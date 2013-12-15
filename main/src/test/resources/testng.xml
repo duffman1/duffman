@@ -1,0 +1,28 @@
+<suite name="Test Suite for NBC.com" parallel="tests" thread-count="2">
+
+  	<parameter name="Environment" value="PROD"></parameter>
+  	<test name="Demo Tests">
+
+		<!-- Enter group name for specific test scripts-->
+		<groups>
+	 		<run>
+	 			<include name="full"/>
+	 		</run>
+		</groups>
+
+		<!-- Add individual packages you wanted to execute below-->
+   		<!--packages>
+   			<package name="com.nbcuni.test.nbccom"/>
+		</packages-->
+
+		<!-- Add individual classes you wanted to execute below-->
+		<classes>			
+			<class name="com.nbcuni.test.publisher.tests.customcontenttypes.AddingNewCustomContentType"/>		
+		</classes>
+	</test>
+	
+	<!--listeners>
+    	<listener class-name="com.nbcuni.test.webdriver.CustomWebDriverExceptionListener"/>
+    </listeners-->
+
+</suite>
