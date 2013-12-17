@@ -1,6 +1,10 @@
-package com.nbcuni.tests.publisher.tests.advertising;
+package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile;
 
 
+import junit.framework.Assert;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
@@ -9,21 +13,20 @@ import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import com.nbcuni.test.publisher.CharacterProfile;
 import com.nbcuni.test.publisher.ContentTypes;
 import com.nbcuni.test.publisher.AppLib;
-import com.nbcuni.test.publisher.DFPAddTags;
+import com.nbcuni.test.publisher.SelectFile;
 import com.nbcuni.test.publisher.Logout;
-import com.nbcuni.test.publisher.Modules;
 import com.nbcuni.test.publisher.Overlay;
 import com.nbcuni.test.publisher.Taxonomy;
 import com.nbcuni.test.publisher.UserLogin;
+import com.nbcuni.test.publisher.common.Random;
 import com.nbcuni.test.webdriver.CustomWebDriver;
 import com.nbcuni.test.webdriver.WebDriverClientExecution;
 
-import common.Random;
 
-
-public class GPTConfiguration {
+public class CreateCharacterProfile {
 	
 	private CustomWebDriver webDriver;
     private AppLib applib;
@@ -63,18 +66,16 @@ public class GPTConfiguration {
     }
 
     /*************************************************************************************
-     * TEST CASE 
+     * TEST CASE 3106 Adding new custom content type
      * Step 1 - Login to publisher using drupal 1 credentials <br>
-     * Step 2 - Click on "Modules"<br>
-     * Step 3 - In the filter list, type "DART". If the Dart module is enabled, disable it by unchecking the "Enabled" checkbox, and click the "Save configuration" button<br>
-     * Step 4 - In the filter list, type "Doublecheck". Put a check in the "enabled" column next to the "Doublecheck for publishers" module, and click on the "Save configuration" button<br>
-     * Step 5 - Click on "Structure" >> "DFP Ad Tags" >> "Global DFP Settings"<br>
-     * Step 6 - In the "Network ID" field, type "nbcu", and click on the "Save configuration" button<br>
-     * Step 7 - Log out Publisher 7
+     * Step 2 - Click on Content >> add new content >> Character Profile<br>
+     * Step 3 - Populate the valid value in the following mandatory fields: Character, First Name OR Character, Last Name<br>
+     * Step 4 - Click on "Select" button under Cover Media. Click on "Next" button twice, then click on "Save" button<br>
+     * Step 5 - Click on the "Save" button<br> 
      * @throws Throwable No Return values are needed
      *************************************************************************************/
     @Test(groups = {"full", "smoke" })
-    public void Test() {
+    public void Test() throws Exception{
         try {
             
         	//Step 1
@@ -83,39 +84,39 @@ public class GPTConfiguration {
             
             //Step 2
             Taxonomy taxonomy = new Taxonomy(webDriver);
-            taxonomy.ClickTier1ModulesLnk();
+            taxonomy.MouseOverTier1ContentLnk();
+            taxonomy.MouseOverTier1ContentTier2AddContentLnk();
+            taxonomy.ClickTier1ContentTier2AddContentTier3CharacterProfileLnk();
             
             //Step 3
-            Modules modules = new Modules(webDriver);
-            modules.SwitchToModulesFrm();
-            modules.EnterFilterName("DART");
-            modules.DisableModule("DART");
+            CharacterProfile characterProfile = new CharacterProfile(webDriver);
+            characterProfile.SwitchToCreateCharacterProfileFrm();
+            Random random = new Random();
+            String characterName = random.GetCharacterString(15);
+            characterProfile.EnterCharacterFirstName(characterName);
             
             //Step 4
-            modules.EnterFilterName("Doubleclick for Publishers");
-            modules.EnableModule("Doubleclick for Publishers");
+            characterProfile.ClickAddPhotoSelectBtn();
+            SelectFile selectFile = new SelectFile(webDriver);
+            selectFile.SwitchToSelectFileFrm();
+            //TODO - this needs to be modified to find a file from a local file repository.
+            //ultimately it will need to leverage the remote file upload feature of webdriver for sauce execution
+            selectFile.EnterFilePath("/Users/brandonclark/Desktop/HanSolo.jpg");
+            selectFile.ClickUploadBtn();
+            selectFile.WaitForFileUploaded("HanSolo.jpg");
+            selectFile.ClickNextBtn();
+            selectFile.ClickPublicLocalFilesRdb();
+            selectFile.ClickNextBtn();
+            selectFile.VerifyFileImagePresent("HanSolo");
+            selectFile.ClickSaveBtn();
+            applib.switchToDefaultContent();
+            characterProfile.SwitchToCreateCharacterProfileFrm();
+            characterProfile.VerifyDefaultImagePresent("HanSolo");
             
             //Step 5
-            Overlay overlay = new Overlay(webDriver);
-            overlay.ClickCloseOverlayLnk();
+            characterProfile.ClickSaveBtn();
             applib.switchToDefaultContent();
-            taxonomy.MouseOverTier1StructureLnk();
-            taxonomy.MouseOverTier1StructureTier2DFPAddTagsLnk();
-            taxonomy.ClickTier1StructureTier2DFPAddTagsTier3GlobalDFPSettingsLnk();
-            
-            //Step 6
-            DFPAddTags dfpAddTags = new DFPAddTags(webDriver);
-            dfpAddTags.SwitchToDFPAddTagsFrm();
-            dfpAddTags.EnterNetworkId("nbcu");
-            dfpAddTags.ClickSaveConfigurationBtn();
-            dfpAddTags.VerifyConfigurationSaved();
-            overlay.ClickCloseOverlayLnk();
-            applib.switchToDefaultContent();
-            
-            //Step 7
-            Logout logout = new Logout(webDriver);
-            logout.ClickLogoutBtn();
-            
+            characterProfile.VerifyCharacterProfileSaved(characterName);
             
         } catch (Exception e) {
             applib.fail(e.toString());

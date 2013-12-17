@@ -1,4 +1,4 @@
-package com.nbcuni.test.publisher.tests.customcontenttypes;
+package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CustomContentType;
 
 
 import org.testng.annotations.AfterClass;
@@ -15,10 +15,9 @@ import com.nbcuni.test.publisher.Logout;
 import com.nbcuni.test.publisher.Overlay;
 import com.nbcuni.test.publisher.Taxonomy;
 import com.nbcuni.test.publisher.UserLogin;
+import com.nbcuni.test.publisher.common.Random;
 import com.nbcuni.test.webdriver.CustomWebDriver;
 import com.nbcuni.test.webdriver.WebDriverClientExecution;
-
-import common.Random;
 
 
 public class AddingNewCustomContentType {

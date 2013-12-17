@@ -1,4 +1,4 @@
-package com.nbcuni.tests.publisher.tests.advertising;
+package com.nbcuni.test.publisher.tests.Advertising.Comscore;
 
 
 import org.testng.annotations.AfterClass;
@@ -8,6 +8,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+
 import com.nbcuni.test.publisher.ContentTypes;
 import com.nbcuni.test.publisher.AppLib;
 import com.nbcuni.test.publisher.Logout;
@@ -15,10 +16,9 @@ import com.nbcuni.test.publisher.Modules;
 import com.nbcuni.test.publisher.Overlay;
 import com.nbcuni.test.publisher.Taxonomy;
 import com.nbcuni.test.publisher.UserLogin;
+import com.nbcuni.test.publisher.common.Random;
 import com.nbcuni.test.webdriver.CustomWebDriver;
 import com.nbcuni.test.webdriver.WebDriverClientExecution;
-
-import common.Random;
 
 
 public class PixelmanModuleSetupAndVerification {

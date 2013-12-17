@@ -36,8 +36,8 @@ public class Taxonomy {
     private static String Tier1_Structure_Tier2_DFPAdTags_Lnk = Tier1_Structure_Lnk + "/../ul//a[text()='DFP Ad Tags']";
     private static String Tier1_Structure_Tier2_DFPAdTags_Tier3_GlobalDFPSettings_Lnk = Tier1_Structure_Tier2_DFPAdTags_Lnk + "/..//a[text()='Global DFP Settings']";
     private static String Tier1_Structure_Tier2_DFPAdTags_Tier3_Add_Lnk = Tier1_Structure_Tier2_DFPAdTags_Lnk + "/..//a[text()='Add']";
-    
-    
+    private static String Tier1_Content_Tier2_AddContent_Tier3_CharacterProfile_Lnk = Tier1_Content_Tier2_AddContent_Lnk + "/..//a[text()='Character Profile']";
+    private static String Tier1_Content_Tier2_AddContent_Tier3_MediaGallery_Lnk = Tier1_Content_Tier2_AddContent_Lnk + "/..//a[text()='Media Gallery']";
 
     public Taxonomy(final CustomWebDriver custWebDr) {
         webDriver = custWebDr;
@@ -160,6 +160,24 @@ public class Taxonomy {
     	new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Tier1_Structure_Tier2_Blocks_Lnk)));
     	
     	webDriver.findElement(By.xpath((Tier1_Structure_Tier2_Blocks_Lnk))).click();;
+ 
+    	
+    }
+    
+    public void ClickTier1ContentTier2AddContentTier3CharacterProfileLnk() throws Exception {
+    	
+    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(By.xpath(Tier1_Content_Tier2_AddContent_Tier3_CharacterProfile_Lnk)));
+    	
+    	webDriver.click(Tier1_Content_Tier2_AddContent_Tier3_CharacterProfile_Lnk);
+ 
+    	
+    }
+    
+    public void ClickTier1ContentTier2AddContentTier3MediaGalleryLnk() throws Exception {
+    	
+    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(By.xpath(Tier1_Content_Tier2_AddContent_Tier3_MediaGallery_Lnk)));
+    	
+    	webDriver.click(Tier1_Content_Tier2_AddContent_Tier3_MediaGallery_Lnk);
  
     	
     }

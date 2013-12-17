@@ -1,4 +1,4 @@
-package common;
+package com.nbcuni.test.publisher.common;
 
 
 import java.util.UUID;
