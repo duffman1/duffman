@@ -11,7 +11,6 @@ import org.testng.annotations.Test;
 
 import com.nbcuni.test.publisher.ContentTypes;
 import com.nbcuni.test.publisher.AppLib;
-import com.nbcuni.test.publisher.Homepage;
 import com.nbcuni.test.publisher.Logout;
 import com.nbcuni.test.publisher.Overlay;
 import com.nbcuni.test.publisher.Taxonomy;
@@ -24,7 +23,7 @@ import common.Random;
 
 public class AddingNewCustomContentType {
 	
-	private CustomWebDriver cs;
+	private CustomWebDriver webDriver;
     private AppLib applib;
 
     /**
@@ -37,8 +36,8 @@ public class AddingNewCustomContentType {
     @Parameters("Environment")
     public void startSelenium(@Optional("PROD") String sEnv) {
         try {
-            cs = WebDriverClientExecution.getInstance().getDriver();
-            applib = new AppLib(cs);
+            webDriver = WebDriverClientExecution.getInstance().getDriver();
+            applib = new AppLib(webDriver);
             applib.setEnvironmentInfo(sEnv);
         } catch (Exception e) {
             applib.fail(e.toString());
@@ -54,7 +53,7 @@ public class AddingNewCustomContentType {
     @AfterMethod(alwaysRun = true)
     public void stopSelenium() {
         try {
-            cs.quit();
+            webDriver.quit();
         } catch (Exception e) {
             applib.fail(e.toString());
         }
@@ -73,30 +72,30 @@ public class AddingNewCustomContentType {
      * @throws Throwable No Return values are needed
      *************************************************************************************/
     @Test(groups = {"full", "smoke" })
-    public void AddNewCustomContentType() {
+    public void Test() throws Exception{
         try {
             
         	//Step 1
-        	UserLogin userLogin = applib.openApplication2();
+        	UserLogin userLogin = applib.openApplication();
             userLogin.Login("admin@publisher.nbcuni.com", "pa55word");
             
             //Step 2
-            Taxonomy taxonomy = new Taxonomy(cs, applib);
+            Taxonomy taxonomy = new Taxonomy(webDriver);
             taxonomy.MouseOverTier1StructureLnk();
             taxonomy.MouseOverTier1StructureTier2ContentTypeLnk();
             taxonomy.ClickTier1StructureTier2ContentTypeTier3AddContentTypeLnk();
             
             //Step 3
-            ContentTypes contentTypes = new ContentTypes(cs, applib);
+            ContentTypes contentTypes = new ContentTypes(webDriver);
             contentTypes.SwitchToAddContentTypeFrm();
             Random random = new Random();
-            String contentTypeName = random.CharacterString(10);
+            String contentTypeName = random.GetCharacterString(10);
             contentTypes.EnterName(contentTypeName);
             
             //Step 4
             contentTypes.ClickSaveBtn();
             contentTypes.VerifyContentTypeSaved(contentTypeName);
-            Overlay overlay = new Overlay(cs);
+            Overlay overlay = new Overlay(webDriver);
             overlay.ClickCloseOverlayLnk();
             
             //Step 5
@@ -108,7 +107,7 @@ public class AddingNewCustomContentType {
             
             //Step 6
             contentTypes.SwitchToNewContentTypeFrm(contentTypeName);
-            String newFieldName = random.CharacterString(15);
+            String newFieldName = random.GetCharacterString(15);
             String newFieldType = "Image";
             contentTypes.AddNewField(newFieldName);
             contentTypes.SelectFieldType(newFieldType);

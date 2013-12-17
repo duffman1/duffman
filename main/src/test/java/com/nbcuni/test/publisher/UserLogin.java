@@ -1,6 +1,9 @@
 package com.nbcuni.test.publisher;
 
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
 
 import com.nbcuni.test.lib.Util;
@@ -26,17 +29,10 @@ public class UserLogin {
     private static String LogIn_Btn = "//input[@id='edit-submit']";
     
 
-    public UserLogin(final CustomWebDriver custWebDr, final AppLib al2) {
+    public UserLogin(final CustomWebDriver custWebDr) {
         webDriver = custWebDr;
-        al = al2;
         ul = new Util(webDriver);
-        try {
-            if (!webDriver.getTitle().contains(Page_Title)) {
-                al.fail("Page Was Not in the User Login Page screen as expected");
-            }
-        } catch (Exception e) {
-            al.fail(e.toString()); 
-        }
+        
     }
     
     
@@ -54,6 +50,7 @@ public class UserLogin {
     
     public void ClickLoginBtn() throws Exception {
     	
+    	Thread.sleep(1000);
     	webDriver.click(LogIn_Btn);
     	
     }

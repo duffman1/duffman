@@ -37,17 +37,10 @@ public class ContentTypes {
     
     
     
-    public ContentTypes(final CustomWebDriver custWebDr, final AppLib al2) {
+    public ContentTypes(final CustomWebDriver custWebDr) {
         webDriver = custWebDr;
-        al = al2;
         ul = new Util(webDriver);
-        try {
-            if (!webDriver.getTitle().contains(Page_Title)) {
-                al.fail("Page Was Not in the User Login Page screen as expected");
-            }
-        } catch (Exception e) {
-            al.fail(e.toString()); 
-        }
+        
     }
     
     

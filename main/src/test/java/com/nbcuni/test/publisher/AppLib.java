@@ -33,6 +33,10 @@ import java.util.concurrent.TimeUnit;
 
 
 
+
+
+import junit.framework.Assert;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoAlertPresentException;
@@ -187,7 +191,9 @@ public class AppLib {
      * @throws Exception
      */
     public void fail(String errorMessage) {
-        Reporter.log(errorMessage);
+        
+    	Reporter.log(errorMessage);
+    	Assert.fail(errorMessage);
     }
     
 
@@ -239,33 +245,23 @@ public class AppLib {
     }
     
     
-    
     /**
      * Opens the browser with application url
      * 
      * @return Return value
      * @throws Exception Code Error
      */
-    public Homepage openApplication() throws Exception {
-        Reporter.log("URL: " + this.getApplicationURL());
-        custWebDr.openURL(this.getApplicationURL());
-        return new Homepage(custWebDr, this);
-    }
     
-    public UserLogin openApplication2() throws Exception {
+    
+    public UserLogin openApplication() throws Exception {
         Reporter.log("URL: " + this.getApplicationURL());
         custWebDr.openURL(this.getApplicationURL());
-        return new UserLogin(custWebDr, this);
-    }
-
-    public Search openSearchPage() throws Exception {
-        Reporter.log("URL: " + this.getApplicationURL()+"search?q=");
-        custWebDr.openURL(this.getApplicationURL()+"search?q=");
-        return new Search(custWebDr, this);
+        return new UserLogin(custWebDr);
     }
     
     public void switchToDefaultContent() throws Exception {
         custWebDr.switchTo().defaultContent();
-        Reporter.log("Switched to default content");
     }
+    
+    
 }

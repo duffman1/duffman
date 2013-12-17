@@ -1,6 +1,9 @@
 package com.nbcuni.test.publisher;
 
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
 
 import com.nbcuni.test.lib.Util;
@@ -21,21 +24,14 @@ public class Logout {
     private final Util ul;
     
     private static String Page_Title = "Site-Install";
-    private static String LogOut_Btn = "//li[@class='admin-menu-action']/a[text()='Log out']";
+    private static String LogOut_Btn = "(//a[text()='Log out'])[2]";
     
     
 
-    public Logout(final CustomWebDriver custWebDr, final AppLib al2) {
+    public Logout(final CustomWebDriver custWebDr) {
         webDriver = custWebDr;
-        al = al2;
         ul = new Util(webDriver);
-        try {
-            if (!webDriver.getTitle().contains(Page_Title)) {
-                al.fail("Page Was Not in the User Login Page screen as expected");
-            }
-        } catch (Exception e) {
-            al.fail(e.toString()); 
-        }
+        
     }
     
     
@@ -43,6 +39,12 @@ public class Logout {
     	
     	ul.verifyObjectExists(LogOut_Btn);
     	
+    }
+    
+    public void ClickLogoutBtn() {
+    	
+    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(By.xpath(LogOut_Btn)));
+    	webDriver.click(LogOut_Btn);
     }
     
     

@@ -26,7 +26,7 @@ public class Random {
     
     Util util = new Util(null);
     
-    public String CharacterString(int MaximumLength) {
+    public String GetCharacterString(int MaximumLength) {
 
         //TODO - add a loop that creates a string as long as needed and not just the standard UUID length
         //generate a random character string value

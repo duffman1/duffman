@@ -1,7 +1,7 @@
-<suite name="Test Suite for NBC.com" parallel="tests" thread-count="2">
+<suite name="Test Suite for Publisher 7" parallel="classes" thread-count="1">
 
   	<parameter name="Environment" value="PROD"></parameter>
-  	<test name="Demo Tests">
+  	<test name="All Web Tests">
 
 		<!-- Enter group name for specific test scripts-->
 		<groups>
@@ -11,14 +11,14 @@
 		</groups>
 
 		<!-- Add individual packages you wanted to execute below-->
-   		<!--packages>
-   			<package name="com.nbcuni.test.nbccom"/>
-		</packages-->
+   		<packages>
+   			<package name="com.nbcuni.tests.publisher.tests.*"/>
+		</packages>
 
 		<!-- Add individual classes you wanted to execute below-->
 		<classes>			
 			<class name="com.nbcuni.test.publisher.tests.customcontenttypes.AddingNewCustomContentType"/>		
-		</classes>
+		</classes>-->
 	</test>
 	
 	<!--listeners>

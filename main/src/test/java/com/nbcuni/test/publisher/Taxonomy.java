@@ -25,31 +25,29 @@ public class Taxonomy {
     private final Util ul;
     
     private static String Page_Title = "Site-Install";
+    private static String Home_Lnk = "//span[@class='admin-menu-home-icon']";
     private static String Tier1_Structure_Lnk = "//li[contains(@class,'admin-menu-toolbar-category')]//a[text()='Structure']";
     private static String Tier1_Content_Lnk = "//li[contains(@class,'admin-menu-toolbar-category')]//a[text()='Content']";
+    private static String Tier1_Modules_Lnk = "//li[contains(@class,'admin-menu-toolbar-category')]//a[text()='Modules']";
     private static String Tier1_Structure_Tier2_ContentTypes_Lnk = Tier1_Structure_Lnk + "/../ul//a[text()='Content types']";
+    private static String Tier1_Structure_Tier2_Blocks_Lnk = Tier1_Structure_Lnk + "/../ul//a[text()='Blocks']";
     private static String Tier1_Content_Tier2_AddContent_Lnk = Tier1_Content_Lnk + "/../ul//a[text()='Add content']";
     private static String Tier1_Structure_Tier2_ContentTypes_Tier3_AddContentType_Lnk = Tier1_Structure_Tier2_ContentTypes_Lnk + "/..//a[text()='Add content type']";
+    private static String Tier1_Structure_Tier2_DFPAdTags_Lnk = Tier1_Structure_Lnk + "/../ul//a[text()='DFP Ad Tags']";
+    private static String Tier1_Structure_Tier2_DFPAdTags_Tier3_GlobalDFPSettings_Lnk = Tier1_Structure_Tier2_DFPAdTags_Lnk + "/..//a[text()='Global DFP Settings']";
+    private static String Tier1_Structure_Tier2_DFPAdTags_Tier3_Add_Lnk = Tier1_Structure_Tier2_DFPAdTags_Lnk + "/..//a[text()='Add']";
     
     
 
-    public Taxonomy(final CustomWebDriver custWebDr, final AppLib al2) {
+    public Taxonomy(final CustomWebDriver custWebDr) {
         webDriver = custWebDr;
-        al = al2;
         ul = new Util(webDriver);
-        try {
-            if (!webDriver.getTitle().contains(Page_Title)) {
-                al.fail("Page Was Not in the User Login Page screen as expected");
-            }
-        } catch (Exception e) {
-            al.fail(e.toString()); 
-        }
+        
     }
     
     
     public void MouseOverTier1StructureLnk() throws Exception {
     	
-    	//TODO create a mouse over wrapper action for mouseover 
     	Actions action = new Actions(webDriver);
     	action.moveToElement(webDriver.findElement(By.xpath(Tier1_Structure_Lnk))).build().perform();
     	
@@ -103,7 +101,6 @@ public class Taxonomy {
     	
     	String contentTypeManageDisplayLocator = Tier1_Structure_Tier2_ContentTypes_Lnk + "/..//a[text()='" + contentTypeName + "']" + "/..//a[text()='Manage fields']";
     	new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOfElementLocated(By.xpath(contentTypeManageDisplayLocator)));
-    	
     	webDriver.click(contentTypeManageDisplayLocator);
  
     	
@@ -115,6 +112,54 @@ public class Taxonomy {
     	new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOfElementLocated(By.xpath(contentTypeLocator)));
     	
     	webDriver.click(contentTypeLocator);
+ 
+    	
+    }
+    
+    public void ClickTier1ModulesLnk() throws Exception {
+    	
+    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(By.xpath(Tier1_Modules_Lnk)));
+    	webDriver.click(Tier1_Modules_Lnk);
+    }
+    
+    public void ClickHomeLnk() throws Exception {
+    	
+    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(By.xpath(Home_Lnk)));
+    	webDriver.click(Home_Lnk);
+    		
+    }
+    
+    public void MouseOverTier1StructureTier2DFPAddTagsLnk() throws Exception {
+    	
+    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Tier1_Structure_Tier2_DFPAdTags_Lnk)));
+    	
+    	Actions action = new Actions(webDriver);
+    	action.moveToElement(webDriver.findElement(By.xpath(Tier1_Structure_Tier2_DFPAdTags_Lnk))).build().perform();
+ 
+    	
+    }
+    
+    public void ClickTier1StructureTier2DFPAddTagsTier3GlobalDFPSettingsLnk() throws Exception {
+    	
+    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Tier1_Structure_Tier2_DFPAdTags_Tier3_GlobalDFPSettings_Lnk)));
+    	
+    	webDriver.click(Tier1_Structure_Tier2_DFPAdTags_Tier3_GlobalDFPSettings_Lnk);
+    	
+    }
+    
+    public void ClickTier1StructureTier2DFPAddTagsTier3AddLnk() throws Exception {
+    	
+    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Tier1_Structure_Tier2_DFPAdTags_Tier3_Add_Lnk)));
+    	
+    	webDriver.click(Tier1_Structure_Tier2_DFPAdTags_Tier3_Add_Lnk);
+    	
+    }
+    
+    public void ClickTier1ContentTier2BlocksLnk() throws Exception {
+    	
+    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Tier1_Structure_Tier2_Blocks_Lnk)));
+    	
+    	webDriver.findElement(By.xpath((Tier1_Structure_Tier2_Blocks_Lnk))).click();;
  
     	
     }
