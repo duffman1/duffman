@@ -9,56 +9,21 @@ import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import com.nbcuni.test.publisher.ContentTypes;
 import com.nbcuni.test.publisher.AppLib;
 import com.nbcuni.test.publisher.Logout;
 import com.nbcuni.test.publisher.Overlay;
-import com.nbcuni.test.publisher.Taxonomy;
 import com.nbcuni.test.publisher.UserLogin;
+import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Random;
+import com.nbcuni.test.publisher.content.ContentTypes;
+import com.nbcuni.test.publisher.taxonomy.Taxonomy;
 import com.nbcuni.test.webdriver.CustomWebDriver;
 import com.nbcuni.test.webdriver.WebDriverClientExecution;
 
 
-public class AddingNewCustomContentType {
+public class AddingNewCustomContentType extends ParentTest{
 	
-	private CustomWebDriver webDriver;
-    private AppLib applib;
-
-    /**
-     * Instantiate the TestNG Before Class Method.
-     * 
-     * @param sEnv - environment
-     * @throws Exception - error
-     */
-    @BeforeMethod(alwaysRun = true)
-    @Parameters("Environment")
-    public void startSelenium(@Optional("PROD") String sEnv) {
-        try {
-            webDriver = WebDriverClientExecution.getInstance().getDriver();
-            applib = new AppLib(webDriver);
-            applib.setEnvironmentInfo(sEnv);
-        } catch (Exception e) {
-            applib.fail(e.toString());
-        }
-
-    }
-
-    /**
-     * Instantiate the TestNG After Class Method.
-     * 
-     * @throws Exception - error
-     */
-    @AfterMethod(alwaysRun = true)
-    public void stopSelenium() {
-        try {
-            webDriver.quit();
-        } catch (Exception e) {
-            applib.fail(e.toString());
-        }
-
-    }
-
+	
     /*************************************************************************************
      * TEST CASE 3106 Adding new custom content type
      * Step 1 - Login to publisher using drupal 1 credentials <br>
@@ -80,7 +45,6 @@ public class AddingNewCustomContentType {
             //Step 2
             Taxonomy taxonomy = new Taxonomy(webDriver);
             taxonomy.MouseOverTier1StructureLnk();
-            taxonomy.MouseOverTier1StructureTier2ContentTypeLnk();
             taxonomy.ClickTier1StructureTier2ContentTypeTier3AddContentTypeLnk();
             
             //Step 3
@@ -97,7 +61,7 @@ public class AddingNewCustomContentType {
             overlay.ClickCloseOverlayLnk();
             
             //Step 5
-            applib.switchToDefaultContent();
+            overlay.switchToDefaultContent();
             taxonomy.MouseOverTier1StructureLnk();
             taxonomy.MouseOverTier1StructureTier2ContentTypeLnk();
             taxonomy.MouseOverTier1StructureTier2ContentTypeTier3ContentTypeLnk(contentTypeName);
@@ -118,7 +82,7 @@ public class AddingNewCustomContentType {
             
             //Step 7
             overlay.ClickCloseOverlayLnk();
-            applib.switchToDefaultContent();
+            overlay.switchToDefaultContent();
             taxonomy.MouseOverTier1ContentLnk();
             taxonomy.MouseOverTier1ContentTier2AddContentLnk();
             taxonomy.ClickTier1ContentTier2AddContentTier3ContentTypeLnk(contentTypeName);

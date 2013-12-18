@@ -13,60 +13,25 @@ import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import com.nbcuni.test.publisher.CharacterProfile;
-import com.nbcuni.test.publisher.ContentTypes;
 import com.nbcuni.test.publisher.AppLib;
-import com.nbcuni.test.publisher.SelectFile;
 import com.nbcuni.test.publisher.Logout;
 import com.nbcuni.test.publisher.Overlay;
-import com.nbcuni.test.publisher.Taxonomy;
 import com.nbcuni.test.publisher.UserLogin;
+import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Random;
+import com.nbcuni.test.publisher.content.CharactersInformation;
+import com.nbcuni.test.publisher.content.ContentParent;
+import com.nbcuni.test.publisher.content.ContentTypes;
+import com.nbcuni.test.publisher.content.SelectFile;
+import com.nbcuni.test.publisher.taxonomy.Taxonomy;
 import com.nbcuni.test.webdriver.CustomWebDriver;
 import com.nbcuni.test.webdriver.WebDriverClientExecution;
 
 
-public class CreateCharacterProfile {
+public class CreateCharacterProfile extends ParentTest{
 	
-	private CustomWebDriver webDriver;
-    private AppLib applib;
-
-    /**
-     * Instantiate the TestNG Before Class Method.
-     * 
-     * @param sEnv - environment
-     * @throws Exception - error
-     */
-    @BeforeMethod(alwaysRun = true)
-    @Parameters("Environment")
-    public void startSelenium(@Optional("PROD") String sEnv) {
-        try {
-            webDriver = WebDriverClientExecution.getInstance().getDriver();
-            applib = new AppLib(webDriver);
-            applib.setEnvironmentInfo(sEnv);
-        } catch (Exception e) {
-            applib.fail(e.toString());
-        }
-
-    }
-
-    /**
-     * Instantiate the TestNG After Class Method.
-     * 
-     * @throws Exception - error
-     */
-    @AfterMethod(alwaysRun = true)
-    public void stopSelenium() {
-        try {
-            webDriver.quit();
-        } catch (Exception e) {
-            applib.fail(e.toString());
-        }
-
-    }
-
     /*************************************************************************************
-     * TEST CASE 3106 Adding new custom content type
+     * TEST CASE
      * Step 1 - Login to publisher using drupal 1 credentials <br>
      * Step 2 - Click on Content >> add new content >> Character Profile<br>
      * Step 3 - Populate the valid value in the following mandatory fields: Character, First Name OR Character, Last Name<br>
@@ -83,13 +48,12 @@ public class CreateCharacterProfile {
             
             //Step 2
             Taxonomy taxonomy = new Taxonomy(webDriver);
-            taxonomy.MouseOverTier1ContentLnk();
-            taxonomy.MouseOverTier1ContentTier2AddContentLnk();
             taxonomy.ClickTier1ContentTier2AddContentTier3CharacterProfileLnk();
             
             //Step 3
-            CharacterProfile characterProfile = new CharacterProfile(webDriver);
-            characterProfile.SwitchToCreateCharacterProfileFrm();
+            CharactersInformation characterProfile = new CharactersInformation(webDriver);
+            Overlay overlay = new Overlay(webDriver);
+            overlay.SwitchToCreateCharacterProfileFrm();
             Random random = new Random();
             String characterName = random.GetCharacterString(15);
             characterProfile.EnterCharacterFirstName(characterName);
@@ -108,14 +72,15 @@ public class CreateCharacterProfile {
             selectFile.ClickNextBtn();
             selectFile.VerifyFileImagePresent("HanSolo");
             selectFile.ClickSaveBtn();
-            applib.switchToDefaultContent();
-            characterProfile.SwitchToCreateCharacterProfileFrm();
+            overlay.switchToDefaultContent();
+            overlay.SwitchToCreateCharacterProfileFrm();
             characterProfile.VerifyDefaultImagePresent("HanSolo");
             
             //Step 5
-            characterProfile.ClickSaveBtn();
-            applib.switchToDefaultContent();
-            characterProfile.VerifyCharacterProfileSaved(characterName);
+            ContentParent contentParent = new ContentParent(webDriver);
+            contentParent.ClickSaveBtn();
+            overlay.switchToDefaultContent();
+            contentParent.VerifyMessageStatus("need this");
             
        
     }

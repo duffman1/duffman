@@ -26,8 +26,6 @@ public class DFPAddTags {
     private static AppLib al;
     private final Util ul;
     
-    private static String DFPAddTags_Frm = "//iframe[@title='DFP Ad Tags dialog']";
-    private static String AddNewDFPAd_Frm = "//iframe[@title='Add a new DFP ad dialog']";
     private static String NetworkId_Txb = "//input[@id='edit-dfp-network-id']";
     private static String SaveConfiguration_Btn = "//input[@id='edit-submit']";
     private static String Save_Btn = "//input[@id='edit-submit']";
@@ -40,20 +38,6 @@ public class DFPAddTags {
         webDriver = custWebDr;
         ul = new Util(webDriver);
         
-    }
-    
-    public void SwitchToAddNewDFPAdFrm() throws Exception {
-    	
-    	WebElement frm = webDriver.findElement(By.xpath(AddNewDFPAd_Frm));
-    	webDriver.switchTo().frame(frm);
-    	
-    }
-    
-    public void SwitchToDFPAddTagsFrm() throws Exception {
-    	
-    	WebElement frm = webDriver.findElement(By.xpath(DFPAddTags_Frm));
-    	webDriver.switchTo().frame(frm);
-    	
     }
     
     public void EnterNetworkId(String networkIdName) throws Exception {

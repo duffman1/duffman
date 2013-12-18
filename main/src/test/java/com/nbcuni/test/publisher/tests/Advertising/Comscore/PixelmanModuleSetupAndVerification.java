@@ -10,56 +10,21 @@ import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import com.nbcuni.test.publisher.ContentTypes;
 import com.nbcuni.test.publisher.AppLib;
 import com.nbcuni.test.publisher.Logout;
 import com.nbcuni.test.publisher.Modules;
 import com.nbcuni.test.publisher.Overlay;
-import com.nbcuni.test.publisher.Taxonomy;
 import com.nbcuni.test.publisher.UserLogin;
+import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Random;
+import com.nbcuni.test.publisher.content.ContentTypes;
+import com.nbcuni.test.publisher.taxonomy.Taxonomy;
 import com.nbcuni.test.webdriver.CustomWebDriver;
 import com.nbcuni.test.webdriver.WebDriverClientExecution;
 
 
-public class PixelmanModuleSetupAndVerification {
+public class PixelmanModuleSetupAndVerification extends ParentTest {
 	
-	private CustomWebDriver webDriver;
-    private AppLib applib;
-
-    /**
-     * Instantiate the TestNG Before Class Method.
-     * 
-     * @param sEnv - environment
-     * @throws Exception - error
-     */
-    @BeforeMethod(alwaysRun = true)
-    @Parameters("Environment")
-    public void startSelenium(@Optional("PROD") String sEnv) {
-        try {
-            webDriver = WebDriverClientExecution.getInstance().getDriver();
-            applib = new AppLib(webDriver);
-            applib.setEnvironmentInfo(sEnv);
-        } catch (Exception e) {
-            applib.fail(e.toString());
-        }
-
-    }
-
-    /**
-     * Instantiate the TestNG After Class Method.
-     * 
-     * @throws Exception - error
-     */
-    @AfterMethod(alwaysRun = true)
-    public void stopSelenium() {
-        try {
-            webDriver.quit();
-        } catch (Exception e) {
-            applib.fail(e.toString());
-        }
-
-    }
 
     /*************************************************************************************
      * TEST CASE 
@@ -88,7 +53,8 @@ public class PixelmanModuleSetupAndVerification {
         Taxonomy taxonomy = new Taxonomy(webDriver);
         taxonomy.ClickTier1ModulesLnk();
         Modules modules = new Modules(webDriver);
-        modules.SwitchToModulesFrm();
+        Overlay overlay = new Overlay(webDriver);
+        overlay.SwitchToModulesFrm();
         modules.EnterFilterName("Pixelman");
             
         //Step 3
@@ -101,9 +67,8 @@ public class PixelmanModuleSetupAndVerification {
         modules.DisableModule("Doubleclick for Publishers");
             
         //Step 5
-        Overlay overlay = new Overlay(webDriver);
         overlay.ClickCloseOverlayLnk();
-        applib.switchToDefaultContent();
+        overlay.switchToDefaultContent();
         taxonomy.ClickHomeLnk();
             
         //Step 6
@@ -121,7 +86,7 @@ public class PixelmanModuleSetupAndVerification {
         //Step 9
         userLogin.Login("admin@publisher.nbcuni.com", "pa55word");
         taxonomy.ClickTier1ModulesLnk();
-        modules.SwitchToModulesFrm();
+        overlay.SwitchToModulesFrm();
         modules.EnterFilterName("Pixelman");
         modules.DisableModule("Pixelman");
         modules.EnterFilterName("Pub Ads");
@@ -131,7 +96,7 @@ public class PixelmanModuleSetupAndVerification {
         modules.VerifyModuleSourceNotInPage("//www.nbcudigitaladops.com/hosted/global_header.js");
         modules.VerifyModuleSourceNotInPage("//www.nbcudigitaladops.com/hosted/site.js?h=qa5dev_publisher_nbcuni_com_header");
         overlay.ClickCloseOverlayLnk();
-        applib.switchToDefaultContent();
+        overlay.switchToDefaultContent();
             
         //Step 11
         logout.ClickLogoutBtn();

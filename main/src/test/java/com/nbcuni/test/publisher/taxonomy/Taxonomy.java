@@ -1,4 +1,4 @@
-package com.nbcuni.test.publisher;
+package com.nbcuni.test.publisher.taxonomy;
 
 
 import org.openqa.selenium.By;
@@ -8,6 +8,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
 
 import com.nbcuni.test.lib.Util;
+import com.nbcuni.test.publisher.AppLib;
 import com.nbcuni.test.webdriver.CustomWebDriver;
 
 
@@ -39,6 +40,8 @@ public class Taxonomy {
     private static String Tier1_Content_Tier2_AddContent_Tier3_CharacterProfile_Lnk = Tier1_Content_Tier2_AddContent_Lnk + "/..//a[text()='Character Profile']";
     private static String Tier1_Content_Tier2_AddContent_Tier3_MediaGallery_Lnk = Tier1_Content_Tier2_AddContent_Lnk + "/..//a[text()='Media Gallery']";
     private static String Tier1_Content_Tier2_AddContent_Tier3_Movie_Lnk = Tier1_Content_Tier2_AddContent_Lnk + "/..//a[text()='Movie']";
+    private static String Tier1_Content_Tier2_AddContent_Tier3_Person_Lnk = Tier1_Content_Tier2_AddContent_Lnk + "/..//a[text()='Person']";
+    
     
     public Taxonomy(final CustomWebDriver custWebDr) {
         webDriver = custWebDr;
@@ -80,6 +83,9 @@ public class Taxonomy {
     }
     
     public void ClickTier1StructureTier2ContentTypeTier3AddContentTypeLnk() throws Exception {
+    	
+    	this.MouseOverTier1StructureLnk();
+    	this.MouseOverTier1StructureTier2ContentTypeLnk();
     	
     	new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Tier1_Structure_Tier2_ContentTypes_Tier3_AddContentType_Lnk)));
     	
@@ -142,6 +148,9 @@ public class Taxonomy {
     
     public void ClickTier1StructureTier2DFPAddTagsTier3GlobalDFPSettingsLnk() throws Exception {
     	
+    	this.MouseOverTier1StructureLnk();
+    	this.MouseOverTier1StructureTier2DFPAddTagsLnk();
+    	
     	new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Tier1_Structure_Tier2_DFPAdTags_Tier3_GlobalDFPSettings_Lnk)));
     	
     	webDriver.click(Tier1_Structure_Tier2_DFPAdTags_Tier3_GlobalDFPSettings_Lnk);
@@ -150,6 +159,9 @@ public class Taxonomy {
     
     public void ClickTier1StructureTier2DFPAddTagsTier3AddLnk() throws Exception {
     	
+    	this.MouseOverTier1StructureLnk();
+    	this.MouseOverTier1StructureTier2DFPAddTagsLnk();
+    	
     	new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Tier1_Structure_Tier2_DFPAdTags_Tier3_Add_Lnk)));
     	
     	webDriver.click(Tier1_Structure_Tier2_DFPAdTags_Tier3_Add_Lnk);
@@ -157,6 +169,8 @@ public class Taxonomy {
     }
     
     public void ClickTier1ContentTier2BlocksLnk() throws Exception {
+    	
+    	this.MouseOverTier1ContentLnk();
     	
     	new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Tier1_Structure_Tier2_Blocks_Lnk)));
     	
@@ -167,14 +181,19 @@ public class Taxonomy {
     
     public void ClickTier1ContentTier2AddContentTier3CharacterProfileLnk() throws Exception {
     	
-    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(By.xpath(Tier1_Content_Tier2_AddContent_Tier3_CharacterProfile_Lnk)));
+    	this.MouseOverTier1ContentLnk();
+    	this.MouseOverTier1ContentTier2AddContentLnk();
     	
+    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(By.xpath(Tier1_Content_Tier2_AddContent_Tier3_CharacterProfile_Lnk)));
     	webDriver.click(Tier1_Content_Tier2_AddContent_Tier3_CharacterProfile_Lnk);
  
     	
     }
     
     public void ClickTier1ContentTier2AddContentTier3MediaGalleryLnk() throws Exception {
+    	
+    	this.MouseOverTier1ContentLnk();
+    	this.MouseOverTier1ContentTier2AddContentLnk();
     	
     	new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(By.xpath(Tier1_Content_Tier2_AddContent_Tier3_MediaGallery_Lnk)));
     	
@@ -185,9 +204,24 @@ public class Taxonomy {
     
     public void ClickTier1ContentTier2AddContentTier3MovieLnk() throws Exception {
     	
+    	this.MouseOverTier1ContentLnk();
+    	this.MouseOverTier1ContentTier2AddContentLnk();
+    	
     	new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(By.xpath(Tier1_Content_Tier2_AddContent_Tier3_Movie_Lnk)));
     	
     	webDriver.click(Tier1_Content_Tier2_AddContent_Tier3_Movie_Lnk);
+ 
+    	
+    }
+    
+    public void ClickTier1ContentTier2AddContentTier3PersonLnk() throws Exception {
+    	
+    	this.MouseOverTier1ContentLnk();
+    	this.MouseOverTier1ContentTier2AddContentLnk();
+    	
+    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(By.xpath(Tier1_Content_Tier2_AddContent_Tier3_Person_Lnk)));
+    	
+    	webDriver.click(Tier1_Content_Tier2_AddContent_Tier3_Person_Lnk);
  
     	
     }

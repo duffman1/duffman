@@ -1,4 +1,4 @@
-package com.nbcuni.test.publisher;
+package com.nbcuni.test.publisher.content;
 
 
 import org.openqa.selenium.By;
@@ -10,43 +10,33 @@ import org.testng.Assert;
 import org.testng.Reporter;
 
 import com.nbcuni.test.lib.Util;
+import com.nbcuni.test.publisher.AppLib;
 import com.nbcuni.test.webdriver.CustomWebDriver;
 
 
 /*********************************************
- * publisher.nbcuni.com Character Profile Library. Copyright
+ * publisher.nbcuni.com Characters Information Library. Copyright
  * 
  * @author Brandon Clark
  * @version 1.0 Date: December 13, 2013
  *********************************************/
 
-public class CharacterProfile {
+public class CharactersInformation {
 
     private static CustomWebDriver webDriver;
     private static AppLib al;
     private final Util ul;
     
-    private static String Page_Title = "Content types";
-    private static String CreateCharacterProfile_Frm = "//iframe[@title='Create Character Profile dialog']";
     private static String CharacterFirstName_Txb = "//input[@id='edit-field-character-first-name-und-0-value']";
     private static String CoverPhotoSelect_Btn = "//a[@id='edit-field-character-cover-photo-und-0-select']";
     private static String Profile_Img = "//div[@class='media-thumbnail']/img";
-    private static String Save_Btn = "//input[@id='edit-submit']";
-    private static String Message_Ctr = "//div[@class='messages status']";
     
-    public CharacterProfile(final CustomWebDriver custWebDr) {
+    public CharactersInformation(final CustomWebDriver custWebDr) {
         webDriver = custWebDr;
         ul = new Util(webDriver);
         
     }
    
-    public void SwitchToCreateCharacterProfileFrm() throws Exception {
-    	
-    	WebElement frm = webDriver.findElement(By.xpath(CreateCharacterProfile_Frm));
-    	webDriver.switchTo().frame(frm);
-    	
-    }
-    
     public void EnterCharacterFirstName(String characterName) throws Exception {
     	
     	new WebDriverWait(webDriver, 10).until(
@@ -74,20 +64,7 @@ public class CharacterProfile {
     			"!= \"undefined\" && arguments[0].naturalWidth > 0", Profile_Img);
     }
     
-    public void ClickSaveBtn() throws Exception {
-    	
-    	new WebDriverWait(webDriver, 10).until(
-    			ExpectedConditions.elementToBeClickable(By.xpath(Save_Btn)));
-    	
-    	webDriver.click(Save_Btn);
-    }
     
-    public void VerifyCharacterProfileSaved(String characterProfileName){
-    	
-    	new WebDriverWait(webDriver, 10).until(
-    			ExpectedConditions.textToBePresentInElement(By.xpath(Message_Ctr)
-    					, "Character Profile " + characterProfileName + " has been created."));
-    }
     
     
   

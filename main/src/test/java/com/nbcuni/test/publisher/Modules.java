@@ -26,8 +26,6 @@ public class Modules {
     private static AppLib al;
     private final Util ul;
     
-    private static String Page_Title = "Modules";
-    private static String Modules_Frm = "//iframe[@title='Modules dialog']";
     private static String FilterList_Txb = "//input[@id='edit-module-filter-name']";
     private static String SaveConfiguration_Btn = "//input[@id='edit-submit']";
     private static String Message_Ctr = "//div[@class='messages status']";
@@ -40,13 +38,6 @@ public class Modules {
         
     }
     
-    public void SwitchToModulesFrm() throws Exception {
-    	
-    	WebElement frm = webDriver.findElement(By.xpath(Modules_Frm));
-    	webDriver.switchTo().frame(frm);
-    	
-    }
-    
     public void EnterFilterName(String filterName) throws Exception {
     	
     	webDriver.type(FilterList_Txb, filterName);
@@ -55,7 +46,7 @@ public class Modules {
     	Thread.sleep(2000);
     }
     
-    public void VerifyConfigurationSaved() {
+    public void VerifyConfigurationSaved() throws Exception{
     	
     	ul.verifyObjectContainsText(Message_Ctr, "The configuration options have been saved.");
     }

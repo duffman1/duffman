@@ -259,9 +259,6 @@ public class AppLib {
         return new UserLogin(custWebDr);
     }
     
-    public void switchToDefaultContent() throws Exception {
-        custWebDr.switchTo().defaultContent();
-    }
     
     
 }

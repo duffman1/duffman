@@ -12,57 +12,22 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.nbcuni.test.publisher.Blocks;
-import com.nbcuni.test.publisher.ContentTypes;
 import com.nbcuni.test.publisher.AppLib;
 import com.nbcuni.test.publisher.DFPAddTags;
 import com.nbcuni.test.publisher.Logout;
 import com.nbcuni.test.publisher.Modules;
 import com.nbcuni.test.publisher.Overlay;
-import com.nbcuni.test.publisher.Taxonomy;
 import com.nbcuni.test.publisher.UserLogin;
+import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Random;
+import com.nbcuni.test.publisher.content.ContentTypes;
+import com.nbcuni.test.publisher.taxonomy.Taxonomy;
 import com.nbcuni.test.webdriver.CustomWebDriver;
 import com.nbcuni.test.webdriver.WebDriverClientExecution;
 
 
-public class GPTTagsVerification {
+public class GPTTagsVerification extends ParentTest{
 	
-	private CustomWebDriver webDriver;
-    private AppLib applib;
-
-    /**
-     * Instantiate the TestNG Before Class Method.
-     * 
-     * @param sEnv - environment
-     * @throws Exception - error
-     */
-    @BeforeMethod(alwaysRun = true)
-    @Parameters("Environment")
-    public void startSelenium(@Optional("PROD") String sEnv) {
-        try {
-            webDriver = WebDriverClientExecution.getInstance().getDriver();
-            applib = new AppLib(webDriver);
-            applib.setEnvironmentInfo(sEnv);
-        } catch (Exception e) {
-            applib.fail(e.toString());
-        }
-
-    }
-
-    /**
-     * Instantiate the TestNG After Class Method.
-     * 
-     * @throws Exception - error
-     */
-    @AfterMethod(alwaysRun = true)
-    public void stopSelenium() {
-        try {
-            webDriver.quit();
-        } catch (Exception e) {
-            applib.fail(e.toString());
-        }
-
-    }
 
     /*************************************************************************************
      * TEST CASE 
@@ -91,43 +56,40 @@ public class GPTTagsVerification {
             //Step 1A
             Taxonomy taxonomy = new Taxonomy(webDriver);
             taxonomy.ClickTier1ModulesLnk();
+            Overlay overlay = new Overlay(webDriver);
+            overlay.SwitchToModulesFrm();
             Modules modules = new Modules(webDriver);
-            modules.SwitchToModulesFrm();
             modules.EnterFilterName("Doubleclick for Publishers");
             modules.EnableModule("Doubleclick for Publishers");
-            Overlay overlay = new Overlay(webDriver);
             overlay.ClickCloseOverlayLnk();
-            applib.switchToDefaultContent();
+            overlay.switchToDefaultContent();
             
             //Step 2
-            taxonomy.MouseOverTier1StructureLnk();
-            taxonomy.MouseOverTier1StructureTier2DFPAddTagsLnk();
             taxonomy.ClickTier1StructureTier2DFPAddTagsTier3AddLnk();
             
             //Step 3
+            overlay.SwitchToAddNewDFPAdFrm();
             DFPAddTags dfpAddTags = new DFPAddTags(webDriver);
-            dfpAddTags.SwitchToAddNewDFPAdFrm();
             Random random = new Random();
             String adSlotName = random.GetCharacterString(15);
             dfpAddTags.EnterAdSlotName(adSlotName);
             dfpAddTags.EnterAdSizes("300x250");
             dfpAddTags.EnterAdUnitPatter("Test_AdUnit_Pattern");
             
-
+            //Step 4
             dfpAddTags.ClickSaveBtn();
             dfpAddTags.VerifyAdTagCreated(adSlotName);
             
             //Step 5
             overlay.ClickCloseOverlayLnk();
-            applib.switchToDefaultContent();
-            taxonomy.MouseOverTier1StructureLnk();
+            overlay.switchToDefaultContent();
             taxonomy.ClickTier1ContentTier2BlocksLnk();
             
             //Step 6
             Blocks blocks = new Blocks(webDriver);
             blocks.SwitchToBlocksFrm();
             blocks.ClickPubSauceLnk();
-            applib.switchToDefaultContent();
+            overlay.switchToDefaultContent();
             blocks.SwitchToBlocksFrm();
             blocks.SelectRegion(adSlotName, "Right sidebar");
             blocks.ClickSaveBlocksBtn();
@@ -138,7 +100,7 @@ public class GPTTagsVerification {
             
             //Step 8
             overlay.ClickCloseOverlayLnk();
-            applib.switchToDefaultContent();
+            overlay.switchToDefaultContent();
             taxonomy.ClickHomeLnk();
             blocks.VerifyScriptSourceInPage("http://www.googletagservices.com/tag/js/gpt.js");
             Assert.fail("Test case indicates there should be extra scripts present here. Following up with Pete");

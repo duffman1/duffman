@@ -16,58 +16,23 @@ import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import com.nbcuni.test.publisher.CharacterProfile;
-import com.nbcuni.test.publisher.ContentTypes;
 import com.nbcuni.test.publisher.AppLib;
-import com.nbcuni.test.publisher.Movie;
-import com.nbcuni.test.publisher.SelectFile;
 import com.nbcuni.test.publisher.Logout;
 import com.nbcuni.test.publisher.Overlay;
-import com.nbcuni.test.publisher.Taxonomy;
 import com.nbcuni.test.publisher.UserLogin;
+import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Random;
+import com.nbcuni.test.publisher.content.CastCrew;
+import com.nbcuni.test.publisher.content.CharactersInformation;
+import com.nbcuni.test.publisher.content.ContentTypes;
+import com.nbcuni.test.publisher.content.SelectFile;
+import com.nbcuni.test.publisher.taxonomy.Taxonomy;
 import com.nbcuni.test.webdriver.CustomWebDriver;
 import com.nbcuni.test.webdriver.WebDriverClientExecution;
 
 
-public class CharacterFieldShouldAppearOnlyWhenCharacterIsSelected {
+public class CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedShortVersion extends ParentTest{
 	
-	private CustomWebDriver webDriver;
-    private AppLib applib;
-
-    /**
-     * Instantiate the TestNG Before Class Method.
-     * 
-     * @param sEnv - environment
-     * @throws Exception - error
-     */
-    @BeforeMethod(alwaysRun = true)
-    @Parameters("Environment")
-    public void startSelenium(@Optional("PROD") String sEnv) {
-        try {
-            webDriver = WebDriverClientExecution.getInstance().getDriver();
-            applib = new AppLib(webDriver);
-            applib.setEnvironmentInfo(sEnv);
-        } catch (Exception e) {
-            applib.fail(e.toString());
-        }
-
-    }
-
-    /**
-     * Instantiate the TestNG After Class Method.
-     * 
-     * @throws Exception - error
-     */
-    @AfterMethod(alwaysRun = true)
-    public void stopSelenium() {
-        try {
-            webDriver.quit();
-        } catch (Exception e) {
-            applib.fail(e.toString());
-        }
-
-    }
 
     /*************************************************************************************
      * TEST CASE 3106 Adding new custom content type
@@ -87,7 +52,7 @@ public class CharacterFieldShouldAppearOnlyWhenCharacterIsSelected {
      * @throws Throwable No Return values are needed
      *************************************************************************************/
     @Test(groups = {"full", "smoke" })
-    public void CharacterFieldShouldAppearOnlyWhenCharacterIsSelected() throws Exception{
+    public void CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedShortVersion() throws Exception{
          
         	//Step 1
         	UserLogin userLogin = applib.openApplication();
@@ -100,19 +65,22 @@ public class CharacterFieldShouldAppearOnlyWhenCharacterIsSelected {
             taxonomy.ClickTier1ContentTier2AddContentTier3MovieLnk();
             
             //Step 3
-            Movie movie = new Movie(webDriver);
-            movie.SwitchToCreateMovieFrm();
-            movie.ClickCastCrewTab();
+            Overlay overlay = new Overlay(webDriver);
+            overlay.SwitchToCreateMovieFrm();
+            CastCrew castCrew = new CastCrew(webDriver);
+            castCrew.ClickCastCrewLnk();
             List<String> allRoles = Arrays.asList("Contributor", "Directory", "Executive Producer", "Host",
             		"Judge", "Producer", "Self", "Song Writer", "Writer");
             for (String role : allRoles) {
             	
-            	movie.SelectRole(role);
-            	movie.VerifyCharacterTxbNotDisplayed();
+            	castCrew.SelectRole(role); Thread.sleep(1000);
+            	castCrew.VerifyCharacterTxbNotDisplayed();
+            	
             }
             
             //Step 4
-            movie.SelectRole("Character");
+            castCrew.SelectRole("Character");
+            castCrew.VerifyCharacterTxbDisplayed();
             
             
     }

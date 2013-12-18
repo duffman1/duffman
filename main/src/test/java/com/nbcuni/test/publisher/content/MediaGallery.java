@@ -1,4 +1,4 @@
-package com.nbcuni.test.publisher;
+package com.nbcuni.test.publisher.content;
 
 
 import org.openqa.selenium.By;
@@ -10,6 +10,7 @@ import org.testng.Assert;
 import org.testng.Reporter;
 
 import com.nbcuni.test.lib.Util;
+import com.nbcuni.test.publisher.AppLib;
 import com.nbcuni.test.webdriver.CustomWebDriver;
 
 
@@ -26,7 +27,6 @@ public class MediaGallery {
     private static AppLib al;
     private final Util ul;
     
-    private static String CreateMediaGallery_Frm = "//iframe[@title='Create Media Gallery dialog']";
     private static String Title_Txb = "//input[@id='edit-title']";
     private static String CoverItemSelect_Btn = "//a[@id='edit-field-cover-item-und-0-select']";
     private static String Cover_Img = "//div[@class='media-thumbnail']/img";
@@ -40,13 +40,6 @@ public class MediaGallery {
         
     }
    
-    public void SwitchToCreateMediaGalleryFrm() throws Exception {
-    	
-    	WebElement frm = webDriver.findElement(By.xpath(CreateMediaGallery_Frm));
-    	webDriver.switchTo().frame(frm);
-    	
-    }
-    
     public void EnterTitle(String titleName) throws Exception{
     	
     	new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(By.xpath(Title_Txb)));
