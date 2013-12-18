@@ -68,6 +68,7 @@ public class AppLib {
     private String appURL = "";
     private String proxyUrl = "";
     private Integer proxyPort = 0;
+    private String pathToMediaContent = "";
 
     private static String configFileName = "src" + File.separator + "test" + File.separator + "resources"
             + File.separator + "config.properties";
@@ -132,7 +133,11 @@ public class AppLib {
         }
     }
 
-
+    public String getPathToMedia(){
+    	
+    	return pathToMediaContent = configProperties.getProperty(environment + pathToMediaContent);
+    }
+    
     /**
      * Returns the application URL e.g. http://www.nbc.com
      * 

@@ -85,7 +85,7 @@ public class CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter ex
             selectFile.SwitchToSelectFileFrm();
             //TODO - this needs to be modified to find a file from a local file repository.
             //ultimately it will need to leverage the remote file upload feature of webdriver for sauce execution
-            selectFile.EnterFilePath("/Users/brandonclark/Desktop/HanSolo.jpg");
+            selectFile.EnterFilePath(applib.getPathToMedia() + "HanSolo.jpg");
             selectFile.ClickUploadBtn();
             selectFile.WaitForFileUploaded("HanSolo.jpg");
             selectFile.ClickNextBtn();

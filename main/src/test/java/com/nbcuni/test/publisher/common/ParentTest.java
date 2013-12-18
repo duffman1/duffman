@@ -54,7 +54,8 @@ public class ParentTest {
     @AfterMethod(alwaysRun = true)
     public void stopSelenium() {
         try {
-            webDriver.quit();
+            
+        	webDriver.quit();
         } catch (Exception e) {
             applib.fail(e.toString());
         }

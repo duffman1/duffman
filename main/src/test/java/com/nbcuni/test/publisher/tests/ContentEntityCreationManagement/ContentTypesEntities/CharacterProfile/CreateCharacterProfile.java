@@ -40,7 +40,7 @@ public class CreateCharacterProfile extends ParentTest{
      * @throws Throwable No Return values are needed
      *************************************************************************************/
     @Test(groups = {"full", "smoke" })
-    public void CreateCharacterProfile() throws Exception{
+    public void CreateCharacterProfile() throws Exception {
          
         	//Step 1
         	UserLogin userLogin = applib.openApplication();
@@ -64,7 +64,7 @@ public class CreateCharacterProfile extends ParentTest{
             selectFile.SwitchToSelectFileFrm();
             //TODO - this needs to be modified to find a file from a local file repository.
             //ultimately it will need to leverage the remote file upload feature of webdriver for sauce execution
-            selectFile.EnterFilePath("/Users/brandonclark/Desktop/HanSolo.jpg");
+            selectFile.EnterFilePath(applib.getPathToMedia() + "HanSolo.jpg");
             selectFile.ClickUploadBtn();
             selectFile.WaitForFileUploaded("HanSolo.jpg");
             selectFile.ClickNextBtn();
