@@ -72,8 +72,7 @@ public class AddingNewCustomContentType {
      *************************************************************************************/
     @Test(groups = {"full", "smoke" })
     public void Test() throws Exception{
-        try {
-            
+        
         	//Step 1
         	UserLogin userLogin = applib.openApplication();
             userLogin.Login("admin@publisher.nbcuni.com", "pa55word");
@@ -126,10 +125,6 @@ public class AddingNewCustomContentType {
             contentTypes.SwitchToCreateContentFrm(contentTypeName);
             contentTypes.VerifyFieldSaveBtnPresent(newFieldName);
             
-            
-        } catch (Exception e) {
-            applib.fail(e.toString());
-        }
-
+        
     }
 }

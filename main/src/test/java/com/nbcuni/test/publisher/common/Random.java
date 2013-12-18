@@ -32,7 +32,6 @@ public class Random {
         //generate a random character string value
     	String charString = UUID.randomUUID().toString().replace("-", "").substring(0, MaximumLength);
     	
-
         return charString;
     }
     

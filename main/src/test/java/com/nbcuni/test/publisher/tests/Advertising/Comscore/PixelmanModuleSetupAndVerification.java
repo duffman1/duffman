@@ -1,6 +1,7 @@
 package com.nbcuni.test.publisher.tests.Advertising.Comscore;
 
 
+import org.openqa.selenium.By;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
@@ -23,7 +24,7 @@ import com.nbcuni.test.webdriver.WebDriverClientExecution;
 
 public class PixelmanModuleSetupAndVerification {
 	
-	private CustomWebDriver cs;
+	private CustomWebDriver webDriver;
     private AppLib applib;
 
     /**
@@ -36,8 +37,8 @@ public class PixelmanModuleSetupAndVerification {
     @Parameters("Environment")
     public void startSelenium(@Optional("PROD") String sEnv) {
         try {
-            cs = WebDriverClientExecution.getInstance().getDriver();
-            applib = new AppLib(cs);
+            webDriver = WebDriverClientExecution.getInstance().getDriver();
+            applib = new AppLib(webDriver);
             applib.setEnvironmentInfo(sEnv);
         } catch (Exception e) {
             applib.fail(e.toString());
@@ -53,7 +54,7 @@ public class PixelmanModuleSetupAndVerification {
     @AfterMethod(alwaysRun = true)
     public void stopSelenium() {
         try {
-            cs.quit();
+            webDriver.quit();
         } catch (Exception e) {
             applib.fail(e.toString());
         }
@@ -77,72 +78,67 @@ public class PixelmanModuleSetupAndVerification {
      * @throws Throwable No Return values are needed
      *************************************************************************************/
     @Test(groups = {"full", "smoke" })
-    public void Test() {
-        try {
+    public void Test() throws Exception{
+        
+    	//Step 1
+        UserLogin userLogin = applib.openApplication();
+        userLogin.Login("admin@publisher.nbcuni.com", "pa55word");
+        
+        //Step 2
+        Taxonomy taxonomy = new Taxonomy(webDriver);
+        taxonomy.ClickTier1ModulesLnk();
+        Modules modules = new Modules(webDriver);
+        modules.SwitchToModulesFrm();
+        modules.EnterFilterName("Pixelman");
             
-        	//Step 1
-        	UserLogin userLogin = applib.openApplication();
-            userLogin.Login("admin@publisher.nbcuni.com", "pa55word");
+        //Step 3
+        modules.EnableModule("Pixelman");
             
-            //Step 2
-            Taxonomy taxonomy = new Taxonomy(cs);
-            taxonomy.ClickTier1ModulesLnk();
-            Modules modules = new Modules(cs);
-            modules.SwitchToModulesFrm();
-            modules.EnterFilterName("Pixelman");
+        //Step 4
+        modules.EnterFilterName("DART");
+        modules.DisableModule("DART");
+        modules.EnterFilterName("Doubleclick for Publishers");
+        modules.DisableModule("Doubleclick for Publishers");
             
-            //Step 3
-            modules.EnableModule("Pixelman");
+        //Step 5
+        Overlay overlay = new Overlay(webDriver);
+        overlay.ClickCloseOverlayLnk();
+        applib.switchToDefaultContent();
+        taxonomy.ClickHomeLnk();
             
-            //Step 4
-            modules.EnterFilterName("DART");
-            modules.DisableModule("DART");
-            modules.EnterFilterName("Doubleclick for Publishers");
-            modules.DisableModule("Doubleclick for Publishers");
+        //Step 6
+        modules.VerifyModuleSourceInPage("//www.nbcudigitaladops.com/hosted/global_header.js");
+        modules.VerifyModuleSourceInPage("//www.nbcudigitaladops.com/hosted/site.js?h=qa5dev_publisher_nbcuni_com_header");
             
-            //Step 5
-            Overlay overlay = new Overlay(cs);
-            overlay.ClickCloseOverlayLnk();
-            applib.switchToDefaultContent();
-            taxonomy.ClickHomeLnk();
+        //Step 7
+        Logout logout = new Logout(webDriver);
+        logout.ClickLogoutBtn();
             
-            //Step 6
-            modules.VerifyModuleSourceInPage("//www.nbcudigitaladops.com/hosted/global_header.js");
-            modules.VerifyModuleSourceInPage("//www.nbcudigitaladops.com/hosted/site.js?h=qa5dev_publisher_nbcuni_com_header");
+        //Step 8
+        modules.VerifyModuleSourceInPage("//www.nbcudigitaladops.com/hosted/global_header.js");
+        modules.VerifyModuleSourceInPage("//www.nbcudigitaladops.com/hosted/site.js?h=qa5dev_publisher_nbcuni_com_header");
             
-            //Step 7
-            Logout logout = new Logout(cs);
-            logout.ClickLogoutBtn();
+        //Step 9
+        userLogin.Login("admin@publisher.nbcuni.com", "pa55word");
+        taxonomy.ClickTier1ModulesLnk();
+        modules.SwitchToModulesFrm();
+        modules.EnterFilterName("Pixelman");
+        modules.DisableModule("Pixelman");
+        modules.EnterFilterName("Pub Ads");
+        modules.DisableModule("Pub Ads");
             
-            //Step 8
-            modules.VerifyModuleSourceInPage("//www.nbcudigitaladops.com/hosted/global_header.js");
-            modules.VerifyModuleSourceInPage("//www.nbcudigitaladops.com/hosted/site.js?h=qa5dev_publisher_nbcuni_com_header");
+        //Step 10
+        modules.VerifyModuleSourceNotInPage("//www.nbcudigitaladops.com/hosted/global_header.js");
+        modules.VerifyModuleSourceNotInPage("//www.nbcudigitaladops.com/hosted/site.js?h=qa5dev_publisher_nbcuni_com_header");
+        overlay.ClickCloseOverlayLnk();
+        applib.switchToDefaultContent();
             
-            //Step 9
-            userLogin.Login("admin@publisher.nbcuni.com", "pa55word");
-            taxonomy.ClickTier1ModulesLnk();
-            modules.SwitchToModulesFrm();
-            modules.EnterFilterName("Pixelman");
-            modules.DisableModule("Pixelman");
-            modules.EnterFilterName("Pub Ads");
-            modules.DisableModule("Pub Ads");
+        //Step 11
+        logout.ClickLogoutBtn();
             
-            //Step 10
-            modules.VerifyModuleSourceNotInPage("//www.nbcudigitaladops.com/hosted/global_header.js");
-            modules.VerifyModuleSourceNotInPage("//www.nbcudigitaladops.com/hosted/site.js?h=qa5dev_publisher_nbcuni_com_header");
-            overlay.ClickCloseOverlayLnk();
-            applib.switchToDefaultContent();
-            
-            //Step 11
-            logout.ClickLogoutBtn();
-            
-            //Step 12
-            modules.VerifyModuleSourceNotInPage("//www.nbcudigitaladops.com/hosted/global_header.js");
-            modules.VerifyModuleSourceNotInPage("//www.nbcudigitaladops.com/hosted/site.js?h=qa5dev_publisher_nbcuni_com_header");
-            
-        } catch (Exception e) {
-            applib.fail(e.toString());
-        }
-
+        //Step 12
+        modules.VerifyModuleSourceNotInPage("//www.nbcudigitaladops.com/hosted/global_header.js");
+        modules.VerifyModuleSourceNotInPage("//www.nbcudigitaladops.com/hosted/site.js?h=qa5dev_publisher_nbcuni_com_header");
+         
     }
 }

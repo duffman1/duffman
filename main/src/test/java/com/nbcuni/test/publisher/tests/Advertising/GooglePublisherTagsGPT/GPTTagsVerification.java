@@ -82,9 +82,8 @@ public class GPTTagsVerification {
      * @throws Throwable No Return values are needed
      *************************************************************************************/
     @Test(groups = {"full", "smoke" })
-    public void Test() {
-        try {
-            
+    public void Test() throws Exception {
+        
         	//Step 1
         	UserLogin userLogin = applib.openApplication();
             userLogin.Login("admin@publisher.nbcuni.com", "pa55word");
@@ -148,9 +147,7 @@ public class GPTTagsVerification {
             Logout logout = new Logout(webDriver);
             logout.ClickLogoutBtn();
             
-        } catch (Exception e) {
-            applib.fail(e.toString());
-       }
+       
 
     }
 }

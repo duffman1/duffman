@@ -76,8 +76,7 @@ public class CreateCharacterProfile {
      *************************************************************************************/
     @Test(groups = {"full", "smoke" })
     public void Test() throws Exception{
-        try {
-            
+         
         	//Step 1
         	UserLogin userLogin = applib.openApplication();
             userLogin.Login("admin@publisher.nbcuni.com", "pa55word");
@@ -118,9 +117,6 @@ public class CreateCharacterProfile {
             applib.switchToDefaultContent();
             characterProfile.VerifyCharacterProfileSaved(characterName);
             
-        } catch (Exception e) {
-            applib.fail(e.toString());
-        }
-
+       
     }
 }
