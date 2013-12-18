@@ -38,7 +38,8 @@ public class Taxonomy {
     private static String Tier1_Structure_Tier2_DFPAdTags_Tier3_Add_Lnk = Tier1_Structure_Tier2_DFPAdTags_Lnk + "/..//a[text()='Add']";
     private static String Tier1_Content_Tier2_AddContent_Tier3_CharacterProfile_Lnk = Tier1_Content_Tier2_AddContent_Lnk + "/..//a[text()='Character Profile']";
     private static String Tier1_Content_Tier2_AddContent_Tier3_MediaGallery_Lnk = Tier1_Content_Tier2_AddContent_Lnk + "/..//a[text()='Media Gallery']";
-
+    private static String Tier1_Content_Tier2_AddContent_Tier3_Movie_Lnk = Tier1_Content_Tier2_AddContent_Lnk + "/..//a[text()='Movie']";
+    
     public Taxonomy(final CustomWebDriver custWebDr) {
         webDriver = custWebDr;
         ul = new Util(webDriver);
@@ -178,6 +179,15 @@ public class Taxonomy {
     	new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(By.xpath(Tier1_Content_Tier2_AddContent_Tier3_MediaGallery_Lnk)));
     	
     	webDriver.click(Tier1_Content_Tier2_AddContent_Tier3_MediaGallery_Lnk);
+ 
+    	
+    }
+    
+    public void ClickTier1ContentTier2AddContentTier3MovieLnk() throws Exception {
+    	
+    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(By.xpath(Tier1_Content_Tier2_AddContent_Tier3_Movie_Lnk)));
+    	
+    	webDriver.click(Tier1_Content_Tier2_AddContent_Tier3_Movie_Lnk);
  
     	
     }

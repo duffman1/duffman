@@ -78,7 +78,7 @@ public class PixelmanModuleSetupAndVerification {
      * @throws Throwable No Return values are needed
      *************************************************************************************/
     @Test(groups = {"full", "smoke" })
-    public void Test() throws Exception{
+    public void PixelmanModuleSetupAndVerification() throws Exception{
         
     	//Step 1
         UserLogin userLogin = applib.openApplication();
