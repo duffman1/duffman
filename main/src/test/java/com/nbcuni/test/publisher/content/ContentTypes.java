@@ -27,8 +27,6 @@ public class ContentTypes {
     private static AppLib al;
     private final Util ul;
     
-    private static String Page_Title = "Content types";
-    private static String ContentTypes_Frm = "//iframe[@title='Content types dialog']";
     private static String Name_Txb = "//input[@id='edit-name']";
     private static String Save_Btn = "//input[@id='edit-submit']";
     private static String MessageStatus_Ctr = "//div[@class='messages status']";
@@ -42,14 +40,6 @@ public class ContentTypes {
         webDriver = custWebDr;
         ul = new Util(webDriver);
         
-    }
-    
-    
-    public void SwitchToAddContentTypeFrm() throws Exception {
-    	
-    	WebElement frm = webDriver.findElement(By.xpath(ContentTypes_Frm));
-    	webDriver.switchTo().frame(frm);
-    	
     }
     
     public void EnterName(String name) throws Exception {

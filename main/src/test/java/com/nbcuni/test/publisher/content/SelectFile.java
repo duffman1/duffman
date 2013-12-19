@@ -14,6 +14,7 @@ import org.testng.Reporter;
 
 import com.nbcuni.test.lib.Util;
 import com.nbcuni.test.publisher.AppLib;
+import com.nbcuni.test.publisher.Overlay;
 import com.nbcuni.test.webdriver.CustomWebDriver;
 
 
@@ -27,8 +28,8 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 public class SelectFile {
 
     private static CustomWebDriver webDriver;
-    private static AppLib al;
-    private final Util ul;
+    private AppLib applib;
+    private Util ul;
     
     private static String SelectFile_Frm = "//iframe[@id='mediaBrowser']";
     private static String ViewLibrary_Btn = "//a[@title='View Library']";
@@ -43,10 +44,10 @@ public class SelectFile {
     private static String AddFiles_Lnk = "//a[@id='edit-upload_browse']";
     
     
-    public SelectFile(final CustomWebDriver custWebDr) {
+    public SelectFile(final CustomWebDriver custWebDr, AppLib applib) {
         webDriver = custWebDr;
         ul = new Util(webDriver);
-        
+        this.applib = applib;
     }
     
     public void SwitchToSelectFileFrm() throws Exception {
@@ -138,6 +139,22 @@ public class SelectFile {
     	
     }
     
+    public void SelectDefaultCoverImg() throws Exception {
+    	
+    	this.SwitchToSelectFileFrm();
+    	//TODO - this needs to be modified to find a file from a local file repository.
+    	//ultimately it will need to leverage the remote file upload feature of webdriver for sauce execution
+    	this.EnterFilePath(applib.getPathToMedia() + "HanSolo.jpg");
+    	this.ClickUploadBtn();
+    	this.WaitForFileUploaded("HanSolo.jpg");
+    	this.ClickNextBtn();
+    	this.ClickPublicLocalFilesRdb();
+    	this.ClickNextBtn();
+    	this.VerifyFileImagePresent("HanSolo");
+    	this.ClickSaveBtn();
+    	Overlay overlay = new Overlay(webDriver);
+    	overlay.switchToDefaultContent();
+    }
     
    
     

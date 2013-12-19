@@ -1,6 +1,8 @@
 package com.nbcuni.test.publisher.content;
 
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -58,6 +60,13 @@ public class ContentParent {
     	new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(
     			By.xpath(EditDraft_Btn)));
     	webDriver.click(EditDraft_Btn);
+    }
+    
+    public void VerifyRequiredFields(List<String> allFields) {
+    	
+    	for (String field : allFields) {
+    		webDriver.findElement(By.xpath("//*[contains(text(), '" + field + "')]/span[text()='*']"));
+    	}
     }
     
 }

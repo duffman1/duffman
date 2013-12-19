@@ -19,7 +19,6 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 public class Random {
 
     
-
     public Random() {
         
     }
@@ -34,8 +33,6 @@ public class Random {
     	
         return charString;
     }
-    
-    
     
     
   

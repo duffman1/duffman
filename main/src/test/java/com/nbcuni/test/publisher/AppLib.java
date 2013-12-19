@@ -127,7 +127,7 @@ public class AppLib {
             appURL = configProperties.getProperty(environment + ".Url");
             proxyUrl = configProperties.getProperty(environment + ".ProxyURL");
             proxyPort = Integer.valueOf(configProperties.getProperty(environment + ".ProxyPort"));
-
+            pathToMediaContent = configProperties.getProperty(environment + ".PathToMediaContent");
         } catch (Exception e) {
             new CustomWebDriverException(e, custWebDr);
         }
@@ -135,7 +135,7 @@ public class AppLib {
 
     public String getPathToMedia(){
     	
-    	return pathToMediaContent = configProperties.getProperty(environment + pathToMediaContent);
+    	return this.pathToMediaContent;
     }
     
     /**

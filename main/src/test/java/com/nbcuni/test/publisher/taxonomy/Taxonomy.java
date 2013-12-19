@@ -41,6 +41,9 @@ public class Taxonomy {
     private static String Tier1_Content_Tier2_AddContent_Tier3_MediaGallery_Lnk = Tier1_Content_Tier2_AddContent_Lnk + "/..//a[text()='Media Gallery']";
     private static String Tier1_Content_Tier2_AddContent_Tier3_Movie_Lnk = Tier1_Content_Tier2_AddContent_Lnk + "/..//a[text()='Movie']";
     private static String Tier1_Content_Tier2_AddContent_Tier3_Person_Lnk = Tier1_Content_Tier2_AddContent_Lnk + "/..//a[text()='Person']";
+    private static String Tier1_Content_Tier2_AddContent_Tier3_Post_Lnk = Tier1_Content_Tier2_AddContent_Lnk + "/..//a[text()='Post']";
+    private static String Tier1_Content_Tier2_AddContent_Tier3_TVEpisode_Lnk = Tier1_Content_Tier2_AddContent_Lnk + "/..//a[text()='TV Episode']";
+    private static String Tier1_Content_Tier2_AddContent_Tier3_TVSeason_Lnk = Tier1_Content_Tier2_AddContent_Lnk + "/..//a[text()='TV Season']";
     
     
     public Taxonomy(final CustomWebDriver custWebDr) {
@@ -168,9 +171,9 @@ public class Taxonomy {
     	
     }
     
-    public void ClickTier1ContentTier2BlocksLnk() throws Exception {
+    public void ClickTier1StructureTier2BlocksLnk() throws Exception {
     	
-    	this.MouseOverTier1ContentLnk();
+    	this.MouseOverTier1StructureLnk();
     	
     	new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Tier1_Structure_Tier2_Blocks_Lnk)));
     	
@@ -202,6 +205,18 @@ public class Taxonomy {
     	
     }
     
+    public void ClickTier1ContentTier2AddContentTier3PostLnk() throws Exception {
+    	
+    	this.MouseOverTier1ContentLnk();
+    	this.MouseOverTier1ContentTier2AddContentLnk();
+    	
+    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(By.xpath(Tier1_Content_Tier2_AddContent_Tier3_Post_Lnk)));
+    	
+    	webDriver.click(Tier1_Content_Tier2_AddContent_Tier3_Post_Lnk);
+ 
+    	
+    }
+    
     public void ClickTier1ContentTier2AddContentTier3MovieLnk() throws Exception {
     	
     	this.MouseOverTier1ContentLnk();
@@ -222,6 +237,30 @@ public class Taxonomy {
     	new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(By.xpath(Tier1_Content_Tier2_AddContent_Tier3_Person_Lnk)));
     	
     	webDriver.click(Tier1_Content_Tier2_AddContent_Tier3_Person_Lnk);
+ 
+    	
+    }
+    
+    public void ClickTier1ContentTier2AddContentTier3TVEpisodeLnk() throws Exception {
+    	
+    	this.MouseOverTier1ContentLnk();
+    	this.MouseOverTier1ContentTier2AddContentLnk();
+    	
+    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(By.xpath(Tier1_Content_Tier2_AddContent_Tier3_TVEpisode_Lnk)));
+    	
+    	webDriver.click(Tier1_Content_Tier2_AddContent_Tier3_TVEpisode_Lnk);
+ 
+    	
+    }
+    
+    public void ClickTier1ContentTier2AddContentTier3TVSeasonLnk() throws Exception {
+    	
+    	this.MouseOverTier1ContentLnk();
+    	this.MouseOverTier1ContentTier2AddContentLnk();
+    	
+    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(By.xpath(Tier1_Content_Tier2_AddContent_Tier3_TVSeason_Lnk)));
+    	
+    	webDriver.click(Tier1_Content_Tier2_AddContent_Tier3_TVSeason_Lnk);
  
     	
     }

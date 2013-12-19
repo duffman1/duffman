@@ -24,7 +24,7 @@ public class Logout {
     private final Util ul;
     
     private static String Page_Title = "Site-Install";
-    private static String LogOut_Btn = "(//a[text()='Log out'])[2]";
+    private static String LogOut_Btn = "(//a[text()='Log out'])[1]";
     
     
 

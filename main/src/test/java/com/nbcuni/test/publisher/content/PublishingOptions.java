@@ -42,6 +42,9 @@ public class PublishingOptions {
     	
     	new WebDriverWait(webDriver, 10).until(ExpectedConditions.
     			elementToBeClickable(By.xpath(PublishingOptions_Lnk)));
+    	
+    	webDriver.executeScript("window.scrollBy(0,-50);");
+    	
     	webDriver.click(PublishingOptions_Lnk);
     }
     

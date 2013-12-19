@@ -51,36 +51,25 @@ public class CreateCharacterProfile extends ParentTest{
             taxonomy.ClickTier1ContentTier2AddContentTier3CharacterProfileLnk();
             
             //Step 3
-            CharactersInformation characterProfile = new CharactersInformation(webDriver);
+            CharactersInformation charactersInformation = new CharactersInformation(webDriver);
             Overlay overlay = new Overlay(webDriver);
             overlay.SwitchToCreateCharacterProfileFrm();
             Random random = new Random();
             String characterName = random.GetCharacterString(15);
-            characterProfile.EnterCharacterFirstName(characterName);
+            charactersInformation.EnterCharacterFirstName(characterName);
             
             //Step 4
-            characterProfile.ClickAddPhotoSelectBtn();
-            SelectFile selectFile = new SelectFile(webDriver);
-            selectFile.SwitchToSelectFileFrm();
-            //TODO - this needs to be modified to find a file from a local file repository.
-            //ultimately it will need to leverage the remote file upload feature of webdriver for sauce execution
-            selectFile.EnterFilePath(applib.getPathToMedia() + "HanSolo.jpg");
-            selectFile.ClickUploadBtn();
-            selectFile.WaitForFileUploaded("HanSolo.jpg");
-            selectFile.ClickNextBtn();
-            selectFile.ClickPublicLocalFilesRdb();
-            selectFile.ClickNextBtn();
-            selectFile.VerifyFileImagePresent("HanSolo");
-            selectFile.ClickSaveBtn();
-            overlay.switchToDefaultContent();
+            charactersInformation.ClickAddPhotoSelectBtn();
+            SelectFile selectFile = new SelectFile(webDriver, applib);
+            selectFile.SelectDefaultCoverImg();
             overlay.SwitchToCreateCharacterProfileFrm();
-            characterProfile.VerifyDefaultImagePresent("HanSolo");
+            charactersInformation.VerifyDefaultImagePresent("HanSolo");
             
             //Step 5
             ContentParent contentParent = new ContentParent(webDriver);
             contentParent.ClickSaveBtn();
             overlay.switchToDefaultContent();
-            contentParent.VerifyMessageStatus("need this");
+            contentParent.VerifyMessageStatus("Character Profile " + characterName + " has been created.");
             
        
     }

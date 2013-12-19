@@ -74,25 +74,15 @@ public class CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter ex
             taxonomy.ClickTier1ContentTier2AddContentTier3CharacterProfileLnk();
             
             //Step 3 
-            CharactersInformation characterProfile = new CharactersInformation(webDriver);
+            CharactersInformation charactersInformation = new CharactersInformation(webDriver);
             Overlay overlay = new Overlay(webDriver);
             overlay.SwitchToCreateCharacterProfileFrm();
             Random random = new Random();
             String characterName = random.GetCharacterString(15);
-            characterProfile.EnterCharacterFirstName(characterName);
-            characterProfile.ClickAddPhotoSelectBtn();
-            SelectFile selectFile = new SelectFile(webDriver);
-            selectFile.SwitchToSelectFileFrm();
-            //TODO - this needs to be modified to find a file from a local file repository.
-            //ultimately it will need to leverage the remote file upload feature of webdriver for sauce execution
-            selectFile.EnterFilePath(applib.getPathToMedia() + "HanSolo.jpg");
-            selectFile.ClickUploadBtn();
-            selectFile.WaitForFileUploaded("HanSolo.jpg");
-            selectFile.ClickNextBtn();
-            selectFile.ClickPublicLocalFilesRdb();
-            selectFile.ClickNextBtn();
-            selectFile.ClickSaveBtn();
-            overlay.switchToDefaultContent();
+            charactersInformation.EnterCharacterFirstName(characterName);
+            charactersInformation.ClickAddPhotoSelectBtn();
+            SelectFile selectFile = new SelectFile(webDriver, applib);
+            selectFile.SelectDefaultCoverImg();
             overlay.SwitchToCreateCharacterProfileFrm();
             ContentParent contentParent = new ContentParent(webDriver);
             contentParent.ClickSaveBtn();
@@ -133,22 +123,14 @@ public class CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter ex
             String personFirstName = random.GetCharacterString(15);
             personsInformation.EnterFirstName(personFirstName);
             String biography = personsInformation.EnterBiography();
-            personsInformation.ClickCoverPhotoSelectBtn();
-            selectFile.SwitchToSelectFileFrm();
-            //TODO - this needs to be modified to find a file from a local file repository.
-            //ultimately it will need to leverage the remote file upload feature of webdriver for sauce execution
-            selectFile.EnterFilePath("/Users/brandonclark/Desktop/HanSolo.jpg");
-            selectFile.ClickUploadBtn();
-            selectFile.WaitForFileUploaded("HanSolo.jpg");
-            selectFile.ClickNextBtn();
-            selectFile.ClickPublicLocalFilesRdb();
-            selectFile.ClickNextBtn();
-            selectFile.ClickSaveBtn();
             overlay.switchToDefaultContent();
+            overlay.SwitchToCreatePersonFrm();
+            personsInformation.ClickCoverPhotoSelectBtn();
+            selectFile.SelectDefaultCoverImg();
             overlay.SwitchToCreatePersonFrm();
             contentParent.ClickSaveBtn();
             overlay.switchToDefaultContent();
-            contentParent.VerifyMessageStatus("need this");
+            contentParent.VerifyMessageStatus("Person " + personFirstName + " has been created.");
             
             //Step 11
             taxonomy.ClickTier1ContentTier2AddContentTier3MovieLnk();
@@ -168,29 +150,17 @@ public class CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter ex
             String movieTitle = random.GetCharacterString(15);
             basicInformation.EnterTitle(movieTitle);
             String snyopsis = basicInformation.EnterSynopsis();
-            overlay.switchToDefaultContent();
             overlay.SwitchToCreateMovieFrm();
             basicInformation.ClickCoverSelectBtn();
-            selectFile.SwitchToSelectFileFrm();
-            //TODO - this needs to be modified to find a file from a local file repository.
-            //ultimately it will need to leverage the remote file upload feature of webdriver for sauce execution
-            selectFile.EnterFilePath("/Users/brandonclark/Desktop/HanSolo.jpg");
-            selectFile.ClickUploadBtn();
-            selectFile.WaitForFileUploaded("HanSolo.jpg");
-            selectFile.ClickNextBtn();
-            selectFile.ClickPublicLocalFilesRdb();
-            selectFile.ClickNextBtn();
-            selectFile.ClickSaveBtn();
-            overlay.switchToDefaultContent();
+            selectFile.SelectDefaultCoverImg();
             overlay.SwitchToCreateMovieFrm();
             contentParent.ClickSaveBtn();
             overlay.switchToDefaultContent();
-            contentParent.VerifyMessageStatus(movieTitle);
+            contentParent.VerifyMessageStatus("Movie " + movieTitle + " has been created.");
             
             //Step 15
             contentParent.ClickEditDraftBtn();
             overlay.SwitchToEditMovieFrm(movieTitle);
-            
             castCrew.ClickCastCrewLnk();
             castCrew.VerifyCharacterTxbDisplayed();
             castCrew.VerifyPersonNameValue(personFirstName);
@@ -207,7 +177,7 @@ public class CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter ex
             //Step 17
             overlay.switchToDefaultContent();
             RevisionState revisionState = new RevisionState(webDriver);
-            revisionState.VerifyRevisionStatePublished();
+            revisionState.VerifyRevisionState("Published");
            
             
     }

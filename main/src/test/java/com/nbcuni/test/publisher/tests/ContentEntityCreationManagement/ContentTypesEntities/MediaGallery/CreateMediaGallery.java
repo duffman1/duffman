@@ -22,9 +22,10 @@ import com.nbcuni.test.publisher.Overlay;
 import com.nbcuni.test.publisher.UserLogin;
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Random;
+import com.nbcuni.test.publisher.content.BasicInformation;
 import com.nbcuni.test.publisher.content.CharactersInformation;
+import com.nbcuni.test.publisher.content.ContentParent;
 import com.nbcuni.test.publisher.content.ContentTypes;
-import com.nbcuni.test.publisher.content.MediaGallery;
 import com.nbcuni.test.publisher.content.SelectFile;
 import com.nbcuni.test.publisher.taxonomy.Taxonomy;
 import com.nbcuni.test.webdriver.CustomWebDriver;
@@ -56,30 +57,19 @@ public class CreateMediaGallery extends ParentTest{
             taxonomy.ClickTier1ContentTier2AddContentTier3MediaGalleryLnk();
             
             //Step 3
-            MediaGallery mediaGallery = new MediaGallery(webDriver);
+            BasicInformation basicInformation = new BasicInformation(webDriver);
             Overlay overlay = new Overlay(webDriver);
             overlay.SwitchToCreateMediaGalleryFrm();
             Random random = new Random();
             String title = random.GetCharacterString(15);
-            mediaGallery.EnterTitle(title);
+            basicInformation.EnterTitle(title);
             
             //Step 4
-            mediaGallery.ClickCoverItemSelectBtn();
-            SelectFile selectFile = new SelectFile(webDriver);
-            selectFile.SwitchToSelectFileFrm();
-            //TODO - this needs to be modified to find a file from a local file repository.
-            //ultimately it will need to leverage the remote file upload feature of webdriver for sauce execution
-            selectFile.EnterFilePath(applib.getPathToMedia() + "HanSolo.jpg");
-            selectFile.ClickUploadBtn();
-            selectFile.WaitForFileUploaded("HanSolo.jpg");
-            selectFile.ClickNextBtn();
-            selectFile.ClickPublicLocalFilesRdb();
-            selectFile.ClickNextBtn();
-            selectFile.VerifyFileImagePresent("HanSolo");
-            selectFile.ClickSaveBtn();
-            overlay.switchToDefaultContent();
+            basicInformation.ClickCoverSelectBtn();
+            SelectFile selectFile = new SelectFile(webDriver, applib);
+            selectFile.SelectDefaultCoverImg();
             overlay.SwitchToCreateMediaGalleryFrm();
-            mediaGallery.VerifyCoverImagePresent("HanSolo");
+            basicInformation.VerifyCoverImagePresent("HanSolo");
             
             //Step 5
             /* TODO - find a way to get multiple file uploads working
@@ -93,9 +83,9 @@ public class CreateMediaGallery extends ParentTest{
             */
             
             //Step 6
-            mediaGallery.ClickSaveBtn();
-            mediaGallery.VerifyMediaGallerySaved(title);
-            
+            ContentParent contentParent = new ContentParent(webDriver);
+            contentParent.ClickSaveBtn();
+            contentParent.VerifyMessageStatus("Media Gallery " + title + " has been created.");
             
         
     }

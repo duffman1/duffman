@@ -44,12 +44,12 @@ public class AddingNewCustomContentType extends ParentTest{
             
             //Step 2
             Taxonomy taxonomy = new Taxonomy(webDriver);
-            taxonomy.MouseOverTier1StructureLnk();
             taxonomy.ClickTier1StructureTier2ContentTypeTier3AddContentTypeLnk();
             
             //Step 3
+            Overlay overlay = new Overlay(webDriver);
+            overlay.SwitchToAddContentTypeFrm();
             ContentTypes contentTypes = new ContentTypes(webDriver);
-            contentTypes.SwitchToAddContentTypeFrm();
             Random random = new Random();
             String contentTypeName = random.GetCharacterString(10);
             contentTypes.EnterName(contentTypeName);
@@ -57,7 +57,6 @@ public class AddingNewCustomContentType extends ParentTest{
             //Step 4
             contentTypes.ClickSaveBtn();
             contentTypes.VerifyContentTypeSaved(contentTypeName);
-            Overlay overlay = new Overlay(webDriver);
             overlay.ClickCloseOverlayLnk();
             
             //Step 5

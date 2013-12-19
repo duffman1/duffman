@@ -83,7 +83,7 @@ public class GPTTagsVerification extends ParentTest{
             //Step 5
             overlay.ClickCloseOverlayLnk();
             overlay.switchToDefaultContent();
-            taxonomy.ClickTier1ContentTier2BlocksLnk();
+            taxonomy.ClickTier1StructureTier2BlocksLnk();
             
             //Step 6
             Blocks blocks = new Blocks(webDriver);

@@ -52,9 +52,9 @@ public class PixelmanModuleSetupAndVerification extends ParentTest {
         //Step 2
         Taxonomy taxonomy = new Taxonomy(webDriver);
         taxonomy.ClickTier1ModulesLnk();
-        Modules modules = new Modules(webDriver);
         Overlay overlay = new Overlay(webDriver);
         overlay.SwitchToModulesFrm();
+        Modules modules = new Modules(webDriver);
         modules.EnterFilterName("Pixelman");
             
         //Step 3

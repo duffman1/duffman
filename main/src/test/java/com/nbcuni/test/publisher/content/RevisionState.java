@@ -37,11 +37,11 @@ public class RevisionState {
         
     }
    
-    public void VerifyRevisionStatePublished() throws Exception {
+    public void VerifyRevisionState(String state) throws Exception {
     	
     	new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOf(
     			webDriver.findElement(By.xpath(RevisionState_Ctr))));
-    	Assert.assertTrue(webDriver.findElement(By.xpath(RevisionState_Ctr)).getText().contains("Published"));
+    	Assert.assertTrue(webDriver.findElement(By.xpath(RevisionState_Ctr)).getText().contains(state));
     }
     
     

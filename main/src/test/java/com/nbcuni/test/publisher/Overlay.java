@@ -32,6 +32,10 @@ public class Overlay {
     private static String DFPAddTags_Frm = "//iframe[@title='DFP Ad Tags dialog']";
     private static String AddNewDFPAd_Frm = "//iframe[@title='Add a new DFP ad dialog']";
     private static String CreateMediaGallery_Frm = "//iframe[@title='Create Media Gallery dialog']";
+    private static String ContentTypes_Frm = "//iframe[@title='Content types dialog']";
+    private static String CreatePost_Frm = "//iframe[@title='Create Post dialog']";
+    private static String CreateTVEpisode_Frm = "//iframe[@title='Create TV Episode dialog']";
+    private static String CreateTVSeason_Frm = "//iframe[@title='Create TV Season dialog']";
     
     public Overlay(final CustomWebDriver custWebDr) {
     	
@@ -52,6 +56,13 @@ public class Overlay {
     public void SwitchToCreateCharacterProfileFrm() throws Exception {
     	
     	WebElement frm = webDriver.findElement(By.xpath(CreateCharacterProfile_Frm));
+    	webDriver.switchTo().frame(frm);
+    	
+    }
+    
+    public void SwitchToCreatePostFrm() throws Exception {
+    	
+    	WebElement frm = webDriver.findElement(By.xpath(CreatePost_Frm));
     	webDriver.switchTo().frame(frm);
     	
     }
@@ -105,6 +116,26 @@ public class Overlay {
     	
     }
     
-   
+	public void SwitchToAddContentTypeFrm() throws Exception {
+    	
+    	WebElement frm = webDriver.findElement(By.xpath(ContentTypes_Frm));
+    	webDriver.switchTo().frame(frm);
+    	
+    }
+	
+	public void SwitchToCreateTVEpisodeFrm() throws Exception {
+    	
+    	WebElement frm = webDriver.findElement(By.xpath(CreateTVEpisode_Frm));
+    	webDriver.switchTo().frame(frm);
+    	
+    }
+	
+	public void SwitchToCreateTVSeasonFrm() throws Exception {
+    	
+    	WebElement frm = webDriver.findElement(By.xpath(CreateTVSeason_Frm));
+    	webDriver.switchTo().frame(frm);
+    	
+    }
+    
 }
 

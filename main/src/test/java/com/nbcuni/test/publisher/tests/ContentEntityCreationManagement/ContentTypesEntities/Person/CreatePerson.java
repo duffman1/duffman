@@ -1,4 +1,4 @@
-package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Movie;
+package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person;
 
 
 import java.util.Arrays;
@@ -24,35 +24,29 @@ import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Random;
 import com.nbcuni.test.publisher.content.CastCrew;
 import com.nbcuni.test.publisher.content.CharactersInformation;
+import com.nbcuni.test.publisher.content.ContentParent;
 import com.nbcuni.test.publisher.content.ContentTypes;
+import com.nbcuni.test.publisher.content.PersonsInformation;
 import com.nbcuni.test.publisher.content.SelectFile;
 import com.nbcuni.test.publisher.taxonomy.Taxonomy;
 import com.nbcuni.test.webdriver.CustomWebDriver;
 import com.nbcuni.test.webdriver.WebDriverClientExecution;
 
 
-public class CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedShortVersion extends ParentTest{
+public class CreatePerson extends ParentTest{
 	
 
     /*************************************************************************************
      * TEST CASE 3106 Adding new custom content type
      * Step 1 - Login to publisher using drupal 1 credentials <br>
-     * Step 2 - Go to "Content" >> "Add Content" >> "Movie"<br>
-     * Step 3 - Click on the "Cast/Crew" tab, and then in turn select every "Role" option except "Character". These include:
-     * Contributor
-     * Directory
-     * Executive Producer
-     * Host
-     * Judge
-     * Producer
-     * Self
-     * Song Writer
-     * Writer
-     * Step 4 - In the "Role" list, click "Character"<br>
+     * Step 2 - Click on Content --> Add content --> person<br>
+     * Step 3 - Populate the valid value in following mandatory fields: 'Character: First Name' or 'Character: Last Name' 'Biography'<br>
+	 * Step 4 - Click on 'Select' button under Cover Media, click on 'Browse' button and choose the image from the local machine. Click on 'Next' button twice then click on 'Save' button.<br>
+     * Step 5 - Click on 'Save' button.<br> 
      * @throws Throwable No Return values are needed
      *************************************************************************************/
     @Test(groups = {"full", "smoke" })
-    public void CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedShortVersion() throws Exception{
+    public void CreatePerson() throws Exception{
          
         	//Step 1
         	UserLogin userLogin = applib.openApplication();
@@ -60,25 +54,30 @@ public class CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedShortVersion e
             
             //Step 2
             Taxonomy taxonomy = new Taxonomy(webDriver);
-            taxonomy.ClickTier1ContentTier2AddContentTier3MovieLnk();
+            taxonomy.ClickTier1ContentTier2AddContentTier3PersonLnk();
             
             //Step 3
             Overlay overlay = new Overlay(webDriver);
-            overlay.SwitchToCreateMovieFrm();
-            CastCrew castCrew = new CastCrew(webDriver);
-            castCrew.ClickCastCrewLnk();
-            List<String> allRoles = Arrays.asList("Contributor", "Directory", "Executive Producer", "Host",
-            		"Judge", "Producer", "Self", "Song Writer", "Writer");
-            for (String role : allRoles) {
-            	
-            	castCrew.SelectRole(role); Thread.sleep(1000);
-            	castCrew.VerifyCharacterTxbNotDisplayed();
-            	
-            }
+            overlay.SwitchToCreatePersonFrm();
+            PersonsInformation personsInformation = new PersonsInformation(webDriver);
+            Random random = new Random();
+            String personFirstName = random.GetCharacterString(15);
+            personsInformation.EnterFirstName(personFirstName);
+            String biography = personsInformation.EnterBiography();
             
             //Step 4
-            castCrew.SelectRole("Character");
-            castCrew.VerifyCharacterTxbDisplayed();
+            overlay.switchToDefaultContent();
+            overlay.SwitchToCreatePersonFrm();
+            personsInformation.ClickCoverPhotoSelectBtn();
+            SelectFile selectFile = new SelectFile(webDriver, applib);
+            selectFile.SelectDefaultCoverImg();
+            overlay.SwitchToCreatePersonFrm();
+            ContentParent contentParent = new ContentParent(webDriver);
+            contentParent.ClickSaveBtn();
+            
+            //Step 5
+            overlay.switchToDefaultContent();
+            contentParent.VerifyMessageStatus("Person " + personFirstName + " has been created.");
             
             
     }
