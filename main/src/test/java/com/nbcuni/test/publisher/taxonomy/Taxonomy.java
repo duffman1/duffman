@@ -44,6 +44,8 @@ public class Taxonomy {
     private static String Tier1_Content_Tier2_AddContent_Tier3_Post_Lnk = Tier1_Content_Tier2_AddContent_Lnk + "/..//a[text()='Post']";
     private static String Tier1_Content_Tier2_AddContent_Tier3_TVEpisode_Lnk = Tier1_Content_Tier2_AddContent_Lnk + "/..//a[text()='TV Episode']";
     private static String Tier1_Content_Tier2_AddContent_Tier3_TVSeason_Lnk = Tier1_Content_Tier2_AddContent_Lnk + "/..//a[text()='TV Season']";
+    private static String Tier1_Content_Tier2_Queues_Lnk = Tier1_Content_Lnk + "/../ul//a[text()='Queues']";
+    private static String Tier1_Content_Tier2_Queues_Tier3_AddPromoQueue_Lnk = Tier1_Content_Tier2_Queues_Lnk + "/..//a[text()='Add Promo Queue']";
     
     
     public Taxonomy(final CustomWebDriver custWebDr) {
@@ -93,6 +95,26 @@ public class Taxonomy {
     	new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Tier1_Structure_Tier2_ContentTypes_Tier3_AddContentType_Lnk)));
     	
     	webDriver.click(Tier1_Structure_Tier2_ContentTypes_Tier3_AddContentType_Lnk);
+    	
+    }
+    
+    public void MouseOverTier1ContentTier2QueuesLnk() throws Exception {
+    	
+    	this.MouseOverTier1ContentLnk();
+    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Tier1_Content_Tier2_Queues_Lnk)));
+    	
+    	Actions action = new Actions(webDriver);
+    	action.moveToElement(webDriver.findElement(By.xpath(Tier1_Content_Tier2_Queues_Lnk))).build().perform();
+    }
+    
+    public void ClickTier1ContentTier2QueuesTier3AddPromoQueueLnk() throws Exception {
+    	
+    	this.MouseOverTier1ContentLnk();
+    	this.MouseOverTier1ContentTier2QueuesLnk();
+    	
+    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Tier1_Content_Tier2_Queues_Tier3_AddPromoQueue_Lnk)));
+    	
+    	webDriver.click(Tier1_Content_Tier2_Queues_Tier3_AddPromoQueue_Lnk);
     	
     }
     

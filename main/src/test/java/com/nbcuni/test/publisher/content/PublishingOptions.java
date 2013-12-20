@@ -43,7 +43,7 @@ public class PublishingOptions {
     	new WebDriverWait(webDriver, 10).until(ExpectedConditions.
     			elementToBeClickable(By.xpath(PublishingOptions_Lnk)));
     	
-    	webDriver.executeScript("window.scrollBy(0,-50);");
+    	webDriver.executeScript("window.scrollBy(0,-50);"); 
     	
     	webDriver.click(PublishingOptions_Lnk);
     }
@@ -53,6 +53,11 @@ public class PublishingOptions {
     	new WebDriverWait(webDriver, 10).until(ExpectedConditions.
     			elementToBeClickable(By.xpath(CreateNewRevision_Cbx)));
     	webDriver.click(CreateNewRevision_Cbx);
+    }
+    
+    public void VerifyCreateNewRevisionCbxChecked() throws Exception {
+    	
+    	Assert.assertTrue(webDriver.findElement(By.xpath(CreateNewRevision_Cbx)).isSelected() == true);
     }
     
     public void SelectModerationState(String stateName) throws Exception {

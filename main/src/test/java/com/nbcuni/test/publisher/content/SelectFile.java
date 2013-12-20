@@ -7,6 +7,7 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.remote.LocalFileDetector;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -81,6 +82,7 @@ public class SelectFile {
     public void EnterFilePath(String pathToFile) throws Exception {
     	
     	new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(By.xpath(BrowseToFile_Upl)));
+    	webDriver.setFileDetector(new LocalFileDetector());
     	webDriver.findElement(By.xpath(BrowseToFile_Upl)).sendKeys(pathToFile);
     	
     }
@@ -142,8 +144,6 @@ public class SelectFile {
     public void SelectDefaultCoverImg() throws Exception {
     	
     	this.SwitchToSelectFileFrm();
-    	//TODO - this needs to be modified to find a file from a local file repository.
-    	//ultimately it will need to leverage the remote file upload feature of webdriver for sauce execution
     	this.EnterFilePath(applib.getPathToMedia() + "HanSolo.jpg");
     	this.ClickUploadBtn();
     	this.WaitForFileUploaded("HanSolo.jpg");

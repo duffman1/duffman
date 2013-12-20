@@ -35,6 +35,8 @@ import java.util.concurrent.TimeUnit;
 
 
 
+
+
 import junit.framework.Assert;
 
 import org.openqa.selenium.By;
@@ -135,7 +137,8 @@ public class AppLib {
 
     public String getPathToMedia(){
     	
-    	return this.pathToMediaContent;
+    	String pathToMedia = System.getProperty("user.dir") + this.pathToMediaContent;
+    	return pathToMedia;
     }
     
     /**

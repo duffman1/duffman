@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Dec 19 17:47:12 EST 2013</td>
+<td>Started on:</td><td>Fri Dec 20 15:57:18 EST 2013</td>
 </tr>
-<tr><td>Total time:</td><td>82 seconds (82830 ms)</td>
+<tr><td>Total time:</td><td>58 seconds (58974 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,22 +75,19 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Movie.CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter.CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter()'><b>CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Movie.CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter<br/>
-<a href="#Output-1973923767" onClick='toggleBox("Output-1973923767", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.nbcuni.test.publisher.tests.Queues.AddModerationStatesToRevisionsOfAQueue.QueueModerationStates.QueueModerationStates()'><b>QueueModerationStates</b><br>Test class: com.nbcuni.test.publisher.tests.Queues.AddModerationStatesToRevisionsOfAQueue.QueueModerationStates<br/>
+<a href="#Output-1820034055" onClick='toggleBox("Output-1820034055", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1973923767" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1973923767">
+<a href="#Output-1820034055" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1820034055">
 URL: http://qa5dev.publisher.nbcuni.com<br/>
 </div>
 </td>
-<td><div><pre>java.lang.AssertionError: expected [1aed7b07d798415] but found []
+<td><div><pre>java.lang.AssertionError: verifyObjectContainsText:  Object //p[@class=&apos;state-flow-history-event&apos;] Does not contain the text Revision was set from Draft to Draft on 12/20/2013NOT
 	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:494)
-	at org.testng.Assert.assertEquals(Assert.java:123)
-	at org.testng.Assert.assertEquals(Assert.java:176)
-	at org.testng.Assert.assertEquals(Assert.java:186)
-	at com.nbcuni.test.publisher.content.CastCrew.VerifyPersonNameValue(CastCrew.java:89)
-	at com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Movie.CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter.CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter(CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter.java:166)
+	at com.nbcuni.test.lib.Util.verifyObjectContainsText(Util.java:1163)
+	at com.nbcuni.test.publisher.queues.Queues.VerifyStateFlowHistoryEvent(Queues.java:103)
+	at com.nbcuni.test.publisher.tests.Queues.AddModerationStatesToRevisionsOfAQueue.QueueModerationStates.QueueModerationStates(QueueModerationStates.java:128)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -115,15 +112,12 @@ URL: http://qa5dev.publisher.nbcuni.com<br/>
 	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1973923767", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1973923767'><pre>java.lang.AssertionError: expected [1aed7b07d798415] but found []
+</pre></div><a href='#' onClick='toggleBox("stack-trace1820034055", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1820034055'><pre>java.lang.AssertionError: verifyObjectContainsText:  Object //p[@class=&apos;state-flow-history-event&apos;] Does not contain the text Revision was set from Draft to Draft on 12/20/2013NOT
 	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:494)
-	at org.testng.Assert.assertEquals(Assert.java:123)
-	at org.testng.Assert.assertEquals(Assert.java:176)
-	at org.testng.Assert.assertEquals(Assert.java:186)
-	at com.nbcuni.test.publisher.content.CastCrew.VerifyPersonNameValue(CastCrew.java:89)
-	at com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Movie.CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter.CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter(CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter.java:166)
+	at com.nbcuni.test.lib.Util.verifyObjectContainsText(Util.java:1163)
+	at com.nbcuni.test.publisher.queues.Queues.VerifyStateFlowHistoryEvent(Queues.java:103)
+	at com.nbcuni.test.publisher.tests.Queues.AddModerationStatesToRevisionsOfAQueue.QueueModerationStates.QueueModerationStates(QueueModerationStates.java:128)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -149,8 +143,8 @@ URL: http://qa5dev.publisher.nbcuni.com<br/>
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
 </pre></div></td>
-<td>54</td>
-<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Movie.CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter@7a9fa239</td></tr>
+<td>30</td>
+<td>com.nbcuni.test.publisher.tests.Queues.AddModerationStatesToRevisionsOfAQueue.QueueModerationStates@4928ef7d</td></tr>
 </table><p>
 </body>
 </html>

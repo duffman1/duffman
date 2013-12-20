@@ -36,6 +36,9 @@ public class Overlay {
     private static String CreatePost_Frm = "//iframe[@title='Create Post dialog']";
     private static String CreateTVEpisode_Frm = "//iframe[@title='Create TV Episode dialog']";
     private static String CreateTVSeason_Frm = "//iframe[@title='Create TV Season dialog']";
+    private static String AddPromoQueue_Frm = "//iframe[@title='Add promo queue queue dialog']";
+    private static String QueuesListing_Frm = "//iframe[@title='Queues Listing dialog']";
+    private static String QueuesRevisionList_Frm = "//iframe[@title='Queues Revision list dialog']";
     
     public Overlay(final CustomWebDriver custWebDr) {
     	
@@ -133,6 +136,41 @@ public class Overlay {
 	public void SwitchToCreateTVSeasonFrm() throws Exception {
     	
     	WebElement frm = webDriver.findElement(By.xpath(CreateTVSeason_Frm));
+    	webDriver.switchTo().frame(frm);
+    	
+    }
+	
+	public void SwitchToAddPromoQueueFrm() throws Exception {
+    	
+    	WebElement frm = webDriver.findElement(By.xpath(AddPromoQueue_Frm));
+    	webDriver.switchTo().frame(frm);
+    	
+    }
+	
+	public void SwitchToQueuesListingFrm() throws Exception {
+    	
+    	WebElement frm = webDriver.findElement(By.xpath(QueuesListing_Frm));
+    	webDriver.switchTo().frame(frm);
+    	
+    }
+	
+	public void SwitchToDeleteQueueFrm(String queueTitle) throws Exception {
+    	
+		WebElement frm = webDriver.findElement(By.xpath(
+				"//iframe[@title='Are you sure you want to delete the Queue " + queueTitle + "? dialog']"));
+    	webDriver.switchTo().frame(frm);
+    }
+	
+	public void SwitchToEditQueueFrm(String queueTitle) throws Exception {
+    	
+		WebElement frm = webDriver.findElement(By.xpath(
+				"//iframe[@title='Edit " + queueTitle + " dialog']"));
+    	webDriver.switchTo().frame(frm);
+    }
+	
+	public void SwitchToQueuesRevisionListFrm() throws Exception {
+    	
+    	WebElement frm = webDriver.findElement(By.xpath(QueuesRevisionList_Frm));
     	webDriver.switchTo().frame(frm);
     	
     }
