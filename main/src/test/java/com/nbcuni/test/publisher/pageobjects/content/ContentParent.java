@@ -1,4 +1,4 @@
-package com.nbcuni.test.publisher.content;
+package com.nbcuni.test.publisher.pageobjects.content;
 
 
 import java.util.List;

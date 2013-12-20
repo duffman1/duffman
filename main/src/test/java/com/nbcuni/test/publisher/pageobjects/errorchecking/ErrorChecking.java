@@ -1,4 +1,4 @@
-package com.nbcuni.test.publisher.errorchecking;
+package com.nbcuni.test.publisher.pageobjects.errorchecking;
 
 
 import java.util.List;

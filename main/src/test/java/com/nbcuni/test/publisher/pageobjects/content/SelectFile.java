@@ -1,4 +1,4 @@
-package com.nbcuni.test.publisher.content;
+package com.nbcuni.test.publisher.pageobjects.content;
 
 
 import java.util.ArrayList;
@@ -15,7 +15,7 @@ import org.testng.Reporter;
 
 import com.nbcuni.test.lib.Util;
 import com.nbcuni.test.publisher.AppLib;
-import com.nbcuni.test.publisher.Overlay;
+import com.nbcuni.test.publisher.pageobjects.Overlay;
 import com.nbcuni.test.webdriver.CustomWebDriver;
 
 

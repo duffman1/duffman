@@ -1,4 +1,4 @@
-package com.nbcuni.test.publisher.taxonomy;
+package com.nbcuni.test.publisher.pageobjects.taxonomy;
 
 
 import org.openqa.selenium.By;

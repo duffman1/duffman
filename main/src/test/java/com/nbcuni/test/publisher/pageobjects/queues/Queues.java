@@ -1,4 +1,4 @@
-package com.nbcuni.test.publisher.queues;
+package com.nbcuni.test.publisher.pageobjects.queues;
 
 
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.nbcuni.test.publisher;
+package com.nbcuni.test.publisher.pageobjects;
 
 
 import org.openqa.selenium.By;

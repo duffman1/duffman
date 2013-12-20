@@ -10,13 +10,13 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.nbcuni.test.publisher.AppLib;
-import com.nbcuni.test.publisher.Logout;
-import com.nbcuni.test.publisher.Overlay;
-import com.nbcuni.test.publisher.UserLogin;
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Random;
-import com.nbcuni.test.publisher.content.ContentTypes;
-import com.nbcuni.test.publisher.taxonomy.Taxonomy;
+import com.nbcuni.test.publisher.pageobjects.Logout;
+import com.nbcuni.test.publisher.pageobjects.Overlay;
+import com.nbcuni.test.publisher.pageobjects.UserLogin;
+import com.nbcuni.test.publisher.pageobjects.content.ContentTypes;
+import com.nbcuni.test.publisher.pageobjects.taxonomy.Taxonomy;
 import com.nbcuni.test.webdriver.CustomWebDriver;
 import com.nbcuni.test.webdriver.WebDriverClientExecution;
 

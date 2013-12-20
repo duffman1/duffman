@@ -1,4 +1,4 @@
-package com.nbcuni.test.publisher;
+package com.nbcuni.test.publisher.pageobjects;
 
 
 import org.openqa.selenium.By;
@@ -10,6 +10,7 @@ import org.testng.Assert;
 import org.testng.Reporter;
 
 import com.nbcuni.test.lib.Util;
+import com.nbcuni.test.publisher.AppLib;
 import com.nbcuni.test.webdriver.CustomWebDriver;
 
 
