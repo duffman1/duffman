@@ -1,9 +1,10 @@
-package com.nbcuni.test.publisher;
+package com.nbcuni.test.publisher.common;
 
 import java.awt.Color;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.StringReader;
 import java.net.HttpURLConnection;
@@ -38,15 +39,27 @@ import java.util.concurrent.TimeUnit;
 
 
 
+
+
+
+
+
+
+
 import junit.framework.Assert;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
 import org.testng.Reporter;
 
+import com.ibm.icu.text.DateFormat;
+import com.ibm.icu.text.SimpleDateFormat;
 import com.nbcuni.test.lib.Util;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.webdriver.CustomWebDriver;
@@ -73,6 +86,7 @@ public class AppLib {
     private String proxyUrl = "";
     private Integer proxyPort = 0;
     private String pathToMediaContent = "";
+    private String pathToScreenshots = "";
 
     private static String configFileName = "src" + File.separator + "test" + File.separator + "resources"
             + File.separator + "config.properties";
@@ -132,6 +146,7 @@ public class AppLib {
             proxyUrl = configProperties.getProperty(environment + ".ProxyURL");
             proxyPort = Integer.valueOf(configProperties.getProperty(environment + ".ProxyPort"));
             pathToMediaContent = configProperties.getProperty(environment + ".PathToMediaContent");
+            pathToScreenshots = configProperties.getProperty(environment + ".PathToScreenShots");
         } catch (Exception e) {
             new CustomWebDriverException(e, custWebDr);
         }
@@ -141,6 +156,35 @@ public class AppLib {
     	
     	String pathToMedia = System.getProperty("user.dir") + this.pathToMediaContent;
     	return pathToMedia;
+    }
+    
+    /*
+     * Returns screenshot and embeds in testng reports on failure
+     * 
+     */
+    
+    public void attachScreenshot() {
+    	
+        try {
+        	String storeScreenshotsTo = System.getProperty("user.dir") + this.pathToScreenshots;
+        	//TODO set file naming based on test class name rather than time of screenshot capture
+            DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+            Date date = new Date();
+            String fileExtension = dateFormat.format(date).replace("/", "");
+            fileExtension = fileExtension.replace(" ", "");
+            fileExtension = fileExtension.replace(":", "") + ".png";
+            String filePath = storeScreenshotsTo + fileExtension;
+
+            Reporter.log("Screenshot saved to " + filePath + " ");
+            
+        	File scrFile = ((TakesScreenshot) custWebDr).getScreenshotAs(OutputType.FILE);    //custWebDr.getSessionScreenshotFile();
+            FileUtils.copyFile(scrFile, new File(filePath));
+        	Reporter.log("<a href='" + filePath + "'> <img src='" + filePath + "' height='100' width='100'/> </a>");
+       	
+      } catch (Exception e) {
+          Reporter.log("Failed to capture screenshot");
+      }
+      
     }
     
     /**

@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Dec 20 15:57:18 EST 2013</td>
+<td>Started on:</td><td>Sun Dec 22 08:47:49 EST 2013</td>
 </tr>
-<tr><td>Total time:</td><td>58 seconds (58974 ms)</td>
+<tr><td>Total time:</td><td>33 seconds (33335 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,18 +76,18 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='com.nbcuni.test.publisher.tests.Queues.AddModerationStatesToRevisionsOfAQueue.QueueModerationStates.QueueModerationStates()'><b>QueueModerationStates</b><br>Test class: com.nbcuni.test.publisher.tests.Queues.AddModerationStatesToRevisionsOfAQueue.QueueModerationStates<br/>
-<a href="#Output-1820034055" onClick='toggleBox("Output-1820034055", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1375875492" onClick='toggleBox("Output-1375875492", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1820034055" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1820034055">
+<a href="#Output-1375875492" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1375875492">
 URL: http://qa5dev.publisher.nbcuni.com<br/>
 </div>
 </td>
-<td><div><pre>java.lang.AssertionError: verifyObjectContainsText:  Object //p[@class=&apos;state-flow-history-event&apos;] Does not contain the text Revision was set from Draft to Draft on 12/20/2013NOT
-	at org.testng.Assert.fail(Assert.java:94)
-	at com.nbcuni.test.lib.Util.verifyObjectContainsText(Util.java:1163)
-	at com.nbcuni.test.publisher.queues.Queues.VerifyStateFlowHistoryEvent(Queues.java:103)
-	at com.nbcuni.test.publisher.tests.Queues.AddModerationStatesToRevisionsOfAQueue.QueueModerationStates.QueueModerationStates(QueueModerationStates.java:128)
+<td><div><pre>junit.framework.AssertionFailedError
+	at junit.framework.Assert.fail(Assert.java:47)
+	at junit.framework.Assert.assertTrue(Assert.java:20)
+	at junit.framework.Assert.assertTrue(Assert.java:27)
+	at com.nbcuni.test.publisher.tests.Queues.AddModerationStatesToRevisionsOfAQueue.QueueModerationStates.QueueModerationStates(QueueModerationStates.java:71)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -112,12 +112,12 @@ URL: http://qa5dev.publisher.nbcuni.com<br/>
 	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1820034055", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1820034055'><pre>java.lang.AssertionError: verifyObjectContainsText:  Object //p[@class=&apos;state-flow-history-event&apos;] Does not contain the text Revision was set from Draft to Draft on 12/20/2013NOT
-	at org.testng.Assert.fail(Assert.java:94)
-	at com.nbcuni.test.lib.Util.verifyObjectContainsText(Util.java:1163)
-	at com.nbcuni.test.publisher.queues.Queues.VerifyStateFlowHistoryEvent(Queues.java:103)
-	at com.nbcuni.test.publisher.tests.Queues.AddModerationStatesToRevisionsOfAQueue.QueueModerationStates.QueueModerationStates(QueueModerationStates.java:128)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1375875492", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1375875492'><pre>junit.framework.AssertionFailedError
+	at junit.framework.Assert.fail(Assert.java:47)
+	at junit.framework.Assert.assertTrue(Assert.java:20)
+	at junit.framework.Assert.assertTrue(Assert.java:27)
+	at com.nbcuni.test.publisher.tests.Queues.AddModerationStatesToRevisionsOfAQueue.QueueModerationStates.QueueModerationStates(QueueModerationStates.java:71)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -143,8 +143,8 @@ URL: http://qa5dev.publisher.nbcuni.com<br/>
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
 </pre></div></td>
-<td>30</td>
-<td>com.nbcuni.test.publisher.tests.Queues.AddModerationStatesToRevisionsOfAQueue.QueueModerationStates@4928ef7d</td></tr>
+<td>4</td>
+<td>com.nbcuni.test.publisher.tests.Queues.AddModerationStatesToRevisionsOfAQueue.QueueModerationStates@71846ce0</td></tr>
 </table><p>
 </body>
 </html>

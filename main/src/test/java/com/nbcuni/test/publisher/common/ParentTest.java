@@ -1,7 +1,11 @@
 package com.nbcuni.test.publisher.common;
 
 
+import java.io.IOException;
+
 import org.openqa.selenium.By;
+import org.testng.ITestResult;
+import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
@@ -10,7 +14,6 @@ import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import com.nbcuni.test.publisher.AppLib;
 import com.nbcuni.test.publisher.common.Random;
 import com.nbcuni.test.publisher.pageobjects.Logout;
 import com.nbcuni.test.publisher.pageobjects.Modules;
@@ -48,16 +51,32 @@ public class ParentTest {
 
     /**
      * Instantiate the TestNG After Class Method.
+     * @throws IOException 
      * 
      * @throws Exception - error
      */
     @AfterMethod(alwaysRun = true)
-    public void stopSelenium() {
-        try {
-            
-        	webDriver.quit();
+    public void stopSelenium(ITestResult result) {
+        
+    	try {
+    	
+        	if (!result.isSuccess()) {
+
+        		applib.attachScreenshot();
+
+            }
+        	
         } catch (Exception e) {
             applib.fail(e.toString());
+        }
+        
+        try {
+        	
+        	webDriver.quit();
+        } 
+        catch (Exception e) {
+        
+        	applib.fail(e.toString());
         }
 
     }
