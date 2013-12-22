@@ -68,7 +68,7 @@ public class QueueModerationStates extends ParentTest{
         //Step 1
         UserLogin userLogin = applib.openApplication();
         userLogin.Login("admin@publisher.nbcuni.com", "pa55word");
-        Assert.assertTrue(webDriver.getPageSource().contains("not this"));
+        
         //Step 1a
         Taxonomy taxonomy = new Taxonomy(webDriver);
         taxonomy.ClickTier1ModulesLnk();

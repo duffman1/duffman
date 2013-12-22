@@ -46,6 +46,7 @@ import java.util.concurrent.TimeUnit;
 
 
 
+
 import junit.framework.Assert;
 
 import org.apache.commons.io.FileUtils;
@@ -56,6 +57,7 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
+import org.testng.ITestResult;
 import org.testng.Reporter;
 
 import com.ibm.icu.text.DateFormat;
@@ -158,14 +160,15 @@ public class AppLib {
     	return pathToMedia;
     }
     
-    /*
-     * Returns screenshot and embeds in testng reports on failure
-     * 
-     */
     
-    public void attachScreenshot() {
+    /**
+    * Returns screenshot and embeds in testng reports on failure
+    * 
+    */
+    public void attachScreenshot(ITestResult result) {
     	
         try {
+        	
         	String storeScreenshotsTo = System.getProperty("user.dir") + this.pathToScreenshots;
         	//TODO set file naming based on test class name rather than time of screenshot capture
             DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
@@ -175,12 +178,15 @@ public class AppLib {
             fileExtension = fileExtension.replace(":", "") + ".png";
             String filePath = storeScreenshotsTo + fileExtension;
 
+            Reporter.setCurrentTestResult(result); 
             Reporter.log("Screenshot saved to " + filePath + " ");
             
-        	File scrFile = ((TakesScreenshot) custWebDr).getScreenshotAs(OutputType.FILE);    //custWebDr.getSessionScreenshotFile();
+        	File scrFile = ((TakesScreenshot) custWebDr).getScreenshotAs(OutputType.FILE);    
             FileUtils.copyFile(scrFile, new File(filePath));
-        	Reporter.log("<a href='" + filePath + "'> <img src='" + filePath + "' height='100' width='100'/> </a>");
-       	
+            
+        	Reporter.log("<br><br><a href='" + filePath + "'> <img src='" + filePath + "' height='500' width='500'/> </a>");
+        	Reporter.setCurrentTestResult(null);
+    		
       } catch (Exception e) {
           Reporter.log("Failed to capture screenshot");
       }

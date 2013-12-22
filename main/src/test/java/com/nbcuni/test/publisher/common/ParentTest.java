@@ -51,8 +51,7 @@ public class ParentTest {
 
     /**
      * Instantiate the TestNG After Class Method.
-     * @throws IOException 
-     * 
+     *  
      * @throws Exception - error
      */
     @AfterMethod(alwaysRun = true)
@@ -61,13 +60,14 @@ public class ParentTest {
     	try {
     	
         	if (!result.isSuccess()) {
-
-        		applib.attachScreenshot();
+        		
+                applib.attachScreenshot(result);  
 
             }
         	
         } catch (Exception e) {
-            applib.fail(e.toString());
+            
+        	applib.fail(e.toString());
         }
         
         try {
