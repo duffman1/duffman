@@ -2,6 +2,7 @@ package com.nbcuni.test.publisher.common;
 
 
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.testng.ITestResult;
@@ -43,6 +44,8 @@ public class ParentTest {
             webDriver = WebDriverClientExecution.getInstance().getDriver();
             applib = new AppLib(webDriver);
             applib.setEnvironmentInfo(sEnv);
+            
+            webDriver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         } catch (Exception e) {
             applib.fail(e.toString());
         }

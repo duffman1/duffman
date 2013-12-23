@@ -31,6 +31,8 @@ public class PublishingOptions {
     private static String PublishingOptions_Lnk = "//a/strong[text()='Publishing options']";
     private static String CreateNewRevision_Cbx = "//input[@id='edit-revision']";
     private static String ModerationState_Ddl = "//select[@id='edit-event']";
+    private static String LogMessageStateChange_Txa = "(//textarea[@id='edit-event-comment'])[1]";
+    
     
     public PublishingOptions(final CustomWebDriver custWebDr) {
         webDriver = custWebDr;
@@ -65,6 +67,13 @@ public class PublishingOptions {
     	new WebDriverWait(webDriver, 10).until(ExpectedConditions.
     			visibilityOf(webDriver.findElement(By.xpath(ModerationState_Ddl))));
     	webDriver.selectFromDropdown(ModerationState_Ddl, stateName);
+    }
+    
+    public void EnterMessageForStateChange(String messageTxt) throws Exception {
+    	
+    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.
+    			visibilityOf(webDriver.findElement(By.xpath(LogMessageStateChange_Txa))));
+    	webDriver.type(LogMessageStateChange_Txa, messageTxt);
     }
     
     

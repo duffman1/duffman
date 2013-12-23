@@ -107,6 +107,14 @@ public class Taxonomy {
     	action.moveToElement(webDriver.findElement(By.xpath(Tier1_Content_Tier2_Queues_Lnk))).build().perform();
     }
     
+    public void ClickTier1ContentTier2QueuesLnk() throws Exception {
+    	
+    	this.MouseOverTier1ContentLnk();
+    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Tier1_Content_Tier2_Queues_Lnk)));
+    	
+    	webDriver.click(Tier1_Content_Tier2_Queues_Lnk);
+    }
+    
     public void ClickTier1ContentTier2QueuesTier3AddPromoQueueLnk() throws Exception {
     	
     	this.MouseOverTier1ContentLnk();

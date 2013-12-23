@@ -47,6 +47,7 @@ import java.util.concurrent.TimeUnit;
 
 
 
+
 import junit.framework.Assert;
 
 import org.apache.commons.io.FileUtils;
@@ -89,6 +90,7 @@ public class AppLib {
     private Integer proxyPort = 0;
     private String pathToMediaContent = "";
     private String pathToScreenshots = "";
+    private String moduleOverlaysEnabled = "";
 
     private static String configFileName = "src" + File.separator + "test" + File.separator + "resources"
             + File.separator + "config.properties";
@@ -149,6 +151,7 @@ public class AppLib {
             proxyPort = Integer.valueOf(configProperties.getProperty(environment + ".ProxyPort"));
             pathToMediaContent = configProperties.getProperty(environment + ".PathToMediaContent");
             pathToScreenshots = configProperties.getProperty(environment + ".PathToScreenShots");
+            moduleOverlaysEnabled = configProperties.getProperty(environment + ".ModuleOverlaysEnabled");
         } catch (Exception e) {
             new CustomWebDriverException(e, custWebDr);
         }
@@ -160,6 +163,21 @@ public class AppLib {
     	return pathToMedia;
     }
     
+    /**
+     * Returns if overlays are enabled or not
+     * 
+     * @return Return Boolean
+     */
+    public Boolean getModuleOverlaysEnabled() {
+    	
+    	Boolean overlaysEnabled = true;
+    	System.out.println(moduleOverlaysEnabled);
+    	if (moduleOverlaysEnabled == "false") {
+    		overlaysEnabled = false;
+    	}
+    	
+    	return overlaysEnabled;
+    }
     
     /**
     * Returns screenshot and embeds in testng reports on failure

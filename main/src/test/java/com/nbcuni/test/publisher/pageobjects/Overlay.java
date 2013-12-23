@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
 
 import com.nbcuni.test.lib.Util;
+import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.webdriver.CustomWebDriver;
 
 
@@ -22,7 +23,6 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 public class Overlay {
 
     private static CustomWebDriver webDriver;
-    
     
     private static String CloseOverlay_Lnk = "//a[@id='overlay-close']";
     private static String CreateCharacterProfile_Frm = "//iframe[@title='Create Character Profile dialog']";
@@ -39,6 +39,7 @@ public class Overlay {
     private static String AddPromoQueue_Frm = "//iframe[@title='Add promo queue queue dialog']";
     private static String QueuesListing_Frm = "//iframe[@title='Queues Listing dialog']";
     private static String QueuesRevisionList_Frm = "//iframe[@title='Queues Revision list dialog']";
+    private static String AccessDenied_Frm = "//iframe[@title='Access denied dialog']";
     
     public Overlay(final CustomWebDriver custWebDr) {
     	
@@ -53,7 +54,6 @@ public class Overlay {
     public void ClickCloseOverlayLnk() throws Exception {
     	
     	webDriver.click(CloseOverlay_Lnk);
-    	
     }
     
     public void SwitchToCreateCharacterProfileFrm() throws Exception {
@@ -66,7 +66,7 @@ public class Overlay {
     public void SwitchToCreatePostFrm() throws Exception {
     	
     	WebElement frm = webDriver.findElement(By.xpath(CreatePost_Frm));
-    	webDriver.switchTo().frame(frm);
+        webDriver.switchTo().frame(frm);
     	
     }
     
@@ -93,9 +93,8 @@ public class Overlay {
 	
 	public void SwitchToModulesFrm() throws Exception {
     	
-    	WebElement frm = webDriver.findElement(By.xpath(Modules_Frm));
-    	webDriver.switchTo().frame(frm);
-    	
+		WebElement frm = webDriver.findElement(By.xpath(Modules_Frm));
+		webDriver.switchTo().frame(frm);
     }
     
 	public void SwitchToDFPAddTagsFrm() throws Exception {
@@ -168,9 +167,23 @@ public class Overlay {
     	webDriver.switchTo().frame(frm);
     }
 	
+	public void SwitchToEditQueueSchedulingFrm(String queueTitle) throws Exception {
+    	
+		WebElement frm = webDriver.findElement(By.xpath(
+				"//iframe[@title='" + queueTitle + " dialog']"));
+    	webDriver.switchTo().frame(frm);
+    }
+	
 	public void SwitchToQueuesRevisionListFrm() throws Exception {
     	
     	WebElement frm = webDriver.findElement(By.xpath(QueuesRevisionList_Frm));
+    	webDriver.switchTo().frame(frm);
+    	
+    }
+	
+	public void SwitchToAccessDeniedFrm() throws Exception {
+    	
+    	WebElement frm = webDriver.findElement(By.xpath(AccessDenied_Frm));
     	webDriver.switchTo().frame(frm);
     	
     }

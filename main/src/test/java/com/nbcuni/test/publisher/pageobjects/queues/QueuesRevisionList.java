@@ -28,9 +28,9 @@ public class QueuesRevisionList {
     private static AppLib al;
     private final Util ul;
     
-    private static String Confirm_Btn = "";
+    private static String UpdateState_Btn = "(//input[@value='Update State'])[1]";
     private static String Revision_Lnk = "//a[text()='Revisions']";
-    private static String StateFlowHistoryEvent_Txt = "//p[@class='state-flow-history-event']";
+    private static String StateFlowHistoryEvent_Txt = "(//td[@class='views-field views-field-history-list'])[1]";
     private static String Cancel_Lnk = "//a[@id='edit-cancel']";
     
     
@@ -59,6 +59,13 @@ public class QueuesRevisionList {
     	new WebDriverWait(webDriver, 10).until(
     			ExpectedConditions.elementToBeClickable(By.xpath(Cancel_Lnk)));
     	webDriver.click(Cancel_Lnk);
+    }
+    
+    public void ClickUpdateStateBtn() throws Exception {
+    	
+    	new WebDriverWait(webDriver, 10).until(
+    			ExpectedConditions.elementToBeClickable(By.xpath(UpdateState_Btn)));
+    	webDriver.click(UpdateState_Btn);
     }
     
     

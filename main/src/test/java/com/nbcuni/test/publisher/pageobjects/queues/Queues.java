@@ -30,6 +30,8 @@ public class Queues {
     
     private static String Title_Txb = "//input[contains(@id, 'edit-title')]";
     private static String SaveQueue_Btn = "//input[@value='Save queue']";
+    private static String Edit_Tab = "//a[contains(text(), 'Edit')]";
+    
     
     public Queues(final CustomWebDriver custWebDr) {
         webDriver = custWebDr;
@@ -85,6 +87,22 @@ public class Queues {
     	WebElement element = new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOf(
     			webDriver.findElement(By.xpath("(//input[contains(@id, 'edit-field-qt-promo-queue')][1])[" + itemTxbInt + "]"))));
     	element.sendKeys(queueItemTitle);
+    }
+    
+    public void VerifyQueueState(String queueItemTitle, String state) throws Exception {
+    	
+    	String loc = "//table[contains(@class, 'views-table')]//td[contains(text(), '" + queueItemTitle + "')]/..//td[3]";
+    	
+    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOf(
+    			webDriver.findElement(By.xpath(loc))));
+    	ul.verifyObjectContainsText(loc, state);
+    }
+    
+    public void ClickEditTab() throws Exception {
+    	
+    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(
+    			By.xpath(Edit_Tab)));
+    	webDriver.click(Edit_Tab);
     }
     
     
