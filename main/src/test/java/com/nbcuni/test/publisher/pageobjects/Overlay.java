@@ -169,6 +169,8 @@ public class Overlay {
 	
 	public void SwitchToEditQueueSchedulingFrm(String queueTitle) throws Exception {
     	
+		//TODO - replace this with dynamic wait - slight pause needed here on frame switch
+		Thread.sleep(2000);
 		WebElement frm = webDriver.findElement(By.xpath(
 				"//iframe[@title='" + queueTitle + " dialog']"));
     	webDriver.switchTo().frame(frm);

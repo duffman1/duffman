@@ -11,27 +11,27 @@
       <![CDATA[URL: http://qa5dev.publisher.nbcuni.com]]>
     </line>
     <line>
-      <![CDATA[verifyObjectContainsText:  Object //div[@class='content']//tbody contains the text d972a40d750d4d9]]>
+      <![CDATA[Publish state currently set to Draft]]>
     </line>
     <line>
-      <![CDATA[verifyObjectContainsText:  Object //div[@class='content']//tbody contains the text Moderate to Publish]]>
+      <![CDATA[Publish state currently set to Review]]>
     </line>
     <line>
-      <![CDATA[verifyObjectContainsText:  Object //div[@class='content']//tbody contains the text 01/02/2014 - 05:00 PM]]>
+      <![CDATA[Publish state currently set to Published]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="62283" started-at="2013-12-23T21:45:18Z" finished-at="2013-12-23T21:46:21Z">
+  <suite name="Default suite" duration-ms="98193" started-at="2013-12-26T13:45:15Z" finished-at="2013-12-26T13:46:53Z">
     <groups>
       <group name="full">
-        <method signature="ScheduleRevisionsOfQueues.ScheduleRevisionsOfQueues()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.SchedulingQueues.ScheduleRevisionsOfQueues@98e4cc7]" name="ScheduleRevisionsOfQueues" class="com.nbcuni.test.publisher.tests.Queues.SchedulingQueues.ScheduleRevisionsOfQueues"/>
+        <method signature="CreateTVEpisode.CreateTVEpisode()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVEpisode.CreateTVEpisode@fc77f54]" name="CreateTVEpisode" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVEpisode.CreateTVEpisode"/>
       </group> <!-- full -->
       <group name="smoke">
-        <method signature="ScheduleRevisionsOfQueues.ScheduleRevisionsOfQueues()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.SchedulingQueues.ScheduleRevisionsOfQueues@98e4cc7]" name="ScheduleRevisionsOfQueues" class="com.nbcuni.test.publisher.tests.Queues.SchedulingQueues.ScheduleRevisionsOfQueues"/>
+        <method signature="CreateTVEpisode.CreateTVEpisode()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVEpisode.CreateTVEpisode@fc77f54]" name="CreateTVEpisode" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVEpisode.CreateTVEpisode"/>
       </group> <!-- smoke -->
     </groups>
-    <test name="Default test" duration-ms="62283" started-at="2013-12-23T21:45:18Z" finished-at="2013-12-23T21:46:21Z">
-      <class name="com.nbcuni.test.publisher.tests.Queues.SchedulingQueues.ScheduleRevisionsOfQueues">
-        <test-method status="PASS" signature="startSelenium(java.lang.String)[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.SchedulingQueues.ScheduleRevisionsOfQueues@98e4cc7]" name="startSelenium" is-config="true" duration-ms="27854" started-at="2013-12-23T16:45:18Z" finished-at="2013-12-23T16:45:46Z">
+    <test name="Default test" duration-ms="98193" started-at="2013-12-26T13:45:15Z" finished-at="2013-12-26T13:46:53Z">
+      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVEpisode.CreateTVEpisode">
+        <test-method status="PASS" signature="startSelenium(java.lang.String)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVEpisode.CreateTVEpisode@fc77f54]" name="startSelenium" is-config="true" duration-ms="28335" started-at="2013-12-26T08:45:15Z" finished-at="2013-12-26T08:45:43Z">
           <params>
             <param index="0">
               <value>
@@ -48,34 +48,34 @@
             </line>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="ScheduleRevisionsOfQueues()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.SchedulingQueues.ScheduleRevisionsOfQueues@98e4cc7]" name="ScheduleRevisionsOfQueues" duration-ms="33847" started-at="2013-12-23T16:45:46Z" finished-at="2013-12-23T16:46:20Z">
+        <test-method status="PASS" signature="CreateTVEpisode()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVEpisode.CreateTVEpisode@fc77f54]" name="CreateTVEpisode" duration-ms="69275" started-at="2013-12-26T08:45:43Z" finished-at="2013-12-26T08:46:53Z">
           <reporter-output>
             <line>
               <![CDATA[URL: http://qa5dev.publisher.nbcuni.com]]>
             </line>
             <line>
-              <![CDATA[verifyObjectContainsText:  Object //div[@class='content']//tbody contains the text d972a40d750d4d9]]>
+              <![CDATA[Publish state currently set to Draft]]>
             </line>
             <line>
-              <![CDATA[verifyObjectContainsText:  Object //div[@class='content']//tbody contains the text Moderate to Publish]]>
+              <![CDATA[Publish state currently set to Review]]>
             </line>
             <line>
-              <![CDATA[verifyObjectContainsText:  Object //div[@class='content']//tbody contains the text 01/02/2014 - 05:00 PM]]>
+              <![CDATA[Publish state currently set to Published]]>
             </line>
           </reporter-output>
-        </test-method> <!-- ScheduleRevisionsOfQueues -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.SchedulingQueues.ScheduleRevisionsOfQueues@98e4cc7]" name="stopSelenium" is-config="true" duration-ms="568" started-at="2013-12-23T16:46:20Z" finished-at="2013-12-23T16:46:21Z">
+        </test-method> <!-- CreateTVEpisode -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVEpisode.CreateTVEpisode@fc77f54]" name="stopSelenium" is-config="true" duration-ms="569" started-at="2013-12-26T08:46:53Z" finished-at="2013-12-26T08:46:53Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=ScheduleRevisionsOfQueues status=SUCCESS method=ScheduleRevisionsOfQueues.ScheduleRevisionsOfQueues()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.SchedulingQueues.ScheduleRevisionsOfQueues@98e4cc7] output=URL: http://qa5dev.publisher.nbcuni.com]]]>
+                <![CDATA[[TestResult name=CreateTVEpisode status=SUCCESS method=CreateTVEpisode.CreateTVEpisode()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVEpisode.CreateTVEpisode@fc77f54] output=URL: http://qa5dev.publisher.nbcuni.com]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-      </class> <!-- com.nbcuni.test.publisher.tests.Queues.SchedulingQueues.ScheduleRevisionsOfQueues -->
+      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVEpisode.CreateTVEpisode -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

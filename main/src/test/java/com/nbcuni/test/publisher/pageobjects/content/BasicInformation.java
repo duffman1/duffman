@@ -31,7 +31,7 @@ public class BasicInformation {
     private static String BasicInformation_Tab = "//a/strong[text()='Basic Information']";
     private static String Title_Txb = "//input[contains(@id, 'edit-title')]";
     private static String Synopsis_Frm = "//iframe[@id='edit-body-und-0-value_ifr']";
-    private static String Synopsis_Txa = "//body[@id='tinymce']//p";
+    private static String Synopsis_Txa = "//body[@id='tinymce']";
     private static String CoverSelect_Btn = "//a[contains(@id, 'cover')][text()='Select']";
     private static String Cover_Img = "//div[@class='media-thumbnail']/img";
     private static String EpisodeNumber_Txb = "//input[@id='edit-field-episode-number-und-0-value']";
@@ -70,10 +70,9 @@ public class BasicInformation {
                         random.GetCharacterString(20) + " " +
                             random.GetCharacterString(20) + " " +
                                 random.GetCharacterString(20);
-        webDriver.click(Synopsis_Txa);
-        Actions action = new Actions(webDriver);
-        action.sendKeys(body).build().perform();
-
+        WebElement txa = webDriver.findElement(By.xpath(Synopsis_Txa));
+        txa.clear();
+        txa.sendKeys(body);
         webDriver.switchTo().defaultContent();
         
         return body;

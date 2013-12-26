@@ -45,7 +45,13 @@ public class ParentTest {
             applib = new AppLib(webDriver);
             applib.setEnvironmentInfo(sEnv);
             
-            webDriver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+            try {
+            webDriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+            webDriver.manage().window().maximize();
+            }
+            catch (Exception e) {
+            	Reporter.log("Failed to set timeouts and maximize window");
+            }
         } catch (Exception e) {
             applib.fail(e.toString());
         }
