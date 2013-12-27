@@ -47,7 +47,7 @@ public class BasicInformation {
     	
     	new WebDriverWait(webDriver, 10).until(
     			ExpectedConditions.elementToBeClickable(By.xpath(BasicInformation_Tab)));
-    	webDriver.executeScript("window.scrollBy(0,-50);");
+    	webDriver.executeScript("window.scrollBy(0,-100);"); 
     	webDriver.click(BasicInformation_Tab);
     }
     

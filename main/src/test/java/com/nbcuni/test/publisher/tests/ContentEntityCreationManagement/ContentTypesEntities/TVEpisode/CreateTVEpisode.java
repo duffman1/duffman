@@ -87,7 +87,8 @@ public class CreateTVEpisode extends ParentTest{
             	ContentParent contentParent = new ContentParent(webDriver);
             	contentParent.ClickSaveBtn();
             	overlay.switchToDefaultContent();
-            
+            	contentParent.VerifyMessageStatus("Person " + personFirstName + " has been created.");
+            	
             	//Step 2
             	taxonomy.ClickTier1ContentTier2AddContentTier3TVEpisodeLnk();
             	overlay.SwitchToCreateTVEpisodeFrm();

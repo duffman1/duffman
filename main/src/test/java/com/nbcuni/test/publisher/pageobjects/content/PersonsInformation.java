@@ -30,7 +30,7 @@ public class PersonsInformation {
     
     private static String FirstName_Txb = "//input[@id='edit-field-person-first-name-und-0-value']";
     private static String Biography_Frm = "//iframe[@id='edit-body-und-0-value_ifr']";
-    private static String Biography_Txa = "//body[@id='tinymce']//p";
+    private static String Biography_Txa = "//body[@id='tinymce']";
     private static String CoverPhotoSelect_Btn = "//a[@id='edit-field-person-cover-photo-und-0-select']";
     
     public PersonsInformation(final CustomWebDriver custWebDr) {
@@ -58,9 +58,8 @@ public void EnterFirstName(String firstName) throws Exception {
                             random.GetCharacterString(20) + " " +
                                 random.GetCharacterString(20);
         webDriver.click(Biography_Txa);
-        Actions action = new Actions(webDriver);
-        action.sendKeys(body).build().perform();
-
+        webDriver.type(Biography_Txa, body);
+        
         return body;
     }
     

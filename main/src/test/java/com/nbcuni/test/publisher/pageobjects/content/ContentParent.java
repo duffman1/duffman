@@ -33,7 +33,9 @@ public class ContentParent {
     
     private static String Save_Btn = "//input[@id='edit-submit']";
     private static String Message_Ctr = "//div[@class='messages status']";
+    private static String Warning_Ctr = "//div[@class='messages warning']";
     private static String EditDraft_Btn = "//a[text()='Edit Draft']";
+    private static String Revisions_Btn = "//a[text()='Revisions']";
     
     public ContentParent(final CustomWebDriver custWebDr) {
         webDriver = custWebDr;
@@ -55,11 +57,25 @@ public class ContentParent {
     					, messageStatus));
     }
     
+    public void VerifyMessageWarning(String warningTxt){
+    	
+    	new WebDriverWait(webDriver, 10).until(
+    			ExpectedConditions.textToBePresentInElement(By.xpath(Warning_Ctr)
+    					, warningTxt));
+    }
+    
     public void ClickEditDraftBtn() {
     	
     	new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(
     			By.xpath(EditDraft_Btn)));
     	webDriver.click(EditDraft_Btn);
+    }
+    
+    public void ClickRevisionsBtn() {
+    	
+    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(
+    			By.xpath(Revisions_Btn)));
+    	webDriver.click(Revisions_Btn);
     }
     
     public void VerifyRequiredFields(List<String> allFields) {

@@ -40,6 +40,14 @@ public class Overlay {
     private static String QueuesListing_Frm = "//iframe[@title='Queues Listing dialog']";
     private static String QueuesRevisionList_Frm = "//iframe[@title='Queues Revision list dialog']";
     private static String AccessDenied_Frm = "//iframe[@title='Access denied dialog']";
+    private static String SiteReports_Frm = "//iframe[@title='Site Reports dialog']";
+    private static String Facebook_Frm = "//iframe[@title='Facebook dialog']";
+    private static String Revisions_Frm = "//iframe[@title='Revisions dialog']";
+    private static String DrupalForFacebook_Frm = "//iframe[@title='Drupal for Facebook dialog']";
+    private static String People_Frm = "//iframe[@title='People dialog']";
+    private static String Content_Frm = "//iframe[@title='Content dialog']";
+    private static String ContentRevisions_Frm = "//iframe[@title='Content Revisions dialog']";
+    
     
     public Overlay(final CustomWebDriver custWebDr) {
     	
@@ -87,6 +95,13 @@ public class Overlay {
 	public void SwitchToEditMovieFrm(String movieTitle) throws Exception {
     	
     	WebElement frm = webDriver.findElement(By.xpath("//iframe[@title='Edit Movie " + movieTitle + " dialog']"));
+    	webDriver.switchTo().frame(frm);
+    	
+    }
+	
+	public void SwitchToEditPostFrm(String postTitle) throws Exception {
+    	
+    	WebElement frm = webDriver.findElement(By.xpath("//iframe[@title='Edit Post " + postTitle + " dialog']"));
     	webDriver.switchTo().frame(frm);
     	
     }
@@ -188,6 +203,62 @@ public class Overlay {
     	WebElement frm = webDriver.findElement(By.xpath(AccessDenied_Frm));
     	webDriver.switchTo().frame(frm);
     	
+    }
+	
+	public void SwitchToSiteReportsFrm() throws Exception {
+    	
+    	WebElement frm = webDriver.findElement(By.xpath(SiteReports_Frm));
+    	webDriver.switchTo().frame(frm);
+    	
+    }
+	
+	public void SwitchToFacebookFrm() throws Exception {
+    	
+    	WebElement frm = webDriver.findElement(By.xpath(Facebook_Frm));
+    	webDriver.switchTo().frame(frm);
+    	
+    }
+	
+	public void SwitchToRevisionsFrm() throws Exception {
+    	
+    	WebElement frm = webDriver.findElement(By.xpath(Revisions_Frm));
+    	webDriver.switchTo().frame(frm);
+    	
+    }
+	
+	public void SwitchToDrupalForFacebookFrm() throws Exception {
+    	
+    	WebElement frm = webDriver.findElement(By.xpath(DrupalForFacebook_Frm));
+    	webDriver.switchTo().frame(frm);
+    	
+    }
+	
+	public void SwitchToPeopleFrm() throws Exception {
+    	
+    	WebElement frm = webDriver.findElement(By.xpath(People_Frm));
+    	webDriver.switchTo().frame(frm);
+    	
+    }
+	
+	public void SwitchToContentFrm() throws Exception {
+    	
+    	WebElement frm = webDriver.findElement(By.xpath(Content_Frm));
+    	webDriver.switchTo().frame(frm);
+    	
+    }
+	
+	public void SwitchToContentRevisionsFrm() throws Exception {
+    	
+    	WebElement frm = webDriver.findElement(By.xpath(ContentRevisions_Frm));
+    	webDriver.switchTo().frame(frm);
+    	
+    }
+	
+public void SwitchToDeleteContentItemFrm(String contentItemTitle) throws Exception {
+    	
+		WebElement frm = webDriver.findElement(By.xpath(
+				"//iframe[@title='Are you sure you want to delete " + contentItemTitle + "? dialog']"));
+    	webDriver.switchTo().frame(frm);
     }
     
 }

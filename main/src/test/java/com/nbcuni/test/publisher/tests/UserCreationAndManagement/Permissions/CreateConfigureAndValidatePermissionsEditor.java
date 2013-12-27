@@ -1,0 +1,285 @@
+package com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions;
+
+
+import java.text.SimpleDateFormat;
+import java.util.Arrays;
+import java.util.Date;
+import java.util.List;
+
+import junit.framework.Assert;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Reporter;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
+
+import com.nbcuni.test.publisher.common.AppLib;
+import com.nbcuni.test.publisher.common.ParentTest;
+import com.nbcuni.test.publisher.common.Random;
+import com.nbcuni.test.publisher.pageobjects.AccessDenied;
+import com.nbcuni.test.publisher.pageobjects.Logout;
+import com.nbcuni.test.publisher.pageobjects.Modules;
+import com.nbcuni.test.publisher.pageobjects.Overlay;
+import com.nbcuni.test.publisher.pageobjects.UserLogin;
+import com.nbcuni.test.publisher.pageobjects.People.AddUser;
+import com.nbcuni.test.publisher.pageobjects.People.Permissions;
+import com.nbcuni.test.publisher.pageobjects.People.Roles;
+import com.nbcuni.test.publisher.pageobjects.content.BasicInformation;
+import com.nbcuni.test.publisher.pageobjects.content.CastCrew;
+import com.nbcuni.test.publisher.pageobjects.content.CharactersInformation;
+import com.nbcuni.test.publisher.pageobjects.content.Content;
+import com.nbcuni.test.publisher.pageobjects.content.ContentParent;
+import com.nbcuni.test.publisher.pageobjects.content.ContentTypes;
+import com.nbcuni.test.publisher.pageobjects.content.Delete;
+import com.nbcuni.test.publisher.pageobjects.content.PersonsInformation;
+import com.nbcuni.test.publisher.pageobjects.content.PublishingOptions;
+import com.nbcuni.test.publisher.pageobjects.content.RevisionState;
+import com.nbcuni.test.publisher.pageobjects.content.Revisions;
+import com.nbcuni.test.publisher.pageobjects.content.SelectFile;
+import com.nbcuni.test.publisher.pageobjects.errorchecking.ErrorChecking;
+import com.nbcuni.test.publisher.pageobjects.queues.DeleteQueue;
+import com.nbcuni.test.publisher.pageobjects.queues.Queues;
+import com.nbcuni.test.publisher.pageobjects.queues.QueuesRevisionList;
+import com.nbcuni.test.publisher.pageobjects.taxonomy.Taxonomy;
+import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.webdriver.WebDriverClientExecution;
+
+
+public class CreateConfigureAndValidatePermissionsEditor extends ParentTest{
+	
+    /*************************************************************************************
+     * TEST CASE 
+     * Step 1 - Login Publisher 7 using Drupal 1 credentials<br>
+     * Step 2 - Click on People --> Add user<br>
+     * Step 3 - Populate the following fields with their corresponding values, and click on the "Create new account" button.  Username: editor Email Address: nbcuniqa1@gmail.com Password: pa55word Confirm Password: pa55word Status: Active Roles: <Put a check on the "editor" checkbox> First Name: TestFirst Last Name: TestLast<br>
+     * Step 4 - Click on People --> Permissions --> Roles<br>
+     * Step 5 - For the "editor" value, click on the "edit permissions" link in the "OPERATIONS" column<br>
+     * Step 6 - Put a check on the following permissions, and click on the "Save Permissions" button.  Post: Create new content Post: Edit own content Post: Delete own content<br>
+     * Step 7 - Click on the "Log out" link<br>
+     * Step 8 - Login Publisher 7 using the editor user credentials, created from Steps 2-6<br>
+     * Step 9 - Click on Content --> Add new content --> Post<br>
+     * Step 10 - Populate all required fields , and click on the "Save" button<br>
+	 * Step 11 - Click on "Content"<br>
+     * Step 12 - For the "Post" content that was just created, verify that a dropdown appears in the "OPERATIONS" column showing the "Edit" value<br>
+     * Step 13 - Expand the dropdown in the "OPERATIONS" column for the "Post" content that was just created, and verify that both "Edit" and "Delete" values appear<br>
+     * Step 14 - Click on the "Log out" link<br>
+     * Step 15 - Login Publisher 7 using Drupal 1 credentials<br>
+     * Step 16 - Click on Content --> Add new content --> Post<br>
+     * Step 17 - Populate all required fields , and click on the "Save" button<br>
+     * Step 18 - Click on the "Log out" link.,The user is taken to the Publisher 7 main page where they are asked for a username and password.
+     * Step 19 - Login Publisher 7 using the editor user credentials, created from Steps 2-6<br>
+     * Step 20 - Click on "Content"<br>
+     * Step 21 - For the "Post" content that was created using Drupal 1 credentials from Step 16-17, verify that no dropdown field appears in the "OPERATIONS" column<br>
+     * Step 22 - Click on Content --> Content Revisions<br>
+     * Step 23 - For the "Post" content that was created using Drupal 1 credentials from Step 16-17, verify that no dropdown field appears in the "OPERATIONS" column<br>
+     * Step 24 - For the "Post" content that was created from Steps 9-10, verify that a dropdown appears in the "OPERATIONS" column showing the "Edit" value<br>
+     * Step 25 - Expand the dropdown in the "OPERATIONS" column for the "Post" content that was just created, and verify that both "Edit" and "Delete" values appear<br>
+     * Step 26 - Click on the "Edit" value<br>
+     * Step 27 - Change the value of the "Body" field, and click on "Save"<br>
+     * Step 28 - Click on "Content"<br>
+     * Step 29 - For the "Post" content that was created from Steps 9-10, expand the dropdown in the "OPERATIONS" column, and click on "Delete"<br>
+     * Step 30 - Click on "Content"<br>
+     * Step 31 - Verify that the "Post" created from Steps 9-10 does not appear<br>
+     * Step 32 - Click on the "Log out" link<br>
+     * Step 33 - Repeat Steps 1 -32 but replace Step 6 and all other steps that use the "Post" content type with the following content types, and verify that the behavior is the same.  Character Profile Media Gallery Movie Person TV Episode TV Season TV Show<br>
+     * @throws Throwable No Return values are needed
+     *************************************************************************************/
+    @Test(groups = {"full", "smoke"})
+    public void CreateConfigureAndValidatePermissionsEditor() throws Exception{
+    	
+    	//Step 1
+    	UserLogin userLogin = applib.openApplication();
+        userLogin.Login("admin@publisher.nbcuni.com", "pa55word");
+        
+        //Step 1a (enable post module if needed)
+        Taxonomy taxonomy = new Taxonomy(webDriver);
+        taxonomy.ClickTier1ModulesLnk();
+        Overlay overlay = new Overlay(webDriver);
+        overlay.SwitchToModulesFrm();
+        Modules modules = new Modules(webDriver);
+        modules.EnterFilterName("Pub Post");
+        modules.EnableModule("Pub Post");
+        overlay.ClickCloseOverlayLnk();
+        overlay.switchToDefaultContent();
+        
+        //Step 2
+        taxonomy.ClickTier1PeopleTier2AddUserLnk();
+        overlay.SwitchToPeopleFrm();
+        
+        //Step 3
+        AddUser addUser = new AddUser(webDriver);
+        Random random = new Random();
+        String userName = random.GetCharacterString(15) + "@" + random.GetCharacterString(15) + ".com";
+        addUser.EnterUsername(userName);
+        addUser.EnterEmailAddress(userName);
+        String passWord = "pa55word"; //TODO - randomize username and password generation
+        addUser.EnterPassword(passWord);
+        addUser.EnterConfirmPassword(passWord);
+        addUser.ClickEditorRoleCbx();
+        String firstName = random.GetCharacterString(15);
+        addUser.EnterFirstName(firstName);
+        String lastName = random.GetCharacterString(15);
+        addUser.EnterLastName(lastName);
+        addUser.ClickCreateNewAccountBtn();
+        ContentParent contentParent = new ContentParent(webDriver);
+        contentParent.VerifyMessageStatus("A welcome message with further instructions has been e-mailed to the new user " + userName + ".");
+       
+        //Step 4
+        overlay.switchToDefaultContent();
+        taxonomy.ClickTier1PeopleTier2PermissionsTier3RolesLnk();
+        overlay.switchToDefaultContent();
+        overlay.SwitchToPeopleFrm();
+        
+        //Step 5
+        Roles roles = new Roles(webDriver);
+        roles.ClickEditorEditPermissionsLnk(); 
+        overlay.switchToDefaultContent();
+        //TODO - fix this in overlays for frames that have duplicate titles
+        webDriver.switchTo().frame(webDriver.findElement(By.xpath("(//iframe[contains(@title, 'People')])[2]")));
+        
+        //Step 6
+        Permissions permissions = new Permissions(webDriver);
+        permissions.CheckPostCreateNewContentCbx();
+        permissions.CheckPostEditOwnContentCbx();
+        permissions.CheckPostDeleteOwnContentCbx();
+        permissions.ClickSaveConfigurationsBtn();
+        contentParent.VerifyMessageStatus("The changes have been saved.");
+        
+        //Step 7
+        overlay.ClickCloseOverlayLnk();
+        overlay.switchToDefaultContent();
+        Logout logout = new Logout(webDriver);
+        logout.ClickLogoutBtn();
+        
+        //Step 8
+        userLogin.Login(userName, passWord);
+        
+        //Step 9 and 10 (truncated)
+        taxonomy.ClickTier1ContentTier2AddContentTier3PostLnk();
+        overlay.SwitchToCreatePostFrm();
+        BasicInformation basicInformation = new BasicInformation(webDriver);
+        String postTitle = random.GetCharacterString(15);
+        basicInformation.EnterTitle(postTitle);
+        basicInformation.EnterSynopsis();
+        overlay.switchToDefaultContent();
+        overlay.SwitchToCreatePostFrm();
+        basicInformation.ClickCoverSelectBtn();
+        SelectFile selectFile = new SelectFile(webDriver, applib);
+        selectFile.SelectDefaultCoverImg();
+        overlay.SwitchToCreatePostFrm();
+        PublishingOptions publishingOptions = new PublishingOptions(webDriver);
+        publishingOptions.ClickPublishingOptionsLnk();
+        publishingOptions.SelectModerationState("Draft");
+        contentParent.ClickSaveBtn();
+        overlay.switchToDefaultContent();
+        contentParent.VerifyMessageStatus("Post " + postTitle + " has been created.");
+        
+        //Step 11
+        taxonomy.ClickTier1ContentLnk();
+        overlay.SwitchToContentFrm();
+        
+        //Step 12 and 13 (truncated)
+        Content content = new Content(webDriver);
+        content.VerifyContentItemEditDelete(postTitle);
+        
+        //Step 14
+        overlay.ClickCloseOverlayLnk();
+        logout.ClickLogoutBtn();
+        
+        //Step 15
+        userLogin.Login("admin@publisher.nbcuni.com", "pa55word");
+        
+        //Step 16 and 17 (truncated)
+        taxonomy.ClickTier1ContentTier2AddContentTier3PostLnk();
+        overlay.SwitchToCreatePostFrm();
+        String postTitle2 = random.GetCharacterString(15);
+        basicInformation.EnterTitle(postTitle2);
+        basicInformation.EnterSynopsis();
+        overlay.switchToDefaultContent();
+        overlay.SwitchToCreatePostFrm();
+        basicInformation.ClickCoverSelectBtn();
+        selectFile.SelectDefaultCoverImg();
+        overlay.SwitchToCreatePostFrm();
+        publishingOptions.ClickPublishingOptionsLnk();
+        publishingOptions.SelectModerationState("Draft");
+        contentParent.ClickSaveBtn();
+        overlay.switchToDefaultContent();
+        contentParent.VerifyMessageStatus("Post " + postTitle2 + " has been created.");
+        
+        //Step 18
+        logout.ClickLogoutBtn();
+        
+        //Step 19
+        userLogin.Login(userName, passWord);
+        
+        //Step 20
+        taxonomy.ClickTier1ContentLnk();
+        overlay.SwitchToContentFrm();
+        
+        //Step 21
+        content.VerifyContentItemEditDeleteNotPresent(postTitle2);
+        
+        //Step 22
+        overlay.switchToDefaultContent();
+        taxonomy.ClickTier1ContentTier2ContentRevisionsLnk();
+        overlay.SwitchToContentRevisionsFrm(); //not right frame
+        
+        //Step 23
+        Revisions revisions = new Revisions(webDriver);
+        revisions.VerifyContentItemEditDeleteNotPresent(postTitle2);
+        
+        //Step 24
+        revisions.VerifyContentItemEditDelete(postTitle);
+        
+        //Step 25 and 26 (truncated)
+        revisions.ClickEditExtendMenuBtn(postTitle);
+        revisions.ClickEditMenuBtn(postTitle);
+        overlay.switchToDefaultContent();
+        overlay.SwitchToEditPostFrm(postTitle);
+        
+        //Step 27
+        basicInformation.EnterSynopsis();
+        contentParent.ClickSaveBtn();
+        overlay.switchToDefaultContent();
+        contentParent.VerifyMessageStatus("Post " + postTitle + " has been updated.");
+        
+        //Step 28
+        taxonomy.ClickTier1ContentLnk();
+        overlay.SwitchToContentFrm();
+        
+        //Step 29
+        content.ClickEditExtendMenuBtn(postTitle);
+        content.ClickDeleteMenuBtn(postTitle);
+        overlay.switchToDefaultContent();
+        overlay.SwitchToDeleteContentItemFrm(postTitle);
+        Delete delete = new Delete(webDriver);
+        delete.ClickDeleteBtn();
+        overlay.switchToDefaultContent();
+        contentParent.VerifyMessageStatus("Post " + postTitle + " has been deleted.");
+        
+        //Step 30
+        taxonomy.ClickTier1ContentLnk();
+        overlay.SwitchToContentFrm();
+        
+        //Step 31
+        content.VerifyContentItemNotPresent(postTitle);
+        
+        //Step 32
+        overlay.ClickCloseOverlayLnk();
+        logout.ClickLogoutBtn();
+        
+        //Step 33
+        //TODO - this step is redundant by content type and not a priority. Add repetition as time allows.
+        
+        
+        Assert.fail("Test under construction");
+    }
+}
