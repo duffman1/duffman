@@ -65,10 +65,8 @@ public class CreateTVSeason extends ParentTest{
         	Reporter.log("Publish state currently set to " + state);
         		
         //Step 2
-        Taxonomy taxonomy = new Taxonomy(webDriver);
-        taxonomy.ClickTier1ContentTier2AddContentTier3TVSeasonLnk();
-        Overlay overlay = new Overlay(webDriver);
-        overlay.SwitchToCreateTVSeasonFrm();
+        taxonomy.NavigateSite("Content>>Add content>>TV Season");
+        overlay.SwitchToFrame("Create TV Season");
         
         //Step 3
         ContentParent contentParent = new ContentParent(webDriver);
@@ -80,18 +78,17 @@ public class CreateTVSeason extends ParentTest{
         //Step 4
         BasicInformation basicInformation = new BasicInformation(webDriver);
         basicInformation.ClickBasicInformationTab();
-        Random random = new Random();
         String tvSeasonTitle = random.GetCharacterString(15);
         basicInformation.EnterTitle(tvSeasonTitle);
         basicInformation.EnterSeasonNumber("1");
         basicInformation.EnterSynopsis();
-        overlay.SwitchToCreateTVSeasonFrm();
+        overlay.SwitchToFrame("Create TV Season");
         
         //Step 5
         basicInformation.ClickCoverSelectBtn();
         SelectFile selectFile = new SelectFile(webDriver, applib);
     	selectFile.SelectDefaultCoverImg();
-    	overlay.SwitchToCreateTVSeasonFrm();
+    	overlay.SwitchToFrame("Create TV Season");
     	
     	//Step 6
     	publishingOptions.ClickPublishingOptionsLnk();

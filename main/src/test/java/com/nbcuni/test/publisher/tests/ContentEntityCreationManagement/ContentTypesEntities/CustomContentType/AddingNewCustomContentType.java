@@ -43,12 +43,10 @@ public class AddingNewCustomContentType extends ParentTest{
             userLogin.Login("admin@publisher.nbcuni.com", "pa55word");
             
             //Step 2
-            Taxonomy taxonomy = new Taxonomy(webDriver);
-            taxonomy.ClickTier1StructureTier2ContentTypeTier3AddContentTypeLnk();
+            taxonomy.NavigateSite("Structure>>Content types>>Add content type");
             
             //Step 3
-            Overlay overlay = new Overlay(webDriver);
-            overlay.SwitchToAddContentTypeFrm();
+            overlay.SwitchToFrame("Content types");
             ContentTypes contentTypes = new ContentTypes(webDriver);
             Random random = new Random();
             String contentTypeName = random.GetCharacterString(10);
@@ -61,13 +59,10 @@ public class AddingNewCustomContentType extends ParentTest{
             
             //Step 5
             overlay.switchToDefaultContent();
-            taxonomy.MouseOverTier1StructureLnk();
-            taxonomy.MouseOverTier1StructureTier2ContentTypeLnk();
-            taxonomy.MouseOverTier1StructureTier2ContentTypeTier3ContentTypeLnk(contentTypeName);
-            taxonomy.ClickTier1StructureTier2ContentTypeTier3ContentTypeTier4ManageFieldsLnk(contentTypeName);
+            taxonomy.NavigateSite("Structure>>Content types>>" + contentTypeName + ">>Manage fields");
             
             //Step 6
-            contentTypes.SwitchToNewContentTypeFrm(contentTypeName);
+            overlay.SwitchToFrame(contentTypeName);
             String newFieldName = random.GetCharacterString(15);
             String newFieldType = "Image";
             contentTypes.AddNewField(newFieldName);
@@ -82,10 +77,8 @@ public class AddingNewCustomContentType extends ParentTest{
             //Step 7
             overlay.ClickCloseOverlayLnk();
             overlay.switchToDefaultContent();
-            taxonomy.MouseOverTier1ContentLnk();
-            taxonomy.MouseOverTier1ContentTier2AddContentLnk();
-            taxonomy.ClickTier1ContentTier2AddContentTier3ContentTypeLnk(contentTypeName);
-            contentTypes.SwitchToCreateContentFrm(contentTypeName);
+            taxonomy.NavigateSite("Content>>Add content>>" + contentTypeName);
+            overlay.SwitchToFrame(contentTypeName);
             contentTypes.VerifyFieldSaveBtnPresent(newFieldName);
             
         

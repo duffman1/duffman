@@ -53,14 +53,11 @@ public class CreateMediaGallery extends ParentTest{
             userLogin.Login("admin@publisher.nbcuni.com", "pa55word");
             
             //Step 2
-            Taxonomy taxonomy = new Taxonomy(webDriver);
-            taxonomy.ClickTier1ContentTier2AddContentTier3MediaGalleryLnk();
+            taxonomy.NavigateSite("Content>>Add content>>Media Gallery");
             
             //Step 3
             BasicInformation basicInformation = new BasicInformation(webDriver);
-            Overlay overlay = new Overlay(webDriver);
-            overlay.SwitchToCreateMediaGalleryFrm();
-            Random random = new Random();
+            overlay.SwitchToFrame("Create Media Gallery");
             String title = random.GetCharacterString(15);
             basicInformation.EnterTitle(title);
             
@@ -68,7 +65,7 @@ public class CreateMediaGallery extends ParentTest{
             basicInformation.ClickCoverSelectBtn();
             SelectFile selectFile = new SelectFile(webDriver, applib);
             selectFile.SelectDefaultCoverImg();
-            overlay.SwitchToCreateMediaGalleryFrm();
+            overlay.SwitchToFrame("Create Media Gallery");
             basicInformation.VerifyCoverImagePresent("HanSolo");
             
             //Step 5

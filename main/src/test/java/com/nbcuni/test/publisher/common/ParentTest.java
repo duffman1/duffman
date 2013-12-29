@@ -30,6 +30,9 @@ public class ParentTest {
 	
 	public CustomWebDriver webDriver;
     public AppLib applib;
+    public Random random;
+    public Taxonomy taxonomy;
+    public Overlay overlay;
 
     /**
      * Instantiate the TestNG Before Class Method.
@@ -44,6 +47,9 @@ public class ParentTest {
             webDriver = WebDriverClientExecution.getInstance().getDriver();
             applib = new AppLib(webDriver);
             applib.setEnvironmentInfo(sEnv);
+            random = new Random();
+            taxonomy = new Taxonomy(webDriver);
+            overlay = new Overlay(webDriver);
             
             try {
             webDriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);

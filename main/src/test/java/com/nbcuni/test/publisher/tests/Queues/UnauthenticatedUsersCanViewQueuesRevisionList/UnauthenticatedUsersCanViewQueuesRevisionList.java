@@ -60,8 +60,7 @@ public class UnauthenticatedUsersCanViewQueuesRevisionList extends ParentTest{
         
         //Step 2
         webDriver.navigate().to(applib.getApplicationURL() + "/#overlay=admin/content/queues/manage/all/revisions-state-flow-states");
-        Overlay overlay = new Overlay(webDriver);
-        overlay.SwitchToAccessDeniedFrm();
+        overlay.SwitchToFrame("Access denied");
         AccessDenied accessDenied = new AccessDenied(webDriver);
         accessDenied.VerifyAccessDeniedTxt();
         

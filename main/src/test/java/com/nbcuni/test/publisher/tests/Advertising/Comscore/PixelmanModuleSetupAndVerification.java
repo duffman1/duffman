@@ -49,17 +49,13 @@ public class PixelmanModuleSetupAndVerification extends ParentTest {
         UserLogin userLogin = applib.openApplication();
         userLogin.Login("admin@publisher.nbcuni.com", "pa55word");
         
-        //Step 2
-        Taxonomy taxonomy = new Taxonomy(webDriver);
-        taxonomy.ClickTier1ModulesLnk();
-        Overlay overlay = new Overlay(webDriver);
-        overlay.SwitchToModulesFrm();
-        Modules modules = new Modules(webDriver);
-        modules.EnterFilterName("Pixelman");
-            
-        //Step 3
-        modules.EnableModule("Pixelman");
-            
+        //Step 2 and 3 (truncated)
+        taxonomy.NavigateSite("Modules");
+    	overlay.SwitchToFrame("Modules");
+    	Modules modules = new Modules(webDriver);
+    	modules.EnterFilterName("Pixelman");
+    	modules.EnableModule("Pixelman");
+    	
         //Step 4
         modules.EnterFilterName("DART");
         modules.DisableModule("DART");
@@ -69,7 +65,7 @@ public class PixelmanModuleSetupAndVerification extends ParentTest {
         //Step 5
         overlay.ClickCloseOverlayLnk();
         overlay.switchToDefaultContent();
-        taxonomy.ClickHomeLnk();
+        taxonomy.NavigateSite("Home");
             
         //Step 6
         modules.VerifyModuleSourceInPage("//www.nbcudigitaladops.com/hosted/global_header.js");
@@ -85,8 +81,8 @@ public class PixelmanModuleSetupAndVerification extends ParentTest {
             
         //Step 9
         userLogin.Login("admin@publisher.nbcuni.com", "pa55word");
-        taxonomy.ClickTier1ModulesLnk();
-        overlay.SwitchToModulesFrm();
+        taxonomy.NavigateSite("Modules");
+        overlay.SwitchToFrame("Modules");
         modules.EnterFilterName("Pixelman");
         modules.DisableModule("Pixelman");
         modules.EnterFilterName("Pub Ads");

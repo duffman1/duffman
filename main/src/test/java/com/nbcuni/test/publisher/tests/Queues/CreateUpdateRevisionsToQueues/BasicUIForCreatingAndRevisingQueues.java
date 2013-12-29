@@ -70,43 +70,40 @@ public class BasicUIForCreatingAndRevisingQueues extends ParentTest{
         userLogin.Login("admin@publisher.nbcuni.com", "pa55word");
         
         //Step 2
-        Taxonomy taxonomy = new Taxonomy(webDriver);
-        taxonomy.ClickTier1ContentTier2QueuesTier3AddPromoQueueLnk();
+        taxonomy.NavigateSite("Content>>Queues>>Add Promo Queue");
         
         //Step 3
-        Overlay overlay = new Overlay(webDriver);
-        overlay.SwitchToAddPromoQueueFrm();
+        overlay.SwitchToFrame("Add Promo Queue");
         Queues queues = new Queues(webDriver);
         queues.ClickSaveQueueBtn();
         ErrorChecking errorChecking = new ErrorChecking(webDriver);
         errorChecking.VerifyAllRequiredFields(Arrays.asList("Title"));
         
         //Step 4
-        Random random = new Random();
         String queueTitle = random.GetCharacterString(15);
         queues.EnterTitle(queueTitle);
         queues.ClickSaveQueueBtn();
         overlay.switchToDefaultContent();
-        overlay.SwitchToQueuesListingFrm();
+        overlay.SwitchToFrame("Queues Listing");
         queues.VerifyQueuesInList(Arrays.asList(queueTitle));
         
         //Step 5
         queues.ClickEditQueueExtendMenuBtn(queueTitle);
         queues.ClickDeleteQueueMenuBtn(queueTitle);
         overlay.switchToDefaultContent();
-        overlay.SwitchToDeleteQueueFrm(queueTitle);
+        overlay.SwitchToFrame(queueTitle);
         
         //Step 6
         DeleteQueue deleteQueue = new DeleteQueue(webDriver);
         deleteQueue.ClickCancelLnk();
         overlay.switchToDefaultContent();
-        overlay.SwitchToQueuesListingFrm();
+        overlay.SwitchToFrame("Queues Listing");
         
         //Step 7
         queues.ClickEditQueueExtendMenuBtn(queueTitle);
         queues.ClickEditQueueMenuBtn(queueTitle);
         overlay.switchToDefaultContent();
-        overlay.SwitchToEditQueueFrm(queueTitle);
+        overlay.SwitchToFrame(queueTitle);
         
         //Step 8
         String modQueueTitle = random.GetCharacterString(15);
@@ -115,7 +112,7 @@ public class BasicUIForCreatingAndRevisingQueues extends ParentTest{
         publishingOptions.VerifyCreateNewRevisionCbxChecked();
         queues.ClickSaveQueueBtn();
         overlay.switchToDefaultContent();
-        overlay.SwitchToQueuesListingFrm();
+        overlay.SwitchToFrame("Queues Listing");
         queues.VerifyQueuesInList(Arrays.asList(modQueueTitle));
         
         //Step 9

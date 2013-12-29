@@ -59,13 +59,11 @@ public class CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedShortVersion e
             userLogin.Login("admin@publisher.nbcuni.com", "pa55word");
             
             //Step 2
-            Taxonomy taxonomy = new Taxonomy(webDriver);
-            taxonomy.ClickTier1ContentTier2AddContentTier3MovieLnk();
+            taxonomy.NavigateSite("Content>>Add content>>Movie");
             
             //Step 3
-            Overlay overlay = new Overlay(webDriver);
-            overlay.SwitchToCreateMovieFrm();
             CastCrew castCrew = new CastCrew(webDriver);
+            overlay.SwitchToFrame("Movie");
             castCrew.ClickCastCrewLnk();
             List<String> allRoles = Arrays.asList("Contributor", "Directory", "Executive Producer", "Host",
             		"Judge", "Producer", "Self", "Song Writer", "Writer");

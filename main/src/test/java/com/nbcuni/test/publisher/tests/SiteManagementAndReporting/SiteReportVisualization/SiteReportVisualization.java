@@ -73,19 +73,12 @@ public class SiteReportVisualization extends ParentTest{
         userLogin.Login("admin@publisher.nbcuni.com", "pa55word");
         
         //Step 1a
-        Taxonomy taxonomy = new Taxonomy(webDriver);
-        taxonomy.ClickTier1ModulesLnk();
-        Overlay overlay = new Overlay(webDriver);
-        overlay.SwitchToModulesFrm();
         Modules modules = new Modules(webDriver);
-        modules.EnterFilterName("Pub Report Server");
-        modules.EnableModule("Pub Report Server");
-        overlay.ClickCloseOverlayLnk();
-        overlay.switchToDefaultContent();
+        modules.VerifyModuleEnabled("Pub Report Server");
         
         //Step 2
-        taxonomy.ClickTier1ReportsTier2PublisherReportsLnk();
-        overlay.SwitchToSiteReportsFrm();
+        taxonomy.NavigateSite("Reports>>Publisher Reports");
+        overlay.SwitchToFrame("Reports");
         
         //Step 3
         Assert.fail("Test steps indicate that I should be able to filter with results on columns but no action taken results in data present. Emailing pete/sruthi.");

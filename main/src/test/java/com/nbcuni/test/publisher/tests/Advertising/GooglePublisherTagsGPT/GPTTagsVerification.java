@@ -54,21 +54,14 @@ public class GPTTagsVerification extends ParentTest{
             userLogin.Login("admin@publisher.nbcuni.com", "pa55word");
             
             //Step 1A
-            Taxonomy taxonomy = new Taxonomy(webDriver);
-            taxonomy.ClickTier1ModulesLnk();
-            Overlay overlay = new Overlay(webDriver);
-            overlay.SwitchToModulesFrm();
             Modules modules = new Modules(webDriver);
-            modules.EnterFilterName("Doubleclick for Publishers");
-            modules.EnableModule("Doubleclick for Publishers");
-            overlay.ClickCloseOverlayLnk();
-            overlay.switchToDefaultContent();
+            modules.VerifyModuleEnabled("Doubleclick for Publishers");
             
             //Step 2
-            taxonomy.ClickTier1StructureTier2DFPAddTagsTier3AddLnk();
+            taxonomy.NavigateSite("Structure>>DFP Ad Tags>>Add");
             
             //Step 3
-            overlay.SwitchToAddNewDFPAdFrm();
+            overlay.SwitchToFrame("Add a new DFP ad");
             DFPAddTags dfpAddTags = new DFPAddTags(webDriver);
             Random random = new Random();
             String adSlotName = random.GetCharacterString(15);
@@ -83,7 +76,7 @@ public class GPTTagsVerification extends ParentTest{
             //Step 5
             overlay.ClickCloseOverlayLnk();
             overlay.switchToDefaultContent();
-            taxonomy.ClickTier1StructureTier2BlocksLnk();
+            taxonomy.NavigateSite("Structure>>Blocks");
             
             //Step 6
             Blocks blocks = new Blocks(webDriver);
@@ -101,9 +94,11 @@ public class GPTTagsVerification extends ParentTest{
             //Step 8
             overlay.ClickCloseOverlayLnk();
             overlay.switchToDefaultContent();
-            taxonomy.ClickHomeLnk();
+            taxonomy.NavigateSite("Home");
             blocks.VerifyScriptSourceInPage("http://www.googletagservices.com/tag/js/gpt.js");
-            Assert.fail("Test case indicates there should be extra scripts present here. Following up with Pete");
+            blocks.VerifyScriptSourceInPage("//www.nbcudigitaladops.com/hosted/global_header.js");
+            blocks.VerifyScriptSourceInPage("googletag.slots.test_gpt = googletag.defineSlot(\"nbcu/Test_AdUnit_Pattern\", [300, 250], \"dfp-ad-test_gpt\")   .addService(googletag.pubads());");
+            blocks.VerifyScriptSourceInPage("googletag.enableServices();");
             
             //Step 9
             Logout logout = new Logout(webDriver);

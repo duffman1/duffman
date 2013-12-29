@@ -11,6 +11,7 @@ import org.testng.Reporter;
 
 import com.nbcuni.test.lib.Util;
 import com.nbcuni.test.publisher.common.AppLib;
+import com.nbcuni.test.publisher.pageobjects.taxonomy.Taxonomy;
 import com.nbcuni.test.webdriver.CustomWebDriver;
 
 
@@ -96,6 +97,18 @@ public class Modules {
     			"Module source is present when it should not be!");
     	
     	
+    }
+    
+    public void VerifyModuleEnabled(String moduleName) throws Exception {
+    	
+    	Taxonomy taxonomy = new Taxonomy(webDriver);
+    	Overlay overlay = new Overlay(webDriver);
+    	taxonomy.NavigateSite("Modules");
+    	overlay.SwitchToFrame("Modules");
+    	this.EnterFilterName(moduleName);
+    	this.EnableModule(moduleName);
+    	overlay.ClickCloseOverlayLnk();
+        overlay.switchToDefaultContent();
     }
     
     

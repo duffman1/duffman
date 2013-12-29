@@ -69,30 +69,27 @@ public class CreateTVEpisode extends ParentTest{
             	Reporter.log("Publish state currently set to " + state);
             
             	//Step 1A
-            	Taxonomy taxonomy = new Taxonomy(webDriver);
-            	taxonomy.ClickTier1ContentTier2AddContentTier3PersonLnk();
-            	Overlay overlay = new Overlay(webDriver);
-            	overlay.SwitchToCreatePersonFrm();
+            	taxonomy.NavigateSite("Content>>Add content>>Person");
+            	overlay.SwitchToFrame("Create Person");
             	PersonsInformation personsInformation = new PersonsInformation(webDriver);
-            	Random random = new Random();
             	String personFirstName = random.GetCharacterString(15);
             	personsInformation.EnterFirstName(personFirstName);
             	personsInformation.EnterBiography();
             	overlay.switchToDefaultContent();
-            	overlay.SwitchToCreatePersonFrm();
+            	overlay.SwitchToFrame("Create Person");
             	personsInformation.ClickCoverPhotoSelectBtn();
             	SelectFile selectFile = new SelectFile(webDriver, applib);
             	selectFile.SelectDefaultCoverImg();
-            	overlay.SwitchToCreatePersonFrm();
+            	overlay.SwitchToFrame("Create Person");
             	ContentParent contentParent = new ContentParent(webDriver);
             	contentParent.ClickSaveBtn();
             	overlay.switchToDefaultContent();
             	contentParent.VerifyMessageStatus("Person " + personFirstName + " has been created.");
             	
             	//Step 2
-            	taxonomy.ClickTier1ContentTier2AddContentTier3TVEpisodeLnk();
-            	overlay.SwitchToCreateTVEpisodeFrm();
-            
+            	taxonomy.NavigateSite("Content>>Add content>>TV Episode");
+            	overlay.SwitchToFrame("TV Episode");
+            	
             	//Step 3
             	contentParent.VerifyRequiredFields(Arrays.asList("Title", "Episode", "Synopsis"));
             	PublishingOptions publishingOptions = new PublishingOptions(webDriver);
@@ -107,12 +104,12 @@ public class CreateTVEpisode extends ParentTest{
             	basicInformation.EnterEpisodeNumber("1");
             	basicInformation.EnterSynopsis();
                 overlay.switchToDefaultContent();
-                overlay.SwitchToCreateTVEpisodeFrm();
-            	
+                overlay.SwitchToFrame("Create TV Episode");
+                
             	//Step 5
             	basicInformation.ClickCoverSelectBtn();
             	selectFile.SelectDefaultCoverImg();
-            	overlay.SwitchToCreateTVEpisodeFrm();
+            	overlay.SwitchToFrame("Create TV Episode");
         	
             	//Step 6
             	publishingOptions.ClickPublishingOptionsLnk();

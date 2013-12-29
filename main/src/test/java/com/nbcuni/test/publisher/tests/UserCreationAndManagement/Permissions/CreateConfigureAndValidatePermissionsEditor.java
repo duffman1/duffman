@@ -38,6 +38,7 @@ import com.nbcuni.test.publisher.pageobjects.content.CharactersInformation;
 import com.nbcuni.test.publisher.pageobjects.content.Content;
 import com.nbcuni.test.publisher.pageobjects.content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.content.ContentTypes;
+import com.nbcuni.test.publisher.pageobjects.content.CreateDefaultContent;
 import com.nbcuni.test.publisher.pageobjects.content.Delete;
 import com.nbcuni.test.publisher.pageobjects.content.PersonsInformation;
 import com.nbcuni.test.publisher.pageobjects.content.PublishingOptions;
@@ -100,23 +101,15 @@ public class CreateConfigureAndValidatePermissionsEditor extends ParentTest{
         userLogin.Login("admin@publisher.nbcuni.com", "pa55word");
         
         //Step 1a (enable post module if needed)
-        Taxonomy taxonomy = new Taxonomy(webDriver);
-        taxonomy.ClickTier1ModulesLnk();
-        Overlay overlay = new Overlay(webDriver);
-        overlay.SwitchToModulesFrm();
         Modules modules = new Modules(webDriver);
-        modules.EnterFilterName("Pub Post");
-        modules.EnableModule("Pub Post");
-        overlay.ClickCloseOverlayLnk();
-        overlay.switchToDefaultContent();
+        modules.VerifyModuleEnabled("Pub Post");
         
         //Step 2
-        taxonomy.ClickTier1PeopleTier2AddUserLnk();
-        overlay.SwitchToPeopleFrm();
+        taxonomy.NavigateSite("People>>Add user");
+        overlay.SwitchToFrame("People");
         
         //Step 3
         AddUser addUser = new AddUser(webDriver);
-        Random random = new Random();
         String userName = random.GetCharacterString(15) + "@" + random.GetCharacterString(15) + ".com";
         addUser.EnterUsername(userName);
         addUser.EnterEmailAddress(userName);
@@ -134,9 +127,9 @@ public class CreateConfigureAndValidatePermissionsEditor extends ParentTest{
        
         //Step 4
         overlay.switchToDefaultContent();
-        taxonomy.ClickTier1PeopleTier2PermissionsTier3RolesLnk();
+        taxonomy.NavigateSite("People>>Permissions>>Roles");
         overlay.switchToDefaultContent();
-        overlay.SwitchToPeopleFrm();
+        overlay.SwitchToFrame("People");
         
         //Step 5
         Roles roles = new Roles(webDriver);
@@ -163,28 +156,12 @@ public class CreateConfigureAndValidatePermissionsEditor extends ParentTest{
         userLogin.Login(userName, passWord);
         
         //Step 9 and 10 (truncated)
-        taxonomy.ClickTier1ContentTier2AddContentTier3PostLnk();
-        overlay.SwitchToCreatePostFrm();
-        BasicInformation basicInformation = new BasicInformation(webDriver);
-        String postTitle = random.GetCharacterString(15);
-        basicInformation.EnterTitle(postTitle);
-        basicInformation.EnterSynopsis();
-        overlay.switchToDefaultContent();
-        overlay.SwitchToCreatePostFrm();
-        basicInformation.ClickCoverSelectBtn();
-        SelectFile selectFile = new SelectFile(webDriver, applib);
-        selectFile.SelectDefaultCoverImg();
-        overlay.SwitchToCreatePostFrm();
-        PublishingOptions publishingOptions = new PublishingOptions(webDriver);
-        publishingOptions.ClickPublishingOptionsLnk();
-        publishingOptions.SelectModerationState("Draft");
-        contentParent.ClickSaveBtn();
-        overlay.switchToDefaultContent();
-        contentParent.VerifyMessageStatus("Post " + postTitle + " has been created.");
+        CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver, applib);
+        String postTitle = createDefaultContent.Post("Draft");
         
         //Step 11
-        taxonomy.ClickTier1ContentLnk();
-        overlay.SwitchToContentFrm();
+        taxonomy.NavigateSite("Content");
+        overlay.SwitchToFrame("Content");
         
         //Step 12 and 13 (truncated)
         Content content = new Content(webDriver);
@@ -198,21 +175,7 @@ public class CreateConfigureAndValidatePermissionsEditor extends ParentTest{
         userLogin.Login("admin@publisher.nbcuni.com", "pa55word");
         
         //Step 16 and 17 (truncated)
-        taxonomy.ClickTier1ContentTier2AddContentTier3PostLnk();
-        overlay.SwitchToCreatePostFrm();
-        String postTitle2 = random.GetCharacterString(15);
-        basicInformation.EnterTitle(postTitle2);
-        basicInformation.EnterSynopsis();
-        overlay.switchToDefaultContent();
-        overlay.SwitchToCreatePostFrm();
-        basicInformation.ClickCoverSelectBtn();
-        selectFile.SelectDefaultCoverImg();
-        overlay.SwitchToCreatePostFrm();
-        publishingOptions.ClickPublishingOptionsLnk();
-        publishingOptions.SelectModerationState("Draft");
-        contentParent.ClickSaveBtn();
-        overlay.switchToDefaultContent();
-        contentParent.VerifyMessageStatus("Post " + postTitle2 + " has been created.");
+        String postTitle2 = createDefaultContent.Post("Draft");
         
         //Step 18
         logout.ClickLogoutBtn();
@@ -221,16 +184,16 @@ public class CreateConfigureAndValidatePermissionsEditor extends ParentTest{
         userLogin.Login(userName, passWord);
         
         //Step 20
-        taxonomy.ClickTier1ContentLnk();
-        overlay.SwitchToContentFrm();
+        taxonomy.NavigateSite("Content");
+        overlay.SwitchToFrame("Content");
         
         //Step 21
         content.VerifyContentItemEditDeleteNotPresent(postTitle2);
         
         //Step 22
         overlay.switchToDefaultContent();
-        taxonomy.ClickTier1ContentTier2ContentRevisionsLnk();
-        overlay.SwitchToContentRevisionsFrm(); //not right frame
+        taxonomy.NavigateSite("Content>>Content Revisions");
+        overlay.SwitchToFrame("Content Revisions");
         
         //Step 23
         Revisions revisions = new Revisions(webDriver);
@@ -243,31 +206,32 @@ public class CreateConfigureAndValidatePermissionsEditor extends ParentTest{
         revisions.ClickEditExtendMenuBtn(postTitle);
         revisions.ClickEditMenuBtn(postTitle);
         overlay.switchToDefaultContent();
-        overlay.SwitchToEditPostFrm(postTitle);
+        overlay.SwitchToFrame(postTitle);
         
         //Step 27
+        BasicInformation basicInformation = new BasicInformation(webDriver);
         basicInformation.EnterSynopsis();
         contentParent.ClickSaveBtn();
         overlay.switchToDefaultContent();
         contentParent.VerifyMessageStatus("Post " + postTitle + " has been updated.");
         
         //Step 28
-        taxonomy.ClickTier1ContentLnk();
-        overlay.SwitchToContentFrm();
+        taxonomy.NavigateSite("Content");
+        overlay.SwitchToFrame("Content");
         
         //Step 29
         content.ClickEditExtendMenuBtn(postTitle);
         content.ClickDeleteMenuBtn(postTitle);
         overlay.switchToDefaultContent();
-        overlay.SwitchToDeleteContentItemFrm(postTitle);
+        overlay.SwitchToFrame(postTitle);
         Delete delete = new Delete(webDriver);
         delete.ClickDeleteBtn();
         overlay.switchToDefaultContent();
         contentParent.VerifyMessageStatus("Post " + postTitle + " has been deleted.");
         
         //Step 30
-        taxonomy.ClickTier1ContentLnk();
-        overlay.SwitchToContentFrm();
+        taxonomy.NavigateSite("Content");
+        overlay.SwitchToFrame("Content");
         
         //Step 31
         content.VerifyContentItemNotPresent(postTitle);

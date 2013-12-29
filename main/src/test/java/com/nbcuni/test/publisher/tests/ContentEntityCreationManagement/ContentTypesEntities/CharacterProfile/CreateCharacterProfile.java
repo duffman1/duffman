@@ -48,12 +48,12 @@ public class CreateCharacterProfile extends ParentTest{
             
             //Step 2
             Taxonomy taxonomy = new Taxonomy(webDriver);
-            taxonomy.ClickTier1ContentTier2AddContentTier3CharacterProfileLnk();
+            taxonomy.NavigateSite("Content>>Add content>>Character Profile");
             
             //Step 3
             CharactersInformation charactersInformation = new CharactersInformation(webDriver);
             Overlay overlay = new Overlay(webDriver);
-            overlay.SwitchToCreateCharacterProfileFrm();
+            overlay.SwitchToFrame("Create Character Profile");
             Random random = new Random();
             String characterName = random.GetCharacterString(15);
             charactersInformation.EnterCharacterFirstName(characterName);
@@ -62,7 +62,7 @@ public class CreateCharacterProfile extends ParentTest{
             charactersInformation.ClickAddPhotoSelectBtn();
             SelectFile selectFile = new SelectFile(webDriver, applib);
             selectFile.SelectDefaultCoverImg();
-            overlay.SwitchToCreateCharacterProfileFrm();
+            overlay.SwitchToFrame("Create Character Profile");
             charactersInformation.VerifyDefaultImagePresent("HanSolo");
             
             //Step 5

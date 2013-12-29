@@ -46,11 +46,11 @@ public class GPTConfiguration extends ParentTest{
             
             //Step 2
             Taxonomy taxonomy = new Taxonomy(webDriver);
-            taxonomy.ClickTier1ModulesLnk();
+            taxonomy.NavigateSite("Modules");
             
             //Step 3
             Overlay overlay = new Overlay(webDriver);
-            overlay.SwitchToModulesFrm();
+            overlay.SwitchToFrame("Modules");
             Modules modules = new Modules(webDriver);
             modules.EnterFilterName("DART");
             modules.DisableModule("DART");
@@ -62,11 +62,11 @@ public class GPTConfiguration extends ParentTest{
             //Step 5
             overlay.ClickCloseOverlayLnk();
             overlay.switchToDefaultContent();
-            taxonomy.ClickTier1StructureTier2DFPAddTagsTier3GlobalDFPSettingsLnk();
+            taxonomy.NavigateSite("Structure>>DFP Ad Tags>>Global DFP Settings");
             
             //Step 6
             DFPAddTags dfpAddTags = new DFPAddTags(webDriver);
-            overlay.SwitchToDFPAddTagsFrm();
+            overlay.SwitchToFrame("DFP Ad Tags");
             dfpAddTags.EnterNetworkId("nbcu");
             dfpAddTags.ClickSaveConfigurationBtn();
             dfpAddTags.VerifyConfigurationSaved();

@@ -32,6 +32,7 @@ import com.nbcuni.test.publisher.pageobjects.content.CastCrew;
 import com.nbcuni.test.publisher.pageobjects.content.CharactersInformation;
 import com.nbcuni.test.publisher.pageobjects.content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.content.ContentTypes;
+import com.nbcuni.test.publisher.pageobjects.content.CreateDefaultContent;
 import com.nbcuni.test.publisher.pageobjects.content.PersonsInformation;
 import com.nbcuni.test.publisher.pageobjects.content.PublishingOptions;
 import com.nbcuni.test.publisher.pageobjects.content.RevisionState;
@@ -69,67 +70,43 @@ public class ScheduleRevisionsOfQueues extends ParentTest{
         userLogin.Login("admin@publisher.nbcuni.com", "pa55word");
         
         //Step 1a
-        Taxonomy taxonomy = new Taxonomy(webDriver);
-        taxonomy.ClickTier1ModulesLnk();
-        Overlay overlay = new Overlay(webDriver);
-        overlay.SwitchToModulesFrm();
         Modules modules = new Modules(webDriver);
-        modules.EnterFilterName("Pub Post");
-        modules.EnableModule("Pub Post");
-        overlay.ClickCloseOverlayLnk();
-        overlay.switchToDefaultContent();
-        taxonomy.ClickTier1ContentTier2AddContentTier3PostLnk();
-        overlay.SwitchToCreatePostFrm();
-        ContentParent contentParent = new ContentParent(webDriver);
-        BasicInformation basicInformation = new BasicInformation(webDriver);
-        Random random = new Random();
-        String postTitle = random.GetCharacterString(15);
-        basicInformation.EnterTitle(postTitle);
-        basicInformation.EnterSynopsis();
-        overlay.switchToDefaultContent();
-        overlay.SwitchToCreatePostFrm();
-        basicInformation.ClickCoverSelectBtn();
-        SelectFile selectFile = new SelectFile(webDriver, applib);
-        selectFile.SelectDefaultCoverImg();
-        overlay.SwitchToCreatePostFrm();
-        PublishingOptions publishingOptions = new PublishingOptions(webDriver);
-        publishingOptions.ClickPublishingOptionsLnk();
-        publishingOptions.SelectModerationState("Draft");
-        contentParent.ClickSaveBtn();
-        overlay.switchToDefaultContent();
-        contentParent.VerifyMessageStatus("Post " + postTitle + " has been created.");
+        modules.VerifyModuleEnabled("Pub Post");
+        CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver, applib);
+        String postTitle = createDefaultContent.Post("Draft");
         
         //Step 2
-        taxonomy.ClickTier1ContentTier2QueuesTier3AddPromoQueueLnk();
+        taxonomy.NavigateSite("Content>>Queues>>Add Promo Queue");
         
         //Step 3
-        overlay.SwitchToAddPromoQueueFrm();
+        overlay.SwitchToFrame("Add promo queue");
         Queues queues = new Queues(webDriver);
         String queueTitle = random.GetCharacterString(15);
         queues.EnterTitle(queueTitle);
         queues.EnterQueueItem(postTitle, "1");
         queues.ClickSaveQueueBtn();
         overlay.switchToDefaultContent();
-        overlay.SwitchToQueuesListingFrm();
+        overlay.SwitchToFrame("Queues Listing");
         queues.VerifyQueuesInList(Arrays.asList(queueTitle)); 
         
         //Step 4
         queues.ClickEditQueueExtendMenuBtn(queueTitle);
         queues.ClickEditQueueMenuBtn(queueTitle);
         overlay.switchToDefaultContent();
-        overlay.SwitchToEditQueueFrm(queueTitle);
+        overlay.SwitchToFrame(queueTitle);
         
-        //Step 5, 6, and 7 (truncated for test efficiency)
+        //Step 5, 6, and 7 (truncated)
+        PublishingOptions publishingOptions = new PublishingOptions(webDriver);
         publishingOptions.VerifyCreateNewRevisionCbxChecked();
         ScheduleQueue scheduleQueue = new ScheduleQueue(webDriver);
         scheduleQueue.ClickScheduleTab();
         overlay.switchToDefaultContent();
-        overlay.SwitchToEditQueueSchedulingFrm(queueTitle);
+        overlay.SwitchToFrameByIndex(queueTitle, 1);
         scheduleQueue.ClickAddScheduledRevisionLnk();
         
         //Step 8
         overlay.switchToDefaultContent();
-        overlay.SwitchToEditQueueSchedulingFrm(queueTitle);
+        overlay.SwitchToFrame(queueTitle);
         scheduleQueue.SelectRevision(queueTitle);
         scheduleQueue.SelectOperation("Moderate to Publish");
         Calendar cal = Calendar.getInstance();
@@ -143,8 +120,9 @@ public class ScheduleRevisionsOfQueues extends ParentTest{
         //Step 9
         scheduleQueue.ClickScheduleBtn();
         overlay.switchToDefaultContent();
+        ContentParent contentParent = new ContentParent(webDriver);
         contentParent.VerifyMessageStatus("The scheduled revision operation has been saved.");
-        taxonomy.ClickTier1ContentTier2QueuesLnk();
+        taxonomy.NavigateSite("Content>>Queues");
         //overlay.SwitchToQueuesListingFrm(); NOT IN AN OVERLAY - STILL FUNCTIONAL THOUGH - EMAILING RICH BURKE
         queues.ClickEditQueueExtendMenuBtn(queueTitle);
         queues.ClickEditQueueMenuBtn(queueTitle);

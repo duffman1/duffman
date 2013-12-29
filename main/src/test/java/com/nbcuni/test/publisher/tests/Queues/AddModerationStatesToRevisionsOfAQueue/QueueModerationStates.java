@@ -31,6 +31,7 @@ import com.nbcuni.test.publisher.pageobjects.content.CastCrew;
 import com.nbcuni.test.publisher.pageobjects.content.CharactersInformation;
 import com.nbcuni.test.publisher.pageobjects.content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.content.ContentTypes;
+import com.nbcuni.test.publisher.pageobjects.content.CreateDefaultContent;
 import com.nbcuni.test.publisher.pageobjects.content.PersonsInformation;
 import com.nbcuni.test.publisher.pageobjects.content.PublishingOptions;
 import com.nbcuni.test.publisher.pageobjects.content.RevisionState;
@@ -70,39 +71,14 @@ public class QueueModerationStates extends ParentTest{
         userLogin.Login("admin@publisher.nbcuni.com", "pa55word");
         
         //Step 1a
-        Taxonomy taxonomy = new Taxonomy(webDriver);
-        taxonomy.ClickTier1ModulesLnk();
-        Overlay overlay = new Overlay(webDriver);
-        overlay.SwitchToModulesFrm();
         Modules modules = new Modules(webDriver);
-        modules.EnterFilterName("Pub Post");
-        modules.EnableModule("Pub Post");
-        overlay.ClickCloseOverlayLnk();
-        overlay.switchToDefaultContent();
-        taxonomy.ClickTier1ContentTier2AddContentTier3PostLnk();
-        overlay.SwitchToCreatePostFrm();
-        ContentParent contentParent = new ContentParent(webDriver);
-        BasicInformation basicInformation = new BasicInformation(webDriver);
-        Random random = new Random();
-        String postTitle = random.GetCharacterString(15);
-        basicInformation.EnterTitle(postTitle);
-        basicInformation.EnterSynopsis();
-        overlay.switchToDefaultContent();
-        overlay.SwitchToCreatePostFrm();
-        basicInformation.ClickCoverSelectBtn();
-        SelectFile selectFile = new SelectFile(webDriver, applib);
-        selectFile.SelectDefaultCoverImg();
-        overlay.SwitchToCreatePostFrm();
-        PublishingOptions publishingOptions = new PublishingOptions(webDriver);
-        publishingOptions.ClickPublishingOptionsLnk();
-        publishingOptions.SelectModerationState("Draft");
-        contentParent.ClickSaveBtn();
-        overlay.switchToDefaultContent();
-        contentParent.VerifyMessageStatus("Post " + postTitle + " has been created.");
+        modules.VerifyModuleEnabled("Pub Post");
+        CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver, applib);
+        String postTitle = createDefaultContent.Post("Draft");
         
         //Step 2
-        taxonomy.ClickTier1ContentTier2QueuesTier3AddPromoQueueLnk();
-        overlay.SwitchToAddPromoQueueFrm();
+        taxonomy.NavigateSite("Content>>Queues>>Add Promo Queue");
+        overlay.SwitchToFrame("Add promo queue");
         
         //Step 3
         Queues queues = new Queues(webDriver);
@@ -111,20 +87,20 @@ public class QueueModerationStates extends ParentTest{
         queues.EnterQueueItem(postTitle, "1");
         queues.ClickSaveQueueBtn();
         overlay.switchToDefaultContent();
-        overlay.SwitchToQueuesListingFrm();
+        overlay.SwitchToFrame("Queues Listing");
         queues.VerifyQueuesInList(Arrays.asList(queueTitle)); 
         
         //Step 4
         queues.ClickEditQueueExtendMenuBtn(queueTitle);
         queues.ClickEditQueueMenuBtn(queueTitle);
         overlay.switchToDefaultContent();
-        overlay.SwitchToEditQueueFrm(queueTitle);
+        overlay.SwitchToFrame(queueTitle);
         
         //Step 5
         QueuesRevisionList queuesRevisionList = new QueuesRevisionList(webDriver);
         queuesRevisionList.ClickRevisionsLnk();
         overlay.switchToDefaultContent();
-        overlay.SwitchToQueuesRevisionListFrm();
+        overlay.SwitchToFrame("Queues Revision list");
         SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
     	String date = sdf.format(new Date());
         queuesRevisionList.VerifyStateFlowHistoryEvent("Revision was set from Draft to Draft on " + date);
@@ -133,31 +109,33 @@ public class QueueModerationStates extends ParentTest{
         //Step 6
         queuesRevisionList.ClickCancelLnk();
         overlay.switchToDefaultContent();
-        overlay.SwitchToEditQueueFrm(queueTitle);
+        overlay.SwitchToFrame(queueTitle);
         
         //Step 7
         overlay.ClickCloseOverlayLnk();
         
         //Step 8
-        taxonomy.ClickTier1ContentTier2QueuesLnk();
-        overlay.SwitchToQueuesListingFrm();
+        taxonomy.NavigateSite("Content>>Queues");
+        overlay.SwitchToFrame("Queues Listing");
         queues.ClickEditQueueExtendMenuBtn(queueTitle);
         queues.ClickEditQueueMenuBtn(queueTitle);
         overlay.switchToDefaultContent();
-        overlay.SwitchToEditQueueFrm(queueTitle);
+        overlay.SwitchToFrame(queueTitle);
         queuesRevisionList.ClickRevisionsLnk();
         overlay.switchToDefaultContent();
-        overlay.SwitchToQueuesRevisionListFrm();
+        overlay.SwitchToFrame("Queues Revision list");
+        PublishingOptions publishingOptions = new PublishingOptions(webDriver);
         publishingOptions.SelectModerationState("Publish");
         String messageForStateChange = random.GetCharacterString(15) + " " + random.GetCharacterString(10);
         publishingOptions.EnterMessageForStateChange(messageForStateChange);
         queuesRevisionList.ClickUpdateStateBtn();
+        ContentParent contentParent= new ContentParent(webDriver);
         contentParent.VerifyMessageStatus(queueTitle + " transitioned to the published state.");
         
         //Step 9
         queuesRevisionList.ClickRevisionsLnk();
         overlay.switchToDefaultContent();
-        overlay.SwitchToQueuesRevisionListFrm();
+        overlay.SwitchToFrame("Queues Revision list");
         queuesRevisionList.VerifyStateFlowHistoryEvent("Revision was set from Draft to Published on " + date);
         queuesRevisionList.VerifyStateFlowHistoryEvent(messageForStateChange);
         
@@ -167,13 +145,13 @@ public class QueueModerationStates extends ParentTest{
         publishingOptions.EnterMessageForStateChange(messageForStateChangeUnpub);
         queuesRevisionList.ClickUpdateStateBtn();
         overlay.switchToDefaultContent();
-        overlay.SwitchToEditQueueFrm(queueTitle);
+        overlay.SwitchToFrame(queueTitle);
         contentParent.VerifyMessageStatus(queueTitle + " transitioned to the unpublished state.");
         
         //Step 11
         queuesRevisionList.ClickRevisionsLnk();
         overlay.switchToDefaultContent();
-        overlay.SwitchToQueuesRevisionListFrm();
+        overlay.SwitchToFrame("Queues Revision list");
         queuesRevisionList.VerifyStateFlowHistoryEvent("Revision was set from Published to Unpublished on " + date);
         queuesRevisionList.VerifyStateFlowHistoryEvent(messageForStateChangeUnpub);
         

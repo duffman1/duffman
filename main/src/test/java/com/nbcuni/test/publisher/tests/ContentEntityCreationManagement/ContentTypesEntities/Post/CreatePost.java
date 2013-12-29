@@ -62,15 +62,8 @@ public class CreatePost extends ParentTest{
             userLogin.Login("admin@publisher.nbcuni.com", "pa55word");
             
             //Step 1a
-            Taxonomy taxonomy = new Taxonomy(webDriver);
-            taxonomy.ClickTier1ModulesLnk();
-            Overlay overlay = new Overlay(webDriver);
-            overlay.SwitchToModulesFrm();
             Modules modules = new Modules(webDriver);
-            modules.EnterFilterName("Pub Post");
-            modules.EnableModule("Pub Post");
-            overlay.ClickCloseOverlayLnk();
-            overlay.switchToDefaultContent();
+            modules.VerifyModuleEnabled("Pub Post");
             
             List<String> allStates = Arrays.asList("Draft", "Review", "Published");
             for (String state : allStates) {
@@ -78,8 +71,8 @@ public class CreatePost extends ParentTest{
             	Reporter.log("Publish state currently set to " + state);
             
             	//Step 1b
-            	taxonomy.ClickTier1ContentTier2AddContentTier3PostLnk();
-            	overlay.SwitchToCreatePostFrm();
+            	taxonomy.NavigateSite("Content>>Add content>>Post");
+            	overlay.SwitchToFrame("Create Post");
             
             	//Step 2
             	ContentParent contentParent = new ContentParent(webDriver);
@@ -91,18 +84,17 @@ public class CreatePost extends ParentTest{
             	//Step 3
             	BasicInformation basicInformation = new BasicInformation(webDriver);
             	basicInformation.ClickBasicInformationTab();
-            	Random random = new Random();
             	String postTitle = random.GetCharacterString(15);
             	basicInformation.EnterTitle(postTitle);
             	basicInformation.EnterSynopsis();
             
             	//Step 4
             	overlay.switchToDefaultContent();
-            	overlay.SwitchToCreatePostFrm();
+            	overlay.SwitchToFrame("Create Post");
             	basicInformation.ClickCoverSelectBtn();
             	SelectFile selectFile = new SelectFile(webDriver, applib);
             	selectFile.SelectDefaultCoverImg();
-            	overlay.SwitchToCreatePostFrm();
+            	overlay.SwitchToFrame("Create Post");
             
             	//Step 5
             	publishingOptions.ClickPublishingOptionsLnk();

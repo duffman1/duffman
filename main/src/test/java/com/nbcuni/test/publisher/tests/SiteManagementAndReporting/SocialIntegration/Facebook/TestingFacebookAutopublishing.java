@@ -37,6 +37,7 @@ import com.nbcuni.test.publisher.pageobjects.content.CastCrew;
 import com.nbcuni.test.publisher.pageobjects.content.CharactersInformation;
 import com.nbcuni.test.publisher.pageobjects.content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.content.ContentTypes;
+import com.nbcuni.test.publisher.pageobjects.content.CreateDefaultContent;
 import com.nbcuni.test.publisher.pageobjects.content.PersonsInformation;
 import com.nbcuni.test.publisher.pageobjects.content.PublishingOptions;
 import com.nbcuni.test.publisher.pageobjects.content.RevisionState;
@@ -85,10 +86,8 @@ public class TestingFacebookAutopublishing extends ParentTest{
         userLogin.Login("admin@publisher.nbcuni.com", "pa55word");
         
         //Step 1a
-        Taxonomy taxonomy = new Taxonomy(webDriver);
-        taxonomy.ClickTier1ModulesLnk();
-        Overlay overlay = new Overlay(webDriver);
-        overlay.SwitchToModulesFrm();
+        taxonomy.NavigateSite("Modules");
+        overlay.SwitchToFrame("Modules");
         Modules modules = new Modules(webDriver);
         modules.EnterFilterName("Pub Social");
         modules.EnableModule("Pub Social");
@@ -98,10 +97,9 @@ public class TestingFacebookAutopublishing extends ParentTest{
         overlay.switchToDefaultContent();
         
         //Step 2
-        taxonomy.ClickTier1StructureTier2FacebookAppsTier3AddAppLnk();
-        overlay.SwitchToDrupalForFacebookFrm();
+        taxonomy.NavigateSite("Structure>>Facebook Apps>>Add App");
+        overlay.SwitchToFrame("Drupal for Facebook");
         DrupalForFacebook drupalForFacebook = new DrupalForFacebook(webDriver);
-        Random random = new Random();
         String label = random.GetCharacterString(15);
         drupalForFacebook.EnterLabel(label);
         drupalForFacebook.EnterFacebookAppId("125235334322205");
@@ -112,8 +110,8 @@ public class TestingFacebookAutopublishing extends ParentTest{
         overlay.switchToDefaultContent();
         
         //Step 3
-        taxonomy.ClickTier1StructureTier2FacebookAppsTier3StreamPostsLnk();
-        overlay.SwitchToDrupalForFacebookFrm();
+        taxonomy.NavigateSite("Structure>>Facebook Apps>>Stream Posts");
+        overlay.SwitchToFrame("Drupal for Facebook");
         drupalForFacebook.ClickPostViaPub7Lnk();
         
         //Step 4 and 5 (truncated)
@@ -129,32 +127,16 @@ public class TestingFacebookAutopublishing extends ParentTest{
         drupalForFacebook.EnterToken();
         
         //Step 8
-        taxonomy.ClickTier1ConfigurationTier2WebservicesTier3FacebookLnk();
-        overlay.SwitchToFacebookFrm();
+        taxonomy.NavigateSite("Configuration>>Web services>>Facebook");
+        overlay.SwitchToFrame("Facebook");
         NodeTypes nodeTypes = new NodeTypes(webDriver);
         nodeTypes.EnablePostNode();
         overlay.ClickCloseOverlayLnk();
         overlay.switchToDefaultContent();
-        taxonomy.ClickTier1ContentTier2AddContentTier3PostLnk();
-        overlay.SwitchToCreatePostFrm();
-        BasicInformation basicInformation = new BasicInformation(webDriver);
-        String postTitle = random.GetCharacterString(15);
-        basicInformation.EnterTitle(postTitle);
-        basicInformation.EnterSynopsis();
-        overlay.switchToDefaultContent();
-        overlay.SwitchToCreatePostFrm();
-        basicInformation.ClickCoverSelectBtn();
-        SelectFile selectFile = new SelectFile(webDriver, applib);
-        selectFile.SelectDefaultCoverImg();
-        overlay.SwitchToCreatePostFrm();
-        PublishingOptions publishingOptions = new PublishingOptions(webDriver);
-        publishingOptions.ClickPublishingOptionsLnk();
-        publishingOptions.SelectModerationState("Published");
-        contentParent.ClickSaveBtn();
-        overlay.switchToDefaultContent();
-        contentParent.VerifyMessageStatus("Post " + postTitle + " has been created.");
+        CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver, applib);
+        String postTitle = createDefaultContent.Post("Published");
         contentParent.ClickRevisionsBtn();
-        overlay.SwitchToRevisionsFrm();
+        overlay.SwitchToFrame("Revisions");
         
         //Step 4
         Revisions revisions = new Revisions(webDriver);

@@ -70,30 +70,27 @@ public class CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter ex
             userLogin.Login("admin@publisher.nbcuni.com", "pa55word");
             
             //Step 2
-            Taxonomy taxonomy = new Taxonomy(webDriver);
-            taxonomy.ClickTier1ContentTier2AddContentTier3CharacterProfileLnk();
+            taxonomy.NavigateSite("Content>>Add content>>Character Profile");
             
             //Step 3 
             CharactersInformation charactersInformation = new CharactersInformation(webDriver);
-            Overlay overlay = new Overlay(webDriver);
-            overlay.SwitchToCreateCharacterProfileFrm();
-            Random random = new Random();
+            overlay.SwitchToFrame("Create Character Profile");
             String characterName = random.GetCharacterString(15);
             charactersInformation.EnterCharacterFirstName(characterName);
             charactersInformation.ClickAddPhotoSelectBtn();
             SelectFile selectFile = new SelectFile(webDriver, applib);
             selectFile.SelectDefaultCoverImg();
-            overlay.SwitchToCreateCharacterProfileFrm();
+            overlay.SwitchToFrame("Create Character Profile");
             ContentParent contentParent = new ContentParent(webDriver);
             contentParent.ClickSaveBtn();
             overlay.switchToDefaultContent();
             
             //Step 4
-            taxonomy.ClickTier1ContentTier2AddContentTier3MovieLnk();
+            taxonomy.NavigateSite("Content>>Add content>>Movie");
             
             //Step 5
+            overlay.SwitchToFrame("Create Movie");
             CastCrew castCrew = new CastCrew(webDriver);
-            overlay.SwitchToCreateMovieFrm();
             castCrew.ClickCastCrewLnk();
             
             //Step 6
@@ -104,7 +101,7 @@ public class CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter ex
             		"Judge", "Producer", "Self", "Song Writer", "Writer");
             for (String role : allRoles) {
             	
-            	castCrew.SelectRole(role); Thread.sleep(1000);
+            	castCrew.SelectRole(role); Thread.sleep(500);
             	castCrew.VerifyCharacterTxbNotDisplayed();
             	
             }
@@ -115,28 +112,28 @@ public class CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter ex
             
             //Step 9 
             overlay.switchToDefaultContent();
-            taxonomy.ClickTier1ContentTier2AddContentTier3PersonLnk();
+            taxonomy.NavigateSite("Content>>Add content>>Person");
             
             //Step 10
             PersonsInformation personsInformation = new PersonsInformation(webDriver);
-            overlay.SwitchToCreatePersonFrm();
+            overlay.SwitchToFrame("Create Person");
             String personFirstName = random.GetCharacterString(15);
             personsInformation.EnterFirstName(personFirstName);
             String biography = personsInformation.EnterBiography();
             overlay.switchToDefaultContent();
-            overlay.SwitchToCreatePersonFrm();
+            overlay.SwitchToFrame("Create Person");
             personsInformation.ClickCoverPhotoSelectBtn();
             selectFile.SelectDefaultCoverImg();
-            overlay.SwitchToCreatePersonFrm();
+            overlay.SwitchToFrame("Create Person");
             contentParent.ClickSaveBtn();
             overlay.switchToDefaultContent();
             contentParent.VerifyMessageStatus("Person " + personFirstName + " has been created.");
             
             //Step 11
-            taxonomy.ClickTier1ContentTier2AddContentTier3MovieLnk();
+            taxonomy.NavigateSite("Content>>Add content>>Movie");
             
             //Step 12
-            overlay.SwitchToCreateMovieFrm();
+            overlay.SwitchToFrame("Create Movie");
             castCrew.ClickCastCrewLnk();
             
             //Step 13
@@ -150,17 +147,17 @@ public class CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter ex
             String movieTitle = random.GetCharacterString(15);
             basicInformation.EnterTitle(movieTitle);
             String snyopsis = basicInformation.EnterSynopsis();
-            overlay.SwitchToCreateMovieFrm();
+            overlay.SwitchToFrame("Create Movie");
             basicInformation.ClickCoverSelectBtn();
             selectFile.SelectDefaultCoverImg();
-            overlay.SwitchToCreateMovieFrm();
+            overlay.SwitchToFrame("Create Movie");
             contentParent.ClickSaveBtn();
             overlay.switchToDefaultContent();
             contentParent.VerifyMessageStatus("Movie " + movieTitle + " has been created.");
             
             //Step 15
             contentParent.ClickEditDraftBtn();
-            overlay.SwitchToEditMovieFrm(movieTitle);
+            overlay.SwitchToFrame(movieTitle);
             castCrew.ClickCastCrewLnk();
             castCrew.VerifyCharacterTxbDisplayed();
             castCrew.VerifyPersonNameValue(personFirstName);

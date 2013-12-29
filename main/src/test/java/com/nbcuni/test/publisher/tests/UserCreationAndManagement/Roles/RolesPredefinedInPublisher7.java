@@ -68,10 +68,8 @@ public class RolesPredefinedInPublisher7 extends ParentTest{
         userLogin.Login("admin@publisher.nbcuni.com", "pa55word");
         
         //Step 2
-        Taxonomy taxonomy = new Taxonomy(webDriver);
-        taxonomy.ClickTier1PeopleTier2PermissionsLnk();
-        Overlay overlay = new Overlay(webDriver);
-        overlay.SwitchToPeopleFrm();
+        taxonomy.NavigateSite("People>>Permissions");
+        overlay.SwitchToFrame("People");
         
         //Step 3
         Permissions permissions = new Permissions(webDriver);
@@ -81,7 +79,7 @@ public class RolesPredefinedInPublisher7 extends ParentTest{
         Roles roles = new Roles(webDriver);
         roles.ClickRolesBtn();
         overlay.switchToDefaultContent();
-        overlay.SwitchToPeopleFrm();
+        overlay.SwitchToFrame("People");
        
         //Step 5
         roles.VerifyRoleRows();

@@ -53,25 +53,22 @@ public class CreatePerson extends ParentTest{
             userLogin.Login("admin@publisher.nbcuni.com", "pa55word");
             
             //Step 2
-            Taxonomy taxonomy = new Taxonomy(webDriver);
-            taxonomy.ClickTier1ContentTier2AddContentTier3PersonLnk();
+            taxonomy.NavigateSite("Content>>Add content>>Person");
             
             //Step 3
-            Overlay overlay = new Overlay(webDriver);
-            overlay.SwitchToCreatePersonFrm();
+            overlay.SwitchToFrame("Create Person");
             PersonsInformation personsInformation = new PersonsInformation(webDriver);
-            Random random = new Random();
             String personFirstName = random.GetCharacterString(15);
             personsInformation.EnterFirstName(personFirstName);
             String biography = personsInformation.EnterBiography();
             
             //Step 4
             overlay.switchToDefaultContent();
-            overlay.SwitchToCreatePersonFrm();
+            overlay.SwitchToFrame("Create Person");
             personsInformation.ClickCoverPhotoSelectBtn();
             SelectFile selectFile = new SelectFile(webDriver, applib);
             selectFile.SelectDefaultCoverImg();
-            overlay.SwitchToCreatePersonFrm();
+            overlay.SwitchToFrame("Create Person");
             ContentParent contentParent = new ContentParent(webDriver);
             contentParent.ClickSaveBtn();
             
