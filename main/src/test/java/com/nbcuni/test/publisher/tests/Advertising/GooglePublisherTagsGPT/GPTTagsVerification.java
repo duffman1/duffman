@@ -81,23 +81,20 @@ public class GPTTagsVerification extends ParentTest{
             //Step 6
             Blocks blocks = new Blocks(webDriver);
             blocks.SwitchToBlocksFrm();
-            blocks.ClickPubSauceLnk();
-            overlay.switchToDefaultContent();
-            blocks.SwitchToBlocksFrm();
-            blocks.SelectRegion(adSlotName, "Right sidebar");
+            blocks.SelectRegion(adSlotName, "Sidebar first");
             blocks.ClickSaveBlocksBtn();
             blocks.VerifyBlockSettingsUpdated();
             
             //Step 7
-            blocks.VerifySelectedRegion(adSlotName, "Right sidebar");
+            blocks.VerifySelectedRegion(adSlotName, "Sidebar first");
             
             //Step 8
             overlay.ClickCloseOverlayLnk();
             overlay.switchToDefaultContent();
             taxonomy.NavigateSite("Home");
             blocks.VerifyScriptSourceInPage("http://www.googletagservices.com/tag/js/gpt.js");
-            blocks.VerifyScriptSourceInPage("//www.nbcudigitaladops.com/hosted/global_header.js");
-            blocks.VerifyScriptSourceInPage("googletag.slots.test_gpt = googletag.defineSlot(\"nbcu/Test_AdUnit_Pattern\", [300, 250], \"dfp-ad-test_gpt\")   .addService(googletag.pubads());");
+            //blocks.VerifyScriptSourceInPage("//www.nbcudigitaladops.com/hosted/global_header.js");
+            blocks.VerifyScriptSourceInPage("googletag.slots." + adSlotName);
             blocks.VerifyScriptSourceInPage("googletag.enableServices();");
             
             //Step 9
