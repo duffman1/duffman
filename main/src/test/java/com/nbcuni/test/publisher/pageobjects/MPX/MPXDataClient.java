@@ -118,15 +118,31 @@ public class MPXDataClient {
     
     public List<String> GetAllMPXObjectFields(String mpxObject, String field) throws Exception {
     	
+    	//TODO - refactor to be more efficient
+    	
     	webDriver.selectFromDropdown(Object_Ddl, mpxObject);
     	webDriver.type(Fields_Txb, field);
     	webDriver.click(Submit_Btn);
     	
     	new WebDriverWait(webDriver, 45).until(ExpectedConditions.textToBePresentInElement(By.xpath(Response_Pre), "startIndex"));
     	
-    	String[] resultSet = webDriver.findElement(By.xpath(Response_Pre)).getText().replace("\"", "").split(field + ": ");
+    	String result = webDriver.findElement(By.xpath(Response_Pre)).getText();
+    	result = result.replace("<entry>", "");
+    	result = result.replace("</entry>", "");
+    	result = result.replace("</" + field + ">",  "");
+    	String[] resultSet = result.split("<" + field + ">");
     	
-    	return Arrays.asList(resultSet);
+    	List<String> finalResultSet = Arrays.asList(resultSet);
+    	try {
+    		finalResultSet.remove(0);
+    	}
+    	catch (UnsupportedOperationException e) {
+    		
+    		finalResultSet = new ArrayList<String>(finalResultSet);
+            finalResultSet.remove(0);
+    	}
+    	
+    	return finalResultSet;
     }
     
     

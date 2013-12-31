@@ -2,6 +2,7 @@ package com.nbcuni.test.publisher.pageobjects.MPX;
 
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -53,11 +54,14 @@ public class Settings {
         
     }
     
-    public void ClickMPXLoginLnk() throws Exception {
+    public void ExpandMPXLogin() throws Exception {
     	
-    	WebElement el = new WebDriverWait(webDriver, 10).until(ExpectedConditions.
-    			visibilityOf(webDriver.findElement(By.xpath(MPXLogin_Lnk))));
-    	el.click();
+    	if (new WebDriverWait(webDriver, 30).until(ExpectedConditions.presenceOfElementLocated(
+    			By.xpath(AddAccount_Btn))).isDisplayed() == false) {
+    		
+    		webDriver.findElement(By.xpath(MPXLogin_Lnk)).click();
+    	}
+    	
     }
     
     public void EnterUsername0(String userName) throws Exception {
@@ -177,12 +181,13 @@ public class Settings {
     
     public void ClickConnectToMPXBtn() throws Exception {
     	
-    	webDriver.click(ConnectToMPX_Btn);
+    	webDriver.findElement(By.xpath(ConnectToMPX_Btn)).click();
     }
     
     public void ClickAddAccountBtn() throws Exception {
     	
-    	webDriver.click(AddAccount_Btn);
+    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.
+    			visibilityOf(webDriver.findElement(By.xpath(AddAccount_Btn)))).click();
     }
     
     public void SelectImportAccount1(String account) throws Exception {
@@ -212,6 +217,56 @@ public class Settings {
     	Assert.assertTrue(ddl1.getFirstSelectedOption().isEnabled() == false);
     	Assert.assertTrue(ddl1.getFirstSelectedOption().isEnabled() == false);
     	Assert.assertTrue(ddl1.getFirstSelectedOption().isEnabled() == false);
+    }
+    
+    public void VerifyUsernameValues(String userName, int txbCount) throws Exception {
+    	
+    	List<WebElement> allUsernameTxbs = new WebDriverWait(webDriver, 10).until(ExpectedConditions.
+    			visibilityOfAllElementsLocatedBy(By.xpath("//input[contains(@id, 'edit-accounts-existing')][contains(@id, 'username')]")));
+    	
+    	Assert.assertEquals(allUsernameTxbs.size(), txbCount);
+    	
+    	for (WebElement el : allUsernameTxbs) {
+    	
+    		Assert.assertEquals(el.getAttribute("value"), userName);
+    	}
+    }
+    
+    public List<String> GetImportAccountSelectedOptions() throws Exception {
+    	
+    	//TODO - clean this up and make it a bit more efficient
+    	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+    	
+    	boolean ddl2Present = false;
+    	boolean ddl3Present = false;
+    	Select ddl2 = null;
+    	Select ddl3 = null;
+    	
+    	Select ddl1 = new Select(new WebDriverWait(webDriver, 10).until(
+    			ExpectedConditions.visibilityOf(webDriver.findElement(By.xpath(SelectImportAccount1_Ddl)))));
+    	
+    	try {
+    		
+    		ddl2 = new Select(webDriver.findElement(By.xpath(SelectImportAccount2_Ddl)));
+    		ddl2Present = true;
+    	}
+    	catch (Exception e) {}
+    	
+    	try {
+    		
+    		ddl3 = new Select(webDriver.findElement(By.xpath(SelectImportAccount3_Ddl)));
+    		ddl3Present = true;
+    	}
+    	catch (Exception e) {}
+    	
+    	List<String> selectedOptions = new ArrayList<String>();
+    	selectedOptions.add(ddl1.getFirstSelectedOption().getText());
+    	if (ddl2Present == true) { selectedOptions.add(ddl2.getFirstSelectedOption().getText()); }
+    	if (ddl3Present == true) { selectedOptions.add(ddl3.getFirstSelectedOption().getText()); }
+    	
+    	webDriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+    	
+    	return selectedOptions;
     }
     
   
