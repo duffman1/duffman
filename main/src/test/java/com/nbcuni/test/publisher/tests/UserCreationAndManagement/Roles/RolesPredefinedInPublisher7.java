@@ -1,4 +1,4 @@
-package com.nbcuni.test.publisher.tests.UserCreationandManagement.Roles;
+package com.nbcuni.test.publisher.tests.UserCreationAndManagement.Roles;
 
 
 import java.text.SimpleDateFormat;

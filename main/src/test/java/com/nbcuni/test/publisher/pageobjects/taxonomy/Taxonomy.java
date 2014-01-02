@@ -42,7 +42,7 @@ public class Taxonomy {
     public void MouseOffTaxonomyElement(String locator) throws Exception {
     	//TODO call a script that closes the taxonomy bar
     	Actions action = new Actions(webDriver);
-    	action.moveToElement(webDriver.findElement(By.xpath(locator)), -100, 100).build().perform();
+    	action.moveToElement(webDriver.findElement(By.xpath("(//a[text()='Shortcuts'])[2]"))).build().perform();
     	new WebDriverWait(webDriver, 10).until(ExpectedConditions.not(ExpectedConditions.visibilityOf(webDriver.findElement(By.xpath(locator)))));
     }
     

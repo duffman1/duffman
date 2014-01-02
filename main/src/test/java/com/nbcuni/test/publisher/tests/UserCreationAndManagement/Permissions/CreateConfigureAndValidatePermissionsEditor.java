@@ -1,4 +1,4 @@
-package com.nbcuni.test.publisher.tests.UserCreationandManagement.Permissions;
+package com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions;
 
 
 import junit.framework.Assert;

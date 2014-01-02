@@ -1,7 +1,10 @@
 package com.nbcuni.test.publisher.pageobjects;
 
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -31,7 +34,7 @@ public class Modules {
     private static String FilterList_Txb = "//input[@id='edit-module-filter-name']";
     private static String SaveConfiguration_Btn = "//input[@id='edit-submit']";
     private static String Message_Ctr = "//div[@class='messages status']";
-    
+    private static String Continue_Btn = "//input[@value='Continue']";
     
     
     public Modules(final CustomWebDriver custWebDr) {
@@ -62,9 +65,33 @@ public class Modules {
     	if (Cbx.isSelected() == false) {
     		Cbx.click();
     		webDriver.click(SaveConfiguration_Btn);
+    		
+    		webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+        	
+        	boolean additionalModulesRequired = false;
+        	
+        	Overlay overlay = new Overlay(webDriver);
+        	overlay.switchToDefaultContent();
+        	
+        	try {
+        		overlay.SwitchToFrame("Some required modules must be enabled");
+        		additionalModulesRequired = true;
+        	}
+        	catch (NoSuchElementException e) { }
+        	
+        	if (additionalModulesRequired == true) {
+        		
+        		new WebDriverWait(webDriver, 10).until(ExpectedConditions.
+        				elementToBeClickable(By.xpath(Continue_Btn))).click();
+        		overlay.switchToDefaultContent();
+        	}
+        	
+        	overlay.SwitchToFrame("Modules");
+        	
+        	webDriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        	
     		this.VerifyConfigurationSaved();
     	}
-    	
     	
     }
     

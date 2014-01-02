@@ -84,6 +84,7 @@ public class CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter ex
             ContentParent contentParent = new ContentParent(webDriver);
             contentParent.ClickSaveBtn();
             overlay.switchToDefaultContent();
+            contentParent.VerifyMessageStatus("Character Profile " + characterName + " has been created.");
             
             //Step 4
             taxonomy.NavigateSite("Content>>Add content>>Movie");
@@ -176,6 +177,5 @@ public class CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter ex
             RevisionState revisionState = new RevisionState(webDriver);
             revisionState.VerifyRevisionState("Published");
            
-            
     }
 }
