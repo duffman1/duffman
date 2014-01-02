@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="1" name="Failed suite [Test Suite for Publisher 7]" parallel="classes">
-  <parameter name="Environment" value="PROD"/>
-  <test name="All Web Tests(failed)" parallel="classes">
+<suite name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
     <classes>
+<<<<<<< HEAD
       <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Movie.CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedShortVersion">
         <methods>
           <include name="startSelenium"/>
@@ -153,6 +153,15 @@
           <include name="stopSelenium"/>
         </methods>
       </class> <!-- com.nbcuni.test.publisher.tests.Security.FileViewDeniedToUnauthenticatedUsers -->
+=======
+      <class name="com.nbcuni.test.publisher.tests.UserCreationandManagement.UnauthenticatedUsersNotAbleToViewThePublishedContents.UnauthenticatedUsersNotAbleToViewThePublishedContents">
+        <methods>
+          <include name="startSelenium"/>
+          <include name="RolesPredefinedInPublisher7"/>
+          <include name="stopSelenium"/>
+        </methods>
+      </class> <!-- com.nbcuni.test.publisher.tests.UserCreationandManagement.UnauthenticatedUsersNotAbleToViewThePublishedContents.UnauthenticatedUsersNotAbleToViewThePublishedContents -->
+>>>>>>> origin/Faizan
     </classes>
-  </test> <!-- All Web Tests(failed) -->
-</suite> <!-- Failed suite [Test Suite for Publisher 7] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

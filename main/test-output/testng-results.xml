@@ -2,6 +2,9 @@
 <testng-results skipped="0" failed="5" total="24" passed="19">
   <reporter-output>
     <line>
+      <![CDATA[org.openqa.jetty.util.MultiException[java.net.SocketException: Unrecognized Windows Sockets error: 0: JVM_Bind]]]>
+    </line>
+    <line>
       <![CDATA[Setting Environment to: PROD]]>
     </line>
     <line>
@@ -11,6 +14,7 @@
       <![CDATA[URL: http://qa5dev.publisher.nbcuni.com]]>
     </line>
     <line>
+<<<<<<< HEAD
       <![CDATA[verifyObjectContainsText:  Object //div[@class='messages status'] contains the text The configuration options have been saved.]]>
     </line>
     <line>
@@ -2676,6 +2680,23 @@ height="1" width="1" border="0" alt="" /&gt;&lt;/a&gt;</noscript><!--/DO NOT REM
     <test name="All Web Tests" duration-ms="981317" started-at="2014-01-02T16:37:51Z" finished-at="2014-01-02T16:54:12Z">
       <class name="com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.CreateConfigureAndValidatePermissionsEditor">
         <test-method status="PASS" signature="startSelenium(java.lang.String)[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.CreateConfigureAndValidatePermissionsEditor@67bba966]" name="startSelenium" is-config="true" duration-ms="1562" started-at="2014-01-02T11:49:44Z" finished-at="2014-01-02T11:49:46Z">
+=======
+      <![CDATA[Publish state currently set to 'Published']]>
+    </line>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="167845" started-at="2014-01-01T07:27:05Z" finished-at="2014-01-01T07:29:53Z">
+    <groups>
+      <group name="full">
+        <method signature="UnauthenticatedUsersNotAbleToViewThePublishedContents.RolesPredefinedInPublisher7()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationandManagement.UnauthenticatedUsersNotAbleToViewThePublishedContents.UnauthenticatedUsersNotAbleToViewThePublishedContents@b42cbf]" name="RolesPredefinedInPublisher7" class="com.nbcuni.test.publisher.tests.UserCreationandManagement.UnauthenticatedUsersNotAbleToViewThePublishedContents.UnauthenticatedUsersNotAbleToViewThePublishedContents"/>
+      </group> <!-- full -->
+      <group name="smoke">
+        <method signature="UnauthenticatedUsersNotAbleToViewThePublishedContents.RolesPredefinedInPublisher7()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationandManagement.UnauthenticatedUsersNotAbleToViewThePublishedContents.UnauthenticatedUsersNotAbleToViewThePublishedContents@b42cbf]" name="RolesPredefinedInPublisher7" class="com.nbcuni.test.publisher.tests.UserCreationandManagement.UnauthenticatedUsersNotAbleToViewThePublishedContents.UnauthenticatedUsersNotAbleToViewThePublishedContents"/>
+      </group> <!-- smoke -->
+    </groups>
+    <test name="Default test" duration-ms="167845" started-at="2014-01-01T07:27:05Z" finished-at="2014-01-01T07:29:53Z">
+      <class name="com.nbcuni.test.publisher.tests.UserCreationandManagement.UnauthenticatedUsersNotAbleToViewThePublishedContents.UnauthenticatedUsersNotAbleToViewThePublishedContents">
+        <test-method status="PASS" signature="startSelenium(java.lang.String)[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationandManagement.UnauthenticatedUsersNotAbleToViewThePublishedContents.UnauthenticatedUsersNotAbleToViewThePublishedContents@b42cbf]" name="startSelenium" is-config="true" duration-ms="24363" started-at="2014-01-01T12:57:05Z" finished-at="2014-01-01T12:57:30Z">
+>>>>>>> origin/Faizan
           <params>
             <param index="0">
               <value>
@@ -2685,6 +2706,7 @@ height="1" width="1" border="0" alt="" /&gt;&lt;/a&gt;</noscript><!--/DO NOT REM
           </params>
           <reporter-output>
             <line>
+<<<<<<< HEAD
               <![CDATA[Setting Environment to: PROD]]>
             </line>
             <line>
@@ -5811,6 +5833,10 @@ Driver info: driver.version: EventFiringWebDriver
             </param>
           </params>
           <reporter-output>
+=======
+              <![CDATA[org.openqa.jetty.util.MultiException[java.net.SocketException: Unrecognized Windows Sockets error: 0: JVM_Bind]]]>
+            </line>
+>>>>>>> origin/Faizan
             <line>
               <![CDATA[Setting Environment to: PROD]]>
             </line>
@@ -5819,12 +5845,17 @@ Driver info: driver.version: EventFiringWebDriver
             </line>
           </reporter-output>
         </test-method> <!-- startSelenium -->
+<<<<<<< HEAD
         <test-method status="PASS" signature="MultipleMPXAccountsPerLoginVerification()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.MultipleMPXAccountsPerLoginVerification.MultipleMPXAccountsPerLoginVerification@27ac0d45]" name="MultipleMPXAccountsPerLoginVerification" duration-ms="15572" started-at="2014-01-02T11:53:56Z" finished-at="2014-01-02T11:54:12Z">
+=======
+        <test-method status="PASS" signature="RolesPredefinedInPublisher7()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationandManagement.UnauthenticatedUsersNotAbleToViewThePublishedContents.UnauthenticatedUsersNotAbleToViewThePublishedContents@b42cbf]" name="RolesPredefinedInPublisher7" duration-ms="142966" started-at="2014-01-01T12:57:30Z" finished-at="2014-01-01T12:59:53Z">
+>>>>>>> origin/Faizan
           <reporter-output>
             <line>
               <![CDATA[URL: http://qa5dev.publisher.nbcuni.com]]>
             </line>
             <line>
+<<<<<<< HEAD
               <![CDATA[URL: http://qa5dev.publisher.nbcuni.com]]>
             </line>
           </reporter-output>
@@ -5834,12 +5865,24 @@ Driver info: driver.version: EventFiringWebDriver
             <param index="0">
               <value>
                 <![CDATA[[TestResult name=MultipleMPXAccountsPerLoginVerification status=SUCCESS method=MultipleMPXAccountsPerLoginVerification.MultipleMPXAccountsPerLoginVerification()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.MultipleMPXAccountsPerLoginVerification.MultipleMPXAccountsPerLoginVerification@27ac0d45] output=URL: http://qa5dev.publisher.nbcuni.com]]]>
+=======
+              <![CDATA[Publish state currently set to 'Published']]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- RolesPredefinedInPublisher7 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationandManagement.UnauthenticatedUsersNotAbleToViewThePublishedContents.UnauthenticatedUsersNotAbleToViewThePublishedContents@b42cbf]" name="stopSelenium" is-config="true" duration-ms="499" started-at="2014-01-01T12:59:53Z" finished-at="2014-01-01T12:59:53Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=RolesPredefinedInPublisher7 status=SUCCESS method=UnauthenticatedUsersNotAbleToViewThePublishedContents.RolesPredefinedInPublisher7()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationandManagement.UnauthenticatedUsersNotAbleToViewThePublishedContents.UnauthenticatedUsersNotAbleToViewThePublishedContents@b42cbf] output=URL: http://qa5dev.publisher.nbcuni.com]]]>
+>>>>>>> origin/Faizan
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
+<<<<<<< HEAD
       </class> <!-- com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.MultipleMPXAccountsPerLoginVerification.MultipleMPXAccountsPerLoginVerification -->
       <class name="com.nbcuni.test.publisher.tests.Queues.SchedulingQueues.ScheduleRevisionsOfQueues">
         <test-method status="PASS" signature="startSelenium(java.lang.String)[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.SchedulingQueues.ScheduleRevisionsOfQueues@59e91c40]" name="startSelenium" is-config="true" duration-ms="1569" started-at="2014-01-02T11:47:58Z" finished-at="2014-01-02T11:47:59Z">
@@ -6197,4 +6240,9 @@ Driver info: driver.version: unknown
       </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVSeason.CreateTVSeason -->
     </test> <!-- All Web Tests -->
   </suite> <!-- Test Suite for Publisher 7 -->
+=======
+      </class> <!-- com.nbcuni.test.publisher.tests.UserCreationandManagement.UnauthenticatedUsersNotAbleToViewThePublishedContents.UnauthenticatedUsersNotAbleToViewThePublishedContents -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+>>>>>>> origin/Faizan
 </testng-results>
