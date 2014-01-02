@@ -58,11 +58,10 @@ public class MPXMedia {
     	el.click();
     }
 
-    public void ClickSyncMPXMediaLnk() throws Exception {
+    public void ClickSyncMPXMediaNowLnk() throws Exception {
     	
-    	WebElement el = new WebDriverWait(webDriver, 30).until(ExpectedConditions.
-    			visibilityOf(webDriver.findElement(By.xpath(SyncMPXMedia_Lnk))));
-    	el.click();
+    	new WebDriverWait(webDriver, 30).until(ExpectedConditions.
+    			visibilityOf(webDriver.findElement(By.xpath(SyncMPXMediaNow_Lnk)))).click();;
     }
     
     public void VerifyImportAccountLabels(List<String> labels) throws Exception {

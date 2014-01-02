@@ -89,10 +89,6 @@ public class MPXPlayersSyncVerification extends ParentTest{
         userLogin.Login("admin@publisher.nbcuni.com", "pa55word");
         
         //Step
-        Modules modules = new Modules(webDriver);
-        modules.VerifyModuleEnabled("Pub MPX");
-        
-        //Step
         taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
         overlay.SwitchToFrame("Media: thePlatform mpx settings dialog");
         Settings settings = new Settings(webDriver);

@@ -44,22 +44,21 @@
       <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Movie.CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter">
         <methods>
           <include name="startSelenium"/>
-          <include name="CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter"/>
           <include name="stopSelenium"/>
         </methods>
       </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Movie.CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter -->
-      <class name="com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.MultipleMPXAccountsPerLoginVerification.MultipleMPXAccountsPerLoginVerification">
-        <methods>
-          <include name="startSelenium"/>
-          <include name="stopSelenium"/>
-        </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.MultipleMPXAccountsPerLoginVerification.MultipleMPXAccountsPerLoginVerification -->
       <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost">
         <methods>
           <include name="startSelenium"/>
           <include name="stopSelenium"/>
         </methods>
       </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost -->
+      <class name="com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.MultipleMPXAccountsPerLoginVerification.MPXMediaSyncVerification">
+        <methods>
+          <include name="startSelenium"/>
+          <include name="stopSelenium"/>
+        </methods>
+      </class> <!-- com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.MultipleMPXAccountsPerLoginVerification.MPXMediaSyncVerification -->
       <class name="com.nbcuni.test.publisher.tests.Queues.CreateUpdateRevisionsToQueues.BasicUIForCreatingAndRevisingQueues">
         <methods>
           <include name="startSelenium"/>
@@ -67,6 +66,12 @@
           <include name="stopSelenium"/>
         </methods>
       </class> <!-- com.nbcuni.test.publisher.tests.Queues.CreateUpdateRevisionsToQueues.BasicUIForCreatingAndRevisingQueues -->
+      <class name="com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.MultipleMPXAccountsPerLoginVerification.MultipleMPXAccountsPerLoginVerification">
+        <methods>
+          <include name="startSelenium"/>
+          <include name="stopSelenium"/>
+        </methods>
+      </class> <!-- com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.MultipleMPXAccountsPerLoginVerification.MultipleMPXAccountsPerLoginVerification -->
       <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CustomContentType.AddingNewCustomContentType">
         <methods>
           <include name="startSelenium"/>
@@ -77,7 +82,6 @@
         <methods>
           <include name="startSelenium"/>
           <include name="stopSelenium"/>
-          <include name="MPXPlayersSyncVerification"/>
         </methods>
       </class> <!-- com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.MultipleMPXAccountsPerLoginVerification.MPXPlayersSyncVerification -->
       <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVSeason.CreateTVSeason">
@@ -110,6 +114,13 @@
           <include name="stopSelenium"/>
         </methods>
       </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson -->
+      <class name="com.nbcuni.test.publisher.tests.Queues.SchedulingQueues.ScheduleRevisionsOfQueues">
+        <methods>
+          <include name="startSelenium"/>
+          <include name="ScheduleRevisionsOfQueues"/>
+          <include name="stopSelenium"/>
+        </methods>
+      </class> <!-- com.nbcuni.test.publisher.tests.Queues.SchedulingQueues.ScheduleRevisionsOfQueues -->
       <class name="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SocialIntegration.Facebook.TestingFacebookAutopublishing">
         <methods>
           <include name="startSelenium"/>
@@ -123,12 +134,6 @@
           <include name="stopSelenium"/>
         </methods>
       </class> <!-- com.nbcuni.test.publisher.tests.UserCreationAndManagement.Roles.RolesPredefinedInPublisher7 -->
-      <class name="com.nbcuni.test.publisher.tests.Queues.SchedulingQueues.ScheduleRevisionsOfQueues">
-        <methods>
-          <include name="startSelenium"/>
-          <include name="stopSelenium"/>
-        </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.Queues.SchedulingQueues.ScheduleRevisionsOfQueues -->
       <class name="com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.CreateConfigureAndValidatePermissionsEditor">
         <methods>
           <include name="startSelenium"/>

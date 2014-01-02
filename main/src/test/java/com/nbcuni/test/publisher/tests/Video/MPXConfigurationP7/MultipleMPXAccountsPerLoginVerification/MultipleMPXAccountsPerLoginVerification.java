@@ -106,8 +106,6 @@ public class MultipleMPXAccountsPerLoginVerification extends ParentTest{
         
         //Step
         applib.openApplication();
-        Modules modules = new Modules(webDriver);
-        modules.VerifyModuleEnabled("Pub MPX");
         
         //Step 
         taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");

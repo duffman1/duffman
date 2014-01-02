@@ -127,14 +127,32 @@ public class MPXDataClient {
     	new WebDriverWait(webDriver, 45).until(ExpectedConditions.textToBePresentInElement(By.xpath(Response_Pre), "startIndex"));
     	
     	String result = webDriver.findElement(By.xpath(Response_Pre)).getText();
-    	result = result.replace("<entry>", "");
-    	result = result.replace("</entry>", "");
-    	result = result.replace("</" + field + ">",  "");
-    	String[] resultSet = result.split("<" + field + ">");
+    	String[] resultSet;
+    	if (mpxObject == "Player") {
+    		
+    		result = result.replace("<entry>", "");
+    		result = result.replace("</entry>", "");
+    		result = result.replace("</" + field + ">",  "");
+    		resultSet = result.split("<" + field + ">");
+    	}
+    	else {
+    		
+    		result = result.replace("\"", "");
+    		result = result.replace("{",  "");
+    		result = result.replace("}",  "");
+    		result = result.replace(",", "");
+    		resultSet = result.split(field + ":");
+    		
+    	}
     	
-    	List<String> finalResultSet = Arrays.asList(resultSet);
+    	String[] trimmedResultSet = new String[resultSet.length];
+    	for (int i = 0; i < resultSet.length; i++)
+    	    trimmedResultSet[i] = resultSet[i].trim();
+    	
+    	List<String> finalResultSet = Arrays.asList(trimmedResultSet);
+    	
     	try {
-    		finalResultSet.remove(0);
+    		finalResultSet.remove(0); 
     	}
     	catch (UnsupportedOperationException e) {
     		
