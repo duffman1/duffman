@@ -1,4 +1,4 @@
-package com.nbcuni.test.publisher.tests.UserCreationandManagement.UnauthenticatedUsersNotAbleToViewThePublishedContents;
+package com.nbcuni.test.publisher.tests.UserCreationAndManagement.UnauthenticatedUsersNotAbleToViewThePublishedContents;
 
 import java.util.Arrays;
 import java.util.List;
