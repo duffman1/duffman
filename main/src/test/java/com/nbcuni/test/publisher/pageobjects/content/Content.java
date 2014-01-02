@@ -30,9 +30,8 @@ public class Content {
     private static CustomWebDriver webDriver;
     private static AppLib al;
     private final Util ul;
-    
-    
-    
+    private static String Operation_Dd = ".//*[@id='edit-operation']";
+        
     public Content(final CustomWebDriver custWebDr) {
         webDriver = custWebDr;
         ul = new Util(webDriver);
@@ -77,6 +76,24 @@ public class Content {
     	new WebDriverWait(webDriver, 10).until(ExpectedConditions.not(ExpectedConditions.
     			presenceOfElementLocated((By.xpath("//a[text()='" + contentItemTitle + "']")))));
     	
+    }
+    public void SelectCheckBoxOfTheContent(String contentItemTitle) throws Exception {
+    	
+    	WebElement el = new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(
+    			By.xpath("//a[text()='" + contentItemTitle + "']/../..//input[@type='checkbox']")));
+    	el.click();
+    }
+    public void SelectModerationState(String OperationName) throws Exception {
+    	
+    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.
+    			visibilityOf(webDriver.findElement(By.xpath(Operation_Dd))));
+    	webDriver.selectFromDropdown(Operation_Dd, OperationName);
+    }
+    public void ClickTheContentFromContentpage(String contentItemTitle) throws Exception {
+    	
+    	WebElement contentName = new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(
+    			By.xpath("//a[text()='" + contentItemTitle + "']")));
+    	contentName.click();
     }
     
 }

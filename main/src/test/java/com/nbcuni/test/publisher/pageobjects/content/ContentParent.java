@@ -36,6 +36,7 @@ public class ContentParent {
     private static String Warning_Ctr = "//div[@class='messages warning']";
     private static String EditDraft_Btn = "//a[text()='Edit Draft']";
     private static String Revisions_Btn = "//a[text()='Revisions']";
+    private static String pageTitle = ".//*[@id='page-title']";
     
     public ContentParent(final CustomWebDriver custWebDr) {
         webDriver = custWebDr;
@@ -84,6 +85,11 @@ public class ContentParent {
     		webDriver.findElement(By.xpath("//*[contains(text(), '" + field + "')]/span[text()='*']"));
     	}
     }
-    
+    public void VerifyPostTitle(String postName){
+    	
+    	new WebDriverWait(webDriver, 10).until(
+    			ExpectedConditions.textToBePresentInElement(By.xpath(pageTitle)
+    					, postName));
+    }
 }
 

@@ -30,7 +30,6 @@ public class RevisionState {
     
     private static String RevisionState_Ctr = "//div[@class='workbench-info-block'][contains(text(), 'Revision state')]";
     
-    
     public RevisionState(final CustomWebDriver custWebDr) {
         webDriver = custWebDr;
         ul = new Util(webDriver);
@@ -43,7 +42,7 @@ public class RevisionState {
     			webDriver.findElement(By.xpath(RevisionState_Ctr))));
     	Assert.assertTrue(webDriver.findElement(By.xpath(RevisionState_Ctr)).getText().contains(state));
     }
-    
+
     
 }
 

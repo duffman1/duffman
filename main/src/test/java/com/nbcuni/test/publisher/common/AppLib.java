@@ -333,10 +333,15 @@ public class AppLib {
     
     public UserLogin openApplication() throws Exception {
         Reporter.log("URL: " + this.getApplicationURL());
-        custWebDr.openURL(this.getApplicationURL());
+        custWebDr.openURL(this.getApplicationURL());        
         return new UserLogin(custWebDr);
     }
     
+    public void Logout() throws Exception {
+        Reporter.log("Logged Out");
+        custWebDr.close();        
+        
+    }
     
     
 }
