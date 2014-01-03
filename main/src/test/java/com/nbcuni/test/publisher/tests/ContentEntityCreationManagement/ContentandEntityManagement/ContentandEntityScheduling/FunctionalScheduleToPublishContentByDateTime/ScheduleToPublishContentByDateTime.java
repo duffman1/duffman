@@ -1,4 +1,4 @@
-package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling;
+package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.FunctionalScheduleToPublishContentByDateTime;
 
 import java.util.Arrays;
 
@@ -13,7 +13,6 @@ import com.nbcuni.test.publisher.pageobjects.content.CreateDefaultContent;
 import com.nbcuni.test.publisher.pageobjects.content.PublishingOptions;
 import com.nbcuni.test.publisher.pageobjects.content.RevisionState;
 import com.nbcuni.test.publisher.pageobjects.content.SelectFile;
-import com.nbcuni.test.publisher.pageobjects.content.Workflow;
 import com.nbcuni.test.publisher.pageobjects.taxonomy.Taxonomy;
 /*************************************************************************************
  * TEST CASE 
@@ -43,17 +42,21 @@ import com.nbcuni.test.publisher.pageobjects.taxonomy.Taxonomy;
  * 
  * @throws Throwable No Return values are needed
  *************************************************************************************/
+/* TODO - faizan still has work outstanding on this test
 @Test(groups = {"full", "smoke"})
-public class ScheduletopublishContentbyDateTime extends ParentTest {
+public class ScheduleToPublishContentByDateTime extends ParentTest {
 
 	public void ScheduletopublishContentbyDateTime() throws Exception{
+		
 		//Step 1
     	UserLogin userLogin = applib.openApplication();
         userLogin.Login("admin@publisher.nbcuni.com", "pa55word");
-      //Step 2
+      
+        //Step 2
         taxonomy.VerifyContentMenuExist("Content");
         taxonomy.VerifyContentMenuExist("My Workbench");
-      //Step 2 
+      
+        //Step 2 
         CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver, applib);
         String postTitle2 = createDefaultContent.Post("Published");
         Workflow workflow = new Workflow(webDriver);
@@ -69,4 +72,4 @@ public class ScheduletopublishContentbyDateTime extends ParentTest {
       //Step3
     	
 	}
-}
+}*/

@@ -35,8 +35,9 @@ public class ContentParent {
     private static String Message_Ctr = "//div[@class='messages status']";
     private static String Warning_Ctr = "//div[@class='messages warning']";
     private static String EditDraft_Btn = "//a[text()='Edit Draft']";
-    private static String Revisions_Btn = "//a[text()='Revisions']";
-    private static String pageTitle = ".//*[@id='page-title']";
+    private static String Revisions_Tab = "//a[text()='Revisions']";
+    private static String View_Tab = "//a[text()='View']";
+    private static String Page_Ttl = "//*[@id='page-title']";
     
     public ContentParent(final CustomWebDriver custWebDr) {
         webDriver = custWebDr;
@@ -72,11 +73,18 @@ public class ContentParent {
     	webDriver.click(EditDraft_Btn);
     }
     
-    public void ClickRevisionsBtn() {
+    public void ClickRevisionsTab() {
     	
     	new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(
-    			By.xpath(Revisions_Btn)));
-    	webDriver.click(Revisions_Btn);
+    			By.xpath(Revisions_Tab))).click();;
+    	
+    }
+    
+    public void ClickViewTab() {
+    	
+    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(
+    			By.xpath(View_Tab))).click();;
+    	
     }
     
     public void VerifyRequiredFields(List<String> allFields) {
@@ -88,7 +96,7 @@ public class ContentParent {
     public void VerifyPostTitle(String postName){
     	
     	new WebDriverWait(webDriver, 10).until(
-    			ExpectedConditions.textToBePresentInElement(By.xpath(pageTitle)
+    			ExpectedConditions.textToBePresentInElement(By.xpath(Page_Ttl)
     					, postName));
     }
 }

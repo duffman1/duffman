@@ -27,9 +27,9 @@ public class Revisions {
     private static CustomWebDriver webDriver;
     private static AppLib al;
     private final Util ul;
-    private static String RevComment = ".//*[@id='edit-event-comment']";
-    private static String RevUpdate_btn=".//*[@id='edit-submit']";
-    private static String RevisionLink=".//a[contains(text(),'Revisions')]";
+    private static String MessageForStateChange_Txa = "(//*[@id='edit-event-comment'])[1]";
+    private static String UpdateState_Btn="//*[@id='edit-submit']";
+    private static String Revision_Lnk="//a[contains(text(),'Revisions')]";
     
     public Revisions(final CustomWebDriver custWebDr) {
         webDriver = custWebDr;
@@ -80,20 +80,19 @@ public class Revisions {
     			presenceOfElementLocated((By.xpath("//table[contains(@class, 'views-table')]//a[contains(text(), '" + contentItemTitle + "')]/../..//a[text()='operations']")))));
     	
     }
-    public void PopulateRevisionComment(String commenttext) throws Exception {
+    public void EnterLogMessageForStateChange(String message) throws Exception {
     	new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOf(
-    			webDriver.findElement(By.xpath(RevComment))));
-    	webDriver.type(RevComment,commenttext );   	
+    			webDriver.findElement(By.xpath(MessageForStateChange_Txa)))).sendKeys(message);;
     	
     }
     public void ClickUpdateStateBtn() throws Exception {    	
-    	WebElement element = new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(
-    			By.xpath(RevUpdate_btn)));
-    	element.click();
+    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(
+    			By.xpath(UpdateState_Btn))).click();;
     }
+    
     public void ClickRevisionTab() throws Exception{
     	WebElement revision = new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(
-    			By.xpath(RevisionLink)));
+    			By.xpath(Revision_Lnk)));
     	revision.click();
     }
 

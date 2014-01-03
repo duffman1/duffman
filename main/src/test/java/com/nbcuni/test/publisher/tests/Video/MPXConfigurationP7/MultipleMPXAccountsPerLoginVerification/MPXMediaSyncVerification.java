@@ -125,14 +125,16 @@ public class MPXMediaSyncVerification extends ParentTest{
             //Step 5
             mpxMedia.ClickSyncMPXMediaNowLnk();
             ContentParent contentParent = new ContentParent(webDriver);
-            //contentParent.VerifyMessageStatus("players returned for account");
+            contentParent.VerifyMessageStatus("Processed video import/update manually for all accounts.");
+            /*
+            contentParent.VerifyMessageStatus("players returned for account");
             contentParent.VerifyMessageStatus("All mpxMedia is up to date for account \"" + configuredAccounts.get(0) + "\"");
             if (configuredAccounts.size() >= 2) {
             	contentParent.VerifyMessageStatus("All mpxMedia is up to date for account \"" + configuredAccounts.get(1) + "\""); 
             }
             if (configuredAccounts.size() >= 3) {
             	contentParent.VerifyMessageStatus("All mpxMedia is up to date for account \"" + configuredAccounts.get(2) + "\"");   
-            }
+            }*/
             
             //Step 6
             Cron cron = new Cron(webDriver);

@@ -135,7 +135,7 @@ public class TestingFacebookAutopublishing extends ParentTest{
         overlay.switchToDefaultContent();
         CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver, applib);
         String postTitle = createDefaultContent.Post("Published");
-        contentParent.ClickRevisionsBtn();
+        contentParent.ClickRevisionsTab();
         overlay.SwitchToFrame("Revisions");
         
         //Step 4
