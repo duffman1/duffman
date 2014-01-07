@@ -1,21 +1,15 @@
 package com.nbcuni.test.publisher.pageobjects.content;
 
 
-import java.util.List;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
-import org.testng.Reporter;
-
 import com.nbcuni.test.lib.Util;
 import com.nbcuni.test.publisher.common.AppLib;
-import com.nbcuni.test.publisher.common.Random;
 import com.nbcuni.test.webdriver.CustomWebDriver;
+import junit.framework.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.util.List;
 
 
 /*********************************************
@@ -98,6 +92,28 @@ public class ContentParent {
     	new WebDriverWait(webDriver, 10).until(
     			ExpectedConditions.textToBePresentInElement(By.xpath(Page_Ttl)
     					, postName));
+    }
+
+    public void VerifyPageContentPresent(List<String> txtItems) throws Exception {
+
+        String bodyTxt = webDriver.findElement(By.xpath("//body")).getText();
+
+        for (String s : txtItems) {
+
+            Assert.assertTrue(bodyTxt.contains(s));
+
+        }
+    }
+
+    public void VerifyPageContentNotPresent(List<String> txtItems) throws Exception {
+
+        String bodyTxt = webDriver.findElement(By.xpath("//body")).getText();
+
+        for (String s : txtItems) {
+
+            Assert.assertFalse(bodyTxt.contains(s));
+
+        }
     }
 }
 

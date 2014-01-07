@@ -1,21 +1,17 @@
 package com.nbcuni.test.publisher.pageobjects.content;
 
 
-import java.util.ArrayList;
-import java.util.List;
-
+import com.nbcuni.test.lib.Util;
+import com.nbcuni.test.publisher.common.AppLib;
+import com.nbcuni.test.webdriver.CustomWebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.Reporter;
 
-import com.nbcuni.test.lib.Util;
-import com.nbcuni.test.publisher.common.AppLib;
-import com.nbcuni.test.publisher.common.Random;
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import java.util.ArrayList;
+import java.util.List;
 
 
 /*********************************************
@@ -73,6 +69,12 @@ public class SearchFor {
     			Assert.fail("Result '" + result + "' is not present in the search result set");
     		}
     	}
+    }
+
+    public void ClickSearchTitleLnk(String title) throws Exception {
+
+        new WebDriverWait(webDriver, 10).until(ExpectedConditions.
+                visibilityOf(webDriver.findElement(By.xpath("//a[text()='" + title + "']")))).click();
     }
     
     
