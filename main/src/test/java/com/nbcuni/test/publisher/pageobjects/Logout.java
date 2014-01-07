@@ -44,8 +44,9 @@ public class Logout {
     
     public void ClickLogoutBtn() {
     	
-    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(By.xpath(LogOut_Btn)));
-    	webDriver.click(LogOut_Btn);
+    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.
+    			elementToBeClickable(By.xpath(LogOut_Btn))).click();;
+    	
     }
     
     

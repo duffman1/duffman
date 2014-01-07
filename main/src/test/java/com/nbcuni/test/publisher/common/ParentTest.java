@@ -28,12 +28,12 @@ import com.nbcuni.test.webdriver.WebDriverClientExecution;
 
 public class ParentTest {
 	
-	public CustomWebDriver webDriver;
+	protected CustomWebDriver webDriver;
     public AppLib applib;
     public Random random;
     public Taxonomy taxonomy;
     public Overlay overlay;
-
+    
     /**
      * Instantiate the TestNG Before Class Method.
      * 
@@ -44,7 +44,8 @@ public class ParentTest {
     @Parameters("Environment")
     public void startSelenium(@Optional("PROD") String sEnv) {
         try {
-            webDriver = WebDriverClientExecution.getInstance().getDriver();
+            
+        	webDriver = WebDriverClientExecution.getInstance().getDriver();
             applib = new AppLib(webDriver);
             applib.setEnvironmentInfo(sEnv);
             random = new Random();

@@ -34,6 +34,10 @@ public class MPXMedia {
     private static String MPXMedia_Lnk = "//a[text()='mpxMedia']";
     private static String SyncMPXMedia_Lnk = "//fieldset[@id='edit-video-sync']//a";
     private static String SyncMPXMediaNow_Lnk = "//input[@value='Sync mpxMedia Now']";
+    private static String SynchMPXMediaForAccount1_Ddl = "//select[@id='edit-video-sync-settings-1-default-player-id']";
+    private static String SynchMPXMediaForAccount2_Ddl = "//select[@id='edit-video-sync-settings-2-default-player-id']";
+    private static String SynchMPXMediaForAccount3_Ddl = "//select[@id='edit-video-sync-settings-3-default-player-id']";
+    
     
     public MPXMedia(final CustomWebDriver custWebDr) {
         webDriver = custWebDr;
@@ -97,6 +101,24 @@ public class MPXMedia {
     	
     	Assert.assertEquals(allOptions.size() - 1, playerList.size());
     	
+    }
+    
+    public void SelectMPXPlayerForAccount1(String playerTitle) throws Exception {
+    	
+    	new Select(new WebDriverWait(webDriver, 10).until(ExpectedConditions.
+    			visibilityOf(webDriver.findElement(By.xpath(SynchMPXMediaForAccount1_Ddl))))).selectByVisibleText(playerTitle);
+    }
+    
+    public void SelectMPXPlayerForAccount2(String playerTitle) throws Exception {
+    	
+    	new Select(new WebDriverWait(webDriver, 10).until(ExpectedConditions.
+    			visibilityOf(webDriver.findElement(By.xpath(SynchMPXMediaForAccount2_Ddl))))).selectByVisibleText(playerTitle);
+    }
+    
+    public void SelectMPXPlayerForAccount3(String playerTitle) throws Exception {
+    	
+    	new Select(new WebDriverWait(webDriver, 10).until(ExpectedConditions.
+    			visibilityOf(webDriver.findElement(By.xpath(SynchMPXMediaForAccount3_Ddl))))).selectByVisibleText(playerTitle);
     }
 }
 

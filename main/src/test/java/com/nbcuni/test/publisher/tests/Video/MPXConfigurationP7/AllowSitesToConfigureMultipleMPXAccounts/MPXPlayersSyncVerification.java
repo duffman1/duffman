@@ -1,4 +1,4 @@
-package com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.MultipleMPXAccountsPerLoginVerification;
+package com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts;
 
 
 import java.text.SimpleDateFormat;
@@ -101,24 +101,33 @@ public class MPXPlayersSyncVerification extends ParentTest{
         	MPXDataClient mpxDataClient = new MPXDataClient(webDriver);
             mpxDataClient.SignInToMPXDataClient("player", "mpx/AdminPub7QA", "Pa55word");
             mpxDataClient.ChooseMPXAccount(configuredAccounts.get(0));
-            List<String> allPlayerTitlesForAccount1 = mpxDataClient.GetAllMPXObjectFields("Player", "title");
+            List<String> allActivePlayerTitlesForAccount1 = mpxDataClient.GetAllActivePlayers();
+            mpxDataClient.SignInToMPXDataClient("player", "mpx/AdminPub7QA", "Pa55word");
+            mpxDataClient.ChooseMPXAccount(configuredAccounts.get(0));
+            List<String> allPlayerTitlesForAccount1 = mpxDataClient.GetAllPlayers();
             
             //Step
+            List<String> allActivePlayerTitlesForAccount2 = null;
             List<String> allPlayerTitlesForAccount2 = null;
             if (configuredAccounts.size() >= 2) {
-            
             	mpxDataClient.SignInToMPXDataClient("player", "mpx/AdminPub7QA", "Pa55word");
             	mpxDataClient.ChooseMPXAccount(configuredAccounts.get(1));
-            	allPlayerTitlesForAccount2 = mpxDataClient.GetAllMPXObjectFields("Player", "title");
+            	allActivePlayerTitlesForAccount2 = mpxDataClient.GetAllActivePlayers();
+            	mpxDataClient.SignInToMPXDataClient("player", "mpx/AdminPub7QA", "Pa55word");
+            	mpxDataClient.ChooseMPXAccount(configuredAccounts.get(1));
+            	allPlayerTitlesForAccount2 = mpxDataClient.GetAllPlayers();
             }
             
             //Step
+            List<String> allActivePlayerTitlesForAccount3 = null;
             List<String> allPlayerTitlesForAccount3 = null;
             if (configuredAccounts.size() >= 3) {
-            	
             	mpxDataClient.SignInToMPXDataClient("player", "mpx/AdminPub7QA", "Pa55word");
             	mpxDataClient.ChooseMPXAccount(configuredAccounts.get(2));
-            	allPlayerTitlesForAccount3 = mpxDataClient.GetAllMPXObjectFields("Player", "title");
+            	allActivePlayerTitlesForAccount3 = mpxDataClient.GetAllActivePlayers();
+            	mpxDataClient.SignInToMPXDataClient("player", "mpx/AdminPub7QA", "Pa55word");
+            	mpxDataClient.ChooseMPXAccount(configuredAccounts.get(2));
+            	allPlayerTitlesForAccount3 = mpxDataClient.GetAllPlayers();
             }
         	
         	//Step
@@ -157,12 +166,12 @@ public class MPXPlayersSyncVerification extends ParentTest{
             mpxMedia.VerifyImportAccountLabels(allLabels);
             
             //Step
-            mpxMedia.VerifyImportAccountPlayerOptions(configuredAccounts.get(0), allPlayerTitlesForAccount1);
+            mpxMedia.VerifyImportAccountPlayerOptions(configuredAccounts.get(0), allActivePlayerTitlesForAccount1);
             if (configuredAccounts.size() >= 2) {
-            	mpxMedia.VerifyImportAccountPlayerOptions(configuredAccounts.get(1), allPlayerTitlesForAccount2);
+            	mpxMedia.VerifyImportAccountPlayerOptions(configuredAccounts.get(1), allActivePlayerTitlesForAccount2);
             }
             if (configuredAccounts.size() >= 3) {
-            	mpxMedia.VerifyImportAccountPlayerOptions(configuredAccounts.get(2), allPlayerTitlesForAccount3);
+            	mpxMedia.VerifyImportAccountPlayerOptions(configuredAccounts.get(2), allActivePlayerTitlesForAccount3);
             }
             
             

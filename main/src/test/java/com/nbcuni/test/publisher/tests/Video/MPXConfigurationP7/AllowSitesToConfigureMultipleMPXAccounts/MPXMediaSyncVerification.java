@@ -1,4 +1,4 @@
-package com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.MultipleMPXAccountsPerLoginVerification;
+package com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts;
 
 
 import java.text.SimpleDateFormat;
@@ -65,7 +65,8 @@ public class MPXMediaSyncVerification extends ParentTest{
      * Step 3 - In a new browser, access the URL, http://mpx.theplatform.com, and login to MPX using the following credentials:   Username: AdminPub7QA Password: Pa55word,The user is taken to the main mpx page.
      * Step 3b - Step missing from QC - but I'm guessing this step is to return to pub7 and nav to Content>>Files>>mpxMedia<br>
      * Step 4 - Click on the "SYNC MPXMEDIA" link.  Note: If the Sync Multimedia section is already expanded ,The section where "SYNC MPXMEDIA" link is located expands. It shows 3 "Import new mpxMedia for account <Account Name>" drop down fields, and a button called "Sync mpxMedia Now".  Note: If the Sync Multimedia section is already expanded (as after a first-time-ever MPX configuration, this step Passes. 
-     * Step 5 - Click Sync mpxMedia Now. ,For each MPX account/subaccount player selected in the previous step, a success message is displayed that shows how many new mpxMedia have been queued.   
+     * Step 5a - If not selected, select the first player option for sync<br> 
+     * Step 5b - Click Sync mpxMedia Now. ,For each MPX account/subaccount player selected in the previous step, a success message is displayed that shows how many new mpxMedia have been queued.   
      * Step 6 - Run cron, and then click Content > Files > mpxMedia ,The user is taken to the "mpxMedia" view in the "Content" overlay. The MPX assets that have been published with respect to different players are present in the mpxMedia table. 
      * Step 7 - Logout of MPX and Publisher7.,The user logs out of MPX and Publisher 7. (NA)
      * Step 8 - Close all the browsers. ,The browsers are closed. (NA)
@@ -94,23 +95,34 @@ public class MPXMediaSyncVerification extends ParentTest{
             mpxDataClient.SignInToMPXDataClient("media", "mpx/AdminPub7QA", "Pa55word");
             mpxDataClient.ChooseMPXAccount(configuredAccounts.get(0));
             List<String> allMediaTitlesForAccount1 = mpxDataClient.GetAllMPXObjectFields("Media", "title");
+            mpxDataClient.SignInToMPXDataClient("player", "mpx/AdminPub7QA", "Pa55word");
+            mpxDataClient.ChooseMPXAccount(configuredAccounts.get(0));
+            List<String> allActivePlayerTitlesForAccount1 = mpxDataClient.GetAllActivePlayers();
             
             //Step 3 (continued)
             List<String> allMediaTitlesForAccount2 = null;
+            List<String> allActivePlayerTitlesForAccount2 = null;
             if (configuredAccounts.size() >= 2) {
             
             	mpxDataClient.SignInToMPXDataClient("media", "mpx/AdminPub7QA", "Pa55word");
             	mpxDataClient.ChooseMPXAccount(configuredAccounts.get(1));
             	allMediaTitlesForAccount2 = mpxDataClient.GetAllMPXObjectFields("Media", "title");
+            	mpxDataClient.SignInToMPXDataClient("player", "mpx/AdminPub7QA", "Pa55word");
+                mpxDataClient.ChooseMPXAccount(configuredAccounts.get(1));
+                allActivePlayerTitlesForAccount2 = mpxDataClient.GetAllActivePlayers();
             }
             
             //Step 3 (continued)
             List<String> allMediaTitlesForAccount3 = null;
+            List<String> allActivePlayerTitlesForAccount3 = null;
             if (configuredAccounts.size() >= 3) {
             	
             	mpxDataClient.SignInToMPXDataClient("media", "mpx/AdminPub7QA", "Pa55word");
             	mpxDataClient.ChooseMPXAccount(configuredAccounts.get(2));
             	allMediaTitlesForAccount3 = mpxDataClient.GetAllMPXObjectFields("Media", "title");
+            	mpxDataClient.SignInToMPXDataClient("player", "mpx/AdminPub7QA", "Pa55word");
+                mpxDataClient.ChooseMPXAccount(configuredAccounts.get(2));
+                allActivePlayerTitlesForAccount3 = mpxDataClient.GetAllActivePlayers();
             }
         	
         	//Step 3b
@@ -122,7 +134,12 @@ public class MPXMediaSyncVerification extends ParentTest{
             MPXMedia mpxMedia = new MPXMedia(webDriver);
             mpxMedia.ExpandMPXMedia();
             
-            //Step 5
+            //Step 5a
+            mpxMedia.SelectMPXPlayerForAccount1(allActivePlayerTitlesForAccount1.get(0));
+            mpxMedia.SelectMPXPlayerForAccount2(allActivePlayerTitlesForAccount2.get(0));
+            mpxMedia.SelectMPXPlayerForAccount3(allActivePlayerTitlesForAccount3.get(0));
+            
+            //Step 5b
             mpxMedia.ClickSyncMPXMediaNowLnk();
             ContentParent contentParent = new ContentParent(webDriver);
             contentParent.VerifyMessageStatus("Processed video import/update manually for all accounts.");

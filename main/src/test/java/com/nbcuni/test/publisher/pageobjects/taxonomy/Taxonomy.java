@@ -46,13 +46,6 @@ public class Taxonomy {
     	new WebDriverWait(webDriver, 10).until(ExpectedConditions.not(ExpectedConditions.visibilityOf(webDriver.findElement(By.xpath(locator)))));
     }
     
-    public void ClickHomeLnk() throws Exception {
-    	
-    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(By.xpath(Home_Lnk)));
-    	webDriver.click(Home_Lnk);
-    		
-    }
-   
     public void NavigateSite(String menuPath) throws Exception{
     	
     	String[] tierLevel = menuPath.split(">>");
@@ -63,67 +56,85 @@ public class Taxonomy {
     	String tier4Locator = null;
     	
     	int depth = tierLevel.length;
-    	if (depth == 1 && menuPath == "Home") { //home link
-    		this.ClickHomeLnk();
-    	}
-    	else if (depth == 1) { //tier 1 taxonomy
-    		tier1Locator = TaxonomyBase + "//a[text()='" + tierLevel[0] + "']";
-    		new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOf(webDriver.findElement(
-    				By.xpath(tier1Locator)))).click();
-    	}
-    	else if (depth == 2) {
+    	if (menuPath.startsWith("Home")) { //home link taxonomy
     		
-    		tier1Locator = TaxonomyBase + "//a[text()='" + tierLevel[0] + "']";
-    		tier2Locator = TaxonomyBase + "//a[text()='" + tierLevel[0] + "']" + "/../ul//a[text()='" + tierLevel[1] +"']";
+    		if (depth == 1) {
+    			new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(By.xpath(Home_Lnk))).click();
+    		}
+    		else if (depth == 2) {
+    			
+    			tier1Locator = Home_Lnk;
+    			tier2Locator = Home_Lnk + "/../..//a[text()='" + tierLevel[1] + "']";
+        		
+        		WebElement tier1Lnk = new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOf(webDriver.findElement(
+        				By.xpath(tier1Locator))));
+        		webDriver.executeScript(MouseOver_Js, tier1Lnk);
+        		WebElement tier2Lnk = new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOf(webDriver.findElement(
+        				By.xpath(tier2Locator))));
+        		tier2Lnk.click();
+        		this.MouseOffTaxonomyElement(tier2Locator);
+    		}
     		
-    		WebElement tier1Lnk = new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOf(webDriver.findElement(
-    				By.xpath(tier1Locator))));
-    		webDriver.executeScript(MouseOver_Js, tier1Lnk);
-    		WebElement tier2Lnk = new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOf(webDriver.findElement(
-    				By.xpath(tier2Locator))));
-    		tier2Lnk.click();
-    		this.MouseOffTaxonomyElement(tier2Locator);
+    	} else {
+    	
+    		if (depth == 1) { //tier 1 taxonomy
+    			tier1Locator = TaxonomyBase + "//a[contains(text(),'" + tierLevel[0] + "')]";
+    			new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOf(webDriver.findElement(
+    					By.xpath(tier1Locator)))).click();
+    		}
+    		else if (depth == 2) {
     		
-    	}
-    	else if (depth == 3) {
+    			tier1Locator = TaxonomyBase + "//a[text()='" + tierLevel[0] + "']";
+    			tier2Locator = TaxonomyBase + "//a[contains(text(),'" + tierLevel[0] + "')]" + "/../ul//a[contains(text(),'" + tierLevel[1] +"')]";
     		
-    		tier1Locator = TaxonomyBase + "//a[text()='" + tierLevel[0] + "']";
-    		tier2Locator = TaxonomyBase + "//a[text()='" + tierLevel[0] + "']" + "/../ul//a[text()='" + tierLevel[1] +"']";
-    		tier3Locator = TaxonomyBase + "//a[text()='" + tierLevel[0] + "']" + "/../ul//a[text()='" + tierLevel[1] +"']" + "/..//a[text()='" + tierLevel[2] + "']";
+    			WebElement tier1Lnk = new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOf(webDriver.findElement(
+    					By.xpath(tier1Locator))));
+    			webDriver.executeScript(MouseOver_Js, tier1Lnk);
+    			WebElement tier2Lnk = new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOf(webDriver.findElement(
+    					By.xpath(tier2Locator))));
+    			tier2Lnk.click();
+    			this.MouseOffTaxonomyElement(tier2Locator);
     		
-    		WebElement tier1Lnk = new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOf(webDriver.findElement(
-    				By.xpath(tier1Locator))));
-    		webDriver.executeScript(MouseOver_Js, tier1Lnk);
-    		WebElement tier2Lnk = new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOf(webDriver.findElement(
-    				By.xpath(tier2Locator))));
-    		webDriver.executeScript(MouseOver_Js, tier2Lnk);
-    		WebElement tier3Lnk = new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOf(webDriver.findElement(
-    				By.xpath(tier3Locator))));
-    		tier3Lnk.click();
-    		this.MouseOffTaxonomyElement(tier3Locator);
+    		}
+    		else if (depth == 3) {
     		
-    	}
-    	else if (depth == 4) {
+    			tier1Locator = TaxonomyBase + "//a[contains(text(),'" + tierLevel[0] + "')]";
+    			tier2Locator = TaxonomyBase + "//a[contains(text(),'" + tierLevel[0] + "')]" + "/../ul//a[contains(text(),'" + tierLevel[1] +"')]";
+    			tier3Locator = TaxonomyBase + "//a[contains(text(),'" + tierLevel[0] + "')]" + "/../ul//a[contains(text(),'" + tierLevel[1] +"')]" + "/..//a[contains(text(),'" + tierLevel[2] + "')]";
     		
-    		tier1Locator = TaxonomyBase + "//a[text()='" + tierLevel[0] + "']";
-    		tier2Locator = TaxonomyBase + "//a[text()='" + tierLevel[0] + "']" + "/../ul//a[text()='" + tierLevel[1] +"']";
-    		tier3Locator = TaxonomyBase + "//a[text()='" + tierLevel[0] + "']" + "/../ul//a[text()='" + tierLevel[1] +"']" + "/..//a[text()='" + tierLevel[2] + "']";
-    		tier4Locator = TaxonomyBase + "//a[text()='" + tierLevel[0] + "']" + "/../ul//a[text()='" + tierLevel[1] +"']" + "/..//a[text()='" + tierLevel[2] + "']" + "/..//a[text()='" + tierLevel[3] + "']";
+    			WebElement tier1Lnk = new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOf(webDriver.findElement(
+    					By.xpath(tier1Locator))));
+    			webDriver.executeScript(MouseOver_Js, tier1Lnk);
+    			WebElement tier2Lnk = new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOf(webDriver.findElement(
+    					By.xpath(tier2Locator))));
+    			webDriver.executeScript(MouseOver_Js, tier2Lnk);
+    			WebElement tier3Lnk = new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOf(webDriver.findElement(
+    					By.xpath(tier3Locator))));
+    			tier3Lnk.click();
+    			this.MouseOffTaxonomyElement(tier3Locator);
     		
-    		WebElement tier1Lnk = new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOf(webDriver.findElement(
-    				By.xpath(tier1Locator))));
-    		webDriver.executeScript(MouseOver_Js, tier1Lnk);
-    		WebElement tier2Lnk = new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOf(webDriver.findElement(
-    				By.xpath(tier2Locator))));
-    		webDriver.executeScript(MouseOver_Js, tier2Lnk);
-    		WebElement tier3Lnk = new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOf(webDriver.findElement(
-    				By.xpath(tier3Locator))));
-    		webDriver.executeScript(MouseOver_Js, tier3Lnk);
-    		WebElement tier4Lnk = new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOf(webDriver.findElement(
-    				By.xpath(tier4Locator))));
-    		tier4Lnk.click();
-    		this.MouseOffTaxonomyElement(tier4Locator);
+    		}
+    		else if (depth == 4) {
     		
+    			tier1Locator = TaxonomyBase + "//a[contains(text(),'" + tierLevel[0] + "')]";
+    			tier2Locator = TaxonomyBase + "//a[contains(text(),'" + tierLevel[0] + "')]" + "/../ul//a[contains(text(),'" + tierLevel[1] +"')]";
+    			tier3Locator = TaxonomyBase + "//a[contains(text(),'" + tierLevel[0] + "')]" + "/../ul//a[contains(text(),'" + tierLevel[1] +"')]" + "/..//a[contains(text(),'" + tierLevel[2] + "')]";
+    			tier4Locator = TaxonomyBase + "//a[contains(text(),'" + tierLevel[0] + "')]" + "/../ul//a[contains(text(),'" + tierLevel[1] +"')]" + "/..//a[contains(text(),'" + tierLevel[2] + "')]" + "/..//a[contains(text(),'" + tierLevel[3] + "')]";
+    		
+    			WebElement tier1Lnk = new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOf(webDriver.findElement(
+    					By.xpath(tier1Locator))));
+    			webDriver.executeScript(MouseOver_Js, tier1Lnk);
+    			WebElement tier2Lnk = new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOf(webDriver.findElement(
+    					By.xpath(tier2Locator))));
+    			webDriver.executeScript(MouseOver_Js, tier2Lnk);
+    			WebElement tier3Lnk = new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOf(webDriver.findElement(
+    					By.xpath(tier3Locator))));
+    			webDriver.executeScript(MouseOver_Js, tier3Lnk);
+    			WebElement tier4Lnk = new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOf(webDriver.findElement(
+    					By.xpath(tier4Locator))));
+    			tier4Lnk.click();
+    			this.MouseOffTaxonomyElement(tier4Locator);
+    		}
     	}
     }
     
