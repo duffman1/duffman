@@ -1,66 +1,5 @@
 package com.nbcuni.test.publisher.common;
 
-import java.awt.Color;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.StringReader;
-import java.net.HttpURLConnection;
-import java.net.InetSocketAddress;
-import java.net.Proxy;
-import java.net.SocketAddress;
-import java.net.URL;
-import java.sql.CallableStatement;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map.Entry;
-import java.util.Properties;
-import java.util.Random;
-import java.util.Set;
-import java.util.TimeZone;
-import java.util.concurrent.TimeUnit;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-import junit.framework.Assert;
-
-import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.NoAlertPresentException;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebElement;
-import org.testng.ITestResult;
-import org.testng.Reporter;
-
 import com.ibm.icu.text.DateFormat;
 import com.ibm.icu.text.SimpleDateFormat;
 import com.nbcuni.test.lib.Util;
@@ -68,6 +7,23 @@ import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.webdriver.CustomWebDriver;
 import com.nbcuni.test.webdriver.CustomWebDriverException;
 import com.nbcuni.test.webdriver.Utilities;
+import junit.framework.Assert;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.testng.ITestResult;
+import org.testng.Reporter;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
+import java.net.*;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.Properties;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**************************************************************************.
  * NBC.com Application Library. Copyright
@@ -342,6 +298,25 @@ public class AppLib {
         custWebDr.close();        
         
     }
-    
+
+    public static String[] getDate(String regExp, String desc) {
+        int count=0;
+        String[] allMatches = new String[2];
+        Matcher m = Pattern.compile(regExp).matcher(desc);
+        while (m.find()) {
+            allMatches[count] = m.group();
+            count++;
+        }
+        return allMatches;
+    }
+
+    public static void Wait(int milSecond){
+        try {
+            Thread.sleep(milSecond);
+        } catch (InterruptedException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
     
 }

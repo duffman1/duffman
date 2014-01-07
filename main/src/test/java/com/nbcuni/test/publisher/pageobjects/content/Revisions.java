@@ -1,18 +1,13 @@
 package com.nbcuni.test.publisher.pageobjects.content;
 
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
-import org.testng.Reporter;
-
 import com.nbcuni.test.lib.Util;
 import com.nbcuni.test.publisher.common.AppLib;
-import com.nbcuni.test.publisher.common.Random;
 import com.nbcuni.test.webdriver.CustomWebDriver;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 /*********************************************
@@ -30,7 +25,8 @@ public class Revisions {
     private static String RevComment = ".//*[@id='edit-event-comment']";
     private static String RevUpdate_btn=".//*[@id='edit-submit']";
     private static String RevisionLink=".//a[contains(text(),'Revisions')]";
-    
+    private static String MessageForStateChange_Txa = "(//*[@id='edit-event-comment'])[1]";
+
     public Revisions(final CustomWebDriver custWebDr) {
         webDriver = custWebDr;
         ul = new Util(webDriver);
@@ -82,7 +78,7 @@ public class Revisions {
     }
     public void PopulateRevisionComment(String commenttext) throws Exception {
     	new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOf(
-    			webDriver.findElement(By.xpath(RevComment))));
+                webDriver.findElement(By.xpath(RevComment))));
     	webDriver.type(RevComment,commenttext );   	
     	
     }
@@ -97,5 +93,10 @@ public class Revisions {
     	revision.click();
     }
 
+    public void EnterLogMessageForStateChange(String message) throws Exception {
+        new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOf(
+            webDriver.findElement(By.xpath(MessageForStateChange_Txa)))).sendKeys(message);
+
+    }
 }
 
