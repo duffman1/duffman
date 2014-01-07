@@ -28,8 +28,8 @@ public class ContentParent {
     private static String Save_Btn = "//input[@id='edit-submit']";
     private static String Message_Ctr = "//div[@class='messages status']";
     private static String Warning_Ctr = "//div[@class='messages warning']";
-    private static String EditDraft_Btn = "//a[text()='Edit Draft']";
-    private static String Revisions_Btn = "//a[text()='Revisions']";
+    private static String EditDraft_Tab = "//a[text()='Edit Draft']";
+    private static String Revisions_Tab = "//a[text()='Revisions']";
     private static String pageTitle = ".//*[@id='page-title']";
     private static String View_Tab = "//a[text()='View']";
     private static String workBenchInfoBlock = ".//*[@class='workbench-info-block']";
@@ -61,18 +61,16 @@ public class ContentParent {
     					, warningTxt));
     }
     
-    public void ClickEditDraftBtn() {
+    public void ClickEditDraftTab() {
     	
     	new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(
-    			By.xpath(EditDraft_Btn)));
-    	webDriver.click(EditDraft_Btn);
+    			By.xpath(EditDraft_Tab))).click();
     }
     
     public void ClickRevisionsTab() {
     	
     	new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(
-    			By.xpath(Revisions_Btn)));
-    	webDriver.click(Revisions_Btn);
+    			By.xpath(Revisions_Tab))).click();
     }
 
     public void ClickViewTab() {

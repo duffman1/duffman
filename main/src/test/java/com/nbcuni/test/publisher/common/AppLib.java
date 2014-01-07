@@ -154,7 +154,7 @@ public class AppLib {
 
             Reporter.setCurrentTestResult(result); 
             Reporter.log("Screenshot saved to " + filePath + " ");
-            
+            System.out.println("Screenshot saved to " + filePath);
         	File scrFile = ((TakesScreenshot) custWebDr).getScreenshotAs(OutputType.FILE);    
             FileUtils.copyFile(scrFile, new File(filePath));
             
@@ -310,13 +310,6 @@ public class AppLib {
         return allMatches;
     }
 
-    public static void Wait(int milSecond){
-        try {
-            Thread.sleep(milSecond);
-        } catch (InterruptedException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-    }
+
     
 }
