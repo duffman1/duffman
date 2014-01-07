@@ -1,29 +1,17 @@
-package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling;
+package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.FunctionalScheduleToPublishContentByDateTime;
 
-import java.sql.Time;
+import com.nbcuni.test.publisher.common.AppLib;
+import com.nbcuni.test.publisher.common.ParentTest;
+import com.nbcuni.test.publisher.pageobjects.UserLogin;
+import com.nbcuni.test.publisher.pageobjects.content.*;
+import com.nbcuni.test.publisher.pageobjects.queues.ScheduleQueue;
+import org.testng.annotations.Test;
+
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
-
-import org.testng.Reporter;
-import org.testng.annotations.Test;
-
-import com.nbcuni.test.publisher.common.AppLib;
-import com.nbcuni.test.publisher.common.ParentTest;
-import com.nbcuni.test.publisher.pageobjects.UserLogin;
-import com.nbcuni.test.publisher.pageobjects.content.BasicInformation;
-import com.nbcuni.test.publisher.pageobjects.content.Content;
-import com.nbcuni.test.publisher.pageobjects.content.ContentParent;
-import com.nbcuni.test.publisher.pageobjects.content.CreateDefaultContent;
-import com.nbcuni.test.publisher.pageobjects.content.PublishingOptions;
-import com.nbcuni.test.publisher.pageobjects.content.RevisionState;
-import com.nbcuni.test.publisher.pageobjects.content.Schedule;
-import com.nbcuni.test.publisher.pageobjects.content.SelectFile;
-import com.nbcuni.test.publisher.pageobjects.content.Workflow;
-import com.nbcuni.test.publisher.pageobjects.queues.ScheduleQueue;
-import com.nbcuni.test.publisher.pageobjects.taxonomy.Taxonomy;
 /*************************************************************************************
  * TEST CASE 
  * Step 1 - Log into a new-installation Publisher test instance as Drupal User 1<br> 
@@ -40,9 +28,10 @@ import com.nbcuni.test.publisher.pageobjects.taxonomy.Taxonomy;
  * 
  * @throws Throwable No Return values are needed
  *************************************************************************************/
-@Test(groups = {"full", "smoke"})
-public class ScheduletopublishContentbyDateTime extends ParentTest {
 
+public class ScheduleToPublishContentByDateTime extends ParentTest {
+
+    @Test(groups = {"full", "smoke"})
 	public void ScheduletopublishContentbyDateTime() throws Exception{
 		//Step 1
     	UserLogin userLogin = applib.openApplication();

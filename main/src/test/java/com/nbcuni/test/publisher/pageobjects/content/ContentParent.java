@@ -1,21 +1,15 @@
 package com.nbcuni.test.publisher.pageobjects.content;
 
 
-import java.util.List;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
-import org.testng.Reporter;
-
 import com.nbcuni.test.lib.Util;
 import com.nbcuni.test.publisher.common.AppLib;
-import com.nbcuni.test.publisher.common.Random;
 import com.nbcuni.test.webdriver.CustomWebDriver;
+import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+
+import java.util.List;
 
 
 /*********************************************
@@ -37,7 +31,9 @@ public class ContentParent {
     private static String EditDraft_Btn = "//a[text()='Edit Draft']";
     private static String Revisions_Btn = "//a[text()='Revisions']";
     private static String pageTitle = ".//*[@id='page-title']";
-    
+    private static String View_Tab = "//a[text()='View']";
+    private static String workBenchInfoBlock = ".//*[@class='workbench-info-block']";
+
     public ContentParent(final CustomWebDriver custWebDr) {
         webDriver = custWebDr;
         ul = new Util(webDriver);
@@ -72,13 +68,20 @@ public class ContentParent {
     	webDriver.click(EditDraft_Btn);
     }
     
-    public void ClickRevisionsBtn() {
+    public void ClickRevisionsTab() {
     	
     	new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(
     			By.xpath(Revisions_Btn)));
     	webDriver.click(Revisions_Btn);
     }
-    
+
+    public void ClickViewTab() {
+
+        new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(
+                By.xpath(View_Tab))).click();;
+
+    }
+
     public void VerifyRequiredFields(List<String> allFields) {
     	
     	for (String field : allFields) {
@@ -90,6 +93,37 @@ public class ContentParent {
     	new WebDriverWait(webDriver, 10).until(
     			ExpectedConditions.textToBePresentInElement(By.xpath(pageTitle)
     					, postName));
+    }
+
+    public void WorkBenchInfoBlock(List<String> fields){
+
+        for (String field:fields){
+            new WebDriverWait(webDriver, 10).until(
+                    ExpectedConditions.textToBePresentInElement(By.xpath(workBenchInfoBlock)
+                            , field));
+        }
+    }
+
+    public void VerifyPageContentPresent(List<String> txtItems) throws Exception {
+
+        String bodyTxt = webDriver.findElement(By.xpath("//body")).getText();
+
+        for (String s : txtItems) {
+
+            Assert.assertTrue(bodyTxt.contains(s));
+
+        }
+    }
+
+    public void VerifyPageContentNotPresent(List<String> txtItems) throws Exception {
+
+        String bodyTxt = webDriver.findElement(By.xpath("//body")).getText();
+
+        for (String s : txtItems) {
+
+            Assert.assertFalse(bodyTxt.contains(s));
+
+        }
     }
 }
 

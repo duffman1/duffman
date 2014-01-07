@@ -9,6 +9,7 @@ import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.content.SearchFor;
 import junit.framework.Assert;
+import org.testng.annotations.Test;
 
 import java.util.Arrays;
 import java.util.List;
@@ -58,7 +59,7 @@ public class MPXVideosSchedulingVerificationInitialOverrides extends ParentTest{
      ,39,Click on "Log out". ,The user logs out of Publisher 7.
      * @throws Throwable No Return values are needed
      *************************************************************************************/
-    //@Test(groups = {"full", "smoke"})
+    @Test(groups = {"full", "smoke"})
     public void MPXVideosSchedulingVerificationInitialOverrides() throws Exception{
 
 
