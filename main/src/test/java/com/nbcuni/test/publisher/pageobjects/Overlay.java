@@ -27,6 +27,7 @@ public class Overlay {
     private static CustomWebDriver webDriver;
     
     private static String CloseOverlay_Lnk = "//a[@id='overlay-close']";
+    private static String ActiveFrame_Frm = "//iframe[@class='overlay-element overlay-active']";
     
     
     public Overlay(final CustomWebDriver custWebDr) {
@@ -56,6 +57,12 @@ public class Overlay {
     	List<WebElement> allFrames = webDriver.findElements(By.xpath("//iframe[contains(@title, '" + frameTitle + "')]"));
     	webDriver.switchTo().frame(allFrames.get(frameIndex));
     	
+    }
+    
+    public void SwitchToActiveFrame() throws Exception {
+    	
+    	this.switchToDefaultContent();
+    	webDriver.switchTo().frame(webDriver.findElement(By.xpath(ActiveFrame_Frm)));
     }
     
     

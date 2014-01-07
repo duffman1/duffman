@@ -163,6 +163,87 @@ public class MPXDataClient {
     	return finalResultSet;
     }
     
+    public List<String> GetAllActivePlayers() throws Exception {
+    	
+    	//TODO - refactor to be more efficient
+    	webDriver.selectFromDropdown(Object_Ddl, "Player");
+    	webDriver.type(Fields_Txb, "title, disabled");
+    	webDriver.click(Submit_Btn);
+    	
+    	new WebDriverWait(webDriver, 45).until(ExpectedConditions.textToBePresentInElement(By.xpath(Response_Pre), "startIndex"));
+    	
+    	String result = webDriver.findElement(By.xpath(Response_Pre)).getText();
+    	
+    	List<String> AllResults = Arrays.asList(result.split("<entry>"));
+    	String AllResultString = null;
+    	
+    	for (String s : AllResults) {
+    		if (s.contains("false")) {
+    			AllResultString = AllResultString + s;
+    		}
+    	}
+    	
+    	String[] resultSet;
+    	result = AllResultString;
+    	result = result.replace("<plplayer:disabled>false</plplayer:disabled>", "");
+    	result = result.replace("</entry>", "");
+    	result = result.replace("</title>",  "");
+    	result = result.replace("</feed>", "");
+    	resultSet = result.split("<title>");
+    	
+    	String[] trimmedResultSet = new String[resultSet.length];
+    	for (int i = 0; i < resultSet.length; i++)
+    	    trimmedResultSet[i] = resultSet[i].trim();
+    	
+    	List<String> finalResultSet = Arrays.asList(trimmedResultSet);
+    	
+    	try {
+    		finalResultSet.remove(0); 
+    	}
+    	catch (UnsupportedOperationException e) {
+    		
+    		finalResultSet = new ArrayList<String>(finalResultSet);
+            finalResultSet.remove(0);
+    	}
+    	
+    	return finalResultSet;
+    }
+    
+    public List<String> GetAllPlayers() throws Exception {
+    	
+    	//TODO - refactor to be more efficient
+    	webDriver.selectFromDropdown(Object_Ddl, "Player");
+    	webDriver.type(Fields_Txb, "title");
+    	webDriver.click(Submit_Btn);
+    	
+    	new WebDriverWait(webDriver, 45).until(ExpectedConditions.textToBePresentInElement(By.xpath(Response_Pre), "startIndex"));
+    	
+    	String result = webDriver.findElement(By.xpath(Response_Pre)).getText();
+    	
+    	String[] resultSet;
+    	result = result.replace("<entry>", "");
+    	result = result.replace("</entry>", "");
+    	result = result.replace("</title>",  "");
+    	resultSet = result.split("<title>");
+    	
+    	String[] trimmedResultSet = new String[resultSet.length];
+    	for (int i = 0; i < resultSet.length; i++)
+    	    trimmedResultSet[i] = resultSet[i].trim();
+    	
+    	List<String> finalResultSet = Arrays.asList(trimmedResultSet);
+    	
+    	try {
+    		finalResultSet.remove(0); 
+    	}
+    	catch (UnsupportedOperationException e) {
+    		
+    		finalResultSet = new ArrayList<String>(finalResultSet);
+            finalResultSet.remove(0);
+    	}
+    	
+    	return finalResultSet;
+    }
+    
     
     
     

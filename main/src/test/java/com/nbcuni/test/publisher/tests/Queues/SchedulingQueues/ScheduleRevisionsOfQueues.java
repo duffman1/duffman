@@ -119,16 +119,17 @@ public class ScheduleRevisionsOfQueues extends ParentTest{
         
         //Step 9
         scheduleQueue.ClickScheduleBtn();
-        overlay.switchToDefaultContent();
+        overlay.SwitchToActiveFrame();
         ContentParent contentParent = new ContentParent(webDriver);
         contentParent.VerifyMessageStatus("The scheduled revision operation has been saved.");
+        overlay.switchToDefaultContent();
         taxonomy.NavigateSite("Content>>Queues");
-        //overlay.SwitchToQueuesListingFrm(); NOT IN AN OVERLAY - STILL FUNCTIONAL THOUGH - EMAILING RICH BURKE
+        overlay.SwitchToFrame("Queues Listing");
         queues.ClickEditQueueExtendMenuBtn(queueTitle);
         queues.ClickEditQueueMenuBtn(queueTitle);
-        overlay.switchToDefaultContent();
-        //overlay.SwitchToEditQueueFrm(queueTitle);
+        overlay.SwitchToActiveFrame();
         scheduleQueue.ClickScheduleTab();
+        overlay.SwitchToActiveFrame();
         scheduleQueue.VerifyScheduledQueue(queueTitle);
         scheduleQueue.VerifyScheduledQueue("Moderate to Publish");
         scheduleQueue.VerifyScheduledQueue(sDate + " - 05:00 PM");

@@ -96,7 +96,8 @@ public class PixelmanModuleSetupAndVerification extends ParentTest {
             
         //Step 11
         logout.ClickLogoutBtn();
-            
+        Thread.sleep(2000); //slight pause required here. TODO - add a dynamic wait to better handle this
+        
         //Step 12
         modules.VerifyModuleSourceNotInPage("//www.nbcudigitaladops.com/hosted/global_header.js");
         modules.VerifyModuleSourceNotInPage("//www.nbcudigitaladops.com/hosted/site.js?h=qa5dev_publisher_nbcuni_com_header");

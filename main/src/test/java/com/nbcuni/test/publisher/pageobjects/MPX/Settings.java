@@ -39,7 +39,7 @@ public class Settings {
     private static String Password0_Txb = "//input[@id='edit-accounts-new-0-theplatform-password']";
     private static String Username1_Txb = "//input[@id='edit-accounts-existing-1-theplatform-username']";
     private static String Password1_Txb = "//input[@id='edit-accounts-existing-1-theplatform-password']";
-    private static String Update_Btn = "//input[@id='edit-accounts-actions-submit']";
+    private static String Update_Btn = "//input[@value='Update']";
     private static String SelectImportAccount1_Ddl = "//select[@id='edit-import-accounts-settings-1']";
     private static String SelectImportAccount2_Ddl = "//select[@id='edit-import-accounts-settings-2']";
     private static String SelectImportAccount3_Ddl = "//select[@id='edit-import-accounts-settings-3']";

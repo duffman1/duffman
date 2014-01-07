@@ -109,5 +109,18 @@ public class BasicInformation {
     			webDriver.findElement(By.xpath(SeasonNumber_Txb))));
     	webDriver.type(SeasonNumber_Txb, seasonNum);
     }
+    public String EnterSynopsis(String txt) throws Exception{
+
+        //switch to the body frame
+    	WebElement frm = webDriver.findElement(By.xpath(Synopsis_Frm));
+        webDriver.switchTo().frame(frm);
+      
+        WebElement txa = webDriver.findElement(By.xpath(Synopsis_Txa));
+        txa.clear();
+        txa.sendKeys(txt);
+        webDriver.switchTo().defaultContent();
+        
+        return txt;
+    }
 }
 

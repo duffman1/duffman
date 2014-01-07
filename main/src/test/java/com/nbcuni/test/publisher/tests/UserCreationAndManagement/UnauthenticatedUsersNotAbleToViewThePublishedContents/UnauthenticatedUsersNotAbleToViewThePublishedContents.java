@@ -19,7 +19,6 @@ import com.nbcuni.test.publisher.pageobjects.content.PublishingOptions;
 import com.nbcuni.test.publisher.pageobjects.content.RevisionState;
 import com.nbcuni.test.publisher.pageobjects.content.Revisions;
 import com.nbcuni.test.publisher.pageobjects.content.SelectFile;
-import com.nbcuni.test.publisher.pageobjects.content.Workflow;
 
 public class UnauthenticatedUsersNotAbleToViewThePublishedContents extends ParentTest {
 
@@ -54,11 +53,11 @@ public class UnauthenticatedUsersNotAbleToViewThePublishedContents extends Paren
     @Test(groups = {"full", "smoke"})
     public void UnauthenticatedUsersNotAbleToViewThePublishedContents() throws Exception{
     	
-	//Step 1
+    	//Step 1
     	UserLogin userLogin = applib.openApplication();
         userLogin.Login("admin@publisher.nbcuni.com", "pa55word");
         
-      //Step 2        
+        //Step 2        
     	taxonomy.NavigateSite("Content>>Add content>>Post");
     	overlay.SwitchToFrame("Create Post");
     	ContentParent contentParent = new ContentParent(webDriver);
@@ -85,60 +84,76 @@ public class UnauthenticatedUsersNotAbleToViewThePublishedContents extends Paren
     	RevisionState revisionState = new RevisionState(webDriver);
     	revisionState.VerifyRevisionState("Published");
     	
-	  //Step 3
+    	//Step 3
         String ContentURL = webDriver.getCurrentUrl();
         Logout logout = new Logout(webDriver);
         logout.ClickLogoutBtn();
         
-      //Step4	
+        //Step4	
         webDriver.navigate().to(ContentURL);
-      //Step5
+      
+        //Step5
         contentParent.VerifyPostTitle(postTitle);
         
-      //Step6
+        //Step6
         userLogin.Login("admin@publisher.nbcuni.com", "pa55word");
+        
         //Step7	
         webDriver.navigate().to(ContentURL);
-      //Step8
+      
+        //Step8
         Revisions revisions = new Revisions(webDriver);
         revisions.ClickRevisionTab();
         overlay.SwitchToFrame("Revisions dialog");        
-        revisions.PopulateRevisionComment("This Revision Comment");
+        revisions.EnterLogMessageForStateChange("This Revision Comment");
         revisions.ClickUpdateStateBtn();
-      //Step9
+      
+        //Step9
         ContentURL = webDriver.getCurrentUrl();
         logout.ClickLogoutBtn();
-      //Step10
+      
+        //Step10
         webDriver.navigate().to(ContentURL);
-      //Step11
+      
+        //Step11
         contentParent.VerifyPostTitle(postTitle);
-      //Step13
+      
+        //Step13
         userLogin.Login("admin@publisher.nbcuni.com", "pa55word");
-      //Step14
+      
+        //Step14
         taxonomy.NavigateSite("Content");
         overlay.SwitchToFrame("Content");
         Content content = new Content(webDriver);
         content.ClickTheContentFromContentpage(postTitle);
-      //Step15
+      
+        //Step15
         ContentURL = webDriver.getCurrentUrl();
         logout.ClickLogoutBtn();
-      //Step16
+      
+        //Step16
         webDriver.navigate().to(ContentURL);
-      //Step17
+      
+        //Step17
         contentParent.VerifyPostTitle(postTitle);
-      //Step18
+      
+        //Step18
         userLogin.Login("admin@publisher.nbcuni.com", "pa55word");
-      //Step19
+      
+        //Step19
         webDriver.navigate().to(ContentURL);
-      //Step20
-        Workflow workflow = new Workflow(webDriver);
-        workflow.ClickWorkflowTab("View");
-      //Step21
+      
+        //Step20
+        contentParent.ClickViewTab();
+        
+        //Step21
         ContentURL = webDriver.getCurrentUrl();
         logout.ClickLogoutBtn();
-      //Step22
+      
+        //Step22
         webDriver.navigate().to(ContentURL);
-      //Step23
+      
+        //Step23
         contentParent.VerifyPostTitle(postTitle);
   
        
