@@ -1,6 +1,7 @@
 package com.nbcuni.test.publisher.pageobjects.content;
 
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -37,6 +38,7 @@ public class ContentParent {
     private static String EditDraft_Btn = "//a[text()='Edit Draft']";
     private static String Revisions_Btn = "//a[text()='Revisions']";
     private static String pageTitle = ".//*[@id='page-title']";
+    private static String workBenchInfoBlock = ".//*[@class='workbench-info-block']";
     
     public ContentParent(final CustomWebDriver custWebDr) {
         webDriver = custWebDr;
@@ -90,6 +92,14 @@ public class ContentParent {
     	new WebDriverWait(webDriver, 10).until(
     			ExpectedConditions.textToBePresentInElement(By.xpath(pageTitle)
     					, postName));
+    }
+    public void WorkBenchInfoBlock(List<String> fields){
+    
+    	for (String field:fields){
+    		new WebDriverWait(webDriver, 10).until(
+    			ExpectedConditions.textToBePresentInElement(By.xpath(workBenchInfoBlock)
+    					, field));
+    	}
     }
 }
 

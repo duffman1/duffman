@@ -94,8 +94,10 @@ public class Revisions {
     public void ClickRevisionTab() throws Exception{
     	WebElement revision = new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(
     			By.xpath(RevisionLink)));
-    	revision.click();
+    	revision.click();    	
     }
+    
+    
 
 }
 

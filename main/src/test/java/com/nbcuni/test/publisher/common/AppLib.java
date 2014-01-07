@@ -31,6 +31,8 @@ import java.util.Random;
 import java.util.Set;
 import java.util.TimeZone;
 import java.util.concurrent.TimeUnit;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 
 
@@ -342,6 +344,23 @@ public class AppLib {
         custWebDr.close();        
         
     }
+    public static String[] getDate(String regExp, String desc) {
+    	  int count=0;
+    	  String[] allMatches = new String[2];
+    	  Matcher m = Pattern.compile(regExp).matcher(desc);
+    	  while (m.find()) {
+    	    allMatches[count] = m.group();
+    	    count++;
+    	  }
+    	  return allMatches;
+    	}
     
-    
+    public static void Wait(int milSecond){
+    	try {
+			Thread.sleep(milSecond);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    }
 }

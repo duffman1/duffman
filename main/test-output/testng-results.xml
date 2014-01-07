@@ -13,22 +13,19 @@
     <line>
       <![CDATA[URL: http://qa5dev.publisher.nbcuni.com]]>
     </line>
-    <line>
-      <![CDATA[Publish state currently set to 'Published']]>
-    </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="167845" started-at="2014-01-01T07:27:05Z" finished-at="2014-01-01T07:29:53Z">
+  <suite name="Default suite" duration-ms="330581" started-at="2014-01-07T11:23:10Z" finished-at="2014-01-07T11:28:40Z">
     <groups>
       <group name="full">
-        <method signature="UnauthenticatedUsersNotAbleToViewThePublishedContents.RolesPredefinedInPublisher7()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationandManagement.UnauthenticatedUsersNotAbleToViewThePublishedContents.UnauthenticatedUsersNotAbleToViewThePublishedContents@b42cbf]" name="RolesPredefinedInPublisher7" class="com.nbcuni.test.publisher.tests.UserCreationandManagement.UnauthenticatedUsersNotAbleToViewThePublishedContents.UnauthenticatedUsersNotAbleToViewThePublishedContents"/>
+        <method signature="ScheduletopublishContentbyDateTime.ScheduletopublishContentbyDateTime()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.ScheduletopublishContentbyDateTime@b42cbf]" name="ScheduletopublishContentbyDateTime" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.ScheduletopublishContentbyDateTime"/>
       </group> <!-- full -->
       <group name="smoke">
-        <method signature="UnauthenticatedUsersNotAbleToViewThePublishedContents.RolesPredefinedInPublisher7()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationandManagement.UnauthenticatedUsersNotAbleToViewThePublishedContents.UnauthenticatedUsersNotAbleToViewThePublishedContents@b42cbf]" name="RolesPredefinedInPublisher7" class="com.nbcuni.test.publisher.tests.UserCreationandManagement.UnauthenticatedUsersNotAbleToViewThePublishedContents.UnauthenticatedUsersNotAbleToViewThePublishedContents"/>
+        <method signature="ScheduletopublishContentbyDateTime.ScheduletopublishContentbyDateTime()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.ScheduletopublishContentbyDateTime@b42cbf]" name="ScheduletopublishContentbyDateTime" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.ScheduletopublishContentbyDateTime"/>
       </group> <!-- smoke -->
     </groups>
-    <test name="Default test" duration-ms="167845" started-at="2014-01-01T07:27:05Z" finished-at="2014-01-01T07:29:53Z">
-      <class name="com.nbcuni.test.publisher.tests.UserCreationandManagement.UnauthenticatedUsersNotAbleToViewThePublishedContents.UnauthenticatedUsersNotAbleToViewThePublishedContents">
-        <test-method status="PASS" signature="startSelenium(java.lang.String)[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationandManagement.UnauthenticatedUsersNotAbleToViewThePublishedContents.UnauthenticatedUsersNotAbleToViewThePublishedContents@b42cbf]" name="startSelenium" is-config="true" duration-ms="24363" started-at="2014-01-01T12:57:05Z" finished-at="2014-01-01T12:57:30Z">
+    <test name="Default test" duration-ms="330581" started-at="2014-01-07T11:23:10Z" finished-at="2014-01-07T11:28:40Z">
+      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.ScheduletopublishContentbyDateTime">
+        <test-method status="PASS" signature="startSelenium(java.lang.String)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.ScheduletopublishContentbyDateTime@b42cbf]" name="startSelenium" is-config="true" duration-ms="18174" started-at="2014-01-07T16:53:10Z" finished-at="2014-01-07T16:53:28Z">
           <params>
             <param index="0">
               <value>
@@ -48,28 +45,25 @@
             </line>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="RolesPredefinedInPublisher7()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationandManagement.UnauthenticatedUsersNotAbleToViewThePublishedContents.UnauthenticatedUsersNotAbleToViewThePublishedContents@b42cbf]" name="RolesPredefinedInPublisher7" duration-ms="142966" started-at="2014-01-01T12:57:30Z" finished-at="2014-01-01T12:59:53Z">
+        <test-method status="PASS" signature="ScheduletopublishContentbyDateTime()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.ScheduletopublishContentbyDateTime@b42cbf]" name="ScheduletopublishContentbyDateTime" duration-ms="310907" started-at="2014-01-07T16:53:28Z" finished-at="2014-01-07T16:58:39Z">
           <reporter-output>
             <line>
               <![CDATA[URL: http://qa5dev.publisher.nbcuni.com]]>
             </line>
-            <line>
-              <![CDATA[Publish state currently set to 'Published']]>
-            </line>
           </reporter-output>
-        </test-method> <!-- RolesPredefinedInPublisher7 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationandManagement.UnauthenticatedUsersNotAbleToViewThePublishedContents.UnauthenticatedUsersNotAbleToViewThePublishedContents@b42cbf]" name="stopSelenium" is-config="true" duration-ms="499" started-at="2014-01-01T12:59:53Z" finished-at="2014-01-01T12:59:53Z">
+        </test-method> <!-- ScheduletopublishContentbyDateTime -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.ScheduletopublishContentbyDateTime@b42cbf]" name="stopSelenium" is-config="true" duration-ms="1468" started-at="2014-01-07T16:58:39Z" finished-at="2014-01-07T16:58:40Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=RolesPredefinedInPublisher7 status=SUCCESS method=UnauthenticatedUsersNotAbleToViewThePublishedContents.RolesPredefinedInPublisher7()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationandManagement.UnauthenticatedUsersNotAbleToViewThePublishedContents.UnauthenticatedUsersNotAbleToViewThePublishedContents@b42cbf] output=URL: http://qa5dev.publisher.nbcuni.com]]]>
+                <![CDATA[[TestResult name=ScheduletopublishContentbyDateTime status=SUCCESS method=ScheduletopublishContentbyDateTime.ScheduletopublishContentbyDateTime()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.ScheduletopublishContentbyDateTime@b42cbf] output=URL: http://qa5dev.publisher.nbcuni.com]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-      </class> <!-- com.nbcuni.test.publisher.tests.UserCreationandManagement.UnauthenticatedUsersNotAbleToViewThePublishedContents.UnauthenticatedUsersNotAbleToViewThePublishedContents -->
+      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.ScheduletopublishContentbyDateTime -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

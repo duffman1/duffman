@@ -20,8 +20,8 @@ public class Workflow {
     private static AppLib al;
     private final Util ul;
     
-   // private static String 
-   
+   private static String Schedule_Tbl = ".//table[@class='sticky-enabled tableheader-processed sticky-table']/..//td[@class='empty message']";
+   private static String AddSchedule_Lnk = ".//*[@id='content']/ul/li/a[contains(text(),'Add scheduled revision')]";
     public Workflow(final CustomWebDriver custWebDr) {
         webDriver = custWebDr;
         ul = new Util(webDriver);
@@ -32,10 +32,28 @@ public class Workflow {
     			By.xpath(".//div[@id='content']/..//a[text()='"+TabName+"']")));
     	workflowTab.click();
     }
-    
+    public void ClickTabonRevisionPage(String TabName) throws Exception{
+    	WebElement tabRP = new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(
+    			By.xpath(".//a[text()='"+TabName+"']")));
+    	tabRP.click();
+    }
     public void VerifyWorkflowTab(String TabName) throws Exception {  	
     	 	
     	new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOf(webDriver.findElement(By.xpath(".//div[@id='content']/..//a[text()='"+TabName+"']"))));
     	   	
     }
+    public void VerifyScheduleTableisEmpty() throws Exception {  	
+	 	
+    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOf(webDriver.findElement(By.xpath(Schedule_Tbl)))).getText().contains("No scheduled revisions available");
+    	   	
+    }
+   public void VerifyAddScheduleVersionLink() throws Exception {
+	   new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOf(webDriver.findElement(By.xpath(AddSchedule_Lnk))));
+   }
+   public void ClickAddScheduleVersionLink() throws Exception {
+	   new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOf(webDriver.findElement(By.xpath(AddSchedule_Lnk)))).click();
+   }
+   public void VerifySchedulePageFieds() throws Exception {
+	   new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOf(webDriver.findElement(By.xpath(AddSchedule_Lnk)))).click();
+   }
 }

@@ -130,8 +130,8 @@ public class Taxonomy {
     
     public void VerifyContentMenuExist(String MenuName) throws Exception {
     	
-    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.not(ExpectedConditions.
-    			presenceOfElementLocated((By.xpath(".//*[@id='admin-menu-menu']/..//a[text()='"+MenuName+"']")))));
+    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOf(webDriver.findElement(
+    			By.xpath(".//ul[@id='admin-menu-menu']/..//a[text()='" + MenuName + "']"))));
     	
     }
   
