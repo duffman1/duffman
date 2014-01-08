@@ -1,4 +1,4 @@
-<suite name="Test Suite for Publisher 7" parallel="methods" thread-count="1">
+<suite name="Test Suite for Publisher 7" parallel="methods" thread-count="1" preserve-order="true">
 
   	<parameter name="Environment" value="PROD"></parameter>
   	
@@ -18,20 +18,10 @@
 
         <packages>
             <package name="com.nbcuni.test.publisher.tests.Advertising.*"/>
-        </packages>
-        <packages>
             <package name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.*"/>
-        </packages>
-        <packages>
             <package name="com.nbcuni.test.publisher.tests.Queues.*"/>
-        </packages>
-        <packages>
             <package name="com.nbcuni.test.publisher.tests.Security.*"/>
-        </packages>
-        <packages>
             <package name="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.*"/>
-        </packages>
-        <packages>
             <package name="com.nbcuni.test.publisher.tests.UserCreationAndManagement.*"/>
         </packages>
 
