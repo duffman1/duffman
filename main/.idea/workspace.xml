@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1d41cc59-a7f0-494f-bdf8-2201bbb4868e" name="Default" comment="forgot a report&#10;">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/pageobjects/content/Schedule.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/tests/UserCreationAndManagement/Roles/RolesPredefinedInPublisher.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/common/AppLib.java" afterPath="$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/common/AppLib.java" />
+    <list default="true" id="1d41cc59-a7f0-494f-bdf8-2201bbb4868e" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/pageobjects/MPX/EditMPXVideo.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/content/People.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/tests/ContentEntityCreationManagement/ContentTypesEntities/Movie/CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter.java" afterPath="$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/tests/ContentEntityCreationManagement/ContentTypesEntities/Movie/CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/pageobjects/content/ContentParent.java" afterPath="$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/pageobjects/content/ContentParent.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/pageobjects/content/RevisionState.java" afterPath="$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/pageobjects/content/RevisionState.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/pageobjects/queues/ScheduleQueue.java" afterPath="$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/pageobjects/queues/ScheduleQueue.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/tests/Queues/SchedulingQueues/ScheduleRevisionsOfQueues.java" afterPath="$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/tests/Queues/SchedulingQueues/ScheduleRevisionsOfQueues.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/tests/ContentEntityCreationManagement/ContentandEntityManagement/ContentandEntityScheduling/FunctionalScheduleToPublishContentByDateTime/ScheduleToPublishContentByDateTime.java" afterPath="$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/tests/ContentEntityCreationManagement/ContentandEntityManagement/ContentandEntityScheduling/FunctionalScheduleToPublishContentByDateTime/ScheduleToPublishContentByDateTime.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/pageobjects/content/Workflow.java" afterPath="$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/pageobjects/content/Workflow.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/tests/Video/ScheduleMPXVideos/Configuration.java" afterPath="$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/tests/Video/ScheduleMPXVideos/Configuration.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/tests/ContentEntityCreationManagement/ContentTypesEntities/Post/CreatePost.java" afterPath="$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/tests/ContentEntityCreationManagement/ContentTypesEntities/Post/CreatePost.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/tests/ContentEntityCreationManagement/ContentTypesEntities/TVEpisode/CreateTVEpisode.java" afterPath="$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/tests/ContentEntityCreationManagement/ContentTypesEntities/TVEpisode/CreateTVEpisode.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/tests/ContentEntityCreationManagement/ContentTypesEntities/TVSeason/CreateTVSeason.java" afterPath="$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/tests/ContentEntityCreationManagement/ContentTypesEntities/TVSeason/CreateTVSeason.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/pageobjects/MPX/MPXMedia.java" afterPath="$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/pageobjects/MPX/MPXMedia.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/tests/Video/MPXConfigurationP7/AllowSitesToConfigureMultipleMPXAccounts/MPXMediaSyncVerification.java" afterPath="$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/tests/Video/MPXConfigurationP7/AllowSitesToConfigureMultipleMPXAccounts/MPXMediaSyncVerification.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/tests/Video/MPXConfigurationP7/AllowSitesToConfigureMultipleMPXAccounts/MPXPlayersSyncVerification.java" afterPath="$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/tests/Video/MPXConfigurationP7/AllowSitesToConfigureMultipleMPXAccounts/MPXPlayersSyncVerification.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/tests/Video/ScheduleMPXVideos/MPXVideosSchedulingVerificationInitialOverrides.java" afterPath="$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/tests/Video/ScheduleMPXVideos/MPXVideosSchedulingVerificationInitialOverrides.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/tests/Video/MPXConfigurationP7/AllowSitesToConfigureMultipleMPXAccounts/MultipleMPXAccountsPerLoginVerification.java" afterPath="$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/tests/Video/MPXConfigurationP7/AllowSitesToConfigureMultipleMPXAccounts/MultipleMPXAccountsPerLoginVerification.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/pageobjects/MPX/Settings.java" afterPath="$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/pageobjects/MPX/Settings.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/pageobjects/taxonomy/Taxonomy.java" afterPath="$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/pageobjects/taxonomy/Taxonomy.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/resources/testng.xml" afterPath="$PROJECT_DIR$/src/test/resources/testng.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="test-nbccom.iws" />
@@ -80,90 +85,52 @@
     <ui_properties />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
-  <component name="ExportTestResults" outputFolder="$PROJECT_DIR$" openResultsInEditor="true" userTempatePath="" />
+  <component name="ExportTestResults" outputFolder="$PROJECT_DIR$/test-output" openResultsInEditor="true" userTempatePath="" />
   <component name="FavoritesManager">
     <favorites_list name="test-nbccom" />
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ScheduleToPublishContentByDateTime.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/tests/ContentEntityCreationManagement/ContentandEntityManagement/ContentandEntityScheduling/FunctionalScheduleToPublishContentByDateTime/ScheduleToPublishContentByDateTime.java">
+      <file leaf-file-name="MPXVideosSchedulingVerificationInitialOverrides.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/tests/Video/ScheduleMPXVideos/MPXVideosSchedulingVerificationInitialOverrides.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="106" column="88" selection-start="5217" selection-end="5217" vertical-scroll-proportion="0.0" vertical-offset="1172" max-vertical-offset="1785">
+            <state line="168" column="30" selection-start="15034" selection-end="15034" vertical-scroll-proportion="0.6672828" vertical-offset="1949" max-vertical-offset="2655">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RolesPredefinedInPublisher7.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/tests/UserCreationAndManagement/Roles/RolesPredefinedInPublisher7.java">
+      <file leaf-file-name="EditMPXVideo.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/pageobjects/MPX/EditMPXVideo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="13" selection-start="2338" selection-end="2338" vertical-scroll-proportion="0.0" vertical-offset="52" max-vertical-offset="735">
+            <state line="62" column="88" selection-start="2927" selection-end="2927" vertical-scroll-proportion="0.0" vertical-offset="554" max-vertical-offset="1440">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BasicInformation.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/pageobjects/content/BasicInformation.java">
+      <file leaf-file-name="testng.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/resources/testng.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="114" column="0" selection-start="4420" selection-end="4420" vertical-scroll-proportion="0.0" vertical-offset="1202" max-vertical-offset="1815">
+            <state line="43" column="47" selection-start="1896" selection-end="1896" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="900">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ScheduleRevisionsOfQueues.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/tests/Queues/SchedulingQueues/ScheduleRevisionsOfQueues.java">
+      <file leaf-file-name="Settings.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/pageobjects/MPX/Settings.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="82" column="33" selection-start="3800" selection-end="3800" vertical-scroll-proportion="0.0" vertical-offset="828" max-vertical-offset="1530">
+            <state line="281" column="59" selection-start="10327" selection-end="10327" vertical-scroll-proportion="0.0" vertical-offset="3689" max-vertical-offset="4260">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RevisionState.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/pageobjects/content/RevisionState.java">
+      <file leaf-file-name="MPXMedia.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/pageobjects/MPX/MPXMedia.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="87" selection-start="806" selection-end="806" vertical-scroll-proportion="0.0" vertical-offset="35" max-vertical-offset="885">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ScheduleQueue.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/pageobjects/queues/ScheduleQueue.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="75" selection-start="1409" selection-end="1439" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="1905">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Workflow.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/pageobjects/content/Workflow.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="9" selection-start="1550" selection-end="1550" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="675">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UnauthenticatedUsersNotAbleToViewThePublishedContents.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/tests/UserCreationAndManagement/UnauthenticatedUsersNotAbleToViewThePublishedContents/UnauthenticatedUsersNotAbleToViewThePublishedContents.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="104" column="36" selection-start="5260" selection-end="5260" vertical-scroll-proportion="0.0" vertical-offset="1220" max-vertical-offset="2235">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MPXMediaSyncVerification.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/tests/Video/MPXConfigurationP7/AllowSitesToConfigureMultipleMPXAccounts/MPXMediaSyncVerification.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="153" column="25" selection-start="9263" selection-end="9263" vertical-scroll-proportion="2.1299827" vertical-offset="286" max-vertical-offset="1965">
+            <state line="43" column="5" selection-start="1705" selection-end="1705" vertical-scroll-proportion="0.0" vertical-offset="76" max-vertical-offset="1845">
               <folding />
             </state>
           </provider>
@@ -172,7 +139,7 @@
       <file leaf-file-name="ContentParent.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/pageobjects/content/ContentParent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="72" column="50" selection-start="2458" selection-end="2458" vertical-scroll-proportion="0.0" vertical-offset="328" max-vertical-offset="1875">
+            <state line="121" column="0" selection-start="3830" selection-end="3830" vertical-scroll-proportion="0.0" vertical-offset="1376" max-vertical-offset="1875">
               <folding />
             </state>
           </provider>
@@ -199,20 +166,32 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/tests/SiteManagementAndReporting/SocialIntegration/Facebook/TestingFacebookAutopublishing.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/common/ParentTest.java" />
-        <option value="$PROJECT_DIR$/src/test/resources/testng.xml" />
         <option value="$PROJECT_DIR$/src/test/resources/WebDriverClientExecution.properties" />
         <option value="$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/pageobjects/content/SearchFor.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/tests/Video/ScheduleMPXVideos/MPXVideosSchedulingVerificationInitialOverrides.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/pageobjects/content/Revisions.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/tests/Queues/SchedulingQueues/ScheduleRevisionsOfQueues.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/pageobjects/content/ContentParent.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/pageobjects/content/Schedule.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/pageobjects/content/Workflow.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/tests/ContentEntityCreationManagement/ContentTypesEntities/Movie/CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/pageobjects/queues/ScheduleQueue.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/common/AppLib.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/pageobjects/content/RevisionState.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/tests/ContentEntityCreationManagement/ContentandEntityManagement/ContentandEntityScheduling/FunctionalScheduleToPublishContentByDateTime/ScheduleToPublishContentByDateTime.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/tests/ContentEntityCreationManagement/ContentTypesEntities/Post/CreatePost.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/pageobjects/taxonomy/Taxonomy.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/tests/ContentEntityCreationManagement/ContentTypesEntities/TVEpisode/CreateTVEpisode.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/tests/ContentEntityCreationManagement/ContentTypesEntities/TVSeason/CreateTVSeason.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/tests/ContentEntityCreationManagement/ContentTypesEntities/Movie/CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/tests/Video/MPXConfigurationP7/AllowSitesToConfigureMultipleMPXAccounts/MPXPlayersSyncVerification.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/content/People.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/pageobjects/MPX/MPXMedia.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/pageobjects/MPX/Settings.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/tests/Video/MPXConfigurationP7/AllowSitesToConfigureMultipleMPXAccounts/MPXMediaSyncVerification.java" />
+        <option value="$PROJECT_DIR$/src/test/resources/testng.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/tests/Video/ScheduleMPXVideos/Configuration.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/pageobjects/MPX/EditMPXVideo.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/tests/Video/MPXConfigurationP7/AllowSitesToConfigureMultipleMPXAccounts/MultipleMPXAccountsPerLoginVerification.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/tests/Video/ScheduleMPXVideos/MPXVideosSchedulingVerificationInitialOverrides.java" />
       </list>
     </option>
   </component>
@@ -341,11 +320,47 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="test-output" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test-nbccom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test-nbccom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -382,6 +397,10 @@
               <option name="myItemId" value="Video" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ScheduleMPXVideos" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -413,7 +432,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="UserCreationAndManagement" />
+              <option name="myItemId" value="Video" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AllowSitesToConfigureMultipleMPXAccounts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -511,41 +534,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ContentEntityCreationManagement" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test-nbccom" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
+              <option name="myItemId" value="Queues" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="publisher" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Advertising" />
+              <option name="myItemId" value="SchedulingQueues" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -605,7 +598,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="content" />
+              <option name="myItemId" value="pageobjects" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MPX" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -634,10 +631,6 @@
               <option name="myItemId" value="publisher" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -660,18 +653,19 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.nbcuni.test.publisher.pageobjects.MPX" />
       <recent name="com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.ScheduleToPublishContentByDateTime.ScheduletopublishContentbyDateTime">
-    <configuration default="false" name="MPXMediaSyncVerification.MPXMediaSyncVerification" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.MPXVideosSchedulingVerificationInitialOverrides.MPXVideosSchedulingVerificationInitialOverrides (5)">
+    <configuration default="false" name="MPXVideosSchedulingVerificationInitialOverrides.MPXVideosSchedulingVerificationInitialOverrides (5)" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <module name="test-nbccom" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" value="" />
       <option name="SUITE_NAME" value="" />
-      <option name="PACKAGE_NAME" value="com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts" />
-      <option name="MAIN_CLASS_NAME" value="com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MPXMediaSyncVerification" />
-      <option name="METHOD_NAME" value="MPXMediaSyncVerification" />
+      <option name="PACKAGE_NAME" value="com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos" />
+      <option name="MAIN_CLASS_NAME" value="com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides" />
+      <option name="METHOD_NAME" value="MPXVideosSchedulingVerificationInitialOverrides" />
       <option name="GROUP_NAME" value="" />
       <option name="TEST_OBJECT" value="METHOD" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -689,18 +683,24 @@
       <envs />
       <properties />
       <listeners />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="61155" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
       <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="ScheduleToPublishContentByDateTime.ScheduletopublishContentbyDateTime" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="MPXVideosSchedulingVerificationInitialOverrides.MPXVideosSchedulingVerificationInitialOverrides (1)" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <module name="test-nbccom" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" value="" />
       <option name="SUITE_NAME" value="" />
-      <option name="PACKAGE_NAME" value="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.FunctionalScheduleToPublishContentByDateTime" />
-      <option name="MAIN_CLASS_NAME" value="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.FunctionalScheduleToPublishContentByDateTime.ScheduleToPublishContentByDateTime" />
-      <option name="METHOD_NAME" value="ScheduletopublishContentbyDateTime" />
+      <option name="PACKAGE_NAME" value="com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos" />
+      <option name="MAIN_CLASS_NAME" value="com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides" />
+      <option name="METHOD_NAME" value="MPXVideosSchedulingVerificationInitialOverrides" />
       <option name="GROUP_NAME" value="" />
       <option name="TEST_OBJECT" value="METHOD" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -718,18 +718,22 @@
       <envs />
       <properties />
       <listeners />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="61355" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <ConfigurationWrapper RunnerId="Debug" />
       <method />
     </configuration>
-    <configuration default="false" name="MultipleMPXAccountsPerLoginVerification.MultipleMPXAccountsPerLoginVerification" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="MPXVideosSchedulingVerificationInitialOverrides.MPXVideosSchedulingVerificationInitialOverrides (2)" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <module name="test-nbccom" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" value="" />
       <option name="SUITE_NAME" value="" />
-      <option name="PACKAGE_NAME" value="com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts" />
-      <option name="MAIN_CLASS_NAME" value="com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MultipleMPXAccountsPerLoginVerification" />
-      <option name="METHOD_NAME" value="MultipleMPXAccountsPerLoginVerification" />
+      <option name="PACKAGE_NAME" value="com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos" />
+      <option name="MAIN_CLASS_NAME" value="com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides" />
+      <option name="METHOD_NAME" value="MPXVideosSchedulingVerificationInitialOverrides" />
       <option name="GROUP_NAME" value="" />
       <option name="TEST_OBJECT" value="METHOD" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -747,18 +751,22 @@
       <envs />
       <properties />
       <listeners />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="61572" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <ConfigurationWrapper RunnerId="Debug" />
       <method />
     </configuration>
-    <configuration default="false" name="MPXPlayersSyncVerification.MPXPlayersSyncVerification" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="MPXVideosSchedulingVerificationInitialOverrides.MPXVideosSchedulingVerificationInitialOverrides (3)" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <module name="test-nbccom" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" value="" />
       <option name="SUITE_NAME" value="" />
-      <option name="PACKAGE_NAME" value="com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts" />
-      <option name="MAIN_CLASS_NAME" value="com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MPXPlayersSyncVerification" />
-      <option name="METHOD_NAME" value="MPXPlayersSyncVerification" />
+      <option name="PACKAGE_NAME" value="com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos" />
+      <option name="MAIN_CLASS_NAME" value="com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides" />
+      <option name="METHOD_NAME" value="MPXVideosSchedulingVerificationInitialOverrides" />
       <option name="GROUP_NAME" value="" />
       <option name="TEST_OBJECT" value="METHOD" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -776,18 +784,22 @@
       <envs />
       <properties />
       <listeners />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="61836" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <ConfigurationWrapper RunnerId="Debug" />
       <method />
     </configuration>
-    <configuration default="false" name="ScheduleRevisionsOfQueues.ScheduleRevisionsOfQueues" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="MPXVideosSchedulingVerificationInitialOverrides.MPXVideosSchedulingVerificationInitialOverrides (4)" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <module name="test-nbccom" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" value="" />
       <option name="SUITE_NAME" value="" />
-      <option name="PACKAGE_NAME" value="com.nbcuni.test.publisher.tests.Queues.SchedulingQueues" />
-      <option name="MAIN_CLASS_NAME" value="com.nbcuni.test.publisher.tests.Queues.SchedulingQueues.ScheduleRevisionsOfQueues" />
-      <option name="METHOD_NAME" value="ScheduleRevisionsOfQueues" />
+      <option name="PACKAGE_NAME" value="com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos" />
+      <option name="MAIN_CLASS_NAME" value="com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides" />
+      <option name="METHOD_NAME" value="MPXVideosSchedulingVerificationInitialOverrides" />
       <option name="GROUP_NAME" value="" />
       <option name="TEST_OBJECT" value="METHOD" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -989,19 +1001,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="TestNG.All Tests" />
-      <item index="1" class="java.lang.String" itemvalue="TestNG.MPXMediaSyncVerification.MPXMediaSyncVerification" />
-      <item index="2" class="java.lang.String" itemvalue="TestNG.ScheduleToPublishContentByDateTime.ScheduletopublishContentbyDateTime" />
-      <item index="3" class="java.lang.String" itemvalue="TestNG.MultipleMPXAccountsPerLoginVerification.MultipleMPXAccountsPerLoginVerification" />
-      <item index="4" class="java.lang.String" itemvalue="TestNG.MPXPlayersSyncVerification.MPXPlayersSyncVerification" />
-      <item index="5" class="java.lang.String" itemvalue="TestNG.ScheduleRevisionsOfQueues.ScheduleRevisionsOfQueues" />
+      <item index="1" class="java.lang.String" itemvalue="TestNG.MPXVideosSchedulingVerificationInitialOverrides.MPXVideosSchedulingVerificationInitialOverrides (5)" />
+      <item index="2" class="java.lang.String" itemvalue="TestNG.MPXVideosSchedulingVerificationInitialOverrides.MPXVideosSchedulingVerificationInitialOverrides (1)" />
+      <item index="3" class="java.lang.String" itemvalue="TestNG.MPXVideosSchedulingVerificationInitialOverrides.MPXVideosSchedulingVerificationInitialOverrides (2)" />
+      <item index="4" class="java.lang.String" itemvalue="TestNG.MPXVideosSchedulingVerificationInitialOverrides.MPXVideosSchedulingVerificationInitialOverrides (3)" />
+      <item index="5" class="java.lang.String" itemvalue="TestNG.MPXVideosSchedulingVerificationInitialOverrides.MPXVideosSchedulingVerificationInitialOverrides (4)" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="TestNG.ScheduleToPublishContentByDateTime.ScheduletopublishContentbyDateTime" />
-        <item index="1" class="java.lang.String" itemvalue="TestNG.ScheduleRevisionsOfQueues.ScheduleRevisionsOfQueues" />
-        <item index="2" class="java.lang.String" itemvalue="TestNG.MPXMediaSyncVerification.MPXMediaSyncVerification" />
-        <item index="3" class="java.lang.String" itemvalue="TestNG.MPXPlayersSyncVerification.MPXPlayersSyncVerification" />
-        <item index="4" class="java.lang.String" itemvalue="TestNG.MultipleMPXAccountsPerLoginVerification.MultipleMPXAccountsPerLoginVerification" />
+        <item index="0" class="java.lang.String" itemvalue="TestNG.MPXVideosSchedulingVerificationInitialOverrides.MPXVideosSchedulingVerificationInitialOverrides (5)" />
+        <item index="1" class="java.lang.String" itemvalue="TestNG.MPXVideosSchedulingVerificationInitialOverrides.MPXVideosSchedulingVerificationInitialOverrides (4)" />
+        <item index="2" class="java.lang.String" itemvalue="TestNG.MPXVideosSchedulingVerificationInitialOverrides.MPXVideosSchedulingVerificationInitialOverrides (3)" />
+        <item index="3" class="java.lang.String" itemvalue="TestNG.MPXVideosSchedulingVerificationInitialOverrides.MPXVideosSchedulingVerificationInitialOverrides (2)" />
+        <item index="4" class="java.lang.String" itemvalue="TestNG.MPXVideosSchedulingVerificationInitialOverrides.MPXVideosSchedulingVerificationInitialOverrides (1)" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -1051,7 +1063,11 @@
       <created>1389119829793</created>
       <updated>1389119829793</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="completed conflict management from merge.">
+      <created>1389131833478</created>
+      <updated>1389131833478</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1066,7 +1082,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32915717" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3997722" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3282353" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32915717" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1076,8 +1092,8 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34451544" sideWeight="0.67058825" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="true" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28328007" sideWeight="0.67176473" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26993167" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28328007" sideWeight="0.67176473" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33712983" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1101,7 +1117,8 @@
     <MESSAGE value="1. added new test for mpx video scheduling overrides.&#10;2. added new page object for mpx file type handling.&#10;3. reconfigured taxonomy to be a contains text check instead of = text match." />
     <MESSAGE value="1. added new configuration mpx scheduling test.&#10;2. added mpx video scheduling override test." />
     <MESSAGE value="Resolved conflicts post merge of faizan branch to master" />
-    <option name="LAST_COMMIT_MESSAGE" value="Resolved conflicts post merge of faizan branch to master" />
+    <MESSAGE value="completed conflict management from merge." />
+    <option name="LAST_COMMIT_MESSAGE" value="completed conflict management from merge." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1111,54 +1128,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/tests/SiteManagementAndReporting/SiteReportVisualization/SiteReportVisualization.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="0" selection-start="7286" selection-end="7286" vertical-scroll-proportion="0.0" vertical-offset="1245" max-vertical-offset="1395" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/tests/SiteManagementAndReporting/SocialIntegration/Facebook/TestingFacebookAutopublishing.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="44" selection-start="7015" selection-end="7015" vertical-scroll-proportion="0.0" vertical-offset="1470" max-vertical-offset="1710" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/common/ParentTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="36" selection-start="2018" selection-end="2018" vertical-scroll-proportion="0.0" vertical-offset="1020" max-vertical-offset="1410">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/common/AppLib.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="191" column="40" selection-start="5715" selection-end="5715" vertical-scroll-proportion="0.0" vertical-offset="2865" max-vertical-offset="5295">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/WebDriverClientExecution.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="104" selection-start="354" selection-end="354" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/tests/SiteManagementAndReporting/SiteReportVisualization/SiteReportVisualization.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="0" selection-start="7286" selection-end="7286" vertical-scroll-proportion="0.0" vertical-offset="1245" max-vertical-offset="1395" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/tests/SiteManagementAndReporting/SocialIntegration/Facebook/TestingFacebookAutopublishing.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="128" column="24" selection-start="8511" selection-end="8511" vertical-scroll-proportion="0.0" vertical-offset="1710" max-vertical-offset="1710" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="94" selection-start="575" selection-end="575" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/pageobjects/content/BasicInformation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="31" column="70" selection-start="1051" selection-end="1051" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
@@ -1184,11 +1153,6 @@
     <entry file="file://$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/pageobjects/content/CastCrew.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/tests/Advertising/Comscore/PixelmanModuleSetupAndVerification.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="41" selection-start="2959" selection-end="2959" vertical-scroll-proportion="-0.22373301" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
@@ -1223,16 +1187,6 @@
         <state line="6" column="13" selection-start="168" selection-end="168" vertical-scroll-proportion="0.027881041" vertical-offset="60" max-vertical-offset="1335" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/tests/SiteManagementAndReporting/SiteReportVisualization/SiteReportVisualization.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="0" selection-start="7286" selection-end="7286" vertical-scroll-proportion="1.0909091" vertical-offset="0" max-vertical-offset="750" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/testng.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="75" selection-start="75" selection-end="75" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="563" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/resources/WebDriverClientExecution.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="17" selection-start="166" selection-end="166" vertical-scroll-proportion="0.13321492" vertical-offset="0" max-vertical-offset="563" />
@@ -1245,40 +1199,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/tests/Video/ScheduleMPXVideos/Configuration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="97" column="24" selection-start="6480" selection-end="6480" vertical-scroll-proportion="0.18181819" vertical-offset="560" max-vertical-offset="1410" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/pageobjects/taxonomy/Taxonomy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="104" column="0" selection-start="4462" selection-end="4462" vertical-scroll-proportion="0.33222038" vertical-offset="1196" max-vertical-offset="2175" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/pageobjects/MPX/MPXDataClient.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="49" column="16" selection-start="1730" selection-end="1730" vertical-scroll-proportion="-0.34313726" vertical-offset="735" max-vertical-offset="3660" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/tests/SiteManagementAndReporting/SocialIntegration/Facebook/TestingFacebookAutopublishing.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="142" column="20" selection-start="9154" selection-end="9154" vertical-scroll-proportion="0.513308" vertical-offset="1140" max-vertical-offset="1710">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/tests/Video/ScheduleMPXVideos/MPXVideosSchedulingVerificationInitialOverrides.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="9" selection-start="9172" selection-end="9176" vertical-scroll-proportion="-0.8852459" vertical-offset="1401" max-vertical-offset="1980">
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/tests/ContentEntityCreationManagement/ContentTypesEntities/MediaGallery/CreateMediaGallery.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="13" selection-start="1391" selection-end="1391" vertical-scroll-proportion="0.16393442" vertical-offset="0" max-vertical-offset="1005" />
+        <state line="34" column="13" selection-start="1391" selection-end="1391" vertical-scroll-proportion="0.16393442" vertical-offset="0" max-vertical-offset="1005">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/pageobjects/content/Revisions.java">
@@ -1298,34 +1228,6 @@
     <entry file="file://$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/pageobjects/content/Content.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="27" column="13" selection-start="822" selection-end="822" vertical-scroll-proportion="0.0" vertical-offset="540" max-vertical-offset="1380">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/pageobjects/content/ContentParent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="50" selection-start="2458" selection-end="2458" vertical-scroll-proportion="0.0" vertical-offset="328" max-vertical-offset="1875">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/tests/Video/MPXConfigurationP7/AllowSitesToConfigureMultipleMPXAccounts/MultipleMPXAccountsPerLoginVerification.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="21" selection-start="9139" selection-end="9139" vertical-scroll-proportion="0.9878683" vertical-offset="195" max-vertical-offset="2400">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/tests/Video/MPXConfigurationP7/AllowSitesToConfigureMultipleMPXAccounts/MPXPlayersSyncVerification.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="18" selection-start="7740" selection-end="7740" vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="2100">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/tests/ContentEntityCreationManagement/ContentTypesEntities/Movie/CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="133" column="46" selection-start="6951" selection-end="6951" vertical-scroll-proportion="0.6828423" vertical-offset="1511" max-vertical-offset="2325">
           <folding />
         </state>
       </provider>
@@ -1355,7 +1257,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="156" column="66" selection-start="5406" selection-end="5406" vertical-scroll-proportion="0.6329527" vertical-offset="1952" max-vertical-offset="4755">
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1364,22 +1266,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="35" column="75" selection-start="1409" selection-end="1439" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="1905">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/tests/Queues/SchedulingQueues/ScheduleRevisionsOfQueues.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="33" selection-start="3800" selection-end="3800" vertical-scroll-proportion="0.0" vertical-offset="828" max-vertical-offset="1530">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/pageobjects/content/RevisionState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="87" selection-start="806" selection-end="806" vertical-scroll-proportion="0.0" vertical-offset="58" max-vertical-offset="885">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1393,27 +1279,192 @@
     <entry file="file://$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/tests/UserCreationAndManagement/Roles/RolesPredefinedInPublisher7.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="51" column="13" selection-start="2338" selection-end="2338" vertical-scroll-proportion="0.0" vertical-offset="52" max-vertical-offset="735">
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/tests/UserCreationAndManagement/UnauthenticatedUsersNotAbleToViewThePublishedContents/UnauthenticatedUsersNotAbleToViewThePublishedContents.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="16" selection-start="3122" selection-end="3122" vertical-scroll-proportion="0.0" vertical-offset="525" max-vertical-offset="2235">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/tests/SiteManagementAndReporting/SiteReportVisualization/SiteReportVisualization.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="68" column="16" selection-start="6812" selection-end="6812" vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="750">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/tests/SiteManagementAndReporting/SocialIntegration/Facebook/TestingFacebookAutopublishing.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="81" column="16" selection-start="6379" selection-end="6379" vertical-scroll-proportion="0.0" vertical-offset="303" max-vertical-offset="1710">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/tests/ContentEntityCreationManagement/ContentTypesEntities/Post/CreatePost.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="80" column="21" selection-start="3648" selection-end="3648" vertical-scroll-proportion="0.63604856" vertical-offset="713" max-vertical-offset="1305">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/pageobjects/taxonomy/Taxonomy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="96" column="80" selection-start="4058" selection-end="4058" vertical-scroll-proportion="0.43674177" vertical-offset="1083" max-vertical-offset="2175">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/tests/UserCreationAndManagement/Permissions/CreateConfigureAndValidatePermissionsEditor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="100" column="28" selection-start="6491" selection-end="6491" vertical-scroll-proportion="0.51473135" vertical-offset="948" max-vertical-offset="3075">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/tests/ContentEntityCreationManagement/ContentTypesEntities/TVEpisode/CreateTVEpisode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="98" column="29" selection-start="4647" selection-end="4647" vertical-scroll-proportion="0.5840555" vertical-offset="1028" max-vertical-offset="1605">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/pageobjects/content/Workflow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="9" selection-start="1550" selection-end="1550" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="675">
+        <state line="42" column="0" selection-start="1550" selection-end="1550" vertical-scroll-proportion="0.8042414" vertical-offset="62" max-vertical-offset="675">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/tests/UserCreationAndManagement/UnauthenticatedUsersNotAbleToViewThePublishedContents/UnauthenticatedUsersNotAbleToViewThePublishedContents.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/tests/Queues/CreateUpdateRevisionsToQueues/BasicUIForCreatingAndRevisingQueues.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="104" column="36" selection-start="5260" selection-end="5260" vertical-scroll-proportion="0.0" vertical-offset="1220" max-vertical-offset="2235">
+        <state line="65" column="16" selection-start="3513" selection-end="3513" vertical-scroll-proportion="0.0" vertical-offset="224" max-vertical-offset="1365">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/tests/ContentEntityCreationManagement/ContentTypesEntities/TVSeason/CreateTVSeason.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="73" column="48" selection-start="3322" selection-end="3322" vertical-scroll-proportion="0.8333333" vertical-offset="490" max-vertical-offset="1170">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/tests/Advertising/GooglePublisherTagsGPT/GPTTagsVerification.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="80" column="24" selection-start="3802" selection-end="3802" vertical-scroll-proportion="0.37" vertical-offset="648" max-vertical-offset="1365">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/pageobjects/content/RevisionState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="0" selection-start="1371" selection-end="1371" vertical-scroll-proportion="0.0" vertical-offset="250" max-vertical-offset="885">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/tests/Advertising/Comscore/PixelmanModuleSetupAndVerification.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="84" column="43" selection-start="4598" selection-end="4598" vertical-scroll-proportion="0.6333333" vertical-offset="595" max-vertical-offset="1395">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/tests/ContentEntityCreationManagement/ContentTypesEntities/Movie/CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="135" column="32" selection-start="7031" selection-end="7031" vertical-scroll-proportion="0.4731978" vertical-offset="1679" max-vertical-offset="2325">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/pageobjects/UserLogin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="0" selection-start="1203" selection-end="1203" vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="1020">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/tests/Video/MPXConfigurationP7/AllowSitesToConfigureMultipleMPXAccounts/MPXPlayersSyncVerification.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="144" column="19" selection-start="11023" selection-end="11023" vertical-scroll-proportion="0.5009242" vertical-offset="1724" max-vertical-offset="2385">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/tests/Video/ScheduleMPXVideos/Configuration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="60" column="21" selection-start="4246" selection-end="4246" vertical-scroll-proportion="0.5009242" vertical-offset="494" max-vertical-offset="1230">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/pageobjects/MPX/Settings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="281" column="59" selection-start="10327" selection-end="10327" vertical-scroll-proportion="0.0" vertical-offset="3689" max-vertical-offset="4260">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/pageobjects/MPX/MPXMedia.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="5" selection-start="1705" selection-end="1705" vertical-scroll-proportion="0.0" vertical-offset="76" max-vertical-offset="1845">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/tests/Queues/SchedulingQueues/ScheduleRevisionsOfQueues.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="85" column="41" selection-start="3731" selection-end="3947" vertical-scroll-proportion="0.63770795" vertical-offset="735" max-vertical-offset="1530">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/testng.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="47" selection-start="1896" selection-end="1896" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="900">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/pageobjects/content/ContentParent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="121" column="0" selection-start="3830" selection-end="3830" vertical-scroll-proportion="0.0" vertical-offset="1376" max-vertical-offset="1875">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/pageobjects/MPX/EditMPXVideo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="88" selection-start="2927" selection-end="2927" vertical-scroll-proportion="0.0" vertical-offset="554" max-vertical-offset="1440">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/tests/Video/MPXConfigurationP7/AllowSitesToConfigureMultipleMPXAccounts/MPXMediaSyncVerification.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="153" column="25" selection-start="9263" selection-end="9263" vertical-scroll-proportion="2.1299827" vertical-offset="286" max-vertical-offset="1965">
+        <state line="109" column="21" selection-start="6816" selection-end="6816" vertical-scroll-proportion="0.36229205" vertical-offset="1259" max-vertical-offset="2505">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/tests/Video/MPXConfigurationP7/AllowSitesToConfigureMultipleMPXAccounts/MultipleMPXAccountsPerLoginVerification.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="157" column="19" selection-start="11287" selection-end="11287" vertical-scroll-proportion="2.6913123" vertical-offset="794" max-vertical-offset="2505">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/nbcuni/test/publisher/tests/Video/ScheduleMPXVideos/MPXVideosSchedulingVerificationInitialOverrides.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="168" column="30" selection-start="15034" selection-end="15034" vertical-scroll-proportion="0.6672828" vertical-offset="1949" max-vertical-offset="2655">
           <folding />
         </state>
       </provider>

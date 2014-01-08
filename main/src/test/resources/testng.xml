@@ -11,12 +11,39 @@
 	 		</run>
 		</groups>-->
 
-		<!-- Add individual packages you wanted to execute below-->
+		<!-- Add individual packages you wanted to execute below
    		<packages>
    			<package name="com.nbcuni.test.publisher.tests.*"/>
-		</packages>
+		</packages> -->
 
-		
+        <packages>
+            <package name="com.nbcuni.test.publisher.tests.Advertising.*"/>
+        </packages>
+        <packages>
+            <package name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.*"/>
+        </packages>
+        <packages>
+            <package name="com.nbcuni.test.publisher.tests.Queues.*"/>
+        </packages>
+        <packages>
+            <package name="com.nbcuni.test.publisher.tests.Security.*"/>
+        </packages>
+        <packages>
+            <package name="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.*"/>
+        </packages>
+        <packages>
+            <package name="com.nbcuni.test.publisher.tests.UserCreationAndManagement.*"/>
+        </packages>
+
+        <!--MPX Video tests MUST be ran sequentially in the following order-->
+        <classes>
+            <class name="com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MultipleMPXAccountsPerLoginVerification"/>
+            <class name="com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MPXPlayersSyncVerification"/>
+            <class name="com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MPXMediaSyncVerification"/>
+            <class name="com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.Configuration"/>
+            <class name="com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides"/>
+        </classes>
+
 	</test>
 	
 	<!--listeners>

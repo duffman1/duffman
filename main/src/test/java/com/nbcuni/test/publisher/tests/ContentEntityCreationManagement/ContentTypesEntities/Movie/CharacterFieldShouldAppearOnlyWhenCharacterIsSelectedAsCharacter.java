@@ -149,7 +149,7 @@ public class CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter ex
             //Step 17
             overlay.switchToDefaultContent();
             RevisionState revisionState = new RevisionState(webDriver);
-            revisionState.VerifyRevisionState("Published");
-           
+            contentParent.WorkBenchInfoBlock(Arrays.asList("Published"));
+
     }
 }

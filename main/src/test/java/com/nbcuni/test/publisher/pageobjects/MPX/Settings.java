@@ -1,24 +1,20 @@
 package com.nbcuni.test.publisher.pageobjects.MPX;
 
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.concurrent.TimeUnit;
-
+import com.nbcuni.test.lib.Util;
+import com.nbcuni.test.publisher.common.AppLib;
+import com.nbcuni.test.webdriver.CustomWebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.Reporter;
 
-import com.nbcuni.test.lib.Util;
-import com.nbcuni.test.publisher.common.AppLib;
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 
 /*********************************************
@@ -43,6 +39,7 @@ public class Settings {
     private static String SelectImportAccount1_Ddl = "//select[@id='edit-import-accounts-settings-1']";
     private static String SelectImportAccount2_Ddl = "//select[@id='edit-import-accounts-settings-2']";
     private static String SelectImportAccount3_Ddl = "//select[@id='edit-import-accounts-settings-3']";
+    private static String SelectImportAccount4_Ddl = "//select[@id='edit-import-accounts-settings-4']";
     private static String SetImportAccount_Btn = "//input[@id='edit-import-accounts-actions-submit']";
     private static String SaveConfigurations_Btn = "//input[@id='edit-submit']";
     private static String ConnectToMPX_Btn = "//input[@value='Connect to MPX']";
@@ -108,8 +105,10 @@ public class Settings {
     	
     	boolean ddl2Present = false;
     	boolean ddl3Present = false;
+        boolean ddl4Present = false;
     	Select ddl2 = null;
     	Select ddl3 = null;
+        Select ddl4 = null;
     	
     	Select ddl1 = new Select(webDriver.findElement(By.xpath(SelectImportAccount1_Ddl)));
     	
@@ -126,10 +125,18 @@ public class Settings {
     		ddl3Present = true;
     	}
     	catch (Exception e) {}
+
+        try {
+
+            ddl4 = new Select(webDriver.findElement(By.xpath(SelectImportAccount4_Ddl)));
+            ddl4Present = true;
+        }
+        catch (Exception e) {}
     	
     	List<WebElement> listOptions = ddl1.getOptions();
     	if (ddl2Present == true) { listOptions.addAll(ddl2.getOptions()); }
     	if (ddl3Present == true) { listOptions.addAll(ddl3.getOptions()); }
+        if (ddl4Present == true) { listOptions.addAll(ddl4.getOptions()); }
     	
     	List<String> optionValues = new ArrayList<String>();
     	for (WebElement option : listOptions) {
@@ -239,8 +246,10 @@ public class Settings {
     	
     	boolean ddl2Present = false;
     	boolean ddl3Present = false;
+        boolean ddl4Present = false;
     	Select ddl2 = null;
     	Select ddl3 = null;
+        Select ddl4 = null;
     	
     	Select ddl1 = new Select(new WebDriverWait(webDriver, 10).until(
     			ExpectedConditions.visibilityOf(webDriver.findElement(By.xpath(SelectImportAccount1_Ddl)))));
@@ -258,11 +267,19 @@ public class Settings {
     		ddl3Present = true;
     	}
     	catch (Exception e) {}
+
+        try {
+
+            ddl4 = new Select(webDriver.findElement(By.xpath(SelectImportAccount4_Ddl)));
+            ddl4Present = true;
+        }
+        catch (Exception e) {}
     	
     	List<String> selectedOptions = new ArrayList<String>();
     	selectedOptions.add(ddl1.getFirstSelectedOption().getText());
     	if (ddl2Present == true) { selectedOptions.add(ddl2.getFirstSelectedOption().getText()); }
     	if (ddl3Present == true) { selectedOptions.add(ddl3.getFirstSelectedOption().getText()); }
+        if (ddl4Present == true) { selectedOptions.add(ddl4.getFirstSelectedOption().getText()); }
     	
     	webDriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     	

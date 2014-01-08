@@ -1,59 +1,19 @@
 package com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts;
 
 
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.List;
-
-import junit.framework.Assert;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Reporter;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Optional;
-import org.testng.annotations.Parameters;
-import org.testng.annotations.Test;
-
-import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.publisher.common.ParentTest;
-import com.nbcuni.test.publisher.common.Random;
-import com.nbcuni.test.publisher.pageobjects.AccessDenied;
-import com.nbcuni.test.publisher.pageobjects.Logout;
-import com.nbcuni.test.publisher.pageobjects.Modules;
-import com.nbcuni.test.publisher.pageobjects.Overlay;
-import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Cron.Cron;
 import com.nbcuni.test.publisher.pageobjects.MPX.MPXDataClient;
-import com.nbcuni.test.publisher.pageobjects.MPX.MPXPlayers;
-import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
 import com.nbcuni.test.publisher.pageobjects.MPX.MPXMedia;
-import com.nbcuni.test.publisher.pageobjects.People.Permissions;
-import com.nbcuni.test.publisher.pageobjects.People.Roles;
-import com.nbcuni.test.publisher.pageobjects.content.BasicInformation;
-import com.nbcuni.test.publisher.pageobjects.content.CastCrew;
-import com.nbcuni.test.publisher.pageobjects.content.CharactersInformation;
+import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
+import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.content.ContentParent;
-import com.nbcuni.test.publisher.pageobjects.content.ContentTypes;
-import com.nbcuni.test.publisher.pageobjects.content.PersonsInformation;
-import com.nbcuni.test.publisher.pageobjects.content.PublishingOptions;
-import com.nbcuni.test.publisher.pageobjects.content.RevisionState;
 import com.nbcuni.test.publisher.pageobjects.content.SearchFor;
-import com.nbcuni.test.publisher.pageobjects.content.SelectFile;
-import com.nbcuni.test.publisher.pageobjects.errorchecking.ErrorChecking;
-import com.nbcuni.test.publisher.pageobjects.queues.DeleteQueue;
-import com.nbcuni.test.publisher.pageobjects.queues.Queues;
-import com.nbcuni.test.publisher.pageobjects.queues.QueuesRevisionList;
-import com.nbcuni.test.publisher.pageobjects.taxonomy.Taxonomy;
-import com.nbcuni.test.webdriver.CustomWebDriver;
-import com.nbcuni.test.webdriver.WebDriverClientExecution;
+import junit.framework.Assert;
+import org.testng.annotations.Test;
+
+import java.util.Arrays;
+import java.util.List;
 
 
 public class MPXMediaSyncVerification extends ParentTest{
@@ -89,8 +49,8 @@ public class MPXMediaSyncVerification extends ParentTest{
             
         	//Step 2 (continued)
         	List<String> configuredAccounts = settings.GetImportAccountSelectedOptions();
-        	
-        	//Step 3 
+
+            //Step 3
         	MPXDataClient mpxDataClient = new MPXDataClient(webDriver);
             mpxDataClient.SignInToMPXDataClient("media", "mpx/AdminPub7QA", "Pa55word");
             mpxDataClient.ChooseMPXAccount(configuredAccounts.get(0));
@@ -124,6 +84,19 @@ public class MPXMediaSyncVerification extends ParentTest{
                 mpxDataClient.ChooseMPXAccount(configuredAccounts.get(2));
                 allActivePlayerTitlesForAccount3 = mpxDataClient.GetAllActivePlayers();
             }
+
+            //Step 3 (continued)
+            List<String> allMediaTitlesForAccount4 = null;
+            List<String> allActivePlayerTitlesForAccount4 = null;
+            if (configuredAccounts.size() >= 4) {
+
+                mpxDataClient.SignInToMPXDataClient("media", "mpx/AdminPub7QA", "Pa55word");
+                mpxDataClient.ChooseMPXAccount(configuredAccounts.get(3));
+                allMediaTitlesForAccount4 = mpxDataClient.GetAllMPXObjectFields("Media", "title");
+                mpxDataClient.SignInToMPXDataClient("player", "mpx/AdminPub7QA", "Pa55word");
+                mpxDataClient.ChooseMPXAccount(configuredAccounts.get(3));
+                allActivePlayerTitlesForAccount4 = mpxDataClient.GetAllActivePlayers();
+            }
         	
         	//Step 3b
             applib.openApplication();
@@ -135,15 +108,33 @@ public class MPXMediaSyncVerification extends ParentTest{
             mpxMedia.ExpandMPXMedia();
             
             //Step 5a
-            mpxMedia.SelectMPXPlayerForAccount1(allActivePlayerTitlesForAccount1.get(0));
-            mpxMedia.SelectMPXPlayerForAccount2(allActivePlayerTitlesForAccount2.get(0));
-            mpxMedia.SelectMPXPlayerForAccount3(allActivePlayerTitlesForAccount3.get(0));
-            
+            //TODO - refactor to clean this up a bit
+            if (configuredAccounts.get(0).equals("DB TV") || configuredAccounts.get(0).equals("NBCU TVE Dev - NBC")) {
+                mpxMedia.SelectMPXPlayerForAccount1("Auditude Demo player");
+            }
+            else {
+                mpxMedia.SelectMPXPlayerForAccount1(allActivePlayerTitlesForAccount1.get(0));
+            }
+            if (configuredAccounts.size() >= 2) {
+                if (configuredAccounts.get(1).equals("DB TV") || configuredAccounts.get(1).equals("NBCU TVE Dev - NBC")) {
+                    mpxMedia.SelectMPXPlayerForAccount2("Auditude Demo player");
+                }
+                else {
+                    mpxMedia.SelectMPXPlayerForAccount2(allActivePlayerTitlesForAccount2.get(0));
+                }
+            }
+            if (configuredAccounts.size() >= 3) {
+                mpxMedia.SelectMPXPlayerForAccount3(allActivePlayerTitlesForAccount3.get(0));
+            }
+            if (configuredAccounts.size() >= 4) {
+                mpxMedia.SelectMPXPlayerForAccount4(allActivePlayerTitlesForAccount4.get(0));
+            }
+
             //Step 5b
             mpxMedia.ClickSyncMPXMediaNowLnk();
             ContentParent contentParent = new ContentParent(webDriver);
             contentParent.VerifyMessageStatus("Processed video import/update manually for all accounts.");
-            /*
+            /* TODO - this needs some clarification as sometimes this text is present post sync and other times it's not
             contentParent.VerifyMessageStatus("players returned for account");
             contentParent.VerifyMessageStatus("All mpxMedia is up to date for account \"" + configuredAccounts.get(0) + "\"");
             if (configuredAccounts.size() >= 2) {
@@ -164,10 +155,15 @@ public class MPXMediaSyncVerification extends ParentTest{
             taxonomy.NavigateSite("Content>>Files>>mpxMedia");
             overlay.SwitchToFrame("Content");
             SearchFor searchFor = new SearchFor(webDriver);
-            searchFor.EnterTitle(allMediaTitlesForAccount1.get(0));
-            searchFor.ClickApplyBtn();
-            searchFor.VerifySearchResultsPresent(Arrays.asList(allMediaTitlesForAccount1.get(0)));
-            
+
+            if (configuredAccounts.contains("DB TV") || configuredAccounts.contains("NBCU TVE Dev - NBC")) {
+                searchFor.EnterTitle("Automation1");
+                searchFor.ClickApplyBtn();
+                searchFor.VerifySearchResultsPresent(Arrays.asList("Automation1"));
+
+            }
+            //TODO - add logic that checks for a media title in the event account1 or 2 is not configured (highly unlikely)
+
         }
         else {
         	

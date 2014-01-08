@@ -2,18 +2,14 @@ package com.nbcuni.test.publisher.pageobjects.taxonomy;
 
 
 
-import java.util.List;
-
+import com.nbcuni.test.lib.Util;
+import com.nbcuni.test.publisher.common.AppLib;
+import com.nbcuni.test.webdriver.CustomWebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Reporter;
-
-import com.nbcuni.test.lib.Util;
-import com.nbcuni.test.publisher.common.AppLib;
-import com.nbcuni.test.webdriver.CustomWebDriver;
 
 
 /*********************************************
@@ -98,7 +94,7 @@ public class Taxonomy {
     		}
     		else if (depth == 3) {
     		
-    			tier1Locator = TaxonomyBase + "//a[contains(text(),'" + tierLevel[0] + "')]";
+    			tier1Locator = TaxonomyBase + "//a[text()='" + tierLevel[0] + "']";
     			tier2Locator = TaxonomyBase + "//a[contains(text(),'" + tierLevel[0] + "')]" + "/../ul//a[contains(text(),'" + tierLevel[1] +"')]";
     			tier3Locator = TaxonomyBase + "//a[contains(text(),'" + tierLevel[0] + "')]" + "/../ul//a[contains(text(),'" + tierLevel[1] +"')]" + "/..//a[contains(text(),'" + tierLevel[2] + "')]";
     		
