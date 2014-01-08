@@ -1,21 +1,16 @@
 package com.nbcuni.test.publisher.pageobjects.content;
 
 
-import java.util.List;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
-import org.testng.Reporter;
-
 import com.nbcuni.test.lib.Util;
 import com.nbcuni.test.publisher.common.AppLib;
-import com.nbcuni.test.publisher.common.Random;
 import com.nbcuni.test.webdriver.CustomWebDriver;
+import junit.framework.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.util.concurrent.TimeUnit;
 
 
 /*********************************************
@@ -51,9 +46,21 @@ public class Content {
     	
     	new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(
     			By.xpath("//a[text()='" + contentItemTitle + "']")));
-    	
-    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.not(ExpectedConditions.
-    			presenceOfElementLocated((By.xpath("//a[text()='" + contentItemTitle + "']/../..//a[text()='operations']")))));
+
+        webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+        boolean elPresent = false;
+
+        try {
+            webDriver.findElement(By.xpath("//a[text()='\" + contentItemTitle + \"']/../..//a[text()='operations']"));
+            elPresent = true;
+        }
+        catch (Exception e) {
+            elPresent = false;
+        }
+
+        Assert.assertFalse(elPresent);
+
+        webDriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     	
     }
     

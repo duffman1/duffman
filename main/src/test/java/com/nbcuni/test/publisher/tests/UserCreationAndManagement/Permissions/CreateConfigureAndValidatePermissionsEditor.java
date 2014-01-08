@@ -110,6 +110,7 @@ public class CreateConfigureAndValidatePermissionsEditor extends ParentTest{
         permissions.CheckPostCreateNewContentCbx();
         permissions.CheckPostEditOwnContentCbx();
         permissions.CheckPostDeleteOwnContentCbx();
+        permissions.CheckAddAndUploadNewFilesCbx();
         permissions.ClickSaveConfigurationsBtn();
         contentParent.VerifyMessageStatus("The changes have been saved.");
         
