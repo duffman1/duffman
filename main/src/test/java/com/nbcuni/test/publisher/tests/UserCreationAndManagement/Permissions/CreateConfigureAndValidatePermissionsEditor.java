@@ -179,6 +179,7 @@ public class CreateConfigureAndValidatePermissionsEditor extends ParentTest{
         //Step 27
         BasicInformation basicInformation = new BasicInformation(webDriver);
         basicInformation.EnterSynopsis();
+        overlay.SwitchToActiveFrame();
         contentParent.ClickSaveBtn();
         overlay.switchToDefaultContent();
         contentParent.VerifyMessageStatus("Post " + postTitle + " has been updated.");
@@ -204,14 +205,9 @@ public class CreateConfigureAndValidatePermissionsEditor extends ParentTest{
         //Step 31
         content.VerifyContentItemNotPresent(postTitle);
         
-        //Step 32
-        overlay.ClickCloseOverlayLnk();
-        logout.ClickLogoutBtn();
-        
-        //Step 33
-        //TODO - this step is redundant by content type and not a priority. Add repetition as time allows.
+        //Step 32 on
+        //TODO - these steps are redundant by content type and not a priority. Add repetition as time allows.
         
         
-        Assert.fail("Test under construction");
     }
 }

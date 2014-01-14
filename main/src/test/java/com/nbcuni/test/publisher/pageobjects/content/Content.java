@@ -4,7 +4,9 @@ package com.nbcuni.test.publisher.pageobjects.content;
 import com.nbcuni.test.lib.Util;
 import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.webdriver.CustomWebDriver;
+
 import junit.framework.Assert;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -80,8 +82,20 @@ public class Content {
     
     public void VerifyContentItemNotPresent(String contentItemTitle) throws Exception {
     	
-    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.not(ExpectedConditions.
-    			presenceOfElementLocated((By.xpath("//a[text()='" + contentItemTitle + "']")))));
+    	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+    	boolean elPresent = true;
+    	try {
+    		webDriver.findElement(By.xpath("//a[text()='" + contentItemTitle + "']"));
+    		elPresent = true;
+    	}
+    	catch (Exception e) {
+    	
+    		elPresent = false;
+    	}
+    	if (elPresent == true) {
+    		Assert.fail("Content item is present when it should not be");
+    	}
+    	webDriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     	
     }
     public void SelectCheckBoxOfTheContent(String contentItemTitle) throws Exception {
