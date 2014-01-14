@@ -36,6 +36,8 @@ public class ScheduleQueue {
     private static String ScheduledQueue_Ctr = "//div[@class='content']//tbody";
     private static String Schedule_Tbl = "//table[@class='sticky-enabled tableheader-processed sticky-table']/..//td[@class='empty message']";
     private static String RunNow_Btn = "//a[text()='Run now']";
+    private static String RunCancel_Btn = "//a[text()='Cancel']";
+    private static String Complete_txt = ".//td[text()='Completed']";
 
     public ScheduleQueue(final CustomWebDriver custWebDr) {
         webDriver = custWebDr;
@@ -124,6 +126,21 @@ public class ScheduleQueue {
         new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(
                 By.xpath(RunNow_Btn))).click();
 
+    }
+    
+    public void VerifyRunNowBtn() throws Exception {
+    	
+    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.presenceOfElementLocated(By.xpath(RunNow_Btn)));
+    }
+    public void VerifyCancelBtn() throws Exception {
+    	
+    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.presenceOfElementLocated(By.xpath(RunCancel_Btn)));
+    }
+    
+    public void VerifyCompleteCronRunStatus() throws Exception {
+    	webDriver.switchTo().defaultContent();    		
+    	webDriver.switchTo().frame(webDriver.findElement(By.xpath(".//iframe[@class='overlay-element overlay-active']")));
+    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.presenceOfElementLocated(By.xpath(Complete_txt)));  	
     }
 
 }
