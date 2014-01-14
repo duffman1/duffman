@@ -1,7 +1,9 @@
 package com.nbcuni.test.publisher.tests.Queues.CreateUpdateRevisionsToQueues;
 
 
+import java.text.SimpleDateFormat;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 
 import junit.framework.Assert;
@@ -32,10 +34,12 @@ import com.nbcuni.test.publisher.pageobjects.content.ContentTypes;
 import com.nbcuni.test.publisher.pageobjects.content.PersonsInformation;
 import com.nbcuni.test.publisher.pageobjects.content.PublishingOptions;
 import com.nbcuni.test.publisher.pageobjects.content.RevisionState;
+import com.nbcuni.test.publisher.pageobjects.content.Revisions;
 import com.nbcuni.test.publisher.pageobjects.content.SelectFile;
 import com.nbcuni.test.publisher.pageobjects.errorchecking.ErrorChecking;
 import com.nbcuni.test.publisher.pageobjects.queues.DeleteQueue;
 import com.nbcuni.test.publisher.pageobjects.queues.Queues;
+import com.nbcuni.test.publisher.pageobjects.queues.QueuesRevisionList;
 import com.nbcuni.test.publisher.pageobjects.taxonomy.Taxonomy;
 import com.nbcuni.test.webdriver.CustomWebDriver;
 import com.nbcuni.test.webdriver.WebDriverClientExecution;
@@ -73,7 +77,7 @@ public class BasicUIForCreatingAndRevisingQueues extends ParentTest{
         taxonomy.NavigateSite("Content>>Queues>>Add Promo Queue");
         
         //Step 3
-        overlay.SwitchToFrame("Add Promo Queue");
+        overlay.SwitchToFrame("Add promo queue queue dialog");
         Queues queues = new Queues(webDriver);
         queues.ClickSaveQueueBtn();
         ErrorChecking errorChecking = new ErrorChecking(webDriver);
@@ -112,11 +116,37 @@ public class BasicUIForCreatingAndRevisingQueues extends ParentTest{
         publishingOptions.VerifyCreateNewRevisionCbxChecked();
         queues.ClickSaveQueueBtn();
         overlay.switchToDefaultContent();
-        overlay.SwitchToFrame("Queues Listing");
+        overlay.SwitchToFrame("Queues Listing dialog");
         queues.VerifyQueuesInList(Arrays.asList(modQueueTitle));
         
         //Step 9
-        Assert.fail("Test steps indicate a 'set revision as default' checkbox should be present but I can't find it. emailing team for help.");
+        queues.ClickEditQueueExtendMenuBtn(modQueueTitle);
+        queues.ClickEditQueueMenuBtn(modQueueTitle);
+        overlay.switchToDefaultContent();
+        overlay.SwitchToFrame(modQueueTitle);
+        
+        //Step 10
+        String modQueueTitle2 = random.GetCharacterString(15);
+        queues.EnterTitle(modQueueTitle2);
+        publishingOptions.ClickCreateNewRevisionCbx();
+        queues.ClickSaveQueueBtn();
+        
+        //Step 11
+        overlay.SwitchToActiveFrame();
+        queues.VerifyQueuesInList(Arrays.asList(modQueueTitle2));
+        queues.ClickEditQueueExtendMenuBtn(modQueueTitle2);
+        queues.ClickEditQueueMenuBtn(modQueueTitle2);
+        overlay.SwitchToActiveFrame();
+        QueuesRevisionList queuesRevisionList = new QueuesRevisionList(webDriver);
+        queuesRevisionList.ClickRevisionsLnk();
+        overlay.switchToDefaultContent();
+        overlay.SwitchToFrame("Queues Revision list");
+        SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
+    	String date = sdf.format(new Date());
+        queuesRevisionList.VerifyStateFlowHistoryEvent("Revision was set from Draft to Draft on " + date);
+        
+        //Step 12 on
+        //per Mirza these steps are no longer needed as functionality has changed since test update. Above steps are sufficient for test purposes.
         
     }
 }

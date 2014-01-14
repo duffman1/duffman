@@ -1,13 +1,17 @@
 package com.nbcuni.test.publisher.pageobjects.content;
 
 
+import java.util.concurrent.TimeUnit;
+
 import com.nbcuni.test.lib.Util;
 import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.webdriver.CustomWebDriver;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 
 /*********************************************
@@ -72,21 +76,35 @@ public class Revisions {
     	new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(
     			By.xpath("//table[contains(@class, 'views-table')]//a[contains(text(), '" + contentItemTitle + "')]")));
     	
-    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.not(ExpectedConditions.
-    			presenceOfElementLocated((By.xpath("//table[contains(@class, 'views-table')]//a[contains(text(), '" + contentItemTitle + "')]/../..//a[text()='operations']")))));
+    	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+    	boolean elPresent = true;
+    	try {
+    		webDriver.findElement(By.xpath("//table[contains(@class, 'views-table')]//a[contains(text(), '" + contentItemTitle + "')]/../..//a[text()='operations']"));
+    		elPresent = true;
+    	}
+    	catch (Exception e) {
     	
+    		elPresent = false;
+    	}
+    	if (elPresent == true) {
+    		Assert.fail("Content item Edit/Delete button present when it should not be");
+    	}
+    	webDriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     }
+    
     public void PopulateRevisionComment(String commenttext) throws Exception {
     	new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOf(
                 webDriver.findElement(By.xpath(RevComment))));
     	webDriver.type(RevComment,commenttext );   	
     	
     }
+    
     public void ClickUpdateStateBtn() throws Exception {    	
     	WebElement element = new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(
     			By.xpath(RevUpdate_btn)));
     	element.click();
     }
+    
     public void ClickRevisionTab() throws Exception{
     	WebElement revision = new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(
     			By.xpath(RevisionLink)));

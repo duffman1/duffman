@@ -1,20 +1,16 @@
 package com.nbcuni.test.publisher.pageobjects.queues;
 
 
-import java.util.List;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Reporter;
-
 import com.nbcuni.test.lib.Util;
 import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.webdriver.CustomWebDriver;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.util.List;
 
 
 /*********************************************
@@ -38,7 +34,11 @@ public class ScheduleQueue {
     private static String Time_Txb = "//input[@id='edit-datetime-timeEntry-popup-1']";
     private static String Schedule_Btn = "//input[@value='Schedule']";
     private static String ScheduledQueue_Ctr = "//div[@class='content']//tbody";
-    
+    private static String Schedule_Tbl = "//table[@class='sticky-enabled tableheader-processed sticky-table']/..//td[@class='empty message']";
+    private static String RunNow_Btn = "//a[text()='Run now']";
+    private static String RunCancel_Btn = "//a[text()='Cancel']";
+    private static String Complete_txt = ".//td[text()='Completed']";
+
     public ScheduleQueue(final CustomWebDriver custWebDr) {
         webDriver = custWebDr;
         ul = new Util(webDriver);
@@ -104,13 +104,44 @@ public class ScheduleQueue {
     }
     
     public void VerifyScheduledQueue(String scheduledTxt) throws Exception {
-    	
+    	Thread.sleep(1000); //TODO - stale element reference here.
     	new WebDriverWait(webDriver, 10).until(
     			ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(ScheduledQueue_Ctr)));
     	ul.verifyObjectContainsText(ScheduledQueue_Ctr, scheduledTxt);
     }
+
+    public void VerifyScheduleTableisEmpty() throws Exception {
+
+        new WebDriverWait(webDriver, 10).until(ExpectedConditions.
+                visibilityOf(webDriver.findElement(By.xpath(Schedule_Tbl)))).getText().
+                contains("No scheduled revisions available");
+
+    }
+    public void VerifyAddScheduleVersionLink() throws Exception {
+        new WebDriverWait(webDriver, 10).until(ExpectedConditions.
+                visibilityOf(webDriver.findElement(By.xpath(AddScheduledRevision_Lnk))));
+    }
+
+    public void ClickRunNowLnk() throws Exception {
+        new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(
+                By.xpath(RunNow_Btn))).click();
+
+    }
     
+    public void VerifyRunNowBtn() throws Exception {
+    	
+    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.presenceOfElementLocated(By.xpath(RunNow_Btn)));
+    }
+    public void VerifyCancelBtn() throws Exception {
+    	
+    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.presenceOfElementLocated(By.xpath(RunCancel_Btn)));
+    }
     
-  
+    public void VerifyCompleteCronRunStatus() throws Exception {
+    	webDriver.switchTo().defaultContent();    		
+    	webDriver.switchTo().frame(webDriver.findElement(By.xpath(".//iframe[@class='overlay-element overlay-active']")));
+    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.presenceOfElementLocated(By.xpath(Complete_txt)));  	
+    }
+
 }
 

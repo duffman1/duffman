@@ -1,60 +1,16 @@
 package com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos;
 
 
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.List;
-
+import com.nbcuni.test.publisher.common.ParentTest;
+import com.nbcuni.test.publisher.pageobjects.FileTypes.MPXFileType;
+import com.nbcuni.test.publisher.pageobjects.MPX.MPXMedia;
+import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
+import com.nbcuni.test.publisher.pageobjects.UserLogin;
+import com.nbcuni.test.publisher.pageobjects.content.ContentParent;
 import junit.framework.Assert;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Reporter;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Optional;
-import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import com.nbcuni.test.publisher.common.AppLib;
-import com.nbcuni.test.publisher.common.ParentTest;
-import com.nbcuni.test.publisher.common.Random;
-import com.nbcuni.test.publisher.pageobjects.AccessDenied;
-import com.nbcuni.test.publisher.pageobjects.Logout;
-import com.nbcuni.test.publisher.pageobjects.Modules;
-import com.nbcuni.test.publisher.pageobjects.Overlay;
-import com.nbcuni.test.publisher.pageobjects.UserLogin;
-import com.nbcuni.test.publisher.pageobjects.Cron.Cron;
-import com.nbcuni.test.publisher.pageobjects.FileTypes.MPXFileType;
-import com.nbcuni.test.publisher.pageobjects.MPX.MPXDataClient;
-import com.nbcuni.test.publisher.pageobjects.MPX.MPXPlayers;
-import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
-import com.nbcuni.test.publisher.pageobjects.MPX.MPXMedia;
-import com.nbcuni.test.publisher.pageobjects.People.Permissions;
-import com.nbcuni.test.publisher.pageobjects.People.Roles;
-import com.nbcuni.test.publisher.pageobjects.content.BasicInformation;
-import com.nbcuni.test.publisher.pageobjects.content.CastCrew;
-import com.nbcuni.test.publisher.pageobjects.content.CharactersInformation;
-import com.nbcuni.test.publisher.pageobjects.content.ContentParent;
-import com.nbcuni.test.publisher.pageobjects.content.ContentTypes;
-import com.nbcuni.test.publisher.pageobjects.content.PersonsInformation;
-import com.nbcuni.test.publisher.pageobjects.content.PublishingOptions;
-import com.nbcuni.test.publisher.pageobjects.content.RevisionState;
-import com.nbcuni.test.publisher.pageobjects.content.SearchFor;
-import com.nbcuni.test.publisher.pageobjects.content.SelectFile;
-import com.nbcuni.test.publisher.pageobjects.errorchecking.ErrorChecking;
-import com.nbcuni.test.publisher.pageobjects.queues.DeleteQueue;
-import com.nbcuni.test.publisher.pageobjects.queues.Queues;
-import com.nbcuni.test.publisher.pageobjects.queues.QueuesRevisionList;
-import com.nbcuni.test.publisher.pageobjects.taxonomy.Taxonomy;
-import com.nbcuni.test.webdriver.CustomWebDriver;
-import com.nbcuni.test.webdriver.WebDriverClientExecution;
+import java.util.List;
 
 
 public class Configuration extends ParentTest{
@@ -76,7 +32,7 @@ public class Configuration extends ParentTest{
      * @throws Throwable No Return values are needed
      *************************************************************************************/
     @Test(groups = {"full", "smoke"})
-    public void Configuration() throws Exception{
+    public void Configuration() throws Exception {
     	
     	//Step 1
     	UserLogin userLogin = applib.openApplication();
@@ -90,31 +46,18 @@ public class Configuration extends ParentTest{
         	
         	//Step
         	List<String> configuredAccounts = settings.GetImportAccountSelectedOptions();
-        	MPXDataClient mpxDataClient = new MPXDataClient(webDriver);
-            mpxDataClient.SignInToMPXDataClient("player", "mpx/AdminPub7QA", "Pa55word");
-            mpxDataClient.ChooseMPXAccount(configuredAccounts.get(0));
-            List<String> allActivePlayerTitlesForAccount1 = mpxDataClient.GetAllActivePlayers();
-            
+
         	//Step 7
             applib.openApplication();
         	taxonomy.NavigateSite("Content>>Files>>mpxMedia");
         	overlay.SwitchToActiveFrame();
         	
         	//Step 8
-        	MPXMedia mpxMedia = new MPXMedia(webDriver);
+            MPXMedia mpxMedia = new MPXMedia(webDriver);
             mpxMedia.ExpandMPXMedia();
-            
-            //Step 9
-            mpxMedia.SelectMPXPlayerForAccount1(allActivePlayerTitlesForAccount1.get(0));
-            mpxMedia.ClickSyncMPXMediaNowLnk();
-            
-            //Step 10
-            overlay.switchToDefaultContent();
-            taxonomy.NavigateSite("Home>>Run cron");
-            overlay.SwitchToFrame("Status report");
-            ContentParent contentParent = new ContentParent(webDriver);
-            contentParent.VerifyMessageStatus("Cron ran successfully");
-            
+
+            //Step 9 and 10 not needed (redundant per previous mpx test)
+
             //Step 11
             overlay.switchToDefaultContent();
             taxonomy.NavigateSite("Structure>>File types>>MPX Video for Account \"" + configuredAccounts.get(0));
@@ -127,6 +70,7 @@ public class Configuration extends ParentTest{
             	
             	mpxFileType.ClickSaveBtn();
             	overlay.SwitchToActiveFrame();
+                ContentParent contentParent = new ContentParent(webDriver);
             	contentParent.VerifyMessageStatus("The file type MPX Video for Account \"" + configuredAccounts.get(0));
             	contentParent.VerifyMessageStatus("has been updated.");
             }

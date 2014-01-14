@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -36,8 +36,8 @@
       <div class="suite">
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
-            <a href="#" class="navigator-link" panel-name="suite-Default_suite">
-              <span class="suite-name border-skipped">Default suite</span>
+            <a href="#" class="navigator-link" panel-name="suite-Failed_suite_[Test_Suite_for_Publisher_7]">
+              <span class="suite-name border-failed">Failed suite [Test Suite for Publisher 7]</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -47,37 +47,37 @@
             <div class="suite-section-content">
               <ul>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>testng-customsuite.xml</span>
+                  <a href="#" class="navigator-link " panel-name="test-xml-Failed_suite_[Test_Suite_for_Publisher_7]">
+                    <span>testng-failed.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="testlist-Default_suite">
+                  <a href="#" class="navigator-link " panel-name="testlist-Failed_suite_[Test_Suite_for_Publisher_7]">
                     <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="group-Default_suite">
+                  <a href="#" class="navigator-link " panel-name="group-Failed_suite_[Test_Suite_for_Publisher_7]">
                     <span>2 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="times-Default_suite">
+                  <a href="#" class="navigator-link " panel-name="times-Failed_suite_[Test_Suite_for_Publisher_7]">
                     <span>Times</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="reporter-Default_suite">
+                  <a href="#" class="navigator-link " panel-name="reporter-Failed_suite_[Test_Suite_for_Publisher_7]">
                     <span>Reporter output</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="ignored-methods-Default_suite">
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-Failed_suite_[Test_Suite_for_Publisher_7]">
                     <span>Ignored methods</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="chronological-Default_suite">
+                  <a href="#" class="navigator-link " panel-name="chronological-Failed_suite_[Test_Suite_for_Publisher_7]">
                     <span>Chronological view</span>
                   </a> <!-- navigator-link  -->
                 </li>
@@ -90,21 +90,45 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,  1 skipped,  </span>
+                    <span class="method-stats">4 methods, 2 failed,   2 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title skipped">Skipped methods</span>
-                    <span class="show-or-hide-methods skipped">
-                      <a href="#" panel-name="suite-Default_suite" class="hide-methods skipped suite-Default_suite"> (hide)</a> <!-- hide-methods skipped suite-Default_suite -->
-                      <a href="#" panel-name="suite-Default_suite" class="show-methods skipped suite-Default_suite"> (show)</a> <!-- show-methods skipped suite-Default_suite -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Failed_suite_[Test_Suite_for_Publisher_7]" class="hide-methods failed suite-Failed_suite_[Test_Suite_for_Publisher_7]"> (hide)</a> <!-- hide-methods failed suite-Failed_suite_[Test_Suite_for_Publisher_7] -->
+                      <a href="#" panel-name="suite-Failed_suite_[Test_Suite_for_Publisher_7]" class="show-methods failed suite-Failed_suite_[Test_Suite_for_Publisher_7]"> (show)</a> <!-- show-methods failed suite-Failed_suite_[Test_Suite_for_Publisher_7] -->
                     </span>
-                    <div class="method-list-content skipped suite-Default_suite">
+                    <div class="method-list-content failed suite-Failed_suite_[Test_Suite_for_Publisher_7]">
                       <span>
-                        <img width="3%" src="skipped.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MPXMediaSyncVerification" hash-for-method="MPXMediaSyncVerification">MPXMediaSyncVerification</a> <!-- method navigator-link -->
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Failed_suite_[Test_Suite_for_Publisher_7]" title="com.nbcuni.test.publisher.tests.Video.Player.SelectVideoPlayerPerVideoFile" hash-for-method="SelectVideoPlayerPerVideoFile">SelectVideoPlayerPerVideoFile</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content skipped suite-Default_suite -->
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Failed_suite_[Test_Suite_for_Publisher_7]" title="com.nbcuni.test.publisher.tests.SocialIntegration.Facebook.TestingFacebookAutopublishing" hash-for-method="TestingFacebookAutopublishing">TestingFacebookAutopublishing</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Failed_suite_[Test_Suite_for_Publisher_7] -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Failed_suite_[Test_Suite_for_Publisher_7]" class="hide-methods passed suite-Failed_suite_[Test_Suite_for_Publisher_7]"> (hide)</a> <!-- hide-methods passed suite-Failed_suite_[Test_Suite_for_Publisher_7] -->
+                      <a href="#" panel-name="suite-Failed_suite_[Test_Suite_for_Publisher_7]" class="show-methods passed suite-Failed_suite_[Test_Suite_for_Publisher_7]"> (show)</a> <!-- show-methods passed suite-Failed_suite_[Test_Suite_for_Publisher_7] -->
+                    </span>
+                    <div class="method-list-content passed suite-Failed_suite_[Test_Suite_for_Publisher_7]">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Failed_suite_[Test_Suite_for_Publisher_7]" title="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVSeason.CreateTVSeason" hash-for-method="CreateTVSeason">CreateTVSeason</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Failed_suite_[Test_Suite_for_Publisher_7]" title="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.ScheduleToPublishContentByDateTime" hash-for-method="ScheduletopublishContentbyDateTime">ScheduletopublishContentbyDateTime</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Failed_suite_[Test_Suite_for_Publisher_7] -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -115,63 +139,390 @@
     </div> <!-- navigator-root -->
     <div class="wrapper">
       <div class="main-panel-root">
-        <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-skipped">
+        <div panel-name="suite-Failed_suite_[Test_Suite_for_Publisher_7]" class="panel Failed_suite_[Test_Suite_for_Publisher_7]">
+          <div class="suite-Failed_suite_[Test_Suite_for_Publisher_7]-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
-              <span class="class-name">com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MPXMediaSyncVerification</span>
+              <img src="failed.png"/>
+              <span class="class-name">com.nbcuni.test.publisher.tests.Video.Player.SelectVideoPlayerPerVideoFile</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="MPXMediaSyncVerification">
-                  </a> <!-- MPXMediaSyncVerification -->
-                  <span class="method-name">MPXMediaSyncVerification</span>
+                  <a name="SelectVideoPlayerPerVideoFile">
+                  </a> <!-- SelectVideoPlayerPerVideoFile -->
+                  <span class="method-name">SelectVideoPlayerPerVideoFile</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element
+  (Session info: chrome=31.0.1650.63)
+  (Driver info: chromedriver=2.3,platform=Mac OS X 10.8.5 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 30.02 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.8.5&apos;, java.version: &apos;1.6.0_65&apos;
+Session ID: 34b1c8fad72c8a016e65ff384a8a634c
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={chromedriverVersion=2.3}, rotatable=false, locationContextEnabled=true, version=31.0.1650.63, cssSelectorsEnabled=true, databaseEnabled=true, handlesAlerts=true, browserConnectionEnabled=false, nativeEvents=true, webStorageEnabled=true, applicationCacheEnabled=false, takesScreenshot=true}]
+Command duration or timeout: 30.63 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.8.5&apos;, java.version: &apos;1.6.0_65&apos;
+Session ID: e661baec-c84c-47f0-90a0-5e93e586f0f6
+Driver info: com.nbcuni.test.webdriver.CustomWebDriver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={chromedriverVersion=2.3}, rotatable=false, locationContextEnabled=true, webdriver.remote.sessionid=e661baec-c84c-47f0-90a0-5e93e586f0f6, version=31.0.1650.63, cssSelectorsEnabled=true, databaseEnabled=true, handlesAlerts=true, browserConnectionEnabled=false, nativeEvents=true, webStorageEnabled=true, applicationCacheEnabled=false, takesScreenshot=true}]
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:191)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:554)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:307)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:404)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:344)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:299)
+	at com.nbcuni.test.publisher.pageobjects.taxonomy.Taxonomy.NavigateSite(Taxonomy.java:101)
+	at com.nbcuni.test.publisher.tests.Video.Player.SelectVideoPlayerPerVideoFile.SelectVideoPlayerPerVideoFile(SelectVideoPlayerPerVideoFile.java:53)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+Caused by: org.openqa.selenium.remote.ScreenshotException: Screen shot has been taken
+Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.8.5&apos;, java.version: &apos;1.6.0_65&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:125)
+	... 20 more
+Caused by: org.openqa.selenium.NoSuchElementException: no such element
+  (Session info: chrome=31.0.1650.63)
+  (Driver info: chromedriver=2.3,platform=Mac OS X 10.8.5 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 30.02 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.8.5&apos;, java.version: &apos;1.6.0_65&apos;
+Session ID: 34b1c8fad72c8a016e65ff384a8a634c
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={chromedriverVersion=2.3}, rotatable=false, locationContextEnabled=true, version=31.0.1650.63, cssSelectorsEnabled=true, databaseEnabled=true, handlesAlerts=true, browserConnectionEnabled=false, nativeEvents=true, webStorageEnabled=true, applicationCacheEnabled=false, takesScreenshot=true}]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.8.5&apos;, java.version: &apos;1.6.0_65&apos;
+Driver info: driver.version: EventFiringWebDriver
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:191)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:554)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:307)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:404)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:344)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:299)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:101)
+	at com.sun.proxy.$Proxy10.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:180)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:47)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:33)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:169)
+	... 3 more
+... Removed 21 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-skipped -->
-        </div> <!-- panel Default_suite -->
-        <div panel-name="test-xml-Default_suite" class="panel">
+          </div> <!-- suite-Failed_suite_[Test_Suite_for_Publisher_7]-class-failed -->
+          <div class="suite-Failed_suite_[Test_Suite_for_Publisher_7]-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.nbcuni.test.publisher.tests.SocialIntegration.Facebook.TestingFacebookAutopublishing</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="TestingFacebookAutopublishing">
+                  </a> <!-- TestingFacebookAutopublishing -->
+                  <span class="method-name">TestingFacebookAutopublishing</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Timed out after 10 seconds waiting for text (&apos;Created facebook application Publisher 7 Test App (eff718adee274be).&apos;) to be present in element found by By.xpath: //div[@class=&apos;messages status&apos;]
+Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.8.5&apos;, java.version: &apos;1.6.0_65&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:259)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.nbcuni.test.publisher.pageobjects.content.ContentParent.VerifyMessageStatus(ContentParent.java:52)
+	at com.nbcuni.test.publisher.tests.SocialIntegration.Facebook.TestingFacebookAutopublishing.TestingFacebookAutopublishing(TestingFacebookAutopublishing.java:73)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+... Removed 10 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Failed_suite_[Test_Suite_for_Publisher_7]-class-failed -->
+          <div class="suite-Failed_suite_[Test_Suite_for_Publisher_7]-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.ScheduleToPublishContentByDateTime</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="ScheduletopublishContentbyDateTime">
+                  </a> <!-- ScheduletopublishContentbyDateTime -->
+                  <span class="method-name">ScheduletopublishContentbyDateTime</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Failed_suite_[Test_Suite_for_Publisher_7]-class-passed -->
+          <div class="suite-Failed_suite_[Test_Suite_for_Publisher_7]-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVSeason.CreateTVSeason</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="CreateTVSeason">
+                  </a> <!-- CreateTVSeason -->
+                  <span class="method-name">CreateTVSeason</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Failed_suite_[Test_Suite_for_Publisher_7]-class-passed -->
+        </div> <!-- panel Failed_suite_[Test_Suite_for_Publisher_7] -->
+        <div panel-name="test-xml-Failed_suite_[Test_Suite_for_Publisher_7]" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/private/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/testng-eclipse--1980113760/testng-customsuite.xml</span>
+            <span class="header-content">/Users/brandonclark/SQE-TEST-Pub7/main/test-output/testng-failed.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite name=&quot;Default suite&quot;&gt;
-  &lt;test verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
+&lt;suite thread-count=&quot;1&quot; name=&quot;Failed suite [Test Suite for Publisher 7]&quot; parallel=&quot;methods&quot;&gt;
+  &lt;parameter name=&quot;Environment&quot; value=&quot;PROD&quot;/&gt;
+  &lt;test name=&quot;All Web Tests(failed)&quot; parallel=&quot;methods&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MPXMediaSyncVerification&quot;/&gt;
+      &lt;class name=&quot;com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityModerationStatesandWorkflows.PublishContenttoUnauthenticatedUsers&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;startSelenium&quot;/&gt;
+          &lt;include name=&quot;stopSelenium&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityModerationStatesandWorkflows.PublishContenttoUnauthenticatedUsers --&gt;
+      &lt;class name=&quot;com.nbcuni.test.publisher.tests.SocialIntegration.Facebook.TestingFacebookAutopublishing&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;startSelenium&quot;/&gt;
+          &lt;include name=&quot;TestingFacebookAutopublishing&quot;/&gt;
+          &lt;include name=&quot;stopSelenium&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.nbcuni.test.publisher.tests.SocialIntegration.Facebook.TestingFacebookAutopublishing --&gt;
+      &lt;class name=&quot;com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Movie.CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;startSelenium&quot;/&gt;
+          &lt;include name=&quot;stopSelenium&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Movie.CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter --&gt;
+      &lt;class name=&quot;com.nbcuni.test.publisher.tests.Video.Player.SelectVideoPlayerPerVideoFile&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;startSelenium&quot;/&gt;
+          &lt;include name=&quot;SelectVideoPlayerPerVideoFile&quot;/&gt;
+          &lt;include name=&quot;stopSelenium&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.nbcuni.test.publisher.tests.Video.Player.SelectVideoPlayerPerVideoFile --&gt;
+      &lt;class name=&quot;com.nbcuni.test.publisher.tests.Queues.SchedulingQueues.ScheduleRevisionsOfQueues&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;startSelenium&quot;/&gt;
+          &lt;include name=&quot;stopSelenium&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.nbcuni.test.publisher.tests.Queues.SchedulingQueues.ScheduleRevisionsOfQueues --&gt;
+      &lt;class name=&quot;com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MPXPlayersSyncVerification&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;startSelenium&quot;/&gt;
+          &lt;include name=&quot;stopSelenium&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MPXPlayersSyncVerification --&gt;
+      &lt;class name=&quot;com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Movie.CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedShortVersion&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;startSelenium&quot;/&gt;
+          &lt;include name=&quot;stopSelenium&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Movie.CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedShortVersion --&gt;
+      &lt;class name=&quot;com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;startSelenium&quot;/&gt;
+          &lt;include name=&quot;stopSelenium&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile --&gt;
+      &lt;class name=&quot;com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;startSelenium&quot;/&gt;
+          &lt;include name=&quot;stopSelenium&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost --&gt;
+      &lt;class name=&quot;com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;startSelenium&quot;/&gt;
+          &lt;include name=&quot;stopSelenium&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides --&gt;
+      &lt;class name=&quot;com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.CreateConfigureAndValidatePermissionsEditor&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;startSelenium&quot;/&gt;
+          &lt;include name=&quot;stopSelenium&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.CreateConfigureAndValidatePermissionsEditor --&gt;
+      &lt;class name=&quot;com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVEpisode.CreateTVEpisode&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;startSelenium&quot;/&gt;
+          &lt;include name=&quot;stopSelenium&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVEpisode.CreateTVEpisode --&gt;
+      &lt;class name=&quot;com.nbcuni.test.publisher.tests.Queues.AddModerationStatesToRevisionsOfAQueue.QueueModerationStates&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;startSelenium&quot;/&gt;
+          &lt;include name=&quot;stopSelenium&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.nbcuni.test.publisher.tests.Queues.AddModerationStatesToRevisionsOfAQueue.QueueModerationStates --&gt;
+      &lt;class name=&quot;com.nbcuni.test.publisher.tests.UserCreationAndManagement.Roles.RolesPredefinedInPublisher7&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;startSelenium&quot;/&gt;
+          &lt;include name=&quot;stopSelenium&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.nbcuni.test.publisher.tests.UserCreationAndManagement.Roles.RolesPredefinedInPublisher7 --&gt;
+      &lt;class name=&quot;com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MPXMediaSyncVerification&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;startSelenium&quot;/&gt;
+          &lt;include name=&quot;stopSelenium&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MPXMediaSyncVerification --&gt;
+      &lt;class name=&quot;com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.ScheduleToPublishContentByDateTime&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;startSelenium&quot;/&gt;
+          &lt;include name=&quot;ScheduletopublishContentbyDateTime&quot;/&gt;
+          &lt;include name=&quot;stopSelenium&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.ScheduleToPublishContentByDateTime --&gt;
+      &lt;class name=&quot;com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.EnhanceOperationsDropdownonScheduleTab&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;startSelenium&quot;/&gt;
+          &lt;include name=&quot;stopSelenium&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.EnhanceOperationsDropdownonScheduleTab --&gt;
+      &lt;class name=&quot;com.nbcuni.test.publisher.tests.Security.FileViewDeniedToUnauthenticatedUsers&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;startSelenium&quot;/&gt;
+          &lt;include name=&quot;stopSelenium&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.nbcuni.test.publisher.tests.Security.FileViewDeniedToUnauthenticatedUsers --&gt;
+      &lt;class name=&quot;com.nbcuni.test.publisher.tests.Queues.UnauthenticatedUsersCanViewQueuesRevisionList.UnauthenticatedUsersCanViewQueuesRevisionList&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;startSelenium&quot;/&gt;
+          &lt;include name=&quot;stopSelenium&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.nbcuni.test.publisher.tests.Queues.UnauthenticatedUsersCanViewQueuesRevisionList.UnauthenticatedUsersCanViewQueuesRevisionList --&gt;
+      &lt;class name=&quot;com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;startSelenium&quot;/&gt;
+          &lt;include name=&quot;stopSelenium&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery --&gt;
+      &lt;class name=&quot;com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;startSelenium&quot;/&gt;
+          &lt;include name=&quot;stopSelenium&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson --&gt;
+      &lt;class name=&quot;com.nbcuni.test.publisher.tests.Advertising.GooglePublisherTagsGPT.GPTTagsVerification&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;startSelenium&quot;/&gt;
+          &lt;include name=&quot;stopSelenium&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.nbcuni.test.publisher.tests.Advertising.GooglePublisherTagsGPT.GPTTagsVerification --&gt;
+      &lt;class name=&quot;com.nbcuni.test.publisher.tests.Queues.CreateUpdateRevisionsToQueues.BasicUIForCreatingAndRevisingQueues&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;startSelenium&quot;/&gt;
+          &lt;include name=&quot;stopSelenium&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.nbcuni.test.publisher.tests.Queues.CreateUpdateRevisionsToQueues.BasicUIForCreatingAndRevisingQueues --&gt;
+      &lt;class name=&quot;com.nbcuni.test.publisher.tests.Advertising.Comscore.PixelmanModuleSetupAndVerification&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;startSelenium&quot;/&gt;
+          &lt;include name=&quot;stopSelenium&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.nbcuni.test.publisher.tests.Advertising.Comscore.PixelmanModuleSetupAndVerification --&gt;
+      &lt;class name=&quot;com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.Configuration&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;startSelenium&quot;/&gt;
+          &lt;include name=&quot;stopSelenium&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.Configuration --&gt;
+      &lt;class name=&quot;com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CustomContentType.AddingNewCustomContentType&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;startSelenium&quot;/&gt;
+          &lt;include name=&quot;stopSelenium&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CustomContentType.AddingNewCustomContentType --&gt;
+      &lt;class name=&quot;com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SiteReportVisualization.SiteReportVisualization&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;startSelenium&quot;/&gt;
+          &lt;include name=&quot;stopSelenium&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SiteReportVisualization.SiteReportVisualization --&gt;
+      &lt;class name=&quot;com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVSeason.CreateTVSeason&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;startSelenium&quot;/&gt;
+          &lt;include name=&quot;stopSelenium&quot;/&gt;
+          &lt;include name=&quot;CreateTVSeason&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVSeason.CreateTVSeason --&gt;
+      &lt;class name=&quot;com.nbcuni.test.publisher.tests.Advertising.GooglePublisherTagsGPT.GPTConfiguration&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;startSelenium&quot;/&gt;
+          &lt;include name=&quot;stopSelenium&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.nbcuni.test.publisher.tests.Advertising.GooglePublisherTagsGPT.GPTConfiguration --&gt;
+      &lt;class name=&quot;com.nbcuni.test.publisher.tests.UserCreationAndManagement.UnauthenticatedUsersNotAbleToViewThePublishedContents.UnauthenticatedUsersNotAbleToViewThePublishedContents&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;startSelenium&quot;/&gt;
+          &lt;include name=&quot;stopSelenium&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.nbcuni.test.publisher.tests.UserCreationAndManagement.UnauthenticatedUsersNotAbleToViewThePublishedContents.UnauthenticatedUsersNotAbleToViewThePublishedContents --&gt;
+      &lt;class name=&quot;com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MultipleMPXAccountsPerLoginVerification&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;startSelenium&quot;/&gt;
+          &lt;include name=&quot;stopSelenium&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MultipleMPXAccountsPerLoginVerification --&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Default test --&gt;
-&lt;/suite&gt; &lt;!-- Default suite --&gt;
+  &lt;/test&gt; &lt;!-- All Web Tests(failed) --&gt;
+&lt;/suite&gt; &lt;!-- Failed suite [Test Suite for Publisher 7] --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="testlist-Default_suite" class="panel">
+        <div panel-name="testlist-Failed_suite_[Test_Suite_for_Publisher_7]" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Tests for Default suite</span>
+            <span class="header-content">Tests for Failed suite [Test Suite for Publisher 7]</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Default test (1 class)</span>
+                <span class="test-name">All Web Tests(failed) (31 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="group-Default_suite" class="panel">
+        <div panel-name="group-Failed_suite_[Test_Suite_for_Publisher_7]" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Groups for Default suite</span>
+            <span class="header-content">Groups for Failed suite [Test Suite for Publisher 7]</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="test-group">
               <span class="test-group-name">full</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">MPXMediaSyncVerification</span>
+                <span class="method-in-group-name">CreateTVSeason</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">ScheduletopublishContentbyDateTime</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">SelectVideoPlayerPerVideoFile</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">TestingFacebookAutopublishing</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -179,77 +530,363 @@
               <span class="test-group-name">smoke</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">MPXMediaSyncVerification</span>
+                <span class="method-in-group-name">CreateTVSeason</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">ScheduletopublishContentbyDateTime</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="times-Default_suite" class="panel">
+        <div panel-name="times-Failed_suite_[Test_Suite_for_Publisher_7]" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Times for Default suite</span>
+            <span class="header-content">Times for Failed suite [Test Suite for Publisher 7]</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="times-div">
               <script type="text/javascript">
-suiteTableInitFunctions.push('tableData_Default_suite');
-function tableData_Default_suite() {
+suiteTableInitFunctions.push('tableData_Failed_suite_[Test_Suite_for_Publisher_7]');
+function tableData_Failed_suite_[Test_Suite_for_Publisher_7]() {
 var data = new google.visualization.DataTable();
 data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(4);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'MPXMediaSyncVerification')
-data.setCell(0, 2, 'com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MPXMediaSyncVerification')
-data.setCell(0, 3, 1);
-window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
+data.setCell(0, 1, 'ScheduletopublishContentbyDateTime')
+data.setCell(0, 2, 'com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.ScheduleToPublishContentByDateTime')
+data.setCell(0, 3, 41721);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'CreateTVSeason')
+data.setCell(1, 2, 'com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVSeason.CreateTVSeason')
+data.setCell(1, 3, 40744);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'SelectVideoPlayerPerVideoFile')
+data.setCell(2, 2, 'com.nbcuni.test.publisher.tests.Video.Player.SelectVideoPlayerPerVideoFile')
+data.setCell(2, 3, 39230);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'TestingFacebookAutopublishing')
+data.setCell(3, 2, 'com.nbcuni.test.publisher.tests.SocialIntegration.Facebook.TestingFacebookAutopublishing')
+data.setCell(3, 3, 28633);
+window.suiteTableData['Failed_suite_[Test_Suite_for_Publisher_7]']= { tableData: data, tableDiv: 'times-div-Failed_suite_[Test_Suite_for_Publisher_7]'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 ms</span>
-              <div id="times-div-Default_suite">
-              </div> <!-- times-div-Default_suite -->
+              <span class="suite-total-time">Total running time: 2 minutes</span>
+              <div id="times-div-Failed_suite_[Test_Suite_for_Publisher_7]">
+              </div> <!-- times-div-Failed_suite_[Test_Suite_for_Publisher_7] -->
             </div> <!-- times-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="reporter-Default_suite" class="panel">
+        <div panel-name="reporter-Failed_suite_[Test_Suite_for_Publisher_7]" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Reporter output for Default suite</span>
+            <span class="header-content">Reporter output for Failed suite [Test Suite for Publisher 7]</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">CreateTVSeason</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">URL: http://qa5dev.publisher.nbcuni.com</span>
+                <span class="reporter-method-output">Publish state currently set to Draft</span>
+                <span class="reporter-method-output">Publish state currently set to Review</span>
+                <span class="reporter-method-output">Publish state currently set to Published</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">ScheduletopublishContentbyDateTime</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">URL: http://qa5dev.publisher.nbcuni.com</span>
+                <span class="reporter-method-output">verifyObjectContainsText:  Object //div[@class='content']//tbody contains the text 8d8763b0e554427</span>
+                <span class="reporter-method-output">verifyObjectContainsText:  Object //div[@class='content']//tbody contains the text Moderate to Publish</span>
+                <span class="reporter-method-output">verifyObjectContainsText:  Object //div[@class='content']//tbody contains the text 01/24/2014 - 05:00 PM</span>
+                <span class="reporter-method-output">verifyObjectContainsText:  Object //div[@class='content']//tbody contains the text Moderate to Published</span>
+                <span class="reporter-method-output">verifyObjectContainsText:  Object //div[@class='content']//tbody contains the text Completed</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">TestingFacebookAutopublishing</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">URL: http://qa5dev.publisher.nbcuni.com</span>
+                <span class="reporter-method-output">Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140114151825.png </span>
+                <span class="reporter-method-output"><br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140114151825.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140114151825.png' height='500' width='500'/> </a></span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">SelectVideoPlayerPerVideoFile</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">URL: http://qa5dev.publisher.nbcuni.com</span>
+                <span class="reporter-method-output">Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140114151907.png </span>
+                <span class="reporter-method-output"><br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140114151907.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140114151907.png' height='500' width='500'/> </a></span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="ignored-methods-Default_suite" class="panel">
+        <div panel-name="ignored-methods-Failed_suite_[Test_Suite_for_Publisher_7]" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">27 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MultipleMPXAccountsPerLoginVerification</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">MultipleMPXAccountsPerLoginVerification</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.nbcuni.test.publisher.tests.Queues.UnauthenticatedUsersCanViewQueuesRevisionList.UnauthenticatedUsersCanViewQueuesRevisionList</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">UnauthenticatedUsersCanViewQueuesRevisionList</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Movie.CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedShortVersion</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedShortVersion</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">CreatePerson</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MPXPlayersSyncVerification</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">MPXPlayersSyncVerification</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.nbcuni.test.publisher.tests.Advertising.GooglePublisherTagsGPT.GPTTagsVerification</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">GPTTagsVerification</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">CreatePost</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.nbcuni.test.publisher.tests.Queues.SchedulingQueues.ScheduleRevisionsOfQueues</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">ScheduleRevisionsOfQueues</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVEpisode.CreateTVEpisode</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">CreateTVEpisode</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.nbcuni.test.publisher.tests.Advertising.Comscore.PixelmanModuleSetupAndVerification</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">PixelmanModuleSetupAndVerification</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">MPXVideosSchedulingVerificationInitialOverrides</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.nbcuni.test.publisher.tests.UserCreationAndManagement.UnauthenticatedUsersNotAbleToViewThePublishedContents.UnauthenticatedUsersNotAbleToViewThePublishedContents</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">UnauthenticatedUsersNotAbleToViewThePublishedContents</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityModerationStatesandWorkflows.PublishContenttoUnauthenticatedUsers</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">PublishContenttoUnauthenticatedUsers</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.nbcuni.test.publisher.tests.Security.FileViewDeniedToUnauthenticatedUsers</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">FileViewDeniedToUnauthenticatedUsers</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.nbcuni.test.publisher.tests.Queues.AddModerationStatesToRevisionsOfAQueue.QueueModerationStates</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">QueueModerationStates</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.nbcuni.test.publisher.tests.Advertising.GooglePublisherTagsGPT.GPTConfiguration</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">GPTConfiguration</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.nbcuni.test.publisher.tests.UserCreationAndManagement.Roles.RolesPredefinedInPublisher7</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">RolesPredefinedInPublisher7</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.CreateConfigureAndValidatePermissionsEditor</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">CreateConfigureAndValidatePermissionsEditor</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Movie.CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MPXMediaSyncVerification</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">MPXMediaSyncVerification</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SiteReportVisualization.SiteReportVisualization</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">SiteReportVisualization</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CustomContentType.AddingNewCustomContentType</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">AddingNewCustomContentType</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.EnhanceOperationsDropdownonScheduleTab</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">ScheduletopublishContentbyDateTime</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">CreateCharacterProfile</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.Configuration</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">Configuration</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.nbcuni.test.publisher.tests.Queues.CreateUpdateRevisionsToQueues.BasicUIForCreatingAndRevisingQueues</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">BasicUIForCreatingAndRevisingQueues</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">CreateMediaGallery</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="chronological-Default_suite" class="panel">
+        <div panel-name="chronological-Failed_suite_[Test_Suite_for_Publisher_7]" class="panel">
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">Methods in chronological order</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MPXMediaSyncVerification</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.nbcuni.test.publisher.tests.SocialIntegration.Facebook.TestingFacebookAutopublishing</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">startSelenium(PROD)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">MPXMediaSyncVerification</span>
-                <span class="method-start">14 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">stopSelenium([TestResult name=MPXMediaSyncVerification status=SKIP method=MPXMediaSyncVerification.MPXMediaSyncVe...)</span>
-                <span class="method-start">16 ms</span>
+                <span class="method-name">TestingFacebookAutopublishing</span>
+                <span class="method-start">13406 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">stopSelenium([TestResult name=TestingFacebookAutopublishing status=FAILURE method=TestingFacebookAutopublishing.T...)</span>
+                <span class="method-start">42042 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.nbcuni.test.publisher.tests.Video.Player.SelectVideoPlayerPerVideoFile</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">startSelenium(PROD)</span>
+                <span class="method-start">42967 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">SelectVideoPlayerPerVideoFile</span>
+                <span class="method-start">44547 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">stopSelenium([TestResult name=SelectVideoPlayerPerVideoFile status=FAILURE method=SelectVideoPlayerPerVideoFile.S...)</span>
+                <span class="method-start">83780 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.ScheduleToPublishContentByDateTime</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">startSelenium(PROD)</span>
+                <span class="method-start">84549 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">ScheduletopublishContentbyDateTime</span>
+                <span class="method-start">86138 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">stopSelenium([TestResult name=ScheduletopublishContentbyDateTime status=SUCCESS method=ScheduleToPublishContentBy...)</span>
+                <span class="method-start">127859 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVSeason.CreateTVSeason</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">startSelenium(PROD)</span>
+                <span class="method-start">128427 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">CreateTVSeason</span>
+                <span class="method-start">130004 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">stopSelenium([TestResult name=CreateTVSeason status=SUCCESS method=CreateTVSeason.CreateTVSeason()[pri:0, instanc...)</span>
+                <span class="method-start">170748 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

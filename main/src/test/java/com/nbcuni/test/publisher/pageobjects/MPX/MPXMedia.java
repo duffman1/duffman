@@ -1,21 +1,18 @@
 package com.nbcuni.test.publisher.pageobjects.MPX;
 
 
-import java.util.ArrayList;
-import java.util.List;
-
+import com.nbcuni.test.lib.Util;
+import com.nbcuni.test.publisher.common.AppLib;
+import com.nbcuni.test.webdriver.CustomWebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.Reporter;
 
-import com.nbcuni.test.lib.Util;
-import com.nbcuni.test.publisher.common.AppLib;
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import java.util.ArrayList;
+import java.util.List;
 
 
 /*********************************************
@@ -37,7 +34,8 @@ public class MPXMedia {
     private static String SynchMPXMediaForAccount1_Ddl = "//select[@id='edit-video-sync-settings-1-default-player-id']";
     private static String SynchMPXMediaForAccount2_Ddl = "//select[@id='edit-video-sync-settings-2-default-player-id']";
     private static String SynchMPXMediaForAccount3_Ddl = "//select[@id='edit-video-sync-settings-3-default-player-id']";
-    
+    private static String SynchMPXMediaForAccount4_Ddl = "//select[@id='edit-video-sync-settings-4-default-player-id']";
+
     
     public MPXMedia(final CustomWebDriver custWebDr) {
         webDriver = custWebDr;
@@ -119,6 +117,12 @@ public class MPXMedia {
     	
     	new Select(new WebDriverWait(webDriver, 10).until(ExpectedConditions.
     			visibilityOf(webDriver.findElement(By.xpath(SynchMPXMediaForAccount3_Ddl))))).selectByVisibleText(playerTitle);
+    }
+
+    public void SelectMPXPlayerForAccount4(String playerTitle) throws Exception {
+
+        new Select(new WebDriverWait(webDriver, 10).until(ExpectedConditions.
+                visibilityOf(webDriver.findElement(By.xpath(SynchMPXMediaForAccount4_Ddl))))).selectByVisibleText(playerTitle);
     }
 }
 

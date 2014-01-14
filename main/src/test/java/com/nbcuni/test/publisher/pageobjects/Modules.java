@@ -95,17 +95,22 @@ public class Modules {
     	
     }
     
-    public void DisableModule(String moduleName) throws Exception {
+    public boolean DisableModule(String moduleName) throws Exception {
     	
     	String moduleLocator = "//label/strong[text()='" + moduleName + "']/../../../td[@class='checkbox']//input";
     	
     	WebElement Cbx = webDriver.findElement(By.xpath(moduleLocator));
     	
+    	boolean moduleAlreadyDisabled = true;
+    	
     	if (Cbx.isSelected() == true) {
     		Cbx.click();
     		webDriver.click(SaveConfiguration_Btn);
     		this.VerifyConfigurationSaved();
+    		moduleAlreadyDisabled = false;
     	}
+    	
+    	return moduleAlreadyDisabled;
     	
     	
     }

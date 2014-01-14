@@ -1,41 +1,14 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVSeason;
 
 
-import java.util.Arrays;
-import java.util.List;
-
-import junit.framework.Assert;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
+import com.nbcuni.test.publisher.common.ParentTest;
+import com.nbcuni.test.publisher.pageobjects.UserLogin;
+import com.nbcuni.test.publisher.pageobjects.content.*;
 import org.testng.Reporter;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Optional;
-import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import com.nbcuni.test.publisher.common.AppLib;
-import com.nbcuni.test.publisher.common.ParentTest;
-import com.nbcuni.test.publisher.common.Random;
-import com.nbcuni.test.publisher.pageobjects.Logout;
-import com.nbcuni.test.publisher.pageobjects.Modules;
-import com.nbcuni.test.publisher.pageobjects.Overlay;
-import com.nbcuni.test.publisher.pageobjects.UserLogin;
-import com.nbcuni.test.publisher.pageobjects.content.BasicInformation;
-import com.nbcuni.test.publisher.pageobjects.content.CastCrew;
-import com.nbcuni.test.publisher.pageobjects.content.CharactersInformation;
-import com.nbcuni.test.publisher.pageobjects.content.ContentParent;
-import com.nbcuni.test.publisher.pageobjects.content.ContentTypes;
-import com.nbcuni.test.publisher.pageobjects.content.PersonsInformation;
-import com.nbcuni.test.publisher.pageobjects.content.PublishingOptions;
-import com.nbcuni.test.publisher.pageobjects.content.RevisionState;
-import com.nbcuni.test.publisher.pageobjects.content.SelectFile;
-import com.nbcuni.test.publisher.pageobjects.taxonomy.Taxonomy;
-import com.nbcuni.test.webdriver.CustomWebDriver;
-import com.nbcuni.test.webdriver.WebDriverClientExecution;
+import java.util.Arrays;
+import java.util.List;
 
 
 public class CreateTVSeason extends ParentTest{
@@ -98,7 +71,7 @@ public class CreateTVSeason extends ParentTest{
     	contentParent.ClickSaveBtn();
     	contentParent.VerifyMessageStatus("TV Season " + tvSeasonTitle + " has been created.");
     	RevisionState revisionState = new RevisionState(webDriver);
-    	revisionState.VerifyRevisionState(state);
+    	contentParent.WorkBenchInfoBlock(Arrays.asList(state));
     	
         }
         

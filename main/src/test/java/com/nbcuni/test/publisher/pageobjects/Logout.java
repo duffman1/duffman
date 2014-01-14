@@ -45,7 +45,9 @@ public class Logout {
     public void ClickLogoutBtn() {
     	
     	new WebDriverWait(webDriver, 10).until(ExpectedConditions.
-    			elementToBeClickable(By.xpath(LogOut_Btn))).click();;
+    			elementToBeClickable(By.xpath(LogOut_Btn))).click();
+    	
+    	webDriver.navigate().refresh(); //TODO - logout requires a refresh for some reason. Figure out a better way
     	
     }
     
