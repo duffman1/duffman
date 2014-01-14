@@ -81,8 +81,7 @@ public class UnauthenticatedUsersNotAbleToViewThePublishedContents extends Paren
     	contentParent.ClickSaveBtn();
     	overlay.switchToDefaultContent();
     	contentParent.VerifyMessageStatus("Post " + postTitle + " has been created.");
-    	RevisionState revisionState = new RevisionState(webDriver);
-    	revisionState.VerifyRevisionState("Published");
+    	contentParent.WorkBenchInfoBlock(Arrays.asList("Published"));
     	
     	//Step 3
         String ContentURL = webDriver.getCurrentUrl();

@@ -134,22 +134,12 @@ public class MPXMediaSyncVerification extends ParentTest{
             mpxMedia.ClickSyncMPXMediaNowLnk();
             ContentParent contentParent = new ContentParent(webDriver);
             contentParent.VerifyMessageStatus("Processed video import/update manually for all accounts.");
-            /* TODO - this needs some clarification as sometimes this text is present post sync and other times it's not
-            contentParent.VerifyMessageStatus("players returned for account");
-            contentParent.VerifyMessageStatus("All mpxMedia is up to date for account \"" + configuredAccounts.get(0) + "\"");
-            if (configuredAccounts.size() >= 2) {
-            	contentParent.VerifyMessageStatus("All mpxMedia is up to date for account \"" + configuredAccounts.get(1) + "\""); 
-            }
-            if (configuredAccounts.size() >= 3) {
-            	contentParent.VerifyMessageStatus("All mpxMedia is up to date for account \"" + configuredAccounts.get(2) + "\"");   
-            }*/
             
             //Step 6
             Cron cron = new Cron(webDriver);
             cron.ClickRunCronToCompleteImportLnk();
             overlay.SwitchToFrame("Cron");
             cron.ClickRunCronBtn();
-            contentParent.VerifyMessageStatus("Processed video import/update via cron for all accounts.");
             contentParent.VerifyMessageStatus("Cron run successfully.");
             overlay.switchToDefaultContent();
             taxonomy.NavigateSite("Content>>Files>>mpxMedia");

@@ -1,9 +1,11 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling;
 
 import com.nbcuni.test.publisher.common.ParentTest;
+import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.content.*;
 import com.nbcuni.test.publisher.pageobjects.queues.ScheduleQueue;
+
 import org.testng.annotations.Test;
 
 import java.text.SimpleDateFormat;
@@ -30,6 +32,10 @@ public class EnhanceOperationsDropdownonScheduleTab extends ParentTest {
         UserLogin userLogin = applib.openApplication();
         userLogin.Login("admin@publisher.nbcuni.com", "pa55word");
 
+      //Step 1a
+        Modules modules = new Modules(webDriver);
+        modules.VerifyModuleEnabled("Pub Post");
+        
       //Step 2
         taxonomy.VerifyContentMenuExist("Content");
         taxonomy.VerifyContentMenuExist("My Workbench");
