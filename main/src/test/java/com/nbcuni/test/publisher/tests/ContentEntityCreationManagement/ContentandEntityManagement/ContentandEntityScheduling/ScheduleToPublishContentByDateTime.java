@@ -10,34 +10,34 @@ import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
 /*************************************************************************************
- * TEST CASE 
- * Step 1 - Log into a new-installation Publisher test instance as Drupal User 1<br> 
- * Step 2 - Create  a Draft post<br> 
- * Step 3 - Verify all Tabs (View, Edit Draft, Revisions, Schedule)
- * Step 4 - Click Revision Tab and Verify that There should be one revision<br>
- * Step 5 - Click on Schedule Tab and Verify that 'Add Schedule Version' and Schedule table is empty.<br>
- * Step 6 - Click on Edit Draft and Populate Revision Log and Synopsis<br> 
- * Step 7 - Verify that Revision State,Public, Moderate fields displayed under workflow tab <br>
- * Step 8 - Click Revision Tab and Verify that there are two revision<br>
- * Step 9 - Click on Schedule Tab and Verify  fields(Revision, Moderate State, Date and Time) and populate with past date and time and verify the failed message<br>
- * Step 10 - Click on Schedule Tab and Verify  fields(Revision, Moderate State, Date and Time) and populate with future date and time and time and verify the success message<br>
- * Step 11 - Verify Schedule table for scheduled revision and Run Cron and verify that published revision displayed under revision tab<br> 
- * 
- * @throws Throwable No Return values are needed
- *************************************************************************************/
+* TEST CASE
+* Step 1 - Log into a new-installation Publisher test instance as Drupal User 1<br>
+* Step 2 - Create a Draft post<br>
+* Step 3 - Verify all Tabs (View, Edit Draft, Revisions, Schedule)
+* Step 4 - Click Revision Tab and Verify that There should be one revision<br>
+* Step 5 - Click on Schedule Tab and Verify that 'Add Schedule Version' and Schedule table is empty.<br>
+* Step 6 - Click on Edit Draft and Populate Revision Log and Synopsis<br>
+* Step 7 - Verify that Revision State,Public, Moderate fields displayed under workflow tab <br>
+* Step 8 - Click Revision Tab and Verify that there are two revision<br>
+* Step 9 - Click on Schedule Tab and Verify fields(Revision, Moderate State, Date and Time) and populate with past date and time and verify the failed message<br>
+* Step 10 - Click on Schedule Tab and Verify fields(Revision, Moderate State, Date and Time) and populate with future date and time and time and verify the success message<br>
+* Step 11 - Verify Schedule table for scheduled revision and Run Cron and verify that published revision displayed under revision tab<br>
+*
+* @throws Throwable No Return values are needed
+*************************************************************************************/
 
 public class ScheduleToPublishContentByDateTime extends ParentTest {
 
     @Test(groups = {"full", "smoke"})
-	public void ScheduletopublishContentbyDateTime() throws Exception{
+        public void ScheduletopublishContentbyDateTime() throws Exception{
 
-		//Step 1
-    	UserLogin userLogin = applib.openApplication();
+                //Step 1
+            UserLogin userLogin = applib.openApplication();
         userLogin.Login("admin@publisher.nbcuni.com", "pa55word");
 
         //Step 2
         taxonomy.VerifyContentMenuExist("Content");
-        taxonomy.VerifyContentMenuExist("My Workbench");    
+        taxonomy.VerifyContentMenuExist("My Workbench");
         CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver, applib);
         String postTitle = createDefaultContent.Post("Draft");
 
@@ -71,13 +71,13 @@ public class ScheduleToPublishContentByDateTime extends ParentTest {
         basicInformation.EnterSynopsis("Testing for new revision");
         overlay.SwitchToActiveFrame();
         PublishingOptions publishingOptions = new PublishingOptions(webDriver);
-    	publishingOptions.ClickPublishingOptionsLnk();
-    	publishingOptions.EnterMessageForStateChange("Test Revision 2");
-    	contentParent.ClickSaveBtn();
-    	overlay.switchToDefaultContent();
+            publishingOptions.ClickPublishingOptionsLnk();
+            publishingOptions.EnterMessageForStateChange("Test Revision 2");
+            contentParent.ClickSaveBtn();
+            overlay.switchToDefaultContent();
 
         //Step 7
-    	contentParent.WorkBenchInfoBlock(Arrays.asList("Revision state", "Public","Moderate"));
+            contentParent.WorkBenchInfoBlock(Arrays.asList("Revision state", "Public","Moderate"));
 
         //Step 8
         contentParent.ClickRevisionsTab();
@@ -104,7 +104,7 @@ public class ScheduleToPublishContentByDateTime extends ParentTest {
         overlay.SwitchToActiveFrame();
         contentParent.VerifyMessageStatus("The scheduled revision operation has been saved");
 
-	    //Step 11 //TODO - this step needs additional work and validation as time allows
+         //Step 11 //TODO - this step needs additional work and validation as time allows
         overlay.SwitchToActiveFrame();
         scheduleQueue.VerifyScheduledQueue(postTitle);
         scheduleQueue.VerifyScheduledQueue("Moderate to Publish");
@@ -117,5 +117,5 @@ public class ScheduleToPublishContentByDateTime extends ParentTest {
         revisions.ClickRevisionTab();
         overlay.SwitchToActiveFrame();
         //revisionstate.VerifyRevisionState("Revision was set from Draft to Published on " + sDate);
-	}
+        }
 }
