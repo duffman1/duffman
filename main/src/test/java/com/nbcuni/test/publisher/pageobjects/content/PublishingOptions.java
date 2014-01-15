@@ -32,6 +32,7 @@ public class PublishingOptions {
     private static String CreateNewRevision_Cbx = "//input[@id='edit-revision']";
     private static String ModerationState_Ddl = "//select[@id='edit-event']";
     private static String LogMessageStateChange_Txa = "(//textarea[@id='edit-event-comment'])[1]";
+    private static String Published_Cbx = "//input[@id='edit-published']";
     
     
     public PublishingOptions(final CustomWebDriver custWebDr) {
@@ -74,6 +75,15 @@ public class PublishingOptions {
     	new WebDriverWait(webDriver, 10).until(ExpectedConditions.
     			visibilityOf(webDriver.findElement(By.xpath(LogMessageStateChange_Txa))));
     	webDriver.type(LogMessageStateChange_Txa, messageTxt);
+    }
+    
+    public void UncheckPublishedCbx() throws Exception {
+    	
+    	WebElement el = new WebDriverWait(webDriver, 10).until(ExpectedConditions.presenceOfElementLocated(By.xpath(Published_Cbx)));
+    	
+    	if (el.isSelected() == true) {
+    		el.click();
+    	}
     }
     
     

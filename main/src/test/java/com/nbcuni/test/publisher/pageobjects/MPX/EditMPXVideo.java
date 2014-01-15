@@ -4,10 +4,13 @@ package com.nbcuni.test.publisher.pageobjects.MPX;
 import com.nbcuni.test.lib.Util;
 import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.webdriver.CustomWebDriver;
+
 import junit.framework.Assert;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 
@@ -30,7 +33,7 @@ public class EditMPXVideo {
     private static String MPXMediaExpirationTime_Txb = "//input[contains(@id, 'edit-field-mpx-expiration-date')][contains(@id, 'timeEntry')]";
     private static String OverrideMPXAvailableDate_Cbx = "//input[@id='field_mpx_available_date_mpx_override_checkbox']";
     private static String OverrideMPXExpirationDate_Cbx = "//input[@id='field_mpx_expiration_date_mpx_override_checkbox']";
-
+    private static String PubMPXVideoPlayer_Ddl = "//select[@id='edit-pub-mpx-player-pid']";
 
     public EditMPXVideo(final CustomWebDriver custWebDr) {
         webDriver = custWebDr;
@@ -91,7 +94,32 @@ public class EditMPXVideo {
         el.click(); //requires click on this input first to prevent "cannot focus element" exception
         el.sendKeys(expirationTime);
     }
-
+    
+    public void VerifyPubMPXVideoPlayerPresent() throws Exception {
+    	
+    	Select el = new Select(new WebDriverWait(webDriver, 10).until(ExpectedConditions.
+    			presenceOfElementLocated(By.xpath(PubMPXVideoPlayer_Ddl))));
+    	
+    	Assert.assertTrue(el.getOptions().size() > 1);
+    	
+    }
+    
+    public void VerifyPubMPXVideoPlayerSelectedOption(String selectedPlayerTitle) throws Exception {
+    	
+    	Select el = new Select(new WebDriverWait(webDriver, 10).until(ExpectedConditions.
+    			presenceOfElementLocated(By.xpath(PubMPXVideoPlayer_Ddl))));
+    	
+    	Assert.assertTrue(el.getFirstSelectedOption().equals(selectedPlayerTitle));
+    	
+    }
+    
+    public void SelectPubMPXVideoPlayer(String playerTitle) throws Exception {
+    	
+    	new Select(new WebDriverWait(webDriver, 10).until(ExpectedConditions.
+    			presenceOfElementLocated(By.xpath(PubMPXVideoPlayer_Ddl)))).selectByVisibleText(playerTitle);
+    	
+    	
+    }
   
 }
 

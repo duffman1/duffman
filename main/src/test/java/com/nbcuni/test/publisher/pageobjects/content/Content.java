@@ -66,6 +66,13 @@ public class Content {
     	
     }
     
+    public void ClickEditMenuBtn(String contentItemTitle) throws Exception {
+    	
+    	WebElement editBtn = new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(
+    			By.xpath("//a[text()='" + contentItemTitle + "']/../..//a[text()='Edit']")));
+    	editBtn.click();
+    }
+
     public void ClickEditExtendMenuBtn(String contentItemTitle) throws Exception {
     	
     	WebElement expandBtn = new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(

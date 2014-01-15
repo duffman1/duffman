@@ -62,6 +62,7 @@ public class Overlay {
     public void SwitchToActiveFrame() throws Exception {
     	
     	this.switchToDefaultContent();
+    	Thread.sleep(1000); //TODO - modify with an explicit wait
     	webDriver.switchTo().frame(webDriver.findElement(By.xpath(ActiveFrame_Frm)));
     }
     

@@ -142,7 +142,7 @@ public class MPXVideosSchedulingVerificationInitialOverrides extends ParentTest{
             contentParent.VerifyPageContentPresent(Arrays.asList("MPX Media Available Date:",
                     formattedAvailableDate, "MPX Media Expiration Date: ", formattedExpirationDate));
 
-            /*Below steps commented out as overrride values not present in content search overlay. Emailed Pete/Sruthi to follow up
+            /*Below steps commented out as override values not present in content search overlay. Emailed Pete/Sruthi to follow up
             //Step 26
             taxonomy.NavigateSite("Content>>Files>>mpxMedia");
             overlay.SwitchToFrame("Content dialog");

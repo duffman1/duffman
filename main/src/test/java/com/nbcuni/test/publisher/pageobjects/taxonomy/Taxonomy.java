@@ -54,6 +54,28 @@ public class Taxonomy {
     	int depth = tierLevel.length;
     	if (menuPath.startsWith("Home")) { //home link taxonomy
     		
+    		if (menuPath.contains("Development")) {
+    			
+    			if (depth == 3) {
+    			
+    				//TODO - update for all tier length. Right now almost all tests that leverage the devel module will be tier 3 taxonomy
+    				tier1Locator = Home_Lnk;
+        			tier2Locator = Home_Lnk + "/../..//span[contains(text(), 'Development')]";
+        			tier3Locator = tier2Locator + "/..//a[contains(text(), '" + tierLevel[2] + "')]";
+            		
+            		WebElement tier1Lnk = new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOf(webDriver.findElement(
+            				By.xpath(tier1Locator))));
+            		webDriver.executeScript(MouseOver_Js, tier1Lnk);
+            		WebElement tier2Lnk = new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOf(webDriver.findElement(
+            				By.xpath(tier2Locator))));
+            		webDriver.executeScript(MouseOver_Js, tier2Lnk);
+            		WebElement tier3Lnk = new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOf(webDriver.findElement(
+            				By.xpath(tier3Locator))));
+            		tier3Lnk.click();
+            		this.MouseOffTaxonomyElement(tier3Locator);
+    			}
+    		}
+    		
     		if (depth == 1) {
     			new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(By.xpath(Home_Lnk))).click();
     		}
@@ -141,6 +163,8 @@ public class Taxonomy {
     			By.xpath(".//ul[@id='admin-menu-menu']/..//a[text()='" + MenuName + "']"))));
     	
     }
+    
+    
   
 }
 

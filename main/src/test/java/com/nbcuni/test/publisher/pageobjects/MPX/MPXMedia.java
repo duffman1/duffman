@@ -124,5 +124,10 @@ public class MPXMedia {
         new Select(new WebDriverWait(webDriver, 10).until(ExpectedConditions.
                 visibilityOf(webDriver.findElement(By.xpath(SynchMPXMediaForAccount4_Ddl))))).selectByVisibleText(playerTitle);
     }
+    
+    public void ClickMPXPlayerUnpublishedHereLnk(String playerTitle) throws Exception {
+
+        webDriver.findElement(By.xpath("//div[@class='messages error']//strong//em[text()='" + playerTitle + "']/../..//a[text()='here']")).click();
+    }
 }
 
