@@ -106,10 +106,8 @@ public class EditMPXVideo {
     
     public void VerifyPubMPXVideoPlayerSelectedOption(String selectedPlayerTitle) throws Exception {
     	
-    	Select el = new Select(new WebDriverWait(webDriver, 10).until(ExpectedConditions.
-    			presenceOfElementLocated(By.xpath(PubMPXVideoPlayer_Ddl))));
-    	
-    	Assert.assertTrue(el.getFirstSelectedOption().equals(selectedPlayerTitle));
+    	Assert.assertTrue(webDriver.findElement(By.
+    			xpath("//select[@id='edit-pub-mpx-player-pid']/option[@selected='selected']")).getText().equals(selectedPlayerTitle));
     	
     }
     

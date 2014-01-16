@@ -86,10 +86,8 @@ public class PixelmanModuleSetupAndVerification extends ParentTest {
         modules.EnterFilterName("Pixelman");
         modules.DisableModule("Pixelman");
         modules.EnterFilterName("Pub Ads");
-        boolean moduleAlreadyDisabled = modules.DisableModule("Pub Ads");
-        if (moduleAlreadyDisabled == true) {
-        	overlay.ClickCloseOverlayLnk();
-        }
+        modules.DisableModule("Pub Ads");
+        overlay.ClickCloseOverlayLnk();
         
         //Step 9a
         overlay.switchToDefaultContent();

@@ -84,10 +84,10 @@ public class Modules {
         		new WebDriverWait(webDriver, 10).until(ExpectedConditions.
         				elementToBeClickable(By.xpath(Continue_Btn))).click();
         		overlay.switchToDefaultContent();
+        		
         	}
         	
         	overlay.SwitchToFrame("Modules");
-        	
         	webDriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         	
     		this.VerifyConfigurationSaved();

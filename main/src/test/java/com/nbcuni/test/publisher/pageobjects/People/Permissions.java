@@ -57,7 +57,7 @@ public class Permissions {
                 visibilityOf(webDriver.findElement(By.xpath(AddAndUploadNewFiles_Cbx))));
 
         if (el.isSelected() == false) {
-        	webDriver.executeScript("window.scrollBy(0,-100);");
+        	webDriver.executeScript("window.scrollBy(0,-50000);");
             el.click();
         }
     }

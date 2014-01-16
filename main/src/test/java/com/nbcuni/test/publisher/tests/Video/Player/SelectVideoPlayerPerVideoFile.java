@@ -86,20 +86,20 @@ public class SelectVideoPlayerPerVideoFile extends ParentTest{
         		//Step 8 through 19 (truncated as test steps no longer match application functionality)
         		overlay.switchToDefaultContent();
         		taxonomy.NavigateSite("Content>>Files>>mpxMedia");
-        		overlay.SwitchToActiveFrame();
+        		//overlay.SwitchToActiveFrame();
         		searchFor.EnterTitle("Automation1");
         		searchFor.ClickApplyBtn();
-        		content.ClickEditExtendMenuBtn("Automation1");
-        		overlay.SwitchToActiveFrame();
+        		content.ClickEditMenuBtn("Automation1");
+        		//overlay.SwitchToActiveFrame();
         		editMPXVideo.SelectPubMPXVideoPlayer("Auditude Demo player");
         		contentParent.ClickSaveBtn();
         		overlay.switchToDefaultContent();
         		taxonomy.NavigateSite("Content>>Files>>mpxMedia");
-        		overlay.SwitchToActiveFrame();
+        		//overlay.SwitchToActiveFrame();
         		searchFor.EnterTitle("Automation1");
         		searchFor.ClickApplyBtn();
-        		content.ClickEditExtendMenuBtn("Automation1");
-        		overlay.SwitchToActiveFrame();
+        		content.ClickEditMenuBtn("Automation1");
+        		//overlay.SwitchToActiveFrame();
         		editMPXVideo.VerifyPubMPXVideoPlayerSelectedOption("Auditude Demo player");
         	
         	}

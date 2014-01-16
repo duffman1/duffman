@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="1" passed="0">
+<testng-results skipped="0" failed="4" total="4" passed="0">
   <reporter-output>
     <line>
       <![CDATA[Setting Environment to: PROD]]>
@@ -8,24 +8,78 @@
       <![CDATA[Environment: PROD]]>
     </line>
     <line>
-      <![CDATA[URL: http://qa3prod.publisher.nbcuni.com]]>
+      <![CDATA[URL: http://qa5dev.publisher.nbcuni.com]]>
     </line>
     <line>
-      <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140115151317.png ]]>
+      <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140116103012.png ]]>
     </line>
     <line>
-      <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140115151317.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140115151317.png' height='500' width='500'/> </a>]]>
+      <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140116103012.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140116103012.png' height='500' width='500'/> </a>]]>
+    </line>
+    <line>
+      <![CDATA[Setting Environment to: PROD]]>
+    </line>
+    <line>
+      <![CDATA[Environment: PROD]]>
+    </line>
+    <line>
+      <![CDATA[URL: http://qa5dev.publisher.nbcuni.com]]>
+    </line>
+    <line>
+      <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140116103041.png ]]>
+    </line>
+    <line>
+      <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140116103041.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140116103041.png' height='500' width='500'/> </a>]]>
+    </line>
+    <line>
+      <![CDATA[Setting Environment to: PROD]]>
+    </line>
+    <line>
+      <![CDATA[Environment: PROD]]>
+    </line>
+    <line>
+      <![CDATA[URL: http://qa5dev.publisher.nbcuni.com]]>
+    </line>
+    <line>
+      <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140116103136.png ]]>
+    </line>
+    <line>
+      <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140116103136.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140116103136.png' height='500' width='500'/> </a>]]>
+    </line>
+    <line>
+      <![CDATA[Setting Environment to: PROD]]>
+    </line>
+    <line>
+      <![CDATA[Environment: PROD]]>
+    </line>
+    <line>
+      <![CDATA[URL: http://qa5dev.publisher.nbcuni.com]]>
+    </line>
+    <line>
+      <![CDATA[URL: http://qa5dev.publisher.nbcuni.com]]>
+    </line>
+    <line>
+      <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140116103225.png ]]>
+    </line>
+    <line>
+      <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140116103225.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140116103225.png' height='500' width='500'/> </a>]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="70952" started-at="2014-01-15T20:12:06Z" finished-at="2014-01-15T20:13:17Z">
+  <suite name="Failed suite [Test Suite for Publisher 7]" duration-ms="191090" started-at="2014-01-16T15:29:15Z" finished-at="2014-01-16T15:32:26Z">
     <groups>
       <group name="full">
-        <method signature="UndefinedIndexesDisplayingForMPXPlayers.UndefinedIndexesDisplayingForMPXPlayers()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.UndefinedIndexesDisplayingForMPXPlayers.UndefinedIndexesDisplayingForMPXPlayers@6d7f11fb]" name="UndefinedIndexesDisplayingForMPXPlayers" class="com.nbcuni.test.publisher.tests.Video.UndefinedIndexesDisplayingForMPXPlayers.UndefinedIndexesDisplayingForMPXPlayers"/>
+        <method signature="EnhanceContentLibraryTable.EnhanceContentLibraryTable()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.EnhanceContentLibraryTable.EnhanceContentLibraryTable@7f712b3a]" name="EnhanceContentLibraryTable" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.EnhanceContentLibraryTable.EnhanceContentLibraryTable"/>
+        <method signature="MPXPlayersSyncVerification.MPXPlayersSyncVerification()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MPXPlayersSyncVerification@15f48262]" name="MPXPlayersSyncVerification" class="com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MPXPlayersSyncVerification"/>
+        <method signature="TestingFacebookAutopublishing.TestingFacebookAutopublishing()[pri:0, instance:com.nbcuni.test.publisher.tests.SocialIntegration.Facebook.TestingFacebookAutopublishing@6f649b44]" name="TestingFacebookAutopublishing" class="com.nbcuni.test.publisher.tests.SocialIntegration.Facebook.TestingFacebookAutopublishing"/>
+        <method signature="UndefinedIndexesDisplayingForMPXPlayers.UndefinedIndexesDisplayingForMPXPlayers()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.UndefinedIndexesDisplayingForMPXPlayers.UndefinedIndexesDisplayingForMPXPlayers@62facf0b]" name="UndefinedIndexesDisplayingForMPXPlayers" class="com.nbcuni.test.publisher.tests.Video.UndefinedIndexesDisplayingForMPXPlayers.UndefinedIndexesDisplayingForMPXPlayers"/>
       </group> <!-- full -->
+      <group name="smoke">
+        <method signature="MPXPlayersSyncVerification.MPXPlayersSyncVerification()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MPXPlayersSyncVerification@15f48262]" name="MPXPlayersSyncVerification" class="com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MPXPlayersSyncVerification"/>
+      </group> <!-- smoke -->
     </groups>
-    <test name="Default test" duration-ms="70952" started-at="2014-01-15T20:12:06Z" finished-at="2014-01-15T20:13:17Z">
+    <test name="All Web Tests(failed)" duration-ms="191090" started-at="2014-01-16T15:29:15Z" finished-at="2014-01-16T15:32:26Z">
       <class name="com.nbcuni.test.publisher.tests.Video.UndefinedIndexesDisplayingForMPXPlayers.UndefinedIndexesDisplayingForMPXPlayers">
-        <test-method status="PASS" signature="startSelenium(java.lang.String)[pri:0, instance:com.nbcuni.test.publisher.tests.Video.UndefinedIndexesDisplayingForMPXPlayers.UndefinedIndexesDisplayingForMPXPlayers@6d7f11fb]" name="startSelenium" is-config="true" duration-ms="13900" started-at="2014-01-15T15:12:06Z" finished-at="2014-01-15T15:12:20Z">
+        <test-method status="PASS" signature="startSelenium(java.lang.String)[pri:0, instance:com.nbcuni.test.publisher.tests.Video.UndefinedIndexesDisplayingForMPXPlayers.UndefinedIndexesDisplayingForMPXPlayers@62facf0b]" name="startSelenium" is-config="true" duration-ms="1848" started-at="2014-01-16T10:30:42Z" finished-at="2014-01-16T10:30:44Z">
           <params>
             <param index="0">
               <value>
@@ -42,7 +96,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="FAIL" signature="UndefinedIndexesDisplayingForMPXPlayers()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.UndefinedIndexesDisplayingForMPXPlayers.UndefinedIndexesDisplayingForMPXPlayers@6d7f11fb]" name="UndefinedIndexesDisplayingForMPXPlayers" duration-ms="56236" started-at="2014-01-15T15:12:20Z" finished-at="2014-01-15T15:13:17Z">
+        <test-method status="FAIL" signature="UndefinedIndexesDisplayingForMPXPlayers()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.UndefinedIndexesDisplayingForMPXPlayers.UndefinedIndexesDisplayingForMPXPlayers@62facf0b]" name="UndefinedIndexesDisplayingForMPXPlayers" duration-ms="51721" started-at="2014-01-16T10:30:44Z" finished-at="2014-01-16T10:31:36Z">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
               <![CDATA[Cannot locate element with text: AutomationPlayer1
@@ -58,7 +112,7 @@ Build info: version: '2.35.0', revision: '8df0c6bedf70ff9f22c647788f9fe9c8d22210
 System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.8.5', java.version: '1.6.0_65'
 Driver info: driver.version: unknown
 	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:147)
-	at com.nbcuni.test.publisher.pageobjects.MPX.EditMPXVideo.SelectPubMPXVideoPlayer(EditMPXVideo.java:119)
+	at com.nbcuni.test.publisher.pageobjects.MPX.EditMPXVideo.SelectPubMPXVideoPlayer(EditMPXVideo.java:117)
 	at com.nbcuni.test.publisher.tests.Video.UndefinedIndexesDisplayingForMPXPlayers.UndefinedIndexesDisplayingForMPXPlayers.UndefinedIndexesDisplayingForMPXPlayers(UndefinedIndexesDisplayingForMPXPlayers.java:97)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
@@ -70,40 +124,29 @@ Driver info: driver.version: unknown
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
 ]]>
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
             <line>
-              <![CDATA[URL: http://qa3prod.publisher.nbcuni.com]]>
+              <![CDATA[URL: http://qa5dev.publisher.nbcuni.com]]>
             </line>
             <line>
-              <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140115151317.png ]]>
+              <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140116103136.png ]]>
             </line>
             <line>
-              <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140115151317.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140115151317.png' height='500' width='500'/> </a>]]>
+              <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140116103136.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140116103136.png' height='500' width='500'/> </a>]]>
             </line>
           </reporter-output>
         </test-method> <!-- UndefinedIndexesDisplayingForMPXPlayers -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Video.UndefinedIndexesDisplayingForMPXPlayers.UndefinedIndexesDisplayingForMPXPlayers@6d7f11fb]" name="stopSelenium" is-config="true" duration-ms="798" started-at="2014-01-15T15:13:17Z" finished-at="2014-01-15T15:13:17Z">
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Video.UndefinedIndexesDisplayingForMPXPlayers.UndefinedIndexesDisplayingForMPXPlayers@62facf0b]" name="stopSelenium" is-config="true" duration-ms="738" started-at="2014-01-16T10:31:36Z" finished-at="2014-01-16T10:31:36Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=UndefinedIndexesDisplayingForMPXPlayers status=FAILURE method=UndefinedIndexesDisplayingForMPXPlayers.UndefinedIndexesDisplayingForMPXPlayers()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.UndefinedIndexesDisplayingForMPXPlayers.UndefinedIndexesDisplayingForMPXPlayers@6d7f11fb] output=URL: http://qa3prod.publisher.nbcuni.com]]]>
+                <![CDATA[[TestResult name=UndefinedIndexesDisplayingForMPXPlayers status=FAILURE method=UndefinedIndexesDisplayingForMPXPlayers.UndefinedIndexesDisplayingForMPXPlayers()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.UndefinedIndexesDisplayingForMPXPlayers.UndefinedIndexesDisplayingForMPXPlayers@62facf0b] output=URL: http://qa5dev.publisher.nbcuni.com]]]>
               </value>
             </param>
           </params>
@@ -111,6 +154,225 @@ Driver info: driver.version: unknown
           </reporter-output>
         </test-method> <!-- stopSelenium -->
       </class> <!-- com.nbcuni.test.publisher.tests.Video.UndefinedIndexesDisplayingForMPXPlayers.UndefinedIndexesDisplayingForMPXPlayers -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.EnhanceContentLibraryTable.EnhanceContentLibraryTable">
+        <test-method status="PASS" signature="startSelenium(java.lang.String)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.EnhanceContentLibraryTable.EnhanceContentLibraryTable@7f712b3a]" name="startSelenium" is-config="true" duration-ms="13732" started-at="2014-01-16T10:29:15Z" finished-at="2014-01-16T10:29:28Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[PROD]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Setting Environment to: PROD]]>
+            </line>
+            <line>
+              <![CDATA[Environment: PROD]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- startSelenium -->
+        <test-method status="FAIL" signature="EnhanceContentLibraryTable()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.EnhanceContentLibraryTable.EnhanceContentLibraryTable@7f712b3a]" name="EnhanceContentLibraryTable" duration-ms="43984" started-at="2014-01-16T10:29:28Z" finished-at="2014-01-16T10:30:12Z">
+          <exception class="java.lang.IndexOutOfBoundsException">
+            <message>
+              <![CDATA[Index: 0, Size: 0]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.RangeCheck(ArrayList.java:547)
+	at java.util.ArrayList.get(ArrayList.java:322)
+	at com.nbcuni.test.publisher.pageobjects.content.SearchFor.VerifySearchHeaderColumnOrder(SearchFor.java:88)
+	at com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.EnhanceContentLibraryTable.EnhanceContentLibraryTable.EnhanceContentLibraryTable(EnhanceContentLibraryTable.java:56)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IndexOutOfBoundsException -->
+          <reporter-output>
+            <line>
+              <![CDATA[URL: http://qa5dev.publisher.nbcuni.com]]>
+            </line>
+            <line>
+              <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140116103012.png ]]>
+            </line>
+            <line>
+              <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140116103012.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140116103012.png' height='500' width='500'/> </a>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- EnhanceContentLibraryTable -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.EnhanceContentLibraryTable.EnhanceContentLibraryTable@7f712b3a]" name="stopSelenium" is-config="true" duration-ms="924" started-at="2014-01-16T10:30:12Z" finished-at="2014-01-16T10:30:13Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=EnhanceContentLibraryTable status=FAILURE method=EnhanceContentLibraryTable.EnhanceContentLibraryTable()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.EnhanceContentLibraryTable.EnhanceContentLibraryTable@7f712b3a] output=URL: http://qa5dev.publisher.nbcuni.com]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopSelenium -->
+      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.EnhanceContentLibraryTable.EnhanceContentLibraryTable -->
+      <class name="com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MPXPlayersSyncVerification">
+        <test-method status="PASS" signature="startSelenium(java.lang.String)[pri:0, instance:com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MPXPlayersSyncVerification@15f48262]" name="startSelenium" is-config="true" duration-ms="1860" started-at="2014-01-16T10:31:36Z" finished-at="2014-01-16T10:31:38Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[PROD]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Setting Environment to: PROD]]>
+            </line>
+            <line>
+              <![CDATA[Environment: PROD]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- startSelenium -->
+        <test-method status="FAIL" signature="MPXPlayersSyncVerification()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MPXPlayersSyncVerification@15f48262]" name="MPXPlayersSyncVerification" duration-ms="46640" started-at="2014-01-16T10:31:38Z" finished-at="2014-01-16T10:32:25Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [36] but found [35]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [36] but found [35]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertEquals(Assert.java:123)
+	at org.testng.Assert.assertEquals(Assert.java:370)
+	at org.testng.Assert.assertEquals(Assert.java:380)
+	at com.nbcuni.test.publisher.pageobjects.MPX.MPXMedia.VerifyImportAccountPlayerOptions(MPXMedia.java:100)
+	at com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MPXPlayersSyncVerification.MPXPlayersSyncVerification(MPXPlayersSyncVerification.java:146)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+            <line>
+              <![CDATA[URL: http://qa5dev.publisher.nbcuni.com]]>
+            </line>
+            <line>
+              <![CDATA[URL: http://qa5dev.publisher.nbcuni.com]]>
+            </line>
+            <line>
+              <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140116103225.png ]]>
+            </line>
+            <line>
+              <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140116103225.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140116103225.png' height='500' width='500'/> </a>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- MPXPlayersSyncVerification -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MPXPlayersSyncVerification@15f48262]" name="stopSelenium" is-config="true" duration-ms="798" started-at="2014-01-16T10:32:25Z" finished-at="2014-01-16T10:32:26Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=MPXPlayersSyncVerification status=FAILURE method=MPXPlayersSyncVerification.MPXPlayersSyncVerification()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MPXPlayersSyncVerification@15f48262] output=URL: http://qa5dev.publisher.nbcuni.com]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopSelenium -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MPXPlayersSyncVerification -->
+      <class name="com.nbcuni.test.publisher.tests.SocialIntegration.Facebook.TestingFacebookAutopublishing">
+        <test-method status="PASS" signature="startSelenium(java.lang.String)[pri:0, instance:com.nbcuni.test.publisher.tests.SocialIntegration.Facebook.TestingFacebookAutopublishing@6f649b44]" name="startSelenium" is-config="true" duration-ms="1995" started-at="2014-01-16T10:30:13Z" finished-at="2014-01-16T10:30:15Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[PROD]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Setting Environment to: PROD]]>
+            </line>
+            <line>
+              <![CDATA[Environment: PROD]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- startSelenium -->
+        <test-method status="FAIL" signature="TestingFacebookAutopublishing()[pri:0, instance:com.nbcuni.test.publisher.tests.SocialIntegration.Facebook.TestingFacebookAutopublishing@6f649b44]" name="TestingFacebookAutopublishing" duration-ms="26065" started-at="2014-01-16T10:30:15Z" finished-at="2014-01-16T10:30:41Z">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Timed out after 10 seconds waiting for text ('Created facebook application Publisher 7 Test App (c7949b7421a645c).') to be present in element found by By.xpath: //div[@class='messages status']
+Build info: version: '2.35.0', revision: '8df0c6bedf70ff9f22c647788f9fe9c8d22210e2', time: '2013-08-17 12:46:41'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.8.5', java.version: '1.6.0_65'
+Driver info: driver.version: unknown]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Timed out after 10 seconds waiting for text ('Created facebook application Publisher 7 Test App (c7949b7421a645c).') to be present in element found by By.xpath: //div[@class='messages status']
+Build info: version: '2.35.0', revision: '8df0c6bedf70ff9f22c647788f9fe9c8d22210e2', time: '2013-08-17 12:46:41'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.8.5', java.version: '1.6.0_65'
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:259)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.nbcuni.test.publisher.pageobjects.content.ContentParent.VerifyMessageStatus(ContentParent.java:56)
+	at com.nbcuni.test.publisher.tests.SocialIntegration.Facebook.TestingFacebookAutopublishing.TestingFacebookAutopublishing(TestingFacebookAutopublishing.java:73)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+            <line>
+              <![CDATA[URL: http://qa5dev.publisher.nbcuni.com]]>
+            </line>
+            <line>
+              <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140116103041.png ]]>
+            </line>
+            <line>
+              <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140116103041.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140116103041.png' height='500' width='500'/> </a>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- TestingFacebookAutopublishing -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.SocialIntegration.Facebook.TestingFacebookAutopublishing@6f649b44]" name="stopSelenium" is-config="true" duration-ms="755" started-at="2014-01-16T10:30:41Z" finished-at="2014-01-16T10:30:42Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TestingFacebookAutopublishing status=FAILURE method=TestingFacebookAutopublishing.TestingFacebookAutopublishing()[pri:0, instance:com.nbcuni.test.publisher.tests.SocialIntegration.Facebook.TestingFacebookAutopublishing@6f649b44] output=URL: http://qa5dev.publisher.nbcuni.com]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopSelenium -->
+      </class> <!-- com.nbcuni.test.publisher.tests.SocialIntegration.Facebook.TestingFacebookAutopublishing -->
+    </test> <!-- All Web Tests(failed) -->
+  </suite> <!-- Failed suite [Test Suite for Publisher 7] -->
 </testng-results>

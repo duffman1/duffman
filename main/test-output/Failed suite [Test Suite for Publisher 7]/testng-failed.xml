@@ -4,25 +4,13 @@
   <parameter name="Environment" value="PROD"/>
   <test name="All Web Tests(failed)(failed)" parallel="methods">
     <classes>
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.ScheduleToPublishContentByDateTime">
+      <class name="com.nbcuni.test.publisher.tests.Video.UndefinedIndexesDisplayingForMPXPlayers.UndefinedIndexesDisplayingForMPXPlayers">
         <methods>
           <include name="startSelenium"/>
+          <include name="UndefinedIndexesDisplayingForMPXPlayers"/>
           <include name="stopSelenium"/>
         </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.ScheduleToPublishContentByDateTime -->
-      <class name="com.nbcuni.test.publisher.tests.Video.Player.SelectVideoPlayerPerVideoFile">
-        <methods>
-          <include name="startSelenium"/>
-          <include name="SelectVideoPlayerPerVideoFile"/>
-          <include name="stopSelenium"/>
-        </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.Video.Player.SelectVideoPlayerPerVideoFile -->
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVSeason.CreateTVSeason">
-        <methods>
-          <include name="startSelenium"/>
-          <include name="stopSelenium"/>
-        </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVSeason.CreateTVSeason -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Video.UndefinedIndexesDisplayingForMPXPlayers.UndefinedIndexesDisplayingForMPXPlayers -->
       <class name="com.nbcuni.test.publisher.tests.SocialIntegration.Facebook.TestingFacebookAutopublishing">
         <methods>
           <include name="startSelenium"/>
@@ -30,6 +18,20 @@
           <include name="stopSelenium"/>
         </methods>
       </class> <!-- com.nbcuni.test.publisher.tests.SocialIntegration.Facebook.TestingFacebookAutopublishing -->
+      <class name="com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MPXPlayersSyncVerification">
+        <methods>
+          <include name="startSelenium"/>
+          <include name="MPXPlayersSyncVerification"/>
+          <include name="stopSelenium"/>
+        </methods>
+      </class> <!-- com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MPXPlayersSyncVerification -->
+      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.EnhanceContentLibraryTable.EnhanceContentLibraryTable">
+        <methods>
+          <include name="startSelenium"/>
+          <include name="stopSelenium"/>
+          <include name="EnhanceContentLibraryTable"/>
+        </methods>
+      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.EnhanceContentLibraryTable.EnhanceContentLibraryTable -->
     </classes>
   </test> <!-- All Web Tests(failed)(failed) -->
 </suite> <!-- Failed suite [Failed suite [Test Suite for Publisher 7]] -->
