@@ -4,7 +4,10 @@ package com.nbcuni.test.publisher.tests.Video.UndefinedIndexesDisplayingForMPXPl
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Cron.Cron;
 import com.nbcuni.test.publisher.pageobjects.MPX.EditMPXVideo;
+import com.nbcuni.test.publisher.pageobjects.MPX.MPXAddPlayer;
+import com.nbcuni.test.publisher.pageobjects.MPX.MPXAssets;
 import com.nbcuni.test.publisher.pageobjects.MPX.MPXDataClient;
+import com.nbcuni.test.publisher.pageobjects.MPX.MPXLogin;
 import com.nbcuni.test.publisher.pageobjects.MPX.MPXMedia;
 import com.nbcuni.test.publisher.pageobjects.MPX.MPXPlayers;
 import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
@@ -48,28 +51,49 @@ public class UndefinedIndexesDisplayingForMPXPlayers extends ParentTest{
     @Test(groups = {"full"})
     public void UndefinedIndexesDisplayingForMPXPlayers() throws Exception{
     	
-    	//TODO - re order test steps above to follow test steps below. Automated steps were re-ordered for ease of automation purposes
-    	
     	//Step 1
     	UserLogin userLogin = applib.openApplication();
-        userLogin.Login("admin@publisher.nbcuni.com", "pa55word");
-        
-        //Step 1a
-        Modules modules = new Modules(webDriver);
-        modules.VerifyModuleEnabled("Devel");
-        overlay.switchToDefaultContent();
-        
+    	MPXLogin mpxLogin = new MPXLogin(webDriver, applib);
+    	mpxLogin.Login("mpx/AdminPub7QA", "Pa55word");
+    	MPXAssets mpxAssets = new MPXAssets(webDriver, applib);
+    	mpxAssets.WaitForAllAssetsToLoad();
+    	
         //Step 2
-        taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
+        MPXAddPlayer mpxAddPlayer = new MPXAddPlayer(webDriver, applib);
+        mpxAddPlayer.ClickPlayersLnk();
+        mpxAddPlayer.ClickAllPlayersLnk();
+        mpxAssets.WaitForAllAssetsToLoad();
+        mpxAddPlayer.ClickAddBtn();
+        String playerTitle = "AutomationPlayer" + random.GetCharacterString(10);
+        mpxAddPlayer.EnterPlayerTitle(playerTitle);
+        mpxAddPlayer.ClickSaveBtn();
+        
+        //Step 3
+        applib.openApplication();
+    	userLogin.Login("admin@publisher.nbcuni.com", "pa55word");
+        
+    	//Step 3 (continued)
+    	taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
         overlay.SwitchToFrame("Media: thePlatform mpx settings dialog");
         Settings settings = new Settings(webDriver);
         if (settings.IsMPXConfigured() == true) {
             
-        	//Step 2 (continued)
+        	//Step 3 (continued)
         	List<String> configuredAccounts = settings.GetImportAccountSelectedOptions();
-
-        	//Step 3 (not needed as leveraging an existing player)
-        	/*taxonomy.NavigateSite("Content>>Files>>mpxPlayers");
+    	    overlay.switchToDefaultContent();
+    	    
+        	//Step 3a
+    	    taxonomy.NavigateSite("Modules");
+        	overlay.SwitchToFrame("Modules");
+        	Modules modules = new Modules(webDriver);
+        	modules.EnterFilterName("Devel");
+            modules.DisableModule("Devel");
+            overlay.ClickCloseOverlayLnk();
+            overlay.switchToDefaultContent();
+    	    
+    	    
+        	//Step 3 (continued)
+        	taxonomy.NavigateSite("Content>>Files>>mpxPlayers");
             overlay.SwitchToFrame("Content");
             MPXPlayers MPXPlayers = new MPXPlayers(webDriver);
             MPXPlayers.ClickSyncMPXPlayersLnk();
@@ -77,7 +101,7 @@ public class UndefinedIndexesDisplayingForMPXPlayers extends ParentTest{
             ContentParent contentParent = new ContentParent(webDriver);
             contentParent.VerifyMessageStatus("players returned for account");
             overlay.switchToDefaultContent();
-            taxonomy.NavigateSite("Home>>Run cron");*/
+            taxonomy.NavigateSite("Home>>Run cron");
         	
         	//Step 4
         	overlay.switchToDefaultContent();
@@ -94,12 +118,12 @@ public class UndefinedIndexesDisplayingForMPXPlayers extends ParentTest{
         	
         	//Step 6
         	EditMPXVideo editMPXVideo = new EditMPXVideo(webDriver);
-        	editMPXVideo.SelectPubMPXVideoPlayer("AutomationPlayer1");
-        	ContentParent contentParent = new ContentParent(webDriver);
+        	editMPXVideo.SelectPubMPXVideoPlayer(playerTitle);
         	contentParent.ClickSaveBtn();
         	
         	//Step 7
         	overlay.switchToDefaultContent();
+        	modules.VerifyModuleEnabled("Devel");
         	taxonomy.NavigateSite("Home>>Development>>Execute PHP Code");
         	overlay.SwitchToActiveFrame();
         	ExecutePHPCode executePHPCode = new ExecutePHPCode(webDriver);
@@ -115,7 +139,7 @@ public class UndefinedIndexesDisplayingForMPXPlayers extends ParentTest{
         	overlay.switchToDefaultContent();
         	taxonomy.NavigateSite("Content>>Files>>mpxPlayers");
         	overlay.SwitchToActiveFrame();
-        	searchFor.ClickSearchTitleLnk("AutomationPlayer1");
+        	searchFor.ClickSearchTitleLnk(playerTitle);
         	overlay.switchToDefaultContent();
         	
         	//Step 9
@@ -132,9 +156,9 @@ public class UndefinedIndexesDisplayingForMPXPlayers extends ParentTest{
         	//Step 10
         	taxonomy.NavigateSite("Content>>Files>>mpxMedia");
         	overlay.SwitchToActiveFrame();
-        	contentParent.VerifyMessageError("An MPXplayer that's in use (AutomationPlayer1) has been unpublished.");
+        	contentParent.VerifyMessageError("An MPXplayer that's in use (" + playerTitle + ") has been unpublished.");
         	MPXMedia mpxMedia = new MPXMedia(webDriver);
-        	mpxMedia.ClickMPXPlayerUnpublishedHereLnk("AutomationPlayer1");
+        	mpxMedia.ClickMPXPlayerUnpublishedHereLnk(playerTitle);
         	overlay.switchToDefaultContent();
         	overlay.SwitchToFrame("Edit mpx_player");
         	contentParent.VerifyNoMessageErrorsPresent();
@@ -150,6 +174,7 @@ public class UndefinedIndexesDisplayingForMPXPlayers extends ParentTest{
         	//Step 12
         	executePHPCode.EnterPHPCode("$player_query = db_select('mpx_player', 'p'); $player_query->fields('p', array('player_id')); $players = $player_query->execute()->fetchCol();  $query = db_select(\"mpx_video\", 'v'); $query->fields('v', array('player_id')); $query->condition('v.player_id', $players, 'NOT IN'); $query->distinct(); $query->isNotNull('v.player_id'); $result = $query->execute(); foreach ($result as $record) { echo \"deleted player id: \".$record->player_id.PHP_EOL; }");
             executePHPCode.ClickExecuteBtn();
+            overlay.SwitchToActiveFrame();
             contentParent.VerifyMessageStatus("deleted player id: " + playerID);
             
             //Step 13
@@ -166,12 +191,12 @@ public class UndefinedIndexesDisplayingForMPXPlayers extends ParentTest{
             overlay.switchToDefaultContent();
             taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
             overlay.SwitchToFrame("Media: thePlatform mpx settings dialog");
-
+            contentParent.VerifyNoMessageErrorsPresent();
         }
         else {
         	
         	Assert.fail("MPX is NOT configured. Test titled 'MultipleMPXAccountsPerLoginVerification' must run before any other MPX tests.");
         }
-        Assert.fail("test under construction");
+        
     }
 }

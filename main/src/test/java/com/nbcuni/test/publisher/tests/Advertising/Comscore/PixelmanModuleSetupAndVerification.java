@@ -92,6 +92,7 @@ public class PixelmanModuleSetupAndVerification extends ParentTest {
         //Step 9a
         overlay.switchToDefaultContent();
         taxonomy.NavigateSite("Home>>Flush all caches");
+        taxonomy.NavigateSite("Home");
         
         //Step 10
         modules.VerifyModuleSourceNotInPage("//www.nbcudigitaladops.com/hosted/global_header.js");

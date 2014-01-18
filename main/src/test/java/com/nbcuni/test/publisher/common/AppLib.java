@@ -47,6 +47,7 @@ public class AppLib {
     private String pathToMediaContent = "";
     private String pathToScreenshots = "";
     private String moduleOverlaysEnabled = "";
+    private String pathToSikuliImages = "";
 
     private static String configFileName = "src" + File.separator + "test" + File.separator + "resources"
             + File.separator + "config.properties";
@@ -108,6 +109,7 @@ public class AppLib {
             pathToMediaContent = configProperties.getProperty(environment + ".PathToMediaContent");
             pathToScreenshots = configProperties.getProperty(environment + ".PathToScreenShots");
             moduleOverlaysEnabled = configProperties.getProperty(environment + ".ModuleOverlaysEnabled");
+            pathToSikuliImages = configProperties.getProperty(environment + ".PathToSikuliImages");
         } catch (Exception e) {
             new CustomWebDriverException(e, custWebDr);
         }
@@ -117,6 +119,12 @@ public class AppLib {
     	
     	String pathToMedia = System.getProperty("user.dir") + this.pathToMediaContent;
     	return pathToMedia;
+    }
+    
+    public String getPathToSikuliImages(){
+    	
+    	String pathToSikuliImages = System.getProperty("user.dir") + this.pathToSikuliImages;
+    	return pathToSikuliImages;
     }
     
     /**

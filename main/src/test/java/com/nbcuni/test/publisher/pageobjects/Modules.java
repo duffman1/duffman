@@ -1,6 +1,7 @@
 package com.nbcuni.test.publisher.pageobjects;
 
 
+import java.util.Arrays;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -14,6 +15,7 @@ import org.testng.Reporter;
 
 import com.nbcuni.test.lib.Util;
 import com.nbcuni.test.publisher.common.AppLib;
+import com.nbcuni.test.publisher.pageobjects.content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.taxonomy.Taxonomy;
 import com.nbcuni.test.webdriver.CustomWebDriver;
 
@@ -35,7 +37,7 @@ public class Modules {
     private static String SaveConfiguration_Btn = "//input[@id='edit-submit']";
     private static String Message_Ctr = "//div[@class='messages status']";
     private static String Continue_Btn = "//input[@value='Continue']";
-    
+    private static String Uninstall_Btn = "//input[@value='Uninstall']";
     
     public Modules(final CustomWebDriver custWebDr) {
         webDriver = custWebDr;
@@ -54,6 +56,22 @@ public class Modules {
     public void VerifyConfigurationSaved() throws Exception{
     	
     	ul.verifyObjectContainsText(Message_Ctr, "The configuration options have been saved.");
+    }
+    
+    public boolean IsModuleEnabled(String moduleName) {
+    	
+    	boolean isModuleEnabled = false;
+    	
+    	String moduleLocator = "//label/strong[text()='" + moduleName + "']/../../../td[@class='checkbox']//input";
+    	
+    	WebElement Cbx = webDriver.findElement(By.xpath(moduleLocator));
+    	
+    	if (Cbx.isSelected() == true) {
+    		
+    		isModuleEnabled = true;
+    	}
+    	
+    	return isModuleEnabled;
     }
     
     public void EnableModule(String moduleName) throws Exception {
@@ -112,6 +130,22 @@ public class Modules {
     	
     	return moduleAlreadyDisabled;
     	
+    	
+    }
+    
+    public void UninstallModule(String moduleName) throws Exception {
+    	
+    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.
+    			presenceOfElementLocated(By.xpath("//label[text()='" + moduleName + "']/../../..//input"))).click();
+    
+    	webDriver.findElement(By.xpath(Uninstall_Btn)).click();
+    	Overlay overlay = new Overlay(webDriver);
+    	overlay.SwitchToActiveFrame();
+    	ContentParent contentParent = new ContentParent(webDriver);
+    	contentParent.VerifyPageContentPresent(Arrays.asList("The following modules will be completely uninstalled from your site, and all data from these modules will be lost!", 
+    			moduleName));
+    	
+    	webDriver.findElement(By.xpath(Uninstall_Btn)).click();
     	
     }
     
