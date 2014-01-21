@@ -1,4 +1,4 @@
-package com.nbcuni.test.publisher.pageobjects.MPX;
+package com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform;
 
 
 import com.nbcuni.test.lib.Util;

@@ -100,6 +100,14 @@ public class SearchFor {
     	return firstResult;
     }
     
+    public String GetFirstPublishedSearchResult() throws Exception {
+
+    	Thread.sleep(1000); //TODO - slight pause required here due to stale element exception. page factory leverage will likely resolve this
+        String firstPublishedResult = webDriver.findElement(By.xpath("(//div[text()='Published']/../..//td[@class='views-field views-field-title']/a)[1]")).getText();
+        
+    	return firstPublishedResult;
+    }
+    
     public Integer GetSearchResultSize() throws Exception {
 
     	Thread.sleep(1000); //TODO - slight pause required here due to stale element exception. page factory leverage will likely resolve this

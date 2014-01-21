@@ -4,13 +4,13 @@ package com.nbcuni.test.publisher.tests.Video.UndefinedIndexesDisplayingForMPXPl
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Cron.Cron;
 import com.nbcuni.test.publisher.pageobjects.MPX.EditMPXVideo;
-import com.nbcuni.test.publisher.pageobjects.MPX.MPXAddPlayer;
-import com.nbcuni.test.publisher.pageobjects.MPX.MPXAssets;
 import com.nbcuni.test.publisher.pageobjects.MPX.MPXDataClient;
-import com.nbcuni.test.publisher.pageobjects.MPX.MPXLogin;
 import com.nbcuni.test.publisher.pageobjects.MPX.MPXMedia;
 import com.nbcuni.test.publisher.pageobjects.MPX.MPXPlayers;
 import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
+import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXAddPlayer;
+import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXAssets;
+import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXLogin;
 import com.nbcuni.test.publisher.pageobjects.ExecutePHPCode;
 import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
@@ -90,7 +90,6 @@ public class UndefinedIndexesDisplayingForMPXPlayers extends ParentTest{
             modules.DisableModule("Devel");
             overlay.ClickCloseOverlayLnk();
             overlay.switchToDefaultContent();
-    	    
     	    
         	//Step 3 (continued)
         	taxonomy.NavigateSite("Content>>Files>>mpxPlayers");

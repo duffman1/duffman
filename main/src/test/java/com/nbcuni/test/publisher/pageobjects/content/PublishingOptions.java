@@ -86,6 +86,23 @@ public class PublishingOptions {
     	}
     }
     
+    public void VerifyPublishedCbxChecked() throws Exception {
+    	
+    	WebElement el = new WebDriverWait(webDriver, 10).until(ExpectedConditions.
+    			visibilityOfElementLocated(By.xpath(Published_Cbx)));
+    	
+    	Assert.assertTrue(el.isSelected() == true);
+    }
+    
+    public void VerifyPublishedCbxNotCheckedAndNotEditable() throws Exception {
+    	
+    	WebElement el = new WebDriverWait(webDriver, 10).until(ExpectedConditions.
+    			visibilityOfElementLocated(By.xpath(Published_Cbx)));
+    	
+    	Assert.assertFalse(el.isSelected());
+    	Assert.assertFalse(el.isEnabled());
+    }
+    
     
     
     

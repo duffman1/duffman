@@ -143,6 +143,7 @@ public class ContentParent {
 
     public void VerifyPageContentPresent(List<String> txtItems) throws Exception {
 
+    	Thread.sleep(1000); //TODO stale element exception here
         String bodyTxt = webDriver.findElement(By.xpath("//body")).getText();
 
         for (String s : txtItems) {

@@ -1,4 +1,4 @@
-package com.nbcuni.test.publisher.pageobjects.MPX;
+package com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform;
 
 
 import java.util.ArrayList;
@@ -10,6 +10,9 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.sikuli.script.Button;
+import org.sikuli.script.Key;
+import org.sikuli.script.KeyModifier;
 import org.sikuli.script.Screen;
 import org.testng.Assert;
 import org.testng.Reporter;
@@ -81,7 +84,70 @@ public class MPXAssets {
     	
     }
     
+    public void WaitForImgPresent(String imgPath) throws Exception {
+    	
+    	boolean imgPresent = false;
+
+        for (int second = 0; ; second++){
+            if (second >= 60) {
+                Assert.fail("MPX image is not present after timeout");}
+            try{
+                s.find(imgPath);
+                imgPresent = true;
+            }
+            catch (Exception e){}
+            if (imgPresent == true){ break;}
+            Thread.sleep(500);
+        }
     
+    }
+    
+    public void WaitForImgNotPresent(String imgPath) throws Exception {
+    	
+    	boolean imgPresent = false;
+
+    	for (int second = 0; ; second++){
+            if (second >= 60) {
+                Assert.fail("MPX image is still present after timeout");}
+            try{
+                s.find(imgPath);
+                imgPresent = true;
+            }
+            catch (Exception e){
+            	imgPresent = false;
+            }
+            if (imgPresent == false){ break;}
+            Thread.sleep(500);
+        }
+    
+    }
+    
+    public void ScrollDownForImgPresent(String imgPath) throws Exception {
+    	
+    	boolean imgPresent = false;
+
+        for (int duration = 0; ; duration++){
+            if (duration >= 120) {
+                Assert.fail("MPX image is not present after timeout");}
+            try{
+                s.find(imgPath);
+                imgPresent = true;
+            }
+            catch (Exception e) { 
+            	
+            	s.wheel(Button.WHEEL_DOWN, 15);
+            }
+            if (imgPresent == true){ break;}
+            Thread.sleep(200);
+        }
+    
+    }
+    
+    public void ClearInput() throws Exception {
+    	
+    	s.type("a", KeyModifier.CMD);
+    	s.type(Key.BACKSPACE);
+    }
     
 }
 

@@ -1,4 +1,4 @@
-package com.nbcuni.test.publisher.pageobjects.MPX;
+package com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform;
 
 
 import com.nbcuni.test.lib.Util;
@@ -31,7 +31,7 @@ public class MPXLogin {
     private static CustomWebDriver webDriver;
     private static AppLib applib;
     private final Util ul;
-    
+    MPXAssets mpxAssets = new MPXAssets(this.webDriver, this.applib);
     
     public MPXLogin(final CustomWebDriver custWebDr, AppLib applib) {
         webDriver = custWebDr;
@@ -46,15 +46,19 @@ public class MPXLogin {
     	return PathToImages;
     }
     
+    public void OpenMPXThePlatform() throws Exception {
+    	
+    	webDriver.navigate().to("http://mpx.theplatform.com/");
+    }
+    
     public void Login(String userName, String passWord) throws Exception {
     	
     	Screen s = new Screen();
         String path = this.getImagePath();
     	
-        webDriver.navigate().to("http://mpx.theplatform.com/");
     	s.wait(path + "Login/UserName_Txb.png", 30);
-    	Thread.sleep(2000); //TODO - create a dyanmic wait for sikuli scripts
-        s.doubleClick(path + "Login/UserName_Txb.png");
+    	mpxAssets.WaitForImgPresent(path + "Login/UserName_Txb.png");
+    	s.doubleClick(path + "Login/UserName_Txb.png");
         s.type(userName);
         s.doubleClick(path + "Login/PassWord_Txb.png");
         s.type(passWord);
