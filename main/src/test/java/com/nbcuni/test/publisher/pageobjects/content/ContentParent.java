@@ -33,6 +33,7 @@ public class ContentParent {
     private static String pageTitle = ".//*[@id='page-title']";
     private static String View_Tab = "//a[text()='View']";
     private static String workBenchInfoBlock = ".//*[@class='workbench-info-block']";
+    private static String AddAnotherItem_Btn=".//input[@name='field_movie_credit_add_more']";
 
     public ContentParent(final CustomWebDriver custWebDr) {
         webDriver = custWebDr;
