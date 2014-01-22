@@ -54,6 +54,7 @@ public class UndefinedIndexesDisplayingForMPXPlayers extends ParentTest{
     	//Step 1
     	UserLogin userLogin = applib.openApplication();
     	MPXLogin mpxLogin = new MPXLogin(webDriver, applib);
+    	mpxLogin.OpenMPXThePlatform();
     	mpxLogin.Login("mpx/AdminPub7QA", "Pa55word");
     	MPXAssets mpxAssets = new MPXAssets(webDriver, applib);
     	mpxAssets.WaitForAllAssetsToLoad();

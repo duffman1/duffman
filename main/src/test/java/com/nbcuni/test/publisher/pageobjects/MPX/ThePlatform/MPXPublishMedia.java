@@ -50,13 +50,14 @@ public class MPXPublishMedia {
     public void ClickPublishBtn() throws Exception {
     	
     	String path = this.getImagePath();
-    	s.wait(path + "Publish/Publish_Btn.png", 30);
+    	mpxAssets.WaitForImgPresent(path + "Publish/Publish_Btn.png");
     	s.click(path + "Publish/Publish_Btn.png");
     }
     
     public void ClickPublishToAllCbx() throws Exception {
     	
     	String path = this.getImagePath();
+    	mpxAssets.WaitForImgPresent(path + "Publish/All_Lbl.png");
     	Pattern pImage = new Pattern(path + "Publish/All_Lbl.png").targetOffset(-18, 0);
     	Region r = s.exists(pImage, 1);
     	s.click(r, 1);
@@ -65,10 +66,9 @@ public class MPXPublishMedia {
     public void ClickPublishFromDialogBtn() throws Exception {
     	
     	String path = this.getImagePath();
-    	s.wait(path + "Publish/PublishFromDialog_Btn.png", 30);
+    	mpxAssets.WaitForImgPresent(path + "Publish/PublishFromDialog_Btn.png");
     	s.click(path + "Publish/PublishFromDialog_Btn.png");
     	
-    	mpxAssets.WaitForImgPresent(path + "Common/Spinner.png");
     	mpxAssets.WaitForImgNotPresent(path + "Common/Spinner.png");
     	
     }
@@ -76,24 +76,24 @@ public class MPXPublishMedia {
     public void ClickAdditionalOptionsArrow() throws Exception {
     	
     	String path = this.getImagePath();
-    	s.wait(path + "Common/AdditionalOptions_Arr.png", 30);
+    	mpxAssets.WaitForImgPresent(path + "Common/AdditionalOptions_Arr.png");
     	s.click(path + "Common/AdditionalOptions_Arr.png");
     }
     
     public void ClickPublishUpdateLnk() throws Exception {
     	
     	String path = this.getImagePath();
-    	s.wait(path + "Publish/PublishUpdate_Lnk.png", 30);
+    	mpxAssets.WaitForImgPresent(path + "Publish/PublishUpdate_Lnk.png");
     	s.click(path + "Publish/PublishUpdate_Lnk.png");
     }
     
     public void ClickUpdateBtn() throws Exception {
     	
     	String path = this.getImagePath();
-    	s.wait(path + "Common/Update_Btn.png", 30);
+    	mpxAssets.WaitForImgPresent(path + "Common/Update_Btn.png");
     	s.click(path + "Common/Update_Btn.png");
     	
-    	mpxAssets.WaitForImgPresent(path + "Common/Spinner.png");
+    	Thread.sleep(2000);
     	mpxAssets.WaitForImgNotPresent(path + "Common/Spinner.png");
     }
     

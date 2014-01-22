@@ -50,43 +50,48 @@ public class MPXAddMedia {
     public void ClickUploadBtn() throws Exception {
     	
     	String path = this.getImagePath();
-    	s.wait(path + "Common/Upload_Btn.png", 30);
+    	mpxAssets.WaitForImgPresent(path + "Common/Upload_Btn.png");
     	s.click(path + "Common/Upload_Btn.png");
     }
     
     public void ClickChooseFilesBtn() throws Exception {
     	
     	String path = this.getImagePath();
-    	s.wait(path + "FileUpload/ChooseFiles_Btn.png", 30);
+    	mpxAssets.WaitForImgPresent(path + "FileUpload/ChooseFiles_Btn.png");
     	s.click(path + "FileUpload/ChooseFiles_Btn.png");
     }
     
     public void ClickMoviesUploadBtn() throws Exception {
     	
     	String path = this.getImagePath();
-    	s.wait(path + "FileUpload/MoviesUpload_Btn.png", 30);
+    	mpxAssets.WaitForImgPresent(path + "FileUpload/MoviesUpload_Btn.png");
     	Thread.sleep(500); //slight pause required here
-    	s.click(path + "FileUpload/MoviesUpload_Btn.png");
+    	try {
+    		s.click(path + "FileUpload/MoviesUpload_Btn.png");
+    	}
+    	catch (Exception e) {
+    		s.click(path + "FileUpload/HighlightedMoviesUpload_Btn.png");
+    	}
     }
     
     public void ClickTestMovieBtn() throws Exception {
     	
     	String path = this.getImagePath();
-    	s.wait(path + "FileUpload/TestMovie_Btn.png", 30);
+    	mpxAssets.WaitForImgPresent(path + "FileUpload/TestMovie_Btn.png");
     	s.click(path + "FileUpload/TestMovie_Btn.png");
     }
     
     public void ClickOpenBtn() throws Exception {
     	
     	String path = this.getImagePath();
-    	s.wait(path + "FileUpload/Open_Btn.png", 30);
+    	mpxAssets.WaitForImgPresent(path + "FileUpload/Open_Btn.png");
     	s.click(path + "FileUpload/Open_Btn.png");
     }
     
     public void ClickUploadFromDialogBtn() throws Exception {
     	
     	String path = this.getImagePath();
-    	s.wait(path + "Common/UploadFromDialog_Btn.png", 30);
+    	mpxAssets.WaitForImgPresent(path + "Common/UploadFromDialog_Btn.png");
     	s.click(path + "Common/UploadFromDialog_Btn.png");
     	
     	mpxAssets.WaitForImgPresent(path + "Media/DefaultMediaPresent.png");
@@ -177,12 +182,14 @@ public class MPXAddMedia {
     	s.click(path + "Common/Save_Btn.png");
     	
     	mpxAssets.WaitForImgNotPresent(path + "Common/Spinner.png");
+    	//Thread.sleep(2000);
     }
     
     public void SelectContentRatingUSMPAA_PG13() throws Exception {
     	
     	String path = this.getImagePath();
     	mpxAssets.ScrollDownForImgPresent(path + "Media/ContentRatingUSMPAA_Ddl.png");
+    	mpxAssets.Scroll("Down", 10); //extra scroll needed for interaction with ddl
     	Pattern pImage = new Pattern(path + "Media/ContentRatingUSMPAA_Ddl.png").targetOffset(-5, 15);
     	Region r = s.exists(pImage, 1);
     	s.click(r, 1);

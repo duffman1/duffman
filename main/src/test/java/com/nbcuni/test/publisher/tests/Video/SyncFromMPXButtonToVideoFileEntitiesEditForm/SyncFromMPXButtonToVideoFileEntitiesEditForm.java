@@ -52,7 +52,6 @@ public class SyncFromMPXButtonToVideoFileEntitiesEditForm extends ParentTest{
      * Step 13 - In MPX,  select the asset under test and "Delete" the asset.    In P7, click on "Sync from MPX  button" for this asset and refresh the page.   ,Sync is run 
      * Step 14 - Navigate to Content --> files --> Mpx Media and locate the asset under test. ,Asset now shows as unpublished  
      * Step 15 - In MPX upload a new asset and populate Available date and Expiration date in the future.  Publish the asset.  In P7, Run Cron and note the asset has been ingested  In MPX, change the Available and expiration date in the future, publish updates  In P7, navigate to the edit page for the asset under test and click on "Sync from MPX"  Return to Content --> Files --> MPX Media and note the file is listed as unpublished  In MPX, change the Available date to a past date and expiration date to a future date.  Publish updates  In P7,  navigate to the edit page for the asset under test and click on "Sync from MPX"  Return to Content --> Files --> MPX Media and note the file is listed as published,The 'Sync from MPX' will update publish/unpublish status correctly as dates are updated and shifted.    *NOTE* This step was added to ensure adequate documentation of the state change testing was captured. 
-
      * @throws Throwable No Return values are needed
      *************************************************************************************/
     @Test(groups = {"full"})
@@ -76,6 +75,7 @@ public class SyncFromMPXButtonToVideoFileEntitiesEditForm extends ParentTest{
     	mpxAddMedia.ClickOpenBtn();
     	mpxAddMedia.ClickUploadFromDialogBtn();
     	String mediaTitle = "Automation" + random.GetCharacterString(10);
+    	mpxAddMedia.GiveFocusToMediaItem();
     	mpxAddMedia.EnterAuthor("Pub7 Content Provider");
     	mpxAddMedia.EnterTitle(mediaTitle);
     	mpxAddMedia.EnterCategories("Series, Show");
@@ -116,7 +116,6 @@ public class SyncFromMPXButtonToVideoFileEntitiesEditForm extends ParentTest{
     	    editMPXVideo.VerifyMPXMediaCategory2("Show");
     	    editMPXVideo.VerifyMPXMediaTitle(mediaTitle);
     	    editMPXVideo.VerifyMPXMediaAuthor("Pub7 Content Provider");
-    	    //TODO - add logic that adds and checks every piece of mpx metadata
     	    
     	    //Step 5
     	    PublishingOptions publishingOptions = new PublishingOptions(webDriver);
@@ -158,7 +157,7 @@ public class SyncFromMPXButtonToVideoFileEntitiesEditForm extends ParentTest{
     	    editMPXVideo.VerifyMPXExpirationDate(sDate2);
     	    editMPXVideo.VerifyMPXExpirationTime("05:00am");
     	    
-    	    //Step 8 (unable to automate as custom fields aren't displayed on pub7. emailing Pete)
+    	    //Step 8 (unable to automate as custom fields aren't displayed on pub7. Following up with Pete)
     	    
     	    //Step 9 and 10 
     	    mpxLogin.OpenMPXThePlatform();
@@ -229,9 +228,9 @@ public class SyncFromMPXButtonToVideoFileEntitiesEditForm extends ParentTest{
     	    overlay.SwitchToActiveFrame();
     	    editMPXVideo.VerifyMPXAirDate(sDate2);
     	    editMPXVideo.VerifyMPXAirTime("05:00am");
-    	    editMPXVideo.VerifyMPXAvailableDate(sDate4);
+    	    editMPXVideo.VerifyMPXAvailableDate(sDate2);
     	    editMPXVideo.VerifyMPXAvailableTime("05:00am");
-    	    editMPXVideo.VerifyMPXExpirationDate(sDate4);
+    	    editMPXVideo.VerifyMPXExpirationDate(sDate2);
     	    editMPXVideo.VerifyMPXExpirationTime("05:00am");
         	
     	    //Step 13 through 15
