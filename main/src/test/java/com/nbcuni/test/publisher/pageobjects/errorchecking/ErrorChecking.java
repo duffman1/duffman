@@ -50,8 +50,7 @@ public class ErrorChecking {
     		ul.verifyObjectContainsText(Error_Ctr, field + " field is required.");
     	}
     }
+    
    
-    
-    
 }
 

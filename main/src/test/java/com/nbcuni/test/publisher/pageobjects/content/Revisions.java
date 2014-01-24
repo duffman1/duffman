@@ -30,7 +30,7 @@ public class Revisions {
     private static String RevUpdate_btn=".//*[@id='edit-submit']";
     private static String RevisionLink=".//a[contains(text(),'Revisions')]";
     private static String MessageForStateChange_Txa = "(//*[@id='edit-event-comment'])[1]";
-
+    private static String DeleteRev_Btn=".//*[@id='edit-submit']";
     public Revisions(final CustomWebDriver custWebDr) {
         webDriver = custWebDr;
         ul = new Util(webDriver);
@@ -44,6 +44,12 @@ public class Revisions {
     	element.click();
     }
     
+    public void ClickEditMenuDeleteBtn(String contentItemTitle) throws Exception {
+    	
+    	WebElement element = new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(
+    			By.xpath("//table[contains(@class, 'views-table')]//a[contains(text(), '" + contentItemTitle + "')]/../..//a[text()='Delete']")));
+    	element.click();
+    }
     public void ClickEditMenuBtn(String contentItemTitle) throws Exception {
     	
     	WebElement element = new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(
@@ -116,5 +122,15 @@ public class Revisions {
             webDriver.findElement(By.xpath(MessageForStateChange_Txa)))).sendKeys(message);
 
     }
+    
+    public void ClickDeleteConfirmBtn() throws Exception {
+    	
+    	WebElement element = new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(
+    			By.xpath(DeleteRev_Btn)));
+    	element.click();
+    }
+    
+    
+    
 }
 
