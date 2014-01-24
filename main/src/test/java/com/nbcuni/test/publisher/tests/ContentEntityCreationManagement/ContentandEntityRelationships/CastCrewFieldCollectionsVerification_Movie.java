@@ -271,8 +271,7 @@ public class CastCrewFieldCollectionsVerification_Movie extends ParentTest{
 		castCrew.VerifyRoleValue("Character", 2);
 		castCrew.VerifyCharacterNameValue(Characters.get(2),4);  
 		
-	  //Step 11
-		overlay.switchToDefaultContent();
+	  //Step 11		
         overlay.ClickCloseOverlayLnk();     
         logout.ClickLogoutBtn();
      

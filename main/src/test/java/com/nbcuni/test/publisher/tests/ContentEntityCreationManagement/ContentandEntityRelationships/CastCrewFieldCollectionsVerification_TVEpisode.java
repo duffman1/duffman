@@ -260,7 +260,6 @@ public class CastCrewFieldCollectionsVerification_TVEpisode extends ParentTest {
 		castCrew.VerifyCharacterNameValue(Characters.get(2),4);  
 		
 	  //Step 11
-		overlay.switchToDefaultContent();
         overlay.ClickCloseOverlayLnk();     
         logout.ClickLogoutBtn();
      

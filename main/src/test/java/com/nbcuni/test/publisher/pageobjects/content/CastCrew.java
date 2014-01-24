@@ -4,6 +4,7 @@ package com.nbcuni.test.publisher.pageobjects.content;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -21,7 +22,7 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 /*********************************************
  * publisher.nbcuni.com Cast/Crew Library. Copyright
  * 
- * @author Brandon Clark
+ * @author Brandon Clark/Faizan Khan
  * @version 1.0 Date: December 13, 2013
  *********************************************/
 
@@ -91,12 +92,12 @@ public class CastCrew {
     public void EnterPersonName(String personName) throws Exception {
     	
     	WebElement txb = new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOf
-    			(webDriver.findElement(By.xpath(Person_Txb))));    	
+   			(webDriver.findElement(By.xpath(Person_Txb)))); 
+    	
     	txb.sendKeys(personName);
     	Thread.sleep(2000);
     	txb.sendKeys(Keys.ARROW_DOWN);
-    	txb.sendKeys(Keys.ENTER); 
-    	
+    	webDriver.findElement(By.xpath(".//div[@id='autocomplete']/../..//div[contains(text(),'"+personName+"')]")).click();
     	//TODO - get this wait working properly
     	//new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOf(webDriver.findElement(By.xpath(Person_Ato)))).click();
     	//Thread.sleep(2000);
@@ -109,7 +110,7 @@ public class CastCrew {
     	txbs.get(PersonNum).sendKeys(personName);
     	Thread.sleep(2000);
     	txbs.get(PersonNum).sendKeys(Keys.ARROW_DOWN);
-    	txbs.get(PersonNum).sendKeys(Keys.ENTER);  
+    	webDriver.findElement(By.xpath(".//div[@id='autocomplete']/../..//div[contains(text(),'"+personName+"')]")).click();
     	//TODO - get this wait working properly
     	//new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOf(webDriver.findElement(By.xpath(Person_Ato)))).click();
     	//Thread.sleep(2000);
@@ -119,13 +120,11 @@ public class CastCrew {
     public void EnterCharacterName(String characterName) throws Exception {
     	
     	WebElement txb = new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOf
-    			(webDriver.findElement(By.xpath(Character_Txb))));
-    	
+    			(webDriver.findElement(By.xpath(Character_Txb))));    	
     	txb.sendKeys(characterName);
     	Thread.sleep(2000);
     	txb.sendKeys(Keys.ARROW_DOWN);
-    	txb.sendKeys(Keys.ENTER);
-    
+    	webDriver.findElement(By.xpath(".//div[@id='autocomplete']/../..//div[contains(text(),'"+characterName+"')]")).click();
     	//TODO - get this wait working properly
     	//new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOf(webDriver.findElement(By.xpath(Character_Ato)))).click();
     	//Thread.sleep(2000);
@@ -137,9 +136,7 @@ public class CastCrew {
     	txbs.get(characterBoxNum).sendKeys(characterName);
     	Thread.sleep(2000);
     	txbs.get(characterBoxNum).sendKeys(Keys.ARROW_DOWN);
-    	txbs.get(characterBoxNum).sendKeys(Keys.ENTER);
-    	txbs.get(characterBoxNum).sendKeys(Keys.TAB);
-    	txbs.get(characterBoxNum).sendKeys(Keys.TAB);
+    	webDriver.findElement(By.xpath(".//div[@id='autocomplete']/../..//div[contains(text(),'"+characterName+"')]")).click();
     	
     	//TODO - get this wait working properly
     	//new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOf(webDriver.findElement(By.xpath(Character_Ato)))).click();
