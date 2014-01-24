@@ -18,11 +18,16 @@ public class DeleteMultipleAccounts extends ParentTest{
 	
     /*************************************************************************************
      * TEST CASE 
-     * Step 1 - Log into Pub 7
-     * Step 2 - Log into MPX web data service and get all available accounts
-     * Step 3 - Open pub 7 and navigate to Confuguration>>Media>>Media: thePlatform mpx settings
-     * Step 4 - Verify that mpx is configured. Fail test if not.
-     * Step 5 - Click "MPX Login" link to expand mpx login options
+     * Step 1 - Log into Pub 7<br>
+     * Step 2 - Log into MPX web data service and get all available accounts<br>
+     * Step 3 - Open pub 7 and navigate to Confuguration>>Media>>Media: thePlatform mpx settings<br>
+     * Step 4 - Verify that mpx is configured. Fail test if not.<br>
+     * Step 5 - Click "MPX Login" link to expand mpx login options<br>
+     * Step 6 - For each "Delete Account xxx", get the element click the delete button<br>
+     * Step 7 - For each "You are about to..." confirmation, click the "Delete" button<br>
+     * Step 8 - For each account to be deleted, Wait for step 4 of 4 to complete for "Deleting MPX Account XXX" dialog<br>
+     * Step 9 - For each account to be deleted, Wait for page refresh to recycle<br>
+     * Step 10 - Close overlay, navigate "Content>>Files>>mpxMedia, verify no MPX assets present in list<br>
      * @throws Throwable No Return values are needed
      *************************************************************************************/
     @Test(groups = {"full"})

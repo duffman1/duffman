@@ -8,30 +8,24 @@
       <![CDATA[Environment: PROD]]>
     </line>
     <line>
-      <![CDATA[URL: http://qa2dev.publisher.nbcuni.com]]>
+      <![CDATA[URL: http://qa5stg.publisher.nbcuni.com]]>
     </line>
     <line>
-      <![CDATA[verifyObjectContainsText:  Object //div[@class='messages status'] contains the text The configuration options have been saved.]]>
-    </line>
-    <line>
-      <![CDATA[Publish state currently set to Draft]]>
-    </line>
-    <line>
-      <![CDATA[Publish state currently set to Review]]>
-    </line>
-    <line>
-      <![CDATA[Publish state currently set to Published]]>
+      <![CDATA[URL: http://qa5stg.publisher.nbcuni.com]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="87043" started-at="2014-01-24T19:38:24Z" finished-at="2014-01-24T19:39:51Z">
+  <suite name="Default suite" duration-ms="34236" started-at="2014-01-24T20:48:48Z" finished-at="2014-01-24T20:49:22Z">
     <groups>
       <group name="full">
-        <method signature="CreatePost.CreatePost()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost@2d082059]" name="CreatePost" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost"/>
+        <method signature="MultipleMPXAccountsPerLoginVerification.MultipleMPXAccountsPerLoginVerification()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MultipleMPXAccountsPerLoginVerification@2c766a24]" name="MultipleMPXAccountsPerLoginVerification" class="com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MultipleMPXAccountsPerLoginVerification"/>
       </group> <!-- full -->
+      <group name="smoke">
+        <method signature="MultipleMPXAccountsPerLoginVerification.MultipleMPXAccountsPerLoginVerification()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MultipleMPXAccountsPerLoginVerification@2c766a24]" name="MultipleMPXAccountsPerLoginVerification" class="com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MultipleMPXAccountsPerLoginVerification"/>
+      </group> <!-- smoke -->
     </groups>
-    <test name="Default test" duration-ms="87043" started-at="2014-01-24T19:38:24Z" finished-at="2014-01-24T19:39:51Z">
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost">
-        <test-method status="PASS" signature="startSelenium(java.lang.String)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost@2d082059]" name="startSelenium" is-config="true" duration-ms="13488" started-at="2014-01-24T14:38:24Z" finished-at="2014-01-24T14:38:38Z">
+    <test name="Default test" duration-ms="34236" started-at="2014-01-24T20:48:48Z" finished-at="2014-01-24T20:49:22Z">
+      <class name="com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MultipleMPXAccountsPerLoginVerification">
+        <test-method status="PASS" signature="startSelenium(java.lang.String)[pri:0, instance:com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MultipleMPXAccountsPerLoginVerification@2c766a24]" name="startSelenium" is-config="true" duration-ms="13855" started-at="2014-01-24T15:48:48Z" finished-at="2014-01-24T15:49:02Z">
           <params>
             <param index="0">
               <value>
@@ -48,37 +42,28 @@
             </line>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="CreatePost()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost@2d082059]" name="CreatePost" duration-ms="72969" started-at="2014-01-24T14:38:38Z" finished-at="2014-01-24T14:39:51Z">
+        <test-method status="PASS" signature="MultipleMPXAccountsPerLoginVerification()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MultipleMPXAccountsPerLoginVerification@2c766a24]" name="MultipleMPXAccountsPerLoginVerification" duration-ms="19797" started-at="2014-01-24T15:49:02Z" finished-at="2014-01-24T15:49:22Z">
           <reporter-output>
             <line>
-              <![CDATA[URL: http://qa2dev.publisher.nbcuni.com]]>
+              <![CDATA[URL: http://qa5stg.publisher.nbcuni.com]]>
             </line>
             <line>
-              <![CDATA[verifyObjectContainsText:  Object //div[@class='messages status'] contains the text The configuration options have been saved.]]>
-            </line>
-            <line>
-              <![CDATA[Publish state currently set to Draft]]>
-            </line>
-            <line>
-              <![CDATA[Publish state currently set to Review]]>
-            </line>
-            <line>
-              <![CDATA[Publish state currently set to Published]]>
+              <![CDATA[URL: http://qa5stg.publisher.nbcuni.com]]>
             </line>
           </reporter-output>
-        </test-method> <!-- CreatePost -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost@2d082059]" name="stopSelenium" is-config="true" duration-ms="568" started-at="2014-01-24T14:39:51Z" finished-at="2014-01-24T14:39:51Z">
+        </test-method> <!-- MultipleMPXAccountsPerLoginVerification -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MultipleMPXAccountsPerLoginVerification@2c766a24]" name="stopSelenium" is-config="true" duration-ms="571" started-at="2014-01-24T15:49:22Z" finished-at="2014-01-24T15:49:22Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=CreatePost status=SUCCESS method=CreatePost.CreatePost()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost@2d082059] output=URL: http://qa2dev.publisher.nbcuni.com]]]>
+                <![CDATA[[TestResult name=MultipleMPXAccountsPerLoginVerification status=SUCCESS method=MultipleMPXAccountsPerLoginVerification.MultipleMPXAccountsPerLoginVerification()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MultipleMPXAccountsPerLoginVerification@2c766a24] output=URL: http://qa5stg.publisher.nbcuni.com]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MultipleMPXAccountsPerLoginVerification -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
