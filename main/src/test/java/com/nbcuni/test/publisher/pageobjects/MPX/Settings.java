@@ -36,10 +36,10 @@ public class Settings {
     private static String Username1_Txb = "//input[@id='edit-accounts-existing-1-theplatform-username']";
     private static String Password1_Txb = "//input[@id='edit-accounts-existing-1-theplatform-password']";
     private static String Update_Btn = "//input[@value='Update']";
-    private static String SelectImportAccount1_Ddl = "//select[@id='edit-import-accounts-settings-1']";
-    private static String SelectImportAccount2_Ddl = "//select[@id='edit-import-accounts-settings-2']";
-    private static String SelectImportAccount3_Ddl = "//select[@id='edit-import-accounts-settings-3']";
-    private static String SelectImportAccount4_Ddl = "//select[@id='edit-import-accounts-settings-4']";
+    private static String SelectImportAccount1_Ddl = "(//select[contains(@id, 'edit-import-accounts-settings')])[1]";
+    private static String SelectImportAccount2_Ddl = "(//select[contains(@id, 'edit-import-accounts-settings')])[2]";
+    private static String SelectImportAccount3_Ddl = "(//select[contains(@id, 'edit-import-accounts-settings')])[3]";
+    private static String SelectImportAccount4_Ddl = "(//select[contains(@id, 'edit-import-accounts-settings')])[4]";
     private static String SetImportAccount_Btn = "//input[@id='edit-import-accounts-actions-submit']";
     private static String SaveConfigurations_Btn = "//input[@id='edit-submit']";
     private static String ConnectToMPX_Btn = "//input[@value='Connect to MPX']";

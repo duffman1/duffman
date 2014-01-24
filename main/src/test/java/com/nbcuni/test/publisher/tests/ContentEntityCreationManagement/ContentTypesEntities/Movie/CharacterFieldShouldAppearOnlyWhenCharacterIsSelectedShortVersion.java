@@ -51,7 +51,7 @@ public class CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedShortVersion e
      * Step 4 - In the "Role" list, click "Character"<br>
      * @throws Throwable No Return values are needed
      *************************************************************************************/
-    @Test(groups = {"full", "smoke" })
+    @Test(groups = {"full" })
     public void CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedShortVersion() throws Exception{
          
         	//Step 1

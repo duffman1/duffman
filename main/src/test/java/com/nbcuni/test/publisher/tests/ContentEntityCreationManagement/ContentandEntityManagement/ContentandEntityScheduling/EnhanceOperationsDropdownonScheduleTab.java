@@ -25,7 +25,7 @@ import java.util.Date;
 
 public class EnhanceOperationsDropdownonScheduleTab extends ParentTest {
 
-    @Test(groups = {"full", "smoke"})
+    @Test(groups = {"full"})
         public void ScheduletopublishContentbyDateTime() throws Exception{
 
       //Step 1

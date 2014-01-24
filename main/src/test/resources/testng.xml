@@ -4,12 +4,13 @@
   	
   	<test name="All Web Tests">
 
-		<!-- Enter group name for specific test scripts
+		<!-- Enter group name for specific test scripts -->
 		<groups>
 	 		<run>
-	 			<include name="full"/>
+	 			<!--<include name="full"/>-->
+	 			<include name="smoke"/>
 	 		</run>
-		</groups>-->
+		</groups>
 
 		<!--Add individual packages you wanted to execute below-->
    		<packages>

@@ -60,7 +60,7 @@ public class RolesPredefinedInPublisher7 extends ParentTest{
      * Step 5 - Verify that Name entries are present for only, and all of, the roles  a  anonymous user b  authenticated user c  administrator  d  editor e  senior editor  in that order from top to bottom<br>
      * @throws Throwable No Return values are needed
      *************************************************************************************/
-    @Test(groups = {"full", "smoke"})
+    @Test(groups = {"full"})
     public void RolesPredefinedInPublisher7() throws Exception{
     	
     	//Step 1

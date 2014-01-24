@@ -37,7 +37,7 @@ public class GPTConfiguration extends ParentTest{
      * Step 7 - Log out Publisher 7
      * @throws Throwable No Return values are needed
      *************************************************************************************/
-    @Test(groups = {"full", "smoke" })
+    @Test(groups = {"full" })
     public void GPTConfiguration() throws Exception {
         
         	//Step 1

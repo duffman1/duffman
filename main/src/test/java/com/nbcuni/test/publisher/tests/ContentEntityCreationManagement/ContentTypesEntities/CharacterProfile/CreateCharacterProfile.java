@@ -39,7 +39,7 @@ public class CreateCharacterProfile extends ParentTest{
      * Step 5 - Click on the "Save" button<br> 
      * @throws Throwable No Return values are needed
      *************************************************************************************/
-    @Test(groups = {"full", "smoke" })
+    @Test(groups = {"full" })
     public void CreateCharacterProfile() throws Exception {
          
         	//Step 1

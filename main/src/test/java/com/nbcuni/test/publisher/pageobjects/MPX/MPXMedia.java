@@ -31,10 +31,10 @@ public class MPXMedia {
     private static String MPXMedia_Lnk = "//a[text()='mpxMedia']";
     private static String SyncMPXMedia_Lnk = "//fieldset[@id='edit-video-sync']//a";
     private static String SyncMPXMediaNow_Lnk = "//input[@value='Sync mpxMedia Now']";
-    private static String SynchMPXMediaForAccount1_Ddl = "//select[@id='edit-video-sync-settings-1-default-player-id']";
-    private static String SynchMPXMediaForAccount2_Ddl = "//select[@id='edit-video-sync-settings-2-default-player-id']";
-    private static String SynchMPXMediaForAccount3_Ddl = "//select[@id='edit-video-sync-settings-3-default-player-id']";
-    private static String SynchMPXMediaForAccount4_Ddl = "//select[@id='edit-video-sync-settings-4-default-player-id']";
+    private static String SynchMPXMediaForAccount1_Ddl = "(//select[contains(@id, 'edit-video-sync-settings')])[1]";
+    private static String SynchMPXMediaForAccount2_Ddl = "(//select[contains(@id, 'edit-video-sync-settings')])[2]";
+    private static String SynchMPXMediaForAccount3_Ddl = "(//select[contains(@id, 'edit-video-sync-settings')])[3]";
+    private static String SynchMPXMediaForAccount4_Ddl = "(//select[contains(@id, 'edit-video-sync-settings')])[4]";
 
     
     public MPXMedia(final CustomWebDriver custWebDr) {

@@ -23,7 +23,7 @@ public class SiteReportVisualization extends ParentTest{
 ,Step 11,Filter the list by Time sent = Most recent, and then in turn, until you have examined each list entry:  a  Check the More checkbox for each entry in the list.  b  Use the browser Back button to return to the site listing page. ,a  Checking the More checkbox for a list entry displays a detail page for that site.  b  The browser Back button restores display of the Site reports list.   
      * @throws Throwable No Return values are needed
      *************************************************************************************/
-    @Test(groups = {"full", "smoke"})
+    @Test(groups = {"full"})
     public void SiteReportVisualization() throws Exception{
     	/*Per Mirza, this test is not needed as there are no reports on fresh installs. He will follow up but advised i comment this test out for the time being
     	//Step 1

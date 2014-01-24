@@ -28,7 +28,7 @@ public class InstallZeeboxModule extends ParentTest{
      * Step 7 - Go to Modules > Uninstall, check 'Zeebox Example' and click Uninstall. Confirm the action when prompted.  NOTE: This step is to let other QA personnel test Zeebox installation from scratch. ,Zeebox Example module is uninstalled and the below listed confirmation message is seen  - Zeebox <name of the example> example block has been deleted. - Zeebox <name of the example> example block has been deleted. - Zeebox <name of the example> example block has been deleted. - Zeebox <name of the example>  example block has been deleted. - Zeebox <name of the example> example block has been deleted. - The selected modules have been uninstalled. 
      * @throws Throwable No Return values are needed
      *************************************************************************************/
-    @Test(groups = {"full", "smoke" })
+    @Test(groups = {"full" })
     public void CreatePost() throws Exception{
          
         	//Step 1

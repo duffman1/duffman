@@ -63,7 +63,7 @@ public class QueueModerationStates extends ParentTest{
      * Step 11 - Click the Revisions tab, and then inspect the State Flow Events Form column and the uppermost entry in the History List column<br>
      * @throws Throwable No Return values are needed
      *************************************************************************************/
-    @Test(groups = {"full", "smoke" })
+    @Test(groups = {"full" })
     public void QueueModerationStates() throws Exception{
     	
         //Step 1

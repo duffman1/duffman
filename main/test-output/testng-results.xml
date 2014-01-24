@@ -11,27 +11,27 @@
       <![CDATA[URL: http://qa2dev.publisher.nbcuni.com]]>
     </line>
     <line>
-      <![CDATA[URL: http://qa2dev.publisher.nbcuni.com]]>
+      <![CDATA[verifyObjectContainsText:  Object //div[@class='messages status'] contains the text The configuration options have been saved.]]>
     </line>
     <line>
-      <![CDATA[URL: http://qa2dev.publisher.nbcuni.com]]>
+      <![CDATA[Publish state currently set to Draft]]>
     </line>
     <line>
-      <![CDATA[URL: http://qa2dev.publisher.nbcuni.com]]>
+      <![CDATA[Publish state currently set to Review]]>
     </line>
     <line>
-      <![CDATA[URL: http://qa2dev.publisher.nbcuni.com]]>
+      <![CDATA[Publish state currently set to Published]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="323638" started-at="2014-01-22T21:53:53Z" finished-at="2014-01-22T21:59:16Z">
+  <suite name="Default suite" duration-ms="87043" started-at="2014-01-24T19:38:24Z" finished-at="2014-01-24T19:39:51Z">
     <groups>
       <group name="full">
-        <method signature="SyncFromMPXButtonToVideoFileEntitiesEditForm.SyncFromMPXButtonToVideoFileEntitiesEditForm()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.SyncFromMPXButtonToVideoFileEntitiesEditForm.SyncFromMPXButtonToVideoFileEntitiesEditForm@4c331059]" name="SyncFromMPXButtonToVideoFileEntitiesEditForm" class="com.nbcuni.test.publisher.tests.Video.SyncFromMPXButtonToVideoFileEntitiesEditForm.SyncFromMPXButtonToVideoFileEntitiesEditForm"/>
+        <method signature="CreatePost.CreatePost()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost@2d082059]" name="CreatePost" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost"/>
       </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="323638" started-at="2014-01-22T21:53:53Z" finished-at="2014-01-22T21:59:16Z">
-      <class name="com.nbcuni.test.publisher.tests.Video.SyncFromMPXButtonToVideoFileEntitiesEditForm.SyncFromMPXButtonToVideoFileEntitiesEditForm">
-        <test-method status="PASS" signature="startSelenium(java.lang.String)[pri:0, instance:com.nbcuni.test.publisher.tests.Video.SyncFromMPXButtonToVideoFileEntitiesEditForm.SyncFromMPXButtonToVideoFileEntitiesEditForm@4c331059]" name="startSelenium" is-config="true" duration-ms="13453" started-at="2014-01-22T16:53:53Z" finished-at="2014-01-22T16:54:06Z">
+    <test name="Default test" duration-ms="87043" started-at="2014-01-24T19:38:24Z" finished-at="2014-01-24T19:39:51Z">
+      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost">
+        <test-method status="PASS" signature="startSelenium(java.lang.String)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost@2d082059]" name="startSelenium" is-config="true" duration-ms="13488" started-at="2014-01-24T14:38:24Z" finished-at="2014-01-24T14:38:38Z">
           <params>
             <param index="0">
               <value>
@@ -48,37 +48,37 @@
             </line>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="SyncFromMPXButtonToVideoFileEntitiesEditForm()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.SyncFromMPXButtonToVideoFileEntitiesEditForm.SyncFromMPXButtonToVideoFileEntitiesEditForm@4c331059]" name="SyncFromMPXButtonToVideoFileEntitiesEditForm" duration-ms="309596" started-at="2014-01-22T16:54:06Z" finished-at="2014-01-22T16:59:16Z">
+        <test-method status="PASS" signature="CreatePost()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost@2d082059]" name="CreatePost" duration-ms="72969" started-at="2014-01-24T14:38:38Z" finished-at="2014-01-24T14:39:51Z">
           <reporter-output>
             <line>
               <![CDATA[URL: http://qa2dev.publisher.nbcuni.com]]>
             </line>
             <line>
-              <![CDATA[URL: http://qa2dev.publisher.nbcuni.com]]>
+              <![CDATA[verifyObjectContainsText:  Object //div[@class='messages status'] contains the text The configuration options have been saved.]]>
             </line>
             <line>
-              <![CDATA[URL: http://qa2dev.publisher.nbcuni.com]]>
+              <![CDATA[Publish state currently set to Draft]]>
             </line>
             <line>
-              <![CDATA[URL: http://qa2dev.publisher.nbcuni.com]]>
+              <![CDATA[Publish state currently set to Review]]>
             </line>
             <line>
-              <![CDATA[URL: http://qa2dev.publisher.nbcuni.com]]>
+              <![CDATA[Publish state currently set to Published]]>
             </line>
           </reporter-output>
-        </test-method> <!-- SyncFromMPXButtonToVideoFileEntitiesEditForm -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Video.SyncFromMPXButtonToVideoFileEntitiesEditForm.SyncFromMPXButtonToVideoFileEntitiesEditForm@4c331059]" name="stopSelenium" is-config="true" duration-ms="572" started-at="2014-01-22T16:59:16Z" finished-at="2014-01-22T16:59:16Z">
+        </test-method> <!-- CreatePost -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost@2d082059]" name="stopSelenium" is-config="true" duration-ms="568" started-at="2014-01-24T14:39:51Z" finished-at="2014-01-24T14:39:51Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=SyncFromMPXButtonToVideoFileEntitiesEditForm status=SUCCESS method=SyncFromMPXButtonToVideoFileEntitiesEditForm.SyncFromMPXButtonToVideoFileEntitiesEditForm()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.SyncFromMPXButtonToVideoFileEntitiesEditForm.SyncFromMPXButtonToVideoFileEntitiesEditForm@4c331059] output=URL: http://qa2dev.publisher.nbcuni.com]]]>
+                <![CDATA[[TestResult name=CreatePost status=SUCCESS method=CreatePost.CreatePost()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost@2d082059] output=URL: http://qa2dev.publisher.nbcuni.com]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-      </class> <!-- com.nbcuni.test.publisher.tests.Video.SyncFromMPXButtonToVideoFileEntitiesEditForm.SyncFromMPXButtonToVideoFileEntitiesEditForm -->
+      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

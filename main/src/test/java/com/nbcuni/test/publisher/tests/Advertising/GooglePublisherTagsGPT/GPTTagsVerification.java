@@ -46,7 +46,7 @@ public class GPTTagsVerification extends ParentTest{
      * Step 9 - Log out of publisher 7
      * @throws Throwable No Return values are needed
      *************************************************************************************/
-    @Test(groups = {"full", "smoke" })
+    @Test(groups = {"full" })
     public void GPTTagsVerification() throws Exception {
         
         	//Step 1

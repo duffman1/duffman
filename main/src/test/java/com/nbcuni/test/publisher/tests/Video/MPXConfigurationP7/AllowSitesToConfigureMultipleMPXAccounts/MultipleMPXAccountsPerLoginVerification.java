@@ -85,7 +85,7 @@ public class MultipleMPXAccountsPerLoginVerification extends ParentTest{
         	settings.EnterPassword0("Pa55word");
         	settings.ClickConnectToMPXBtn();
         	ContentParent contentParent = new ContentParent(webDriver);
-        	contentParent.VerifyMessageStatus("Retrieved 5 import accounts for account 1.");
+        	contentParent.VerifyMessageStatus("Login successful");
         	settings.VerifyImportAccountOptions(accountNames);
             
         	//Step
@@ -109,11 +109,11 @@ public class MultipleMPXAccountsPerLoginVerification extends ParentTest{
         	settings.ClickSetImportAccountBtn();
         	
         	//Step
-        	contentParent.VerifyMessageStatus("Setting import account \"DB%20TV\" for account 1.");
+        	contentParent.VerifyMessageStatus("Setting import account \"DB%20TV\" for account");
         	contentParent.VerifyMessageStatus("Retrieving import account information for \"DB%20TV\".");
-        	contentParent.VerifyMessageStatus("Setting import account \"NBCU%20TVE%20Dev%20-%20NBC\" for account 2.");
+        	contentParent.VerifyMessageStatus("Setting import account \"NBCU%20TVE%20Dev%20-%20NBC\" for account");
         	contentParent.VerifyMessageStatus("Retrieving import account information for \"NBCU%20TVE%20Dev%20-%20NBC\".");
-        	contentParent.VerifyMessageStatus("Setting import account \"NBCU%20TVE%20Stage%20-%20Golf%20Channel\" for account 3.");
+        	contentParent.VerifyMessageStatus("Setting import account \"NBCU%20TVE%20Stage%20-%20Golf%20Channel\" for account");
         	contentParent.VerifyMessageStatus("Retrieving import account information for \"NBCU%20TVE%20Stage%20-%20Golf%20Channel\".");
         	
         	//Step

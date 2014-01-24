@@ -45,7 +45,7 @@ public class CreateMediaGallery extends ParentTest{
      * Step 6 - Click on "Save" button<br> 
      * @throws Throwable No Return values are needed
      *************************************************************************************/
-    @Test(groups = {"full", "smoke" })
+    @Test(groups = {"full" })
     public void CreateMediaGallery() throws Exception{
         
         	//Step 1

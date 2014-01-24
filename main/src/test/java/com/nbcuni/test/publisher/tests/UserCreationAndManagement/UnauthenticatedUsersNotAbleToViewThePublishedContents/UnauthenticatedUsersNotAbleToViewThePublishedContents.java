@@ -50,7 +50,7 @@ public class UnauthenticatedUsersNotAbleToViewThePublishedContents extends Paren
      * 
      * @throws Throwable No Return values are needed
      *************************************************************************************/
-    @Test(groups = {"full", "smoke"})
+    @Test(groups = {"full"})
     public void UnauthenticatedUsersNotAbleToViewThePublishedContents() throws Exception{
     	
     	//Step 1

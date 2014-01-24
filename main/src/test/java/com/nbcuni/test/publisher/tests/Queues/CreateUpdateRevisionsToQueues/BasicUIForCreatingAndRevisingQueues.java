@@ -66,7 +66,7 @@ public class BasicUIForCreatingAndRevisingQueues extends ParentTest{
 
      * @throws Throwable No Return values are needed
      *************************************************************************************/
-    @Test(groups = {"full", "smoke" })
+    @Test(groups = {"full" })
     public void BasicUIForCreatingAndRevisingQueues() throws Exception{
     	
         //Step 1

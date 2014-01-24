@@ -45,7 +45,7 @@ public class CreatePerson extends ParentTest{
      * Step 5 - Click on 'Save' button.<br> 
      * @throws Throwable No Return values are needed
      *************************************************************************************/
-    @Test(groups = {"full", "smoke" })
+    @Test(groups = {"full" })
     public void CreatePerson() throws Exception{
          
         	//Step 1

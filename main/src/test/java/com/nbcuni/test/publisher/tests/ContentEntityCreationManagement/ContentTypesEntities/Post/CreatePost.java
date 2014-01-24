@@ -28,7 +28,7 @@ public class CreatePost extends ParentTest{
      * Step 7 - Repeat above steps with Moderation state value as Review and Published<br> 
      * @throws Throwable No Return values are needed
      *************************************************************************************/
-    @Test(groups = {"full", "smoke" })
+    @Test(groups = {"full" })
     public void CreatePost() throws Exception{
          
         	//Step 1
