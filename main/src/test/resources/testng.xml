@@ -4,11 +4,10 @@
   	
   	<test name="All Web Tests">
 
-		<!-- Enter group name for specific test scripts -->
+		<!-- Enter group name for specific test scripts, options are "full" or "smoke" -->
 		<groups>
 	 		<run>
-	 			<!--<include name="full"/>-->
-	 			<include name="smoke"/>
+	 			<include name="full"/>
 	 		</run>
 		</groups>
 

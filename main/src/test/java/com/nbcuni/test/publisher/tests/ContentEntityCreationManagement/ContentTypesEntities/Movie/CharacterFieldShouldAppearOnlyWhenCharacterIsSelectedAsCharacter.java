@@ -76,13 +76,13 @@ public class CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter ex
             		"Judge", "Producer", "Self", "Song Writer", "Writer");
             for (String role : allRoles) {
             	
-            	castCrew.SelectRole(role); Thread.sleep(500);
+            	castCrew.SelectRole(role, "1"); Thread.sleep(500);
             	castCrew.VerifyCharacterTxbNotDisplayed();
             	
             }
             
             //Step 8
-            castCrew.SelectRole("Character");
+            castCrew.SelectRole("Character", "1");
             castCrew.VerifyCharacterTxbDisplayed();
             
             //Step 9 
@@ -112,9 +112,9 @@ public class CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter ex
             castCrew.ClickCastCrewLnk();
             
             //Step 13
-            castCrew.EnterPersonName(personFirstName);
-            castCrew.SelectRole("Character");
-            castCrew.EnterCharacterName(characterName);
+            castCrew.EnterPersonName(personFirstName, "1");
+            castCrew.SelectRole("Character", "1");
+            castCrew.EnterCharacterName(characterName, "1");
             
             //Step 14
             BasicInformation basicInformation = new BasicInformation(webDriver);
@@ -135,9 +135,9 @@ public class CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter ex
             overlay.SwitchToFrame(movieTitle);
             castCrew.ClickCastCrewLnk();
             castCrew.VerifyCharacterTxbDisplayed();
-            castCrew.VerifyPersonNameValue(personFirstName);
-            castCrew.VerifyRoleValue("Character");
-            castCrew.VerifyCharacterNameValue(characterName);
+            castCrew.VerifyPersonNameValue(personFirstName, "1");
+            castCrew.VerifyRoleValue("Character", "1");
+            castCrew.VerifyCharacterNameValue(characterName, "1");
             
             //Step 16
             PublishingOptions publishingOptions = new PublishingOptions(webDriver);

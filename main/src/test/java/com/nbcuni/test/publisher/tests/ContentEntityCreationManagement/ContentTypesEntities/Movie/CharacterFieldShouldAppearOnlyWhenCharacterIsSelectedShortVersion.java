@@ -69,13 +69,13 @@ public class CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedShortVersion e
             		"Judge", "Producer", "Self", "Song Writer", "Writer");
             for (String role : allRoles) {
             	
-            	castCrew.SelectRole(role); Thread.sleep(1000);
+            	castCrew.SelectRole(role, "1"); Thread.sleep(1000);
             	castCrew.VerifyCharacterTxbNotDisplayed();
             	
             }
             
             //Step 4
-            castCrew.SelectRole("Character");
+            castCrew.SelectRole("Character", "1");
             castCrew.VerifyCharacterTxbDisplayed();
             
             

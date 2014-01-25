@@ -12,7 +12,6 @@ import org.testng.annotations.Test;
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Random;
 import com.nbcuni.test.publisher.pageobjects.AccessDenied;
-import com.nbcuni.test.publisher.pageobjects.ErrorMessage;
 import com.nbcuni.test.publisher.pageobjects.Logout;
 import com.nbcuni.test.publisher.pageobjects.Overlay;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
@@ -49,14 +48,14 @@ public class CastCrewFieldCollectionsVerification_Movie extends ParentTest{
      *************************************************************************************/
     @Test(groups = {"full"})
     public void CastCrewFieldCollectionsVerification() throws Exception{
+    	
     	//Step 1
-    	
-    	List<String> Characters =Arrays.asList("CharacterFirstName1","CharacterFirstName2","CharacterFirstName3");
-    	List<String> Persons =Arrays.asList("PersonFirstName1","PersonFirstName2","PersonFirstName3");
-    	
+    	List<String> Characters = Arrays.asList("CharacterFirstName1","CharacterFirstName2","CharacterFirstName3");
+    	List<String> Persons = Arrays.asList("PersonFirstName1","PersonFirstName2","PersonFirstName3");
     	UserLogin userLogin = applib.openApplication();
         userLogin.Login("admin@publisher.nbcuni.com", "pa55word");
         ContentParent contentParent = new ContentParent(webDriver);
+        
         //Step 2
         CharactersInformation charactersInformation = new CharactersInformation(webDriver);
         Random random = new Random();
@@ -76,7 +75,6 @@ public class CastCrewFieldCollectionsVerification_Movie extends ParentTest{
 	        charactersInformation.VerifyDefaultImagePresent("HanSolo");
 	        contentParent.ClickSaveBtn();
 	        overlay.switchToDefaultContent();
-	        Thread.sleep(5000);
 	        contentParent.VerifyMessageStatus("Character Profile " + Characters.get(CCount) + " has been created.");
 	     
         }/*Close For loop : Character profile*/
@@ -95,7 +93,6 @@ public class CastCrewFieldCollectionsVerification_Movie extends ParentTest{
 	        overlay.SwitchToFrame("Create Person");	       
 	        contentParent.ClickSaveBtn();
 	        overlay.switchToDefaultContent();
-	        Thread.sleep(5000);
 	        contentParent.VerifyMessageStatus("Person " + Persons.get(PCount) + " has been created.");
         }/*Close For Loop Create Person*/
         
@@ -103,7 +100,8 @@ public class CastCrewFieldCollectionsVerification_Movie extends ParentTest{
       //Step 4
         /****Create Movie***/
         taxonomy.NavigateSite("Content>>Add content>>Movie");
-      //Step 5
+      
+        //Step 5
         overlay.SwitchToFrame("Create Movie");
         String MovieName = random.GetCharacterString(15);
         BasicInformation basicInformation =new BasicInformation(webDriver);
@@ -113,33 +111,25 @@ public class CastCrewFieldCollectionsVerification_Movie extends ParentTest{
         overlay.switchToDefaultContent();
         overlay.SwitchToFrame("Create Movie");       
         basicInformation.ClickCoverSelectBtn();
-        //SelectFile selectFile = new SelectFile(webDriver, applib);
         selectFile.SelectDefaultCoverImg();
-      //Step 6
+      
+        //Step 6
         overlay.SwitchToFrame("Create Movie");
         CastCrew castCrew = new CastCrew(webDriver);
         castCrew.ClickCastCrewLnk();
        
         /*Add  Cast/Crew number : 2*/
-        castCrew.EnterPersonName(Persons.get(0));
-        castCrew.SelectRole("Character");
+        castCrew.EnterPersonName(Persons.get(0), "1");
+        castCrew.SelectRole("Character", "1");
         castCrew.VerifyCharacterTxbDisplayed();
-        castCrew.EnterCharacterName(Characters.get(0));
-        /*To DO
-         * Direct wait may require..depends on network speed/application response
-         */
+        castCrew.EnterCharacterName(Characters.get(0), "1");
         overlay.switchToDefaultContent();
         overlay.SwitchToActiveFrame();
         basicInformation.ClickBasicInformationTab();
-        /*To DO
-         * Direct wait may require..depends on network speed/application response
-         */
-      //Step 7
+        
+        //Step 7
         contentParent.ClickSaveBtn();
         overlay.switchToDefaultContent();
-        /*To DO
-         * Direct wait may require..depends on network speed/application response
-         */
         Workflow workFlow = new Workflow(webDriver);
         workFlow.ClickWorkflowTab("Revisions");
         overlay.switchToDefaultContent();
@@ -148,14 +138,8 @@ public class CastCrewFieldCollectionsVerification_Movie extends ParentTest{
         revision.ClickEditMenuBtn(MovieName);
         overlay.switchToDefaultContent();
         overlay.SwitchToActiveFrame();
-        /*To DO
-         * Direct wait may require..depends on network speed/application response
-         */
         PublishingOptions publishingOptions = new PublishingOptions(webDriver);
         publishingOptions.ClickPublishingOptionsLnk();  
-        /*To DO
-         * Direct wait may require..depends on network speed/application response
-         */
         publishingOptions.VerifyCreateNewRevisionCbxChecked();
         overlay.switchToDefaultContent();
         overlay.SwitchToActiveFrame();
@@ -163,20 +147,17 @@ public class CastCrewFieldCollectionsVerification_Movie extends ParentTest{
         overlay.SwitchToActiveFrame();
         castCrew.ClickCastCrewLnk();
         /*Verify old cast/crew data*/
-        castCrew.VerifyPersonNameValue(Persons.get(0),0);
-        castCrew.VerifyCharacterNameValue(Characters.get(0),0);
-        castCrew.VerifyRoleValue("Character", 0);
+        castCrew.VerifyPersonNameValue(Persons.get(0), "1");
+        castCrew.VerifyCharacterNameValue(Characters.get(0), "1");
+        castCrew.VerifyRoleValue("Character", "1");
         /*Add  Cast/Crew number : 2*/
         castCrew.ClickAddAnotherItemBtn();
-        /*To DO
-         * Direct wait may require..depends on network speed/application response
-         */
-        castCrew.EnterPersonName(Persons.get(1),2);
+        castCrew.EnterPersonName(Persons.get(1), "2");
         overlay.switchToDefaultContent();
         overlay.SwitchToActiveFrame();
-        castCrew.SelectRole("Character", 1);
+        castCrew.SelectRole("Character", "2");
         castCrew.VerifyCharacterTxbDisplayed();
-        castCrew.EnterCharacterName(Characters.get(1),2);
+        castCrew.EnterCharacterName(Characters.get(1), "2");
         
         /*Change Movie Title*/
         overlay.switchToDefaultContent();
@@ -185,21 +166,13 @@ public class CastCrewFieldCollectionsVerification_Movie extends ParentTest{
         String MovieName2 = random.GetCharacterString(15);        
         basicInformation.EnterTitle(MovieName2);
         contentParent.ClickSaveBtn();
-      //Step 8
-        /*To DO
-         * Direct wait may require..depends on network speed/application response
-         */
+      
+        //Step 8
         overlay.switchToDefaultContent();        
         workFlow.ClickWorkflowTab("Revisions");
         overlay.switchToDefaultContent();
         overlay.SwitchToActiveFrame();
-        /*To DO
-         * Direct wait may require..depends on network speed/application response
-         */
         revision.ClickEditMenuBtn(MovieName2);
-        /*To DO
-         * Direct wait may require..depends on network speed/application response
-         */
         overlay.switchToDefaultContent();
         overlay.SwitchToActiveFrame();
         publishingOptions.ClickPublishingOptionsLnk();
@@ -209,22 +182,19 @@ public class CastCrewFieldCollectionsVerification_Movie extends ParentTest{
         
         castCrew.ClickCastCrewLnk();
         /*Verify old cast/crew data*/
-        castCrew.VerifyPersonNameValue(Persons.get(0),0);
-        castCrew.VerifyCharacterNameValue(Characters.get(0),0);
-        castCrew.VerifyRoleValue("Character", 0);
-        castCrew.VerifyPersonNameValue(Persons.get(1),2);
-        castCrew.VerifyRoleValue("Character", 1);
-        castCrew.VerifyCharacterNameValue(Characters.get(1),2);
+        castCrew.VerifyPersonNameValue(Persons.get(0), "1");
+        castCrew.VerifyCharacterNameValue(Characters.get(0), "1");
+        castCrew.VerifyRoleValue("Character", "1");
+        castCrew.VerifyPersonNameValue(Persons.get(1), "2");
+        castCrew.VerifyRoleValue("Character", "2");
+        castCrew.VerifyCharacterNameValue(Characters.get(1), "2");
         
         /*Add  Cast/Crew number : 2*/
         castCrew.ClickAddAnotherItemBtn();
-        /*To DO
-         * Direct wait may require..depends on network speed/application response
-         */
-        castCrew.EnterPersonName(Persons.get(2),4);
-        castCrew.SelectRole("Character", 2);
+        castCrew.EnterPersonName(Persons.get(2), "3");
+        castCrew.SelectRole("Character", "3");
         castCrew.VerifyCharacterTxbDisplayed();
-        castCrew.EnterCharacterName(Characters.get(2),4);
+        castCrew.EnterCharacterName(Characters.get(2), "3");
         /*Change Movie Title 3*/
         overlay.switchToDefaultContent();
         overlay.SwitchToActiveFrame();
@@ -232,23 +202,14 @@ public class CastCrewFieldCollectionsVerification_Movie extends ParentTest{
         String MovieName3 = random.GetCharacterString(15);        
         basicInformation.EnterTitle(MovieName3);
         contentParent.ClickSaveBtn();
-      //Step 9
-        /*To DO
-         * Direct wait may require..depends on network speed/application response
-         */
+      
+        //Step 9
         overlay.switchToDefaultContent();        
         workFlow.ClickWorkflowTab("Revisions");
         overlay.switchToDefaultContent();
         overlay.SwitchToActiveFrame();
-
-        /*To DO
-         * Direct wait may require..depends on network speed/application response
-         */
         revision.ClickEditExtendMenuBtn(MovieName2);
         revision.ClickEditMenuDeleteBtn(MovieName2);
-        /*To DO
-         * Direct wait may require..depends on network speed/application response
-         */
         overlay.switchToDefaultContent();
         overlay.SwitchToActiveFrame();
         revision.ClickDeleteConfirmBtn();
@@ -258,18 +219,17 @@ public class CastCrewFieldCollectionsVerification_Movie extends ParentTest{
         revision.ClickEditMenuBtn(MovieName3);
         overlay.switchToDefaultContent();
         overlay.SwitchToActiveFrame();
-        ErrorMessage errorMessage = new ErrorMessage(webDriver);
-        errorMessage.VerifyErrorMessageNotonPage("Notice: Trying to get property of non-object in field_collection_field_get_entity() (line 1608 of /mnt/www/html/nbcuqa4dev/docroot/profiles/all/modules/contrib/field_collection/field_collection.module)");
+        contentParent.VerifyPageContentNotPresent(Arrays.asList("Notice: Trying to get property of non-object in field_collection_field_get_entity() (line 1608 of /mnt/www/html/nbcuqa4dev/docroot/profiles/all/modules/contrib/field_collection/field_collection.module)"));
         /*Verify All 3 Cast/Crew data*/
-		castCrew.VerifyPersonNameValue(Persons.get(0),0);
-		castCrew.VerifyCharacterNameValue(Characters.get(0),0);
-		castCrew.VerifyRoleValue("Character", 0);
-		castCrew.VerifyPersonNameValue(Persons.get(1),2);
-		castCrew.VerifyRoleValue("Character", 1);
-		castCrew.VerifyCharacterNameValue(Characters.get(1),2);     
-		castCrew.VerifyPersonNameValue(Persons.get(2),4);        
-		castCrew.VerifyRoleValue("Character", 2);
-		castCrew.VerifyCharacterNameValue(Characters.get(2),4);  
+		castCrew.VerifyPersonNameValue(Persons.get(0), "1");
+		castCrew.VerifyCharacterNameValue(Characters.get(0), "1");
+		castCrew.VerifyRoleValue("Character", "1");
+		castCrew.VerifyPersonNameValue(Persons.get(1), "2");
+		castCrew.VerifyRoleValue("Character", "2");
+		castCrew.VerifyCharacterNameValue(Characters.get(1), "2");     
+		castCrew.VerifyPersonNameValue(Persons.get(2), "3");        
+		castCrew.VerifyRoleValue("Character", "3");
+		castCrew.VerifyCharacterNameValue(Characters.get(2), "3");  
 		
 	  //Step 11		
         overlay.ClickCloseOverlayLnk();     

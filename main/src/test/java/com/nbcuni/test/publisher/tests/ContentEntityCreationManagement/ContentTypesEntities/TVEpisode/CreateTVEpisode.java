@@ -93,8 +93,8 @@ public class CreateTVEpisode extends ParentTest{
             	castCrew.ClickCastCrewLnk();
         	
             	//Step 8
-            	castCrew.EnterPersonName(personFirstName);
-            	castCrew.SelectRole("Contributor");
+            	castCrew.EnterPersonName(personFirstName, "1");
+            	castCrew.SelectRole("Contributor", "1");
         	
             	//Step 9
             	contentParent.ClickSaveBtn();
