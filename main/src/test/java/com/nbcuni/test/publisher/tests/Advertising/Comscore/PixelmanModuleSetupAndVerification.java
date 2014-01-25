@@ -66,7 +66,8 @@ public class PixelmanModuleSetupAndVerification extends ParentTest {
         overlay.ClickCloseOverlayLnk();
         overlay.switchToDefaultContent();
         taxonomy.NavigateSite("Home");
-            
+        taxonomy.NavigateSite("Home>>Flush all caches");
+        
         //Step 6
         modules.VerifyModuleSourceInPage("//www.nbcudigitaladops.com/hosted/global_header.js");
         modules.VerifyModuleSourceInPage("//www.nbcudigitaladops.com/hosted/site.js?h=qa5dev_publisher_nbcuni_com_header");

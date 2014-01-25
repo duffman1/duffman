@@ -149,19 +149,16 @@ public class Modules {
     	
     }
     
-    public void VerifyModuleSourceInPage(String scriptSrc) {
+    public void VerifyModuleSourceInPage(String scriptSrc) throws Exception {
     	
-    	String pageSource = webDriver.getPageSource();
-    	ul.verifyTextContainsExpectedText(pageSource, scriptSrc);
-    	
+    	Assert.assertTrue(webDriver.getPageSource().contains(scriptSrc));
+    	    
     }
     
-    public void VerifyModuleSourceNotInPage(String scriptSrc) {
+    public void VerifyModuleSourceNotInPage(String scriptSrc) throws Exception {
     	
-    	//TODO - add a util method for this to lib
     	Assert.assertFalse(webDriver.getPageSource().contains(scriptSrc), 
     			"Module source is present when it should not be!");
-    	
     	
     }
     

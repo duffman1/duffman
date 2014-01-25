@@ -51,6 +51,8 @@ public class UndefinedIndexesDisplayingForMPXPlayers extends ParentTest{
     @Test(groups = {"full"})
     public void UndefinedIndexesDisplayingForMPXPlayers() throws Exception{
     	
+    	//Defect was removed from iteration 39 for work at a later date. commenting out test until resolved at the request of the business
+    	/*
     	//Step 1
     	UserLogin userLogin = applib.openApplication();
     	MPXLogin mpxLogin = new MPXLogin(webDriver, applib);
@@ -197,6 +199,6 @@ public class UndefinedIndexesDisplayingForMPXPlayers extends ParentTest{
         	
         	Assert.fail("MPX is NOT configured. Test titled 'MultipleMPXAccountsPerLoginVerification' must run before any other MPX tests.");
         }
-        
+        */
     }
 }

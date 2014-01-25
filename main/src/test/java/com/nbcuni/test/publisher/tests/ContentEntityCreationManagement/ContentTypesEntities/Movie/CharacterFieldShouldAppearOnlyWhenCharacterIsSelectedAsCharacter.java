@@ -72,7 +72,7 @@ public class CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter ex
             castCrew.VerifyCharacterTxbNotDisplayed();
             
             //Step 7
-            List<String> allRoles = Arrays.asList("Contributor", "Directory", "Executive Producer", "Host",
+            List<String> allRoles = Arrays.asList("Contributor", "Director", "Executive Producer", "Host",
             		"Judge", "Producer", "Self", "Song Writer", "Writer");
             for (String role : allRoles) {
             	

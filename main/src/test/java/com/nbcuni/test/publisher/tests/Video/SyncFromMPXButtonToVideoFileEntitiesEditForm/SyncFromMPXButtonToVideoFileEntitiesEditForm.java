@@ -57,6 +57,8 @@ public class SyncFromMPXButtonToVideoFileEntitiesEditForm extends ParentTest{
     @Test(groups = {"full"})
     public void SyncFromMPXButtonToVideoFileEntitiesEditForm() throws Exception{
     	
+    	/*TODO - Functionality removed from iteration 39 but will be added back in a future iteration. When complete, uncomment this test
+    	
     	//Step 1
     	UserLogin userLogin = applib.openApplication();
     	userLogin.Login("admin@publisher.nbcuni.com", "pa55word");
@@ -240,7 +242,7 @@ public class SyncFromMPXButtonToVideoFileEntitiesEditForm extends ParentTest{
         	
         	Assert.fail("MPX is NOT configured. Test titled 'MultipleMPXAccountsPerLoginVerification' must run before any other MPX tests.");
         }
-        
+        */
         
     }
 }
