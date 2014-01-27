@@ -48,9 +48,9 @@ public class Overlay {
     
     public void SwitchToFrame(String frameTitle) {
     	
-    	WebElement frm = webDriver.findElement(By.xpath("//iframe[contains(@title, '" + frameTitle + "')]"));
+    	WebElement frm = new WebDriverWait(webDriver, 30).until(ExpectedConditions.
+    			presenceOfElementLocated(By.xpath("//iframe[contains(@title, '" + frameTitle + "')]")));
     	webDriver.switchTo().frame(frm);
-    	
     }
     
     public void SwitchToFrameByIndex(String frameTitle, Integer frameIndex) {
@@ -64,7 +64,10 @@ public class Overlay {
     	
     	this.switchToDefaultContent();
     	Thread.sleep(1000); //TODO - modify with an explicit wait
-    	webDriver.switchTo().frame(webDriver.findElement(By.xpath(ActiveFrame_Frm)));
+    	WebElement frm = new WebDriverWait(webDriver, 30).until(ExpectedConditions.
+    			presenceOfElementLocated(By.xpath(ActiveFrame_Frm)));
+    	
+    	webDriver.switchTo().frame(frm);
     }
     
     

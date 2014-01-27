@@ -48,6 +48,10 @@ public class AppLib {
     private String pathToScreenshots = "";
     private String moduleOverlaysEnabled = "";
     private String pathToSikuliImages = "";
+    private String admin1Username = "";
+    private String admin1Password = "";
+    private String mpxUsername = "";
+    private String mpxPassword = "";
 
     private static String configFileName = "src" + File.separator + "test" + File.separator + "resources"
             + File.separator + "config.properties";
@@ -110,6 +114,11 @@ public class AppLib {
             pathToScreenshots = configProperties.getProperty(environment + ".PathToScreenShots");
             moduleOverlaysEnabled = configProperties.getProperty(environment + ".ModuleOverlaysEnabled");
             pathToSikuliImages = configProperties.getProperty(environment + ".PathToSikuliImages");
+            admin1Username = configProperties.getProperty(environment + ".Admin1UserName");
+            admin1Password = configProperties.getProperty(environment + ".Admin1PassWord");
+            mpxUsername = configProperties.getProperty(environment + ".MPXUserName");
+            mpxPassword = configProperties.getProperty(environment + ".MPXPassWord");
+            
         } catch (Exception e) {
             new CustomWebDriverException(e, custWebDr);
         }
@@ -125,6 +134,34 @@ public class AppLib {
     	
     	String pathToSikuliImages = System.getProperty("user.dir") + this.pathToSikuliImages;
     	return pathToSikuliImages;
+    }
+    
+    public String getAdmin1Username(){
+    	
+    	String admin1Username = this.admin1Username;
+    	
+    	return admin1Username;
+    }
+    
+    public String getAdmin1Password(){
+    	
+    	String admin1Password = this.admin1Password;
+    	
+    	return admin1Password;
+    }
+    
+    public String getMPXUsername(){
+    	
+    	String MPXUsername = this.mpxUsername;
+    	
+    	return MPXUsername;
+    }
+    
+    public String getMPXPassword(){
+    	
+    	String MPXPassword = this.mpxPassword;
+    	
+    	return MPXPassword;
     }
     
     /**
