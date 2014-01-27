@@ -9,7 +9,10 @@ import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.content.SearchFor;
+
 import junit.framework.Assert;
+
+import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
 import java.util.Arrays;
@@ -145,6 +148,7 @@ public class MPXMediaSyncVerification extends ParentTest{
             taxonomy.NavigateSite("Content>>Files>>mpxMedia");
             overlay.SwitchToFrame("Content");
             SearchFor searchFor = new SearchFor(webDriver);
+            PageFactory.initElements(webDriver, searchFor);
 
             if (configuredAccounts.contains("DB TV") || configuredAccounts.contains("NBCU TVE Dev - NBC")) {
                 searchFor.EnterTitle("Automation1");

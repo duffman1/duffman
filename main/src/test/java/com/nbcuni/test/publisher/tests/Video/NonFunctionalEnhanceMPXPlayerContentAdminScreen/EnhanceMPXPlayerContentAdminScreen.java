@@ -8,6 +8,7 @@ import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.content.SearchFor;
 
+import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
 import java.util.Arrays;
@@ -55,6 +56,7 @@ public class EnhanceMPXPlayerContentAdminScreen extends ParentTest{
         	taxonomy.NavigateSite("Content>>Files>>mpxPlayers");
         	overlay.SwitchToActiveFrame();
         	SearchFor searchFor = new SearchFor(webDriver);
+        	PageFactory.initElements(webDriver, searchFor);
         	searchFor.VerifyMPXSearchHeaderColumnOrder();
         	
         	//Step 3 - NA, redundant as step 2

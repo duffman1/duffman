@@ -9,7 +9,10 @@ import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.content.SearchFor;
 import com.nbcuni.test.publisher.pageobjects.content.Workflow;
+
 import junit.framework.Assert;
+
+import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
 import java.text.SimpleDateFormat;
@@ -82,6 +85,7 @@ public class MPXVideosSchedulingVerificationInitialOverrides extends ParentTest{
             taxonomy.NavigateSite("Content>>Files>>mpxMedia");
             overlay.SwitchToFrame("Content");
             SearchFor searchFor = new SearchFor(webDriver);
+            PageFactory.initElements(webDriver, searchFor);
             searchFor.EnterTitle("Automation1");
             searchFor.ClickApplyBtn();
             searchFor.VerifySearchResultsPresent(Arrays.asList("Automation1"));

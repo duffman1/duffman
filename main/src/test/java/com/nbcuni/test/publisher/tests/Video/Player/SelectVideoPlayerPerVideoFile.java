@@ -13,6 +13,7 @@ import com.nbcuni.test.publisher.pageobjects.content.SearchFor;
 
 import junit.framework.Assert;
 
+import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
 
@@ -65,6 +66,7 @@ public class SelectVideoPlayerPerVideoFile extends ParentTest{
         		//Step 3
         		overlay.SwitchToActiveFrame();
         		SearchFor searchFor = new SearchFor(webDriver);
+        		PageFactory.initElements(webDriver, searchFor);
         		searchFor.EnterTitle("Automation1");
         		searchFor.ClickApplyBtn();
 
