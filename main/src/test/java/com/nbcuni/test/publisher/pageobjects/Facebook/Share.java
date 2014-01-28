@@ -2,12 +2,14 @@ package com.nbcuni.test.publisher.pageobjects.Facebook;
 
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.Reporter;
 
 import com.nbcuni.test.lib.Util;
@@ -60,6 +62,24 @@ public class Share {
     			visibilityOf(webDriver.findElement(By.xpath(Share_Btn))));
     	
     	Btn.click();
+    	
+    	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+
+            boolean elementPresent = true;
+            for (int time = 0; ; time++){
+                 if (time >= 60) {
+                     Assert.fail("Element is still present after timeout");}
+                  try{
+                  webDriver.findElement(By.xpath(Share_Btn));
+                  elementPresent = true;
+                  }
+                  catch (Exception e){ elementPresent = false;  }
+                  if (elementPresent == false){ break;}
+                  Thread.sleep(1000);
+                  }
+
+            webDriver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+
     }
     
    

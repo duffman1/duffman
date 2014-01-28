@@ -2,6 +2,7 @@ package com.nbcuni.test.publisher.pageobjects.Facebook;
 
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -12,6 +13,7 @@ import org.testng.Reporter;
 
 import com.nbcuni.test.lib.Util;
 import com.nbcuni.test.publisher.common.AppLib;
+import com.nbcuni.test.publisher.pageobjects.content.Delete;
 import com.nbcuni.test.webdriver.CustomWebDriver;
 
 
@@ -28,6 +30,12 @@ public class DrupalForFacebook {
     private static AppLib al;
     private final Util ul;
     
+    public DrupalForFacebook(final CustomWebDriver custWebDr) {
+        webDriver = custWebDr;
+        ul = new Util(webDriver);
+        
+    }
+    
     private static String Label_Txb = "//input[@id='edit-label']";
     private static String FacebookAppId_Txb = "//input[@id='edit-id']";
     private static String Secret_Txb = "//input[@id='edit-secret']";
@@ -40,11 +48,31 @@ public class DrupalForFacebook {
     private static String ShowCurrentToken_Lnk = "//a[@class='fieldset-title']";
     private static String Token_Ctr = "(//div[@class='fieldset-description'])[2]";
     private static String PasteAccessToken_Txa = "//textarea[@id='edit-fb-stream-token']";
+    private static String Edit_Lnk = "//a[text()='edit']";
     
-    public DrupalForFacebook(final CustomWebDriver custWebDr) {
-        webDriver = custWebDr;
-        ul = new Util(webDriver);
-        
+    
+    public boolean FacebookAppExists() throws Exception {
+    	
+    	webDriver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+    	
+    	boolean existingAppPresent = false;
+    	WebElement edit_Lnk = null;
+    	try {
+    		edit_Lnk = webDriver.findElement(By.xpath(Edit_Lnk));
+    		existingAppPresent = true;
+    	}
+    	catch (Exception e) {
+    		existingAppPresent = false;
+    	}
+    	
+    	webDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+    	
+    	return existingAppPresent;
+    }
+    
+    public void ClickEditLnk() throws Exception {
+    	
+    	webDriver.findElement(By.xpath(Edit_Lnk)).click();
     }
     
     public void EnterLabel(String labelTxt) throws Exception {

@@ -13,31 +13,19 @@
     <line>
       <![CDATA[URL: http://qa5dev.publisher.nbcuni.com]]>
     </line>
-    <line>
-      <![CDATA[Enter title Automation1.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Apply' button.]]>
-    </line>
-    <line>
-      <![CDATA[Get the title text of every result in the search result set.]]>
-    </line>
-    <line>
-      <![CDATA[For each expected result, assert it is present in the result set.]]>
-    </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="62493" started-at="2014-01-27T19:24:02Z" finished-at="2014-01-27T19:25:04Z">
+  <suite name="Default suite" duration-ms="166660" started-at="2014-01-28T00:16:35Z" finished-at="2014-01-28T00:19:22Z">
     <groups>
       <group name="full">
-        <method signature="MPXMediaSyncVerification.MPXMediaSyncVerification()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MPXMediaSyncVerification@1232784a]" name="MPXMediaSyncVerification" class="com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MPXMediaSyncVerification"/>
+        <method signature="MPXPlayersSyncVerification.MPXPlayersSyncVerification()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MPXPlayersSyncVerification@4c331059]" name="MPXPlayersSyncVerification" class="com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MPXPlayersSyncVerification"/>
       </group> <!-- full -->
       <group name="smoke">
-        <method signature="MPXMediaSyncVerification.MPXMediaSyncVerification()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MPXMediaSyncVerification@1232784a]" name="MPXMediaSyncVerification" class="com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MPXMediaSyncVerification"/>
+        <method signature="MPXPlayersSyncVerification.MPXPlayersSyncVerification()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MPXPlayersSyncVerification@4c331059]" name="MPXPlayersSyncVerification" class="com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MPXPlayersSyncVerification"/>
       </group> <!-- smoke -->
     </groups>
-    <test name="Default test" duration-ms="62493" started-at="2014-01-27T19:24:02Z" finished-at="2014-01-27T19:25:04Z">
-      <class name="com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MPXMediaSyncVerification">
-        <test-method status="PASS" signature="startSelenium(java.lang.String)[pri:0, instance:com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MPXMediaSyncVerification@1232784a]" name="startSelenium" is-config="true" duration-ms="13652" started-at="2014-01-27T14:24:02Z" finished-at="2014-01-27T14:24:16Z">
+    <test name="Default test" duration-ms="166660" started-at="2014-01-28T00:16:35Z" finished-at="2014-01-28T00:19:22Z">
+      <class name="com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MPXPlayersSyncVerification">
+        <test-method status="PASS" signature="startSelenium(java.lang.String)[pri:0, instance:com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MPXPlayersSyncVerification@4c331059]" name="startSelenium" is-config="true" duration-ms="13749" started-at="2014-01-27T19:16:35Z" finished-at="2014-01-27T19:16:49Z">
           <params>
             <param index="0">
               <value>
@@ -54,7 +42,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="MPXMediaSyncVerification()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MPXMediaSyncVerification@1232784a]" name="MPXMediaSyncVerification" duration-ms="48254" started-at="2014-01-27T14:24:16Z" finished-at="2014-01-27T14:25:04Z">
+        <test-method status="PASS" signature="MPXPlayersSyncVerification()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MPXPlayersSyncVerification@4c331059]" name="MPXPlayersSyncVerification" duration-ms="152323" started-at="2014-01-27T19:16:49Z" finished-at="2014-01-27T19:19:21Z">
           <reporter-output>
             <line>
               <![CDATA[URL: http://qa5dev.publisher.nbcuni.com]]>
@@ -62,32 +50,20 @@
             <line>
               <![CDATA[URL: http://qa5dev.publisher.nbcuni.com]]>
             </line>
-            <line>
-              <![CDATA[Enter title Automation1.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Apply' button.]]>
-            </line>
-            <line>
-              <![CDATA[Get the title text of every result in the search result set.]]>
-            </line>
-            <line>
-              <![CDATA[For each expected result, assert it is present in the result set.]]>
-            </line>
           </reporter-output>
-        </test-method> <!-- MPXMediaSyncVerification -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MPXMediaSyncVerification@1232784a]" name="stopSelenium" is-config="true" duration-ms="569" started-at="2014-01-27T14:25:04Z" finished-at="2014-01-27T14:25:04Z">
+        </test-method> <!-- MPXPlayersSyncVerification -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MPXPlayersSyncVerification@4c331059]" name="stopSelenium" is-config="true" duration-ms="571" started-at="2014-01-27T19:19:21Z" finished-at="2014-01-27T19:19:22Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=MPXMediaSyncVerification status=SUCCESS method=MPXMediaSyncVerification.MPXMediaSyncVerification()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MPXMediaSyncVerification@1232784a] output=URL: http://qa5dev.publisher.nbcuni.com]]]>
+                <![CDATA[[TestResult name=MPXPlayersSyncVerification status=SUCCESS method=MPXPlayersSyncVerification.MPXPlayersSyncVerification()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MPXPlayersSyncVerification@4c331059] output=URL: http://qa5dev.publisher.nbcuni.com]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-      </class> <!-- com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MPXMediaSyncVerification -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MPXPlayersSyncVerification -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -90,13 +90,6 @@ public class MPXMedia {
     		allOptions.add(el.getText());
     	}
     	
-    	/*
-    	for (String player : playerList) {
-    		
-    		System.out.println("PLAYER = " + player);
-    		Assert.assertTrue(allOptions.contains(player));
-    	}*/
-    	
     	Assert.assertEquals(allOptions.size() - 1, playerList.size());
     	
     }

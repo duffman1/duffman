@@ -8,6 +8,7 @@ import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.content.SearchFor;
 
+import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -53,6 +54,7 @@ public class EnhanceContentLibraryTable extends ParentTest{
         	
         	//Step 4
         	SearchFor searchFor = new SearchFor(webDriver);
+        	PageFactory.initElements(webDriver, searchFor);
         	searchFor.VerifySearchHeaderColumnOrder();
         	
         	//Step 5 //TODO this step needs additional logic as time allows
