@@ -95,7 +95,7 @@ public class Modules {
         		overlay.SwitchToFrame("Some required modules must be enabled");
         		additionalModulesRequired = true;
         	}
-        	catch (NoSuchElementException e) { }
+        	catch (Exception e) { }
         	
         	if (additionalModulesRequired == true) {
         		
