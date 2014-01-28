@@ -4,6 +4,8 @@ package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentT
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.content.*;
+
+import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 
@@ -60,6 +62,7 @@ public class CreateTVSeason extends ParentTest{
         //Step 5
         basicInformation.ClickCoverSelectBtn();
         SelectFile selectFile = new SelectFile(webDriver, applib);
+        PageFactory.initElements(webDriver, selectFile);
     	selectFile.SelectDefaultCoverImg();
     	overlay.SwitchToFrame("Create TV Season");
     	

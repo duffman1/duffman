@@ -5,6 +5,8 @@ import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.content.*;
+
+import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 
@@ -67,6 +69,7 @@ public class CreatePost extends ParentTest{
             	overlay.SwitchToFrame("Create Post");
             	basicInformation.ClickCoverSelectBtn();
             	SelectFile selectFile = new SelectFile(webDriver, applib);
+            	PageFactory.initElements(webDriver, selectFile);
             	selectFile.SelectDefaultCoverImg();
             	overlay.SwitchToFrame("Create Post");
             

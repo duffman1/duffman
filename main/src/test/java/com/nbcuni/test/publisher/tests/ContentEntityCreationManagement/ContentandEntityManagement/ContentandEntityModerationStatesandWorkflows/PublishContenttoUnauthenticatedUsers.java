@@ -1,5 +1,6 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityModerationStatesandWorkflows;
 
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
@@ -40,6 +41,7 @@ public class PublishContenttoUnauthenticatedUsers extends ParentTest{
         basicInformation.EnterTitle(title);
         basicInformation.ClickCoverSelectBtn();
         SelectFile selectFile = new SelectFile(webDriver, applib);
+        PageFactory.initElements(webDriver, selectFile);
         selectFile.SelectDefaultCoverImg();
         overlay.SwitchToFrame("Create Media Gallery");
         basicInformation.VerifyCoverImagePresent("HanSolo");        

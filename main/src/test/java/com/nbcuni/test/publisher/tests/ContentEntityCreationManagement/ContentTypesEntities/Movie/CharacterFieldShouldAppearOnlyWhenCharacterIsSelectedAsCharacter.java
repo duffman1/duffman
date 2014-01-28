@@ -4,6 +4,8 @@ package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentT
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.content.*;
+
+import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
 import java.util.Arrays;
@@ -53,6 +55,7 @@ public class CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter ex
             charactersInformation.EnterCharacterFirstName(characterName);
             charactersInformation.ClickAddPhotoSelectBtn();
             SelectFile selectFile = new SelectFile(webDriver, applib);
+            PageFactory.initElements(webDriver, selectFile);
             selectFile.SelectDefaultCoverImg();
             overlay.SwitchToFrame("Create Character Profile");
             ContentParent contentParent = new ContentParent(webDriver);

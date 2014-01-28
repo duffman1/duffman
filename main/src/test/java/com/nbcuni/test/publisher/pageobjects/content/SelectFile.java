@@ -5,9 +5,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.LocalFileDetector;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -32,113 +35,131 @@ public class SelectFile {
     private AppLib applib;
     private Util ul;
     
-    private static String SelectFile_Frm = "//iframe[@id='mediaBrowser']";
-    private static String ViewLibrary_Btn = "//a[@title='View Library']";
-    private static String Default_Img = "//div[@class='media-thumbnail']/img";
-    private static String Submit_Btn = "//a[text()='Submit']";
-    private static String BrowseToFile_Upl = "//input[@id='edit-upload-upload']";
-    private static String Upload_Btn = "//input[contains(@id, 'edit-upload-upload-button')]";
-    private static String Next_Btn = "//input[@id='edit-next']";
-    private static String PublicLocalFiles_Rdb = "//input[@id='edit-scheme-public']";
-    private static String File_Img = "//div[@id='file_image_form_group_image_top_wrapper']//img";
-    private static String Save_Btn = "//input[@id='edit-submit']";
-    private static String AddFiles_Lnk = "//a[@id='edit-upload_browse']";
-    
-    
+    //PAGE OBJECT CONSTRUCTOR
     public SelectFile(final CustomWebDriver custWebDr, AppLib applib) {
         webDriver = custWebDr;
         ul = new Util(webDriver);
         this.applib = applib;
     }
     
+    //PAGE OBJECT IDENTIFIERS
+    @FindBy(how = How.XPATH, using = "//iframe[@id='mediaBrowser']")
+    private static WebElement SelectFile_Frm;
+    
+    @FindBy(how = How.XPATH, using = "//a[@title='View Library']")
+    private static WebElement ViewLibrary_Btn;
+    
+    @FindBy(how = How.XPATH, using = "//div[@class='media-thumbnail']/img")
+    private static WebElement Default_Img;
+    
+    @FindBy(how = How.XPATH, using = "//a[text()='Submit']")
+    private static WebElement Submit_Btn;
+    
+    @FindBy(how = How.XPATH, using = "//input[@id='edit-upload-upload']")
+    private static WebElement BrowseToFile_Upl;
+    
+    @FindBy(how = How.XPATH, using = "//input[contains(@id, 'edit-upload-upload-button')]")
+    private static WebElement Upload_Btn;
+    
+    @FindBy(how = How.XPATH, using = "//input[@id='edit-next']")
+    private static WebElement Next_Btn;
+    
+    @FindBy(how = How.XPATH, using = "//input[@id='edit-scheme-public']")
+    private static WebElement PublicLocalFiles_Rdb;
+    
+    @FindBy(how = How.XPATH, using = "//div[@id='file_image_form_group_image_top_wrapper']//img")
+    private static WebElement File_Img;
+    
+    @FindBy(how = How.XPATH, using = "//input[@id='edit-submit']")
+    private static WebElement Save_Btn;
+    
+    @FindBy(how = How.XPATH, using = "//a[@id='edit-upload_browse']")
+    private static WebElement AddFiles_Lnk;
+    
+    private WebElement File_Lnk(String fileName) {
+    	return webDriver.findElement(By.xpath("//a[text()='" + fileName + "']"));
+    }
+    
+    //PAGE OBJECT IDENTIFIERS
     public void SwitchToSelectFileFrm() throws Exception {
     	
-    	WebElement frm = webDriver.findElement(By.xpath(SelectFile_Frm));
-    	webDriver.switchTo().frame(frm);
+    	Reporter.log("Switch to the select file frame.");
+    	webDriver.switchTo().frame(SelectFile_Frm);
     	
     }
     
     public void ClickViewLibraryBtn() throws Exception {
     	
-    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(By.xpath(ViewLibrary_Btn)));
-    	webDriver.click(ViewLibrary_Btn);
+    	Reporter.log("Click the 'View Library' button.");
+    	ViewLibrary_Btn.click();
     	
     }
     
     public void ClickDefaultImg() throws Exception {
     	
-    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(By.xpath(Default_Img)));
-    	webDriver.click(Default_Img);
+    	Reporter.log("Click on the default img.");
+    	Default_Img.click();
     	
     }
     
     public void ClickSubmitBtn() throws Exception {
     	
-    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(By.xpath(Submit_Btn)));
-    	webDriver.click(Submit_Btn);
+    	Reporter.log("Click on the 'Submit' button.");
+    	Submit_Btn.click();
     	
     }
     
     public void EnterFilePath(String pathToFile) throws Exception {
     	
-    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(By.xpath(BrowseToFile_Upl)));
-    	webDriver.setFileDetector(new LocalFileDetector());
-    	webDriver.findElement(By.xpath(BrowseToFile_Upl)).sendKeys(pathToFile);
+    	Reporter.log("Enter the file path for file upload.");
+    	//webDriver.setFileDetector(new LocalFileDetector());
+    	BrowseToFile_Upl.sendKeys(pathToFile);
     	
     }
     
     public void ClickUploadBtn() throws Exception {
     	
-    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(By.xpath(Upload_Btn)));
-    	webDriver.click(Upload_Btn);
+    	Reporter.log("Click the 'Upload' button.");
+    	Upload_Btn.click();
     	
     }
     
     public void WaitForFileUploaded(String fileName) throws Exception {
     	
-    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(By.xpath("//a[text()='" + fileName + "']")));
+    	Reporter.log("Wait for the file link to be visible after upload.");
+    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOf(File_Lnk(fileName)));
     	
     }
     
     public void ClickNextBtn() throws Exception {
     	
-    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(By.xpath(Next_Btn)));
-    	webDriver.click(Next_Btn);
+    	Reporter.log("Click the 'Next' button.");
+    	Next_Btn.click();
     }
     
     public void ClickPublicLocalFilesRdb() throws Exception {
     	
-    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(By.xpath(PublicLocalFiles_Rdb)));
-    	webDriver.click(PublicLocalFiles_Rdb);
+    	Reporter.log("Click the 'Public Local Files' radio button.");
+    	PublicLocalFiles_Rdb.click();
     }
     
     public void VerifyFileImagePresent(String imageSrc) throws Exception {
     	
-    	new WebDriverWait(webDriver, 10).until(
-    			ExpectedConditions.elementToBeClickable(By.xpath(File_Img)));
+    	Reporter.log("Assert the file image '" + imageSrc + "' is present and visible.");
+    	Assert.assertTrue(File_Img.getAttribute("src").contains(imageSrc));
     	
-    	Assert.assertTrue(webDriver.findElement(By.xpath(File_Img)).getAttribute("src").contains(imageSrc));
-    	
-    	webDriver.executeScript("return arguments[0].complete && typeof arguments[0].naturalWidth " +
-    			"!= \"undefined\" && arguments[0].naturalWidth > 0", File_Img);
+    	Reporter.log("Assert the the img is loaded.");
+    	Thread.sleep(3000); //TODO - replace with dynamic wait
+    	Boolean imgLoaded = (Boolean) ((JavascriptExecutor)webDriver).executeScript(
+    			"return arguments[0].complete && typeof arguments[0].naturalWidth != \"undefined\" && arguments[0].naturalWidth > 0", 
+    				File_Img);
+    	Assert.assertTrue(imgLoaded);
     }
     
     public void ClickSaveBtn() throws Exception {
     	
-    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(By.xpath(Save_Btn)));
-    	webDriver.click(Save_Btn);
-    }
-    
-    public void AddMultipleFiles(List<String> filePaths) throws Exception {
-    	
-    	for (String path : filePaths){
-    		
-    		new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(By.xpath(AddFiles_Lnk)));
-        	
-    		webDriver.findElement(By.xpath(AddFiles_Lnk)).sendKeys(path);
-    	}
-    	
-    	
+    	Reporter.log("Click the 'Save' button.");
+    	Save_Btn.click();
     }
     
     public void SelectDefaultCoverImg() throws Exception {

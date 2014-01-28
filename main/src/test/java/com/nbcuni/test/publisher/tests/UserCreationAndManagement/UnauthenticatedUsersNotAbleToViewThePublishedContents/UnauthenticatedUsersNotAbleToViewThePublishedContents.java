@@ -3,6 +3,7 @@ package com.nbcuni.test.publisher.tests.UserCreationAndManagement.Unauthenticate
 import java.util.Arrays;
 import java.util.List;
 
+import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 
@@ -74,6 +75,7 @@ public class UnauthenticatedUsersNotAbleToViewThePublishedContents extends Paren
     	overlay.SwitchToFrame("Create Post");
     	basicInformation.ClickCoverSelectBtn();
     	SelectFile selectFile = new SelectFile(webDriver, applib);
+    	PageFactory.initElements(webDriver, selectFile);
     	selectFile.SelectDefaultCoverImg();
     	overlay.SwitchToFrame("Create Post");
     	publishingOptions.ClickPublishingOptionsLnk();

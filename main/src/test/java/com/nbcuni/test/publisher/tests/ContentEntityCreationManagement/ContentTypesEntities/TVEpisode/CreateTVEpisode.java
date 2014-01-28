@@ -4,6 +4,8 @@ package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentT
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.content.*;
+
+import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 
@@ -52,6 +54,7 @@ public class CreateTVEpisode extends ParentTest{
             	overlay.SwitchToFrame("Create Person");
             	personsInformation.ClickCoverPhotoSelectBtn();
             	SelectFile selectFile = new SelectFile(webDriver, applib);
+            	PageFactory.initElements(webDriver, selectFile);
             	selectFile.SelectDefaultCoverImg();
             	overlay.SwitchToFrame("Create Person");
             	ContentParent contentParent = new ContentParent(webDriver);

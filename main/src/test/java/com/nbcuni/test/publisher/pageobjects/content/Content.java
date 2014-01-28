@@ -105,23 +105,31 @@ public class Content {
     	webDriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     	
     }
+    
     public void SelectCheckBoxOfTheContent(String contentItemTitle) throws Exception {
     	
     	WebElement el = new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(
     			By.xpath("//a[text()='" + contentItemTitle + "']/../..//input[@type='checkbox']")));
     	el.click();
     }
+    
     public void SelectModerationState(String OperationName) throws Exception {
     	
     	new WebDriverWait(webDriver, 10).until(ExpectedConditions.
     			visibilityOf(webDriver.findElement(By.xpath(Operation_Dd))));
     	webDriver.selectFromDropdown(Operation_Dd, OperationName);
     }
+    
     public void ClickTheContentFromContentpage(String contentItemTitle) throws Exception {
     	
     	WebElement contentName = new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(
     			By.xpath("//a[text()='" + contentItemTitle + "']")));
     	contentName.click();
+    }
+    
+    public void ClickAddFileLnk() throws Exception {
+    	
+    	webDriver.findElement(By.linkText("Add file")).click();
     }
     
 }

@@ -4,6 +4,8 @@ package com.nbcuni.test.publisher.pageobjects.content;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -33,6 +35,10 @@ public class BasicInformation {
     private static String Synopsis_Frm = "//iframe[@id='edit-body-und-0-value_ifr']";
     private static String Synopsis_Txa = "//body[@id='tinymce']";
     private static String CoverSelect_Btn = "//a[contains(@id, 'cover')][text()='Select']";
+    
+    @FindBy(how = How.XPATH, using = "//input[@id='edit-field-media-items-und-add-more']")
+    private static WebElement MediaItemsSelect_Btn;
+    
     private static String Cover_Img = "//div[@class='media-thumbnail']/img";
     private static String EpisodeNumber_Txb = "//input[@id='edit-field-episode-number-und-0-value']";
     private static String SeasonNumber_Txb = "//input[@id='edit-field-season-id-und-0-value']";
@@ -83,6 +89,12 @@ public class BasicInformation {
     	new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOf(
     			webDriver.findElement(By.xpath(CoverSelect_Btn))));
     	webDriver.click(CoverSelect_Btn);
+    }
+    
+    public void ClickMediaItemsSelectBtn() throws Exception {
+    	
+    	Reporter.log("Click the 'Media Items Select' button.");
+    	MediaItemsSelect_Btn.click();
     }
     
     public void VerifyCoverImagePresent(String imageSrc) throws Exception {

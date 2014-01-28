@@ -8,6 +8,7 @@ import junit.framework.Assert;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
@@ -67,6 +68,7 @@ public class CreatePerson extends ParentTest{
             overlay.SwitchToFrame("Create Person");
             personsInformation.ClickCoverPhotoSelectBtn();
             SelectFile selectFile = new SelectFile(webDriver, applib);
+            PageFactory.initElements(webDriver, selectFile);
             selectFile.SelectDefaultCoverImg();
             overlay.SwitchToFrame("Create Person");
             ContentParent contentParent = new ContentParent(webDriver);

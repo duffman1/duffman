@@ -29,7 +29,7 @@ public class InstallZeeboxModule extends ParentTest{
      * @throws Throwable No Return values are needed
      *************************************************************************************/
     @Test(groups = {"full" })
-    public void CreatePost() throws Exception{
+    public void InstallZeeboxModule() throws Exception{
          
         	//Step 1
         	UserLogin userLogin = applib.openApplication();

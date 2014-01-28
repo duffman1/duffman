@@ -8,6 +8,7 @@ import junit.framework.Assert;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
@@ -64,6 +65,7 @@ public class CreateMediaGallery extends ParentTest{
             //Step 4
             basicInformation.ClickCoverSelectBtn();
             SelectFile selectFile = new SelectFile(webDriver, applib);
+            PageFactory.initElements(webDriver, selectFile);
             selectFile.SelectDefaultCoverImg();
             overlay.SwitchToFrame("Create Media Gallery");
             basicInformation.VerifyCoverImagePresent("HanSolo");
