@@ -3,6 +3,7 @@ package com.nbcuni.test.publisher.tests.Advertising.GooglePublisherTagsGPT;
 
 import junit.framework.Assert;
 
+import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
@@ -20,6 +21,7 @@ import com.nbcuni.test.publisher.pageobjects.Logout;
 import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.Overlay;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
+import com.nbcuni.test.publisher.pageobjects.content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.content.ContentTypes;
 import com.nbcuni.test.publisher.pageobjects.taxonomy.Taxonomy;
 import com.nbcuni.test.webdriver.CustomWebDriver;
@@ -79,11 +81,14 @@ public class GPTTagsVerification extends ParentTest{
             taxonomy.NavigateSite("Structure>>Blocks");
             
             //Step 6
+            overlay.SwitchToActiveFrame();
             Blocks blocks = new Blocks(webDriver);
-            blocks.SwitchToBlocksFrm();
+            PageFactory.initElements(webDriver, blocks);
             blocks.SelectRegion(adSlotName, "Sidebar first");
             blocks.ClickSaveBlocksBtn();
-            blocks.VerifyBlockSettingsUpdated();
+            ContentParent contentParent = new ContentParent(webDriver);
+            PageFactory.initElements(webDriver, contentParent);
+            contentParent.VerifyMessageStatus("The block settings have been updated.");
             
             //Step 7
             blocks.VerifySelectedRegion(adSlotName, "Sidebar first");
@@ -93,15 +98,9 @@ public class GPTTagsVerification extends ParentTest{
             overlay.switchToDefaultContent();
             taxonomy.NavigateSite("Home");
             blocks.VerifyScriptSourceInPage("http://www.googletagservices.com/tag/js/gpt.js");
-            //blocks.VerifyScriptSourceInPage("//www.nbcudigitaladops.com/hosted/global_header.js");
-            blocks.VerifyScriptSourceInPage("googletag.slots." + adSlotName);
-            blocks.VerifyScriptSourceInPage("googletag.enableServices();");
+            blocks.VerifyHomePageBlockPresent(adSlotName);
             
-            //Step 9
-            Logout logout = new Logout(webDriver);
-            logout.ClickLogoutBtn();
+            //Step 9 - NA
             
-       
-
     }
 }
