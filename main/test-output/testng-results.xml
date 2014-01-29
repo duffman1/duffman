@@ -8,111 +8,66 @@
       <![CDATA[Environment: PROD]]>
     </line>
     <line>
-      <![CDATA[URL: http://qa5dev.publisher.nbcuni.com]]>
+      <![CDATA[URL: http://qa5stg.publisher.nbcuni.com]]>
     </line>
     <line>
-      <![CDATA[Switch to the select file frame.]]>
+      <![CDATA[Enter the account name 'DB TV' in the account select text box.]]>
     </line>
     <line>
-      <![CDATA[Enter the file path for file upload.]]>
+      <![CDATA[Click the account option from the drop down list.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Upload' button.]]>
+      <![CDATA[Click the 'Account' title to leave focus off of the selection.]]>
     </line>
     <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
+      <![CDATA[Wait for account to switch to the newly selected account.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Next' button.]]>
+      <![CDATA[URL: http://qa5stg.publisher.nbcuni.com]]>
     </line>
     <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
+      <![CDATA[Enter title Automation104bf26839.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Next' button.]]>
+      <![CDATA[Click the 'Apply' button.]]>
     </line>
     <line>
-      <![CDATA[Assert the file image 'HanSolo' is present and visible.]]>
+      <![CDATA[Get the title text of every result in the search result set.]]>
     </line>
     <line>
-      <![CDATA[Assert the the img is loaded.]]>
+      <![CDATA[For each expected result, assert it is present in the result set.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save' button.]]>
+      <![CDATA[Click the first search title link in the search result set.]]>
     </line>
     <line>
-      <![CDATA[Switch to the select file frame.]]>
+      <![CDATA[URL: http://qa5stg.publisher.nbcuni.com]]>
     </line>
     <line>
-      <![CDATA[Enter the file path for file upload.]]>
+      <![CDATA[Enter title Automation104bf26839.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Upload' button.]]>
+      <![CDATA[Click the 'Apply' button.]]>
     </line>
     <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
+      <![CDATA[Get the title text of every result in the search result set.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Next' button.]]>
+      <![CDATA[For each expected result, assert it is present in the result set.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Assert the file image 'HanSolo' is present and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Assert the the img is loaded.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the select file frame.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the file path for file upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Upload' button.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Assert the file image 'HanSolo' is present and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Assert the the img is loaded.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
+      <![CDATA[Click the first search title link in the search result set.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="83706" started-at="2014-01-29T16:20:44Z" finished-at="2014-01-29T16:22:08Z">
+  <suite name="Default suite" duration-ms="450060" started-at="2014-01-29T20:38:56Z" finished-at="2014-01-29T20:46:26Z">
     <groups>
       <group name="full">
-        <method signature="CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter.CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Movie.CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter@4104c575]" name="CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Movie.CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter"/>
+        <method signature="MPXVideosSchedulingVerificationScheduling.MPXVideosSchedulingVerificationScheduling()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling@1232784a]" name="MPXVideosSchedulingVerificationScheduling" class="com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling"/>
       </group> <!-- full -->
-      <group name="smoke">
-        <method signature="CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter.CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Movie.CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter@4104c575]" name="CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Movie.CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter"/>
-      </group> <!-- smoke -->
     </groups>
-    <test name="Default test" duration-ms="83706" started-at="2014-01-29T16:20:44Z" finished-at="2014-01-29T16:22:08Z">
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Movie.CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter">
-        <test-method status="PASS" signature="startSelenium(java.lang.String)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Movie.CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter@4104c575]" name="startSelenium" is-config="true" duration-ms="13599" started-at="2014-01-29T11:20:44Z" finished-at="2014-01-29T11:20:58Z">
+    <test name="Default test" duration-ms="450060" started-at="2014-01-29T20:38:56Z" finished-at="2014-01-29T20:46:26Z">
+      <class name="com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling">
+        <test-method status="PASS" signature="startSelenium(java.lang.String)[pri:0, instance:com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling@1232784a]" name="startSelenium" is-config="true" duration-ms="13742" started-at="2014-01-29T15:38:56Z" finished-at="2014-01-29T15:39:10Z">
           <params>
             <param index="0">
               <value>
@@ -129,115 +84,73 @@
             </line>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Movie.CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter@4104c575]" name="CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter" duration-ms="69523" started-at="2014-01-29T11:20:58Z" finished-at="2014-01-29T11:22:07Z">
+        <test-method status="PASS" signature="MPXVideosSchedulingVerificationScheduling()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling@1232784a]" name="MPXVideosSchedulingVerificationScheduling" duration-ms="435731" started-at="2014-01-29T15:39:10Z" finished-at="2014-01-29T15:46:26Z">
           <reporter-output>
             <line>
-              <![CDATA[URL: http://qa5dev.publisher.nbcuni.com]]>
+              <![CDATA[URL: http://qa5stg.publisher.nbcuni.com]]>
             </line>
             <line>
-              <![CDATA[Switch to the select file frame.]]>
+              <![CDATA[Enter the account name 'DB TV' in the account select text box.]]>
             </line>
             <line>
-              <![CDATA[Enter the file path for file upload.]]>
+              <![CDATA[Click the account option from the drop down list.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Upload' button.]]>
+              <![CDATA[Click the 'Account' title to leave focus off of the selection.]]>
             </line>
             <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
+              <![CDATA[Wait for account to switch to the newly selected account.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Next' button.]]>
+              <![CDATA[URL: http://qa5stg.publisher.nbcuni.com]]>
             </line>
             <line>
-              <![CDATA[Click the 'Public Local Files' radio button.]]>
+              <![CDATA[Enter title Automation104bf26839.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Next' button.]]>
+              <![CDATA[Click the 'Apply' button.]]>
             </line>
             <line>
-              <![CDATA[Assert the file image 'HanSolo' is present and visible.]]>
+              <![CDATA[Get the title text of every result in the search result set.]]>
             </line>
             <line>
-              <![CDATA[Assert the the img is loaded.]]>
+              <![CDATA[For each expected result, assert it is present in the result set.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save' button.]]>
+              <![CDATA[Click the first search title link in the search result set.]]>
             </line>
             <line>
-              <![CDATA[Switch to the select file frame.]]>
+              <![CDATA[URL: http://qa5stg.publisher.nbcuni.com]]>
             </line>
             <line>
-              <![CDATA[Enter the file path for file upload.]]>
+              <![CDATA[Enter title Automation104bf26839.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Upload' button.]]>
+              <![CDATA[Click the 'Apply' button.]]>
             </line>
             <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
+              <![CDATA[Get the title text of every result in the search result set.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Next' button.]]>
+              <![CDATA[For each expected result, assert it is present in the result set.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Public Local Files' radio button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Assert the file image 'HanSolo' is present and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Assert the the img is loaded.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the select file frame.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the file path for file upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Upload' button.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Public Local Files' radio button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Assert the file image 'HanSolo' is present and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Assert the the img is loaded.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
+              <![CDATA[Click the first search title link in the search result set.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Movie.CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter@4104c575]" name="stopSelenium" is-config="true" duration-ms="573" started-at="2014-01-29T11:22:07Z" finished-at="2014-01-29T11:22:08Z">
+        </test-method> <!-- MPXVideosSchedulingVerificationScheduling -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling@1232784a]" name="stopSelenium" is-config="true" duration-ms="573" started-at="2014-01-29T15:46:26Z" finished-at="2014-01-29T15:46:26Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter status=SUCCESS method=CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter.CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Movie.CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter@4104c575] output=URL: http://qa5dev.publisher.nbcuni.com]]]>
+                <![CDATA[[TestResult name=MPXVideosSchedulingVerificationScheduling status=SUCCESS method=MPXVideosSchedulingVerificationScheduling.MPXVideosSchedulingVerificationScheduling()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling@1232784a] output=URL: http://qa5stg.publisher.nbcuni.com]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Movie.CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

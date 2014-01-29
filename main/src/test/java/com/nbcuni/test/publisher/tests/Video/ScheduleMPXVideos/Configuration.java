@@ -31,7 +31,7 @@ public class Configuration extends ParentTest{
      * Step 12 - Scroll down, and put a check on the "Enable MPX Value Overrides" checkbox field, and click on the "Save" button. ,The user is taken to the "File types" overlay where they get a successful message, "The file type MPX Video for Account DB TV has been updated". 
      * @throws Throwable No Return values are needed
      *************************************************************************************/
-    @Test(groups = {"full"})
+    @Test(groups = {"full", "mpx"})
     public void Configuration() throws Exception {
     	
     	//Step 1

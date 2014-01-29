@@ -35,7 +35,7 @@ public class MPXMediaSyncVerification extends ParentTest{
      * Step 8 - Close all the browsers. ,The browsers are closed. (NA)
      * @throws Throwable No Return values are needed
      *************************************************************************************/
-    @Test(groups = {"full", "smoke"})
+    @Test(groups = {"full", "smoke", "mpx"})
     public void MPXMediaSyncVerification() throws Exception{
     	
     	//TODO - re order test steps above to follow test steps below. Automated steps were re-ordered for ease of automation purposes

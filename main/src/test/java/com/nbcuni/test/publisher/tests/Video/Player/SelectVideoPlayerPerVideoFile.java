@@ -42,7 +42,7 @@ public class SelectVideoPlayerPerVideoFile extends ParentTest{
      ,19,Close all the browsers.,The browsers are closed.
      * @throws Throwable No Return values are needed
      *************************************************************************************/
-    @Test(groups = {"full"})
+    @Test(groups = {"full", "mpx"})
     public void SelectVideoPlayerPerVideoFile () throws Exception{
 
 

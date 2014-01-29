@@ -64,7 +64,7 @@ public class MPXVideosSchedulingVerificationInitialOverrides extends ParentTest{
      * Step 38 - Click on the "Save" button.,The user is taken to the mpx asset's detail page where the changes showing the original mpx metadata values are retained successfully.
      * @throws Throwable No Return values are needed
      *************************************************************************************/
-    @Test(groups = {"full"})
+    @Test(groups = {"full", "mpx"})
     public void MPXVideosSchedulingVerificationInitialOverrides() throws Exception{
 
 

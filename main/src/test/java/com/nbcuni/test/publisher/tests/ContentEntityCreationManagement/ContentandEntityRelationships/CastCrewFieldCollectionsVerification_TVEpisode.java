@@ -40,7 +40,7 @@ public class CastCrewFieldCollectionsVerification_TVEpisode extends ParentTest {
      * @throws Throwable No Return values are needed.<br>
      *************************************************************************************/
     @Test(groups = {"full"})
-    public void CastCrewFieldCollectionsVerification() throws Exception{
+    public void CastCrewFieldCollectionsVerification_TVEpisode() throws Exception{
     	
     	/* Item removed from iteration 39, commenting out test until future iteration
     	

@@ -36,7 +36,7 @@ public class EnhanceMPXPlayerContentAdminScreen extends ParentTest{
      * Step 10 - Logout from P7 ,Logout successful.
      * @throws Throwable No Return values are needed
      *************************************************************************************/
-    @Test(groups = {"full"})
+    @Test(groups = {"full", "mpx"})
     public void EnhanceMPXPlayerContentAdminScreen() throws Exception{
     	
     	//Step 1

@@ -40,7 +40,7 @@ public class MPXPlayersSyncVerification extends ParentTest{
      * Step 16 - From the players noted down in Step 7, verify that all of them appear in the mpxPlayers table with no duplicates. ,All of the players appear as expected with no duplicates.<br>   
      * @throws Throwable No Return values are needed
      *************************************************************************************/
-    @Test(groups = {"full", "smoke"})
+    @Test(groups = {"full", "smoke", "mpx"})
     public void MPXPlayersSyncVerification() throws Exception{
     	
     	//TODO - re order test steps above to follow test steps below. Automated steps were re-ordered for ease of automation purposes

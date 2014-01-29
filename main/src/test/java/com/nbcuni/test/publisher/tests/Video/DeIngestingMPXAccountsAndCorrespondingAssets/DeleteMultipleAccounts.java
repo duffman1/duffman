@@ -30,7 +30,7 @@ public class DeleteMultipleAccounts extends ParentTest{
      * Step 10 - Close overlay, navigate "Content>>Files>>mpxMedia, verify no MPX assets present in list<br>
      * @throws Throwable No Return values are needed
      *************************************************************************************/
-    @Test(groups = {"full"})
+    @Test(groups = {"full", "mpx"})
     public void DeleteMultipleAccounts() throws Exception{
     	
     	/* TEST PULLED FROM ITERATION 39 UNTIL A LATER DATE

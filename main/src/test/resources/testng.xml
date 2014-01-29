@@ -4,20 +4,69 @@
   	
   	<test name="All Web Tests">
 
-		<!-- Enter group name for specific test scripts, options are "full" or "smoke" -->
+		<!-- Enter group name for specific test scripts, options are "full", "smoke", or "mpx -->
 		<groups>
 	 		<run>
 	 			<include name="full"/>
 	 		</run>
 		</groups>
 
-		<!--Add individual packages you wanted to execute below-->
-   		<packages>
-   			<package name="com.nbcuni.test.publisher.tests.*"/>
-		</packages>
-
+		<classes>
+			<!--VIDEO-->
+			<class name="com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MultipleMPXAccountsPerLoginVerification"/>
+			<class name="com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MPXPlayersSyncVerification"/>
+			<class name="com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MPXMediaSyncVerification"/>
+			<class name="com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling"/>
+			<class name="com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.Configuration"/>
+			<class name="com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides"/>
+			<class name="com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen"/>
+			<class name="com.nbcuni.test.publisher.tests.Video.Player.SelectVideoPlayerPerVideoFile"/>
+			<class name="com.nbcuni.test.publisher.tests.Video.SyncFromMPXButtonToVideoFileEntitiesEditForm.SyncFromMPXButtonToVideoFileEntitiesEditForm"/>
+			<class name="com.nbcuni.test.publisher.tests.Video.UndefinedIndexesDisplayingForMPXPlayers.UndefinedIndexesDisplayingForMPXPlayers"/>
+			<class name="com.nbcuni.test.publisher.tests.Video.DeIngestingMPXAccountsAndCorrespondingAssets.DeleteMultipleAccounts"/>
+		
+			<!--ADVERTISING-->
+			<class name="com.nbcuni.test.publisher.tests.Advertising.Comscore.PixelmanModuleSetupAndVerification"/>
+			<class name="com.nbcuni.test.publisher.tests.Advertising.GooglePublisherTagsGPT.GPTConfiguration"/>
+			<class name="com.nbcuni.test.publisher.tests.Advertising.GooglePublisherTagsGPT.GPTTagsVerification"/>
+			
+			<!--CONTENT AND ENTITY CREATION AND MANAGEMENT-->
+			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost"/>
+			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile"/>
+			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson"/>
+			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Movie.CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter"/>
+			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVEpisode.CreateTVEpisode"/>
+			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVSeason.CreateTVSeason"/>
+			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery"/>
+			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CustomContentType.AddingNewCustomContentType"/>
+			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityModerationStatesandWorkflows.PublishContenttoUnauthenticatedUsers"/>
+			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.EnhanceOperationsDropdownonScheduleTab"/>
+			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.ScheduleToPublishContentByDateTime"/>
+			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.EnhanceContentLibraryTable.EnhanceContentLibraryTable"/>
+			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.InstallZeeboxModule.InstallZeeboxModule"/>
+			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.CastCrewFieldCollectionsVerification_Movie"/>
+			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.CastCrewFieldCollectionsVerification_TVEpisode"/>
+			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIFKeywordsIngestedAsPhraseInsteadSetsWords.EXIFKeywordsIngestedPhraseInsteadSetsWords"/>
+			
+			<!--QUEUES-->
+			<class name="com.nbcuni.test.publisher.tests.Queues.AddModerationStatesToRevisionsOfAQueue.QueueModerationStates"/>
+			<class name="com.nbcuni.test.publisher.tests.Queues.CreateUpdateRevisionsToQueues.BasicUIForCreatingAndRevisingQueues"/>
+			<class name="com.nbcuni.test.publisher.tests.Queues.SchedulingQueues.ScheduleRevisionsOfQueues"/>
+			<class name="com.nbcuni.test.publisher.tests.Queues.UnauthenticatedUsersCanViewQueuesRevisionList.UnauthenticatedUsersCanViewQueuesRevisionList"/>
+			
+			<!--SECURITY-->
+			<class name="com.nbcuni.test.publisher.tests.Security.FileViewDeniedToUnauthenticatedUsers"/>
+			
+			<!--SITE MANAGEMENT AND REPORTING-->
+			<class name="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SiteReportVisualization.SiteReportVisualization"/>
+			
+			<!--SOCIAL INTEGRATION-->
+			<class name="com.nbcuni.test.publisher.tests.SocialIntegration.Facebook.ConfiguringPublisherAutopublishingToFacebookTimeandWall"/>
+			
+			<!--USER CREATION AND MANAGEMENT-->
+			<class name="com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.CreateConfigureAndValidatePermissionsEditor"/>
+			<class name="com.nbcuni.test.publisher.tests.UserCreationAndManagement.Roles.RolesPredefinedInPublisher7"/>
+			<class name="com.nbcuni.test.publisher.tests.UserCreationAndManagement.UnauthenticatedUsersNotAbleToViewThePublishedContents.UnauthenticatedUsersNotAbleToViewThePublishedContents"/>
+		</classes>
 	</test>
-	
-	
-	
 </suite>

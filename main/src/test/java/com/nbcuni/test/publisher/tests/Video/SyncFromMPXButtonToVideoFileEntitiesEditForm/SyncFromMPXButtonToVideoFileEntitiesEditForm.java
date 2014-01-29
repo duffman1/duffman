@@ -54,7 +54,7 @@ public class SyncFromMPXButtonToVideoFileEntitiesEditForm extends ParentTest{
      * Step 15 - In MPX upload a new asset and populate Available date and Expiration date in the future.  Publish the asset.  In P7, Run Cron and note the asset has been ingested  In MPX, change the Available and expiration date in the future, publish updates  In P7, navigate to the edit page for the asset under test and click on "Sync from MPX"  Return to Content --> Files --> MPX Media and note the file is listed as unpublished  In MPX, change the Available date to a past date and expiration date to a future date.  Publish updates  In P7,  navigate to the edit page for the asset under test and click on "Sync from MPX"  Return to Content --> Files --> MPX Media and note the file is listed as published,The 'Sync from MPX' will update publish/unpublish status correctly as dates are updated and shifted.    *NOTE* This step was added to ensure adequate documentation of the state change testing was captured. 
      * @throws Throwable No Return values are needed
      *************************************************************************************/
-    @Test(groups = {"full"})
+    @Test(groups = {"full", "mpx"})
     public void SyncFromMPXButtonToVideoFileEntitiesEditForm() throws Exception{
     	
     	/*TODO - Functionality removed from iteration 39 but will be added back in a future iteration. When complete, uncomment this test

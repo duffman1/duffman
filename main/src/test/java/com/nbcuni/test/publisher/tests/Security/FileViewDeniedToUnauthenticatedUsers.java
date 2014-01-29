@@ -1,6 +1,5 @@
 package com.nbcuni.test.publisher.tests.Security;
 
-
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
@@ -45,7 +44,6 @@ import com.nbcuni.test.publisher.pageobjects.queues.QueuesRevisionList;
 import com.nbcuni.test.publisher.pageobjects.taxonomy.Taxonomy;
 import com.nbcuni.test.webdriver.CustomWebDriver;
 import com.nbcuni.test.webdriver.WebDriverClientExecution;
-
 
 public class FileViewDeniedToUnauthenticatedUsers extends ParentTest{
 	

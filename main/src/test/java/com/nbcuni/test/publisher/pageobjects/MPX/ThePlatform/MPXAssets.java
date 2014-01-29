@@ -49,9 +49,7 @@ public class MPXAssets {
     	return PathToImages;
     }
     
-    public void WaitForAllAssetsToLoad() throws Exception {
-    	
-    	String path = this.getImagePath();
+    public void WaitForAllAssetsToLoad(String path) throws Exception {
     	
     	this.WaitForImgPresent(path + "Common/Loading_Txt.png");
     	this.WaitForImgNotPresent(path + "Common/Loading_Txt.png");

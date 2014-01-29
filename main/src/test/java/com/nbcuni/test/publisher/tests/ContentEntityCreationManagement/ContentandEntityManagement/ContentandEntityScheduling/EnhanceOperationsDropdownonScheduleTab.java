@@ -11,22 +11,21 @@ import org.testng.annotations.Test;
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
-/*************************************************************************************
-* TEST CASE
-* Step 1 - Log into a new-installation Publisher test instance as Drupal User 1<br>
-* Step 2 - Create a Draft post<br>
-* Step 3 - Click on Schedule Tab populate with future date and time and verify the success message
-* Step 4 - Verify 'Run Now' & 'Cancel' Element(Button) exists 
-* Step 5 - Click on 'Run Now' button<br>
-* Step 6 - Verify 'Complete' text appears<br>
-*
-* @throws Throwable No Return values are needed
-*************************************************************************************/
 
 public class EnhanceOperationsDropdownonScheduleTab extends ParentTest {
-
+	/*************************************************************************************
+	* TEST CASE
+	* Step 1 - Log into a new-installation Publisher test instance as Drupal User 1<br>
+	* Step 2 - Create a Draft post<br>
+	* Step 3 - Click on Schedule Tab populate with future date and time and verify the success message
+	* Step 4 - Verify 'Run Now' & 'Cancel' Element(Button) exists 
+	* Step 5 - Click on 'Run Now' button<br>
+	* Step 6 - Verify 'Complete' text appears<br>
+	*
+	* @throws Throwable No Return values are needed
+	*************************************************************************************/
     @Test(groups = {"full"})
-        public void ScheduletopublishContentbyDateTime() throws Exception{
+        public void EnhanceOperationsDropdownonScheduleTab() throws Exception{
 
       //Step 1
         UserLogin userLogin = applib.openApplication();

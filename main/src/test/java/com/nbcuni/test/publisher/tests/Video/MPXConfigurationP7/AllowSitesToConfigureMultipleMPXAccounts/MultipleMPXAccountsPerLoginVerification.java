@@ -47,10 +47,9 @@ public class MultipleMPXAccountsPerLoginVerification extends ParentTest{
      * Step 26 - Click on the "Home" menu item on the top.,The user is taken to the Publisher7 home page.
      * Step 27 - Click on "Configuration" --> "Media" --> "Media: thePlatform mpx settings".,The user is taken to the "Media" thePlatform mpx settings" page.
      * Step 28 - Click on the link, "MPX LOGIN". ,The configurations created for 3 MPX sub-accounts are seen has having been retained for the "AdminPub7QA" user. 
-
      * @throws Throwable No Return values are needed
      *************************************************************************************/
-    @Test(groups = {"full", "smoke"})
+    @Test(groups = {"full", "smoke", "mpx"})
     public void MultipleMPXAccountsPerLoginVerification() throws Exception{
     	
     	//TODO - re order test steps above to follow test steps below. Automated steps were re-ordered for ease of automation purposes
