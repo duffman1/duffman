@@ -8,6 +8,8 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -32,93 +34,110 @@ public class CastCrew {
     private static AppLib al;
     private final Util ul;
     
-    private static String CastCrew_Lnk = "//a/strong[text()='Cast/Crew']";
-    private static String Character_Txb = "//label[contains(text(), 'Character')]/../input";
-    private static String AddAnotherItem_Btn="//input[@value= 'Add another item']";
-    
+    //PAGE OBJECT CONSTRUCTOR
     public CastCrew(final CustomWebDriver custWebDr) {
         webDriver = custWebDr;
-        ul = new Util(webDriver);
-        
+        ul = new Util(webDriver);   
     }
-   
+    
+    //PAGE OBJECT IDENTIFIERS
+    @FindBy(how = How.XPATH, using = "//a/strong[text()='Cast/Crew']")
+    private static WebElement CastCrew_Lnk;
+    
+    @FindBy(how = How.XPATH, using = "//label[contains(text(), 'Character')]/../input")
+    private static WebElement Character_Txb;
+    
+    @FindBy(how = How.XPATH, using = "//input[@value= 'Add another item']")
+    private static WebElement AddAnotherItem_Btn;
+    
+    private static WebElement Role_Ddl(String index) {
+    	return webDriver.findElement(By.xpath("(//select[contains(@id, 'role')])[" + index + "]"));
+    }
+    
+    private static WebElement Person_Txb(String index) {
+    	return webDriver.findElement(By.xpath("(//input[contains(@id, 'person')][1])[" + index + "]"));
+    }
+    
+    private static WebElement Character_Txb(String index) {
+    	return webDriver.findElement(By.xpath("(//input[contains(@id, 'character')][1])[" + index + "]"));
+    }
+    
+    private static WebElement AutoComplete_Opt(String optionTxt) {
+    	return webDriver.findElement(By.xpath("//div[@class='reference-autocomplete'][text()='" + optionTxt + "']"));
+    }
+    
+    //PAGE OBJECT METHODS
     public void ClickCastCrewLnk() throws Exception {
     	
-    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(By.xpath(CastCrew_Lnk)));
+    	Reporter.log("Click the 'Cast/Crew' link.");
+    	CastCrew_Lnk.getLocation().moveBy(0, 0);
     	webDriver.executeScript("window.scrollBy(0,-50);");
-    	webDriver.click(CastCrew_Lnk);
+    	CastCrew_Lnk.click();
     }
     
     public void ClickAddAnotherItemBtn() throws Exception {
     	
-    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(By.xpath(AddAnotherItem_Btn)));
-    	webDriver.click(AddAnotherItem_Btn);
+    	Reporter.log("Click the 'Add Another Item' button.");
+    	AddAnotherItem_Btn.click();
     	
     }
     
     public void SelectRole(String roleName, String index) throws Exception {
     	
-    	new Select(new WebDriverWait(webDriver, 10).until(ExpectedConditions.
-    			visibilityOf(webDriver.findElement(By.
-    					xpath("(//select[contains(@id, 'role')])[" + index + "]"))))).
-    						selectByVisibleText(roleName);
+    	Reporter.log("Select the '" + roleName + "' from the 'Role' drop down list.");
+    	new Select(Role_Ddl(index)).selectByVisibleText(roleName);
     }
     
     public void VerifyCharacterTxbNotDisplayed() throws Exception {
     	
-    	Assert.assertTrue(webDriver.findElement(By.xpath(Character_Txb)).isDisplayed() == false);
+    	Reporter.log("Assert that the 'Character' text box is not displayed.");
+    	Assert.assertTrue(Character_Txb.isDisplayed() == false);
     }
     
     public void VerifyCharacterTxbDisplayed() throws Exception {
     	
-    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOf(
-    			webDriver.findElement(By.xpath(Character_Txb))));
+    	Reporter.log("Assert that the 'Character' text box is displayed.");
+    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.
+    			visibilityOf(Character_Txb));
     	
     }
     
     public void EnterPersonName(String personName, String index) throws Exception {
     	
-    	Thread.sleep(1000); //Stale element exception
-    	WebElement txb = new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOf
-   			(webDriver.findElement(By.xpath("(//input[contains(@id, 'person')][1])[" + index + "]")))); 
+    	Reporter.log("Enter '" + personName + "' in the Person text box.");
+    	Person_Txb(index).sendKeys(personName);
     	
-    	txb.sendKeys(personName);
-    	Thread.sleep(2000);
-    	txb.sendKeys(Keys.ARROW_DOWN);
-    	txb.sendKeys(Keys.ENTER);
+    	Reporter.log("Click the '" + personName + "' from the auto complete option list.");
+    	AutoComplete_Opt(personName).click();
     	
     }
     
     public void EnterCharacterName(String characterName, String index) throws Exception {
     	
-    	Thread.sleep(1000); //Stale element exception
-    	WebElement txb = new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOf
-    			(webDriver.findElement(By.xpath("(//input[contains(@id, 'character')][1])[" + index + "]"))));    	
-    	txb.sendKeys(characterName);
-    	Thread.sleep(2000);
-    	txb.sendKeys(Keys.ARROW_DOWN);
-    	txb.sendKeys(Keys.ENTER);
+    	Reporter.log("Enter '" + characterName + "' in the 'Character' text box.");
+    	Character_Txb(index).sendKeys(characterName);
+    	
+    	Reporter.log("Click the '" + characterName + "' from the auto complete option list.");
+    	AutoComplete_Opt(characterName).click();
+    	
     }
     
     public void VerifyPersonNameValue(String personName, String index) throws Exception {
     	
-    	Assert.assertTrue(webDriver.findElement(By.
-    			xpath("(//input[contains(@id, 'person')][1])[" + index + "]")).
-    				getAttribute("value").contains(personName));
+    	Reporter.log("Assert the value of the 'Person' text box equals '" + personName + "'.");
+    	Assert.assertTrue(Person_Txb(index).getAttribute("value").contains(personName));
     }
     
     public void VerifyCharacterNameValue(String characterName, String index) throws Exception {
     	
-    	Assert.assertTrue(webDriver.findElement(By.
-    			xpath("(//input[contains(@id, 'character')][1])[" + index + "]")).
-    				getAttribute("value").contains(characterName));
+    	Reporter.log("Assert the value of the 'Character' text box equals '" + characterName + "'.");
+    	Assert.assertTrue(Character_Txb(index).getAttribute("value").contains(characterName));
     }
     
     public void VerifyRoleValue(String roleName, String index) throws Exception {
     	
-    	Select el = new Select(new WebDriverWait(webDriver, 10).until(ExpectedConditions.
-    			visibilityOf(webDriver.findElement(By.
-    					xpath("(//select[contains(@id, 'role')])[" + index + "]")))));
+    	Reporter.log("Assert the value of the 'Role' drop down list equals '" + roleName + "'.");
+    	Select el = new Select(Role_Ddl(index));
     	Assert.assertEquals(el.getFirstSelectedOption().getText(), roleName);
     	
     						

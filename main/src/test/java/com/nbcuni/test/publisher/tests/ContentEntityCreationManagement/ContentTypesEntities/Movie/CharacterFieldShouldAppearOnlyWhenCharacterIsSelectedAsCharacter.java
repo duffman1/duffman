@@ -69,6 +69,7 @@ public class CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter ex
             //Step 5
             overlay.SwitchToFrame("Create Movie");
             CastCrew castCrew = new CastCrew(webDriver);
+            PageFactory.initElements(webDriver, castCrew);
             castCrew.ClickCastCrewLnk();
             
             //Step 6

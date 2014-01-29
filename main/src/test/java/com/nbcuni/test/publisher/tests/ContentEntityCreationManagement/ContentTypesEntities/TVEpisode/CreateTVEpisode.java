@@ -93,6 +93,7 @@ public class CreateTVEpisode extends ParentTest{
         	
             	//Step 7
             	CastCrew castCrew = new CastCrew(webDriver);
+            	PageFactory.initElements(webDriver, castCrew);
             	castCrew.ClickCastCrewLnk();
         	
             	//Step 8

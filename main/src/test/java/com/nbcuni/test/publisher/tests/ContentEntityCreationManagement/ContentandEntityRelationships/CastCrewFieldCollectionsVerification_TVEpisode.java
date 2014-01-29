@@ -3,6 +3,7 @@ package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Contenta
 import java.util.Arrays;
 import java.util.List;
 
+import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
 import com.nbcuni.test.publisher.common.ParentTest;
@@ -42,13 +43,15 @@ public class CastCrewFieldCollectionsVerification_TVEpisode extends ParentTest {
     @Test(groups = {"full"})
     public void CastCrewFieldCollectionsVerification_TVEpisode() throws Exception{
     	
-    	/* Item removed from iteration 39, commenting out test until future iteration
-    	
     	//Step 1
-    	List<String> Characters =Arrays.asList("CharacterName1","CharacterName2","CharacterName3");
-    	List<String> Persons =Arrays.asList("PersonName1","PersonName2","PersonName3");
+    	List<String> Characters = Arrays.asList("CharacterName" + random.GetCharacterString(10),
+    			"CharacterName" + random.GetCharacterString(10),
+    				"CharacterName" + random.GetCharacterString(10));
+    	List<String> Persons = Arrays.asList("PersonName" + random.GetCharacterString(10),
+    			"PersonName" + random.GetCharacterString(10),
+    				"PersonName" + random.GetCharacterString(10));
     	UserLogin userLogin = applib.openApplication();
-        userLogin.Login("admin@publisher.nbcuni.com", "pa55word");
+        userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
         ContentParent contentParent = new ContentParent(webDriver);
         
         //Step 2
@@ -56,9 +59,9 @@ public class CastCrewFieldCollectionsVerification_TVEpisode extends ParentTest {
         Random random = new Random();
         Overlay overlay = new Overlay(webDriver);
         SelectFile selectFile = new SelectFile(webDriver, applib);
-        Logout logout = new Logout(webDriver);
+        PageFactory.initElements(webDriver, selectFile);
         
-        for(int CCount=0;CCount<3;CCount++){
+        for(int CCount=0;CCount<3;CCount++) {
 	        Taxonomy taxonomy = new Taxonomy(webDriver);
 	        taxonomy.NavigateSite("Content>>Add content>>Character Profile");
 	        overlay.SwitchToFrame("Create Character Profile");
@@ -106,6 +109,7 @@ public class CastCrewFieldCollectionsVerification_TVEpisode extends ParentTest {
       
         //Step 6
         CastCrew castCrew = new CastCrew(webDriver);
+        PageFactory.initElements(webDriver, castCrew);
         castCrew.ClickCastCrewLnk();
         //Add  Cast/Crew number : 2
         castCrew.EnterPersonName(Persons.get(0), "1");
@@ -204,8 +208,7 @@ public class CastCrewFieldCollectionsVerification_TVEpisode extends ParentTest {
         revision.ClickEditMenuBtn(TVEpisodeName3);
         overlay.switchToDefaultContent();
         overlay.SwitchToActiveFrame();
-        //TODO - this story pulled from iteration 39 so this error will still be present. For now I'm evaluating that it is but once this defect is fixed this line will fail and we will need to evaluate that it's not present.
-        contentParent.VerifyPageContentPresent(Arrays.asList("Notice: Trying to get property of non-object in field_collection_field_get_entity() (line 1608 of /mnt/www/html/nbcuqa5dev/docroot/profiles/all/modules/contrib/field_collection/field_collection.module)"));
+        contentParent.VerifyPageContentNotPresent(Arrays.asList("Notice: Trying to get property of non-object in field_collection_field_get_entity() (line 1608 of /mnt/www/html/nbcuqa5dev/docroot/profiles/all/modules/contrib/field_collection/field_collection.module)"));
         //Verify All 3 Cast/Crew data
         castCrew.ClickCastCrewLnk();
 		castCrew.VerifyPersonNameValue(Persons.get(0), "1");
@@ -217,6 +220,6 @@ public class CastCrewFieldCollectionsVerification_TVEpisode extends ParentTest {
 		castCrew.VerifyPersonNameValue(Persons.get(2), "3");        
 		castCrew.VerifyRoleValue("Character", "3");
 		castCrew.VerifyCharacterNameValue(Characters.get(2), "3");  
-        */
+        
     }
 }
