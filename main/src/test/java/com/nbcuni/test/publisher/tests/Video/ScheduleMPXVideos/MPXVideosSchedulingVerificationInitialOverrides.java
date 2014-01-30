@@ -1,6 +1,5 @@
 package com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos;
 
-
 import com.ibm.icu.util.Calendar;
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.MPX.EditMPXVideo;
@@ -9,17 +8,13 @@ import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.content.SearchFor;
 import com.nbcuni.test.publisher.pageobjects.content.Workflow;
-
 import junit.framework.Assert;
-
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
-
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
-
 
 public class MPXVideosSchedulingVerificationInitialOverrides extends ParentTest{
 	
@@ -65,12 +60,12 @@ public class MPXVideosSchedulingVerificationInitialOverrides extends ParentTest{
      * @throws Throwable No Return values are needed
      *************************************************************************************/
     @Test(groups = {"full", "mpx"})
-    public void MPXVideosSchedulingVerificationInitialOverrides() throws Exception{
-
+    public void MPXVideosSchedulingVerificationInitialOverrides_Test() throws Exception{
 
     	//Step 1
     	UserLogin userLogin = applib.openApplication();
-        userLogin.Login("admin@publisher.nbcuni.com", "pa55word");
+    	PageFactory.initElements(webDriver, userLogin);
+        userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
         
         //Step 2 on requires prior MPX configuration
         taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");

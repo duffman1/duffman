@@ -1,23 +1,15 @@
 package com.nbcuni.test.publisher.tests.UserCreationAndManagement.UnauthenticatedUsersNotAbleToViewThePublishedContents;
 
 import java.util.Arrays;
-import java.util.List;
-
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Reporter;
 import org.testng.annotations.Test;
-
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Logout;
-import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
-import com.nbcuni.test.publisher.pageobjects.People.Permissions;
-import com.nbcuni.test.publisher.pageobjects.People.Roles;
 import com.nbcuni.test.publisher.pageobjects.content.BasicInformation;
 import com.nbcuni.test.publisher.pageobjects.content.Content;
 import com.nbcuni.test.publisher.pageobjects.content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.content.PublishingOptions;
-import com.nbcuni.test.publisher.pageobjects.content.RevisionState;
 import com.nbcuni.test.publisher.pageobjects.content.Revisions;
 import com.nbcuni.test.publisher.pageobjects.content.SelectFile;
 
@@ -48,15 +40,15 @@ public class UnauthenticatedUsersNotAbleToViewThePublishedContents extends Paren
      * Step 21 - Copy the URL and Log Out<br>
      * Step 22 - Paste the URL in Browser(as Unauthenticated user)<br>
      * Step 23 - Verify that the user should be able to view the corresponding published content.<br>
-     * 
      * @throws Throwable No Return values are needed
      *************************************************************************************/
     @Test(groups = {"full"})
-    public void UnauthenticatedUsersNotAbleToViewThePublishedContents() throws Exception{
+    public void UnauthenticatedUsersNotAbleToViewThePublishedContents_Test() throws Exception{
     	
     	//Step 1
     	UserLogin userLogin = applib.openApplication();
-        userLogin.Login("admin@publisher.nbcuni.com", "pa55word");
+    	PageFactory.initElements(webDriver, userLogin);
+        userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
         
         //Step 2        
     	taxonomy.NavigateSite("Content>>Add content>>Post");

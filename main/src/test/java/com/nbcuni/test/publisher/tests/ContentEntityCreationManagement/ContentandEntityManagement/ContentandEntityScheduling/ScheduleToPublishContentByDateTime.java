@@ -5,9 +5,8 @@ import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.content.*;
 import com.nbcuni.test.publisher.pageobjects.queues.ScheduleQueue;
-
+import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
-
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
@@ -27,15 +26,15 @@ public class ScheduleToPublishContentByDateTime extends ParentTest {
 	* Step 9 - Click on Schedule Tab and Verify fields(Revision, Moderate State, Date and Time) and populate with past date and time and verify the failed message<br>
 	* Step 10 - Click on Schedule Tab and Verify fields(Revision, Moderate State, Date and Time) and populate with future date and time and time and verify the success message<br>
 	* Step 11 - Verify Schedule table for scheduled revision and Run Cron and verify that published revision displayed under revision tab<br>
-	*
 	* @throws Throwable No Return values are needed
 	*************************************************************************************/
     @Test(groups = {"full", "smoke"})
-        public void ScheduleToPublishContentByDateTime() throws Exception{
+        public void ScheduleToPublishContentByDateTime_Test() throws Exception{
 
         //Step 1
         UserLogin userLogin = applib.openApplication();
-        userLogin.Login("admin@publisher.nbcuni.com", "pa55word");
+        PageFactory.initElements(webDriver, userLogin);
+        userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
 
         //Step 1a
         Modules modules = new Modules(webDriver);
@@ -77,13 +76,13 @@ public class ScheduleToPublishContentByDateTime extends ParentTest {
         basicInformation.EnterSynopsis("Testing for new revision");
         overlay.SwitchToActiveFrame();
         PublishingOptions publishingOptions = new PublishingOptions(webDriver);
-            publishingOptions.ClickPublishingOptionsLnk();
-            publishingOptions.EnterMessageForStateChange("Test Revision 2");
-            contentParent.ClickSaveBtn();
-            overlay.switchToDefaultContent();
+        publishingOptions.ClickPublishingOptionsLnk();
+        publishingOptions.EnterMessageForStateChange("Test Revision 2");
+        contentParent.ClickSaveBtn();
+        overlay.switchToDefaultContent();
 
         //Step 7
-            contentParent.WorkBenchInfoBlock(Arrays.asList("Revision state", "Public","Moderate"));
+        contentParent.WorkBenchInfoBlock(Arrays.asList("Revision state", "Public","Moderate"));
 
         //Step 8
         contentParent.ClickRevisionsTab();

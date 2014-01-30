@@ -1,31 +1,14 @@
 package com.nbcuni.test.publisher.tests.Advertising.Comscore;
 
-
-import org.openqa.selenium.By;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Optional;
-import org.testng.annotations.Parameters;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
-
-import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.publisher.common.ParentTest;
-import com.nbcuni.test.publisher.common.Random;
 import com.nbcuni.test.publisher.pageobjects.Logout;
 import com.nbcuni.test.publisher.pageobjects.Modules;
-import com.nbcuni.test.publisher.pageobjects.Overlay;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
-import com.nbcuni.test.publisher.pageobjects.content.ContentTypes;
-import com.nbcuni.test.publisher.pageobjects.taxonomy.Taxonomy;
-import com.nbcuni.test.webdriver.CustomWebDriver;
-import com.nbcuni.test.webdriver.WebDriverClientExecution;
-
 
 public class PixelmanModuleSetupAndVerification extends ParentTest {
 	
-
     /*************************************************************************************
      * TEST CASE 
      * Step 1 - Login to publisher using drupal 1 credentials <br>
@@ -43,11 +26,12 @@ public class PixelmanModuleSetupAndVerification extends ParentTest {
      * @throws Throwable No Return values are needed
      *************************************************************************************/
     @Test(groups = {"full", "smoke" })
-    public void PixelmanModuleSetupAndVerification() throws Exception{
+    public void PixelmanModuleSetupAndVerification_Test() throws Exception{
         
     	//Step 1
         UserLogin userLogin = applib.openApplication();
-        userLogin.Login("admin@publisher.nbcuni.com", "pa55word");
+        PageFactory.initElements(webDriver, userLogin);
+        userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
         
         //Step 2 and 3 (truncated)
         taxonomy.NavigateSite("Modules");

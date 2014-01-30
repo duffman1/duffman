@@ -1,15 +1,10 @@
 package com.nbcuni.test.publisher.pageobjects;
 
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
 import org.testng.Reporter;
-
-import com.nbcuni.test.lib.Util;
-import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.webdriver.CustomWebDriver;
-
 
 /*********************************************
  * publisher.nbcuni.com UserLogin Library. Copyright
@@ -21,38 +16,42 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 public class UserLogin {
 
     private static CustomWebDriver webDriver;
-    private static AppLib al;
-    private final Util ul;
     
-    private static String Page_Title = "Site-Install";
-    private static String Email_Address_Txb = "//input[@id='edit-name']";
-    private static String Password_Txb = "//input[@id='edit-pass']";
-    private static String LogIn_Btn = "//input[@id='edit-submit']";
-    
-
+    //PAGE OBJECT CONSTRUCTOR
     public UserLogin(final CustomWebDriver custWebDr) {
         webDriver = custWebDr;
-        ul = new Util(webDriver);
-        
     }
     
+    //PAGE OBJECT IDENTIFIERS
+    @FindBy(how = How.XPATH, using = "//input[@id='edit-name']")
+    private static WebElement Email_Address_Txb;
     
+    @FindBy(how = How.XPATH, using = "//input[@id='edit-pass']")
+    private static WebElement Password_Txb;
+    
+    @FindBy(how = How.XPATH, using = "//input[@id='edit-submit']")
+    private static WebElement LogIn_Btn;
+    
+    
+    //PAGE OBJECT METHODS
     public void EnterEmailAddress(String emailAddress) throws Exception {
     	
-    	webDriver.type(Email_Address_Txb, emailAddress);
+    	Reporter.log("Enter the user's email address in the 'Email Address' text box.");
+    	Email_Address_Txb.sendKeys(emailAddress);
     	
     }
     
     public void EnterPassword(String password) throws Exception {
     	
-    	webDriver.type(Password_Txb, password);
+    	Reporter.log("Enter the user's password in the 'Password' text box.");
+    	Password_Txb.sendKeys(password);
     	
     }
     
     public void ClickLoginBtn() throws Exception {
     	
-    	Thread.sleep(1000);
-    	webDriver.click(LogIn_Btn);
+    	Reporter.log("Click the 'Login' button.");
+    	LogIn_Btn.click();
     	
     }
     

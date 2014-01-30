@@ -1,9 +1,7 @@
 package com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SiteReportVisualization;
 
-
 import com.nbcuni.test.publisher.common.ParentTest;
 import org.testng.annotations.Test;
-
 
 public class SiteReportVisualization extends ParentTest{
 	

@@ -1,19 +1,14 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityModerationStatesandWorkflows;
 
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
-
 import com.nbcuni.test.publisher.common.ParentTest;
-import com.nbcuni.test.publisher.pageobjects.AccessDenied;
 import com.nbcuni.test.publisher.pageobjects.Logout;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.content.BasicInformation;
 import com.nbcuni.test.publisher.pageobjects.content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.content.PublishingOptions;
 import com.nbcuni.test.publisher.pageobjects.content.SelectFile;
-import com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery;
 
 public class PublishContenttoUnauthenticatedUsers extends ParentTest{
 	 /*************************************************************************************
@@ -28,12 +23,14 @@ public class PublishContenttoUnauthenticatedUsers extends ParentTest{
      * @throws Throwable No Return values are needed
      *************************************************************************************/
     @Test(groups = {"full"})
-    public void PublishContenttoUnauthenticatedUsers() throws Exception{
-      //Step 1
+    public void PublishContenttoUnauthenticatedUsers_Test() throws Exception{
+      
+    	//Step 1
     	UserLogin userLogin = applib.openApplication();
-        userLogin.Login("admin@publisher.nbcuni.com", "pa55word");
+    	PageFactory.initElements(webDriver, userLogin);
+        userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
         
-      //Step 2
+        //Step 2
         taxonomy.NavigateSite("Content>>Add content>>Media Gallery"); 
         BasicInformation basicInformation = new BasicInformation(webDriver);
         overlay.SwitchToFrame("Create Media Gallery");
@@ -49,7 +46,7 @@ public class PublishContenttoUnauthenticatedUsers extends ParentTest{
         /*TODO
          * Upload 4 media files
          */
-      //Step 3
+        //Step 3
         PublishingOptions publishingOptions = new PublishingOptions(webDriver);
         publishingOptions.ClickPublishingOptionsLnk();
     	publishingOptions.SelectModerationState("Published");
@@ -58,7 +55,7 @@ public class PublishContenttoUnauthenticatedUsers extends ParentTest{
         contentParent.ClickSaveBtn();
         contentParent.VerifyMessageStatus("Media Gallery " + title + " has been created.");
       
-      //Step 4
+        //Step 4
         String ContentURL = webDriver.getCurrentUrl();
         Logout logout = new Logout(webDriver);
         logout.ClickLogoutBtn();

@@ -1,7 +1,5 @@
 package com.nbcuni.test.publisher.tests.Video.SyncFromMPXButtonToVideoFileEntitiesEditForm;
 
-
-import com.ibm.icu.util.Calendar;
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Cron.Cron;
 import com.nbcuni.test.publisher.pageobjects.MPX.EditMPXVideo;
@@ -21,16 +19,12 @@ import com.nbcuni.test.publisher.pageobjects.content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.content.PublishingOptions;
 import com.nbcuni.test.publisher.pageobjects.content.SearchFor;
 import com.nbcuni.test.publisher.pageobjects.content.Workflow;
-
 import junit.framework.Assert;
-
 import org.testng.annotations.Test;
-
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
-
 
 public class SyncFromMPXButtonToVideoFileEntitiesEditForm extends ParentTest{
 	
@@ -55,7 +49,7 @@ public class SyncFromMPXButtonToVideoFileEntitiesEditForm extends ParentTest{
      * @throws Throwable No Return values are needed
      *************************************************************************************/
     @Test(groups = {"full", "mpx"})
-    public void SyncFromMPXButtonToVideoFileEntitiesEditForm() throws Exception{
+    public void SyncFromMPXButtonToVideoFileEntitiesEditForm_Test() throws Exception{
     	
     	/*TODO - Functionality removed from iteration 39 but will be added back in a future iteration. When complete, uncomment this test
     	
@@ -68,7 +62,6 @@ public class SyncFromMPXButtonToVideoFileEntitiesEditForm extends ParentTest{
     	mpxLogin.OpenMPXThePlatform();
     	mpxLogin.Login("mpx/AdminPub7QA", "Pa55word");
     	MPXAssets mpxAssets = new MPXAssets(webDriver, applib);
-    	mpxAssets.WaitForAllAssetsToLoad();
     	MPXAddMedia mpxAddMedia = new MPXAddMedia(webDriver, applib);
     	mpxAddMedia.ClickUploadBtn();
     	mpxAddMedia.ClickChooseFilesBtn();

@@ -1,20 +1,15 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Movie;
 
-
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.content.*;
-
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
-
 import java.util.Arrays;
 import java.util.List;
 
-
 public class CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter extends ParentTest{
 	
-
     /*************************************************************************************
      * TEST CASE Character field should only appear when Role is selected as character
      * Step 1 - Login to publisher using drupal 1 credentials <br>
@@ -39,11 +34,12 @@ public class CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter ex
      * @throws Throwable No Return values are needed
      *************************************************************************************/
     @Test(groups = {"full", "smoke" })
-    public void CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter() throws Exception{
+    public void CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter_Test() throws Exception{
          
         	//Step 1
         	UserLogin userLogin = applib.openApplication();
-            userLogin.Login("admin@publisher.nbcuni.com", "pa55word");
+        	PageFactory.initElements(webDriver, userLogin);
+            userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
             
             //Step 2
             taxonomy.NavigateSite("Content>>Add content>>Character Profile");
@@ -98,7 +94,7 @@ public class CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter ex
             overlay.SwitchToFrame("Create Person");
             String personFirstName = random.GetCharacterString(15);
             personsInformation.EnterFirstName(personFirstName);
-            String biography = personsInformation.EnterBiography();
+            personsInformation.EnterBiography();
             overlay.switchToDefaultContent();
             overlay.SwitchToFrame("Create Person");
             personsInformation.ClickCoverPhotoSelectBtn();
@@ -125,7 +121,7 @@ public class CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter ex
             basicInformation.ClickBasicInformationTab();
             String movieTitle = random.GetCharacterString(15);
             basicInformation.EnterTitle(movieTitle);
-            String snyopsis = basicInformation.EnterSynopsis();
+            basicInformation.EnterSynopsis();
             overlay.SwitchToFrame("Create Movie");
             basicInformation.ClickCoverSelectBtn();
             selectFile.SelectDefaultCoverImg();
@@ -152,7 +148,7 @@ public class CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter ex
             
             //Step 17
             overlay.switchToDefaultContent();
-            RevisionState revisionState = new RevisionState(webDriver);
+            new RevisionState(webDriver);
             contentParent.WorkBenchInfoBlock(Arrays.asList("Published"));
 
     }

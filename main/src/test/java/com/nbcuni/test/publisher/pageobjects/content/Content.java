@@ -1,19 +1,14 @@
 package com.nbcuni.test.publisher.pageobjects.content;
 
-
 import com.nbcuni.test.lib.Util;
 import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.webdriver.CustomWebDriver;
-
 import junit.framework.Assert;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import java.util.concurrent.TimeUnit;
-
 
 /*********************************************
  * publisher.nbcuni.com Content Library. Copyright
@@ -25,13 +20,10 @@ import java.util.concurrent.TimeUnit;
 public class Content {
 
     private static CustomWebDriver webDriver;
-    private static AppLib al;
-    private final Util ul;
     private static String Operation_Dd = ".//*[@id='edit-operation']";
         
     public Content(final CustomWebDriver custWebDr) {
         webDriver = custWebDr;
-        ul = new Util(webDriver);
         
     }
    

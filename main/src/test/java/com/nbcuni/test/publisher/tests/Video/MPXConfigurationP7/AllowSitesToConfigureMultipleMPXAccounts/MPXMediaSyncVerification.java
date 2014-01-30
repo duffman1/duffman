@@ -1,6 +1,5 @@
 package com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts;
 
-
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Cron.Cron;
 import com.nbcuni.test.publisher.pageobjects.MPX.MPXDataClient;
@@ -9,15 +8,11 @@ import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.content.SearchFor;
-
 import junit.framework.Assert;
-
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
-
 import java.util.Arrays;
 import java.util.List;
-
 
 public class MPXMediaSyncVerification extends ParentTest{
 	
@@ -36,13 +31,14 @@ public class MPXMediaSyncVerification extends ParentTest{
      * @throws Throwable No Return values are needed
      *************************************************************************************/
     @Test(groups = {"full", "smoke", "mpx"})
-    public void MPXMediaSyncVerification() throws Exception{
+    public void MPXMediaSyncVerification_Test() throws Exception{
     	
-    	//TODO - re order test steps above to follow test steps below. Automated steps were re-ordered for ease of automation purposes
+    	//NOTE - Automated steps were re-ordered for ease of automation purposes
     	
     	//Step 1
     	UserLogin userLogin = applib.openApplication();
-        userLogin.Login("admin@publisher.nbcuni.com", "pa55word");
+    	PageFactory.initElements(webDriver, userLogin);
+        userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
         
         //Step 2
         taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
@@ -55,48 +51,33 @@ public class MPXMediaSyncVerification extends ParentTest{
 
             //Step 3
         	MPXDataClient mpxDataClient = new MPXDataClient(webDriver);
-            mpxDataClient.SignInToMPXDataClient("media", "mpx/AdminPub7QA", "Pa55word");
-            mpxDataClient.ChooseMPXAccount(configuredAccounts.get(0));
-            List<String> allMediaTitlesForAccount1 = mpxDataClient.GetAllMPXObjectFields("Media", "title");
-            mpxDataClient.SignInToMPXDataClient("player", "mpx/AdminPub7QA", "Pa55word");
+            mpxDataClient.SignInToMPXDataClient("player", applib.getMPXUsername(), applib.getMPXPassword());
             mpxDataClient.ChooseMPXAccount(configuredAccounts.get(0));
             List<String> allActivePlayerTitlesForAccount1 = mpxDataClient.GetAllActivePlayers();
             
             //Step 3 (continued)
-            List<String> allMediaTitlesForAccount2 = null;
             List<String> allActivePlayerTitlesForAccount2 = null;
             if (configuredAccounts.size() >= 2) {
             
-            	mpxDataClient.SignInToMPXDataClient("media", "mpx/AdminPub7QA", "Pa55word");
-            	mpxDataClient.ChooseMPXAccount(configuredAccounts.get(1));
-            	allMediaTitlesForAccount2 = mpxDataClient.GetAllMPXObjectFields("Media", "title");
-            	mpxDataClient.SignInToMPXDataClient("player", "mpx/AdminPub7QA", "Pa55word");
+            	mpxDataClient.SignInToMPXDataClient("player", applib.getMPXUsername(), applib.getMPXPassword());
                 mpxDataClient.ChooseMPXAccount(configuredAccounts.get(1));
                 allActivePlayerTitlesForAccount2 = mpxDataClient.GetAllActivePlayers();
             }
             
             //Step 3 (continued)
-            List<String> allMediaTitlesForAccount3 = null;
             List<String> allActivePlayerTitlesForAccount3 = null;
             if (configuredAccounts.size() >= 3) {
             	
-            	mpxDataClient.SignInToMPXDataClient("media", "mpx/AdminPub7QA", "Pa55word");
-            	mpxDataClient.ChooseMPXAccount(configuredAccounts.get(2));
-            	allMediaTitlesForAccount3 = mpxDataClient.GetAllMPXObjectFields("Media", "title");
-            	mpxDataClient.SignInToMPXDataClient("player", "mpx/AdminPub7QA", "Pa55word");
+            	mpxDataClient.SignInToMPXDataClient("player", applib.getMPXUsername(), applib.getMPXPassword());
                 mpxDataClient.ChooseMPXAccount(configuredAccounts.get(2));
                 allActivePlayerTitlesForAccount3 = mpxDataClient.GetAllActivePlayers();
             }
 
             //Step 3 (continued)
-            List<String> allMediaTitlesForAccount4 = null;
             List<String> allActivePlayerTitlesForAccount4 = null;
             if (configuredAccounts.size() >= 4) {
 
-                mpxDataClient.SignInToMPXDataClient("media", "mpx/AdminPub7QA", "Pa55word");
-                mpxDataClient.ChooseMPXAccount(configuredAccounts.get(3));
-                allMediaTitlesForAccount4 = mpxDataClient.GetAllMPXObjectFields("Media", "title");
-                mpxDataClient.SignInToMPXDataClient("player", "mpx/AdminPub7QA", "Pa55word");
+            	mpxDataClient.SignInToMPXDataClient("player", applib.getMPXUsername(), applib.getMPXPassword());
                 mpxDataClient.ChooseMPXAccount(configuredAccounts.get(3));
                 allActivePlayerTitlesForAccount4 = mpxDataClient.GetAllActivePlayers();
             }

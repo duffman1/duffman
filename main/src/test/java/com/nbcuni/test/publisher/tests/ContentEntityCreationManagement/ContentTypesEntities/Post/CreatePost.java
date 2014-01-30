@@ -1,22 +1,16 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post;
 
-
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.content.*;
-
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Reporter;
 import org.testng.annotations.Test;
-
 import java.util.Arrays;
 import java.util.List;
 
-
 public class CreatePost extends ParentTest{
 	
-
     /*************************************************************************************
      * TEST CASE 
      * Step 1 - Login to Pub7 
@@ -31,11 +25,12 @@ public class CreatePost extends ParentTest{
      * @throws Throwable No Return values are needed
      *************************************************************************************/
     @Test(groups = {"full" })
-    public void CreatePost() throws Exception{
+    public void CreatePost_Test() throws Exception{
          
         	//Step 1
         	UserLogin userLogin = applib.openApplication();
-            userLogin.Login("admin@publisher.nbcuni.com", "pa55word");
+        	PageFactory.initElements(webDriver, userLogin);
+            userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
             
             //Step 1a
             Modules modules = new Modules(webDriver);
@@ -43,8 +38,6 @@ public class CreatePost extends ParentTest{
             
             List<String> allStates = Arrays.asList("Draft", "Review", "Published");
             for (String state : allStates) {
-            
-            	Reporter.log("Publish state currently set to " + state);
             
             	//Step 1b
             	taxonomy.NavigateSite("Content>>Add content>>Post");
@@ -81,11 +74,8 @@ public class CreatePost extends ParentTest{
             	contentParent.ClickSaveBtn();
             	overlay.switchToDefaultContent();
             	contentParent.VerifyMessageStatus("Post " + postTitle + " has been created.");
-            	RevisionState revisionState = new RevisionState(webDriver);
-                contentParent.WorkBenchInfoBlock(Arrays.asList(state));
-            	//revisionState.VerifyRevisionState(state);
-            
-            
+            	contentParent.WorkBenchInfoBlock(Arrays.asList(state));
+            	
             }
             
     }

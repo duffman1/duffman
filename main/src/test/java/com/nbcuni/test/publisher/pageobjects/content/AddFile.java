@@ -1,27 +1,14 @@
 package com.nbcuni.test.publisher.pageobjects.content;
 
-
-import java.util.ArrayList;
-import java.util.List;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.remote.LocalFileDetector;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.sikuli.script.Pattern;
-import org.sikuli.script.Region;
 import org.sikuli.script.Screen;
-import org.testng.Assert;
 import org.testng.Reporter;
-
 import com.nbcuni.test.lib.Util;
 import com.nbcuni.test.publisher.common.AppLib;
-import com.nbcuni.test.publisher.pageobjects.Overlay;
 import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXAssets;
 import com.nbcuni.test.webdriver.CustomWebDriver;
 
@@ -37,14 +24,12 @@ public class AddFile {
 
     private static CustomWebDriver webDriver;
     private AppLib applib;
-    private Util ul;
     Screen s = new Screen();
     MPXAssets mpxAssets = new MPXAssets(this.webDriver, this.applib);
     
     //PAGE OBJECT CONSTRUCTOR
     public AddFile(final CustomWebDriver custWebDr, AppLib applib) {
         webDriver = custWebDr;
-        ul = new Util(webDriver);
         this.applib = applib;
     }
     

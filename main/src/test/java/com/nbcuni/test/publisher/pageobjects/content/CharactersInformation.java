@@ -1,23 +1,13 @@
 package com.nbcuni.test.publisher.pageobjects.content;
 
-
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Hashtable;
-import java.util.List;
-
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.Reporter;
-
 import com.nbcuni.test.lib.Util;
 import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.webdriver.CustomWebDriver;
-
 
 /*********************************************
  * publisher.nbcuni.com Characters Information Library. Copyright
@@ -29,8 +19,6 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 public class CharactersInformation {
 
     private static CustomWebDriver webDriver;
-    private static AppLib al;
-    private final Util ul;
     
     private static String CharacterFirstName_Txb = "//input[@id='edit-field-character-first-name-und-0-value']";
     private static String CharacterPrefix_Txb = ".//input[@id='edit-field-character-prefix-und-0-value']";
@@ -45,7 +33,6 @@ public class CharactersInformation {
     
     public CharactersInformation(final CustomWebDriver custWebDr) {
         webDriver = custWebDr;
-        ul = new Util(webDriver);
         
     }
    

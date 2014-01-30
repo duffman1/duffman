@@ -1,8 +1,6 @@
 package com.nbcuni.test.publisher.tests.Video.Player;
 
-
 import java.util.List;
-
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.MPX.EditMPXVideo;
 import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
@@ -10,12 +8,9 @@ import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.content.Content;
 import com.nbcuni.test.publisher.pageobjects.content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.content.SearchFor;
-
 import junit.framework.Assert;
-
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
-
 
 public class SelectVideoPlayerPerVideoFile extends ParentTest{
 	
@@ -43,12 +38,12 @@ public class SelectVideoPlayerPerVideoFile extends ParentTest{
      * @throws Throwable No Return values are needed
      *************************************************************************************/
     @Test(groups = {"full", "mpx"})
-    public void SelectVideoPlayerPerVideoFile () throws Exception{
-
+    public void SelectVideoPlayerPerVideoFile_Test() throws Exception{
 
     	//Step 1
     	UserLogin userLogin = applib.openApplication();
-        userLogin.Login("admin@publisher.nbcuni.com", "pa55word");
+    	PageFactory.initElements(webDriver, userLogin);
+        userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
         
         //Step 2 on requires prior MPX configuration
         taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");

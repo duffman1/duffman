@@ -1,18 +1,7 @@
 package com.nbcuni.test.publisher.tests.Video.DeIngestingMPXAccountsAndCorrespondingAssets;
 
-
 import com.nbcuni.test.publisher.common.ParentTest;
-import com.nbcuni.test.publisher.pageobjects.MPX.MPXDataClient;
-import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
-import com.nbcuni.test.publisher.pageobjects.UserLogin;
-import com.nbcuni.test.publisher.pageobjects.content.ContentParent;
-
 import org.testng.annotations.Test;
-
-import java.util.List;
-
-import junit.framework.Assert;
-
 
 public class DeleteMultipleAccounts extends ParentTest{
 	
@@ -31,16 +20,17 @@ public class DeleteMultipleAccounts extends ParentTest{
      * @throws Throwable No Return values are needed
      *************************************************************************************/
     @Test(groups = {"full", "mpx"})
-    public void DeleteMultipleAccounts() throws Exception{
+    public void DeleteMultipleAccounts_Test() throws Exception{
     	
     	/* TEST PULLED FROM ITERATION 39 UNTIL A LATER DATE
     	//Step 1
     	UserLogin userLogin = applib.openApplication();
-        userLogin.Login("admin@publisher.nbcuni.com", "pa55word");
+    	PageFactory.initElements(webDriver, userLogin);
+        userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
         
         //Step 2
         MPXDataClient mpxDataClient = new MPXDataClient(webDriver);
-        mpxDataClient.SignInToMPXDataClient("media", "mpx/AdminPub7QA", "Pa55word");
+        mpxDataClient.SignInToMPXDataClient("media", applib.getMPXUsername(), applib.getMPXPassword());
         List<String> accountNames = mpxDataClient.GetAllMPXAccounts();
         
         //Step 3

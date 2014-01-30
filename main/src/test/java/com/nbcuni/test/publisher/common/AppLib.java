@@ -13,7 +13,6 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.testng.ITestResult;
 import org.testng.Reporter;
-
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -32,9 +31,7 @@ import java.util.regex.Pattern;
  * @version 1.0 Date: September 1, 2013
  ***************************************************************************/
 
-
 public class AppLib {
-
 
     private static final int FOUR_ZERO_FOUR = 404;
     private CustomWebDriver custWebDr = null;
@@ -57,8 +54,7 @@ public class AppLib {
             + File.separator + "config.properties";
     private static Properties configProperties = null;
     private static boolean isConfigLoaded = false;
-    private static String businessid = "";
-
+    
     /**
      * @param cs1 Custom Webdriver
      */

@@ -63,6 +63,7 @@ public class MPXLogin {
         s.doubleClick(path + "Login/PassWord_Txb.png");
         s.type(passWord);
         s.click(path + "Login/SignIn_Btn.png");
+        
     }
     
     

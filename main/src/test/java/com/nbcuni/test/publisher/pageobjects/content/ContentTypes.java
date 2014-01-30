@@ -1,6 +1,5 @@
 package com.nbcuni.test.publisher.pageobjects.content;
 
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -24,8 +23,6 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 public class ContentTypes {
 
     private static CustomWebDriver webDriver;
-    private static AppLib al;
-    private final Util ul;
     
     private static String Name_Txb = "//input[@id='edit-name']";
     private static String Save_Btn = "//input[@id='edit-submit']";
@@ -38,7 +35,6 @@ public class ContentTypes {
     
     public ContentTypes(final CustomWebDriver custWebDr) {
         webDriver = custWebDr;
-        ul = new Util(webDriver);
         
     }
     
@@ -56,8 +52,8 @@ public class ContentTypes {
     
     public void VerifyContentTypeSaved(String name) throws Exception {
     	
-    	ul.verifyObjectContainsText(MessageStatus_Ctr, "The content type " + name + " has been added.");
-    	ul.verifyObjectContainsText(ContentTypeTbl_Ctr, name);
+    	Assert.assertTrue(webDriver.findElement(By.xpath(MessageStatus_Ctr)).getText().contains("The content type " + name + " has been added."));
+    	Assert.assertTrue(webDriver.findElement(By.xpath(ContentTypeTbl_Ctr)).getText().contains(name));
     	
     }
     
@@ -89,19 +85,19 @@ public class ContentTypes {
     
     public void VerifyNewFieldSaved(String fieldName) throws Exception {
     	
-    	ul.verifyObjectContainsText(MessageStatus_Ctr, "Updated field " + fieldName + " field settings.");
+    	Assert.assertTrue(webDriver.findElement(By.xpath(MessageStatus_Ctr)).getText().contains("Updated field " + fieldName + " field settings."));
     	
     }
     
     public void VerifyConfigurationSaved(String fieldName) throws Exception {
     	
-    	ul.verifyObjectContainsText(MessageStatus_Ctr, "Saved " + fieldName + " configuration.");
+    	Assert.assertTrue(webDriver.findElement(By.xpath(MessageStatus_Ctr)).getText().contains("Saved " + fieldName + " configuration."));
     	
     }
     
     public void VerifyFieldSaveBtnPresent(String fieldName) throws Exception {
     	
-    	ul.verifyObjectExists("//a[@id='edit-field-" + fieldName + "-und-field-" + fieldName + "-und-0-select']");
+    	Assert.assertTrue(webDriver.findElement(By.xpath("//a[@id='edit-field-" + fieldName + "-und-field-" + fieldName + "-und-0-select']")).isDisplayed());
     	
     }
     

@@ -1,16 +1,13 @@
 package com.nbcuni.test.publisher.pageobjects.content;
 
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
-
 import com.nbcuni.test.lib.Util;
 import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.publisher.common.Random;
@@ -27,8 +24,6 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 public class BasicInformation {
 
     private static CustomWebDriver webDriver;
-    private static AppLib al;
-    private final Util ul;
     
     private static String BasicInformation_Tab = "//a/strong[text()='Basic Information']";
     private static String Title_Txb = "//input[contains(@id, 'edit-title')]";
@@ -45,7 +40,6 @@ public class BasicInformation {
     
     public BasicInformation(final CustomWebDriver custWebDr) {
         webDriver = custWebDr;
-        ul = new Util(webDriver);
         
     }
    

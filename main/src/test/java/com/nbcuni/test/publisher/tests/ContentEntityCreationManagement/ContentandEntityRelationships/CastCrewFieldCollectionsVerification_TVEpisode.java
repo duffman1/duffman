@@ -2,13 +2,9 @@ package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Contenta
 
 import java.util.Arrays;
 import java.util.List;
-
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
-
 import com.nbcuni.test.publisher.common.ParentTest;
-import com.nbcuni.test.publisher.common.Random;
-import com.nbcuni.test.publisher.pageobjects.Logout;
 import com.nbcuni.test.publisher.pageobjects.Overlay;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.content.BasicInformation;
@@ -41,7 +37,7 @@ public class CastCrewFieldCollectionsVerification_TVEpisode extends ParentTest {
      * @throws Throwable No Return values are needed.<br>
      *************************************************************************************/
     @Test(groups = {"full"})
-    public void CastCrewFieldCollectionsVerification_TVEpisode() throws Exception{
+    public void CastCrewFieldCollectionsVerificationTVEpisode_Test() throws Exception{
     	
     	//Step 1
     	List<String> Characters = Arrays.asList("CharacterName" + random.GetCharacterString(10),
@@ -51,12 +47,12 @@ public class CastCrewFieldCollectionsVerification_TVEpisode extends ParentTest {
     			"PersonName" + random.GetCharacterString(10),
     				"PersonName" + random.GetCharacterString(10));
     	UserLogin userLogin = applib.openApplication();
+    	PageFactory.initElements(webDriver, userLogin);
         userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
         ContentParent contentParent = new ContentParent(webDriver);
         
         //Step 2
         CharactersInformation charactersInformation = new CharactersInformation(webDriver);
-        Random random = new Random();
         Overlay overlay = new Overlay(webDriver);
         SelectFile selectFile = new SelectFile(webDriver, applib);
         PageFactory.initElements(webDriver, selectFile);

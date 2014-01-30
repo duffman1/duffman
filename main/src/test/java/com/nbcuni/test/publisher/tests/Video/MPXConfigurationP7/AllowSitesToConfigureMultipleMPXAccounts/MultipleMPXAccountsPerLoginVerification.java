@@ -1,15 +1,15 @@
 package com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts;
 
-
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.MPX.MPXDataClient;
 import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.content.ContentParent;
+
+import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
 import java.util.List;
-
 
 public class MultipleMPXAccountsPerLoginVerification extends ParentTest{
 	
@@ -50,17 +50,18 @@ public class MultipleMPXAccountsPerLoginVerification extends ParentTest{
      * @throws Throwable No Return values are needed
      *************************************************************************************/
     @Test(groups = {"full", "smoke", "mpx"})
-    public void MultipleMPXAccountsPerLoginVerification() throws Exception{
+    public void MultipleMPXAccountsPerLoginVerification_Test() throws Exception{
     	
-    	//TODO - re order test steps above to follow test steps below. Automated steps were re-ordered for ease of automation purposes
+    	//NOTE - Automated steps were re-ordered for ease of automation purposes
     	
     	//Step
     	UserLogin userLogin = applib.openApplication();
-        userLogin.Login("admin@publisher.nbcuni.com", "pa55word");
+    	PageFactory.initElements(webDriver, userLogin);
+        userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
         
         //Step
         MPXDataClient mpxDataClient = new MPXDataClient(webDriver);
-        mpxDataClient.SignInToMPXDataClient("media", "mpx/AdminPub7QA", "Pa55word");
+        mpxDataClient.SignInToMPXDataClient("media", applib.getMPXUsername(), applib.getMPXPassword());
         List<String> accountNames = mpxDataClient.GetAllMPXAccounts();
         
         //Step
@@ -80,8 +81,8 @@ public class MultipleMPXAccountsPerLoginVerification extends ParentTest{
         	
         	//Step
         	settings.ClickAddAccountBtn();
-        	settings.EnterUsername0("mpx/AdminPub7QA");
-        	settings.EnterPassword0("Pa55word");
+        	settings.EnterUsername0(applib.getMPXUsername());
+        	settings.EnterPassword0(applib.getMPXPassword());
         	settings.ClickConnectToMPXBtn();
         	ContentParent contentParent = new ContentParent(webDriver);
         	contentParent.VerifyMessageStatus("Login successful");
@@ -90,15 +91,15 @@ public class MultipleMPXAccountsPerLoginVerification extends ParentTest{
         	//Step
         	settings.ExpandMPXLogin();
         	settings.ClickAddAccountBtn();
-        	settings.EnterUsername0("mpx/AdminPub7QA");
-        	settings.EnterPassword0("Pa55word");
+        	settings.EnterUsername0(applib.getMPXUsername());
+        	settings.EnterPassword0(applib.getMPXPassword());
         	settings.ClickUpdateBtn();
         	
         	//Step
         	settings.ExpandMPXLogin();
         	settings.ClickAddAccountBtn();
-        	settings.EnterUsername0("mpx/AdminPub7QA");
-        	settings.EnterPassword0("Pa55word");
+        	settings.EnterUsername0(applib.getMPXUsername());
+        	settings.EnterPassword0(applib.getMPXPassword());
         	settings.ClickUpdateBtn();
         	
         	//Step
@@ -132,14 +133,14 @@ public class MultipleMPXAccountsPerLoginVerification extends ParentTest{
             
             //Step
             settings.ExpandMPXLogin();
-            settings.VerifyUsernameValues("mpx/AdminPub7QA", 3);
+            settings.VerifyUsernameValues(applib.getMPXUsername(), 3);
             
             //Step
             settings.ClickAddAccountBtn();
             
             //Step
-            settings.EnterUsername0("mpx/AdminPub7QA");
-        	settings.EnterPassword0("Pa55word");
+            settings.EnterUsername0(applib.getMPXUsername());
+        	settings.EnterPassword0(applib.getMPXPassword());
         	settings.ClickUpdateBtn();
         	
         	//Step

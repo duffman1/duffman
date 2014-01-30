@@ -1,25 +1,15 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
-
 import com.nbcuni.test.publisher.common.ParentTest;
-import com.nbcuni.test.publisher.common.Random;
-import com.nbcuni.test.publisher.pageobjects.AccessDenied;
-import com.nbcuni.test.publisher.pageobjects.Logout;
 import com.nbcuni.test.publisher.pageobjects.Overlay;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.content.BasicInformation;
 import com.nbcuni.test.publisher.pageobjects.content.CastCrew;
 import com.nbcuni.test.publisher.pageobjects.content.CharactersInformation;
-import com.nbcuni.test.publisher.pageobjects.content.Content;
 import com.nbcuni.test.publisher.pageobjects.content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.content.PersonsInformation;
 import com.nbcuni.test.publisher.pageobjects.content.PublishingOptions;
@@ -27,7 +17,6 @@ import com.nbcuni.test.publisher.pageobjects.content.Revisions;
 import com.nbcuni.test.publisher.pageobjects.content.SelectFile;
 import com.nbcuni.test.publisher.pageobjects.content.Workflow;
 import com.nbcuni.test.publisher.pageobjects.taxonomy.Taxonomy;
-import com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery;
 
 public class CastCrewFieldCollectionsVerification_Movie extends ParentTest{
 	 /*************************************************************************************
@@ -48,7 +37,7 @@ public class CastCrewFieldCollectionsVerification_Movie extends ParentTest{
      * @throws Throwable No Return values are needed.<br>
      *************************************************************************************/
     @Test(groups = {"full"})
-    public void CastCrewFieldCollectionsVerification_Movie() throws Exception{
+    public void CastCrewFieldCollectionsVerificationMovie_Test() throws Exception{
     	
     	//Step 1
     	List<String> Characters = Arrays.asList("CharacterFirstName" + random.GetCharacterString(10),
@@ -58,12 +47,12 @@ public class CastCrewFieldCollectionsVerification_Movie extends ParentTest{
     			"PersonFirstName" + random.GetCharacterString(10),
     				"PersonFirstName" + random.GetCharacterString(10));
     	UserLogin userLogin = applib.openApplication();
-        userLogin.Login("admin@publisher.nbcuni.com", "pa55word");
+    	PageFactory.initElements(webDriver, userLogin);
+        userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
         ContentParent contentParent = new ContentParent(webDriver);
         
         //Step 2
         CharactersInformation charactersInformation = new CharactersInformation(webDriver);
-        Random random = new Random();
         Overlay overlay = new Overlay(webDriver);
         SelectFile selectFile = new SelectFile(webDriver, applib);
         PageFactory.initElements(webDriver, selectFile);

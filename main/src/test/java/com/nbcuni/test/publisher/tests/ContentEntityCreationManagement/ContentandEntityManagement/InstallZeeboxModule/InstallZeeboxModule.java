@@ -1,22 +1,15 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.InstallZeeboxModule;
 
-
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.content.*;
-
-import org.testng.Assert;
-import org.testng.Reporter;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
-
 import java.util.Arrays;
-import java.util.List;
-
 
 public class InstallZeeboxModule extends ParentTest{
 	
-
     /*************************************************************************************
      * TEST CASE 
      * Step 1 - Log into the QA instance as an admin(user1).   NOTE: The code for this test is initally deployed to http://qa1dev.publisher.nbcuni.com/ ,Login succeeds 
@@ -29,11 +22,12 @@ public class InstallZeeboxModule extends ParentTest{
      * @throws Throwable No Return values are needed
      *************************************************************************************/
     @Test(groups = {"full" })
-    public void InstallZeeboxModule() throws Exception{
+    public void InstallZeeboxModule_Test() throws Exception{
          
         	//Step 1
         	UserLogin userLogin = applib.openApplication();
-            userLogin.Login("admin@publisher.nbcuni.com", "pa55word");
+        	PageFactory.initElements(webDriver, userLogin);
+            userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
             
             //Step 2 and 3
             Modules modules = new Modules(webDriver);

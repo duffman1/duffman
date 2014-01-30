@@ -1,6 +1,5 @@
 package com.nbcuni.test.publisher.tests.Video.UndefinedIndexesDisplayingForMPXPlayers;
 
-
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Cron.Cron;
 import com.nbcuni.test.publisher.pageobjects.MPX.EditMPXVideo;
@@ -21,11 +20,11 @@ import com.nbcuni.test.publisher.pageobjects.content.Workflow;
 
 import junit.framework.Assert;
 
+import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
 import java.util.Arrays;
 import java.util.List;
-
 
 public class UndefinedIndexesDisplayingForMPXPlayers extends ParentTest{
 	
@@ -49,15 +48,17 @@ public class UndefinedIndexesDisplayingForMPXPlayers extends ParentTest{
      * @throws Throwable No Return values are needed
      *************************************************************************************/
     @Test(groups = {"full", "mpx"})
-    public void UndefinedIndexesDisplayingForMPXPlayers() throws Exception{
+    public void UndefinedIndexesDisplayingForMPXPlayers_Test() throws Exception{
     	
     	//Defect was removed from iteration 39 for work at a later date. commenting out test until resolved at the request of the business
     	/*
     	//Step 1
     	UserLogin userLogin = applib.openApplication();
+    	PageFactory.initElements(webDriver, userLogin);
+    	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
     	MPXLogin mpxLogin = new MPXLogin(webDriver, applib);
     	mpxLogin.OpenMPXThePlatform();
-    	mpxLogin.Login("mpx/AdminPub7QA", "Pa55word");
+    	mpxLogin.Login(applib.getMPXUsername(), applib.getMPXPassword());
     	MPXAssets mpxAssets = new MPXAssets(webDriver, applib);
     	mpxAssets.WaitForAllAssetsToLoad();
     	
@@ -73,8 +74,7 @@ public class UndefinedIndexesDisplayingForMPXPlayers extends ParentTest{
         
         //Step 3
         applib.openApplication();
-    	userLogin.Login("admin@publisher.nbcuni.com", "pa55word");
-        
+    	
     	//Step 3 (continued)
     	taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
         overlay.SwitchToFrame("Media: thePlatform mpx settings dialog");

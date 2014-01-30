@@ -1,25 +1,10 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CustomContentType;
 
-
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Optional;
-import org.testng.annotations.Parameters;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
-
-import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.publisher.common.ParentTest;
-import com.nbcuni.test.publisher.common.Random;
-import com.nbcuni.test.publisher.pageobjects.Logout;
-import com.nbcuni.test.publisher.pageobjects.Overlay;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.content.ContentTypes;
-import com.nbcuni.test.publisher.pageobjects.taxonomy.Taxonomy;
-import com.nbcuni.test.webdriver.CustomWebDriver;
-import com.nbcuni.test.webdriver.WebDriverClientExecution;
-
 
 public class AddingNewCustomContentType extends ParentTest{
 	
@@ -36,11 +21,12 @@ public class AddingNewCustomContentType extends ParentTest{
      * @throws Throwable No Return values are needed
      *************************************************************************************/
     @Test(groups = {"full", "smoke" })
-    public void AddingNewCustomContentType() throws Exception{
+    public void AddingNewCustomContentType_Test() throws Exception{
         
         	//Step 1
         	UserLogin userLogin = applib.openApplication();
-            userLogin.Login("admin@publisher.nbcuni.com", "pa55word");
+        	PageFactory.initElements(webDriver, userLogin);
+            userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
             
             //Step 2
             taxonomy.NavigateSite("Structure>>Content types>>Add content type");
@@ -48,7 +34,6 @@ public class AddingNewCustomContentType extends ParentTest{
             //Step 3
             overlay.SwitchToFrame("Content types");
             ContentTypes contentTypes = new ContentTypes(webDriver);
-            Random random = new Random();
             String contentTypeName = random.GetCharacterString(10);
             contentTypes.EnterName(contentTypeName);
             

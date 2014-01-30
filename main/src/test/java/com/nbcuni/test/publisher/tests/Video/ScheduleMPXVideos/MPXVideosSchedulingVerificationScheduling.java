@@ -1,10 +1,8 @@
 package com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos;
 
-
 import com.ibm.icu.util.Calendar;
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.MPX.EditMPXVideo;
-import com.nbcuni.test.publisher.pageobjects.MPX.MPXMedia;
 import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
 import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXAddMedia;
 import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXLogin;
@@ -15,17 +13,13 @@ import com.nbcuni.test.publisher.pageobjects.content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.content.SearchFor;
 import com.nbcuni.test.publisher.pageobjects.content.Workflow;
 import com.nbcuni.test.publisher.pageobjects.queues.ScheduleQueue;
-
 import junit.framework.Assert;
-
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
-
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
-
 
 public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
 	
@@ -71,11 +65,11 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
      * @throws Throwable No Return values are needed
      *************************************************************************************/
     @Test(groups = {"full", "smoke", "mpx"})
-    public void MPXVideosSchedulingVerificationScheduling() throws Exception{
-
-
+    public void MPXVideosSchedulingVerificationScheduling_Test() throws Exception{
+    	
     	//Step 1
     	UserLogin userLogin = applib.openApplication();
+    	PageFactory.initElements(webDriver, userLogin);
         userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
         
         //Note - test requires mpx configuration
@@ -83,7 +77,7 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
         overlay.SwitchToFrame("Media: thePlatform mpx settings dialog");
         Settings settings = new Settings(webDriver);
         if (settings.IsMPXConfigured() == true) {
-
+		
             //Step 2
         	List<String> configuredAccounts = settings.GetImportAccountSelectedOptions();
         	MPXLogin mpxLogin = new MPXLogin(webDriver, applib);
@@ -260,6 +254,6 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
         	Assert.fail("MPX is NOT configured. Test titled 'MultipleMPXAccountsPerLoginVerification' must run before any other MPX tests.");
         	
         }
-
+        
     }
 }

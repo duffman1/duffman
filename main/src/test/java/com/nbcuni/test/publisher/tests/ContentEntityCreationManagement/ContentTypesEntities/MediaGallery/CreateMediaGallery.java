@@ -1,40 +1,14 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery;
 
-
-import java.awt.Robot;
-import java.util.Arrays;
-
-import junit.framework.Assert;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Optional;
-import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-
-import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.publisher.common.ParentTest;
-import com.nbcuni.test.publisher.common.Random;
-import com.nbcuni.test.publisher.pageobjects.Logout;
-import com.nbcuni.test.publisher.pageobjects.Overlay;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.content.BasicInformation;
-import com.nbcuni.test.publisher.pageobjects.content.CharactersInformation;
 import com.nbcuni.test.publisher.pageobjects.content.ContentParent;
-import com.nbcuni.test.publisher.pageobjects.content.ContentTypes;
 import com.nbcuni.test.publisher.pageobjects.content.SelectFile;
-import com.nbcuni.test.publisher.pageobjects.taxonomy.Taxonomy;
-import com.nbcuni.test.webdriver.CustomWebDriver;
-import com.nbcuni.test.webdriver.WebDriverClientExecution;
-
 
 public class CreateMediaGallery extends ParentTest{
-	
 	
     /*************************************************************************************
      * TEST CASE Create Media Gallery
@@ -47,11 +21,12 @@ public class CreateMediaGallery extends ParentTest{
      * @throws Throwable No Return values are needed
      *************************************************************************************/
     @Test(groups = {"full" })
-    public void CreateMediaGallery() throws Exception{
+    public void CreateMediaGallery_Test() throws Exception{
         
         	//Step 1
         	UserLogin userLogin = applib.openApplication();
-            userLogin.Login("admin@publisher.nbcuni.com", "pa55word");
+        	PageFactory.initElements(webDriver, userLogin);
+            userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
             
             //Step 2
             taxonomy.NavigateSite("Content>>Add content>>Media Gallery");
@@ -86,6 +61,5 @@ public class CreateMediaGallery extends ParentTest{
             contentParent.ClickSaveBtn();
             contentParent.VerifyMessageStatus("Media Gallery " + title + " has been created.");
             
-        
     }
 }

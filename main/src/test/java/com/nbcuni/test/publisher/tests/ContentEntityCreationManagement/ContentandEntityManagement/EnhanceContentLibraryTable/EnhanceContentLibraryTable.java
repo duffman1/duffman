@@ -1,20 +1,14 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.EnhanceContentLibraryTable;
 
-
 import com.nbcuni.test.publisher.common.ParentTest;
-import com.nbcuni.test.publisher.pageobjects.MPX.MPXDataClient;
 import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.content.SearchFor;
-
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import java.util.Arrays;
-import java.util.List;
-
 
 public class EnhanceContentLibraryTable extends ParentTest{
 	
@@ -35,13 +29,14 @@ public class EnhanceContentLibraryTable extends ParentTest{
      * @throws Throwable No Return values are needed
      *************************************************************************************/
     @Test(groups = {"full"})
-    public void EnhanceContentLibraryTable() throws Exception{
+    public void EnhanceContentLibraryTable_Test() throws Exception{
     	
-    	//TODO - re order test steps above to follow test steps below. Automated steps were re-ordered for ease of automation purposes
+    	//NOTE- Automated steps were re-ordered for ease of automation purposes
     	
     	//Step 1 and 2
     	UserLogin userLogin = applib.openApplication();
-        userLogin.Login("admin@publisher.nbcuni.com", "pa55word");
+    	PageFactory.initElements(webDriver, userLogin);
+        userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
         taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
         overlay.SwitchToFrame("Media: thePlatform mpx settings dialog");
         Settings settings = new Settings(webDriver);

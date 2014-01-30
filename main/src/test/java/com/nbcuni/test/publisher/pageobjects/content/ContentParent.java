@@ -1,19 +1,13 @@
 package com.nbcuni.test.publisher.pageobjects.content;
 
-
-import com.nbcuni.test.lib.Util;
-import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.webdriver.CustomWebDriver;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-
 import java.util.List;
 import java.util.concurrent.TimeUnit;
-
 
 /*********************************************
  * publisher.nbcuni.com Content Parent Library. Copyright
@@ -25,8 +19,6 @@ import java.util.concurrent.TimeUnit;
 public class ContentParent {
 
     private static CustomWebDriver webDriver;
-    private static AppLib al;
-    private final Util ul;
     
     private static String Save_Btn = "//input[@id='edit-submit']";
     private static String Message_Ctr = "//div[@class='messages status']";
@@ -41,7 +33,6 @@ public class ContentParent {
 
     public ContentParent(final CustomWebDriver custWebDr) {
         webDriver = custWebDr;
-        ul = new Util(webDriver);
         
     }
    

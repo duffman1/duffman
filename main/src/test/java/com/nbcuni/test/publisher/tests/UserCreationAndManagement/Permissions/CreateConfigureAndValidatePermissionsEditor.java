@@ -1,11 +1,8 @@
 package com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions;
 
-
-import junit.framework.Assert;
-
 import org.openqa.selenium.By;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
-
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Logout;
 import com.nbcuni.test.publisher.pageobjects.Modules;
@@ -19,7 +16,6 @@ import com.nbcuni.test.publisher.pageobjects.content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.content.CreateDefaultContent;
 import com.nbcuni.test.publisher.pageobjects.content.Delete;
 import com.nbcuni.test.publisher.pageobjects.content.Revisions;
-
 
 public class CreateConfigureAndValidatePermissionsEditor extends ParentTest{
 	
@@ -61,11 +57,12 @@ public class CreateConfigureAndValidatePermissionsEditor extends ParentTest{
      * @throws Throwable No Return values are needed
      *************************************************************************************/
     @Test(groups = {"full", "smoke"})
-    public void CreateConfigureAndValidatePermissionsEditor() throws Exception{
+    public void CreateConfigureAndValidatePermissionsEditor_Test() throws Exception{
     	
     	//Step 1
     	UserLogin userLogin = applib.openApplication();
-        userLogin.Login("admin@publisher.nbcuni.com", "pa55word");
+    	PageFactory.initElements(webDriver, userLogin);
+        userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
         
         //Step 1a (enable post module if needed)
         Modules modules = new Modules(webDriver);

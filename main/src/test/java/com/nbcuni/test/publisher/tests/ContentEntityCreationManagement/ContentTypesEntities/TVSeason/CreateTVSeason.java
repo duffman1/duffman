@@ -1,17 +1,13 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVSeason;
 
-
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.content.*;
-
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
-
 import java.util.Arrays;
 import java.util.List;
-
 
 public class CreateTVSeason extends ParentTest{
 	
@@ -28,17 +24,16 @@ public class CreateTVSeason extends ParentTest{
      * @throws Throwable No Return values are needed
      *************************************************************************************/
     @Test(groups = {"full", "smoke" })
-    public void CreateTVSeason() throws Exception{
+    public void CreateTVSeason_Test() throws Exception{
     	
         //Step 1
         UserLogin userLogin = applib.openApplication();
-        userLogin.Login("admin@publisher.nbcuni.com", "pa55word");
+        PageFactory.initElements(webDriver, userLogin);
+        userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
         
         List<String> allStates = Arrays.asList("Draft", "Review", "Published");
         for (String state : allStates) {
-        
-        	Reporter.log("Publish state currently set to " + state);
-        		
+        	
         //Step 2
         taxonomy.NavigateSite("Content>>Add content>>TV Season");
         overlay.SwitchToFrame("Create TV Season");
@@ -73,7 +68,6 @@ public class CreateTVSeason extends ParentTest{
     	//Step 7
     	contentParent.ClickSaveBtn();
     	contentParent.VerifyMessageStatus("TV Season " + tvSeasonTitle + " has been created.");
-    	RevisionState revisionState = new RevisionState(webDriver);
     	contentParent.WorkBenchInfoBlock(Arrays.asList(state));
     	
         }

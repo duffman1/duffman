@@ -1,17 +1,18 @@
 package com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos;
 
-
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.FileTypes.MPXFileType;
 import com.nbcuni.test.publisher.pageobjects.MPX.MPXMedia;
 import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.content.ContentParent;
+
 import junit.framework.Assert;
+
+import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
 import java.util.List;
-
 
 public class Configuration extends ParentTest{
 	
@@ -32,11 +33,12 @@ public class Configuration extends ParentTest{
      * @throws Throwable No Return values are needed
      *************************************************************************************/
     @Test(groups = {"full", "mpx"})
-    public void Configuration() throws Exception {
+    public void Configuration_Test() throws Exception {
     	
     	//Step 1
     	UserLogin userLogin = applib.openApplication();
-        userLogin.Login("admin@publisher.nbcuni.com", "pa55word");
+    	PageFactory.initElements(webDriver, userLogin);
+        userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
         
         //Step 2 through 6 requires prior MPX configuration
         taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");

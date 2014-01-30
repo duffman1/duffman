@@ -1,24 +1,13 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIFKeywordsIngestedAsPhraseInsteadSetsWords;
 
-
 import com.nbcuni.test.publisher.common.ParentTest;
-import com.nbcuni.test.publisher.pageobjects.Modules;
-import com.nbcuni.test.publisher.pageobjects.Overlay;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.content.*;
-
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
-import org.testng.Reporter;
 import org.testng.annotations.Test;
-
-import java.util.Arrays;
-import java.util.List;
-
 
 public class EXIFKeywordsIngestedPhraseInsteadSetsWords extends ParentTest{
 	
-
     /*************************************************************************************
      * TEST CASE 
      * Step 1 - Login to P7 using Admin (user 1) credentials ,Login Successful 
@@ -34,10 +23,11 @@ public class EXIFKeywordsIngestedPhraseInsteadSetsWords extends ParentTest{
      * @throws Throwable No Return values are needed
      *************************************************************************************/
     @Test(groups = {"full" })
-    public void EXIFKeywordsIngestedPhraseInsteadSetsWords() throws Exception{
+    public void EXIFKeywordsIngestedPhraseInsteadSetsWords_Test() throws Exception{
          
         	//Step 1
         	UserLogin userLogin = applib.openApplication();
+        	PageFactory.initElements(webDriver, userLogin);
             userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
             
             //Step 2

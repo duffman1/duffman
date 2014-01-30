@@ -1,6 +1,5 @@
 package com.nbcuni.test.publisher.tests.Queues.SchedulingQueues;
 
-
 import com.ibm.icu.util.Calendar;
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Modules;
@@ -10,12 +9,11 @@ import com.nbcuni.test.publisher.pageobjects.content.CreateDefaultContent;
 import com.nbcuni.test.publisher.pageobjects.content.PublishingOptions;
 import com.nbcuni.test.publisher.pageobjects.queues.Queues;
 import com.nbcuni.test.publisher.pageobjects.queues.ScheduleQueue;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
-
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
-
 
 public class ScheduleRevisionsOfQueues extends ParentTest{
 	
@@ -34,11 +32,12 @@ public class ScheduleRevisionsOfQueues extends ParentTest{
      * @throws Throwable No Return values are needed
      *************************************************************************************/
     @Test(groups = {"full", "smoke" })
-    public void ScheduleRevisionsOfQueues() throws Exception{
+    public void ScheduleRevisionsOfQueues_Test() throws Exception{
     	
         //Step 1
         UserLogin userLogin = applib.openApplication();
-        userLogin.Login("admin@publisher.nbcuni.com", "pa55word");
+        PageFactory.initElements(webDriver, userLogin);
+        userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
         
         //Step 1a
         Modules modules = new Modules(webDriver);

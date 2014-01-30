@@ -1,13 +1,9 @@
 package com.nbcuni.test.publisher.tests.SocialIntegration.Facebook;
 
-
 import java.net.URL;
 import java.util.Arrays;
-
-import junit.framework.Assert;
-
+import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
-
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
@@ -16,12 +12,9 @@ import com.nbcuni.test.publisher.pageobjects.Facebook.NodeTypes;
 import com.nbcuni.test.publisher.pageobjects.Facebook.Share;
 import com.nbcuni.test.publisher.pageobjects.content.BasicInformation;
 import com.nbcuni.test.publisher.pageobjects.content.ContentParent;
-import com.nbcuni.test.publisher.pageobjects.content.CreateDefaultContent;
 import com.nbcuni.test.publisher.pageobjects.content.Delete;
 import com.nbcuni.test.publisher.pageobjects.content.PublishingOptions;
 import com.nbcuni.test.publisher.pageobjects.content.Revisions;
-import com.nbcuni.test.publisher.pageobjects.content.SelectFile;
-
 
 public class ConfiguringPublisherAutopublishingToFacebookTimeandWall extends ParentTest{
 	
@@ -44,12 +37,13 @@ public class ConfiguringPublisherAutopublishingToFacebookTimeandWall extends Par
      * @throws Throwable No Return values are needed
      *************************************************************************************/
     @Test(groups = {"full"})
-    public void ConfiguringPublisherAutopublishingToFacebookTimeandWall() throws Exception{
+    public void ConfiguringPublisherAutopublishingToFacebookTimeandWall_Test() throws Exception{
     	
     	//Step 1 - NA as test logs into facebook as part of a later step
     	
     	//Step 2
     	UserLogin userLogin = applib.openApplication();
+    	PageFactory.initElements(webDriver, userLogin);
         userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
         
         //Step 3

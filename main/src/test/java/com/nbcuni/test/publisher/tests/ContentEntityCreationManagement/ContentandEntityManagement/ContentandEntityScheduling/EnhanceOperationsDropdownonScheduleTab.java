@@ -5,11 +5,9 @@ import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.content.*;
 import com.nbcuni.test.publisher.pageobjects.queues.ScheduleQueue;
-
+import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
-
 import java.text.SimpleDateFormat;
-import java.util.Arrays;
 import java.util.Date;
 
 public class EnhanceOperationsDropdownonScheduleTab extends ParentTest {
@@ -21,28 +19,27 @@ public class EnhanceOperationsDropdownonScheduleTab extends ParentTest {
 	* Step 4 - Verify 'Run Now' & 'Cancel' Element(Button) exists 
 	* Step 5 - Click on 'Run Now' button<br>
 	* Step 6 - Verify 'Complete' text appears<br>
-	*
 	* @throws Throwable No Return values are needed
 	*************************************************************************************/
     @Test(groups = {"full"})
-        public void EnhanceOperationsDropdownonScheduleTab() throws Exception{
+        public void EnhanceOperationsDropdownonScheduleTab_Test() throws Exception{
 
-      //Step 1
+    	//Step 1
         UserLogin userLogin = applib.openApplication();
-        userLogin.Login("admin@publisher.nbcuni.com", "pa55word");
+        PageFactory.initElements(webDriver, userLogin);
+        userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
 
-      //Step 1a
+        //Step 1a
         Modules modules = new Modules(webDriver);
         modules.VerifyModuleEnabled("Pub Post");
         
-      //Step 2
+        //Step 2
         taxonomy.VerifyContentMenuExist("Content");
         taxonomy.VerifyContentMenuExist("My Workbench");
         CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver, applib);
         String postTitle = createDefaultContent.Post("Draft");
 
-        
-      //Step 3
+        //Step 3
         ScheduleQueue scheduleQueue = new ScheduleQueue(webDriver);           
         scheduleQueue.ClickScheduleTab();
         overlay.SwitchToActiveFrame();
@@ -61,13 +58,16 @@ public class EnhanceOperationsDropdownonScheduleTab extends ParentTest {
         overlay.SwitchToActiveFrame();        
         ContentParent contentParent = new ContentParent(webDriver);
         contentParent.VerifyMessageStatus("The scheduled revision operation has been saved");
-     //Step 4
+     
+        //Step 4
         overlay.SwitchToActiveFrame(); 
         scheduleQueue.VerifyRunNowBtn();     
         scheduleQueue.VerifyCancelBtn();
-     //Step 5
+     
+        //Step 5
         scheduleQueue.ClickRunNowLnk();
-     //Step 6
+     
+        //Step 6
         overlay.switchToDefaultContent();
         overlay.SwitchToFrame(postTitle + " dialog");
         scheduleQueue.VerifyCompleteCronRunStatus();

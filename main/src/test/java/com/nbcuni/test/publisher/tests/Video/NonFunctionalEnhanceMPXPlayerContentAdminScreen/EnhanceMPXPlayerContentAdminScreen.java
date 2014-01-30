@@ -1,21 +1,13 @@
 package com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen;
 
-
 import com.nbcuni.test.publisher.common.ParentTest;
-import com.nbcuni.test.publisher.pageobjects.MPX.MPXDataClient;
 import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
-import com.nbcuni.test.publisher.pageobjects.content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.content.SearchFor;
-
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
-
-import java.util.Arrays;
 import java.util.List;
-
 import junit.framework.Assert;
-
 
 public class EnhanceMPXPlayerContentAdminScreen extends ParentTest{
 	
@@ -37,10 +29,11 @@ public class EnhanceMPXPlayerContentAdminScreen extends ParentTest{
      * @throws Throwable No Return values are needed
      *************************************************************************************/
     @Test(groups = {"full", "mpx"})
-    public void EnhanceMPXPlayerContentAdminScreen() throws Exception{
+    public void EnhanceMPXPlayerContentAdminScreen_Test() throws Exception{
     	
     	//Step 1
     	UserLogin userLogin = applib.openApplication();
+    	PageFactory.initElements(webDriver, userLogin);
         userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
         
         //Step 1a

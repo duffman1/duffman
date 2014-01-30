@@ -1,6 +1,5 @@
 package com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts;
 
-
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.MPX.MPXDataClient;
 import com.nbcuni.test.publisher.pageobjects.MPX.MPXMedia;
@@ -8,12 +7,14 @@ import com.nbcuni.test.publisher.pageobjects.MPX.MPXPlayers;
 import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.content.ContentParent;
+
 import junit.framework.Assert;
+
+import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
 import java.util.ArrayList;
 import java.util.List;
-
 
 public class MPXPlayersSyncVerification extends ParentTest{
 	
@@ -41,13 +42,14 @@ public class MPXPlayersSyncVerification extends ParentTest{
      * @throws Throwable No Return values are needed
      *************************************************************************************/
     @Test(groups = {"full", "smoke", "mpx"})
-    public void MPXPlayersSyncVerification() throws Exception{
+    public void MPXPlayersSyncVerification_Test() throws Exception{
     	
     	//TODO - re order test steps above to follow test steps below. Automated steps were re-ordered for ease of automation purposes
     	
     	//Step
     	UserLogin userLogin = applib.openApplication();
-        userLogin.Login("admin@publisher.nbcuni.com", "pa55word");
+    	PageFactory.initElements(webDriver, userLogin);
+        userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
         
         //Step
         taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
@@ -60,10 +62,10 @@ public class MPXPlayersSyncVerification extends ParentTest{
         	
         	//Step
         	MPXDataClient mpxDataClient = new MPXDataClient(webDriver);
-            mpxDataClient.SignInToMPXDataClient("player", "mpx/AdminPub7QA", "Pa55word");
+            mpxDataClient.SignInToMPXDataClient("player", applib.getMPXUsername(), applib.getMPXPassword());
             mpxDataClient.ChooseMPXAccount(configuredAccounts.get(0));
             List<String> allActivePlayerTitlesForAccount1 = mpxDataClient.GetAllActivePlayers();
-            mpxDataClient.SignInToMPXDataClient("player", "mpx/AdminPub7QA", "Pa55word");
+            mpxDataClient.SignInToMPXDataClient("player", applib.getMPXUsername(), applib.getMPXPassword());
             mpxDataClient.ChooseMPXAccount(configuredAccounts.get(0));
             List<String> allPlayerTitlesForAccount1 = mpxDataClient.GetAllPlayers();
             
@@ -71,10 +73,10 @@ public class MPXPlayersSyncVerification extends ParentTest{
             List<String> allActivePlayerTitlesForAccount2 = null;
             List<String> allPlayerTitlesForAccount2 = null;
             if (configuredAccounts.size() >= 2) {
-            	mpxDataClient.SignInToMPXDataClient("player", "mpx/AdminPub7QA", "Pa55word");
+            	mpxDataClient.SignInToMPXDataClient("player", applib.getMPXUsername(), applib.getMPXPassword());
             	mpxDataClient.ChooseMPXAccount(configuredAccounts.get(1));
             	allActivePlayerTitlesForAccount2 = mpxDataClient.GetAllActivePlayers();
-            	mpxDataClient.SignInToMPXDataClient("player", "mpx/AdminPub7QA", "Pa55word");
+            	mpxDataClient.SignInToMPXDataClient("player", applib.getMPXUsername(), applib.getMPXPassword());
             	mpxDataClient.ChooseMPXAccount(configuredAccounts.get(1));
             	allPlayerTitlesForAccount2 = mpxDataClient.GetAllPlayers();
             }
@@ -83,10 +85,10 @@ public class MPXPlayersSyncVerification extends ParentTest{
             List<String> allActivePlayerTitlesForAccount3 = null;
             List<String> allPlayerTitlesForAccount3 = null;
             if (configuredAccounts.size() >= 3) {
-            	mpxDataClient.SignInToMPXDataClient("player", "mpx/AdminPub7QA", "Pa55word");
+            	mpxDataClient.SignInToMPXDataClient("player", applib.getMPXUsername(), applib.getMPXPassword());
             	mpxDataClient.ChooseMPXAccount(configuredAccounts.get(2));
             	allActivePlayerTitlesForAccount3 = mpxDataClient.GetAllActivePlayers();
-            	mpxDataClient.SignInToMPXDataClient("player", "mpx/AdminPub7QA", "Pa55word");
+            	mpxDataClient.SignInToMPXDataClient("player", applib.getMPXUsername(), applib.getMPXPassword());
             	mpxDataClient.ChooseMPXAccount(configuredAccounts.get(2));
             	allPlayerTitlesForAccount3 = mpxDataClient.GetAllPlayers();
             }
@@ -95,10 +97,10 @@ public class MPXPlayersSyncVerification extends ParentTest{
             List<String> allActivePlayerTitlesForAccount4 = null;
             List<String> allPlayerTitlesForAccount4 = null;
             if (configuredAccounts.size() >= 4) {
-                mpxDataClient.SignInToMPXDataClient("player", "mpx/AdminPub7QA", "Pa55word");
+            	mpxDataClient.SignInToMPXDataClient("player", applib.getMPXUsername(), applib.getMPXPassword());
                 mpxDataClient.ChooseMPXAccount(configuredAccounts.get(3));
                 allActivePlayerTitlesForAccount4 = mpxDataClient.GetAllActivePlayers();
-                mpxDataClient.SignInToMPXDataClient("player", "mpx/AdminPub7QA", "Pa55word");
+                mpxDataClient.SignInToMPXDataClient("player", applib.getMPXUsername(), applib.getMPXPassword());
                 mpxDataClient.ChooseMPXAccount(configuredAccounts.get(3));
                 allPlayerTitlesForAccount4 = mpxDataClient.GetAllPlayers();
             }
