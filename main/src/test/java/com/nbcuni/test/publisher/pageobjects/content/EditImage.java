@@ -76,6 +76,7 @@ public class EditImage {
     public void VerifyTitleTextValue(String value) throws Exception {
     	
     	Reporter.log("Assert that the Title Text box value matches '" + value + "'.");
+    	Thread.sleep(1000); //stale element exception
     	Assert.assertTrue(TitleText_Txb.getAttribute("value").equals(value));
     }
     

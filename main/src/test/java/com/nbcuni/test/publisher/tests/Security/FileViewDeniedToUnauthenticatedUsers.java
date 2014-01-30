@@ -28,7 +28,7 @@ public class FileViewDeniedToUnauthenticatedUsers extends ParentTest{
         //Step 2
         UserLogin userLogin = new UserLogin(webDriver);
         PageFactory.initElements(webDriver, userLogin);
-        userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Username());
+        userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
         new WebDriverWait(webDriver, 10).until(ExpectedConditions.titleContains("Content"));
         
     }

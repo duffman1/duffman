@@ -145,15 +145,23 @@ public class SelectFile {
     
     public void VerifyFileImagePresent(String imageSrc) throws Exception {
     	
-    	Reporter.log("Assert the file image '" + imageSrc + "' is present and visible.");
+    	Reporter.log("Assert the file image '" + imageSrc + "' is present.");
     	Assert.assertTrue(File_Img.getAttribute("src").contains(imageSrc));
     	
-    	Reporter.log("Assert the the img is loaded.");
-    	Thread.sleep(3000); //TODO - replace with dynamic wait
-    	Boolean imgLoaded = (Boolean) ((JavascriptExecutor)webDriver).executeScript(
-    			"return arguments[0].complete && typeof arguments[0].naturalWidth != \"undefined\" && arguments[0].naturalWidth > 0", 
-    				File_Img);
-    	Assert.assertTrue(imgLoaded);
+    	Reporter.log("Assert the the img is loaded and visible.");
+    	boolean imgLoaded;
+        for (int second = 0; ; second++){
+            if (second >= 30) {
+                Assert.fail("Image '" + imageSrc + "' is not fully loaded after timeout");
+            }
+            
+            imgLoaded = (Boolean) ((JavascriptExecutor)webDriver).executeScript(
+            			"return arguments[0].complete && typeof arguments[0].naturalWidth != \"undefined\" && arguments[0].naturalWidth > 0", 
+            				File_Img);
+                
+            if (imgLoaded == true){ break;}
+            Thread.sleep(500);
+        }
     }
     
     public void ClickSaveBtn() throws Exception {

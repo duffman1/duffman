@@ -40,8 +40,8 @@ public class AddFile {
     @FindBy(how = How.XPATH, using = "//a[@class='plupload_button plupload_start']")
     private static WebElement StartUpload_Lnk;
     
-    @FindBy(how = How.XPATH, using = "//div[@class='plupload_file_status'][text()='100%']")
-    private static WebElement UploadStatus100_Txt;
+    @FindBy(how = How.XPATH, using = "//span[@class='plupload_upload_status'][text()='Uploaded 1/1 files']")
+    private static WebElement UploadStatus1of1Files_Txt;
     
     @FindBy(how = How.XPATH, using = "//input[@id='edit-next']")
     private static WebElement Next_Btn;
@@ -101,8 +101,8 @@ public class AddFile {
     public void WaitForSuccessfulUpload() throws Exception {
     	
     	Reporter.log("Wait for file upload to reach 100%");
-    	new WebDriverWait(webDriver, 30).until(ExpectedConditions.visibilityOf(UploadStatus100_Txt));
-    	Thread.sleep(5000); //TODO - add dynamic wait as short pause is needed to prevent pub 7 wait for file upload js alert
+    	new WebDriverWait(webDriver, 30).until(ExpectedConditions.visibilityOf(UploadStatus1of1Files_Txt));
+    	Thread.sleep(1000); //slight pause to avoid problematic js alert
     }
     
     public void ClickNextBtn() throws Exception {

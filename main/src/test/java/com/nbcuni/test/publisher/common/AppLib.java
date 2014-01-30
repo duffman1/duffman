@@ -160,26 +160,6 @@ public class AppLib {
     	return MPXPassword;
     }
     
-    /**
-     * Returns if overlays are enabled or not
-     * 
-     * @return Return Boolean
-     */
-    public Boolean getModuleOverlaysEnabled() {
-    	
-    	Boolean overlaysEnabled = true;
-    	System.out.println(moduleOverlaysEnabled);
-    	if (moduleOverlaysEnabled == "false") {
-    		overlaysEnabled = false;
-    	}
-    	
-    	return overlaysEnabled;
-    }
-    
-    /**
-    * Returns screenshot and embeds in testng reports on failure
-    * 
-    */
     public void attachScreenshot(ITestResult result) {
     	
         try {
@@ -208,12 +188,6 @@ public class AppLib {
       
     }
     
-    /**
-     * Returns the application URL e.g. http://www.nbc.com
-     * 
-     * @return Return value application URL
-     * @throws Exception Code Error
-     */
     public final String getApplicationURL() throws Exception {
         return this.appURL;
     }
@@ -224,18 +198,10 @@ public class AppLib {
 		return httpProxy;
     }
    
-    /**
-     * @return Return value
-     * @throws Exception Code Error
-     */
     public final String getEnvironment() throws Exception {
         return this.environment;
     }
 
-    /**
-     * @param sEnv environment
-     * @throws Exception Code Error
-     */
     public final void setEnvironmentInfo(String sEnv) throws Exception {
         Reporter.log("Setting Environment to: " + sEnv);
         Reporter.log("Environment: " + sEnv);
@@ -243,114 +209,17 @@ public class AppLib {
         this.getEnvironmentInfo();
     }
 
-
-    /**
-     * @param err
-     * @throws Exception Code Error
-     */
-    public final void showErrors(ArrayList<String> err) throws Exception {
-        String tempErr = "";
-        if (!err.isEmpty()) {
-            for (String xxx : err) {
-                tempErr = tempErr + "\n" + xxx;
-                Reporter.log(xxx);
-            }
-            fail(tempErr);
-        }
-    }
-
-    /**
-     * Method to log Error
-     * 
-     * @param err
-     * @throws Exception
-     */
     public void fail(String errorMessage) {
         
     	Reporter.log(errorMessage);
     	Assert.fail(errorMessage);
     }
     
-
-    /**
-     * .
-     * Validates the page title
-     * 
-     * @param sPagename Page name
-     * @param sMessage - string description of validation
-     * @throws Exception Code Error
-     */
-    public final void validateCorrectPageDisplay(String sPagename) throws Exception {
-        String sPage = custWebDr.getTitle();
-        ul.compareTextValues(sPage, sPagename);
-    }
-
-    /**
-     * This method will attain all links on the page and
-     * perform a HTTP response verification on the page
-     * ensuring that it does not return a error
-     * 
-     * @throws Exception - error
-     */
-    public final void verifyHtttpResponseForAllLinksOnPage() throws Exception {
-        ArrayList<String> rawLinks = custWebDr.getAllLinksOnPage();
-        for (String xxx:rawLinks) {
-            if (xxx.startsWith("http:")) {
-                URL url = new URL(xxx.trim());
-                Reporter.log("URL: " + url);
-                HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-                int code = connection.getResponseCode();
-                if ((code == FOUR_ZERO_FOUR)) {
-                    fail("Response Code incorrect");
-                }
-            }
-            if (xxx.startsWith("/")) {
-                String baseLocation = custWebDr.getLocation();
-                String baseURL = baseLocation.replace("com/", "com");
-                String rawLinks2 = baseURL + xxx;
-                URL url = new URL(rawLinks2.trim());
-                Reporter.log("URL: " + url);
-                HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-                int code = connection.getResponseCode();
-                if ((code == FOUR_ZERO_FOUR)) {
-                    fail("Response Code incorrect");
-                }
-            }
-        }
-    }
-    
-    
-    /**
-     * Opens the browser with application url
-     * 
-     * @return Return value
-     * @throws Exception Code Error
-     */
-    
-    
     public UserLogin openApplication() throws Exception {
-        Reporter.log("URL: " + this.getApplicationURL());
+        Reporter.log("Open url '" + this.getApplicationURL() + "'.");
         custWebDr.openURL(this.getApplicationURL());        
         return new UserLogin(custWebDr);
     }
     
-    public void Logout() throws Exception {
-        Reporter.log("Logged Out");
-        custWebDr.close();        
-        
-    }
-
-    public static String[] getDate(String regExp, String desc) {
-        int count=0;
-        String[] allMatches = new String[2];
-        Matcher m = Pattern.compile(regExp).matcher(desc);
-        while (m.find()) {
-            allMatches[count] = m.group();
-            count++;
-        }
-        return allMatches;
-    }
-
-
     
 }

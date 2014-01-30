@@ -55,20 +55,24 @@ public class MediaItems {
     private static WebElement Edit_Btn;
     
     
-    
-   
     //PAGE OBJECT METHODS
     public void VerifyFileImagePresent(String imageSrc) throws Exception {
     	
     	Reporter.log("Assert that img source of the Media Item contains '" + imageSrc + "'.");
     	Assert.assertTrue(MediaItem_Img.getAttribute("src").contains(imageSrc));
     	
-    	Reporter.log("Assert the the img is loaded.");
-    	Thread.sleep(3000); //TODO - replace with dynamic wait
-    	Boolean imgLoaded = (Boolean) ((JavascriptExecutor)webDriver).executeScript(
-    			"return arguments[0].complete && typeof arguments[0].naturalWidth != \"undefined\" && arguments[0].naturalWidth > 0", 
-    				MediaItem_Img);
-    	Assert.assertTrue(imgLoaded);
+    	Reporter.log("Assert the the img is loaded and visible.");
+    	boolean imgLoaded;
+        for (int second = 0; ; second++){
+            if (second >= 30) {
+                Assert.fail("Image '" + imageSrc + "' is not fully loaded after timeout");
+            }
+            imgLoaded = (Boolean) ((JavascriptExecutor)webDriver).executeScript(
+            			"return arguments[0].complete && typeof arguments[0].naturalWidth != \"undefined\" && arguments[0].naturalWidth > 0", 
+            			MediaItem_Img);
+            if (imgLoaded == true){ break;}
+            Thread.sleep(500);
+        }
     }
     
     public void ClickEditBtn() throws Exception {
