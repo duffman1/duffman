@@ -5,81 +5,23 @@
   <test name="All Web Tests(failed)(failed)" parallel="methods">
     <groups>
       <run>
-        <include name="full"/>
+        <include name="mpx"/>
       </run>
     </groups>
     <classes>
-      <class name="com.nbcuni.test.publisher.tests.Video.DeIngestingMPXAccountsAndCorrespondingAssets.DeleteMultipleAccounts">
+      <class name="com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MultipleMPXAccountsPerLoginVerification">
         <methods>
           <include name="startSelenium"/>
-          <include name="DeleteMultipleAccounts"/>
+          <include name="MultipleMPXAccountsPerLoginVerification_Test"/>
           <include name="stopSelenium"/>
         </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.Video.DeIngestingMPXAccountsAndCorrespondingAssets.DeleteMultipleAccounts -->
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVSeason.CreateTVSeason">
-        <methods>
-          <include name="startSelenium"/>
-          <include name="stopSelenium"/>
-        </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVSeason.CreateTVSeason -->
-      <class name="com.nbcuni.test.publisher.tests.UserCreationAndManagement.Roles.RolesPredefinedInPublisher7">
+      </class> <!-- com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MultipleMPXAccountsPerLoginVerification -->
+      <class name="com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling">
         <methods>
           <include name="startSelenium"/>
           <include name="stopSelenium"/>
         </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.UserCreationAndManagement.Roles.RolesPredefinedInPublisher7 -->
-      <class name="com.nbcuni.test.publisher.tests.Advertising.GooglePublisherTagsGPT.GPTConfiguration">
-        <methods>
-          <include name="startSelenium"/>
-          <include name="stopSelenium"/>
-        </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.Advertising.GooglePublisherTagsGPT.GPTConfiguration -->
-      <class name="com.nbcuni.test.publisher.tests.Queues.AddModerationStatesToRevisionsOfAQueue.QueueModerationStates">
-        <methods>
-          <include name="startSelenium"/>
-          <include name="stopSelenium"/>
-        </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.Queues.AddModerationStatesToRevisionsOfAQueue.QueueModerationStates -->
-      <class name="com.nbcuni.test.publisher.tests.SocialIntegration.Facebook.TestingFacebookAutopublishing">
-        <methods>
-          <include name="startSelenium"/>
-          <include name="TestingFacebookAutopublishing"/>
-          <include name="stopSelenium"/>
-        </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.SocialIntegration.Facebook.TestingFacebookAutopublishing -->
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.InstallZeeboxModule.InstallZeeboxModule">
-        <methods>
-          <include name="startSelenium"/>
-          <include name="stopSelenium"/>
-        </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.InstallZeeboxModule.InstallZeeboxModule -->
-      <class name="com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MPXPlayersSyncVerification">
-        <methods>
-          <include name="startSelenium"/>
-          <include name="MPXPlayersSyncVerification"/>
-          <include name="stopSelenium"/>
-        </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MPXPlayersSyncVerification -->
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.EnhanceContentLibraryTable.EnhanceContentLibraryTable">
-        <methods>
-          <include name="startSelenium"/>
-          <include name="stopSelenium"/>
-          <include name="EnhanceContentLibraryTable"/>
-        </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.EnhanceContentLibraryTable.EnhanceContentLibraryTable -->
-      <class name="com.nbcuni.test.publisher.tests.Advertising.Comscore.PixelmanModuleSetupAndVerification">
-        <methods>
-          <include name="startSelenium"/>
-          <include name="stopSelenium"/>
-        </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.Advertising.Comscore.PixelmanModuleSetupAndVerification -->
-      <class name="com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides">
-        <methods>
-          <include name="startSelenium"/>
-          <include name="stopSelenium"/>
-          <include name="MPXVideosSchedulingVerificationInitialOverrides"/>
-        </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling -->
     </classes>
   </test> <!-- All Web Tests(failed)(failed) -->
 </suite> <!-- Failed suite [Failed suite [Test Suite for Publisher 7]] -->

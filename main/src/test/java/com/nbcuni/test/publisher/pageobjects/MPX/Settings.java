@@ -215,6 +215,12 @@ public class Settings {
     	ddl.selectByVisibleText(account);
     }
     
+    public void SelectImportAccount4(String account) throws Exception {
+    	
+    	Select ddl = new Select(webDriver.findElement(By.xpath(SelectImportAccount4_Ddl)));
+    	ddl.selectByVisibleText(account);
+    }
+    
     public void VerifyImportAccountsDisabled() throws Exception {
     	
     	Select ddl1 = new Select(webDriver.findElement(By.xpath(SelectImportAccount1_Ddl)));

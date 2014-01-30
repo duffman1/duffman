@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="1" total="2" passed="1">
   <reporter-output>
     <line>
       <![CDATA[Setting Environment to: PROD]]>
@@ -8,7 +8,7 @@
       <![CDATA[Environment: PROD]]>
     </line>
     <line>
-      <![CDATA[URL: http://qa5dev.publisher.nbcuni.com]]>
+      <![CDATA[URL: http://qa3prod.publisher.nbcuni.com]]>
     </line>
     <line>
       <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
@@ -20,45 +20,99 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[Switch to the select file frame.]]>
+      <![CDATA[Enter the account name 'DB TV' in the account select text box.]]>
     </line>
     <line>
-      <![CDATA[Enter the file path for file upload.]]>
+      <![CDATA[Click the account option from the drop down list.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Upload' button.]]>
+      <![CDATA[Click the 'Account' title to leave focus off of the selection.]]>
     </line>
     <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
+      <![CDATA[Wait for account to switch to the newly selected account.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Next' button.]]>
+      <![CDATA[URL: http://qa3prod.publisher.nbcuni.com]]>
     </line>
     <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
+      <![CDATA[Enter title Automation92cc8aefdd.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Next' button.]]>
+      <![CDATA[Click the 'Apply' button.]]>
     </line>
     <line>
-      <![CDATA[Assert the file image 'HanSolo' is present and visible.]]>
+      <![CDATA[Get the title text of every result in the search result set.]]>
     </line>
     <line>
-      <![CDATA[Assert the the img is loaded.]]>
+      <![CDATA[For each expected result, assert it is present in the result set.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save' button.]]>
+      <![CDATA[Click the first search title link in the search result set.]]>
+    </line>
+    <line>
+      <![CDATA[URL: http://qa3prod.publisher.nbcuni.com]]>
+    </line>
+    <line>
+      <![CDATA[Enter title Automation92cc8aefdd.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Apply' button.]]>
+    </line>
+    <line>
+      <![CDATA[Get the title text of every result in the search result set.]]>
+    </line>
+    <line>
+      <![CDATA[For each expected result, assert it is present in the result set.]]>
+    </line>
+    <line>
+      <![CDATA[Click the first search title link in the search result set.]]>
+    </line>
+    <line>
+      <![CDATA[Setting Environment to: PROD]]>
+    </line>
+    <line>
+      <![CDATA[Environment: PROD]]>
+    </line>
+    <line>
+      <![CDATA[URL: http://qa3prod.publisher.nbcuni.com]]>
+    </line>
+    <line>
+      <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter the user's password in the 'Password' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Login' button.]]>
+    </line>
+    <line>
+      <![CDATA[URL: http://qa3prod.publisher.nbcuni.com]]>
+    </line>
+    <line>
+      <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140130150734.png ]]>
+    </line>
+    <line>
+      <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140130150734.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140130150734.png' height='500' width='500'/> </a>]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="33586" started-at="2014-01-30T19:28:45Z" finished-at="2014-01-30T19:29:18Z">
+  <suite name="Failed suite [Test Suite for Publisher 7]" duration-ms="552671" started-at="2014-01-30T19:58:22Z" finished-at="2014-01-30T20:07:35Z">
     <groups>
+      <group name="mpx">
+        <method signature="MPXVideosSchedulingVerificationScheduling.MPXVideosSchedulingVerificationScheduling_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling@2bb5340c]" name="MPXVideosSchedulingVerificationScheduling_Test" class="com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling"/>
+        <method signature="MultipleMPXAccountsPerLoginVerification.MultipleMPXAccountsPerLoginVerification_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MultipleMPXAccountsPerLoginVerification@46c837cd]" name="MultipleMPXAccountsPerLoginVerification_Test" class="com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MultipleMPXAccountsPerLoginVerification"/>
+      </group> <!-- mpx -->
       <group name="full">
-        <method signature="CreateCharacterProfile.CreateCharacterProfile_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@2f774b9b]" name="CreateCharacterProfile_Test" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile"/>
+        <method signature="MPXVideosSchedulingVerificationScheduling.MPXVideosSchedulingVerificationScheduling_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling@2bb5340c]" name="MPXVideosSchedulingVerificationScheduling_Test" class="com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling"/>
+        <method signature="MultipleMPXAccountsPerLoginVerification.MultipleMPXAccountsPerLoginVerification_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MultipleMPXAccountsPerLoginVerification@46c837cd]" name="MultipleMPXAccountsPerLoginVerification_Test" class="com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MultipleMPXAccountsPerLoginVerification"/>
       </group> <!-- full -->
+      <group name="smoke">
+        <method signature="MPXVideosSchedulingVerificationScheduling.MPXVideosSchedulingVerificationScheduling_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling@2bb5340c]" name="MPXVideosSchedulingVerificationScheduling_Test" class="com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling"/>
+        <method signature="MultipleMPXAccountsPerLoginVerification.MultipleMPXAccountsPerLoginVerification_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MultipleMPXAccountsPerLoginVerification@46c837cd]" name="MultipleMPXAccountsPerLoginVerification_Test" class="com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MultipleMPXAccountsPerLoginVerification"/>
+      </group> <!-- smoke -->
     </groups>
-    <test name="Default test" duration-ms="33586" started-at="2014-01-30T19:28:45Z" finished-at="2014-01-30T19:29:18Z">
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile">
-        <test-method status="PASS" signature="startSelenium(java.lang.String)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@2f774b9b]" name="startSelenium" is-config="true" duration-ms="13718" started-at="2014-01-30T14:28:45Z" finished-at="2014-01-30T14:28:58Z">
+    <test name="All Web Tests(failed)" duration-ms="552671" started-at="2014-01-30T19:58:22Z" finished-at="2014-01-30T20:07:35Z">
+      <class name="com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MultipleMPXAccountsPerLoginVerification">
+        <test-method status="PASS" signature="startSelenium(java.lang.String)[pri:0, instance:com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MultipleMPXAccountsPerLoginVerification@46c837cd]" name="startSelenium" is-config="true" duration-ms="1563" started-at="2014-01-30T15:07:20Z" finished-at="2014-01-30T15:07:21Z">
           <params>
             <param index="0">
               <value>
@@ -75,10 +129,38 @@
             </line>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="CreateCharacterProfile_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@2f774b9b]" name="CreateCharacterProfile_Test" duration-ms="19289" started-at="2014-01-30T14:28:58Z" finished-at="2014-01-30T14:29:18Z">
+        <test-method status="FAIL" signature="MultipleMPXAccountsPerLoginVerification_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MultipleMPXAccountsPerLoginVerification@46c837cd]" name="MultipleMPXAccountsPerLoginVerification_Test" duration-ms="12712" started-at="2014-01-30T15:07:21Z" finished-at="2014-01-30T15:07:34Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at com.nbcuni.test.publisher.pageobjects.MPX.Settings.VerifyImportAccountOptions(Settings.java:149)
+	at com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MultipleMPXAccountsPerLoginVerification.MultipleMPXAccountsPerLoginVerification_Test(MultipleMPXAccountsPerLoginVerification.java:78)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
             <line>
-              <![CDATA[URL: http://qa5dev.publisher.nbcuni.com]]>
+              <![CDATA[URL: http://qa3prod.publisher.nbcuni.com]]>
             </line>
             <line>
               <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
@@ -90,49 +172,122 @@
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
-              <![CDATA[Switch to the select file frame.]]>
+              <![CDATA[URL: http://qa3prod.publisher.nbcuni.com]]>
             </line>
             <line>
-              <![CDATA[Enter the file path for file upload.]]>
+              <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140130150734.png ]]>
             </line>
             <line>
-              <![CDATA[Click the 'Upload' button.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Public Local Files' radio button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Assert the file image 'HanSolo' is present and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Assert the the img is loaded.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
+              <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140130150734.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140130150734.png' height='500' width='500'/> </a>]]>
             </line>
           </reporter-output>
-        </test-method> <!-- CreateCharacterProfile_Test -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@2f774b9b]" name="stopSelenium" is-config="true" duration-ms="567" started-at="2014-01-30T14:29:18Z" finished-at="2014-01-30T14:29:18Z">
+        </test-method> <!-- MultipleMPXAccountsPerLoginVerification_Test -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MultipleMPXAccountsPerLoginVerification@46c837cd]" name="stopSelenium" is-config="true" duration-ms="758" started-at="2014-01-30T15:07:34Z" finished-at="2014-01-30T15:07:35Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=CreateCharacterProfile_Test status=SUCCESS method=CreateCharacterProfile.CreateCharacterProfile_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@2f774b9b] output=URL: http://qa5dev.publisher.nbcuni.com]]]>
+                <![CDATA[[TestResult name=MultipleMPXAccountsPerLoginVerification_Test status=FAILURE method=MultipleMPXAccountsPerLoginVerification.MultipleMPXAccountsPerLoginVerification_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MultipleMPXAccountsPerLoginVerification@46c837cd] output=URL: http://qa3prod.publisher.nbcuni.com]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MultipleMPXAccountsPerLoginVerification -->
+      <class name="com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling">
+        <test-method status="PASS" signature="startSelenium(java.lang.String)[pri:0, instance:com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling@2bb5340c]" name="startSelenium" is-config="true" duration-ms="13439" started-at="2014-01-30T14:58:22Z" finished-at="2014-01-30T14:58:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[PROD]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Setting Environment to: PROD]]>
+            </line>
+            <line>
+              <![CDATA[Environment: PROD]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- startSelenium -->
+        <test-method status="PASS" signature="MPXVideosSchedulingVerificationScheduling_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling@2bb5340c]" name="MPXVideosSchedulingVerificationScheduling_Test" duration-ms="523607" started-at="2014-01-30T14:58:36Z" finished-at="2014-01-30T15:07:19Z">
+          <reporter-output>
+            <line>
+              <![CDATA[URL: http://qa3prod.publisher.nbcuni.com]]>
+            </line>
+            <line>
+              <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter the user's password in the 'Password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Login' button.]]>
+            </line>
+            <line>
+              <![CDATA[Enter the account name 'DB TV' in the account select text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the account option from the drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Account' title to leave focus off of the selection.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for account to switch to the newly selected account.]]>
+            </line>
+            <line>
+              <![CDATA[URL: http://qa3prod.publisher.nbcuni.com]]>
+            </line>
+            <line>
+              <![CDATA[Enter title Automation92cc8aefdd.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Apply' button.]]>
+            </line>
+            <line>
+              <![CDATA[Get the title text of every result in the search result set.]]>
+            </line>
+            <line>
+              <![CDATA[For each expected result, assert it is present in the result set.]]>
+            </line>
+            <line>
+              <![CDATA[Click the first search title link in the search result set.]]>
+            </line>
+            <line>
+              <![CDATA[URL: http://qa3prod.publisher.nbcuni.com]]>
+            </line>
+            <line>
+              <![CDATA[Enter title Automation92cc8aefdd.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Apply' button.]]>
+            </line>
+            <line>
+              <![CDATA[Get the title text of every result in the search result set.]]>
+            </line>
+            <line>
+              <![CDATA[For each expected result, assert it is present in the result set.]]>
+            </line>
+            <line>
+              <![CDATA[Click the first search title link in the search result set.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- MPXVideosSchedulingVerificationScheduling_Test -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling@2bb5340c]" name="stopSelenium" is-config="true" duration-ms="572" started-at="2014-01-30T15:07:19Z" finished-at="2014-01-30T15:07:20Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=MPXVideosSchedulingVerificationScheduling_Test status=SUCCESS method=MPXVideosSchedulingVerificationScheduling.MPXVideosSchedulingVerificationScheduling_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling@2bb5340c] output=URL: http://qa3prod.publisher.nbcuni.com]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopSelenium -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling -->
+    </test> <!-- All Web Tests(failed) -->
+  </suite> <!-- Failed suite [Test Suite for Publisher 7] -->
 </testng-results>
