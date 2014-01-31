@@ -50,6 +50,7 @@ public class AppLib {
     private String mpxUsername = "";
     private String mpxPassword = "";
     private String implicitWaitTime = "";
+    private String pageLoadWaitTime = "";
 
     private static String configFileName = "src" + File.separator + "test" + File.separator + "resources"
             + File.separator + "config.properties";
@@ -116,6 +117,7 @@ public class AppLib {
             mpxUsername = configProperties.getProperty(environment + ".MPXUserName");
             mpxPassword = configProperties.getProperty(environment + ".MPXPassWord");
             implicitWaitTime = configProperties.getProperty(environment + ".ImplicitWaitTime");
+            pageLoadWaitTime = configProperties.getProperty(environment + ".PageLoadWaitTime");
             
         } catch (Exception e) {
             new CustomWebDriverException(e, custWebDr);
@@ -165,6 +167,12 @@ public class AppLib {
     public int getImplicitWaitTime(){
     	
     	return Integer.parseInt(this.implicitWaitTime);
+    	
+    }
+    
+    public int getPageLoadWaitTime(){
+    	
+    	return Integer.parseInt(this.pageLoadWaitTime);
     	
     }
     

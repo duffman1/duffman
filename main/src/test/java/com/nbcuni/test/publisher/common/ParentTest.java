@@ -42,6 +42,7 @@ public class ParentTest {
             overlay = new Overlay(webDriver);
             
             try {
+            webDriver.manage().timeouts().pageLoadTimeout(applib.getPageLoadWaitTime(), TimeUnit.SECONDS);
             webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
             webDriver.manage().window().maximize();
             }

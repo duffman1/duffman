@@ -57,21 +57,8 @@ public class MPXAssets {
     }
     
     public void WaitForImgPresent(String imgPath) throws Exception {
-    	
-    	boolean imgPresent = false;
-
-        for (int second = 0; ; second++){
-            if (second >= 60) {
-                Assert.fail("MPX image '" + imgPath + "' is not present after timeout");}
-            try{
-                s.find(imgPath);
-                imgPresent = true;
-            }
-            catch (Exception e){}
-            if (imgPresent == true){ break;}
-            Thread.sleep(500);
-        }
-    
+    	s.wait(imgPath, 60); 
+    	Thread.sleep(250);
     }
     
     public void WaitForImgNotPresent(String imgPath) throws Exception {
@@ -82,7 +69,7 @@ public class MPXAssets {
             if (second >= 60) {
                 Assert.fail("MPX image '" + imgPath + "' is still present after timeout");}
             try{
-                s.find(imgPath);
+            	s.find(imgPath);
                 imgPresent = true;
             }
             catch (Exception e){
@@ -91,7 +78,7 @@ public class MPXAssets {
             if (imgPresent == false){ break;}
             Thread.sleep(500);
         }
-    
+    	
     }
     
     public void ScrollDownForImgPresent(String imgPath) throws Exception {
