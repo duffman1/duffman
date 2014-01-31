@@ -64,31 +64,26 @@ public class EnhanceContentLibraryTable extends ParentTest{
         	Assert.assertTrue(resultSetSize >= 1);
         	searchFor.ClickSearchHeaderColumnLnk("Title");
         	overlay.SwitchToActiveFrame();
-        	Assert.assertTrue(!searchFor.GetFirstSearchResult().equals(defaultFirstSearchResult));
         	Assert.assertTrue(searchFor.GetSearchResultSize() == resultSetSize);
         	
         	//Step 8
         	searchFor.ClickSearchHeaderColumnLnk("Type");
         	overlay.SwitchToActiveFrame();
-        	Assert.assertTrue(!searchFor.GetFirstSearchResult().equals(defaultFirstSearchResult));
         	Assert.assertTrue(searchFor.GetSearchResultSize() == resultSetSize);
         	
         	//Step 9
         	searchFor.ClickSearchHeaderColumnLnk("Size");
         	overlay.SwitchToActiveFrame();
-        	Assert.assertTrue(!searchFor.GetFirstSearchResult().equals(defaultFirstSearchResult));
         	Assert.assertTrue(searchFor.GetSearchResultSize() == resultSetSize);
         	
         	//Step 10
         	searchFor.ClickSearchHeaderColumnLnk("Uploaded By");
         	overlay.SwitchToActiveFrame();
-        	Assert.assertTrue(!searchFor.GetFirstSearchResult().equals(defaultFirstSearchResult));
         	Assert.assertTrue(searchFor.GetSearchResultSize() == resultSetSize);
         	
         	//Step 11
         	searchFor.ClickSearchHeaderColumnLnk("Upload date");
         	overlay.SwitchToActiveFrame();
-        	Assert.assertTrue(!searchFor.GetFirstSearchResult().equals(defaultFirstSearchResult));
         	Assert.assertTrue(searchFor.GetSearchResultSize() == resultSetSize);
         	
         	//Step 12
