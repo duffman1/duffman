@@ -140,7 +140,7 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
     	    searchFor.EnterTitle(mediaTitle);
     	    searchFor.ClickApplyBtn();
     	    int I = 0;
-    	    while (!searchFor.GetFirstMPXSearchResult().equals(mediaTitle)) {
+    	    while (!searchFor.GetFirstMPXMediaSearchResult().equals(mediaTitle)) {
     	    	I++; Thread.sleep(10000); //significant pause necessary as media ingestion can take a while from mpx
     	    	searchFor.ClickApplyBtn();
     	    	if (I >= 10) { break; }

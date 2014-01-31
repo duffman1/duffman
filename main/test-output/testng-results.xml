@@ -20,21 +20,114 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[verifyObjectContainsText:  Object //div[@class='messages error'] contains the text Title field is required.]]>
+      <![CDATA[Verify that the search result set column order matches as expected.]]>
     </line>
     <line>
-      <![CDATA[verifyObjectContainsText:  Object (//td[@class='views-field views-field-history-list'])[1] contains the text Revision was set from Draft to Draft on 01/31/2014]]>
+      <![CDATA[Get the text of the first search result set item.]]>
+    </line>
+    <line>
+      <![CDATA[Get the number of results in the result set.]]>
+    </line>
+    <line>
+      <![CDATA[Enter title Automation.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Apply' button.]]>
+    </line>
+    <line>
+      <![CDATA[Get the number of results in the result set.]]>
+    </line>
+    <line>
+      <![CDATA[Get the text of the first search result set item.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Reset' button.]]>
+    </line>
+    <line>
+      <![CDATA[Get the text of the first search result set item.]]>
+    </line>
+    <line>
+      <![CDATA[Get the number of results in the result set.]]>
+    </line>
+    <line>
+      <![CDATA[Get all the account options in the 'MPX Player Account' select ddl.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that the count of options is expected + 1 for the '-select' option.]]>
+    </line>
+    <line>
+      <![CDATA[Get the text of each of the ddl options.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that each expected account option is present in the 'MPX Player Account' select ddl.]]>
+    </line>
+    <line>
+      <![CDATA[Select the DB TV from the 'MPXPlayerAccount' select ddl.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Apply' button.]]>
+    </line>
+    <line>
+      <![CDATA[Get all the MPX result set 'Source' items.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that every source item in the result set equals 'DB TV'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Reset' button.]]>
+    </line>
+    <line>
+      <![CDATA[Select the 'Published' from the 'MPX Player Status' select ddl.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Apply' button.]]>
+    </line>
+    <line>
+      <![CDATA[Get all the MPX result set 'Status' items.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that result set size for Published items is greater than 0.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that every status item in the result set equals 'Published'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Reset' button.]]>
+    </line>
+    <line>
+      <![CDATA[Select the 'Unpublished' from the 'MPX Player Status' select ddl.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Apply' button.]]>
+    </line>
+    <line>
+      <![CDATA[Get all the MPX result set 'Status' items.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that every status item in the result set equals 'Unpublished'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Reset' button.]]>
+    </line>
+    <line>
+      <![CDATA[Get the text of the first search result set item.]]>
+    </line>
+    <line>
+      <![CDATA[Get the number of results in the result set.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="30501" started-at="2014-01-31T15:54:36Z" finished-at="2014-01-31T15:55:07Z">
+  <suite name="Default suite" duration-ms="73386" started-at="2014-01-31T21:27:11Z" finished-at="2014-01-31T21:28:25Z">
     <groups>
+      <group name="mpx">
+        <method signature="EnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen@4104c575]" name="EnhanceMPXPlayerContentAdminScreen_Test" class="com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen"/>
+      </group> <!-- mpx -->
       <group name="full">
-        <method signature="BasicUIForCreatingAndRevisingQueues.BasicUIForCreatingAndRevisingQueues_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.CreateUpdateRevisionsToQueues.BasicUIForCreatingAndRevisingQueues@4104c575]" name="BasicUIForCreatingAndRevisingQueues_Test" class="com.nbcuni.test.publisher.tests.Queues.CreateUpdateRevisionsToQueues.BasicUIForCreatingAndRevisingQueues"/>
+        <method signature="EnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen@4104c575]" name="EnhanceMPXPlayerContentAdminScreen_Test" class="com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen"/>
       </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="30501" started-at="2014-01-31T15:54:36Z" finished-at="2014-01-31T15:55:07Z">
-      <class name="com.nbcuni.test.publisher.tests.Queues.CreateUpdateRevisionsToQueues.BasicUIForCreatingAndRevisingQueues">
-        <test-method status="PASS" signature="startSelenium(java.lang.String)[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.CreateUpdateRevisionsToQueues.BasicUIForCreatingAndRevisingQueues@4104c575]" name="startSelenium" is-config="true" duration-ms="13570" started-at="2014-01-31T10:54:36Z" finished-at="2014-01-31T10:54:50Z">
+    <test name="Default test" duration-ms="73386" started-at="2014-01-31T21:27:11Z" finished-at="2014-01-31T21:28:25Z">
+      <class name="com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen">
+        <test-method status="PASS" signature="startSelenium(java.lang.String)[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen@4104c575]" name="startSelenium" is-config="true" duration-ms="13593" started-at="2014-01-31T16:27:11Z" finished-at="2014-01-31T16:27:25Z">
           <params>
             <param index="0">
               <value>
@@ -51,7 +144,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="BasicUIForCreatingAndRevisingQueues_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.CreateUpdateRevisionsToQueues.BasicUIForCreatingAndRevisingQueues@4104c575]" name="BasicUIForCreatingAndRevisingQueues_Test" duration-ms="16346" started-at="2014-01-31T10:54:50Z" finished-at="2014-01-31T10:55:06Z">
+        <test-method status="PASS" signature="EnhanceMPXPlayerContentAdminScreen_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen@4104c575]" name="EnhanceMPXPlayerContentAdminScreen_Test" duration-ms="59209" started-at="2014-01-31T16:27:25Z" finished-at="2014-01-31T16:28:24Z">
           <reporter-output>
             <line>
               <![CDATA[Open url 'http://qa5dev.publisher.nbcuni.com'.]]>
@@ -66,25 +159,115 @@
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
-              <![CDATA[verifyObjectContainsText:  Object //div[@class='messages error'] contains the text Title field is required.]]>
+              <![CDATA[Verify that the search result set column order matches as expected.]]>
             </line>
             <line>
-              <![CDATA[verifyObjectContainsText:  Object (//td[@class='views-field views-field-history-list'])[1] contains the text Revision was set from Draft to Draft on 01/31/2014]]>
+              <![CDATA[Get the text of the first search result set item.]]>
+            </line>
+            <line>
+              <![CDATA[Get the number of results in the result set.]]>
+            </line>
+            <line>
+              <![CDATA[Enter title Automation.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Apply' button.]]>
+            </line>
+            <line>
+              <![CDATA[Get the number of results in the result set.]]>
+            </line>
+            <line>
+              <![CDATA[Get the text of the first search result set item.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Reset' button.]]>
+            </line>
+            <line>
+              <![CDATA[Get the text of the first search result set item.]]>
+            </line>
+            <line>
+              <![CDATA[Get the number of results in the result set.]]>
+            </line>
+            <line>
+              <![CDATA[Get all the account options in the 'MPX Player Account' select ddl.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that the count of options is expected + 1 for the '-select' option.]]>
+            </line>
+            <line>
+              <![CDATA[Get the text of each of the ddl options.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that each expected account option is present in the 'MPX Player Account' select ddl.]]>
+            </line>
+            <line>
+              <![CDATA[Select the DB TV from the 'MPXPlayerAccount' select ddl.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Apply' button.]]>
+            </line>
+            <line>
+              <![CDATA[Get all the MPX result set 'Source' items.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that every source item in the result set equals 'DB TV'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Reset' button.]]>
+            </line>
+            <line>
+              <![CDATA[Select the 'Published' from the 'MPX Player Status' select ddl.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Apply' button.]]>
+            </line>
+            <line>
+              <![CDATA[Get all the MPX result set 'Status' items.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that result set size for Published items is greater than 0.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that every status item in the result set equals 'Published'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Reset' button.]]>
+            </line>
+            <line>
+              <![CDATA[Select the 'Unpublished' from the 'MPX Player Status' select ddl.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Apply' button.]]>
+            </line>
+            <line>
+              <![CDATA[Get all the MPX result set 'Status' items.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that every status item in the result set equals 'Unpublished'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Reset' button.]]>
+            </line>
+            <line>
+              <![CDATA[Get the text of the first search result set item.]]>
+            </line>
+            <line>
+              <![CDATA[Get the number of results in the result set.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- BasicUIForCreatingAndRevisingQueues_Test -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.CreateUpdateRevisionsToQueues.BasicUIForCreatingAndRevisingQueues@4104c575]" name="stopSelenium" is-config="true" duration-ms="571" started-at="2014-01-31T10:55:06Z" finished-at="2014-01-31T10:55:07Z">
+        </test-method> <!-- EnhanceMPXPlayerContentAdminScreen_Test -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen@4104c575]" name="stopSelenium" is-config="true" duration-ms="572" started-at="2014-01-31T16:28:24Z" finished-at="2014-01-31T16:28:25Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=BasicUIForCreatingAndRevisingQueues_Test status=SUCCESS method=BasicUIForCreatingAndRevisingQueues.BasicUIForCreatingAndRevisingQueues_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.CreateUpdateRevisionsToQueues.BasicUIForCreatingAndRevisingQueues@4104c575] output=Open url 'http://qa5dev.publisher.nbcuni.com'.]]]>
+                <![CDATA[[TestResult name=EnhanceMPXPlayerContentAdminScreen_Test status=SUCCESS method=EnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen@4104c575] output=Open url 'http://qa5dev.publisher.nbcuni.com'.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-      </class> <!-- com.nbcuni.test.publisher.tests.Queues.CreateUpdateRevisionsToQueues.BasicUIForCreatingAndRevisingQueues -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

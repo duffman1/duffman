@@ -4,6 +4,7 @@ package com.nbcuni.test.publisher.pageobjects.MPX;
 import com.nbcuni.test.lib.Util;
 import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.webdriver.CustomWebDriver;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
@@ -11,6 +12,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.Reporter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,6 +46,7 @@ public class Settings {
     private static String SaveConfigurations_Btn = "//input[@id='edit-submit']";
     private static String ConnectToMPX_Btn = "//input[@value='Connect to MPX']";
     private static String AddAccount_Btn = "//input[@value='Add Account']";
+    private static String DisplayMPXDebugMessageLevel_Ddl = "//select[@id='edit-media-theplatform-mpx-output-message-watchdog-severity']";
     
     public Settings(final CustomWebDriver custWebDr) {
         webDriver = custWebDr;
@@ -292,6 +295,15 @@ public class Settings {
     	return selectedOptions;
     }
     
+    public void EnsureMPXDebugMessageLevelNotVerbose() {
+    	
+    	Reporter.log("If 'Display MPX Debug Message Level' drop down list is set to 'Extremely Verbose', set it to the appropriate level.");
+    	Select el = new Select(webDriver.findElement(By.xpath(DisplayMPXDebugMessageLevel_Ddl)));
+    	if (el.getFirstSelectedOption().getText().equals("Extremely Verbose")) {
+    		el.selectByVisibleText("Advanced");
+    		webDriver.findElement(By.xpath(SaveConfigurations_Btn)).click();
+    	}
+    }
   
 }
 

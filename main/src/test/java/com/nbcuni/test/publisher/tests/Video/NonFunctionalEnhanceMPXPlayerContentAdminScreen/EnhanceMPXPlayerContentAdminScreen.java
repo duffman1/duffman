@@ -57,17 +57,17 @@ public class EnhanceMPXPlayerContentAdminScreen extends ParentTest{
         	//Step 4
         	if (configuredAccounts.get(0).equals("DB TV")) {
         	
-        		String initialFirstResult = searchFor.GetFirstMPXSearchResult();
+        		String initialFirstResult = searchFor.GetFirstMPXPlayerSearchResult();
         		int initialResultSize = searchFor.GetMPXSearchResultSize();
         		searchFor.EnterTitle("Automation");
         		searchFor.ClickApplyBtn();
         		Assert.assertTrue(searchFor.GetMPXSearchResultSize() < initialResultSize);
-        		Assert.assertTrue(searchFor.GetFirstMPXSearchResult().contains("AutomationPlayer"));
+        		Assert.assertTrue(searchFor.GetFirstMPXPlayerSearchResult().contains("AutomationPlayer"));
         		
         		//Step 5
         		searchFor.ClickResetBtn();
         		overlay.switchToDefaultContent();
-        		Assert.assertTrue(searchFor.GetFirstMPXSearchResult().equals(initialFirstResult));
+        		Assert.assertTrue(searchFor.GetFirstMPXPlayerSearchResult().equals(initialFirstResult));
         		Assert.assertTrue(searchFor.GetMPXSearchResultSize().equals(initialResultSize));
         		
         		//Step 6a - already executed first line of step 2
@@ -95,7 +95,7 @@ public class EnhanceMPXPlayerContentAdminScreen extends ParentTest{
         		
         		//Step 9
         		searchFor.ClickResetBtn();
-        		Assert.assertTrue(searchFor.GetFirstMPXSearchResult().equals(initialFirstResult));
+        		Assert.assertTrue(searchFor.GetFirstMPXPlayerSearchResult().equals(initialFirstResult));
         		Assert.assertTrue(searchFor.GetMPXSearchResultSize().equals(initialResultSize));
         		
         		//Step 10 - NA for automation purposes

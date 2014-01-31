@@ -89,7 +89,10 @@ public class SearchFor {
     private static WebElement FirstSearchResult_Lnk;
     
     @FindBy(how = How.XPATH, using = "(//tbody//td[3]//a)[1]")
-    private static WebElement FirstMPXSearchResult_Lnk;
+    private static WebElement FirstMPXMediaSearchResult_Lnk;
+    
+    @FindBy(how = How.XPATH, using = "(//tbody//td[2]//a)[1]")
+    private static WebElement FirstMPXPlayerSearchResult_Lnk;
     
     @FindBy(how = How.XPATH, using = "(//div[text()='Published']/../..//td[@class='views-field views-field-title']/a)[1]")
     private static WebElement FirstPublishedSearchResult_Lnk;
@@ -186,13 +189,26 @@ public class SearchFor {
         return FirstSearchResult_Lnk.getText();
     }
     
-    public String GetFirstMPXSearchResult() throws Exception {
+    public String GetFirstMPXMediaSearchResult() throws Exception {
     	
     	webDriver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
     	Reporter.log("Get the text of the first search result set item.");
     	String linkTxt = "";
     	try {
-    		linkTxt = FirstMPXSearchResult_Lnk.getText();	
+    		linkTxt = FirstMPXMediaSearchResult_Lnk.getText();	
+    	}
+    	catch (Exception e) {}
+    	webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
+        return linkTxt;
+    }
+    
+    public String GetFirstMPXPlayerSearchResult() throws Exception {
+    	
+    	webDriver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+    	Reporter.log("Get the text of the first search result set item.");
+    	String linkTxt = "";
+    	try {
+    		linkTxt = FirstMPXPlayerSearchResult_Lnk.getText();	
     	}
     	catch (Exception e) {}
     	webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
