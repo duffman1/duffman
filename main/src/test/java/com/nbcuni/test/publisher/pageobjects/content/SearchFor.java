@@ -18,6 +18,7 @@ import org.testng.Reporter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 
 /*********************************************
@@ -30,14 +31,12 @@ import java.util.List;
 public class SearchFor {
 
     private static CustomWebDriver webDriver;
-    private static AppLib al;
-    private static Util ul;
+    private static AppLib applib;
     
     //PAGE OBJECT CONSTRUCTOR
-    public SearchFor(final CustomWebDriver custWebDr) {
+    public SearchFor(final CustomWebDriver custWebDr, final AppLib applib) {
         webDriver = custWebDr;
-        ul = new Util(webDriver);
-        
+        this.applib = applib;
     }
    
     //PAGE OBJECT IDENTIFIERS
@@ -89,7 +88,7 @@ public class SearchFor {
     @FindBy(how = How.XPATH, using = "(//tbody//td[3]//a)[1]")
     private static WebElement FirstSearchResult_Lnk;
     
-    @FindBy(how = How.XPATH, using = "(//tbody//td[2]//a)[1]")
+    @FindBy(how = How.XPATH, using = "(//tbody//td[3]//a)[1]")
     private static WebElement FirstMPXSearchResult_Lnk;
     
     @FindBy(how = How.XPATH, using = "(//div[text()='Published']/../..//td[@class='views-field views-field-title']/a)[1]")
@@ -188,17 +187,24 @@ public class SearchFor {
     }
     
     public String GetFirstMPXSearchResult() throws Exception {
-
+    	
+    	webDriver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
     	Reporter.log("Get the text of the first search result set item.");
-    	Thread.sleep(1000); 
-        return FirstMPXSearchResult_Lnk.getText();
+    	String linkTxt = "";
+    	try {
+    		linkTxt = FirstMPXSearchResult_Lnk.getText();	
+    	}
+    	catch (Exception e) {}
+    	webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
+        return linkTxt;
     }
     
     public String GetFirstPublishedSearchResult() throws Exception {
 
     	Reporter.log("Get the text of the first published search result set item.");
     	Thread.sleep(1000);
-        return FirstPublishedSearchResult_Lnk.getText();
+    	return FirstPublishedSearchResult_Lnk.getText();	
+ 
     }
     
     public Integer GetSearchResultSize() throws Exception {

@@ -202,6 +202,7 @@ public class CastCrewFieldCollectionsVerification_Movie extends ParentTest{
         overlay.switchToDefaultContent();
         overlay.SwitchToActiveFrame();
         contentParent.VerifyPageContentNotPresent(Arrays.asList("Notice: Trying to get property of non-object in field_collection_field_get_entity() (line 1608 of /mnt/www/html/nbcuqa4dev/docroot/profiles/all/modules/contrib/field_collection/field_collection.module)"));
+        castCrew.ClickCastCrewLnk();
         castCrew.VerifyPersonNameValue(Persons.get(0), "1");
 		castCrew.VerifyCharacterNameValue(Characters.get(0), "1");
 		castCrew.VerifyRoleValue("Character", "1");

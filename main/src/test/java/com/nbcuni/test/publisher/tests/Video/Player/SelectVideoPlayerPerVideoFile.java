@@ -60,7 +60,7 @@ public class SelectVideoPlayerPerVideoFile extends ParentTest{
 
         		//Step 3
         		overlay.SwitchToActiveFrame();
-        		SearchFor searchFor = new SearchFor(webDriver);
+        		SearchFor searchFor = new SearchFor(webDriver, applib);
         		PageFactory.initElements(webDriver, searchFor);
         		searchFor.EnterTitle("Automation1");
         		searchFor.ClickApplyBtn();

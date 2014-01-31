@@ -48,7 +48,7 @@ public class EnhanceMPXPlayerContentAdminScreen extends ParentTest{
         	overlay.switchToDefaultContent();
         	taxonomy.NavigateSite("Content>>Files>>mpxPlayers");
         	overlay.SwitchToActiveFrame();
-        	SearchFor searchFor = new SearchFor(webDriver);
+        	SearchFor searchFor = new SearchFor(webDriver, applib);
         	PageFactory.initElements(webDriver, searchFor);
         	searchFor.VerifyMPXSearchHeaderColumnOrder();
         	

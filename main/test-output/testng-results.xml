@@ -20,45 +20,21 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[Switch to the select file frame.]]>
+      <![CDATA[verifyObjectContainsText:  Object //div[@class='messages error'] contains the text Title field is required.]]>
     </line>
     <line>
-      <![CDATA[Enter the file path for file upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Upload' button.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Assert the file image 'HanSolo' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Assert the the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
+      <![CDATA[verifyObjectContainsText:  Object (//td[@class='views-field views-field-history-list'])[1] contains the text Revision was set from Draft to Draft on 01/31/2014]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="44649" started-at="2014-01-30T22:41:57Z" finished-at="2014-01-30T22:42:42Z">
+  <suite name="Default suite" duration-ms="30501" started-at="2014-01-31T15:54:36Z" finished-at="2014-01-31T15:55:07Z">
     <groups>
       <group name="full">
-        <method signature="EnhanceOperationsDropdownonScheduleTab.EnhanceOperationsDropdownonScheduleTab_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.EnhanceOperationsDropdownonScheduleTab@2f774b9b]" name="EnhanceOperationsDropdownonScheduleTab_Test" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.EnhanceOperationsDropdownonScheduleTab"/>
+        <method signature="BasicUIForCreatingAndRevisingQueues.BasicUIForCreatingAndRevisingQueues_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.CreateUpdateRevisionsToQueues.BasicUIForCreatingAndRevisingQueues@4104c575]" name="BasicUIForCreatingAndRevisingQueues_Test" class="com.nbcuni.test.publisher.tests.Queues.CreateUpdateRevisionsToQueues.BasicUIForCreatingAndRevisingQueues"/>
       </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="44649" started-at="2014-01-30T22:41:57Z" finished-at="2014-01-30T22:42:42Z">
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.EnhanceOperationsDropdownonScheduleTab">
-        <test-method status="PASS" signature="startSelenium(java.lang.String)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.EnhanceOperationsDropdownonScheduleTab@2f774b9b]" name="startSelenium" is-config="true" duration-ms="13695" started-at="2014-01-30T17:41:57Z" finished-at="2014-01-30T17:42:11Z">
+    <test name="Default test" duration-ms="30501" started-at="2014-01-31T15:54:36Z" finished-at="2014-01-31T15:55:07Z">
+      <class name="com.nbcuni.test.publisher.tests.Queues.CreateUpdateRevisionsToQueues.BasicUIForCreatingAndRevisingQueues">
+        <test-method status="PASS" signature="startSelenium(java.lang.String)[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.CreateUpdateRevisionsToQueues.BasicUIForCreatingAndRevisingQueues@4104c575]" name="startSelenium" is-config="true" duration-ms="13570" started-at="2014-01-31T10:54:36Z" finished-at="2014-01-31T10:54:50Z">
           <params>
             <param index="0">
               <value>
@@ -75,7 +51,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="EnhanceOperationsDropdownonScheduleTab_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.EnhanceOperationsDropdownonScheduleTab@2f774b9b]" name="EnhanceOperationsDropdownonScheduleTab_Test" duration-ms="30371" started-at="2014-01-30T17:42:11Z" finished-at="2014-01-30T17:42:41Z">
+        <test-method status="PASS" signature="BasicUIForCreatingAndRevisingQueues_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.CreateUpdateRevisionsToQueues.BasicUIForCreatingAndRevisingQueues@4104c575]" name="BasicUIForCreatingAndRevisingQueues_Test" duration-ms="16346" started-at="2014-01-31T10:54:50Z" finished-at="2014-01-31T10:55:06Z">
           <reporter-output>
             <line>
               <![CDATA[Open url 'http://qa5dev.publisher.nbcuni.com'.]]>
@@ -90,49 +66,25 @@
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
-              <![CDATA[Switch to the select file frame.]]>
+              <![CDATA[verifyObjectContainsText:  Object //div[@class='messages error'] contains the text Title field is required.]]>
             </line>
             <line>
-              <![CDATA[Enter the file path for file upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Upload' button.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Public Local Files' radio button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Assert the file image 'HanSolo' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Assert the the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
+              <![CDATA[verifyObjectContainsText:  Object (//td[@class='views-field views-field-history-list'])[1] contains the text Revision was set from Draft to Draft on 01/31/2014]]>
             </line>
           </reporter-output>
-        </test-method> <!-- EnhanceOperationsDropdownonScheduleTab_Test -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.EnhanceOperationsDropdownonScheduleTab@2f774b9b]" name="stopSelenium" is-config="true" duration-ms="568" started-at="2014-01-30T17:42:41Z" finished-at="2014-01-30T17:42:42Z">
+        </test-method> <!-- BasicUIForCreatingAndRevisingQueues_Test -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.CreateUpdateRevisionsToQueues.BasicUIForCreatingAndRevisingQueues@4104c575]" name="stopSelenium" is-config="true" duration-ms="571" started-at="2014-01-31T10:55:06Z" finished-at="2014-01-31T10:55:07Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=EnhanceOperationsDropdownonScheduleTab_Test status=SUCCESS method=EnhanceOperationsDropdownonScheduleTab.EnhanceOperationsDropdownonScheduleTab_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.EnhanceOperationsDropdownonScheduleTab@2f774b9b] output=Open url 'http://qa5dev.publisher.nbcuni.com'.]]]>
+                <![CDATA[[TestResult name=BasicUIForCreatingAndRevisingQueues_Test status=SUCCESS method=BasicUIForCreatingAndRevisingQueues.BasicUIForCreatingAndRevisingQueues_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.CreateUpdateRevisionsToQueues.BasicUIForCreatingAndRevisingQueues@4104c575] output=Open url 'http://qa5dev.publisher.nbcuni.com'.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.EnhanceOperationsDropdownonScheduleTab -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Queues.CreateUpdateRevisionsToQueues.BasicUIForCreatingAndRevisingQueues -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

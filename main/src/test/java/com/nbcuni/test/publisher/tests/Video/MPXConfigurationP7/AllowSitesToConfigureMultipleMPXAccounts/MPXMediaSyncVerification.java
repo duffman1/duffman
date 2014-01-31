@@ -128,7 +128,7 @@ public class MPXMediaSyncVerification extends ParentTest{
             overlay.switchToDefaultContent();
             taxonomy.NavigateSite("Content>>Files>>mpxMedia");
             overlay.SwitchToFrame("Content");
-            SearchFor searchFor = new SearchFor(webDriver);
+            SearchFor searchFor = new SearchFor(webDriver, applib);
             PageFactory.initElements(webDriver, searchFor);
 
             if (configuredAccounts.contains("DB TV") || configuredAccounts.contains("NBCU TVE Dev - NBC")) {

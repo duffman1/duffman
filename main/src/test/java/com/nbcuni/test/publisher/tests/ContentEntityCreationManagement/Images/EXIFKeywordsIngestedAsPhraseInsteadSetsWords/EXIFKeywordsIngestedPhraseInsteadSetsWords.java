@@ -1,8 +1,10 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIFKeywordsIngestedAsPhraseInsteadSetsWords;
 
 import com.nbcuni.test.publisher.common.ParentTest;
+import com.nbcuni.test.publisher.pageobjects.SimpleEXIFIPTCMappings;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.content.*;
+
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
@@ -10,7 +12,8 @@ public class EXIFKeywordsIngestedPhraseInsteadSetsWords extends ParentTest{
 	
     /*************************************************************************************
      * TEST CASE 
-     * Step 1 - Login to P7 using Admin (user 1) credentials ,Login Successful 
+     * Step 1 - Login to P7 using Admin (user 1) credentials ,Login Successful
+     * Step 1a - Enable simple exif/iptc mappings 
      * Step 2 - Go to Content-> Files -> Click Add Files -> On Add file overlay -> Click on Add files -> Select the test images -> Click Next  Note : Test images are attached to the test cases. Please use only those selected images to test as their EXIF data field keyword has commas. And this test is to verify  special character comma  gets ingested in P7 successfully.,"Edit multiple files" overlay appears with all the test images  
      * Step 3 - Verify that in EXIF data under "Keyword" column data values are separated by comma's ( , ) and hence comma's are successfully ingested in the P7 EXIF fields.   ,Special character comma (,) are succesfully ingested in P7 EXIF fields.  
      * Step 4 - Go to Content -> Add Content media Gallery -> under "Create Media Gallery" overlay -> Set all the required fields ->  Click on Media Items "Select" tab -> under "Select a file" overlay -> Click on Add files -> select all test images -> Click Next  ,"Create Media Gallery" overlay appears. 
@@ -29,6 +32,23 @@ public class EXIFKeywordsIngestedPhraseInsteadSetsWords extends ParentTest{
         	UserLogin userLogin = applib.openApplication();
         	PageFactory.initElements(webDriver, userLogin);
             userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+            
+            //Step 1a
+            taxonomy.NavigateSite("Configuration>>Media>>Simple EXIF/IPTC Mappings");
+            overlay.SwitchToActiveFrame();
+            SimpleEXIFIPTCMappings simpleEXIFIPTCMappings = new SimpleEXIFIPTCMappings(webDriver, applib);
+            PageFactory.initElements(webDriver, simpleEXIFIPTCMappings);
+            simpleEXIFIPTCMappings.SelectAltText("Aperture");
+            simpleEXIFIPTCMappings.SelectTitleText("Title");
+            simpleEXIFIPTCMappings.SelectCaption("Caption");
+            simpleEXIFIPTCMappings.SelectCopyright("Copyright");
+            simpleEXIFIPTCMappings.SelectCredit("Credit");
+            simpleEXIFIPTCMappings.SelectKeywords("Keywords");
+            simpleEXIFIPTCMappings.SelectMediaCategories("none");
+            simpleEXIFIPTCMappings.SelectMediaTags("Title");
+            simpleEXIFIPTCMappings.SelectSource("Source");
+            simpleEXIFIPTCMappings.ClickSaveBtn();
+            overlay.switchToDefaultContent();
             
             //Step 2
             taxonomy.NavigateSite("Content>>Files");

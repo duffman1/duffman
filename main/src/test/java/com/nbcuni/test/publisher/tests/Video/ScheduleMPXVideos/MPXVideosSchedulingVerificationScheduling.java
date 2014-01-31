@@ -135,10 +135,16 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
     	    overlay.SwitchToActiveFrame();
     	    
     	    //Step 9
-    	    SearchFor searchFor = new SearchFor(webDriver);
+    	    SearchFor searchFor = new SearchFor(webDriver, applib);
     	    PageFactory.initElements(webDriver, searchFor);
     	    searchFor.EnterTitle(mediaTitle);
     	    searchFor.ClickApplyBtn();
+    	    int I = 0;
+    	    while (!searchFor.GetFirstMPXSearchResult().equals(mediaTitle)) {
+    	    	I++; Thread.sleep(10000); //significant pause necessary as media ingestion can take a while from mpx
+    	    	searchFor.ClickApplyBtn();
+    	    	if (I >= 10) { break; }
+    	    }
     	    searchFor.VerifySearchResultsPresent(Arrays.asList(mediaTitle));
     	    SimpleDateFormat pub7DateFormat = new SimpleDateFormat("MM/dd/yyyy");
     	    String pub7Date20DaysInPast = pub7DateFormat.format(date20DaysInPast);

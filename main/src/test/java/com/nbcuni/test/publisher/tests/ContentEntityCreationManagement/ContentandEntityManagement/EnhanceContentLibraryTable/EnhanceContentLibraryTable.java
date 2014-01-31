@@ -48,7 +48,7 @@ public class EnhanceContentLibraryTable extends ParentTest{
         	overlay.SwitchToActiveFrame();
         	
         	//Step 4
-        	SearchFor searchFor = new SearchFor(webDriver);
+        	SearchFor searchFor = new SearchFor(webDriver, applib);
         	PageFactory.initElements(webDriver, searchFor);
         	searchFor.VerifySearchHeaderColumnOrder();
         	
