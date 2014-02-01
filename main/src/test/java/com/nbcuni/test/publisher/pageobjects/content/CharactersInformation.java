@@ -1,18 +1,9 @@
 package com.nbcuni.test.publisher.pageobjects.content;
 
-import java.util.ArrayList;
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 import org.testng.Reporter;
-
-import com.nbcuni.test.lib.Util;
-import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.webdriver.CustomWebDriver;
 
 /*********************************************

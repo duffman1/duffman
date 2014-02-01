@@ -144,7 +144,7 @@ public class ConfiguringPublisherAutopublishingToFacebookTimeandWall extends Par
         share.ClickShareBtn();
         
         //Step 14
-        Thread.sleep(10000); //posts to facebook take a few seconds. No way of knowing when they post or not...
+        Thread.sleep(30000); //TODO - add a better dynamic wait as posts to facebook take several seconds. No way of knowing when they post or not...
         webDriver.navigate().to(new URL("https://www.facebook.com/"));
         overlay.switchToDefaultContent();
         contentParent.VerifyPageContentPresent(Arrays.asList("Publisher Seven Test User", 

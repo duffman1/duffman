@@ -1,15 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Command line suite]">
-  <test name="Command line test(failed)" preserve-order="false">
+<suite thread-count="1" name="Failed suite [Failed suite [Test Suite for Publisher 7]]" parallel="methods">
+  <parameter name="Environment" value="PROD"/>
+  <test name="All Web Tests(failed)(failed)" parallel="methods">
+    <groups>
+      <run>
+        <include name="full"/>
+      </run>
+    </groups>
     <classes>
-      <class name="com.nbcuni.test.publisher.tests.Queues.AddModerationStatesToRevisionsOfAQueue.QueueModerationStates">
+      <class name="com.nbcuni.test.publisher.tests.Queues.CreateUpdateRevisionsToQueues.BasicUIForCreatingAndRevisingQueues">
         <methods>
           <include name="startSelenium"/>
           <include name="stopSelenium"/>
-          <include name="QueueModerationStates_Test"/>
         </methods>
-      </class>
+      </class> <!-- com.nbcuni.test.publisher.tests.Queues.CreateUpdateRevisionsToQueues.BasicUIForCreatingAndRevisingQueues -->
+      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.CastCrewFieldCollectionsVerification_TVEpisode">
+        <methods>
+          <include name="startSelenium"/>
+          <include name="stopSelenium"/>
+        </methods>
+      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.CastCrewFieldCollectionsVerification_TVEpisode -->
+      <class name="com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.CreateConfigureAndValidatePermissionsEditor">
+        <methods>
+          <include name="startSelenium"/>
+          <include name="stopSelenium"/>
+        </methods>
+      </class> <!-- com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.CreateConfigureAndValidatePermissionsEditor -->
+      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIFKeywordsIngestedAsPhraseInsteadSetsWords.EXIFKeywordsIngestedPhraseInsteadSetsWords">
+        <methods>
+          <include name="startSelenium"/>
+          <include name="stopSelenium"/>
+        </methods>
+      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIFKeywordsIngestedAsPhraseInsteadSetsWords.EXIFKeywordsIngestedPhraseInsteadSetsWords -->
+      <class name="com.nbcuni.test.publisher.tests.SocialIntegration.Facebook.ConfiguringPublisherAutopublishingToFacebookTimeandWall">
+        <methods>
+          <include name="startSelenium"/>
+          <include name="stopSelenium"/>
+          <include name="ConfiguringPublisherAutopublishingToFacebookTimeandWall_Test"/>
+        </methods>
+      </class> <!-- com.nbcuni.test.publisher.tests.SocialIntegration.Facebook.ConfiguringPublisherAutopublishingToFacebookTimeandWall -->
+      <class name="com.nbcuni.test.publisher.tests.UserCreationAndManagement.UnauthenticatedUsersNotAbleToViewThePublishedContents.UnauthenticatedUsersNotAbleToViewThePublishedContents">
+        <methods>
+          <include name="startSelenium"/>
+          <include name="stopSelenium"/>
+        </methods>
+      </class> <!-- com.nbcuni.test.publisher.tests.UserCreationAndManagement.UnauthenticatedUsersNotAbleToViewThePublishedContents.UnauthenticatedUsersNotAbleToViewThePublishedContents -->
     </classes>
-  </test>
-</suite>
+  </test> <!-- All Web Tests(failed)(failed) -->
+</suite> <!-- Failed suite [Failed suite [Test Suite for Publisher 7]] -->

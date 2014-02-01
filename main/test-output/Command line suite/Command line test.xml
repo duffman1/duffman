@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite hostname="baclark77-mac1.home" name="com.nbcuni.test.publisher.tests.Queues.AddModerationStatesToRevisionsOfAQueue.QueueModerationStates" tests="1" failures="1" timestamp="1 Feb 2014 14:14:04 GMT" time="76.765" errors="0">
+  <testcase name="QueueModerationStates_Test" time="74.235" classname="com.nbcuni.test.publisher.tests.Queues.AddModerationStatesToRevisionsOfAQueue.QueueModerationStates">
+    <failure type="org.openqa.selenium.WebDriverException" message="Build info: version: &amp;apos;2.35.0&amp;apos;, revision: &amp;apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&amp;apos;, time: &amp;apos;2013-08-17 12:46:41&amp;apos;
+System info: os.name: &amp;apos;Mac OS X&amp;apos;, os.arch: &amp;apos;x86_64&amp;apos;, os.version: &amp;apos;10.8.5&amp;apos;, java.version: &amp;apos;1.6.0_65&amp;apos;
+Session ID: f3532368-b3c5-4094-b868-11897b7f7774
+Driver info: com.nbcuni.test.webdriver.CustomWebDriver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.i1Rg86}, rotatable=false, locationContextEnabled=true, webdriver.remote.sessionid=f3532368-b3c5-4094-b868-11897b7f7774, version=32.0.1700.102, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]">
+      <![CDATA[org.openqa.selenium.WebDriverException: Build info: version: '2.35.0', revision: '8df0c6bedf70ff9f22c647788f9fe9c8d22210e2', time: '2013-08-17 12:46:41'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.8.5', java.version: '1.6.0_65'
+Session ID: f3532368-b3c5-4094-b868-11897b7f7774
+Driver info: com.nbcuni.test.webdriver.CustomWebDriver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.i1Rg86}, rotatable=false, locationContextEnabled=true, webdriver.remote.sessionid=f3532368-b3c5-4094-b868-11897b7f7774, version=32.0.1700.102, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:191)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:554)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:307)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:404)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:344)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:299)
+	at com.nbcuni.test.publisher.pageobjects.Overlay.SwitchToFrame(Overlay.java:51)
+	at com.nbcuni.test.publisher.pageobjects.Modules.VerifyModuleEnabled(Modules.java:170)
+	at com.nbcuni.test.publisher.tests.Queues.AddModerationStatesToRevisionsOfAQueue.QueueModerationStates.QueueModerationStates_Test(QueueModerationStates.java:43)
+	at org.infinitest.testrunner.JUnit4Runner.runTestNGTest(JUnit4Runner.java:77)
+	at org.infinitest.testrunner.JUnit4Runner.runTest(JUnit4Runner.java:57)
+	at org.infinitest.testrunner.TestRunnerProcess.runTest(TestRunnerProcess.java:70)
+	at org.infinitest.testrunner.TestRunnerProcess.writeTestResultToOutputStream(TestRunnerProcess.java:112)
+	at org.infinitest.testrunner.TestRunnerProcess.main(TestRunnerProcess.java:89)
+Caused by: java.lang.NullPointerException
+	at org.openqa.selenium.support.events.EventFiringWebDriver.extractInterfaces(EventFiringWebDriver.java:117)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.access$500(EventFiringWebDriver.java:63)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.<init>(EventFiringWebDriver.java:318)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.<init>(EventFiringWebDriver.java:312)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.createWebElement(EventFiringWebDriver.java:282)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:182)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:47)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:33)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:169)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+... Removed 26 stack frames]]>
+    </failure>
+  </testcase>
+</testsuite>

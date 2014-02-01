@@ -67,6 +67,7 @@ public class CastCrewFieldCollectionsVerification_TVEpisode extends ParentTest {
 	        overlay.SwitchToFrame("Create Character Profile");
 	        charactersInformation.EnterCharacterFirstName(Characters.get(CCount));
 	        CoverPhoto coverPhoto = new CoverPhoto(webDriver);
+	        PageFactory.initElements(webDriver, coverPhoto);
 	        coverPhoto.ClickSelectBtn();
 	        selectFile.SelectDefaultCoverImg();
 	        overlay.SwitchToFrame("Create Character Profile");
