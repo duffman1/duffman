@@ -98,9 +98,7 @@ public class CreateConfigureAndValidatePermissionsEditor extends ParentTest{
         //Step 5
         Roles roles = new Roles(webDriver);
         roles.ClickEditorEditPermissionsLnk(); 
-        overlay.switchToDefaultContent();
-        //TODO - fix this in overlays for frames that have duplicate titles
-        webDriver.switchTo().frame(webDriver.findElement(By.xpath("(//iframe[contains(@title, 'People')])[2]")));
+        overlay.SwitchToActiveFrame();
         
         //Step 6
         Permissions permissions = new Permissions(webDriver);

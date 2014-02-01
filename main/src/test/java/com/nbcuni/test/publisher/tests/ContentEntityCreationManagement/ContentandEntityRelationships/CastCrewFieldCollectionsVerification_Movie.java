@@ -2,8 +2,10 @@ package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Contenta
 
 import java.util.Arrays;
 import java.util.List;
+
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
+
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Overlay;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
@@ -11,6 +13,7 @@ import com.nbcuni.test.publisher.pageobjects.content.BasicInformation;
 import com.nbcuni.test.publisher.pageobjects.content.CastCrew;
 import com.nbcuni.test.publisher.pageobjects.content.CharactersInformation;
 import com.nbcuni.test.publisher.pageobjects.content.ContentParent;
+import com.nbcuni.test.publisher.pageobjects.content.CoverPhoto;
 import com.nbcuni.test.publisher.pageobjects.content.PersonsInformation;
 import com.nbcuni.test.publisher.pageobjects.content.PublishingOptions;
 import com.nbcuni.test.publisher.pageobjects.content.Revisions;
@@ -53,6 +56,7 @@ public class CastCrewFieldCollectionsVerification_Movie extends ParentTest{
         
         //Step 2
         CharactersInformation charactersInformation = new CharactersInformation(webDriver);
+        PageFactory.initElements(webDriver, charactersInformation);
         Overlay overlay = new Overlay(webDriver);
         SelectFile selectFile = new SelectFile(webDriver, applib);
         PageFactory.initElements(webDriver, selectFile);
@@ -62,10 +66,12 @@ public class CastCrewFieldCollectionsVerification_Movie extends ParentTest{
 	        taxonomy.NavigateSite("Content>>Add content>>Character Profile");
 	        overlay.SwitchToFrame("Create Character Profile");
 	        charactersInformation.EnterCharacterFirstName(Characters.get(CCount));
-	        charactersInformation.ClickAddPhotoSelectBtn();
+	        CoverPhoto coverPhoto = new CoverPhoto(webDriver);
+	        PageFactory.initElements(webDriver, coverPhoto);
+	        coverPhoto.ClickSelectBtn();
 	        selectFile.SelectDefaultCoverImg();
 	        overlay.SwitchToFrame("Create Character Profile");
-	        charactersInformation.VerifyDefaultImagePresent("HanSolo");
+	        coverPhoto.VerifyFileImagePresent("HanSolo");
 	        contentParent.ClickSaveBtn();
 	        overlay.switchToDefaultContent();
 	        contentParent.VerifyMessageStatus("Character Profile " + Characters.get(CCount) + " has been created.");

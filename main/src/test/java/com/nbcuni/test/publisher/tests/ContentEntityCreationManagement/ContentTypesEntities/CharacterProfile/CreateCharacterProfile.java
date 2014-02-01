@@ -2,12 +2,14 @@ package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentT
 
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
+
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Overlay;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.content.CharactersInformation;
 import com.nbcuni.test.publisher.pageobjects.content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.content.ContentTypes;
+import com.nbcuni.test.publisher.pageobjects.content.CoverPhoto;
 import com.nbcuni.test.publisher.pageobjects.content.SelectFile;
 import com.nbcuni.test.publisher.pageobjects.taxonomy.Taxonomy;
 import com.nbcuni.test.webdriver.CustomWebDriver;
@@ -38,18 +40,20 @@ public class CreateCharacterProfile extends ParentTest{
             
             //Step 3
             CharactersInformation charactersInformation = new CharactersInformation(webDriver);
-            Overlay overlay = new Overlay(webDriver);
+            PageFactory.initElements(webDriver, charactersInformation);
             overlay.SwitchToFrame("Create Character Profile");
             String characterName = random.GetCharacterString(15);
             charactersInformation.EnterCharacterFirstName(characterName);
             
             //Step 4
-            charactersInformation.ClickAddPhotoSelectBtn();
+            CoverPhoto coverPhoto = new CoverPhoto(webDriver);
+            PageFactory.initElements(webDriver, coverPhoto);
+            coverPhoto.ClickSelectBtn();
             SelectFile selectFile = new SelectFile(webDriver, applib);
             PageFactory.initElements(webDriver, selectFile);
             selectFile.SelectDefaultCoverImg();
             overlay.SwitchToFrame("Create Character Profile");
-            charactersInformation.VerifyDefaultImagePresent("HanSolo");
+            coverPhoto.VerifyFileImagePresent("HanSolo");
             
             //Step 5
             ContentParent contentParent = new ContentParent(webDriver);

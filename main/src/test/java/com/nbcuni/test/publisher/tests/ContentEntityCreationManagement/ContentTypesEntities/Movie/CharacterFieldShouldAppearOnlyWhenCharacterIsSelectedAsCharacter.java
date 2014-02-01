@@ -46,10 +46,13 @@ public class CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter ex
             
             //Step 3 
             CharactersInformation charactersInformation = new CharactersInformation(webDriver);
+            PageFactory.initElements(webDriver, charactersInformation);
             overlay.SwitchToFrame("Create Character Profile");
             String characterName = random.GetCharacterString(15);
             charactersInformation.EnterCharacterFirstName(characterName);
-            charactersInformation.ClickAddPhotoSelectBtn();
+            CoverPhoto coverPhoto = new CoverPhoto(webDriver);
+            PageFactory.initElements(webDriver, coverPhoto);
+            coverPhoto.ClickSelectBtn();
             SelectFile selectFile = new SelectFile(webDriver, applib);
             PageFactory.initElements(webDriver, selectFile);
             selectFile.SelectDefaultCoverImg();
