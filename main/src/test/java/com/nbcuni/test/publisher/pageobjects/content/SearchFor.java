@@ -66,23 +66,19 @@ public class SearchFor {
     private static WebElement MPXPlayerStatus_Ddl;
     
     private static List<WebElement> AllResultSet_Ttls() {
-    	List<WebElement> els = webDriver.findElements(By.xpath("//table/tbody/tr/td[contains(@class, 'title')]"));
-    	return els;
+    	return webDriver.findElements(By.xpath("//table/tbody/tr/td[contains(@class, 'title')]"));
     }
     
     private static WebElement SearchTitle_Lnk(String title) {
-    	WebElement el = webDriver.findElement(By.xpath("//a[text()='" + title + "']"));
-    	return el;
+    	return webDriver.findElement(By.xpath("//a[text()='" + title + "']"));
     }
     
     private static List<WebElement> AllSearchHeader_Clms() {
-    	List<WebElement> els = webDriver.findElements(By.xpath("//thead//th/a"));
-    	return els;
+    	return webDriver.findElements(By.xpath("//thead//th/a"));
     }
     
     private static List<WebElement> AllMPXSearchHeader_Clms() {
-    	List<WebElement> els = webDriver.findElements(By.xpath("//thead//th"));
-    	return els;
+    	return webDriver.findElements(By.xpath("//thead//th"));
     }
     
     @FindBy(how = How.XPATH, using = "(//tbody//td[3]//a)[1]")
@@ -98,18 +94,15 @@ public class SearchFor {
     private static WebElement FirstPublishedSearchResult_Lnk;
     
     private static WebElement ColumnHeader_Lnk(String lnkTxt) {
-    	WebElement el = webDriver.findElement(By.xpath("//thead//th/a[text()='" + lnkTxt + "']"));
-    	return el;
+    	return webDriver.findElement(By.xpath("//thead//th/a[text()='" + lnkTxt + "']"));
     }
     
     private static List<WebElement> AllMPXResultSetSource_Itms() {
-    	List<WebElement> els = webDriver.findElements(By.xpath("//tbody//td[4]"));
-    	return els;
+    	return webDriver.findElements(By.xpath("//tbody//td[4]"));
     }
     
     private static List<WebElement> AllMPXResultSetStatus_Itms() {
-    	List<WebElement> els = webDriver.findElements(By.xpath("//tbody//td[5]"));
-    	return els;
+    	return webDriver.findElements(By.xpath("//tbody//td[5]"));
     }
     
     
@@ -302,6 +295,7 @@ public class SearchFor {
 
     	Reporter.log("Get all the MPX result set 'Status' items.");
     	Thread.sleep(1000); 
+    	webDriver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
         List<WebElement> resultSet = AllMPXResultSetStatus_Itms();
         
         if (status == "Published") {
@@ -314,6 +308,7 @@ public class SearchFor {
     		
     		Assert.assertTrue(el.getText().equals(status));
     	}
+        webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
     }
     
     
