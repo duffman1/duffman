@@ -60,6 +60,13 @@ public class Blocks {
     	
     }
     
+    public void SelectRegionByName(String blockName, String regionLocation) throws Exception{
+    	
+    	String selectLocator = "//select[@name='blocks[" + blockName + "][region]']";
+    	Thread.sleep(2000);//TODO replace this with a better wait
+    	webDriver.selectFromDropdown(By.xpath(selectLocator), regionLocation);
+    	
+    }
     public void ClickSaveBlocksBtn(){
     	
     	webDriver.click(SaveBlocks_Btn);

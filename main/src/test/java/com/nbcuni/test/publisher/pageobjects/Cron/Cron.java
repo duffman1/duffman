@@ -33,6 +33,7 @@ public class Cron {
     
     private static String RunCronToCompleteImport_Lnk = "//li[contains(text(), 'to complete the import')]/a[text()='Run cron']";
     private static String RunCron_Btn = "//input[@id='edit-run']";
+    private static String RunCronFromHome_Lnk = ".//*[@id='admin-menu-icon']/..//a[contains(text(),'Run cron')]";
     
     
     public Cron(final CustomWebDriver custWebDr) {
@@ -51,6 +52,11 @@ public class Cron {
     	
     	new WebDriverWait(webDriver, 10).until(ExpectedConditions.
     			visibilityOf(webDriver.findElement(By.xpath(RunCron_Btn)))).click();
+    }
+    public void ClickRunCronHomeLink() throws Exception {
+    	
+    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.
+    			visibilityOf(webDriver.findElement(By.xpath(RunCronFromHome_Lnk)))).click();
     }
    
     

@@ -17,7 +17,7 @@ import org.testng.Assert;
 /*********************************************
  * publisher.nbcuni.com Revisions State Library. Copyright
  * 
- * @author Brandon Clark
+ * @author Brandon Clark/Faizan Khan
  * @version 1.0 Date: December 26, 2013
  *********************************************/
 

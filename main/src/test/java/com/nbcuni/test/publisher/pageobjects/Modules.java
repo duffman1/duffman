@@ -8,6 +8,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -33,17 +35,19 @@ public class Modules {
     private static AppLib al;
     private final Util ul;
     
-    private static String FilterList_Txb = "//input[@id='edit-module-filter-name']";
-    private static String SaveConfiguration_Btn = "//input[@id='edit-submit']";
-    private static String Message_Ctr = "//div[@class='messages status']";
-    private static String Continue_Btn = "//input[@value='Continue']";
-    private static String Uninstall_Btn = "//input[@value='Uninstall']";
+    
     
     public Modules(final CustomWebDriver custWebDr) {
         webDriver = custWebDr;
         ul = new Util(webDriver);
         
     }
+    
+    private static String FilterList_Txb = "//input[@id='edit-module-filter-name']";
+    private static String SaveConfiguration_Btn = "//input[@id='edit-submit']";
+    private static String Message_Ctr = "//div[@class='messages status']";
+    private static String Continue_Btn = "//input[@value='Continue']";
+    private static String Uninstall_Btn = "//input[@value='Uninstall']";
     
     public void EnterFilterName(String filterName) throws Exception {
     	
