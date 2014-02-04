@@ -21,7 +21,6 @@ public class TestSetup extends ParentTest{
      * Step 1 - Login to Pub7 
      * Step 2 - Disable sticky edit actions module
      * Step 3 - Disable devel module
-     * Step 4 - Disable verbose mpx output if necessary
      * @throws Throwable No Return values are needed
      *************************************************************************************/
     @Test(groups = {"full" })
@@ -42,15 +41,6 @@ public class TestSetup extends ParentTest{
         	//Step 3
         	modules.EnterFilterName("Devel");
             modules.DisableModule("Devel");
-            
-            //Step 4
-            overlay.ClickCloseOverlayLnk();
-            overlay.switchToDefaultContent();
-            taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
-            overlay.SwitchToFrame("Media: thePlatform mpx settings dialog");
-            Settings settings = new Settings(webDriver);
-            settings.EnsureMPXDebugMessageLevelNotVerbose();
-            
             
     }
 }

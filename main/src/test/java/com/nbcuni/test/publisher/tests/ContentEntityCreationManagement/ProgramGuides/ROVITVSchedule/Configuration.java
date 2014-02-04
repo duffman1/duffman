@@ -7,9 +7,8 @@ import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Blocks;
 import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
-import com.nbcuni.test.publisher.pageobjects.Configuration.Program_Guide;
-import com.nbcuni.test.publisher.pageobjects.content.Content;
-import com.nbcuni.test.publisher.pageobjects.taxonomy.Taxonomy;
+import com.nbcuni.test.publisher.pageobjects.Configuration.ProgramGuide;
+import com.nbcuni.test.publisher.pageobjects.content.ContentParent;
 
 public class Configuration extends ParentTest{
 	/*************************************************************************************
@@ -26,55 +25,54 @@ public class Configuration extends ParentTest{
      * Step 7 - Populate the field, "Data URL" with the value,
      * 			"http://feed.entertainment.tv.theplatform.com/f/dCK2IC/stage_usa_listing?range=1-*&form=json".<br>
      * Step 8 -  Save and verify success message.
-
      * @throws Throwable No Return values are needed
      *************************************************************************************/
-   
-	
 	@Test(groups = {"full" })
-    public void CreatePost() throws Exception{
+    public void Configuration_Test() throws Exception{
+		
 		//Step 1
 		UserLogin userLogin = applib.openApplication();
-	    userLogin.Login("admin@publisher.nbcuni.com", "pa55word");
+		PageFactory.initElements(webDriver, userLogin);
+	    userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
 	    
 	    //Step 2	   
 	    Modules modules = new Modules(webDriver);
 	    modules.VerifyModuleEnabled("Program Guide");
 	    modules.VerifyModuleEnabled("Program Guide Example");
+	    
 	    //Step 3
 	    modules.VerifyModuleEnabled("Views UI");
 	   
 	    //Step 4
 	    overlay.switchToDefaultContent();
         taxonomy.NavigateSite("Structure>>Blocks");        
+        
         //Step 5
+        overlay.SwitchToActiveFrame();
         Blocks blocks = new Blocks(webDriver);
-        overlay.switchToDefaultContent();
-        overlay.SwitchToActiveFrame();
-        blocks.SelectRegionByName("program_guide_example_program_guide", "Content");
+        PageFactory.initElements(webDriver, blocks);
+        blocks.SelectRegion("Program Guide", "Content");
         blocks.ClickSaveBlocksBtn();
-        overlay.switchToDefaultContent();
         overlay.SwitchToActiveFrame();
-        blocks.VerifyBlockSettingsUpdated();
+        ContentParent contentParent = new ContentParent(webDriver);
+        contentParent.VerifyMessageStatus("The block settings have been updated.");
         
         //Step 6
         blocks.VerifySelectedRegion("Program Guide", "Content");
         overlay.ClickCloseOverlayLnk();
         overlay.switchToDefaultContent();
         taxonomy.NavigateSite("Configuration>>Web services>>Program Guide");
-      //Step 7
-        overlay.switchToDefaultContent();
+      
+        //Step 7
         overlay.SwitchToActiveFrame();
-        Program_Guide program_Guide = new Program_Guide(webDriver);
-        PageFactory.initElements(webDriver, program_Guide);
-        program_Guide.PopulateDataURL();
-      //Step 8
-        program_Guide.ClickSaveConfigBtn();
-        modules.VerifyConfigurationSaved();       
-        overlay.ClickCloseOverlayLnk();
-        overlay.switchToDefaultContent();
-	   
-	
+        ProgramGuide programGuide = new ProgramGuide(webDriver);
+        PageFactory.initElements(webDriver, programGuide);
+        programGuide.EnterDataURL();
+      
+        //Step 8
+        programGuide.ClickSaveConfigBtn();
+        contentParent.VerifyMessageStatus("The configuration options have been saved.");       
+        
 	}
 	
 }

@@ -46,7 +46,7 @@ public class Blocks {
     
     private static WebElement BlockLocator_Ddl(String blockName) {
     	
-    	return webDriver.findElement(By.xpath("//select[@id='edit-blocks-dfp-" + blockName + "-region']"));
+    	return webDriver.findElement(By.xpath("(//td[text()='" + blockName + "']/..//select)[1]"));
     }
     
     private static WebElement SelectedBlock_Ctr(String blockName) {
@@ -69,18 +69,11 @@ public class Blocks {
     public void SelectRegion(String blockName, String regionLocation) throws Exception{
     	
     	Reporter.log("Select the block name '" + blockName + "' from the '" + regionLocation + "' drop down list.");
-    	Thread.sleep(2000);//TODO replace this with a better wait
+    	Thread.sleep(1000);
     	new Select(BlockLocator_Ddl(blockName)).selectByVisibleText(regionLocation);
     	
     }
     
-    public void SelectRegionByName(String blockName, String regionLocation) throws Exception{
-    	
-    	String selectLocator = "//select[@name='blocks[" + blockName + "][region]']";
-    	Thread.sleep(2000);//TODO replace this with a better wait
-    	webDriver.selectFromDropdown(By.xpath(selectLocator), regionLocation);
-    	
-    }
     public void ClickSaveBlocksBtn(){
     	
     	Reporter.log("Click the 'Save Blocks' button.");

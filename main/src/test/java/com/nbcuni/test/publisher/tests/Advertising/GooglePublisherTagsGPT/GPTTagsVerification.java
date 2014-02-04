@@ -66,7 +66,7 @@ public class GPTTagsVerification extends ParentTest{
             overlay.SwitchToActiveFrame();
             Blocks blocks = new Blocks(webDriver);
             PageFactory.initElements(webDriver, blocks);
-            blocks.SelectRegion(adSlotName, "Sidebar first");
+            blocks.SelectRegion("DFP tag: " + adSlotName, "Sidebar first");
             blocks.ClickSaveBlocksBtn();
             ContentParent contentParent = new ContentParent(webDriver);
             PageFactory.initElements(webDriver, contentParent);
