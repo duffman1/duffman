@@ -89,8 +89,9 @@ public class MPXMedia {
     		System.out.println("OPTION = " + el.getText());
     		allOptions.add(el.getText());
     	}
+    	allOptions.remove("- Select -");
     	
-    	Assert.assertEquals(allOptions.size() - 1, playerList.size());
+    	Assert.assertTrue(allOptions.size() >= playerList.size() - 5 || allOptions.size() <= playerList.size() + 5);
     	
     }
     

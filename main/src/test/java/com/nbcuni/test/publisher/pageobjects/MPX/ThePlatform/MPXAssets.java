@@ -58,21 +58,7 @@ public class MPXAssets {
     
     public void WaitForImgPresent(String imgPath) throws Exception {
     	
-    	boolean imgPresent = false;
-
-    	for (int second = 0; ; second++){
-            if (second >= 60) {
-                Assert.fail("MPX image '" + imgPath + "' is not present after timeout");}
-            try{
-            	s.find(imgPath);
-                imgPresent = true;
-            }
-            catch (Exception e){
-            	imgPresent = false;
-            }
-            if (imgPresent == true){ break;}
-            Thread.sleep(500);
-        }
+    	s.wait(imgPath, 60); //TODO - add config option
     }
     
     public void WaitForImgNotPresent(String imgPath) throws Exception {
@@ -112,7 +98,6 @@ public class MPXAssets {
             }
             if (imgPresent == true){ break;}
         }
-    
     }
     
     public void Scroll(String DownOrUp, int wheelGradiant) throws Exception {
