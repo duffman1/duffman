@@ -75,7 +75,6 @@ public class MPXSelectAccount {
     	s.click(path + "SelectAccount/Account_Txb.png");
     	
     	Reporter.log("Wait for account to switch to the newly selected account.");
-        	Thread.sleep(1000);
         	mpxAssets.WaitForImgNotPresent(path + "SelectAccount/SwitchingAccounts_Ctr.png");
     	
     }

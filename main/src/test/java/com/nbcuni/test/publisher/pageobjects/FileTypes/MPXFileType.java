@@ -6,7 +6,10 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
 
@@ -25,31 +28,43 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 public class MPXFileType {
 
     private static CustomWebDriver webDriver;
-    private static AppLib al;
-    private final Util ul;
     
-    private static String EnableMPXValueOverrides_Cbx = "//input[@id='edit-pub-mpx-mpx-video-1-enable-default-field-overrides']";
-    private static String Save_Btn = "//input[@id='edit-submit']";
-    
+    //PAGE OBJECT CONSTRUCTOR
     public MPXFileType(final CustomWebDriver custWebDr) {
         webDriver = custWebDr;
-        ul = new Util(webDriver);
         
+    }
+    
+    //PAGE OBJECT IDENTIFIERS
+    @FindBy(how = How.ID, using = "edit-pub-mpx-mpx-video-1-url-alias-field")
+    private static WebElement URLAliasField_Ddl;
+    
+    @FindBy(how = How.ID, using = "edit-pub-mpx-mpx-video-1-enable-default-field-overrides")
+    private static WebElement EnableMPXValueOverrides_Cbx;
+    
+    @FindBy(how = How.ID, using = "edit-submit")
+    private static WebElement Save_Btn;
+    
+    
+    //PAGE OBJECT METHODS
+    public void SelectURLAliasField(String fieldName) throws Exception {
+    	
+    	Reporter.log("Select '" + fieldName + "' from the 'URL Alias Field' drop down list.");
+    	new Select(URLAliasField_Ddl).selectByVisibleText(fieldName);
     }
     
     public boolean EnableMPXValueOverrides() throws Exception {
     	
     	boolean isEnabled = false;
     	
-    	WebElement el = new WebDriverWait(webDriver, 10).until(ExpectedConditions.
-    			visibilityOf(webDriver.findElement(By.xpath(EnableMPXValueOverrides_Cbx))));
-    	
-    	if (el.isSelected() == true) {
+    	if (EnableMPXValueOverrides_Cbx.isSelected() == true) {
     		
     		isEnabled = true;
     	}
     	else {
-    		el.click();
+    		
+    		Reporter.log("Click the 'Enable MPX Value Overrides' check box.");
+    		EnableMPXValueOverrides_Cbx.click();
     	}
     	
     	return isEnabled;
@@ -57,8 +72,8 @@ public class MPXFileType {
     
     public void ClickSaveBtn () throws Exception {
     	
-    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.
-    			visibilityOf(webDriver.findElement(By.xpath(Save_Btn)))).click();
+    	Reporter.log("Click the 'Save' button.");
+    	Save_Btn.click();
     }
     
     

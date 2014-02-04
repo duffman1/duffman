@@ -56,7 +56,7 @@ public class MPXLogin {
     	Screen s = new Screen();
         String path = this.getImagePath();
     	
-    	s.wait(path + "Login/UserName_Txb.png", 30);
+        mpxAssets.WaitForImgPresent(path + "Login/SignIn_Ctr.png");
     	mpxAssets.WaitForImgPresent(path + "Login/UserName_Txb.png");
     	s.doubleClick(path + "Login/UserName_Txb.png");
         s.type(userName);

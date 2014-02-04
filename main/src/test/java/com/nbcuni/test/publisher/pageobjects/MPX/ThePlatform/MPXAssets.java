@@ -57,8 +57,22 @@ public class MPXAssets {
     }
     
     public void WaitForImgPresent(String imgPath) throws Exception {
-    	s.wait(imgPath, 60); 
-    	Thread.sleep(250);
+    	
+    	boolean imgPresent = false;
+
+    	for (int second = 0; ; second++){
+            if (second >= 60) {
+                Assert.fail("MPX image '" + imgPath + "' is not present after timeout");}
+            try{
+            	s.find(imgPath);
+                imgPresent = true;
+            }
+            catch (Exception e){
+            	imgPresent = false;
+            }
+            if (imgPresent == true){ break;}
+            Thread.sleep(500);
+        }
     }
     
     public void WaitForImgNotPresent(String imgPath) throws Exception {

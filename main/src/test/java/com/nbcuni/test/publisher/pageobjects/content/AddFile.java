@@ -7,6 +7,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.sikuli.script.Screen;
 import org.testng.Reporter;
+
 import com.nbcuni.test.lib.Util;
 import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXAssets;
@@ -62,9 +63,18 @@ public class AddFile {
     
     public void ClickPicturesUploadBtn() throws Exception {
     	
-    	Reporter.log("Click the local 'Pictures' icon.");
     	String path = this.getImagePath();
     	mpxAssets.WaitForImgPresent(path + "AddFile/Cancel_Btn.png");
+    	
+    	Reporter.log("Click the 'All Files' icon.");
+    	try {
+    		s.click(path + "FileUpload/AllMyFiles_Btn.png");
+    	}
+    	catch (Exception e) {
+    		s.click(path + "FileUpload/HighlightedAllMyFiles_Btn.png");
+    	}
+    	
+    	Reporter.log("Click the local 'Pictures' icon.");
     	Thread.sleep(500); //slight pause required here
     	try {
     		s.click(path + "AddFile/PicturesUpload_Btn.png");

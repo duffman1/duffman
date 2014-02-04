@@ -118,8 +118,14 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
         	//Step 6
         	MPXPublishMedia mpxPublishMedia = new MPXPublishMedia(webDriver, applib);
         	mpxPublishMedia.ClickPublishBtn();
-        	mpxPublishMedia.ClickPublishToAllCbx();
+        	mpxPublishMedia.ClickPublishToPub7PrimaryCbx();
         	mpxPublishMedia.ClickPublishFromDialogBtn();
+        	if (mpxPublishMedia.PublishSuccessful() == false) {
+            	mpxPublishMedia.ClickOKBtn();
+            	mpxPublishMedia.ClickPublishBtn();
+                mpxPublishMedia.ClickPublishToPub7PrimaryCbx();
+                mpxPublishMedia.ClickPublishFromDialogBtn();
+            }
         	
         	//Step 7
         	applib.openApplication();
@@ -139,9 +145,10 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
     	    PageFactory.initElements(webDriver, searchFor);
     	    searchFor.EnterTitle(mediaTitle);
     	    searchFor.ClickApplyBtn();
+    	    overlay.switchToDefaultContent();
     	    int I = 0;
     	    while (!searchFor.GetFirstMPXMediaSearchResult().equals(mediaTitle)) {
-    	    	I++; Thread.sleep(10000); //significant pause necessary as media ingestion can take a while from mpx
+    	    	I++; Thread.sleep(5000); //significant pause necessary as media ingestion can take a while from mpx
     	    	searchFor.ClickApplyBtn();
     	    	if (I >= 10) { break; }
     	    }
@@ -199,7 +206,7 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
         	//Step 28
         	mpxPublishMedia.ClickAdditionalOptionsArrow();
     	    mpxPublishMedia.ClickPublishUpdateLnk();
-    	    mpxPublishMedia.ClickPublishToAllCbx();
+    	    mpxPublishMedia.ClickPublishToPub7PrimaryCbx();
     	    mpxPublishMedia.ClickUpdateBtn();
     	    
     	    //Step 29
@@ -217,6 +224,7 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
     	    //Step 31
     	    searchFor.EnterTitle(mediaTitle);
     	    searchFor.ClickApplyBtn();
+    	    overlay.switchToDefaultContent();
     	    searchFor.VerifySearchResultsPresent(Arrays.asList(mediaTitle));
     	    String pub7DateToday = pub7DateFormat.format(dateToday);
     	    String pub7Date1YearInFuture = pub7DateFormat.format(date1YearInFuture);

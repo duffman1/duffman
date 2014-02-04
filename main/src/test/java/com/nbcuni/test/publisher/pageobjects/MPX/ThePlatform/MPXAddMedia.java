@@ -64,14 +64,22 @@ public class MPXAddMedia {
     public void ClickMoviesUploadBtn() throws Exception {
     	
     	String path = this.getImagePath();
+    	
+    	try {
+    		s.click(path + "FileUpload/AllMyFiles_Btn.png");
+    	}
+    	catch (Exception e) {
+    		s.click(path + "FileUpload/HighlightedAllMyFiles_Btn.png");
+    	}
+    	
     	mpxAssets.WaitForImgPresent(path + "FileUpload/MoviesUpload_Btn.png");
-    	Thread.sleep(500); //slight pause required here
     	try {
     		s.click(path + "FileUpload/MoviesUpload_Btn.png");
     	}
     	catch (Exception e) {
     		s.click(path + "FileUpload/HighlightedMoviesUpload_Btn.png");
     	}
+    	
     }
     
     public void ClickTestMovieBtn() throws Exception {
@@ -114,6 +122,17 @@ public class MPXAddMedia {
     	s.click(r, 1);
     	mpxAssets.ClearInput();
     	s.type(mediaTitle);
+    }
+    
+    public void EnterCanonicalURL(String urlTxt) throws Exception {
+    	
+    	String path = this.getImagePath();
+    	mpxAssets.ScrollDownForImgPresent(path + "Media/CanonicalURL_Txb.png");
+    	Pattern pImage = new Pattern(path + "Media/CanonicalURL_Txb.png").targetOffset(0, 15);
+    	Region r = s.exists(pImage, 1);
+    	s.click(r, 1);
+    	mpxAssets.ClearInput();
+    	s.type(urlTxt);
     }
     
     public void EnterAuthor(String author) throws Exception {

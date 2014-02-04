@@ -42,6 +42,7 @@ public class Settings {
     private static String SelectImportAccount2_Ddl = "(//select[contains(@id, 'edit-import-accounts-settings')])[2]";
     private static String SelectImportAccount3_Ddl = "(//select[contains(@id, 'edit-import-accounts-settings')])[3]";
     private static String SelectImportAccount4_Ddl = "(//select[contains(@id, 'edit-import-accounts-settings')])[4]";
+    private static String SelectImportAccount5_Ddl = "(//select[contains(@id, 'edit-import-accounts-settings')])[5]";
     private static String SetImportAccount_Btn = "//input[@id='edit-import-accounts-actions-submit']";
     private static String SaveConfigurations_Btn = "//input[@id='edit-submit']";
     private static String ConnectToMPX_Btn = "//input[@value='Connect to MPX']";
@@ -109,9 +110,11 @@ public class Settings {
     	boolean ddl2Present = false;
     	boolean ddl3Present = false;
         boolean ddl4Present = false;
+        boolean ddl5Present = false;
     	Select ddl2 = null;
     	Select ddl3 = null;
         Select ddl4 = null;
+        Select ddl5 = null;
     	
     	Select ddl1 = new Select(webDriver.findElement(By.xpath(SelectImportAccount1_Ddl)));
     	
@@ -135,17 +138,27 @@ public class Settings {
             ddl4Present = true;
         }
         catch (Exception e) {}
+        
+        try {
+
+            ddl5 = new Select(webDriver.findElement(By.xpath(SelectImportAccount5_Ddl)));
+            ddl5Present = true;
+        }
+        catch (Exception e) {}
     	
     	List<WebElement> listOptions = ddl1.getOptions();
     	if (ddl2Present == true) { listOptions.addAll(ddl2.getOptions()); }
     	if (ddl3Present == true) { listOptions.addAll(ddl3.getOptions()); }
         if (ddl4Present == true) { listOptions.addAll(ddl4.getOptions()); }
+        if (ddl5Present == true) { listOptions.addAll(ddl5.getOptions()); }
     	
     	List<String> optionValues = new ArrayList<String>();
     	for (WebElement option : listOptions) {
     		
     		optionValues.add(option.getText());
     	}
+    	
+    	optionValues.remove("- Select -");
     	
     	for (String account : accountNames) {
     		

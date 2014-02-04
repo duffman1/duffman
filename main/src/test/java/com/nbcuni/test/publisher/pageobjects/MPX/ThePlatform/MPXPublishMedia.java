@@ -63,6 +63,15 @@ public class MPXPublishMedia {
     	s.click(r, 1);
     }
     
+    public void ClickPublishToPub7PrimaryCbx() throws Exception {
+    	
+    	String path = this.getImagePath();
+    	mpxAssets.WaitForImgPresent(path + "Publish/Pub7PrimaryPublishProfile_Lbl.png");
+    	Pattern pImage = new Pattern(path + "Publish/Pub7PrimaryPublishProfile_Lbl.png").targetOffset(-18, 0);
+    	Region r = s.exists(pImage, 1);
+    	s.click(r, 1);
+    }
+    
     public void ClickPublishFromDialogBtn() throws Exception {
     	
     	String path = this.getImagePath();
@@ -73,6 +82,29 @@ public class MPXPublishMedia {
     	
     }
     
+    public boolean PublishSuccessful() {
+    	
+    	String path = this.getImagePath();
+    	boolean publishSuccessful = false;
+    	try {
+    		s.find(path + "Publish/PublishError_Ctr.png");
+    		publishSuccessful = false;
+    	}
+    	catch (Exception e) {
+    		publishSuccessful = true;
+    	}
+    	
+    	return publishSuccessful;
+    }
+    
+    public void ClickOKBtn() throws Exception {
+    	
+    	String path = this.getImagePath();
+    	mpxAssets.WaitForImgPresent(path + "Common/OK_Btn.png");
+    	s.click(path + "Common/OK_Btn.png");
+    	
+    }
+
     public void ClickAdditionalOptionsArrow() throws Exception {
     	
     	String path = this.getImagePath();

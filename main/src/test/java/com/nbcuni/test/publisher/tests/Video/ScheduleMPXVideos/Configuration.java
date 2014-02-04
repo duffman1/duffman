@@ -67,6 +67,7 @@ public class Configuration extends ParentTest{
             
             //Step 12
             MPXFileType mpxFileType = new MPXFileType(webDriver);
+            PageFactory.initElements(webDriver, mpxFileType);
             boolean isMPXValueOverrideEnabled = mpxFileType.EnableMPXValueOverrides();
             if (isMPXValueOverrideEnabled == false) {
             	
