@@ -3,13 +3,25 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
+<<<<<<< HEAD
       <class name="com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MultipleMPXAccountsPerLoginVerification">
+=======
+      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ProgramGuides.ROVITVSchedule.ProgramGuideVerification">
+>>>>>>> refs/remotes/origin/Faizan
         <methods>
           <include name="startSelenium"/>
+<<<<<<< HEAD
           <include name="MultipleMPXAccountsPerLoginVerification_Test"/>
+=======
+>>>>>>> refs/remotes/origin/Faizan
           <include name="stopSelenium"/>
+          <include name="CreatePost"/>
         </methods>
+<<<<<<< HEAD
       </class> <!-- com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MultipleMPXAccountsPerLoginVerification -->
+=======
+      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ProgramGuides.ROVITVSchedule.ProgramGuideVerification -->
+>>>>>>> refs/remotes/origin/Faizan
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
