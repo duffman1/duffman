@@ -102,7 +102,7 @@ public class CastCrewFieldCollectionsVerification_TVEpisode extends ParentTest {
         //Step 5
         overlay.SwitchToActiveFrame();
         String TVEpisodeName = random.GetCharacterString(15);        
-        BasicInformation basicInformation =new BasicInformation(webDriver);
+        BasicInformation basicInformation = new BasicInformation(webDriver);
         basicInformation.EnterTitle(TVEpisodeName);
         basicInformation.EnterEpisodeNumber("1");
     	basicInformation.EnterSynopsis();       
@@ -129,8 +129,9 @@ public class CastCrewFieldCollectionsVerification_TVEpisode extends ParentTest {
         workFlow.ClickWorkflowTab("Revisions");
         overlay.switchToDefaultContent();
         overlay.SwitchToActiveFrame();
-        Revisions revision = new Revisions(webDriver);
-        revision.ClickEditMenuBtn(TVEpisodeName);
+        Revisions revisions = new Revisions(webDriver, applib);
+        PageFactory.initElements(webDriver, revisions);
+        revisions.ClickEditMenuBtn(TVEpisodeName);
         overlay.switchToDefaultContent();
         overlay.SwitchToActiveFrame();
         PublishingOptions publishingOptions = new PublishingOptions(webDriver);
@@ -165,7 +166,7 @@ public class CastCrewFieldCollectionsVerification_TVEpisode extends ParentTest {
         workFlow.ClickWorkflowTab("Revisions");
         overlay.switchToDefaultContent();
         overlay.SwitchToActiveFrame();
-        revision.ClickEditMenuBtn(TVEpisodeName2);
+        revisions.ClickEditMenuBtn(TVEpisodeName2);
         overlay.switchToDefaultContent();
         overlay.SwitchToActiveFrame();
         publishingOptions.ClickPublishingOptionsLnk();
@@ -199,15 +200,15 @@ public class CastCrewFieldCollectionsVerification_TVEpisode extends ParentTest {
         workFlow.ClickWorkflowTab("Revisions");
         overlay.switchToDefaultContent();
         overlay.SwitchToActiveFrame();
-        revision.ClickEditExtendMenuBtn(TVEpisodeName2);
-        revision.ClickEditMenuDeleteBtn(TVEpisodeName2);
+        revisions.ClickEditExtendMenuBtn(TVEpisodeName2);
+        revisions.ClickEditMenuDeleteBtn(TVEpisodeName2);
         overlay.switchToDefaultContent();
         overlay.SwitchToActiveFrame();
-        revision.ClickDeleteConfirmBtn();
+        revisions.ClickDeleteConfirmBtn();
         overlay.switchToDefaultContent();
         overlay.SwitchToActiveFrame();
         //Click on Movie 3- Edit
-        revision.ClickEditMenuBtn(TVEpisodeName3);
+        revisions.ClickEditMenuBtn(TVEpisodeName3);
         overlay.switchToDefaultContent();
         overlay.SwitchToActiveFrame();
         contentParent.VerifyPageContentNotPresent(Arrays.asList("Notice: Trying to get property of non-object in field_collection_field_get_entity() (line 1608 of /mnt/www/html/nbcuqa5dev/docroot/profiles/all/modules/contrib/field_collection/field_collection.module)"));

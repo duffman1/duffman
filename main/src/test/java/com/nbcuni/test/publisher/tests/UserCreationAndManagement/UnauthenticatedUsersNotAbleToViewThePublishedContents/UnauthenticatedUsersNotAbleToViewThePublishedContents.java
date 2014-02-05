@@ -96,7 +96,8 @@ public class UnauthenticatedUsersNotAbleToViewThePublishedContents extends Paren
         webDriver.navigate().to(ContentURL);
       
         //Step8
-        Revisions revisions = new Revisions(webDriver);
+        Revisions revisions = new Revisions(webDriver, applib);
+        PageFactory.initElements(webDriver, revisions);
         revisions.ClickRevisionTab();
         overlay.SwitchToFrame("Revisions dialog");        
         revisions.EnterLogMessageForStateChange("This Revision Comment");

@@ -37,9 +37,10 @@ public class Logout {
     
     
     //PAGE OBJECT METHODS
-    public void ClickLogoutBtn() {
+    public void ClickLogoutBtn() throws Exception {
     	
     	Reporter.log("Click the 'Logout' button.");
+    	Thread.sleep(1000); //slight pause needed here
     	LogOut_Btn.click();
     	webDriver.navigate().refresh(); //TODO - logout requires a refresh for some reason. Figure out a better way
     	

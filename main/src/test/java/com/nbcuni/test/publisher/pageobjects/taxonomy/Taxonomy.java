@@ -62,13 +62,15 @@ public class Taxonomy {
     				tier1Locator = Home_Lnk;
         			tier2Locator = Home_Lnk + "/../..//span[contains(text(), 'Development')]";
         			tier3Locator = tier2Locator + "/..//a[contains(text(), '" + tierLevel[2] + "')]";
-            		
+            		Thread.sleep(500);
             		WebElement tier1Lnk = new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOf(webDriver.findElement(
             				By.xpath(tier1Locator))));
             		webDriver.executeScript(MouseOver_Js, tier1Lnk);
+            		Thread.sleep(500);
             		WebElement tier2Lnk = new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOf(webDriver.findElement(
             				By.xpath(tier2Locator))));
             		webDriver.executeScript(MouseOver_Js, tier2Lnk);
+            		Thread.sleep(500);
             		WebElement tier3Lnk = new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOf(webDriver.findElement(
             				By.xpath(tier3Locator))));
             		tier3Lnk.click();
@@ -83,10 +85,11 @@ public class Taxonomy {
     			
     			tier1Locator = Home_Lnk;
     			tier2Locator = Home_Lnk + "/../..//a[text()='" + tierLevel[1] + "']";
-        		
+    			Thread.sleep(500);
         		WebElement tier1Lnk = new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOf(webDriver.findElement(
         				By.xpath(tier1Locator))));
         		webDriver.executeScript(MouseOver_Js, tier1Lnk);
+        		Thread.sleep(500);
         		WebElement tier2Lnk = new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOf(webDriver.findElement(
         				By.xpath(tier2Locator))));
         		tier2Lnk.click();
@@ -97,6 +100,7 @@ public class Taxonomy {
     	
     		if (depth == 1) { //tier 1 taxonomy
     			tier1Locator = TaxonomyBase + "//a[contains(text(),'" + tierLevel[0] + "')]";
+    			Thread.sleep(500);
     			new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOf(webDriver.findElement(
     					By.xpath(tier1Locator)))).click();
     		}
@@ -104,10 +108,11 @@ public class Taxonomy {
     		
     			tier1Locator = TaxonomyBase + "//a[text()='" + tierLevel[0] + "']";
     			tier2Locator = TaxonomyBase + "//a[contains(text(),'" + tierLevel[0] + "')]" + "/../ul//a[contains(text(),'" + tierLevel[1] +"')]";
-    		
+    			Thread.sleep(500);
     			WebElement tier1Lnk = new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOf(webDriver.findElement(
     					By.xpath(tier1Locator))));
     			webDriver.executeScript(MouseOver_Js, tier1Lnk);
+    			Thread.sleep(500);
     			WebElement tier2Lnk = new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOf(webDriver.findElement(
     					By.xpath(tier2Locator))));
     			tier2Lnk.click();
@@ -119,13 +124,15 @@ public class Taxonomy {
     			tier1Locator = TaxonomyBase + "//a[text()='" + tierLevel[0] + "']";
     			tier2Locator = TaxonomyBase + "//a[contains(text(),'" + tierLevel[0] + "')]" + "/../ul//a[contains(text(),'" + tierLevel[1] +"')]";
     			tier3Locator = TaxonomyBase + "//a[contains(text(),'" + tierLevel[0] + "')]" + "/../ul//a[contains(text(),'" + tierLevel[1] +"')]" + "/..//a[contains(text(),'" + tierLevel[2] + "')]";
-    		
+    			Thread.sleep(500);
     			WebElement tier1Lnk = new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOf(webDriver.findElement(
     					By.xpath(tier1Locator))));
     			webDriver.executeScript(MouseOver_Js, tier1Lnk);
+    			Thread.sleep(500);
     			WebElement tier2Lnk = new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOf(webDriver.findElement(
     					By.xpath(tier2Locator))));
     			webDriver.executeScript(MouseOver_Js, tier2Lnk);
+    			Thread.sleep(500);
     			WebElement tier3Lnk = new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOf(webDriver.findElement(
     					By.xpath(tier3Locator))));
     			tier3Lnk.click();
@@ -138,16 +145,19 @@ public class Taxonomy {
     			tier2Locator = TaxonomyBase + "//a[contains(text(),'" + tierLevel[0] + "')]" + "/../ul//a[contains(text(),'" + tierLevel[1] +"')]";
     			tier3Locator = TaxonomyBase + "//a[contains(text(),'" + tierLevel[0] + "')]" + "/../ul//a[contains(text(),'" + tierLevel[1] +"')]" + "/..//a[contains(text(),'" + tierLevel[2] + "')]";
     			tier4Locator = TaxonomyBase + "//a[contains(text(),'" + tierLevel[0] + "')]" + "/../ul//a[contains(text(),'" + tierLevel[1] +"')]" + "/..//a[contains(text(),'" + tierLevel[2] + "')]" + "/..//a[contains(text(),'" + tierLevel[3] + "')]";
-    		
+    			Thread.sleep(500);
     			WebElement tier1Lnk = new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOf(webDriver.findElement(
     					By.xpath(tier1Locator))));
     			webDriver.executeScript(MouseOver_Js, tier1Lnk);
+    			Thread.sleep(500);
     			WebElement tier2Lnk = new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOf(webDriver.findElement(
     					By.xpath(tier2Locator))));
     			webDriver.executeScript(MouseOver_Js, tier2Lnk);
+    			Thread.sleep(500);
     			WebElement tier3Lnk = new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOf(webDriver.findElement(
     					By.xpath(tier3Locator))));
     			webDriver.executeScript(MouseOver_Js, tier3Lnk);
+    			Thread.sleep(500);
     			WebElement tier4Lnk = new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOf(webDriver.findElement(
     					By.xpath(tier4Locator))));
     			tier4Lnk.click();
@@ -155,7 +165,6 @@ public class Taxonomy {
     		}
     	}
     }
-    
     
     public void VerifyContentMenuExist(String MenuName) throws Exception {
     	

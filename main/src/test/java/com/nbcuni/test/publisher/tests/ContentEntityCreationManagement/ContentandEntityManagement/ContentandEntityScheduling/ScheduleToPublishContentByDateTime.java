@@ -54,7 +54,8 @@ public class ScheduleToPublishContentByDateTime extends ParentTest {
         workflow.VerifyWorkflowTab("Schedule");
 
         //Step 4
-        Revisions revisions = new Revisions(webDriver);
+        Revisions revisions = new Revisions(webDriver, applib);
+        PageFactory.initElements(webDriver, revisions);
         revisions.ClickRevisionTab();
         overlay.SwitchToFrame("Revisions dialog");
         RevisionState revisionstate = new RevisionState(webDriver);

@@ -160,7 +160,8 @@ public class CreateConfigureAndValidatePermissionsEditor extends ParentTest{
         overlay.SwitchToFrame("Content Revisions");
         
         //Step 23
-        Revisions revisions = new Revisions(webDriver);
+        Revisions revisions = new Revisions(webDriver, applib);
+        PageFactory.initElements(webDriver, revisions);
         revisions.VerifyContentItemEditDeleteNotPresent(postTitle2);
         
         //Step 24

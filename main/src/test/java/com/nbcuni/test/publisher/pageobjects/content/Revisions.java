@@ -1,91 +1,113 @@
 package com.nbcuni.test.publisher.pageobjects.content;
 
-
 import java.util.concurrent.TimeUnit;
-
-import com.nbcuni.test.lib.Util;
 import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.webdriver.CustomWebDriver;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
 import org.testng.Assert;
-
+import org.testng.Reporter;
 
 /*********************************************
  * publisher.nbcuni.com Revisions State Library. Copyright
  * 
- * @author Brandon Clark/Faizan Khan
- * @version 1.0 Date: December 26, 2013
+ * @author Brandon Clark
+ * @version 1.1 Date: February 4, 2014
  *********************************************/
 
 public class Revisions {
 
-    private static CustomWebDriver webDriver;
-    private static AppLib al;
-    private final Util ul;
-    private static String RevComment = ".//*[@id='edit-event-comment']";
-    private static String RevUpdate_btn=".//*[@id='edit-submit']";
-    private static String RevisionLink=".//a[contains(text(),'Revisions')]";
-    private static String MessageForStateChange_Txa = "(//*[@id='edit-event-comment'])[1]";
-    private static String DeleteRev_Btn=".//*[@id='edit-submit']";
-    public Revisions(final CustomWebDriver custWebDr) {
+	private static CustomWebDriver webDriver;
+	private static AppLib applib;
+    
+	//PAGE OBJECT CONSTRUCTOR
+	public Revisions(final CustomWebDriver custWebDr, AppLib applib) {
         webDriver = custWebDr;
-        ul = new Util(webDriver);
-        
+        this.applib = applib;
     }
-   
-    public void ClickEditExtendMenuBtn(String contentItemTitle) throws Exception {
+	
+	//PAGE OBJECT IDENTIFIERS
+	@FindBy(how = How.ID, using = "edit-submit")
+    private static WebElement UpdateState_Btn;
+	
+	@FindBy(how = How.XPATH, using = "//a[contains(text(),'Revisions')]")
+    private static WebElement Revision_Lnk;
+	
+	@FindBy(how = How.XPATH, using = "(//*[@id='edit-event-comment'])[1]")
+    private static WebElement MessageForStateChange_Txa;
+	
+	@FindBy(how = How.ID, using = "edit-submit")
+    private static WebElement DeleteRevision_Btn;
+    
+	private static WebElement ContentItem_Ttl(String contentItemTtl) {
+		return webDriver.findElement(By.xpath("//table[contains(@class, 'views-table')]//a[contains(text(), '" + contentItemTtl + "')]"));
+	}
+	
+	private static WebElement EditExtendMenu_Btn(String contentItemTtl) {
+		return webDriver.findElement(By.xpath("//table[contains(@class, 'views-table')]//a[contains(text(), '" + contentItemTtl + "')]/../..//a[text()='operations']"));
+	}
+	
+	private static WebElement EditMenuDelete_Btn(String contentItemTtl) {
+		return webDriver.findElement(By.xpath("//table[contains(@class, 'views-table')]//a[contains(text(), '" + contentItemTtl + "')]/../..//a[text()='Delete']"));
+	}
+	
+	private static WebElement EditMenu_Btn(String contentItemTtl) {
+		return webDriver.findElement(By.xpath("//table[contains(@class, 'views-table')]//a[contains(text(), '" + contentItemTtl + "')]/../..//a[text()='Edit']"));
+	}
+	
+	private static WebElement ShareMenu_Btn(String contentItemTtl) {
+		return webDriver.findElement(By.xpath("//table[contains(@class, 'views-table')]//a[contains(text(), '" + contentItemTtl + "')]/../..//a[text()='Share']"));
+	}
+	
+	
+	//PAGE OBJECT METHODS
+    public void ClickEditExtendMenuBtn(String contentItemTtl) throws Exception {
     	
-    	WebElement element = new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(
-    			By.xpath("//table[contains(@class, 'views-table')]//a[contains(text(), '" + contentItemTitle + "')]/../..//a[text()='operations']")));
-    	element.click();
+    	Reporter.log("Click the 'Edit' extend menu button.");
+    	EditExtendMenu_Btn(contentItemTtl).click();
+    	Thread.sleep(1000);
     }
     
-    public void ClickEditMenuDeleteBtn(String contentItemTitle) throws Exception {
+    public void ClickEditMenuDeleteBtn(String contentItemTtl) throws Exception {
     	
-    	WebElement element = new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(
-    			By.xpath("//table[contains(@class, 'views-table')]//a[contains(text(), '" + contentItemTitle + "')]/../..//a[text()='Delete']")));
-    	element.click();
+    	Reporter.log("Click the 'Delete' button.");
+    	EditMenuDelete_Btn(contentItemTtl).click();
     }
-    public void ClickEditMenuBtn(String contentItemTitle) throws Exception {
+    public void ClickEditMenuBtn(String contentItemTtl) throws Exception {
     	
-    	WebElement element = new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(
-    			By.xpath("//table[contains(@class, 'views-table')]//a[contains(text(), '" + contentItemTitle + "')]/../..//a[text()='Edit']")));
-    	element.click();
+    	Reporter.log("Click the 'Edit' menu button.");
+    	EditMenu_Btn(contentItemTtl).click();
     }
 
-    public void ClickShareMenuBtn(String contentItemTitle) throws Exception {
+    public void ClickShareMenuBtn(String contentItemTtl) throws Exception {
     	
-    	WebElement element = new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(
-    			By.xpath("//table[contains(@class, 'views-table')]//a[contains(text(), '" + contentItemTitle + "')]/../..//a[text()='Share']")));
-    	element.click();
+    	Reporter.log("Click the 'Share' menu button.");
+    	ShareMenu_Btn(contentItemTtl).click();
     }
     
-    public void VerifyContentItemEditDelete(String contentItemTitle) throws Exception {
+    public void VerifyContentItemEditDelete(String contentItemTtl) throws Exception {
     	
-    	WebElement expandBtn = new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(
-    			By.xpath("//table[contains(@class, 'views-table')]//a[contains(text(), '" + contentItemTitle + "')]/../..//a[text()='operations']")));
-    	expandBtn.click();
+    	this.ClickEditExtendMenuBtn(contentItemTtl);
+    	Reporter.log("Verify Edit menu 'Edit' button is present.");
+    	EditMenu_Btn(contentItemTtl).isDisplayed();
     	
-    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOf(webDriver.findElement(By.xpath(
-    			"//table[contains(@class, 'views-table')]//a[contains(text(), '" + contentItemTitle + "')]/../..//a[text()='Edit']"))));
-    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOf(webDriver.findElement(By.xpath(
-    			"//table[contains(@class, 'views-table')]//a[contains(text(), '" + contentItemTitle + "')]/../..//a[text()='Delete']"))));
+    	Reporter.log("Verify Edit menu 'Delete' buttton is present.");
+    	EditMenuDelete_Btn(contentItemTtl).isDisplayed();
     	
     }
 
-    public void VerifyContentItemEditDeleteNotPresent(String contentItemTitle) throws Exception {
+    public void VerifyContentItemEditDeleteNotPresent(String contentItemTtl) throws Exception {
     	
-    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(
-    			By.xpath("//table[contains(@class, 'views-table')]//a[contains(text(), '" + contentItemTitle + "')]")));
+    	Reporter.log("Wait for the content item titled '" + contentItemTtl + "' to be present in revision list.");
+    	ContentItem_Ttl(contentItemTtl).isDisplayed();
     	
-    	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+    	webDriver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
     	boolean elPresent = true;
     	try {
-    		webDriver.findElement(By.xpath("//table[contains(@class, 'views-table')]//a[contains(text(), '" + contentItemTitle + "')]/../..//a[text()='operations']"));
+    		
+    		EditExtendMenu_Btn(contentItemTtl).isDisplayed();
     		elPresent = true;
     	}
     	catch (Exception e) {
@@ -95,39 +117,32 @@ public class Revisions {
     	if (elPresent == true) {
     		Assert.fail("Content item Edit/Delete button present when it should not be");
     	}
-    	webDriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-    }
-    
-    public void PopulateRevisionComment(String commenttext) throws Exception {
-    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOf(
-                webDriver.findElement(By.xpath(RevComment))));
-    	webDriver.type(RevComment,commenttext );   	
-    	
+    	webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
     }
     
     public void ClickUpdateStateBtn() throws Exception {    	
-    	WebElement element = new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(
-    			By.xpath(RevUpdate_btn)));
-    	element.click();
+    	
+    	Reporter.log("Click the 'Update State' button.");
+    	UpdateState_Btn.click();
     }
     
     public void ClickRevisionTab() throws Exception{
-    	WebElement revision = new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(
-    			By.xpath(RevisionLink)));
-    	revision.click();
+    	
+    	Reporter.log("Click the 'Revision' link.");
+    	Revision_Lnk.click();
     }
 
     public void EnterLogMessageForStateChange(String message) throws Exception {
-        new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOf(
-            webDriver.findElement(By.xpath(MessageForStateChange_Txa)))).sendKeys(message);
+        
+    	Reporter.log("Enter '" + message + "' in the 'Message for state change' text area.");
+    	MessageForStateChange_Txa.sendKeys(message);
 
     }
     
     public void ClickDeleteConfirmBtn() throws Exception {
     	
-    	WebElement element = new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(
-    			By.xpath(DeleteRev_Btn)));
-    	element.click();
+    	Reporter.log("Click the 'Confirm Delete' button.");
+    	DeleteRevision_Btn.click();
     }
     
     

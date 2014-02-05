@@ -134,7 +134,8 @@ public class ConfiguringPublisherAutopublishingToFacebookTimeandWall extends Par
         overlay.SwitchToFrame("Revisions");
         
         //Step 12
-        Revisions revisions = new Revisions(webDriver);
+        Revisions revisions = new Revisions(webDriver, applib);
+        PageFactory.initElements(webDriver, revisions);
         revisions.ClickEditExtendMenuBtn(postTitle);
         revisions.ClickShareMenuBtn(postTitle);
         Share share = new Share(webDriver);

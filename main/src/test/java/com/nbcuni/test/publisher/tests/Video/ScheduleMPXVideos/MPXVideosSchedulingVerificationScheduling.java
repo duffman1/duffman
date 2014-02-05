@@ -7,15 +7,19 @@ import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
 import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXAddMedia;
 import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXLogin;
 import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXPublishMedia;
+import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXSearch;
 import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXSelectAccount;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.content.SearchFor;
 import com.nbcuni.test.publisher.pageobjects.content.Workflow;
 import com.nbcuni.test.publisher.pageobjects.queues.ScheduleQueue;
+
 import junit.framework.Assert;
+
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
+
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
@@ -189,6 +193,10 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
     	    
     	    //Step 26
     	    mpxLogin.OpenMPXThePlatform();
+    	    mpxSelectAccount.SelectAccount("DB TV");
+    	    MPXSearch mpxSearch = new MPXSearch(webDriver, applib);
+    	    mpxSearch.EnterSearchTxt(mediaTitle);
+    	    mpxSearch.ClickSearchByTitleLnk();
     	    mpxAddMedia.GiveFocusToMediaItem();
     	    Calendar calToday = Calendar.getInstance();
         	Date dateToday = calToday.getTime();

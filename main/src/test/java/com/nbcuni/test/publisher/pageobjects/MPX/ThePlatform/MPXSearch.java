@@ -60,7 +60,7 @@ public class MPXSearch {
     	
     	String path = this.getImagePath();
     	mpxAssets.WaitForImgPresent(path + "Search/Search_Txb.png");
-    	Pattern pImage = new Pattern(path + "Search/Search_Txb.png").targetOffset(-10, 0);
+    	Pattern pImage = new Pattern(path + "Search/Search_Txb.png").targetOffset(-30, 0);
     	Region r = s.exists(pImage, 1);
     	s.click(r, 1);
     	mpxAssets.WaitForImgPresent(path + "Search/Titles_Lnk.png");
