@@ -1,11 +1,14 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ProgramGuides.ROVITVSchedule;
 
+import net.lightbody.bmp.proxy.jetty.html.Block;
+
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
 import com.nbcuni.test.lib.Util;
 import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.publisher.common.ParentTest;
+import com.nbcuni.test.publisher.pageobjects.Blocks;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Configuration.ProgramGuide;
 import com.nbcuni.test.publisher.pageobjects.Cron.Cron;
@@ -28,7 +31,7 @@ public class ProgramGuideVerification extends ParentTest{
      * Step 10 - Verify that the row, "No data found" does not appear anymore.<br>    
      * Step 11 - Verify that TV Listings information appears underneath the "Date", "Show" and "Information" column starting from the current date.
      * Step 12 - Scroll down, and verify that the TV Listings information appears for the next day also.
-
+	 * Step 13 - Disable Program Guide block
      * @throws Throwable No Return values are needed
      *************************************************************************************/
 	@Test(groups = {"full" })
@@ -70,6 +73,14 @@ public class ProgramGuideVerification extends ParentTest{
         
         //Step 10 through 12 (truncated)
         programGuide.VerifyProgramGuideContainsShows();
+        
+        //Step 13
+        taxonomy.NavigateSite("Structure>>Blocks");
+        overlay.SwitchToActiveFrame();
+        Blocks blocks = new Blocks(webDriver);
+        PageFactory.initElements(webDriver, blocks);
+        blocks.SelectRegion("Program Guide", "- None -");
+        blocks.ClickSaveBlocksBtn();
         
     }
     

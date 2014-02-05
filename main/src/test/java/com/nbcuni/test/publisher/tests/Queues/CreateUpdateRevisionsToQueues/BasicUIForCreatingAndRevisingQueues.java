@@ -3,8 +3,11 @@ package com.nbcuni.test.publisher.tests.Queues.CreateUpdateRevisionsToQueues;
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
+import java.util.TimeZone;
+
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
+
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.content.*;
@@ -110,7 +113,9 @@ public class BasicUIForCreatingAndRevisingQueues extends ParentTest{
         overlay.switchToDefaultContent();
         overlay.SwitchToFrame("Queues Revision list");
         SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
+        sdf.setTimeZone(TimeZone.getTimeZone("UTC"));
     	String date = sdf.format(new Date());
+    	
         queuesRevisionList.VerifyStateFlowHistoryEvent("Revision was set from Draft to Draft on " + date);
         
         //Step 12 on

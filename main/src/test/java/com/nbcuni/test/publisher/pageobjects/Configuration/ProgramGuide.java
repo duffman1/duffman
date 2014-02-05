@@ -1,7 +1,11 @@
 package com.nbcuni.test.publisher.pageobjects.Configuration;
 
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
+import java.util.TimeZone;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -101,17 +105,23 @@ public class ProgramGuide {
     
     public void VerifyProgramGuideContainsShows() throws Exception {
     	
-    	Reporter.log("Verify that there is at least one show in the program guide table.");
-    	List<WebElement> allRows = ProgramGuideTbl_Rws();
-    	boolean showPresent = false;
-    	for (WebElement row : allRows) {
-    		if (!row.getText().contains("Network Programming")) {
-    			showPresent = true;
-    			break;
+    	Calendar calendar = Calendar.getInstance(TimeZone.getTimeZone("UTC"));
+    	if (calendar.get(Calendar.HOUR_OF_DAY) < 18 && calendar.get(Calendar.HOUR_OF_DAY) > 14) {
+    		Reporter.log("Verify that there is at least one show in the program guide table.");
+    		List<WebElement> allRows = ProgramGuideTbl_Rws();
+    		boolean showPresent = false;
+    		for (WebElement row : allRows) {
+    			if (!row.getText().contains("Network Programming")) {
+    				showPresent = true;
+    				break;
+    			}
+    		}
+    		if (showPresent == false) {
+    			Assert.fail("No shows present in the Program Guide.");
     		}
     	}
-    	if (showPresent == false) {
-    		Assert.fail("No shows present in the Program Guide.");
+    	else {
+    		Reporter.log("After 8pm, show availability limited.");
     	}
     }
     
