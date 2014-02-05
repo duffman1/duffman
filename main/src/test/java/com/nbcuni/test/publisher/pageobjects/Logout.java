@@ -2,6 +2,9 @@ package com.nbcuni.test.publisher.pageobjects;
 
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
@@ -21,32 +24,23 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 public class Logout {
 
     private static CustomWebDriver webDriver;
-    private static AppLib al;
-    private final Util ul;
     
-    private static String Page_Title = "Site-Install";
-    private static String LogOut_Btn = "(//a[text()='Log out'])[1]";
-    
-    
-
+    //PAGE OBJECT CONSTRUCTOR
     public Logout(final CustomWebDriver custWebDr) {
         webDriver = custWebDr;
-        ul = new Util(webDriver);
         
     }
     
+    //PAGE OBJECT IDENTIFIERS
+    @FindBy(how = How.XPATH, using = "(//a[text()='Log out'])[1]")
+    private static WebElement LogOut_Btn;
     
-    public void LogoutBtnPresent() throws Exception {
-    	
-    	ul.verifyObjectExists(LogOut_Btn);
-    	
-    }
     
+    //PAGE OBJECT METHODS
     public void ClickLogoutBtn() {
     	
-    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.
-    			elementToBeClickable(By.xpath(LogOut_Btn))).click();
-    	
+    	Reporter.log("Click the 'Logout' button.");
+    	LogOut_Btn.click();
     	webDriver.navigate().refresh(); //TODO - logout requires a refresh for some reason. Figure out a better way
     	
     }

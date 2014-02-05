@@ -58,6 +58,7 @@ public class PublishContenttoUnauthenticatedUsers extends ParentTest{
         //Step 4
         String ContentURL = webDriver.getCurrentUrl();
         Logout logout = new Logout(webDriver);
+        PageFactory.initElements(webDriver, logout);
         logout.ClickLogoutBtn();
         webDriver.navigate().to(ContentURL);
         contentParent.VerifyPostTitle(title);

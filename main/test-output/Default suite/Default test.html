@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Feb 04 21:01:57 EST 2014</td>
+<td>Started on:</td><td>Wed Feb 05 11:08:27 EST 2014</td>
 </tr>
-<tr><td>Total time:</td><td>95 seconds (95536 ms)</td>
+<tr><td>Total time:</td><td>89 seconds (89883 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,28 +75,81 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ProgramGuides.ROVITVSchedule.ProgramGuideVerification.ProgramGuideVerification_Test()'><b>ProgramGuideVerification_Test</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ProgramGuides.ROVITVSchedule.ProgramGuideVerification<br/>
-<a href="#Output-974905868" onClick='toggleBox("Output-974905868", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIFKeywordsIngestedAsPhraseInsteadSetsWords.EXIFKeywordsIngestedPhraseInsteadSetsWords.EXIFKeywordsIngestedPhraseInsteadSetsWords_Test()'><b>EXIFKeywordsIngestedPhraseInsteadSetsWords_Test</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIFKeywordsIngestedAsPhraseInsteadSetsWords.EXIFKeywordsIngestedPhraseInsteadSetsWords<br/>
+<a href="#Output-1085837532" onClick='toggleBox("Output-1085837532", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-974905868" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-974905868">
+<a href="#Output-1085837532" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1085837532">
 Open url 'http://qa5dev.publisher.nbcuni.com'.<br/>
 Enter the user's email address in the 'Email Address' text box.<br/>
 Enter the user's password in the 'Password' text box.<br/>
 Click the 'Login' button.<br/>
-Verify home page program guide contains text 'Program Guide'.<br/>
-Verify column headers present of 'Date', 'Show', and 'Information'.<br/>
-Verify Cron Status contains data url 'http://feed.entertainment.tv.theplatform.com/f/dCK2IC/stage_usa_listing?range=1-*&form=json'.<br/>
-Verify home page program guide contains text 'Program Guide'.<br/>
-Verify column headers present of 'Date', 'Show', and 'Information'.<br/>
-After 8pm, show availability limited.<br/>
-Select the block name 'Program Guide' from the '- None -' drop down list.<br/>
-Click the 'Save Blocks' button.<br/>
+Select the 'Aperture' from the 'Alt Text' drop down list.<br/>
+Select the 'Title' from the 'Title Text' drop down list.<br/>
+Select the 'Caption' from the 'Caption' drop down list.<br/>
+Select the 'Copyright' from the 'Copyright' drop down list.<br/>
+Select the 'Credit' from the 'Credit' drop down list.<br/>
+Select the 'Keywords' from the 'Keywords' drop down list.<br/>
+Select the 'none' from the 'Media categories' drop down list.<br/>
+Select the 'Title' from the 'Media Tags' drop down list.<br/>
+Select the 'Source' from the 'Source' drop down list.<br/>
+Click the 'Save' button.<br/>
+Click the 'Add files' link.<br/>
+Click the 'All Files' icon.<br/>
+Click the local 'Pictures' icon.<br/>
+Click the test picture link.<br/>
+Click the 'Open' button.<br/>
+Click the 'Start upload' link.<br/>
+Wait for file upload to reach 100%<br/>
+Click the 'Next' button.<br/>
+Assert that the Title Text box value matches 'NUP_155306_0046.JPG'.<br/>
+Assert that the Alt Text box value matches 'f/5.6'.<br/>
+Assert that the Source box value matches 'Episodic'.<br/>
+Assert that the Credit Text box value matches 'Brownie Harris/NBC'.<br/>
+Assert that the Copyright Text box value matches '2013 NBCUniversal Media, LLC'.<br/>
+Assert that the Keywords Text box value matches 'NUP_155306, Revolution, Episode 118, Season 1'.<br/>
+Click the 'Save' button.<br/>
+Click the 'Media Items Select' button.<br/>
+Switch to the select file frame.<br/>
+Click the 'Add files' link.<br/>
+Click the 'All Files' icon.<br/>
+Click the local 'Pictures' icon.<br/>
+Click the test picture link.<br/>
+Click the 'Open' button.<br/>
+Click the 'Start upload' link.<br/>
+Wait for file upload to reach 100%<br/>
+Click the 'Next' button.<br/>
+Assert that img source of the Media Item contains 'NUP_155306_0046'.<br/>
+Assert the the img is loaded and visible.<br/>
+Click the 'Edit' button.<br/>
+Assert that the Title Text box value matches 'NUP_155306_0046.JPG'.<br/>
+Assert that the Alt Text box value matches 'f/5.6'.<br/>
+Assert that the Source box value matches 'Episodic'.<br/>
+Assert that the Credit Text box value matches 'Brownie Harris/NBC'.<br/>
+Assert that the Copyright Text box value matches '2013 NBCUniversal Media, LLC'.<br/>
+Assert that the Keywords Text box value matches 'NUP_155306, Revolution, Episode 118, Season 1'.<br/>
+Click the 'Close Window' image.<br/>
+Switch to the select file frame.<br/>
+Enter the file path for file upload.<br/>
+Click the 'Upload' button.<br/>
+Wait for the file link to be visible after upload.<br/>
+Click the 'Next' button.<br/>
+Click the 'Public Local Files' radio button.<br/>
+Click the 'Next' button.<br/>
+Assert that the Title Text box value matches 'NUP_155306_0046.JPG'.<br/>
+Assert that the Alt Text box value matches 'f/5.6'.<br/>
+Assert that the Source box value matches 'Episodic'.<br/>
+Assert that the Credit Text box value matches 'Brownie Harris/NBC'.<br/>
+Assert that the Copyright Text box value matches '2013 NBCUniversal Media, LLC'.<br/>
+Assert that the Keywords Text box value matches 'NUP_155306, Revolution, Episode 118, Season 1'.<br/>
+Assert the file image 'NUP_155306_0046' is present.<br/>
+Assert the the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
 </div>
 </td>
 <td></td>
-<td>81</td>
-<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ProgramGuides.ROVITVSchedule.ProgramGuideVerification@2f774b9b</td></tr>
+<td>75</td>
+<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIFKeywordsIngestedAsPhraseInsteadSetsWords.EXIFKeywordsIngestedPhraseInsteadSetsWords@1232784a</td></tr>
 </table><p>
 </body>
 </html>

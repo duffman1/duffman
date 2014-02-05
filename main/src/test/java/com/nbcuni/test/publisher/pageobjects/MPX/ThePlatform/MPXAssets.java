@@ -58,7 +58,7 @@ public class MPXAssets {
     
     public void WaitForImgPresent(String imgPath) throws Exception {
     	
-    	s.wait(imgPath, 60); //TODO - add config option
+    	s.wait(imgPath, 60); //TODO - add config option 
     }
     
     public void WaitForImgNotPresent(String imgPath) throws Exception {

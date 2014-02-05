@@ -60,10 +60,6 @@ public class GPTConfiguration extends ParentTest{
             overlay.ClickCloseOverlayLnk();
             overlay.switchToDefaultContent();
             
-            //Step 7
-            Logout logout = new Logout(webDriver);
-            logout.ClickLogoutBtn();
-            
-        
+            //Step 7 - NA
     }
 }

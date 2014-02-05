@@ -80,6 +80,7 @@ public class UnauthenticatedUsersNotAbleToViewThePublishedContents extends Paren
     	//Step 3
         String ContentURL = webDriver.getCurrentUrl();
         Logout logout = new Logout(webDriver);
+        PageFactory.initElements(webDriver, logout);
         logout.ClickLogoutBtn();
         
         //Step4	

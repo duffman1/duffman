@@ -113,6 +113,7 @@ public class CreateConfigureAndValidatePermissionsEditor extends ParentTest{
         overlay.ClickCloseOverlayLnk();
         overlay.switchToDefaultContent();
         Logout logout = new Logout(webDriver);
+        PageFactory.initElements(webDriver, logout);
         logout.ClickLogoutBtn();
         
         //Step 8

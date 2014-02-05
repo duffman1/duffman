@@ -3,6 +3,8 @@ package com.nbcuni.test.publisher.pageobjects.content;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.NoSuchElementException;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -120,6 +122,8 @@ public class EditImage {
     	
     	Reporter.log("Click the 'Close Window' image.");
     	CloseWindow_Img.click();
+    	Thread.sleep(1000); //TODO - add dynamic wait
+    	
     }
     
   

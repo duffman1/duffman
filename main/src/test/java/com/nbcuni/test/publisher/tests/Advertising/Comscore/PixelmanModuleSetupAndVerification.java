@@ -58,6 +58,7 @@ public class PixelmanModuleSetupAndVerification extends ParentTest {
             
         //Step 7
         Logout logout = new Logout(webDriver);
+        PageFactory.initElements(webDriver, logout);
         logout.ClickLogoutBtn();
             
         //Step 8
