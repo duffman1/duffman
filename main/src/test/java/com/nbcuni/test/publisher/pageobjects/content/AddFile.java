@@ -5,6 +5,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.sikuli.script.Key;
+import org.sikuli.script.KeyModifier;
 import org.sikuli.script.Pattern;
 import org.sikuli.script.Region;
 import org.sikuli.script.Screen;
@@ -77,8 +79,31 @@ public class AddFile {
     	Pattern pImage2 = new Pattern(path + "AddFile/WinPathToFile.png").targetOffset(-50, 0);
     	Region r2 = s.exists(pImage2, 1);
     	s.click(r2, 1);
-    	mpxAssets.ClearInput();
+    	s.type("a", KeyModifier.CTRL);
+    	s.type(Key.BACKSPACE);
     	s.type(pathToFile);
+    }
+    
+    public void ClickGoBtn_Win() throws Exception {
+    	
+    	Reporter.log("Click the windows 'Go' arrow.");
+    	String path = this.getImagePath();
+    	mpxAssets.WaitForImgPresent(path + "AddFile/WinGo_Btn.png");
+    	s.click(path + "AddFile/WinGo_Btn.png");
+    }
+    
+    public void EnterFileName_Win(String fileName) throws Exception {
+    	
+    	String path = this.getImagePath();
+    	mpxAssets.WaitForImgPresent(path + "AddFile/WinFileName_Txb.png");
+    	
+    	Reporter.log("Enter the file name.");
+    	Pattern pImage = new Pattern(path + "AddFile/WinFileName_Txb.png").targetOffset(0, 25);
+    	Region r = s.exists(pImage, 1);
+    	s.click(r, 1);
+    	s.type("a", KeyModifier.CTRL);
+    	s.type(Key.BACKSPACE);
+    	s.type(fileName);
     }
 
     public void ClickPicturesUploadBtn() throws Exception {
@@ -121,8 +146,8 @@ public class AddFile {
     		s.click(path + "FileUpload/Open_Btn.png");
     	}
     	else {
-    		mpxAssets.WaitForImgPresent(path + "FileUpload/WinOpen_Btn.png");
-    		s.click(path + "FileUpload/WinOpen_Btn.png");
+    		mpxAssets.WaitForImgPresent(path + "AddFile/WinOpen_Btn.png");
+    		s.click(path + "AddFile/WinOpen_Btn.png");
     	}
     	
     }

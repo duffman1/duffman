@@ -65,7 +65,9 @@ public class EXIFKeywordsIngestedPhraseInsteadSetsWords extends ParentTest{
             	addFile.ClickOpenBtn();
             }
             else {
-            	addFile.EnterPathToFile_Win(applib.getPathToMedia() + "/NUP_155306_0046.JPG");
+            	addFile.EnterPathToFile_Win(applib.getPathToMedia());
+            	addFile.ClickGoBtn_Win();
+            	addFile.EnterFileName_Win("NUP_155306_0046.JPG");
             	addFile.ClickOpenBtn();
             }
             addFile.ClickStartUploadLnk();
@@ -108,7 +110,9 @@ public class EXIFKeywordsIngestedPhraseInsteadSetsWords extends ParentTest{
             	addFile.ClickOpenBtn();
             }
             else {
-            	addFile.EnterPathToFile_Win(applib.getPathToMedia() + "/NUP_155306_0046.JPG");
+            	addFile.EnterPathToFile_Win(applib.getPathToMedia());
+            	addFile.ClickGoBtn_Win();
+            	addFile.EnterFileName_Win("NUP_155306_0046.JPG");
             	addFile.ClickOpenBtn();
             }
             addFile.ClickStartUploadLnk();

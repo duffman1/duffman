@@ -127,6 +127,7 @@ public class AppLib {
     public String getPathToMedia(){
     	
     	String pathToMedia = System.getProperty("user.dir") + this.pathToMediaContent;
+    	pathToMedia = pathToMedia.replace("/", File.separator);
     	return pathToMedia;
     }
     
