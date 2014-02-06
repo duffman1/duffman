@@ -37,13 +37,13 @@ public class MPXSelectAccount {
     private static AppLib applib;
     private final Util ul;
     Screen s = new Screen();
-    MPXAssets mpxAssets = new MPXAssets(webDriver, applib);
+    MPXAssets mpxAssets;
     
     public MPXSelectAccount(final CustomWebDriver custWebDr, AppLib applib) {
         webDriver = custWebDr;
         this.applib = applib;
         ul = new Util(webDriver);
-        
+        mpxAssets = new MPXAssets(webDriver, applib);
     }
     
     private String getImagePath() {

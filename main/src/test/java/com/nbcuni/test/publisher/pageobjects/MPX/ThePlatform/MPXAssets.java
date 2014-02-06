@@ -112,12 +112,12 @@ public class MPXAssets {
     }
     
     public void ClearInput() throws Exception {
-    	
-    	if (webDriver.getCapabilities().getPlatform().toString() == "MAC") {
-    		s.type("a", KeyModifier.CMD);
+    	if (System.getProperty("os.name").contains("Windows")) {
+    		s.type("a", KeyModifier.CTRL);
+    		
     	}
     	else {
-    		s.type("a", KeyModifier.CTRL);
+    		s.type("a", KeyModifier.CMD);
     	}
     	s.type(Key.BACKSPACE);
     }

@@ -32,13 +32,13 @@ public class MPXAddMedia {
     private static AppLib applib;
     private final Util ul;
     Screen s = new Screen();
-    MPXAssets mpxAssets = new MPXAssets(this.webDriver, this.applib);
+    MPXAssets mpxAssets;
     
-    public MPXAddMedia(final CustomWebDriver custWebDr, AppLib applib) {
+    public MPXAddMedia(CustomWebDriver custWebDr, AppLib applib) {
         webDriver = custWebDr;
         this.applib = applib;
         ul = new Util(webDriver);
-        
+        mpxAssets = new MPXAssets(webDriver, applib);
     }
     
     private String getImagePath() {
@@ -57,8 +57,16 @@ public class MPXAddMedia {
     public void ClickChooseFilesBtn() throws Exception {
     	
     	String path = this.getImagePath();
-    	mpxAssets.WaitForImgPresent(path + "FileUpload/ChooseFiles_Btn.png");
-    	s.click(path + "FileUpload/ChooseFiles_Btn.png");
+    	if (webDriver.getCapabilities().getPlatform().toString() == "MAC") {
+    		
+    		mpxAssets.WaitForImgPresent(path + "FileUpload/ChooseFiles_Btn_Mac.png");
+    		s.click(path + "FileUpload/ChooseFiles_Btn_Mac.png");
+    	}
+    	else {
+    		
+    		mpxAssets.WaitForImgPresent(path + "FileUpload/ChooseFiles_Btn.png");
+    		s.click(path + "FileUpload/ChooseFiles_Btn.png");
+    	}
     }
     
     public void ClickMoviesUploadBtn() throws Exception {

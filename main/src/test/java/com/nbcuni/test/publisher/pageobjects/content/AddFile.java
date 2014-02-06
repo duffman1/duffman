@@ -98,7 +98,7 @@ public class AddFile {
     	mpxAssets.WaitForImgPresent(path + "AddFile/WinFileName_Txb.png");
     	
     	Reporter.log("Enter the file name.");
-    	Pattern pImage = new Pattern(path + "AddFile/WinFileName_Txb.png").targetOffset(0, 25);
+    	Pattern pImage = new Pattern(path + "AddFile/WinFileName_Txb.png").targetOffset(25, 0);
     	Region r = s.exists(pImage, 1);
     	s.click(r, 1);
     	s.type("a", KeyModifier.CTRL);

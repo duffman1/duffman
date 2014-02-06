@@ -3,6 +3,7 @@ package com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Set;
+
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.MPX.EditMPXVideo;
 import com.nbcuni.test.publisher.pageobjects.MPX.MPXMedia;
@@ -17,7 +18,10 @@ import com.nbcuni.test.publisher.pageobjects.content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.content.PublishingOptions;
 import com.nbcuni.test.publisher.pageobjects.content.SearchFor;
 import com.nbcuni.test.publisher.pageobjects.content.Workflow;
+import com.nbcuni.test.publisher.pageobjects.errorchecking.ErrorChecking;
+
 import junit.framework.Assert;
+
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
@@ -149,8 +153,8 @@ public class NotificationPlayerUnavailability extends ParentTest{
         	    overlay.SwitchToActiveFrame();
         	    
         	    //Step 7
-                contentParent.VerifyMessageError("An MPXplayer that's in use (" + playerTitle + ") has been disabled in MPX.");
-                contentParent.VerifyMessageError("To change its status in MPX, log into mpx.theplatform");
+        	    ErrorChecking errorChecking = new ErrorChecking(webDriver);
+        	    errorChecking.VerifyMPXPlayerDisabled(playerTitle);
                 
                 //Step 8
                 searchFor.EnterTitle(playerTitle);
@@ -169,26 +173,20 @@ public class NotificationPlayerUnavailability extends ParentTest{
                 //Step 9
                 taxonomy.NavigateSite("Content>>Files>>mpxPlayers");
                 overlay.SwitchToActiveFrame();
-                contentParent.VerifyMessageError("An MPXplayer that's in use (" + playerTitle + ") has been disabled and unpublished.");
-                contentParent.VerifyMessageError("To change its status in Publisher, click here");
-                contentParent.VerifyMessageError("To change its status in MPX, log into mpx.theplatform");
+                errorChecking.VerifyMPXPlayerDisabledAndUnpublished(playerTitle);
                 
                 //Step 10
                 MPXMedia mpxMedia = new MPXMedia(webDriver);
                 mpxMedia.ClickMPXMediaLnk();
                 overlay.SwitchToActiveFrame();
-                contentParent.VerifyMessageError("An MPXplayer that's in use (" + playerTitle + ") has been disabled and unpublished.");
-                contentParent.VerifyMessageError("To change its status in Publisher, click here");
-                contentParent.VerifyMessageError("To change its status in MPX, log into mpx.theplatform");
+                errorChecking.VerifyMPXPlayerDisabledAndUnpublished(playerTitle);
                 overlay.ClickCloseOverlayLnk();
                 overlay.switchToDefaultContent();
                 
                 //Step 11
                 taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
                 overlay.SwitchToActiveFrame();
-                contentParent.VerifyMessageError("An MPXplayer that's in use (" + playerTitle + ") has been disabled and unpublished.");
-                contentParent.VerifyMessageError("To change its status in Publisher, click here");
-                contentParent.VerifyMessageError("To change its status in MPX, log into mpx.theplatform");
+                errorChecking.VerifyMPXPlayerDisabledAndUnpublished(playerTitle);
                 
                 //Step 12
                 mpxMedia.ClickMPXPlayerUnpublishedHereLnk(playerTitle);
@@ -200,9 +198,7 @@ public class NotificationPlayerUnavailability extends ParentTest{
                 //Step 13
                 taxonomy.NavigateSite("Content>>Files>>mpxPlayers");
                 overlay.SwitchToActiveFrame();
-                contentParent.VerifyMessageError("An MPXplayer that's in use (" + playerTitle + ") has been disabled in MPX.");
-                contentParent.VerifyMessageError("To change its status in MPX, log into mpx.theplatform");
-                contentParent.VerifyPageContentNotPresent(Arrays.asList("To change its status in Publisher, click here"));
+                errorChecking.VerifyMPXPlayerDisabled(playerTitle);
                 
                 //Step 14
                 String parentWindow = webDriver.getWindowHandle();
@@ -241,8 +237,7 @@ public class NotificationPlayerUnavailability extends ParentTest{
         	    //Step 17
         	    taxonomy.NavigateSite("Content>>Files>>mpxPlayers");
                 overlay.SwitchToActiveFrame();
-                contentParent.VerifyPageContentNotPresent(Arrays.asList("An MPXplayer that's in use (" + playerTitle + ") has been disabled in MPX.", 
-                		"To change its status in MPX, log into mpx.theplatform"));
+                contentParent.VerifyPageContentNotPresent(Arrays.asList("An MPXplayer that's in use (" + playerTitle + ") has been disabled in MPX."));
                 
         	}
         	else {

@@ -51,6 +51,25 @@ public class ErrorChecking {
     	}
     }
     
+    public void VerifyMPXPlayerDisabled(String playerTitle) throws Exception {
+    	
+    	WebElement el = new WebDriverWait(webDriver, 10).until(ExpectedConditions.presenceOfElementLocated(
+				By.xpath(Error_Ctr + "/ul/li//em[contains(text(), '" + playerTitle + "')]/../..")));
+    	
+    	Assert.assertTrue(el.getText().contains("An MPXplayer that's in use (" + playerTitle + ") has been disabled in MPX."));
+    	Assert.assertTrue(el.getText().contains("To change its status in MPX, log into mpx.theplatform"));
+    }
+    
+    public void VerifyMPXPlayerDisabledAndUnpublished(String playerTitle) throws Exception {
+    	
+    	WebElement el = new WebDriverWait(webDriver, 10).until(ExpectedConditions.presenceOfElementLocated(
+				By.xpath(Error_Ctr + "/ul/li//em[contains(text(), '" + playerTitle + "')]/../..")));
+    	
+    	Assert.assertTrue(el.getText().contains("An MPXplayer that's in use (" + playerTitle + ") has been disabled and unpublished."));
+    	Assert.assertTrue(el.getText().contains("To change its status in Publisher, click here"));
+    	Assert.assertTrue(el.getText().contains("To change its status in MPX, log into mpx.theplatform"));
+    }
+    
    
 }
 

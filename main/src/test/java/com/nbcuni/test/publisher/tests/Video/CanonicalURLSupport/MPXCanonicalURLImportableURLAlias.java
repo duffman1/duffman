@@ -17,6 +17,7 @@ import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXLogin;
 import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXPublishMedia;
 import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXSelectAccount;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
+import com.nbcuni.test.publisher.pageobjects.content.AddFile;
 import com.nbcuni.test.publisher.pageobjects.content.Content;
 import com.nbcuni.test.publisher.pageobjects.content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.content.SearchFor;
@@ -108,12 +109,21 @@ public class MPXCanonicalURLImportableURLAlias extends ParentTest{
                 	MPXSelectAccount mpxSelectAccount = new MPXSelectAccount(webDriver, applib);
                 	mpxSelectAccount.SelectAccount("DB TV");
             	}
-                MPXAddMedia mpxAddMedia = new MPXAddMedia(webDriver, applib);
-                mpxAddMedia.ClickUploadBtn();
-                mpxAddMedia.ClickChooseFilesBtn();
-                mpxAddMedia.ClickMoviesUploadBtn();
-                mpxAddMedia.ClickTestMovieBtn();
-                mpxAddMedia.ClickOpenBtn();
+            	MPXAddMedia mpxAddMedia = new MPXAddMedia(webDriver, applib);
+            	AddFile addFile = new AddFile(webDriver, applib);
+            	mpxAddMedia.ClickUploadBtn();
+            	mpxAddMedia.ClickChooseFilesBtn();
+            	if (webDriver.getCapabilities().getPlatform().toString() == "MAC") {
+            		mpxAddMedia.ClickMoviesUploadBtn();
+            		mpxAddMedia.ClickTestMovieBtn();
+            		mpxAddMedia.ClickOpenBtn();
+            	}
+            	else {
+            		addFile.EnterPathToFile_Win(applib.getPathToMedia());
+                	addFile.ClickGoBtn_Win();
+                	addFile.EnterFileName_Win("DefAutMed.m4v");
+                	addFile.ClickOpenBtn();
+            	}
                 mpxAddMedia.ClickUploadFromDialogBtn();
                 String mediaTitle = "Automation" + random.GetCharacterString(10);
                 mpxAddMedia.GiveFocusToMediaItem();

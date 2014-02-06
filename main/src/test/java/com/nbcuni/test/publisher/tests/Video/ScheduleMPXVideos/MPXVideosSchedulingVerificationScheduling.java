@@ -10,6 +10,7 @@ import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXPublishMedia;
 import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXSearch;
 import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXSelectAccount;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
+import com.nbcuni.test.publisher.pageobjects.content.AddFile;
 import com.nbcuni.test.publisher.pageobjects.content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.content.SearchFor;
 import com.nbcuni.test.publisher.pageobjects.content.Workflow;
@@ -95,11 +96,20 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
         	
         	//Step 4 (test creates new mpx asset)
         	MPXAddMedia mpxAddMedia = new MPXAddMedia(webDriver, applib);
+        	AddFile addFile = new AddFile(webDriver, applib);
         	mpxAddMedia.ClickUploadBtn();
         	mpxAddMedia.ClickChooseFilesBtn();
-        	mpxAddMedia.ClickMoviesUploadBtn();
-        	mpxAddMedia.ClickTestMovieBtn();
-        	mpxAddMedia.ClickOpenBtn();
+        	if (webDriver.getCapabilities().getPlatform().toString() == "MAC") {
+        		mpxAddMedia.ClickMoviesUploadBtn();
+        		mpxAddMedia.ClickTestMovieBtn();
+        		mpxAddMedia.ClickOpenBtn();
+        	}
+        	else {
+        		addFile.EnterPathToFile_Win(applib.getPathToMedia());
+            	addFile.ClickGoBtn_Win();
+            	addFile.EnterFileName_Win("DefAutMed.m4v");
+            	addFile.ClickOpenBtn();
+        	}
         	mpxAddMedia.ClickUploadFromDialogBtn();
         	String mediaTitle = "Automation" + random.GetCharacterString(10);
         	mpxAddMedia.GiveFocusToMediaItem();

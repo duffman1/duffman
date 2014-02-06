@@ -181,7 +181,7 @@ public class AppLib {
     	
         try {
         	
-        	String storeScreenshotsTo = System.getProperty("user.dir") + this.pathToScreenshots;
+        	String storeScreenshotsTo = System.getProperty("user.dir") + this.pathToScreenshots.replace("/", File.separator);
         	//TODO set file naming based on test class name rather than time of screenshot capture
             DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
             Date date = new Date();
