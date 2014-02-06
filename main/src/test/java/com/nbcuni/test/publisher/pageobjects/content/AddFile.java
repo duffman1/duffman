@@ -5,6 +5,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.sikuli.script.Pattern;
+import org.sikuli.script.Region;
 import org.sikuli.script.Screen;
 import org.testng.Reporter;
 
@@ -61,6 +63,24 @@ public class AddFile {
     	AddFiles_Lnk.click();
     }
     
+    public void EnterPathToFile_Win(String pathToFile) throws Exception {
+    	
+    	String path = this.getImagePath();
+    	mpxAssets.WaitForImgPresent(path + "AddFile/WinPathToFile.png");
+    	
+    	Reporter.log("Click the windows arrow to expand file path for file upload.");
+    	Pattern pImage = new Pattern(path + "AddFile/WinPathToFile.png").targetOffset(-3, 0);
+    	Region r = s.exists(pImage, 1);
+    	s.click(r, 1);
+    	
+    	Reporter.log("Enter the path to the file for upload.");
+    	Pattern pImage2 = new Pattern(path + "AddFile/WinPathToFile.png").targetOffset(-50, 0);
+    	Region r2 = s.exists(pImage2, 1);
+    	s.click(r2, 1);
+    	mpxAssets.ClearInput();
+    	s.type(pathToFile);
+    }
+
     public void ClickPicturesUploadBtn() throws Exception {
     	
     	String path = this.getImagePath();
@@ -96,8 +116,14 @@ public class AddFile {
     	
     	Reporter.log("Click the 'Open' button.");
     	String path = this.getImagePath();
-    	mpxAssets.WaitForImgPresent(path + "FileUpload/Open_Btn.png");
-    	s.click(path + "FileUpload/Open_Btn.png");
+    	if (webDriver.getCapabilities().getPlatform().toString() == "MAC") {
+    		mpxAssets.WaitForImgPresent(path + "FileUpload/Open_Btn.png");
+    		s.click(path + "FileUpload/Open_Btn.png");
+    	}
+    	else {
+    		mpxAssets.WaitForImgPresent(path + "FileUpload/WinOpen_Btn.png");
+    		s.click(path + "FileUpload/WinOpen_Btn.png");
+    	}
     	
     }
     

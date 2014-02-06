@@ -20,96 +20,198 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[Enter the account name 'DB TV' in the account select text box.]]>
+      <![CDATA[Select the 'Aperture' from the 'Alt Text' drop down list.]]>
     </line>
     <line>
-      <![CDATA[Click the account option from the drop down list.]]>
+      <![CDATA[Select the 'Title' from the 'Title Text' drop down list.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Account' title to leave focus off of the selection.]]>
+      <![CDATA[Select the 'Caption' from the 'Caption' drop down list.]]>
     </line>
     <line>
-      <![CDATA[Wait for account to switch to the newly selected account.]]>
+      <![CDATA[Select the 'Copyright' from the 'Copyright' drop down list.]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://qa5dev.publisher.nbcuni.com'.]]>
+      <![CDATA[Select the 'Credit' from the 'Credit' drop down list.]]>
     </line>
     <line>
-      <![CDATA[Enter title AutomationPlayere4f4f2e00c.]]>
+      <![CDATA[Select the 'Keywords' from the 'Keywords' drop down list.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Apply' button.]]>
+      <![CDATA[Select the 'none' from the 'Media categories' drop down list.]]>
     </line>
     <line>
-      <![CDATA[Get the text of the first search result set item.]]>
+      <![CDATA[Select the 'Title' from the 'Media Tags' drop down list.]]>
     </line>
     <line>
-      <![CDATA[Enter title Automation.]]>
+      <![CDATA[Select the 'Source' from the 'Source' drop down list.]]>
     </line>
     <line>
-      <![CDATA[Select the 'Published' from the 'MPX Status' select ddl.]]>
+      <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Select the DB TV from the 'Source' select ddl.]]>
+      <![CDATA[Click the 'Add files' link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Apply' button.]]>
+      <![CDATA[Click the 'All Files' icon.]]>
     </line>
     <line>
-      <![CDATA[Get the text of the first search result set item.]]>
+      <![CDATA[Click the local 'Pictures' icon.]]>
     </line>
     <line>
-      <![CDATA[Click the first search title link in the search result set.]]>
+      <![CDATA[Click the test picture link.]]>
     </line>
     <line>
-      <![CDATA[Enter the account name 'DB TV' in the account select text box.]]>
+      <![CDATA[Click the 'Open' button.]]>
     </line>
     <line>
-      <![CDATA[Click the account option from the drop down list.]]>
+      <![CDATA[Click the 'Start upload' link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Account' title to leave focus off of the selection.]]>
+      <![CDATA[Wait for file upload to reach 100%]]>
     </line>
     <line>
-      <![CDATA[Wait for account to switch to the newly selected account.]]>
+      <![CDATA[Click the 'Next' button.]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://qa5dev.publisher.nbcuni.com'.]]>
+      <![CDATA[Assert that the Title Text box value matches 'NUP_155306_0046.JPG'.]]>
     </line>
     <line>
-      <![CDATA[Enter title AutomationPlayere4f4f2e00c.]]>
+      <![CDATA[Assert that the Alt Text box value matches 'f/5.6'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Apply' button.]]>
+      <![CDATA[Assert that the Source box value matches 'Episodic'.]]>
     </line>
     <line>
-      <![CDATA[Click the first search title link in the search result set.]]>
+      <![CDATA[Assert that the Credit Text box value matches 'Brownie Harris/NBC'.]]>
     </line>
     <line>
-      <![CDATA[Enter the account name 'DB TV' in the account select text box.]]>
+      <![CDATA[Assert that the Copyright Text box value matches '2013 NBCUniversal Media, LLC'.]]>
     </line>
     <line>
-      <![CDATA[Click the account option from the drop down list.]]>
+      <![CDATA[Assert that the Keywords Text box value matches 'NUP_155306, Revolution, Episode 118, Season 1'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Account' title to leave focus off of the selection.]]>
+      <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Wait for account to switch to the newly selected account.]]>
+      <![CDATA[Click the 'Media Items Select' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the select file frame.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Add files' link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'All Files' icon.]]>
+    </line>
+    <line>
+      <![CDATA[Click the local 'Pictures' icon.]]>
+    </line>
+    <line>
+      <![CDATA[Click the test picture link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Open' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Start upload' link.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for file upload to reach 100%]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that img source of the Media Item contains 'NUP_155306_0046'.]]>
+    </line>
+    <line>
+      <![CDATA[Assert the the img is loaded and visible.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Edit' button.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that the Title Text box value matches 'NUP_155306_0046.JPG'.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that the Alt Text box value matches 'f/5.6'.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that the Source box value matches 'Episodic'.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that the Credit Text box value matches 'Brownie Harris/NBC'.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that the Copyright Text box value matches '2013 NBCUniversal Media, LLC'.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that the Keywords Text box value matches 'NUP_155306, Revolution, Episode 118, Season 1'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Window' image.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the select file frame.]]>
+    </line>
+    <line>
+      <![CDATA[Enter the file path for file upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Upload' button.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Public Local Files' radio button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that the Title Text box value matches 'NUP_155306_0046.JPG'.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that the Alt Text box value matches 'f/5.6'.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that the Source box value matches 'Episodic'.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that the Credit Text box value matches 'Brownie Harris/NBC'.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that the Copyright Text box value matches '2013 NBCUniversal Media, LLC'.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that the Keywords Text box value matches 'NUP_155306, Revolution, Episode 118, Season 1'.]]>
+    </line>
+    <line>
+      <![CDATA[Assert the file image 'NUP_155306_0046' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Assert the the img is loaded and visible.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="428852" started-at="2014-02-06T17:36:48Z" finished-at="2014-02-06T17:43:57Z">
+  <suite name="Default suite" duration-ms="88415" started-at="2014-02-06T19:20:08Z" finished-at="2014-02-06T19:21:37Z">
     <groups>
-      <group name="mpx">
-        <method signature="NotificationPlayerUnavailability.NotificationPlayerUnavailability_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability@2f774b9b]" name="NotificationPlayerUnavailability_Test" class="com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability"/>
-      </group> <!-- mpx -->
       <group name="full">
-        <method signature="NotificationPlayerUnavailability.NotificationPlayerUnavailability_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability@2f774b9b]" name="NotificationPlayerUnavailability_Test" class="com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability"/>
+        <method signature="EXIFKeywordsIngestedPhraseInsteadSetsWords.EXIFKeywordsIngestedPhraseInsteadSetsWords_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIFKeywordsIngestedAsPhraseInsteadSetsWords.EXIFKeywordsIngestedPhraseInsteadSetsWords@2f774b9b]" name="EXIFKeywordsIngestedPhraseInsteadSetsWords_Test" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIFKeywordsIngestedAsPhraseInsteadSetsWords.EXIFKeywordsIngestedPhraseInsteadSetsWords"/>
       </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="428852" started-at="2014-02-06T17:36:48Z" finished-at="2014-02-06T17:43:57Z">
-      <class name="com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability">
-        <test-method status="PASS" signature="startSelenium(java.lang.String)[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability@2f774b9b]" name="startSelenium" is-config="true" duration-ms="13693" started-at="2014-02-06T12:36:48Z" finished-at="2014-02-06T12:37:02Z">
+    <test name="Default test" duration-ms="88415" started-at="2014-02-06T19:20:08Z" finished-at="2014-02-06T19:21:37Z">
+      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIFKeywordsIngestedAsPhraseInsteadSetsWords.EXIFKeywordsIngestedPhraseInsteadSetsWords">
+        <test-method status="PASS" signature="startSelenium(java.lang.String)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIFKeywordsIngestedAsPhraseInsteadSetsWords.EXIFKeywordsIngestedPhraseInsteadSetsWords@2f774b9b]" name="startSelenium" is-config="true" duration-ms="13823" started-at="2014-02-06T14:20:08Z" finished-at="2014-02-06T14:20:22Z">
           <params>
             <param index="0">
               <value>
@@ -126,7 +228,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="NotificationPlayerUnavailability_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability@2f774b9b]" name="NotificationPlayerUnavailability_Test" duration-ms="414571" started-at="2014-02-06T12:37:02Z" finished-at="2014-02-06T12:43:57Z">
+        <test-method status="PASS" signature="EXIFKeywordsIngestedPhraseInsteadSetsWords_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIFKeywordsIngestedAsPhraseInsteadSetsWords.EXIFKeywordsIngestedPhraseInsteadSetsWords@2f774b9b]" name="EXIFKeywordsIngestedPhraseInsteadSetsWords_Test" duration-ms="74004" started-at="2014-02-06T14:20:22Z" finished-at="2014-02-06T14:21:36Z">
           <reporter-output>
             <line>
               <![CDATA[Open url 'http://qa5dev.publisher.nbcuni.com'.]]>
@@ -141,97 +243,202 @@
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
-              <![CDATA[Enter the account name 'DB TV' in the account select text box.]]>
+              <![CDATA[Select the 'Aperture' from the 'Alt Text' drop down list.]]>
             </line>
             <line>
-              <![CDATA[Click the account option from the drop down list.]]>
+              <![CDATA[Select the 'Title' from the 'Title Text' drop down list.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Account' title to leave focus off of the selection.]]>
+              <![CDATA[Select the 'Caption' from the 'Caption' drop down list.]]>
             </line>
             <line>
-              <![CDATA[Wait for account to switch to the newly selected account.]]>
+              <![CDATA[Select the 'Copyright' from the 'Copyright' drop down list.]]>
             </line>
             <line>
-              <![CDATA[Open url 'http://qa5dev.publisher.nbcuni.com'.]]>
+              <![CDATA[Select the 'Credit' from the 'Credit' drop down list.]]>
             </line>
             <line>
-              <![CDATA[Enter title AutomationPlayere4f4f2e00c.]]>
+              <![CDATA[Select the 'Keywords' from the 'Keywords' drop down list.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Apply' button.]]>
+              <![CDATA[Select the 'none' from the 'Media categories' drop down list.]]>
             </line>
             <line>
-              <![CDATA[Get the text of the first search result set item.]]>
+              <![CDATA[Select the 'Title' from the 'Media Tags' drop down list.]]>
             </line>
             <line>
-              <![CDATA[Enter title Automation.]]>
+              <![CDATA[Select the 'Source' from the 'Source' drop down list.]]>
             </line>
             <line>
-              <![CDATA[Select the 'Published' from the 'MPX Status' select ddl.]]>
+              <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Select the DB TV from the 'Source' select ddl.]]>
+              <![CDATA[Click the 'Add files' link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Apply' button.]]>
+              <![CDATA[Click the 'All Files' icon.]]>
             </line>
             <line>
-              <![CDATA[Get the text of the first search result set item.]]>
+              <![CDATA[Click the local 'Pictures' icon.]]>
             </line>
             <line>
-              <![CDATA[Click the first search title link in the search result set.]]>
+              <![CDATA[Click the test picture link.]]>
             </line>
             <line>
-              <![CDATA[Enter the account name 'DB TV' in the account select text box.]]>
+              <![CDATA[Click the 'Open' button.]]>
             </line>
             <line>
-              <![CDATA[Click the account option from the drop down list.]]>
+              <![CDATA[Click the 'Start upload' link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Account' title to leave focus off of the selection.]]>
+              <![CDATA[Wait for file upload to reach 100%]]>
             </line>
             <line>
-              <![CDATA[Wait for account to switch to the newly selected account.]]>
+              <![CDATA[Click the 'Next' button.]]>
             </line>
             <line>
-              <![CDATA[Open url 'http://qa5dev.publisher.nbcuni.com'.]]>
+              <![CDATA[Assert that the Title Text box value matches 'NUP_155306_0046.JPG'.]]>
             </line>
             <line>
-              <![CDATA[Enter title AutomationPlayere4f4f2e00c.]]>
+              <![CDATA[Assert that the Alt Text box value matches 'f/5.6'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Apply' button.]]>
+              <![CDATA[Assert that the Source box value matches 'Episodic'.]]>
             </line>
             <line>
-              <![CDATA[Click the first search title link in the search result set.]]>
+              <![CDATA[Assert that the Credit Text box value matches 'Brownie Harris/NBC'.]]>
             </line>
             <line>
-              <![CDATA[Enter the account name 'DB TV' in the account select text box.]]>
+              <![CDATA[Assert that the Copyright Text box value matches '2013 NBCUniversal Media, LLC'.]]>
             </line>
             <line>
-              <![CDATA[Click the account option from the drop down list.]]>
+              <![CDATA[Assert that the Keywords Text box value matches 'NUP_155306, Revolution, Episode 118, Season 1'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Account' title to leave focus off of the selection.]]>
+              <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Wait for account to switch to the newly selected account.]]>
+              <![CDATA[Click the 'Media Items Select' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the select file frame.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Add files' link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'All Files' icon.]]>
+            </line>
+            <line>
+              <![CDATA[Click the local 'Pictures' icon.]]>
+            </line>
+            <line>
+              <![CDATA[Click the test picture link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Open' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Start upload' link.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for file upload to reach 100%]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that img source of the Media Item contains 'NUP_155306_0046'.]]>
+            </line>
+            <line>
+              <![CDATA[Assert the the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Edit' button.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that the Title Text box value matches 'NUP_155306_0046.JPG'.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that the Alt Text box value matches 'f/5.6'.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that the Source box value matches 'Episodic'.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that the Credit Text box value matches 'Brownie Harris/NBC'.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that the Copyright Text box value matches '2013 NBCUniversal Media, LLC'.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that the Keywords Text box value matches 'NUP_155306, Revolution, Episode 118, Season 1'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Window' image.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the select file frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter the file path for file upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Upload' button.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Public Local Files' radio button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that the Title Text box value matches 'NUP_155306_0046.JPG'.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that the Alt Text box value matches 'f/5.6'.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that the Source box value matches 'Episodic'.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that the Credit Text box value matches 'Brownie Harris/NBC'.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that the Copyright Text box value matches '2013 NBCUniversal Media, LLC'.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that the Keywords Text box value matches 'NUP_155306, Revolution, Episode 118, Season 1'.]]>
+            </line>
+            <line>
+              <![CDATA[Assert the file image 'NUP_155306_0046' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Assert the the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- NotificationPlayerUnavailability_Test -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability@2f774b9b]" name="stopSelenium" is-config="true" duration-ms="573" started-at="2014-02-06T12:43:57Z" finished-at="2014-02-06T12:43:57Z">
+        </test-method> <!-- EXIFKeywordsIngestedPhraseInsteadSetsWords_Test -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIFKeywordsIngestedAsPhraseInsteadSetsWords.EXIFKeywordsIngestedPhraseInsteadSetsWords@2f774b9b]" name="stopSelenium" is-config="true" duration-ms="569" started-at="2014-02-06T14:21:36Z" finished-at="2014-02-06T14:21:37Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=NotificationPlayerUnavailability_Test status=SUCCESS method=NotificationPlayerUnavailability.NotificationPlayerUnavailability_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability@2f774b9b] output=Open url 'http://qa5dev.publisher.nbcuni.com'.]]]>
+                <![CDATA[[TestResult name=EXIFKeywordsIngestedPhraseInsteadSetsWords_Test status=SUCCESS method=EXIFKeywordsIngestedPhraseInsteadSetsWords.EXIFKeywordsIngestedPhraseInsteadSetsWords_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIFKeywordsIngestedAsPhraseInsteadSetsWords.EXIFKeywordsIngestedPhraseInsteadSetsWords@2f774b9b] output=Open url 'http://qa5dev.publisher.nbcuni.com'.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-      </class> <!-- com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability -->
+      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIFKeywordsIngestedAsPhraseInsteadSetsWords.EXIFKeywordsIngestedPhraseInsteadSetsWords -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

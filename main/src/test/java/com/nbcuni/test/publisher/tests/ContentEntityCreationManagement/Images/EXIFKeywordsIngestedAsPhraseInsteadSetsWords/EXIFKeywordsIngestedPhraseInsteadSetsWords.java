@@ -59,9 +59,15 @@ public class EXIFKeywordsIngestedPhraseInsteadSetsWords extends ParentTest{
             AddFile addFile = new AddFile(webDriver, applib);
             PageFactory.initElements(webDriver, addFile);
             addFile.ClickAddFilesLnk();
-            addFile.ClickPicturesUploadBtn();
-            addFile.ClickTestPictureBtn();
-            addFile.ClickOpenBtn();
+            if (webDriver.getCapabilities().getPlatform().toString() == "MAC") {
+            	addFile.ClickPicturesUploadBtn();
+            	addFile.ClickTestPictureBtn();
+            	addFile.ClickOpenBtn();
+            }
+            else {
+            	addFile.EnterPathToFile_Win(applib.getPathToMedia() + "/NUP_155306_0046.JPG");
+            	addFile.ClickOpenBtn();
+            }
             addFile.ClickStartUploadLnk();
             addFile.WaitForSuccessfulUpload();
             addFile.ClickNextBtn();
@@ -96,9 +102,15 @@ public class EXIFKeywordsIngestedPhraseInsteadSetsWords extends ParentTest{
             PageFactory.initElements(webDriver, selectFile);
             selectFile.SwitchToSelectFileFrm();
             addFile.ClickAddFilesLnk();
-            addFile.ClickPicturesUploadBtn();
-            addFile.ClickTestPictureBtn();
-            addFile.ClickOpenBtn();
+            if (webDriver.getCapabilities().getPlatform().toString() == "MAC") {
+            	addFile.ClickPicturesUploadBtn();
+            	addFile.ClickTestPictureBtn();
+            	addFile.ClickOpenBtn();
+            }
+            else {
+            	addFile.EnterPathToFile_Win(applib.getPathToMedia() + "/NUP_155306_0046.JPG");
+            	addFile.ClickOpenBtn();
+            }
             addFile.ClickStartUploadLnk();
             addFile.WaitForSuccessfulUpload();
             addFile.ClickNextBtn();
