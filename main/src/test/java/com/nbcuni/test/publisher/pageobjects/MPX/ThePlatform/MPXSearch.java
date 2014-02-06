@@ -56,6 +56,15 @@ public class MPXSearch {
     	s.type(txt);
     }
     
+    public void EnterSearchPlayersTxt(String txt) throws Exception {
+    	
+    	String path = this.getImagePath();
+    	mpxAssets.WaitForImgPresent(path + "Search/SearchPlayers_Txb.png");
+    	s.click(path + "Search/SearchPlayers_Txb.png");
+    	mpxAssets.ClearInput();
+    	s.type(txt);
+    }
+    
     public void ClickSearchByTitleLnk() throws Exception {
     	
     	String path = this.getImagePath();
@@ -67,6 +76,17 @@ public class MPXSearch {
     	s.click(path + "Search/Titles_Lnk.png");
     	
     	Thread.sleep(2000); //TODO - replace with dynamic wait
+    }
+    
+    public void ClickSearchByPlayersTitleLnk() throws Exception {
+    	
+    	String path = this.getImagePath();
+    	mpxAssets.WaitForImgPresent(path + "Search/Titles_Ddl.png");
+    	s.click(path + "Search/Titles_Ddl.png");
+    	mpxAssets.WaitForImgPresent(path + "Search/Titles_Lnk.png");
+    	s.click(path + "Search/Titles_Lnk.png");
+    	
+    	Thread.sleep(4000); //TODO - replace with dynamic wait
     }
     
     

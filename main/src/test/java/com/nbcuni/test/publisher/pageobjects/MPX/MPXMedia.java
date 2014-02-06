@@ -123,5 +123,11 @@ public class MPXMedia {
 
         webDriver.findElement(By.xpath("//div[@class='messages error']//strong//em[text()='" + playerTitle + "']/../..//a[text()='here']")).click();
     }
+    
+    public void ClickMPXPlayerLogIntoMPXPlatformLnk(String playerTitle) throws Exception {
+
+        webDriver.findElement(By.xpath("//div[@class='messages error']//strong//em[text()='" + playerTitle + "']/../..//a[text()='mpx.theplatform']")).click();
+    }
+    
 }
 

@@ -1,9 +1,11 @@
 package com.nbcuni.test.publisher.pageobjects;
 
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.testng.Reporter;
+
 import com.nbcuni.test.webdriver.CustomWebDriver;
 
 /*********************************************
@@ -51,7 +53,12 @@ public class UserLogin {
     public void ClickLoginBtn() throws Exception {
     	
     	Reporter.log("Click the 'Login' button.");
-    	LogIn_Btn.click();
+    	try {
+    		LogIn_Btn.click();
+    	}
+    	catch (TimeoutException e) {
+    		webDriver.navigate().refresh();
+    	}
     	
     }
     

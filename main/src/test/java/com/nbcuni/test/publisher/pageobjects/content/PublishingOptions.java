@@ -79,9 +79,20 @@ public class PublishingOptions {
     
     public void UncheckPublishedCbx() throws Exception {
     	
-    	WebElement el = new WebDriverWait(webDriver, 10).until(ExpectedConditions.presenceOfElementLocated(By.xpath(Published_Cbx)));
+    	WebElement el = new WebDriverWait(webDriver, 10).until(ExpectedConditions.
+    			visibilityOf(webDriver.findElement(By.xpath(Published_Cbx))));
     	
     	if (el.isSelected() == true) {
+    		el.click();
+    	}
+    }
+    
+    public void CheckPublishedCbx() throws Exception {
+    	
+    	WebElement el = new WebDriverWait(webDriver, 10).until(ExpectedConditions.
+    			visibilityOf(webDriver.findElement(By.xpath(Published_Cbx))));
+    	
+    	if (el.isSelected() == false) {
     		el.click();
     	}
     }
@@ -89,7 +100,7 @@ public class PublishingOptions {
     public void VerifyPublishedCbxChecked() throws Exception {
     	
     	WebElement el = new WebDriverWait(webDriver, 10).until(ExpectedConditions.
-    			visibilityOfElementLocated(By.xpath(Published_Cbx)));
+    			visibilityOf(webDriver.findElement(By.xpath(Published_Cbx))));
     	
     	Assert.assertTrue(el.isSelected() == true);
     }
@@ -97,7 +108,7 @@ public class PublishingOptions {
     public void VerifyPublishedCbxNotCheckedAndNotEditable() throws Exception {
     	
     	WebElement el = new WebDriverWait(webDriver, 10).until(ExpectedConditions.
-    			visibilityOfElementLocated(By.xpath(Published_Cbx)));
+    			visibilityOf(webDriver.findElement(By.xpath(Published_Cbx))));
     	
     	Assert.assertFalse(el.isSelected());
     	Assert.assertFalse(el.isEnabled());

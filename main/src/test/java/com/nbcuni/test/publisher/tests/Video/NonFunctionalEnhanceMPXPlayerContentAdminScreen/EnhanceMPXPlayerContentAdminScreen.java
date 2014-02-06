@@ -85,11 +85,11 @@ public class EnhanceMPXPlayerContentAdminScreen extends ParentTest{
         		searchFor.ClickResetBtn();
         		
         		//Step 8
-        		searchFor.SelectMPXPlayerStatus("Published");
+        		searchFor.SelectMPXStatus("Published");
         		searchFor.ClickApplyBtn();
         		searchFor.VerifyMPXResultSetMPXStatus("Published");
         		searchFor.ClickResetBtn();
-        		searchFor.SelectMPXPlayerStatus("Unpublished");
+        		searchFor.SelectMPXStatus("Unpublished");
         		searchFor.ClickApplyBtn();
         		searchFor.VerifyMPXResultSetMPXStatus("Unpublished");
         		

@@ -62,8 +62,11 @@ public class SearchFor {
     @FindBy(how = How.XPATH, using = "//select[@id='edit-player-account']")
     private static WebElement MPXPlayerAccount_Ddl;
     
+    @FindBy(how = How.XPATH, using = "//select[@id='edit-account']")
+    private static WebElement MPXMediaSource_Ddl;
+    
     @FindBy(how = How.XPATH, using = "//select[@id='edit-status']")
-    private static WebElement MPXPlayerStatus_Ddl;
+    private static WebElement MPXStatus_Ddl;
     
     private static List<WebElement> AllResultSet_Ttls() {
     	return webDriver.findElements(By.xpath("//table/tbody/tr/td[contains(@class, 'title')]"));
@@ -271,6 +274,12 @@ public class SearchFor {
     	mpxPlayerAccountDdl.selectByVisibleText(accountOption);
     }
     
+    public void SelectMPXMediaSource(String accountOption) throws Exception {
+    	
+    	Reporter.log("Select the " + accountOption + " from the 'Source' select ddl.");
+    	new Select(MPXMediaSource_Ddl).selectByVisibleText(accountOption);
+    }
+    
     public void VerifyMPXResultSetSource(String account) throws Exception {
 
     	Reporter.log("Get all the MPX result set 'Source' items.");
@@ -284,10 +293,10 @@ public class SearchFor {
     	}
     }
     
-    public void SelectMPXPlayerStatus(String status) throws Exception {
+    public void SelectMPXStatus(String status) throws Exception {
     	
-    	Reporter.log("Select the '" + status + "' from the 'MPX Player Status' select ddl.");
-    	Select mpxPlayerStatusDdl = new Select(MPXPlayerStatus_Ddl);
+    	Reporter.log("Select the '" + status + "' from the 'MPX Status' select ddl.");
+    	Select mpxPlayerStatusDdl = new Select(MPXStatus_Ddl);
     	mpxPlayerStatusDdl.selectByVisibleText(status);
     }
     
