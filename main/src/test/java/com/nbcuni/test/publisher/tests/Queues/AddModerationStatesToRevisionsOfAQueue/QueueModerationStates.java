@@ -102,6 +102,7 @@ public class QueueModerationStates extends ParentTest{
         publishingOptions.EnterMessageForStateChange(messageForStateChange);
         queuesRevisionList.ClickUpdateStateBtn();
         ContentParent contentParent= new ContentParent(webDriver, applib);
+        PageFactory.initElements(webDriver, contentParent);
         contentParent.VerifyMessageStatus(queueTitle + " transitioned to the published state.");
         
         //Step 9

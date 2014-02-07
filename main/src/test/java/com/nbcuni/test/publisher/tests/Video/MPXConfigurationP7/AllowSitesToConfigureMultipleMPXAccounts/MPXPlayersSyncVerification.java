@@ -113,6 +113,7 @@ public class MPXPlayersSyncVerification extends ParentTest{
             MPXPlayers.ClickSyncMPXPlayersLnk();
             MPXPlayers.ClickSyncMPXPlayersNowLnk();
             ContentParent contentParent = new ContentParent(webDriver, applib);
+            PageFactory.initElements(webDriver, contentParent);
             contentParent.VerifyMessageStatus("players returned for account");
             Integer playerCountForAccount1 = allPlayerTitlesForAccount1.size();
             contentParent.VerifyMessageStatus(playerCountForAccount1.toString() + " players returned for account \"" + configuredAccounts.get(0) + "\"");

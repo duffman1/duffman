@@ -57,6 +57,7 @@ public class CreateCharacterProfile extends ParentTest{
             
             //Step 5
             ContentParent contentParent = new ContentParent(webDriver, applib);
+            PageFactory.initElements(webDriver, contentParent);
             contentParent.ClickSaveBtn();
             overlay.switchToDefaultContent();
             contentParent.VerifyMessageStatus("Character Profile " + characterName + " has been created.");

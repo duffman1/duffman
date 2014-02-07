@@ -18,7 +18,7 @@ import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.content.PublishingOptions;
 import com.nbcuni.test.publisher.pageobjects.content.SearchFor;
-import com.nbcuni.test.publisher.pageobjects.content.Workflow;
+import com.nbcuni.test.publisher.pageobjects.content.WorkBench;
 import junit.framework.Assert;
 import org.testng.annotations.Test;
 import java.text.SimpleDateFormat;

@@ -74,6 +74,7 @@ public class MPXCanonicalURLImportableURLAlias extends ParentTest{
         		//Step 4
         		overlay.SwitchToActiveFrame();
         		ContentParent contentParent = new ContentParent(webDriver, applib);
+        		PageFactory.initElements(webDriver, contentParent);
         		ManageFields manageFields = new ManageFields(webDriver, applib);
         		PageFactory.initElements(webDriver, manageFields);
         		if (manageFields.FieldLabelExists("MPX Media Related Link") == false) {

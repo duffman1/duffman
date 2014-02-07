@@ -1,8 +1,10 @@
 package com.nbcuni.test.publisher.tests.UserCreationAndManagement.UnauthenticatedUsersNotAbleToViewThePublishedContents;
 
 import java.util.Arrays;
+
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
+
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Logout;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
@@ -12,6 +14,7 @@ import com.nbcuni.test.publisher.pageobjects.content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.content.PublishingOptions;
 import com.nbcuni.test.publisher.pageobjects.content.Revisions;
 import com.nbcuni.test.publisher.pageobjects.content.SelectFile;
+import com.nbcuni.test.publisher.pageobjects.content.WorkBench;
 
 public class UnauthenticatedUsersNotAbleToViewThePublishedContents extends ParentTest {
 
@@ -54,6 +57,7 @@ public class UnauthenticatedUsersNotAbleToViewThePublishedContents extends Paren
     	taxonomy.NavigateSite("Content>>Add content>>Post");
     	overlay.SwitchToFrame("Create Post");
     	ContentParent contentParent = new ContentParent(webDriver, applib);
+    	PageFactory.initElements(webDriver, contentParent);
     	contentParent.VerifyRequiredFields(Arrays.asList("Title", "Body"));
     	PublishingOptions publishingOptions = new PublishingOptions(webDriver);
     	publishingOptions.ClickPublishingOptionsLnk();
@@ -75,7 +79,9 @@ public class UnauthenticatedUsersNotAbleToViewThePublishedContents extends Paren
     	contentParent.ClickSaveBtn();
     	overlay.switchToDefaultContent();
     	contentParent.VerifyMessageStatus("Post " + postTitle + " has been created.");
-    	contentParent.WorkBenchInfoBlock(Arrays.asList("Published"));
+    	WorkBench workBench = new WorkBench(webDriver, applib);
+    	PageFactory.initElements(webDriver, workBench);
+    	workBench.VerifyWorkBenchBlockTextPresent(Arrays.asList("Published"));
     	
     	//Step 3
         String ContentURL = webDriver.getCurrentUrl();
@@ -90,7 +96,7 @@ public class UnauthenticatedUsersNotAbleToViewThePublishedContents extends Paren
         contentParent.VerifyPostTitle(postTitle);
         
         //Step6
-        userLogin.Login("admin@publisher.nbcuni.com", "pa55word");
+        userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
         
         //Step7	
         webDriver.navigate().to(ContentURL);
@@ -114,7 +120,7 @@ public class UnauthenticatedUsersNotAbleToViewThePublishedContents extends Paren
         contentParent.VerifyPostTitle(postTitle);
       
         //Step13
-        userLogin.Login("admin@publisher.nbcuni.com", "pa55word");
+        userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
       
         //Step14
         taxonomy.NavigateSite("Content");
@@ -133,13 +139,13 @@ public class UnauthenticatedUsersNotAbleToViewThePublishedContents extends Paren
         contentParent.VerifyPostTitle(postTitle);
       
         //Step18
-        userLogin.Login("admin@publisher.nbcuni.com", "pa55word");
+        userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
       
         //Step19
         webDriver.navigate().to(ContentURL);
       
         //Step20
-        contentParent.ClickViewTab();
+        workBench.ClickWorkBenchTab("View");
         
         //Step21
         ContentURL = webDriver.getCurrentUrl();

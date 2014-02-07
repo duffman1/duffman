@@ -18,7 +18,7 @@ import com.nbcuni.test.publisher.pageobjects.content.PersonsInformation;
 import com.nbcuni.test.publisher.pageobjects.content.PublishingOptions;
 import com.nbcuni.test.publisher.pageobjects.content.Revisions;
 import com.nbcuni.test.publisher.pageobjects.content.SelectFile;
-import com.nbcuni.test.publisher.pageobjects.content.Workflow;
+import com.nbcuni.test.publisher.pageobjects.content.WorkBench;
 import com.nbcuni.test.publisher.pageobjects.taxonomy.Taxonomy;
 
 public class CastCrewFieldCollectionsVerification_Movie extends ParentTest{
@@ -53,6 +53,7 @@ public class CastCrewFieldCollectionsVerification_Movie extends ParentTest{
     	PageFactory.initElements(webDriver, userLogin);
         userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
         ContentParent contentParent = new ContentParent(webDriver, applib);
+        PageFactory.initElements(webDriver, contentParent);
         
         //Step 2
         CharactersInformation charactersInformation = new CharactersInformation(webDriver);
@@ -127,8 +128,9 @@ public class CastCrewFieldCollectionsVerification_Movie extends ParentTest{
         //Step 7
         contentParent.ClickSaveBtn();
         overlay.switchToDefaultContent();
-        Workflow workFlow = new Workflow(webDriver);
-        workFlow.ClickWorkflowTab("Revisions");
+        WorkBench workBench = new WorkBench(webDriver, applib);
+        PageFactory.initElements(webDriver, workBench);
+        workBench.ClickWorkBenchTab("Revisions");
         overlay.switchToDefaultContent();
         overlay.SwitchToActiveFrame();
         Revisions revisions = new Revisions(webDriver, applib);
@@ -163,7 +165,7 @@ public class CastCrewFieldCollectionsVerification_Movie extends ParentTest{
       
         //Step 8
         overlay.switchToDefaultContent();        
-        workFlow.ClickWorkflowTab("Revisions");
+        workBench.ClickWorkBenchTab("Revisions");
         overlay.switchToDefaultContent();
         overlay.SwitchToActiveFrame();
         revisions.ClickEditMenuBtn(MovieName2);
@@ -195,7 +197,7 @@ public class CastCrewFieldCollectionsVerification_Movie extends ParentTest{
       
         //Step 9
         overlay.switchToDefaultContent();        
-        workFlow.ClickWorkflowTab("Revisions");
+        workBench.ClickWorkBenchTab("Revisions");
         overlay.switchToDefaultContent();
         overlay.SwitchToActiveFrame();
         revisions.ClickEditExtendMenuBtn(MovieName2);

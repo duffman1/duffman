@@ -17,7 +17,7 @@ import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.content.PublishingOptions;
 import com.nbcuni.test.publisher.pageobjects.content.SearchFor;
-import com.nbcuni.test.publisher.pageobjects.content.Workflow;
+import com.nbcuni.test.publisher.pageobjects.content.WorkBench;
 import com.nbcuni.test.publisher.pageobjects.errorchecking.ErrorChecking;
 
 import junit.framework.Assert;
@@ -101,6 +101,7 @@ public class NotificationPlayerUnavailability extends ParentTest{
                 MPXPlayers.ClickSyncMPXPlayersLnk();
                 MPXPlayers.ClickSyncMPXPlayersNowLnk();
                 ContentParent contentParent = new ContentParent(webDriver, applib);
+                PageFactory.initElements(webDriver, contentParent);
                 contentParent.VerifyMessageStatus("players returned for account");
         	    SearchFor searchFor = new SearchFor(webDriver, applib);
                 PageFactory.initElements(webDriver, searchFor);
@@ -118,8 +119,9 @@ public class NotificationPlayerUnavailability extends ParentTest{
         	    searchFor.SelectMPXMediaSource("DB TV");
         	    searchFor.ClickApplyBtn();
         	    searchFor.ClickSearchTitleLnk(searchFor.GetFirstMPXMediaSearchResult());
-        	    Workflow workflow = new Workflow(webDriver);
-        	    workflow.ClickWorkflowTab("Edit");
+        	    WorkBench workBench = new WorkBench(webDriver, applib);
+        	    PageFactory.initElements(webDriver, workBench);
+        	    workBench.ClickWorkBenchTab("Edit");
         	    overlay.SwitchToActiveFrame();
         	    EditMPXVideo editMPXVideo = new EditMPXVideo(webDriver);
         	    editMPXVideo.SelectPubMPXVideoPlayer(playerTitle);
@@ -162,7 +164,7 @@ public class NotificationPlayerUnavailability extends ParentTest{
                 searchFor.ClickApplyBtn();
                 overlay.switchToDefaultContent();
                 searchFor.ClickSearchTitleLnk(playerTitle);
-                workflow.ClickWorkflowTab("Edit");
+                workBench.ClickWorkBenchTab("Edit");
                 overlay.SwitchToActiveFrame();
                 PublishingOptions publishingOptions = new PublishingOptions(webDriver);
                 publishingOptions.ClickPublishingOptionsLnk();

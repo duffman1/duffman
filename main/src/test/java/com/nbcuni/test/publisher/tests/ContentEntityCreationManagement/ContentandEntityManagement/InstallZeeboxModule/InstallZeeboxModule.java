@@ -38,6 +38,7 @@ public class InstallZeeboxModule extends ParentTest{
             
             //Step 5
             ContentParent contentParent = new ContentParent(webDriver, applib);
+            PageFactory.initElements(webDriver, contentParent);
             contentParent.VerifyPageContentPresent(Arrays.asList("Zeebox Follow Button example block",
             		"Zeebox Play-along example block",
             			"Zeebox Hot TV Rooms example block",

@@ -87,6 +87,7 @@ public class CreateConfigureAndValidatePermissionsEditor extends ParentTest{
         addUser.EnterLastName(lastName);
         addUser.ClickCreateNewAccountBtn();
         ContentParent contentParent = new ContentParent(webDriver, applib);
+        PageFactory.initElements(webDriver, contentParent);
         contentParent.VerifyMessageStatus("A welcome message with further instructions has been e-mailed to the new user " + userName + ".");
        
         //Step 4

@@ -13,7 +13,7 @@ import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.content.AddFile;
 import com.nbcuni.test.publisher.pageobjects.content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.content.SearchFor;
-import com.nbcuni.test.publisher.pageobjects.content.Workflow;
+import com.nbcuni.test.publisher.pageobjects.content.WorkBench;
 import com.nbcuni.test.publisher.pageobjects.queues.ScheduleQueue;
 
 import junit.framework.Assert;

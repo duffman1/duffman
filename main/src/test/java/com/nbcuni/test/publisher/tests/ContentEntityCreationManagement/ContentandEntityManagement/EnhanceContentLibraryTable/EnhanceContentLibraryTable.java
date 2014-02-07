@@ -56,6 +56,7 @@ public class EnhanceContentLibraryTable extends ParentTest{
         	
         	//Step 6
         	ContentParent contentParent = new ContentParent(webDriver, applib);
+        	PageFactory.initElements(webDriver, contentParent);
         	contentParent.VerifyPageContentNotPresent(Arrays.asList("We are sorry, no video available"));
         	
         	//Step 7

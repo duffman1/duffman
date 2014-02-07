@@ -46,6 +46,7 @@ public class CreatePerson extends ParentTest{
             selectFile.SelectDefaultCoverImg();
             overlay.SwitchToFrame("Create Person");
             ContentParent contentParent = new ContentParent(webDriver, applib);
+            PageFactory.initElements(webDriver, contentParent);
             contentParent.ClickSaveBtn();
             
             //Step 5

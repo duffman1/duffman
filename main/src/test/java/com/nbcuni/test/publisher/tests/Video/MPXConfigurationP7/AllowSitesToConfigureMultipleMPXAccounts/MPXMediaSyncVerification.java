@@ -117,6 +117,7 @@ public class MPXMediaSyncVerification extends ParentTest{
             //Step 5b
             mpxMedia.ClickSyncMPXMediaNowLnk();
             ContentParent contentParent = new ContentParent(webDriver, applib);
+            PageFactory.initElements(webDriver, contentParent);
             contentParent.VerifyMessageStatus("Processed video import/update manually for all accounts.");
             
             //Step 6

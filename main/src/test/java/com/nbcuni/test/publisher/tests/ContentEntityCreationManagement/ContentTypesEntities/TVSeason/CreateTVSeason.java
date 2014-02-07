@@ -40,6 +40,7 @@ public class CreateTVSeason extends ParentTest{
         
         //Step 3
         ContentParent contentParent = new ContentParent(webDriver, applib);
+        PageFactory.initElements(webDriver, contentParent);
         contentParent.VerifyRequiredFields(Arrays.asList("Title", "Season", "Synopsis"));
         PublishingOptions publishingOptions = new PublishingOptions(webDriver);
         publishingOptions.ClickPublishingOptionsLnk();
@@ -68,7 +69,9 @@ public class CreateTVSeason extends ParentTest{
     	//Step 7
     	contentParent.ClickSaveBtn();
     	contentParent.VerifyMessageStatus("TV Season " + tvSeasonTitle + " has been created.");
-    	contentParent.WorkBenchInfoBlock(Arrays.asList(state));
+    	WorkBench workBench = new WorkBench(webDriver, applib);
+    	PageFactory.initElements(webDriver, workBench);
+    	workBench.VerifyWorkBenchBlockTextPresent(Arrays.asList(state));
     	
         }
         

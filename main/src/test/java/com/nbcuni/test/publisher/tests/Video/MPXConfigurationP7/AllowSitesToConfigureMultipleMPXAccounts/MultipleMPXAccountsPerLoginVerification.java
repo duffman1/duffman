@@ -85,6 +85,7 @@ public class MultipleMPXAccountsPerLoginVerification extends ParentTest{
         	settings.EnterPassword0(applib.getMPXPassword());
         	settings.ClickConnectToMPXBtn();
         	ContentParent contentParent = new ContentParent(webDriver, applib);
+        	PageFactory.initElements(webDriver, contentParent);
         	contentParent.VerifyMessageStatus("Login successful");
         	settings.VerifyImportAccountOptions(accountNames);
             

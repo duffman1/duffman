@@ -51,6 +51,7 @@ public class CreateTVEpisode extends ParentTest{
             	selectFile.SelectDefaultCoverImg();
             	overlay.SwitchToFrame("Create Person");
             	ContentParent contentParent = new ContentParent(webDriver, applib);
+            	PageFactory.initElements(webDriver, contentParent);
             	contentParent.ClickSaveBtn();
             	overlay.switchToDefaultContent();
             	contentParent.VerifyMessageStatus("Person " + personFirstName + " has been created.");
@@ -96,8 +97,10 @@ public class CreateTVEpisode extends ParentTest{
             	//Step 9
             	contentParent.ClickSaveBtn();
             	contentParent.VerifyMessageStatus("TV Episode " + tvEpisodeTitle + " has been created.");
-            	contentParent.WorkBenchInfoBlock(Arrays.asList(state));
-        	
+            	WorkBench workBench = new WorkBench(webDriver, applib);
+            	PageFactory.initElements(webDriver, workBench);
+            	workBench.VerifyWorkBenchBlockTextPresent(Arrays.asList(state));
+            	
             }
     
     }

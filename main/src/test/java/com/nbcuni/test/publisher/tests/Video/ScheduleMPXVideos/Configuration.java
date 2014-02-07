@@ -74,6 +74,7 @@ public class Configuration extends ParentTest{
             	mpxFileType.ClickSaveBtn();
             	overlay.SwitchToActiveFrame();
                 ContentParent contentParent = new ContentParent(webDriver, applib);
+                PageFactory.initElements(webDriver, contentParent);
             	contentParent.VerifyMessageStatus("The file type MPX Video for Account \"" + configuredAccounts.get(0));
             	contentParent.VerifyMessageStatus("has been updated.");
             }

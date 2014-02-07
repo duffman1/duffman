@@ -13,7 +13,7 @@ import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.content.AddFile;
 import com.nbcuni.test.publisher.pageobjects.content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.content.SearchFor;
-import com.nbcuni.test.publisher.pageobjects.content.Workflow;
+import com.nbcuni.test.publisher.pageobjects.content.WorkBench;
 import com.nbcuni.test.publisher.pageobjects.queues.ScheduleQueue;
 
 import junit.framework.Assert;
@@ -146,6 +146,7 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
         	taxonomy.NavigateSite("Home>>Run cron");
     	    overlay.SwitchToActiveFrame();
     	    ContentParent contentParent = new ContentParent(webDriver, applib);
+    	    PageFactory.initElements(webDriver, contentParent);
     	    contentParent.VerifyMessageStatus("Cron ran successfully.");
     	    
     	    //Step 8
@@ -184,8 +185,9 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
     	    		pub7WorkflowDate7DaysInPast + " - 05:00"));
     	    
     	    //Step 12
-    	    Workflow workFlow = new Workflow(webDriver);
-    	    workFlow.ClickWorkflowTab("Edit");
+    	    WorkBench workBench = new WorkBench(webDriver, applib);
+    	    PageFactory.initElements(webDriver, workBench);
+    	    workBench.ClickWorkBenchTab("Edit");
     	    overlay.SwitchToActiveFrame();
     	    
     	    //Step 13
@@ -259,7 +261,7 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
     	    		pub7WorkflowDate1YearInFuture + " - 05:00"));
     	    
     	    //Step 34
-    	    workFlow.ClickWorkflowTab("Edit");
+    	    workBench.ClickWorkBenchTab("Edit");
     	    overlay.SwitchToActiveFrame();
     	    
     	    //Step 35

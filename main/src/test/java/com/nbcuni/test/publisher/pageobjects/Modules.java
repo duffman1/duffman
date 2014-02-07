@@ -10,6 +10,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -144,6 +145,7 @@ public class Modules {
     	Overlay overlay = new Overlay(webDriver);
     	overlay.SwitchToActiveFrame();
     	ContentParent contentParent = new ContentParent(webDriver, applib);
+    	PageFactory.initElements(webDriver, contentParent);
     	contentParent.VerifyPageContentPresent(Arrays.asList("The following modules will be completely uninstalled from your site, and all data from these modules will be lost!", 
     			moduleName));
     	

@@ -78,6 +78,7 @@ public class SelectVideoPlayerPerVideoFile extends ParentTest{
         		//Step 7
         		editMPXVideo.SelectPubMPXVideoPlayer("--- Default Player ---");
         		ContentParent contentParent = new ContentParent(webDriver, applib);
+        		PageFactory.initElements(webDriver, contentParent);
         		contentParent.ClickSaveBtn();
             
         		//Step 8 through 19 (truncated as test steps no longer match application functionality)

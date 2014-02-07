@@ -47,11 +47,12 @@ public class ScheduleToPublishContentByDateTime extends ParentTest {
         String postTitle = createDefaultContent.Post("Draft");
 
         //Step 3
-        Workflow workflow = new Workflow(webDriver);
-        workflow.VerifyWorkflowTab("View");
-        workflow.VerifyWorkflowTab("Edit Draft");
-        workflow.VerifyWorkflowTab("Revisions");
-        workflow.VerifyWorkflowTab("Schedule");
+        WorkBench workBench = new WorkBench(webDriver, applib);
+        PageFactory.initElements(webDriver, workBench);
+        workBench.VerifyWorkBenchTabPresent("View");
+        workBench.VerifyWorkBenchTabPresent("Edit Draft");
+        workBench.VerifyWorkBenchTabPresent("Revisions");
+        workBench.VerifyWorkBenchTabPresent("Schedule");
 
         //Step 4
         Revisions revisions = new Revisions(webDriver, applib);
@@ -69,8 +70,7 @@ public class ScheduleToPublishContentByDateTime extends ParentTest {
         scheduleQueue.VerifyScheduleTableisEmpty();
         
         //Step 6
-        ContentParent contentParent = new ContentParent(webDriver, applib);
-        contentParent.ClickEditDraftTab();
+        workBench.ClickWorkBenchTab("Edit Draft");
         overlay.switchToDefaultContent();
         overlay.SwitchToFrame("Edit Post "+ postTitle + " dialog");
         BasicInformation basicInformation = new BasicInformation(webDriver);
@@ -79,14 +79,16 @@ public class ScheduleToPublishContentByDateTime extends ParentTest {
         PublishingOptions publishingOptions = new PublishingOptions(webDriver);
         publishingOptions.ClickPublishingOptionsLnk();
         publishingOptions.EnterMessageForStateChange("Test Revision 2");
+        ContentParent contentParent = new ContentParent(webDriver, applib);
+        PageFactory.initElements(webDriver, contentParent);
         contentParent.ClickSaveBtn();
         overlay.switchToDefaultContent();
 
         //Step 7
-        contentParent.WorkBenchInfoBlock(Arrays.asList("Revision state", "Public","Moderate"));
-
+        workBench.VerifyWorkBenchBlockTextPresent(Arrays.asList("Revision state", "Public","Moderate"));
+        
         //Step 8
-        contentParent.ClickRevisionsTab();
+        workBench.ClickWorkBenchTab("Revisions");
         overlay.SwitchToFrame("Revisions dialog");
         revisionstate.VerifyRevisionCount(2);
 

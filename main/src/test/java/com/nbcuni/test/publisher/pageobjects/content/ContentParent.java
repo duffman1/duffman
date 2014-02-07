@@ -6,6 +6,8 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -27,35 +29,56 @@ public class ContentParent {
     private static CustomWebDriver webDriver;
     private static AppLib applib;
     
-    private static String Save_Btn = "//input[@id='edit-submit']";
-    private static String Message_Ctr = "//div[@class='messages status']";
-    private static String Warning_Ctr = "//div[@class='messages warning']";
-    private static String Error_Ctr = "//div[@class='messages error']";
-    private static String EditDraft_Tab = "//a[text()='Edit Draft']";
-    private static String Revisions_Tab = "//a[text()='Revisions']";
-    private static String pageTitle = ".//*[@id='page-title']";
-    private static String View_Tab = "//a[text()='View']";
-    private static String workBenchInfoBlock = ".//*[@class='workbench-info-block']";
-    private static String AddAnotherItem_Btn=".//input[@name='field_movie_credit_add_more']";
-
+    //PAGE OBJECT CONSTRUCTOR
     public ContentParent(CustomWebDriver custWebDr, AppLib applib) {
         webDriver = custWebDr;
         this.applib = applib;
     }
-   
+    
+    //PAGE OBJECT IDENTIFIERS
+    @FindBy(how = How.XPATH, using = "//input[@id='edit-submit']")
+    private static WebElement Save_Btn;
+    
+    @FindBy(how = How.XPATH, using = "//div[@class='messages status']")
+    private static WebElement Message_Ctr;
+    
+    @FindBy(how = How.XPATH, using = "//div[@class='messages warning']")
+    private static WebElement Warning_Ctr;
+    
+    @FindBy(how = How.XPATH, using = "//div[@class='messages error']")
+    private static WebElement Error_Ctr;
+    
+    @FindBy(how = How.XPATH, using = "//a[text()='Edit Draft']")
+    private static WebElement EditDraft_Tab;
+    
+    @FindBy(how = How.XPATH, using = "//a[text()='Revisions']")
+    private static WebElement Revisions_Tab;
+    
+    @FindBy(how = How.ID, using = "page-title")
+    private static WebElement PageTitle;
+    
+    @FindBy(how = How.XPATH, using = "//a[text()='View']")
+    private static WebElement View_Tab;
+    
+    @FindBy(how = How.XPATH, using = "//body")
+    private static WebElement Body_Txt;
+    
+    private static WebElement RequiredField_Ast(String field) {
+    	return webDriver.findElement(By.xpath("//*[contains(text(), '" + field + "')]/span[text()='*']"));
+    }
+    
+    
+    //PAGE OBJECT METHODS
     public void ClickSaveBtn() throws Exception {
     	
-    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(
-    			By.xpath(Save_Btn)));
-    	webDriver.click(Save_Btn);
+    	Reporter.log("Click the 'Save' button.");
+    	Save_Btn.click();
     }
     
     public void VerifyMessageStatus(String messageStatus) throws Exception {
     	
     	Reporter.log("Verify success message of '" + messageStatus + "' is present.");
-    	new WebDriverWait(webDriver, 10).until(
-    			ExpectedConditions.textToBePresentInElement(By.xpath(Message_Ctr)
-    					, messageStatus));
+    	Assert.assertTrue(Message_Ctr.getText().contains(messageStatus));
     	
     	Reporter.log("Verify there are no errors present.");
     	ErrorChecking errorChecking = new ErrorChecking(webDriver, applib);
@@ -65,78 +88,45 @@ public class ContentParent {
     
     public void VerifyMessageWarning(String warningTxt) throws Exception {
     	
-    	new WebDriverWait(webDriver, 10).until(
-    			ExpectedConditions.textToBePresentInElement(By.xpath(Warning_Ctr)
-    					, warningTxt));
+    	Reporter.log("Verify warning message '" + warningTxt + "' is present.");
+    	Assert.assertTrue(Warning_Ctr.getText().contains(warningTxt));
     }
     
-    public void VerifyMessageError(String errorTxt) throws Exception {
-    	
-    	new WebDriverWait(webDriver, 10).until(
-    			ExpectedConditions.textToBePresentInElement(By.xpath(Error_Ctr)
-    					, errorTxt));
-    }
-    
-    public void ClickEditDraftTab() throws Exception {
-    	
-    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(
-    			By.xpath(EditDraft_Tab))).click();
-    }
-    
-    public void ClickRevisionsTab() throws Exception {
-    	
-    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(
-    			By.xpath(Revisions_Tab))).click();
-    }
-
-    public void ClickViewTab() throws Exception {
-
-        new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(
-                By.xpath(View_Tab))).click();;
-
-    }
-
     public void VerifyRequiredFields(List<String> allFields) throws Exception {
     	
     	for (String field : allFields) {
-    		webDriver.findElement(By.xpath("//*[contains(text(), '" + field + "')]/span[text()='*']"));
+    		Reporter.log("Verify the '" + field + "' is present as a required field.");
+    		RequiredField_Ast(field).isDisplayed();
     	}
     }
     public void VerifyPostTitle(String postName) throws Exception {
     	
-    	new WebDriverWait(webDriver, 10).until(
-    			ExpectedConditions.textToBePresentInElement(By.xpath(pageTitle)
-    					, postName));
-    }
-
-    public void WorkBenchInfoBlock(List<String> fields) throws Exception {
-
-        for (String field:fields){
-            new WebDriverWait(webDriver, 10).until(
-                    ExpectedConditions.textToBePresentInElement(By.xpath(workBenchInfoBlock)
-                            , field));
-        }
+    	Reporter.log("Verify the post titled '" + postName + "' is present.");
+    	Assert.assertTrue(PageTitle.getText().contains(postName));
+    	
     }
 
     public void VerifyPageContentPresent(List<String> txtItems) throws Exception {
 
-    	Thread.sleep(1000); //TODO stale element exception here
-        String bodyTxt = webDriver.findElement(By.xpath("//body")).getText();
+    	Thread.sleep(500); //stale element exception
+        String bodyTxt = Body_Txt.getText();
 
-        for (String s : txtItems) {
-
-            Assert.assertTrue(bodyTxt.contains(s));
+        for (String text : txtItems) {
+        	Reporter.log("Verify the text '" + text + "' is present on the page.");
+            Assert.assertTrue(bodyTxt.contains(text));
 
         }
     }
 
     public void VerifyPageContentNotPresent(List<String> txtItems) throws Exception {
 
-        String bodyTxt = webDriver.findElement(By.xpath("//body")).getText();
-
-        for (String s : txtItems) {
-
-            Assert.assertFalse(bodyTxt.contains(s));
+    	Thread.sleep(500); //stale element exception
+        String bodyTxt = Body_Txt.getText();
+        
+        for (String text : txtItems) {
+        	
+        	Reporter.log("Verify the text '" + text + "' is NOT present on the page.");
+            Assert.assertFalse(bodyTxt.contains(text));
 
         }
     }

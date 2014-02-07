@@ -55,6 +55,7 @@ public class Configuration extends ParentTest{
         blocks.ClickSaveBlocksBtn();
         overlay.SwitchToActiveFrame();
         ContentParent contentParent = new ContentParent(webDriver, applib);
+        PageFactory.initElements(webDriver, contentParent);
         contentParent.VerifyMessageStatus("The block settings have been updated.");
         
         //Step 6

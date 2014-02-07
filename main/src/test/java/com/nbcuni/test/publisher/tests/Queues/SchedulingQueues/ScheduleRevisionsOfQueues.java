@@ -90,6 +90,7 @@ public class ScheduleRevisionsOfQueues extends ParentTest{
         scheduleQueue.ClickScheduleBtn();
         overlay.SwitchToActiveFrame();
         ContentParent contentParent = new ContentParent(webDriver, applib);
+        PageFactory.initElements(webDriver, contentParent);
         contentParent.VerifyMessageStatus("The scheduled revision operation has been saved.");
         overlay.switchToDefaultContent();
         taxonomy.NavigateSite("Content>>Queues");

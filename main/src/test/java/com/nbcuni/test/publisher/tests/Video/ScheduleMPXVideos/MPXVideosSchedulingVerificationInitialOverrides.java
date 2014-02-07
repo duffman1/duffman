@@ -7,7 +7,7 @@ import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.content.SearchFor;
-import com.nbcuni.test.publisher.pageobjects.content.Workflow;
+import com.nbcuni.test.publisher.pageobjects.content.WorkBench;
 import junit.framework.Assert;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
@@ -88,6 +88,7 @@ public class MPXVideosSchedulingVerificationInitialOverrides extends ParentTest{
             searchFor.ClickSearchTitleLnk("Automation1");
             overlay.switchToDefaultContent();
             ContentParent contentParent = new ContentParent(webDriver, applib);
+            PageFactory.initElements(webDriver, contentParent);
             List<String> defaultVideoValues = Arrays.asList("Automation1", "MPX Released File Public IDs:", "zAN5F0aqoIzA",
                     "MPX Media Default Released File Public ID:", "MPX Media Categories:", "Series", "Show", "MPX Media Description:",
                     "Automation 1 example test", "MPX Media Author:", "Pub7 Content Provider", "MPX Media Air Date:",
@@ -102,8 +103,9 @@ public class MPXVideosSchedulingVerificationInitialOverrides extends ParentTest{
             contentParent.VerifyPageContentNotPresent(overridenVideoValues);
 
             //Step 21
-            Workflow workFlow = new Workflow(webDriver);
-            workFlow.ClickWorkflowTab("Edit");
+            WorkBench workBench = new WorkBench(webDriver, applib);
+            PageFactory.initElements(webDriver, workBench);
+            workBench.ClickWorkBenchTab("Edit");
             overlay.SwitchToFrame("Edit mpx_video_1 Automation1 dialog");
 
             //Step 22
@@ -155,7 +157,7 @@ public class MPXVideosSchedulingVerificationInitialOverrides extends ParentTest{
 
             //Step 36
             searchFor.ClickSearchTitleLnk("Automation1"); */
-            workFlow.ClickWorkflowTab("Edit");
+            workBench.ClickWorkBenchTab("Edit");
             overlay.SwitchToFrame("Edit mpx_video_1 Automation1 dialog");
 
             //Step 37

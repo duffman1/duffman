@@ -56,6 +56,7 @@ public class ProgramGuideVerification extends ParentTest{
         taxonomy.NavigateSite("Home>>Run cron");
         overlay.SwitchToActiveFrame();
 	    ContentParent contentParent = new ContentParent(webDriver, applib);
+	    PageFactory.initElements(webDriver, contentParent);
 	    contentParent.VerifyMessageStatus("Cron ran successfully.");
         
         //Step 6

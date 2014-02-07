@@ -2,8 +2,10 @@ package com.nbcuni.test.publisher.tests.SocialIntegration.Facebook;
 
 import java.net.URL;
 import java.util.Arrays;
+
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
+
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
@@ -15,6 +17,7 @@ import com.nbcuni.test.publisher.pageobjects.content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.content.Delete;
 import com.nbcuni.test.publisher.pageobjects.content.PublishingOptions;
 import com.nbcuni.test.publisher.pageobjects.content.Revisions;
+import com.nbcuni.test.publisher.pageobjects.content.WorkBench;
 
 public class ConfiguringPublisherAutopublishingToFacebookTimeandWall extends ParentTest{
 	
@@ -63,6 +66,7 @@ public class ConfiguringPublisherAutopublishingToFacebookTimeandWall extends Par
         DrupalForFacebook drupalForFacebook = new DrupalForFacebook(webDriver);
         Delete delete = new Delete(webDriver);
         ContentParent contentParent = new ContentParent(webDriver, applib);
+        PageFactory.initElements(webDriver, contentParent);
         boolean appAlreadyExists = drupalForFacebook.FacebookAppExists();
         if (appAlreadyExists == true) {
         	drupalForFacebook.ClickEditLnk();
@@ -130,7 +134,9 @@ public class ConfiguringPublisherAutopublishingToFacebookTimeandWall extends Par
         publishingOptions.SelectModerationState("Published");
         contentParent.ClickSaveBtn();
         contentParent.VerifyMessageStatus("Post " + postTitle + " has been created.");
-        contentParent.ClickRevisionsTab();
+        WorkBench workBench = new WorkBench(webDriver, applib);
+        PageFactory.initElements(webDriver, workBench);
+        workBench.ClickWorkBenchTab("Revisions");
         overlay.SwitchToFrame("Revisions");
         
         //Step 12

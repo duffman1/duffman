@@ -45,6 +45,7 @@ public class CreatePost extends ParentTest{
             
             	//Step 2
             	ContentParent contentParent = new ContentParent(webDriver, applib);
+            	PageFactory.initElements(webDriver, contentParent);
             	contentParent.VerifyRequiredFields(Arrays.asList("Title", "Body"));
             	PublishingOptions publishingOptions = new PublishingOptions(webDriver);
             	publishingOptions.ClickPublishingOptionsLnk();
@@ -74,7 +75,9 @@ public class CreatePost extends ParentTest{
             	contentParent.ClickSaveBtn();
             	overlay.switchToDefaultContent();
             	contentParent.VerifyMessageStatus("Post " + postTitle + " has been created.");
-            	contentParent.WorkBenchInfoBlock(Arrays.asList(state));
+            	WorkBench workBench = new WorkBench(webDriver, applib);
+            	PageFactory.initElements(webDriver, workBench);
+            	workBench.VerifyWorkBenchBlockTextPresent(Arrays.asList(state));
             	
             }
             

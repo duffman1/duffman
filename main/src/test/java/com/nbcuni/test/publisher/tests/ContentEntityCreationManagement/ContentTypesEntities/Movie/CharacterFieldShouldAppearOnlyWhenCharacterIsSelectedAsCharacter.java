@@ -58,6 +58,7 @@ public class CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter ex
             selectFile.SelectDefaultCoverImg();
             overlay.SwitchToFrame("Create Character Profile");
             ContentParent contentParent = new ContentParent(webDriver, applib);
+            PageFactory.initElements(webDriver, contentParent);
             contentParent.ClickSaveBtn();
             overlay.switchToDefaultContent();
             contentParent.VerifyMessageStatus("Character Profile " + characterName + " has been created.");
@@ -134,7 +135,9 @@ public class CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter ex
             contentParent.VerifyMessageStatus("Movie " + movieTitle + " has been created.");
             
             //Step 15
-            contentParent.ClickEditDraftTab();
+            WorkBench workBench = new WorkBench(webDriver, applib);
+            PageFactory.initElements(webDriver, workBench);
+            workBench.ClickWorkBenchTab("Edit Draft");
             overlay.SwitchToFrame(movieTitle);
             castCrew.ClickCastCrewLnk();
             castCrew.VerifyCharacterTxbDisplayed();
@@ -152,7 +155,7 @@ public class CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter ex
             //Step 17
             overlay.switchToDefaultContent();
             new RevisionState(webDriver);
-            contentParent.WorkBenchInfoBlock(Arrays.asList("Published"));
-
+            workBench.VerifyWorkBenchBlockTextPresent(Arrays.asList("Published"));
+            
     }
 }

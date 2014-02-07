@@ -87,6 +87,7 @@ public class EXIFKeywordsIngestedPhraseInsteadSetsWords extends ParentTest{
             editImage.ClickSaveBtn();
             overlay.SwitchToActiveFrame();
             ContentParent contentParent = new ContentParent(webDriver, applib);
+            PageFactory.initElements(webDriver, contentParent);
             contentParent.VerifyMessageStatus("Image");
             contentParent.VerifyMessageStatus("has been updated.");
             overlay.ClickCloseOverlayLnk();

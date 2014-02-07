@@ -58,6 +58,7 @@ public class CreateMediaGallery extends ParentTest{
             
             //Step 6
             ContentParent contentParent = new ContentParent(webDriver, applib);
+            PageFactory.initElements(webDriver, contentParent);
             contentParent.ClickSaveBtn();
             contentParent.VerifyMessageStatus("Media Gallery " + title + " has been created.");
             
