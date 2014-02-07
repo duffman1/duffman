@@ -52,6 +52,7 @@ public class BasicUIForCreatingAndRevisingQueues extends ParentTest{
         Queues queues = new Queues(webDriver);
         queues.ClickSaveQueueBtn();
         ErrorChecking errorChecking = new ErrorChecking(webDriver, applib);
+        PageFactory.initElements(webDriver, errorChecking);
         errorChecking.VerifyAllRequiredFields(Arrays.asList("Title"));
         
         //Step 4

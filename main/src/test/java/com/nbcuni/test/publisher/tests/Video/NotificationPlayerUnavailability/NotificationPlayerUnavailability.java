@@ -71,7 +71,7 @@ public class NotificationPlayerUnavailability extends ParentTest{
         //MPX Configuration required
         taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
         overlay.SwitchToFrame("Media: thePlatform mpx settings dialog");
-        Settings settings = new Settings(webDriver);
+        Settings settings = new Settings(webDriver, applib);
         if (settings.IsMPXConfigured() == true) {
 
         	List<String> configuredAccounts = settings.GetImportAccountSelectedOptions();
@@ -154,6 +154,7 @@ public class NotificationPlayerUnavailability extends ParentTest{
         	    
         	    //Step 7
         	    ErrorChecking errorChecking = new ErrorChecking(webDriver, applib);
+        	    PageFactory.initElements(webDriver, errorChecking);
         	    errorChecking.VerifyMPXPlayerDisabled(playerTitle);
                 
                 //Step 8

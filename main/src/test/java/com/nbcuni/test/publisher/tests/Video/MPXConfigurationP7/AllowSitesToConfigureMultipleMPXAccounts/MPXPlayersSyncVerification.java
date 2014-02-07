@@ -54,7 +54,7 @@ public class MPXPlayersSyncVerification extends ParentTest{
         //Step
         taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
         overlay.SwitchToFrame("Media: thePlatform mpx settings dialog");
-        Settings settings = new Settings(webDriver);
+        Settings settings = new Settings(webDriver, applib);
         if (settings.IsMPXConfigured() == true) {
             
         	//Step

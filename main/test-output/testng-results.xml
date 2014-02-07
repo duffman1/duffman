@@ -11,24 +11,27 @@
       <![CDATA[Open url 'http://qa5dev.publisher.nbcuni.com'.]]>
     </line>
     <line>
-      <![CDATA[Enter the account name 'DB TV' in the account select text box.]]>
+      <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the account option from the drop down list.]]>
+      <![CDATA[Enter the user's password in the 'Password' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Account' title to leave focus off of the selection.]]>
+      <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[Wait for account to switch to the newly selected account.]]>
+      <![CDATA[verifyObjectContainsText:  Object (//td[@class='views-field views-field-history-list'])[1] contains the text Revision was set from Draft to Draft on 02/07/2014]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="132580" started-at="2014-02-07T16:39:12Z" finished-at="2014-02-07T16:41:24Z">
+  <suite name="Default suite" duration-ms="33334" started-at="2014-02-07T19:50:27Z" finished-at="2014-02-07T19:51:01Z">
     <groups>
+      <group name="full">
+        <method signature="BasicUIForCreatingAndRevisingQueues.BasicUIForCreatingAndRevisingQueues_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.CreateUpdateRevisionsToQueues.BasicUIForCreatingAndRevisingQueues@1232784a]" name="BasicUIForCreatingAndRevisingQueues_Test" class="com.nbcuni.test.publisher.tests.Queues.CreateUpdateRevisionsToQueues.BasicUIForCreatingAndRevisingQueues"/>
+      </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="132580" started-at="2014-02-07T16:39:12Z" finished-at="2014-02-07T16:41:24Z">
-      <class name="com.nbcuni.test.publisher.ContentBuildScripts.Build1000MPXAssets">
-        <test-method status="PASS" signature="startSelenium(java.lang.String)[pri:0, instance:com.nbcuni.test.publisher.ContentBuildScripts.Build1000MPXAssets@1232784a]" name="startSelenium" is-config="true" duration-ms="13319" started-at="2014-02-07T11:39:12Z" finished-at="2014-02-07T11:39:25Z">
+    <test name="Default test" duration-ms="33334" started-at="2014-02-07T19:50:27Z" finished-at="2014-02-07T19:51:01Z">
+      <class name="com.nbcuni.test.publisher.tests.Queues.CreateUpdateRevisionsToQueues.BasicUIForCreatingAndRevisingQueues">
+        <test-method status="PASS" signature="startSelenium(java.lang.String)[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.CreateUpdateRevisionsToQueues.BasicUIForCreatingAndRevisingQueues@1232784a]" name="startSelenium" is-config="true" duration-ms="13877" started-at="2014-02-07T14:50:27Z" finished-at="2014-02-07T14:50:41Z">
           <params>
             <param index="0">
               <value>
@@ -45,37 +48,37 @@
             </line>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="BuildAssets_Test()[pri:0, instance:com.nbcuni.test.publisher.ContentBuildScripts.Build1000MPXAssets@1232784a]" name="BuildAssets_Test" duration-ms="118672" started-at="2014-02-07T11:39:25Z" finished-at="2014-02-07T11:41:24Z">
+        <test-method status="PASS" signature="BasicUIForCreatingAndRevisingQueues_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.CreateUpdateRevisionsToQueues.BasicUIForCreatingAndRevisingQueues@1232784a]" name="BasicUIForCreatingAndRevisingQueues_Test" duration-ms="18877" started-at="2014-02-07T14:50:41Z" finished-at="2014-02-07T14:51:00Z">
           <reporter-output>
             <line>
               <![CDATA[Open url 'http://qa5dev.publisher.nbcuni.com'.]]>
             </line>
             <line>
-              <![CDATA[Enter the account name 'DB TV' in the account select text box.]]>
+              <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the account option from the drop down list.]]>
+              <![CDATA[Enter the user's password in the 'Password' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Account' title to leave focus off of the selection.]]>
+              <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
-              <![CDATA[Wait for account to switch to the newly selected account.]]>
+              <![CDATA[verifyObjectContainsText:  Object (//td[@class='views-field views-field-history-list'])[1] contains the text Revision was set from Draft to Draft on 02/07/2014]]>
             </line>
           </reporter-output>
-        </test-method> <!-- BuildAssets_Test -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.ContentBuildScripts.Build1000MPXAssets@1232784a]" name="stopSelenium" is-config="true" duration-ms="574" started-at="2014-02-07T11:41:24Z" finished-at="2014-02-07T11:41:24Z">
+        </test-method> <!-- BasicUIForCreatingAndRevisingQueues_Test -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.CreateUpdateRevisionsToQueues.BasicUIForCreatingAndRevisingQueues@1232784a]" name="stopSelenium" is-config="true" duration-ms="567" started-at="2014-02-07T14:51:00Z" finished-at="2014-02-07T14:51:01Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=BuildAssets_Test status=SUCCESS method=Build1000MPXAssets.BuildAssets_Test()[pri:0, instance:com.nbcuni.test.publisher.ContentBuildScripts.Build1000MPXAssets@1232784a] output=Open url 'http://qa5dev.publisher.nbcuni.com'.]]]>
+                <![CDATA[[TestResult name=BasicUIForCreatingAndRevisingQueues_Test status=SUCCESS method=BasicUIForCreatingAndRevisingQueues.BasicUIForCreatingAndRevisingQueues_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.CreateUpdateRevisionsToQueues.BasicUIForCreatingAndRevisingQueues@1232784a] output=Open url 'http://qa5dev.publisher.nbcuni.com'.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-      </class> <!-- com.nbcuni.test.publisher.ContentBuildScripts.Build1000MPXAssets -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Queues.CreateUpdateRevisionsToQueues.BasicUIForCreatingAndRevisingQueues -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

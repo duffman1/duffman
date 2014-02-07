@@ -31,6 +31,7 @@ public class Build1000MPXAssets extends ParentTest{
     @Test()
     public void BuildAssets_Test() throws Exception{
     	
+    	/*
     	//Step 1
     	UserLogin userLogin = applib.openApplication();
     	
@@ -82,6 +83,6 @@ public class Build1000MPXAssets extends ParentTest{
             }
         	
         }
-        
+        */
     }
 }

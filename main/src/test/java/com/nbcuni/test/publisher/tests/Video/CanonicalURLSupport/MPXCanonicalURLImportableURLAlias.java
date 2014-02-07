@@ -54,7 +54,7 @@ public class MPXCanonicalURLImportableURLAlias extends ParentTest{
         //MPX Configuration required
         taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
         overlay.SwitchToFrame("Media: thePlatform mpx settings dialog");
-        Settings settings = new Settings(webDriver);
+        Settings settings = new Settings(webDriver, applib);
         if (settings.IsMPXConfigured() == true) {
 
         	List<String> configuredAccounts = settings.GetImportAccountSelectedOptions();
@@ -73,6 +73,7 @@ public class MPXCanonicalURLImportableURLAlias extends ParentTest{
         		
         		//Step 4
         		overlay.SwitchToActiveFrame();
+        		ContentParent contentParent = new ContentParent(webDriver, applib);
         		ManageFields manageFields = new ManageFields(webDriver, applib);
         		PageFactory.initElements(webDriver, manageFields);
         		if (manageFields.FieldLabelExists("MPX Media Related Link") == false) {
@@ -82,7 +83,7 @@ public class MPXCanonicalURLImportableURLAlias extends ParentTest{
         			//Step 5
         			manageFields.SelectFieldType("Link");
         			manageFields.ClickSaveBtn(); 
-        			
+        			contentParent.VerifyMessageStatus("Your settings have been saved.");
         		}
         		
         		//Step 6
@@ -98,7 +99,6 @@ public class MPXCanonicalURLImportableURLAlias extends ParentTest{
         		PageFactory.initElements(webDriver, mpxFileType);
         		mpxFileType.SelectURLAliasField("MPX Media Related Link");
         		mpxFileType.ClickSaveBtn();
-        		ContentParent contentParent = new ContentParent(webDriver, applib);
         		contentParent.VerifyMessageStatus("has been updated.");
         		
         		//Step 8 NOTE- step 8 creates a new video with a canonical url rather than using an existing video

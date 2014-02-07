@@ -6,9 +6,11 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.Reporter;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -48,62 +50,66 @@ public class ContentParent {
     	webDriver.click(Save_Btn);
     }
     
-    public void VerifyMessageStatus(String messageStatus){
+    public void VerifyMessageStatus(String messageStatus) throws Exception {
     	
+    	Reporter.log("Verify success message of '" + messageStatus + "' is present.");
     	new WebDriverWait(webDriver, 10).until(
     			ExpectedConditions.textToBePresentInElement(By.xpath(Message_Ctr)
     					, messageStatus));
+    	
+    	Reporter.log("Verify there are no errors present.");
     	ErrorChecking errorChecking = new ErrorChecking(webDriver, applib);
+    	PageFactory.initElements(webDriver, errorChecking);
     	errorChecking.VerifyNoMessageErrorsPresent();
     }
     
-    public void VerifyMessageWarning(String warningTxt){
+    public void VerifyMessageWarning(String warningTxt) throws Exception {
     	
     	new WebDriverWait(webDriver, 10).until(
     			ExpectedConditions.textToBePresentInElement(By.xpath(Warning_Ctr)
     					, warningTxt));
     }
     
-    public void VerifyMessageError(String errorTxt){
+    public void VerifyMessageError(String errorTxt) throws Exception {
     	
     	new WebDriverWait(webDriver, 10).until(
     			ExpectedConditions.textToBePresentInElement(By.xpath(Error_Ctr)
     					, errorTxt));
     }
     
-    public void ClickEditDraftTab() {
+    public void ClickEditDraftTab() throws Exception {
     	
     	new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(
     			By.xpath(EditDraft_Tab))).click();
     }
     
-    public void ClickRevisionsTab() {
+    public void ClickRevisionsTab() throws Exception {
     	
     	new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(
     			By.xpath(Revisions_Tab))).click();
     }
 
-    public void ClickViewTab() {
+    public void ClickViewTab() throws Exception {
 
         new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(
                 By.xpath(View_Tab))).click();;
 
     }
 
-    public void VerifyRequiredFields(List<String> allFields) {
+    public void VerifyRequiredFields(List<String> allFields) throws Exception {
     	
     	for (String field : allFields) {
     		webDriver.findElement(By.xpath("//*[contains(text(), '" + field + "')]/span[text()='*']"));
     	}
     }
-    public void VerifyPostTitle(String postName){
+    public void VerifyPostTitle(String postName) throws Exception {
     	
     	new WebDriverWait(webDriver, 10).until(
     			ExpectedConditions.textToBePresentInElement(By.xpath(pageTitle)
     					, postName));
     }
 
-    public void WorkBenchInfoBlock(List<String> fields){
+    public void WorkBenchInfoBlock(List<String> fields) throws Exception {
 
         for (String field:fields){
             new WebDriverWait(webDriver, 10).until(

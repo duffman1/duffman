@@ -29,8 +29,7 @@ import java.util.concurrent.TimeUnit;
 public class Settings {
 
     private static CustomWebDriver webDriver;
-    private static AppLib al;
-    private final Util ul;
+    private static AppLib applib;
     
     private static String MPXLogin_Lnk = "//fieldset[@id='edit-accounts']//a";
     private static String Username0_Txb = "//input[@id='edit-accounts-new-0-theplatform-username']";
@@ -49,9 +48,9 @@ public class Settings {
     private static String AddAccount_Btn = "//input[@value='Add Account']";
     private static String DisplayMPXDebugMessageLevel_Ddl = "//select[@id='edit-media-theplatform-mpx-output-message-watchdog-severity']";
     
-    public Settings(final CustomWebDriver custWebDr) {
+    public Settings(CustomWebDriver custWebDr, AppLib applib) {
         webDriver = custWebDr;
-        ul = new Util(webDriver);
+        this.applib = applib;
         
     }
     
@@ -160,12 +159,11 @@ public class Settings {
     	
     	optionValues.remove("- Select -");
     	
-    	for (String account : accountNames) {
-    		
-    		Assert.assertTrue(optionValues.contains(account));
+    	for (String option : optionValues) {
+    		Assert.assertTrue(accountNames.contains(option));
     	}
     	
-    	webDriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+    	webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
     }
     
     public boolean IsMPXConfigured() throws Exception {
@@ -183,7 +181,7 @@ public class Settings {
     		mpxAlreadyConfigured = true;
     	}
     	
-    	webDriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+    	webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
     	
     	return mpxAlreadyConfigured;
     }
@@ -303,7 +301,7 @@ public class Settings {
     	if (ddl3Present == true) { selectedOptions.add(ddl3.getFirstSelectedOption().getText()); }
         if (ddl4Present == true) { selectedOptions.add(ddl4.getFirstSelectedOption().getText()); }
     	
-    	webDriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+    	webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
     	
     	return selectedOptions;
     }

@@ -72,7 +72,7 @@ public class MultipleMPXAccountsPerLoginVerification extends ParentTest{
         overlay.SwitchToFrame("Media: thePlatform mpx settings dialog");
         
         //Step 
-        Settings settings = new Settings(webDriver);
+        Settings settings = new Settings(webDriver, applib);
         if (settings.IsMPXConfigured() == true) { //MPX previously configured - pass test
         	
         	settings.VerifyImportAccountOptions(accountNames);

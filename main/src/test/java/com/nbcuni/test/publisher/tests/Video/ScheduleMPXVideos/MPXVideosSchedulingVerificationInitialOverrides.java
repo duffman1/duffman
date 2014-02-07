@@ -70,7 +70,7 @@ public class MPXVideosSchedulingVerificationInitialOverrides extends ParentTest{
         //Step 2 on requires prior MPX configuration
         taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
         overlay.SwitchToFrame("Media: thePlatform mpx settings dialog");
-        Settings settings = new Settings(webDriver);
+        Settings settings = new Settings(webDriver, applib);
         if (settings.IsMPXConfigured() == true) {
 
             //NOTE - test requires mpx test "MPXMediaSyncVerification" to be ran prior to this execution
