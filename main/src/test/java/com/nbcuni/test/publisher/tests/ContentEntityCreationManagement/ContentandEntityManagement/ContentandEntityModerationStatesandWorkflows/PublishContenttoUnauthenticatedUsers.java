@@ -51,7 +51,7 @@ public class PublishContenttoUnauthenticatedUsers extends ParentTest{
         publishingOptions.ClickPublishingOptionsLnk();
     	publishingOptions.SelectModerationState("Published");
     	publishingOptions.EnterMessageForStateChange("Log message for state change as Published");
-        ContentParent contentParent = new ContentParent(webDriver);
+        ContentParent contentParent = new ContentParent(webDriver, applib);
         contentParent.ClickSaveBtn();
         contentParent.VerifyMessageStatus("Media Gallery " + title + " has been created.");
       

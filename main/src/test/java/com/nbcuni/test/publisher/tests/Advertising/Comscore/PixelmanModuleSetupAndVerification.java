@@ -36,7 +36,7 @@ public class PixelmanModuleSetupAndVerification extends ParentTest {
         //Step 2 and 3 (truncated)
         taxonomy.NavigateSite("Modules");
     	overlay.SwitchToFrame("Modules");
-    	Modules modules = new Modules(webDriver);
+    	Modules modules = new Modules(webDriver, applib);
     	modules.EnterFilterName("Pixelman");
     	modules.EnableModule("Pixelman");
     	

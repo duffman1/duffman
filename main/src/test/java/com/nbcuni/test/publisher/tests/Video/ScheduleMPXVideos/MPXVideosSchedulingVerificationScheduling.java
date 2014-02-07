@@ -145,7 +145,7 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
         	applib.openApplication();
         	taxonomy.NavigateSite("Home>>Run cron");
     	    overlay.SwitchToActiveFrame();
-    	    ContentParent contentParent = new ContentParent(webDriver);
+    	    ContentParent contentParent = new ContentParent(webDriver, applib);
     	    contentParent.VerifyMessageStatus("Cron ran successfully.");
     	    
     	    //Step 8

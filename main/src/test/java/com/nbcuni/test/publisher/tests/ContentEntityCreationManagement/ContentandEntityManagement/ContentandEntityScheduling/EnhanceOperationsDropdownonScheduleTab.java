@@ -30,7 +30,7 @@ public class EnhanceOperationsDropdownonScheduleTab extends ParentTest {
         userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
 
         //Step 1a
-        Modules modules = new Modules(webDriver);
+        Modules modules = new Modules(webDriver, applib);
         modules.VerifyModuleEnabled("Pub Post");
         
         //Step 2
@@ -56,7 +56,7 @@ public class EnhanceOperationsDropdownonScheduleTab extends ParentTest {
         scheduleQueue.EnterTime("05:00 PM");
         scheduleQueue.ClickScheduleBtn();
         overlay.SwitchToActiveFrame();        
-        ContentParent contentParent = new ContentParent(webDriver);
+        ContentParent contentParent = new ContentParent(webDriver, applib);
         contentParent.VerifyMessageStatus("The scheduled revision operation has been saved");
      
         //Step 4

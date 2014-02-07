@@ -52,7 +52,7 @@ public class CreateDefaultContent {
     	
     	taxonomy.NavigateSite("Content>>Add content>>Post");
         overlay.SwitchToFrame("Create Post");
-        ContentParent contentParent = new ContentParent(webDriver);
+        ContentParent contentParent = new ContentParent(webDriver, appLib);
         BasicInformation basicInformation = new BasicInformation(webDriver);
         String postTitle = random.GetCharacterString(15);
         basicInformation.EnterTitle(postTitle);

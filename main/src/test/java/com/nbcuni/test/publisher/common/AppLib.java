@@ -51,6 +51,7 @@ public class AppLib {
     private String mpxPassword = "";
     private String implicitWaitTime = "";
     private String pageLoadWaitTime = "";
+    private String errorChecksEnabled = "";
 
     private static String configFileName = "src" + File.separator + "test" + File.separator + "resources"
             + File.separator + "config.properties";
@@ -118,6 +119,7 @@ public class AppLib {
             mpxPassword = configProperties.getProperty(environment + ".MPXPassWord");
             implicitWaitTime = configProperties.getProperty(environment + ".ImplicitWaitTime");
             pageLoadWaitTime = configProperties.getProperty(environment + ".PageLoadWaitTime");
+            errorChecksEnabled = configProperties.getProperty(environment + ".ErrorCheckingEnabled");
             
         } catch (Exception e) {
             new CustomWebDriverException(e, custWebDr);
@@ -175,6 +177,19 @@ public class AppLib {
     	
     	return Integer.parseInt(this.pageLoadWaitTime);
     	
+    }
+    
+    public boolean IsErrorCheckingEnabled(){
+    	
+    	boolean checksEnabled = true;
+    	if (this.errorChecksEnabled.equals("true")) {
+    		checksEnabled = true;
+    	}
+    	else {
+    		checksEnabled = false;
+    	}
+    	
+    	return checksEnabled;
     }
     
     public void attachScreenshot(ITestResult result) {

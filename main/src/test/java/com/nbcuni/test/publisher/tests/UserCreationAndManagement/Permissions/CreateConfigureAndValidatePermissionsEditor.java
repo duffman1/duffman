@@ -65,7 +65,7 @@ public class CreateConfigureAndValidatePermissionsEditor extends ParentTest{
         userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
         
         //Step 1a (enable post module if needed)
-        Modules modules = new Modules(webDriver);
+        Modules modules = new Modules(webDriver, applib);
         modules.VerifyModuleEnabled("Pub Post");
         
         //Step 2
@@ -86,7 +86,7 @@ public class CreateConfigureAndValidatePermissionsEditor extends ParentTest{
         String lastName = random.GetCharacterString(15);
         addUser.EnterLastName(lastName);
         addUser.ClickCreateNewAccountBtn();
-        ContentParent contentParent = new ContentParent(webDriver);
+        ContentParent contentParent = new ContentParent(webDriver, applib);
         contentParent.VerifyMessageStatus("A welcome message with further instructions has been e-mailed to the new user " + userName + ".");
        
         //Step 4

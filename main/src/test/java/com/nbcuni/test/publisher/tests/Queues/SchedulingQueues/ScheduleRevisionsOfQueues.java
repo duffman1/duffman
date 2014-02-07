@@ -40,7 +40,7 @@ public class ScheduleRevisionsOfQueues extends ParentTest{
         userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
         
         //Step 1a
-        Modules modules = new Modules(webDriver);
+        Modules modules = new Modules(webDriver, applib);
         modules.VerifyModuleEnabled("Pub Post");
         CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver, applib);
         String postTitle = createDefaultContent.Post("Draft");
@@ -89,7 +89,7 @@ public class ScheduleRevisionsOfQueues extends ParentTest{
         //Step 9
         scheduleQueue.ClickScheduleBtn();
         overlay.SwitchToActiveFrame();
-        ContentParent contentParent = new ContentParent(webDriver);
+        ContentParent contentParent = new ContentParent(webDriver, applib);
         contentParent.VerifyMessageStatus("The scheduled revision operation has been saved.");
         overlay.switchToDefaultContent();
         taxonomy.NavigateSite("Content>>Queues");

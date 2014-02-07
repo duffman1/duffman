@@ -98,7 +98,7 @@ public class MPXCanonicalURLImportableURLAlias extends ParentTest{
         		PageFactory.initElements(webDriver, mpxFileType);
         		mpxFileType.SelectURLAliasField("MPX Media Related Link");
         		mpxFileType.ClickSaveBtn();
-        		ContentParent contentParent = new ContentParent(webDriver);
+        		ContentParent contentParent = new ContentParent(webDriver, applib);
         		contentParent.VerifyMessageStatus("has been updated.");
         		
         		//Step 8 NOTE- step 8 creates a new video with a canonical url rather than using an existing video

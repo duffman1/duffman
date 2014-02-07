@@ -57,7 +57,7 @@ public class CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter ex
             PageFactory.initElements(webDriver, selectFile);
             selectFile.SelectDefaultCoverImg();
             overlay.SwitchToFrame("Create Character Profile");
-            ContentParent contentParent = new ContentParent(webDriver);
+            ContentParent contentParent = new ContentParent(webDriver, applib);
             contentParent.ClickSaveBtn();
             overlay.switchToDefaultContent();
             contentParent.VerifyMessageStatus("Character Profile " + characterName + " has been created.");

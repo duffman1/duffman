@@ -55,7 +55,7 @@ public class EnhanceContentLibraryTable extends ParentTest{
         	//Step 5 //TODO this step needs additional logic as time allows
         	
         	//Step 6
-        	ContentParent contentParent = new ContentParent(webDriver);
+        	ContentParent contentParent = new ContentParent(webDriver, applib);
         	contentParent.VerifyPageContentNotPresent(Arrays.asList("We are sorry, no video available"));
         	
         	//Step 7

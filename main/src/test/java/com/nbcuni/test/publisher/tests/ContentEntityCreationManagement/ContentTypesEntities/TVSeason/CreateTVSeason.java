@@ -39,7 +39,7 @@ public class CreateTVSeason extends ParentTest{
         overlay.SwitchToFrame("Create TV Season");
         
         //Step 3
-        ContentParent contentParent = new ContentParent(webDriver);
+        ContentParent contentParent = new ContentParent(webDriver, applib);
         contentParent.VerifyRequiredFields(Arrays.asList("Title", "Season", "Synopsis"));
         PublishingOptions publishingOptions = new PublishingOptions(webDriver);
         publishingOptions.ClickPublishingOptionsLnk();

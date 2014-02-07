@@ -32,15 +32,12 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 public class Modules {
 
     private static CustomWebDriver webDriver;
-    private static AppLib al;
-    private final Util ul;
+    private static AppLib applib;
     
     
-    
-    public Modules(final CustomWebDriver custWebDr) {
+    public Modules(CustomWebDriver custWebDr, AppLib applib) {
         webDriver = custWebDr;
-        ul = new Util(webDriver);
-        
+        this.applib = applib;
     }
     
     private static String FilterList_Txb = "//input[@id='edit-module-filter-name']";
@@ -59,7 +56,8 @@ public class Modules {
     
     public void VerifyConfigurationSaved() throws Exception{
     	
-    	ul.verifyObjectContainsText(Message_Ctr, "The configuration options have been saved.");
+    	Assert.assertTrue(webDriver.findElement(By.xpath(Message_Ctr)).getText().contains("The configuration options have been saved."));
+    	
     }
     
     public boolean IsModuleEnabled(String moduleName) {
@@ -145,7 +143,7 @@ public class Modules {
     	webDriver.findElement(By.xpath(Uninstall_Btn)).click();
     	Overlay overlay = new Overlay(webDriver);
     	overlay.SwitchToActiveFrame();
-    	ContentParent contentParent = new ContentParent(webDriver);
+    	ContentParent contentParent = new ContentParent(webDriver, applib);
     	contentParent.VerifyPageContentPresent(Arrays.asList("The following modules will be completely uninstalled from your site, and all data from these modules will be lost!", 
     			moduleName));
     	

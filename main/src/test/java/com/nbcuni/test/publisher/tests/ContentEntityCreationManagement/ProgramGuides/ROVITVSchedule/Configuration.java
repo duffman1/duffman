@@ -36,7 +36,7 @@ public class Configuration extends ParentTest{
 	    userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
 	    
 	    //Step 2	   
-	    Modules modules = new Modules(webDriver);
+	    Modules modules = new Modules(webDriver, applib);
 	    modules.VerifyModuleEnabled("Program Guide");
 	    modules.VerifyModuleEnabled("Program Guide Example");
 	    
@@ -54,7 +54,7 @@ public class Configuration extends ParentTest{
         blocks.SelectRegion("Program Guide", "Content");
         blocks.ClickSaveBlocksBtn();
         overlay.SwitchToActiveFrame();
-        ContentParent contentParent = new ContentParent(webDriver);
+        ContentParent contentParent = new ContentParent(webDriver, applib);
         contentParent.VerifyMessageStatus("The block settings have been updated.");
         
         //Step 6

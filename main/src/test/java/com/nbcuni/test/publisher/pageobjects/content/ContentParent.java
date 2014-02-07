@@ -1,11 +1,15 @@
 package com.nbcuni.test.publisher.pageobjects.content;
 
+import com.nbcuni.test.publisher.common.AppLib;
+import com.nbcuni.test.publisher.pageobjects.errorchecking.ErrorChecking;
 import com.nbcuni.test.webdriver.CustomWebDriver;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -19,6 +23,7 @@ import java.util.concurrent.TimeUnit;
 public class ContentParent {
 
     private static CustomWebDriver webDriver;
+    private static AppLib applib;
     
     private static String Save_Btn = "//input[@id='edit-submit']";
     private static String Message_Ctr = "//div[@class='messages status']";
@@ -31,9 +36,9 @@ public class ContentParent {
     private static String workBenchInfoBlock = ".//*[@class='workbench-info-block']";
     private static String AddAnotherItem_Btn=".//input[@name='field_movie_credit_add_more']";
 
-    public ContentParent(final CustomWebDriver custWebDr) {
+    public ContentParent(CustomWebDriver custWebDr, AppLib applib) {
         webDriver = custWebDr;
-        
+        this.applib = applib;
     }
    
     public void ClickSaveBtn() throws Exception {
@@ -48,6 +53,8 @@ public class ContentParent {
     	new WebDriverWait(webDriver, 10).until(
     			ExpectedConditions.textToBePresentInElement(By.xpath(Message_Ctr)
     					, messageStatus));
+    	ErrorChecking errorChecking = new ErrorChecking(webDriver, applib);
+    	errorChecking.VerifyNoMessageErrorsPresent();
     }
     
     public void VerifyMessageWarning(String warningTxt){
@@ -62,34 +69,6 @@ public class ContentParent {
     	new WebDriverWait(webDriver, 10).until(
     			ExpectedConditions.textToBePresentInElement(By.xpath(Error_Ctr)
     					, errorTxt));
-    }
-    
-    public void VerifyNoMessageErrorsPresent(){
-    	
-    	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
-    	
-    	boolean errorsPresent = false;
-    	try {
-    	
-    		WebElement el = webDriver.findElement(By.xpath(Error_Ctr));
-    		
-    		String errorText = el.getText();
-    		errorText = errorText.replace("Error message", "");
-    		errorText = errorText.replace("There are security updates available for one or more of your modules or themes. To ensure the security of your server, you should update immediately! See the available updates page for more information.", "");
-    		System.out.println(errorText);
-    		if (errorText.length() > 0) {
-    			errorsPresent = true;
-    		}
-    	}
-    	catch (Exception e) {
-    		errorsPresent = false;
-    	}
-    	
-    	if (errorsPresent == true) {
-    		Assert.fail("Error message are present!");
-    	}
-    	
-    	webDriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     }
     
     public void ClickEditDraftTab() {

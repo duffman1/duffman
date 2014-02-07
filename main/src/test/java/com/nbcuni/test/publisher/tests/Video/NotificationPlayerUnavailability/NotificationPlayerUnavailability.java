@@ -100,7 +100,7 @@ public class NotificationPlayerUnavailability extends ParentTest{
                 MPXPlayers MPXPlayers = new MPXPlayers(webDriver);
                 MPXPlayers.ClickSyncMPXPlayersLnk();
                 MPXPlayers.ClickSyncMPXPlayersNowLnk();
-                ContentParent contentParent = new ContentParent(webDriver);
+                ContentParent contentParent = new ContentParent(webDriver, applib);
                 contentParent.VerifyMessageStatus("players returned for account");
         	    SearchFor searchFor = new SearchFor(webDriver, applib);
                 PageFactory.initElements(webDriver, searchFor);
@@ -153,7 +153,7 @@ public class NotificationPlayerUnavailability extends ParentTest{
         	    overlay.SwitchToActiveFrame();
         	    
         	    //Step 7
-        	    ErrorChecking errorChecking = new ErrorChecking(webDriver);
+        	    ErrorChecking errorChecking = new ErrorChecking(webDriver, applib);
         	    errorChecking.VerifyMPXPlayerDisabled(playerTitle);
                 
                 //Step 8

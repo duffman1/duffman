@@ -86,7 +86,7 @@ public class EXIFKeywordsIngestedPhraseInsteadSetsWords extends ParentTest{
             editImage.VerifyKeywordsValue("NUP_155306, Revolution, Episode 118, Season 1");
             editImage.ClickSaveBtn();
             overlay.SwitchToActiveFrame();
-            ContentParent contentParent = new ContentParent(webDriver);
+            ContentParent contentParent = new ContentParent(webDriver, applib);
             contentParent.VerifyMessageStatus("Image");
             contentParent.VerifyMessageStatus("has been updated.");
             overlay.ClickCloseOverlayLnk();

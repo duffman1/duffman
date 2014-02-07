@@ -87,7 +87,7 @@ public class MPXVideosSchedulingVerificationInitialOverrides extends ParentTest{
 
             searchFor.ClickSearchTitleLnk("Automation1");
             overlay.switchToDefaultContent();
-            ContentParent contentParent = new ContentParent(webDriver);
+            ContentParent contentParent = new ContentParent(webDriver, applib);
             List<String> defaultVideoValues = Arrays.asList("Automation1", "MPX Released File Public IDs:", "zAN5F0aqoIzA",
                     "MPX Media Default Released File Public ID:", "MPX Media Categories:", "Series", "Show", "MPX Media Description:",
                     "Automation 1 example test", "MPX Media Author:", "Pub7 Content Provider", "MPX Media Air Date:",

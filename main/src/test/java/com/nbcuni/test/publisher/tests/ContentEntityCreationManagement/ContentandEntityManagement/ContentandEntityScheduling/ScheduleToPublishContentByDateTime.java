@@ -37,7 +37,7 @@ public class ScheduleToPublishContentByDateTime extends ParentTest {
         userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
 
         //Step 1a
-        Modules modules = new Modules(webDriver);
+        Modules modules = new Modules(webDriver, applib);
         modules.VerifyModuleEnabled("Pub Post");
         
         //Step 2
@@ -69,7 +69,7 @@ public class ScheduleToPublishContentByDateTime extends ParentTest {
         scheduleQueue.VerifyScheduleTableisEmpty();
         
         //Step 6
-        ContentParent contentParent = new ContentParent(webDriver);
+        ContentParent contentParent = new ContentParent(webDriver, applib);
         contentParent.ClickEditDraftTab();
         overlay.switchToDefaultContent();
         overlay.SwitchToFrame("Edit Post "+ postTitle + " dialog");

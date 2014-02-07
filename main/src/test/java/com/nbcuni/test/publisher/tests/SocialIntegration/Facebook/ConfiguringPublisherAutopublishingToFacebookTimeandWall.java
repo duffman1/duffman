@@ -49,7 +49,7 @@ public class ConfiguringPublisherAutopublishingToFacebookTimeandWall extends Par
         //Step 3
         taxonomy.NavigateSite("Modules");
         overlay.SwitchToFrame("Modules");
-        Modules modules = new Modules(webDriver);
+        Modules modules = new Modules(webDriver, applib);
         modules.EnterFilterName("Pub Social");
         modules.EnableModule("Pub Social");
         modules.EnterFilterName("Pub Post");
@@ -62,7 +62,7 @@ public class ConfiguringPublisherAutopublishingToFacebookTimeandWall extends Par
         overlay.SwitchToFrame("Drupal for Facebook");
         DrupalForFacebook drupalForFacebook = new DrupalForFacebook(webDriver);
         Delete delete = new Delete(webDriver);
-        ContentParent contentParent = new ContentParent(webDriver);
+        ContentParent contentParent = new ContentParent(webDriver, applib);
         boolean appAlreadyExists = drupalForFacebook.FacebookAppExists();
         if (appAlreadyExists == true) {
         	drupalForFacebook.ClickEditLnk();

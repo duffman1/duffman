@@ -52,7 +52,7 @@ public class CastCrewFieldCollectionsVerification_Movie extends ParentTest{
     	UserLogin userLogin = applib.openApplication();
     	PageFactory.initElements(webDriver, userLogin);
         userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
-        ContentParent contentParent = new ContentParent(webDriver);
+        ContentParent contentParent = new ContentParent(webDriver, applib);
         
         //Step 2
         CharactersInformation charactersInformation = new CharactersInformation(webDriver);

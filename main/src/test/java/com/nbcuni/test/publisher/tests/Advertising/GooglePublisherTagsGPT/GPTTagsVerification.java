@@ -38,7 +38,7 @@ public class GPTTagsVerification extends ParentTest{
             userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
             
             //Step 1A
-            Modules modules = new Modules(webDriver);
+            Modules modules = new Modules(webDriver, applib);
             modules.VerifyModuleEnabled("Doubleclick for Publishers");
             
             //Step 2
@@ -68,7 +68,7 @@ public class GPTTagsVerification extends ParentTest{
             PageFactory.initElements(webDriver, blocks);
             blocks.SelectRegion("DFP tag: " + adSlotName, "Sidebar first");
             blocks.ClickSaveBlocksBtn();
-            ContentParent contentParent = new ContentParent(webDriver);
+            ContentParent contentParent = new ContentParent(webDriver, applib);
             PageFactory.initElements(webDriver, contentParent);
             contentParent.VerifyMessageStatus("The block settings have been updated.");
             

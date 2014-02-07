@@ -33,7 +33,7 @@ public class CreatePost extends ParentTest{
             userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
             
             //Step 1a
-            Modules modules = new Modules(webDriver);
+            Modules modules = new Modules(webDriver, applib);
             modules.VerifyModuleEnabled("Pub Post");
             
             List<String> allStates = Arrays.asList("Draft", "Review", "Published");
@@ -44,7 +44,7 @@ public class CreatePost extends ParentTest{
             	overlay.SwitchToFrame("Create Post");
             
             	//Step 2
-            	ContentParent contentParent = new ContentParent(webDriver);
+            	ContentParent contentParent = new ContentParent(webDriver, applib);
             	contentParent.VerifyRequiredFields(Arrays.asList("Title", "Body"));
             	PublishingOptions publishingOptions = new PublishingOptions(webDriver);
             	publishingOptions.ClickPublishingOptionsLnk();

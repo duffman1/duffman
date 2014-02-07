@@ -56,7 +56,7 @@ public class CreateCharacterProfile extends ParentTest{
             coverPhoto.VerifyFileImagePresent("HanSolo");
             
             //Step 5
-            ContentParent contentParent = new ContentParent(webDriver);
+            ContentParent contentParent = new ContentParent(webDriver, applib);
             contentParent.ClickSaveBtn();
             overlay.switchToDefaultContent();
             contentParent.VerifyMessageStatus("Character Profile " + characterName + " has been created.");

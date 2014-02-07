@@ -53,7 +53,7 @@ public class UnauthenticatedUsersNotAbleToViewThePublishedContents extends Paren
         //Step 2        
     	taxonomy.NavigateSite("Content>>Add content>>Post");
     	overlay.SwitchToFrame("Create Post");
-    	ContentParent contentParent = new ContentParent(webDriver);
+    	ContentParent contentParent = new ContentParent(webDriver, applib);
     	contentParent.VerifyRequiredFields(Arrays.asList("Title", "Body"));
     	PublishingOptions publishingOptions = new PublishingOptions(webDriver);
     	publishingOptions.ClickPublishingOptionsLnk();

@@ -42,7 +42,7 @@ public class QueueModerationStates extends ParentTest{
         userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
         
         //Step 1a
-        Modules modules = new Modules(webDriver);
+        Modules modules = new Modules(webDriver, applib);
         modules.VerifyModuleEnabled("Pub Post");
         CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver, applib);
         String postTitle = createDefaultContent.Post("Draft");
@@ -101,7 +101,7 @@ public class QueueModerationStates extends ParentTest{
         String messageForStateChange = random.GetCharacterString(15) + " " + random.GetCharacterString(10);
         publishingOptions.EnterMessageForStateChange(messageForStateChange);
         queuesRevisionList.ClickUpdateStateBtn();
-        ContentParent contentParent= new ContentParent(webDriver);
+        ContentParent contentParent= new ContentParent(webDriver, applib);
         contentParent.VerifyMessageStatus(queueTitle + " transitioned to the published state.");
         
         //Step 9

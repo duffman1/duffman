@@ -11,81 +11,6 @@
       <![CDATA[Open url 'http://qa5dev.publisher.nbcuni.com'.]]>
     </line>
     <line>
-      <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the user's password in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Login' button.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the account name 'DB TV' in the account select text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the account option from the drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Account' title to leave focus off of the selection.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for account to switch to the newly selected account.]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://qa5dev.publisher.nbcuni.com'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter title AutomationPlayer571722a937.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Apply' button.]]>
-    </line>
-    <line>
-      <![CDATA[Get the text of the first search result set item.]]>
-    </line>
-    <line>
-      <![CDATA[Enter title Automation.]]>
-    </line>
-    <line>
-      <![CDATA[Select the 'Published' from the 'MPX Status' select ddl.]]>
-    </line>
-    <line>
-      <![CDATA[Select the DB TV from the 'Source' select ddl.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Apply' button.]]>
-    </line>
-    <line>
-      <![CDATA[Get the text of the first search result set item.]]>
-    </line>
-    <line>
-      <![CDATA[Click the first search title link in the search result set.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the account name 'DB TV' in the account select text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the account option from the drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Account' title to leave focus off of the selection.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for account to switch to the newly selected account.]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://qa5dev.publisher.nbcuni.com'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter title AutomationPlayer571722a937.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Apply' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the first search title link in the search result set.]]>
-    </line>
-    <line>
       <![CDATA[Enter the account name 'DB TV' in the account select text box.]]>
     </line>
     <line>
@@ -98,18 +23,12 @@
       <![CDATA[Wait for account to switch to the newly selected account.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="456426" started-at="2014-02-06T23:10:32Z" finished-at="2014-02-06T23:18:08Z">
+  <suite name="Default suite" duration-ms="132580" started-at="2014-02-07T16:39:12Z" finished-at="2014-02-07T16:41:24Z">
     <groups>
-      <group name="mpx">
-        <method signature="NotificationPlayerUnavailability.NotificationPlayerUnavailability_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability@1232784a]" name="NotificationPlayerUnavailability_Test" class="com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability"/>
-      </group> <!-- mpx -->
-      <group name="full">
-        <method signature="NotificationPlayerUnavailability.NotificationPlayerUnavailability_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability@1232784a]" name="NotificationPlayerUnavailability_Test" class="com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability"/>
-      </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="456426" started-at="2014-02-06T23:10:32Z" finished-at="2014-02-06T23:18:08Z">
-      <class name="com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability">
-        <test-method status="PASS" signature="startSelenium(java.lang.String)[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability@1232784a]" name="startSelenium" is-config="true" duration-ms="13687" started-at="2014-02-06T18:10:32Z" finished-at="2014-02-06T18:10:45Z">
+    <test name="Default test" duration-ms="132580" started-at="2014-02-07T16:39:12Z" finished-at="2014-02-07T16:41:24Z">
+      <class name="com.nbcuni.test.publisher.ContentBuildScripts.Build1000MPXAssets">
+        <test-method status="PASS" signature="startSelenium(java.lang.String)[pri:0, instance:com.nbcuni.test.publisher.ContentBuildScripts.Build1000MPXAssets@1232784a]" name="startSelenium" is-config="true" duration-ms="13319" started-at="2014-02-07T11:39:12Z" finished-at="2014-02-07T11:39:25Z">
           <params>
             <param index="0">
               <value>
@@ -126,85 +45,10 @@
             </line>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="NotificationPlayerUnavailability_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability@1232784a]" name="NotificationPlayerUnavailability_Test" duration-ms="442158" started-at="2014-02-06T18:10:45Z" finished-at="2014-02-06T18:18:08Z">
+        <test-method status="PASS" signature="BuildAssets_Test()[pri:0, instance:com.nbcuni.test.publisher.ContentBuildScripts.Build1000MPXAssets@1232784a]" name="BuildAssets_Test" duration-ms="118672" started-at="2014-02-07T11:39:25Z" finished-at="2014-02-07T11:41:24Z">
           <reporter-output>
             <line>
               <![CDATA[Open url 'http://qa5dev.publisher.nbcuni.com'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the user's password in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Login' button.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the account name 'DB TV' in the account select text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the account option from the drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Account' title to leave focus off of the selection.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for account to switch to the newly selected account.]]>
-            </line>
-            <line>
-              <![CDATA[Open url 'http://qa5dev.publisher.nbcuni.com'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter title AutomationPlayer571722a937.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Apply' button.]]>
-            </line>
-            <line>
-              <![CDATA[Get the text of the first search result set item.]]>
-            </line>
-            <line>
-              <![CDATA[Enter title Automation.]]>
-            </line>
-            <line>
-              <![CDATA[Select the 'Published' from the 'MPX Status' select ddl.]]>
-            </line>
-            <line>
-              <![CDATA[Select the DB TV from the 'Source' select ddl.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Apply' button.]]>
-            </line>
-            <line>
-              <![CDATA[Get the text of the first search result set item.]]>
-            </line>
-            <line>
-              <![CDATA[Click the first search title link in the search result set.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the account name 'DB TV' in the account select text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the account option from the drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Account' title to leave focus off of the selection.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for account to switch to the newly selected account.]]>
-            </line>
-            <line>
-              <![CDATA[Open url 'http://qa5dev.publisher.nbcuni.com'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter title AutomationPlayer571722a937.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Apply' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the first search title link in the search result set.]]>
             </line>
             <line>
               <![CDATA[Enter the account name 'DB TV' in the account select text box.]]>
@@ -219,19 +63,19 @@
               <![CDATA[Wait for account to switch to the newly selected account.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- NotificationPlayerUnavailability_Test -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability@1232784a]" name="stopSelenium" is-config="true" duration-ms="567" started-at="2014-02-06T18:18:08Z" finished-at="2014-02-06T18:18:08Z">
+        </test-method> <!-- BuildAssets_Test -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.ContentBuildScripts.Build1000MPXAssets@1232784a]" name="stopSelenium" is-config="true" duration-ms="574" started-at="2014-02-07T11:41:24Z" finished-at="2014-02-07T11:41:24Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=NotificationPlayerUnavailability_Test status=SUCCESS method=NotificationPlayerUnavailability.NotificationPlayerUnavailability_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability@1232784a] output=Open url 'http://qa5dev.publisher.nbcuni.com'.]]]>
+                <![CDATA[[TestResult name=BuildAssets_Test status=SUCCESS method=Build1000MPXAssets.BuildAssets_Test()[pri:0, instance:com.nbcuni.test.publisher.ContentBuildScripts.Build1000MPXAssets@1232784a] output=Open url 'http://qa5dev.publisher.nbcuni.com'.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-      </class> <!-- com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability -->
+      </class> <!-- com.nbcuni.test.publisher.ContentBuildScripts.Build1000MPXAssets -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

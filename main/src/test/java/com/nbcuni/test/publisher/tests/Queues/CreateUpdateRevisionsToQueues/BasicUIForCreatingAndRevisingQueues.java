@@ -51,7 +51,7 @@ public class BasicUIForCreatingAndRevisingQueues extends ParentTest{
         overlay.SwitchToFrame("Add promo queue queue dialog");
         Queues queues = new Queues(webDriver);
         queues.ClickSaveQueueBtn();
-        ErrorChecking errorChecking = new ErrorChecking(webDriver);
+        ErrorChecking errorChecking = new ErrorChecking(webDriver, applib);
         errorChecking.VerifyAllRequiredFields(Arrays.asList("Title"));
         
         //Step 4
