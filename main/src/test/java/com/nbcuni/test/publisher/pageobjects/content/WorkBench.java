@@ -37,7 +37,7 @@ public class WorkBench {
     private static WebElement WorkBenchInfo_Ctr;
     
     private static WebElement WorkBench_Tab(String tabName) {
-    	return webDriver.findElement(By.xpath("//div[@id='content']/..//a[text()='" + tabName + "']"));
+    	return webDriver.findElement(By.xpath("//a[text()='" + tabName + "']"));
     }
     
     
