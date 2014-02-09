@@ -31,7 +31,7 @@ public class Build1000MPXAssets extends ParentTest{
     @Test()
     public void BuildAssets_Test() throws Exception{
     	
-    	/*
+    	
     	//Step 1
     	UserLogin userLogin = applib.openApplication();
     	
@@ -45,6 +45,8 @@ public class Build1000MPXAssets extends ParentTest{
         	int I = 0;
         	while (I < 1000) {
         		I++;
+        	
+        	webDriver.getTitle();
         	
         	//Step 4 (test creates new mpx asset)
         	MPXAddMedia mpxAddMedia = new MPXAddMedia(webDriver, applib);
@@ -83,6 +85,6 @@ public class Build1000MPXAssets extends ParentTest{
             }
         	
         }
-        */
+        
     }
 }
