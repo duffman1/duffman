@@ -31,7 +31,7 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 public class CreateDefaultContent {
 
     private static CustomWebDriver webDriver;
-    private static AppLib appLib;
+    private static AppLib applib;
     private final Util ul;
     
     Taxonomy taxonomy;
@@ -39,12 +39,12 @@ public class CreateDefaultContent {
 	Random random;
 	
     
-    public CreateDefaultContent(final CustomWebDriver custWebDr, AppLib appLib) {
+    public CreateDefaultContent(final CustomWebDriver custWebDr, AppLib appib) {
         webDriver = custWebDr;
         ul = new Util(webDriver);
-        this.appLib = appLib;
+        this.applib = applib;
         taxonomy = new Taxonomy(webDriver);
-        overlay = new Overlay(webDriver);
+        overlay = new Overlay(webDriver, applib);
         random = new Random();
     }
    
@@ -52,7 +52,7 @@ public class CreateDefaultContent {
     	
     	taxonomy.NavigateSite("Content>>Add content>>Post");
         overlay.SwitchToFrame("Create Post");
-        ContentParent contentParent = new ContentParent(webDriver, appLib);
+        ContentParent contentParent = new ContentParent(webDriver, applib);
         PageFactory.initElements(webDriver, contentParent);
         BasicInformation basicInformation = new BasicInformation(webDriver);
         String postTitle = random.GetCharacterString(15);
@@ -61,7 +61,7 @@ public class CreateDefaultContent {
         overlay.switchToDefaultContent();
         overlay.SwitchToFrame("Create Post");
         basicInformation.ClickCoverSelectBtn();
-        SelectFile selectFile = new SelectFile(webDriver, appLib);
+        SelectFile selectFile = new SelectFile(webDriver, applib);
         PageFactory.initElements(webDriver, selectFile);
         selectFile.SelectDefaultCoverImg();
         overlay.SwitchToFrame("Create Post");

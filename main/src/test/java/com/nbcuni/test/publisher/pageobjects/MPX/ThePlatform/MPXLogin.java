@@ -48,7 +48,7 @@ public class MPXLogin {
     
     public void OpenMPXThePlatform() throws Exception {
     	
-    	webDriver.navigate().to("http://mpx.theplatform.com/");
+    	webDriver.navigate().to(applib.getMPXUrl());
     }
     
     public void Login(String userName, String passWord) throws Exception {

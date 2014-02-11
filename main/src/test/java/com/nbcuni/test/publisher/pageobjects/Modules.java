@@ -91,7 +91,7 @@ public class Modules {
         	
         	boolean additionalModulesRequired = false;
         	
-        	Overlay overlay = new Overlay(webDriver);
+        	Overlay overlay = new Overlay(webDriver, applib);
         	overlay.switchToDefaultContent();
         	
         	try {
@@ -142,7 +142,7 @@ public class Modules {
     			presenceOfElementLocated(By.xpath("//label[text()='" + moduleName + "']/../../..//input"))).click();
     
     	webDriver.findElement(By.xpath(Uninstall_Btn)).click();
-    	Overlay overlay = new Overlay(webDriver);
+    	Overlay overlay = new Overlay(webDriver, applib);
     	overlay.SwitchToActiveFrame();
     	ContentParent contentParent = new ContentParent(webDriver, applib);
     	PageFactory.initElements(webDriver, contentParent);
@@ -169,7 +169,7 @@ public class Modules {
     public void VerifyModuleEnabled(String moduleName) throws Exception {
     	
     	Taxonomy taxonomy = new Taxonomy(webDriver);
-    	Overlay overlay = new Overlay(webDriver);
+    	Overlay overlay = new Overlay(webDriver, applib);
     	taxonomy.NavigateSite("Modules");
     	overlay.SwitchToFrame("Modules");
     	this.EnterFilterName(moduleName);
@@ -178,8 +178,13 @@ public class Modules {
         overlay.switchToDefaultContent();
     }
     
+    public void ClickConfigureLnk(String moduleName) throws Exception {
+    	
+    	webDriver.findElement(By.xpath("//label/strong[text()='" + moduleName + "']/../../../td//a[text()='Configure']")).click();
+    }
     
     
+  
   
 }
 

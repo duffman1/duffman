@@ -47,6 +47,8 @@ public class Settings {
     private static String ConnectToMPX_Btn = "//input[@value='Connect to MPX']";
     private static String AddAccount_Btn = "//input[@value='Add Account']";
     private static String DisplayMPXDebugMessageLevel_Ddl = "//select[@id='edit-media-theplatform-mpx-output-message-watchdog-severity']";
+    private static String DeleteAccount_Btns = "//input[contains(@value, 'Delete Account')]";
+    private static String Delete_Btn = "//input[@value='Delete']";
     
     public Settings(CustomWebDriver custWebDr, AppLib applib) {
         webDriver = custWebDr;
@@ -60,6 +62,9 @@ public class Settings {
     			By.xpath(AddAccount_Btn))).isDisplayed() == false) {
     		
     		webDriver.findElement(By.xpath(MPXLogin_Lnk)).click();
+    		
+    		Reporter.log("Wait for 'Update' button to be visible.");
+    		new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Update_Btn)));
     	}
     	
     }
@@ -314,6 +319,29 @@ public class Settings {
     		el.selectByVisibleText("Advanced");
     		webDriver.findElement(By.xpath(SaveConfigurations_Btn)).click();
     	}
+    }
+    
+    public void SelectMPXDebugMessageLevel(String level) {
+    	
+    	Reporter.log("Select '" + level + "' from the 'MPX Debug Message Level' drop down list.");
+    	new Select(webDriver.findElement(By.xpath(DisplayMPXDebugMessageLevel_Ddl))).selectByVisibleText(level);
+    	
+    }
+    
+    public List<WebElement> GetAllDeleteAccountButtons() throws Exception {
+    	
+    	Reporter.log("Get each of the 'Delete Account' buttons");
+    	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+    	List<WebElement> allElements = webDriver.findElements(By.xpath(DeleteAccount_Btns));
+    	webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
+    	
+    	return allElements;
+    }
+    
+    public void ClickDeleteBtn() throws Exception {
+    	
+    	Reporter.log("Click the 'Delete' button.");
+    	webDriver.findElement(By.xpath(Delete_Btn)).click();;
     }
   
 }

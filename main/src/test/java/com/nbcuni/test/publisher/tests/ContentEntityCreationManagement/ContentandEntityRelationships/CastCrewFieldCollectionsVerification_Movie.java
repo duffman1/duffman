@@ -58,7 +58,6 @@ public class CastCrewFieldCollectionsVerification_Movie extends ParentTest{
         //Step 2
         CharactersInformation charactersInformation = new CharactersInformation(webDriver);
         PageFactory.initElements(webDriver, charactersInformation);
-        Overlay overlay = new Overlay(webDriver);
         SelectFile selectFile = new SelectFile(webDriver, applib);
         PageFactory.initElements(webDriver, selectFile);
         

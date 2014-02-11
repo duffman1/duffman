@@ -159,7 +159,7 @@ public class MultipleMPXAccountsPerLoginVerification extends ParentTest{
             //Step
             settings.SelectImportAccount4("NBCU TVE Dev - Style");
             settings.ClickSetImportAccountBtn();
-            contentParent.VerifyMessageStatus("Setting import account \"NBCU%20TVE%20Dev%20-%20Style\" for account 4.");
+            contentParent.VerifyMessageStatus("Setting import account \"NBCU%20TVE%20Dev%20-%20Style\" for account");
             contentParent.VerifyMessageStatus("Retrieving import account information for \"NBCU%20TVE%20Dev%20-%20Style\".");
 
         }

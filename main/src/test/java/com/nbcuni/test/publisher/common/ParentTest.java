@@ -36,7 +36,7 @@ public class ParentTest {
             applib.setEnvironmentInfo(sEnv);
             random = new Random();
             taxonomy = new Taxonomy(webDriver);
-            overlay = new Overlay(webDriver);
+            overlay = new Overlay(webDriver, applib);
             
             try {
             	webDriver.manage().timeouts().pageLoadTimeout(applib.getPageLoadWaitTime(), TimeUnit.SECONDS);

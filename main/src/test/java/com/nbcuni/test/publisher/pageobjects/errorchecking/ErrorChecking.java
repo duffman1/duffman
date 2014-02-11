@@ -86,8 +86,9 @@ public class ErrorChecking {
     	
     		//allowed errors
     		List<String> allowedErrors = new ArrayList<String>();
-    		allowedErrors.add("There are security updates available for");
+    		allowedErrors.add("There are security updates available for one or more of your modules or themes");
     		allowedErrors.add("An MPXplayer that's in use");
+    		allowedErrors.add("There is a security update available for your version of Drupal");
     		
     		
     		//FIRST - check if error container is present
@@ -121,7 +122,8 @@ public class ErrorChecking {
     				errorText.replace("Error message", "");
     				//check the error text isn't in list of allowed errors
     				if (errorText.contains(allowedErrors.get(0)) 
-    						|| errorText.contains(allowedErrors.get(1))) {
+    						|| errorText.contains(allowedErrors.get(1))
+    							|| errorText.contains(allowedErrors.get(2))) {
     					//ignore error
     					
     				}
@@ -142,7 +144,8 @@ public class ErrorChecking {
     				//check the error text of each error
     				for (String error : Errors) {
     					if (error.contains(allowedErrors.get(0)) 
-    							|| error.contains(allowedErrors.get(1))) {
+    							|| error.contains(allowedErrors.get(1))
+    									|| error.contains(allowedErrors.get(2))) {
     						//ignore error
     					}
     					else {

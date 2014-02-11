@@ -222,8 +222,10 @@ public class SearchFor {
     public Integer GetSearchResultSize() throws Exception {
     	
     	Reporter.log("Get the number of results in the result set.");
-    	Thread.sleep(1000); 
-        return AllSearchResults_Lnks().size();
+    	webDriver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+    	int resultSetSize = AllSearchResults_Lnks().size();
+    	webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
+        return resultSetSize;
     }
     
     public Integer GetMPXSearchResultSize() throws Exception {

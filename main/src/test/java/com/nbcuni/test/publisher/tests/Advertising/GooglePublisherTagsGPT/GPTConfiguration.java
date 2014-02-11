@@ -36,7 +36,6 @@ public class GPTConfiguration extends ParentTest{
             taxonomy.NavigateSite("Modules");
             
             //Step 3
-            Overlay overlay = new Overlay(webDriver);
             overlay.SwitchToFrame("Modules");
             Modules modules = new Modules(webDriver, applib);
             modules.EnterFilterName("DART");
