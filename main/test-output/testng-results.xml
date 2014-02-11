@@ -8,7 +8,7 @@
       <![CDATA[Environment: PROD]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://qa5dev.publisher.nbcuni.com'.]]>
+      <![CDATA[Open url 'http://qa1dev.publisher.nbcuni.com'.]]>
     </line>
     <line>
       <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
@@ -18,12 +18,6 @@
     </line>
     <line>
       <![CDATA[Click the 'Login' button.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'e2c51e97eab9404' in the 'Character First Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the Cover Photo 'Select' button.]]>
     </line>
     <line>
       <![CDATA[Switch to the select file frame.]]>
@@ -56,30 +50,75 @@
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Assert that img source of the Cover Photo contains 'HanSolo'.]]>
-    </line>
-    <line>
-      <![CDATA[Assert the the img is loaded and visible.]]>
-    </line>
-    <line>
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'Character Profile e2c51e97eab9404 has been created.' is present.]]>
+      <![CDATA[Verify success message of 'Post 07201cd3e3c8416 has been created.' is present.]]>
     </line>
     <line>
       <![CDATA[Verify there are no errors present.]]>
     </line>
+    <line>
+      <![CDATA[Click the 'Share' in the work bench.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Tumblr, email, googleplus-interactive ,foursquare, print, twitter-tweet, facebook-like' in the Privider text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'ADVANCED SHARE BAR SETTINGS' link to expand advanced menu options.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'wrap|true' in the 'Advanced showShareBarUI settings' text area.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configuration' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify there are no errors present.]]>
+    </line>
+    <line>
+      <![CDATA[Enter title 07201cd3e3c8416.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Apply' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the first search title link in the search result set.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the Tumblr gigya share link is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the Email gigya share link is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the Google Plus gigya share link is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the Foursquare gigya share link is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the Print gigya share link is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the Twitter gigya share link is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the Facebook gigya share link is present.]]>
+    </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="33584" started-at="2014-02-09T21:29:34Z" finished-at="2014-02-09T21:30:07Z">
+  <suite name="Default suite" duration-ms="68986" started-at="2014-02-11T01:19:08Z" finished-at="2014-02-11T01:20:17Z">
     <groups>
       <group name="full">
-        <method signature="CreateCharacterProfile.CreateCharacterProfile_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@2f774b9b]" name="CreateCharacterProfile_Test" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile"/>
+        <method signature="FunctionalImplementGigyaShareBar.FunctionalImplementGigyaShareBar_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.SocialIntegration.FunctionalImplementGigyaShareBar.FunctionalImplementGigyaShareBar@4104c575]" name="FunctionalImplementGigyaShareBar_Test" class="com.nbcuni.test.publisher.tests.SocialIntegration.FunctionalImplementGigyaShareBar.FunctionalImplementGigyaShareBar"/>
       </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="33584" started-at="2014-02-09T21:29:34Z" finished-at="2014-02-09T21:30:07Z">
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile">
-        <test-method status="PASS" signature="startSelenium(java.lang.String)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@2f774b9b]" name="startSelenium" is-config="true" duration-ms="13757" started-at="2014-02-09T16:29:34Z" finished-at="2014-02-09T16:29:47Z">
+    <test name="Default test" duration-ms="68986" started-at="2014-02-11T01:19:08Z" finished-at="2014-02-11T01:20:17Z">
+      <class name="com.nbcuni.test.publisher.tests.SocialIntegration.FunctionalImplementGigyaShareBar.FunctionalImplementGigyaShareBar">
+        <test-method status="PASS" signature="startSelenium(java.lang.String)[pri:0, instance:com.nbcuni.test.publisher.tests.SocialIntegration.FunctionalImplementGigyaShareBar.FunctionalImplementGigyaShareBar@4104c575]" name="startSelenium" is-config="true" duration-ms="12877" started-at="2014-02-10T20:19:08Z" finished-at="2014-02-10T20:19:21Z">
           <params>
             <param index="0">
               <value>
@@ -96,10 +135,10 @@
             </line>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="CreateCharacterProfile_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@2f774b9b]" name="CreateCharacterProfile_Test" duration-ms="19240" started-at="2014-02-09T16:29:47Z" finished-at="2014-02-09T16:30:07Z">
+        <test-method status="PASS" signature="FunctionalImplementGigyaShareBar_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.SocialIntegration.FunctionalImplementGigyaShareBar.FunctionalImplementGigyaShareBar@4104c575]" name="FunctionalImplementGigyaShareBar_Test" duration-ms="55524" started-at="2014-02-10T20:19:21Z" finished-at="2014-02-10T20:20:16Z">
           <reporter-output>
             <line>
-              <![CDATA[Open url 'http://qa5dev.publisher.nbcuni.com'.]]>
+              <![CDATA[Open url 'http://qa1dev.publisher.nbcuni.com'.]]>
             </line>
             <line>
               <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
@@ -109,12 +148,6 @@
             </line>
             <line>
               <![CDATA[Click the 'Login' button.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'e2c51e97eab9404' in the 'Character First Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the Cover Photo 'Select' button.]]>
             </line>
             <line>
               <![CDATA[Switch to the select file frame.]]>
@@ -147,34 +180,79 @@
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Assert that img source of the Cover Photo contains 'HanSolo'.]]>
-            </line>
-            <line>
-              <![CDATA[Assert the the img is loaded and visible.]]>
-            </line>
-            <line>
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'Character Profile e2c51e97eab9404 has been created.' is present.]]>
+              <![CDATA[Verify success message of 'Post 07201cd3e3c8416 has been created.' is present.]]>
             </line>
             <line>
               <![CDATA[Verify there are no errors present.]]>
             </line>
+            <line>
+              <![CDATA[Click the 'Share' in the work bench.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Tumblr, email, googleplus-interactive ,foursquare, print, twitter-tweet, facebook-like' in the Privider text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'ADVANCED SHARE BAR SETTINGS' link to expand advanced menu options.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'wrap|true' in the 'Advanced showShareBarUI settings' text area.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configuration' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify there are no errors present.]]>
+            </line>
+            <line>
+              <![CDATA[Enter title 07201cd3e3c8416.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Apply' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the first search title link in the search result set.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the Tumblr gigya share link is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the Email gigya share link is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the Google Plus gigya share link is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the Foursquare gigya share link is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the Print gigya share link is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the Twitter gigya share link is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the Facebook gigya share link is present.]]>
+            </line>
           </reporter-output>
-        </test-method> <!-- CreateCharacterProfile_Test -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@2f774b9b]" name="stopSelenium" is-config="true" duration-ms="570" started-at="2014-02-09T16:30:07Z" finished-at="2014-02-09T16:30:07Z">
+        </test-method> <!-- FunctionalImplementGigyaShareBar_Test -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.SocialIntegration.FunctionalImplementGigyaShareBar.FunctionalImplementGigyaShareBar@4104c575]" name="stopSelenium" is-config="true" duration-ms="572" started-at="2014-02-10T20:20:16Z" finished-at="2014-02-10T20:20:17Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=CreateCharacterProfile_Test status=SUCCESS method=CreateCharacterProfile.CreateCharacterProfile_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@2f774b9b] output=Open url 'http://qa5dev.publisher.nbcuni.com'.]]]>
+                <![CDATA[[TestResult name=FunctionalImplementGigyaShareBar_Test status=SUCCESS method=FunctionalImplementGigyaShareBar.FunctionalImplementGigyaShareBar_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.SocialIntegration.FunctionalImplementGigyaShareBar.FunctionalImplementGigyaShareBar@4104c575] output=Open url 'http://qa1dev.publisher.nbcuni.com'.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile -->
+      </class> <!-- com.nbcuni.test.publisher.tests.SocialIntegration.FunctionalImplementGigyaShareBar.FunctionalImplementGigyaShareBar -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

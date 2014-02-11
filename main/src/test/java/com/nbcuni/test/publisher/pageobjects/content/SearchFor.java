@@ -43,7 +43,7 @@ public class SearchFor {
     @FindBy(how = How.XPATH, using = "//input[@id='edit-title']")
     private static WebElement Title_Txb;
     
-    @FindBy(how = How.XPATH, using = "//input[@id='edit-submit-content-files']")
+    @FindBy(how = How.XPATH, using = "//input[@value='Apply']")
     private static WebElement Apply_Btn;
     
     private static List<WebElement> AllSearchResults_Lnks() {
