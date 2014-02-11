@@ -92,7 +92,7 @@ public class MPXVideosSchedulingVerificationInitialOverrides extends ParentTest{
             List<String> defaultVideoValues = Arrays.asList("Automation1", "MPX Released File Public IDs:", "zAN5F0aqoIzA",
                     "MPX Media Default Released File Public ID:", "MPX Media Categories:", "Series", "Show", "MPX Media Description:",
                     "Automation 1 example test", "MPX Media Author:", "Pub7 Content Provider", "MPX Media Air Date:",
-                    "Wednesday, January 8, 2014 - 13:35", "MPX Media Keywords:", "mpx, metadata, field, override", "MPX Media Copyright:",
+                    "Wednesday, January 8, 2014", "MPX Media Keywords:", "mpx, metadata, field, override", "MPX Media Copyright:",
                     "NBCUNI QA", "MPX Media Film Advisory Board Rating:", "pd", "MPX Media MPAA Rating:", "MPX Media MPAA Sub-Ratings:",
                     "v", "MPX Media V-Chip Rating:", "tv-y7", "MPX Media V-Chip Sub-Ratings:", "l", "MPX Media Exclude Selected Countries:",
                     "Prevent Playback in Selected Countries");

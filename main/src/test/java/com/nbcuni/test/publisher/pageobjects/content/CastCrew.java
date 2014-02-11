@@ -60,8 +60,7 @@ public class CastCrew {
     public void ClickCastCrewLnk() throws Exception {
     	
     	Reporter.log("Click the 'Cast/Crew' link.");
-    	CastCrew_Lnk.getLocation().moveBy(0, 0);
-    	webDriver.executeScript("window.scrollBy(0,-50);");
+    	webDriver.executeScript("window.scrollBy(0,-500);");
     	CastCrew_Lnk.click();
     }
     
@@ -108,6 +107,7 @@ public class CastCrew {
     	Character_Txb(index).sendKeys(characterName);
     	
     	Reporter.log("Click the '" + characterName + "' from the auto complete option list.");
+    	webDriver.executeScript("window.scrollBy(0,100);");
     	AutoComplete_Opt(characterName).click();
     	
     }

@@ -1,4 +1,4 @@
-package com.nbcuni.test.publisher.ContentBuildScripts;
+package com.nbcuni.test.publisher.contentbuildscripts;
 
 import com.ibm.icu.util.Calendar;
 import com.nbcuni.test.publisher.common.ParentTest;
