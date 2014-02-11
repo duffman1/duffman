@@ -31,6 +31,7 @@ public class InstallZeeboxModule extends ParentTest{
             
             //Step 2 and 3
             Modules modules = new Modules(webDriver, applib);
+            PageFactory.initElements(webDriver, modules);
             modules.VerifyModuleEnabled("zeebox Example");
             
             //Step 4

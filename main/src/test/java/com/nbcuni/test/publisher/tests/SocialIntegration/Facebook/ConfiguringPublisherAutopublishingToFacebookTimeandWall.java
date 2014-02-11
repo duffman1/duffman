@@ -53,6 +53,7 @@ public class ConfiguringPublisherAutopublishingToFacebookTimeandWall extends Par
         taxonomy.NavigateSite("Modules");
         overlay.SwitchToFrame("Modules");
         Modules modules = new Modules(webDriver, applib);
+        PageFactory.initElements(webDriver, modules);
         modules.EnterFilterName("Pub Social");
         modules.EnableModule("Pub Social");
         modules.EnterFilterName("Pub Post");

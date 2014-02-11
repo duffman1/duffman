@@ -39,6 +39,7 @@ public class GPTTagsVerification extends ParentTest{
             
             //Step 1A
             Modules modules = new Modules(webDriver, applib);
+            PageFactory.initElements(webDriver, modules);
             modules.VerifyModuleEnabled("Doubleclick for Publishers");
             
             //Step 2

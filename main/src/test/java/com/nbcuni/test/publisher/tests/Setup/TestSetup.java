@@ -38,6 +38,7 @@ public class TestSetup extends ParentTest{
             taxonomy.NavigateSite("Modules");
         	overlay.SwitchToFrame("Modules");
         	Modules modules = new Modules(webDriver, applib);
+        	PageFactory.initElements(webDriver, modules);
         	modules.EnterFilterName("Sticky Edit Actions");
         	modules.DisableModule("Sticky Edit Actions");
             

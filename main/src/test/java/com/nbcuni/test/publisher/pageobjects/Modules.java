@@ -1,27 +1,18 @@
 package com.nbcuni.test.publisher.pageobjects;
 
-
 import java.util.Arrays;
 import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
-
-import com.nbcuni.test.lib.Util;
 import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.publisher.pageobjects.content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.taxonomy.Taxonomy;
 import com.nbcuni.test.webdriver.CustomWebDriver;
-
 
 /*********************************************
  * publisher.nbcuni.com Modules Library. Copyright
@@ -34,30 +25,58 @@ public class Modules {
 
     private static CustomWebDriver webDriver;
     private static AppLib applib;
+    private static ContentParent contentParent;
+    private static Overlay overlay;
+    private static Taxonomy taxonomy;
     
-    
-    public Modules(CustomWebDriver custWebDr, AppLib applib) {
-        webDriver = custWebDr;
-        this.applib = applib;
+    //PAGE OBJECT CONSTRUCTOR
+    public Modules(CustomWebDriver webDriver, AppLib applib) {
+    	Modules.webDriver = webDriver;
+    	Modules.applib = applib;
+    	contentParent = new ContentParent(webDriver, applib);
+    	PageFactory.initElements(webDriver, contentParent);
+    	overlay = new Overlay(webDriver, applib);
+    	PageFactory.initElements(webDriver, applib);
+    	taxonomy = new Taxonomy(webDriver);
+    	PageFactory.initElements(webDriver, taxonomy);
     }
     
-    private static String FilterList_Txb = "//input[@id='edit-module-filter-name']";
-    private static String SaveConfiguration_Btn = "//input[@id='edit-submit']";
-    private static String Message_Ctr = "//div[@class='messages status']";
-    private static String Continue_Btn = "//input[@value='Continue']";
-    private static String Uninstall_Btn = "//input[@value='Uninstall']";
+    @FindBy(how = How.XPATH, using = "//input[@id='edit-module-filter-name']")
+    private static WebElement FilterList_Txb;
     
+    @FindBy(how = How.XPATH, using = "//input[@id='edit-submit']")
+    private static WebElement SaveConfiguration_Btn;
+    
+    @FindBy(how = How.XPATH, using = "//input[@value='Continue']")
+    private static WebElement Continue_Btn;
+    
+    @FindBy(how = How.XPATH, using = "//input[@value='Uninstall']")
+    private static WebElement Uninstall_Btn;
+    
+    private static WebElement ModuleName_Cbx(String moduleName) {
+    	return webDriver.findElement(By.xpath("//label/strong[text()='" + moduleName + "']/../../../td[@class='checkbox']//input"));
+    }
+    
+    private static WebElement UninstallModuleName_Cbx(String moduleName) {
+    	return webDriver.findElement(By.xpath("//label[text()='" + moduleName + "']/../../..//input"));
+    }
+    
+    private static WebElement Configure_Lnk(String moduleName) {
+    	return webDriver.findElement(By.xpath("//label/strong[text()='" + moduleName + "']/../../../td//a[text()='Configure']"));
+    }
+    
+    
+    //PAGE OBJECT METHODS
     public void EnterFilterName(String filterName) throws Exception {
     	
-    	webDriver.type(FilterList_Txb, filterName);
+    	Reporter.log("Enter '" + filterName + "' in the 'Filter Name' text box.");
+    	FilterList_Txb.sendKeys(filterName);
     	
-    	//TODO - replace this sleep with a fluent wait
-    	Thread.sleep(2000);
     }
     
     public void VerifyConfigurationSaved() throws Exception{
     	
-    	Assert.assertTrue(webDriver.findElement(By.xpath(Message_Ctr)).getText().contains("The configuration options have been saved."));
+    	contentParent.VerifyMessageStatus("The configuration options have been saved.");
     	
     }
     
@@ -65,11 +84,7 @@ public class Modules {
     	
     	boolean isModuleEnabled = false;
     	
-    	String moduleLocator = "//label/strong[text()='" + moduleName + "']/../../../td[@class='checkbox']//input";
-    	
-    	WebElement Cbx = webDriver.findElement(By.xpath(moduleLocator));
-    	
-    	if (Cbx.isSelected() == true) {
+    	if (ModuleName_Cbx(moduleName).isSelected() == true) {
     		
     		isModuleEnabled = true;
     	}
@@ -79,19 +94,18 @@ public class Modules {
     
     public void EnableModule(String moduleName) throws Exception {
     	
-    	String moduleLocator = "//label/strong[text()='" + moduleName + "']/../../../td[@class='checkbox']//input";
-    	
-    	WebElement Cbx = webDriver.findElement(By.xpath(moduleLocator));
-    	
-    	if (Cbx.isSelected() == false) {
-    		Cbx.click();
-    		webDriver.click(SaveConfiguration_Btn);
+    	if (ModuleName_Cbx(moduleName).isSelected() == false) {
+    		
+    		Reporter.log("Check the '" + moduleName + "' check box.");
+    		ModuleName_Cbx(moduleName).click();
+    		
+    		Reporter.log("Click the 'Save configuration' button.");
+    		SaveConfiguration_Btn.click();
     		
     		webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
         	
         	boolean additionalModulesRequired = false;
         	
-        	Overlay overlay = new Overlay(webDriver, applib);
         	overlay.switchToDefaultContent();
         	
         	try {
@@ -102,14 +116,15 @@ public class Modules {
         	
         	if (additionalModulesRequired == true) {
         		
-        		new WebDriverWait(webDriver, 10).until(ExpectedConditions.
-        				elementToBeClickable(By.xpath(Continue_Btn))).click();
+        		Reporter.log("Click the 'Continue' button to enable additional modules.");
+        		Continue_Btn.click();
         		overlay.switchToDefaultContent();
         		
         	}
         	
+        	Reporter.log("Switch back to the 'Modules' frame.");
         	overlay.SwitchToFrame("Modules");
-        	webDriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        	webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
         	
     		this.VerifyConfigurationSaved();
     	}
@@ -118,15 +133,14 @@ public class Modules {
     
     public boolean DisableModule(String moduleName) throws Exception {
     	
-    	String moduleLocator = "//label/strong[text()='" + moduleName + "']/../../../td[@class='checkbox']//input";
-    	
-    	WebElement Cbx = webDriver.findElement(By.xpath(moduleLocator));
-    	
     	boolean moduleAlreadyDisabled = true;
     	
-    	if (Cbx.isSelected() == true) {
-    		Cbx.click();
-    		webDriver.click(SaveConfiguration_Btn);
+    	if (ModuleName_Cbx(moduleName).isSelected() == true) {
+    		Reporter.log("Uncheck the '" + moduleName + "' module checkbox.");
+    		ModuleName_Cbx(moduleName).click();
+    		
+    		Reporter.log("Click the 'Save configuration' button.");
+    		SaveConfiguration_Btn.click();
     		this.VerifyConfigurationSaved();
     		moduleAlreadyDisabled = false;
     	}
@@ -138,18 +152,17 @@ public class Modules {
     
     public void UninstallModule(String moduleName) throws Exception {
     	
-    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.
-    			presenceOfElementLocated(By.xpath("//label[text()='" + moduleName + "']/../../..//input"))).click();
-    
-    	webDriver.findElement(By.xpath(Uninstall_Btn)).click();
-    	Overlay overlay = new Overlay(webDriver, applib);
+    	Reporter.log("Click the '" + moduleName + "' uninstall checkbox.");
+    	UninstallModuleName_Cbx(moduleName).click();
+    	
+    	Reporter.log("Click the 'Uninstall' button.");
+    	Uninstall_Btn.click();
     	overlay.SwitchToActiveFrame();
-    	ContentParent contentParent = new ContentParent(webDriver, applib);
-    	PageFactory.initElements(webDriver, contentParent);
     	contentParent.VerifyPageContentPresent(Arrays.asList("The following modules will be completely uninstalled from your site, and all data from these modules will be lost!", 
     			moduleName));
     	
-    	webDriver.findElement(By.xpath(Uninstall_Btn)).click();
+    	Reporter.log("Click the 'Uninstall' button to confirm.");
+    	Uninstall_Btn.click();
     	
     }
     
@@ -168,8 +181,6 @@ public class Modules {
     
     public void VerifyModuleEnabled(String moduleName) throws Exception {
     	
-    	Taxonomy taxonomy = new Taxonomy(webDriver);
-    	Overlay overlay = new Overlay(webDriver, applib);
     	taxonomy.NavigateSite("Modules");
     	overlay.SwitchToFrame("Modules");
     	this.EnterFilterName(moduleName);
@@ -180,7 +191,8 @@ public class Modules {
     
     public void ClickConfigureLnk(String moduleName) throws Exception {
     	
-    	webDriver.findElement(By.xpath("//label/strong[text()='" + moduleName + "']/../../../td//a[text()='Configure']")).click();
+    	Reporter.log("Click the '" + moduleName + "' module 'Configure' link.");
+    	Configure_Lnk(moduleName).click();
     }
     
     

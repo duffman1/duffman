@@ -66,6 +66,7 @@ public class CreateConfigureAndValidatePermissionsEditor extends ParentTest{
         
         //Step 1a (enable post module if needed)
         Modules modules = new Modules(webDriver, applib);
+        PageFactory.initElements(webDriver, modules);
         modules.VerifyModuleEnabled("Pub Post");
         
         //Step 2

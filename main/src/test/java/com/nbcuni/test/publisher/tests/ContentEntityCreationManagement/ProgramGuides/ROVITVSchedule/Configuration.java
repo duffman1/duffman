@@ -37,6 +37,7 @@ public class Configuration extends ParentTest{
 	    
 	    //Step 2	   
 	    Modules modules = new Modules(webDriver, applib);
+	    PageFactory.initElements(webDriver, modules);
 	    modules.VerifyModuleEnabled("Program Guide");
 	    modules.VerifyModuleEnabled("Program Guide Example");
 	    

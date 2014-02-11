@@ -38,6 +38,7 @@ public class ScheduleToPublishContentByDateTime extends ParentTest {
 
         //Step 1a
         Modules modules = new Modules(webDriver, applib);
+        PageFactory.initElements(webDriver, modules);
         modules.VerifyModuleEnabled("Pub Post");
         
         //Step 2

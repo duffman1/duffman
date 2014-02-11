@@ -53,6 +53,7 @@ public class FunctionalImplementGigyaShareBar extends ParentTest{
         
         //Step Setup
         Modules modules = new Modules(webDriver, applib);
+        PageFactory.initElements(webDriver, modules);
         modules.VerifyModuleEnabled("Pub Gigya");
         
         //Step 3

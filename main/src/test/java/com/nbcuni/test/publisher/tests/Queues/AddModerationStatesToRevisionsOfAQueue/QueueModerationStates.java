@@ -43,6 +43,7 @@ public class QueueModerationStates extends ParentTest{
         
         //Step 1a
         Modules modules = new Modules(webDriver, applib);
+        PageFactory.initElements(webDriver, modules);
         modules.VerifyModuleEnabled("Pub Post");
         CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver, applib);
         String postTitle = createDefaultContent.Post("Draft");

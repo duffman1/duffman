@@ -38,6 +38,7 @@ public class GPTConfiguration extends ParentTest{
             //Step 3
             overlay.SwitchToFrame("Modules");
             Modules modules = new Modules(webDriver, applib);
+            PageFactory.initElements(webDriver, modules);
             modules.EnterFilterName("DART");
             modules.DisableModule("DART");
             
