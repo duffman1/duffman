@@ -2,6 +2,10 @@ package com.nbcuni.test.publisher.contentbuildscripts;
 
 import com.ibm.icu.util.Calendar;
 import com.nbcuni.test.publisher.common.ParentTest;
+import com.nbcuni.test.publisher.pageobjects.Content.AddFile;
+import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
+import com.nbcuni.test.publisher.pageobjects.Content.SearchFor;
+import com.nbcuni.test.publisher.pageobjects.Content.WorkBench;
 import com.nbcuni.test.publisher.pageobjects.MPX.EditMPXVideo;
 import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
 import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXAddMedia;
@@ -9,12 +13,8 @@ import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXLogin;
 import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXPublishMedia;
 import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXSearch;
 import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXSelectAccount;
+import com.nbcuni.test.publisher.pageobjects.Queues.ScheduleQueue;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
-import com.nbcuni.test.publisher.pageobjects.content.AddFile;
-import com.nbcuni.test.publisher.pageobjects.content.ContentParent;
-import com.nbcuni.test.publisher.pageobjects.content.SearchFor;
-import com.nbcuni.test.publisher.pageobjects.content.WorkBench;
-import com.nbcuni.test.publisher.pageobjects.queues.ScheduleQueue;
 
 import junit.framework.Assert;
 
@@ -59,8 +59,8 @@ public class Build1000MPXAssets extends ParentTest{
         		mpxAddMedia.ClickOpenBtn();
         	}
         	else {
-        		addFile.EnterPathToFile_Win(applib.getPathToMedia());
-            	addFile.ClickGoBtn_Win();
+        		//addFile.EnterPathToFile_Win(applib.getPathToMedia());
+            	//addFile.ClickGoBtn_Win();
             	addFile.EnterFileName_Win("DefAutMed.m4v");
             	addFile.ClickOpenBtn();
         	}
@@ -70,9 +70,7 @@ public class Build1000MPXAssets extends ParentTest{
         	mpxAddMedia.EnterTitle(mediaTitle);
         	
         	//Step 5
-        	Thread.sleep(5000);
         	mpxAddMedia.ClickSaveBtn();
-        	Thread.sleep(5000);
         	
         	//Step 6
         	MPXPublishMedia mpxPublishMedia = new MPXPublishMedia(webDriver, applib);

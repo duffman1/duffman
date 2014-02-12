@@ -2,13 +2,14 @@ package com.nbcuni.test.publisher.tests.Advertising.GooglePublisherTagsGPT;
 
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
+
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.DFPAddTags;
 import com.nbcuni.test.publisher.pageobjects.Logout;
 import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.Overlay;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
-import com.nbcuni.test.publisher.pageobjects.taxonomy.Taxonomy;
+import com.nbcuni.test.publisher.pageobjects.Taxonomy.Taxonomy;
 
 public class GPTConfiguration extends ParentTest{
 
@@ -32,7 +33,6 @@ public class GPTConfiguration extends ParentTest{
             userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
             
             //Step 2
-            Taxonomy taxonomy = new Taxonomy(webDriver);
             taxonomy.NavigateSite("Modules");
             
             //Step 3

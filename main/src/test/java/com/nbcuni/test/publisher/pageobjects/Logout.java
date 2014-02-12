@@ -2,6 +2,7 @@ package com.nbcuni.test.publisher.pageobjects;
 
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -40,7 +41,12 @@ public class Logout {
     public void ClickLogoutBtn() throws Exception {
     	
     	Reporter.log("Click the 'Logout' button.");
-    	webDriver.executeScript("arguments[0].click();", LogOut_Btn); //js click required here as sometimes the logout lnk is hidden under the admin navigation no matter what scrolling options are available.
+    	try {
+    		LogOut_Btn.click();
+    	}
+    	catch (WebDriverException e) {
+    		webDriver.executeScript("arguments[0].click();", LogOut_Btn);
+    	}
     	webDriver.navigate().refresh(); //TODO - logout requires a refresh for some reason. Figure out a better way
     	
     }

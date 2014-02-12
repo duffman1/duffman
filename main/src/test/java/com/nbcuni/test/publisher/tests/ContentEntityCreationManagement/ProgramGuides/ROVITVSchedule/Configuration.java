@@ -8,7 +8,7 @@ import com.nbcuni.test.publisher.pageobjects.Blocks;
 import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Configuration.ProgramGuide;
-import com.nbcuni.test.publisher.pageobjects.content.ContentParent;
+import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 
 public class Configuration extends ParentTest{
 	/*************************************************************************************

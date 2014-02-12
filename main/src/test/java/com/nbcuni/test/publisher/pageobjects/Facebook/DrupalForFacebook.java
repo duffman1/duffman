@@ -13,7 +13,7 @@ import org.testng.Reporter;
 
 import com.nbcuni.test.lib.Util;
 import com.nbcuni.test.publisher.common.AppLib;
-import com.nbcuni.test.publisher.pageobjects.content.Delete;
+import com.nbcuni.test.publisher.pageobjects.Content.Delete;
 import com.nbcuni.test.webdriver.CustomWebDriver;
 
 

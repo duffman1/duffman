@@ -1,15 +1,18 @@
 package com.nbcuni.test.publisher.common;
 
 import com.nbcuni.test.publisher.pageobjects.Overlay;
-import com.nbcuni.test.publisher.pageobjects.taxonomy.Taxonomy;
+import com.nbcuni.test.publisher.pageobjects.Taxonomy.Taxonomy;
 import com.nbcuni.test.webdriver.CustomWebDriver;
 import com.nbcuni.test.webdriver.WebDriverClientExecution;
+
+import org.openqa.selenium.support.PageFactory;
 import org.testng.ITestResult;
 import org.testng.Reporter;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
+
 import java.util.concurrent.TimeUnit;
 
 public class ParentTest {
@@ -36,6 +39,7 @@ public class ParentTest {
             applib.setEnvironmentInfo(sEnv);
             random = new Random();
             taxonomy = new Taxonomy(webDriver);
+            PageFactory.initElements(webDriver, taxonomy);
             overlay = new Overlay(webDriver, applib);
             
             try {

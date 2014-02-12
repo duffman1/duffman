@@ -2,13 +2,14 @@ package com.nbcuni.test.publisher.tests.Advertising.GooglePublisherTagsGPT;
 
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
+
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Random;
 import com.nbcuni.test.publisher.pageobjects.Blocks;
 import com.nbcuni.test.publisher.pageobjects.DFPAddTags;
 import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
-import com.nbcuni.test.publisher.pageobjects.content.ContentParent;
+import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 
 public class GPTTagsVerification extends ParentTest{
 	

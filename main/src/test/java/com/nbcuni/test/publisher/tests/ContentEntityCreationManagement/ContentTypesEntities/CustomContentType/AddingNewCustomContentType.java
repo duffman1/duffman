@@ -2,9 +2,10 @@ package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentT
 
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
+
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
-import com.nbcuni.test.publisher.pageobjects.content.ContentTypes;
+import com.nbcuni.test.publisher.pageobjects.Content.ContentTypes;
 
 public class AddingNewCustomContentType extends ParentTest{
 	

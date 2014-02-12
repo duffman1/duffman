@@ -9,17 +9,17 @@ import org.testng.annotations.Test;
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Overlay;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
-import com.nbcuni.test.publisher.pageobjects.content.BasicInformation;
-import com.nbcuni.test.publisher.pageobjects.content.CastCrew;
-import com.nbcuni.test.publisher.pageobjects.content.CharactersInformation;
-import com.nbcuni.test.publisher.pageobjects.content.ContentParent;
-import com.nbcuni.test.publisher.pageobjects.content.CoverPhoto;
-import com.nbcuni.test.publisher.pageobjects.content.PersonsInformation;
-import com.nbcuni.test.publisher.pageobjects.content.PublishingOptions;
-import com.nbcuni.test.publisher.pageobjects.content.Revisions;
-import com.nbcuni.test.publisher.pageobjects.content.SelectFile;
-import com.nbcuni.test.publisher.pageobjects.content.WorkBench;
-import com.nbcuni.test.publisher.pageobjects.taxonomy.Taxonomy;
+import com.nbcuni.test.publisher.pageobjects.Content.BasicInformation;
+import com.nbcuni.test.publisher.pageobjects.Content.CastCrew;
+import com.nbcuni.test.publisher.pageobjects.Content.CharactersInformation;
+import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
+import com.nbcuni.test.publisher.pageobjects.Content.CoverPhoto;
+import com.nbcuni.test.publisher.pageobjects.Content.PersonsInformation;
+import com.nbcuni.test.publisher.pageobjects.Content.PublishingOptions;
+import com.nbcuni.test.publisher.pageobjects.Content.Revisions;
+import com.nbcuni.test.publisher.pageobjects.Content.SelectFile;
+import com.nbcuni.test.publisher.pageobjects.Content.WorkBench;
+import com.nbcuni.test.publisher.pageobjects.Taxonomy.Taxonomy;
 
 public class CastCrewFieldCollectionsVerification_Movie extends ParentTest{
 	 /*************************************************************************************
@@ -62,7 +62,6 @@ public class CastCrewFieldCollectionsVerification_Movie extends ParentTest{
         PageFactory.initElements(webDriver, selectFile);
         
         for(int CCount=0;CCount<3;CCount++){
-	        Taxonomy taxonomy = new Taxonomy(webDriver);
 	        taxonomy.NavigateSite("Content>>Add content>>Character Profile");
 	        overlay.SwitchToFrame("Create Character Profile");
 	        charactersInformation.EnterCharacterFirstName(Characters.get(CCount));

@@ -209,7 +209,8 @@ public class MPXAddMedia {
     	s.click(path + "Common/Save_Btn.png");
     	
     	mpxAssets.WaitForImgNotPresent(path + "Common/Spinner.png");
-    	//Thread.sleep(2000);
+    	
+    	Thread.sleep(10000); //long pause here since file uploads in background requires some time. This is bad I know but there's no visual indicator I can go by...
     }
     
     public void SelectContentRatingUSMPAA_PG13() throws Exception {

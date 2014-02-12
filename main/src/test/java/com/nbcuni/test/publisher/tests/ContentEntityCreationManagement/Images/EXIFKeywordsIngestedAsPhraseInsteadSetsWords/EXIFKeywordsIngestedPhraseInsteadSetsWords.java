@@ -3,7 +3,7 @@ package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.E
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.SimpleEXIFIPTCMappings;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
-import com.nbcuni.test.publisher.pageobjects.content.*;
+import com.nbcuni.test.publisher.pageobjects.Content.*;
 
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;

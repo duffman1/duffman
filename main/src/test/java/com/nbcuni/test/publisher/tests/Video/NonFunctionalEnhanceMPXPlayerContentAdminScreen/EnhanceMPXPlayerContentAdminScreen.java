@@ -1,12 +1,15 @@
 package com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen;
 
 import com.nbcuni.test.publisher.common.ParentTest;
+import com.nbcuni.test.publisher.pageobjects.Content.SearchFor;
 import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
-import com.nbcuni.test.publisher.pageobjects.content.SearchFor;
+
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
+
 import java.util.List;
+
 import junit.framework.Assert;
 
 public class EnhanceMPXPlayerContentAdminScreen extends ParentTest{

@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -14,8 +15,8 @@ import org.testng.Assert;
 import org.testng.Reporter;
 
 import com.nbcuni.test.publisher.common.AppLib;
-import com.nbcuni.test.publisher.pageobjects.content.ContentParent;
-import com.nbcuni.test.publisher.pageobjects.taxonomy.Taxonomy;
+import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
+import com.nbcuni.test.publisher.pageobjects.Taxonomy.Taxonomy;
 import com.nbcuni.test.webdriver.CustomWebDriver;
 
 /*********************************************
@@ -109,7 +110,12 @@ public class Modules {
     		ModuleName_Cbx(moduleName).click();
     		
     		Reporter.log("Click the 'Save configuration' button.");
-    		SaveConfiguration_Btn.click();
+    		try {
+    			SaveConfiguration_Btn.click();
+    		}
+    		catch (WebDriverException e) {
+    			webDriver.executeScript("arguments[0].click();", SaveConfiguration_Btn);
+    		}
     		
     		webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
         	
@@ -149,7 +155,12 @@ public class Modules {
     		ModuleName_Cbx(moduleName).click();
     		
     		Reporter.log("Click the 'Save configuration' button.");
-    		SaveConfiguration_Btn.click();
+    		try {
+    			SaveConfiguration_Btn.click();
+    		}
+    		catch (WebDriverException e) {
+    			webDriver.executeScript("arguments[0].click();", SaveConfiguration_Btn);
+    		}
     		this.VerifyConfigurationSaved();
     		moduleAlreadyDisabled = false;
     	}

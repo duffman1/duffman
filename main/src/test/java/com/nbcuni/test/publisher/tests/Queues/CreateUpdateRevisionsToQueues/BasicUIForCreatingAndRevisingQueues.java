@@ -10,11 +10,11 @@ import org.testng.annotations.Test;
 
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
-import com.nbcuni.test.publisher.pageobjects.content.*;
-import com.nbcuni.test.publisher.pageobjects.errorchecking.ErrorChecking;
-import com.nbcuni.test.publisher.pageobjects.queues.DeleteQueue;
-import com.nbcuni.test.publisher.pageobjects.queues.Queues;
-import com.nbcuni.test.publisher.pageobjects.queues.QueuesRevisionList;
+import com.nbcuni.test.publisher.pageobjects.Content.*;
+import com.nbcuni.test.publisher.pageobjects.ErrorChecking.ErrorChecking;
+import com.nbcuni.test.publisher.pageobjects.Queues.DeleteQueue;
+import com.nbcuni.test.publisher.pageobjects.Queues.Queues;
+import com.nbcuni.test.publisher.pageobjects.Queues.QueuesRevisionList;
 
 public class BasicUIForCreatingAndRevisingQueues extends ParentTest{
 	

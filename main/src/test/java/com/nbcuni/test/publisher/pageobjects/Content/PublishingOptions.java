@@ -1,0 +1,122 @@
+package com.nbcuni.test.publisher.pageobjects.Content;
+
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+import org.testng.Reporter;
+
+import com.nbcuni.test.lib.Util;
+import com.nbcuni.test.publisher.common.AppLib;
+import com.nbcuni.test.publisher.common.Random;
+import com.nbcuni.test.webdriver.CustomWebDriver;
+
+
+/*********************************************
+ * publisher.nbcuni.com Publishing Options Library. Copyright
+ * 
+ * @author Brandon Clark
+ * @version 1.0 Date: December 18, 2013
+ *********************************************/
+
+public class PublishingOptions {
+
+    private static CustomWebDriver webDriver;
+    private static AppLib al;
+    private final Util ul;
+    
+    private static String PublishingOptions_Lnk = "//a/strong[text()='Publishing options']";
+    private static String CreateNewRevision_Cbx = "//input[@id='edit-revision']";
+    private static String ModerationState_Ddl = "//select[@id='edit-event']";
+    private static String LogMessageStateChange_Txa = "(//textarea[@id='edit-event-comment'])[1]";
+    private static String Published_Cbx = "//input[@id='edit-published']";
+    
+    
+    public PublishingOptions(final CustomWebDriver custWebDr) {
+        webDriver = custWebDr;
+        ul = new Util(webDriver);
+        
+    }
+   
+    public void ClickPublishingOptionsLnk() throws Exception {
+    	
+    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.
+    			elementToBeClickable(By.xpath(PublishingOptions_Lnk)));
+    	
+    	webDriver.executeScript("window.scrollBy(0,-500);");
+    	
+    	webDriver.click(PublishingOptions_Lnk);
+    }
+    
+    public void ClickCreateNewRevisionCbx() throws Exception {
+    	
+    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.
+    			elementToBeClickable(By.xpath(CreateNewRevision_Cbx)));
+    	webDriver.click(CreateNewRevision_Cbx);
+    }
+    
+    public void VerifyCreateNewRevisionCbxChecked() throws Exception {
+    	
+    	Assert.assertTrue(webDriver.findElement(By.xpath(CreateNewRevision_Cbx)).isSelected() == true);
+    }
+    
+    public void SelectModerationState(String stateName) throws Exception {
+    	
+    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.
+    			visibilityOf(webDriver.findElement(By.xpath(ModerationState_Ddl))));
+    	webDriver.selectFromDropdown(ModerationState_Ddl, stateName);
+    }
+    
+    public void EnterMessageForStateChange(String messageTxt) throws Exception {
+    	
+    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.
+    			visibilityOf(webDriver.findElement(By.xpath(LogMessageStateChange_Txa))));
+    	webDriver.type(LogMessageStateChange_Txa, messageTxt);
+    }
+    
+    public void UncheckPublishedCbx() throws Exception {
+    	
+    	WebElement el = new WebDriverWait(webDriver, 10).until(ExpectedConditions.
+    			visibilityOf(webDriver.findElement(By.xpath(Published_Cbx))));
+    	
+    	if (el.isSelected() == true) {
+    		el.click();
+    	}
+    }
+    
+    public void CheckPublishedCbx() throws Exception {
+    	
+    	WebElement el = new WebDriverWait(webDriver, 10).until(ExpectedConditions.
+    			visibilityOf(webDriver.findElement(By.xpath(Published_Cbx))));
+    	
+    	if (el.isSelected() == false) {
+    		el.click();
+    	}
+    }
+    
+    public void VerifyPublishedCbxChecked() throws Exception {
+    	
+    	WebElement el = new WebDriverWait(webDriver, 10).until(ExpectedConditions.
+    			visibilityOf(webDriver.findElement(By.xpath(Published_Cbx))));
+    	
+    	Assert.assertTrue(el.isSelected() == true);
+    }
+    
+    public void VerifyPublishedCbxNotCheckedAndNotEditable() throws Exception {
+    	
+    	WebElement el = new WebDriverWait(webDriver, 10).until(ExpectedConditions.
+    			visibilityOf(webDriver.findElement(By.xpath(Published_Cbx))));
+    	
+    	Assert.assertFalse(el.isSelected());
+    	Assert.assertFalse(el.isEnabled());
+    }
+    
+    
+    
+    
+    
+}
+

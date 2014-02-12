@@ -52,6 +52,13 @@ public class MPXPublishMedia {
     	String path = this.getImagePath();
     	mpxAssets.WaitForImgPresent(path + "Publish/Publish_Btn.png");
     	s.click(path + "Publish/Publish_Btn.png");
+    	
+    	//Windows requires slight mousemove for publish dialog to be visible in flash - no idea why...
+    	if (System.getProperty("os.name").contains("Windows")) {
+    		Pattern pImage = new Pattern(path + "Publish/Publish_Btn.png").targetOffset(-20, 0);
+    		Region r = s.exists(pImage, 1);
+    		s.click(r, 1);
+    	}
     }
     
     public void ClickPublishToAllCbx() throws Exception {

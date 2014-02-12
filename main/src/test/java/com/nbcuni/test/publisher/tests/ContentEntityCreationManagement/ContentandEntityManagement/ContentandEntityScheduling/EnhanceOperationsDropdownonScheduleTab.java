@@ -3,10 +3,12 @@ package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Contenta
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
-import com.nbcuni.test.publisher.pageobjects.content.*;
-import com.nbcuni.test.publisher.pageobjects.queues.ScheduleQueue;
+import com.nbcuni.test.publisher.pageobjects.Content.*;
+import com.nbcuni.test.publisher.pageobjects.Queues.ScheduleQueue;
+
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
