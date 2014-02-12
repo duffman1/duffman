@@ -16,7 +16,7 @@ public class CreatePost extends ParentTest{
      * Step 1 - Login to Pub7 
      * Step 1a - Ensure "Pub Post" module is activated<br>
      * Step 1b - Navigate to create post page<br>
-     * Step 2 - Verify that below fields are the mandatory ones and have star symbol marked on them:-  Basic Information tab:- 1) Title 2) Body  Publishhing Options tab:- 1) Moderation state<br>
+     * Step 2 - Verify that below fields are the mandatory ones and have star symbol marked on them:-  Basic Information tab:- 1) Title 2) Body  Publishing Options tab:- 1) Moderation state<br>
      * Step 3 - Enter value in Title and Body<br>
      * Step 4 - Upload image in Cover Media.  
      * Step 5 - Click on Publishing options tab and select Draft in Moderation state. 

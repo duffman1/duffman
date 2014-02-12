@@ -40,8 +40,7 @@ public class Logout {
     public void ClickLogoutBtn() throws Exception {
     	
     	Reporter.log("Click the 'Logout' button.");
-    	Thread.sleep(1000); //slight pause needed here
-    	LogOut_Btn.click();
+    	webDriver.executeScript("arguments[0].click();", LogOut_Btn); //js click required here as sometimes the logout lnk is hidden under the admin navigation no matter what scrolling options are available.
     	webDriver.navigate().refresh(); //TODO - logout requires a refresh for some reason. Figure out a better way
     	
     }

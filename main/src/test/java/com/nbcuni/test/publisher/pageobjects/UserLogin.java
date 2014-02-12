@@ -20,8 +20,8 @@ public class UserLogin {
     private static CustomWebDriver webDriver;
     
     //PAGE OBJECT CONSTRUCTOR
-    public UserLogin(final CustomWebDriver custWebDr) {
-        webDriver = custWebDr;
+    public UserLogin(CustomWebDriver webDriver) {
+        UserLogin.webDriver = webDriver;
     }
     
     //PAGE OBJECT IDENTIFIERS

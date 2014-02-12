@@ -20,147 +20,66 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[Enter the account name 'DB TV' in the account select text box.]]>
+      <![CDATA[Enter '429dd0559fee493' in the 'Character First Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the account option from the drop down list.]]>
+      <![CDATA[Click the Cover Photo 'Select' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Account' title to leave focus off of the selection.]]>
+      <![CDATA[Switch to the select file frame.]]>
     </line>
     <line>
-      <![CDATA[Wait for account to switch to the newly selected account.]]>
+      <![CDATA[Enter the file path for file upload.]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://qa5dev.publisher.nbcuni.com'.]]>
+      <![CDATA[Click the 'Upload' button.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'Cron ran successfully.' is present.]]>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
     </line>
     <line>
-      <![CDATA[Verify there are no errors present.]]>
+      <![CDATA[Click the 'Next' button.]]>
     </line>
     <line>
-      <![CDATA[Enter title Automation5bdb3aa03f.]]>
+      <![CDATA[Click the 'Public Local Files' radio button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Apply' button.]]>
+      <![CDATA[Click the 'Next' button.]]>
     </line>
     <line>
-      <![CDATA[Get the text of the first search result set item.]]>
+      <![CDATA[Assert the file image 'HanSolo' is present.]]>
     </line>
     <line>
-      <![CDATA[Get the title text of every result in the search result set.]]>
+      <![CDATA[Assert the the img is loaded and visible.]]>
     </line>
     <line>
-      <![CDATA[For each expected result, assert it is present in the result set.]]>
+      <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Verify the text '01/22/2014 - 05:00 AM' is present on the page.]]>
+      <![CDATA[Assert that img source of the Cover Photo contains 'HanSolo'.]]>
     </line>
     <line>
-      <![CDATA[Verify the text '02/04/2014 - 05:00 AM' is present on the page.]]>
+      <![CDATA[Assert the the img is loaded and visible.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'Expired' is present on the page.]]>
+      <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Click the first search title link in the search result set.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'Automation5bdb3aa03f' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'Wednesday, January 22, 2014 - 05:00' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'Tuesday, February 4, 2014 - 05:00' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Edit' in the work bench.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the account name 'DB TV' in the account select text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the account option from the drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Account' title to leave focus off of the selection.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for account to switch to the newly selected account.]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://qa5dev.publisher.nbcuni.com'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Cron ran successfully.' is present.]]>
+      <![CDATA[Verify success message of 'Character Profile 429dd0559fee493 has been created.' is present.]]>
     </line>
     <line>
       <![CDATA[Verify there are no errors present.]]>
-    </line>
-    <line>
-      <![CDATA[Enter title Automation5bdb3aa03f.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Apply' button.]]>
-    </line>
-    <line>
-      <![CDATA[Get the title text of every result in the search result set.]]>
-    </line>
-    <line>
-      <![CDATA[For each expected result, assert it is present in the result set.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text '02/11/2014 - 05:00 AM' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text '02/11/2015 - 05:00 AM' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'Published' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Click the first search title link in the search result set.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'Automation5bdb3aa03f' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'Tuesday, February 11, 2014 - 05:00' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'Wednesday, February 11, 2015 - 05:00' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Edit' in the work bench.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'Automation5bdb3aa03f' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'Unpublish' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text '02/11/2015 - 05:00' is present on the page.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="491118" started-at="2014-02-12T03:04:08Z" finished-at="2014-02-12T03:12:19Z">
+  <suite name="Default suite" duration-ms="30790" started-at="2014-02-12T14:18:24Z" finished-at="2014-02-12T14:18:55Z">
     <groups>
-      <group name="mpx">
-        <method signature="MPXVideosSchedulingVerificationScheduling.MPXVideosSchedulingVerificationScheduling_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling@4104c575]" name="MPXVideosSchedulingVerificationScheduling_Test" class="com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling"/>
-      </group> <!-- mpx -->
       <group name="full">
-        <method signature="MPXVideosSchedulingVerificationScheduling.MPXVideosSchedulingVerificationScheduling_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling@4104c575]" name="MPXVideosSchedulingVerificationScheduling_Test" class="com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling"/>
+        <method signature="CreateCharacterProfile.CreateCharacterProfile_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@2f774b9b]" name="CreateCharacterProfile_Test" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile"/>
       </group> <!-- full -->
-      <group name="smoke">
-        <method signature="MPXVideosSchedulingVerificationScheduling.MPXVideosSchedulingVerificationScheduling_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling@4104c575]" name="MPXVideosSchedulingVerificationScheduling_Test" class="com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling"/>
-      </group> <!-- smoke -->
     </groups>
-    <test name="Default test" duration-ms="491118" started-at="2014-02-12T03:04:08Z" finished-at="2014-02-12T03:12:19Z">
-      <class name="com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling">
-        <test-method status="PASS" signature="startSelenium(java.lang.String)[pri:0, instance:com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling@4104c575]" name="startSelenium" is-config="true" duration-ms="13419" started-at="2014-02-11T22:04:08Z" finished-at="2014-02-11T22:04:21Z">
+    <test name="Default test" duration-ms="30790" started-at="2014-02-12T14:18:24Z" finished-at="2014-02-12T14:18:55Z">
+      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile">
+        <test-method status="PASS" signature="startSelenium(java.lang.String)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@2f774b9b]" name="startSelenium" is-config="true" duration-ms="13576" started-at="2014-02-12T09:18:24Z" finished-at="2014-02-12T09:18:38Z">
           <params>
             <param index="0">
               <value>
@@ -177,7 +96,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="MPXVideosSchedulingVerificationScheduling_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling@4104c575]" name="MPXVideosSchedulingVerificationScheduling_Test" duration-ms="477117" started-at="2014-02-11T22:04:21Z" finished-at="2014-02-11T22:12:18Z">
+        <test-method status="PASS" signature="CreateCharacterProfile_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@2f774b9b]" name="CreateCharacterProfile_Test" duration-ms="16630" started-at="2014-02-12T09:18:38Z" finished-at="2014-02-12T09:18:54Z">
           <reporter-output>
             <line>
               <![CDATA[Open url 'http://qa5dev.publisher.nbcuni.com'.]]>
@@ -192,145 +111,70 @@
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
-              <![CDATA[Enter the account name 'DB TV' in the account select text box.]]>
+              <![CDATA[Enter '429dd0559fee493' in the 'Character First Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the account option from the drop down list.]]>
+              <![CDATA[Click the Cover Photo 'Select' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Account' title to leave focus off of the selection.]]>
+              <![CDATA[Switch to the select file frame.]]>
             </line>
             <line>
-              <![CDATA[Wait for account to switch to the newly selected account.]]>
+              <![CDATA[Enter the file path for file upload.]]>
             </line>
             <line>
-              <![CDATA[Open url 'http://qa5dev.publisher.nbcuni.com'.]]>
+              <![CDATA[Click the 'Upload' button.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'Cron ran successfully.' is present.]]>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
             </line>
             <line>
-              <![CDATA[Verify there are no errors present.]]>
+              <![CDATA[Click the 'Next' button.]]>
             </line>
             <line>
-              <![CDATA[Enter title Automation5bdb3aa03f.]]>
+              <![CDATA[Click the 'Public Local Files' radio button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Apply' button.]]>
+              <![CDATA[Click the 'Next' button.]]>
             </line>
             <line>
-              <![CDATA[Get the text of the first search result set item.]]>
+              <![CDATA[Assert the file image 'HanSolo' is present.]]>
             </line>
             <line>
-              <![CDATA[Get the title text of every result in the search result set.]]>
+              <![CDATA[Assert the the img is loaded and visible.]]>
             </line>
             <line>
-              <![CDATA[For each expected result, assert it is present in the result set.]]>
+              <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Verify the text '01/22/2014 - 05:00 AM' is present on the page.]]>
+              <![CDATA[Assert that img source of the Cover Photo contains 'HanSolo'.]]>
             </line>
             <line>
-              <![CDATA[Verify the text '02/04/2014 - 05:00 AM' is present on the page.]]>
+              <![CDATA[Assert the the img is loaded and visible.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'Expired' is present on the page.]]>
+              <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Click the first search title link in the search result set.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'Automation5bdb3aa03f' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'Wednesday, January 22, 2014 - 05:00' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'Tuesday, February 4, 2014 - 05:00' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Edit' in the work bench.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the account name 'DB TV' in the account select text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the account option from the drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Account' title to leave focus off of the selection.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for account to switch to the newly selected account.]]>
-            </line>
-            <line>
-              <![CDATA[Open url 'http://qa5dev.publisher.nbcuni.com'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Cron ran successfully.' is present.]]>
+              <![CDATA[Verify success message of 'Character Profile 429dd0559fee493 has been created.' is present.]]>
             </line>
             <line>
               <![CDATA[Verify there are no errors present.]]>
-            </line>
-            <line>
-              <![CDATA[Enter title Automation5bdb3aa03f.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Apply' button.]]>
-            </line>
-            <line>
-              <![CDATA[Get the title text of every result in the search result set.]]>
-            </line>
-            <line>
-              <![CDATA[For each expected result, assert it is present in the result set.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text '02/11/2014 - 05:00 AM' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text '02/11/2015 - 05:00 AM' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'Published' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Click the first search title link in the search result set.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'Automation5bdb3aa03f' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'Tuesday, February 11, 2014 - 05:00' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'Wednesday, February 11, 2015 - 05:00' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Edit' in the work bench.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'Automation5bdb3aa03f' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'Unpublish' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text '02/11/2015 - 05:00' is present on the page.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- MPXVideosSchedulingVerificationScheduling_Test -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling@4104c575]" name="stopSelenium" is-config="true" duration-ms="570" started-at="2014-02-11T22:12:18Z" finished-at="2014-02-11T22:12:19Z">
+        </test-method> <!-- CreateCharacterProfile_Test -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@2f774b9b]" name="stopSelenium" is-config="true" duration-ms="569" started-at="2014-02-12T09:18:54Z" finished-at="2014-02-12T09:18:55Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=MPXVideosSchedulingVerificationScheduling_Test status=SUCCESS method=MPXVideosSchedulingVerificationScheduling.MPXVideosSchedulingVerificationScheduling_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling@4104c575] output=Open url 'http://qa5dev.publisher.nbcuni.com'.]]]>
+                <![CDATA[[TestResult name=CreateCharacterProfile_Test status=SUCCESS method=CreateCharacterProfile.CreateCharacterProfile_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@2f774b9b] output=Open url 'http://qa5dev.publisher.nbcuni.com'.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-      </class> <!-- com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling -->
+      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

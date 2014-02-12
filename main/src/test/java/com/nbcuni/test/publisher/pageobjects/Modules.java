@@ -2,13 +2,17 @@ package com.nbcuni.test.publisher.pageobjects;
 
 import java.util.Arrays;
 import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
+
 import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.publisher.pageobjects.content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.taxonomy.Taxonomy;
@@ -45,7 +49,7 @@ public class Modules {
     @FindBy(how = How.XPATH, using = "//input[@id='edit-module-filter-name']")
     private static WebElement FilterList_Txb;
     
-    @FindBy(how = How.XPATH, using = "//input[@id='edit-submit']")
+    @FindBy(how = How.XPATH, using = "//input[@value='Save configuration']")
     private static WebElement SaveConfiguration_Btn;
     
     @FindBy(how = How.XPATH, using = "//input[@value='Continue']")
@@ -71,7 +75,11 @@ public class Modules {
     public void EnterFilterName(String filterName) throws Exception {
     	
     	Reporter.log("Enter '" + filterName + "' in the 'Filter Name' text box.");
+    	FilterList_Txb.clear();
     	FilterList_Txb.sendKeys(filterName);
+    	
+    	Reporter.log("Wait for the module titled '" + filterName + "' to appear in the list.");
+    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOf(ModuleName_Cbx(filterName)));
     	
     }
     

@@ -2,18 +2,13 @@ package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentT
 
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
-
 import com.nbcuni.test.publisher.common.ParentTest;
-import com.nbcuni.test.publisher.pageobjects.Overlay;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.content.CharactersInformation;
 import com.nbcuni.test.publisher.pageobjects.content.ContentParent;
-import com.nbcuni.test.publisher.pageobjects.content.ContentTypes;
 import com.nbcuni.test.publisher.pageobjects.content.CoverPhoto;
 import com.nbcuni.test.publisher.pageobjects.content.SelectFile;
 import com.nbcuni.test.publisher.pageobjects.taxonomy.Taxonomy;
-import com.nbcuni.test.webdriver.CustomWebDriver;
-import com.nbcuni.test.webdriver.WebDriverClientExecution;
 
 public class CreateCharacterProfile extends ParentTest{
 	
@@ -26,7 +21,7 @@ public class CreateCharacterProfile extends ParentTest{
      * Step 5 - Click on the "Save" button<br> 
      * @throws Throwable No Return values are needed
      *************************************************************************************/
-    @Test(groups = {"full" })
+    @Test(groups = {"full"})
     public void CreateCharacterProfile_Test() throws Exception {
          
         	//Step 1
@@ -35,13 +30,12 @@ public class CreateCharacterProfile extends ParentTest{
             userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
             
             //Step 2
-            Taxonomy taxonomy = new Taxonomy(webDriver);
             taxonomy.NavigateSite("Content>>Add content>>Character Profile");
             
             //Step 3
             CharactersInformation charactersInformation = new CharactersInformation(webDriver);
             PageFactory.initElements(webDriver, charactersInformation);
-            overlay.SwitchToFrame("Create Character Profile");
+            overlay.SwitchToActiveFrame();
             String characterName = random.GetCharacterString(15);
             charactersInformation.EnterCharacterFirstName(characterName);
             
