@@ -78,7 +78,9 @@ public class ContentParent {
     public void VerifyMessageStatus(String messageStatus) throws Exception {
     	
     	Reporter.log("Verify success message of '" + messageStatus + "' is present.");
-    	Assert.assertTrue(Message_Ctr.getText().contains(messageStatus));
+    	if (!Message_Ctr.getText().contains(messageStatus)) {
+    		Assert.fail("The message status '" + messageStatus + "' is not present.");
+    	}
     	
     	Reporter.log("Verify there are no errors present.");
     	ErrorChecking errorChecking = new ErrorChecking(webDriver, applib);

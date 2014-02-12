@@ -70,6 +70,7 @@ public class CreateTVEpisode extends ParentTest{
             
             	//Step 4
             	BasicInformation basicInformation = new BasicInformation(webDriver);
+            	PageFactory.initElements(webDriver, basicInformation);
             	basicInformation.ClickBasicInformationTab();
             	String tvEpisodeTitle = random.GetCharacterString(15);
             	basicInformation.EnterTitle(tvEpisodeTitle);

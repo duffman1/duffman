@@ -77,7 +77,8 @@ public class ScheduleToPublishContentByDateTime extends ParentTest {
         overlay.switchToDefaultContent();
         overlay.SwitchToFrame("Edit Post "+ postTitle + " dialog");
         BasicInformation basicInformation = new BasicInformation(webDriver);
-        basicInformation.EnterSynopsis("Testing for new revision");
+        PageFactory.initElements(webDriver, basicInformation);
+        String synopsis = basicInformation.EnterSynopsis();
         overlay.SwitchToActiveFrame();
         PublishingOptions publishingOptions = new PublishingOptions(webDriver);
         publishingOptions.ClickPublishingOptionsLnk();

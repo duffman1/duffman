@@ -124,6 +124,7 @@ public class CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter ex
             
             //Step 14
             BasicInformation basicInformation = new BasicInformation(webDriver);
+            PageFactory.initElements(webDriver, basicInformation);
             basicInformation.ClickBasicInformationTab();
             String movieTitle = random.GetCharacterString(15);
             basicInformation.EnterTitle(movieTitle);

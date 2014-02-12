@@ -178,6 +178,7 @@ public class CreateConfigureAndValidatePermissionsEditor extends ParentTest{
         
         //Step 27
         BasicInformation basicInformation = new BasicInformation(webDriver);
+        PageFactory.initElements(webDriver, basicInformation);
         basicInformation.EnterSynopsis();
         overlay.SwitchToActiveFrame();
         contentParent.ClickSaveBtn();

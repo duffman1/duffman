@@ -101,10 +101,10 @@ public class CastCrewFieldCollectionsVerification_Movie extends ParentTest{
         //Step 5
         overlay.SwitchToFrame("Create Movie");
         String MovieName = random.GetCharacterString(15);
-        BasicInformation basicInformation =new BasicInformation(webDriver);
+        BasicInformation basicInformation = new BasicInformation(webDriver);
+        PageFactory.initElements(webDriver, basicInformation);
         basicInformation.EnterTitle(MovieName);
-        String MovieSynopsis = random.GetCharacterString(30);
-        basicInformation.EnterSynopsis(MovieSynopsis);
+        String MovieSynopsis = basicInformation.EnterSynopsis();
         overlay.switchToDefaultContent();
         overlay.SwitchToFrame("Create Movie");       
         basicInformation.ClickCoverSelectBtn();

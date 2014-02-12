@@ -85,7 +85,7 @@ public class MPXDataClient {
     
     public List<String> GetAllMPXAccounts() throws Exception {
     	
-    	webDriver.click(AccountPicker_Btn);
+    	new WebDriverWait(webDriver, 60).until(ExpectedConditions.visibilityOfElementLocated(By.xpath(AccountPicker_Btn))).click();
     	
     	List<WebElement> allAccountLnks = new WebDriverWait(webDriver, 10).until(ExpectedConditions.
     			visibilityOfAllElementsLocatedBy(By.xpath(Account_Ctr)));

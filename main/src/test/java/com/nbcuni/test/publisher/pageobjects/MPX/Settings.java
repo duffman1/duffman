@@ -251,8 +251,8 @@ public class Settings {
     	Select ddl3 = new Select(webDriver.findElement(By.xpath(SelectImportAccount3_Ddl)));
     	
     	Assert.assertTrue(ddl1.getFirstSelectedOption().isEnabled() == false);
-    	Assert.assertTrue(ddl1.getFirstSelectedOption().isEnabled() == false);
-    	Assert.assertTrue(ddl1.getFirstSelectedOption().isEnabled() == false);
+    	Assert.assertTrue(ddl2.getFirstSelectedOption().isEnabled() == false);
+    	Assert.assertTrue(ddl3.getFirstSelectedOption().isEnabled() == false);
     }
     
     public void VerifyUsernameValues(String userName, int txbCount) throws Exception {

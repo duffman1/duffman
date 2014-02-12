@@ -54,6 +54,7 @@ public class CreateDefaultContent {
         ContentParent contentParent = new ContentParent(webDriver, applib);
         PageFactory.initElements(webDriver, contentParent);
         BasicInformation basicInformation = new BasicInformation(webDriver);
+        PageFactory.initElements(webDriver, basicInformation);
         String postTitle = random.GetCharacterString(15);
         basicInformation.EnterTitle(postTitle);
         basicInformation.EnterSynopsis();

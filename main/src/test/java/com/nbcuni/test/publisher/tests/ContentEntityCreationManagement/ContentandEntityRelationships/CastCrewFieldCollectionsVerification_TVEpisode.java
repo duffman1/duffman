@@ -102,6 +102,7 @@ public class CastCrewFieldCollectionsVerification_TVEpisode extends ParentTest {
         overlay.SwitchToActiveFrame();
         String TVEpisodeName = random.GetCharacterString(15);        
         BasicInformation basicInformation = new BasicInformation(webDriver);
+        PageFactory.initElements(webDriver, basicInformation);
         basicInformation.EnterTitle(TVEpisodeName);
         basicInformation.EnterEpisodeNumber("1");
     	basicInformation.EnterSynopsis();       

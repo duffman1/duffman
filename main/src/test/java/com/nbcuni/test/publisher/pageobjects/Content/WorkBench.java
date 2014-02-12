@@ -1,17 +1,12 @@
 package com.nbcuni.test.publisher.pageobjects.Content;
 
 import java.util.List;
-
-import com.nbcuni.test.lib.Util;
 import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.webdriver.CustomWebDriver;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
 /*********************************************
@@ -26,9 +21,9 @@ public class WorkBench {
     private static AppLib applib;
     
     //PAGE OBJECT CONSTRUCTORS
-    public WorkBench(CustomWebDriver custWebDr, AppLib applib) {
-        webDriver = custWebDr;
-        this.applib = applib;
+    public WorkBench(CustomWebDriver webDriver, AppLib applib) {
+        WorkBench.webDriver = webDriver;
+        WorkBench.applib = applib;
         
     }
     

@@ -63,6 +63,7 @@ public class UnauthenticatedUsersNotAbleToViewThePublishedContents extends Paren
     	publishingOptions.ClickPublishingOptionsLnk();
     	contentParent.VerifyRequiredFields(Arrays.asList("Moderation State"));
     	BasicInformation basicInformation = new BasicInformation(webDriver);
+    	PageFactory.initElements(webDriver, basicInformation);
     	basicInformation.ClickBasicInformationTab();
     	String postTitle = random.GetCharacterString(15);
     	basicInformation.EnterTitle(postTitle);

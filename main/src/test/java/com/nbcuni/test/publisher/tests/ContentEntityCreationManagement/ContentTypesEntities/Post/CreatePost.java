@@ -56,6 +56,7 @@ public class CreatePost extends ParentTest{
             
             	//Step 3
             	BasicInformation basicInformation = new BasicInformation(webDriver);
+            	PageFactory.initElements(webDriver, basicInformation);
             	basicInformation.ClickBasicInformationTab();
             	String postTitle = random.GetCharacterString(15);
             	basicInformation.EnterTitle(postTitle);
