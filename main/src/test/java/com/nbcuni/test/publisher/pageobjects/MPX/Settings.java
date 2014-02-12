@@ -15,6 +15,7 @@ import org.testng.Assert;
 import org.testng.Reporter;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -162,10 +163,13 @@ public class Settings {
     		optionValues.add(option.getText());
     	}
     	
-    	optionValues.remove("- Select -");
+    	optionValues.removeAll(Collections.singleton("- Select -"));
     	
     	for (String option : optionValues) {
-    		Assert.assertTrue(accountNames.contains(option));
+    		if (!accountNames.contains(option)) {
+    			Assert.fail("option '" + option + "' is not present in mpx account selections.");
+    		}
+    		
     	}
     	
     	webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);

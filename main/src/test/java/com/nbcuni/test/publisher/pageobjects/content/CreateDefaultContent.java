@@ -32,17 +32,15 @@ public class CreateDefaultContent {
 
     private static CustomWebDriver webDriver;
     private static AppLib applib;
-    private final Util ul;
     
-    Taxonomy taxonomy;
-	Overlay overlay;
-	Random random;
+    private static Taxonomy taxonomy;
+	private static Overlay overlay;
+	private Random random;
 	
     
-    public CreateDefaultContent(final CustomWebDriver custWebDr, AppLib appib) {
-        webDriver = custWebDr;
-        ul = new Util(webDriver);
-        this.applib = applib;
+    public CreateDefaultContent(CustomWebDriver webDriver, AppLib applib) {
+        CreateDefaultContent.webDriver = webDriver;
+        CreateDefaultContent.applib = applib;
         taxonomy = new Taxonomy(webDriver);
         overlay = new Overlay(webDriver, applib);
         random = new Random();

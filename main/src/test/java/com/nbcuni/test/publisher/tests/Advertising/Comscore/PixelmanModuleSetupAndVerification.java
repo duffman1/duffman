@@ -70,10 +70,10 @@ public class PixelmanModuleSetupAndVerification extends ParentTest {
         userLogin.Login("admin@publisher.nbcuni.com", "pa55word");
         taxonomy.NavigateSite("Modules");
         overlay.SwitchToFrame("Modules");
-        modules.EnterFilterName("Pixelman");
-        modules.DisableModule("Pixelman");
         modules.EnterFilterName("Pub Ads");
         modules.DisableModule("Pub Ads");
+        modules.EnterFilterName("Pixelman");
+        modules.DisableModule("Pixelman");
         overlay.ClickCloseOverlayLnk();
         
         //Step 9a

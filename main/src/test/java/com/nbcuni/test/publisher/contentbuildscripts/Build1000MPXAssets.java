@@ -31,7 +31,7 @@ public class Build1000MPXAssets extends ParentTest{
     @Test()
     public void BuildAssets_Test() throws Exception{
     	
-    	/*
+    	
     	//Step 1
     	UserLogin userLogin = applib.openApplication();
     	
@@ -70,7 +70,9 @@ public class Build1000MPXAssets extends ParentTest{
         	mpxAddMedia.EnterTitle(mediaTitle);
         	
         	//Step 5
+        	Thread.sleep(5000);
         	mpxAddMedia.ClickSaveBtn();
+        	Thread.sleep(5000);
         	
         	//Step 6
         	MPXPublishMedia mpxPublishMedia = new MPXPublishMedia(webDriver, applib);
@@ -84,7 +86,7 @@ public class Build1000MPXAssets extends ParentTest{
                 mpxPublishMedia.ClickPublishFromDialogBtn();
             }
         	
-        }*/
+        }
         
     }
 }

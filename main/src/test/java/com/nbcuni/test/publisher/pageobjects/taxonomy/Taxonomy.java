@@ -38,7 +38,7 @@ public class Taxonomy {
     public void MouseOffTaxonomyElement(String locator) throws Exception {
     	//TODO call a script that closes the taxonomy bar
     	Actions action = new Actions(webDriver);
-    	action.moveToElement(webDriver.findElement(By.xpath("//div[@class='environment-indicator-name']"))).build().perform();
+    	action.moveToElement(webDriver.findElement(By.xpath("//a[@id='edit-shortcuts']"))).build().perform();
     	new WebDriverWait(webDriver, 10).until(ExpectedConditions.not(ExpectedConditions.visibilityOf(webDriver.findElement(By.xpath(locator)))));
     }
     

@@ -41,6 +41,7 @@ public class Modules {
     	PageFactory.initElements(webDriver, taxonomy);
     }
     
+    //PAGE OBJECT IDENTIFIERS
     @FindBy(how = How.XPATH, using = "//input[@id='edit-module-filter-name']")
     private static WebElement FilterList_Txb;
     

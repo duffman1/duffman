@@ -51,9 +51,9 @@ public class MPXAssets {
     
     public void WaitForAllAssetsToLoad(String path) throws Exception {
     	
-    	this.WaitForImgPresent(path + "Common/Loading_Txt.png");
-    	this.WaitForImgNotPresent(path + "Common/Loading_Txt.png");
-        
+    	//TODO - come up with a better dynamic wait for all mpx assets loaded
+    	Thread.sleep(5000);
+    	
     }
     
     public void WaitForImgPresent(String imgPath) throws Exception {
