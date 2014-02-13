@@ -41,6 +41,7 @@ public class Overlay {
     
     public void switchToDefaultContent() throws Exception {
     	
+    	Thread.sleep(500);
     	webDriver.switchTo().defaultContent();
     }
     

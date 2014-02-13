@@ -97,23 +97,13 @@ public class MultipleMPXAccountsPerLoginVerification extends ParentTest{
         	settings.ClickUpdateBtn();
         	
         	//Step
-        	settings.ExpandMPXLogin();
-        	settings.ClickAddAccountBtn();
-        	settings.EnterUsername0(applib.getMPXUsername());
-        	settings.EnterPassword0(applib.getMPXPassword());
-        	settings.ClickUpdateBtn();
-        	
-        	//Step
             settings.SelectImportAccount1("DB TV");
-        	settings.SelectImportAccount2("NBCU TVE Dev - NBC");
-        	settings.SelectImportAccount3("NBCU TVE Stage - Golf Channel");
+        	settings.SelectImportAccount2("NBCU TVE Stage - Golf Channel");
         	settings.ClickSetImportAccountBtn();
         	
         	//Step
         	contentParent.VerifyMessageStatus("Setting import account \"DB%20TV\" for account");
         	contentParent.VerifyMessageStatus("Retrieving import account information for \"DB%20TV\".");
-        	contentParent.VerifyMessageStatus("Setting import account \"NBCU%20TVE%20Dev%20-%20NBC\" for account");
-        	contentParent.VerifyMessageStatus("Retrieving import account information for \"NBCU%20TVE%20Dev%20-%20NBC\".");
         	contentParent.VerifyMessageStatus("Setting import account \"NBCU%20TVE%20Stage%20-%20Golf%20Channel\" for account");
         	contentParent.VerifyMessageStatus("Retrieving import account information for \"NBCU%20TVE%20Stage%20-%20Golf%20Channel\".");
         	
@@ -134,7 +124,7 @@ public class MultipleMPXAccountsPerLoginVerification extends ParentTest{
             
             //Step
             settings.ExpandMPXLogin();
-            settings.VerifyUsernameValues(applib.getMPXUsername(), 3);
+            settings.VerifyUsernameValues(applib.getMPXUsername(), 2);
             
             //Step
             settings.ClickAddAccountBtn();
@@ -154,10 +144,10 @@ public class MultipleMPXAccountsPerLoginVerification extends ParentTest{
             
             //Step
             settings.ExpandMPXLogin();
-            settings.VerifyUsernameValues("mpx/AdminPub7QA", 4);
+            settings.VerifyUsernameValues("mpx/AdminPub7QA", 3);
 
             //Step
-            settings.SelectImportAccount4("NBCU TVE Dev - Style");
+            settings.SelectImportAccount3("NBCU TVE Dev - Style");
             settings.ClickSetImportAccountBtn();
             contentParent.VerifyMessageStatus("Setting import account \"NBCU%20TVE%20Dev%20-%20Style\" for account");
             contentParent.VerifyMessageStatus("Retrieving import account information for \"NBCU%20TVE%20Dev%20-%20Style\".");

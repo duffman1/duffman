@@ -246,13 +246,41 @@ public class Settings {
     
     public void VerifyImportAccountsDisabled() throws Exception {
     	
+    	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+    	
+    	boolean ddl1Present = false;
+    	boolean ddl2Present = false;
+    	boolean ddl3Present = false;
+    	
     	Select ddl1 = new Select(webDriver.findElement(By.xpath(SelectImportAccount1_Ddl)));
-    	Select ddl2 = new Select(webDriver.findElement(By.xpath(SelectImportAccount2_Ddl)));
-    	Select ddl3 = new Select(webDriver.findElement(By.xpath(SelectImportAccount3_Ddl)));
+    	Select ddl2 = null;
+    	Select ddl3 = null;
+    	
+    	try {
+    		ddl2 = new Select(webDriver.findElement(By.xpath(SelectImportAccount2_Ddl)));
+    		ddl2Present = true;
+    	}
+    	catch (NoSuchElementException e) {
+    		ddl2Present = false;
+    	}
+    	
+    	try {
+    		ddl3 = new Select(webDriver.findElement(By.xpath(SelectImportAccount3_Ddl)));
+    		ddl3Present = true;
+    	}
+    	catch (NoSuchElementException e) {
+    		ddl3Present = false;
+    	}
     	
     	Assert.assertTrue(ddl1.getFirstSelectedOption().isEnabled() == false);
-    	Assert.assertTrue(ddl2.getFirstSelectedOption().isEnabled() == false);
-    	Assert.assertTrue(ddl3.getFirstSelectedOption().isEnabled() == false);
+    	if (ddl2Present == true) {
+    		Assert.assertTrue(ddl2.getFirstSelectedOption().isEnabled() == false);
+    	}
+    	if (ddl3Present == true) {
+    		Assert.assertTrue(ddl3.getFirstSelectedOption().isEnabled() == false);
+    	}
+    	
+    	webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
     }
     
     public void VerifyUsernameValues(String userName, int txbCount) throws Exception {

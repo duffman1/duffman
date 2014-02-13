@@ -92,7 +92,7 @@ public class MPXVideosSchedulingVerificationInitialOverrides extends ParentTest{
             overlay.switchToDefaultContent();
             ContentParent contentParent = new ContentParent(webDriver, applib);
             PageFactory.initElements(webDriver, contentParent);
-            List<String> defaultVideoValues = Arrays.asList("Automation1", "MPX Released File Public IDs:", "zAN5F0aqoIzA",
+            List<String> defaultVideoValues = Arrays.asList("Automation1", "MPX Released File Public IDs:",
                     "MPX Media Default Released File Public ID:", "MPX Media Categories:", "Series", "Show", "MPX Media Description:",
                     "Automation 1 example test", "MPX Media Author:", "Pub7 Content Provider", "MPX Media Air Date:",
                     "Wednesday, January 8, 2014", "MPX Media Keywords:", "mpx, metadata, field, override", "MPX Media Copyright:",
@@ -109,7 +109,7 @@ public class MPXVideosSchedulingVerificationInitialOverrides extends ParentTest{
             WorkBench workBench = new WorkBench(webDriver, applib);
             PageFactory.initElements(webDriver, workBench);
             workBench.ClickWorkBenchTab("Edit");
-            overlay.SwitchToFrame("Edit mpx_video_1 Automation1 dialog");
+            overlay.SwitchToActiveFrame();
 
             //Step 22
             EditMPXVideo editMPXVideo = new EditMPXVideo(webDriver);

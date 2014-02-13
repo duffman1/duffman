@@ -162,7 +162,7 @@ public class AddFile {
     public void WaitForSuccessfulUpload() throws Exception {
     	
     	Reporter.log("Wait for file upload to reach 100%");
-    	new WebDriverWait(webDriver, 30).until(ExpectedConditions.visibilityOf(UploadStatus1of1Files_Txt));
+    	new WebDriverWait(webDriver, 60).until(ExpectedConditions.visibilityOf(UploadStatus1of1Files_Txt));
     	Thread.sleep(1000); //slight pause to avoid problematic js alert
     }
     

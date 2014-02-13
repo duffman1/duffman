@@ -36,10 +36,10 @@ public class MPXFileType {
     }
     
     //PAGE OBJECT IDENTIFIERS
-    @FindBy(how = How.ID, using = "edit-pub-mpx-mpx-video-1-url-alias-field")
+    @FindBy(how = How.XPATH, using = "//select[contains(@id, 'url-alias-field')]")
     private static WebElement URLAliasField_Ddl;
     
-    @FindBy(how = How.ID, using = "edit-pub-mpx-mpx-video-1-enable-default-field-overrides")
+    @FindBy(how = How.XPATH, using = "//input[contains(@id, 'enable-default-field-overrides')]")
     private static WebElement EnableMPXValueOverrides_Cbx;
     
     @FindBy(how = How.ID, using = "edit-submit")

@@ -55,13 +55,13 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>All Web Tests</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>42/2/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>9/4/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Feb 05 18:15:37 EST 2014</td>
+<td>Started on:</td><td>Thu Feb 13 12:30:11 EST 2014</td>
 </tr>
-<tr><td>Total time:</td><td>2704 seconds (2704865 ms)</td>
+<tr><td>Total time:</td><td>998 seconds (998341 ms)</td>
 </tr><tr>
-<td>Included groups:</td><td>full </td>
+<td>Included groups:</td><td>mpx </td>
 </tr><tr>
 <td>Excluded groups:</td><td></td>
 </tr>
@@ -75,35 +75,34 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.nbcuni.test.publisher.tests.SocialIntegration.Facebook.ConfiguringPublisherAutopublishingToFacebookTimeandWall.ConfiguringPublisherAutopublishingToFacebookTimeandWall_Test()'><b>ConfiguringPublisherAutopublishingToFacebookTimeandWall_Test</b><br>Test class: com.nbcuni.test.publisher.tests.SocialIntegration.Facebook.ConfiguringPublisherAutopublishingToFacebookTimeandWall<br/>
-<a href="#Output-493034544" onClick='toggleBox("Output-493034544", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.Configuration.Configuration_Test()'><b>Configuration_Test</b><br>Test class: com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.Configuration<br/>
+<a href="#Output-910600801" onClick='toggleBox("Output-910600801", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-493034544" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-493034544">
+<a href="#Output-910600801" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-910600801">
 Open url 'http://qa5dev.publisher.nbcuni.com'.<br/>
 Enter the user's email address in the 'Email Address' text box.<br/>
 Enter the user's password in the 'Password' text box.<br/>
 Click the 'Login' button.<br/>
-Click the 'Edit' extend menu button.<br/>
-Click the 'Share' menu button.<br/>
-Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140205185802.png <br/>
-<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140205185802.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140205185802.png' height='500' width='500'/> </a><br/>
+Open url 'http://qa5dev.publisher.nbcuni.com'.<br/>
+Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140213123831.png <br/>
+<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140213123831.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140213123831.png' height='500' width='500'/> </a><br/>
 </div>
 </td>
-<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
-	at com.nbcuni.test.publisher.pageobjects.content.ContentParent.VerifyPageContentPresent(ContentParent.java:143)
-	at com.nbcuni.test.publisher.tests.SocialIntegration.Facebook.ConfiguringPublisherAutopublishingToFacebookTimeandWall.ConfiguringPublisherAutopublishingToFacebookTimeandWall_Test(ConfiguringPublisherAutopublishingToFacebookTimeandWall.java:151)
+<td><div><pre>java.lang.NumberFormatException: For input string: &quot;&quot;
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:48)
+	at java.lang.Integer.parseInt(Integer.java:470)
+	at java.lang.Integer.parseInt(Integer.java:499)
+	at com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.Configuration.Configuration_Test(Configuration.java:87)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
 	at java.lang.Thread.run(Thread.java:695)
-... Removed 14 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace493034544", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace493034544'><pre>java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:494)
-	at org.testng.Assert.assertTrue(Assert.java:42)
-	at org.testng.Assert.assertTrue(Assert.java:52)
-	at com.nbcuni.test.publisher.pageobjects.content.ContentParent.VerifyPageContentPresent(ContentParent.java:143)
-	at com.nbcuni.test.publisher.tests.SocialIntegration.Facebook.ConfiguringPublisherAutopublishingToFacebookTimeandWall.ConfiguringPublisherAutopublishingToFacebookTimeandWall_Test(ConfiguringPublisherAutopublishingToFacebookTimeandWall.java:151)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace910600801", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace910600801'><pre>java.lang.NumberFormatException: For input string: &quot;&quot;
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:48)
+	at java.lang.Integer.parseInt(Integer.java:470)
+	at java.lang.Integer.parseInt(Integer.java:499)
+	at com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.Configuration.Configuration_Test(Configuration.java:87)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
@@ -118,117 +117,45 @@ Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screensho
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
 	at java.lang.Thread.run(Thread.java:695)
 </pre></div></td>
-<td>97</td>
-<td>com.nbcuni.test.publisher.tests.SocialIntegration.Facebook.ConfiguringPublisherAutopublishingToFacebookTimeandWall@4178460d</td></tr>
+<td>16</td>
+<td>com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.Configuration@7d95d4fe</td></tr>
 <tr>
-<td title='com.nbcuni.test.publisher.tests.Queues.SchedulingQueues.ScheduleRevisionsOfQueues.ScheduleRevisionsOfQueues_Test()'><b>ScheduleRevisionsOfQueues_Test</b><br>Test class: com.nbcuni.test.publisher.tests.Queues.SchedulingQueues.ScheduleRevisionsOfQueues<br/>
-<a href="#Output-275482251" onClick='toggleBox("Output-275482251", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.nbcuni.test.publisher.tests.Video.DeIngestingMPXAccountsAndCorrespondingAssets.DeleteMultipleAccounts.DeleteMultipleAccounts_Test()'><b>DeleteMultipleAccounts_Test</b><br>Test class: com.nbcuni.test.publisher.tests.Video.DeIngestingMPXAccountsAndCorrespondingAssets.DeleteMultipleAccounts<br/>
+<a href="#Output-245178926" onClick='toggleBox("Output-245178926", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-275482251" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-275482251">
+<a href="#Output-245178926" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-245178926">
 Open url 'http://qa5dev.publisher.nbcuni.com'.<br/>
 Enter the user's email address in the 'Email Address' text box.<br/>
 Enter the user's password in the 'Password' text box.<br/>
 Click the 'Login' button.<br/>
-Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140205185606.png <br/>
-<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140205185606.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140205185606.png' height='500' width='500'/> </a><br/>
+Open url 'http://qa5dev.publisher.nbcuni.com'.<br/>
+Wait for 'Update' button to be visible.<br/>
+Get each of the 'Delete Account' buttons<br/>
+Get each of the 'Delete Account' buttons<br/>
+Get each of the 'Delete Account' buttons<br/>
+Verify the text 'You are about to delete account' is present on the page.<br/>
+Verify the text 'and all of its assets. This action cannot be undone.' is present on the page.<br/>
+Click the 'Delete' button.<br/>
+Verify success message of 'Beginning process of deleting account' is present.<br/>
+Verify there are no errors present.<br/>
+Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140213124649.png <br/>
+<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140213124649.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140213124649.png' height='500' width='500'/> </a><br/>
 </div>
 </td>
-<td><div><pre>org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 10.000
-  (Session info: chrome=32.0.1700.107)
-  (Driver info: chromedriver=2.8.241036,platform=Mac OS X 10.8.5 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 190.06 seconds
-Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.8.5&apos;, java.version: &apos;1.6.0_65&apos;
-Session ID: 428e4d9be7753e02977c0fd16feeca16
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.bbAuZN}, rotatable=false, locationContextEnabled=true, version=32.0.1700.107, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
-Command duration or timeout: 190.66 seconds
-Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.8.5&apos;, java.version: &apos;1.6.0_65&apos;
-Session ID: c6ec7251-f88e-4fe3-b54f-453ecdbacf53
-Driver info: com.nbcuni.test.webdriver.CustomWebDriver
-Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.bbAuZN}, rotatable=false, locationContextEnabled=true, webdriver.remote.sessionid=c6ec7251-f88e-4fe3-b54f-453ecdbacf53, version=32.0.1700.107, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:191)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:554)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:268)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:79)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:41)
-	at com.sun.proxy.$Proxy12.click(Unknown Source)
-	at com.nbcuni.test.publisher.pageobjects.UserLogin.ClickLoginBtn(UserLogin.java:54)
-	at com.nbcuni.test.publisher.pageobjects.UserLogin.Login(UserLogin.java:62)
-	at com.nbcuni.test.publisher.tests.Queues.SchedulingQueues.ScheduleRevisionsOfQueues.ScheduleRevisionsOfQueues_Test(ScheduleRevisionsOfQueues.java:40)
+<td><div><pre>java.lang.AssertionError: Error text of &apos;Request to retrieve mpx feed data returned a(n) &quot;com.theplatform.authentication.api.exception.AuthenticationException&quot; exception. Description: &apos;token&apos; parameter is missing. -- Response Code: 401 -- Correlation ID: 5341806f-d87e-4a77-adfc-6a0fdcb3d62c&apos; is present in application.
+	at com.nbcuni.test.publisher.pageobjects.ErrorChecking.ErrorChecking.VerifyNoMessageErrorsPresent(ErrorChecking.java:153)
+	at com.nbcuni.test.publisher.pageobjects.Content.ContentParent.VerifyMessageStatus(ContentParent.java:88)
+	at com.nbcuni.test.publisher.tests.Video.DeIngestingMPXAccountsAndCorrespondingAssets.DeleteMultipleAccounts.DeleteMultipleAccounts_Test(DeleteMultipleAccounts.java:73)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
 	at java.lang.Thread.run(Thread.java:695)
-Caused by: org.openqa.selenium.remote.ScreenshotException: Screen shot has been taken
-Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.8.5&apos;, java.version: &apos;1.6.0_65&apos;
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:125)
-	... 24 more
-Caused by: org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 10.000
-  (Session info: chrome=32.0.1700.107)
-  (Driver info: chromedriver=2.8.241036,platform=Mac OS X 10.8.5 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 190.06 seconds
-Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.8.5&apos;, java.version: &apos;1.6.0_65&apos;
-Session ID: 428e4d9be7753e02977c0fd16feeca16
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.bbAuZN}, rotatable=false, locationContextEnabled=true, version=32.0.1700.107, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
-Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.8.5&apos;, java.version: &apos;1.6.0_65&apos;
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:191)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:554)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:268)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:79)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement$1.invoke(EventFiringWebDriver.java:327)
-	at com.sun.proxy.$Proxy13.click(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.click(EventFiringWebDriver.java:340)
-	at org.openqa.selenium.remote.server.KnownElements$1.invoke(KnownElements.java:63)
-	at com.sun.proxy.$Proxy14.click(Unknown Source)
-	at org.openqa.selenium.remote.server.handler.ClickElement.call(ClickElement.java:29)
-	at org.openqa.selenium.remote.server.handler.ClickElement.call(ClickElement.java:22)
-	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:138)
-	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:169)
-	... 3 more
-... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace275482251", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace275482251'><pre>org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 10.000
-  (Session info: chrome=32.0.1700.107)
-  (Driver info: chromedriver=2.8.241036,platform=Mac OS X 10.8.5 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 190.06 seconds
-Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.8.5&apos;, java.version: &apos;1.6.0_65&apos;
-Session ID: 428e4d9be7753e02977c0fd16feeca16
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.bbAuZN}, rotatable=false, locationContextEnabled=true, version=32.0.1700.107, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
-Command duration or timeout: 190.66 seconds
-Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.8.5&apos;, java.version: &apos;1.6.0_65&apos;
-Session ID: c6ec7251-f88e-4fe3-b54f-453ecdbacf53
-Driver info: com.nbcuni.test.webdriver.CustomWebDriver
-Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.bbAuZN}, rotatable=false, locationContextEnabled=true, webdriver.remote.sessionid=c6ec7251-f88e-4fe3-b54f-453ecdbacf53, version=32.0.1700.107, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:191)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:554)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:268)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:79)
-	at sun.reflect.GeneratedMethodAccessor30.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
-	at java.lang.reflect.Method.invoke(Method.java:597)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:41)
-	at com.sun.proxy.$Proxy12.click(Unknown Source)
-	at com.nbcuni.test.publisher.pageobjects.UserLogin.ClickLoginBtn(UserLogin.java:54)
-	at com.nbcuni.test.publisher.pageobjects.UserLogin.Login(UserLogin.java:62)
-	at com.nbcuni.test.publisher.tests.Queues.SchedulingQueues.ScheduleRevisionsOfQueues.ScheduleRevisionsOfQueues_Test(ScheduleRevisionsOfQueues.java:40)
+... Removed 11 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace245178926", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace245178926'><pre>java.lang.AssertionError: Error text of &apos;Request to retrieve mpx feed data returned a(n) &quot;com.theplatform.authentication.api.exception.AuthenticationException&quot; exception. Description: &apos;token&apos; parameter is missing. -- Response Code: 401 -- Correlation ID: 5341806f-d87e-4a77-adfc-6a0fdcb3d62c&apos; is present in application.
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.nbcuni.test.publisher.pageobjects.ErrorChecking.ErrorChecking.VerifyNoMessageErrorsPresent(ErrorChecking.java:153)
+	at com.nbcuni.test.publisher.pageobjects.Content.ContentParent.VerifyMessageStatus(ContentParent.java:88)
+	at com.nbcuni.test.publisher.tests.Video.DeIngestingMPXAccountsAndCorrespondingAssets.DeleteMultipleAccounts.DeleteMultipleAccounts_Test(DeleteMultipleAccounts.java:73)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
@@ -242,53 +169,124 @@ Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browse
 	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
 	at java.lang.Thread.run(Thread.java:695)
-Caused by: org.openqa.selenium.remote.ScreenshotException: Screen shot has been taken
-Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.8.5&apos;, java.version: &apos;1.6.0_65&apos;
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:125)
-	... 24 more
-Caused by: org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 10.000
-  (Session info: chrome=32.0.1700.107)
-  (Driver info: chromedriver=2.8.241036,platform=Mac OS X 10.8.5 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 190.06 seconds
-Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.8.5&apos;, java.version: &apos;1.6.0_65&apos;
-Session ID: 428e4d9be7753e02977c0fd16feeca16
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.bbAuZN}, rotatable=false, locationContextEnabled=true, version=32.0.1700.107, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
-Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.8.5&apos;, java.version: &apos;1.6.0_65&apos;
-Driver info: driver.version: RemoteWebDriver
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:191)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:554)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:268)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:79)
-	at sun.reflect.GeneratedMethodAccessor30.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
-	at java.lang.reflect.Method.invoke(Method.java:597)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement$1.invoke(EventFiringWebDriver.java:327)
-	at com.sun.proxy.$Proxy13.click(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.click(EventFiringWebDriver.java:340)
-	at sun.reflect.GeneratedMethodAccessor30.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
-	at java.lang.reflect.Method.invoke(Method.java:597)
-	at org.openqa.selenium.remote.server.KnownElements$1.invoke(KnownElements.java:63)
-	at com.sun.proxy.$Proxy14.click(Unknown Source)
-	at org.openqa.selenium.remote.server.handler.ClickElement.call(ClickElement.java:29)
-	at org.openqa.selenium.remote.server.handler.ClickElement.call(ClickElement.java:22)
-	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:138)
-	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:169)
-	... 3 more
 </pre></div></td>
-<td>192</td>
-<td>com.nbcuni.test.publisher.tests.Queues.SchedulingQueues.ScheduleRevisionsOfQueues@7455d93d</td></tr>
+<td>50</td>
+<td>com.nbcuni.test.publisher.tests.Video.DeIngestingMPXAccountsAndCorrespondingAssets.DeleteMultipleAccounts@5f49d886</td></tr>
+<tr>
+<td title='com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability.NotificationPlayerUnavailability_Test()'><b>NotificationPlayerUnavailability_Test</b><br>Test class: com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability<br/>
+<a href="#Output-747078278" onClick='toggleBox("Output-747078278", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-747078278" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-747078278">
+Open url 'http://qa5dev.publisher.nbcuni.com'.<br/>
+Enter the user's email address in the 'Email Address' text box.<br/>
+Enter the user's password in the 'Password' text box.<br/>
+Click the 'Login' button.<br/>
+Enter the account name 'DB TV' in the account select text box.<br/>
+Click the account option from the drop down list.<br/>
+Click the 'Account' title to leave focus off of the selection.<br/>
+Wait for account to switch to the newly selected account.<br/>
+Open url 'http://qa5dev.publisher.nbcuni.com'.<br/>
+Verify success message of 'players returned for account' is present.<br/>
+Verify there are no errors present.<br/>
+Enter title AutomationPlayer32f8f88706.<br/>
+Click the 'Apply' button.<br/>
+Get the text of the first search result set item.<br/>
+Enter title Automation.<br/>
+Select the 'Published' from the 'MPX Status' select ddl.<br/>
+Select the DB TV from the 'Source' select ddl.<br/>
+Click the 'Apply' button.<br/>
+Get the text of the first search result set item.<br/>
+Click the first search title link in the search result set.<br/>
+Click the 'Edit' in the work bench.<br/>
+Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140213124556.png <br/>
+<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140213124556.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140213124556.png' height='500' width='500'/> </a><br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: Cannot locate element with text: AutomationPlayer32f8f88706
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.8.5&apos;, java.version: &apos;1.6.0_65&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:147)
+	at com.nbcuni.test.publisher.pageobjects.MPX.EditMPXVideo.SelectPubMPXVideoPlayer(EditMPXVideo.java:128)
+	at com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability.NotificationPlayerUnavailability_Test(NotificationPlayerUnavailability.java:127)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace747078278", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace747078278'><pre>org.openqa.selenium.NoSuchElementException: Cannot locate element with text: AutomationPlayer32f8f88706
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.8.5&apos;, java.version: &apos;1.6.0_65&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:147)
+	at com.nbcuni.test.publisher.pageobjects.MPX.EditMPXVideo.SelectPubMPXVideoPlayer(EditMPXVideo.java:128)
+	at com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability.NotificationPlayerUnavailability_Test(NotificationPlayerUnavailability.java:127)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+</pre></div></td>
+<td>181</td>
+<td>com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability@c2f48d2</td></tr>
+<tr>
+<td title='com.nbcuni.test.publisher.tests.Video.Player.SelectVideoPlayerPerVideoFile.SelectVideoPlayerPerVideoFile_Test()'><b>SelectVideoPlayerPerVideoFile_Test</b><br>Test class: com.nbcuni.test.publisher.tests.Video.Player.SelectVideoPlayerPerVideoFile<br/>
+<a href="#Output-1885534170" onClick='toggleBox("Output-1885534170", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1885534170" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1885534170">
+Open url 'http://qa5dev.publisher.nbcuni.com'.<br/>
+Enter the user's email address in the 'Email Address' text box.<br/>
+Enter the user's password in the 'Password' text box.<br/>
+Click the 'Login' button.<br/>
+Enter title Automation1.<br/>
+Click the 'Apply' button.<br/>
+Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140213124004.png <br/>
+<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140213124004.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140213124004.png' height='500' width='500'/> </a><br/>
+</div>
+</td>
+<td><div><pre>junit.framework.AssertionFailedError
+	at junit.framework.Assert.fail(Assert.java:47)
+	at junit.framework.Assert.assertTrue(Assert.java:20)
+	at junit.framework.Assert.assertTrue(Assert.java:27)
+	at com.nbcuni.test.publisher.pageobjects.MPX.EditMPXVideo.VerifyPubMPXVideoPlayerPresent(EditMPXVideo.java:114)
+	at com.nbcuni.test.publisher.tests.Video.Player.SelectVideoPlayerPerVideoFile.SelectVideoPlayerPerVideoFile_Test(SelectVideoPlayerPerVideoFile.java:79)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1885534170", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1885534170'><pre>junit.framework.AssertionFailedError
+	at junit.framework.Assert.fail(Assert.java:47)
+	at junit.framework.Assert.assertTrue(Assert.java:20)
+	at junit.framework.Assert.assertTrue(Assert.java:27)
+	at com.nbcuni.test.publisher.pageobjects.MPX.EditMPXVideo.VerifyPubMPXVideoPlayerPresent(EditMPXVideo.java:114)
+	at com.nbcuni.test.publisher.tests.Video.Player.SelectVideoPlayerPerVideoFile.SelectVideoPlayerPerVideoFile_Test(SelectVideoPlayerPerVideoFile.java:79)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+</pre></div></td>
+<td>17</td>
+<td>com.nbcuni.test.publisher.tests.Video.Player.SelectVideoPlayerPerVideoFile@3f3f210f</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -298,860 +296,11 @@ Driver info: driver.version: RemoteWebDriver
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CustomContentType.AddingNewCustomContentType.AddingNewCustomContentType_Test()'><b>AddingNewCustomContentType_Test</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CustomContentType.AddingNewCustomContentType<br/>
-<a href="#Output-313779243" onClick='toggleBox("Output-313779243", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-313779243" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-313779243">
-Open url 'http://qa5dev.publisher.nbcuni.com'.<br/>
-Enter the user's email address in the 'Email Address' text box.<br/>
-Enter the user's password in the 'Password' text box.<br/>
-Click the 'Login' button.<br/>
-</div>
-</td>
-<td></td>
-<td>34</td>
-<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CustomContentType.AddingNewCustomContentType@6a340101</td></tr>
-<tr>
-<td title='com.nbcuni.test.publisher.tests.Queues.CreateUpdateRevisionsToQueues.BasicUIForCreatingAndRevisingQueues.BasicUIForCreatingAndRevisingQueues_Test()'><b>BasicUIForCreatingAndRevisingQueues_Test</b><br>Test class: com.nbcuni.test.publisher.tests.Queues.CreateUpdateRevisionsToQueues.BasicUIForCreatingAndRevisingQueues<br/>
-<a href="#Output-156685423" onClick='toggleBox("Output-156685423", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-156685423" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-156685423">
-Open url 'http://qa5dev.publisher.nbcuni.com'.<br/>
-Enter the user's email address in the 'Email Address' text box.<br/>
-Enter the user's password in the 'Password' text box.<br/>
-Click the 'Login' button.<br/>
-verifyObjectContainsText:  Object //div[@class='messages error'] contains the text Title field is required.<br/>
-verifyObjectContainsText:  Object (//td[@class='views-field views-field-history-list'])[1] contains the text Revision was set from Draft to Draft on 02/05/2014<br/>
-</div>
-</td>
-<td></td>
-<td>19</td>
-<td>com.nbcuni.test.publisher.tests.Queues.CreateUpdateRevisionsToQueues.BasicUIForCreatingAndRevisingQueues@10aadc97</td></tr>
-<tr>
-<td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.CastCrewFieldCollectionsVerification_Movie.CastCrewFieldCollectionsVerificationMovie_Test()'><b>CastCrewFieldCollectionsVerificationMovie_Test</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.CastCrewFieldCollectionsVerification_Movie<br/>
-<a href="#Output-165629806" onClick='toggleBox("Output-165629806", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-165629806" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-165629806">
-Open url 'http://qa5dev.publisher.nbcuni.com'.<br/>
-Enter the user's email address in the 'Email Address' text box.<br/>
-Enter the user's password in the 'Password' text box.<br/>
-Click the 'Login' button.<br/>
-Enter 'CharacterFirstName853eadfde9' in the 'Character First Name' text box.<br/>
-Click the Cover Photo 'Select' button.<br/>
-Switch to the select file frame.<br/>
-Enter the file path for file upload.<br/>
-Click the 'Upload' button.<br/>
-Wait for the file link to be visible after upload.<br/>
-Click the 'Next' button.<br/>
-Click the 'Public Local Files' radio button.<br/>
-Click the 'Next' button.<br/>
-Assert the file image 'HanSolo' is present.<br/>
-Assert the the img is loaded and visible.<br/>
-Click the 'Save' button.<br/>
-Assert that img source of the Cover Photo contains 'HanSolo'.<br/>
-Assert the the img is loaded and visible.<br/>
-Enter 'CharacterFirstName04268c5325' in the 'Character First Name' text box.<br/>
-Click the Cover Photo 'Select' button.<br/>
-Switch to the select file frame.<br/>
-Enter the file path for file upload.<br/>
-Click the 'Upload' button.<br/>
-Wait for the file link to be visible after upload.<br/>
-Click the 'Next' button.<br/>
-Click the 'Public Local Files' radio button.<br/>
-Click the 'Next' button.<br/>
-Assert the file image 'HanSolo' is present.<br/>
-Assert the the img is loaded and visible.<br/>
-Click the 'Save' button.<br/>
-Assert that img source of the Cover Photo contains 'HanSolo'.<br/>
-Assert the the img is loaded and visible.<br/>
-Enter 'CharacterFirstName254db46178' in the 'Character First Name' text box.<br/>
-Click the Cover Photo 'Select' button.<br/>
-Switch to the select file frame.<br/>
-Enter the file path for file upload.<br/>
-Click the 'Upload' button.<br/>
-Wait for the file link to be visible after upload.<br/>
-Click the 'Next' button.<br/>
-Click the 'Public Local Files' radio button.<br/>
-Click the 'Next' button.<br/>
-Assert the file image 'HanSolo' is present.<br/>
-Assert the the img is loaded and visible.<br/>
-Click the 'Save' button.<br/>
-Assert that img source of the Cover Photo contains 'HanSolo'.<br/>
-Assert the the img is loaded and visible.<br/>
-Switch to the select file frame.<br/>
-Enter the file path for file upload.<br/>
-Click the 'Upload' button.<br/>
-Wait for the file link to be visible after upload.<br/>
-Click the 'Next' button.<br/>
-Click the 'Public Local Files' radio button.<br/>
-Click the 'Next' button.<br/>
-Assert the file image 'HanSolo' is present.<br/>
-Assert the the img is loaded and visible.<br/>
-Click the 'Save' button.<br/>
-Switch to the select file frame.<br/>
-Enter the file path for file upload.<br/>
-Click the 'Upload' button.<br/>
-Wait for the file link to be visible after upload.<br/>
-Click the 'Next' button.<br/>
-Click the 'Public Local Files' radio button.<br/>
-Click the 'Next' button.<br/>
-Assert the file image 'HanSolo' is present.<br/>
-Assert the the img is loaded and visible.<br/>
-Click the 'Save' button.<br/>
-Switch to the select file frame.<br/>
-Enter the file path for file upload.<br/>
-Click the 'Upload' button.<br/>
-Wait for the file link to be visible after upload.<br/>
-Click the 'Next' button.<br/>
-Click the 'Public Local Files' radio button.<br/>
-Click the 'Next' button.<br/>
-Assert the file image 'HanSolo' is present.<br/>
-Assert the the img is loaded and visible.<br/>
-Click the 'Save' button.<br/>
-Switch to the select file frame.<br/>
-Enter the file path for file upload.<br/>
-Click the 'Upload' button.<br/>
-Wait for the file link to be visible after upload.<br/>
-Click the 'Next' button.<br/>
-Click the 'Public Local Files' radio button.<br/>
-Click the 'Next' button.<br/>
-Assert the file image 'HanSolo' is present.<br/>
-Assert the the img is loaded and visible.<br/>
-Click the 'Save' button.<br/>
-Click the 'Cast/Crew' link.<br/>
-Enter 'PersonFirstNamea57aa6b006' in the Person text box.<br/>
-Click the 'PersonFirstNamea57aa6b006' from the auto complete option list.<br/>
-Select the 'Character' from the 'Role' drop down list.<br/>
-Assert that the 'Character' text box is displayed.<br/>
-Enter 'CharacterFirstName853eadfde9' in the 'Character' text box.<br/>
-Click the 'CharacterFirstName853eadfde9' from the auto complete option list.<br/>
-Click the 'Edit' menu button.<br/>
-Click the 'Cast/Crew' link.<br/>
-Assert the value of the 'Person' text box equals 'PersonFirstNamea57aa6b006'.<br/>
-Assert the value of the 'Character' text box equals 'CharacterFirstName853eadfde9'.<br/>
-Assert the value of the 'Role' drop down list equals 'Character'.<br/>
-Click the 'Add Another Item' button.<br/>
-Enter 'PersonFirstNamec06f5a228c' in the Person text box.<br/>
-Click the 'PersonFirstNamec06f5a228c' from the auto complete option list.<br/>
-Select the 'Character' from the 'Role' drop down list.<br/>
-Assert that the 'Character' text box is displayed.<br/>
-Enter 'CharacterFirstName04268c5325' in the 'Character' text box.<br/>
-Click the 'CharacterFirstName04268c5325' from the auto complete option list.<br/>
-Click the 'Edit' menu button.<br/>
-Click the 'Cast/Crew' link.<br/>
-Assert the value of the 'Person' text box equals 'PersonFirstNamea57aa6b006'.<br/>
-Assert the value of the 'Character' text box equals 'CharacterFirstName853eadfde9'.<br/>
-Assert the value of the 'Role' drop down list equals 'Character'.<br/>
-Assert the value of the 'Person' text box equals 'PersonFirstNamec06f5a228c'.<br/>
-Assert the value of the 'Role' drop down list equals 'Character'.<br/>
-Assert the value of the 'Character' text box equals 'CharacterFirstName04268c5325'.<br/>
-Click the 'Add Another Item' button.<br/>
-Enter 'PersonFirstNamead10003098' in the Person text box.<br/>
-Click the 'PersonFirstNamead10003098' from the auto complete option list.<br/>
-Select the 'Character' from the 'Role' drop down list.<br/>
-Assert that the 'Character' text box is displayed.<br/>
-Enter 'CharacterFirstName254db46178' in the 'Character' text box.<br/>
-Click the 'CharacterFirstName254db46178' from the auto complete option list.<br/>
-Click the 'Edit' extend menu button.<br/>
-Click the 'Delete' button.<br/>
-Click the 'Confirm Delete' button.<br/>
-Click the 'Edit' menu button.<br/>
-Click the 'Cast/Crew' link.<br/>
-Assert the value of the 'Person' text box equals 'PersonFirstNamea57aa6b006'.<br/>
-Assert the value of the 'Character' text box equals 'CharacterFirstName853eadfde9'.<br/>
-Assert the value of the 'Role' drop down list equals 'Character'.<br/>
-Assert the value of the 'Person' text box equals 'PersonFirstNamec06f5a228c'.<br/>
-Assert the value of the 'Role' drop down list equals 'Character'.<br/>
-Assert the value of the 'Character' text box equals 'CharacterFirstName04268c5325'.<br/>
-Assert the value of the 'Person' text box equals 'PersonFirstNamead10003098'.<br/>
-Assert the value of the 'Role' drop down list equals 'Character'.<br/>
-Assert the value of the 'Character' text box equals 'CharacterFirstName254db46178'.<br/>
-</div>
-</td>
-<td></td>
-<td>121</td>
-<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.CastCrewFieldCollectionsVerification_Movie@32dcb03b</td></tr>
-<tr>
-<td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.CastCrewFieldCollectionsVerification_TVEpisode.CastCrewFieldCollectionsVerificationTVEpisode_Test()'><b>CastCrewFieldCollectionsVerificationTVEpisode_Test</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.CastCrewFieldCollectionsVerification_TVEpisode<br/>
-<a href="#Output-1116195531" onClick='toggleBox("Output-1116195531", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1116195531" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1116195531">
-Open url 'http://qa5dev.publisher.nbcuni.com'.<br/>
-Enter the user's email address in the 'Email Address' text box.<br/>
-Enter the user's password in the 'Password' text box.<br/>
-Click the 'Login' button.<br/>
-Enter 'CharacterName0cf5d179b0' in the 'Character First Name' text box.<br/>
-Click the Cover Photo 'Select' button.<br/>
-Switch to the select file frame.<br/>
-Enter the file path for file upload.<br/>
-Click the 'Upload' button.<br/>
-Wait for the file link to be visible after upload.<br/>
-Click the 'Next' button.<br/>
-Click the 'Public Local Files' radio button.<br/>
-Click the 'Next' button.<br/>
-Assert the file image 'HanSolo' is present.<br/>
-Assert the the img is loaded and visible.<br/>
-Click the 'Save' button.<br/>
-Assert that img source of the Cover Photo contains 'HanSolo'.<br/>
-Assert the the img is loaded and visible.<br/>
-Enter 'CharacterNamec0d967d4aa' in the 'Character First Name' text box.<br/>
-Click the Cover Photo 'Select' button.<br/>
-Switch to the select file frame.<br/>
-Enter the file path for file upload.<br/>
-Click the 'Upload' button.<br/>
-Wait for the file link to be visible after upload.<br/>
-Click the 'Next' button.<br/>
-Click the 'Public Local Files' radio button.<br/>
-Click the 'Next' button.<br/>
-Assert the file image 'HanSolo' is present.<br/>
-Assert the the img is loaded and visible.<br/>
-Click the 'Save' button.<br/>
-Assert that img source of the Cover Photo contains 'HanSolo'.<br/>
-Assert the the img is loaded and visible.<br/>
-Enter 'CharacterNamec8d16a35af' in the 'Character First Name' text box.<br/>
-Click the Cover Photo 'Select' button.<br/>
-Switch to the select file frame.<br/>
-Enter the file path for file upload.<br/>
-Click the 'Upload' button.<br/>
-Wait for the file link to be visible after upload.<br/>
-Click the 'Next' button.<br/>
-Click the 'Public Local Files' radio button.<br/>
-Click the 'Next' button.<br/>
-Assert the file image 'HanSolo' is present.<br/>
-Assert the the img is loaded and visible.<br/>
-Click the 'Save' button.<br/>
-Assert that img source of the Cover Photo contains 'HanSolo'.<br/>
-Assert the the img is loaded and visible.<br/>
-Switch to the select file frame.<br/>
-Enter the file path for file upload.<br/>
-Click the 'Upload' button.<br/>
-Wait for the file link to be visible after upload.<br/>
-Click the 'Next' button.<br/>
-Click the 'Public Local Files' radio button.<br/>
-Click the 'Next' button.<br/>
-Assert the file image 'HanSolo' is present.<br/>
-Assert the the img is loaded and visible.<br/>
-Click the 'Save' button.<br/>
-Switch to the select file frame.<br/>
-Enter the file path for file upload.<br/>
-Click the 'Upload' button.<br/>
-Wait for the file link to be visible after upload.<br/>
-Click the 'Next' button.<br/>
-Click the 'Public Local Files' radio button.<br/>
-Click the 'Next' button.<br/>
-Assert the file image 'HanSolo' is present.<br/>
-Assert the the img is loaded and visible.<br/>
-Click the 'Save' button.<br/>
-Switch to the select file frame.<br/>
-Enter the file path for file upload.<br/>
-Click the 'Upload' button.<br/>
-Wait for the file link to be visible after upload.<br/>
-Click the 'Next' button.<br/>
-Click the 'Public Local Files' radio button.<br/>
-Click the 'Next' button.<br/>
-Assert the file image 'HanSolo' is present.<br/>
-Assert the the img is loaded and visible.<br/>
-Click the 'Save' button.<br/>
-Click the 'Cast/Crew' link.<br/>
-Enter 'PersonName030915f0e2' in the Person text box.<br/>
-Click the 'PersonName030915f0e2' from the auto complete option list.<br/>
-Select the 'Character' from the 'Role' drop down list.<br/>
-Assert that the 'Character' text box is displayed.<br/>
-Enter 'CharacterName0cf5d179b0' in the 'Character' text box.<br/>
-Click the 'CharacterName0cf5d179b0' from the auto complete option list.<br/>
-Click the 'Edit' menu button.<br/>
-Click the 'Cast/Crew' link.<br/>
-Assert the value of the 'Person' text box equals 'PersonName030915f0e2'.<br/>
-Assert the value of the 'Character' text box equals 'CharacterName0cf5d179b0'.<br/>
-Assert the value of the 'Role' drop down list equals 'Character'.<br/>
-Click the 'Add Another Item' button.<br/>
-Enter 'PersonName970bf0efb7' in the Person text box.<br/>
-Click the 'PersonName970bf0efb7' from the auto complete option list.<br/>
-Select the 'Character' from the 'Role' drop down list.<br/>
-Assert that the 'Character' text box is displayed.<br/>
-Enter 'CharacterNamec0d967d4aa' in the 'Character' text box.<br/>
-Click the 'CharacterNamec0d967d4aa' from the auto complete option list.<br/>
-Click the 'Edit' menu button.<br/>
-Click the 'Cast/Crew' link.<br/>
-Assert the value of the 'Person' text box equals 'PersonName030915f0e2'.<br/>
-Assert the value of the 'Character' text box equals 'CharacterName0cf5d179b0'.<br/>
-Assert the value of the 'Role' drop down list equals 'Character'.<br/>
-Assert the value of the 'Person' text box equals 'PersonName970bf0efb7'.<br/>
-Assert the value of the 'Role' drop down list equals 'Character'.<br/>
-Assert the value of the 'Character' text box equals 'CharacterNamec0d967d4aa'.<br/>
-Click the 'Add Another Item' button.<br/>
-Enter 'PersonNamecc1c8a756f' in the Person text box.<br/>
-Click the 'PersonNamecc1c8a756f' from the auto complete option list.<br/>
-Select the 'Character' from the 'Role' drop down list.<br/>
-Assert that the 'Character' text box is displayed.<br/>
-Enter 'CharacterNamec8d16a35af' in the 'Character' text box.<br/>
-Click the 'CharacterNamec8d16a35af' from the auto complete option list.<br/>
-Click the 'Edit' extend menu button.<br/>
-Click the 'Delete' button.<br/>
-Click the 'Confirm Delete' button.<br/>
-Click the 'Edit' menu button.<br/>
-Click the 'Cast/Crew' link.<br/>
-Assert the value of the 'Person' text box equals 'PersonName030915f0e2'.<br/>
-Assert the value of the 'Character' text box equals 'CharacterName0cf5d179b0'.<br/>
-Assert the value of the 'Role' drop down list equals 'Character'.<br/>
-Assert the value of the 'Person' text box equals 'PersonName970bf0efb7'.<br/>
-Assert the value of the 'Role' drop down list equals 'Character'.<br/>
-Assert the value of the 'Character' text box equals 'CharacterNamec0d967d4aa'.<br/>
-Assert the value of the 'Person' text box equals 'PersonNamecc1c8a756f'.<br/>
-Assert the value of the 'Role' drop down list equals 'Character'.<br/>
-Assert the value of the 'Character' text box equals 'CharacterNamec8d16a35af'.<br/>
-</div>
-</td>
-<td></td>
-<td>122</td>
-<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.CastCrewFieldCollectionsVerification_TVEpisode@360dc67e</td></tr>
-<tr>
-<td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Movie.CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter.CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter_Test()'><b>CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter_Test</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Movie.CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter<br/>
-<a href="#Output-1319931098" onClick='toggleBox("Output-1319931098", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1319931098" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1319931098">
-Open url 'http://qa5dev.publisher.nbcuni.com'.<br/>
-Enter the user's email address in the 'Email Address' text box.<br/>
-Enter the user's password in the 'Password' text box.<br/>
-Click the 'Login' button.<br/>
-Enter 'e40ef47385994cf' in the 'Character First Name' text box.<br/>
-Click the Cover Photo 'Select' button.<br/>
-Switch to the select file frame.<br/>
-Enter the file path for file upload.<br/>
-Click the 'Upload' button.<br/>
-Wait for the file link to be visible after upload.<br/>
-Click the 'Next' button.<br/>
-Click the 'Public Local Files' radio button.<br/>
-Click the 'Next' button.<br/>
-Assert the file image 'HanSolo' is present.<br/>
-Assert the the img is loaded and visible.<br/>
-Click the 'Save' button.<br/>
-Click the 'Cast/Crew' link.<br/>
-Assert that the 'Character' text box is not displayed.<br/>
-Select the 'Contributor' from the 'Role' drop down list.<br/>
-Assert that the 'Character' text box is not displayed.<br/>
-Select the 'Director' from the 'Role' drop down list.<br/>
-Assert that the 'Character' text box is not displayed.<br/>
-Select the 'Executive Producer' from the 'Role' drop down list.<br/>
-Assert that the 'Character' text box is not displayed.<br/>
-Select the 'Host' from the 'Role' drop down list.<br/>
-Assert that the 'Character' text box is not displayed.<br/>
-Select the 'Judge' from the 'Role' drop down list.<br/>
-Assert that the 'Character' text box is not displayed.<br/>
-Select the 'Producer' from the 'Role' drop down list.<br/>
-Assert that the 'Character' text box is not displayed.<br/>
-Select the 'Self' from the 'Role' drop down list.<br/>
-Assert that the 'Character' text box is not displayed.<br/>
-Select the 'Song Writer' from the 'Role' drop down list.<br/>
-Assert that the 'Character' text box is not displayed.<br/>
-Select the 'Writer' from the 'Role' drop down list.<br/>
-Assert that the 'Character' text box is not displayed.<br/>
-Select the 'Character' from the 'Role' drop down list.<br/>
-Assert that the 'Character' text box is displayed.<br/>
-Switch to the select file frame.<br/>
-Enter the file path for file upload.<br/>
-Click the 'Upload' button.<br/>
-Wait for the file link to be visible after upload.<br/>
-Click the 'Next' button.<br/>
-Click the 'Public Local Files' radio button.<br/>
-Click the 'Next' button.<br/>
-Assert the file image 'HanSolo' is present.<br/>
-Assert the the img is loaded and visible.<br/>
-Click the 'Save' button.<br/>
-Click the 'Cast/Crew' link.<br/>
-Enter 'f2ed6213612649f' in the Person text box.<br/>
-Click the 'f2ed6213612649f' from the auto complete option list.<br/>
-Select the 'Character' from the 'Role' drop down list.<br/>
-Enter 'e40ef47385994cf' in the 'Character' text box.<br/>
-Click the 'e40ef47385994cf' from the auto complete option list.<br/>
-Switch to the select file frame.<br/>
-Enter the file path for file upload.<br/>
-Click the 'Upload' button.<br/>
-Wait for the file link to be visible after upload.<br/>
-Click the 'Next' button.<br/>
-Click the 'Public Local Files' radio button.<br/>
-Click the 'Next' button.<br/>
-Assert the file image 'HanSolo' is present.<br/>
-Assert the the img is loaded and visible.<br/>
-Click the 'Save' button.<br/>
-Click the 'Cast/Crew' link.<br/>
-Assert that the 'Character' text box is displayed.<br/>
-Assert the value of the 'Person' text box equals 'f2ed6213612649f'.<br/>
-Assert the value of the 'Role' drop down list equals 'Character'.<br/>
-Assert the value of the 'Character' text box equals 'e40ef47385994cf'.<br/>
-</div>
-</td>
-<td></td>
-<td>53</td>
-<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Movie.CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter@26858bf1</td></tr>
-<tr>
-<td title='com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.Configuration.Configuration_Test()'><b>Configuration_Test</b><br>Test class: com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.Configuration<br/>
-<a href="#Output-1545409429" onClick='toggleBox("Output-1545409429", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1545409429" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1545409429">
-Open url 'http://qa5dev.publisher.nbcuni.com'.<br/>
-Enter the user's email address in the 'Email Address' text box.<br/>
-Enter the user's password in the 'Password' text box.<br/>
-Click the 'Login' button.<br/>
-Open url 'http://qa5dev.publisher.nbcuni.com'.<br/>
-</div>
-</td>
-<td></td>
-<td>18</td>
-<td>com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.Configuration@4737371</td></tr>
-<tr>
-<td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ProgramGuides.ROVITVSchedule.Configuration.Configuration_Test()'><b>Configuration_Test</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ProgramGuides.ROVITVSchedule.Configuration<br/>
-<a href="#Output-869565327" onClick='toggleBox("Output-869565327", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-869565327" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-869565327">
-Open url 'http://qa5dev.publisher.nbcuni.com'.<br/>
-Enter the user's email address in the 'Email Address' text box.<br/>
-Enter the user's password in the 'Password' text box.<br/>
-Click the 'Login' button.<br/>
-Select the block name 'Program Guide' from the 'Content' drop down list.<br/>
-Click the 'Save Blocks' button.<br/>
-Assert that the selected block 'Program Guide' contains the 'Content' text.<br/>
-Enter 'http://feed.entertainment.tv.theplatform.com/f/dCK2IC/stage_usa_listing?range=1-*&form=json' in the 'Data URL' text box.<br/>
-Click the 'Save Configuration' button.<br/>
-</div>
-</td>
-<td></td>
-<td>37</td>
-<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ProgramGuides.ROVITVSchedule.Configuration@527736bd</td></tr>
-<tr>
-<td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile.CreateCharacterProfile_Test()'><b>CreateCharacterProfile_Test</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile<br/>
-<a href="#Output-1037936399" onClick='toggleBox("Output-1037936399", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1037936399" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1037936399">
-Open url 'http://qa5dev.publisher.nbcuni.com'.<br/>
-Enter the user's email address in the 'Email Address' text box.<br/>
-Enter the user's password in the 'Password' text box.<br/>
-Click the 'Login' button.<br/>
-Enter '4d88ea13e48c48f' in the 'Character First Name' text box.<br/>
-Click the Cover Photo 'Select' button.<br/>
-Switch to the select file frame.<br/>
-Enter the file path for file upload.<br/>
-Click the 'Upload' button.<br/>
-Wait for the file link to be visible after upload.<br/>
-Click the 'Next' button.<br/>
-Click the 'Public Local Files' radio button.<br/>
-Click the 'Next' button.<br/>
-Assert the file image 'HanSolo' is present.<br/>
-Assert the the img is loaded and visible.<br/>
-Click the 'Save' button.<br/>
-Assert that img source of the Cover Photo contains 'HanSolo'.<br/>
-Assert the the img is loaded and visible.<br/>
-</div>
-</td>
-<td></td>
-<td>15</td>
-<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@2b8bbc5a</td></tr>
-<tr>
-<td title='com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.CreateConfigureAndValidatePermissionsEditor.CreateConfigureAndValidatePermissionsEditor_Test()'><b>CreateConfigureAndValidatePermissionsEditor_Test</b><br>Test class: com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.CreateConfigureAndValidatePermissionsEditor<br/>
-<a href="#Output-632537781" onClick='toggleBox("Output-632537781", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-632537781" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-632537781">
-Open url 'http://qa5dev.publisher.nbcuni.com'.<br/>
-Enter the user's email address in the 'Email Address' text box.<br/>
-Enter the user's password in the 'Password' text box.<br/>
-Click the 'Login' button.<br/>
-Click the 'Logout' button.<br/>
-Enter the user's email address in the 'Email Address' text box.<br/>
-Enter the user's password in the 'Password' text box.<br/>
-Click the 'Login' button.<br/>
-Switch to the select file frame.<br/>
-Enter the file path for file upload.<br/>
-Click the 'Upload' button.<br/>
-Wait for the file link to be visible after upload.<br/>
-Click the 'Next' button.<br/>
-Click the 'Public Local Files' radio button.<br/>
-Click the 'Next' button.<br/>
-Assert the file image 'HanSolo' is present.<br/>
-Assert the the img is loaded and visible.<br/>
-Click the 'Save' button.<br/>
-Click the 'Logout' button.<br/>
-Enter the user's email address in the 'Email Address' text box.<br/>
-Enter the user's password in the 'Password' text box.<br/>
-Click the 'Login' button.<br/>
-Switch to the select file frame.<br/>
-Enter the file path for file upload.<br/>
-Click the 'Upload' button.<br/>
-Wait for the file link to be visible after upload.<br/>
-Click the 'Next' button.<br/>
-Click the 'Public Local Files' radio button.<br/>
-Click the 'Next' button.<br/>
-Assert the file image 'HanSolo' is present.<br/>
-Assert the the img is loaded and visible.<br/>
-Click the 'Save' button.<br/>
-Click the 'Logout' button.<br/>
-Enter the user's email address in the 'Email Address' text box.<br/>
-Enter the user's password in the 'Password' text box.<br/>
-Click the 'Login' button.<br/>
-Wait for the content item titled '68e71e6471f4473' to be present in revision list.<br/>
-Click the 'Edit' extend menu button.<br/>
-Verify Edit menu 'Edit' button is present.<br/>
-Verify Edit menu 'Delete' buttton is present.<br/>
-Click the 'Edit' extend menu button.<br/>
-Click the 'Edit' menu button.<br/>
-</div>
-</td>
-<td></td>
-<td>96</td>
-<td>com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.CreateConfigureAndValidatePermissionsEditor@5ecd2e33</td></tr>
-<tr>
-<td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery.CreateMediaGallery_Test()'><b>CreateMediaGallery_Test</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery<br/>
-<a href="#Output-1815766117" onClick='toggleBox("Output-1815766117", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1815766117" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1815766117">
-Open url 'http://qa5dev.publisher.nbcuni.com'.<br/>
-Enter the user's email address in the 'Email Address' text box.<br/>
-Enter the user's password in the 'Password' text box.<br/>
-Click the 'Login' button.<br/>
-Switch to the select file frame.<br/>
-Enter the file path for file upload.<br/>
-Click the 'Upload' button.<br/>
-Wait for the file link to be visible after upload.<br/>
-Click the 'Next' button.<br/>
-Click the 'Public Local Files' radio button.<br/>
-Click the 'Next' button.<br/>
-Assert the file image 'HanSolo' is present.<br/>
-Assert the the img is loaded and visible.<br/>
-Click the 'Save' button.<br/>
-</div>
-</td>
-<td></td>
-<td>15</td>
-<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery@3bc0f2e5</td></tr>
-<tr>
-<td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson.CreatePerson_Test()'><b>CreatePerson_Test</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson<br/>
-<a href="#Output-408031140" onClick='toggleBox("Output-408031140", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-408031140" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-408031140">
-Open url 'http://qa5dev.publisher.nbcuni.com'.<br/>
-Enter the user's email address in the 'Email Address' text box.<br/>
-Enter the user's password in the 'Password' text box.<br/>
-Click the 'Login' button.<br/>
-Switch to the select file frame.<br/>
-Enter the file path for file upload.<br/>
-Click the 'Upload' button.<br/>
-Wait for the file link to be visible after upload.<br/>
-Click the 'Next' button.<br/>
-Click the 'Public Local Files' radio button.<br/>
-Click the 'Next' button.<br/>
-Assert the file image 'HanSolo' is present.<br/>
-Assert the the img is loaded and visible.<br/>
-Click the 'Save' button.<br/>
-</div>
-</td>
-<td></td>
-<td>18</td>
-<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson@2927fa12</td></tr>
-<tr>
-<td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost.CreatePost_Test()'><b>CreatePost_Test</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost<br/>
-<a href="#Output-1669420564" onClick='toggleBox("Output-1669420564", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1669420564" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1669420564">
-Open url 'http://qa5dev.publisher.nbcuni.com'.<br/>
-Enter the user's email address in the 'Email Address' text box.<br/>
-Enter the user's password in the 'Password' text box.<br/>
-Click the 'Login' button.<br/>
-Switch to the select file frame.<br/>
-Enter the file path for file upload.<br/>
-Click the 'Upload' button.<br/>
-Wait for the file link to be visible after upload.<br/>
-Click the 'Next' button.<br/>
-Click the 'Public Local Files' radio button.<br/>
-Click the 'Next' button.<br/>
-Assert the file image 'HanSolo' is present.<br/>
-Assert the the img is loaded and visible.<br/>
-Click the 'Save' button.<br/>
-Switch to the select file frame.<br/>
-Enter the file path for file upload.<br/>
-Click the 'Upload' button.<br/>
-Wait for the file link to be visible after upload.<br/>
-Click the 'Next' button.<br/>
-Click the 'Public Local Files' radio button.<br/>
-Click the 'Next' button.<br/>
-Assert the file image 'HanSolo' is present.<br/>
-Assert the the img is loaded and visible.<br/>
-Click the 'Save' button.<br/>
-Switch to the select file frame.<br/>
-Enter the file path for file upload.<br/>
-Click the 'Upload' button.<br/>
-Wait for the file link to be visible after upload.<br/>
-Click the 'Next' button.<br/>
-Click the 'Public Local Files' radio button.<br/>
-Click the 'Next' button.<br/>
-Assert the file image 'HanSolo' is present.<br/>
-Assert the the img is loaded and visible.<br/>
-Click the 'Save' button.<br/>
-</div>
-</td>
-<td></td>
-<td>51</td>
-<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost@4b00ebec</td></tr>
-<tr>
-<td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVEpisode.CreateTVEpisode.CreateTVEpisode_Test()'><b>CreateTVEpisode_Test</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVEpisode.CreateTVEpisode<br/>
-<a href="#Output-478652261" onClick='toggleBox("Output-478652261", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-478652261" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-478652261">
-Open url 'http://qa5dev.publisher.nbcuni.com'.<br/>
-Enter the user's email address in the 'Email Address' text box.<br/>
-Enter the user's password in the 'Password' text box.<br/>
-Click the 'Login' button.<br/>
-Switch to the select file frame.<br/>
-Enter the file path for file upload.<br/>
-Click the 'Upload' button.<br/>
-Wait for the file link to be visible after upload.<br/>
-Click the 'Next' button.<br/>
-Click the 'Public Local Files' radio button.<br/>
-Click the 'Next' button.<br/>
-Assert the file image 'HanSolo' is present.<br/>
-Assert the the img is loaded and visible.<br/>
-Click the 'Save' button.<br/>
-Switch to the select file frame.<br/>
-Enter the file path for file upload.<br/>
-Click the 'Upload' button.<br/>
-Wait for the file link to be visible after upload.<br/>
-Click the 'Next' button.<br/>
-Click the 'Public Local Files' radio button.<br/>
-Click the 'Next' button.<br/>
-Assert the file image 'HanSolo' is present.<br/>
-Assert the the img is loaded and visible.<br/>
-Click the 'Save' button.<br/>
-Click the 'Cast/Crew' link.<br/>
-Enter 'e9885b67c3c24b8' in the Person text box.<br/>
-Click the 'e9885b67c3c24b8' from the auto complete option list.<br/>
-Select the 'Contributor' from the 'Role' drop down list.<br/>
-Switch to the select file frame.<br/>
-Enter the file path for file upload.<br/>
-Click the 'Upload' button.<br/>
-Wait for the file link to be visible after upload.<br/>
-Click the 'Next' button.<br/>
-Click the 'Public Local Files' radio button.<br/>
-Click the 'Next' button.<br/>
-Assert the file image 'HanSolo' is present.<br/>
-Assert the the img is loaded and visible.<br/>
-Click the 'Save' button.<br/>
-Switch to the select file frame.<br/>
-Enter the file path for file upload.<br/>
-Click the 'Upload' button.<br/>
-Wait for the file link to be visible after upload.<br/>
-Click the 'Next' button.<br/>
-Click the 'Public Local Files' radio button.<br/>
-Click the 'Next' button.<br/>
-Assert the file image 'HanSolo' is present.<br/>
-Assert the the img is loaded and visible.<br/>
-Click the 'Save' button.<br/>
-Click the 'Cast/Crew' link.<br/>
-Enter '14a06adb59f64a7' in the Person text box.<br/>
-Click the '14a06adb59f64a7' from the auto complete option list.<br/>
-Select the 'Contributor' from the 'Role' drop down list.<br/>
-Switch to the select file frame.<br/>
-Enter the file path for file upload.<br/>
-Click the 'Upload' button.<br/>
-Wait for the file link to be visible after upload.<br/>
-Click the 'Next' button.<br/>
-Click the 'Public Local Files' radio button.<br/>
-Click the 'Next' button.<br/>
-Assert the file image 'HanSolo' is present.<br/>
-Assert the the img is loaded and visible.<br/>
-Click the 'Save' button.<br/>
-Switch to the select file frame.<br/>
-Enter the file path for file upload.<br/>
-Click the 'Upload' button.<br/>
-Wait for the file link to be visible after upload.<br/>
-Click the 'Next' button.<br/>
-Click the 'Public Local Files' radio button.<br/>
-Click the 'Next' button.<br/>
-Assert the file image 'HanSolo' is present.<br/>
-Assert the the img is loaded and visible.<br/>
-Click the 'Save' button.<br/>
-Click the 'Cast/Crew' link.<br/>
-Enter '0c0fa807d3bc40f' in the Person text box.<br/>
-Click the '0c0fa807d3bc40f' from the auto complete option list.<br/>
-Select the 'Contributor' from the 'Role' drop down list.<br/>
-</div>
-</td>
-<td></td>
-<td>80</td>
-<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVEpisode.CreateTVEpisode@36b60b93</td></tr>
-<tr>
-<td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVSeason.CreateTVSeason.CreateTVSeason_Test()'><b>CreateTVSeason_Test</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVSeason.CreateTVSeason<br/>
-<a href="#Output-1695426649" onClick='toggleBox("Output-1695426649", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1695426649" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1695426649">
-Open url 'http://qa5dev.publisher.nbcuni.com'.<br/>
-Enter the user's email address in the 'Email Address' text box.<br/>
-Enter the user's password in the 'Password' text box.<br/>
-Click the 'Login' button.<br/>
-Switch to the select file frame.<br/>
-Enter the file path for file upload.<br/>
-Click the 'Upload' button.<br/>
-Wait for the file link to be visible after upload.<br/>
-Click the 'Next' button.<br/>
-Click the 'Public Local Files' radio button.<br/>
-Click the 'Next' button.<br/>
-Assert the file image 'HanSolo' is present.<br/>
-Assert the the img is loaded and visible.<br/>
-Click the 'Save' button.<br/>
-Switch to the select file frame.<br/>
-Enter the file path for file upload.<br/>
-Click the 'Upload' button.<br/>
-Wait for the file link to be visible after upload.<br/>
-Click the 'Next' button.<br/>
-Click the 'Public Local Files' radio button.<br/>
-Click the 'Next' button.<br/>
-Assert the file image 'HanSolo' is present.<br/>
-Assert the the img is loaded and visible.<br/>
-Click the 'Save' button.<br/>
-Switch to the select file frame.<br/>
-Enter the file path for file upload.<br/>
-Click the 'Upload' button.<br/>
-Wait for the file link to be visible after upload.<br/>
-Click the 'Next' button.<br/>
-Click the 'Public Local Files' radio button.<br/>
-Click the 'Next' button.<br/>
-Assert the file image 'HanSolo' is present.<br/>
-Assert the the img is loaded and visible.<br/>
-Click the 'Save' button.<br/>
-</div>
-</td>
-<td></td>
-<td>40</td>
-<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVSeason.CreateTVSeason@177f409c</td></tr>
-<tr>
-<td title='com.nbcuni.test.publisher.tests.Video.DeIngestingMPXAccountsAndCorrespondingAssets.DeleteMultipleAccounts.DeleteMultipleAccounts_Test()'><b>DeleteMultipleAccounts_Test</b><br>Test class: com.nbcuni.test.publisher.tests.Video.DeIngestingMPXAccountsAndCorrespondingAssets.DeleteMultipleAccounts</td>
-<td></td>
-<td>0</td>
-<td>com.nbcuni.test.publisher.tests.Video.DeIngestingMPXAccountsAndCorrespondingAssets.DeleteMultipleAccounts@69267649</td></tr>
-<tr>
-<td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIFKeywordsIngestedAsPhraseInsteadSetsWords.EXIFKeywordsIngestedPhraseInsteadSetsWords.EXIFKeywordsIngestedPhraseInsteadSetsWords_Test()'><b>EXIFKeywordsIngestedPhraseInsteadSetsWords_Test</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIFKeywordsIngestedAsPhraseInsteadSetsWords.EXIFKeywordsIngestedPhraseInsteadSetsWords<br/>
-<a href="#Output-1615671416" onClick='toggleBox("Output-1615671416", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1615671416" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1615671416">
-Open url 'http://qa5dev.publisher.nbcuni.com'.<br/>
-Enter the user's email address in the 'Email Address' text box.<br/>
-Enter the user's password in the 'Password' text box.<br/>
-Click the 'Login' button.<br/>
-Select the 'Aperture' from the 'Alt Text' drop down list.<br/>
-Select the 'Title' from the 'Title Text' drop down list.<br/>
-Select the 'Caption' from the 'Caption' drop down list.<br/>
-Select the 'Copyright' from the 'Copyright' drop down list.<br/>
-Select the 'Credit' from the 'Credit' drop down list.<br/>
-Select the 'Keywords' from the 'Keywords' drop down list.<br/>
-Select the 'none' from the 'Media categories' drop down list.<br/>
-Select the 'Title' from the 'Media Tags' drop down list.<br/>
-Select the 'Source' from the 'Source' drop down list.<br/>
-Click the 'Save' button.<br/>
-Click the 'Add files' link.<br/>
-Click the 'All Files' icon.<br/>
-Click the local 'Pictures' icon.<br/>
-Click the test picture link.<br/>
-Click the 'Open' button.<br/>
-Click the 'Start upload' link.<br/>
-Wait for file upload to reach 100%<br/>
-Click the 'Next' button.<br/>
-Assert that the Title Text box value matches 'NUP_155306_0046.JPG'.<br/>
-Assert that the Alt Text box value matches 'f/5.6'.<br/>
-Assert that the Source box value matches 'Episodic'.<br/>
-Assert that the Credit Text box value matches 'Brownie Harris/NBC'.<br/>
-Assert that the Copyright Text box value matches '2013 NBCUniversal Media, LLC'.<br/>
-Assert that the Keywords Text box value matches 'NUP_155306, Revolution, Episode 118, Season 1'.<br/>
-Click the 'Save' button.<br/>
-Click the 'Media Items Select' button.<br/>
-Switch to the select file frame.<br/>
-Click the 'Add files' link.<br/>
-Click the 'All Files' icon.<br/>
-Click the local 'Pictures' icon.<br/>
-Click the test picture link.<br/>
-Click the 'Open' button.<br/>
-Click the 'Start upload' link.<br/>
-Wait for file upload to reach 100%<br/>
-Click the 'Next' button.<br/>
-Assert that img source of the Media Item contains 'NUP_155306_0046'.<br/>
-Assert the the img is loaded and visible.<br/>
-Click the 'Edit' button.<br/>
-Assert that the Title Text box value matches 'NUP_155306_0046.JPG'.<br/>
-Assert that the Alt Text box value matches 'f/5.6'.<br/>
-Assert that the Source box value matches 'Episodic'.<br/>
-Assert that the Credit Text box value matches 'Brownie Harris/NBC'.<br/>
-Assert that the Copyright Text box value matches '2013 NBCUniversal Media, LLC'.<br/>
-Assert that the Keywords Text box value matches 'NUP_155306, Revolution, Episode 118, Season 1'.<br/>
-Click the 'Close Window' image.<br/>
-Switch to the select file frame.<br/>
-Enter the file path for file upload.<br/>
-Click the 'Upload' button.<br/>
-Wait for the file link to be visible after upload.<br/>
-Click the 'Next' button.<br/>
-Click the 'Public Local Files' radio button.<br/>
-Click the 'Next' button.<br/>
-Assert that the Title Text box value matches 'NUP_155306_0046.JPG'.<br/>
-Assert that the Alt Text box value matches 'f/5.6'.<br/>
-Assert that the Source box value matches 'Episodic'.<br/>
-Assert that the Credit Text box value matches 'Brownie Harris/NBC'.<br/>
-Assert that the Copyright Text box value matches '2013 NBCUniversal Media, LLC'.<br/>
-Assert that the Keywords Text box value matches 'NUP_155306, Revolution, Episode 118, Season 1'.<br/>
-Assert the file image 'NUP_155306_0046' is present.<br/>
-Assert the the img is loaded and visible.<br/>
-Click the 'Save' button.<br/>
-</div>
-</td>
-<td></td>
-<td>76</td>
-<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIFKeywordsIngestedAsPhraseInsteadSetsWords.EXIFKeywordsIngestedPhraseInsteadSetsWords@68814013</td></tr>
-<tr>
-<td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.EnhanceContentLibraryTable.EnhanceContentLibraryTable.EnhanceContentLibraryTable_Test()'><b>EnhanceContentLibraryTable_Test</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.EnhanceContentLibraryTable.EnhanceContentLibraryTable<br/>
-<a href="#Output-1011923020" onClick='toggleBox("Output-1011923020", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1011923020" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1011923020">
-Open url 'http://qa5dev.publisher.nbcuni.com'.<br/>
-Enter the user's email address in the 'Email Address' text box.<br/>
-Enter the user's password in the 'Password' text box.<br/>
-Click the 'Login' button.<br/>
-Verify that the search result set column order matches as expected.<br/>
-Get the text of the first search result set item.<br/>
-Get the number of results in the result set.<br/>
-Click the Title column header link for column sorting.<br/>
-Get the number of results in the result set.<br/>
-Click the Type column header link for column sorting.<br/>
-Get the number of results in the result set.<br/>
-Click the Size column header link for column sorting.<br/>
-Get the number of results in the result set.<br/>
-Click the Uploaded By column header link for column sorting.<br/>
-Get the number of results in the result set.<br/>
-Click the Upload date column header link for column sorting.<br/>
-Get the number of results in the result set.<br/>
-Click the Upload date column header link for column sorting.<br/>
-Get the text of the first search result set item.<br/>
-Get the number of results in the result set.<br/>
-</div>
-</td>
-<td></td>
-<td>56</td>
-<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.EnhanceContentLibraryTable.EnhanceContentLibraryTable@37a001ff</td></tr>
-<tr>
 <td title='com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen_Test()'><b>EnhanceMPXPlayerContentAdminScreen_Test</b><br>Test class: com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen<br/>
-<a href="#Output-1638787062" onClick='toggleBox("Output-1638787062", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-548153399" onClick='toggleBox("Output-548153399", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1638787062" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1638787062">
+<a href="#Output-548153399" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-548153399">
 Open url 'http://qa5dev.publisher.nbcuni.com'.<br/>
 Enter the user's email address in the 'Email Address' text box.<br/>
 Enter the user's password in the 'Password' text box.<br/>
@@ -1175,13 +324,13 @@ Click the 'Apply' button.<br/>
 Get all the MPX result set 'Source' items.<br/>
 Assert that every source item in the result set equals 'DB TV'.<br/>
 Click the 'Reset' button.<br/>
-Select the 'Published' from the 'MPX Player Status' select ddl.<br/>
+Select the 'Published' from the 'MPX Status' select ddl.<br/>
 Click the 'Apply' button.<br/>
 Get all the MPX result set 'Status' items.<br/>
 Assert that result set size for Published items is greater than 0.<br/>
 Assert that every status item in the result set equals 'Published'.<br/>
 Click the 'Reset' button.<br/>
-Select the 'Unpublished' from the 'MPX Player Status' select ddl.<br/>
+Select the 'Unpublished' from the 'MPX Status' select ddl.<br/>
 Click the 'Apply' button.<br/>
 Get all the MPX result set 'Status' items.<br/>
 Assert that every status item in the result set equals 'Unpublished'.<br/>
@@ -1191,110 +340,14 @@ Get the number of results in the result set.<br/>
 </div>
 </td>
 <td></td>
-<td>32</td>
-<td>com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen@9a68ef9</td></tr>
-<tr>
-<td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.EnhanceOperationsDropdownonScheduleTab.EnhanceOperationsDropdownonScheduleTab_Test()'><b>EnhanceOperationsDropdownonScheduleTab_Test</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.EnhanceOperationsDropdownonScheduleTab<br/>
-<a href="#Output-375417014" onClick='toggleBox("Output-375417014", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-375417014" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-375417014">
-Open url 'http://qa5dev.publisher.nbcuni.com'.<br/>
-Enter the user's email address in the 'Email Address' text box.<br/>
-Enter the user's password in the 'Password' text box.<br/>
-Click the 'Login' button.<br/>
-Switch to the select file frame.<br/>
-Enter the file path for file upload.<br/>
-Click the 'Upload' button.<br/>
-Wait for the file link to be visible after upload.<br/>
-Click the 'Next' button.<br/>
-Click the 'Public Local Files' radio button.<br/>
-Click the 'Next' button.<br/>
-Assert the file image 'HanSolo' is present.<br/>
-Assert the the img is loaded and visible.<br/>
-Click the 'Save' button.<br/>
-</div>
-</td>
-<td></td>
 <td>31</td>
-<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.EnhanceOperationsDropdownonScheduleTab@7f712b3a</td></tr>
-<tr>
-<td title='com.nbcuni.test.publisher.tests.Security.FileViewDeniedToUnauthenticatedUsers.FileViewDeniedToUnauthenticatedUsers_Test()'><b>FileViewDeniedToUnauthenticatedUsers_Test</b><br>Test class: com.nbcuni.test.publisher.tests.Security.FileViewDeniedToUnauthenticatedUsers<br/>
-<a href="#Output-1810887748" onClick='toggleBox("Output-1810887748", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1810887748" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1810887748">
-Open url 'http://qa5dev.publisher.nbcuni.com'.<br/>
-verifyObjectContainsText:  Object //body contains the text You are not authorized to access this page.<br/>
-Enter the user's email address in the 'Email Address' text box.<br/>
-Enter the user's password in the 'Password' text box.<br/>
-Click the 'Login' button.<br/>
-</div>
-</td>
-<td></td>
-<td>5</td>
-<td>com.nbcuni.test.publisher.tests.Security.FileViewDeniedToUnauthenticatedUsers@4090c06f</td></tr>
-<tr>
-<td title='com.nbcuni.test.publisher.tests.Advertising.GooglePublisherTagsGPT.GPTConfiguration.GPTConfiguration_Test()'><b>GPTConfiguration_Test</b><br>Test class: com.nbcuni.test.publisher.tests.Advertising.GooglePublisherTagsGPT.GPTConfiguration<br/>
-<a href="#Output-600795369" onClick='toggleBox("Output-600795369", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-600795369" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-600795369">
-Open url 'http://qa5dev.publisher.nbcuni.com'.<br/>
-Enter the user's email address in the 'Email Address' text box.<br/>
-Enter the user's password in the 'Password' text box.<br/>
-Click the 'Login' button.<br/>
-verifyObjectContainsText:  Object //div[@class='messages status'] contains the text The configuration options have been saved.<br/>
-verifyObjectContainsText:  Object //div[@class='messages status'] contains the text The configuration options have been saved.<br/>
-</div>
-</td>
-<td></td>
-<td>38</td>
-<td>com.nbcuni.test.publisher.tests.Advertising.GooglePublisherTagsGPT.GPTConfiguration@62facf0b</td></tr>
-<tr>
-<td title='com.nbcuni.test.publisher.tests.Advertising.GooglePublisherTagsGPT.GPTTagsVerification.GPTTagsVerification_Test()'><b>GPTTagsVerification_Test</b><br>Test class: com.nbcuni.test.publisher.tests.Advertising.GooglePublisherTagsGPT.GPTTagsVerification<br/>
-<a href="#Output-1424053985" onClick='toggleBox("Output-1424053985", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1424053985" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1424053985">
-Open url 'http://qa5dev.publisher.nbcuni.com'.<br/>
-Enter the user's email address in the 'Email Address' text box.<br/>
-Enter the user's password in the 'Password' text box.<br/>
-Click the 'Login' button.<br/>
-verifyObjectContainsText:  Object //div[@class='messages status'] contains the text 512716bde42c45c has been created.<br/>
-Select the block name 'DFP tag: 512716bde42c45c' from the 'Sidebar first' drop down list.<br/>
-Click the 'Save Blocks' button.<br/>
-Assert that the selected block '512716bde42c45c' contains the 'Sidebar first' text.<br/>
-Assert the page source contains the 'http://www.googletagservices.com/tag/js/gpt.js'.<br/>
-Assert the home page block '512716bde42c45c' is present.<br/>
-</div>
-</td>
-<td></td>
-<td>26</td>
-<td>com.nbcuni.test.publisher.tests.Advertising.GooglePublisherTagsGPT.GPTTagsVerification@37fd6bea</td></tr>
-<tr>
-<td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.InstallZeeboxModule.InstallZeeboxModule.InstallZeeboxModule_Test()'><b>InstallZeeboxModule_Test</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.InstallZeeboxModule.InstallZeeboxModule<br/>
-<a href="#Output-445567561" onClick='toggleBox("Output-445567561", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-445567561" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-445567561">
-Open url 'http://qa5dev.publisher.nbcuni.com'.<br/>
-Enter the user's email address in the 'Email Address' text box.<br/>
-Enter the user's password in the 'Password' text box.<br/>
-Click the 'Login' button.<br/>
-verifyObjectContainsText:  Object //div[@class='messages status'] contains the text The configuration options have been saved.<br/>
-verifyObjectContainsText:  Object //div[@class='messages status'] contains the text The configuration options have been saved.<br/>
-</div>
-</td>
-<td></td>
-<td>73</td>
-<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.InstallZeeboxModule.InstallZeeboxModule@5c1fe88d</td></tr>
+<td>com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen@24148662</td></tr>
 <tr>
 <td title='com.nbcuni.test.publisher.tests.Video.CanonicalURLSupport.MPXCanonicalURLImportableURLAlias.MPXCanonicalURLImportableURLAlias_Test()'><b>MPXCanonicalURLImportableURLAlias_Test</b><br>Test class: com.nbcuni.test.publisher.tests.Video.CanonicalURLSupport.MPXCanonicalURLImportableURLAlias<br/>
-<a href="#Output-1962031827" onClick='toggleBox("Output-1962031827", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-115342900" onClick='toggleBox("Output-115342900", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1962031827" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1962031827">
+<a href="#Output-115342900" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-115342900">
 Open url 'http://qa5dev.publisher.nbcuni.com'.<br/>
 Enter the user's email address in the 'Email Address' text box.<br/>
 Enter the user's password in the 'Password' text box.<br/>
@@ -1303,31 +356,43 @@ Click the 'DB TV manage fields' link.<br/>
 Click the 'DB TV edit file type' link.<br/>
 Select 'MPX Media Related Link' from the 'URL Alias Field' drop down list.<br/>
 Click the 'Save' button.<br/>
+Verify success message of 'has been updated.' is present.<br/>
+Verify there are no errors present.<br/>
 Enter the account name 'DB TV' in the account select text box.<br/>
 Click the account option from the drop down list.<br/>
 Click the 'Account' title to leave focus off of the selection.<br/>
 Wait for account to switch to the newly selected account.<br/>
 Open url 'http://qa5dev.publisher.nbcuni.com'.<br/>
-Enter title Automationfa62da0641.<br/>
+Verify success message of 'Cron ran successfully.' is present.<br/>
+Verify there are no errors present.<br/>
+Verify success message of 'Every cache cleared.' is present.<br/>
+Verify there are no errors present.<br/>
+Enter title Automation82777eadac.<br/>
 Click the 'Apply' button.<br/>
 Get the text of the first search result set item.<br/>
 Click the first search title link in the search result set.<br/>
+Verify the text 'MPX Media Related Link:' is present on the page.<br/>
+Verify the text 'canonicalurlb935ae8f77' is present on the page.<br/>
 </div>
 </td>
 <td></td>
-<td>188</td>
-<td>com.nbcuni.test.publisher.tests.Video.CanonicalURLSupport.MPXCanonicalURLImportableURLAlias@426295eb</td></tr>
+<td>162</td>
+<td>com.nbcuni.test.publisher.tests.Video.CanonicalURLSupport.MPXCanonicalURLImportableURLAlias@5c1fe88d</td></tr>
 <tr>
 <td title='com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MPXMediaSyncVerification.MPXMediaSyncVerification_Test()'><b>MPXMediaSyncVerification_Test</b><br>Test class: com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MPXMediaSyncVerification<br/>
-<a href="#Output-757092418" onClick='toggleBox("Output-757092418", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-814700868" onClick='toggleBox("Output-814700868", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-757092418" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-757092418">
+<a href="#Output-814700868" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-814700868">
 Open url 'http://qa5dev.publisher.nbcuni.com'.<br/>
 Enter the user's email address in the 'Email Address' text box.<br/>
 Enter the user's password in the 'Password' text box.<br/>
 Click the 'Login' button.<br/>
 Open url 'http://qa5dev.publisher.nbcuni.com'.<br/>
+Verify success message of 'Processed video import/update manually for all accounts.' is present.<br/>
+Verify there are no errors present.<br/>
+Verify success message of 'Cron run successfully.' is present.<br/>
+Verify there are no errors present.<br/>
 Enter title Automation1.<br/>
 Click the 'Apply' button.<br/>
 Get the title text of every result in the search result set.<br/>
@@ -1335,30 +400,34 @@ For each expected result, assert it is present in the result set.<br/>
 </div>
 </td>
 <td></td>
-<td>146</td>
-<td>com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MPXMediaSyncVerification@555c07d8</td></tr>
+<td>91</td>
+<td>com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MPXMediaSyncVerification@69267649</td></tr>
 <tr>
 <td title='com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MPXPlayersSyncVerification.MPXPlayersSyncVerification_Test()'><b>MPXPlayersSyncVerification_Test</b><br>Test class: com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MPXPlayersSyncVerification<br/>
-<a href="#Output-1663569029" onClick='toggleBox("Output-1663569029", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1304869843" onClick='toggleBox("Output-1304869843", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1663569029" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1663569029">
+<a href="#Output-1304869843" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1304869843">
 Open url 'http://qa5dev.publisher.nbcuni.com'.<br/>
 Enter the user's email address in the 'Email Address' text box.<br/>
 Enter the user's password in the 'Password' text box.<br/>
 Click the 'Login' button.<br/>
 Open url 'http://qa5dev.publisher.nbcuni.com'.<br/>
+Verify success message of 'players returned for account' is present.<br/>
+Verify there are no errors present.<br/>
+Verify success message of '59 players returned for account "DB TV"' is present.<br/>
+Verify there are no errors present.<br/>
 </div>
 </td>
 <td></td>
-<td>109</td>
-<td>com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MPXPlayersSyncVerification@69b1fbf4</td></tr>
+<td>46</td>
+<td>com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MPXPlayersSyncVerification@7dc05ffd</td></tr>
 <tr>
 <td title='com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides.MPXVideosSchedulingVerificationInitialOverrides_Test()'><b>MPXVideosSchedulingVerificationInitialOverrides_Test</b><br>Test class: com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides<br/>
-<a href="#Output-270232918" onClick='toggleBox("Output-270232918", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1329801935" onClick='toggleBox("Output-1329801935", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-270232918" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-270232918">
+<a href="#Output-1329801935" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1329801935">
 Open url 'http://qa5dev.publisher.nbcuni.com'.<br/>
 Enter the user's email address in the 'Email Address' text box.<br/>
 Enter the user's password in the 'Password' text box.<br/>
@@ -1368,17 +437,87 @@ Click the 'Apply' button.<br/>
 Get the title text of every result in the search result set.<br/>
 For each expected result, assert it is present in the result set.<br/>
 Click the first search title link in the search result set.<br/>
+Verify the text 'Automation1' is present on the page.<br/>
+Verify the text 'MPX Released File Public IDs:' is present on the page.<br/>
+Verify the text 'MPX Media Default Released File Public ID:' is present on the page.<br/>
+Verify the text 'MPX Media Categories:' is present on the page.<br/>
+Verify the text 'Series' is present on the page.<br/>
+Verify the text 'Show' is present on the page.<br/>
+Verify the text 'MPX Media Description:' is present on the page.<br/>
+Verify the text 'Automation 1 example test' is present on the page.<br/>
+Verify the text 'MPX Media Author:' is present on the page.<br/>
+Verify the text 'Pub7 Content Provider' is present on the page.<br/>
+Verify the text 'MPX Media Air Date:' is present on the page.<br/>
+Verify the text 'Wednesday, January 8, 2014' is present on the page.<br/>
+Verify the text 'MPX Media Keywords:' is present on the page.<br/>
+Verify the text 'mpx, metadata, field, override' is present on the page.<br/>
+Verify the text 'MPX Media Copyright:' is present on the page.<br/>
+Verify the text 'NBCUNI QA' is present on the page.<br/>
+Verify the text 'MPX Media Film Advisory Board Rating:' is present on the page.<br/>
+Verify the text 'pd' is present on the page.<br/>
+Verify the text 'MPX Media MPAA Rating:' is present on the page.<br/>
+Verify the text 'MPX Media MPAA Sub-Ratings:' is present on the page.<br/>
+Verify the text 'v' is present on the page.<br/>
+Verify the text 'MPX Media V-Chip Rating:' is present on the page.<br/>
+Verify the text 'tv-y7' is present on the page.<br/>
+Verify the text 'MPX Media V-Chip Sub-Ratings:' is present on the page.<br/>
+Verify the text 'l' is present on the page.<br/>
+Verify the text 'MPX Media Exclude Selected Countries:' is present on the page.<br/>
+Verify the text 'Prevent Playback in Selected Countries' is present on the page.<br/>
+Verify the text 'MPX Media Available Date:' is NOT present on the page.<br/>
+Verify the text 'MPX Media Expiration Date:' is NOT present on the page.<br/>
+Click the 'Edit' in the work bench.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'Automation1 has been updated.' is present.<br/>
+Verify there are no errors present.<br/>
+Verify the text 'MPX Media Available Date:' is present on the page.<br/>
+Verify the text 'Thursday, February 20, 2014' is present on the page.<br/>
+Verify the text 'MPX Media Expiration Date: ' is present on the page.<br/>
+Verify the text 'Sunday, February 12, 2017' is present on the page.<br/>
+Click the 'Edit' in the work bench.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'Automation1 has been updated.' is present.<br/>
+Verify there are no errors present.<br/>
+Verify the text 'Automation1' is present on the page.<br/>
+Verify the text 'MPX Released File Public IDs:' is present on the page.<br/>
+Verify the text 'MPX Media Default Released File Public ID:' is present on the page.<br/>
+Verify the text 'MPX Media Categories:' is present on the page.<br/>
+Verify the text 'Series' is present on the page.<br/>
+Verify the text 'Show' is present on the page.<br/>
+Verify the text 'MPX Media Description:' is present on the page.<br/>
+Verify the text 'Automation 1 example test' is present on the page.<br/>
+Verify the text 'MPX Media Author:' is present on the page.<br/>
+Verify the text 'Pub7 Content Provider' is present on the page.<br/>
+Verify the text 'MPX Media Air Date:' is present on the page.<br/>
+Verify the text 'Wednesday, January 8, 2014' is present on the page.<br/>
+Verify the text 'MPX Media Keywords:' is present on the page.<br/>
+Verify the text 'mpx, metadata, field, override' is present on the page.<br/>
+Verify the text 'MPX Media Copyright:' is present on the page.<br/>
+Verify the text 'NBCUNI QA' is present on the page.<br/>
+Verify the text 'MPX Media Film Advisory Board Rating:' is present on the page.<br/>
+Verify the text 'pd' is present on the page.<br/>
+Verify the text 'MPX Media MPAA Rating:' is present on the page.<br/>
+Verify the text 'MPX Media MPAA Sub-Ratings:' is present on the page.<br/>
+Verify the text 'v' is present on the page.<br/>
+Verify the text 'MPX Media V-Chip Rating:' is present on the page.<br/>
+Verify the text 'tv-y7' is present on the page.<br/>
+Verify the text 'MPX Media V-Chip Sub-Ratings:' is present on the page.<br/>
+Verify the text 'l' is present on the page.<br/>
+Verify the text 'MPX Media Exclude Selected Countries:' is present on the page.<br/>
+Verify the text 'Prevent Playback in Selected Countries' is present on the page.<br/>
+Verify the text 'MPX Media Available Date:' is NOT present on the page.<br/>
+Verify the text 'MPX Media Expiration Date:' is NOT present on the page.<br/>
 </div>
 </td>
 <td></td>
-<td>36</td>
-<td>com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides@10d09ad3</td></tr>
+<td>37</td>
+<td>com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides@7c2e1f1f</td></tr>
 <tr>
 <td title='com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling.MPXVideosSchedulingVerificationScheduling_Test()'><b>MPXVideosSchedulingVerificationScheduling_Test</b><br>Test class: com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling<br/>
-<a href="#Output-886099408" onClick='toggleBox("Output-886099408", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1826211554" onClick='toggleBox("Output-1826211554", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-886099408" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-886099408">
+<a href="#Output-1826211554" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1826211554">
 Open url 'http://qa5dev.publisher.nbcuni.com'.<br/>
 Enter the user's email address in the 'Email Address' text box.<br/>
 Enter the user's password in the 'Password' text box.<br/>
@@ -1388,33 +527,54 @@ Click the account option from the drop down list.<br/>
 Click the 'Account' title to leave focus off of the selection.<br/>
 Wait for account to switch to the newly selected account.<br/>
 Open url 'http://qa5dev.publisher.nbcuni.com'.<br/>
-Enter title Automation297002ad52.<br/>
+Verify success message of 'Cron ran successfully.' is present.<br/>
+Verify there are no errors present.<br/>
+Enter title Automation8e17f3d2b8.<br/>
 Click the 'Apply' button.<br/>
 Get the text of the first search result set item.<br/>
 Get the title text of every result in the search result set.<br/>
 For each expected result, assert it is present in the result set.<br/>
+Verify the text '01/24/2014 - 05:00 AM' is present on the page.<br/>
+Verify the text '02/06/2014 - 05:00 AM' is present on the page.<br/>
+Verify the text 'Expired' is present on the page.<br/>
 Click the first search title link in the search result set.<br/>
+Verify the text 'Automation8e17f3d2b8' is present on the page.<br/>
+Verify the text 'Friday, January 24, 2014 - 05:00' is present on the page.<br/>
+Verify the text 'Thursday, February 6, 2014 - 05:00' is present on the page.<br/>
+Click the 'Edit' in the work bench.<br/>
 Enter the account name 'DB TV' in the account select text box.<br/>
 Click the account option from the drop down list.<br/>
 Click the 'Account' title to leave focus off of the selection.<br/>
 Wait for account to switch to the newly selected account.<br/>
 Open url 'http://qa5dev.publisher.nbcuni.com'.<br/>
-Enter title Automation297002ad52.<br/>
+Verify success message of 'Cron ran successfully.' is present.<br/>
+Verify there are no errors present.<br/>
+Enter title Automation8e17f3d2b8.<br/>
 Click the 'Apply' button.<br/>
 Get the title text of every result in the search result set.<br/>
 For each expected result, assert it is present in the result set.<br/>
+Verify the text '02/13/2014 - 05:00 AM' is present on the page.<br/>
+Verify the text '02/13/2015 - 05:00 AM' is present on the page.<br/>
+Verify the text 'Published' is present on the page.<br/>
 Click the first search title link in the search result set.<br/>
+Verify the text 'Automation8e17f3d2b8' is present on the page.<br/>
+Verify the text 'Thursday, February 13, 2014 - 05:00' is present on the page.<br/>
+Verify the text 'Friday, February 13, 2015 - 05:00' is present on the page.<br/>
+Click the 'Edit' in the work bench.<br/>
+Verify the text 'Automation8e17f3d2b8' is present on the page.<br/>
+Verify the text 'Unpublish' is present on the page.<br/>
+Verify the text '02/13/2015 - 05:00' is present on the page.<br/>
 </div>
 </td>
 <td></td>
-<td>338</td>
-<td>com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling@7d95d4fe</td></tr>
+<td>305</td>
+<td>com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling@7f712b3a</td></tr>
 <tr>
 <td title='com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MultipleMPXAccountsPerLoginVerification.MultipleMPXAccountsPerLoginVerification_Test()'><b>MultipleMPXAccountsPerLoginVerification_Test</b><br>Test class: com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MultipleMPXAccountsPerLoginVerification<br/>
-<a href="#Output-1513312339" onClick='toggleBox("Output-1513312339", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1704647724" onClick='toggleBox("Output-1704647724", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1513312339" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1513312339">
+<a href="#Output-1704647724" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1704647724">
 Open url 'http://qa5dev.publisher.nbcuni.com'.<br/>
 Enter the user's email address in the 'Email Address' text box.<br/>
 Enter the user's password in the 'Password' text box.<br/>
@@ -1423,264 +583,18 @@ Open url 'http://qa5dev.publisher.nbcuni.com'.<br/>
 </div>
 </td>
 <td></td>
-<td>15</td>
-<td>com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MultipleMPXAccountsPerLoginVerification@2565a3c2</td></tr>
-<tr>
-<td title='com.nbcuni.test.publisher.tests.Advertising.Comscore.PixelmanModuleSetupAndVerification.PixelmanModuleSetupAndVerification_Test()'><b>PixelmanModuleSetupAndVerification_Test</b><br>Test class: com.nbcuni.test.publisher.tests.Advertising.Comscore.PixelmanModuleSetupAndVerification<br/>
-<a href="#Output-1501313317" onClick='toggleBox("Output-1501313317", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1501313317" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1501313317">
-Open url 'http://qa5dev.publisher.nbcuni.com'.<br/>
-Enter the user's email address in the 'Email Address' text box.<br/>
-Enter the user's password in the 'Password' text box.<br/>
-Click the 'Login' button.<br/>
-verifyObjectContainsText:  Object //div[@class='messages status'] contains the text The configuration options have been saved.<br/>
-verifyObjectContainsText:  Object //div[@class='messages status'] contains the text The configuration options have been saved.<br/>
-Click the 'Logout' button.<br/>
-Enter the user's email address in the 'Email Address' text box.<br/>
-Enter the user's password in the 'Password' text box.<br/>
-Click the 'Login' button.<br/>
-verifyObjectContainsText:  Object //div[@class='messages status'] contains the text The configuration options have been saved.<br/>
-Click the 'Logout' button.<br/>
-</div>
-</td>
-<td></td>
-<td>109</td>
-<td>com.nbcuni.test.publisher.tests.Advertising.Comscore.PixelmanModuleSetupAndVerification@48e61a35</td></tr>
-<tr>
-<td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ProgramGuides.ROVITVSchedule.ProgramGuideVerification.ProgramGuideVerification_Test()'><b>ProgramGuideVerification_Test</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ProgramGuides.ROVITVSchedule.ProgramGuideVerification<br/>
-<a href="#Output-1491844959" onClick='toggleBox("Output-1491844959", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1491844959" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1491844959">
-Open url 'http://qa5dev.publisher.nbcuni.com'.<br/>
-Enter the user's email address in the 'Email Address' text box.<br/>
-Enter the user's password in the 'Password' text box.<br/>
-Click the 'Login' button.<br/>
-Verify home page program guide contains text 'Program Guide'.<br/>
-Verify column headers present of 'Date', 'Show', and 'Information'.<br/>
-Verify Cron Status contains data url 'http://feed.entertainment.tv.theplatform.com/f/dCK2IC/stage_usa_listing?range=1-*&form=json'.<br/>
-Verify home page program guide contains text 'Program Guide'.<br/>
-Verify column headers present of 'Date', 'Show', and 'Information'.<br/>
-After 8pm, show availability limited.<br/>
-Select the block name 'Program Guide' from the '- None -' drop down list.<br/>
-Click the 'Save Blocks' button.<br/>
-</div>
-</td>
-<td></td>
-<td>69</td>
-<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ProgramGuides.ROVITVSchedule.ProgramGuideVerification@77d2b01b</td></tr>
-<tr>
-<td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityModerationStatesandWorkflows.PublishContenttoUnauthenticatedUsers.PublishContenttoUnauthenticatedUsers_Test()'><b>PublishContenttoUnauthenticatedUsers_Test</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityModerationStatesandWorkflows.PublishContenttoUnauthenticatedUsers<br/>
-<a href="#Output-1387460950" onClick='toggleBox("Output-1387460950", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1387460950" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1387460950">
-Open url 'http://qa5dev.publisher.nbcuni.com'.<br/>
-Enter the user's email address in the 'Email Address' text box.<br/>
-Enter the user's password in the 'Password' text box.<br/>
-Click the 'Login' button.<br/>
-Switch to the select file frame.<br/>
-Enter the file path for file upload.<br/>
-Click the 'Upload' button.<br/>
-Wait for the file link to be visible after upload.<br/>
-Click the 'Next' button.<br/>
-Click the 'Public Local Files' radio button.<br/>
-Click the 'Next' button.<br/>
-Assert the file image 'HanSolo' is present.<br/>
-Assert the the img is loaded and visible.<br/>
-Click the 'Save' button.<br/>
-Click the 'Logout' button.<br/>
-</div>
-</td>
-<td></td>
-<td>21</td>
-<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityModerationStatesandWorkflows.PublishContenttoUnauthenticatedUsers@402f0df1</td></tr>
-<tr>
-<td title='com.nbcuni.test.publisher.tests.Queues.AddModerationStatesToRevisionsOfAQueue.QueueModerationStates.QueueModerationStates_Test()'><b>QueueModerationStates_Test</b><br>Test class: com.nbcuni.test.publisher.tests.Queues.AddModerationStatesToRevisionsOfAQueue.QueueModerationStates<br/>
-<a href="#Output-1159034982" onClick='toggleBox("Output-1159034982", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1159034982" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1159034982">
-Open url 'http://qa5dev.publisher.nbcuni.com'.<br/>
-Enter the user's email address in the 'Email Address' text box.<br/>
-Enter the user's password in the 'Password' text box.<br/>
-Click the 'Login' button.<br/>
-Switch to the select file frame.<br/>
-Enter the file path for file upload.<br/>
-Click the 'Upload' button.<br/>
-Wait for the file link to be visible after upload.<br/>
-Click the 'Next' button.<br/>
-Click the 'Public Local Files' radio button.<br/>
-Click the 'Next' button.<br/>
-Assert the file image 'HanSolo' is present.<br/>
-Assert the the img is loaded and visible.<br/>
-Click the 'Save' button.<br/>
-verifyObjectContainsText:  Object (//td[@class='views-field views-field-history-list'])[1] contains the text Revision was set from Draft to Draft on 02/05/2014<br/>
-verifyObjectContainsText:  Object (//td[@class='views-field views-field-history-list'])[1] contains the text Revision was set from Draft to Published on 02/05/2014<br/>
-verifyObjectContainsText:  Object (//td[@class='views-field views-field-history-list'])[1] contains the text 117736536d734a2 5d29c2a696<br/>
-verifyObjectContainsText:  Object (//td[@class='views-field views-field-history-list'])[1] contains the text Revision was set from Published to Unpublished on 02/05/2014<br/>
-verifyObjectContainsText:  Object (//td[@class='views-field views-field-history-list'])[1] contains the text 2aecc1e0ae43417 c58445f434<br/>
-</div>
-</td>
-<td></td>
-<td>45</td>
-<td>com.nbcuni.test.publisher.tests.Queues.AddModerationStatesToRevisionsOfAQueue.QueueModerationStates@7f92c8d9</td></tr>
-<tr>
-<td title='com.nbcuni.test.publisher.tests.UserCreationAndManagement.Roles.RolesPredefinedInPublisher7.RolesPredefinedInPublisher7_Test()'><b>RolesPredefinedInPublisher7_Test</b><br>Test class: com.nbcuni.test.publisher.tests.UserCreationAndManagement.Roles.RolesPredefinedInPublisher7<br/>
-<a href="#Output-1334071759" onClick='toggleBox("Output-1334071759", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1334071759" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1334071759">
-Open url 'http://qa5dev.publisher.nbcuni.com'.<br/>
-Enter the user's email address in the 'Email Address' text box.<br/>
-Enter the user's password in the 'Password' text box.<br/>
-Click the 'Login' button.<br/>
-</div>
-</td>
-<td></td>
-<td>11</td>
-<td>com.nbcuni.test.publisher.tests.UserCreationAndManagement.Roles.RolesPredefinedInPublisher7@6f649b44</td></tr>
-<tr>
-<td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.ScheduleToPublishContentByDateTime.ScheduleToPublishContentByDateTime_Test()'><b>ScheduleToPublishContentByDateTime_Test</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.ScheduleToPublishContentByDateTime<br/>
-<a href="#Output-1719361870" onClick='toggleBox("Output-1719361870", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1719361870" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1719361870">
-Open url 'http://qa5dev.publisher.nbcuni.com'.<br/>
-Enter the user's email address in the 'Email Address' text box.<br/>
-Enter the user's password in the 'Password' text box.<br/>
-Click the 'Login' button.<br/>
-Switch to the select file frame.<br/>
-Enter the file path for file upload.<br/>
-Click the 'Upload' button.<br/>
-Wait for the file link to be visible after upload.<br/>
-Click the 'Next' button.<br/>
-Click the 'Public Local Files' radio button.<br/>
-Click the 'Next' button.<br/>
-Assert the file image 'HanSolo' is present.<br/>
-Assert the the img is loaded and visible.<br/>
-Click the 'Save' button.<br/>
-Click the 'Revision' link.<br/>
-verifyObjectContainsText:  Object //div[@class='content']//tbody contains the text bbc268a878124b0<br/>
-verifyObjectContainsText:  Object //div[@class='content']//tbody contains the text Moderate to Publish<br/>
-verifyObjectContainsText:  Object //div[@class='content']//tbody contains the text 02/15/2014 - 05:00 PM<br/>
-verifyObjectContainsText:  Object //div[@class='content']//tbody contains the text Moderate to Published<br/>
-verifyObjectContainsText:  Object //div[@class='content']//tbody contains the text Completed<br/>
-Click the 'Revision' link.<br/>
-</div>
-</td>
-<td></td>
-<td>47</td>
-<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.ScheduleToPublishContentByDateTime@7977b9b</td></tr>
-<tr>
-<td title='com.nbcuni.test.publisher.tests.Video.Player.SelectVideoPlayerPerVideoFile.SelectVideoPlayerPerVideoFile_Test()'><b>SelectVideoPlayerPerVideoFile_Test</b><br>Test class: com.nbcuni.test.publisher.tests.Video.Player.SelectVideoPlayerPerVideoFile<br/>
-<a href="#Output-705175439" onClick='toggleBox("Output-705175439", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-705175439" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-705175439">
-Open url 'http://qa5dev.publisher.nbcuni.com'.<br/>
-Enter the user's email address in the 'Email Address' text box.<br/>
-Enter the user's password in the 'Password' text box.<br/>
-Click the 'Login' button.<br/>
-Enter title Automation1.<br/>
-Click the 'Apply' button.<br/>
-Enter title Automation1.<br/>
-Click the 'Apply' button.<br/>
-Enter title Automation1.<br/>
-Click the 'Apply' button.<br/>
-</div>
-</td>
-<td></td>
-<td>29</td>
-<td>com.nbcuni.test.publisher.tests.Video.Player.SelectVideoPlayerPerVideoFile@5ff3ce5c</td></tr>
-<tr>
-<td title='com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SiteReportVisualization.SiteReportVisualization.SiteReportVisualization()'><b>SiteReportVisualization</b><br>Test class: com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SiteReportVisualization.SiteReportVisualization</td>
-<td></td>
-<td>0</td>
-<td>com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SiteReportVisualization.SiteReportVisualization@69e328e0</td></tr>
+<td>17</td>
+<td>com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MultipleMPXAccountsPerLoginVerification@3bc0f2e5</td></tr>
 <tr>
 <td title='com.nbcuni.test.publisher.tests.Video.SyncFromMPXButtonToVideoFileEntitiesEditForm.SyncFromMPXButtonToVideoFileEntitiesEditForm.SyncFromMPXButtonToVideoFileEntitiesEditForm_Test()'><b>SyncFromMPXButtonToVideoFileEntitiesEditForm_Test</b><br>Test class: com.nbcuni.test.publisher.tests.Video.SyncFromMPXButtonToVideoFileEntitiesEditForm.SyncFromMPXButtonToVideoFileEntitiesEditForm</td>
 <td></td>
 <td>0</td>
-<td>com.nbcuni.test.publisher.tests.Video.SyncFromMPXButtonToVideoFileEntitiesEditForm.SyncFromMPXButtonToVideoFileEntitiesEditForm@5f49d886</td></tr>
-<tr>
-<td title='com.nbcuni.test.publisher.tests.Setup.TestSetup.TestSetup_Test()'><b>TestSetup_Test</b><br>Test class: com.nbcuni.test.publisher.tests.Setup.TestSetup<br/>
-<a href="#Output-385491364" onClick='toggleBox("Output-385491364", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-385491364" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-385491364">
-Open url 'http://qa5dev.publisher.nbcuni.com'.<br/>
-Enter the user's email address in the 'Email Address' text box.<br/>
-Enter the user's password in the 'Password' text box.<br/>
-Click the 'Login' button.<br/>
-</div>
-</td>
-<td></td>
-<td>13</td>
-<td>com.nbcuni.test.publisher.tests.Setup.TestSetup@c2f48d2</td></tr>
-<tr>
-<td title='com.nbcuni.test.publisher.tests.Queues.UnauthenticatedUsersCanViewQueuesRevisionList.UnauthenticatedUsersCanViewQueuesRevisionList.UnauthenticatedUsersCanViewQueuesRevisionList_Test()'><b>UnauthenticatedUsersCanViewQueuesRevisionList_Test</b><br>Test class: com.nbcuni.test.publisher.tests.Queues.UnauthenticatedUsersCanViewQueuesRevisionList.UnauthenticatedUsersCanViewQueuesRevisionList<br/>
-<a href="#Output-525632172" onClick='toggleBox("Output-525632172", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-525632172" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-525632172">
-Open url 'http://qa5dev.publisher.nbcuni.com'.<br/>
-verifyObjectContainsText:  Object //body contains the text You are not authorized to access this page.<br/>
-verifyObjectContainsText:  Object //body contains the text You are not authorized to access this page.<br/>
-verifyObjectContainsText:  Object //body contains the text You are not authorized to access this page.<br/>
-</div>
-</td>
-<td></td>
-<td>2</td>
-<td>com.nbcuni.test.publisher.tests.Queues.UnauthenticatedUsersCanViewQueuesRevisionList.UnauthenticatedUsersCanViewQueuesRevisionList@24148662</td></tr>
-<tr>
-<td title='com.nbcuni.test.publisher.tests.UserCreationAndManagement.UnauthenticatedUsersNotAbleToViewThePublishedContents.UnauthenticatedUsersNotAbleToViewThePublishedContents.UnauthenticatedUsersNotAbleToViewThePublishedContents_Test()'><b>UnauthenticatedUsersNotAbleToViewThePublishedContents_Test</b><br>Test class: com.nbcuni.test.publisher.tests.UserCreationAndManagement.UnauthenticatedUsersNotAbleToViewThePublishedContents.UnauthenticatedUsersNotAbleToViewThePublishedContents<br/>
-<a href="#Output-1096233430" onClick='toggleBox("Output-1096233430", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1096233430" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1096233430">
-Open url 'http://qa5dev.publisher.nbcuni.com'.<br/>
-Enter the user's email address in the 'Email Address' text box.<br/>
-Enter the user's password in the 'Password' text box.<br/>
-Click the 'Login' button.<br/>
-Switch to the select file frame.<br/>
-Enter the file path for file upload.<br/>
-Click the 'Upload' button.<br/>
-Wait for the file link to be visible after upload.<br/>
-Click the 'Next' button.<br/>
-Click the 'Public Local Files' radio button.<br/>
-Click the 'Next' button.<br/>
-Assert the file image 'HanSolo' is present.<br/>
-Assert the the img is loaded and visible.<br/>
-Click the 'Save' button.<br/>
-Click the 'Logout' button.<br/>
-Enter the user's email address in the 'Email Address' text box.<br/>
-Enter the user's password in the 'Password' text box.<br/>
-Click the 'Login' button.<br/>
-Click the 'Revision' link.<br/>
-Enter 'This Revision Comment' in the 'Message for state change' text area.<br/>
-Click the 'Update State' button.<br/>
-Click the 'Logout' button.<br/>
-Enter the user's email address in the 'Email Address' text box.<br/>
-Enter the user's password in the 'Password' text box.<br/>
-Click the 'Login' button.<br/>
-Click the 'Logout' button.<br/>
-Enter the user's email address in the 'Email Address' text box.<br/>
-Enter the user's password in the 'Password' text box.<br/>
-Click the 'Login' button.<br/>
-Click the 'Logout' button.<br/>
-</div>
-</td>
-<td></td>
-<td>44</td>
-<td>com.nbcuni.test.publisher.tests.UserCreationAndManagement.UnauthenticatedUsersNotAbleToViewThePublishedContents.UnauthenticatedUsersNotAbleToViewThePublishedContents@2f242b11</td></tr>
+<td>com.nbcuni.test.publisher.tests.Video.SyncFromMPXButtonToVideoFileEntitiesEditForm.SyncFromMPXButtonToVideoFileEntitiesEditForm@3f829e6f</td></tr>
 <tr>
 <td title='com.nbcuni.test.publisher.tests.Video.UndefinedIndexesDisplayingForMPXPlayers.UndefinedIndexesDisplayingForMPXPlayers.UndefinedIndexesDisplayingForMPXPlayers_Test()'><b>UndefinedIndexesDisplayingForMPXPlayers_Test</b><br>Test class: com.nbcuni.test.publisher.tests.Video.UndefinedIndexesDisplayingForMPXPlayers.UndefinedIndexesDisplayingForMPXPlayers</td>
 <td></td>
 <td>0</td>
-<td>com.nbcuni.test.publisher.tests.Video.UndefinedIndexesDisplayingForMPXPlayers.UndefinedIndexesDisplayingForMPXPlayers@186fa9fc</td></tr>
+<td>com.nbcuni.test.publisher.tests.Video.UndefinedIndexesDisplayingForMPXPlayers.UndefinedIndexesDisplayingForMPXPlayers@6a340101</td></tr>
 </table><p>
 </body>
 </html>

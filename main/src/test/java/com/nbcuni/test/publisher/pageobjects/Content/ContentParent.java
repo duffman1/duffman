@@ -115,8 +115,10 @@ public class ContentParent {
 
         for (String text : txtItems) {
         	Reporter.log("Verify the text '" + text + "' is present on the page.");
-            Assert.assertTrue(bodyTxt.contains(text));
-
+        	if (!bodyTxt.contains(text)) {
+        		Assert.fail("The text '" + text + "' is not present on the page.");
+        	}
+            
         }
     }
 

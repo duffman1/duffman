@@ -9,9 +9,13 @@ import com.nbcuni.test.publisher.pageobjects.UserLogin;
 
 import junit.framework.Assert;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Configuration extends ParentTest{
@@ -48,36 +52,61 @@ public class Configuration extends ParentTest{
         	
         	//Step
         	List<String> configuredAccounts = settings.GetImportAccountSelectedOptions();
-
-        	//Step 7
-            applib.openApplication();
-        	taxonomy.NavigateSite("Content>>Files>>mpxMedia");
-        	overlay.SwitchToActiveFrame();
+        	if (configuredAccounts.contains("DB TV")) {
+        		
+        		//Step 7
+        		applib.openApplication();
+        		taxonomy.NavigateSite("Content>>Files>>mpxMedia");
+        		overlay.SwitchToActiveFrame();
         	
-        	//Step 8
-            MPXMedia mpxMedia = new MPXMedia(webDriver);
-            mpxMedia.ExpandMPXMedia();
+        		//Step 8
+        		MPXMedia mpxMedia = new MPXMedia(webDriver);
+        		mpxMedia.ExpandMPXMedia();
 
-            //Step 9 and 10 not needed (redundant per previous mpx test)
+        		//Step 9 and 10 not needed (redundant per previous mpx test)
 
-            //Step 11
-            overlay.switchToDefaultContent();
-            taxonomy.NavigateSite("Structure>>File types>>MPX Video for Account \"" + configuredAccounts.get(0));
-            overlay.SwitchToActiveFrame();
+        		//Step 11
+        		overlay.switchToDefaultContent();
+        		
+        		//Below Step is a horrendous hack as a work around for dealing with the known bug of duplicate mpx account links in the file type menu
+        		String allURLs = null;
+        		for (WebElement el : webDriver.findElements(By.xpath("//a[text()='MPX Video for Account \"DB TV\" (2312945284)']"))) {
+        			allURLs = allURLs + el.getAttribute("href");
+        		}
+        		allURLs = allURLs.replaceAll(applib.getApplicationURL() + "/admin/structure/file-types/manage/", "");
+        		String[] index = allURLs.split("mpx_video_");
+        		ArrayList<Integer> allIndexInts = new ArrayList<Integer>();
+        		allIndexInts.removeAll(Collections.singleton("empty"));
+        		for (String s : index) {
+        			try {
+        				allIndexInts.add(Integer.parseInt(s));
+        			}
+        			catch (NumberFormatException e) {}
+        		}
+        		Integer maxScore = Collections.max(allIndexInts);
+        		WebElement accountLnk = webDriver.findElement(By.xpath("//a[contains(text(), 'DB TV')][contains(@href, '" + maxScore.toString() + "')]"));
+        		webDriver.executeScript("arguments[0].click();", accountLnk);
+        		
+        		//taxonomy.NavigateSite("Structure>>File types>>MPX Video for Account \"DB TV\" (2312945284)");
+        		overlay.SwitchToActiveFrame();
             
-            //Step 12
-            MPXFileType mpxFileType = new MPXFileType(webDriver);
-            PageFactory.initElements(webDriver, mpxFileType);
-            boolean isMPXValueOverrideEnabled = mpxFileType.EnableMPXValueOverrides();
-            if (isMPXValueOverrideEnabled == false) {
+        		//Step 12
+        		MPXFileType mpxFileType = new MPXFileType(webDriver);
+        		PageFactory.initElements(webDriver, mpxFileType);
+        		boolean isMPXValueOverrideEnabled = mpxFileType.EnableMPXValueOverrides();
+        		if (isMPXValueOverrideEnabled == false) {
             	
-            	mpxFileType.ClickSaveBtn();
-            	overlay.SwitchToActiveFrame();
-                ContentParent contentParent = new ContentParent(webDriver, applib);
-                PageFactory.initElements(webDriver, contentParent);
-            	contentParent.VerifyMessageStatus("The file type MPX Video for Account \"" + configuredAccounts.get(0));
-            	contentParent.VerifyMessageStatus("has been updated.");
-            }
+        			mpxFileType.ClickSaveBtn();
+        			overlay.SwitchToActiveFrame();
+        			ContentParent contentParent = new ContentParent(webDriver, applib);
+        			PageFactory.initElements(webDriver, contentParent);
+        			contentParent.VerifyMessageStatus("The file type MPX Video for Account \"" + configuredAccounts.get(0));
+        			contentParent.VerifyMessageStatus("has been updated.");
+        		}
+        	}
+        	else {
+        		Assert.fail("DB TV account must be configured.");
+        	}
         }
         else {
         	

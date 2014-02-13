@@ -1,6 +1,7 @@
 package com.nbcuni.test.publisher.pageobjects.Taxonomy;
 
 import com.nbcuni.test.webdriver.CustomWebDriver;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -8,6 +9,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Reporter;
 
 /*********************************************
  * publisher.nbcuni.com Taxonomy Library. Copyright
@@ -30,19 +32,19 @@ public class Taxonomy {
     private static String MouseOver_Js = "var evObj = document.createEvent('MouseEvents');" + "evObj.initMouseEvent(\"mouseover\",true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);" + "arguments[0].dispatchEvent(evObj);";
 	
     private static WebElement Tier1_Lnk(String[] tiers) {
-    	return webDriver.findElement(By.xpath("//li[contains(@class,'admin-menu-toolbar-category')]//a[contains(text(),'" + tiers[0] + "')]"));
+    	return webDriver.findElement(By.xpath("//li[contains(@class,'admin-menu-toolbar-category')]//a[text()='" + tiers[0] + "']"));
     }
     
     private static WebElement Tier2_Lnk(String[] tiers) {
-    	return webDriver.findElement(By.xpath("//li[contains(@class,'admin-menu-toolbar-category')]//a[contains(text(),'" + tiers[0] + "')]/../ul//a[contains(text(),'" + tiers[1] +"')]"));
+    	return webDriver.findElement(By.xpath("//li[contains(@class,'admin-menu-toolbar-category')]//a[text()='" + tiers[0] + "']/../ul//a[text()='" + tiers[1] +"']"));
     }
     
     private static WebElement Tier3_Lnk(String[] tiers) {
-    	return webDriver.findElement(By.xpath("//li[contains(@class,'admin-menu-toolbar-category')]//a[contains(text(),'" + tiers[0] + "')]/../ul//a[contains(text(),'" + tiers[1] +"')]/..//a[contains(text(),'" + tiers[2] + "')]"));
+    	return webDriver.findElement(By.xpath("//li[contains(@class,'admin-menu-toolbar-category')]//a[text()='" + tiers[0] + "']/../ul//a[text()='" + tiers[1] +"']/..//a[text()='" + tiers[2] + "']"));
     }
     
     private static WebElement Tier4_Lnk(String[] tiers) {
-    	return webDriver.findElement(By.xpath("//li[contains(@class,'admin-menu-toolbar-category')]//a[contains(text(),'" + tiers[0] + "')]/../ul//a[contains(text(),'" + tiers[1] +"')]/..//a[contains(text(),'" + tiers[2] + "')]/..//a[contains(text(),'" + tiers[3] + "')]"));
+    	return webDriver.findElement(By.xpath("//li[contains(@class,'admin-menu-toolbar-category')]//a[text()='" + tiers[0] + "']/../ul//a[text()='" + tiers[1] +"']/..//a[text()='" + tiers[2] + "']/..//a[text()='" + tiers[3] + "']"));
     }
     
     @FindBy(how = How.XPATH, using = "//span[@class='admin-menu-home-icon']")
@@ -57,6 +59,10 @@ public class Taxonomy {
     
     private static WebElement HomeDevelopmentTier3_Lnk(String[] tiers) {
     	return webDriver.findElement(By.xpath("//span[@class='admin-menu-home-icon']/../..//span[contains(text(), 'Development')]/..//a[contains(text(), '" + tiers[2] + "')]"));
+    }
+    
+    private static WebElement TaxonomyItem_Lnk(String menuName) {
+    	return webDriver.findElement(By.xpath("//ul[@id='admin-menu-menu']/..//a[contains(text()=\"" + menuName + "\"]"));
     }
     
     @FindBy(how = How.XPATH, using = "//a[@id='edit-shortcuts']")
@@ -156,10 +162,10 @@ public class Taxonomy {
     	}
     }
     
-    public void VerifyContentMenuExist(String MenuName) throws Exception {
+    public void VerifyContentMenuExist(String menuName) throws Exception {
     	
-    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOf(webDriver.findElement(
-    			By.xpath(".//ul[@id='admin-menu-menu']/..//a[text()='" + MenuName + "']"))));
+    	Reporter.log("Verify content menu item '" + menuName + "' is present in the site taxonomy.");
+    	TaxonomyItem_Lnk(menuName).getText();
     	
     }
     
