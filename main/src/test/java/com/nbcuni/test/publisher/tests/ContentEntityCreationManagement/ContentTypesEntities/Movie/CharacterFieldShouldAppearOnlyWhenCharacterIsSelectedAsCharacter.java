@@ -48,7 +48,6 @@ public class CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter ex
             
             //Step 3 
             CharactersInformation charactersInformation = new CharactersInformation(webDriver);
-            PageFactory.initElements(webDriver, charactersInformation);
             overlay.SwitchToFrame("Create Character Profile");
             String characterName = random.GetCharacterString(15);
             charactersInformation.EnterCharacterFirstName(characterName);
@@ -71,7 +70,6 @@ public class CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter ex
             //Step 5
             overlay.SwitchToFrame("Create Movie");
             CastCrew castCrew = new CastCrew(webDriver);
-            PageFactory.initElements(webDriver, castCrew);
             castCrew.ClickCastCrewLnk();
             
             //Step 6
@@ -124,7 +122,6 @@ public class CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter ex
             
             //Step 14
             BasicInformation basicInformation = new BasicInformation(webDriver);
-            PageFactory.initElements(webDriver, basicInformation);
             basicInformation.ClickBasicInformationTab();
             String movieTitle = random.GetCharacterString(15);
             basicInformation.EnterTitle(movieTitle);

@@ -3,6 +3,7 @@ package com.nbcuni.test.publisher.pageobjects.Content;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.sikuli.script.Key;
@@ -12,11 +13,9 @@ import org.sikuli.script.Region;
 import org.sikuli.script.Screen;
 import org.testng.Reporter;
 
-import com.nbcuni.test.lib.Util;
 import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXAssets;
 import com.nbcuni.test.webdriver.CustomWebDriver;
-
 
 /*********************************************
  * publisher.nbcuni.com Add File Library. Copyright
@@ -28,14 +27,16 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 public class AddFile {
 
     private static CustomWebDriver webDriver;
-    private AppLib applib;
-    Screen s = new Screen();
+    private static AppLib applib;
+    private static Screen sikuli;
     MPXAssets mpxAssets = new MPXAssets(this.webDriver, this.applib);
     
     //PAGE OBJECT CONSTRUCTOR
-    public AddFile(final CustomWebDriver custWebDr, AppLib applib) {
-        webDriver = custWebDr;
-        this.applib = applib;
+    public AddFile(CustomWebDriver webDriver, AppLib applib) {
+        AddFile.webDriver = webDriver;
+        AddFile.applib = applib;
+        sikuli = new Screen();
+        PageFactory.initElements(webDriver, this);
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -72,16 +73,16 @@ public class AddFile {
     	
     	Reporter.log("Click the windows arrow to expand file path for file upload.");
     	Pattern pImage = new Pattern(path + "AddFile/WinPathToFile.png").targetOffset(-3, 0);
-    	Region r = s.exists(pImage, 1);
-    	s.click(r, 1);
+    	Region r = sikuli.exists(pImage, 1);
+    	sikuli.click(r, 1);
     	
     	Reporter.log("Enter the path to the file for upload.");
     	Pattern pImage2 = new Pattern(path + "AddFile/WinPathToFile.png").targetOffset(-50, 0);
-    	Region r2 = s.exists(pImage2, 1);
-    	s.click(r2, 1);
-    	s.type("a", KeyModifier.CTRL);
-    	s.type(Key.BACKSPACE);
-    	s.type(pathToFile);
+    	Region r2 = sikuli.exists(pImage2, 1);
+    	sikuli.click(r2, 1);
+    	sikuli.type("a", KeyModifier.CTRL);
+    	sikuli.type(Key.BACKSPACE);
+    	sikuli.type(pathToFile);
     }
     
     public void ClickGoBtn_Win() throws Exception {
@@ -89,7 +90,7 @@ public class AddFile {
     	Reporter.log("Click the windows 'Go' arrow.");
     	String path = this.getImagePath();
     	mpxAssets.WaitForImgPresent(path + "AddFile/WinGo_Btn.png");
-    	s.click(path + "AddFile/WinGo_Btn.png");
+    	sikuli.click(path + "AddFile/WinGo_Btn.png");
     }
     
     public void EnterFileName_Win(String fileName) throws Exception {
@@ -99,11 +100,11 @@ public class AddFile {
     	
     	Reporter.log("Enter the file name.");
     	Pattern pImage = new Pattern(path + "AddFile/WinFileName_Txb.png").targetOffset(25, 0);
-    	Region r = s.exists(pImage, 1);
-    	s.click(r, 1);
-    	s.type("a", KeyModifier.CTRL);
-    	s.type(Key.BACKSPACE);
-    	s.type(fileName);
+    	Region r = sikuli.exists(pImage, 1);
+    	sikuli.click(r, 1);
+    	sikuli.type("a", KeyModifier.CTRL);
+    	sikuli.type(Key.BACKSPACE);
+    	sikuli.type(fileName);
     }
 
     public void ClickPicturesUploadBtn() throws Exception {
@@ -113,19 +114,19 @@ public class AddFile {
     	
     	Reporter.log("Click the 'All Files' icon.");
     	try {
-    		s.click(path + "FileUpload/AllMyFiles_Btn.png");
+    		sikuli.click(path + "FileUpload/AllMyFiles_Btn.png");
     	}
     	catch (Exception e) {
-    		s.click(path + "FileUpload/HighlightedAllMyFiles_Btn.png");
+    		sikuli.click(path + "FileUpload/HighlightedAllMyFiles_Btn.png");
     	}
     	
     	Reporter.log("Click the local 'Pictures' icon.");
     	Thread.sleep(500); //slight pause required here
     	try {
-    		s.click(path + "AddFile/PicturesUpload_Btn.png");
+    		sikuli.click(path + "AddFile/PicturesUpload_Btn.png");
     	}
     	catch (Exception e) {
-    		s.click(path + "AddFile/HighlightedPicturesUpload_Btn.png");
+    		sikuli.click(path + "AddFile/HighlightedPicturesUpload_Btn.png");
     	}
     }
     
@@ -134,7 +135,7 @@ public class AddFile {
     	Reporter.log("Click the test picture link.");
     	String path = this.getImagePath();
     	mpxAssets.WaitForImgPresent(path + "AddFile/TestPicture_Btn.png");
-    	s.click(path + "AddFile/TestPicture_Btn.png");
+    	sikuli.click(path + "AddFile/TestPicture_Btn.png");
     }
     
     public void ClickOpenBtn() throws Exception {
@@ -143,11 +144,11 @@ public class AddFile {
     	String path = this.getImagePath();
     	if (webDriver.getCapabilities().getPlatform().toString() == "MAC") {
     		mpxAssets.WaitForImgPresent(path + "FileUpload/Open_Btn.png");
-    		s.click(path + "FileUpload/Open_Btn.png");
+    		sikuli.click(path + "FileUpload/Open_Btn.png");
     	}
     	else {
     		mpxAssets.WaitForImgPresent(path + "AddFile/WinOpen_Btn.png");
-    		s.click(path + "AddFile/WinOpen_Btn.png");
+    		sikuli.click(path + "AddFile/WinOpen_Btn.png");
     	}
     	
     }

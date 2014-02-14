@@ -4,6 +4,7 @@ import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
 
 import com.nbcuni.test.webdriver.CustomWebDriver;
@@ -22,6 +23,7 @@ public class UserLogin {
     //PAGE OBJECT CONSTRUCTOR
     public UserLogin(CustomWebDriver webDriver) {
         UserLogin.webDriver = webDriver;
+        PageFactory.initElements(webDriver, this);
     }
     
     //PAGE OBJECT IDENTIFIERS

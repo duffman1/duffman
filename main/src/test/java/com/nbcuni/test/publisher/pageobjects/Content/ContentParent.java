@@ -3,19 +3,14 @@ package com.nbcuni.test.publisher.pageobjects.Content;
 import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.publisher.pageobjects.ErrorChecking.ErrorChecking;
 import com.nbcuni.test.webdriver.CustomWebDriver;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
-
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 /*********************************************
  * publisher.nbcuni.com Content Parent Library. Copyright
@@ -30,9 +25,10 @@ public class ContentParent {
     private static AppLib applib;
     
     //PAGE OBJECT CONSTRUCTOR
-    public ContentParent(CustomWebDriver custWebDr, AppLib applib) {
-        webDriver = custWebDr;
-        this.applib = applib;
+    public ContentParent(CustomWebDriver webDriver, AppLib applib) {
+        ContentParent.webDriver = webDriver;
+        ContentParent.applib = applib;
+        PageFactory.initElements(webDriver, this);
     }
     
     //PAGE OBJECT IDENTIFIERS

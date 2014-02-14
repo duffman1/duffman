@@ -57,7 +57,6 @@ public class EXIFKeywordsIngestedPhraseInsteadSetsWords extends ParentTest{
             content.ClickAddFileLnk();
             overlay.SwitchToActiveFrame();
             AddFile addFile = new AddFile(webDriver, applib);
-            PageFactory.initElements(webDriver, addFile);
             addFile.ClickAddFilesLnk();
             if (webDriver.getCapabilities().getPlatform().toString() == "MAC") {
             	addFile.ClickPicturesUploadBtn();
@@ -97,7 +96,6 @@ public class EXIFKeywordsIngestedPhraseInsteadSetsWords extends ParentTest{
             taxonomy.NavigateSite("Content>>Add content>>Media Gallery");
             overlay.SwitchToActiveFrame();
             BasicInformation basicInformation = new BasicInformation(webDriver);
-            PageFactory.initElements(webDriver, basicInformation);
             String title = random.GetCharacterString(15);
             basicInformation.EnterTitle(title);
             basicInformation.ClickMediaItemsSelectBtn();

@@ -57,7 +57,6 @@ public class CastCrewFieldCollectionsVerification_Movie extends ParentTest{
         
         //Step 2
         CharactersInformation charactersInformation = new CharactersInformation(webDriver);
-        PageFactory.initElements(webDriver, charactersInformation);
         SelectFile selectFile = new SelectFile(webDriver, applib);
         PageFactory.initElements(webDriver, selectFile);
         
@@ -102,7 +101,6 @@ public class CastCrewFieldCollectionsVerification_Movie extends ParentTest{
         overlay.SwitchToFrame("Create Movie");
         String MovieName = random.GetCharacterString(15);
         BasicInformation basicInformation = new BasicInformation(webDriver);
-        PageFactory.initElements(webDriver, basicInformation);
         basicInformation.EnterTitle(MovieName);
         String MovieSynopsis = basicInformation.EnterSynopsis();
         overlay.switchToDefaultContent();
@@ -113,7 +111,6 @@ public class CastCrewFieldCollectionsVerification_Movie extends ParentTest{
         //Step 6
         overlay.SwitchToFrame("Create Movie");
         CastCrew castCrew = new CastCrew(webDriver);
-        PageFactory.initElements(webDriver, castCrew);
         castCrew.ClickCastCrewLnk();
         castCrew.EnterPersonName(Persons.get(0), "1");
         castCrew.SelectRole("Character", "1");

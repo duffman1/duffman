@@ -3,7 +3,9 @@ package com.nbcuni.test.publisher.pageobjects.Content;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
+
 import com.nbcuni.test.webdriver.CustomWebDriver;
 
 /*********************************************
@@ -18,8 +20,9 @@ public class CharactersInformation {
     private static CustomWebDriver webDriver;
     
     //PAGE OBJECT CONSTRUCTOR
-    public CharactersInformation(final CustomWebDriver custWebDr) {
-        webDriver = custWebDr;
+    public CharactersInformation(CustomWebDriver webDriver) {
+        CharactersInformation.webDriver = webDriver;
+        PageFactory.initElements(webDriver, this);
     }
    
     //PAGE OBJECT IDENTIFIERS

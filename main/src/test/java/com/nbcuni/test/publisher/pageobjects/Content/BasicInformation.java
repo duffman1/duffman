@@ -4,8 +4,10 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.Reporter;
+
 import com.nbcuni.test.publisher.common.Random;
 import com.nbcuni.test.webdriver.CustomWebDriver;
 
@@ -23,7 +25,7 @@ public class BasicInformation {
     //PAGE OBJECT CONSTRUCTOR
     public BasicInformation(CustomWebDriver webDriver) {
         BasicInformation.webDriver = webDriver;
-        
+        PageFactory.initElements(webDriver, this);
     }
     
     //PAGE OBJECT IDENTIFIERS

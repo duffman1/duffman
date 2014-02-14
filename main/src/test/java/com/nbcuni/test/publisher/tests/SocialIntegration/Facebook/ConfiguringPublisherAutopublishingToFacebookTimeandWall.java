@@ -126,7 +126,6 @@ public class ConfiguringPublisherAutopublishingToFacebookTimeandWall extends Par
         //Step 11
         taxonomy.NavigateSite("Content>>Add content>>Post");
         BasicInformation basicInformation = new BasicInformation(webDriver);
-        PageFactory.initElements(webDriver, basicInformation);
         String postTitle = random.GetCharacterString(15);
         basicInformation.EnterTitle(postTitle);
         basicInformation.EnterSynopsis();

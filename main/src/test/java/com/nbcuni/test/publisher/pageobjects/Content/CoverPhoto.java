@@ -12,6 +12,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.LocalFileDetector;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.sikuli.script.Pattern;
@@ -37,14 +38,11 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 public class CoverPhoto {
 
     private static CustomWebDriver webDriver;
-    private AppLib applib;
-    private Util ul;
     
     //PAGE OBJECT CONSTRUCTOR
-    public CoverPhoto(final CustomWebDriver custWebDr) {
-        webDriver = custWebDr;
-        ul = new Util(webDriver);
-        this.applib = applib;
+    public CoverPhoto(final CustomWebDriver webDriver) {
+        CoverPhoto.webDriver = webDriver;
+        PageFactory.initElements(webDriver, this);
     }
     
     //PAGE OBJECT IDENTIFIERS

@@ -44,6 +44,7 @@ public class Modules {
     	PageFactory.initElements(webDriver, applib);
     	taxonomy = new Taxonomy(webDriver);
     	PageFactory.initElements(webDriver, taxonomy);
+    	PageFactory.initElements(webDriver, this);
     }
     
     //PAGE OBJECT IDENTIFIERS

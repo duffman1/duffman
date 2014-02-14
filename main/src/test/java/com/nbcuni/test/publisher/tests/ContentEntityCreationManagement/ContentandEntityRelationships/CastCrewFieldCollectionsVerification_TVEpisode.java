@@ -57,7 +57,6 @@ public class CastCrewFieldCollectionsVerification_TVEpisode extends ParentTest {
         
         //Step 2
         CharactersInformation charactersInformation = new CharactersInformation(webDriver);
-        PageFactory.initElements(webDriver, charactersInformation);
         SelectFile selectFile = new SelectFile(webDriver, applib);
         PageFactory.initElements(webDriver, selectFile);
         
@@ -102,7 +101,6 @@ public class CastCrewFieldCollectionsVerification_TVEpisode extends ParentTest {
         overlay.SwitchToActiveFrame();
         String TVEpisodeName = random.GetCharacterString(15);        
         BasicInformation basicInformation = new BasicInformation(webDriver);
-        PageFactory.initElements(webDriver, basicInformation);
         basicInformation.EnterTitle(TVEpisodeName);
         basicInformation.EnterEpisodeNumber("1");
     	basicInformation.EnterSynopsis();       
@@ -111,7 +109,6 @@ public class CastCrewFieldCollectionsVerification_TVEpisode extends ParentTest {
       
         //Step 6
         CastCrew castCrew = new CastCrew(webDriver);
-        PageFactory.initElements(webDriver, castCrew);
         castCrew.ClickCastCrewLnk();
         //Add  Cast/Crew number : 2
         castCrew.EnterPersonName(Persons.get(0), "1");

@@ -70,7 +70,6 @@ public class CreateTVEpisode extends ParentTest{
             
             	//Step 4
             	BasicInformation basicInformation = new BasicInformation(webDriver);
-            	PageFactory.initElements(webDriver, basicInformation);
             	basicInformation.ClickBasicInformationTab();
             	String tvEpisodeTitle = random.GetCharacterString(15);
             	basicInformation.EnterTitle(tvEpisodeTitle);
@@ -90,7 +89,6 @@ public class CreateTVEpisode extends ParentTest{
         	
             	//Step 7
             	CastCrew castCrew = new CastCrew(webDriver);
-            	PageFactory.initElements(webDriver, castCrew);
             	castCrew.ClickCastCrewLnk();
         	
             	//Step 8

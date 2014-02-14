@@ -1,27 +1,15 @@
 package com.nbcuni.test.publisher.pageobjects.ErrorChecking;
 
-
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.Reporter;
-
-import com.nbcuni.test.lib.Util;
 import com.nbcuni.test.publisher.common.AppLib;
-import com.nbcuni.test.publisher.common.Random;
 import com.nbcuni.test.webdriver.CustomWebDriver;
-
 
 /*********************************************
  * publisher.nbcuni.com Content Parent Library. Copyright
@@ -36,9 +24,9 @@ public class ErrorChecking {
     private static AppLib applib;
     
     //PAGE OBJECT CONSTRUCTOR
-    public ErrorChecking(CustomWebDriver custWebDr, AppLib applib) {
-        webDriver = custWebDr;
-        this.applib = applib;
+    public ErrorChecking(CustomWebDriver webDriver, AppLib applib) {
+        ErrorChecking.webDriver = webDriver;
+        ErrorChecking.applib = applib;
         
     }
     
@@ -89,7 +77,8 @@ public class ErrorChecking {
     		allowedErrors.add("There are security updates available for one or more of your modules or themes");
     		allowedErrors.add("An MPXplayer that's in use");
     		allowedErrors.add("There is a security update available for your version of Drupal");
-    		
+    		allowedErrors.add("Request to retrieve mpx feed data returned a(n) \"com.theplatform.authentication.api.exception.AuthenticationException\" exception.");
+    		allowedErrors.add("Expiring mpx token FAILED.");
     		
     		//FIRST - check if error container is present
     		boolean errorContainerPresent = false;
@@ -123,9 +112,10 @@ public class ErrorChecking {
     				//check the error text isn't in list of allowed errors
     				if (errorText.contains(allowedErrors.get(0)) 
     						|| errorText.contains(allowedErrors.get(1))
-    							|| errorText.contains(allowedErrors.get(2))) {
+    							|| errorText.contains(allowedErrors.get(2))
+    								|| errorText.contains(allowedErrors.get(3))
+    								 	|| errorText.contains(allowedErrors.get(4))) {
     					//ignore error
-    					
     				}
     				else {
     					//legit error and fail test
@@ -145,7 +135,9 @@ public class ErrorChecking {
     				for (String error : Errors) {
     					if (error.contains(allowedErrors.get(0)) 
     							|| error.contains(allowedErrors.get(1))
-    									|| error.contains(allowedErrors.get(2))) {
+    									|| error.contains(allowedErrors.get(2))
+    										|| error.contains(allowedErrors.get(3))
+    										 	|| error.contains(allowedErrors.get(4))) {
     						//ignore error
     					}
     					else {
