@@ -2,12 +2,9 @@ package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Contenta
 
 import java.util.Arrays;
 import java.util.List;
-
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
-
 import com.nbcuni.test.publisher.common.ParentTest;
-import com.nbcuni.test.publisher.pageobjects.Overlay;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Content.BasicInformation;
 import com.nbcuni.test.publisher.pageobjects.Content.CastCrew;
@@ -19,7 +16,6 @@ import com.nbcuni.test.publisher.pageobjects.Content.PublishingOptions;
 import com.nbcuni.test.publisher.pageobjects.Content.Revisions;
 import com.nbcuni.test.publisher.pageobjects.Content.SelectFile;
 import com.nbcuni.test.publisher.pageobjects.Content.WorkBench;
-import com.nbcuni.test.publisher.pageobjects.Taxonomy.Taxonomy;
 
 public class CastCrewFieldCollectionsVerification_TVEpisode extends ParentTest {
 	 /*************************************************************************************
@@ -50,22 +46,18 @@ public class CastCrewFieldCollectionsVerification_TVEpisode extends ParentTest {
     			"PersonName" + random.GetCharacterString(10),
     				"PersonName" + random.GetCharacterString(10));
     	UserLogin userLogin = applib.openApplication();
-    	PageFactory.initElements(webDriver, userLogin);
-        userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+    	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
         ContentParent contentParent = new ContentParent(webDriver, applib);
-        PageFactory.initElements(webDriver, contentParent);
         
         //Step 2
         CharactersInformation charactersInformation = new CharactersInformation(webDriver);
         SelectFile selectFile = new SelectFile(webDriver, applib);
-        PageFactory.initElements(webDriver, selectFile);
         
         for(int CCount=0;CCount<3;CCount++) {
 	        taxonomy.NavigateSite("Content>>Add content>>Character Profile");
 	        overlay.SwitchToFrame("Create Character Profile");
 	        charactersInformation.EnterCharacterFirstName(Characters.get(CCount));
 	        CoverPhoto coverPhoto = new CoverPhoto(webDriver);
-	        PageFactory.initElements(webDriver, coverPhoto);
 	        coverPhoto.ClickSelectBtn();
 	        selectFile.SelectDefaultCoverImg();
 	        overlay.SwitchToFrame("Create Character Profile");
@@ -123,12 +115,10 @@ public class CastCrewFieldCollectionsVerification_TVEpisode extends ParentTest {
         contentParent.ClickSaveBtn();
         overlay.switchToDefaultContent();
         WorkBench workBench = new WorkBench(webDriver, applib);
-        PageFactory.initElements(webDriver, workBench);
         workBench.ClickWorkBenchTab("Revisions");
         overlay.switchToDefaultContent();
         overlay.SwitchToActiveFrame();
         Revisions revisions = new Revisions(webDriver, applib);
-        PageFactory.initElements(webDriver, revisions);
         revisions.ClickEditMenuBtn(TVEpisodeName);
         overlay.switchToDefaultContent();
         overlay.SwitchToActiveFrame();

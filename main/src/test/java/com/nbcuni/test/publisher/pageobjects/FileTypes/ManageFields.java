@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Reporter;
 
@@ -25,9 +26,10 @@ public class ManageFields {
     private static AppLib applib;
     
     //PAGE OBJECT CONSTRUCTOR
-    public ManageFields(final CustomWebDriver custWebDr, AppLib applib) {
-        webDriver = custWebDr;
-        this.applib = applib;
+    public ManageFields(CustomWebDriver webDriver, AppLib applib) {
+        ManageFields.webDriver = webDriver;
+        ManageFields.applib = applib;
+        PageFactory.initElements(webDriver, this);
     }
     
     //PAGE OBJECT IDENTIFIERS

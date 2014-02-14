@@ -67,12 +67,11 @@ public class MPXVideosSchedulingVerificationInitialOverrides extends ParentTest{
 
     	//Step 1
     	UserLogin userLogin = applib.openApplication();
-    	PageFactory.initElements(webDriver, userLogin);
-        userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+    	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
         
         //Step 2 on requires prior MPX configuration
         taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
-        overlay.SwitchToFrame("Media: thePlatform mpx settings dialog");
+        overlay.SwitchToActiveFrame();
         Settings settings = new Settings(webDriver, applib);
         if (settings.IsMPXConfigured() == true) {
 
@@ -81,9 +80,8 @@ public class MPXVideosSchedulingVerificationInitialOverrides extends ParentTest{
         	//Step 2 onward will use an existing mpx published video due to flash based restriction
             overlay.switchToDefaultContent();
             taxonomy.NavigateSite("Content>>Files>>mpxMedia");
-            overlay.SwitchToFrame("Content");
+            overlay.SwitchToActiveFrame();
             SearchFor searchFor = new SearchFor(webDriver, applib);
-            PageFactory.initElements(webDriver, searchFor);
             searchFor.EnterTitle("Automation1");
             searchFor.ClickApplyBtn();
             searchFor.VerifySearchResultsPresent(Arrays.asList("Automation1"));
@@ -91,7 +89,6 @@ public class MPXVideosSchedulingVerificationInitialOverrides extends ParentTest{
             searchFor.ClickSearchTitleLnk("Automation1");
             overlay.switchToDefaultContent();
             ContentParent contentParent = new ContentParent(webDriver, applib);
-            PageFactory.initElements(webDriver, contentParent);
             List<String> defaultVideoValues = Arrays.asList("Automation1", "MPX Released File Public IDs:",
                     "MPX Media Default Released File Public ID:", "MPX Media Categories:", "Series", "Show", "MPX Media Description:",
                     "Automation 1 example test", "MPX Media Author:", "Pub7 Content Provider", "MPX Media Air Date:",
@@ -107,7 +104,6 @@ public class MPXVideosSchedulingVerificationInitialOverrides extends ParentTest{
 
             //Step 21
             WorkBench workBench = new WorkBench(webDriver, applib);
-            PageFactory.initElements(webDriver, workBench);
             workBench.ClickWorkBenchTab("Edit");
             overlay.SwitchToActiveFrame();
 
@@ -161,7 +157,7 @@ public class MPXVideosSchedulingVerificationInitialOverrides extends ParentTest{
             //Step 36
             searchFor.ClickSearchTitleLnk("Automation1"); */
             workBench.ClickWorkBenchTab("Edit");
-            overlay.SwitchToFrame("Edit mpx_video_1 Automation1 dialog");
+            overlay.SwitchToActiveFrame();
 
             //Step 37
             editMPXVideo.ClickOverrideMPXAvailableDateCbx();

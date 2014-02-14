@@ -1,25 +1,18 @@
 package com.nbcuni.test.publisher.pageobjects.Content;
 
-
-import com.nbcuni.test.lib.Util;
 import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.webdriver.CustomWebDriver;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
-
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
-
 
 /*********************************************
  * publisher.nbcuni.com Search Library. Copyright
@@ -34,9 +27,10 @@ public class SearchFor {
     private static AppLib applib;
     
     //PAGE OBJECT CONSTRUCTOR
-    public SearchFor(final CustomWebDriver custWebDr, final AppLib applib) {
-        webDriver = custWebDr;
-        this.applib = applib;
+    public SearchFor(CustomWebDriver webDriver, AppLib applib) {
+        SearchFor.webDriver = webDriver;
+        SearchFor.applib = applib;
+        PageFactory.initElements(webDriver, this);
     }
    
     //PAGE OBJECT IDENTIFIERS

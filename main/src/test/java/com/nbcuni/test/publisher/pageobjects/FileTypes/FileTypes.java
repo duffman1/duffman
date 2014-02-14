@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
 
 import com.nbcuni.test.webdriver.CustomWebDriver;
@@ -20,8 +21,9 @@ public class FileTypes {
     private static CustomWebDriver webDriver;
     
     //PAGE OBJECT CONSTRUCTOR
-    public FileTypes(final CustomWebDriver custWebDr) {
-        webDriver = custWebDr;
+    public FileTypes(CustomWebDriver webDriver) {
+        FileTypes.webDriver = webDriver;
+        PageFactory.initElements(webDriver, this);
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -32,6 +34,7 @@ public class FileTypes {
     private static WebElement EditFileType_Lnk(String fieldName) {
     	return webDriver.findElement(By.xpath("//td[contains(text(), '" + fieldName + "')]/..//a[text()='edit file type']"));
     }
+    
     
     //PAGE OBJECT METHODS
     public void ClickManageFieldsLnk(String fieldName) throws Exception {

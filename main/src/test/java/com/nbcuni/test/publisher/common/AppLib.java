@@ -43,7 +43,6 @@ public class AppLib {
     private Integer proxyPort = 0;
     private String pathToMediaContent = "";
     private String pathToScreenshots = "";
-    private String moduleOverlaysEnabled = "";
     private String pathToSikuliImages = "";
     private String admin1Username = "";
     private String admin1Password = "";
@@ -53,6 +52,8 @@ public class AppLib {
     private String pageLoadWaitTime = "";
     private String errorChecksEnabled = "";
     private String mpxUrl = "";
+    private String gMailAutoEmailUsername = "";
+    private String gMailAutoEmailPassword = "";
 
     private static String configFileName = "src" + File.separator + "test" + File.separator + "resources"
             + File.separator + "config.properties";
@@ -112,7 +113,6 @@ public class AppLib {
             proxyPort = Integer.valueOf(configProperties.getProperty(environment + ".ProxyPort"));
             pathToMediaContent = configProperties.getProperty(environment + ".PathToMediaContent");
             pathToScreenshots = configProperties.getProperty(environment + ".PathToScreenShots");
-            moduleOverlaysEnabled = configProperties.getProperty(environment + ".ModuleOverlaysEnabled");
             pathToSikuliImages = configProperties.getProperty(environment + ".PathToSikuliImages");
             admin1Username = configProperties.getProperty(environment + ".Admin1UserName");
             admin1Password = configProperties.getProperty(environment + ".Admin1PassWord");
@@ -122,6 +122,8 @@ public class AppLib {
             pageLoadWaitTime = configProperties.getProperty(environment + ".PageLoadWaitTime");
             errorChecksEnabled = configProperties.getProperty(environment + ".ErrorCheckingEnabled");
             mpxUrl = configProperties.getProperty(environment + ".MPXUrl");
+            gMailAutoEmailUsername = configProperties.getProperty(environment + ".GMailAutoEmailUsername");
+            gMailAutoEmailPassword = configProperties.getProperty(environment + ".GMailAutoEmailPassword");
             
         } catch (Exception e) {
             new CustomWebDriverException(e, custWebDr);
@@ -138,19 +140,16 @@ public class AppLib {
     public String getPathToSikuliImages(){
     	
     	String pathToSikuliImages = System.getProperty("user.dir") + this.pathToSikuliImages;
+    	pathToSikuliImages = pathToSikuliImages.replace("/", File.separator);
     	return pathToSikuliImages;
     }
     
     public String getAdmin1Username(){
     	
-    	String admin1Username = this.admin1Username;
-    	
     	return admin1Username;
     }
     
     public String getAdmin1Password(){
-    	
-    	String admin1Password = this.admin1Password;
     	
     	return admin1Password;
     }
@@ -162,16 +161,14 @@ public class AppLib {
 
     public String getMPXUsername(){
     	
-    	String MPXUsername = this.mpxUsername;
+    	return mpxUsername;
     	
-    	return MPXUsername;
     }
     
     public String getMPXPassword(){
     	
-    	String MPXPassword = this.mpxPassword;
+    	return mpxPassword;
     	
-    	return MPXPassword;
     }
     
     public int getImplicitWaitTime(){
@@ -183,6 +180,18 @@ public class AppLib {
     public int getPageLoadWaitTime(){
     	
     	return Integer.parseInt(this.pageLoadWaitTime);
+    	
+    }
+    
+    public String getGmailAutoEmailUsername(){
+    	
+    	return gMailAutoEmailUsername;
+    	
+    }
+    
+    public String getGmailAutoEmailPassword(){
+    	
+    	return gMailAutoEmailPassword;
     	
     }
     

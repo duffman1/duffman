@@ -1,11 +1,13 @@
 package com.nbcuni.test.publisher.pageobjects.People;
 
-
 import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -14,7 +16,6 @@ import org.testng.Reporter;
 import com.nbcuni.test.lib.Util;
 import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.webdriver.CustomWebDriver;
-
 
 /*********************************************
  * publisher.nbcuni.com Add User Library. Copyright
@@ -26,76 +27,102 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 public class AddUser {
 
     private static CustomWebDriver webDriver;
-    private static AppLib al;
-    private final Util ul;
     
-    private static String Username_Txb = "//input[@id='edit-name']";
-    private static String EmailAddress_Txb = "//input[@id='edit-mail']";
-    private static String Password_Txb = "//input[@id='edit-pass-pass1']";
-    private static String ConfirmPassword_Txb = "//input[@id='edit-pass-pass2']";
-    private static String Role_Editor_Cbx = "//input[@id='edit-roles-4']";
-    private static String FirstName_Txb = "//input[@id='edit-field-first-name-und-0-value']";
-    private static String LastName_Txb = "//input[@id='edit-field-last-name-und-0-value']";
-    private static String CreateNewAccount_Btn = "//input[@value='Create new account']";
-    
-    public AddUser(final CustomWebDriver custWebDr) {
-        webDriver = custWebDr;
-        ul = new Util(webDriver);
-        
+    //PAGE OBJECT CONSTRUCTOR
+    public AddUser(CustomWebDriver webDriver) {
+        AddUser.webDriver = webDriver;
+        PageFactory.initElements(webDriver, this);
     }
     
+    //PAGE OBJECT IDENTIFIERS
+    @FindBy(how = How.XPATH, using = "//input[@id='edit-name']")
+    private static WebElement Username_Txb;
+    
+    @FindBy(how = How.XPATH, using = "//input[@id='edit-mail']")
+    private static WebElement EmailAddress_Txb;
+    
+    @FindBy(how = How.XPATH, using = "//input[@id='edit-pass-pass1']")
+    private static WebElement Password_Txb;
+    
+    @FindBy(how = How.XPATH, using = "//input[@id='edit-pass-pass2']")
+    private static WebElement ConfirmPassword_Txb;
+    
+    @FindBy(how = How.XPATH, using = "//input[@id='edit-roles-4']")
+    private static WebElement Role_Editor_Cbx;
+    
+    @FindBy(how = How.ID, using = "edit-notify")
+    private static WebElement NotifyUserNewAccount_Cbx;
+    
+    @FindBy(how = How.XPATH, using = "//input[@id='edit-field-first-name-und-0-value']")
+    private static WebElement FirstName_Txb;
+    
+    @FindBy(how = How.XPATH, using = "//input[@id='edit-field-last-name-und-0-value']")
+    private static WebElement LastName_Txb;
+    
+    @FindBy(how = How.XPATH, using = "//input[@value='Create new account']")
+    private static WebElement CreateNewAccount_Btn;
+    
+    
+    //PAGE OBJECT METHODS
     public void EnterUsername(String userName) throws Exception {
     	
-    	WebElement el = new WebDriverWait(webDriver, 10).until(ExpectedConditions.
-    			visibilityOf(webDriver.findElement(By.xpath(Username_Txb))));
-    	el.sendKeys(userName);
+    	Reporter.log("Enter '" + userName + "' in the 'Username' text box.");
+    	Username_Txb.sendKeys(userName);
+    	
     }
     
     public void EnterEmailAddress(String emailAddress) throws Exception {
     	
-    	WebElement el = new WebDriverWait(webDriver, 10).until(ExpectedConditions.
-    			visibilityOf(webDriver.findElement(By.xpath(EmailAddress_Txb))));
-    	el.sendKeys(emailAddress);
+    	Reporter.log("Enter '" + emailAddress + "' in the 'E-mail address' text box.");
+    	EmailAddress_Txb.sendKeys(emailAddress);
+    	
     }
     
     public void EnterPassword(String passWord) throws Exception {
     	
-    	WebElement el = new WebDriverWait(webDriver, 10).until(ExpectedConditions.
-    			visibilityOf(webDriver.findElement(By.xpath(Password_Txb))));
-    	el.sendKeys(passWord);
+    	Reporter.log("Enter '" + passWord + "' in the 'Password' text box.");
+    	Password_Txb.sendKeys(passWord);
+    	
     }
     
     public void EnterConfirmPassword(String passWord) throws Exception {
     	
-    	WebElement el = new WebDriverWait(webDriver, 10).until(ExpectedConditions.
-    			visibilityOf(webDriver.findElement(By.xpath(ConfirmPassword_Txb))));
-    	el.sendKeys(passWord);
+    	Reporter.log("Enter '" + passWord + "' in the 'Confirm password' text box.");
+    	ConfirmPassword_Txb.sendKeys(passWord);
     }
     
     public void ClickEditorRoleCbx() throws Exception {
     	
-    	WebElement el = new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(By.xpath(Role_Editor_Cbx)));
-    	el.click();
+    	Reporter.log("Check the 'editor' checkbox.");
+    	Role_Editor_Cbx.click();
+    }
+    
+    public void CheckNotifyUserNewAccountCbx() throws Exception {
+    	
+    	if (NotifyUserNewAccount_Cbx.isSelected() == false) {
+    		Reporter.log("Check the 'Notify user of a new account' check box.");
+    		NotifyUserNewAccount_Cbx.click();
+    	}
     }
     
     public void EnterFirstName(String firstName) throws Exception {
     	
-    	WebElement el = new WebDriverWait(webDriver, 10).until(ExpectedConditions.
-    			visibilityOf(webDriver.findElement(By.xpath(FirstName_Txb))));
-    	el.sendKeys(firstName);
+    	Reporter.log("Enter '" + firstName + "' in the 'First Name' text box.");
+    	FirstName_Txb.sendKeys(firstName);
+    	
     }
     
     public void EnterLastName(String lastName) throws Exception {
     	
-    	WebElement el = new WebDriverWait(webDriver, 10).until(ExpectedConditions.
-    			visibilityOf(webDriver.findElement(By.xpath(LastName_Txb))));
-    	el.sendKeys(lastName);
+    	Reporter.log("Enter '" + lastName + "' in the 'Last Name' text box.");
+    	LastName_Txb.sendKeys(lastName);
+    	
     }
     
     public void ClickCreateNewAccountBtn() throws Exception {
     	
-    	WebElement el = new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(By.xpath(CreateNewAccount_Btn)));
-    	el.click();
+    	Reporter.log("Click the 'Create new account' button.");
+    	CreateNewAccount_Btn.click();
     }
     
     

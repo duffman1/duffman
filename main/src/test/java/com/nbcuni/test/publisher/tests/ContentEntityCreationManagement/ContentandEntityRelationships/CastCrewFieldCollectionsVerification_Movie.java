@@ -50,22 +50,18 @@ public class CastCrewFieldCollectionsVerification_Movie extends ParentTest{
     			"PersonFirstName" + random.GetCharacterString(10),
     				"PersonFirstName" + random.GetCharacterString(10));
     	UserLogin userLogin = applib.openApplication();
-    	PageFactory.initElements(webDriver, userLogin);
-        userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+    	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
         ContentParent contentParent = new ContentParent(webDriver, applib);
-        PageFactory.initElements(webDriver, contentParent);
         
         //Step 2
         CharactersInformation charactersInformation = new CharactersInformation(webDriver);
         SelectFile selectFile = new SelectFile(webDriver, applib);
-        PageFactory.initElements(webDriver, selectFile);
         
         for(int CCount=0;CCount<3;CCount++){
 	        taxonomy.NavigateSite("Content>>Add content>>Character Profile");
 	        overlay.SwitchToFrame("Create Character Profile");
 	        charactersInformation.EnterCharacterFirstName(Characters.get(CCount));
 	        CoverPhoto coverPhoto = new CoverPhoto(webDriver);
-	        PageFactory.initElements(webDriver, coverPhoto);
 	        coverPhoto.ClickSelectBtn();
 	        selectFile.SelectDefaultCoverImg();
 	        overlay.SwitchToFrame("Create Character Profile");
@@ -124,12 +120,10 @@ public class CastCrewFieldCollectionsVerification_Movie extends ParentTest{
         contentParent.ClickSaveBtn();
         overlay.switchToDefaultContent();
         WorkBench workBench = new WorkBench(webDriver, applib);
-        PageFactory.initElements(webDriver, workBench);
         workBench.ClickWorkBenchTab("Revisions");
         overlay.switchToDefaultContent();
         overlay.SwitchToActiveFrame();
         Revisions revisions = new Revisions(webDriver, applib);
-        PageFactory.initElements(webDriver, revisions);
         revisions.ClickEditMenuBtn(MovieName);
         overlay.switchToDefaultContent();
         overlay.SwitchToActiveFrame();

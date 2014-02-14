@@ -1,7 +1,10 @@
 package com.nbcuni.test.publisher.tests.Video.CanonicalURLSupport;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
+
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Content.AddFile;
 import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
@@ -18,6 +21,8 @@ import com.nbcuni.test.publisher.pageobjects.UserLogin;
 
 import junit.framework.Assert;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
@@ -42,8 +47,7 @@ public class MPXCanonicalURLImportableURLAlias extends ParentTest{
 
     	//Step 1
     	UserLogin userLogin = applib.openApplication();
-    	PageFactory.initElements(webDriver, userLogin);
-        userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+    	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
         
         //MPX Configuration required
         taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
@@ -62,15 +66,12 @@ public class MPXCanonicalURLImportableURLAlias extends ParentTest{
         	
         		//Step 3
         		FileTypes fileTypes = new FileTypes(webDriver);
-        		PageFactory.initElements(webDriver, fileTypes);
         		fileTypes.ClickManageFieldsLnk(configuredAccounts.get(0));
         		
         		//Step 4
         		overlay.SwitchToActiveFrame();
         		ContentParent contentParent = new ContentParent(webDriver, applib);
-        		PageFactory.initElements(webDriver, contentParent);
         		ManageFields manageFields = new ManageFields(webDriver, applib);
-        		PageFactory.initElements(webDriver, manageFields);
         		if (manageFields.FieldLabelExists("MPX Media Related Link") == false) {
         			
         			manageFields.EnterAddNewField("MPX Media Related Link");
@@ -84,14 +85,28 @@ public class MPXCanonicalURLImportableURLAlias extends ParentTest{
         		//Step 6
     			overlay.ClickCloseOverlayLnk();
         		overlay.switchToDefaultContent();
-        		taxonomy.NavigateSite("Structure>>File types");
-        		overlay.SwitchToActiveFrame();
-        		fileTypes.ClickEditFileTypeLnk("DB TV");
+        		//Below Step is a horrendous hack as a work around for dealing with the known bug of duplicate mpx account links in the file type menu
+        		String allURLs = null;
+        		for (WebElement el : webDriver.findElements(By.xpath("//a[text()='MPX Video for Account \"DB TV\" (2312945284)']"))) {
+        			allURLs = allURLs + el.getAttribute("href");
+        		}
+        		allURLs = allURLs.replaceAll(applib.getApplicationURL() + "/admin/structure/file-types/manage/", "");
+        		String[] index = allURLs.split("mpx_video_");
+        		ArrayList<Integer> allIndexInts = new ArrayList<Integer>();
+        		allIndexInts.removeAll(Collections.singleton("empty"));
+        		for (String s : index) {
+        			try {
+        				allIndexInts.add(Integer.parseInt(s));
+        			}
+        			catch (NumberFormatException e) {}
+        		}
+        		Integer maxScore = Collections.max(allIndexInts);
+        		WebElement accountLnk = webDriver.findElement(By.xpath("//a[contains(text(), 'DB TV')][contains(@href, '" + maxScore.toString() + "')]"));
+        		webDriver.executeScript("arguments[0].click();", accountLnk);
         		overlay.SwitchToActiveFrame();
         		
         		//Step 7
         		MPXFileType mpxFileType = new MPXFileType(webDriver);
-        		PageFactory.initElements(webDriver, mpxFileType);
         		mpxFileType.SelectURLAliasField("MPX Media Related Link");
         		mpxFileType.ClickSaveBtn();
         		contentParent.VerifyMessageStatus("has been updated.");
@@ -151,7 +166,6 @@ public class MPXCanonicalURLImportableURLAlias extends ParentTest{
         	    taxonomy.NavigateSite("Content>>Files>>mpxMedia");
         	    overlay.SwitchToActiveFrame();
         	    SearchFor searchFor = new SearchFor(webDriver, applib);
-        	    PageFactory.initElements(webDriver, searchFor);
         	    searchFor.EnterTitle(mediaTitle);
         	    searchFor.ClickApplyBtn();
         	    overlay.switchToDefaultContent();

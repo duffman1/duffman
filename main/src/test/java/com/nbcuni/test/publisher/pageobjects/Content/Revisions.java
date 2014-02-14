@@ -7,6 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.Reporter;
 
@@ -23,9 +24,10 @@ public class Revisions {
 	private static AppLib applib;
     
 	//PAGE OBJECT CONSTRUCTOR
-	public Revisions(final CustomWebDriver custWebDr, AppLib applib) {
-        webDriver = custWebDr;
-        this.applib = applib;
+	public Revisions(CustomWebDriver webDriver, AppLib applib) {
+        Revisions.webDriver = webDriver;
+        Revisions.applib = applib;
+        PageFactory.initElements(webDriver, this);
     }
 	
 	//PAGE OBJECT IDENTIFIERS

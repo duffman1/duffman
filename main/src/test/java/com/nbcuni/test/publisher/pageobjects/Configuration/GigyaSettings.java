@@ -71,6 +71,7 @@ public class GigyaSettings {
     public void EnterAdvancedShowShareBarUISettings(String settings) throws Exception {
     	
     	Reporter.log("Enter '" + settings + "' in the 'Advanced showShareBarUI settings' text area.");
+    	Thread.sleep(1000);
     	AdvancedShowShareBarUISettings_Txa.clear();
     	AdvancedShowShareBarUISettings_Txa.sendKeys(settings);
     }
