@@ -1,32 +1,14 @@
 package com.nbcuni.test.publisher.pageobjects.Content;
 
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.NoSuchElementException;
 import java.util.concurrent.TimeUnit;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.remote.LocalFileDetector;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.sikuli.script.Pattern;
-import org.sikuli.script.Region;
-import org.sikuli.script.Screen;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.Reporter;
-
-import com.nbcuni.test.lib.Util;
 import com.nbcuni.test.publisher.common.AppLib;
-import com.nbcuni.test.publisher.pageobjects.Overlay;
-import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXAssets;
 import com.nbcuni.test.webdriver.CustomWebDriver;
-
 
 /*********************************************
  * publisher.nbcuni.com Edit Image Library. Copyright
@@ -39,13 +21,12 @@ public class EditImage {
 
     private static CustomWebDriver webDriver;
     private AppLib applib;
-    private Util ul;
     
     //PAGE OBJECT CONSTRUCTOR
-    public EditImage(final CustomWebDriver custWebDr) {
-        webDriver = custWebDr;
-        ul = new Util(webDriver);
+    public EditImage(CustomWebDriver webDriver, AppLib applib) {
+        EditImage.webDriver = webDriver;
         this.applib = applib;
+        PageFactory.initElements(webDriver, this);
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -122,7 +103,23 @@ public class EditImage {
     	
     	Reporter.log("Click the 'Close Window' image.");
     	CloseWindow_Img.click();
-    	Thread.sleep(1000); //TODO - add dynamic wait
+    	
+    	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+    	boolean imgPresent = false;
+    	for (int second = 0; ; second++) {
+            if (second >= 60) {
+                Assert.fail("Edit image is still present after timeout");}
+            try{
+            	CloseWindow_Img.isDisplayed();
+                imgPresent = true;
+            }
+            catch (Exception e){
+            	imgPresent = false;
+            }
+            if (imgPresent == false){ break;}
+            Thread.sleep(500);
+        }
+    	webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
     	
     }
     

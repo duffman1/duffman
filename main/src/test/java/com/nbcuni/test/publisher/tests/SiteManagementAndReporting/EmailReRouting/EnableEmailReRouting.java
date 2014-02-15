@@ -1,35 +1,12 @@
 package com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EmailReRouting;
 
-import java.net.URL;
-import java.util.Arrays;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.Properties;
-
-import javax.mail.Folder;
-import javax.mail.Message;
-import javax.mail.Session;
-import javax.mail.Store;
-
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.GmailConnect;
 import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Configuration.RerouteEmail;
-import com.nbcuni.test.publisher.pageobjects.Content.BasicInformation;
 import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
-import com.nbcuni.test.publisher.pageobjects.Content.Delete;
-import com.nbcuni.test.publisher.pageobjects.Content.PublishingOptions;
-import com.nbcuni.test.publisher.pageobjects.Content.Revisions;
-import com.nbcuni.test.publisher.pageobjects.Content.WorkBench;
-import com.nbcuni.test.publisher.pageobjects.Facebook.DrupalForFacebook;
-import com.nbcuni.test.publisher.pageobjects.Facebook.NodeTypes;
-import com.nbcuni.test.publisher.pageobjects.Facebook.Share;
 import com.nbcuni.test.publisher.pageobjects.People.AddUser;
 
 public class EnableEmailReRouting extends ParentTest{
@@ -47,6 +24,10 @@ public class EnableEmailReRouting extends ParentTest{
     	//Step 1
     	UserLogin userLogin = applib.openApplication();
     	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+        
+    	//Step 1a
+    	Modules modules = new Modules(webDriver, applib);
+        modules.VerifyModuleEnabled("Reroute emails");
         
     	//Step 2
     	taxonomy.NavigateSite("Configuration>>Development>>Reroute Email");

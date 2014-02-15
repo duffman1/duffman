@@ -31,12 +31,10 @@ public class CreatePost extends ParentTest{
          
         	//Step 1
         	UserLogin userLogin = applib.openApplication();
-        	PageFactory.initElements(webDriver, userLogin);
-            userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+        	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
             
             //Step 1a
             Modules modules = new Modules(webDriver, applib);
-            PageFactory.initElements(webDriver, modules);
             modules.VerifyModuleEnabled("Pub Post");
             
             List<String> allStates = Arrays.asList("Draft", "Review", "Published");
@@ -48,7 +46,6 @@ public class CreatePost extends ParentTest{
             
             	//Step 2
             	ContentParent contentParent = new ContentParent(webDriver, applib);
-            	PageFactory.initElements(webDriver, contentParent);
             	contentParent.VerifyRequiredFields(Arrays.asList("Title", "Body"));
             	PublishingOptions publishingOptions = new PublishingOptions(webDriver);
             	publishingOptions.ClickPublishingOptionsLnk();
@@ -66,7 +63,6 @@ public class CreatePost extends ParentTest{
             	overlay.SwitchToFrame("Create Post");
             	basicInformation.ClickCoverSelectBtn();
             	SelectFile selectFile = new SelectFile(webDriver, applib);
-            	PageFactory.initElements(webDriver, selectFile);
             	selectFile.SelectDefaultCoverImg();
             	overlay.SwitchToFrame("Create Post");
             
@@ -79,7 +75,6 @@ public class CreatePost extends ParentTest{
             	overlay.switchToDefaultContent();
             	contentParent.VerifyMessageStatus("Post " + postTitle + " has been created.");
             	WorkBench workBench = new WorkBench(webDriver, applib);
-            	PageFactory.initElements(webDriver, workBench);
             	workBench.VerifyWorkBenchBlockTextPresent(Arrays.asList(state));
             	
             }

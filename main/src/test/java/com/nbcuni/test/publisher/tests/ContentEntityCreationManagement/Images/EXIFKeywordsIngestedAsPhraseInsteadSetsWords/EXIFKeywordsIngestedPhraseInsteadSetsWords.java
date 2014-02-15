@@ -30,14 +30,12 @@ public class EXIFKeywordsIngestedPhraseInsteadSetsWords extends ParentTest{
          
         	//Step 1
         	UserLogin userLogin = applib.openApplication();
-        	PageFactory.initElements(webDriver, userLogin);
-            userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+        	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
             
             //Step 1a
             taxonomy.NavigateSite("Configuration>>Media>>Simple EXIF/IPTC Mappings");
             overlay.SwitchToActiveFrame();
             SimpleEXIFIPTCMappings simpleEXIFIPTCMappings = new SimpleEXIFIPTCMappings(webDriver, applib);
-            PageFactory.initElements(webDriver, simpleEXIFIPTCMappings);
             simpleEXIFIPTCMappings.SelectAltText("Aperture");
             simpleEXIFIPTCMappings.SelectTitleText("Title");
             simpleEXIFIPTCMappings.SelectCaption("Caption");
@@ -75,8 +73,7 @@ public class EXIFKeywordsIngestedPhraseInsteadSetsWords extends ParentTest{
             overlay.SwitchToActiveFrame();
             
             //Step 3
-            EditImage editImage = new EditImage(webDriver);
-            PageFactory.initElements(webDriver, editImage);
+            EditImage editImage = new EditImage(webDriver, applib);
             editImage.VerifyTitleTextValue("NUP_155306_0046.JPG");
             editImage.VerifyAltTextValue("f/5.6");
             editImage.VerifySourceValue("Episodic");
@@ -86,7 +83,6 @@ public class EXIFKeywordsIngestedPhraseInsteadSetsWords extends ParentTest{
             editImage.ClickSaveBtn();
             overlay.SwitchToActiveFrame();
             ContentParent contentParent = new ContentParent(webDriver, applib);
-            PageFactory.initElements(webDriver, contentParent);
             contentParent.VerifyMessageStatus("Image");
             contentParent.VerifyMessageStatus("has been updated.");
             overlay.ClickCloseOverlayLnk();
@@ -100,7 +96,6 @@ public class EXIFKeywordsIngestedPhraseInsteadSetsWords extends ParentTest{
             basicInformation.EnterTitle(title);
             basicInformation.ClickMediaItemsSelectBtn();
             SelectFile selectFile = new SelectFile(webDriver, applib);
-            PageFactory.initElements(webDriver, selectFile);
             selectFile.SwitchToSelectFileFrm();
             addFile.ClickAddFilesLnk();
             if (webDriver.getCapabilities().getPlatform().toString() == "MAC") {
@@ -121,7 +116,6 @@ public class EXIFKeywordsIngestedPhraseInsteadSetsWords extends ParentTest{
             
             //Step 5
             MediaItems mediaItems = new MediaItems(webDriver);
-            PageFactory.initElements(webDriver, mediaItems);
             mediaItems.VerifyFileImagePresent("NUP_155306_0046");
             mediaItems.ClickEditBtn();
             
