@@ -1,25 +1,12 @@
 package com.nbcuni.test.publisher.pageobjects.Configuration;
 
-
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.List;
-import java.util.TimeZone;
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
-
-import com.nbcuni.test.lib.Util;
 import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.webdriver.CustomWebDriver;
-
 
 /*********************************************
  * publisher.nbcuni.com Gigya Settings Library. Copyright
@@ -34,9 +21,10 @@ public class GigyaSettings {
     private static AppLib applib;
     
     //PAGE OBJECT CONSTRUCTOR    
-    public GigyaSettings(CustomWebDriver custWebDr, AppLib applib) {
-        webDriver = custWebDr;
-        this.applib = applib;
+    public GigyaSettings(CustomWebDriver webDriver, AppLib applib) {
+        GigyaSettings.webDriver = webDriver;
+        GigyaSettings.applib = applib;
+        PageFactory.initElements(webDriver, this);
     }
     
     //PAGE OBJECT IDENTIFIERS    

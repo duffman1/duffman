@@ -1,18 +1,11 @@
 package com.nbcuni.test.publisher.pageobjects.Content;
 
-import java.util.List;
-
-import com.nbcuni.test.lib.Util;
 import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.webdriver.CustomWebDriver;
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
 /*********************************************
  * publisher.nbcuni.com Taxonomy Library. Copyright
@@ -26,10 +19,10 @@ public class GigyaShareBar {
     private static AppLib applib;
     
     //PAGE OBJECT CONSTRUCTORS
-    public GigyaShareBar(CustomWebDriver custWebDr, AppLib applib) {
-        webDriver = custWebDr;
-        this.applib = applib;
-        
+    public GigyaShareBar(CustomWebDriver webDriver, AppLib applib) {
+        GigyaShareBar.webDriver = webDriver;
+        GigyaShareBar.applib = applib;
+        PageFactory.initElements(webDriver, this);
     }
     
     //PAGE OBJECT IDENTIFIERS

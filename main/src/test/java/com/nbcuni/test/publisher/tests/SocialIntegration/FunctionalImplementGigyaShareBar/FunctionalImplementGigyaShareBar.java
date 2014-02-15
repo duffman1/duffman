@@ -44,8 +44,7 @@ public class FunctionalImplementGigyaShareBar extends ParentTest{
     	
     	//Step 1
     	UserLogin userLogin = applib.openApplication();
-    	PageFactory.initElements(webDriver, userLogin);
-        userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+    	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
         
         //Step 2 (creates new post)
         CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver, applib);
@@ -53,7 +52,6 @@ public class FunctionalImplementGigyaShareBar extends ParentTest{
         
         //Step Setup
         Modules modules = new Modules(webDriver, applib);
-        PageFactory.initElements(webDriver, modules);
         modules.VerifyModuleEnabled("Pub Gigya");
         
         //Step 3
@@ -65,13 +63,11 @@ public class FunctionalImplementGigyaShareBar extends ParentTest{
         workBench.ClickWorkBenchTab("Share");
         overlay.SwitchToActiveFrame();
         GigyaSettings gigyaSettings = new GigyaSettings(webDriver, applib);
-        PageFactory.initElements(webDriver, gigyaSettings);
         gigyaSettings.EnterProviders("Tumblr, email, googleplus-interactive ,foursquare, print, twitter-tweet, facebook-like");
         gigyaSettings.ClickGigyaAdvancedShareBarSettingsLnk();
         gigyaSettings.EnterAdvancedShowShareBarUISettings("wrap|true");
         gigyaSettings.ClickSaveConfiguration_Btn();
         ContentParent contentParent = new ContentParent(webDriver, applib);
-        PageFactory.initElements(webDriver, contentParent);
         contentParent.VerifyMessageStatus("The configuration options have been saved.");
         overlay.ClickCloseOverlayLnk();
         overlay.switchToDefaultContent();
@@ -80,13 +76,11 @@ public class FunctionalImplementGigyaShareBar extends ParentTest{
         taxonomy.NavigateSite("Content");
         overlay.SwitchToActiveFrame();
         SearchFor searchFor = new SearchFor(webDriver, applib);
-        PageFactory.initElements(webDriver, searchFor);
         searchFor.EnterTitle(postTitle);
         searchFor.ClickApplyBtn();
         overlay.switchToDefaultContent();
         searchFor.ClickSearchTitleLnk(postTitle);
         GigyaShareBar gigyaShareBar = new GigyaShareBar(webDriver, applib);
-        PageFactory.initElements(webDriver, gigyaShareBar);
         gigyaShareBar.VerifyTumblrBtnPresent();
         gigyaShareBar.VerifyEmailBtnPresent();
         gigyaShareBar.VerifyGooglePlusBtnPresent();
