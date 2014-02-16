@@ -4,6 +4,7 @@ import java.net.URL;
 import java.util.Arrays;
 
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.nbcuni.test.publisher.common.ParentTest;
@@ -11,6 +12,7 @@ import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Content.BasicInformation;
 import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
+import com.nbcuni.test.publisher.pageobjects.Content.CreateDefaultContent;
 import com.nbcuni.test.publisher.pageobjects.Content.Delete;
 import com.nbcuni.test.publisher.pageobjects.Content.PublishingOptions;
 import com.nbcuni.test.publisher.pageobjects.Content.Revisions;
@@ -46,14 +48,12 @@ public class ConfiguringPublisherAutopublishingToFacebookTimeandWall extends Par
     	
     	//Step 2
     	UserLogin userLogin = applib.openApplication();
-    	PageFactory.initElements(webDriver, userLogin);
-        userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+    	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
         
         //Step 3
         taxonomy.NavigateSite("Modules");
         overlay.SwitchToFrame("Modules");
         Modules modules = new Modules(webDriver, applib);
-        PageFactory.initElements(webDriver, modules);
         modules.EnterFilterName("Pub Social");
         modules.EnableModule("Pub Social");
         modules.EnterFilterName("Pub Post");
@@ -64,10 +64,9 @@ public class ConfiguringPublisherAutopublishingToFacebookTimeandWall extends Par
         //Step 3a
         taxonomy.NavigateSite("Structure>>Facebook Apps");
         overlay.SwitchToFrame("Drupal for Facebook");
-        DrupalForFacebook drupalForFacebook = new DrupalForFacebook(webDriver);
+        DrupalForFacebook drupalForFacebook = new DrupalForFacebook(webDriver, applib);
         Delete delete = new Delete(webDriver);
         ContentParent contentParent = new ContentParent(webDriver, applib);
-        PageFactory.initElements(webDriver, contentParent);
         boolean appAlreadyExists = drupalForFacebook.FacebookAppExists();
         if (appAlreadyExists == true) {
         	drupalForFacebook.ClickEditLnk();
@@ -120,7 +119,7 @@ public class ConfiguringPublisherAutopublishingToFacebookTimeandWall extends Par
         
         //Step 10
         taxonomy.NavigateSite("Configuration>>Web services>>Facebook");
-        NodeTypes nodeTypes = new NodeTypes(webDriver);
+        NodeTypes nodeTypes = new NodeTypes(webDriver, applib);
         nodeTypes.EnablePostNode();
         
         //Step 11
@@ -136,28 +135,42 @@ public class ConfiguringPublisherAutopublishingToFacebookTimeandWall extends Par
         contentParent.ClickSaveBtn();
         contentParent.VerifyMessageStatus("Post " + postTitle + " has been created.");
         WorkBench workBench = new WorkBench(webDriver, applib);
-        PageFactory.initElements(webDriver, workBench);
         workBench.ClickWorkBenchTab("Revisions");
         overlay.SwitchToFrame("Revisions");
         
         //Step 12
         Revisions revisions = new Revisions(webDriver, applib);
-        PageFactory.initElements(webDriver, revisions);
         revisions.ClickEditExtendMenuBtn(postTitle);
         revisions.ClickShareMenuBtn(postTitle);
-        Share share = new Share(webDriver);
+        Share share = new Share(webDriver, applib);
         share.ClickPostToFacebookWallCbx();
         String message = random.GetCharacterString(15);
         share.EnterBriefMessage(message);
         share.ClickShareBtn();
         
         //Step 14
-        Thread.sleep(30000); //TODO - add a better dynamic wait as posts to facebook take several seconds. No way of knowing when they post or not...
         webDriver.navigate().to(new URL("https://www.facebook.com/"));
         overlay.switchToDefaultContent();
-        contentParent.VerifyPageContentPresent(Arrays.asList("Publisher Seven Test User", 
-        		postTitle, "via Publisher 7 Test App"));
-        
+        for (int I = 0 ; ; I++) {
+        	if (I >= 10) {
+        		Assert.fail("Facebook app post has not posted to facebook.");
+        	}
+        	boolean postUpdatePresent = false;
+            
+        	try {
+        		contentParent.VerifyPageContentPresent(Arrays.asList("Publisher Seven Test User", 
+                		postTitle, "via Publisher 7 Test App"));
+        		postUpdatePresent = true;
+        	}
+        	catch (AssertionError e) {
+        		postUpdatePresent = false;
+        	}
+        	if (postUpdatePresent == true) { break; }
+        	else {
+        		Thread.sleep(1000);
+        		webDriver.navigate().refresh();
+        	}
+        }
         
     }
 }

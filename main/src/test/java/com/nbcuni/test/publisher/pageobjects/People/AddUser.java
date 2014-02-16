@@ -1,20 +1,10 @@
 package com.nbcuni.test.publisher.pageobjects.People;
 
-import java.util.List;
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 import org.testng.Reporter;
-
-import com.nbcuni.test.lib.Util;
-import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.webdriver.CustomWebDriver;
 
 /*********************************************
@@ -26,11 +16,8 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 
 public class AddUser {
 
-    private static CustomWebDriver webDriver;
-    
     //PAGE OBJECT CONSTRUCTOR
     public AddUser(CustomWebDriver webDriver) {
-        AddUser.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
     }
     

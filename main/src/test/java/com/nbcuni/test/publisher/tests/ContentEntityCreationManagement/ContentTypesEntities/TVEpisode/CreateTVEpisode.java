@@ -96,6 +96,7 @@ public class CreateTVEpisode extends ParentTest{
             	castCrew.SelectRole("Contributor", "1");
         	
             	//Step 9
+            	Thread.sleep(1000); //TODO - slight pause required here for this test - figure out a proper dynamic wait for this test.
             	contentParent.ClickSaveBtn();
             	contentParent.VerifyMessageStatus("TV Episode " + tvEpisodeTitle + " has been created.");
             	WorkBench workBench = new WorkBench(webDriver, applib);

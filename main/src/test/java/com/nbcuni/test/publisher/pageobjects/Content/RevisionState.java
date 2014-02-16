@@ -1,14 +1,12 @@
 package com.nbcuni.test.publisher.pageobjects.Content;
 
-
-import com.nbcuni.test.lib.Util;
-import com.nbcuni.test.publisher.common.AppLib;
+import java.util.List;
 import com.nbcuni.test.webdriver.CustomWebDriver;
 import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
-
+import org.testng.Reporter;
 
 /*********************************************
  * publisher.nbcuni.com Revision State Library. Copyright
@@ -20,26 +18,28 @@ import org.testng.Assert;
 public class RevisionState {
 
     private static CustomWebDriver webDriver;
-    private static AppLib al;
-    private final Util ul;
     
-    private static String RevisionState_Ctr = "//table[@id='revision-form-table']/tbody";
-    private static String RevisionsState_Tbl = "//table[@id='revision-form-table']/tbody/tr";
-    private static String Body_txt = "//div[@class='field field-name-body field-type-text-with-summary field-label-hidden']";
-    private static String Node_num = ".//*[@id='revision-form-table']/tbody/..//td[@class='views-field views-field-vid']";
-    public RevisionState(final CustomWebDriver custWebDr) {
-        webDriver = custWebDr;
-        ul = new Util(webDriver);
-        
+    //PAGE OBJECT CONSTRUCTOR
+    public RevisionState(CustomWebDriver webDriver) {
+        RevisionState.webDriver = webDriver;
+        PageFactory.initElements(webDriver, this);
     }
-
-    public void VerifyRevisionCount(Integer RevisionCount) throws Exception {
+    
+    //PAGE OBJECT IDENTIFIERS
+    private static List<WebElement> RevisionsState_Trs() {
+    	return webDriver.findElements(By.xpath("//table[@id='revision-form-table']/tbody/tr"));
+    }
+    
+    private static List<WebElement> Node_Num() {
+    	return webDriver.findElements(By.xpath("//*[@id='revision-form-table']/tbody/..//td[@class='views-field views-field-vid']"));
+    }
+    
+    //PAGE OBJECT METHODS
+    public void VerifyRevisionCount(Integer revisionCount) throws Exception {
     	
-    	Integer revisionsNode = webDriver.findElements(By.xpath(Node_num)).size();  
-    	Integer revisionsRows = (webDriver.findElements(By.xpath(RevisionsState_Tbl)).size())-1;
-    	Assert.assertTrue(revisionsNode.intValue() == (RevisionCount));
-    	Assert.assertTrue(revisionsRows.intValue() == (RevisionCount));
-    	
+    	Reporter.log("Verify the number of present revisions entries equals '" + revisionCount + "'.");
+    	Assert.assertTrue(Node_Num().size() == (revisionCount));
+    	Assert.assertTrue(RevisionsState_Trs().size() - 1 == (revisionCount));
     }
 
 }

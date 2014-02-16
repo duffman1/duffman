@@ -1,21 +1,14 @@
 package com.nbcuni.test.publisher.pageobjects.Facebook;
 
-
-import java.util.List;
 import java.util.concurrent.TimeUnit;
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.Reporter;
-
-import com.nbcuni.test.lib.Util;
 import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.webdriver.CustomWebDriver;
-
 
 /*********************************************
  * publisher.nbcuni.com Share Library. Copyright
@@ -27,41 +20,43 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 public class Share {
 
     private static CustomWebDriver webDriver;
-    private static AppLib al;
-    private final Util ul;
+    private static AppLib applib;
     
-    private static String PostToFacebookWall_Cbx = "//input[@id='edit-facebook-enabled']";
-    private static String ProvideBriefMessage_Txa = "//textarea[@id='edit-facebook-stream-post']";
-    private static String Share_Btn = "//input[@value='Share']";
-    
-    public Share(final CustomWebDriver custWebDr) {
-        webDriver = custWebDr;
-        ul = new Util(webDriver);
-        
+    //PAGE OBJECT CONSTRUCTOR
+    public Share(CustomWebDriver webDriver, AppLib applib) {
+        Share.webDriver = webDriver;
+        Share.applib = applib;
+        PageFactory.initElements(webDriver, this);
     }
     
+    //PAGE OBJECT IDENTIFIERS
+    @FindBy(how = How.ID, using = "edit-facebook-enabled")
+    private static WebElement PostToFacebookWall_Cbx;
+    
+    @FindBy(how = How.ID, using = "edit-facebook-stream-post")
+    private static WebElement ProvideBriefMessage_Txa;
+    
+    @FindBy(how = How.XPATH, using = "//input[@value='Share']")
+    private static WebElement Share_Btn;
+    
+    
+    //PAGE OBJECT METHODS
     public void ClickPostToFacebookWallCbx() throws Exception {
     	
-    	WebElement Cbx = new WebDriverWait(webDriver, 10).until(ExpectedConditions.
-    			visibilityOf(webDriver.findElement(By.xpath(PostToFacebookWall_Cbx))));
-    	
-    	Cbx.click();
+    	Reporter.log("Check the 'Post to facebook wall' check box.");
+    	PostToFacebookWall_Cbx.click();
     }
     
     public void EnterBriefMessage(String messageTxt) throws Exception {
     	
-    	WebElement txa = new WebDriverWait(webDriver, 10).until(ExpectedConditions.
-    			visibilityOf(webDriver.findElement(By.xpath(ProvideBriefMessage_Txa))));
-    	
-    	txa.sendKeys(messageTxt);
+    	Reporter.log("Enter '" + messageTxt + "' in the 'Provide brief message' text area.");
+    	ProvideBriefMessage_Txa.sendKeys(messageTxt);
     }
     
     public void ClickShareBtn() throws Exception {
     	
-    	WebElement Btn = new WebDriverWait(webDriver, 10).until(ExpectedConditions.
-    			visibilityOf(webDriver.findElement(By.xpath(Share_Btn))));
-    	
-    	Btn.click();
+    	Reporter.log("Click the 'Share' button.");
+    	Share_Btn.click();
     	
     	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
 
@@ -70,15 +65,15 @@ public class Share {
                  if (time >= 60) {
                      Assert.fail("Element is still present after timeout");}
                   try{
-                  webDriver.findElement(By.xpath(Share_Btn));
+                  Share_Btn.isDisplayed();
                   elementPresent = true;
                   }
                   catch (Exception e){ elementPresent = false;  }
-                  if (elementPresent == false){ break;}
+                  if (elementPresent == false){ break; }
                   Thread.sleep(1000);
                   }
 
-            webDriver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+            webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
 
     }
     

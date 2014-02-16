@@ -5,12 +5,10 @@ import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Content.*;
 import com.nbcuni.test.publisher.pageobjects.Queues.ScheduleQueue;
-
-import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
-
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
+import java.util.Calendar;
 import java.util.Date;
 
 public class ScheduleToPublishContentByDateTime extends ParentTest {
@@ -35,12 +33,10 @@ public class ScheduleToPublishContentByDateTime extends ParentTest {
 
         //Step 1
         UserLogin userLogin = applib.openApplication();
-        PageFactory.initElements(webDriver, userLogin);
         userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
 
         //Step 1a
         Modules modules = new Modules(webDriver, applib);
-        PageFactory.initElements(webDriver, modules);
         modules.VerifyModuleEnabled("Pub Post");
         
         //Step 2
@@ -51,7 +47,6 @@ public class ScheduleToPublishContentByDateTime extends ParentTest {
 
         //Step 3
         WorkBench workBench = new WorkBench(webDriver, applib);
-        PageFactory.initElements(webDriver, workBench);
         workBench.VerifyWorkBenchTabPresent("View");
         workBench.VerifyWorkBenchTabPresent("Edit Draft");
         workBench.VerifyWorkBenchTabPresent("Revisions");
@@ -59,7 +54,6 @@ public class ScheduleToPublishContentByDateTime extends ParentTest {
 
         //Step 4
         Revisions revisions = new Revisions(webDriver, applib);
-        PageFactory.initElements(webDriver, revisions);
         revisions.ClickRevisionTab();
         overlay.SwitchToFrame("Revisions dialog");
         RevisionState revisionstate = new RevisionState(webDriver);
@@ -83,7 +77,6 @@ public class ScheduleToPublishContentByDateTime extends ParentTest {
         publishingOptions.ClickPublishingOptionsLnk();
         publishingOptions.EnterMessageForStateChange("Test Revision 2");
         ContentParent contentParent = new ContentParent(webDriver, applib);
-        PageFactory.initElements(webDriver, contentParent);
         contentParent.ClickSaveBtn();
         overlay.switchToDefaultContent();
 
@@ -104,8 +97,8 @@ public class ScheduleToPublishContentByDateTime extends ParentTest {
         //Step 10
         scheduleQueue.SelectRevision(postTitle);
         scheduleQueue.SelectOperation("Moderate to Published");
-        com.ibm.icu.util.Calendar cal = com.ibm.icu.util.Calendar.getInstance();
-        cal.add(com.ibm.icu.util.Calendar.DATE, 10);
+        Calendar cal = Calendar.getInstance();
+        cal.add(Calendar.DATE, 10);
         Date date = cal.getTime();
         SimpleDateFormat sdfDate = new SimpleDateFormat("MM/dd/yyyy");
         String sDate = sdfDate.format(date);

@@ -1,10 +1,8 @@
 package com.nbcuni.test.publisher.pageobjects.Content;
 
 import java.util.List;
-
 import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.webdriver.CustomWebDriver;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -12,6 +10,7 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.Reporter;
+
 /*********************************************
  * publisher.nbcuni.com Taxonomy Library. Copyright
  * 
@@ -21,12 +20,10 @@ import org.testng.Reporter;
 public class WorkBench {
 
 	private static CustomWebDriver webDriver;
-    private static AppLib applib;
     
-    //PAGE OBJECT CONSTRUCTORS
+	//PAGE OBJECT CONSTRUCTORS
     public WorkBench(CustomWebDriver webDriver, AppLib applib) {
         WorkBench.webDriver = webDriver;
-        WorkBench.applib = applib;
         PageFactory.initElements(webDriver, this);
     }
     

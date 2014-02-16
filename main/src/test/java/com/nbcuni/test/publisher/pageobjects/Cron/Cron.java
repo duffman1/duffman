@@ -1,22 +1,11 @@
 package com.nbcuni.test.publisher.pageobjects.Cron;
 
-
-import java.util.List;
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
-
-import com.nbcuni.test.lib.Util;
-import com.nbcuni.test.publisher.common.AppLib;
-import com.nbcuni.test.publisher.common.Random;
 import com.nbcuni.test.webdriver.CustomWebDriver;
-
 
 /*********************************************
  * publisher.nbcuni.com Cron Library. Copyright
@@ -28,38 +17,33 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 public class Cron {
 
     private static CustomWebDriver webDriver;
-    private static AppLib al;
-    private final Util ul;
     
-    private static String RunCronToCompleteImport_Lnk = "//li[contains(text(), 'to complete the import')]/a[text()='Run cron']";
-    private static String RunCron_Btn = "//input[@id='edit-run']";
-    private static String RunCronFromHome_Lnk = ".//*[@id='admin-menu-icon']/..//a[contains(text(),'Run cron')]";
-    
-    
-    public Cron(final CustomWebDriver custWebDr) {
-        webDriver = custWebDr;
-        ul = new Util(webDriver);
-        
+    //PAGE OBJECT CONSTRUCTOR
+    public Cron(CustomWebDriver webDriver) {
+        Cron.webDriver = webDriver;
+        PageFactory.initElements(webDriver, this);
     }
     
+    //PAGE OBJECT IDENTIFIERS
+    @FindBy(how = How.XPATH, using = "//li[contains(text(), 'to complete the import')]/a[text()='Run cron']")
+    private static WebElement RunCronToCompleteImport_Lnk;
+    
+    @FindBy(how = How.ID, using = "edit-run")
+    private static WebElement RunCron_Btn;
+    
+    
+    //PAGE OBJECT METHODS
     public void ClickRunCronToCompleteImportLnk() throws Exception {
     	
-    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.
-    			visibilityOf(webDriver.findElement(By.xpath(RunCronToCompleteImport_Lnk)))).click();
+    	Reporter.log("Click the 'Run Cron to complete import' link.");
+    	RunCronToCompleteImport_Lnk.click();
     }
     
     public void ClickRunCronBtn() throws Exception {
     	
-    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.
-    			visibilityOf(webDriver.findElement(By.xpath(RunCron_Btn)))).click();
+    	Reporter.log("Click the 'Run Cron' button.");
+    	RunCron_Btn.click();
     }
-    public void ClickRunCronHomeLink() throws Exception {
-    	
-    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.
-    			visibilityOf(webDriver.findElement(By.xpath(RunCronFromHome_Lnk)))).click();
-    }
-   
-    
     
 }
 

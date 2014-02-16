@@ -1,19 +1,13 @@
 package com.nbcuni.test.publisher.pageobjects.Content;
 
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.Reporter;
-
-import com.nbcuni.test.lib.Util;
-import com.nbcuni.test.publisher.common.AppLib;
-import com.nbcuni.test.publisher.common.Random;
 import com.nbcuni.test.webdriver.CustomWebDriver;
-
 
 /*********************************************
  * publisher.nbcuni.com Publishing Options Library. Copyright
@@ -25,98 +19,97 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 public class PublishingOptions {
 
     private static CustomWebDriver webDriver;
-    private static AppLib al;
-    private final Util ul;
     
-    private static String PublishingOptions_Lnk = "//a/strong[text()='Publishing options']";
-    private static String CreateNewRevision_Cbx = "//input[@id='edit-revision']";
-    private static String ModerationState_Ddl = "//select[@id='edit-event']";
-    private static String LogMessageStateChange_Txa = "(//textarea[@id='edit-event-comment'])[1]";
-    private static String Published_Cbx = "//input[@id='edit-published']";
-    
-    
-    public PublishingOptions(final CustomWebDriver custWebDr) {
-        webDriver = custWebDr;
-        ul = new Util(webDriver);
-        
+    //PAGE OBJECT CONSTRUCTOR
+    public PublishingOptions(CustomWebDriver webDriver) {
+        PublishingOptions.webDriver = webDriver;
+        PageFactory.initElements(webDriver, this);
     }
-   
+    
+    //PAGE OBJECT IDENTIFIERS
+    @FindBy(how = How.XPATH, using = "//a/strong[text()='Publishing options']")
+    private static WebElement PublishingOptions_Lnk;
+    
+    @FindBy(how = How.ID, using = "edit-revision")
+    private static WebElement CreateNewRevision_Cbx;
+    
+    @FindBy(how = How.ID, using = "edit-event")
+    private static WebElement ModerationState_Ddl;
+    
+    @FindBy(how = How.XPATH, using = "(//textarea[@id='edit-event-comment'])[1]")
+    private static WebElement LogMessageStateChange_Txa;
+    
+    @FindBy(how = How.ID, using = "edit-published")
+    private static WebElement Published_Cbx;
+    
+    private static String ScrollUp_Js() {
+    	String jsScrollUp = "window.scrollBy(0,-500);";
+    	return jsScrollUp;
+    }
+    
+    //PAGE OBJECT METHODS
     public void ClickPublishingOptionsLnk() throws Exception {
     	
-    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.
-    			elementToBeClickable(By.xpath(PublishingOptions_Lnk)));
+    	Reporter.log("Scroll the 'Publishing Options' link into view.");
+    	PublishingOptions_Lnk.isDisplayed();
+    	webDriver.executeScript(ScrollUp_Js());
     	
-    	webDriver.executeScript("window.scrollBy(0,-500);");
-    	
-    	webDriver.click(PublishingOptions_Lnk);
+    	Reporter.log("Click the 'Publishing Options' link.");
+    	PublishingOptions_Lnk.click();
     }
     
     public void ClickCreateNewRevisionCbx() throws Exception {
     	
-    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.
-    			elementToBeClickable(By.xpath(CreateNewRevision_Cbx)));
-    	webDriver.click(CreateNewRevision_Cbx);
+    	Reporter.log("Check the 'Create New Revision' checkbox.");
+    	CreateNewRevision_Cbx.click();
     }
     
     public void VerifyCreateNewRevisionCbxChecked() throws Exception {
     	
-    	Assert.assertTrue(webDriver.findElement(By.xpath(CreateNewRevision_Cbx)).isSelected() == true);
+    	Reporter.log("Verify the 'Create New Revision' checkbox is checked.");
+    	Assert.assertTrue(CreateNewRevision_Cbx.isSelected() == true);
     }
     
     public void SelectModerationState(String stateName) throws Exception {
     	
-    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.
-    			visibilityOf(webDriver.findElement(By.xpath(ModerationState_Ddl))));
-    	webDriver.selectFromDropdown(ModerationState_Ddl, stateName);
+    	Reporter.log("Select '" + stateName + "' from the 'Moderation State' drop down list.");
+    	new Select(ModerationState_Ddl).selectByVisibleText(stateName);
     }
     
     public void EnterMessageForStateChange(String messageTxt) throws Exception {
     	
-    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.
-    			visibilityOf(webDriver.findElement(By.xpath(LogMessageStateChange_Txa))));
-    	webDriver.type(LogMessageStateChange_Txa, messageTxt);
+    	Reporter.log("Enter '" + messageTxt + "' in the 'Message for State Change' text area.");
+    	LogMessageStateChange_Txa.sendKeys(messageTxt);
     }
     
     public void UncheckPublishedCbx() throws Exception {
     	
-    	WebElement el = new WebDriverWait(webDriver, 10).until(ExpectedConditions.
-    			visibilityOf(webDriver.findElement(By.xpath(Published_Cbx))));
-    	
-    	if (el.isSelected() == true) {
-    		el.click();
+    	if (Published_Cbx.isSelected() == true) {
+    		Reporter.log("Uncheck the 'Published' checkbox");
+    		Published_Cbx.click();
     	}
     }
     
     public void CheckPublishedCbx() throws Exception {
     	
-    	WebElement el = new WebDriverWait(webDriver, 10).until(ExpectedConditions.
-    			visibilityOf(webDriver.findElement(By.xpath(Published_Cbx))));
-    	
-    	if (el.isSelected() == false) {
-    		el.click();
+    	if (Published_Cbx.isSelected() == false) {
+    		Reporter.log("Check the 'Published' checkbox");
+    		Published_Cbx.click();
     	}
     }
     
     public void VerifyPublishedCbxChecked() throws Exception {
     	
-    	WebElement el = new WebDriverWait(webDriver, 10).until(ExpectedConditions.
-    			visibilityOf(webDriver.findElement(By.xpath(Published_Cbx))));
-    	
-    	Assert.assertTrue(el.isSelected() == true);
+    	Reporter.log("Verify the 'Published' checkbox is checked.");
+    	Assert.assertTrue(Published_Cbx.isSelected() == true);
     }
     
     public void VerifyPublishedCbxNotCheckedAndNotEditable() throws Exception {
     	
-    	WebElement el = new WebDriverWait(webDriver, 10).until(ExpectedConditions.
-    			visibilityOf(webDriver.findElement(By.xpath(Published_Cbx))));
-    	
-    	Assert.assertFalse(el.isSelected());
-    	Assert.assertFalse(el.isEnabled());
+    	Reporter.log("Verify the 'Published' checkbox is unchecked and is not enabled.");
+    	Assert.assertFalse(Published_Cbx.isSelected());
+    	Assert.assertFalse(Published_Cbx.isEnabled());
     }
-    
-    
-    
-    
     
 }
 
