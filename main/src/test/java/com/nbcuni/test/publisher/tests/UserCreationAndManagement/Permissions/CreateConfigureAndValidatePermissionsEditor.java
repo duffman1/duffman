@@ -131,7 +131,7 @@ public class CreateConfigureAndValidatePermissionsEditor extends ParentTest{
         overlay.SwitchToFrame("Content");
         
         //Step 12 and 13 (truncated)
-        Content content = new Content(webDriver);
+        Content content = new Content(webDriver, applib);
         content.VerifyContentItemEditDelete(postTitle);
         
         //Step 14

@@ -7,6 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
+
 /*********************************************
  * publisher.nbcuni.com Taxonomy Library. Copyright
  * 
@@ -15,13 +16,8 @@ import org.testng.Reporter;
  *********************************************/
 public class GigyaShareBar {
 
-	private static CustomWebDriver webDriver;
-    private static AppLib applib;
-    
-    //PAGE OBJECT CONSTRUCTORS
+	//PAGE OBJECT CONSTRUCTORS
     public GigyaShareBar(CustomWebDriver webDriver, AppLib applib) {
-        GigyaShareBar.webDriver = webDriver;
-        GigyaShareBar.applib = applib;
         PageFactory.initElements(webDriver, this);
     }
     

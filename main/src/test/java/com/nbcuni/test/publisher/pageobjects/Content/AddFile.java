@@ -12,7 +12,6 @@ import org.sikuli.script.Pattern;
 import org.sikuli.script.Region;
 import org.sikuli.script.Screen;
 import org.testng.Reporter;
-
 import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXAssets;
 import com.nbcuni.test.webdriver.CustomWebDriver;
@@ -29,13 +28,14 @@ public class AddFile {
     private static CustomWebDriver webDriver;
     private static AppLib applib;
     private static Screen sikuli;
-    MPXAssets mpxAssets = new MPXAssets(this.webDriver, this.applib);
+    private static MPXAssets mpxAssets;
     
     //PAGE OBJECT CONSTRUCTOR
     public AddFile(CustomWebDriver webDriver, AppLib applib) {
         AddFile.webDriver = webDriver;
         AddFile.applib = applib;
         sikuli = new Screen();
+        mpxAssets = new MPXAssets(webDriver, applib);
         PageFactory.initElements(webDriver, this);
     }
     

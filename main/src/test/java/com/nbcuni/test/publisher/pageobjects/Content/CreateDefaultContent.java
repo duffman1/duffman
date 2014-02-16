@@ -1,25 +1,11 @@
 package com.nbcuni.test.publisher.pageobjects.Content;
 
-
-import java.util.List;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
-import org.testng.Reporter;
-
-import com.nbcuni.test.lib.Util;
 import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.publisher.common.Random;
 import com.nbcuni.test.publisher.pageobjects.Overlay;
 import com.nbcuni.test.publisher.pageobjects.Taxonomy.Taxonomy;
 import com.nbcuni.test.webdriver.CustomWebDriver;
-
 
 /*********************************************
  * publisher.nbcuni.com Default Content Library. Copyright
@@ -35,9 +21,8 @@ public class CreateDefaultContent {
     
     private static Taxonomy taxonomy;
 	private static Overlay overlay;
-	private Random random;
+	private static Random random;
 	
-    
     public CreateDefaultContent(CustomWebDriver webDriver, AppLib applib) {
         CreateDefaultContent.webDriver = webDriver;
         CreateDefaultContent.applib = applib;
@@ -52,7 +37,6 @@ public class CreateDefaultContent {
     	taxonomy.NavigateSite("Content>>Add content>>Post");
         overlay.SwitchToFrame("Create Post");
         ContentParent contentParent = new ContentParent(webDriver, applib);
-        PageFactory.initElements(webDriver, contentParent);
         BasicInformation basicInformation = new BasicInformation(webDriver);
         String postTitle = random.GetCharacterString(15);
         basicInformation.EnterTitle(postTitle);
@@ -61,7 +45,6 @@ public class CreateDefaultContent {
         overlay.SwitchToFrame("Create Post");
         basicInformation.ClickCoverSelectBtn();
         SelectFile selectFile = new SelectFile(webDriver, applib);
-        PageFactory.initElements(webDriver, selectFile);
         selectFile.SelectDefaultCoverImg();
         overlay.SwitchToFrame("Create Post");
         PublishingOptions publishingOptions = new PublishingOptions(webDriver);

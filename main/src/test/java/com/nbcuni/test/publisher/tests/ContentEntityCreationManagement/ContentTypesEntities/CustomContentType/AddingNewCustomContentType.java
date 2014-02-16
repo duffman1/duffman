@@ -1,14 +1,11 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CustomContentType;
 
-import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
-
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Content.ContentTypes;
 
 public class AddingNewCustomContentType extends ParentTest{
-	
 	
     /*************************************************************************************
      * TEST CASE 3106 Adding new custom content type
@@ -26,15 +23,14 @@ public class AddingNewCustomContentType extends ParentTest{
         
         	//Step 1
         	UserLogin userLogin = applib.openApplication();
-        	PageFactory.initElements(webDriver, userLogin);
-            userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+        	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
             
             //Step 2
             taxonomy.NavigateSite("Structure>>Content types>>Add content type");
             
             //Step 3
             overlay.SwitchToFrame("Content types");
-            ContentTypes contentTypes = new ContentTypes(webDriver);
+            ContentTypes contentTypes = new ContentTypes(webDriver, applib);
             String contentTypeName = random.GetCharacterString(10);
             contentTypes.EnterName(contentTypeName);
             

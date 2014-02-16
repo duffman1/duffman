@@ -17,11 +17,8 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 
 public class CharactersInformation {
 
-    private static CustomWebDriver webDriver;
-    
     //PAGE OBJECT CONSTRUCTOR
     public CharactersInformation(CustomWebDriver webDriver) {
-        CharactersInformation.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
     }
    

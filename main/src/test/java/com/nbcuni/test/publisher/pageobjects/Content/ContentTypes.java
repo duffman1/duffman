@@ -2,16 +2,14 @@ package com.nbcuni.test.publisher.pageobjects.Content;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.Reporter;
-
-import com.nbcuni.test.lib.Util;
 import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.webdriver.CustomWebDriver;
-
 
 /*********************************************
  * publisher.nbcuni.com ContentTypes Library. Copyright
@@ -23,87 +21,92 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 public class ContentTypes {
 
     private static CustomWebDriver webDriver;
+    private static ContentParent contentParent;
     
-    private static String Name_Txb = "//input[@id='edit-name']";
-    private static String Save_Btn = "//input[@id='edit-submit']";
-    private static String MessageStatus_Ctr = "//div[@class='messages status']";
-    private static String ContentTypeTbl_Ctr = "//div[@class='content']//tbody";
-    private static String AddNewField_Txb = "//input[@id='edit-fields-add-new-field-label']";
-    private static String FieldType_Ddl = "//select[@id='edit-fields-add-new-field-type']";
-    
-    
-    
-    public ContentTypes(final CustomWebDriver custWebDr) {
-        webDriver = custWebDr;
-        
+    //PAGE OBJECT CONSTRUCTOR
+    public ContentTypes(CustomWebDriver webDriver, AppLib applib) {
+        ContentTypes.webDriver = webDriver;
+        PageFactory.initElements(webDriver, this);
+        contentParent = new ContentParent(webDriver, applib);
     }
     
+    //PAGE OBJECT IDENTIFIERS
+    @FindBy(how = How.ID, using = "edit-name")
+    private static WebElement Name_Txb;
+    
+    @FindBy(how = How.ID, using = "edit-submit")
+    private static WebElement Save_Btn;
+    
+    @FindBy(how = How.XPATH, using = "//div[@class='content']//tbody")
+    private static WebElement ContentTypeTbl_Ctr;
+    
+    @FindBy(how = How.XPATH, using = "//input[@id='edit-fields-add-new-field-label']")
+    private static WebElement AddNewField_Txb;
+    
+    @FindBy(how = How.ID, using = "edit-fields-add-new-field-type")
+    private static WebElement FieldType_Ddl;
+    
+    private static WebElement FieldSave_Btn(String fieldName) {
+    	return webDriver.findElement(By.xpath("//a[@id='edit-field-" + fieldName + "-und-field-" + fieldName + "-und-0-select']"));
+    }
+    
+    
+    //PAGE OBJECT METHODS
     public void EnterName(String name) throws Exception {
     	
-    	webDriver.type(Name_Txb, name);
+    	Reporter.log("Enter '" + name + "' in the 'Name' text box.");
+    	Name_Txb.sendKeys(name);
     	
     }
     
     public void ClickSaveBtn() throws Exception {
     	
-    	webDriver.click(Save_Btn);
+    	Reporter.log("Click the 'Save' button.");
+    	Save_Btn.click();
     	
     }
     
     public void VerifyContentTypeSaved(String name) throws Exception {
     	
-    	Assert.assertTrue(webDriver.findElement(By.xpath(MessageStatus_Ctr)).getText().contains("The content type " + name + " has been added."));
-    	Assert.assertTrue(webDriver.findElement(By.xpath(ContentTypeTbl_Ctr)).getText().contains(name));
+    	contentParent.VerifyMessageStatus("The content type " + name + " has been added.");
     	
-    }
-    
-    public void SwitchToNewContentTypeFrm(String name) throws Exception {
-    	
-    	WebElement frm = webDriver.findElement(By.xpath("//iframe[contains(@title, '" + name + "')]"));
-    	webDriver.switchTo().frame(frm);
-    	
-    }
-    
-    public void SwitchToCreateContentFrm(String name) throws Exception {
-    	
-    	WebElement frm = webDriver.findElement(By.xpath("//iframe[contains(@title, 'Create " + name + " dialog')]"));
-    	webDriver.switchTo().frame(frm);
+    	Reporter.log("Verify the content type table contains the text '" + name + "'.");
+    	Assert.assertTrue(ContentTypeTbl_Ctr.getText().contains(name));
     	
     }
     
     public void AddNewField(String fieldName) throws Exception {
     	
-    	webDriver.type(AddNewField_Txb, fieldName);
+    	Reporter.log("Enter '" + fieldName + "' in the 'Add new field' text box.");
+    	AddNewField_Txb.sendKeys(fieldName);
     	
     }
     
     public void SelectFieldType(String fieldType) throws Exception {
     	
-    	webDriver.selectFromDropdown(FieldType_Ddl, fieldType);
+    	Reporter.log("Select '" + fieldType + "' from the 'Field Type' drop down list.");
+        new Select(FieldType_Ddl).selectByVisibleText(fieldType);
     	
     }
     
     public void VerifyNewFieldSaved(String fieldName) throws Exception {
     	
-    	Assert.assertTrue(webDriver.findElement(By.xpath(MessageStatus_Ctr)).getText().contains("Updated field " + fieldName + " field settings."));
+    	contentParent.VerifyMessageStatus("Updated field " + fieldName + " field settings.");
     	
     }
     
     public void VerifyConfigurationSaved(String fieldName) throws Exception {
     	
-    	Assert.assertTrue(webDriver.findElement(By.xpath(MessageStatus_Ctr)).getText().contains("Saved " + fieldName + " configuration."));
+    	contentParent.VerifyMessageStatus("Saved " + fieldName + " configuration.");
     	
     }
     
     public void VerifyFieldSaveBtnPresent(String fieldName) throws Exception {
     	
-    	Assert.assertTrue(webDriver.findElement(By.xpath("//a[@id='edit-field-" + fieldName + "-und-field-" + fieldName + "-und-0-select']")).isDisplayed());
+    	Reporter.log("Verify the Field 'Save' button is present.");
+    	FieldSave_Btn(fieldName).isDisplayed();
     	
     }
     
-    
-    
-    
-  
 }
 

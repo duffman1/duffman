@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sat Feb 15 16:40:13 EST 2014</td>
+<td>Started on:</td><td>Sat Feb 15 19:17:12 EST 2014</td>
 </tr>
-<tr><td>Total time:</td><td>47 seconds (47296 ms)</td>
+<tr><td>Total time:</td><td>69 seconds (69100 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,42 +75,66 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EmailReRouting.EnableEmailReRouting.EnableEmailReRouting_Test()'><b>EnableEmailReRouting_Test</b><br>Test class: com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EmailReRouting.EnableEmailReRouting<br/>
-<a href="#Output-1452604994" onClick='toggleBox("Output-1452604994", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.ScheduleToPublishContentByDateTime.ScheduleToPublishContentByDateTime_Test()'><b>ScheduleToPublishContentByDateTime_Test</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.ScheduleToPublishContentByDateTime<br/>
+<a href="#Output-870397608" onClick='toggleBox("Output-870397608", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1452604994" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1452604994">
+<a href="#Output-870397608" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-870397608">
 Open url 'http://qa5dev.publisher.nbcuni.com'.<br/>
 Enter the user's email address in the 'Email Address' text box.<br/>
 Enter the user's password in the 'Password' text box.<br/>
 Click the 'Login' button.<br/>
 Click the 'Modules' menu link.<br/>
-Enter 'Reroute emails' in the 'Filter Name' text box.<br/>
-Wait for the module titled 'Reroute emails' to appear in the list.<br/>
-Mouse over the 'Configuration' menu link.<br/>
-Mouse over the 'Development' menu link.<br/>
-Click the 'Reroute Email' menu link.<br/>
-Enter 'Pub7NBCUAutoEmailUser1@gmail.com' in the 'Email addresses' text box.<br/>
-Click the 'Save configuration' button.<br/>
-Verify success message of 'The configuration options have been saved.' is present.<br/>
+Enter 'Pub Post' in the 'Filter Name' text box.<br/>
+Wait for the module titled 'Pub Post' to appear in the list.<br/>
+Verify content menu item 'Content' is present in the site taxonomy.<br/>
+Verify content menu item 'My Workbench' is present in the site taxonomy.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Add content' menu link.<br/>
+Click the 'Post' menu link.<br/>
+Enter '0f90029b2109449' in the 'Title' text box.<br/>
+Switch to the Synopsis frame.<br/>
+Enter a randomized text string into the 'Body' text area.<br/>
+Click the 'Cover' select button.<br/>
+Switch to the select file frame.<br/>
+Enter the file path for file upload.<br/>
+Click the 'Upload' button.<br/>
+Wait for the file link to be visible after upload.<br/>
+Click the 'Next' button.<br/>
+Click the 'Public Local Files' radio button.<br/>
+Click the 'Next' button.<br/>
+Assert the file image 'HanSolo' is present.<br/>
+Assert the the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'Post 0f90029b2109449 has been created.' is present.<br/>
 Verify there are no errors present.<br/>
-Mouse over the 'People' menu link.<br/>
-Click the 'Add user' menu link.<br/>
-Enter '90d0d17dcf994a9@f14c8441a56e4a5.com' in the 'Username' text box.<br/>
-Enter '90d0d17dcf994a9@f14c8441a56e4a5.com' in the 'E-mail address' text box.<br/>
-Enter 'pa55word' in the 'Password' text box.<br/>
-Enter 'pa55word' in the 'Confirm password' text box.<br/>
-Check the 'editor' checkbox.<br/>
-Enter '506067b40702419' in the 'First Name' text box.<br/>
-Enter '17600640066b41e' in the 'Last Name' text box.<br/>
-Click the 'Create new account' button.<br/>
-Verify success message of 'A welcome message with further instructions has been e-mailed to the new user 90d0d17dcf994a9@f14c8441a56e4a5.com.' is present.<br/>
+Verify the 'View' is present in the work bench.<br/>
+Verify the 'Edit Draft' is present in the work bench.<br/>
+Verify the 'Revisions' is present in the work bench.<br/>
+Verify the 'Schedule' is present in the work bench.<br/>
+Click the 'Revision' link.<br/>
+Click the 'Edit Draft' in the work bench.<br/>
+Switch to the Synopsis frame.<br/>
+Enter a randomized text string into the 'Body' text area.<br/>
+Click the 'Save' button.<br/>
+Verify the text 'Revision state' is present in the work bench info block.<br/>
+Verify the text 'Public' is present in the work bench info block.<br/>
+Verify the text 'Moderate' is present in the work bench info block.<br/>
+Click the 'Revisions' in the work bench.<br/>
+Verify success message of 'The scheduled revision operation has been saved' is present.<br/>
 Verify there are no errors present.<br/>
+verifyObjectContainsText:  Object //div[@class='content']//tbody contains the text 0f90029b2109449<br/>
+verifyObjectContainsText:  Object //div[@class='content']//tbody contains the text Moderate to Publish<br/>
+verifyObjectContainsText:  Object //div[@class='content']//tbody contains the text 02/25/2014 - 05:00 PM<br/>
+verifyObjectContainsText:  Object //div[@class='content']//tbody contains the text Moderate to Published<br/>
+verifyObjectContainsText:  Object //div[@class='content']//tbody contains the text Completed<br/>
+Click the 'Revision' link.<br/>
 </div>
 </td>
 <td></td>
-<td>33</td>
-<td>com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EmailReRouting.EnableEmailReRouting@2f774b9b</td></tr>
+<td>54</td>
+<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.ScheduleToPublishContentByDateTime@4104c575</td></tr>
 </table><p>
 </body>
 </html>

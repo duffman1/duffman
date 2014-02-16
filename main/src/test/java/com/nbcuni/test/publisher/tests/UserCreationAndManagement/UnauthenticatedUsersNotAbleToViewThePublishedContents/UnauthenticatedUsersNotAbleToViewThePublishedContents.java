@@ -11,8 +11,10 @@ import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Content.BasicInformation;
 import com.nbcuni.test.publisher.pageobjects.Content.Content;
 import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
+import com.nbcuni.test.publisher.pageobjects.Content.CreateDefaultContent;
 import com.nbcuni.test.publisher.pageobjects.Content.PublishingOptions;
 import com.nbcuni.test.publisher.pageobjects.Content.Revisions;
+import com.nbcuni.test.publisher.pageobjects.Content.SearchFor;
 import com.nbcuni.test.publisher.pageobjects.Content.SelectFile;
 import com.nbcuni.test.publisher.pageobjects.Content.WorkBench;
 
@@ -50,113 +52,87 @@ public class UnauthenticatedUsersNotAbleToViewThePublishedContents extends Paren
     	
     	//Step 1
     	UserLogin userLogin = applib.openApplication();
-    	PageFactory.initElements(webDriver, userLogin);
-        userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+    	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
         
-        //Step 2        
-    	taxonomy.NavigateSite("Content>>Add content>>Post");
-    	overlay.SwitchToFrame("Create Post");
-    	ContentParent contentParent = new ContentParent(webDriver, applib);
-    	PageFactory.initElements(webDriver, contentParent);
-    	contentParent.VerifyRequiredFields(Arrays.asList("Title", "Body"));
-    	PublishingOptions publishingOptions = new PublishingOptions(webDriver);
-    	publishingOptions.ClickPublishingOptionsLnk();
-    	contentParent.VerifyRequiredFields(Arrays.asList("Moderation State"));
-    	BasicInformation basicInformation = new BasicInformation(webDriver);
-    	basicInformation.ClickBasicInformationTab();
-    	String postTitle = random.GetCharacterString(15);
-    	basicInformation.EnterTitle(postTitle);
-    	basicInformation.EnterSynopsis();
-    	overlay.switchToDefaultContent();
-    	overlay.SwitchToFrame("Create Post");
-    	basicInformation.ClickCoverSelectBtn();
-    	SelectFile selectFile = new SelectFile(webDriver, applib);
-    	PageFactory.initElements(webDriver, selectFile);
-    	selectFile.SelectDefaultCoverImg();
-    	overlay.SwitchToFrame("Create Post");
-    	publishingOptions.ClickPublishingOptionsLnk();
-    	publishingOptions.SelectModerationState("Published");
-    	contentParent.ClickSaveBtn();
-    	overlay.switchToDefaultContent();
-    	contentParent.VerifyMessageStatus("Post " + postTitle + " has been created.");
+        //Step 2  
+    	CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver, applib);
+    	String postTitle = createDefaultContent.Post("Published");
     	WorkBench workBench = new WorkBench(webDriver, applib);
-    	PageFactory.initElements(webDriver, workBench);
     	workBench.VerifyWorkBenchBlockTextPresent(Arrays.asList("Published"));
     	
     	//Step 3
-        String ContentURL = webDriver.getCurrentUrl();
+        String contentURL = webDriver.getCurrentUrl();
         Logout logout = new Logout(webDriver);
-        PageFactory.initElements(webDriver, logout);
         logout.ClickLogoutBtn();
         
         //Step4	
-        webDriver.navigate().to(ContentURL);
+        webDriver.navigate().to(contentURL);
       
         //Step5
-        contentParent.VerifyPostTitle(postTitle);
+        ContentParent contentParent = new ContentParent(webDriver, applib);
+        contentParent.VerifyPageContentPresent(Arrays.asList(postTitle));
         
         //Step6
         userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
         
         //Step7	
-        webDriver.navigate().to(ContentURL);
+        webDriver.navigate().to(contentURL);
       
         //Step8
         Revisions revisions = new Revisions(webDriver, applib);
-        PageFactory.initElements(webDriver, revisions);
         revisions.ClickRevisionTab();
         overlay.SwitchToFrame("Revisions dialog");        
         revisions.EnterLogMessageForStateChange("This Revision Comment");
         revisions.ClickUpdateStateBtn();
       
         //Step9
-        ContentURL = webDriver.getCurrentUrl();
+        contentURL = webDriver.getCurrentUrl();
         logout.ClickLogoutBtn();
       
         //Step10
-        webDriver.navigate().to(ContentURL);
+        webDriver.navigate().to(contentURL);
       
         //Step11
-        contentParent.VerifyPostTitle(postTitle);
-      
+        contentParent.VerifyPageContentPresent(Arrays.asList(postTitle));
+        
         //Step13
         userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
       
         //Step14
         taxonomy.NavigateSite("Content");
-        overlay.SwitchToFrame("Content");
-        Content content = new Content(webDriver);
-        content.ClickTheContentFromContentpage(postTitle);
-      
+        overlay.SwitchToActiveFrame();
+        SearchFor searchFor = new SearchFor(webDriver, applib);
+        searchFor.ClickSearchTitleLnk(postTitle);
+        
         //Step15
-        ContentURL = webDriver.getCurrentUrl();
+        contentURL = webDriver.getCurrentUrl();
         logout.ClickLogoutBtn();
       
         //Step16
-        webDriver.navigate().to(ContentURL);
+        webDriver.navigate().to(contentURL);
       
         //Step17
-        contentParent.VerifyPostTitle(postTitle);
-      
+        contentParent.VerifyPageContentPresent(Arrays.asList(postTitle));
+        
         //Step18
         userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
       
         //Step19
-        webDriver.navigate().to(ContentURL);
+        webDriver.navigate().to(contentURL);
       
         //Step20
         workBench.ClickWorkBenchTab("View");
         
         //Step21
-        ContentURL = webDriver.getCurrentUrl();
+        contentURL = webDriver.getCurrentUrl();
         logout.ClickLogoutBtn();
       
         //Step22
-        webDriver.navigate().to(ContentURL);
+        webDriver.navigate().to(contentURL);
       
         //Step23
-        contentParent.VerifyPostTitle(postTitle);
-  
+        contentParent.VerifyPageContentPresent(Arrays.asList(postTitle));
+        
        
     }
 }

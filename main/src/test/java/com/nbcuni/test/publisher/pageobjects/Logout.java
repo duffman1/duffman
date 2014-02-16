@@ -1,19 +1,12 @@
 package com.nbcuni.test.publisher.pageobjects;
 
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
-
-import com.nbcuni.test.lib.Util;
-import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.webdriver.CustomWebDriver;
-
 
 /*********************************************
  * publisher.nbcuni.com Logout Library. Copyright
@@ -27,9 +20,9 @@ public class Logout {
     private static CustomWebDriver webDriver;
     
     //PAGE OBJECT CONSTRUCTOR
-    public Logout(final CustomWebDriver custWebDr) {
-        webDriver = custWebDr;
-        
+    public Logout(CustomWebDriver webDriver) {
+        Logout.webDriver = webDriver;
+        PageFactory.initElements(webDriver, this);
     }
     
     //PAGE OBJECT IDENTIFIERS

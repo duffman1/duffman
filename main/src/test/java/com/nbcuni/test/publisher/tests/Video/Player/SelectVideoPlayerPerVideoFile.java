@@ -45,8 +45,7 @@ public class SelectVideoPlayerPerVideoFile extends ParentTest{
 
     	//Step 1
     	UserLogin userLogin = applib.openApplication();
-    	PageFactory.initElements(webDriver, userLogin);
-        userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+    	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
         
         //Step 2 on requires prior MPX configuration
         taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
@@ -64,16 +63,14 @@ public class SelectVideoPlayerPerVideoFile extends ParentTest{
         		//Step 3
         		overlay.SwitchToActiveFrame();
         		SearchFor searchFor = new SearchFor(webDriver, applib);
-        		PageFactory.initElements(webDriver, searchFor);
         		searchFor.EnterTitle("Automation1");
         		searchFor.ClickApplyBtn();
 
         		//Step 4
         		overlay.switchToDefaultContent();
-        		Content content = new Content(webDriver);
+        		Content content = new Content(webDriver, applib);
         		content.ClickEditMenuBtn("Automation1");
-        		//overlay.SwitchToActiveFrame();
-            
+        		
         		//Step 5 and 6
         		EditMPXVideo editMPXVideo = new EditMPXVideo(webDriver);
         		editMPXVideo.VerifyPubMPXVideoPlayerPresent();
@@ -81,26 +78,21 @@ public class SelectVideoPlayerPerVideoFile extends ParentTest{
         		//Step 7
         		editMPXVideo.SelectPubMPXVideoPlayer("--- Default Player ---");
         		ContentParent contentParent = new ContentParent(webDriver, applib);
-        		PageFactory.initElements(webDriver, contentParent);
         		contentParent.ClickSaveBtn();
             
         		//Step 8 through 19 (truncated as test steps no longer match application functionality)
         		overlay.switchToDefaultContent();
         		taxonomy.NavigateSite("Content>>Files>>mpxMedia");
-        		//overlay.SwitchToActiveFrame();
         		searchFor.EnterTitle("Automation1");
         		searchFor.ClickApplyBtn();
         		content.ClickEditMenuBtn("Automation1");
-        		//overlay.SwitchToActiveFrame();
         		editMPXVideo.SelectPubMPXVideoPlayer("Auditude Demo player");
         		contentParent.ClickSaveBtn();
         		overlay.switchToDefaultContent();
         		taxonomy.NavigateSite("Content>>Files>>mpxMedia");
-        		//overlay.SwitchToActiveFrame();
         		searchFor.EnterTitle("Automation1");
         		searchFor.ClickApplyBtn();
         		content.ClickEditMenuBtn("Automation1");
-        		//overlay.SwitchToActiveFrame();
         		editMPXVideo.VerifyPubMPXVideoPlayerSelectedOption("Auditude Demo player");
         	
         	}

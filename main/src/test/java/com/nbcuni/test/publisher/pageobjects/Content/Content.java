@@ -1,13 +1,16 @@
 package com.nbcuni.test.publisher.pageobjects.Content;
 
-import com.nbcuni.test.lib.Util;
 import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.webdriver.CustomWebDriver;
 import junit.framework.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Reporter;
 import java.util.concurrent.TimeUnit;
 
 /*********************************************
@@ -20,32 +23,67 @@ import java.util.concurrent.TimeUnit;
 public class Content {
 
     private static CustomWebDriver webDriver;
-    private static String Operation_Dd = ".//*[@id='edit-operation']";
-        
-    public Content(final CustomWebDriver custWebDr) {
-        webDriver = custWebDr;
-        
+    private static AppLib applib;
+    private static WebDriverWait wait;
+    
+    //PAGE OBJECT CONSTRUCTOR
+    public Content(CustomWebDriver webDriver, AppLib applib) {
+        Content.webDriver = webDriver;
+        Content.applib = applib;
+        wait = new WebDriverWait(webDriver, 10);
+        PageFactory.initElements(webDriver, this);
     }
    
+    //PAGE OBJECT IDENTIFIERS
+    @FindBy(how = How.LINK_TEXT, using = "Add file")
+    private static WebElement AddFile_Lnk;
+    
+    private WebElement ContentItem_Lnk(String contentItemTitle) {
+    	return webDriver.findElement(By.xpath("//a[text()='" + contentItemTitle + "']"));
+    }
+    
+    private WebElement Edit_Lnk(String contentItemTitle) {
+    	return webDriver.findElement(By.xpath("//a[text()='" + contentItemTitle + "']/../..//a[text()='Edit']"));
+    }
+    
+    private WebElement ExtendEditMenu_Lnk(String contentItemTitle) {
+    	return webDriver.findElement(By.xpath("//a[text()='" + contentItemTitle + "']/../..//a[text()='operations']"));
+    }
+    
+    private WebElement EditMenuEdit_Lnk(String contentItemTitle) {
+    	return webDriver.findElement(By.xpath("//a[text()='" + contentItemTitle + "']/../..//a[text()='Edit']"));
+    }
+    
+    private WebElement EditMenuDelete_Lnk(String contentItemTitle) {
+    	return webDriver.findElement(By.xpath("//a[text()='" + contentItemTitle + "']/../..//a[text()='Delete']"));
+    }
+    
+    
+    //PAGE OBJECT METHODS
     public void VerifyContentItemEditDelete(String contentItemTitle) throws Exception {
     	
+    	Reporter.log("Click the extend arrow for the 'Edit' menu.");
     	this.ClickEditExtendMenuBtn(contentItemTitle);
     	
-    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOf(webDriver.findElement(By.xpath("//a[text()='" + contentItemTitle + "']/../..//a[text()='Edit']"))));
-    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOf(webDriver.findElement(By.xpath("//a[text()='" + contentItemTitle + "']/../..//a[text()='Delete']"))));
+    	Reporter.log("Verify the 'Edit' menu link is present from the extended edit menu.");
+    	EditMenuEdit_Lnk(contentItemTitle).isDisplayed();
+    	
+    	Reporter.log("Verify the 'Delete' menu link is present from the extended edit menu.");
+    	EditMenuDelete_Lnk(contentItemTitle).isDisplayed();
     	
     }
     
     public void VerifyContentItemEditDeleteNotPresent(String contentItemTitle) throws Exception {
     	
-    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(
-    			By.xpath("//a[text()='" + contentItemTitle + "']")));
+    	Reporter.log("Wait for the content item titled '" + contentItemTitle + "' is present.");
+    	ContentItem_Lnk(contentItemTitle).isDisplayed();
 
         webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
         boolean elPresent = false;
 
+        Reporter.log("Verify the 'Edit/Delete' menu options are not present for the content item titled '" + contentItemTitle + "'.");
         try {
-            webDriver.findElement(By.xpath("//a[text()='\" + contentItemTitle + \"']/../..//a[text()='operations']"));
+            ExtendEditMenu_Lnk(contentItemTitle).isDisplayed();
             elPresent = true;
         }
         catch (Exception e) {
@@ -54,37 +92,35 @@ public class Content {
 
         Assert.assertFalse(elPresent);
 
-        webDriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
     	
     }
     
     public void ClickEditMenuBtn(String contentItemTitle) throws Exception {
     	
-    	WebElement editBtn = new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(
-    			By.xpath("//a[text()='" + contentItemTitle + "']/../..//a[text()='Edit']")));
-    	editBtn.click();
+    	Reporter.log("Click the 'Edit' link for content item titled '" + contentItemTitle + ".");
+    	Edit_Lnk(contentItemTitle).click();
     }
 
     public void ClickEditExtendMenuBtn(String contentItemTitle) throws Exception {
     	
-    	WebElement expandBtn = new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(
-    			By.xpath("//a[text()='" + contentItemTitle + "']/../..//a[text()='operations']")));
-    	expandBtn.click();
+    	Reporter.log("Click the extend edit menu link.");
+    	ExtendEditMenu_Lnk(contentItemTitle).click();
     }
     
     public void ClickDeleteMenuBtn(String contentItemTitle) throws Exception {
     	
-    	WebElement el = new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(
-    			By.xpath("//a[text()='" + contentItemTitle + "']/../..//a[text()='Delete']")));
-    	el.click();
+    	Reporter.log("Click the 'Delete' menu link.");
+    	wait.until(ExpectedConditions.visibilityOf(EditMenuDelete_Lnk(contentItemTitle))).click();
     }
     
     public void VerifyContentItemNotPresent(String contentItemTitle) throws Exception {
     	
+    	Reporter.log("Verify the content item titled '" + contentItemTitle + "' is not present.");
     	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
     	boolean elPresent = true;
     	try {
-    		webDriver.findElement(By.xpath("//a[text()='" + contentItemTitle + "']"));
+    		ContentItem_Lnk(contentItemTitle).isDisplayed();
     		elPresent = true;
     	}
     	catch (Exception e) {
@@ -94,34 +130,14 @@ public class Content {
     	if (elPresent == true) {
     		Assert.fail("Content item is present when it should not be");
     	}
-    	webDriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+    	webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
     	
-    }
-    
-    public void SelectCheckBoxOfTheContent(String contentItemTitle) throws Exception {
-    	
-    	WebElement el = new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(
-    			By.xpath("//a[text()='" + contentItemTitle + "']/../..//input[@type='checkbox']")));
-    	el.click();
-    }
-    
-    public void SelectModerationState(String OperationName) throws Exception {
-    	
-    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.
-    			visibilityOf(webDriver.findElement(By.xpath(Operation_Dd))));
-    	webDriver.selectFromDropdown(Operation_Dd, OperationName);
-    }
-    
-    public void ClickTheContentFromContentpage(String contentItemTitle) throws Exception {
-    	
-    	WebElement contentName = new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(
-    			By.xpath("//a[text()='" + contentItemTitle + "']")));
-    	contentName.click();
     }
     
     public void ClickAddFileLnk() throws Exception {
     	
-    	webDriver.findElement(By.linkText("Add file")).click();
+    	Reporter.log("Click the 'Add file' link.");
+    	AddFile_Lnk.click();
     }
     
 }

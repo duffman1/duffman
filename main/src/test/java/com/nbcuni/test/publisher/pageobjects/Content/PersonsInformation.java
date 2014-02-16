@@ -1,19 +1,12 @@
 package com.nbcuni.test.publisher.pageobjects.Content;
 
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
-
-import com.nbcuni.test.lib.Util;
-import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.publisher.common.Random;
 import com.nbcuni.test.webdriver.CustomWebDriver;
-
 
 /*********************************************
  * publisher.nbcuni.com PersonsInformation Library. Copyright
@@ -25,48 +18,54 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 public class PersonsInformation {
 
     private static CustomWebDriver webDriver;
-    private static AppLib al;
-    private final Util ul;
     
-    private static String FirstName_Txb = "//input[@id='edit-field-person-first-name-und-0-value']";
-    private static String Biography_Frm = "//iframe[@id='edit-body-und-0-value_ifr']";
-    private static String Biography_Txa = "//body[@id='tinymce']";
-    private static String CoverPhotoSelect_Btn = "//a[@id='edit-field-person-cover-photo-und-0-select']";
-    
-    public PersonsInformation(final CustomWebDriver custWebDr) {
-        webDriver = custWebDr;
-        ul = new Util(webDriver);
-        
+    //PAGE OBJECT CONSTCUTOR
+    public PersonsInformation(CustomWebDriver webDriver) {
+        PersonsInformation.webDriver = webDriver;
+        PageFactory.initElements(webDriver, this);
     }
-   
-public void EnterFirstName(String firstName) throws Exception {
+    
+    //PAGE OBJECT IDENTIFIERS
+    @FindBy(how = How.ID, using = "edit-field-person-first-name-und-0-value")
+    private static WebElement FirstName_Txb;
+    
+    @FindBy(how = How.ID, using = "edit-body-und-0-value_ifr")
+    private static WebElement Biography_Frm;
+    
+    @FindBy(how = How.ID, using = "tinymce")
+    private static WebElement Biography_Txa;
+    
+    @FindBy(how = How.ID, using = "edit-field-person-cover-photo-und-0-select")
+    private static WebElement CoverPhotoSelect_Btn;
+    
+    
+    //PAGE OBJECT METHODS
+    public void EnterFirstName(String firstName) throws Exception {
     	
-    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(By.xpath(FirstName_Txb)));
-    	webDriver.type(FirstName_Txb, firstName);
+    	Reporter.log("Enter '" + firstName + "' in the 'First name' text box.");
+    	FirstName_Txb.sendKeys(firstName);
     }
     
     public String EnterBiography() throws Exception{
 
-        //switch to the body frame
-    	WebElement frm = webDriver.findElement(By.xpath(Biography_Frm));
-        webDriver.switchTo().frame(frm);
+        webDriver.switchTo().frame(Biography_Frm);
 
-        //Enter a randomized body
+        Reporter.log("Enter a random block of text in the 'Biography' text area.");
         Random random = new Random();
         String body = random.GetCharacterString(20) + " " +
                         random.GetCharacterString(20) + " " +
                             random.GetCharacterString(20) + " " +
                                 random.GetCharacterString(20);
-        webDriver.click(Biography_Txa);
-        webDriver.type(Biography_Txa, body);
+        Biography_Txa.click();
+        Biography_Txa.sendKeys(body);
         
         return body;
     }
     
     public void ClickCoverPhotoSelectBtn() throws Exception {
     	
-    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(By.xpath(CoverPhotoSelect_Btn)));
-    	webDriver.click(CoverPhotoSelect_Btn);
+    	Reporter.log("Click the 'Cover Photo' Select button.");
+    	CoverPhotoSelect_Btn.click();
     }
     
     

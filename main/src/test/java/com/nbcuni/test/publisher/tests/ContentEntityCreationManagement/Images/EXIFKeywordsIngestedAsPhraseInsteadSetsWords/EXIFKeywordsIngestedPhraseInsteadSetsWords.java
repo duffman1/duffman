@@ -51,7 +51,7 @@ public class EXIFKeywordsIngestedPhraseInsteadSetsWords extends ParentTest{
             //Step 2
             taxonomy.NavigateSite("Content>>Files");
             overlay.SwitchToActiveFrame();
-            Content content = new Content(webDriver);
+            Content content = new Content(webDriver, applib);
             content.ClickAddFileLnk();
             overlay.SwitchToActiveFrame();
             AddFile addFile = new AddFile(webDriver, applib);

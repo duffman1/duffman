@@ -23,78 +23,153 @@
       <![CDATA[Click the 'Modules' menu link.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Reroute emails' in the 'Filter Name' text box.]]>
+      <![CDATA[Enter 'Pub Post' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Wait for the module titled 'Reroute emails' to appear in the list.]]>
+      <![CDATA[Wait for the module titled 'Pub Post' to appear in the list.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Configuration' menu link.]]>
+      <![CDATA[Verify content menu item 'Content' is present in the site taxonomy.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Development' menu link.]]>
+      <![CDATA[Verify content menu item 'My Workbench' is present in the site taxonomy.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Reroute Email' menu link.]]>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Pub7NBCUAutoEmailUser1@gmail.com' in the 'Email addresses' text box.]]>
+      <![CDATA[Mouse over the 'Add content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
+      <![CDATA[Click the 'Post' menu link.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+      <![CDATA[Enter '0f90029b2109449' in the 'Title' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the Synopsis frame.]]>
+    </line>
+    <line>
+      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Cover' select button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the select file frame.]]>
+    </line>
+    <line>
+      <![CDATA[Enter the file path for file upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Upload' button.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Public Local Files' radio button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Assert the file image 'HanSolo' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Assert the the img is loaded and visible.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Post 0f90029b2109449 has been created.' is present.]]>
     </line>
     <line>
       <![CDATA[Verify there are no errors present.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'People' menu link.]]>
+      <![CDATA[Verify the 'View' is present in the work bench.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Add user' menu link.]]>
+      <![CDATA[Verify the 'Edit Draft' is present in the work bench.]]>
     </line>
     <line>
-      <![CDATA[Enter '90d0d17dcf994a9@f14c8441a56e4a5.com' in the 'Username' text box.]]>
+      <![CDATA[Verify the 'Revisions' is present in the work bench.]]>
     </line>
     <line>
-      <![CDATA[Enter '90d0d17dcf994a9@f14c8441a56e4a5.com' in the 'E-mail address' text box.]]>
+      <![CDATA[Verify the 'Schedule' is present in the work bench.]]>
     </line>
     <line>
-      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+      <![CDATA[Click the 'Revision' link.]]>
     </line>
     <line>
-      <![CDATA[Enter 'pa55word' in the 'Confirm password' text box.]]>
+      <![CDATA[Click the 'Edit Draft' in the work bench.]]>
     </line>
     <line>
-      <![CDATA[Check the 'editor' checkbox.]]>
+      <![CDATA[Switch to the Synopsis frame.]]>
     </line>
     <line>
-      <![CDATA[Enter '506067b40702419' in the 'First Name' text box.]]>
+      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
     </line>
     <line>
-      <![CDATA[Enter '17600640066b41e' in the 'Last Name' text box.]]>
+      <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Create new account' button.]]>
+      <![CDATA[Verify the text 'Revision state' is present in the work bench info block.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'A welcome message with further instructions has been e-mailed to the new user 90d0d17dcf994a9@f14c8441a56e4a5.com.' is present.]]>
+      <![CDATA[Verify the text 'Public' is present in the work bench info block.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'Moderate' is present in the work bench info block.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Revisions' in the work bench.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The scheduled revision operation has been saved' is present.]]>
     </line>
     <line>
       <![CDATA[Verify there are no errors present.]]>
+    </line>
+    <line>
+      <![CDATA[verifyObjectContainsText:  Object //div[@class='content']//tbody contains the text 0f90029b2109449]]>
+    </line>
+    <line>
+      <![CDATA[verifyObjectContainsText:  Object //div[@class='content']//tbody contains the text Moderate to Publish]]>
+    </line>
+    <line>
+      <![CDATA[verifyObjectContainsText:  Object //div[@class='content']//tbody contains the text 02/25/2014 - 05:00 PM]]>
+    </line>
+    <line>
+      <![CDATA[verifyObjectContainsText:  Object //div[@class='content']//tbody contains the text Moderate to Published]]>
+    </line>
+    <line>
+      <![CDATA[verifyObjectContainsText:  Object //div[@class='content']//tbody contains the text Completed]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Revision' link.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="47296" started-at="2014-02-15T21:40:13Z" finished-at="2014-02-15T21:41:01Z">
+  <suite name="Default suite" duration-ms="69100" started-at="2014-02-16T00:17:12Z" finished-at="2014-02-16T00:18:21Z">
     <groups>
       <group name="full">
-        <method signature="EnableEmailReRouting.EnableEmailReRouting_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EmailReRouting.EnableEmailReRouting@2f774b9b]" name="EnableEmailReRouting_Test" class="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EmailReRouting.EnableEmailReRouting"/>
+        <method signature="ScheduleToPublishContentByDateTime.ScheduleToPublishContentByDateTime_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.ScheduleToPublishContentByDateTime@4104c575]" name="ScheduleToPublishContentByDateTime_Test" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.ScheduleToPublishContentByDateTime"/>
       </group> <!-- full -->
+      <group name="smoke">
+        <method signature="ScheduleToPublishContentByDateTime.ScheduleToPublishContentByDateTime_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.ScheduleToPublishContentByDateTime@4104c575]" name="ScheduleToPublishContentByDateTime_Test" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.ScheduleToPublishContentByDateTime"/>
+      </group> <!-- smoke -->
     </groups>
-    <test name="Default test" duration-ms="47296" started-at="2014-02-15T21:40:13Z" finished-at="2014-02-15T21:41:01Z">
-      <class name="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EmailReRouting.EnableEmailReRouting">
-        <test-method status="PASS" signature="startSelenium(java.lang.String)[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EmailReRouting.EnableEmailReRouting@2f774b9b]" name="startSelenium" is-config="true" duration-ms="13089" started-at="2014-02-15T16:40:13Z" finished-at="2014-02-15T16:40:26Z">
+    <test name="Default test" duration-ms="69100" started-at="2014-02-16T00:17:12Z" finished-at="2014-02-16T00:18:21Z">
+      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.ScheduleToPublishContentByDateTime">
+        <test-method status="PASS" signature="startSelenium(java.lang.String)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.ScheduleToPublishContentByDateTime@4104c575]" name="startSelenium" is-config="true" duration-ms="13523" started-at="2014-02-15T19:17:12Z" finished-at="2014-02-15T19:17:25Z">
           <params>
             <param index="0">
               <value>
@@ -111,7 +186,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="EnableEmailReRouting_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EmailReRouting.EnableEmailReRouting@2f774b9b]" name="EnableEmailReRouting_Test" duration-ms="33628" started-at="2014-02-15T16:40:26Z" finished-at="2014-02-15T16:41:00Z">
+        <test-method status="PASS" signature="ScheduleToPublishContentByDateTime_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.ScheduleToPublishContentByDateTime@4104c575]" name="ScheduleToPublishContentByDateTime_Test" duration-ms="54995" started-at="2014-02-15T19:17:25Z" finished-at="2014-02-15T19:18:20Z">
           <reporter-output>
             <line>
               <![CDATA[Open url 'http://qa5dev.publisher.nbcuni.com'.]]>
@@ -129,82 +204,154 @@
               <![CDATA[Click the 'Modules' menu link.]]>
             </line>
             <line>
-              <![CDATA[Enter 'Reroute emails' in the 'Filter Name' text box.]]>
+              <![CDATA[Enter 'Pub Post' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Wait for the module titled 'Reroute emails' to appear in the list.]]>
+              <![CDATA[Wait for the module titled 'Pub Post' to appear in the list.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Configuration' menu link.]]>
+              <![CDATA[Verify content menu item 'Content' is present in the site taxonomy.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Development' menu link.]]>
+              <![CDATA[Verify content menu item 'My Workbench' is present in the site taxonomy.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Reroute Email' menu link.]]>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Enter 'Pub7NBCUAutoEmailUser1@gmail.com' in the 'Email addresses' text box.]]>
+              <![CDATA[Mouse over the 'Add content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
+              <![CDATA[Click the 'Post' menu link.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+              <![CDATA[Enter '0f90029b2109449' in the 'Title' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the Synopsis frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Cover' select button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the select file frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter the file path for file upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Upload' button.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Public Local Files' radio button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Assert the file image 'HanSolo' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Assert the the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Post 0f90029b2109449 has been created.' is present.]]>
             </line>
             <line>
               <![CDATA[Verify there are no errors present.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'People' menu link.]]>
+              <![CDATA[Verify the 'View' is present in the work bench.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Add user' menu link.]]>
+              <![CDATA[Verify the 'Edit Draft' is present in the work bench.]]>
             </line>
             <line>
-              <![CDATA[Enter '90d0d17dcf994a9@f14c8441a56e4a5.com' in the 'Username' text box.]]>
+              <![CDATA[Verify the 'Revisions' is present in the work bench.]]>
             </line>
             <line>
-              <![CDATA[Enter '90d0d17dcf994a9@f14c8441a56e4a5.com' in the 'E-mail address' text box.]]>
+              <![CDATA[Verify the 'Schedule' is present in the work bench.]]>
             </line>
             <line>
-              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+              <![CDATA[Click the 'Revision' link.]]>
             </line>
             <line>
-              <![CDATA[Enter 'pa55word' in the 'Confirm password' text box.]]>
+              <![CDATA[Click the 'Edit Draft' in the work bench.]]>
             </line>
             <line>
-              <![CDATA[Check the 'editor' checkbox.]]>
+              <![CDATA[Switch to the Synopsis frame.]]>
             </line>
             <line>
-              <![CDATA[Enter '506067b40702419' in the 'First Name' text box.]]>
+              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
             </line>
             <line>
-              <![CDATA[Enter '17600640066b41e' in the 'Last Name' text box.]]>
+              <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Create new account' button.]]>
+              <![CDATA[Verify the text 'Revision state' is present in the work bench info block.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'A welcome message with further instructions has been e-mailed to the new user 90d0d17dcf994a9@f14c8441a56e4a5.com.' is present.]]>
+              <![CDATA[Verify the text 'Public' is present in the work bench info block.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Moderate' is present in the work bench info block.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Revisions' in the work bench.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The scheduled revision operation has been saved' is present.]]>
             </line>
             <line>
               <![CDATA[Verify there are no errors present.]]>
+            </line>
+            <line>
+              <![CDATA[verifyObjectContainsText:  Object //div[@class='content']//tbody contains the text 0f90029b2109449]]>
+            </line>
+            <line>
+              <![CDATA[verifyObjectContainsText:  Object //div[@class='content']//tbody contains the text Moderate to Publish]]>
+            </line>
+            <line>
+              <![CDATA[verifyObjectContainsText:  Object //div[@class='content']//tbody contains the text 02/25/2014 - 05:00 PM]]>
+            </line>
+            <line>
+              <![CDATA[verifyObjectContainsText:  Object //div[@class='content']//tbody contains the text Moderate to Published]]>
+            </line>
+            <line>
+              <![CDATA[verifyObjectContainsText:  Object //div[@class='content']//tbody contains the text Completed]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Revision' link.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- EnableEmailReRouting_Test -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EmailReRouting.EnableEmailReRouting@2f774b9b]" name="stopSelenium" is-config="true" duration-ms="568" started-at="2014-02-15T16:41:00Z" finished-at="2014-02-15T16:41:01Z">
+        </test-method> <!-- ScheduleToPublishContentByDateTime_Test -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.ScheduleToPublishContentByDateTime@4104c575]" name="stopSelenium" is-config="true" duration-ms="569" started-at="2014-02-15T19:18:20Z" finished-at="2014-02-15T19:18:21Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=EnableEmailReRouting_Test status=SUCCESS method=EnableEmailReRouting.EnableEmailReRouting_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EmailReRouting.EnableEmailReRouting@2f774b9b] output=Open url 'http://qa5dev.publisher.nbcuni.com'.]]]>
+                <![CDATA[[TestResult name=ScheduleToPublishContentByDateTime_Test status=SUCCESS method=ScheduleToPublishContentByDateTime.ScheduleToPublishContentByDateTime_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.ScheduleToPublishContentByDateTime@4104c575] output=Open url 'http://qa5dev.publisher.nbcuni.com'.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-      </class> <!-- com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EmailReRouting.EnableEmailReRouting -->
+      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.ScheduleToPublishContentByDateTime -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
