@@ -48,6 +48,7 @@ public class Overlay {
     public void ClickCloseOverlayLnk() throws Exception {
     	
     	webDriver.click(CloseOverlay_Lnk);
+    	this.switchToDefaultContent();
     }
     
     public void SwitchToFrame(String frameTitle) {
