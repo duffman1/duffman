@@ -70,7 +70,7 @@ public class ManageFields {
     	webDriver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
     	
     	try {
-    		WebElement el = FieldLabel_Txt(labelTxt);
+    		FieldLabel_Txt(labelTxt).isDisplayed();
     		fieldExists = true;
     	}
     	catch (Exception e) {

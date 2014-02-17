@@ -16,11 +16,8 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 
 public class Cron {
 
-    private static CustomWebDriver webDriver;
-    
     //PAGE OBJECT CONSTRUCTOR
     public Cron(CustomWebDriver webDriver) {
-        Cron.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
     }
     

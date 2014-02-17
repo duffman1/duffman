@@ -1,23 +1,8 @@
 package com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform;
 
-
-import com.nbcuni.test.lib.Util;
 import com.nbcuni.test.publisher.common.AppLib;
-import com.nbcuni.test.webdriver.CustomWebDriver;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
+import org.testng.Reporter;
 import org.sikuli.script.*;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.TimeUnit;
-
 
 /*********************************************
  * publisher.nbcuni.com MPX Delete Media Library. Copyright
@@ -28,48 +13,41 @@ import java.util.concurrent.TimeUnit;
 
 public class MPXDeleteMedia {
 
-    private static CustomWebDriver webDriver;
     private static AppLib applib;
-    private final Util ul;
-    Screen s = new Screen();
-    MPXAssets mpxAssets;
+    private static Screen sikuli;
+    private static MPXAssets mpxAssets;
     
-    public MPXDeleteMedia(CustomWebDriver custWebDr, AppLib applib) {
-        webDriver = custWebDr;
-        this.applib = applib;
-        ul = new Util(webDriver);
-        mpxAssets = new MPXAssets(webDriver, applib);
+    public MPXDeleteMedia(AppLib applib) {
+        sikuli = new Screen();
+        MPXDeleteMedia.applib = applib;
+        mpxAssets = new MPXAssets(applib);
     }
     
     private String getImagePath() {
     	
-    	String PathToImages = applib.getPathToSikuliImages();
-    	return PathToImages;
+    	return applib.getPathToSikuliImages();
     }
     
     public void GiveFocusToMediaList() throws Exception {
     	
-    	String path = this.getImagePath();
-    	mpxAssets.WaitForImgPresent(path + "DeleteMedia/DeleteMedia1.png");
-    	s.click(path + "DeleteMedia/DeleteMedia1.png");
+    	Reporter.log("Click the media item to give focus to it.");
+    	mpxAssets.WaitForImgPresent(getImagePath() + "DeleteMedia/DeleteMedia1.png");
+    	sikuli.click(getImagePath() + "DeleteMedia/DeleteMedia1.png");
     }
     
     public void ClickDeleteBtn() throws Exception {
     	
-    	String path = this.getImagePath();
-    	mpxAssets.WaitForImgPresent(path + "DeleteMedia/Delete_Btn.png");
-    	s.click(path + "DeleteMedia/Delete_Btn.png");
+    	Reporter.log("Click the 'Delete' button.");
+    	mpxAssets.WaitForImgPresent(getImagePath() + "DeleteMedia/Delete_Btn.png");
+    	sikuli.click(getImagePath() + "DeleteMedia/Delete_Btn.png");
     }
     
     public void ClickYesBtn() throws Exception {
     	
-    	String path = this.getImagePath();
-    	mpxAssets.WaitForImgPresent(path + "DeleteMedia/Yes_Btn.png");
-    	s.click(path + "DeleteMedia/Yes_Btn.png");
+    	Reporter.log("Click the 'Yes' button.");
+    	mpxAssets.WaitForImgPresent(getImagePath() + "DeleteMedia/Yes_Btn.png");
+    	sikuli.click(getImagePath() + "DeleteMedia/Yes_Btn.png");
     }
     
-    
-    
-  
 }
 

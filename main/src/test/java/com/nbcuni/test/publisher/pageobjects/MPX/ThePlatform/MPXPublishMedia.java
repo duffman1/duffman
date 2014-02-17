@@ -1,23 +1,8 @@
 package com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform;
 
-
-import com.nbcuni.test.lib.Util;
 import com.nbcuni.test.publisher.common.AppLib;
-import com.nbcuni.test.webdriver.CustomWebDriver;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
+import org.testng.Reporter;
 import org.sikuli.script.*;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.TimeUnit;
-
 
 /*********************************************
  * publisher.nbcuni.com MPX Publish Media Library. Copyright
@@ -28,73 +13,59 @@ import java.util.concurrent.TimeUnit;
 
 public class MPXPublishMedia {
 
-    private static CustomWebDriver webDriver;
     private static AppLib applib;
-    private final Util ul;
-    Screen s = new Screen();
-    MPXAssets mpxAssets = new MPXAssets(this.webDriver, this.applib);
+    private static Screen sikuli;
+    private static MPXAssets mpxAssets;
     
-    public MPXPublishMedia(final CustomWebDriver custWebDr, AppLib applib) {
-        webDriver = custWebDr;
-        this.applib = applib;
-        ul = new Util(webDriver);
-        
+    public MPXPublishMedia(AppLib applib) {
+        sikuli = new Screen();
+        MPXPublishMedia.applib = applib;
+        mpxAssets = new MPXAssets(applib);
     }
     
     private String getImagePath() {
     	
-    	String PathToImages = applib.getPathToSikuliImages();
-    	return PathToImages;
+    	return applib.getPathToSikuliImages();
     }
     
     public void ClickPublishBtn() throws Exception {
     	
-    	String path = this.getImagePath();
-    	mpxAssets.WaitForImgPresent(path + "Publish/Publish_Btn.png");
-    	s.click(path + "Publish/Publish_Btn.png");
+    	Reporter.log("Click the 'Publish' button.");
+    	mpxAssets.WaitForImgPresent(getImagePath() + "Publish/Publish_Btn.png");
+    	sikuli.click(getImagePath() + "Publish/Publish_Btn.png");
     	
     	//Windows requires slight mousemove for publish dialog to be visible in flash - no idea why...
     	if (System.getProperty("os.name").contains("Windows")) {
-    		Pattern pImage = new Pattern(path + "Publish/Publish_Btn.png").targetOffset(-20, 0);
-    		Region r = s.exists(pImage, 1);
-    		s.click(r, 1);
+    		Pattern pattern = new Pattern(getImagePath() + "Publish/Publish_Btn.png").targetOffset(-20, 0);
+    		Region region = sikuli.exists(pattern, 1);
+    		sikuli.click(region, 1);
     	}
-    }
-    
-    public void ClickPublishToAllCbx() throws Exception {
-    	
-    	String path = this.getImagePath();
-    	mpxAssets.WaitForImgPresent(path + "Publish/All_Lbl.png");
-    	Pattern pImage = new Pattern(path + "Publish/All_Lbl.png").targetOffset(-18, 0);
-    	Region r = s.exists(pImage, 1);
-    	s.click(r, 1);
     }
     
     public void ClickPublishToPub7PrimaryCbx() throws Exception {
     	
-    	String path = this.getImagePath();
-    	mpxAssets.WaitForImgPresent(path + "Publish/Pub7PrimaryPublishProfile_Lbl.png");
-    	Pattern pImage = new Pattern(path + "Publish/Pub7PrimaryPublishProfile_Lbl.png").targetOffset(-18, 0);
-    	Region r = s.exists(pImage, 1);
-    	s.click(r, 1);
+    	Reporter.log("Click the 'Publish to Pub 7 Primary' check box.");
+    	mpxAssets.WaitForImgPresent(getImagePath() + "Publish/Pub7PrimaryPublishProfile_Lbl.png");
+    	Pattern pattern = new Pattern(getImagePath() + "Publish/Pub7PrimaryPublishProfile_Lbl.png").targetOffset(-18, 0);
+    	Region region = sikuli.exists(pattern, 1);
+    	sikuli.click(region, 1);
     }
     
     public void ClickPublishFromDialogBtn() throws Exception {
     	
-    	String path = this.getImagePath();
-    	mpxAssets.WaitForImgPresent(path + "Publish/PublishFromDialog_Btn.png");
-    	s.click(path + "Publish/PublishFromDialog_Btn.png");
+    	Reporter.log("Click the 'Publish' button from the upload dialog.");
+    	mpxAssets.WaitForImgPresent(getImagePath() + "Publish/PublishFromDialog_Btn.png");
+    	sikuli.click(getImagePath() + "Publish/PublishFromDialog_Btn.png");
     	
-    	mpxAssets.WaitForImgNotPresent(path + "Common/Spinner.png");
+    	mpxAssets.WaitForImgNotPresent(getImagePath() + "Common/Spinner.png");
     	
     }
     
     public boolean PublishSuccessful() {
     	
-    	String path = this.getImagePath();
     	boolean publishSuccessful = false;
     	try {
-    		s.find(path + "Publish/PublishError_Ctr.png");
+    		sikuli.find(getImagePath() + "Publish/PublishError_Ctr.png");
     		publishSuccessful = false;
     	}
     	catch (Exception e) {
@@ -106,37 +77,35 @@ public class MPXPublishMedia {
     
     public void ClickOKBtn() throws Exception {
     	
-    	String path = this.getImagePath();
-    	mpxAssets.WaitForImgPresent(path + "Common/OK_Btn.png");
-    	s.click(path + "Common/OK_Btn.png");
+    	Reporter.log("Click the 'OK' button.");
+    	mpxAssets.WaitForImgPresent(getImagePath() + "Common/OK_Btn.png");
+    	sikuli.click(getImagePath() + "Common/OK_Btn.png");
     	
     }
 
     public void ClickAdditionalOptionsArrow() throws Exception {
     	
-    	String path = this.getImagePath();
-    	mpxAssets.WaitForImgPresent(path + "Common/AdditionalOptions_Arr.png");
-    	s.click(path + "Common/AdditionalOptions_Arr.png");
+    	Reporter.log("Click the 'Additional Options' arrow.");
+    	mpxAssets.WaitForImgPresent(getImagePath() + "Common/AdditionalOptions_Arr.png");
+    	sikuli.click(getImagePath() + "Common/AdditionalOptions_Arr.png");
     }
     
     public void ClickPublishUpdateLnk() throws Exception {
     	
-    	String path = this.getImagePath();
-    	mpxAssets.WaitForImgPresent(path + "Publish/PublishUpdate_Lnk.png");
-    	s.click(path + "Publish/PublishUpdate_Lnk.png");
+    	Reporter.log("Click the 'Publish Update' link.");
+    	mpxAssets.WaitForImgPresent(getImagePath() + "Publish/PublishUpdate_Lnk.png");
+    	sikuli.click(getImagePath() + "Publish/PublishUpdate_Lnk.png");
     }
     
     public void ClickUpdateBtn() throws Exception {
     	
-    	String path = this.getImagePath();
-    	mpxAssets.WaitForImgPresent(path + "Common/Update_Btn.png");
-    	s.click(path + "Common/Update_Btn.png");
+    	Reporter.log("Click the 'Update' button.");
+    	mpxAssets.WaitForImgPresent(getImagePath() + "Common/Update_Btn.png");
+    	sikuli.click(getImagePath() + "Common/Update_Btn.png");
     	
     	Thread.sleep(2000);
-    	mpxAssets.WaitForImgNotPresent(path + "Common/Spinner.png");
+    	mpxAssets.WaitForImgNotPresent(getImagePath() + "Common/Spinner.png");
     }
     
-    
-  
 }
 

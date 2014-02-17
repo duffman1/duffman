@@ -17,13 +17,8 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 
 public class GigyaSettings {
 
-    private static CustomWebDriver webDriver;
-    private static AppLib applib;
-    
     //PAGE OBJECT CONSTRUCTOR    
     public GigyaSettings(CustomWebDriver webDriver, AppLib applib) {
-        GigyaSettings.webDriver = webDriver;
-        GigyaSettings.applib = applib;
         PageFactory.initElements(webDriver, this);
     }
     

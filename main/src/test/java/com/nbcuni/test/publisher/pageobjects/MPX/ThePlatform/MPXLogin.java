@@ -1,23 +1,9 @@
 package com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform;
 
-
-import com.nbcuni.test.lib.Util;
 import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.webdriver.CustomWebDriver;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
+import org.testng.Reporter;
 import org.sikuli.script.*;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.TimeUnit;
-
 
 /*********************************************
  * publisher.nbcuni.com MPXLogin Library. Copyright
@@ -29,44 +15,45 @@ import java.util.concurrent.TimeUnit;
 public class MPXLogin {
 
     private static CustomWebDriver webDriver;
+    private static Screen sikuli;
     private static AppLib applib;
-    private final Util ul;
-    MPXAssets mpxAssets = new MPXAssets(this.webDriver, this.applib);
+    private static MPXAssets mpxAssets;
     
-    public MPXLogin(final CustomWebDriver custWebDr, AppLib applib) {
-        webDriver = custWebDr;
-        this.applib = applib;
-        ul = new Util(webDriver);
-        
+    public MPXLogin(CustomWebDriver webDriver, AppLib applib) {
+        MPXLogin.webDriver = webDriver;
+        sikuli = new Screen();
+        MPXLogin.applib = applib;
+        mpxAssets = new MPXAssets(applib);
     }
     
     private String getImagePath() {
     	
-    	String PathToImages = applib.getPathToSikuliImages();
-    	return PathToImages;
+    	return applib.getPathToSikuliImages();
     }
     
     public void OpenMPXThePlatform() throws Exception {
     	
+    	Reporter.log("Open the mpx platform.");
     	webDriver.navigate().to(applib.getMPXUrl());
     }
     
     public void Login(String userName, String passWord) throws Exception {
     	
-    	Screen s = new Screen();
-        String path = this.getImagePath();
+    	mpxAssets.WaitForImgPresent(getImagePath() + "Login/SignIn_Ctr.png");
+    	mpxAssets.WaitForImgPresent(getImagePath() + "Login/UserName_Txb.png");
     	
-        mpxAssets.WaitForImgPresent(path + "Login/SignIn_Ctr.png");
-    	mpxAssets.WaitForImgPresent(path + "Login/UserName_Txb.png");
-    	s.doubleClick(path + "Login/UserName_Txb.png");
-        s.type(userName);
-        s.doubleClick(path + "Login/PassWord_Txb.png");
-        s.type(passWord);
-        s.click(path + "Login/SignIn_Btn.png");
+    	Reporter.log("Enter '" + userName + "' in the 'Username' text box.");
+    	sikuli.doubleClick(getImagePath() + "Login/UserName_Txb.png");
+        sikuli.type(userName);
+        
+        Reporter.log("Enter '" + passWord + "' in the 'Password' text box.");
+        sikuli.doubleClick(getImagePath() + "Login/PassWord_Txb.png");
+        sikuli.type(passWord);
+        
+        Reporter.log("Click the 'Login' button.");
+        sikuli.click(getImagePath() + "Login/SignIn_Btn.png");
         
     }
     
-    
-  
 }
 

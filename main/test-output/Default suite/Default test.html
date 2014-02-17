@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Feb 17 13:48:50 EST 2014</td>
+<td>Started on:</td><td>Mon Feb 17 16:20:05 EST 2014</td>
 </tr>
-<tr><td>Total time:</td><td>91 seconds (91296 ms)</td>
+<tr><td>Total time:</td><td>343 seconds (343712 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,95 +67,232 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentAndEntityPreview.PreviewContentItemsIntheFuturefromContentandWorkbenchViews.PreviewContentItemsIntheFuturefromContentandWorkbenchViews_Test()'><b>PreviewContentItemsIntheFuturefromContentandWorkbenchViews_Test</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentAndEntityPreview.PreviewContentItemsIntheFuturefromContentandWorkbenchViews<br/>
-<a href="#Output-25047450" onClick='toggleBox("Output-25047450", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling.MPXVideosSchedulingVerificationScheduling_Test()'><b>MPXVideosSchedulingVerificationScheduling_Test</b><br>Test class: com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling<br/>
+<a href="#Output-1285366524" onClick='toggleBox("Output-1285366524", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-25047450" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-25047450">
+<a href="#Output-1285366524" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1285366524">
 Open url 'http://qa5dev.publisher.nbcuni.com'.<br/>
 Enter the user's email address in the 'Email Address' text box.<br/>
 Enter the user's password in the 'Password' text box.<br/>
 Click the 'Login' button.<br/>
-Mouse over the 'Content' menu link.<br/>
-Mouse over the 'Add content' menu link.<br/>
-Click the 'Post' menu link.<br/>
-Enter 'bba02e5e177644b' in the 'Title' text box.<br/>
-Switch to the Synopsis frame.<br/>
-Enter a randomized text string into the 'Body' text area.<br/>
-Enter '3f75b182764843f1962c5fd59' in the 'Short Description' text area.<br/>
-Click the 'Cover' select button.<br/>
-Switch to the select file frame.<br/>
-Enter the file path for file upload.<br/>
+Mouse over the 'Configuration' menu link.<br/>
+Mouse over the 'Media' menu link.<br/>
+Click the 'Media: thePlatform mpx settings' menu link.<br/>
+Open the mpx platform.<br/>
+Enter 'mpx/AdminPub7QA' in the 'Username' text box.<br/>
+Enter 'Pa55word' in the 'Password' text box.<br/>
+Click the 'Login' button.<br/>
+Enter the account name 'DB TV' in the account select text box.<br/>
+Click the account option from the drop down list.<br/>
+Click the 'Account' title to leave focus off of the selection.<br/>
+Wait for account to switch to the newly selected account.<br/>
 Click the 'Upload' button.<br/>
-Wait for the file link to be visible after upload.<br/>
-Click the 'Next' button.<br/>
-Click the 'Public Local Files' radio button.<br/>
-Click the 'Next' button.<br/>
-Assert the file image 'HanSolo' is present.<br/>
-Assert the the img is loaded and visible.<br/>
+Click the 'Choose Files' button.<br/>
+Click the 'Movies' button in the OS Upload dialog.<br/>
+Click the Test Movie in th OS Upload dialog.<br/>
+Click the 'Open' button.<br/>
+Click the 'Upload' button in the Upload dialog.<br/>
+Click the 'Available Date' label on the right hand side to give focus to the media item.<br/>
+Enter '1/28/2014 12:00 AM' in the 'Available Date' text box.<br/>
+Enter 'Automation8b9ea8e91a' in the 'Title' text box.<br/>
+Enter '2/10/2014 12:00 AM' in the 'Expiration Date' text box.<br/>
 Click the 'Save' button.<br/>
-Scroll the 'Publishing Options' link into view.<br/>
-Click the 'Publishing Options' link.<br/>
-Select 'Published' from the 'Moderation State' drop down list.<br/>
+Click the 'Publish' button.<br/>
+Click the 'Publish to Pub 7 Primary' check box.<br/>
+Click the 'Publish' button from the upload dialog.<br/>
+Open url 'http://qa5dev.publisher.nbcuni.com'.<br/>
+Verify success message of 'Cron ran successfully.' is present.<br/>
+Verify there are no errors present.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Files' menu link.<br/>
+Click the 'mpxMedia' menu link.<br/>
+Enter title Automation8b9ea8e91a.<br/>
+Click the 'Apply' button.<br/>
+Get the text of the first search result set item.<br/>
+Get the title text of every result in the search result set.<br/>
+For each expected result, assert it is present in the result set.<br/>
+Verify the text '01/28/2014 - 05:00 AM' is present on the page.<br/>
+Verify the text '02/10/2014 - 05:00 AM' is present on the page.<br/>
+Verify the text 'Expired' is present on the page.<br/>
+Click the first search title link in the search result set.<br/>
+Verify the text 'Automation8b9ea8e91a' is present on the page.<br/>
+Verify the text 'Tuesday, January 28, 2014 - 05:00' is present on the page.<br/>
+Verify the text 'Monday, February 10, 2014 - 05:00' is present on the page.<br/>
+Click the 'Edit' in the work bench.<br/>
+Open the mpx platform.<br/>
+Enter the account name 'DB TV' in the account select text box.<br/>
+Click the account option from the drop down list.<br/>
+Click the 'Account' title to leave focus off of the selection.<br/>
+Wait for account to switch to the newly selected account.<br/>
+Enter 'Automation8b9ea8e91a' in the 'Search' text box.<br/>
+Click the 'Search by Title' link.<br/>
+Click the 'Available Date' label on the right hand side to give focus to the media item.<br/>
+Enter '2/17/2014 12:00 AM' in the 'Available Date' text box.<br/>
+Enter '2/17/2015 12:00 AM' in the 'Expiration Date' text box.<br/>
 Click the 'Save' button.<br/>
-Verify success message of 'Post bba02e5e177644b has been created.' is present.<br/>
+Click the 'Additional Options' arrow.<br/>
+Click the 'Publish Update' link.<br/>
+Click the 'Publish to Pub 7 Primary' check box.<br/>
+Click the 'Update' button.<br/>
+Open url 'http://qa5dev.publisher.nbcuni.com'.<br/>
+Verify success message of 'Cron ran successfully.' is present.<br/>
 Verify there are no errors present.<br/>
-Click on the 'Preview Site' link.<br/>
-Select 'Site as of ...' from the 'SELECT A CONDITION' drop down list.<br/>
-Enter '02/18/2014' in the 'DATE' text box.<br/>
-Enter '12:40 pm' in the 'TIME' text box.<br/>
-Click the 'Enable Preview' button.<br/>
-Verify the 'Disable Preview' is visible.<br/>
-Verify the 'Update Preview' button is present.<br/>
-Click the 'Edit Draft' in the work bench.<br/>
-Enter 'Updatedbba02e5e177644b' in the 'Title' text box.<br/>
-Enter 'Updated3f75b182764843f1962c5fd59' in the 'Short Description' text area.<br/>
-Switch to the Synopsis frame.<br/>
-Enter a randomized text string into the 'Body' text area.<br/>
-Click the 'Save' button.<br/>
-Click the 'Schedule' in the work bench.<br/>
-Verify success message of 'The scheduled revision operation has been saved' is present.<br/>
-Verify there are no errors present.<br/>
-Verify the selected option of the 'SELECT A CONDITION' drop down list is 'Site as of ...'.<br/>
-Verify the value of the 'DATE' text box is '02/18/2014'.<br/>
-Verify the value of the 'TIME' text box is '12:40 pm'.<br/>
-Verify the text 'Updated3f75b182764843f1962c5fd59' is present on the page.<br/>
-Verify the text '07744465c21541298ddb 94f53da738334c5c8715 ecd023e82af44427ac51 15d796efded94a7abf78' is present on the page.<br/>
-Click on the 'Preview Site' link.<br/>
-Verify the 'Disable Preview' is NOT visible.<br/>
-Click on the 'Preview Site' link.<br/>
-Verify the 'Disable Preview' is visible.<br/>
-Verify the selected option of the 'SELECT A CONDITION' drop down list is 'Site as of ...'.<br/>
-Verify the value of the 'DATE' text box is '02/18/2014'.<br/>
-Verify the value of the 'TIME' text box is '12:40 pm'.<br/>
-Click the 'Schedule' in the work bench.<br/>
-Verify success message of 'The scheduled revision operation has been saved' is present.<br/>
-Verify there are no errors present.<br/>
-Verify the selected option of the 'SELECT A CONDITION' drop down list is 'Site as of ...'.<br/>
-Verify the value of the 'DATE' text box is '02/18/2014'.<br/>
-Verify the value of the 'TIME' text box is '12:40 pm'.<br/>
-Enter '02/20/2014' in the 'DATE' text box.<br/>
-Enter '12:40 pm' in the 'TIME' text box.<br/>
-Click the 'Update Preview' button.<br/>
-Verify the text 'Updated3f75b182764843f1962c5fd59' is present on the page.<br/>
-Verify the text '07744465c21541298ddb 94f53da738334c5c8715 ecd023e82af44427ac51 15d796efded94a7abf78' is present on the page.<br/>
-Click the 'Disable Preview' button.<br/>
-Click on the 'Preview Site' link.<br/>
-Verify the selected option of the 'SELECT A CONDITION' drop down list is '- Select -'.<br/>
-Verify the 'Enable Preview' button is visible.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Files' menu link.<br/>
+Click the 'mpxMedia' menu link.<br/>
+Enter title Automation8b9ea8e91a.<br/>
+Click the 'Apply' button.<br/>
+Get the title text of every result in the search result set.<br/>
+For each expected result, assert it is present in the result set.<br/>
+Verify the text '02/17/2014 - 05:00 AM' is present on the page.<br/>
+Verify the text '02/17/2015 - 05:00 AM' is present on the page.<br/>
+Verify the text 'Published' is present on the page.<br/>
+Click the first search title link in the search result set.<br/>
+Verify the text 'Automation8b9ea8e91a' is present on the page.<br/>
+Verify the text 'Monday, February 17, 2014 - 05:00' is present on the page.<br/>
+Verify the text 'Tuesday, February 17, 2015 - 05:00' is present on the page.<br/>
+Click the 'Edit' in the work bench.<br/>
+Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140217162548.png <br/>
+Failed to capture screenshot<br/>
 </div>
 </td>
-<td></td>
-<td>71</td>
-<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentAndEntityPreview.PreviewContentItemsIntheFuturefromContentandWorkbenchViews@4104c575</td></tr>
+<td><div><pre>org.openqa.selenium.WebDriverException: Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.8.5&apos;, java.version: &apos;1.6.0_65&apos;
+Session ID: e2178915-bf5f-408d-93d1-d7ffdcd30d88
+Driver info: com.nbcuni.test.webdriver.CustomWebDriver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.wJyFnq}, rotatable=false, locationContextEnabled=true, webdriver.remote.sessionid=e2178915-bf5f-408d-93d1-d7ffdcd30d88, version=32.0.1700.107, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:191)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:554)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:307)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:404)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:344)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:299)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:579)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:39)
+	at org.openqa.selenium.support.ui.ExpectedConditions$3.apply(ExpectedConditions.java:106)
+	at org.openqa.selenium.support.ui.ExpectedConditions$3.apply(ExpectedConditions.java:103)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
+	at com.nbcuni.test.publisher.pageobjects.Queues.ScheduleQueue.VerifyRunNowBtn(ScheduleQueue.java:133)
+	at com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling.MPXVideosSchedulingVerificationScheduling_Test(MPXVideosSchedulingVerificationScheduling.java:266)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+Caused by: java.lang.NullPointerException
+	at org.openqa.selenium.support.events.EventFiringWebDriver.extractInterfaces(EventFiringWebDriver.java:117)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.access$500(EventFiringWebDriver.java:63)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.&lt;init&gt;(EventFiringWebDriver.java:318)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.&lt;init&gt;(EventFiringWebDriver.java:312)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.createWebElement(EventFiringWebDriver.java:282)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:182)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:47)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:33)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:169)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1285366524", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1285366524'><pre>org.openqa.selenium.WebDriverException: Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.8.5&apos;, java.version: &apos;1.6.0_65&apos;
+Session ID: e2178915-bf5f-408d-93d1-d7ffdcd30d88
+Driver info: com.nbcuni.test.webdriver.CustomWebDriver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.wJyFnq}, rotatable=false, locationContextEnabled=true, webdriver.remote.sessionid=e2178915-bf5f-408d-93d1-d7ffdcd30d88, version=32.0.1700.107, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:191)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:554)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:307)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:404)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:344)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:299)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:579)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:39)
+	at org.openqa.selenium.support.ui.ExpectedConditions$3.apply(ExpectedConditions.java:106)
+	at org.openqa.selenium.support.ui.ExpectedConditions$3.apply(ExpectedConditions.java:103)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
+	at com.nbcuni.test.publisher.pageobjects.Queues.ScheduleQueue.VerifyRunNowBtn(ScheduleQueue.java:133)
+	at com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling.MPXVideosSchedulingVerificationScheduling_Test(MPXVideosSchedulingVerificationScheduling.java:266)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+Caused by: java.lang.NullPointerException
+	at org.openqa.selenium.support.events.EventFiringWebDriver.extractInterfaces(EventFiringWebDriver.java:117)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.access$500(EventFiringWebDriver.java:63)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.&lt;init&gt;(EventFiringWebDriver.java:318)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.&lt;init&gt;(EventFiringWebDriver.java:312)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.createWebElement(EventFiringWebDriver.java:282)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:182)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:47)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:33)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:169)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+</pre></div></td>
+<td>329</td>
+<td>com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling@1232784a</td></tr>
 </table><p>
 </body>
 </html>

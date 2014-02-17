@@ -1,9 +1,8 @@
 package com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform;
 
 import com.nbcuni.test.publisher.common.AppLib;
-import com.nbcuni.test.webdriver.CustomWebDriver;
-
 import org.sikuli.script.*;
+import org.testng.Reporter;
 
 /*********************************************
  * publisher.nbcuni.com MPX Add Player Library. Copyright
@@ -14,80 +13,79 @@ import org.sikuli.script.*;
 
 public class MPXAddPlayer {
 
-    private static CustomWebDriver webDriver;
     private static AppLib applib;
-    Screen s = new Screen();
-    MPXAssets mpxAssets = new MPXAssets(webDriver, applib);
+    private static Screen sikuli;
+    private static MPXAssets mpxAssets;
     
-    public MPXAddPlayer(final CustomWebDriver custWebDr, AppLib applib) {
-        webDriver = custWebDr;
-        this.applib = applib;
+    public MPXAddPlayer(AppLib applib) {
+        sikuli = new Screen();
+    	MPXAddPlayer.applib = applib;
+    	mpxAssets = new MPXAssets(applib);
         
     }
     
     private String getImagePath() {
     	
-    	String PathToImages = applib.getPathToSikuliImages();
-    	return PathToImages;
+    	return applib.getPathToSikuliImages();
     }
     
     public void ClickPlayersLnk() throws Exception {
     	
-    	String path = this.getImagePath();
-    	mpxAssets.WaitForImgPresent(path + "Players/Players_Lnk.png");
-    	s.click(path + "Players/Players_Lnk.png");
+    	Reporter.log("Click the 'Players' link.");
+    	mpxAssets.WaitForImgPresent(getImagePath() + "Players/Players_Lnk.png");
+    	sikuli.click(getImagePath() + "Players/Players_Lnk.png");
     }
     
     public void ClickAllPlayersLnk() throws Exception {
     	
-    	String path = this.getImagePath();
-    	mpxAssets.WaitForImgPresent(path + "Players/AllPlayers_Lnk.png");
-    	s.click(path + "Players/AllPlayers_Lnk.png");
-    	mpxAssets.WaitForImgPresent(path + "Players/AllPlayers_Lst.png");
-    	mpxAssets.WaitForAllAssetsToLoad(path);
+    	Reporter.log("Click the 'All Players' link.");
+    	mpxAssets.WaitForImgPresent(getImagePath() + "Players/AllPlayers_Lnk.png");
+    	sikuli.click(getImagePath() + "Players/AllPlayers_Lnk.png");
+    	mpxAssets.WaitForImgPresent(getImagePath() + "Players/AllPlayers_Lst.png");
+    	mpxAssets.WaitForAllAssetsToLoad(getImagePath());
     }
     
     public void ClickAddBtn() throws Exception {
     	
-    	String path = this.getImagePath();
-    	mpxAssets.WaitForImgPresent(path + "Common/Add_Btn.png");
-    	s.click(path + "Common/Add_Btn.png");
-    	mpxAssets.WaitForImgPresent(path + "Players/NewPlayer_Lbl.png");
+    	Reporter.log("Click the 'Add' button.");
+    	mpxAssets.WaitForImgPresent(getImagePath() + "Common/Add_Btn.png");
+    	sikuli.click(getImagePath() + "Common/Add_Btn.png");
+    	mpxAssets.WaitForImgPresent(getImagePath() + "Players/NewPlayer_Lbl.png");
     }
     
     public void EnterPlayerTitle(String playerTitle) throws Exception {
     	
-    	String path = this.getImagePath();
+    	Reporter.log("Enter '" + playerTitle + "' in the 'Title' text box.");
     	Thread.sleep(3000); //TODO - bad but necessary pause
-    	mpxAssets.WaitForImgPresent(path + "Media/Title_Txb.png");
-    	Pattern pImage = new Pattern(path + "Media/Title_Txb.png").targetOffset(0, 15);
-    	Region r = s.exists(pImage, 1);
-    	s.click(r, 1);
+    	mpxAssets.WaitForImgPresent(getImagePath() + "Media/Title_Txb.png");
+    	Pattern pattern = new Pattern(getImagePath() + "Media/Title_Txb.png").targetOffset(0, 15);
+    	Region region = sikuli.exists(pattern, 1);
+    	sikuli.click(region, 1);
     	mpxAssets.ClearInput();
-    	s.type(playerTitle);
+    	sikuli.type(playerTitle);
     }
     
     public void ClickSaveBtn() throws Exception {
     	
-    	String path = this.getImagePath();
-    	mpxAssets.WaitForImgPresent(path + "Common/Save_Btn.png");
-    	s.click(path + "Common/Save_Btn.png");
+    	Reporter.log("Click the 'Save' button.");
+    	mpxAssets.WaitForImgPresent(getImagePath() + "Common/Save_Btn.png");
+    	sikuli.click(getImagePath() + "Common/Save_Btn.png");
     	Thread.sleep(2000); //TODO - add dynamic wait
     }
     
     public void GiveFocusToPlayerItem() throws Exception {
     	
-    	String path = this.getImagePath();
-    	mpxAssets.WaitForImgPresent(path + "Media/Title_Txb.png");
-    	s.click(path + "Media/Title_Txb.png");
+    	Reporter.log("Click the 'Player Title' label to give focus to the player item.");
+    	mpxAssets.WaitForImgPresent(getImagePath() + "Media/Title_Txb.png");
+    	sikuli.click(getImagePath() + "Media/Title_Txb.png");
     	
     }
     
     public void ClickDisablePlayerCbx() throws Exception {
     	
-    	String path = this.getImagePath();
-    	mpxAssets.ScrollDownForImgPresent(path + "Players/DisableThisPlayer_Cbx.png");
-    	s.click(path + "Players/DisableThisPlayer_Cbx.png");
+    	Reporter.log("Click the 'Disable Player' check box.");
+    	mpxAssets.ScrollDownForImgPresent(getImagePath() + "Players/DisableThisPlayer_Cbx.png");
+    	sikuli.click(getImagePath() + "Players/DisableThisPlayer_Cbx.png");
     }
     
   

@@ -1,23 +1,8 @@
 package com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform;
 
-
-import com.nbcuni.test.lib.Util;
 import com.nbcuni.test.publisher.common.AppLib;
-import com.nbcuni.test.webdriver.CustomWebDriver;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
+import org.testng.Reporter;
 import org.sikuli.script.*;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.TimeUnit;
-
 
 /*********************************************
  * publisher.nbcuni.com MPX Search Library. Copyright
@@ -28,63 +13,59 @@ import java.util.concurrent.TimeUnit;
 
 public class MPXSearch {
 
-    private static CustomWebDriver webDriver;
     private static AppLib applib;
-    private final Util ul;
-    Screen s = new Screen();
-    MPXAssets mpxAssets = new MPXAssets(this.webDriver, this.applib);
+    private static Screen sikuli;
+    private static MPXAssets mpxAssets;
     
-    public MPXSearch(final CustomWebDriver custWebDr, AppLib applib) {
-        webDriver = custWebDr;
-        this.applib = applib;
-        ul = new Util(webDriver);
-        
+    public MPXSearch(AppLib applib) {
+        sikuli = new Screen();
+        MPXSearch.applib = applib;
+        mpxAssets = new MPXAssets(applib);
     }
     
     private String getImagePath() {
     	
-    	String PathToImages = applib.getPathToSikuliImages();
-    	return PathToImages;
+    	return applib.getPathToSikuliImages();
     }
     
     public void EnterSearchTxt(String txt) throws Exception {
     	
-    	String path = this.getImagePath();
-    	mpxAssets.WaitForImgPresent(path + "Search/Search_Txb.png");
-    	s.click(path + "Search/Search_Txb.png");
+    	Reporter.log("Enter '" + txt + "' in the 'Search' text box.");
+    	mpxAssets.WaitForImgPresent(getImagePath() + "Search/Search_Txb.png");
+    	sikuli.click(getImagePath() + "Search/Search_Txb.png");
     	mpxAssets.ClearInput();
-    	s.type(txt);
+    	sikuli.type(txt);
     }
     
     public void EnterSearchPlayersTxt(String txt) throws Exception {
     	
-    	String path = this.getImagePath();
-    	mpxAssets.WaitForImgPresent(path + "Search/SearchPlayers_Txb.png");
-    	s.click(path + "Search/SearchPlayers_Txb.png");
+    	Reporter.log("Enter '" + txt + "' in the 'Player Search' text box.");
+    	mpxAssets.WaitForImgPresent(getImagePath() + "Search/SearchPlayers_Txb.png");
+    	sikuli.click(getImagePath() + "Search/SearchPlayers_Txb.png");
     	mpxAssets.ClearInput();
-    	s.type(txt);
+    	sikuli.type(txt);
     }
     
     public void ClickSearchByTitleLnk() throws Exception {
     	
-    	String path = this.getImagePath();
-    	mpxAssets.WaitForImgPresent(path + "Search/Search_Txb.png");
-    	Pattern pImage = new Pattern(path + "Search/Search_Txb.png").targetOffset(-30, 0);
-    	Region r = s.exists(pImage, 1);
-    	s.click(r, 1);
-    	mpxAssets.WaitForImgPresent(path + "Search/Titles_Lnk.png");
-    	s.click(path + "Search/Titles_Lnk.png");
+    	Reporter.log("Click the 'Search by Title' link.");
+    	mpxAssets.WaitForImgPresent(getImagePath() + "Search/Search_Txb.png");
+    	Pattern pattern = new Pattern(getImagePath() + "Search/Search_Txb.png").targetOffset(-30, 0);
+    	Region region = sikuli.exists(pattern, 1);
+    	sikuli.click(region, 1);
+    	mpxAssets.WaitForImgPresent(getImagePath() + "Search/Titles_Lnk.png");
+    	sikuli.click(getImagePath() + "Search/Titles_Lnk.png");
     	
     	Thread.sleep(2000); //TODO - replace with dynamic wait
     }
     
     public void ClickSearchByPlayersTitleLnk() throws Exception {
     	
-    	String path = this.getImagePath();
-    	mpxAssets.WaitForImgPresent(path + "Search/Titles_Ddl.png");
-    	s.click(path + "Search/Titles_Ddl.png");
-    	mpxAssets.WaitForImgPresent(path + "Search/Titles_Lnk.png");
-    	s.click(path + "Search/Titles_Lnk.png");
+    	Reporter.log("Click the 'Search by Players Title' link.");
+    	mpxAssets.WaitForImgPresent(getImagePath() + "Search/Titles_Ddl.png");
+    	sikuli.click(getImagePath() + "Search/Titles_Ddl.png");
+    	mpxAssets.WaitForImgPresent(getImagePath() + "Search/Titles_Lnk.png");
+    	sikuli.click(getImagePath() + "Search/Titles_Lnk.png");
     	
     	Thread.sleep(4000); //TODO - replace with dynamic wait
     }

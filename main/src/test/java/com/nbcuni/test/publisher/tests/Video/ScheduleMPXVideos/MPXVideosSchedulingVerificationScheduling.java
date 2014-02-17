@@ -15,12 +15,8 @@ import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXSearch;
 import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXSelectAccount;
 import com.nbcuni.test.publisher.pageobjects.Queues.ScheduleQueue;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
-
 import junit.framework.Assert;
-
-import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
-
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
@@ -74,8 +70,7 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
     	
     	//Step 1
     	UserLogin userLogin = applib.openApplication();
-    	PageFactory.initElements(webDriver, userLogin);
-        userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+    	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
         
         //Note - test requires mpx configuration
         taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
@@ -91,11 +86,11 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
         	
         	//Step 3
         	if (configuredAccounts.contains("DB TV")) {
-        	MPXSelectAccount mpxSelectAccount = new MPXSelectAccount(webDriver, applib);
+        	MPXSelectAccount mpxSelectAccount = new MPXSelectAccount(applib);
         	mpxSelectAccount.SelectAccount("DB TV");
         	
         	//Step 4 (test creates new mpx asset)
-        	MPXAddMedia mpxAddMedia = new MPXAddMedia(webDriver, applib);
+        	MPXAddMedia mpxAddMedia = new MPXAddMedia(applib);
         	AddFile addFile = new AddFile(webDriver, applib);
         	mpxAddMedia.ClickUploadBtn();
         	mpxAddMedia.ClickChooseFilesBtn();
@@ -130,7 +125,7 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
         	mpxAddMedia.ClickSaveBtn();
         	
         	//Step 6
-        	MPXPublishMedia mpxPublishMedia = new MPXPublishMedia(webDriver, applib);
+        	MPXPublishMedia mpxPublishMedia = new MPXPublishMedia(applib);
         	mpxPublishMedia.ClickPublishBtn();
         	mpxPublishMedia.ClickPublishToPub7PrimaryCbx();
         	mpxPublishMedia.ClickPublishFromDialogBtn();
@@ -146,7 +141,6 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
         	taxonomy.NavigateSite("Home>>Run cron");
     	    overlay.SwitchToActiveFrame();
     	    ContentParent contentParent = new ContentParent(webDriver, applib);
-    	    PageFactory.initElements(webDriver, contentParent);
     	    contentParent.VerifyMessageStatus("Cron ran successfully.");
     	    
     	    //Step 8
@@ -157,7 +151,6 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
     	    
     	    //Step 9
     	    SearchFor searchFor = new SearchFor(webDriver, applib);
-    	    PageFactory.initElements(webDriver, searchFor);
     	    searchFor.EnterTitle(mediaTitle);
     	    searchFor.ClickApplyBtn();
     	    overlay.switchToDefaultContent();
@@ -186,7 +179,6 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
     	    
     	    //Step 12
     	    WorkBench workBench = new WorkBench(webDriver, applib);
-    	    PageFactory.initElements(webDriver, workBench);
     	    workBench.ClickWorkBenchTab("Edit");
     	    overlay.SwitchToActiveFrame();
     	    
@@ -206,7 +198,7 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
     	    //Step 26
     	    mpxLogin.OpenMPXThePlatform();
     	    mpxSelectAccount.SelectAccount("DB TV");
-    	    MPXSearch mpxSearch = new MPXSearch(webDriver, applib);
+    	    MPXSearch mpxSearch = new MPXSearch(applib);
     	    mpxSearch.EnterSearchTxt(mediaTitle);
     	    mpxSearch.ClickSearchByTitleLnk();
     	    mpxAddMedia.GiveFocusToMediaItem();

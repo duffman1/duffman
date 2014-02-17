@@ -1,28 +1,10 @@
 package com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform;
 
-
-import java.util.ArrayList;
-import java.util.List;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.sikuli.script.Button;
-import org.sikuli.script.Key;
-import org.sikuli.script.KeyModifier;
 import org.sikuli.script.Pattern;
 import org.sikuli.script.Region;
 import org.sikuli.script.Screen;
-import org.testng.Assert;
 import org.testng.Reporter;
-
-import com.nbcuni.test.lib.Util;
 import com.nbcuni.test.publisher.common.AppLib;
-import com.nbcuni.test.webdriver.CustomWebDriver;
-
 
 /*********************************************
  * publisher.nbcuni.com MPX Select Account Library. Copyright
@@ -33,49 +15,46 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 
 public class MPXSelectAccount {
 
-    private static CustomWebDriver webDriver;
     private static AppLib applib;
-    private final Util ul;
-    Screen s = new Screen();
-    MPXAssets mpxAssets;
+    private static Screen sikuli;
+    private static MPXAssets mpxAssets;
     
-    public MPXSelectAccount(final CustomWebDriver custWebDr, AppLib applib) {
-        webDriver = custWebDr;
-        this.applib = applib;
-        ul = new Util(webDriver);
-        mpxAssets = new MPXAssets(webDriver, applib);
+    public MPXSelectAccount(AppLib applib) {
+        sikuli = new Screen();
+        MPXSelectAccount.applib = applib;
+        mpxAssets = new MPXAssets(applib);
     }
     
     private String getImagePath() {
     	
-    	String PathToImages = applib.getPathToSikuliImages();
-    	return PathToImages;
+    	return applib.getPathToSikuliImages();
+    	
     }
     
     public void SelectAccount(String accountName) throws Exception {
     	
-    	String path = this.getImagePath();
-    	mpxAssets.WaitForImgPresent(path + "SelectAccount/AdminPub7QA_Ttl.png");
-    	mpxAssets.WaitForAllAssetsToLoad(path);
+    	mpxAssets.WaitForImgPresent(getImagePath() + "SelectAccount/AdminPub7QA_Ttl.png");
+    	mpxAssets.WaitForAllAssetsToLoad(getImagePath());
     	
     	Reporter.log("Enter the account name '" + accountName + "' in the account select text box.");
-    	mpxAssets.WaitForImgPresent(path + "SelectAccount/Account_Txb.png");
-    	Pattern pImage = new Pattern(path + "SelectAccount/Account_Txb.png").targetOffset(45, 0);
-    	Region r = s.exists(pImage, 1);
-    	s.doubleClick(r, 1);
+    	mpxAssets.WaitForImgPresent(getImagePath() + "SelectAccount/Account_Txb.png");
+    	Pattern pattern = new Pattern(getImagePath() + "SelectAccount/Account_Txb.png").targetOffset(45, 0);
+    	Region region = sikuli.exists(pattern, 1);
+    	sikuli.doubleClick(region, 1);
     	mpxAssets.ClearInput();
-    	s.type(accountName);
+    	sikuli.type(accountName);
+    	Thread.sleep(1000);
     	
     	Reporter.log("Click the account option from the drop down list.");
-    	Pattern pImage2 = new Pattern(path + "SelectAccount/Account_Txb.png").targetOffset(40, 15);
-    	Region r2 = s.exists(pImage2, 1);
-    	s.click(r2, 1);
+    	Pattern pattern2 = new Pattern(getImagePath() + "SelectAccount/Account_Txb.png").targetOffset(40, 15);
+    	Region region2 = sikuli.exists(pattern2, 1);
+    	sikuli.click(region2, 1);
     	
     	Reporter.log("Click the 'Account' title to leave focus off of the selection.");
-    	s.click(path + "SelectAccount/Account_Txb.png");
+    	sikuli.click(getImagePath() + "SelectAccount/Account_Txb.png");
     	
     	Reporter.log("Wait for account to switch to the newly selected account.");
-        	mpxAssets.WaitForImgNotPresent(path + "SelectAccount/SwitchingAccounts_Ctr.png");
+        mpxAssets.WaitForImgNotPresent(getImagePath() + "SelectAccount/SwitchingAccounts_Ctr.png");
     	
     }
     

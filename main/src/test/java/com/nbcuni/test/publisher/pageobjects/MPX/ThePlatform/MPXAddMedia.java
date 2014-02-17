@@ -1,23 +1,8 @@
 package com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform;
 
-
-import com.nbcuni.test.lib.Util;
 import com.nbcuni.test.publisher.common.AppLib;
-import com.nbcuni.test.webdriver.CustomWebDriver;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 import org.sikuli.script.*;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.TimeUnit;
-
+import org.testng.Reporter;
 
 /*********************************************
  * publisher.nbcuni.com MPX Add Media Library. Copyright
@@ -28,221 +13,210 @@ import java.util.concurrent.TimeUnit;
 
 public class MPXAddMedia {
 
-    private static CustomWebDriver webDriver;
     private static AppLib applib;
-    private final Util ul;
-    Screen s = new Screen();
-    MPXAssets mpxAssets;
+    private static Screen sikuli;
+    private static MPXAssets mpxAssets;
     
-    public MPXAddMedia(CustomWebDriver custWebDr, AppLib applib) {
-        webDriver = custWebDr;
-        this.applib = applib;
-        ul = new Util(webDriver);
-        mpxAssets = new MPXAssets(webDriver, applib);
+    public MPXAddMedia(AppLib applib) {
+    	sikuli = new Screen();
+        MPXAddMedia.applib = applib;
+        mpxAssets = new MPXAssets(applib);
     }
     
     private String getImagePath() {
     	
-    	String PathToImages = applib.getPathToSikuliImages();
-    	return PathToImages;
+    	return applib.getPathToSikuliImages();
     }
     
     public void ClickUploadBtn() throws Exception {
     	
-    	String path = this.getImagePath();
-    	mpxAssets.WaitForImgPresent(path + "Common/Upload_Btn.png");
-    	s.click(path + "Common/Upload_Btn.png");
+    	Reporter.log("Click the 'Upload' button.");
+    	mpxAssets.WaitForImgPresent(getImagePath() + "Common/Upload_Btn.png");
+    	sikuli.click(getImagePath() + "Common/Upload_Btn.png");
     }
     
     public void ClickChooseFilesBtn() throws Exception {
     	
-    	String path = this.getImagePath();
-    	if (webDriver.getCapabilities().getPlatform().toString() == "MAC") {
+    	Reporter.log("Click the 'Choose Files' button.");
+    	if (System.getProperty("os.name").contains("Mac")) {
     		
-    		mpxAssets.WaitForImgPresent(path + "FileUpload/ChooseFiles_Btn_Mac.png");
-    		s.click(path + "FileUpload/ChooseFiles_Btn_Mac.png");
+    		mpxAssets.WaitForImgPresent(getImagePath() + "FileUpload/ChooseFiles_Btn_Mac.png");
+    		sikuli.click(getImagePath() + "FileUpload/ChooseFiles_Btn_Mac.png");
     	}
     	else {
     		
-    		mpxAssets.WaitForImgPresent(path + "FileUpload/ChooseFiles_Btn.png");
-    		s.click(path + "FileUpload/ChooseFiles_Btn.png");
+    		mpxAssets.WaitForImgPresent(getImagePath() + "FileUpload/ChooseFiles_Btn.png");
+    		sikuli.click(getImagePath() + "FileUpload/ChooseFiles_Btn.png");
     	}
     }
     
     public void ClickMoviesUploadBtn() throws Exception {
     	
-    	String path = this.getImagePath();
-    	
+    	Reporter.log("Click the 'Movies' button in the OS Upload dialog.");
     	try {
-    		s.click(path + "FileUpload/AllMyFiles_Btn.png");
+    		sikuli.click(getImagePath() + "FileUpload/AllMyFiles_Btn.png");
     	}
     	catch (Exception e) {
-    		s.click(path + "FileUpload/HighlightedAllMyFiles_Btn.png");
+    		sikuli.click(getImagePath() + "FileUpload/HighlightedAllMyFiles_Btn.png");
     	}
     	
-    	mpxAssets.WaitForImgPresent(path + "FileUpload/MoviesUpload_Btn.png");
+    	mpxAssets.WaitForImgPresent(getImagePath() + "FileUpload/MoviesUpload_Btn.png");
     	try {
-    		s.click(path + "FileUpload/MoviesUpload_Btn.png");
+    		sikuli.click(getImagePath() + "FileUpload/MoviesUpload_Btn.png");
     	}
     	catch (Exception e) {
-    		s.click(path + "FileUpload/HighlightedMoviesUpload_Btn.png");
+    		sikuli.click(getImagePath() + "FileUpload/HighlightedMoviesUpload_Btn.png");
     	}
-    	
     }
     
     public void ClickTestMovieBtn() throws Exception {
     	
-    	String path = this.getImagePath();
-    	mpxAssets.WaitForImgPresent(path + "FileUpload/TestMovie_Btn.png");
-    	s.click(path + "FileUpload/TestMovie_Btn.png");
+    	Reporter.log("Click the Test Movie in th OS Upload dialog.");
+    	mpxAssets.WaitForImgPresent(getImagePath() + "FileUpload/TestMovie_Btn.png");
+    	sikuli.click(getImagePath() + "FileUpload/TestMovie_Btn.png");
     }
     
     public void ClickOpenBtn() throws Exception {
     	
-    	String path = this.getImagePath();
-    	mpxAssets.WaitForImgPresent(path + "FileUpload/Open_Btn.png");
-    	s.click(path + "FileUpload/Open_Btn.png");
+    	Reporter.log("Click the 'Open' button.");
+    	mpxAssets.WaitForImgPresent(getImagePath() + "FileUpload/Open_Btn.png");
+    	sikuli.click(getImagePath() + "FileUpload/Open_Btn.png");
     }
     
     public void ClickUploadFromDialogBtn() throws Exception {
     	
-    	String path = this.getImagePath();
-    	mpxAssets.WaitForImgPresent(path + "Common/UploadFromDialog_Btn.png");
-    	s.click(path + "Common/UploadFromDialog_Btn.png");
+    	Reporter.log("Click the 'Upload' button in the Upload dialog.");
+    	mpxAssets.WaitForImgPresent(getImagePath() + "Common/UploadFromDialog_Btn.png");
+    	sikuli.click(getImagePath() + "Common/UploadFromDialog_Btn.png");
     	
-    	mpxAssets.WaitForImgPresent(path + "Media/DefaultMediaPresent.png");
+    	Thread.sleep(5000); //TODO - come up with good dynamic wait
     }
     
     public void GiveFocusToMediaItem() throws Exception {
     	
-    	String path = this.getImagePath();
-    	mpxAssets.WaitForImgPresent(path + "Media/AvailableDate_Txb.png");
-    	s.click(path + "Media/AvailableDate_Txb.png");
+    	Reporter.log("Click the 'Available Date' label on the right hand side to give focus to the media item.");
+    	mpxAssets.WaitForImgPresent(getImagePath() + "Media/AvailableDate_Txb.png");
+    	sikuli.click(getImagePath() + "Media/AvailableDate_Txb.png");
     	
     }
     
     public void EnterTitle(String mediaTitle) throws Exception {
     	
-    	String path = this.getImagePath();
-    	mpxAssets.ScrollDownForImgPresent(path + "Media/Title_Txb.png");
-    	Pattern pImage = new Pattern(path + "Media/Title_Txb.png").targetOffset(0, 15);
-    	Region r = s.exists(pImage, 1);
-    	s.click(r, 1);
+    	Reporter.log("Enter '" + mediaTitle + "' in the 'Title' text box.");
+    	mpxAssets.ScrollDownForImgPresent(getImagePath() + "Media/Title_Txb.png");
+    	Pattern pattern = new Pattern(getImagePath() + "Media/Title_Txb.png").targetOffset(0, 15);
+    	Region region = sikuli.exists(pattern, 1);
+    	sikuli.click(region, 1);
     	mpxAssets.ClearInput();
-    	s.type(mediaTitle);
+    	sikuli.type(mediaTitle);
     }
     
     public void EnterCanonicalURL(String urlTxt) throws Exception {
     	
-    	String path = this.getImagePath();
-    	mpxAssets.ScrollDownForImgPresent(path + "Media/CanonicalURL_Txb.png");
-    	Pattern pImage = new Pattern(path + "Media/CanonicalURL_Txb.png").targetOffset(0, 15);
-    	Region r = s.exists(pImage, 1);
-    	s.click(r, 1);
+    	Reporter.log("Enter '" + urlTxt + "' in the 'Canonical URL' text box.");
+    	mpxAssets.ScrollDownForImgPresent(getImagePath() + "Media/CanonicalURL_Txb.png");
+    	Pattern pattern = new Pattern(getImagePath() + "Media/CanonicalURL_Txb.png").targetOffset(0, 15);
+    	Region region = sikuli.exists(pattern, 1);
+    	sikuli.click(region, 1);
     	mpxAssets.ClearInput();
-    	s.type(urlTxt);
+    	sikuli.type(urlTxt);
     }
     
     public void EnterAuthor(String author) throws Exception {
     	
-    	String path = this.getImagePath();
-    	mpxAssets.WaitForImgPresent(path + "Media/Author_Txb.png");
-    	Pattern pImage = new Pattern(path + "Media/Author_Txb.png").targetOffset(0, 15);
-    	Region r = s.exists(pImage, 1);
-    	s.click(r, 1);
+    	Reporter.log("Enter '" + author + "' in the 'Author' text box.");
+    	mpxAssets.WaitForImgPresent(getImagePath() + "Media/Author_Txb.png");
+    	Pattern pattern = new Pattern(getImagePath() + "Media/Author_Txb.png").targetOffset(0, 15);
+    	Region region = sikuli.exists(pattern, 1);
+    	sikuli.click(region, 1);
     	mpxAssets.ClearInput();
-    	s.type(author);
+    	sikuli.type(author);
     }
     
     public void EnterCategories(String categories) throws Exception {
     	
-    	String path = this.getImagePath();
-    	mpxAssets.ScrollDownForImgPresent(path + "Media/Categories_Txb.png");
-    	Pattern pImage = new Pattern(path + "Media/Categories_Txb.png").targetOffset(0, 15);
-    	Region r = s.exists(pImage, 1);
-    	s.click(r, 1);
+    	Reporter.log("Enter '" + categories + "' in the 'Categories' text box.");
+    	mpxAssets.ScrollDownForImgPresent(getImagePath() + "Media/Categories_Txb.png");
+    	Pattern pattern = new Pattern(getImagePath() + "Media/Categories_Txb.png").targetOffset(0, 15);
+    	Region region = sikuli.exists(pattern, 1);
+    	sikuli.click(region, 1);
     	mpxAssets.ClearInput();
-    	s.type(categories);
+    	sikuli.type(categories);
         
     }
     
     public void EnterAvailableDate(String date) throws Exception {
     	
-    	String path = this.getImagePath();
-    	mpxAssets.ScrollDownForImgPresent(path + "Media/AvailableDate_Txb.png");
-    	Pattern pImage = new Pattern(path + "Media/AvailableDate_Txb.png").targetOffset(0, 15);
-    	Region r = s.exists(pImage, 1);
-    	s.click(r, 1);
+    	Reporter.log("Enter '" + date + "' in the 'Available Date' text box.");
+    	mpxAssets.ScrollDownForImgPresent(getImagePath() + "Media/AvailableDate_Txb.png");
+    	Pattern pattern = new Pattern(getImagePath() + "Media/AvailableDate_Txb.png").targetOffset(0, 15);
+    	Region region = sikuli.exists(pattern, 1);
+    	sikuli.click(region, 1);
     	mpxAssets.ClearInput();
-    	s.type(date);
+    	sikuli.type(date);
         
     }
 
     public void EnterExpirationDate(String date) throws Exception {
     	
-    	String path = this.getImagePath();
-    	mpxAssets.ScrollDownForImgPresent(path + "Media/ExpirationDate_Txb.png");
-    	Pattern pImage = new Pattern(path + "Media/ExpirationDate_Txb.png").targetOffset(0, 15);
-    	Region r = s.exists(pImage, 1);
-    	s.click(r, 1);
+    	Reporter.log("Enter '" + date + "' in the 'Expiration Date' text box.");
+    	mpxAssets.ScrollDownForImgPresent(getImagePath() + "Media/ExpirationDate_Txb.png");
+    	Pattern pattern = new Pattern(getImagePath() + "Media/ExpirationDate_Txb.png").targetOffset(0, 15);
+    	Region region = sikuli.exists(pattern, 1);
+    	sikuli.click(region, 1);
     	mpxAssets.ClearInput();
-    	s.type(date);
+    	sikuli.type(date);
         
     }
     
     public void EnterAirDate(String date) throws Exception {
     	
-    	String path = this.getImagePath();
-    	mpxAssets.ScrollDownForImgPresent(path + "Media/AirDate_Txb.png");
-    	Pattern pImage = new Pattern(path + "Media/AirDate_Txb.png").targetOffset(0, 15);
-    	Region r = s.exists(pImage, 1);
-    	s.click(r, 1);
+    	Reporter.log("Enter '" + date + "' in the 'Air Date' text box.");
+    	mpxAssets.ScrollDownForImgPresent(getImagePath() + "Media/AirDate_Txb.png");
+    	Pattern pattern = new Pattern(getImagePath() + "Media/AirDate_Txb.png").targetOffset(0, 15);
+    	Region region = sikuli.exists(pattern, 1);
+    	sikuli.click(region, 1);
     	mpxAssets.ClearInput();
-    	s.type(date);
+    	sikuli.type(date);
         
     }
     
     public void ClickSaveBtn() throws Exception {
     	
-    	String path = this.getImagePath();
-    	mpxAssets.WaitForImgPresent(path + "Common/Save_Btn.png");
-    	s.click(path + "Common/Save_Btn.png");
+    	Reporter.log("Click the 'Save' button.");
+    	mpxAssets.WaitForImgPresent(getImagePath() + "Common/Save_Btn.png");
+    	sikuli.click(getImagePath() + "Common/Save_Btn.png");
     	
-    	mpxAssets.WaitForImgNotPresent(path + "Common/Spinner.png");
+    	mpxAssets.WaitForImgNotPresent(getImagePath() + "Common/Spinner.png");
     	
-    	Thread.sleep(10000); //long pause here since file uploads in background requires some time. This is bad I know but there's no visual indicator I can go by...
+    	Thread.sleep(10000); //TODO - long pause here since file uploads in background requires some time. This is bad I know but there's no visual indicator I can go by...
     }
     
     public void SelectContentRatingUSMPAA_PG13() throws Exception {
     	
-    	String path = this.getImagePath();
-    	mpxAssets.ScrollDownForImgPresent(path + "Media/ContentRatingUSMPAA_Ddl.png");
+    	Reporter.log("Select 'PG 13' from the 'USMPAA' drop down list.");
+    	mpxAssets.ScrollDownForImgPresent(getImagePath() + "Media/ContentRatingUSMPAA_Ddl.png");
     	mpxAssets.Scroll("Down", 10); //extra scroll needed for interaction with ddl
-    	Pattern pImage = new Pattern(path + "Media/ContentRatingUSMPAA_Ddl.png").targetOffset(-5, 15);
-    	Region r = s.exists(pImage, 1);
-    	s.click(r, 1);
+    	Pattern pattern = new Pattern(getImagePath() + "Media/ContentRatingUSMPAA_Ddl.png").targetOffset(-5, 15);
+    	Region region = sikuli.exists(pattern, 1);
+    	sikuli.click(region, 1);
     	
-    	mpxAssets.WaitForImgPresent(path + "Media/PG13_Opt.png");
-    	s.click(path + "Media/PG13_Opt.png");
+    	mpxAssets.WaitForImgPresent(getImagePath() + "Media/PG13_Opt.png");
+    	sikuli.click(getImagePath() + "Media/PG13_Opt.png");
     	
-        
     }
     
     public void EnterContentRatingUSMPAASubRating(String subRating) throws Exception {
     	
-    	String path = this.getImagePath();
-    	mpxAssets.ScrollDownForImgPresent(path + "Media/ContentRatingUSMPAA_Ddl.png");
-    	Pattern pImage = new Pattern(path + "Media/ContentRatingUSMPAA_Ddl.png").targetOffset(20, 15);
-    	Region r = s.exists(pImage, 1);
-    	s.click(r, 1);
+    	Reporter.log("Enter '" + subRating + "' in the 'USMPAA Sub Rating' text box.");
+    	mpxAssets.ScrollDownForImgPresent(getImagePath() + "Media/ContentRatingUSMPAA_Ddl.png");
+    	Pattern pattern = new Pattern(getImagePath() + "Media/ContentRatingUSMPAA_Ddl.png").targetOffset(20, 15);
+    	Region region = sikuli.exists(pattern, 1);
+    	sikuli.click(region, 1);
     	mpxAssets.ClearInput();
-    	s.type(subRating);
+    	sikuli.type(subRating);
     	
-        
     }
     
-    
-    
-  
 }
 

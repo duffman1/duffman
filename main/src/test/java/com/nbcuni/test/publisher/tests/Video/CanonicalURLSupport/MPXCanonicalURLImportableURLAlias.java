@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
-
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Content.AddFile;
 import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
@@ -18,12 +17,9 @@ import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXLogin;
 import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXPublishMedia;
 import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXSelectAccount;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
-
 import junit.framework.Assert;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
 public class MPXCanonicalURLImportableURLAlias extends ParentTest{
@@ -116,10 +112,10 @@ public class MPXCanonicalURLImportableURLAlias extends ParentTest{
             	mpxLogin.OpenMPXThePlatform();
             	mpxLogin.Login(applib.getMPXUsername(), applib.getMPXPassword());
             	if (configuredAccounts.contains("DB TV")) {
-                	MPXSelectAccount mpxSelectAccount = new MPXSelectAccount(webDriver, applib);
+                	MPXSelectAccount mpxSelectAccount = new MPXSelectAccount(applib);
                 	mpxSelectAccount.SelectAccount("DB TV");
             	}
-            	MPXAddMedia mpxAddMedia = new MPXAddMedia(webDriver, applib);
+            	MPXAddMedia mpxAddMedia = new MPXAddMedia(applib);
             	AddFile addFile = new AddFile(webDriver, applib);
             	mpxAddMedia.ClickUploadBtn();
             	mpxAddMedia.ClickChooseFilesBtn();
@@ -141,7 +137,7 @@ public class MPXCanonicalURLImportableURLAlias extends ParentTest{
                 String canonicalURL = "canonicalurl" + random.GetCharacterString(10);
                 mpxAddMedia.EnterCanonicalURL(canonicalURL);
                 mpxAddMedia.ClickSaveBtn();
-                MPXPublishMedia mpxPublishMedia = new MPXPublishMedia(webDriver, applib);
+                MPXPublishMedia mpxPublishMedia = new MPXPublishMedia(applib);
                 mpxPublishMedia.ClickPublishBtn();
                 mpxPublishMedia.ClickPublishToPub7PrimaryCbx();
                 mpxPublishMedia.ClickPublishFromDialogBtn();

@@ -18,9 +18,7 @@ import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXLogin;
 import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXSearch;
 import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXSelectAccount;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
-
 import junit.framework.Assert;
-
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
@@ -83,9 +81,9 @@ public class NotificationPlayerUnavailability extends ParentTest{
             	mpxLogin.Login(applib.getMPXUsername(), applib.getMPXPassword());
             	
             	//Step 2 - NOTE that step creates a new player rather than use an existing one
-            	MPXSelectAccount mpxSelectAccount = new MPXSelectAccount(webDriver, applib);
+            	MPXSelectAccount mpxSelectAccount = new MPXSelectAccount(applib);
                 mpxSelectAccount.SelectAccount("DB TV");
-            	MPXAddPlayer mpxAddPlayer = new MPXAddPlayer(webDriver, applib);
+            	MPXAddPlayer mpxAddPlayer = new MPXAddPlayer(applib);
                 mpxAddPlayer.ClickPlayersLnk();
                 mpxAddPlayer.ClickAllPlayersLnk();
                 mpxAddPlayer.ClickAddBtn();
@@ -131,7 +129,7 @@ public class NotificationPlayerUnavailability extends ParentTest{
                 mpxSelectAccount.SelectAccount("DB TV");
                 mpxAddPlayer.ClickPlayersLnk();
                 mpxAddPlayer.ClickAllPlayersLnk();
-            	MPXSearch mpxSearch = new MPXSearch(webDriver, applib);
+            	MPXSearch mpxSearch = new MPXSearch(applib);
             	mpxSearch.EnterSearchPlayersTxt(playerTitle);
             	mpxSearch.ClickSearchByPlayersTitleLnk();
             	mpxAddPlayer.GiveFocusToPlayerItem();

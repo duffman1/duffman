@@ -18,11 +18,8 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.net.*;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.Properties;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 /**************************************************************************.
  * NBC.com Application Library. Copyright
@@ -33,10 +30,7 @@ import java.util.regex.Pattern;
 
 public class AppLib {
 
-    private static final int FOUR_ZERO_FOUR = 404;
     private CustomWebDriver custWebDr = null;
-    private final Util ul;
-
     private String environment = "";
     private String appURL = "";
     private String proxyUrl = "";
@@ -54,6 +48,7 @@ public class AppLib {
     private String mpxUrl = "";
     private String gMailAutoEmailUsername = "";
     private String gMailAutoEmailPassword = "";
+    private String sikuliImageWaitTime = "";
 
     private static String configFileName = "src" + File.separator + "test" + File.separator + "resources"
             + File.separator + "config.properties";
@@ -65,7 +60,7 @@ public class AppLib {
      */
     public AppLib(CustomWebDriver cs1) {
         custWebDr = cs1;
-        ul = new Util(custWebDr);
+        new Util(custWebDr);
         try {
             loadConfig();
         } catch (Exception e) {
@@ -124,7 +119,7 @@ public class AppLib {
             mpxUrl = configProperties.getProperty(environment + ".MPXUrl");
             gMailAutoEmailUsername = configProperties.getProperty(environment + ".GMailAutoEmailUsername");
             gMailAutoEmailPassword = configProperties.getProperty(environment + ".GMailAutoEmailPassword");
-            
+            sikuliImageWaitTime = configProperties.getProperty(environment + ".SikuliImageWaitTime");
         } catch (Exception e) {
             new CustomWebDriverException(e, custWebDr);
         }
@@ -174,6 +169,12 @@ public class AppLib {
     public int getImplicitWaitTime(){
     	
     	return Integer.parseInt(this.implicitWaitTime);
+    	
+    }
+    
+    public double getSikuliImageWaitTime(){
+    	
+    	return (double) Integer.parseInt(this.sikuliImageWaitTime);
     	
     }
     

@@ -35,7 +35,7 @@ public class AddFile {
         AddFile.webDriver = webDriver;
         AddFile.applib = applib;
         sikuli = new Screen();
-        mpxAssets = new MPXAssets(webDriver, applib);
+        mpxAssets = new MPXAssets(applib);
         PageFactory.initElements(webDriver, this);
     }
     
