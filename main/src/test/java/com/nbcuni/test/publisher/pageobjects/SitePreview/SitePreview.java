@@ -1,0 +1,156 @@
+package com.nbcuni.test.publisher.pageobjects.SitePreview;
+
+import junit.framework.Assert;
+import org.openqa.selenium.WebDriverException;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Reporter;
+import com.nbcuni.test.webdriver.CustomWebDriver;
+
+/*********************************************
+ * publisher.nbcuni.com PreviewSite Library. Copyright
+ * 
+ * @author Khan, Faizan
+ * @version 1.0 Date: February 14, 2014
+ *********************************************/
+public class SitePreview {
+
+	 private static CustomWebDriver webDriver;
+	 private static WebDriverWait wait;
+	 
+	 //PAGE OBJECT CONSTRUCTOR    
+	 public SitePreview(CustomWebDriver webDriver) {
+		 SitePreview.webDriver = webDriver;
+		 PageFactory.initElements(webDriver, this);
+	     wait = new WebDriverWait(webDriver, 10);  
+	 }
+	 
+	 //PAGE OBJECT IDENTIFIERS
+	 @FindBy(how = How.ID, using ="edit-sps")
+	 private static WebElement PreviewSite_Lnk;
+	    
+	 @FindBy(how = How.CSS, using ="input[value='Enable Preview']")
+	 private static WebElement EnablePreview_Btn;
+	    
+	 @FindBy(how = How.ID, using ="edit-active-condition-container-active-condition-selector")
+	 private static WebElement SelectCondition_Ddl;
+	    
+	 @FindBy(how = How.ID, using ="edit-active-condition-container-date-condition-widget-preview-date-datepicker-popup-0")
+	 private static WebElement Date_Txb;
+	      
+	 @FindBy(how = How.ID, using ="edit-active-condition-container-date-condition-widget-preview-date-timeEntry-popup-1")
+	 private static WebElement Time_Txb;
+	   
+	 @FindBy(how = How.ID, using ="edit-cancel")
+	 private static WebElement DisablePreview_Btn;	
+	    
+	 @FindBy(how = How.CSS, using ="input[value='Update Preview']")
+	 private static WebElement UpdatePreview_Btn;
+	    
+	
+	 //PAGE OBJECT METHODS
+	 public void ClickEnablePreviewBtn() throws Exception { 
+		 
+		 Reporter.log("Click the 'Enable Preview' button.");
+		 try {
+			 	EnablePreview_Btn.click();
+	    	}
+	    	catch (WebDriverException e) {
+	    		webDriver.executeScript("arguments[0].click();", EnablePreview_Btn);
+	    	}
+		 	
+	 }
+	    
+	 public void ClickPreviewSiteLnk() throws Exception { 
+	    	
+		 Reporter.log("Click on the 'Preview Site' link.");
+	     PreviewSite_Lnk.click();
+	 }
+	    
+	 public void VerifyEnablePreviewBtnVisible() throws Exception { 
+	    	
+		 Reporter.log("Verify the 'Enable Preview' button is visible.");	
+		 Assert.assertTrue(EnablePreview_Btn.isDisplayed());
+	 }
+	    
+	 public void SelectACondition() throws Exception { 
+	    	
+		 Reporter.log("Select 'Site as of ...' from the 'SELECT A CONDITION' drop down list.");	
+		 wait.until(ExpectedConditions.visibilityOf(SelectCondition_Ddl));
+		 new Select(SelectCondition_Ddl).selectByVisibleText("Site as of ...");
+	     
+	 }
+	       
+	 public void VerifySelectAConditionValue(String value) throws Exception { 	    	
+	    	
+		 Reporter.log("Verify the selected option of the 'SELECT A CONDITION' drop down list is '" + value + "'.");	  
+		 Assert.assertEquals(new Select(SelectCondition_Ddl).getFirstSelectedOption().getText(),value);
+	 }
+	   
+	 public void EnterDate(String date) throws Exception {
+	    	
+		 Reporter.log("Enter '" + date + "' in the 'DATE' text box.");
+		 wait.until(ExpectedConditions.visibilityOf(Date_Txb)).clear();
+		 Date_Txb.sendKeys(date);
+		 
+	 }
+	    
+	 public void VerifyDateValue(String date) throws Exception {
+	    	
+		 Reporter.log("Verify the value of the 'DATE' text box is '" + date + "'.");	    	
+		 Assert.assertEquals(Date_Txb.getAttribute("value"),date);
+		 
+	 }
+	     
+	 public void EnterTime(String time) throws Exception {
+	    		
+		 Reporter.log("Enter '" + time + "' in the 'TIME' text box.");		
+		 Time_Txb.clear();	
+		 Time_Txb.sendKeys(time);
+		 
+	 }
+	       
+	 public void VerifyTimeValue(String time) throws Exception {
+	    	
+		 Reporter.log("Verify the value of the 'TIME' text box is '" + time + "'.");	    	
+		 Assert.assertTrue(Time_Txb.getAttribute("value").contains(time));
+		 
+	 }
+	      
+	 public void VerifyDisablePreviewBtnVisible() throws Exception {
+	    	
+		 Reporter.log("Verify the 'Disable Preview' is visible.");		
+		 Assert.assertTrue(DisablePreview_Btn.isDisplayed());
+		 
+	 }
+	 
+	 public void VerifyDisablePreviewBtnNotVisible() throws Exception {
+	    	
+		 Reporter.log("Verify the 'Disable Preview' is NOT visible.");		
+		 Assert.assertFalse(DisablePreview_Btn.isDisplayed());
+		 
+	 }
+	    
+	 public void ClickDisablePreviewBtn() throws Exception {
+	    	
+		 Reporter.log("Click the 'Disable Preview' button.");	    	
+		 DisablePreview_Btn.click();
+	 }
+	    
+	 public void VerifyUpdatePreviewBtnVisible() throws Exception {	    	
+	    	
+		 Reporter.log("Verify the 'Update Preview' button is present.");
+		 UpdatePreview_Btn.isDisplayed();
+	 }
+	       
+	 public void ClickUpdatePreviewBtn(){
+	    	
+		 Reporter.log("Click the 'Update Preview' button.");	
+		 UpdatePreview_Btn.click();
+	 }
+}

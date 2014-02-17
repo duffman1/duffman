@@ -35,6 +35,9 @@ public class BasicInformation {
     @FindBy(how = How.XPATH, using = "//input[contains(@id, 'edit-title')]")
     private static WebElement Title_Txb;
     
+    @FindBy(how = How.ID, using = "edit-field-summary-und-0-value")
+    private static WebElement ShortDescription_Txa;
+    
     @FindBy(how = How.XPATH, using = "//iframe[@id='edit-body-und-0-value_ifr']")
     private static WebElement Synopsis_Frm;
     
@@ -68,9 +71,17 @@ public class BasicInformation {
     public void EnterTitle(String title) throws Exception {
     	
     	Reporter.log("Enter '" + title + "' in the 'Title' text box.");
+    	Title_Txb.clear();
     	Title_Txb.sendKeys(title);
     }
     
+    public void EnterShortDescription(String shortDescription) throws Exception {
+    	
+    	Reporter.log("Enter '" + shortDescription + "' in the 'Short Description' text area.");
+    	ShortDescription_Txa.clear();
+    	ShortDescription_Txa.sendKeys(shortDescription);
+    }
+
     public String EnterSynopsis() throws Exception{
 
         Reporter.log("Switch to the Synopsis frame.");
