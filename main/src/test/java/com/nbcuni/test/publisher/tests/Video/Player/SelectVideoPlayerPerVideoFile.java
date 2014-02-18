@@ -1,7 +1,6 @@
 package com.nbcuni.test.publisher.tests.Video.Player;
 
 import java.util.List;
-
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Content.Content;
 import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
@@ -9,10 +8,7 @@ import com.nbcuni.test.publisher.pageobjects.Content.SearchFor;
 import com.nbcuni.test.publisher.pageobjects.MPX.EditMPXVideo;
 import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
-
 import junit.framework.Assert;
-
-import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
 public class SelectVideoPlayerPerVideoFile extends ParentTest{

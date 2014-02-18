@@ -1,30 +1,7 @@
 package com.nbcuni.test.publisher.tests.Video.UndefinedIndexesDisplayingForMPXPlayers;
 
 import com.nbcuni.test.publisher.common.ParentTest;
-import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
-import com.nbcuni.test.publisher.pageobjects.Content.PublishingOptions;
-import com.nbcuni.test.publisher.pageobjects.Content.SearchFor;
-import com.nbcuni.test.publisher.pageobjects.Content.WorkBench;
-import com.nbcuni.test.publisher.pageobjects.Cron.Cron;
-import com.nbcuni.test.publisher.pageobjects.MPX.EditMPXVideo;
-import com.nbcuni.test.publisher.pageobjects.MPX.MPXDataClient;
-import com.nbcuni.test.publisher.pageobjects.MPX.MPXMedia;
-import com.nbcuni.test.publisher.pageobjects.MPX.MPXPlayers;
-import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
-import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXAddPlayer;
-import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXAssets;
-import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXLogin;
-import com.nbcuni.test.publisher.pageobjects.ExecutePHPCode;
-import com.nbcuni.test.publisher.pageobjects.Modules;
-import com.nbcuni.test.publisher.pageobjects.UserLogin;
-
-import junit.framework.Assert;
-
-import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
-
-import java.util.Arrays;
-import java.util.List;
 
 public class UndefinedIndexesDisplayingForMPXPlayers extends ParentTest{
 	

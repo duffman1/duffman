@@ -1,22 +1,20 @@
 package com.nbcuni.test.publisher.pageobjects.MPX;
 
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
-
-import com.nbcuni.test.lib.Util;
-import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.webdriver.CustomWebDriver;
-
 
 /*********************************************
  * publisher.nbcuni.com MPXDataClient Library. Copyright
@@ -28,50 +26,69 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 public class MPXDataClient {
 
     private static CustomWebDriver webDriver;
-    private static AppLib al;
-    private final Util ul;
+    private static WebDriverWait wait;
     
-    private static String User_Txb = "//input[@id='user']";
-    private static String Password_Txb = "//input[@id='password']";
-    private static String SignIn_Btn = "//button[@id='submitAuth-button']";
-    private static String AccountPicker_Btn = "//button[@id='accountPickerButton-button']";
-    private static String Account_Ctr = "//ul[@class='first-of-type hastitle']//a";
-    private static String Object_Ddl = "//select[@id='object']";
-    private static String Fields_Txb = "//input[@id='getSparseFields']";
-    private static String Response_Pre = "//pre[@id='response']";
-    private static String Submit_Btn = "//button[@id='submit-button']";
-    
-    public MPXDataClient(final CustomWebDriver custWebDr) {
-        webDriver = custWebDr;
-        ul = new Util(webDriver);
-        
+    //PAGE OBJECT CONSTRUCTOR
+    public MPXDataClient(CustomWebDriver webDriver) {
+        MPXDataClient.webDriver = webDriver;
+        PageFactory.initElements(webDriver, this);
+        wait = new WebDriverWait(webDriver, 30);
     }
     
+    //PAGE OBJECT IDENTIFIERS
+    @FindBy(how = How.ID, using = "user")
+    private static WebElement User_Txb;
+    
+    @FindBy(how = How.ID, using = "password")
+    private static WebElement Password_Txb;
+    
+    @FindBy(how = How.ID, using = "submitAuth-button")
+    private static WebElement SignIn_Btn;
+    
+    @FindBy(how = How.ID, using = "accountPickerButton-button")
+    private static WebElement AccountPicker_Btn;
+    
+    private static List<WebElement> Account_Ctr(){
+    	return webDriver.findElements(By.xpath("//ul[@class='first-of-type hastitle']//a"));
+    }
+    
+    @FindBy(how = How.ID, using = "object")
+    private static WebElement Object_Ddl;
+    
+    @FindBy(how = How.ID, using = "getSparseFields")
+    private static WebElement Fields_Txb;
+    
+    @FindBy(how = How.ID, using = "response")
+    private static WebElement Response_Pre;
+    
+    @FindBy(how = How.ID, using = "submit-button")
+    private static WebElement Submit_Btn;
+    
+    
+    //PAGE OBJECT METHODS
     public void OpenMPXDataClient(String clientType) throws Exception {
     	
+    	Reporter.log("Open the mpx data client at http://data." + clientType + ".theplatform.com/" + clientType + "/client.");
     	webDriver.navigate().to("http://data." + clientType + ".theplatform.com/" + clientType + "/client");
-    	new WebDriverWait(webDriver, 30).until(ExpectedConditions.titleIs("Data Service Web Client Login"));
+    	wait.until(ExpectedConditions.titleIs("Data Service Web Client Login"));
     }
     
     public void EnterUser(String userName) throws Exception {
     	
-    	WebElement el = new WebDriverWait(webDriver, 10).until(ExpectedConditions.
-    			visibilityOf(webDriver.findElement(By.xpath(User_Txb))));
-    	el.sendKeys(userName);
+    	Reporter.log("Enter the Username in the 'Username' text box.");
+    	User_Txb.sendKeys(userName);
     }
     
     public void EnterPassword(String passWord) throws Exception {
     	
-    	WebElement el = new WebDriverWait(webDriver, 10).until(ExpectedConditions.
-    			visibilityOf(webDriver.findElement(By.xpath(Password_Txb))));
-    	el.sendKeys(passWord);
+    	Reporter.log("Enter the Password in the 'Password' text box.");
+    	Password_Txb.sendKeys(passWord);
     }
     
     public void ClickSignInBtn() throws Exception {
     	
-    	WebElement el = new WebDriverWait(webDriver, 10).until(ExpectedConditions.
-    			visibilityOf(webDriver.findElement(By.xpath(SignIn_Btn))));
-    	el.click();
+    	Reporter.log("Click the 'Sign In' button.");
+    	SignIn_Btn.click();
     }
     
     public void SignInToMPXDataClient(String clientType, String userName, String passWord) throws Exception {
@@ -80,15 +97,16 @@ public class MPXDataClient {
     	this.EnterUser(userName);
     	this.EnterPassword(passWord);
     	this.ClickSignInBtn();
-    	new WebDriverWait(webDriver, 30).until(ExpectedConditions.titleContains("Data Service Web Client"));
+    	wait.until(ExpectedConditions.titleContains("Data Service Web Client"));
     }
     
     public List<String> GetAllMPXAccounts() throws Exception {
     	
-    	new WebDriverWait(webDriver, 60).until(ExpectedConditions.visibilityOfElementLocated(By.xpath(AccountPicker_Btn))).click();
+    	Reporter.log("Click the Account Picker button to display all mpx accounts.");
+    	wait.until(ExpectedConditions.visibilityOf(AccountPicker_Btn)).click();
     	
-    	List<WebElement> allAccountLnks = new WebDriverWait(webDriver, 10).until(ExpectedConditions.
-    			visibilityOfAllElementsLocatedBy(By.xpath(Account_Ctr)));
+    	Reporter.log("Store all the active mpx accounts to a list.");
+    	List<WebElement> allAccountLnks = Account_Ctr();
     	
     	List<String> accountNames = new ArrayList<String>();
     	for (WebElement el : allAccountLnks) {
@@ -101,14 +119,15 @@ public class MPXDataClient {
     
     public void ChooseMPXAccount(String accountName) throws Exception {
     	
-    	webDriver.click(AccountPicker_Btn);
+    	Reporter.log("Click the Account Picker button.");
+    	AccountPicker_Btn.click();
     	
-    	List<WebElement> allAccountLnks = new WebDriverWait(webDriver, 10).until(ExpectedConditions.
-    			visibilityOfAllElementsLocatedBy(By.xpath(Account_Ctr)));
+    	List<WebElement> allAccountLnks = Account_Ctr();
     	
     	for (WebElement el : allAccountLnks) {
     		
     		if (el.getText().contains(accountName)) {
+    			Reporter.log("Click the '" + accountName + "' account check box.");
     			el.click();
     		}
     		
@@ -118,15 +137,28 @@ public class MPXDataClient {
     
     public List<String> GetAllMPXObjectFields(String mpxObject, String field) throws Exception {
     	
-    	//TODO - refactor to be more efficient
+    	Reporter.log("Select the '" + mpxObject + "' from the 'Object' drop down list.");
+    	new Select(Object_Ddl).selectByVisibleText(mpxObject);
     	
-    	webDriver.selectFromDropdown(Object_Ddl, mpxObject);
-    	webDriver.type(Fields_Txb, field);
-    	webDriver.click(Submit_Btn);
+    	Reporter.log("Enter '" + field + "' in the 'Field' text box.");
+    	Fields_Txb.sendKeys(field);
     	
-    	new WebDriverWait(webDriver, 45).until(ExpectedConditions.textToBePresentInElement(By.xpath(Response_Pre), "startIndex"));
+    	Reporter.log("Click the 'Submit' button.");
+    	Submit_Btn.click();
     	
-    	String result = webDriver.findElement(By.xpath(Response_Pre)).getText();
+    	for (int second = 0; ; second++){
+            if (second >= 30) {
+                Assert.fail("MPX Data client result set not present after 30 seconds.");}
+            try {
+                Response_Pre.isDisplayed();
+                if (Response_Pre.getText().contains("startIndex")) {break;}
+            }
+            catch (NoSuchElementException e) {}
+            Thread.sleep(1000);
+        }
+    	
+    	Reporter.log("Store the result set to a list.");
+    	String result = Response_Pre.getText();
     	String[] resultSet;
     	if (mpxObject == "Player") {
     		
@@ -165,14 +197,28 @@ public class MPXDataClient {
     
     public List<String> GetAllActivePlayers() throws Exception {
     	
-    	//TODO - refactor to be more efficient
-    	webDriver.selectFromDropdown(Object_Ddl, "Player");
-    	webDriver.type(Fields_Txb, "title, disabled");
-    	webDriver.click(Submit_Btn);
+    	Reporter.log("Select 'Player' from the 'Object' drop down list.");
+    	new Select(Object_Ddl).selectByVisibleText("Player");
     	
-    	new WebDriverWait(webDriver, 45).until(ExpectedConditions.textToBePresentInElement(By.xpath(Response_Pre), "startIndex"));
+    	Reporter.log("Enter 'title, disabled' in the 'Fields' text box.");
+    	Fields_Txb.sendKeys("title, disabled");
     	
-    	String result = webDriver.findElement(By.xpath(Response_Pre)).getText();
+    	Reporter.log("Click the 'Submit' button.");
+    	Submit_Btn.click();
+    	
+    	for (int second = 0; ; second++){
+            if (second >= 30) {
+                Assert.fail("MPX Data client result set not present after 30 seconds.");}
+            try {
+                Response_Pre.isDisplayed();
+                if (Response_Pre.getText().contains("startIndex")) {break;}
+            }
+            catch (NoSuchElementException e) {}
+            Thread.sleep(1000);
+        }
+    	
+    	Reporter.log("Store the result set to a list.");
+    	String result = Response_Pre.getText();
     	
     	List<String> AllResults = Arrays.asList(result.split("<entry>"));
     	String AllResultString = null;
@@ -211,14 +257,28 @@ public class MPXDataClient {
     
     public List<String> GetAllPlayers() throws Exception {
     	
-    	//TODO - refactor to be more efficient
-    	webDriver.selectFromDropdown(Object_Ddl, "Player");
-    	webDriver.type(Fields_Txb, "title");
-    	webDriver.click(Submit_Btn);
+    	Reporter.log("Select 'Player' from the 'Object' drop down list.");
+    	new Select(Object_Ddl).selectByVisibleText("Player");
     	
-    	new WebDriverWait(webDriver, 45).until(ExpectedConditions.textToBePresentInElement(By.xpath(Response_Pre), "startIndex"));
+    	Reporter.log("Enter 'title' in the 'Fields' text box.");
+    	Fields_Txb.sendKeys("title");
     	
-    	String result = webDriver.findElement(By.xpath(Response_Pre)).getText();
+    	Reporter.log("Click the 'Submit' button.");
+    	Submit_Btn.click();
+    	
+    	for (int second = 0; ; second++){
+            if (second >= 30) {
+                Assert.fail("MPX Data client result set not present after 30 seconds.");}
+            try {
+                Response_Pre.isDisplayed();
+                if (Response_Pre.getText().contains("startIndex")) {break;}
+            }
+            catch (NoSuchElementException e) {}
+            Thread.sleep(1000);
+        }
+    	
+    	Reporter.log("Store the result set to a list.");
+    	String result = Response_Pre.getText();
     	
     	String[] resultSet;
     	result = result.replace("<entry>", "");
@@ -244,9 +304,5 @@ public class MPXDataClient {
     	return finalResultSet;
     }
     
-    
-    
-    
-  
 }
 

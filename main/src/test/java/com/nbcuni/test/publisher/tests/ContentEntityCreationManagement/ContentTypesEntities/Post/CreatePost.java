@@ -4,10 +4,7 @@ import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Content.*;
-
-import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
-
 import java.util.Arrays;
 import java.util.List;
 

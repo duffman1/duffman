@@ -18,13 +18,8 @@ import org.testng.Reporter;
 
 public class SimpleEXIFIPTCMappings {
 
-    private static CustomWebDriver webDriver;
-    private static AppLib applib;
-    
     //PAGE OBJECT CONSTRUCTOR
     public SimpleEXIFIPTCMappings(CustomWebDriver webDriver, AppLib applib) {
-        SimpleEXIFIPTCMappings.webDriver = webDriver;
-        SimpleEXIFIPTCMappings.applib = applib;
         PageFactory.initElements(webDriver, this);
     }
    

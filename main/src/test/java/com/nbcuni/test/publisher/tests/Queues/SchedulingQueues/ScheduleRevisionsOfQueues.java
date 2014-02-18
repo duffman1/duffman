@@ -9,10 +9,7 @@ import com.nbcuni.test.publisher.pageobjects.Content.CreateDefaultContent;
 import com.nbcuni.test.publisher.pageobjects.Content.PublishingOptions;
 import com.nbcuni.test.publisher.pageobjects.Queues.Queues;
 import com.nbcuni.test.publisher.pageobjects.Queues.ScheduleQueue;
-
-import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
-
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;

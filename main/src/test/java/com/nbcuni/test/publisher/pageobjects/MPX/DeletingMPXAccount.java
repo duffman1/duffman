@@ -1,19 +1,13 @@
 package com.nbcuni.test.publisher.pageobjects.MPX;
 
-import java.util.List;
-
-import com.nbcuni.test.lib.Util;
 import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.webdriver.CustomWebDriver;
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
+
 /*********************************************
  * publisher.nbcuni.com Deleting MPX Account Library. Copyright
  * 
@@ -22,14 +16,9 @@ import org.testng.Reporter;
  *********************************************/
 public class DeletingMPXAccount {
 
-	private static CustomWebDriver webDriver;
-    private static AppLib applib;
-    
-    //PAGE OBJECT CONSTRUCTORS
-    public DeletingMPXAccount(CustomWebDriver custWebDr, AppLib applib) {
-        webDriver = custWebDr;
-        this.applib = applib;
-        
+	//PAGE OBJECT CONSTRUCTORS
+    public DeletingMPXAccount(CustomWebDriver webDriver, AppLib applib) {
+        PageFactory.initElements(webDriver, this);
     }
     
     //PAGE OBJECT IDENTIFIERS

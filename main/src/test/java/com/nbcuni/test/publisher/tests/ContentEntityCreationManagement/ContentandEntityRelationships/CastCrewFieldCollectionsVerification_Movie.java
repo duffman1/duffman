@@ -2,12 +2,8 @@ package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Contenta
 
 import java.util.Arrays;
 import java.util.List;
-
-import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
-
 import com.nbcuni.test.publisher.common.ParentTest;
-import com.nbcuni.test.publisher.pageobjects.Overlay;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Content.BasicInformation;
 import com.nbcuni.test.publisher.pageobjects.Content.CastCrew;
@@ -19,7 +15,6 @@ import com.nbcuni.test.publisher.pageobjects.Content.PublishingOptions;
 import com.nbcuni.test.publisher.pageobjects.Content.Revisions;
 import com.nbcuni.test.publisher.pageobjects.Content.SelectFile;
 import com.nbcuni.test.publisher.pageobjects.Content.WorkBench;
-import com.nbcuni.test.publisher.pageobjects.Taxonomy.Taxonomy;
 
 public class CastCrewFieldCollectionsVerification_Movie extends ParentTest{
 	 /*************************************************************************************
@@ -78,7 +73,7 @@ public class CastCrewFieldCollectionsVerification_Movie extends ParentTest{
 	        taxonomy.NavigateSite("Content>>Add content>>Person");
 	        overlay.SwitchToFrame("Create Person");	
 	        personsInformation.EnterFirstName(Persons.get(PCount));
-	        String biography = personsInformation.EnterBiography();
+	        personsInformation.EnterBiography();
 	        overlay.switchToDefaultContent();
 	        overlay.SwitchToFrame("Create Person");
 	        personsInformation.ClickCoverPhotoSelectBtn();
@@ -98,7 +93,7 @@ public class CastCrewFieldCollectionsVerification_Movie extends ParentTest{
         String MovieName = random.GetCharacterString(15);
         BasicInformation basicInformation = new BasicInformation(webDriver);
         basicInformation.EnterTitle(MovieName);
-        String MovieSynopsis = basicInformation.EnterSynopsis();
+        basicInformation.EnterSynopsis();
         overlay.switchToDefaultContent();
         overlay.SwitchToFrame("Create Movie");       
         basicInformation.ClickCoverSelectBtn();

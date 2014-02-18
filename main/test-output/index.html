@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,7 +37,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Default_suite">
-              <span class="suite-name border-failed">Default suite</span>
+              <span class="suite-name border-passed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -58,7 +58,7 @@
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="group-Default_suite">
-                    <span>3 groups</span>
+                    <span>1 group</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -90,21 +90,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method, 1 failed,   </span>
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
-                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods passed suite-Default_suite"> (hide)</a> <!-- hide-methods passed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
                     </span>
-                    <div class="method-list-content failed suite-Default_suite">
+                    <div class="method-list-content passed suite-Default_suite">
                       <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling" hash-for-method="MPXVideosSchedulingVerificationScheduling_Test">MPXVideosSchedulingVerificationScheduling_Test</a> <!-- method navigator-link -->
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.CastCrewFieldCollectionsVerification_Movie" hash-for-method="CastCrewFieldCollectionsVerificationMovie_Test">CastCrewFieldCollectionsVerificationMovie_Test</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content failed suite-Default_suite -->
+                    </div> <!-- method-list-content passed suite-Default_suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -116,89 +116,25 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-failed">
+          <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling</span>
+              <img src="passed.png"/>
+              <span class="class-name">com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.CastCrewFieldCollectionsVerification_Movie</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="MPXVideosSchedulingVerificationScheduling_Test">
-                  </a> <!-- MPXVideosSchedulingVerificationScheduling_Test -->
-                  <span class="method-name">MPXVideosSchedulingVerificationScheduling_Test</span>
-                  <div class="stack-trace">org.openqa.selenium.WebDriverException: Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.8.5&apos;, java.version: &apos;1.6.0_65&apos;
-Session ID: e2178915-bf5f-408d-93d1-d7ffdcd30d88
-Driver info: com.nbcuni.test.webdriver.CustomWebDriver
-Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.wJyFnq}, rotatable=false, locationContextEnabled=true, webdriver.remote.sessionid=e2178915-bf5f-408d-93d1-d7ffdcd30d88, version=32.0.1700.107, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:191)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:554)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:307)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:404)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:344)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:299)
-	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:579)
-	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:39)
-	at org.openqa.selenium.support.ui.ExpectedConditions$3.apply(ExpectedConditions.java:106)
-	at org.openqa.selenium.support.ui.ExpectedConditions$3.apply(ExpectedConditions.java:103)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
-	at com.nbcuni.test.publisher.pageobjects.Queues.ScheduleQueue.VerifyRunNowBtn(ScheduleQueue.java:133)
-	at com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling.MPXVideosSchedulingVerificationScheduling_Test(MPXVideosSchedulingVerificationScheduling.java:266)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
-	at java.lang.reflect.Method.invoke(Method.java:597)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-Caused by: java.lang.NullPointerException
-	at org.openqa.selenium.support.events.EventFiringWebDriver.extractInterfaces(EventFiringWebDriver.java:117)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.access$500(EventFiringWebDriver.java:63)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.&lt;init&gt;(EventFiringWebDriver.java:318)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.&lt;init&gt;(EventFiringWebDriver.java:312)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.createWebElement(EventFiringWebDriver.java:282)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:182)
-	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:47)
-	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:33)
-	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:138)
-	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:169)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
-	at java.lang.Thread.run(Thread.java:695)
-
-</div> <!-- stack-trace -->
+                  <a name="CastCrewFieldCollectionsVerificationMovie_Test">
+                  </a> <!-- CastCrewFieldCollectionsVerificationMovie_Test -->
+                  <span class="method-name">CastCrewFieldCollectionsVerificationMovie_Test</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-failed -->
+          </div> <!-- suite-Default_suite-class-passed -->
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/private/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/testng-eclipse-2094583496/testng-customsuite.xml</span>
+            <span class="header-content">/private/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/testng-eclipse--1647661905/testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -207,7 +143,7 @@ Caused by: java.lang.NullPointerException
 &lt;suite name=&quot;Default suite&quot;&gt;
   &lt;test verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling&quot;/&gt;
+      &lt;class name=&quot;com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.CastCrewFieldCollectionsVerification_Movie&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -235,23 +171,7 @@ Caused by: java.lang.NullPointerException
               <span class="test-group-name">full</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">MPXVideosSchedulingVerificationScheduling_Test</span>
-                <br/>
-              </div> <!-- method-in-group -->
-            </div> <!-- test-group -->
-            <div class="test-group">
-              <span class="test-group-name">mpx</span>
-              <br/>
-              <div class="method-in-group">
-                <span class="method-in-group-name">MPXVideosSchedulingVerificationScheduling_Test</span>
-                <br/>
-              </div> <!-- method-in-group -->
-            </div> <!-- test-group -->
-            <div class="test-group">
-              <span class="test-group-name">smoke</span>
-              <br/>
-              <div class="method-in-group">
-                <span class="method-in-group-name">MPXVideosSchedulingVerificationScheduling_Test</span>
+                <span class="method-in-group-name">CastCrewFieldCollectionsVerificationMovie_Test</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -273,14 +193,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'MPXVideosSchedulingVerificationScheduling_Test')
-data.setCell(0, 2, 'com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling')
-data.setCell(0, 3, 329591);
+data.setCell(0, 1, 'CastCrewFieldCollectionsVerificationMovie_Test')
+data.setCell(0, 2, 'com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.CastCrewFieldCollectionsVerification_Movie')
+data.setCell(0, 3, 166490);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 5 minutes</span>
+              <span class="suite-total-time">Total running time: 2 minutes</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -292,91 +212,212 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="reporter-method-div">
-              <span class="reporter-method-name">MPXVideosSchedulingVerificationScheduling_Test</span>
+              <span class="reporter-method-name">CastCrewFieldCollectionsVerificationMovie_Test</span>
               <div class="reporter-method-output-div">
                 <span class="reporter-method-output">Open url 'http://qa5dev.publisher.nbcuni.com'.</span>
                 <span class="reporter-method-output">Enter the user's email address in the 'Email Address' text box.</span>
                 <span class="reporter-method-output">Enter the user's password in the 'Password' text box.</span>
                 <span class="reporter-method-output">Click the 'Login' button.</span>
-                <span class="reporter-method-output">Mouse over the 'Configuration' menu link.</span>
-                <span class="reporter-method-output">Mouse over the 'Media' menu link.</span>
-                <span class="reporter-method-output">Click the 'Media: thePlatform mpx settings' menu link.</span>
-                <span class="reporter-method-output">Open the mpx platform.</span>
-                <span class="reporter-method-output">Enter 'mpx/AdminPub7QA' in the 'Username' text box.</span>
-                <span class="reporter-method-output">Enter 'Pa55word' in the 'Password' text box.</span>
-                <span class="reporter-method-output">Click the 'Login' button.</span>
-                <span class="reporter-method-output">Enter the account name 'DB TV' in the account select text box.</span>
-                <span class="reporter-method-output">Click the account option from the drop down list.</span>
-                <span class="reporter-method-output">Click the 'Account' title to leave focus off of the selection.</span>
-                <span class="reporter-method-output">Wait for account to switch to the newly selected account.</span>
+                <span class="reporter-method-output">Mouse over the 'Content' menu link.</span>
+                <span class="reporter-method-output">Mouse over the 'Add content' menu link.</span>
+                <span class="reporter-method-output">Click the 'Character Profile' menu link.</span>
+                <span class="reporter-method-output">Enter 'CharacterFirstNameb3402bb9b1' in the 'Character First Name' text box.</span>
+                <span class="reporter-method-output">Click the Cover Photo 'Select' button.</span>
+                <span class="reporter-method-output">Switch to the select file frame.</span>
+                <span class="reporter-method-output">Enter the file path for file upload.</span>
                 <span class="reporter-method-output">Click the 'Upload' button.</span>
-                <span class="reporter-method-output">Click the 'Choose Files' button.</span>
-                <span class="reporter-method-output">Click the 'Movies' button in the OS Upload dialog.</span>
-                <span class="reporter-method-output">Click the Test Movie in th OS Upload dialog.</span>
-                <span class="reporter-method-output">Click the 'Open' button.</span>
-                <span class="reporter-method-output">Click the 'Upload' button in the Upload dialog.</span>
-                <span class="reporter-method-output">Click the 'Available Date' label on the right hand side to give focus to the media item.</span>
-                <span class="reporter-method-output">Enter '1/28/2014 12:00 AM' in the 'Available Date' text box.</span>
-                <span class="reporter-method-output">Enter 'Automation8b9ea8e91a' in the 'Title' text box.</span>
-                <span class="reporter-method-output">Enter '2/10/2014 12:00 AM' in the 'Expiration Date' text box.</span>
+                <span class="reporter-method-output">Wait for the file link to be visible after upload.</span>
+                <span class="reporter-method-output">Click the 'Next' button.</span>
+                <span class="reporter-method-output">Click the 'Public Local Files' radio button.</span>
+                <span class="reporter-method-output">Click the 'Next' button.</span>
+                <span class="reporter-method-output">Assert the file image 'HanSolo' is present.</span>
+                <span class="reporter-method-output">Assert the the img is loaded and visible.</span>
                 <span class="reporter-method-output">Click the 'Save' button.</span>
-                <span class="reporter-method-output">Click the 'Publish' button.</span>
-                <span class="reporter-method-output">Click the 'Publish to Pub 7 Primary' check box.</span>
-                <span class="reporter-method-output">Click the 'Publish' button from the upload dialog.</span>
-                <span class="reporter-method-output">Open url 'http://qa5dev.publisher.nbcuni.com'.</span>
-                <span class="reporter-method-output">Verify success message of 'Cron ran successfully.' is present.</span>
+                <span class="reporter-method-output">Assert that img source of the Cover Photo contains 'HanSolo'.</span>
+                <span class="reporter-method-output">Assert the the img is loaded and visible.</span>
+                <span class="reporter-method-output">Click the 'Save' button.</span>
+                <span class="reporter-method-output">Verify success message of 'Character Profile CharacterFirstNameb3402bb9b1 has been created.' is present.</span>
                 <span class="reporter-method-output">Verify there are no errors present.</span>
                 <span class="reporter-method-output">Mouse over the 'Content' menu link.</span>
-                <span class="reporter-method-output">Mouse over the 'Files' menu link.</span>
-                <span class="reporter-method-output">Click the 'mpxMedia' menu link.</span>
-                <span class="reporter-method-output">Enter title Automation8b9ea8e91a.</span>
-                <span class="reporter-method-output">Click the 'Apply' button.</span>
-                <span class="reporter-method-output">Get the text of the first search result set item.</span>
-                <span class="reporter-method-output">Get the title text of every result in the search result set.</span>
-                <span class="reporter-method-output">For each expected result, assert it is present in the result set.</span>
-                <span class="reporter-method-output">Verify the text '01/28/2014 - 05:00 AM' is present on the page.</span>
-                <span class="reporter-method-output">Verify the text '02/10/2014 - 05:00 AM' is present on the page.</span>
-                <span class="reporter-method-output">Verify the text 'Expired' is present on the page.</span>
-                <span class="reporter-method-output">Click the first search title link in the search result set.</span>
-                <span class="reporter-method-output">Verify the text 'Automation8b9ea8e91a' is present on the page.</span>
-                <span class="reporter-method-output">Verify the text 'Tuesday, January 28, 2014 - 05:00' is present on the page.</span>
-                <span class="reporter-method-output">Verify the text 'Monday, February 10, 2014 - 05:00' is present on the page.</span>
-                <span class="reporter-method-output">Click the 'Edit' in the work bench.</span>
-                <span class="reporter-method-output">Open the mpx platform.</span>
-                <span class="reporter-method-output">Enter the account name 'DB TV' in the account select text box.</span>
-                <span class="reporter-method-output">Click the account option from the drop down list.</span>
-                <span class="reporter-method-output">Click the 'Account' title to leave focus off of the selection.</span>
-                <span class="reporter-method-output">Wait for account to switch to the newly selected account.</span>
-                <span class="reporter-method-output">Enter 'Automation8b9ea8e91a' in the 'Search' text box.</span>
-                <span class="reporter-method-output">Click the 'Search by Title' link.</span>
-                <span class="reporter-method-output">Click the 'Available Date' label on the right hand side to give focus to the media item.</span>
-                <span class="reporter-method-output">Enter '2/17/2014 12:00 AM' in the 'Available Date' text box.</span>
-                <span class="reporter-method-output">Enter '2/17/2015 12:00 AM' in the 'Expiration Date' text box.</span>
+                <span class="reporter-method-output">Mouse over the 'Add content' menu link.</span>
+                <span class="reporter-method-output">Click the 'Character Profile' menu link.</span>
+                <span class="reporter-method-output">Enter 'CharacterFirstNamed3257d8a51' in the 'Character First Name' text box.</span>
+                <span class="reporter-method-output">Click the Cover Photo 'Select' button.</span>
+                <span class="reporter-method-output">Switch to the select file frame.</span>
+                <span class="reporter-method-output">Enter the file path for file upload.</span>
+                <span class="reporter-method-output">Click the 'Upload' button.</span>
+                <span class="reporter-method-output">Wait for the file link to be visible after upload.</span>
+                <span class="reporter-method-output">Click the 'Next' button.</span>
+                <span class="reporter-method-output">Click the 'Public Local Files' radio button.</span>
+                <span class="reporter-method-output">Click the 'Next' button.</span>
+                <span class="reporter-method-output">Assert the file image 'HanSolo' is present.</span>
+                <span class="reporter-method-output">Assert the the img is loaded and visible.</span>
                 <span class="reporter-method-output">Click the 'Save' button.</span>
-                <span class="reporter-method-output">Click the 'Additional Options' arrow.</span>
-                <span class="reporter-method-output">Click the 'Publish Update' link.</span>
-                <span class="reporter-method-output">Click the 'Publish to Pub 7 Primary' check box.</span>
-                <span class="reporter-method-output">Click the 'Update' button.</span>
-                <span class="reporter-method-output">Open url 'http://qa5dev.publisher.nbcuni.com'.</span>
-                <span class="reporter-method-output">Verify success message of 'Cron ran successfully.' is present.</span>
+                <span class="reporter-method-output">Assert that img source of the Cover Photo contains 'HanSolo'.</span>
+                <span class="reporter-method-output">Assert the the img is loaded and visible.</span>
+                <span class="reporter-method-output">Click the 'Save' button.</span>
+                <span class="reporter-method-output">Verify success message of 'Character Profile CharacterFirstNamed3257d8a51 has been created.' is present.</span>
                 <span class="reporter-method-output">Verify there are no errors present.</span>
                 <span class="reporter-method-output">Mouse over the 'Content' menu link.</span>
-                <span class="reporter-method-output">Mouse over the 'Files' menu link.</span>
-                <span class="reporter-method-output">Click the 'mpxMedia' menu link.</span>
-                <span class="reporter-method-output">Enter title Automation8b9ea8e91a.</span>
-                <span class="reporter-method-output">Click the 'Apply' button.</span>
-                <span class="reporter-method-output">Get the title text of every result in the search result set.</span>
-                <span class="reporter-method-output">For each expected result, assert it is present in the result set.</span>
-                <span class="reporter-method-output">Verify the text '02/17/2014 - 05:00 AM' is present on the page.</span>
-                <span class="reporter-method-output">Verify the text '02/17/2015 - 05:00 AM' is present on the page.</span>
-                <span class="reporter-method-output">Verify the text 'Published' is present on the page.</span>
-                <span class="reporter-method-output">Click the first search title link in the search result set.</span>
-                <span class="reporter-method-output">Verify the text 'Automation8b9ea8e91a' is present on the page.</span>
-                <span class="reporter-method-output">Verify the text 'Monday, February 17, 2014 - 05:00' is present on the page.</span>
-                <span class="reporter-method-output">Verify the text 'Tuesday, February 17, 2015 - 05:00' is present on the page.</span>
-                <span class="reporter-method-output">Click the 'Edit' in the work bench.</span>
-                <span class="reporter-method-output">Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140217162548.png </span>
-                <span class="reporter-method-output">Failed to capture screenshot</span>
+                <span class="reporter-method-output">Mouse over the 'Add content' menu link.</span>
+                <span class="reporter-method-output">Click the 'Character Profile' menu link.</span>
+                <span class="reporter-method-output">Enter 'CharacterFirstName2f4ab40e1d' in the 'Character First Name' text box.</span>
+                <span class="reporter-method-output">Click the Cover Photo 'Select' button.</span>
+                <span class="reporter-method-output">Switch to the select file frame.</span>
+                <span class="reporter-method-output">Enter the file path for file upload.</span>
+                <span class="reporter-method-output">Click the 'Upload' button.</span>
+                <span class="reporter-method-output">Wait for the file link to be visible after upload.</span>
+                <span class="reporter-method-output">Click the 'Next' button.</span>
+                <span class="reporter-method-output">Click the 'Public Local Files' radio button.</span>
+                <span class="reporter-method-output">Click the 'Next' button.</span>
+                <span class="reporter-method-output">Assert the file image 'HanSolo' is present.</span>
+                <span class="reporter-method-output">Assert the the img is loaded and visible.</span>
+                <span class="reporter-method-output">Click the 'Save' button.</span>
+                <span class="reporter-method-output">Assert that img source of the Cover Photo contains 'HanSolo'.</span>
+                <span class="reporter-method-output">Assert the the img is loaded and visible.</span>
+                <span class="reporter-method-output">Click the 'Save' button.</span>
+                <span class="reporter-method-output">Verify success message of 'Character Profile CharacterFirstName2f4ab40e1d has been created.' is present.</span>
+                <span class="reporter-method-output">Verify there are no errors present.</span>
+                <span class="reporter-method-output">Mouse over the 'Content' menu link.</span>
+                <span class="reporter-method-output">Mouse over the 'Add content' menu link.</span>
+                <span class="reporter-method-output">Click the 'Person' menu link.</span>
+                <span class="reporter-method-output">Enter 'PersonFirstNamebb679f303d' in the 'First name' text box.</span>
+                <span class="reporter-method-output">Enter a random block of text in the 'Biography' text area.</span>
+                <span class="reporter-method-output">Click the 'Cover Photo' Select button.</span>
+                <span class="reporter-method-output">Switch to the select file frame.</span>
+                <span class="reporter-method-output">Enter the file path for file upload.</span>
+                <span class="reporter-method-output">Click the 'Upload' button.</span>
+                <span class="reporter-method-output">Wait for the file link to be visible after upload.</span>
+                <span class="reporter-method-output">Click the 'Next' button.</span>
+                <span class="reporter-method-output">Click the 'Public Local Files' radio button.</span>
+                <span class="reporter-method-output">Click the 'Next' button.</span>
+                <span class="reporter-method-output">Assert the file image 'HanSolo' is present.</span>
+                <span class="reporter-method-output">Assert the the img is loaded and visible.</span>
+                <span class="reporter-method-output">Click the 'Save' button.</span>
+                <span class="reporter-method-output">Click the 'Save' button.</span>
+                <span class="reporter-method-output">Verify success message of 'Person PersonFirstNamebb679f303d has been created.' is present.</span>
+                <span class="reporter-method-output">Verify there are no errors present.</span>
+                <span class="reporter-method-output">Mouse over the 'Content' menu link.</span>
+                <span class="reporter-method-output">Mouse over the 'Add content' menu link.</span>
+                <span class="reporter-method-output">Click the 'Person' menu link.</span>
+                <span class="reporter-method-output">Enter 'PersonFirstName1f4ad4dcc9' in the 'First name' text box.</span>
+                <span class="reporter-method-output">Enter a random block of text in the 'Biography' text area.</span>
+                <span class="reporter-method-output">Click the 'Cover Photo' Select button.</span>
+                <span class="reporter-method-output">Switch to the select file frame.</span>
+                <span class="reporter-method-output">Enter the file path for file upload.</span>
+                <span class="reporter-method-output">Click the 'Upload' button.</span>
+                <span class="reporter-method-output">Wait for the file link to be visible after upload.</span>
+                <span class="reporter-method-output">Click the 'Next' button.</span>
+                <span class="reporter-method-output">Click the 'Public Local Files' radio button.</span>
+                <span class="reporter-method-output">Click the 'Next' button.</span>
+                <span class="reporter-method-output">Assert the file image 'HanSolo' is present.</span>
+                <span class="reporter-method-output">Assert the the img is loaded and visible.</span>
+                <span class="reporter-method-output">Click the 'Save' button.</span>
+                <span class="reporter-method-output">Click the 'Save' button.</span>
+                <span class="reporter-method-output">Verify success message of 'Person PersonFirstName1f4ad4dcc9 has been created.' is present.</span>
+                <span class="reporter-method-output">Verify there are no errors present.</span>
+                <span class="reporter-method-output">Mouse over the 'Content' menu link.</span>
+                <span class="reporter-method-output">Mouse over the 'Add content' menu link.</span>
+                <span class="reporter-method-output">Click the 'Person' menu link.</span>
+                <span class="reporter-method-output">Enter 'PersonFirstNameca3da7c3b9' in the 'First name' text box.</span>
+                <span class="reporter-method-output">Enter a random block of text in the 'Biography' text area.</span>
+                <span class="reporter-method-output">Click the 'Cover Photo' Select button.</span>
+                <span class="reporter-method-output">Switch to the select file frame.</span>
+                <span class="reporter-method-output">Enter the file path for file upload.</span>
+                <span class="reporter-method-output">Click the 'Upload' button.</span>
+                <span class="reporter-method-output">Wait for the file link to be visible after upload.</span>
+                <span class="reporter-method-output">Click the 'Next' button.</span>
+                <span class="reporter-method-output">Click the 'Public Local Files' radio button.</span>
+                <span class="reporter-method-output">Click the 'Next' button.</span>
+                <span class="reporter-method-output">Assert the file image 'HanSolo' is present.</span>
+                <span class="reporter-method-output">Assert the the img is loaded and visible.</span>
+                <span class="reporter-method-output">Click the 'Save' button.</span>
+                <span class="reporter-method-output">Click the 'Save' button.</span>
+                <span class="reporter-method-output">Verify success message of 'Person PersonFirstNameca3da7c3b9 has been created.' is present.</span>
+                <span class="reporter-method-output">Verify there are no errors present.</span>
+                <span class="reporter-method-output">Mouse over the 'Content' menu link.</span>
+                <span class="reporter-method-output">Mouse over the 'Add content' menu link.</span>
+                <span class="reporter-method-output">Click the 'Movie' menu link.</span>
+                <span class="reporter-method-output">Enter '6f581cea781c44c' in the 'Title' text box.</span>
+                <span class="reporter-method-output">Switch to the Synopsis frame.</span>
+                <span class="reporter-method-output">Enter a randomized text string into the 'Body' text area.</span>
+                <span class="reporter-method-output">Click the 'Cover' select button.</span>
+                <span class="reporter-method-output">Switch to the select file frame.</span>
+                <span class="reporter-method-output">Enter the file path for file upload.</span>
+                <span class="reporter-method-output">Click the 'Upload' button.</span>
+                <span class="reporter-method-output">Wait for the file link to be visible after upload.</span>
+                <span class="reporter-method-output">Click the 'Next' button.</span>
+                <span class="reporter-method-output">Click the 'Public Local Files' radio button.</span>
+                <span class="reporter-method-output">Click the 'Next' button.</span>
+                <span class="reporter-method-output">Assert the file image 'HanSolo' is present.</span>
+                <span class="reporter-method-output">Assert the the img is loaded and visible.</span>
+                <span class="reporter-method-output">Click the 'Save' button.</span>
+                <span class="reporter-method-output">Click the 'Cast/Crew' link.</span>
+                <span class="reporter-method-output">Enter 'PersonFirstNamebb679f303d' in the Person text box.</span>
+                <span class="reporter-method-output">Click the 'PersonFirstNamebb679f303d' from the auto complete option list.</span>
+                <span class="reporter-method-output">Select the 'Character' from the 'Role' drop down list.</span>
+                <span class="reporter-method-output">Assert that the 'Character' text box is displayed.</span>
+                <span class="reporter-method-output">Enter 'CharacterFirstNameb3402bb9b1' in the 'Character' text box.</span>
+                <span class="reporter-method-output">Click the 'CharacterFirstNameb3402bb9b1' from the auto complete option list.</span>
+                <span class="reporter-method-output">Scroll to and click the 'Basic Information' tab.</span>
+                <span class="reporter-method-output">Click the 'Save' button.</span>
+                <span class="reporter-method-output">Click the 'Revisions' in the work bench.</span>
+                <span class="reporter-method-output">Click the 'Edit' menu button.</span>
+                <span class="reporter-method-output">Scroll the 'Publishing Options' link into view.</span>
+                <span class="reporter-method-output">Click the 'Publishing Options' link.</span>
+                <span class="reporter-method-output">Verify the 'Create New Revision' checkbox is checked.</span>
+                <span class="reporter-method-output">Click the 'Cast/Crew' link.</span>
+                <span class="reporter-method-output">Assert the value of the 'Person' text box equals 'PersonFirstNamebb679f303d'.</span>
+                <span class="reporter-method-output">Assert the value of the 'Character' text box equals 'CharacterFirstNameb3402bb9b1'.</span>
+                <span class="reporter-method-output">Assert the value of the 'Role' drop down list equals 'Character'.</span>
+                <span class="reporter-method-output">Click the 'Add Another Item' button.</span>
+                <span class="reporter-method-output">Enter 'PersonFirstName1f4ad4dcc9' in the Person text box.</span>
+                <span class="reporter-method-output">Click the 'PersonFirstName1f4ad4dcc9' from the auto complete option list.</span>
+                <span class="reporter-method-output">Select the 'Character' from the 'Role' drop down list.</span>
+                <span class="reporter-method-output">Assert that the 'Character' text box is displayed.</span>
+                <span class="reporter-method-output">Enter 'CharacterFirstNamed3257d8a51' in the 'Character' text box.</span>
+                <span class="reporter-method-output">Click the 'CharacterFirstNamed3257d8a51' from the auto complete option list.</span>
+                <span class="reporter-method-output">Scroll to and click the 'Basic Information' tab.</span>
+                <span class="reporter-method-output">Enter '4fa4ec01d35e497' in the 'Title' text box.</span>
+                <span class="reporter-method-output">Click the 'Save' button.</span>
+                <span class="reporter-method-output">Click the 'Revisions' in the work bench.</span>
+                <span class="reporter-method-output">Click the 'Edit' menu button.</span>
+                <span class="reporter-method-output">Scroll the 'Publishing Options' link into view.</span>
+                <span class="reporter-method-output">Click the 'Publishing Options' link.</span>
+                <span class="reporter-method-output">Verify the 'Create New Revision' checkbox is checked.</span>
+                <span class="reporter-method-output">Click the 'Cast/Crew' link.</span>
+                <span class="reporter-method-output">Assert the value of the 'Person' text box equals 'PersonFirstNamebb679f303d'.</span>
+                <span class="reporter-method-output">Assert the value of the 'Character' text box equals 'CharacterFirstNameb3402bb9b1'.</span>
+                <span class="reporter-method-output">Assert the value of the 'Role' drop down list equals 'Character'.</span>
+                <span class="reporter-method-output">Assert the value of the 'Person' text box equals 'PersonFirstName1f4ad4dcc9'.</span>
+                <span class="reporter-method-output">Assert the value of the 'Role' drop down list equals 'Character'.</span>
+                <span class="reporter-method-output">Assert the value of the 'Character' text box equals 'CharacterFirstNamed3257d8a51'.</span>
+                <span class="reporter-method-output">Click the 'Add Another Item' button.</span>
+                <span class="reporter-method-output">Enter 'PersonFirstNameca3da7c3b9' in the Person text box.</span>
+                <span class="reporter-method-output">Click the 'PersonFirstNameca3da7c3b9' from the auto complete option list.</span>
+                <span class="reporter-method-output">Select the 'Character' from the 'Role' drop down list.</span>
+                <span class="reporter-method-output">Assert that the 'Character' text box is displayed.</span>
+                <span class="reporter-method-output">Enter 'CharacterFirstName2f4ab40e1d' in the 'Character' text box.</span>
+                <span class="reporter-method-output">Click the 'CharacterFirstName2f4ab40e1d' from the auto complete option list.</span>
+                <span class="reporter-method-output">Scroll to and click the 'Basic Information' tab.</span>
+                <span class="reporter-method-output">Enter '63980ed85a884e4' in the 'Title' text box.</span>
+                <span class="reporter-method-output">Click the 'Save' button.</span>
+                <span class="reporter-method-output">Click the 'Revisions' in the work bench.</span>
+                <span class="reporter-method-output">Click the 'Edit' extend menu button.</span>
+                <span class="reporter-method-output">Click the 'Delete' button.</span>
+                <span class="reporter-method-output">Click the 'Confirm Delete' button.</span>
+                <span class="reporter-method-output">Click the 'Edit' menu button.</span>
+                <span class="reporter-method-output">Verify the text 'Notice: Trying to get property of non-object in field_collection_field_get_entity() (line 1608 of /mnt/www/html/nbcuqa4dev/docroot/profiles/all/modules/contrib/field_collection/field_collection.module)' is NOT present on the page.</span>
+                <span class="reporter-method-output">Click the 'Cast/Crew' link.</span>
+                <span class="reporter-method-output">Assert the value of the 'Person' text box equals 'PersonFirstNamebb679f303d'.</span>
+                <span class="reporter-method-output">Assert the value of the 'Character' text box equals 'CharacterFirstNameb3402bb9b1'.</span>
+                <span class="reporter-method-output">Assert the value of the 'Role' drop down list equals 'Character'.</span>
+                <span class="reporter-method-output">Assert the value of the 'Person' text box equals 'PersonFirstName1f4ad4dcc9'.</span>
+                <span class="reporter-method-output">Assert the value of the 'Role' drop down list equals 'Character'.</span>
+                <span class="reporter-method-output">Assert the value of the 'Character' text box equals 'CharacterFirstNamed3257d8a51'.</span>
+                <span class="reporter-method-output">Assert the value of the 'Person' text box equals 'PersonFirstNameca3da7c3b9'.</span>
+                <span class="reporter-method-output">Assert the value of the 'Role' drop down list equals 'Character'.</span>
+                <span class="reporter-method-output">Assert the value of the 'Character' text box equals 'CharacterFirstName2f4ab40e1d'.</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -394,20 +435,18 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.CastCrewFieldCollectionsVerification_Movie</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">startSelenium(PROD)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">MPXVideosSchedulingVerificationScheduling_Test</span>
-                <span class="method-start">13535 ms</span>
+                <span class="method-name">CastCrewFieldCollectionsVerificationMovie_Test</span>
+                <span class="method-start">13916 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">stopSelenium([TestResult name=MPXVideosSchedulingVerificationScheduling_Test status=FAILURE method=MPXVideosSched...)</span>
-                <span class="method-start">343135 ms</span>
+                <span class="method-name">stopSelenium([TestResult name=CastCrewFieldCollectionsVerificationMovie_Test status=SUCCESS method=CastCrewFieldC...)</span>
+                <span class="method-start">180407 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

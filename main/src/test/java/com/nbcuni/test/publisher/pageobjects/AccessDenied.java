@@ -1,21 +1,15 @@
 package com.nbcuni.test.publisher.pageobjects;
 
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.Reporter;
-
-import com.nbcuni.test.lib.Util;
-import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.webdriver.CustomWebDriver;
 
-
 /*********************************************
- * publisher.nbcuni.com Modules Library. Copyright
+ * publisher.nbcuni.com Access Denied Library. Copyright
  * 
  * @author Brandon Clark
  * @version 1.0 Date: December 15, 2013
@@ -23,23 +17,23 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 
 public class AccessDenied {
 
-    private static CustomWebDriver webDriver;
-    private static AppLib al;
-    private final Util ul;
-    
-    
-    public AccessDenied(final CustomWebDriver custWebDr) {
-        webDriver = custWebDr;
-        ul = new Util(webDriver);
-        
+    //PAGE OBJECT CONSTRUCTOR
+    public AccessDenied(CustomWebDriver webDriver) {
+        PageFactory.initElements(webDriver, this);
     }
     
+    //PAGE OBJECT IDENTIFIERS
+    @FindBy(how = How.TAG_NAME, using = "body")
+    private static WebElement Body_Txt;
+    
+    //PAGE OBJECT METHODS
     public void VerifyAccessDeniedTxt() throws Exception {
     	
-    	ul.verifyObjectContainsText("//body", "You are not authorized to access this page.");
+    	Reporter.log("Verify access denied text is present.");
+    	if (!Body_Txt.getText().contains("You are not authorized to access this page.")) {
+    		Assert.fail("The text 'You are not authorized to access this page.' is not present.");
+    	}
     }
     
-    
-  
 }
 

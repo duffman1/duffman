@@ -3,11 +3,7 @@ package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentT
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Content.*;
-
-import org.openqa.selenium.support.PageFactory;
-import org.testng.Reporter;
 import org.testng.annotations.Test;
-
 import java.util.Arrays;
 import java.util.List;
 
@@ -30,7 +26,6 @@ public class CreateTVSeason extends ParentTest{
     	
         //Step 1
         UserLogin userLogin = applib.openApplication();
-        PageFactory.initElements(webDriver, userLogin);
         userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
         
         List<String> allStates = Arrays.asList("Draft", "Review", "Published");
@@ -42,7 +37,6 @@ public class CreateTVSeason extends ParentTest{
         
         //Step 3
         ContentParent contentParent = new ContentParent(webDriver, applib);
-        PageFactory.initElements(webDriver, contentParent);
         contentParent.VerifyRequiredFields(Arrays.asList("Title", "Season", "Synopsis"));
         PublishingOptions publishingOptions = new PublishingOptions(webDriver);
         publishingOptions.ClickPublishingOptionsLnk();
@@ -60,8 +54,7 @@ public class CreateTVSeason extends ParentTest{
         //Step 5
         basicInformation.ClickCoverSelectBtn();
         SelectFile selectFile = new SelectFile(webDriver, applib);
-        PageFactory.initElements(webDriver, selectFile);
-    	selectFile.SelectDefaultCoverImg();
+        selectFile.SelectDefaultCoverImg();
     	overlay.SwitchToFrame("Create TV Season");
     	
     	//Step 6
@@ -72,7 +65,6 @@ public class CreateTVSeason extends ParentTest{
     	contentParent.ClickSaveBtn();
     	contentParent.VerifyMessageStatus("TV Season " + tvSeasonTitle + " has been created.");
     	WorkBench workBench = new WorkBench(webDriver, applib);
-    	PageFactory.initElements(webDriver, workBench);
     	workBench.VerifyWorkBenchBlockTextPresent(Arrays.asList(state));
     	
         }

@@ -4,16 +4,7 @@ import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.AdministrationMenu;
 import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
-import com.nbcuni.test.publisher.pageobjects.Content.*;
-import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
-
-import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
-
-import java.util.Arrays;
-import java.util.List;
-
-import junit.framework.Assert;
 
 public class TestSetup extends ParentTest{
 	
@@ -31,14 +22,12 @@ public class TestSetup extends ParentTest{
          
         	//Step 1
         	UserLogin userLogin = applib.openApplication();
-        	PageFactory.initElements(webDriver, userLogin);
-            userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+        	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
             
             //Step 2
             taxonomy.NavigateSite("Modules");
         	overlay.SwitchToFrame("Modules");
         	Modules modules = new Modules(webDriver, applib);
-        	PageFactory.initElements(webDriver, modules);
         	modules.EnterFilterName("Sticky Edit Actions");
         	modules.DisableModule("Sticky Edit Actions");
             
@@ -51,7 +40,6 @@ public class TestSetup extends ParentTest{
             modules.ClickConfigureLnk("Administration menu");
             overlay.SwitchToActiveFrame();
             AdministrationMenu administrationMenu = new AdministrationMenu(webDriver, applib);
-            PageFactory.initElements(webDriver, administrationMenu);
             administrationMenu.UnCheckKeepMenuOnTopOfPageCbx();
             administrationMenu.ClickSaveConfigurationBtn();
             overlay.ClickCloseOverlayLnk();

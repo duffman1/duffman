@@ -1,9 +1,6 @@
 package com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
-
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Logout;
 import com.nbcuni.test.publisher.pageobjects.Modules;
@@ -62,12 +59,10 @@ public class CreateConfigureAndValidatePermissionsEditor extends ParentTest{
     	
     	//Step 1
     	UserLogin userLogin = applib.openApplication();
-    	PageFactory.initElements(webDriver, userLogin);
-        userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+    	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
         
         //Step 1a (enable post module if needed)
         Modules modules = new Modules(webDriver, applib);
-        PageFactory.initElements(webDriver, modules);
         modules.VerifyModuleEnabled("Pub Post");
         
         //Step 2
@@ -89,7 +84,6 @@ public class CreateConfigureAndValidatePermissionsEditor extends ParentTest{
         addUser.EnterLastName(lastName);
         addUser.ClickCreateNewAccountBtn();
         ContentParent contentParent = new ContentParent(webDriver, applib);
-        PageFactory.initElements(webDriver, contentParent);
         contentParent.VerifyMessageStatus("A welcome message with further instructions has been e-mailed to the new user " + userName + ".");
        
         //Step 4
@@ -116,7 +110,6 @@ public class CreateConfigureAndValidatePermissionsEditor extends ParentTest{
         overlay.ClickCloseOverlayLnk();
         overlay.switchToDefaultContent();
         Logout logout = new Logout(webDriver);
-        PageFactory.initElements(webDriver, logout);
         logout.ClickLogoutBtn();
         
         //Step 8
@@ -164,7 +157,6 @@ public class CreateConfigureAndValidatePermissionsEditor extends ParentTest{
         
         //Step 23
         Revisions revisions = new Revisions(webDriver, applib);
-        PageFactory.initElements(webDriver, revisions);
         revisions.VerifyContentItemEditDeleteNotPresent(postTitle2);
         
         //Step 24

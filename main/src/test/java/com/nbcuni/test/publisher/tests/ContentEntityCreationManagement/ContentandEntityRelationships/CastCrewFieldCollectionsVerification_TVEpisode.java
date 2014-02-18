@@ -2,7 +2,6 @@ package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Contenta
 
 import java.util.Arrays;
 import java.util.List;
-import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
@@ -74,7 +73,7 @@ public class CastCrewFieldCollectionsVerification_TVEpisode extends ParentTest {
 	        taxonomy.NavigateSite("Content>>Add content>>Person");
 	        overlay.SwitchToFrame("Create Person");	
 	        personsInformation.EnterFirstName(Persons.get(PCount));
-	        String biography = personsInformation.EnterBiography();
+	        personsInformation.EnterBiography();
 	        overlay.switchToDefaultContent();
 	        overlay.SwitchToFrame("Create Person");
 	        personsInformation.ClickCoverPhotoSelectBtn();

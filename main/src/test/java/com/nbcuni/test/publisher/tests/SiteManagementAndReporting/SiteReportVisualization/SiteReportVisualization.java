@@ -22,7 +22,7 @@ public class SiteReportVisualization extends ParentTest{
      * @throws Throwable No Return values are needed
      *************************************************************************************/
     @Test(groups = {"full"})
-    public void SiteReportVisualization() throws Exception{
+    public void SiteReportVisualization_Test() throws Exception{
     	/*Per Mirza, this test is not needed as there are no reports on fresh installs. He will follow up but advised i comment this test out for the time being
     	//Step 1
     	UserLogin userLogin = applib.openApplication();

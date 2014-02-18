@@ -1,19 +1,11 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ProgramGuides.ROVITVSchedule;
 
-import net.lightbody.bmp.proxy.jetty.html.Block;
-
-import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
-
-import com.nbcuni.test.lib.Util;
-import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Blocks;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Configuration.ProgramGuide;
 import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
-import com.nbcuni.test.publisher.pageobjects.Cron.Cron;
-import com.nbcuni.test.webdriver.CustomWebDriver;
 
 public class ProgramGuideVerification extends ParentTest{
 	/*************************************************************************************
@@ -39,12 +31,10 @@ public class ProgramGuideVerification extends ParentTest{
 		
 		//Step 1
 		UserLogin userLogin = applib.openApplication();
-		PageFactory.initElements(webDriver, userLogin);
-	    userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+		userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
 	    
 	    //Step 2
 	    ProgramGuide programGuide = new ProgramGuide(webDriver);
-        PageFactory.initElements(webDriver, programGuide);
         programGuide.VerifyProgramGuideText();
         
         //Step 3
@@ -56,7 +46,6 @@ public class ProgramGuideVerification extends ParentTest{
         taxonomy.NavigateSite("Home>>Run cron");
         overlay.SwitchToActiveFrame();
 	    ContentParent contentParent = new ContentParent(webDriver, applib);
-	    PageFactory.initElements(webDriver, contentParent);
 	    contentParent.VerifyMessageStatus("Cron ran successfully.");
         
         //Step 6
@@ -79,7 +68,6 @@ public class ProgramGuideVerification extends ParentTest{
         taxonomy.NavigateSite("Structure>>Blocks");
         overlay.SwitchToActiveFrame();
         Blocks blocks = new Blocks(webDriver);
-        PageFactory.initElements(webDriver, blocks);
         blocks.SelectRegion("Program Guide", "- None -");
         blocks.ClickSaveBlocksBtn();
         
