@@ -139,6 +139,7 @@ public class ConfiguringPublisherAutopublishingToFacebookTimeandWall extends Par
         revisions.ClickEditExtendMenuBtn(postTitle);
         revisions.ClickShareMenuBtn(postTitle);
         Share share = new Share(webDriver, applib);
+        share.ClickFacebookLnk();
         share.ClickPostToFacebookWallCbx();
         String message = random.GetCharacterString(15);
         share.EnterBriefMessage(message);
