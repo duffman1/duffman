@@ -3,11 +3,15 @@ package com.nbcuni.test.publisher.pageobjects.ErrorChecking;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
+import org.testng.Reporter;
+
 import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.webdriver.CustomWebDriver;
 
@@ -27,7 +31,7 @@ public class ErrorChecking {
     public ErrorChecking(CustomWebDriver webDriver, AppLib applib) {
         ErrorChecking.webDriver = webDriver;
         ErrorChecking.applib = applib;
-        
+        PageFactory.initElements(webDriver, this);
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -56,15 +60,23 @@ public class ErrorChecking {
     
     public void VerifyMPXPlayerDisabled(String playerTitle) throws Exception {
     	
-    	Assert.assertTrue(DisabledPlayerError_Ctr(playerTitle).getText().contains("An MPXplayer that's in use (" + playerTitle + ") has been disabled in MPX."));
-    	Assert.assertTrue(DisabledPlayerError_Ctr(playerTitle).getText().contains("To change its status in MPX, log into mpx.theplatform"));
+    	Reporter.log("Verify that the disabled player text is present for player titled '" + playerTitle + "'.");
+    	String disabledPlayerTxt = DisabledPlayerError_Ctr(playerTitle).getText();
+    	if (!disabledPlayerTxt.contains("An MPXplayer that's in use (" + playerTitle + ") has been disabled in MPX.")) {
+    		Assert.fail("Disabled player text not present for player titled '" + playerTitle + "'.");
+    	}
+    	Assert.assertTrue(disabledPlayerTxt.contains("To change its status in MPX, log into mpx.theplatform"));
     }
     
     public void VerifyMPXPlayerDisabledAndUnpublished(String playerTitle) throws Exception {
     	
-    	Assert.assertTrue(DisabledPlayerError_Ctr(playerTitle).getText().contains("An MPXplayer that's in use (" + playerTitle + ") has been disabled and unpublished."));
-    	Assert.assertTrue(DisabledPlayerError_Ctr(playerTitle).getText().contains("To change its status in Publisher, click here"));
-    	Assert.assertTrue(DisabledPlayerError_Ctr(playerTitle).getText().contains("To change its status in MPX, log into mpx.theplatform"));
+    	Reporter.log("Verify that the disabled and unpublished player text is present for player titled '" + playerTitle + "'.");
+    	String disabledPlayerTxt = DisabledPlayerError_Ctr(playerTitle).getText();
+    	if (!disabledPlayerTxt.contains("An MPXplayer that's in use (" + playerTitle + ") has been disabled and unpublished.")) {
+    		Assert.fail("Disabled and unpublished player text not present for player titled '" + playerTitle + "'.");
+    	}
+    	Assert.assertTrue(disabledPlayerTxt.contains("To change its status in Publisher, click here"));
+    	Assert.assertTrue(disabledPlayerTxt.contains("To change its status in MPX, log into mpx.theplatform"));
     }
     
     public void VerifyNoMessageErrorsPresent() throws Exception{

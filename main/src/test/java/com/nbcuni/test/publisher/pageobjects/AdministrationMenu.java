@@ -3,7 +3,9 @@ package com.nbcuni.test.publisher.pageobjects;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
+
 import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.webdriver.CustomWebDriver;
 
@@ -18,6 +20,7 @@ public class AdministrationMenu {
 
     //PAGE OBJECT CONSTRUCTOR
     public AdministrationMenu(CustomWebDriver webDriver, AppLib applib) {
+    	PageFactory.initElements(webDriver, this);
     }
     
     //PAGE OBJECT IDENTIFIERS

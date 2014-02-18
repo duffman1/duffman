@@ -80,7 +80,6 @@ public class ContentParent {
     	
     	Reporter.log("Verify there are no errors present.");
     	ErrorChecking errorChecking = new ErrorChecking(webDriver, applib);
-    	PageFactory.initElements(webDriver, errorChecking);
     	errorChecking.VerifyNoMessageErrorsPresent();
     }
     

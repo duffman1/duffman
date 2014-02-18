@@ -4,7 +4,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
+
 import com.nbcuni.test.webdriver.CustomWebDriver;
 
 /*********************************************
@@ -16,8 +19,11 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 
 public class MPXPlayers {
 
+	private static CustomWebDriver webDriver;
+	
     //PAGE OBJECT CONSTRUCTOR
     public MPXPlayers(CustomWebDriver webDriver) {
+    	MPXPlayers.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
     }
     
@@ -48,7 +54,7 @@ public class MPXPlayers {
     public void ClickSyncMPXPlayersNowLnk() throws Exception {
     	
     	Reporter.log("Click the 'Sync MPX Players Now' link.");
-    	SyncMPXPlayersNow_Lnk.click();
+    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOf(SyncMPXPlayersNow_Lnk)).click();
     }
     
 }

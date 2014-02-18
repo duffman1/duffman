@@ -19,7 +19,6 @@ import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXSearch;
 import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXSelectAccount;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import junit.framework.Assert;
-import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
 public class NotificationPlayerUnavailability extends ParentTest{
@@ -62,8 +61,7 @@ public class NotificationPlayerUnavailability extends ParentTest{
 
     	//NOTE - Test steps re-ordered and truncated for automation optimization
     	UserLogin userLogin = applib.openApplication();
-    	PageFactory.initElements(webDriver, userLogin);
-        userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+    	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
         
         //MPX Configuration required
         taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
@@ -98,10 +96,8 @@ public class NotificationPlayerUnavailability extends ParentTest{
                 MPXPlayers.ClickSyncMPXPlayersLnk();
                 MPXPlayers.ClickSyncMPXPlayersNowLnk();
                 ContentParent contentParent = new ContentParent(webDriver, applib);
-                PageFactory.initElements(webDriver, contentParent);
                 contentParent.VerifyMessageStatus("players returned for account");
         	    SearchFor searchFor = new SearchFor(webDriver, applib);
-                PageFactory.initElements(webDriver, searchFor);
                 searchFor.EnterTitle(playerTitle);
                 searchFor.ClickApplyBtn();
                 overlay.switchToDefaultContent();
@@ -117,7 +113,6 @@ public class NotificationPlayerUnavailability extends ParentTest{
         	    searchFor.ClickApplyBtn();
         	    searchFor.ClickSearchTitleLnk(searchFor.GetFirstMPXMediaSearchResult());
         	    WorkBench workBench = new WorkBench(webDriver, applib);
-        	    PageFactory.initElements(webDriver, workBench);
         	    workBench.ClickWorkBenchTab("Edit");
         	    overlay.SwitchToActiveFrame();
         	    EditMPXVideo editMPXVideo = new EditMPXVideo(webDriver);
@@ -135,7 +130,7 @@ public class NotificationPlayerUnavailability extends ParentTest{
             	mpxAddPlayer.GiveFocusToPlayerItem();
             	mpxAddPlayer.ClickDisablePlayerCbx();
             	mpxAddPlayer.ClickSaveBtn();
-            	Thread.sleep(10000); //long pause necessary as mpx processes player
+            	Thread.sleep(10000); //TODO - long pause necessary as mpx processes player
             	
             	//Step 4
             	applib.openApplication();
@@ -153,7 +148,6 @@ public class NotificationPlayerUnavailability extends ParentTest{
         	    
         	    //Step 7
         	    ErrorChecking errorChecking = new ErrorChecking(webDriver, applib);
-        	    PageFactory.initElements(webDriver, errorChecking);
         	    errorChecking.VerifyMPXPlayerDisabled(playerTitle);
                 
                 //Step 8

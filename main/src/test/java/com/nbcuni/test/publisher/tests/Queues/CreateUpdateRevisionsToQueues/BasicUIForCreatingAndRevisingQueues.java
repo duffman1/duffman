@@ -4,10 +4,7 @@ import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.TimeZone;
-
-import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
-
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Content.*;
@@ -41,7 +38,6 @@ public class BasicUIForCreatingAndRevisingQueues extends ParentTest{
     	
         //Step 1
         UserLogin userLogin = applib.openApplication();
-        PageFactory.initElements(webDriver, userLogin);
         userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
         
         //Step 2
@@ -52,7 +48,6 @@ public class BasicUIForCreatingAndRevisingQueues extends ParentTest{
         Queues queues = new Queues(webDriver);
         queues.ClickSaveQueueBtn();
         ErrorChecking errorChecking = new ErrorChecking(webDriver, applib);
-        PageFactory.initElements(webDriver, errorChecking);
         errorChecking.VerifyAllRequiredFields(Arrays.asList("Title"));
         
         //Step 4

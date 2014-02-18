@@ -2,7 +2,6 @@ package com.nbcuni.test.publisher.tests.Video.DeIngestingMPXAccountsAndCorrespon
 
 import java.util.Arrays;
 import java.util.List;
-
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
@@ -10,9 +9,7 @@ import com.nbcuni.test.publisher.pageobjects.Content.SearchFor;
 import com.nbcuni.test.publisher.pageobjects.ErrorChecking.ErrorChecking;
 import com.nbcuni.test.publisher.pageobjects.MPX.MPXMedia;
 import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
-
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -37,8 +34,7 @@ public class DeleteMultipleAccounts extends ParentTest{
     	
     	//Step 1
     	UserLogin userLogin = applib.openApplication();
-    	PageFactory.initElements(webDriver, userLogin);
-        userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+    	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
         
         //Step 2
         applib.openApplication();
@@ -55,9 +51,7 @@ public class DeleteMultipleAccounts extends ParentTest{
         	
         	//Step 5 through 8
         	ContentParent contentParent = new ContentParent(webDriver, applib);
-        	PageFactory.initElements(webDriver, contentParent);
         	ErrorChecking errorChecking = new ErrorChecking(webDriver, applib);
-        	PageFactory.initElements(webDriver, errorChecking);
         	List<WebElement> AllDeleteAccountButtons = settings.GetAllDeleteAccountButtons();
         	Assert.assertTrue(configuredAccounts.size() == AllDeleteAccountButtons.size());
         	while (settings.GetAllDeleteAccountButtons().size() > 0) {
@@ -82,7 +76,6 @@ public class DeleteMultipleAccounts extends ParentTest{
         	taxonomy.NavigateSite("Content>>Files>>mpxMedia");
         	overlay.SwitchToActiveFrame();
         	SearchFor searchFor = new SearchFor(webDriver, applib);
-        	PageFactory.initElements(webDriver, searchFor);
         	searchFor.EnterTitle("Automation");
         	searchFor.ClickApplyBtn();
         	overlay.switchToDefaultContent();
@@ -104,8 +97,7 @@ public class DeleteMultipleAccounts extends ParentTest{
         	//Step 11
         	taxonomy.NavigateSite("Content>>Files>>mpxMedia");
         	MPXMedia mpxMedia = new MPXMedia(webDriver);
-        	PageFactory.initElements(webDriver, mpxMedia);
-            mpxMedia.ExpandMPXMedia();
+        	mpxMedia.ExpandMPXMedia();
             mpxMedia.SelectMPXPlayerForAccount1("Auditude Demo player");
             mpxMedia.ClickSyncMPXMediaNowLnk();
             contentParent.VerifyMessageStatus("Processed video import/update manually for all accounts.");
