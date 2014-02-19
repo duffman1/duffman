@@ -55,7 +55,6 @@ public class PixelmanModuleSetupAndVerification extends ParentTest {
         
         //Step 6
         modules.VerifyModuleSourceInPage("//www.nbcudigitaladops.com/hosted/global_header.js");
-        modules.VerifyModuleSourceInPage("//www.nbcudigitaladops.com/hosted/site.js?h=qa5dev_publisher_nbcuni_com_header");
             
         //Step 7
         Logout logout = new Logout(webDriver);
@@ -64,7 +63,6 @@ public class PixelmanModuleSetupAndVerification extends ParentTest {
             
         //Step 8
         modules.VerifyModuleSourceInPage("//www.nbcudigitaladops.com/hosted/global_header.js");
-        modules.VerifyModuleSourceInPage("//www.nbcudigitaladops.com/hosted/site.js?h=qa5dev_publisher_nbcuni_com_header");
             
         //Step 9
         userLogin.Login("admin@publisher.nbcuni.com", "pa55word");

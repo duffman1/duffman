@@ -103,6 +103,7 @@ public class Taxonomy {
     		}
     		
     		if (depth == 1) {
+    			Thread.sleep(250);
     			wait.until(ExpectedConditions.visibilityOf(HomeTier1_Lnk)).click();
     		}
     		else if (depth == 2) {
