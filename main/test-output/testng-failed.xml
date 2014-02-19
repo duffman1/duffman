@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.nbcuni.test.publisher.tests.SocialIntegration.ImplementAutoPublishingToTwitter.TwitterAutoPublishing">
+      <class name="com.nbcuni.test.publisher.tests.UserCreationAndManagement.UnauthenticatedUsersNotAbleToViewThePublishedContents.UnauthenticatedUsersNotAbleToViewThePublishedContents">
         <methods>
           <include name="startSelenium"/>
+          <include name="UnauthenticatedUsersNotAbleToViewThePublishedContents_Test"/>
           <include name="stopSelenium"/>
-          <include name="TwitterAutoPublishing_Test"/>
         </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.SocialIntegration.ImplementAutoPublishingToTwitter.TwitterAutoPublishing -->
+      </class> <!-- com.nbcuni.test.publisher.tests.UserCreationAndManagement.UnauthenticatedUsersNotAbleToViewThePublishedContents.UnauthenticatedUsersNotAbleToViewThePublishedContents -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

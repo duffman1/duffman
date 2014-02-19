@@ -31,7 +31,7 @@ public class SitePreview {
 	 }
 	 
 	 //PAGE OBJECT IDENTIFIERS
-	 @FindBy(how = How.ID, using ="edit-sps")
+	 @FindBy(how = How.ID, using ="preview-site")
 	 private static WebElement PreviewSite_Lnk;
 	    
 	 @FindBy(how = How.CSS, using ="input[value='Enable Preview']")
