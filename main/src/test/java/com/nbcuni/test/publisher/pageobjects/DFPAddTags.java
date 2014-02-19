@@ -18,12 +18,10 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 
 public class DFPAddTags {
 
-    private static CustomWebDriver webDriver;
     private static ContentParent contentParent;
     
     //PAGE OBJECT CONSTRUCTOR
     public DFPAddTags(CustomWebDriver webDriver, AppLib applib) {
-        DFPAddTags.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
         contentParent = new ContentParent(webDriver, applib);
     }
@@ -92,7 +90,8 @@ public class DFPAddTags {
     public void EnterAdUnitPattern(String adPattern) throws Exception {
     	
     	Reporter.log("Enter '" + adPattern + "' in the 'Ad Unit Pattern' text box.");
-    	webDriver.type(AdUnitPattern_Txb, adPattern);
+    	AdUnitPattern_Txb.sendKeys(adPattern);
+    	
     }
     
 }

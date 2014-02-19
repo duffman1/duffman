@@ -64,6 +64,12 @@ public class ManageFields {
     	Save_Btn.click();
     }
     
+    public void ClickSaveFieldSettingsBtn() throws Exception {
+    	
+    	Reporter.log("Click the 'Save field settings' button.");
+    	Save_Btn.click();
+    }
+    
     public boolean FieldLabelExists(String labelTxt) throws Exception {
     	
     	boolean fieldExists = false;

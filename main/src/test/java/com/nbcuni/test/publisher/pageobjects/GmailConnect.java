@@ -7,6 +7,8 @@ import javax.mail.Message;
 import javax.mail.Session;
 import javax.mail.Store;
 import org.testng.Assert;
+import org.testng.Reporter;
+
 import com.nbcuni.test.publisher.common.AppLib;
 
 /*********************************************
@@ -41,6 +43,7 @@ public class GmailConnect {
     
     public void VerifyAutoEmailRecieved (String subject) throws Exception {
     	
+    	Reporter.log("Verify that the auto email titled '" + subject + "' arrives in the gmail inbox.");
     	ConnectToGmail();
     	
     	Folder folder = store.getFolder("INBOX");

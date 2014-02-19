@@ -7,12 +7,8 @@ import com.nbcuni.test.publisher.pageobjects.MPX.MPXMedia;
 import com.nbcuni.test.publisher.pageobjects.MPX.MPXPlayers;
 import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
-
 import junit.framework.Assert;
-
-import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -48,8 +44,7 @@ public class MPXPlayersSyncVerification extends ParentTest{
     	
     	//Step
     	UserLogin userLogin = applib.openApplication();
-    	PageFactory.initElements(webDriver, userLogin);
-        userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+    	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
         
         //Step
         taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
@@ -113,7 +108,6 @@ public class MPXPlayersSyncVerification extends ParentTest{
             MPXPlayers.ClickSyncMPXPlayersLnk();
             MPXPlayers.ClickSyncMPXPlayersNowLnk();
             ContentParent contentParent = new ContentParent(webDriver, applib);
-            PageFactory.initElements(webDriver, contentParent);
             contentParent.VerifyMessageStatus("players returned for account");
             Integer playerCountForAccount1 = allPlayerTitlesForAccount1.size();
             contentParent.VerifyMessageStatus(playerCountForAccount1.toString() + " players returned for account \"" + configuredAccounts.get(0) + "\"");

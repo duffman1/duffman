@@ -6,14 +6,10 @@ import com.nbcuni.test.publisher.pageobjects.FileTypes.MPXFileType;
 import com.nbcuni.test.publisher.pageobjects.MPX.MPXMedia;
 import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
-
 import junit.framework.Assert;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -41,8 +37,7 @@ public class Configuration extends ParentTest{
     	
     	//Step 1
     	UserLogin userLogin = applib.openApplication();
-    	PageFactory.initElements(webDriver, userLogin);
-        userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+    	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
         
         //Step 2 through 6 requires prior MPX configuration
         taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
@@ -92,14 +87,12 @@ public class Configuration extends ParentTest{
             
         		//Step 12
         		MPXFileType mpxFileType = new MPXFileType(webDriver);
-        		PageFactory.initElements(webDriver, mpxFileType);
         		boolean isMPXValueOverrideEnabled = mpxFileType.EnableMPXValueOverrides();
         		if (isMPXValueOverrideEnabled == false) {
             	
         			mpxFileType.ClickSaveBtn();
         			overlay.SwitchToActiveFrame();
         			ContentParent contentParent = new ContentParent(webDriver, applib);
-        			PageFactory.initElements(webDriver, contentParent);
         			contentParent.VerifyMessageStatus("The file type MPX Video for Account \"" + configuredAccounts.get(0));
         			contentParent.VerifyMessageStatus("has been updated.");
         		}

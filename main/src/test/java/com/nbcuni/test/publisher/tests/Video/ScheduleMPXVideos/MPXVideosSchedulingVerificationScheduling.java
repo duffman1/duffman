@@ -154,11 +154,13 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
     	    searchFor.EnterTitle(mediaTitle);
     	    searchFor.ClickApplyBtn();
     	    overlay.switchToDefaultContent();
-    	    int I = 0;
-    	    while (!searchFor.GetFirstMPXMediaSearchResult().equals(mediaTitle)) {
-    	    	I++; Thread.sleep(5000); //significant pause necessary as media ingestion can take a while from mpx
-    	    	searchFor.ClickApplyBtn();
-    	    	if (I >= 10) { break; }
+    	    if (!searchFor.GetFirstMPXMediaSearchResult().equals(mediaTitle)) {
+    	    	Thread.sleep(30000); //pause and re-run cron as sometimes media assets aren't in the first ingested queue
+    	    	taxonomy.NavigateSite("Home>>Run cron");
+        	    contentParent.VerifyMessageStatus("Cron ran successfully.");
+        	    taxonomy.NavigateSite("Content>>Files>>mpxMedia");
+        	    searchFor.EnterTitle(mediaTitle);
+        	    searchFor.ClickApplyBtn();
     	    }
     	    searchFor.VerifySearchResultsPresent(Arrays.asList(mediaTitle));
     	    SimpleDateFormat pub7DateFormat = new SimpleDateFormat("MM/dd/yyyy");

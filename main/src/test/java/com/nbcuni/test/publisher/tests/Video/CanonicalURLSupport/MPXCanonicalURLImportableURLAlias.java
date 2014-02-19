@@ -8,7 +8,6 @@ import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Content.AddFile;
 import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.Content.SearchFor;
-import com.nbcuni.test.publisher.pageobjects.FileTypes.FileTypes;
 import com.nbcuni.test.publisher.pageobjects.FileTypes.MPXFileType;
 import com.nbcuni.test.publisher.pageobjects.FileTypes.ManageFields;
 import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
@@ -61,8 +60,28 @@ public class MPXCanonicalURLImportableURLAlias extends ParentTest{
         		overlay.SwitchToActiveFrame();
         	
         		//Step 3
-        		FileTypes fileTypes = new FileTypes(webDriver);
-        		fileTypes.ClickManageFieldsLnk(configuredAccounts.get(0));
+        		//FileTypes fileTypes = new FileTypes(webDriver);
+        		//fileTypes.ClickManageFieldsLnk(configuredAccounts.get(0));
+        		//Below Step is a horrendous hack as a work around for dealing with the known bug of duplicate mpx account links in the file type menu
+        		String allManageFieldsURLs = null;
+        		for (WebElement el : webDriver.findElements(By.xpath("//td[contains(text(), 'MPX Video for Account \"DB TV\"')]/..//a[text()='manage fields']"))) {
+        			allManageFieldsURLs = allManageFieldsURLs + el.getAttribute("href");
+        		}
+        		allManageFieldsURLs = allManageFieldsURLs.replaceAll(applib.getApplicationURL() + "/admin/structure/file-types/manage/", "");
+        		allManageFieldsURLs = allManageFieldsURLs.replaceAll("/fields", "");
+        		String[] index = allManageFieldsURLs.split("mpx_video_");
+        		ArrayList<Integer> allIndexInts = new ArrayList<Integer>();
+        		allIndexInts.removeAll(Collections.singleton("empty"));
+        		for (String s : index) {
+        			try {
+        				allIndexInts.add(Integer.parseInt(s));
+        			}
+        			catch (NumberFormatException e) {}
+        		}
+        		Integer maxScore = Collections.max(allIndexInts);
+        		WebElement manageFieldLnk = webDriver.findElement(By.xpath("//td[contains(text(), 'MPX Video for Account \"DB TV\"')]/..//a[text()='manage fields'][contains(@href, '" + maxScore.toString() + "')]"));
+        		webDriver.executeScript("arguments[0].click();", manageFieldLnk);
+        		overlay.SwitchToActiveFrame();
         		
         		//Step 4
         		overlay.SwitchToActiveFrame();
@@ -75,13 +94,15 @@ public class MPXCanonicalURLImportableURLAlias extends ParentTest{
         			//Step 5
         			manageFields.SelectFieldType("Link");
         			manageFields.ClickSaveBtn(); 
-        			contentParent.VerifyMessageStatus("Your settings have been saved.");
+        			manageFields.ClickSaveFieldSettingsBtn();
+        			contentParent.VerifyMessageStatus("Updated field MPX Media Related Link field settings.");
         		}
         		
         		//Step 6
     			overlay.ClickCloseOverlayLnk();
         		overlay.switchToDefaultContent();
         		//Below Step is a horrendous hack as a work around for dealing with the known bug of duplicate mpx account links in the file type menu
+        		/*
         		String allURLs = null;
         		for (WebElement el : webDriver.findElements(By.xpath("//a[text()='MPX Video for Account \"DB TV\" (2312945284)']"))) {
         			allURLs = allURLs + el.getAttribute("href");
@@ -96,7 +117,7 @@ public class MPXCanonicalURLImportableURLAlias extends ParentTest{
         			}
         			catch (NumberFormatException e) {}
         		}
-        		Integer maxScore = Collections.max(allIndexInts);
+        		Integer maxScore = Collections.max(allIndexInts);*/
         		WebElement accountLnk = webDriver.findElement(By.xpath("//a[contains(text(), 'DB TV')][contains(@href, '" + maxScore.toString() + "')]"));
         		webDriver.executeScript("arguments[0].click();", accountLnk);
         		overlay.SwitchToActiveFrame();
@@ -154,9 +175,6 @@ public class MPXCanonicalURLImportableURLAlias extends ParentTest{
         	    overlay.SwitchToActiveFrame();
         	    contentParent.VerifyMessageStatus("Cron ran successfully.");
         	    overlay.ClickCloseOverlayLnk();
-        	    overlay.switchToDefaultContent();
-        	    taxonomy.NavigateSite("Home>>Flush all caches");
-        	    contentParent.VerifyMessageStatus("Every cache cleared.");
         	    
         	    //Step 10
         	    taxonomy.NavigateSite("Content>>Files>>mpxMedia");
@@ -165,11 +183,13 @@ public class MPXCanonicalURLImportableURLAlias extends ParentTest{
         	    searchFor.EnterTitle(mediaTitle);
         	    searchFor.ClickApplyBtn();
         	    overlay.switchToDefaultContent();
-        	    int I = 0;
-        	    while (!searchFor.GetFirstMPXMediaSearchResult().equals(mediaTitle)) {
-        	    	I++; Thread.sleep(5000); //significant pause necessary as media ingestion can take a while from mpx
-        	    	searchFor.ClickApplyBtn();
-        	    	if (I >= 10) { break; }
+        	    if (!searchFor.GetFirstMPXMediaSearchResult().equals(mediaTitle)) {
+        	    	Thread.sleep(30000); //pause and re-run cron as sometimes media assets aren't in the first ingested queue
+        	    	taxonomy.NavigateSite("Home>>Run cron");
+            	    contentParent.VerifyMessageStatus("Cron ran successfully.");
+            	    taxonomy.NavigateSite("Content>>Files>>mpxMedia");
+            	    searchFor.EnterTitle(mediaTitle);
+            	    searchFor.ClickApplyBtn();
         	    }
         	    searchFor.ClickSearchTitleLnk(mediaTitle);
         	    

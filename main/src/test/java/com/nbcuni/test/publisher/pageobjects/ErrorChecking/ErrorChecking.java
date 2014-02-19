@@ -91,6 +91,7 @@ public class ErrorChecking {
     		allowedErrors.add("There is a security update available for your version of Drupal");
     		allowedErrors.add("Request to retrieve mpx feed data returned a(n) \"com.theplatform.authentication.api.exception.AuthenticationException\" exception.");
     		allowedErrors.add("Expiring mpx token FAILED.");
+    		allowedErrors.add("Warning: Attempt to assign property of non-object in EntityAPIController->save()");
     		
     		//FIRST - check if error container is present
     		boolean errorContainerPresent = false;
@@ -126,7 +127,8 @@ public class ErrorChecking {
     						|| errorText.contains(allowedErrors.get(1))
     							|| errorText.contains(allowedErrors.get(2))
     								|| errorText.contains(allowedErrors.get(3))
-    								 	|| errorText.contains(allowedErrors.get(4))) {
+    								 	|| errorText.contains(allowedErrors.get(4))
+    								 		|| errorText.contains(allowedErrors.get(5))) {
     					//ignore error
     				}
     				else {
@@ -149,7 +151,8 @@ public class ErrorChecking {
     							|| error.contains(allowedErrors.get(1))
     									|| error.contains(allowedErrors.get(2))
     										|| error.contains(allowedErrors.get(3))
-    										 	|| error.contains(allowedErrors.get(4))) {
+    										 	|| error.contains(allowedErrors.get(4))
+    										 		|| error.contains(allowedErrors.get(5))) {
     						//ignore error
     					}
     					else {
