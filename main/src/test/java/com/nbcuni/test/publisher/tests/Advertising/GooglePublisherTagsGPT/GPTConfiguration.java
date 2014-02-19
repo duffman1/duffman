@@ -45,7 +45,7 @@ public class GPTConfiguration extends ParentTest{
             taxonomy.NavigateSite("Structure>>DFP Ad Tags>>Global DFP Settings");
             
             //Step 6
-            DFPAddTags dfpAddTags = new DFPAddTags(webDriver);
+            DFPAddTags dfpAddTags = new DFPAddTags(webDriver, applib);
             overlay.SwitchToFrame("DFP Ad Tags");
             dfpAddTags.EnterNetworkId("nbcu");
             dfpAddTags.ClickSaveConfigurationBtn();

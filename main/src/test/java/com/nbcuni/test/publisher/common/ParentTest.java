@@ -4,8 +4,6 @@ import com.nbcuni.test.publisher.pageobjects.Overlay;
 import com.nbcuni.test.publisher.pageobjects.Taxonomy.Taxonomy;
 import com.nbcuni.test.webdriver.CustomWebDriver;
 import com.nbcuni.test.webdriver.WebDriverClientExecution;
-
-import org.openqa.selenium.support.PageFactory;
 import org.testng.ITestResult;
 import org.testng.Reporter;
 import org.testng.annotations.AfterMethod;
@@ -23,12 +21,6 @@ public class ParentTest {
     protected Taxonomy taxonomy;
     protected Overlay overlay;
     
-    /**
-     * Instantiate the TestNG Before Class Method.
-     * 
-     * @param sEnv - environment
-     * @throws Exception - error
-     */
     @BeforeMethod(alwaysRun = true)
     @Parameters("Environment")
     public void startSelenium(@Optional("PROD") String sEnv) {
@@ -39,7 +31,6 @@ public class ParentTest {
             applib.setEnvironmentInfo(sEnv);
             random = new Random();
             taxonomy = new Taxonomy(webDriver);
-            PageFactory.initElements(webDriver, taxonomy);
             overlay = new Overlay(webDriver, applib);
             
             try {
@@ -56,11 +47,6 @@ public class ParentTest {
 
     }
 
-    /**
-     * Instantiate the TestNG After Class Method.
-     *  
-     * @throws Exception - error
-     */
     @AfterMethod(alwaysRun = true)
     public void stopSelenium(ITestResult result) throws Exception{
         

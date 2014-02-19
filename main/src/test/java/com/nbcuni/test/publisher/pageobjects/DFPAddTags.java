@@ -1,18 +1,13 @@
 package com.nbcuni.test.publisher.pageobjects;
 
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
-
-import com.nbcuni.test.lib.Util;
 import com.nbcuni.test.publisher.common.AppLib;
+import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 import com.nbcuni.test.webdriver.CustomWebDriver;
-
 
 /*********************************************
  * publisher.nbcuni.com DFP Add Tags Library. Copyright
@@ -24,63 +19,81 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 public class DFPAddTags {
 
     private static CustomWebDriver webDriver;
-    private static AppLib al;
-    private final Util ul;
+    private static ContentParent contentParent;
     
-    private static String NetworkId_Txb = "//input[@id='edit-dfp-network-id']";
-    private static String SaveConfiguration_Btn = "//input[@id='edit-submit']";
-    private static String Save_Btn = "//input[@id='edit-submit']";
-    private static String Message_Ctr = "//div[@class='messages status']";
-    private static String AdSlotName_Txb = "//input[@id='edit-slot']";
-    private static String Sizes_Txb = "//input[@id='edit-size']";
-    private static String AdUnitPattern_Txb = "//input[@id='edit-adunit']";
-    
-    public DFPAddTags(final CustomWebDriver custWebDr) {
-        webDriver = custWebDr;
-        ul = new Util(webDriver);
-        
+    //PAGE OBJECT CONSTRUCTOR
+    public DFPAddTags(CustomWebDriver webDriver, AppLib applib) {
+        DFPAddTags.webDriver = webDriver;
+        PageFactory.initElements(webDriver, this);
+        contentParent = new ContentParent(webDriver, applib);
     }
     
+    //PAGE OBJECT IDENTIFIERS
+    @FindBy(how = How.ID, using = "edit-dfp-network-id")
+    private static WebElement NetworkId_Txb;
+    
+    @FindBy(how = How.ID, using = "edit-submit")
+    private static WebElement SaveConfiguration_Btn;
+    
+    @FindBy(how = How.ID, using = "edit-submit")
+    private static WebElement Save_Btn;
+    
+    @FindBy(how = How.ID, using = "edit-slot")
+    private static WebElement AdSlotName_Txb;
+    
+    @FindBy(how = How.ID, using = "edit-size")
+    private static WebElement Sizes_Txb;
+    
+    @FindBy(how = How.ID, using = "edit-adunit")
+    private static WebElement AdUnitPattern_Txb;
+    
+    
+    //PAGE OBJECT METHODS
     public void EnterNetworkId(String networkIdName) throws Exception {
     	
-    	webDriver.type(NetworkId_Txb, networkIdName);
+    	Reporter.log("Enter '" + networkIdName + "' in the 'Network ID' text box.");
+    	NetworkId_Txb.sendKeys(networkIdName);
     }
     
-    public void ClickSaveConfigurationBtn() {
+    public void ClickSaveConfigurationBtn() throws Exception {
     	
-    	webDriver.click(SaveConfiguration_Btn);
+    	Reporter.log("Click the 'Save configuration' button.");
+    	SaveConfiguration_Btn.click();
     }
     
-    public void ClickSaveBtn() {
+    public void ClickSaveBtn() throws Exception {
     	
-    	webDriver.click(Save_Btn);
+    	Reporter.log("Click the 'Save' button.");
+    	Save_Btn.click();
     }
     
-    public void VerifyConfigurationSaved() {
+    public void VerifyConfigurationSaved() throws Exception {
     	
-    	ul.verifyObjectContainsText(Message_Ctr, "The configuration options have been saved.");
+    	contentParent.VerifyMessageStatus("The configuration options have been saved.");
     }
     
-    public void VerifyAdTagCreated(String adTagName) {
+    public void VerifyAdTagCreated(String adTagName) throws Exception {
     	
-    	ul.verifyObjectContainsText(Message_Ctr, adTagName + " has been created.");
+    	contentParent.VerifyMessageStatus(adTagName + " has been created.");
     }
     
-    public void EnterAdSlotName(String adSlotName){
+    public void EnterAdSlotName(String adSlotName) throws Exception {
     	
-    	webDriver.type(AdSlotName_Txb, adSlotName);
+    	Reporter.log("Enter '" + adSlotName + "' in the 'Ad Slot Name' text box.");
+    	AdSlotName_Txb.sendKeys(adSlotName);
     }
     
-    public void EnterAdSizes(String adSize){
+    public void EnterAdSizes(String adSize) throws Exception {
     	
-    	webDriver.type(Sizes_Txb, adSize);
+    	Reporter.log("Enter '" + adSize + "' in the 'Ad Sizes' text box.");
+    	Sizes_Txb.sendKeys(adSize);
     }
     
-    public void EnterAdUnitPatter(String adPattern){
+    public void EnterAdUnitPattern(String adPattern) throws Exception {
     	
+    	Reporter.log("Enter '" + adPattern + "' in the 'Ad Unit Pattern' text box.");
     	webDriver.type(AdUnitPattern_Txb, adPattern);
     }
-    
     
 }
 

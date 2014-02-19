@@ -1,20 +1,14 @@
 package com.nbcuni.test.publisher.pageobjects.People;
 
-
 import java.util.List;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.Reporter;
-
-import com.nbcuni.test.lib.Util;
-import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.webdriver.CustomWebDriver;
-
 
 /*********************************************
  * publisher.nbcuni.com Roles Library. Copyright
@@ -26,29 +20,37 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 public class Roles {
 
     private static CustomWebDriver webDriver;
-    private static AppLib al;
-    private final Util ul;
     
-    private static String Roles_Btn = "//li/a[text()='Roles']";
-    private static String RoleRows_Ctr = "//table[@id='user-roles']//a[@class='tabledrag-handle']/..";
-    private static String Editor_EditPermissions_Lnk = "//td[text()='editor']/..//a[text()='edit permissions']";
-    
-    public Roles(final CustomWebDriver custWebDr) {
-        webDriver = custWebDr;
-        ul = new Util(webDriver);
-        
+    //PAGE OBJECT CONSTRUCTOR
+    public Roles(CustomWebDriver webDriver) {
+        Roles.webDriver = webDriver;
+        PageFactory.initElements(webDriver, this);
     }
     
+    //PAGE OBJECT IDENTIFIERS
+    @FindBy(how = How.XPATH, using = "//li/a[text()='Roles']")
+    private static WebElement Roles_Btn;
+    
+    private static List<WebElement> RoleRows_Ctr() {
+    	return webDriver.findElements(By.xpath("//table[@id='user-roles']//a[@class='tabledrag-handle']/.."));
+    }
+    
+    @FindBy(how = How.XPATH, using = "//td[text()='editor']/..//a[text()='edit permissions']")
+    private static WebElement Editor_EditPermissions_Lnk;
+    
+    
+    //PAGE OBJECT METHODS
     public void ClickRolesBtn() throws Exception {
     	
-    	WebElement el = new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(By.xpath(Roles_Btn)));
-    	el.click();
+    	Reporter.log("Click the 'Roles' button.");
+    	Roles_Btn.click();
     }
     
     public void VerifyRoleRows() throws Exception {
     	
-    	List<WebElement> allColumns = new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(RoleRows_Ctr)));
+    	List<WebElement> allColumns = RoleRows_Ctr();
     	
+    	Reporter.log("Verify all the required role permissions are present in the 'Role' list.");
     	Assert.assertTrue(allColumns.get(0).getText().contains("anonymous user"));
     	Assert.assertTrue(allColumns.get(1).getText().contains("authenticated user"));
     	Assert.assertTrue(allColumns.get(2).getText().contains("administrator"));
@@ -58,12 +60,10 @@ public class Roles {
     
     public void ClickEditorEditPermissionsLnk() throws Exception {
     	
-    	WebElement el = new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(By.xpath(Editor_EditPermissions_Lnk)));
-    	el.click();
+    	Reporter.log("Click the 'Edit Permissions' link for the 'Editor' role.");
+    	Editor_EditPermissions_Lnk.click();
+    	
     }
     
-    
-    
-  
 }
 

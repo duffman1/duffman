@@ -1,24 +1,22 @@
 package com.nbcuni.test.publisher.pageobjects.MPX;
 
-
-import com.nbcuni.test.lib.Util;
 import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.webdriver.CustomWebDriver;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
-
 
 /*********************************************
  * publisher.nbcuni.com Settings Library. Copyright
@@ -31,80 +29,108 @@ public class Settings {
 
     private static CustomWebDriver webDriver;
     private static AppLib applib;
+    private static WebDriverWait wait;
     
-    private static String MPXLogin_Lnk = "//fieldset[@id='edit-accounts']//a";
-    private static String Username0_Txb = "//input[@id='edit-accounts-new-0-theplatform-username']";
-    private static String Password0_Txb = "//input[@id='edit-accounts-new-0-theplatform-password']";
-    private static String Username1_Txb = "//input[@id='edit-accounts-existing-1-theplatform-username']";
-    private static String Password1_Txb = "//input[@id='edit-accounts-existing-1-theplatform-password']";
-    private static String Update_Btn = "//input[@value='Update']";
-    private static String SelectImportAccount1_Ddl = "(//select[contains(@id, 'edit-import-accounts-settings')])[1]";
-    private static String SelectImportAccount2_Ddl = "(//select[contains(@id, 'edit-import-accounts-settings')])[2]";
-    private static String SelectImportAccount3_Ddl = "(//select[contains(@id, 'edit-import-accounts-settings')])[3]";
-    private static String SelectImportAccount4_Ddl = "(//select[contains(@id, 'edit-import-accounts-settings')])[4]";
-    private static String SelectImportAccount5_Ddl = "(//select[contains(@id, 'edit-import-accounts-settings')])[5]";
-    private static String SetImportAccount_Btn = "//input[@id='edit-import-accounts-actions-submit']";
-    private static String SaveConfigurations_Btn = "//input[@id='edit-submit']";
-    private static String ConnectToMPX_Btn = "//input[@value='Connect to MPX']";
-    private static String AddAccount_Btn = "//input[@value='Add Account']";
-    private static String DisplayMPXDebugMessageLevel_Ddl = "//select[@id='edit-media-theplatform-mpx-output-message-watchdog-severity']";
-    private static String DeleteAccount_Btns = "//input[contains(@value, 'Delete Account')]";
-    private static String Delete_Btn = "//input[@value='Delete']";
-    
-    public Settings(CustomWebDriver custWebDr, AppLib applib) {
-        webDriver = custWebDr;
-        this.applib = applib;
-        
+    //PAGE OBJECT CONSTRUCTOR
+    public Settings(CustomWebDriver webDriver, AppLib applib) {
+        Settings.webDriver = webDriver;
+        Settings.applib = applib;
+        PageFactory.initElements(webDriver, this);
+        wait = new WebDriverWait(webDriver, 10);
     }
     
+    //PAGE OBJECT IDENTIFIERS
+    @FindBy(how = How.XPATH, using = "//fieldset[@id='edit-accounts']//a")
+    private static WebElement MPXLogin_Lnk;
+    
+    @FindBy(how = How.ID, using = "edit-accounts-new-0-theplatform-username")
+    private static WebElement Username0_Txb;
+    
+    @FindBy(how = How.ID, using = "edit-accounts-new-0-theplatform-password")
+    private static WebElement Password0_Txb;
+    
+    @FindBy(how = How.ID, using = "edit-accounts-existing-1-theplatform-username")
+    private static WebElement Username1_Txb;
+    
+    @FindBy(how = How.ID, using = "edit-accounts-existing-1-theplatform-password")
+    private static WebElement Password1_Txb;
+    
+    @FindBy(how = How.CSS, using = "input[value='Update']")
+    private static WebElement Update_Btn;
+    
+    @FindBy(how = How.XPATH, using = "(//select[contains(@id, 'edit-import-accounts-settings')])[1]")
+    private static WebElement SelectImportAccount1_Ddl;
+    
+    @FindBy(how = How.XPATH, using = "(//select[contains(@id, 'edit-import-accounts-settings')])[2]")
+    private static WebElement SelectImportAccount2_Ddl;
+    
+    @FindBy(how = How.XPATH, using = "(//select[contains(@id, 'edit-import-accounts-settings')])[3]")
+    private static WebElement SelectImportAccount3_Ddl;
+    
+    @FindBy(how = How.XPATH, using = "(//select[contains(@id, 'edit-import-accounts-settings')])[4]")
+    private static WebElement SelectImportAccount4_Ddl;
+    
+    @FindBy(how = How.XPATH, using = "(//select[contains(@id, 'edit-import-accounts-settings')])[5]")
+    private static WebElement SelectImportAccount5_Ddl;
+    
+    @FindBy(how = How.ID, using = "edit-import-accounts-actions-submit")
+    private static WebElement SetImportAccount_Btn;
+    
+    @FindBy(how = How.ID, using = "edit-submit")
+    private static WebElement SaveConfigurations_Btn;
+    
+    @FindBy(how = How.CSS, using = "input[value='Connect to MPX']")
+    private static WebElement ConnectToMPX_Btn;
+    
+    @FindBy(how = How.CSS, using = "input[value='Add Account']")
+    private static WebElement AddAccount_Btn;
+    
+    @FindBy(how = How.ID, using = "edit-media-theplatform-mpx-output-message-watchdog-severity")
+    private static WebElement DisplayMPXDebugMessageLevel_Ddl;
+    
+    private static List<WebElement> DeleteAccount_Btns() {
+    	return webDriver.findElements(By.cssSelector("input[value*='Delete Account']"));
+    }
+    
+    @FindBy(how = How.CSS, using = "input[value='Delete']")
+    private static WebElement Delete_Btn;
+    
+    private static List<WebElement> AllUsername_Txbs() {
+    	return webDriver.findElements(By.xpath("//input[contains(@id, 'edit-accounts-existing')][contains(@id, 'username')]"));
+    }
+    
+    
+    //PAGE OBJECT METHODS
     public void ExpandMPXLogin() throws Exception {
     	
-    	if (new WebDriverWait(webDriver, 30).until(ExpectedConditions.presenceOfElementLocated(
-    			By.xpath(AddAccount_Btn))).isDisplayed() == false) {
+    	if (AddAccount_Btn.isDisplayed() == false) {
     		
-    		webDriver.findElement(By.xpath(MPXLogin_Lnk)).click();
+    		Reporter.log("Click the 'MPX Login' link.");
+    		MPXLogin_Lnk.click();
     		
     		Reporter.log("Wait for 'Update' button to be visible.");
-    		new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Update_Btn)));
+    		wait.until(ExpectedConditions.visibilityOf(Update_Btn));
     	}
     	
     }
     
     public void EnterUsername0(String userName) throws Exception {
     	
-    	WebElement el = new WebDriverWait(webDriver, 10).until(ExpectedConditions.
-    			visibilityOf(webDriver.findElement(By.xpath(Username0_Txb))));
-    	el.clear();
-    	el.sendKeys(userName);
+    	Reporter.log("Enter mpx username in the 'Username for Account...' text box.");
+    	Username0_Txb.clear();
+    	Username0_Txb.sendKeys(userName);
     } 
     
     public void EnterPassword0(String passWord) throws Exception {
     	
-    	WebElement el = new WebDriverWait(webDriver, 10).until(ExpectedConditions.
-    			visibilityOf(webDriver.findElement(By.xpath(Password0_Txb))));
-    	el.sendKeys(passWord);
+    	Reporter.log("Enter mpx password in the 'Password for Account...' text box.");
+    	Password0_Txb.sendKeys(passWord);
     }
 
-    public void EnterUsername1(String userName) throws Exception {
-    	
-    	WebElement el = new WebDriverWait(webDriver, 10).until(ExpectedConditions.
-    			visibilityOf(webDriver.findElement(By.xpath(Username1_Txb))));
-    	el.clear();
-    	el.sendKeys(userName);
-    }
-    
-    public void EnterPassword1(String passWord) throws Exception {
-    	
-    	WebElement el = new WebDriverWait(webDriver, 10).until(ExpectedConditions.
-    			visibilityOf(webDriver.findElement(By.xpath(Password1_Txb))));
-    	el.sendKeys(passWord);
-    }
-    
     public void ClickUpdateBtn() throws Exception {
     	
-    	WebElement el = new WebDriverWait(webDriver, 10).until(ExpectedConditions.
-    			visibilityOf(webDriver.findElement(By.xpath(Update_Btn))));
-    	el.click();
+    	Reporter.log("Click the 'Update' button.");
+    	Update_Btn.click();
     }
     
     public void VerifyImportAccountOptions(List<String> accountNames) throws Exception {
@@ -121,36 +147,37 @@ public class Settings {
         Select ddl4 = null;
         Select ddl5 = null;
     	
-    	Select ddl1 = new Select(webDriver.findElement(By.xpath(SelectImportAccount1_Ddl)));
+    	Select ddl1 = new Select(SelectImportAccount1_Ddl);
     	
     	try {
     		
-    		ddl2 = new Select(webDriver.findElement(By.xpath(SelectImportAccount2_Ddl)));
+    		ddl2 = new Select(SelectImportAccount2_Ddl);
     		ddl2Present = true;
     	}
     	catch (Exception e) {}
     	
     	try {
     		
-    		ddl3 = new Select(webDriver.findElement(By.xpath(SelectImportAccount3_Ddl)));
+    		ddl3 = new Select(SelectImportAccount3_Ddl);
     		ddl3Present = true;
     	}
     	catch (Exception e) {}
 
         try {
 
-            ddl4 = new Select(webDriver.findElement(By.xpath(SelectImportAccount4_Ddl)));
+            ddl4 = new Select(SelectImportAccount4_Ddl);
             ddl4Present = true;
         }
         catch (Exception e) {}
         
         try {
 
-            ddl5 = new Select(webDriver.findElement(By.xpath(SelectImportAccount5_Ddl)));
+            ddl5 = new Select(SelectImportAccount5_Ddl);
             ddl5Present = true;
         }
         catch (Exception e) {}
     	
+        Reporter.log("Get the account options from the 'Select Import Account for Account...' drop down lists.");
     	List<WebElement> listOptions = ddl1.getOptions();
     	if (ddl2Present == true) { listOptions.addAll(ddl2.getOptions()); }
     	if (ddl3Present == true) { listOptions.addAll(ddl3.getOptions()); }
@@ -179,11 +206,12 @@ public class Settings {
     	
     	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
     	
+    	Reporter.log("Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.");
     	boolean mpxAlreadyConfigured = true;
     	
     	try {
     		
-    		webDriver.findElement(By.xpath(ConnectToMPX_Btn));
+    		ConnectToMPX_Btn.isDisplayed();
     		mpxAlreadyConfigured = false;
     	}
     	catch (NoSuchElementException e) {
@@ -197,67 +225,65 @@ public class Settings {
     
     public void ClickSetImportAccountBtn() throws Exception {
     	
-    	WebElement el = new WebDriverWait(webDriver, 10).until(ExpectedConditions.
-    			visibilityOf(webDriver.findElement(By.xpath(SetImportAccount_Btn))));
-    	el.click();
+    	Reporter.log("click the 'Set Import Account' button.");
+    	SetImportAccount_Btn.click();
     }
     
     public void ClickSaveConfigurationsBtn() throws Exception {
     	
-    	WebElement el = new WebDriverWait(webDriver, 10).until(ExpectedConditions.
-    			visibilityOf(webDriver.findElement(By.xpath(SaveConfigurations_Btn))));
-    	el.click();
+    	Reporter.log("Click the 'Save configurations' button.");
+    	SaveConfigurations_Btn.click();
     }
     
     public void ClickConnectToMPXBtn() throws Exception {
     	
-    	webDriver.findElement(By.xpath(ConnectToMPX_Btn)).click();
+    	Reporter.log("Click the 'Connect to MPX' button.");
+    	ConnectToMPX_Btn.click();
     }
     
     public void ClickAddAccountBtn() throws Exception {
     	
-    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.
-    			visibilityOf(webDriver.findElement(By.xpath(AddAccount_Btn)))).click();
+    	Reporter.log("Click the 'Add Account' button.");
+    	AddAccount_Btn.click();
     }
     
     public void SelectImportAccount1(String account) throws Exception {
     	
-    	Select ddl = new Select(webDriver.findElement(By.xpath(SelectImportAccount1_Ddl)));
-    	ddl.selectByVisibleText(account);
+    	Reporter.log("Select '" + account + "' from the first 'Select Import Account for...' drop down list.");
+    	new Select(SelectImportAccount1_Ddl).selectByVisibleText(account);
     }
     
     public void SelectImportAccount2(String account) throws Exception {
     	
-    	Select ddl = new Select(webDriver.findElement(By.xpath(SelectImportAccount2_Ddl)));
-    	ddl.selectByVisibleText(account);
+    	Reporter.log("Select '" + account + "' from the second 'Select Import Account for...' drop down list.");
+    	new Select(SelectImportAccount2_Ddl).selectByVisibleText(account);
     }
     
     public void SelectImportAccount3(String account) throws Exception {
     	
-    	Select ddl = new Select(webDriver.findElement(By.xpath(SelectImportAccount3_Ddl)));
-    	ddl.selectByVisibleText(account);
+    	Reporter.log("Select '" + account + "' from the third 'Select Import Account for...' drop down list.");
+    	new Select(SelectImportAccount3_Ddl).selectByVisibleText(account);
     }
     
     public void SelectImportAccount4(String account) throws Exception {
     	
-    	Select ddl = new Select(webDriver.findElement(By.xpath(SelectImportAccount4_Ddl)));
-    	ddl.selectByVisibleText(account);
+    	Reporter.log("Select '" + account + "' from the fourth 'Select Import Account for...' drop down list.");
+    	new Select(SelectImportAccount4_Ddl).selectByVisibleText(account);
     }
     
     public void VerifyImportAccountsDisabled() throws Exception {
     	
     	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
     	
-    	boolean ddl1Present = false;
     	boolean ddl2Present = false;
     	boolean ddl3Present = false;
     	
-    	Select ddl1 = new Select(webDriver.findElement(By.xpath(SelectImportAccount1_Ddl)));
+    	Select ddl1 = new Select(SelectImportAccount1_Ddl);
     	Select ddl2 = null;
     	Select ddl3 = null;
     	
     	try {
-    		ddl2 = new Select(webDriver.findElement(By.xpath(SelectImportAccount2_Ddl)));
+    		ddl2 = new Select(SelectImportAccount2_Ddl);
     		ddl2Present = true;
     	}
     	catch (NoSuchElementException e) {
@@ -265,13 +291,14 @@ public class Settings {
     	}
     	
     	try {
-    		ddl3 = new Select(webDriver.findElement(By.xpath(SelectImportAccount3_Ddl)));
+    		ddl3 = new Select(SelectImportAccount3_Ddl);
     		ddl3Present = true;
     	}
     	catch (NoSuchElementException e) {
     		ddl3Present = false;
     	}
     	
+    	Reporter.log("Verify the 'Select Import Account for...' drop down lists are disabled.");
     	Assert.assertTrue(ddl1.getFirstSelectedOption().isEnabled() == false);
     	if (ddl2Present == true) {
     		Assert.assertTrue(ddl2.getFirstSelectedOption().isEnabled() == false);
@@ -285,20 +312,20 @@ public class Settings {
     
     public void VerifyUsernameValues(String userName, int txbCount) throws Exception {
     	
-    	List<WebElement> allUsernameTxbs = new WebDriverWait(webDriver, 10).until(ExpectedConditions.
-    			visibilityOfAllElementsLocatedBy(By.xpath("//input[contains(@id, 'edit-accounts-existing')][contains(@id, 'username')]")));
+    	List<WebElement> allUsernameTxbs = AllUsername_Txbs();
     	
+    	Reporter.log("Verify the count of the Username text boxes matches '" + txbCount + "'.");
     	Assert.assertEquals(allUsernameTxbs.size(), txbCount);
     	
     	for (WebElement el : allUsernameTxbs) {
     	
+    		Reporter.log("Verify the 'Username' text box value equals '" + userName + "'.");
     		Assert.assertEquals(el.getAttribute("value"), userName);
     	}
     }
     
     public List<String> GetImportAccountSelectedOptions() throws Exception {
     	
-    	//TODO - clean this up and make it a bit more efficient
     	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
     	
     	boolean ddl2Present = false;
@@ -308,30 +335,30 @@ public class Settings {
     	Select ddl3 = null;
         Select ddl4 = null;
     	
-    	Select ddl1 = new Select(new WebDriverWait(webDriver, 10).until(
-    			ExpectedConditions.visibilityOf(webDriver.findElement(By.xpath(SelectImportAccount1_Ddl)))));
+    	Select ddl1 = new Select(SelectImportAccount1_Ddl);
     	
     	try {
     		
-    		ddl2 = new Select(webDriver.findElement(By.xpath(SelectImportAccount2_Ddl)));
+    		ddl2 = new Select(SelectImportAccount2_Ddl);
     		ddl2Present = true;
     	}
     	catch (Exception e) {}
     	
     	try {
     		
-    		ddl3 = new Select(webDriver.findElement(By.xpath(SelectImportAccount3_Ddl)));
+    		ddl3 = new Select(SelectImportAccount3_Ddl);
     		ddl3Present = true;
     	}
     	catch (Exception e) {}
 
         try {
 
-            ddl4 = new Select(webDriver.findElement(By.xpath(SelectImportAccount4_Ddl)));
+            ddl4 = new Select(SelectImportAccount4_Ddl);
             ddl4Present = true;
         }
         catch (Exception e) {}
     	
+        Reporter.log("Get all the selected import account options and store to a list.");
     	List<String> selectedOptions = new ArrayList<String>();
     	selectedOptions.add(ddl1.getFirstSelectedOption().getText());
     	if (ddl2Present == true) { selectedOptions.add(ddl2.getFirstSelectedOption().getText()); }
@@ -346,17 +373,17 @@ public class Settings {
     public void EnsureMPXDebugMessageLevelNotVerbose() {
     	
     	Reporter.log("If 'Display MPX Debug Message Level' drop down list is set to 'Extremely Verbose', set it to the appropriate level.");
-    	Select el = new Select(webDriver.findElement(By.xpath(DisplayMPXDebugMessageLevel_Ddl)));
+    	Select el = new Select(DisplayMPXDebugMessageLevel_Ddl);
     	if (el.getFirstSelectedOption().getText().equals("Extremely Verbose")) {
     		el.selectByVisibleText("Advanced");
-    		webDriver.findElement(By.xpath(SaveConfigurations_Btn)).click();
+    		SaveConfigurations_Btn.click();
     	}
     }
     
     public void SelectMPXDebugMessageLevel(String level) {
     	
     	Reporter.log("Select '" + level + "' from the 'MPX Debug Message Level' drop down list.");
-    	new Select(webDriver.findElement(By.xpath(DisplayMPXDebugMessageLevel_Ddl))).selectByVisibleText(level);
+    	new Select(DisplayMPXDebugMessageLevel_Ddl).selectByVisibleText(level);
     	
     }
     
@@ -364,7 +391,7 @@ public class Settings {
     	
     	Reporter.log("Get each of the 'Delete Account' buttons");
     	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
-    	List<WebElement> allElements = webDriver.findElements(By.xpath(DeleteAccount_Btns));
+    	List<WebElement> allElements = DeleteAccount_Btns();
     	webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
     	
     	return allElements;
@@ -373,7 +400,7 @@ public class Settings {
     public void ClickDeleteBtn() throws Exception {
     	
     	Reporter.log("Click the 'Delete' button.");
-    	webDriver.findElement(By.xpath(Delete_Btn)).click();;
+    	Delete_Btn.click();
     }
   
 }

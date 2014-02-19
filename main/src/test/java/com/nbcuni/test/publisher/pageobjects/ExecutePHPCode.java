@@ -1,19 +1,11 @@
 package com.nbcuni.test.publisher.pageobjects;
 
-
-import java.util.List;
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
-
-import com.nbcuni.test.lib.Util;
-import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.webdriver.CustomWebDriver;
-
 
 /*********************************************
  * publisher.nbcuni.com Execute PHP Code Library. Copyright
@@ -24,42 +16,44 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 
 public class ExecutePHPCode {
 
-    private static CustomWebDriver webDriver;
-    
-    private static String PHPCodeToExecute_Txa = "//textarea[@id='edit-code']";
-    private static String Execute_Btn = "//input[@value='Execute']";
-    private static String Message_Ctr = "//div[@class='messages status']";
-    
-    public ExecutePHPCode(final CustomWebDriver custWebDr) {
-    	
-    	webDriver = custWebDr;
+    //PAGE OBJECT CONSTRUCTOR
+    public ExecutePHPCode(CustomWebDriver webDriver) {
+    	PageFactory.initElements(webDriver, this);
     }
+
+    //PAGE OBJECT IDENTIFIERS
+    @FindBy(how = How.ID, using = "edit-code")
+    private static WebElement PHPCodeToExecute_Txa;
     
+    @FindBy(how = How.ID, using = "input[value='Execute']")
+    private static WebElement Execute_Btn;
+    
+    @FindBy(how = How.XPATH, using = "//div[@class='messages status']")
+    private static WebElement Message_Ctr;
+    
+    
+    //PAGE OBJECT METHODS
     public void EnterPHPCode(String phpCode) throws Exception {
         
-    	WebElement el = new WebDriverWait(webDriver, 10).until(ExpectedConditions.
-    			presenceOfElementLocated(By.xpath(PHPCodeToExecute_Txa)));
-    	el.clear();
-    	el.sendKeys(phpCode);
+    	Reporter.log("Enter '" + phpCode + "' in the 'PHP Code to Execute' text area.");
+    	PHPCodeToExecute_Txa.clear();
+    	PHPCodeToExecute_Txa.sendKeys(phpCode);
     }
     
     public void ClickExecuteBtn() throws Exception {
     	
-    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.
-    			presenceOfElementLocated(By.xpath(Execute_Btn))).click();
+    	Reporter.log("Click the 'Execute' button.");
+    	Execute_Btn.click();
     }
     
     public String GetPlayerId() throws Exception {
     	
-    	WebElement el = new WebDriverWait(webDriver, 10).until(ExpectedConditions.presenceOfElementLocated(By.xpath(Message_Ctr)));
-    	System.out.println(el.getText());
-    	String[] playerIDs = el.getText().replace("Status message", "").trim().split("player id: ");
+    	Reporter.log("Get the player id from the message container.");
+    	String[] playerIDs = Message_Ctr.getText().replace("Status message", "").trim().split("player id: ");
     	
     	String playerID = playerIDs[1];
     	return playerID;
     }
-    
-    
     
 }
 

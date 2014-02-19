@@ -1,6 +1,5 @@
 package com.nbcuni.test.publisher.tests.UserCreationAndManagement.Roles;
 
-import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
@@ -23,8 +22,7 @@ public class RolesPredefinedInPublisher7 extends ParentTest{
     	
     	//Step 1
     	UserLogin userLogin = applib.openApplication();
-    	PageFactory.initElements(webDriver, userLogin);
-        userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+    	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
         
         //Step 2
         taxonomy.NavigateSite("People>>Permissions");

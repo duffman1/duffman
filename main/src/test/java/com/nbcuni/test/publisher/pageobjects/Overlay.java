@@ -1,21 +1,15 @@
 package com.nbcuni.test.publisher.pageobjects;
 
-
-import java.util.List;
 import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.Reporter;
-
-import com.nbcuni.test.lib.Util;
 import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.webdriver.CustomWebDriver;
-
 
 /*********************************************
  * publisher.nbcuni.com Overlay Library. Copyright
@@ -29,48 +23,48 @@ public class Overlay {
     private static CustomWebDriver webDriver;
     private static AppLib applib;
     
-    private static String CloseOverlay_Lnk = "//a[@id='overlay-close']";
-    private static String ActiveFrame_Frm = "//iframe[@class='overlay-element overlay-active']";
+    //PAGE OBJECT CONSTRUCTOR
+    public Overlay(CustomWebDriver webDriver, AppLib applib) {
+    	Overlay.webDriver = webDriver;
+    	Overlay.applib = applib;
+    	PageFactory.initElements(webDriver, this);
+    }
+
+    //PAGE OBJECT IDENTIFIERS
+    @FindBy(how = How.ID, using = "overlay-close")
+    private static WebElement CloseOverlay_Lnk;
     
+    @FindBy(how = How.XPATH, using = "//iframe[@class='overlay-element overlay-active']")
+    private static WebElement ActiveFrame_Frm;
     
-    public Overlay(final CustomWebDriver custWebDr, AppLib applib) {
-    	
-    	webDriver = custWebDr;
-    	this.applib = applib;
+    private static WebElement Dialog_Frm(String frameTitle) {
+    	return webDriver.findElement(By.xpath("//iframe[contains(@title, '" + frameTitle + "')]"));
     }
     
+    //PAGE OBJECT METHODS
     public void switchToDefaultContent() throws Exception {
     	
-    	Thread.sleep(500);
     	webDriver.switchTo().defaultContent();
     }
     
     public void ClickCloseOverlayLnk() throws Exception {
     	
-    	webDriver.click(CloseOverlay_Lnk);
+    	Reporter.log("Click the 'Close Overlay X'.");
+    	CloseOverlay_Lnk.click();
     	this.switchToDefaultContent();
     }
     
     public void SwitchToFrame(String frameTitle) {
     	
-    	WebElement frm = webDriver.findElement(By.xpath("//iframe[contains(@title, '" + frameTitle + "')]"));
-    	webDriver.switchTo().frame(frm);
-    }
-    
-    public void SwitchToFrameByIndex(String frameTitle, Integer frameIndex) {
-    	
-    	List<WebElement> allFrames = webDriver.findElements(By.xpath("//iframe[contains(@title, '" + frameTitle + "')]"));
-    	webDriver.switchTo().frame(allFrames.get(frameIndex));
-    	
+    	Reporter.log("Switch to frame titled '" + frameTitle + "'.");
+    	webDriver.switchTo().frame(Dialog_Frm(frameTitle));
     }
     
     public void SwitchToActiveFrame() throws Exception {
     	
     	this.switchToDefaultContent();
-    	Thread.sleep(1000); //TODO - modify with an explicit wait
-    	WebElement frm = webDriver.findElement(By.xpath(ActiveFrame_Frm));
-    	
-    	webDriver.switchTo().frame(frm);
+    	Reporter.log("Switch to the active frame titled '" + ActiveFrame_Frm.getAttribute("title") + "'.");
+    	webDriver.switchTo().frame(ActiveFrame_Frm);
     }
     
     public void WaitForFrameNotPresent(String frameTitle) throws Exception {
@@ -78,11 +72,12 @@ public class Overlay {
     	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
     	boolean framePresent = false;
 
+    	Reporter.log("Wait for the frame titled '" + frameTitle + "' to close.");
     	for (int second = 0; ; second++){
             if (second >= 120) {
                 Assert.fail("Frame titled '" + frameTitle + "' is still present after timeout");}
             try{
-            	webDriver.findElement(By.xpath("//iframe[contains(@title, '" + frameTitle + "')]"));
+            	Dialog_Frm(frameTitle).isDisplayed();
                 framePresent = true;
             }
             catch (Exception e){

@@ -1,12 +1,12 @@
 package com.nbcuni.test.publisher.pageobjects.Taxonomy;
 
 import com.nbcuni.test.webdriver.CustomWebDriver;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
@@ -25,7 +25,7 @@ public class Taxonomy {
     //PAGE OBJECT CONSTRUCTOR
     public Taxonomy(CustomWebDriver webDriver) {
         Taxonomy.webDriver = webDriver;
-        
+        PageFactory.initElements(webDriver, this);
     }
     
     //PAGE OBJECT IDENTIFIERS AND SCRIPTS

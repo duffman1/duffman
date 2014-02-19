@@ -1,10 +1,7 @@
 package com.nbcuni.test.publisher.tests.Advertising.GooglePublisherTagsGPT;
 
-import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
-
 import com.nbcuni.test.publisher.common.ParentTest;
-import com.nbcuni.test.publisher.common.Random;
 import com.nbcuni.test.publisher.pageobjects.Blocks;
 import com.nbcuni.test.publisher.pageobjects.DFPAddTags;
 import com.nbcuni.test.publisher.pageobjects.Modules;
@@ -35,12 +32,10 @@ public class GPTTagsVerification extends ParentTest{
         
         	//Step 1
         	UserLogin userLogin = applib.openApplication();
-        	PageFactory.initElements(webDriver, userLogin);
-            userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+        	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
             
             //Step 1A
             Modules modules = new Modules(webDriver, applib);
-            PageFactory.initElements(webDriver, modules);
             modules.VerifyModuleEnabled("Doubleclick for Publishers");
             
             //Step 2
@@ -48,12 +43,11 @@ public class GPTTagsVerification extends ParentTest{
             
             //Step 3
             overlay.SwitchToFrame("Add a new DFP ad");
-            DFPAddTags dfpAddTags = new DFPAddTags(webDriver);
-            Random random = new Random();
+            DFPAddTags dfpAddTags = new DFPAddTags(webDriver, applib);
             String adSlotName = random.GetCharacterString(15);
             dfpAddTags.EnterAdSlotName(adSlotName);
             dfpAddTags.EnterAdSizes("300x250");
-            dfpAddTags.EnterAdUnitPatter("Test_AdUnit_Pattern");
+            dfpAddTags.EnterAdUnitPattern("Test_AdUnit_Pattern");
             
             //Step 4
             dfpAddTags.ClickSaveBtn();
@@ -67,11 +61,9 @@ public class GPTTagsVerification extends ParentTest{
             //Step 6
             overlay.SwitchToActiveFrame();
             Blocks blocks = new Blocks(webDriver);
-            PageFactory.initElements(webDriver, blocks);
             blocks.SelectRegion("DFP tag: " + adSlotName, "Sidebar first");
             blocks.ClickSaveBlocksBtn();
             ContentParent contentParent = new ContentParent(webDriver, applib);
-            PageFactory.initElements(webDriver, contentParent);
             contentParent.VerifyMessageStatus("The block settings have been updated.");
             
             //Step 7
@@ -86,5 +78,10 @@ public class GPTTagsVerification extends ParentTest{
             
             //Step 9 - NA
             
+            //Cleanup - remove added block
+            taxonomy.NavigateSite("Structure>>Blocks");
+            overlay.SwitchToActiveFrame();
+            blocks.SelectRegion("DFP tag: " + adSlotName, "- None -");
+            blocks.ClickSaveBlocksBtn();
     }
 }
