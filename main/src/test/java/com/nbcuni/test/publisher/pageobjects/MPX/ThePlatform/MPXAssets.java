@@ -70,7 +70,7 @@ public class MPXAssets {
             }
             catch (Exception e) { 
             	
-            	sikuli.wheel(Button.WHEEL_DOWN, 15);
+            	sikuli.wheel(Button.WHEEL_UP, 15); //in java 7 sikuli mouse down is actually the wheel_up command
             }
             if (imgPresent == true){ break;}
         }
@@ -79,10 +79,10 @@ public class MPXAssets {
     public void Scroll(String DownOrUp, int wheelGradiant) throws Exception {
     	
     	if (DownOrUp == "Down") {
-    		sikuli.wheel(Button.WHEEL_DOWN, wheelGradiant);
+    		sikuli.wheel(Button.WHEEL_UP, wheelGradiant);
     	}
     	else {
-    		sikuli.wheel(Button.WHEEL_UP, wheelGradiant);
+    		sikuli.wheel(Button.WHEEL_DOWN, wheelGradiant);
     	}
           
     }

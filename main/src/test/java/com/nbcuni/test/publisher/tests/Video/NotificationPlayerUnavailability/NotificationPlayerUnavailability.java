@@ -19,9 +19,8 @@ import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXLogin;
 import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXSearch;
 import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXSelectAccount;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
-
 import junit.framework.Assert;
-
+import org.openqa.selenium.NoSuchElementException;
 import org.testng.annotations.Test;
 
 public class NotificationPlayerUnavailability extends ParentTest{
@@ -159,8 +158,21 @@ public class NotificationPlayerUnavailability extends ParentTest{
         	    
         	    //Step 7
         	    ErrorChecking errorChecking = new ErrorChecking(webDriver, applib);
-        	    errorChecking.VerifyMPXPlayerDisabled(playerTitle);
-                
+        	    try {
+        	    	errorChecking.VerifyMPXPlayerDisabled(playerTitle);
+        	    }
+        	    catch (AssertionError | NoSuchElementException ex) {
+        	    	
+        	    	Thread.sleep(30000); //pause and re-run cron as this step can be flaky and sometimes require a second cron run.
+        	    	overlay.switchToDefaultContent();
+        	    	taxonomy.NavigateSite("Home>>Run cron");
+        	    	overlay.SwitchToActiveFrame();
+            	    contentParent.VerifyMessageStatus("Cron ran successfully.");
+            	    overlay.ClickCloseOverlayLnk();
+            	    taxonomy.NavigateSite("Content>>Files>>mpxPlayers");
+            	    errorChecking.VerifyMPXPlayerDisabled(playerTitle);
+        	    }
+        	    
                 //Step 8
                 searchFor.EnterTitle(playerTitle);
                 searchFor.ClickApplyBtn();
@@ -225,7 +237,7 @@ public class NotificationPlayerUnavailability extends ParentTest{
             	mpxAddPlayer.GiveFocusToPlayerItem();
             	mpxAddPlayer.ClickDisablePlayerCbx();
             	mpxAddPlayer.ClickSaveBtn();
-            	Thread.sleep(10000); //long pause necessary as mpx processes player
+            	Thread.sleep(5000); //long pause necessary as mpx processes player
             	
             	//Step 16
             	webDriver.close();
@@ -242,8 +254,20 @@ public class NotificationPlayerUnavailability extends ParentTest{
         	    //Step 17
         	    taxonomy.NavigateSite("Content>>Files>>mpxPlayers");
                 overlay.SwitchToActiveFrame();
-                contentParent.VerifyPageContentNotPresent(Arrays.asList("An MPXplayer that's in use (" + playerTitle + ") has been disabled in MPX."));
                 
+                try {
+                	contentParent.VerifyPageContentNotPresent(Arrays.asList("An MPXplayer that's in use (" + playerTitle + ") has been disabled in MPX."));
+                }
+                catch (AssertionError e) {
+                	Thread.sleep(30000); //pause and re-run cron as this step can be flaky and sometimes require a second cron run.
+        	    	overlay.switchToDefaultContent();
+        	    	taxonomy.NavigateSite("Home>>Run cron");
+        	    	overlay.SwitchToActiveFrame();
+            	    contentParent.VerifyMessageStatus("Cron ran successfully.");
+            	    overlay.ClickCloseOverlayLnk();
+            	    taxonomy.NavigateSite("Content>>Files>>mpxPlayers");
+            	    contentParent.VerifyPageContentNotPresent(Arrays.asList("An MPXplayer that's in use (" + playerTitle + ") has been disabled in MPX."));
+                }
         	}
         	else {
         		Assert.fail("DB TV account must be configured.");
