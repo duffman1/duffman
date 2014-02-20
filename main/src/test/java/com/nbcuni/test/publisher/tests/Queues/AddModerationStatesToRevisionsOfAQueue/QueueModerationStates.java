@@ -4,10 +4,7 @@ import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.TimeZone;
-
-import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
-
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
@@ -36,14 +33,12 @@ public class QueueModerationStates extends ParentTest{
     @Test(groups = {"full" })
     public void QueueModerationStates_Test() throws Exception{
     	
-        //Step 1
+    	//Step 1
         UserLogin userLogin = applib.openApplication();
-        PageFactory.initElements(webDriver, userLogin);
         userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
         
         //Step 1a
         Modules modules = new Modules(webDriver, applib);
-        PageFactory.initElements(webDriver, modules);
         modules.VerifyModuleEnabled("Pub Post");
         CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver, applib);
         String postTitle = createDefaultContent.Post("Draft");
@@ -103,7 +98,6 @@ public class QueueModerationStates extends ParentTest{
         publishingOptions.EnterMessageForStateChange(messageForStateChange);
         queuesRevisionList.ClickUpdateStateBtn();
         ContentParent contentParent= new ContentParent(webDriver, applib);
-        PageFactory.initElements(webDriver, contentParent);
         contentParent.VerifyMessageStatus(queueTitle + " transitioned to the published state.");
         
         //Step 9
@@ -128,7 +122,6 @@ public class QueueModerationStates extends ParentTest{
         overlay.SwitchToFrame("Queues Revision list");
         queuesRevisionList.VerifyStateFlowHistoryEvent("Revision was set from Published to Unpublished on " + date);
         queuesRevisionList.VerifyStateFlowHistoryEvent(messageForStateChangeUnpub);
-        
         
     }
 }

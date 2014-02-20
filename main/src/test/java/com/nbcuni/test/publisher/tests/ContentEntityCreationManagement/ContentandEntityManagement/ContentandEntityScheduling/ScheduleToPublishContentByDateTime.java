@@ -63,7 +63,7 @@ public class ScheduleToPublishContentByDateTime extends ParentTest {
         ScheduleQueue scheduleQueue = new ScheduleQueue(webDriver);
         scheduleQueue.ClickScheduleTab();
         overlay.SwitchToActiveFrame();
-        scheduleQueue.VerifyAddScheduleVersionLink();
+        scheduleQueue.VerifyAddScheduleVersionLnkPresent();
         scheduleQueue.VerifyScheduleTableisEmpty();
         
         //Step 6

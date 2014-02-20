@@ -5,11 +5,9 @@ import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Content.*;
 import com.nbcuni.test.publisher.pageobjects.Queues.ScheduleQueue;
-
-import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
-
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 public class EnhanceOperationsDropdownonScheduleTab extends ParentTest {
@@ -28,12 +26,10 @@ public class EnhanceOperationsDropdownonScheduleTab extends ParentTest {
 
     	//Step 1
         UserLogin userLogin = applib.openApplication();
-        PageFactory.initElements(webDriver, userLogin);
         userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
 
         //Step 1a
         Modules modules = new Modules(webDriver, applib);
-        PageFactory.initElements(webDriver, modules);
         modules.VerifyModuleEnabled("Pub Post");
         
         //Step 2
@@ -50,8 +46,8 @@ public class EnhanceOperationsDropdownonScheduleTab extends ParentTest {
         overlay.SwitchToActiveFrame();     
         scheduleQueue.SelectRevision(postTitle);
         scheduleQueue.SelectOperation("Moderate to Published");
-        com.ibm.icu.util.Calendar cal = com.ibm.icu.util.Calendar.getInstance();
-        cal.add(com.ibm.icu.util.Calendar.DATE, 10);
+        Calendar cal = Calendar.getInstance();
+        cal.add(Calendar.DATE, 10);
         Date date = cal.getTime();
         SimpleDateFormat sdfDate = new SimpleDateFormat("MM/dd/yyyy");
         String sDate = sdfDate.format(date);
@@ -60,20 +56,18 @@ public class EnhanceOperationsDropdownonScheduleTab extends ParentTest {
         scheduleQueue.ClickScheduleBtn();
         overlay.SwitchToActiveFrame();        
         ContentParent contentParent = new ContentParent(webDriver, applib);
-        PageFactory.initElements(webDriver, contentParent);
         contentParent.VerifyMessageStatus("The scheduled revision operation has been saved");
      
         //Step 4
         overlay.SwitchToActiveFrame(); 
-        scheduleQueue.VerifyRunNowBtn();     
-        scheduleQueue.VerifyCancelBtn();
+        scheduleQueue.VerifyRunNowBtnPresent();     
+        scheduleQueue.VerifyCancelBtnPresent();
      
         //Step 5
         scheduleQueue.ClickRunNowLnk();
      
         //Step 6
-        overlay.switchToDefaultContent();
-        overlay.SwitchToFrame(postTitle + " dialog");
-        scheduleQueue.VerifyCompleteCronRunStatus();
+        overlay.SwitchToActiveFrame();
+        scheduleQueue.VerifyRunStatusComplete();
        }
 }

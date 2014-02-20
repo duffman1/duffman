@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Feb 20 13:01:20 EST 2014</td>
+<td>Started on:</td><td>Thu Feb 20 15:20:29 EST 2014</td>
 </tr>
-<tr><td>Total time:</td><td>115 seconds (115541 ms)</td>
+<tr><td>Total time:</td><td>259 seconds (259651 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,80 +67,297 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.Logo.LogoExceptionAppearsAttemptCreateLogo.LogoExceptionAppearsAttemptCreateLogo_Test()'><b>LogoExceptionAppearsAttemptCreateLogo_Test</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.Logo.LogoExceptionAppearsAttemptCreateLogo<br/>
-<a href="#Output-235116633" onClick='toggleBox("Output-235116633", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability.NotificationPlayerUnavailability_Test()'><b>NotificationPlayerUnavailability_Test</b><br>Test class: com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability<br/>
+<a href="#Output-682081658" onClick='toggleBox("Output-682081658", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-235116633" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-235116633">
+<a href="#Output-682081658" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-682081658">
 Open url 'http://qa5dev.publisher.nbcuni.com'.<br/>
 Enter the user's email address in the 'Email Address' text box.<br/>
 Enter the user's password in the 'Password' text box.<br/>
 Click the 'Login' button.<br/>
-Click the 'Modules' menu link.<br/>
-Switch to frame titled 'Modules'.<br/>
-Enter 'Logo Manager' in the 'Filter Name' text box.<br/>
-Wait for the module titled 'Logo Manager' to appear in the list.<br/>
-Click the 'Close Overlay X'.<br/>
-Mouse over the 'Content' menu link.<br/>
-Mouse over the 'Logos' menu link.<br/>
-Click the 'Add Logo' menu link.<br/>
-Switch to the active frame titled 'Add Logo dialog'.<br/>
-Enter '1348971ce983469' in the 'Title' text box.<br/>
-Enter the file path for file upload.<br/>
-Click the 'Upload' button.<br/>
-Wait for the file link to be visible after upload.<br/>
-Assert the file image 'nbclogosmall' is present.<br/>
-Assert the the img is loaded and visible.<br/>
-Enter '2014-02-20' in the 'Start Date' text box.<br/>
-Enter '06:02:01 PM' in the 'Start Time' text box.<br/>
-Enter '2014-02-20' in the 'End Date' text box.<br/>
-Enter '06:02:46 PM' in the 'End Time' text box.<br/>
+Mouse over the 'Configuration' menu link.<br/>
+Mouse over the 'Media' menu link.<br/>
+Click the 'Media: thePlatform mpx settings' menu link.<br/>
+Switch to frame titled 'Media: thePlatform mpx settings dialog'.<br/>
+Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.<br/>
+Get all the selected import account options and store to a list.<br/>
+Open the mpx platform.<br/>
+Enter 'mpx/AdminPub7QA' in the 'Username' text box.<br/>
+Enter 'Pa55word' in the 'Password' text box.<br/>
+Click the 'Login' button.<br/>
+Enter the account name 'DB TV' in the account select text box.<br/>
+Click the account option from the drop down list.<br/>
+Click the 'Account' title to leave focus off of the selection.<br/>
+Wait for account to switch to the newly selected account.<br/>
+Click the 'Players' link.<br/>
+Click the 'All Players' link.<br/>
+Click the 'Add' button.<br/>
+Enter 'AutomationPlayer228a36685a' in the 'Title' text box.<br/>
 Click the 'Save' button.<br/>
-Switch to the active frame titled 'Manage Logo dialog'.<br/>
-Verify the text '1348971ce983469' is present on the page.<br/>
-Verify the text 'Thu, 02/20/2014 - 18:02' is present on the page.<br/>
-Verify the text 'Thu, 02/20/2014 - 18:02' is present on the page.<br/>
-Assert the file image 'nbclogosmall' is present.<br/>
-Assert the the img is loaded and visible.<br/>
-Click the 'Close Overlay X'.<br/>
-Switch to the active frame titled 'Status report dialog'.<br/>
-Verify success message of 'Cron ran successfully.' is present.<br/>
-Verify there are no errors present.<br/>
-Click the 'Close Overlay X'.<br/>
-Assert the file image 'nbclogosmall' is present.<br/>
-Assert the the img is loaded and visible.<br/>
-Switch to the active frame titled 'Status report dialog'.<br/>
-Verify success message of 'Cron ran successfully.' is present.<br/>
-Verify there are no errors present.<br/>
-Click the 'Close Overlay X'.<br/>
-Assert the file image 'logo' is present.<br/>
-Assert the the img is loaded and visible.<br/>
+Open url 'http://qa5dev.publisher.nbcuni.com'.<br/>
 Mouse over the 'Content' menu link.<br/>
-Click the 'Logos' menu link.<br/>
-Switch to the active frame titled 'Manage Logo dialog'.<br/>
-Click the 'Edit' extend menu button for logo titled '1348971ce983469'.<br/>
-Click the 'Delete' button for logo titled '1348971ce983469'.<br/>
-Switch to the active frame titled 'Are you sure you want to delete this logo? dialog'.<br/>
-Click the 'Delete' button.<br/>
-Switch to the active frame titled 'Manage Logo dialog'.<br/>
-Verify success message of 'Logo has been deleted successfully.' is present.<br/>
+Mouse over the 'Files' menu link.<br/>
+Click the 'mpxPlayers' menu link.<br/>
+Switch to frame titled 'Content'.<br/>
+Click the 'Sync MPX Players' link.<br/>
+Click the 'Sync MPX Players Now' link.<br/>
+Verify success message of 'players returned for account' is present.<br/>
 Verify there are no errors present.<br/>
-Verify the text '1348971ce983469' is NOT present on the page.<br/>
-Verify the text 'Thu, 02/20/2014 - 18:02' is NOT present on the page.<br/>
-Verify the text 'Thu, 02/20/2014 - 18:02' is NOT present on the page.<br/>
+Enter title AutomationPlayer228a36685a.<br/>
+Click the 'Apply' button.<br/>
+Get the text of the first search result set item.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Files' menu link.<br/>
+Click the 'mpxMedia' menu link.<br/>
+Enter title Automation.<br/>
+Select the 'Published' from the 'MPX Status' select ddl.<br/>
+Select the DB TV from the 'Source' select ddl.<br/>
+Click the 'Apply' button.<br/>
+Get the text of the first search result set item.<br/>
+Click the first search title link in the search result set.<br/>
+Click the 'Edit' in the work bench.<br/>
+Switch to the active frame titled 'Edit mpx_video_7 Automationca1c21746c dialog'.<br/>
+Select 'AutomationPlayer228a36685a' from the 'Video Player' drop down list.<br/>
+Click the 'Save' button.<br/>
+Open the mpx platform.<br/>
+Enter the account name 'DB TV' in the account select text box.<br/>
+Click the account option from the drop down list.<br/>
+Click the 'Account' title to leave focus off of the selection.<br/>
+Wait for account to switch to the newly selected account.<br/>
+Click the 'Players' link.<br/>
+Click the 'All Players' link.<br/>
+Enter 'AutomationPlayer228a36685a' in the 'Player Search' text box.<br/>
+Click the 'Search by Players Title' link.<br/>
+Click the 'Player Title' label to give focus to the player item.<br/>
+Click the 'Disable Player' check box.<br/>
+Click the 'Save' button.<br/>
+Open url 'http://qa5dev.publisher.nbcuni.com'.<br/>
+Switch to the active frame titled 'Status report dialog'.<br/>
+Verify success message of 'Cron ran successfully.' is present.<br/>
+Verify there are no errors present.<br/>
+Click the 'Close Overlay X'.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Files' menu link.<br/>
+Click the 'mpxPlayers' menu link.<br/>
+Switch to the active frame titled 'Content dialog'.<br/>
+Verify that the disabled player text is present for player titled 'AutomationPlayer228a36685a'.<br/>
+Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140220152447.png <br/>
+<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140220152447.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140220152447.png' height='500' width='500'/> </a><br/>
 </div>
 </td>
-<td></td>
-<td>101</td>
-<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.Logo.LogoExceptionAppearsAttemptCreateLogo@4c331059</td></tr>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element
+  (Session info: chrome=33.0.1750.117)
+  (Driver info: chromedriver=2.8.241036,platform=Mac OS X 10.8.5 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 48.66 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.8.5&apos;, java.version: &apos;1.6.0_65&apos;
+Session ID: 0aae506933c859e5fc046a4bd4bd2e03
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.BdYIZB}, rotatable=false, locationContextEnabled=true, version=33.0.1750.117, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
+Command duration or timeout: 49.18 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.8.5&apos;, java.version: &apos;1.6.0_65&apos;
+Session ID: 74f79d8f-b90d-4b5a-8004-882e312307bb
+Driver info: com.nbcuni.test.webdriver.CustomWebDriver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.BdYIZB}, rotatable=false, locationContextEnabled=true, webdriver.remote.sessionid=74f79d8f-b90d-4b5a-8004-882e312307bb, version=33.0.1750.117, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:191)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:554)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:307)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:404)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:344)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:299)
+	at com.nbcuni.test.publisher.pageobjects.ErrorChecking.ErrorChecking.DisabledPlayerError_Ctr(ErrorChecking.java:45)
+	at com.nbcuni.test.publisher.pageobjects.ErrorChecking.ErrorChecking.VerifyMPXPlayerDisabled(ErrorChecking.java:64)
+	at com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability.NotificationPlayerUnavailability_Test(NotificationPlayerUnavailability.java:162)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+Caused by: org.openqa.selenium.remote.ScreenshotException: Screen shot has been taken
+Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.8.5&apos;, java.version: &apos;1.6.0_65&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:125)
+	... 32 more
+Caused by: org.openqa.selenium.NoSuchElementException: no such element
+  (Session info: chrome=33.0.1750.117)
+  (Driver info: chromedriver=2.8.241036,platform=Mac OS X 10.8.5 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 48.66 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.8.5&apos;, java.version: &apos;1.6.0_65&apos;
+Session ID: 0aae506933c859e5fc046a4bd4bd2e03
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.BdYIZB}, rotatable=false, locationContextEnabled=true, version=33.0.1750.117, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.8.5&apos;, java.version: &apos;1.6.0_65&apos;
+Driver info: driver.version: EventFiringWebDriver
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:191)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:554)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:307)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:404)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:344)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:299)
+	at sun.reflect.GeneratedMethodAccessor22.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:101)
+	at com.sun.proxy.$Proxy10.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:180)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:47)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:33)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:169)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+</pre></div><a href='#' onClick='toggleBox("stack-trace682081658", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace682081658'><pre>org.openqa.selenium.NoSuchElementException: no such element
+  (Session info: chrome=33.0.1750.117)
+  (Driver info: chromedriver=2.8.241036,platform=Mac OS X 10.8.5 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 48.66 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.8.5&apos;, java.version: &apos;1.6.0_65&apos;
+Session ID: 0aae506933c859e5fc046a4bd4bd2e03
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.BdYIZB}, rotatable=false, locationContextEnabled=true, version=33.0.1750.117, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
+Command duration or timeout: 49.18 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.8.5&apos;, java.version: &apos;1.6.0_65&apos;
+Session ID: 74f79d8f-b90d-4b5a-8004-882e312307bb
+Driver info: com.nbcuni.test.webdriver.CustomWebDriver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.BdYIZB}, rotatable=false, locationContextEnabled=true, webdriver.remote.sessionid=74f79d8f-b90d-4b5a-8004-882e312307bb, version=33.0.1750.117, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:191)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:554)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:307)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:404)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:344)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:299)
+	at com.nbcuni.test.publisher.pageobjects.ErrorChecking.ErrorChecking.DisabledPlayerError_Ctr(ErrorChecking.java:45)
+	at com.nbcuni.test.publisher.pageobjects.ErrorChecking.ErrorChecking.VerifyMPXPlayerDisabled(ErrorChecking.java:64)
+	at com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability.NotificationPlayerUnavailability_Test(NotificationPlayerUnavailability.java:162)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+Caused by: org.openqa.selenium.remote.ScreenshotException: Screen shot has been taken
+Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.8.5&apos;, java.version: &apos;1.6.0_65&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:125)
+	... 32 more
+Caused by: org.openqa.selenium.NoSuchElementException: no such element
+  (Session info: chrome=33.0.1750.117)
+  (Driver info: chromedriver=2.8.241036,platform=Mac OS X 10.8.5 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 48.66 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.8.5&apos;, java.version: &apos;1.6.0_65&apos;
+Session ID: 0aae506933c859e5fc046a4bd4bd2e03
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.BdYIZB}, rotatable=false, locationContextEnabled=true, version=33.0.1750.117, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.8.5&apos;, java.version: &apos;1.6.0_65&apos;
+Driver info: driver.version: EventFiringWebDriver
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:191)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:554)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:307)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:404)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:344)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:299)
+	at sun.reflect.GeneratedMethodAccessor22.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:101)
+	at com.sun.proxy.$Proxy10.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:180)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:47)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:33)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:169)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+</pre></div></td>
+<td>245</td>
+<td>com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability@4c331059</td></tr>
 </table><p>
 </body>
 </html>

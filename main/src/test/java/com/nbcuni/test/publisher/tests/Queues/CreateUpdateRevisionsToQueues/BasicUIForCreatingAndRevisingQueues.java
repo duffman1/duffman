@@ -9,7 +9,6 @@ import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Content.*;
 import com.nbcuni.test.publisher.pageobjects.ErrorChecking.ErrorChecking;
-import com.nbcuni.test.publisher.pageobjects.Queues.DeleteQueue;
 import com.nbcuni.test.publisher.pageobjects.Queues.Queues;
 import com.nbcuni.test.publisher.pageobjects.Queues.QueuesRevisionList;
 
@@ -54,27 +53,23 @@ public class BasicUIForCreatingAndRevisingQueues extends ParentTest{
         String queueTitle = random.GetCharacterString(15);
         queues.EnterTitle(queueTitle);
         queues.ClickSaveQueueBtn();
-        overlay.switchToDefaultContent();
-        overlay.SwitchToFrame("Queues Listing");
+        overlay.SwitchToActiveFrame();
         queues.VerifyQueuesInList(Arrays.asList(queueTitle));
         
         //Step 5
         queues.ClickEditQueueExtendMenuBtn(queueTitle);
         queues.ClickDeleteQueueMenuBtn(queueTitle);
-        overlay.switchToDefaultContent();
-        overlay.SwitchToFrame(queueTitle);
+        overlay.SwitchToActiveFrame();
         
         //Step 6
-        DeleteQueue deleteQueue = new DeleteQueue(webDriver);
-        deleteQueue.ClickCancelLnk();
-        overlay.switchToDefaultContent();
-        overlay.SwitchToFrame("Queues Listing");
+        Delete delete = new Delete(webDriver);
+        delete.ClickCancelLnk();
+        overlay.SwitchToActiveFrame();
         
         //Step 7
         queues.ClickEditQueueExtendMenuBtn(queueTitle);
         queues.ClickEditQueueMenuBtn(queueTitle);
-        overlay.switchToDefaultContent();
-        overlay.SwitchToFrame(queueTitle);
+        overlay.SwitchToActiveFrame();
         
         //Step 8
         String modQueueTitle = random.GetCharacterString(15);
@@ -82,15 +77,13 @@ public class BasicUIForCreatingAndRevisingQueues extends ParentTest{
         PublishingOptions publishingOptions = new PublishingOptions(webDriver);
         publishingOptions.VerifyCreateNewRevisionCbxChecked();
         queues.ClickSaveQueueBtn();
-        overlay.switchToDefaultContent();
-        overlay.SwitchToFrame("Queues Listing dialog");
+        overlay.SwitchToActiveFrame();
         queues.VerifyQueuesInList(Arrays.asList(modQueueTitle));
         
         //Step 9
         queues.ClickEditQueueExtendMenuBtn(modQueueTitle);
         queues.ClickEditQueueMenuBtn(modQueueTitle);
-        overlay.switchToDefaultContent();
-        overlay.SwitchToFrame(modQueueTitle);
+        overlay.SwitchToActiveFrame();
         
         //Step 10
         String modQueueTitle2 = random.GetCharacterString(15);
@@ -106,8 +99,7 @@ public class BasicUIForCreatingAndRevisingQueues extends ParentTest{
         overlay.SwitchToActiveFrame();
         QueuesRevisionList queuesRevisionList = new QueuesRevisionList(webDriver);
         queuesRevisionList.ClickRevisionsLnk();
-        overlay.switchToDefaultContent();
-        overlay.SwitchToFrame("Queues Revision list");
+        overlay.SwitchToActiveFrame();
         SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
         sdf.setTimeZone(TimeZone.getTimeZone("UTC"));
     	String date = sdf.format(new Date());

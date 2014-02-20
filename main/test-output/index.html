@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,7 +37,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Default_suite">
-              <span class="suite-name border-passed">Default suite</span>
+              <span class="suite-name border-failed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -58,7 +58,7 @@
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="group-Default_suite">
-                    <span>1 group</span>
+                    <span>2 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -90,21 +90,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Default_suite" class="hide-methods passed suite-Default_suite"> (hide)</a> <!-- hide-methods passed suite-Default_suite -->
-                      <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
                     </span>
-                    <div class="method-list-content passed suite-Default_suite">
+                    <div class="method-list-content failed suite-Default_suite">
                       <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.Logo.LogoExceptionAppearsAttemptCreateLogo" hash-for-method="LogoExceptionAppearsAttemptCreateLogo_Test">LogoExceptionAppearsAttemptCreateLogo_Test</a> <!-- method navigator-link -->
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability" hash-for-method="NotificationPlayerUnavailability_Test">NotificationPlayerUnavailability_Test</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-Default_suite -->
+                    </div> <!-- method-list-content failed suite-Default_suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -116,25 +116,127 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-passed">
+          <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.Logo.LogoExceptionAppearsAttemptCreateLogo</span>
+              <img src="failed.png"/>
+              <span class="class-name">com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="LogoExceptionAppearsAttemptCreateLogo_Test">
-                  </a> <!-- LogoExceptionAppearsAttemptCreateLogo_Test -->
-                  <span class="method-name">LogoExceptionAppearsAttemptCreateLogo_Test</span>
+                  <a name="NotificationPlayerUnavailability_Test">
+                  </a> <!-- NotificationPlayerUnavailability_Test -->
+                  <span class="method-name">NotificationPlayerUnavailability_Test</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element
+  (Session info: chrome=33.0.1750.117)
+  (Driver info: chromedriver=2.8.241036,platform=Mac OS X 10.8.5 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 48.66 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.8.5&apos;, java.version: &apos;1.6.0_65&apos;
+Session ID: 0aae506933c859e5fc046a4bd4bd2e03
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.BdYIZB}, rotatable=false, locationContextEnabled=true, version=33.0.1750.117, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
+Command duration or timeout: 49.18 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.8.5&apos;, java.version: &apos;1.6.0_65&apos;
+Session ID: 74f79d8f-b90d-4b5a-8004-882e312307bb
+Driver info: com.nbcuni.test.webdriver.CustomWebDriver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.BdYIZB}, rotatable=false, locationContextEnabled=true, webdriver.remote.sessionid=74f79d8f-b90d-4b5a-8004-882e312307bb, version=33.0.1750.117, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:191)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:554)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:307)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:404)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:344)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:299)
+	at com.nbcuni.test.publisher.pageobjects.ErrorChecking.ErrorChecking.DisabledPlayerError_Ctr(ErrorChecking.java:45)
+	at com.nbcuni.test.publisher.pageobjects.ErrorChecking.ErrorChecking.VerifyMPXPlayerDisabled(ErrorChecking.java:64)
+	at com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability.NotificationPlayerUnavailability_Test(NotificationPlayerUnavailability.java:162)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+Caused by: org.openqa.selenium.remote.ScreenshotException: Screen shot has been taken
+Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.8.5&apos;, java.version: &apos;1.6.0_65&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:125)
+	... 32 more
+Caused by: org.openqa.selenium.NoSuchElementException: no such element
+  (Session info: chrome=33.0.1750.117)
+  (Driver info: chromedriver=2.8.241036,platform=Mac OS X 10.8.5 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 48.66 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.8.5&apos;, java.version: &apos;1.6.0_65&apos;
+Session ID: 0aae506933c859e5fc046a4bd4bd2e03
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.BdYIZB}, rotatable=false, locationContextEnabled=true, version=33.0.1750.117, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.8.5&apos;, java.version: &apos;1.6.0_65&apos;
+Driver info: driver.version: EventFiringWebDriver
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:191)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:554)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:307)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:404)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:344)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:299)
+	at sun.reflect.GeneratedMethodAccessor22.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:101)
+	at com.sun.proxy.$Proxy10.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:180)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:47)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:33)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:169)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-passed -->
+          </div> <!-- suite-Default_suite-class-failed -->
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/private/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/testng-eclipse-713142947/testng-customsuite.xml</span>
+            <span class="header-content">/private/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/testng-eclipse--1799563537/testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -143,7 +245,7 @@
 &lt;suite name=&quot;Default suite&quot;&gt;
   &lt;test verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.Logo.LogoExceptionAppearsAttemptCreateLogo&quot;/&gt;
+      &lt;class name=&quot;com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -171,7 +273,15 @@
               <span class="test-group-name">full</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">LogoExceptionAppearsAttemptCreateLogo_Test</span>
+                <span class="method-in-group-name">NotificationPlayerUnavailability_Test</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">mpx</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">NotificationPlayerUnavailability_Test</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -193,14 +303,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'LogoExceptionAppearsAttemptCreateLogo_Test')
-data.setCell(0, 2, 'com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.Logo.LogoExceptionAppearsAttemptCreateLogo')
-data.setCell(0, 3, 101349);
+data.setCell(0, 1, 'NotificationPlayerUnavailability_Test')
+data.setCell(0, 2, 'com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability')
+data.setCell(0, 3, 245050);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 4 minutes</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -212,64 +322,80 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="reporter-method-div">
-              <span class="reporter-method-name">LogoExceptionAppearsAttemptCreateLogo_Test</span>
+              <span class="reporter-method-name">NotificationPlayerUnavailability_Test</span>
               <div class="reporter-method-output-div">
                 <span class="reporter-method-output">Open url 'http://qa5dev.publisher.nbcuni.com'.</span>
                 <span class="reporter-method-output">Enter the user's email address in the 'Email Address' text box.</span>
                 <span class="reporter-method-output">Enter the user's password in the 'Password' text box.</span>
                 <span class="reporter-method-output">Click the 'Login' button.</span>
-                <span class="reporter-method-output">Click the 'Modules' menu link.</span>
-                <span class="reporter-method-output">Switch to frame titled 'Modules'.</span>
-                <span class="reporter-method-output">Enter 'Logo Manager' in the 'Filter Name' text box.</span>
-                <span class="reporter-method-output">Wait for the module titled 'Logo Manager' to appear in the list.</span>
-                <span class="reporter-method-output">Click the 'Close Overlay X'.</span>
-                <span class="reporter-method-output">Mouse over the 'Content' menu link.</span>
-                <span class="reporter-method-output">Mouse over the 'Logos' menu link.</span>
-                <span class="reporter-method-output">Click the 'Add Logo' menu link.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'Add Logo dialog'.</span>
-                <span class="reporter-method-output">Enter '1348971ce983469' in the 'Title' text box.</span>
-                <span class="reporter-method-output">Enter the file path for file upload.</span>
-                <span class="reporter-method-output">Click the 'Upload' button.</span>
-                <span class="reporter-method-output">Wait for the file link to be visible after upload.</span>
-                <span class="reporter-method-output">Assert the file image 'nbclogosmall' is present.</span>
-                <span class="reporter-method-output">Assert the the img is loaded and visible.</span>
-                <span class="reporter-method-output">Enter '2014-02-20' in the 'Start Date' text box.</span>
-                <span class="reporter-method-output">Enter '06:02:01 PM' in the 'Start Time' text box.</span>
-                <span class="reporter-method-output">Enter '2014-02-20' in the 'End Date' text box.</span>
-                <span class="reporter-method-output">Enter '06:02:46 PM' in the 'End Time' text box.</span>
+                <span class="reporter-method-output">Mouse over the 'Configuration' menu link.</span>
+                <span class="reporter-method-output">Mouse over the 'Media' menu link.</span>
+                <span class="reporter-method-output">Click the 'Media: thePlatform mpx settings' menu link.</span>
+                <span class="reporter-method-output">Switch to frame titled 'Media: thePlatform mpx settings dialog'.</span>
+                <span class="reporter-method-output">Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.</span>
+                <span class="reporter-method-output">Get all the selected import account options and store to a list.</span>
+                <span class="reporter-method-output">Open the mpx platform.</span>
+                <span class="reporter-method-output">Enter 'mpx/AdminPub7QA' in the 'Username' text box.</span>
+                <span class="reporter-method-output">Enter 'Pa55word' in the 'Password' text box.</span>
+                <span class="reporter-method-output">Click the 'Login' button.</span>
+                <span class="reporter-method-output">Enter the account name 'DB TV' in the account select text box.</span>
+                <span class="reporter-method-output">Click the account option from the drop down list.</span>
+                <span class="reporter-method-output">Click the 'Account' title to leave focus off of the selection.</span>
+                <span class="reporter-method-output">Wait for account to switch to the newly selected account.</span>
+                <span class="reporter-method-output">Click the 'Players' link.</span>
+                <span class="reporter-method-output">Click the 'All Players' link.</span>
+                <span class="reporter-method-output">Click the 'Add' button.</span>
+                <span class="reporter-method-output">Enter 'AutomationPlayer228a36685a' in the 'Title' text box.</span>
                 <span class="reporter-method-output">Click the 'Save' button.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'Manage Logo dialog'.</span>
-                <span class="reporter-method-output">Verify the text '1348971ce983469' is present on the page.</span>
-                <span class="reporter-method-output">Verify the text 'Thu, 02/20/2014 - 18:02' is present on the page.</span>
-                <span class="reporter-method-output">Verify the text 'Thu, 02/20/2014 - 18:02' is present on the page.</span>
-                <span class="reporter-method-output">Assert the file image 'nbclogosmall' is present.</span>
-                <span class="reporter-method-output">Assert the the img is loaded and visible.</span>
-                <span class="reporter-method-output">Click the 'Close Overlay X'.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'Status report dialog'.</span>
-                <span class="reporter-method-output">Verify success message of 'Cron ran successfully.' is present.</span>
-                <span class="reporter-method-output">Verify there are no errors present.</span>
-                <span class="reporter-method-output">Click the 'Close Overlay X'.</span>
-                <span class="reporter-method-output">Assert the file image 'nbclogosmall' is present.</span>
-                <span class="reporter-method-output">Assert the the img is loaded and visible.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'Status report dialog'.</span>
-                <span class="reporter-method-output">Verify success message of 'Cron ran successfully.' is present.</span>
-                <span class="reporter-method-output">Verify there are no errors present.</span>
-                <span class="reporter-method-output">Click the 'Close Overlay X'.</span>
-                <span class="reporter-method-output">Assert the file image 'logo' is present.</span>
-                <span class="reporter-method-output">Assert the the img is loaded and visible.</span>
+                <span class="reporter-method-output">Open url 'http://qa5dev.publisher.nbcuni.com'.</span>
                 <span class="reporter-method-output">Mouse over the 'Content' menu link.</span>
-                <span class="reporter-method-output">Click the 'Logos' menu link.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'Manage Logo dialog'.</span>
-                <span class="reporter-method-output">Click the 'Edit' extend menu button for logo titled '1348971ce983469'.</span>
-                <span class="reporter-method-output">Click the 'Delete' button for logo titled '1348971ce983469'.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'Are you sure you want to delete this logo? dialog'.</span>
-                <span class="reporter-method-output">Click the 'Delete' button.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'Manage Logo dialog'.</span>
-                <span class="reporter-method-output">Verify success message of 'Logo has been deleted successfully.' is present.</span>
+                <span class="reporter-method-output">Mouse over the 'Files' menu link.</span>
+                <span class="reporter-method-output">Click the 'mpxPlayers' menu link.</span>
+                <span class="reporter-method-output">Switch to frame titled 'Content'.</span>
+                <span class="reporter-method-output">Click the 'Sync MPX Players' link.</span>
+                <span class="reporter-method-output">Click the 'Sync MPX Players Now' link.</span>
+                <span class="reporter-method-output">Verify success message of 'players returned for account' is present.</span>
                 <span class="reporter-method-output">Verify there are no errors present.</span>
-                <span class="reporter-method-output">Verify the text '1348971ce983469' is NOT present on the page.</span>
-                <span class="reporter-method-output">Verify the text 'Thu, 02/20/2014 - 18:02' is NOT present on the page.</span>
-                <span class="reporter-method-output">Verify the text 'Thu, 02/20/2014 - 18:02' is NOT present on the page.</span>
+                <span class="reporter-method-output">Enter title AutomationPlayer228a36685a.</span>
+                <span class="reporter-method-output">Click the 'Apply' button.</span>
+                <span class="reporter-method-output">Get the text of the first search result set item.</span>
+                <span class="reporter-method-output">Mouse over the 'Content' menu link.</span>
+                <span class="reporter-method-output">Mouse over the 'Files' menu link.</span>
+                <span class="reporter-method-output">Click the 'mpxMedia' menu link.</span>
+                <span class="reporter-method-output">Enter title Automation.</span>
+                <span class="reporter-method-output">Select the 'Published' from the 'MPX Status' select ddl.</span>
+                <span class="reporter-method-output">Select the DB TV from the 'Source' select ddl.</span>
+                <span class="reporter-method-output">Click the 'Apply' button.</span>
+                <span class="reporter-method-output">Get the text of the first search result set item.</span>
+                <span class="reporter-method-output">Click the first search title link in the search result set.</span>
+                <span class="reporter-method-output">Click the 'Edit' in the work bench.</span>
+                <span class="reporter-method-output">Switch to the active frame titled 'Edit mpx_video_7 Automationca1c21746c dialog'.</span>
+                <span class="reporter-method-output">Select 'AutomationPlayer228a36685a' from the 'Video Player' drop down list.</span>
+                <span class="reporter-method-output">Click the 'Save' button.</span>
+                <span class="reporter-method-output">Open the mpx platform.</span>
+                <span class="reporter-method-output">Enter the account name 'DB TV' in the account select text box.</span>
+                <span class="reporter-method-output">Click the account option from the drop down list.</span>
+                <span class="reporter-method-output">Click the 'Account' title to leave focus off of the selection.</span>
+                <span class="reporter-method-output">Wait for account to switch to the newly selected account.</span>
+                <span class="reporter-method-output">Click the 'Players' link.</span>
+                <span class="reporter-method-output">Click the 'All Players' link.</span>
+                <span class="reporter-method-output">Enter 'AutomationPlayer228a36685a' in the 'Player Search' text box.</span>
+                <span class="reporter-method-output">Click the 'Search by Players Title' link.</span>
+                <span class="reporter-method-output">Click the 'Player Title' label to give focus to the player item.</span>
+                <span class="reporter-method-output">Click the 'Disable Player' check box.</span>
+                <span class="reporter-method-output">Click the 'Save' button.</span>
+                <span class="reporter-method-output">Open url 'http://qa5dev.publisher.nbcuni.com'.</span>
+                <span class="reporter-method-output">Switch to the active frame titled 'Status report dialog'.</span>
+                <span class="reporter-method-output">Verify success message of 'Cron ran successfully.' is present.</span>
+                <span class="reporter-method-output">Verify there are no errors present.</span>
+                <span class="reporter-method-output">Click the 'Close Overlay X'.</span>
+                <span class="reporter-method-output">Mouse over the 'Content' menu link.</span>
+                <span class="reporter-method-output">Mouse over the 'Files' menu link.</span>
+                <span class="reporter-method-output">Click the 'mpxPlayers' menu link.</span>
+                <span class="reporter-method-output">Switch to the active frame titled 'Content dialog'.</span>
+                <span class="reporter-method-output">Verify that the disabled player text is present for player titled 'AutomationPlayer228a36685a'.</span>
+                <span class="reporter-method-output">Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140220152447.png </span>
+                <span class="reporter-method-output"><br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140220152447.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140220152447.png' height='500' width='500'/> </a></span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -287,18 +413,20 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.Logo.LogoExceptionAppearsAttemptCreateLogo</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">startSelenium(PROD)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">LogoExceptionAppearsAttemptCreateLogo_Test</span>
-                <span class="method-start">13609 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">NotificationPlayerUnavailability_Test</span>
+                <span class="method-start">13658 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">stopSelenium([TestResult name=LogoExceptionAppearsAttemptCreateLogo_Test status=SUCCESS method=LogoExceptionAppea...)</span>
-                <span class="method-start">114959 ms</span>
+                <span class="method-name">stopSelenium([TestResult name=NotificationPlayerUnavailability_Test status=FAILURE method=NotificationPlayerUnava...)</span>
+                <span class="method-start">258719 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

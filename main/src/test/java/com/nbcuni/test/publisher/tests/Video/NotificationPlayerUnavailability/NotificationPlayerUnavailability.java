@@ -3,6 +3,7 @@ package com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Set;
+
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.Content.PublishingOptions;
@@ -18,7 +19,9 @@ import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXLogin;
 import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXSearch;
 import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXSelectAccount;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
+
 import junit.framework.Assert;
+
 import org.testng.annotations.Test;
 
 public class NotificationPlayerUnavailability extends ParentTest{
@@ -102,7 +105,15 @@ public class NotificationPlayerUnavailability extends ParentTest{
                 searchFor.ClickApplyBtn();
                 overlay.switchToDefaultContent();
                 if (!searchFor.GetFirstMPXPlayerSearchResult().equals(playerTitle)) {
-        	    	Assert.fail("MPX Player has not been successfully ingested into pub 7."); 
+        	    	Thread.sleep(30000); //pause and re-run cron as sometimes media assets aren't in the first ingested queue
+        	    	taxonomy.NavigateSite("Home>>Run cron");
+            	    contentParent.VerifyMessageStatus("Cron ran successfully.");
+            	    taxonomy.NavigateSite("Content>>Files>>mpxPlayers");
+            	    searchFor.EnterTitle(playerTitle);
+                    searchFor.ClickApplyBtn();
+                    if (!searchFor.GetFirstMPXPlayerSearchResult().equals(playerTitle)) {
+            	    	Assert.fail("MPX Player has not been successfully ingested into pub 7."); 
+            	    }
         	    }
                 
         	    //Step 2a
@@ -130,7 +141,7 @@ public class NotificationPlayerUnavailability extends ParentTest{
             	mpxAddPlayer.GiveFocusToPlayerItem();
             	mpxAddPlayer.ClickDisablePlayerCbx();
             	mpxAddPlayer.ClickSaveBtn();
-            	Thread.sleep(10000); //TODO - long pause necessary as mpx processes player
+            	Thread.sleep(5000); //TODO - long pause necessary as mpx processes player
             	
             	//Step 4
             	applib.openApplication();
