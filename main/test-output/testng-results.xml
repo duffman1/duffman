@@ -8,7 +8,7 @@
       <![CDATA[Environment: PROD]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://qa5stg.publisher.nbcuni.com'.]]>
+      <![CDATA[Open url 'http://qa5dev.publisher.nbcuni.com'.]]>
     </line>
     <line>
       <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
@@ -20,25 +20,34 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
+      <![CDATA[Click the 'Modules' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to frame titled 'Modules'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Logo Manager' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the module titled 'Logo Manager' to appear in the list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
       <![CDATA[Mouse over the 'Content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Add content' menu link.]]>
+      <![CDATA[Mouse over the 'Logos' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Character Profile' menu link.]]>
+      <![CDATA[Click the 'Add Logo' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Create Character Profile dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'Add Logo dialog'.]]>
     </line>
     <line>
-      <![CDATA[Enter '527d1c2279ed44a' in the 'Character First Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the Cover Photo 'Select' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the select file frame.]]>
+      <![CDATA[Enter '1348971ce983469' in the 'Title' text box.]]>
     </line>
     <line>
       <![CDATA[Enter the file path for file upload.]]>
@@ -50,51 +59,132 @@
       <![CDATA[Wait for the file link to be visible after upload.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Assert the file image 'HanSolo' is present.]]>
+      <![CDATA[Assert the file image 'nbclogosmall' is present.]]>
     </line>
     <line>
       <![CDATA[Assert the the img is loaded and visible.]]>
     </line>
     <line>
+      <![CDATA[Enter '2014-02-20' in the 'Start Date' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '06:02:01 PM' in the 'Start Time' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '2014-02-20' in the 'End Date' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '06:02:46 PM' in the 'End Time' text box.]]>
+    </line>
+    <line>
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Switch to frame titled 'Create Character Profile'.]]>
+      <![CDATA[Switch to the active frame titled 'Manage Logo dialog'.]]>
     </line>
     <line>
-      <![CDATA[Assert that img source of the Cover Photo contains 'HanSolo'.]]>
+      <![CDATA[Verify the text '1348971ce983469' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'Thu, 02/20/2014 - 18:02' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'Thu, 02/20/2014 - 18:02' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Assert the file image 'nbclogosmall' is present.]]>
     </line>
     <line>
       <![CDATA[Assert the the img is loaded and visible.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save' button.]]>
+      <![CDATA[Click the 'Close Overlay X'.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'Character Profile 527d1c2279ed44a has been created.' is present.]]>
+      <![CDATA[Switch to the active frame titled 'Status report dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Cron ran successfully.' is present.]]>
     </line>
     <line>
       <![CDATA[Verify there are no errors present.]]>
     </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Assert the file image 'nbclogosmall' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Assert the the img is loaded and visible.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Status report dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Cron ran successfully.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify there are no errors present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Assert the file image 'logo' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Assert the the img is loaded and visible.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Logos' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Manage Logo dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Edit' extend menu button for logo titled '1348971ce983469'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Delete' button for logo titled '1348971ce983469'.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Are you sure you want to delete this logo? dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Delete' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Manage Logo dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Logo has been deleted successfully.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify there are no errors present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text '1348971ce983469' is NOT present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'Thu, 02/20/2014 - 18:02' is NOT present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'Thu, 02/20/2014 - 18:02' is NOT present on the page.]]>
+    </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="38571" started-at="2014-02-19T20:39:54Z" finished-at="2014-02-19T20:40:33Z">
+  <suite name="Default suite" duration-ms="115541" started-at="2014-02-20T18:01:20Z" finished-at="2014-02-20T18:03:16Z">
     <groups>
       <group name="full">
-        <method signature="CreateCharacterProfile.CreateCharacterProfile_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@2c766a24]" name="CreateCharacterProfile_Test" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile"/>
+        <method signature="LogoExceptionAppearsAttemptCreateLogo.LogoExceptionAppearsAttemptCreateLogo_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.Logo.LogoExceptionAppearsAttemptCreateLogo@4c331059]" name="LogoExceptionAppearsAttemptCreateLogo_Test" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.Logo.LogoExceptionAppearsAttemptCreateLogo"/>
       </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="38571" started-at="2014-02-19T20:39:54Z" finished-at="2014-02-19T20:40:33Z">
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile">
-        <test-method status="PASS" signature="startSelenium(java.lang.String)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@2c766a24]" name="startSelenium" is-config="true" duration-ms="13698" started-at="2014-02-19T15:39:54Z" finished-at="2014-02-19T15:40:08Z">
+    <test name="Default test" duration-ms="115541" started-at="2014-02-20T18:01:20Z" finished-at="2014-02-20T18:03:16Z">
+      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.Logo.LogoExceptionAppearsAttemptCreateLogo">
+        <test-method status="PASS" signature="startSelenium(java.lang.String)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.Logo.LogoExceptionAppearsAttemptCreateLogo@4c331059]" name="startSelenium" is-config="true" duration-ms="13609" started-at="2014-02-20T13:01:20Z" finished-at="2014-02-20T13:01:34Z">
           <params>
             <param index="0">
               <value>
@@ -111,10 +201,10 @@
             </line>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="CreateCharacterProfile_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@2c766a24]" name="CreateCharacterProfile_Test" duration-ms="24285" started-at="2014-02-19T15:40:08Z" finished-at="2014-02-19T15:40:32Z">
+        <test-method status="PASS" signature="LogoExceptionAppearsAttemptCreateLogo_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.Logo.LogoExceptionAppearsAttemptCreateLogo@4c331059]" name="LogoExceptionAppearsAttemptCreateLogo_Test" duration-ms="101349" started-at="2014-02-20T13:01:34Z" finished-at="2014-02-20T13:03:15Z">
           <reporter-output>
             <line>
-              <![CDATA[Open url 'http://qa5stg.publisher.nbcuni.com'.]]>
+              <![CDATA[Open url 'http://qa5dev.publisher.nbcuni.com'.]]>
             </line>
             <line>
               <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
@@ -126,25 +216,34 @@
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
+              <![CDATA[Click the 'Modules' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to frame titled 'Modules'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Logo Manager' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the module titled 'Logo Manager' to appear in the list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
               <![CDATA[Mouse over the 'Content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Add content' menu link.]]>
+              <![CDATA[Mouse over the 'Logos' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Character Profile' menu link.]]>
+              <![CDATA[Click the 'Add Logo' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create Character Profile dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'Add Logo dialog'.]]>
             </line>
             <line>
-              <![CDATA[Enter '527d1c2279ed44a' in the 'Character First Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the Cover Photo 'Select' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the select file frame.]]>
+              <![CDATA[Enter '1348971ce983469' in the 'Title' text box.]]>
             </line>
             <line>
               <![CDATA[Enter the file path for file upload.]]>
@@ -156,55 +255,136 @@
               <![CDATA[Wait for the file link to be visible after upload.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Public Local Files' radio button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Assert the file image 'HanSolo' is present.]]>
+              <![CDATA[Assert the file image 'nbclogosmall' is present.]]>
             </line>
             <line>
               <![CDATA[Assert the the img is loaded and visible.]]>
             </line>
             <line>
+              <![CDATA[Enter '2014-02-20' in the 'Start Date' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '06:02:01 PM' in the 'Start Time' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '2014-02-20' in the 'End Date' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '06:02:46 PM' in the 'End Time' text box.]]>
+            </line>
+            <line>
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Switch to frame titled 'Create Character Profile'.]]>
+              <![CDATA[Switch to the active frame titled 'Manage Logo dialog'.]]>
             </line>
             <line>
-              <![CDATA[Assert that img source of the Cover Photo contains 'HanSolo'.]]>
+              <![CDATA[Verify the text '1348971ce983469' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Thu, 02/20/2014 - 18:02' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Thu, 02/20/2014 - 18:02' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Assert the file image 'nbclogosmall' is present.]]>
             </line>
             <line>
               <![CDATA[Assert the the img is loaded and visible.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save' button.]]>
+              <![CDATA[Click the 'Close Overlay X'.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'Character Profile 527d1c2279ed44a has been created.' is present.]]>
+              <![CDATA[Switch to the active frame titled 'Status report dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Cron ran successfully.' is present.]]>
             </line>
             <line>
               <![CDATA[Verify there are no errors present.]]>
             </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Assert the file image 'nbclogosmall' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Assert the the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Status report dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Cron ran successfully.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify there are no errors present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Assert the file image 'logo' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Assert the the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Logos' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Manage Logo dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Edit' extend menu button for logo titled '1348971ce983469'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Delete' button for logo titled '1348971ce983469'.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Are you sure you want to delete this logo? dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Delete' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Manage Logo dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Logo has been deleted successfully.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify there are no errors present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text '1348971ce983469' is NOT present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Thu, 02/20/2014 - 18:02' is NOT present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Thu, 02/20/2014 - 18:02' is NOT present on the page.]]>
+            </line>
           </reporter-output>
-        </test-method> <!-- CreateCharacterProfile_Test -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@2c766a24]" name="stopSelenium" is-config="true" duration-ms="574" started-at="2014-02-19T15:40:32Z" finished-at="2014-02-19T15:40:33Z">
+        </test-method> <!-- LogoExceptionAppearsAttemptCreateLogo_Test -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.Logo.LogoExceptionAppearsAttemptCreateLogo@4c331059]" name="stopSelenium" is-config="true" duration-ms="570" started-at="2014-02-20T13:03:15Z" finished-at="2014-02-20T13:03:16Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=CreateCharacterProfile_Test status=SUCCESS method=CreateCharacterProfile.CreateCharacterProfile_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@2c766a24] output=Open url 'http://qa5stg.publisher.nbcuni.com'.]]]>
+                <![CDATA[[TestResult name=LogoExceptionAppearsAttemptCreateLogo_Test status=SUCCESS method=LogoExceptionAppearsAttemptCreateLogo.LogoExceptionAppearsAttemptCreateLogo_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.Logo.LogoExceptionAppearsAttemptCreateLogo@4c331059] output=Open url 'http://qa5dev.publisher.nbcuni.com'.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile -->
+      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.Logo.LogoExceptionAppearsAttemptCreateLogo -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

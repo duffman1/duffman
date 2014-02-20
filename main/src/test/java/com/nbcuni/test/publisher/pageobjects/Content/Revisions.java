@@ -77,6 +77,7 @@ public class Revisions {
     	Reporter.log("Click the 'Delete' button.");
     	EditMenuDelete_Btn(contentItemTtl).click();
     }
+    
     public void ClickEditMenuBtn(String contentItemTtl) throws Exception {
     	
     	Reporter.log("Click the 'Edit' menu button.");

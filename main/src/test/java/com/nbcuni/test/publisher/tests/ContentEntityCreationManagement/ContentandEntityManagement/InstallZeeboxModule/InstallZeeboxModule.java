@@ -4,10 +4,7 @@ import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Content.*;
-
-import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
-
 import java.util.Arrays;
 
 public class InstallZeeboxModule extends ParentTest{
@@ -28,12 +25,10 @@ public class InstallZeeboxModule extends ParentTest{
          
         	//Step 1
         	UserLogin userLogin = applib.openApplication();
-        	PageFactory.initElements(webDriver, userLogin);
-            userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+        	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
             
             //Step 2 and 3
             Modules modules = new Modules(webDriver, applib);
-            PageFactory.initElements(webDriver, modules);
             modules.VerifyModuleEnabled("zeebox Example");
             
             //Step 4
@@ -41,7 +36,6 @@ public class InstallZeeboxModule extends ParentTest{
             
             //Step 5
             ContentParent contentParent = new ContentParent(webDriver, applib);
-            PageFactory.initElements(webDriver, contentParent);
             contentParent.VerifyPageContentPresent(Arrays.asList("Zeebox Follow Button example block",
             		"Zeebox Play-along example block",
             			"Zeebox Hot TV Rooms example block",
