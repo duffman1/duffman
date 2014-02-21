@@ -1,13 +1,16 @@
 package com.nbcuni.test.publisher.pageobjects.Content;
 
 import java.util.concurrent.TimeUnit;
+
 import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.webdriver.CustomWebDriver;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.Reporter;
 
@@ -43,6 +46,9 @@ public class Revisions {
 	@FindBy(how = How.ID, using = "edit-submit")
     private static WebElement DeleteRevision_Btn;
     
+	@FindBy(how = How.ID, using = "edit-event")
+    private static WebElement ChangeState_Ddl;
+	
 	private static WebElement ContentItem_Ttl(String contentItemTtl) {
 		return webDriver.findElement(By.xpath("//table[contains(@class, 'views-table')]//a[contains(text(), '" + contentItemTtl + "')]"));
 	}
@@ -148,7 +154,11 @@ public class Revisions {
     	DeleteRevision_Btn.click();
     }
     
-    
+    public void SelectChangeState(String stateName) throws Exception {
+        
+        Reporter.log("Select '" + stateName + "' from the 'Change State' drop down list.");
+        new Select(ChangeState_Ddl).selectByVisibleText(stateName);
+    }
     
 }
 
