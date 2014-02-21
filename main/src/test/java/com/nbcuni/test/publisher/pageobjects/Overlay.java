@@ -63,6 +63,7 @@ public class Overlay {
     public void SwitchToActiveFrame() throws Exception {
     	
     	this.switchToDefaultContent();
+    	Thread.sleep(250); //slight pause to help ensure frame switch occurs to a new frame and not the old.
     	Reporter.log("Switch to the active frame titled '" + ActiveFrame_Frm.getAttribute("title") + "'.");
     	webDriver.switchTo().frame(ActiveFrame_Frm);
     }

@@ -95,7 +95,6 @@ public class CastCrewFieldCollectionsVerification_TVEpisode extends ParentTest {
         basicInformation.EnterTitle(TVEpisodeName);
         basicInformation.EnterEpisodeNumber("1");
     	basicInformation.EnterSynopsis();       
-        overlay.switchToDefaultContent();
         overlay.SwitchToActiveFrame(); 
       
         //Step 6
@@ -106,7 +105,6 @@ public class CastCrewFieldCollectionsVerification_TVEpisode extends ParentTest {
         castCrew.SelectRole("Character", "1");
         castCrew.VerifyCharacterTxbDisplayed();
         castCrew.EnterCharacterName(Characters.get(0), "1");
-        overlay.switchToDefaultContent();
         overlay.SwitchToActiveFrame();
         basicInformation.ClickBasicInformationTab();
       
@@ -115,16 +113,13 @@ public class CastCrewFieldCollectionsVerification_TVEpisode extends ParentTest {
         overlay.switchToDefaultContent();
         WorkBench workBench = new WorkBench(webDriver, applib);
         workBench.ClickWorkBenchTab("Revisions");
-        overlay.switchToDefaultContent();
         overlay.SwitchToActiveFrame();
         Revisions revisions = new Revisions(webDriver, applib);
         revisions.ClickEditMenuBtn(TVEpisodeName);
-        overlay.switchToDefaultContent();
         overlay.SwitchToActiveFrame();
         PublishingOptions publishingOptions = new PublishingOptions(webDriver);
         publishingOptions.ClickPublishingOptionsLnk();  
         publishingOptions.VerifyCreateNewRevisionCbxChecked();       
-        overlay.switchToDefaultContent();
         overlay.SwitchToActiveFrame();
         castCrew.ClickCastCrewLnk();
         //Verify old cast/crew data
@@ -134,14 +129,12 @@ public class CastCrewFieldCollectionsVerification_TVEpisode extends ParentTest {
         //Add  Cast/Crew number : 2
         castCrew.ClickAddAnotherItemBtn();
         castCrew.EnterPersonName(Persons.get(1), "2");
-        overlay.switchToDefaultContent();
         overlay.SwitchToActiveFrame();
         castCrew.SelectRole("Character", "2");
         castCrew.VerifyCharacterTxbDisplayed();
         castCrew.EnterCharacterName(Characters.get(1), "2");
         
         //Change Movie Title
-        overlay.switchToDefaultContent();
         overlay.SwitchToActiveFrame();
         basicInformation.ClickBasicInformationTab();
         String TVEpisodeName2 = random.GetCharacterString(15);        
@@ -151,14 +144,11 @@ public class CastCrewFieldCollectionsVerification_TVEpisode extends ParentTest {
         //Step 8
         overlay.switchToDefaultContent();        
         workBench.ClickWorkBenchTab("Revisions");
-        overlay.switchToDefaultContent();
         overlay.SwitchToActiveFrame();
         revisions.ClickEditMenuBtn(TVEpisodeName2);
-        overlay.switchToDefaultContent();
         overlay.SwitchToActiveFrame();
         publishingOptions.ClickPublishingOptionsLnk();
         publishingOptions.VerifyCreateNewRevisionCbxChecked();
-        overlay.switchToDefaultContent();
         overlay.SwitchToActiveFrame();
         castCrew.ClickCastCrewLnk();
         //Verify old cast/crew data
@@ -175,7 +165,6 @@ public class CastCrewFieldCollectionsVerification_TVEpisode extends ParentTest {
         castCrew.VerifyCharacterTxbDisplayed();
         castCrew.EnterCharacterName(Characters.get(2), "3");
         //Change Movie Title 3
-        overlay.switchToDefaultContent();
         overlay.SwitchToActiveFrame();
         basicInformation.ClickBasicInformationTab();
         String TVEpisodeName3 = random.GetCharacterString(15);        
@@ -185,18 +174,14 @@ public class CastCrewFieldCollectionsVerification_TVEpisode extends ParentTest {
         //Step 9
         overlay.switchToDefaultContent();        
         workBench.ClickWorkBenchTab("Revisions");
-        overlay.switchToDefaultContent();
         overlay.SwitchToActiveFrame();
         revisions.ClickEditExtendMenuBtn(TVEpisodeName2);
         revisions.ClickEditMenuDeleteBtn(TVEpisodeName2);
-        overlay.switchToDefaultContent();
         overlay.SwitchToActiveFrame();
         revisions.ClickDeleteConfirmBtn();
-        overlay.switchToDefaultContent();
         overlay.SwitchToActiveFrame();
         //Click on Movie 3- Edit
         revisions.ClickEditMenuBtn(TVEpisodeName3);
-        overlay.switchToDefaultContent();
         overlay.SwitchToActiveFrame();
         contentParent.VerifyPageContentNotPresent(Arrays.asList("Notice: Trying to get property of non-object in field_collection_field_get_entity() (line 1608 of /mnt/www/html/nbcuqa5dev/docroot/profiles/all/modules/contrib/field_collection/field_collection.module)"));
         //Verify All 3 Cast/Crew data

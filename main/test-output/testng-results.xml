@@ -8,7 +8,7 @@
       <![CDATA[Environment: PROD]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://qa5dev.publisher.nbcuni.com'.]]>
+      <![CDATA[Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.]]>
     </line>
     <line>
       <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
@@ -20,217 +20,469 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Configuration' menu link.]]>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Media' menu link.]]>
+      <![CDATA[Mouse over the 'Add content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Media: thePlatform mpx settings' menu link.]]>
+      <![CDATA[Click the 'Character Profile' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to frame titled 'Media: thePlatform mpx settings dialog'.]]>
+      <![CDATA[Switch to frame titled 'Create Character Profile'.]]>
     </line>
     <line>
-      <![CDATA[Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.]]>
+      <![CDATA[Enter 'CharacterName91dc6c0a35' in the 'Character First Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Get all the selected import account options and store to a list.]]>
+      <![CDATA[Click the Cover Photo 'Select' button.]]>
     </line>
     <line>
-      <![CDATA[Open the mpx platform.]]>
+      <![CDATA[Switch to the select file frame.]]>
     </line>
     <line>
-      <![CDATA[Enter 'mpx/AdminPub7QA' in the 'Username' text box.]]>
+      <![CDATA[Enter the file path for file upload.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Pa55word' in the 'Password' text box.]]>
+      <![CDATA[Click the 'Upload' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Login' button.]]>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
     </line>
     <line>
-      <![CDATA[Enter the account name 'DB TV' in the account select text box.]]>
+      <![CDATA[Click the 'Next' button.]]>
     </line>
     <line>
-      <![CDATA[Click the account option from the drop down list.]]>
+      <![CDATA[Click the 'Public Local Files' radio button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Account' title to leave focus off of the selection.]]>
+      <![CDATA[Click the 'Next' button.]]>
     </line>
     <line>
-      <![CDATA[Wait for account to switch to the newly selected account.]]>
+      <![CDATA[Assert the file image 'HanSolo' is present.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Players' link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'All Players' link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Add' button.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'AutomationPlayer8574886ddb' in the 'Title' text box.]]>
+      <![CDATA[Assert the the img is loaded and visible.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://qa5dev.publisher.nbcuni.com'.]]>
+      <![CDATA[Switch to frame titled 'Create Character Profile'.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Content' menu link.]]>
+      <![CDATA[Assert that img source of the Cover Photo contains 'HanSolo'.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Files' menu link.]]>
+      <![CDATA[Assert the the img is loaded and visible.]]>
     </line>
     <line>
-      <![CDATA[Click the 'mpxPlayers' menu link.]]>
+      <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Switch to frame titled 'Content'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Sync MPX Players' link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Sync MPX Players Now' link.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'players returned for account' is present.]]>
+      <![CDATA[Verify success message of 'Character Profile CharacterName91dc6c0a35 has been created.' is present.]]>
     </line>
     <line>
       <![CDATA[Verify there are no errors present.]]>
     </line>
     <line>
-      <![CDATA[Enter title AutomationPlayer8574886ddb.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Apply' button.]]>
-    </line>
-    <line>
-      <![CDATA[Get the text of the first search result set item.]]>
-    </line>
-    <line>
       <![CDATA[Mouse over the 'Content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Files' menu link.]]>
+      <![CDATA[Mouse over the 'Add content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'mpxMedia' menu link.]]>
+      <![CDATA[Click the 'Character Profile' menu link.]]>
     </line>
     <line>
-      <![CDATA[Enter title Automation.]]>
+      <![CDATA[Switch to frame titled 'Create Character Profile'.]]>
     </line>
     <line>
-      <![CDATA[Select the 'Published' from the 'MPX Status' select ddl.]]>
+      <![CDATA[Enter 'CharacterName34f7d978ad' in the 'Character First Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Select the DB TV from the 'Source' select ddl.]]>
+      <![CDATA[Click the Cover Photo 'Select' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Apply' button.]]>
+      <![CDATA[Switch to the select file frame.]]>
     </line>
     <line>
-      <![CDATA[Get the text of the first search result set item.]]>
+      <![CDATA[Enter the file path for file upload.]]>
     </line>
     <line>
-      <![CDATA[Click the first search title link in the search result set.]]>
+      <![CDATA[Click the 'Upload' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Edit' in the work bench.]]>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Edit mpx_video_7 Automationca1c21746c dialog'.]]>
+      <![CDATA[Click the 'Next' button.]]>
     </line>
     <line>
-      <![CDATA[Select 'AutomationPlayer8574886ddb' from the 'Video Player' drop down list.]]>
+      <![CDATA[Click the 'Public Local Files' radio button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save' button.]]>
+      <![CDATA[Click the 'Next' button.]]>
     </line>
     <line>
-      <![CDATA[Open the mpx platform.]]>
+      <![CDATA[Assert the file image 'HanSolo' is present.]]>
     </line>
     <line>
-      <![CDATA[Enter the account name 'DB TV' in the account select text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the account option from the drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Account' title to leave focus off of the selection.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for account to switch to the newly selected account.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Players' link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'All Players' link.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'AutomationPlayer8574886ddb' in the 'Player Search' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Search by Players Title' link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Player Title' label to give focus to the player item.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Disable Player' check box.]]>
+      <![CDATA[Assert the the img is loaded and visible.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://qa5dev.publisher.nbcuni.com'.]]>
+      <![CDATA[Switch to frame titled 'Create Character Profile'.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Status report dialog'.]]>
+      <![CDATA[Assert that img source of the Cover Photo contains 'HanSolo'.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'Cron ran successfully.' is present.]]>
+      <![CDATA[Assert the the img is loaded and visible.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Character Profile CharacterName34f7d978ad has been created.' is present.]]>
     </line>
     <line>
       <![CDATA[Verify there are no errors present.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Add content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Character Profile' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to frame titled 'Create Character Profile'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'CharacterNamed9b90a32d2' in the 'Character First Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the Cover Photo 'Select' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the select file frame.]]>
+    </line>
+    <line>
+      <![CDATA[Enter the file path for file upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Upload' button.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Public Local Files' radio button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Assert the file image 'HanSolo' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Assert the the img is loaded and visible.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to frame titled 'Create Character Profile'.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that img source of the Cover Photo contains 'HanSolo'.]]>
+    </line>
+    <line>
+      <![CDATA[Assert the the img is loaded and visible.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Character Profile CharacterNamed9b90a32d2 has been created.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify there are no errors present.]]>
     </line>
     <line>
       <![CDATA[Mouse over the 'Content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Files' menu link.]]>
+      <![CDATA[Mouse over the 'Add content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'mpxPlayers' menu link.]]>
+      <![CDATA[Click the 'Person' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+      <![CDATA[Switch to frame titled 'Create Person'.]]>
     </line>
     <line>
-      <![CDATA[Verify that the disabled player text is present for player titled 'AutomationPlayer8574886ddb'.]]>
+      <![CDATA[Enter 'PersonName49ab077bf9' in the 'First name' text box.]]>
     </line>
     <line>
-      <![CDATA[Enter title AutomationPlayer8574886ddb.]]>
+      <![CDATA[Enter a random block of text in the 'Biography' text area.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Apply' button.]]>
+      <![CDATA[Switch to frame titled 'Create Person'.]]>
     </line>
     <line>
-      <![CDATA[Click the first search title link in the search result set.]]>
+      <![CDATA[Click the 'Cover Photo' Select button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Edit' in the work bench.]]>
+      <![CDATA[Switch to the select file frame.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Edit mpx_player AutomationPlayer8574886ddb dialog'.]]>
+      <![CDATA[Enter the file path for file upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Upload' button.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Public Local Files' radio button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Assert the file image 'HanSolo' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Assert the the img is loaded and visible.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to frame titled 'Create Person'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Person PersonName49ab077bf9 has been created.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify there are no errors present.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Add content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Person' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to frame titled 'Create Person'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'PersonName0db1617d55' in the 'First name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter a random block of text in the 'Biography' text area.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to frame titled 'Create Person'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Cover Photo' Select button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the select file frame.]]>
+    </line>
+    <line>
+      <![CDATA[Enter the file path for file upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Upload' button.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Public Local Files' radio button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Assert the file image 'HanSolo' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Assert the the img is loaded and visible.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to frame titled 'Create Person'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Person PersonName0db1617d55 has been created.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify there are no errors present.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Add content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Person' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to frame titled 'Create Person'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'PersonNamec41acac792' in the 'First name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter a random block of text in the 'Biography' text area.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to frame titled 'Create Person'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Cover Photo' Select button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the select file frame.]]>
+    </line>
+    <line>
+      <![CDATA[Enter the file path for file upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Upload' button.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Public Local Files' radio button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Assert the file image 'HanSolo' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Assert the the img is loaded and visible.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to frame titled 'Create Person'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Person PersonNamec41acac792 has been created.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify there are no errors present.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Add content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'TV Episode' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create TV Episode dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '1e0b17000c4a4ea' in the 'Title' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '1' in the 'Episode Number' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the Synopsis frame.]]>
+    </line>
+    <line>
+      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create TV Episode dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Cast/Crew' link.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'PersonName49ab077bf9' in the Person text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'PersonName49ab077bf9' from the auto complete option list.]]>
+    </line>
+    <line>
+      <![CDATA[Select the 'Character' from the 'Role' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that the 'Character' text box is displayed.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'CharacterName91dc6c0a35' in the 'Character' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'CharacterName91dc6c0a35' from the auto complete option list.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create TV Episode dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Revisions' in the work bench.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Revisions dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Edit' menu button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Edit TV Episode 1e0b17000c4a4ea dialog'.]]>
     </line>
     <line>
       <![CDATA[Scroll the 'Publishing Options' link into view.]]>
@@ -239,64 +491,70 @@
       <![CDATA[Click the 'Publishing Options' link.]]>
     </line>
     <line>
-      <![CDATA[Uncheck the 'Published' checkbox]]>
+      <![CDATA[Verify the 'Create New Revision' checkbox is checked.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Edit TV Episode 1e0b17000c4a4ea dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Cast/Crew' link.]]>
+    </line>
+    <line>
+      <![CDATA[Assert the value of the 'Person' text box equals 'PersonName49ab077bf9'.]]>
+    </line>
+    <line>
+      <![CDATA[Assert the value of the 'Character' text box equals 'CharacterName91dc6c0a35'.]]>
+    </line>
+    <line>
+      <![CDATA[Assert the value of the 'Role' drop down list equals 'Character'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Add Another Item' button.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'PersonName0db1617d55' in the Person text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'PersonName0db1617d55' from the auto complete option list.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Edit TV Episode 1e0b17000c4a4ea dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Select the 'Character' from the 'Role' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that the 'Character' text box is displayed.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'CharacterName34f7d978ad' in the 'Character' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'CharacterName34f7d978ad' from the auto complete option list.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Edit TV Episode 1e0b17000c4a4ea dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'e38bf9670faa467' in the 'Title' text box.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'MPX Player AutomationPlayer8574886ddb has been updated.' is present.]]>
+      <![CDATA[Click the 'Revisions' in the work bench.]]>
     </line>
     <line>
-      <![CDATA[Verify there are no errors present.]]>
+      <![CDATA[Switch to the active frame titled 'Revisions dialog'.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Content' menu link.]]>
+      <![CDATA[Click the 'Edit' menu button.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Files' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'mpxPlayers' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that the disabled and unpublished player text is present for player titled 'AutomationPlayer8574886ddb'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'MPX Media' link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that the disabled and unpublished player text is present for player titled 'AutomationPlayer8574886ddb'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Configuration' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Media' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Media: thePlatform mpx settings' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that the disabled and unpublished player text is present for player titled 'AutomationPlayer8574886ddb'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'click here' link for the unpublished player titled 'AutomationPlayer8574886ddb'.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Edit mpx_player AutomationPlayer8574886ddb dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'Edit TV Episode e38bf9670faa467 dialog'.]]>
     </line>
     <line>
       <![CDATA[Scroll the 'Publishing Options' link into view.]]>
@@ -305,132 +563,135 @@
       <![CDATA[Click the 'Publishing Options' link.]]>
     </line>
     <line>
-      <![CDATA[Check the 'Published' checkbox]]>
+      <![CDATA[Verify the 'Create New Revision' checkbox is checked.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Edit TV Episode e38bf9670faa467 dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Cast/Crew' link.]]>
+    </line>
+    <line>
+      <![CDATA[Assert the value of the 'Person' text box equals 'PersonName49ab077bf9'.]]>
+    </line>
+    <line>
+      <![CDATA[Assert the value of the 'Character' text box equals 'CharacterName91dc6c0a35'.]]>
+    </line>
+    <line>
+      <![CDATA[Assert the value of the 'Role' drop down list equals 'Character'.]]>
+    </line>
+    <line>
+      <![CDATA[Assert the value of the 'Person' text box equals 'PersonName0db1617d55'.]]>
+    </line>
+    <line>
+      <![CDATA[Assert the value of the 'Role' drop down list equals 'Character'.]]>
+    </line>
+    <line>
+      <![CDATA[Assert the value of the 'Character' text box equals 'CharacterName34f7d978ad'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Add Another Item' button.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'PersonNamec41acac792' in the Person text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'PersonNamec41acac792' from the auto complete option list.]]>
+    </line>
+    <line>
+      <![CDATA[Select the 'Character' from the 'Role' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that the 'Character' text box is displayed.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'CharacterNamed9b90a32d2' in the 'Character' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'CharacterNamed9b90a32d2' from the auto complete option list.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Edit TV Episode e38bf9670faa467 dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'e71cc872f60b4f0' in the 'Title' text box.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Content' menu link.]]>
+      <![CDATA[Click the 'Revisions' in the work bench.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Files' menu link.]]>
+      <![CDATA[Switch to the active frame titled 'Revisions dialog'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'mpxPlayers' menu link.]]>
+      <![CDATA[Click the 'Edit' extend menu button.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+      <![CDATA[Click the 'Delete' button.]]>
     </line>
     <line>
-      <![CDATA[Verify that the disabled player text is present for player titled 'AutomationPlayer8574886ddb'.]]>
+      <![CDATA[Switch to the active frame titled 'Are you sure you want to delete the revision from Fri, 02/21/2014 - 15:18? dialog'.]]>
     </line>
     <line>
-      <![CDATA[Click the MPX 'Login' link for the unpublished player 'AutomationPlayer8574886ddb'.]]>
+      <![CDATA[Click the 'Confirm Delete' button.]]>
     </line>
     <line>
-      <![CDATA[Enter the account name 'DB TV' in the account select text box.]]>
+      <![CDATA[Switch to the active frame titled 'Revisions dialog'.]]>
     </line>
     <line>
-      <![CDATA[Click the account option from the drop down list.]]>
+      <![CDATA[Click the 'Edit' menu button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Account' title to leave focus off of the selection.]]>
+      <![CDATA[Switch to the active frame titled 'Edit TV Episode e71cc872f60b4f0 dialog'.]]>
     </line>
     <line>
-      <![CDATA[Wait for account to switch to the newly selected account.]]>
+      <![CDATA[Verify the text 'Notice: Trying to get property of non-object in field_collection_field_get_entity() (line 1608 of /mnt/www/html/nbcuqa5dev/docroot/profiles/all/modules/contrib/field_collection/field_collection.module)' is NOT present on the page.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Players' link.]]>
+      <![CDATA[Click the 'Cast/Crew' link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'All Players' link.]]>
+      <![CDATA[Assert the value of the 'Person' text box equals 'PersonName49ab077bf9'.]]>
     </line>
     <line>
-      <![CDATA[Enter 'AutomationPlayer8574886ddb' in the 'Player Search' text box.]]>
+      <![CDATA[Assert the value of the 'Character' text box equals 'CharacterName91dc6c0a35'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Search by Players Title' link.]]>
+      <![CDATA[Assert the value of the 'Role' drop down list equals 'Character'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Player Title' label to give focus to the player item.]]>
+      <![CDATA[Assert the value of the 'Person' text box equals 'PersonName0db1617d55'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Disable Player' check box.]]>
+      <![CDATA[Assert the value of the 'Role' drop down list equals 'Character'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save' button.]]>
+      <![CDATA[Assert the value of the 'Character' text box equals 'CharacterName34f7d978ad'.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+      <![CDATA[Assert the value of the 'Person' text box equals 'PersonNamec41acac792'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
+      <![CDATA[Assert the value of the 'Role' drop down list equals 'Character'.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Status report dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Cron ran successfully.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify there are no errors present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Files' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'mpxPlayers' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'An MPXplayer that's in use (AutomationPlayer8574886ddb) has been disabled in MPX.' is NOT present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Status report dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Cron ran successfully.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify there are no errors present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Files' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'mpxPlayers' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'An MPXplayer that's in use (AutomationPlayer8574886ddb) has been disabled in MPX.' is NOT present on the page.]]>
+      <![CDATA[Assert the value of the 'Character' text box equals 'CharacterNamed9b90a32d2'.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="352645" started-at="2014-02-20T21:48:14Z" finished-at="2014-02-20T21:54:06Z">
+  <suite name="Default suite" duration-ms="111574" started-at="2014-02-21T15:17:23Z" finished-at="2014-02-21T15:19:14Z">
     <groups>
-      <group name="mpx">
-        <method signature="NotificationPlayerUnavailability.NotificationPlayerUnavailability_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability@eabce30]" name="NotificationPlayerUnavailability_Test" class="com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability"/>
-      </group> <!-- mpx -->
       <group name="full">
-        <method signature="NotificationPlayerUnavailability.NotificationPlayerUnavailability_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability@eabce30]" name="NotificationPlayerUnavailability_Test" class="com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability"/>
+        <method signature="CastCrewFieldCollectionsVerification_TVEpisode.CastCrewFieldCollectionsVerificationTVEpisode_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.CastCrewFieldCollectionsVerification_TVEpisode@41683cc5]" name="CastCrewFieldCollectionsVerificationTVEpisode_Test" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.CastCrewFieldCollectionsVerification_TVEpisode"/>
       </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="352645" started-at="2014-02-20T21:48:14Z" finished-at="2014-02-20T21:54:06Z">
-      <class name="com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability">
-        <test-method status="PASS" signature="startSelenium(java.lang.String)[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability@eabce30]" name="startSelenium" is-config="true" duration-ms="13735" started-at="2014-02-20T16:48:14Z" finished-at="2014-02-20T16:48:28Z">
+    <test name="Default test" duration-ms="111574" started-at="2014-02-21T15:17:23Z" finished-at="2014-02-21T15:19:14Z">
+      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.CastCrewFieldCollectionsVerification_TVEpisode">
+        <test-method status="PASS" signature="startSelenium(java.lang.String)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.CastCrewFieldCollectionsVerification_TVEpisode@41683cc5]" name="startSelenium" is-config="true" duration-ms="13803" started-at="2014-02-21T10:17:23Z" finished-at="2014-02-21T10:17:37Z">
           <params>
             <param index="0">
               <value>
@@ -447,10 +708,10 @@
             </line>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="NotificationPlayerUnavailability_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability@eabce30]" name="NotificationPlayerUnavailability_Test" duration-ms="338326" started-at="2014-02-20T16:48:28Z" finished-at="2014-02-20T16:54:06Z">
+        <test-method status="PASS" signature="CastCrewFieldCollectionsVerificationTVEpisode_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.CastCrewFieldCollectionsVerification_TVEpisode@41683cc5]" name="CastCrewFieldCollectionsVerificationTVEpisode_Test" duration-ms="97185" started-at="2014-02-21T10:17:37Z" finished-at="2014-02-21T10:19:14Z">
           <reporter-output>
             <line>
-              <![CDATA[Open url 'http://qa5dev.publisher.nbcuni.com'.]]>
+              <![CDATA[Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.]]>
             </line>
             <line>
               <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
@@ -462,217 +723,469 @@
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Configuration' menu link.]]>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Media' menu link.]]>
+              <![CDATA[Mouse over the 'Add content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Media: thePlatform mpx settings' menu link.]]>
+              <![CDATA[Click the 'Character Profile' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to frame titled 'Media: thePlatform mpx settings dialog'.]]>
+              <![CDATA[Switch to frame titled 'Create Character Profile'.]]>
             </line>
             <line>
-              <![CDATA[Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.]]>
+              <![CDATA[Enter 'CharacterName91dc6c0a35' in the 'Character First Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Get all the selected import account options and store to a list.]]>
+              <![CDATA[Click the Cover Photo 'Select' button.]]>
             </line>
             <line>
-              <![CDATA[Open the mpx platform.]]>
+              <![CDATA[Switch to the select file frame.]]>
             </line>
             <line>
-              <![CDATA[Enter 'mpx/AdminPub7QA' in the 'Username' text box.]]>
+              <![CDATA[Enter the file path for file upload.]]>
             </line>
             <line>
-              <![CDATA[Enter 'Pa55word' in the 'Password' text box.]]>
+              <![CDATA[Click the 'Upload' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Login' button.]]>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
             </line>
             <line>
-              <![CDATA[Enter the account name 'DB TV' in the account select text box.]]>
+              <![CDATA[Click the 'Next' button.]]>
             </line>
             <line>
-              <![CDATA[Click the account option from the drop down list.]]>
+              <![CDATA[Click the 'Public Local Files' radio button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Account' title to leave focus off of the selection.]]>
+              <![CDATA[Click the 'Next' button.]]>
             </line>
             <line>
-              <![CDATA[Wait for account to switch to the newly selected account.]]>
+              <![CDATA[Assert the file image 'HanSolo' is present.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Players' link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'All Players' link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Add' button.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'AutomationPlayer8574886ddb' in the 'Title' text box.]]>
+              <![CDATA[Assert the the img is loaded and visible.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Open url 'http://qa5dev.publisher.nbcuni.com'.]]>
+              <![CDATA[Switch to frame titled 'Create Character Profile'.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Content' menu link.]]>
+              <![CDATA[Assert that img source of the Cover Photo contains 'HanSolo'.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Files' menu link.]]>
+              <![CDATA[Assert the the img is loaded and visible.]]>
             </line>
             <line>
-              <![CDATA[Click the 'mpxPlayers' menu link.]]>
+              <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Switch to frame titled 'Content'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Sync MPX Players' link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Sync MPX Players Now' link.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'players returned for account' is present.]]>
+              <![CDATA[Verify success message of 'Character Profile CharacterName91dc6c0a35 has been created.' is present.]]>
             </line>
             <line>
               <![CDATA[Verify there are no errors present.]]>
             </line>
             <line>
-              <![CDATA[Enter title AutomationPlayer8574886ddb.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Apply' button.]]>
-            </line>
-            <line>
-              <![CDATA[Get the text of the first search result set item.]]>
-            </line>
-            <line>
               <![CDATA[Mouse over the 'Content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Files' menu link.]]>
+              <![CDATA[Mouse over the 'Add content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'mpxMedia' menu link.]]>
+              <![CDATA[Click the 'Character Profile' menu link.]]>
             </line>
             <line>
-              <![CDATA[Enter title Automation.]]>
+              <![CDATA[Switch to frame titled 'Create Character Profile'.]]>
             </line>
             <line>
-              <![CDATA[Select the 'Published' from the 'MPX Status' select ddl.]]>
+              <![CDATA[Enter 'CharacterName34f7d978ad' in the 'Character First Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Select the DB TV from the 'Source' select ddl.]]>
+              <![CDATA[Click the Cover Photo 'Select' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Apply' button.]]>
+              <![CDATA[Switch to the select file frame.]]>
             </line>
             <line>
-              <![CDATA[Get the text of the first search result set item.]]>
+              <![CDATA[Enter the file path for file upload.]]>
             </line>
             <line>
-              <![CDATA[Click the first search title link in the search result set.]]>
+              <![CDATA[Click the 'Upload' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Edit' in the work bench.]]>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Edit mpx_video_7 Automationca1c21746c dialog'.]]>
+              <![CDATA[Click the 'Next' button.]]>
             </line>
             <line>
-              <![CDATA[Select 'AutomationPlayer8574886ddb' from the 'Video Player' drop down list.]]>
+              <![CDATA[Click the 'Public Local Files' radio button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save' button.]]>
+              <![CDATA[Click the 'Next' button.]]>
             </line>
             <line>
-              <![CDATA[Open the mpx platform.]]>
+              <![CDATA[Assert the file image 'HanSolo' is present.]]>
             </line>
             <line>
-              <![CDATA[Enter the account name 'DB TV' in the account select text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the account option from the drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Account' title to leave focus off of the selection.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for account to switch to the newly selected account.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Players' link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'All Players' link.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'AutomationPlayer8574886ddb' in the 'Player Search' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Search by Players Title' link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Player Title' label to give focus to the player item.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Disable Player' check box.]]>
+              <![CDATA[Assert the the img is loaded and visible.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Open url 'http://qa5dev.publisher.nbcuni.com'.]]>
+              <![CDATA[Switch to frame titled 'Create Character Profile'.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Status report dialog'.]]>
+              <![CDATA[Assert that img source of the Cover Photo contains 'HanSolo'.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'Cron ran successfully.' is present.]]>
+              <![CDATA[Assert the the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Character Profile CharacterName34f7d978ad has been created.' is present.]]>
             </line>
             <line>
               <![CDATA[Verify there are no errors present.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Add content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Character Profile' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to frame titled 'Create Character Profile'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'CharacterNamed9b90a32d2' in the 'Character First Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the Cover Photo 'Select' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the select file frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter the file path for file upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Upload' button.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Public Local Files' radio button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Assert the file image 'HanSolo' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Assert the the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to frame titled 'Create Character Profile'.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that img source of the Cover Photo contains 'HanSolo'.]]>
+            </line>
+            <line>
+              <![CDATA[Assert the the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Character Profile CharacterNamed9b90a32d2 has been created.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify there are no errors present.]]>
             </line>
             <line>
               <![CDATA[Mouse over the 'Content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Files' menu link.]]>
+              <![CDATA[Mouse over the 'Add content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'mpxPlayers' menu link.]]>
+              <![CDATA[Click the 'Person' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+              <![CDATA[Switch to frame titled 'Create Person'.]]>
             </line>
             <line>
-              <![CDATA[Verify that the disabled player text is present for player titled 'AutomationPlayer8574886ddb'.]]>
+              <![CDATA[Enter 'PersonName49ab077bf9' in the 'First name' text box.]]>
             </line>
             <line>
-              <![CDATA[Enter title AutomationPlayer8574886ddb.]]>
+              <![CDATA[Enter a random block of text in the 'Biography' text area.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Apply' button.]]>
+              <![CDATA[Switch to frame titled 'Create Person'.]]>
             </line>
             <line>
-              <![CDATA[Click the first search title link in the search result set.]]>
+              <![CDATA[Click the 'Cover Photo' Select button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Edit' in the work bench.]]>
+              <![CDATA[Switch to the select file frame.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Edit mpx_player AutomationPlayer8574886ddb dialog'.]]>
+              <![CDATA[Enter the file path for file upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Upload' button.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Public Local Files' radio button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Assert the file image 'HanSolo' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Assert the the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to frame titled 'Create Person'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Person PersonName49ab077bf9 has been created.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify there are no errors present.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Add content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Person' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to frame titled 'Create Person'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'PersonName0db1617d55' in the 'First name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter a random block of text in the 'Biography' text area.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to frame titled 'Create Person'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Cover Photo' Select button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the select file frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter the file path for file upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Upload' button.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Public Local Files' radio button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Assert the file image 'HanSolo' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Assert the the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to frame titled 'Create Person'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Person PersonName0db1617d55 has been created.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify there are no errors present.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Add content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Person' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to frame titled 'Create Person'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'PersonNamec41acac792' in the 'First name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter a random block of text in the 'Biography' text area.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to frame titled 'Create Person'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Cover Photo' Select button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the select file frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter the file path for file upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Upload' button.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Public Local Files' radio button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Assert the file image 'HanSolo' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Assert the the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to frame titled 'Create Person'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Person PersonNamec41acac792 has been created.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify there are no errors present.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Add content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'TV Episode' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create TV Episode dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '1e0b17000c4a4ea' in the 'Title' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '1' in the 'Episode Number' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the Synopsis frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create TV Episode dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Cast/Crew' link.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'PersonName49ab077bf9' in the Person text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'PersonName49ab077bf9' from the auto complete option list.]]>
+            </line>
+            <line>
+              <![CDATA[Select the 'Character' from the 'Role' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that the 'Character' text box is displayed.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'CharacterName91dc6c0a35' in the 'Character' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'CharacterName91dc6c0a35' from the auto complete option list.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create TV Episode dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Revisions' in the work bench.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Revisions dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Edit' menu button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Edit TV Episode 1e0b17000c4a4ea dialog'.]]>
             </line>
             <line>
               <![CDATA[Scroll the 'Publishing Options' link into view.]]>
@@ -681,64 +1194,70 @@
               <![CDATA[Click the 'Publishing Options' link.]]>
             </line>
             <line>
-              <![CDATA[Uncheck the 'Published' checkbox]]>
+              <![CDATA[Verify the 'Create New Revision' checkbox is checked.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Edit TV Episode 1e0b17000c4a4ea dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Cast/Crew' link.]]>
+            </line>
+            <line>
+              <![CDATA[Assert the value of the 'Person' text box equals 'PersonName49ab077bf9'.]]>
+            </line>
+            <line>
+              <![CDATA[Assert the value of the 'Character' text box equals 'CharacterName91dc6c0a35'.]]>
+            </line>
+            <line>
+              <![CDATA[Assert the value of the 'Role' drop down list equals 'Character'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Add Another Item' button.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'PersonName0db1617d55' in the Person text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'PersonName0db1617d55' from the auto complete option list.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Edit TV Episode 1e0b17000c4a4ea dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Select the 'Character' from the 'Role' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that the 'Character' text box is displayed.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'CharacterName34f7d978ad' in the 'Character' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'CharacterName34f7d978ad' from the auto complete option list.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Edit TV Episode 1e0b17000c4a4ea dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'e38bf9670faa467' in the 'Title' text box.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'MPX Player AutomationPlayer8574886ddb has been updated.' is present.]]>
+              <![CDATA[Click the 'Revisions' in the work bench.]]>
             </line>
             <line>
-              <![CDATA[Verify there are no errors present.]]>
+              <![CDATA[Switch to the active frame titled 'Revisions dialog'.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Content' menu link.]]>
+              <![CDATA[Click the 'Edit' menu button.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Files' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'mpxPlayers' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that the disabled and unpublished player text is present for player titled 'AutomationPlayer8574886ddb'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'MPX Media' link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that the disabled and unpublished player text is present for player titled 'AutomationPlayer8574886ddb'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Configuration' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Media' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Media: thePlatform mpx settings' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that the disabled and unpublished player text is present for player titled 'AutomationPlayer8574886ddb'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'click here' link for the unpublished player titled 'AutomationPlayer8574886ddb'.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Edit mpx_player AutomationPlayer8574886ddb dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'Edit TV Episode e38bf9670faa467 dialog'.]]>
             </line>
             <line>
               <![CDATA[Scroll the 'Publishing Options' link into view.]]>
@@ -747,133 +1266,139 @@
               <![CDATA[Click the 'Publishing Options' link.]]>
             </line>
             <line>
-              <![CDATA[Check the 'Published' checkbox]]>
+              <![CDATA[Verify the 'Create New Revision' checkbox is checked.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Edit TV Episode e38bf9670faa467 dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Cast/Crew' link.]]>
+            </line>
+            <line>
+              <![CDATA[Assert the value of the 'Person' text box equals 'PersonName49ab077bf9'.]]>
+            </line>
+            <line>
+              <![CDATA[Assert the value of the 'Character' text box equals 'CharacterName91dc6c0a35'.]]>
+            </line>
+            <line>
+              <![CDATA[Assert the value of the 'Role' drop down list equals 'Character'.]]>
+            </line>
+            <line>
+              <![CDATA[Assert the value of the 'Person' text box equals 'PersonName0db1617d55'.]]>
+            </line>
+            <line>
+              <![CDATA[Assert the value of the 'Role' drop down list equals 'Character'.]]>
+            </line>
+            <line>
+              <![CDATA[Assert the value of the 'Character' text box equals 'CharacterName34f7d978ad'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Add Another Item' button.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'PersonNamec41acac792' in the Person text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'PersonNamec41acac792' from the auto complete option list.]]>
+            </line>
+            <line>
+              <![CDATA[Select the 'Character' from the 'Role' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that the 'Character' text box is displayed.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'CharacterNamed9b90a32d2' in the 'Character' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'CharacterNamed9b90a32d2' from the auto complete option list.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Edit TV Episode e38bf9670faa467 dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'e71cc872f60b4f0' in the 'Title' text box.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Content' menu link.]]>
+              <![CDATA[Click the 'Revisions' in the work bench.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Files' menu link.]]>
+              <![CDATA[Switch to the active frame titled 'Revisions dialog'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'mpxPlayers' menu link.]]>
+              <![CDATA[Click the 'Edit' extend menu button.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+              <![CDATA[Click the 'Delete' button.]]>
             </line>
             <line>
-              <![CDATA[Verify that the disabled player text is present for player titled 'AutomationPlayer8574886ddb'.]]>
+              <![CDATA[Switch to the active frame titled 'Are you sure you want to delete the revision from Fri, 02/21/2014 - 15:18? dialog'.]]>
             </line>
             <line>
-              <![CDATA[Click the MPX 'Login' link for the unpublished player 'AutomationPlayer8574886ddb'.]]>
+              <![CDATA[Click the 'Confirm Delete' button.]]>
             </line>
             <line>
-              <![CDATA[Enter the account name 'DB TV' in the account select text box.]]>
+              <![CDATA[Switch to the active frame titled 'Revisions dialog'.]]>
             </line>
             <line>
-              <![CDATA[Click the account option from the drop down list.]]>
+              <![CDATA[Click the 'Edit' menu button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Account' title to leave focus off of the selection.]]>
+              <![CDATA[Switch to the active frame titled 'Edit TV Episode e71cc872f60b4f0 dialog'.]]>
             </line>
             <line>
-              <![CDATA[Wait for account to switch to the newly selected account.]]>
+              <![CDATA[Verify the text 'Notice: Trying to get property of non-object in field_collection_field_get_entity() (line 1608 of /mnt/www/html/nbcuqa5dev/docroot/profiles/all/modules/contrib/field_collection/field_collection.module)' is NOT present on the page.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Players' link.]]>
+              <![CDATA[Click the 'Cast/Crew' link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'All Players' link.]]>
+              <![CDATA[Assert the value of the 'Person' text box equals 'PersonName49ab077bf9'.]]>
             </line>
             <line>
-              <![CDATA[Enter 'AutomationPlayer8574886ddb' in the 'Player Search' text box.]]>
+              <![CDATA[Assert the value of the 'Character' text box equals 'CharacterName91dc6c0a35'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Search by Players Title' link.]]>
+              <![CDATA[Assert the value of the 'Role' drop down list equals 'Character'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Player Title' label to give focus to the player item.]]>
+              <![CDATA[Assert the value of the 'Person' text box equals 'PersonName0db1617d55'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Disable Player' check box.]]>
+              <![CDATA[Assert the value of the 'Role' drop down list equals 'Character'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save' button.]]>
+              <![CDATA[Assert the value of the 'Character' text box equals 'CharacterName34f7d978ad'.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+              <![CDATA[Assert the value of the 'Person' text box equals 'PersonNamec41acac792'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
+              <![CDATA[Assert the value of the 'Role' drop down list equals 'Character'.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Status report dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Cron ran successfully.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify there are no errors present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Files' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'mpxPlayers' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'An MPXplayer that's in use (AutomationPlayer8574886ddb) has been disabled in MPX.' is NOT present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Status report dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Cron ran successfully.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify there are no errors present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Files' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'mpxPlayers' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'An MPXplayer that's in use (AutomationPlayer8574886ddb) has been disabled in MPX.' is NOT present on the page.]]>
+              <![CDATA[Assert the value of the 'Character' text box equals 'CharacterNamed9b90a32d2'.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- NotificationPlayerUnavailability_Test -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability@eabce30]" name="stopSelenium" is-config="true" duration-ms="570" started-at="2014-02-20T16:54:06Z" finished-at="2014-02-20T16:54:06Z">
+        </test-method> <!-- CastCrewFieldCollectionsVerificationTVEpisode_Test -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.CastCrewFieldCollectionsVerification_TVEpisode@41683cc5]" name="stopSelenium" is-config="true" duration-ms="572" started-at="2014-02-21T10:19:14Z" finished-at="2014-02-21T10:19:14Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=NotificationPlayerUnavailability_Test status=SUCCESS method=NotificationPlayerUnavailability.NotificationPlayerUnavailability_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability@eabce30] output=Open url 'http://qa5dev.publisher.nbcuni.com'.]]]>
+                <![CDATA[[TestResult name=CastCrewFieldCollectionsVerificationTVEpisode_Test status=SUCCESS method=CastCrewFieldCollectionsVerification_TVEpisode.CastCrewFieldCollectionsVerificationTVEpisode_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.CastCrewFieldCollectionsVerification_TVEpisode@41683cc5] output=Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-      </class> <!-- com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability -->
+      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.CastCrewFieldCollectionsVerification_TVEpisode -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
