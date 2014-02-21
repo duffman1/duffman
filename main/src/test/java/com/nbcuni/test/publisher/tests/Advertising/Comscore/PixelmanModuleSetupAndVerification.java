@@ -65,7 +65,7 @@ public class PixelmanModuleSetupAndVerification extends ParentTest {
         modules.VerifyModuleSourceInPage("//www.nbcudigitaladops.com/hosted/global_header.js");
             
         //Step 9
-        userLogin.Login("admin@publisher.nbcuni.com", "pa55word");
+        userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
         taxonomy.NavigateSite("Modules");
         overlay.SwitchToFrame("Modules");
         modules.EnterFilterName("Pub Ads");

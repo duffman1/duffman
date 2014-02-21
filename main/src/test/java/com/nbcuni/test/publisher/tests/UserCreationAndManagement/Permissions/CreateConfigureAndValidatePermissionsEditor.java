@@ -132,7 +132,7 @@ public class CreateConfigureAndValidatePermissionsEditor extends ParentTest{
         logout.ClickLogoutBtn();
         
         //Step 15
-        userLogin.Login("admin@publisher.nbcuni.com", "pa55word");
+        userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
         
         //Step 16 and 17 (truncated)
         String postTitle2 = createDefaultContent.Post("Draft");
