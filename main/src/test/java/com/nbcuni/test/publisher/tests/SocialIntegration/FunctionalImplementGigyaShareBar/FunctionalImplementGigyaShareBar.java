@@ -1,7 +1,9 @@
 package com.nbcuni.test.publisher.tests.SocialIntegration.FunctionalImplementGigyaShareBar;
 
 import org.testng.annotations.Test;
+
 import com.nbcuni.test.publisher.common.ParentTest;
+import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Configuration.GigyaSettings;
@@ -25,7 +27,7 @@ public class FunctionalImplementGigyaShareBar extends ParentTest{
      * Step 6 - Log out from P7 ,Logout Successful  
      * @throws Throwable No Return values are needed
      *************************************************************************************/
-    @Test(groups = {"full"})
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"})
     public void FunctionalImplementGigyaShareBar_Test() throws Exception{
     	
     	//Step 1

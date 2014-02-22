@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Set;
 
 import com.nbcuni.test.publisher.common.ParentTest;
+import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.Content.PublishingOptions;
 import com.nbcuni.test.publisher.pageobjects.Content.SearchFor;
@@ -19,7 +20,9 @@ import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXLogin;
 import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXSearch;
 import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXSelectAccount;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
+
 import junit.framework.Assert;
+
 import org.openqa.selenium.NoSuchElementException;
 import org.testng.annotations.Test;
 
@@ -58,7 +61,7 @@ public class NotificationPlayerUnavailability extends ParentTest{
      * Step 28 - Navigate to Home --> Files --> mpxMedia page,Message "An MPXplayer that's in use (NAME_OF_PLAYER_IN_STEP_3) has been disabled and unpublished."
      * @throws Throwable No Return values are needed
      *************************************************************************************/
-    @Test(groups = {"full", "mpx"})
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "mpx"})
     public void NotificationPlayerUnavailability_Test() throws Exception{
 
     	//NOTE - Test steps re-ordered and truncated for automation optimization

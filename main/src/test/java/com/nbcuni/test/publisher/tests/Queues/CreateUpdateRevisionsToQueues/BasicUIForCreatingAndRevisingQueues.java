@@ -4,8 +4,11 @@ import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.TimeZone;
+
 import org.testng.annotations.Test;
+
 import com.nbcuni.test.publisher.common.ParentTest;
+import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Content.*;
 import com.nbcuni.test.publisher.pageobjects.ErrorChecking.ErrorChecking;
@@ -32,7 +35,7 @@ public class BasicUIForCreatingAndRevisingQueues extends ParentTest{
      * Step 14 - Again display the Edit <queuename> overlay<br> 
      * @throws Throwable No Return values are needed
      *************************************************************************************/
-    @Test(groups = {"full" })
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full" })
     public void BasicUIForCreatingAndRevisingQueues_Test() throws Exception{
     	
         //Step 1

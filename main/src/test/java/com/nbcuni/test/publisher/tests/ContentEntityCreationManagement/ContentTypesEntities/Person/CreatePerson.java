@@ -4,6 +4,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
 import com.nbcuni.test.publisher.common.ParentTest;
+import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.Content.PersonsInformation;
@@ -20,7 +21,7 @@ public class CreatePerson extends ParentTest{
      * Step 5 - Click on 'Save' button.<br> 
      * @throws Throwable No Return values are needed
      *************************************************************************************/
-    @Test(groups = {"full" })
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full" })
     public void CreatePerson_Test() throws Exception{
          
         	//Step 1

@@ -1,14 +1,18 @@
 package com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts;
 
 import com.nbcuni.test.publisher.common.ParentTest;
+import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.MPX.MPXDataClient;
 import com.nbcuni.test.publisher.pageobjects.MPX.MPXMedia;
 import com.nbcuni.test.publisher.pageobjects.MPX.MPXPlayers;
 import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
+
 import junit.framework.Assert;
+
 import org.testng.annotations.Test;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -37,7 +41,7 @@ public class MPXPlayersSyncVerification extends ParentTest{
      * Step 16 - From the players noted down in Step 7, verify that all of them appear in the mpxPlayers table with no duplicates. ,All of the players appear as expected with no duplicates.<br>   
      * @throws Throwable No Return values are needed
      *************************************************************************************/
-    @Test(groups = {"full", "smoke", "mpx"})
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "smoke", "mpx"})
     public void MPXPlayersSyncVerification_Test() throws Exception{
     	
     	//TODO - re order test steps above to follow test steps below. Automated steps were re-ordered for ease of automation purposes

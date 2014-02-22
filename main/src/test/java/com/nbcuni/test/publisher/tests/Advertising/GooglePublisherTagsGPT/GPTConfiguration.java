@@ -1,7 +1,9 @@
 package com.nbcuni.test.publisher.tests.Advertising.GooglePublisherTagsGPT;
 
 import org.testng.annotations.Test;
+
 import com.nbcuni.test.publisher.common.ParentTest;
+import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.DFPAddTags;
 import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
@@ -19,7 +21,7 @@ public class GPTConfiguration extends ParentTest{
      * Step 7 - Log out Publisher 7
      * @throws Throwable No Return values are needed
      *************************************************************************************/
-    @Test(groups = {"full" })
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full" })
     public void GPTConfiguration_Test() throws Exception {
         
         	//Step 1

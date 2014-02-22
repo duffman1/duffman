@@ -4,6 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.nbcuni.test.publisher.common.ParentTest;
+import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Configuration.SiteCatalyst;
 import com.nbcuni.test.publisher.pageobjects.Content.BasicInformation;
@@ -26,7 +27,7 @@ public class AddAbilityOverrideSiteCatalystVariablesPerNodeBasis extends ParentT
      * Step 9 - Logout from P7 ,Logout successful 
      * @throws Throwable No Return values are needed
      *************************************************************************************/
-    @Test(groups = {"full"})
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"})
     public void AddAbilityOverrideSiteCatalystVariablesPerNodeBasis_Test() throws Exception {
          
         	//Step 1

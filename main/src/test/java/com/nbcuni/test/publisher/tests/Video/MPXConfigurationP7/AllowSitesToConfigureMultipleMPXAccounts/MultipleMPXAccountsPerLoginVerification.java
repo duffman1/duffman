@@ -1,6 +1,7 @@
 package com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts;
 
 import com.nbcuni.test.publisher.common.ParentTest;
+import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.MPX.MPXDataClient;
 import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
@@ -49,7 +50,7 @@ public class MultipleMPXAccountsPerLoginVerification extends ParentTest{
      * Step 28 - Click on the link, "MPX LOGIN". ,The configurations created for 3 MPX sub-accounts are seen has having been retained for the "AdminPub7QA" user. 
      * @throws Throwable No Return values are needed
      *************************************************************************************/
-    @Test(groups = {"full", "smoke", "mpx"})
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "smoke", "mpx"})
     public void MultipleMPXAccountsPerLoginVerification_Test() throws Exception{
     	
     	//NOTE - Automated steps were re-ordered for ease of automation purposes

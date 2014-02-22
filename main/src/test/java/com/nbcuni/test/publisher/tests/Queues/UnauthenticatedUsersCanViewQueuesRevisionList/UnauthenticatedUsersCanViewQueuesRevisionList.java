@@ -1,7 +1,9 @@
 package com.nbcuni.test.publisher.tests.Queues.UnauthenticatedUsersCanViewQueuesRevisionList;
 
 import org.testng.annotations.Test;
+
 import com.nbcuni.test.publisher.common.ParentTest;
+import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.AccessDenied;
 
 public class UnauthenticatedUsersCanViewQueuesRevisionList extends ParentTest{
@@ -14,7 +16,7 @@ public class UnauthenticatedUsersCanViewQueuesRevisionList extends ParentTest{
      * Step 4 - Access the following link:  http://<Replace with appropriate environment name>.publisher.nbcuni.com/admin/content/queues/manage/all/revisions-state-flow-states  For Example: http://qa3stg.publisher.nbcuni.com/admin/content/queues/manage/all/revisions-state-flow-states<br>
      * @throws Throwable No Return values are needed
      *************************************************************************************/
-    @Test(groups = {"full"})
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"})
     public void UnauthenticatedUsersCanViewQueuesRevisionList_Test() throws Exception{
     	
         //Step 1

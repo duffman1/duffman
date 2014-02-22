@@ -1,6 +1,8 @@
 package com.nbcuni.test.publisher.tests.Video.UndefinedIndexesDisplayingForMPXPlayers;
 
 import com.nbcuni.test.publisher.common.ParentTest;
+import com.nbcuni.test.publisher.common.RerunOnFailure;
+
 import org.testng.annotations.Test;
 
 public class UndefinedIndexesDisplayingForMPXPlayers extends ParentTest{
@@ -24,7 +26,7 @@ public class UndefinedIndexesDisplayingForMPXPlayers extends ParentTest{
      * Step 15 - Logout from P7  ,Logout successful (not needed for automation)
      * @throws Throwable No Return values are needed
      *************************************************************************************/
-    @Test(groups = {"full", "mpx"})
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "mpx"})
     public void UndefinedIndexesDisplayingForMPXPlayers_Test() throws Exception{
     	
     	//Defect was removed from iteration 39 for work at a later date. commenting out test until resolved at the request of the business

@@ -4,8 +4,11 @@ import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
+
 import org.testng.annotations.Test;
+
 import com.nbcuni.test.publisher.common.ParentTest;
+import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Content.BasicInformation;
 import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
@@ -41,7 +44,7 @@ public class PreviewContentItemsIntheFuturefromContentandWorkbenchViews extends 
      * Step 20 - Verify that EnablePreview Button displayed
      * @throws Throwable No Return values are needed
      *************************************************************************************/
-	@Test(groups = {"full"})
+	@Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"})
 	public void PreviewContentItemsIntheFuturefromContentandWorkbenchViews_Test() throws Exception{
 		
 		//Step 1

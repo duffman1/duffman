@@ -1,7 +1,9 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ProgramGuides.ROVITVSchedule;
 
 import org.testng.annotations.Test;
+
 import com.nbcuni.test.publisher.common.ParentTest;
+import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Blocks;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Configuration.ProgramGuide;
@@ -26,7 +28,7 @@ public class ProgramGuideVerification extends ParentTest{
 	 * Step 13 - Disable Program Guide block
      * @throws Throwable No Return values are needed
      *************************************************************************************/
-	@Test(groups = {"full" })
+	@Test(retryAnalyzer = RerunOnFailure.class, groups = {"full" })
     public void ProgramGuideVerification_Test() throws Exception{
 		
 		//Step 1

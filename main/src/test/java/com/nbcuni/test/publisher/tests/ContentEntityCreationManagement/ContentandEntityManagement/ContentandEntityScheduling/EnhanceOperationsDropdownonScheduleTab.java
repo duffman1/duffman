@@ -1,11 +1,14 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling;
 
 import com.nbcuni.test.publisher.common.ParentTest;
+import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Content.*;
 import com.nbcuni.test.publisher.pageobjects.Queues.ScheduleQueue;
+
 import org.testng.annotations.Test;
+
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -21,7 +24,7 @@ public class EnhanceOperationsDropdownonScheduleTab extends ParentTest {
 	* Step 6 - Verify 'Complete' text appears<br>
 	* @throws Throwable No Return values are needed
 	*************************************************************************************/
-    @Test(groups = {"full"})
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"})
         public void EnhanceOperationsDropdownonScheduleTab_Test() throws Exception{
 
     	//Step 1

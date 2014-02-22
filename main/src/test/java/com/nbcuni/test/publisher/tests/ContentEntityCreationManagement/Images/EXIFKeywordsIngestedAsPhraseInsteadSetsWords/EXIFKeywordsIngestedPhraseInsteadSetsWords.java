@@ -1,9 +1,11 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIFKeywordsIngestedAsPhraseInsteadSetsWords;
 
 import com.nbcuni.test.publisher.common.ParentTest;
+import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.SimpleEXIFIPTCMappings;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Content.*;
+
 import org.testng.annotations.Test;
 
 public class EXIFKeywordsIngestedPhraseInsteadSetsWords extends ParentTest{
@@ -23,7 +25,7 @@ public class EXIFKeywordsIngestedPhraseInsteadSetsWords extends ParentTest{
      * Step 10 - Log out from P7 ,Logout successful 
      * @throws Throwable No Return values are needed
      *************************************************************************************/
-    @Test(groups = {"full" })
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full" })
     public void EXIFKeywordsIngestedPhraseInsteadSetsWords_Test() throws Exception{
          
         	//Step 1

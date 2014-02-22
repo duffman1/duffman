@@ -4,6 +4,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
 import com.nbcuni.test.publisher.common.ParentTest;
+import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Content.BasicInformation;
 import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
@@ -21,7 +22,7 @@ public class CreateMediaGallery extends ParentTest{
      * Step 6 - Click on "Save" button<br> 
      * @throws Throwable No Return values are needed
      *************************************************************************************/
-    @Test(groups = {"full" })
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full" })
     public void CreateMediaGallery_Test() throws Exception{
         
         	//Step 1

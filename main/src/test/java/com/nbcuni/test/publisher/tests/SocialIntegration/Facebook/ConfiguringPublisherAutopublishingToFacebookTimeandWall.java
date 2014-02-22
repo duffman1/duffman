@@ -2,9 +2,12 @@ package com.nbcuni.test.publisher.tests.SocialIntegration.Facebook;
 
 import java.net.URL;
 import java.util.Arrays;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
 import com.nbcuni.test.publisher.common.ParentTest;
+import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Content.BasicInformation;
@@ -37,7 +40,7 @@ public class ConfiguringPublisherAutopublishingToFacebookTimeandWall extends Par
      * Step 13 - Click the Facebook link the success message, log into Facebook if necessary, and inspect the test account Wall for the presence of test post, The test post and its cover image are displayed on the Wall<br>
      * @throws Throwable No Return values are needed
      *************************************************************************************/
-    @Test(groups = {"full"})
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"})
     public void ConfiguringPublisherAutopublishingToFacebookTimeandWall_Test() throws Exception{
     	
     	//Step 1 - NA as test logs into facebook as part of a later step

@@ -1,15 +1,19 @@
 package com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos;
 
 import com.nbcuni.test.publisher.common.ParentTest;
+import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.FileTypes.MPXFileType;
 import com.nbcuni.test.publisher.pageobjects.MPX.MPXMedia;
 import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
+
 import junit.framework.Assert;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -32,7 +36,7 @@ public class Configuration extends ParentTest{
      * Step 12 - Scroll down, and put a check on the "Enable MPX Value Overrides" checkbox field, and click on the "Save" button. ,The user is taken to the "File types" overlay where they get a successful message, "The file type MPX Video for Account DB TV has been updated". 
      * @throws Throwable No Return values are needed
      *************************************************************************************/
-    @Test(groups = {"full", "mpx"})
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "mpx"})
     public void Configuration_Test() throws Exception {
     	
     	//Step 1

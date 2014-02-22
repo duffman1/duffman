@@ -1,6 +1,7 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.EnhanceContentLibraryTable;
 
 import com.nbcuni.test.publisher.common.ParentTest;
+import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.Content.SearchFor;
 import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
@@ -30,7 +31,7 @@ public class EnhanceContentLibraryTable extends ParentTest{
      * Step 12 - Click on Upload Date again, the list is sorted by default results as seen in step 5
      * @throws Throwable No Return values are needed
      *************************************************************************************/
-    @Test(groups = {"full"})
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"})
     public void EnhanceContentLibraryTable_Test() throws Exception{
     	
     	//NOTE- Automated steps were re-ordered for ease of automation purposes

@@ -1,10 +1,13 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post;
 
 import com.nbcuni.test.publisher.common.ParentTest;
+import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Content.*;
+
 import org.testng.annotations.Test;
+
 import java.util.Arrays;
 import java.util.List;
 
@@ -23,7 +26,7 @@ public class CreatePost extends ParentTest{
      * Step 7 - Repeat above steps with Moderation state value as Review and Published<br> 
      * @throws Throwable No Return values are needed
      *************************************************************************************/
-    @Test(groups = {"full" })
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full" })
     public void CreatePost_Test() throws Exception{
          
         	//Step 1

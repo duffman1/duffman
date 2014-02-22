@@ -88,6 +88,7 @@ public class Revisions {
     	
     	Reporter.log("Click the 'Edit' menu button.");
     	EditMenu_Btn(contentItemTtl).click();
+    	Thread.sleep(1000); //slight pause required here for successful frame switch
     }
 
     public void ClickShareMenuBtn(String contentItemTtl) throws Exception {

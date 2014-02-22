@@ -1,8 +1,11 @@
 package com.nbcuni.test.publisher.tests.UserCreationAndManagement.UnauthenticatedUsersNotAbleToViewThePublishedContents;
 
 import java.util.Arrays;
+
 import org.testng.annotations.Test;
+
 import com.nbcuni.test.publisher.common.ParentTest;
+import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Logout;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
@@ -40,7 +43,7 @@ public class UnauthenticatedUsersNotAbleToViewThePublishedContents extends Paren
      * Step 23 - Verify that the user should be able to view the corresponding published content.<br>
      * @throws Throwable No Return values are needed
      *************************************************************************************/
-    @Test(groups = {"full"})
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"})
     public void UnauthenticatedUsersNotAbleToViewThePublishedContents_Test() throws Exception{
     	
     	//Step 1

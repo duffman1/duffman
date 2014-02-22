@@ -3,6 +3,7 @@ package com.nbcuni.test.publisher.tests.Advertising.Comscore;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 import com.nbcuni.test.publisher.common.ParentTest;
+import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Logout;
 import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
@@ -25,7 +26,7 @@ public class PixelmanModuleSetupAndVerification extends ParentTest {
      * Step 12 - View the source code of the homepage and ensure that the source scripts from Step 6 are NOT present.<br>
      * @throws Throwable No Return values are needed
      *************************************************************************************/
-    @Test(groups = {"full", "smoke" })
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "smoke"})
     public void PixelmanModuleSetupAndVerification_Test() throws Exception{
         
     	//Step 1

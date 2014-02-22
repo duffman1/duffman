@@ -1,6 +1,7 @@
 package com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts;
 
 import com.nbcuni.test.publisher.common.ParentTest;
+import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.Content.SearchFor;
 import com.nbcuni.test.publisher.pageobjects.Cron.Cron;
@@ -33,7 +34,7 @@ public class MPXMediaSyncVerification extends ParentTest{
      * Step 8 - Close all the browsers. ,The browsers are closed. (NA)
      * @throws Throwable No Return values are needed
      *************************************************************************************/
-    @Test(groups = {"full", "smoke", "mpx"})
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "smoke", "mpx"})
     public void MPXMediaSyncVerification_Test() throws Exception{
     	
     	//NOTE - Automated steps were re-ordered for ease of automation purposes

@@ -2,8 +2,11 @@ package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Contenta
 
 import java.util.Arrays;
 import java.util.List;
+
 import org.testng.annotations.Test;
+
 import com.nbcuni.test.publisher.common.ParentTest;
+import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Content.BasicInformation;
 import com.nbcuni.test.publisher.pageobjects.Content.CastCrew;
@@ -34,7 +37,7 @@ public class CastCrewFieldCollectionsVerification_TVEpisode extends ParentTest {
      * Step 11 - Logout and close.		
      * @throws Throwable No Return values are needed.<br>
      *************************************************************************************/
-    @Test(groups = {"full"})
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"})
     public void CastCrewFieldCollectionsVerificationTVEpisode_Test() throws Exception{
     	
     	//Step 1

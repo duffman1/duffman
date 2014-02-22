@@ -1,7 +1,9 @@
 package com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions;
 
 import org.testng.annotations.Test;
+
 import com.nbcuni.test.publisher.common.ParentTest;
+import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Logout;
 import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
@@ -54,7 +56,7 @@ public class CreateConfigureAndValidatePermissionsEditor extends ParentTest{
      * Step 33 - Repeat Steps 1 -32 but replace Step 6 and all other steps that use the "Post" content type with the following content types, and verify that the behavior is the same.  Character Profile Media Gallery Movie Person TV Episode TV Season TV Show<br>
      * @throws Throwable No Return values are needed
      *************************************************************************************/
-    @Test(groups = {"full", "smoke"})
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "smoke"})
     public void CreateConfigureAndValidatePermissionsEditor_Test() throws Exception{
     	
     	//Step 1

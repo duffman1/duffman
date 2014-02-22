@@ -1,6 +1,7 @@
 package com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen;
 
 import com.nbcuni.test.publisher.common.ParentTest;
+import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Content.SearchFor;
 import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
@@ -31,7 +32,7 @@ public class EnhanceMPXPlayerContentAdminScreen extends ParentTest{
      * Step 10 - Logout from P7 ,Logout successful.
      * @throws Throwable No Return values are needed
      *************************************************************************************/
-    @Test(groups = {"full", "mpx"})
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "mpx"})
     public void EnhanceMPXPlayerContentAdminScreen_Test() throws Exception{
     	
     	//Step 1

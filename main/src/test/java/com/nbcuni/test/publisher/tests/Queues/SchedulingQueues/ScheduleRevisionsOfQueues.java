@@ -2,6 +2,7 @@ package com.nbcuni.test.publisher.tests.Queues.SchedulingQueues;
 
 import com.ibm.icu.util.Calendar;
 import com.nbcuni.test.publisher.common.ParentTest;
+import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
@@ -9,7 +10,9 @@ import com.nbcuni.test.publisher.pageobjects.Content.CreateDefaultContent;
 import com.nbcuni.test.publisher.pageobjects.Content.PublishingOptions;
 import com.nbcuni.test.publisher.pageobjects.Queues.Queues;
 import com.nbcuni.test.publisher.pageobjects.Queues.ScheduleQueue;
+
 import org.testng.annotations.Test;
+
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
@@ -30,7 +33,7 @@ public class ScheduleRevisionsOfQueues extends ParentTest{
      * Step 9 - Click Schedule<br>
      * @throws Throwable No Return values are needed
      *************************************************************************************/
-    @Test(groups = {"full", "smoke" })
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "smoke" })
     public void ScheduleRevisionsOfQueues_Test() throws Exception{
     	
         //Step 1

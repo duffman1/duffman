@@ -2,11 +2,14 @@ package com.nbcuni.test.publisher.tests.SocialIntegration.ImplementAutoPublishin
 
 import java.net.URL;
 import java.util.Arrays;
+
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
 import com.nbcuni.test.publisher.common.ParentTest;
+import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Content.BasicInformation;
@@ -37,7 +40,7 @@ public class TwitterAutoPublishing extends ParentTest{
      * Step 11 - In the browser tab open to the test Twitter account, view the account homepage to determine if the tweet for the shared Publisher content was posted. ,The tweet for the shared Publisher content is present in the Twitter test account homepage. 
      * @throws Throwable No Return values are needed
      *************************************************************************************/
-    @Test(groups = {"full"})
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"})
     public void TwitterAutoPublishing_Test() throws Exception{
     	
     	//Step 1

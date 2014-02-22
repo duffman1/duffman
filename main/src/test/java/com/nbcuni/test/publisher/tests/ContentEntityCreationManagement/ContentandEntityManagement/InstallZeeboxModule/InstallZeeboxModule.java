@@ -1,10 +1,13 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.InstallZeeboxModule;
 
 import com.nbcuni.test.publisher.common.ParentTest;
+import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Content.*;
+
 import org.testng.annotations.Test;
+
 import java.util.Arrays;
 
 public class InstallZeeboxModule extends ParentTest{
@@ -20,7 +23,7 @@ public class InstallZeeboxModule extends ParentTest{
      * Step 7 - Go to Modules > Uninstall, check 'Zeebox Example' and click Uninstall. Confirm the action when prompted.  NOTE: This step is to let other QA personnel test Zeebox installation from scratch. ,Zeebox Example module is uninstalled and the below listed confirmation message is seen  - Zeebox <name of the example> example block has been deleted. - Zeebox <name of the example> example block has been deleted. - Zeebox <name of the example> example block has been deleted. - Zeebox <name of the example>  example block has been deleted. - Zeebox <name of the example> example block has been deleted. - The selected modules have been uninstalled. 
      * @throws Throwable No Return values are needed
      *************************************************************************************/
-    @Test(groups = {"full" })
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full" })
     public void InstallZeeboxModule_Test() throws Exception{
          
         	//Step 1

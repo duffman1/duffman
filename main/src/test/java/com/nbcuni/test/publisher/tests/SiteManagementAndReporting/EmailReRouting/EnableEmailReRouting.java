@@ -1,7 +1,9 @@
 package com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EmailReRouting;
 
 import org.testng.annotations.Test;
+
 import com.nbcuni.test.publisher.common.ParentTest;
+import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.GmailConnect;
 import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
@@ -18,7 +20,7 @@ public class EnableEmailReRouting extends ParentTest{
      * Step 3 - Navigate to People -->  Add User  Complete configuration of a new user account, for email address use a DIFFERENT email than used in step 2, ensure "Notify user of new account' is clicked.  Save user. ,When new user is created, an email should be generated and re routed to the email address configured in step 2. 
 	 * @throws Throwable No Return values are needed
      *************************************************************************************/
-    @Test(groups = {"full"})
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"})
     public void EnableEmailReRouting_Test() throws Exception{
     	
     	//Step 1

@@ -2,6 +2,7 @@ package com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos;
 
 import com.ibm.icu.util.Calendar;
 import com.nbcuni.test.publisher.common.ParentTest;
+import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Content.AddFile;
 import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.Content.SearchFor;
@@ -15,8 +16,11 @@ import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXSearch;
 import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXSelectAccount;
 import com.nbcuni.test.publisher.pageobjects.Queues.ScheduleQueue;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
+
 import junit.framework.Assert;
+
 import org.testng.annotations.Test;
+
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
@@ -65,7 +69,7 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
      * 37,Click on the "Log out" link.,The user logs out as expected.
      * @throws Throwable No Return values are needed
      *************************************************************************************/
-    @Test(groups = {"full", "smoke", "mpx"})
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "smoke", "mpx"})
     public void MPXVideosSchedulingVerificationScheduling_Test() throws Exception{
     	
     	//Step 1

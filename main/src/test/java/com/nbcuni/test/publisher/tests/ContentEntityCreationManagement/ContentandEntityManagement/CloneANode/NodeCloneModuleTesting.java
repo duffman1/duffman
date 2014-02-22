@@ -1,7 +1,9 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CloneANode;
 
 import org.testng.annotations.Test;
+
 import com.nbcuni.test.publisher.common.ParentTest;
+import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Configuration.NodeCloneModule;
@@ -25,7 +27,7 @@ public class NodeCloneModuleTesting extends ParentTest {
 * Step 9 - Mouse over the teaser for the content just published, and confirm that its context-sensitive link icon (gear and down arrow, at the upper right corner of the teaser) are displayed.<br>
 * @throws Throwable No Return values are needed
 *************************************************************************************/
-@Test(groups = {"full"})
+@Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"})
 public void NodeCloneModuleTesting_Test() throws Exception{
 
 	//Step 1

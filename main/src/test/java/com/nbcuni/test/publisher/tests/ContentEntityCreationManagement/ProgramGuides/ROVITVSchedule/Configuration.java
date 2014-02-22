@@ -4,6 +4,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
 import com.nbcuni.test.publisher.common.ParentTest;
+import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Blocks;
 import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
@@ -27,7 +28,7 @@ public class Configuration extends ParentTest{
      * Step 8 -  Save and verify success message.
      * @throws Throwable No Return values are needed
      *************************************************************************************/
-	@Test(groups = {"full" })
+	@Test(retryAnalyzer = RerunOnFailure.class, groups = {"full" })
     public void Configuration_Test() throws Exception{
 		
 		//Step 1
