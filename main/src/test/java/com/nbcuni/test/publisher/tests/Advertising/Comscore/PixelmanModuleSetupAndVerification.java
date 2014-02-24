@@ -1,6 +1,5 @@
 package com.nbcuni.test.publisher.tests.Advertising.Comscore;
 
-import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.RerunOnFailure;
@@ -31,14 +30,12 @@ public class PixelmanModuleSetupAndVerification extends ParentTest {
         
     	//Step 1
         UserLogin userLogin = applib.openApplication();
-        PageFactory.initElements(webDriver, userLogin);
         userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
         
         //Step 2 and 3 (truncated)
         taxonomy.NavigateSite("Modules");
     	overlay.SwitchToFrame("Modules");
     	Modules modules = new Modules(webDriver, applib);
-    	PageFactory.initElements(webDriver, modules);
     	modules.EnterFilterName("Pixelman");
     	modules.EnableModule("Pixelman");
     	
@@ -50,7 +47,6 @@ public class PixelmanModuleSetupAndVerification extends ParentTest {
             
         //Step 5
         overlay.ClickCloseOverlayLnk();
-        overlay.switchToDefaultContent();
         taxonomy.NavigateSite("Home");
         taxonomy.NavigateSite("Home>>Flush all caches");
         
@@ -59,7 +55,6 @@ public class PixelmanModuleSetupAndVerification extends ParentTest {
             
         //Step 7
         Logout logout = new Logout(webDriver);
-        PageFactory.initElements(webDriver, logout);
         logout.ClickLogoutBtn();
             
         //Step 8
@@ -76,7 +71,6 @@ public class PixelmanModuleSetupAndVerification extends ParentTest {
         overlay.ClickCloseOverlayLnk();
         
         //Step 9a
-        overlay.switchToDefaultContent();
         taxonomy.NavigateSite("Home>>Flush all caches");
         taxonomy.NavigateSite("Home");
         

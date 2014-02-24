@@ -120,6 +120,7 @@ public class AppLib {
             gMailAutoEmailUsername = configProperties.getProperty(environment + ".GMailAutoEmailUsername");
             gMailAutoEmailPassword = configProperties.getProperty(environment + ".GMailAutoEmailPassword");
             sikuliImageWaitTime = configProperties.getProperty(environment + ".SikuliImageWaitTime");
+            
         } catch (Exception e) {
             new CustomWebDriverException(e, custWebDr);
         }

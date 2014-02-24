@@ -6,10 +6,7 @@ import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.MPX.MPXDataClient;
 import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
-
-import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
-
 import java.util.List;
 
 public class MultipleMPXAccountsPerLoginVerification extends ParentTest{
@@ -57,8 +54,7 @@ public class MultipleMPXAccountsPerLoginVerification extends ParentTest{
     	
     	//Step
     	UserLogin userLogin = applib.openApplication();
-    	PageFactory.initElements(webDriver, userLogin);
-        userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+    	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
         
         //Step
         MPXDataClient mpxDataClient = new MPXDataClient(webDriver);
@@ -86,7 +82,6 @@ public class MultipleMPXAccountsPerLoginVerification extends ParentTest{
         	settings.EnterPassword0(applib.getMPXPassword());
         	settings.ClickConnectToMPXBtn();
         	ContentParent contentParent = new ContentParent(webDriver, applib);
-        	PageFactory.initElements(webDriver, contentParent);
         	contentParent.VerifyMessageStatus("Login successful");
         	settings.VerifyImportAccountOptions(accountNames);
             

@@ -13,11 +13,12 @@ public boolean retry(ITestResult result) {
 		
 		retryCount++; 
 		
-		return true; 
+		return true;
 		
-	} 
+		} 
 	
-	return false; 
+		return false; 
 	
-	} 
+	}  
+	
 } 

@@ -1,15 +1,13 @@
 package com.nbcuni.test.publisher.tests.Video.CanonicalURLSupport;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
-
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Content.AddFile;
 import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.Content.SearchFor;
+import com.nbcuni.test.publisher.pageobjects.FileTypes.FileTypes;
 import com.nbcuni.test.publisher.pageobjects.FileTypes.MPXFileType;
 import com.nbcuni.test.publisher.pageobjects.FileTypes.ManageFields;
 import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
@@ -18,11 +16,7 @@ import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXLogin;
 import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXPublishMedia;
 import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXSelectAccount;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
-
 import junit.framework.Assert;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 public class MPXCanonicalURLImportableURLAlias extends ParentTest{
@@ -64,27 +58,8 @@ public class MPXCanonicalURLImportableURLAlias extends ParentTest{
         		overlay.SwitchToActiveFrame();
         	
         		//Step 3
-        		//FileTypes fileTypes = new FileTypes(webDriver);
-        		//fileTypes.ClickManageFieldsLnk(configuredAccounts.get(0));
-        		//Below Step is a horrendous hack as a work around for dealing with the known bug of duplicate mpx account links in the file type menu
-        		String allManageFieldsURLs = null;
-        		for (WebElement el : webDriver.findElements(By.xpath("//td[contains(text(), 'MPX Video for Account \"DB TV\"')]/..//a[text()='manage fields']"))) {
-        			allManageFieldsURLs = allManageFieldsURLs + el.getAttribute("href");
-        		}
-        		allManageFieldsURLs = allManageFieldsURLs.replaceAll(applib.getApplicationURL() + "/admin/structure/file-types/manage/", "");
-        		allManageFieldsURLs = allManageFieldsURLs.replaceAll("/fields", "");
-        		String[] index = allManageFieldsURLs.split("mpx_video_");
-        		ArrayList<Integer> allIndexInts = new ArrayList<Integer>();
-        		allIndexInts.removeAll(Collections.singleton("empty"));
-        		for (String s : index) {
-        			try {
-        				allIndexInts.add(Integer.parseInt(s));
-        			}
-        			catch (NumberFormatException e) {}
-        		}
-        		Integer maxScore = Collections.max(allIndexInts);
-        		WebElement manageFieldLnk = webDriver.findElement(By.xpath("//td[contains(text(), 'MPX Video for Account \"DB TV\"')]/..//a[text()='manage fields'][contains(@href, '" + maxScore.toString() + "')]"));
-        		webDriver.executeScript("arguments[0].click();", manageFieldLnk);
+        		FileTypes fileTypes = new FileTypes(webDriver);
+        		fileTypes.ClickManageFieldsLnk(configuredAccounts.get(0));
         		overlay.SwitchToActiveFrame();
         		
         		//Step 4
@@ -104,29 +79,12 @@ public class MPXCanonicalURLImportableURLAlias extends ParentTest{
         		
         		//Step 6
     			overlay.ClickCloseOverlayLnk();
-        		overlay.switchToDefaultContent();
-        		//Below Step is a horrendous hack as a work around for dealing with the known bug of duplicate mpx account links in the file type menu
-        		/*
-        		String allURLs = null;
-        		for (WebElement el : webDriver.findElements(By.xpath("//a[text()='MPX Video for Account \"DB TV\" (2312945284)']"))) {
-        			allURLs = allURLs + el.getAttribute("href");
-        		}
-        		allURLs = allURLs.replaceAll(applib.getApplicationURL() + "/admin/structure/file-types/manage/", "");
-        		String[] index = allURLs.split("mpx_video_");
-        		ArrayList<Integer> allIndexInts = new ArrayList<Integer>();
-        		allIndexInts.removeAll(Collections.singleton("empty"));
-        		for (String s : index) {
-        			try {
-        				allIndexInts.add(Integer.parseInt(s));
-        			}
-        			catch (NumberFormatException e) {}
-        		}
-        		Integer maxScore = Collections.max(allIndexInts);*/
-        		WebElement accountLnk = webDriver.findElement(By.xpath("//a[contains(text(), 'DB TV')][contains(@href, '" + maxScore.toString() + "')]"));
-        		webDriver.executeScript("arguments[0].click();", accountLnk);
+    			taxonomy.NavigateSite("Structure>>File types");
         		overlay.SwitchToActiveFrame();
         		
         		//Step 7
+        		fileTypes.ClickEditFileTypeLnk(configuredAccounts.get(0));
+        		overlay.SwitchToActiveFrame();
         		MPXFileType mpxFileType = new MPXFileType(webDriver);
         		mpxFileType.SelectURLAliasField("MPX Media Related Link");
         		mpxFileType.ClickSaveBtn();

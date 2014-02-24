@@ -4,18 +4,10 @@ import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.FileTypes.MPXFileType;
-import com.nbcuni.test.publisher.pageobjects.MPX.MPXMedia;
 import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
-
 import junit.framework.Assert;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
-
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class Configuration extends ParentTest{
@@ -53,40 +45,11 @@ public class Configuration extends ParentTest{
         	List<String> configuredAccounts = settings.GetImportAccountSelectedOptions();
         	if (configuredAccounts.contains("DB TV")) {
         		
-        		//Step 7
-        		applib.openApplication();
-        		taxonomy.NavigateSite("Content>>Files>>mpxMedia");
-        		overlay.SwitchToActiveFrame();
-        	
-        		//Step 8
-        		MPXMedia mpxMedia = new MPXMedia(webDriver);
-        		mpxMedia.ExpandMPXMedia();
-
-        		//Step 9 and 10 not needed (redundant per previous mpx test)
-
+        		//Step 7 through 10 not needed (redundant per previous mpx test)
+        		
         		//Step 11
-        		overlay.switchToDefaultContent();
-        		
-        		//Below Step is a horrendous hack as a work around for dealing with the known bug of duplicate mpx account links in the file type menu
-        		String allURLs = null;
-        		for (WebElement el : webDriver.findElements(By.xpath("//a[text()='MPX Video for Account \"DB TV\" (2312945284)']"))) {
-        			allURLs = allURLs + el.getAttribute("href");
-        		}
-        		allURLs = allURLs.replaceAll(applib.getApplicationURL() + "/admin/structure/file-types/manage/", "");
-        		String[] index = allURLs.split("mpx_video_");
-        		ArrayList<Integer> allIndexInts = new ArrayList<Integer>();
-        		allIndexInts.removeAll(Collections.singleton("empty"));
-        		for (String s : index) {
-        			try {
-        				allIndexInts.add(Integer.parseInt(s));
-        			}
-        			catch (NumberFormatException e) {}
-        		}
-        		Integer maxScore = Collections.max(allIndexInts);
-        		WebElement accountLnk = webDriver.findElement(By.xpath("//a[contains(text(), 'DB TV')][contains(@href, '" + maxScore.toString() + "')]"));
-        		webDriver.executeScript("arguments[0].click();", accountLnk);
-        		
-        		//taxonomy.NavigateSite("Structure>>File types>>MPX Video for Account \"DB TV\" (2312945284)");
+        		overlay.ClickCloseOverlayLnk();
+        		taxonomy.NavigateSite("Structure>>File types>>MPX Video for Account \"DB TV\" (2312945284)");
         		overlay.SwitchToActiveFrame();
             
         		//Step 12
