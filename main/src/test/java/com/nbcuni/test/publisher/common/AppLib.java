@@ -131,12 +131,14 @@ public class AppLib {
 
     public String getPathToMedia(){
     	
-    	return System.getProperty("user.dir") + this.pathToMediaContent.replace("/", File.separator);
+    	String filePath = System.getProperty("user.dir") + this.pathToMediaContent;
+        return filePath.replace("/", File.separator);
     }
     
     public String getPathToSikuliImages(){
     	
-    	return pathToSikuliImages = System.getProperty("user.dir") + this.pathToSikuliImages.replace("/", File.separator);
+    	String filePath = System.getProperty("user.dir") + this.pathToSikuliImages;
+    	return filePath.replace("/", File.separator);
     }
     
     public String getAdmin1Username(){
