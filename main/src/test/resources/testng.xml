@@ -1,6 +1,13 @@
 <suite name="Test Suite for Publisher 7" parallel="methods" thread-count="1" preserve-order="true">
 
+	<!--CONFIGURATION PARAMETERS-->
   	<parameter name="Environment" value="PROD"></parameter>
+  	<parameter name="PathToReports" value="/test-output/reports/"></parameter>
+  	
+  	<!--CUSTOM REPORT LISTENTER-->
+  	<listeners>
+    <listener class-name="com.nbcuni.test.publisher.common.CustomReport" />
+  	</listeners>
   	
   	<test name="All Web Tests">
 

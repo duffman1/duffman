@@ -2,95 +2,29 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite thread-count="1" name="Failed suite [Test Suite for Publisher 7]" parallel="methods">
   <parameter name="Environment" value="PROD"/>
+  <listeners>
+    <listener class-name="com.nbcuni.test.publisher.common.CustomReport"/>
+  </listeners>
   <test name="All Web Tests(failed)" parallel="methods">
     <groups>
       <run>
-        <include name="mpx"/>
+        <include name="full"/>
       </run>
     </groups>
     <classes>
-      <class name="com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.Configuration">
-        <methods>
-          <include name="startSelenium"/>
-          <include name="Configuration_Test"/>
-          <include name="stopSelenium"/>
-        </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.Configuration -->
-      <class name="com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MPXPlayersSyncVerification">
+      <class name="com.nbcuni.test.publisher.tests.Setup.TestSetup">
         <methods>
           <include name="startSelenium"/>
           <include name="stopSelenium"/>
+          <include name="TestSetup_Test"/>
         </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MPXPlayersSyncVerification -->
-      <class name="com.nbcuni.test.publisher.tests.Video.DeIngestingMPXAccountsAndCorrespondingAssets.DeleteMultipleAccounts">
-        <methods>
-          <include name="startSelenium"/>
-          <include name="DeleteMultipleAccounts_Test"/>
-          <include name="stopSelenium"/>
-        </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.Video.DeIngestingMPXAccountsAndCorrespondingAssets.DeleteMultipleAccounts -->
-      <class name="com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability">
-        <methods>
-          <include name="startSelenium"/>
-          <include name="stopSelenium"/>
-          <include name="NotificationPlayerUnavailability_Test"/>
-        </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability -->
-      <class name="com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MPXMediaSyncVerification">
+      </class> <!-- com.nbcuni.test.publisher.tests.Setup.TestSetup -->
+      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile">
         <methods>
           <include name="startSelenium"/>
           <include name="stopSelenium"/>
         </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MPXMediaSyncVerification -->
-      <class name="com.nbcuni.test.publisher.tests.Video.CanonicalURLSupport.MPXCanonicalURLImportableURLAlias">
-        <methods>
-          <include name="startSelenium"/>
-          <include name="stopSelenium"/>
-        </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.Video.CanonicalURLSupport.MPXCanonicalURLImportableURLAlias -->
-      <class name="com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MultipleMPXAccountsPerLoginVerification">
-        <methods>
-          <include name="startSelenium"/>
-          <include name="stopSelenium"/>
-        </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MultipleMPXAccountsPerLoginVerification -->
-      <class name="com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen">
-        <methods>
-          <include name="startSelenium"/>
-          <include name="stopSelenium"/>
-        </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen -->
-      <class name="com.nbcuni.test.publisher.tests.Video.SyncFromMPXButtonToVideoFileEntitiesEditForm.SyncFromMPXButtonToVideoFileEntitiesEditForm">
-        <methods>
-          <include name="startSelenium"/>
-          <include name="stopSelenium"/>
-        </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.Video.SyncFromMPXButtonToVideoFileEntitiesEditForm.SyncFromMPXButtonToVideoFileEntitiesEditForm -->
-      <class name="com.nbcuni.test.publisher.tests.Video.Player.SelectVideoPlayerPerVideoFile">
-        <methods>
-          <include name="startSelenium"/>
-          <include name="SelectVideoPlayerPerVideoFile_Test"/>
-          <include name="stopSelenium"/>
-        </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.Video.Player.SelectVideoPlayerPerVideoFile -->
-      <class name="com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling">
-        <methods>
-          <include name="startSelenium"/>
-          <include name="stopSelenium"/>
-        </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling -->
-      <class name="com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides">
-        <methods>
-          <include name="startSelenium"/>
-          <include name="stopSelenium"/>
-        </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides -->
-      <class name="com.nbcuni.test.publisher.tests.Video.UndefinedIndexesDisplayingForMPXPlayers.UndefinedIndexesDisplayingForMPXPlayers">
-        <methods>
-          <include name="startSelenium"/>
-          <include name="stopSelenium"/>
-        </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.Video.UndefinedIndexesDisplayingForMPXPlayers.UndefinedIndexesDisplayingForMPXPlayers -->
+      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile -->
     </classes>
   </test> <!-- All Web Tests(failed) -->
 </suite> <!-- Failed suite [Test Suite for Publisher 7] -->

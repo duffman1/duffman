@@ -7,12 +7,15 @@ import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.webdriver.CustomWebDriver;
 import com.nbcuni.test.webdriver.CustomWebDriverException;
 import com.nbcuni.test.webdriver.Utilities;
+
 import junit.framework.Assert;
+
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.testng.ITestResult;
 import org.testng.Reporter;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -128,16 +131,12 @@ public class AppLib {
 
     public String getPathToMedia(){
     	
-    	String pathToMedia = System.getProperty("user.dir") + this.pathToMediaContent;
-    	pathToMedia = pathToMedia.replace("/", File.separator);
-    	return pathToMedia;
+    	return System.getProperty("user.dir") + this.pathToMediaContent.replace("/", File.separator);
     }
     
     public String getPathToSikuliImages(){
     	
-    	String pathToSikuliImages = System.getProperty("user.dir") + this.pathToSikuliImages;
-    	pathToSikuliImages = pathToSikuliImages.replace("/", File.separator);
-    	return pathToSikuliImages;
+    	return pathToSikuliImages = System.getProperty("user.dir") + this.pathToSikuliImages.replace("/", File.separator);
     }
     
     public String getAdmin1Username(){
@@ -215,8 +214,7 @@ public class AppLib {
         try {
         	
         	String storeScreenshotsTo = System.getProperty("user.dir") + this.pathToScreenshots.replace("/", File.separator);
-        	//TODO set file naming based on test class name rather than time of screenshot capture
-            DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+        	DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
             Date date = new Date();
             String fileExtension = dateFormat.format(date).replace("/", "");
             fileExtension = fileExtension.replace(" ", "");

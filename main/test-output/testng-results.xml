@@ -20,93 +20,48 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Configuration' menu link.]]>
+      <![CDATA[Click the 'Modules' menu link.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Media' menu link.]]>
+      <![CDATA[Switch to frame titled 'Modules'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Media: thePlatform mpx settings' menu link.]]>
+      <![CDATA[Enter 'Sticky Edit Actions' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Switch to frame titled 'Media: thePlatform mpx settings dialog'.]]>
+      <![CDATA[Wait for the module titled 'Sticky Edit Actions' to appear in the list.]]>
     </line>
     <line>
-      <![CDATA[Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.]]>
+      <![CDATA[Enter 'Devel' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Get all the selected import account options and store to a list.]]>
+      <![CDATA[Wait for the module titled 'Devel' to appear in the list.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
+      <![CDATA[Enter 'Database logging' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Structure' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'File types' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'File types dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'DB TV manage file display' link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'MPX Video for Account &quot;DB TV&quot; (2312945284) dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Select the 'USA_Demo_Player' player from the 'Pub MPX Video Player for Account...' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Your settings have been saved.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify there are no errors present.]]>
+      <![CDATA[Wait for the module titled 'Database logging' to appear in the list.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Files' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'mpxMedia' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter title Automation1.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Apply' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the first search title link in the search result set.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the mpx video player frame is present.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="34305" started-at="2014-02-24T15:54:20Z" finished-at="2014-02-24T15:54:54Z">
+  <suite name="Test Suite for Publisher 7" duration-ms="32866" started-at="2014-02-24T21:17:52Z" finished-at="2014-02-24T21:18:25Z">
     <groups>
       <group name="mpx">
-        <method signature="DefaultPlayerOptionsVerification.MPXCanonicalURLImportableURLAlias_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification@6e0e60c4]" name="MPXCanonicalURLImportableURLAlias_Test" class="com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification"/>
+        <method signature="TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@59b746f]" name="TestSetup_Test" class="com.nbcuni.test.publisher.tests.Setup.TestSetup"/>
       </group> <!-- mpx -->
       <group name="full">
-        <method signature="DefaultPlayerOptionsVerification.MPXCanonicalURLImportableURLAlias_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification@6e0e60c4]" name="MPXCanonicalURLImportableURLAlias_Test" class="com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification"/>
+        <method signature="TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@59b746f]" name="TestSetup_Test" class="com.nbcuni.test.publisher.tests.Setup.TestSetup"/>
       </group> <!-- full -->
+      <group name="smoke">
+        <method signature="TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@59b746f]" name="TestSetup_Test" class="com.nbcuni.test.publisher.tests.Setup.TestSetup"/>
+      </group> <!-- smoke -->
     </groups>
-    <test name="Default test" duration-ms="34305" started-at="2014-02-24T15:54:20Z" finished-at="2014-02-24T15:54:54Z">
-      <class name="com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification">
-        <test-method status="PASS" signature="startSelenium(java.lang.String)[pri:0, instance:com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification@6e0e60c4]" name="startSelenium" is-config="true" duration-ms="13268" started-at="2014-02-24T10:54:20Z" finished-at="2014-02-24T10:54:33Z">
+    <test name="All Web Tests" duration-ms="32866" started-at="2014-02-24T21:17:52Z" finished-at="2014-02-24T21:18:25Z">
+      <class name="com.nbcuni.test.publisher.tests.Setup.TestSetup">
+        <test-method status="PASS" signature="startSelenium(java.lang.String)[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@59b746f]" name="startSelenium" is-config="true" duration-ms="13269" started-at="2014-02-24T16:17:52Z" finished-at="2014-02-24T16:18:05Z">
           <params>
             <param index="0">
               <value>
@@ -123,7 +78,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="MPXCanonicalURLImportableURLAlias_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification@6e0e60c4]" name="MPXCanonicalURLImportableURLAlias_Test" duration-ms="20441" started-at="2014-02-24T10:54:33Z" finished-at="2014-02-24T10:54:54Z">
+        <test-method status="PASS" signature="TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@59b746f]" name="TestSetup_Test" duration-ms="19006" started-at="2014-02-24T16:18:05Z" finished-at="2014-02-24T16:18:24Z">
           <reporter-output>
             <line>
               <![CDATA[Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.]]>
@@ -138,94 +93,46 @@
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Configuration' menu link.]]>
+              <![CDATA[Click the 'Modules' menu link.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Media' menu link.]]>
+              <![CDATA[Switch to frame titled 'Modules'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Media: thePlatform mpx settings' menu link.]]>
+              <![CDATA[Enter 'Sticky Edit Actions' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Switch to frame titled 'Media: thePlatform mpx settings dialog'.]]>
+              <![CDATA[Wait for the module titled 'Sticky Edit Actions' to appear in the list.]]>
             </line>
             <line>
-              <![CDATA[Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.]]>
+              <![CDATA[Enter 'Devel' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Get all the selected import account options and store to a list.]]>
+              <![CDATA[Wait for the module titled 'Devel' to appear in the list.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
+              <![CDATA[Enter 'Database logging' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Structure' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'File types' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'File types dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'DB TV manage file display' link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'MPX Video for Account &quot;DB TV&quot; (2312945284) dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Select the 'USA_Demo_Player' player from the 'Pub MPX Video Player for Account...' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Your settings have been saved.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify there are no errors present.]]>
+              <![CDATA[Wait for the module titled 'Database logging' to appear in the list.]]>
             </line>
             <line>
               <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Files' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'mpxMedia' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter title Automation1.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Apply' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the first search title link in the search result set.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the mpx video player frame is present.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- MPXCanonicalURLImportableURLAlias_Test -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification@6e0e60c4]" name="stopSelenium" is-config="true" duration-ms="580" started-at="2014-02-24T10:54:54Z" finished-at="2014-02-24T10:54:54Z">
+        </test-method> <!-- TestSetup_Test -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@59b746f]" name="stopSelenium" is-config="true" duration-ms="568" started-at="2014-02-24T16:18:24Z" finished-at="2014-02-24T16:18:25Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=MPXCanonicalURLImportableURLAlias_Test status=SUCCESS method=DefaultPlayerOptionsVerification.MPXCanonicalURLImportableURLAlias_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification@6e0e60c4] output=Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.]]]>
+                <![CDATA[[TestResult name=TestSetup_Test status=SUCCESS method=TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@59b746f] output=Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-      </class> <!-- com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Setup.TestSetup -->
+    </test> <!-- All Web Tests -->
+  </suite> <!-- Test Suite for Publisher 7 -->
 </testng-results>
