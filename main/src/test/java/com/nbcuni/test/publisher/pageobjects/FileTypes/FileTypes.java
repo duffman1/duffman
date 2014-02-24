@@ -33,6 +33,10 @@ public class FileTypes {
     	return webDriver.findElement(By.xpath("//td[contains(text(), '" + fieldName + "')]/..//a[text()='edit file type']"));
     }
     
+    private static WebElement ManageFileDisplay_Lnk(String fieldName) {
+    	return webDriver.findElement(By.xpath("//td[contains(text(), '" + fieldName + "')]/..//a[text()='manage file display']"));
+    }
+    
     
     //PAGE OBJECT METHODS
     public void ClickManageFieldsLnk(String fieldName) throws Exception {
@@ -45,6 +49,12 @@ public class FileTypes {
     	
     	Reporter.log("Click the '" + fieldName + " edit file type' link.");
     	EditFileType_Lnk(fieldName).click();
+    }
+    
+    public void ClickManageFileDisplayLnk(String fieldName) throws Exception {
+    	
+    	Reporter.log("Click the '" + fieldName + " manage file display' link.");
+    	ManageFileDisplay_Lnk(fieldName).click();
     }
     
     

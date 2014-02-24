@@ -53,6 +53,9 @@ public class WorkBench {
     	return webDriver.findElement(By.xpath("//a[text() = 'Clone this " + contentType + "']"));
     }
     
+    @FindBy(how = How.CSS, using = "iframe[id='pdk-player']")
+    private static WebElement MPXPlayer_Frm;
+    
     
     //PAGE OBJECT METHODS
     public void ClickWorkBenchTab(String tabName) throws Exception{
@@ -95,7 +98,12 @@ public class WorkBench {
         
     	Reporter.log("Click the 'Clone this " + contentType + "' link.");
     	CloneContent_Lnk(contentType).click();
-
+    }
+    
+    public void VerifyMPXPlayerPresent() throws Exception {
+        
+    	Reporter.log("Verify the mpx video player frame is present.");
+        MPXPlayer_Frm.isDisplayed();
     }
 
 }

@@ -53,7 +53,6 @@ public class MPXCanonicalURLImportableURLAlias extends ParentTest{
         	//Step 2
         	if (configuredAccounts.get(0).equals("DB TV")) {
         		overlay.ClickCloseOverlayLnk();
-        		overlay.switchToDefaultContent();
         		taxonomy.NavigateSite("Structure>>File types");
         		overlay.SwitchToActiveFrame();
         	

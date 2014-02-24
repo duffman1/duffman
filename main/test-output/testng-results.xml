@@ -20,58 +20,49 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Modules' menu link.]]>
+      <![CDATA[Mouse over the 'Configuration' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to frame titled 'Modules'.]]>
+      <![CDATA[Mouse over the 'Media' menu link.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Pixelman' in the 'Filter Name' text box.]]>
+      <![CDATA[Click the 'Media: thePlatform mpx settings' menu link.]]>
     </line>
     <line>
-      <![CDATA[Wait for the module titled 'Pixelman' to appear in the list.]]>
+      <![CDATA[Switch to frame titled 'Media: thePlatform mpx settings dialog'.]]>
     </line>
     <line>
-      <![CDATA[Check the 'Pixelman' check box.]]>
+      <![CDATA[Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
+      <![CDATA[Get all the selected import account options and store to a list.]]>
     </line>
     <line>
-      <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
+      <![CDATA[Click the 'Close Overlay X'.]]>
     </line>
     <line>
-      <![CDATA[Switch back to the 'Modules' frame.]]>
+      <![CDATA[Mouse over the 'Structure' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to frame titled 'Modules'.]]>
+      <![CDATA[Click the 'File types' menu link.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+      <![CDATA[Switch to the active frame titled 'File types dialog'.]]>
     </line>
     <line>
-      <![CDATA[Verify there are no errors present.]]>
+      <![CDATA[Click the 'DB TV manage file display' link.]]>
     </line>
     <line>
-      <![CDATA[Enter 'DART' in the 'Filter Name' text box.]]>
+      <![CDATA[Switch to the active frame titled 'MPX Video for Account &quot;DB TV&quot; (2312945284) dialog'.]]>
     </line>
     <line>
-      <![CDATA[Wait for the module titled 'DART' to appear in the list.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Doubleclick for Publishers' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the module titled 'Doubleclick for Publishers' to appear in the list.]]>
-    </line>
-    <line>
-      <![CDATA[Uncheck the 'Doubleclick for Publishers' module checkbox.]]>
+      <![CDATA[Select the 'USA_Demo_Player' player from the 'Pub MPX Video Player for Account...' drop down list.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save configuration' button.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+      <![CDATA[Verify success message of 'Your settings have been saved.' is present.]]>
     </line>
     <line>
       <![CDATA[Verify there are no errors present.]]>
@@ -80,66 +71,42 @@
       <![CDATA[Click the 'Close Overlay X'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Logout' button.]]>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
+      <![CDATA[Mouse over the 'Files' menu link.]]>
     </line>
     <line>
-      <![CDATA[Enter the user's password in the 'Password' text box.]]>
+      <![CDATA[Click the 'mpxMedia' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Login' button.]]>
+      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Modules' menu link.]]>
+      <![CDATA[Enter title Automation1.]]>
     </line>
     <line>
-      <![CDATA[Switch to frame titled 'Modules'.]]>
+      <![CDATA[Click the 'Apply' button.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Pub Ads' in the 'Filter Name' text box.]]>
+      <![CDATA[Click the first search title link in the search result set.]]>
     </line>
     <line>
-      <![CDATA[Wait for the module titled 'Pub Ads' to appear in the list.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Pixelman' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the module titled 'Pixelman' to appear in the list.]]>
-    </line>
-    <line>
-      <![CDATA[Uncheck the 'Pixelman' module checkbox.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify there are no errors present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Logout' button.]]>
+      <![CDATA[Verify the mpx video player frame is present.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="89629" started-at="2014-02-24T14:13:35Z" finished-at="2014-02-24T14:15:05Z">
+  <suite name="Default suite" duration-ms="34305" started-at="2014-02-24T15:54:20Z" finished-at="2014-02-24T15:54:54Z">
     <groups>
+      <group name="mpx">
+        <method signature="DefaultPlayerOptionsVerification.MPXCanonicalURLImportableURLAlias_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification@6e0e60c4]" name="MPXCanonicalURLImportableURLAlias_Test" class="com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification"/>
+      </group> <!-- mpx -->
       <group name="full">
-        <method signature="PixelmanModuleSetupAndVerification.PixelmanModuleSetupAndVerification_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.Comscore.PixelmanModuleSetupAndVerification@3dbd56d0]" name="PixelmanModuleSetupAndVerification_Test" class="com.nbcuni.test.publisher.tests.Advertising.Comscore.PixelmanModuleSetupAndVerification"/>
+        <method signature="DefaultPlayerOptionsVerification.MPXCanonicalURLImportableURLAlias_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification@6e0e60c4]" name="MPXCanonicalURLImportableURLAlias_Test" class="com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification"/>
       </group> <!-- full -->
-      <group name="smoke">
-        <method signature="PixelmanModuleSetupAndVerification.PixelmanModuleSetupAndVerification_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.Comscore.PixelmanModuleSetupAndVerification@3dbd56d0]" name="PixelmanModuleSetupAndVerification_Test" class="com.nbcuni.test.publisher.tests.Advertising.Comscore.PixelmanModuleSetupAndVerification"/>
-      </group> <!-- smoke -->
     </groups>
-    <test name="Default test" duration-ms="89629" started-at="2014-02-24T14:13:35Z" finished-at="2014-02-24T14:15:05Z">
-      <class name="com.nbcuni.test.publisher.tests.Advertising.Comscore.PixelmanModuleSetupAndVerification">
-        <test-method status="PASS" signature="startSelenium(java.lang.String)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.Comscore.PixelmanModuleSetupAndVerification@3dbd56d0]" name="startSelenium" is-config="true" duration-ms="13324" started-at="2014-02-24T09:13:35Z" finished-at="2014-02-24T09:13:49Z">
+    <test name="Default test" duration-ms="34305" started-at="2014-02-24T15:54:20Z" finished-at="2014-02-24T15:54:54Z">
+      <class name="com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification">
+        <test-method status="PASS" signature="startSelenium(java.lang.String)[pri:0, instance:com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification@6e0e60c4]" name="startSelenium" is-config="true" duration-ms="13268" started-at="2014-02-24T10:54:20Z" finished-at="2014-02-24T10:54:33Z">
           <params>
             <param index="0">
               <value>
@@ -156,7 +123,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="PixelmanModuleSetupAndVerification_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.Comscore.PixelmanModuleSetupAndVerification@3dbd56d0]" name="PixelmanModuleSetupAndVerification_Test" duration-ms="75722" started-at="2014-02-24T09:13:49Z" finished-at="2014-02-24T09:15:04Z">
+        <test-method status="PASS" signature="MPXCanonicalURLImportableURLAlias_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification@6e0e60c4]" name="MPXCanonicalURLImportableURLAlias_Test" duration-ms="20441" started-at="2014-02-24T10:54:33Z" finished-at="2014-02-24T10:54:54Z">
           <reporter-output>
             <line>
               <![CDATA[Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.]]>
@@ -171,58 +138,49 @@
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Modules' menu link.]]>
+              <![CDATA[Mouse over the 'Configuration' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to frame titled 'Modules'.]]>
+              <![CDATA[Mouse over the 'Media' menu link.]]>
             </line>
             <line>
-              <![CDATA[Enter 'Pixelman' in the 'Filter Name' text box.]]>
+              <![CDATA[Click the 'Media: thePlatform mpx settings' menu link.]]>
             </line>
             <line>
-              <![CDATA[Wait for the module titled 'Pixelman' to appear in the list.]]>
+              <![CDATA[Switch to frame titled 'Media: thePlatform mpx settings dialog'.]]>
             </line>
             <line>
-              <![CDATA[Check the 'Pixelman' check box.]]>
+              <![CDATA[Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
+              <![CDATA[Get all the selected import account options and store to a list.]]>
             </line>
             <line>
-              <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
+              <![CDATA[Click the 'Close Overlay X'.]]>
             </line>
             <line>
-              <![CDATA[Switch back to the 'Modules' frame.]]>
+              <![CDATA[Mouse over the 'Structure' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to frame titled 'Modules'.]]>
+              <![CDATA[Click the 'File types' menu link.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+              <![CDATA[Switch to the active frame titled 'File types dialog'.]]>
             </line>
             <line>
-              <![CDATA[Verify there are no errors present.]]>
+              <![CDATA[Click the 'DB TV manage file display' link.]]>
             </line>
             <line>
-              <![CDATA[Enter 'DART' in the 'Filter Name' text box.]]>
+              <![CDATA[Switch to the active frame titled 'MPX Video for Account &quot;DB TV&quot; (2312945284) dialog'.]]>
             </line>
             <line>
-              <![CDATA[Wait for the module titled 'DART' to appear in the list.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Doubleclick for Publishers' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the module titled 'Doubleclick for Publishers' to appear in the list.]]>
-            </line>
-            <line>
-              <![CDATA[Uncheck the 'Doubleclick for Publishers' module checkbox.]]>
+              <![CDATA[Select the 'USA_Demo_Player' player from the 'Pub MPX Video Player for Account...' drop down list.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save configuration' button.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+              <![CDATA[Verify success message of 'Your settings have been saved.' is present.]]>
             </line>
             <line>
               <![CDATA[Verify there are no errors present.]]>
@@ -231,67 +189,43 @@
               <![CDATA[Click the 'Close Overlay X'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Logout' button.]]>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
+              <![CDATA[Mouse over the 'Files' menu link.]]>
             </line>
             <line>
-              <![CDATA[Enter the user's password in the 'Password' text box.]]>
+              <![CDATA[Click the 'mpxMedia' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Login' button.]]>
+              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Modules' menu link.]]>
+              <![CDATA[Enter title Automation1.]]>
             </line>
             <line>
-              <![CDATA[Switch to frame titled 'Modules'.]]>
+              <![CDATA[Click the 'Apply' button.]]>
             </line>
             <line>
-              <![CDATA[Enter 'Pub Ads' in the 'Filter Name' text box.]]>
+              <![CDATA[Click the first search title link in the search result set.]]>
             </line>
             <line>
-              <![CDATA[Wait for the module titled 'Pub Ads' to appear in the list.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Pixelman' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the module titled 'Pixelman' to appear in the list.]]>
-            </line>
-            <line>
-              <![CDATA[Uncheck the 'Pixelman' module checkbox.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify there are no errors present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Logout' button.]]>
+              <![CDATA[Verify the mpx video player frame is present.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- PixelmanModuleSetupAndVerification_Test -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.Comscore.PixelmanModuleSetupAndVerification@3dbd56d0]" name="stopSelenium" is-config="true" duration-ms="569" started-at="2014-02-24T09:15:04Z" finished-at="2014-02-24T09:15:05Z">
+        </test-method> <!-- MPXCanonicalURLImportableURLAlias_Test -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification@6e0e60c4]" name="stopSelenium" is-config="true" duration-ms="580" started-at="2014-02-24T10:54:54Z" finished-at="2014-02-24T10:54:54Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=PixelmanModuleSetupAndVerification_Test status=SUCCESS method=PixelmanModuleSetupAndVerification.PixelmanModuleSetupAndVerification_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.Comscore.PixelmanModuleSetupAndVerification@3dbd56d0] output=Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.]]]>
+                <![CDATA[[TestResult name=MPXCanonicalURLImportableURLAlias_Test status=SUCCESS method=DefaultPlayerOptionsVerification.MPXCanonicalURLImportableURLAlias_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification@6e0e60c4] output=Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-      </class> <!-- com.nbcuni.test.publisher.tests.Advertising.Comscore.PixelmanModuleSetupAndVerification -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
