@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Feb 25 13:15:39 EST 2014</td>
+<td>Started on:</td><td>Tue Feb 25 16:44:04 EST 2014</td>
 </tr>
-<tr><td>Total time:</td><td>34 seconds (34082 ms)</td>
+<tr><td>Total time:</td><td>330 seconds (330612 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,12 +75,12 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification.DefaultPlayerOptionsVerification_Test()'><b>DefaultPlayerOptionsVerification_Test</b><br>Test class: com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification<br/>
-<a href="#Output-665488214" onClick='toggleBox("Output-665488214", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability.NotificationPlayerUnavailability_Test()'><b>NotificationPlayerUnavailability_Test</b><br>Test class: com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability<br/>
+<a href="#Output-293350788" onClick='toggleBox("Output-293350788", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-665488214" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-665488214">
-Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.<br/>
+<a href="#Output-293350788" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-293350788">
+Open url 'http://qa4.qa.nbcupublisher7.publisher7.com'.<br/>
 Enter the user's email address in the 'Email Address' text box.<br/>
 Enter the user's password in the 'Password' text box.<br/>
 Click the 'Login' button.<br/>
@@ -90,31 +90,139 @@ Click the 'Media: thePlatform mpx settings' menu link.<br/>
 Switch to frame titled 'Media: thePlatform mpx settings dialog'.<br/>
 Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.<br/>
 Get all the selected import account options and store to a list.<br/>
-Click the 'Close Overlay X'.<br/>
-Mouse over the 'Structure' menu link.<br/>
-Click the 'File types' menu link.<br/>
-Switch to the active frame titled 'File types dialog'.<br/>
-Click the 'DB TV manage file display' link.<br/>
-Switch to the active frame titled 'MPX Video for Account &quot;DB TV&quot; (2312945284) dialog'.<br/>
-Click the 'Pub MPX Video' link.<br/>
-Select the 'USA_Demo_Player' player from the 'Pub MPX Video Player for Account...' drop down list.<br/>
-Click the 'Save configuration' button.<br/>
-Verify success message of 'Your settings have been saved.' is present.<br/>
+Open the mpx platform.<br/>
+Enter 'mpx/AdminPub7QA' in the 'Username' text box.<br/>
+Enter 'Pa55word' in the 'Password' text box.<br/>
+Click the 'Login' button.<br/>
+Enter the account name 'DB TV' in the account select text box.<br/>
+Click the account option from the drop down list.<br/>
+Click the 'Account' title to leave focus off of the selection.<br/>
+Wait for account to switch to the newly selected account.<br/>
+Click the 'Players' link.<br/>
+Click the 'All Players' link.<br/>
+Click the 'Add' button.<br/>
+Enter 'AutomationPlayer9f1a5b4eda' in the 'Title' text box.<br/>
+Click the 'Save' button.<br/>
+Open url 'http://qa4.qa.nbcupublisher7.publisher7.com'.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Files' menu link.<br/>
+Click the 'mpxPlayers' menu link.<br/>
+Switch to frame titled 'Content'.<br/>
+Click the 'Sync MPX Players' link.<br/>
+Click the 'Sync MPX Players Now' link.<br/>
+Verify success message of 'players returned for account' is present.<br/>
+Verify there are no errors present.<br/>
+Enter title AutomationPlayer9f1a5b4eda.<br/>
+Click the 'Apply' button.<br/>
+Get the text of the first search result set item.<br/>
+Verify success message of 'Cron ran successfully.' is present.<br/>
+Verify there are no errors present.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Files' menu link.<br/>
+Click the 'mpxPlayers' menu link.<br/>
+Enter title AutomationPlayer9f1a5b4eda.<br/>
+Click the 'Apply' button.<br/>
+Get the text of the first search result set item.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Files' menu link.<br/>
+Click the 'mpxMedia' menu link.<br/>
+Enter title Automation.<br/>
+Select the 'Published' from the 'MPX Status' select ddl.<br/>
+Select the DB TV from the 'Source' select ddl.<br/>
+Click the 'Apply' button.<br/>
+Get the text of the first search result set item.<br/>
+Click the first search title link in the search result set.<br/>
+Click the 'Edit' link in the work bench.<br/>
+Switch to the active frame titled 'Edit mpx_video_4 Automationddd218ee51 dialog'.<br/>
+Select 'AutomationPlayer9f1a5b4eda' from the 'Video Player' drop down list.<br/>
+Click the 'Save' button.<br/>
+Open the mpx platform.<br/>
+Enter the account name 'DB TV' in the account select text box.<br/>
+Click the account option from the drop down list.<br/>
+Click the 'Account' title to leave focus off of the selection.<br/>
+Wait for account to switch to the newly selected account.<br/>
+Click the 'Players' link.<br/>
+Click the 'All Players' link.<br/>
+Enter 'AutomationPlayer9f1a5b4eda' in the 'Player Search' text box.<br/>
+Click the 'Search by Players Title' link.<br/>
+Click the 'Player Title' label to give focus to the player item.<br/>
+Click the 'Disable Player' check box.<br/>
+Click the 'Save' button.<br/>
+Open url 'http://qa4.qa.nbcupublisher7.publisher7.com'.<br/>
+Switch to the active frame titled 'Status report dialog'.<br/>
+Verify success message of 'Cron ran successfully.' is present.<br/>
 Verify there are no errors present.<br/>
 Click the 'Close Overlay X'.<br/>
 Mouse over the 'Content' menu link.<br/>
 Mouse over the 'Files' menu link.<br/>
-Click the 'mpxMedia' menu link.<br/>
+Click the 'mpxPlayers' menu link.<br/>
 Switch to the active frame titled 'Content dialog'.<br/>
-Enter title Automation1.<br/>
+Verify that the disabled player text is present for player titled 'AutomationPlayer9f1a5b4eda'.<br/>
+Enter title AutomationPlayer9f1a5b4eda.<br/>
 Click the 'Apply' button.<br/>
 Click the first search title link in the search result set.<br/>
-Verify the mpx video player frame is present.<br/>
+Click the 'Edit' link in the work bench.<br/>
+Switch to the active frame titled 'Edit mpx_player AutomationPlayer9f1a5b4eda dialog'.<br/>
+Scroll the 'Publishing Options' link into view.<br/>
+Click the 'Publishing Options' link.<br/>
+Uncheck the 'Published' checkbox<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'MPX Player AutomationPlayer9f1a5b4eda has been updated.' is present.<br/>
+Verify there are no errors present.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Files' menu link.<br/>
+Click the 'mpxPlayers' menu link.<br/>
+Switch to the active frame titled 'Content dialog'.<br/>
+Verify that the disabled and unpublished player text is present for player titled 'AutomationPlayer9f1a5b4eda'.<br/>
+Click the 'MPX Media' link.<br/>
+Switch to the active frame titled 'Content dialog'.<br/>
+Verify that the disabled and unpublished player text is present for player titled 'AutomationPlayer9f1a5b4eda'.<br/>
+Click the 'Close Overlay X'.<br/>
+Mouse over the 'Configuration' menu link.<br/>
+Mouse over the 'Media' menu link.<br/>
+Click the 'Media: thePlatform mpx settings' menu link.<br/>
+Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.<br/>
+Verify that the disabled and unpublished player text is present for player titled 'AutomationPlayer9f1a5b4eda'.<br/>
+Click the 'click here' link for the unpublished player titled 'AutomationPlayer9f1a5b4eda'.<br/>
+Switch to the active frame titled 'Edit mpx_player AutomationPlayer9f1a5b4eda dialog'.<br/>
+Scroll the 'Publishing Options' link into view.<br/>
+Click the 'Publishing Options' link.<br/>
+Check the 'Published' checkbox<br/>
+Click the 'Save' button.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Files' menu link.<br/>
+Click the 'mpxPlayers' menu link.<br/>
+Switch to the active frame titled 'Content dialog'.<br/>
+Verify that the disabled player text is present for player titled 'AutomationPlayer9f1a5b4eda'.<br/>
+Click the MPX 'Login' link for the unpublished player 'AutomationPlayer9f1a5b4eda'.<br/>
+Enter the account name 'DB TV' in the account select text box.<br/>
+Click the account option from the drop down list.<br/>
+Click the 'Account' title to leave focus off of the selection.<br/>
+Wait for account to switch to the newly selected account.<br/>
+Click the 'Players' link.<br/>
+Click the 'All Players' link.<br/>
+Enter 'AutomationPlayer9f1a5b4eda' in the 'Player Search' text box.<br/>
+Click the 'Search by Players Title' link.<br/>
+Click the 'Player Title' label to give focus to the player item.<br/>
+Click the 'Disable Player' check box.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'Content dialog'.<br/>
+Click the 'Close Overlay X'.<br/>
+Switch to the active frame titled 'Status report dialog'.<br/>
+Verify success message of 'Cron ran successfully.' is present.<br/>
+Verify there are no errors present.<br/>
+Click the 'Close Overlay X'.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Files' menu link.<br/>
+Click the 'mpxPlayers' menu link.<br/>
+Switch to the active frame titled 'Content dialog'.<br/>
+Verify the text 'An MPXplayer that's in use (AutomationPlayer9f1a5b4eda) has been disabled in MPX.' is NOT present on the page.<br/>
+Verify the text 'An MPXplayer that's in use (AutomationPlayer9f1a5b4eda) has been disabled in MPX.' is NOT present on the page.<br/>
 </div>
 </td>
 <td></td>
-<td>19</td>
-<td>com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification@6538b14</td></tr>
+<td>316</td>
+<td>com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability@339bf2ac</td></tr>
 </table><p>
 </body>
 </html>

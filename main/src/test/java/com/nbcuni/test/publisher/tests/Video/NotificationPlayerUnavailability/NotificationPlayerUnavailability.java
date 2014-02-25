@@ -83,7 +83,7 @@ public class NotificationPlayerUnavailability extends ParentTest{
             	mpxLogin.OpenMPXThePlatform();
             	mpxLogin.Login(applib.getMPXUsername(), applib.getMPXPassword());
             	
-            	//Step 2 - NOTE that step creates a new player rather than use an existing one
+            	//Step 2 - note that this test creates a new player
             	MPXSelectAccount mpxSelectAccount = new MPXSelectAccount(applib);
                 mpxSelectAccount.SelectAccount("DB TV");
             	MPXAddPlayer mpxAddPlayer = new MPXAddPlayer(applib);
@@ -93,7 +93,7 @@ public class NotificationPlayerUnavailability extends ParentTest{
                 String playerTitle = "AutomationPlayer" + random.GetCharacterString(10);
                 mpxAddPlayer.EnterPlayerTitle(playerTitle);
                 mpxAddPlayer.ClickSaveBtn();
-                Thread.sleep(10000); //long pause necessary as mpx processes player
+                Thread.sleep(5000); //long pause necessary as mpx processes player
                 applib.openApplication();
                 taxonomy.NavigateSite("Content>>Files>>mpxPlayers");
                 overlay.SwitchToFrame("Content");
@@ -103,11 +103,11 @@ public class NotificationPlayerUnavailability extends ParentTest{
                 ContentParent contentParent = new ContentParent(webDriver, applib);
                 contentParent.VerifyMessageStatus("players returned for account");
         	    SearchFor searchFor = new SearchFor(webDriver, applib);
-                searchFor.EnterTitle(playerTitle);
+        	    searchFor.EnterTitle(playerTitle);
                 searchFor.ClickApplyBtn();
                 overlay.switchToDefaultContent();
                 if (!searchFor.GetFirstMPXPlayerSearchResult().equals(playerTitle)) {
-        	    	Thread.sleep(30000); //pause and re-run cron as sometimes media assets aren't in the first ingested queue
+        	    	Thread.sleep(10000); //pause and re-run cron as sometimes media assets aren't in the first ingested queue
         	    	taxonomy.NavigateSite("Home>>Run cron");
             	    contentParent.VerifyMessageStatus("Cron ran successfully.");
             	    taxonomy.NavigateSite("Content>>Files>>mpxPlayers");
@@ -133,8 +133,8 @@ public class NotificationPlayerUnavailability extends ParentTest{
         	    contentParent.ClickSaveBtn();
         	    
                 //Step 3
-                mpxLogin.OpenMPXThePlatform();
-                mpxSelectAccount.SelectAccount("DB TV");
+        	    mpxLogin.OpenMPXThePlatform();
+            	mpxSelectAccount.SelectAccount("DB TV");
                 mpxAddPlayer.ClickPlayersLnk();
                 mpxAddPlayer.ClickAllPlayersLnk();
             	MPXSearch mpxSearch = new MPXSearch(applib);
@@ -159,21 +159,30 @@ public class NotificationPlayerUnavailability extends ParentTest{
         	    taxonomy.NavigateSite("Content>>Files>>mpxPlayers");
         	    overlay.SwitchToActiveFrame();
         	    
-        	    //Step 7
+        	    //Step 7 - note that multiple cron runs are sometimes necessary for disabled player to be present
         	    ErrorChecking errorChecking = new ErrorChecking(webDriver, applib);
-        	    try {
-        	    	errorChecking.VerifyMPXPlayerDisabled(playerTitle);
-        	    }
-        	    catch (AssertionError | NoSuchElementException ex) {
+        	    int I = 0;
+        	    while (I < 2) {
+        	    	I++;
+        	    	if (I == 3) {
+        	    		Assert.fail("MPX player '" + playerTitle + "' is not present after 3 cron executions.");
+        	    	}
+        	    	try {
+        	    		errorChecking.VerifyMPXPlayerDisabled(playerTitle);
+        	    		break;
+        	    	}
+        	    	catch (AssertionError | NoSuchElementException ex) {
         	    	
-        	    	Thread.sleep(30000); //pause and re-run cron as this step can be flaky and sometimes require a second cron run.
-        	    	overlay.switchToDefaultContent();
-        	    	taxonomy.NavigateSite("Home>>Run cron");
-        	    	overlay.SwitchToActiveFrame();
-            	    contentParent.VerifyMessageStatus("Cron ran successfully.");
-            	    overlay.ClickCloseOverlayLnk();
-            	    taxonomy.NavigateSite("Content>>Files>>mpxPlayers");
-            	    errorChecking.VerifyMPXPlayerDisabled(playerTitle);
+        	    		Thread.sleep(10000); //pause and re-run cron as this step can be flaky and sometimes require a second cron run.
+        	    		overlay.switchToDefaultContent();
+        	    		taxonomy.NavigateSite("Home>>Run cron");
+        	    		overlay.SwitchToActiveFrame();
+        	    		contentParent.VerifyMessageStatus("Cron ran successfully.");
+        	    		overlay.ClickCloseOverlayLnk();
+        	    		taxonomy.NavigateSite("Content>>Files>>mpxPlayers");
+        	    		overlay.SwitchToActiveFrame();
+        	    		errorChecking.VerifyMPXPlayerDisabled(playerTitle);
+        	    	}
         	    }
         	    
                 //Step 8
@@ -257,20 +266,27 @@ public class NotificationPlayerUnavailability extends ParentTest{
         	    //Step 17
         	    taxonomy.NavigateSite("Content>>Files>>mpxPlayers");
                 overlay.SwitchToActiveFrame();
-                
-                try {
-                	contentParent.VerifyPageContentNotPresent(Arrays.asList("An MPXplayer that's in use (" + playerTitle + ") has been disabled in MPX."));
-                }
-                catch (AssertionError e) {
-                	Thread.sleep(30000); //pause and re-run cron as this step can be flaky and sometimes require a second cron run.
-        	    	overlay.switchToDefaultContent();
-        	    	taxonomy.NavigateSite("Home>>Run cron");
-        	    	overlay.SwitchToActiveFrame();
-            	    contentParent.VerifyMessageStatus("Cron ran successfully.");
-            	    overlay.ClickCloseOverlayLnk();
-            	    taxonomy.NavigateSite("Content>>Files>>mpxPlayers");
-            	    contentParent.VerifyPageContentNotPresent(Arrays.asList("An MPXplayer that's in use (" + playerTitle + ") has been disabled in MPX."));
-                }
+                int I2 = 0;
+        	    while (I2 < 2) {
+        	    	I2++;
+        	    	if (I2 == 3) {
+        	    		Assert.fail("MPX disabled player text for '" + playerTitle + "' is still present after 3 cron executions.");
+        	    	}
+        	    	try {
+        	    		contentParent.VerifyPageContentNotPresent(Arrays.asList("An MPXplayer that's in use (" + playerTitle + ") has been disabled in MPX."));
+        	    	}
+        	    	catch (AssertionError e) {
+        	    		Thread.sleep(10000); //pause and re-run cron as this step can be flaky and sometimes require a second cron run.
+        	    		overlay.switchToDefaultContent();
+        	    		taxonomy.NavigateSite("Home>>Run cron");
+        	    		overlay.SwitchToActiveFrame();
+        	    		contentParent.VerifyMessageStatus("Cron ran successfully.");
+        	    		overlay.ClickCloseOverlayLnk();
+        	    		taxonomy.NavigateSite("Content>>Files>>mpxPlayers");
+        	    		overlay.SwitchToActiveFrame();
+        	    		contentParent.VerifyPageContentNotPresent(Arrays.asList("An MPXplayer that's in use (" + playerTitle + ") has been disabled in MPX."));
+        	    	}
+        	    }
         	}
         	else {
         		Assert.fail("DB TV account must be configured.");

@@ -60,15 +60,21 @@ public class ErrorChecking {
     
     public void VerifyMPXPlayerDisabled(String playerTitle) throws Exception {
     	
+    	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+    	
     	Reporter.log("Verify that the disabled player text is present for player titled '" + playerTitle + "'.");
     	String disabledPlayerTxt = DisabledPlayerError_Ctr(playerTitle).getText();
     	if (!disabledPlayerTxt.contains("An MPXplayer that's in use (" + playerTitle + ") has been disabled in MPX.")) {
     		Assert.fail("Disabled player text not present for player titled '" + playerTitle + "'.");
     	}
     	Assert.assertTrue(disabledPlayerTxt.contains("To change its status in MPX, log into mpx.theplatform"));
+    	
+    	webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
     }
     
     public void VerifyMPXPlayerDisabledAndUnpublished(String playerTitle) throws Exception {
+    	
+    	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
     	
     	Reporter.log("Verify that the disabled and unpublished player text is present for player titled '" + playerTitle + "'.");
     	String disabledPlayerTxt = DisabledPlayerError_Ctr(playerTitle).getText();
@@ -77,6 +83,8 @@ public class ErrorChecking {
     	}
     	Assert.assertTrue(disabledPlayerTxt.contains("To change its status in Publisher, click here"));
     	Assert.assertTrue(disabledPlayerTxt.contains("To change its status in MPX, log into mpx.theplatform"));
+    	
+    	webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
     }
     
     public void VerifyNoMessageErrorsPresent() throws Exception{
