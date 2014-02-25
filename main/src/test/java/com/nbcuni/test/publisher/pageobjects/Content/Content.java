@@ -2,7 +2,7 @@ package com.nbcuni.test.publisher.pageobjects.Content;
 
 import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.webdriver.CustomWebDriver;
-import junit.framework.Assert;
+import org.testng.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;

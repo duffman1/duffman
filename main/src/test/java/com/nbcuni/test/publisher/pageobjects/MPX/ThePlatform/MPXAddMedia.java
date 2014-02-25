@@ -100,6 +100,22 @@ public class MPXAddMedia {
     	
     }
     
+    public void ClickFilesLnk() throws Exception {
+    	
+    	Reporter.log("Click the 'Files' link.");
+    	mpxAssets.WaitForImgPresent(getImagePath() + "Media/Files_Lnk.png");
+    	sikuli.click(getImagePath() + "Media/Files_Lnk.png");
+    	Thread.sleep(3000); //TODO - add dynamic wait
+    }
+    
+    public void ClickAllMediaLnk() throws Exception {
+    	
+    	Reporter.log("Click the 'All Media' link.");
+    	mpxAssets.WaitForImgPresent(getImagePath() + "Media/AllMedia_Lnk.png");
+    	sikuli.click(getImagePath() + "Media/AllMedia_Lnk.png");
+    	Thread.sleep(3000); //TODO - add dynamic wait
+    }
+    
     public void EnterTitle(String mediaTitle) throws Exception {
     	
     	Reporter.log("Enter '" + mediaTitle + "' in the 'Title' text box.");

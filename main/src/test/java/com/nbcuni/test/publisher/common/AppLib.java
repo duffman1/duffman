@@ -8,7 +8,7 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 import com.nbcuni.test.webdriver.CustomWebDriverException;
 import com.nbcuni.test.webdriver.Utilities;
 
-import junit.framework.Assert;
+import org.testng.Assert;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
@@ -129,76 +129,76 @@ public class AppLib {
         }
     }
 
-    public String getPathToMedia(){
+    public String getPathToMedia() {
     	
     	String filePath = System.getProperty("user.dir") + this.pathToMediaContent;
         return filePath.replace("/", File.separator);
     }
     
-    public String getPathToSikuliImages(){
+    public String getPathToSikuliImages() {
     	
     	String filePath = System.getProperty("user.dir") + this.pathToSikuliImages;
     	return filePath.replace("/", File.separator);
     }
     
-    public String getAdmin1Username(){
+    public String getAdmin1Username() {
     	
     	return admin1Username;
     }
     
-    public String getAdmin1Password(){
+    public String getAdmin1Password() {
     	
     	return admin1Password;
     }
     
-    public String getMPXUrl(){
+    public String getMPXUrl() {
     	
     	return this.mpxUrl;
     }
 
-    public String getMPXUsername(){
+    public String getMPXUsername() {
     	
     	return mpxUsername;
     	
     }
     
-    public String getMPXPassword(){
+    public String getMPXPassword() {
     	
     	return mpxPassword;
     	
     }
     
-    public int getImplicitWaitTime(){
+    public int getImplicitWaitTime() {
     	
     	return Integer.parseInt(this.implicitWaitTime);
     	
     }
     
-    public double getSikuliImageWaitTime(){
+    public double getSikuliImageWaitTime() {
     	
     	return (double) Integer.parseInt(this.sikuliImageWaitTime);
     	
     }
     
-    public int getPageLoadWaitTime(){
+    public int getPageLoadWaitTime() {
     	
     	return Integer.parseInt(this.pageLoadWaitTime);
     	
     }
     
-    public String getGmailAutoEmailUsername(){
+    public String getGmailAutoEmailUsername() {
     	
     	return gMailAutoEmailUsername;
     	
     }
     
-    public String getGmailAutoEmailPassword(){
+    public String getGmailAutoEmailPassword() {
     	
     	return gMailAutoEmailPassword;
     	
     }
     
-    public boolean IsErrorCheckingEnabled(){
+    public boolean IsErrorCheckingEnabled() {
     	
     	boolean checksEnabled = true;
     	if (this.errorChecksEnabled.equals("true")) {

@@ -17,7 +17,7 @@ import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXSelectAccount;
 import com.nbcuni.test.publisher.pageobjects.Queues.ScheduleQueue;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 
-import junit.framework.Assert;
+import org.testng.Assert;
 
 import org.testng.annotations.Test;
 

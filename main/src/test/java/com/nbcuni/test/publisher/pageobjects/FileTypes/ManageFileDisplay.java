@@ -29,11 +29,23 @@ public class ManageFileDisplay {
     }
     
     //PAGE OBJECT IDENTIFIERS
+    @FindBy(how = How.ID, using = "edit-displays-pub-mpx-image-status")
+    private static WebElement PubMPXImage_Cbx;
+    
     @FindBy(how = How.ID, using = "edit-displays-pub-mpx-video-status")
     private static WebElement PubMPXVideo_Cbx;
     
     @FindBy(how = How.CSS, using = "select[id*='edit-displays-pub-mpx-video-settings-pub-mpx-video-player']")
     private static WebElement PubMPXVideoPlayerForAccount_Ddl;
+    
+    @FindBy(how = How.ID, using = "edit-displays-pub-mpx-image-settings-pub-mpx-image-image-style")
+    private static WebElement PubMPXImageStyle_Ddl;
+    
+    @FindBy(how = How.XPATH, using = "//a/strong[text()='Pub MPX Video']")
+    private static WebElement PubMPXVideo_Lnk;
+    
+    @FindBy(how = How.XPATH, using = "//a/strong[text()='Pub MPX Image']")
+    private static WebElement PubMPXImage_Lnk;
     
     @FindBy(how = How.ID, using = "edit-actions-submit")
     private static WebElement SaveConfiguration_Btn;
@@ -48,11 +60,46 @@ public class ManageFileDisplay {
     	}
     }
     
+    public void CheckPubMPXImageCbx() throws Exception {
+    	
+    	if (PubMPXImage_Cbx.isSelected() == false) {
+    		Reporter.log("Check the 'Pub MPX Image' checkbox");
+    		PubMPXImage_Cbx.click();
+    	}
+    }
+    
+    public void UnCheckPubMPXImageCbx() throws Exception {
+    	
+    	if (PubMPXImage_Cbx.isSelected() == true) {
+    		Reporter.log("Un-Check the 'Pub MPX Image' checkbox");
+    		PubMPXImage_Cbx.click();
+    	}
+    }
+    
+    public void ClickPubMPXVideoLnk() throws Exception {
+    	
+    	Reporter.log("Click the 'Pub MPX Video' link.");
+    	wait.until(ExpectedConditions.visibilityOf(PubMPXVideo_Lnk)).click();
+    }
+    
+    public void ClickPubMPXImageLnk() throws Exception {
+    	
+    	Reporter.log("Click the 'Pub MPX Image' link.");
+    	wait.until(ExpectedConditions.visibilityOf(PubMPXImage_Lnk)).click();
+    }
+    
     public void SelectMPXVideoPlayer(String playerName) throws Exception {
     	
     	Reporter.log("Select the '" + playerName + "' player from the 'Pub MPX Video Player for Account...' drop down list.");
     	wait.until(ExpectedConditions.visibilityOf(PubMPXVideoPlayerForAccount_Ddl));
     	new Select(PubMPXVideoPlayerForAccount_Ddl).selectByVisibleText(playerName);
+    }
+    
+    public void SelectMPXImageStyle(String style) throws Exception {
+    	
+    	Reporter.log("Select the '" + style + "' option from the 'Pub MPX Image Style' drop down list.");
+    	wait.until(ExpectedConditions.visibilityOf(PubMPXImageStyle_Ddl));
+    	new Select(PubMPXImageStyle_Ddl).selectByVisibleText(style);
     }
     
     public void ClickSaveConfigurationBtn() throws Exception {

@@ -2,7 +2,9 @@ package com.nbcuni.test.publisher.pageobjects.Content;
 
 import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.webdriver.CustomWebDriver;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -10,6 +12,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.Reporter;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -70,6 +73,10 @@ public class SearchFor {
     	return webDriver.findElement(By.xpath("//a[text()='" + title + "']"));
     }
     
+    private static WebElement SearchThumbnail_Img(String title) {
+    	return webDriver.findElement(By.xpath("//a[text()='" + title + "']/../../td[contains(@class, 'thumbnail')]//img"));
+    }
+    
     private static List<WebElement> AllSearchHeader_Clms() {
     	return webDriver.findElements(By.xpath("//thead//th/a"));
     }
@@ -122,7 +129,7 @@ public class SearchFor {
     public void VerifySearchResultsPresent(List<String> resultSet) throws Exception {
     	
     	Reporter.log("Get the title text of every result in the search result set.");
-    	Thread.sleep(1000);
+    	Thread.sleep(250);
     	List<String> allResultTitles = new ArrayList<String>();
     	for (WebElement el : AllResultSet_Ttls()) {
     		
@@ -144,8 +151,27 @@ public class SearchFor {
     public void ClickSearchTitleLnk(String title) throws Exception {
 
     	Reporter.log("Click the first search title link in the search result set.");
-    	Thread.sleep(1000); 
+    	Thread.sleep(250); 
         SearchTitle_Lnk(title).click();
+    }
+    
+    public void VerifySearchThumbnailImgPresent(String title, String imgName) throws Exception {
+
+    	Reporter.log("Verify the search thumbnail named '" + imgName + "' is present for search result '" + title + "'.");
+    	Assert.assertTrue(SearchThumbnail_Img(title).getAttribute("src").contains(imgName));
+    	
+    	Reporter.log("Assert the the img is loaded and visible.");
+    	boolean imgLoaded;
+        for (int second = 0; ; second++){
+            if (second >= 30) {
+                Assert.fail("Image '" + imgName + "' is not fully loaded after timeout");
+            }
+            imgLoaded = (Boolean) ((JavascriptExecutor)webDriver).executeScript(
+            			"return arguments[0].complete && typeof arguments[0].naturalWidth != \"undefined\" && arguments[0].naturalWidth > 0", 
+            			SearchThumbnail_Img(title));
+            if (imgLoaded == true){ break;}
+            Thread.sleep(500);
+        }
     }
     
     public void VerifySearchHeaderColumnOrder() throws Exception {
@@ -175,7 +201,7 @@ public class SearchFor {
     public String GetFirstSearchResult() throws Exception {
 
     	Reporter.log("Get the text of the first search result set item.");
-    	Thread.sleep(1000); 
+    	Thread.sleep(250); 
         return FirstSearchResult_Lnk.getText();
     }
     
@@ -208,7 +234,7 @@ public class SearchFor {
     public String GetFirstPublishedSearchResult() throws Exception {
 
     	Reporter.log("Get the text of the first published search result set item.");
-    	Thread.sleep(1000);
+    	Thread.sleep(250);
     	return FirstPublishedSearchResult_Lnk.getText();	
  
     }
@@ -225,7 +251,7 @@ public class SearchFor {
     public Integer GetMPXSearchResultSize() throws Exception {
 
     	Reporter.log("Get the number of results in the result set.");
-    	Thread.sleep(1000); 
+    	Thread.sleep(250); 
         return AllMPXSearchResults_Lnks().size();
     }
     
@@ -279,7 +305,7 @@ public class SearchFor {
     public void VerifyMPXResultSetSource(String account) throws Exception {
 
     	Reporter.log("Get all the MPX result set 'Source' items.");
-    	Thread.sleep(1000);
+    	Thread.sleep(250);
         List<WebElement> resultSet = AllMPXResultSetSource_Itms();
         
         Reporter.log("Assert that every source item in the result set equals '" + account + "'.");
@@ -299,7 +325,7 @@ public class SearchFor {
     public void VerifyMPXResultSetMPXStatus(String status) throws Exception {
 
     	Reporter.log("Get all the MPX result set 'Status' items.");
-    	Thread.sleep(1000); 
+    	Thread.sleep(250); 
     	webDriver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
         List<WebElement> resultSet = AllMPXResultSetStatus_Itms();
         

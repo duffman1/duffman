@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 
 import java.util.List;
 
-import junit.framework.Assert;
+import org.testng.Assert;
 
 public class EnhanceMPXPlayerContentAdminScreen extends ParentTest{
 	

@@ -10,7 +10,7 @@ import com.nbcuni.test.publisher.pageobjects.FileTypes.FileTypes;
 import com.nbcuni.test.publisher.pageobjects.FileTypes.ManageFileDisplay;
 import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
-import junit.framework.Assert;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class DefaultPlayerOptionsVerification extends ParentTest{
@@ -41,7 +41,7 @@ public class DefaultPlayerOptionsVerification extends ParentTest{
      * @throws Throwable No Return values are needed
      *************************************************************************************/
     @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "mpx"})
-    public void MPXCanonicalURLImportableURLAlias_Test() throws Exception{
+    public void DefaultPlayerOptionsVerification_Test() throws Exception {
 
     	//Step 1
     	UserLogin userLogin = applib.openApplication();
@@ -71,6 +71,7 @@ public class DefaultPlayerOptionsVerification extends ParentTest{
         		//Step 15
         		ManageFileDisplay manageFileDisplay = new ManageFileDisplay(webDriver, applib);
         		manageFileDisplay.ClickPubMPXVideoCbx();
+        		manageFileDisplay.ClickPubMPXVideoLnk();
         		manageFileDisplay.SelectMPXVideoPlayer("USA_Demo_Player");
         		manageFileDisplay.ClickSaveConfigurationBtn();
         		ContentParent contentParent = new ContentParent(webDriver, applib);

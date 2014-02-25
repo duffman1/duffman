@@ -9,7 +9,7 @@ import com.nbcuni.test.publisher.pageobjects.MPX.MPXPlayers;
 import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 
-import junit.framework.Assert;
+import org.testng.Assert;
 
 import org.testng.annotations.Test;
 

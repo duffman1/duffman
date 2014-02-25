@@ -1,15 +1,14 @@
-package com.nbcuni.test.publisher.tests.Video.CanonicalURLSupport;
+package com.nbcuni.test.publisher.tests.Video.Thumbnails;
 
-import java.util.Arrays;
 import java.util.List;
+
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Content.AddFile;
 import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.Content.SearchFor;
 import com.nbcuni.test.publisher.pageobjects.FileTypes.FileTypes;
-import com.nbcuni.test.publisher.pageobjects.FileTypes.MPXFileType;
-import com.nbcuni.test.publisher.pageobjects.FileTypes.ManageFields;
+import com.nbcuni.test.publisher.pageobjects.FileTypes.ManageFileDisplay;
 import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
 import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXAddMedia;
 import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXLogin;
@@ -19,26 +18,37 @@ import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class MPXCanonicalURLImportableURLAlias extends ParentTest{
+public class ThumbnailsAreNotUpdated extends ParentTest{
 	
     /*************************************************************************************
      * TEST CASE 
-     * Step 1 - Log in to the test instance as Drupal User 1 (usually admin in Publisher test sites). ,Login succeeds. 
-     * Step 2 - Go to Structure > File Types 
-	 * Step 3 - Click "manage fields" link in the MPX Video row.
-     * Step 4 - NOTE - if field labeled "MPX Media Related Link" exists, skip steps 4 and 5. Create a new text field. ,
-	 * Step 5 - Under MPX Media Data Field Path, enter link -- this will draw data from the Related Link field in MPX. ,
-     * Step 6 - Go back to the file types page. ,
-	 * Step 7 - Click edit file type in the MPX Video row, and then select the "MPX Media Related Link".
-     * Step 8 - Working In MPX, enter a value for any video in the Canonical URL (a.k.a Related Link) field, and click Save.,
-     * Step 9 - Run cron, and then clear all caches in Drupal.
-     * Step 10 - Go to the Content > FIles > mpxMedia page -- <http://<TestSiteName>/admin/content/file/mpxmedia>. ,The URL path in the browser address bar matches the value you entered in the Related Link field in MPX at Step 7.
+     * Step 1 - Prerequisites:  Configure the MPX account at /admin/config/media/theplatform for DBTV  Go to /admin/structure/file-types/manage/mpx_video/file-display. check Pub MPX Image and set the image style  Make sure to set the representative image of the content type being tested as Cover Media,
+     * Step 2 - Log into the test instance as admin Note: This user story was initially deployed to http://qa1dev.publisher.nbcuni.com/user,Login Succeeds
+     * Step 3 - On another tab, Upload a video in MPX at http://mpx.theplatform.com/ and Publish the video,Video gets published
+     * Step 4 - Go to Content > Files > mpxMedia,mpxMedia page is displayed
+     * Step 5 - Click Sync mpxMedia now,A confirmation message stating that the sync is complete
+     * Step 6 - Run Cron ,All the drupal caches are cleared
+     * Step 7 - Go to Content > Files > mpxMedia and look for the video uploaded in step2,The video should be displayed in the list of files.
+     * Step 8 - Go back to http://mpx.theplatform.com/ and click the video uploaded in step2,The Preview of the selected video is seen to the right of the page
+     * Step 9 - Click Files,Files related to the video are displayed
+     * Step 10 - Click Upload and select an image,Uploaded image is displayed in the list of files
+     * Step 11 - Click on the image to load the preview,  check This is the default content or thumbnail and save,All the options are saved.
+     * Step 12 - Go back to All Media and Save,The video is now updated with the thumbnail image.
+     * Step 13 - Go back to the Publisher instance. Run Cron. ,All the drupal caches are cleared
+     * Step 14 - Go to Content > Files > mpxMedia and look for the video,A thumbnail should now be seen.
+     * Step 15 - Go back to MPX and Choose another thumbnail image (A snapshot of the video or a new image file uploaded) for the same video,A new thumbnail image  has been set for the video.
+     * Step 16 - Go back to the Publisher instance. Run Cron. ,All drupal caches are cleared.
+     * Step 17 - Go to Content > Files > mpxMedia and look for the video,The updated thumbnail should be seen   Note: Browser cache can sometimes not allow to see the changes. Please verify on another browser or hard refresh to see the image change
+     * Step 18 - Go to Content > Add Content > Movie,Movie Page is displayed
+     * Step 19 - Click Cover Media. select the video uploaded and Save,The thumbnail of the video should be seen on the content creation page
+     * Step 20 - Save the Movie ,Movie is created
+     * Step 21 - Go to Content table and look for the Movie created ,A thumbnail image is displayed for the movie.  
      * @throws Throwable No Return values are needed
      *************************************************************************************/
     @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "mpx"})
-    public void MPXCanonicalURLImportableURLAlias_Test() throws Exception{
+    public void ThumbnailsAreNotUpdated_Test() throws Exception {
 
-    	//Step 1
+    	//Step 1 and 2
     	UserLogin userLogin = applib.openApplication();
     	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
         
@@ -50,46 +60,26 @@ public class MPXCanonicalURLImportableURLAlias extends ParentTest{
 
         	List<String> configuredAccounts = settings.GetImportAccountSelectedOptions();
 
-        	//Step 2
         	if (configuredAccounts.get(0).equals("DB TV")) {
+        		
         		overlay.ClickCloseOverlayLnk();
         		taxonomy.NavigateSite("Structure>>File types");
         		overlay.SwitchToActiveFrame();
         	
-        		//Step 3
         		FileTypes fileTypes = new FileTypes(webDriver);
-        		fileTypes.ClickManageFieldsLnk(configuredAccounts.get(0));
+        		fileTypes.ClickManageFileDisplayLnk(configuredAccounts.get(0));
         		overlay.SwitchToActiveFrame();
         		
-        		//Step 4
-        		overlay.SwitchToActiveFrame();
+        		ManageFileDisplay manageFileDisplay = new ManageFileDisplay(webDriver, applib);
+        		manageFileDisplay.CheckPubMPXImageCbx();
+        		manageFileDisplay.ClickPubMPXImageLnk();
+        		manageFileDisplay.SelectMPXImageStyle("Thumbnail (100x100)");
+        		manageFileDisplay.ClickSaveConfigurationBtn();
         		ContentParent contentParent = new ContentParent(webDriver, applib);
-        		ManageFields manageFields = new ManageFields(webDriver, applib);
-        		if (manageFields.FieldLabelExists("MPX Media Related Link") == false) {
-        			
-        			manageFields.EnterAddNewField("MPX Media Related Link");
-        			
-        			//Step 5
-        			manageFields.SelectFieldType("Link");
-        			manageFields.ClickSaveBtn(); 
-        			manageFields.ClickSaveFieldSettingsBtn();
-        			contentParent.VerifyMessageStatus("Updated field MPX Media Related Link field settings.");
-        		}
+        		contentParent.VerifyMessageStatus("Your settings have been saved.");
+        		overlay.ClickCloseOverlayLnk();
         		
-        		//Step 6
-    			overlay.ClickCloseOverlayLnk();
-    			taxonomy.NavigateSite("Structure>>File types");
-        		overlay.SwitchToActiveFrame();
-        		
-        		//Step 7
-        		fileTypes.ClickEditFileTypeLnk(configuredAccounts.get(0));
-        		overlay.SwitchToActiveFrame();
-        		MPXFileType mpxFileType = new MPXFileType(webDriver);
-        		mpxFileType.SelectURLAliasField("MPX Media Related Link");
-        		mpxFileType.ClickSaveBtn();
-        		contentParent.VerifyMessageStatus("has been updated.");
-        		
-        		//Step 8 NOTE- step 8 creates a new video with a canonical url rather than using an existing video
+        		//Step 3
         		MPXLogin mpxLogin = new MPXLogin(webDriver, applib);
             	mpxLogin.OpenMPXThePlatform();
             	mpxLogin.Login(applib.getMPXUsername(), applib.getMPXPassword());
@@ -116,28 +106,39 @@ public class MPXCanonicalURLImportableURLAlias extends ParentTest{
                 String mediaTitle = "Automation" + random.GetCharacterString(10);
                 mpxAddMedia.GiveFocusToMediaItem();
                 mpxAddMedia.EnterTitle(mediaTitle);
-                String canonicalURL = "canonicalurl" + random.GetCharacterString(10);
-                mpxAddMedia.EnterCanonicalURL(canonicalURL);
+                mpxAddMedia.ClickSaveBtn();
+                mpxAddMedia.ClickFilesLnk();
+                mpxAddMedia.ClickUploadBtn();
+            	mpxAddMedia.ClickChooseFilesBtn();
+            	if (webDriver.getCapabilities().getPlatform().toString() == "MAC") {
+            		addFile.ClickPicturesUploadBtn();
+                	addFile.ClickNBCLogoLnk();
+                	addFile.ClickOpenBtn();
+            	}
+            	else {
+            		addFile.EnterPathToFile_Win(applib.getPathToMedia());
+                	addFile.ClickGoBtn_Win();
+                	addFile.EnterFileName_Win("nbclogosmall.jpg");
+                	addFile.ClickOpenBtn();
+            	}
+            	mpxAddMedia.ClickUploadFromDialogBtn();
+                mpxAddMedia.ClickAllMediaLnk();
                 mpxAddMedia.ClickSaveBtn();
                 MPXPublishMedia mpxPublishMedia = new MPXPublishMedia(applib);
                 mpxPublishMedia.ClickPublishBtn();
                 mpxPublishMedia.ClickPublishToPub7PrimaryCbx();
                 mpxPublishMedia.ClickPublishFromDialogBtn();
-                if (mpxPublishMedia.PublishSuccessful() == false) {
-                	mpxPublishMedia.ClickOKBtn();
-                	mpxPublishMedia.ClickPublishBtn();
-                    mpxPublishMedia.ClickPublishToPub7PrimaryCbx();
-                    mpxPublishMedia.ClickPublishFromDialogBtn();
-                }
-        		
-                //Step 9
+                
+                //Step 4 through 12 - N/A as step 3 creates a media item that has an image associated with it.
+                
+                //Step 13
                 applib.openApplication();
                 taxonomy.NavigateSite("Home>>Run cron");
         	    overlay.SwitchToActiveFrame();
         	    contentParent.VerifyMessageStatus("Cron ran successfully.");
         	    overlay.ClickCloseOverlayLnk();
-        	    
-        	    //Step 10
+        		
+        		//Step 14
         	    taxonomy.NavigateSite("Content>>Files>>mpxMedia");
         	    overlay.SwitchToActiveFrame();
         	    SearchFor searchFor = new SearchFor(webDriver, applib);
@@ -152,12 +153,16 @@ public class MPXCanonicalURLImportableURLAlias extends ParentTest{
             	    searchFor.EnterTitle(mediaTitle);
             	    searchFor.ClickApplyBtn();
         	    }
-        	    searchFor.ClickSearchTitleLnk(mediaTitle);
-        	    
-        	    //Step 11
-        	    contentParent.VerifyPageContentPresent(Arrays.asList("MPX Media Related Link:", canonicalURL));
-        	    Assert.assertTrue(webDriver.getCurrentUrl().equals(applib.getApplicationURL() + "/" + canonicalURL));
+        	    searchFor.VerifySearchThumbnailImgPresent(mediaTitle, "nbclogosmall");
         		
+        		//Step 15 through 21 - TODO as time allows. This initial test is more about initial mpx thumbnail ingestion than thumbnail update.
+        		
+        	    //Cleanup
+        	    taxonomy.NavigateSite("Structure>>File types");
+        		fileTypes.ClickManageFileDisplayLnk(configuredAccounts.get(0));
+        		manageFileDisplay.UnCheckPubMPXImageCbx();
+        		manageFileDisplay.ClickSaveConfigurationBtn();
+        		contentParent.VerifyMessageStatus("Your settings have been saved.");
         	}
         	else {
         		Assert.fail("DB TV account must be configured.");
@@ -168,6 +173,6 @@ public class MPXCanonicalURLImportableURLAlias extends ParentTest{
         	Assert.fail("MPX is NOT configured. Test titled 'MultipleMPXAccountsPerLoginVerification' must run before any other MPX tests.");
         	
         }
-
+        
     }
 }

@@ -130,6 +130,14 @@ public class AddFile {
     	}
     }
     
+    public void ClickNBCLogoLnk() throws Exception {
+    	
+    	Reporter.log("Click the nbc logo image link.");
+    	String path = this.getImagePath();
+    	mpxAssets.WaitForImgPresent(path + "AddFile/NBCLogo_Lnk.png");
+    	sikuli.click(path + "AddFile/NBCLogo_Lnk.png");
+    }
+
     public void ClickTestPictureBtn() throws Exception {
     	
     	Reporter.log("Click the test picture link.");

@@ -1,7 +1,7 @@
 package com.nbcuni.test.publisher.pageobjects.MPX;
 
 import com.nbcuni.test.webdriver.CustomWebDriver;
-import junit.framework.Assert;
+import org.testng.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;

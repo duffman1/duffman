@@ -6,7 +6,7 @@ import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.FileTypes.MPXFileType;
 import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
-import junit.framework.Assert;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import java.util.List;
 

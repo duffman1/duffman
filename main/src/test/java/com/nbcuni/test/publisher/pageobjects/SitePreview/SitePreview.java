@@ -1,6 +1,6 @@
 package com.nbcuni.test.publisher.pageobjects.SitePreview;
 
-import junit.framework.Assert;
+import org.testng.Assert;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -89,6 +89,7 @@ public class SitePreview {
 	 public void VerifySelectAConditionValue(String value) throws Exception { 	    	
 	    	
 		 Reporter.log("Verify the selected option of the 'SELECT A CONDITION' drop down list is '" + value + "'.");	  
+		 wait.until(ExpectedConditions.visibilityOf(SelectCondition_Ddl));
 		 Assert.assertEquals(new Select(SelectCondition_Ddl).getFirstSelectedOption().getText(),value);
 	 }
 	   
