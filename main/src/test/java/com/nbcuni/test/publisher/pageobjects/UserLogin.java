@@ -33,7 +33,7 @@ public class UserLogin {
     @FindBy(how = How.XPATH, using = "//input[@id='edit-pass']")
     private static WebElement Password_Txb;
     
-    @FindBy(how = How.XPATH, using = "//input[@id='edit-submit']")
+    @FindBy(how = How.CSS, using = "input[value='Log in']")
     private static WebElement LogIn_Btn;
     
     
