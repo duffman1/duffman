@@ -28,7 +28,7 @@ public class RolesPredefinedInPublisher7 extends ParentTest{
         
         //Step 2
         taxonomy.NavigateSite("People>>Permissions");
-        overlay.SwitchToFrame("People");
+        overlay.SwitchToActiveFrame();
         
         //Step 3
         Permissions permissions = new Permissions(webDriver);
@@ -37,8 +37,7 @@ public class RolesPredefinedInPublisher7 extends ParentTest{
         //Step 4
         Roles roles = new Roles(webDriver);
         roles.ClickRolesBtn();
-        overlay.switchToDefaultContent();
-        overlay.SwitchToFrame("People");
+        overlay.SwitchToActiveFrame();
        
         //Step 5
         roles.VerifyRoleRows();

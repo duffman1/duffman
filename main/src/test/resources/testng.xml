@@ -3,6 +3,7 @@
 	<!--CONFIGURATION PARAMETERS-->
   	<parameter name="Environment" value="PROD"></parameter>
   	<parameter name="PathToReports" value="/test-output/reports/"></parameter>
+  	<parameter name="ReRunOnFailureCount" value="1"></parameter>
   	
   	<!--CUSTOM REPORT LISTENTER-->
   	<listeners>
@@ -11,7 +12,7 @@
   	
   	<test name="All Web Tests">
 
-		<!-- Enter group name for specific test scripts, options are "full", "smoke", or "mpx -->
+		<!-- Enter group name for specific test scripts, options are "full", "smoke", or "mpx" -->
 		<groups>
 	 		<run>
 	 			<include name="full"/>

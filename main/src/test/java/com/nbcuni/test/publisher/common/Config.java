@@ -2,6 +2,7 @@ package com.nbcuni.test.publisher.common;
 
 import org.testng.Assert;
 import org.w3c.dom.Document;
+
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.xpath.XPath;
@@ -12,13 +13,13 @@ import java.io.File;
 
 public class Config {
 
-	private String getConfigFileLocation() throws Exception {
+	private String getConfigFileLocation() {
 		
 		String fileLoc = System.getProperty("user.dir") + "/src/test/resources/testng.xml";
 		return fileLoc.replace("/", File.separator);
 	}
 	
-    private String getXpathValue(String configValue) throws Exception {
+    private String getXpathValue(String configValue) {
 
         String value = null;
 
@@ -42,9 +43,15 @@ public class Config {
 
     }
     
-    public String getPathToReports() throws Exception {
+    public String getPathToReports() {
     	String fileLoc = System.getProperty("user.dir") + this.getXpathValue("PathToReports");
     	return fileLoc.replace("/", File.separator);
+    }
+    
+    public int getReRunOnFailureCount() {
+    	
+    	return Integer.parseInt(this.getXpathValue("ReRunOnFailureCount"));
+    	
     }
 
 
