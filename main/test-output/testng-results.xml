@@ -14,16 +14,10 @@
       <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
     </line>
     <line>
-      <![CDATA[Enter the user's password in the 'Password' text box.]]>
+      <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140226101900.png ]]>
     </line>
     <line>
-      <![CDATA[Click the 'Login' button.]]>
-    </line>
-    <line>
-      <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140226080038.png ]]>
-    </line>
-    <line>
-      <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140226080038.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140226080038.png' height='500' width='500'/> </a>]]>
+      <![CDATA[Failed to capture screenshot]]>
     </line>
     <line>
       <![CDATA[Setting Environment to: PROD]]>
@@ -38,30 +32,21 @@
       <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
     </line>
     <line>
-      <![CDATA[Enter the user's password in the 'Password' text box.]]>
+      <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140226101904.png ]]>
     </line>
     <line>
-      <![CDATA[Click the 'Login' button.]]>
-    </line>
-    <line>
-      <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140226080044.png ]]>
-    </line>
-    <line>
-      <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140226080044.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140226080044.png' height='500' width='500'/> </a>]]>
+      <![CDATA[Failed to capture screenshot]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="23184" started-at="2014-02-26T13:00:21Z" finished-at="2014-02-26T13:00:45Z">
+  <suite name="Default suite" duration-ms="45660" started-at="2014-02-26T15:18:18Z" finished-at="2014-02-26T15:19:04Z">
     <groups>
       <group name="full">
-        <method signature="PixelmanModuleSetupAndVerification.PixelmanModuleSetupAndVerification_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.Comscore.PixelmanModuleSetupAndVerification@22e5ecb2]" name="PixelmanModuleSetupAndVerification_Test" class="com.nbcuni.test.publisher.tests.Advertising.Comscore.PixelmanModuleSetupAndVerification"/>
+        <method signature="ConfiguringPublisherAutopublishingToFacebookTimeandWall.ConfiguringPublisherAutopublishingToFacebookTimeandWall_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.SocialIntegration.Facebook.ConfiguringPublisherAutopublishingToFacebookTimeandWall@30404564]" name="ConfiguringPublisherAutopublishingToFacebookTimeandWall_Test" class="com.nbcuni.test.publisher.tests.SocialIntegration.Facebook.ConfiguringPublisherAutopublishingToFacebookTimeandWall"/>
       </group> <!-- full -->
-      <group name="smoke">
-        <method signature="PixelmanModuleSetupAndVerification.PixelmanModuleSetupAndVerification_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.Comscore.PixelmanModuleSetupAndVerification@22e5ecb2]" name="PixelmanModuleSetupAndVerification_Test" class="com.nbcuni.test.publisher.tests.Advertising.Comscore.PixelmanModuleSetupAndVerification"/>
-      </group> <!-- smoke -->
     </groups>
-    <test name="Default test" duration-ms="23184" started-at="2014-02-26T13:00:21Z" finished-at="2014-02-26T13:00:45Z">
-      <class name="com.nbcuni.test.publisher.tests.Advertising.Comscore.PixelmanModuleSetupAndVerification">
-        <test-method status="PASS" signature="startSelenium(java.lang.String)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.Comscore.PixelmanModuleSetupAndVerification@22e5ecb2]" name="startSelenium" is-config="true" duration-ms="13199" started-at="2014-02-26T08:00:21Z" finished-at="2014-02-26T08:00:35Z">
+    <test name="Default test" duration-ms="45660" started-at="2014-02-26T15:18:18Z" finished-at="2014-02-26T15:19:04Z">
+      <class name="com.nbcuni.test.publisher.tests.SocialIntegration.Facebook.ConfiguringPublisherAutopublishingToFacebookTimeandWall">
+        <test-method status="PASS" signature="startSelenium(java.lang.String)[pri:0, instance:com.nbcuni.test.publisher.tests.SocialIntegration.Facebook.ConfiguringPublisherAutopublishingToFacebookTimeandWall@30404564]" name="startSelenium" is-config="true" duration-ms="13600" started-at="2014-02-26T10:18:18Z" finished-at="2014-02-26T10:18:32Z">
           <params>
             <param index="0">
               <value>
@@ -78,18 +63,38 @@
             </line>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="FAIL" signature="PixelmanModuleSetupAndVerification_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.Comscore.PixelmanModuleSetupAndVerification@22e5ecb2]" name="PixelmanModuleSetupAndVerification_Test" duration-ms="3420" started-at="2014-02-26T08:00:35Z" finished-at="2014-02-26T08:00:38Z">
-          <exception class="java.lang.AssertionError">
+        <test-method status="FAIL" signature="ConfiguringPublisherAutopublishingToFacebookTimeandWall_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.SocialIntegration.Facebook.ConfiguringPublisherAutopublishingToFacebookTimeandWall@30404564]" name="ConfiguringPublisherAutopublishingToFacebookTimeandWall_Test" duration-ms="27600" started-at="2014-02-26T10:18:32Z" finished-at="2014-02-26T10:19:00Z">
+          <exception class="org.openqa.selenium.WebDriverException">
             <message>
-              <![CDATA[expected [true] but found [false]]]>
+              <![CDATA[Build info: version: '2.35.0', revision: '8df0c6bedf70ff9f22c647788f9fe9c8d22210e2', time: '2013-08-17 12:46:41'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.8.5', java.version: '1.7.0_25'
+Session ID: a2026b0d-3329-44fa-a3e3-c2215561d67a
+Driver info: com.nbcuni.test.webdriver.CustomWebDriver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.eUKnGR}, rotatable=false, locationContextEnabled=true, webdriver.remote.sessionid=a2026b0d-3329-44fa-a3e3-c2215561d67a, version=33.0.1750.117, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:494)
-	at org.testng.Assert.assertTrue(Assert.java:42)
-	at org.testng.Assert.assertTrue(Assert.java:52)
-	at com.nbcuni.test.publisher.tests.Advertising.Comscore.PixelmanModuleSetupAndVerification.PixelmanModuleSetupAndVerification_Test(PixelmanModuleSetupAndVerification.java:36)
+              <![CDATA[org.openqa.selenium.WebDriverException: Build info: version: '2.35.0', revision: '8df0c6bedf70ff9f22c647788f9fe9c8d22210e2', time: '2013-08-17 12:46:41'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.8.5', java.version: '1.7.0_25'
+Session ID: a2026b0d-3329-44fa-a3e3-c2215561d67a
+Driver info: com.nbcuni.test.webdriver.CustomWebDriver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.eUKnGR}, rotatable=false, locationContextEnabled=true, webdriver.remote.sessionid=a2026b0d-3329-44fa-a3e3-c2215561d67a, version=33.0.1750.117, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:191)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:554)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:307)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:404)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:344)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:299)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:59)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:34)
+	at com.sun.proxy.$Proxy12.sendKeys(Unknown Source)
+	at com.nbcuni.test.publisher.pageobjects.UserLogin.EnterEmailAddress(UserLogin.java:44)
+	at com.nbcuni.test.publisher.pageobjects.UserLogin.Login(UserLogin.java:69)
+	at com.nbcuni.test.publisher.tests.SocialIntegration.Facebook.ConfiguringPublisherAutopublishingToFacebookTimeandWall.ConfiguringPublisherAutopublishingToFacebookTimeandWall_Test(ConfiguringPublisherAutopublishingToFacebookTimeandWall.java:50)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -114,9 +119,24 @@
 	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+Caused by: java.lang.NullPointerException
+	at org.openqa.selenium.support.events.EventFiringWebDriver.extractInterfaces(EventFiringWebDriver.java:117)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.access$500(EventFiringWebDriver.java:63)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.<init>(EventFiringWebDriver.java:318)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.<init>(EventFiringWebDriver.java:312)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.createWebElement(EventFiringWebDriver.java:282)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:182)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:47)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:33)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:169)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
             <line>
               <![CDATA[Open url 'http://qa4.qa.nbcupublisher7.publisher7.com'.]]>
@@ -125,31 +145,25 @@
               <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
             </line>
             <line>
-              <![CDATA[Enter the user's password in the 'Password' text box.]]>
+              <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140226101900.png ]]>
             </line>
             <line>
-              <![CDATA[Click the 'Login' button.]]>
-            </line>
-            <line>
-              <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140226080038.png ]]>
-            </line>
-            <line>
-              <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140226080038.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140226080038.png' height='500' width='500'/> </a>]]>
+              <![CDATA[Failed to capture screenshot]]>
             </line>
           </reporter-output>
-        </test-method> <!-- PixelmanModuleSetupAndVerification_Test -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.Comscore.PixelmanModuleSetupAndVerification@22e5ecb2]" name="stopSelenium" is-config="true" duration-ms="815" started-at="2014-02-26T08:00:38Z" finished-at="2014-02-26T08:00:39Z">
+        </test-method> <!-- ConfiguringPublisherAutopublishingToFacebookTimeandWall_Test -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.SocialIntegration.Facebook.ConfiguringPublisherAutopublishingToFacebookTimeandWall@30404564]" name="stopSelenium" is-config="true" duration-ms="616" started-at="2014-02-26T10:19:00Z" finished-at="2014-02-26T10:19:00Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=PixelmanModuleSetupAndVerification_Test status=FAILURE method=PixelmanModuleSetupAndVerification.PixelmanModuleSetupAndVerification_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.Comscore.PixelmanModuleSetupAndVerification@22e5ecb2] output=Open url 'http://qa4.qa.nbcupublisher7.publisher7.com'.]]]>
+                <![CDATA[[TestResult name=ConfiguringPublisherAutopublishingToFacebookTimeandWall_Test status=FAILURE method=ConfiguringPublisherAutopublishingToFacebookTimeandWall.ConfiguringPublisherAutopublishingToFacebookTimeandWall_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.SocialIntegration.Facebook.ConfiguringPublisherAutopublishingToFacebookTimeandWall@30404564] output=Open url 'http://qa4.qa.nbcupublisher7.publisher7.com'.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="startSelenium(java.lang.String)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.Comscore.PixelmanModuleSetupAndVerification@22e5ecb2]" name="startSelenium" is-config="true" duration-ms="1878" started-at="2014-02-26T08:00:39Z" finished-at="2014-02-26T08:00:41Z">
+        <test-method status="PASS" signature="startSelenium(java.lang.String)[pri:0, instance:com.nbcuni.test.publisher.tests.SocialIntegration.Facebook.ConfiguringPublisherAutopublishingToFacebookTimeandWall@30404564]" name="startSelenium" is-config="true" duration-ms="1911" started-at="2014-02-26T10:19:00Z" finished-at="2014-02-26T10:19:02Z">
           <params>
             <param index="0">
               <value>
@@ -166,18 +180,38 @@
             </line>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="FAIL" signature="PixelmanModuleSetupAndVerification_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.Comscore.PixelmanModuleSetupAndVerification@22e5ecb2]" name="PixelmanModuleSetupAndVerification_Test" duration-ms="3101" started-at="2014-02-26T08:00:41Z" finished-at="2014-02-26T08:00:44Z">
-          <exception class="java.lang.AssertionError">
+        <test-method status="FAIL" signature="ConfiguringPublisherAutopublishingToFacebookTimeandWall_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.SocialIntegration.Facebook.ConfiguringPublisherAutopublishingToFacebookTimeandWall@30404564]" name="ConfiguringPublisherAutopublishingToFacebookTimeandWall_Test" duration-ms="1337" started-at="2014-02-26T10:19:02Z" finished-at="2014-02-26T10:19:04Z">
+          <exception class="org.openqa.selenium.WebDriverException">
             <message>
-              <![CDATA[expected [true] but found [false]]]>
+              <![CDATA[Build info: version: '2.35.0', revision: '8df0c6bedf70ff9f22c647788f9fe9c8d22210e2', time: '2013-08-17 12:46:41'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.8.5', java.version: '1.7.0_25'
+Session ID: 07a6e009-5654-49ed-8373-623b2d2eb343
+Driver info: com.nbcuni.test.webdriver.CustomWebDriver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.mK5OiQ}, rotatable=false, locationContextEnabled=true, webdriver.remote.sessionid=07a6e009-5654-49ed-8373-623b2d2eb343, version=33.0.1750.117, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:494)
-	at org.testng.Assert.assertTrue(Assert.java:42)
-	at org.testng.Assert.assertTrue(Assert.java:52)
-	at com.nbcuni.test.publisher.tests.Advertising.Comscore.PixelmanModuleSetupAndVerification.PixelmanModuleSetupAndVerification_Test(PixelmanModuleSetupAndVerification.java:36)
+              <![CDATA[org.openqa.selenium.WebDriverException: Build info: version: '2.35.0', revision: '8df0c6bedf70ff9f22c647788f9fe9c8d22210e2', time: '2013-08-17 12:46:41'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.8.5', java.version: '1.7.0_25'
+Session ID: 07a6e009-5654-49ed-8373-623b2d2eb343
+Driver info: com.nbcuni.test.webdriver.CustomWebDriver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.mK5OiQ}, rotatable=false, locationContextEnabled=true, webdriver.remote.sessionid=07a6e009-5654-49ed-8373-623b2d2eb343, version=33.0.1750.117, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:191)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:554)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:307)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:404)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:344)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:299)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:59)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:34)
+	at com.sun.proxy.$Proxy12.sendKeys(Unknown Source)
+	at com.nbcuni.test.publisher.pageobjects.UserLogin.EnterEmailAddress(UserLogin.java:44)
+	at com.nbcuni.test.publisher.pageobjects.UserLogin.Login(UserLogin.java:69)
+	at com.nbcuni.test.publisher.tests.SocialIntegration.Facebook.ConfiguringPublisherAutopublishingToFacebookTimeandWall.ConfiguringPublisherAutopublishingToFacebookTimeandWall_Test(ConfiguringPublisherAutopublishingToFacebookTimeandWall.java:50)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -202,9 +236,24 @@
 	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+Caused by: java.lang.NullPointerException
+	at org.openqa.selenium.support.events.EventFiringWebDriver.extractInterfaces(EventFiringWebDriver.java:117)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.access$500(EventFiringWebDriver.java:63)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.<init>(EventFiringWebDriver.java:318)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.<init>(EventFiringWebDriver.java:312)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.createWebElement(EventFiringWebDriver.java:282)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:182)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:47)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:33)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:169)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
             <line>
               <![CDATA[Open url 'http://qa4.qa.nbcupublisher7.publisher7.com'.]]>
@@ -213,31 +262,25 @@
               <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
             </line>
             <line>
-              <![CDATA[Enter the user's password in the 'Password' text box.]]>
+              <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140226101904.png ]]>
             </line>
             <line>
-              <![CDATA[Click the 'Login' button.]]>
-            </line>
-            <line>
-              <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140226080044.png ]]>
-            </line>
-            <line>
-              <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140226080044.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140226080044.png' height='500' width='500'/> </a>]]>
+              <![CDATA[Failed to capture screenshot]]>
             </line>
           </reporter-output>
-        </test-method> <!-- PixelmanModuleSetupAndVerification_Test -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.Comscore.PixelmanModuleSetupAndVerification@22e5ecb2]" name="stopSelenium" is-config="true" duration-ms="753" started-at="2014-02-26T08:00:44Z" finished-at="2014-02-26T08:00:45Z">
+        </test-method> <!-- ConfiguringPublisherAutopublishingToFacebookTimeandWall_Test -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.SocialIntegration.Facebook.ConfiguringPublisherAutopublishingToFacebookTimeandWall@30404564]" name="stopSelenium" is-config="true" duration-ms="573" started-at="2014-02-26T10:19:04Z" finished-at="2014-02-26T10:19:04Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=PixelmanModuleSetupAndVerification_Test status=FAILURE method=PixelmanModuleSetupAndVerification.PixelmanModuleSetupAndVerification_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.Comscore.PixelmanModuleSetupAndVerification@22e5ecb2] output=Open url 'http://qa4.qa.nbcupublisher7.publisher7.com'.]]]>
+                <![CDATA[[TestResult name=ConfiguringPublisherAutopublishingToFacebookTimeandWall_Test status=FAILURE method=ConfiguringPublisherAutopublishingToFacebookTimeandWall.ConfiguringPublisherAutopublishingToFacebookTimeandWall_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.SocialIntegration.Facebook.ConfiguringPublisherAutopublishingToFacebookTimeandWall@30404564] output=Open url 'http://qa4.qa.nbcupublisher7.publisher7.com'.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-      </class> <!-- com.nbcuni.test.publisher.tests.Advertising.Comscore.PixelmanModuleSetupAndVerification -->
+      </class> <!-- com.nbcuni.test.publisher.tests.SocialIntegration.Facebook.ConfiguringPublisherAutopublishingToFacebookTimeandWall -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

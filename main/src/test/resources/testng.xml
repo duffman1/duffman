@@ -5,6 +5,14 @@
   	<parameter name="PathToReports" value="/test-output/reports/"></parameter>
   	<parameter name="ReRunOnFailureCount" value="1"></parameter>
   	
+  	<!--RALLY CONFIG-->
+  	<parameter name="RallyUsername" value="brandon.clark@nbcuni.com"></parameter>
+  	<parameter name="RallyPassword" value="tufNewcyd4#"></parameter>
+  	<parameter name="RallyUrl" value="https://rally1.rallydev.com"></parameter>
+  	<parameter name="RallyWorkspace" value="Digital Products"></parameter>
+  	<parameter name="RallyProject" value="Publisher 7"></parameter>
+  	<parameter name="RallyTaskID" value="TA27751"></parameter>
+  	
   	<!--CUSTOM REPORT LISTENTER-->
   	<listeners>
     <listener class-name="com.nbcuni.test.publisher.common.CustomReport" />

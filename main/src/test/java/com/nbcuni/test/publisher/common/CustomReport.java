@@ -26,6 +26,7 @@ public class CustomReport extends EmailableReporter {
 	public void generateReport(List<XmlSuite> xmlSuites, List<ISuite> suites, String outputDirectory) {
 		
 		Config config = new Config();
+		UploadReportRally uploadReport = new UploadReportRally();
 		
 		//get the results of each test suite that was executed
 	    for (ISuite suite : suites) {
@@ -96,6 +97,14 @@ public class CustomReport extends EmailableReporter {
 			
 		} catch (IOException e) { System.out.println("Failed to copy emailable-report.html to reports directory."); }
     
+		//upload report to rally
+		try {
+			uploadReport.uploadFileAttachment(filePath, fileExtension);
+		} catch (Exception e) {
+			
+			System.out.println("Failed to upload report attachment to Rally.");
+		}
+		
     }
 }
 }

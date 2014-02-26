@@ -10,7 +10,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
 
@@ -25,12 +27,14 @@ public class Revisions {
 
 	private static CustomWebDriver webDriver;
 	private static AppLib applib;
+    private static WebDriverWait wait;
     
 	//PAGE OBJECT CONSTRUCTOR
 	public Revisions(CustomWebDriver webDriver, AppLib applib) {
         Revisions.webDriver = webDriver;
         Revisions.applib = applib;
         PageFactory.initElements(webDriver, this);
+        wait = new WebDriverWait(webDriver, 10);
     }
 	
 	//PAGE OBJECT IDENTIFIERS
@@ -81,7 +85,7 @@ public class Revisions {
     public void ClickEditMenuDeleteBtn(String contentItemTtl) throws Exception {
     	
     	Reporter.log("Click the 'Delete' button.");
-    	EditMenuDelete_Btn(contentItemTtl).click();
+    	wait.until(ExpectedConditions.visibilityOf(EditMenuDelete_Btn(contentItemTtl))).click();
     }
     
     public void ClickEditMenuBtn(String contentItemTtl) throws Exception {
@@ -94,7 +98,7 @@ public class Revisions {
     public void ClickShareMenuBtn(String contentItemTtl) throws Exception {
     	
     	Reporter.log("Click the 'Share' menu button.");
-    	ShareMenu_Btn(contentItemTtl).click();
+    	wait.until(ExpectedConditions.visibilityOf(ShareMenu_Btn(contentItemTtl))).click();
     }
     
     public void VerifyContentItemEditDelete(String contentItemTtl) throws Exception {

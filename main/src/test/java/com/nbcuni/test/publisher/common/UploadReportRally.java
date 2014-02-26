@@ -5,39 +5,31 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.rallydev.rest.RallyRestApi;
 import com.rallydev.rest.request.CreateRequest;
-import com.rallydev.rest.request.DeleteRequest;
-import com.rallydev.rest.request.GetRequest;
 import com.rallydev.rest.request.QueryRequest;
-import com.rallydev.rest.request.UpdateRequest;
 import com.rallydev.rest.response.CreateResponse;
-import com.rallydev.rest.response.DeleteResponse;
-import com.rallydev.rest.response.GetResponse;
 import com.rallydev.rest.response.QueryResponse;
-import com.rallydev.rest.response.UpdateResponse;
 import com.rallydev.rest.util.Fetch;
 import com.rallydev.rest.util.QueryFilter;
-import com.rallydev.rest.util.Ref;
-
 import java.io.RandomAccessFile;
 import java.io.IOException;
 import java.net.URI;
-import java.net.URISyntaxException;
 
 import org.apache.commons.codec.binary.Base64;
 
 public class UploadReportRally {
 
-    public static void main(String[] args) throws URISyntaxException, IOException {
+    public void uploadFileAttachment(String pathToReport, String reportName) throws Exception {
 
-        // Create and configure a new instance of RallyRestApi
-        // Connection parameters
-        String rallyURL = "https://rally1.rallydev.com";
+    	Config config = new Config();
+    	
+        //Connection parameters
+        String rallyURL = config.getConfigValue("RallyUrl");
         String wsapiVersion = "1.40";
-        String applicationName = "RestExample_AddAttachmentToUserStory";
+        String applicationName = "Attach Automated Test Reports";
 
         // Credentials
-        String userName = "user@company.com";
-        String userPassword = "topsecret";
+        String userName = config.getConfigValue("RallyUsername");
+        String userPassword = config.getConfigValue("RallyPassword");
 
         RallyRestApi restApi = new RallyRestApi(
                         new URI(rallyURL),
@@ -46,15 +38,15 @@ public class UploadReportRally {
         restApi.setWsapiVersion(wsapiVersion);
         restApi.setApplicationName(applicationName);
 
-        // User settings
-        String testerUserName = "attachmentuser@company.com";
+        //User settings
+        String testerUserName = userName;
 
-        // Workspace and Project Settings
-        String myWorkspace = "My Workspace";
-        String myProject = "My Project";
+        //Workspace and Project Settings
+        String Workspace = config.getConfigValue("RallyWorkspace");
+        String Project = config.getConfigValue("RallyProject");
 
-        // FormattedID of Existing Test Case to Query
-        String existStoryFormattedID = "US43";       
+        //Task ID - update in config with each iteration change
+        String existTaskID = config.getConfigValue("RallyTaskID");       
 
         //Read User
         QueryRequest userRequest = new QueryRequest("User");
@@ -66,66 +58,65 @@ public class UploadReportRally {
         JsonObject userQueryObject = userQueryElement.getAsJsonObject();
         String userRef = userQueryObject.get("_ref").getAsString();
 
-        // Get reference to Workspace of interest
+        //Get reference to Workspace of interest
         QueryRequest workspaceRequest = new QueryRequest("Workspace");
         workspaceRequest.setFetch(new Fetch("Name", "Owner", "Projects"));
-        workspaceRequest.setQueryFilter(new QueryFilter("Name", "=", myWorkspace));
+        workspaceRequest.setQueryFilter(new QueryFilter("Name", "=", Workspace));
         QueryResponse workspaceQueryResponse = restApi.query(workspaceRequest);
-        String workspaceRef = workspaceQueryResponse.getResults().get(0).getAsJsonObject().get("_ref").getAsString();
+        workspaceQueryResponse.getResults().get(0).getAsJsonObject().get("_ref").getAsString();
 
-        // Get reference to Project of interest
+        //Get reference to Project of interest
         QueryRequest projectRequest = new QueryRequest("Project");
         projectRequest.setFetch(new Fetch("Name", "Owner", "Projects"));
-        projectRequest.setQueryFilter(new QueryFilter("Name", "=", myProject));
+        projectRequest.setQueryFilter(new QueryFilter("Name", "=", Project));
         QueryResponse projectQueryResponse = restApi.query(projectRequest);
-        String projectRef = projectQueryResponse.getResults().get(0).getAsJsonObject().get("_ref").getAsString();      
+        projectQueryResponse.getResults().get(0).getAsJsonObject().get("_ref").getAsString();      
 
-        // Query for existing User Story
-        QueryRequest  existUserStoryRequest = new QueryRequest("HierarchicalRequirement");
-        existUserStoryRequest.setFetch(new Fetch("FormattedID","Name"));
-        existUserStoryRequest.setQueryFilter(new QueryFilter("FormattedID", "=", existStoryFormattedID));
-        QueryResponse userStoryQueryResponse = restApi.query(existUserStoryRequest);
-        JsonObject existUserStoryJsonObject = userStoryQueryResponse.getResults().get(0).getAsJsonObject();
+        //Query for existing User Story
+        QueryRequest  existTaskRequest = new QueryRequest("Tasks");
+        existTaskRequest.setFetch(new Fetch("FormattedID","Name"));
+        existTaskRequest.setQueryFilter(new QueryFilter("FormattedID", "=", existTaskID));
+        QueryResponse userStoryQueryResponse = restApi.query(existTaskRequest);
+        userStoryQueryResponse.getResults().get(0).getAsJsonObject();
         String existUserStoryRef = userStoryQueryResponse.getResults().get(0).getAsJsonObject().get("_ref").getAsString();
 
-        // Read In Image Content
-        String imageFilePath = "/Users/username/Documents/";
-        String imageFileName = "image1.png";
-        String fullImageFile = imageFilePath + imageFileName;
-        String imageBase64String;
+        //Read In File Content
+        String ReportFile = pathToReport;
+        String fileBase64String;
         long attachmentSize;
 
-        // Open file
-        RandomAccessFile myImageFileHandle = new RandomAccessFile(fullImageFile, "r");
+        //Open file
+        RandomAccessFile myFileHandle = new RandomAccessFile(ReportFile, "r");
 
         try {
-            // Get and check length
-            long longlength = myImageFileHandle.length();
-            // Max upload size for Rally attachments is 5MB
+            
+        	//Get and check length
+            long longlength = myFileHandle.length();
+            //Max upload size for Rally attachments is 5MB
             long maxAttachmentLength = 5120000;
-            if (longlength > maxAttachmentLength) throw new IOException("File size too big for Rally attachment, > 5 MB");
+            if (longlength > maxAttachmentLength) throw new IOException("File size too large for Rally attachment, > 5 MB");
 
-            // Read file and return data
+            //Read file and return data
             byte[] fileBytes = new byte[(int) longlength];
-            myImageFileHandle.readFully(fileBytes);
-            imageBase64String = Base64.encodeBase64String(fileBytes);
+            myFileHandle.readFully(fileBytes);
+            fileBase64String = Base64.encodeBase64String(fileBytes);
             attachmentSize = longlength;
 
-            // First create AttachmentContent from image string
+            //First create AttachmentContent from image string
             JsonObject myAttachmentContent = new JsonObject();
-            myAttachmentContent.addProperty("Content", imageBase64String);
+            myAttachmentContent.addProperty("Content", fileBase64String);
             CreateRequest attachmentContentCreateRequest = new CreateRequest("AttachmentContent", myAttachmentContent);
             CreateResponse attachmentContentResponse = restApi.create(attachmentContentCreateRequest);
             String myAttachmentContentRef = attachmentContentResponse.getObject().get("_ref").getAsString();
             System.out.println("Attachment Content created: " + myAttachmentContentRef);            
 
-            // Now create the Attachment itself
+            //Now create the Attachment itself
             JsonObject myAttachment = new JsonObject();
             myAttachment.addProperty("Artifact", existUserStoryRef);
             myAttachment.addProperty("Content", myAttachmentContentRef);
-            myAttachment.addProperty("Name", "AttachmentFromREST.png");
-            myAttachment.addProperty("Description", "Attachment From REST");
-            myAttachment.addProperty("ContentType","image/png");
+            myAttachment.addProperty("Name", reportName);
+            myAttachment.addProperty("Description", "Attachment From Automated Test Suite");
+            myAttachment.addProperty("ContentType","text/html");
             myAttachment.addProperty("Size", attachmentSize);
             myAttachment.addProperty("User", userRef);          
 
@@ -151,6 +142,7 @@ public class UploadReportRally {
 
         finally {
             //Release all resources
+        	myFileHandle.close();
             restApi.close();
         }                
     }

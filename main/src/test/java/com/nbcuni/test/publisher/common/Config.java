@@ -19,7 +19,7 @@ public class Config {
 		return fileLoc.replace("/", File.separator);
 	}
 	
-    private String getXpathValue(String configValue) {
+    public String getConfigValue(String configValue) {
 
         String value = null;
 
@@ -44,13 +44,13 @@ public class Config {
     }
     
     public String getPathToReports() {
-    	String fileLoc = System.getProperty("user.dir") + this.getXpathValue("PathToReports");
+    	String fileLoc = System.getProperty("user.dir") + this.getConfigValue("PathToReports");
     	return fileLoc.replace("/", File.separator);
     }
     
     public int getReRunOnFailureCount() {
     	
-    	return Integer.parseInt(this.getXpathValue("ReRunOnFailureCount"));
+    	return Integer.parseInt(this.getConfigValue("ReRunOnFailureCount"));
     	
     }
 
