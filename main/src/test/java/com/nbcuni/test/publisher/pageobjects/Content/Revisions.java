@@ -78,8 +78,9 @@ public class Revisions {
     public void ClickEditExtendMenuBtn(String contentItemTtl) throws Exception {
     	
     	Reporter.log("Click the 'Edit' extend menu button.");
-    	Thread.sleep(250); //slight pause required here
+    	Thread.sleep(500);
     	EditExtendMenu_Btn(contentItemTtl).click();
+    	Thread.sleep(500); //pauses before and after required - do not edit these sleep times.
     }
     
     public void ClickEditMenuDeleteBtn(String contentItemTtl) throws Exception {

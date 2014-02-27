@@ -4,9 +4,11 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
+
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
@@ -25,12 +27,12 @@ public class TestCleanup extends ParentTest{
         	UserLogin userLogin = applib.openApplication();
         	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
             
-            //delete any old mpx account file types (DE3921)
+        	//delete any old mpx account file types (DE3921)
             webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
             try {
             	List<String> eachURL = new ArrayList<String>();
             	String allURLs = null;
-            	for (WebElement el : webDriver.findElements(By.xpath("//a[text()='MPX Video for Account \"DB TV\" (2312945284)']"))) {
+            	for (WebElement el : webDriver.findElements(By.xpath("//a[contains(text(), 'MPX Video for Account')][contains(text(), 'DB TV')]"))) {
             		allURLs = allURLs + el.getAttribute("href");
             		eachURL.add(el.getAttribute("href"));
             	}
@@ -45,10 +47,9 @@ public class TestCleanup extends ParentTest{
             		catch (NumberFormatException e) {}
             	}
             	Integer maxScore = Collections.max(allIndexInts);
-    		
-            	for (String url : eachURL) {
+    		    for (String url : eachURL) {
     			
-            		if (!url.contains(maxScore.toString())) {
+            		if (!url.contains("mpx_video_" + maxScore.toString())) {
             			webDriver.navigate().to(url);
             			webDriver.findElement(By.id("edit-delete")).click();
             			webDriver.findElement(By.id("edit-submit")).click();
@@ -57,6 +58,7 @@ public class TestCleanup extends ParentTest{
             }
             catch (Exception e) {}
             webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
+            
             
             //if Cindia's demo set set timezone to NY
             if (applib.getApplicationURL().contains("demo.publisher7.com")) {

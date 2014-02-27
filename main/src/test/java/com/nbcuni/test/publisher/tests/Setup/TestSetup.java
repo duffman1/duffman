@@ -43,7 +43,6 @@ public class TestSetup extends ParentTest{
             modules.EnterFilterName("Database logging");
             modules.DisableModule("Database logging");
             overlay.ClickCloseOverlayLnk();
-            overlay.switchToDefaultContent();
             
             //if Cindia's demo site, set set timezone to UTC
             if (applib.getApplicationURL().contains("demo.publisher7.com")) {
@@ -52,12 +51,12 @@ public class TestSetup extends ParentTest{
             	webDriver.findElement(By.id("edit-submit")).click();
             }
             
-          //delete any old mpx account file types (DE3921)
+            //delete any old mpx account file types (DE3921)
             webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
             try {
             	List<String> eachURL = new ArrayList<String>();
             	String allURLs = null;
-            	for (WebElement el : webDriver.findElements(By.xpath("//a[text()='MPX Video for Account \"DB TV\" (2312945284)']"))) {
+            	for (WebElement el : webDriver.findElements(By.xpath("//a[contains(text(), 'MPX Video for Account')][contains(text(), 'DB TV')]"))) {
             		allURLs = allURLs + el.getAttribute("href");
             		eachURL.add(el.getAttribute("href"));
             	}
@@ -72,10 +71,9 @@ public class TestSetup extends ParentTest{
             		catch (NumberFormatException e) {}
             	}
             	Integer maxScore = Collections.max(allIndexInts);
-    		
-            	for (String url : eachURL) {
+    		    for (String url : eachURL) {
     			
-            		if (!url.contains(maxScore.toString())) {
+            		if (!url.contains("mpx_video_" + maxScore.toString())) {
             			webDriver.navigate().to(url);
             			webDriver.findElement(By.id("edit-delete")).click();
             			webDriver.findElement(By.id("edit-submit")).click();
