@@ -4,12 +4,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
-
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.RerunOnFailure;
-import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
@@ -24,17 +21,11 @@ public class TestCleanup extends ParentTest{
     @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "smoke", "mpx"})
     public void TestSetup_Test() throws Exception{
          
-        	//Step 1
+        	//login
         	UserLogin userLogin = applib.openApplication();
         	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
             
-            //Step 2
-            Modules modules = new Modules(webDriver, applib);
-            if (applib.getApplicationURL().contains("demo.publisher7.com")) {
-            	modules.VerifyModuleEnabled("Sticky Edit Actions");
-            }
-            
-            //Step 3 (DE3921)
+            //delete any old mpx account file types (DE3921)
             webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
             try {
             	List<String> eachURL = new ArrayList<String>();
@@ -67,14 +58,14 @@ public class TestCleanup extends ParentTest{
             catch (Exception e) {}
             webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
             
-            //Step 6 - if Cindia's demo set set timezone to NY
+            //if Cindia's demo set set timezone to NY
             if (applib.getApplicationURL().contains("demo.publisher7.com")) {
             	webDriver.navigate().to(applib.getApplicationURL() + "/admin/config/regional/settings");
             	new Select(webDriver.findElement(By.id("edit-date-default-timezone"))).selectByValue("America/New_York");
             	webDriver.findElement(By.id("edit-submit")).click();
             }
             
-            //Step 7
+            //flush all caches
             taxonomy.NavigateSite("Home>>Flush all caches");
             
     }

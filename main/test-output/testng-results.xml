@@ -19,22 +19,49 @@
     <line>
       <![CDATA[Click the 'Login' button.]]>
     </line>
+    <line>
+      <![CDATA[Click the 'Modules' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to frame titled 'Modules'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Sticky Edit Actions' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the module titled 'Sticky Edit Actions' to appear in the list.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Devel' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the module titled 'Devel' to appear in the list.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Database logging' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the module titled 'Database logging' to appear in the list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="25167" started-at="2014-02-26T20:38:04Z" finished-at="2014-02-26T20:38:29Z">
+  <suite name="Default suite" duration-ms="30864" started-at="2014-02-27T12:09:37Z" finished-at="2014-02-27T12:10:08Z">
     <groups>
       <group name="mpx">
-        <method signature="TestCleanup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestCleanup@e0bbd78]" name="TestSetup_Test" class="com.nbcuni.test.publisher.tests.Setup.TestCleanup"/>
+        <method signature="TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@c6787c1]" name="TestSetup_Test" class="com.nbcuni.test.publisher.tests.Setup.TestSetup"/>
       </group> <!-- mpx -->
       <group name="full">
-        <method signature="TestCleanup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestCleanup@e0bbd78]" name="TestSetup_Test" class="com.nbcuni.test.publisher.tests.Setup.TestCleanup"/>
+        <method signature="TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@c6787c1]" name="TestSetup_Test" class="com.nbcuni.test.publisher.tests.Setup.TestSetup"/>
       </group> <!-- full -->
       <group name="smoke">
-        <method signature="TestCleanup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestCleanup@e0bbd78]" name="TestSetup_Test" class="com.nbcuni.test.publisher.tests.Setup.TestCleanup"/>
+        <method signature="TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@c6787c1]" name="TestSetup_Test" class="com.nbcuni.test.publisher.tests.Setup.TestSetup"/>
       </group> <!-- smoke -->
     </groups>
-    <test name="Default test" duration-ms="25167" started-at="2014-02-26T20:38:04Z" finished-at="2014-02-26T20:38:29Z">
-      <class name="com.nbcuni.test.publisher.tests.Setup.TestCleanup">
-        <test-method status="PASS" signature="startSelenium(java.lang.String)[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestCleanup@e0bbd78]" name="startSelenium" is-config="true" duration-ms="13237" started-at="2014-02-26T15:38:04Z" finished-at="2014-02-26T15:38:17Z">
+    <test name="Default test" duration-ms="30864" started-at="2014-02-27T12:09:37Z" finished-at="2014-02-27T12:10:08Z">
+      <class name="com.nbcuni.test.publisher.tests.Setup.TestSetup">
+        <test-method status="PASS" signature="startSelenium(java.lang.String)[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@c6787c1]" name="startSelenium" is-config="true" duration-ms="14108" started-at="2014-02-27T07:09:37Z" finished-at="2014-02-27T07:09:51Z">
           <params>
             <param index="0">
               <value>
@@ -51,7 +78,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestCleanup@e0bbd78]" name="TestSetup_Test" duration-ms="11347" started-at="2014-02-26T15:38:17Z" finished-at="2014-02-26T15:38:28Z">
+        <test-method status="PASS" signature="TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@c6787c1]" name="TestSetup_Test" duration-ms="16172" started-at="2014-02-27T07:09:51Z" finished-at="2014-02-27T07:10:07Z">
           <reporter-output>
             <line>
               <![CDATA[Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.]]>
@@ -65,20 +92,47 @@
             <line>
               <![CDATA[Click the 'Login' button.]]>
             </line>
+            <line>
+              <![CDATA[Click the 'Modules' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to frame titled 'Modules'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Sticky Edit Actions' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the module titled 'Sticky Edit Actions' to appear in the list.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Devel' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the module titled 'Devel' to appear in the list.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Database logging' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the module titled 'Database logging' to appear in the list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
           </reporter-output>
         </test-method> <!-- TestSetup_Test -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestCleanup@e0bbd78]" name="stopSelenium" is-config="true" duration-ms="570" started-at="2014-02-26T15:38:28Z" finished-at="2014-02-26T15:38:29Z">
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@c6787c1]" name="stopSelenium" is-config="true" duration-ms="567" started-at="2014-02-27T07:10:07Z" finished-at="2014-02-27T07:10:08Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=TestSetup_Test status=SUCCESS method=TestCleanup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestCleanup@e0bbd78] output=Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.]]]>
+                <![CDATA[[TestResult name=TestSetup_Test status=SUCCESS method=TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@c6787c1] output=Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-      </class> <!-- com.nbcuni.test.publisher.tests.Setup.TestCleanup -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Setup.TestSetup -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
