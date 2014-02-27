@@ -3,7 +3,7 @@
 	<!--CONFIGURATION PARAMETERS-->
   	<parameter name="Environment" value="PROD"></parameter>
   	<parameter name="PathToReports" value="/test-output/reports/"></parameter>
-  	<parameter name="ReRunOnFailureCount" value="1"></parameter>
+  	<parameter name="ReRunOnFailureCount" value="2"></parameter>
   	
   	<!--RALLY CONFIG-->
   	<parameter name="RallyUsername" value="brandon.clark@nbcuni.com"></parameter>
@@ -71,6 +71,7 @@
 			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.CastCrewFieldCollectionsVerification_Movie"/>
 			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.CastCrewFieldCollectionsVerification_TVEpisode"/>
 			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIFKeywordsIngestedAsPhraseInsteadSetsWords.EXIFKeywordsIngestedPhraseInsteadSetsWords"/>
+			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.AddApplyEmbeddedMetadataButton.AddApplyEmbeddedMetadataButtonAllImageForms"/>
 			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ProgramGuides.ROVITVSchedule.Configuration"/>
 			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ProgramGuides.ROVITVSchedule.ProgramGuideVerification"/>
 			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentAndEntityPreview.PreviewContentItemsIntheFuturefromContentandWorkbenchViews"/>

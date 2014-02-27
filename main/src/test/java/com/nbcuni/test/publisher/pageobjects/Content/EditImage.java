@@ -48,8 +48,14 @@ public class EditImage {
     @FindBy(how = How.XPATH, using = "//input[contains(@id, 'edit-field-keywords-und-0-value')]")
     private static WebElement Keywords_Txb;
     
+    @FindBy(how = How.ID, using = "edit-simple-exif")
+    private static WebElement ApplyEmbeddedMetadata_Btn;
+    
     @FindBy(how = How.XPATH, using = "//input[@value='Save']")
     private static WebElement Save_Btn;
+    
+    @FindBy(how = How.ID, using = "edit-submit--2")
+    private static WebElement SaveFromEditFrm_Btn;
     
     @FindBy(how = How.XPATH, using = "//img[@title='Close window']")
     private static WebElement CloseWindow_Img;
@@ -59,8 +65,15 @@ public class EditImage {
     public void VerifyTitleTextValue(String value) throws Exception {
     	
     	Reporter.log("Assert that the Title Text box value matches '" + value + "'.");
-    	Thread.sleep(1000); //stale element exception
+    	Thread.sleep(250); //stale element exception
     	Assert.assertTrue(TitleText_Txb.getAttribute("value").equals(value));
+    }
+    
+    public void EnterTitleText(String title) throws Exception {
+    	
+    	Reporter.log("Enter '" + title + "' in the 'Title Text' text box.");
+    	TitleText_Txb.clear();
+    	TitleText_Txb.sendKeys(title);
     }
     
     public void VerifyAltTextValue(String value) throws Exception {
@@ -73,6 +86,13 @@ public class EditImage {
     	
     	Reporter.log("Assert that the Source box value matches '" + value + "'.");
     	Assert.assertTrue(Source_Txb.getAttribute("value").equals(value));
+    }
+    
+    public void EnterSource(String source) throws Exception {
+    	
+    	Reporter.log("Enter '" + source + "' in the 'Source' text box.");
+    	Source_Txb.clear();
+    	Source_Txb.sendKeys(source);
     }
     
     public void VerifyCreditValue(String value) throws Exception {
@@ -93,10 +113,28 @@ public class EditImage {
     	Assert.assertTrue(Keywords_Txb.getAttribute("value").equals(value));
     }
     
+    public void VerifyApplyEmbeddedMetadataBtnPresent() throws Exception {
+    	
+    	Reporter.log("Verify the 'Apply Embedded Metadata' button is present.");
+    	ApplyEmbeddedMetadata_Btn.isDisplayed();
+    }
+    
+    public void ClickApplyEmbeddedMetadataBtn() throws Exception {
+    	
+    	Reporter.log("Click the 'Apply Embedded Metadata' button.");
+    	ApplyEmbeddedMetadata_Btn.click();
+    }
+
     public void ClickSaveBtn() throws Exception {
     	
     	Reporter.log("Click the 'Save' button.");
     	Save_Btn.click();
+    }
+    
+    public void ClickSaveFromEditFrmBtn() throws Exception {
+    	
+    	Reporter.log("Click the 'Save' button.");
+    	SaveFromEditFrm_Btn.click();
     }
     
     public void ClickCloseWindowImg() throws Exception {
@@ -117,6 +155,27 @@ public class EditImage {
             	imgPresent = false;
             }
             if (imgPresent == false){ break;}
+            Thread.sleep(500);
+        }
+    	webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
+    	
+    }
+    
+    public void WaitForEditImageFrameClose() throws Exception {
+    	
+    	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+    	boolean imgFramePresent = false;
+    	for (int second = 0; ; second++) {
+            if (second >= 60) {
+                Assert.fail("Edit image frame is still present after timeout");}
+            try{
+            	CloseWindow_Img.isDisplayed();
+                imgFramePresent = true;
+            }
+            catch (Exception e){
+            	imgFramePresent = false;
+            }
+            if (imgFramePresent == false){ break;}
             Thread.sleep(500);
         }
     	webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);

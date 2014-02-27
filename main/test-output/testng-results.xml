@@ -20,48 +20,108 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Modules' menu link.]]>
+      <![CDATA[Mouse over the 'Configuration' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to frame titled 'Modules'.]]>
+      <![CDATA[Mouse over the 'Media' menu link.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Sticky Edit Actions' in the 'Filter Name' text box.]]>
+      <![CDATA[Click the 'Media: thePlatform mpx settings' menu link.]]>
     </line>
     <line>
-      <![CDATA[Wait for the module titled 'Sticky Edit Actions' to appear in the list.]]>
+      <![CDATA[Switch to frame titled 'Media: thePlatform mpx settings dialog'.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Devel' in the 'Filter Name' text box.]]>
+      <![CDATA[Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.]]>
     </line>
     <line>
-      <![CDATA[Wait for the module titled 'Devel' to appear in the list.]]>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Database logging' in the 'Filter Name' text box.]]>
+      <![CDATA[Click the 'Files' menu link.]]>
     </line>
     <line>
-      <![CDATA[Wait for the module titled 'Database logging' to appear in the list.]]>
+      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
+      <![CDATA[Verify that the search result set column order matches as expected.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'We are sorry, no video available' is NOT present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Get the text of the first search result set item.]]>
+    </line>
+    <line>
+      <![CDATA[Get the number of results in the result set.]]>
+    </line>
+    <line>
+      <![CDATA[Click the Title column header link for column sorting.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Get the number of results in the result set.]]>
+    </line>
+    <line>
+      <![CDATA[Click the Type column header link for column sorting.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Get the number of results in the result set.]]>
+    </line>
+    <line>
+      <![CDATA[Click the Size column header link for column sorting.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Get the number of results in the result set.]]>
+    </line>
+    <line>
+      <![CDATA[Click the Uploaded By column header link for column sorting.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Get the number of results in the result set.]]>
+    </line>
+    <line>
+      <![CDATA[Click the Upload date column header link for column sorting.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Get the number of results in the result set.]]>
+    </line>
+    <line>
+      <![CDATA[Click the Upload date column header link for column sorting.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Get the text of the first search result set item.]]>
+    </line>
+    <line>
+      <![CDATA[Get the number of results in the result set.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="30864" started-at="2014-02-27T12:09:37Z" finished-at="2014-02-27T12:10:08Z">
+  <suite name="Default suite" duration-ms="47766" started-at="2014-02-27T15:12:28Z" finished-at="2014-02-27T15:13:15Z">
     <groups>
-      <group name="mpx">
-        <method signature="TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@c6787c1]" name="TestSetup_Test" class="com.nbcuni.test.publisher.tests.Setup.TestSetup"/>
-      </group> <!-- mpx -->
       <group name="full">
-        <method signature="TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@c6787c1]" name="TestSetup_Test" class="com.nbcuni.test.publisher.tests.Setup.TestSetup"/>
+        <method signature="EnhanceContentLibraryTable.EnhanceContentLibraryTable_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.EnhanceContentLibraryTable.EnhanceContentLibraryTable@5d1a4ce8]" name="EnhanceContentLibraryTable_Test" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.EnhanceContentLibraryTable.EnhanceContentLibraryTable"/>
       </group> <!-- full -->
-      <group name="smoke">
-        <method signature="TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@c6787c1]" name="TestSetup_Test" class="com.nbcuni.test.publisher.tests.Setup.TestSetup"/>
-      </group> <!-- smoke -->
     </groups>
-    <test name="Default test" duration-ms="30864" started-at="2014-02-27T12:09:37Z" finished-at="2014-02-27T12:10:08Z">
-      <class name="com.nbcuni.test.publisher.tests.Setup.TestSetup">
-        <test-method status="PASS" signature="startSelenium(java.lang.String)[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@c6787c1]" name="startSelenium" is-config="true" duration-ms="14108" started-at="2014-02-27T07:09:37Z" finished-at="2014-02-27T07:09:51Z">
+    <test name="Default test" duration-ms="47766" started-at="2014-02-27T15:12:28Z" finished-at="2014-02-27T15:13:15Z">
+      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.EnhanceContentLibraryTable.EnhanceContentLibraryTable">
+        <test-method status="PASS" signature="startSelenium(java.lang.String)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.EnhanceContentLibraryTable.EnhanceContentLibraryTable@5d1a4ce8]" name="startSelenium" is-config="true" duration-ms="14522" started-at="2014-02-27T10:12:28Z" finished-at="2014-02-27T10:12:42Z">
           <params>
             <param index="0">
               <value>
@@ -78,7 +138,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@c6787c1]" name="TestSetup_Test" duration-ms="16172" started-at="2014-02-27T07:09:51Z" finished-at="2014-02-27T07:10:07Z">
+        <test-method status="PASS" signature="EnhanceContentLibraryTable_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.EnhanceContentLibraryTable.EnhanceContentLibraryTable@5d1a4ce8]" name="EnhanceContentLibraryTable_Test" duration-ms="32660" started-at="2014-02-27T10:12:42Z" finished-at="2014-02-27T10:13:15Z">
           <reporter-output>
             <line>
               <![CDATA[Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.]]>
@@ -93,46 +153,112 @@
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Modules' menu link.]]>
+              <![CDATA[Mouse over the 'Configuration' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to frame titled 'Modules'.]]>
+              <![CDATA[Mouse over the 'Media' menu link.]]>
             </line>
             <line>
-              <![CDATA[Enter 'Sticky Edit Actions' in the 'Filter Name' text box.]]>
+              <![CDATA[Click the 'Media: thePlatform mpx settings' menu link.]]>
             </line>
             <line>
-              <![CDATA[Wait for the module titled 'Sticky Edit Actions' to appear in the list.]]>
+              <![CDATA[Switch to frame titled 'Media: thePlatform mpx settings dialog'.]]>
             </line>
             <line>
-              <![CDATA[Enter 'Devel' in the 'Filter Name' text box.]]>
+              <![CDATA[Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.]]>
             </line>
             <line>
-              <![CDATA[Wait for the module titled 'Devel' to appear in the list.]]>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Enter 'Database logging' in the 'Filter Name' text box.]]>
+              <![CDATA[Click the 'Files' menu link.]]>
             </line>
             <line>
-              <![CDATA[Wait for the module titled 'Database logging' to appear in the list.]]>
+              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
+              <![CDATA[Verify that the search result set column order matches as expected.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'We are sorry, no video available' is NOT present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Get the text of the first search result set item.]]>
+            </line>
+            <line>
+              <![CDATA[Get the number of results in the result set.]]>
+            </line>
+            <line>
+              <![CDATA[Click the Title column header link for column sorting.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Get the number of results in the result set.]]>
+            </line>
+            <line>
+              <![CDATA[Click the Type column header link for column sorting.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Get the number of results in the result set.]]>
+            </line>
+            <line>
+              <![CDATA[Click the Size column header link for column sorting.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Get the number of results in the result set.]]>
+            </line>
+            <line>
+              <![CDATA[Click the Uploaded By column header link for column sorting.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Get the number of results in the result set.]]>
+            </line>
+            <line>
+              <![CDATA[Click the Upload date column header link for column sorting.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Get the number of results in the result set.]]>
+            </line>
+            <line>
+              <![CDATA[Click the Upload date column header link for column sorting.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Get the text of the first search result set item.]]>
+            </line>
+            <line>
+              <![CDATA[Get the number of results in the result set.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- TestSetup_Test -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@c6787c1]" name="stopSelenium" is-config="true" duration-ms="567" started-at="2014-02-27T07:10:07Z" finished-at="2014-02-27T07:10:08Z">
+        </test-method> <!-- EnhanceContentLibraryTable_Test -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.EnhanceContentLibraryTable.EnhanceContentLibraryTable@5d1a4ce8]" name="stopSelenium" is-config="true" duration-ms="573" started-at="2014-02-27T10:13:15Z" finished-at="2014-02-27T10:13:15Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=TestSetup_Test status=SUCCESS method=TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@c6787c1] output=Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.]]]>
+                <![CDATA[[TestResult name=EnhanceContentLibraryTable_Test status=SUCCESS method=EnhanceContentLibraryTable.EnhanceContentLibraryTable_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.EnhanceContentLibraryTable.EnhanceContentLibraryTable@5d1a4ce8] output=Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-      </class> <!-- com.nbcuni.test.publisher.tests.Setup.TestSetup -->
+      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.EnhanceContentLibraryTable.EnhanceContentLibraryTable -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

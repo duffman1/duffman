@@ -78,8 +78,8 @@ public class Revisions {
     public void ClickEditExtendMenuBtn(String contentItemTtl) throws Exception {
     	
     	Reporter.log("Click the 'Edit' extend menu button.");
+    	Thread.sleep(250); //slight pause required here
     	EditExtendMenu_Btn(contentItemTtl).click();
-    	Thread.sleep(1000);
     }
     
     public void ClickEditMenuDeleteBtn(String contentItemTtl) throws Exception {
@@ -92,7 +92,7 @@ public class Revisions {
     	
     	Reporter.log("Click the 'Edit' menu button.");
     	EditMenu_Btn(contentItemTtl).click();
-    	Thread.sleep(1000); //slight pause required here for successful frame switch
+    	Thread.sleep(250); //slight pause required here for successful frame switch
     }
 
     public void ClickShareMenuBtn(String contentItemTtl) throws Exception {
@@ -105,7 +105,7 @@ public class Revisions {
     	
     	this.ClickEditExtendMenuBtn(contentItemTtl);
     	Reporter.log("Verify Edit menu 'Edit' button is present.");
-    	EditMenu_Btn(contentItemTtl).isDisplayed();
+    	wait.until(ExpectedConditions.visibilityOf(EditMenu_Btn(contentItemTtl)));
     	
     	Reporter.log("Verify Edit menu 'Delete' buttton is present.");
     	EditMenuDelete_Btn(contentItemTtl).isDisplayed();

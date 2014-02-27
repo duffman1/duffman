@@ -26,19 +26,19 @@ public class TwitterLogin {
     @FindBy(how = How.ID, using = "username_or_email")
     private static WebElement AdminUsernameOrEmail_Txb;
     
-    @FindBy(how = How.XPATH, using = "(//input[@name='session[username_or_email]'])[2]")
+    @FindBy(how = How.XPATH, using = "(//input[@name='session[username_or_email]'])[1]")
     private static WebElement UsernameOrEmail_Txb;
     
     @FindBy(how = How.ID, using = "password")
     private static WebElement AdminPassword_Txb;
     
-    @FindBy(how = How.XPATH, using = "(//input[@name='session[password]'])[2]")
+    @FindBy(how = How.XPATH, using = "(//input[@name='session[password]'])[1]")
     private static WebElement Password_Txb;
     
     @FindBy(how = How.ID, using = "allow")
     private static WebElement AuthorizeApp_Btn;
     
-    @FindBy(how = How.XPATH, using = "(//button[text()='Sign in'])[2]")
+    @FindBy(how = How.XPATH, using = "(//button[text()='Sign in'])[1]")
     private static WebElement SignIn_Btn;
     
     
