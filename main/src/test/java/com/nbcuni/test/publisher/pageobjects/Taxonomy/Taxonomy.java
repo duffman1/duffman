@@ -71,9 +71,16 @@ public class Taxonomy {
     
     //PAGE OBJECT METHODS
     public void MouseOffTaxonomyElement(WebElement locator) throws Exception {
-    	Actions action = new Actions(webDriver);
-    	action.moveToElement(Shortcuts_Lnk).build().perform();
-    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.not(ExpectedConditions.visibilityOf(locator)));
+    	
+    	//is mouse-off fails, refresh the page to be sure to close taxonomy menu
+    	try {
+    		Actions action = new Actions(webDriver);
+    		action.moveToElement(Shortcuts_Lnk).build().perform();
+    		new WebDriverWait(webDriver, 5).until(ExpectedConditions.not(ExpectedConditions.visibilityOf(locator)));
+    	}
+    	catch (Exception e) {
+    		webDriver.navigate().refresh();
+    	}
     }
     
     public void NavigateSite(String menuPath) throws Exception{

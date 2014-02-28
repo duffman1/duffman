@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Feb 28 12:34:49 EST 2014</td>
+<td>Started on:</td><td>Fri Feb 28 15:02:43 EST 2014</td>
 </tr>
-<tr><td>Total time:</td><td>42 seconds (42346 ms)</td>
+<tr><td>Total time:</td><td>31 seconds (31947 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,33 +75,42 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.nbcuni.test.publisher.tests.Setup.TestSetup.TestSetup_Test()'><b>TestSetup_Test</b><br>Test class: com.nbcuni.test.publisher.tests.Setup.TestSetup<br/>
-<a href="#Output-728271196" onClick='toggleBox("Output-728271196", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile.CreateCharacterProfile_Test()'><b>CreateCharacterProfile_Test</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile<br/>
+<a href="#Output-383283648" onClick='toggleBox("Output-383283648", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-728271196" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-728271196">
+<a href="#Output-383283648" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-383283648">
 Open url 'http://qa4.qa.nbcupublisher7.publisher7.com'.<br/>
 Enter the user's email address in the 'Email Address' text box.<br/>
 Enter the user's password in the 'Password' text box.<br/>
 Click the 'Login' button.<br/>
-Click the 'Modules' menu link.<br/>
-Switch to frame titled 'Modules'.<br/>
-Enter 'Sticky Edit Actions' in the 'Filter Name' text box.<br/>
-Wait for the module titled 'Sticky Edit Actions' to appear in the list.<br/>
-Uncheck the 'Sticky Edit Actions' module checkbox.<br/>
-Click the 'Save configuration' button.<br/>
-Verify success message of 'The configuration options have been saved.' is present.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Add content' menu link.<br/>
+Click the 'Character Profile' menu link.<br/>
+Switch to the active frame titled 'Create Character Profile dialog'.<br/>
+Enter '2b084fd025fa4d2' in the 'Character First Name' text box.<br/>
+Click the Cover Photo 'Select' button.<br/>
+Switch to the select file frame.<br/>
+Enter the file path for file upload.<br/>
+Click the 'Upload' button.<br/>
+Wait for the file link to be visible after upload.<br/>
+Click the 'Next' button.<br/>
+Click the 'Public Local Files' radio button.<br/>
+Click the 'Next' button.<br/>
+Assert the file image 'HanSolo' is present.<br/>
+Assert the the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Switch to frame titled 'Create Character Profile'.<br/>
+Assert that img source of the Cover Photo contains 'HanSolo'.<br/>
+Assert the the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'Character Profile 2b084fd025fa4d2 has been created.' is present.<br/>
 Verify there are no errors present.<br/>
-Enter 'Devel' in the 'Filter Name' text box.<br/>
-Wait for the module titled 'Devel' to appear in the list.<br/>
-Enter 'Database logging' in the 'Filter Name' text box.<br/>
-Wait for the module titled 'Database logging' to appear in the list.<br/>
-Click the 'Close Overlay X'.<br/>
 </div>
 </td>
 <td></td>
-<td>28</td>
-<td>com.nbcuni.test.publisher.tests.Setup.TestSetup@31dab039</td></tr>
+<td>17</td>
+<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@73774da1</td></tr>
 </table><p>
 </body>
 </html>

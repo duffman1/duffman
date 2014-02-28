@@ -19,6 +19,7 @@ import javax.mail.internet.MimeMultipart;
 
 public class SendEmailReport {
 
+	@SuppressWarnings("static-access")
 	public void SendEmail(String pathToReport, String reportName, Integer passedTestsCount, Integer failedTestsCount) {
 
 		Config config = new Config();
@@ -41,14 +42,23 @@ public class SendEmailReport {
         try {
 
             Message message = new MimeMessage(session);
-            //message.setFrom(new InternetAddress("brandon.clark@nbcuni.com"));
-            message.setRecipients(Message.RecipientType.TO,
-                InternetAddress.parse(config.getConfigValue("SendReportEmailAddress")));
+            message.setFrom(new InternetAddress("Automation@nbcuni.com"));
+            
+            //if there are failures or few tests executed, send to automation qa resource for review
+            Integer totalTestCount = passedTestsCount + failedTestsCount;
+            if (failedTestsCount.SIZE > 0 || totalTestCount < 10) {
+            	message.setRecipients(Message.RecipientType.TO,
+            			InternetAddress.parse("brandon.clark@nbcuni.com"));
+            }
+            else {
+            	message.setRecipients(Message.RecipientType.TO,
+            			InternetAddress.parse(config.getConfigValue("SendReportEmailAddress")));
+            }
+            
             message.setSubject("Test Automation Report");
             
             BodyPart messageBodyPart = new MimeBodyPart();
 
-            Integer totalTestCount = passedTestsCount + failedTestsCount;
             messageBodyPart.setText("Test run complete against latest build on " + config.getConfigValue("AppURL")
                 + "\n\n Total tests executed = " + totalTestCount.toString()
             		+ "\n Tests passed = " + passedTestsCount.toString()

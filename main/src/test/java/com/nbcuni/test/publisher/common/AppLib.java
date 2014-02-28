@@ -42,14 +42,9 @@ public class AppLib {
     private String pathToMediaContent = "";
     private String pathToScreenshots = "";
     private String pathToSikuliImages = "";
-    private String admin1Username = "";
-    private String admin1Password = "";
-    private String mpxUsername = "";
-    private String mpxPassword = "";
     private String implicitWaitTime = "";
     private String pageLoadWaitTime = "";
     private String errorChecksEnabled = "";
-    private String mpxUrl = "";
     private String sikuliImageWaitTime = "";
 
     private static String configFileName = "src" + File.separator + "test" + File.separator + "resources"
@@ -110,14 +105,9 @@ public class AppLib {
             pathToMediaContent = configProperties.getProperty(environment + ".PathToMediaContent");
             pathToScreenshots = configProperties.getProperty(environment + ".PathToScreenShots");
             pathToSikuliImages = configProperties.getProperty(environment + ".PathToSikuliImages");
-            admin1Username = configProperties.getProperty(environment + ".Admin1UserName");
-            admin1Password = configProperties.getProperty(environment + ".Admin1PassWord");
-            mpxUsername = configProperties.getProperty(environment + ".MPXUserName");
-            mpxPassword = configProperties.getProperty(environment + ".MPXPassWord");
             implicitWaitTime = configProperties.getProperty(environment + ".ImplicitWaitTime");
             pageLoadWaitTime = configProperties.getProperty(environment + ".PageLoadWaitTime");
             errorChecksEnabled = configProperties.getProperty(environment + ".ErrorCheckingEnabled");
-            mpxUrl = configProperties.getProperty(environment + ".MPXUrl");
             sikuliImageWaitTime = configProperties.getProperty(environment + ".SikuliImageWaitTime");
             
         } catch (Exception e) {
@@ -139,28 +129,28 @@ public class AppLib {
     
     public String getAdmin1Username() {
     	
-    	return admin1Username;
+    	return config.getConfigValue("Admin1Username");
     }
     
     public String getAdmin1Password() {
     	
-    	return admin1Password;
+    	return config.getConfigValue("Admin1Password");
     }
     
     public String getMPXUrl() {
     	
-    	return this.mpxUrl;
+    	return config.getConfigValue("MPXUrl");
     }
 
     public String getMPXUsername() {
     	
-    	return mpxUsername;
+    	return config.getConfigValue("MPXUsername");
     	
     }
     
     public String getMPXPassword() {
     	
-    	return mpxPassword;
+    	return config.getConfigValue("MPXPassword");
     	
     }
     

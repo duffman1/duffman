@@ -20,6 +20,7 @@ public class ParentTest {
     protected Random random;
     protected Taxonomy taxonomy;
     protected Overlay overlay;
+    protected Config config;
     
     @BeforeMethod(alwaysRun = true)
     @Parameters("Environment")
@@ -29,6 +30,7 @@ public class ParentTest {
         	webDriver = WebDriverClientExecution.getInstance().getDriver();
             applib = new AppLib(webDriver);
             applib.setEnvironmentInfo(sEnv);
+            config = new Config();
             random = new Random();
             taxonomy = new Taxonomy(webDriver);
             overlay = new Overlay(webDriver, applib);
