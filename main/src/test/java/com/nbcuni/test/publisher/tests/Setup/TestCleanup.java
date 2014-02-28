@@ -21,7 +21,7 @@ public class TestCleanup extends ParentTest{
      * @throws Throwable No Return values are needed
      *************************************************************************************/
     @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "smoke", "mpx"})
-    public void TestSetup_Test() throws Exception{
+    public void TestCleanup_Test() throws Exception{
          
         	//login
         	UserLogin userLogin = applib.openApplication();

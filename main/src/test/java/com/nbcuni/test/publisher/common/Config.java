@@ -15,11 +15,11 @@ public class Config {
 
 	private String getConfigFileLocation() {
 		
-		String fileLoc = System.getProperty("user.dir") + "/src/test/resources/testng.xml";
+		String fileLoc = System.getProperty("user.dir") + "/src/test/resources/ConfigTestNG.xml";
 		return fileLoc.replace("/", File.separator);
 	}
 	
-    public String getConfigValue(String configValue) {
+    public String getConfigValue(String parameterName) {
 
         String value = null;
 
@@ -32,7 +32,7 @@ public class Config {
             XPathFactory xpathFact = XPathFactory.newInstance();
             XPath xpath = xpathFact.newXPath();
 
-            value = (String) xpath.evaluate("//parameter[@name='" + configValue + "']/@value", xmlDoc, XPathConstants.STRING);
+            value = (String) xpath.evaluate("//parameter[@name='" + parameterName + "']/@value", xmlDoc, XPathConstants.STRING);
         }
         catch (Exception e) {
 
@@ -48,10 +48,57 @@ public class Config {
     	return fileLoc.replace("/", File.separator);
     }
     
+    public String getPathToScreenshots() {
+    	String fileLoc = System.getProperty("user.dir") + this.getConfigValue("PathToScreenshots");
+    	return fileLoc.replace("/", File.separator);
+    }
+    
+    public String getPathToSikuliImages() {
+    	String fileLoc = System.getProperty("user.dir") + this.getConfigValue("PathToSikuliImages");
+    	return fileLoc.replace("/", File.separator);
+    }
+    
     public int getReRunOnFailureCount() {
     	
     	return Integer.parseInt(this.getConfigValue("ReRunOnFailureCount"));
     	
+    }
+    
+    public double getSikuliImageWaitTime() {
+    	
+    	return (double) Integer.parseInt(this.getConfigValue("SikuliImageWaitTime"));
+    	
+    }
+    
+    public int getImplicitWaitTime() {
+    	
+    	return Integer.parseInt(this.getConfigValue("ImplicitWaitTime"));
+    	
+    }
+    
+    public int getPageLoadWaitTime() {
+    	
+    	return Integer.parseInt(this.getConfigValue("PageLoadWaitTime"));
+    	
+    }
+    
+    public String getPathToMedia() {
+    	
+    	String filePath = System.getProperty("user.dir") + this.getConfigValue("PathToMediaContent");
+        return filePath.replace("/", File.separator);
+    }
+    
+    public boolean IsErrorCheckingEnabled() {
+    	
+    	boolean checksEnabled = true;
+    	if (this.getConfigValue("ErrorCheckingEnabled").equals("true")) {
+    		checksEnabled = true;
+    	}
+    	else {
+    		checksEnabled = false;
+    	}
+    	
+    	return checksEnabled;
     }
 
 
