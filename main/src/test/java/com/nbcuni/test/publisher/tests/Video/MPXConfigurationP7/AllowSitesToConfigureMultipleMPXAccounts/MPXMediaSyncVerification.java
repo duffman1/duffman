@@ -9,12 +9,8 @@ import com.nbcuni.test.publisher.pageobjects.MPX.MPXDataClient;
 import com.nbcuni.test.publisher.pageobjects.MPX.MPXMedia;
 import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
-
 import org.testng.Assert;
-
-import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
-
 import java.util.Arrays;
 import java.util.List;
 
@@ -41,8 +37,7 @@ public class MPXMediaSyncVerification extends ParentTest{
     	
     	//Step 1
     	UserLogin userLogin = applib.openApplication();
-    	PageFactory.initElements(webDriver, userLogin);
-        userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+    	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
         
         //Step 2
         taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
@@ -89,14 +84,13 @@ public class MPXMediaSyncVerification extends ParentTest{
         	//Step 3b
             applib.openApplication();
             taxonomy.NavigateSite("Content>>Files>>mpxMedia");
-            overlay.SwitchToFrame("Content");
+            overlay.SwitchToActiveFrame();
             
             //Step 4
             MPXMedia mpxMedia = new MPXMedia(webDriver);
             mpxMedia.ExpandMPXMedia();
             
             //Step 5a
-            //TODO - refactor to clean this up a bit
             if (configuredAccounts.get(0).equals("DB TV") || configuredAccounts.get(0).equals("NBCU TVE Dev - NBC")) {
                 mpxMedia.SelectMPXPlayerForAccount1("Auditude Demo player");
             }
@@ -121,21 +115,19 @@ public class MPXMediaSyncVerification extends ParentTest{
             //Step 5b
             mpxMedia.ClickSyncMPXMediaNowLnk();
             ContentParent contentParent = new ContentParent(webDriver, applib);
-            PageFactory.initElements(webDriver, contentParent);
             contentParent.VerifyMessageStatus("Processed video import/update manually for all accounts.");
             
             //Step 6
             Cron cron = new Cron(webDriver);
             cron.ClickRunCronToCompleteImportLnk();
-            overlay.SwitchToFrame("Cron");
+            overlay.SwitchToActiveFrame();
             cron.ClickRunCronBtn();
             contentParent.VerifyMessageStatus("Cron run successfully.");
             overlay.switchToDefaultContent();
             taxonomy.NavigateSite("Content>>Files>>mpxMedia");
-            overlay.SwitchToFrame("Content");
+            overlay.SwitchToActiveFrame();
             SearchFor searchFor = new SearchFor(webDriver, applib);
-            PageFactory.initElements(webDriver, searchFor);
-
+            
             if (configuredAccounts.contains("DB TV") || configuredAccounts.contains("NBCU TVE Dev - NBC")) {
                 searchFor.EnterTitle("Automation1");
                 searchFor.ClickApplyBtn();

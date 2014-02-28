@@ -52,7 +52,7 @@ public class MPXPlayersSyncVerification extends ParentTest{
         
         //Step
         taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
-        overlay.SwitchToFrame("Media: thePlatform mpx settings dialog");
+        overlay.SwitchToActiveFrame();
         Settings settings = new Settings(webDriver, applib);
         if (settings.IsMPXConfigured() == true) {
             
@@ -107,7 +107,7 @@ public class MPXPlayersSyncVerification extends ParentTest{
         	//Step
             applib.openApplication();
             taxonomy.NavigateSite("Content>>Files>>mpxPlayers");
-            overlay.SwitchToFrame("Content");
+            overlay.SwitchToActiveFrame();
             MPXPlayers MPXPlayers = new MPXPlayers(webDriver);
             MPXPlayers.ClickSyncMPXPlayersLnk();
             MPXPlayers.ClickSyncMPXPlayersNowLnk();
@@ -131,7 +131,7 @@ public class MPXPlayersSyncVerification extends ParentTest{
             //Step
             overlay.switchToDefaultContent();
             taxonomy.NavigateSite("Content>>Files>>mpxMedia");
-            overlay.SwitchToFrame("Content");
+            overlay.SwitchToActiveFrame();
             MPXMedia mpxMedia = new MPXMedia(webDriver);
             mpxMedia.ExpandMPXMedia();
             

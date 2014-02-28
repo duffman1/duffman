@@ -1,9 +1,17 @@
 <suite name="Test Suite for Publisher 7" parallel="methods" thread-count="1" preserve-order="true">
 
 	<!--CONFIGURATION PARAMETERS-->
+	<parameter name="AppURL" value="http://qa5.qa.nbcupublisher7.publisher7.com"></parameter>
+	<parameter name="ReRunOnFailureCount" value="2"></parameter>
   	<parameter name="Environment" value="PROD"></parameter>
+  	
+  	<!--REPORT CONFIG-->
   	<parameter name="PathToReports" value="/test-output/reports/"></parameter>
-  	<parameter name="ReRunOnFailureCount" value="2"></parameter>
+  	<parameter name="SendReportEmailAddress" value="brandon.clark@nbcuni.com"></parameter>
+  	
+  	<!--GMAIL CONFIG-->
+  	<parameter name="GmailUsername" value="Pub7NBCUAutoEmailUser1@gmail.com"></parameter>
+  	<parameter name="GmailPassword" value="Pub7NBCUAutoEmailPassword1"></parameter>
   	
   	<!--RALLY CONFIG-->
   	<parameter name="RallyUsername" value="brandon.clark@nbcuni.com"></parameter>

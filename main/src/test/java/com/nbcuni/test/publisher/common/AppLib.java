@@ -33,9 +33,10 @@ import java.util.Properties;
 
 public class AppLib {
 
+	Config config = new Config();
+	
     private CustomWebDriver custWebDr = null;
     private String environment = "";
-    private String appURL = "";
     private String proxyUrl = "";
     private Integer proxyPort = 0;
     private String pathToMediaContent = "";
@@ -49,8 +50,6 @@ public class AppLib {
     private String pageLoadWaitTime = "";
     private String errorChecksEnabled = "";
     private String mpxUrl = "";
-    private String gMailAutoEmailUsername = "";
-    private String gMailAutoEmailPassword = "";
     private String sikuliImageWaitTime = "";
 
     private static String configFileName = "src" + File.separator + "test" + File.separator + "resources"
@@ -106,7 +105,6 @@ public class AppLib {
     private void getEnvironmentInfo() {
         try {
 
-            appURL = configProperties.getProperty(environment + ".Url");
             proxyUrl = configProperties.getProperty(environment + ".ProxyURL");
             proxyPort = Integer.valueOf(configProperties.getProperty(environment + ".ProxyPort"));
             pathToMediaContent = configProperties.getProperty(environment + ".PathToMediaContent");
@@ -120,8 +118,6 @@ public class AppLib {
             pageLoadWaitTime = configProperties.getProperty(environment + ".PageLoadWaitTime");
             errorChecksEnabled = configProperties.getProperty(environment + ".ErrorCheckingEnabled");
             mpxUrl = configProperties.getProperty(environment + ".MPXUrl");
-            gMailAutoEmailUsername = configProperties.getProperty(environment + ".GMailAutoEmailUsername");
-            gMailAutoEmailPassword = configProperties.getProperty(environment + ".GMailAutoEmailPassword");
             sikuliImageWaitTime = configProperties.getProperty(environment + ".SikuliImageWaitTime");
             
         } catch (Exception e) {
@@ -188,13 +184,13 @@ public class AppLib {
     
     public String getGmailAutoEmailUsername() {
     	
-    	return gMailAutoEmailUsername;
+    	return config.getConfigValue("GmailUsername");
     	
     }
     
     public String getGmailAutoEmailPassword() {
     	
-    	return gMailAutoEmailPassword;
+    	return config.getConfigValue("GmailPassword");
     	
     }
     
@@ -239,7 +235,7 @@ public class AppLib {
     }
     
     public final String getApplicationURL() throws Exception {
-        return this.appURL;
+        return config.getConfigValue("AppURL");
     }
 
     public Proxy getHttpProxy() {

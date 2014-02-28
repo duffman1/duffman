@@ -105,6 +105,14 @@ public class CustomReport extends EmailableReporter {
 			System.out.println("Failed to upload report attachment to Rally.");
 		}
 		
+		//send auto email with report
+		SendEmailReport sendEmailReport = new SendEmailReport();
+		try {
+			sendEmailReport.SendEmail(filePath, fileExtension, passedTests.size(), failedTests.size());
+		} catch (Exception e) {
+			System.out.println("Failed to send report email.");
+		}
+		
     }
 }
 }

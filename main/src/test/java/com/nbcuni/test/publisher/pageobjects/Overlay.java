@@ -1,6 +1,7 @@
 package com.nbcuni.test.publisher.pageobjects;
 
 import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -8,6 +9,7 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.Reporter;
+
 import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.webdriver.CustomWebDriver;
 
@@ -54,18 +56,20 @@ public class Overlay {
     	this.switchToDefaultContent();
     }
     
-    public void SwitchToFrame(String frameTitle) {
+    public void SwitchToFrame(String frameTitle) throws Exception {
     	
     	Reporter.log("Switch to frame titled '" + frameTitle + "'.");
+    	Thread.sleep(500); //slight pause to help ensure frame switch occurs to a new frame and not the old.
     	webDriver.switchTo().frame(Dialog_Frm(frameTitle));
     }
     
     public void SwitchToActiveFrame() throws Exception {
     	
     	this.switchToDefaultContent();
-    	Thread.sleep(250); //slight pause to help ensure frame switch occurs to a new frame and not the old.
+    	Thread.sleep(500); //slight pause to help ensure frame switch occurs to a new frame and not the old.
     	Reporter.log("Switch to the active frame titled '" + ActiveFrame_Frm.getAttribute("title") + "'.");
     	webDriver.switchTo().frame(ActiveFrame_Frm);
+    	
     }
     
     public void WaitForFrameNotPresent(String frameTitle) throws Exception {
