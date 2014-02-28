@@ -39,6 +39,9 @@ public class Overlay {
     @FindBy(how = How.XPATH, using = "//iframe[@class='overlay-element overlay-active']")
     private static WebElement ActiveFrame_Frm;
     
+    @FindBy(how = How.XPATH, using = "//h1[contains(text(), 'Loading')]")
+    private static WebElement Loading_Ttl;
+    
     private static WebElement Dialog_Frm(String frameTitle) {
     	return webDriver.findElement(By.xpath("//iframe[contains(@title, '" + frameTitle + "')]"));
     }
@@ -59,14 +62,33 @@ public class Overlay {
     public void SwitchToFrame(String frameTitle) throws Exception {
     	
     	Reporter.log("Switch to frame titled '" + frameTitle + "'.");
-    	Thread.sleep(500); //slight pause to help ensure frame switch occurs to a new frame and not the old.
+    	Thread.sleep(250); //slight pause to help ensure frame switch occurs to a new frame and not the old.
     	webDriver.switchTo().frame(Dialog_Frm(frameTitle));
     }
     
     public void SwitchToActiveFrame() throws Exception {
     	
+    	//wait for frame titled 'loading' to not be present
+    	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+    	boolean loadingFramePresent = false;
+
+    	for (int second = 0; ; second++){
+            if (second >= 120) {
+                Assert.fail("Frame titled 'Loading' is still present after timeout");}
+            try{
+            	Loading_Ttl.isDisplayed();
+                loadingFramePresent = true;
+            }
+            catch (Exception e){
+            	loadingFramePresent = false;
+            }
+            if (loadingFramePresent == false){ break;}
+            Thread.sleep(500);
+        }
+    	webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
+    	
     	this.switchToDefaultContent();
-    	Thread.sleep(500); //slight pause to help ensure frame switch occurs to a new frame and not the old.
+    	Thread.sleep(250); //slight pause to help ensure frame switch occurs to a new frame and not the old.
     	Reporter.log("Switch to the active frame titled '" + ActiveFrame_Frm.getAttribute("title") + "'.");
     	webDriver.switchTo().frame(ActiveFrame_Frm);
     	

@@ -1,7 +1,7 @@
 <suite name="Test Suite for Publisher 7" parallel="methods" thread-count="1" preserve-order="true">
 
-	<!--CONFIGURATION PARAMETERS-->
-	<parameter name="AppURL" value="http://qa5.qa.nbcupublisher7.publisher7.com"></parameter>
+	<!--RUNTIME CONFIG-->
+	<parameter name="AppURL" value="http://qa4.qa.nbcupublisher7.publisher7.com"></parameter>
 	<parameter name="ReRunOnFailureCount" value="2"></parameter>
   	<parameter name="Environment" value="PROD"></parameter>
   	
@@ -26,6 +26,8 @@
     <listener class-name="com.nbcuni.test.publisher.common.CustomReport" />
   	</listeners>
   	
+  	
+  	<!--TEST EXECUTION QUEUE-->
   	<test name="All Web Tests">
 
 		<!-- Enter group name for specific test scripts, options are "full", "smoke", or "mpx" -->
