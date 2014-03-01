@@ -19,7 +19,6 @@ import javax.mail.internet.MimeMultipart;
 
 public class SendEmailReport {
 
-	@SuppressWarnings("static-access")
 	public void SendEmail(String pathToReport, String reportName, Integer passedTestsCount, Integer failedTestsCount) {
 
 		Config config = new Config();
@@ -46,7 +45,7 @@ public class SendEmailReport {
             
             //if there are failures or few tests executed, send to automation qa resource for review
             Integer totalTestCount = passedTestsCount + failedTestsCount;
-            if (failedTestsCount.SIZE > 0 || totalTestCount < 10) {
+            if (!failedTestsCount.equals(0) || totalTestCount < 10) {
             	message.setRecipients(Message.RecipientType.TO,
             			InternetAddress.parse("brandon.clark@nbcuni.com"));
             }
