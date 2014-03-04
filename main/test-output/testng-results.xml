@@ -14,85 +14,52 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Content' menu link.]]>
+      <![CDATA[Click the 'Modules' menu link.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Add content' menu link.]]>
+      <![CDATA[Switch to frame titled 'Modules'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Character Profile' menu link.]]>
+      <![CDATA[Enter 'Sticky Edit Actions' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Create Character Profile dialog'.]]>
+      <![CDATA[Wait for the module titled 'Sticky Edit Actions' to appear in the list.]]>
     </line>
     <line>
-      <![CDATA[Enter 'f7d2516209324cd' in the 'Character First Name' text box.]]>
+      <![CDATA[Enter 'Devel' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the Cover Photo 'Select' button.]]>
+      <![CDATA[Wait for the module titled 'Devel' to appear in the list.]]>
     </line>
     <line>
-      <![CDATA[Switch to the select file frame.]]>
+      <![CDATA[Enter 'Database logging' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Enter the file path for file upload.]]>
+      <![CDATA[Wait for the module titled 'Database logging' to appear in the list.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Upload' button.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Assert the file image 'HanSolo' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Assert the the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to frame titled 'Create Character Profile'.]]>
-    </line>
-    <line>
-      <![CDATA[Assert that img source of the Cover Photo contains 'HanSolo'.]]>
-    </line>
-    <line>
-      <![CDATA[Assert the the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Character Profile f7d2516209324cd has been created.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify there are no errors present.]]>
+      <![CDATA[Click the 'Close Overlay X'.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="32593" started-at="2014-03-03T19:10:14Z" finished-at="2014-03-03T19:10:47Z">
+  <suite name="Test Suite for Publisher 7" duration-ms="31326" started-at="2014-03-04T14:32:17Z" finished-at="2014-03-04T14:32:49Z">
     <groups>
+      <group name="mpx">
+        <method signature="TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@210c05b5]" name="TestSetup_Test" class="com.nbcuni.test.publisher.tests.Setup.TestSetup"/>
+      </group> <!-- mpx -->
       <group name="full">
-        <method signature="CreateCharacterProfile.CreateCharacterProfile_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@3d9f242f]" name="CreateCharacterProfile_Test" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile"/>
+        <method signature="TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@210c05b5]" name="TestSetup_Test" class="com.nbcuni.test.publisher.tests.Setup.TestSetup"/>
       </group> <!-- full -->
+      <group name="smoke">
+        <method signature="TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@210c05b5]" name="TestSetup_Test" class="com.nbcuni.test.publisher.tests.Setup.TestSetup"/>
+      </group> <!-- smoke -->
     </groups>
-    <test name="Default test" duration-ms="32593" started-at="2014-03-03T19:10:14Z" finished-at="2014-03-03T19:10:47Z">
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile">
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@3d9f242f]" name="startSelenium" is-config="true" duration-ms="13996" started-at="2014-03-03T14:10:14Z" finished-at="2014-03-03T14:10:28Z">
+    <test name="All Web Tests" duration-ms="31326" started-at="2014-03-04T14:32:17Z" finished-at="2014-03-04T14:32:49Z">
+      <class name="com.nbcuni.test.publisher.tests.Setup.TestSetup">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@210c05b5]" name="startSelenium" is-config="true" duration-ms="13268" started-at="2014-03-04T09:32:17Z" finished-at="2014-03-04T09:32:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="CreateCharacterProfile_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@3d9f242f]" name="CreateCharacterProfile_Test" duration-ms="18017" started-at="2014-03-03T14:10:28Z" finished-at="2014-03-03T14:10:46Z">
+        <test-method status="PASS" signature="TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@210c05b5]" name="TestSetup_Test" duration-ms="17477" started-at="2014-03-04T09:32:31Z" finished-at="2014-03-04T09:32:48Z">
           <reporter-output>
             <line>
               <![CDATA[Open url 'http://qa4.qa.nbcupublisher7.publisher7.com'.]]>
@@ -107,85 +74,46 @@
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Content' menu link.]]>
+              <![CDATA[Click the 'Modules' menu link.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Add content' menu link.]]>
+              <![CDATA[Switch to frame titled 'Modules'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Character Profile' menu link.]]>
+              <![CDATA[Enter 'Sticky Edit Actions' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create Character Profile dialog'.]]>
+              <![CDATA[Wait for the module titled 'Sticky Edit Actions' to appear in the list.]]>
             </line>
             <line>
-              <![CDATA[Enter 'f7d2516209324cd' in the 'Character First Name' text box.]]>
+              <![CDATA[Enter 'Devel' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the Cover Photo 'Select' button.]]>
+              <![CDATA[Wait for the module titled 'Devel' to appear in the list.]]>
             </line>
             <line>
-              <![CDATA[Switch to the select file frame.]]>
+              <![CDATA[Enter 'Database logging' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Enter the file path for file upload.]]>
+              <![CDATA[Wait for the module titled 'Database logging' to appear in the list.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Upload' button.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Public Local Files' radio button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Assert the file image 'HanSolo' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Assert the the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to frame titled 'Create Character Profile'.]]>
-            </line>
-            <line>
-              <![CDATA[Assert that img source of the Cover Photo contains 'HanSolo'.]]>
-            </line>
-            <line>
-              <![CDATA[Assert the the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Character Profile f7d2516209324cd has been created.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify there are no errors present.]]>
+              <![CDATA[Click the 'Close Overlay X'.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- CreateCharacterProfile_Test -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@3d9f242f]" name="stopSelenium" is-config="true" duration-ms="569" started-at="2014-03-03T14:10:46Z" finished-at="2014-03-03T14:10:47Z">
+        </test-method> <!-- TestSetup_Test -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@210c05b5]" name="stopSelenium" is-config="true" duration-ms="567" started-at="2014-03-04T09:32:48Z" finished-at="2014-03-04T09:32:49Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=CreateCharacterProfile_Test status=SUCCESS method=CreateCharacterProfile.CreateCharacterProfile_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@3d9f242f] output=Open url 'http://qa4.qa.nbcupublisher7.publisher7.com'.]]]>
+                <![CDATA[[TestResult name=TestSetup_Test status=SUCCESS method=TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@210c05b5] output=Open url 'http://qa4.qa.nbcupublisher7.publisher7.com'.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Setup.TestSetup -->
+    </test> <!-- All Web Tests -->
+  </suite> <!-- Test Suite for Publisher 7 -->
 </testng-results>
