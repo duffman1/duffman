@@ -100,6 +100,7 @@ public class CustomReport extends EmailableReporter {
 		//upload report to rally
 		try {
 			uploadReport.uploadFileAttachment(filePath, fileExtension);
+			
 		} catch (Exception e) {
 			
 			System.out.println("Failed to upload report attachment to Rally.");

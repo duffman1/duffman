@@ -89,8 +89,6 @@ public class SendEmailReport {
             	System.out.println("Report result email not sent per configuration setting.");
             }
 
-            
-
         } catch (MessagingException e) {
             throw new RuntimeException(e);
         }

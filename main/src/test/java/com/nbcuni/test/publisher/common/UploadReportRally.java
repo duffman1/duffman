@@ -120,20 +120,24 @@ public class UploadReportRally {
             myAttachment.addProperty("Size", attachmentSize);
             myAttachment.addProperty("User", userRef);          
 
+            if (config.getConfigValue("UploadReportToRally").equals("true")) {
             CreateRequest attachmentCreateRequest = new CreateRequest("Attachment", myAttachment);
             CreateResponse attachmentResponse = restApi.create(attachmentCreateRequest);
-            String myAttachmentRef = attachmentResponse.getObject().get("_ref").getAsString();
-            System.out.println("Attachment  created: " + myAttachmentRef);  
-
-            if (attachmentResponse.wasSuccessful()) {
-                System.out.println("Successfully created Attachment");
-            } else {
-                String[] attachmentContentErrors;
-                attachmentContentErrors = attachmentResponse.getErrors();
-                        System.out.println("Error occurred creating Attachment: ");
-                for (int i=0; i<attachmentContentErrors.length;i++) {
-                        System.out.println(attachmentContentErrors[i]);
-                }                   
+            attachmentResponse.getObject().get("_ref").getAsString();
+            
+            	if (attachmentResponse.wasSuccessful()) {
+            		System.out.println("Successfully created Attachment");
+            	} else {
+            		String[] attachmentContentErrors;
+            		attachmentContentErrors = attachmentResponse.getErrors();
+                        	System.out.println("Error occurred creating Attachment: ");
+                        	for (int i=0; i<attachmentContentErrors.length;i++) {
+                        		System.out.println(attachmentContentErrors[i]);
+                        	}                   
+            	}
+            }
+            else {
+            	System.out.println("Report was not uploaded to Rally per configuration setting.");
             }
         } catch (Exception e) {
                 System.out.println("Exception occurred while attempting to create Content and/or Attachment: ");

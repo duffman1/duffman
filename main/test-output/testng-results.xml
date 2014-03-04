@@ -2,7 +2,7 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
     <line>
-      <![CDATA[Open url 'http://qa4.qa.nbcupublisher7.publisher7.com'.]]>
+      <![CDATA[Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.]]>
     </line>
     <line>
       <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
@@ -41,28 +41,28 @@
       <![CDATA[Click the 'Close Overlay X'.]]>
     </line>
   </reporter-output>
-  <suite name="Test Suite for Publisher 7" duration-ms="31326" started-at="2014-03-04T14:32:17Z" finished-at="2014-03-04T14:32:49Z">
+  <suite name="Test Suite for Publisher 7" duration-ms="30558" started-at="2014-03-04T14:51:53Z" finished-at="2014-03-04T14:52:23Z">
     <groups>
       <group name="mpx">
-        <method signature="TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@210c05b5]" name="TestSetup_Test" class="com.nbcuni.test.publisher.tests.Setup.TestSetup"/>
+        <method signature="TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@71a3310a]" name="TestSetup_Test" class="com.nbcuni.test.publisher.tests.Setup.TestSetup"/>
       </group> <!-- mpx -->
       <group name="full">
-        <method signature="TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@210c05b5]" name="TestSetup_Test" class="com.nbcuni.test.publisher.tests.Setup.TestSetup"/>
+        <method signature="TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@71a3310a]" name="TestSetup_Test" class="com.nbcuni.test.publisher.tests.Setup.TestSetup"/>
       </group> <!-- full -->
       <group name="smoke">
-        <method signature="TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@210c05b5]" name="TestSetup_Test" class="com.nbcuni.test.publisher.tests.Setup.TestSetup"/>
+        <method signature="TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@71a3310a]" name="TestSetup_Test" class="com.nbcuni.test.publisher.tests.Setup.TestSetup"/>
       </group> <!-- smoke -->
     </groups>
-    <test name="All Web Tests" duration-ms="31326" started-at="2014-03-04T14:32:17Z" finished-at="2014-03-04T14:32:49Z">
+    <test name="All Web Tests" duration-ms="30558" started-at="2014-03-04T14:51:53Z" finished-at="2014-03-04T14:52:23Z">
       <class name="com.nbcuni.test.publisher.tests.Setup.TestSetup">
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@210c05b5]" name="startSelenium" is-config="true" duration-ms="13268" started-at="2014-03-04T09:32:17Z" finished-at="2014-03-04T09:32:31Z">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@71a3310a]" name="startSelenium" is-config="true" duration-ms="12891" started-at="2014-03-04T09:51:53Z" finished-at="2014-03-04T09:52:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@210c05b5]" name="TestSetup_Test" duration-ms="17477" started-at="2014-03-04T09:32:31Z" finished-at="2014-03-04T09:32:48Z">
+        <test-method status="PASS" signature="TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@71a3310a]" name="TestSetup_Test" duration-ms="17084" started-at="2014-03-04T09:52:06Z" finished-at="2014-03-04T09:52:23Z">
           <reporter-output>
             <line>
-              <![CDATA[Open url 'http://qa4.qa.nbcupublisher7.publisher7.com'.]]>
+              <![CDATA[Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.]]>
             </line>
             <line>
               <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
@@ -102,11 +102,11 @@
             </line>
           </reporter-output>
         </test-method> <!-- TestSetup_Test -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@210c05b5]" name="stopSelenium" is-config="true" duration-ms="567" started-at="2014-03-04T09:32:48Z" finished-at="2014-03-04T09:32:49Z">
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@71a3310a]" name="stopSelenium" is-config="true" duration-ms="570" started-at="2014-03-04T09:52:23Z" finished-at="2014-03-04T09:52:23Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=TestSetup_Test status=SUCCESS method=TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@210c05b5] output=Open url 'http://qa4.qa.nbcupublisher7.publisher7.com'.]]]>
+                <![CDATA[[TestResult name=TestSetup_Test status=SUCCESS method=TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@71a3310a] output=Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.]]]>
               </value>
             </param>
           </params>
