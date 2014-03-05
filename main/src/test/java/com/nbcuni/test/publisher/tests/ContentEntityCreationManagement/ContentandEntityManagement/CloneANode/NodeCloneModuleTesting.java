@@ -74,7 +74,7 @@ public void NodeCloneModuleTesting_Test() throws Exception{
     
     //Step 9
     workBench.ClickContextualConfigureLnk();
-    workBench.VerifyConfigureBlockLnkVisible();
+    workBench.VerifyConfigureBlockLnkPresent();
    
 	}
 }

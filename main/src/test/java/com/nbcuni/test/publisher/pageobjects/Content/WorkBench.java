@@ -88,10 +88,10 @@ public class WorkBench {
         wait.until(ExpectedConditions.visibilityOf(ContextualLinksGearDown_Lnk)).click();
     }
           
-    public void VerifyConfigureBlockLnkVisible() throws Exception {
+    public void VerifyConfigureBlockLnkPresent() throws Exception {
         
-    	Reporter.log("Verify 'Configure Block' link is visible.");
-        wait.until(ExpectedConditions.visibilityOf(ConfigureBlock_Lnk));
+    	Reporter.log("Verify 'Configure Block' link is present.");
+        ConfigureBlock_Lnk.getLocation();
     }
     
     public void ClickCloneContentLnk(String contentType) throws Exception {

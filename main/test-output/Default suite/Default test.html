@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Mar 04 21:13:00 EST 2014</td>
+<td>Started on:</td><td>Wed Mar 05 13:35:20 EST 2014</td>
 </tr>
-<tr><td>Total time:</td><td>46 seconds (46845 ms)</td>
+<tr><td>Total time:</td><td>50 seconds (50434 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,48 +75,42 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EmailReRouting.EnableEmailReRouting.EnableEmailReRouting_Test()'><b>EnableEmailReRouting_Test</b><br>Test class: com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EmailReRouting.EnableEmailReRouting<br/>
-<a href="#Output-1967123754" onClick='toggleBox("Output-1967123754", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile.CreateCharacterProfile_Test()'><b>CreateCharacterProfile_Test</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile<br/>
+<a href="#Output-6184655" onClick='toggleBox("Output-6184655", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1967123754" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1967123754">
-Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.<br/>
+<a href="#Output-6184655" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-6184655">
+Open url 'http://qa5.qa.nbcupublisher7.publisher7.com/'.<br/>
 Enter the user's email address in the 'Email Address' text box.<br/>
 Enter the user's password in the 'Password' text box.<br/>
 Click the 'Login' button.<br/>
-Click the 'Modules' menu link.<br/>
-Switch to frame titled 'Modules'.<br/>
-Enter 'Reroute emails' in the 'Filter Name' text box.<br/>
-Wait for the module titled 'Reroute emails' to appear in the list.<br/>
-Click the 'Close Overlay X'.<br/>
-Mouse over the 'Configuration' menu link.<br/>
-Mouse over the 'Development' menu link.<br/>
-Click the 'Reroute Email' menu link.<br/>
-Switch to the active frame titled 'Reroute Email dialog'.<br/>
-Enter 'Pub7NBCUAutoEmailUser1@gmail.com' in the 'Email addresses' text box.<br/>
-Click the 'Save configuration' button.<br/>
-Verify success message of 'The configuration options have been saved.' is present.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Add content' menu link.<br/>
+Click the 'Character Profile' menu link.<br/>
+Switch to the active frame titled 'Create Character Profile dialog'.<br/>
+Enter '2cc4d7b1cd56411' in the 'Character First Name' text box.<br/>
+Click the Cover Photo 'Select' button.<br/>
+Switch to the select file frame.<br/>
+Enter the file path for file upload.<br/>
+Click the 'Upload' button.<br/>
+Wait for the file link to be visible after upload.<br/>
+Click the 'Next' button.<br/>
+Click the 'Public Local Files' radio button.<br/>
+Click the 'Next' button.<br/>
+Assert the file image 'HanSolo' is present.<br/>
+Assert the the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Switch to frame titled 'Create Character Profile'.<br/>
+Assert that img source of the Cover Photo contains 'HanSolo'.<br/>
+Assert the the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'Character Profile 2cc4d7b1cd56411 has been created.' is present.<br/>
 Verify there are no errors present.<br/>
-Click the 'Close Overlay X'.<br/>
-Mouse over the 'People' menu link.<br/>
-Click the 'Add user' menu link.<br/>
-Switch to the active frame titled 'People dialog'.<br/>
-Enter '65842ef31eca4fa@af1faecd068d4be.com' in the 'Username' text box.<br/>
-Enter '65842ef31eca4fa@af1faecd068d4be.com' in the 'E-mail address' text box.<br/>
-Enter 'pa55word' in the 'Password' text box.<br/>
-Enter 'pa55word' in the 'Confirm password' text box.<br/>
-Check the 'editor' checkbox.<br/>
-Enter '2597bd171d1149a' in the 'First Name' text box.<br/>
-Enter '13e7cfd6ec7148a' in the 'Last Name' text box.<br/>
-Click the 'Create new account' button.<br/>
-Verify success message of 'A welcome message with further instructions has been e-mailed to the new user 65842ef31eca4fa@af1faecd068d4be.com.' is present.<br/>
-Verify there are no errors present.<br/>
-Verify that the auto email titled 'An administrator created an account for you at Site-Install' arrives in the gmail inbox.<br/>
 </div>
 </td>
 <td></td>
-<td>32</td>
-<td>com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EmailReRouting.EnableEmailReRouting@1201fd18</td></tr>
+<td>36</td>
+<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@1b00a944</td></tr>
 </table><p>
 </body>
 </html>

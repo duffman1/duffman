@@ -2,7 +2,7 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
     <line>
-      <![CDATA[Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.]]>
+      <![CDATA[Open url 'http://qa5.qa.nbcupublisher7.publisher7.com/'.]]>
     </line>
     <line>
       <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
@@ -14,106 +14,88 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Modules' menu link.]]>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to frame titled 'Modules'.]]>
+      <![CDATA[Mouse over the 'Add content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Reroute emails' in the 'Filter Name' text box.]]>
+      <![CDATA[Click the 'Character Profile' menu link.]]>
     </line>
     <line>
-      <![CDATA[Wait for the module titled 'Reroute emails' to appear in the list.]]>
+      <![CDATA[Switch to the active frame titled 'Create Character Profile dialog'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
+      <![CDATA[Enter '2cc4d7b1cd56411' in the 'Character First Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Configuration' menu link.]]>
+      <![CDATA[Click the Cover Photo 'Select' button.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Development' menu link.]]>
+      <![CDATA[Switch to the select file frame.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Reroute Email' menu link.]]>
+      <![CDATA[Enter the file path for file upload.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Reroute Email dialog'.]]>
+      <![CDATA[Click the 'Upload' button.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Pub7NBCUAutoEmailUser1@gmail.com' in the 'Email addresses' text box.]]>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
+      <![CDATA[Click the 'Next' button.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+      <![CDATA[Click the 'Public Local Files' radio button.]]>
     </line>
     <line>
-      <![CDATA[Verify there are no errors present.]]>
+      <![CDATA[Click the 'Next' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
+      <![CDATA[Assert the file image 'HanSolo' is present.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'People' menu link.]]>
+      <![CDATA[Assert the the img is loaded and visible.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Add user' menu link.]]>
+      <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'People dialog'.]]>
+      <![CDATA[Switch to frame titled 'Create Character Profile'.]]>
     </line>
     <line>
-      <![CDATA[Enter '65842ef31eca4fa@af1faecd068d4be.com' in the 'Username' text box.]]>
+      <![CDATA[Assert that img source of the Cover Photo contains 'HanSolo'.]]>
     </line>
     <line>
-      <![CDATA[Enter '65842ef31eca4fa@af1faecd068d4be.com' in the 'E-mail address' text box.]]>
+      <![CDATA[Assert the the img is loaded and visible.]]>
     </line>
     <line>
-      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+      <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Enter 'pa55word' in the 'Confirm password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Check the 'editor' checkbox.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '2597bd171d1149a' in the 'First Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '13e7cfd6ec7148a' in the 'Last Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Create new account' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'A welcome message with further instructions has been e-mailed to the new user 65842ef31eca4fa@af1faecd068d4be.com.' is present.]]>
+      <![CDATA[Verify success message of 'Character Profile 2cc4d7b1cd56411 has been created.' is present.]]>
     </line>
     <line>
       <![CDATA[Verify there are no errors present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that the auto email titled 'An administrator created an account for you at Site-Install' arrives in the gmail inbox.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="46845" started-at="2014-03-05T02:13:00Z" finished-at="2014-03-05T02:13:47Z">
+  <suite name="Default suite" duration-ms="50434" started-at="2014-03-05T18:35:20Z" finished-at="2014-03-05T18:36:10Z">
     <groups>
       <group name="full">
-        <method signature="EnableEmailReRouting.EnableEmailReRouting_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EmailReRouting.EnableEmailReRouting@1201fd18]" name="EnableEmailReRouting_Test" class="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EmailReRouting.EnableEmailReRouting"/>
+        <method signature="CreateCharacterProfile.CreateCharacterProfile_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@1b00a944]" name="CreateCharacterProfile_Test" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile"/>
       </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="46845" started-at="2014-03-05T02:13:00Z" finished-at="2014-03-05T02:13:47Z">
-      <class name="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EmailReRouting.EnableEmailReRouting">
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EmailReRouting.EnableEmailReRouting@1201fd18]" name="startSelenium" is-config="true" duration-ms="13350" started-at="2014-03-04T21:13:00Z" finished-at="2014-03-04T21:13:13Z">
+    <test name="Default test" duration-ms="50434" started-at="2014-03-05T18:35:20Z" finished-at="2014-03-05T18:36:10Z">
+      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@1b00a944]" name="startSelenium" is-config="true" duration-ms="13320" started-at="2014-03-05T13:35:20Z" finished-at="2014-03-05T13:35:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="EnableEmailReRouting_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EmailReRouting.EnableEmailReRouting@1201fd18]" name="EnableEmailReRouting_Test" duration-ms="32915" started-at="2014-03-04T21:13:13Z" finished-at="2014-03-04T21:13:46Z">
+        <test-method status="PASS" signature="CreateCharacterProfile_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@1b00a944]" name="CreateCharacterProfile_Test" duration-ms="36533" started-at="2014-03-05T13:35:33Z" finished-at="2014-03-05T13:36:10Z">
           <reporter-output>
             <line>
-              <![CDATA[Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.]]>
+              <![CDATA[Open url 'http://qa5.qa.nbcupublisher7.publisher7.com/'.]]>
             </line>
             <line>
               <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
@@ -125,103 +107,85 @@
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Modules' menu link.]]>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to frame titled 'Modules'.]]>
+              <![CDATA[Mouse over the 'Add content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Enter 'Reroute emails' in the 'Filter Name' text box.]]>
+              <![CDATA[Click the 'Character Profile' menu link.]]>
             </line>
             <line>
-              <![CDATA[Wait for the module titled 'Reroute emails' to appear in the list.]]>
+              <![CDATA[Switch to the active frame titled 'Create Character Profile dialog'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
+              <![CDATA[Enter '2cc4d7b1cd56411' in the 'Character First Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Configuration' menu link.]]>
+              <![CDATA[Click the Cover Photo 'Select' button.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Development' menu link.]]>
+              <![CDATA[Switch to the select file frame.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Reroute Email' menu link.]]>
+              <![CDATA[Enter the file path for file upload.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Reroute Email dialog'.]]>
+              <![CDATA[Click the 'Upload' button.]]>
             </line>
             <line>
-              <![CDATA[Enter 'Pub7NBCUAutoEmailUser1@gmail.com' in the 'Email addresses' text box.]]>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
+              <![CDATA[Click the 'Next' button.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+              <![CDATA[Click the 'Public Local Files' radio button.]]>
             </line>
             <line>
-              <![CDATA[Verify there are no errors present.]]>
+              <![CDATA[Click the 'Next' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
+              <![CDATA[Assert the file image 'HanSolo' is present.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'People' menu link.]]>
+              <![CDATA[Assert the the img is loaded and visible.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Add user' menu link.]]>
+              <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'People dialog'.]]>
+              <![CDATA[Switch to frame titled 'Create Character Profile'.]]>
             </line>
             <line>
-              <![CDATA[Enter '65842ef31eca4fa@af1faecd068d4be.com' in the 'Username' text box.]]>
+              <![CDATA[Assert that img source of the Cover Photo contains 'HanSolo'.]]>
             </line>
             <line>
-              <![CDATA[Enter '65842ef31eca4fa@af1faecd068d4be.com' in the 'E-mail address' text box.]]>
+              <![CDATA[Assert the the img is loaded and visible.]]>
             </line>
             <line>
-              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+              <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Enter 'pa55word' in the 'Confirm password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Check the 'editor' checkbox.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '2597bd171d1149a' in the 'First Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '13e7cfd6ec7148a' in the 'Last Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Create new account' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'A welcome message with further instructions has been e-mailed to the new user 65842ef31eca4fa@af1faecd068d4be.com.' is present.]]>
+              <![CDATA[Verify success message of 'Character Profile 2cc4d7b1cd56411 has been created.' is present.]]>
             </line>
             <line>
               <![CDATA[Verify there are no errors present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that the auto email titled 'An administrator created an account for you at Site-Install' arrives in the gmail inbox.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- EnableEmailReRouting_Test -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EmailReRouting.EnableEmailReRouting@1201fd18]" name="stopSelenium" is-config="true" duration-ms="569" started-at="2014-03-04T21:13:46Z" finished-at="2014-03-04T21:13:47Z">
+        </test-method> <!-- CreateCharacterProfile_Test -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@1b00a944]" name="stopSelenium" is-config="true" duration-ms="568" started-at="2014-03-05T13:36:10Z" finished-at="2014-03-05T13:36:10Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=EnableEmailReRouting_Test status=SUCCESS method=EnableEmailReRouting.EnableEmailReRouting_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EmailReRouting.EnableEmailReRouting@1201fd18] output=Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.]]]>
+                <![CDATA[[TestResult name=CreateCharacterProfile_Test status=SUCCESS method=CreateCharacterProfile.CreateCharacterProfile_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@1b00a944] output=Open url 'http://qa5.qa.nbcupublisher7.publisher7.com/'.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-      </class> <!-- com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EmailReRouting.EnableEmailReRouting -->
+      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
