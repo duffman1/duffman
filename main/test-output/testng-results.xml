@@ -20,46 +20,97 @@
       <![CDATA[Switch to frame titled 'Modules'.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Sticky Edit Actions' in the 'Filter Name' text box.]]>
+      <![CDATA[Enter 'Reroute emails' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Wait for the module titled 'Sticky Edit Actions' to appear in the list.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Devel' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the module titled 'Devel' to appear in the list.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Database logging' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the module titled 'Database logging' to appear in the list.]]>
+      <![CDATA[Wait for the module titled 'Reroute emails' to appear in the list.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
     </line>
+    <line>
+      <![CDATA[Mouse over the 'Configuration' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Development' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Reroute Email' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Reroute Email dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Pub7NBCUAutoEmailUser1@gmail.com' in the 'Email addresses' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configuration' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify there are no errors present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'People' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Add user' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'People dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '65842ef31eca4fa@af1faecd068d4be.com' in the 'Username' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '65842ef31eca4fa@af1faecd068d4be.com' in the 'E-mail address' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'pa55word' in the 'Confirm password' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Check the 'editor' checkbox.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '2597bd171d1149a' in the 'First Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '13e7cfd6ec7148a' in the 'Last Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Create new account' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'A welcome message with further instructions has been e-mailed to the new user 65842ef31eca4fa@af1faecd068d4be.com.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify there are no errors present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify that the auto email titled 'An administrator created an account for you at Site-Install' arrives in the gmail inbox.]]>
+    </line>
   </reporter-output>
-  <suite name="Test Suite for Publisher 7" duration-ms="30558" started-at="2014-03-04T14:51:53Z" finished-at="2014-03-04T14:52:23Z">
+  <suite name="Default suite" duration-ms="46845" started-at="2014-03-05T02:13:00Z" finished-at="2014-03-05T02:13:47Z">
     <groups>
-      <group name="mpx">
-        <method signature="TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@71a3310a]" name="TestSetup_Test" class="com.nbcuni.test.publisher.tests.Setup.TestSetup"/>
-      </group> <!-- mpx -->
       <group name="full">
-        <method signature="TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@71a3310a]" name="TestSetup_Test" class="com.nbcuni.test.publisher.tests.Setup.TestSetup"/>
+        <method signature="EnableEmailReRouting.EnableEmailReRouting_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EmailReRouting.EnableEmailReRouting@1201fd18]" name="EnableEmailReRouting_Test" class="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EmailReRouting.EnableEmailReRouting"/>
       </group> <!-- full -->
-      <group name="smoke">
-        <method signature="TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@71a3310a]" name="TestSetup_Test" class="com.nbcuni.test.publisher.tests.Setup.TestSetup"/>
-      </group> <!-- smoke -->
     </groups>
-    <test name="All Web Tests" duration-ms="30558" started-at="2014-03-04T14:51:53Z" finished-at="2014-03-04T14:52:23Z">
-      <class name="com.nbcuni.test.publisher.tests.Setup.TestSetup">
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@71a3310a]" name="startSelenium" is-config="true" duration-ms="12891" started-at="2014-03-04T09:51:53Z" finished-at="2014-03-04T09:52:06Z">
+    <test name="Default test" duration-ms="46845" started-at="2014-03-05T02:13:00Z" finished-at="2014-03-05T02:13:47Z">
+      <class name="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EmailReRouting.EnableEmailReRouting">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EmailReRouting.EnableEmailReRouting@1201fd18]" name="startSelenium" is-config="true" duration-ms="13350" started-at="2014-03-04T21:13:00Z" finished-at="2014-03-04T21:13:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@71a3310a]" name="TestSetup_Test" duration-ms="17084" started-at="2014-03-04T09:52:06Z" finished-at="2014-03-04T09:52:23Z">
+        <test-method status="PASS" signature="EnableEmailReRouting_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EmailReRouting.EnableEmailReRouting@1201fd18]" name="EnableEmailReRouting_Test" duration-ms="32915" started-at="2014-03-04T21:13:13Z" finished-at="2014-03-04T21:13:46Z">
           <reporter-output>
             <line>
               <![CDATA[Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.]]>
@@ -80,40 +131,97 @@
               <![CDATA[Switch to frame titled 'Modules'.]]>
             </line>
             <line>
-              <![CDATA[Enter 'Sticky Edit Actions' in the 'Filter Name' text box.]]>
+              <![CDATA[Enter 'Reroute emails' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Wait for the module titled 'Sticky Edit Actions' to appear in the list.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Devel' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the module titled 'Devel' to appear in the list.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Database logging' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the module titled 'Database logging' to appear in the list.]]>
+              <![CDATA[Wait for the module titled 'Reroute emails' to appear in the list.]]>
             </line>
             <line>
               <![CDATA[Click the 'Close Overlay X'.]]>
             </line>
+            <line>
+              <![CDATA[Mouse over the 'Configuration' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Development' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Reroute Email' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Reroute Email dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Pub7NBCUAutoEmailUser1@gmail.com' in the 'Email addresses' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configuration' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify there are no errors present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'People' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Add user' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'People dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '65842ef31eca4fa@af1faecd068d4be.com' in the 'Username' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '65842ef31eca4fa@af1faecd068d4be.com' in the 'E-mail address' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'pa55word' in the 'Confirm password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Check the 'editor' checkbox.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '2597bd171d1149a' in the 'First Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '13e7cfd6ec7148a' in the 'Last Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Create new account' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'A welcome message with further instructions has been e-mailed to the new user 65842ef31eca4fa@af1faecd068d4be.com.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify there are no errors present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify that the auto email titled 'An administrator created an account for you at Site-Install' arrives in the gmail inbox.]]>
+            </line>
           </reporter-output>
-        </test-method> <!-- TestSetup_Test -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@71a3310a]" name="stopSelenium" is-config="true" duration-ms="570" started-at="2014-03-04T09:52:23Z" finished-at="2014-03-04T09:52:23Z">
+        </test-method> <!-- EnableEmailReRouting_Test -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EmailReRouting.EnableEmailReRouting@1201fd18]" name="stopSelenium" is-config="true" duration-ms="569" started-at="2014-03-04T21:13:46Z" finished-at="2014-03-04T21:13:47Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=TestSetup_Test status=SUCCESS method=TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@71a3310a] output=Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.]]]>
+                <![CDATA[[TestResult name=EnableEmailReRouting_Test status=SUCCESS method=EnableEmailReRouting.EnableEmailReRouting_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EmailReRouting.EnableEmailReRouting@1201fd18] output=Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-      </class> <!-- com.nbcuni.test.publisher.tests.Setup.TestSetup -->
-    </test> <!-- All Web Tests -->
-  </suite> <!-- Test Suite for Publisher 7 -->
+      </class> <!-- com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EmailReRouting.EnableEmailReRouting -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

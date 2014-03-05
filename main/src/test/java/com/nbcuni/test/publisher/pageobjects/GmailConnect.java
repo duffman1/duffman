@@ -79,6 +79,7 @@ public class GmailConnect {
         		message.setFlag(Flags.Flag.DELETED, true);
         	}
         }
+        folder.expunge();
         folder.close(true);
         
         DisconnectFromGmail();

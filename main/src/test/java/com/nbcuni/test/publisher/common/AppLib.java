@@ -107,7 +107,7 @@ public class AppLib {
     	
         try {
         	
-        	String storeScreenshotsTo = System.getProperty("user.dir") + config.getPathToScreenshots();
+        	String storeScreenshotsTo = config.getPathToScreenshots();
         	DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
             Date date = new Date();
             String fileExtension = dateFormat.format(date).replace("/", "");
