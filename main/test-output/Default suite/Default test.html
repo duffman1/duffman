@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Mar 06 09:41:01 EST 2014</td>
+<td>Started on:</td><td>Thu Mar 06 12:00:18 EST 2014</td>
 </tr>
-<tr><td>Total time:</td><td>33 seconds (33610 ms)</td>
+<tr><td>Total time:</td><td>34 seconds (34701 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,29 +75,52 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.nbcuni.test.publisher.tests.Setup.TestSetup.TestSetup_Test()'><b>TestSetup_Test</b><br>Test class: com.nbcuni.test.publisher.tests.Setup.TestSetup<br/>
-<a href="#Output-362056011" onClick='toggleBox("Output-362056011", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.RepresentativeImage.SetDefaultRepresentativeImagePost.SetDefaultRepresentativeImagePost_Test()'><b>SetDefaultRepresentativeImagePost_Test</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.RepresentativeImage.SetDefaultRepresentativeImagePost<br/>
+<a href="#Output-234951536" onClick='toggleBox("Output-234951536", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-362056011" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-362056011">
+<a href="#Output-234951536" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-234951536">
 Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.<br/>
 Enter the user's email address in the 'Email Address' text box.<br/>
 Enter the user's password in the 'Password' text box.<br/>
 Click the 'Login' button.<br/>
-Click the 'Modules' menu link.<br/>
-Switch to frame titled 'Modules'.<br/>
-Enter 'Sticky Edit Actions' in the 'Filter Name' text box.<br/>
-Wait for the module titled 'Sticky Edit Actions' to appear in the list.<br/>
-Enter 'Devel' in the 'Filter Name' text box.<br/>
-Wait for the module titled 'Devel' to appear in the list.<br/>
-Enter 'Database logging' in the 'Filter Name' text box.<br/>
-Wait for the module titled 'Database logging' to appear in the list.<br/>
-Click the 'Close Overlay X'.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Add content' menu link.<br/>
+Click the 'Post' menu link.<br/>
+Switch to the active frame titled 'Create Post dialog'.<br/>
+Enter 'd522b1a959ad4ac' in the 'Title' text box.<br/>
+Switch to the Synopsis frame.<br/>
+Enter a randomized text string into the 'Body' text area.<br/>
+Switch to the active frame titled 'Create Post dialog'.<br/>
+Click the 'Cover' select button.<br/>
+Switch to the select file frame.<br/>
+Enter the file path for file upload.<br/>
+Click the 'Upload' button.<br/>
+Wait for the file link to be visible after upload.<br/>
+Click the 'Next' button.<br/>
+Click the 'Public Local Files' radio button.<br/>
+Click the 'Next' button.<br/>
+Assert the file image 'HanSolo' is present.<br/>
+Assert the the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'Create Post dialog'.<br/>
+Scroll the 'Publishing Options' link into view.<br/>
+Click the 'Publishing Options' link.<br/>
+Select 'Published' from the 'Moderation State' drop down list.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'Post d522b1a959ad4ac has been created.' is present.<br/>
+Verify there are no errors present.<br/>
+Click the 'Content' menu link.<br/>
+Switch to the active frame titled 'Content dialog'.<br/>
+Enter title d522b1a959ad4ac.<br/>
+Click the 'Apply' button.<br/>
+Verify the search thumbnail named 'HanSolo' is present for search result 'd522b1a959ad4ac'.<br/>
+Assert the the img is loaded and visible.<br/>
 </div>
 </td>
 <td></td>
-<td>19</td>
-<td>com.nbcuni.test.publisher.tests.Setup.TestSetup@152ab88b</td></tr>
+<td>21</td>
+<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.RepresentativeImage.SetDefaultRepresentativeImagePost@22e5ecb2</td></tr>
 </table><p>
 </body>
 </html>

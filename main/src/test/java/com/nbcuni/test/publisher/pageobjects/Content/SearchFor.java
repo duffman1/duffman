@@ -74,7 +74,7 @@ public class SearchFor {
     }
     
     private static WebElement SearchThumbnail_Img(String title) {
-    	return webDriver.findElement(By.xpath("//a[text()='" + title + "']/../../td[contains(@class, 'thumbnail')]//img"));
+    	return webDriver.findElement(By.xpath("//a[text()='" + title + "']/../../td//img"));
     }
     
     private static List<WebElement> AllSearchHeader_Clms() {
