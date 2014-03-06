@@ -10,7 +10,7 @@ private int maxRetryCount = config.getReRunOnFailureCount();
 
 public boolean retry(ITestResult result) {
 
-	if(retryCount < maxRetryCount) { 
+	if(retryCount < maxRetryCount && config.getConfigValue("ReRunOnFailure").equals("true")) { 
 		
 		retryCount++; 
 		

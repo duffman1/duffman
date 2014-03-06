@@ -2,7 +2,7 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
     <line>
-      <![CDATA[Open url 'http://qa5.qa.nbcupublisher7.publisher7.com/'.]]>
+      <![CDATA[Open url 'http://qa4.qa.nbcupublisher7.publisher7.com/'.]]>
     </line>
     <line>
       <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
@@ -14,22 +14,76 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
+      <![CDATA[Click the 'Modules' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to frame titled 'Modules'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Pub SEO' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the module titled 'Pub SEO' to appear in the list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Structure' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Content types' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Post' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Post dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'XML sitemap' link.]]>
+    </line>
+    <line>
+      <![CDATA[Select 'Included' from the 'Inclusion' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save content type' link.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The content type Post has been updated.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify there are no errors present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
       <![CDATA[Mouse over the 'Content' menu link.]]>
     </line>
     <line>
       <![CDATA[Mouse over the 'Add content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Character Profile' menu link.]]>
+      <![CDATA[Click the 'Post' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Create Character Profile dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
     </line>
     <line>
-      <![CDATA[Enter '2cc4d7b1cd56411' in the 'Character First Name' text box.]]>
+      <![CDATA[Enter '1904127d394248f' in the 'Title' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the Cover Photo 'Select' button.]]>
+      <![CDATA[Switch to the Synopsis frame.]]>
+    </line>
+    <line>
+      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Cover' select button.]]>
     </line>
     <line>
       <![CDATA[Switch to the select file frame.]]>
@@ -62,10 +116,76 @@
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Switch to frame titled 'Create Character Profile'.]]>
+      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
     </line>
     <line>
-      <![CDATA[Assert that img source of the Cover Photo contains 'HanSolo'.]]>
+      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Publishing Options' link.]]>
+    </line>
+    <line>
+      <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Post 1904127d394248f has been created.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify there are no errors present.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Add content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Post' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '5f87c9476733484' in the 'Title' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the Synopsis frame.]]>
+    </line>
+    <line>
+      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Cover' select button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the select file frame.]]>
+    </line>
+    <line>
+      <![CDATA[Enter the file path for file upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Upload' button.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Public Local Files' radio button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Assert the file image 'HanSolo' is present.]]>
     </line>
     <line>
       <![CDATA[Assert the the img is loaded and visible.]]>
@@ -74,28 +194,112 @@
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'Character Profile 2cc4d7b1cd56411 has been created.' is present.]]>
+      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Publishing Options' link.]]>
+    </line>
+    <line>
+      <![CDATA[Select 'Published' from the 'Moderation State' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Post 5f87c9476733484 has been created.' is present.]]>
     </line>
     <line>
       <![CDATA[Verify there are no errors present.]]>
     </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Status report dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Cron ran successfully.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify there are no errors present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Configuration' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Search and metadata' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'XML sitemap' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Rebuild links' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Are you sure you want to rebuild the XML sitemap? dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Rebuild Sitemap' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to frame titled 'Rebuilding Sitemap'.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the frame titled 'Rebuilding Sitemap' to close.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'XML sitemap dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The sitemap links were rebuilt.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify there are no errors present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Configuration' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Search and metadata' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'XML sitemap' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'XML sitemap dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'XMLSitemap Link' with text ''.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text '5f87c9476733484' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text '1904127d394248f' is NOT present on the page.]]>
+    </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="50434" started-at="2014-03-05T18:35:20Z" finished-at="2014-03-05T18:36:10Z">
+  <suite name="Default suite" duration-ms="111233" started-at="2014-03-06T14:03:15Z" finished-at="2014-03-06T14:05:06Z">
     <groups>
       <group name="full">
-        <method signature="CreateCharacterProfile.CreateCharacterProfile_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@1b00a944]" name="CreateCharacterProfile_Test" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile"/>
+        <method signature="TurnOnSEOOptimizationModule.TurnOnSEOOptimizationModule_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SEOModules.TurnOnSEOOptimizationModule@1201fd18]" name="TurnOnSEOOptimizationModule_Test" class="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SEOModules.TurnOnSEOOptimizationModule"/>
       </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="50434" started-at="2014-03-05T18:35:20Z" finished-at="2014-03-05T18:36:10Z">
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile">
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@1b00a944]" name="startSelenium" is-config="true" duration-ms="13320" started-at="2014-03-05T13:35:20Z" finished-at="2014-03-05T13:35:33Z">
+    <test name="Default test" duration-ms="111233" started-at="2014-03-06T14:03:15Z" finished-at="2014-03-06T14:05:06Z">
+      <class name="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SEOModules.TurnOnSEOOptimizationModule">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SEOModules.TurnOnSEOOptimizationModule@1201fd18]" name="startSelenium" is-config="true" duration-ms="13064" started-at="2014-03-06T09:03:15Z" finished-at="2014-03-06T09:03:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="CreateCharacterProfile_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@1b00a944]" name="CreateCharacterProfile_Test" duration-ms="36533" started-at="2014-03-05T13:35:33Z" finished-at="2014-03-05T13:36:10Z">
+        <test-method status="PASS" signature="TurnOnSEOOptimizationModule_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SEOModules.TurnOnSEOOptimizationModule@1201fd18]" name="TurnOnSEOOptimizationModule_Test" duration-ms="97590" started-at="2014-03-06T09:03:28Z" finished-at="2014-03-06T09:05:06Z">
           <reporter-output>
             <line>
-              <![CDATA[Open url 'http://qa5.qa.nbcupublisher7.publisher7.com/'.]]>
+              <![CDATA[Open url 'http://qa4.qa.nbcupublisher7.publisher7.com/'.]]>
             </line>
             <line>
               <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
@@ -107,22 +311,76 @@
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
+              <![CDATA[Click the 'Modules' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to frame titled 'Modules'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Pub SEO' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the module titled 'Pub SEO' to appear in the list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Structure' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Content types' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Post' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Post dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'XML sitemap' link.]]>
+            </line>
+            <line>
+              <![CDATA[Select 'Included' from the 'Inclusion' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save content type' link.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The content type Post has been updated.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify there are no errors present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
               <![CDATA[Mouse over the 'Content' menu link.]]>
             </line>
             <line>
               <![CDATA[Mouse over the 'Add content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Character Profile' menu link.]]>
+              <![CDATA[Click the 'Post' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create Character Profile dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
             </line>
             <line>
-              <![CDATA[Enter '2cc4d7b1cd56411' in the 'Character First Name' text box.]]>
+              <![CDATA[Enter '1904127d394248f' in the 'Title' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the Cover Photo 'Select' button.]]>
+              <![CDATA[Switch to the Synopsis frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Cover' select button.]]>
             </line>
             <line>
               <![CDATA[Switch to the select file frame.]]>
@@ -155,10 +413,76 @@
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Switch to frame titled 'Create Character Profile'.]]>
+              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
             </line>
             <line>
-              <![CDATA[Assert that img source of the Cover Photo contains 'HanSolo'.]]>
+              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Publishing Options' link.]]>
+            </line>
+            <line>
+              <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Post 1904127d394248f has been created.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify there are no errors present.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Add content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Post' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '5f87c9476733484' in the 'Title' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the Synopsis frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Cover' select button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the select file frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter the file path for file upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Upload' button.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Public Local Files' radio button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Assert the file image 'HanSolo' is present.]]>
             </line>
             <line>
               <![CDATA[Assert the the img is loaded and visible.]]>
@@ -167,25 +491,109 @@
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'Character Profile 2cc4d7b1cd56411 has been created.' is present.]]>
+              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Publishing Options' link.]]>
+            </line>
+            <line>
+              <![CDATA[Select 'Published' from the 'Moderation State' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Post 5f87c9476733484 has been created.' is present.]]>
             </line>
             <line>
               <![CDATA[Verify there are no errors present.]]>
             </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Status report dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Cron ran successfully.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify there are no errors present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Configuration' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Search and metadata' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'XML sitemap' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Rebuild links' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Are you sure you want to rebuild the XML sitemap? dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Rebuild Sitemap' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to frame titled 'Rebuilding Sitemap'.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the frame titled 'Rebuilding Sitemap' to close.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'XML sitemap dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The sitemap links were rebuilt.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify there are no errors present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Configuration' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Search and metadata' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'XML sitemap' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'XML sitemap dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'XMLSitemap Link' with text ''.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text '5f87c9476733484' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text '1904127d394248f' is NOT present on the page.]]>
+            </line>
           </reporter-output>
-        </test-method> <!-- CreateCharacterProfile_Test -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@1b00a944]" name="stopSelenium" is-config="true" duration-ms="568" started-at="2014-03-05T13:36:10Z" finished-at="2014-03-05T13:36:10Z">
+        </test-method> <!-- TurnOnSEOOptimizationModule_Test -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SEOModules.TurnOnSEOOptimizationModule@1201fd18]" name="stopSelenium" is-config="true" duration-ms="567" started-at="2014-03-06T09:05:06Z" finished-at="2014-03-06T09:05:06Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=CreateCharacterProfile_Test status=SUCCESS method=CreateCharacterProfile.CreateCharacterProfile_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@1b00a944] output=Open url 'http://qa5.qa.nbcupublisher7.publisher7.com/'.]]]>
+                <![CDATA[[TestResult name=TurnOnSEOOptimizationModule_Test status=SUCCESS method=TurnOnSEOOptimizationModule.TurnOnSEOOptimizationModule_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SEOModules.TurnOnSEOOptimizationModule@1201fd18] output=Open url 'http://qa4.qa.nbcupublisher7.publisher7.com/'.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile -->
+      </class> <!-- com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SEOModules.TurnOnSEOOptimizationModule -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
