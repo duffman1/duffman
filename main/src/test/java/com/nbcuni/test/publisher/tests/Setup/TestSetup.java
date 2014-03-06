@@ -62,6 +62,7 @@ public class TestSetup extends ParentTest{
             	}
             	allURLs = allURLs.replaceAll(applib.getApplicationURL() + "/admin/structure/file-types/manage/", "");
             	String[] index = allURLs.split("mpx_video_");
+            	
             	ArrayList<Integer> allIndexInts = new ArrayList<Integer>();
             	allIndexInts.removeAll(Collections.singleton("empty"));
             	for (String s : index) {
@@ -71,7 +72,7 @@ public class TestSetup extends ParentTest{
             		catch (NumberFormatException e) {}
             	}
             	Integer maxScore = Collections.max(allIndexInts);
-    		    for (String url : eachURL) {
+            	for (String url : eachURL) {
     			
             		if (!url.contains("mpx_video_" + maxScore.toString())) {
             			webDriver.navigate().to(url);
