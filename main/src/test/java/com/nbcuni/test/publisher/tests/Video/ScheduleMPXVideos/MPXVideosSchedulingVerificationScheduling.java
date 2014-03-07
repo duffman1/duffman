@@ -69,7 +69,7 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
      * 37,Click on the "Log out" link.,The user logs out as expected.
      * @throws Throwable No Return values are needed
      *************************************************************************************/
-    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "smoke", "mpx"})
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "mpx"})
     public void MPXVideosSchedulingVerificationScheduling_Test() throws Exception{
     	
     	//Step 1

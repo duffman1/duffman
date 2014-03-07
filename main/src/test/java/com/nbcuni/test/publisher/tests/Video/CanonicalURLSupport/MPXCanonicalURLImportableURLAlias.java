@@ -35,7 +35,7 @@ public class MPXCanonicalURLImportableURLAlias extends ParentTest{
      * Step 10 - Go to the Content > FIles > mpxMedia page -- <http://<TestSiteName>/admin/content/file/mpxmedia>. ,The URL path in the browser address bar matches the value you entered in the Related Link field in MPX at Step 7.
      * @throws Throwable No Return values are needed
      *************************************************************************************/
-    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "mpx"})
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "smoke", "mpx"})
     public void MPXCanonicalURLImportableURLAlias_Test() throws Exception{
 
     	//Step 1
