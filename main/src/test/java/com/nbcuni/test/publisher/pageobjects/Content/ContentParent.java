@@ -35,6 +35,9 @@ public class ContentParent {
     @FindBy(how = How.XPATH, using = "//input[@id='edit-submit']")
     private static WebElement Save_Btn;
     
+    @FindBy(how = How.ID, using = "edit-cancel")
+    private static WebElement Cancel_Btn;
+    
     @FindBy(how = How.XPATH, using = "//div[@class='messages status']")
     private static WebElement Message_Ctr;
     
@@ -69,6 +72,12 @@ public class ContentParent {
     	
     	Reporter.log("Click the 'Save' button.");
     	Save_Btn.click();
+    }
+    
+    public void ClickCancelBtn() throws Exception {
+    	
+    	Reporter.log("Click the 'Cancel' button.");
+    	Cancel_Btn.click();
     }
     
     public void VerifyMessageStatus(String messageStatus) throws Exception {

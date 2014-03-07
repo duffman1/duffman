@@ -1,8 +1,6 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery;
 
-import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
-
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
@@ -27,24 +25,22 @@ public class CreateMediaGallery extends ParentTest{
         
         	//Step 1
         	UserLogin userLogin = applib.openApplication();
-        	PageFactory.initElements(webDriver, userLogin);
-            userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+        	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
             
             //Step 2
             taxonomy.NavigateSite("Content>>Add content>>Media Gallery");
+            overlay.SwitchToActiveFrame();
             
             //Step 3
             BasicInformation basicInformation = new BasicInformation(webDriver);
-            overlay.SwitchToFrame("Create Media Gallery");
             String title = random.GetCharacterString(15);
             basicInformation.EnterTitle(title);
             
             //Step 4
             basicInformation.ClickCoverSelectBtn();
             SelectFile selectFile = new SelectFile(webDriver, applib);
-            PageFactory.initElements(webDriver, selectFile);
             selectFile.SelectDefaultCoverImg();
-            overlay.SwitchToFrame("Create Media Gallery");
+            overlay.SwitchToActiveFrame();
             basicInformation.VerifyCoverImagePresent("HanSolo");
             
             //Step 5
@@ -60,7 +56,6 @@ public class CreateMediaGallery extends ParentTest{
             
             //Step 6
             ContentParent contentParent = new ContentParent(webDriver, applib);
-            PageFactory.initElements(webDriver, contentParent);
             contentParent.ClickSaveBtn();
             contentParent.VerifyMessageStatus("Media Gallery " + title + " has been created.");
             

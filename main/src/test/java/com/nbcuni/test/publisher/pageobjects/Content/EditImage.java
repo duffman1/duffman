@@ -7,6 +7,7 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.Reporter;
+
 import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.webdriver.CustomWebDriver;
 
@@ -65,8 +66,9 @@ public class EditImage {
     public void VerifyTitleTextValue(String value) throws Exception {
     	
     	Reporter.log("Assert that the Title Text box value matches '" + value + "'.");
-    	Thread.sleep(250); //stale element exception
+    	Thread.sleep(500); //stale element exception
     	Assert.assertTrue(TitleText_Txb.getAttribute("value").equals(value));
+    	
     }
     
     public void EnterTitleText(String title) throws Exception {

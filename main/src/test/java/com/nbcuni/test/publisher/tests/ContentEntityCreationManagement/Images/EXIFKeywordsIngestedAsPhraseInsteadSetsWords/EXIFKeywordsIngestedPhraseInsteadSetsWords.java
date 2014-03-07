@@ -116,7 +116,7 @@ public class EXIFKeywordsIngestedPhraseInsteadSetsWords extends ParentTest{
             
             //Step 5
             MediaItems mediaItems = new MediaItems(webDriver);
-            mediaItems.VerifyFileImagePresent("NUP_155306_0046");
+            mediaItems.VerifyFileImagePresent("NUP_155306_0046", "1");
             mediaItems.ClickEditBtn();
             
             //Step 6

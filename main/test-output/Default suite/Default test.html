@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Mar 06 13:14:58 EST 2014</td>
+<td>Started on:</td><td>Fri Mar 07 15:29:45 EST 2014</td>
 </tr>
-<tr><td>Total time:</td><td>163 seconds (163661 ms)</td>
+<tr><td>Total time:</td><td>41 seconds (41880 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,79 +75,52 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.nbcuni.test.publisher.tests.Video.CanonicalURLSupport.MPXCanonicalURLImportableURLAlias.MPXCanonicalURLImportableURLAlias_Test()'><b>MPXCanonicalURLImportableURLAlias_Test</b><br>Test class: com.nbcuni.test.publisher.tests.Video.CanonicalURLSupport.MPXCanonicalURLImportableURLAlias<br/>
-<a href="#Output-38241737" onClick='toggleBox("Output-38241737", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.RepresentativeImage.SetDefaultRepresentativeImagePost.SetDefaultRepresentativeImagePost_Test()'><b>SetDefaultRepresentativeImagePost_Test</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.RepresentativeImage.SetDefaultRepresentativeImagePost<br/>
+<a href="#Output-111376551" onClick='toggleBox("Output-111376551", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-38241737" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-38241737">
+<a href="#Output-111376551" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-111376551">
 Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.<br/>
 Enter the user's email address in the 'Email Address' text box.<br/>
 Enter the user's password in the 'Password' text box.<br/>
 Click the 'Login' button.<br/>
-Mouse over the 'Configuration' menu link.<br/>
-Mouse over the 'Media' menu link.<br/>
-Click the 'Media: thePlatform mpx settings' menu link.<br/>
-Switch to frame titled 'Media: thePlatform mpx settings dialog'.<br/>
-Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.<br/>
-Get all the selected import account options and store to a list.<br/>
-Click the 'Close Overlay X'.<br/>
-Mouse over the 'Structure' menu link.<br/>
-Click the 'File types' menu link.<br/>
-Switch to the active frame titled 'File types dialog'.<br/>
-Click the 'DB TV manage fields' link.<br/>
-Switch to the active frame titled 'MPX Video for Account &quot;DB TV&quot; (2312945284) dialog'.<br/>
-Switch to the active frame titled 'MPX Video for Account &quot;DB TV&quot; (2312945284) dialog'.<br/>
-Click the 'Close Overlay X'.<br/>
-Mouse over the 'Structure' menu link.<br/>
-Click the 'File types' menu link.<br/>
-Switch to the active frame titled 'File types dialog'.<br/>
-Click the 'DB TV edit file type' link.<br/>
-Switch to the active frame titled 'MPX Video for Account &quot;DB TV&quot; (2312945284) dialog'.<br/>
-Select 'MPX Media Related Link' from the 'URL Alias Field' drop down list.<br/>
-Click the 'Save' button.<br/>
-Verify success message of 'has been updated.' is present.<br/>
-Verify there are no errors present.<br/>
-Open the mpx platform.<br/>
-Enter 'mpx/AdminPub7QA' in the 'Username' text box.<br/>
-Enter 'Pa55word' in the 'Password' text box.<br/>
-Click the 'Login' button.<br/>
-Enter the account name 'DB TV' in the account select text box.<br/>
-Click the account option from the drop down list.<br/>
-Click the 'Account' title to leave focus off of the selection.<br/>
-Wait for account to switch to the newly selected account.<br/>
-Click the 'Upload' button.<br/>
-Click the 'Choose Files' button.<br/>
-Click the 'Movies' button in the OS Upload dialog.<br/>
-Click the Test Movie in th OS Upload dialog.<br/>
-Click the 'Open' button.<br/>
-Click the 'Upload' button in the Upload dialog.<br/>
-Click the 'Available Date' label on the right hand side to give focus to the media item.<br/>
-Enter 'Automation5cbbb4b7e3' in the 'Title' text box.<br/>
-Enter 'canonicalurld2ec17eb3f' in the 'Canonical URL' text box.<br/>
-Click the 'Save' button.<br/>
-Click the 'Publish' button.<br/>
-Click the 'Publish to Pub 7 Primary' check box.<br/>
-Click the 'Publish' button from the upload dialog.<br/>
-Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.<br/>
-Switch to the active frame titled 'Status report dialog'.<br/>
-Verify success message of 'Cron ran successfully.' is present.<br/>
-Verify there are no errors present.<br/>
-Click the 'Close Overlay X'.<br/>
 Mouse over the 'Content' menu link.<br/>
-Mouse over the 'Files' menu link.<br/>
-Click the 'mpxMedia' menu link.<br/>
+Mouse over the 'Add content' menu link.<br/>
+Click the 'Post' menu link.<br/>
+Switch to the active frame titled 'Create Post dialog'.<br/>
+Enter '06d722ccd6fd42b' in the 'Title' text box.<br/>
+Switch to the Synopsis frame.<br/>
+Enter a randomized text string into the 'Body' text area.<br/>
+Switch to the active frame titled 'Create Post dialog'.<br/>
+Click the 'Cover' select button.<br/>
+Switch to the select file frame.<br/>
+Enter the file path for file upload.<br/>
+Click the 'Upload' button.<br/>
+Wait for the file link to be visible after upload.<br/>
+Click the 'Next' button.<br/>
+Click the 'Public Local Files' radio button.<br/>
+Click the 'Next' button.<br/>
+Assert the file image 'HanSolo' is present.<br/>
+Assert the the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'Create Post dialog'.<br/>
+Scroll the 'Publishing Options' link into view.<br/>
+Click the 'Publishing Options' link.<br/>
+Select 'Published' from the 'Moderation State' drop down list.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'Post 06d722ccd6fd42b has been created.' is present.<br/>
+Verify there are no errors present.<br/>
+Click the 'Content' menu link.<br/>
 Switch to the active frame titled 'Content dialog'.<br/>
-Enter title Automation5cbbb4b7e3.<br/>
+Enter title 06d722ccd6fd42b.<br/>
 Click the 'Apply' button.<br/>
-Get the text of the first search result set item.<br/>
-Click the first search title link in the search result set.<br/>
-Verify the text 'MPX Media Related Link:' is present on the page.<br/>
-Verify the text 'canonicalurld2ec17eb3f' is present on the page.<br/>
+Verify the search thumbnail named 'HanSolo' is present for search result '06d722ccd6fd42b'.<br/>
+Assert the the img is loaded and visible.<br/>
 </div>
 </td>
 <td></td>
-<td>149</td>
-<td>com.nbcuni.test.publisher.tests.Video.CanonicalURLSupport.MPXCanonicalURLImportableURLAlias@17f7b44f</td></tr>
+<td>27</td>
+<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.RepresentativeImage.SetDefaultRepresentativeImagePost@41fdde2f</td></tr>
 </table><p>
 </body>
 </html>

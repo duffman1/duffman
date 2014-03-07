@@ -6,6 +6,7 @@ import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.webdriver.CustomWebDriver;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -56,6 +57,14 @@ public class WorkBench {
     @FindBy(how = How.CSS, using = "iframe[id='pdk-player']")
     private static WebElement MPXPlayer_Frm;
     
+    private static WebElement WorkBench_Img(String imageIndex) {
+    	return webDriver.findElement(By.xpath("(//div[contains(@class, 'file-image')]//img)[" + imageIndex + "]"));
+    }
+    
+    private static WebElement WorkBenchFileImage_Ids(String imageIndex) {
+    	return webDriver.findElement(By.xpath("(//div[contains(@class, 'file-image')])[" + imageIndex + "]"));
+    }
+    
     
     //PAGE OBJECT METHODS
     public void ClickWorkBenchTab(String tabName) throws Exception{
@@ -104,6 +113,31 @@ public class WorkBench {
         
     	Reporter.log("Verify the mpx video player frame is present.");
         MPXPlayer_Frm.isDisplayed();
+    }
+    
+    public void VerifyFileImagePresent(String imageSrc, String imageIndex) throws Exception {
+    	
+    	Reporter.log("Assert that img source of the Media Item contains '" + imageSrc + "'.");
+    	Assert.assertTrue(WorkBench_Img(imageIndex).getAttribute("src").contains(imageSrc));
+    	
+    	Reporter.log("Assert the the img is loaded and visible.");
+    	boolean imgLoaded;
+        for (int second = 0; ; second++){
+            if (second >= 30) {
+                Assert.fail("Image '" + imageSrc + "' is not fully loaded after timeout");
+            }
+            imgLoaded = (Boolean) ((JavascriptExecutor)webDriver).executeScript(
+            			"return arguments[0].complete && typeof arguments[0].naturalWidth != \"undefined\" && arguments[0].naturalWidth > 0", 
+            			WorkBench_Img(imageIndex));
+            if (imgLoaded == true){ break;}
+            Thread.sleep(500);
+        }
+    }
+    
+    public String GetFileImageId(String imageIndex) {
+    	
+    	Reporter.log("Get the file id of image number " + imageIndex + ".");
+    	return WorkBenchFileImage_Ids(imageIndex).getAttribute("id");
     }
 
 }
