@@ -3,6 +3,7 @@ package com.nbcuni.test.publisher.pageobjects.Content;
 import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.publisher.pageobjects.ErrorChecking.ErrorChecking;
 import com.nbcuni.test.webdriver.CustomWebDriver;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -10,6 +11,7 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.Reporter;
+
 import java.util.List;
 
 /*********************************************
@@ -137,6 +139,12 @@ public class ContentParent {
             Assert.assertFalse(bodyTxt.contains(text));
 
         }
+    }
+    
+    public void Scroll(String scrollCount) throws Exception {
+    	
+    	Reporter.log("Scroll by '" + scrollCount + "'.");
+    	webDriver.executeScript("window.scrollBy(0," + scrollCount + ");"); 
     }
     
 }
