@@ -14,139 +14,187 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Modules' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to frame titled 'Modules'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Sticky Edit Actions' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the module titled 'Sticky Edit Actions' to appear in the list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
       <![CDATA[Mouse over the 'Content' menu link.]]>
     </line>
     <line>
       <![CDATA[Mouse over the 'Add content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Post' menu link.]]>
+      <![CDATA[Click the 'Media Gallery' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'Create Media Gallery dialog'.]]>
     </line>
     <line>
-      <![CDATA[Enter '1cf91fcd8116473' in the 'Title' text box.]]>
+      <![CDATA[Enter '4ec2f1566baf4b1' in the 'Title' text box.]]>
     </line>
     <line>
-      <![CDATA[Scroll by '100'.]]>
+      <![CDATA[Click the 'Media Items Select' button.]]>
     </line>
     <line>
-      <![CDATA[Switch to the Synopsis frame.]]>
+      <![CDATA[Switch to the select file frame.]]>
     </line>
     <line>
-      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+      <![CDATA[Click the 'View Library' button.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+      <![CDATA[Enter 'HanSolo' in the 'File name' text box.]]>
     </line>
     <line>
-      <![CDATA[Verify the sticky edit 'Save' button is present.]]>
+      <![CDATA[Wait for the file search 'spinner' image to be present.]]>
     </line>
     <line>
-      <![CDATA[Verify the sticky edit 'Preview' button is present.]]>
+      <![CDATA[Wait for the file search 'spinner' image to not be present, indicating image search is complete.]]>
     </line>
     <line>
-      <![CDATA[Scroll by '100'.]]>
+      <![CDATA[Click the 'Apply' button.]]>
     </line>
     <line>
-      <![CDATA[Verify the sticky edit 'Save' button is present.]]>
+      <![CDATA[Wait for the file search 'spinner' image to be present.]]>
     </line>
     <line>
-      <![CDATA[Verify the sticky edit 'Preview' button is present.]]>
+      <![CDATA[Wait for the file search 'spinner' image to not be present, indicating image search is complete.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Meta tags' link.]]>
+      <![CDATA[Assert the media thumbnail image 'HanSolo' is present.]]>
     </line>
     <line>
-      <![CDATA[Verify the sticky edit 'Save' button is present.]]>
+      <![CDATA[Assert the the img is loaded and visible.]]>
     </line>
     <line>
-      <![CDATA[Verify the sticky edit 'Preview' button is present.]]>
+      <![CDATA[Assert the media thumbnail image 'HanSolo' is present.]]>
     </line>
     <line>
-      <![CDATA[Scroll by '100'.]]>
+      <![CDATA[Assert the the img is loaded and visible.]]>
     </line>
     <line>
-      <![CDATA[Verify the sticky edit 'Save' button is present.]]>
+      <![CDATA[Click media thumbnail image number 1]]>
     </line>
     <line>
-      <![CDATA[Verify the sticky edit 'Preview' button is present.]]>
+      <![CDATA[Click media thumbnail image number 2]]>
+    </line>
+    <line>
+      <![CDATA[Click on the 'Submit' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create Media Gallery dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that img source of the Media Item contains 'HanSolo'.]]>
+    </line>
+    <line>
+      <![CDATA[Assert the the img is loaded and visible.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that img source of the Media Item contains 'HanSolo'.]]>
+    </line>
+    <line>
+      <![CDATA[Assert the the img is loaded and visible.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'Post 1cf91fcd8116473 has been created.' is present.]]>
+      <![CDATA[Verify success message of 'Media Gallery 4ec2f1566baf4b1 has been created.' is present.]]>
     </line>
     <line>
       <![CDATA[Verify there are no errors present.]]>
     </line>
     <line>
-      <![CDATA[Verify the sticky edit 'Save' button is present.]]>
+      <![CDATA[Assert that img source of the Media Item contains 'HanSolo'.]]>
     </line>
     <line>
-      <![CDATA[Verify the sticky edit 'Preview' button is present.]]>
+      <![CDATA[Assert the the img is loaded and visible.]]>
     </line>
     <line>
-      <![CDATA[Scroll by '100'.]]>
+      <![CDATA[Get the file id of image number 1.]]>
     </line>
     <line>
-      <![CDATA[Verify the sticky edit 'Save' button is present.]]>
+      <![CDATA[Assert that img source of the Media Item contains 'HanSolo'.]]>
     </line>
     <line>
-      <![CDATA[Verify the sticky edit 'Preview' button is present.]]>
+      <![CDATA[Assert the the img is loaded and visible.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Modules' menu link.]]>
+      <![CDATA[Get the file id of image number 2.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Sticky Edit Actions' in the 'Filter Name' text box.]]>
+      <![CDATA[Click the 'Edit Draft' link in the work bench.]]>
     </line>
     <line>
-      <![CDATA[Wait for the module titled 'Sticky Edit Actions' to appear in the list.]]>
+      <![CDATA[Switch to the active frame titled 'Edit Media Gallery 4ec2f1566baf4b1 dialog'.]]>
     </line>
     <line>
-      <![CDATA[Uncheck the 'Sticky Edit Actions' module checkbox.]]>
+      <![CDATA[Assert that img source of the Media Item contains 'HanSolo'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
+      <![CDATA[Assert the the img is loaded and visible.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+      <![CDATA[Get the unique url for image number 1.]]>
     </line>
     <line>
-      <![CDATA[Verify there are no errors present.]]>
+      <![CDATA[Assert that img source of the Media Item contains 'HanSolo'.]]>
+    </line>
+    <line>
+      <![CDATA[Assert the the img is loaded and visible.]]>
+    </line>
+    <line>
+      <![CDATA[Get the unique url for image number 2.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Cancel' button.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that img source of the Media Item contains 'HanSolo'.]]>
+    </line>
+    <line>
+      <![CDATA[Assert the the img is loaded and visible.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that img source of the Media Item contains 'HanSolo'.]]>
+    </line>
+    <line>
+      <![CDATA[Assert the the img is loaded and visible.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'Current Item' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'HanSolo.jpg' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'Current Item Index' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text '0' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'Current Item ID' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text '4185' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'Current Item URL' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'http://qa5.qa.nbcupublisher7.publisher7.com/node/541/item/4185' is present on the page.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="52047" started-at="2014-03-10T18:22:17Z" finished-at="2014-03-10T18:23:09Z">
+  <suite name="Default suite" duration-ms="39218" started-at="2014-03-10T21:17:52Z" finished-at="2014-03-10T21:18:31Z">
     <groups>
       <group name="full">
-        <method signature="StickyButtons.StickyButtons_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons@2f303a76]" name="StickyButtons_Test" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons"/>
+        <method signature="DisplayUniqueURLEachAssetEditForm.DisplayUniqueURLEachAssetEditForm_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.ProvideUniqueURLImages.DisplayUniqueURLEachAssetEditForm@6e0031c0]" name="DisplayUniqueURLEachAssetEditForm_Test" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.ProvideUniqueURLImages.DisplayUniqueURLEachAssetEditForm"/>
       </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="52047" started-at="2014-03-10T18:22:17Z" finished-at="2014-03-10T18:23:09Z">
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons">
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons@2f303a76]" name="startSelenium" is-config="true" duration-ms="13100" started-at="2014-03-10T14:22:17Z" finished-at="2014-03-10T14:22:30Z">
+    <test name="Default test" duration-ms="39218" started-at="2014-03-10T21:17:52Z" finished-at="2014-03-10T21:18:31Z">
+      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.ProvideUniqueURLImages.DisplayUniqueURLEachAssetEditForm">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.ProvideUniqueURLImages.DisplayUniqueURLEachAssetEditForm@6e0031c0]" name="startSelenium" is-config="true" duration-ms="13542" started-at="2014-03-10T17:17:52Z" finished-at="2014-03-10T17:18:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="StickyButtons_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons@2f303a76]" name="StickyButtons_Test" duration-ms="38362" started-at="2014-03-10T14:22:30Z" finished-at="2014-03-10T14:23:09Z">
+        <test-method status="PASS" signature="DisplayUniqueURLEachAssetEditForm_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.ProvideUniqueURLImages.DisplayUniqueURLEachAssetEditForm@6e0031c0]" name="DisplayUniqueURLEachAssetEditForm_Test" duration-ms="25095" started-at="2014-03-10T17:18:05Z" finished-at="2014-03-10T17:18:31Z">
           <reporter-output>
             <line>
               <![CDATA[Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.]]>
@@ -161,139 +209,187 @@
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Modules' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to frame titled 'Modules'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Sticky Edit Actions' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the module titled 'Sticky Edit Actions' to appear in the list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
               <![CDATA[Mouse over the 'Content' menu link.]]>
             </line>
             <line>
               <![CDATA[Mouse over the 'Add content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Post' menu link.]]>
+              <![CDATA[Click the 'Media Gallery' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'Create Media Gallery dialog'.]]>
             </line>
             <line>
-              <![CDATA[Enter '1cf91fcd8116473' in the 'Title' text box.]]>
+              <![CDATA[Enter '4ec2f1566baf4b1' in the 'Title' text box.]]>
             </line>
             <line>
-              <![CDATA[Scroll by '100'.]]>
+              <![CDATA[Click the 'Media Items Select' button.]]>
             </line>
             <line>
-              <![CDATA[Switch to the Synopsis frame.]]>
+              <![CDATA[Switch to the select file frame.]]>
             </line>
             <line>
-              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+              <![CDATA[Click the 'View Library' button.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+              <![CDATA[Enter 'HanSolo' in the 'File name' text box.]]>
             </line>
             <line>
-              <![CDATA[Verify the sticky edit 'Save' button is present.]]>
+              <![CDATA[Wait for the file search 'spinner' image to be present.]]>
             </line>
             <line>
-              <![CDATA[Verify the sticky edit 'Preview' button is present.]]>
+              <![CDATA[Wait for the file search 'spinner' image to not be present, indicating image search is complete.]]>
             </line>
             <line>
-              <![CDATA[Scroll by '100'.]]>
+              <![CDATA[Click the 'Apply' button.]]>
             </line>
             <line>
-              <![CDATA[Verify the sticky edit 'Save' button is present.]]>
+              <![CDATA[Wait for the file search 'spinner' image to be present.]]>
             </line>
             <line>
-              <![CDATA[Verify the sticky edit 'Preview' button is present.]]>
+              <![CDATA[Wait for the file search 'spinner' image to not be present, indicating image search is complete.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Meta tags' link.]]>
+              <![CDATA[Assert the media thumbnail image 'HanSolo' is present.]]>
             </line>
             <line>
-              <![CDATA[Verify the sticky edit 'Save' button is present.]]>
+              <![CDATA[Assert the the img is loaded and visible.]]>
             </line>
             <line>
-              <![CDATA[Verify the sticky edit 'Preview' button is present.]]>
+              <![CDATA[Assert the media thumbnail image 'HanSolo' is present.]]>
             </line>
             <line>
-              <![CDATA[Scroll by '100'.]]>
+              <![CDATA[Assert the the img is loaded and visible.]]>
             </line>
             <line>
-              <![CDATA[Verify the sticky edit 'Save' button is present.]]>
+              <![CDATA[Click media thumbnail image number 1]]>
             </line>
             <line>
-              <![CDATA[Verify the sticky edit 'Preview' button is present.]]>
+              <![CDATA[Click media thumbnail image number 2]]>
+            </line>
+            <line>
+              <![CDATA[Click on the 'Submit' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Media Gallery dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that img source of the Media Item contains 'HanSolo'.]]>
+            </line>
+            <line>
+              <![CDATA[Assert the the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that img source of the Media Item contains 'HanSolo'.]]>
+            </line>
+            <line>
+              <![CDATA[Assert the the img is loaded and visible.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'Post 1cf91fcd8116473 has been created.' is present.]]>
+              <![CDATA[Verify success message of 'Media Gallery 4ec2f1566baf4b1 has been created.' is present.]]>
             </line>
             <line>
               <![CDATA[Verify there are no errors present.]]>
             </line>
             <line>
-              <![CDATA[Verify the sticky edit 'Save' button is present.]]>
+              <![CDATA[Assert that img source of the Media Item contains 'HanSolo'.]]>
             </line>
             <line>
-              <![CDATA[Verify the sticky edit 'Preview' button is present.]]>
+              <![CDATA[Assert the the img is loaded and visible.]]>
             </line>
             <line>
-              <![CDATA[Scroll by '100'.]]>
+              <![CDATA[Get the file id of image number 1.]]>
             </line>
             <line>
-              <![CDATA[Verify the sticky edit 'Save' button is present.]]>
+              <![CDATA[Assert that img source of the Media Item contains 'HanSolo'.]]>
             </line>
             <line>
-              <![CDATA[Verify the sticky edit 'Preview' button is present.]]>
+              <![CDATA[Assert the the img is loaded and visible.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Modules' menu link.]]>
+              <![CDATA[Get the file id of image number 2.]]>
             </line>
             <line>
-              <![CDATA[Enter 'Sticky Edit Actions' in the 'Filter Name' text box.]]>
+              <![CDATA[Click the 'Edit Draft' link in the work bench.]]>
             </line>
             <line>
-              <![CDATA[Wait for the module titled 'Sticky Edit Actions' to appear in the list.]]>
+              <![CDATA[Switch to the active frame titled 'Edit Media Gallery 4ec2f1566baf4b1 dialog'.]]>
             </line>
             <line>
-              <![CDATA[Uncheck the 'Sticky Edit Actions' module checkbox.]]>
+              <![CDATA[Assert that img source of the Media Item contains 'HanSolo'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
+              <![CDATA[Assert the the img is loaded and visible.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+              <![CDATA[Get the unique url for image number 1.]]>
             </line>
             <line>
-              <![CDATA[Verify there are no errors present.]]>
+              <![CDATA[Assert that img source of the Media Item contains 'HanSolo'.]]>
+            </line>
+            <line>
+              <![CDATA[Assert the the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Get the unique url for image number 2.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Cancel' button.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that img source of the Media Item contains 'HanSolo'.]]>
+            </line>
+            <line>
+              <![CDATA[Assert the the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that img source of the Media Item contains 'HanSolo'.]]>
+            </line>
+            <line>
+              <![CDATA[Assert the the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Current Item' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'HanSolo.jpg' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Current Item Index' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text '0' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Current Item ID' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text '4185' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Current Item URL' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'http://qa5.qa.nbcupublisher7.publisher7.com/node/541/item/4185' is present on the page.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- StickyButtons_Test -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons@2f303a76]" name="stopSelenium" is-config="true" duration-ms="570" started-at="2014-03-10T14:23:09Z" finished-at="2014-03-10T14:23:09Z">
+        </test-method> <!-- DisplayUniqueURLEachAssetEditForm_Test -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.ProvideUniqueURLImages.DisplayUniqueURLEachAssetEditForm@6e0031c0]" name="stopSelenium" is-config="true" duration-ms="569" started-at="2014-03-10T17:18:31Z" finished-at="2014-03-10T17:18:31Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=StickyButtons_Test status=SUCCESS method=StickyButtons.StickyButtons_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons@2f303a76] output=Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.]]]>
+                <![CDATA[[TestResult name=DisplayUniqueURLEachAssetEditForm_Test status=SUCCESS method=DisplayUniqueURLEachAssetEditForm.DisplayUniqueURLEachAssetEditForm_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.ProvideUniqueURLImages.DisplayUniqueURLEachAssetEditForm@6e0031c0] output=Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons -->
+      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.ProvideUniqueURLImages.DisplayUniqueURLEachAssetEditForm -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -1,12 +1,10 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.ProvideUniqueURLImages;
 
 import java.util.Arrays;
-
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Content.*;
-
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -45,7 +43,11 @@ public class DisplayUniqueURLEachAssetEditForm extends ParentTest{
             selectFile.SwitchToSelectFileFrm();
             selectFile.ClickViewLibraryBtn();
             selectFile.EnterFileName("HanSolo");
+            selectFile.WaitForFileSearchComplete();
+            selectFile.ClickApplyBtn();
+            selectFile.WaitForFileSearchComplete();
             selectFile.VerifyMediaThumbnailImagePresent("HanSolo", "1");
+            selectFile.VerifyMediaThumbnailImagePresent("HanSolo", "2");
             selectFile.ClickMediaThumbnailImage("1");
             selectFile.ClickMediaThumbnailImage("2");
             selectFile.ClickSubmitBtn();

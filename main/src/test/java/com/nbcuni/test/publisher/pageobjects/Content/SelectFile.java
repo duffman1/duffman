@@ -1,6 +1,7 @@
 package com.nbcuni.test.publisher.pageobjects.Content;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -82,6 +83,9 @@ public class SelectFile {
     @FindBy(how = How.XPATH, using = "//a[@id='edit-upload_browse']")
     private static WebElement AddFiles_Lnk;
     
+    @FindBy(how = How.XPATH, using = "//div[@class='throbber']")
+    private static WebElement Spinner_Img;
+    
     private WebElement File_Lnk(String fileName) {
     	return webDriver.findElement(By.xpath("//a[text()='" + fileName + "']"));
     }
@@ -117,8 +121,33 @@ public class SelectFile {
     	
     	Reporter.log("Click the 'Apply' button.");
     	Apply_Btn.click();
-    	Thread.sleep(5000);
     	
+    }
+    
+    public void WaitForFileSearchComplete() throws Exception {
+    	
+    	Reporter.log("Wait for the file search 'spinner' image to be present.");
+    	Spinner_Img.isDisplayed();
+    	
+    	Reporter.log("Wait for the file search 'spinner' image to not be present, indicating image search is complete.");
+    	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+    	boolean searchComplete;
+        for (int second = 0; ; second++){
+            if (second >= 30) {
+                Assert.fail("File search not complete after timeout");
+            }
+            try {
+            	Spinner_Img.isDisplayed();
+            	searchComplete = false;
+            }
+            catch (Exception e) {
+            	searchComplete = true;
+            }
+                
+            if (searchComplete == true){ break;}
+            Thread.sleep(500);
+        }
+        webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
     }
     
     public void ClickDefaultImg() throws Exception {

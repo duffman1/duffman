@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Mar 10 14:22:17 EDT 2014</td>
+<td>Started on:</td><td>Mon Mar 10 17:17:52 EDT 2014</td>
 </tr>
-<tr><td>Total time:</td><td>52 seconds (52047 ms)</td>
+<tr><td>Total time:</td><td>39 seconds (39218 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,60 +75,76 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons.StickyButtons_Test()'><b>StickyButtons_Test</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons<br/>
-<a href="#Output-206684361" onClick='toggleBox("Output-206684361", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.ProvideUniqueURLImages.DisplayUniqueURLEachAssetEditForm.DisplayUniqueURLEachAssetEditForm_Test()'><b>DisplayUniqueURLEachAssetEditForm_Test</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.ProvideUniqueURLImages.DisplayUniqueURLEachAssetEditForm<br/>
+<a href="#Output-1650311758" onClick='toggleBox("Output-1650311758", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-206684361" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-206684361">
+<a href="#Output-1650311758" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1650311758">
 Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.<br/>
 Enter the user's email address in the 'Email Address' text box.<br/>
 Enter the user's password in the 'Password' text box.<br/>
 Click the 'Login' button.<br/>
-Click the 'Modules' menu link.<br/>
-Switch to frame titled 'Modules'.<br/>
-Enter 'Sticky Edit Actions' in the 'Filter Name' text box.<br/>
-Wait for the module titled 'Sticky Edit Actions' to appear in the list.<br/>
-Click the 'Close Overlay X'.<br/>
 Mouse over the 'Content' menu link.<br/>
 Mouse over the 'Add content' menu link.<br/>
-Click the 'Post' menu link.<br/>
-Switch to the active frame titled 'Create Post dialog'.<br/>
-Enter '1cf91fcd8116473' in the 'Title' text box.<br/>
-Scroll by '100'.<br/>
-Switch to the Synopsis frame.<br/>
-Enter a randomized text string into the 'Body' text area.<br/>
-Switch to the active frame titled 'Create Post dialog'.<br/>
-Verify the sticky edit 'Save' button is present.<br/>
-Verify the sticky edit 'Preview' button is present.<br/>
-Scroll by '100'.<br/>
-Verify the sticky edit 'Save' button is present.<br/>
-Verify the sticky edit 'Preview' button is present.<br/>
-Click the 'Meta tags' link.<br/>
-Verify the sticky edit 'Save' button is present.<br/>
-Verify the sticky edit 'Preview' button is present.<br/>
-Scroll by '100'.<br/>
-Verify the sticky edit 'Save' button is present.<br/>
-Verify the sticky edit 'Preview' button is present.<br/>
+Click the 'Media Gallery' menu link.<br/>
+Switch to the active frame titled 'Create Media Gallery dialog'.<br/>
+Enter '4ec2f1566baf4b1' in the 'Title' text box.<br/>
+Click the 'Media Items Select' button.<br/>
+Switch to the select file frame.<br/>
+Click the 'View Library' button.<br/>
+Enter 'HanSolo' in the 'File name' text box.<br/>
+Wait for the file search 'spinner' image to be present.<br/>
+Wait for the file search 'spinner' image to not be present, indicating image search is complete.<br/>
+Click the 'Apply' button.<br/>
+Wait for the file search 'spinner' image to be present.<br/>
+Wait for the file search 'spinner' image to not be present, indicating image search is complete.<br/>
+Assert the media thumbnail image 'HanSolo' is present.<br/>
+Assert the the img is loaded and visible.<br/>
+Assert the media thumbnail image 'HanSolo' is present.<br/>
+Assert the the img is loaded and visible.<br/>
+Click media thumbnail image number 1<br/>
+Click media thumbnail image number 2<br/>
+Click on the 'Submit' button.<br/>
+Switch to the active frame titled 'Create Media Gallery dialog'.<br/>
+Assert that img source of the Media Item contains 'HanSolo'.<br/>
+Assert the the img is loaded and visible.<br/>
+Assert that img source of the Media Item contains 'HanSolo'.<br/>
+Assert the the img is loaded and visible.<br/>
 Click the 'Save' button.<br/>
-Verify success message of 'Post 1cf91fcd8116473 has been created.' is present.<br/>
+Verify success message of 'Media Gallery 4ec2f1566baf4b1 has been created.' is present.<br/>
 Verify there are no errors present.<br/>
-Verify the sticky edit 'Save' button is present.<br/>
-Verify the sticky edit 'Preview' button is present.<br/>
-Scroll by '100'.<br/>
-Verify the sticky edit 'Save' button is present.<br/>
-Verify the sticky edit 'Preview' button is present.<br/>
-Click the 'Modules' menu link.<br/>
-Enter 'Sticky Edit Actions' in the 'Filter Name' text box.<br/>
-Wait for the module titled 'Sticky Edit Actions' to appear in the list.<br/>
-Uncheck the 'Sticky Edit Actions' module checkbox.<br/>
-Click the 'Save configuration' button.<br/>
-Verify success message of 'The configuration options have been saved.' is present.<br/>
-Verify there are no errors present.<br/>
+Assert that img source of the Media Item contains 'HanSolo'.<br/>
+Assert the the img is loaded and visible.<br/>
+Get the file id of image number 1.<br/>
+Assert that img source of the Media Item contains 'HanSolo'.<br/>
+Assert the the img is loaded and visible.<br/>
+Get the file id of image number 2.<br/>
+Click the 'Edit Draft' link in the work bench.<br/>
+Switch to the active frame titled 'Edit Media Gallery 4ec2f1566baf4b1 dialog'.<br/>
+Assert that img source of the Media Item contains 'HanSolo'.<br/>
+Assert the the img is loaded and visible.<br/>
+Get the unique url for image number 1.<br/>
+Assert that img source of the Media Item contains 'HanSolo'.<br/>
+Assert the the img is loaded and visible.<br/>
+Get the unique url for image number 2.<br/>
+Click the 'Cancel' button.<br/>
+Assert that img source of the Media Item contains 'HanSolo'.<br/>
+Assert the the img is loaded and visible.<br/>
+Assert that img source of the Media Item contains 'HanSolo'.<br/>
+Assert the the img is loaded and visible.<br/>
+Verify the text 'Current Item' is present on the page.<br/>
+Verify the text 'HanSolo.jpg' is present on the page.<br/>
+Verify the text 'Current Item Index' is present on the page.<br/>
+Verify the text '0' is present on the page.<br/>
+Verify the text 'Current Item ID' is present on the page.<br/>
+Verify the text '4185' is present on the page.<br/>
+Verify the text 'Current Item URL' is present on the page.<br/>
+Verify the text 'http://qa5.qa.nbcupublisher7.publisher7.com/node/541/item/4185' is present on the page.<br/>
 </div>
 </td>
 <td></td>
-<td>38</td>
-<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons@2f303a76</td></tr>
+<td>25</td>
+<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.ProvideUniqueURLImages.DisplayUniqueURLEachAssetEditForm@6e0031c0</td></tr>
 </table><p>
 </body>
 </html>

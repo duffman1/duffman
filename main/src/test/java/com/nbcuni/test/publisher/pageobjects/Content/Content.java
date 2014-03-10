@@ -105,6 +105,7 @@ public class Content {
     public void ClickEditExtendMenuBtn(String contentItemTitle) throws Exception {
     	
     	Reporter.log("Click the extend edit menu link.");
+    	Thread.sleep(500); //stale element exception
     	ExtendEditMenu_Lnk(contentItemTitle).click();
     }
     
