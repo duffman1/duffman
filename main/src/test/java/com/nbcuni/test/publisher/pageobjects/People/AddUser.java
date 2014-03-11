@@ -37,6 +37,9 @@ public class AddUser {
     @FindBy(how = How.XPATH, using = "//input[@id='edit-roles-4']")
     private static WebElement Role_Editor_Cbx;
     
+    @FindBy(how = How.ID, using = "edit-roles-5")
+    private static WebElement Role_SeniorEditor_Cbx;
+    
     @FindBy(how = How.ID, using = "edit-notify")
     private static WebElement NotifyUserNewAccount_Cbx;
     
@@ -82,6 +85,12 @@ public class AddUser {
     	
     	Reporter.log("Check the 'editor' checkbox.");
     	Role_Editor_Cbx.click();
+    }
+    
+    public void ClickSeniorEditorRoleCbx() throws Exception {
+    	
+    	Reporter.log("Check the 'senior editor' checkbox.");
+    	Role_SeniorEditor_Cbx.click();
     }
     
     public void CheckNotifyUserNewAccountCbx() throws Exception {

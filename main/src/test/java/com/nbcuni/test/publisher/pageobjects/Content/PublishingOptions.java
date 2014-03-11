@@ -1,5 +1,6 @@
 package com.nbcuni.test.publisher.pageobjects.Content;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -7,6 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.Reporter;
+
 import com.nbcuni.test.webdriver.CustomWebDriver;
 
 /*********************************************
@@ -42,10 +44,18 @@ public class PublishingOptions {
     @FindBy(how = How.ID, using = "edit-published")
     private static WebElement Published_Cbx;
     
+    @FindBy(how = How.ID, using = "edit-field-workbench-assigned-und-0-target-id")
+    private static WebElement AssignTo_Txb;
+    
+    private static WebElement AutoComplete_Opt(String optionTxt) {
+    	return webDriver.findElement(By.xpath("//div[@class='reference-autocomplete'][text()='" + optionTxt + "']"));
+    }
+    
     private static String ScrollUp_Js() {
     	String jsScrollUp = "window.scrollBy(0,-500);";
     	return jsScrollUp;
     }
+    
     
     //PAGE OBJECT METHODS
     public void ClickPublishingOptionsLnk() throws Exception {
@@ -76,6 +86,12 @@ public class PublishingOptions {
     	new Select(ModerationState_Ddl).selectByVisibleText(stateName);
     }
     
+    public void VerifyModerationStateValue(String stateValue) throws Exception {
+    	
+    	Reporter.log("Verify the 'Moderation State' drop down list value is '" + stateValue + "'.");
+    	Assert.assertEquals(new Select(ModerationState_Ddl).getFirstSelectedOption().getText(), stateValue);
+    }
+    
     public void EnterMessageForStateChange(String messageTxt) throws Exception {
     	
     	Reporter.log("Enter '" + messageTxt + "' in the 'Message for State Change' text area.");
@@ -102,6 +118,23 @@ public class PublishingOptions {
     	
     	Reporter.log("Verify the 'Published' checkbox is checked.");
     	Assert.assertTrue(Published_Cbx.isSelected() == true);
+    }
+    
+    public void VerifyAssignToValue(String userName) throws Exception {
+    	
+    	Reporter.log("Verify the 'Assign to' text box value is '" + userName + "'.");
+    	Assert.assertTrue(AssignTo_Txb.getAttribute("value").contains(userName));
+    }
+    
+    public void EnterAssignTo(String userName) throws Exception {
+    	
+    	Reporter.log("Enter '" + userName + "' in the 'Assign to' text box.");
+    	AssignTo_Txb.clear();
+    	AssignTo_Txb.sendKeys(userName);
+    	
+    	Reporter.log("Click the '" + userName + "' from the auto complete option list.");
+    	AutoComplete_Opt(userName).click();
+    	
     }
     
     public void VerifyPublishedCbxNotCheckedAndNotEditable() throws Exception {

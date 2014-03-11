@@ -1,5 +1,7 @@
 package com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions;
 
+import java.util.Arrays;
+
 import org.testng.annotations.Test;
 
 import com.nbcuni.test.publisher.common.ParentTest;
@@ -57,7 +59,7 @@ public class CreateConfigureAndValidatePermissionsEditor extends ParentTest{
      * @throws Throwable No Return values are needed
      *************************************************************************************/
     @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "smoke"})
-    public void CreateConfigureAndValidatePermissionsEditor_Test() throws Exception{
+    public void CreateConfigureAndValidatePermissionsEditor_Test() throws Exception {
     	
     	//Step 1
     	UserLogin userLogin = applib.openApplication();
@@ -69,14 +71,14 @@ public class CreateConfigureAndValidatePermissionsEditor extends ParentTest{
         
         //Step 2
         taxonomy.NavigateSite("People>>Add user");
-        overlay.SwitchToFrame("People");
+        overlay.SwitchToActiveFrame();
         
         //Step 3
         AddUser addUser = new AddUser(webDriver);
         String userName = random.GetCharacterString(15) + "@" + random.GetCharacterString(15) + ".com";
         addUser.EnterUsername(userName);
         addUser.EnterEmailAddress(userName);
-        String passWord = "pa55word"; //TODO - randomize username and password generation
+        String passWord = "pa55word";
         addUser.EnterPassword(passWord);
         addUser.EnterConfirmPassword(passWord);
         addUser.ClickEditorRoleCbx();
@@ -89,10 +91,9 @@ public class CreateConfigureAndValidatePermissionsEditor extends ParentTest{
         contentParent.VerifyMessageStatus("A welcome message with further instructions has been e-mailed to the new user " + userName + ".");
        
         //Step 4
-        overlay.switchToDefaultContent();
+        overlay.ClickCloseOverlayLnk();
         taxonomy.NavigateSite("People>>Permissions>>Roles");
-        overlay.switchToDefaultContent();
-        overlay.SwitchToFrame("People");
+        overlay.SwitchToActiveFrame();
         
         //Step 5
         Roles roles = new Roles(webDriver);
@@ -101,16 +102,14 @@ public class CreateConfigureAndValidatePermissionsEditor extends ParentTest{
         
         //Step 6
         Permissions permissions = new Permissions(webDriver);
-        permissions.CheckPostCreateNewContentCbx();
-        permissions.CheckPostEditOwnContentCbx();
-        permissions.CheckPostDeleteOwnContentCbx();
-        permissions.CheckAddAndUploadNewFilesCbx();
+        permissions.EnablePermissions(Arrays.asList("create post content", 
+        		"edit own post content", "delete own post content", "create files"));
+        permissions.DisablePermissions(Arrays.asList("edit any post content", "delete any post content"));
         permissions.ClickSaveConfigurationsBtn();
         contentParent.VerifyMessageStatus("The changes have been saved.");
         
         //Step 7
         overlay.ClickCloseOverlayLnk();
-        overlay.switchToDefaultContent();
         Logout logout = new Logout(webDriver);
         logout.ClickLogoutBtn();
         
@@ -123,7 +122,7 @@ public class CreateConfigureAndValidatePermissionsEditor extends ParentTest{
         
         //Step 11
         taxonomy.NavigateSite("Content");
-        overlay.SwitchToFrame("Content");
+        overlay.SwitchToActiveFrame();
         
         //Step 12 and 13 (truncated)
         Content content = new Content(webDriver, applib);
@@ -147,15 +146,15 @@ public class CreateConfigureAndValidatePermissionsEditor extends ParentTest{
         
         //Step 20
         taxonomy.NavigateSite("Content");
-        overlay.SwitchToFrame("Content");
+        overlay.SwitchToActiveFrame();
         
         //Step 21
         content.VerifyContentItemEditDeleteNotPresent(postTitle2);
         
         //Step 22
-        overlay.switchToDefaultContent();
+        overlay.ClickCloseOverlayLnk();
         taxonomy.NavigateSite("Content>>Content Revisions");
-        overlay.SwitchToFrame("Content Revisions");
+        overlay.SwitchToActiveFrame();
         
         //Step 23
         Revisions revisions = new Revisions(webDriver, applib);
@@ -167,8 +166,7 @@ public class CreateConfigureAndValidatePermissionsEditor extends ParentTest{
         //Step 25 and 26 (truncated)
         revisions.ClickEditExtendMenuBtn(postTitle);
         revisions.ClickEditMenuBtn(postTitle);
-        overlay.switchToDefaultContent();
-        overlay.SwitchToFrame(postTitle);
+        overlay.SwitchToActiveFrame();
         
         //Step 27
         BasicInformation basicInformation = new BasicInformation(webDriver);
@@ -180,13 +178,12 @@ public class CreateConfigureAndValidatePermissionsEditor extends ParentTest{
         
         //Step 28
         taxonomy.NavigateSite("Content");
-        overlay.SwitchToFrame("Content");
+        overlay.SwitchToActiveFrame();
         
         //Step 29
         content.ClickEditExtendMenuBtn(postTitle);
         content.ClickDeleteMenuBtn(postTitle);
-        overlay.switchToDefaultContent();
-        overlay.SwitchToFrame(postTitle);
+        overlay.SwitchToActiveFrame();
         Delete delete = new Delete(webDriver);
         delete.ClickDeleteBtn();
         overlay.switchToDefaultContent();
@@ -194,7 +191,7 @@ public class CreateConfigureAndValidatePermissionsEditor extends ParentTest{
         
         //Step 30
         taxonomy.NavigateSite("Content");
-        overlay.SwitchToFrame("Content");
+        overlay.SwitchToActiveFrame();
         
         //Step 31
         content.VerifyContentItemNotPresent(postTitle);

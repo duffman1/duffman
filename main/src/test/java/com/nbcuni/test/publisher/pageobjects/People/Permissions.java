@@ -48,6 +48,10 @@ public class Permissions {
     @FindBy(how = How.CSS, using = "input[value='Save permissions']")
     private static WebElement SavePermissions_Btn;
     
+    private static WebElement Permission_Cbx(String value) {
+    	return webDriver.findElement(By.cssSelector("input[value='" + value + "']"));
+    }
+    
     
     //PAGE OBJECT METHODS
     public void VerifyRoleColumns() throws Exception {
@@ -61,37 +65,24 @@ public class Permissions {
     	Assert.assertEquals(allColumns.get(3).getText(), "EDITOR");
     	Assert.assertEquals(allColumns.get(4).getText(), "SENIOR EDITOR");
     }
-
-    public void CheckAddAndUploadNewFilesCbx() throws Exception {
-
-        if (AddAndUploadNewFiles_Cbx.isSelected() == false) {
-        	Reporter.log("Scroll up and check the 'Add and Upload New Files' check box.");
-        	webDriver.executeScript("window.scrollBy(0,-50000);");
-        	AddAndUploadNewFiles_Cbx.click();
-        }
-    }
-
-    public void CheckPostCreateNewContentCbx() throws Exception {
+    
+    public void EnablePermissions(List<String> permissionValues) throws Exception {
     	
-    	if (Post_CreateNewContent_Cbx.isSelected() == false) {
-    		Reporter.log("Check the 'Post Create New Content' check box.");
-    		Post_CreateNewContent_Cbx.click();
+    	for (String value : permissionValues) {
+    		if (Permission_Cbx(value).isSelected() == false) {
+    			Reporter.log("Check the '" + value + "' checkbox.");
+    			Permission_Cbx(value).click();
+    		}
     	}
     }
     
-    public void CheckPostEditOwnContentCbx() throws Exception {
+    public void DisablePermissions(List<String> permissionValues) throws Exception {
     	
-    	if (Post_EditOwnContent_Cbx.isSelected() == false) {
-    		Reporter.log("Check the 'Post Edit Own Content' check box.");
-    		Post_EditOwnContent_Cbx.click();
-    	}
-    }
-    
-    public void CheckPostDeleteOwnContentCbx() throws Exception {
-    	
-    	if (Post_DeleteOwnContent_Cbx.isSelected() == false) {
-    		Reporter.log("Check the 'Delete Own Content' check box.");
-    		Post_DeleteOwnContent_Cbx.click();
+    	for (String value : permissionValues) {
+    		if (Permission_Cbx(value).isSelected() == true) {
+    			Reporter.log("Uncheck the '" + value + "' checkbox.");
+    			Permission_Cbx(value).click();
+    		}
     	}
     }
     
