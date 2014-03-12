@@ -34,7 +34,6 @@ public class ContentTypeStructure {
 
     
     //PAGE OBJECT METHODS
-    
     public void ClickXMLSiteMapLink()throws Exception{
     
     	Reporter.log("Click the 'XML sitemap' link.");

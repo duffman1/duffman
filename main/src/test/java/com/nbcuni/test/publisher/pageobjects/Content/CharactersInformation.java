@@ -49,6 +49,7 @@ public class CharactersInformation {
     public void EnterCharacterFirstName(String characterFirstName) throws Exception {
     	
     	Reporter.log("Enter '" + characterFirstName + "' in the 'Character First Name' text box.");
+    	CharacterFirstName_Txb.clear();
     	CharacterFirstName_Txb.sendKeys(characterFirstName);
     }
     

@@ -159,7 +159,7 @@ public class ConfiguringPublisherAutopublishingToFacebookTimeandWall extends Par
             
         	try {
         		contentParent.VerifyPageContentPresent(Arrays.asList("Publisher Seven Test User", 
-                		postTitle, "via Publisher 7 Test App"));
+                		postTitle, "Publisher 7 Test App"));
         		postUpdatePresent = true;
         	}
         	catch (AssertionError e) {

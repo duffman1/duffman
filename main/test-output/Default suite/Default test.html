@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Mar 11 14:02:59 EDT 2014</td>
+<td>Started on:</td><td>Wed Mar 12 10:59:13 EDT 2014</td>
 </tr>
-<tr><td>Total time:</td><td>14 seconds (14141 ms)</td>
+<tr><td>Total time:</td><td>57 seconds (57741 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,10 +75,81 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentEntityModerationStatesWorkflows.MultiEditorPublishingWorkflow.MultiEditorPublishingWorkflow_Test()'><b>MultiEditorPublishingWorkflow_Test</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentEntityModerationStatesWorkflows.MultiEditorPublishingWorkflow</td>
+<td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.SoftLengthLimit.AddCharacterCountOptionTextFields.AddCharacterCountOptionTextFields_Test()'><b>AddCharacterCountOptionTextFields_Test</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.SoftLengthLimit.AddCharacterCountOptionTextFields<br/>
+<a href="#Output-1519377898" onClick='toggleBox("Output-1519377898", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1519377898" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1519377898">
+Open url 'http://qa4.qa.nbcupublisher7.publisher7.com'.<br/>
+Enter the user's email address in the 'Email Address' text box.<br/>
+Enter the user's password in the 'Password' text box.<br/>
+Click the 'Login' button.<br/>
+Mouse over the 'Structure' menu link.<br/>
+Mouse over the 'Content types' menu link.<br/>
+Mouse over the 'Character Profile' menu link.<br/>
+Mouse over the 'Manage fields' menu link.<br/>
+Click the 'Character: First Name' menu link.<br/>
+Switch to the active frame titled 'Character: First Name dialog'.<br/>
+Enter '150' in the 'Soft length limit' text box.<br/>
+Enter '10' in the 'Soft length minimum' text box.<br/>
+Click the 'Save settings' button.<br/>
+Switch to the active frame titled 'Character Profile dialog'.<br/>
+Verify success message of 'Saved Character: First Name configuration.' is present.<br/>
+Verify there are no errors present.<br/>
+Click the 'Close Overlay X'.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Add content' menu link.<br/>
+Click the 'Character Profile' menu link.<br/>
+Switch to the active frame titled 'Create Character Profile dialog'.<br/>
+Enter '599c' in the 'Character First Name' text box.<br/>
+Verify the soft length under limit text of '4/150' is present.<br/>
+Enter 'ce2dcb6a280945f' in the 'Character First Name' text box.<br/>
+Verify the soft length meets limit text of '15/150' is present.<br/>
+Enter '654e8c0c1d10480a9ddeb625b896fdf729573aadce77439a8419e4296b48f51c2cf0bc59ff0a4c399b7b4e3547881821071df21eb9e446ffbd0d40ec09117947e3645604e53142a0ae51a4a63097ebd5' in the 'Character First Name' text box.<br/>
+Verify the soft length exceeds limit text of '160/150' is present.<br/>
+Click the Cover Photo 'Select' button.<br/>
+Switch to the select file frame.<br/>
+Enter the file path for file upload.<br/>
+Click the 'Upload' button.<br/>
+Wait for the file link to be visible after upload.<br/>
+Click the 'Next' button.<br/>
+Click the 'Public Local Files' radio button.<br/>
+Click the 'Next' button.<br/>
+Assert the file image 'HanSolo' is present.<br/>
+Assert the the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'Create Character Profile dialog'.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'Character Profile 654e8c0c1d10480a9ddeb625b896fdf729573aadce77439a8419e4296b48f51c2cf0bc59ff0a4c399b7b4e3547881821071df21eb9e446ffbd0d40ec09117947e3645604e53142a0ae51a4a63097ebd5 has been created.' is present.<br/>
+Verify there are no errors present.<br/>
+Mouse over the 'Structure' menu link.<br/>
+Mouse over the 'Content types' menu link.<br/>
+Mouse over the 'Character Profile' menu link.<br/>
+Mouse over the 'Manage fields' menu link.<br/>
+Click the 'Character: First Name' menu link.<br/>
+Switch to the active frame titled 'Character: First Name dialog'.<br/>
+Enter '' in the 'Soft length limit' text box.<br/>
+Enter '' in the 'Soft length minimum' text box.<br/>
+Click the 'Save settings' button.<br/>
+Switch to the active frame titled 'Character Profile dialog'.<br/>
+Verify success message of 'Saved Character: First Name configuration.' is present.<br/>
+Verify there are no errors present.<br/>
+Click the 'Close Overlay X'.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Add content' menu link.<br/>
+Click the 'Character Profile' menu link.<br/>
+Switch to the active frame titled 'Create Character Profile dialog'.<br/>
+Enter '599c' in the 'Character First Name' text box.<br/>
+Verify the soft length under limit text of '4/150' is NOT present.<br/>
+Enter 'ce2dcb6a280945f' in the 'Character First Name' text box.<br/>
+Verify the soft length meets limit text of '15/150' is NOT present.<br/>
+Enter '654e8c0c1d10480a9ddeb625b896fdf729573aadce77439a8419e4296b48f51c2cf0bc59ff0a4c399b7b4e3547881821071df21eb9e446ffbd0d40ec09117947e3645604e53142a0ae51a4a63097ebd5' in the 'Character First Name' text box.<br/>
+Verify the soft length exceeds limit text of '160/150' is NOT present.<br/>
+</div>
+</td>
 <td></td>
-<td>0</td>
-<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentEntityModerationStatesWorkflows.MultiEditorPublishingWorkflow@35c283b5</td></tr>
+<td>43</td>
+<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.SoftLengthLimit.AddCharacterCountOptionTextFields@408f3be4</td></tr>
 </table><p>
 </body>
 </html>

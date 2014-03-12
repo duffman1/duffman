@@ -1,13 +1,16 @@
 package com.nbcuni.test.publisher.common;
 
 import com.nbcuni.test.publisher.pageobjects.Overlay;
+import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.Taxonomy.Taxonomy;
 import com.nbcuni.test.webdriver.CustomWebDriver;
 import com.nbcuni.test.webdriver.WebDriverClientExecution;
+
 import org.testng.ITestResult;
 import org.testng.Reporter;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+
 import java.util.concurrent.TimeUnit;
 
 public class ParentTest {
@@ -18,6 +21,7 @@ public class ParentTest {
     protected Taxonomy taxonomy;
     protected Overlay overlay;
     protected Config config;
+    protected ContentParent contentParent;
     
     @BeforeMethod(alwaysRun = true)
     public void startSelenium() {
@@ -29,6 +33,7 @@ public class ParentTest {
             random = new Random();
             taxonomy = new Taxonomy(webDriver);
             overlay = new Overlay(webDriver, applib);
+            contentParent = new ContentParent(webDriver, applib);
             
             try {
             	webDriver.manage().timeouts().pageLoadTimeout(applib.getPageLoadWaitTime(), TimeUnit.SECONDS);

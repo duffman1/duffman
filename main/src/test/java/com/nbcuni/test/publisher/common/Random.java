@@ -23,12 +23,11 @@ public class Random {
 
         //TODO - add a loop that creates a string as long as needed and not just the standard UUID length
         //generate a random character string value
-    	String charString = UUID.randomUUID().toString().replace("-", "").substring(0, MaximumLength);
+    	String charString = UUID.randomUUID().toString() + UUID.randomUUID().toString() + UUID.randomUUID().toString() + UUID.randomUUID().toString() + UUID.randomUUID().toString();
+    	charString = charString.replace("-", "").substring(0, MaximumLength);
     	
         return charString;
     }
     
-    
-  
 }
 

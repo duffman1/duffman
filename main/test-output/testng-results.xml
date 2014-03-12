@@ -1,35 +1,425 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
+    <line>
+      <![CDATA[Open url 'http://qa4.qa.nbcupublisher7.publisher7.com'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter the user's password in the 'Password' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Login' button.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Structure' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Content types' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Character Profile' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Manage fields' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Character: First Name' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Character: First Name dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '150' in the 'Soft length limit' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '10' in the 'Soft length minimum' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save settings' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Character Profile dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Saved Character: First Name configuration.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify there are no errors present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Add content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Character Profile' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create Character Profile dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '599c' in the 'Character First Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the soft length under limit text of '4/150' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'ce2dcb6a280945f' in the 'Character First Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the soft length meets limit text of '15/150' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '654e8c0c1d10480a9ddeb625b896fdf729573aadce77439a8419e4296b48f51c2cf0bc59ff0a4c399b7b4e3547881821071df21eb9e446ffbd0d40ec09117947e3645604e53142a0ae51a4a63097ebd5' in the 'Character First Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the soft length exceeds limit text of '160/150' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the Cover Photo 'Select' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the select file frame.]]>
+    </line>
+    <line>
+      <![CDATA[Enter the file path for file upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Upload' button.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Public Local Files' radio button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Assert the file image 'HanSolo' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Assert the the img is loaded and visible.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create Character Profile dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Character Profile 654e8c0c1d10480a9ddeb625b896fdf729573aadce77439a8419e4296b48f51c2cf0bc59ff0a4c399b7b4e3547881821071df21eb9e446ffbd0d40ec09117947e3645604e53142a0ae51a4a63097ebd5 has been created.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify there are no errors present.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Structure' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Content types' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Character Profile' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Manage fields' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Character: First Name' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Character: First Name dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '' in the 'Soft length limit' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '' in the 'Soft length minimum' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save settings' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Character Profile dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Saved Character: First Name configuration.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify there are no errors present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Add content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Character Profile' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create Character Profile dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '599c' in the 'Character First Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the soft length under limit text of '4/150' is NOT present.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'ce2dcb6a280945f' in the 'Character First Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the soft length meets limit text of '15/150' is NOT present.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '654e8c0c1d10480a9ddeb625b896fdf729573aadce77439a8419e4296b48f51c2cf0bc59ff0a4c399b7b4e3547881821071df21eb9e446ffbd0d40ec09117947e3645604e53142a0ae51a4a63097ebd5' in the 'Character First Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the soft length exceeds limit text of '160/150' is NOT present.]]>
+    </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="14141" started-at="2014-03-11T18:02:59Z" finished-at="2014-03-11T18:03:13Z">
+  <suite name="Default suite" duration-ms="57741" started-at="2014-03-12T14:59:13Z" finished-at="2014-03-12T15:00:11Z">
     <groups>
       <group name="full">
-        <method signature="MultiEditorPublishingWorkflow.MultiEditorPublishingWorkflow_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentEntityModerationStatesWorkflows.MultiEditorPublishingWorkflow@35c283b5]" name="MultiEditorPublishingWorkflow_Test" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentEntityModerationStatesWorkflows.MultiEditorPublishingWorkflow"/>
+        <method signature="AddCharacterCountOptionTextFields.AddCharacterCountOptionTextFields_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.SoftLengthLimit.AddCharacterCountOptionTextFields@408f3be4]" name="AddCharacterCountOptionTextFields_Test" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.SoftLengthLimit.AddCharacterCountOptionTextFields"/>
       </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="14141" started-at="2014-03-11T18:02:59Z" finished-at="2014-03-11T18:03:13Z">
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentEntityModerationStatesWorkflows.MultiEditorPublishingWorkflow">
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentEntityModerationStatesWorkflows.MultiEditorPublishingWorkflow@35c283b5]" name="startSelenium" is-config="true" duration-ms="13552" started-at="2014-03-11T14:02:59Z" finished-at="2014-03-11T14:03:13Z">
+    <test name="Default test" duration-ms="57741" started-at="2014-03-12T14:59:13Z" finished-at="2014-03-12T15:00:11Z">
+      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.SoftLengthLimit.AddCharacterCountOptionTextFields">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.SoftLengthLimit.AddCharacterCountOptionTextFields@408f3be4]" name="startSelenium" is-config="true" duration-ms="13238" started-at="2014-03-12T10:59:13Z" finished-at="2014-03-12T10:59:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="MultiEditorPublishingWorkflow_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentEntityModerationStatesWorkflows.MultiEditorPublishingWorkflow@35c283b5]" name="MultiEditorPublishingWorkflow_Test" duration-ms="7" started-at="2014-03-11T14:03:13Z" finished-at="2014-03-11T14:03:13Z">
+        <test-method status="PASS" signature="AddCharacterCountOptionTextFields_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.SoftLengthLimit.AddCharacterCountOptionTextFields@408f3be4]" name="AddCharacterCountOptionTextFields_Test" duration-ms="43923" started-at="2014-03-12T10:59:27Z" finished-at="2014-03-12T11:00:10Z">
           <reporter-output>
+            <line>
+              <![CDATA[Open url 'http://qa4.qa.nbcupublisher7.publisher7.com'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter the user's password in the 'Password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Login' button.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Structure' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Content types' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Character Profile' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Manage fields' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Character: First Name' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Character: First Name dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '150' in the 'Soft length limit' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '10' in the 'Soft length minimum' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save settings' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Character Profile dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Saved Character: First Name configuration.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify there are no errors present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Add content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Character Profile' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Character Profile dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '599c' in the 'Character First Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the soft length under limit text of '4/150' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'ce2dcb6a280945f' in the 'Character First Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the soft length meets limit text of '15/150' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '654e8c0c1d10480a9ddeb625b896fdf729573aadce77439a8419e4296b48f51c2cf0bc59ff0a4c399b7b4e3547881821071df21eb9e446ffbd0d40ec09117947e3645604e53142a0ae51a4a63097ebd5' in the 'Character First Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the soft length exceeds limit text of '160/150' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the Cover Photo 'Select' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the select file frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter the file path for file upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Upload' button.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Public Local Files' radio button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Assert the file image 'HanSolo' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Assert the the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Character Profile dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Character Profile 654e8c0c1d10480a9ddeb625b896fdf729573aadce77439a8419e4296b48f51c2cf0bc59ff0a4c399b7b4e3547881821071df21eb9e446ffbd0d40ec09117947e3645604e53142a0ae51a4a63097ebd5 has been created.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify there are no errors present.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Structure' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Content types' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Character Profile' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Manage fields' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Character: First Name' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Character: First Name dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '' in the 'Soft length limit' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '' in the 'Soft length minimum' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save settings' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Character Profile dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Saved Character: First Name configuration.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify there are no errors present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Add content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Character Profile' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Character Profile dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '599c' in the 'Character First Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the soft length under limit text of '4/150' is NOT present.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'ce2dcb6a280945f' in the 'Character First Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the soft length meets limit text of '15/150' is NOT present.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '654e8c0c1d10480a9ddeb625b896fdf729573aadce77439a8419e4296b48f51c2cf0bc59ff0a4c399b7b4e3547881821071df21eb9e446ffbd0d40ec09117947e3645604e53142a0ae51a4a63097ebd5' in the 'Character First Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the soft length exceeds limit text of '160/150' is NOT present.]]>
+            </line>
           </reporter-output>
-        </test-method> <!-- MultiEditorPublishingWorkflow_Test -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentEntityModerationStatesWorkflows.MultiEditorPublishingWorkflow@35c283b5]" name="stopSelenium" is-config="true" duration-ms="569" started-at="2014-03-11T14:03:13Z" finished-at="2014-03-11T14:03:13Z">
+        </test-method> <!-- AddCharacterCountOptionTextFields_Test -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.SoftLengthLimit.AddCharacterCountOptionTextFields@408f3be4]" name="stopSelenium" is-config="true" duration-ms="569" started-at="2014-03-12T11:00:10Z" finished-at="2014-03-12T11:00:11Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=MultiEditorPublishingWorkflow_Test status=SUCCESS method=MultiEditorPublishingWorkflow.MultiEditorPublishingWorkflow_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentEntityModerationStatesWorkflows.MultiEditorPublishingWorkflow@35c283b5] output={null}]]]>
+                <![CDATA[[TestResult name=AddCharacterCountOptionTextFields_Test status=SUCCESS method=AddCharacterCountOptionTextFields.AddCharacterCountOptionTextFields_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.SoftLengthLimit.AddCharacterCountOptionTextFields@408f3be4] output=Open url 'http://qa4.qa.nbcupublisher7.publisher7.com'.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentEntityModerationStatesWorkflows.MultiEditorPublishingWorkflow -->
+      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.SoftLengthLimit.AddCharacterCountOptionTextFields -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
