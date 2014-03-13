@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.SoftLengthLimit.AddCharacterCountOptionTextFields">
+      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.IntegrateFocalPointModule.FocalPointModule">
         <methods>
           <include name="startSelenium"/>
+          <include name="FocalPointModule_Test"/>
           <include name="stopSelenium"/>
-          <include name="AddCharacterCountOptionTextFields_Test"/>
         </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.SoftLengthLimit.AddCharacterCountOptionTextFields -->
+      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.IntegrateFocalPointModule.FocalPointModule -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

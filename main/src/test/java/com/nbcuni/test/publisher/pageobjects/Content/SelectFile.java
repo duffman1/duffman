@@ -6,6 +6,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
@@ -85,6 +86,12 @@ public class SelectFile {
     
     @FindBy(how = How.XPATH, using = "//div[@class='throbber']")
     private static WebElement Spinner_Img;
+    
+    @FindBy(how = How.ID, using = "edit-indicator")
+    private static WebElement FocalPoint_Ind;
+    
+    @FindBy(how = How.ID, using = "edit-focal-point--2")
+    private static WebElement FocalPoint_Txb;
     
     private WebElement File_Lnk(String fileName) {
     	return webDriver.findElement(By.xpath("//a[text()='" + fileName + "']"));
@@ -181,6 +188,23 @@ public class SelectFile {
     	
     	Reporter.log("Click the 'Upload' button.");
     	Upload_Btn.click();
+    	
+    }
+    
+    public void DoucleClickFocalPointIndicator() throws Exception {
+    	
+    	Reporter.log("Double click the focal point indicator arrow.");
+    	Actions actions = new Actions(webDriver);
+    	actions.doubleClick(FocalPoint_Ind);
+    	actions.perform();
+    	
+    }
+    
+    public void VerifyFocalPointCoordinates(String coordinatesTxt) throws Exception {
+    	
+    	Reporter.log("Verify value of 'Focal Point' text box is '" + coordinatesTxt + "'.");
+    	wait.until(ExpectedConditions.visibilityOf(FocalPoint_Txb));
+    	Assert.assertEquals(FocalPoint_Txb.getAttribute("value"), coordinatesTxt);
     	
     }
     

@@ -4,10 +4,7 @@ import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Content.*;
-
-import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
-
 import java.util.Arrays;
 import java.util.List;
 
@@ -33,7 +30,6 @@ public class CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter ex
      * Step 15 - Click on the "Edit" tab, then click on the "Cast/Crew" tab and verify that the values selected in step 13 are retained<br>
      * Step 16 - Click on the "Publishing options" tab, select the "Moderation State" as "Published", uncheck the "Create new revision" checkbox, and click on the "Save" button<br>
      * Step 17 - Log out of publisher 7<br>
-     * Step 
      * @throws Throwable No Return values are needed
      *************************************************************************************/
     @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "smoke" })
@@ -41,35 +37,30 @@ public class CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter ex
          
         	//Step 1
         	UserLogin userLogin = applib.openApplication();
-        	PageFactory.initElements(webDriver, userLogin);
-            userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+        	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
             
             //Step 2
             taxonomy.NavigateSite("Content>>Add content>>Character Profile");
             
             //Step 3 
             CharactersInformation charactersInformation = new CharactersInformation(webDriver);
-            overlay.SwitchToFrame("Create Character Profile");
+            overlay.SwitchToActiveFrame();
             String characterName = random.GetCharacterString(15);
             charactersInformation.EnterCharacterFirstName(characterName);
             CoverPhoto coverPhoto = new CoverPhoto(webDriver);
-            PageFactory.initElements(webDriver, coverPhoto);
             coverPhoto.ClickSelectBtn();
             SelectFile selectFile = new SelectFile(webDriver, applib);
-            PageFactory.initElements(webDriver, selectFile);
             selectFile.SelectDefaultCoverImg();
-            overlay.SwitchToFrame("Create Character Profile");
-            ContentParent contentParent = new ContentParent(webDriver, applib);
-            PageFactory.initElements(webDriver, contentParent);
+            overlay.SwitchToActiveFrame();
             contentParent.ClickSaveBtn();
             overlay.switchToDefaultContent();
             contentParent.VerifyMessageStatus("Character Profile " + characterName + " has been created.");
             
             //Step 4
             taxonomy.NavigateSite("Content>>Add content>>Movie");
+            overlay.SwitchToActiveFrame();
             
             //Step 5
-            overlay.SwitchToFrame("Create Movie");
             CastCrew castCrew = new CastCrew(webDriver);
             castCrew.ClickCastCrewLnk();
             
@@ -93,18 +84,17 @@ public class CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter ex
             //Step 9 
             overlay.switchToDefaultContent();
             taxonomy.NavigateSite("Content>>Add content>>Person");
+            overlay.SwitchToActiveFrame();
             
             //Step 10
             PersonsInformation personsInformation = new PersonsInformation(webDriver);
-            overlay.SwitchToFrame("Create Person");
             String personFirstName = random.GetCharacterString(15);
             personsInformation.EnterFirstName(personFirstName);
             personsInformation.EnterBiography();
-            overlay.switchToDefaultContent();
-            overlay.SwitchToFrame("Create Person");
+            overlay.SwitchToActiveFrame();
             personsInformation.ClickCoverPhotoSelectBtn();
             selectFile.SelectDefaultCoverImg();
-            overlay.SwitchToFrame("Create Person");
+            overlay.SwitchToActiveFrame();
             contentParent.ClickSaveBtn();
             overlay.switchToDefaultContent();
             contentParent.VerifyMessageStatus("Person " + personFirstName + " has been created.");
@@ -113,7 +103,7 @@ public class CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter ex
             taxonomy.NavigateSite("Content>>Add content>>Movie");
             
             //Step 12
-            overlay.SwitchToFrame("Create Movie");
+            overlay.SwitchToActiveFrame();
             castCrew.ClickCastCrewLnk();
             
             //Step 13
@@ -127,19 +117,18 @@ public class CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter ex
             String movieTitle = random.GetCharacterString(15);
             basicInformation.EnterTitle(movieTitle);
             basicInformation.EnterSynopsis();
-            overlay.SwitchToFrame("Create Movie");
+            overlay.SwitchToActiveFrame();
             basicInformation.ClickCoverSelectBtn();
             selectFile.SelectDefaultCoverImg();
-            overlay.SwitchToFrame("Create Movie");
+            overlay.SwitchToActiveFrame();
             contentParent.ClickSaveBtn();
             overlay.switchToDefaultContent();
             contentParent.VerifyMessageStatus("Movie " + movieTitle + " has been created.");
             
             //Step 15
             WorkBench workBench = new WorkBench(webDriver, applib);
-            PageFactory.initElements(webDriver, workBench);
             workBench.ClickWorkBenchTab("Edit Draft");
-            overlay.SwitchToFrame(movieTitle);
+            overlay.SwitchToActiveFrame();
             castCrew.ClickCastCrewLnk();
             castCrew.VerifyCharacterTxbDisplayed();
             castCrew.VerifyPersonNameValue(personFirstName, "1");
@@ -155,7 +144,6 @@ public class CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter ex
             
             //Step 17
             overlay.switchToDefaultContent();
-            new RevisionState(webDriver);
             workBench.VerifyWorkBenchBlockTextPresent(Arrays.asList("Published"));
             
     }

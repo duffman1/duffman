@@ -29,6 +29,9 @@ public class ManageFileDisplay {
     }
     
     //PAGE OBJECT IDENTIFIERS
+    @FindBy(how = How.ID, using = "edit-displays-file-field-image-status")
+    private static WebElement Image_Cbx;
+    
     @FindBy(how = How.ID, using = "edit-displays-pub-mpx-image-status")
     private static WebElement PubMPXImage_Cbx;
     
@@ -47,11 +50,22 @@ public class ManageFileDisplay {
     @FindBy(how = How.XPATH, using = "//a/strong[text()='Pub MPX Image']")
     private static WebElement PubMPXImage_Lnk;
     
+    @FindBy(how = How.ID, using = "edit-displays-file-field-image-settings-image-style")
+    private static WebElement ImageStyle_Ddl;
+    
     @FindBy(how = How.ID, using = "edit-actions-submit")
     private static WebElement SaveConfiguration_Btn;
     
     
     //PAGE OBJECT METHODS
+    public void CheckImageCbx() throws Exception {
+    	
+    	if (Image_Cbx.isSelected() == false) {
+    		Reporter.log("Check the 'Image' checkbox");
+    		Image_Cbx.click();
+    	}
+    }
+
     public void ClickPubMPXVideoCbx() throws Exception {
     	
     	if (PubMPXVideo_Cbx.isSelected() == false) {
@@ -102,12 +116,17 @@ public class ManageFileDisplay {
     	new Select(PubMPXImageStyle_Ddl).selectByVisibleText(style);
     }
     
+    public void SelectImageStyle(String style) throws Exception {
+    	
+    	Reporter.log("Select the '" + style + "' option from the 'Image Style' drop down list.");
+    	new Select(ImageStyle_Ddl).selectByVisibleText(style);
+    }
+    
     public void ClickSaveConfigurationBtn() throws Exception {
     	
     	Reporter.log("Click the 'Save configuration' button.");
     	SaveConfiguration_Btn.click();
     }
-    
     
     
 }

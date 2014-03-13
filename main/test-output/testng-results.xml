@@ -14,40 +14,58 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Structure' menu link.]]>
+      <![CDATA[Click the 'Modules' menu link.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Content types' menu link.]]>
+      <![CDATA[Switch to frame titled 'Modules'.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Character Profile' menu link.]]>
+      <![CDATA[Enter 'Focal Point' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Manage fields' menu link.]]>
+      <![CDATA[Wait for the module titled 'Focal Point' to appear in the list.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Character: First Name' menu link.]]>
+      <![CDATA[Click the 'Close Overlay X'.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Character: First Name dialog'.]]>
+      <![CDATA[Mouse over the 'Configuration' menu link.]]>
     </line>
     <line>
-      <![CDATA[Enter '150' in the 'Soft length limit' text box.]]>
+      <![CDATA[Mouse over the 'Media' menu link.]]>
     </line>
     <line>
-      <![CDATA[Enter '10' in the 'Soft length minimum' text box.]]>
+      <![CDATA[Click the 'Focal Point' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save settings' button.]]>
+      <![CDATA[Switch to the active frame titled 'Media dialog'.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Character Profile dialog'.]]>
+      <![CDATA[Select 'Thumbnail (100x100)' from the 'Preview Image Style' drop down list.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'Saved Character: First Name configuration.' is present.]]>
+      <![CDATA[Click the 'Save configuration' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
     </line>
     <line>
       <![CDATA[Verify there are no errors present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Configuration' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Media' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Image styles' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Image styles dialog'.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
@@ -59,31 +77,25 @@
       <![CDATA[Mouse over the 'Add content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Character Profile' menu link.]]>
+      <![CDATA[Click the 'Movie' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Create Character Profile dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
     </line>
     <line>
-      <![CDATA[Enter '599c' in the 'Character First Name' text box.]]>
+      <![CDATA[Enter '4ba4f72446444e8' in the 'Title' text box.]]>
     </line>
     <line>
-      <![CDATA[Verify the soft length under limit text of '4/150' is present.]]>
+      <![CDATA[Switch to the Synopsis frame.]]>
     </line>
     <line>
-      <![CDATA[Enter 'ce2dcb6a280945f' in the 'Character First Name' text box.]]>
+      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
     </line>
     <line>
-      <![CDATA[Verify the soft length meets limit text of '15/150' is present.]]>
+      <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
     </line>
     <line>
-      <![CDATA[Enter '654e8c0c1d10480a9ddeb625b896fdf729573aadce77439a8419e4296b48f51c2cf0bc59ff0a4c399b7b4e3547881821071df21eb9e446ffbd0d40ec09117947e3645604e53142a0ae51a4a63097ebd5' in the 'Character First Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the soft length exceeds limit text of '160/150' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the Cover Photo 'Select' button.]]>
+      <![CDATA[Click the 'Cover' select button.]]>
     </line>
     <line>
       <![CDATA[Switch to the select file frame.]]>
@@ -113,103 +125,49 @@
       <![CDATA[Assert the the img is loaded and visible.]]>
     </line>
     <line>
+      <![CDATA[Double click the focal point indicator arrow.]]>
+    </line>
+    <line>
+      <![CDATA[Verify value of 'Focal Point' text box is '50,50'.]]>
+    </line>
+    <line>
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Create Character Profile dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'Character Profile 654e8c0c1d10480a9ddeb625b896fdf729573aadce77439a8419e4296b48f51c2cf0bc59ff0a4c399b7b4e3547881821071df21eb9e446ffbd0d40ec09117947e3645604e53142a0ae51a4a63097ebd5 has been created.' is present.]]>
+      <![CDATA[Verify success message of 'Movie 4ba4f72446444e8 has been created.' is present.]]>
     </line>
     <line>
       <![CDATA[Verify there are no errors present.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Structure' menu link.]]>
+      <![CDATA[Assert that img source of the Media Item contains 'HanSolo'.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Content types' menu link.]]>
+      <![CDATA[Assert the the img is loaded and visible.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Character Profile' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Manage fields' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Character: First Name' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Character: First Name dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '' in the 'Soft length limit' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '' in the 'Soft length minimum' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save settings' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Character Profile dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Saved Character: First Name configuration.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify there are no errors present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Add content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Character Profile' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Character Profile dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '599c' in the 'Character First Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the soft length under limit text of '4/150' is NOT present.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'ce2dcb6a280945f' in the 'Character First Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the soft length meets limit text of '15/150' is NOT present.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '654e8c0c1d10480a9ddeb625b896fdf729573aadce77439a8419e4296b48f51c2cf0bc59ff0a4c399b7b4e3547881821071df21eb9e446ffbd0d40ec09117947e3645604e53142a0ae51a4a63097ebd5' in the 'Character First Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the soft length exceeds limit text of '160/150' is NOT present.]]>
+      <![CDATA[Assert that the workbench image width = '200' and the image height = '200'.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="57741" started-at="2014-03-12T14:59:13Z" finished-at="2014-03-12T15:00:11Z">
+  <suite name="Default suite" duration-ms="47585" started-at="2014-03-13T12:45:27Z" finished-at="2014-03-13T12:46:14Z">
     <groups>
       <group name="full">
-        <method signature="AddCharacterCountOptionTextFields.AddCharacterCountOptionTextFields_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.SoftLengthLimit.AddCharacterCountOptionTextFields@408f3be4]" name="AddCharacterCountOptionTextFields_Test" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.SoftLengthLimit.AddCharacterCountOptionTextFields"/>
+        <method signature="FocalPointModule.FocalPointModule_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.IntegrateFocalPointModule.FocalPointModule@30404564]" name="FocalPointModule_Test" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.IntegrateFocalPointModule.FocalPointModule"/>
       </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="57741" started-at="2014-03-12T14:59:13Z" finished-at="2014-03-12T15:00:11Z">
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.SoftLengthLimit.AddCharacterCountOptionTextFields">
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.SoftLengthLimit.AddCharacterCountOptionTextFields@408f3be4]" name="startSelenium" is-config="true" duration-ms="13238" started-at="2014-03-12T10:59:13Z" finished-at="2014-03-12T10:59:27Z">
+    <test name="Default test" duration-ms="47585" started-at="2014-03-13T12:45:27Z" finished-at="2014-03-13T12:46:14Z">
+      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.IntegrateFocalPointModule.FocalPointModule">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.IntegrateFocalPointModule.FocalPointModule@30404564]" name="startSelenium" is-config="true" duration-ms="18811" started-at="2014-03-13T08:45:27Z" finished-at="2014-03-13T08:45:46Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="AddCharacterCountOptionTextFields_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.SoftLengthLimit.AddCharacterCountOptionTextFields@408f3be4]" name="AddCharacterCountOptionTextFields_Test" duration-ms="43923" started-at="2014-03-12T10:59:27Z" finished-at="2014-03-12T11:00:10Z">
+        <test-method status="PASS" signature="FocalPointModule_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.IntegrateFocalPointModule.FocalPointModule@30404564]" name="FocalPointModule_Test" duration-ms="28672" started-at="2014-03-13T08:45:46Z" finished-at="2014-03-13T08:46:14Z">
           <reporter-output>
             <line>
               <![CDATA[Open url 'http://qa4.qa.nbcupublisher7.publisher7.com'.]]>
@@ -224,40 +182,58 @@
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Structure' menu link.]]>
+              <![CDATA[Click the 'Modules' menu link.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Content types' menu link.]]>
+              <![CDATA[Switch to frame titled 'Modules'.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Character Profile' menu link.]]>
+              <![CDATA[Enter 'Focal Point' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Manage fields' menu link.]]>
+              <![CDATA[Wait for the module titled 'Focal Point' to appear in the list.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Character: First Name' menu link.]]>
+              <![CDATA[Click the 'Close Overlay X'.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Character: First Name dialog'.]]>
+              <![CDATA[Mouse over the 'Configuration' menu link.]]>
             </line>
             <line>
-              <![CDATA[Enter '150' in the 'Soft length limit' text box.]]>
+              <![CDATA[Mouse over the 'Media' menu link.]]>
             </line>
             <line>
-              <![CDATA[Enter '10' in the 'Soft length minimum' text box.]]>
+              <![CDATA[Click the 'Focal Point' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save settings' button.]]>
+              <![CDATA[Switch to the active frame titled 'Media dialog'.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Character Profile dialog'.]]>
+              <![CDATA[Select 'Thumbnail (100x100)' from the 'Preview Image Style' drop down list.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'Saved Character: First Name configuration.' is present.]]>
+              <![CDATA[Click the 'Save configuration' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
             </line>
             <line>
               <![CDATA[Verify there are no errors present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Configuration' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Media' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Image styles' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Image styles dialog'.]]>
             </line>
             <line>
               <![CDATA[Click the 'Close Overlay X'.]]>
@@ -269,31 +245,25 @@
               <![CDATA[Mouse over the 'Add content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Character Profile' menu link.]]>
+              <![CDATA[Click the 'Movie' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create Character Profile dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
             </line>
             <line>
-              <![CDATA[Enter '599c' in the 'Character First Name' text box.]]>
+              <![CDATA[Enter '4ba4f72446444e8' in the 'Title' text box.]]>
             </line>
             <line>
-              <![CDATA[Verify the soft length under limit text of '4/150' is present.]]>
+              <![CDATA[Switch to the Synopsis frame.]]>
             </line>
             <line>
-              <![CDATA[Enter 'ce2dcb6a280945f' in the 'Character First Name' text box.]]>
+              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
             </line>
             <line>
-              <![CDATA[Verify the soft length meets limit text of '15/150' is present.]]>
+              <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
             </line>
             <line>
-              <![CDATA[Enter '654e8c0c1d10480a9ddeb625b896fdf729573aadce77439a8419e4296b48f51c2cf0bc59ff0a4c399b7b4e3547881821071df21eb9e446ffbd0d40ec09117947e3645604e53142a0ae51a4a63097ebd5' in the 'Character First Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the soft length exceeds limit text of '160/150' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the Cover Photo 'Select' button.]]>
+              <![CDATA[Click the 'Cover' select button.]]>
             </line>
             <line>
               <![CDATA[Switch to the select file frame.]]>
@@ -323,103 +293,49 @@
               <![CDATA[Assert the the img is loaded and visible.]]>
             </line>
             <line>
+              <![CDATA[Double click the focal point indicator arrow.]]>
+            </line>
+            <line>
+              <![CDATA[Verify value of 'Focal Point' text box is '50,50'.]]>
+            </line>
+            <line>
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create Character Profile dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'Character Profile 654e8c0c1d10480a9ddeb625b896fdf729573aadce77439a8419e4296b48f51c2cf0bc59ff0a4c399b7b4e3547881821071df21eb9e446ffbd0d40ec09117947e3645604e53142a0ae51a4a63097ebd5 has been created.' is present.]]>
+              <![CDATA[Verify success message of 'Movie 4ba4f72446444e8 has been created.' is present.]]>
             </line>
             <line>
               <![CDATA[Verify there are no errors present.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Structure' menu link.]]>
+              <![CDATA[Assert that img source of the Media Item contains 'HanSolo'.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Content types' menu link.]]>
+              <![CDATA[Assert the the img is loaded and visible.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Character Profile' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Manage fields' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Character: First Name' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Character: First Name dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '' in the 'Soft length limit' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '' in the 'Soft length minimum' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save settings' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Character Profile dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Saved Character: First Name configuration.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify there are no errors present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Add content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Character Profile' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Character Profile dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '599c' in the 'Character First Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the soft length under limit text of '4/150' is NOT present.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'ce2dcb6a280945f' in the 'Character First Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the soft length meets limit text of '15/150' is NOT present.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '654e8c0c1d10480a9ddeb625b896fdf729573aadce77439a8419e4296b48f51c2cf0bc59ff0a4c399b7b4e3547881821071df21eb9e446ffbd0d40ec09117947e3645604e53142a0ae51a4a63097ebd5' in the 'Character First Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the soft length exceeds limit text of '160/150' is NOT present.]]>
+              <![CDATA[Assert that the workbench image width = '200' and the image height = '200'.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- AddCharacterCountOptionTextFields_Test -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.SoftLengthLimit.AddCharacterCountOptionTextFields@408f3be4]" name="stopSelenium" is-config="true" duration-ms="569" started-at="2014-03-12T11:00:10Z" finished-at="2014-03-12T11:00:11Z">
+        </test-method> <!-- FocalPointModule_Test -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.IntegrateFocalPointModule.FocalPointModule@30404564]" name="stopSelenium" is-config="true" duration-ms="84" started-at="2014-03-13T08:46:14Z" finished-at="2014-03-13T08:46:14Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=AddCharacterCountOptionTextFields_Test status=SUCCESS method=AddCharacterCountOptionTextFields.AddCharacterCountOptionTextFields_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.SoftLengthLimit.AddCharacterCountOptionTextFields@408f3be4] output=Open url 'http://qa4.qa.nbcupublisher7.publisher7.com'.]]]>
+                <![CDATA[[TestResult name=FocalPointModule_Test status=SUCCESS method=FocalPointModule.FocalPointModule_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.IntegrateFocalPointModule.FocalPointModule@30404564] output=Open url 'http://qa4.qa.nbcupublisher7.publisher7.com'.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.SoftLengthLimit.AddCharacterCountOptionTextFields -->
+      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.IntegrateFocalPointModule.FocalPointModule -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

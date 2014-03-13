@@ -116,7 +116,7 @@ public class ContentParent {
 
     public void VerifyPageContentPresent(List<String> txtItems) throws Exception {
 
-    	Thread.sleep(250); //stale element exception
+    	Thread.sleep(500); //stale element exception
         String bodyTxt = Body_Txt.getText();
 
         for (String text : txtItems) {

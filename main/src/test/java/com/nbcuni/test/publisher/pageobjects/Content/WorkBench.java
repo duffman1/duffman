@@ -134,6 +134,14 @@ public class WorkBench {
         }
     }
     
+    public void VerifyFileImageSize(String imageIndex, String height, String width) throws Exception {
+    	
+    	Reporter.log("Assert that the workbench image width = '" + width + "' and the image height = '" + height + "'.");
+    	Assert.assertEquals(WorkBench_Img(imageIndex).getAttribute("width"), width);
+    	Assert.assertEquals(WorkBench_Img(imageIndex).getAttribute("height"), height);
+    	  
+    }
+    
     public String GetFileImageId(String imageIndex) {
     	
     	Reporter.log("Get the file id of image number " + imageIndex + ".");
