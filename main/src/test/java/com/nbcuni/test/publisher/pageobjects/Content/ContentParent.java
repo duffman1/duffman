@@ -24,13 +24,13 @@ import java.util.List;
 public class ContentParent {
 
     private static CustomWebDriver webDriver;
-    private static AppLib applib;
+    private static ErrorChecking errorChecking;
     
     //PAGE OBJECT CONSTRUCTOR
     public ContentParent(CustomWebDriver webDriver, AppLib applib) {
         ContentParent.webDriver = webDriver;
-        ContentParent.applib = applib;
         PageFactory.initElements(webDriver, this);
+        errorChecking = new ErrorChecking(webDriver, applib);
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -90,7 +90,6 @@ public class ContentParent {
     	}
     	
     	Reporter.log("Verify there are no errors present.");
-    	ErrorChecking errorChecking = new ErrorChecking(webDriver, applib);
     	errorChecking.VerifyNoMessageErrorsPresent();
     }
     
@@ -98,6 +97,9 @@ public class ContentParent {
     	
     	Reporter.log("Verify warning message '" + warningTxt + "' is present.");
     	Assert.assertTrue(Warning_Ctr.getText().contains(warningTxt));
+    	
+    	Reporter.log("Verify there are no errors present.");
+    	errorChecking.VerifyNoMessageErrorsPresent();
     }
     
     public void VerifyRequiredFields(List<String> allFields) throws Exception {

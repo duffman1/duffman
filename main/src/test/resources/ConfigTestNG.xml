@@ -1,10 +1,10 @@
 <suite name="Test Suite for Publisher 7" parallel="methods" thread-count="1" preserve-order="true">
 
 	<!--RUNTIME CONFIG-->
-	<parameter name="AppURL" value="http://qa4.qa.nbcupublisher7.publisher7.com"></parameter>
+	<parameter name="AppURL" value="http://qa5.qa.nbcupublisher7.publisher7.com"></parameter>
 	<parameter name="Admin1Username" value="admin@publisher.nbcuni.com"></parameter>
 	<parameter name="Admin1Password" value="pa55word"></parameter>
-	<parameter name="ReRunOnFailure" value="false"></parameter>
+	<parameter name="ReRunOnFailure" value="true"></parameter>
 	<parameter name="ReRunOnFailureCount" value="2"></parameter>
   	
   	<!--REPORT CONFIG-->
@@ -87,6 +87,7 @@
 			<class name="com.nbcuni.test.publisher.tests.Advertising.Comscore.PixelmanModuleSetupAndVerification"/>
 			<class name="com.nbcuni.test.publisher.tests.Advertising.GooglePublisherTagsGPT.GPTConfiguration"/>
 			<class name="com.nbcuni.test.publisher.tests.Advertising.GooglePublisherTagsGPT.GPTTagsVerification"/>
+			<class name="com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds"/>
 			
 			<!--CONTENT AND ENTITY CREATION AND MANAGEMENT-->
 			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost"/>
