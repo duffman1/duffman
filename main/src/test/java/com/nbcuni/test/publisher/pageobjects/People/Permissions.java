@@ -1,7 +1,11 @@
 package com.nbcuni.test.publisher.pageobjects.People;
 
+import com.nbcuni.test.publisher.common.AppLib;
+import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 import com.nbcuni.test.webdriver.CustomWebDriver;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -21,11 +25,13 @@ import java.util.List;
 public class Permissions {
 
     private static CustomWebDriver webDriver;
+    private static ContentParent contentParent;
     
     //PAGE OBJECT CONSTRUCTOR
-    public Permissions(CustomWebDriver webDriver) {
+    public Permissions(CustomWebDriver webDriver, AppLib applib) {
         Permissions.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
+        contentParent = new ContentParent(webDriver, applib);
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -71,7 +77,13 @@ public class Permissions {
     	for (String value : permissionValues) {
     		if (Permission_Cbx(value).isSelected() == false) {
     			Reporter.log("Check the '" + value + "' checkbox.");
-    			Permission_Cbx(value).click();
+    			try {
+    				Permission_Cbx(value).click();
+    			}
+    			catch (WebDriverException e) {
+    				contentParent.Scroll("-500");
+    				Permission_Cbx(value).click();
+    			}
     		}
     	}
     }

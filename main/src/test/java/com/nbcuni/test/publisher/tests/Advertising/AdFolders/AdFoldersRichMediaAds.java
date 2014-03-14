@@ -42,7 +42,7 @@ public class AdFoldersRichMediaAds extends ParentTest {
         
         //Step 4
         String sideFileName = random.GetCharacterString(15);
-        AddNewSideFile addNewSideFile = new AddNewSideFile(webDriver);
+        AddNewSideFile addNewSideFile = new AddNewSideFile(webDriver, applib);
         addNewSideFile.EnterName(sideFileName);
         
         //Step 5
@@ -67,7 +67,6 @@ public class AdFoldersRichMediaAds extends ParentTest {
         overlay.SwitchToActiveFrame();
         
         //Step 10
-        publisherAdsSideFiles.VerifyAdSideFileStorageType("Atlas", "Default");
         publisherAdsSideFiles.ClickAdSideFileEditLnk("Atlas");
         overlay.SwitchToActiveFrame();
         

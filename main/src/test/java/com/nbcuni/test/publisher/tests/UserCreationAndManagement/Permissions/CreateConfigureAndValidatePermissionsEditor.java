@@ -101,7 +101,7 @@ public class CreateConfigureAndValidatePermissionsEditor extends ParentTest{
         overlay.SwitchToActiveFrame();
         
         //Step 6
-        Permissions permissions = new Permissions(webDriver);
+        Permissions permissions = new Permissions(webDriver, applib);
         permissions.EnablePermissions(Arrays.asList("create post content", 
         		"edit own post content", "delete own post content", "create files"));
         permissions.DisablePermissions(Arrays.asList("edit any post content", "delete any post content"));

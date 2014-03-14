@@ -39,6 +39,10 @@ public class TestSetup extends ParentTest{
         	modules.EnterFilterName("Devel");
             modules.DisableModule("Devel");
             
+            //disable the deprecated 'ImageField Focus" module.
+            modules.EnterFilterName("ImageField Focus");
+            modules.DisableModule("ImageField Focus");
+            
             //disable database logging module
             modules.EnterFilterName("Database logging");
             modules.DisableModule("Database logging");

@@ -50,6 +50,10 @@ public class ImageStyles {
 		return webDriver.findElement(By.xpath("//a[text()='" + styleName + "']"));
 	}
 	
+	private static WebElement StyleDelete_Lnk(String styleName) {
+		return webDriver.findElement(By.xpath("//a[text()='" + styleName + "']/../..//a[text()='delete']"));
+	}
+	
 	
 	//PAGE OBJECT METHODS
 	public boolean FocalImageStylePresent(String styleName) throws Exception {
@@ -68,6 +72,12 @@ public class ImageStyles {
         webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
         
         return elPresent;
+	}
+	
+	public void ClickDeleteStyleLnk(String styleName) throws Exception {
+
+		Reporter.log("Click the 'delete' link for style name '" + styleName + "'.");
+		StyleDelete_Lnk(styleName).click();
 	}
 	
 	public void EnterStyleName(String name) throws Exception {

@@ -31,7 +31,7 @@ public class RolesPredefinedInPublisher7 extends ParentTest{
         overlay.SwitchToActiveFrame();
         
         //Step 3
-        Permissions permissions = new Permissions(webDriver);
+        Permissions permissions = new Permissions(webDriver, applib);
         permissions.VerifyRoleColumns();
         
         //Step 4

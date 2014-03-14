@@ -1,11 +1,15 @@
 package com.nbcuni.test.publisher.pageobjects.Structure;
 
+import java.util.concurrent.TimeUnit;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Reporter;
+import com.nbcuni.test.publisher.common.AppLib;
+import com.nbcuni.test.publisher.pageobjects.Overlay;
 import com.nbcuni.test.webdriver.CustomWebDriver;
 
 /*********************************************
@@ -17,9 +21,16 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 
 public class AddNewSideFile {
 
+	private static CustomWebDriver webDriver;
+	private static AppLib applib;
+	private static Overlay overlay;
+	
     //PAGE OBJECT CONSTRUCTOR
-    public AddNewSideFile(CustomWebDriver webDriver) {
+    public AddNewSideFile(CustomWebDriver webDriver, AppLib applib) {
+    	AddNewSideFile.webDriver = webDriver;
+    	AddNewSideFile.applib = applib;
     	PageFactory.initElements(webDriver, this);
+    	overlay = new Overlay(webDriver, applib);
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -91,7 +102,16 @@ public class AddNewSideFile {
     public void ClickSaveBtn() throws Exception {
         
     	Reporter.log("Click the 'Save' button.");
-    	Save_Btn.click();
+    	webDriver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+    	try {
+    		Save_Btn.click();
+    	}
+    	catch (NoSuchElementException e) {
+    		webDriver.navigate().refresh();
+    		overlay.SwitchToActiveFrame();
+    		Save_Btn.click();
+    	}
+    	webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
     }
     
     public void ClickRevertBtn() throws Exception {
