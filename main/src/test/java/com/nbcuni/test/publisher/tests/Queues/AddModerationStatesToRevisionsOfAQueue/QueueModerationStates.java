@@ -48,7 +48,7 @@ public class QueueModerationStates extends ParentTest{
         
         //Step 2
         taxonomy.NavigateSite("Content>>Queues>>Add Promo Queue");
-        overlay.SwitchToFrame("Add promo queue");
+        overlay.SwitchToActiveFrame();
         
         //Step 3
         Queues queues = new Queues(webDriver);
@@ -56,21 +56,18 @@ public class QueueModerationStates extends ParentTest{
         queues.EnterTitle(queueTitle);
         queues.EnterQueueItem(postTitle, "1");
         queues.ClickSaveQueueBtn();
-        overlay.switchToDefaultContent();
-        overlay.SwitchToFrame("Queues Listing");
+        overlay.SwitchToActiveFrame();
         queues.VerifyQueuesInList(Arrays.asList(queueTitle)); 
         
         //Step 4
         queues.ClickEditQueueExtendMenuBtn(queueTitle);
         queues.ClickEditQueueMenuBtn(queueTitle);
-        overlay.switchToDefaultContent();
-        overlay.SwitchToFrame(queueTitle);
+        overlay.SwitchToActiveFrame();
         
         //Step 5
         QueuesRevisionList queuesRevisionList = new QueuesRevisionList(webDriver);
         queuesRevisionList.ClickRevisionsLnk();
-        overlay.switchToDefaultContent();
-        overlay.SwitchToFrame("Queues Revision list");
+        overlay.SwitchToActiveFrame();
         SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
         sdf.setTimeZone(TimeZone.getTimeZone("UTC"));
     	String date = sdf.format(new Date());
@@ -79,34 +76,29 @@ public class QueueModerationStates extends ParentTest{
         
         //Step 6
         queuesRevisionList.ClickCancelLnk();
-        overlay.switchToDefaultContent();
-        overlay.SwitchToFrame(queueTitle);
+        overlay.SwitchToActiveFrame();
         
         //Step 7
         overlay.ClickCloseOverlayLnk();
         
         //Step 8
         taxonomy.NavigateSite("Content>>Queues");
-        overlay.SwitchToFrame("Queues Listing");
+        overlay.SwitchToActiveFrame();
         queues.ClickEditQueueExtendMenuBtn(queueTitle);
         queues.ClickEditQueueMenuBtn(queueTitle);
-        overlay.switchToDefaultContent();
-        overlay.SwitchToFrame(queueTitle);
+        overlay.SwitchToActiveFrame();
         queuesRevisionList.ClickRevisionsLnk();
-        overlay.switchToDefaultContent();
-        overlay.SwitchToFrame("Queues Revision list");
+        overlay.SwitchToActiveFrame();
         PublishingOptions publishingOptions = new PublishingOptions(webDriver);
         publishingOptions.SelectModerationState("Publish");
         String messageForStateChange = random.GetCharacterString(15) + " " + random.GetCharacterString(10);
         publishingOptions.EnterMessageForStateChange(messageForStateChange);
         queuesRevisionList.ClickUpdateStateBtn();
-        ContentParent contentParent= new ContentParent(webDriver, applib);
         contentParent.VerifyMessageStatus(queueTitle + " transitioned to the published state.");
         
         //Step 9
         queuesRevisionList.ClickRevisionsLnk();
-        overlay.switchToDefaultContent();
-        overlay.SwitchToFrame("Queues Revision list");
+        overlay.SwitchToActiveFrame();
         queuesRevisionList.VerifyStateFlowHistoryEvent("Revision was set from Draft to Published on " + date);
         queuesRevisionList.VerifyStateFlowHistoryEvent(messageForStateChange);
         
@@ -115,14 +107,12 @@ public class QueueModerationStates extends ParentTest{
         String messageForStateChangeUnpub = random.GetCharacterString(15) + " " + random.GetCharacterString(10);
         publishingOptions.EnterMessageForStateChange(messageForStateChangeUnpub);
         queuesRevisionList.ClickUpdateStateBtn();
-        overlay.switchToDefaultContent();
-        overlay.SwitchToFrame(queueTitle);
+        overlay.SwitchToActiveFrame();
         contentParent.VerifyMessageStatus(queueTitle + " transitioned to the unpublished state.");
         
         //Step 11
         queuesRevisionList.ClickRevisionsLnk();
-        overlay.switchToDefaultContent();
-        overlay.SwitchToFrame("Queues Revision list");
+        overlay.SwitchToActiveFrame();
         queuesRevisionList.VerifyStateFlowHistoryEvent("Revision was set from Published to Unpublished on " + date);
         queuesRevisionList.VerifyStateFlowHistoryEvent(messageForStateChangeUnpub);
         

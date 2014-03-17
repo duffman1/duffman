@@ -51,6 +51,13 @@ public class ErrorChecking {
     
     
     //PAGE OBJECT METHODS
+    public void VerifyErrorMessagePresent(String errorMessage) throws Exception {
+    	
+    	if (!Error_Ctr.getText().contains(errorMessage)) {
+    		Assert.fail("Error message container does not contain error message '" + errorMessage + "'.");
+    	}
+    }
+
     public void VerifyAllRequiredFields(List<String> allFieldTitles) throws Exception {
     	
     	for (String field : allFieldTitles) {

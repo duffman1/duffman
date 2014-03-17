@@ -102,6 +102,12 @@ public class ContentParent {
     	errorChecking.VerifyNoMessageErrorsPresent();
     }
     
+    public void VerifyMessageError(String errorMessage) throws Exception {
+    	
+    	Reporter.log("Verify error message of '" + errorMessage + "' is present.");
+    	errorChecking.VerifyErrorMessagePresent(errorMessage);
+    }
+    
     public void VerifyRequiredFields(List<String> allFields) throws Exception {
     	
     	for (String field : allFields) {

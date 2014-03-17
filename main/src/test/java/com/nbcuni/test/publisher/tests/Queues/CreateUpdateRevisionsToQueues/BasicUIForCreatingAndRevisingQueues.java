@@ -44,9 +44,9 @@ public class BasicUIForCreatingAndRevisingQueues extends ParentTest{
         
         //Step 2
         taxonomy.NavigateSite("Content>>Queues>>Add Promo Queue");
+        overlay.SwitchToActiveFrame();
         
         //Step 3
-        overlay.SwitchToFrame("Add promo queue queue dialog");
         Queues queues = new Queues(webDriver);
         queues.ClickSaveQueueBtn();
         ErrorChecking errorChecking = new ErrorChecking(webDriver, applib);
@@ -109,8 +109,7 @@ public class BasicUIForCreatingAndRevisingQueues extends ParentTest{
     	
         queuesRevisionList.VerifyStateFlowHistoryEvent("Revision was set from Draft to Draft on " + date);
         
-        //Step 12 on
-        //per Mirza these steps are no longer needed as functionality has changed since test update. Above steps are sufficient for test purposes.
+        //Step 12-14 N/A
         
     }
 }

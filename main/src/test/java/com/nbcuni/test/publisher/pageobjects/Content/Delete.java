@@ -25,6 +25,9 @@ public class Delete {
     @FindBy(how = How.XPATH, using = "//input[@value='Delete']")
     private static WebElement Delete_Btn;
     
+    @FindBy(how = How.XPATH, using = "//input[@value='Delete revision']")
+    private static WebElement DeleteRevision_Btn;
+    
     @FindBy(how = How.XPATH, using = "//a[text()='Cancel']")
     private static WebElement Cancel_Lnk;
     
@@ -34,6 +37,12 @@ public class Delete {
     	
     	Reporter.log("Click the 'Delete' button.");
     	Delete_Btn.click();
+    }
+    
+    public void ClickDeleteRevisionBtn() throws Exception {
+    	
+    	Reporter.log("Click the 'Delete revision' button.");
+    	DeleteRevision_Btn.click();
     }
     
     public void ClickCancelLnk() throws Exception {

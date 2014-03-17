@@ -1,11 +1,17 @@
 package com.nbcuni.test.publisher.pageobjects.Queues;
 
+import java.util.List;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
+
 import com.nbcuni.test.webdriver.CustomWebDriver;
 
 /*********************************************
@@ -17,9 +23,14 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 
 public class QueuesRevisionList {
 
+	private static CustomWebDriver webDriver;
+	private static WebDriverWait wait;
+	
     //PAGE OBJECT CONSTRUCTOR
     public QueuesRevisionList(CustomWebDriver webDriver) {
+    	QueuesRevisionList.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
+        wait = new WebDriverWait(webDriver, 10);
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -34,6 +45,22 @@ public class QueuesRevisionList {
     
     @FindBy(how = How.ID, using = "edit-cancel")
     private static WebElement Cancel_Lnk;
+    
+    private static WebElement EditExtendMenu_Btn(String index) {
+		return webDriver.findElement(By.xpath("(//table[contains(@class, 'views-table')]//td/..//a[text()='operations'])[" + index + "]"));
+	}
+	
+	private static WebElement EditMenuDelete_Btn(String index) {
+		return webDriver.findElement(By.xpath("(//table[contains(@class, 'views-table')]//td/..//a[text()='Delete'])[" + index + "]"));
+	}
+	
+	private static WebElement EditMenu_Btn(String index) {
+		return webDriver.findElement(By.xpath("(//table[contains(@class, 'views-table')]//td/..//a[text()='Edit'])[" + index + "]"));
+	}
+	
+	private static List<WebElement> StateFlow_Rws() {
+		return webDriver.findElements(By.xpath("//table[contains(@class, 'views-table')]//tr[contains(@class, 'state-flow')]"));
+	}
     
     
     //PAGE OBJECT METHODS
@@ -61,6 +88,31 @@ public class QueuesRevisionList {
     	
     	Reporter.log("Click the 'Update state' button.");
     	UpdateState_Btn.click();
+    }
+    
+    public void ClickEditQueueExtendMenuBtn(String revisionIndex) throws Exception {
+    	
+    	Reporter.log("Click the 'Expand' arrow to extend the edit menu for queue revision index '" + revisionIndex + "'.");
+    	EditExtendMenu_Btn(revisionIndex).click();
+    }
+    
+    public void ClickDeleteQueueMenuBtn(String revisionIndex) throws Exception {
+    	
+    	Reporter.log("Click the 'Delete' button for the queue revision index '" + revisionIndex + "'.");
+    	wait.until(ExpectedConditions.visibilityOf(EditMenuDelete_Btn(revisionIndex))).click();
+    	
+    }
+    
+    public void ClickEditQueueMenuBtn(String revisionIndex) throws Exception {
+    	
+    	Reporter.log("Click the 'Edit' button for queue revision index + '" + revisionIndex + "'.");
+    	EditMenu_Btn(revisionIndex).click();
+    }
+    
+    public void VerifyRevisionCount(int revisionCount) throws Exception {
+    	
+    	Reporter.log("Verify the count of revisions in the Queues revision list is '" + revisionCount + "'.");
+    	Assert.assertEquals(StateFlow_Rws().size(), revisionCount);
     }
     
 }

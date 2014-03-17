@@ -66,7 +66,7 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
      * Step 34 - Click on the "Edit" tab. ,The user is taken to the "Edit mpx video" overlay. 
      * Step 35 - Verify that the following mpx fields are still populated with the updated values from Step 26 (the values updated in thePlatform).  MPX Media Available Date: <Today's date> MPX Media Expiration Date: <Today's date + 3 years>,The values on the mpx edit page are updated with the values from Step 26 as expected.
      * Step 36 - Click on the "SCHEDULE" tab, and verify that the following revision is scheduled  REVISION: Revision <#>: Test Video - <Default Player> ACTION: Unpublish Date: <Today's date + 3 years> OPERATIONS: <Drop down field containing "Run now" and "Cancel">,The revision is scheduled as expected.
-     * 37,Click on the "Log out" link.,The user logs out as expected.
+     * Step 37 - Click on the "Log out" link.,The user logs out as expected.
      * @throws Throwable No Return values are needed
      *************************************************************************************/
     @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "mpx"})
@@ -171,7 +171,7 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
     	    String pub7Date20DaysInPast = pub7DateFormat.format(date20DaysInPast);
     	    String pub7Date7DaysInPast = pub7DateFormat.format(date7DaysInPast);
     	    contentParent.VerifyPageContentPresent(Arrays.asList(pub7Date20DaysInPast + " - 05:00 AM"
-    	    		, pub7Date7DaysInPast + " - 05:00 AM", "Expired"));
+    	    		, pub7Date7DaysInPast + " - 04:00 AM", "Expired"));
     	    
     	    //Step 10
     	    searchFor.ClickSearchTitleLnk(mediaTitle);
@@ -181,7 +181,7 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
     	    String pub7WorkflowDate20DaysInPast = pub7WorkflowDateFormat.format(date20DaysInPast);
     	    String pub7WorkflowDate7DaysInPast = pub7WorkflowDateFormat.format(date7DaysInPast);
     	    contentParent.VerifyPageContentPresent(Arrays.asList(mediaTitle, pub7WorkflowDate20DaysInPast + " - 05:00",
-    	    		pub7WorkflowDate7DaysInPast + " - 05:00"));
+    	    		pub7WorkflowDate7DaysInPast + " - 04:00"));
     	    
     	    //Step 12
     	    WorkBench workBench = new WorkBench(webDriver, applib);

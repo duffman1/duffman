@@ -40,6 +40,9 @@ public class Queues {
     @FindBy(how = How.XPATH, using = "//a[contains(text(), 'Edit')]")
     private static WebElement Edit_Tab;
     
+    @FindBy(how = How.LINK_TEXT, using = "Add Promo Queue")
+    private static WebElement AddPromoQueue_Lnk;
+    
     private static WebElement QueuesList_Ttl(String queueTitle) {
     	return webDriver.findElement(By.xpath("//table[contains(@class, 'views-table')]//td[contains(text(), '" + queueTitle + "')]/.."));
     }
@@ -61,7 +64,7 @@ public class Queues {
 	}
 	
 	private static WebElement AutoComplete_Opt(String optionTxt) {
-    	return webDriver.findElement(By.xpath("//div[@class='reference-autocomplete'][text()='" + optionTxt + "']"));
+    	return webDriver.findElement(By.xpath("//div[@class='reference-autocomplete'][contains(text(),'" + optionTxt + "')]"));
     }
     
 	
@@ -69,6 +72,7 @@ public class Queues {
     public void EnterTitle(String queueTitle) throws Exception {
     	
     	Reporter.log("Enter '" + queueTitle + "' in the 'Title' text box.");
+    	Title_Txb.clear();
     	Title_Txb.sendKeys(queueTitle);
     }
     
@@ -76,6 +80,12 @@ public class Queues {
     	
     	Reporter.log("Click the 'Save Queue' button.");
     	SaveQueue_Btn.click();
+    }
+    
+    public void ClickAddPromoQueueLnk() throws Exception {
+    	
+    	Reporter.log("Click the 'Add Promo Queue' link.");
+    	AddPromoQueue_Lnk.click();
     }
     
     public void VerifyQueuesInList(List<String> allQueueTitles) throws Exception {
