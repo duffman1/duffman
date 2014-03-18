@@ -25,11 +25,10 @@ public class MPXAssets {
         
     }
     
-    public void WaitForAllAssetsToLoad(String path) throws Exception {
+    public void WaitForAllAssetsToLoad() throws Exception {
     	
-    	//TODO - come up with a better dynamic wait for all mpx assets loaded
-    	Thread.sleep(5000);
-    	
+    	this.WaitForImgPresent(applib.getPathToSikuliImages() + "Common/SaveCancel_Btns.png");
+    	Thread.sleep(1000);
     }
     
     public void WaitForImgPresent(String imgPath) throws Exception {
@@ -39,37 +38,18 @@ public class MPXAssets {
     
     public void WaitForImgNotPresent(String imgPath) throws Exception {
     	
-    	boolean imgPresent = false;
-
-    	for (int second = 0; ; second++){
-            if (second >= applib.getSikuliImageWaitTime()) {
-                Assert.fail("MPX image '" + imgPath + "' is still present after timeout");}
-            try{
-            	sikuli.find(imgPath);
-                imgPresent = true;
-            }
-            catch (Exception e){
-            	imgPresent = false;
-            }
-            if (imgPresent == false){ break;}
-            Thread.sleep(1000);
-        }
+    	sikuli.waitVanish(imgPath, applib.getSikuliImageWaitTime());
     	
     }
     
     public void ScrollDownForImgPresent(String imgPath) throws Exception {
     	
-    	boolean imgPresent = false;
-
-        for (int duration = 0; ; duration++){
+    	for (int duration = 0; ; duration++){
             if (duration >= 10) {
-                Assert.fail("MPX image '" + imgPath + "' is not present after 10 scrolls down");}
-            try{
-                sikuli.find(imgPath);
-                imgPresent = true;
+                Assert.fail("MPX image '" + imgPath + "' is not present after 10 scrolls down");
             }
-            catch (Exception e) { 
-            	
+        
+            if (sikuli.exists(imgPath, 1) == null) {
             	if (System.getProperty("os.name").contains("Windows")) {
             		sikuli.wheel(Button.WHEEL_DOWN, 15);
             	}
@@ -77,7 +57,10 @@ public class MPXAssets {
             		sikuli.wheel(Button.WHEEL_UP, 15); //in java 7 sikuli mouse down is actually the wheel_up for mac
             	}
             }
-            if (imgPresent == true){ break;}
+            else {
+            	break;
+            }
+            
         }
     }
     

@@ -1,6 +1,8 @@
 package com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform;
 
 import com.nbcuni.test.publisher.common.AppLib;
+import com.nbcuni.test.publisher.pageobjects.Content.AddFile;
+
 import org.sikuli.script.*;
 import org.testng.Reporter;
 
@@ -16,11 +18,13 @@ public class MPXAddMedia {
     private static AppLib applib;
     private static Screen sikuli;
     private static MPXAssets mpxAssets;
+    private static AddFile addFile;
     
     public MPXAddMedia(AppLib applib) {
     	sikuli = new Screen();
         MPXAddMedia.applib = applib;
         mpxAssets = new MPXAssets(applib);
+        addFile = new AddFile(null, applib);
     }
     
     private String getImagePath() {
@@ -50,32 +54,6 @@ public class MPXAddMedia {
     	}
     }
     
-    public void ClickMoviesUploadBtn() throws Exception {
-    	
-    	Reporter.log("Click the 'Movies' button in the OS Upload dialog.");
-    	try {
-    		sikuli.click(getImagePath() + "FileUpload/AllMyFiles_Btn.png");
-    	}
-    	catch (Exception e) {
-    		sikuli.click(getImagePath() + "FileUpload/HighlightedAllMyFiles_Btn.png");
-    	}
-    	
-    	mpxAssets.WaitForImgPresent(getImagePath() + "FileUpload/MoviesUpload_Btn.png");
-    	try {
-    		sikuli.click(getImagePath() + "FileUpload/MoviesUpload_Btn.png");
-    	}
-    	catch (Exception e) {
-    		sikuli.click(getImagePath() + "FileUpload/HighlightedMoviesUpload_Btn.png");
-    	}
-    }
-    
-    public void ClickTestMovieBtn() throws Exception {
-    	
-    	Reporter.log("Click the Test Movie in th OS Upload dialog.");
-    	mpxAssets.WaitForImgPresent(getImagePath() + "FileUpload/TestMovie_Btn.png");
-    	sikuli.click(getImagePath() + "FileUpload/TestMovie_Btn.png");
-    }
-    
     public void ClickOpenBtn() throws Exception {
     	
     	Reporter.log("Click the 'Open' button.");
@@ -89,7 +67,9 @@ public class MPXAddMedia {
     	mpxAssets.WaitForImgPresent(getImagePath() + "Common/UploadFromDialog_Btn.png");
     	sikuli.click(getImagePath() + "Common/UploadFromDialog_Btn.png");
     	
-    	Thread.sleep(5000); //TODO - come up with good dynamic wait
+    	Thread.sleep(1000);
+    	mpxAssets.WaitForImgNotPresent(getImagePath() + "Common/Spinner.png");
+    	
     }
     
     public void GiveFocusToMediaItem() throws Exception {
@@ -232,6 +212,14 @@ public class MPXAddMedia {
     	mpxAssets.ClearInput();
     	sikuli.type(subRating);
     	
+    }
+    
+    public void UploadDefaultVideo() throws Exception {
+    	
+    	this.ClickUploadBtn();
+    	this.ClickChooseFilesBtn();
+    	addFile.AddDefaultVideo();
+        this.ClickUploadFromDialogBtn();
     }
     
 }

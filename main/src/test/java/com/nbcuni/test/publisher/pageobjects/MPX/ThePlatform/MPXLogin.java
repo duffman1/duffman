@@ -53,6 +53,8 @@ public class MPXLogin {
         Reporter.log("Click the 'Login' button.");
         sikuli.click(getImagePath() + "Login/SignIn_Btn.png");
         
+        mpxAssets.WaitForAllAssetsToLoad();
+        
     }
     
 }

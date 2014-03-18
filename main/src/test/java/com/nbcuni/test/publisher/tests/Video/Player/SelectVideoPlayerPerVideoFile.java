@@ -5,14 +5,11 @@ import java.util.List;
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Content.Content;
-import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.Content.SearchFor;
 import com.nbcuni.test.publisher.pageobjects.MPX.EditMPXVideo;
 import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
-
 import org.testng.Assert;
-
 import org.testng.annotations.Test;
 
 public class SelectVideoPlayerPerVideoFile extends ParentTest{
@@ -49,7 +46,7 @@ public class SelectVideoPlayerPerVideoFile extends ParentTest{
         
         //Step 2 on requires prior MPX configuration
         taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
-        overlay.SwitchToFrame("Media: thePlatform mpx settings dialog");
+        overlay.SwitchToActiveFrame();
         Settings settings = new Settings(webDriver, applib);
         if (settings.IsMPXConfigured() == true) {
 
@@ -77,7 +74,6 @@ public class SelectVideoPlayerPerVideoFile extends ParentTest{
             
         		//Step 7
         		editMPXVideo.SelectPubMPXVideoPlayer("--- Default Player ---");
-        		ContentParent contentParent = new ContentParent(webDriver, applib);
         		contentParent.ClickSaveBtn();
             
         		//Step 8 through 19 (truncated as test steps no longer match application functionality)

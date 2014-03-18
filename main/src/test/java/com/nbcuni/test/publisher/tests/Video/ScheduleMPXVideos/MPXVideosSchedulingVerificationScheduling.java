@@ -3,24 +3,20 @@ package com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos;
 import com.ibm.icu.util.Calendar;
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.RerunOnFailure;
-import com.nbcuni.test.publisher.pageobjects.Content.AddFile;
-import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.Content.SearchFor;
 import com.nbcuni.test.publisher.pageobjects.Content.WorkBench;
 import com.nbcuni.test.publisher.pageobjects.MPX.EditMPXVideo;
 import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
 import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXAddMedia;
+import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXAssets;
 import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXLogin;
 import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXPublishMedia;
 import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXSearch;
 import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXSelectAccount;
 import com.nbcuni.test.publisher.pageobjects.Queues.ScheduleQueue;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
-
 import org.testng.Assert;
-
 import org.testng.annotations.Test;
-
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
@@ -78,7 +74,7 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
         
         //Note - test requires mpx configuration
         taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
-        overlay.SwitchToFrame("Media: thePlatform mpx settings dialog");
+        overlay.SwitchToActiveFrame();
         Settings settings = new Settings(webDriver, applib);
         if (settings.IsMPXConfigured() == true) {
 		
@@ -95,21 +91,7 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
         	
         	//Step 4 (test creates new mpx asset)
         	MPXAddMedia mpxAddMedia = new MPXAddMedia(applib);
-        	AddFile addFile = new AddFile(webDriver, applib);
-        	mpxAddMedia.ClickUploadBtn();
-        	mpxAddMedia.ClickChooseFilesBtn();
-        	if (webDriver.getCapabilities().getPlatform().toString() == "MAC") {
-        		mpxAddMedia.ClickMoviesUploadBtn();
-        		mpxAddMedia.ClickTestMovieBtn();
-        		mpxAddMedia.ClickOpenBtn();
-        	}
-        	else {
-        		addFile.EnterPathToFile_Win(applib.getPathToMedia());
-            	addFile.ClickGoBtn_Win();
-            	addFile.EnterFileName_Win("DefAutMed.m4v");
-            	addFile.ClickOpenBtn();
-        	}
-        	mpxAddMedia.ClickUploadFromDialogBtn();
+        	mpxAddMedia.UploadDefaultVideo();
         	String mediaTitle = "Automation" + random.GetCharacterString(10);
         	mpxAddMedia.GiveFocusToMediaItem();
         	Calendar cal20DaysInPast = Calendar.getInstance();
@@ -130,26 +112,16 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
         	
         	//Step 6
         	MPXPublishMedia mpxPublishMedia = new MPXPublishMedia(applib);
-        	mpxPublishMedia.ClickPublishBtn();
-        	mpxPublishMedia.ClickPublishToPub7PrimaryCbx();
-        	mpxPublishMedia.ClickPublishFromDialogBtn();
-        	if (mpxPublishMedia.PublishSuccessful() == false) {
-            	mpxPublishMedia.ClickOKBtn();
-            	mpxPublishMedia.ClickPublishBtn();
-                mpxPublishMedia.ClickPublishToPub7PrimaryCbx();
-                mpxPublishMedia.ClickPublishFromDialogBtn();
-            }
+        	mpxPublishMedia.PublishDefaultVideo();
         	
         	//Step 7
         	applib.openApplication();
         	taxonomy.NavigateSite("Home>>Run cron");
     	    overlay.SwitchToActiveFrame();
-    	    ContentParent contentParent = new ContentParent(webDriver, applib);
     	    contentParent.VerifyMessageStatus("Cron ran successfully.");
     	    
     	    //Step 8
     	    overlay.ClickCloseOverlayLnk();
-    	    overlay.switchToDefaultContent();
     	    taxonomy.NavigateSite("Content>>Files>>mpxMedia");
     	    overlay.SwitchToActiveFrame();
     	    
@@ -203,6 +175,8 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
     	    
     	    //Step 26
     	    mpxLogin.OpenMPXThePlatform();
+    	    MPXAssets mpxAssets = new MPXAssets(applib);
+    	    mpxAssets.WaitForAllAssetsToLoad();
     	    mpxSelectAccount.SelectAccount("DB TV");
     	    MPXSearch mpxSearch = new MPXSearch(applib);
     	    mpxSearch.EnterSearchTxt(mediaTitle);
@@ -235,7 +209,6 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
     	    
     	    //Step 30
     	    overlay.ClickCloseOverlayLnk();
-    	    overlay.switchToDefaultContent();
     	    taxonomy.NavigateSite("Content>>Files>>mpxMedia");
     	    overlay.SwitchToActiveFrame();
     	    

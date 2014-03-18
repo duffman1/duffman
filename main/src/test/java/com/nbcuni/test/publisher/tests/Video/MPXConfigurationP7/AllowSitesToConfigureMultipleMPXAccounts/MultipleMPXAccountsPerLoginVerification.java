@@ -2,7 +2,6 @@ package com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToCon
 
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.RerunOnFailure;
-import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.MPX.MPXDataClient;
 import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
@@ -66,7 +65,7 @@ public class MultipleMPXAccountsPerLoginVerification extends ParentTest{
         
         //Step 
         taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
-        overlay.SwitchToFrame("Media: thePlatform mpx settings dialog");
+        overlay.SwitchToActiveFrame();
         
         //Step 
         Settings settings = new Settings(webDriver, applib);
@@ -81,7 +80,6 @@ public class MultipleMPXAccountsPerLoginVerification extends ParentTest{
         	settings.EnterUsername0(applib.getMPXUsername());
         	settings.EnterPassword0(applib.getMPXPassword());
         	settings.ClickConnectToMPXBtn();
-        	ContentParent contentParent = new ContentParent(webDriver, applib);
         	contentParent.VerifyMessageStatus("Login successful");
         	settings.VerifyImportAccountOptions(accountNames);
             
@@ -116,7 +114,7 @@ public class MultipleMPXAccountsPerLoginVerification extends ParentTest{
         	
         	//Step
         	taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
-            overlay.SwitchToFrame("Media: thePlatform mpx settings dialog");
+            overlay.SwitchToActiveFrame();
             
             //Step
             settings.ExpandMPXLogin();
@@ -136,7 +134,7 @@ public class MultipleMPXAccountsPerLoginVerification extends ParentTest{
         	
         	//Step
         	taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
-            overlay.SwitchToFrame("Media: thePlatform mpx settings dialog");
+            overlay.SwitchToActiveFrame();
             
             //Step
             settings.ExpandMPXLogin();

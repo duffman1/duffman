@@ -3,17 +3,13 @@ package com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos;
 import com.ibm.icu.util.Calendar;
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.RerunOnFailure;
-import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.Content.SearchFor;
 import com.nbcuni.test.publisher.pageobjects.Content.WorkBench;
 import com.nbcuni.test.publisher.pageobjects.MPX.EditMPXVideo;
 import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
-
 import org.testng.Assert;
-
 import org.testng.annotations.Test;
-
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
@@ -88,7 +84,6 @@ public class MPXVideosSchedulingVerificationInitialOverrides extends ParentTest{
 
             searchFor.ClickSearchTitleLnk("Automation1");
             overlay.switchToDefaultContent();
-            ContentParent contentParent = new ContentParent(webDriver, applib);
             List<String> defaultVideoValues = Arrays.asList("Automation1", "MPX Released File Public IDs:",
                     "MPX Media Default Released File Public ID:", "MPX Media Categories:", "Series", "Show", "MPX Media Description:",
                     "Automation 1 example test", "MPX Media Author:", "Pub7 Content Provider", "MPX Media Air Date:",

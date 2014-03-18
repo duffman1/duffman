@@ -2,7 +2,6 @@ package com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToCon
 
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.RerunOnFailure;
-import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.MPX.MPXDataClient;
 import com.nbcuni.test.publisher.pageobjects.MPX.MPXMedia;
 import com.nbcuni.test.publisher.pageobjects.MPX.MPXPlayers;
@@ -111,7 +110,6 @@ public class MPXPlayersSyncVerification extends ParentTest{
             MPXPlayers MPXPlayers = new MPXPlayers(webDriver);
             MPXPlayers.ClickSyncMPXPlayersLnk();
             MPXPlayers.ClickSyncMPXPlayersNowLnk();
-            ContentParent contentParent = new ContentParent(webDriver, applib);
             contentParent.VerifyMessageStatus("players returned for account");
             Integer playerCountForAccount1 = allPlayerTitlesForAccount1.size();
             contentParent.VerifyMessageStatus(playerCountForAccount1.toString() + " players returned for account \"" + configuredAccounts.get(0) + "\"");

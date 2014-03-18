@@ -42,7 +42,7 @@ public class DeleteMultipleAccounts extends ParentTest{
         //Step 2
         applib.openApplication();
         taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
-        overlay.SwitchToFrame("Media: thePlatform mpx settings dialog");
+        overlay.SwitchToActiveFrame();
         
         //Step 3
         Settings settings = new Settings(webDriver, applib);
@@ -75,7 +75,6 @@ public class DeleteMultipleAccounts extends ParentTest{
         	
         	//Step 9
         	overlay.ClickCloseOverlayLnk();
-        	overlay.switchToDefaultContent();
         	taxonomy.NavigateSite("Content>>Files>>mpxMedia");
         	overlay.SwitchToActiveFrame();
         	SearchFor searchFor = new SearchFor(webDriver, applib);
@@ -112,7 +111,7 @@ public class DeleteMultipleAccounts extends ParentTest{
     	    overlay.switchToDefaultContent();
     	    int I = 0;
     	    while (!searchFor.GetFirstMPXMediaSearchResult().contains("Automation")) {
-    	    	I++; Thread.sleep(5000); //significant pause necessary as media ingestion can take a while from mpx
+    	    	I++; Thread.sleep(5000); //pause necessary as media ingestion can take a while from mpx
     	    	searchFor.ClickApplyBtn();
     	    	if (I >= 5) { break; }
     	    }

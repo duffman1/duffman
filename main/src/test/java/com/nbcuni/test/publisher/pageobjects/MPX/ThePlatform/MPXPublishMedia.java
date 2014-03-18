@@ -63,13 +63,9 @@ public class MPXPublishMedia {
     
     public boolean PublishSuccessful() {
     	
-    	boolean publishSuccessful = false;
-    	try {
-    		sikuli.find(getImagePath() + "Publish/PublishError_Ctr.png");
+    	boolean publishSuccessful = true;
+    	if (sikuli.exists(getImagePath() + "Publish/PublishError_Ctr.png", 1) != null) {
     		publishSuccessful = false;
-    	}
-    	catch (Exception e) {
-    		publishSuccessful = true;
     	}
     	
     	return publishSuccessful;
@@ -103,8 +99,23 @@ public class MPXPublishMedia {
     	mpxAssets.WaitForImgPresent(getImagePath() + "Common/Update_Btn.png");
     	sikuli.click(getImagePath() + "Common/Update_Btn.png");
     	
-    	Thread.sleep(2000);
+    	Thread.sleep(1000);
     	mpxAssets.WaitForImgNotPresent(getImagePath() + "Common/Spinner.png");
+    }
+    
+    public void PublishDefaultVideo() throws Exception {
+    	
+    	this.ClickPublishBtn();
+        this.ClickPublishToPub7PrimaryCbx();
+        this.ClickPublishFromDialogBtn();
+        
+        if (this.PublishSuccessful() == false) {
+    		Thread.sleep(5000);
+        	this.ClickOKBtn();
+        	this.ClickPublishBtn();
+            this.ClickPublishToPub7PrimaryCbx();
+            this.ClickPublishFromDialogBtn();
+        }
     }
     
 }

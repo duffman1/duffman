@@ -5,12 +5,8 @@ import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Content.SearchFor;
 import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
-
-import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
-
 import java.util.List;
-
 import org.testng.Assert;
 
 public class EnhanceMPXPlayerContentAdminScreen extends ParentTest{
@@ -37,23 +33,20 @@ public class EnhanceMPXPlayerContentAdminScreen extends ParentTest{
     	
     	//Step 1
     	UserLogin userLogin = applib.openApplication();
-    	PageFactory.initElements(webDriver, userLogin);
-        userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+    	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
         
         //Step 1a
         taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
-        overlay.SwitchToFrame("Media: thePlatform mpx settings dialog");
+        overlay.SwitchToActiveFrame();
         Settings settings = new Settings(webDriver, applib);
         if (settings.IsMPXConfigured() == true) { 
         	
         	//Step 2
         	List<String> configuredAccounts = settings.GetImportAccountSelectedOptions();
         	overlay.ClickCloseOverlayLnk();
-        	overlay.switchToDefaultContent();
         	taxonomy.NavigateSite("Content>>Files>>mpxPlayers");
         	overlay.SwitchToActiveFrame();
         	SearchFor searchFor = new SearchFor(webDriver, applib);
-        	PageFactory.initElements(webDriver, searchFor);
         	searchFor.VerifyMPXSearchHeaderColumnOrder();
         	
         	//Step 3 - NA, redundant as step 2

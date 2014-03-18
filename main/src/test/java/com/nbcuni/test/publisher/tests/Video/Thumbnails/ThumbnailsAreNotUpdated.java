@@ -54,7 +54,7 @@ public class ThumbnailsAreNotUpdated extends ParentTest{
         
         //MPX Configuration required
         taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
-        overlay.SwitchToFrame("Media: thePlatform mpx settings dialog");
+        overlay.SwitchToActiveFrame();
         Settings settings = new Settings(webDriver, applib);
         if (settings.IsMPXConfigured() == true) {
 
@@ -83,26 +83,10 @@ public class ThumbnailsAreNotUpdated extends ParentTest{
         		MPXLogin mpxLogin = new MPXLogin(webDriver, applib);
             	mpxLogin.OpenMPXThePlatform();
             	mpxLogin.Login(applib.getMPXUsername(), applib.getMPXPassword());
-            	if (configuredAccounts.contains("DB TV")) {
-                	MPXSelectAccount mpxSelectAccount = new MPXSelectAccount(applib);
-                	mpxSelectAccount.SelectAccount("DB TV");
-            	}
+            	MPXSelectAccount mpxSelectAccount = new MPXSelectAccount(applib);
+                mpxSelectAccount.SelectAccount("DB TV");
             	MPXAddMedia mpxAddMedia = new MPXAddMedia(applib);
-            	AddFile addFile = new AddFile(webDriver, applib);
-            	mpxAddMedia.ClickUploadBtn();
-            	mpxAddMedia.ClickChooseFilesBtn();
-            	if (webDriver.getCapabilities().getPlatform().toString() == "MAC") {
-            		mpxAddMedia.ClickMoviesUploadBtn();
-            		mpxAddMedia.ClickTestMovieBtn();
-            		mpxAddMedia.ClickOpenBtn();
-            	}
-            	else {
-            		addFile.EnterPathToFile_Win(applib.getPathToMedia());
-                	addFile.ClickGoBtn_Win();
-                	addFile.EnterFileName_Win("DefAutMed.m4v");
-                	addFile.ClickOpenBtn();
-            	}
-                mpxAddMedia.ClickUploadFromDialogBtn();
+            	mpxAddMedia.UploadDefaultVideo();
                 String mediaTitle = "Automation" + random.GetCharacterString(10);
                 mpxAddMedia.GiveFocusToMediaItem();
                 mpxAddMedia.EnterTitle(mediaTitle);
@@ -110,24 +94,22 @@ public class ThumbnailsAreNotUpdated extends ParentTest{
                 mpxAddMedia.ClickFilesLnk();
                 mpxAddMedia.ClickUploadBtn();
             	mpxAddMedia.ClickChooseFilesBtn();
+            	AddFile addFile = new AddFile(webDriver, applib);
             	if (webDriver.getCapabilities().getPlatform().toString() == "MAC") {
             		addFile.ClickPicturesUploadBtn();
                 	addFile.ClickNBCLogoLnk();
-                	addFile.ClickOpenBtn();
             	}
             	else {
             		addFile.EnterPathToFile_Win(applib.getPathToMedia());
                 	addFile.ClickGoBtn_Win();
                 	addFile.EnterFileName_Win("nbclogosmall.jpg");
-                	addFile.ClickOpenBtn();
             	}
+            	addFile.ClickOpenBtn();
             	mpxAddMedia.ClickUploadFromDialogBtn();
                 mpxAddMedia.ClickAllMediaLnk();
                 mpxAddMedia.ClickSaveBtn();
                 MPXPublishMedia mpxPublishMedia = new MPXPublishMedia(applib);
-                mpxPublishMedia.ClickPublishBtn();
-                mpxPublishMedia.ClickPublishToPub7PrimaryCbx();
-                mpxPublishMedia.ClickPublishFromDialogBtn();
+                mpxPublishMedia.PublishDefaultVideo();
                 
                 //Step 4 through 12 - N/A as step 3 creates a media item that has an image associated with it.
                 

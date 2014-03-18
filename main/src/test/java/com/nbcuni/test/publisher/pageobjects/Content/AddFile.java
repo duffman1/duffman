@@ -12,6 +12,7 @@ import org.sikuli.script.Pattern;
 import org.sikuli.script.Region;
 import org.sikuli.script.Screen;
 import org.testng.Reporter;
+
 import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXAssets;
 import com.nbcuni.test.webdriver.CustomWebDriver;
@@ -130,6 +131,25 @@ public class AddFile {
     	}
     }
     
+    public void ClickMoviesUploadBtn() throws Exception {
+    	
+    	Reporter.log("Click the 'Movies' button in the OS Upload dialog.");
+    	try {
+    		sikuli.click(getImagePath() + "FileUpload/AllMyFiles_Btn.png");
+    	}
+    	catch (Exception e) {
+    		sikuli.click(getImagePath() + "FileUpload/HighlightedAllMyFiles_Btn.png");
+    	}
+    	
+    	mpxAssets.WaitForImgPresent(getImagePath() + "FileUpload/MoviesUpload_Btn.png");
+    	try {
+    		sikuli.click(getImagePath() + "FileUpload/MoviesUpload_Btn.png");
+    	}
+    	catch (Exception e) {
+    		sikuli.click(getImagePath() + "FileUpload/HighlightedMoviesUpload_Btn.png");
+    	}
+    }
+    
     public void ClickNBCLogoLnk() throws Exception {
     	
     	Reporter.log("Click the nbc logo image link.");
@@ -146,11 +166,18 @@ public class AddFile {
     	sikuli.click(path + "AddFile/TestPicture_Btn.png");
     }
     
+    public void ClickTestMovieBtn() throws Exception {
+    	
+    	Reporter.log("Click the Test Movie in th OS Upload dialog.");
+    	mpxAssets.WaitForImgPresent(getImagePath() + "FileUpload/TestMovie_Btn.png");
+    	sikuli.click(getImagePath() + "FileUpload/TestMovie_Btn.png");
+    }
+
     public void ClickOpenBtn() throws Exception {
     	
     	Reporter.log("Click the 'Open' button.");
     	String path = this.getImagePath();
-    	if (webDriver.getCapabilities().getPlatform().toString() == "MAC") {
+    	if (System.getProperty("os.name").contains("Mac")) {
     		mpxAssets.WaitForImgPresent(path + "FileUpload/Open_Btn.png");
     		sikuli.click(path + "FileUpload/Open_Btn.png");
     	}
@@ -182,6 +209,19 @@ public class AddFile {
     	
     }
     
+    public void AddDefaultVideo() throws Exception {
+    	
+    	if (System.getProperty("os.name").contains("Mac")) {
+    		this.ClickMoviesUploadBtn();
+    		this.ClickTestMovieBtn();
+    	}
+    	else {
+    		this.EnterPathToFile_Win(applib.getPathToMedia());
+        	this.ClickGoBtn_Win();
+        	this.EnterFileName_Win("DefAutMed.m4v");
+    	}
+    	this.ClickOpenBtn();
+    }
    
   
 }

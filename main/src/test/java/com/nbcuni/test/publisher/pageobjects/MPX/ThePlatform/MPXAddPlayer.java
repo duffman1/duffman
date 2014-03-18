@@ -42,7 +42,7 @@ public class MPXAddPlayer {
     	mpxAssets.WaitForImgPresent(getImagePath() + "Players/AllPlayers_Lnk.png");
     	sikuli.click(getImagePath() + "Players/AllPlayers_Lnk.png");
     	mpxAssets.WaitForImgPresent(getImagePath() + "Players/AllPlayers_Lst.png");
-    	mpxAssets.WaitForAllAssetsToLoad(getImagePath());
+    	mpxAssets.WaitForAllAssetsToLoad();
     }
     
     public void ClickAddBtn() throws Exception {
@@ -70,7 +70,7 @@ public class MPXAddPlayer {
     	Reporter.log("Click the 'Save' button.");
     	mpxAssets.WaitForImgPresent(getImagePath() + "Common/Save_Btn.png");
     	sikuli.click(getImagePath() + "Common/Save_Btn.png");
-    	Thread.sleep(2000); //TODO - add dynamic wait
+    	Thread.sleep(5000); //long pause necessary as mpx processes player on backend
     }
     
     public void GiveFocusToPlayerItem() throws Exception {

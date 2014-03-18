@@ -2,7 +2,6 @@ package com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos;
 
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.RerunOnFailure;
-import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.FileTypes.MPXFileType;
 import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
@@ -37,7 +36,7 @@ public class Configuration extends ParentTest{
         
         //Step 2 through 6 requires prior MPX configuration
         taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
-        overlay.SwitchToFrame("Media: thePlatform mpx settings dialog");
+        overlay.SwitchToActiveFrame();
         Settings settings = new Settings(webDriver, applib);
         if (settings.IsMPXConfigured() == true) {
         	
@@ -59,7 +58,6 @@ public class Configuration extends ParentTest{
             	
         			mpxFileType.ClickSaveBtn();
         			overlay.SwitchToActiveFrame();
-        			ContentParent contentParent = new ContentParent(webDriver, applib);
         			contentParent.VerifyMessageStatus("The file type MPX Video for Account \"" + configuredAccounts.get(0));
         			contentParent.VerifyMessageStatus("has been updated.");
         		}

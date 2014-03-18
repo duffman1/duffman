@@ -23,13 +23,49 @@
       <![CDATA[Click the 'Media: thePlatform mpx settings' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to frame titled 'Media: thePlatform mpx settings dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.]]>
     </line>
     <line>
       <![CDATA[Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.]]>
     </line>
     <line>
       <![CDATA[Get all the selected import account options and store to a list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Structure' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'File types' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'File types dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'DB TV manage file display' link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'MPX Video for Account &quot;DB TV&quot; (2312945284) dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Pub MPX Image' link.]]>
+    </line>
+    <line>
+      <![CDATA[Select the 'Thumbnail (100x100)' option from the 'Pub MPX Image Style' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configuration' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Your settings have been saved.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify there are no errors present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
     </line>
     <line>
       <![CDATA[Open the mpx platform.]]>
@@ -42,18 +78,6 @@
     </line>
     <line>
       <![CDATA[Click the 'Login' button.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the account name 'DB TV' in the account select text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the account option from the drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Account' title to leave focus off of the selection.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for account to switch to the newly selected account.]]>
     </line>
     <line>
       <![CDATA[Click the 'Upload' button.]]>
@@ -77,13 +101,37 @@
       <![CDATA[Click the 'Available Date' label on the right hand side to give focus to the media item.]]>
     </line>
     <line>
-      <![CDATA[Enter '2/25/2014 12:00 AM' in the 'Available Date' text box.]]>
+      <![CDATA[Enter 'Automation513518f04b' in the 'Title' text box.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Automation2b4c318e2e' in the 'Title' text box.]]>
+      <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Enter '3/10/2014 12:00 AM' in the 'Expiration Date' text box.]]>
+      <![CDATA[Click the 'Files' link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Upload' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Choose Files' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'All Files' icon.]]>
+    </line>
+    <line>
+      <![CDATA[Click the local 'Pictures' icon.]]>
+    </line>
+    <line>
+      <![CDATA[Click the nbc logo image link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Open' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Upload' button in the Upload dialog.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'All Media' link.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save' button.]]>
@@ -125,7 +173,7 @@
       <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
     </line>
     <line>
-      <![CDATA[Enter title Automation2b4c318e2e.]]>
+      <![CDATA[Enter title Automation513518f04b.]]>
     </line>
     <line>
       <![CDATA[Click the 'Apply' button.]]>
@@ -134,205 +182,49 @@
       <![CDATA[Get the text of the first search result set item.]]>
     </line>
     <line>
-      <![CDATA[Get the title text of every result in the search result set.]]>
+      <![CDATA[Verify the search thumbnail named 'nbclogosmall' is present for search result 'Automation513518f04b'.]]>
     </line>
     <line>
-      <![CDATA[For each expected result, assert it is present in the result set.]]>
+      <![CDATA[Assert the the img is loaded and visible.]]>
     </line>
     <line>
-      <![CDATA[Verify the text '02/25/2014 - 05:00 AM' is present on the page.]]>
+      <![CDATA[Mouse over the 'Structure' menu link.]]>
     </line>
     <line>
-      <![CDATA[Verify the text '03/10/2014 - 04:00 AM' is present on the page.]]>
+      <![CDATA[Click the 'File types' menu link.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'Expired' is present on the page.]]>
+      <![CDATA[Click the 'DB TV manage file display' link.]]>
     </line>
     <line>
-      <![CDATA[Click the first search title link in the search result set.]]>
+      <![CDATA[Un-Check the 'Pub MPX Image' checkbox]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'Automation2b4c318e2e' is present on the page.]]>
+      <![CDATA[Click the 'Save configuration' button.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'Tuesday, February 25, 2014 - 05:00' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'Monday, March 10, 2014 - 04:00' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Edit' link in the work bench.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Edit mpx_video_6 Automation2b4c318e2e dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the value of the 'Available Date' text box equals '02/25/2014'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the value of the 'Expiration Date' text box equals '03/10/2014'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Schedule' tab.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Automation2b4c318e2e dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the scheduled revision table is empty.]]>
-    </line>
-    <line>
-      <![CDATA[Open the mpx platform.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the account name 'DB TV' in the account select text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the account option from the drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Account' title to leave focus off of the selection.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for account to switch to the newly selected account.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Automation2b4c318e2e' in the 'Search' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Search by Title' link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Available Date' label on the right hand side to give focus to the media item.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '3/17/2014 12:00 AM' in the 'Available Date' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '3/17/2015 12:00 AM' in the 'Expiration Date' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Additional Options' arrow.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Publish Update' link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Publish to Pub 7 Primary' check box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Update' button.]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Status report dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Cron ran successfully.' is present.]]>
+      <![CDATA[Verify success message of 'Your settings have been saved.' is present.]]>
     </line>
     <line>
       <![CDATA[Verify there are no errors present.]]>
     </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Files' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'mpxMedia' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter title Automation2b4c318e2e.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Apply' button.]]>
-    </line>
-    <line>
-      <![CDATA[Get the title text of every result in the search result set.]]>
-    </line>
-    <line>
-      <![CDATA[For each expected result, assert it is present in the result set.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text '03/17/2014 - 04:00 AM' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text '03/17/2015 - 04:00 AM' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'Published' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Click the first search title link in the search result set.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'Automation2b4c318e2e' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'Monday, March 17, 2014 - 04:00' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'Tuesday, March 17, 2015 - 04:00' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Edit' link in the work bench.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Edit mpx_video_6 Automation2b4c318e2e dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the value of the 'Available Date' text box equals '03/17/2014'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the value of the 'Expiration Date' text box equals '03/17/2015'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Schedule' tab.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Automation2b4c318e2e dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Run now' button is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'Automation2b4c318e2e' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'Unpublish' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text '03/17/2015 - 04:00' is present on the page.]]>
-    </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="285052" started-at="2014-03-17T16:37:03Z" finished-at="2014-03-17T16:41:48Z">
+  <suite name="Default suite" duration-ms="180597" started-at="2014-03-18T17:33:47Z" finished-at="2014-03-18T17:36:48Z">
     <groups>
       <group name="mpx">
-        <method signature="MPXVideosSchedulingVerificationScheduling.MPXVideosSchedulingVerificationScheduling_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling@1df749e3]" name="MPXVideosSchedulingVerificationScheduling_Test" class="com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling"/>
+        <method signature="ThumbnailsAreNotUpdated.ThumbnailsAreNotUpdated_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.Thumbnails.ThumbnailsAreNotUpdated@83602ca]" name="ThumbnailsAreNotUpdated_Test" class="com.nbcuni.test.publisher.tests.Video.Thumbnails.ThumbnailsAreNotUpdated"/>
       </group> <!-- mpx -->
       <group name="full">
-        <method signature="MPXVideosSchedulingVerificationScheduling.MPXVideosSchedulingVerificationScheduling_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling@1df749e3]" name="MPXVideosSchedulingVerificationScheduling_Test" class="com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling"/>
+        <method signature="ThumbnailsAreNotUpdated.ThumbnailsAreNotUpdated_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.Thumbnails.ThumbnailsAreNotUpdated@83602ca]" name="ThumbnailsAreNotUpdated_Test" class="com.nbcuni.test.publisher.tests.Video.Thumbnails.ThumbnailsAreNotUpdated"/>
       </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="285052" started-at="2014-03-17T16:37:03Z" finished-at="2014-03-17T16:41:48Z">
-      <class name="com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling">
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling@1df749e3]" name="startSelenium" is-config="true" duration-ms="13228" started-at="2014-03-17T12:37:03Z" finished-at="2014-03-17T12:37:16Z">
+    <test name="Default test" duration-ms="180597" started-at="2014-03-18T17:33:47Z" finished-at="2014-03-18T17:36:48Z">
+      <class name="com.nbcuni.test.publisher.tests.Video.Thumbnails.ThumbnailsAreNotUpdated">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.Thumbnails.ThumbnailsAreNotUpdated@83602ca]" name="startSelenium" is-config="true" duration-ms="13622" started-at="2014-03-18T13:33:47Z" finished-at="2014-03-18T13:34:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="MPXVideosSchedulingVerificationScheduling_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling@1df749e3]" name="MPXVideosSchedulingVerificationScheduling_Test" duration-ms="271240" started-at="2014-03-17T12:37:16Z" finished-at="2014-03-17T12:41:47Z">
+        <test-method status="PASS" signature="ThumbnailsAreNotUpdated_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.Thumbnails.ThumbnailsAreNotUpdated@83602ca]" name="ThumbnailsAreNotUpdated_Test" duration-ms="166390" started-at="2014-03-18T13:34:01Z" finished-at="2014-03-18T13:36:47Z">
           <reporter-output>
             <line>
               <![CDATA[Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.]]>
@@ -356,13 +248,49 @@
               <![CDATA[Click the 'Media: thePlatform mpx settings' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to frame titled 'Media: thePlatform mpx settings dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.]]>
             </line>
             <line>
               <![CDATA[Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.]]>
             </line>
             <line>
               <![CDATA[Get all the selected import account options and store to a list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Structure' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'File types' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'File types dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'DB TV manage file display' link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'MPX Video for Account &quot;DB TV&quot; (2312945284) dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Pub MPX Image' link.]]>
+            </line>
+            <line>
+              <![CDATA[Select the 'Thumbnail (100x100)' option from the 'Pub MPX Image Style' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configuration' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Your settings have been saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify there are no errors present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
             </line>
             <line>
               <![CDATA[Open the mpx platform.]]>
@@ -375,18 +303,6 @@
             </line>
             <line>
               <![CDATA[Click the 'Login' button.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the account name 'DB TV' in the account select text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the account option from the drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Account' title to leave focus off of the selection.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for account to switch to the newly selected account.]]>
             </line>
             <line>
               <![CDATA[Click the 'Upload' button.]]>
@@ -410,13 +326,37 @@
               <![CDATA[Click the 'Available Date' label on the right hand side to give focus to the media item.]]>
             </line>
             <line>
-              <![CDATA[Enter '2/25/2014 12:00 AM' in the 'Available Date' text box.]]>
+              <![CDATA[Enter 'Automation513518f04b' in the 'Title' text box.]]>
             </line>
             <line>
-              <![CDATA[Enter 'Automation2b4c318e2e' in the 'Title' text box.]]>
+              <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Enter '3/10/2014 12:00 AM' in the 'Expiration Date' text box.]]>
+              <![CDATA[Click the 'Files' link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Upload' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Choose Files' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'All Files' icon.]]>
+            </line>
+            <line>
+              <![CDATA[Click the local 'Pictures' icon.]]>
+            </line>
+            <line>
+              <![CDATA[Click the nbc logo image link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Open' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Upload' button in the Upload dialog.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'All Media' link.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save' button.]]>
@@ -458,7 +398,7 @@
               <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
             </line>
             <line>
-              <![CDATA[Enter title Automation2b4c318e2e.]]>
+              <![CDATA[Enter title Automation513518f04b.]]>
             </line>
             <line>
               <![CDATA[Click the 'Apply' button.]]>
@@ -467,202 +407,46 @@
               <![CDATA[Get the text of the first search result set item.]]>
             </line>
             <line>
-              <![CDATA[Get the title text of every result in the search result set.]]>
+              <![CDATA[Verify the search thumbnail named 'nbclogosmall' is present for search result 'Automation513518f04b'.]]>
             </line>
             <line>
-              <![CDATA[For each expected result, assert it is present in the result set.]]>
+              <![CDATA[Assert the the img is loaded and visible.]]>
             </line>
             <line>
-              <![CDATA[Verify the text '02/25/2014 - 05:00 AM' is present on the page.]]>
+              <![CDATA[Mouse over the 'Structure' menu link.]]>
             </line>
             <line>
-              <![CDATA[Verify the text '03/10/2014 - 04:00 AM' is present on the page.]]>
+              <![CDATA[Click the 'File types' menu link.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'Expired' is present on the page.]]>
+              <![CDATA[Click the 'DB TV manage file display' link.]]>
             </line>
             <line>
-              <![CDATA[Click the first search title link in the search result set.]]>
+              <![CDATA[Un-Check the 'Pub MPX Image' checkbox]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'Automation2b4c318e2e' is present on the page.]]>
+              <![CDATA[Click the 'Save configuration' button.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'Tuesday, February 25, 2014 - 05:00' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'Monday, March 10, 2014 - 04:00' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Edit' link in the work bench.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Edit mpx_video_6 Automation2b4c318e2e dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the value of the 'Available Date' text box equals '02/25/2014'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the value of the 'Expiration Date' text box equals '03/10/2014'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Schedule' tab.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Automation2b4c318e2e dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the scheduled revision table is empty.]]>
-            </line>
-            <line>
-              <![CDATA[Open the mpx platform.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the account name 'DB TV' in the account select text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the account option from the drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Account' title to leave focus off of the selection.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for account to switch to the newly selected account.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Automation2b4c318e2e' in the 'Search' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Search by Title' link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Available Date' label on the right hand side to give focus to the media item.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '3/17/2014 12:00 AM' in the 'Available Date' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '3/17/2015 12:00 AM' in the 'Expiration Date' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Additional Options' arrow.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Publish Update' link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Publish to Pub 7 Primary' check box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Update' button.]]>
-            </line>
-            <line>
-              <![CDATA[Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Status report dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Cron ran successfully.' is present.]]>
+              <![CDATA[Verify success message of 'Your settings have been saved.' is present.]]>
             </line>
             <line>
               <![CDATA[Verify there are no errors present.]]>
             </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Files' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'mpxMedia' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter title Automation2b4c318e2e.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Apply' button.]]>
-            </line>
-            <line>
-              <![CDATA[Get the title text of every result in the search result set.]]>
-            </line>
-            <line>
-              <![CDATA[For each expected result, assert it is present in the result set.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text '03/17/2014 - 04:00 AM' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text '03/17/2015 - 04:00 AM' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'Published' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Click the first search title link in the search result set.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'Automation2b4c318e2e' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'Monday, March 17, 2014 - 04:00' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'Tuesday, March 17, 2015 - 04:00' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Edit' link in the work bench.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Edit mpx_video_6 Automation2b4c318e2e dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the value of the 'Available Date' text box equals '03/17/2014'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the value of the 'Expiration Date' text box equals '03/17/2015'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Schedule' tab.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Automation2b4c318e2e dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Run now' button is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'Automation2b4c318e2e' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'Unpublish' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text '03/17/2015 - 04:00' is present on the page.]]>
-            </line>
           </reporter-output>
-        </test-method> <!-- MPXVideosSchedulingVerificationScheduling_Test -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling@1df749e3]" name="stopSelenium" is-config="true" duration-ms="572" started-at="2014-03-17T12:41:47Z" finished-at="2014-03-17T12:41:48Z">
+        </test-method> <!-- ThumbnailsAreNotUpdated_Test -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Video.Thumbnails.ThumbnailsAreNotUpdated@83602ca]" name="stopSelenium" is-config="true" duration-ms="575" started-at="2014-03-18T13:36:47Z" finished-at="2014-03-18T13:36:48Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=MPXVideosSchedulingVerificationScheduling_Test status=SUCCESS method=MPXVideosSchedulingVerificationScheduling.MPXVideosSchedulingVerificationScheduling_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling@1df749e3] output=Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.]]]>
+                <![CDATA[[TestResult name=ThumbnailsAreNotUpdated_Test status=SUCCESS method=ThumbnailsAreNotUpdated.ThumbnailsAreNotUpdated_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.Thumbnails.ThumbnailsAreNotUpdated@83602ca] output=Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-      </class> <!-- com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Video.Thumbnails.ThumbnailsAreNotUpdated -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
