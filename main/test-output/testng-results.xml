@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
     <line>
       <![CDATA[Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.]]>
@@ -14,22 +14,16 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Configuration' menu link.]]>
+      <![CDATA[Click the 'Modules' menu link.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Media' menu link.]]>
+      <![CDATA[Switch to frame titled 'Modules'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Media: thePlatform mpx settings' menu link.]]>
+      <![CDATA[Enter 'Pub Ads' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.]]>
-    </line>
-    <line>
-      <![CDATA[Get all the selected import account options and store to a list.]]>
+      <![CDATA[Wait for the module titled 'Pub Ads' to appear in the list.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
@@ -38,193 +32,257 @@
       <![CDATA[Mouse over the 'Structure' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'File types' menu link.]]>
+      <![CDATA[Click the 'Publisher Ads Side Files' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'File types dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'DB TV manage file display' link.]]>
+      <![CDATA[Click the 'Add' link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'MPX Video for Account &quot;DB TV&quot; (2312945284) dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'Add a new side file dialog'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Pub MPX Image' link.]]>
+      <![CDATA[Enter '520ca97eadce4e6' in the 'Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Select the 'Thumbnail (100x100)' option from the 'Pub MPX Image Style' drop down list.]]>
+      <![CDATA[Enter '1c81f5db71/7b29ad1b9c.html' in the 'Path' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
+      <![CDATA[Select the 'text/html' from the 'Response type' drop down list.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'Your settings have been saved.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify there are no errors present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Open the mpx platform.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'mpx/AdminPub7QA' in the 'Username' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Pa55word' in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Login' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Upload' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Choose Files' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Movies' button in the OS Upload dialog.]]>
-    </line>
-    <line>
-      <![CDATA[Click the Test Movie in th OS Upload dialog.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Open' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Upload' button in the Upload dialog.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Available Date' label on the right hand side to give focus to the media item.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Automation513518f04b' in the 'Title' text box.]]>
+      <![CDATA[Enter '<html><body bgcolor=white><script language=javascript>function pq(q) {if(q.length > 1) this.q = q.substring(1, q.length);else this.q = null;this.keyValuePairs = new Array();if(q) {for(var i=0; i < this.q.split("&").length; i++) {this.keyValuePairs[i] = this.q.split("&")[i];}}this.getValue = function(s) {for(var j=0; j < this.keyValuePairs.length; j++) {if(this.keyValuePairs[j].split("=")[0] == s)return this.keyValuePairs[j].split("=")[1];}return -1;}}function qs(key){var page = new pq(document.location.search);return unescape(page.getValue(key));}var _c = qs('c');var r_number = Math.random();document.writeln('<SCR'+'IPT language='JavaScript' S'+'RC="http://media.adcentriconline.com/adcentric/tag/'+_c+'?ADCadcifr=1&number='+r_number+'"></SCR'+'IPT>');</script></body></html>' in the 'Content' text box.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Files' link.]]>
+      <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Upload' button.]]>
+      <![CDATA[Verify success message of '520ca97eadce4e6 has been created.' is present.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Choose Files' button.]]>
+      <![CDATA[Verify there are no errors present.]]>
     </line>
     <line>
-      <![CDATA[Click the 'All Files' icon.]]>
+      <![CDATA[Click the Ad Side File link with path '1c81f5db71/7b29ad1b9c.html'.]]>
     </line>
     <line>
-      <![CDATA[Click the local 'Pictures' icon.]]>
+      <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
     </line>
     <line>
-      <![CDATA[Click the nbc logo image link.]]>
+      <![CDATA[Click the Ad Side File 'Edit' link for adName + 'Atlas'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Open' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Upload' button in the Upload dialog.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'All Media' link.]]>
+      <![CDATA[Switch to the active frame titled 'Edit side file atlas dialog'.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Publish' button.]]>
+      <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Publish to Pub 7 Primary' check box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Publish' button from the upload dialog.]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Status report dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Cron ran successfully.' is present.]]>
+      <![CDATA[Verify success message of 'atlas has been updated' is present.]]>
     </line>
     <line>
       <![CDATA[Verify there are no errors present.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
+      <![CDATA[Verify storage type for Ad Side File 'Atlas' is set to 'Overridden'.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Content' menu link.]]>
+      <![CDATA[Click the Ad Side File 'Edit' link for adName + 'Atlas'.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Files' menu link.]]>
+      <![CDATA[Switch to the active frame titled 'Edit side file atlas dialog'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'mpxMedia' menu link.]]>
+      <![CDATA[Click the 'Revert' button.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+      <![CDATA[Click the 'Revert' button.]]>
     </line>
     <line>
-      <![CDATA[Enter title Automation513518f04b.]]>
+      <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Apply' button.]]>
-    </line>
-    <line>
-      <![CDATA[Get the text of the first search result set item.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the search thumbnail named 'nbclogosmall' is present for search result 'Automation513518f04b'.]]>
-    </line>
-    <line>
-      <![CDATA[Assert the the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Structure' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'File types' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'DB TV manage file display' link.]]>
-    </line>
-    <line>
-      <![CDATA[Un-Check the 'Pub MPX Image' checkbox]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Your settings have been saved.' is present.]]>
+      <![CDATA[Verify success message of 'The item has been reverted.' is present.]]>
     </line>
     <line>
       <![CDATA[Verify there are no errors present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify storage type for Ad Side File 'Atlas' is set to 'Default'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the Ad Side File expand link for adName + 'Atlas'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the Ad Side File 'Clone' link for adName + 'Atlas'.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Clone side file atlas dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '25ce453bee1d4de' in the 'Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'clone_of_atlas has been created.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140319111534.png ]]>
+    </line>
+    <line>
+      <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140319111534.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140319111534.png' height='500' width='500'/> </a>]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="180597" started-at="2014-03-18T17:33:47Z" finished-at="2014-03-18T17:36:48Z">
+  <suite name="Default suite" duration-ms="82399" started-at="2014-03-19T16:14:13Z" finished-at="2014-03-19T16:15:35Z">
     <groups>
-      <group name="mpx">
-        <method signature="ThumbnailsAreNotUpdated.ThumbnailsAreNotUpdated_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.Thumbnails.ThumbnailsAreNotUpdated@83602ca]" name="ThumbnailsAreNotUpdated_Test" class="com.nbcuni.test.publisher.tests.Video.Thumbnails.ThumbnailsAreNotUpdated"/>
-      </group> <!-- mpx -->
       <group name="full">
-        <method signature="ThumbnailsAreNotUpdated.ThumbnailsAreNotUpdated_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.Thumbnails.ThumbnailsAreNotUpdated@83602ca]" name="ThumbnailsAreNotUpdated_Test" class="com.nbcuni.test.publisher.tests.Video.Thumbnails.ThumbnailsAreNotUpdated"/>
+        <method signature="AdFoldersRichMediaAds.AdFoldersRichMediaAds_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds@77ea34ed]" name="AdFoldersRichMediaAds_Test" class="com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds"/>
       </group> <!-- full -->
+      <group name="smoke">
+        <method signature="AdFoldersRichMediaAds.AdFoldersRichMediaAds_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds@77ea34ed]" name="AdFoldersRichMediaAds_Test" class="com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds"/>
+      </group> <!-- smoke -->
     </groups>
-    <test name="Default test" duration-ms="180597" started-at="2014-03-18T17:33:47Z" finished-at="2014-03-18T17:36:48Z">
-      <class name="com.nbcuni.test.publisher.tests.Video.Thumbnails.ThumbnailsAreNotUpdated">
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.Thumbnails.ThumbnailsAreNotUpdated@83602ca]" name="startSelenium" is-config="true" duration-ms="13622" started-at="2014-03-18T13:33:47Z" finished-at="2014-03-18T13:34:01Z">
+    <test name="Default test" duration-ms="82399" started-at="2014-03-19T16:14:13Z" finished-at="2014-03-19T16:15:35Z">
+      <class name="com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds@77ea34ed]" name="startSelenium" is-config="true" duration-ms="13441" started-at="2014-03-19T12:14:13Z" finished-at="2014-03-19T12:14:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="ThumbnailsAreNotUpdated_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.Thumbnails.ThumbnailsAreNotUpdated@83602ca]" name="ThumbnailsAreNotUpdated_Test" duration-ms="166390" started-at="2014-03-18T13:34:01Z" finished-at="2014-03-18T13:36:47Z">
+        <test-method status="FAIL" signature="AdFoldersRichMediaAds_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds@77ea34ed]" name="AdFoldersRichMediaAds_Test" duration-ms="68128" started-at="2014-03-19T12:14:26Z" finished-at="2014-03-19T12:15:34Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element
+  (Session info: chrome=33.0.1750.152)
+  (Driver info: chromedriver=2.8.241036,platform=Mac OS X 10.8.5 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 30.06 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.35.0', revision: '8df0c6bedf70ff9f22c647788f9fe9c8d22210e2', time: '2013-08-17 12:46:41'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.8.5', java.version: '1.7.0_25'
+Session ID: 29e9aa2e90fba06182a96242ac876d86
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.TGf4Rp}, rotatable=false, locationContextEnabled=true, version=33.0.1750.152, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
+Command duration or timeout: 30.49 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.35.0', revision: '8df0c6bedf70ff9f22c647788f9fe9c8d22210e2', time: '2013-08-17 12:46:41'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.8.5', java.version: '1.7.0_25'
+Session ID: e5a156cc-c7c3-4481-a54a-818d4b0ad4ef
+Driver info: com.nbcuni.test.webdriver.CustomWebDriver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.TGf4Rp}, rotatable=false, locationContextEnabled=true, webdriver.remote.sessionid=e5a156cc-c7c3-4481-a54a-818d4b0ad4ef, version=33.0.1750.152, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element
+  (Session info: chrome=33.0.1750.152)
+  (Driver info: chromedriver=2.8.241036,platform=Mac OS X 10.8.5 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 30.06 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.35.0', revision: '8df0c6bedf70ff9f22c647788f9fe9c8d22210e2', time: '2013-08-17 12:46:41'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.8.5', java.version: '1.7.0_25'
+Session ID: 29e9aa2e90fba06182a96242ac876d86
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.TGf4Rp}, rotatable=false, locationContextEnabled=true, version=33.0.1750.152, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
+Command duration or timeout: 30.49 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.35.0', revision: '8df0c6bedf70ff9f22c647788f9fe9c8d22210e2', time: '2013-08-17 12:46:41'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.8.5', java.version: '1.7.0_25'
+Session ID: e5a156cc-c7c3-4481-a54a-818d4b0ad4ef
+Driver info: com.nbcuni.test.webdriver.CustomWebDriver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.TGf4Rp}, rotatable=false, locationContextEnabled=true, webdriver.remote.sessionid=e5a156cc-c7c3-4481-a54a-818d4b0ad4ef, version=33.0.1750.152, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
+	at sun.reflect.GeneratedConstructorAccessor21.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:191)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:554)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:307)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:404)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:344)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:299)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:59)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:34)
+	at com.sun.proxy.$Proxy10.getText(Unknown Source)
+	at com.nbcuni.test.publisher.pageobjects.Content.ContentParent.VerifyMessageStatus(ContentParent.java:88)
+	at com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds.AdFoldersRichMediaAds_Test(AdFoldersRichMediaAds.java:102)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+Caused by: org.openqa.selenium.remote.ScreenshotException: Screen shot has been taken
+Build info: version: '2.35.0', revision: '8df0c6bedf70ff9f22c647788f9fe9c8d22210e2', time: '2013-08-17 12:46:41'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.8.5', java.version: '1.7.0_25'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:125)
+	... 34 more
+Caused by: org.openqa.selenium.NoSuchElementException: no such element
+  (Session info: chrome=33.0.1750.152)
+  (Driver info: chromedriver=2.8.241036,platform=Mac OS X 10.8.5 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 30.06 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.35.0', revision: '8df0c6bedf70ff9f22c647788f9fe9c8d22210e2', time: '2013-08-17 12:46:41'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.8.5', java.version: '1.7.0_25'
+Session ID: 29e9aa2e90fba06182a96242ac876d86
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.TGf4Rp}, rotatable=false, locationContextEnabled=true, version=33.0.1750.152, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.35.0', revision: '8df0c6bedf70ff9f22c647788f9fe9c8d22210e2', time: '2013-08-17 12:46:41'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.8.5', java.version: '1.7.0_25'
+Driver info: driver.version: EventFiringWebDriver
+	at sun.reflect.GeneratedConstructorAccessor21.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:191)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:554)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:307)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:404)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:344)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:299)
+	at sun.reflect.GeneratedMethodAccessor16.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:101)
+	at com.sun.proxy.$Proxy8.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:180)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:47)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:33)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:169)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
             <line>
               <![CDATA[Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.]]>
@@ -239,22 +297,16 @@
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Configuration' menu link.]]>
+              <![CDATA[Click the 'Modules' menu link.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Media' menu link.]]>
+              <![CDATA[Switch to frame titled 'Modules'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Media: thePlatform mpx settings' menu link.]]>
+              <![CDATA[Enter 'Pub Ads' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.]]>
-            </line>
-            <line>
-              <![CDATA[Get all the selected import account options and store to a list.]]>
+              <![CDATA[Wait for the module titled 'Pub Ads' to appear in the list.]]>
             </line>
             <line>
               <![CDATA[Click the 'Close Overlay X'.]]>
@@ -263,190 +315,130 @@
               <![CDATA[Mouse over the 'Structure' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'File types' menu link.]]>
+              <![CDATA[Click the 'Publisher Ads Side Files' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'File types dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'DB TV manage file display' link.]]>
+              <![CDATA[Click the 'Add' link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'MPX Video for Account &quot;DB TV&quot; (2312945284) dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'Add a new side file dialog'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Pub MPX Image' link.]]>
+              <![CDATA[Enter '520ca97eadce4e6' in the 'Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Select the 'Thumbnail (100x100)' option from the 'Pub MPX Image Style' drop down list.]]>
+              <![CDATA[Enter '1c81f5db71/7b29ad1b9c.html' in the 'Path' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
+              <![CDATA[Select the 'text/html' from the 'Response type' drop down list.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'Your settings have been saved.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify there are no errors present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Open the mpx platform.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'mpx/AdminPub7QA' in the 'Username' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Pa55word' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Login' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Upload' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Choose Files' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Movies' button in the OS Upload dialog.]]>
-            </line>
-            <line>
-              <![CDATA[Click the Test Movie in th OS Upload dialog.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Open' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Upload' button in the Upload dialog.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Available Date' label on the right hand side to give focus to the media item.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Automation513518f04b' in the 'Title' text box.]]>
+              <![CDATA[Enter '<html><body bgcolor=white><script language=javascript>function pq(q) {if(q.length > 1) this.q = q.substring(1, q.length);else this.q = null;this.keyValuePairs = new Array();if(q) {for(var i=0; i < this.q.split("&").length; i++) {this.keyValuePairs[i] = this.q.split("&")[i];}}this.getValue = function(s) {for(var j=0; j < this.keyValuePairs.length; j++) {if(this.keyValuePairs[j].split("=")[0] == s)return this.keyValuePairs[j].split("=")[1];}return -1;}}function qs(key){var page = new pq(document.location.search);return unescape(page.getValue(key));}var _c = qs('c');var r_number = Math.random();document.writeln('<SCR'+'IPT language='JavaScript' S'+'RC="http://media.adcentriconline.com/adcentric/tag/'+_c+'?ADCadcifr=1&number='+r_number+'"></SCR'+'IPT>');</script></body></html>' in the 'Content' text box.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Files' link.]]>
+              <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Upload' button.]]>
+              <![CDATA[Verify success message of '520ca97eadce4e6 has been created.' is present.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Choose Files' button.]]>
+              <![CDATA[Verify there are no errors present.]]>
             </line>
             <line>
-              <![CDATA[Click the 'All Files' icon.]]>
+              <![CDATA[Click the Ad Side File link with path '1c81f5db71/7b29ad1b9c.html'.]]>
             </line>
             <line>
-              <![CDATA[Click the local 'Pictures' icon.]]>
+              <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
             </line>
             <line>
-              <![CDATA[Click the nbc logo image link.]]>
+              <![CDATA[Click the Ad Side File 'Edit' link for adName + 'Atlas'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Open' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Upload' button in the Upload dialog.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'All Media' link.]]>
+              <![CDATA[Switch to the active frame titled 'Edit side file atlas dialog'.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Publish' button.]]>
+              <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Publish to Pub 7 Primary' check box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Publish' button from the upload dialog.]]>
-            </line>
-            <line>
-              <![CDATA[Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Status report dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Cron ran successfully.' is present.]]>
+              <![CDATA[Verify success message of 'atlas has been updated' is present.]]>
             </line>
             <line>
               <![CDATA[Verify there are no errors present.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
+              <![CDATA[Verify storage type for Ad Side File 'Atlas' is set to 'Overridden'.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Content' menu link.]]>
+              <![CDATA[Click the Ad Side File 'Edit' link for adName + 'Atlas'.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Files' menu link.]]>
+              <![CDATA[Switch to the active frame titled 'Edit side file atlas dialog'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'mpxMedia' menu link.]]>
+              <![CDATA[Click the 'Revert' button.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+              <![CDATA[Click the 'Revert' button.]]>
             </line>
             <line>
-              <![CDATA[Enter title Automation513518f04b.]]>
+              <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Apply' button.]]>
-            </line>
-            <line>
-              <![CDATA[Get the text of the first search result set item.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the search thumbnail named 'nbclogosmall' is present for search result 'Automation513518f04b'.]]>
-            </line>
-            <line>
-              <![CDATA[Assert the the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Structure' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'File types' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'DB TV manage file display' link.]]>
-            </line>
-            <line>
-              <![CDATA[Un-Check the 'Pub MPX Image' checkbox]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Your settings have been saved.' is present.]]>
+              <![CDATA[Verify success message of 'The item has been reverted.' is present.]]>
             </line>
             <line>
               <![CDATA[Verify there are no errors present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify storage type for Ad Side File 'Atlas' is set to 'Default'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the Ad Side File expand link for adName + 'Atlas'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the Ad Side File 'Clone' link for adName + 'Atlas'.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Clone side file atlas dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '25ce453bee1d4de' in the 'Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'clone_of_atlas has been created.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140319111534.png ]]>
+            </line>
+            <line>
+              <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140319111534.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140319111534.png' height='500' width='500'/> </a>]]>
             </line>
           </reporter-output>
-        </test-method> <!-- ThumbnailsAreNotUpdated_Test -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Video.Thumbnails.ThumbnailsAreNotUpdated@83602ca]" name="stopSelenium" is-config="true" duration-ms="575" started-at="2014-03-18T13:36:47Z" finished-at="2014-03-18T13:36:48Z">
+        </test-method> <!-- AdFoldersRichMediaAds_Test -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds@77ea34ed]" name="stopSelenium" is-config="true" duration-ms="804" started-at="2014-03-19T12:15:34Z" finished-at="2014-03-19T12:15:35Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=ThumbnailsAreNotUpdated_Test status=SUCCESS method=ThumbnailsAreNotUpdated.ThumbnailsAreNotUpdated_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.Thumbnails.ThumbnailsAreNotUpdated@83602ca] output=Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.]]]>
+                <![CDATA[[TestResult name=AdFoldersRichMediaAds_Test status=FAILURE method=AdFoldersRichMediaAds.AdFoldersRichMediaAds_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds@77ea34ed] output=Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-      </class> <!-- com.nbcuni.test.publisher.tests.Video.Thumbnails.ThumbnailsAreNotUpdated -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

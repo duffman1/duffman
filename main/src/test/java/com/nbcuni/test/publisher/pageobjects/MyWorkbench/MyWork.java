@@ -1,5 +1,9 @@
 package com.nbcuni.test.publisher.pageobjects.MyWorkbench;
 
+import java.util.List;
+
+import junit.framework.Assert;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -34,6 +38,10 @@ public class MyWork {
     	return webDriver.findElement(By.xpath("//a[text()='" + title + "']/../..//a[text()='edit']"));
     }
     
+    private static WebElement ContentItem_Ctr(String title) {
+    	return webDriver.findElement(By.xpath("//td[contains(@class, 'title')]/a[text()='" + title + "']/../.."));
+    }
+    
     
     //PAGE OBJECT METHODS
     public void ClickMyWorkBtn() throws Exception {
@@ -48,6 +56,16 @@ public class MyWork {
     	Reporter.log("Click the 'edit' link for the content item titled '" + title + "'.");
     	Edit_Lnk(title).click();
     	
+    }
+    
+    public void VerifyContentItemData(List<String> contentData) {
+    	
+    	String contentItemTxt = ContentItem_Ctr(contentData.get(0)).getText();
+		
+    	for (String data : contentData) {
+    		Reporter.log("Verify that text '" + data + "' is present in the content item titled '" + contentData.get(0) + "'.");
+    		Assert.assertTrue(contentItemTxt.contains(data));
+    	}
     }
     
 }

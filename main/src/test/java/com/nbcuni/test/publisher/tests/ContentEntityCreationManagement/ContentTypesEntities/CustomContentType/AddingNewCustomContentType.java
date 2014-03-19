@@ -1,9 +1,11 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CustomContentType;
 
 import org.testng.annotations.Test;
+
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
+import com.nbcuni.test.publisher.pageobjects.Content.BasicInformation;
 import com.nbcuni.test.publisher.pageobjects.Content.ContentTypes;
 
 public class AddingNewCustomContentType extends ParentTest{
@@ -17,6 +19,7 @@ public class AddingNewCustomContentType extends ParentTest{
      * Step 5 - Navigate to Structure >> Content Types >> New Content Type >> Manage Fields<br>
      * Step 6 - Under 'Label' column type 'image' in 'Add new field' text box, under 'Field type' column select 'image' in 'Type of data to store' drop down and click on 'Save' button then click on 'Save field settings' button then click on 'Save setting' button. ,Observe that successful message is displayed.<br>
      * Step 7 - Navigate to Content-> Add content-> new custom content type. Observe that the user is taken to the "Create new custom content type" overlay and 'Select' button under 'Image' text is displayed for selecting the image.
+     * Step 8 - Enter required fields and click save
      * @throws Throwable No Return values are needed
      *************************************************************************************/
     @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "smoke" })
@@ -63,6 +66,16 @@ public class AddingNewCustomContentType extends ParentTest{
             taxonomy.NavigateSite("Content>>Add content>>" + contentTypeName);
             overlay.SwitchToFrame(contentTypeName);
             contentTypes.VerifyFieldSaveBtnPresent(newFieldName);
+            
+            //Step 8
+            BasicInformation basicInformation = new BasicInformation(webDriver);
+            String contentTitle = random.GetCharacterString(15);
+            basicInformation.EnterTitle(contentTitle);
+            basicInformation.EnterSynopsis();
+            overlay.SwitchToActiveFrame();
+            contentParent.ClickSaveBtn();
+            overlay.switchToDefaultContent();
+            contentParent.VerifyMessageStatus(contentTypeName + " " + contentTitle + " has been created.");
             
     }
 }

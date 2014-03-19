@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,7 +37,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Default_suite">
-              <span class="suite-name border-passed">Default suite</span>
+              <span class="suite-name border-failed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -90,21 +90,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Default_suite" class="hide-methods passed suite-Default_suite"> (hide)</a> <!-- hide-methods passed suite-Default_suite -->
-                      <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
                     </span>
-                    <div class="method-list-content passed suite-Default_suite">
+                    <div class="method-list-content failed suite-Default_suite">
                       <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.nbcuni.test.publisher.tests.Video.Thumbnails.ThumbnailsAreNotUpdated" hash-for-method="ThumbnailsAreNotUpdated_Test">ThumbnailsAreNotUpdated_Test</a> <!-- method navigator-link -->
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds" hash-for-method="AdFoldersRichMediaAds_Test">AdFoldersRichMediaAds_Test</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-Default_suite -->
+                    </div> <!-- method-list-content failed suite-Default_suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -116,25 +116,127 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-passed">
+          <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.nbcuni.test.publisher.tests.Video.Thumbnails.ThumbnailsAreNotUpdated</span>
+              <img src="failed.png"/>
+              <span class="class-name">com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="ThumbnailsAreNotUpdated_Test">
-                  </a> <!-- ThumbnailsAreNotUpdated_Test -->
-                  <span class="method-name">ThumbnailsAreNotUpdated_Test</span>
+                  <a name="AdFoldersRichMediaAds_Test">
+                  </a> <!-- AdFoldersRichMediaAds_Test -->
+                  <span class="method-name">AdFoldersRichMediaAds_Test</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element
+  (Session info: chrome=33.0.1750.152)
+  (Driver info: chromedriver=2.8.241036,platform=Mac OS X 10.8.5 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 30.06 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.8.5&apos;, java.version: &apos;1.7.0_25&apos;
+Session ID: 29e9aa2e90fba06182a96242ac876d86
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.TGf4Rp}, rotatable=false, locationContextEnabled=true, version=33.0.1750.152, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
+Command duration or timeout: 30.49 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.8.5&apos;, java.version: &apos;1.7.0_25&apos;
+Session ID: e5a156cc-c7c3-4481-a54a-818d4b0ad4ef
+Driver info: com.nbcuni.test.webdriver.CustomWebDriver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.TGf4Rp}, rotatable=false, locationContextEnabled=true, webdriver.remote.sessionid=e5a156cc-c7c3-4481-a54a-818d4b0ad4ef, version=33.0.1750.152, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
+	at sun.reflect.GeneratedConstructorAccessor21.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:191)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:554)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:307)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:404)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:344)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:299)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:59)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:34)
+	at com.sun.proxy.$Proxy10.getText(Unknown Source)
+	at com.nbcuni.test.publisher.pageobjects.Content.ContentParent.VerifyMessageStatus(ContentParent.java:88)
+	at com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds.AdFoldersRichMediaAds_Test(AdFoldersRichMediaAds.java:102)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+Caused by: org.openqa.selenium.remote.ScreenshotException: Screen shot has been taken
+Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.8.5&apos;, java.version: &apos;1.7.0_25&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:125)
+	... 34 more
+Caused by: org.openqa.selenium.NoSuchElementException: no such element
+  (Session info: chrome=33.0.1750.152)
+  (Driver info: chromedriver=2.8.241036,platform=Mac OS X 10.8.5 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 30.06 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.8.5&apos;, java.version: &apos;1.7.0_25&apos;
+Session ID: 29e9aa2e90fba06182a96242ac876d86
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.TGf4Rp}, rotatable=false, locationContextEnabled=true, version=33.0.1750.152, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.8.5&apos;, java.version: &apos;1.7.0_25&apos;
+Driver info: driver.version: EventFiringWebDriver
+	at sun.reflect.GeneratedConstructorAccessor21.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:191)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:554)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:307)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:404)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:344)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:299)
+	at sun.reflect.GeneratedMethodAccessor16.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:101)
+	at com.sun.proxy.$Proxy8.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:180)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:47)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:33)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:169)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-passed -->
+          </div> <!-- suite-Default_suite-class-failed -->
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/private/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/testng-eclipse--1740943987/testng-customsuite.xml</span>
+            <span class="header-content">/private/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/testng-eclipse--218454160/testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -143,7 +245,7 @@
 &lt;suite name=&quot;Default suite&quot;&gt;
   &lt;test verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.nbcuni.test.publisher.tests.Video.Thumbnails.ThumbnailsAreNotUpdated&quot;/&gt;
+      &lt;class name=&quot;com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -171,15 +273,15 @@
               <span class="test-group-name">full</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">ThumbnailsAreNotUpdated_Test</span>
+                <span class="method-in-group-name">AdFoldersRichMediaAds_Test</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
             <div class="test-group">
-              <span class="test-group-name">mpx</span>
+              <span class="test-group-name">smoke</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">ThumbnailsAreNotUpdated_Test</span>
+                <span class="method-in-group-name">AdFoldersRichMediaAds_Test</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -201,14 +303,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'ThumbnailsAreNotUpdated_Test')
-data.setCell(0, 2, 'com.nbcuni.test.publisher.tests.Video.Thumbnails.ThumbnailsAreNotUpdated')
-data.setCell(0, 3, 166390);
+data.setCell(0, 1, 'AdFoldersRichMediaAds_Test')
+data.setCell(0, 2, 'com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds')
+data.setCell(0, 3, 68128);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 minutes</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -220,77 +322,55 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="reporter-method-div">
-              <span class="reporter-method-name">ThumbnailsAreNotUpdated_Test</span>
+              <span class="reporter-method-name">AdFoldersRichMediaAds_Test</span>
               <div class="reporter-method-output-div">
                 <span class="reporter-method-output">Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.</span>
                 <span class="reporter-method-output">Enter the user's email address in the 'Email Address' text box.</span>
                 <span class="reporter-method-output">Enter the user's password in the 'Password' text box.</span>
                 <span class="reporter-method-output">Click the 'Login' button.</span>
-                <span class="reporter-method-output">Mouse over the 'Configuration' menu link.</span>
-                <span class="reporter-method-output">Mouse over the 'Media' menu link.</span>
-                <span class="reporter-method-output">Click the 'Media: thePlatform mpx settings' menu link.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.</span>
-                <span class="reporter-method-output">Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.</span>
-                <span class="reporter-method-output">Get all the selected import account options and store to a list.</span>
+                <span class="reporter-method-output">Click the 'Modules' menu link.</span>
+                <span class="reporter-method-output">Switch to frame titled 'Modules'.</span>
+                <span class="reporter-method-output">Enter 'Pub Ads' in the 'Filter Name' text box.</span>
+                <span class="reporter-method-output">Wait for the module titled 'Pub Ads' to appear in the list.</span>
                 <span class="reporter-method-output">Click the 'Close Overlay X'.</span>
                 <span class="reporter-method-output">Mouse over the 'Structure' menu link.</span>
-                <span class="reporter-method-output">Click the 'File types' menu link.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'File types dialog'.</span>
-                <span class="reporter-method-output">Click the 'DB TV manage file display' link.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'MPX Video for Account &quot;DB TV&quot; (2312945284) dialog'.</span>
-                <span class="reporter-method-output">Click the 'Pub MPX Image' link.</span>
-                <span class="reporter-method-output">Select the 'Thumbnail (100x100)' option from the 'Pub MPX Image Style' drop down list.</span>
-                <span class="reporter-method-output">Click the 'Save configuration' button.</span>
-                <span class="reporter-method-output">Verify success message of 'Your settings have been saved.' is present.</span>
-                <span class="reporter-method-output">Verify there are no errors present.</span>
-                <span class="reporter-method-output">Click the 'Close Overlay X'.</span>
-                <span class="reporter-method-output">Open the mpx platform.</span>
-                <span class="reporter-method-output">Enter 'mpx/AdminPub7QA' in the 'Username' text box.</span>
-                <span class="reporter-method-output">Enter 'Pa55word' in the 'Password' text box.</span>
-                <span class="reporter-method-output">Click the 'Login' button.</span>
-                <span class="reporter-method-output">Click the 'Upload' button.</span>
-                <span class="reporter-method-output">Click the 'Choose Files' button.</span>
-                <span class="reporter-method-output">Click the 'Movies' button in the OS Upload dialog.</span>
-                <span class="reporter-method-output">Click the Test Movie in th OS Upload dialog.</span>
-                <span class="reporter-method-output">Click the 'Open' button.</span>
-                <span class="reporter-method-output">Click the 'Upload' button in the Upload dialog.</span>
-                <span class="reporter-method-output">Click the 'Available Date' label on the right hand side to give focus to the media item.</span>
-                <span class="reporter-method-output">Enter 'Automation513518f04b' in the 'Title' text box.</span>
+                <span class="reporter-method-output">Click the 'Publisher Ads Side Files' menu link.</span>
+                <span class="reporter-method-output">Switch to the active frame titled 'Publisher Ads Side Files dialog'.</span>
+                <span class="reporter-method-output">Click the 'Add' link.</span>
+                <span class="reporter-method-output">Switch to the active frame titled 'Add a new side file dialog'.</span>
+                <span class="reporter-method-output">Enter '520ca97eadce4e6' in the 'Name' text box.</span>
+                <span class="reporter-method-output">Enter '1c81f5db71/7b29ad1b9c.html' in the 'Path' text box.</span>
+                <span class="reporter-method-output">Select the 'text/html' from the 'Response type' drop down list.</span>
+                <span class="reporter-method-output">Enter '<html><body bgcolor=white><script language=javascript>function pq(q) {if(q.length > 1) this.q = q.substring(1, q.length);else this.q = null;this.keyValuePairs = new Array();if(q) {for(var i=0; i < this.q.split("&").length; i++) {this.keyValuePairs[i] = this.q.split("&")[i];}}this.getValue = function(s) {for(var j=0; j < this.keyValuePairs.length; j++) {if(this.keyValuePairs[j].split("=")[0] == s)return this.keyValuePairs[j].split("=")[1];}return -1;}}function qs(key){var page = new pq(document.location.search);return unescape(page.getValue(key));}var _c = qs('c');var r_number = Math.random();document.writeln('<SCR'+'IPT language='JavaScript' S'+'RC="http://media.adcentriconline.com/adcentric/tag/'+_c+'?ADCadcifr=1&number='+r_number+'"></SCR'+'IPT>');</script></body></html>' in the 'Content' text box.</span>
                 <span class="reporter-method-output">Click the 'Save' button.</span>
-                <span class="reporter-method-output">Click the 'Files' link.</span>
-                <span class="reporter-method-output">Click the 'Upload' button.</span>
-                <span class="reporter-method-output">Click the 'Choose Files' button.</span>
-                <span class="reporter-method-output">Click the 'All Files' icon.</span>
-                <span class="reporter-method-output">Click the local 'Pictures' icon.</span>
-                <span class="reporter-method-output">Click the nbc logo image link.</span>
-                <span class="reporter-method-output">Click the 'Open' button.</span>
-                <span class="reporter-method-output">Click the 'Upload' button in the Upload dialog.</span>
-                <span class="reporter-method-output">Click the 'All Media' link.</span>
+                <span class="reporter-method-output">Switch to the active frame titled 'Publisher Ads Side Files dialog'.</span>
+                <span class="reporter-method-output">Verify success message of '520ca97eadce4e6 has been created.' is present.</span>
+                <span class="reporter-method-output">Verify there are no errors present.</span>
+                <span class="reporter-method-output">Click the Ad Side File link with path '1c81f5db71/7b29ad1b9c.html'.</span>
+                <span class="reporter-method-output">Switch to the active frame titled 'Publisher Ads Side Files dialog'.</span>
+                <span class="reporter-method-output">Click the Ad Side File 'Edit' link for adName + 'Atlas'.</span>
+                <span class="reporter-method-output">Switch to the active frame titled 'Edit side file atlas dialog'.</span>
                 <span class="reporter-method-output">Click the 'Save' button.</span>
-                <span class="reporter-method-output">Click the 'Publish' button.</span>
-                <span class="reporter-method-output">Click the 'Publish to Pub 7 Primary' check box.</span>
-                <span class="reporter-method-output">Click the 'Publish' button from the upload dialog.</span>
-                <span class="reporter-method-output">Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'Status report dialog'.</span>
-                <span class="reporter-method-output">Verify success message of 'Cron ran successfully.' is present.</span>
+                <span class="reporter-method-output">Switch to the active frame titled 'Publisher Ads Side Files dialog'.</span>
+                <span class="reporter-method-output">Verify success message of 'atlas has been updated' is present.</span>
                 <span class="reporter-method-output">Verify there are no errors present.</span>
-                <span class="reporter-method-output">Click the 'Close Overlay X'.</span>
-                <span class="reporter-method-output">Mouse over the 'Content' menu link.</span>
-                <span class="reporter-method-output">Mouse over the 'Files' menu link.</span>
-                <span class="reporter-method-output">Click the 'mpxMedia' menu link.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'Content dialog'.</span>
-                <span class="reporter-method-output">Enter title Automation513518f04b.</span>
-                <span class="reporter-method-output">Click the 'Apply' button.</span>
-                <span class="reporter-method-output">Get the text of the first search result set item.</span>
-                <span class="reporter-method-output">Verify the search thumbnail named 'nbclogosmall' is present for search result 'Automation513518f04b'.</span>
-                <span class="reporter-method-output">Assert the the img is loaded and visible.</span>
-                <span class="reporter-method-output">Mouse over the 'Structure' menu link.</span>
-                <span class="reporter-method-output">Click the 'File types' menu link.</span>
-                <span class="reporter-method-output">Click the 'DB TV manage file display' link.</span>
-                <span class="reporter-method-output">Un-Check the 'Pub MPX Image' checkbox</span>
-                <span class="reporter-method-output">Click the 'Save configuration' button.</span>
-                <span class="reporter-method-output">Verify success message of 'Your settings have been saved.' is present.</span>
+                <span class="reporter-method-output">Verify storage type for Ad Side File 'Atlas' is set to 'Overridden'.</span>
+                <span class="reporter-method-output">Click the Ad Side File 'Edit' link for adName + 'Atlas'.</span>
+                <span class="reporter-method-output">Switch to the active frame titled 'Edit side file atlas dialog'.</span>
+                <span class="reporter-method-output">Click the 'Revert' button.</span>
+                <span class="reporter-method-output">Click the 'Revert' button.</span>
+                <span class="reporter-method-output">Switch to the active frame titled 'Publisher Ads Side Files dialog'.</span>
+                <span class="reporter-method-output">Verify success message of 'The item has been reverted.' is present.</span>
                 <span class="reporter-method-output">Verify there are no errors present.</span>
+                <span class="reporter-method-output">Verify storage type for Ad Side File 'Atlas' is set to 'Default'.</span>
+                <span class="reporter-method-output">Click the Ad Side File expand link for adName + 'Atlas'.</span>
+                <span class="reporter-method-output">Click the Ad Side File 'Clone' link for adName + 'Atlas'.</span>
+                <span class="reporter-method-output">Switch to the active frame titled 'Clone side file atlas dialog'.</span>
+                <span class="reporter-method-output">Enter '25ce453bee1d4de' in the 'Name' text box.</span>
+                <span class="reporter-method-output">Click the 'Save' button.</span>
+                <span class="reporter-method-output">Verify success message of 'clone_of_atlas has been created.' is present.</span>
+                <span class="reporter-method-output">Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140319111534.png </span>
+                <span class="reporter-method-output"><br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140319111534.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140319111534.png' height='500' width='500'/> </a></span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -308,18 +388,20 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.nbcuni.test.publisher.tests.Video.Thumbnails.ThumbnailsAreNotUpdated</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">startSelenium</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">ThumbnailsAreNotUpdated_Test</span>
-                <span class="method-start">13622 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">AdFoldersRichMediaAds_Test</span>
+                <span class="method-start">13441 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">stopSelenium([TestResult name=ThumbnailsAreNotUpdated_Test status=SUCCESS method=ThumbnailsAreNotUpdated.Thumbnai...)</span>
-                <span class="method-start">180012 ms</span>
+                <span class="method-name">stopSelenium([TestResult name=AdFoldersRichMediaAds_Test status=FAILURE method=AdFoldersRichMediaAds.AdFoldersRic...)</span>
+                <span class="method-start">81575 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

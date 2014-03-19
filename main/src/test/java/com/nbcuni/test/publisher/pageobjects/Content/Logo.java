@@ -10,38 +10,38 @@ import org.testng.Reporter;
 import com.nbcuni.test.webdriver.CustomWebDriver;
 
 /*********************************************
- * publisher.nbcuni.com Cover Media Library. Copyright
+ * publisher.nbcuni.com Logo Library. Copyright
  * 
  * @author Brandon Clark
- * @version 1.0 Date: February 28, 2014
+ * @version 1.0 Date: March 19, 2014
  *********************************************/
 
-public class CoverMedia {
+public class Logo {
 
     private static CustomWebDriver webDriver;
     
     //PAGE OBJECT CONSTRUCTOR
-    public CoverMedia(final CustomWebDriver webDriver) {
-        CoverMedia.webDriver = webDriver;
+    public Logo(final CustomWebDriver webDriver) {
+        Logo.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
     }
     
     //PAGE OBJECT IDENTIFIERS
-    @FindBy(how = How.CSS, using = "div[id='edit-field-cover-media-und-0'] img")
-    private static WebElement CoverMedia_Img;
+    @FindBy(how = How.CSS, using = "div[id='edit-field-logo-und-0'] img")
+    private static WebElement Logo_Img;
     
-    @FindBy(how = How.ID, using = "edit-field-cover-media-und-0-edit")
+    @FindBy(how = How.ID, using = "edit-field-cover-logo-und-0-edit")
     private static WebElement Edit_Btn;
     
-    @FindBy(how = How.CSS, using = "a[id*= 'cover-media-und-0-select']")
+    @FindBy(how = How.ID, using = "edit-field-logo-und-0-select")
     private static WebElement Select_Btn;
     
     
     //PAGE OBJECT METHODS
     public void VerifyFileImagePresent(String imageSrc) throws Exception {
     	
-    	Reporter.log("Assert that img source of the Cover Media contains '" + imageSrc + "'.");
-    	Assert.assertTrue(CoverMedia_Img.getAttribute("src").contains(imageSrc));
+    	Reporter.log("Assert that img source of the Logo contains '" + imageSrc + "'.");
+    	Assert.assertTrue(Logo_Img.getAttribute("src").contains(imageSrc));
     	
     	Reporter.log("Assert the the img is loaded and visible.");
     	boolean imgLoaded;
@@ -51,7 +51,7 @@ public class CoverMedia {
             }
             imgLoaded = (Boolean) ((JavascriptExecutor)webDriver).executeScript(
             			"return arguments[0].complete && typeof arguments[0].naturalWidth != \"undefined\" && arguments[0].naturalWidth > 0", 
-            			CoverMedia_Img);
+            			Logo_Img);
             if (imgLoaded == true){ break;}
             Thread.sleep(500);
         }
@@ -59,13 +59,13 @@ public class CoverMedia {
     
     public void ClickEditBtn() throws Exception {
     	
-    	Reporter.log("Click the Cover Media 'Edit' button.");
+    	Reporter.log("Click the Logo 'Edit' button.");
     	Edit_Btn.click();
     }
     
     public void ClickSelectBtn() throws Exception {
     	
-    	Reporter.log("Click the Cover Media 'Select' button.");
+    	Reporter.log("Click the Logo 'Select' button.");
     	Select_Btn.click();
     }
     

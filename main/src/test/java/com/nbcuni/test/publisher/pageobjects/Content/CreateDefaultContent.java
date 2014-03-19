@@ -26,6 +26,9 @@ public class CreateDefaultContent {
 	private static CoverPhoto coverPhoto;
 	private static PersonsInformation personsInformation;
 	private static ContentTypes contentTypes;
+	private static CoverMedia coverMedia;
+	private static Logo logo;
+	private static Banner banner;
 	
     public CreateDefaultContent(CustomWebDriver webDriver, AppLib applib) {
         taxonomy = new Taxonomy(webDriver);
@@ -39,6 +42,9 @@ public class CreateDefaultContent {
         coverPhoto = new CoverPhoto(webDriver);
         personsInformation = new PersonsInformation(webDriver);
         contentTypes = new ContentTypes(webDriver, applib);
+        coverMedia = new CoverMedia(webDriver);
+        logo = new Logo(webDriver);
+        banner = new Banner(webDriver);
     }
    
     public String Post(String moderationState) throws Exception {
@@ -193,6 +199,32 @@ public class CreateDefaultContent {
            contentParent.VerifyMessageStatus("TV Season " + tvSeasonTitle + " has been created.");
            
            return tvSeasonTitle;
+       }
+       
+       public String TVShow(String moderationState) throws Exception {
+           
+    	   taxonomy.NavigateSite("Content>>Add content>>TV Show");
+    	   overlay.SwitchToActiveFrame();
+    	   basicInformation.ClickBasicInformationTab();
+    	   String tvShowTitle = random.GetCharacterString(15);
+    	   basicInformation.EnterTitle(tvShowTitle);
+    	   basicInformation.EnterSynopsis();
+           overlay.SwitchToActiveFrame();
+           logo.ClickSelectBtn();
+           selectFile.SelectDefaultCoverImg();
+           overlay.SwitchToActiveFrame();
+           coverMedia.ClickSelectBtn();
+           selectFile.SelectDefaultCoverImg();
+           overlay.SwitchToActiveFrame();
+           banner.ClickSelectBtn();
+           selectFile.SelectDefaultCoverImg();
+           overlay.SwitchToActiveFrame();
+           publishingOptions.ClickPublishingOptionsLnk();
+           publishingOptions.SelectModerationState(moderationState);
+           contentParent.ClickSaveBtn();
+           contentParent.VerifyMessageStatus("TV Show " + tvShowTitle + " has been created.");
+           
+           return tvShowTitle;
        }
 
        public String AddCustomeContentType(String ContentName) throws Exception{

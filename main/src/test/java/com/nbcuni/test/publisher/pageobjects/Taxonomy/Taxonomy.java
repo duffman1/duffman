@@ -32,23 +32,23 @@ public class Taxonomy {
     private static String MouseOver_Js = "var evObj = document.createEvent('MouseEvents');" + "evObj.initMouseEvent(\"mouseover\",true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);" + "arguments[0].dispatchEvent(evObj);";
 	
     private static WebElement Tier1_Lnk(String[] tiers) {
-    	return webDriver.findElement(By.xpath("//li[contains(@class,'admin-menu-toolbar-category')]//a[text()='" + tiers[0] + "']"));
+    	return webDriver.findElement(By.xpath("//li[contains(@class,'admin-menu-toolbar-category')]/a[text()='" + tiers[0] + "']"));
     }
     
     private static WebElement Tier2_Lnk(String[] tiers) {
-    	return webDriver.findElement(By.xpath("//li[contains(@class,'admin-menu-toolbar-category')]//a[text()='" + tiers[0] + "']/../ul//a[text()='" + tiers[1] +"']"));
+    	return webDriver.findElement(By.xpath("//li[contains(@class,'admin-menu-toolbar-category')]/a[text()='" + tiers[0] + "']/../ul//a[text()='" + tiers[1] +"']"));
     }
     
     private static WebElement Tier3_Lnk(String[] tiers) {
-    	return webDriver.findElement(By.xpath("//li[contains(@class,'admin-menu-toolbar-category')]//a[text()='" + tiers[0] + "']/../ul//a[text()='" + tiers[1] +"']/..//a[text()='" + tiers[2] + "']"));
+    	return webDriver.findElement(By.xpath("//li[contains(@class,'admin-menu-toolbar-category')]/a[text()='" + tiers[0] + "']/../ul//a[text()='" + tiers[1] +"']/..//a[text()='" + tiers[2] + "']"));
     }
     
     private static WebElement Tier4_Lnk(String[] tiers) {
-    	return webDriver.findElement(By.xpath("//li[contains(@class,'admin-menu-toolbar-category')]//a[text()='" + tiers[0] + "']/../ul//a[text()='" + tiers[1] +"']/..//a[text()='" + tiers[2] + "']/..//a[text()='" + tiers[3] + "']"));
+    	return webDriver.findElement(By.xpath("//li[contains(@class,'admin-menu-toolbar-category')]/a[text()='" + tiers[0] + "']/../ul//a[text()='" + tiers[1] +"']/..//a[text()='" + tiers[2] + "']/..//a[text()='" + tiers[3] + "']"));
     }
     
     private static WebElement Tier5_Lnk(String[] tiers) {
-    	return webDriver.findElement(By.xpath("//li[contains(@class,'admin-menu-toolbar-category')]//a[text()='" + tiers[0] + "']/../ul//a[text()='" + tiers[1] +"']/..//a[text()='" + tiers[2] + "']/..//a[text()='" + tiers[3] + "']/..//a[text()='" + tiers[4] + "']"));
+    	return webDriver.findElement(By.xpath("//li[contains(@class,'admin-menu-toolbar-category')]/a[text()='" + tiers[0] + "']/../ul//a[text()='" + tiers[1] +"']/..//a[text()='" + tiers[2] + "']/..//a[text()='" + tiers[3] + "']/..//a[text()='" + tiers[4] + "']"));
     }
     
     @FindBy(how = How.XPATH, using = "//span[@class='admin-menu-home-icon']")
