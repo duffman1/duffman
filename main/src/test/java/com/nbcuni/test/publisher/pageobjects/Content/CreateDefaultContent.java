@@ -29,6 +29,7 @@ public class CreateDefaultContent {
 	private static CoverMedia coverMedia;
 	private static Logo logo;
 	private static Banner banner;
+	private static Relationships relationships;
 	
     public CreateDefaultContent(CustomWebDriver webDriver, AppLib applib) {
         taxonomy = new Taxonomy(webDriver);
@@ -45,6 +46,7 @@ public class CreateDefaultContent {
         coverMedia = new CoverMedia(webDriver);
         logo = new Logo(webDriver);
         banner = new Banner(webDriver);
+        relationships = new Relationships(webDriver, applib);
     }
    
     public String Post(String moderationState) throws Exception {
@@ -67,36 +69,44 @@ public class CreateDefaultContent {
         return postTitle;
     }
     
-    public String CharacterProfile(String moderationState) throws Exception {
+    public String CharacterProfile(String moderationState, String showTitle, String movieTitle) throws Exception {
         
-    		taxonomy.NavigateSite("Content>>Add content>>Character Profile");
-           overlay.SwitchToActiveFrame();
-           String characterName = random.GetCharacterString(15);
-           charactersInformation.EnterCharacterFirstName(characterName);
-           coverPhoto.ClickSelectBtn();
-           selectFile.SelectDefaultCoverImg();
-           overlay.SwitchToActiveFrame();
-           coverPhoto.VerifyFileImagePresent("HanSolo");
-           publishingOptions.ClickPublishingOptionsLnk();
-           publishingOptions.SelectModerationState(moderationState);
-           contentParent.ClickSaveBtn();
-           overlay.switchToDefaultContent();
-           contentParent.VerifyMessageStatus("Character Profile " + characterName + " has been created.");
-                  
-           return characterName;
+    	taxonomy.NavigateSite("Content>>Add content>>Character Profile");
+        overlay.SwitchToActiveFrame();
+        String characterName = random.GetCharacterString(15); 
+        charactersInformation.EnterCharacterFirstName(characterName);
+        coverPhoto.ClickSelectBtn();
+        selectFile.SelectDefaultCoverImg();
+        overlay.SwitchToActiveFrame();
+        coverPhoto.VerifyFileImagePresent("HanSolo");
+        publishingOptions.ClickPublishingOptionsLnk();
+        publishingOptions.SelectModerationState(moderationState);
+        if (showTitle != null) {
+        	relationships.ClickRelationshipsLnk();
+        	relationships.SelectShow(showTitle);
+        }
+        if (movieTitle != null) {
+        	relationships.ClickRelationshipsLnk();
+        	relationships.SelectMovie(movieTitle);
+        }
+        contentParent.ClickSaveBtn();
+        overlay.switchToDefaultContent();
+        contentParent.VerifyMessageStatus("Character Profile " + characterName + " has been created.");       
            
-       }
+        return characterName;
+           
+    }
     
-       public String CustomContent(String moderationState , String CustomeContentType) throws Exception {	
+       public String CustomContent(String moderationState , String CustomContentType) throws Exception {	
        
-        taxonomy.NavigateSite("Content>>Add content>>" + CustomeContentType);
+        taxonomy.NavigateSite("Content>>Add content>>" + CustomContentType);
         overlay.SwitchToActiveFrame();
         String contentTitleName = random.GetCharacterString(10);
         basicInformation.EnterTitle(contentTitleName);
         publishingOptions.ClickPublishingOptionsLnk();
         publishingOptions.SelectModerationState(moderationState);
         contentParent.ClickSaveBtn();
-        contentParent.VerifyMessageStatus(CustomeContentType +" " + contentTitleName + " has been created.");
+        contentParent.VerifyMessageStatus(CustomContentType +" " + contentTitleName + " has been created.");
         
         return contentTitleName;
        }
@@ -162,7 +172,7 @@ public class CreateDefaultContent {
            return personFirstName;
        }
 
-       public String TVEpisode(String moderationState) throws Exception {
+       public String TVEpisode(String moderationState, String showName, String seasonName) throws Exception {
        
     	   taxonomy.NavigateSite("Content>>Add content>>TV Episode");
     	   overlay.SwitchToActiveFrame();
@@ -174,13 +184,18 @@ public class CreateDefaultContent {
            overlay.SwitchToActiveFrame();
            publishingOptions.ClickPublishingOptionsLnk();
            publishingOptions.SelectModerationState(moderationState);
+           if (showName != null) {
+        	   relationships.ClickRelationshipsLnk();
+        	   relationships.SelectShow(showName);
+        	   relationships.SelectSeason(seasonName);
+           }
            contentParent.ClickSaveBtn();
            contentParent.VerifyMessageStatus("TV Episode " + tvEpisodeTitle + " has been created.");
            
            return tvEpisodeTitle;
        }
 
-       public String TVSeason(String moderationState) throws Exception {
+       public String TVSeason(String moderationState, String showName) throws Exception {
        
     	   taxonomy.NavigateSite("Content>>Add content>>TV Season");
            overlay.SwitchToActiveFrame();
@@ -195,6 +210,10 @@ public class CreateDefaultContent {
            overlay.SwitchToActiveFrame();
            publishingOptions.ClickPublishingOptionsLnk();
            publishingOptions.SelectModerationState(moderationState);
+           if (showName != null) {
+        	   relationships.ClickRelationshipsLnk();
+        	   relationships.SelectShow(showName);
+           }
            contentParent.ClickSaveBtn();
            contentParent.VerifyMessageStatus("TV Season " + tvSeasonTitle + " has been created.");
            

@@ -36,15 +36,20 @@ public class RelationshipsSettings {
 	@FindBy(how = How.XPATH, using ="//a/strong[text()='TV']")
 	private static WebElement TV_Tab;
 	
+	@FindBy(how = How.XPATH, using ="//a/strong[text()='Movies']")
+	private static WebElement Movies_Tab;
+	
 	private static List<WebElement> AllContentType_Cbxs() {
 		return webDriver.findElements(By.xpath("//div[@class='fieldset-wrapper']//input"));
 	}
 
-	@FindBy(how = How.ID, using ="edit-pub-relationships-tv-content-type-character-profile")
-	private static WebElement CharacterProfileTV_Cbx;
+	private static List<WebElement> ContentType_Cbx(String contentName) {
+		return webDriver.findElements(By.xpath("//label[text()='" + contentName + " ']/../input"));
+	}
 	
-	@FindBy(how = How.ID, using ="edit-pub-relationships-tv-content-type-character-profile-level")
-	private static WebElement CharacterProfileTVRelationshipDepth_Ddl;
+	private static WebElement RelationshipDepth_Ddl(String contentName) {
+		return webDriver.findElement(By.xpath("//label[text()='" + contentName + " ']/../select"));
+	}
 	
 	@FindBy(how = How.ID, using ="edit-submit")
 	private static WebElement SaveConfiguration_Btn;
@@ -57,28 +62,36 @@ public class RelationshipsSettings {
 		TV_Tab.click();
 	}
 	
+	public void ClickMoviesTab() throws Exception {
+
+		Reporter.log("Click the 'Movies' tab.");
+		Movies_Tab.click();
+	}
+	
 	public void UncheckAllCheckboxes() throws Exception {
 		
+		Reporter.log("Uncheck all checked check boxes.");
 		for (WebElement cbx : AllContentType_Cbxs()) {
 			if (cbx.isDisplayed() && cbx.isSelected()) {
-				Reporter.log("Uncheck content item checkbox with id '" + cbx.getAttribute("id") + "'.");
 				cbx.click();
 			}
 		}
 	}
 	
-	public void CheckCharacterProfileTVCbx() throws Exception {
+	public void CheckContentItemCbx(String contentName) throws Exception {
 
-		if (CharacterProfileTV_Cbx.isSelected() == false) {
-			Reporter.log("Check the 'Character Profile' check box.");
-			CharacterProfileTV_Cbx.click();
+		for (WebElement cbx : ContentType_Cbx(contentName)) {
+			if (cbx.isDisplayed() && cbx.isSelected() == false) {
+				Reporter.log("Check the '" + contentName + "' checkbox.");
+				cbx.click();
+			}
 		}
 	}
 	
-	public void SelectCharacterProfileTVRelationshipDepth(String option) throws Exception {
+	public void SelectRelationshipDepth(String contentName, String option) throws Exception {
 		
-		Reporter.log("Select '" + option + "' from the 'Character Profile TV Relationship Depth' drop down list.");
-		new Select(wait.until(ExpectedConditions.visibilityOf(CharacterProfileTVRelationshipDepth_Ddl))).
+		Reporter.log("Select '" + option + "' from the '" + contentName + "' drop down list.");
+		new Select(wait.until(ExpectedConditions.visibilityOf(RelationshipDepth_Ddl(contentName)))).
 			selectByVisibleText(option);
 	}
 	

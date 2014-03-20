@@ -102,13 +102,17 @@ public class PublisherAdsSideFiles {
     public void ClickAdSideFileCloneLnk(String adName) throws Exception {
         
     	Reporter.log("Click the Ad Side File 'Clone' link for adName + '" + adName + "'.");
-    	wait.until(ExpectedConditions.visibilityOf(AdSideFileClone_Lnk(adName))).click();
+    	wait.until(ExpectedConditions.visibilityOf(AdSideFileClone_Lnk(adName)));
+    	Thread.sleep(500); //pause required here
+    	AdSideFileClone_Lnk(adName).click();
     }
     
     public void ClickAdSideFileDeleteLnk(String adName) throws Exception {
         
     	Reporter.log("Click the Ad Side File 'Delete' link for adName + '" + adName + "'.");
-    	wait.until(ExpectedConditions.visibilityOf(AdSideFileDelete_Lnk(adName))).click();
+    	wait.until(ExpectedConditions.visibilityOf(AdSideFileDelete_Lnk(adName)));
+    	Thread.sleep(500); //pause required here
+    	AdSideFileDelete_Lnk(adName).click();
     }
     
     public void VerifyAdSideFileNotPresent(String adName) throws Exception {

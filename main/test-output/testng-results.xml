@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="1" passed="0">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
     <line>
       <![CDATA[Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.]]>
@@ -17,272 +17,577 @@
       <![CDATA[Click the 'Modules' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to frame titled 'Modules'.]]>
+      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Pub Ads' in the 'Filter Name' text box.]]>
+      <![CDATA[Enter 'Pub Movie Relationships' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Wait for the module titled 'Pub Ads' to appear in the list.]]>
+      <![CDATA[Wait for the module titled 'Pub Movie Relationships' to appear in the list.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Pub Movie Relationships' check box is checked.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Pub Relationships' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the module titled 'Pub Relationships' to appear in the list.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Pub Relationships' check box is checked.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Pub TV Relationships' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the module titled 'Pub TV Relationships' to appear in the list.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Pub TV Relationships' check box is checked.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Structure' menu link.]]>
+      <![CDATA[Mouse over the 'Configuration' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Publisher Ads Side Files' menu link.]]>
+      <![CDATA[Mouse over the 'Content authoring' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
+      <![CDATA[Click the 'Relationships Settings' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Add' link.]]>
+      <![CDATA[Switch to the active frame titled 'Relationships Settings dialog'.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Add a new side file dialog'.]]>
+      <![CDATA[Click the 'TV' tab.]]>
     </line>
     <line>
-      <![CDATA[Enter '520ca97eadce4e6' in the 'Name' text box.]]>
+      <![CDATA[Uncheck all checked check boxes.]]>
     </line>
     <line>
-      <![CDATA[Enter '1c81f5db71/7b29ad1b9c.html' in the 'Path' text box.]]>
+      <![CDATA[Check the 'Character Profile' checkbox.]]>
     </line>
     <line>
-      <![CDATA[Select the 'text/html' from the 'Response type' drop down list.]]>
+      <![CDATA[Select 'Show' from the 'Character Profile TV Relationship Depth' drop down list.]]>
     </line>
     <line>
-      <![CDATA[Enter '<html><body bgcolor=white><script language=javascript>function pq(q) {if(q.length > 1) this.q = q.substring(1, q.length);else this.q = null;this.keyValuePairs = new Array();if(q) {for(var i=0; i < this.q.split("&").length; i++) {this.keyValuePairs[i] = this.q.split("&")[i];}}this.getValue = function(s) {for(var j=0; j < this.keyValuePairs.length; j++) {if(this.keyValuePairs[j].split("=")[0] == s)return this.keyValuePairs[j].split("=")[1];}return -1;}}function qs(key){var page = new pq(document.location.search);return unescape(page.getValue(key));}var _c = qs('c');var r_number = Math.random();document.writeln('<SCR'+'IPT language='JavaScript' S'+'RC="http://media.adcentriconline.com/adcentric/tag/'+_c+'?ADCadcifr=1&number='+r_number+'"></SCR'+'IPT>');</script></body></html>' in the 'Content' text box.]]>
+      <![CDATA[Check the 'TV Episode' checkbox.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save' button.]]>
+      <![CDATA[Select 'Season' from the 'TV Episode TV Relationship Depth' drop down list.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
+      <![CDATA[Check the 'TV Season' checkbox.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of '520ca97eadce4e6 has been created.' is present.]]>
+      <![CDATA[Select 'Show' from the 'TV Season TV Relationship Depth' drop down list.]]>
     </line>
     <line>
-      <![CDATA[Verify there are no errors present.]]>
+      <![CDATA[Click the 'Movies' tab.]]>
     </line>
     <line>
-      <![CDATA[Click the Ad Side File link with path '1c81f5db71/7b29ad1b9c.html'.]]>
+      <![CDATA[Uncheck all checked check boxes.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
+      <![CDATA[Check the 'Character Profile' checkbox.]]>
     </line>
     <line>
-      <![CDATA[Click the Ad Side File 'Edit' link for adName + 'Atlas'.]]>
+      <![CDATA[Click the 'Save configuration' button.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Edit side file atlas dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'atlas has been updated' is present.]]>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
     </line>
     <line>
       <![CDATA[Verify there are no errors present.]]>
     </line>
     <line>
-      <![CDATA[Verify storage type for Ad Side File 'Atlas' is set to 'Overridden'.]]>
+      <![CDATA[Click the 'Close Overlay X'.]]>
     </line>
     <line>
-      <![CDATA[Click the Ad Side File 'Edit' link for adName + 'Atlas'.]]>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Edit side file atlas dialog'.]]>
+      <![CDATA[Mouse over the 'Add content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Revert' button.]]>
+      <![CDATA[Click the 'TV Show' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Revert' button.]]>
+      <![CDATA[Switch to the active frame titled 'Create TV Show dialog'.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
+      <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'The item has been reverted.' is present.]]>
+      <![CDATA[Enter 'a9a9fbcdf71b4e7' in the 'Title' text box.]]>
     </line>
     <line>
-      <![CDATA[Verify there are no errors present.]]>
+      <![CDATA[Switch to the Synopsis frame.]]>
     </line>
     <line>
-      <![CDATA[Verify storage type for Ad Side File 'Atlas' is set to 'Default'.]]>
+      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
     </line>
     <line>
-      <![CDATA[Click the Ad Side File expand link for adName + 'Atlas'.]]>
+      <![CDATA[Switch to the active frame titled 'Create TV Show dialog'.]]>
     </line>
     <line>
-      <![CDATA[Click the Ad Side File 'Clone' link for adName + 'Atlas'.]]>
+      <![CDATA[Click the Logo 'Select' button.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Clone side file atlas dialog'.]]>
+      <![CDATA[Switch to the select file frame.]]>
     </line>
     <line>
-      <![CDATA[Enter '25ce453bee1d4de' in the 'Name' text box.]]>
+      <![CDATA[Enter the file path for file upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Upload' button.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Public Local Files' radio button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the file image 'HanSolo' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the img is loaded and visible.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'clone_of_atlas has been created.' is present.]]>
+      <![CDATA[Switch to the active frame titled 'Create TV Show dialog'.]]>
     </line>
     <line>
-      <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140319111534.png ]]>
+      <![CDATA[Click the Cover Media 'Select' button.]]>
     </line>
     <line>
-      <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140319111534.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140319111534.png' height='500' width='500'/> </a>]]>
+      <![CDATA[Switch to the select file frame.]]>
+    </line>
+    <line>
+      <![CDATA[Enter the file path for file upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Upload' button.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Public Local Files' radio button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the file image 'HanSolo' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the img is loaded and visible.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create TV Show dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the Banner 'Select' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the select file frame.]]>
+    </line>
+    <line>
+      <![CDATA[Enter the file path for file upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Upload' button.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Public Local Files' radio button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the file image 'HanSolo' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the img is loaded and visible.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create TV Show dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Publishing Options' link.]]>
+    </line>
+    <line>
+      <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'TV Show a9a9fbcdf71b4e7 has been created.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify there are no errors present.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Add content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'TV Season' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create TV Season dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'bfcf3e5519d0461' in the 'Title' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '1' in the 'Season Number' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the Synopsis frame.]]>
+    </line>
+    <line>
+      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create TV Season dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Cover' select button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the select file frame.]]>
+    </line>
+    <line>
+      <![CDATA[Enter the file path for file upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Upload' button.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Public Local Files' radio button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the file image 'HanSolo' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the img is loaded and visible.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create TV Season dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Publishing Options' link.]]>
+    </line>
+    <line>
+      <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Relationships' link.]]>
+    </line>
+    <line>
+      <![CDATA[Select 'a9a9fbcdf71b4e7' from the 'Show' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'TV Season bfcf3e5519d0461 has been created.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify there are no errors present.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Add content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'TV Episode' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create TV Episode dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '714c8dbea469496' in the 'Title' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '1' in the 'Episode Number' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the Synopsis frame.]]>
+    </line>
+    <line>
+      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create TV Episode dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Publishing Options' link.]]>
+    </line>
+    <line>
+      <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Relationships' link.]]>
+    </line>
+    <line>
+      <![CDATA[Select 'a9a9fbcdf71b4e7' from the 'Show' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Select 'bfcf3e5519d0461' from the 'Season' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'TV Episode 714c8dbea469496 has been created.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify there are no errors present.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Add content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Movie' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'b8bf387bee0b42f' in the 'Title' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the Synopsis frame.]]>
+    </line>
+    <line>
+      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Cover' select button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the select file frame.]]>
+    </line>
+    <line>
+      <![CDATA[Enter the file path for file upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Upload' button.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Public Local Files' radio button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the file image 'HanSolo' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the img is loaded and visible.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Publishing Options' link.]]>
+    </line>
+    <line>
+      <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Movie b8bf387bee0b42f has been created.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify there are no errors present.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Add content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Character Profile' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create Character Profile dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '11d867adecef4e6' in the 'Character First Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the Cover Photo 'Select' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the select file frame.]]>
+    </line>
+    <line>
+      <![CDATA[Enter the file path for file upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Upload' button.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Public Local Files' radio button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the file image 'HanSolo' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the img is loaded and visible.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create Character Profile dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that img source of the Cover Photo contains 'HanSolo'.]]>
+    </line>
+    <line>
+      <![CDATA[Assert the the img is loaded and visible.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Publishing Options' link.]]>
+    </line>
+    <line>
+      <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Relationships' link.]]>
+    </line>
+    <line>
+      <![CDATA[Select 'a9a9fbcdf71b4e7' from the 'Show' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Relationships' link.]]>
+    </line>
+    <line>
+      <![CDATA[Select 'b8bf387bee0b42f' from the 'Movie' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Character Profile 11d867adecef4e6 has been created.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify there are no errors present.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="82399" started-at="2014-03-19T16:14:13Z" finished-at="2014-03-19T16:15:35Z">
+  <suite name="Default suite" duration-ms="97418" started-at="2014-03-20T23:04:49Z" finished-at="2014-03-20T23:06:27Z">
     <groups>
       <group name="full">
-        <method signature="AdFoldersRichMediaAds.AdFoldersRichMediaAds_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds@77ea34ed]" name="AdFoldersRichMediaAds_Test" class="com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds"/>
+        <method signature="AddAbilityRelateShowSeasonEpisodeSpecifiableContentTypes.AddAbilityRelateShowSeasonEpisodeSpecifiableContentTypes_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.AddAbilityRelateShowSeasonEpisodeSpecifiableContentTypes@1201fd18]" name="AddAbilityRelateShowSeasonEpisodeSpecifiableContentTypes_Test" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.AddAbilityRelateShowSeasonEpisodeSpecifiableContentTypes"/>
       </group> <!-- full -->
-      <group name="smoke">
-        <method signature="AdFoldersRichMediaAds.AdFoldersRichMediaAds_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds@77ea34ed]" name="AdFoldersRichMediaAds_Test" class="com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds"/>
-      </group> <!-- smoke -->
     </groups>
-    <test name="Default test" duration-ms="82399" started-at="2014-03-19T16:14:13Z" finished-at="2014-03-19T16:15:35Z">
-      <class name="com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds">
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds@77ea34ed]" name="startSelenium" is-config="true" duration-ms="13441" started-at="2014-03-19T12:14:13Z" finished-at="2014-03-19T12:14:26Z">
+    <test name="Default test" duration-ms="97418" started-at="2014-03-20T23:04:49Z" finished-at="2014-03-20T23:06:27Z">
+      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.AddAbilityRelateShowSeasonEpisodeSpecifiableContentTypes">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.AddAbilityRelateShowSeasonEpisodeSpecifiableContentTypes@1201fd18]" name="startSelenium" is-config="true" duration-ms="14063" started-at="2014-03-20T19:04:49Z" finished-at="2014-03-20T19:05:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="FAIL" signature="AdFoldersRichMediaAds_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds@77ea34ed]" name="AdFoldersRichMediaAds_Test" duration-ms="68128" started-at="2014-03-19T12:14:26Z" finished-at="2014-03-19T12:15:34Z">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element
-  (Session info: chrome=33.0.1750.152)
-  (Driver info: chromedriver=2.8.241036,platform=Mac OS X 10.8.5 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 30.06 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.35.0', revision: '8df0c6bedf70ff9f22c647788f9fe9c8d22210e2', time: '2013-08-17 12:46:41'
-System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.8.5', java.version: '1.7.0_25'
-Session ID: 29e9aa2e90fba06182a96242ac876d86
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.TGf4Rp}, rotatable=false, locationContextEnabled=true, version=33.0.1750.152, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
-Command duration or timeout: 30.49 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.35.0', revision: '8df0c6bedf70ff9f22c647788f9fe9c8d22210e2', time: '2013-08-17 12:46:41'
-System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.8.5', java.version: '1.7.0_25'
-Session ID: e5a156cc-c7c3-4481-a54a-818d4b0ad4ef
-Driver info: com.nbcuni.test.webdriver.CustomWebDriver
-Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.TGf4Rp}, rotatable=false, locationContextEnabled=true, webdriver.remote.sessionid=e5a156cc-c7c3-4481-a54a-818d4b0ad4ef, version=33.0.1750.152, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element
-  (Session info: chrome=33.0.1750.152)
-  (Driver info: chromedriver=2.8.241036,platform=Mac OS X 10.8.5 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 30.06 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.35.0', revision: '8df0c6bedf70ff9f22c647788f9fe9c8d22210e2', time: '2013-08-17 12:46:41'
-System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.8.5', java.version: '1.7.0_25'
-Session ID: 29e9aa2e90fba06182a96242ac876d86
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.TGf4Rp}, rotatable=false, locationContextEnabled=true, version=33.0.1750.152, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
-Command duration or timeout: 30.49 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.35.0', revision: '8df0c6bedf70ff9f22c647788f9fe9c8d22210e2', time: '2013-08-17 12:46:41'
-System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.8.5', java.version: '1.7.0_25'
-Session ID: e5a156cc-c7c3-4481-a54a-818d4b0ad4ef
-Driver info: com.nbcuni.test.webdriver.CustomWebDriver
-Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.TGf4Rp}, rotatable=false, locationContextEnabled=true, webdriver.remote.sessionid=e5a156cc-c7c3-4481-a54a-818d4b0ad4ef, version=33.0.1750.152, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
-	at sun.reflect.GeneratedConstructorAccessor21.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:191)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:554)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:307)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:404)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:344)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:299)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:59)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:34)
-	at com.sun.proxy.$Proxy10.getText(Unknown Source)
-	at com.nbcuni.test.publisher.pageobjects.Content.ContentParent.VerifyMessageStatus(ContentParent.java:88)
-	at com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds.AdFoldersRichMediaAds_Test(AdFoldersRichMediaAds.java:102)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-Caused by: org.openqa.selenium.remote.ScreenshotException: Screen shot has been taken
-Build info: version: '2.35.0', revision: '8df0c6bedf70ff9f22c647788f9fe9c8d22210e2', time: '2013-08-17 12:46:41'
-System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.8.5', java.version: '1.7.0_25'
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:125)
-	... 34 more
-Caused by: org.openqa.selenium.NoSuchElementException: no such element
-  (Session info: chrome=33.0.1750.152)
-  (Driver info: chromedriver=2.8.241036,platform=Mac OS X 10.8.5 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 30.06 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.35.0', revision: '8df0c6bedf70ff9f22c647788f9fe9c8d22210e2', time: '2013-08-17 12:46:41'
-System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.8.5', java.version: '1.7.0_25'
-Session ID: 29e9aa2e90fba06182a96242ac876d86
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.TGf4Rp}, rotatable=false, locationContextEnabled=true, version=33.0.1750.152, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.35.0', revision: '8df0c6bedf70ff9f22c647788f9fe9c8d22210e2', time: '2013-08-17 12:46:41'
-System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.8.5', java.version: '1.7.0_25'
-Driver info: driver.version: EventFiringWebDriver
-	at sun.reflect.GeneratedConstructorAccessor21.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:191)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:554)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:307)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:404)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:344)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:299)
-	at sun.reflect.GeneratedMethodAccessor16.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:101)
-	at com.sun.proxy.$Proxy8.findElement(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:180)
-	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:47)
-	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:33)
-	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
-	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:169)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+        <test-method status="PASS" signature="AddAbilityRelateShowSeasonEpisodeSpecifiableContentTypes_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.AddAbilityRelateShowSeasonEpisodeSpecifiableContentTypes@1201fd18]" name="AddAbilityRelateShowSeasonEpisodeSpecifiableContentTypes_Test" duration-ms="82771" started-at="2014-03-20T19:05:03Z" finished-at="2014-03-20T19:06:26Z">
           <reporter-output>
             <line>
               <![CDATA[Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.]]>
@@ -300,145 +605,577 @@ Driver info: driver.version: EventFiringWebDriver
               <![CDATA[Click the 'Modules' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to frame titled 'Modules'.]]>
+              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
             </line>
             <line>
-              <![CDATA[Enter 'Pub Ads' in the 'Filter Name' text box.]]>
+              <![CDATA[Enter 'Pub Movie Relationships' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Wait for the module titled 'Pub Ads' to appear in the list.]]>
+              <![CDATA[Wait for the module titled 'Pub Movie Relationships' to appear in the list.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Pub Movie Relationships' check box is checked.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Pub Relationships' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the module titled 'Pub Relationships' to appear in the list.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Pub Relationships' check box is checked.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Pub TV Relationships' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the module titled 'Pub TV Relationships' to appear in the list.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Pub TV Relationships' check box is checked.]]>
             </line>
             <line>
               <![CDATA[Click the 'Close Overlay X'.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Structure' menu link.]]>
+              <![CDATA[Mouse over the 'Configuration' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Publisher Ads Side Files' menu link.]]>
+              <![CDATA[Mouse over the 'Content authoring' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
+              <![CDATA[Click the 'Relationships Settings' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Add' link.]]>
+              <![CDATA[Switch to the active frame titled 'Relationships Settings dialog'.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Add a new side file dialog'.]]>
+              <![CDATA[Click the 'TV' tab.]]>
             </line>
             <line>
-              <![CDATA[Enter '520ca97eadce4e6' in the 'Name' text box.]]>
+              <![CDATA[Uncheck all checked check boxes.]]>
             </line>
             <line>
-              <![CDATA[Enter '1c81f5db71/7b29ad1b9c.html' in the 'Path' text box.]]>
+              <![CDATA[Check the 'Character Profile' checkbox.]]>
             </line>
             <line>
-              <![CDATA[Select the 'text/html' from the 'Response type' drop down list.]]>
+              <![CDATA[Select 'Show' from the 'Character Profile TV Relationship Depth' drop down list.]]>
             </line>
             <line>
-              <![CDATA[Enter '<html><body bgcolor=white><script language=javascript>function pq(q) {if(q.length > 1) this.q = q.substring(1, q.length);else this.q = null;this.keyValuePairs = new Array();if(q) {for(var i=0; i < this.q.split("&").length; i++) {this.keyValuePairs[i] = this.q.split("&")[i];}}this.getValue = function(s) {for(var j=0; j < this.keyValuePairs.length; j++) {if(this.keyValuePairs[j].split("=")[0] == s)return this.keyValuePairs[j].split("=")[1];}return -1;}}function qs(key){var page = new pq(document.location.search);return unescape(page.getValue(key));}var _c = qs('c');var r_number = Math.random();document.writeln('<SCR'+'IPT language='JavaScript' S'+'RC="http://media.adcentriconline.com/adcentric/tag/'+_c+'?ADCadcifr=1&number='+r_number+'"></SCR'+'IPT>');</script></body></html>' in the 'Content' text box.]]>
+              <![CDATA[Check the 'TV Episode' checkbox.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save' button.]]>
+              <![CDATA[Select 'Season' from the 'TV Episode TV Relationship Depth' drop down list.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
+              <![CDATA[Check the 'TV Season' checkbox.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of '520ca97eadce4e6 has been created.' is present.]]>
+              <![CDATA[Select 'Show' from the 'TV Season TV Relationship Depth' drop down list.]]>
             </line>
             <line>
-              <![CDATA[Verify there are no errors present.]]>
+              <![CDATA[Click the 'Movies' tab.]]>
             </line>
             <line>
-              <![CDATA[Click the Ad Side File link with path '1c81f5db71/7b29ad1b9c.html'.]]>
+              <![CDATA[Uncheck all checked check boxes.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
+              <![CDATA[Check the 'Character Profile' checkbox.]]>
             </line>
             <line>
-              <![CDATA[Click the Ad Side File 'Edit' link for adName + 'Atlas'.]]>
+              <![CDATA[Click the 'Save configuration' button.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Edit side file atlas dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'atlas has been updated' is present.]]>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
             </line>
             <line>
               <![CDATA[Verify there are no errors present.]]>
             </line>
             <line>
-              <![CDATA[Verify storage type for Ad Side File 'Atlas' is set to 'Overridden'.]]>
+              <![CDATA[Click the 'Close Overlay X'.]]>
             </line>
             <line>
-              <![CDATA[Click the Ad Side File 'Edit' link for adName + 'Atlas'.]]>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Edit side file atlas dialog'.]]>
+              <![CDATA[Mouse over the 'Add content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Revert' button.]]>
+              <![CDATA[Click the 'TV Show' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Revert' button.]]>
+              <![CDATA[Switch to the active frame titled 'Create TV Show dialog'.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
+              <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'The item has been reverted.' is present.]]>
+              <![CDATA[Enter 'a9a9fbcdf71b4e7' in the 'Title' text box.]]>
             </line>
             <line>
-              <![CDATA[Verify there are no errors present.]]>
+              <![CDATA[Switch to the Synopsis frame.]]>
             </line>
             <line>
-              <![CDATA[Verify storage type for Ad Side File 'Atlas' is set to 'Default'.]]>
+              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
             </line>
             <line>
-              <![CDATA[Click the Ad Side File expand link for adName + 'Atlas'.]]>
+              <![CDATA[Switch to the active frame titled 'Create TV Show dialog'.]]>
             </line>
             <line>
-              <![CDATA[Click the Ad Side File 'Clone' link for adName + 'Atlas'.]]>
+              <![CDATA[Click the Logo 'Select' button.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Clone side file atlas dialog'.]]>
+              <![CDATA[Switch to the select file frame.]]>
             </line>
             <line>
-              <![CDATA[Enter '25ce453bee1d4de' in the 'Name' text box.]]>
+              <![CDATA[Enter the file path for file upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Upload' button.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Public Local Files' radio button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the file image 'HanSolo' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the img is loaded and visible.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'clone_of_atlas has been created.' is present.]]>
+              <![CDATA[Switch to the active frame titled 'Create TV Show dialog'.]]>
             </line>
             <line>
-              <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140319111534.png ]]>
+              <![CDATA[Click the Cover Media 'Select' button.]]>
             </line>
             <line>
-              <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140319111534.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/20140319111534.png' height='500' width='500'/> </a>]]>
+              <![CDATA[Switch to the select file frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter the file path for file upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Upload' button.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Public Local Files' radio button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the file image 'HanSolo' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create TV Show dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the Banner 'Select' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the select file frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter the file path for file upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Upload' button.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Public Local Files' radio button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the file image 'HanSolo' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create TV Show dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Publishing Options' link.]]>
+            </line>
+            <line>
+              <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'TV Show a9a9fbcdf71b4e7 has been created.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify there are no errors present.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Add content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'TV Season' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create TV Season dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'bfcf3e5519d0461' in the 'Title' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '1' in the 'Season Number' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the Synopsis frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create TV Season dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Cover' select button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the select file frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter the file path for file upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Upload' button.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Public Local Files' radio button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the file image 'HanSolo' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create TV Season dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Publishing Options' link.]]>
+            </line>
+            <line>
+              <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Relationships' link.]]>
+            </line>
+            <line>
+              <![CDATA[Select 'a9a9fbcdf71b4e7' from the 'Show' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'TV Season bfcf3e5519d0461 has been created.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify there are no errors present.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Add content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'TV Episode' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create TV Episode dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '714c8dbea469496' in the 'Title' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '1' in the 'Episode Number' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the Synopsis frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create TV Episode dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Publishing Options' link.]]>
+            </line>
+            <line>
+              <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Relationships' link.]]>
+            </line>
+            <line>
+              <![CDATA[Select 'a9a9fbcdf71b4e7' from the 'Show' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Select 'bfcf3e5519d0461' from the 'Season' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'TV Episode 714c8dbea469496 has been created.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify there are no errors present.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Add content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Movie' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'b8bf387bee0b42f' in the 'Title' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the Synopsis frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Cover' select button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the select file frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter the file path for file upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Upload' button.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Public Local Files' radio button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the file image 'HanSolo' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Publishing Options' link.]]>
+            </line>
+            <line>
+              <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Movie b8bf387bee0b42f has been created.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify there are no errors present.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Add content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Character Profile' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Character Profile dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '11d867adecef4e6' in the 'Character First Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the Cover Photo 'Select' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the select file frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter the file path for file upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Upload' button.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Public Local Files' radio button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the file image 'HanSolo' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Character Profile dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that img source of the Cover Photo contains 'HanSolo'.]]>
+            </line>
+            <line>
+              <![CDATA[Assert the the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Publishing Options' link.]]>
+            </line>
+            <line>
+              <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Relationships' link.]]>
+            </line>
+            <line>
+              <![CDATA[Select 'a9a9fbcdf71b4e7' from the 'Show' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Relationships' link.]]>
+            </line>
+            <line>
+              <![CDATA[Select 'b8bf387bee0b42f' from the 'Movie' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Character Profile 11d867adecef4e6 has been created.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify there are no errors present.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- AdFoldersRichMediaAds_Test -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds@77ea34ed]" name="stopSelenium" is-config="true" duration-ms="804" started-at="2014-03-19T12:15:34Z" finished-at="2014-03-19T12:15:35Z">
+        </test-method> <!-- AddAbilityRelateShowSeasonEpisodeSpecifiableContentTypes_Test -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.AddAbilityRelateShowSeasonEpisodeSpecifiableContentTypes@1201fd18]" name="stopSelenium" is-config="true" duration-ms="572" started-at="2014-03-20T19:06:26Z" finished-at="2014-03-20T19:06:27Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=AdFoldersRichMediaAds_Test status=FAILURE method=AdFoldersRichMediaAds.AdFoldersRichMediaAds_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds@77ea34ed] output=Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.]]]>
+                <![CDATA[[TestResult name=AddAbilityRelateShowSeasonEpisodeSpecifiableContentTypes_Test status=SUCCESS method=AddAbilityRelateShowSeasonEpisodeSpecifiableContentTypes.AddAbilityRelateShowSeasonEpisodeSpecifiableContentTypes_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.AddAbilityRelateShowSeasonEpisodeSpecifiableContentTypes@1201fd18] output=Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-      </class> <!-- com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds -->
+      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.AddAbilityRelateShowSeasonEpisodeSpecifiableContentTypes -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

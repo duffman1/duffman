@@ -7,6 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+//import org.openqa.selenium.remote.LocalFileDetector;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
@@ -229,10 +230,10 @@ public class SelectFile {
     
     public void VerifyFileImagePresent(String imageSrc) throws Exception {
     	
-    	Reporter.log("Assert the file image '" + imageSrc + "' is present.");
+    	Reporter.log("Verify the file image '" + imageSrc + "' is present.");
     	Assert.assertTrue(File_Img.getAttribute("src").contains(imageSrc));
     	
-    	Reporter.log("Assert the the img is loaded and visible.");
+    	Reporter.log("Verify the img is loaded and visible.");
     	boolean imgLoaded;
         for (int second = 0; ; second++){
             if (second >= 30) {
@@ -250,7 +251,7 @@ public class SelectFile {
     
     public void VerifyMediaThumbnailImagePresent(String imageSrc, String imageIndex) throws Exception {
     	
-    	Reporter.log("Assert the media thumbnail image '" + imageSrc + "' is present.");
+    	Reporter.log("Verify the media thumbnail image '" + imageSrc + "' is present.");
     	for (int second = 0; ; second++){
             if (second >= 30) {
                 Assert.fail("Image '" + imageSrc + "' is not present after timeout");
@@ -262,7 +263,7 @@ public class SelectFile {
             Thread.sleep(500);
         }
     	
-    	Reporter.log("Assert the the img is loaded and visible.");
+    	Reporter.log("Verify the the img is loaded and visible.");
     	boolean imgLoaded;
         for (int second = 0; ; second++){
             if (second >= 30) {

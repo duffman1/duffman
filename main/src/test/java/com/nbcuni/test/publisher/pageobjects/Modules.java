@@ -144,6 +144,9 @@ public class Modules {
         	
     		this.VerifyConfigurationSaved();
     	}
+    	else {
+    		Reporter.log("Verify the '" + moduleName + "' check box is checked.");
+    	}
     	
     }
     
