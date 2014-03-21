@@ -1,10 +1,14 @@
 package com.nbcuni.test.publisher.pageobjects.Content;
 
 import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
 
@@ -21,13 +25,15 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 public class EditImage {
 
     private static CustomWebDriver webDriver;
-    private AppLib applib;
+    private static AppLib applib;
+    private static WebDriverWait wait;
     
     //PAGE OBJECT CONSTRUCTOR
     public EditImage(CustomWebDriver webDriver, AppLib applib) {
         EditImage.webDriver = webDriver;
-        this.applib = applib;
+        EditImage.applib = applib;
         PageFactory.initElements(webDriver, this);
+        wait = (WebDriverWait) new WebDriverWait(webDriver, 10).ignoring(StaleElementReferenceException.class);
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -58,7 +64,7 @@ public class EditImage {
     @FindBy(how = How.ID, using = "edit-submit--2")
     private static WebElement SaveFromEditFrm_Btn;
     
-    @FindBy(how = How.XPATH, using = "//img[@title='Close window']")
+    @FindBy(how = How.CSS, using = "img[title='Close window']")
     private static WebElement CloseWindow_Img;
     
    
@@ -66,53 +72,58 @@ public class EditImage {
     public void VerifyTitleTextValue(String value) throws Exception {
     	
     	Reporter.log("Assert that the Title Text box value matches '" + value + "'.");
-    	Thread.sleep(500); //stale element exception
-    	Assert.assertTrue(TitleText_Txb.getAttribute("value").equals(value));
+    	Assert.assertTrue(wait.until(ExpectedConditions.visibilityOf(TitleText_Txb)).
+    			getAttribute("value").equals(value));
     	
     }
     
     public void EnterTitleText(String title) throws Exception {
     	
     	Reporter.log("Enter '" + title + "' in the 'Title Text' text box.");
-    	TitleText_Txb.clear();
+    	wait.until(ExpectedConditions.visibilityOf(TitleText_Txb)).clear();
     	TitleText_Txb.sendKeys(title);
     }
     
     public void VerifyAltTextValue(String value) throws Exception {
     	
     	Reporter.log("Assert that the Alt Text box value matches '" + value + "'.");
-    	Assert.assertTrue(AltText_Txb.getAttribute("value").equals(value));
+    	Assert.assertTrue(wait.until(ExpectedConditions.visibilityOf(AltText_Txb))
+    			.getAttribute("value").equals(value));
     }
     
     public void VerifySourceValue(String value) throws Exception {
     	
     	Reporter.log("Assert that the Source box value matches '" + value + "'.");
-    	Assert.assertTrue(Source_Txb.getAttribute("value").equals(value));
+    	Assert.assertTrue(wait.until(ExpectedConditions.visibilityOf(Source_Txb))
+    			.getAttribute("value").equals(value));
     }
     
     public void EnterSource(String source) throws Exception {
     	
     	Reporter.log("Enter '" + source + "' in the 'Source' text box.");
-    	Source_Txb.clear();
+    	wait.until(ExpectedConditions.visibilityOf(Source_Txb)).clear();
     	Source_Txb.sendKeys(source);
     }
     
     public void VerifyCreditValue(String value) throws Exception {
     	
     	Reporter.log("Assert that the Credit Text box value matches '" + value + "'.");
-    	Assert.assertTrue(Credit_Txb.getAttribute("value").equals(value));
+    	Assert.assertTrue(wait.until(ExpectedConditions.visibilityOf(Credit_Txb))
+    			.getAttribute("value").equals(value));
     }
     
     public void VerifyCopyrightValue(String value) throws Exception {
     	
     	Reporter.log("Assert that the Copyright Text box value matches '" + value + "'.");
-    	Assert.assertTrue(Copyright_Txb.getAttribute("value").equals(value));
+    	Assert.assertTrue(wait.until(ExpectedConditions.visibilityOf(Copyright_Txb))
+    			.getAttribute("value").equals(value));
     }
     
     public void VerifyKeywordsValue(String value) throws Exception {
     	
     	Reporter.log("Assert that the Keywords Text box value matches '" + value + "'.");
-    	Assert.assertTrue(Keywords_Txb.getAttribute("value").equals(value));
+    	Assert.assertTrue(wait.until(ExpectedConditions.visibilityOf(Keywords_Txb))
+    			.getAttribute("value").equals(value));
     }
     
     public void VerifyApplyEmbeddedMetadataBtnPresent() throws Exception {
@@ -142,24 +153,9 @@ public class EditImage {
     public void ClickCloseWindowImg() throws Exception {
     	
     	Reporter.log("Click the 'Close Window' image.");
+    	Thread.sleep(1000); //slight pause required here
     	CloseWindow_Img.click();
-    	
-    	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
-    	boolean imgPresent = false;
-    	for (int second = 0; ; second++) {
-            if (second >= 60) {
-                Assert.fail("Edit image is still present after timeout");}
-            try{
-            	CloseWindow_Img.isDisplayed();
-                imgPresent = true;
-            }
-            catch (Exception e){
-            	imgPresent = false;
-            }
-            if (imgPresent == false){ break;}
-            Thread.sleep(500);
-        }
-    	webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
+    	this.WaitForEditImageFrameClose();
     	
     }
     
@@ -168,7 +164,7 @@ public class EditImage {
     	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
     	boolean imgFramePresent = false;
     	for (int second = 0; ; second++) {
-            if (second >= 60) {
+            if (second >= 30) {
                 Assert.fail("Edit image frame is still present after timeout");}
             try{
             	CloseWindow_Img.isDisplayed();
@@ -183,7 +179,6 @@ public class EditImage {
     	webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
     	
     }
-    
   
 }
 

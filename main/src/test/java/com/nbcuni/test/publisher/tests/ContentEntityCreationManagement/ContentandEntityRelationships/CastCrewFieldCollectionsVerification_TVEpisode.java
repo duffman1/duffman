@@ -108,6 +108,7 @@ public class CastCrewFieldCollectionsVerification_TVEpisode extends ParentTest {
         //Step 7
         contentParent.ClickSaveBtn();
         overlay.switchToDefaultContent();
+        contentParent.VerifyMessageStatus("TV Episode " + TVEpisodeName + " has been created.");
         WorkBench workBench = new WorkBench(webDriver, applib);
         workBench.ClickWorkBenchTab("Revisions");
         overlay.SwitchToActiveFrame();
