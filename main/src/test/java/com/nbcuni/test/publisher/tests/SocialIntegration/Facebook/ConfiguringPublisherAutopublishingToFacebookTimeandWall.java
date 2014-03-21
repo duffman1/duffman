@@ -51,18 +51,17 @@ public class ConfiguringPublisherAutopublishingToFacebookTimeandWall extends Par
         
         //Step 3
         taxonomy.NavigateSite("Modules");
-        overlay.SwitchToFrame("Modules");
+        overlay.SwitchToActiveFrame();
         Modules modules = new Modules(webDriver, applib);
         modules.EnterFilterName("Pub Social");
         modules.EnableModule("Pub Social");
         modules.EnterFilterName("Pub Post");
         modules.EnableModule("Pub Post");
         overlay.ClickCloseOverlayLnk();
-        overlay.switchToDefaultContent();
         
         //Step 3a
         taxonomy.NavigateSite("Structure>>Facebook Apps");
-        overlay.SwitchToFrame("Drupal for Facebook");
+        overlay.SwitchToActiveFrame();
         DrupalForFacebook drupalForFacebook = new DrupalForFacebook(webDriver, applib);
         Delete delete = new Delete(webDriver);
         ContentParent contentParent = new ContentParent(webDriver, applib);
@@ -77,7 +76,6 @@ public class ConfiguringPublisherAutopublishingToFacebookTimeandWall extends Par
         }
         else {
         	overlay.ClickCloseOverlayLnk();
-            overlay.switchToDefaultContent();
         }
         
         //Step 4
@@ -96,7 +94,7 @@ public class ConfiguringPublisherAutopublishingToFacebookTimeandWall extends Par
         //Step 5
         taxonomy.NavigateSite("Structure>>Facebook Apps>>Stream Posts");
         if (appAlreadyExists == false) {
-        	overlay.SwitchToFrame("Drupal for Facebook");
+        	overlay.SwitchToActiveFrame();
         }
         drupalForFacebook.ClickPostViaPub7Lnk();
         
@@ -135,7 +133,7 @@ public class ConfiguringPublisherAutopublishingToFacebookTimeandWall extends Par
         contentParent.VerifyMessageStatus("Post " + postTitle + " has been created.");
         WorkBench workBench = new WorkBench(webDriver, applib);
         workBench.ClickWorkBenchTab("Revisions");
-        overlay.SwitchToFrame("Revisions");
+        overlay.SwitchToActiveFrame();
         
         //Step 12
         Revisions revisions = new Revisions(webDriver, applib);

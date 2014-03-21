@@ -108,6 +108,7 @@ public class ErrorChecking {
     		allowedErrors.add("Expiring mpx token FAILED.");
     		allowedErrors.add("Warning: Attempt to assign property of non-object in EntityAPIController->save()");
     		allowedErrors.add("Notice: Trying to get property of non-object in EntityAPIController->save()");
+    		allowedErrors.add("Notice: Undefined offset: 2 in drupal_http_request() (line 1006 of /mnt/www/html/nbcupublisher7qa/docroot/includes/common.inc)");
     		
     		//FIRST - check if error container is present
     		boolean errorContainerPresent = false;
@@ -145,7 +146,8 @@ public class ErrorChecking {
     								|| errorText.contains(allowedErrors.get(3))
     								 	|| errorText.contains(allowedErrors.get(4))
     								 		|| errorText.contains(allowedErrors.get(5))
-    								 			|| errorText.contains(allowedErrors.get(6))) {
+    								 			|| errorText.contains(allowedErrors.get(6))
+    								 				|| errorText.contains(allowedErrors.get(7))) {
     					//ignore error
     				}
     				else {
@@ -170,7 +172,8 @@ public class ErrorChecking {
     										|| error.contains(allowedErrors.get(3))
     										 	|| error.contains(allowedErrors.get(4))
     										 		|| error.contains(allowedErrors.get(5))
-    										 			|| error.contains(allowedErrors.get(6))) {
+    										 			|| error.contains(allowedErrors.get(6))
+    										 				|| error.contains(allowedErrors.get(7))) {
     						//ignore error
     					}
     					else {
