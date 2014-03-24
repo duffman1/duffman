@@ -5,6 +5,7 @@ import org.sikuli.script.Key;
 import org.sikuli.script.KeyModifier;
 import org.sikuli.script.Screen;
 import org.testng.Assert;
+
 import com.nbcuni.test.publisher.common.AppLib;
 
 /*********************************************
@@ -33,13 +34,34 @@ public class MPXAssets {
     
     public void WaitForImgPresent(String imgPath) throws Exception {
     	
-    	sikuli.wait(imgPath, applib.getSikuliImageWaitTime()); 
+    	//sikuli.wait(imgPath, applib.getSikuliImageWaitTime()); 
+    	
+    	for (int second = 0; ; second++){
+            if (second >= applib.getSikuliImageWaitTime()) {
+                Assert.fail("Image '" + imgPath + "' is not present after timeout");
+            }
+            
+            if (sikuli.exists(imgPath) != null) {
+            	break;
+            }
+            Thread.sleep(500);
+        }
     }
     
     public void WaitForImgNotPresent(String imgPath) throws Exception {
     	
-    	sikuli.waitVanish(imgPath, applib.getSikuliImageWaitTime());
+    	//sikuli.waitVanish(imgPath, applib.getSikuliImageWaitTime());
     	
+    	for (int second = 0; ; second++){
+            if (second >= applib.getSikuliImageWaitTime()) {
+                Assert.fail("Image '" + imgPath + "' is still present after timeout");
+            }
+            
+            if (sikuli.exists(imgPath) == null) {
+            	break;
+            }
+            Thread.sleep(500);
+        }
     }
     
     public void ScrollDownForImgPresent(String imgPath) throws Exception {

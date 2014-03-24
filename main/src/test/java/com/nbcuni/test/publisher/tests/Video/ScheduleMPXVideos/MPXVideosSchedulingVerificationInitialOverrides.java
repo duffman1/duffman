@@ -108,10 +108,9 @@ public class MPXVideosSchedulingVerificationInitialOverrides extends ParentTest{
             editMPXVideo.VerifyMPXMediaExpirationDateNullAndDisabled();
 
             //Step 23
-            editMPXVideo.ClickOverrideMPXAvailableDateCbx();
-            editMPXVideo.ClickOverrideMPXExpirationDateCbx();
-            Thread.sleep(5000); //TODO - slight pause needed here. Work on dynamic wait to handle this
-
+            editMPXVideo.CheckOverrideMPXAvailableDateCbx();
+            editMPXVideo.CheckOverrideMPXExpirationDateCbx();
+            
             //Step 24
             Calendar cal = Calendar.getInstance();
             Calendar cal2 = Calendar.getInstance();
@@ -155,9 +154,8 @@ public class MPXVideosSchedulingVerificationInitialOverrides extends ParentTest{
             overlay.SwitchToActiveFrame();
 
             //Step 37
-            editMPXVideo.ClickOverrideMPXAvailableDateCbx();
-            editMPXVideo.ClickOverrideMPXExpirationDateCbx();
-            Thread.sleep(4000); //TODO - add dyanmic wait
+            editMPXVideo.UnCheckOverrideMPXAvailableDateCbx();
+            editMPXVideo.UnCheckOverrideMPXExpirationDateCbx();
             editMPXVideo.VerifyMPXMediaAvailableDateNullAndDisabled();
             editMPXVideo.VerifyMPXMediaExpirationDateNullAndDisabled();
 

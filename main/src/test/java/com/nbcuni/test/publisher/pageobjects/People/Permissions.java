@@ -54,8 +54,12 @@ public class Permissions {
     @FindBy(how = How.CSS, using = "input[value='Save permissions']")
     private static WebElement SavePermissions_Btn;
     
-    private static WebElement Permission_Cbx(String value) {
+    private static WebElement SingleRolePermission_Cbx(String value) {
     	return webDriver.findElement(By.cssSelector("input[value='" + value + "']"));
+    }
+    
+    private static WebElement MultiRolePermission_Cbx(String roleName, String value) {
+    	return webDriver.findElement(By.xpath("//label[contains(text(),'" + roleName + "')]/../input[@value='" + value + "']"));
     }
     
     
@@ -72,28 +76,79 @@ public class Permissions {
     	Assert.assertEquals(allColumns.get(4).getText(), "SENIOR EDITOR");
     }
     
-    public void EnablePermissions(List<String> permissionValues) throws Exception {
+    public void EnablePermissions(String roleName, List<String> permissionValues) throws Exception {
     	
+    	//TODO - refactor and clean this up
     	for (String value : permissionValues) {
-    		if (Permission_Cbx(value).isSelected() == false) {
-    			Reporter.log("Check the '" + value + "' checkbox.");
-    			try {
-    				Permission_Cbx(value).click();
-    			}
-    			catch (WebDriverException e) {
-    				contentParent.Scroll("-500");
-    				Permission_Cbx(value).click();
-    			}
+    		if (roleName == null) {
+    			if (SingleRolePermission_Cbx(value).isSelected() == false) {
+        			Reporter.log("Check the '" + value + "' checkbox.");
+        			try {
+        				SingleRolePermission_Cbx(value).click();
+        			}
+        			catch (WebDriverException e) {
+        				contentParent.Scroll("-500");
+        				SingleRolePermission_Cbx(value).click();
+        			}
+        		}
+    		}
+    		else {
+    			if (MultiRolePermission_Cbx(roleName, value).isSelected() == false) {
+        			Reporter.log("Check the '" + value + "' checkbox for the '" + roleName + "' role.");
+        			try {
+        				MultiRolePermission_Cbx(roleName, value).click();
+        			}
+        			catch (WebDriverException e) {
+        				contentParent.Scroll("-500");
+        				MultiRolePermission_Cbx(roleName, value).click();
+        			}
+        		}
     		}
     	}
     }
     
-    public void DisablePermissions(List<String> permissionValues) throws Exception {
+    public void DisablePermissions(String roleName, List<String> permissionValues) throws Exception {
     	
     	for (String value : permissionValues) {
-    		if (Permission_Cbx(value).isSelected() == true) {
-    			Reporter.log("Uncheck the '" + value + "' checkbox.");
-    			Permission_Cbx(value).click();
+    		if (roleName == null) {
+    			if (SingleRolePermission_Cbx(value).isSelected() == true) {
+        			Reporter.log("Uncheck the '" + value + "' checkbox.");
+        			SingleRolePermission_Cbx(value).click();
+        		}
+    		}
+    		else {
+    			if (MultiRolePermission_Cbx(roleName, value).isSelected() == true) {
+        			Reporter.log("Uncheck the '" + value + "' checkbox for the '" + roleName + "' role.");
+        			MultiRolePermission_Cbx(roleName, value).click();
+        		}
+    		}
+    	}
+    }
+    
+    public void VerifyPermissionsSelected(String roleName, List<String> permissionValues) throws Exception {
+    	
+    	for (String value : permissionValues) {
+    		if (roleName == null) {
+    			Reporter.log("Verify the '" + value + "' checkbox is checked.");
+        		Assert.assertTrue(SingleRolePermission_Cbx(value).isSelected());
+    		}
+    		else {
+    			Reporter.log("Verify the '" + value + "' checkbox for the '" + roleName + "' is checked.");
+        		Assert.assertTrue(MultiRolePermission_Cbx(roleName, value).isSelected());
+    		}
+    	}
+    }
+    
+    public void VerifyPermissionsNotSelected(String roleName, List<String> permissionValues) throws Exception {
+    	
+    	for (String value : permissionValues) {
+    		if (roleName == null) {
+    			Reporter.log("Verify the '" + value + "' checkbox is not checked.");
+        		Assert.assertFalse(SingleRolePermission_Cbx(value).isSelected());
+    		}
+    		else {
+    			Reporter.log("Verify the '" + value + "' checkbox for the '" + roleName + "' is not checked.");
+        		Assert.assertFalse(MultiRolePermission_Cbx(roleName, value).isSelected());
     		}
     	}
     }

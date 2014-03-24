@@ -1,12 +1,16 @@
 package com.nbcuni.test.publisher.pageobjects.MPX;
 
 import com.nbcuni.test.webdriver.CustomWebDriver;
+
 import org.testng.Assert;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
 
 /*********************************************
@@ -18,9 +22,12 @@ import org.testng.Reporter;
 
 public class EditMPXVideo {
 
+	private static WebDriverWait wait;
+	
     //PAGE OBJECT CONSTRUCTOR
     public EditMPXVideo(CustomWebDriver webDriver) {
-        PageFactory.initElements(webDriver, this);
+    	PageFactory.initElements(webDriver, this);
+        wait = new WebDriverWait(webDriver, 10);
     }
     
     //PAGE OBJECT IDENTIFERS
@@ -91,24 +98,74 @@ public class EditMPXVideo {
         Assert.assertTrue(MPXMediaExpirationDate_Txb.isEnabled() == false);
     }
 
-    public void ClickOverrideMPXAvailableDateCbx() throws Exception {
+    public void CheckOverrideMPXAvailableDateCbx() throws Exception {
         
-    	Reporter.log("Click the 'Override' checkbox for the 'Available Date' check box.");
-    	OverrideMPXAvailableDate_Cbx.click();
-
+    	if (OverrideMPXAvailableDate_Cbx.isSelected() == false) {
+    		Reporter.log("Click the 'Override' checkbox for the 'Available Date' check box.");
+        	OverrideMPXAvailableDate_Cbx.click();
+        	
+        	wait.until(new ExpectedCondition<Boolean>() {
+        		public Boolean apply(WebDriver webDriver) {
+        			WebElement element = MPXMediaAvailableDate_Txb;
+        			return element.isEnabled();
+       		 	}
+        	});
+        	Thread.sleep(500);
+    	}
+    }
+    
+    public void UnCheckOverrideMPXAvailableDateCbx() throws Exception {
+        
+    	if (OverrideMPXAvailableDate_Cbx.isSelected() == true) {
+    		Reporter.log("Un-check the 'Override' checkbox for the 'Available Date' check box.");
+        	OverrideMPXAvailableDate_Cbx.click();
+        	
+        	wait.until(new ExpectedCondition<Boolean>() {
+        		public Boolean apply(WebDriver webDriver) {
+        			WebElement element = MPXMediaAvailableDate_Txb;
+        			return !element.isEnabled();
+       		 	}
+        	});
+        	Thread.sleep(500);
+    	}
     }
 
-    public void ClickOverrideMPXExpirationDateCbx() throws Exception {
+    public void CheckOverrideMPXExpirationDateCbx() throws Exception {
         
-    	Reporter.log("Click the 'Override' checkbox for the 'Expiration Date' check box.");
-    	OverrideMPXExpirationDate_Cbx.click();
-
+    	if (OverrideMPXExpirationDate_Cbx.isSelected() == false) {
+    		Reporter.log("Click the 'Override' checkbox for the 'Expiration Date' check box.");
+        	OverrideMPXExpirationDate_Cbx.click();
+        	
+        	wait.until(new ExpectedCondition<Boolean>() {
+        		public Boolean apply(WebDriver webDriver) {
+        			WebElement element = MPXMediaExpirationDate_Txb;
+        			return element.isEnabled();
+       		 	}
+        	});
+        	Thread.sleep(500);
+    	}
+    }
+    
+    public void UnCheckOverrideMPXExpirationDateCbx() throws Exception {
+        
+    	if (OverrideMPXExpirationDate_Cbx.isSelected() == true) {
+    		Reporter.log("Un-check the 'Override' checkbox for the 'Expiration Date' check box.");
+        	OverrideMPXExpirationDate_Cbx.click();
+        	
+        	wait.until(new ExpectedCondition<Boolean>() {
+        		public Boolean apply(WebDriver webDriver) {
+        			WebElement element = MPXMediaExpirationDate_Txb;
+        			return !element.isEnabled();
+       		 	}
+        	});
+        	Thread.sleep(500);
+    	}
     }
 
     public void EnterMPXAvailableDate(String availableDate) throws Exception {
 
     	Reporter.log("Enter '" + availableDate + "' in the 'Available Date' text box.");
-        MPXMediaAvailableDate_Txb.sendKeys(availableDate);
+    	MPXMediaAvailableDate_Txb.sendKeys(availableDate);
     }
 
     public void EnterMPXAvailableTime(String availableTime) throws Exception {
@@ -121,7 +178,7 @@ public class EditMPXVideo {
     public void EnterMPXExpirationDate(String expirationDate) throws Exception {
 
     	Reporter.log("Enter '" + expirationDate + "' in the 'Expiration Date' text box.");
-        MPXMediaExpirationDate_Txb.sendKeys(expirationDate);
+    	MPXMediaExpirationDate_Txb.sendKeys(expirationDate);
     }
 
     public void EnterMPXExpirationTime(String expirationTime) throws Exception {

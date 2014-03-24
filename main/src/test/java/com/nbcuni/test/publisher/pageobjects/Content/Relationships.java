@@ -71,7 +71,7 @@ public class Relationships {
     public void SelectSeason(String seasonName) throws Exception {
         
     	Reporter.log("Select '" + seasonName + "' from the 'Season' drop down list.");
-    	 wait.until(new ExpectedCondition<Boolean>(){
+    	wait.until(new ExpectedCondition<Boolean>(){
     		 @Override
     		 public Boolean apply(WebDriver webDriver) {
     		 WebElement element = Season_Ddl;

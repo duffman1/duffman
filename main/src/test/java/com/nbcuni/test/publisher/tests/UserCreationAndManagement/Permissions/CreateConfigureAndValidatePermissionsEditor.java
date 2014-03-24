@@ -1,9 +1,7 @@
 package com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions;
 
 import java.util.Arrays;
-
 import org.testng.annotations.Test;
-
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Logout;
@@ -11,7 +9,6 @@ import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Content.BasicInformation;
 import com.nbcuni.test.publisher.pageobjects.Content.Content;
-import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.Content.CreateDefaultContent;
 import com.nbcuni.test.publisher.pageobjects.Content.Delete;
 import com.nbcuni.test.publisher.pageobjects.Content.Revisions;
@@ -87,7 +84,6 @@ public class CreateConfigureAndValidatePermissionsEditor extends ParentTest{
         String lastName = random.GetCharacterString(15);
         addUser.EnterLastName(lastName);
         addUser.ClickCreateNewAccountBtn();
-        ContentParent contentParent = new ContentParent(webDriver, applib);
         contentParent.VerifyMessageStatus("A welcome message with further instructions has been e-mailed to the new user " + userName + ".");
        
         //Step 4
@@ -102,9 +98,9 @@ public class CreateConfigureAndValidatePermissionsEditor extends ParentTest{
         
         //Step 6
         Permissions permissions = new Permissions(webDriver, applib);
-        permissions.EnablePermissions(Arrays.asList("create post content", 
+        permissions.EnablePermissions(null, Arrays.asList("create post content", 
         		"edit own post content", "delete own post content", "create files"));
-        permissions.DisablePermissions(Arrays.asList("edit any post content", "delete any post content"));
+        permissions.DisablePermissions(null, Arrays.asList("edit any post content", "delete any post content"));
         permissions.ClickSaveConfigurationsBtn();
         contentParent.VerifyMessageStatus("The changes have been saved.");
         

@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Mar 24 07:51:01 EDT 2014</td>
+<td>Started on:</td><td>Mon Mar 24 18:36:05 EDT 2014</td>
 </tr>
-<tr><td>Total time:</td><td>34 seconds (34062 ms)</td>
+<tr><td>Total time:</td><td>46 seconds (46342 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,42 +75,118 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile.CreateCharacterProfile_Test()'><b>CreateCharacterProfile_Test</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile<br/>
-<a href="#Output-574830583" onClick='toggleBox("Output-574830583", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides.MPXVideosSchedulingVerificationInitialOverrides_Test()'><b>MPXVideosSchedulingVerificationInitialOverrides_Test</b><br>Test class: com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides<br/>
+<a href="#Output-900515867" onClick='toggleBox("Output-900515867", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-574830583" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-574830583">
-Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.<br/>
+<a href="#Output-900515867" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-900515867">
+Open url 'http://pubentertainment.stage.nbcupublisher7.publisher7.com'.<br/>
 Enter the user's email address in the 'Email Address' text box.<br/>
 Enter the user's password in the 'Password' text box.<br/>
 Click the 'Login' button.<br/>
+Mouse over the 'Configuration' menu link.<br/>
+Mouse over the 'Media' menu link.<br/>
+Click the 'Media: thePlatform mpx settings' menu link.<br/>
+Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.<br/>
+Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.<br/>
 Mouse over the 'Content' menu link.<br/>
-Mouse over the 'Add content' menu link.<br/>
-Click the 'Character Profile' menu link.<br/>
-Switch to the active frame titled 'Create Character Profile dialog'.<br/>
-Enter '4a2afd51ad04485' in the 'Character First Name' text box.<br/>
-Click the Cover Photo 'Select' button.<br/>
-Switch to the select file frame.<br/>
-Enter the file path for file upload.<br/>
-Click the 'Upload' button.<br/>
-Wait for the file link to be visible after upload.<br/>
-Click the 'Next' button.<br/>
-Click the 'Public Local Files' radio button.<br/>
-Click the 'Next' button.<br/>
-Verify the file image 'HanSolo' is present.<br/>
-Verify the img is loaded and visible.<br/>
+Mouse over the 'Files' menu link.<br/>
+Click the 'mpxMedia' menu link.<br/>
+Switch to the active frame titled 'Content dialog'.<br/>
+Enter title Automation1.<br/>
+Click the 'Apply' button.<br/>
+Get the title text of every result in the search result set.<br/>
+For each expected result, assert it is present in the result set.<br/>
+Click the first search title link in the search result set.<br/>
+Verify the text 'Automation1' is present on the page.<br/>
+Verify the text 'MPX Released File Public IDs:' is present on the page.<br/>
+Verify the text 'MPX Media Default Released File Public ID:' is present on the page.<br/>
+Verify the text 'MPX Media Categories:' is present on the page.<br/>
+Verify the text 'Series' is present on the page.<br/>
+Verify the text 'Show' is present on the page.<br/>
+Verify the text 'MPX Media Description:' is present on the page.<br/>
+Verify the text 'Automation 1 example test' is present on the page.<br/>
+Verify the text 'MPX Media Author:' is present on the page.<br/>
+Verify the text 'Pub7 Content Provider' is present on the page.<br/>
+Verify the text 'MPX Media Air Date:' is present on the page.<br/>
+Verify the text 'Wednesday, January 8, 2014' is present on the page.<br/>
+Verify the text 'MPX Media Keywords:' is present on the page.<br/>
+Verify the text 'mpx, metadata, field, override' is present on the page.<br/>
+Verify the text 'MPX Media Copyright:' is present on the page.<br/>
+Verify the text 'NBCUNI QA' is present on the page.<br/>
+Verify the text 'MPX Media Film Advisory Board Rating:' is present on the page.<br/>
+Verify the text 'pd' is present on the page.<br/>
+Verify the text 'MPX Media MPAA Rating:' is present on the page.<br/>
+Verify the text 'MPX Media MPAA Sub-Ratings:' is present on the page.<br/>
+Verify the text 'v' is present on the page.<br/>
+Verify the text 'MPX Media V-Chip Rating:' is present on the page.<br/>
+Verify the text 'tv-y7' is present on the page.<br/>
+Verify the text 'MPX Media V-Chip Sub-Ratings:' is present on the page.<br/>
+Verify the text 'l' is present on the page.<br/>
+Verify the text 'MPX Media Exclude Selected Countries:' is present on the page.<br/>
+Verify the text 'Prevent Playback in Selected Countries' is present on the page.<br/>
+Verify the text 'MPX Media Available Date:' is NOT present on the page.<br/>
+Verify the text 'MPX Media Expiration Date:' is NOT present on the page.<br/>
+Click the 'Edit' link in the work bench.<br/>
+Switch to the active frame titled 'Edit mpx_video_3 Automation1 dialog'.<br/>
+Verify that the 'Media Availabe Date' text box is disabled and has no value.<br/>
+Verify that the 'Media Expiration Date' text box is disabled and has no value.<br/>
+Click the 'Override' checkbox for the 'Available Date' check box.<br/>
+Click the 'Override' checkbox for the 'Expiration Date' check box.<br/>
+Enter '03/31/2014' in the 'Available Date' text box.<br/>
+Enter '05:00pm' in the 'Available Time' text box.<br/>
+Enter '03/23/2017' in the 'Expiration Date' text box.<br/>
+Enter '05:00pm' in the 'Expiration Time' text box.<br/>
 Click the 'Save' button.<br/>
-Switch to frame titled 'Create Character Profile'.<br/>
-Assert that img source of the Cover Photo contains 'HanSolo'.<br/>
-Assert the the img is loaded and visible.<br/>
-Click the 'Save' button.<br/>
-Verify success message of 'Character Profile 4a2afd51ad04485 has been created.' is present.<br/>
+Verify success message of 'Automation1 has been updated.' is present.<br/>
 Verify there are no errors present.<br/>
+Verify the text 'MPX Media Available Date:' is present on the page.<br/>
+Verify the text 'Monday, March 31, 2014' is present on the page.<br/>
+Verify the text 'MPX Media Expiration Date: ' is present on the page.<br/>
+Verify the text 'Thursday, March 23, 2017' is present on the page.<br/>
+Click the 'Edit' link in the work bench.<br/>
+Switch to the active frame titled 'Edit mpx_video_3 Automation1 dialog'.<br/>
+Un-check the 'Override' checkbox for the 'Available Date' check box.<br/>
+Un-check the 'Override' checkbox for the 'Expiration Date' check box.<br/>
+Verify that the 'Media Availabe Date' text box is disabled and has no value.<br/>
+Verify that the 'Media Expiration Date' text box is disabled and has no value.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'Automation1 has been updated.' is present.<br/>
+Verify there are no errors present.<br/>
+Verify the text 'Automation1' is present on the page.<br/>
+Verify the text 'MPX Released File Public IDs:' is present on the page.<br/>
+Verify the text 'MPX Media Default Released File Public ID:' is present on the page.<br/>
+Verify the text 'MPX Media Categories:' is present on the page.<br/>
+Verify the text 'Series' is present on the page.<br/>
+Verify the text 'Show' is present on the page.<br/>
+Verify the text 'MPX Media Description:' is present on the page.<br/>
+Verify the text 'Automation 1 example test' is present on the page.<br/>
+Verify the text 'MPX Media Author:' is present on the page.<br/>
+Verify the text 'Pub7 Content Provider' is present on the page.<br/>
+Verify the text 'MPX Media Air Date:' is present on the page.<br/>
+Verify the text 'Wednesday, January 8, 2014' is present on the page.<br/>
+Verify the text 'MPX Media Keywords:' is present on the page.<br/>
+Verify the text 'mpx, metadata, field, override' is present on the page.<br/>
+Verify the text 'MPX Media Copyright:' is present on the page.<br/>
+Verify the text 'NBCUNI QA' is present on the page.<br/>
+Verify the text 'MPX Media Film Advisory Board Rating:' is present on the page.<br/>
+Verify the text 'pd' is present on the page.<br/>
+Verify the text 'MPX Media MPAA Rating:' is present on the page.<br/>
+Verify the text 'MPX Media MPAA Sub-Ratings:' is present on the page.<br/>
+Verify the text 'v' is present on the page.<br/>
+Verify the text 'MPX Media V-Chip Rating:' is present on the page.<br/>
+Verify the text 'tv-y7' is present on the page.<br/>
+Verify the text 'MPX Media V-Chip Sub-Ratings:' is present on the page.<br/>
+Verify the text 'l' is present on the page.<br/>
+Verify the text 'MPX Media Exclude Selected Countries:' is present on the page.<br/>
+Verify the text 'Prevent Playback in Selected Countries' is present on the page.<br/>
+Verify the text 'MPX Media Available Date:' is NOT present on the page.<br/>
+Verify the text 'MPX Media Expiration Date:' is NOT present on the page.<br/>
 </div>
 </td>
 <td></td>
-<td>18</td>
-<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@4868bd35</td></tr>
+<td>31</td>
+<td>com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides@59d6f830</td></tr>
 </table><p>
 </body>
 </html>
