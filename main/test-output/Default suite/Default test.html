@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Mar 21 14:55:29 EDT 2014</td>
+<td>Started on:</td><td>Mon Mar 24 07:51:01 EDT 2014</td>
 </tr>
-<tr><td>Total time:</td><td>66 seconds (66839 ms)</td>
+<tr><td>Total time:</td><td>34 seconds (34062 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,94 +75,42 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.nbcuni.test.publisher.tests.SocialIntegration.Facebook.ConfiguringPublisherAutopublishingToFacebookTimeandWall.ConfiguringPublisherAutopublishingToFacebookTimeandWall_Test()'><b>ConfiguringPublisherAutopublishingToFacebookTimeandWall_Test</b><br>Test class: com.nbcuni.test.publisher.tests.SocialIntegration.Facebook.ConfiguringPublisherAutopublishingToFacebookTimeandWall<br/>
-<a href="#Output-1560325680" onClick='toggleBox("Output-1560325680", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile.CreateCharacterProfile_Test()'><b>CreateCharacterProfile_Test</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile<br/>
+<a href="#Output-574830583" onClick='toggleBox("Output-574830583", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1560325680" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1560325680">
+<a href="#Output-574830583" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-574830583">
 Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.<br/>
 Enter the user's email address in the 'Email Address' text box.<br/>
 Enter the user's password in the 'Password' text box.<br/>
 Click the 'Login' button.<br/>
-Click the 'Modules' menu link.<br/>
-Switch to the active frame titled 'Modules dialog'.<br/>
-Enter 'Pub Social' in the 'Filter Name' text box.<br/>
-Wait for the module titled 'Pub Social' to appear in the list.<br/>
-Verify the 'Pub Social' check box is checked.<br/>
-Enter 'Pub Post' in the 'Filter Name' text box.<br/>
-Wait for the module titled 'Pub Post' to appear in the list.<br/>
-Verify the 'Pub Post' check box is checked.<br/>
-Click the 'Close Overlay X'.<br/>
-Mouse over the 'Structure' menu link.<br/>
-Click the 'Facebook Apps' menu link.<br/>
-Switch to the active frame titled 'Drupal for Facebook dialog'.<br/>
-Click the 'Edit' link.<br/>
-Switch to the active frame titled '6f59e4589d654f9 dialog'.<br/>
-Click the 'Delete' button.<br/>
-Click the 'Delete' button.<br/>
-Click the 'Delete' button.<br/>
-Mouse over the 'Structure' menu link.<br/>
-Mouse over the 'Facebook Apps' menu link.<br/>
-Click the 'Add App' menu link.<br/>
-Enter '509d4a4e331f4ec' in the 'Label' text box.<br/>
-Enter '125235334322205' in the 'Facbook app id' text box.<br/>
-Enter 'a9b07339789b4ea75b3951f81fe27def' in the 'Secret' text box.<br/>
-Click the 'Save' button.<br/>
-Verify success message of 'Created facebook application Publisher 7 Test App (509d4a4e331f4ec).' is present.<br/>
-Verify there are no errors present.<br/>
-Mouse over the 'Structure' menu link.<br/>
-Mouse over the 'Facebook Apps' menu link.<br/>
-Click the 'Stream Posts' menu link.<br/>
-Click the 'Post via pub 7' link.<br/>
-Enter 'publisher_rifassi_user@tfbnw.net' in the 'Username' text box.<br/>
-Enter 'pa55word' in the 'Password' text box.<br/>
-Click the 'Facebook login' button.<br/>
-Verify warning message 'Generated a new access token, but not yet saved. Remember to press the save button below!' is present.<br/>
-Verify there are no errors present.<br/>
-Click the 'Save configuration' button.<br/>
-Verify success message of 'The configuration options have been saved.' is present.<br/>
-Verify there are no errors present.<br/>
-Click the 'Show current token' link.<br/>
-Copy the current token.<br/>
-Paste the current token into the 'Paste Access token' text area.<br/>
-Click the 'Save configuration' button.<br/>
-Verify success message of 'The configuration options have been saved.' is present.<br/>
-Verify there are no errors present.<br/>
-Mouse over the 'Configuration' menu link.<br/>
-Mouse over the 'Web services' menu link.<br/>
-Click the 'Facebook' menu link.<br/>
-Check the 'Post' checkbox.<br/>
-Click the 'Save configuration' button.<br/>
-Verify success message of 'The configuration options have been saved.' is present.<br/>
-Verify there are no errors present.<br/>
 Mouse over the 'Content' menu link.<br/>
 Mouse over the 'Add content' menu link.<br/>
-Click the 'Post' menu link.<br/>
-Enter '4c108f0d507e4eb' in the 'Title' text box.<br/>
-Switch to the Synopsis frame.<br/>
-Enter a randomized text string into the 'Body' text area.<br/>
-Scroll the 'Publishing Options' link into view.<br/>
-Click the 'Publishing Options' link.<br/>
-Select 'Published' from the 'Moderation State' drop down list.<br/>
+Click the 'Character Profile' menu link.<br/>
+Switch to the active frame titled 'Create Character Profile dialog'.<br/>
+Enter '4a2afd51ad04485' in the 'Character First Name' text box.<br/>
+Click the Cover Photo 'Select' button.<br/>
+Switch to the select file frame.<br/>
+Enter the file path for file upload.<br/>
+Click the 'Upload' button.<br/>
+Wait for the file link to be visible after upload.<br/>
+Click the 'Next' button.<br/>
+Click the 'Public Local Files' radio button.<br/>
+Click the 'Next' button.<br/>
+Verify the file image 'HanSolo' is present.<br/>
+Verify the img is loaded and visible.<br/>
 Click the 'Save' button.<br/>
-Verify success message of 'Post 4c108f0d507e4eb has been created.' is present.<br/>
+Switch to frame titled 'Create Character Profile'.<br/>
+Assert that img source of the Cover Photo contains 'HanSolo'.<br/>
+Assert the the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'Character Profile 4a2afd51ad04485 has been created.' is present.<br/>
 Verify there are no errors present.<br/>
-Click the 'Revisions' link in the work bench.<br/>
-Switch to the active frame titled 'Revisions dialog'.<br/>
-Click the 'Edit' extend menu button.<br/>
-Click the 'Share' menu button.<br/>
-Click the 'Facebook' link.<br/>
-Check the 'Post to facebook wall' check box.<br/>
-Enter 'fb7b41fd8ca24ff' in the 'Provide brief message' text area.<br/>
-Click the 'Share' button.<br/>
-Verify the text 'Publisher Seven Test User' is present on the page.<br/>
-Verify the text '4c108f0d507e4eb' is present on the page.<br/>
-Verify the text 'Publisher 7 Test App' is present on the page.<br/>
 </div>
 </td>
 <td></td>
-<td>52</td>
-<td>com.nbcuni.test.publisher.tests.SocialIntegration.Facebook.ConfiguringPublisherAutopublishingToFacebookTimeandWall@11f11ffc</td></tr>
+<td>18</td>
+<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@4868bd35</td></tr>
 </table><p>
 </body>
 </html>

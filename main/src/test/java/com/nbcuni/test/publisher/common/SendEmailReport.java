@@ -45,7 +45,7 @@ public class SendEmailReport {
             
             //if there are failures or few tests executed, send to automation qa resource for review
             Integer totalTestCount = passedTestsCount + failedTestsCount;
-            if (!failedTestsCount.equals(0) || totalTestCount < 10) {
+            if (!failedTestsCount.equals(0)) {
             	message.setRecipients(Message.RecipientType.TO,
             			InternetAddress.parse("brandon.clark@nbcuni.com"));
             }
@@ -58,10 +58,12 @@ public class SendEmailReport {
             
             BodyPart messageBodyPart = new MimeBodyPart();
 
+            Integer actualFailedTestCount = failedTestsCount / config.getReRunOnFailureCount();
+            
             messageBodyPart.setText("Test run complete against latest build on " + config.getConfigValue("AppURL")
                 + "\n\n Total tests executed = " + totalTestCount.toString()
             		+ "\n Tests passed = " + passedTestsCount.toString()
-            			+ "\n Tests failed = " + failedTestsCount.toString()
+            			+ "\n Tests failed = " + actualFailedTestCount.toString()
             				+ "\n\n A detailed report is attached. Iteration Report archives are assigned to task " + config.getConfigValue("RallyTaskID") + "."
             					+ "\n\n Publisher 7 Automation Team");
 
