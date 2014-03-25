@@ -2,7 +2,7 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
     <line>
-      <![CDATA[Open url 'http://pubentertainment.stage.nbcupublisher7.publisher7.com'.]]>
+      <![CDATA[Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.]]>
     </line>
     <line>
       <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
@@ -29,304 +29,139 @@
       <![CDATA[Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.]]>
     </line>
     <line>
+      <![CDATA[Get all the selected import account options and store to a list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
       <![CDATA[Mouse over the 'Content' menu link.]]>
     </line>
     <line>
       <![CDATA[Mouse over the 'Files' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'mpxMedia' menu link.]]>
+      <![CDATA[Click the 'mpxPlayers' menu link.]]>
     </line>
     <line>
       <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
     </line>
     <line>
-      <![CDATA[Enter title Automation1.]]>
+      <![CDATA[Verify that the search result set column order matches as expected.]]>
+    </line>
+    <line>
+      <![CDATA[Get the text of the first search result set item.]]>
+    </line>
+    <line>
+      <![CDATA[Get the number of results in the result set.]]>
+    </line>
+    <line>
+      <![CDATA[Enter title Automation.]]>
     </line>
     <line>
       <![CDATA[Click the 'Apply' button.]]>
     </line>
     <line>
-      <![CDATA[Get the title text of every result in the search result set.]]>
+      <![CDATA[Get the number of results in the result set.]]>
     </line>
     <line>
-      <![CDATA[For each expected result, assert it is present in the result set.]]>
+      <![CDATA[Get the text of the first search result set item.]]>
     </line>
     <line>
-      <![CDATA[Click the first search title link in the search result set.]]>
+      <![CDATA[Click the 'Reset' button.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'Automation1' is present on the page.]]>
+      <![CDATA[Get the text of the first search result set item.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'MPX Released File Public IDs:' is present on the page.]]>
+      <![CDATA[Get the number of results in the result set.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'MPX Media Default Released File Public ID:' is present on the page.]]>
+      <![CDATA[Get all the account options in the 'MPX Player Account' select ddl.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'MPX Media Categories:' is present on the page.]]>
+      <![CDATA[Assert that the count of options is expected + 1 for the '-select' option.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'Series' is present on the page.]]>
+      <![CDATA[Get the text of each of the ddl options.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'Show' is present on the page.]]>
+      <![CDATA[Assert that each expected account option is present in the 'MPX Player Account' select ddl.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'MPX Media Description:' is present on the page.]]>
+      <![CDATA[Select the DB TV from the 'MPXPlayerAccount' select ddl.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'Automation 1 example test' is present on the page.]]>
+      <![CDATA[Click the 'Apply' button.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'MPX Media Author:' is present on the page.]]>
+      <![CDATA[Get all the MPX result set 'Source' items.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'Pub7 Content Provider' is present on the page.]]>
+      <![CDATA[Assert that every source item in the result set equals 'DB TV'.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'MPX Media Air Date:' is present on the page.]]>
+      <![CDATA[Click the 'Reset' button.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'Wednesday, January 8, 2014' is present on the page.]]>
+      <![CDATA[Select the 'Published' from the 'MPX Status' select ddl.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'MPX Media Keywords:' is present on the page.]]>
+      <![CDATA[Click the 'Apply' button.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'mpx, metadata, field, override' is present on the page.]]>
+      <![CDATA[Get all the MPX result set 'Status' items.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'MPX Media Copyright:' is present on the page.]]>
+      <![CDATA[Assert that result set size for Published items is greater than 0.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'NBCUNI QA' is present on the page.]]>
+      <![CDATA[Assert that every status item in the result set equals 'Published'.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'MPX Media Film Advisory Board Rating:' is present on the page.]]>
+      <![CDATA[Click the 'Reset' button.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'pd' is present on the page.]]>
+      <![CDATA[Select the 'Unpublished' from the 'MPX Status' select ddl.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'MPX Media MPAA Rating:' is present on the page.]]>
+      <![CDATA[Click the 'Apply' button.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'MPX Media MPAA Sub-Ratings:' is present on the page.]]>
+      <![CDATA[Get all the MPX result set 'Status' items.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'v' is present on the page.]]>
+      <![CDATA[Assert that every status item in the result set equals 'Unpublished'.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'MPX Media V-Chip Rating:' is present on the page.]]>
+      <![CDATA[Click the 'Reset' button.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'tv-y7' is present on the page.]]>
+      <![CDATA[Get the text of the first search result set item.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'MPX Media V-Chip Sub-Ratings:' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'l' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'MPX Media Exclude Selected Countries:' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'Prevent Playback in Selected Countries' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'MPX Media Available Date:' is NOT present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'MPX Media Expiration Date:' is NOT present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Edit' link in the work bench.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Edit mpx_video_3 Automation1 dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that the 'Media Availabe Date' text box is disabled and has no value.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that the 'Media Expiration Date' text box is disabled and has no value.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Override' checkbox for the 'Available Date' check box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Override' checkbox for the 'Expiration Date' check box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '03/31/2014' in the 'Available Date' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '05:00pm' in the 'Available Time' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '03/23/2017' in the 'Expiration Date' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '05:00pm' in the 'Expiration Time' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Automation1 has been updated.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify there are no errors present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'MPX Media Available Date:' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'Monday, March 31, 2014' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'MPX Media Expiration Date: ' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'Thursday, March 23, 2017' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Edit' link in the work bench.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Edit mpx_video_3 Automation1 dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Un-check the 'Override' checkbox for the 'Available Date' check box.]]>
-    </line>
-    <line>
-      <![CDATA[Un-check the 'Override' checkbox for the 'Expiration Date' check box.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that the 'Media Availabe Date' text box is disabled and has no value.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that the 'Media Expiration Date' text box is disabled and has no value.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Automation1 has been updated.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify there are no errors present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'Automation1' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'MPX Released File Public IDs:' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'MPX Media Default Released File Public ID:' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'MPX Media Categories:' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'Series' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'Show' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'MPX Media Description:' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'Automation 1 example test' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'MPX Media Author:' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'Pub7 Content Provider' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'MPX Media Air Date:' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'Wednesday, January 8, 2014' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'MPX Media Keywords:' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'mpx, metadata, field, override' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'MPX Media Copyright:' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'NBCUNI QA' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'MPX Media Film Advisory Board Rating:' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'pd' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'MPX Media MPAA Rating:' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'MPX Media MPAA Sub-Ratings:' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'v' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'MPX Media V-Chip Rating:' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'tv-y7' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'MPX Media V-Chip Sub-Ratings:' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'l' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'MPX Media Exclude Selected Countries:' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'Prevent Playback in Selected Countries' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'MPX Media Available Date:' is NOT present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'MPX Media Expiration Date:' is NOT present on the page.]]>
+      <![CDATA[Get the number of results in the result set.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="46342" started-at="2014-03-24T22:36:05Z" finished-at="2014-03-24T22:36:52Z">
+  <suite name="Default suite" duration-ms="44780" started-at="2014-03-25T14:57:27Z" finished-at="2014-03-25T14:58:12Z">
     <groups>
       <group name="mpx">
-        <method signature="MPXVideosSchedulingVerificationInitialOverrides.MPXVideosSchedulingVerificationInitialOverrides_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides@59d6f830]" name="MPXVideosSchedulingVerificationInitialOverrides_Test" class="com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides"/>
+        <method signature="EnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen@46a53092]" name="EnhanceMPXPlayerContentAdminScreen_Test" class="com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen"/>
       </group> <!-- mpx -->
       <group name="full">
-        <method signature="MPXVideosSchedulingVerificationInitialOverrides.MPXVideosSchedulingVerificationInitialOverrides_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides@59d6f830]" name="MPXVideosSchedulingVerificationInitialOverrides_Test" class="com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides"/>
+        <method signature="EnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen@46a53092]" name="EnhanceMPXPlayerContentAdminScreen_Test" class="com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen"/>
       </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="46342" started-at="2014-03-24T22:36:05Z" finished-at="2014-03-24T22:36:52Z">
-      <class name="com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides">
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides@59d6f830]" name="startSelenium" is-config="true" duration-ms="14224" started-at="2014-03-24T18:36:05Z" finished-at="2014-03-24T18:36:20Z">
+    <test name="Default test" duration-ms="44780" started-at="2014-03-25T14:57:27Z" finished-at="2014-03-25T14:58:12Z">
+      <class name="com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen@46a53092]" name="startSelenium" is-config="true" duration-ms="14233" started-at="2014-03-25T10:57:27Z" finished-at="2014-03-25T10:57:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="MPXVideosSchedulingVerificationInitialOverrides_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides@59d6f830]" name="MPXVideosSchedulingVerificationInitialOverrides_Test" duration-ms="31533" started-at="2014-03-24T18:36:20Z" finished-at="2014-03-24T18:36:51Z">
+        <test-method status="PASS" signature="EnhanceMPXPlayerContentAdminScreen_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen@46a53092]" name="EnhanceMPXPlayerContentAdminScreen_Test" duration-ms="29965" started-at="2014-03-25T10:57:42Z" finished-at="2014-03-25T10:58:11Z">
           <reporter-output>
             <line>
-              <![CDATA[Open url 'http://pubentertainment.stage.nbcupublisher7.publisher7.com'.]]>
+              <![CDATA[Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.]]>
             </line>
             <line>
               <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
@@ -353,298 +188,133 @@
               <![CDATA[Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.]]>
             </line>
             <line>
+              <![CDATA[Get all the selected import account options and store to a list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
               <![CDATA[Mouse over the 'Content' menu link.]]>
             </line>
             <line>
               <![CDATA[Mouse over the 'Files' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'mpxMedia' menu link.]]>
+              <![CDATA[Click the 'mpxPlayers' menu link.]]>
             </line>
             <line>
               <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
             </line>
             <line>
-              <![CDATA[Enter title Automation1.]]>
+              <![CDATA[Verify that the search result set column order matches as expected.]]>
+            </line>
+            <line>
+              <![CDATA[Get the text of the first search result set item.]]>
+            </line>
+            <line>
+              <![CDATA[Get the number of results in the result set.]]>
+            </line>
+            <line>
+              <![CDATA[Enter title Automation.]]>
             </line>
             <line>
               <![CDATA[Click the 'Apply' button.]]>
             </line>
             <line>
-              <![CDATA[Get the title text of every result in the search result set.]]>
+              <![CDATA[Get the number of results in the result set.]]>
             </line>
             <line>
-              <![CDATA[For each expected result, assert it is present in the result set.]]>
+              <![CDATA[Get the text of the first search result set item.]]>
             </line>
             <line>
-              <![CDATA[Click the first search title link in the search result set.]]>
+              <![CDATA[Click the 'Reset' button.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'Automation1' is present on the page.]]>
+              <![CDATA[Get the text of the first search result set item.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'MPX Released File Public IDs:' is present on the page.]]>
+              <![CDATA[Get the number of results in the result set.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'MPX Media Default Released File Public ID:' is present on the page.]]>
+              <![CDATA[Get all the account options in the 'MPX Player Account' select ddl.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'MPX Media Categories:' is present on the page.]]>
+              <![CDATA[Assert that the count of options is expected + 1 for the '-select' option.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'Series' is present on the page.]]>
+              <![CDATA[Get the text of each of the ddl options.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'Show' is present on the page.]]>
+              <![CDATA[Assert that each expected account option is present in the 'MPX Player Account' select ddl.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'MPX Media Description:' is present on the page.]]>
+              <![CDATA[Select the DB TV from the 'MPXPlayerAccount' select ddl.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'Automation 1 example test' is present on the page.]]>
+              <![CDATA[Click the 'Apply' button.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'MPX Media Author:' is present on the page.]]>
+              <![CDATA[Get all the MPX result set 'Source' items.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'Pub7 Content Provider' is present on the page.]]>
+              <![CDATA[Assert that every source item in the result set equals 'DB TV'.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'MPX Media Air Date:' is present on the page.]]>
+              <![CDATA[Click the 'Reset' button.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'Wednesday, January 8, 2014' is present on the page.]]>
+              <![CDATA[Select the 'Published' from the 'MPX Status' select ddl.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'MPX Media Keywords:' is present on the page.]]>
+              <![CDATA[Click the 'Apply' button.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'mpx, metadata, field, override' is present on the page.]]>
+              <![CDATA[Get all the MPX result set 'Status' items.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'MPX Media Copyright:' is present on the page.]]>
+              <![CDATA[Assert that result set size for Published items is greater than 0.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'NBCUNI QA' is present on the page.]]>
+              <![CDATA[Assert that every status item in the result set equals 'Published'.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'MPX Media Film Advisory Board Rating:' is present on the page.]]>
+              <![CDATA[Click the 'Reset' button.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'pd' is present on the page.]]>
+              <![CDATA[Select the 'Unpublished' from the 'MPX Status' select ddl.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'MPX Media MPAA Rating:' is present on the page.]]>
+              <![CDATA[Click the 'Apply' button.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'MPX Media MPAA Sub-Ratings:' is present on the page.]]>
+              <![CDATA[Get all the MPX result set 'Status' items.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'v' is present on the page.]]>
+              <![CDATA[Assert that every status item in the result set equals 'Unpublished'.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'MPX Media V-Chip Rating:' is present on the page.]]>
+              <![CDATA[Click the 'Reset' button.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'tv-y7' is present on the page.]]>
+              <![CDATA[Get the text of the first search result set item.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'MPX Media V-Chip Sub-Ratings:' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'l' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'MPX Media Exclude Selected Countries:' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'Prevent Playback in Selected Countries' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'MPX Media Available Date:' is NOT present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'MPX Media Expiration Date:' is NOT present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Edit' link in the work bench.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Edit mpx_video_3 Automation1 dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that the 'Media Availabe Date' text box is disabled and has no value.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that the 'Media Expiration Date' text box is disabled and has no value.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Override' checkbox for the 'Available Date' check box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Override' checkbox for the 'Expiration Date' check box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '03/31/2014' in the 'Available Date' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '05:00pm' in the 'Available Time' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '03/23/2017' in the 'Expiration Date' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '05:00pm' in the 'Expiration Time' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Automation1 has been updated.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify there are no errors present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'MPX Media Available Date:' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'Monday, March 31, 2014' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'MPX Media Expiration Date: ' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'Thursday, March 23, 2017' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Edit' link in the work bench.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Edit mpx_video_3 Automation1 dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Un-check the 'Override' checkbox for the 'Available Date' check box.]]>
-            </line>
-            <line>
-              <![CDATA[Un-check the 'Override' checkbox for the 'Expiration Date' check box.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that the 'Media Availabe Date' text box is disabled and has no value.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that the 'Media Expiration Date' text box is disabled and has no value.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Automation1 has been updated.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify there are no errors present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'Automation1' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'MPX Released File Public IDs:' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'MPX Media Default Released File Public ID:' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'MPX Media Categories:' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'Series' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'Show' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'MPX Media Description:' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'Automation 1 example test' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'MPX Media Author:' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'Pub7 Content Provider' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'MPX Media Air Date:' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'Wednesday, January 8, 2014' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'MPX Media Keywords:' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'mpx, metadata, field, override' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'MPX Media Copyright:' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'NBCUNI QA' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'MPX Media Film Advisory Board Rating:' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'pd' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'MPX Media MPAA Rating:' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'MPX Media MPAA Sub-Ratings:' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'v' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'MPX Media V-Chip Rating:' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'tv-y7' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'MPX Media V-Chip Sub-Ratings:' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'l' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'MPX Media Exclude Selected Countries:' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'Prevent Playback in Selected Countries' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'MPX Media Available Date:' is NOT present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'MPX Media Expiration Date:' is NOT present on the page.]]>
+              <![CDATA[Get the number of results in the result set.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- MPXVideosSchedulingVerificationInitialOverrides_Test -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides@59d6f830]" name="stopSelenium" is-config="true" duration-ms="570" started-at="2014-03-24T18:36:51Z" finished-at="2014-03-24T18:36:52Z">
+        </test-method> <!-- EnhanceMPXPlayerContentAdminScreen_Test -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen@46a53092]" name="stopSelenium" is-config="true" duration-ms="570" started-at="2014-03-25T10:58:11Z" finished-at="2014-03-25T10:58:12Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=MPXVideosSchedulingVerificationInitialOverrides_Test status=SUCCESS method=MPXVideosSchedulingVerificationInitialOverrides.MPXVideosSchedulingVerificationInitialOverrides_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides@59d6f830] output=Open url 'http://pubentertainment.stage.nbcupublisher7.publisher7.com'.]]]>
+                <![CDATA[[TestResult name=EnhanceMPXPlayerContentAdminScreen_Test status=SUCCESS method=EnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen@46a53092] output=Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-      </class> <!-- com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

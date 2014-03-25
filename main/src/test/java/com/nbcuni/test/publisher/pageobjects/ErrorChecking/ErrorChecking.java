@@ -109,6 +109,7 @@ public class ErrorChecking {
     		allowedErrors.add("Warning: Attempt to assign property of non-object in EntityAPIController->save()");
     		allowedErrors.add("Notice: Trying to get property of non-object in EntityAPIController->save()");
     		allowedErrors.add("Notice: Undefined offset: 2 in drupal_http_request() (line 1006 of /mnt/www/html/nbcupublisher7qa/docroot/includes/common.inc)");
+    		allowedErrors.add("Failed to retrieve mpx feed data. No data returned from thePlatform after 0 seconds from: http://tvedev.nbcuni.com/common/web/css/player_embed.css");
     		
     		//FIRST - check if error container is present
     		boolean errorContainerPresent = false;
@@ -147,7 +148,8 @@ public class ErrorChecking {
     								 	|| errorText.contains(allowedErrors.get(4))
     								 		|| errorText.contains(allowedErrors.get(5))
     								 			|| errorText.contains(allowedErrors.get(6))
-    								 				|| errorText.contains(allowedErrors.get(7))) {
+    								 				|| errorText.contains(allowedErrors.get(7))
+    								 					|| errorText.contains(allowedErrors.get(8))) {
     					//ignore error
     				}
     				else {
@@ -165,20 +167,21 @@ public class ErrorChecking {
     				}
     				
     				//check the error text of each error
-    				for (String error : Errors) {
-    					if (error.contains(allowedErrors.get(0)) 
-    							|| error.contains(allowedErrors.get(1))
-    									|| error.contains(allowedErrors.get(2))
-    										|| error.contains(allowedErrors.get(3))
-    										 	|| error.contains(allowedErrors.get(4))
-    										 		|| error.contains(allowedErrors.get(5))
-    										 			|| error.contains(allowedErrors.get(6))
-    										 				|| error.contains(allowedErrors.get(7))) {
+    				for (String errorText : Errors) {
+    					if (errorText.contains(allowedErrors.get(0)) 
+    							|| errorText.contains(allowedErrors.get(1))
+    									|| errorText.contains(allowedErrors.get(2))
+    										|| errorText.contains(allowedErrors.get(3))
+    										 	|| errorText.contains(allowedErrors.get(4))
+    										 		|| errorText.contains(allowedErrors.get(5))
+    										 			|| errorText.contains(allowedErrors.get(6))
+    										 				|| errorText.contains(allowedErrors.get(7))
+    										 					|| errorText.contains(allowedErrors.get(8))) {
     						//ignore error
     					}
     					else {
-    						//legit error and fail test
-        					Assert.fail("Error text of '" + error + "' is present in application.");
+    						//legitimate error and fail test
+        					Assert.fail("Error text of '" + errorText + "' is present in application.");
     					}
     				}
     			}
