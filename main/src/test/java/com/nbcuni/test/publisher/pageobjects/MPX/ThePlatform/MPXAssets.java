@@ -41,7 +41,7 @@ public class MPXAssets {
                 Assert.fail("Image '" + imgPath + "' is not present after timeout");
             }
             
-            if (sikuli.exists(imgPath) != null) {
+            if (sikuli.exists(imgPath, .5) != null) {
             	break;
             }
             Thread.sleep(500);
@@ -57,7 +57,7 @@ public class MPXAssets {
                 Assert.fail("Image '" + imgPath + "' is still present after timeout");
             }
             
-            if (sikuli.exists(imgPath) == null) {
+            if (sikuli.exists(imgPath, .5) == null) {
             	break;
             }
             Thread.sleep(500);

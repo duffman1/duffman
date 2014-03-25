@@ -1,5 +1,6 @@
 package com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform;
 
+import java.util.Iterator;
 import com.nbcuni.test.publisher.common.AppLib;
 import org.testng.Reporter;
 import org.sikuli.script.*;
@@ -35,6 +36,18 @@ public class MPXDeleteMedia {
     	sikuli.click(getImagePath() + "DeleteMedia/DeleteMedia1.png");
     }
     
+    public void ClickEachAutomationItem() throws Exception {
+    	
+    	Reporter.log("Click the 'Delete' button.");
+    	mpxAssets.WaitForImgPresent(getImagePath() + "DeleteMedia/Automation_Ttl.png");
+    	
+    	Iterator<Match> matches = sikuli.findAll(getImagePath() + "DeleteMedia/Automation_Ttl.png");
+    	while (matches.hasNext()) {
+            Object match = matches.next();
+            sikuli.click(match);
+    	}
+    }
+
     public void ClickDeleteBtn() throws Exception {
     	
     	Reporter.log("Click the 'Delete' button.");
