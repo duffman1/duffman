@@ -156,28 +156,21 @@ public class NotificationPlayerUnavailability extends ParentTest{
         	    
         	    //Step 7 - note that multiple cron runs are sometimes necessary for disabled player to be present
         	    ErrorChecking errorChecking = new ErrorChecking(webDriver, applib);
-        	    int I = 0;
-        	    while (I < 2) {
-        	    	I++;
-        	    	if (I == 3) {
-        	    		Assert.fail("MPX player '" + playerTitle + "' is not present after 3 cron executions.");
-        	    	}
-        	    	try {
+        	    try {
         	    		errorChecking.VerifyMPXPlayerDisabled(playerTitle);
-        	    		break;
-        	    	}
-        	    	catch (AssertionError | NoSuchElementException ex) {
+        	    }
+        	    catch (AssertionError | NoSuchElementException ex) {
         	    	
-        	    		Thread.sleep(10000); //pause and re-run cron as this step can be flaky and sometimes require a second cron run.
-        	    		overlay.switchToDefaultContent();
-        	    		taxonomy.NavigateSite("Home>>Run cron");
-        	    		overlay.SwitchToActiveFrame();
-        	    		contentParent.VerifyMessageStatus("Cron ran successfully.");
-        	    		overlay.ClickCloseOverlayLnk();
-        	    		taxonomy.NavigateSite("Content>>Files>>mpxPlayers");
-        	    		overlay.SwitchToActiveFrame();
-        	    		errorChecking.VerifyMPXPlayerDisabled(playerTitle);
-        	    	}
+        	    	Thread.sleep(10000); //pause and re-run cron as this step can be flaky and sometimes require a second cron run.
+        	    	overlay.switchToDefaultContent();
+        	    	taxonomy.NavigateSite("Home>>Run cron");
+        	    	overlay.SwitchToActiveFrame();
+        	    	contentParent.VerifyMessageStatus("Cron ran successfully.");
+        	    	overlay.ClickCloseOverlayLnk();
+        	    	taxonomy.NavigateSite("Content>>Files>>mpxPlayers");
+        	    	overlay.SwitchToActiveFrame();
+        	    	errorChecking.VerifyMPXPlayerDisabled(playerTitle);
+        	   
         	    }
         	    
                 //Step 8
@@ -258,26 +251,19 @@ public class NotificationPlayerUnavailability extends ParentTest{
         	    //Step 17
         	    taxonomy.NavigateSite("Content>>Files>>mpxPlayers");
                 overlay.SwitchToActiveFrame();
-                int I2 = 0;
-        	    while (I2 < 2) {
-        	    	I2++;
-        	    	if (I2 == 3) {
-        	    		Assert.fail("MPX disabled player text for '" + playerTitle + "' is still present after 3 cron executions.");
-        	    	}
-        	    	try {
-        	    		contentParent.VerifyPageContentNotPresent(Arrays.asList("An MPXplayer that's in use (" + playerTitle + ") has been disabled in MPX."));
-        	    	}
-        	    	catch (AssertionError e) {
-        	    		Thread.sleep(10000); //pause and re-run cron as this step can be flaky and sometimes require a second cron run.
-        	    		overlay.switchToDefaultContent();
-        	    		taxonomy.NavigateSite("Home>>Run cron");
-        	    		overlay.SwitchToActiveFrame();
-        	    		contentParent.VerifyMessageStatus("Cron ran successfully.");
-        	    		overlay.ClickCloseOverlayLnk();
-        	    		taxonomy.NavigateSite("Content>>Files>>mpxPlayers");
-        	    		overlay.SwitchToActiveFrame();
-        	    		contentParent.VerifyPageContentNotPresent(Arrays.asList("An MPXplayer that's in use (" + playerTitle + ") has been disabled in MPX."));
-        	    	}
+                try {
+        	    	contentParent.VerifyPageContentNotPresent(Arrays.asList("An MPXplayer that's in use (" + playerTitle + ") has been disabled in MPX."));
+        	    }
+        	    catch (AssertionError e) {
+        	    	Thread.sleep(10000); //pause and re-run cron as this step can be flaky and sometimes require a second cron run.
+        	    	overlay.switchToDefaultContent();
+        	    	taxonomy.NavigateSite("Home>>Run cron");
+        	    	overlay.SwitchToActiveFrame();
+        	    	contentParent.VerifyMessageStatus("Cron ran successfully.");
+        	    	overlay.ClickCloseOverlayLnk();
+        	    	taxonomy.NavigateSite("Content>>Files>>mpxPlayers");
+        	    	overlay.SwitchToActiveFrame();
+        	    	contentParent.VerifyPageContentNotPresent(Arrays.asList("An MPXplayer that's in use (" + playerTitle + ") has been disabled in MPX."));
         	    }
         	}
         	else {

@@ -2,7 +2,7 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
     <line>
-      <![CDATA[Open url 'http://qa5.stage.nbcupublisher7.publisher7.com'.]]>
+      <![CDATA[Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.]]>
     </line>
     <line>
       <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
@@ -17,187 +17,190 @@
       <![CDATA[Mouse over the 'Configuration' menu link.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Content authoring' menu link.]]>
+      <![CDATA[Mouse over the 'Media' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Content lock' menu link.]]>
+      <![CDATA[Click the 'Media: thePlatform mpx settings' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Content lock dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
+      <![CDATA[Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+      <![CDATA[Get all the selected import account options and store to a list.]]>
     </line>
     <line>
-      <![CDATA[Verify there are no errors present.]]>
+      <![CDATA[Open the mpx platform.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
+      <![CDATA[Enter 'mpx/AdminPub7QA' in the 'Username' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Modules' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to frame titled 'Modules'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Pub Post' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the module titled 'Pub Post' to appear in the list.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Pub Post' check box is checked.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'People' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Add user' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'People dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '7ae0e18ab9714d9@a8413819ce63455.com' in the 'Username' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '7ae0e18ab9714d9@a8413819ce63455.com' in the 'E-mail address' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'pa55word' in the 'Confirm password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Check the 'editor' checkbox.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'ff45ee01e23e43c' in the 'First Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '99a1d9938b244d0' in the 'Last Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Create new account' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'A welcome message with further instructions has been e-mailed to the new user 7ae0e18ab9714d9@a8413819ce63455.com.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify there are no errors present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'People' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Permissions' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Roles' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'People dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Edit Permissions' link for the 'Editor' role.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'People dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save Permissions' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The changes have been saved.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify there are no errors present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Logout' button.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the user's password in the 'Password' text box.]]>
+      <![CDATA[Enter 'Pa55word' in the 'Password' text box.]]>
     </line>
     <line>
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Content' menu link.]]>
+      <![CDATA[Click the 'Players' link.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Add content' menu link.]]>
+      <![CDATA[Click the 'All Players' link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Post' menu link.]]>
+      <![CDATA[Click the 'Add' button.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '5745042809c044d' in the 'Title' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the Synopsis frame.]]>
-    </line>
-    <line>
-      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Cover' select button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the select file frame.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the file path for file upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Upload' button.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the file image 'HanSolo' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img is loaded and visible.]]>
+      <![CDATA[Enter 'AutomationPlayerf0ce2a47be' in the 'Title' text box.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+      <![CDATA[Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Files' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'mpxPlayers' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Sync MPX Players' link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Sync MPX Players Now' link.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'players returned for account' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify there are no errors present.]]>
+    </line>
+    <line>
+      <![CDATA[Enter title AutomationPlayerf0ce2a47be.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Apply' button.]]>
+    </line>
+    <line>
+      <![CDATA[Get the text of the first search result set item.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Files' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'mpxMedia' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Enter title Automation.]]>
+    </line>
+    <line>
+      <![CDATA[Select the 'Published' from the 'MPX Status' select ddl.]]>
+    </line>
+    <line>
+      <![CDATA[Select the DB TV from the 'Source' select ddl.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Apply' button.]]>
+    </line>
+    <line>
+      <![CDATA[Get the text of the first search result set item.]]>
+    </line>
+    <line>
+      <![CDATA[Click the first search title link in the search result set.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Edit' link in the work bench.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Edit mpx_video_4 Automationc6842760c5 dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Select 'AutomationPlayerf0ce2a47be' from the 'Video Player' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Open the mpx platform.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Players' link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'All Players' link.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'AutomationPlayerf0ce2a47be' in the 'Player Search' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Search by Players Title' link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Player Title' label to give focus to the player item.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Disable Player' check box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Status report dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Cron ran successfully.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify there are no errors present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Files' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'mpxPlayers' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify that the disabled player text is present for player titled 'AutomationPlayerf0ce2a47be'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter title AutomationPlayerf0ce2a47be.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Apply' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the first search title link in the search result set.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Edit' link in the work bench.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Edit mpx_player AutomationPlayerf0ce2a47be dialog'.]]>
     </line>
     <line>
       <![CDATA[Scroll the 'Publishing Options' link into view.]]>
@@ -206,58 +209,169 @@
       <![CDATA[Click the 'Publishing Options' link.]]>
     </line>
     <line>
-      <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
+      <![CDATA[Uncheck the 'Published' checkbox]]>
     </line>
     <line>
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'Post 5745042809c044d has been created.' is present.]]>
+      <![CDATA[Verify success message of 'MPX Player AutomationPlayerf0ce2a47be has been updated.' is present.]]>
     </line>
     <line>
       <![CDATA[Verify there are no errors present.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Content' menu link.]]>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Files' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'mpxPlayers' menu link.]]>
     </line>
     <line>
       <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Edit' link for content item titled '5745042809c044d.]]>
+      <![CDATA[Verify that the disabled and unpublished player text is present for player titled 'AutomationPlayerf0ce2a47be'.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Edit Post 5745042809c044d dialog'.]]>
+      <![CDATA[Click the 'MPX Media' link.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'This document is now locked against simultaneous editing. It will unlock when you navigate elsewhere.' is present.]]>
+      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify that the disabled and unpublished player text is present for player titled 'AutomationPlayerf0ce2a47be'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Configuration' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Media' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Media: thePlatform mpx settings' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify that the disabled and unpublished player text is present for player titled 'AutomationPlayerf0ce2a47be'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'click here' link for the unpublished player titled 'AutomationPlayerf0ce2a47be'.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Edit mpx_player AutomationPlayerf0ce2a47be dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Publishing Options' link.]]>
+    </line>
+    <line>
+      <![CDATA[Check the 'Published' checkbox]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Files' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'mpxPlayers' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify that the disabled player text is present for player titled 'AutomationPlayerf0ce2a47be'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the MPX 'Login' link for the unpublished player 'AutomationPlayerf0ce2a47be'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Players' link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'All Players' link.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'AutomationPlayerf0ce2a47be' in the 'Player Search' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Search by Players Title' link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Player Title' label to give focus to the player item.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Disable Player' check box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Status report dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Cron ran successfully.' is present.]]>
     </line>
     <line>
       <![CDATA[Verify there are no errors present.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'Your lock will be considered stale and up for grabs in 30 min.' is present.]]>
+      <![CDATA[Click the 'Close Overlay X'.]]>
     </line>
     <line>
-      <![CDATA[Verify there are no errors present.]]>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Files' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'mpxPlayers' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'An MPXplayer that's in use (AutomationPlayerf0ce2a47be) has been disabled in MPX.' is NOT present on the page.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="68810" started-at="2014-03-25T17:33:22Z" finished-at="2014-03-25T17:34:31Z">
+  <suite name="Default suite" duration-ms="293965" started-at="2014-03-25T20:00:34Z" finished-at="2014-03-25T20:05:27Z">
     <groups>
+      <group name="mpx">
+        <method signature="NotificationPlayerUnavailability.NotificationPlayerUnavailability_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability@141bbe9f]" name="NotificationPlayerUnavailability_Test" class="com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability"/>
+      </group> <!-- mpx -->
       <group name="full">
-        <method signature="ContentLocking.ContentLocking_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.LockContentWhenEditing.ContentLocking@1ca718f3]" name="ContentLocking_Test" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.LockContentWhenEditing.ContentLocking"/>
+        <method signature="NotificationPlayerUnavailability.NotificationPlayerUnavailability_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability@141bbe9f]" name="NotificationPlayerUnavailability_Test" class="com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability"/>
       </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="68810" started-at="2014-03-25T17:33:22Z" finished-at="2014-03-25T17:34:31Z">
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.LockContentWhenEditing.ContentLocking">
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.LockContentWhenEditing.ContentLocking@1ca718f3]" name="startSelenium" is-config="true" duration-ms="14266" started-at="2014-03-25T13:33:22Z" finished-at="2014-03-25T13:33:36Z">
+    <test name="Default test" duration-ms="293965" started-at="2014-03-25T20:00:34Z" finished-at="2014-03-25T20:05:27Z">
+      <class name="com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability@141bbe9f]" name="startSelenium" is-config="true" duration-ms="14161" started-at="2014-03-25T16:00:34Z" finished-at="2014-03-25T16:00:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="ContentLocking_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.LockContentWhenEditing.ContentLocking@1ca718f3]" name="ContentLocking_Test" duration-ms="53964" started-at="2014-03-25T13:33:36Z" finished-at="2014-03-25T13:34:30Z">
+        <test-method status="PASS" signature="NotificationPlayerUnavailability_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability@141bbe9f]" name="NotificationPlayerUnavailability_Test" duration-ms="279217" started-at="2014-03-25T16:00:48Z" finished-at="2014-03-25T16:05:27Z">
           <reporter-output>
             <line>
-              <![CDATA[Open url 'http://qa5.stage.nbcupublisher7.publisher7.com'.]]>
+              <![CDATA[Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.]]>
             </line>
             <line>
               <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
@@ -272,187 +386,190 @@
               <![CDATA[Mouse over the 'Configuration' menu link.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Content authoring' menu link.]]>
+              <![CDATA[Mouse over the 'Media' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Content lock' menu link.]]>
+              <![CDATA[Click the 'Media: thePlatform mpx settings' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Content lock dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
+              <![CDATA[Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+              <![CDATA[Get all the selected import account options and store to a list.]]>
             </line>
             <line>
-              <![CDATA[Verify there are no errors present.]]>
+              <![CDATA[Open the mpx platform.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
+              <![CDATA[Enter 'mpx/AdminPub7QA' in the 'Username' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Modules' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to frame titled 'Modules'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Pub Post' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the module titled 'Pub Post' to appear in the list.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Pub Post' check box is checked.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'People' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Add user' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'People dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '7ae0e18ab9714d9@a8413819ce63455.com' in the 'Username' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '7ae0e18ab9714d9@a8413819ce63455.com' in the 'E-mail address' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa55word' in the 'Confirm password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Check the 'editor' checkbox.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'ff45ee01e23e43c' in the 'First Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '99a1d9938b244d0' in the 'Last Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Create new account' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'A welcome message with further instructions has been e-mailed to the new user 7ae0e18ab9714d9@a8413819ce63455.com.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify there are no errors present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'People' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Permissions' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Roles' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'People dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Edit Permissions' link for the 'Editor' role.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'People dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save Permissions' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The changes have been saved.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify there are no errors present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Logout' button.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the user's password in the 'Password' text box.]]>
+              <![CDATA[Enter 'Pa55word' in the 'Password' text box.]]>
             </line>
             <line>
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Content' menu link.]]>
+              <![CDATA[Click the 'Players' link.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Add content' menu link.]]>
+              <![CDATA[Click the 'All Players' link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Post' menu link.]]>
+              <![CDATA[Click the 'Add' button.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '5745042809c044d' in the 'Title' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the Synopsis frame.]]>
-            </line>
-            <line>
-              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Cover' select button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the select file frame.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the file path for file upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Upload' button.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Public Local Files' radio button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the file image 'HanSolo' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img is loaded and visible.]]>
+              <![CDATA[Enter 'AutomationPlayerf0ce2a47be' in the 'Title' text box.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+              <![CDATA[Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Files' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'mpxPlayers' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Sync MPX Players' link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Sync MPX Players Now' link.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'players returned for account' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify there are no errors present.]]>
+            </line>
+            <line>
+              <![CDATA[Enter title AutomationPlayerf0ce2a47be.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Apply' button.]]>
+            </line>
+            <line>
+              <![CDATA[Get the text of the first search result set item.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Files' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'mpxMedia' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Enter title Automation.]]>
+            </line>
+            <line>
+              <![CDATA[Select the 'Published' from the 'MPX Status' select ddl.]]>
+            </line>
+            <line>
+              <![CDATA[Select the DB TV from the 'Source' select ddl.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Apply' button.]]>
+            </line>
+            <line>
+              <![CDATA[Get the text of the first search result set item.]]>
+            </line>
+            <line>
+              <![CDATA[Click the first search title link in the search result set.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Edit' link in the work bench.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Edit mpx_video_4 Automationc6842760c5 dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Select 'AutomationPlayerf0ce2a47be' from the 'Video Player' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Open the mpx platform.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Players' link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'All Players' link.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'AutomationPlayerf0ce2a47be' in the 'Player Search' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Search by Players Title' link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Player Title' label to give focus to the player item.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Disable Player' check box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Status report dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Cron ran successfully.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify there are no errors present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Files' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'mpxPlayers' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify that the disabled player text is present for player titled 'AutomationPlayerf0ce2a47be'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter title AutomationPlayerf0ce2a47be.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Apply' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the first search title link in the search result set.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Edit' link in the work bench.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Edit mpx_player AutomationPlayerf0ce2a47be dialog'.]]>
             </line>
             <line>
               <![CDATA[Scroll the 'Publishing Options' link into view.]]>
@@ -461,55 +578,163 @@
               <![CDATA[Click the 'Publishing Options' link.]]>
             </line>
             <line>
-              <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
+              <![CDATA[Uncheck the 'Published' checkbox]]>
             </line>
             <line>
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'Post 5745042809c044d has been created.' is present.]]>
+              <![CDATA[Verify success message of 'MPX Player AutomationPlayerf0ce2a47be has been updated.' is present.]]>
             </line>
             <line>
               <![CDATA[Verify there are no errors present.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Content' menu link.]]>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Files' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'mpxPlayers' menu link.]]>
             </line>
             <line>
               <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Edit' link for content item titled '5745042809c044d.]]>
+              <![CDATA[Verify that the disabled and unpublished player text is present for player titled 'AutomationPlayerf0ce2a47be'.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Edit Post 5745042809c044d dialog'.]]>
+              <![CDATA[Click the 'MPX Media' link.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'This document is now locked against simultaneous editing. It will unlock when you navigate elsewhere.' is present.]]>
+              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify that the disabled and unpublished player text is present for player titled 'AutomationPlayerf0ce2a47be'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Configuration' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Media' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Media: thePlatform mpx settings' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify that the disabled and unpublished player text is present for player titled 'AutomationPlayerf0ce2a47be'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'click here' link for the unpublished player titled 'AutomationPlayerf0ce2a47be'.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Edit mpx_player AutomationPlayerf0ce2a47be dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Publishing Options' link.]]>
+            </line>
+            <line>
+              <![CDATA[Check the 'Published' checkbox]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Files' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'mpxPlayers' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify that the disabled player text is present for player titled 'AutomationPlayerf0ce2a47be'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the MPX 'Login' link for the unpublished player 'AutomationPlayerf0ce2a47be'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Players' link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'All Players' link.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'AutomationPlayerf0ce2a47be' in the 'Player Search' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Search by Players Title' link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Player Title' label to give focus to the player item.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Disable Player' check box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Status report dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Cron ran successfully.' is present.]]>
             </line>
             <line>
               <![CDATA[Verify there are no errors present.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'Your lock will be considered stale and up for grabs in 30 min.' is present.]]>
+              <![CDATA[Click the 'Close Overlay X'.]]>
             </line>
             <line>
-              <![CDATA[Verify there are no errors present.]]>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Files' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'mpxPlayers' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'An MPXplayer that's in use (AutomationPlayerf0ce2a47be) has been disabled in MPX.' is NOT present on the page.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- ContentLocking_Test -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.LockContentWhenEditing.ContentLocking@1ca718f3]" name="stopSelenium" is-config="true" duration-ms="569" started-at="2014-03-25T13:34:30Z" finished-at="2014-03-25T13:34:31Z">
+        </test-method> <!-- NotificationPlayerUnavailability_Test -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability@141bbe9f]" name="stopSelenium" is-config="true" duration-ms="572" started-at="2014-03-25T16:05:27Z" finished-at="2014-03-25T16:05:27Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=ContentLocking_Test status=SUCCESS method=ContentLocking.ContentLocking_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.LockContentWhenEditing.ContentLocking@1ca718f3] output=Open url 'http://qa5.stage.nbcupublisher7.publisher7.com'.]]]>
+                <![CDATA[[TestResult name=NotificationPlayerUnavailability_Test status=SUCCESS method=NotificationPlayerUnavailability.NotificationPlayerUnavailability_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability@141bbe9f] output=Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.LockContentWhenEditing.ContentLocking -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
