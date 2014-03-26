@@ -50,7 +50,7 @@ public class ScheduleRevisionsOfQueues extends ParentTest{
         overlay.SwitchToActiveFrame();
         
         //Step 3
-        Queues queues = new Queues(webDriver);
+        Queues queues = new Queues(webDriver, applib);
         String queueTitle = random.GetCharacterString(15);
         queues.EnterTitle(queueTitle);
         queues.EnterQueueItem(postTitle, "1");

@@ -38,7 +38,7 @@ public class DeleteRevisionsQueues extends ParentTest {
         overlay.SwitchToActiveFrame();
         
         //Step 3
-        Queues queues = new Queues(webDriver);
+        Queues queues = new Queues(webDriver, applib);
         queues.ClickAddPromoQueueLnk();
         overlay.SwitchToActiveFrame();
         String queueTitle = random.GetCharacterString(15);

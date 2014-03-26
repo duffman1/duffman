@@ -1,6 +1,7 @@
 package com.nbcuni.test.publisher.pageobjects.Queues;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -9,24 +10,28 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.Reporter;
 
+import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.webdriver.CustomWebDriver;
 
 /*********************************************
  * publisher.nbcuni.com Queues Library. Copyright
  * 
  * @author Brandon Clark
- * @version 1.0 Date: December 13, 2013
+ * @version 1.1 Date: March 25, 2014
  *********************************************/
 
 public class Queues {
 
     private static CustomWebDriver webDriver;
+    private static AppLib applib;
     
     //PAGE OBJECT CONSTRUCTOR
-    public Queues(CustomWebDriver webDriver) {
+    public Queues(CustomWebDriver webDriver, AppLib applib) {
         Queues.webDriver = webDriver;
+        Queues.applib = applib;
         PageFactory.initElements(webDriver, this);
     }
     
@@ -124,6 +129,29 @@ public class Queues {
     	Reporter.log("Click the '" + queueItemTitle + "' from the auto complete option list.");
     	AutoComplete_Opt(queueItemTitle).click();
     	Thread.sleep(1000); //TODO - replace with dynamic wait that waits for auto complete element to no longer be present
+    	
+    }
+    
+    public void VerifyQueueEditDeleteNotPresent(String queueTitle) throws Exception {
+    	
+    	Reporter.log("Verify the queue titled '" + queueTitle + "' is present.");
+    	QueuesList_Ttl(queueTitle).isDisplayed();
+
+        webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+        boolean elPresent = false;
+
+        Reporter.log("Verify the 'Edit/Delete' menu options are not present for the queue titled '" + queueTitle + "'.");
+        try {
+        	EditExtendMenu_Btn(queueTitle).isDisplayed();
+            elPresent = true;
+        }
+        catch (Exception e) {
+            elPresent = false;
+        }
+
+        Assert.assertFalse(elPresent);
+
+        webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
     	
     }
     

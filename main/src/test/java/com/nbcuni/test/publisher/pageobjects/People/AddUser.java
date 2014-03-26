@@ -1,24 +1,44 @@
 package com.nbcuni.test.publisher.pageobjects.People;
 
+import java.util.List;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
+
+import com.nbcuni.test.publisher.common.AppLib;
+import com.nbcuni.test.publisher.common.Random;
+import com.nbcuni.test.publisher.pageobjects.Overlay;
+import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
+import com.nbcuni.test.publisher.pageobjects.Taxonomy.Taxonomy;
 import com.nbcuni.test.webdriver.CustomWebDriver;
 
 /*********************************************
  * publisher.nbcuni.com Add User Library. Copyright
  * 
  * @author Brandon Clark
- * @version 1.0 Date: December 26, 2013
+ * @version 1.1 Date: March 26, 2014
  *********************************************/
 
 public class AddUser {
 
+	private static CustomWebDriver webDriver;
+	private static Taxonomy taxonomy;
+	private static Overlay overlay;
+	private static ContentParent contentParent;
+	private static Random random;
+	
     //PAGE OBJECT CONSTRUCTOR
-    public AddUser(CustomWebDriver webDriver) {
+    public AddUser(CustomWebDriver webDriver, AppLib applib) {
+    	AddUser.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
+        taxonomy = new Taxonomy(webDriver);
+        overlay = new Overlay(webDriver, applib);
+        contentParent = new ContentParent(webDriver, applib);
+        random = new Random();
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -34,11 +54,9 @@ public class AddUser {
     @FindBy(how = How.XPATH, using = "//input[@id='edit-pass-pass2']")
     private static WebElement ConfirmPassword_Txb;
     
-    @FindBy(how = How.XPATH, using = "//input[@id='edit-roles-4']")
-    private static WebElement Role_Editor_Cbx;
-    
-    @FindBy(how = How.ID, using = "edit-roles-5")
-    private static WebElement Role_SeniorEditor_Cbx;
+    private static WebElement Role_Cbx(String role) {
+    	return webDriver.findElement(By.xpath("//label[text()='" + role + " ']/../input"));
+    }
     
     @FindBy(how = How.ID, using = "edit-notify")
     private static WebElement NotifyUserNewAccount_Cbx;
@@ -81,16 +99,14 @@ public class AddUser {
     	ConfirmPassword_Txb.sendKeys(passWord);
     }
     
-    public void ClickEditorRoleCbx() throws Exception {
+    public void CheckRoleCbx(List<String> roles) throws Exception {
     	
-    	Reporter.log("Check the 'editor' checkbox.");
-    	Role_Editor_Cbx.click();
-    }
-    
-    public void ClickSeniorEditorRoleCbx() throws Exception {
-    	
-    	Reporter.log("Check the 'senior editor' checkbox.");
-    	Role_SeniorEditor_Cbx.click();
+    	for (String role : roles) {
+    		if (Role_Cbx(role).isSelected() == false) {
+    			Reporter.log("Check the '" + role + "' check box.");
+    			Role_Cbx(role).click();
+    		}
+    	}
     }
     
     public void CheckNotifyUserNewAccountCbx() throws Exception {
@@ -121,13 +137,29 @@ public class AddUser {
     	CreateNewAccount_Btn.click();
     }
     
+    public String AddDefaultUser(List<String> roles) throws Exception {
+    	
+    	taxonomy.NavigateSite("People>>Add user");
+        overlay.SwitchToActiveFrame();
+        String userName = random.GetCharacterString(15) + "@" + random.GetCharacterString(15) + ".com";
+        this.EnterUsername(userName);
+        this.EnterEmailAddress(userName);
+        String passWord = "pa55word";
+        this.EnterPassword(passWord);
+        this.EnterConfirmPassword(passWord);
+        this.CheckRoleCbx(roles);
+        this.CheckNotifyUserNewAccountCbx();
+        String firstName = random.GetCharacterString(15);
+        this.EnterFirstName(firstName);
+        String lastName = random.GetCharacterString(15);
+        this.EnterLastName(lastName);
+        this.ClickCreateNewAccountBtn();
+        contentParent.VerifyMessageStatus("A welcome message with further instructions has been e-mailed to the new user " + userName + ".");
+        overlay.ClickCloseOverlayLnk();
+        
+        return userName;
+    }
     
-    
-    
-    
-    
-    
-   
   
 }
 

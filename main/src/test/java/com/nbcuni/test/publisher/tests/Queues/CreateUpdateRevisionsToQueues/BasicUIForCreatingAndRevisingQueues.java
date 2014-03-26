@@ -47,7 +47,7 @@ public class BasicUIForCreatingAndRevisingQueues extends ParentTest{
         overlay.SwitchToActiveFrame();
         
         //Step 3
-        Queues queues = new Queues(webDriver);
+        Queues queues = new Queues(webDriver, applib);
         queues.ClickSaveQueueBtn();
         ErrorChecking errorChecking = new ErrorChecking(webDriver, applib);
         errorChecking.VerifyAllRequiredFields(Arrays.asList("Title"));

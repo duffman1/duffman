@@ -47,23 +47,8 @@ public class ContentLocking extends ParentTest {
 	    modules.VerifyModuleEnabled("Pub Post");
 	        
 	    //Step 4
-	    taxonomy.NavigateSite("People>>Add user");
-	    overlay.SwitchToActiveFrame();
-	    AddUser addUser = new AddUser(webDriver);
-	    String userName = random.GetCharacterString(15) + "@" + random.GetCharacterString(15) + ".com";
-	    addUser.EnterUsername(userName);
-	    addUser.EnterEmailAddress(userName);
-	    String passWord = "pa55word";
-	    addUser.EnterPassword(passWord);
-	    addUser.EnterConfirmPassword(passWord);
-	    addUser.ClickEditorRoleCbx();
-	    String firstName = random.GetCharacterString(15);
-	    addUser.EnterFirstName(firstName);
-	    String lastName = random.GetCharacterString(15);
-	    addUser.EnterLastName(lastName);
-	    addUser.ClickCreateNewAccountBtn();        
-	    contentParent.VerifyMessageStatus("A welcome message with further instructions has been e-mailed to the new user " + userName + "."); 
-	    overlay.ClickCloseOverlayLnk();
+	    AddUser addUser = new AddUser(webDriver, applib);
+	    String userName = addUser.AddDefaultUser(Arrays.asList("editor"));
 	    taxonomy.NavigateSite("People>>Permissions>>Roles");  
 	    overlay.SwitchToActiveFrame();
 	    Roles roles = new Roles(webDriver);
@@ -79,7 +64,7 @@ public class ContentLocking extends ParentTest {
 	    //Step 5
 	    Logout logout = new Logout(webDriver);
 	    logout.ClickLogoutBtn();
-	    userLogin.Login(userName, passWord);
+	    userLogin.Login(userName, "pa55word");
 	        
 	    //Step 6
 	    CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver, applib);

@@ -75,7 +75,7 @@ public class Content {
     
     public void VerifyContentItemEditDeleteNotPresent(String contentItemTitle) throws Exception {
     	
-    	Reporter.log("Wait for the content item titled '" + contentItemTitle + "' is present.");
+    	Reporter.log("Verify the content item titled '" + contentItemTitle + "' is present.");
     	ContentItem_Lnk(contentItemTitle).isDisplayed();
 
         webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);

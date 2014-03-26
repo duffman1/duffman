@@ -66,28 +66,11 @@ public class CreateConfigureAndValidatePermissionsEditor extends ParentTest{
         Modules modules = new Modules(webDriver, applib);
         modules.VerifyModuleEnabled("Pub Post");
         
-        //Step 2
-        taxonomy.NavigateSite("People>>Add user");
-        overlay.SwitchToActiveFrame();
+        //Step 2 and 3
+        AddUser addUser = new AddUser(webDriver, applib);
+        String userName = addUser.AddDefaultUser(Arrays.asList("editor"));
         
-        //Step 3
-        AddUser addUser = new AddUser(webDriver);
-        String userName = random.GetCharacterString(15) + "@" + random.GetCharacterString(15) + ".com";
-        addUser.EnterUsername(userName);
-        addUser.EnterEmailAddress(userName);
-        String passWord = "pa55word";
-        addUser.EnterPassword(passWord);
-        addUser.EnterConfirmPassword(passWord);
-        addUser.ClickEditorRoleCbx();
-        String firstName = random.GetCharacterString(15);
-        addUser.EnterFirstName(firstName);
-        String lastName = random.GetCharacterString(15);
-        addUser.EnterLastName(lastName);
-        addUser.ClickCreateNewAccountBtn();
-        contentParent.VerifyMessageStatus("A welcome message with further instructions has been e-mailed to the new user " + userName + ".");
-       
         //Step 4
-        overlay.ClickCloseOverlayLnk();
         taxonomy.NavigateSite("People>>Permissions>>Roles");
         overlay.SwitchToActiveFrame();
         
@@ -110,7 +93,7 @@ public class CreateConfigureAndValidatePermissionsEditor extends ParentTest{
         logout.ClickLogoutBtn();
         
         //Step 8
-        userLogin.Login(userName, passWord);
+        userLogin.Login(userName, "pa55word");
         
         //Step 9 and 10 (truncated)
         CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver, applib);
@@ -138,7 +121,7 @@ public class CreateConfigureAndValidatePermissionsEditor extends ParentTest{
         logout.ClickLogoutBtn();
         
         //Step 19
-        userLogin.Login(userName, passWord);
+        userLogin.Login(userName, "pa55word");
         
         //Step 20
         taxonomy.NavigateSite("Content");

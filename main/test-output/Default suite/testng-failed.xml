@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.CustomPermissionSetVerification">
+      <class name="com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.EditorPermissionCustomQueuesOperationsMenu">
         <methods>
           <include name="startSelenium"/>
-          <include name="CustomPermissionSetVerification_Test"/>
+          <include name="EditorPermissionCustomQueuesOperationsMenu_Test"/>
           <include name="stopSelenium"/>
         </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.CustomPermissionSetVerification -->
+      </class> <!-- com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.EditorPermissionCustomQueuesOperationsMenu -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
