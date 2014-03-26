@@ -2,7 +2,7 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
     <line>
-      <![CDATA[Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.]]>
+      <![CDATA[Open url 'http://qa4.qa.nbcupublisher7.publisher7.com'.]]>
     </line>
     <line>
       <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
@@ -14,682 +14,164 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Content' menu link.]]>
+      <![CDATA[Mouse over the 'Structure' menu link.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Add content' menu link.]]>
+      <![CDATA[Click the 'Permission Sets' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Character Profile' menu link.]]>
+      <![CDATA[Switch to the active frame titled 'Permission Sets dialog'.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Create Character Profile dialog'.]]>
+      <![CDATA[Click the 'Add' link.]]>
     </line>
     <line>
-      <![CDATA[Enter 'CharacterName70c97d5d6f' in the 'Character First Name' text box.]]>
+      <![CDATA[Switch to the active frame titled 'Add a new permission set dialog'.]]>
     </line>
     <line>
-      <![CDATA[Click the Cover Photo 'Select' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the select file frame.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the file path for file upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Upload' button.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the file image 'HanSolo' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img is loaded and visible.]]>
+      <![CDATA[Enter '5c4e373097a3460' in the 'Permission Set Name' text box.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Create Character Profile dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'Permission Sets dialog'.]]>
     </line>
     <line>
-      <![CDATA[Assert that img source of the Cover Photo contains 'HanSolo'.]]>
-    </line>
-    <line>
-      <![CDATA[Assert the the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Character Profile CharacterName70c97d5d6f has been created.' is present.]]>
+      <![CDATA[Verify success message of '5c4e373097a3460 has been created.' is present.]]>
     </line>
     <line>
       <![CDATA[Verify there are no errors present.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Content' menu link.]]>
+      <![CDATA[Click the Permission Set 'Edit' link for set name + '5c4e373097a3460'.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Add content' menu link.]]>
+      <![CDATA[Switch to the active frame titled 'Edit permission set 5c4e373097a3460 dialog'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Character Profile' menu link.]]>
+      <![CDATA[Verify all permission checkboxes are not checked.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Create Character Profile dialog'.]]>
+      <![CDATA[Click the 'Export' tab.]]>
     </line>
     <line>
-      <![CDATA[Enter 'CharacterNamef39efa4e0a' in the 'Character First Name' text box.]]>
+      <![CDATA[Switch to the active frame titled 'Export permission set 5c4e373097a3460 dialog'.]]>
     </line>
     <line>
-      <![CDATA[Click the Cover Photo 'Select' button.]]>
+      <![CDATA[Verify 'Export' text area value is '$permission_set = new stdClass();
+$permission_set->disabled = FALSE; /* Edit this to true to make a default permission_set disabled initially */
+$permission_set->api_version = 1;
+$permission_set->machinename = '5c4e373097a3460';
+$permission_set->name = '5c4e373097a3460';
+$permission_set->permissions = array();
+'.]]>
     </line>
     <line>
-      <![CDATA[Switch to the select file frame.]]>
+      <![CDATA[Click the 'Edit' tab.]]>
     </line>
     <line>
-      <![CDATA[Enter the file path for file upload.]]>
+      <![CDATA[Switch to the active frame titled 'Edit permission set 5c4e373097a3460 dialog'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Upload' button.]]>
+      <![CDATA[Check the 'stick to Acquia web node' checkbox.]]>
     </line>
     <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
+      <![CDATA[Check the 'access administration menu' checkbox.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the file image 'HanSolo' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img is loaded and visible.]]>
+      <![CDATA[Check the 'flush caches' checkbox.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Create Character Profile dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'Permission Sets dialog'.]]>
     </line>
     <line>
-      <![CDATA[Assert that img source of the Cover Photo contains 'HanSolo'.]]>
-    </line>
-    <line>
-      <![CDATA[Assert the the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Character Profile CharacterNamef39efa4e0a has been created.' is present.]]>
+      <![CDATA[Verify success message of '5c4e373097a3460 has been updated.' is present.]]>
     </line>
     <line>
       <![CDATA[Verify there are no errors present.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Content' menu link.]]>
+      <![CDATA[Click the Permission Set 'Edit' link for set name + '5c4e373097a3460'.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Add content' menu link.]]>
+      <![CDATA[Switch to the active frame titled 'Edit permission set 5c4e373097a3460 dialog'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Character Profile' menu link.]]>
+      <![CDATA[Click the 'Export' tab.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Create Character Profile dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'Export permission set 5c4e373097a3460 dialog'.]]>
     </line>
     <line>
-      <![CDATA[Enter 'CharacterName3e5845013a' in the 'Character First Name' text box.]]>
+      <![CDATA[Verify 'Export' text area value is '$permission_set = new stdClass();
+$permission_set->disabled = FALSE; /* Edit this to true to make a default permission_set disabled initially */
+$permission_set->api_version = 1;
+$permission_set->machinename = '5c4e373097a3460';
+$permission_set->name = '5c4e373097a3460';
+$permission_set->permissions = array(
+  'stick to Acquia web node' => 'stick to Acquia web node',
+  'access administration menu' => 'access administration menu',
+  'flush caches' => 'flush caches',
+);
+'.]]>
     </line>
     <line>
-      <![CDATA[Click the Cover Photo 'Select' button.]]>
+      <![CDATA[Click the 'Close Overlay X'.]]>
     </line>
     <line>
-      <![CDATA[Switch to the select file frame.]]>
+      <![CDATA[Mouse over the 'Structure' menu link.]]>
     </line>
     <line>
-      <![CDATA[Enter the file path for file upload.]]>
+      <![CDATA[Click the 'Permission Sets' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Upload' button.]]>
+      <![CDATA[Switch to the active frame titled 'Permission Sets dialog'.]]>
     </line>
     <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
+      <![CDATA[Click the Permission Set expand link for Set Name + '5c4e373097a3460'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Next' button.]]>
+      <![CDATA[Click the Permission Set 'Delete' link for Set Name + '5c4e373097a3460'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the file image 'HanSolo' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Character Profile dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Assert that img source of the Cover Photo contains 'HanSolo'.]]>
-    </line>
-    <line>
-      <![CDATA[Assert the the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Character Profile CharacterName3e5845013a has been created.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify there are no errors present.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Add content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Person' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Person dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'PersonName035ebb14b6' in the 'First name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter a random block of text in the 'Biography' text area.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Person dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Cover Photo' Select button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the select file frame.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the file path for file upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Upload' button.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the file image 'HanSolo' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Person dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Person PersonName035ebb14b6 has been created.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify there are no errors present.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Add content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Person' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Person dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'PersonName82f57125db' in the 'First name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter a random block of text in the 'Biography' text area.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Person dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Cover Photo' Select button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the select file frame.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the file path for file upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Upload' button.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the file image 'HanSolo' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Person dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Person PersonName82f57125db has been created.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify there are no errors present.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Add content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Person' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Person dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'PersonNamef31d681484' in the 'First name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter a random block of text in the 'Biography' text area.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Person dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Cover Photo' Select button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the select file frame.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the file path for file upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Upload' button.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the file image 'HanSolo' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Person dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Person PersonNamef31d681484 has been created.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify there are no errors present.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Add content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'TV Episode' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create TV Episode dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'aa6813f0cbf2419' in the 'Title' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '1' in the 'Episode Number' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the Synopsis frame.]]>
-    </line>
-    <line>
-      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create TV Episode dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Cast/Crew' link.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'PersonName035ebb14b6' in the Person text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'PersonName035ebb14b6' from the auto complete option list.]]>
-    </line>
-    <line>
-      <![CDATA[Select the 'Character' from the 'Role' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Assert that the 'Character' text box is displayed.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'CharacterName70c97d5d6f' in the 'Character' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'CharacterName70c97d5d6f' from the auto complete option list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'TV Episode aa6813f0cbf2419 has been created.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify there are no errors present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Revisions' link in the work bench.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Revisions dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Edit' menu button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Edit TV Episode aa6813f0cbf2419 dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Publishing Options' link.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Create New Revision' checkbox is checked.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Cast/Crew' link.]]>
-    </line>
-    <line>
-      <![CDATA[Assert the value of the 'Person' text box equals 'PersonName035ebb14b6'.]]>
-    </line>
-    <line>
-      <![CDATA[Assert the value of the 'Character' text box equals 'CharacterName70c97d5d6f'.]]>
-    </line>
-    <line>
-      <![CDATA[Assert the value of the 'Role' drop down list equals 'Character'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Add Another Item' button.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'PersonName82f57125db' in the Person text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'PersonName82f57125db' from the auto complete option list.]]>
-    </line>
-    <line>
-      <![CDATA[Select the 'Character' from the 'Role' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Assert that the 'Character' text box is displayed.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'CharacterNamef39efa4e0a' in the 'Character' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'CharacterNamef39efa4e0a' from the auto complete option list.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '46f5092becad42f' in the 'Title' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'TV Episode 46f5092becad42f has been updated.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify there are no errors present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Revisions' link in the work bench.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Revisions dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Edit' menu button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Edit TV Episode 46f5092becad42f dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Publishing Options' link.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Create New Revision' checkbox is checked.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Cast/Crew' link.]]>
-    </line>
-    <line>
-      <![CDATA[Assert the value of the 'Person' text box equals 'PersonName035ebb14b6'.]]>
-    </line>
-    <line>
-      <![CDATA[Assert the value of the 'Character' text box equals 'CharacterName70c97d5d6f'.]]>
-    </line>
-    <line>
-      <![CDATA[Assert the value of the 'Role' drop down list equals 'Character'.]]>
-    </line>
-    <line>
-      <![CDATA[Assert the value of the 'Person' text box equals 'PersonName82f57125db'.]]>
-    </line>
-    <line>
-      <![CDATA[Assert the value of the 'Role' drop down list equals 'Character'.]]>
-    </line>
-    <line>
-      <![CDATA[Assert the value of the 'Character' text box equals 'CharacterNamef39efa4e0a'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Add Another Item' button.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'PersonNamef31d681484' in the Person text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'PersonNamef31d681484' from the auto complete option list.]]>
-    </line>
-    <line>
-      <![CDATA[Select the 'Character' from the 'Role' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Assert that the 'Character' text box is displayed.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'CharacterName3e5845013a' in the 'Character' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'CharacterName3e5845013a' from the auto complete option list.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '9bc49a4bc56a400' in the 'Title' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'TV Episode 9bc49a4bc56a400 has been updated.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify there are no errors present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Revisions' link in the work bench.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Revisions dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Edit' extend menu button.]]>
+      <![CDATA[Switch to the active frame titled 'Are you sure you want to delete 5c4e373097a3460? dialog'.]]>
     </line>
     <line>
       <![CDATA[Click the 'Delete' button.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Are you sure you want to delete the revision from Wed, 03/26/2014 - 13:25? dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'Permission Sets dialog'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Confirm Delete' button.]]>
+      <![CDATA[Verify success message of 'The item has been deleted.' is present.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Revisions dialog'.]]>
+      <![CDATA[Verify there are no errors present.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Edit' menu button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Edit TV Episode 9bc49a4bc56a400 dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'Notice: Trying to get property of non-object in field_collection_field_get_entity() (line 1608 of /mnt/www/html/nbcuqa5dev/docroot/profiles/all/modules/contrib/field_collection/field_collection.module)' is NOT present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Cast/Crew' link.]]>
-    </line>
-    <line>
-      <![CDATA[Assert the value of the 'Person' text box equals 'PersonName035ebb14b6'.]]>
-    </line>
-    <line>
-      <![CDATA[Assert the value of the 'Character' text box equals 'CharacterName70c97d5d6f'.]]>
-    </line>
-    <line>
-      <![CDATA[Assert the value of the 'Role' drop down list equals 'Character'.]]>
-    </line>
-    <line>
-      <![CDATA[Assert the value of the 'Person' text box equals 'PersonName82f57125db'.]]>
-    </line>
-    <line>
-      <![CDATA[Assert the value of the 'Role' drop down list equals 'Character'.]]>
-    </line>
-    <line>
-      <![CDATA[Assert the value of the 'Character' text box equals 'CharacterNamef39efa4e0a'.]]>
-    </line>
-    <line>
-      <![CDATA[Assert the value of the 'Person' text box equals 'PersonNamef31d681484'.]]>
-    </line>
-    <line>
-      <![CDATA[Assert the value of the 'Role' drop down list equals 'Character'.]]>
-    </line>
-    <line>
-      <![CDATA[Assert the value of the 'Character' text box equals 'CharacterName3e5845013a'.]]>
+      <![CDATA[Verify Permission Set '5c4e373097a3460' is NOT present.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="135043" started-at="2014-03-26T13:23:48Z" finished-at="2014-03-26T13:26:03Z">
+  <suite name="Default suite" duration-ms="64000" started-at="2014-03-26T17:53:25Z" finished-at="2014-03-26T17:54:29Z">
     <groups>
       <group name="full">
-        <method signature="CastCrewFieldCollectionsVerificationTVEpisode.CastCrewFieldCollectionsVerificationTVEpisode_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.CastCrewFieldCollectionsVerificationTVEpisode@63dad2ac]" name="CastCrewFieldCollectionsVerificationTVEpisode_Test" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.CastCrewFieldCollectionsVerificationTVEpisode"/>
+        <method signature="CustomPermissionSetVerification.CustomPermissionSetVerification_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.CustomPermissionSetVerification@152ab88b]" name="CustomPermissionSetVerification_Test" class="com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.CustomPermissionSetVerification"/>
       </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="135043" started-at="2014-03-26T13:23:48Z" finished-at="2014-03-26T13:26:03Z">
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.CastCrewFieldCollectionsVerificationTVEpisode">
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.CastCrewFieldCollectionsVerificationTVEpisode@63dad2ac]" name="startSelenium" is-config="true" duration-ms="14168" started-at="2014-03-26T09:23:48Z" finished-at="2014-03-26T09:24:02Z">
+    <test name="Default test" duration-ms="64000" started-at="2014-03-26T17:53:25Z" finished-at="2014-03-26T17:54:29Z">
+      <class name="com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.CustomPermissionSetVerification">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.CustomPermissionSetVerification@152ab88b]" name="startSelenium" is-config="true" duration-ms="14112" started-at="2014-03-26T13:53:25Z" finished-at="2014-03-26T13:53:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="CastCrewFieldCollectionsVerificationTVEpisode_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.CastCrewFieldCollectionsVerificationTVEpisode@63dad2ac]" name="CastCrewFieldCollectionsVerificationTVEpisode_Test" duration-ms="120295" started-at="2014-03-26T09:24:02Z" finished-at="2014-03-26T09:26:03Z">
+        <test-method status="PASS" signature="CustomPermissionSetVerification_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.CustomPermissionSetVerification@152ab88b]" name="CustomPermissionSetVerification_Test" duration-ms="49307" started-at="2014-03-26T13:53:39Z" finished-at="2014-03-26T13:54:29Z">
           <reporter-output>
             <line>
-              <![CDATA[Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.]]>
+              <![CDATA[Open url 'http://qa4.qa.nbcupublisher7.publisher7.com'.]]>
             </line>
             <line>
               <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
@@ -701,679 +183,161 @@
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Content' menu link.]]>
+              <![CDATA[Mouse over the 'Structure' menu link.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Add content' menu link.]]>
+              <![CDATA[Click the 'Permission Sets' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Character Profile' menu link.]]>
+              <![CDATA[Switch to the active frame titled 'Permission Sets dialog'.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create Character Profile dialog'.]]>
+              <![CDATA[Click the 'Add' link.]]>
             </line>
             <line>
-              <![CDATA[Enter 'CharacterName70c97d5d6f' in the 'Character First Name' text box.]]>
+              <![CDATA[Switch to the active frame titled 'Add a new permission set dialog'.]]>
             </line>
             <line>
-              <![CDATA[Click the Cover Photo 'Select' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the select file frame.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the file path for file upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Upload' button.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Public Local Files' radio button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the file image 'HanSolo' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img is loaded and visible.]]>
+              <![CDATA[Enter '5c4e373097a3460' in the 'Permission Set Name' text box.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create Character Profile dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'Permission Sets dialog'.]]>
             </line>
             <line>
-              <![CDATA[Assert that img source of the Cover Photo contains 'HanSolo'.]]>
-            </line>
-            <line>
-              <![CDATA[Assert the the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Character Profile CharacterName70c97d5d6f has been created.' is present.]]>
+              <![CDATA[Verify success message of '5c4e373097a3460 has been created.' is present.]]>
             </line>
             <line>
               <![CDATA[Verify there are no errors present.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Content' menu link.]]>
+              <![CDATA[Click the Permission Set 'Edit' link for set name + '5c4e373097a3460'.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Add content' menu link.]]>
+              <![CDATA[Switch to the active frame titled 'Edit permission set 5c4e373097a3460 dialog'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Character Profile' menu link.]]>
+              <![CDATA[Verify all permission checkboxes are not checked.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create Character Profile dialog'.]]>
+              <![CDATA[Click the 'Export' tab.]]>
             </line>
             <line>
-              <![CDATA[Enter 'CharacterNamef39efa4e0a' in the 'Character First Name' text box.]]>
+              <![CDATA[Switch to the active frame titled 'Export permission set 5c4e373097a3460 dialog'.]]>
             </line>
             <line>
-              <![CDATA[Click the Cover Photo 'Select' button.]]>
+              <![CDATA[Verify 'Export' text area value is '$permission_set = new stdClass();
+$permission_set->disabled = FALSE; /* Edit this to true to make a default permission_set disabled initially */
+$permission_set->api_version = 1;
+$permission_set->machinename = '5c4e373097a3460';
+$permission_set->name = '5c4e373097a3460';
+$permission_set->permissions = array();
+'.]]>
             </line>
             <line>
-              <![CDATA[Switch to the select file frame.]]>
+              <![CDATA[Click the 'Edit' tab.]]>
             </line>
             <line>
-              <![CDATA[Enter the file path for file upload.]]>
+              <![CDATA[Switch to the active frame titled 'Edit permission set 5c4e373097a3460 dialog'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Upload' button.]]>
+              <![CDATA[Check the 'stick to Acquia web node' checkbox.]]>
             </line>
             <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
+              <![CDATA[Check the 'access administration menu' checkbox.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Public Local Files' radio button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the file image 'HanSolo' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img is loaded and visible.]]>
+              <![CDATA[Check the 'flush caches' checkbox.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create Character Profile dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'Permission Sets dialog'.]]>
             </line>
             <line>
-              <![CDATA[Assert that img source of the Cover Photo contains 'HanSolo'.]]>
-            </line>
-            <line>
-              <![CDATA[Assert the the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Character Profile CharacterNamef39efa4e0a has been created.' is present.]]>
+              <![CDATA[Verify success message of '5c4e373097a3460 has been updated.' is present.]]>
             </line>
             <line>
               <![CDATA[Verify there are no errors present.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Content' menu link.]]>
+              <![CDATA[Click the Permission Set 'Edit' link for set name + '5c4e373097a3460'.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Add content' menu link.]]>
+              <![CDATA[Switch to the active frame titled 'Edit permission set 5c4e373097a3460 dialog'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Character Profile' menu link.]]>
+              <![CDATA[Click the 'Export' tab.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create Character Profile dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'Export permission set 5c4e373097a3460 dialog'.]]>
             </line>
             <line>
-              <![CDATA[Enter 'CharacterName3e5845013a' in the 'Character First Name' text box.]]>
+              <![CDATA[Verify 'Export' text area value is '$permission_set = new stdClass();
+$permission_set->disabled = FALSE; /* Edit this to true to make a default permission_set disabled initially */
+$permission_set->api_version = 1;
+$permission_set->machinename = '5c4e373097a3460';
+$permission_set->name = '5c4e373097a3460';
+$permission_set->permissions = array(
+  'stick to Acquia web node' => 'stick to Acquia web node',
+  'access administration menu' => 'access administration menu',
+  'flush caches' => 'flush caches',
+);
+'.]]>
             </line>
             <line>
-              <![CDATA[Click the Cover Photo 'Select' button.]]>
+              <![CDATA[Click the 'Close Overlay X'.]]>
             </line>
             <line>
-              <![CDATA[Switch to the select file frame.]]>
+              <![CDATA[Mouse over the 'Structure' menu link.]]>
             </line>
             <line>
-              <![CDATA[Enter the file path for file upload.]]>
+              <![CDATA[Click the 'Permission Sets' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Upload' button.]]>
+              <![CDATA[Switch to the active frame titled 'Permission Sets dialog'.]]>
             </line>
             <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
+              <![CDATA[Click the Permission Set expand link for Set Name + '5c4e373097a3460'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Next' button.]]>
+              <![CDATA[Click the Permission Set 'Delete' link for Set Name + '5c4e373097a3460'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Public Local Files' radio button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the file image 'HanSolo' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Character Profile dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Assert that img source of the Cover Photo contains 'HanSolo'.]]>
-            </line>
-            <line>
-              <![CDATA[Assert the the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Character Profile CharacterName3e5845013a has been created.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify there are no errors present.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Add content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Person' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Person dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'PersonName035ebb14b6' in the 'First name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter a random block of text in the 'Biography' text area.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Person dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Cover Photo' Select button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the select file frame.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the file path for file upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Upload' button.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Public Local Files' radio button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the file image 'HanSolo' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Person dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Person PersonName035ebb14b6 has been created.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify there are no errors present.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Add content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Person' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Person dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'PersonName82f57125db' in the 'First name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter a random block of text in the 'Biography' text area.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Person dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Cover Photo' Select button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the select file frame.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the file path for file upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Upload' button.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Public Local Files' radio button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the file image 'HanSolo' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Person dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Person PersonName82f57125db has been created.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify there are no errors present.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Add content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Person' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Person dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'PersonNamef31d681484' in the 'First name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter a random block of text in the 'Biography' text area.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Person dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Cover Photo' Select button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the select file frame.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the file path for file upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Upload' button.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Public Local Files' radio button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the file image 'HanSolo' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Person dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Person PersonNamef31d681484 has been created.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify there are no errors present.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Add content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'TV Episode' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create TV Episode dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'aa6813f0cbf2419' in the 'Title' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '1' in the 'Episode Number' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the Synopsis frame.]]>
-            </line>
-            <line>
-              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create TV Episode dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Cast/Crew' link.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'PersonName035ebb14b6' in the Person text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'PersonName035ebb14b6' from the auto complete option list.]]>
-            </line>
-            <line>
-              <![CDATA[Select the 'Character' from the 'Role' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Assert that the 'Character' text box is displayed.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'CharacterName70c97d5d6f' in the 'Character' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'CharacterName70c97d5d6f' from the auto complete option list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'TV Episode aa6813f0cbf2419 has been created.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify there are no errors present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Revisions' link in the work bench.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Revisions dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Edit' menu button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Edit TV Episode aa6813f0cbf2419 dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Publishing Options' link.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Create New Revision' checkbox is checked.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Cast/Crew' link.]]>
-            </line>
-            <line>
-              <![CDATA[Assert the value of the 'Person' text box equals 'PersonName035ebb14b6'.]]>
-            </line>
-            <line>
-              <![CDATA[Assert the value of the 'Character' text box equals 'CharacterName70c97d5d6f'.]]>
-            </line>
-            <line>
-              <![CDATA[Assert the value of the 'Role' drop down list equals 'Character'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Add Another Item' button.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'PersonName82f57125db' in the Person text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'PersonName82f57125db' from the auto complete option list.]]>
-            </line>
-            <line>
-              <![CDATA[Select the 'Character' from the 'Role' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Assert that the 'Character' text box is displayed.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'CharacterNamef39efa4e0a' in the 'Character' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'CharacterNamef39efa4e0a' from the auto complete option list.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '46f5092becad42f' in the 'Title' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'TV Episode 46f5092becad42f has been updated.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify there are no errors present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Revisions' link in the work bench.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Revisions dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Edit' menu button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Edit TV Episode 46f5092becad42f dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Publishing Options' link.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Create New Revision' checkbox is checked.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Cast/Crew' link.]]>
-            </line>
-            <line>
-              <![CDATA[Assert the value of the 'Person' text box equals 'PersonName035ebb14b6'.]]>
-            </line>
-            <line>
-              <![CDATA[Assert the value of the 'Character' text box equals 'CharacterName70c97d5d6f'.]]>
-            </line>
-            <line>
-              <![CDATA[Assert the value of the 'Role' drop down list equals 'Character'.]]>
-            </line>
-            <line>
-              <![CDATA[Assert the value of the 'Person' text box equals 'PersonName82f57125db'.]]>
-            </line>
-            <line>
-              <![CDATA[Assert the value of the 'Role' drop down list equals 'Character'.]]>
-            </line>
-            <line>
-              <![CDATA[Assert the value of the 'Character' text box equals 'CharacterNamef39efa4e0a'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Add Another Item' button.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'PersonNamef31d681484' in the Person text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'PersonNamef31d681484' from the auto complete option list.]]>
-            </line>
-            <line>
-              <![CDATA[Select the 'Character' from the 'Role' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Assert that the 'Character' text box is displayed.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'CharacterName3e5845013a' in the 'Character' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'CharacterName3e5845013a' from the auto complete option list.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '9bc49a4bc56a400' in the 'Title' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'TV Episode 9bc49a4bc56a400 has been updated.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify there are no errors present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Revisions' link in the work bench.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Revisions dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Edit' extend menu button.]]>
+              <![CDATA[Switch to the active frame titled 'Are you sure you want to delete 5c4e373097a3460? dialog'.]]>
             </line>
             <line>
               <![CDATA[Click the 'Delete' button.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Are you sure you want to delete the revision from Wed, 03/26/2014 - 13:25? dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'Permission Sets dialog'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Confirm Delete' button.]]>
+              <![CDATA[Verify success message of 'The item has been deleted.' is present.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Revisions dialog'.]]>
+              <![CDATA[Verify there are no errors present.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Edit' menu button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Edit TV Episode 9bc49a4bc56a400 dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'Notice: Trying to get property of non-object in field_collection_field_get_entity() (line 1608 of /mnt/www/html/nbcuqa5dev/docroot/profiles/all/modules/contrib/field_collection/field_collection.module)' is NOT present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Cast/Crew' link.]]>
-            </line>
-            <line>
-              <![CDATA[Assert the value of the 'Person' text box equals 'PersonName035ebb14b6'.]]>
-            </line>
-            <line>
-              <![CDATA[Assert the value of the 'Character' text box equals 'CharacterName70c97d5d6f'.]]>
-            </line>
-            <line>
-              <![CDATA[Assert the value of the 'Role' drop down list equals 'Character'.]]>
-            </line>
-            <line>
-              <![CDATA[Assert the value of the 'Person' text box equals 'PersonName82f57125db'.]]>
-            </line>
-            <line>
-              <![CDATA[Assert the value of the 'Role' drop down list equals 'Character'.]]>
-            </line>
-            <line>
-              <![CDATA[Assert the value of the 'Character' text box equals 'CharacterNamef39efa4e0a'.]]>
-            </line>
-            <line>
-              <![CDATA[Assert the value of the 'Person' text box equals 'PersonNamef31d681484'.]]>
-            </line>
-            <line>
-              <![CDATA[Assert the value of the 'Role' drop down list equals 'Character'.]]>
-            </line>
-            <line>
-              <![CDATA[Assert the value of the 'Character' text box equals 'CharacterName3e5845013a'.]]>
+              <![CDATA[Verify Permission Set '5c4e373097a3460' is NOT present.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- CastCrewFieldCollectionsVerificationTVEpisode_Test -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.CastCrewFieldCollectionsVerificationTVEpisode@63dad2ac]" name="stopSelenium" is-config="true" duration-ms="568" started-at="2014-03-26T09:26:03Z" finished-at="2014-03-26T09:26:03Z">
+        </test-method> <!-- CustomPermissionSetVerification_Test -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.CustomPermissionSetVerification@152ab88b]" name="stopSelenium" is-config="true" duration-ms="569" started-at="2014-03-26T13:54:29Z" finished-at="2014-03-26T13:54:29Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=CastCrewFieldCollectionsVerificationTVEpisode_Test status=SUCCESS method=CastCrewFieldCollectionsVerificationTVEpisode.CastCrewFieldCollectionsVerificationTVEpisode_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.CastCrewFieldCollectionsVerificationTVEpisode@63dad2ac] output=Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.]]]>
+                <![CDATA[[TestResult name=CustomPermissionSetVerification_Test status=SUCCESS method=CustomPermissionSetVerification.CustomPermissionSetVerification_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.CustomPermissionSetVerification@152ab88b] output=Open url 'http://qa4.qa.nbcupublisher7.publisher7.com'.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.CastCrewFieldCollectionsVerificationTVEpisode -->
+      </class> <!-- com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.CustomPermissionSetVerification -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

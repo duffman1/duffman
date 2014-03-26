@@ -1,10 +1,10 @@
 <suite name="Test Suite for Publisher 7" parallel="methods" thread-count="1" preserve-order="true">
 
 	<!--RUNTIME CONFIG-->
-	<parameter name="AppURL" value="http://qa5.qa.nbcupublisher7.publisher7.com"></parameter>
+	<parameter name="AppURL" value="http://qa4.qa.nbcupublisher7.publisher7.com"></parameter>
 	<parameter name="Admin1Username" value="admin@publisher.nbcuni.com"></parameter>
 	<parameter name="Admin1Password" value="pa55word"></parameter>
-	<parameter name="ReRunOnFailure" value="true"></parameter>
+	<parameter name="ReRunOnFailure" value="false"></parameter>
 	<parameter name="ReRunOnFailureCount" value="1"></parameter>
   	
   	<!--REPORT CONFIG-->
@@ -147,6 +147,7 @@
 			<class name="com.nbcuni.test.publisher.tests.UserCreationAndManagement.Roles.RolesPredefinedInPublisher7"/>
 			<class name="com.nbcuni.test.publisher.tests.UserCreationAndManagement.UnauthenticatedUsersNotAbleToViewThePublishedContents.UnauthenticatedUsersNotAbleToViewThePublishedContents"/>
 			<class name="com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.CreatePermissionSetsGUI"/>
+			<class name="com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.CustomPermissionSetVerification"/>
 		
 			<!--METRICS-->
 			<class name="com.nbcuni.test.publisher.tests.Metrics.AddAbilityOverrideSiteCatalystVariablesPerNodeBasis.AddAbilityOverrideSiteCatalystVariablesPerNodeBasis"/>
