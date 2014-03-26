@@ -9,7 +9,6 @@ import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Content.BasicInformation;
 import com.nbcuni.test.publisher.pageobjects.Content.CastCrew;
 import com.nbcuni.test.publisher.pageobjects.Content.CharactersInformation;
-import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.Content.CoverPhoto;
 import com.nbcuni.test.publisher.pageobjects.Content.PersonsInformation;
 import com.nbcuni.test.publisher.pageobjects.Content.PublishingOptions;
@@ -17,7 +16,7 @@ import com.nbcuni.test.publisher.pageobjects.Content.Revisions;
 import com.nbcuni.test.publisher.pageobjects.Content.SelectFile;
 import com.nbcuni.test.publisher.pageobjects.Content.WorkBench;
 
-public class CastCrewFieldCollectionsVerification_TVEpisode extends ParentTest {
+public class CastCrewFieldCollectionsVerificationTVEpisode extends ParentTest {
 	 /*************************************************************************************
      * TEST CASE 
      * Step 1 - Log in to the test instance as Drupal User 1 (usually admin in Publisher sites)./<br>
@@ -47,12 +46,10 @@ public class CastCrewFieldCollectionsVerification_TVEpisode extends ParentTest {
     				"PersonName" + random.GetCharacterString(10));
     	UserLogin userLogin = applib.openApplication();
     	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
-        ContentParent contentParent = new ContentParent(webDriver, applib);
         
         //Step 2
         CharactersInformation charactersInformation = new CharactersInformation(webDriver);
         SelectFile selectFile = new SelectFile(webDriver, applib);
-        
         for(int CCount=0;CCount<3;CCount++) {
 	        taxonomy.NavigateSite("Content>>Add content>>Character Profile");
 	        overlay.SwitchToActiveFrame();
@@ -65,7 +62,6 @@ public class CastCrewFieldCollectionsVerification_TVEpisode extends ParentTest {
 	        contentParent.ClickSaveBtn();
 	        overlay.switchToDefaultContent();
 	        contentParent.VerifyMessageStatus("Character Profile " + Characters.get(CCount) + " has been created.");
-	     
         }
         
         //Step 3
@@ -89,9 +85,9 @@ public class CastCrewFieldCollectionsVerification_TVEpisode extends ParentTest {
         overlay.SwitchToActiveFrame();
         
         //Step 5
-        String TVEpisodeName = random.GetCharacterString(15);        
+        String episodeTitle = random.GetCharacterString(15);        
         BasicInformation basicInformation = new BasicInformation(webDriver);
-        basicInformation.EnterTitle(TVEpisodeName);
+        basicInformation.EnterTitle(episodeTitle);
         basicInformation.EnterEpisodeNumber("1");
     	basicInformation.EnterSynopsis();       
         overlay.SwitchToActiveFrame(); 
@@ -103,17 +99,17 @@ public class CastCrewFieldCollectionsVerification_TVEpisode extends ParentTest {
         castCrew.SelectRole("Character", "1");
         castCrew.VerifyCharacterTxbDisplayed();
         castCrew.EnterCharacterName(Characters.get(0), "1");
-        basicInformation.ClickBasicInformationTab();
-      
+        
         //Step 7
+        Thread.sleep(1000); //TODO - figure out why this pause is necessary and add dynamic wait
         contentParent.ClickSaveBtn();
         overlay.switchToDefaultContent();
-        contentParent.VerifyMessageStatus("TV Episode " + TVEpisodeName + " has been created.");
+        contentParent.VerifyMessageStatus("TV Episode " + episodeTitle + " has been created.");
         WorkBench workBench = new WorkBench(webDriver, applib);
         workBench.ClickWorkBenchTab("Revisions");
         overlay.SwitchToActiveFrame();
         Revisions revisions = new Revisions(webDriver, applib);
-        revisions.ClickEditMenuBtn(TVEpisodeName);
+        revisions.ClickEditMenuBtn(episodeTitle);
         overlay.SwitchToActiveFrame();
         PublishingOptions publishingOptions = new PublishingOptions(webDriver);
         publishingOptions.ClickPublishingOptionsLnk();  
@@ -128,15 +124,16 @@ public class CastCrewFieldCollectionsVerification_TVEpisode extends ParentTest {
         castCrew.VerifyCharacterTxbDisplayed();
         castCrew.EnterCharacterName(Characters.get(1), "2");
         basicInformation.ClickBasicInformationTab();
-        String TVEpisodeName2 = random.GetCharacterString(15);        
-        basicInformation.EnterTitle(TVEpisodeName2);
+        String episodeTitle2 = random.GetCharacterString(15);        
+        basicInformation.EnterTitle(episodeTitle2);
         contentParent.ClickSaveBtn();
+        overlay.switchToDefaultContent();        
+        contentParent.VerifyMessageStatus("TV Episode " + episodeTitle2 + " has been updated.");
       
         //Step 8
-        overlay.switchToDefaultContent();        
         workBench.ClickWorkBenchTab("Revisions");
         overlay.SwitchToActiveFrame();
-        revisions.ClickEditMenuBtn(TVEpisodeName2);
+        revisions.ClickEditMenuBtn(episodeTitle2);
         overlay.SwitchToActiveFrame();
         publishingOptions.ClickPublishingOptionsLnk();
         publishingOptions.VerifyCreateNewRevisionCbxChecked();
@@ -153,20 +150,23 @@ public class CastCrewFieldCollectionsVerification_TVEpisode extends ParentTest {
         castCrew.VerifyCharacterTxbDisplayed();
         castCrew.EnterCharacterName(Characters.get(2), "3");
         basicInformation.ClickBasicInformationTab();
-        String TVEpisodeName3 = random.GetCharacterString(15);        
-        basicInformation.EnterTitle(TVEpisodeName3);
+        String episodeTitle3 = random.GetCharacterString(15);        
+        basicInformation.EnterTitle(episodeTitle3);
         contentParent.ClickSaveBtn();
-      
-        //Step 9
         overlay.switchToDefaultContent();        
+        contentParent.VerifyMessageStatus("TV Episode " + episodeTitle3 + " has been updated.");
+        
+        //Step 9
         workBench.ClickWorkBenchTab("Revisions");
         overlay.SwitchToActiveFrame();
-        revisions.ClickEditExtendMenuBtn(TVEpisodeName2);
-        revisions.ClickEditMenuDeleteBtn(TVEpisodeName2);
+        revisions.ClickEditExtendMenuBtn(episodeTitle2);
+        revisions.ClickEditMenuDeleteBtn(episodeTitle2);
         overlay.SwitchToActiveFrame();
         revisions.ClickDeleteConfirmBtn();
         overlay.SwitchToActiveFrame();
-        revisions.ClickEditMenuBtn(TVEpisodeName3);
+        
+        //Step 10
+        revisions.ClickEditMenuBtn(episodeTitle3);
         overlay.SwitchToActiveFrame();
         contentParent.VerifyPageContentNotPresent(Arrays.asList("Notice: Trying to get property of non-object in field_collection_field_get_entity() (line 1608 of /mnt/www/html/nbcuqa5dev/docroot/profiles/all/modules/contrib/field_collection/field_collection.module)"));
         castCrew.ClickCastCrewLnk();
@@ -178,7 +178,9 @@ public class CastCrewFieldCollectionsVerification_TVEpisode extends ParentTest {
 		castCrew.VerifyCharacterNameValue(Characters.get(1), "2");     
 		castCrew.VerifyPersonNameValue(Persons.get(2), "3");        
 		castCrew.VerifyRoleValue("Character", "3");
-		castCrew.VerifyCharacterNameValue(Characters.get(2), "3");  
+		castCrew.VerifyCharacterNameValue(Characters.get(2), "3");
+		
+		//Step 11 - N/A
         
     }
 }
