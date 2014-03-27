@@ -5,7 +5,6 @@ import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Content.BasicInformation;
-import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.Content.SelectFile;
 
 public class CreateMediaGallery extends ParentTest{
@@ -55,8 +54,8 @@ public class CreateMediaGallery extends ParentTest{
             */
             
             //Step 6
-            ContentParent contentParent = new ContentParent(webDriver, applib);
             contentParent.ClickSaveBtn();
+            overlay.switchToDefaultContent();
             contentParent.VerifyMessageStatus("Media Gallery " + title + " has been created.");
             
     }

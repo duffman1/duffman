@@ -2,15 +2,11 @@ package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Contenta
 
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.RerunOnFailure;
-import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.Content.SearchFor;
 import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
-
-import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import java.util.Arrays;
 
 public class EnhanceContentLibraryTable extends ParentTest{
@@ -38,28 +34,24 @@ public class EnhanceContentLibraryTable extends ParentTest{
     	
     	//Step 1 and 2
     	UserLogin userLogin = applib.openApplication();
-    	PageFactory.initElements(webDriver, userLogin);
-        userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+    	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
         taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
-        overlay.SwitchToFrame("Media: thePlatform mpx settings dialog");
+        overlay.SwitchToActiveFrame();
         Settings settings = new Settings(webDriver, applib);
         if (settings.IsMPXConfigured() == true) { 
         
         	//Step 3
-        	overlay.switchToDefaultContent();
+        	overlay.ClickCloseOverlayLnk();
         	taxonomy.NavigateSite("Content>>Files");
         	overlay.SwitchToActiveFrame();
         	
         	//Step 4
         	SearchFor searchFor = new SearchFor(webDriver, applib);
-        	PageFactory.initElements(webDriver, searchFor);
         	searchFor.VerifySearchHeaderColumnOrder();
         	
         	//Step 5 //TODO this step needs additional logic as time allows
         	
         	//Step 6
-        	ContentParent contentParent = new ContentParent(webDriver, applib);
-        	PageFactory.initElements(webDriver, contentParent);
         	contentParent.VerifyPageContentNotPresent(Arrays.asList("We are sorry, no video available"));
         	
         	//Step 7

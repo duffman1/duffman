@@ -63,7 +63,7 @@ public class SearchFor {
     private static WebElement MPXMediaSource_Ddl;
     
     @FindBy(how = How.XPATH, using = "//select[@id='edit-status']")
-    private static WebElement MPXStatus_Ddl;
+    private static WebElement Status_Ddl;
     
     private static List<WebElement> AllResultSet_Ttls() {
     	return webDriver.findElements(By.xpath("//table/tbody/tr/td[contains(@class, 'title')]"));
@@ -87,6 +87,9 @@ public class SearchFor {
     
     @FindBy(how = How.XPATH, using = "(//tbody//td[3]//a)[1]")
     private static WebElement FirstSearchResult_Lnk;
+    
+    @FindBy(how = How.ID, using = "edit-changed-datepicker-popup-0")
+    private static WebElement UpdatedOnAfter_Txb;
     
     @FindBy(how = How.XPATH, using = "(//tbody//td[3]//a)[1]")
     private static WebElement FirstMPXMediaSearchResult_Lnk;
@@ -112,16 +115,27 @@ public class SearchFor {
     
     //PAGE OBJECT METHODS
     public void EnterTitle(String title) throws Exception {
+    	
     	Reporter.log("Enter title " + title + ".");
+    	Title_Txb.clear();
     	Title_Txb.sendKeys(title);
     }
     
+    public void EnterUpdatedOnAfterDate(String date) throws Exception {
+    	
+    	Reporter.log("Enter '" + date + "' in the 'Updated On or After' text box.");
+    	UpdatedOnAfter_Txb.clear();
+    	UpdatedOnAfter_Txb.sendKeys(date);
+    }
+    
     public void ClickApplyBtn() throws Exception {
+    	
     	Reporter.log("Click the 'Apply' button.");
     	Apply_Btn.click();
     }
     
     public void ClickResetBtn() throws Exception {
+    	
     	Reporter.log("Click the 'Reset' button.");
     	Reset_Btn.click();
     }
@@ -315,11 +329,10 @@ public class SearchFor {
     	}
     }
     
-    public void SelectMPXStatus(String status) throws Exception {
+    public void SelectStatus(String status) throws Exception {
     	
-    	Reporter.log("Select the '" + status + "' from the 'MPX Status' select ddl.");
-    	Select mpxPlayerStatusDdl = new Select(MPXStatus_Ddl);
-    	mpxPlayerStatusDdl.selectByVisibleText(status);
+    	Reporter.log("Select the '" + status + "' from the 'MPX Status/Published' drop down list.");
+    	new Select(Status_Ddl).selectByVisibleText(status);
     }
     
     public void VerifyMPXResultSetMPXStatus(String status) throws Exception {

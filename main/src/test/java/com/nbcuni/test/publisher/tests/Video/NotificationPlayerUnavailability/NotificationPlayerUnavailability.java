@@ -116,7 +116,7 @@ public class NotificationPlayerUnavailability extends ParentTest{
         	    //Step 2a
         	    taxonomy.NavigateSite("Content>>Files>>mpxMedia");
         	    searchFor.EnterTitle("Automation");
-        	    searchFor.SelectMPXStatus("Published");
+        	    searchFor.SelectStatus("Published");
         	    searchFor.SelectMPXMediaSource("DB TV");
         	    searchFor.ClickApplyBtn();
         	    searchFor.ClickSearchTitleLnk(searchFor.GetFirstMPXMediaSearchResult());
