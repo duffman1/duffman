@@ -1,19 +1,8 @@
 package com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions;
 
-import java.util.Arrays;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.RerunOnFailure;
-import com.nbcuni.test.publisher.pageobjects.Logout;
-import com.nbcuni.test.publisher.pageobjects.UserLogin;
-import com.nbcuni.test.publisher.pageobjects.Content.Delete;
-import com.nbcuni.test.publisher.pageobjects.People.AddUser;
-import com.nbcuni.test.publisher.pageobjects.People.Permissions;
-import com.nbcuni.test.publisher.pageobjects.People.Roles;
-import com.nbcuni.test.publisher.pageobjects.Queues.Queues;
-import com.nbcuni.test.publisher.pageobjects.Structure.Queues.AddQueueType;
-import com.nbcuni.test.publisher.pageobjects.Structure.Queues.QueueTypes;
 
 public class EditorPermissionCustomQueuesOperationsMenu extends ParentTest {
 	
@@ -24,6 +13,7 @@ public class EditorPermissionCustomQueuesOperationsMenu extends ParentTest {
     @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"})
     public void EditorPermissionCustomQueuesOperationsMenu_Test() throws Exception {
     	
+    	/* COMMENTING OUT THIS TEST - WAITING FOR INFO FROM SRUTHI
     	//Step 1
     	UserLogin userLogin = applib.openApplication();
     	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
@@ -139,6 +129,6 @@ public class EditorPermissionCustomQueuesOperationsMenu extends ParentTest {
         overlay.SwitchToActiveFrame();
         contentParent.VerifyMessageStatus("Deleted Queue type " + queueTypeName + ".");
         
-    	Assert.fail("Test under construction - waiting on input from sruthi on step 14.");
+    	Assert.fail("Test under construction - waiting on input from sruthi on step 14.");*/
     }
 }
