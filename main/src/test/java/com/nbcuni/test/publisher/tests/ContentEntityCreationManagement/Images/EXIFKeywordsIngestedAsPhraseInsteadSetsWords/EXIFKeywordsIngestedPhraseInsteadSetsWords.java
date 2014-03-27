@@ -120,6 +120,7 @@ public class EXIFKeywordsIngestedPhraseInsteadSetsWords extends ParentTest{
             mediaItems.ClickEditBtn();
             
             //Step 6
+            editImage.WaitForEditImageFrameOpen();
             editImage.VerifyTitleTextValue("NUP_155306_0046.JPG");
             editImage.VerifyAltTextValue("f/5.6");
             editImage.VerifySourceValue("Episodic");
