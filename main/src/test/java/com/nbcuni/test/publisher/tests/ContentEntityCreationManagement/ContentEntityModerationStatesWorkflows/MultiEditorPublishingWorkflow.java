@@ -1,7 +1,10 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentEntityModerationStatesWorkflows;
 
 import java.util.Arrays;
+import java.util.List;
+
 import org.testng.annotations.Test;
+
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Logout;
@@ -47,20 +50,20 @@ public class MultiEditorPublishingWorkflow extends ParentTest{
         String editorUserName = addUser.AddDefaultUser(Arrays.asList("editor"));
         
         //Setup - create senior editor user
-        /*String seniorEditorUserName =*/ addUser.AddDefaultUser(Arrays.asList("senior editor"));
+        String seniorEditorUserName = addUser.AddDefaultUser(Arrays.asList("senior editor"));
         
         //Setup - ensure editor and senior editor have correct permissions
         taxonomy.NavigateSite("People>>Permissions");
         overlay.SwitchToActiveFrame();
         Permissions permissions = new Permissions(webDriver, applib);
-        permissions.EnablePermissions("editor", Arrays.asList("create post content", 
-        		"edit any post content", "delete any post content", "create files", "access workbench",
-        			"access advanced_link autocomplete", "access collection list", "create collections",
-        				"edit collections", "view collections", "delete collections", "view the administration theme"));
-        permissions.EnablePermissions("senior editor", Arrays.asList("create post content", 
-        		"edit any post content", "delete any post content", "create files", "access workbench",
-        			"access advanced_link autocomplete", "access collection list", "create collections",
-        				"edit collections", "view collections", "delete collections", "view the administration theme"));
+        List<String> userRoles = Arrays.asList("editor", "senior editor");
+        for (String role : userRoles) {
+        	permissions.EnablePermissions(role, Arrays.asList("create post content", 
+            		"edit any post content", "delete any post content", "create files", "access workbench",
+            			"access advanced_link autocomplete", "access collection list", "create collections",
+            				"edit collections", "view collections", "delete collections", "view the administration theme",
+            					"view moderation messages", "access user profiles"));
+        }
         permissions.ClickSaveConfigurationsBtn();
         contentParent.VerifyMessageStatus("The changes have been saved.");
         overlay.ClickCloseOverlayLnk();
@@ -109,10 +112,11 @@ public class MultiEditorPublishingWorkflow extends ParentTest{
         
         //Step 9
         publishingOptions.ClickPublishingOptionsLnk();
-        /* COMMENTING OUT BELOW PORTION OF TEST DUE TO BUG WITH US6581 - FOLLOWING UP WITH CINDIA.
         publishingOptions.EnterAssignTo(seniorEditorUserName);
+        Thread.sleep(1000); //TODO - figure out why this pause is necessary and add dynamic wait
         contentParent.ClickSaveBtn();
         contentParent.VerifyMessageStatus("Post " + postTitle + " has been updated.");
+        overlay.ClickCloseOverlayLnk();
         
         //Step 10
         taxonomy.NavigateSite("My Workbench");
@@ -130,6 +134,7 @@ public class MultiEditorPublishingWorkflow extends ParentTest{
         //Step 12 TODO automate as time allows
         
         //Step 13
+        overlay.ClickCloseOverlayLnk();
         logout.ClickLogoutBtn();
         userLogin.Login(seniorEditorUserName, userPassword);
         
@@ -139,6 +144,6 @@ public class MultiEditorPublishingWorkflow extends ParentTest{
         contentParent.VerifyPageContentPresent(Arrays.asList(postTitle));
         
         //Step 15 - N/A
-        */
+        
     }
 }

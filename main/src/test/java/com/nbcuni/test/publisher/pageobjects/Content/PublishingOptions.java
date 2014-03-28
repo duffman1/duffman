@@ -134,7 +134,6 @@ public class PublishingOptions {
     	
     	Reporter.log("Click the '" + userName + "' from the auto complete option list.");
     	AutoComplete_Opt(userName).click();
-    	
     }
     
     public void VerifyPublishedCbxNotCheckedAndNotEditable() throws Exception {
