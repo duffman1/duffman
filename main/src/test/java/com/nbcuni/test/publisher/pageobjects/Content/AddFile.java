@@ -158,12 +158,20 @@ public class AddFile {
     	sikuli.click(path + "AddFile/NBCLogo_Lnk.png");
     }
 
-    public void ClickTestPictureBtn() throws Exception {
+    public void ClickTestPictureExifDataBtn() throws Exception {
     	
     	Reporter.log("Click the test picture link.");
     	String path = this.getImagePath();
-    	mpxAssets.WaitForImgPresent(path + "AddFile/TestPicture_Btn.png");
-    	sikuli.click(path + "AddFile/TestPicture_Btn.png");
+    	mpxAssets.WaitForImgPresent(path + "AddFile/TestPictureExifData_Btn.png");
+    	sikuli.click(path + "AddFile/TestPictureExifData_Btn.png");
+    }
+    
+    public void ClickTestPictureDefaultBtn() throws Exception {
+    	
+    	Reporter.log("Click the test picture link.");
+    	String path = this.getImagePath();
+    	mpxAssets.WaitForImgPresent(path + "AddFile/TestPictureDefault_Btn.png");
+    	sikuli.click(path + "AddFile/TestPictureDefault_Btn.png");
     }
     
     public void ClickTestMovieBtn() throws Exception {
@@ -219,6 +227,20 @@ public class AddFile {
     		this.EnterPathToFile_Win(applib.getPathToMedia());
         	this.ClickGoBtn_Win();
         	this.EnterFileName_Win("DefAutMed.m4v");
+    	}
+    	this.ClickOpenBtn();
+    }
+    
+    public void AddDefaultPicture() throws Exception {
+    	
+    	if (System.getProperty("os.name").contains("Mac")) {
+    		this.ClickPicturesUploadBtn();
+    		this.ClickTestPictureDefaultBtn();
+    	}
+    	else {
+    		this.EnterPathToFile_Win(applib.getPathToMedia());
+        	this.ClickGoBtn_Win();
+        	this.EnterFileName_Win("TestPictureDefault_Btn.png");
     	}
     	this.ClickOpenBtn();
     }

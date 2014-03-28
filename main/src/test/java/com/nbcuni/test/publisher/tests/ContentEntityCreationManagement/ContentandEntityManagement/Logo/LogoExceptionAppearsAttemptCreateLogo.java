@@ -4,12 +4,10 @@ import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
-import com.nbcuni.test.publisher.pageobjects.Content.*;
+import com.nbcuni.test.publisher.pageobjects.Content.Delete;
 import com.nbcuni.test.publisher.pageobjects.Logo.AddLogo;
 import com.nbcuni.test.publisher.pageobjects.Logo.Logos;
-
 import org.testng.annotations.Test;
-
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Calendar;
@@ -37,7 +35,7 @@ public class LogoExceptionAppearsAttemptCreateLogo extends ParentTest{
      * @throws Throwable No Return values are needed
      *************************************************************************************/
     @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"})
-    public void LogoExceptionAppearsAttemptCreateLogo_Test() throws Exception{
+    public void LogoExceptionAppearsAttemptCreateLogo_Test() throws Exception {
          
         	//Step 1
         	UserLogin userLogin = applib.openApplication();
@@ -80,13 +78,12 @@ public class LogoExceptionAppearsAttemptCreateLogo extends ParentTest{
     	    
     	    //Step 4
     	    overlay.SwitchToActiveFrame();
-    	    ContentParent contentParent = new ContentParent(webDriver, applib);
     	    SimpleDateFormat pub7DateTimeFormat = new SimpleDateFormat("EEE, MM/dd/yyyy - kk:mm");
         	pub7DateTimeFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
         	String pub7DateTime15SecondsFuture = pub7DateTimeFormat.format(date15SecondsFuture);
         	String pub7DateTime60SecondsFuture = pub7DateTimeFormat.format(date60SecondsFuture);
     	    contentParent.VerifyPageContentPresent(Arrays.asList(logoTitle, 
-    	    		pub7DateTime15SecondsFuture, pub7DateTime60SecondsFuture));
+    	    		pub7DateTime15SecondsFuture.replace("24:", "00:"), pub7DateTime60SecondsFuture.replace("24:", "00:")));
     	    Logos logos = new Logos(webDriver);
     	    logos.VerifyLogoImgPresent(logoTitle, "nbclogosmall");
     	    
@@ -122,8 +119,7 @@ public class LogoExceptionAppearsAttemptCreateLogo extends ParentTest{
     	    overlay.SwitchToActiveFrame();
     	    contentParent.VerifyMessageStatus("Logo has been deleted successfully.");
     	    contentParent.VerifyPageContentNotPresent(Arrays.asList(logoTitle, 
-    	    		pub7DateTime15SecondsFuture, pub7DateTime60SecondsFuture));
-    	    
+    	    		pub7DateTime15SecondsFuture.replace("24:", "00:"), pub7DateTime60SecondsFuture.replace("24:", "00:")));
     	    
     }
 }

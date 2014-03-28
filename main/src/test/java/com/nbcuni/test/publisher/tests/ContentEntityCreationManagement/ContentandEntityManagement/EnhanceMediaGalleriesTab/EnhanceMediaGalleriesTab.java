@@ -60,12 +60,13 @@ public class EnhanceMediaGalleriesTab extends ParentTest{
     	//Steps 6 and 7
     	searchFor.ClickResetBtn();
     	searchFor.EnterTitle(title);
-    	Calendar cal = Calendar.getInstance(TimeZone.getTimeZone("UTC"));
-        Calendar cal2 = Calendar.getInstance(TimeZone.getTimeZone("UTC"));
+    	Calendar cal = Calendar.getInstance();
+        Calendar cal2 = Calendar.getInstance();
         cal2.add(Calendar.DATE, 1);
         Date today = cal.getTime();
         Date tomorrow = cal2.getTime();
         SimpleDateFormat sdfDate = new SimpleDateFormat("MM/dd/yyyy");
+        sdfDate.setTimeZone(TimeZone.getTimeZone("UTC"));
         String todayDate = sdfDate.format(today);
         String tomorrowDate = sdfDate.format(tomorrow);
         searchFor.EnterUpdatedOnAfterDate(tomorrowDate);

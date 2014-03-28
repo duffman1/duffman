@@ -58,7 +58,7 @@ public class EXIFKeywordsIngestedPhraseInsteadSetsWords extends ParentTest{
             addFile.ClickAddFilesLnk();
             if (webDriver.getCapabilities().getPlatform().toString() == "MAC") {
             	addFile.ClickPicturesUploadBtn();
-            	addFile.ClickTestPictureBtn();
+            	addFile.ClickTestPictureExifDataBtn();
             	addFile.ClickOpenBtn();
             }
             else {
@@ -100,7 +100,7 @@ public class EXIFKeywordsIngestedPhraseInsteadSetsWords extends ParentTest{
             addFile.ClickAddFilesLnk();
             if (webDriver.getCapabilities().getPlatform().toString() == "MAC") {
             	addFile.ClickPicturesUploadBtn();
-            	addFile.ClickTestPictureBtn();
+            	addFile.ClickTestPictureExifDataBtn();
             	addFile.ClickOpenBtn();
             }
             else {

@@ -1,10 +1,13 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery;
 
 import org.testng.annotations.Test;
+
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
+import com.nbcuni.test.publisher.pageobjects.Content.AddFile;
 import com.nbcuni.test.publisher.pageobjects.Content.BasicInformation;
+import com.nbcuni.test.publisher.pageobjects.Content.MediaItems;
 import com.nbcuni.test.publisher.pageobjects.Content.SelectFile;
 
 public class CreateMediaGallery extends ParentTest{
@@ -15,7 +18,7 @@ public class CreateMediaGallery extends ParentTest{
      * Step 2 - Click on "Content" >> "Add Content" >> "Media Gallery"<br>
      * Step 3 - Populate the valid value in the following mandatory fields: "Title"<br>
      * Step 4 - Click on "Select" button under "Cover Media", click on "Browse" button and choose the image from the local machine. Click on "Next" button twice then click on "Save" button.<br>
-     * Step 5 [UNABLE TO AUTOMATE THIS STEP] - Click on "Select media" button under "Media" items. Drag and drop 3 or more images from the local machine and click on "Next" button<br>
+     * Step 5 - Click on "Select media" button under "Media" items. Drag and drop 3 or more images from the local machine and click on "Next" button<br>
      * Step 6 - Click on "Save" button<br> 
      * @throws Throwable No Return values are needed
      *************************************************************************************/
@@ -43,15 +46,17 @@ public class CreateMediaGallery extends ParentTest{
             basicInformation.VerifyCoverImagePresent("HanSolo");
             
             //Step 5
-            /* TODO - find a way to get multiple file uploads working
-            mediaGallery.ClickMediaItemsSelectMediaBtn();
+            MediaItems mediaItems = new MediaItems(webDriver);
+            mediaItems.ClickSelectBtn();
             selectFile.SwitchToSelectFileFrm();
-            
-            selectFile.AddMultipleFiles(Arrays.asList("/Users/brandonclark/Desktop/HanSolo.jpg", 
-            		"/Users/brandonclark/Desktop/HanSolo.jpg", 
-            			"/Users/brandonclark/Desktop/HanSolo.jpg"));
-            
-            */
+            AddFile addFile = new AddFile(webDriver, applib);
+            addFile.ClickAddFilesLnk();
+            addFile.AddDefaultPicture();
+            addFile.ClickStartUploadLnk();
+            addFile.WaitForSuccessfulUpload();
+            addFile.ClickNextBtn();
+            overlay.SwitchToActiveFrame();
+            mediaItems.VerifyFileImagePresent("nbclogo", "2");
             
             //Step 6
             contentParent.ClickSaveBtn();

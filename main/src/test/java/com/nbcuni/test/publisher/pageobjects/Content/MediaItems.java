@@ -33,6 +33,9 @@ public class MediaItems {
     	return webDriver.findElement(By.xpath("(//div[@class='media-thumbnail']/img)[" + imageIndex + "]"));
     }
     
+    @FindBy(how = How.ID, using = "edit-field-media-items-und-add-more")
+    private static WebElement Select_Btn;
+    
     @FindBy(how = How.XPATH, using = "//a[@id='edit-field-media-items-und-0-edit']")
     private static WebElement Edit_Btn;
     
@@ -61,6 +64,12 @@ public class MediaItems {
         }
     }
     
+    public void ClickSelectBtn() throws Exception {
+    	
+    	Reporter.log("Click the 'Select' button.");
+    	Select_Btn.click();
+    }
+
     public void ClickEditBtn() throws Exception {
     	
     	Reporter.log("Click the 'Edit' button.");

@@ -155,7 +155,7 @@ public class EditImage {
     public void WaitForEditImageFrameOpen() throws Exception {
     	
     	CloseWindow_Img.isDisplayed();
-    	Thread.sleep(1500);
+    	Thread.sleep(2500); //long pause required here... TODO - figure out dynamic wait
     }
 
     public void WaitForEditImageFrameClose() throws Exception {
