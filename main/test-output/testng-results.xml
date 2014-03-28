@@ -14,22 +14,64 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
+      <![CDATA[Mouse over the 'Configuration' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Media' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Simple EXIF/IPTC Mappings' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Simple EXIF/IPTC Mappings dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Select the 'Aperture' from the 'Alt Text' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Select the 'Title' from the 'Title Text' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Select the 'Caption' from the 'Caption' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Select the 'Copyright' from the 'Copyright' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Select the 'Credit' from the 'Credit' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Select the 'Keywords' from the 'Keywords' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Select the 'none' from the 'Media categories' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Select the 'Title' from the 'Media Tags' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Select the 'Source' from the 'Source' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
       <![CDATA[Mouse over the 'Content' menu link.]]>
     </line>
     <line>
       <![CDATA[Mouse over the 'Add content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Media Gallery' menu link.]]>
+      <![CDATA[Click the 'Post' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Create Media Gallery dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
     </line>
     <line>
-      <![CDATA[Enter 'c633abc4e0b74eb' in the 'Title' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Cover' select button.]]>
+      <![CDATA[Click the Cover Media 'Select' button.]]>
     </line>
     <line>
       <![CDATA[Switch to the select file frame.]]>
@@ -53,85 +95,115 @@
       <![CDATA[Click the 'Next' button.]]>
     </line>
     <line>
-      <![CDATA[Verify the file image 'HanSolo' is present.]]>
+      <![CDATA[Verify the file image 'NUP_155306_0046' is present.]]>
     </line>
     <line>
       <![CDATA[Verify the img is loaded and visible.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save' button.]]>
+      <![CDATA[Verify the 'Apply Embedded Metadata' button is present.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Create Media Gallery dialog'.]]>
+      <![CDATA[Assert that the Title Text box value matches 'NUP_155306_0046.JPG'.]]>
     </line>
     <line>
-      <![CDATA[Verify the Cover image src contains 'HanSolo'.]]>
+      <![CDATA[Assert that the Alt Text box value matches 'f/5.6'.]]>
     </line>
     <line>
-      <![CDATA[Wait for the image to fully load.]]>
+      <![CDATA[Assert that the Source box value matches 'Episodic'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Select' button.]]>
+      <![CDATA[Assert that the Credit Text box value matches 'Brownie Harris/NBC'.]]>
     </line>
     <line>
-      <![CDATA[Switch to the select file frame.]]>
+      <![CDATA[Assert that the Copyright Text box value matches '2013 NBCUniversal Media, LLC'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Add files' link.]]>
+      <![CDATA[Assert that the Keywords Text box value matches 'NUP_155306, Revolution, Episode 118, Season 1'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'All Files' icon.]]>
+      <![CDATA[Enter '' in the 'Title Text' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the local 'Pictures' icon.]]>
+      <![CDATA[Enter '' in the 'Source' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the test picture link.]]>
+      <![CDATA[Click the 'Apply Embedded Metadata' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Open' button.]]>
+      <![CDATA[Assert that the Title Text box value matches 'NUP_155306_0046.JPG'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Start upload' link.]]>
+      <![CDATA[Assert that the Source box value matches 'Episodic'.]]>
     </line>
     <line>
-      <![CDATA[Wait for file upload to reach 100%]]>
+      <![CDATA[Enter 'ModifiedTitle.JPG' in the 'Title Text' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Media Gallery dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Assert that img source of the Media Item contains 'nbclogo'.]]>
-    </line>
-    <line>
-      <![CDATA[Assert the the img is loaded and visible.]]>
+      <![CDATA[Enter 'ModifiedSource' in the 'Source' text box.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'Media Gallery c633abc4e0b74eb has been created.' is present.]]>
+      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
     </line>
     <line>
-      <![CDATA[Verify there are no errors present.]]>
+      <![CDATA[Click the Cover Media 'Edit' button.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that the Title Text box value matches 'ModifiedTitle.JPG'.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that the Source box value matches 'ModifiedSource'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '' in the 'Title Text' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '' in the 'Source' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Apply Embedded Metadata' button.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that the Title Text box value matches 'NUP_155306_0046.JPG'.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that the Source box value matches 'Episodic'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '' in the 'Title Text' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '' in the 'Source' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the Cover Media 'Edit' button.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that the Title Text box value matches 'NUP_155306_0046.JPG'.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that the Source box value matches 'Episodic'.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="41211" started-at="2014-03-28T12:03:14Z" finished-at="2014-03-28T12:03:56Z">
+  <suite name="Default suite" duration-ms="46899" started-at="2014-03-28T13:54:12Z" finished-at="2014-03-28T13:54:59Z">
     <groups>
       <group name="full">
-        <method signature="CreateMediaGallery.CreateMediaGallery_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery@46a53092]" name="CreateMediaGallery_Test" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery"/>
+        <method signature="AddApplyEmbeddedMetadataButtonAllImageForms.AddApplyEmbeddedMetadataButtonAllImageForms_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.AddApplyEmbeddedMetadataButton.AddApplyEmbeddedMetadataButtonAllImageForms@1ca718f3]" name="AddApplyEmbeddedMetadataButtonAllImageForms_Test" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.AddApplyEmbeddedMetadataButton.AddApplyEmbeddedMetadataButtonAllImageForms"/>
       </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="41211" started-at="2014-03-28T12:03:14Z" finished-at="2014-03-28T12:03:56Z">
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery">
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery@46a53092]" name="startSelenium" is-config="true" duration-ms="13557" started-at="2014-03-28T08:03:14Z" finished-at="2014-03-28T08:03:28Z">
+    <test name="Default test" duration-ms="46899" started-at="2014-03-28T13:54:12Z" finished-at="2014-03-28T13:54:59Z">
+      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.AddApplyEmbeddedMetadataButton.AddApplyEmbeddedMetadataButtonAllImageForms">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.AddApplyEmbeddedMetadataButton.AddApplyEmbeddedMetadataButtonAllImageForms@1ca718f3]" name="startSelenium" is-config="true" duration-ms="14076" started-at="2014-03-28T09:54:12Z" finished-at="2014-03-28T09:54:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="CreateMediaGallery_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery@46a53092]" name="CreateMediaGallery_Test" duration-ms="27061" started-at="2014-03-28T08:03:28Z" finished-at="2014-03-28T08:03:55Z">
+        <test-method status="PASS" signature="AddApplyEmbeddedMetadataButtonAllImageForms_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.AddApplyEmbeddedMetadataButton.AddApplyEmbeddedMetadataButtonAllImageForms@1ca718f3]" name="AddApplyEmbeddedMetadataButtonAllImageForms_Test" duration-ms="32242" started-at="2014-03-28T09:54:27Z" finished-at="2014-03-28T09:54:59Z">
           <reporter-output>
             <line>
               <![CDATA[Open url 'http://qa4.qa.nbcupublisher7.publisher7.com'.]]>
@@ -146,22 +218,64 @@
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
+              <![CDATA[Mouse over the 'Configuration' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Media' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Simple EXIF/IPTC Mappings' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Simple EXIF/IPTC Mappings dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Select the 'Aperture' from the 'Alt Text' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Select the 'Title' from the 'Title Text' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Select the 'Caption' from the 'Caption' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Select the 'Copyright' from the 'Copyright' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Select the 'Credit' from the 'Credit' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Select the 'Keywords' from the 'Keywords' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Select the 'none' from the 'Media categories' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Select the 'Title' from the 'Media Tags' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Select the 'Source' from the 'Source' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
               <![CDATA[Mouse over the 'Content' menu link.]]>
             </line>
             <line>
               <![CDATA[Mouse over the 'Add content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Media Gallery' menu link.]]>
+              <![CDATA[Click the 'Post' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create Media Gallery dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
             </line>
             <line>
-              <![CDATA[Enter 'c633abc4e0b74eb' in the 'Title' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Cover' select button.]]>
+              <![CDATA[Click the Cover Media 'Select' button.]]>
             </line>
             <line>
               <![CDATA[Switch to the select file frame.]]>
@@ -185,85 +299,115 @@
               <![CDATA[Click the 'Next' button.]]>
             </line>
             <line>
-              <![CDATA[Verify the file image 'HanSolo' is present.]]>
+              <![CDATA[Verify the file image 'NUP_155306_0046' is present.]]>
             </line>
             <line>
               <![CDATA[Verify the img is loaded and visible.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save' button.]]>
+              <![CDATA[Verify the 'Apply Embedded Metadata' button is present.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create Media Gallery dialog'.]]>
+              <![CDATA[Assert that the Title Text box value matches 'NUP_155306_0046.JPG'.]]>
             </line>
             <line>
-              <![CDATA[Verify the Cover image src contains 'HanSolo'.]]>
+              <![CDATA[Assert that the Alt Text box value matches 'f/5.6'.]]>
             </line>
             <line>
-              <![CDATA[Wait for the image to fully load.]]>
+              <![CDATA[Assert that the Source box value matches 'Episodic'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Select' button.]]>
+              <![CDATA[Assert that the Credit Text box value matches 'Brownie Harris/NBC'.]]>
             </line>
             <line>
-              <![CDATA[Switch to the select file frame.]]>
+              <![CDATA[Assert that the Copyright Text box value matches '2013 NBCUniversal Media, LLC'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Add files' link.]]>
+              <![CDATA[Assert that the Keywords Text box value matches 'NUP_155306, Revolution, Episode 118, Season 1'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'All Files' icon.]]>
+              <![CDATA[Enter '' in the 'Title Text' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the local 'Pictures' icon.]]>
+              <![CDATA[Enter '' in the 'Source' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the test picture link.]]>
+              <![CDATA[Click the 'Apply Embedded Metadata' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Open' button.]]>
+              <![CDATA[Assert that the Title Text box value matches 'NUP_155306_0046.JPG'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Start upload' link.]]>
+              <![CDATA[Assert that the Source box value matches 'Episodic'.]]>
             </line>
             <line>
-              <![CDATA[Wait for file upload to reach 100%]]>
+              <![CDATA[Enter 'ModifiedTitle.JPG' in the 'Title Text' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Media Gallery dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Assert that img source of the Media Item contains 'nbclogo'.]]>
-            </line>
-            <line>
-              <![CDATA[Assert the the img is loaded and visible.]]>
+              <![CDATA[Enter 'ModifiedSource' in the 'Source' text box.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'Media Gallery c633abc4e0b74eb has been created.' is present.]]>
+              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
             </line>
             <line>
-              <![CDATA[Verify there are no errors present.]]>
+              <![CDATA[Click the Cover Media 'Edit' button.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that the Title Text box value matches 'ModifiedTitle.JPG'.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that the Source box value matches 'ModifiedSource'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '' in the 'Title Text' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '' in the 'Source' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Apply Embedded Metadata' button.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that the Title Text box value matches 'NUP_155306_0046.JPG'.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that the Source box value matches 'Episodic'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '' in the 'Title Text' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '' in the 'Source' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the Cover Media 'Edit' button.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that the Title Text box value matches 'NUP_155306_0046.JPG'.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that the Source box value matches 'Episodic'.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- CreateMediaGallery_Test -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery@46a53092]" name="stopSelenium" is-config="true" duration-ms="582" started-at="2014-03-28T08:03:55Z" finished-at="2014-03-28T08:03:56Z">
+        </test-method> <!-- AddApplyEmbeddedMetadataButtonAllImageForms_Test -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.AddApplyEmbeddedMetadataButton.AddApplyEmbeddedMetadataButtonAllImageForms@1ca718f3]" name="stopSelenium" is-config="true" duration-ms="569" started-at="2014-03-28T09:54:59Z" finished-at="2014-03-28T09:54:59Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=CreateMediaGallery_Test status=SUCCESS method=CreateMediaGallery.CreateMediaGallery_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery@46a53092] output=Open url 'http://qa4.qa.nbcupublisher7.publisher7.com'.]]]>
+                <![CDATA[[TestResult name=AddApplyEmbeddedMetadataButtonAllImageForms_Test status=SUCCESS method=AddApplyEmbeddedMetadataButtonAllImageForms.AddApplyEmbeddedMetadataButtonAllImageForms_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.AddApplyEmbeddedMetadataButton.AddApplyEmbeddedMetadataButtonAllImageForms@1ca718f3] output=Open url 'http://qa4.qa.nbcupublisher7.publisher7.com'.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery -->
+      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.AddApplyEmbeddedMetadataButton.AddApplyEmbeddedMetadataButtonAllImageForms -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

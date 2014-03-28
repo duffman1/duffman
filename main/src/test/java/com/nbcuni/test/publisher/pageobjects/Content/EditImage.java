@@ -71,6 +71,7 @@ public class EditImage {
     public void VerifyTitleTextValue(String value) throws Exception {
     	
     	Reporter.log("Assert that the Title Text box value matches '" + value + "'.");
+    	Thread.sleep(500); //stale element exception
     	Assert.assertEquals(wait.until(ExpectedConditions.visibilityOf(TitleText_Txb)).getAttribute("value"), value);
     	
     }
@@ -155,6 +156,7 @@ public class EditImage {
     public void WaitForEditImageFrameOpen() throws Exception {
     	
     	CloseWindow_Img.isDisplayed();
+    	wait.until(ExpectedConditions.visibilityOf(TitleText_Txb));
     	Thread.sleep(2500); //long pause required here... TODO - figure out dynamic wait
     }
 

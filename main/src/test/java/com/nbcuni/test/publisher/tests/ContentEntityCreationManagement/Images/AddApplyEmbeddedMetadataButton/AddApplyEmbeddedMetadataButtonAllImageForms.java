@@ -78,6 +78,7 @@ public class AddApplyEmbeddedMetadataButtonAllImageForms extends ParentTest{
             
             //Step 8
             coverMedia.ClickEditBtn();
+            editImage.WaitForEditImageFrameOpen();
             editImage.VerifyTitleTextValue("ModifiedTitle.JPG");
             editImage.VerifySourceValue("ModifiedSource");
             
@@ -96,6 +97,7 @@ public class AddApplyEmbeddedMetadataButtonAllImageForms extends ParentTest{
             
             //Step 11
             coverMedia.ClickEditBtn();
+            editImage.WaitForEditImageFrameOpen();
             editImage.VerifyTitleTextValue("NUP_155306_0046.JPG");
             editImage.VerifySourceValue("Episodic");
             

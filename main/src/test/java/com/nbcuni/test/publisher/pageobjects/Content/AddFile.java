@@ -240,7 +240,7 @@ public class AddFile {
     	else {
     		this.EnterPathToFile_Win(applib.getPathToMedia());
         	this.ClickGoBtn_Win();
-        	this.EnterFileName_Win("TestPictureDefault_Btn.png");
+        	this.EnterFileName_Win("nbclogosmall.jpg");
     	}
     	this.ClickOpenBtn();
     }
