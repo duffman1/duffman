@@ -1,7 +1,7 @@
 package com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform;
 
 import com.nbcuni.test.publisher.common.AppLib;
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 import org.testng.Reporter;
 import org.sikuli.script.*;
 
@@ -14,15 +14,15 @@ import org.sikuli.script.*;
 
 public class MPXLogin {
 
-    private static CustomWebDriver webDriver;
-    private static Screen sikuli;
-    private static AppLib applib;
-    private static MPXAssets mpxAssets;
+    private Driver webDriver;
+    private Screen sikuli;
+    private AppLib applib;
+    private MPXAssets mpxAssets;
     
-    public MPXLogin(CustomWebDriver webDriver, AppLib applib) {
-        MPXLogin.webDriver = webDriver;
+    public MPXLogin(Driver webDriver, AppLib applib) {
+        this.webDriver = webDriver;
         sikuli = new Screen();
-        MPXLogin.applib = applib;
+        this.applib = applib;
         mpxAssets = new MPXAssets(applib);
     }
     

@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
 import com.nbcuni.test.publisher.common.AppLib;
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
  * publisher.nbcuni.com SiteCatalyst Library. Copyright
@@ -19,29 +19,29 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 
 public class SiteCatalyst {
 
-    private static WebDriverWait wait;
+    WebDriverWait wait;
     
     //PAGE OBJECT CONSTRUCTOR    
-    public SiteCatalyst(CustomWebDriver webDriver, AppLib applib) {
+    public SiteCatalyst(Driver webDriver, AppLib applib) {
         PageFactory.initElements(webDriver, this);
         wait = new WebDriverWait(webDriver, 10);
     }
     
     //PAGE OBJECT IDENTIFIERS    
     @FindBy(how = How.XPATH, using ="(//fieldset[@id='edit-variables']//a)[1]")
-    private static WebElement CustomVariables_Lnk;
+    private WebElement CustomVariables_Lnk;
     
     @FindBy(how = How.XPATH, using ="//fieldset[@id='edit-variable-overrides']//a")
-    private static WebElement Overrides_Lnk;
+    private WebElement Overrides_Lnk;
     
     @FindBy(how = How.ID, using ="edit-sitecatalyst-variable-overrides-media-gallery")
-    private static WebElement MediaGallery_Cbx;
+    private WebElement MediaGallery_Cbx;
     
     @FindBy(how = How.ID, using ="edit-sitecatalyst-variable-overrides-post")
-    private static WebElement Post_Cbx;
+    private WebElement Post_Cbx;
     
     @FindBy(how = How.ID, using ="edit-submit")
-    private static WebElement SaveConfiguration_Btn;
+    private WebElement SaveConfiguration_Btn;
     
     
     //PAGE OBJECT METHODS

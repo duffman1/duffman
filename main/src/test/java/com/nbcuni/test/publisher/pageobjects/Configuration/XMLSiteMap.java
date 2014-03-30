@@ -6,7 +6,7 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
 import com.nbcuni.test.publisher.common.AppLib;
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
 * publisher.nbcuni.com XML Site Map Library. Copyright
@@ -16,24 +16,24 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 *********************************************/
 public class XMLSiteMap {
 		
-	private static AppLib applib;
+	private AppLib applib;
 	
 	//PAGE OBJECT CONSTRUCTOR
-	public XMLSiteMap(CustomWebDriver webDriver, AppLib applib) {
-		XMLSiteMap.applib = applib;
+	public XMLSiteMap(Driver webDriver, AppLib applib) {
+		this.applib = applib;
 		PageFactory.initElements(webDriver, this);
 		
 	}
 
 	//PAGE OBJECT IDENTIFIERS
 	@FindBy(how = How.ID, using ="edit-save-custom")
-	private static WebElement SaveandRestore_Cbx;
+	private WebElement SaveandRestore_Cbx;
 
 	@FindBy(how = How.ID, using ="edit-submit")
-	private static WebElement RebuildSitemap_Btn;
+	private WebElement RebuildSitemap_Btn;
 
 	@FindBy(how = How.XPATH, using ="//table/..//tr[1]/td[2]/a")
-	private static WebElement XMLSiteMap_Lnk;
+	private WebElement XMLSiteMap_Lnk;
 
 	
 	//PAGE OBJECT METHODS

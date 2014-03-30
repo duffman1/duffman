@@ -17,12 +17,12 @@ import com.nbcuni.test.publisher.common.AppLib;
 
 public class MPXAssets {
 
-    private static AppLib applib;
-    private static Screen sikuli;
+    private AppLib applib;
+    private Screen sikuli;
     
     public MPXAssets(AppLib applib) {
     	sikuli = new Screen();
-        MPXAssets.applib = applib;
+        this.applib = applib;
         
     }
     

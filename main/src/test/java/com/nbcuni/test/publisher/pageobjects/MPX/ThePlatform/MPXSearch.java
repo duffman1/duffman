@@ -13,13 +13,13 @@ import org.sikuli.script.*;
 
 public class MPXSearch {
 
-    private static AppLib applib;
-    private static Screen sikuli;
-    private static MPXAssets mpxAssets;
+    private AppLib applib;
+    private Screen sikuli;
+    private MPXAssets mpxAssets;
     
     public MPXSearch(AppLib applib) {
         sikuli = new Screen();
-        MPXSearch.applib = applib;
+        this.applib = applib;
         mpxAssets = new MPXAssets(applib);
     }
     

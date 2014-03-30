@@ -2,12 +2,12 @@ package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentT
 
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.RerunOnFailure;
-import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
-import com.nbcuni.test.publisher.pageobjects.Content.*;
-
+import com.nbcuni.test.publisher.pageobjects.Content.BasicInformation;
+import com.nbcuni.test.publisher.pageobjects.Content.PublishingOptions;
+import com.nbcuni.test.publisher.pageobjects.Content.SelectFile;
+import com.nbcuni.test.publisher.pageobjects.Content.WorkBench;
 import org.testng.annotations.Test;
-
 import java.util.Arrays;
 import java.util.List;
 
@@ -16,8 +16,7 @@ public class CreatePost extends ParentTest{
     /*************************************************************************************
      * TEST CASE 
      * Step 1 - Login to Pub7 
-     * Step 1a - Ensure "Pub Post" module is activated<br>
-     * Step 1b - Navigate to create post page<br>
+     * Step 1a - Navigate to create post page<br>
      * Step 2 - Verify that below fields are the mandatory ones and have star symbol marked on them:-  Basic Information tab:- 1) Title 2) Body  Publishing Options tab:- 1) Moderation state<br>
      * Step 3 - Enter value in Title and Body<br>
      * Step 4 - Upload image in Cover Media.  
@@ -33,19 +32,14 @@ public class CreatePost extends ParentTest{
         	UserLogin userLogin = applib.openApplication();
         	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
             
-            //Step 1a
-            Modules modules = new Modules(webDriver, applib);
-            modules.VerifyModuleEnabled("Pub Post");
-            
             List<String> allStates = Arrays.asList("Draft", "Review", "Published");
             for (String state : allStates) {
             
-            	//Step 1b
+            	//Step 1a
             	taxonomy.NavigateSite("Content>>Add content>>Post");
-            	overlay.SwitchToFrame("Create Post");
+            	overlay.SwitchToActiveFrame();
             
             	//Step 2
-            	ContentParent contentParent = new ContentParent(webDriver, applib);
             	contentParent.VerifyRequiredFields(Arrays.asList("Title", "Body"));
             	PublishingOptions publishingOptions = new PublishingOptions(webDriver);
             	publishingOptions.ClickPublishingOptionsLnk();
@@ -59,12 +53,11 @@ public class CreatePost extends ParentTest{
             	basicInformation.EnterSynopsis();
             
             	//Step 4
-            	overlay.switchToDefaultContent();
-            	overlay.SwitchToFrame("Create Post");
+            	overlay.SwitchToActiveFrame();
             	basicInformation.ClickCoverSelectBtn();
             	SelectFile selectFile = new SelectFile(webDriver, applib);
             	selectFile.SelectDefaultCoverImg();
-            	overlay.SwitchToFrame("Create Post");
+            	overlay.SwitchToActiveFrame();
             
             	//Step 5
             	publishingOptions.ClickPublishingOptionsLnk();

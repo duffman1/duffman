@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
 import com.nbcuni.test.publisher.common.AppLib;
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
  * publisher.nbcuni.com Manage File Display Library. Copyright
@@ -20,41 +20,41 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 
 public class ManageFileDisplay {
 
-    private static WebDriverWait wait;
+    WebDriverWait wait;
     
     //PAGE OBJECT CONSTRUCTOR
-    public ManageFileDisplay(CustomWebDriver webDriver, AppLib applib) {
+    public ManageFileDisplay(Driver webDriver, AppLib applib) {
         PageFactory.initElements(webDriver, this);
         wait = new WebDriverWait(webDriver, 10);
     }
     
     //PAGE OBJECT IDENTIFIERS
     @FindBy(how = How.ID, using = "edit-displays-file-field-image-status")
-    private static WebElement Image_Cbx;
+    private WebElement Image_Cbx;
     
     @FindBy(how = How.ID, using = "edit-displays-pub-mpx-image-status")
-    private static WebElement PubMPXImage_Cbx;
+    private WebElement PubMPXImage_Cbx;
     
     @FindBy(how = How.ID, using = "edit-displays-pub-mpx-video-status")
-    private static WebElement PubMPXVideo_Cbx;
+    private WebElement PubMPXVideo_Cbx;
     
     @FindBy(how = How.CSS, using = "select[id*='edit-displays-pub-mpx-video-settings-pub-mpx-video-player']")
-    private static WebElement PubMPXVideoPlayerForAccount_Ddl;
+    private WebElement PubMPXVideoPlayerForAccount_Ddl;
     
     @FindBy(how = How.ID, using = "edit-displays-pub-mpx-image-settings-pub-mpx-image-image-style")
-    private static WebElement PubMPXImageStyle_Ddl;
+    private WebElement PubMPXImageStyle_Ddl;
     
     @FindBy(how = How.XPATH, using = "//a/strong[text()='Pub MPX Video']")
-    private static WebElement PubMPXVideo_Lnk;
+    private WebElement PubMPXVideo_Lnk;
     
     @FindBy(how = How.XPATH, using = "//a/strong[text()='Pub MPX Image']")
-    private static WebElement PubMPXImage_Lnk;
+    private WebElement PubMPXImage_Lnk;
     
     @FindBy(how = How.ID, using = "edit-displays-file-field-image-settings-image-style")
-    private static WebElement ImageStyle_Ddl;
+    private WebElement ImageStyle_Ddl;
     
     @FindBy(how = How.ID, using = "edit-actions-submit")
-    private static WebElement SaveConfiguration_Btn;
+    private WebElement SaveConfiguration_Btn;
     
     
     //PAGE OBJECT METHODS

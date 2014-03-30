@@ -9,7 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Reporter;
 import com.nbcuni.test.publisher.common.AppLib;
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
 * publisher.nbcuni.com Image Styles Library. Copyright
@@ -19,38 +19,38 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 *********************************************/
 public class ImageStyles {
 		
-	private static CustomWebDriver webDriver;
-	private static AppLib applib;
+	private Driver webDriver;
+	private AppLib applib;
 	
 	//PAGE OBJECT CONSTRUCTOR
-	public ImageStyles(CustomWebDriver webDriver, AppLib applib) {
-		ImageStyles.webDriver = webDriver;
-		ImageStyles.applib = applib;
+	public ImageStyles(Driver webDriver, AppLib applib) {
+		this.webDriver = webDriver;
+		this.applib = applib;
 		PageFactory.initElements(webDriver, this);
 		
 	}
 
 	//PAGE OBJECT IDENTIFIERS
 	@FindBy(how = How.ID, using ="edit-label")
-	private static WebElement StyleName_Txb;
+	private WebElement StyleName_Txb;
 	
 	@FindBy(how = How.ID, using ="edit-submit")
-	private static WebElement CreateNewStyle_Btn;
+	private WebElement CreateNewStyle_Btn;
 	
 	@FindBy(how = How.CSS, using ="select[name='new']")
-	private static WebElement Effect_Ddl;
+	private WebElement Effect_Ddl;
 	
 	@FindBy(how = How.ID, using ="edit-add")
-	private static WebElement Add_Btn;
+	private WebElement Add_Btn;
 	
 	@FindBy(how = How.ID, using ="edit-actions-submit")
-	private static WebElement UpdateStyle_Btn;
+	private WebElement UpdateStyle_Btn;
 	
-	private static WebElement Style_Lnk(String styleName) {
+	private WebElement Style_Lnk(String styleName) {
 		return webDriver.findElement(By.xpath("//a[text()='" + styleName + "']"));
 	}
 	
-	private static WebElement StyleDelete_Lnk(String styleName) {
+	private WebElement StyleDelete_Lnk(String styleName) {
 		return webDriver.findElement(By.xpath("//a[text()='" + styleName + "']/../..//a[text()='delete']"));
 	}
 	

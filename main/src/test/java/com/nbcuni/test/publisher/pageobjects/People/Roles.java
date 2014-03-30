@@ -8,7 +8,7 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.Reporter;
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
  * publisher.nbcuni.com Roles Library. Copyright
@@ -19,24 +19,24 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 
 public class Roles {
 
-    private static CustomWebDriver webDriver;
+    private Driver webDriver;
     
     //PAGE OBJECT CONSTRUCTOR
-    public Roles(CustomWebDriver webDriver) {
-        Roles.webDriver = webDriver;
+    public Roles(Driver webDriver) {
+        this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
     }
     
     //PAGE OBJECT IDENTIFIERS
     @FindBy(how = How.XPATH, using = "//li/a[text()='Roles']")
-    private static WebElement Roles_Btn;
+    private WebElement Roles_Btn;
     
-    private static List<WebElement> RoleRows_Ctr() {
+    private List<WebElement> RoleRows_Ctr() {
     	return webDriver.findElements(By.xpath("//table[@id='user-roles']//a[@class='tabledrag-handle']/.."));
     }
     
     @FindBy(how = How.XPATH, using = "//td[text()='editor']/..//a[text()='edit permissions']")
-    private static WebElement Editor_EditPermissions_Lnk;
+    private WebElement Editor_EditPermissions_Lnk;
     
     
     //PAGE OBJECT METHODS

@@ -1,6 +1,6 @@
 package com.nbcuni.test.publisher.pageobjects.MPX;
 
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 
 import org.testng.Assert;
 import org.openqa.selenium.WebDriver;
@@ -22,65 +22,65 @@ import org.testng.Reporter;
 
 public class EditMPXVideo {
 
-	private static WebDriverWait wait;
+	private WebDriverWait wait;
 	
     //PAGE OBJECT CONSTRUCTOR
-    public EditMPXVideo(CustomWebDriver webDriver) {
+    public EditMPXVideo(Driver webDriver) {
     	PageFactory.initElements(webDriver, this);
         wait = new WebDriverWait(webDriver, 10);
     }
     
     //PAGE OBJECT IDENTIFERS
     @FindBy(how = How.CSS, using = "input[id*='edit-field-mpx-available-date'][id*='datepicker']")
-    private static WebElement MPXMediaAvailableDate_Txb;
+    private WebElement MPXMediaAvailableDate_Txb;
     
     @FindBy(how = How.XPATH, using = "//input[contains(@id, 'edit-field-mpx-available-date')][contains(@id, 'timeEntry')]")
-    private static WebElement MPXMediaAvailableTime_Txb;
+    private WebElement MPXMediaAvailableTime_Txb;
     
     @FindBy(how = How.XPATH, using = "//input[contains(@id, 'edit-field-mpx-expiration-date')][contains(@id, 'datepicker')]")
-    private static WebElement MPXMediaExpirationDate_Txb;
+    private WebElement MPXMediaExpirationDate_Txb;
     
     @FindBy(how = How.XPATH, using = "//input[contains(@id, 'edit-field-mpx-expiration-date')][contains(@id, 'timeEntry')]")
-    private static WebElement MPXMediaExpirationTime_Txb;
+    private WebElement MPXMediaExpirationTime_Txb;
     
     @FindBy(how = How.ID, using = "field_mpx_available_date_mpx_override_checkbox")
-    private static WebElement OverrideMPXAvailableDate_Cbx;
+    private WebElement OverrideMPXAvailableDate_Cbx;
     
     @FindBy(how = How.ID, using = "field_mpx_expiration_date_mpx_override_checkbox")
-    private static WebElement OverrideMPXExpirationDate_Cbx;
+    private WebElement OverrideMPXExpirationDate_Cbx;
     
     @FindBy(how = How.ID, using = "edit-pub-mpx-player-pid")
-    private static WebElement PubMPXVideoPlayer_Ddl;
+    private WebElement PubMPXVideoPlayer_Ddl;
     
     @FindBy(how = How.ID, using = "edit-field-mpx-media-categories-und-0-value")
-    private static WebElement MPXMediaCategory1_Txb;
+    private WebElement MPXMediaCategory1_Txb;
     
     @FindBy(how = How.ID, using = "edit-field-mpx-media-categories-und-1-value")
-    private static WebElement MPXMediaCategory2_Txb;
+    private WebElement MPXMediaCategory2_Txb;
     
     @FindBy(how = How.ID, using = "edit-field-mpx-media-categories-und-2-value")
-    private static WebElement MPXMediaCategory3_Txb;
+    private WebElement MPXMediaCategory3_Txb;
     
     @FindBy(how = How.ID, using = "edit-field-mpx-title-und-0-value")
-    private static WebElement MPXMediaTitle_Txb;
+    private WebElement MPXMediaTitle_Txb;
     
     @FindBy(how = How.ID, using = "edit-field-mpx-author-und-0-value")
-    private static WebElement MPXMediaAuthor_Txb;
+    private WebElement MPXMediaAuthor_Txb;
     
     @FindBy(how = How.ID, using = "edit-update-mpx-data")
-    private static WebElement SyncFromMPX_Btn;
+    private WebElement SyncFromMPX_Btn;
     
     @FindBy(how = How.ID, using = "edit-field-mpx-mpaa-rating-und-0-value")
-    private static WebElement MPXMediaMPAARating_Txb;
+    private WebElement MPXMediaMPAARating_Txb;
     
     @FindBy(how = How.ID, using = "edit-field-mpx-mpaa-subratings-und-0-value")
-    private static WebElement MPXMediaMPAASubRating1_Txb;
+    private WebElement MPXMediaMPAASubRating1_Txb;
     
     @FindBy(how = How.ID, using = "edit-field-mpx-airdate-und-0-value-datepicker-popup-0")
-    private static WebElement MPXMediaAirDate_Txb;
+    private WebElement MPXMediaAirDate_Txb;
     
     @FindBy(how = How.ID, using = "edit-field-mpx-airdate-und-0-value-timeEntry-popup-1")
-    private static WebElement MPXMediaAirTime_Txb;
+    private WebElement MPXMediaAirTime_Txb;
     
     
     //PAGE OBJECT METHODS

@@ -16,13 +16,13 @@ import com.nbcuni.test.publisher.common.AppLib;
 
 public class MPXSelectAccount {
 
-    private static AppLib applib;
-    private static Screen sikuli;
-    private static MPXAssets mpxAssets;
+    private AppLib applib;
+    private Screen sikuli;
+    private MPXAssets mpxAssets;
     
     public MPXSelectAccount(AppLib applib) {
         sikuli = new Screen();
-        MPXSelectAccount.applib = applib;
+        this.applib = applib;
         mpxAssets = new MPXAssets(applib);
     }
     

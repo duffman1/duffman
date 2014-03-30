@@ -6,7 +6,7 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
 import com.nbcuni.test.publisher.common.AppLib;
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
 * publisher.nbcuni.com Content Lock Library. Copyright
@@ -17,16 +17,16 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 public class ContentLock {
 
 	//PAGE OBJECT CONSTRUCTOR
-	public ContentLock(CustomWebDriver webDriver, AppLib applib) {
+	public ContentLock(Driver webDriver, AppLib applib) {
 		PageFactory.initElements(webDriver, this);
 	}
 
 	//PAGE OBJECT IDENTIFIERS
 	@FindBy(how = How.ID, using ="edit-content-lock-admin-verbose")
-	private static WebElement ShowLockUnlockMessages_Cbx;
+	private WebElement ShowLockUnlockMessages_Cbx;
 
 	@FindBy(how = How.ID, using ="edit-submit")
-	private static WebElement SaveConfiguration_Btn;
+	private WebElement SaveConfiguration_Btn;
 
 
 	//PAGE OBJECT METHODS

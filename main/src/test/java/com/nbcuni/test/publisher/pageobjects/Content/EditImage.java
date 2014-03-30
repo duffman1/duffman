@@ -12,7 +12,7 @@ import org.testng.Assert;
 import org.testng.Reporter;
 
 import com.nbcuni.test.publisher.common.AppLib;
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
  * publisher.nbcuni.com Edit Image Library. Copyright
@@ -23,48 +23,48 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 
 public class EditImage {
 
-    private static CustomWebDriver webDriver;
-    private static AppLib applib;
-    private static WebDriverWait wait;
+    private Driver webDriver;
+    private AppLib applib;
+    private WebDriverWait wait;
     
     //PAGE OBJECT CONSTRUCTOR
-    public EditImage(CustomWebDriver webDriver, AppLib applib) {
-        EditImage.webDriver = webDriver;
-        EditImage.applib = applib;
+    public EditImage(Driver webDriver, AppLib applib) {
+        this.webDriver = webDriver;
+        this.applib = applib;
         PageFactory.initElements(webDriver, this);
         wait = new WebDriverWait(webDriver, 10);
     }
     
     //PAGE OBJECT IDENTIFIERS
     @FindBy(how = How.XPATH, using = "//input[contains(@id, 'edit-field-file-image-title-text-und-0-value')]")
-    private static WebElement TitleText_Txb;
+    private WebElement TitleText_Txb;
     
     @FindBy(how = How.XPATH, using = "//input[contains(@id, 'edit-field-file-image-alt-text-und-0-value')]")
-    private static WebElement AltText_Txb;
+    private WebElement AltText_Txb;
     
     @FindBy(how = How.XPATH, using = "//input[contains(@id, 'edit-field-source-und-0-value')]")
-    private static WebElement Source_Txb;
+    private WebElement Source_Txb;
     
     @FindBy(how = How.XPATH, using = "//input[contains(@id, 'edit-field-credit-und-0-value')]")
-    private static WebElement Credit_Txb;
+    private WebElement Credit_Txb;
     
     @FindBy(how = How.XPATH, using = "//input[contains(@id, 'edit-field-copyright-und-0-value')]")
-    private static WebElement Copyright_Txb;
+    private WebElement Copyright_Txb;
     
     @FindBy(how = How.XPATH, using = "//input[contains(@id, 'edit-field-keywords-und-0-value')]")
-    private static WebElement Keywords_Txb;
+    private WebElement Keywords_Txb;
     
     @FindBy(how = How.ID, using = "edit-simple-exif")
-    private static WebElement ApplyEmbeddedMetadata_Btn;
+    private WebElement ApplyEmbeddedMetadata_Btn;
     
     @FindBy(how = How.XPATH, using = "//input[@value='Save']")
-    private static WebElement Save_Btn;
+    private WebElement Save_Btn;
     
     @FindBy(how = How.ID, using = "edit-submit--2")
-    private static WebElement SaveFromEditFrm_Btn;
+    private WebElement SaveFromEditFrm_Btn;
     
     @FindBy(how = How.CSS, using = "img[title='Close window']")
-    private static WebElement CloseWindow_Img;
+    private WebElement CloseWindow_Img;
     
    
     //PAGE OBJECT METHODS

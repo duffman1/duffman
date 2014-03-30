@@ -12,7 +12,7 @@ import org.testng.Assert;
 import org.testng.Reporter;
 
 import com.nbcuni.test.publisher.common.AppLib;
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
 * publisher.nbcuni.com Permission Sets Library. Copyright
@@ -23,35 +23,35 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 
 public class PermissionSets {
 
-	private static CustomWebDriver webDriver;
-	private static AppLib applib;
-	private static WebDriverWait wait;
+	private Driver webDriver;
+	private AppLib applib;
+	private WebDriverWait wait;
 	
     //PAGE OBJECT CONSTRUCTOR
-    public PermissionSets(CustomWebDriver webDriver, AppLib applib) {
-    	PermissionSets.webDriver = webDriver;
-    	PermissionSets.applib = applib;
+    public PermissionSets(Driver webDriver, AppLib applib) {
+    	this.webDriver = webDriver;
+    	this.applib = applib;
     	PageFactory.initElements(webDriver, this);
     	wait = new WebDriverWait(webDriver, 10);
     }
     
     //PAGE OBJECT IDENTIFIERS
     @FindBy(how = How.LINK_TEXT, using = "Add")
-    private static WebElement Add_Lnk;
+    private WebElement Add_Lnk;
     
-    private static WebElement PermissionSetEdit_Lnk(String setName) {
+    private WebElement PermissionSetEdit_Lnk(String setName) {
     	return webDriver.findElement(By.xpath("//td[text()='" + setName + "']/..//a[text()='Edit']"));
     }
     
-    private static WebElement PermissionSetName_Txt(String setName) {
+    private WebElement PermissionSetName_Txt(String setName) {
     	return webDriver.findElement(By.xpath("//td[text()='" + setName + "']"));
     }
     
-    private static WebElement PermissionSetExpandEdit_Lnk(String setName) {
+    private WebElement PermissionSetExpandEdit_Lnk(String setName) {
     	return webDriver.findElement(By.xpath("//td[text()='" + setName + "']/..//a[text()='open']"));
     }
     
-    private static WebElement PermissionSetDelete_Lnk(String setName) {
+    private WebElement PermissionSetDelete_Lnk(String setName) {
     	return webDriver.findElement(By.xpath("//td[text()='" + setName + "']/..//a[text()='Delete']"));
     }
     

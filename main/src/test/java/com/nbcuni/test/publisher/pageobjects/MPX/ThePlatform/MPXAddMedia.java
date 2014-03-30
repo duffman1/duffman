@@ -15,14 +15,14 @@ import org.testng.Reporter;
 
 public class MPXAddMedia {
 
-    private static AppLib applib;
-    private static Screen sikuli;
-    private static MPXAssets mpxAssets;
-    private static AddFile addFile;
+    private AppLib applib;
+    private Screen sikuli;
+    private MPXAssets mpxAssets;
+    private AddFile addFile;
     
     public MPXAddMedia(AppLib applib) {
     	sikuli = new Screen();
-        MPXAddMedia.applib = applib;
+        this.applib = applib;
         mpxAssets = new MPXAssets(applib);
         addFile = new AddFile(null, applib);
     }

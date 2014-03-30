@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.Reporter;
 import com.nbcuni.test.publisher.common.AppLib;
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
  * publisher.nbcuni.com ContentTypes Library. Copyright
@@ -20,33 +20,33 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 
 public class ContentTypes {
 
-    private static CustomWebDriver webDriver;
-    private static ContentParent contentParent;
+    private Driver webDriver;
+    private ContentParent contentParent;
     
     //PAGE OBJECT CONSTRUCTOR
-    public ContentTypes(CustomWebDriver webDriver, AppLib applib) {
-        ContentTypes.webDriver = webDriver;
+    public ContentTypes(Driver webDriver, AppLib applib) {
+        this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
         contentParent = new ContentParent(webDriver, applib);
     }
     
     //PAGE OBJECT IDENTIFIERS
     @FindBy(how = How.ID, using = "edit-name")
-    private static WebElement Name_Txb;
+    private WebElement Name_Txb;
     
     @FindBy(how = How.ID, using = "edit-submit")
-    private static WebElement Save_Btn;
+    private WebElement Save_Btn;
     
     @FindBy(how = How.XPATH, using = "//div[@class='content']//tbody")
-    private static WebElement ContentTypeTbl_Ctr;
+    private WebElement ContentTypeTbl_Ctr;
     
     @FindBy(how = How.XPATH, using = "//input[@id='edit-fields-add-new-field-label']")
-    private static WebElement AddNewField_Txb;
+    private WebElement AddNewField_Txb;
     
     @FindBy(how = How.ID, using = "edit-fields-add-new-field-type")
-    private static WebElement FieldType_Ddl;
+    private WebElement FieldType_Ddl;
     
-    private static WebElement FieldSave_Btn(String fieldName) {
+    private WebElement FieldSave_Btn(String fieldName) {
     	return webDriver.findElement(By.xpath("//a[@id='edit-field-" + fieldName + "-und-field-" + fieldName + "-und-0-select']"));
     }
     

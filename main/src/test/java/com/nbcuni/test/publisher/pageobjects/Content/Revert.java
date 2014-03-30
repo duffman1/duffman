@@ -5,7 +5,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
  * publisher.nbcuni.com Revert Library. Copyright
@@ -17,13 +17,13 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 public class Revert {
 
     //PAGE OBJECT CONSTRUCTOR
-    public Revert(CustomWebDriver webDriver) {
+    public Revert(Driver webDriver) {
         PageFactory.initElements(webDriver, this);
     }
     
     //PAGE OBJECT IDENTIFIERS
     @FindBy(how = How.ID, using = "edit-submit")
-    private static WebElement Revert_Btn;
+    private WebElement Revert_Btn;
     
     
     //PAGE OBJECT METHODS

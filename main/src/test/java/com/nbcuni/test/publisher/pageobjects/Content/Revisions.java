@@ -3,7 +3,7 @@ package com.nbcuni.test.publisher.pageobjects.Content;
 import java.util.concurrent.TimeUnit;
 
 import com.nbcuni.test.publisher.common.AppLib;
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -25,51 +25,51 @@ import org.testng.Reporter;
 
 public class Revisions {
 
-	private static CustomWebDriver webDriver;
-	private static AppLib applib;
-    private static WebDriverWait wait;
+	private Driver webDriver;
+	private AppLib applib;
+    private WebDriverWait wait;
     
 	//PAGE OBJECT CONSTRUCTOR
-	public Revisions(CustomWebDriver webDriver, AppLib applib) {
-        Revisions.webDriver = webDriver;
-        Revisions.applib = applib;
+	public Revisions(Driver webDriver, AppLib applib) {
+        this.webDriver = webDriver;
+        this.applib = applib;
         PageFactory.initElements(webDriver, this);
         wait = new WebDriverWait(webDriver, 10);
     }
 	
 	//PAGE OBJECT IDENTIFIERS
 	@FindBy(how = How.ID, using = "edit-submit")
-    private static WebElement UpdateState_Btn;
+    private WebElement UpdateState_Btn;
 	
 	@FindBy(how = How.XPATH, using = "//a[contains(text(),'Revisions')]")
-    private static WebElement Revision_Lnk;
+    private WebElement Revision_Lnk;
 	
 	@FindBy(how = How.XPATH, using = "(//*[@id='edit-event-comment'])[1]")
-    private static WebElement MessageForStateChange_Txa;
+    private WebElement MessageForStateChange_Txa;
 	
 	@FindBy(how = How.ID, using = "edit-submit")
-    private static WebElement DeleteRevision_Btn;
+    private WebElement DeleteRevision_Btn;
     
 	@FindBy(how = How.ID, using = "edit-event")
-    private static WebElement ChangeState_Ddl;
+    private WebElement ChangeState_Ddl;
 	
-	private static WebElement ContentItem_Ttl(String contentItemTtl) {
+	private WebElement ContentItem_Ttl(String contentItemTtl) {
 		return webDriver.findElement(By.xpath("//table[contains(@class, 'views-table')]//a[contains(text(), '" + contentItemTtl + "')]"));
 	}
 	
-	private static WebElement EditExtendMenu_Btn(String contentItemTtl) {
+	private WebElement EditExtendMenu_Btn(String contentItemTtl) {
 		return webDriver.findElement(By.xpath("//table[contains(@class, 'views-table')]//a[contains(text(), '" + contentItemTtl + "')]/../..//a[text()='operations']"));
 	}
 	
-	private static WebElement EditMenuDelete_Btn(String contentItemTtl) {
+	private WebElement EditMenuDelete_Btn(String contentItemTtl) {
 		return webDriver.findElement(By.xpath("//table[contains(@class, 'views-table')]//a[contains(text(), '" + contentItemTtl + "')]/../..//a[text()='Delete']"));
 	}
 	
-	private static WebElement EditMenu_Btn(String contentItemTtl) {
+	private WebElement EditMenu_Btn(String contentItemTtl) {
 		return webDriver.findElement(By.xpath("//table[contains(@class, 'views-table')]//a[contains(text(), '" + contentItemTtl + "')]/../..//a[text()='Edit']"));
 	}
 	
-	private static WebElement ShareMenu_Btn(String contentItemTtl) {
+	private WebElement ShareMenu_Btn(String contentItemTtl) {
 		return webDriver.findElement(By.xpath("//table[contains(@class, 'views-table')]//a[contains(text(), '" + contentItemTtl + "')]/../..//a[text()='Share']"));
 	}
 	

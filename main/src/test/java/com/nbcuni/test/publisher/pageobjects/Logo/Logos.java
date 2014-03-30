@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
 
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
  * publisher.nbcuni.com Logos Library. Copyright
@@ -22,27 +22,27 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 
 public class Logos {
 
-	private static CustomWebDriver webDriver;
+	private Driver webDriver;
 	
     //PAGE OBJECT CONSTRUCTOR
-    public Logos(CustomWebDriver webDriver) {
-    	Logos.webDriver = webDriver;
+    public Logos(Driver webDriver) {
+    	this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
     }
     
     //PAGE OBJECT IDENTIFIERS
     @FindBy(how = How.CSS, using = "img[alt='Home']")
-    private static WebElement HomeLogo_Img;
+    private WebElement HomeLogo_Img;
     
-    private static WebElement Logo_Img(String logoTitle) {
+    private WebElement Logo_Img(String logoTitle) {
     	return webDriver.findElement(By.xpath("//div[@class='view-content']//tbody/tr/td[contains(text(), '" + logoTitle + "')]/..//img"));
     }
     
-    private static WebElement EditExtendMenu_Btn(String logoTitle) {
+    private WebElement EditExtendMenu_Btn(String logoTitle) {
 		return webDriver.findElement(By.xpath("//div[@class='view-content']//tbody/tr/td[contains(text(), '" + logoTitle + "')]/..//a[text()='operations']"));
 	}
 	
-	private static WebElement EditMenuDelete_Btn(String logoTitle) {
+	private WebElement EditMenuDelete_Btn(String logoTitle) {
 		return webDriver.findElement(By.xpath("//div[@class='view-content']//tbody/tr/td[contains(text(), '" + logoTitle + "')]/..//a[text()='Delete']"));
 	}
     

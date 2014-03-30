@@ -9,7 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.Reporter;
 
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
  * publisher.nbcuni.com Add Logo Library. Copyright
@@ -20,45 +20,45 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 
 public class AddLogo {
 
-	private static CustomWebDriver webDriver;
+	private Driver webDriver;
 	
     //PAGE OBJECT CONSTRUCTOR
-    public AddLogo(CustomWebDriver webDriver) {
-    	AddLogo.webDriver = webDriver;
+    public AddLogo(Driver webDriver) {
+    	this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
     }
     
     //PAGE OBJECT IDENTIFIERS
     @FindBy(how = How.ID, using = "edit-title")
-    private static WebElement Title_Txb;
+    private WebElement Title_Txb;
     
     @FindBy(how = How.ID, using = "edit-start-datepicker-popup-0")
-    private static WebElement StartDate_Txb;
+    private WebElement StartDate_Txb;
     
     @FindBy(how = How.ID, using = "edit-start-timeEntry-popup-1")
-    private static WebElement StartTime_Txb;
+    private WebElement StartTime_Txb;
     
     @FindBy(how = How.ID, using = "edit-end-datepicker-popup-0")
-    private static WebElement EndDate_Txb;
+    private WebElement EndDate_Txb;
     
     @FindBy(how = How.ID, using = "edit-end-timeEntry-popup-1")
-    private static WebElement EndTime_Txb;
+    private WebElement EndTime_Txb;
     
     @FindBy(how = How.ID, using = "edit-field-logo-und-0-upload")
-    private static WebElement BrowseToFile_Upl;
+    private WebElement BrowseToFile_Upl;
     
     @FindBy(how = How.ID, using = "edit-field-logo-und-0-upload-button")
-    private static WebElement Upload_Btn;
+    private WebElement Upload_Btn;
     
     @FindBy(how = How.ID, using = "edit-submit")
-    private static WebElement Save_Btn;
+    private WebElement Save_Btn;
     
     private WebElement File_Lnk(String fileName) {
     	return webDriver.findElement(By.xpath("//a[text()='" + fileName + "']"));
     }
     
     @FindBy(how = How.CSS, using = "div[class='image-preview'] img")
-    private static WebElement File_Img;
+    private WebElement File_Img;
     
     
     //PAGE OBJECT METHODS

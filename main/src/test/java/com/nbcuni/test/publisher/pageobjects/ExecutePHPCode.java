@@ -5,7 +5,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
  * publisher.nbcuni.com Execute PHP Code Library. Copyright
@@ -17,19 +17,19 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 public class ExecutePHPCode {
 
     //PAGE OBJECT CONSTRUCTOR
-    public ExecutePHPCode(CustomWebDriver webDriver) {
+    public ExecutePHPCode(Driver webDriver) {
     	PageFactory.initElements(webDriver, this);
     }
 
     //PAGE OBJECT IDENTIFIERS
     @FindBy(how = How.ID, using = "edit-code")
-    private static WebElement PHPCodeToExecute_Txa;
+    private WebElement PHPCodeToExecute_Txa;
     
     @FindBy(how = How.ID, using = "input[value='Execute']")
-    private static WebElement Execute_Btn;
+    private WebElement Execute_Btn;
     
     @FindBy(how = How.XPATH, using = "//div[@class='messages status']")
-    private static WebElement Message_Ctr;
+    private WebElement Message_Ctr;
     
     
     //PAGE OBJECT METHODS

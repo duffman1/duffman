@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
 import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
  * publisher.nbcuni.com Node Types Library. Copyright
@@ -18,20 +18,20 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 
 public class NodeTypes {
 
-    private static ContentParent contentParent;
+    ContentParent contentParent;
     
     //PAGE OBJECT CONSTRUCTOR
-    public NodeTypes(CustomWebDriver webDriver, AppLib applib) {
+    public NodeTypes(Driver webDriver, AppLib applib) {
         PageFactory.initElements(webDriver, this);
         contentParent = new ContentParent(webDriver, applib);
     }
     
     //PAGE OBJECT IDENTIFIERS
     @FindBy(how = How.ID, using = "edit-facebook-post-types-post")
-    private static WebElement Post_Cbx;
+    private WebElement Post_Cbx;
     
     @FindBy(how = How.XPATH, using = "//input[@value='Save configuration']")
-    private static WebElement SaveConfiguration_Btn;
+    private WebElement SaveConfiguration_Btn;
     
     
     //PAGE OBJECT METHODS

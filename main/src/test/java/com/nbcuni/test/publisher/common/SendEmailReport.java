@@ -43,8 +43,8 @@ public class SendEmailReport {
             Message message = new MimeMessage(session);
             message.setFrom(new InternetAddress("Automation@nbcuni.com"));
             
-            //if there are failures or few tests executed, send to automation qa resource for review
-            Integer totalTestCount = passedTestsCount + failedTestsCount;
+            //if there are failures send to automation qa resource for review
+            //Integer totalTestCount = passedTestsCount + failedTestsCount;
             if (!failedTestsCount.equals(0)) {
             	message.setRecipients(Message.RecipientType.TO,
             			InternetAddress.parse("brandon.clark@nbcuni.com"));
@@ -58,14 +58,18 @@ public class SendEmailReport {
             
             BodyPart messageBodyPart = new MimeBodyPart();
 
-            Integer actualFailedTestCount = failedTestsCount / config.getReRunOnFailureCount();
+            String resultLine;
+            if (failedTestsCount > 0) {
+            	resultLine = "Errors were detected during test execution.";
+            }
+            else {
+            	resultLine = "No errors were detected during test execution.";
+            }
             
             messageBodyPart.setText("Test run complete against latest build on " + config.getConfigValue("AppURL")
-                + "\n\n Total tests executed = " + totalTestCount.toString()
-            		+ "\n Tests passed = " + passedTestsCount.toString()
-            			+ "\n Tests failed = " + actualFailedTestCount.toString()
-            				+ "\n\n A detailed report is attached. Iteration Report archives are assigned to task " + config.getConfigValue("RallyTaskID") + "."
-            					+ "\n\n Publisher 7 Automation Team");
+                + "\n\n" + resultLine
+            		+ "\n\n A detailed report is attached. Iteration Report archives are assigned to task " + config.getConfigValue("RallyTaskID") + "."
+            			+ "\n\n Publisher 7 Automation Team");
 
             Multipart multipart = new MimeMultipart();
 

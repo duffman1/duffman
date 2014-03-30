@@ -1,7 +1,7 @@
 package com.nbcuni.test.publisher.pageobjects.MPX;
 
 import com.nbcuni.test.publisher.common.AppLib;
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -17,16 +17,16 @@ import org.testng.Reporter;
 public class DeletingMPXAccount {
 
 	//PAGE OBJECT CONSTRUCTORS
-    public DeletingMPXAccount(CustomWebDriver webDriver, AppLib applib) {
+    public DeletingMPXAccount(Driver webDriver, AppLib applib) {
         PageFactory.initElements(webDriver, this);
     }
     
     //PAGE OBJECT IDENTIFIERS
     @FindBy(how = How.XPATH, using = "//div[@class='message'][text()='Completed 4 of 4.']")
-    private static WebElement Completed4of4_Msg;
+    private WebElement Completed4of4_Msg;
     
     @FindBy(how = How.XPATH, using = "//div[@class='percentage'][text()='100%']")
-    private static WebElement OneHundredPercent_Msg;
+    private WebElement OneHundredPercent_Msg;
     
     
     //PAGE OBJECT METHODS

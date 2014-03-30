@@ -7,7 +7,7 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.Reporter;
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
  * publisher.nbcuni.com Logo Library. Copyright
@@ -18,23 +18,23 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 
 public class Logo {
 
-    private static CustomWebDriver webDriver;
+    private Driver webDriver;
     
     //PAGE OBJECT CONSTRUCTOR
-    public Logo(final CustomWebDriver webDriver) {
-        Logo.webDriver = webDriver;
+    public Logo(final Driver webDriver) {
+        this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
     }
     
     //PAGE OBJECT IDENTIFIERS
     @FindBy(how = How.CSS, using = "div[id='edit-field-logo-und-0'] img")
-    private static WebElement Logo_Img;
+    private WebElement Logo_Img;
     
     @FindBy(how = How.ID, using = "edit-field-cover-logo-und-0-edit")
-    private static WebElement Edit_Btn;
+    private WebElement Edit_Btn;
     
     @FindBy(how = How.ID, using = "edit-field-logo-und-0-select")
-    private static WebElement Select_Btn;
+    private WebElement Select_Btn;
     
     
     //PAGE OBJECT METHODS

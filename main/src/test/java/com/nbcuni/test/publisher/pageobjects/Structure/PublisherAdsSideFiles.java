@@ -12,7 +12,7 @@ import org.testng.Assert;
 import org.testng.Reporter;
 
 import com.nbcuni.test.publisher.common.AppLib;
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
 * publisher.nbcuni.com Publisher Ads Side Files Library. Copyright
@@ -23,47 +23,47 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 
 public class PublisherAdsSideFiles {
 
-	private static CustomWebDriver webDriver;
-	private static AppLib applib;
-	private static WebDriverWait wait;
+	private Driver webDriver;
+	private AppLib applib;
+	private WebDriverWait wait;
 	
     //PAGE OBJECT CONSTRUCTOR
-    public PublisherAdsSideFiles(CustomWebDriver webDriver, AppLib applib) {
-    	PublisherAdsSideFiles.webDriver = webDriver;
-    	PublisherAdsSideFiles.applib = applib;
+    public PublisherAdsSideFiles(Driver webDriver, AppLib applib) {
+    	this.webDriver = webDriver;
+    	this.applib = applib;
     	PageFactory.initElements(webDriver, this);
     	wait = new WebDriverWait(webDriver, 10);
     }
     
     //PAGE OBJECT IDENTIFIERS
     @FindBy(how = How.LINK_TEXT, using = "Add")
-    private static WebElement Add_Lnk;
+    private WebElement Add_Lnk;
     
-    private static WebElement AdSideFile_Lnk(String linkPath) {
+    private WebElement AdSideFile_Lnk(String linkPath) {
     	return webDriver.findElement(By.xpath("//a[text()='" + linkPath + "']"));
     }
     
-    private static WebElement AdSideFileEdit_Lnk(String adName) {
+    private WebElement AdSideFileEdit_Lnk(String adName) {
     	return webDriver.findElement(By.xpath("//td[text()='" + adName + "']/..//a[text()='Edit']"));
     }
     
-    private static WebElement AdSideFileName_Txt(String adName) {
+    private WebElement AdSideFileName_Txt(String adName) {
     	return webDriver.findElement(By.xpath("//td[text()='" + adName + "']"));
     }
     
-    private static WebElement AdSideFileStorage_Txt(String adName, String storageType) {
+    private WebElement AdSideFileStorage_Txt(String adName, String storageType) {
     	return webDriver.findElement(By.xpath("//td[text()='" + adName + "']/../td[contains(@class, 'storage')][text()='" + storageType + "']"));
     }
     
-    private static WebElement AdSideFileExpandEdit_Lnk(String adName) {
+    private WebElement AdSideFileExpandEdit_Lnk(String adName) {
     	return webDriver.findElement(By.xpath("//td[text()='" + adName + "']/..//a[text()='open']"));
     }
     
-    private static WebElement AdSideFileClone_Lnk(String adName) {
+    private WebElement AdSideFileClone_Lnk(String adName) {
     	return webDriver.findElement(By.xpath("//td[text()='" + adName + "']/..//a[text()='Clone']"));
     }
     
-    private static WebElement AdSideFileDelete_Lnk(String adName) {
+    private WebElement AdSideFileDelete_Lnk(String adName) {
     	return webDriver.findElement(By.xpath("//td[text()='" + adName + "']/..//a[text()='Delete']"));
     }
     

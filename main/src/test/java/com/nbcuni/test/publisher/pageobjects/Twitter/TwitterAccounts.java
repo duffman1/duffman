@@ -9,7 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
 
 import com.nbcuni.test.publisher.common.AppLib;
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
  * publisher.nbcuni.com Twitter Library. Copyright
@@ -20,22 +20,22 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 
 public class TwitterAccounts {
 
-	private static CustomWebDriver webDriver;
-	private static AppLib applib;
+	private Driver webDriver;
+	private AppLib applib;
 	
     //PAGE OBJECT CONSTRUCTOR
-    public TwitterAccounts(CustomWebDriver webDriver, AppLib applib) {
-    	TwitterAccounts.webDriver = webDriver;
-    	TwitterAccounts.applib = applib;
+    public TwitterAccounts(Driver webDriver, AppLib applib) {
+    	this.webDriver = webDriver;
+    	this.applib = applib;
         PageFactory.initElements(webDriver, this);
     }
     
     //PAGE OBJECT IDENTIFIERS
     @FindBy(how = How.ID, using = "edit-submit")
-    private static WebElement GoToTwitterAddAuthenticatedAccount_Btn;
+    private WebElement GoToTwitterAddAuthenticatedAccount_Btn;
     
     @FindBy(how = How.XPATH, using = "//a[text()='@PublisherSeven']")
-    private static WebElement PublisherSevenAccount_Lnk;
+    private WebElement PublisherSevenAccount_Lnk;
     
     
     //PAGE OBJECT METHODS

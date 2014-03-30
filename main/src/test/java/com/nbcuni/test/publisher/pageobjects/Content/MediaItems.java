@@ -9,7 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.Reporter;
 
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
  * publisher.nbcuni.com Media Items Library. Copyright
@@ -20,26 +20,26 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 
 public class MediaItems {
 
-    private static CustomWebDriver webDriver;
+    private Driver webDriver;
     
     //PAGE OBJECT CONSTRUCTOR
-    public MediaItems(CustomWebDriver webDriver) {
-        MediaItems.webDriver = webDriver;
+    public MediaItems(Driver webDriver) {
+        this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
     }
     
     //PAGE OBJECT IDENTIFIERS
-    private static WebElement MediaItem_Img(String imageIndex) {
+    private WebElement MediaItem_Img(String imageIndex) {
     	return webDriver.findElement(By.xpath("(//div[@class='media-thumbnail']/img)[" + imageIndex + "]"));
     }
     
     @FindBy(how = How.ID, using = "edit-field-media-items-und-add-more")
-    private static WebElement Select_Btn;
+    private WebElement Select_Btn;
     
     @FindBy(how = How.XPATH, using = "//a[@id='edit-field-media-items-und-0-edit']")
-    private static WebElement Edit_Btn;
+    private WebElement Edit_Btn;
     
-    private static WebElement Unique_Url(String imageIndex) {
+    private WebElement Unique_Url(String imageIndex) {
     	return webDriver.findElement(By.xpath("(//div[@class='media-thumbnail']/../../..//div[3]/a)[" + imageIndex + "]"));
     }
     

@@ -1,7 +1,7 @@
 package com.nbcuni.test.publisher.pageobjects.Content;
 
 import com.nbcuni.test.publisher.common.AppLib;
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 import org.testng.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -22,21 +22,21 @@ import java.util.concurrent.TimeUnit;
 
 public class Content {
 
-    private static CustomWebDriver webDriver;
-    private static AppLib applib;
-    private static WebDriverWait wait;
+    private Driver webDriver;
+    private AppLib applib;
+    private WebDriverWait wait;
     
     //PAGE OBJECT CONSTRUCTOR
-    public Content(CustomWebDriver webDriver, AppLib applib) {
-        Content.webDriver = webDriver;
-        Content.applib = applib;
+    public Content(Driver webDriver, AppLib applib) {
+        this.webDriver = webDriver;
+        this.applib = applib;
         wait = new WebDriverWait(webDriver, 10);
         PageFactory.initElements(webDriver, this);
     }
    
     //PAGE OBJECT IDENTIFIERS
     @FindBy(how = How.LINK_TEXT, using = "Add file")
-    private static WebElement AddFile_Lnk;
+    private WebElement AddFile_Lnk;
     
     private WebElement ContentItem_Lnk(String contentItemTitle) {
     	return webDriver.findElement(By.xpath("//a[text()='" + contentItemTitle + "']"));

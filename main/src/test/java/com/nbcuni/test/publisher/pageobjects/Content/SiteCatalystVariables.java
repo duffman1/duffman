@@ -8,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
  * publisher.nbcuni.com Site Catalyst Variables Library. Copyright
@@ -19,32 +19,32 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 
 public class SiteCatalystVariables {
 
-    private static CustomWebDriver webDriver;
-    private static WebDriverWait wait;
+    private Driver webDriver;
+    private WebDriverWait wait;
     
     //PAGE OBJECT CONSTRUCTOR
-    public SiteCatalystVariables(CustomWebDriver webDriver) {
-        SiteCatalystVariables.webDriver = webDriver;
+    public SiteCatalystVariables(Driver webDriver) {
+        this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
         wait = new WebDriverWait(webDriver, 10);
     }
     
     //PAGE OBJECT IDENTIFIERS
     @FindBy(how = How.XPATH, using = "//a/strong[text()='SiteCatalyst Variables']")
-    private static WebElement SiteCatalystVariables_Tab;
+    private WebElement SiteCatalystVariables_Tab;
     
-    private static WebElement VariableValue_Txb(String variableName) {
+    private WebElement VariableValue_Txb(String variableName) {
     	return webDriver.findElement(By.xpath("//input[@value='" + variableName + "']/../../..//input[contains(@id, 'value')]"));
     }
     
     @FindBy(how = How.ID, using = "edit-add-another-variable")
-    private static WebElement AddAnotherVariable_Btn;
+    private WebElement AddAnotherVariable_Btn;
     
     @FindBy(how = How.XPATH, using = "(//input[contains(@id, 'name')][@value=''])[1]")
-    private static WebElement BlankVariableName_Txb;
+    private WebElement BlankVariableName_Txb;
     
     @FindBy(how = How.XPATH, using = "(//input[contains(@id, 'name')][@value='']/../../..//input[contains(@id, 'value')][@value=''])[1]")
-    private static WebElement BlankVariableValue_Txb;
+    private WebElement BlankVariableValue_Txb;
     
     
     //PAGE OBJECT METHODS

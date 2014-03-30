@@ -7,7 +7,7 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.Reporter;
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
  * publisher.nbcuni.com Cover Photo Library. Copyright
@@ -18,23 +18,23 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 
 public class CoverPhoto {
 
-    private static CustomWebDriver webDriver;
+    private Driver webDriver;
     
     //PAGE OBJECT CONSTRUCTOR
-    public CoverPhoto(final CustomWebDriver webDriver) {
-        CoverPhoto.webDriver = webDriver;
+    public CoverPhoto(final Driver webDriver) {
+        this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
     }
     
     //PAGE OBJECT IDENTIFIERS
     @FindBy(how = How.XPATH, using = "//div[contains(@id, 'field-character-cover-photo')]//img")
-    private static WebElement CoverPhoto_Img;
+    private WebElement CoverPhoto_Img;
     
     @FindBy(how = How.XPATH, using = "//div[contains(@id, 'field-character-cover-photo')]//a[text()='Edit']")
-    private static WebElement Edit_Btn;
+    private WebElement Edit_Btn;
     
     @FindBy(how = How.XPATH, using = "//div[contains(@id, 'field-character-cover-photo')]//a[text()='Select']")
-    private static WebElement Select_Btn;
+    private WebElement Select_Btn;
     
     
     //PAGE OBJECT METHODS

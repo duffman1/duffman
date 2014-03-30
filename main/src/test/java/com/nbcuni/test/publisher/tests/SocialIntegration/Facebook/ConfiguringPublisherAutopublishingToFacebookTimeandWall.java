@@ -55,8 +55,6 @@ public class ConfiguringPublisherAutopublishingToFacebookTimeandWall extends Par
         Modules modules = new Modules(webDriver, applib);
         modules.EnterFilterName("Pub Social");
         modules.EnableModule("Pub Social");
-        modules.EnterFilterName("Pub Post");
-        modules.EnableModule("Pub Post");
         overlay.ClickCloseOverlayLnk();
         
         //Step 3a

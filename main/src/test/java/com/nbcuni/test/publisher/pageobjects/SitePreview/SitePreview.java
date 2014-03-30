@@ -10,7 +10,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
  * publisher.nbcuni.com PreviewSite Library. Copyright
@@ -20,37 +20,37 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
  *********************************************/
 public class SitePreview {
 
-	 private static CustomWebDriver webDriver;
-	 private static WebDriverWait wait;
+	 private Driver webDriver;
+	 private WebDriverWait wait;
 	 
 	 //PAGE OBJECT CONSTRUCTOR    
-	 public SitePreview(CustomWebDriver webDriver) {
-		 SitePreview.webDriver = webDriver;
+	 public SitePreview(Driver webDriver) {
+		 this.webDriver = webDriver;
 		 PageFactory.initElements(webDriver, this);
 	     wait = new WebDriverWait(webDriver, 10);  
 	 }
 	 
 	 //PAGE OBJECT IDENTIFIERS
 	 @FindBy(how = How.ID, using ="preview-site")
-	 private static WebElement PreviewSite_Lnk;
+	 private WebElement PreviewSite_Lnk;
 	    
 	 @FindBy(how = How.CSS, using ="input[value='Enable Preview']")
-	 private static WebElement EnablePreview_Btn;
+	 private WebElement EnablePreview_Btn;
 	    
 	 @FindBy(how = How.ID, using ="edit-active-condition-container-active-condition-selector")
-	 private static WebElement SelectCondition_Ddl;
+	 private WebElement SelectCondition_Ddl;
 	    
 	 @FindBy(how = How.ID, using ="edit-active-condition-container-date-condition-widget-preview-date-datepicker-popup-0")
-	 private static WebElement Date_Txb;
+	 private WebElement Date_Txb;
 	      
 	 @FindBy(how = How.ID, using ="edit-active-condition-container-date-condition-widget-preview-date-timeEntry-popup-1")
-	 private static WebElement Time_Txb;
+	 private WebElement Time_Txb;
 	   
 	 @FindBy(how = How.ID, using ="edit-cancel")
-	 private static WebElement DisablePreview_Btn;	
+	 private WebElement DisablePreview_Btn;	
 	    
 	 @FindBy(how = How.CSS, using ="input[value='Update Preview']")
-	 private static WebElement UpdatePreview_Btn;
+	 private WebElement UpdatePreview_Btn;
 	    
 	
 	 //PAGE OBJECT METHODS

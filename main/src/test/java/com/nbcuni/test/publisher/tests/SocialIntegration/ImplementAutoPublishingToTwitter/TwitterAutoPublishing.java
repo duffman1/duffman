@@ -2,18 +2,15 @@ package com.nbcuni.test.publisher.tests.SocialIntegration.ImplementAutoPublishin
 
 import java.net.URL;
 import java.util.Arrays;
-
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Content.BasicInformation;
-import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.Content.PublishingOptions;
 import com.nbcuni.test.publisher.pageobjects.Content.Revisions;
 import com.nbcuni.test.publisher.pageobjects.Content.WorkBench;
@@ -47,12 +44,10 @@ public class TwitterAutoPublishing extends ParentTest{
     	UserLogin userLogin = applib.openApplication();
     	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
         taxonomy.NavigateSite("Modules");
-        overlay.SwitchToFrame("Modules");
+        overlay.SwitchToActiveFrame();
         Modules modules = new Modules(webDriver, applib);
         modules.EnterFilterName("Pub Social");
         modules.EnableModule("Pub Social");
-        modules.EnterFilterName("Pub Post");
-        modules.EnableModule("Pub Post");
         
         //Step 2
         modules.EnterFilterName("Twitter");
@@ -69,7 +64,6 @@ public class TwitterAutoPublishing extends ParentTest{
         twitter.EnterOAuthConsumerKey("5Ur95TtwzHY2A9hMKg");
         twitter.EnterOAuthConsumerSecret("GEHafCRDdJpRoaJ4Zk4tPYDObR3IkeEtnr5otrpIs");
         twitter.ClickSaveConfigurationBtn();
-        ContentParent contentParent = new ContentParent(webDriver, applib);
         contentParent.VerifyMessageStatus("The configuration options have been saved.");
         overlay.ClickCloseOverlayLnk();
         

@@ -6,7 +6,7 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Reporter;
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
 * publisher.nbcuni.com Content Type Structure Library. Copyright
@@ -18,19 +18,19 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 public class ContentTypeStructure {
 
     //PAGE OBJECT CONSTRUCTOR
-    public ContentTypeStructure(CustomWebDriver webDriver) {
+    public ContentTypeStructure(Driver webDriver) {
     	PageFactory.initElements(webDriver, this);
     }
     
     //PAGE OBJECT IDENTIFIERS
     @FindBy(how = How.XPATH, using = "//a/strong[text()='XML sitemap']")
-    private static WebElement XMLsitemap_Lnk;
+    private WebElement XMLsitemap_Lnk;
     
     @FindBy(how = How.ID, using = "edit-xmlsitemap-status")
-    private static WebElement Inclustion_Ddl;
+    private WebElement Inclustion_Ddl;
     
     @FindBy(how = How.ID, using = "edit-submit")
-    private static WebElement SaveContentType_Btn;
+    private WebElement SaveContentType_Btn;
 
     
     //PAGE OBJECT METHODS

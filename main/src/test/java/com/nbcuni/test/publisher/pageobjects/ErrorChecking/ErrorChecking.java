@@ -13,7 +13,7 @@ import org.testng.Assert;
 import org.testng.Reporter;
 
 import com.nbcuni.test.publisher.common.AppLib;
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
  * publisher.nbcuni.com Content Parent Library. Copyright
@@ -24,28 +24,28 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 
 public class ErrorChecking {
 
-    private static CustomWebDriver webDriver;
-    private static AppLib applib;
+    private Driver webDriver;
+    private AppLib applib;
     
     //PAGE OBJECT CONSTRUCTOR
-    public ErrorChecking(CustomWebDriver webDriver, AppLib applib) {
-        ErrorChecking.webDriver = webDriver;
-        ErrorChecking.applib = applib;
+    public ErrorChecking(Driver webDriver, AppLib applib) {
+        this.webDriver = webDriver;
+        this.applib = applib;
         PageFactory.initElements(webDriver, this);
     }
     
     //PAGE OBJECT IDENTIFIERS
     @FindBy(how = How.XPATH, using = "//div[@class='messages error']")
-    private static WebElement Error_Ctr;
+    private WebElement Error_Ctr;
     
     @FindBy(how = How.XPATH, using = "//div[@class='messages error']/ul")
-    private static WebElement MoreThanOneError_Ctr;
+    private WebElement MoreThanOneError_Ctr;
     
-    private static WebElement DisabledPlayerError_Ctr(String playerTitle) {
+    private WebElement DisabledPlayerError_Ctr(String playerTitle) {
     	return webDriver.findElement(By.xpath("//div[@class='messages error']/ul/li//em[contains(text(), '" + playerTitle + "')]/../.."));
     }
     
-    private static List<WebElement> Error_Itms() {
+    private List<WebElement> Error_Itms() {
     	return webDriver.findElements(By.xpath("//div[@class='messages error']/ul/li"));
     }
     

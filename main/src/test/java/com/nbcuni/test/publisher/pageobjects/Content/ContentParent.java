@@ -2,7 +2,7 @@ package com.nbcuni.test.publisher.pageobjects.Content;
 
 import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.publisher.pageobjects.ErrorChecking.ErrorChecking;
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -23,48 +23,48 @@ import java.util.List;
 
 public class ContentParent {
 
-    private static CustomWebDriver webDriver;
-    private static ErrorChecking errorChecking;
+    private Driver webDriver;
+    private ErrorChecking errorChecking;
     
     //PAGE OBJECT CONSTRUCTOR
-    public ContentParent(CustomWebDriver webDriver, AppLib applib) {
-        ContentParent.webDriver = webDriver;
+    public ContentParent(Driver webDriver, AppLib applib) {
+        this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
         errorChecking = new ErrorChecking(webDriver, applib);
     }
     
     //PAGE OBJECT IDENTIFIERS
     @FindBy(how = How.XPATH, using = "//input[@id='edit-submit']")
-    private static WebElement Save_Btn;
+    private WebElement Save_Btn;
     
     @FindBy(how = How.ID, using = "edit-cancel")
-    private static WebElement Cancel_Btn;
+    private WebElement Cancel_Btn;
     
     @FindBy(how = How.XPATH, using = "//div[@class='messages status']")
-    private static WebElement Message_Ctr;
+    private WebElement Message_Ctr;
     
     @FindBy(how = How.XPATH, using = "//div[@class='messages warning']")
-    private static WebElement Warning_Ctr;
+    private WebElement Warning_Ctr;
     
     @FindBy(how = How.XPATH, using = "//div[@class='messages error']")
-    private static WebElement Error_Ctr;
+    private WebElement Error_Ctr;
     
     @FindBy(how = How.XPATH, using = "//a[text()='Edit Draft']")
-    private static WebElement EditDraft_Tab;
+    private WebElement EditDraft_Tab;
     
     @FindBy(how = How.XPATH, using = "//a[text()='Revisions']")
-    private static WebElement Revisions_Tab;
+    private WebElement Revisions_Tab;
     
     @FindBy(how = How.ID, using = "page-title")
-    private static WebElement PageTitle;
+    private WebElement PageTitle;
     
     @FindBy(how = How.XPATH, using = "//a[text()='View']")
-    private static WebElement View_Tab;
+    private WebElement View_Tab;
     
     @FindBy(how = How.XPATH, using = "//body")
-    private static WebElement Body_Txt;
+    private WebElement Body_Txt;
     
-    private static WebElement RequiredField_Ast(String field) {
+    private WebElement RequiredField_Ast(String field) {
     	return webDriver.findElement(By.xpath("//*[contains(text(), '" + field + "')]/span[text()='*']"));
     }
     

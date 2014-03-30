@@ -1,7 +1,7 @@
 package com.nbcuni.test.publisher.pageobjects.Structure.Queues;
 
 import com.nbcuni.test.publisher.common.AppLib;
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -18,19 +18,19 @@ import org.testng.Reporter;
 
 public class QueueTypes {
 
-    private static CustomWebDriver webDriver;
+    private Driver webDriver;
     
     //PAGE OBJECT CONSTRUCTOR
-    public QueueTypes(CustomWebDriver webDriver, AppLib applib) {
-        QueueTypes.webDriver = webDriver;
+    public QueueTypes(Driver webDriver, AppLib applib) {
+        this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
     }
     
     //PAGE OBJECT IDENTIFIERS
     @FindBy(how = How.XPATH, using = "//a[text()='Add queue type']")
-    private static WebElement AddQueueType_Lnk;
+    private WebElement AddQueueType_Lnk;
     
-    private static WebElement DeleteQueueType_Lnk(String queueType) {
+    private WebElement DeleteQueueType_Lnk(String queueType) {
     	return webDriver.findElement(By.xpath("//td[contains(text(), '" + queueType + "')]/..//a[text()='delete']"));
     }
     

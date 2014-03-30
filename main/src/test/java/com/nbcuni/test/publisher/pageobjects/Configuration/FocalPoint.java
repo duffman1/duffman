@@ -6,7 +6,7 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Reporter;
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
 * publisher.nbcuni.com Focal Point Library. Copyright
@@ -17,23 +17,23 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 public class FocalPoint {
 		
 	//PAGE OBJECT CONSTRUCTOR
-	public FocalPoint(CustomWebDriver webDriver) {
+	public FocalPoint(Driver webDriver) {
 		PageFactory.initElements(webDriver, this);
 		
 	}
 
 	//PAGE OBJECT IDENTIFIERS
 	@FindBy(how = How.ID, using ="edit-focal-point-enabled-for-image")
-	private static WebElement StandardImageFields_Cbx;
+	private WebElement StandardImageFields_Cbx;
 	
 	@FindBy(how = How.ID, using ="edit-focal-point-enabled-for-media")
-	private static WebElement MediaModuleImageFields_Cbx;
+	private WebElement MediaModuleImageFields_Cbx;
 	
 	@FindBy(how = How.ID, using ="edit-focal-point-preview-image-style")
-	private static WebElement PreviewImageStyle_Ddl;
+	private WebElement PreviewImageStyle_Ddl;
 	
 	@FindBy(how = How.ID, using ="edit-submit")
-	private static WebElement SaveConfiguration_Btn;
+	private WebElement SaveConfiguration_Btn;
 
 	
 	//PAGE OBJECT METHODS

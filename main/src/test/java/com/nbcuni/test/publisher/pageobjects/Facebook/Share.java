@@ -12,7 +12,7 @@ import org.testng.Assert;
 import org.testng.Reporter;
 
 import com.nbcuni.test.publisher.common.AppLib;
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
  * publisher.nbcuni.com Share Library. Copyright
@@ -23,39 +23,39 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 
 public class Share {
 
-    private static CustomWebDriver webDriver;
-    private static AppLib applib;
-    private static WebDriverWait wait;
+    private Driver webDriver;
+    private AppLib applib;
+    private WebDriverWait wait;
     
     //PAGE OBJECT CONSTRUCTOR
-    public Share(CustomWebDriver webDriver, AppLib applib) {
-        Share.webDriver = webDriver;
-        Share.applib = applib;
+    public Share(Driver webDriver, AppLib applib) {
+        this.webDriver = webDriver;
+        this.applib = applib;
         PageFactory.initElements(webDriver, this);
         wait = new WebDriverWait(webDriver, 10);
     }
     
     //PAGE OBJECT IDENTIFIERS
     @FindBy(how = How.XPATH, using = "//a/strong[text()='Facebook']")
-    private static WebElement Facebook_Lnk;
+    private WebElement Facebook_Lnk;
     
     @FindBy(how = How.ID, using = "edit-facebook-enabled")
-    private static WebElement PostToFacebookWall_Cbx;
+    private WebElement PostToFacebookWall_Cbx;
     
     @FindBy(how = How.XPATH, using = "//a/strong[text()='Twitter']")
-    private static WebElement Twitter_Lnk;
+    private WebElement Twitter_Lnk;
     
     @FindBy(how = How.ID, using = "edit-twitter-enabled")
-    private static WebElement PostToTwitter_Cbx;
+    private WebElement PostToTwitter_Cbx;
     
     @FindBy(how = How.ID, using = "edit-facebook-stream-post")
-    private static WebElement ProvideBriefMessage_Txa;
+    private WebElement ProvideBriefMessage_Txa;
     
     @FindBy(how = How.ID, using = "edit-twitter-status-update")
-    private static WebElement Tweet_Txa;
+    private WebElement Tweet_Txa;
     
     @FindBy(how = How.XPATH, using = "//input[@value='Share']")
-    private static WebElement Share_Btn;
+    private WebElement Share_Btn;
     
     
     //PAGE OBJECT METHODS

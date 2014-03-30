@@ -11,7 +11,7 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
 
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
  * publisher.nbcuni.com My Work Library. Copyright
@@ -22,23 +22,23 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 
 public class MyWork {
 
-	private static CustomWebDriver webDriver;
+	private Driver webDriver;
 	
     //PAGE OBJECT CONSTRUCTOR
-    public MyWork(CustomWebDriver webDriver) {
-    	MyWork.webDriver = webDriver;
+    public MyWork(Driver webDriver) {
+    	this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
     }
     
     //PAGE OBJECT IDENTIFIERS
     @FindBy(how = How.XPATH, using = "//a[text()='My Work']")
-    private static WebElement MyWork_Btn;
+    private WebElement MyWork_Btn;
     
-    private static WebElement Edit_Lnk(String title) {
+    private WebElement Edit_Lnk(String title) {
     	return webDriver.findElement(By.xpath("//a[text()='" + title + "']/../..//a[text()='edit']"));
     }
     
-    private static WebElement ContentItem_Ctr(String title) {
+    private WebElement ContentItem_Ctr(String title) {
     	return webDriver.findElement(By.xpath("//td[contains(@class, 'title')]/a[text()='" + title + "']/../.."));
     }
     

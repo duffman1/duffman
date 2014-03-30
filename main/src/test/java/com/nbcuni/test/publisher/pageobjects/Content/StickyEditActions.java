@@ -6,7 +6,7 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
 
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
  * publisher.nbcuni.com Sticky Edit Actions Library. Copyright
@@ -18,16 +18,16 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 public class StickyEditActions {
 
     //PAGE OBJECT CONSTRUCTOR
-    public StickyEditActions(CustomWebDriver webDriver) {
+    public StickyEditActions(Driver webDriver) {
         PageFactory.initElements(webDriver, this);
     }
     
     //PAGE OBJECT IDENTIFIERS
     @FindBy(how = How.XPATH, using = "//div[contains(@class, 'sticky-element')]/input[@id='edit-submit']")
-    private static WebElement Save_Btn;
+    private WebElement Save_Btn;
     
     @FindBy(how = How.XPATH, using = "//div[contains(@class, 'sticky-element')]/input[@id='edit-preview']")
-    private static WebElement Preview_Btn;
+    private WebElement Preview_Btn;
     
     
     //PAGE OBJECT METHODS

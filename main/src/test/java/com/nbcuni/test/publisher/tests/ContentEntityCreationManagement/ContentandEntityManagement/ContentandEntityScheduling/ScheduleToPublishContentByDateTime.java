@@ -2,13 +2,15 @@ package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Contenta
 
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.RerunOnFailure;
-import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
-import com.nbcuni.test.publisher.pageobjects.Content.*;
+import com.nbcuni.test.publisher.pageobjects.Content.BasicInformation;
+import com.nbcuni.test.publisher.pageobjects.Content.CreateDefaultContent;
+import com.nbcuni.test.publisher.pageobjects.Content.PublishingOptions;
+import com.nbcuni.test.publisher.pageobjects.Content.RevisionState;
+import com.nbcuni.test.publisher.pageobjects.Content.Revisions;
+import com.nbcuni.test.publisher.pageobjects.Content.WorkBench;
 import com.nbcuni.test.publisher.pageobjects.Queues.ScheduleQueue;
-
 import org.testng.annotations.Test;
-
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Calendar;
@@ -38,10 +40,6 @@ public class ScheduleToPublishContentByDateTime extends ParentTest {
         UserLogin userLogin = applib.openApplication();
         userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
 
-        //Step 1a
-        Modules modules = new Modules(webDriver, applib);
-        modules.VerifyModuleEnabled("Pub Post");
-        
         //Step 2
         taxonomy.VerifyContentMenuExist("Content");
         taxonomy.VerifyContentMenuExist("My Workbench");
@@ -79,7 +77,6 @@ public class ScheduleToPublishContentByDateTime extends ParentTest {
         PublishingOptions publishingOptions = new PublishingOptions(webDriver);
         publishingOptions.ClickPublishingOptionsLnk();
         publishingOptions.EnterMessageForStateChange("Test Revision 2");
-        ContentParent contentParent = new ContentParent(webDriver, applib);
         contentParent.ClickSaveBtn();
         overlay.switchToDefaultContent();
 

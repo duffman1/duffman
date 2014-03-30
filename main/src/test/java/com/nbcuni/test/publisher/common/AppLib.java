@@ -2,8 +2,8 @@ package com.nbcuni.test.publisher.common;
 
 import com.ibm.icu.text.DateFormat;
 import com.ibm.icu.text.SimpleDateFormat;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
-import com.nbcuni.test.webdriver.CustomWebDriver;
 import org.testng.Assert;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
@@ -25,9 +25,9 @@ public class AppLib {
 	Config config = new Config();
 	
     private String environment = "";
-    private CustomWebDriver webDriver;
+    private Driver webDriver;
     
-    public AppLib(CustomWebDriver webDriver) {
+    public AppLib(Driver webDriver) {
     	this.webDriver = webDriver;
     }
 
@@ -146,7 +146,7 @@ public class AppLib {
     
     public UserLogin openApplication() throws Exception {
         Reporter.log("Open url '" + this.getApplicationURL() + "'.");
-        webDriver.openURL(this.getApplicationURL());        
+        webDriver.navigate().to(this.getApplicationURL());        
         return new UserLogin(webDriver);
     }
     

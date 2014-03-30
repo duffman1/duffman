@@ -15,7 +15,7 @@ import org.testng.Reporter;
 
 import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXAssets;
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
  * publisher.nbcuni.com Add File Library. Copyright
@@ -26,15 +26,15 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 
 public class AddFile {
 
-    private static CustomWebDriver webDriver;
-    private static AppLib applib;
-    private static Screen sikuli;
-    private static MPXAssets mpxAssets;
+    private Driver webDriver;
+    private AppLib applib;
+    private Screen sikuli;
+    private MPXAssets mpxAssets;
     
     //PAGE OBJECT CONSTRUCTOR
-    public AddFile(CustomWebDriver webDriver, AppLib applib) {
-        AddFile.webDriver = webDriver;
-        AddFile.applib = applib;
+    public AddFile(Driver webDriver, AppLib applib) {
+        this.webDriver = webDriver;
+        this.applib = applib;
         sikuli = new Screen();
         mpxAssets = new MPXAssets(applib);
         PageFactory.initElements(webDriver, this);
@@ -42,16 +42,16 @@ public class AddFile {
     
     //PAGE OBJECT IDENTIFIERS
     @FindBy(how = How.XPATH, using = "//a[@id='edit-upload_browse']")
-    private static WebElement AddFiles_Lnk;
+    private WebElement AddFiles_Lnk;
     
     @FindBy(how = How.XPATH, using = "//a[@class='plupload_button plupload_start']")
-    private static WebElement StartUpload_Lnk;
+    private WebElement StartUpload_Lnk;
     
     @FindBy(how = How.XPATH, using = "//span[@class='plupload_upload_status'][text()='Uploaded 1/1 files']")
-    private static WebElement UploadStatus1of1Files_Txt;
+    private WebElement UploadStatus1of1Files_Txt;
     
     @FindBy(how = How.XPATH, using = "//input[@id='edit-next']")
-    private static WebElement Next_Btn;
+    private WebElement Next_Btn;
     
     
     //PAGE OBJECT METHODS

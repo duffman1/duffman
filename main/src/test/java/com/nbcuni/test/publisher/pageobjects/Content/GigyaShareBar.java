@@ -1,7 +1,7 @@
 package com.nbcuni.test.publisher.pageobjects.Content;
 
 import com.nbcuni.test.publisher.common.AppLib;
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -17,31 +17,31 @@ import org.testng.Reporter;
 public class GigyaShareBar {
 
 	//PAGE OBJECT CONSTRUCTORS
-    public GigyaShareBar(CustomWebDriver webDriver, AppLib applib) {
+    public GigyaShareBar(Driver webDriver, AppLib applib) {
         PageFactory.initElements(webDriver, this);
     }
     
     //PAGE OBJECT IDENTIFIERS
     @FindBy(how = How.XPATH, using = "//div[contains(@class, 'gig')][text()='Tumblr']")
-    private static WebElement Tumblr_Btn;
+    private WebElement Tumblr_Btn;
     
     @FindBy(how = How.XPATH, using = "//div[contains(@class, 'gig')][text()='Email']")
-    private static WebElement Email_Btn;
+    private WebElement Email_Btn;
     
     @FindBy(how = How.XPATH, using = "//div[contains(@class, 'gig')][text()='Google+']")
-    private static WebElement GooglePlus_Btn;
+    private WebElement GooglePlus_Btn;
     
     @FindBy(how = How.XPATH, using = "//div[contains(@class, 'gig')][text()='Foursquare']")
-    private static WebElement Foursquare_Btn;
+    private WebElement Foursquare_Btn;
     
     @FindBy(how = How.XPATH, using = "//div[contains(@class, 'gig')][text()='Print']")
-    private static WebElement Print_Btn;
+    private WebElement Print_Btn;
     
     @FindBy(how = How.XPATH, using = "//div[contains(@class, 'gig')]//iframe[contains(@id, 'twitter')]")
-    private static WebElement Twitter_Frm;
+    private WebElement Twitter_Frm;
     
     @FindBy(how = How.XPATH, using = "//div[contains(@class, 'gig')]//iframe[contains(@title, 'Facebook')]")
-    private static WebElement Facebook_Frm;
+    private WebElement Facebook_Frm;
     
   
     //PAGE OBJECT METHODS

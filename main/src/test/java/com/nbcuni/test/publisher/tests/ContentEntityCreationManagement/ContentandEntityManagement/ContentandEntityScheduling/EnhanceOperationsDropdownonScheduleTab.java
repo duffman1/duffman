@@ -2,13 +2,10 @@ package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Contenta
 
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.RerunOnFailure;
-import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
-import com.nbcuni.test.publisher.pageobjects.Content.*;
+import com.nbcuni.test.publisher.pageobjects.Content.CreateDefaultContent;
 import com.nbcuni.test.publisher.pageobjects.Queues.ScheduleQueue;
-
 import org.testng.annotations.Test;
-
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -31,10 +28,6 @@ public class EnhanceOperationsDropdownonScheduleTab extends ParentTest {
         UserLogin userLogin = applib.openApplication();
         userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
 
-        //Step 1a
-        Modules modules = new Modules(webDriver, applib);
-        modules.VerifyModuleEnabled("Pub Post");
-        
         //Step 2
         taxonomy.VerifyContentMenuExist("Content");
         taxonomy.VerifyContentMenuExist("My Workbench");
@@ -58,7 +51,6 @@ public class EnhanceOperationsDropdownonScheduleTab extends ParentTest {
         scheduleQueue.EnterTime("05:00 PM");
         scheduleQueue.ClickScheduleBtn();
         overlay.SwitchToActiveFrame();        
-        ContentParent contentParent = new ContentParent(webDriver, applib);
         contentParent.VerifyMessageStatus("The scheduled revision operation has been saved");
      
         //Step 4

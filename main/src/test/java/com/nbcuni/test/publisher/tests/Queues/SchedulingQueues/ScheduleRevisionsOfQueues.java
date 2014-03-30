@@ -3,15 +3,12 @@ package com.nbcuni.test.publisher.tests.Queues.SchedulingQueues;
 import com.ibm.icu.util.Calendar;
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.RerunOnFailure;
-import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Content.CreateDefaultContent;
 import com.nbcuni.test.publisher.pageobjects.Content.PublishingOptions;
 import com.nbcuni.test.publisher.pageobjects.Queues.Queues;
 import com.nbcuni.test.publisher.pageobjects.Queues.ScheduleQueue;
-
 import org.testng.annotations.Test;
-
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
@@ -40,8 +37,6 @@ public class ScheduleRevisionsOfQueues extends ParentTest{
         userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
         
         //Step 1a
-        Modules modules = new Modules(webDriver, applib);
-        modules.VerifyModuleEnabled("Pub Post");
         CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver, applib);
         String postTitle = createDefaultContent.Post("Draft");
         

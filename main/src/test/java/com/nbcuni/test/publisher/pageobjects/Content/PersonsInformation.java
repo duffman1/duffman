@@ -6,7 +6,7 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
 import com.nbcuni.test.publisher.common.Random;
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
  * publisher.nbcuni.com PersonsInformation Library. Copyright
@@ -17,26 +17,26 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 
 public class PersonsInformation {
 
-    private static CustomWebDriver webDriver;
+    private Driver webDriver;
     
     //PAGE OBJECT CONSTCUTOR
-    public PersonsInformation(CustomWebDriver webDriver) {
-        PersonsInformation.webDriver = webDriver;
+    public PersonsInformation(Driver webDriver) {
+        this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
     }
     
     //PAGE OBJECT IDENTIFIERS
     @FindBy(how = How.ID, using = "edit-field-person-first-name-und-0-value")
-    private static WebElement FirstName_Txb;
+    private WebElement FirstName_Txb;
     
     @FindBy(how = How.ID, using = "edit-body-und-0-value_ifr")
-    private static WebElement Biography_Frm;
+    private WebElement Biography_Frm;
     
     @FindBy(how = How.ID, using = "tinymce")
-    private static WebElement Biography_Txa;
+    private WebElement Biography_Txa;
     
     @FindBy(how = How.ID, using = "edit-field-person-cover-photo-und-0-select")
-    private static WebElement CoverPhotoSelect_Btn;
+    private WebElement CoverPhotoSelect_Btn;
     
     
     //PAGE OBJECT METHODS

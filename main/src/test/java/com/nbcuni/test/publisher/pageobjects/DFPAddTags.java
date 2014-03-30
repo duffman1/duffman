@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
 import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
  * publisher.nbcuni.com DFP Add Tags Library. Copyright
@@ -18,32 +18,32 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 
 public class DFPAddTags {
 
-    private static ContentParent contentParent;
+    ContentParent contentParent;
     
     //PAGE OBJECT CONSTRUCTOR
-    public DFPAddTags(CustomWebDriver webDriver, AppLib applib) {
+    public DFPAddTags(Driver webDriver, AppLib applib) {
         PageFactory.initElements(webDriver, this);
         contentParent = new ContentParent(webDriver, applib);
     }
     
     //PAGE OBJECT IDENTIFIERS
     @FindBy(how = How.ID, using = "edit-dfp-network-id")
-    private static WebElement NetworkId_Txb;
+    private WebElement NetworkId_Txb;
     
     @FindBy(how = How.ID, using = "edit-submit")
-    private static WebElement SaveConfiguration_Btn;
+    private WebElement SaveConfiguration_Btn;
     
     @FindBy(how = How.ID, using = "edit-submit")
-    private static WebElement Save_Btn;
+    private WebElement Save_Btn;
     
     @FindBy(how = How.ID, using = "edit-slot")
-    private static WebElement AdSlotName_Txb;
+    private WebElement AdSlotName_Txb;
     
     @FindBy(how = How.ID, using = "edit-size")
-    private static WebElement Sizes_Txb;
+    private WebElement Sizes_Txb;
     
     @FindBy(how = How.ID, using = "edit-adunit")
-    private static WebElement AdUnitPattern_Txb;
+    private WebElement AdUnitPattern_Txb;
     
     
     //PAGE OBJECT METHODS

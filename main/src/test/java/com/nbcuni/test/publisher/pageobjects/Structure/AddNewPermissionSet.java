@@ -2,7 +2,7 @@ package com.nbcuni.test.publisher.pageobjects.Structure;
 
 import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriverException;
@@ -24,37 +24,37 @@ import java.util.List;
 
 public class AddNewPermissionSet {
 
-    private static CustomWebDriver webDriver;
-    private static ContentParent contentParent;
+    private Driver webDriver;
+    ContentParent contentParent;
     
     //PAGE OBJECT CONSTRUCTOR
-    public AddNewPermissionSet(CustomWebDriver webDriver, AppLib applib) {
-        AddNewPermissionSet.webDriver = webDriver;
+    public AddNewPermissionSet(Driver webDriver, AppLib applib) {
+        this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
         contentParent = new ContentParent(webDriver, applib);
     }
     
     //PAGE OBJECT IDENTIFIERS
     @FindBy(how = How.ID, using = "edit-name")
-    private static WebElement PermissionSetName_Txb;
+    private WebElement PermissionSetName_Txb;
     
     @FindBy(how = How.ID, using = "edit-submit")
-    private static WebElement Save_Btn;
+    private WebElement Save_Btn;
     
     @FindBy(how = How.XPATH, using = "//a[text()='Edit']")
-    private static WebElement Edit_Tab;
+    private WebElement Edit_Tab;
     
     @FindBy(how = How.XPATH, using = "//a[text()='Export']")
-    private static WebElement Export_Tab;
+    private WebElement Export_Tab;
     
     @FindBy(how = How.ID, using = "edit-code")
-    private static WebElement Export_Txa;
+    private WebElement Export_Txa;
     
-    private static WebElement Permission_Cbx(String value) {
+    private WebElement Permission_Cbx(String value) {
     	return webDriver.findElement(By.cssSelector("input[value='" + value + "']"));
     }
     
-    private static List<WebElement> AllPermission_Cbxs() {
+    private List<WebElement> AllPermission_Cbxs() {
     	return webDriver.findElements(By.cssSelector("table[id='permissions'] input[type='checkbox']"));
     }
     

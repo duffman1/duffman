@@ -1,7 +1,7 @@
 package com.nbcuni.test.publisher.pageobjects.MPX;
 
 import com.nbcuni.test.publisher.common.AppLib;
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
@@ -27,75 +27,75 @@ import java.util.concurrent.TimeUnit;
 
 public class Settings {
 
-    private static CustomWebDriver webDriver;
-    private static AppLib applib;
-    private static WebDriverWait wait;
+    private Driver webDriver;
+    private AppLib applib;
+    private WebDriverWait wait;
     
     //PAGE OBJECT CONSTRUCTOR
-    public Settings(CustomWebDriver webDriver, AppLib applib) {
-        Settings.webDriver = webDriver;
-        Settings.applib = applib;
+    public Settings(Driver webDriver, AppLib applib) {
+        this.webDriver = webDriver;
+        this.applib = applib;
         PageFactory.initElements(webDriver, this);
         wait = new WebDriverWait(webDriver, 10);
     }
     
     //PAGE OBJECT IDENTIFIERS
     @FindBy(how = How.XPATH, using = "//fieldset[@id='edit-accounts']//a")
-    private static WebElement MPXLogin_Lnk;
+    private WebElement MPXLogin_Lnk;
     
     @FindBy(how = How.ID, using = "edit-accounts-new-0-theplatform-username")
-    private static WebElement Username0_Txb;
+    private WebElement Username0_Txb;
     
     @FindBy(how = How.ID, using = "edit-accounts-new-0-theplatform-password")
-    private static WebElement Password0_Txb;
+    private WebElement Password0_Txb;
     
     @FindBy(how = How.ID, using = "edit-accounts-existing-1-theplatform-username")
-    private static WebElement Username1_Txb;
+    private WebElement Username1_Txb;
     
     @FindBy(how = How.ID, using = "edit-accounts-existing-1-theplatform-password")
-    private static WebElement Password1_Txb;
+    private WebElement Password1_Txb;
     
     @FindBy(how = How.CSS, using = "input[value='Update']")
-    private static WebElement Update_Btn;
+    private WebElement Update_Btn;
     
     @FindBy(how = How.XPATH, using = "(//select[contains(@id, 'edit-import-accounts-settings')])[1]")
-    private static WebElement SelectImportAccount1_Ddl;
+    private WebElement SelectImportAccount1_Ddl;
     
     @FindBy(how = How.XPATH, using = "(//select[contains(@id, 'edit-import-accounts-settings')])[2]")
-    private static WebElement SelectImportAccount2_Ddl;
+    private WebElement SelectImportAccount2_Ddl;
     
     @FindBy(how = How.XPATH, using = "(//select[contains(@id, 'edit-import-accounts-settings')])[3]")
-    private static WebElement SelectImportAccount3_Ddl;
+    private WebElement SelectImportAccount3_Ddl;
     
     @FindBy(how = How.XPATH, using = "(//select[contains(@id, 'edit-import-accounts-settings')])[4]")
-    private static WebElement SelectImportAccount4_Ddl;
+    private WebElement SelectImportAccount4_Ddl;
     
     @FindBy(how = How.XPATH, using = "(//select[contains(@id, 'edit-import-accounts-settings')])[5]")
-    private static WebElement SelectImportAccount5_Ddl;
+    private WebElement SelectImportAccount5_Ddl;
     
     @FindBy(how = How.ID, using = "edit-import-accounts-actions-submit")
-    private static WebElement SetImportAccount_Btn;
+    private WebElement SetImportAccount_Btn;
     
     @FindBy(how = How.ID, using = "edit-submit")
-    private static WebElement SaveConfigurations_Btn;
+    private WebElement SaveConfigurations_Btn;
     
     @FindBy(how = How.CSS, using = "input[value='Connect to MPX']")
-    private static WebElement ConnectToMPX_Btn;
+    private WebElement ConnectToMPX_Btn;
     
     @FindBy(how = How.CSS, using = "input[value='Add Account']")
-    private static WebElement AddAccount_Btn;
+    private WebElement AddAccount_Btn;
     
     @FindBy(how = How.ID, using = "edit-media-theplatform-mpx-output-message-watchdog-severity")
-    private static WebElement DisplayMPXDebugMessageLevel_Ddl;
+    private WebElement DisplayMPXDebugMessageLevel_Ddl;
     
-    private static List<WebElement> DeleteAccount_Btns() {
+    private List<WebElement> DeleteAccount_Btns() {
     	return webDriver.findElements(By.cssSelector("input[value*='Delete Account']"));
     }
     
     @FindBy(how = How.CSS, using = "input[value='Delete']")
-    private static WebElement Delete_Btn;
+    private WebElement Delete_Btn;
     
-    private static List<WebElement> AllUsername_Txbs() {
+    private List<WebElement> AllUsername_Txbs() {
     	return webDriver.findElements(By.xpath("//input[contains(@id, 'edit-accounts-existing')][contains(@id, 'username')]"));
     }
     

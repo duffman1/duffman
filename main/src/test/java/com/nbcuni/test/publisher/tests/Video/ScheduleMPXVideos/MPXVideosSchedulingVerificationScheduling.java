@@ -142,7 +142,7 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
     	    SimpleDateFormat pub7DateFormat = new SimpleDateFormat("MM/dd/yyyy");
     	    String pub7Date20DaysInPast = pub7DateFormat.format(date20DaysInPast);
     	    String pub7Date7DaysInPast = pub7DateFormat.format(date7DaysInPast);
-    	    contentParent.VerifyPageContentPresent(Arrays.asList(pub7Date20DaysInPast + " - 05:00 AM"
+    	    contentParent.VerifyPageContentPresent(Arrays.asList(pub7Date20DaysInPast + " - 04:00 AM"
     	    		, pub7Date7DaysInPast + " - 04:00 AM", "Expired"));
     	    
     	    //Step 10
@@ -152,7 +152,7 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
     	    SimpleDateFormat pub7WorkflowDateFormat = new SimpleDateFormat("EEEE, MMMM d, yyyy");
     	    String pub7WorkflowDate20DaysInPast = pub7WorkflowDateFormat.format(date20DaysInPast);
     	    String pub7WorkflowDate7DaysInPast = pub7WorkflowDateFormat.format(date7DaysInPast);
-    	    contentParent.VerifyPageContentPresent(Arrays.asList(mediaTitle, pub7WorkflowDate20DaysInPast + " - 05:00",
+    	    contentParent.VerifyPageContentPresent(Arrays.asList(mediaTitle, pub7WorkflowDate20DaysInPast + " - 04:00",
     	    		pub7WorkflowDate7DaysInPast + " - 04:00"));
     	    
     	    //Step 12

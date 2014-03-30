@@ -1,6 +1,6 @@
 package com.nbcuni.test.publisher.pageobjects.MPX;
 
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -21,49 +21,49 @@ import java.util.List;
 
 public class MPXMedia {
 
-    private static CustomWebDriver webDriver;
+    private Driver webDriver;
     
     //PAGE OBJECT CONSTRUCTOR
-    public MPXMedia(CustomWebDriver webDriver) {
-        MPXMedia.webDriver = webDriver;
+    public MPXMedia(Driver webDriver) {
+        this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
     }
     
     //PAGE OBJECT IDENTIFIERS
     @FindBy(how = How.XPATH, using = "//a[text()='mpxMedia']")
-    private static WebElement MPXMedia_Lnk;
+    private WebElement MPXMedia_Lnk;
     
     @FindBy(how = How.XPATH, using = "//fieldset[@id='edit-video-sync']//a")
-    private static WebElement SyncMPXMedia_Lnk;
+    private WebElement SyncMPXMedia_Lnk;
     
     @FindBy(how = How.XPATH, using = "//input[@value='Sync mpxMedia Now']")
-    private static WebElement SyncMPXMediaNow_Lnk;
+    private WebElement SyncMPXMediaNow_Lnk;
     
     @FindBy(how = How.XPATH, using = "(//select[contains(@id, 'edit-video-sync-settings')])[1]")
-    private static WebElement SynchMPXMediaForAccount1_Ddl;
+    private WebElement SynchMPXMediaForAccount1_Ddl;
     
     @FindBy(how = How.XPATH, using = "(//select[contains(@id, 'edit-video-sync-settings')])[2]")
-    private static WebElement SynchMPXMediaForAccount2_Ddl;
+    private WebElement SynchMPXMediaForAccount2_Ddl;
     
     @FindBy(how = How.XPATH, using = "(//select[contains(@id, 'edit-video-sync-settings')])[3]")
-    private static WebElement SynchMPXMediaForAccount3_Ddl;
+    private WebElement SynchMPXMediaForAccount3_Ddl;
     
     @FindBy(how = How.XPATH, using = "(//select[contains(@id, 'edit-video-sync-settings')])[4]")
-    private static WebElement SynchMPXMediaForAccount4_Ddl;
+    private WebElement SynchMPXMediaForAccount4_Ddl;
 
-    private static WebElement ImportAccount_Lbl(String label) {
+    private WebElement ImportAccount_Lbl(String label) {
     	return webDriver.findElement(By.xpath("//label[contains(@for, 'edit-video-sync-settings')][contains(text(), '" + label + "')]"));
     }
     
-    private static WebElement ImportAccount_Ddl(String accountName) {
+    private WebElement ImportAccount_Ddl(String accountName) {
     	return webDriver.findElement(By.xpath("//label[contains(@for, 'edit-video-sync-settings')][contains(text(), '" + accountName + "')]/../select"));
     }
     
-    private static WebElement MPXUnpublishedPlayer_Lnk(String playerTitle) {
+    private WebElement MPXUnpublishedPlayer_Lnk(String playerTitle) {
     	return webDriver.findElement(By.xpath("//div[@class='messages error']//strong//em[text()='" + playerTitle + "']/../..//a[text()='here']"));
     }
     
-    private static WebElement MPXLogin_Lnk(String playerTitle) {
+    private WebElement MPXLogin_Lnk(String playerTitle) {
     	return webDriver.findElement(By.xpath("//div[@class='messages error']//strong//em[text()='" + playerTitle + "']/../..//a[text()='mpx.theplatform']"));
     }
     

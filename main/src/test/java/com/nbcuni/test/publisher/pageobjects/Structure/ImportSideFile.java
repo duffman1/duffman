@@ -5,7 +5,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
 * publisher.nbcuni.com Import Side File Library. Copyright
@@ -17,19 +17,19 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 public class ImportSideFile {
 
     //PAGE OBJECT CONSTRUCTOR
-    public ImportSideFile(CustomWebDriver webDriver) {
+    public ImportSideFile(Driver webDriver) {
     	PageFactory.initElements(webDriver, this);
     }
     
     //PAGE OBJECT IDENTIFIERS
     @FindBy(how = How.ID, using = "edit-import")
-    private static WebElement SideFileCode_Txa;
+    private WebElement SideFileCode_Txa;
     
     @FindBy(how = How.ID, using = "edit-overwrite")
-    private static WebElement AllowImportOverwriteRecord_Cbx;
+    private WebElement AllowImportOverwriteRecord_Cbx;
     
     @FindBy(how = How.ID, using = "edit-next")
-    private static WebElement Continue_Btn;
+    private WebElement Continue_Btn;
     
     
     //PAGE OBJECT METHODS

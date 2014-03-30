@@ -9,7 +9,7 @@ import org.testng.Assert;
 import org.testng.Reporter;
 
 import com.nbcuni.test.publisher.common.Random;
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
  * publisher.nbcuni.com Basic Information Library. Copyright
@@ -20,44 +20,44 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 
 public class BasicInformation {
 
-    private static CustomWebDriver webDriver;
+    private Driver webDriver;
     
     //PAGE OBJECT CONSTRUCTOR
-    public BasicInformation(CustomWebDriver webDriver) {
-        BasicInformation.webDriver = webDriver;
+    public BasicInformation(Driver webDriver) {
+        this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
     }
     
     //PAGE OBJECT IDENTIFIERS
     @FindBy(how = How.XPATH, using = "//a/strong[text()='Basic Information']")
-    private static WebElement BasicInformation_Tab;
+    private WebElement BasicInformation_Tab;
     
     @FindBy(how = How.XPATH, using = "//input[contains(@id, 'edit-title')]")
-    private static WebElement Title_Txb;
+    private WebElement Title_Txb;
     
     @FindBy(how = How.ID, using = "edit-field-summary-und-0-value")
-    private static WebElement ShortDescription_Txa;
+    private WebElement ShortDescription_Txa;
     
     @FindBy(how = How.XPATH, using = "//iframe[@id='edit-body-und-0-value_ifr']")
-    private static WebElement Synopsis_Frm;
+    private WebElement Synopsis_Frm;
     
     @FindBy(how = How.XPATH, using = "//body[@id='tinymce']")
-    private static WebElement Synopsis_Txa;
+    private WebElement Synopsis_Txa;
     
     @FindBy(how = How.XPATH, using = "//a[contains(@id, 'cover')][text()='Select']")
-    private static WebElement CoverSelect_Btn;
+    private WebElement CoverSelect_Btn;
     
     @FindBy(how = How.XPATH, using = "//input[@id='edit-field-media-items-und-add-more']")
-    private static WebElement MediaItemsSelect_Btn;
+    private WebElement MediaItemsSelect_Btn;
     
     @FindBy(how = How.XPATH, using = "//div[@class='media-thumbnail']/img")
-    private static WebElement Cover_Img;
+    private WebElement Cover_Img;
     
     @FindBy(how = How.XPATH, using = "//input[@id='edit-field-episode-number-und-0-value']")
-    private static WebElement EpisodeNumber_Txb;
+    private WebElement EpisodeNumber_Txb;
     
     @FindBy(how = How.XPATH, using = "//input[@id='edit-field-season-id-und-0-value']")
-    private static WebElement SeasonNumber_Txb;
+    private WebElement SeasonNumber_Txb;
     
     
     //PAGE OBJECT METHODS

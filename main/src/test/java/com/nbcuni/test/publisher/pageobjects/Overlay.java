@@ -11,7 +11,7 @@ import org.testng.Assert;
 import org.testng.Reporter;
 
 import com.nbcuni.test.publisher.common.AppLib;
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
  * publisher.nbcuni.com Overlay Library. Copyright
@@ -22,27 +22,27 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 
 public class Overlay {
 
-    private static CustomWebDriver webDriver;
-    private static AppLib applib;
+    private Driver webDriver;
+    private AppLib applib;
     
     //PAGE OBJECT CONSTRUCTOR
-    public Overlay(CustomWebDriver webDriver, AppLib applib) {
-    	Overlay.webDriver = webDriver;
-    	Overlay.applib = applib;
+    public Overlay(Driver webDriver, AppLib applib) {
+    	this.webDriver = webDriver;
+    	this.applib = applib;
     	PageFactory.initElements(webDriver, this);
     }
 
     //PAGE OBJECT IDENTIFIERS
     @FindBy(how = How.ID, using = "overlay-close")
-    private static WebElement CloseOverlay_Lnk;
+    private WebElement CloseOverlay_Lnk;
     
     @FindBy(how = How.XPATH, using = "//iframe[@class='overlay-element overlay-active']")
-    private static WebElement ActiveFrame_Frm;
+    private WebElement ActiveFrame_Frm;
     
     @FindBy(how = How.XPATH, using = "//h1[contains(text(), 'Loading')]")
-    private static WebElement Loading_Ttl;
+    private WebElement Loading_Ttl;
     
-    private static WebElement Dialog_Frm(String frameTitle) {
+    private WebElement Dialog_Frm(String frameTitle) {
     	return webDriver.findElement(By.xpath("//iframe[contains(@title, '" + frameTitle + "')]"));
     }
     

@@ -6,7 +6,7 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Reporter;
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
  * publisher.nbcuni.com MPX Library. Copyright
@@ -18,19 +18,19 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 public class MPXFileType {
 
     //PAGE OBJECT CONSTRUCTOR
-    public MPXFileType(CustomWebDriver webDriver) {
+    public MPXFileType(Driver webDriver) {
         PageFactory.initElements(webDriver, this);
     }
     
     //PAGE OBJECT IDENTIFIERS
     @FindBy(how = How.XPATH, using = "//select[contains(@id, 'url-alias-field')]")
-    private static WebElement URLAliasField_Ddl;
+    private WebElement URLAliasField_Ddl;
     
     @FindBy(how = How.XPATH, using = "//input[contains(@id, 'enable-default-field-overrides')]")
-    private static WebElement EnableMPXValueOverrides_Cbx;
+    private WebElement EnableMPXValueOverrides_Cbx;
     
     @FindBy(how = How.ID, using = "edit-submit")
-    private static WebElement Save_Btn;
+    private WebElement Save_Btn;
     
     
     //PAGE OBJECT METHODS

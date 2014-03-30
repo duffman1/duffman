@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
 
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
  * publisher.nbcuni.com MPX Players Library. Copyright
@@ -19,23 +19,23 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 
 public class MPXPlayers {
 
-	private static CustomWebDriver webDriver;
+	private Driver webDriver;
 	
     //PAGE OBJECT CONSTRUCTOR
-    public MPXPlayers(CustomWebDriver webDriver) {
-    	MPXPlayers.webDriver = webDriver;
+    public MPXPlayers(Driver webDriver) {
+    	this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
     }
     
     //PAGE OBJECT IDENTIFIERS
     @FindBy(how = How.XPATH, using = "//a[text()='mpxPlayers']")
-    private static WebElement MPXPlayers_Lnk;
+    private WebElement MPXPlayers_Lnk;
     
     @FindBy(how = How.XPATH, using = "//a[@class='fieldset-title']")
-    private static WebElement SyncMPXPlayers_Lnk;
+    private WebElement SyncMPXPlayers_Lnk;
     
     @FindBy(how = How.XPATH, using = "//input[@value='Sync mpxPlayers Now']")
-    private static WebElement SyncMPXPlayersNow_Lnk;
+    private WebElement SyncMPXPlayersNow_Lnk;
     
     
     //PAGE OBJECT METHODS

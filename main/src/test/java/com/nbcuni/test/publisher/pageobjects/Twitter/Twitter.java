@@ -6,7 +6,7 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
 import com.nbcuni.test.publisher.common.AppLib;
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
  * publisher.nbcuni.com Twitter Library. Copyright
@@ -18,19 +18,19 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 public class Twitter {
 
     //PAGE OBJECT CONSTRUCTOR
-    public Twitter(CustomWebDriver webDriver, AppLib applib) {
+    public Twitter(Driver webDriver, AppLib applib) {
         PageFactory.initElements(webDriver, this);
     }
     
     //PAGE OBJECT IDENTIFIERS
     @FindBy(how = How.ID, using = "edit-twitter-consumer-key")
-    private static WebElement OAuthConsumerKey_Txb;
+    private WebElement OAuthConsumerKey_Txb;
     
     @FindBy(how = How.ID, using = "edit-twitter-consumer-secret")
-    private static WebElement OAuthConsumerSecret_Txb;
+    private WebElement OAuthConsumerSecret_Txb;
     
     @FindBy(how = How.ID, using = "edit-submit")
-    private static WebElement SaveConfiguration_Btn;
+    private WebElement SaveConfiguration_Btn;
     
     //PAGE OBJECT METHODS
     public void EnterOAuthConsumerKey(String key) throws Exception {

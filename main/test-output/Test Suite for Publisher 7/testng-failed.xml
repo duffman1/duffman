@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="1" name="Failed suite [Test Suite for Publisher 7]" parallel="methods">
+<suite thread-count="2" name="Failed suite [Test Suite for Publisher 7]" parallel="classes">
+  <parameter name="ReRunOnFailure" value="false"/>
   <parameter name="Admin1Password" value="pa55word"/>
-  <parameter name="ReRunOnFailureCount" value="3"/>
+  <parameter name="ReRunOnFailureCount" value="1"/>
   <parameter name="RallyUrl" value="https://rally1.rallydev.com"/>
   <parameter name="ErrorCheckingEnabled" value="true"/>
-  <parameter name="SendReportAutoEmails" value="true"/>
   <parameter name="RallyUsername" value="brandon.clark@nbcuni.com"/>
+  <parameter name="SendReportAutoEmails" value="true"/>
   <parameter name="Admin1Username" value="admin@publisher.nbcuni.com"/>
+  <parameter name="Browser" value="chrome"/>
   <parameter name="GmailUsername" value="Pub7NBCUAutoEmailUser1@gmail.com"/>
   <parameter name="PathToScreenshots" value="/test-output/screenshots/"/>
   <parameter name="PageLoadWaitTime" value="180"/>
@@ -17,7 +19,7 @@
   <parameter name="RallyPassword" value="tufNewcyd4#"/>
   <parameter name="PathToReports" value="/test-output/reports/"/>
   <parameter name="MPXPassword" value="Pa55word"/>
-  <parameter name="RallyTaskID" value="TA28200"/>
+  <parameter name="RallyTaskID" value="TA30797"/>
   <parameter name="RallyWorkspace" value="Digital Products"/>
   <parameter name="SendReportEmailAddress" value="ots.publishing.core@nbcuni.com"/>
   <parameter name="UploadReportToRally" value="true"/>
@@ -25,18 +27,49 @@
   <parameter name="ImplicitWaitTime" value="30"/>
   <parameter name="GmailPassword" value="Pub7NBCUAutoEmailPassword1"/>
   <parameter name="SikuliImageWaitTime" value="60"/>
-  <parameter name="AppURL" value="http://qa5.qa.nbcupublisher7.publisher7.com"/>
+  <parameter name="AppURL" value="http://qa4.qa.nbcupublisher7.publisher7.com"/>
   <parameter name="MPXUsername" value="mpx/AdminPub7QA"/>
   <listeners>
     <listener class-name="com.nbcuni.test.publisher.common.CustomReport"/>
   </listeners>
-  <test name="All Web Tests(failed)" parallel="methods">
+  <test name="All Web Tests(failed)" parallel="classes">
     <groups>
       <run>
         <include name="full"/>
       </run>
     </groups>
     <classes>
+      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CustomContentType.AddingNewCustomContentType">
+        <methods>
+          <include name="AddingNewCustomContentType_Test"/>
+          <include name="stopSelenium"/>
+        </methods>
+      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CustomContentType.AddingNewCustomContentType -->
+      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson">
+        <methods>
+          <include name="stopSelenium"/>
+          <include name="CreatePerson_Test"/>
+        </methods>
+      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson -->
+      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery">
+        <methods>
+          <include name="CreateMediaGallery_Test"/>
+          <include name="stopSelenium"/>
+        </methods>
+      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery -->
+      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Movie.CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter">
+        <methods>
+          <include name="CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter_Test"/>
+          <include name="stopSelenium"/>
+        </methods>
+      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Movie.CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter -->
+      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost">
+        <methods>
+          <include name="startSelenium"/>
+          <include name="CreatePost_Test"/>
+          <include name="stopSelenium"/>
+        </methods>
+      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost -->
       <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile">
         <methods>
           <include name="startSelenium"/>
@@ -44,6 +77,18 @@
           <include name="stopSelenium"/>
         </methods>
       </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile -->
+      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVEpisode.CreateTVEpisode">
+        <methods>
+          <include name="CreateTVEpisode_Test"/>
+          <include name="stopSelenium"/>
+        </methods>
+      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVEpisode.CreateTVEpisode -->
+      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVSeason.CreateTVSeason">
+        <methods>
+          <include name="stopSelenium"/>
+          <include name="CreateTVSeason_Test"/>
+        </methods>
+      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVSeason.CreateTVSeason -->
     </classes>
   </test> <!-- All Web Tests(failed) -->
 </suite> <!-- Failed suite [Test Suite for Publisher 7] -->

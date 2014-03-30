@@ -5,7 +5,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
 * publisher.nbcuni.com Add Focal Point Crop Effect Library. Copyright
@@ -16,20 +16,20 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 public class AddFocalPointCropEffect {
 		
 	//PAGE OBJECT CONSTRUCTOR
-	public AddFocalPointCropEffect(CustomWebDriver webDriver) {
+	public AddFocalPointCropEffect(Driver webDriver) {
 		PageFactory.initElements(webDriver, this);
 		
 	}
 
 	//PAGE OBJECT IDENTIFIERS
 	@FindBy(how = How.ID, using ="edit-data-width")
-	private static WebElement Width_Txb;
+	private WebElement Width_Txb;
 	
 	@FindBy(how = How.ID, using ="edit-data-height")
-	private static WebElement Height_Txb;
+	private WebElement Height_Txb;
 	
 	@FindBy(how = How.ID, using ="edit-submit")
-	private static WebElement AddEffect_Btn;
+	private WebElement AddEffect_Btn;
 	
 	
 	//PAGE OBJECT METHODS

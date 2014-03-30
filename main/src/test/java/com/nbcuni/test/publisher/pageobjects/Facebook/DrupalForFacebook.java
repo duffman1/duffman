@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
 import com.nbcuni.test.publisher.common.AppLib;
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
  * publisher.nbcuni.com Drupal For Facebook Library. Copyright
@@ -20,55 +20,55 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 
 public class DrupalForFacebook {
 
-    private static CustomWebDriver webDriver;
-    private static AppLib applib;
+    private Driver webDriver;
+    private AppLib applib;
     
     //PAGE OBJECT CONSTRUCTOR
-    public DrupalForFacebook(CustomWebDriver webDriver, AppLib applib) {
-        DrupalForFacebook.webDriver = webDriver;
-        DrupalForFacebook.applib = applib;
+    public DrupalForFacebook(Driver webDriver, AppLib applib) {
+        this.webDriver = webDriver;
+        this.applib = applib;
         PageFactory.initElements(webDriver, this);
     }
     
     //PAGE OBJECT IDENTIFIERS
     @FindBy(how = How.ID, using = "edit-label")
-    private static WebElement Label_Txb;
+    private WebElement Label_Txb;
     
     @FindBy(how = How.ID, using = "edit-id")
-    private static WebElement FacebookAppId_Txb;
+    private WebElement FacebookAppId_Txb;
     
     @FindBy(how = How.ID, using = "edit-secret")
-    private static WebElement Secret_Txb;
+    private WebElement Secret_Txb;
     
     @FindBy(how = How.ID, using = "edit-submit")
-    private static WebElement Save_Btn;
+    private WebElement Save_Btn;
     
     @FindBy(how = How.XPATH, using = "//input[@value='Save configuration']")
-    private static WebElement SaveConfiguration_Btn;
+    private WebElement SaveConfiguration_Btn;
     
     @FindBy(how = How.XPATH, using = "//a[contains(@href, 'https://www.facebook.com/dialog/oauth')]")
-    private static WebElement PostViaPub7_Lnk;
+    private WebElement PostViaPub7_Lnk;
     
     @FindBy(how = How.ID, using = "email")
-    private static WebElement FacebookEmail_Txb;
+    private WebElement FacebookEmail_Txb;
     
     @FindBy(how = How.ID, using = "pass")
-    private static WebElement FacebookPassword_Txb;
+    private WebElement FacebookPassword_Txb;
     
     @FindBy(how = How.ID, using = "u_0_1")
-    private static WebElement FacebookLogin_Btn;
+    private WebElement FacebookLogin_Btn;
     
     @FindBy(how = How.XPATH, using = "//a[@class='fieldset-title']")
-    private static WebElement ShowCurrentToken_Lnk;
+    private WebElement ShowCurrentToken_Lnk;
     
     @FindBy(how = How.XPATH, using = "(//div[@class='fieldset-description'])[2]")
-    private static WebElement Token_Ctr;
+    private WebElement Token_Ctr;
     
     @FindBy(how = How.ID, using = "edit-fb-stream-token")
-    private static WebElement PasteAccessToken_Txa;
+    private WebElement PasteAccessToken_Txa;
     
     @FindBy(how = How.XPATH, using = "//a[text()='edit']")
-    private static WebElement Edit_Lnk;
+    private WebElement Edit_Lnk;
     
     
     //PAGE OBJECT METHODS

@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
 * publisher.nbcuni.com Node Clone Module Library. Copyright
@@ -18,35 +18,35 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 
 public class NodeCloneModule {
 
-    private static CustomWebDriver webDriver;
+    private Driver webDriver;
     
     //PAGE OBJECT CONSTRUCTOR
-    public NodeCloneModule(CustomWebDriver webDriver) {
-    	NodeCloneModule.webDriver = webDriver;
+    public NodeCloneModule(Driver webDriver) {
+    	this.webDriver = webDriver;
     	PageFactory.initElements(webDriver, this);
     }
     
     //PAGE OBJECT IDENTIFIERS
     @FindBy(how = How.ID, using = "edit-clone-method-prepopulate")
-    private static WebElement PrePopulateNodeFormFields_Rdb;
+    private WebElement PrePopulateNodeFormFields_Rdb;
     
     @FindBy(how = How.ID, using = "edit-clone-nodes-without-confirm-1")
-    private static WebElement BypassConfirmation_Rdb;
+    private WebElement BypassConfirmation_Rdb;
     
     @FindBy(how = How.ID, using = "edit-clone-menu-links-0")
-    private static WebElement No_Rdb;
+    private WebElement No_Rdb;
     
     @FindBy(how = How.ID, using = "edit-clone-use-node-type-name")
-    private static WebElement UseNodeTypeNameInCloneLink_Cbx;
+    private WebElement UseNodeTypeNameInCloneLink_Cbx;
     
     @FindBy(how = How.ID, using = "edit-submit")
-    private static WebElement SaveConfiguration_Btn;
+    private WebElement SaveConfiguration_Btn;
     
-    private static List<WebElement> PublishingOptionsResetDefault_Cbxs() {
+    private List<WebElement> PublishingOptionsResetDefault_Cbxs() {
     	return webDriver.findElements(By.cssSelector("input[id*='edit-clone-reset']"));
     }
     
-    private static List<WebElement> OmittedContentTypes_Cbxs() {
+    private List<WebElement> OmittedContentTypes_Cbxs() {
     	return webDriver.findElements(By.cssSelector("input[id*='edit-clone-omitted']"));
     }
     

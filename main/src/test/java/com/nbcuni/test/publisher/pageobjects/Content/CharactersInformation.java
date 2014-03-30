@@ -6,7 +6,7 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
 
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
  * publisher.nbcuni.com Characters Information Library. Copyright
@@ -18,25 +18,25 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 public class CharactersInformation {
 
     //PAGE OBJECT CONSTRUCTOR
-    public CharactersInformation(CustomWebDriver webDriver) {
+    public CharactersInformation(Driver webDriver) {
         PageFactory.initElements(webDriver, this);
     }
    
     //PAGE OBJECT IDENTIFIERS
     @FindBy(how = How.ID, using = "edit-field-character-first-name-und-0-value")
-    private static WebElement CharacterFirstName_Txb;
+    private WebElement CharacterFirstName_Txb;
     
     @FindBy(how = How.ID, using = "edit-field-character-prefix-und-0-value")
-    private static WebElement CharacterPrefix_Txb;
+    private WebElement CharacterPrefix_Txb;
     
     @FindBy(how = How.ID, using = "edit-field-character-middle-name-und-0-value")
-    private static WebElement CharacterMiddleName_Txb;
+    private WebElement CharacterMiddleName_Txb;
     
     @FindBy(how = How.ID, using = "edit-field-character-last-name-und-0-value")
-    private static WebElement CharacterLastName_Txb;
+    private WebElement CharacterLastName_Txb;
     
     @FindBy(how = How.ID, using = "edit-field-character-suffix-und-0-value")
-    private static WebElement CharacterSuffix_Txb;
+    private WebElement CharacterSuffix_Txb;
     
     
     //PAGE OBJECT METHODS

@@ -14,7 +14,7 @@ import org.testng.Assert;
 import org.testng.Reporter;
 
 import com.nbcuni.test.publisher.common.AppLib;
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
  * publisher.nbcuni.com Queues Library. Copyright
@@ -25,50 +25,50 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 
 public class Queues {
 
-    private static CustomWebDriver webDriver;
-    private static AppLib applib;
+    private Driver webDriver;
+    private AppLib applib;
     
     //PAGE OBJECT CONSTRUCTOR
-    public Queues(CustomWebDriver webDriver, AppLib applib) {
-        Queues.webDriver = webDriver;
-        Queues.applib = applib;
+    public Queues(Driver webDriver, AppLib applib) {
+        this.webDriver = webDriver;
+        this.applib = applib;
         PageFactory.initElements(webDriver, this);
     }
     
     //PAGE OBJECT IDENTIFIERS
     @FindBy(how = How.CSS, using = "input[id*='edit-title']")
-    private static WebElement Title_Txb;
+    private WebElement Title_Txb;
     
     @FindBy(how = How.CSS, using = "input[value='Save queue']")
-    private static WebElement SaveQueue_Btn;
+    private WebElement SaveQueue_Btn;
     
     @FindBy(how = How.XPATH, using = "//a[contains(text(), 'Edit')]")
-    private static WebElement Edit_Tab;
+    private WebElement Edit_Tab;
     
     @FindBy(how = How.LINK_TEXT, using = "Add Promo Queue")
-    private static WebElement AddPromoQueue_Lnk;
+    private WebElement AddPromoQueue_Lnk;
     
-    private static WebElement QueuesList_Ttl(String queueTitle) {
+    private WebElement QueuesList_Ttl(String queueTitle) {
     	return webDriver.findElement(By.xpath("//table[contains(@class, 'views-table')]//td[contains(text(), '" + queueTitle + "')]/.."));
     }
     
-    private static WebElement EditExtendMenu_Btn(String queueTitle) {
+    private WebElement EditExtendMenu_Btn(String queueTitle) {
 		return webDriver.findElement(By.xpath("//table[contains(@class, 'views-table')]//td[contains(text(), '" + queueTitle + "')]/..//a[text()='operations']"));
 	}
 	
-	private static WebElement EditMenuDelete_Btn(String queueTitle) {
+	private WebElement EditMenuDelete_Btn(String queueTitle) {
 		return webDriver.findElement(By.xpath("//table[contains(@class, 'views-table')]//td[contains(text(), '" + queueTitle + "')]/..//a[text()='Delete']"));
 	}
 	
-	private static WebElement EditMenu_Btn(String queueTitle) {
+	private WebElement EditMenu_Btn(String queueTitle) {
 		return webDriver.findElement(By.xpath("//table[contains(@class, 'views-table')]//td[contains(text(), '" + queueTitle + "')]/..//a[text()='Edit']"));
 	}
 	
-	private static WebElement QueueItem_Txb(String itemTxbIndex) {
+	private WebElement QueueItem_Txb(String itemTxbIndex) {
 		return webDriver.findElement(By.xpath("(//input[contains(@id, 'edit-field-qt-promo-queue')][1])[" + itemTxbIndex + "]"));
 	}
 	
-	private static WebElement AutoComplete_Opt(String optionTxt) {
+	private WebElement AutoComplete_Opt(String optionTxt) {
     	return webDriver.findElement(By.xpath("//div[@class='reference-autocomplete'][contains(text(),'" + optionTxt + "')]"));
     }
     

@@ -73,47 +73,51 @@ public class CustomReport extends EmailableReporter {
             failedTests.removeResult(failedMethodToRemove);
         }
 		
-		//generate the report
-        super.generateReport(xmlSuites, suites, outputDirectory);
+        //only generate and send reports on last suite being executed and not both
+        if (suite.getName().equals("Pub 7 Concurrent Suite")) {
+		
+        	//generate the report
+        	super.generateReport(xmlSuites, suites, outputDirectory);
 
-        //copy the emailable report to the reports directory
-		File resultsFile = new File(outputDirectory + File.separator + "emailable-report.html");
+        	//copy the emailable report to the reports directory
+        	File resultsFile = new File(outputDirectory + File.separator + "emailable-report.html");
     
-		String storeReportsTo = null;
-		try {
-			storeReportsTo = config.getPathToReports();
-		} catch (Exception e) { System.out.println("Failed to get configuration path to reports directory."); }
+        	String storeReportsTo = null;
+        	try {
+        		storeReportsTo = config.getPathToReports();
+        	} catch (Exception e) { System.out.println("Failed to get configuration path to reports directory."); }
 		
-		DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
-		Date date = new Date();
-		String fileExtension = dateFormat.format(date).replace("/", "");
-		fileExtension = fileExtension.replace(" ", "");
-		fileExtension = fileExtension.replace(":", "") + ".html";
-		String filePath = storeReportsTo + fileExtension;
+        	DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+        	Date date = new Date();
+        	String fileExtension = dateFormat.format(date).replace("/", "");
+        	fileExtension = fileExtension.replace(" ", "");
+        	fileExtension = fileExtension.replace(":", "") + ".html";
+        	String filePath = storeReportsTo + fileExtension;
 
-		try {
-			FileUtils.copyFile(resultsFile, new File(filePath));
-			System.out.println("Report saved to: " + filePath);
+        	try {
+        		FileUtils.copyFile(resultsFile, new File(filePath));
+        		System.out.println("Report saved to: " + filePath);
 			
-		} catch (IOException e) { System.out.println("Failed to copy emailable-report.html to reports directory."); }
+        	} catch (IOException e) { System.out.println("Failed to copy emailable-report.html to reports directory."); }
     
-		//upload report to rally
-		try {
-			uploadReport.uploadFileAttachment(filePath, fileExtension);
+        	//upload report to rally
+        	try {
+        		uploadReport.uploadFileAttachment(filePath, fileExtension);
 			
-		} catch (Exception e) {
+        	} catch (Exception e) {
 			
-			System.out.println("Failed to upload report attachment to Rally.");
-		}
+        		System.out.println("Failed to upload report attachment to Rally.");
+        	}
 		
-		//send auto email with report
-		SendEmailReport sendEmailReport = new SendEmailReport();
-		try {
-			sendEmailReport.SendEmail(filePath, fileExtension, passedTests.size(), failedTests.size());
-		} catch (Exception e) {
-			System.out.println("Failed to send report email.");
-		}
-		
+        	//send auto email with report
+        	SendEmailReport sendEmailReport = new SendEmailReport();
+        	try {
+        		sendEmailReport.SendEmail(filePath, fileExtension, passedTests.size(), failedTests.size());
+        	} catch (Exception e) {
+        		System.out.println("Failed to send report email.");
+        	}
+        }
     }
-}
+
+	}
 }

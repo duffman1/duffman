@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.Reporter;
 import com.nbcuni.test.publisher.common.AppLib;
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
  * publisher.nbcuni.com Soft Length Library. Copyright
@@ -18,26 +18,26 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 
 public class SoftLength {
 
-    private static CustomWebDriver webDriver;
-    private static AppLib applib;
+    private Driver webDriver;
+    private AppLib applib;
     
     //PAGE OBJECT CONSTRUCTOR
-    public SoftLength(CustomWebDriver webDriver, AppLib applib) {
-        SoftLength.webDriver = webDriver;
-        SoftLength.applib = applib;
+    public SoftLength(Driver webDriver, AppLib applib) {
+        this.webDriver = webDriver;
+        this.applib = applib;
         PageFactory.initElements(webDriver, this);
     }
     
     //PAGE OBJECT IDENTIFIERS
-    private static WebElement SoftLengthUnderLimit_Ctr(String characterTxt) {
+    private WebElement SoftLengthUnderLimit_Ctr(String characterTxt) {
     	return webDriver.findElement(By.xpath("//div[contains(@class,'under-min')][text()='" + characterTxt + "']"));
     }
     
-    private static WebElement SoftLengthMeetsLimit_Ctr(String characterTxt) {
+    private WebElement SoftLengthMeetsLimit_Ctr(String characterTxt) {
     	return webDriver.findElement(By.xpath("//div[@class='soft-length-limit-tooltip description min-style-tooltip'][text()='" + characterTxt + "']"));
     }
     
-    private static WebElement SoftLengthExceedsLimit_Ctr(String characterTxt) {
+    private WebElement SoftLengthExceedsLimit_Ctr(String characterTxt) {
     	return webDriver.findElement(By.xpath("//div[@class='soft-length-limit-tooltip description min-style-tooltip exceeded'][text()='" + characterTxt + "']"));
     }
     

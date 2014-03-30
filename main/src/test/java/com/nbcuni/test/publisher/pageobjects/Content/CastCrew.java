@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
 
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
  * publisher.nbcuni.com Cast/Crew Library. Copyright
@@ -22,37 +22,37 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 
 public class CastCrew {
 
-    private static CustomWebDriver webDriver;
+    private Driver webDriver;
     
     //PAGE OBJECT CONSTRUCTOR
-    public CastCrew(CustomWebDriver webDriver) {
-        CastCrew.webDriver = webDriver;
+    public CastCrew(Driver webDriver) {
+        this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
     }
     
     //PAGE OBJECT IDENTIFIERS
     @FindBy(how = How.XPATH, using = "//a/strong[text()='Cast/Crew']")
-    private static WebElement CastCrew_Lnk;
+    private WebElement CastCrew_Lnk;
     
     @FindBy(how = How.XPATH, using = "//label[contains(text(), 'Character')]/../input")
-    private static WebElement Character_Txb;
+    private WebElement Character_Txb;
     
     @FindBy(how = How.XPATH, using = "//input[@value= 'Add another item']")
-    private static WebElement AddAnotherItem_Btn;
+    private WebElement AddAnotherItem_Btn;
     
-    private static WebElement Role_Ddl(String index) {
+    private WebElement Role_Ddl(String index) {
     	return webDriver.findElement(By.xpath("(//select[contains(@id, 'role')])[" + index + "]"));
     }
     
-    private static WebElement Person_Txb(String index) {
+    private WebElement Person_Txb(String index) {
     	return webDriver.findElement(By.xpath("(//input[contains(@id, 'person')][1])[" + index + "]"));
     }
     
-    private static WebElement Character_Txb(String index) {
+    private WebElement Character_Txb(String index) {
     	return webDriver.findElement(By.xpath("(//input[contains(@id, 'character')][1])[" + index + "]"));
     }
     
-    private static WebElement AutoComplete_Opt(String optionTxt) {
+    private WebElement AutoComplete_Opt(String optionTxt) {
     	return webDriver.findElement(By.xpath("//div[@class='reference-autocomplete'][text()='" + optionTxt + "']"));
     }
     

@@ -6,7 +6,7 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
 import com.nbcuni.test.publisher.common.AppLib;
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
  * publisher.nbcuni.com Twitter Login Library. Copyright
@@ -18,28 +18,28 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 public class TwitterLogin {
 
     //PAGE OBJECT CONSTRUCTOR
-    public TwitterLogin(CustomWebDriver webDriver, AppLib applib) {
+    public TwitterLogin(Driver webDriver, AppLib applib) {
         PageFactory.initElements(webDriver, this);
     }
     
     //PAGE OBJECT IDENTIFIERS
     @FindBy(how = How.ID, using = "username_or_email")
-    private static WebElement AdminUsernameOrEmail_Txb;
+    private WebElement AdminUsernameOrEmail_Txb;
     
     @FindBy(how = How.XPATH, using = "(//input[@name='session[username_or_email]'])[1]")
-    private static WebElement UsernameOrEmail_Txb;
+    private WebElement UsernameOrEmail_Txb;
     
     @FindBy(how = How.ID, using = "password")
-    private static WebElement AdminPassword_Txb;
+    private WebElement AdminPassword_Txb;
     
     @FindBy(how = How.XPATH, using = "(//input[@name='session[password]'])[1]")
-    private static WebElement Password_Txb;
+    private WebElement Password_Txb;
     
     @FindBy(how = How.ID, using = "allow")
-    private static WebElement AuthorizeApp_Btn;
+    private WebElement AuthorizeApp_Btn;
     
     @FindBy(how = How.XPATH, using = "(//button[text()='Sign in'])[1]")
-    private static WebElement SignIn_Btn;
+    private WebElement SignIn_Btn;
     
     
     //PAGE OBJECT METHODS

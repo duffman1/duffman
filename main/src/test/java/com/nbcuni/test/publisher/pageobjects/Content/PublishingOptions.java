@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.Reporter;
 
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
  * publisher.nbcuni.com Publishing Options Library. Copyright
@@ -20,38 +20,38 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 
 public class PublishingOptions {
 
-    private static CustomWebDriver webDriver;
+    private Driver webDriver;
     
     //PAGE OBJECT CONSTRUCTOR
-    public PublishingOptions(CustomWebDriver webDriver) {
-        PublishingOptions.webDriver = webDriver;
+    public PublishingOptions(Driver webDriver) {
+        this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
     }
     
     //PAGE OBJECT IDENTIFIERS
     @FindBy(how = How.XPATH, using = "//a/strong[text()='Publishing options']")
-    private static WebElement PublishingOptions_Lnk;
+    private WebElement PublishingOptions_Lnk;
     
     @FindBy(how = How.ID, using = "edit-revision")
-    private static WebElement CreateNewRevision_Cbx;
+    private WebElement CreateNewRevision_Cbx;
     
     @FindBy(how = How.ID, using = "edit-event")
-    private static WebElement ModerationState_Ddl;
+    private WebElement ModerationState_Ddl;
     
     @FindBy(how = How.XPATH, using = "(//textarea[@id='edit-event-comment'])[1]")
-    private static WebElement LogMessageStateChange_Txa;
+    private WebElement LogMessageStateChange_Txa;
     
     @FindBy(how = How.ID, using = "edit-published")
-    private static WebElement Published_Cbx;
+    private WebElement Published_Cbx;
     
     @FindBy(how = How.ID, using = "edit-field-workbench-assigned-und-0-target-id")
-    private static WebElement AssignTo_Txb;
+    private WebElement AssignTo_Txb;
     
-    private static WebElement AutoComplete_Opt(String optionTxt) {
+    private WebElement AutoComplete_Opt(String optionTxt) {
     	return webDriver.findElement(By.xpath("//div[@class='reference-autocomplete'][text()='" + optionTxt + "']"));
     }
     
-    private static String ScrollUp_Js() {
+    private String ScrollUp_Js() {
     	String jsScrollUp = "window.scrollBy(0,-500);";
     	return jsScrollUp;
     }

@@ -7,7 +7,7 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
 
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
  * publisher.nbcuni.com UserLogin Library. Copyright
@@ -18,23 +18,23 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 
 public class UserLogin {
 
-    private static CustomWebDriver webDriver;
+    private Driver webDriver;
     
     //PAGE OBJECT CONSTRUCTOR
-    public UserLogin(CustomWebDriver webDriver) {
-        UserLogin.webDriver = webDriver;
+    public UserLogin(Driver webDriver) {
+        this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
     }
     
     //PAGE OBJECT IDENTIFIERS
     @FindBy(how = How.XPATH, using = "//input[@id='edit-name']")
-    private static WebElement Email_Address_Txb;
+    private WebElement Email_Address_Txb;
     
     @FindBy(how = How.XPATH, using = "//input[@id='edit-pass']")
-    private static WebElement Password_Txb;
+    private WebElement Password_Txb;
     
     @FindBy(how = How.CSS, using = "input[value='Log in']")
-    private static WebElement LogIn_Btn;
+    private WebElement LogIn_Btn;
     
     
     //PAGE OBJECT METHODS

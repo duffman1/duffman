@@ -14,7 +14,7 @@ import com.nbcuni.test.publisher.common.Random;
 import com.nbcuni.test.publisher.pageobjects.Overlay;
 import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.Taxonomy.Taxonomy;
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
  * publisher.nbcuni.com Add User Library. Copyright
@@ -25,15 +25,15 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 
 public class AddUser {
 
-	private static CustomWebDriver webDriver;
-	private static Taxonomy taxonomy;
-	private static Overlay overlay;
-	private static ContentParent contentParent;
-	private static Random random;
+	private Driver webDriver;
+	private Taxonomy taxonomy;
+	private Overlay overlay;
+	private ContentParent contentParent;
+	private Random random;
 	
     //PAGE OBJECT CONSTRUCTOR
-    public AddUser(CustomWebDriver webDriver, AppLib applib) {
-    	AddUser.webDriver = webDriver;
+    public AddUser(Driver webDriver, AppLib applib) {
+    	this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
         taxonomy = new Taxonomy(webDriver);
         overlay = new Overlay(webDriver, applib);
@@ -43,32 +43,32 @@ public class AddUser {
     
     //PAGE OBJECT IDENTIFIERS
     @FindBy(how = How.XPATH, using = "//input[@id='edit-name']")
-    private static WebElement Username_Txb;
+    private WebElement Username_Txb;
     
     @FindBy(how = How.XPATH, using = "//input[@id='edit-mail']")
-    private static WebElement EmailAddress_Txb;
+    private WebElement EmailAddress_Txb;
     
     @FindBy(how = How.XPATH, using = "//input[@id='edit-pass-pass1']")
-    private static WebElement Password_Txb;
+    private WebElement Password_Txb;
     
     @FindBy(how = How.XPATH, using = "//input[@id='edit-pass-pass2']")
-    private static WebElement ConfirmPassword_Txb;
+    private WebElement ConfirmPassword_Txb;
     
-    private static WebElement Role_Cbx(String role) {
+    private WebElement Role_Cbx(String role) {
     	return webDriver.findElement(By.xpath("//label[text()='" + role + " ']/../input"));
     }
     
     @FindBy(how = How.ID, using = "edit-notify")
-    private static WebElement NotifyUserNewAccount_Cbx;
+    private WebElement NotifyUserNewAccount_Cbx;
     
     @FindBy(how = How.XPATH, using = "//input[@id='edit-field-first-name-und-0-value']")
-    private static WebElement FirstName_Txb;
+    private WebElement FirstName_Txb;
     
     @FindBy(how = How.XPATH, using = "//input[@id='edit-field-last-name-und-0-value']")
-    private static WebElement LastName_Txb;
+    private WebElement LastName_Txb;
     
     @FindBy(how = How.XPATH, using = "//input[@value='Create new account']")
-    private static WebElement CreateNewAccount_Btn;
+    private WebElement CreateNewAccount_Btn;
     
     
     //PAGE OBJECT METHODS

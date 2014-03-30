@@ -6,7 +6,7 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.Reporter;
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
  * publisher.nbcuni.com Access Denied Library. Copyright
@@ -18,13 +18,13 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 public class AccessDenied {
 
     //PAGE OBJECT CONSTRUCTOR
-    public AccessDenied(CustomWebDriver webDriver) {
+    public AccessDenied(Driver webDriver) {
         PageFactory.initElements(webDriver, this);
     }
     
     //PAGE OBJECT IDENTIFIERS
     @FindBy(how = How.TAG_NAME, using = "body")
-    private static WebElement Body_Txt;
+    private WebElement Body_Txt;
     
     //PAGE OBJECT METHODS
     public void VerifyAccessDeniedTxt() throws Exception {

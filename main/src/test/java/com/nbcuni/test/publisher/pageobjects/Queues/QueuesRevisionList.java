@@ -12,7 +12,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
 
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
  * publisher.nbcuni.com Queues Revision List Library. Copyright
@@ -23,42 +23,42 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 
 public class QueuesRevisionList {
 
-	private static CustomWebDriver webDriver;
-	private static WebDriverWait wait;
+	private Driver webDriver;
+	private WebDriverWait wait;
 	
     //PAGE OBJECT CONSTRUCTOR
-    public QueuesRevisionList(CustomWebDriver webDriver) {
-    	QueuesRevisionList.webDriver = webDriver;
+    public QueuesRevisionList(Driver webDriver) {
+    	this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
         wait = new WebDriverWait(webDriver, 10);
     }
     
     //PAGE OBJECT IDENTIFIERS
     @FindBy(how = How.XPATH, using = "(//input[@value='Update State'])[1]")
-    private static WebElement UpdateState_Btn;
+    private WebElement UpdateState_Btn;
     
     @FindBy(how = How.XPATH, using = "//a[text()='Revisions']")
-    private static WebElement Revision_Lnk;
+    private WebElement Revision_Lnk;
     
     @FindBy(how = How.XPATH, using = "(//td[@class='views-field views-field-history-list'])[1]")
-    private static WebElement StateFlowHistoryEvent_Txt;
+    private WebElement StateFlowHistoryEvent_Txt;
     
     @FindBy(how = How.ID, using = "edit-cancel")
-    private static WebElement Cancel_Lnk;
+    private WebElement Cancel_Lnk;
     
-    private static WebElement EditExtendMenu_Btn(String index) {
+    private WebElement EditExtendMenu_Btn(String index) {
 		return webDriver.findElement(By.xpath("(//table[contains(@class, 'views-table')]//td/..//a[text()='operations'])[" + index + "]"));
 	}
 	
-	private static WebElement EditMenuDelete_Btn(String index) {
+	private WebElement EditMenuDelete_Btn(String index) {
 		return webDriver.findElement(By.xpath("(//table[contains(@class, 'views-table')]//td/..//a[text()='Delete'])[" + index + "]"));
 	}
 	
-	private static WebElement EditMenu_Btn(String index) {
+	private WebElement EditMenu_Btn(String index) {
 		return webDriver.findElement(By.xpath("(//table[contains(@class, 'views-table')]//td/..//a[text()='Edit'])[" + index + "]"));
 	}
 	
-	private static List<WebElement> StateFlow_Rws() {
+	List<WebElement> StateFlow_Rws() {
 		return webDriver.findElements(By.xpath("//table[contains(@class, 'views-table')]//tr[contains(@class, 'state-flow')]"));
 	}
     

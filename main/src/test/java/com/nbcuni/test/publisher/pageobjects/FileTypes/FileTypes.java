@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
 
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
  * publisher.nbcuni.com UserLogin Library. Copyright
@@ -16,24 +16,24 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 
 public class FileTypes {
 
-    private static CustomWebDriver webDriver;
+    private Driver webDriver;
     
     //PAGE OBJECT CONSTRUCTOR
-    public FileTypes(CustomWebDriver webDriver) {
-        FileTypes.webDriver = webDriver;
+    public FileTypes(Driver webDriver) {
+        this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
     }
     
     //PAGE OBJECT IDENTIFIERS
-    private static WebElement ManageFields_Lnk(String fieldName) {
+    private WebElement ManageFields_Lnk(String fieldName) {
     	return webDriver.findElement(By.xpath("//td[contains(text(), '" + fieldName + "')]/..//a[text()='manage fields']"));
     }
     
-    private static WebElement EditFileType_Lnk(String fieldName) {
+    private WebElement EditFileType_Lnk(String fieldName) {
     	return webDriver.findElement(By.xpath("//td[contains(text(), '" + fieldName + "')]/..//a[text()='edit file type']"));
     }
     
-    private static WebElement ManageFileDisplay_Lnk(String fieldName) {
+    private WebElement ManageFileDisplay_Lnk(String fieldName) {
     	return webDriver.findElement(By.xpath("//td[contains(text(), '" + fieldName + "')]/..//a[text()='manage file display']"));
     }
     

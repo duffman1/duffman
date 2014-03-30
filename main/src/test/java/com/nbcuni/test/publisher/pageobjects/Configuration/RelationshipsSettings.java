@@ -12,7 +12,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
 
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
 * publisher.nbcuni.com Relationships Settings Library. Copyright
@@ -22,37 +22,37 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 *********************************************/
 public class RelationshipsSettings {
 		
-	private static CustomWebDriver webDriver;
-	private static WebDriverWait wait;
+	private Driver webDriver;
+	private WebDriverWait wait;
 	
 	//PAGE OBJECT CONSTRUCTOR
-	public RelationshipsSettings(CustomWebDriver webDriver) {
-		RelationshipsSettings.webDriver = webDriver;
+	public RelationshipsSettings(Driver webDriver) {
+		this.webDriver = webDriver;
 		PageFactory.initElements(webDriver, this);
 		wait = new WebDriverWait(webDriver, 10);
 	}
 
 	//PAGE OBJECT IDENTIFIERS
 	@FindBy(how = How.XPATH, using ="//a/strong[text()='TV']")
-	private static WebElement TV_Tab;
+	private WebElement TV_Tab;
 	
 	@FindBy(how = How.XPATH, using ="//a/strong[text()='Movies']")
-	private static WebElement Movies_Tab;
+	private WebElement Movies_Tab;
 	
-	private static List<WebElement> AllContentType_Cbxs() {
+	private List<WebElement> AllContentType_Cbxs() {
 		return webDriver.findElements(By.xpath("//div[@class='fieldset-wrapper']//input"));
 	}
 
-	private static List<WebElement> ContentType_Cbx(String contentName) {
+	private List<WebElement> ContentType_Cbx(String contentName) {
 		return webDriver.findElements(By.xpath("//label[text()='" + contentName + " ']/../input"));
 	}
 	
-	private static WebElement RelationshipDepth_Ddl(String contentName) {
+	private WebElement RelationshipDepth_Ddl(String contentName) {
 		return webDriver.findElement(By.xpath("//label[text()='" + contentName + " ']/../select"));
 	}
 	
 	@FindBy(how = How.ID, using ="edit-submit")
-	private static WebElement SaveConfiguration_Btn;
+	private WebElement SaveConfiguration_Btn;
 	
 	
 	//PAGE OBJECT METHODS

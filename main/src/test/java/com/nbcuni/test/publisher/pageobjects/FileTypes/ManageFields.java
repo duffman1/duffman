@@ -9,7 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Reporter;
 import com.nbcuni.test.publisher.common.AppLib;
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
  * publisher.nbcuni.com Manage Fields Library. Copyright
@@ -20,27 +20,27 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 
 public class ManageFields {
 
-    private static CustomWebDriver webDriver;
-    private static AppLib applib;
+    private Driver webDriver;
+    private AppLib applib;
     
     //PAGE OBJECT CONSTRUCTOR
-    public ManageFields(CustomWebDriver webDriver, AppLib applib) {
-        ManageFields.webDriver = webDriver;
-        ManageFields.applib = applib;
+    public ManageFields(Driver webDriver, AppLib applib) {
+        this.webDriver = webDriver;
+        this.applib = applib;
         PageFactory.initElements(webDriver, this);
     }
     
     //PAGE OBJECT IDENTIFIERS
     @FindBy(how = How.ID, using = "edit-fields-add-new-field-label")
-    private static WebElement AddNewField_Txb;
+    private WebElement AddNewField_Txb;
     
     @FindBy(how = How.ID, using = "edit-fields-add-new-field-type")
-    private static WebElement SelectFieldType_Ddl;
+    private WebElement SelectFieldType_Ddl;
     
     @FindBy(how = How.ID, using = "edit-submit")
-    private static WebElement Save_Btn;
+    private WebElement Save_Btn;
     
-    private static WebElement FieldLabel_Txt(String labelTxt) {
+    private WebElement FieldLabel_Txt(String labelTxt) {
     	return webDriver.findElement(By.xpath("//td[contains(text(), '" + labelTxt + "')]"));
     }
     

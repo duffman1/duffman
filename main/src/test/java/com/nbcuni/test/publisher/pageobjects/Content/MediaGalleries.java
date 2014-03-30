@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
 
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
  * publisher.nbcuni.com Media Galleries Library. Copyright
@@ -20,19 +20,19 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 
 public class MediaGalleries {
 
-	private static CustomWebDriver webDriver;
-	private static WebDriverWait wait;
+	private Driver webDriver;
+	private WebDriverWait wait;
 	
     //PAGE OBJECT CONSTRUCTOR
-    public MediaGalleries(CustomWebDriver webDriver) {
-    	MediaGalleries.webDriver = webDriver;
+    public MediaGalleries(Driver webDriver) {
+    	this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
         wait = new WebDriverWait(webDriver, 10);
     }
     
     //PAGE OBJECT IDENTIFIERS
     @FindBy(how = How.XPATH, using = "//a[text()='Add Media Gallery']")
-    private static WebElement AddMediaGallery_Lnk;
+    private WebElement AddMediaGallery_Lnk;
     
     private WebElement Edit_Lnk(String contentItemTitle) {
     	return webDriver.findElement(By.xpath("//a[text()='" + contentItemTitle + "']/../..//a[text()='Edit']"));

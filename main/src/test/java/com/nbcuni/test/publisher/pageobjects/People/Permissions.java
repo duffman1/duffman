@@ -2,7 +2,7 @@ package com.nbcuni.test.publisher.pageobjects.People;
 
 import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriverException;
@@ -24,41 +24,41 @@ import java.util.List;
 
 public class Permissions {
 
-    private static CustomWebDriver webDriver;
-    private static ContentParent contentParent;
+    private Driver webDriver;
+    private ContentParent contentParent;
     
     //PAGE OBJECT CONSTRUCTOR
-    public Permissions(CustomWebDriver webDriver, AppLib applib) {
-        Permissions.webDriver = webDriver;
+    public Permissions(Driver webDriver, AppLib applib) {
+        this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
         contentParent = new ContentParent(webDriver, applib);
     }
     
     //PAGE OBJECT IDENTIFIERS
-    private static List<WebElement> RoleColumns_Ctr() {
+    private List<WebElement> RoleColumns_Ctr() {
     	return webDriver.findElements(By.xpath("(//th[text()='Permission'])[2]/../th[@class='checkbox']"));
     }
     
     @FindBy(how = How.CSS, using = "input[id*='create-post-content']")
-    private static WebElement Post_CreateNewContent_Cbx;
+    private WebElement Post_CreateNewContent_Cbx;
     
     @FindBy(how = How.ID, using = "edit-4-edit-own-post-content")
-    private static WebElement Post_EditOwnContent_Cbx;
+    private WebElement Post_EditOwnContent_Cbx;
     
     @FindBy(how = How.ID, using = "edit-4-delete-own-post-content")
-    private static WebElement Post_DeleteOwnContent_Cbx;
+    private WebElement Post_DeleteOwnContent_Cbx;
     
     @FindBy(how = How.ID, using = "edit-4-create-files")
-    private static WebElement AddAndUploadNewFiles_Cbx;
+    private WebElement AddAndUploadNewFiles_Cbx;
     
     @FindBy(how = How.CSS, using = "input[value='Save permissions']")
-    private static WebElement SavePermissions_Btn;
+    private WebElement SavePermissions_Btn;
     
-    private static WebElement SingleRolePermission_Cbx(String value) {
+    private WebElement SingleRolePermission_Cbx(String value) {
     	return webDriver.findElement(By.cssSelector("input[value='" + value + "']"));
     }
     
-    private static WebElement MultiRolePermission_Cbx(String roleName, String value) {
+    private WebElement MultiRolePermission_Cbx(String roleName, String value) {
     	return webDriver.findElement(By.xpath("//label[contains(text(),'" + roleName + "')]/../input[@value='" + value + "']"));
     }
     

@@ -12,7 +12,7 @@ import org.testng.TestNG;*/
 public class ScanForNewBuild {
 
 	/*//TODO - this class needs a LOT of future work to clean up and eventually run as CI integration.
-	public static void main(String[] args) throws Exception {
+	public  void main(String[] args) throws Exception {
 
 		//scan the inbox account for a new build
 		Session session;

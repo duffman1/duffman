@@ -1,7 +1,7 @@
 package com.nbcuni.test.publisher.pageobjects.Content;
 
 import com.nbcuni.test.publisher.common.AppLib;
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -22,28 +22,26 @@ import org.testng.Reporter;
  *********************************************/
 public class Relationships {
 
-	CustomWebDriver webDriver;
-	WebDriverWait wait;
+	private WebDriverWait wait;
 	
 	//PAGE OBJECT CONSTRUCTORS
-    public Relationships(CustomWebDriver webDriver, AppLib applib) {
-    	this.webDriver = webDriver;
-        PageFactory.initElements(webDriver, this);
+    public Relationships(Driver webDriver, AppLib applib) {
+    	PageFactory.initElements(webDriver, this);
         wait = new WebDriverWait(webDriver, 10);
     }
     
     //PAGE OBJECT IDENTIFIERS AND SCRIPTS
     @FindBy(how = How.XPATH, using = "//a/strong[text()='Relationships']")
-    private static WebElement Relationships_Lnk;
+    private WebElement Relationships_Lnk;
     
     @FindBy(how = How.CSS, using = "select[id*='edit-field-pub-relation-tv-shows-und-0-field-show']")
-    private static WebElement Show_Ddl;
+    private WebElement Show_Ddl;
     
     @FindBy(how = How.CSS, using = "select[id*='edit-field-pub-relation-tv-shows-und-0-field-season")
-    private static WebElement Season_Ddl;
+    private WebElement Season_Ddl;
     
     @FindBy(how = How.CSS, using = "select[id*='edit-field-pub-relation-movie")
-    private static WebElement Movie_Ddl;
+    private WebElement Movie_Ddl;
     
     
     //PAGE OBJECT METHODS

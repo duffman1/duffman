@@ -1,33 +1,45 @@
 package com.nbcuni.test.publisher.common;
 
+import com.nbcuni.test.publisher.common.Driver.*;
 import com.nbcuni.test.publisher.pageobjects.Overlay;
 import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.Taxonomy.Taxonomy;
-import com.nbcuni.test.webdriver.CustomWebDriver;
-import com.nbcuni.test.webdriver.WebDriverClientExecution;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 
 import org.testng.ITestResult;
 import org.testng.Reporter;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
 
 import java.util.concurrent.TimeUnit;
 
 public class ParentTest {
 	
-	protected CustomWebDriver webDriver;
+	protected Driver webDriver;
+	protected DriverSetup driverSetup;
     protected AppLib applib;
     protected Random random;
     protected Taxonomy taxonomy;
     protected Overlay overlay;
     protected Config config;
     protected ContentParent contentParent;
+    protected StartGridHubNode startGridHubNode;
+    
+    @BeforeSuite(alwaysRun = true)
+    public void startGridAndHub() throws Exception {
+
+    	startGridHubNode = new StartGridHubNode();
+    	startGridHubNode.start();
+
+    }
     
     @BeforeMethod(alwaysRun = true)
-    public void startSelenium() {
+    public void startSelenium() throws Exception {
         try {
-            
-        	webDriver = WebDriverClientExecution.getInstance().getDriver();
+            driverSetup = new DriverSetup();
+        	webDriver = driverSetup.WebDriverSetup();
             applib = new AppLib(webDriver);
             config = new Config();
             random = new Random();
@@ -73,6 +85,13 @@ public class ParentTest {
         
         	applib.fail(e.toString());
         }
+
+    }
+    
+    @AfterSuite(alwaysRun = true)
+    public void stopGridAndHub() throws Exception {
+
+    	startGridHubNode.stop();
 
     }
     

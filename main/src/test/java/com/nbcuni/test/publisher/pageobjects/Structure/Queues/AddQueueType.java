@@ -1,7 +1,7 @@
 package com.nbcuni.test.publisher.pageobjects.Structure.Queues;
 
 import com.nbcuni.test.publisher.common.AppLib;
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -21,27 +21,27 @@ import java.util.List;
 
 public class AddQueueType {
 
-    private static CustomWebDriver webDriver;
+    private Driver webDriver;
     
     //PAGE OBJECT CONSTRUCTOR
-    public AddQueueType(CustomWebDriver webDriver, AppLib applib) {
-        AddQueueType.webDriver = webDriver;
+    public AddQueueType(Driver webDriver, AppLib applib) {
+        this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
     }
     
     //PAGE OBJECT IDENTIFIERS
     @FindBy(how = How.ID, using = "edit-label")
-    private static WebElement Name_Txb;
+    private WebElement Name_Txb;
     
     @FindBy(how = How.ID, using = "edit-target")
-    private static WebElement EntityType_Ddl;
+    private WebElement EntityType_Ddl;
     
-    private static WebElement ContentType_Cbx(String contentType) {
+    private WebElement ContentType_Cbx(String contentType) {
     	return webDriver.findElement(By.xpath("//label[text()='" + contentType + " ']/../input"));
     }
     
     @FindBy(how = How.ID, using = "edit-submit")
-    private static WebElement SaveQueueType_Btn;
+    private WebElement SaveQueueType_Btn;
     
     
     //PAGE OBJECT METHODS

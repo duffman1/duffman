@@ -4,7 +4,7 @@ import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.publisher.common.Random;
 import com.nbcuni.test.publisher.pageobjects.Overlay;
 import com.nbcuni.test.publisher.pageobjects.Taxonomy.Taxonomy;
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
  * publisher.nbcuni.com Default Content Library. Copyright
@@ -15,23 +15,23 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 
 public class CreateDefaultContent {
 
-    private static Taxonomy taxonomy;
-	private static Overlay overlay;
-	private static Random random;
-	private static BasicInformation basicInformation;
-	private static ContentParent contentParent;
-	private static PublishingOptions publishingOptions;
-	private static SelectFile selectFile;
-	private static CharactersInformation charactersInformation;
-	private static CoverPhoto coverPhoto;
-	private static PersonsInformation personsInformation;
-	private static ContentTypes contentTypes;
-	private static CoverMedia coverMedia;
-	private static Logo logo;
-	private static Banner banner;
-	private static Relationships relationships;
+    Taxonomy taxonomy;
+	Overlay overlay;
+	Random random;
+	BasicInformation basicInformation;
+	ContentParent contentParent;
+	PublishingOptions publishingOptions;
+	SelectFile selectFile;
+	CharactersInformation charactersInformation;
+	CoverPhoto coverPhoto;
+	PersonsInformation personsInformation;
+	ContentTypes contentTypes;
+	CoverMedia coverMedia;
+	Logo logo;
+	Banner banner;
+	Relationships relationships;
 	
-    public CreateDefaultContent(CustomWebDriver webDriver, AppLib applib) {
+    public CreateDefaultContent(Driver webDriver, AppLib applib) {
         taxonomy = new Taxonomy(webDriver);
         overlay = new Overlay(webDriver, applib);
         random = new Random();

@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Reporter;
 
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
 * publisher.nbcuni.com Manage Display Library. Copyright
@@ -19,19 +19,19 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 public class ManageDisplay {
 
     //PAGE OBJECT CONSTRUCTOR
-    public ManageDisplay(CustomWebDriver webDriver) {
+    public ManageDisplay(Driver webDriver) {
     	PageFactory.initElements(webDriver, this);
     }
     
     //PAGE OBJECT IDENTIFIERS
     @FindBy(how = How.ID, using = "edit-fields-field-movie-cover-media-type")
-    private static WebElement CoverMediaFormat_Ddl;
+    private WebElement CoverMediaFormat_Ddl;
     
     @FindBy(how = How.XPATH, using = "//div[@class='field-formatter-summary']/em[contains(text(), 'Default')]")
-    private static WebElement DefaultViewMode_Txt;
+    private WebElement DefaultViewMode_Txt;
     
     @FindBy(how = How.ID, using = "edit-submit")
-    private static WebElement Save_Btn;
+    private WebElement Save_Btn;
 
     
     //PAGE OBJECT METHODS

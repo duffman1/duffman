@@ -34,7 +34,7 @@ public class AddCharacterCountOptionTextFields extends ParentTest{
         	//Step 1
         	UserLogin userLogin = applib.openApplication();
         	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
-            
+        	
             //Step 2 through 4
         	taxonomy.NavigateSite("Structure>>Content types>>Character Profile>>Manage fields>>Character: First Name");
         	overlay.SwitchToActiveFrame();

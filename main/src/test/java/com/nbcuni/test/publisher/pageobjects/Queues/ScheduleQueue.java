@@ -1,6 +1,6 @@
 package com.nbcuni.test.publisher.pageobjects.Queues;
 
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -20,47 +20,47 @@ import java.util.List;
 public class ScheduleQueue {
 
     //PAGE OBJECT CONSTRUCTOR
-    public ScheduleQueue(CustomWebDriver webDriver) {
+    public ScheduleQueue(Driver webDriver) {
         PageFactory.initElements(webDriver,  this);
         
     }
     
     //PAGE OBJECT IDENTIFIERS
     @FindBy(how = How.XPATH, using = "//a[text()='Schedule']")
-    private static WebElement Schedule_Tab;
+    private WebElement Schedule_Tab;
     
     @FindBy(how = How.XPATH, using = "//a[text()='Add scheduled revision']")
-    private static WebElement AddScheduledRevision_Lnk;
+    private WebElement AddScheduledRevision_Lnk;
     
     @FindBy(how = How.ID, using = "edit-revision-id")
-    private static WebElement Revision_Ddl;
+    private WebElement Revision_Ddl;
     
     @FindBy(how = How.ID, using = "edit-operation")
-    private static WebElement Operation_Ddl;
+    private WebElement Operation_Ddl;
     
     @FindBy(how = How.ID, using = "edit-datetime-datepicker-popup-0")
-    private static WebElement Date_Txb;
+    private WebElement Date_Txb;
     
     @FindBy(how = How.ID, using = "edit-datetime-timeEntry-popup-1")
-    private static WebElement Time_Txb;
+    private WebElement Time_Txb;
     
     @FindBy(how = How.CSS, using = "input[value='Schedule']")
-    private static WebElement Schedule_Btn;
+    private WebElement Schedule_Btn;
     
     @FindBy(how = How.XPATH, using = "//div[@class='content']//tbody")
-    private static WebElement ScheduledQueue_Ctr;
+    private WebElement ScheduledQueue_Ctr;
     
     @FindBy(how = How.XPATH, using = "//table[@class='sticky-enabled tableheader-processed sticky-table']/..//td[@class='empty message']")
-    private static WebElement Schedule_Tbl;
+    private WebElement Schedule_Tbl;
     
     @FindBy(how = How.XPATH, using = "//a[text()='Run now']")
-    private static WebElement RunNow_Btn;
+    private WebElement RunNow_Btn;
     
     @FindBy(how = How.XPATH, using = "//a[text()='Cancel']")
-    private static WebElement RunCancel_Btn;
+    private WebElement RunCancel_Btn;
     
     @FindBy(how = How.XPATH, using = "//td[text()='Completed']")
-    private static WebElement Complete_txt;
+    private WebElement Complete_txt;
 
     
     //PAGE OBJECT METHODS

@@ -3,7 +3,7 @@ package com.nbcuni.test.publisher.pageobjects.Content;
 import java.util.List;
 
 import com.nbcuni.test.publisher.common.AppLib;
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -24,44 +24,44 @@ import org.testng.Reporter;
  *********************************************/
 public class WorkBench {
 
-	private static CustomWebDriver webDriver;
-    private static WebDriverWait wait;
+	private Driver webDriver;
+    private WebDriverWait wait;
     
 	//PAGE OBJECT CONSTRUCTORS
-    public WorkBench(CustomWebDriver webDriver, AppLib applib) {
-        WorkBench.webDriver = webDriver;
+    public WorkBench(Driver webDriver, AppLib applib) {
+        this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
         wait = new WebDriverWait(webDriver, 10);
     }
     
     //PAGE OBJECT IDENTIFIERS AND SCRIPTS
-    private static String MouseOver_Js = "var evObj = document.createEvent('MouseEvents');" + "evObj.initMouseEvent(\"mouseover\",true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);" + "arguments[0].dispatchEvent(evObj);";
+    private String MouseOver_Js = "var evObj = document.createEvent('MouseEvents');" + "evObj.initMouseEvent(\"mouseover\",true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);" + "arguments[0].dispatchEvent(evObj);";
 	
     @FindBy(how = How.CLASS_NAME, using = "workbench-info-block")
-    private static WebElement WorkBenchInfo_Ctr;
+    private WebElement WorkBenchInfo_Ctr;
     
-    private static WebElement WorkBench_Tab(String tabName) {
+    private WebElement WorkBench_Tab(String tabName) {
     	return webDriver.findElement(By.xpath("//a[text()='" + tabName + "']"));
     }
     
     @FindBy(how = How.CSS, using = "div[id='block-workbench-block'] a.contextual-links-trigger")
-    private static WebElement ContextualLinksGearDown_Lnk;
+    private WebElement ContextualLinksGearDown_Lnk;
     
     @FindBy(how = How.XPATH, using ="//li[@class='block-configure first last']/a[contains(text(),'Configure block')]")
-    private static WebElement ConfigureBlock_Lnk;
+    private WebElement ConfigureBlock_Lnk;
     
-    private static WebElement CloneContent_Lnk(String contentType) {
+    private WebElement CloneContent_Lnk(String contentType) {
     	return webDriver.findElement(By.xpath("//a[text() = 'Clone this " + contentType + "']"));
     }
     
     @FindBy(how = How.CSS, using = "iframe[id='pdk-player']")
-    private static WebElement MPXPlayer_Frm;
+    private WebElement MPXPlayer_Frm;
     
-    private static WebElement WorkBench_Img(String imageIndex) {
+    private WebElement WorkBench_Img(String imageIndex) {
     	return webDriver.findElement(By.xpath("(//div[contains(@class, 'file-image')]//img)[" + imageIndex + "]"));
     }
     
-    private static WebElement WorkBenchFileImage_Ids(String imageIndex) {
+    private WebElement WorkBenchFileImage_Ids(String imageIndex) {
     	return webDriver.findElement(By.xpath("(//div[contains(@class, 'file-image')])[" + imageIndex + "]"));
     }
     

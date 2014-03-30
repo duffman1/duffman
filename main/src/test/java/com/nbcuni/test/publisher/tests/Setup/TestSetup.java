@@ -46,6 +46,10 @@ public class TestSetup extends ParentTest{
             //disable database logging module
             modules.EnterFilterName("Database logging");
             modules.DisableModule("Database logging");
+            
+            //enable pub post module
+            modules.EnterFilterName("Pub Post");
+            modules.EnableModule("Pub Post");
             overlay.ClickCloseOverlayLnk();
             
             //if Cindia's demo site, set set timezone to UTC

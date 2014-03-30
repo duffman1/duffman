@@ -1,6 +1,6 @@
 package com.nbcuni.test.publisher.pageobjects.Taxonomy;
 
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -20,57 +20,57 @@ import org.testng.Reporter;
 
 public class Taxonomy {
 
-    private static CustomWebDriver webDriver;
+    private Driver webDriver;
     
     //PAGE OBJECT CONSTRUCTOR
-    public Taxonomy(CustomWebDriver webDriver) {
-        Taxonomy.webDriver = webDriver;
+    public Taxonomy(Driver webDriver) {
+        this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
     }
     
     //PAGE OBJECT IDENTIFIERS AND SCRIPTS
-    private static String MouseOver_Js = "var evObj = document.createEvent('MouseEvents');" + "evObj.initMouseEvent(\"mouseover\",true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);" + "arguments[0].dispatchEvent(evObj);";
+    private String MouseOver_Js = "var evObj = document.createEvent('MouseEvents');" + "evObj.initMouseEvent(\"mouseover\",true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);" + "arguments[0].dispatchEvent(evObj);";
 	
-    private static WebElement Tier1_Lnk(String[] tiers) {
+    private WebElement Tier1_Lnk(String[] tiers) {
     	return webDriver.findElement(By.xpath("//li[contains(@class,'admin-menu-toolbar-category')]/a[text()='" + tiers[0] + "']"));
     }
     
-    private static WebElement Tier2_Lnk(String[] tiers) {
+    private WebElement Tier2_Lnk(String[] tiers) {
     	return webDriver.findElement(By.xpath("//li[contains(@class,'admin-menu-toolbar-category')]/a[text()='" + tiers[0] + "']/../ul//a[text()='" + tiers[1] +"']"));
     }
     
-    private static WebElement Tier3_Lnk(String[] tiers) {
+    private WebElement Tier3_Lnk(String[] tiers) {
     	return webDriver.findElement(By.xpath("//li[contains(@class,'admin-menu-toolbar-category')]/a[text()='" + tiers[0] + "']/../ul//a[text()='" + tiers[1] +"']/..//a[text()='" + tiers[2] + "']"));
     }
     
-    private static WebElement Tier4_Lnk(String[] tiers) {
+    private WebElement Tier4_Lnk(String[] tiers) {
     	return webDriver.findElement(By.xpath("//li[contains(@class,'admin-menu-toolbar-category')]/a[text()='" + tiers[0] + "']/../ul//a[text()='" + tiers[1] +"']/..//a[text()='" + tiers[2] + "']/..//a[text()='" + tiers[3] + "']"));
     }
     
-    private static WebElement Tier5_Lnk(String[] tiers) {
+    private WebElement Tier5_Lnk(String[] tiers) {
     	return webDriver.findElement(By.xpath("//li[contains(@class,'admin-menu-toolbar-category')]/a[text()='" + tiers[0] + "']/../ul//a[text()='" + tiers[1] +"']/..//a[text()='" + tiers[2] + "']/..//a[text()='" + tiers[3] + "']/..//a[text()='" + tiers[4] + "']"));
     }
     
     @FindBy(how = How.XPATH, using = "//span[@class='admin-menu-home-icon']")
-    private static WebElement HomeTier1_Lnk;
+    private WebElement HomeTier1_Lnk;
     
-    private static WebElement HomeTier2_Lnk(String[] tiers) {
+    private WebElement HomeTier2_Lnk(String[] tiers) {
     	return webDriver.findElement(By.xpath("//span[@class='admin-menu-home-icon']/../..//a[text()='" + tiers[1] + "']"));
     }
     
     @FindBy(how = How.XPATH, using = "//span[@class='admin-menu-home-icon']/../..//span[contains(text(), 'Development')]")
-    private static WebElement HomeDevelopmentTier2_Lnk;
+    private WebElement HomeDevelopmentTier2_Lnk;
     
-    private static WebElement HomeDevelopmentTier3_Lnk(String[] tiers) {
+    private WebElement HomeDevelopmentTier3_Lnk(String[] tiers) {
     	return webDriver.findElement(By.xpath("//span[@class='admin-menu-home-icon']/../..//span[contains(text(), 'Development')]/..//a[contains(text(), '" + tiers[2] + "')]"));
     }
     
-    private static WebElement TaxonomyItem_Lnk(String menuName) {
+    private WebElement TaxonomyItem_Lnk(String menuName) {
     	return webDriver.findElement(By.xpath("//ul[@id='admin-menu-menu']/..//a[text()=\"" + menuName + "\"]"));
     }
     
     @FindBy(how = How.XPATH, using = "//a[@id='edit-shortcuts']")
-    private static WebElement Shortcuts_Lnk;
+    private WebElement Shortcuts_Lnk;
     
     
     //PAGE OBJECT METHODS

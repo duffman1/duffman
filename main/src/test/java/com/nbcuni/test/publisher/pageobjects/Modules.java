@@ -17,7 +17,7 @@ import org.testng.Reporter;
 import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.Taxonomy.Taxonomy;
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
  * publisher.nbcuni.com Modules Library. Copyright
@@ -28,16 +28,16 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 
 public class Modules {
 
-    private static CustomWebDriver webDriver;
-    private static AppLib applib;
-    private static ContentParent contentParent;
-    private static Overlay overlay;
-    private static Taxonomy taxonomy;
+    private Driver webDriver;
+    private AppLib applib;
+    private ContentParent contentParent;
+    private Overlay overlay;
+    private Taxonomy taxonomy;
     
     //PAGE OBJECT CONSTRUCTOR
-    public Modules(CustomWebDriver webDriver, AppLib applib) {
-    	Modules.webDriver = webDriver;
-    	Modules.applib = applib;
+    public Modules(Driver webDriver, AppLib applib) {
+    	this.webDriver = webDriver;
+    	this.applib = applib;
     	contentParent = new ContentParent(webDriver, applib);
     	PageFactory.initElements(webDriver, contentParent);
     	overlay = new Overlay(webDriver, applib);
@@ -49,26 +49,26 @@ public class Modules {
     
     //PAGE OBJECT IDENTIFIERS
     @FindBy(how = How.XPATH, using = "//input[@id='edit-module-filter-name']")
-    private static WebElement FilterList_Txb;
+    private WebElement FilterList_Txb;
     
     @FindBy(how = How.XPATH, using = "//input[@value='Save configuration']")
-    private static WebElement SaveConfiguration_Btn;
+    private WebElement SaveConfiguration_Btn;
     
     @FindBy(how = How.XPATH, using = "//input[@value='Continue']")
-    private static WebElement Continue_Btn;
+    private WebElement Continue_Btn;
     
     @FindBy(how = How.XPATH, using = "//input[@value='Uninstall']")
-    private static WebElement Uninstall_Btn;
+    private WebElement Uninstall_Btn;
     
-    private static WebElement ModuleName_Cbx(String moduleName) {
+    private WebElement ModuleName_Cbx(String moduleName) {
     	return webDriver.findElement(By.xpath("//label/strong[text()='" + moduleName + "']/../../../td[@class='checkbox']//input"));
     }
     
-    private static WebElement UninstallModuleName_Cbx(String moduleName) {
+    private WebElement UninstallModuleName_Cbx(String moduleName) {
     	return webDriver.findElement(By.xpath("//label[text()='" + moduleName + "']/../../..//input"));
     }
     
-    private static WebElement Configure_Lnk(String moduleName) {
+    private WebElement Configure_Lnk(String moduleName) {
     	return webDriver.findElement(By.xpath("//label/strong[text()='" + moduleName + "']/../../../td//a[text()='Configure']"));
     }
     

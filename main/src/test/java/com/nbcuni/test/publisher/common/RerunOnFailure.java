@@ -8,6 +8,7 @@ Config config = new Config();
 private int retryCount = 0;
 private int maxRetryCount = config.getReRunOnFailureCount();
 
+@Override
 public boolean retry(ITestResult result) {
 
 	if(retryCount < maxRetryCount && config.getConfigValue("ReRunOnFailure").equals("true")) { 

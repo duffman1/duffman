@@ -4,12 +4,9 @@ import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.TimeZone;
-
 import org.testng.annotations.Test;
-
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.RerunOnFailure;
-import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Content.*;
 import com.nbcuni.test.publisher.pageobjects.Queues.Queues;
@@ -41,8 +38,6 @@ public class QueueModerationStates extends ParentTest{
         userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
         
         //Step 1a
-        Modules modules = new Modules(webDriver, applib);
-        modules.VerifyModuleEnabled("Pub Post");
         CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver, applib);
         String postTitle = createDefaultContent.Post("Draft");
         

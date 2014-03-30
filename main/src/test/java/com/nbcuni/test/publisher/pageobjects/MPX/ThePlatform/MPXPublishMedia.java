@@ -13,13 +13,13 @@ import org.sikuli.script.*;
 
 public class MPXPublishMedia {
 
-    private static AppLib applib;
-    private static Screen sikuli;
-    private static MPXAssets mpxAssets;
+    private AppLib applib;
+    private Screen sikuli;
+    private MPXAssets mpxAssets;
     
     public MPXPublishMedia(AppLib applib) {
         sikuli = new Screen();
-        MPXPublishMedia.applib = applib;
+        this.applib = applib;
         mpxAssets = new MPXAssets(applib);
     }
     

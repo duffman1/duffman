@@ -10,7 +10,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.Reporter;
 import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.publisher.pageobjects.Overlay;
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
 * publisher.nbcuni.com Add a New Side File Library. Copyright
@@ -21,48 +21,48 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 
 public class AddNewSideFile {
 
-	private static CustomWebDriver webDriver;
-	private static AppLib applib;
-	private static Overlay overlay;
+	private Driver webDriver;
+	private AppLib applib;
+	private Overlay overlay;
 	
     //PAGE OBJECT CONSTRUCTOR
-    public AddNewSideFile(CustomWebDriver webDriver, AppLib applib) {
-    	AddNewSideFile.webDriver = webDriver;
-    	AddNewSideFile.applib = applib;
+    public AddNewSideFile(Driver webDriver, AppLib applib) {
+    	this.webDriver = webDriver;
+    	this.applib = applib;
     	PageFactory.initElements(webDriver, this);
     	overlay = new Overlay(webDriver, applib);
     }
     
     //PAGE OBJECT IDENTIFIERS
     @FindBy(how = How.ID, using = "edit-name")
-    private static WebElement Name_Txb;
+    private WebElement Name_Txb;
     
     @FindBy(how = How.ID, using = "edit-machine-name")
-    private static WebElement MachineName_Txb;
+    private WebElement MachineName_Txb;
     
     @FindBy(how = How.ID, using = "edit-path")
-    private static WebElement Path_Txb;
+    private WebElement Path_Txb;
     
     @FindBy(how = How.ID, using = "edit-file-type")
-    private static WebElement ResponseType_Ddl;
+    private WebElement ResponseType_Ddl;
     
     @FindBy(how = How.ID, using = "edit-content")
-    private static WebElement Content_Txa;
+    private WebElement Content_Txa;
     
     @FindBy(how = How.CSS, using = "input[value='Save']")
-    private static WebElement Save_Btn;
+    private WebElement Save_Btn;
     
     @FindBy(how = How.ID, using = "edit-delete")
-    private static WebElement Revert_Btn;
+    private WebElement Revert_Btn;
     
     @FindBy(how = How.XPATH, using = "//a[text()='Export']")
-    private static WebElement Export_Lnk;
+    private WebElement Export_Lnk;
     
     @FindBy(how = How.ID, using = "edit-code")
-    private static WebElement Export_Txa;
+    private WebElement Export_Txa;
     
     @FindBy(how = How.ID, using = "edit-next")
-    private static WebElement Update_Btn;
+    private WebElement Update_Btn;
     
     
     //PAGE OBJECT METHODS

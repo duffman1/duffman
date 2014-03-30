@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
  * publisher.nbcuni.com Logout Library. Copyright
@@ -17,17 +17,17 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 
 public class Logout {
 
-    private static CustomWebDriver webDriver;
+    private Driver webDriver;
     
     //PAGE OBJECT CONSTRUCTOR
-    public Logout(CustomWebDriver webDriver) {
-        Logout.webDriver = webDriver;
+    public Logout(Driver webDriver) {
+        this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
     }
     
     //PAGE OBJECT IDENTIFIERS
     @FindBy(how = How.XPATH, using = "(//a[text()='Log out'])[1]")
-    private static WebElement LogOut_Btn;
+    private WebElement LogOut_Btn;
     
     
     //PAGE OBJECT METHODS

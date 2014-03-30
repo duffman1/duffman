@@ -100,6 +100,30 @@ public class Config {
     	
     	return checksEnabled;
     }
+    
+    public int getParallelCount() {
+
+        String value = null;
+
+        try {
+
+        	File file = new File(this.getConfigFileLocation());
+            DocumentBuilderFactory xmlFactory = DocumentBuilderFactory.newInstance();
+            DocumentBuilder docBuilder = xmlFactory.newDocumentBuilder();
+            Document xmlDoc = docBuilder.parse(file);
+            XPathFactory xpathFact = XPathFactory.newInstance();
+            XPath xpath = xpathFact.newXPath();
+
+            value = (String) xpath.evaluate("//suite[@name='Test Suite for Publisher 7']/@thread-count", xmlDoc, XPathConstants.STRING);
+        }
+        catch (Exception e) {
+
+            Assert.fail("Failed to get parallel thread count from test config");
+        }
+
+        return Integer.parseInt(value);
+
+    }
 
 
 }

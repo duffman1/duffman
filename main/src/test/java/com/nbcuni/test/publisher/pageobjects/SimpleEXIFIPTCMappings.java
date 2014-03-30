@@ -1,7 +1,7 @@
 package com.nbcuni.test.publisher.pageobjects;
 
 import com.nbcuni.test.publisher.common.AppLib;
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -19,40 +19,40 @@ import org.testng.Reporter;
 public class SimpleEXIFIPTCMappings {
 
     //PAGE OBJECT CONSTRUCTOR
-    public SimpleEXIFIPTCMappings(CustomWebDriver webDriver, AppLib applib) {
+    public SimpleEXIFIPTCMappings(Driver webDriver, AppLib applib) {
         PageFactory.initElements(webDriver, this);
     }
    
     //PAGE OBJECT IDENTIFIERS
     @FindBy(how = How.ID, using = "edit-mappings-field-file-image-alt-text")
-    private static WebElement AltText_Ddl;
+    private WebElement AltText_Ddl;
     
     @FindBy(how = How.ID, using = "edit-mappings-field-file-image-title-text")
-    private static WebElement TitleText_Ddl;
+    private WebElement TitleText_Ddl;
     
     @FindBy(how = How.ID, using = "edit-mappings-field-caption")
-    private static WebElement Caption_Ddl;
+    private WebElement Caption_Ddl;
     
     @FindBy(how = How.ID, using = "edit-mappings-field-copyright")
-    private static WebElement Copyright_Ddl;
+    private WebElement Copyright_Ddl;
     
     @FindBy(how = How.ID, using = "edit-mappings-field-credit")
-    private static WebElement Credit_Ddl;
+    private WebElement Credit_Ddl;
     
     @FindBy(how = How.ID, using = "edit-mappings-field-keywords")
-    private static WebElement Keywords_Ddl;
+    private WebElement Keywords_Ddl;
     
     @FindBy(how = How.ID, using = "edit-mappings-field-media-categories")
-    private static WebElement MediaCategories_Ddl;
+    private WebElement MediaCategories_Ddl;
     
     @FindBy(how = How.ID, using = "edit-mappings-field-media-tags")
-    private static WebElement MediaTags_Ddl;
+    private WebElement MediaTags_Ddl;
     
     @FindBy(how = How.ID, using = "edit-mappings-field-source")
-    private static WebElement Source_Ddl;
+    private WebElement Source_Ddl;
     
     @FindBy(how = How.ID, using = "edit-submit")
-    private static WebElement Save_Btn;
+    private WebElement Save_Btn;
     
     
     //PAGE OBJECT METHODS

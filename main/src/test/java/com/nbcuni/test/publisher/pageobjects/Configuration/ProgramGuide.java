@@ -10,7 +10,7 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.Reporter;
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
  * publisher.nbcuni.com Modules Library. Copyright
@@ -21,36 +21,36 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 
 public class ProgramGuide {
 
-    private static CustomWebDriver webDriver;
-    private final String DataURL= "http://feed.entertainment.tv.theplatform.com/f/dCK2IC/stage_usa_listing?range=1-*&form=json";
+    private Driver webDriver;
+    private String DataURL= "http://feed.entertainment.tv.theplatform.com/f/dCK2IC/stage_usa_listing?range=1-*&form=json";
     
     //PAGE OBJECT CONSTRUCTOR    
-    public ProgramGuide(CustomWebDriver webDriver) {
-        ProgramGuide.webDriver = webDriver;
+    public ProgramGuide(Driver webDriver) {
+        this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
     }
     
     //PAGE OBJECT IDENTIFIERS    
     @FindBy(how = How.ID, using ="edit-program-guide-data-url")
-    private static WebElement DataURL_Txb;  
+    private WebElement DataURL_Txb;  
     
     @FindBy(how = How.XPATH, using ="//input[@id='edit-submit'][@value='Save configuration']")
-    private static WebElement SaveConfiguration_Btn; 
+    private WebElement SaveConfiguration_Btn; 
     
     @FindBy(how = How.XPATH, using ="//div[@id='block-program-guide-example-program-guide']/h2[contains(text(),'Program Guide')]")
-     private static WebElement ProgramGuideTextOnHomePage_Lbl;
+     private WebElement ProgramGuideTextOnHomePage_Lbl;
     
     @FindBy(how = How.XPATH, using ="//table[@class='sticky-enabled tableheader-processed sticky-table']/..//td[contains(text(),'There is no data')]")
-    private static WebElement NoDataTextInTheFirstRow_Txt;
+    private WebElement NoDataTextInTheFirstRow_Txt;
     
     @FindBy(how = How.XPATH, using ="//table[@class='system-status-report']/..//td[contains(text(),'Program Guide Data URL')]/..//td[@class='status-value']")
-    private static WebElement ProgramGuideRunCronStatus_Sts;
+    private WebElement ProgramGuideRunCronStatus_Sts;
     
-    private static List<WebElement> ProgramGuideTbl_Cls() {
+    private List<WebElement> ProgramGuideTbl_Cls() {
     	return webDriver.findElements(By.xpath("//table[@class='sticky-enabled tableheader-processed sticky-table']/..//th"));
     }
     
-    private static List<WebElement> ProgramGuideTbl_Rws() {
+    private List<WebElement> ProgramGuideTbl_Rws() {
     	return webDriver.findElements(By.xpath("//h2[text()='Program Guide']/..//table/tbody/tr"));
     }
     

@@ -5,7 +5,6 @@ import org.testng.annotations.Test;
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Logout;
-import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Content.BasicInformation;
 import com.nbcuni.test.publisher.pageobjects.Content.Content;
@@ -61,10 +60,6 @@ public class CreateConfigureAndValidatePermissionsEditor extends ParentTest{
     	//Step 1
     	UserLogin userLogin = applib.openApplication();
     	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
-        
-        //Step 1a (enable post module if needed)
-        Modules modules = new Modules(webDriver, applib);
-        modules.VerifyModuleEnabled("Pub Post");
         
         //Step 2 and 3
         AddUser addUser = new AddUser(webDriver, applib);

@@ -6,7 +6,7 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
 import com.nbcuni.test.publisher.common.AppLib;
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
  * publisher.nbcuni.com Gigya Settings Library. Copyright
@@ -18,22 +18,22 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 public class GigyaSettings {
 
     //PAGE OBJECT CONSTRUCTOR    
-    public GigyaSettings(CustomWebDriver webDriver, AppLib applib) {
+    public GigyaSettings(Driver webDriver, AppLib applib) {
         PageFactory.initElements(webDriver, this);
     }
     
     //PAGE OBJECT IDENTIFIERS    
     @FindBy(how = How.ID, using ="edit-gigya-share-buttons")
-    private static WebElement Providers_Txb;
+    private WebElement Providers_Txb;
     
     @FindBy(how = How.XPATH, using ="//fieldset[@id='edit-gigya-advanced-sharing']//a")
-    private static WebElement AdvancedShareBarSettings_Lnk;
+    private WebElement AdvancedShareBarSettings_Lnk;
     
     @FindBy(how = How.ID, using ="edit-gigya-share-advanced")
-    private static WebElement AdvancedShowShareBarUISettings_Txa;
+    private WebElement AdvancedShowShareBarUISettings_Txa;
     
     @FindBy(how = How.ID, using ="edit-submit")
-    private static WebElement SaveConfiguration_Btn;
+    private WebElement SaveConfiguration_Btn;
     
     
   

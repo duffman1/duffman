@@ -18,7 +18,7 @@ import org.testng.Reporter;
 
 import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.publisher.pageobjects.Overlay;
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
  * publisher.nbcuni.com Select File Library. Copyright
@@ -29,13 +29,13 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 
 public class SelectFile {
 
-    private static CustomWebDriver webDriver;
+    private Driver webDriver;
     private AppLib applib;
-    private static WebDriverWait wait;
+    private WebDriverWait wait;
     
     //PAGE OBJECT CONSTRUCTOR
-    public SelectFile(CustomWebDriver webDriver, AppLib applib) {
-        SelectFile.webDriver = webDriver;
+    public SelectFile(Driver webDriver, AppLib applib) {
+        this.webDriver = webDriver;
         this.applib = applib;
         PageFactory.initElements(webDriver, this);
         wait = new WebDriverWait(webDriver, 10);
@@ -43,56 +43,56 @@ public class SelectFile {
     
     //PAGE OBJECT IDENTIFIERS
     @FindBy(how = How.XPATH, using = "//iframe[@id='mediaBrowser']")
-    private static WebElement SelectFile_Frm;
+    private WebElement SelectFile_Frm;
     
     @FindBy(how = How.XPATH, using = "//a[@title='View Library']")
-    private static WebElement ViewLibrary_Btn;
+    private WebElement ViewLibrary_Btn;
     
     @FindBy(how = How.ID, using = "edit-filename")
-    private static WebElement FileName_Txb;
+    private WebElement FileName_Txb;
     
     @FindBy(how = How.ID, using = "edit-submit-publisher-media-browser")
-    private static WebElement Apply_Btn;
+    private WebElement Apply_Btn;
     
     @FindBy(how = How.XPATH, using = "//div[@class='media-thumbnail']/img")
-    private static WebElement Default_Img;
+    private WebElement Default_Img;
     
     private List<WebElement> Submit_Btn() {
     	return webDriver.findElements(By.xpath("//a[text()='Submit']"));
     }
     
     @FindBy(how = How.XPATH, using = "//a[contains(@class, 'button button-yes fake-submit')]")
-    private static WebElement ViewLibrarySubmit_Btn;
+    private WebElement ViewLibrarySubmit_Btn;
     
     @FindBy(how = How.XPATH, using = "//input[@id='edit-upload-upload']")
-    private static WebElement BrowseToFile_Upl;
+    private WebElement BrowseToFile_Upl;
     
     @FindBy(how = How.XPATH, using = "//input[contains(@id, 'edit-upload-upload-button')]")
-    private static WebElement Upload_Btn;
+    private WebElement Upload_Btn;
     
     @FindBy(how = How.XPATH, using = "//input[@id='edit-next']")
-    private static WebElement Next_Btn;
+    private WebElement Next_Btn;
     
     @FindBy(how = How.XPATH, using = "//input[@id='edit-scheme-public']")
-    private static WebElement PublicLocalFiles_Rdb;
+    private WebElement PublicLocalFiles_Rdb;
     
     @FindBy(how = How.XPATH, using = "//div[@id='file_image_form_group_image_top_wrapper']//img")
-    private static WebElement File_Img;
+    private WebElement File_Img;
     
     @FindBy(how = How.XPATH, using = "//input[@id='edit-submit']")
-    private static WebElement Save_Btn;
+    private WebElement Save_Btn;
     
     @FindBy(how = How.XPATH, using = "//a[@id='edit-upload_browse']")
-    private static WebElement AddFiles_Lnk;
+    private WebElement AddFiles_Lnk;
     
     @FindBy(how = How.XPATH, using = "//div[@class='throbber']")
-    private static WebElement Spinner_Img;
+    private WebElement Spinner_Img;
     
     @FindBy(how = How.ID, using = "edit-indicator")
-    private static WebElement FocalPoint_Ind;
+    private WebElement FocalPoint_Ind;
     
     @FindBy(how = How.ID, using = "edit-focal-point--2")
-    private static WebElement FocalPoint_Txb;
+    private WebElement FocalPoint_Txb;
     
     private WebElement File_Lnk(String fileName) {
     	return webDriver.findElement(By.xpath("//a[text()='" + fileName + "']"));

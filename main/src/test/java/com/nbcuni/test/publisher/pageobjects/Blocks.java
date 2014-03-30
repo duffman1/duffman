@@ -8,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.Reporter;
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
  * publisher.nbcuni.com Blocks Library. Copyright
@@ -19,32 +19,30 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 
 public class Blocks {
 
-    private static CustomWebDriver webDriver;
+    private Driver webDriver;
     
     //PAGE OBJECT CONSTRUCTOR
-    public Blocks(CustomWebDriver webDriver) {
-        Blocks.webDriver = webDriver;
+    public Blocks(Driver webDriver) {
+        this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
     }
     
     //PAGE OBJECT IDENTIFIERS
     @FindBy(how = How.XPATH, using = "//a[text()='Pub Sauce']")
-    private static WebElement PubSauce_Lnk;
+    private WebElement PubSauce_Lnk;
     
     @FindBy(how = How.XPATH, using = "//input[@id='edit-submit']")
-    private static WebElement SaveBlocks_Btn;
+    private WebElement SaveBlocks_Btn;
     
-    private static WebElement BlockLocator_Ddl(String blockName) {
-    	
+    private WebElement BlockLocator_Ddl(String blockName) {
     	return webDriver.findElement(By.xpath("(//td[text()='" + blockName + "']/..//select)[1]"));
     }
     
-    private static WebElement SelectedBlock_Ctr(String blockName) {
-    	
+    private WebElement SelectedBlock_Ctr(String blockName) {
     	return webDriver.findElement(By.xpath("//td[@class='block'][contains(text(), '" + blockName + "')]/../td[2]//select/option[@selected='selected']"));
     }
     
-    private static WebElement HomePageBlock_Ctr(String blockName) {
+    private WebElement HomePageBlock_Ctr(String blockName) {
     	return webDriver.findElement(By.xpath("//div[@class='region region-sidebar-first']/div[@id='block-dfp-" + blockName + "']"));
     }
    

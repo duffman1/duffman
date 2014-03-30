@@ -1,7 +1,7 @@
 package com.nbcuni.test.publisher.pageobjects.Content;
 
 import com.nbcuni.test.publisher.common.AppLib;
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -26,89 +26,89 @@ import java.util.concurrent.TimeUnit;
 
 public class SearchFor {
 
-    private static CustomWebDriver webDriver;
-    private static AppLib applib;
+    private Driver webDriver;
+    private AppLib applib;
     
     //PAGE OBJECT CONSTRUCTOR
-    public SearchFor(CustomWebDriver webDriver, AppLib applib) {
-        SearchFor.webDriver = webDriver;
-        SearchFor.applib = applib;
+    public SearchFor(Driver webDriver, AppLib applib) {
+        this.webDriver = webDriver;
+        this.applib = applib;
         PageFactory.initElements(webDriver, this);
     }
    
     //PAGE OBJECT IDENTIFIERS
     @FindBy(how = How.XPATH, using = "//input[@id='edit-title']")
-    private static WebElement Title_Txb;
+    private WebElement Title_Txb;
     
     @FindBy(how = How.XPATH, using = "//input[@value='Apply']")
-    private static WebElement Apply_Btn;
+    private WebElement Apply_Btn;
     
-    private static List<WebElement> AllSearchResults_Lnks() {
+    private List<WebElement> AllSearchResults_Lnks() {
     	List<WebElement> els = webDriver.findElements(By.xpath("//tbody//td[3]//a"));
     	return els;
     }
     
-    private static List<WebElement> AllMPXSearchResults_Lnks() {
+    private List<WebElement> AllMPXSearchResults_Lnks() {
     	List<WebElement> els = webDriver.findElements(By.xpath("//tbody//td[2]//a"));
     	return els;
     }
     
     @FindBy(how = How.XPATH, using = "//input[@id='edit-reset']")
-    private static WebElement Reset_Btn;
+    private WebElement Reset_Btn;
     
     @FindBy(how = How.XPATH, using = "//select[@id='edit-player-account']")
-    private static WebElement MPXPlayerAccount_Ddl;
+    private WebElement MPXPlayerAccount_Ddl;
     
     @FindBy(how = How.XPATH, using = "//select[@id='edit-account']")
-    private static WebElement MPXMediaSource_Ddl;
+    private WebElement MPXMediaSource_Ddl;
     
     @FindBy(how = How.XPATH, using = "//select[@id='edit-status']")
-    private static WebElement Status_Ddl;
+    private WebElement Status_Ddl;
     
-    private static List<WebElement> AllResultSet_Ttls() {
+    private List<WebElement> AllResultSet_Ttls() {
     	return webDriver.findElements(By.xpath("//table/tbody/tr/td[contains(@class, 'title')]"));
     }
     
-    private static WebElement SearchTitle_Lnk(String title) {
+    private WebElement SearchTitle_Lnk(String title) {
     	return webDriver.findElement(By.xpath("//a[text()='" + title + "']"));
     }
     
-    private static WebElement SearchThumbnail_Img(String title) {
+    private WebElement SearchThumbnail_Img(String title) {
     	return webDriver.findElement(By.xpath("//a[text()='" + title + "']/../../td//img"));
     }
     
-    private static List<WebElement> AllSearchHeader_Clms() {
+    private List<WebElement> AllSearchHeader_Clms() {
     	return webDriver.findElements(By.xpath("//thead//th/a"));
     }
     
-    private static List<WebElement> AllMPXSearchHeader_Clms() {
+    private List<WebElement> AllMPXSearchHeader_Clms() {
     	return webDriver.findElements(By.xpath("//thead//th"));
     }
     
     @FindBy(how = How.XPATH, using = "(//tbody//td[3]//a)[1]")
-    private static WebElement FirstSearchResult_Lnk;
+    private WebElement FirstSearchResult_Lnk;
     
     @FindBy(how = How.ID, using = "edit-changed-datepicker-popup-0")
-    private static WebElement UpdatedOnAfter_Txb;
+    private WebElement UpdatedOnAfter_Txb;
     
     @FindBy(how = How.XPATH, using = "(//tbody//td[3]//a)[1]")
-    private static WebElement FirstMPXMediaSearchResult_Lnk;
+    private WebElement FirstMPXMediaSearchResult_Lnk;
     
     @FindBy(how = How.XPATH, using = "(//tbody//td[2]//a)[1]")
-    private static WebElement FirstMPXPlayerSearchResult_Lnk;
+    private WebElement FirstMPXPlayerSearchResult_Lnk;
     
     @FindBy(how = How.XPATH, using = "(//div[text()='Published']/../..//td[@class='views-field views-field-title']/a)[1]")
-    private static WebElement FirstPublishedSearchResult_Lnk;
+    private WebElement FirstPublishedSearchResult_Lnk;
     
-    private static WebElement ColumnHeader_Lnk(String lnkTxt) {
+    private WebElement ColumnHeader_Lnk(String lnkTxt) {
     	return webDriver.findElement(By.xpath("//thead//th/a[text()='" + lnkTxt + "']"));
     }
     
-    private static List<WebElement> AllMPXResultSetSource_Itms() {
+    List<WebElement> AllMPXResultSetSource_Itms() {
     	return webDriver.findElements(By.xpath("//tbody//td[4]"));
     }
     
-    private static List<WebElement> AllMPXResultSetStatus_Itms() {
+    private List<WebElement> AllMPXResultSetStatus_Itms() {
     	return webDriver.findElements(By.xpath("//tbody//td[5]"));
     }
     

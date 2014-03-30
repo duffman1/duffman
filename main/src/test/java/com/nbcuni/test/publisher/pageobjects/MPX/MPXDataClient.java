@@ -14,7 +14,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
  * publisher.nbcuni.com MPXDataClient Library. Copyright
@@ -25,44 +25,44 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 
 public class MPXDataClient {
 
-    private static CustomWebDriver webDriver;
-    private static WebDriverWait wait;
+    private Driver webDriver;
+    private WebDriverWait wait;
     
     //PAGE OBJECT CONSTRUCTOR
-    public MPXDataClient(CustomWebDriver webDriver) {
-        MPXDataClient.webDriver = webDriver;
+    public MPXDataClient(Driver webDriver) {
+        this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
         wait = new WebDriverWait(webDriver, 30);
     }
     
     //PAGE OBJECT IDENTIFIERS
     @FindBy(how = How.ID, using = "user")
-    private static WebElement User_Txb;
+    private WebElement User_Txb;
     
     @FindBy(how = How.ID, using = "password")
-    private static WebElement Password_Txb;
+    private WebElement Password_Txb;
     
     @FindBy(how = How.ID, using = "submitAuth-button")
-    private static WebElement SignIn_Btn;
+    private WebElement SignIn_Btn;
     
     @FindBy(how = How.ID, using = "accountPickerButton-button")
-    private static WebElement AccountPicker_Btn;
+    private WebElement AccountPicker_Btn;
     
-    private static List<WebElement> Account_Ctr(){
+    private List<WebElement> Account_Ctr(){
     	return webDriver.findElements(By.xpath("//ul[@class='first-of-type hastitle']//a"));
     }
     
     @FindBy(how = How.ID, using = "object")
-    private static WebElement Object_Ddl;
+    private WebElement Object_Ddl;
     
     @FindBy(how = How.ID, using = "getSparseFields")
-    private static WebElement Fields_Txb;
+    private WebElement Fields_Txb;
     
     @FindBy(how = How.ID, using = "response")
-    private static WebElement Response_Pre;
+    private WebElement Response_Pre;
     
     @FindBy(how = How.ID, using = "submit-button")
-    private static WebElement Submit_Btn;
+    private WebElement Submit_Btn;
     
     
     //PAGE OBJECT METHODS

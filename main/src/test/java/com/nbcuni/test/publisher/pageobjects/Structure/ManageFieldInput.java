@@ -5,7 +5,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
-import com.nbcuni.test.webdriver.CustomWebDriver;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
 * publisher.nbcuni.com Manage Field Input Library. Copyright
@@ -17,19 +17,19 @@ import com.nbcuni.test.webdriver.CustomWebDriver;
 public class ManageFieldInput {
 
     //PAGE OBJECT CONSTRUCTOR
-    public ManageFieldInput(CustomWebDriver webDriver) {
+    public ManageFieldInput(Driver webDriver) {
     	PageFactory.initElements(webDriver, this);
     }
     
     //PAGE OBJECT IDENTIFIERS
     @FindBy(how = How.ID, using = "edit-instance-widget-settings-soft-length-minimum")
-    private static WebElement SoftLengthMinimum_Txb;
+    private WebElement SoftLengthMinimum_Txb;
     
     @FindBy(how = How.ID, using = "edit-instance-widget-settings-soft-length-limit")
-    private static WebElement SoftLengthLimit_Txb;
+    private WebElement SoftLengthLimit_Txb;
     
     @FindBy(how = How.ID, using = "edit-submit")
-    private static WebElement SaveSettings_Btn;
+    private WebElement SaveSettings_Btn;
 
     
     //PAGE OBJECT METHODS

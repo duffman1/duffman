@@ -13,13 +13,13 @@ import org.testng.Reporter;
 
 public class MPXAddPlayer {
 
-    private static AppLib applib;
-    private static Screen sikuli;
-    private static MPXAssets mpxAssets;
+    private AppLib applib;
+    private Screen sikuli;
+    private MPXAssets mpxAssets;
     
     public MPXAddPlayer(AppLib applib) {
         sikuli = new Screen();
-    	MPXAddPlayer.applib = applib;
+    	this.applib = applib;
     	mpxAssets = new MPXAssets(applib);
         
     }

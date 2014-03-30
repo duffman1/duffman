@@ -20,12 +20,12 @@ import com.nbcuni.test.publisher.common.AppLib;
 
 public class GmailConnect {
 
-    private static AppLib applib;
-    private static Session session;
-    private static Store store;
+    private AppLib applib;
+    private Session session;
+    private Store store;
     
     public GmailConnect(AppLib applib) {
-        GmailConnect.applib = applib;
+        this.applib = applib;
     }
     
     private void ConnectToGmail() throws Exception { 
