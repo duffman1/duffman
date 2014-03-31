@@ -1,0 +1,1557 @@
+<html>
+<head>
+<title>TestNG:  All Web Tests</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>All Web Tests</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>24/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Sun Mar 30 20:39:33 EDT 2014</td>
+</tr>
+<tr><td>Total time:</td><td>1765 seconds (1765636 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td>full </td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds.AdFoldersRichMediaAds_Test()'><b>AdFoldersRichMediaAds_Test</b><br>Test class: com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds<br/>
+<a href="#Output-2055915864" onClick='toggleBox("Output-2055915864", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2055915864" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2055915864">
+Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.<br/>
+Enter the user's email address in the 'Email Address' text box.<br/>
+Enter the user's password in the 'Password' text box.<br/>
+Click the 'Login' button.<br/>
+Click the 'Modules' menu link.<br/>
+Switch to frame titled 'Modules'.<br/>
+Enter 'Pub Ads' in the 'Filter Name' text box.<br/>
+Wait for the module titled 'Pub Ads' to appear in the list.<br/>
+Verify the 'Pub Ads' check box is checked.<br/>
+Click the 'Close Overlay X'.<br/>
+Mouse over the 'Structure' menu link.<br/>
+Click the 'Publisher Ads Side Files' menu link.<br/>
+Switch to the active frame titled 'Publisher Ads Side Files dialog'.<br/>
+Click the 'Add' link.<br/>
+Switch to the active frame titled 'Add a new side file dialog'.<br/>
+Enter '24fe80d58c924f6' in the 'Name' text box.<br/>
+Enter '8e19678104/f9d2f3d396.html' in the 'Path' text box.<br/>
+Select the 'text/html' from the 'Response type' drop down list.<br/>
+Enter '<html><body bgcolor=white><script language=javascript>function pq(q) {if(q.length > 1) this.q = q.substring(1, q.length);else this.q = null;this.keyValuePairs = new Array();if(q) {for(var i=0; i < this.q.split("&").length; i++) {this.keyValuePairs[i] = this.q.split("&")[i];}}this.getValue = function(s) {for(var j=0; j < this.keyValuePairs.length; j++) {if(this.keyValuePairs[j].split("=")[0] == s)return this.keyValuePairs[j].split("=")[1];}return -1;}}function qs(key){var page = new pq(document.location.search);return unescape(page.getValue(key));}var _c = qs('c');var r_number = Math.random();document.writeln('<SCR'+'IPT language='JavaScript' S'+'RC="http://media.adcentriconline.com/adcentric/tag/'+_c+'?ADCadcifr=1&number='+r_number+'"></SCR'+'IPT>');</script></body></html>' in the 'Content' text box.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'Publisher Ads Side Files dialog'.<br/>
+Verify success message of '24fe80d58c924f6 has been created.' is present.<br/>
+Verify there are no errors present.<br/>
+Click the Ad Side File link with path '8e19678104/f9d2f3d396.html'.<br/>
+Switch to the active frame titled 'Publisher Ads Side Files dialog'.<br/>
+Click the Ad Side File 'Edit' link for adName + 'Atlas'.<br/>
+Switch to the active frame titled 'Edit side file atlas dialog'.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'Publisher Ads Side Files dialog'.<br/>
+Verify success message of 'atlas has been updated' is present.<br/>
+Verify there are no errors present.<br/>
+Verify storage type for Ad Side File 'Atlas' is set to 'Overridden'.<br/>
+Click the Ad Side File 'Edit' link for adName + 'Atlas'.<br/>
+Switch to the active frame titled 'Edit side file atlas dialog'.<br/>
+Click the 'Revert' button.<br/>
+Click the 'Revert' button.<br/>
+Switch to the active frame titled 'Publisher Ads Side Files dialog'.<br/>
+Verify success message of 'The item has been reverted.' is present.<br/>
+Verify there are no errors present.<br/>
+Verify storage type for Ad Side File 'Atlas' is set to 'Default'.<br/>
+Click the Ad Side File expand link for adName + 'Atlas'.<br/>
+Click the Ad Side File 'Clone' link for adName + 'Atlas'.<br/>
+Switch to the active frame titled 'Clone side file atlas dialog'.<br/>
+Enter '690bf1a24f6c446' in the 'Name' text box.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'clone_of_atlas has been created.' is present.<br/>
+Verify there are no errors present.<br/>
+Verify storage type for Ad Side File '690bf1a24f6c446' is set to 'Normal'.<br/>
+Click the Ad Side File 'Edit' link for adName + 'Atlas'.<br/>
+Switch to the active frame titled 'Edit side file atlas dialog'.<br/>
+Click the 'Export' tab.<br/>
+Switch to the active frame titled 'Export side file atlas dialog'.<br/>
+Copy the text from the 'Export' text area.<br/>
+Click the 'Close Overlay X'.<br/>
+Mouse over the 'Structure' menu link.<br/>
+Mouse over the 'Publisher Ads Side Files' menu link.<br/>
+Click the 'Import' menu link.<br/>
+Switch to the active frame titled 'Import side file dialog'.<br/>
+Enter '$adpath = new stdClass();
+$adpath->disabled = FALSE; /* Edit this to true to make a default adpath disabled initially */
+$adpath->api_version = 1;
+$adpath->machine_name = 'atlas';
+$adpath->name = 'Atlas';
+$adpath->path = 'atlas/atlas_rm.html';
+$adpath->file_type = 'html';
+$adpath->content = '<html>
+<head>
+</head>
+<body>
+<script src=\'http://rmd.atdmt.com/tl/newIframeScript.js\'> </script>
+
+
+</body>
+</html>';
+' in the 'Side file code' text area.<br/>
+Click the 'Continue' button.<br/>
+Switch to the active frame titled 'Import side file dialog'.<br/>
+Verify warning message 'You have unsaved changes. These changes will not be made permanent until you click Save.' is present.<br/>
+Verify there are no errors present.<br/>
+Enter '8629980152b14ac' in the 'Name' text box.<br/>
+Enter 'c0f7683ad9/7852ee868a.html' in the 'Path' text box.<br/>
+Click the 'Update' button.<br/>
+Switch to the active frame titled 'Import side file dialog'.<br/>
+Verify warning message 'You have unsaved changes. These changes will not be made permanent until you click Save.' is present.<br/>
+Verify there are no errors present.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'Import side file dialog'.<br/>
+Enter '8629980152b14ac' in the 'Machine Name' text box.<br/>
+Click the 'Update' button.<br/>
+Switch to the active frame titled 'Import side file dialog'.<br/>
+Verify warning message 'You have unsaved changes. These changes will not be made permanent until you click Save.' is present.<br/>
+Verify there are no errors present.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'Publisher Ads Side Files dialog'.<br/>
+Verify success message of '8629980152b14ac has been created.' is present.<br/>
+Verify there are no errors present.<br/>
+Verify storage type for Ad Side File '8629980152b14ac' is set to 'Normal'.<br/>
+Click the Ad Side File expand link for adName + '24fe80d58c924f6'.<br/>
+Click the Ad Side File 'Delete' link for adName + '24fe80d58c924f6'.<br/>
+Switch to the active frame titled 'Are you sure you want to delete 24fe80d58c924f6? dialog'.<br/>
+Click the 'Delete' button.<br/>
+Switch to the active frame titled 'Publisher Ads Side Files dialog'.<br/>
+Verify success message of 'The item has been deleted.' is present.<br/>
+Verify there are no errors present.<br/>
+Verify Ad Side File '24fe80d58c924f6' is NOT present.<br/>
+Click the Ad Side File expand link for adName + '690bf1a24f6c446'.<br/>
+Click the Ad Side File 'Delete' link for adName + '690bf1a24f6c446'.<br/>
+Switch to the active frame titled 'Are you sure you want to delete clone_of_atlas? dialog'.<br/>
+Click the 'Delete' button.<br/>
+Switch to the active frame titled 'Publisher Ads Side Files dialog'.<br/>
+Verify success message of 'The item has been deleted.' is present.<br/>
+Verify there are no errors present.<br/>
+Verify Ad Side File '690bf1a24f6c446' is NOT present.<br/>
+Click the Ad Side File expand link for adName + '8629980152b14ac'.<br/>
+Click the Ad Side File 'Delete' link for adName + '8629980152b14ac'.<br/>
+Switch to the active frame titled 'Are you sure you want to delete 8629980152b14ac? dialog'.<br/>
+Click the 'Delete' button.<br/>
+Switch to the active frame titled 'Publisher Ads Side Files dialog'.<br/>
+Verify success message of 'The item has been deleted.' is present.<br/>
+Verify there are no errors present.<br/>
+Verify Ad Side File '8629980152b14ac' is NOT present.<br/>
+</div>
+</td>
+<td></td>
+<td>91</td>
+<td>com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds@28709cc9</td></tr>
+<tr>
+<td title='com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.Configuration.Configuration_Test()'><b>Configuration_Test</b><br>Test class: com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.Configuration<br/>
+<a href="#Output-1918093871" onClick='toggleBox("Output-1918093871", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1918093871" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1918093871">
+Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.<br/>
+Enter the user's email address in the 'Email Address' text box.<br/>
+Enter the user's password in the 'Password' text box.<br/>
+Click the 'Login' button.<br/>
+Mouse over the 'Configuration' menu link.<br/>
+Mouse over the 'Media' menu link.<br/>
+Click the 'Media: thePlatform mpx settings' menu link.<br/>
+Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.<br/>
+Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.<br/>
+Get all the selected import account options and store to a list.<br/>
+Click the 'Close Overlay X'.<br/>
+Mouse over the 'Structure' menu link.<br/>
+Mouse over the 'File types' menu link.<br/>
+Click the 'MPX Video for Account "DB TV" (2312945284)' menu link.<br/>
+Switch to the active frame titled 'MPX Video for Account &quot;DB TV&quot; (2312945284) dialog'.<br/>
+</div>
+</td>
+<td></td>
+<td>14</td>
+<td>com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.Configuration@33cb47cb</td></tr>
+<tr>
+<td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ProgramGuides.ROVITVSchedule.Configuration.Configuration_Test()'><b>Configuration_Test</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ProgramGuides.ROVITVSchedule.Configuration<br/>
+<a href="#Output-1197701504" onClick='toggleBox("Output-1197701504", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1197701504" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1197701504">
+Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.<br/>
+Enter the user's email address in the 'Email Address' text box.<br/>
+Enter the user's password in the 'Password' text box.<br/>
+Click the 'Login' button.<br/>
+Click the 'Modules' menu link.<br/>
+Switch to frame titled 'Modules'.<br/>
+Enter 'Program Guide' in the 'Filter Name' text box.<br/>
+Wait for the module titled 'Program Guide' to appear in the list.<br/>
+Verify the 'Program Guide' check box is checked.<br/>
+Click the 'Close Overlay X'.<br/>
+Click the 'Modules' menu link.<br/>
+Switch to frame titled 'Modules'.<br/>
+Enter 'Program Guide Example' in the 'Filter Name' text box.<br/>
+Wait for the module titled 'Program Guide Example' to appear in the list.<br/>
+Verify the 'Program Guide Example' check box is checked.<br/>
+Click the 'Close Overlay X'.<br/>
+Click the 'Modules' menu link.<br/>
+Switch to frame titled 'Modules'.<br/>
+Enter 'Views UI' in the 'Filter Name' text box.<br/>
+Wait for the module titled 'Views UI' to appear in the list.<br/>
+Verify the 'Views UI' check box is checked.<br/>
+Click the 'Close Overlay X'.<br/>
+Mouse over the 'Structure' menu link.<br/>
+Click the 'Blocks' menu link.<br/>
+Switch to the active frame titled 'Blocks dialog'.<br/>
+Select the block name 'Program Guide' from the 'Content' drop down list.<br/>
+Click the 'Save Blocks' button.<br/>
+Switch to the active frame titled 'Blocks dialog'.<br/>
+Verify success message of 'The block settings have been updated.' is present.<br/>
+Verify there are no errors present.<br/>
+Assert that the selected block 'Program Guide' contains the 'Content' text.<br/>
+Click the 'Close Overlay X'.<br/>
+Mouse over the 'Configuration' menu link.<br/>
+Mouse over the 'Web services' menu link.<br/>
+Click the 'Program Guide' menu link.<br/>
+Switch to the active frame titled 'Program Guide dialog'.<br/>
+Enter 'http://feed.entertainment.tv.theplatform.com/f/dCK2IC/stage_usa_listing?range=1-*&form=json' in the 'Data URL' text box.<br/>
+Click the 'Save Configuration' button.<br/>
+Verify success message of 'The configuration options have been saved.' is present.<br/>
+Verify there are no errors present.<br/>
+</div>
+</td>
+<td></td>
+<td>31</td>
+<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ProgramGuides.ROVITVSchedule.Configuration@53bc45d4</td></tr>
+<tr>
+<td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery.CreateMediaGallery_Test()'><b>CreateMediaGallery_Test</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery<br/>
+<a href="#Output-1578876725" onClick='toggleBox("Output-1578876725", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1578876725" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1578876725">
+Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.<br/>
+Enter the user's email address in the 'Email Address' text box.<br/>
+Enter the user's password in the 'Password' text box.<br/>
+Click the 'Login' button.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Add content' menu link.<br/>
+Click the 'Media Gallery' menu link.<br/>
+Switch to the active frame titled 'Create Media Gallery dialog'.<br/>
+Enter 'ad18cc4bcc2448f' in the 'Title' text box.<br/>
+Click the 'Cover' select button.<br/>
+Switch to the select file frame.<br/>
+Enter the file path for file upload.<br/>
+Click the 'Upload' button.<br/>
+Wait for the file link to be visible after upload.<br/>
+Click the 'Next' button.<br/>
+Click the 'Public Local Files' radio button.<br/>
+Click the 'Next' button.<br/>
+Verify the file image 'HanSolo' is present.<br/>
+Verify the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'Create Media Gallery dialog'.<br/>
+Verify the Cover image src contains 'HanSolo'.<br/>
+Wait for the image to fully load.<br/>
+Click the 'Select' button.<br/>
+Switch to the select file frame.<br/>
+Click the 'Add files' link.<br/>
+Click the 'All Files' icon.<br/>
+Click the local 'Pictures' icon.<br/>
+Click the test picture link.<br/>
+Click the 'Open' button.<br/>
+Click the 'Start upload' link.<br/>
+Wait for file upload to reach 100%<br/>
+Click the 'Next' button.<br/>
+Switch to the active frame titled 'Create Media Gallery dialog'.<br/>
+Assert that img source of the Media Item contains 'nbclogo'.<br/>
+Assert the the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'Media Gallery ad18cc4bcc2448f has been created.' is present.<br/>
+Verify there are no errors present.<br/>
+</div>
+</td>
+<td></td>
+<td>30</td>
+<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery@52450ebf</td></tr>
+<tr>
+<td title='com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification.DefaultPlayerOptionsVerification_Test()'><b>DefaultPlayerOptionsVerification_Test</b><br>Test class: com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification<br/>
+<a href="#Output-716670015" onClick='toggleBox("Output-716670015", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-716670015" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-716670015">
+Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.<br/>
+Enter the user's email address in the 'Email Address' text box.<br/>
+Enter the user's password in the 'Password' text box.<br/>
+Click the 'Login' button.<br/>
+Mouse over the 'Configuration' menu link.<br/>
+Mouse over the 'Media' menu link.<br/>
+Click the 'Media: thePlatform mpx settings' menu link.<br/>
+Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.<br/>
+Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.<br/>
+Get all the selected import account options and store to a list.<br/>
+Click the 'Close Overlay X'.<br/>
+Mouse over the 'Structure' menu link.<br/>
+Click the 'File types' menu link.<br/>
+Switch to the active frame titled 'File types dialog'.<br/>
+Click the 'DB TV manage file display' link.<br/>
+Switch to the active frame titled 'MPX Video for Account &quot;DB TV&quot; (2312945284) dialog'.<br/>
+Click the 'Pub MPX Video' checkbox<br/>
+Click the 'Pub MPX Video' link.<br/>
+Select the 'USA_Demo_Player' player from the 'Pub MPX Video Player for Account...' drop down list.<br/>
+Click the 'Save configuration' button.<br/>
+Verify success message of 'Your settings have been saved.' is present.<br/>
+Verify there are no errors present.<br/>
+Click the 'Close Overlay X'.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Files' menu link.<br/>
+Click the 'mpxMedia' menu link.<br/>
+Switch to the active frame titled 'Content dialog'.<br/>
+Enter title Automation1.<br/>
+Click the 'Apply' button.<br/>
+Click the first search title link in the search result set.<br/>
+Verify the mpx video player frame is present.<br/>
+</div>
+</td>
+<td></td>
+<td>26</td>
+<td>com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification@3096f94</td></tr>
+<tr>
+<td title='com.nbcuni.test.publisher.tests.Video.DeIngestingMPXAccountsAndCorrespondingAssets.DeleteMultipleAccounts.DeleteMultipleAccounts_Test()'><b>DeleteMultipleAccounts_Test</b><br>Test class: com.nbcuni.test.publisher.tests.Video.DeIngestingMPXAccountsAndCorrespondingAssets.DeleteMultipleAccounts<br/>
+<a href="#Output-527392451" onClick='toggleBox("Output-527392451", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-527392451" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-527392451">
+Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.<br/>
+Enter the user's email address in the 'Email Address' text box.<br/>
+Enter the user's password in the 'Password' text box.<br/>
+Click the 'Login' button.<br/>
+Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.<br/>
+Mouse over the 'Configuration' menu link.<br/>
+Mouse over the 'Media' menu link.<br/>
+Click the 'Media: thePlatform mpx settings' menu link.<br/>
+Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.<br/>
+Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.<br/>
+Get all the selected import account options and store to a list.<br/>
+Click the 'MPX Login' link.<br/>
+Wait for 'Update' button to be visible.<br/>
+Get each of the 'Delete Account' buttons<br/>
+Get each of the 'Delete Account' buttons<br/>
+Get each of the 'Delete Account' buttons<br/>
+Verify the text 'You are about to delete account' is present on the page.<br/>
+Verify the text 'and all of its assets. This action cannot be undone.' is present on the page.<br/>
+Click the 'Delete' button.<br/>
+Switch to frame titled 'Deleting MPX Account'.<br/>
+Wait for the frame titled 'Deleting MPX Account' to close.<br/>
+Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.<br/>
+Verify success message of 'Beginning process of deleting account' is present.<br/>
+Verify there are no errors present.<br/>
+Get each of the 'Delete Account' buttons<br/>
+Click the 'Close Overlay X'.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Files' menu link.<br/>
+Click the 'mpxMedia' menu link.<br/>
+Switch to the active frame titled 'Content dialog'.<br/>
+Enter title Automation.<br/>
+Click the 'Apply' button.<br/>
+Get the number of results in the result set.<br/>
+Mouse over the 'Configuration' menu link.<br/>
+Mouse over the 'Media' menu link.<br/>
+Click the 'Media: thePlatform mpx settings' menu link.<br/>
+Click the 'Add Account' button.<br/>
+Enter mpx username in the 'Username for Account...' text box.<br/>
+Enter mpx password in the 'Password for Account...' text box.<br/>
+Click the 'Connect to MPX' button.<br/>
+Verify success message of 'Login successful' is present.<br/>
+Verify there are no errors present.<br/>
+Select 'DB TV' from the first 'Select Import Account for...' drop down list.<br/>
+click the 'Set Import Account' button.<br/>
+Verify success message of 'Setting import account "DB%20TV" for account' is present.<br/>
+Verify there are no errors present.<br/>
+Click the 'Save configurations' button.<br/>
+Verify success message of 'The configuration options have been saved.' is present.<br/>
+Verify there are no errors present.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Files' menu link.<br/>
+Click the 'mpxMedia' menu link.<br/>
+Select 'Auditude Demo player' from the first 'Import Player' drop down list.<br/>
+Click the 'Sync MPX Media Now' link.<br/>
+Verify success message of 'Processed video import/update manually for all accounts.' is present.<br/>
+Verify there are no errors present.<br/>
+Verify success message of 'Cron ran successfully.' is present.<br/>
+Verify there are no errors present.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Files' menu link.<br/>
+Click the 'mpxMedia' menu link.<br/>
+Enter title Automation.<br/>
+Click the 'Apply' button.<br/>
+Get the text of the first search result set item.<br/>
+Get the text of the first search result set item.<br/>
+</div>
+</td>
+<td></td>
+<td>146</td>
+<td>com.nbcuni.test.publisher.tests.Video.DeIngestingMPXAccountsAndCorrespondingAssets.DeleteMultipleAccounts@593b8970</td></tr>
+<tr>
+<td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIFKeywordsIngestedAsPhraseInsteadSetsWords.EXIFKeywordsIngestedPhraseInsteadSetsWords.EXIFKeywordsIngestedPhraseInsteadSetsWords_Test()'><b>EXIFKeywordsIngestedPhraseInsteadSetsWords_Test</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIFKeywordsIngestedAsPhraseInsteadSetsWords.EXIFKeywordsIngestedPhraseInsteadSetsWords<br/>
+<a href="#Output-864717047" onClick='toggleBox("Output-864717047", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-864717047" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-864717047">
+Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.<br/>
+Enter the user's email address in the 'Email Address' text box.<br/>
+Enter the user's password in the 'Password' text box.<br/>
+Click the 'Login' button.<br/>
+Mouse over the 'Configuration' menu link.<br/>
+Mouse over the 'Media' menu link.<br/>
+Click the 'Simple EXIF/IPTC Mappings' menu link.<br/>
+Switch to the active frame titled 'Simple EXIF/IPTC Mappings dialog'.<br/>
+Select the 'Aperture' from the 'Alt Text' drop down list.<br/>
+Select the 'Title' from the 'Title Text' drop down list.<br/>
+Select the 'Caption' from the 'Caption' drop down list.<br/>
+Select the 'Copyright' from the 'Copyright' drop down list.<br/>
+Select the 'Credit' from the 'Credit' drop down list.<br/>
+Select the 'Keywords' from the 'Keywords' drop down list.<br/>
+Select the 'none' from the 'Media categories' drop down list.<br/>
+Select the 'Title' from the 'Media Tags' drop down list.<br/>
+Select the 'Source' from the 'Source' drop down list.<br/>
+Click the 'Save' button.<br/>
+Mouse over the 'Content' menu link.<br/>
+Click the 'Files' menu link.<br/>
+Switch to the active frame titled 'Content dialog'.<br/>
+Click the 'Add file' link.<br/>
+Switch to the active frame titled 'Add file dialog'.<br/>
+Click the 'Add files' link.<br/>
+Click the 'All Files' icon.<br/>
+Click the local 'Pictures' icon.<br/>
+Click the test picture link.<br/>
+Click the 'Open' button.<br/>
+Click the 'Start upload' link.<br/>
+Wait for file upload to reach 100%<br/>
+Click the 'Next' button.<br/>
+Switch to the active frame titled 'Edit multiple files dialog'.<br/>
+Assert that the Title Text box value matches 'NUP_155306_0046.JPG'.<br/>
+Assert that the Alt Text box value matches 'f/5.6'.<br/>
+Assert that the Source box value matches 'Episodic'.<br/>
+Assert that the Credit Text box value matches 'Brownie Harris/NBC'.<br/>
+Assert that the Copyright Text box value matches '2013 NBCUniversal Media, LLC'.<br/>
+Assert that the Keywords Text box value matches 'NUP_155306, Revolution, Episode 118, Season 1'.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'Content dialog'.<br/>
+Verify success message of 'Image' is present.<br/>
+Verify there are no errors present.<br/>
+Verify success message of 'has been updated.' is present.<br/>
+Verify there are no errors present.<br/>
+Click the 'Close Overlay X'.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Add content' menu link.<br/>
+Click the 'Media Gallery' menu link.<br/>
+Switch to the active frame titled 'Create Media Gallery dialog'.<br/>
+Enter 'fd53999d1445403' in the 'Title' text box.<br/>
+Click the 'Media Items Select' button.<br/>
+Switch to the select file frame.<br/>
+Click the 'Add files' link.<br/>
+Click the 'All Files' icon.<br/>
+Click the local 'Pictures' icon.<br/>
+Click the test picture link.<br/>
+Click the 'Open' button.<br/>
+Click the 'Start upload' link.<br/>
+Wait for file upload to reach 100%<br/>
+Click the 'Next' button.<br/>
+Switch to the active frame titled 'Create Media Gallery dialog'.<br/>
+Assert that img source of the Media Item contains 'NUP_155306_0046'.<br/>
+Assert the the img is loaded and visible.<br/>
+Click the 'Edit' button.<br/>
+Assert that the Title Text box value matches 'NUP_155306_0046.JPG'.<br/>
+Assert that the Alt Text box value matches 'f/5.6'.<br/>
+Assert that the Source box value matches 'Episodic'.<br/>
+Assert that the Credit Text box value matches 'Brownie Harris/NBC'.<br/>
+Assert that the Copyright Text box value matches '2013 NBCUniversal Media, LLC'.<br/>
+Assert that the Keywords Text box value matches 'NUP_155306, Revolution, Episode 118, Season 1'.<br/>
+Click the 'Close Window' image.<br/>
+Switch to the active frame titled 'Create Media Gallery dialog'.<br/>
+Click the 'Cover' select button.<br/>
+Switch to the select file frame.<br/>
+Enter the file path for file upload.<br/>
+Click the 'Upload' button.<br/>
+Wait for the file link to be visible after upload.<br/>
+Click the 'Next' button.<br/>
+Click the 'Public Local Files' radio button.<br/>
+Click the 'Next' button.<br/>
+Assert that the Title Text box value matches 'NUP_155306_0046.JPG'.<br/>
+Assert that the Alt Text box value matches 'f/5.6'.<br/>
+Assert that the Source box value matches 'Episodic'.<br/>
+Assert that the Credit Text box value matches 'Brownie Harris/NBC'.<br/>
+Assert that the Copyright Text box value matches '2013 NBCUniversal Media, LLC'.<br/>
+Assert that the Keywords Text box value matches 'NUP_155306, Revolution, Episode 118, Season 1'.<br/>
+Verify the file image 'NUP_155306_0046' is present.<br/>
+Verify the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'Create Media Gallery dialog'.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'Media Gallery fd53999d1445403 has been created.' is present.<br/>
+Verify there are no errors present.<br/>
+</div>
+</td>
+<td></td>
+<td>70</td>
+<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIFKeywordsIngestedAsPhraseInsteadSetsWords.EXIFKeywordsIngestedPhraseInsteadSetsWords@445ebf88</td></tr>
+<tr>
+<td title='com.nbcuni.test.publisher.tests.Advertising.GooglePublisherTagsGPT.GPTConfiguration.GPTConfiguration_Test()'><b>GPTConfiguration_Test</b><br>Test class: com.nbcuni.test.publisher.tests.Advertising.GooglePublisherTagsGPT.GPTConfiguration<br/>
+<a href="#Output-350119295" onClick='toggleBox("Output-350119295", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-350119295" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-350119295">
+Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.<br/>
+Enter the user's email address in the 'Email Address' text box.<br/>
+Enter the user's password in the 'Password' text box.<br/>
+Click the 'Login' button.<br/>
+Click the 'Modules' menu link.<br/>
+Switch to frame titled 'Modules'.<br/>
+Enter 'DART' in the 'Filter Name' text box.<br/>
+Wait for the module titled 'DART' to appear in the list.<br/>
+Enter 'Doubleclick for Publishers' in the 'Filter Name' text box.<br/>
+Wait for the module titled 'Doubleclick for Publishers' to appear in the list.<br/>
+Check the 'Doubleclick for Publishers' check box.<br/>
+Click the 'Save configuration' button.<br/>
+Switch to frame titled 'Some required modules must be enabled'.<br/>
+Switch back to the 'Modules' frame.<br/>
+Switch to frame titled 'Modules'.<br/>
+Verify success message of 'The configuration options have been saved.' is present.<br/>
+Verify there are no errors present.<br/>
+Click the 'Close Overlay X'.<br/>
+Mouse over the 'Structure' menu link.<br/>
+Mouse over the 'DFP Ad Tags' menu link.<br/>
+Click the 'Global DFP Settings' menu link.<br/>
+Switch to frame titled 'DFP Ad Tags'.<br/>
+Enter 'nbcu' in the 'Network ID' text box.<br/>
+Click the 'Save configuration' button.<br/>
+Verify success message of 'The configuration options have been saved.' is present.<br/>
+Verify there are no errors present.<br/>
+Click the 'Close Overlay X'.<br/>
+</div>
+</td>
+<td></td>
+<td>34</td>
+<td>com.nbcuni.test.publisher.tests.Advertising.GooglePublisherTagsGPT.GPTConfiguration@5dcfd078</td></tr>
+<tr>
+<td title='com.nbcuni.test.publisher.tests.Advertising.GooglePublisherTagsGPT.GPTTagsVerification.GPTTagsVerification_Test()'><b>GPTTagsVerification_Test</b><br>Test class: com.nbcuni.test.publisher.tests.Advertising.GooglePublisherTagsGPT.GPTTagsVerification<br/>
+<a href="#Output-244324781" onClick='toggleBox("Output-244324781", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-244324781" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-244324781">
+Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.<br/>
+Enter the user's email address in the 'Email Address' text box.<br/>
+Enter the user's password in the 'Password' text box.<br/>
+Click the 'Login' button.<br/>
+Click the 'Modules' menu link.<br/>
+Switch to frame titled 'Modules'.<br/>
+Enter 'Doubleclick for Publishers' in the 'Filter Name' text box.<br/>
+Wait for the module titled 'Doubleclick for Publishers' to appear in the list.<br/>
+Verify the 'Doubleclick for Publishers' check box is checked.<br/>
+Click the 'Close Overlay X'.<br/>
+Mouse over the 'Structure' menu link.<br/>
+Mouse over the 'DFP Ad Tags' menu link.<br/>
+Click the 'Add' menu link.<br/>
+Switch to frame titled 'Add a new DFP ad'.<br/>
+Enter '8c40e86bbdd44ca' in the 'Ad Slot Name' text box.<br/>
+Enter '300x250' in the 'Ad Sizes' text box.<br/>
+Enter 'Test_AdUnit_Pattern' in the 'Ad Unit Pattern' text box.<br/>
+Click the 'Save' button.<br/>
+Verify success message of '8c40e86bbdd44ca has been created.' is present.<br/>
+Verify there are no errors present.<br/>
+Click the 'Close Overlay X'.<br/>
+Mouse over the 'Structure' menu link.<br/>
+Click the 'Blocks' menu link.<br/>
+Switch to the active frame titled 'Blocks dialog'.<br/>
+Select the block name 'DFP tag: 8c40e86bbdd44ca' from the 'Sidebar first' drop down list.<br/>
+Click the 'Save Blocks' button.<br/>
+Verify success message of 'The block settings have been updated.' is present.<br/>
+Verify there are no errors present.<br/>
+Assert that the selected block '8c40e86bbdd44ca' contains the 'Sidebar first' text.<br/>
+Click the 'Close Overlay X'.<br/>
+Assert the page source contains the 'http://www.googletagservices.com/tag/js/gpt.js'.<br/>
+Assert the home page block '8c40e86bbdd44ca' is present.<br/>
+Mouse over the 'Structure' menu link.<br/>
+Click the 'Blocks' menu link.<br/>
+Switch to the active frame titled 'Blocks dialog'.<br/>
+Select the block name 'DFP tag: 8c40e86bbdd44ca' from the '- None -' drop down list.<br/>
+Click the 'Save Blocks' button.<br/>
+</div>
+</td>
+<td></td>
+<td>28</td>
+<td>com.nbcuni.test.publisher.tests.Advertising.GooglePublisherTagsGPT.GPTTagsVerification@2a807bbc</td></tr>
+<tr>
+<td title='com.nbcuni.test.publisher.tests.Video.CanonicalURLSupport.MPXCanonicalURLImportableURLAlias.MPXCanonicalURLImportableURLAlias_Test()'><b>MPXCanonicalURLImportableURLAlias_Test</b><br>Test class: com.nbcuni.test.publisher.tests.Video.CanonicalURLSupport.MPXCanonicalURLImportableURLAlias<br/>
+<a href="#Output-721228459" onClick='toggleBox("Output-721228459", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-721228459" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-721228459">
+Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.<br/>
+Enter the user's email address in the 'Email Address' text box.<br/>
+Enter the user's password in the 'Password' text box.<br/>
+Click the 'Login' button.<br/>
+Mouse over the 'Configuration' menu link.<br/>
+Mouse over the 'Media' menu link.<br/>
+Click the 'Media: thePlatform mpx settings' menu link.<br/>
+Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.<br/>
+Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.<br/>
+Get all the selected import account options and store to a list.<br/>
+Click the 'Close Overlay X'.<br/>
+Mouse over the 'Structure' menu link.<br/>
+Click the 'File types' menu link.<br/>
+Switch to the active frame titled 'File types dialog'.<br/>
+Click the 'DB TV manage fields' link.<br/>
+Switch to the active frame titled 'MPX Video for Account &quot;DB TV&quot; (2312945284) dialog'.<br/>
+Switch to the active frame titled 'MPX Video for Account &quot;DB TV&quot; (2312945284) dialog'.<br/>
+Click the 'Close Overlay X'.<br/>
+Mouse over the 'Structure' menu link.<br/>
+Click the 'File types' menu link.<br/>
+Switch to the active frame titled 'File types dialog'.<br/>
+Click the 'DB TV edit file type' link.<br/>
+Switch to the active frame titled 'MPX Video for Account &quot;DB TV&quot; (2312945284) dialog'.<br/>
+Select 'MPX Media Related Link' from the 'URL Alias Field' drop down list.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'has been updated.' is present.<br/>
+Verify there are no errors present.<br/>
+Open the mpx platform.<br/>
+Enter 'mpx/AdminPub7QA' in the 'Username' text box.<br/>
+Enter 'Pa55word' in the 'Password' text box.<br/>
+Click the 'Login' button.<br/>
+Click the 'Upload' button.<br/>
+Click the 'Choose Files' button.<br/>
+Click the 'Movies' button in the OS Upload dialog.<br/>
+Click the Test Movie in th OS Upload dialog.<br/>
+Click the 'Open' button.<br/>
+Click the 'Upload' button in the Upload dialog.<br/>
+Click the 'Available Date' label on the right hand side to give focus to the media item.<br/>
+Enter 'Automation02113e4c7e' in the 'Title' text box.<br/>
+Enter 'canonicalurl02fd8f4722' in the 'Canonical URL' text box.<br/>
+Click the 'Save' button.<br/>
+Click the 'Publish' button.<br/>
+Click the 'Publish to Pub 7 Primary' check box.<br/>
+Click the 'Publish' button from the upload dialog.<br/>
+Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.<br/>
+Switch to the active frame titled 'Status report dialog'.<br/>
+Verify success message of 'Cron ran successfully.' is present.<br/>
+Verify there are no errors present.<br/>
+Click the 'Close Overlay X'.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Files' menu link.<br/>
+Click the 'mpxMedia' menu link.<br/>
+Switch to the active frame titled 'Content dialog'.<br/>
+Enter title Automation02113e4c7e.<br/>
+Click the 'Apply' button.<br/>
+Get the text of the first search result set item.<br/>
+Click the first search title link in the search result set.<br/>
+Verify the text 'MPX Media Related Link:' is present on the page.<br/>
+Verify the text 'canonicalurl02fd8f4722' is present on the page.<br/>
+</div>
+</td>
+<td></td>
+<td>119</td>
+<td>com.nbcuni.test.publisher.tests.Video.CanonicalURLSupport.MPXCanonicalURLImportableURLAlias@32f5c51c</td></tr>
+<tr>
+<td title='com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MPXMediaSyncVerification.MPXMediaSyncVerification_Test()'><b>MPXMediaSyncVerification_Test</b><br>Test class: com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MPXMediaSyncVerification<br/>
+<a href="#Output-2115136623" onClick='toggleBox("Output-2115136623", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2115136623" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2115136623">
+Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.<br/>
+Enter the user's email address in the 'Email Address' text box.<br/>
+Enter the user's password in the 'Password' text box.<br/>
+Click the 'Login' button.<br/>
+Mouse over the 'Configuration' menu link.<br/>
+Mouse over the 'Media' menu link.<br/>
+Click the 'Media: thePlatform mpx settings' menu link.<br/>
+Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.<br/>
+Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.<br/>
+Get all the selected import account options and store to a list.<br/>
+Open the mpx data client at http://data.player.theplatform.com/player/client.<br/>
+Enter the Username in the 'Username' text box.<br/>
+Enter the Password in the 'Password' text box.<br/>
+Click the 'Sign In' button.<br/>
+Click the Account Picker button.<br/>
+Click the 'DB TV' account check box.<br/>
+Select 'Player' from the 'Object' drop down list.<br/>
+Enter 'title, disabled' in the 'Fields' text box.<br/>
+Click the 'Submit' button.<br/>
+Store the result set to a list.<br/>
+Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Files' menu link.<br/>
+Click the 'mpxMedia' menu link.<br/>
+Switch to the active frame titled 'Content dialog'.<br/>
+Click the 'Sync MPX Media' link.<br/>
+Select 'Auditude Demo player' from the first 'Import Player' drop down list.<br/>
+Click the 'Sync MPX Media Now' link.<br/>
+Verify success message of 'Processed video import/update manually for all accounts.' is present.<br/>
+Verify there are no errors present.<br/>
+Click the 'Run Cron to complete import' link.<br/>
+Switch to the active frame titled 'Cron dialog'.<br/>
+Click the 'Run Cron' button.<br/>
+Verify success message of 'Cron run successfully.' is present.<br/>
+Verify there are no errors present.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Files' menu link.<br/>
+Click the 'mpxMedia' menu link.<br/>
+Switch to the active frame titled 'Content dialog'.<br/>
+Enter title Automation1.<br/>
+Click the 'Apply' button.<br/>
+Get the title text of every result in the search result set.<br/>
+For each expected result, assert it is present in the result set.<br/>
+</div>
+</td>
+<td></td>
+<td>54</td>
+<td>com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MPXMediaSyncVerification@264b72a2</td></tr>
+<tr>
+<td title='com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MPXPlayersSyncVerification.MPXPlayersSyncVerification_Test()'><b>MPXPlayersSyncVerification_Test</b><br>Test class: com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MPXPlayersSyncVerification<br/>
+<a href="#Output-1105402241" onClick='toggleBox("Output-1105402241", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1105402241" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1105402241">
+Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.<br/>
+Enter the user's email address in the 'Email Address' text box.<br/>
+Enter the user's password in the 'Password' text box.<br/>
+Click the 'Login' button.<br/>
+Mouse over the 'Configuration' menu link.<br/>
+Mouse over the 'Media' menu link.<br/>
+Click the 'Media: thePlatform mpx settings' menu link.<br/>
+Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.<br/>
+Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.<br/>
+Get all the selected import account options and store to a list.<br/>
+Open the mpx data client at http://data.player.theplatform.com/player/client.<br/>
+Enter the Username in the 'Username' text box.<br/>
+Enter the Password in the 'Password' text box.<br/>
+Click the 'Sign In' button.<br/>
+Click the Account Picker button.<br/>
+Click the 'DB TV' account check box.<br/>
+Select 'Player' from the 'Object' drop down list.<br/>
+Enter 'title, disabled' in the 'Fields' text box.<br/>
+Click the 'Submit' button.<br/>
+Store the result set to a list.<br/>
+Open the mpx data client at http://data.player.theplatform.com/player/client.<br/>
+Enter the Username in the 'Username' text box.<br/>
+Enter the Password in the 'Password' text box.<br/>
+Click the 'Sign In' button.<br/>
+Click the Account Picker button.<br/>
+Click the 'DB TV' account check box.<br/>
+Select 'Player' from the 'Object' drop down list.<br/>
+Enter 'title' in the 'Fields' text box.<br/>
+Click the 'Submit' button.<br/>
+Store the result set to a list.<br/>
+Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Files' menu link.<br/>
+Click the 'mpxPlayers' menu link.<br/>
+Switch to the active frame titled 'Content dialog'.<br/>
+Click the 'Sync MPX Players' link.<br/>
+Click the 'Sync MPX Players Now' link.<br/>
+Verify success message of 'players returned for account' is present.<br/>
+Verify there are no errors present.<br/>
+Verify success message of '52 players returned for account "DB TV"' is present.<br/>
+Verify there are no errors present.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Files' menu link.<br/>
+Click the 'mpxMedia' menu link.<br/>
+Switch to the active frame titled 'Content dialog'.<br/>
+Click the 'Sync MPX Media' link.<br/>
+Verify that the 'Import new mpxMedia for account "DB TV"' Import New Account' drop down list is present.<br/>
+Verify that the list of player options matches the count from mpx.<br/>
+</div>
+</td>
+<td></td>
+<td>46</td>
+<td>com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MPXPlayersSyncVerification@767fa665</td></tr>
+<tr>
+<td title='com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides.MPXVideosSchedulingVerificationInitialOverrides_Test()'><b>MPXVideosSchedulingVerificationInitialOverrides_Test</b><br>Test class: com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides<br/>
+<a href="#Output-1522329323" onClick='toggleBox("Output-1522329323", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1522329323" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1522329323">
+Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.<br/>
+Enter the user's email address in the 'Email Address' text box.<br/>
+Enter the user's password in the 'Password' text box.<br/>
+Click the 'Login' button.<br/>
+Mouse over the 'Configuration' menu link.<br/>
+Mouse over the 'Media' menu link.<br/>
+Click the 'Media: thePlatform mpx settings' menu link.<br/>
+Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.<br/>
+Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Files' menu link.<br/>
+Click the 'mpxMedia' menu link.<br/>
+Switch to the active frame titled 'Content dialog'.<br/>
+Enter title Automation1.<br/>
+Click the 'Apply' button.<br/>
+Get the title text of every result in the search result set.<br/>
+For each expected result, assert it is present in the result set.<br/>
+Click the first search title link in the search result set.<br/>
+Verify the text 'Automation1' is present on the page.<br/>
+Verify the text 'MPX Released File Public IDs:' is present on the page.<br/>
+Verify the text 'MPX Media Default Released File Public ID:' is present on the page.<br/>
+Verify the text 'MPX Media Categories:' is present on the page.<br/>
+Verify the text 'Series' is present on the page.<br/>
+Verify the text 'Show' is present on the page.<br/>
+Verify the text 'MPX Media Description:' is present on the page.<br/>
+Verify the text 'Automation 1 example test' is present on the page.<br/>
+Verify the text 'MPX Media Author:' is present on the page.<br/>
+Verify the text 'Pub7 Content Provider' is present on the page.<br/>
+Verify the text 'MPX Media Air Date:' is present on the page.<br/>
+Verify the text 'Wednesday, January 8, 2014' is present on the page.<br/>
+Verify the text 'MPX Media Keywords:' is present on the page.<br/>
+Verify the text 'mpx, metadata, field, override' is present on the page.<br/>
+Verify the text 'MPX Media Copyright:' is present on the page.<br/>
+Verify the text 'NBCUNI QA' is present on the page.<br/>
+Verify the text 'MPX Media Film Advisory Board Rating:' is present on the page.<br/>
+Verify the text 'pd' is present on the page.<br/>
+Verify the text 'MPX Media MPAA Rating:' is present on the page.<br/>
+Verify the text 'MPX Media MPAA Sub-Ratings:' is present on the page.<br/>
+Verify the text 'v' is present on the page.<br/>
+Verify the text 'MPX Media V-Chip Rating:' is present on the page.<br/>
+Verify the text 'tv-y7' is present on the page.<br/>
+Verify the text 'MPX Media V-Chip Sub-Ratings:' is present on the page.<br/>
+Verify the text 'l' is present on the page.<br/>
+Verify the text 'MPX Media Exclude Selected Countries:' is present on the page.<br/>
+Verify the text 'Prevent Playback in Selected Countries' is present on the page.<br/>
+Verify the text 'MPX Media Available Date:' is NOT present on the page.<br/>
+Verify the text 'MPX Media Expiration Date:' is NOT present on the page.<br/>
+Click the 'Edit' link in the work bench.<br/>
+Switch to the active frame titled 'Edit mpx_video_9 Automation1 dialog'.<br/>
+Verify that the 'Media Availabe Date' text box is disabled and has no value.<br/>
+Verify that the 'Media Expiration Date' text box is disabled and has no value.<br/>
+Click the 'Override' checkbox for the 'Available Date' check box.<br/>
+Click the 'Override' checkbox for the 'Expiration Date' check box.<br/>
+Enter '04/06/2014' in the 'Available Date' text box.<br/>
+Enter '05:00pm' in the 'Available Time' text box.<br/>
+Enter '03/29/2017' in the 'Expiration Date' text box.<br/>
+Enter '05:00pm' in the 'Expiration Time' text box.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'Automation1 has been updated.' is present.<br/>
+Verify there are no errors present.<br/>
+Verify the text 'MPX Media Available Date:' is present on the page.<br/>
+Verify the text 'Sunday, April 6, 2014' is present on the page.<br/>
+Verify the text 'MPX Media Expiration Date: ' is present on the page.<br/>
+Verify the text 'Wednesday, March 29, 2017' is present on the page.<br/>
+Click the 'Edit' link in the work bench.<br/>
+Switch to the active frame titled 'Edit mpx_video_9 Automation1 dialog'.<br/>
+Un-check the 'Override' checkbox for the 'Available Date' check box.<br/>
+Un-check the 'Override' checkbox for the 'Expiration Date' check box.<br/>
+Verify that the 'Media Availabe Date' text box is disabled and has no value.<br/>
+Verify that the 'Media Expiration Date' text box is disabled and has no value.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'Automation1 has been updated.' is present.<br/>
+Verify there are no errors present.<br/>
+Verify the text 'Automation1' is present on the page.<br/>
+Verify the text 'MPX Released File Public IDs:' is present on the page.<br/>
+Verify the text 'MPX Media Default Released File Public ID:' is present on the page.<br/>
+Verify the text 'MPX Media Categories:' is present on the page.<br/>
+Verify the text 'Series' is present on the page.<br/>
+Verify the text 'Show' is present on the page.<br/>
+Verify the text 'MPX Media Description:' is present on the page.<br/>
+Verify the text 'Automation 1 example test' is present on the page.<br/>
+Verify the text 'MPX Media Author:' is present on the page.<br/>
+Verify the text 'Pub7 Content Provider' is present on the page.<br/>
+Verify the text 'MPX Media Air Date:' is present on the page.<br/>
+Verify the text 'Wednesday, January 8, 2014' is present on the page.<br/>
+Verify the text 'MPX Media Keywords:' is present on the page.<br/>
+Verify the text 'mpx, metadata, field, override' is present on the page.<br/>
+Verify the text 'MPX Media Copyright:' is present on the page.<br/>
+Verify the text 'NBCUNI QA' is present on the page.<br/>
+Verify the text 'MPX Media Film Advisory Board Rating:' is present on the page.<br/>
+Verify the text 'pd' is present on the page.<br/>
+Verify the text 'MPX Media MPAA Rating:' is present on the page.<br/>
+Verify the text 'MPX Media MPAA Sub-Ratings:' is present on the page.<br/>
+Verify the text 'v' is present on the page.<br/>
+Verify the text 'MPX Media V-Chip Rating:' is present on the page.<br/>
+Verify the text 'tv-y7' is present on the page.<br/>
+Verify the text 'MPX Media V-Chip Sub-Ratings:' is present on the page.<br/>
+Verify the text 'l' is present on the page.<br/>
+Verify the text 'MPX Media Exclude Selected Countries:' is present on the page.<br/>
+Verify the text 'Prevent Playback in Selected Countries' is present on the page.<br/>
+Verify the text 'MPX Media Available Date:' is NOT present on the page.<br/>
+Verify the text 'MPX Media Expiration Date:' is NOT present on the page.<br/>
+</div>
+</td>
+<td></td>
+<td>30</td>
+<td>com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides@5543bd5c</td></tr>
+<tr>
+<td title='com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling.MPXVideosSchedulingVerificationScheduling_Test()'><b>MPXVideosSchedulingVerificationScheduling_Test</b><br>Test class: com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling<br/>
+<a href="#Output-256706001" onClick='toggleBox("Output-256706001", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-256706001" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-256706001">
+Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.<br/>
+Enter the user's email address in the 'Email Address' text box.<br/>
+Enter the user's password in the 'Password' text box.<br/>
+Click the 'Login' button.<br/>
+Mouse over the 'Configuration' menu link.<br/>
+Mouse over the 'Media' menu link.<br/>
+Click the 'Media: thePlatform mpx settings' menu link.<br/>
+Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.<br/>
+Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.<br/>
+Get all the selected import account options and store to a list.<br/>
+Open the mpx platform.<br/>
+Enter 'mpx/AdminPub7QA' in the 'Username' text box.<br/>
+Enter 'Pa55word' in the 'Password' text box.<br/>
+Click the 'Login' button.<br/>
+Click the 'Upload' button.<br/>
+Click the 'Choose Files' button.<br/>
+Click the 'Movies' button in the OS Upload dialog.<br/>
+Click the Test Movie in th OS Upload dialog.<br/>
+Click the 'Open' button.<br/>
+Click the 'Upload' button in the Upload dialog.<br/>
+Click the 'Available Date' label on the right hand side to give focus to the media item.<br/>
+Enter '3/10/2014 12:00 AM' in the 'Available Date' text box.<br/>
+Enter 'Automation617b334fe9' in the 'Title' text box.<br/>
+Enter '3/23/2014 12:00 AM' in the 'Expiration Date' text box.<br/>
+Click the 'Save' button.<br/>
+Click the 'Publish' button.<br/>
+Click the 'Publish to Pub 7 Primary' check box.<br/>
+Click the 'Publish' button from the upload dialog.<br/>
+Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.<br/>
+Switch to the active frame titled 'Status report dialog'.<br/>
+Verify success message of 'Cron ran successfully.' is present.<br/>
+Verify there are no errors present.<br/>
+Click the 'Close Overlay X'.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Files' menu link.<br/>
+Click the 'mpxMedia' menu link.<br/>
+Switch to the active frame titled 'Content dialog'.<br/>
+Enter title Automation617b334fe9.<br/>
+Click the 'Apply' button.<br/>
+Get the text of the first search result set item.<br/>
+Get the title text of every result in the search result set.<br/>
+For each expected result, assert it is present in the result set.<br/>
+Verify the text '03/10/2014 - 04:00 AM' is present on the page.<br/>
+Verify the text '03/23/2014 - 04:00 AM' is present on the page.<br/>
+Verify the text 'Expired' is present on the page.<br/>
+Click the first search title link in the search result set.<br/>
+Verify the text 'Automation617b334fe9' is present on the page.<br/>
+Verify the text 'Monday, March 10, 2014 - 04:00' is present on the page.<br/>
+Verify the text 'Sunday, March 23, 2014 - 04:00' is present on the page.<br/>
+Click the 'Edit' link in the work bench.<br/>
+Switch to the active frame titled 'Edit mpx_video_9 Automation617b334fe9 dialog'.<br/>
+Verify the value of the 'Available Date' text box equals '03/10/2014'.<br/>
+Verify the value of the 'Expiration Date' text box equals '03/23/2014'.<br/>
+Click the 'Schedule' tab.<br/>
+Switch to the active frame titled 'Automation617b334fe9 dialog'.<br/>
+Verify the scheduled revision table is empty.<br/>
+Open the mpx platform.<br/>
+Enter 'Automation617b334fe9' in the 'Search' text box.<br/>
+Click the 'Search by Title' link.<br/>
+Click the 'Available Date' label on the right hand side to give focus to the media item.<br/>
+Enter '3/30/2014 12:00 AM' in the 'Available Date' text box.<br/>
+Enter '3/30/2015 12:00 AM' in the 'Expiration Date' text box.<br/>
+Click the 'Save' button.<br/>
+Click the 'Additional Options' arrow.<br/>
+Click the 'Publish Update' link.<br/>
+Click the 'Publish to Pub 7 Primary' check box.<br/>
+Click the 'Update' button.<br/>
+Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.<br/>
+Switch to the active frame titled 'Status report dialog'.<br/>
+Verify success message of 'Cron ran successfully.' is present.<br/>
+Verify there are no errors present.<br/>
+Click the 'Close Overlay X'.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Files' menu link.<br/>
+Click the 'mpxMedia' menu link.<br/>
+Switch to the active frame titled 'Content dialog'.<br/>
+Enter title Automation617b334fe9.<br/>
+Click the 'Apply' button.<br/>
+Get the title text of every result in the search result set.<br/>
+For each expected result, assert it is present in the result set.<br/>
+Verify the text '03/30/2014 - 04:00 AM' is present on the page.<br/>
+Verify the text '03/30/2015 - 04:00 AM' is present on the page.<br/>
+Verify the text 'Published' is present on the page.<br/>
+Click the first search title link in the search result set.<br/>
+Verify the text 'Automation617b334fe9' is present on the page.<br/>
+Verify the text 'Sunday, March 30, 2014 - 04:00' is present on the page.<br/>
+Verify the text 'Monday, March 30, 2015 - 04:00' is present on the page.<br/>
+Click the 'Edit' link in the work bench.<br/>
+Switch to the active frame titled 'Edit mpx_video_9 Automation617b334fe9 dialog'.<br/>
+Verify the value of the 'Available Date' text box equals '03/30/2014'.<br/>
+Verify the value of the 'Expiration Date' text box equals '03/30/2015'.<br/>
+Click the 'Schedule' tab.<br/>
+Switch to the active frame titled 'Automation617b334fe9 dialog'.<br/>
+Verify the 'Run now' button is present.<br/>
+Verify the text 'Automation617b334fe9' is present on the page.<br/>
+Verify the text 'Unpublish' is present on the page.<br/>
+Verify the text '03/30/2015 - 04:00' is present on the page.<br/>
+</div>
+</td>
+<td></td>
+<td>205</td>
+<td>com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling@36856daa</td></tr>
+<tr>
+<td title='com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MultipleMPXAccountsPerLoginVerification.MultipleMPXAccountsPerLoginVerification_Test()'><b>MultipleMPXAccountsPerLoginVerification_Test</b><br>Test class: com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MultipleMPXAccountsPerLoginVerification<br/>
+<a href="#Output-406836414" onClick='toggleBox("Output-406836414", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-406836414" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-406836414">
+Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.<br/>
+Enter the user's email address in the 'Email Address' text box.<br/>
+Enter the user's password in the 'Password' text box.<br/>
+Click the 'Login' button.<br/>
+Open the mpx data client at http://data.media.theplatform.com/media/client.<br/>
+Enter the Username in the 'Username' text box.<br/>
+Enter the Password in the 'Password' text box.<br/>
+Click the 'Sign In' button.<br/>
+Click the Account Picker button to display all mpx accounts.<br/>
+Store all the active mpx accounts to a list.<br/>
+Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.<br/>
+Mouse over the 'Configuration' menu link.<br/>
+Mouse over the 'Media' menu link.<br/>
+Click the 'Media: thePlatform mpx settings' menu link.<br/>
+Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.<br/>
+Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.<br/>
+Get the account options from the 'Select Import Account for Account...' drop down lists.<br/>
+</div>
+</td>
+<td></td>
+<td>18</td>
+<td>com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MultipleMPXAccountsPerLoginVerification@794564dc</td></tr>
+<tr>
+<td title='com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability.NotificationPlayerUnavailability_Test()'><b>NotificationPlayerUnavailability_Test</b><br>Test class: com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability<br/>
+<a href="#Output-273462391" onClick='toggleBox("Output-273462391", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-273462391" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-273462391">
+Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.<br/>
+Enter the user's email address in the 'Email Address' text box.<br/>
+Enter the user's password in the 'Password' text box.<br/>
+Click the 'Login' button.<br/>
+Mouse over the 'Configuration' menu link.<br/>
+Mouse over the 'Media' menu link.<br/>
+Click the 'Media: thePlatform mpx settings' menu link.<br/>
+Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.<br/>
+Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.<br/>
+Get all the selected import account options and store to a list.<br/>
+Open the mpx platform.<br/>
+Enter 'mpx/AdminPub7QA' in the 'Username' text box.<br/>
+Enter 'Pa55word' in the 'Password' text box.<br/>
+Click the 'Login' button.<br/>
+Click the 'Players' link.<br/>
+Click the 'All Players' link.<br/>
+Click the 'Add' button.<br/>
+Enter 'AutomationPlayer493a91e226' in the 'Title' text box.<br/>
+Click the 'Save' button.<br/>
+Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Files' menu link.<br/>
+Click the 'mpxPlayers' menu link.<br/>
+Switch to the active frame titled 'Content dialog'.<br/>
+Click the 'Sync MPX Players' link.<br/>
+Click the 'Sync MPX Players Now' link.<br/>
+Verify success message of 'players returned for account' is present.<br/>
+Verify there are no errors present.<br/>
+Enter title AutomationPlayer493a91e226.<br/>
+Click the 'Apply' button.<br/>
+Get the text of the first search result set item.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Files' menu link.<br/>
+Click the 'mpxMedia' menu link.<br/>
+Enter title Automation.<br/>
+Select the 'Published' from the 'MPX Status/Published' drop down list.<br/>
+Select the DB TV from the 'Source' select ddl.<br/>
+Click the 'Apply' button.<br/>
+Get the text of the first search result set item.<br/>
+Click the first search title link in the search result set.<br/>
+Click the 'Edit' link in the work bench.<br/>
+Switch to the active frame titled 'Edit mpx_video_9 Automation02113e4c7e dialog'.<br/>
+Select 'AutomationPlayer493a91e226' from the 'Video Player' drop down list.<br/>
+Click the 'Save' button.<br/>
+Open the mpx platform.<br/>
+Click the 'Players' link.<br/>
+Click the 'All Players' link.<br/>
+Enter 'AutomationPlayer493a91e226' in the 'Player Search' text box.<br/>
+Click the 'Search by Players Title' link.<br/>
+Click the 'Player Title' label to give focus to the player item.<br/>
+Click the 'Disable Player' check box.<br/>
+Click the 'Save' button.<br/>
+Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.<br/>
+Switch to the active frame titled 'Status report dialog'.<br/>
+Verify success message of 'Cron ran successfully.' is present.<br/>
+Verify there are no errors present.<br/>
+Click the 'Close Overlay X'.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Files' menu link.<br/>
+Click the 'mpxPlayers' menu link.<br/>
+Switch to the active frame titled 'Content dialog'.<br/>
+Verify that the disabled player text is present for player titled 'AutomationPlayer493a91e226'.<br/>
+Switch to the active frame titled 'Status report dialog'.<br/>
+Verify success message of 'Cron ran successfully.' is present.<br/>
+Verify there are no errors present.<br/>
+Click the 'Close Overlay X'.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Files' menu link.<br/>
+Click the 'mpxPlayers' menu link.<br/>
+Switch to the active frame titled 'Content dialog'.<br/>
+Verify that the disabled player text is present for player titled 'AutomationPlayer493a91e226'.<br/>
+Enter title AutomationPlayer493a91e226.<br/>
+Click the 'Apply' button.<br/>
+Click the first search title link in the search result set.<br/>
+Click the 'Edit' link in the work bench.<br/>
+Switch to the active frame titled 'Edit mpx_player AutomationPlayer493a91e226 dialog'.<br/>
+Scroll the 'Publishing Options' link into view.<br/>
+Click the 'Publishing Options' link.<br/>
+Uncheck the 'Published' checkbox<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'MPX Player AutomationPlayer493a91e226 has been updated.' is present.<br/>
+Verify there are no errors present.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Files' menu link.<br/>
+Click the 'mpxPlayers' menu link.<br/>
+Switch to the active frame titled 'Content dialog'.<br/>
+Verify that the disabled and unpublished player text is present for player titled 'AutomationPlayer493a91e226'.<br/>
+Click the 'MPX Media' link.<br/>
+Switch to the active frame titled 'Content dialog'.<br/>
+Verify that the disabled and unpublished player text is present for player titled 'AutomationPlayer493a91e226'.<br/>
+Click the 'Close Overlay X'.<br/>
+Mouse over the 'Configuration' menu link.<br/>
+Mouse over the 'Media' menu link.<br/>
+Click the 'Media: thePlatform mpx settings' menu link.<br/>
+Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.<br/>
+Verify that the disabled and unpublished player text is present for player titled 'AutomationPlayer493a91e226'.<br/>
+Click the 'click here' link for the unpublished player titled 'AutomationPlayer493a91e226'.<br/>
+Switch to the active frame titled 'Edit mpx_player AutomationPlayer493a91e226 dialog'.<br/>
+Scroll the 'Publishing Options' link into view.<br/>
+Click the 'Publishing Options' link.<br/>
+Check the 'Published' checkbox<br/>
+Click the 'Save' button.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Files' menu link.<br/>
+Click the 'mpxPlayers' menu link.<br/>
+Switch to the active frame titled 'Content dialog'.<br/>
+Verify that the disabled player text is present for player titled 'AutomationPlayer493a91e226'.<br/>
+Click the MPX 'Login' link for the unpublished player 'AutomationPlayer493a91e226'.<br/>
+Click the 'Players' link.<br/>
+Click the 'All Players' link.<br/>
+Enter 'AutomationPlayer493a91e226' in the 'Player Search' text box.<br/>
+Click the 'Search by Players Title' link.<br/>
+Click the 'Player Title' label to give focus to the player item.<br/>
+Click the 'Disable Player' check box.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'Content dialog'.<br/>
+Click the 'Close Overlay X'.<br/>
+Switch to the active frame titled 'Status report dialog'.<br/>
+Verify success message of 'Cron ran successfully.' is present.<br/>
+Verify there are no errors present.<br/>
+Click the 'Close Overlay X'.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Files' menu link.<br/>
+Click the 'mpxPlayers' menu link.<br/>
+Switch to the active frame titled 'Content dialog'.<br/>
+Verify the text 'An MPXplayer that's in use (AutomationPlayer493a91e226) has been disabled in MPX.' is NOT present on the page.<br/>
+Switch to the active frame titled 'Status report dialog'.<br/>
+Verify success message of 'Cron ran successfully.' is present.<br/>
+Verify there are no errors present.<br/>
+Click the 'Close Overlay X'.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Files' menu link.<br/>
+Click the 'mpxPlayers' menu link.<br/>
+Switch to the active frame titled 'Content dialog'.<br/>
+Verify the text 'An MPXplayer that's in use (AutomationPlayer493a91e226) has been disabled in MPX.' is NOT present on the page.<br/>
+</div>
+</td>
+<td></td>
+<td>349</td>
+<td>com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability@4797e7b</td></tr>
+<tr>
+<td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ProgramGuides.ROVITVSchedule.ProgramGuideVerification.ProgramGuideVerification_Test()'><b>ProgramGuideVerification_Test</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ProgramGuides.ROVITVSchedule.ProgramGuideVerification<br/>
+<a href="#Output-1291596694" onClick='toggleBox("Output-1291596694", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1291596694" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1291596694">
+Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.<br/>
+Enter the user's email address in the 'Email Address' text box.<br/>
+Enter the user's password in the 'Password' text box.<br/>
+Click the 'Login' button.<br/>
+Verify home page program guide contains text 'Program Guide'.<br/>
+Verify column headers present of 'Date', 'Show', and 'Information'.<br/>
+Switch to the active frame titled 'Status report dialog'.<br/>
+Verify success message of 'Cron ran successfully.' is present.<br/>
+Verify there are no errors present.<br/>
+Verify Cron Status contains data url 'http://feed.entertainment.tv.theplatform.com/f/dCK2IC/stage_usa_listing?range=1-*&form=json'.<br/>
+Click the 'Close Overlay X'.<br/>
+Verify home page program guide contains text 'Program Guide'.<br/>
+Verify column headers present of 'Date', 'Show', and 'Information'.<br/>
+After 8pm, show availability limited.<br/>
+Mouse over the 'Structure' menu link.<br/>
+Click the 'Blocks' menu link.<br/>
+Switch to the active frame titled 'Blocks dialog'.<br/>
+Select the block name 'Program Guide' from the '- None -' drop down list.<br/>
+Click the 'Save Blocks' button.<br/>
+</div>
+</td>
+<td></td>
+<td>32</td>
+<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ProgramGuides.ROVITVSchedule.ProgramGuideVerification@547d573</td></tr>
+<tr>
+<td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons.StickyButtons_Test()'><b>StickyButtons_Test</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons<br/>
+<a href="#Output-141348434" onClick='toggleBox("Output-141348434", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-141348434" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-141348434">
+Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.<br/>
+Enter the user's email address in the 'Email Address' text box.<br/>
+Enter the user's password in the 'Password' text box.<br/>
+Click the 'Login' button.<br/>
+Click the 'Modules' menu link.<br/>
+Switch to frame titled 'Modules'.<br/>
+Enter 'Sticky Edit Actions' in the 'Filter Name' text box.<br/>
+Wait for the module titled 'Sticky Edit Actions' to appear in the list.<br/>
+Check the 'Sticky Edit Actions' check box.<br/>
+Click the 'Save configuration' button.<br/>
+Switch to frame titled 'Some required modules must be enabled'.<br/>
+Switch back to the 'Modules' frame.<br/>
+Switch to frame titled 'Modules'.<br/>
+Verify success message of 'The configuration options have been saved.' is present.<br/>
+Verify there are no errors present.<br/>
+Click the 'Close Overlay X'.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Add content' menu link.<br/>
+Click the 'Post' menu link.<br/>
+Switch to the active frame titled 'Create Post dialog'.<br/>
+Enter 'ac8ed5f3a88c47b' in the 'Title' text box.<br/>
+Scroll by '100'.<br/>
+Switch to the Synopsis frame.<br/>
+Enter a randomized text string into the 'Body' text area.<br/>
+Switch to the active frame titled 'Create Post dialog'.<br/>
+Verify the sticky edit 'Save' button is present.<br/>
+Verify the sticky edit 'Preview' button is present.<br/>
+Scroll by '100'.<br/>
+Verify the sticky edit 'Save' button is present.<br/>
+Verify the sticky edit 'Preview' button is present.<br/>
+Click the 'Meta tags' link.<br/>
+Verify the sticky edit 'Save' button is present.<br/>
+Verify the sticky edit 'Preview' button is present.<br/>
+Scroll by '100'.<br/>
+Verify the sticky edit 'Save' button is present.<br/>
+Verify the sticky edit 'Preview' button is present.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'Post ac8ed5f3a88c47b has been created.' is present.<br/>
+Verify there are no errors present.<br/>
+Verify the sticky edit 'Save' button is present.<br/>
+Verify the sticky edit 'Preview' button is present.<br/>
+Scroll by '100'.<br/>
+Verify the sticky edit 'Save' button is present.<br/>
+Verify the sticky edit 'Preview' button is present.<br/>
+Click the 'Modules' menu link.<br/>
+Enter 'Sticky Edit Actions' in the 'Filter Name' text box.<br/>
+Wait for the module titled 'Sticky Edit Actions' to appear in the list.<br/>
+Uncheck the 'Sticky Edit Actions' module checkbox.<br/>
+Click the 'Save configuration' button.<br/>
+Verify success message of 'The configuration options have been saved.' is present.<br/>
+Verify there are no errors present.<br/>
+</div>
+</td>
+<td></td>
+<td>60</td>
+<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons@f48530a</td></tr>
+<tr>
+<td title='com.nbcuni.test.publisher.tests.Video.SyncFromMPXButtonToVideoFileEntitiesEditForm.SyncFromMPXButtonToVideoFileEntitiesEditForm.SyncFromMPXButtonToVideoFileEntitiesEditForm_Test()'><b>SyncFromMPXButtonToVideoFileEntitiesEditForm_Test</b><br>Test class: com.nbcuni.test.publisher.tests.Video.SyncFromMPXButtonToVideoFileEntitiesEditForm.SyncFromMPXButtonToVideoFileEntitiesEditForm</td>
+<td></td>
+<td>0</td>
+<td>com.nbcuni.test.publisher.tests.Video.SyncFromMPXButtonToVideoFileEntitiesEditForm.SyncFromMPXButtonToVideoFileEntitiesEditForm@607c5f1a</td></tr>
+<tr>
+<td title='com.nbcuni.test.publisher.tests.Setup.TestCleanup.TestCleanup_Test()'><b>TestCleanup_Test</b><br>Test class: com.nbcuni.test.publisher.tests.Setup.TestCleanup<br/>
+<a href="#Output-103093200" onClick='toggleBox("Output-103093200", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-103093200" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-103093200">
+Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.<br/>
+Enter the user's email address in the 'Email Address' text box.<br/>
+Enter the user's password in the 'Password' text box.<br/>
+Click the 'Login' button.<br/>
+</div>
+</td>
+<td></td>
+<td>4</td>
+<td>com.nbcuni.test.publisher.tests.Setup.TestCleanup@6d8c8c3e</td></tr>
+<tr>
+<td title='com.nbcuni.test.publisher.tests.Setup.TestSetup.TestSetup_Test()'><b>TestSetup_Test</b><br>Test class: com.nbcuni.test.publisher.tests.Setup.TestSetup<br/>
+<a href="#Output-1616339094" onClick='toggleBox("Output-1616339094", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1616339094" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1616339094">
+Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.<br/>
+Enter the user's email address in the 'Email Address' text box.<br/>
+Enter the user's password in the 'Password' text box.<br/>
+Click the 'Login' button.<br/>
+Click the 'Modules' menu link.<br/>
+Switch to frame titled 'Modules'.<br/>
+Enter 'Sticky Edit Actions' in the 'Filter Name' text box.<br/>
+Wait for the module titled 'Sticky Edit Actions' to appear in the list.<br/>
+Enter 'Devel' in the 'Filter Name' text box.<br/>
+Wait for the module titled 'Devel' to appear in the list.<br/>
+Enter 'ImageField Focus' in the 'Filter Name' text box.<br/>
+Wait for the module titled 'ImageField Focus' to appear in the list.<br/>
+Enter 'Database logging' in the 'Filter Name' text box.<br/>
+Wait for the module titled 'Database logging' to appear in the list.<br/>
+Enter 'Pub Post' in the 'Filter Name' text box.<br/>
+Wait for the module titled 'Pub Post' to appear in the list.<br/>
+Verify the 'Pub Post' check box is checked.<br/>
+Click the 'Close Overlay X'.<br/>
+</div>
+</td>
+<td></td>
+<td>39</td>
+<td>com.nbcuni.test.publisher.tests.Setup.TestSetup@375c56d3</td></tr>
+<tr>
+<td title='com.nbcuni.test.publisher.tests.Video.Thumbnails.ThumbnailsAreNotUpdated.ThumbnailsAreNotUpdated_Test()'><b>ThumbnailsAreNotUpdated_Test</b><br>Test class: com.nbcuni.test.publisher.tests.Video.Thumbnails.ThumbnailsAreNotUpdated<br/>
+<a href="#Output-1238052913" onClick='toggleBox("Output-1238052913", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1238052913" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1238052913">
+Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.<br/>
+Enter the user's email address in the 'Email Address' text box.<br/>
+Enter the user's password in the 'Password' text box.<br/>
+Click the 'Login' button.<br/>
+Mouse over the 'Configuration' menu link.<br/>
+Mouse over the 'Media' menu link.<br/>
+Click the 'Media: thePlatform mpx settings' menu link.<br/>
+Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.<br/>
+Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.<br/>
+Get all the selected import account options and store to a list.<br/>
+Click the 'Close Overlay X'.<br/>
+Mouse over the 'Structure' menu link.<br/>
+Click the 'File types' menu link.<br/>
+Switch to the active frame titled 'File types dialog'.<br/>
+Click the 'DB TV manage file display' link.<br/>
+Switch to the active frame titled 'MPX Video for Account &quot;DB TV&quot; (2312945284) dialog'.<br/>
+Check the 'Pub MPX Image' checkbox<br/>
+Click the 'Pub MPX Image' link.<br/>
+Select the 'Thumbnail (100x100)' option from the 'Pub MPX Image Style' drop down list.<br/>
+Click the 'Save configuration' button.<br/>
+Verify success message of 'Your settings have been saved.' is present.<br/>
+Verify there are no errors present.<br/>
+Click the 'Close Overlay X'.<br/>
+Open the mpx platform.<br/>
+Enter 'mpx/AdminPub7QA' in the 'Username' text box.<br/>
+Enter 'Pa55word' in the 'Password' text box.<br/>
+Click the 'Login' button.<br/>
+Click the 'Upload' button.<br/>
+Click the 'Choose Files' button.<br/>
+Click the 'Movies' button in the OS Upload dialog.<br/>
+Click the Test Movie in th OS Upload dialog.<br/>
+Click the 'Open' button.<br/>
+Click the 'Upload' button in the Upload dialog.<br/>
+Click the 'Available Date' label on the right hand side to give focus to the media item.<br/>
+Enter 'Automation5d2294e707' in the 'Title' text box.<br/>
+Click the 'Save' button.<br/>
+Click the 'Files' link.<br/>
+Click the 'Upload' button.<br/>
+Click the 'Choose Files' button.<br/>
+Click the 'All Files' icon.<br/>
+Click the local 'Pictures' icon.<br/>
+Click the nbc logo image link.<br/>
+Click the 'Open' button.<br/>
+Click the 'Upload' button in the Upload dialog.<br/>
+Click the 'All Media' link.<br/>
+Click the 'Save' button.<br/>
+Click the 'Publish' button.<br/>
+Click the 'Publish to Pub 7 Primary' check box.<br/>
+Click the 'Publish' button from the upload dialog.<br/>
+Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.<br/>
+Switch to the active frame titled 'Status report dialog'.<br/>
+Verify success message of 'Cron ran successfully.' is present.<br/>
+Verify there are no errors present.<br/>
+Click the 'Close Overlay X'.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Files' menu link.<br/>
+Click the 'mpxMedia' menu link.<br/>
+Switch to the active frame titled 'Content dialog'.<br/>
+Enter title Automation5d2294e707.<br/>
+Click the 'Apply' button.<br/>
+Get the text of the first search result set item.<br/>
+Verify the search thumbnail named 'nbclogosmall' is present for search result 'Automation5d2294e707'.<br/>
+Assert the the img is loaded and visible.<br/>
+Mouse over the 'Structure' menu link.<br/>
+Click the 'File types' menu link.<br/>
+Click the 'DB TV manage file display' link.<br/>
+Un-Check the 'Pub MPX Image' checkbox<br/>
+Click the 'Save configuration' button.<br/>
+Verify success message of 'Your settings have been saved.' is present.<br/>
+Verify there are no errors present.<br/>
+</div>
+</td>
+<td></td>
+<td>144</td>
+<td>com.nbcuni.test.publisher.tests.Video.Thumbnails.ThumbnailsAreNotUpdated@61bcaeed</td></tr>
+<tr>
+<td title='com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SEOModules.TurnOnSEOOptimizationModule.TurnOnSEOOptimizationModule_Test()'><b>TurnOnSEOOptimizationModule_Test</b><br>Test class: com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SEOModules.TurnOnSEOOptimizationModule<br/>
+<a href="#Output-519435876" onClick='toggleBox("Output-519435876", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-519435876" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-519435876">
+Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.<br/>
+Enter the user's email address in the 'Email Address' text box.<br/>
+Enter the user's password in the 'Password' text box.<br/>
+Click the 'Login' button.<br/>
+Click the 'Modules' menu link.<br/>
+Switch to frame titled 'Modules'.<br/>
+Enter 'Pub SEO' in the 'Filter Name' text box.<br/>
+Wait for the module titled 'Pub SEO' to appear in the list.<br/>
+Verify the 'Pub SEO' check box is checked.<br/>
+Click the 'Close Overlay X'.<br/>
+Mouse over the 'Structure' menu link.<br/>
+Mouse over the 'Content types' menu link.<br/>
+Click the 'Post' menu link.<br/>
+Switch to the active frame titled 'Post dialog'.<br/>
+Click the 'XML sitemap' link.<br/>
+Select 'Included' from the 'Inclusion' drop down list.<br/>
+Click the 'Save content type' link.<br/>
+Verify success message of 'The content type Post has been updated.' is present.<br/>
+Verify there are no errors present.<br/>
+Click the 'Close Overlay X'.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Add content' menu link.<br/>
+Click the 'Post' menu link.<br/>
+Switch to the active frame titled 'Create Post dialog'.<br/>
+Enter '17e7b7444b1a423' in the 'Title' text box.<br/>
+Switch to the Synopsis frame.<br/>
+Enter a randomized text string into the 'Body' text area.<br/>
+Switch to the active frame titled 'Create Post dialog'.<br/>
+Click the 'Cover' select button.<br/>
+Switch to the select file frame.<br/>
+Enter the file path for file upload.<br/>
+Click the 'Upload' button.<br/>
+Wait for the file link to be visible after upload.<br/>
+Click the 'Next' button.<br/>
+Click the 'Public Local Files' radio button.<br/>
+Click the 'Next' button.<br/>
+Verify the file image 'HanSolo' is present.<br/>
+Verify the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'Create Post dialog'.<br/>
+Scroll the 'Publishing Options' link into view.<br/>
+Click the 'Publishing Options' link.<br/>
+Select 'Draft' from the 'Moderation State' drop down list.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'Post 17e7b7444b1a423 has been created.' is present.<br/>
+Verify there are no errors present.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Add content' menu link.<br/>
+Click the 'Post' menu link.<br/>
+Switch to the active frame titled 'Create Post dialog'.<br/>
+Enter 'def9d77117ec48d' in the 'Title' text box.<br/>
+Switch to the Synopsis frame.<br/>
+Enter a randomized text string into the 'Body' text area.<br/>
+Switch to the active frame titled 'Create Post dialog'.<br/>
+Click the 'Cover' select button.<br/>
+Switch to the select file frame.<br/>
+Enter the file path for file upload.<br/>
+Click the 'Upload' button.<br/>
+Wait for the file link to be visible after upload.<br/>
+Click the 'Next' button.<br/>
+Click the 'Public Local Files' radio button.<br/>
+Click the 'Next' button.<br/>
+Verify the file image 'HanSolo' is present.<br/>
+Verify the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'Create Post dialog'.<br/>
+Scroll the 'Publishing Options' link into view.<br/>
+Click the 'Publishing Options' link.<br/>
+Select 'Published' from the 'Moderation State' drop down list.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'Post def9d77117ec48d has been created.' is present.<br/>
+Verify there are no errors present.<br/>
+Switch to the active frame titled 'Status report dialog'.<br/>
+Verify success message of 'Cron ran successfully.' is present.<br/>
+Verify there are no errors present.<br/>
+Click the 'Close Overlay X'.<br/>
+Mouse over the 'Configuration' menu link.<br/>
+Mouse over the 'Search and metadata' menu link.<br/>
+Mouse over the 'XML sitemap' menu link.<br/>
+Click the 'Rebuild links' menu link.<br/>
+Switch to the active frame titled 'Are you sure you want to rebuild the XML sitemap? dialog'.<br/>
+Click the 'Rebuild Sitemap' button.<br/>
+Switch to frame titled 'Rebuilding Sitemap'.<br/>
+Wait for the frame titled 'Rebuilding Sitemap' to close.<br/>
+Switch to the active frame titled 'XML sitemap dialog'.<br/>
+Verify success message of 'The sitemap links were rebuilt.' is present.<br/>
+Verify there are no errors present.<br/>
+Click the 'Close Overlay X'.<br/>
+Mouse over the 'Configuration' menu link.<br/>
+Mouse over the 'Search and metadata' menu link.<br/>
+Click the 'XML sitemap' menu link.<br/>
+Switch to the active frame titled 'XML sitemap dialog'.<br/>
+Click the 'XMLSitemap Link' with text ''.<br/>
+Verify the text 'def9d77117ec48d' is present on the page.<br/>
+Verify the text '17e7b7444b1a423' is NOT present on the page.<br/>
+</div>
+</td>
+<td></td>
+<td>121</td>
+<td>com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SEOModules.TurnOnSEOOptimizationModule@3ae0e5b7</td></tr>
+<tr>
+<td title='com.nbcuni.test.publisher.tests.Video.UndefinedIndexesDisplayingForMPXPlayers.UndefinedIndexesDisplayingForMPXPlayers.UndefinedIndexesDisplayingForMPXPlayers_Test()'><b>UndefinedIndexesDisplayingForMPXPlayers_Test</b><br>Test class: com.nbcuni.test.publisher.tests.Video.UndefinedIndexesDisplayingForMPXPlayers.UndefinedIndexesDisplayingForMPXPlayers</td>
+<td></td>
+<td>0</td>
+<td>com.nbcuni.test.publisher.tests.Video.UndefinedIndexesDisplayingForMPXPlayers.UndefinedIndexesDisplayingForMPXPlayers@2f0e73ba</td></tr>
+</table><p>
+</body>
+</html>

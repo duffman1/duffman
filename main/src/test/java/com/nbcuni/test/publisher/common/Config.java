@@ -15,7 +15,7 @@ public class Config {
 
 	private String getConfigFileLocation() {
 		
-		String fileLoc = System.getProperty("user.dir") + "/src/test/resources/ConfigTestNG.xml";
+		String fileLoc = System.getProperty("user.dir") + "/src/test/resources/TestNGSuiteConfig.xml";
 		return fileLoc.replace("/", File.separator);
 	}
 	
@@ -105,16 +105,19 @@ public class Config {
 
         String value = null;
 
+        String concurrentFileLoc = System.getProperty("user.dir") + "/src/test/resources/TestNGConcurrentSuite.xml";
+		concurrentFileLoc = concurrentFileLoc.replace("/", File.separator);
+		
         try {
 
-        	File file = new File(this.getConfigFileLocation());
+        	File file = new File(concurrentFileLoc);
             DocumentBuilderFactory xmlFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder docBuilder = xmlFactory.newDocumentBuilder();
             Document xmlDoc = docBuilder.parse(file);
             XPathFactory xpathFact = XPathFactory.newInstance();
             XPath xpath = xpathFact.newXPath();
 
-            value = (String) xpath.evaluate("//suite[@name='Test Suite for Publisher 7']/@thread-count", xmlDoc, XPathConstants.STRING);
+            value = (String) xpath.evaluate("//suite[@name='Pub 7 Concurrent Suite']/@thread-count", xmlDoc, XPathConstants.STRING);
         }
         catch (Exception e) {
 

@@ -1,0 +1,770 @@
+<html>
+<head>
+<title>TestNG:  All Web Tests</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>All Web Tests</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>7/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Sat Mar 29 09:35:49 EDT 2014</td>
+</tr>
+<tr><td>Total time:</td><td>115 seconds (115721 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td>full </td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CustomContentType.AddingNewCustomContentType.AddingNewCustomContentType_Test()'><b>AddingNewCustomContentType_Test</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CustomContentType.AddingNewCustomContentType<br/>
+<a href="#Output-413715662" onClick='toggleBox("Output-413715662", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-413715662" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-413715662">
+Open url 'http://qa4.qa.nbcupublisher7.publisher7.com'.<br/>
+Enter the user's email address in the 'Email Address' text box.<br/>
+Enter the user's password in the 'Password' text box.<br/>
+Click the 'Login' button.<br/>
+Mouse over the 'Structure' menu link.<br/>
+Mouse over the 'Content types' menu link.<br/>
+Click the 'Add content type' menu link.<br/>
+Switch to frame titled 'Content types'.<br/>
+Enter 'dbdde5ec96' in the 'Name' text box.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'The content type dbdde5ec96 has been added.' is present.<br/>
+Verify there are no errors present.<br/>
+Verify the content type table contains the text 'dbdde5ec96'.<br/>
+Click the 'Close Overlay X'.<br/>
+Mouse over the 'Structure' menu link.<br/>
+Mouse over the 'Content types' menu link.<br/>
+Mouse over the 'dbdde5ec96' menu link.<br/>
+Click the 'Manage fields' menu link.<br/>
+Switch to frame titled 'dbdde5ec96'.<br/>
+Enter 'e9a99c9ccc5a4f0' in the 'Add new field' text box.<br/>
+Select 'Image' from the 'Field Type' drop down list.<br/>
+Click the 'Save' button.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'Updated field e9a99c9ccc5a4f0 field settings.' is present.<br/>
+Verify there are no errors present.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'Saved e9a99c9ccc5a4f0 configuration.' is present.<br/>
+Verify there are no errors present.<br/>
+Click the 'Save' button.<br/>
+Click the 'Close Overlay X'.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Add content' menu link.<br/>
+Click the 'dbdde5ec96' menu link.<br/>
+Switch to frame titled 'dbdde5ec96'.<br/>
+Verify the Field 'Save' button is present.<br/>
+Enter 'f8a42f23ae604d5' in the 'Title' text box.<br/>
+Switch to the Synopsis frame.<br/>
+Enter a randomized text string into the 'Body' text area.<br/>
+Switch to the active frame titled 'Create dbdde5ec96 dialog'.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'dbdde5ec96 f8a42f23ae604d5 has been created.' is present.<br/>
+Verify there are no errors present.<br/>
+</div>
+</td>
+<td></td>
+<td>36</td>
+<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CustomContentType.AddingNewCustomContentType@253d8b48</td></tr>
+<tr>
+<td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Movie.CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter.CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter_Test()'><b>CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter_Test</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Movie.CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter<br/>
+<a href="#Output-487090258" onClick='toggleBox("Output-487090258", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-487090258" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-487090258">
+Open url 'http://qa4.qa.nbcupublisher7.publisher7.com'.<br/>
+Enter the user's email address in the 'Email Address' text box.<br/>
+Enter the user's password in the 'Password' text box.<br/>
+Click the 'Login' button.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Add content' menu link.<br/>
+Click the 'Character Profile' menu link.<br/>
+Switch to the active frame titled 'Create Character Profile dialog'.<br/>
+Enter 'b823832c9a9f488' in the 'Character First Name' text box.<br/>
+Click the Cover Photo 'Select' button.<br/>
+Switch to the select file frame.<br/>
+Enter the file path for file upload.<br/>
+Click the 'Upload' button.<br/>
+Wait for the file link to be visible after upload.<br/>
+Click the 'Next' button.<br/>
+Click the 'Public Local Files' radio button.<br/>
+Click the 'Next' button.<br/>
+Verify the file image 'HanSolo' is present.<br/>
+Verify the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'Create Character Profile dialog'.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'Character Profile b823832c9a9f488 has been created.' is present.<br/>
+Verify there are no errors present.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Add content' menu link.<br/>
+Click the 'Movie' menu link.<br/>
+Switch to the active frame titled 'Create Movie dialog'.<br/>
+Click the 'Cast/Crew' link.<br/>
+Assert that the 'Character' text box is not displayed.<br/>
+Select the 'Contributor' from the 'Role' drop down list.<br/>
+Assert that the 'Character' text box is not displayed.<br/>
+Select the 'Director' from the 'Role' drop down list.<br/>
+Assert that the 'Character' text box is not displayed.<br/>
+Select the 'Executive Producer' from the 'Role' drop down list.<br/>
+Assert that the 'Character' text box is not displayed.<br/>
+Select the 'Host' from the 'Role' drop down list.<br/>
+Assert that the 'Character' text box is not displayed.<br/>
+Select the 'Judge' from the 'Role' drop down list.<br/>
+Assert that the 'Character' text box is not displayed.<br/>
+Select the 'Producer' from the 'Role' drop down list.<br/>
+Assert that the 'Character' text box is not displayed.<br/>
+Select the 'Self' from the 'Role' drop down list.<br/>
+Assert that the 'Character' text box is not displayed.<br/>
+Select the 'Song Writer' from the 'Role' drop down list.<br/>
+Assert that the 'Character' text box is not displayed.<br/>
+Select the 'Writer' from the 'Role' drop down list.<br/>
+Assert that the 'Character' text box is not displayed.<br/>
+Select the 'Character' from the 'Role' drop down list.<br/>
+Assert that the 'Character' text box is displayed.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Add content' menu link.<br/>
+Click the 'Person' menu link.<br/>
+Switch to the active frame titled 'Create Person dialog'.<br/>
+Enter '1fa8b2fc333d4cb' in the 'First name' text box.<br/>
+Enter a random block of text in the 'Biography' text area.<br/>
+Switch to the active frame titled 'Create Person dialog'.<br/>
+Click the 'Cover Photo' Select button.<br/>
+Switch to the select file frame.<br/>
+Enter the file path for file upload.<br/>
+Click the 'Upload' button.<br/>
+Wait for the file link to be visible after upload.<br/>
+Click the 'Next' button.<br/>
+Click the 'Public Local Files' radio button.<br/>
+Click the 'Next' button.<br/>
+Verify the file image 'HanSolo' is present.<br/>
+Verify the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'Create Person dialog'.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'Person 1fa8b2fc333d4cb has been created.' is present.<br/>
+Verify there are no errors present.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Add content' menu link.<br/>
+Click the 'Movie' menu link.<br/>
+Switch to the active frame titled 'Create Movie dialog'.<br/>
+Click the 'Cast/Crew' link.<br/>
+Enter '1fa8b2fc333d4cb' in the Person text box.<br/>
+Click the '1fa8b2fc333d4cb' from the auto complete option list.<br/>
+Select the 'Character' from the 'Role' drop down list.<br/>
+Enter 'b823832c9a9f488' in the 'Character' text box.<br/>
+Click the 'b823832c9a9f488' from the auto complete option list.<br/>
+Scroll to and click the 'Basic Information' tab.<br/>
+Enter '80b467c93fee4f1' in the 'Title' text box.<br/>
+Switch to the Synopsis frame.<br/>
+Enter a randomized text string into the 'Body' text area.<br/>
+Switch to the active frame titled 'Create Movie dialog'.<br/>
+Click the 'Cover' select button.<br/>
+Switch to the select file frame.<br/>
+Enter the file path for file upload.<br/>
+Click the 'Upload' button.<br/>
+Wait for the file link to be visible after upload.<br/>
+Click the 'Next' button.<br/>
+Click the 'Public Local Files' radio button.<br/>
+Click the 'Next' button.<br/>
+Verify the file image 'HanSolo' is present.<br/>
+Verify the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'Create Movie dialog'.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'Movie 80b467c93fee4f1 has been created.' is present.<br/>
+Verify there are no errors present.<br/>
+Click the 'Edit Draft' link in the work bench.<br/>
+Switch to the active frame titled 'Edit Movie 80b467c93fee4f1 dialog'.<br/>
+Click the 'Cast/Crew' link.<br/>
+Assert that the 'Character' text box is displayed.<br/>
+Assert the value of the 'Person' text box equals '1fa8b2fc333d4cb'.<br/>
+Assert the value of the 'Role' drop down list equals 'Character'.<br/>
+Assert the value of the 'Character' text box equals 'b823832c9a9f488'.<br/>
+Scroll the 'Publishing Options' link into view.<br/>
+Click the 'Publishing Options' link.<br/>
+Check the 'Create New Revision' checkbox.<br/>
+Select 'Published' from the 'Moderation State' drop down list.<br/>
+Click the 'Save' button.<br/>
+Verify the text 'Published' is present in the work bench info block.<br/>
+</div>
+</td>
+<td></td>
+<td>77</td>
+<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Movie.CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter@bf2c60d</td></tr>
+<tr>
+<td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile.CreateCharacterProfile_Test()'><b>CreateCharacterProfile_Test</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile<br/>
+<a href="#Output-1998774403" onClick='toggleBox("Output-1998774403", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1998774403" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1998774403">
+Open url 'http://qa4.qa.nbcupublisher7.publisher7.com'.<br/>
+Enter the user's email address in the 'Email Address' text box.<br/>
+Enter the user's password in the 'Password' text box.<br/>
+Click the 'Login' button.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Add content' menu link.<br/>
+Click the 'Character Profile' menu link.<br/>
+Switch to the active frame titled 'Create Character Profile dialog'.<br/>
+Enter 'd9fba0100f24477' in the 'Character First Name' text box.<br/>
+Click the Cover Photo 'Select' button.<br/>
+Switch to the select file frame.<br/>
+Enter the file path for file upload.<br/>
+Click the 'Upload' button.<br/>
+Wait for the file link to be visible after upload.<br/>
+Click the 'Next' button.<br/>
+Click the 'Public Local Files' radio button.<br/>
+Click the 'Next' button.<br/>
+Verify the file image 'HanSolo' is present.<br/>
+Verify the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Switch to frame titled 'Create Character Profile'.<br/>
+Assert that img source of the Cover Photo contains 'HanSolo'.<br/>
+Assert the the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'Character Profile d9fba0100f24477 has been created.' is present.<br/>
+Verify there are no errors present.<br/>
+</div>
+</td>
+<td></td>
+<td>19</td>
+<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@6b833711</td></tr>
+<tr>
+<td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson.CreatePerson_Test()'><b>CreatePerson_Test</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson<br/>
+<a href="#Output-1398084443" onClick='toggleBox("Output-1398084443", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1398084443" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1398084443">
+Open url 'http://qa4.qa.nbcupublisher7.publisher7.com'.<br/>
+Enter the user's email address in the 'Email Address' text box.<br/>
+Enter the user's password in the 'Password' text box.<br/>
+Click the 'Login' button.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Add content' menu link.<br/>
+Click the 'Person' menu link.<br/>
+Switch to frame titled 'Create Person'.<br/>
+Enter 'acebfed2e6aa469' in the 'First name' text box.<br/>
+Enter a random block of text in the 'Biography' text area.<br/>
+Switch to frame titled 'Create Person'.<br/>
+Click the 'Cover Photo' Select button.<br/>
+Switch to the select file frame.<br/>
+Enter the file path for file upload.<br/>
+Click the 'Upload' button.<br/>
+Wait for the file link to be visible after upload.<br/>
+Click the 'Next' button.<br/>
+Click the 'Public Local Files' radio button.<br/>
+Click the 'Next' button.<br/>
+Verify the file image 'HanSolo' is present.<br/>
+Verify the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Switch to frame titled 'Create Person'.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'Person acebfed2e6aa469 has been created.' is present.<br/>
+Verify there are no errors present.<br/>
+</div>
+</td>
+<td></td>
+<td>18</td>
+<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson@6fa8859b</td></tr>
+<tr>
+<td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost.CreatePost_Test()'><b>CreatePost_Test</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost<br/>
+<a href="#Output-1123434088" onClick='toggleBox("Output-1123434088", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1123434088" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1123434088">
+Open url 'http://qa4.qa.nbcupublisher7.publisher7.com'.<br/>
+Enter the user's email address in the 'Email Address' text box.<br/>
+Enter the user's password in the 'Password' text box.<br/>
+Click the 'Login' button.<br/>
+Click the 'Modules' menu link.<br/>
+Switch to frame titled 'Modules'.<br/>
+Enter 'Pub Post' in the 'Filter Name' text box.<br/>
+Wait for the module titled 'Pub Post' to appear in the list.<br/>
+Verify the 'Pub Post' check box is checked.<br/>
+Click the 'Close Overlay X'.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Add content' menu link.<br/>
+Click the 'Post' menu link.<br/>
+Switch to frame titled 'Create Post'.<br/>
+Verify the 'Title' is present as a required field.<br/>
+Verify the 'Body' is present as a required field.<br/>
+Scroll the 'Publishing Options' link into view.<br/>
+Click the 'Publishing Options' link.<br/>
+Verify the 'Moderation State' is present as a required field.<br/>
+Scroll to and click the 'Basic Information' tab.<br/>
+Enter '4b5835c356fe447' in the 'Title' text box.<br/>
+Switch to the Synopsis frame.<br/>
+Enter a randomized text string into the 'Body' text area.<br/>
+Switch to frame titled 'Create Post'.<br/>
+Click the 'Cover' select button.<br/>
+Switch to the select file frame.<br/>
+Enter the file path for file upload.<br/>
+Click the 'Upload' button.<br/>
+Wait for the file link to be visible after upload.<br/>
+Click the 'Next' button.<br/>
+Click the 'Public Local Files' radio button.<br/>
+Click the 'Next' button.<br/>
+Verify the file image 'HanSolo' is present.<br/>
+Verify the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Switch to frame titled 'Create Post'.<br/>
+Scroll the 'Publishing Options' link into view.<br/>
+Click the 'Publishing Options' link.<br/>
+Select 'Draft' from the 'Moderation State' drop down list.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'Post 4b5835c356fe447 has been created.' is present.<br/>
+Verify there are no errors present.<br/>
+Verify the text 'Draft' is present in the work bench info block.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Add content' menu link.<br/>
+Click the 'Post' menu link.<br/>
+Switch to frame titled 'Create Post'.<br/>
+Verify the 'Title' is present as a required field.<br/>
+Verify the 'Body' is present as a required field.<br/>
+Scroll the 'Publishing Options' link into view.<br/>
+Click the 'Publishing Options' link.<br/>
+Verify the 'Moderation State' is present as a required field.<br/>
+Scroll to and click the 'Basic Information' tab.<br/>
+Enter 'c11a08f2cf5f485' in the 'Title' text box.<br/>
+Switch to the Synopsis frame.<br/>
+Enter a randomized text string into the 'Body' text area.<br/>
+Switch to frame titled 'Create Post'.<br/>
+Click the 'Cover' select button.<br/>
+Switch to the select file frame.<br/>
+Enter the file path for file upload.<br/>
+Click the 'Upload' button.<br/>
+Wait for the file link to be visible after upload.<br/>
+Click the 'Next' button.<br/>
+Click the 'Public Local Files' radio button.<br/>
+Click the 'Next' button.<br/>
+Verify the file image 'HanSolo' is present.<br/>
+Verify the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Switch to frame titled 'Create Post'.<br/>
+Scroll the 'Publishing Options' link into view.<br/>
+Click the 'Publishing Options' link.<br/>
+Select 'Review' from the 'Moderation State' drop down list.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'Post c11a08f2cf5f485 has been created.' is present.<br/>
+Verify there are no errors present.<br/>
+Verify the text 'Review' is present in the work bench info block.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Add content' menu link.<br/>
+Click the 'Post' menu link.<br/>
+Switch to frame titled 'Create Post'.<br/>
+Verify the 'Title' is present as a required field.<br/>
+Verify the 'Body' is present as a required field.<br/>
+Scroll the 'Publishing Options' link into view.<br/>
+Click the 'Publishing Options' link.<br/>
+Verify the 'Moderation State' is present as a required field.<br/>
+Scroll to and click the 'Basic Information' tab.<br/>
+Enter 'ff05d8bafd3145d' in the 'Title' text box.<br/>
+Switch to the Synopsis frame.<br/>
+Enter a randomized text string into the 'Body' text area.<br/>
+Switch to frame titled 'Create Post'.<br/>
+Click the 'Cover' select button.<br/>
+Switch to the select file frame.<br/>
+Enter the file path for file upload.<br/>
+Click the 'Upload' button.<br/>
+Wait for the file link to be visible after upload.<br/>
+Click the 'Next' button.<br/>
+Click the 'Public Local Files' radio button.<br/>
+Click the 'Next' button.<br/>
+Verify the file image 'HanSolo' is present.<br/>
+Verify the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Switch to frame titled 'Create Post'.<br/>
+Scroll the 'Publishing Options' link into view.<br/>
+Click the 'Publishing Options' link.<br/>
+Select 'Published' from the 'Moderation State' drop down list.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'Post ff05d8bafd3145d has been created.' is present.<br/>
+Verify there are no errors present.<br/>
+Verify the text 'Published' is present in the work bench info block.<br/>
+</div>
+</td>
+<td></td>
+<td>53</td>
+<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost@7fb67ae1</td></tr>
+<tr>
+<td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVEpisode.CreateTVEpisode.CreateTVEpisode_Test()'><b>CreateTVEpisode_Test</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVEpisode.CreateTVEpisode<br/>
+<a href="#Output-1274773711" onClick='toggleBox("Output-1274773711", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1274773711" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1274773711">
+Open url 'http://qa4.qa.nbcupublisher7.publisher7.com'.<br/>
+Enter the user's email address in the 'Email Address' text box.<br/>
+Enter the user's password in the 'Password' text box.<br/>
+Click the 'Login' button.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Add content' menu link.<br/>
+Click the 'Person' menu link.<br/>
+Switch to frame titled 'Create Person'.<br/>
+Enter 'a7b1a0846cd2401' in the 'First name' text box.<br/>
+Enter a random block of text in the 'Biography' text area.<br/>
+Switch to frame titled 'Create Person'.<br/>
+Click the 'Cover Photo' Select button.<br/>
+Switch to the select file frame.<br/>
+Enter the file path for file upload.<br/>
+Click the 'Upload' button.<br/>
+Wait for the file link to be visible after upload.<br/>
+Click the 'Next' button.<br/>
+Click the 'Public Local Files' radio button.<br/>
+Click the 'Next' button.<br/>
+Verify the file image 'HanSolo' is present.<br/>
+Verify the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Switch to frame titled 'Create Person'.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'Person a7b1a0846cd2401 has been created.' is present.<br/>
+Verify there are no errors present.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Add content' menu link.<br/>
+Click the 'TV Episode' menu link.<br/>
+Switch to frame titled 'TV Episode'.<br/>
+Verify the 'Title' is present as a required field.<br/>
+Verify the 'Episode' is present as a required field.<br/>
+Verify the 'Synopsis' is present as a required field.<br/>
+Scroll the 'Publishing Options' link into view.<br/>
+Click the 'Publishing Options' link.<br/>
+Verify the 'Moderation State' is present as a required field.<br/>
+Scroll to and click the 'Basic Information' tab.<br/>
+Enter 'a3ea15cb097a41c' in the 'Title' text box.<br/>
+Enter '1' in the 'Episode Number' text box.<br/>
+Switch to the Synopsis frame.<br/>
+Enter a randomized text string into the 'Body' text area.<br/>
+Switch to frame titled 'Create TV Episode'.<br/>
+Click the 'Cover' select button.<br/>
+Switch to the select file frame.<br/>
+Enter the file path for file upload.<br/>
+Click the 'Upload' button.<br/>
+Wait for the file link to be visible after upload.<br/>
+Click the 'Next' button.<br/>
+Click the 'Public Local Files' radio button.<br/>
+Click the 'Next' button.<br/>
+Verify the file image 'HanSolo' is present.<br/>
+Verify the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Switch to frame titled 'Create TV Episode'.<br/>
+Scroll the 'Publishing Options' link into view.<br/>
+Click the 'Publishing Options' link.<br/>
+Select 'Draft' from the 'Moderation State' drop down list.<br/>
+Click the 'Cast/Crew' link.<br/>
+Enter 'a7b1a0846cd2401' in the Person text box.<br/>
+Click the 'a7b1a0846cd2401' from the auto complete option list.<br/>
+Select the 'Contributor' from the 'Role' drop down list.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'TV Episode a3ea15cb097a41c has been created.' is present.<br/>
+Verify there are no errors present.<br/>
+Verify the text 'Draft' is present in the work bench info block.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Add content' menu link.<br/>
+Click the 'Person' menu link.<br/>
+Switch to frame titled 'Create Person'.<br/>
+Enter 'f66662bddcb14eb' in the 'First name' text box.<br/>
+Enter a random block of text in the 'Biography' text area.<br/>
+Switch to frame titled 'Create Person'.<br/>
+Click the 'Cover Photo' Select button.<br/>
+Switch to the select file frame.<br/>
+Enter the file path for file upload.<br/>
+Click the 'Upload' button.<br/>
+Wait for the file link to be visible after upload.<br/>
+Click the 'Next' button.<br/>
+Click the 'Public Local Files' radio button.<br/>
+Click the 'Next' button.<br/>
+Verify the file image 'HanSolo' is present.<br/>
+Verify the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Switch to frame titled 'Create Person'.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'Person f66662bddcb14eb has been created.' is present.<br/>
+Verify there are no errors present.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Add content' menu link.<br/>
+Click the 'TV Episode' menu link.<br/>
+Switch to frame titled 'TV Episode'.<br/>
+Verify the 'Title' is present as a required field.<br/>
+Verify the 'Episode' is present as a required field.<br/>
+Verify the 'Synopsis' is present as a required field.<br/>
+Scroll the 'Publishing Options' link into view.<br/>
+Click the 'Publishing Options' link.<br/>
+Verify the 'Moderation State' is present as a required field.<br/>
+Scroll to and click the 'Basic Information' tab.<br/>
+Enter '13a43400a354495' in the 'Title' text box.<br/>
+Enter '1' in the 'Episode Number' text box.<br/>
+Switch to the Synopsis frame.<br/>
+Enter a randomized text string into the 'Body' text area.<br/>
+Switch to frame titled 'Create TV Episode'.<br/>
+Click the 'Cover' select button.<br/>
+Switch to the select file frame.<br/>
+Enter the file path for file upload.<br/>
+Click the 'Upload' button.<br/>
+Wait for the file link to be visible after upload.<br/>
+Click the 'Next' button.<br/>
+Click the 'Public Local Files' radio button.<br/>
+Click the 'Next' button.<br/>
+Verify the file image 'HanSolo' is present.<br/>
+Verify the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Switch to frame titled 'Create TV Episode'.<br/>
+Scroll the 'Publishing Options' link into view.<br/>
+Click the 'Publishing Options' link.<br/>
+Select 'Review' from the 'Moderation State' drop down list.<br/>
+Click the 'Cast/Crew' link.<br/>
+Enter 'f66662bddcb14eb' in the Person text box.<br/>
+Click the 'f66662bddcb14eb' from the auto complete option list.<br/>
+Select the 'Contributor' from the 'Role' drop down list.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'TV Episode 13a43400a354495 has been created.' is present.<br/>
+Verify there are no errors present.<br/>
+Verify the text 'Review' is present in the work bench info block.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Add content' menu link.<br/>
+Click the 'Person' menu link.<br/>
+Switch to frame titled 'Create Person'.<br/>
+Enter 'd6413fa629384f4' in the 'First name' text box.<br/>
+Enter a random block of text in the 'Biography' text area.<br/>
+Switch to frame titled 'Create Person'.<br/>
+Click the 'Cover Photo' Select button.<br/>
+Switch to the select file frame.<br/>
+Enter the file path for file upload.<br/>
+Click the 'Upload' button.<br/>
+Wait for the file link to be visible after upload.<br/>
+Click the 'Next' button.<br/>
+Click the 'Public Local Files' radio button.<br/>
+Click the 'Next' button.<br/>
+Verify the file image 'HanSolo' is present.<br/>
+Verify the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Switch to frame titled 'Create Person'.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'Person d6413fa629384f4 has been created.' is present.<br/>
+Verify there are no errors present.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Add content' menu link.<br/>
+Click the 'TV Episode' menu link.<br/>
+Switch to frame titled 'TV Episode'.<br/>
+Verify the 'Title' is present as a required field.<br/>
+Verify the 'Episode' is present as a required field.<br/>
+Verify the 'Synopsis' is present as a required field.<br/>
+Scroll the 'Publishing Options' link into view.<br/>
+Click the 'Publishing Options' link.<br/>
+Verify the 'Moderation State' is present as a required field.<br/>
+Scroll to and click the 'Basic Information' tab.<br/>
+Enter '5251ec648e3842f' in the 'Title' text box.<br/>
+Enter '1' in the 'Episode Number' text box.<br/>
+Switch to the Synopsis frame.<br/>
+Enter a randomized text string into the 'Body' text area.<br/>
+Switch to frame titled 'Create TV Episode'.<br/>
+Click the 'Cover' select button.<br/>
+Switch to the select file frame.<br/>
+Enter the file path for file upload.<br/>
+Click the 'Upload' button.<br/>
+Wait for the file link to be visible after upload.<br/>
+Click the 'Next' button.<br/>
+Click the 'Public Local Files' radio button.<br/>
+Click the 'Next' button.<br/>
+Verify the file image 'HanSolo' is present.<br/>
+Verify the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Switch to frame titled 'Create TV Episode'.<br/>
+Scroll the 'Publishing Options' link into view.<br/>
+Click the 'Publishing Options' link.<br/>
+Select 'Published' from the 'Moderation State' drop down list.<br/>
+Click the 'Cast/Crew' link.<br/>
+Enter 'd6413fa629384f4' in the Person text box.<br/>
+Click the 'd6413fa629384f4' from the auto complete option list.<br/>
+Select the 'Contributor' from the 'Role' drop down list.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'TV Episode 5251ec648e3842f has been created.' is present.<br/>
+Verify there are no errors present.<br/>
+Verify the text 'Published' is present in the work bench info block.<br/>
+</div>
+</td>
+<td></td>
+<td>88</td>
+<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVEpisode.CreateTVEpisode@3a2cd6c8</td></tr>
+<tr>
+<td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVSeason.CreateTVSeason.CreateTVSeason_Test()'><b>CreateTVSeason_Test</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVSeason.CreateTVSeason<br/>
+<a href="#Output-939025203" onClick='toggleBox("Output-939025203", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-939025203" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-939025203">
+Open url 'http://qa4.qa.nbcupublisher7.publisher7.com'.<br/>
+Enter the user's email address in the 'Email Address' text box.<br/>
+Enter the user's password in the 'Password' text box.<br/>
+Click the 'Login' button.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Add content' menu link.<br/>
+Click the 'TV Season' menu link.<br/>
+Switch to frame titled 'Create TV Season'.<br/>
+Verify the 'Title' is present as a required field.<br/>
+Verify the 'Season' is present as a required field.<br/>
+Verify the 'Synopsis' is present as a required field.<br/>
+Scroll the 'Publishing Options' link into view.<br/>
+Click the 'Publishing Options' link.<br/>
+Verify the 'Moderation State' is present as a required field.<br/>
+Scroll to and click the 'Basic Information' tab.<br/>
+Enter '4b533d0c80b149d' in the 'Title' text box.<br/>
+Enter '1' in the 'Season Number' text box.<br/>
+Switch to the Synopsis frame.<br/>
+Enter a randomized text string into the 'Body' text area.<br/>
+Switch to frame titled 'Create TV Season'.<br/>
+Click the 'Cover' select button.<br/>
+Switch to the select file frame.<br/>
+Enter the file path for file upload.<br/>
+Click the 'Upload' button.<br/>
+Wait for the file link to be visible after upload.<br/>
+Click the 'Next' button.<br/>
+Click the 'Public Local Files' radio button.<br/>
+Click the 'Next' button.<br/>
+Verify the file image 'HanSolo' is present.<br/>
+Verify the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Switch to frame titled 'Create TV Season'.<br/>
+Scroll the 'Publishing Options' link into view.<br/>
+Click the 'Publishing Options' link.<br/>
+Select 'Draft' from the 'Moderation State' drop down list.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'TV Season 4b533d0c80b149d has been created.' is present.<br/>
+Verify there are no errors present.<br/>
+Verify the text 'Draft' is present in the work bench info block.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Add content' menu link.<br/>
+Click the 'TV Season' menu link.<br/>
+Switch to frame titled 'Create TV Season'.<br/>
+Verify the 'Title' is present as a required field.<br/>
+Verify the 'Season' is present as a required field.<br/>
+Verify the 'Synopsis' is present as a required field.<br/>
+Scroll the 'Publishing Options' link into view.<br/>
+Click the 'Publishing Options' link.<br/>
+Verify the 'Moderation State' is present as a required field.<br/>
+Scroll to and click the 'Basic Information' tab.<br/>
+Enter '2fd0bea3525b44b' in the 'Title' text box.<br/>
+Enter '1' in the 'Season Number' text box.<br/>
+Switch to the Synopsis frame.<br/>
+Enter a randomized text string into the 'Body' text area.<br/>
+Switch to frame titled 'Create TV Season'.<br/>
+Click the 'Cover' select button.<br/>
+Switch to the select file frame.<br/>
+Enter the file path for file upload.<br/>
+Click the 'Upload' button.<br/>
+Wait for the file link to be visible after upload.<br/>
+Click the 'Next' button.<br/>
+Click the 'Public Local Files' radio button.<br/>
+Click the 'Next' button.<br/>
+Verify the file image 'HanSolo' is present.<br/>
+Verify the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Switch to frame titled 'Create TV Season'.<br/>
+Scroll the 'Publishing Options' link into view.<br/>
+Click the 'Publishing Options' link.<br/>
+Select 'Review' from the 'Moderation State' drop down list.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'TV Season 2fd0bea3525b44b has been created.' is present.<br/>
+Verify there are no errors present.<br/>
+Verify the text 'Review' is present in the work bench info block.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Add content' menu link.<br/>
+Click the 'TV Season' menu link.<br/>
+Switch to frame titled 'Create TV Season'.<br/>
+Verify the 'Title' is present as a required field.<br/>
+Verify the 'Season' is present as a required field.<br/>
+Verify the 'Synopsis' is present as a required field.<br/>
+Scroll the 'Publishing Options' link into view.<br/>
+Click the 'Publishing Options' link.<br/>
+Verify the 'Moderation State' is present as a required field.<br/>
+Scroll to and click the 'Basic Information' tab.<br/>
+Enter '5ce6f3904df34cd' in the 'Title' text box.<br/>
+Enter '1' in the 'Season Number' text box.<br/>
+Switch to the Synopsis frame.<br/>
+Enter a randomized text string into the 'Body' text area.<br/>
+Switch to frame titled 'Create TV Season'.<br/>
+Click the 'Cover' select button.<br/>
+Switch to the select file frame.<br/>
+Enter the file path for file upload.<br/>
+Click the 'Upload' button.<br/>
+Wait for the file link to be visible after upload.<br/>
+Click the 'Next' button.<br/>
+Click the 'Public Local Files' radio button.<br/>
+Click the 'Next' button.<br/>
+Verify the file image 'HanSolo' is present.<br/>
+Verify the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Switch to frame titled 'Create TV Season'.<br/>
+Scroll the 'Publishing Options' link into view.<br/>
+Click the 'Publishing Options' link.<br/>
+Select 'Published' from the 'Moderation State' drop down list.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'TV Season 5ce6f3904df34cd has been created.' is present.<br/>
+Verify there are no errors present.<br/>
+Verify the text 'Published' is present in the work bench info block.<br/>
+</div>
+</td>
+<td></td>
+<td>52</td>
+<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVSeason.CreateTVSeason@20dbbc62</td></tr>
+</table><p>
+</body>
+</html>
