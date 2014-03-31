@@ -44,7 +44,7 @@ public class SendEmailReport {
             message.setFrom(new InternetAddress("Automation@nbcuni.com"));
             
             //if there are failures send to automation qa resource for review
-            //Integer totalTestCount = passedTestsCount + failedTestsCount;
+            Integer totalTestCount = passedTestsCount + failedTestsCount;
             if (!failedTestsCount.equals(0)) {
             	message.setRecipients(Message.RecipientType.TO,
             			InternetAddress.parse("brandon.clark@nbcuni.com"));
@@ -58,18 +58,12 @@ public class SendEmailReport {
             
             BodyPart messageBodyPart = new MimeBodyPart();
 
-            String resultLine;
-            if (failedTestsCount > 0) {
-            	resultLine = "Errors were detected during test execution.";
-            }
-            else {
-            	resultLine = "No errors were detected during test execution.";
-            }
-            
             messageBodyPart.setText("Test run complete against latest build on " + config.getConfigValue("AppURL")
-                + "\n\n" + resultLine
-            		+ "\n\n A detailed report is attached. Iteration Report archives are assigned to task " + config.getConfigValue("RallyTaskID") + "."
-            			+ "\n\n Publisher 7 Automation Team");
+                + "\n\n Total tests executed = " + totalTestCount.toString()
+                	+ "\n\n Tests passed = " + passedTestsCount.toString()
+                		+ "\n\n Tests failed = " + failedTestsCount.toString()
+                			+ "\n\n A detailed report is attached. Iteration Report archives are assigned to task " + config.getConfigValue("RallyTaskID") + "."
+                				+ "\n\n Publisher 7 Automation Team");
 
             Multipart multipart = new MimeMultipart();
 
