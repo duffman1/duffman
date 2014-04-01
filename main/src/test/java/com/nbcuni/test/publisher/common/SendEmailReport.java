@@ -60,8 +60,8 @@ public class SendEmailReport {
 
             messageBodyPart.setText("Test run complete against latest build on " + config.getConfigValue("AppURL")
                 + "\n\n Total tests executed = " + totalTestCount.toString()
-                	+ "\n\n Tests passed = " + passedTestsCount.toString()
-                		+ "\n\n Tests failed = " + failedTestsCount.toString()
+                	+ "\n Tests passed = " + passedTestsCount.toString()
+                		+ "\n Tests failed = " + failedTestsCount.toString()
                 			+ "\n\n A detailed report is attached. Iteration Report archives are assigned to task " + config.getConfigValue("RallyTaskID") + "."
                 				+ "\n\n Publisher 7 Automation Team");
 

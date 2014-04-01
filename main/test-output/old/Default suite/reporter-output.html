@@ -2,26 +2,97 @@
 <tr><td>Enter the user's email address in the 'Email Address' text box.</td></tr>
 <tr><td>Enter the user's password in the 'Password' text box.</td></tr>
 <tr><td>Click the 'Login' button.</td></tr>
-<tr><td>Mouse over the 'Content' menu link.</td></tr>
-<tr><td>Mouse over the 'Add content' menu link.</td></tr>
-<tr><td>Click the 'Character Profile' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'Create Character Profile dialog'.</td></tr>
-<tr><td>Enter 'b863f565e9da4cf' in the 'Character First Name' text box.</td></tr>
-<tr><td>Click the Cover Photo 'Select' button.</td></tr>
-<tr><td>Switch to the select file frame.</td></tr>
-<tr><td>Enter the file path for file upload.</td></tr>
+<tr><td>Mouse over the 'Configuration' menu link.</td></tr>
+<tr><td>Mouse over the 'Media' menu link.</td></tr>
+<tr><td>Click the 'Media: thePlatform mpx settings' menu link.</td></tr>
+<tr><td>Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.</td></tr>
+<tr><td>Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.</td></tr>
+<tr><td>Get all the selected import account options and store to a list.</td></tr>
+<tr><td>Open the mpx platform.</td></tr>
+<tr><td>Enter 'mpx/AdminPub7QA' in the 'Username' text box.</td></tr>
+<tr><td>Enter 'Pa55word' in the 'Password' text box.</td></tr>
+<tr><td>Click the 'Login' button.</td></tr>
 <tr><td>Click the 'Upload' button.</td></tr>
-<tr><td>Wait for the file link to be visible after upload.</td></tr>
-<tr><td>Click the 'Next' button.</td></tr>
-<tr><td>Click the 'Public Local Files' radio button.</td></tr>
-<tr><td>Click the 'Next' button.</td></tr>
-<tr><td>Verify the file image 'HanSolo' is present.</td></tr>
-<tr><td>Verify the img is loaded and visible.</td></tr>
+<tr><td>Click the 'Choose Files' button.</td></tr>
+<tr><td>Click the 'Movies' button in the OS Upload dialog.</td></tr>
+<tr><td>Click the Test Movie in th OS Upload dialog.</td></tr>
+<tr><td>Click the 'Open' button.</td></tr>
+<tr><td>Click the 'Upload' button in the Upload dialog.</td></tr>
+<tr><td>Click the 'Available Date' label on the right hand side to give focus to the media item.</td></tr>
+<tr><td>Enter '3/12/2014 12:00 AM' in the 'Available Date' text box.</td></tr>
+<tr><td>Enter 'Automation530c096177' in the 'Title' text box.</td></tr>
+<tr><td>Enter '3/25/2014 12:00 AM' in the 'Expiration Date' text box.</td></tr>
 <tr><td>Click the 'Save' button.</td></tr>
-<tr><td>Switch to frame titled 'Create Character Profile'.</td></tr>
-<tr><td>Assert that img source of the Cover Photo contains 'HanSolo'.</td></tr>
-<tr><td>Assert the the img is loaded and visible.</td></tr>
-<tr><td>Click the 'Save' button.</td></tr>
-<tr><td>Verify success message of 'Character Profile b863f565e9da4cf has been created.' is present.</td></tr>
+<tr><td>Click the 'Publish' button.</td></tr>
+<tr><td>Click the 'Publish to Pub 7 Primary' check box.</td></tr>
+<tr><td>Click the 'Publish' button from the upload dialog.</td></tr>
+<tr><td>Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.</td></tr>
+<tr><td>Switch to the active frame titled 'Status report dialog'.</td></tr>
+<tr><td>Verify success message of 'Cron ran successfully.' is present.</td></tr>
 <tr><td>Verify there are no errors present.</td></tr>
+<tr><td>Click the 'Close Overlay X'.</td></tr>
+<tr><td>Mouse over the 'Content' menu link.</td></tr>
+<tr><td>Mouse over the 'Files' menu link.</td></tr>
+<tr><td>Click the 'mpxMedia' menu link.</td></tr>
+<tr><td>Switch to the active frame titled 'Content dialog'.</td></tr>
+<tr><td>Enter title Automation530c096177.</td></tr>
+<tr><td>Click the 'Apply' button.</td></tr>
+<tr><td>Get the text of the first search result set item.</td></tr>
+<tr><td>Get the title text of every result in the search result set.</td></tr>
+<tr><td>For each expected result, assert it is present in the result set.</td></tr>
+<tr><td>Verify the text '03/12/2014 - 04:00 AM' is present on the page.</td></tr>
+<tr><td>Verify the text '03/25/2014 - 04:00 AM' is present on the page.</td></tr>
+<tr><td>Verify the text 'Expired' is present on the page.</td></tr>
+<tr><td>Click the first search title link in the search result set.</td></tr>
+<tr><td>Verify the text 'Automation530c096177' is present on the page.</td></tr>
+<tr><td>Verify the text 'Wednesday, March 12, 2014 - 04:00' is present on the page.</td></tr>
+<tr><td>Verify the text 'Tuesday, March 25, 2014 - 04:00' is present on the page.</td></tr>
+<tr><td>Click the 'Edit' link in the work bench.</td></tr>
+<tr><td>Switch to the active frame titled 'Edit mpx_video_16 Automation530c096177 dialog'.</td></tr>
+<tr><td>Verify the value of the 'Available Date' text box equals '03/12/2014'.</td></tr>
+<tr><td>Verify the value of the 'Expiration Date' text box equals '03/25/2014'.</td></tr>
+<tr><td>Click the 'Schedule' tab.</td></tr>
+<tr><td>Switch to the active frame titled 'Automation530c096177 dialog'.</td></tr>
+<tr><td>Verify the scheduled revision table is empty.</td></tr>
+<tr><td>Open the mpx platform.</td></tr>
+<tr><td>Enter 'Automation530c096177' in the 'Search' text box.</td></tr>
+<tr><td>Click the 'Search by Title' link.</td></tr>
+<tr><td>Click the 'Available Date' label on the right hand side to give focus to the media item.</td></tr>
+<tr><td>Enter '4/01/2014 12:00 AM' in the 'Available Date' text box.</td></tr>
+<tr><td>Enter '4/01/2015 12:00 AM' in the 'Expiration Date' text box.</td></tr>
+<tr><td>Click the 'Save' button.</td></tr>
+<tr><td>Click the 'Additional Options' arrow.</td></tr>
+<tr><td>Click the 'Publish Update' link.</td></tr>
+<tr><td>Click the 'Publish to Pub 7 Primary' check box.</td></tr>
+<tr><td>Click the 'Update' button.</td></tr>
+<tr><td>Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.</td></tr>
+<tr><td>Switch to the active frame titled 'Status report dialog'.</td></tr>
+<tr><td>Verify success message of 'Cron ran successfully.' is present.</td></tr>
+<tr><td>Verify there are no errors present.</td></tr>
+<tr><td>Click the 'Close Overlay X'.</td></tr>
+<tr><td>Mouse over the 'Content' menu link.</td></tr>
+<tr><td>Mouse over the 'Files' menu link.</td></tr>
+<tr><td>Click the 'mpxMedia' menu link.</td></tr>
+<tr><td>Switch to the active frame titled 'Content dialog'.</td></tr>
+<tr><td>Enter title Automation530c096177.</td></tr>
+<tr><td>Click the 'Apply' button.</td></tr>
+<tr><td>Get the title text of every result in the search result set.</td></tr>
+<tr><td>For each expected result, assert it is present in the result set.</td></tr>
+<tr><td>Verify the text '04/01/2014 - 04:00 AM' is present on the page.</td></tr>
+<tr><td>Verify the text '04/01/2015 - 04:00 AM' is present on the page.</td></tr>
+<tr><td>Verify the text 'Published' is present on the page.</td></tr>
+<tr><td>Click the first search title link in the search result set.</td></tr>
+<tr><td>Verify the text 'Automation530c096177' is present on the page.</td></tr>
+<tr><td>Verify the text 'Tuesday, April 1, 2014 - 04:00' is present on the page.</td></tr>
+<tr><td>Verify the text 'Wednesday, April 1, 2015 - 04:00' is present on the page.</td></tr>
+<tr><td>Click the 'Edit' link in the work bench.</td></tr>
+<tr><td>Switch to the active frame titled 'Edit mpx_video_16 Automation530c096177 dialog'.</td></tr>
+<tr><td>Verify the value of the 'Available Date' text box equals '04/01/2014'.</td></tr>
+<tr><td>Verify the value of the 'Expiration Date' text box equals '04/01/2015'.</td></tr>
+<tr><td>Click the 'Schedule' tab.</td></tr>
+<tr><td>Switch to the active frame titled 'Automation530c096177 dialog'.</td></tr>
+<tr><td>Verify the 'Run now' button is present.</td></tr>
+<tr><td>Verify the text 'Automation530c096177' is present on the page.</td></tr>
+<tr><td>Verify the text 'Unpublish' is present on the page.</td></tr>
+<tr><td>Verify the text '04/01/2015 - 04:00' is present on the page.</td></tr>
 </table>
