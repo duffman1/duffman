@@ -1,8 +1,6 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ProgramGuides.ROVITVSchedule;
 
-import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
-
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Blocks;
@@ -33,43 +31,40 @@ public class Configuration extends ParentTest{
 		
 		//Step 1
 		UserLogin userLogin = applib.openApplication();
-		PageFactory.initElements(webDriver, userLogin);
-	    userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+		userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
 	    
-	    //Step 2	   
+	    //Step 2 and 3	   
 	    Modules modules = new Modules(webDriver, applib);
-	    PageFactory.initElements(webDriver, modules);
-	    modules.VerifyModuleEnabled("Program Guide");
-	    modules.VerifyModuleEnabled("Program Guide Example");
+	    taxonomy.NavigateSite("Modules");
+	    overlay.SwitchToActiveFrame();
+	    modules.EnterFilterName("Program Guide");
+	    modules.EnableModule("Program Guide");
+	    modules.EnterFilterName("Program Guide Example");
+	    modules.EnableModule("Program Guide Example");
+	    modules.EnterFilterName("Views UI");
+	    modules.EnableModule("Views UI");
+	    overlay.ClickCloseOverlayLnk();
 	    
-	    //Step 3
-	    modules.VerifyModuleEnabled("Views UI");
-	   
 	    //Step 4
-	    overlay.switchToDefaultContent();
-        taxonomy.NavigateSite("Structure>>Blocks");        
+	    taxonomy.NavigateSite("Structure>>Blocks");        
+        overlay.SwitchToActiveFrame();
         
         //Step 5
-        overlay.SwitchToActiveFrame();
         Blocks blocks = new Blocks(webDriver);
-        PageFactory.initElements(webDriver, blocks);
         blocks.SelectRegion("Program Guide", "Content");
         blocks.ClickSaveBlocksBtn();
         overlay.SwitchToActiveFrame();
         ContentParent contentParent = new ContentParent(webDriver, applib);
-        PageFactory.initElements(webDriver, contentParent);
         contentParent.VerifyMessageStatus("The block settings have been updated.");
         
         //Step 6
         blocks.VerifySelectedRegion("Program Guide", "Content");
         overlay.ClickCloseOverlayLnk();
-        overlay.switchToDefaultContent();
         taxonomy.NavigateSite("Configuration>>Web services>>Program Guide");
       
         //Step 7
         overlay.SwitchToActiveFrame();
         ProgramGuide programGuide = new ProgramGuide(webDriver);
-        PageFactory.initElements(webDriver, programGuide);
         programGuide.EnterDataURL();
       
         //Step 8

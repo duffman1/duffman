@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
+import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
@@ -18,11 +19,13 @@ import com.nbcuni.test.publisher.common.Driver.Driver;
 public class Logout {
 
     private Driver webDriver;
+    private Config config;
     
     //PAGE OBJECT CONSTRUCTOR
     public Logout(Driver webDriver) {
         this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
+        config = new Config();
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -34,13 +37,23 @@ public class Logout {
     public void ClickLogoutBtn() throws Exception {
     	
     	Reporter.log("Click the 'Logout' button.");
-    	try {
-    		LogOut_Btn.click();
+    	//existing chrome bug where logout link click doesn't work properly
+    	if (config.getConfigValue("Browser").equals("chrome")) {
+    		webDriver.manage().deleteAllCookies();
+    		webDriver.navigate().to(config.getConfigValue("AppURL"));
     	}
-    	catch (WebDriverException e) {
-    		webDriver.executeScript("arguments[0].click();", LogOut_Btn);
+    	else {
+    		try {
+        		LogOut_Btn.click();
+        		
+        	}
+        	catch (WebDriverException e) {
+        		webDriver.executeScript("arguments[0].click();", LogOut_Btn);
+        		webDriver.navigate().refresh(); //TODO - logout requires a refresh for some reason. Figure out a better way
+            	
+        	}
+        	
     	}
-    	webDriver.navigate().refresh(); //TODO - logout requires a refresh for some reason. Figure out a better way
     	
     }
     

@@ -81,6 +81,7 @@ public class ProgramGuide {
     public void VerifyDateShowInfoColumn() throws Exception {  	
 	 	
     	Reporter.log("Verify column headers present of 'Date', 'Show', and 'Information'.");
+    	Thread.sleep(500); //stale element exception
     	List<WebElement> allColumns = ProgramGuideTbl_Cls();
  		Assert.assertTrue(allColumns.get(3).getText().contains("Date"));
     	Assert.assertTrue(allColumns.get(4).getText().contains("Show"));
