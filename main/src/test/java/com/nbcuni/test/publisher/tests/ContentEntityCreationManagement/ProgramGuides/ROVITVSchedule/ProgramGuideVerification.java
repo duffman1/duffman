@@ -55,8 +55,6 @@ public class ProgramGuideVerification extends ParentTest{
 		modules.EnableModule("Program Guide");
 		modules.EnterFilterName("Program Guide Example");
 		modules.EnableModule("Program Guide Example");
-		modules.EnterFilterName("Views UI");
-		modules.EnableModule("Views UI");
 		overlay.ClickCloseOverlayLnk();
 			    
 		//Step 4
@@ -97,7 +95,6 @@ public class ProgramGuideVerification extends ParentTest{
         //Step 12
         taxonomy.NavigateSite("Home>>Run cron");
         overlay.SwitchToActiveFrame();
-	    contentParent.VerifyMessageStatus("Cron ran successfully.");
 	    
         //Step 13
         programGuide.ProgramGuideRunCronStatus();

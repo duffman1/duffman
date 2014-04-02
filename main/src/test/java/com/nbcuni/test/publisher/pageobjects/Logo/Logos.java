@@ -2,10 +2,12 @@ package com.nbcuni.test.publisher.pageobjects.Logo;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -23,11 +25,13 @@ import com.nbcuni.test.publisher.common.Driver.Driver;
 public class Logos {
 
 	private Driver webDriver;
+	private WebDriverWait wait;
 	
     //PAGE OBJECT CONSTRUCTOR
     public Logos(Driver webDriver) {
     	this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
+        wait = new WebDriverWait(webDriver, 10);
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -57,14 +61,20 @@ public class Logos {
     public void ClickEditMenuDeleteBtn(String logoTitle) throws Exception {
     	
     	Reporter.log("Click the 'Delete' button for logo titled '" + logoTitle + "'.");
-    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOf(
+    	wait.until(ExpectedConditions.visibilityOf(
     			EditMenuDelete_Btn(logoTitle))).click();
     }
     
-    public void VerifyHomePageLogoImgPresent(String imageSrc) throws Exception {
+    public void VerifyHomePageLogoImgPresent(final String imageSrc) throws Exception {
     	
     	Reporter.log("Assert the file image '" + imageSrc + "' is present.");
-    	Assert.assertTrue(HomeLogo_Img.getAttribute("src").contains(imageSrc));
+    	wait.until(new ExpectedCondition<Boolean>(){
+   		 	@Override
+   		 	public Boolean apply(WebDriver webDriver) {
+   		 		WebElement element = HomeLogo_Img;
+   		 		return element.getAttribute("src").contains(imageSrc);
+   		 	}
+    	}); 
     	
     	Reporter.log("Assert the the img is loaded and visible.");
     	boolean imgLoaded;

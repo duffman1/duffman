@@ -126,15 +126,15 @@ public class SitePreview {
 	      
 	 public void VerifyDisablePreviewBtnVisible() throws Exception {
 	    	
-		 Reporter.log("Verify the 'Disable Preview' is visible.");		
-		 Assert.assertTrue(DisablePreview_Btn.isDisplayed());
+		 Reporter.log("Verify the 'Disable Preview' is visible.");
+		 wait.until(ExpectedConditions.visibilityOf(DisablePreview_Btn));
 		 
 	 }
 	 
 	 public void VerifyDisablePreviewBtnNotVisible() throws Exception {
 	    	
-		 Reporter.log("Verify the 'Disable Preview' is NOT visible.");		
-		 Assert.assertFalse(DisablePreview_Btn.isDisplayed());
+		 Reporter.log("Verify the 'Disable Preview' is NOT visible.");
+		 wait.until(ExpectedConditions.not(ExpectedConditions.visibilityOf(DisablePreview_Btn)));
 		 
 	 }
 	    
