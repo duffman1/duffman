@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite thread-count="4" name="Failed suite [Pub 7 Concurrent Suite]" parallel="classes">
-  <parameter name="ReRunOnFailure" value="true"/>
+  <parameter name="ReRunOnFailure" value="false"/>
   <parameter name="Admin1Password" value="pa55word"/>
   <parameter name="ReRunOnFailureCount" value="1"/>
   <parameter name="RallyUrl" value="https://rally1.rallydev.com"/>
   <parameter name="ErrorCheckingEnabled" value="true"/>
-  <parameter name="SendReportAutoEmails" value="false"/>
+  <parameter name="SendReportAutoEmails" value="true"/>
   <parameter name="RallyUsername" value="brandon.clark@nbcuni.com"/>
   <parameter name="Admin1Username" value="admin@publisher.nbcuni.com"/>
   <parameter name="GmailUsername" value="Pub7NBCUAutoEmailUser1@gmail.com"/>
@@ -21,8 +21,8 @@
   <parameter name="MPXPassword" value="Pa55word"/>
   <parameter name="RallyTaskID" value="TA30797"/>
   <parameter name="RallyWorkspace" value="Digital Products"/>
-  <parameter name="SendReportEmailAddress" value="ots.publishing.core@nbcuni.com"/>
-  <parameter name="UploadReportToRally" value="false"/>
+  <parameter name="SendReportEmailAddress" value="brandon.clark@nbcuni.com"/>
+  <parameter name="UploadReportToRally" value="true"/>
   <parameter name="PathToSikuliImages" value="/src/test/java/com/nbcuni/test/publisher/lib/sikuli/images/"/>
   <parameter name="ImplicitWaitTime" value="30"/>
   <parameter name="GmailPassword" value="Pub7NBCUAutoEmailPassword1"/>
@@ -32,39 +32,27 @@
   <listeners>
     <listener class-name="com.nbcuni.test.publisher.common.CustomReport"/>
   </listeners>
-  <test name="All Web Tests(failed)" parallel="classes">
+  <test name="All Concurrent Web Tests(failed)" parallel="classes">
     <groups>
       <run>
         <include name="full"/>
       </run>
     </groups>
     <classes>
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVEpisode.CreateTVEpisode">
+      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson">
         <methods>
           <include name="startSelenium"/>
           <include name="stopGridAndHub"/>
           <include name="startGridAndHub"/>
           <include name="stopSelenium"/>
         </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVEpisode.CreateTVEpisode -->
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVSeason.CreateTVSeason">
-        <methods>
-          <include name="startSelenium"/>
-          <include name="stopSelenium"/>
-        </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVSeason.CreateTVSeason -->
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson">
-        <methods>
-          <include name="startSelenium"/>
-          <include name="stopSelenium"/>
-        </methods>
       </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson -->
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityModerationStatesandWorkflows.PublishContenttoUnauthenticatedUsers">
+      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVEpisode.CreateTVEpisode">
         <methods>
           <include name="startSelenium"/>
           <include name="stopSelenium"/>
         </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityModerationStatesandWorkflows.PublishContenttoUnauthenticatedUsers -->
+      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVEpisode.CreateTVEpisode -->
       <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Movie.CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter">
         <methods>
           <include name="startSelenium"/>
@@ -72,25 +60,18 @@
           <include name="stopSelenium"/>
         </methods>
       </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Movie.CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter -->
+      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost">
+        <methods>
+          <include name="startSelenium"/>
+          <include name="stopSelenium"/>
+        </methods>
+      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost -->
       <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile">
         <methods>
           <include name="startSelenium"/>
           <include name="stopSelenium"/>
         </methods>
       </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile -->
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost">
-        <methods>
-          <include name="startSelenium"/>
-          <include name="CreatePost_Test"/>
-          <include name="stopSelenium"/>
-        </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost -->
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CustomContentType.AddingNewCustomContentType">
-        <methods>
-          <include name="startSelenium"/>
-          <include name="stopSelenium"/>
-        </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CustomContentType.AddingNewCustomContentType -->
     </classes>
-  </test> <!-- All Web Tests(failed) -->
+  </test> <!-- All Concurrent Web Tests(failed) -->
 </suite> <!-- Failed suite [Pub 7 Concurrent Suite] -->

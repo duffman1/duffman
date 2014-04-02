@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="7" passed="7">
   <reporter-output>
     <line>
       <![CDATA[Open url 'http://qa4.qa.nbcupublisher7.publisher7.com'.]]>
@@ -14,79 +14,49 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'People' menu link.]]>
+      <![CDATA[Click the 'Modules' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Add user' menu link.]]>
+      <![CDATA[Switch to frame titled 'Modules'.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'People dialog'.]]>
+      <![CDATA[Enter 'Sticky Edit Actions' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Enter '15ad2e54f0d5454@5e4a237fc94645c.com' in the 'Username' text box.]]>
+      <![CDATA[Wait for the module titled 'Sticky Edit Actions' to appear in the list.]]>
     </line>
     <line>
-      <![CDATA[Enter '15ad2e54f0d5454@5e4a237fc94645c.com' in the 'E-mail address' text box.]]>
+      <![CDATA[Enter 'Devel' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+      <![CDATA[Wait for the module titled 'Devel' to appear in the list.]]>
     </line>
     <line>
-      <![CDATA[Enter 'pa55word' in the 'Confirm password' text box.]]>
+      <![CDATA[Enter 'ImageField Focus' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Check the 'editor' check box.]]>
+      <![CDATA[Wait for the module titled 'ImageField Focus' to appear in the list.]]>
     </line>
     <line>
-      <![CDATA[Enter 'cedeb77cc42f4a8' in the 'First Name' text box.]]>
+      <![CDATA[Enter 'Database logging' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Enter 'd42c846e63fb4a0' in the 'Last Name' text box.]]>
+      <![CDATA[Wait for the module titled 'Database logging' to appear in the list.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Create new account' button.]]>
+      <![CDATA[Enter 'Pub Post' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'A welcome message with further instructions has been e-mailed to the new user 15ad2e54f0d5454@5e4a237fc94645c.com.' is present.]]>
+      <![CDATA[Wait for the module titled 'Pub Post' to appear in the list.]]>
     </line>
     <line>
-      <![CDATA[Verify there are no errors present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'People' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Permissions' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Roles' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'People dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Edit Permissions' link for the 'Editor' role.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'People dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save Permissions' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The changes have been saved.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify there are no errors present.]]>
+      <![CDATA[Verify the 'Pub Post' check box is checked.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Logout' button.]]>
+      <![CDATA[Open url 'http://qa4.qa.nbcupublisher7.publisher7.com'.]]>
     </line>
     <line>
       <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
@@ -104,22 +74,13 @@
       <![CDATA[Mouse over the 'Add content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Post' menu link.]]>
+      <![CDATA[Click the 'Media Gallery' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'Create Media Gallery dialog'.]]>
     </line>
     <line>
-      <![CDATA[Enter '54ab91f8bb9a424' in the 'Title' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the Synopsis frame.]]>
-    </line>
-    <line>
-      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+      <![CDATA[Enter '0adce608330848d' in the 'Title' text box.]]>
     </line>
     <line>
       <![CDATA[Click the 'Cover' select button.]]>
@@ -155,6 +116,372 @@
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
+      <![CDATA[Switch to the active frame titled 'Create Media Gallery dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the Cover image src contains 'HanSolo'.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the image to fully load.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Select' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the select file frame.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Add files' link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'All Files' icon.]]>
+    </line>
+    <line>
+      <![CDATA[Click the local 'Pictures' icon.]]>
+    </line>
+    <line>
+      <![CDATA[Click the test picture link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Open' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Start upload' link.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for file upload to reach 100%]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create Media Gallery dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that img source of the Media Item contains 'nbclogo'.]]>
+    </line>
+    <line>
+      <![CDATA[Assert the the img is loaded and visible.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Media Gallery 0adce608330848d has been created.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify there are no errors present.]]>
+    </line>
+    <line>
+      <![CDATA[Open url 'http://qa4.qa.nbcupublisher7.publisher7.com'.]]>
+    </line>
+    <line>
+      <![CDATA[Open url 'http://qa4.qa.nbcupublisher7.publisher7.com'.]]>
+    </line>
+    <line>
+      <![CDATA[Open url 'http://qa4.qa.nbcupublisher7.publisher7.com'.]]>
+    </line>
+    <line>
+      <![CDATA[Open url 'http://qa4.qa.nbcupublisher7.publisher7.com'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter the user's password in the 'Password' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Login' button.]]>
+    </line>
+    <line>
+      <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter the user's password in the 'Password' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Login' button.]]>
+    </line>
+    <line>
+      <![CDATA[Enter the user's password in the 'Password' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter the user's password in the 'Password' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Login' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Login' button.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Add content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Character Profile' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Add content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Person' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Add content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Post' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to frame titled 'Create Person'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'eea43ddf4762408' in the 'First name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter a random block of text in the 'Biography' text area.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Add content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to frame titled 'Create Person'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Character Profile' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Cover Photo' Select button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Title' is present as a required field.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Body' is present as a required field.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Publishing Options' link.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Moderation State' is present as a required field.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '76cf48da86054d3' in the 'Title' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the Synopsis frame.]]>
+    </line>
+    <line>
+      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the select file frame.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create Character Profile dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter the file path for file upload.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '77d561459e8544f' in the 'Character First Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Upload' button.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the Cover Photo 'Select' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the select file frame.]]>
+    </line>
+    <line>
+      <![CDATA[Enter the file path for file upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Upload' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Cover' select button.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create Character Profile dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'ccb4aed06dc74f0' in the 'Character First Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the select file frame.]]>
+    </line>
+    <line>
+      <![CDATA[Enter the file path for file upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Upload' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the Cover Photo 'Select' button.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the select file frame.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Public Local Files' radio button.]]>
+    </line>
+    <line>
+      <![CDATA[Enter the file path for file upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Public Local Files' radio button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Upload' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the file image 'HanSolo' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the img is loaded and visible.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Public Local Files' radio button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the file image 'HanSolo' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the img is loaded and visible.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to frame titled 'Create Person'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Public Local Files' radio button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to frame titled 'Create Character Profile'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that img source of the Cover Photo contains 'HanSolo'.]]>
+    </line>
+    <line>
+      <![CDATA[Assert the the img is loaded and visible.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the file image 'HanSolo' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the img is loaded and visible.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the file image 'HanSolo' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Person eea43ddf4762408 has been created.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the img is loaded and visible.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify there are no errors present.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create Character Profile dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Character Profile 77d561459e8544f has been created.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify there are no errors present.]]>
+    </line>
+    <line>
       <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
     </line>
     <line>
@@ -170,34 +497,22 @@
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'Post 54ab91f8bb9a424 has been created.' is present.]]>
+      <![CDATA[Verify success message of 'Character Profile ccb4aed06dc74f0 has been created.' is present.]]>
     </line>
     <line>
       <![CDATA[Verify there are no errors present.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Content' menu link.]]>
+      <![CDATA[Open url 'http://qa4.qa.nbcupublisher7.publisher7.com'.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the extend arrow for the 'Edit' menu.]]>
+      <![CDATA[Mouse over the 'Add content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the extend edit menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Edit' menu link is present from the extended edit menu.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Delete' menu link is present from the extended edit menu.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Logout' button.]]>
+      <![CDATA[Click the 'Movie' menu link.]]>
     </line>
     <line>
       <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
@@ -209,7 +524,34 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
+      <![CDATA[Verify success message of 'Post 76cf48da86054d3 has been created.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify there are no errors present.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Cast/Crew' link.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that the 'Character' text box is not displayed.]]>
+    </line>
+    <line>
+      <![CDATA[Select the 'Contributor' from the 'Role' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'Draft' is present in the work bench info block.]]>
+    </line>
+    <line>
       <![CDATA[Mouse over the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that the 'Character' text box is not displayed.]]>
+    </line>
+    <line>
+      <![CDATA[Select the 'Director' from the 'Role' drop down list.]]>
     </line>
     <line>
       <![CDATA[Mouse over the 'Add content' menu link.]]>
@@ -218,10 +560,55 @@
       <![CDATA[Click the 'Post' menu link.]]>
     </line>
     <line>
+      <![CDATA[Assert that the 'Character' text box is not displayed.]]>
+    </line>
+    <line>
+      <![CDATA[Select the 'Executive Producer' from the 'Role' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Add content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that the 'Character' text box is not displayed.]]>
+    </line>
+    <line>
+      <![CDATA[Select the 'Host' from the 'Role' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Person' menu link.]]>
+    </line>
+    <line>
       <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
     </line>
     <line>
-      <![CDATA[Enter '94ef1ef1b6434a8' in the 'Title' text box.]]>
+      <![CDATA[Verify the 'Title' is present as a required field.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Body' is present as a required field.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Publishing Options' link.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that the 'Character' text box is not displayed.]]>
+    </line>
+    <line>
+      <![CDATA[Select the 'Judge' from the 'Role' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Moderation State' is present as a required field.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '6990b897ac3643d' in the 'Title' text box.]]>
     </line>
     <line>
       <![CDATA[Switch to the Synopsis frame.]]>
@@ -230,7 +617,679 @@
       <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
     </line>
     <line>
+      <![CDATA[Assert that the 'Character' text box is not displayed.]]>
+    </line>
+    <line>
+      <![CDATA[Select the 'Producer' from the 'Role' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to frame titled 'Create Person'.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that the 'Character' text box is not displayed.]]>
+    </line>
+    <line>
+      <![CDATA[Select the 'Self' from the 'Role' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'e8c5319a9cd041e' in the 'First name' text box.]]>
+    </line>
+    <line>
       <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Cover' select button.]]>
+    </line>
+    <line>
+      <![CDATA[Enter a random block of text in the 'Biography' text area.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that the 'Character' text box is not displayed.]]>
+    </line>
+    <line>
+      <![CDATA[Select the 'Song Writer' from the 'Role' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the select file frame.]]>
+    </line>
+    <line>
+      <![CDATA[Enter the file path for file upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Upload' button.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that the 'Character' text box is not displayed.]]>
+    </line>
+    <line>
+      <![CDATA[Select the 'Writer' from the 'Role' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that the 'Character' text box is not displayed.]]>
+    </line>
+    <line>
+      <![CDATA[Select the 'Character' from the 'Role' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to frame titled 'Create Person'.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that the 'Character' text box is displayed.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Cover Photo' Select button.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Public Local Files' radio button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Add content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the select file frame.]]>
+    </line>
+    <line>
+      <![CDATA[Enter the file path for file upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Person' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Upload' button.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the file image 'HanSolo' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the img is loaded and visible.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Public Local Files' radio button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Publishing Options' link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Select 'Review' from the 'Moderation State' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create Person dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'a5e18f7b8cf24fb' in the 'First name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Enter a random block of text in the 'Biography' text area.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the file image 'HanSolo' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the img is loaded and visible.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to frame titled 'Create Person'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Post 6990b897ac3643d has been created.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify there are no errors present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create Person dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Cover Photo' Select button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'Review' is present in the work bench info block.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the select file frame.]]>
+    </line>
+    <line>
+      <![CDATA[Enter the file path for file upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Upload' button.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Add content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Post' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Public Local Files' radio button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Person e8c5319a9cd041e has been created.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify there are no errors present.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Title' is present as a required field.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Body' is present as a required field.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Publishing Options' link.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the file image 'HanSolo' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the img is loaded and visible.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Moderation State' is present as a required field.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '727f81d452a1457' in the 'Title' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Add content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the Synopsis frame.]]>
+    </line>
+    <line>
+      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'TV Episode' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create Person dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to frame titled 'TV Episode'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Cover' select button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Title' is present as a required field.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Episode' is present as a required field.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Synopsis' is present as a required field.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Publishing Options' link.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Moderation State' is present as a required field.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '723cc68f040044d' in the 'Title' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Person a5e18f7b8cf24fb has been created.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the select file frame.]]>
+    </line>
+    <line>
+      <![CDATA[Enter the file path for file upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Upload' button.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
+    </line>
+    <line>
+      <![CDATA[Verify there are no errors present.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '1' in the 'Episode Number' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the Synopsis frame.]]>
+    </line>
+    <line>
+      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Add content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Public Local Files' radio button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Movie' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to frame titled 'Create TV Episode'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the file image 'HanSolo' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the img is loaded and visible.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Cover' select button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the select file frame.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Cast/Crew' link.]]>
+    </line>
+    <line>
+      <![CDATA[Enter the file path for file upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Upload' button.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'a5e18f7b8cf24fb' in the Person text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'a5e18f7b8cf24fb' from the auto complete option list.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Publishing Options' link.]]>
+    </line>
+    <line>
+      <![CDATA[Select 'Published' from the 'Moderation State' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Select the 'Character' from the 'Role' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'ccb4aed06dc74f0' in the 'Character' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Public Local Files' radio button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'ccb4aed06dc74f0' from the auto complete option list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Post 727f81d452a1457 has been created.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
+    </line>
+    <line>
+      <![CDATA[Verify there are no errors present.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '608a3bd7af364cb' in the 'Title' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the file image 'HanSolo' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'Published' is present in the work bench info block.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the img is loaded and visible.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the Synopsis frame.]]>
+    </line>
+    <line>
+      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to frame titled 'Create TV Episode'.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Publishing Options' link.]]>
+    </line>
+    <line>
+      <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Cover' select button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Cast/Crew' link.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'e8c5319a9cd041e' in the Person text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'e8c5319a9cd041e' from the auto complete option list.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the select file frame.]]>
+    </line>
+    <line>
+      <![CDATA[Enter the file path for file upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Upload' button.]]>
+    </line>
+    <line>
+      <![CDATA[Select the 'Contributor' from the 'Role' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Public Local Files' radio button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'TV Episode 723cc68f040044d has been created.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the file image 'HanSolo' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the img is loaded and visible.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify there are no errors present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'Draft' is present in the work bench info block.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Add content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Person' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Movie 608a3bd7af364cb has been created.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify there are no errors present.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to frame titled 'Create Person'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Edit Draft' link in the work bench.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '7388a96dee44473' in the 'First name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter a random block of text in the 'Biography' text area.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to frame titled 'Create Person'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Cover Photo' Select button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Edit Movie 608a3bd7af364cb dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Cast/Crew' link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the select file frame.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that the 'Character' text box is displayed.]]>
+    </line>
+    <line>
+      <![CDATA[Enter the file path for file upload.]]>
+    </line>
+    <line>
+      <![CDATA[Assert the value of the 'Person' text box equals 'a5e18f7b8cf24fb'.]]>
+    </line>
+    <line>
+      <![CDATA[Assert the value of the 'Role' drop down list equals 'Character'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Upload' button.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
+    </line>
+    <line>
+      <![CDATA[Assert the value of the 'Character' text box equals 'ccb4aed06dc74f0'.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Publishing Options' link.]]>
+    </line>
+    <line>
+      <![CDATA[Check the 'Create New Revision' checkbox.]]>
+    </line>
+    <line>
+      <![CDATA[Select 'Published' from the 'Moderation State' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Public Local Files' radio button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the file image 'HanSolo' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the img is loaded and visible.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'Published' is present in the work bench info block.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to frame titled 'Create Person'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Person 7388a96dee44473 has been created.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify there are no errors present.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Add content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'TV Episode' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to frame titled 'TV Episode'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Title' is present as a required field.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Episode' is present as a required field.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Synopsis' is present as a required field.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Publishing Options' link.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Moderation State' is present as a required field.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '7381f7b12d7445c' in the 'Title' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '1' in the 'Episode Number' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the Synopsis frame.]]>
+    </line>
+    <line>
+      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to frame titled 'Create TV Episode'.]]>
     </line>
     <line>
       <![CDATA[Click the 'Cover' select button.]]>
@@ -266,7 +1325,7 @@
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+      <![CDATA[Switch to frame titled 'Create TV Episode'.]]>
     </line>
     <line>
       <![CDATA[Scroll the 'Publishing Options' link into view.]]>
@@ -275,73 +1334,136 @@
       <![CDATA[Click the 'Publishing Options' link.]]>
     </line>
     <line>
-      <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
+      <![CDATA[Select 'Review' from the 'Moderation State' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Cast/Crew' link.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '7388a96dee44473' in the Person text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the '7388a96dee44473' from the auto complete option list.]]>
+    </line>
+    <line>
+      <![CDATA[Select the 'Contributor' from the 'Role' drop down list.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'Post 94ef1ef1b6434a8 has been created.' is present.]]>
+      <![CDATA[Verify success message of 'TV Episode 7381f7b12d7445c has been created.' is present.]]>
     </line>
     <line>
       <![CDATA[Verify there are no errors present.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Logout' button.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the user's password in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Login' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the content item titled '94ef1ef1b6434a8' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Edit/Delete' menu options are not present for the content item titled '94ef1ef1b6434a8'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
+      <![CDATA[Verify the text 'Review' is present in the work bench info block.]]>
     </line>
     <line>
       <![CDATA[Mouse over the 'Content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Content Revisions' menu link.]]>
+      <![CDATA[Mouse over the 'Add content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Content Revisions dialog'.]]>
+      <![CDATA[Click the 'Person' menu link.]]>
     </line>
     <line>
-      <![CDATA[Wait for the content item titled '94ef1ef1b6434a8' to be present in revision list.]]>
+      <![CDATA[Switch to frame titled 'Create Person'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Edit' extend menu button.]]>
+      <![CDATA[Enter 'f93f0af90268417' in the 'First name' text box.]]>
     </line>
     <line>
-      <![CDATA[Verify Edit menu 'Edit' button is present.]]>
+      <![CDATA[Enter a random block of text in the 'Biography' text area.]]>
     </line>
     <line>
-      <![CDATA[Verify Edit menu 'Delete' buttton is present.]]>
+      <![CDATA[Switch to frame titled 'Create Person'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Edit' extend menu button.]]>
+      <![CDATA[Click the 'Cover Photo' Select button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Edit' menu button.]]>
+      <![CDATA[Switch to the select file frame.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Edit Post 54ab91f8bb9a424 dialog'.]]>
+      <![CDATA[Enter the file path for file upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Upload' button.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Public Local Files' radio button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the file image 'HanSolo' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the img is loaded and visible.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to frame titled 'Create Person'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Person f93f0af90268417 has been created.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify there are no errors present.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Add content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'TV Episode' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to frame titled 'TV Episode'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Title' is present as a required field.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Episode' is present as a required field.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Synopsis' is present as a required field.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Publishing Options' link.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Moderation State' is present as a required field.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'e72455a2515440f' in the 'Title' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '1' in the 'Episode Number' text box.]]>
     </line>
     <line>
       <![CDATA[Switch to the Synopsis frame.]]>
@@ -350,71 +1472,103 @@
       <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Edit Post 54ab91f8bb9a424 dialog'.]]>
+      <![CDATA[Switch to frame titled 'Create TV Episode'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Cover' select button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the select file frame.]]>
+    </line>
+    <line>
+      <![CDATA[Enter the file path for file upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Upload' button.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Public Local Files' radio button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the file image 'HanSolo' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the img is loaded and visible.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'Post 54ab91f8bb9a424 has been updated.' is present.]]>
+      <![CDATA[Switch to frame titled 'Create TV Episode'.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Publishing Options' link.]]>
+    </line>
+    <line>
+      <![CDATA[Select 'Published' from the 'Moderation State' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Cast/Crew' link.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'f93f0af90268417' in the Person text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'f93f0af90268417' from the auto complete option list.]]>
+    </line>
+    <line>
+      <![CDATA[Select the 'Contributor' from the 'Role' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'TV Episode e72455a2515440f has been created.' is present.]]>
     </line>
     <line>
       <![CDATA[Verify there are no errors present.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the extend edit menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Delete' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Are you sure you want to delete 54ab91f8bb9a424? dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Delete' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Post 54ab91f8bb9a424 has been deleted.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify there are no errors present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the content item titled '54ab91f8bb9a424' is not present.]]>
+      <![CDATA[Verify the text 'Published' is present in the work bench info block.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="82584" started-at="2014-04-02T02:10:20Z" finished-at="2014-04-02T02:11:43Z">
+  <suite name="Pub 7 Concurrent Suite" duration-ms="105117" started-at="2014-04-02T15:33:14Z" finished-at="2014-04-02T15:34:59Z">
     <groups>
       <group name="full">
-        <method signature="CreateConfigureAndValidatePermissionsEditor.CreateConfigureAndValidatePermissionsEditor_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.CreateConfigureAndValidatePermissionsEditor@333d4d6b]" name="CreateConfigureAndValidatePermissionsEditor_Test" class="com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.CreateConfigureAndValidatePermissionsEditor"/>
+        <method signature="CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter.CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Movie.CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter@6c7108a1]" name="CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter_Test" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Movie.CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter"/>
+        <method signature="CreateCharacterProfile.CreateCharacterProfile_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@34a281e7]" name="CreateCharacterProfile_Test" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile"/>
+        <method signature="CreatePerson.CreatePerson_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson@18fe7fb0]" name="CreatePerson_Test" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson"/>
+        <method signature="CreatePost.CreatePost_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost@3aa3defc]" name="CreatePost_Test" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost"/>
+        <method signature="CreateTVEpisode.CreateTVEpisode_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVEpisode.CreateTVEpisode@70edb9a5]" name="CreateTVEpisode_Test" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVEpisode.CreateTVEpisode"/>
       </group> <!-- full -->
       <group name="smoke">
-        <method signature="CreateConfigureAndValidatePermissionsEditor.CreateConfigureAndValidatePermissionsEditor_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.CreateConfigureAndValidatePermissionsEditor@333d4d6b]" name="CreateConfigureAndValidatePermissionsEditor_Test" class="com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.CreateConfigureAndValidatePermissionsEditor"/>
+        <method signature="CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter.CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Movie.CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter@6c7108a1]" name="CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter_Test" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Movie.CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter"/>
+        <method signature="CreateTVEpisode.CreateTVEpisode_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVEpisode.CreateTVEpisode@70edb9a5]" name="CreateTVEpisode_Test" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVEpisode.CreateTVEpisode"/>
       </group> <!-- smoke -->
     </groups>
-    <test name="Default test" duration-ms="82584" started-at="2014-04-02T02:10:20Z" finished-at="2014-04-02T02:11:43Z">
-      <class name="com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.CreateConfigureAndValidatePermissionsEditor">
-        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.CreateConfigureAndValidatePermissionsEditor@333d4d6b]" name="startGridAndHub" is-config="true" duration-ms="12308" started-at="2014-04-01T22:10:08Z" finished-at="2014-04-01T22:10:20Z">
+    <test name="All Concurrent Web Tests" duration-ms="105117" started-at="2014-04-02T15:33:14Z" finished-at="2014-04-02T15:34:59Z">
+      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile">
+        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@34a281e7]" name="startGridAndHub" is-config="true" duration-ms="5395" started-at="2014-04-02T11:33:09Z" finished-at="2014-04-02T11:33:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startGridAndHub -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.CreateConfigureAndValidatePermissionsEditor@333d4d6b]" name="startSelenium" is-config="true" duration-ms="2194" started-at="2014-04-01T22:10:20Z" finished-at="2014-04-01T22:10:23Z">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@34a281e7]" name="startSelenium" is-config="true" duration-ms="4557" started-at="2014-04-02T11:33:14Z" finished-at="2014-04-02T11:33:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="CreateConfigureAndValidatePermissionsEditor_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.CreateConfigureAndValidatePermissionsEditor@333d4d6b]" name="CreateConfigureAndValidatePermissionsEditor_Test" duration-ms="79806" started-at="2014-04-01T22:10:23Z" finished-at="2014-04-01T22:11:42Z">
+        <test-method status="PASS" signature="CreateCharacterProfile_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@34a281e7]" name="CreateCharacterProfile_Test" duration-ms="24294" started-at="2014-04-02T11:33:19Z" finished-at="2014-04-02T11:33:43Z">
           <reporter-output>
             <line>
               <![CDATA[Open url 'http://qa4.qa.nbcupublisher7.publisher7.com'.]]>
@@ -429,115 +1583,22 @@
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'People' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Add user' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'People dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '15ad2e54f0d5454@5e4a237fc94645c.com' in the 'Username' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '15ad2e54f0d5454@5e4a237fc94645c.com' in the 'E-mail address' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa55word' in the 'Confirm password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Check the 'editor' check box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'cedeb77cc42f4a8' in the 'First Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'd42c846e63fb4a0' in the 'Last Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Create new account' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'A welcome message with further instructions has been e-mailed to the new user 15ad2e54f0d5454@5e4a237fc94645c.com.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify there are no errors present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'People' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Permissions' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Roles' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'People dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Edit Permissions' link for the 'Editor' role.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'People dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save Permissions' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The changes have been saved.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify there are no errors present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Logout' button.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the user's password in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Login' button.]]>
-            </line>
-            <line>
               <![CDATA[Mouse over the 'Content' menu link.]]>
             </line>
             <line>
               <![CDATA[Mouse over the 'Add content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Post' menu link.]]>
+              <![CDATA[Click the 'Character Profile' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'Create Character Profile dialog'.]]>
             </line>
             <line>
-              <![CDATA[Enter '54ab91f8bb9a424' in the 'Title' text box.]]>
+              <![CDATA[Enter '77d561459e8544f' in the 'Character First Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Switch to the Synopsis frame.]]>
-            </line>
-            <line>
-              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Cover' select button.]]>
+              <![CDATA[Click the Cover Photo 'Select' button.]]>
             </line>
             <line>
               <![CDATA[Switch to the select file frame.]]>
@@ -570,263 +1631,1659 @@
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+              <![CDATA[Switch to frame titled 'Create Character Profile'.]]>
             </line>
             <line>
-              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+              <![CDATA[Assert that img source of the Cover Photo contains 'HanSolo'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Publishing Options' link.]]>
-            </line>
-            <line>
-              <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
+              <![CDATA[Assert the the img is loaded and visible.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'Post 54ab91f8bb9a424 has been created.' is present.]]>
+              <![CDATA[Verify success message of 'Character Profile 77d561459e8544f has been created.' is present.]]>
             </line>
             <line>
               <![CDATA[Verify there are no errors present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the extend arrow for the 'Edit' menu.]]>
-            </line>
-            <line>
-              <![CDATA[Click the extend edit menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Edit' menu link is present from the extended edit menu.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Delete' menu link is present from the extended edit menu.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Logout' button.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the user's password in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Login' button.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Add content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Post' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '94ef1ef1b6434a8' in the 'Title' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the Synopsis frame.]]>
-            </line>
-            <line>
-              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Cover' select button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the select file frame.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the file path for file upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Upload' button.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Public Local Files' radio button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the file image 'HanSolo' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Publishing Options' link.]]>
-            </line>
-            <line>
-              <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Post 94ef1ef1b6434a8 has been created.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify there are no errors present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Logout' button.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the user's password in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Login' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the content item titled '94ef1ef1b6434a8' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Edit/Delete' menu options are not present for the content item titled '94ef1ef1b6434a8'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Content Revisions' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Content Revisions dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the content item titled '94ef1ef1b6434a8' to be present in revision list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Edit' extend menu button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify Edit menu 'Edit' button is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify Edit menu 'Delete' buttton is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Edit' extend menu button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Edit' menu button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Edit Post 54ab91f8bb9a424 dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the Synopsis frame.]]>
-            </line>
-            <line>
-              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Edit Post 54ab91f8bb9a424 dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Post 54ab91f8bb9a424 has been updated.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify there are no errors present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the extend edit menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Delete' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Are you sure you want to delete 54ab91f8bb9a424? dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Delete' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Post 54ab91f8bb9a424 has been deleted.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify there are no errors present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the content item titled '54ab91f8bb9a424' is not present.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- CreateConfigureAndValidatePermissionsEditor_Test -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.CreateConfigureAndValidatePermissionsEditor@333d4d6b]" name="stopSelenium" is-config="true" duration-ms="572" started-at="2014-04-01T22:11:42Z" finished-at="2014-04-01T22:11:43Z">
+        </test-method> <!-- CreateCharacterProfile_Test -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@34a281e7]" name="stopSelenium" is-config="true" duration-ms="568" started-at="2014-04-02T11:33:43Z" finished-at="2014-04-02T11:33:43Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=CreateConfigureAndValidatePermissionsEditor_Test status=SUCCESS method=CreateConfigureAndValidatePermissionsEditor.CreateConfigureAndValidatePermissionsEditor_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.CreateConfigureAndValidatePermissionsEditor@333d4d6b] output=Open url 'http://qa4.qa.nbcupublisher7.publisher7.com'.]]]>
+                <![CDATA[[TestResult name=CreateCharacterProfile_Test status=SUCCESS method=CreateCharacterProfile.CreateCharacterProfile_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@34a281e7] output=Open url 'http://qa4.qa.nbcupublisher7.publisher7.com'.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.CreateConfigureAndValidatePermissionsEditor@333d4d6b]" name="stopGridAndHub" is-config="true" duration-ms="356" started-at="2014-04-01T22:11:43Z" finished-at="2014-04-01T22:11:43Z">
+        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@34a281e7]" name="stopGridAndHub" is-config="true" duration-ms="390" started-at="2014-04-02T11:34:59Z" finished-at="2014-04-02T11:34:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopGridAndHub -->
-      </class> <!-- com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.CreateConfigureAndValidatePermissionsEditor -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile -->
+      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost@3aa3defc]" name="startSelenium" is-config="true" duration-ms="4804" started-at="2014-04-02T11:33:14Z" finished-at="2014-04-02T11:33:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startSelenium -->
+        <test-method status="PASS" signature="CreatePost_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost@3aa3defc]" name="CreatePost_Test" duration-ms="53944" started-at="2014-04-02T11:33:19Z" finished-at="2014-04-02T11:34:13Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Open url 'http://qa4.qa.nbcupublisher7.publisher7.com'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter the user's password in the 'Password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Login' button.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Add content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Post' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Title' is present as a required field.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Body' is present as a required field.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Publishing Options' link.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Moderation State' is present as a required field.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '76cf48da86054d3' in the 'Title' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the Synopsis frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Cover' select button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the select file frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter the file path for file upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Upload' button.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Public Local Files' radio button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the file image 'HanSolo' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Publishing Options' link.]]>
+            </line>
+            <line>
+              <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Post 76cf48da86054d3 has been created.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify there are no errors present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Draft' is present in the work bench info block.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Add content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Post' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Title' is present as a required field.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Body' is present as a required field.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Publishing Options' link.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Moderation State' is present as a required field.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '6990b897ac3643d' in the 'Title' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the Synopsis frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Cover' select button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the select file frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter the file path for file upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Upload' button.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Public Local Files' radio button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the file image 'HanSolo' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Publishing Options' link.]]>
+            </line>
+            <line>
+              <![CDATA[Select 'Review' from the 'Moderation State' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Post 6990b897ac3643d has been created.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify there are no errors present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Review' is present in the work bench info block.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Add content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Post' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Title' is present as a required field.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Body' is present as a required field.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Publishing Options' link.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Moderation State' is present as a required field.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '727f81d452a1457' in the 'Title' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the Synopsis frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Cover' select button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the select file frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter the file path for file upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Upload' button.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Public Local Files' radio button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the file image 'HanSolo' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Publishing Options' link.]]>
+            </line>
+            <line>
+              <![CDATA[Select 'Published' from the 'Moderation State' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Post 727f81d452a1457 has been created.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify there are no errors present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Published' is present in the work bench info block.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- CreatePost_Test -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost@3aa3defc]" name="stopSelenium" is-config="true" duration-ms="574" started-at="2014-04-02T11:34:13Z" finished-at="2014-04-02T11:34:13Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=CreatePost_Test status=SUCCESS method=CreatePost.CreatePost_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost@3aa3defc] output=Open url 'http://qa4.qa.nbcupublisher7.publisher7.com'.]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopSelenium -->
+      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost -->
+      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson@18fe7fb0]" name="startSelenium" is-config="true" duration-ms="4596" started-at="2014-04-02T11:33:14Z" finished-at="2014-04-02T11:33:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startSelenium -->
+        <test-method status="PASS" signature="CreatePerson_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson@18fe7fb0]" name="CreatePerson_Test" duration-ms="22813" started-at="2014-04-02T11:33:19Z" finished-at="2014-04-02T11:33:41Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Open url 'http://qa4.qa.nbcupublisher7.publisher7.com'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter the user's password in the 'Password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Login' button.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Add content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Person' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to frame titled 'Create Person'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'eea43ddf4762408' in the 'First name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter a random block of text in the 'Biography' text area.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to frame titled 'Create Person'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Cover Photo' Select button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the select file frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter the file path for file upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Upload' button.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Public Local Files' radio button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the file image 'HanSolo' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to frame titled 'Create Person'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Person eea43ddf4762408 has been created.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify there are no errors present.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- CreatePerson_Test -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson@18fe7fb0]" name="stopSelenium" is-config="true" duration-ms="570" started-at="2014-04-02T11:33:41Z" finished-at="2014-04-02T11:33:42Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=CreatePerson_Test status=SUCCESS method=CreatePerson.CreatePerson_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson@18fe7fb0] output=Open url 'http://qa4.qa.nbcupublisher7.publisher7.com'.]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopSelenium -->
+      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson -->
+      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVEpisode.CreateTVEpisode">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVEpisode.CreateTVEpisode@70edb9a5]" name="startSelenium" is-config="true" duration-ms="2492" started-at="2014-04-02T11:33:42Z" finished-at="2014-04-02T11:33:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startSelenium -->
+        <test-method status="PASS" signature="CreateTVEpisode_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVEpisode.CreateTVEpisode@70edb9a5]" name="CreateTVEpisode_Test" duration-ms="74069" started-at="2014-04-02T11:33:44Z" finished-at="2014-04-02T11:34:58Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Open url 'http://qa4.qa.nbcupublisher7.publisher7.com'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter the user's password in the 'Password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Login' button.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Add content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Person' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to frame titled 'Create Person'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'e8c5319a9cd041e' in the 'First name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter a random block of text in the 'Biography' text area.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to frame titled 'Create Person'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Cover Photo' Select button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the select file frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter the file path for file upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Upload' button.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Public Local Files' radio button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the file image 'HanSolo' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to frame titled 'Create Person'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Person e8c5319a9cd041e has been created.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify there are no errors present.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Add content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'TV Episode' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to frame titled 'TV Episode'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Title' is present as a required field.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Episode' is present as a required field.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Synopsis' is present as a required field.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Publishing Options' link.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Moderation State' is present as a required field.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '723cc68f040044d' in the 'Title' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '1' in the 'Episode Number' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the Synopsis frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to frame titled 'Create TV Episode'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Cover' select button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the select file frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter the file path for file upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Upload' button.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Public Local Files' radio button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the file image 'HanSolo' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to frame titled 'Create TV Episode'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Publishing Options' link.]]>
+            </line>
+            <line>
+              <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Cast/Crew' link.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'e8c5319a9cd041e' in the Person text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'e8c5319a9cd041e' from the auto complete option list.]]>
+            </line>
+            <line>
+              <![CDATA[Select the 'Contributor' from the 'Role' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'TV Episode 723cc68f040044d has been created.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify there are no errors present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Draft' is present in the work bench info block.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Add content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Person' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to frame titled 'Create Person'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '7388a96dee44473' in the 'First name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter a random block of text in the 'Biography' text area.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to frame titled 'Create Person'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Cover Photo' Select button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the select file frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter the file path for file upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Upload' button.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Public Local Files' radio button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the file image 'HanSolo' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to frame titled 'Create Person'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Person 7388a96dee44473 has been created.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify there are no errors present.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Add content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'TV Episode' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to frame titled 'TV Episode'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Title' is present as a required field.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Episode' is present as a required field.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Synopsis' is present as a required field.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Publishing Options' link.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Moderation State' is present as a required field.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '7381f7b12d7445c' in the 'Title' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '1' in the 'Episode Number' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the Synopsis frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to frame titled 'Create TV Episode'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Cover' select button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the select file frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter the file path for file upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Upload' button.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Public Local Files' radio button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the file image 'HanSolo' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to frame titled 'Create TV Episode'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Publishing Options' link.]]>
+            </line>
+            <line>
+              <![CDATA[Select 'Review' from the 'Moderation State' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Cast/Crew' link.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '7388a96dee44473' in the Person text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the '7388a96dee44473' from the auto complete option list.]]>
+            </line>
+            <line>
+              <![CDATA[Select the 'Contributor' from the 'Role' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'TV Episode 7381f7b12d7445c has been created.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify there are no errors present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Review' is present in the work bench info block.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Add content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Person' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to frame titled 'Create Person'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'f93f0af90268417' in the 'First name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter a random block of text in the 'Biography' text area.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to frame titled 'Create Person'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Cover Photo' Select button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the select file frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter the file path for file upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Upload' button.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Public Local Files' radio button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the file image 'HanSolo' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to frame titled 'Create Person'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Person f93f0af90268417 has been created.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify there are no errors present.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Add content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'TV Episode' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to frame titled 'TV Episode'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Title' is present as a required field.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Episode' is present as a required field.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Synopsis' is present as a required field.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Publishing Options' link.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Moderation State' is present as a required field.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'e72455a2515440f' in the 'Title' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '1' in the 'Episode Number' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the Synopsis frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to frame titled 'Create TV Episode'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Cover' select button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the select file frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter the file path for file upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Upload' button.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Public Local Files' radio button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the file image 'HanSolo' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to frame titled 'Create TV Episode'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Publishing Options' link.]]>
+            </line>
+            <line>
+              <![CDATA[Select 'Published' from the 'Moderation State' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Cast/Crew' link.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'f93f0af90268417' in the Person text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'f93f0af90268417' from the auto complete option list.]]>
+            </line>
+            <line>
+              <![CDATA[Select the 'Contributor' from the 'Role' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'TV Episode e72455a2515440f has been created.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify there are no errors present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Published' is present in the work bench info block.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- CreateTVEpisode_Test -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVEpisode.CreateTVEpisode@70edb9a5]" name="stopSelenium" is-config="true" duration-ms="571" started-at="2014-04-02T11:34:58Z" finished-at="2014-04-02T11:34:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=CreateTVEpisode_Test status=SUCCESS method=CreateTVEpisode.CreateTVEpisode_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVEpisode.CreateTVEpisode@70edb9a5] output=Open url 'http://qa4.qa.nbcupublisher7.publisher7.com'.]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopSelenium -->
+      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVEpisode.CreateTVEpisode -->
+      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Movie.CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Movie.CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter@6c7108a1]" name="startSelenium" is-config="true" duration-ms="4806" started-at="2014-04-02T11:33:14Z" finished-at="2014-04-02T11:33:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startSelenium -->
+        <test-method status="PASS" signature="CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Movie.CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter@6c7108a1]" name="CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter_Test" duration-ms="65689" started-at="2014-04-02T11:33:19Z" finished-at="2014-04-02T11:34:24Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Open url 'http://qa4.qa.nbcupublisher7.publisher7.com'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter the user's password in the 'Password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Login' button.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Add content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Character Profile' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Character Profile dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'ccb4aed06dc74f0' in the 'Character First Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the Cover Photo 'Select' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the select file frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter the file path for file upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Upload' button.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Public Local Files' radio button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the file image 'HanSolo' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Character Profile dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Character Profile ccb4aed06dc74f0 has been created.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify there are no errors present.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Add content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Movie' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Cast/Crew' link.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that the 'Character' text box is not displayed.]]>
+            </line>
+            <line>
+              <![CDATA[Select the 'Contributor' from the 'Role' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that the 'Character' text box is not displayed.]]>
+            </line>
+            <line>
+              <![CDATA[Select the 'Director' from the 'Role' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that the 'Character' text box is not displayed.]]>
+            </line>
+            <line>
+              <![CDATA[Select the 'Executive Producer' from the 'Role' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that the 'Character' text box is not displayed.]]>
+            </line>
+            <line>
+              <![CDATA[Select the 'Host' from the 'Role' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that the 'Character' text box is not displayed.]]>
+            </line>
+            <line>
+              <![CDATA[Select the 'Judge' from the 'Role' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that the 'Character' text box is not displayed.]]>
+            </line>
+            <line>
+              <![CDATA[Select the 'Producer' from the 'Role' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that the 'Character' text box is not displayed.]]>
+            </line>
+            <line>
+              <![CDATA[Select the 'Self' from the 'Role' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that the 'Character' text box is not displayed.]]>
+            </line>
+            <line>
+              <![CDATA[Select the 'Song Writer' from the 'Role' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that the 'Character' text box is not displayed.]]>
+            </line>
+            <line>
+              <![CDATA[Select the 'Writer' from the 'Role' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that the 'Character' text box is not displayed.]]>
+            </line>
+            <line>
+              <![CDATA[Select the 'Character' from the 'Role' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that the 'Character' text box is displayed.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Add content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Person' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Person dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'a5e18f7b8cf24fb' in the 'First name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter a random block of text in the 'Biography' text area.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Person dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Cover Photo' Select button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the select file frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter the file path for file upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Upload' button.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Public Local Files' radio button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the file image 'HanSolo' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Person dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Person a5e18f7b8cf24fb has been created.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify there are no errors present.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Add content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Movie' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Cast/Crew' link.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'a5e18f7b8cf24fb' in the Person text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'a5e18f7b8cf24fb' from the auto complete option list.]]>
+            </line>
+            <line>
+              <![CDATA[Select the 'Character' from the 'Role' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'ccb4aed06dc74f0' in the 'Character' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'ccb4aed06dc74f0' from the auto complete option list.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '608a3bd7af364cb' in the 'Title' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the Synopsis frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Cover' select button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the select file frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter the file path for file upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Upload' button.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Public Local Files' radio button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the file image 'HanSolo' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Movie 608a3bd7af364cb has been created.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify there are no errors present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Edit Draft' link in the work bench.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Edit Movie 608a3bd7af364cb dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Cast/Crew' link.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that the 'Character' text box is displayed.]]>
+            </line>
+            <line>
+              <![CDATA[Assert the value of the 'Person' text box equals 'a5e18f7b8cf24fb'.]]>
+            </line>
+            <line>
+              <![CDATA[Assert the value of the 'Role' drop down list equals 'Character'.]]>
+            </line>
+            <line>
+              <![CDATA[Assert the value of the 'Character' text box equals 'ccb4aed06dc74f0'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Publishing Options' link.]]>
+            </line>
+            <line>
+              <![CDATA[Check the 'Create New Revision' checkbox.]]>
+            </line>
+            <line>
+              <![CDATA[Select 'Published' from the 'Moderation State' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Published' is present in the work bench info block.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter_Test -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Movie.CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter@6c7108a1]" name="stopSelenium" is-config="true" duration-ms="567" started-at="2014-04-02T11:34:24Z" finished-at="2014-04-02T11:34:25Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter_Test status=SUCCESS method=CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter.CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Movie.CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter@6c7108a1] output=Open url 'http://qa4.qa.nbcupublisher7.publisher7.com'.]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopSelenium -->
+      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Movie.CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter -->
+    </test> <!-- All Concurrent Web Tests -->
+  </suite> <!-- Pub 7 Concurrent Suite -->
+  <suite name="Pub 7 Consecutive Suite" duration-ms="87126" started-at="2014-04-02T15:31:41Z" finished-at="2014-04-02T15:33:08Z">
+    <groups>
+      <group name="mpx">
+        <method signature="TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@5ffe9644]" name="TestSetup_Test" class="com.nbcuni.test.publisher.tests.Setup.TestSetup"/>
+      </group> <!-- mpx -->
+      <group name="full">
+        <method signature="CreateMediaGallery.CreateMediaGallery_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery@3b6f7142]" name="CreateMediaGallery_Test" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery"/>
+        <method signature="TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@5ffe9644]" name="TestSetup_Test" class="com.nbcuni.test.publisher.tests.Setup.TestSetup"/>
+      </group> <!-- full -->
+      <group name="smoke">
+        <method signature="TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@5ffe9644]" name="TestSetup_Test" class="com.nbcuni.test.publisher.tests.Setup.TestSetup"/>
+      </group> <!-- smoke -->
+    </groups>
+    <test name="All Consecutive Web Tests" duration-ms="87126" started-at="2014-04-02T15:31:41Z" finished-at="2014-04-02T15:33:08Z">
+      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery">
+        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery@3b6f7142]" name="startGridAndHub" is-config="true" duration-ms="11734" started-at="2014-04-02T11:31:29Z" finished-at="2014-04-02T11:31:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startGridAndHub -->
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery@3b6f7142]" name="startSelenium" is-config="true" duration-ms="1993" started-at="2014-04-02T11:32:02Z" finished-at="2014-04-02T11:32:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startSelenium -->
+        <test-method status="PASS" signature="CreateMediaGallery_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery@3b6f7142]" name="CreateMediaGallery_Test" duration-ms="63691" started-at="2014-04-02T11:32:04Z" finished-at="2014-04-02T11:33:08Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Open url 'http://qa4.qa.nbcupublisher7.publisher7.com'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter the user's password in the 'Password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Login' button.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Add content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Media Gallery' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Media Gallery dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '0adce608330848d' in the 'Title' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Cover' select button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the select file frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter the file path for file upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Upload' button.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Public Local Files' radio button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the file image 'HanSolo' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Media Gallery dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the Cover image src contains 'HanSolo'.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the image to fully load.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Select' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the select file frame.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Add files' link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'All Files' icon.]]>
+            </line>
+            <line>
+              <![CDATA[Click the local 'Pictures' icon.]]>
+            </line>
+            <line>
+              <![CDATA[Click the test picture link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Open' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Start upload' link.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for file upload to reach 100%]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Media Gallery dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that img source of the Media Item contains 'nbclogo'.]]>
+            </line>
+            <line>
+              <![CDATA[Assert the the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Media Gallery 0adce608330848d has been created.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify there are no errors present.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- CreateMediaGallery_Test -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery@3b6f7142]" name="stopSelenium" is-config="true" duration-ms="567" started-at="2014-04-02T11:33:08Z" finished-at="2014-04-02T11:33:08Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=CreateMediaGallery_Test status=SUCCESS method=CreateMediaGallery.CreateMediaGallery_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery@3b6f7142] output=Open url 'http://qa4.qa.nbcupublisher7.publisher7.com'.]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopSelenium -->
+        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery@3b6f7142]" name="stopGridAndHub" is-config="true" duration-ms="371" started-at="2014-04-02T11:33:08Z" finished-at="2014-04-02T11:33:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopGridAndHub -->
+      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery -->
+      <class name="com.nbcuni.test.publisher.tests.Setup.TestSetup">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@5ffe9644]" name="startSelenium" is-config="true" duration-ms="2189" started-at="2014-04-02T11:31:41Z" finished-at="2014-04-02T11:31:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startSelenium -->
+        <test-method status="PASS" signature="TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@5ffe9644]" name="TestSetup_Test" duration-ms="18098" started-at="2014-04-02T11:31:43Z" finished-at="2014-04-02T11:32:01Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Open url 'http://qa4.qa.nbcupublisher7.publisher7.com'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter the user's password in the 'Password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Login' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Modules' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to frame titled 'Modules'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Sticky Edit Actions' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the module titled 'Sticky Edit Actions' to appear in the list.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Devel' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the module titled 'Devel' to appear in the list.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'ImageField Focus' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the module titled 'ImageField Focus' to appear in the list.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Database logging' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the module titled 'Database logging' to appear in the list.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Pub Post' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the module titled 'Pub Post' to appear in the list.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Pub Post' check box is checked.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- TestSetup_Test -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@5ffe9644]" name="stopSelenium" is-config="true" duration-ms="574" started-at="2014-04-02T11:32:01Z" finished-at="2014-04-02T11:32:02Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TestSetup_Test status=SUCCESS method=TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@5ffe9644] output=Open url 'http://qa4.qa.nbcupublisher7.publisher7.com'.]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopSelenium -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Setup.TestSetup -->
+    </test> <!-- All Consecutive Web Tests -->
+  </suite> <!-- Pub 7 Consecutive Suite -->
+  <suite name="Publisher 7 Test Suites" duration-ms="0" started-at="2014-04-02T15:35:05Z" finished-at="2014-04-02T15:35:05Z">
+    <groups>
+    </groups>
+  </suite> <!-- Publisher 7 Test Suites -->
 </testng-results>
