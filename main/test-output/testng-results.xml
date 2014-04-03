@@ -2,7 +2,10 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
     <line>
-      <![CDATA[Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.]]>
+      <![CDATA[Open url 'http://qa4.qa.nbcupublisher7.publisher7.com'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify access denied text is present.]]>
     </line>
     <line>
       <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
@@ -13,150 +16,30 @@
     <line>
       <![CDATA[Click the 'Login' button.]]>
     </line>
-    <line>
-      <![CDATA[Click the 'Modules' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Program Guide' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the module titled 'Program Guide' to appear in the list.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Program Guide' check box is checked.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Program Guide Example' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the module titled 'Program Guide Example' to appear in the list.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Program Guide Example' check box is checked.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Structure' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Blocks' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Select the block name 'Program Guide' from the 'Content' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save Blocks' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The block settings have been updated.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify there are no errors present.]]>
-    </line>
-    <line>
-      <![CDATA[Assert that the selected block 'Program Guide' contains the 'Content' text.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Configuration' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Web services' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Program Guide' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Program Guide dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'http://feed.entertainment.tv.theplatform.com/f/dCK2IC/stage_usa_listing?range=1-*&form=json' in the 'Data URL' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save Configuration' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify there are no errors present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify home page program guide contains text 'Program Guide'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify column headers present of 'Date', 'Show', and 'Information'.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Status report dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify Cron Status contains data url 'http://feed.entertainment.tv.theplatform.com/f/dCK2IC/stage_usa_listing?range=1-*&form=json'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify home page program guide contains text 'Program Guide'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify column headers present of 'Date', 'Show', and 'Information'.]]>
-    </line>
-    <line>
-      <![CDATA[After 8pm, show availability limited.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Structure' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Blocks' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Select the block name 'Program Guide' from the '- None -' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save Blocks' button.]]>
-    </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="55291" started-at="2014-04-03T14:49:08Z" finished-at="2014-04-03T14:50:03Z">
+  <suite name="Default suite" duration-ms="6381" started-at="2014-04-03T17:31:17Z" finished-at="2014-04-03T17:31:23Z">
     <groups>
       <group name="full">
-        <method signature="ProgramGuideVerification.ProgramGuideVerification_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ProgramGuides.ROVITVSchedule.ProgramGuideVerification@6e0031c0]" name="ProgramGuideVerification_Test" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ProgramGuides.ROVITVSchedule.ProgramGuideVerification"/>
+        <method signature="FileViewDeniedToUnauthenticatedUsers.FileViewDeniedToUnauthenticatedUsers_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Security.FileViewDeniedToUnauthenticatedUsers@442ac57c]" name="FileViewDeniedToUnauthenticatedUsers_Test" class="com.nbcuni.test.publisher.tests.Security.FileViewDeniedToUnauthenticatedUsers"/>
       </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="55291" started-at="2014-04-03T14:49:08Z" finished-at="2014-04-03T14:50:03Z">
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ProgramGuides.ROVITVSchedule.ProgramGuideVerification">
-        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ProgramGuides.ROVITVSchedule.ProgramGuideVerification@6e0031c0]" name="startGridAndHub" is-config="true" duration-ms="11736" started-at="2014-04-03T10:48:56Z" finished-at="2014-04-03T10:49:08Z">
+    <test name="Default test" duration-ms="6381" started-at="2014-04-03T17:31:17Z" finished-at="2014-04-03T17:31:23Z">
+      <class name="com.nbcuni.test.publisher.tests.Security.FileViewDeniedToUnauthenticatedUsers">
+        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Security.FileViewDeniedToUnauthenticatedUsers@442ac57c]" name="startGridAndHub" is-config="true" duration-ms="11058" started-at="2014-04-03T13:31:06Z" finished-at="2014-04-03T13:31:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startGridAndHub -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ProgramGuides.ROVITVSchedule.ProgramGuideVerification@6e0031c0]" name="startSelenium" is-config="true" duration-ms="2106" started-at="2014-04-03T10:49:08Z" finished-at="2014-04-03T10:49:10Z">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Security.FileViewDeniedToUnauthenticatedUsers@442ac57c]" name="startSelenium" is-config="true" duration-ms="2204" started-at="2014-04-03T13:31:17Z" finished-at="2014-04-03T13:31:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="ProgramGuideVerification_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ProgramGuides.ROVITVSchedule.ProgramGuideVerification@6e0031c0]" name="ProgramGuideVerification_Test" duration-ms="52602" started-at="2014-04-03T10:49:10Z" finished-at="2014-04-03T10:50:03Z">
+        <test-method status="PASS" signature="FileViewDeniedToUnauthenticatedUsers_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Security.FileViewDeniedToUnauthenticatedUsers@442ac57c]" name="FileViewDeniedToUnauthenticatedUsers_Test" duration-ms="3595" started-at="2014-04-03T13:31:19Z" finished-at="2014-04-03T13:31:23Z">
           <reporter-output>
             <line>
-              <![CDATA[Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.]]>
+              <![CDATA[Open url 'http://qa4.qa.nbcupublisher7.publisher7.com'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify access denied text is present.]]>
             </line>
             <line>
               <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
@@ -167,147 +50,24 @@
             <line>
               <![CDATA[Click the 'Login' button.]]>
             </line>
-            <line>
-              <![CDATA[Click the 'Modules' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Program Guide' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the module titled 'Program Guide' to appear in the list.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Program Guide' check box is checked.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Program Guide Example' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the module titled 'Program Guide Example' to appear in the list.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Program Guide Example' check box is checked.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Structure' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Blocks' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Select the block name 'Program Guide' from the 'Content' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save Blocks' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The block settings have been updated.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify there are no errors present.]]>
-            </line>
-            <line>
-              <![CDATA[Assert that the selected block 'Program Guide' contains the 'Content' text.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Configuration' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Web services' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Program Guide' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Program Guide dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'http://feed.entertainment.tv.theplatform.com/f/dCK2IC/stage_usa_listing?range=1-*&form=json' in the 'Data URL' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save Configuration' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify there are no errors present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify home page program guide contains text 'Program Guide'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify column headers present of 'Date', 'Show', and 'Information'.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Status report dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify Cron Status contains data url 'http://feed.entertainment.tv.theplatform.com/f/dCK2IC/stage_usa_listing?range=1-*&form=json'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify home page program guide contains text 'Program Guide'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify column headers present of 'Date', 'Show', and 'Information'.]]>
-            </line>
-            <line>
-              <![CDATA[After 8pm, show availability limited.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Structure' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Blocks' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Select the block name 'Program Guide' from the '- None -' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save Blocks' button.]]>
-            </line>
           </reporter-output>
-        </test-method> <!-- ProgramGuideVerification_Test -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ProgramGuides.ROVITVSchedule.ProgramGuideVerification@6e0031c0]" name="stopSelenium" is-config="true" duration-ms="571" started-at="2014-04-03T10:50:03Z" finished-at="2014-04-03T10:50:03Z">
+        </test-method> <!-- FileViewDeniedToUnauthenticatedUsers_Test -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Security.FileViewDeniedToUnauthenticatedUsers@442ac57c]" name="stopSelenium" is-config="true" duration-ms="568" started-at="2014-04-03T13:31:23Z" finished-at="2014-04-03T13:31:23Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=ProgramGuideVerification_Test status=SUCCESS method=ProgramGuideVerification.ProgramGuideVerification_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ProgramGuides.ROVITVSchedule.ProgramGuideVerification@6e0031c0] output=Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.]]]>
+                <![CDATA[[TestResult name=FileViewDeniedToUnauthenticatedUsers_Test status=SUCCESS method=FileViewDeniedToUnauthenticatedUsers.FileViewDeniedToUnauthenticatedUsers_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Security.FileViewDeniedToUnauthenticatedUsers@442ac57c] output=Open url 'http://qa4.qa.nbcupublisher7.publisher7.com'.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ProgramGuides.ROVITVSchedule.ProgramGuideVerification@6e0031c0]" name="stopGridAndHub" is-config="true" duration-ms="359" started-at="2014-04-03T10:50:03Z" finished-at="2014-04-03T10:50:04Z">
+        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Security.FileViewDeniedToUnauthenticatedUsers@442ac57c]" name="stopGridAndHub" is-config="true" duration-ms="356" started-at="2014-04-03T13:31:23Z" finished-at="2014-04-03T13:31:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopGridAndHub -->
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ProgramGuides.ROVITVSchedule.ProgramGuideVerification -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Security.FileViewDeniedToUnauthenticatedUsers -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -23,16 +23,17 @@ public class ParentTest {
     protected Random random;
     protected Taxonomy taxonomy;
     protected Overlay overlay;
-    protected Config config;
+    protected Config config = new Config();
     protected ContentParent contentParent;
     protected StartGridHubNode startGridHubNode;
     
     @BeforeSuite(alwaysRun = true)
     public void startGridAndHub() throws Exception {
 
-    	startGridHubNode = new StartGridHubNode();
-    	startGridHubNode.start();
-
+    	if (config.getConfigValue("RunMobile").equals("false")) {
+    		startGridHubNode = new StartGridHubNode();
+    		startGridHubNode.start();
+    	}
     }
     
     @BeforeMethod(alwaysRun = true)
@@ -41,7 +42,6 @@ public class ParentTest {
             driverSetup = new DriverSetup();
         	webDriver = driverSetup.WebDriverSetup();
             applib = new AppLib(webDriver);
-            config = new Config();
             random = new Random();
             taxonomy = new Taxonomy(webDriver);
             overlay = new Overlay(webDriver, applib);
@@ -91,7 +91,9 @@ public class ParentTest {
     @AfterSuite(alwaysRun = true)
     public void stopGridAndHub() throws Exception {
 
-    	startGridHubNode.stop();
+    	if (config.getConfigValue("RunMobile").equals("false")) {
+    		startGridHubNode.stop();
+    	}
 
     }
     

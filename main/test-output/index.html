@@ -101,7 +101,7 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ProgramGuides.ROVITVSchedule.ProgramGuideVerification" hash-for-method="ProgramGuideVerification_Test">ProgramGuideVerification_Test</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.nbcuni.test.publisher.tests.Security.FileViewDeniedToUnauthenticatedUsers" hash-for-method="FileViewDeniedToUnauthenticatedUsers_Test">FileViewDeniedToUnauthenticatedUsers_Test</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -119,14 +119,14 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ProgramGuides.ROVITVSchedule.ProgramGuideVerification</span>
+              <span class="class-name">com.nbcuni.test.publisher.tests.Security.FileViewDeniedToUnauthenticatedUsers</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="ProgramGuideVerification_Test">
-                  </a> <!-- ProgramGuideVerification_Test -->
-                  <span class="method-name">ProgramGuideVerification_Test</span>
+                  <a name="FileViewDeniedToUnauthenticatedUsers_Test">
+                  </a> <!-- FileViewDeniedToUnauthenticatedUsers_Test -->
+                  <span class="method-name">FileViewDeniedToUnauthenticatedUsers_Test</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -134,7 +134,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/private/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/testng-eclipse-1233170436/testng-customsuite.xml</span>
+            <span class="header-content">/private/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/testng-eclipse-2074315704/testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -143,7 +143,7 @@
 &lt;suite name=&quot;Default suite&quot;&gt;
   &lt;test verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ProgramGuides.ROVITVSchedule.ProgramGuideVerification&quot;/&gt;
+      &lt;class name=&quot;com.nbcuni.test.publisher.tests.Security.FileViewDeniedToUnauthenticatedUsers&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -171,7 +171,7 @@
               <span class="test-group-name">full</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">ProgramGuideVerification_Test</span>
+                <span class="method-in-group-name">FileViewDeniedToUnauthenticatedUsers_Test</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -193,14 +193,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'ProgramGuideVerification_Test')
-data.setCell(0, 2, 'com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ProgramGuides.ROVITVSchedule.ProgramGuideVerification')
-data.setCell(0, 3, 52602);
+data.setCell(0, 1, 'FileViewDeniedToUnauthenticatedUsers_Test')
+data.setCell(0, 2, 'com.nbcuni.test.publisher.tests.Security.FileViewDeniedToUnauthenticatedUsers')
+data.setCell(0, 3, 3595);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 52 seconds</span>
+              <span class="suite-total-time">Total running time: 3 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -212,53 +212,13 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="reporter-method-div">
-              <span class="reporter-method-name">ProgramGuideVerification_Test</span>
+              <span class="reporter-method-name">FileViewDeniedToUnauthenticatedUsers_Test</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.</span>
+                <span class="reporter-method-output">Open url 'http://qa4.qa.nbcupublisher7.publisher7.com'.</span>
+                <span class="reporter-method-output">Verify access denied text is present.</span>
                 <span class="reporter-method-output">Enter the user's email address in the 'Email Address' text box.</span>
                 <span class="reporter-method-output">Enter the user's password in the 'Password' text box.</span>
                 <span class="reporter-method-output">Click the 'Login' button.</span>
-                <span class="reporter-method-output">Click the 'Modules' menu link.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'Modules dialog'.</span>
-                <span class="reporter-method-output">Enter 'Program Guide' in the 'Filter Name' text box.</span>
-                <span class="reporter-method-output">Wait for the module titled 'Program Guide' to appear in the list.</span>
-                <span class="reporter-method-output">Verify the 'Program Guide' check box is checked.</span>
-                <span class="reporter-method-output">Enter 'Program Guide Example' in the 'Filter Name' text box.</span>
-                <span class="reporter-method-output">Wait for the module titled 'Program Guide Example' to appear in the list.</span>
-                <span class="reporter-method-output">Verify the 'Program Guide Example' check box is checked.</span>
-                <span class="reporter-method-output">Click the 'Close Overlay X'.</span>
-                <span class="reporter-method-output">Mouse over the 'Structure' menu link.</span>
-                <span class="reporter-method-output">Click the 'Blocks' menu link.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'Blocks dialog'.</span>
-                <span class="reporter-method-output">Select the block name 'Program Guide' from the 'Content' drop down list.</span>
-                <span class="reporter-method-output">Click the 'Save Blocks' button.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'Blocks dialog'.</span>
-                <span class="reporter-method-output">Verify success message of 'The block settings have been updated.' is present.</span>
-                <span class="reporter-method-output">Verify there are no errors present.</span>
-                <span class="reporter-method-output">Assert that the selected block 'Program Guide' contains the 'Content' text.</span>
-                <span class="reporter-method-output">Click the 'Close Overlay X'.</span>
-                <span class="reporter-method-output">Mouse over the 'Configuration' menu link.</span>
-                <span class="reporter-method-output">Mouse over the 'Web services' menu link.</span>
-                <span class="reporter-method-output">Click the 'Program Guide' menu link.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'Program Guide dialog'.</span>
-                <span class="reporter-method-output">Enter 'http://feed.entertainment.tv.theplatform.com/f/dCK2IC/stage_usa_listing?range=1-*&form=json' in the 'Data URL' text box.</span>
-                <span class="reporter-method-output">Click the 'Save Configuration' button.</span>
-                <span class="reporter-method-output">Verify success message of 'The configuration options have been saved.' is present.</span>
-                <span class="reporter-method-output">Verify there are no errors present.</span>
-                <span class="reporter-method-output">Click the 'Close Overlay X'.</span>
-                <span class="reporter-method-output">Verify home page program guide contains text 'Program Guide'.</span>
-                <span class="reporter-method-output">Verify column headers present of 'Date', 'Show', and 'Information'.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'Status report dialog'.</span>
-                <span class="reporter-method-output">Verify Cron Status contains data url 'http://feed.entertainment.tv.theplatform.com/f/dCK2IC/stage_usa_listing?range=1-*&form=json'.</span>
-                <span class="reporter-method-output">Click the 'Close Overlay X'.</span>
-                <span class="reporter-method-output">Verify home page program guide contains text 'Program Guide'.</span>
-                <span class="reporter-method-output">Verify column headers present of 'Date', 'Show', and 'Information'.</span>
-                <span class="reporter-method-output">After 8pm, show availability limited.</span>
-                <span class="reporter-method-output">Mouse over the 'Structure' menu link.</span>
-                <span class="reporter-method-output">Click the 'Blocks' menu link.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'Blocks dialog'.</span>
-                <span class="reporter-method-output">Select the block name 'Program Guide' from the '- None -' drop down list.</span>
-                <span class="reporter-method-output">Click the 'Save Blocks' button.</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -276,26 +236,26 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ProgramGuides.ROVITVSchedule.ProgramGuideVerification</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.nbcuni.test.publisher.tests.Security.FileViewDeniedToUnauthenticatedUsers</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">startGridAndHub</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
                 <span class="method-name">startSelenium</span>
-                <span class="method-start">11746 ms</span>
+                <span class="method-start">11069 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">ProgramGuideVerification_Test</span>
-                <span class="method-start">13852 ms</span>
+                <span class="method-name">FileViewDeniedToUnauthenticatedUsers_Test</span>
+                <span class="method-start">13274 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">stopSelenium([TestResult name=ProgramGuideVerification_Test status=SUCCESS method=ProgramGuideVerification.Progra...)</span>
-                <span class="method-start">66455 ms</span>
+                <span class="method-name">stopSelenium([TestResult name=FileViewDeniedToUnauthenticatedUsers_Test status=SUCCESS method=FileViewDeniedToUna...)</span>
+                <span class="method-start">16870 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-suite after">
                 <span class="method-name">stopGridAndHub</span>
-                <span class="method-start">67039 ms</span>
+                <span class="method-start">17450 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

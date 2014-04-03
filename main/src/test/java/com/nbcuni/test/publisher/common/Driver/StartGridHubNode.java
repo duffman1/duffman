@@ -29,7 +29,7 @@ public class StartGridHubNode {
     
     Config config = new Config();
     String hubHost = "localhost";
-    int hubPort = 4444;
+    int hubPort = Integer.parseInt(config.getConfigValue("LocalWebDriverHubPort"));
     Hub myHub = null;
     SelfRegisteringRemote remoteWebDriverNode = null;
     

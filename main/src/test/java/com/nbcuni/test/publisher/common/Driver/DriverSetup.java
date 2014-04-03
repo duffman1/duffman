@@ -23,9 +23,25 @@ public class DriverSetup {
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
 
+        Boolean isMobileRun;
+        if (config.getConfigValue("RunMobile").equals("true")) {
+        	isMobileRun = true;
+        }
+        else {
+        	isMobileRun = false;
+        }
+        
         String browser = config.getConfigValue("Browser");
-        String hubAddress = "http://localhost:4444/wd/hub";
-
+        
+        String hubAddress;
+        if (isMobileRun.equals(false)) {
+        	hubAddress = "http://localhost:" + config.getConfigValue("LocalWebDriverHubPort") + "/wd/hub";
+        }
+        else {
+        	hubAddress = "http://localhost:" + config.getConfigValue("LocalAppiumHubPort") + "/wd/hub";
+        }
+        
+        if (isMobileRun.equals(false)) {
         switch (browser)
         {
             case "firefox":
@@ -57,8 +73,19 @@ public class DriverSetup {
                 capabilities = DesiredCapabilities.htmlUnit();
                 capabilities.setJavascriptEnabled(true);
                 break;
+        	}
+        } 
+        else {
+        	
+        	capabilities.setCapability("device", config.getConfigValue("Device"));
+        	if (config.getConfigValue("Device").equals("Iphone Simulator")) {
+        		capabilities.setCapability("app", "safari");
+        	}
+        	else {
+        		capabilities.setCapability("app", "chrome");
+        	}
         }
-
+        
         capabilities.setCapability(CapabilityType.TAKES_SCREENSHOT, true);
 
         try {
