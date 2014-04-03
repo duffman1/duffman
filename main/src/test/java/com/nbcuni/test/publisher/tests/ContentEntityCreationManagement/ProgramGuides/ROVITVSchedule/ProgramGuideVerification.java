@@ -9,6 +9,7 @@ import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Configuration.ProgramGuide;
 import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
+import com.nbcuni.test.publisher.pageobjects.ErrorChecking.ErrorChecking;
 
 public class ProgramGuideVerification extends ParentTest{
 	/*************************************************************************************
@@ -95,6 +96,8 @@ public class ProgramGuideVerification extends ParentTest{
         //Step 12
         taxonomy.NavigateSite("Home>>Run cron");
         overlay.SwitchToActiveFrame();
+        ErrorChecking errorChecking = new ErrorChecking(webDriver, applib);
+        errorChecking.VerifyNoMessageErrorsPresent();
 	    
         //Step 13
         programGuide.ProgramGuideRunCronStatus();

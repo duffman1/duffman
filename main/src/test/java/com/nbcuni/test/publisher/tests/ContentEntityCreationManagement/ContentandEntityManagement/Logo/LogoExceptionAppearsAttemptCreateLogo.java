@@ -5,9 +5,12 @@ import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Content.Delete;
+import com.nbcuni.test.publisher.pageobjects.ErrorChecking.ErrorChecking;
 import com.nbcuni.test.publisher.pageobjects.Logo.AddLogo;
 import com.nbcuni.test.publisher.pageobjects.Logo.Logos;
+
 import org.testng.annotations.Test;
+
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Calendar;
@@ -92,7 +95,8 @@ public class LogoExceptionAppearsAttemptCreateLogo extends ParentTest{
     	    Thread.sleep(15000);
     	    taxonomy.NavigateSite("Home>>Run cron");
     	    overlay.SwitchToActiveFrame();
-    	    contentParent.VerifyMessageStatus("Cron ran successfully.");
+    	    ErrorChecking errorChecking = new ErrorChecking(webDriver, applib);
+    	    errorChecking.VerifyNoMessageErrorsPresent();
     	    overlay.ClickCloseOverlayLnk();
     	    taxonomy.NavigateSite("Home");
     	    
@@ -103,7 +107,7 @@ public class LogoExceptionAppearsAttemptCreateLogo extends ParentTest{
     	    Thread.sleep(45000); //TODO - add a better dynamic wait for this item.
     	    taxonomy.NavigateSite("Home>>Run cron");
     	    overlay.SwitchToActiveFrame();
-    	    contentParent.VerifyMessageStatus("Cron ran successfully.");
+    	    errorChecking.VerifyNoMessageErrorsPresent();
     	    overlay.ClickCloseOverlayLnk();
     	    taxonomy.NavigateSite("Home");
     	    logos.VerifyHomePageLogoImgPresent("logo");

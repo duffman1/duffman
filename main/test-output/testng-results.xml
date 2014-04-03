@@ -119,7 +119,7 @@
       <![CDATA[Verify column headers present of 'Date', 'Show', and 'Information'.]]>
     </line>
     <line>
-      <![CDATA[Verify that there is at least one show in the program guide table.]]>
+      <![CDATA[After 8pm, show availability limited.]]>
     </line>
     <line>
       <![CDATA[Mouse over the 'Structure' menu link.]]>
@@ -137,23 +137,23 @@
       <![CDATA[Click the 'Save Blocks' button.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="90270" started-at="2014-04-02T17:24:49Z" finished-at="2014-04-02T17:26:19Z">
+  <suite name="Default suite" duration-ms="55291" started-at="2014-04-03T14:49:08Z" finished-at="2014-04-03T14:50:03Z">
     <groups>
       <group name="full">
-        <method signature="ProgramGuideVerification.ProgramGuideVerification_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ProgramGuides.ROVITVSchedule.ProgramGuideVerification@4e61bc49]" name="ProgramGuideVerification_Test" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ProgramGuides.ROVITVSchedule.ProgramGuideVerification"/>
+        <method signature="ProgramGuideVerification.ProgramGuideVerification_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ProgramGuides.ROVITVSchedule.ProgramGuideVerification@6e0031c0]" name="ProgramGuideVerification_Test" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ProgramGuides.ROVITVSchedule.ProgramGuideVerification"/>
       </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="90270" started-at="2014-04-02T17:24:49Z" finished-at="2014-04-02T17:26:19Z">
+    <test name="Default test" duration-ms="55291" started-at="2014-04-03T14:49:08Z" finished-at="2014-04-03T14:50:03Z">
       <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ProgramGuides.ROVITVSchedule.ProgramGuideVerification">
-        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ProgramGuides.ROVITVSchedule.ProgramGuideVerification@4e61bc49]" name="startGridAndHub" is-config="true" duration-ms="12179" started-at="2014-04-02T13:24:37Z" finished-at="2014-04-02T13:24:49Z">
+        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ProgramGuides.ROVITVSchedule.ProgramGuideVerification@6e0031c0]" name="startGridAndHub" is-config="true" duration-ms="11736" started-at="2014-04-03T10:48:56Z" finished-at="2014-04-03T10:49:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startGridAndHub -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ProgramGuides.ROVITVSchedule.ProgramGuideVerification@4e61bc49]" name="startSelenium" is-config="true" duration-ms="2247" started-at="2014-04-02T13:24:49Z" finished-at="2014-04-02T13:24:51Z">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ProgramGuides.ROVITVSchedule.ProgramGuideVerification@6e0031c0]" name="startSelenium" is-config="true" duration-ms="2106" started-at="2014-04-03T10:49:08Z" finished-at="2014-04-03T10:49:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="ProgramGuideVerification_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ProgramGuides.ROVITVSchedule.ProgramGuideVerification@4e61bc49]" name="ProgramGuideVerification_Test" duration-ms="87442" started-at="2014-04-02T13:24:51Z" finished-at="2014-04-02T13:26:18Z">
+        <test-method status="PASS" signature="ProgramGuideVerification_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ProgramGuides.ROVITVSchedule.ProgramGuideVerification@6e0031c0]" name="ProgramGuideVerification_Test" duration-ms="52602" started-at="2014-04-03T10:49:10Z" finished-at="2014-04-03T10:50:03Z">
           <reporter-output>
             <line>
               <![CDATA[Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.]]>
@@ -273,7 +273,7 @@
               <![CDATA[Verify column headers present of 'Date', 'Show', and 'Information'.]]>
             </line>
             <line>
-              <![CDATA[Verify that there is at least one show in the program guide table.]]>
+              <![CDATA[After 8pm, show availability limited.]]>
             </line>
             <line>
               <![CDATA[Mouse over the 'Structure' menu link.]]>
@@ -292,18 +292,18 @@
             </line>
           </reporter-output>
         </test-method> <!-- ProgramGuideVerification_Test -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ProgramGuides.ROVITVSchedule.ProgramGuideVerification@4e61bc49]" name="stopSelenium" is-config="true" duration-ms="570" started-at="2014-04-02T13:26:18Z" finished-at="2014-04-02T13:26:19Z">
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ProgramGuides.ROVITVSchedule.ProgramGuideVerification@6e0031c0]" name="stopSelenium" is-config="true" duration-ms="571" started-at="2014-04-03T10:50:03Z" finished-at="2014-04-03T10:50:03Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=ProgramGuideVerification_Test status=SUCCESS method=ProgramGuideVerification.ProgramGuideVerification_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ProgramGuides.ROVITVSchedule.ProgramGuideVerification@4e61bc49] output=Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.]]]>
+                <![CDATA[[TestResult name=ProgramGuideVerification_Test status=SUCCESS method=ProgramGuideVerification.ProgramGuideVerification_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ProgramGuides.ROVITVSchedule.ProgramGuideVerification@6e0031c0] output=Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ProgramGuides.ROVITVSchedule.ProgramGuideVerification@4e61bc49]" name="stopGridAndHub" is-config="true" duration-ms="355" started-at="2014-04-02T13:26:19Z" finished-at="2014-04-02T13:26:19Z">
+        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ProgramGuides.ROVITVSchedule.ProgramGuideVerification@6e0031c0]" name="stopGridAndHub" is-config="true" duration-ms="359" started-at="2014-04-03T10:50:03Z" finished-at="2014-04-03T10:50:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopGridAndHub -->
