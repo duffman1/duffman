@@ -1,0 +1,23 @@
+<suite name="Pub 7 Consecutive Suite" preserve-order="true">
+
+  	<!--TEST EXECUTION QUEUE-->
+  	<test verbose="1" name="All Consecutive Web Tests" annotations="JDK">
+
+		<!-- Enter group name for specific test scripts, options are "full", "smoke", or "mpx" -->
+		<groups>
+	 		<run>
+	 			<include name="full"/>
+	 		</run>
+		</groups>
+
+		<classes>
+			
+			<!--SETUP-->
+			<class name="com.nbcuni.test.publisher.tests.Setup.TestSetup"/>
+			
+			<!--CONTENT AND ENTITY CREATION AND MANAGEMENT-->
+			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery"/>
+			
+		</classes>
+	</test>
+</suite>
