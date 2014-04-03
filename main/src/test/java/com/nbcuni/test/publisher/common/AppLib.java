@@ -1,7 +1,5 @@
 package com.nbcuni.test.publisher.common;
 
-import com.ibm.icu.text.DateFormat;
-import com.ibm.icu.text.SimpleDateFormat;
 import com.nbcuni.test.publisher.common.Driver.Driver;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import org.testng.Assert;
@@ -11,7 +9,6 @@ import org.openqa.selenium.TakesScreenshot;
 import org.testng.ITestResult;
 import org.testng.Reporter;
 import java.io.File;
-import java.util.Date;
 
 /**************************************************************************.
  * NBC.com Application Library. Copyright
@@ -107,13 +104,10 @@ public class AppLib {
     	
         try {
         	
+        	String methodName = result.getMethod().getMethodName();
+        	
         	String storeScreenshotsTo = config.getPathToScreenshots();
-        	DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
-            Date date = new Date();
-            String fileExtension = dateFormat.format(date).replace("/", "");
-            fileExtension = fileExtension.replace(" ", "");
-            fileExtension = fileExtension.replace(":", "") + ".png";
-            String filePath = storeScreenshotsTo + fileExtension;
+            String filePath = storeScreenshotsTo + methodName + ".png";
 
             Reporter.setCurrentTestResult(result); 
             Reporter.log("Screenshot saved to " + filePath + " ");

@@ -2,14 +2,12 @@ package com.nbcuni.test.publisher.common;
 
 import com.ibm.icu.text.DateFormat;
 import com.ibm.icu.text.SimpleDateFormat;
-
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
-
 import org.apache.commons.io.FileUtils;
 import org.testng.IResultMap;
 import org.testng.ISuite;
@@ -115,6 +113,21 @@ public class CustomReport extends EmailableReporter {
 	    	concurrentFailedTests.removeResult(failedMethodToRemove);
 	    }
 	  
+	    //get the screenshot path of each failed consecutive method
+	    List<String> failedScreenshots = new ArrayList<String>();
+	    for(ITestResult consecutive_failed_result : consecutiveFailedTests.getAllResults())
+	    {
+	    	failedScreenshots.add(config.getPathToScreenshots() + consecutive_failed_result.getMethod().getMethodName() + ".png");
+	    	
+	    }
+	    
+	    //get the screenshot path of each failed concurrent method
+	    for(ITestResult concurrent_failed_result : concurrentFailedTests.getAllResults())
+	    {
+	    	failedScreenshots.add(config.getPathToScreenshots() + concurrent_failed_result.getMethod().getMethodName() + ".png");
+	    	
+	    }
+	    
 	    //generate the report
   	  	super.generateReport(xmlSuites, suites, outputDirectory);
 
@@ -153,7 +166,7 @@ public class CustomReport extends EmailableReporter {
   	  	Integer failedTestCount = consecutiveFailedTests.size() + concurrentFailedTests.size();
   	  	SendEmailReport sendEmailReport = new SendEmailReport();
   	  	try {
-  	  		sendEmailReport.SendEmail(filePath, fileExtension, passedTestCount, failedTestCount);
+  	  		sendEmailReport.SendEmail(filePath, fileExtension, passedTestCount, failedTestCount, failedScreenshots);
   	  	} catch (Exception e) {
   	  		System.out.println("Failed to send report email.");
   	  	}

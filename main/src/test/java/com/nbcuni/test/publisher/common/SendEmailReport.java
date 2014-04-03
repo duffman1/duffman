@@ -1,7 +1,7 @@
 package com.nbcuni.test.publisher.common;
 
+import java.util.List;
 import java.util.Properties;
-
 import javax.activation.DataHandler;
 import javax.activation.DataSource;
 import javax.activation.FileDataSource;
@@ -19,7 +19,7 @@ import javax.mail.internet.MimeMultipart;
 
 public class SendEmailReport {
 
-	public void SendEmail(String pathToReport, String reportName, Integer passedTestsCount, Integer failedTestsCount) {
+	public void SendEmail(String pathToReport, String reportName, Integer passedTestsCount, Integer failedTestsCount, List<String> failedScreenshots) {
 
 		Config config = new Config();
         final String username = config.getConfigValue("GmailUsername");
@@ -69,6 +69,7 @@ public class SendEmailReport {
 
             multipart.addBodyPart(messageBodyPart);
 
+            
             messageBodyPart = new MimeBodyPart();
 
             DataSource source = new FileDataSource(pathToReport);
@@ -78,6 +79,20 @@ public class SendEmailReport {
             messageBodyPart.setFileName(reportName);
 
             multipart.addBodyPart(messageBodyPart);
+            
+            //add each failed screenshot
+            MimeBodyPart screenshotMimeBodyParts = null;
+            for (String failedScreenshot : failedScreenshots) {
+            	
+            	String[] fileName = failedScreenshot.split(config.getPathToScreenshots());
+            	screenshotMimeBodyParts = null;
+                screenshotMimeBodyParts=new MimeBodyPart();
+                DataSource screenshotSource = new FileDataSource(failedScreenshot);
+                screenshotMimeBodyParts.setDataHandler(new DataHandler(screenshotSource));
+                screenshotMimeBodyParts.setFileName(fileName[1]);
+                multipart.addBodyPart(screenshotMimeBodyParts);
+                
+            }
 
             message.setContent(multipart);
 
