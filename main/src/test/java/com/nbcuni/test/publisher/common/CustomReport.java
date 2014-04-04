@@ -117,15 +117,17 @@ public class CustomReport extends EmailableReporter {
 	    List<String> failedScreenshots = new ArrayList<String>();
 	    for(ITestResult consecutive_failed_result : consecutiveFailedTests.getAllResults())
 	    {
-	    	failedScreenshots.add(config.getPathToScreenshots() + consecutive_failed_result.getMethod().getMethodName() + ".png");
-	    	
+	    	if (!failedScreenshots.contains(config.getPathToScreenshots() + consecutive_failed_result.getMethod().getMethodName() + ".png")) {
+	    		failedScreenshots.add(config.getPathToScreenshots() + consecutive_failed_result.getMethod().getMethodName() + ".png");
+	    	}
 	    }
 	    
 	    //get the screenshot path of each failed concurrent method
 	    for(ITestResult concurrent_failed_result : concurrentFailedTests.getAllResults())
 	    {
-	    	failedScreenshots.add(config.getPathToScreenshots() + concurrent_failed_result.getMethod().getMethodName() + ".png");
-	    	
+	    	if (!failedScreenshots.contains(config.getPathToScreenshots() + concurrent_failed_result.getMethod().getMethodName() + ".png")) {	
+	    		failedScreenshots.add(config.getPathToScreenshots() + concurrent_failed_result.getMethod().getMethodName() + ".png");
+	    	}
 	    }
 	    
 	    //generate the report

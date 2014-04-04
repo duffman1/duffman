@@ -48,7 +48,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Pub_7_Concurrent_Suite">
-                    <span>TestNGConcurrentSuiteDemo.xml</span>
+                    <span>TestNGConcurrentSuiteDEMO.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -132,7 +132,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Pub_7_Consecutive_Suite">
-                    <span>TestNGConsecutiveSuiteDemo.xml</span>
+                    <span>TestNGConsecutiveSuiteDEMO.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -216,12 +216,75 @@
                   <a name="CreateCharacterProfile_Test">
                   </a> <!-- CreateCharacterProfile_Test -->
                   <span class="method-name">CreateCharacterProfile_Test</span>
-                  <div class="stack-trace">java.lang.AssertionError: crazy stop here
-	at com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile.CreateCharacterProfile_Test(CreateCharacterProfile.java:31)
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element
+  (Session info: chrome=33.0.1750.152)
+  (Driver info: chromedriver=2.8.241036,platform=Mac OS X 10.9.2 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 30.04 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.2&apos;, java.version: &apos;1.7.0_25&apos;
+Session ID: 59fd7e93642bce40ff147b55b391054c
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.LdmmG8}, rotatable=false, locationContextEnabled=true, version=33.0.1750.152, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
+Command duration or timeout: 30.66 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.2&apos;, java.version: &apos;1.7.0_25&apos;
+Session ID: da197d36-99a3-49fc-a971-7d5c3f115b41
+Driver info: com.nbcuni.test.publisher.common.Driver.Driver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.LdmmG8}, rotatable=false, locationContextEnabled=true, webdriver.remote.sessionid=da197d36-99a3-49fc-a971-7d5c3f115b41, version=33.0.1750.152, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:191)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:554)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:307)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:404)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:344)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:299)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:59)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:34)
+	at com.sun.proxy.$Proxy12.getText(Unknown Source)
+	at com.nbcuni.test.publisher.pageobjects.Content.ContentParent.VerifyMessageStatus(ContentParent.java:88)
+	at com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile.CreateCharacterProfile_Test(CreateCharacterProfile.java:51)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
 	at java.lang.Thread.run(Thread.java:724)
-... Removed 11 stack frames
+Caused by: org.openqa.selenium.remote.ScreenshotException: Screen shot has been taken
+Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.2&apos;, java.version: &apos;1.7.0_25&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:125)
+	... 23 more
+Caused by: org.openqa.selenium.NoSuchElementException: no such element
+  (Session info: chrome=33.0.1750.152)
+  (Driver info: chromedriver=2.8.241036,platform=Mac OS X 10.9.2 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 30.04 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.2&apos;, java.version: &apos;1.7.0_25&apos;
+Session ID: 59fd7e93642bce40ff147b55b391054c
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.LdmmG8}, rotatable=false, locationContextEnabled=true, version=33.0.1750.152, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.2&apos;, java.version: &apos;1.7.0_25&apos;
+Driver info: driver.version: EventFiringWebDriver
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:191)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:554)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:307)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:404)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:344)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:299)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:101)
+	at com.sun.proxy.$Proxy10.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:180)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:47)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:33)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:169)
+	... 3 more
+... Removed 21 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -230,12 +293,75 @@
                   <a name="CreateCharacterProfile_Test">
                   </a> <!-- CreateCharacterProfile_Test -->
                   <span class="method-name">CreateCharacterProfile_Test</span>
-                  <div class="stack-trace">java.lang.AssertionError: crazy stop here
-	at com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile.CreateCharacterProfile_Test(CreateCharacterProfile.java:31)
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element
+  (Session info: chrome=33.0.1750.152)
+  (Driver info: chromedriver=2.8.241036,platform=Mac OS X 10.9.2 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 30.03 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.2&apos;, java.version: &apos;1.7.0_25&apos;
+Session ID: 0ea9ed7081035a8fac226ecec499ddf1
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.6dKVcS}, rotatable=false, locationContextEnabled=true, version=33.0.1750.152, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
+Command duration or timeout: 30.59 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.2&apos;, java.version: &apos;1.7.0_25&apos;
+Session ID: e2797107-a64d-4403-aa9b-1ff2a3a7d50a
+Driver info: com.nbcuni.test.publisher.common.Driver.Driver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.6dKVcS}, rotatable=false, locationContextEnabled=true, webdriver.remote.sessionid=e2797107-a64d-4403-aa9b-1ff2a3a7d50a, version=33.0.1750.152, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:191)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:554)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:307)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:404)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:344)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:299)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:59)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:34)
+	at com.sun.proxy.$Proxy12.getText(Unknown Source)
+	at com.nbcuni.test.publisher.pageobjects.Content.ContentParent.VerifyMessageStatus(ContentParent.java:88)
+	at com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile.CreateCharacterProfile_Test(CreateCharacterProfile.java:51)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
 	at java.lang.Thread.run(Thread.java:724)
-... Removed 11 stack frames
+Caused by: org.openqa.selenium.remote.ScreenshotException: Screen shot has been taken
+Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.2&apos;, java.version: &apos;1.7.0_25&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:125)
+	... 23 more
+Caused by: org.openqa.selenium.NoSuchElementException: no such element
+  (Session info: chrome=33.0.1750.152)
+  (Driver info: chromedriver=2.8.241036,platform=Mac OS X 10.9.2 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 30.03 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.2&apos;, java.version: &apos;1.7.0_25&apos;
+Session ID: 0ea9ed7081035a8fac226ecec499ddf1
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.6dKVcS}, rotatable=false, locationContextEnabled=true, version=33.0.1750.152, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.2&apos;, java.version: &apos;1.7.0_25&apos;
+Driver info: driver.version: EventFiringWebDriver
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:191)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:554)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:307)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:404)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:344)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:299)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:101)
+	at com.sun.proxy.$Proxy10.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:180)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:47)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:33)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:169)
+	... 3 more
+... Removed 21 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -254,7 +380,7 @@
                   <a name="TestSetup_Test">
                   </a> <!-- TestSetup_Test -->
                   <span class="method-name">TestSetup_Test</span>
-                  <div class="stack-trace">java.lang.AssertionError: stop this nonsense
+                  <div class="stack-trace">java.lang.AssertionError: Some craziness here
 	at com.nbcuni.test.publisher.tests.Setup.TestSetup.TestSetup_Test(TestSetup.java:31)
 ... Removed 26 stack frames
 </div> <!-- stack-trace -->
@@ -265,7 +391,7 @@
                   <a name="TestSetup_Test">
                   </a> <!-- TestSetup_Test -->
                   <span class="method-name">TestSetup_Test</span>
-                  <div class="stack-trace">java.lang.AssertionError: stop this nonsense
+                  <div class="stack-trace">java.lang.AssertionError: Some craziness here
 	at com.nbcuni.test.publisher.tests.Setup.TestSetup.TestSetup_Test(TestSetup.java:31)
 ... Removed 26 stack frames
 </div> <!-- stack-trace -->
@@ -278,7 +404,7 @@
         </div> <!-- panel Publisher_7_Test_Suites -->
         <div panel-name="test-xml-Pub_7_Concurrent_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/Users/brandonclark/SQE-TEST-Pub7/main/src/test/resources/TestNGConcurrentSuiteDemo.xml</span>
+            <span class="header-content">/Users/brandonclark/SQE-TEST-Pub7/main/src/test/resources/TestNGConcurrentSuiteDEMO.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -309,14 +435,17 @@
   &lt;parameter name=&quot;RunMobile&quot; value=&quot;false&quot;/&gt;
   &lt;parameter name=&quot;RallyWorkspace&quot; value=&quot;Digital Products&quot;/&gt;
   &lt;parameter name=&quot;SendReportEmailAddress&quot; value=&quot;brandon.clark@nbcuni.com&quot;/&gt;
-  &lt;parameter name=&quot;UploadReportToRally&quot; value=&quot;false&quot;/&gt;
+  &lt;parameter name=&quot;UploadReportToRally&quot; value=&quot;true&quot;/&gt;
   &lt;parameter name=&quot;PathToSikuliImages&quot; value=&quot;/src/test/java/com/nbcuni/test/publisher/lib/sikuli/images/&quot;/&gt;
   &lt;parameter name=&quot;ImplicitWaitTime&quot; value=&quot;30&quot;/&gt;
   &lt;parameter name=&quot;GmailPassword&quot; value=&quot;Pub7NBCUAutoEmailPassword1&quot;/&gt;
   &lt;parameter name=&quot;LocalWebDriverHubPort&quot; value=&quot;4444&quot;/&gt;
-  &lt;parameter name=&quot;AppURL&quot; value=&quot;http://qa5.qa.nbcupublisher7.publisher7.com&quot;/&gt;
+  &lt;parameter name=&quot;AppURL&quot; value=&quot;http://qa4.qa.nbcupublisher7.publisher7.com&quot;/&gt;
   &lt;parameter name=&quot;SikuliImageWaitTime&quot; value=&quot;60&quot;/&gt;
   &lt;parameter name=&quot;MPXUsername&quot; value=&quot;mpx/AdminPub7QA&quot;/&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;com.nbcuni.test.publisher.common.CustomReport&quot;/&gt;
+  &lt;/listeners&gt;
   &lt;test name=&quot;All Concurrent Web Tests&quot;&gt;
     &lt;groups&gt;
       &lt;run&gt;
@@ -333,7 +462,7 @@
         </div> <!-- panel -->
         <div panel-name="test-xml-Pub_7_Consecutive_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/Users/brandonclark/SQE-TEST-Pub7/main/src/test/resources/TestNGConsecutiveSuiteDemo.xml</span>
+            <span class="header-content">/Users/brandonclark/SQE-TEST-Pub7/main/src/test/resources/TestNGConsecutiveSuiteDEMO.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -364,14 +493,17 @@
   &lt;parameter name=&quot;RunMobile&quot; value=&quot;false&quot;/&gt;
   &lt;parameter name=&quot;RallyWorkspace&quot; value=&quot;Digital Products&quot;/&gt;
   &lt;parameter name=&quot;SendReportEmailAddress&quot; value=&quot;brandon.clark@nbcuni.com&quot;/&gt;
-  &lt;parameter name=&quot;UploadReportToRally&quot; value=&quot;false&quot;/&gt;
+  &lt;parameter name=&quot;UploadReportToRally&quot; value=&quot;true&quot;/&gt;
   &lt;parameter name=&quot;PathToSikuliImages&quot; value=&quot;/src/test/java/com/nbcuni/test/publisher/lib/sikuli/images/&quot;/&gt;
   &lt;parameter name=&quot;ImplicitWaitTime&quot; value=&quot;30&quot;/&gt;
   &lt;parameter name=&quot;GmailPassword&quot; value=&quot;Pub7NBCUAutoEmailPassword1&quot;/&gt;
   &lt;parameter name=&quot;LocalWebDriverHubPort&quot; value=&quot;4444&quot;/&gt;
-  &lt;parameter name=&quot;AppURL&quot; value=&quot;http://qa5.qa.nbcupublisher7.publisher7.com&quot;/&gt;
+  &lt;parameter name=&quot;AppURL&quot; value=&quot;http://qa4.qa.nbcupublisher7.publisher7.com&quot;/&gt;
   &lt;parameter name=&quot;SikuliImageWaitTime&quot; value=&quot;60&quot;/&gt;
   &lt;parameter name=&quot;MPXUsername&quot; value=&quot;mpx/AdminPub7QA&quot;/&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;com.nbcuni.test.publisher.common.CustomReport&quot;/&gt;
+  &lt;/listeners&gt;
   &lt;test name=&quot;All Consecutive Web Tests&quot;&gt;
     &lt;groups&gt;
       &lt;run&gt;
@@ -420,12 +552,12 @@
   &lt;parameter name=&quot;RallyWorkspace&quot; value=&quot;Digital Products&quot;/&gt;
   &lt;parameter name=&quot;SendReportEmailAddress&quot; value=&quot;brandon.clark@nbcuni.com&quot;/&gt;
   &lt;parameter name=&quot;PathToSikuliImages&quot; value=&quot;/src/test/java/com/nbcuni/test/publisher/lib/sikuli/images/&quot;/&gt;
-  &lt;parameter name=&quot;UploadReportToRally&quot; value=&quot;false&quot;/&gt;
+  &lt;parameter name=&quot;UploadReportToRally&quot; value=&quot;true&quot;/&gt;
   &lt;parameter name=&quot;ImplicitWaitTime&quot; value=&quot;30&quot;/&gt;
   &lt;parameter name=&quot;GmailPassword&quot; value=&quot;Pub7NBCUAutoEmailPassword1&quot;/&gt;
   &lt;parameter name=&quot;LocalWebDriverHubPort&quot; value=&quot;4444&quot;/&gt;
   &lt;parameter name=&quot;SikuliImageWaitTime&quot; value=&quot;60&quot;/&gt;
-  &lt;parameter name=&quot;AppURL&quot; value=&quot;http://qa5.qa.nbcupublisher7.publisher7.com&quot;/&gt;
+  &lt;parameter name=&quot;AppURL&quot; value=&quot;http://qa4.qa.nbcupublisher7.publisher7.com&quot;/&gt;
   &lt;parameter name=&quot;MPXUsername&quot; value=&quot;mpx/AdminPub7QA&quot;/&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;com.nbcuni.test.publisher.common.CustomReport&quot;/&gt;
@@ -550,16 +682,16 @@ data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'CreateCharacterProfile_Test')
 data.setCell(0, 2, 'com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile')
-data.setCell(0, 3, 4889);
+data.setCell(0, 3, 43910);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'CreateCharacterProfile_Test')
 data.setCell(1, 2, 'com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile')
-data.setCell(1, 3, 4526);
+data.setCell(1, 3, 42962);
 window.suiteTableData['Pub_7_Concurrent_Suite']= { tableData: data, tableDiv: 'times-div-Pub_7_Concurrent_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 9 seconds</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Pub_7_Concurrent_Suite">
               </div> <!-- times-div-Pub_7_Concurrent_Suite -->
             </div> <!-- times-div -->
@@ -583,16 +715,16 @@ data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'TestSetup_Test')
 data.setCell(0, 2, 'com.nbcuni.test.publisher.tests.Setup.TestSetup')
-data.setCell(0, 3, 4711);
+data.setCell(0, 3, 5092);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'TestSetup_Test')
 data.setCell(1, 2, 'com.nbcuni.test.publisher.tests.Setup.TestSetup')
-data.setCell(1, 3, 4621);
+data.setCell(1, 3, 3459);
 window.suiteTableData['Pub_7_Consecutive_Suite']= { tableData: data, tableDiv: 'times-div-Pub_7_Consecutive_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 9 seconds</span>
+              <span class="suite-total-time">Total running time: 8 seconds</span>
               <div id="times-div-Pub_7_Consecutive_Suite">
               </div> <!-- times-div-Pub_7_Consecutive_Suite -->
             </div> <!-- times-div -->
@@ -630,10 +762,31 @@ return data;
             <div class="reporter-method-div">
               <span class="reporter-method-name">CreateCharacterProfile_Test</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.</span>
+                <span class="reporter-method-output">Open url 'http://qa4.qa.nbcupublisher7.publisher7.com'.</span>
                 <span class="reporter-method-output">Enter the user's email address in the 'Email Address' text box.</span>
                 <span class="reporter-method-output">Enter the user's password in the 'Password' text box.</span>
                 <span class="reporter-method-output">Click the 'Login' button.</span>
+                <span class="reporter-method-output">Mouse over the 'Content' menu link.</span>
+                <span class="reporter-method-output">Mouse over the 'Add content' menu link.</span>
+                <span class="reporter-method-output">Click the 'Character Profile' menu link.</span>
+                <span class="reporter-method-output">Switch to the active frame titled 'Create Character Profile dialog'.</span>
+                <span class="reporter-method-output">Enter '441634b364d7410' in the 'Character First Name' text box.</span>
+                <span class="reporter-method-output">Click the Cover Photo 'Select' button.</span>
+                <span class="reporter-method-output">Switch to the select file frame.</span>
+                <span class="reporter-method-output">Enter the file path for file upload.</span>
+                <span class="reporter-method-output">Click the 'Upload' button.</span>
+                <span class="reporter-method-output">Wait for the file link to be visible after upload.</span>
+                <span class="reporter-method-output">Click the 'Next' button.</span>
+                <span class="reporter-method-output">Click the 'Public Local Files' radio button.</span>
+                <span class="reporter-method-output">Click the 'Next' button.</span>
+                <span class="reporter-method-output">Verify the file image 'HanSolo' is present.</span>
+                <span class="reporter-method-output">Verify the img is loaded and visible.</span>
+                <span class="reporter-method-output">Click the 'Save' button.</span>
+                <span class="reporter-method-output">Switch to frame titled 'Create Character Profile'.</span>
+                <span class="reporter-method-output">Assert that img source of the Cover Photo contains 'HanSolo'.</span>
+                <span class="reporter-method-output">Assert the the img is loaded and visible.</span>
+                <span class="reporter-method-output">Click the 'Save' button.</span>
+                <span class="reporter-method-output">Verify success message of 'Character Profile 441634b364d7410 has been created.' is present.</span>
                 <span class="reporter-method-output">Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCharacterProfile_Test.png </span>
                 <span class="reporter-method-output"><br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCharacterProfile_Test.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCharacterProfile_Test.png' height='500' width='500'/> </a></span>
               </div> <!-- reporter-method-output-div -->
@@ -641,10 +794,31 @@ return data;
             <div class="reporter-method-div">
               <span class="reporter-method-name">CreateCharacterProfile_Test</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.</span>
+                <span class="reporter-method-output">Open url 'http://qa4.qa.nbcupublisher7.publisher7.com'.</span>
                 <span class="reporter-method-output">Enter the user's email address in the 'Email Address' text box.</span>
                 <span class="reporter-method-output">Enter the user's password in the 'Password' text box.</span>
                 <span class="reporter-method-output">Click the 'Login' button.</span>
+                <span class="reporter-method-output">Mouse over the 'Content' menu link.</span>
+                <span class="reporter-method-output">Mouse over the 'Add content' menu link.</span>
+                <span class="reporter-method-output">Click the 'Character Profile' menu link.</span>
+                <span class="reporter-method-output">Switch to the active frame titled 'Create Character Profile dialog'.</span>
+                <span class="reporter-method-output">Enter 'b35bc545aaad442' in the 'Character First Name' text box.</span>
+                <span class="reporter-method-output">Click the Cover Photo 'Select' button.</span>
+                <span class="reporter-method-output">Switch to the select file frame.</span>
+                <span class="reporter-method-output">Enter the file path for file upload.</span>
+                <span class="reporter-method-output">Click the 'Upload' button.</span>
+                <span class="reporter-method-output">Wait for the file link to be visible after upload.</span>
+                <span class="reporter-method-output">Click the 'Next' button.</span>
+                <span class="reporter-method-output">Click the 'Public Local Files' radio button.</span>
+                <span class="reporter-method-output">Click the 'Next' button.</span>
+                <span class="reporter-method-output">Verify the file image 'HanSolo' is present.</span>
+                <span class="reporter-method-output">Verify the img is loaded and visible.</span>
+                <span class="reporter-method-output">Click the 'Save' button.</span>
+                <span class="reporter-method-output">Switch to frame titled 'Create Character Profile'.</span>
+                <span class="reporter-method-output">Assert that img source of the Cover Photo contains 'HanSolo'.</span>
+                <span class="reporter-method-output">Assert the the img is loaded and visible.</span>
+                <span class="reporter-method-output">Click the 'Save' button.</span>
+                <span class="reporter-method-output">Verify success message of 'Character Profile b35bc545aaad442 has been created.' is present.</span>
                 <span class="reporter-method-output">Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCharacterProfile_Test.png </span>
                 <span class="reporter-method-output"><br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCharacterProfile_Test.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCharacterProfile_Test.png' height='500' width='500'/> </a></span>
               </div> <!-- reporter-method-output-div -->
@@ -659,7 +833,7 @@ return data;
             <div class="reporter-method-div">
               <span class="reporter-method-name">TestSetup_Test</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.</span>
+                <span class="reporter-method-output">Open url 'http://qa4.qa.nbcupublisher7.publisher7.com'.</span>
                 <span class="reporter-method-output">Enter the user's email address in the 'Email Address' text box.</span>
                 <span class="reporter-method-output">Enter the user's password in the 'Password' text box.</span>
                 <span class="reporter-method-output">Click the 'Login' button.</span>
@@ -670,7 +844,7 @@ return data;
             <div class="reporter-method-div">
               <span class="reporter-method-name">TestSetup_Test</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.</span>
+                <span class="reporter-method-output">Open url 'http://qa4.qa.nbcupublisher7.publisher7.com'.</span>
                 <span class="reporter-method-output">Enter the user's email address in the 'Email Address' text box.</span>
                 <span class="reporter-method-output">Enter the user's password in the 'Password' text box.</span>
                 <span class="reporter-method-output">Click the 'Login' button.</span>
@@ -721,74 +895,74 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
                 <span class="method-name">startSelenium</span>
-                <span class="method-start">12167 ms</span>
+                <span class="method-start">12335 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">TestSetup_Test</span>
-                <span class="method-start">14321 ms</span>
+                <span class="method-start">14760 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">stopSelenium([TestResult name=TestSetup_Test status=FAILURE method=TestSetup.TestSetup_Test()[pri:0, instance:com...)</span>
-                <span class="method-start">18944 ms</span>
+                <span class="method-start">19854 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">startSelenium</span>
-                <span class="method-start">19738 ms</span>
+                <span class="method-start">20583 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">TestSetup_Test</span>
-                <span class="method-start">21542 ms</span>
+                <span class="method-start">22631 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">stopSelenium([TestResult name=TestSetup_Test status=FAILURE method=TestSetup.TestSetup_Test()[pri:0, instance:com...)</span>
-                <span class="method-start">26254 ms</span>
+                <span class="method-start">26091 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-suite after">
                 <span class="method-name">stopGridAndHub</span>
-                <span class="method-start">27017 ms</span>
+                <span class="method-start">26854 ms</span>
               </div> <!-- configuration-suite after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">startGridAndHub</span>
-                <span class="method-start">27375 ms</span>
+                <span class="method-start">27226 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
                 <span class="method-name">startSelenium</span>
-                <span class="method-start">32772 ms</span>
+                <span class="method-start">32640 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">CreateCharacterProfile_Test</span>
-                <span class="method-start">34539 ms</span>
+                <span class="method-start">34765 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">stopSelenium([TestResult name=CreateCharacterProfile_Test status=FAILURE method=CreateCharacterProfile.CreateChar...)</span>
-                <span class="method-start">39428 ms</span>
+                <span class="method-start">78677 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">startSelenium</span>
-                <span class="method-start">40172 ms</span>
+                <span class="method-start">79397 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">CreateCharacterProfile_Test</span>
-                <span class="method-start">41986 ms</span>
+                <span class="method-start">81572 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">stopSelenium([TestResult name=CreateCharacterProfile_Test status=FAILURE method=CreateCharacterProfile.CreateChar...)</span>
-                <span class="method-start">46513 ms</span>
+                <span class="method-start">124535 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-suite after">
                 <span class="method-name">stopGridAndHub</span>
-                <span class="method-start">47273 ms</span>
+                <span class="method-start">125344 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
@@ -805,74 +979,74 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
                 <span class="method-name">startSelenium</span>
-                <span class="method-start">12167 ms</span>
+                <span class="method-start">12335 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">TestSetup_Test</span>
-                <span class="method-start">14321 ms</span>
+                <span class="method-start">14760 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">stopSelenium([TestResult name=TestSetup_Test status=FAILURE method=TestSetup.TestSetup_Test()[pri:0, instance:com...)</span>
-                <span class="method-start">18944 ms</span>
+                <span class="method-start">19854 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">startSelenium</span>
-                <span class="method-start">19738 ms</span>
+                <span class="method-start">20583 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">TestSetup_Test</span>
-                <span class="method-start">21542 ms</span>
+                <span class="method-start">22631 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">stopSelenium([TestResult name=TestSetup_Test status=FAILURE method=TestSetup.TestSetup_Test()[pri:0, instance:com...)</span>
-                <span class="method-start">26254 ms</span>
+                <span class="method-start">26091 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-suite after">
                 <span class="method-name">stopGridAndHub</span>
-                <span class="method-start">27017 ms</span>
+                <span class="method-start">26854 ms</span>
               </div> <!-- configuration-suite after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">startGridAndHub</span>
-                <span class="method-start">27375 ms</span>
+                <span class="method-start">27226 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
                 <span class="method-name">startSelenium</span>
-                <span class="method-start">32772 ms</span>
+                <span class="method-start">32640 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">CreateCharacterProfile_Test</span>
-                <span class="method-start">34539 ms</span>
+                <span class="method-start">34765 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">stopSelenium([TestResult name=CreateCharacterProfile_Test status=FAILURE method=CreateCharacterProfile.CreateChar...)</span>
-                <span class="method-start">39428 ms</span>
+                <span class="method-start">78677 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">startSelenium</span>
-                <span class="method-start">40172 ms</span>
+                <span class="method-start">79397 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">CreateCharacterProfile_Test</span>
-                <span class="method-start">41986 ms</span>
+                <span class="method-start">81572 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">stopSelenium([TestResult name=CreateCharacterProfile_Test status=FAILURE method=CreateCharacterProfile.CreateChar...)</span>
-                <span class="method-start">46513 ms</span>
+                <span class="method-start">124535 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-suite after">
                 <span class="method-name">stopGridAndHub</span>
-                <span class="method-start">47273 ms</span>
+                <span class="method-start">125344 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
@@ -889,74 +1063,74 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
                 <span class="method-name">startSelenium</span>
-                <span class="method-start">12167 ms</span>
+                <span class="method-start">12335 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">TestSetup_Test</span>
-                <span class="method-start">14321 ms</span>
+                <span class="method-start">14760 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">stopSelenium([TestResult name=TestSetup_Test status=FAILURE method=TestSetup.TestSetup_Test()[pri:0, instance:com...)</span>
-                <span class="method-start">18944 ms</span>
+                <span class="method-start">19854 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">startSelenium</span>
-                <span class="method-start">19738 ms</span>
+                <span class="method-start">20583 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">TestSetup_Test</span>
-                <span class="method-start">21542 ms</span>
+                <span class="method-start">22631 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">stopSelenium([TestResult name=TestSetup_Test status=FAILURE method=TestSetup.TestSetup_Test()[pri:0, instance:com...)</span>
-                <span class="method-start">26254 ms</span>
+                <span class="method-start">26091 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-suite after">
                 <span class="method-name">stopGridAndHub</span>
-                <span class="method-start">27017 ms</span>
+                <span class="method-start">26854 ms</span>
               </div> <!-- configuration-suite after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">startGridAndHub</span>
-                <span class="method-start">27375 ms</span>
+                <span class="method-start">27226 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
                 <span class="method-name">startSelenium</span>
-                <span class="method-start">32772 ms</span>
+                <span class="method-start">32640 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">CreateCharacterProfile_Test</span>
-                <span class="method-start">34539 ms</span>
+                <span class="method-start">34765 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">stopSelenium([TestResult name=CreateCharacterProfile_Test status=FAILURE method=CreateCharacterProfile.CreateChar...)</span>
-                <span class="method-start">39428 ms</span>
+                <span class="method-start">78677 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">startSelenium</span>
-                <span class="method-start">40172 ms</span>
+                <span class="method-start">79397 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">CreateCharacterProfile_Test</span>
-                <span class="method-start">41986 ms</span>
+                <span class="method-start">81572 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">stopSelenium([TestResult name=CreateCharacterProfile_Test status=FAILURE method=CreateCharacterProfile.CreateChar...)</span>
-                <span class="method-start">46513 ms</span>
+                <span class="method-start">124535 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-suite after">
                 <span class="method-name">stopGridAndHub</span>
-                <span class="method-start">47273 ms</span>
+                <span class="method-start">125344 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

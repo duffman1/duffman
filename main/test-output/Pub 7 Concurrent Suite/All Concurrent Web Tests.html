@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Apr 03 18:35:02 EDT 2014</td>
+<td>Started on:</td><td>Fri Apr 04 10:52:30 EDT 2014</td>
 </tr>
-<tr><td>Total time:</td><td>14 seconds (14497 ms)</td>
+<tr><td>Total time:</td><td>92 seconds (92668 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td>full </td>
 </tr><tr>
@@ -76,27 +76,141 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile.CreateCharacterProfile_Test()'><b>CreateCharacterProfile_Test</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile<br/>
-<a href="#Output-1009921535" onClick='toggleBox("Output-1009921535", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-853062126" onClick='toggleBox("Output-853062126", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1009921535" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1009921535">
-Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.<br/>
+<a href="#Output-853062126" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-853062126">
+Open url 'http://qa4.qa.nbcupublisher7.publisher7.com'.<br/>
 Enter the user's email address in the 'Email Address' text box.<br/>
 Enter the user's password in the 'Password' text box.<br/>
 Click the 'Login' button.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Add content' menu link.<br/>
+Click the 'Character Profile' menu link.<br/>
+Switch to the active frame titled 'Create Character Profile dialog'.<br/>
+Enter '441634b364d7410' in the 'Character First Name' text box.<br/>
+Click the Cover Photo 'Select' button.<br/>
+Switch to the select file frame.<br/>
+Enter the file path for file upload.<br/>
+Click the 'Upload' button.<br/>
+Wait for the file link to be visible after upload.<br/>
+Click the 'Next' button.<br/>
+Click the 'Public Local Files' radio button.<br/>
+Click the 'Next' button.<br/>
+Verify the file image 'HanSolo' is present.<br/>
+Verify the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Switch to frame titled 'Create Character Profile'.<br/>
+Assert that img source of the Cover Photo contains 'HanSolo'.<br/>
+Assert the the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'Character Profile 441634b364d7410 has been created.' is present.<br/>
 Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCharacterProfile_Test.png <br/>
 <br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCharacterProfile_Test.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCharacterProfile_Test.png' height='500' width='500'/> </a><br/>
 </div>
 </td>
-<td><div><pre>java.lang.AssertionError: crazy stop here
-	at com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile.CreateCharacterProfile_Test(CreateCharacterProfile.java:31)
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element
+  (Session info: chrome=33.0.1750.152)
+  (Driver info: chromedriver=2.8.241036,platform=Mac OS X 10.9.2 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 30.04 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.2&apos;, java.version: &apos;1.7.0_25&apos;
+Session ID: 59fd7e93642bce40ff147b55b391054c
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.LdmmG8}, rotatable=false, locationContextEnabled=true, version=33.0.1750.152, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
+Command duration or timeout: 30.66 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.2&apos;, java.version: &apos;1.7.0_25&apos;
+Session ID: da197d36-99a3-49fc-a971-7d5c3f115b41
+Driver info: com.nbcuni.test.publisher.common.Driver.Driver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.LdmmG8}, rotatable=false, locationContextEnabled=true, webdriver.remote.sessionid=da197d36-99a3-49fc-a971-7d5c3f115b41, version=33.0.1750.152, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:191)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:554)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:307)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:404)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:344)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:299)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:59)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:34)
+	at com.sun.proxy.$Proxy12.getText(Unknown Source)
+	at com.nbcuni.test.publisher.pageobjects.Content.ContentParent.VerifyMessageStatus(ContentParent.java:88)
+	at com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile.CreateCharacterProfile_Test(CreateCharacterProfile.java:51)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
 	at java.lang.Thread.run(Thread.java:724)
-... Removed 11 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1009921535", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1009921535'><pre>java.lang.AssertionError: crazy stop here
-	at org.testng.Assert.fail(Assert.java:94)
-	at com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile.CreateCharacterProfile_Test(CreateCharacterProfile.java:31)
+Caused by: org.openqa.selenium.remote.ScreenshotException: Screen shot has been taken
+Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.2&apos;, java.version: &apos;1.7.0_25&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:125)
+	... 23 more
+Caused by: org.openqa.selenium.NoSuchElementException: no such element
+  (Session info: chrome=33.0.1750.152)
+  (Driver info: chromedriver=2.8.241036,platform=Mac OS X 10.9.2 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 30.04 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.2&apos;, java.version: &apos;1.7.0_25&apos;
+Session ID: 59fd7e93642bce40ff147b55b391054c
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.LdmmG8}, rotatable=false, locationContextEnabled=true, version=33.0.1750.152, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.2&apos;, java.version: &apos;1.7.0_25&apos;
+Driver info: driver.version: EventFiringWebDriver
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:191)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:554)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:307)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:404)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:344)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:299)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:101)
+	at com.sun.proxy.$Proxy10.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:180)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:47)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:33)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:169)
+	... 3 more
+... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace853062126", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace853062126'><pre>org.openqa.selenium.NoSuchElementException: no such element
+  (Session info: chrome=33.0.1750.152)
+  (Driver info: chromedriver=2.8.241036,platform=Mac OS X 10.9.2 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 30.04 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.2&apos;, java.version: &apos;1.7.0_25&apos;
+Session ID: 59fd7e93642bce40ff147b55b391054c
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.LdmmG8}, rotatable=false, locationContextEnabled=true, version=33.0.1750.152, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
+Command duration or timeout: 30.66 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.2&apos;, java.version: &apos;1.7.0_25&apos;
+Session ID: da197d36-99a3-49fc-a971-7d5c3f115b41
+Driver info: com.nbcuni.test.publisher.common.Driver.Driver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.LdmmG8}, rotatable=false, locationContextEnabled=true, webdriver.remote.sessionid=da197d36-99a3-49fc-a971-7d5c3f115b41, version=33.0.1750.152, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:191)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:554)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:307)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:404)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:344)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:299)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:59)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:34)
+	at com.sun.proxy.$Proxy12.getText(Unknown Source)
+	at com.nbcuni.test.publisher.pageobjects.Content.ContentParent.VerifyMessageStatus(ContentParent.java:88)
+	at com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile.CreateCharacterProfile_Test(CreateCharacterProfile.java:51)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -110,32 +224,189 @@ Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screensho
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
 	at java.lang.Thread.run(Thread.java:724)
+Caused by: org.openqa.selenium.remote.ScreenshotException: Screen shot has been taken
+Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.2&apos;, java.version: &apos;1.7.0_25&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:125)
+	... 23 more
+Caused by: org.openqa.selenium.NoSuchElementException: no such element
+  (Session info: chrome=33.0.1750.152)
+  (Driver info: chromedriver=2.8.241036,platform=Mac OS X 10.9.2 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 30.04 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.2&apos;, java.version: &apos;1.7.0_25&apos;
+Session ID: 59fd7e93642bce40ff147b55b391054c
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.LdmmG8}, rotatable=false, locationContextEnabled=true, version=33.0.1750.152, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.2&apos;, java.version: &apos;1.7.0_25&apos;
+Driver info: driver.version: EventFiringWebDriver
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:191)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:554)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:307)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:404)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:344)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:299)
+	at sun.reflect.GeneratedMethodAccessor18.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:101)
+	at com.sun.proxy.$Proxy10.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:180)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:47)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:33)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:169)
+	... 3 more
 </pre></div></td>
-<td>4</td>
-<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@24177336</td></tr>
+<td>43</td>
+<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@7d6904c4</td></tr>
 <tr>
 <td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile.CreateCharacterProfile_Test()'><b>CreateCharacterProfile_Test</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile<br/>
-<a href="#Output-1128593349" onClick='toggleBox("Output-1128593349", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-416166283" onClick='toggleBox("Output-416166283", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1128593349" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1128593349">
-Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.<br/>
+<a href="#Output-416166283" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-416166283">
+Open url 'http://qa4.qa.nbcupublisher7.publisher7.com'.<br/>
 Enter the user's email address in the 'Email Address' text box.<br/>
 Enter the user's password in the 'Password' text box.<br/>
 Click the 'Login' button.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Add content' menu link.<br/>
+Click the 'Character Profile' menu link.<br/>
+Switch to the active frame titled 'Create Character Profile dialog'.<br/>
+Enter 'b35bc545aaad442' in the 'Character First Name' text box.<br/>
+Click the Cover Photo 'Select' button.<br/>
+Switch to the select file frame.<br/>
+Enter the file path for file upload.<br/>
+Click the 'Upload' button.<br/>
+Wait for the file link to be visible after upload.<br/>
+Click the 'Next' button.<br/>
+Click the 'Public Local Files' radio button.<br/>
+Click the 'Next' button.<br/>
+Verify the file image 'HanSolo' is present.<br/>
+Verify the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Switch to frame titled 'Create Character Profile'.<br/>
+Assert that img source of the Cover Photo contains 'HanSolo'.<br/>
+Assert the the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'Character Profile b35bc545aaad442 has been created.' is present.<br/>
 Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCharacterProfile_Test.png <br/>
 <br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCharacterProfile_Test.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCharacterProfile_Test.png' height='500' width='500'/> </a><br/>
 </div>
 </td>
-<td><div><pre>java.lang.AssertionError: crazy stop here
-	at com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile.CreateCharacterProfile_Test(CreateCharacterProfile.java:31)
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element
+  (Session info: chrome=33.0.1750.152)
+  (Driver info: chromedriver=2.8.241036,platform=Mac OS X 10.9.2 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 30.03 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.2&apos;, java.version: &apos;1.7.0_25&apos;
+Session ID: 0ea9ed7081035a8fac226ecec499ddf1
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.6dKVcS}, rotatable=false, locationContextEnabled=true, version=33.0.1750.152, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
+Command duration or timeout: 30.59 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.2&apos;, java.version: &apos;1.7.0_25&apos;
+Session ID: e2797107-a64d-4403-aa9b-1ff2a3a7d50a
+Driver info: com.nbcuni.test.publisher.common.Driver.Driver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.6dKVcS}, rotatable=false, locationContextEnabled=true, webdriver.remote.sessionid=e2797107-a64d-4403-aa9b-1ff2a3a7d50a, version=33.0.1750.152, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:191)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:554)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:307)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:404)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:344)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:299)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:59)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:34)
+	at com.sun.proxy.$Proxy12.getText(Unknown Source)
+	at com.nbcuni.test.publisher.pageobjects.Content.ContentParent.VerifyMessageStatus(ContentParent.java:88)
+	at com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile.CreateCharacterProfile_Test(CreateCharacterProfile.java:51)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
 	at java.lang.Thread.run(Thread.java:724)
-... Removed 11 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1128593349", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1128593349'><pre>java.lang.AssertionError: crazy stop here
-	at org.testng.Assert.fail(Assert.java:94)
-	at com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile.CreateCharacterProfile_Test(CreateCharacterProfile.java:31)
+Caused by: org.openqa.selenium.remote.ScreenshotException: Screen shot has been taken
+Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.2&apos;, java.version: &apos;1.7.0_25&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:125)
+	... 23 more
+Caused by: org.openqa.selenium.NoSuchElementException: no such element
+  (Session info: chrome=33.0.1750.152)
+  (Driver info: chromedriver=2.8.241036,platform=Mac OS X 10.9.2 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 30.03 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.2&apos;, java.version: &apos;1.7.0_25&apos;
+Session ID: 0ea9ed7081035a8fac226ecec499ddf1
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.6dKVcS}, rotatable=false, locationContextEnabled=true, version=33.0.1750.152, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.2&apos;, java.version: &apos;1.7.0_25&apos;
+Driver info: driver.version: EventFiringWebDriver
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:191)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:554)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:307)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:404)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:344)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:299)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:101)
+	at com.sun.proxy.$Proxy10.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:180)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:47)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:33)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:169)
+	... 3 more
+... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace416166283", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace416166283'><pre>org.openqa.selenium.NoSuchElementException: no such element
+  (Session info: chrome=33.0.1750.152)
+  (Driver info: chromedriver=2.8.241036,platform=Mac OS X 10.9.2 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 30.03 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.2&apos;, java.version: &apos;1.7.0_25&apos;
+Session ID: 0ea9ed7081035a8fac226ecec499ddf1
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.6dKVcS}, rotatable=false, locationContextEnabled=true, version=33.0.1750.152, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
+Command duration or timeout: 30.59 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.2&apos;, java.version: &apos;1.7.0_25&apos;
+Session ID: e2797107-a64d-4403-aa9b-1ff2a3a7d50a
+Driver info: com.nbcuni.test.publisher.common.Driver.Driver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.6dKVcS}, rotatable=false, locationContextEnabled=true, webdriver.remote.sessionid=e2797107-a64d-4403-aa9b-1ff2a3a7d50a, version=33.0.1750.152, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:191)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:554)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:307)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:404)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:344)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:299)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:59)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:34)
+	at com.sun.proxy.$Proxy12.getText(Unknown Source)
+	at com.nbcuni.test.publisher.pageobjects.Content.ContentParent.VerifyMessageStatus(ContentParent.java:88)
+	at com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile.CreateCharacterProfile_Test(CreateCharacterProfile.java:51)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -149,9 +420,52 @@ Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screensho
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
 	at java.lang.Thread.run(Thread.java:724)
+Caused by: org.openqa.selenium.remote.ScreenshotException: Screen shot has been taken
+Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.2&apos;, java.version: &apos;1.7.0_25&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:125)
+	... 23 more
+Caused by: org.openqa.selenium.NoSuchElementException: no such element
+  (Session info: chrome=33.0.1750.152)
+  (Driver info: chromedriver=2.8.241036,platform=Mac OS X 10.9.2 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 30.03 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.2&apos;, java.version: &apos;1.7.0_25&apos;
+Session ID: 0ea9ed7081035a8fac226ecec499ddf1
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.6dKVcS}, rotatable=false, locationContextEnabled=true, version=33.0.1750.152, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.2&apos;, java.version: &apos;1.7.0_25&apos;
+Driver info: driver.version: EventFiringWebDriver
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:191)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:554)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:307)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:404)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:344)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:299)
+	at sun.reflect.GeneratedMethodAccessor18.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:101)
+	at com.sun.proxy.$Proxy10.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:180)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:47)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:33)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:169)
+	... 3 more
 </pre></div></td>
-<td>4</td>
-<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@24177336</td></tr>
+<td>42</td>
+<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@7d6904c4</td></tr>
 </table><p>
 </body>
 </html>

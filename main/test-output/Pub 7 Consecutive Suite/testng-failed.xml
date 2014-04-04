@@ -26,12 +26,12 @@
   <parameter name="RallyWorkspace" value="Digital Products"/>
   <parameter name="SendReportEmailAddress" value="brandon.clark@nbcuni.com"/>
   <parameter name="PathToSikuliImages" value="/src/test/java/com/nbcuni/test/publisher/lib/sikuli/images/"/>
-  <parameter name="UploadReportToRally" value="false"/>
+  <parameter name="UploadReportToRally" value="true"/>
   <parameter name="ImplicitWaitTime" value="30"/>
   <parameter name="GmailPassword" value="Pub7NBCUAutoEmailPassword1"/>
   <parameter name="LocalWebDriverHubPort" value="4444"/>
   <parameter name="SikuliImageWaitTime" value="60"/>
-  <parameter name="AppURL" value="http://qa5.qa.nbcupublisher7.publisher7.com"/>
+  <parameter name="AppURL" value="http://qa4.qa.nbcupublisher7.publisher7.com"/>
   <parameter name="MPXUsername" value="mpx/AdminPub7QA"/>
   <listeners>
     <listener class-name="com.nbcuni.test.publisher.common.CustomReport"/>

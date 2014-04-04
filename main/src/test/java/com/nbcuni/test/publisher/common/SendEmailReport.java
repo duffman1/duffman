@@ -58,40 +58,44 @@ public class SendEmailReport {
             
             BodyPart messageBodyPart = new MimeBodyPart();
 
+            String failedTestScreenshotText = "";
+            if (!failedTestsCount.equals(0)) {
+            	if (failedScreenshots.size() <= 10) {
+            		failedTestScreenshotText = "Screenshots of failures are attached. The screenshot file names match the test names in the attached report. ";
+            	}
+            }
+            
             messageBodyPart.setText("Test run complete against latest build on " + config.getConfigValue("AppURL")
                 + "\n\n Total tests executed = " + totalTestCount.toString()
                 	+ "\n Tests passed = " + passedTestsCount.toString()
                 		+ "\n Tests failed = " + failedTestsCount.toString()
-                			+ "\n\n A detailed report is attached. Iteration Report archives are assigned to task " + config.getConfigValue("RallyTaskID") + "."
+                			+ "\n\n A detailed report is attached. " + failedTestScreenshotText + 
+                				"Iteration Report archives are assigned to task " + config.getConfigValue("RallyTaskID") + "."
                 				+ "\n\n Publisher 7 Automation Team");
 
+            //attach html test report
             Multipart multipart = new MimeMultipart();
-
             multipart.addBodyPart(messageBodyPart);
-
-            
             messageBodyPart = new MimeBodyPart();
-
             DataSource source = new FileDataSource(pathToReport);
-
             messageBodyPart.setDataHandler(new DataHandler(source));
-
             messageBodyPart.setFileName(reportName);
-
             multipart.addBodyPart(messageBodyPart);
             
-            //add each failed screenshot
-            MimeBodyPart screenshotMimeBodyParts = null;
-            for (String failedScreenshot : failedScreenshots) {
+            //add each failed screenshot (if there are less than 10 due to file size restrictions)
+            if (failedScreenshots.size() <= 10) {
+            	MimeBodyPart screenshotMimeBodyParts = null;
+            	for (String failedScreenshot : failedScreenshots) {
             	
-            	String[] fileName = failedScreenshot.split(config.getPathToScreenshots());
-            	screenshotMimeBodyParts = null;
-                screenshotMimeBodyParts=new MimeBodyPart();
-                DataSource screenshotSource = new FileDataSource(failedScreenshot);
-                screenshotMimeBodyParts.setDataHandler(new DataHandler(screenshotSource));
-                screenshotMimeBodyParts.setFileName(fileName[1]);
-                multipart.addBodyPart(screenshotMimeBodyParts);
+            		String[] fileName = failedScreenshot.split(config.getPathToScreenshots());
+            		screenshotMimeBodyParts = null;
+            		screenshotMimeBodyParts=new MimeBodyPart();
+            		DataSource screenshotSource = new FileDataSource(failedScreenshot);
+            		screenshotMimeBodyParts.setDataHandler(new DataHandler(screenshotSource));
+            		screenshotMimeBodyParts.setFileName(fileName[1]);
+            		multipart.addBodyPart(screenshotMimeBodyParts);
                 
+            	}
             }
 
             message.setContent(multipart);
