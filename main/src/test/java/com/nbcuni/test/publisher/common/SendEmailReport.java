@@ -82,17 +82,19 @@ public class SendEmailReport {
             messageBodyPart.setFileName(reportName);
             multipart.addBodyPart(messageBodyPart);
             
-            //add each failed screenshot (if there are less than 10 due to file size restrictions)
-            if (failedScreenshots.size() <= 10) {
+            //add each failed screenshot (if there are less than 20 due to file size restrictions)
+            if (failedScreenshots.size() <= 20) {
             	MimeBodyPart screenshotMimeBodyParts = null;
             	for (String failedScreenshot : failedScreenshots) {
             	
-            		String[] fileName = failedScreenshot.split(config.getPathToScreenshots());
+            		String[] fileNames = failedScreenshot.split("screenshots");
+            		String fileName = fileNames[1].replace("\\", "");
+            		fileName = fileName.replace("/", "");
             		screenshotMimeBodyParts = null;
             		screenshotMimeBodyParts=new MimeBodyPart();
             		DataSource screenshotSource = new FileDataSource(failedScreenshot);
             		screenshotMimeBodyParts.setDataHandler(new DataHandler(screenshotSource));
-            		screenshotMimeBodyParts.setFileName(fileName[1]);
+            		screenshotMimeBodyParts.setFileName(fileName);
             		multipart.addBodyPart(screenshotMimeBodyParts);
                 
             	}
