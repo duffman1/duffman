@@ -2,7 +2,7 @@
 <testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
     <line>
-      <![CDATA[Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.]]>
+      <![CDATA[Open url 'http://qa4.qa.nbcupublisher7.publisher7.com'.]]>
     </line>
     <line>
       <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
@@ -14,123 +14,164 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
+      <![CDATA[Mouse over the 'Configuration' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Media' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Media: thePlatform mpx settings' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.]]>
+    </line>
+    <line>
+      <![CDATA[Get all the selected import account options and store to a list.]]>
+    </line>
+    <line>
+      <![CDATA[Open the mpx platform.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'mpx/AdminPub7QA' in the 'Username' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Pa55word' in the 'Password' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Login' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Upload' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Choose Files' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Movies' button in the OS Upload dialog.]]>
+    </line>
+    <line>
+      <![CDATA[Click the Test Movie in th OS Upload dialog.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Open' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Upload' button in the Upload dialog.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Available Date' label on the right hand side to give focus to the media item.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '3/18/2014 12:00 AM' in the 'Available Date' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Automationb8e0ab34d1' in the 'Title' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '3/31/2014 12:00 AM' in the 'Expiration Date' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Publish' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Publish to Pub 7 Primary' check box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Publish' button from the upload dialog.]]>
+    </line>
+    <line>
+      <![CDATA[Open url 'http://qa4.qa.nbcupublisher7.publisher7.com'.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Status report dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
       <![CDATA[Mouse over the 'Content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Queues' menu link.]]>
+      <![CDATA[Mouse over the 'Files' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Add Promo Queue' menu link.]]>
+      <![CDATA[Click the 'mpxMedia' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Add promo queue queue dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save Queue' button.]]>
+      <![CDATA[Enter title Automationb8e0ab34d1.]]>
     </line>
     <line>
-      <![CDATA[Enter '9b2785c11f6246e' in the 'Title' text box.]]>
+      <![CDATA[Click the 'Apply' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save Queue' button.]]>
+      <![CDATA[Get the text of the first search result set item.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Queues Listing dialog'.]]>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Verify the queue titled '9b2785c11f6246e' is present in the Queues list.]]>
+      <![CDATA[Mouse over the 'Files' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Expand' arrow to extend the edit menu for queue titled '9b2785c11f6246e'.]]>
+      <![CDATA[Click the 'mpxMedia' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Delete' button for the queue titled '9b2785c11f6246e'.]]>
+      <![CDATA[Enter title Automationb8e0ab34d1.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Are you sure you want to delete the Queue 9b2785c11f6246e? dialog'.]]>
+      <![CDATA[Click the 'Apply' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Cancel' link.]]>
+      <![CDATA[Get the title text of every result in the search result set.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Queues Listing dialog'.]]>
+      <![CDATA[For each expected result, assert it is present in the result set.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Expand' arrow to extend the edit menu for queue titled '9b2785c11f6246e'.]]>
+      <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/MPXVideosSchedulingVerificationScheduling_Test.png ]]>
     </line>
     <line>
-      <![CDATA[Click the 'Edit' button for queue titled + '9b2785c11f6246e'.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Edit 9b2785c11f6246e dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '79b6c2150bf64c4' in the 'Title' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Create New Revision' checkbox is checked.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save Queue' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Queues Listing dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the queue titled '79b6c2150bf64c4' is present in the Queues list.]]>
-    </line>
-    <line>
-      <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/BasicUIForCreatingAndRevisingQueues_Test.png ]]>
-    </line>
-    <line>
-      <![CDATA[Failed to capture screenshot]]>
+      <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/MPXVideosSchedulingVerificationScheduling_Test.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/MPXVideosSchedulingVerificationScheduling_Test.png' height='500' width='500'/> </a>]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="60923" started-at="2014-04-07T18:53:51Z" finished-at="2014-04-07T18:54:52Z">
+  <suite name="Default suite" duration-ms="236051" started-at="2014-04-07T22:13:05Z" finished-at="2014-04-07T22:17:01Z">
     <groups>
+      <group name="mpx">
+        <method signature="MPXVideosSchedulingVerificationScheduling.MPXVideosSchedulingVerificationScheduling_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling@56dacb7]" name="MPXVideosSchedulingVerificationScheduling_Test" class="com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling"/>
+      </group> <!-- mpx -->
       <group name="full">
-        <method signature="BasicUIForCreatingAndRevisingQueues.BasicUIForCreatingAndRevisingQueues_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.CreateUpdateRevisionsToQueues.BasicUIForCreatingAndRevisingQueues@4ec26cab]" name="BasicUIForCreatingAndRevisingQueues_Test" class="com.nbcuni.test.publisher.tests.Queues.CreateUpdateRevisionsToQueues.BasicUIForCreatingAndRevisingQueues"/>
+        <method signature="MPXVideosSchedulingVerificationScheduling.MPXVideosSchedulingVerificationScheduling_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling@56dacb7]" name="MPXVideosSchedulingVerificationScheduling_Test" class="com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling"/>
       </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="60923" started-at="2014-04-07T18:53:51Z" finished-at="2014-04-07T18:54:52Z">
-      <class name="com.nbcuni.test.publisher.tests.Queues.CreateUpdateRevisionsToQueues.BasicUIForCreatingAndRevisingQueues">
-        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.CreateUpdateRevisionsToQueues.BasicUIForCreatingAndRevisingQueues@4ec26cab]" name="startGridAndHub" is-config="true" duration-ms="11804" started-at="2014-04-07T14:53:39Z" finished-at="2014-04-07T14:53:51Z">
+    <test name="Default test" duration-ms="236051" started-at="2014-04-07T22:13:05Z" finished-at="2014-04-07T22:17:01Z">
+      <class name="com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling">
+        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling@56dacb7]" name="startGridAndHub" is-config="true" duration-ms="11122" started-at="2014-04-07T18:12:54Z" finished-at="2014-04-07T18:13:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startGridAndHub -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.CreateUpdateRevisionsToQueues.BasicUIForCreatingAndRevisingQueues@4ec26cab]" name="startSelenium" is-config="true" duration-ms="2491" started-at="2014-04-07T14:53:51Z" finished-at="2014-04-07T14:53:54Z">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling@56dacb7]" name="startSelenium" is-config="true" duration-ms="2470" started-at="2014-04-07T18:13:05Z" finished-at="2014-04-07T18:13:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="FAIL" signature="BasicUIForCreatingAndRevisingQueues_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.CreateUpdateRevisionsToQueues.BasicUIForCreatingAndRevisingQueues@4ec26cab]" name="BasicUIForCreatingAndRevisingQueues_Test" duration-ms="57818" started-at="2014-04-07T14:53:54Z" finished-at="2014-04-07T14:54:51Z">
-          <exception class="org.openqa.selenium.WebDriverException">
+        <test-method status="FAIL" signature="MPXVideosSchedulingVerificationScheduling_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling@56dacb7]" name="MPXVideosSchedulingVerificationScheduling_Test" duration-ms="232837" started-at="2014-04-07T18:13:07Z" finished-at="2014-04-07T18:17:00Z">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Build info: version: '2.35.0', revision: '8df0c6bedf70ff9f22c647788f9fe9c8d22210e2', time: '2013-08-17 12:46:41'
-System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.9.2', java.version: '1.7.0_25'
-Session ID: 7aa31673-c9ca-41d6-a41d-449ecc3200b0
-Driver info: com.nbcuni.test.publisher.common.Driver.Driver
-Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.kOdQMy}, rotatable=false, locationContextEnabled=true, webdriver.remote.sessionid=7aa31673-c9ca-41d6-a41d-449ecc3200b0, version=33.0.1750.152, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]]]>
+              <![CDATA[Result 'Automationb8e0ab34d1' is not present in the search result set]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: Build info: version: '2.35.0', revision: '8df0c6bedf70ff9f22c647788f9fe9c8d22210e2', time: '2013-08-17 12:46:41'
-System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.9.2', java.version: '1.7.0_25'
-Session ID: 7aa31673-c9ca-41d6-a41d-449ecc3200b0
-Driver info: com.nbcuni.test.publisher.common.Driver.Driver
-Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.kOdQMy}, rotatable=false, locationContextEnabled=true, webdriver.remote.sessionid=7aa31673-c9ca-41d6-a41d-449ecc3200b0, version=33.0.1750.152, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:191)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:554)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:307)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:404)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:344)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:299)
-	at com.nbcuni.test.publisher.pageobjects.Queues.Queues.QueuesList_Ttl(Queues.java:52)
-	at com.nbcuni.test.publisher.pageobjects.Queues.Queues.VerifyQueuesInList(Queues.java:100)
-	at com.nbcuni.test.publisher.tests.Queues.CreateUpdateRevisionsToQueues.BasicUIForCreatingAndRevisingQueues.BasicUIForCreatingAndRevisingQueues_Test(BasicUIForCreatingAndRevisingQueues.java:84)
+              <![CDATA[java.lang.AssertionError: Result 'Automationb8e0ab34d1' is not present in the search result set
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.nbcuni.test.publisher.pageobjects.Content.SearchFor.VerifySearchResultsPresent(SearchFor.java:160)
+	at com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling.MPXVideosSchedulingVerificationScheduling_Test(MPXVideosSchedulingVerificationScheduling.java:141)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -155,27 +196,12 @@ Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browse
 	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-Caused by: java.lang.NullPointerException
-	at org.openqa.selenium.support.events.EventFiringWebDriver.extractInterfaces(EventFiringWebDriver.java:117)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.access$500(EventFiringWebDriver.java:63)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.<init>(EventFiringWebDriver.java:318)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.<init>(EventFiringWebDriver.java:312)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.createWebElement(EventFiringWebDriver.java:282)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:182)
-	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:47)
-	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:33)
-	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
-	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:169)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
             <line>
-              <![CDATA[Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.]]>
+              <![CDATA[Open url 'http://qa4.qa.nbcupublisher7.publisher7.com'.]]>
             </line>
             <line>
               <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
@@ -187,95 +213,152 @@ Caused by: java.lang.NullPointerException
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
+              <![CDATA[Mouse over the 'Configuration' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Media' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Media: thePlatform mpx settings' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.]]>
+            </line>
+            <line>
+              <![CDATA[Get all the selected import account options and store to a list.]]>
+            </line>
+            <line>
+              <![CDATA[Open the mpx platform.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'mpx/AdminPub7QA' in the 'Username' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Pa55word' in the 'Password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Login' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Upload' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Choose Files' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Movies' button in the OS Upload dialog.]]>
+            </line>
+            <line>
+              <![CDATA[Click the Test Movie in th OS Upload dialog.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Open' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Upload' button in the Upload dialog.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Available Date' label on the right hand side to give focus to the media item.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '3/18/2014 12:00 AM' in the 'Available Date' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Automationb8e0ab34d1' in the 'Title' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '3/31/2014 12:00 AM' in the 'Expiration Date' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Publish' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Publish to Pub 7 Primary' check box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Publish' button from the upload dialog.]]>
+            </line>
+            <line>
+              <![CDATA[Open url 'http://qa4.qa.nbcupublisher7.publisher7.com'.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Status report dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
               <![CDATA[Mouse over the 'Content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Queues' menu link.]]>
+              <![CDATA[Mouse over the 'Files' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Add Promo Queue' menu link.]]>
+              <![CDATA[Click the 'mpxMedia' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Add promo queue queue dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save Queue' button.]]>
+              <![CDATA[Enter title Automationb8e0ab34d1.]]>
             </line>
             <line>
-              <![CDATA[Enter '9b2785c11f6246e' in the 'Title' text box.]]>
+              <![CDATA[Click the 'Apply' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save Queue' button.]]>
+              <![CDATA[Get the text of the first search result set item.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Queues Listing dialog'.]]>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Verify the queue titled '9b2785c11f6246e' is present in the Queues list.]]>
+              <![CDATA[Mouse over the 'Files' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Expand' arrow to extend the edit menu for queue titled '9b2785c11f6246e'.]]>
+              <![CDATA[Click the 'mpxMedia' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Delete' button for the queue titled '9b2785c11f6246e'.]]>
+              <![CDATA[Enter title Automationb8e0ab34d1.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Are you sure you want to delete the Queue 9b2785c11f6246e? dialog'.]]>
+              <![CDATA[Click the 'Apply' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Cancel' link.]]>
+              <![CDATA[Get the title text of every result in the search result set.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Queues Listing dialog'.]]>
+              <![CDATA[For each expected result, assert it is present in the result set.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Expand' arrow to extend the edit menu for queue titled '9b2785c11f6246e'.]]>
+              <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/MPXVideosSchedulingVerificationScheduling_Test.png ]]>
             </line>
             <line>
-              <![CDATA[Click the 'Edit' button for queue titled + '9b2785c11f6246e'.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Edit 9b2785c11f6246e dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '79b6c2150bf64c4' in the 'Title' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Create New Revision' checkbox is checked.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save Queue' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Queues Listing dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the queue titled '79b6c2150bf64c4' is present in the Queues list.]]>
-            </line>
-            <line>
-              <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/BasicUIForCreatingAndRevisingQueues_Test.png ]]>
-            </line>
-            <line>
-              <![CDATA[Failed to capture screenshot]]>
+              <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/MPXVideosSchedulingVerificationScheduling_Test.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/MPXVideosSchedulingVerificationScheduling_Test.png' height='500' width='500'/> </a>]]>
             </line>
           </reporter-output>
-        </test-method> <!-- BasicUIForCreatingAndRevisingQueues_Test -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.CreateUpdateRevisionsToQueues.BasicUIForCreatingAndRevisingQueues@4ec26cab]" name="stopSelenium" is-config="true" duration-ms="592" started-at="2014-04-07T14:54:51Z" finished-at="2014-04-07T14:54:52Z">
+        </test-method> <!-- MPXVideosSchedulingVerificationScheduling_Test -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling@56dacb7]" name="stopSelenium" is-config="true" duration-ms="729" started-at="2014-04-07T18:17:00Z" finished-at="2014-04-07T18:17:01Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=BasicUIForCreatingAndRevisingQueues_Test status=FAILURE method=BasicUIForCreatingAndRevisingQueues.BasicUIForCreatingAndRevisingQueues_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.CreateUpdateRevisionsToQueues.BasicUIForCreatingAndRevisingQueues@4ec26cab] output=Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.]]]>
+                <![CDATA[[TestResult name=MPXVideosSchedulingVerificationScheduling_Test status=FAILURE method=MPXVideosSchedulingVerificationScheduling.MPXVideosSchedulingVerificationScheduling_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling@56dacb7] output=Open url 'http://qa4.qa.nbcupublisher7.publisher7.com'.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.CreateUpdateRevisionsToQueues.BasicUIForCreatingAndRevisingQueues@4ec26cab]" name="stopGridAndHub" is-config="true" duration-ms="371" started-at="2014-04-07T14:54:52Z" finished-at="2014-04-07T14:54:52Z">
+        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling@56dacb7]" name="stopGridAndHub" is-config="true" duration-ms="412" started-at="2014-04-07T18:17:01Z" finished-at="2014-04-07T18:17:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopGridAndHub -->
-      </class> <!-- com.nbcuni.test.publisher.tests.Queues.CreateUpdateRevisionsToQueues.BasicUIForCreatingAndRevisingQueues -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

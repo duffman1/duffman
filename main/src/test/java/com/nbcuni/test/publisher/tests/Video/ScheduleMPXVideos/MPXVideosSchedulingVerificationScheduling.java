@@ -206,7 +206,6 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
         	cron.RunCron(true);
     	    
     	    //Step 30
-    	    overlay.ClickCloseOverlayLnk();
     	    taxonomy.NavigateSite("Content>>Files>>mpxMedia");
     	    overlay.SwitchToActiveFrame();
     	    
