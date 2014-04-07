@@ -115,6 +115,12 @@ public class WorkBench {
         MPXPlayer_Frm.isDisplayed();
     }
     
+    public void VerifyMPXPlayerSourceNotPresent(String source) throws Exception {
+        
+    	Reporter.log("Verify the mpx video player frame source does NOT contain '" + source + "'.");
+        Assert.assertFalse(MPXPlayer_Frm.getAttribute("src").contains(source));
+    }
+    
     public void VerifyFileImagePresent(String imageSrc, String imageIndex) throws Exception {
     	
     	Reporter.log("Assert that img source of the Media Item contains '" + imageSrc + "'.");

@@ -5,6 +5,7 @@ import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Content.SearchFor;
 import com.nbcuni.test.publisher.pageobjects.Content.WorkBench;
+import com.nbcuni.test.publisher.pageobjects.Cron.Cron;
 import com.nbcuni.test.publisher.pageobjects.MPX.EditMPXVideo;
 import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
 import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXAddMedia;
@@ -15,8 +16,10 @@ import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXSearch;
 import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXSelectAccount;
 import com.nbcuni.test.publisher.pageobjects.Queues.ScheduleQueue;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
@@ -116,12 +119,10 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
         	
         	//Step 7
         	applib.openApplication();
-        	taxonomy.NavigateSite("Home>>Run cron");
-    	    overlay.SwitchToActiveFrame();
-    	    contentParent.VerifyMessageStatus("Cron ran successfully.");
+        	Cron cron = new Cron(webDriver, applib);
+        	cron.RunCron(true);
     	    
     	    //Step 8
-    	    overlay.ClickCloseOverlayLnk();
     	    taxonomy.NavigateSite("Content>>Files>>mpxMedia");
     	    overlay.SwitchToActiveFrame();
     	    
@@ -132,8 +133,7 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
     	    overlay.switchToDefaultContent();
     	    if (!searchFor.GetFirstMPXMediaSearchResult().equals(mediaTitle)) {
     	    	Thread.sleep(30000); //pause and re-run cron as sometimes media assets aren't in the first ingested queue
-    	    	taxonomy.NavigateSite("Home>>Run cron");
-        	    contentParent.VerifyMessageStatus("Cron ran successfully.");
+    	    	cron.RunCron(false);
         	    taxonomy.NavigateSite("Content>>Files>>mpxMedia");
         	    searchFor.EnterTitle(mediaTitle);
         	    searchFor.ClickApplyBtn();
@@ -203,9 +203,7 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
     	    
     	    //Step 29
     	    applib.openApplication();
-        	taxonomy.NavigateSite("Home>>Run cron");
-    	    overlay.SwitchToActiveFrame();
-    	    contentParent.VerifyMessageStatus("Cron ran successfully.");
+        	cron.RunCron(true);
     	    
     	    //Step 30
     	    overlay.ClickCloseOverlayLnk();

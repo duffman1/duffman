@@ -11,6 +11,7 @@ import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.Content.SearchFor;
+import com.nbcuni.test.publisher.pageobjects.Cron.Cron;
 import com.nbcuni.test.publisher.pageobjects.ErrorChecking.ErrorChecking;
 import com.nbcuni.test.publisher.pageobjects.MPX.MPXMedia;
 import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
@@ -107,8 +108,8 @@ public class DeleteMultipleAccounts extends ParentTest{
             mpxMedia.SelectMPXPlayerForAccount1("Auditude Demo player");
             mpxMedia.ClickSyncMPXMediaNowLnk();
             contentParent.VerifyMessageStatus("Processed video import/update manually for all accounts.");
-        	taxonomy.NavigateSite("Home>>Run cron");
-        	contentParent.VerifyMessageStatus("Cron ran successfully.");
+        	Cron cron = new Cron(webDriver, applib);
+        	cron.RunCron(true);
     	    taxonomy.NavigateSite("Content>>Files>>mpxMedia");
     	    searchFor.EnterTitle("Automation");
     	    searchFor.ClickApplyBtn();

@@ -7,6 +7,7 @@ import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Content.AddFile;
 import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.Content.SearchFor;
+import com.nbcuni.test.publisher.pageobjects.Cron.Cron;
 import com.nbcuni.test.publisher.pageobjects.FileTypes.FileTypes;
 import com.nbcuni.test.publisher.pageobjects.FileTypes.ManageFileDisplay;
 import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
@@ -15,6 +16,7 @@ import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXLogin;
 import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXPublishMedia;
 import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXSelectAccount;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -115,10 +117,8 @@ public class ThumbnailsAreNotUpdated extends ParentTest{
                 
                 //Step 13
                 applib.openApplication();
-                taxonomy.NavigateSite("Home>>Run cron");
-        	    overlay.SwitchToActiveFrame();
-        	    contentParent.VerifyMessageStatus("Cron ran successfully.");
-        	    overlay.ClickCloseOverlayLnk();
+                Cron cron = new Cron(webDriver, applib);
+                cron.RunCron(true);
         		
         		//Step 14
         	    taxonomy.NavigateSite("Content>>Files>>mpxMedia");
@@ -129,8 +129,7 @@ public class ThumbnailsAreNotUpdated extends ParentTest{
         	    overlay.switchToDefaultContent();
         	    if (!searchFor.GetFirstMPXMediaSearchResult().equals(mediaTitle)) {
         	    	Thread.sleep(30000); //pause and re-run cron as sometimes media assets aren't in the first ingested queue
-        	    	taxonomy.NavigateSite("Home>>Run cron");
-            	    contentParent.VerifyMessageStatus("Cron ran successfully.");
+        	    	cron.RunCron(false);
             	    taxonomy.NavigateSite("Content>>Files>>mpxMedia");
             	    searchFor.EnterTitle(mediaTitle);
             	    searchFor.ClickApplyBtn();

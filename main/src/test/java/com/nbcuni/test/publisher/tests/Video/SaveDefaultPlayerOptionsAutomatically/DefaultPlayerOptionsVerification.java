@@ -92,6 +92,9 @@ public class DefaultPlayerOptionsVerification extends ParentTest{
         		WorkBench workBench = new WorkBench(webDriver, applib);
         		workBench.VerifyMPXPlayerPresent();
         		
+        		//Test Case TC1812
+        		workBench.VerifyMPXPlayerSourceNotPresent("embed");
+        		
         		//Step 20 through 21 - N/A
         	}
         	else {

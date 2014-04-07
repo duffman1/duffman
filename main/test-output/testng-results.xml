@@ -2,7 +2,7 @@
 <testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
     <line>
-      <![CDATA[Open url 'http://qa4.qa.nbcupublisher7.publisher7.com'.]]>
+      <![CDATA[Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.]]>
     </line>
     <line>
       <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
@@ -14,55 +14,109 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Modules' menu link.]]>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to frame titled 'Modules'.]]>
+      <![CDATA[Mouse over the 'Queues' menu link.]]>
     </line>
     <line>
-      <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/TestSetup_Test.png ]]>
+      <![CDATA[Click the 'Add Promo Queue' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Add promo queue queue dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save Queue' button.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '9b2785c11f6246e' in the 'Title' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save Queue' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Queues Listing dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the queue titled '9b2785c11f6246e' is present in the Queues list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Expand' arrow to extend the edit menu for queue titled '9b2785c11f6246e'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Delete' button for the queue titled '9b2785c11f6246e'.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Are you sure you want to delete the Queue 9b2785c11f6246e? dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Cancel' link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Queues Listing dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Expand' arrow to extend the edit menu for queue titled '9b2785c11f6246e'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Edit' button for queue titled + '9b2785c11f6246e'.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Edit 9b2785c11f6246e dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '79b6c2150bf64c4' in the 'Title' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Create New Revision' checkbox is checked.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save Queue' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Queues Listing dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the queue titled '79b6c2150bf64c4' is present in the Queues list.]]>
+    </line>
+    <line>
+      <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/BasicUIForCreatingAndRevisingQueues_Test.png ]]>
     </line>
     <line>
       <![CDATA[Failed to capture screenshot]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="11826" started-at="2014-04-07T15:18:09Z" finished-at="2014-04-07T15:18:21Z">
+  <suite name="Default suite" duration-ms="60923" started-at="2014-04-07T18:53:51Z" finished-at="2014-04-07T18:54:52Z">
     <groups>
-      <group name="mpx">
-        <method signature="TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@63dc6270]" name="TestSetup_Test" class="com.nbcuni.test.publisher.tests.Setup.TestSetup"/>
-      </group> <!-- mpx -->
       <group name="full">
-        <method signature="TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@63dc6270]" name="TestSetup_Test" class="com.nbcuni.test.publisher.tests.Setup.TestSetup"/>
+        <method signature="BasicUIForCreatingAndRevisingQueues.BasicUIForCreatingAndRevisingQueues_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.CreateUpdateRevisionsToQueues.BasicUIForCreatingAndRevisingQueues@4ec26cab]" name="BasicUIForCreatingAndRevisingQueues_Test" class="com.nbcuni.test.publisher.tests.Queues.CreateUpdateRevisionsToQueues.BasicUIForCreatingAndRevisingQueues"/>
       </group> <!-- full -->
-      <group name="smoke">
-        <method signature="TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@63dc6270]" name="TestSetup_Test" class="com.nbcuni.test.publisher.tests.Setup.TestSetup"/>
-      </group> <!-- smoke -->
     </groups>
-    <test name="Default test" duration-ms="11826" started-at="2014-04-07T15:18:09Z" finished-at="2014-04-07T15:18:21Z">
-      <class name="com.nbcuni.test.publisher.tests.Setup.TestSetup">
-        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@63dc6270]" name="startGridAndHub" is-config="true" duration-ms="11914" started-at="2014-04-07T11:17:57Z" finished-at="2014-04-07T11:18:09Z">
+    <test name="Default test" duration-ms="60923" started-at="2014-04-07T18:53:51Z" finished-at="2014-04-07T18:54:52Z">
+      <class name="com.nbcuni.test.publisher.tests.Queues.CreateUpdateRevisionsToQueues.BasicUIForCreatingAndRevisingQueues">
+        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.CreateUpdateRevisionsToQueues.BasicUIForCreatingAndRevisingQueues@4ec26cab]" name="startGridAndHub" is-config="true" duration-ms="11804" started-at="2014-04-07T14:53:39Z" finished-at="2014-04-07T14:53:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startGridAndHub -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@63dc6270]" name="startSelenium" is-config="true" duration-ms="2512" started-at="2014-04-07T11:18:09Z" finished-at="2014-04-07T11:18:11Z">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.CreateUpdateRevisionsToQueues.BasicUIForCreatingAndRevisingQueues@4ec26cab]" name="startSelenium" is-config="true" duration-ms="2491" started-at="2014-04-07T14:53:51Z" finished-at="2014-04-07T14:53:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="FAIL" signature="TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@63dc6270]" name="TestSetup_Test" duration-ms="8686" started-at="2014-04-07T11:18:11Z" finished-at="2014-04-07T11:18:20Z">
+        <test-method status="FAIL" signature="BasicUIForCreatingAndRevisingQueues_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.CreateUpdateRevisionsToQueues.BasicUIForCreatingAndRevisingQueues@4ec26cab]" name="BasicUIForCreatingAndRevisingQueues_Test" duration-ms="57818" started-at="2014-04-07T14:53:54Z" finished-at="2014-04-07T14:54:51Z">
           <exception class="org.openqa.selenium.WebDriverException">
             <message>
               <![CDATA[Build info: version: '2.35.0', revision: '8df0c6bedf70ff9f22c647788f9fe9c8d22210e2', time: '2013-08-17 12:46:41'
 System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.9.2', java.version: '1.7.0_25'
-Session ID: 5533691f-879a-4a47-8f3b-ad221a4ff25a
+Session ID: 7aa31673-c9ca-41d6-a41d-449ecc3200b0
 Driver info: com.nbcuni.test.publisher.common.Driver.Driver
-Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.fDhQh9}, rotatable=false, locationContextEnabled=true, webdriver.remote.sessionid=5533691f-879a-4a47-8f3b-ad221a4ff25a, version=33.0.1750.152, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]]]>
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.kOdQMy}, rotatable=false, locationContextEnabled=true, webdriver.remote.sessionid=7aa31673-c9ca-41d6-a41d-449ecc3200b0, version=33.0.1750.152, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.WebDriverException: Build info: version: '2.35.0', revision: '8df0c6bedf70ff9f22c647788f9fe9c8d22210e2', time: '2013-08-17 12:46:41'
 System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.9.2', java.version: '1.7.0_25'
-Session ID: 5533691f-879a-4a47-8f3b-ad221a4ff25a
+Session ID: 7aa31673-c9ca-41d6-a41d-449ecc3200b0
 Driver info: com.nbcuni.test.publisher.common.Driver.Driver
-Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.fDhQh9}, rotatable=false, locationContextEnabled=true, webdriver.remote.sessionid=5533691f-879a-4a47-8f3b-ad221a4ff25a, version=33.0.1750.152, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.kOdQMy}, rotatable=false, locationContextEnabled=true, webdriver.remote.sessionid=7aa31673-c9ca-41d6-a41d-449ecc3200b0, version=33.0.1750.152, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -74,9 +128,9 @@ Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browse
 	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:404)
 	at org.openqa.selenium.By$ByXPath.findElement(By.java:344)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:299)
-	at com.nbcuni.test.publisher.pageobjects.Overlay.Dialog_Frm(Overlay.java:46)
-	at com.nbcuni.test.publisher.pageobjects.Overlay.SwitchToFrame(Overlay.java:66)
-	at com.nbcuni.test.publisher.tests.Setup.TestSetup.TestSetup_Test(TestSetup.java:31)
+	at com.nbcuni.test.publisher.pageobjects.Queues.Queues.QueuesList_Ttl(Queues.java:52)
+	at com.nbcuni.test.publisher.pageobjects.Queues.Queues.VerifyQueuesInList(Queues.java:100)
+	at com.nbcuni.test.publisher.tests.Queues.CreateUpdateRevisionsToQueues.BasicUIForCreatingAndRevisingQueues.BasicUIForCreatingAndRevisingQueues_Test(BasicUIForCreatingAndRevisingQueues.java:84)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -121,7 +175,7 @@ Caused by: java.lang.NullPointerException
           </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
             <line>
-              <![CDATA[Open url 'http://qa4.qa.nbcupublisher7.publisher7.com'.]]>
+              <![CDATA[Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.]]>
             </line>
             <line>
               <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
@@ -133,35 +187,95 @@ Caused by: java.lang.NullPointerException
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Modules' menu link.]]>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to frame titled 'Modules'.]]>
+              <![CDATA[Mouse over the 'Queues' menu link.]]>
             </line>
             <line>
-              <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/TestSetup_Test.png ]]>
+              <![CDATA[Click the 'Add Promo Queue' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Add promo queue queue dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save Queue' button.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '9b2785c11f6246e' in the 'Title' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save Queue' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Queues Listing dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the queue titled '9b2785c11f6246e' is present in the Queues list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Expand' arrow to extend the edit menu for queue titled '9b2785c11f6246e'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Delete' button for the queue titled '9b2785c11f6246e'.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Are you sure you want to delete the Queue 9b2785c11f6246e? dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Cancel' link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Queues Listing dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Expand' arrow to extend the edit menu for queue titled '9b2785c11f6246e'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Edit' button for queue titled + '9b2785c11f6246e'.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Edit 9b2785c11f6246e dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '79b6c2150bf64c4' in the 'Title' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Create New Revision' checkbox is checked.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save Queue' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Queues Listing dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the queue titled '79b6c2150bf64c4' is present in the Queues list.]]>
+            </line>
+            <line>
+              <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/BasicUIForCreatingAndRevisingQueues_Test.png ]]>
             </line>
             <line>
               <![CDATA[Failed to capture screenshot]]>
             </line>
           </reporter-output>
-        </test-method> <!-- TestSetup_Test -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@63dc6270]" name="stopSelenium" is-config="true" duration-ms="602" started-at="2014-04-07T11:18:20Z" finished-at="2014-04-07T11:18:21Z">
+        </test-method> <!-- BasicUIForCreatingAndRevisingQueues_Test -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.CreateUpdateRevisionsToQueues.BasicUIForCreatingAndRevisingQueues@4ec26cab]" name="stopSelenium" is-config="true" duration-ms="592" started-at="2014-04-07T14:54:51Z" finished-at="2014-04-07T14:54:52Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=TestSetup_Test status=FAILURE method=TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@63dc6270] output=Open url 'http://qa4.qa.nbcupublisher7.publisher7.com'.]]]>
+                <![CDATA[[TestResult name=BasicUIForCreatingAndRevisingQueues_Test status=FAILURE method=BasicUIForCreatingAndRevisingQueues.BasicUIForCreatingAndRevisingQueues_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.CreateUpdateRevisionsToQueues.BasicUIForCreatingAndRevisingQueues@4ec26cab] output=Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@63dc6270]" name="stopGridAndHub" is-config="true" duration-ms="381" started-at="2014-04-07T11:18:21Z" finished-at="2014-04-07T11:18:21Z">
+        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.CreateUpdateRevisionsToQueues.BasicUIForCreatingAndRevisingQueues@4ec26cab]" name="stopGridAndHub" is-config="true" duration-ms="371" started-at="2014-04-07T14:54:52Z" finished-at="2014-04-07T14:54:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopGridAndHub -->
-      </class> <!-- com.nbcuni.test.publisher.tests.Setup.TestSetup -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Queues.CreateUpdateRevisionsToQueues.BasicUIForCreatingAndRevisingQueues -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

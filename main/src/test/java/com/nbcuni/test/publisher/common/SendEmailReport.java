@@ -60,7 +60,7 @@ public class SendEmailReport {
 
             String failedTestScreenshotText = "";
             if (!failedTestsCount.equals(0)) {
-            	if (failedScreenshots.size() <= 10) {
+            	if (failedScreenshots.size() <= 20) {
             		failedTestScreenshotText = "Screenshots of failures are attached. The screenshot file names match the test names in the attached report. ";
             	}
             }

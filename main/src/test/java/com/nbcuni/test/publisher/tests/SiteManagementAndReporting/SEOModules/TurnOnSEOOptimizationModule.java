@@ -1,7 +1,9 @@
 package com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SEOModules;
 
 import java.util.Arrays;
+
 import org.testng.annotations.Test;
+
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Modules;
@@ -9,6 +11,7 @@ import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Configuration.XMLSiteMap;
 import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.Content.CreateDefaultContent;
+import com.nbcuni.test.publisher.pageobjects.Cron.Cron;
 import com.nbcuni.test.publisher.pageobjects.Structure.ContentTypeStructure;
 
 public class TurnOnSEOOptimizationModule extends ParentTest {
@@ -58,11 +61,9 @@ public class TurnOnSEOOptimizationModule extends ParentTest {
 		System.out.println(PublishedPostTitle);
 		
 		//Step 6
-		taxonomy.NavigateSite("Home>>Run cron");
-    	overlay.SwitchToActiveFrame();
-    	contentParent.VerifyMessageStatus("Cron ran successfully.");
-    	overlay.ClickCloseOverlayLnk();
-			
+		Cron cron = new Cron(webDriver, applib);
+		cron.RunCron(true);
+		
 		//Step 7
 		taxonomy.NavigateSite("Configuration>>Search and metadata>>XML sitemap>>Rebuild links");
 		overlay.SwitchToActiveFrame();

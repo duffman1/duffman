@@ -3,11 +3,13 @@ package com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Set;
+
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Content.PublishingOptions;
 import com.nbcuni.test.publisher.pageobjects.Content.SearchFor;
 import com.nbcuni.test.publisher.pageobjects.Content.WorkBench;
+import com.nbcuni.test.publisher.pageobjects.Cron.Cron;
 import com.nbcuni.test.publisher.pageobjects.ErrorChecking.ErrorChecking;
 import com.nbcuni.test.publisher.pageobjects.MPX.EditMPXVideo;
 import com.nbcuni.test.publisher.pageobjects.MPX.MPXMedia;
@@ -19,6 +21,7 @@ import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXLogin;
 import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXSearch;
 import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXSelectAccount;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
+
 import org.testng.Assert;
 import org.openqa.selenium.NoSuchElementException;
 import org.testng.annotations.Test;
@@ -101,10 +104,10 @@ public class NotificationPlayerUnavailability extends ParentTest{
         	    searchFor.EnterTitle(playerTitle);
                 searchFor.ClickApplyBtn();
                 overlay.switchToDefaultContent();
+                Cron cron = new Cron(webDriver, applib);
                 if (!searchFor.GetFirstMPXPlayerSearchResult().equals(playerTitle)) {
         	    	Thread.sleep(10000); //pause and re-run cron as sometimes media assets aren't in the first ingested queue
-        	    	taxonomy.NavigateSite("Home>>Run cron");
-            	    contentParent.VerifyMessageStatus("Cron ran successfully.");
+        	    	cron.RunCron(false);
             	    taxonomy.NavigateSite("Content>>Files>>mpxPlayers");
             	    searchFor.EnterTitle(playerTitle);
                     searchFor.ClickApplyBtn();
@@ -145,10 +148,7 @@ public class NotificationPlayerUnavailability extends ParentTest{
             	applib.openApplication();
             	
             	//Step 5
-            	taxonomy.NavigateSite("Home>>Run cron");
-            	overlay.SwitchToActiveFrame();
-            	contentParent.VerifyMessageStatus("Cron ran successfully.");
-            	overlay.ClickCloseOverlayLnk();
+            	cron.RunCron(true);
             	
         	    //Step 6
         	    taxonomy.NavigateSite("Content>>Files>>mpxPlayers");
@@ -163,10 +163,7 @@ public class NotificationPlayerUnavailability extends ParentTest{
         	    	
         	    	Thread.sleep(10000); //pause and re-run cron as this step can be flaky and sometimes require a second cron run.
         	    	overlay.switchToDefaultContent();
-        	    	taxonomy.NavigateSite("Home>>Run cron");
-        	    	overlay.SwitchToActiveFrame();
-        	    	contentParent.VerifyMessageStatus("Cron ran successfully.");
-        	    	overlay.ClickCloseOverlayLnk();
+        	    	cron.RunCron(true);
         	    	taxonomy.NavigateSite("Content>>Files>>mpxPlayers");
         	    	overlay.SwitchToActiveFrame();
         	    	errorChecking.VerifyMPXPlayerDisabled(playerTitle);
@@ -243,10 +240,7 @@ public class NotificationPlayerUnavailability extends ParentTest{
             	webDriver.switchTo().window(parentWindow);
             	overlay.SwitchToActiveFrame();
             	overlay.ClickCloseOverlayLnk();
-            	taxonomy.NavigateSite("Home>>Run cron");
-        	    overlay.SwitchToActiveFrame();
-        	    contentParent.VerifyMessageStatus("Cron ran successfully.");
-        	    overlay.ClickCloseOverlayLnk();
+            	cron.RunCron(true);
         	    
         	    //Step 17
         	    taxonomy.NavigateSite("Content>>Files>>mpxPlayers");
@@ -257,10 +251,7 @@ public class NotificationPlayerUnavailability extends ParentTest{
         	    catch (AssertionError e) {
         	    	Thread.sleep(10000); //pause and re-run cron as this step can be flaky and sometimes require a second cron run.
         	    	overlay.switchToDefaultContent();
-        	    	taxonomy.NavigateSite("Home>>Run cron");
-        	    	overlay.SwitchToActiveFrame();
-        	    	contentParent.VerifyMessageStatus("Cron ran successfully.");
-        	    	overlay.ClickCloseOverlayLnk();
+        	    	cron.RunCron(true);
         	    	taxonomy.NavigateSite("Content>>Files>>mpxPlayers");
         	    	overlay.SwitchToActiveFrame();
         	    	contentParent.VerifyPageContentNotPresent(Arrays.asList("An MPXplayer that's in use (" + playerTitle + ") has been disabled in MPX."));

@@ -118,7 +118,7 @@ public class MPXMediaSyncVerification extends ParentTest{
             contentParent.VerifyMessageStatus("Processed video import/update manually for all accounts.");
             
             //Step 6
-            Cron cron = new Cron(webDriver);
+            Cron cron = new Cron(webDriver, applib);
             cron.ClickRunCronToCompleteImportLnk();
             overlay.SwitchToActiveFrame();
             cron.ClickRunCronBtn();

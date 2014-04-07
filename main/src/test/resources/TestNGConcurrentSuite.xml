@@ -1,4 +1,4 @@
-<suite name="Pub 7 Concurrent Suite" parallel="classes" thread-count="4">
+<suite name="Pub 7 Concurrent Suite" parallel="classes" thread-count="1">
 
   	<!--TEST EXECUTION QUEUE-->
   	<test verbose="1" name="All Concurrent Web Tests" annotations="JDK">
@@ -6,7 +6,7 @@
 		<!-- Enter group name for specific test scripts, options are "full", "smoke", or "mpx" -->
 		<groups>
 	 		<run>
-	 			<include name="full"/>
+	 			<include name="mpx"/>
 	 		</run>
 		</groups>
 
@@ -39,7 +39,6 @@
 			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.ProvideUniqueURLImages.DisplayUniqueURLEachAssetEditForm"/>
 			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.IntegrateFocalPointModule.FocalPointModule"/>
 			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentAndEntityPreview.PreviewContentItemsIntheFuturefromContentandWorkbenchViews"/>
-			
 			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CloneANode.NodeCloneModuleTesting"/>
 			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentEntityModerationStatesWorkflows.MultiEditorPublishingWorkflow"/>
 			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.SoftLengthLimit.AddCharacterCountOptionTextFields"/>
