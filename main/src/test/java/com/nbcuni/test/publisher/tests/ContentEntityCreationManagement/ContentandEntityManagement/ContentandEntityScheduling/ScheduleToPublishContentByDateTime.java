@@ -10,11 +10,14 @@ import com.nbcuni.test.publisher.pageobjects.Content.RevisionState;
 import com.nbcuni.test.publisher.pageobjects.Content.Revisions;
 import com.nbcuni.test.publisher.pageobjects.Content.WorkBench;
 import com.nbcuni.test.publisher.pageobjects.Queues.ScheduleQueue;
+
 import org.testng.annotations.Test;
+
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.TimeZone;
 
 public class ScheduleToPublishContentByDateTime extends ParentTest {
 
@@ -54,9 +57,8 @@ public class ScheduleToPublishContentByDateTime extends ParentTest {
         workBench.VerifyWorkBenchTabPresent("Schedule");
 
         //Step 4
-        Revisions revisions = new Revisions(webDriver, applib);
-        revisions.ClickRevisionTab();
-        overlay.SwitchToFrame("Revisions dialog");
+        workBench.ClickWorkBenchTab("Revisions");
+        overlay.SwitchToActiveFrame();
         RevisionState revisionstate = new RevisionState(webDriver);
         revisionstate.VerifyRevisionCount(1);
 
@@ -69,8 +71,7 @@ public class ScheduleToPublishContentByDateTime extends ParentTest {
         
         //Step 6
         workBench.ClickWorkBenchTab("Edit Draft");
-        overlay.switchToDefaultContent();
-        overlay.SwitchToFrame("Edit Post "+ postTitle + " dialog");
+        overlay.SwitchToActiveFrame();
         BasicInformation basicInformation = new BasicInformation(webDriver);
         basicInformation.EnterSynopsis();
         overlay.SwitchToActiveFrame();
@@ -85,7 +86,7 @@ public class ScheduleToPublishContentByDateTime extends ParentTest {
         
         //Step 8
         workBench.ClickWorkBenchTab("Revisions");
-        overlay.SwitchToFrame("Revisions dialog");
+        overlay.SwitchToActiveFrame();
         revisionstate.VerifyRevisionCount(2);
 
         //Step 9
@@ -97,29 +98,34 @@ public class ScheduleToPublishContentByDateTime extends ParentTest {
         //Step 10
         scheduleQueue.SelectRevision(postTitle);
         scheduleQueue.SelectOperation("Moderate to Published");
-        Calendar cal = Calendar.getInstance();
-        cal.add(Calendar.DATE, 10);
-        Date date = cal.getTime();
+        Calendar cal10DaysFuture = Calendar.getInstance();
+        cal10DaysFuture.add(Calendar.DATE, 10);
+        Date date10DaysFuture = cal10DaysFuture.getTime();
         SimpleDateFormat sdfDate = new SimpleDateFormat("MM/dd/yyyy");
-        String sDate = sdfDate.format(date);
-        scheduleQueue.EnterDate(sDate);
+        sdfDate.setTimeZone(TimeZone.getTimeZone("UTC"));
+        String sdfDate10DaysFuture = sdfDate.format(date10DaysFuture);
+        scheduleQueue.EnterDate(sdfDate10DaysFuture);
         scheduleQueue.EnterTime("05:00 PM");
         scheduleQueue.ClickScheduleBtn();
         overlay.SwitchToActiveFrame();
         contentParent.VerifyMessageStatus("The scheduled revision operation has been saved");
 
-         //Step 11 //TODO - this step needs additional work and validation as time allows
+        //Step 11
         overlay.SwitchToActiveFrame();
         scheduleQueue.VerifyScheduledQueue(postTitle);
         scheduleQueue.VerifyScheduledQueue("Moderate to Publish");
-        scheduleQueue.VerifyScheduledQueue(sDate + " - 05:00 PM");
+        scheduleQueue.VerifyScheduledQueue(sdfDate10DaysFuture + " - 05:00 PM");
         scheduleQueue.ClickRunNowLnk();
-        overlay.switchToDefaultContent();
-        overlay.SwitchToFrame(postTitle + " dialog");
+        overlay.SwitchToActiveFrame();
         scheduleQueue.VerifyScheduledQueue("Moderate to Published");
         scheduleQueue.VerifyScheduledQueue("Completed");
+        Revisions revisions = new Revisions(webDriver, applib);
         revisions.ClickRevisionTab();
         overlay.SwitchToActiveFrame();
-        //revisionstate.VerifyRevisionState("Revision was set from Draft to Published on " + sDate);
-        }
+        Calendar calToday = Calendar.getInstance();
+        Date dateToday = calToday.getTime();
+        String sdfDateToday = sdfDate.format(dateToday);
+        contentParent.VerifyPageContentPresent(Arrays.asList("Revision was set from Draft to Published on " + sdfDateToday));
+        
+    }
 }

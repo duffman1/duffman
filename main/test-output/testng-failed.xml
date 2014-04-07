@@ -1,47 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Pub 7 Consecutive Suite]">
-  <parameter name="ReRunOnFailure" value="true"/>
-  <parameter name="LocalAppiumHubPort" value="4724"/>
-  <parameter name="Device" value="Iphone Simulator"/>
-  <parameter name="Admin1Password" value="pa55word"/>
-  <parameter name="ReRunOnFailureCount" value="1"/>
-  <parameter name="RallyUrl" value="https://rally1.rallydev.com"/>
-  <parameter name="ErrorCheckingEnabled" value="true"/>
-  <parameter name="SendReportAutoEmails" value="true"/>
-  <parameter name="RallyUsername" value="brandon.clark@nbcuni.com"/>
-  <parameter name="Admin1Username" value="admin@publisher.nbcuni.com"/>
-  <parameter name="Browser" value="chrome"/>
-  <parameter name="GmailUsername" value="Pub7NBCUAutoEmailUser1@gmail.com"/>
-  <parameter name="PathToScreenshots" value="/test-output/screenshots/"/>
-  <parameter name="PageLoadWaitTime" value="180"/>
-  <parameter name="MPXUrl" value="http://mpx.theplatform.com/"/>
-  <parameter name="RallyProject" value="Publisher 7"/>
-  <parameter name="PathToMediaContent" value="/src/test/java/com/nbcuni/test/publisher/content/MediaFiles/"/>
-  <parameter name="RallyPassword" value="tufNewcyd4#"/>
-  <parameter name="PathToReports" value="/test-output/reports/"/>
-  <parameter name="MPXPassword" value="Pa55word"/>
-  <parameter name="RallyTaskID" value="TA32944"/>
-  <parameter name="RunMobile" value="false"/>
-  <parameter name="RallyWorkspace" value="Digital Products"/>
-  <parameter name="SendReportEmailAddress" value="brandon.clark@nbcuni.com"/>
-  <parameter name="PathToSikuliImages" value="/src/test/java/com/nbcuni/test/publisher/lib/sikuli/images/"/>
-  <parameter name="UploadReportToRally" value="true"/>
-  <parameter name="ImplicitWaitTime" value="30"/>
-  <parameter name="GmailPassword" value="Pub7NBCUAutoEmailPassword1"/>
-  <parameter name="LocalWebDriverHubPort" value="4444"/>
-  <parameter name="SikuliImageWaitTime" value="60"/>
-  <parameter name="AppURL" value="http://qa4.qa.nbcupublisher7.publisher7.com"/>
-  <parameter name="MPXUsername" value="mpx/AdminPub7QA"/>
-  <listeners>
-    <listener class-name="com.nbcuni.test.publisher.common.CustomReport"/>
-  </listeners>
-  <test name="All Consecutive Web Tests(failed)">
-    <groups>
-      <run>
-        <include name="full"/>
-      </run>
-    </groups>
+<suite name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
     <classes>
       <class name="com.nbcuni.test.publisher.tests.Setup.TestSetup">
         <methods>
@@ -53,5 +13,5 @@
         </methods>
       </class> <!-- com.nbcuni.test.publisher.tests.Setup.TestSetup -->
     </classes>
-  </test> <!-- All Consecutive Web Tests(failed) -->
-</suite> <!-- Failed suite [Pub 7 Consecutive Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

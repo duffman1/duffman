@@ -1,107 +1,60 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title>TestNG Report</title>
-<style type="text/css">
-table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}
-td,th {border:1px solid #009;padding:.25em .5em}
-.result th {vertical-align:bottom}
-.param th {padding-left:1em;padding-right:1em}
-.param td {padding-left:.5em;padding-right:2em}
-.stripe td,.stripe th {background-color: #E6EBF9}
-.numi,.numi_attn {text-align:right}
-.total td {font-weight:bold}
-.passedodd td {background-color: #0A0}
-.passedeven td {background-color: #3F3}
-.skippedodd td {background-color: #CCC}
-.skippedodd td {background-color: #DDD}
-.failedodd td,.numi_attn {background-color: #F33}
-.failedeven td,.stripe .numi_attn {background-color: #D00}
-.stacktrace {white-space:pre;font-family:monospace}
-.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}
-</style>
-</head>
-<body>
-<table cellspacing="0" cellpadding="0" class="testOverview">
-<tr><th>Test</th><th>Methods<br/>Passed</th><th>Scenarios<br/>Passed</th><th># skipped</th><th># failed</th><th>Total<br/>Time</th><th>Included<br/>Groups</th><th>Excluded<br/>Groups</th></tr>
-<tr><th colspan="8">Pub 7 Concurrent Suite</th></tr>
-<tr><td style="text-align:left;padding-right:2em"><a href="#t1">All Concurrent Web Tests</a></td><td class="numi">1</td><td class="numi">1</td><td class="numi">0</td><td class="numi">0</td><td class="numi">18.5 seconds</td><td class="numi">full </td><td class="numi"></td></tr>
-<tr><th colspan="8">Pub 7 Consecutive Suite</th></tr>
-<tr><td style="text-align:left;padding-right:2em"><a href="#t2">All Consecutive Web Tests</a></td><td class="numi">0</td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">2</td><td class="numi">13.3 seconds</td><td class="numi">full </td><td class="numi"></td></tr>
-<tr><th colspan="8">Publisher 7 Test Suites</th></tr>
-<tr class="total"><td>Total</td>
-<td class="numi">1</td><td class="numi">1</td><td class="numi">0</td><td class="numi_attn">2</td><td class="numi">37.5 seconds</td><td colspan="2">&nbsp;</td></tr>
-</table>
-<table cellspacing="0" cellpadding="0" class="methodOverview" id="summary">
-<tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
-<tr><th colspan="5">Pub 7 Concurrent Suite</th></tr>
-<tr id="t1"><th colspan="5">All Concurrent Web Tests &#8212; passed</th></tr>
-<tr class="passedodd"><td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile</td><td><a href="#m1"><b>CreateCharacterProfile_Test</b> (full) </a></td><td class="numi">1</td><td>1396710319956</td><td class="numi">15816</td></tr>
-<tr><th colspan="5">Pub 7 Consecutive Suite</th></tr>
-<tr id="t2"><th colspan="5">All Consecutive Web Tests &#8212; failed</th></tr>
-<tr class="failedodd"><td rowspan="2">com.nbcuni.test.publisher.tests.Setup.TestSetup</td><td><a href="#m2"><b>TestSetup_Test</b> (mpx, full, smoke) </a></td><td class="numi">2</td><td>1396710301623</td><td class="numi">9709</td></tr><tr class="failedodd"><td><a href="#m3"><b>TestSetup_Test</b> (mpx, full, smoke) </a></td><td class="numi">2</td><td>1396710301623</td><td class="numi">9709</td></tr>
-<tr><th colspan="5">Publisher 7 Test Suites</th></tr>
-</table>
-<h1>All Concurrent Web Tests</h1>
-<h2 id="m1">com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile:CreateCharacterProfile_Test</h2>
-<div>
-Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.<br/>
-Enter the user's email address in the 'Email Address' text box.<br/>
-Enter the user's password in the 'Password' text box.<br/>
-Click the 'Login' button.<br/>
-Mouse over the 'Content' menu link.<br/>
-Mouse over the 'Add content' menu link.<br/>
-Click the 'Character Profile' menu link.<br/>
-Switch to the active frame titled 'Create Character Profile dialog'.<br/>
-Enter 'fb05cefe45fe443' in the 'Character First Name' text box.<br/>
-Click the Cover Photo 'Select' button.<br/>
-Switch to the select file frame.<br/>
-Enter the file path for file upload.<br/>
-Click the 'Upload' button.<br/>
-Wait for the file link to be visible after upload.<br/>
-Click the 'Next' button.<br/>
-Click the 'Public Local Files' radio button.<br/>
-Click the 'Next' button.<br/>
-Verify the file image 'HanSolo' is present.<br/>
-Verify the img is loaded and visible.<br/>
-Click the 'Save' button.<br/>
-Switch to frame titled 'Create Character Profile'.<br/>
-Assert that img source of the Cover Photo contains 'HanSolo'.<br/>
-Assert the the img is loaded and visible.<br/>
-Click the 'Save' button.<br/>
-Verify success message of 'Character Profile fb05cefe45fe443 has been created.' is present.<br/>
-Verify there are no errors present.<br/>
-</div>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h1>All Consecutive Web Tests</h1>
-<h2 id="m2">com.nbcuni.test.publisher.tests.Setup.TestSetup:TestSetup_Test</h2>
-<div>
-<h3>Test Messages</h3>
-Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.<br/>
-Enter the user's email address in the 'Email Address' text box.<br/>
-Enter the user's password in the 'Password' text box.<br/>
-Click the 'Login' button.<br/>
-Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/TestSetup_Test.png <br/>
-<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/TestSetup_Test.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/TestSetup_Test.png' height='500' width='500'/> </a><br/>
-<h3>Failure</h3>
-<div class="stacktrace">java.lang.AssertionError: remove this later
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>TestNG Report</title><style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}</style></head><body><table><tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr><tr><th colspan="7">Default suite</th></tr><tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">11,826</td><td></td><td></td></tr></table><table><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.nbcuni.test.publisher.tests.Setup.TestSetup</td><td><a href="#m0">TestSetup_Test</a></td><td rowspan="1">1396883891747</td><td rowspan="1">8686</td></tr></tbody></table><h2>Default test</h2><h3 id="m0">com.nbcuni.test.publisher.tests.Setup.TestSetup#TestSetup_Test</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">Open url &apos;http://qa4.qa.nbcupublisher7.publisher7.com&apos;.<br/>Enter the user&apos;s email address in the &apos;Email Address&apos; text box.<br/>Enter the user&apos;s password in the &apos;Password&apos; text box.<br/>Click the &apos;Login&apos; button.<br/>Click the &apos;Modules&apos; menu link.<br/>Switch to frame titled &apos;Modules&apos;.<br/>Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/TestSetup_Test.png <br/>Failed to capture screenshot</div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.WebDriverException: Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.2&apos;, java.version: &apos;1.7.0_25&apos;
+Session ID: 5533691f-879a-4a47-8f3b-ad221a4ff25a
+Driver info: com.nbcuni.test.publisher.common.Driver.Driver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.fDhQh9}, rotatable=false, locationContextEnabled=true, webdriver.remote.sessionid=5533691f-879a-4a47-8f3b-ad221a4ff25a, version=33.0.1750.152, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:191)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:554)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:307)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:404)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:344)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:299)
+	at com.nbcuni.test.publisher.pageobjects.Overlay.Dialog_Frm(Overlay.java:46)
+	at com.nbcuni.test.publisher.pageobjects.Overlay.SwitchToFrame(Overlay.java:66)
 	at com.nbcuni.test.publisher.tests.Setup.TestSetup.TestSetup_Test(TestSetup.java:31)
-... Removed 26 stack frames</div>
-</div>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m3">com.nbcuni.test.publisher.tests.Setup.TestSetup:TestSetup_Test</h2>
-<div>
-<h3>Test Messages</h3>
-Open url 'http://qa5.qa.nbcupublisher7.publisher7.com'.<br/>
-Enter the user's email address in the 'Email Address' text box.<br/>
-Enter the user's password in the 'Password' text box.<br/>
-Click the 'Login' button.<br/>
-Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/TestSetup_Test.png <br/>
-<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/TestSetup_Test.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/TestSetup_Test.png' height='500' width='500'/> </a><br/>
-<h3>Failure</h3>
-<div class="stacktrace">java.lang.AssertionError: remove this later
-	at com.nbcuni.test.publisher.tests.Setup.TestSetup.TestSetup_Test(TestSetup.java:31)
-... Removed 26 stack frames</div>
-</div>
-<p class="totop"><a href="#summary">back to summary</a></p>
-</body></html>
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+Caused by: java.lang.NullPointerException
+	at org.openqa.selenium.support.events.EventFiringWebDriver.extractInterfaces(EventFiringWebDriver.java:117)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.access$500(EventFiringWebDriver.java:63)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.&lt;init&gt;(EventFiringWebDriver.java:318)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.&lt;init&gt;(EventFiringWebDriver.java:312)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.createWebElement(EventFiringWebDriver.java:282)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:182)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:47)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:33)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:169)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p></body></html>
