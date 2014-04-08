@@ -48,7 +48,6 @@ public class FocalPointModule extends ParentTest{
         FocalPoint focalPoint = new FocalPoint(webDriver);
         focalPoint.ClickStandardImageFieldsCbx();
         focalPoint.ClickMediaModuleImageFieldsCbx();
-        focalPoint.SelectPreviewImageStyle("Thumbnail (100x100)");
         focalPoint.ClickSaveConfigurationBtn();
         contentParent.VerifyMessageStatus("The configuration options have been saved.");
         overlay.ClickCloseOverlayLnk();

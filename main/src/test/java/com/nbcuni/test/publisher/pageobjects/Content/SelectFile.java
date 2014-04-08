@@ -91,7 +91,7 @@ public class SelectFile {
     @FindBy(how = How.ID, using = "edit-indicator")
     private WebElement FocalPoint_Ind;
     
-    @FindBy(how = How.ID, using = "edit-focal-point--2")
+    @FindBy(how = How.ID, using = "edit-focal-point")
     private WebElement FocalPoint_Txb;
     
     private WebElement File_Lnk(String fileName) {
