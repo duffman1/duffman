@@ -48,7 +48,7 @@ public class Blocks {
    
     
     //PAGE OBJECT METHODS
-    public void ClickPubSauceLnk(){
+    public void ClickPubSauceLnk() throws Exception {
     	
     	Reporter.log("Click the 'Pub Sauce' link.");
     	PubSauce_Lnk.click();
@@ -62,32 +62,31 @@ public class Blocks {
     	
     }
     
-    public void ClickSaveBlocksBtn(){
+    public void ClickSaveBlocksBtn() throws Exception {
     	
     	Reporter.log("Click the 'Save Blocks' button.");
     	SaveBlocks_Btn.click();
     }
     
-    public void VerifySelectedRegion(String blockName, String regionLocation){
+    public void VerifySelectedRegion(String blockName, String regionLocation) throws Exception {
     	
     	Reporter.log("Assert that the selected block '" + blockName + "' contains the '" + regionLocation + "' text.");
     	Assert.assertTrue(SelectedBlock_Ctr(blockName).getText().contains(regionLocation));
     }
     
-    public void VerifyScriptSourceInPage(String scriptSrc) {
+    public void VerifyScriptSourceInPage(String scriptSrc) throws Exception {
     	
     	Reporter.log("Assert the page source contains the '" + scriptSrc + "'.");
     	Assert.assertTrue(webDriver.getPageSource().contains(scriptSrc));
     	
     }
     
-    public void VerifyHomePageBlockPresent(String blockName) {
+    public void VerifyHomePageBlockPresent(String blockName) throws Exception {
     	
     	Reporter.log("Assert the home page block '" + blockName + "' is present.");
+    	Thread.sleep(500); //stale element exception
     	Assert.assertTrue(HomePageBlock_Ctr(blockName).isDisplayed());
     }
     
-   
-  
 }
 

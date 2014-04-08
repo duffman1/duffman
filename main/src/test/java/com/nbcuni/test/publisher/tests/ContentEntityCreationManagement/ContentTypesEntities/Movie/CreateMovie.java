@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 import java.util.Arrays;
 import java.util.List;
 
-public class CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter extends ParentTest{
+public class CreateMovie extends ParentTest{
 	
     /*************************************************************************************
      * TEST CASE Character field should only appear when Role is selected as character
@@ -33,7 +33,7 @@ public class CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter ex
      * @throws Throwable No Return values are needed
      *************************************************************************************/
     @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "smoke" })
-    public void CharacterFieldShouldAppearOnlyWhenCharacterIsSelectedAsCharacter_Test() throws Exception{
+    public void CreateMovie_Test() throws Exception {
          
         	//Step 1
         	UserLogin userLogin = applib.openApplication();
