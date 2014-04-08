@@ -106,7 +106,6 @@ public class ErrorChecking {
     		allowedErrors.add("There is a security update available for your version of Drupal");
     		allowedErrors.add("Warning: Attempt to assign property of non-object in EntityAPIController->save()");
     		allowedErrors.add("Notice: Trying to get property of non-object in EntityAPIController->save()");
-    		allowedErrors.add("Notice: Undefined offset: 2 in drupal_http_request() (line 1006 of /mnt/www/html/nbcupublisher7qa/docroot/includes/common.inc)");
     		allowedErrors.add("Request to retrieve mpx feed data returned a(n) \"com.theplatform.authentication.api.exception.AuthenticationException\" exception.");
     		allowedErrors.add("Expiring mpx token FAILED.");
     		
@@ -146,8 +145,7 @@ public class ErrorChecking {
     								|| errorText.contains(allowedErrors.get(3))
     								 	|| errorText.contains(allowedErrors.get(4))
     								 		|| errorText.contains(allowedErrors.get(5))
-    								 			|| errorText.contains(allowedErrors.get(6))
-    								 				|| errorText.contains(allowedErrors.get(7))) {
+    								 			|| errorText.contains(allowedErrors.get(6))) {
     					//ignore error
     				}
     				else {
@@ -172,8 +170,7 @@ public class ErrorChecking {
     										|| errorText.contains(allowedErrors.get(3))
     										 	|| errorText.contains(allowedErrors.get(4))
     										 		|| errorText.contains(allowedErrors.get(5))
-    										 			|| errorText.contains(allowedErrors.get(6))
-    										 				|| errorText.contains(allowedErrors.get(7))) {
+    										 			|| errorText.contains(allowedErrors.get(6))) {
     						//ignore error
     					}
     					else {

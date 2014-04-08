@@ -8,6 +8,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.testng.ITestResult;
 import org.testng.Reporter;
+
 import java.io.File;
 
 /**************************************************************************.
@@ -140,7 +141,7 @@ public class AppLib {
     
     public UserLogin openApplication() throws Exception {
         Reporter.log("Open url '" + this.getApplicationURL() + "'.");
-        webDriver.navigate().to(this.getApplicationURL());        
+        webDriver.navigate().to(this.getApplicationURL());   
         return new UserLogin(webDriver);
     }
     
