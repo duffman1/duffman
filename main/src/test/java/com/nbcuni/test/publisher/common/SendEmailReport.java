@@ -61,18 +61,19 @@ public class SendEmailReport {
             String failedTestScreenshotText = "";
             if (!failedTestsCount.equals(0)) {
             	if (failedScreenshots.size() <= 20) {
-            		failedTestScreenshotText = "Screenshots of failures are attached. The screenshot file names match the test names in the attached report. ";
+            		failedTestScreenshotText = "Screenshots of each failed test are attached. ";
             	}
             }
             
-            messageBodyPart.setText("Test run complete against latest build on " + config.getConfigValue("AppURL")
-                + "\n\n Total tests executed = " + totalTestCount.toString()
-                	+ "\n Tests passed = " + passedTestsCount.toString()
-                		+ "\n Tests failed = " + failedTestsCount.toString()
-                			+ "\n\n A detailed report is attached. " + failedTestScreenshotText + 
-                				"Iteration Report archives are assigned to task " + config.getConfigValue("RallyTaskID") + "."
-                				+ "\n\n Publisher 7 Automation Team");
-
+            messageBodyPart.setContent("<body>Test run complete against latest build on "
+            		+ "<a href='" + config.getConfigValue("AppURL") + "'>" + config.getConfigValue("AppURL") 
+            			+ "</a><br /><br />Total tests executed = " + totalTestCount.toString() 
+            				+ "<br />Tests passed = " + passedTestsCount.toString() + "<br />Tests failed = " 
+            					+ failedTestsCount.toString() + "<br /><br />A detailed report is attached. " 
+            						+ failedTestScreenshotText + "Iteration Report archives are assigned to task " 
+            							+ config.getConfigValue("RallyTaskID") + "." + "<br /><br />Publisher 7 "
+            								+ "QA Automation</body>", "text/html");
+            
             //attach html test report
             Multipart multipart = new MimeMultipart();
             multipart.addBodyPart(messageBodyPart);
