@@ -101,7 +101,7 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentAndEntityPreview.PreviewContentItemsIntheFuturefromContentandWorkbenchViews" hash-for-method="PreviewContentItemsIntheFuturefromContentandWorkbenchViews_Test">PreviewContentItemsIntheFuturefromContentandWorkbenchViews_Test</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost" hash-for-method="CreatePost_Test">CreatePost_Test</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -119,14 +119,14 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentAndEntityPreview.PreviewContentItemsIntheFuturefromContentandWorkbenchViews</span>
+              <span class="class-name">com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="PreviewContentItemsIntheFuturefromContentandWorkbenchViews_Test">
-                  </a> <!-- PreviewContentItemsIntheFuturefromContentandWorkbenchViews_Test -->
-                  <span class="method-name">PreviewContentItemsIntheFuturefromContentandWorkbenchViews_Test</span>
+                  <a name="CreatePost_Test">
+                  </a> <!-- CreatePost_Test -->
+                  <span class="method-name">CreatePost_Test</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -134,7 +134,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/private/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/testng-eclipse--18478579/testng-customsuite.xml</span>
+            <span class="header-content">/private/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/testng-eclipse--835281660/testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -143,7 +143,7 @@
 &lt;suite name=&quot;Default suite&quot;&gt;
   &lt;test verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentAndEntityPreview.PreviewContentItemsIntheFuturefromContentandWorkbenchViews&quot;/&gt;
+      &lt;class name=&quot;com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -171,7 +171,7 @@
               <span class="test-group-name">full</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">PreviewContentItemsIntheFuturefromContentandWorkbenchViews_Test</span>
+                <span class="method-in-group-name">CreatePost_Test</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -193,14 +193,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'PreviewContentItemsIntheFuturefromContentandWorkbenchViews_Test')
-data.setCell(0, 2, 'com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentAndEntityPreview.PreviewContentItemsIntheFuturefromContentandWorkbenchViews')
-data.setCell(0, 3, 52701);
+data.setCell(0, 1, 'CreatePost_Test')
+data.setCell(0, 2, 'com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost')
+data.setCell(0, 3, 47781);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 52 seconds</span>
+              <span class="suite-total-time">Total running time: 47 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -212,7 +212,7 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="reporter-method-div">
-              <span class="reporter-method-name">PreviewContentItemsIntheFuturefromContentandWorkbenchViews_Test</span>
+              <span class="reporter-method-name">CreatePost_Test</span>
               <div class="reporter-method-output-div">
                 <span class="reporter-method-output">Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.</span>
                 <span class="reporter-method-output">Enter the user's email address in the 'Email Address' text box.</span>
@@ -222,11 +222,82 @@ return data;
                 <span class="reporter-method-output">Mouse over the 'Add content' menu link.</span>
                 <span class="reporter-method-output">Click the 'Post' menu link.</span>
                 <span class="reporter-method-output">Switch to the active frame titled 'Create Post dialog'.</span>
-                <span class="reporter-method-output">Enter '8468f1c784e6481' in the 'Title' text box.</span>
+                <span class="reporter-method-output">Verify the 'Title' is present as a required field.</span>
+                <span class="reporter-method-output">Verify the 'Body' is present as a required field.</span>
+                <span class="reporter-method-output">Scroll the 'Publishing Options' link into view.</span>
+                <span class="reporter-method-output">Click the 'Publishing Options' link.</span>
+                <span class="reporter-method-output">Verify the 'Moderation State' is present as a required field.</span>
+                <span class="reporter-method-output">Scroll to and click the 'Basic Information' tab.</span>
+                <span class="reporter-method-output">Enter 'cd1a3da4ad4540f' in the 'Title' text box.</span>
                 <span class="reporter-method-output">Switch to the Synopsis frame.</span>
                 <span class="reporter-method-output">Enter a randomized text string into the 'Body' text area.</span>
                 <span class="reporter-method-output">Switch to the active frame titled 'Create Post dialog'.</span>
-                <span class="reporter-method-output">Enter '00c1ef74d8fe46a291ce2a819' in the 'Short Description' text area.</span>
+                <span class="reporter-method-output">Click the 'Cover' select button.</span>
+                <span class="reporter-method-output">Switch to the select file frame.</span>
+                <span class="reporter-method-output">Enter the file path for file upload.</span>
+                <span class="reporter-method-output">Click the 'Upload' button.</span>
+                <span class="reporter-method-output">Wait for the file link to be visible after upload.</span>
+                <span class="reporter-method-output">Click the 'Next' button.</span>
+                <span class="reporter-method-output">Click the 'Public Local Files' radio button.</span>
+                <span class="reporter-method-output">Click the 'Next' button.</span>
+                <span class="reporter-method-output">Verify the file image 'HanSolo' is present.</span>
+                <span class="reporter-method-output">Verify the img is loaded and visible.</span>
+                <span class="reporter-method-output">Click the 'Save' button.</span>
+                <span class="reporter-method-output">Switch to the active frame titled 'Create Post dialog'.</span>
+                <span class="reporter-method-output">Scroll the 'Publishing Options' link into view.</span>
+                <span class="reporter-method-output">Click the 'Publishing Options' link.</span>
+                <span class="reporter-method-output">Select 'Draft' from the 'Moderation State' drop down list.</span>
+                <span class="reporter-method-output">Click the 'Save' button.</span>
+                <span class="reporter-method-output">Verify success message of 'Post cd1a3da4ad4540f has been created.' is present.</span>
+                <span class="reporter-method-output">Verify there are no errors present.</span>
+                <span class="reporter-method-output">Verify the text 'Draft' is present in the work bench info block.</span>
+                <span class="reporter-method-output">Mouse over the 'Content' menu link.</span>
+                <span class="reporter-method-output">Mouse over the 'Add content' menu link.</span>
+                <span class="reporter-method-output">Click the 'Post' menu link.</span>
+                <span class="reporter-method-output">Switch to the active frame titled 'Create Post dialog'.</span>
+                <span class="reporter-method-output">Verify the 'Title' is present as a required field.</span>
+                <span class="reporter-method-output">Verify the 'Body' is present as a required field.</span>
+                <span class="reporter-method-output">Scroll the 'Publishing Options' link into view.</span>
+                <span class="reporter-method-output">Click the 'Publishing Options' link.</span>
+                <span class="reporter-method-output">Verify the 'Moderation State' is present as a required field.</span>
+                <span class="reporter-method-output">Scroll to and click the 'Basic Information' tab.</span>
+                <span class="reporter-method-output">Enter '07fd81326059431' in the 'Title' text box.</span>
+                <span class="reporter-method-output">Switch to the Synopsis frame.</span>
+                <span class="reporter-method-output">Enter a randomized text string into the 'Body' text area.</span>
+                <span class="reporter-method-output">Switch to the active frame titled 'Create Post dialog'.</span>
+                <span class="reporter-method-output">Click the 'Cover' select button.</span>
+                <span class="reporter-method-output">Switch to the select file frame.</span>
+                <span class="reporter-method-output">Enter the file path for file upload.</span>
+                <span class="reporter-method-output">Click the 'Upload' button.</span>
+                <span class="reporter-method-output">Wait for the file link to be visible after upload.</span>
+                <span class="reporter-method-output">Click the 'Next' button.</span>
+                <span class="reporter-method-output">Click the 'Public Local Files' radio button.</span>
+                <span class="reporter-method-output">Click the 'Next' button.</span>
+                <span class="reporter-method-output">Verify the file image 'HanSolo' is present.</span>
+                <span class="reporter-method-output">Verify the img is loaded and visible.</span>
+                <span class="reporter-method-output">Click the 'Save' button.</span>
+                <span class="reporter-method-output">Switch to the active frame titled 'Create Post dialog'.</span>
+                <span class="reporter-method-output">Scroll the 'Publishing Options' link into view.</span>
+                <span class="reporter-method-output">Click the 'Publishing Options' link.</span>
+                <span class="reporter-method-output">Select 'Review' from the 'Moderation State' drop down list.</span>
+                <span class="reporter-method-output">Click the 'Save' button.</span>
+                <span class="reporter-method-output">Verify success message of 'Post 07fd81326059431 has been created.' is present.</span>
+                <span class="reporter-method-output">Verify there are no errors present.</span>
+                <span class="reporter-method-output">Verify the text 'Review' is present in the work bench info block.</span>
+                <span class="reporter-method-output">Mouse over the 'Content' menu link.</span>
+                <span class="reporter-method-output">Mouse over the 'Add content' menu link.</span>
+                <span class="reporter-method-output">Click the 'Post' menu link.</span>
+                <span class="reporter-method-output">Switch to the active frame titled 'Create Post dialog'.</span>
+                <span class="reporter-method-output">Verify the 'Title' is present as a required field.</span>
+                <span class="reporter-method-output">Verify the 'Body' is present as a required field.</span>
+                <span class="reporter-method-output">Scroll the 'Publishing Options' link into view.</span>
+                <span class="reporter-method-output">Click the 'Publishing Options' link.</span>
+                <span class="reporter-method-output">Verify the 'Moderation State' is present as a required field.</span>
+                <span class="reporter-method-output">Scroll to and click the 'Basic Information' tab.</span>
+                <span class="reporter-method-output">Enter '0c6e74a849424b9' in the 'Title' text box.</span>
+                <span class="reporter-method-output">Switch to the Synopsis frame.</span>
+                <span class="reporter-method-output">Enter a randomized text string into the 'Body' text area.</span>
+                <span class="reporter-method-output">Switch to the active frame titled 'Create Post dialog'.</span>
                 <span class="reporter-method-output">Click the 'Cover' select button.</span>
                 <span class="reporter-method-output">Switch to the select file frame.</span>
                 <span class="reporter-method-output">Enter the file path for file upload.</span>
@@ -243,73 +314,9 @@ return data;
                 <span class="reporter-method-output">Click the 'Publishing Options' link.</span>
                 <span class="reporter-method-output">Select 'Published' from the 'Moderation State' drop down list.</span>
                 <span class="reporter-method-output">Click the 'Save' button.</span>
-                <span class="reporter-method-output">Verify success message of 'Post 8468f1c784e6481 has been created.' is present.</span>
+                <span class="reporter-method-output">Verify success message of 'Post 0c6e74a849424b9 has been created.' is present.</span>
                 <span class="reporter-method-output">Verify there are no errors present.</span>
-                <span class="reporter-method-output">Click on the 'Preview Site' link.</span>
-                <span class="reporter-method-output">Select 'Site as of ...' from the 'SELECT A CONDITION' drop down list.</span>
-                <span class="reporter-method-output">Enter '04/10/2014' in the 'DATE' text box.</span>
-                <span class="reporter-method-output">Enter '12:40 pm' in the 'TIME' text box.</span>
-                <span class="reporter-method-output">Click the 'Enable Preview' button.</span>
-                <span class="reporter-method-output">Verify the 'Disable Preview' is visible.</span>
-                <span class="reporter-method-output">Verify the 'Update Preview' button is present.</span>
-                <span class="reporter-method-output">Click the 'Edit Draft' link in the work bench.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'Edit Post 8468f1c784e6481 dialog'.</span>
-                <span class="reporter-method-output">Enter 'Updated8468f1c784e6481' in the 'Title' text box.</span>
-                <span class="reporter-method-output">Enter 'Updated00c1ef74d8fe46a291ce2a819' in the 'Short Description' text area.</span>
-                <span class="reporter-method-output">Switch to the Synopsis frame.</span>
-                <span class="reporter-method-output">Enter a randomized text string into the 'Body' text area.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'Edit Post 8468f1c784e6481 dialog'.</span>
-                <span class="reporter-method-output">Click the 'Save' button.</span>
-                <span class="reporter-method-output">Click the 'Schedule' link in the work bench.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'Updated8468f1c784e6481 dialog'.</span>
-                <span class="reporter-method-output">Click the 'Add Scheduled Revision' link.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'Updated8468f1c784e6481 dialog'.</span>
-                <span class="reporter-method-output">Select revision titled 'Updated8468f1c784e6481'.</span>
-                <span class="reporter-method-output">Select 'Moderate to Published' from the 'Select operation' drop down list.</span>
-                <span class="reporter-method-output">Enter '04/10/2014' in the 'Date' text box.</span>
-                <span class="reporter-method-output">Enter '12:40 PM' in the 'Time' text box.</span>
-                <span class="reporter-method-output">Click the 'Schedule' button.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'Updated8468f1c784e6481 dialog'.</span>
-                <span class="reporter-method-output">Verify success message of 'The scheduled revision operation has been saved' is present.</span>
-                <span class="reporter-method-output">Verify there are no errors present.</span>
-                <span class="reporter-method-output">Click the 'Close Overlay X'.</span>
-                <span class="reporter-method-output">Verify the selected option of the 'SELECT A CONDITION' drop down list is 'Site as of ...'.</span>
-                <span class="reporter-method-output">Verify the value of the 'DATE' text box is '04/10/2014'.</span>
-                <span class="reporter-method-output">Verify the value of the 'TIME' text box is '12:40 pm'.</span>
-                <span class="reporter-method-output">Verify the text 'Updated00c1ef74d8fe46a291ce2a819' is present on the page.</span>
-                <span class="reporter-method-output">Verify the text 'e3c83e9e3dd54635898b 8017721a9c274e8a9c86 0e3558548db54a0e864a 9bc846d54a7642b5b19a' is present on the page.</span>
-                <span class="reporter-method-output">Click on the 'Preview Site' link.</span>
-                <span class="reporter-method-output">Verify the 'Disable Preview' is NOT visible.</span>
-                <span class="reporter-method-output">Click on the 'Preview Site' link.</span>
-                <span class="reporter-method-output">Verify the 'Disable Preview' is visible.</span>
-                <span class="reporter-method-output">Verify the selected option of the 'SELECT A CONDITION' drop down list is 'Site as of ...'.</span>
-                <span class="reporter-method-output">Verify the value of the 'DATE' text box is '04/10/2014'.</span>
-                <span class="reporter-method-output">Verify the value of the 'TIME' text box is '12:40 pm'.</span>
-                <span class="reporter-method-output">Click the 'Schedule' link in the work bench.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'Updated8468f1c784e6481 dialog'.</span>
-                <span class="reporter-method-output">Click the 'Add Scheduled Revision' link.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'Updated8468f1c784e6481 dialog'.</span>
-                <span class="reporter-method-output">Select revision titled 'Updated8468f1c784e6481'.</span>
-                <span class="reporter-method-output">Select 'Moderate to Published' from the 'Select operation' drop down list.</span>
-                <span class="reporter-method-output">Enter '04/12/2014' in the 'Date' text box.</span>
-                <span class="reporter-method-output">Enter '1:40 AM' in the 'Time' text box.</span>
-                <span class="reporter-method-output">Click the 'Schedule' button.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'Updated8468f1c784e6481 dialog'.</span>
-                <span class="reporter-method-output">Verify success message of 'The scheduled revision operation has been saved' is present.</span>
-                <span class="reporter-method-output">Verify there are no errors present.</span>
-                <span class="reporter-method-output">Click the 'Close Overlay X'.</span>
-                <span class="reporter-method-output">Verify the selected option of the 'SELECT A CONDITION' drop down list is 'Site as of ...'.</span>
-                <span class="reporter-method-output">Verify the value of the 'DATE' text box is '04/10/2014'.</span>
-                <span class="reporter-method-output">Verify the value of the 'TIME' text box is '12:40 pm'.</span>
-                <span class="reporter-method-output">Enter '04/12/2014' in the 'DATE' text box.</span>
-                <span class="reporter-method-output">Enter '12:40 pm' in the 'TIME' text box.</span>
-                <span class="reporter-method-output">Click the 'Update Preview' button.</span>
-                <span class="reporter-method-output">Verify the text 'Updated00c1ef74d8fe46a291ce2a819' is present on the page.</span>
-                <span class="reporter-method-output">Verify the text 'e3c83e9e3dd54635898b 8017721a9c274e8a9c86 0e3558548db54a0e864a 9bc846d54a7642b5b19a' is present on the page.</span>
-                <span class="reporter-method-output">Click the 'Disable Preview' button.</span>
-                <span class="reporter-method-output">Click on the 'Preview Site' link.</span>
-                <span class="reporter-method-output">Verify the selected option of the 'SELECT A CONDITION' drop down list is '- Select -'.</span>
-                <span class="reporter-method-output">Verify the 'Enable Preview' button is visible.</span>
+                <span class="reporter-method-output">Verify the text 'Published' is present in the work bench info block.</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -327,26 +334,26 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentAndEntityPreview.PreviewContentItemsIntheFuturefromContentandWorkbenchViews</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">startGridAndHub</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
                 <span class="method-name">startSelenium</span>
-                <span class="method-start">11571 ms</span>
+                <span class="method-start">12660 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">PreviewContentItemsIntheFuturefromContentandWorkbenchViews_Test</span>
-                <span class="method-start">14039 ms</span>
+                <span class="method-name">CreatePost_Test</span>
+                <span class="method-start">15138 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">stopSelenium([TestResult name=PreviewContentItemsIntheFuturefromContentandWorkbenchViews_Test status=SUCCESS meth...)</span>
-                <span class="method-start">66741 ms</span>
+                <span class="method-name">stopSelenium([TestResult name=CreatePost_Test status=SUCCESS method=CreatePost.CreatePost_Test()[pri:0, instance:...)</span>
+                <span class="method-start">62920 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-suite after">
                 <span class="method-name">stopGridAndHub</span>
-                <span class="method-start">67323 ms</span>
+                <span class="method-start">63499 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

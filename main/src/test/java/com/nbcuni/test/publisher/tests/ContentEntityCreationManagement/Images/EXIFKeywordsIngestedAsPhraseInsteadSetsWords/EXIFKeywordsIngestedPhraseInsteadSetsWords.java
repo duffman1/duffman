@@ -43,7 +43,7 @@ public class EXIFKeywordsIngestedPhraseInsteadSetsWords extends ParentTest{
             simpleEXIFIPTCMappings.SelectCredit("Credit");
             simpleEXIFIPTCMappings.SelectKeywords("Keywords");
             simpleEXIFIPTCMappings.SelectMediaCategories("none");
-            simpleEXIFIPTCMappings.SelectMediaTags("Title");
+            simpleEXIFIPTCMappings.SelectMediaTags("none");
             simpleEXIFIPTCMappings.SelectSource("Source");
             simpleEXIFIPTCMappings.ClickSaveBtn();
             overlay.switchToDefaultContent();

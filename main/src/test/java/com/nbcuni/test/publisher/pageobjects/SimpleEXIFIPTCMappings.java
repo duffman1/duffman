@@ -57,47 +57,47 @@ public class SimpleEXIFIPTCMappings {
     
     //PAGE OBJECT METHODS
     public void SelectAltText(String option) throws Exception {
-    	Reporter.log("Select the '" + option + "' from the 'Alt Text' drop down list.");
+    	Reporter.log("Select the '" + option + "' option from the 'Alt Text' drop down list.");
     	new Select(AltText_Ddl).selectByVisibleText(option);
     }
     
     public void SelectTitleText(String option) throws Exception {
-    	Reporter.log("Select the '" + option + "' from the 'Title Text' drop down list.");
+    	Reporter.log("Select the '" + option + "' option from the 'Title Text' drop down list.");
     	new Select(TitleText_Ddl).selectByVisibleText(option);
     }
     
     public void SelectCaption(String option) throws Exception {
-    	Reporter.log("Select the '" + option + "' from the 'Caption' drop down list.");
+    	Reporter.log("Select the '" + option + "' option from the 'Caption' drop down list.");
     	new Select(Caption_Ddl).selectByVisibleText(option);
     }
     
     public void SelectCopyright(String option) throws Exception {
-    	Reporter.log("Select the '" + option + "' from the 'Copyright' drop down list.");
+    	Reporter.log("Select the '" + option + "' option from the 'Copyright' drop down list.");
     	new Select(Copyright_Ddl).selectByVisibleText(option);
     }
     
     public void SelectCredit(String option) throws Exception {
-    	Reporter.log("Select the '" + option + "' from the 'Credit' drop down list.");
+    	Reporter.log("Select the '" + option + "' option from the 'Credit' drop down list.");
     	new Select(Credit_Ddl).selectByVisibleText(option);
     }
     
     public void SelectKeywords(String option) throws Exception {
-    	Reporter.log("Select the '" + option + "' from the 'Keywords' drop down list.");
+    	Reporter.log("Select the '" + option + "' option from the 'Keywords' drop down list.");
     	new Select(Keywords_Ddl).selectByVisibleText(option);
     }
     
     public void SelectMediaCategories(String option) throws Exception {
-    	Reporter.log("Select the '" + option + "' from the 'Media categories' drop down list.");
+    	Reporter.log("Select the '" + option + "' option from the 'Media categories' drop down list.");
     	new Select(MediaCategories_Ddl).selectByVisibleText(option);
     }
     
     public void SelectMediaTags(String option) throws Exception {
-    	Reporter.log("Select the '" + option + "' from the 'Media Tags' drop down list.");
+    	Reporter.log("Select the '" + option + "' option from the 'Media Tags' drop down list.");
     	new Select(MediaTags_Ddl).selectByVisibleText(option);
     }
     
     public void SelectSource(String option) throws Exception {
-    	Reporter.log("Select the '" + option + "' from the 'Source' drop down list.");
+    	Reporter.log("Select the '" + option + "' option from the 'Source' drop down list.");
     	new Select(Source_Ddl).selectByVisibleText(option);
     }
     
