@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite thread-count="4" name="Failed suite [Pub 7 Concurrent Suite]" parallel="classes">
-  <parameter name="ReRunOnFailure" value="false"/>
+  <parameter name="ReRunOnFailure" value="true"/>
   <parameter name="LocalAppiumHubPort" value="4724"/>
   <parameter name="Device" value="Iphone Simulator"/>
   <parameter name="Admin1Password" value="pa55word"/>
   <parameter name="ReRunOnFailureCount" value="1"/>
   <parameter name="RallyUrl" value="https://rally1.rallydev.com"/>
   <parameter name="ErrorCheckingEnabled" value="true"/>
-  <parameter name="SendReportAutoEmails" value="false"/>
+  <parameter name="SendReportAutoEmails" value="true"/>
   <parameter name="RallyUsername" value="brandon.clark@nbcuni.com"/>
   <parameter name="Admin1Username" value="admin@publisher.nbcuni.com"/>
   <parameter name="Browser" value="chrome"/>
@@ -24,9 +24,9 @@
   <parameter name="RallyTaskID" value="TA32944"/>
   <parameter name="RunMobile" value="false"/>
   <parameter name="RallyWorkspace" value="Digital Products"/>
-  <parameter name="SendReportEmailAddress" value="ots.publishing.core@nbcuni.com"/>
+  <parameter name="SendReportEmailAddress" value="brandon.clark@nbcuni.com"/>
   <parameter name="PathToSikuliImages" value="/src/test/java/com/nbcuni/test/publisher/lib/sikuli/images/"/>
-  <parameter name="UploadReportToRally" value="false"/>
+  <parameter name="UploadReportToRally" value="true"/>
   <parameter name="ImplicitWaitTime" value="30"/>
   <parameter name="GmailPassword" value="Pub7NBCUAutoEmailPassword1"/>
   <parameter name="LocalWebDriverHubPort" value="4444"/>
@@ -43,137 +43,20 @@
       </run>
     </groups>
     <classes>
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.LockContentWhenEditing.ContentLocking">
+      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson">
         <methods>
           <include name="startSelenium"/>
           <include name="stopGridAndHub"/>
           <include name="startGridAndHub"/>
           <include name="stopSelenium"/>
         </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.LockContentWhenEditing.ContentLocking -->
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CustomContentType.AddingNewCustomContentType">
-        <methods>
-          <include name="startSelenium"/>
-          <include name="stopSelenium"/>
-        </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CustomContentType.AddingNewCustomContentType -->
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.CastCrewFieldCollectionsVerificationMovie">
-        <methods>
-          <include name="startSelenium"/>
-          <include name="stopSelenium"/>
-        </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.CastCrewFieldCollectionsVerificationMovie -->
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.InstallZeeboxModule.InstallZeeboxModule">
-        <methods>
-          <include name="startSelenium"/>
-          <include name="stopSelenium"/>
-        </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.InstallZeeboxModule.InstallZeeboxModule -->
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.SoftLengthLimit.AddCharacterCountOptionTextFields">
-        <methods>
-          <include name="startSelenium"/>
-          <include name="stopSelenium"/>
-        </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.SoftLengthLimit.AddCharacterCountOptionTextFields -->
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.AddApplyEmbeddedMetadataButton.AddApplyEmbeddedMetadataButtonAllImageForms">
-        <methods>
-          <include name="startSelenium"/>
-          <include name="stopSelenium"/>
-        </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.AddApplyEmbeddedMetadataButton.AddApplyEmbeddedMetadataButtonAllImageForms -->
+      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson -->
       <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost">
         <methods>
           <include name="startSelenium"/>
           <include name="stopSelenium"/>
         </methods>
       </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost -->
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson">
-        <methods>
-          <include name="startSelenium"/>
-          <include name="stopSelenium"/>
-        </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson -->
-      <class name="com.nbcuni.test.publisher.tests.Video.Player.SelectVideoPlayerPerVideoFile">
-        <methods>
-          <include name="startSelenium"/>
-          <include name="stopSelenium"/>
-        </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.Video.Player.SelectVideoPlayerPerVideoFile -->
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentEntityModerationStatesWorkflows.MultiEditorPublishingWorkflow">
-        <methods>
-          <include name="startSelenium"/>
-          <include name="stopSelenium"/>
-        </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentEntityModerationStatesWorkflows.MultiEditorPublishingWorkflow -->
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.AddAbilityRelateShowSeasonEpisodeSpecifiableContentTypes">
-        <methods>
-          <include name="startSelenium"/>
-          <include name="stopSelenium"/>
-        </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.AddAbilityRelateShowSeasonEpisodeSpecifiableContentTypes -->
-      <class name="com.nbcuni.test.publisher.tests.Queues.CreateUpdateRevisionsToQueues.BasicUIForCreatingAndRevisingQueues">
-        <methods>
-          <include name="startSelenium"/>
-          <include name="BasicUIForCreatingAndRevisingQueues_Test"/>
-          <include name="stopSelenium"/>
-        </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.Queues.CreateUpdateRevisionsToQueues.BasicUIForCreatingAndRevisingQueues -->
-      <class name="com.nbcuni.test.publisher.tests.Queues.AddModerationStatesToRevisionsOfAQueue.QueueModerationStates">
-        <methods>
-          <include name="startSelenium"/>
-          <include name="stopSelenium"/>
-          <include name="QueueModerationStates_Test"/>
-        </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.Queues.AddModerationStatesToRevisionsOfAQueue.QueueModerationStates -->
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile">
-        <methods>
-          <include name="startSelenium"/>
-          <include name="stopSelenium"/>
-        </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile -->
-      <class name="com.nbcuni.test.publisher.tests.Queues.DeletingQueueRevisions.DeleteRevisionsQueues">
-        <methods>
-          <include name="startSelenium"/>
-          <include name="DeleteRevisionsQueues_Test"/>
-          <include name="stopSelenium"/>
-        </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.Queues.DeletingQueueRevisions.DeleteRevisionsQueues -->
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.EnhanceOperationsDropdownonScheduleTab">
-        <methods>
-          <include name="startSelenium"/>
-          <include name="stopSelenium"/>
-        </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.EnhanceOperationsDropdownonScheduleTab -->
-      <class name="com.nbcuni.test.publisher.tests.Queues.UnauthenticatedUsersCanViewQueuesRevisionList.UnauthenticatedUsersCanViewQueuesRevisionList">
-        <methods>
-          <include name="startSelenium"/>
-          <include name="stopSelenium"/>
-        </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.Queues.UnauthenticatedUsersCanViewQueuesRevisionList.UnauthenticatedUsersCanViewQueuesRevisionList -->
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityModerationStatesandWorkflows.PublishContenttoUnauthenticatedUsers">
-        <methods>
-          <include name="startSelenium"/>
-          <include name="stopSelenium"/>
-        </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityModerationStatesandWorkflows.PublishContenttoUnauthenticatedUsers -->
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.IntegrateFocalPointModule.FocalPointModule">
-        <methods>
-          <include name="startSelenium"/>
-          <include name="stopSelenium"/>
-        </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.IntegrateFocalPointModule.FocalPointModule -->
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVEpisode.CreateTVEpisode">
-        <methods>
-          <include name="startSelenium"/>
-          <include name="stopSelenium"/>
-        </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVEpisode.CreateTVEpisode -->
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CloneANode.NodeCloneModuleTesting">
-        <methods>
-          <include name="startSelenium"/>
-          <include name="stopSelenium"/>
-        </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CloneANode.NodeCloneModuleTesting -->
       <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Movie.CreateMovie">
         <methods>
           <include name="startSelenium"/>
@@ -181,73 +64,12 @@
           <include name="stopSelenium"/>
         </methods>
       </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Movie.CreateMovie -->
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.MyWorkbench.EditContentMyWorkbench">
+      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile">
         <methods>
           <include name="startSelenium"/>
           <include name="stopSelenium"/>
         </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.MyWorkbench.EditContentMyWorkbench -->
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVSeason.CreateTVSeason">
-        <methods>
-          <include name="startSelenium"/>
-          <include name="stopSelenium"/>
-          <include name="CreateTVSeason_Test"/>
-        </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVSeason.CreateTVSeason -->
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentAndEntityPreview.PreviewContentItemsIntheFuturefromContentandWorkbenchViews">
-        <methods>
-          <include name="startSelenium"/>
-          <include name="stopSelenium"/>
-        </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentAndEntityPreview.PreviewContentItemsIntheFuturefromContentandWorkbenchViews -->
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.ProvideUniqueURLImages.DisplayUniqueURLEachAssetEditForm">
-        <methods>
-          <include name="startSelenium"/>
-          <include name="stopSelenium"/>
-        </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.ProvideUniqueURLImages.DisplayUniqueURLEachAssetEditForm -->
-      <class name="com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen">
-        <methods>
-          <include name="startSelenium"/>
-          <include name="stopSelenium"/>
-        </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen -->
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.CastCrewFieldCollectionsVerificationTVEpisode">
-        <methods>
-          <include name="startSelenium"/>
-          <include name="stopSelenium"/>
-        </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.CastCrewFieldCollectionsVerificationTVEpisode -->
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.ScheduleToPublishContentByDateTime">
-        <methods>
-          <include name="startSelenium"/>
-          <include name="stopSelenium"/>
-        </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.ScheduleToPublishContentByDateTime -->
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.EnhanceContentLibraryTable.EnhanceContentLibraryTable">
-        <methods>
-          <include name="startSelenium"/>
-          <include name="stopSelenium"/>
-        </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.EnhanceContentLibraryTable.EnhanceContentLibraryTable -->
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.EnhanceMediaGalleriesTab.EnhanceMediaGalleriesTab">
-        <methods>
-          <include name="startSelenium"/>
-          <include name="stopSelenium"/>
-        </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.EnhanceMediaGalleriesTab.EnhanceMediaGalleriesTab -->
-      <class name="com.nbcuni.test.publisher.tests.Queues.SchedulingQueues.ScheduleRevisionsOfQueues">
-        <methods>
-          <include name="startSelenium"/>
-          <include name="stopSelenium"/>
-        </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.Queues.SchedulingQueues.ScheduleRevisionsOfQueues -->
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.RepresentativeImage.SetDefaultRepresentativeImagePost">
-        <methods>
-          <include name="startSelenium"/>
-          <include name="stopSelenium"/>
-        </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.RepresentativeImage.SetDefaultRepresentativeImagePost -->
+      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile -->
     </classes>
   </test> <!-- All Concurrent Web Tests(failed) -->
 </suite> <!-- Failed suite [Pub 7 Concurrent Suite] -->

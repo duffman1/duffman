@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -27,12 +28,14 @@ public class Queues {
 
     private Driver webDriver;
     private AppLib applib;
+    private WebDriverWait wait;
     
     //PAGE OBJECT CONSTRUCTOR
     public Queues(Driver webDriver, AppLib applib) {
         this.webDriver = webDriver;
         this.applib = applib;
         PageFactory.initElements(webDriver, this);
+        wait = new WebDriverWait(webDriver, 10);
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -84,6 +87,7 @@ public class Queues {
     public void ClickSaveQueueBtn() throws Exception {
     	
     	Reporter.log("Click the 'Save Queue' button.");
+    	Thread.sleep(1000); //slight pause required here.
     	SaveQueue_Btn.click();
     }
     
@@ -127,9 +131,22 @@ public class Queues {
     	QueueItem_Txb(itemTxbIndex).sendKeys(queueItemTitle);
     	
     	Reporter.log("Click the '" + queueItemTitle + "' from the auto complete option list.");
-    	AutoComplete_Opt(queueItemTitle).click();
-    	Thread.sleep(1000); //TODO - replace with dynamic wait that waits for auto complete element to no longer be present
-    	
+    	wait.until(ExpectedConditions.visibilityOf(AutoComplete_Opt(queueItemTitle)));
+    	QueueItem_Txb(itemTxbIndex).sendKeys(Keys.DOWN);
+    	QueueItem_Txb(itemTxbIndex).sendKeys(Keys.ENTER);
+    	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+    	for (int second = 0; ; second++){
+            if (second >= 60) {
+                Assert.fail("AutoComplete option titled '" + queueItemTitle + "' is still present after timeout");}
+            try{
+            	AutoComplete_Opt(queueItemTitle).isDisplayed();
+            }
+            catch (Exception e){
+            	break;
+            }
+            Thread.sleep(500);
+        }
+    	webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
     }
     
     public void VerifyQueueEditDeleteNotPresent(String queueTitle) throws Exception {
