@@ -1,26 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="2" passed="1">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
     <line>
-      <![CDATA[Open url 'http://qa4.qa.nbcupublisher7.publisher7.com'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the user's password in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Login' button.]]>
-    </line>
-    <line>
-      <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/TestSetup_Test.png ]]>
-    </line>
-    <line>
-      <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/TestSetup_Test.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/TestSetup_Test.png' height='500' width='500'/> </a>]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://qa4.qa.nbcupublisher7.publisher7.com'.]]>
+      <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]>
     </line>
     <line>
       <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
@@ -38,16 +20,28 @@
       <![CDATA[Mouse over the 'Add content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Character Profile' menu link.]]>
+      <![CDATA[Click the 'Post' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Create Character Profile dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
     </line>
     <line>
-      <![CDATA[Enter 'c995b503f579496' in the 'Character First Name' text box.]]>
+      <![CDATA[Enter '8468f1c784e6481' in the 'Title' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the Cover Photo 'Select' button.]]>
+      <![CDATA[Switch to the Synopsis frame.]]>
+    </line>
+    <line>
+      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '00c1ef74d8fe46a291ce2a819' in the 'Short Description' text area.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Cover' select button.]]>
     </line>
     <line>
       <![CDATA[Switch to the select file frame.]]>
@@ -80,44 +74,242 @@
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Switch to frame titled 'Create Character Profile'.]]>
+      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
     </line>
     <line>
-      <![CDATA[Assert that img source of the Cover Photo contains 'HanSolo'.]]>
+      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
     </line>
     <line>
-      <![CDATA[Assert the the img is loaded and visible.]]>
+      <![CDATA[Click the 'Publishing Options' link.]]>
+    </line>
+    <line>
+      <![CDATA[Select 'Published' from the 'Moderation State' drop down list.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'Character Profile c995b503f579496 has been created.' is present.]]>
+      <![CDATA[Verify success message of 'Post 8468f1c784e6481 has been created.' is present.]]>
     </line>
     <line>
       <![CDATA[Verify there are no errors present.]]>
     </line>
+    <line>
+      <![CDATA[Click on the 'Preview Site' link.]]>
+    </line>
+    <line>
+      <![CDATA[Select 'Site as of ...' from the 'SELECT A CONDITION' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '04/10/2014' in the 'DATE' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '12:40 pm' in the 'TIME' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Enable Preview' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Disable Preview' is visible.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Update Preview' button is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Edit Draft' link in the work bench.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Edit Post 8468f1c784e6481 dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Updated8468f1c784e6481' in the 'Title' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Updated00c1ef74d8fe46a291ce2a819' in the 'Short Description' text area.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the Synopsis frame.]]>
+    </line>
+    <line>
+      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Edit Post 8468f1c784e6481 dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Schedule' link in the work bench.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Updated8468f1c784e6481 dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Add Scheduled Revision' link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Updated8468f1c784e6481 dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Select revision titled 'Updated8468f1c784e6481'.]]>
+    </line>
+    <line>
+      <![CDATA[Select 'Moderate to Published' from the 'Select operation' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '04/10/2014' in the 'Date' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '12:40 PM' in the 'Time' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Schedule' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Updated8468f1c784e6481 dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The scheduled revision operation has been saved' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify there are no errors present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the selected option of the 'SELECT A CONDITION' drop down list is 'Site as of ...'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the value of the 'DATE' text box is '04/10/2014'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the value of the 'TIME' text box is '12:40 pm'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'Updated00c1ef74d8fe46a291ce2a819' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'e3c83e9e3dd54635898b 8017721a9c274e8a9c86 0e3558548db54a0e864a 9bc846d54a7642b5b19a' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Click on the 'Preview Site' link.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Disable Preview' is NOT visible.]]>
+    </line>
+    <line>
+      <![CDATA[Click on the 'Preview Site' link.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Disable Preview' is visible.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the selected option of the 'SELECT A CONDITION' drop down list is 'Site as of ...'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the value of the 'DATE' text box is '04/10/2014'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the value of the 'TIME' text box is '12:40 pm'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Schedule' link in the work bench.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Updated8468f1c784e6481 dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Add Scheduled Revision' link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Updated8468f1c784e6481 dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Select revision titled 'Updated8468f1c784e6481'.]]>
+    </line>
+    <line>
+      <![CDATA[Select 'Moderate to Published' from the 'Select operation' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '04/12/2014' in the 'Date' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '1:40 AM' in the 'Time' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Schedule' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Updated8468f1c784e6481 dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The scheduled revision operation has been saved' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify there are no errors present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the selected option of the 'SELECT A CONDITION' drop down list is 'Site as of ...'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the value of the 'DATE' text box is '04/10/2014'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the value of the 'TIME' text box is '12:40 pm'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '04/12/2014' in the 'DATE' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '12:40 pm' in the 'TIME' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Update Preview' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'Updated00c1ef74d8fe46a291ce2a819' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'e3c83e9e3dd54635898b 8017721a9c274e8a9c86 0e3558548db54a0e864a 9bc846d54a7642b5b19a' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Disable Preview' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click on the 'Preview Site' link.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the selected option of the 'SELECT A CONDITION' drop down list is '- Select -'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Enable Preview' button is visible.]]>
+    </line>
   </reporter-output>
-  <suite name="Pub 7 Concurrent Suite" duration-ms="18286" started-at="2014-04-08T15:52:55Z" finished-at="2014-04-08T15:53:13Z">
+  <suite name="Default suite" duration-ms="55748" started-at="2014-04-09T12:18:26Z" finished-at="2014-04-09T12:19:22Z">
     <groups>
       <group name="full">
-        <method signature="CreateCharacterProfile.CreateCharacterProfile_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@79b8202e]" name="CreateCharacterProfile_Test" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile"/>
+        <method signature="PreviewContentItemsIntheFuturefromContentandWorkbenchViews.PreviewContentItemsIntheFuturefromContentandWorkbenchViews_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentAndEntityPreview.PreviewContentItemsIntheFuturefromContentandWorkbenchViews@2d7349d7]" name="PreviewContentItemsIntheFuturefromContentandWorkbenchViews_Test" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentAndEntityPreview.PreviewContentItemsIntheFuturefromContentandWorkbenchViews"/>
       </group> <!-- full -->
     </groups>
-    <test name="All Concurrent Web Tests" duration-ms="18286" started-at="2014-04-08T15:52:55Z" finished-at="2014-04-08T15:53:13Z">
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile">
-        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@79b8202e]" name="startGridAndHub" is-config="true" duration-ms="5412" started-at="2014-04-08T11:52:50Z" finished-at="2014-04-08T11:52:55Z">
+    <test name="Default test" duration-ms="55748" started-at="2014-04-09T12:18:26Z" finished-at="2014-04-09T12:19:22Z">
+      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentAndEntityPreview.PreviewContentItemsIntheFuturefromContentandWorkbenchViews">
+        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentAndEntityPreview.PreviewContentItemsIntheFuturefromContentandWorkbenchViews@2d7349d7]" name="startGridAndHub" is-config="true" duration-ms="11561" started-at="2014-04-09T08:18:15Z" finished-at="2014-04-09T08:18:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startGridAndHub -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@79b8202e]" name="startSelenium" is-config="true" duration-ms="2174" started-at="2014-04-08T11:52:55Z" finished-at="2014-04-08T11:52:57Z">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentAndEntityPreview.PreviewContentItemsIntheFuturefromContentandWorkbenchViews@2d7349d7]" name="startSelenium" is-config="true" duration-ms="2468" started-at="2014-04-09T08:18:26Z" finished-at="2014-04-09T08:18:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="CreateCharacterProfile_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@79b8202e]" name="CreateCharacterProfile_Test" duration-ms="15542" started-at="2014-04-08T11:52:57Z" finished-at="2014-04-08T11:53:13Z">
+        <test-method status="PASS" signature="PreviewContentItemsIntheFuturefromContentandWorkbenchViews_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentAndEntityPreview.PreviewContentItemsIntheFuturefromContentandWorkbenchViews@2d7349d7]" name="PreviewContentItemsIntheFuturefromContentandWorkbenchViews_Test" duration-ms="52701" started-at="2014-04-09T08:18:29Z" finished-at="2014-04-09T08:19:21Z">
           <reporter-output>
             <line>
-              <![CDATA[Open url 'http://qa4.qa.nbcupublisher7.publisher7.com'.]]>
+              <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]>
             </line>
             <line>
               <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
@@ -135,16 +327,28 @@
               <![CDATA[Mouse over the 'Add content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Character Profile' menu link.]]>
+              <![CDATA[Click the 'Post' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create Character Profile dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
             </line>
             <line>
-              <![CDATA[Enter 'c995b503f579496' in the 'Character First Name' text box.]]>
+              <![CDATA[Enter '8468f1c784e6481' in the 'Title' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the Cover Photo 'Select' button.]]>
+              <![CDATA[Switch to the Synopsis frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '00c1ef74d8fe46a291ce2a819' in the 'Short Description' text area.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Cover' select button.]]>
             </line>
             <line>
               <![CDATA[Switch to the select file frame.]]>
@@ -177,143 +381,239 @@
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Switch to frame titled 'Create Character Profile'.]]>
+              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
             </line>
             <line>
-              <![CDATA[Assert that img source of the Cover Photo contains 'HanSolo'.]]>
+              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
             </line>
             <line>
-              <![CDATA[Assert the the img is loaded and visible.]]>
+              <![CDATA[Click the 'Publishing Options' link.]]>
+            </line>
+            <line>
+              <![CDATA[Select 'Published' from the 'Moderation State' drop down list.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'Character Profile c995b503f579496 has been created.' is present.]]>
+              <![CDATA[Verify success message of 'Post 8468f1c784e6481 has been created.' is present.]]>
             </line>
             <line>
               <![CDATA[Verify there are no errors present.]]>
             </line>
+            <line>
+              <![CDATA[Click on the 'Preview Site' link.]]>
+            </line>
+            <line>
+              <![CDATA[Select 'Site as of ...' from the 'SELECT A CONDITION' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '04/10/2014' in the 'DATE' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '12:40 pm' in the 'TIME' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Enable Preview' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Disable Preview' is visible.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Update Preview' button is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Edit Draft' link in the work bench.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Edit Post 8468f1c784e6481 dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Updated8468f1c784e6481' in the 'Title' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Updated00c1ef74d8fe46a291ce2a819' in the 'Short Description' text area.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the Synopsis frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Edit Post 8468f1c784e6481 dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Schedule' link in the work bench.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Updated8468f1c784e6481 dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Add Scheduled Revision' link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Updated8468f1c784e6481 dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Select revision titled 'Updated8468f1c784e6481'.]]>
+            </line>
+            <line>
+              <![CDATA[Select 'Moderate to Published' from the 'Select operation' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '04/10/2014' in the 'Date' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '12:40 PM' in the 'Time' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Schedule' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Updated8468f1c784e6481 dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The scheduled revision operation has been saved' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify there are no errors present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the selected option of the 'SELECT A CONDITION' drop down list is 'Site as of ...'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the value of the 'DATE' text box is '04/10/2014'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the value of the 'TIME' text box is '12:40 pm'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Updated00c1ef74d8fe46a291ce2a819' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'e3c83e9e3dd54635898b 8017721a9c274e8a9c86 0e3558548db54a0e864a 9bc846d54a7642b5b19a' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Click on the 'Preview Site' link.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Disable Preview' is NOT visible.]]>
+            </line>
+            <line>
+              <![CDATA[Click on the 'Preview Site' link.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Disable Preview' is visible.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the selected option of the 'SELECT A CONDITION' drop down list is 'Site as of ...'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the value of the 'DATE' text box is '04/10/2014'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the value of the 'TIME' text box is '12:40 pm'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Schedule' link in the work bench.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Updated8468f1c784e6481 dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Add Scheduled Revision' link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Updated8468f1c784e6481 dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Select revision titled 'Updated8468f1c784e6481'.]]>
+            </line>
+            <line>
+              <![CDATA[Select 'Moderate to Published' from the 'Select operation' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '04/12/2014' in the 'Date' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '1:40 AM' in the 'Time' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Schedule' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Updated8468f1c784e6481 dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The scheduled revision operation has been saved' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify there are no errors present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the selected option of the 'SELECT A CONDITION' drop down list is 'Site as of ...'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the value of the 'DATE' text box is '04/10/2014'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the value of the 'TIME' text box is '12:40 pm'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '04/12/2014' in the 'DATE' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '12:40 pm' in the 'TIME' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Update Preview' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Updated00c1ef74d8fe46a291ce2a819' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'e3c83e9e3dd54635898b 8017721a9c274e8a9c86 0e3558548db54a0e864a 9bc846d54a7642b5b19a' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Disable Preview' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click on the 'Preview Site' link.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the selected option of the 'SELECT A CONDITION' drop down list is '- Select -'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Enable Preview' button is visible.]]>
+            </line>
           </reporter-output>
-        </test-method> <!-- CreateCharacterProfile_Test -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@79b8202e]" name="stopSelenium" is-config="true" duration-ms="565" started-at="2014-04-08T11:53:13Z" finished-at="2014-04-08T11:53:13Z">
+        </test-method> <!-- PreviewContentItemsIntheFuturefromContentandWorkbenchViews_Test -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentAndEntityPreview.PreviewContentItemsIntheFuturefromContentandWorkbenchViews@2d7349d7]" name="stopSelenium" is-config="true" duration-ms="567" started-at="2014-04-09T08:19:21Z" finished-at="2014-04-09T08:19:22Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=CreateCharacterProfile_Test status=SUCCESS method=CreateCharacterProfile.CreateCharacterProfile_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@79b8202e] output=Open url 'http://qa4.qa.nbcupublisher7.publisher7.com'.]]]>
+                <![CDATA[[TestResult name=PreviewContentItemsIntheFuturefromContentandWorkbenchViews_Test status=SUCCESS method=PreviewContentItemsIntheFuturefromContentandWorkbenchViews.PreviewContentItemsIntheFuturefromContentandWorkbenchViews_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentAndEntityPreview.PreviewContentItemsIntheFuturefromContentandWorkbenchViews@2d7349d7] output=Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@79b8202e]" name="stopGridAndHub" is-config="true" duration-ms="384" started-at="2014-04-08T11:53:13Z" finished-at="2014-04-08T11:53:14Z">
+        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentAndEntityPreview.PreviewContentItemsIntheFuturefromContentandWorkbenchViews@2d7349d7]" name="stopGridAndHub" is-config="true" duration-ms="366" started-at="2014-04-09T08:19:22Z" finished-at="2014-04-09T08:19:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopGridAndHub -->
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile -->
-    </test> <!-- All Concurrent Web Tests -->
-  </suite> <!-- Pub 7 Concurrent Suite -->
-  <suite name="Pub 7 Consecutive Suite" duration-ms="8031" started-at="2014-04-08T15:52:41Z" finished-at="2014-04-08T15:52:49Z">
-    <groups>
-      <group name="mpx">
-        <method signature="TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@1b0690a1]" name="TestSetup_Test" class="com.nbcuni.test.publisher.tests.Setup.TestSetup"/>
-      </group> <!-- mpx -->
-      <group name="full">
-        <method signature="TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@1b0690a1]" name="TestSetup_Test" class="com.nbcuni.test.publisher.tests.Setup.TestSetup"/>
-      </group> <!-- full -->
-      <group name="smoke">
-        <method signature="TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@1b0690a1]" name="TestSetup_Test" class="com.nbcuni.test.publisher.tests.Setup.TestSetup"/>
-      </group> <!-- smoke -->
-    </groups>
-    <test name="All Consecutive Web Tests" duration-ms="8031" started-at="2014-04-08T15:52:41Z" finished-at="2014-04-08T15:52:49Z">
-      <class name="com.nbcuni.test.publisher.tests.Setup.TestSetup">
-        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@1b0690a1]" name="startGridAndHub" is-config="true" duration-ms="11687" started-at="2014-04-08T11:52:30Z" finished-at="2014-04-08T11:52:41Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startGridAndHub -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@1b0690a1]" name="startSelenium" is-config="true" duration-ms="2452" started-at="2014-04-08T11:52:41Z" finished-at="2014-04-08T11:52:44Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startSelenium -->
-        <test-method status="FAIL" signature="TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@1b0690a1]" name="TestSetup_Test" duration-ms="4819" started-at="2014-04-08T11:52:44Z" finished-at="2014-04-08T11:52:49Z">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[fail this test fool.]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: fail this test fool.
-	at org.testng.Assert.fail(Assert.java:94)
-	at com.nbcuni.test.publisher.tests.Setup.TestSetup.TestSetup_Test(TestSetup.java:31)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1220)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-            <line>
-              <![CDATA[Open url 'http://qa4.qa.nbcupublisher7.publisher7.com'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the user's password in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Login' button.]]>
-            </line>
-            <line>
-              <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/TestSetup_Test.png ]]>
-            </line>
-            <line>
-              <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/TestSetup_Test.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/TestSetup_Test.png' height='500' width='500'/> </a>]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- TestSetup_Test -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@1b0690a1]" name="stopSelenium" is-config="true" duration-ms="742" started-at="2014-04-08T11:52:49Z" finished-at="2014-04-08T11:52:49Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=TestSetup_Test status=FAILURE method=TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@1b0690a1] output=Open url 'http://qa4.qa.nbcupublisher7.publisher7.com'.]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@1b0690a1]" name="stopGridAndHub" is-config="true" duration-ms="367" started-at="2014-04-08T11:52:49Z" finished-at="2014-04-08T11:52:50Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- stopGridAndHub -->
-      </class> <!-- com.nbcuni.test.publisher.tests.Setup.TestSetup -->
-    </test> <!-- All Consecutive Web Tests -->
-  </suite> <!-- Pub 7 Consecutive Suite -->
-  <suite name="Publisher 7 Test Suites" duration-ms="0" started-at="2014-04-08T15:53:19Z" finished-at="2014-04-08T15:53:19Z">
-    <groups>
-    </groups>
-  </suite> <!-- Publisher 7 Test Suites -->
+      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentAndEntityPreview.PreviewContentItemsIntheFuturefromContentandWorkbenchViews -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

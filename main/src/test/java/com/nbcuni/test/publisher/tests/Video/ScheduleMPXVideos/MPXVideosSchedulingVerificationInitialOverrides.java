@@ -127,7 +127,7 @@ public class MPXVideosSchedulingVerificationInitialOverrides extends ParentTest{
             editMPXVideo.EnterMPXExpirationTime("05:00pm");
             contentParent.ClickSaveBtn();
             overlay.switchToDefaultContent();
-            contentParent.VerifyMessageStatus("Automation1 has been updated.");
+            contentParent.VerifyMessageStatus("MPX Video for Account \"DB TV\" (2312945284) 2312945284 has been updated.");
 
             //Step 25
             SimpleDateFormat sdfDate2 = new SimpleDateFormat("EEEE, MMMM d, yyyy");
@@ -162,7 +162,7 @@ public class MPXVideosSchedulingVerificationInitialOverrides extends ParentTest{
             //Step 38
             contentParent.ClickSaveBtn();
             overlay.switchToDefaultContent();
-            contentParent.VerifyMessageStatus("Automation1 has been updated.");
+            contentParent.VerifyMessageStatus("MPX Video for Account \"DB TV\" (2312945284) 2312945284 has been updated.");
             contentParent.VerifyPageContentPresent(defaultVideoValues);
             contentParent.VerifyPageContentNotPresent(overridenVideoValues);
 

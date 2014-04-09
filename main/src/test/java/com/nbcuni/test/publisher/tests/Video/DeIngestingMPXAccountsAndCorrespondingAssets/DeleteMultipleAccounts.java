@@ -109,7 +109,7 @@ public class DeleteMultipleAccounts extends ParentTest{
             mpxMedia.ClickSyncMPXMediaNowLnk();
             contentParent.VerifyMessageStatus("Processed video import/update manually for all accounts.");
         	Cron cron = new Cron(webDriver, applib);
-        	cron.RunCron(true);
+        	cron.RunCron(false);
     	    taxonomy.NavigateSite("Content>>Files>>mpxMedia");
     	    searchFor.EnterTitle("Automation");
     	    searchFor.ClickApplyBtn();

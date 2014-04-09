@@ -69,7 +69,12 @@ public class SitePreview {
 	 public void ClickPreviewSiteLnk() throws Exception { 
 	    	
 		 Reporter.log("Click on the 'Preview Site' link.");
-	     PreviewSite_Lnk.click();
+		 try {
+			 PreviewSite_Lnk.click();
+		 }
+		 catch (WebDriverException e) {
+			 webDriver.executeScript("arguments[0].click();", PreviewSite_Lnk);
+		 }
 	 }
 	    
 	 public void VerifyEnablePreviewBtnVisible() throws Exception { 
