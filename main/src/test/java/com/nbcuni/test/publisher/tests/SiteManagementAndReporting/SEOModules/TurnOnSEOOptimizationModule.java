@@ -70,8 +70,7 @@ public class TurnOnSEOOptimizationModule extends ParentTest {
 		XMLSiteMap xmlSiteMap = new XMLSiteMap(webDriver, applib);
 		xmlSiteMap.ClickSaveAndRestoreCbx();
 		xmlSiteMap.ClickRebuildSitemapBtn();
-		overlay.switchToDefaultContent();
-		overlay.SwitchToFrame("Rebuilding Sitemap");
+		Thread.sleep(2000); //TODO - dynamic wait
 		overlay.switchToDefaultContent();
 		overlay.WaitForFrameNotPresent("Rebuilding Sitemap");
 		overlay.SwitchToActiveFrame();

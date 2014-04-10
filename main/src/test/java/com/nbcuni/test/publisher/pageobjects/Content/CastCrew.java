@@ -1,6 +1,9 @@
 package com.nbcuni.test.publisher.pageobjects.Content;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -11,6 +14,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
 
+import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
@@ -23,11 +27,15 @@ import com.nbcuni.test.publisher.common.Driver.Driver;
 public class CastCrew {
 
     private Driver webDriver;
+    private WebDriverWait wait;
+    private Config config;
     
     //PAGE OBJECT CONSTRUCTOR
     public CastCrew(Driver webDriver) {
         this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
+        wait = new WebDriverWait(webDriver, 10);
+        config = new Config();
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -97,7 +105,22 @@ public class CastCrew {
     	Person_Txb(index).sendKeys(personName);
     	
     	Reporter.log("Click the '" + personName + "' from the auto complete option list.");
-    	AutoComplete_Opt(personName).click();
+    	wait.until(ExpectedConditions.visibilityOf(AutoComplete_Opt(personName)));
+    	Person_Txb(index).sendKeys(Keys.DOWN);
+    	Person_Txb(index).sendKeys(Keys.ENTER);
+    	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+    	for (int second = 0; ; second++){
+            if (second >= 60) {
+                Assert.fail("AutoComplete option titled '" + personName + "' is still present after timeout");}
+            try{
+            	AutoComplete_Opt(personName).isDisplayed();
+            }
+            catch (Exception e){
+            	break;
+            }
+            Thread.sleep(500);
+        }
+    	webDriver.manage().timeouts().implicitlyWait(config.getImplicitWaitTime(), TimeUnit.SECONDS);
     	
     }
     
@@ -108,7 +131,22 @@ public class CastCrew {
     	
     	Reporter.log("Click the '" + characterName + "' from the auto complete option list.");
     	webDriver.executeScript("window.scrollBy(0,100);");
-    	AutoComplete_Opt(characterName).click();
+    	wait.until(ExpectedConditions.visibilityOf(AutoComplete_Opt(characterName)));
+    	Character_Txb(index).sendKeys(Keys.DOWN);
+    	Character_Txb(index).sendKeys(Keys.ENTER);
+    	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+    	for (int second = 0; ; second++){
+            if (second >= 60) {
+                Assert.fail("AutoComplete option titled '" + characterName + "' is still present after timeout");}
+            try{
+            	AutoComplete_Opt(characterName).isDisplayed();
+            }
+            catch (Exception e){
+            	break;
+            }
+            Thread.sleep(500);
+        }
+    	webDriver.manage().timeouts().implicitlyWait(config.getImplicitWaitTime(), TimeUnit.SECONDS);
     	
     }
     
