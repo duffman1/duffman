@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
     <line>
-      <![CDATA[Open url 'http://install.qa3.nbcupublisher7.publisher7.com'.]]>
+      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
     </line>
     <line>
       <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
@@ -20,362 +20,262 @@
       <![CDATA[Switch to frame titled 'Modules'.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Pub Ads' in the 'Filter Name' text box.]]>
+      <![CDATA[Enter 'Sticky Edit Actions' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Wait for the module titled 'Pub Ads' to appear in the list.]]>
+      <![CDATA[Wait for the module titled 'Sticky Edit Actions' to appear in the list.]]>
     </line>
     <line>
-      <![CDATA[Verify the 'Pub Ads' check box is checked.]]>
+      <![CDATA[Enter 'Devel' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
+      <![CDATA[Wait for the module titled 'Devel' to appear in the list.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Structure' menu link.]]>
+      <![CDATA[Enter 'ImageField Focus' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Publisher Ads Side Files' menu link.]]>
+      <![CDATA[Wait for the module titled 'ImageField Focus' to appear in the list.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
+      <![CDATA[Enter 'Database logging' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Add' link.]]>
+      <![CDATA[Wait for the module titled 'Database logging' to appear in the list.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Add a new side file dialog'.]]>
+      <![CDATA[Enter 'Pub Post' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Enter '9ed8ae32fe2246d' in the 'Name' text box.]]>
+      <![CDATA[Wait for the module titled 'Pub Post' to appear in the list.]]>
     </line>
     <line>
-      <![CDATA[Enter '208c0dc717/19e0c51626.html' in the 'Path' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Select the 'text/html' from the 'Response type' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '<html><body bgcolor=white><script language=javascript>function pq(q) {if(q.length > 1) this.q = q.substring(1, q.length);else this.q = null;this.keyValuePairs = new Array();if(q) {for(var i=0; i < this.q.split("&").length; i++) {this.keyValuePairs[i] = this.q.split("&")[i];}}this.getValue = function(s) {for(var j=0; j < this.keyValuePairs.length; j++) {if(this.keyValuePairs[j].split("=")[0] == s)return this.keyValuePairs[j].split("=")[1];}return -1;}}function qs(key){var page = new pq(document.location.search);return unescape(page.getValue(key));}var _c = qs('c');var r_number = Math.random();document.writeln('<SCR'+'IPT language='JavaScript' S'+'RC="http://media.adcentriconline.com/adcentric/tag/'+_c+'?ADCadcifr=1&number='+r_number+'"></SCR'+'IPT>');</script></body></html>' in the 'Content' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of '9ed8ae32fe2246d has been created.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify there are no errors present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the Ad Side File link with path '208c0dc717/19e0c51626.html'.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the Ad Side File 'Edit' link for adName + 'AdCentric'.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Edit side file adcentric dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'adcentric has been updated' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify there are no errors present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify storage type for Ad Side File 'AdCentric' is set to 'Overridden'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the Ad Side File 'Edit' link for adName + 'AdCentric'.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Edit side file adcentric dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Revert' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Revert' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The item has been reverted.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify there are no errors present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify storage type for Ad Side File 'AdCentric' is set to 'Default'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the Ad Side File expand link for adName + 'AdCentric'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the Ad Side File 'Clone' link for adName + 'AdCentric'.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Clone side file adcentric dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '9af7804ed6214ea' in the 'Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'clone_of_adcentric has been created.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify there are no errors present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify storage type for Ad Side File '9af7804ed6214ea' is set to 'Normal'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the Ad Side File 'Edit' link for adName + 'AdCentric'.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Edit side file adcentric dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Export' tab.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Export side file adcentric dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Copy the text from the 'Export' text area.]]>
+      <![CDATA[Verify the 'Pub Post' check box is checked.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Structure' menu link.]]>
+      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Publisher Ads Side Files' menu link.]]>
+      <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Import' menu link.]]>
+      <![CDATA[Enter the user's password in the 'Password' text box.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Import side file dialog'.]]>
+      <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[Enter '$adpath = new stdClass();
-$adpath->disabled = FALSE; /* Edit this to true to make a default adpath disabled initially */
-$adpath->api_version = 1;
-$adpath->machine_name = 'adcentric';
-$adpath->name = 'AdCentric';
-$adpath->path = 'AdCentric/adcentric.html';
-$adpath->file_type = 'html';
-$adpath->content = '<html><body bgcolor=white>
-<script language=javascript>
-function pq(q) {
-        if(q.length > 1) this.q = q.substring(1, q.length);
-        else this.q = null;
-        this.keyValuePairs = new Array();
-        if(q) {
-                for(var i=0; i < this.q.split("&").length; i++) {
-                        this.keyValuePairs[i] = this.q.split("&")[i];
-                }
-        }
-        this.getValue = function(s) {
-                for(var j=0; j < this.keyValuePairs.length; j++) {
-                        if(this.keyValuePairs[j].split("=")[0] == s)
-                                return this.keyValuePairs[j].split("=")[1];
-                }
-                return -1;
-        }
-}
-function qs(key){
-        var page = new pq(document.location.search);
-        return unescape(page.getValue(key));
-}
-var _c = qs(\'c\');
-var r_number = Math.random();
-document.writeln(\'<SCR\'+\'IPT language=\\\'JavaScript\\\' S\'+\'RC="http://media.adcentriconline.com/adcentric/tag/\'+_c+\'?ADCadcifr=1&number=\'+r_number+\'"></SCR\'+\'IPT>\');
-</script>
-</body></html>
-';
-' in the 'Side file code' text area.]]>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Continue' button.]]>
+      <![CDATA[Mouse over the 'Add content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Import side file dialog'.]]>
+      <![CDATA[Click the 'Character Profile' menu link.]]>
     </line>
     <line>
-      <![CDATA[Verify warning message 'You have unsaved changes. These changes will not be made permanent until you click Save.' is present.]]>
+      <![CDATA[Switch to the active frame titled 'Create Character Profile dialog'.]]>
     </line>
     <line>
-      <![CDATA[Verify there are no errors present.]]>
+      <![CDATA[Enter '62be98b7c9854c0' in the 'Character First Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Enter '17f4e6fffdba41a' in the 'Name' text box.]]>
+      <![CDATA[Click the Cover Photo 'Select' button.]]>
     </line>
     <line>
-      <![CDATA[Enter '784f0f54e6/fa8e04d156.html' in the 'Path' text box.]]>
+      <![CDATA[Switch to the select file frame.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Update' button.]]>
+      <![CDATA[Enter the file path for file upload.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Import side file dialog'.]]>
+      <![CDATA[Click the 'Upload' button.]]>
     </line>
     <line>
-      <![CDATA[Verify warning message 'You have unsaved changes. These changes will not be made permanent until you click Save.' is present.]]>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
     </line>
     <line>
-      <![CDATA[Verify there are no errors present.]]>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Public Local Files' radio button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the file image 'HanSolo' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the img is loaded and visible.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Import side file dialog'.]]>
+      <![CDATA[Switch to frame titled 'Create Character Profile'.]]>
     </line>
     <line>
-      <![CDATA[Enter '17f4e6fffdba41a' in the 'Machine Name' text box.]]>
+      <![CDATA[Assert that img source of the Cover Photo contains 'HanSolo'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Update' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Import side file dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify warning message 'You have unsaved changes. These changes will not be made permanent until you click Save.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify there are no errors present.]]>
+      <![CDATA[Assert the the img is loaded and visible.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of '17f4e6fffdba41a has been created.' is present.]]>
+      <![CDATA[Verify success message of 'Character Profile 62be98b7c9854c0 has been created.' is present.]]>
     </line>
     <line>
       <![CDATA[Verify there are no errors present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify storage type for Ad Side File '17f4e6fffdba41a' is set to 'Normal'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the Ad Side File expand link for adName + '9ed8ae32fe2246d'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the Ad Side File 'Delete' link for adName + '9ed8ae32fe2246d'.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Are you sure you want to delete 9ed8ae32fe2246d? dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Delete' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The item has been deleted.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify there are no errors present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify Ad Side File '9ed8ae32fe2246d' is NOT present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the Ad Side File expand link for adName + '9af7804ed6214ea'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the Ad Side File 'Delete' link for adName + '9af7804ed6214ea'.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Are you sure you want to delete clone_of_adcentric? dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Delete' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The item has been deleted.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify there are no errors present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify Ad Side File '9af7804ed6214ea' is NOT present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the Ad Side File expand link for adName + '17f4e6fffdba41a'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the Ad Side File 'Delete' link for adName + '17f4e6fffdba41a'.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Are you sure you want to delete 17f4e6fffdba41a? dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Delete' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The item has been deleted.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify there are no errors present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify Ad Side File '17f4e6fffdba41a' is NOT present.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="108334" started-at="2014-04-10T12:47:19Z" finished-at="2014-04-10T12:49:08Z">
+  <suite name="Pub 7 Concurrent Suite" duration-ms="18596" started-at="2014-04-10T17:04:35Z" finished-at="2014-04-10T17:04:53Z">
     <groups>
       <group name="full">
-        <method signature="AdFoldersRichMediaAds.AdFoldersRichMediaAds_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds@4425fa0]" name="AdFoldersRichMediaAds_Test" class="com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds"/>
+        <method signature="CreateCharacterProfile.CreateCharacterProfile_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@2748ea70]" name="CreateCharacterProfile_Test" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile"/>
       </group> <!-- full -->
-      <group name="smoke">
-        <method signature="AdFoldersRichMediaAds.AdFoldersRichMediaAds_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds@4425fa0]" name="AdFoldersRichMediaAds_Test" class="com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds"/>
-      </group> <!-- smoke -->
     </groups>
-    <test name="Default test" duration-ms="108334" started-at="2014-04-10T12:47:19Z" finished-at="2014-04-10T12:49:08Z">
-      <class name="com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds">
-        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds@4425fa0]" name="startGridAndHub" is-config="true" duration-ms="11708" started-at="2014-04-10T08:47:08Z" finished-at="2014-04-10T08:47:19Z">
+    <test name="All Concurrent Web Tests" duration-ms="18596" started-at="2014-04-10T17:04:35Z" finished-at="2014-04-10T17:04:53Z">
+      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile">
+        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@2748ea70]" name="startGridAndHub" is-config="true" duration-ms="5411" started-at="2014-04-10T13:04:29Z" finished-at="2014-04-10T13:04:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startGridAndHub -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds@4425fa0]" name="startSelenium" is-config="true" duration-ms="2464" started-at="2014-04-10T08:47:19Z" finished-at="2014-04-10T08:47:22Z">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@2748ea70]" name="startSelenium" is-config="true" duration-ms="2165" started-at="2014-04-10T13:04:35Z" finished-at="2014-04-10T13:04:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="AdFoldersRichMediaAds_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds@4425fa0]" name="AdFoldersRichMediaAds_Test" duration-ms="105290" started-at="2014-04-10T08:47:22Z" finished-at="2014-04-10T08:49:07Z">
+        <test-method status="PASS" signature="CreateCharacterProfile_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@2748ea70]" name="CreateCharacterProfile_Test" duration-ms="15862" started-at="2014-04-10T13:04:37Z" finished-at="2014-04-10T13:04:53Z">
           <reporter-output>
             <line>
-              <![CDATA[Open url 'http://install.qa3.nbcupublisher7.publisher7.com'.]]>
+              <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter the user's password in the 'Password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Login' button.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Add content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Character Profile' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Character Profile dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '62be98b7c9854c0' in the 'Character First Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the Cover Photo 'Select' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the select file frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter the file path for file upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Upload' button.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Public Local Files' radio button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the file image 'HanSolo' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to frame titled 'Create Character Profile'.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that img source of the Cover Photo contains 'HanSolo'.]]>
+            </line>
+            <line>
+              <![CDATA[Assert the the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Character Profile 62be98b7c9854c0 has been created.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify there are no errors present.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- CreateCharacterProfile_Test -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@2748ea70]" name="stopSelenium" is-config="true" duration-ms="565" started-at="2014-04-10T13:04:53Z" finished-at="2014-04-10T13:04:53Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=CreateCharacterProfile_Test status=SUCCESS method=CreateCharacterProfile.CreateCharacterProfile_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@2748ea70] output=Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopSelenium -->
+        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@2748ea70]" name="stopGridAndHub" is-config="true" duration-ms="369" started-at="2014-04-10T13:04:53Z" finished-at="2014-04-10T13:04:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopGridAndHub -->
+      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile -->
+    </test> <!-- All Concurrent Web Tests -->
+  </suite> <!-- Pub 7 Concurrent Suite -->
+  <suite name="Pub 7 Consecutive Suite" duration-ms="21028" started-at="2014-04-10T17:04:08Z" finished-at="2014-04-10T17:04:29Z">
+    <groups>
+      <group name="mpx">
+        <method signature="TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@6816af10]" name="TestSetup_Test" class="com.nbcuni.test.publisher.tests.Setup.TestSetup"/>
+      </group> <!-- mpx -->
+      <group name="full">
+        <method signature="TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@6816af10]" name="TestSetup_Test" class="com.nbcuni.test.publisher.tests.Setup.TestSetup"/>
+      </group> <!-- full -->
+      <group name="smoke">
+        <method signature="TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@6816af10]" name="TestSetup_Test" class="com.nbcuni.test.publisher.tests.Setup.TestSetup"/>
+      </group> <!-- smoke -->
+    </groups>
+    <test name="All Consecutive Web Tests" duration-ms="21028" started-at="2014-04-10T17:04:08Z" finished-at="2014-04-10T17:04:29Z">
+      <class name="com.nbcuni.test.publisher.tests.Setup.TestSetup">
+        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@6816af10]" name="startGridAndHub" is-config="true" duration-ms="11833" started-at="2014-04-10T13:03:56Z" finished-at="2014-04-10T13:04:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startGridAndHub -->
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@6816af10]" name="startSelenium" is-config="true" duration-ms="2488" started-at="2014-04-10T13:04:08Z" finished-at="2014-04-10T13:04:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startSelenium -->
+        <test-method status="PASS" signature="TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@6816af10]" name="TestSetup_Test" duration-ms="17902" started-at="2014-04-10T13:04:11Z" finished-at="2014-04-10T13:04:28Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
             </line>
             <line>
               <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
@@ -393,356 +293,63 @@ document.writeln(\'<SCR\'+\'IPT language=\\\'JavaScript\\\' S\'+\'RC="http://med
               <![CDATA[Switch to frame titled 'Modules'.]]>
             </line>
             <line>
-              <![CDATA[Enter 'Pub Ads' in the 'Filter Name' text box.]]>
+              <![CDATA[Enter 'Sticky Edit Actions' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Wait for the module titled 'Pub Ads' to appear in the list.]]>
+              <![CDATA[Wait for the module titled 'Sticky Edit Actions' to appear in the list.]]>
             </line>
             <line>
-              <![CDATA[Verify the 'Pub Ads' check box is checked.]]>
+              <![CDATA[Enter 'Devel' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
+              <![CDATA[Wait for the module titled 'Devel' to appear in the list.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Structure' menu link.]]>
+              <![CDATA[Enter 'ImageField Focus' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Publisher Ads Side Files' menu link.]]>
+              <![CDATA[Wait for the module titled 'ImageField Focus' to appear in the list.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
+              <![CDATA[Enter 'Database logging' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Add' link.]]>
+              <![CDATA[Wait for the module titled 'Database logging' to appear in the list.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Add a new side file dialog'.]]>
+              <![CDATA[Enter 'Pub Post' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Enter '9ed8ae32fe2246d' in the 'Name' text box.]]>
+              <![CDATA[Wait for the module titled 'Pub Post' to appear in the list.]]>
             </line>
             <line>
-              <![CDATA[Enter '208c0dc717/19e0c51626.html' in the 'Path' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Select the 'text/html' from the 'Response type' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '<html><body bgcolor=white><script language=javascript>function pq(q) {if(q.length > 1) this.q = q.substring(1, q.length);else this.q = null;this.keyValuePairs = new Array();if(q) {for(var i=0; i < this.q.split("&").length; i++) {this.keyValuePairs[i] = this.q.split("&")[i];}}this.getValue = function(s) {for(var j=0; j < this.keyValuePairs.length; j++) {if(this.keyValuePairs[j].split("=")[0] == s)return this.keyValuePairs[j].split("=")[1];}return -1;}}function qs(key){var page = new pq(document.location.search);return unescape(page.getValue(key));}var _c = qs('c');var r_number = Math.random();document.writeln('<SCR'+'IPT language='JavaScript' S'+'RC="http://media.adcentriconline.com/adcentric/tag/'+_c+'?ADCadcifr=1&number='+r_number+'"></SCR'+'IPT>');</script></body></html>' in the 'Content' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of '9ed8ae32fe2246d has been created.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify there are no errors present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the Ad Side File link with path '208c0dc717/19e0c51626.html'.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the Ad Side File 'Edit' link for adName + 'AdCentric'.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Edit side file adcentric dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'adcentric has been updated' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify there are no errors present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify storage type for Ad Side File 'AdCentric' is set to 'Overridden'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the Ad Side File 'Edit' link for adName + 'AdCentric'.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Edit side file adcentric dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Revert' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Revert' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The item has been reverted.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify there are no errors present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify storage type for Ad Side File 'AdCentric' is set to 'Default'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the Ad Side File expand link for adName + 'AdCentric'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the Ad Side File 'Clone' link for adName + 'AdCentric'.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Clone side file adcentric dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '9af7804ed6214ea' in the 'Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'clone_of_adcentric has been created.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify there are no errors present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify storage type for Ad Side File '9af7804ed6214ea' is set to 'Normal'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the Ad Side File 'Edit' link for adName + 'AdCentric'.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Edit side file adcentric dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Export' tab.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Export side file adcentric dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Copy the text from the 'Export' text area.]]>
+              <![CDATA[Verify the 'Pub Post' check box is checked.]]>
             </line>
             <line>
               <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Structure' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Publisher Ads Side Files' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Import' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Import side file dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '$adpath = new stdClass();
-$adpath->disabled = FALSE; /* Edit this to true to make a default adpath disabled initially */
-$adpath->api_version = 1;
-$adpath->machine_name = 'adcentric';
-$adpath->name = 'AdCentric';
-$adpath->path = 'AdCentric/adcentric.html';
-$adpath->file_type = 'html';
-$adpath->content = '<html><body bgcolor=white>
-<script language=javascript>
-function pq(q) {
-        if(q.length > 1) this.q = q.substring(1, q.length);
-        else this.q = null;
-        this.keyValuePairs = new Array();
-        if(q) {
-                for(var i=0; i < this.q.split("&").length; i++) {
-                        this.keyValuePairs[i] = this.q.split("&")[i];
-                }
-        }
-        this.getValue = function(s) {
-                for(var j=0; j < this.keyValuePairs.length; j++) {
-                        if(this.keyValuePairs[j].split("=")[0] == s)
-                                return this.keyValuePairs[j].split("=")[1];
-                }
-                return -1;
-        }
-}
-function qs(key){
-        var page = new pq(document.location.search);
-        return unescape(page.getValue(key));
-}
-var _c = qs(\'c\');
-var r_number = Math.random();
-document.writeln(\'<SCR\'+\'IPT language=\\\'JavaScript\\\' S\'+\'RC="http://media.adcentriconline.com/adcentric/tag/\'+_c+\'?ADCadcifr=1&number=\'+r_number+\'"></SCR\'+\'IPT>\');
-</script>
-</body></html>
-';
-' in the 'Side file code' text area.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Continue' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Import side file dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify warning message 'You have unsaved changes. These changes will not be made permanent until you click Save.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify there are no errors present.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '17f4e6fffdba41a' in the 'Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '784f0f54e6/fa8e04d156.html' in the 'Path' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Update' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Import side file dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify warning message 'You have unsaved changes. These changes will not be made permanent until you click Save.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify there are no errors present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Import side file dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '17f4e6fffdba41a' in the 'Machine Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Update' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Import side file dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify warning message 'You have unsaved changes. These changes will not be made permanent until you click Save.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify there are no errors present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of '17f4e6fffdba41a has been created.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify there are no errors present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify storage type for Ad Side File '17f4e6fffdba41a' is set to 'Normal'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the Ad Side File expand link for adName + '9ed8ae32fe2246d'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the Ad Side File 'Delete' link for adName + '9ed8ae32fe2246d'.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Are you sure you want to delete 9ed8ae32fe2246d? dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Delete' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The item has been deleted.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify there are no errors present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify Ad Side File '9ed8ae32fe2246d' is NOT present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the Ad Side File expand link for adName + '9af7804ed6214ea'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the Ad Side File 'Delete' link for adName + '9af7804ed6214ea'.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Are you sure you want to delete clone_of_adcentric? dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Delete' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The item has been deleted.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify there are no errors present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify Ad Side File '9af7804ed6214ea' is NOT present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the Ad Side File expand link for adName + '17f4e6fffdba41a'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the Ad Side File 'Delete' link for adName + '17f4e6fffdba41a'.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Are you sure you want to delete 17f4e6fffdba41a? dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Delete' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The item has been deleted.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify there are no errors present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify Ad Side File '17f4e6fffdba41a' is NOT present.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- AdFoldersRichMediaAds_Test -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds@4425fa0]" name="stopSelenium" is-config="true" duration-ms="568" started-at="2014-04-10T08:49:07Z" finished-at="2014-04-10T08:49:08Z">
+        </test-method> <!-- TestSetup_Test -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@6816af10]" name="stopSelenium" is-config="true" duration-ms="569" started-at="2014-04-10T13:04:28Z" finished-at="2014-04-10T13:04:29Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=AdFoldersRichMediaAds_Test status=SUCCESS method=AdFoldersRichMediaAds.AdFoldersRichMediaAds_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds@4425fa0] output=Open url 'http://install.qa3.nbcupublisher7.publisher7.com'.]]]>
+                <![CDATA[[TestResult name=TestSetup_Test status=SUCCESS method=TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@6816af10] output=Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds@4425fa0]" name="stopGridAndHub" is-config="true" duration-ms="378" started-at="2014-04-10T08:49:08Z" finished-at="2014-04-10T08:49:08Z">
+        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@6816af10]" name="stopGridAndHub" is-config="true" duration-ms="361" started-at="2014-04-10T13:04:29Z" finished-at="2014-04-10T13:04:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopGridAndHub -->
-      </class> <!-- com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Setup.TestSetup -->
+    </test> <!-- All Consecutive Web Tests -->
+  </suite> <!-- Pub 7 Consecutive Suite -->
+  <suite name="Publisher 7 Test Suites" duration-ms="0" started-at="2014-04-10T17:04:54Z" finished-at="2014-04-10T17:04:54Z">
+    <groups>
+    </groups>
+  </suite> <!-- Publisher 7 Test Suites -->
 </testng-results>

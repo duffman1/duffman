@@ -22,6 +22,7 @@ public class SendEmailReport {
 	public void SendEmail(String pathToReport, String reportName, Integer passedTestsCount, Integer failedTestsCount, List<String> failedScreenshots) {
 
 		Config config = new Config();
+		/*
         final String username = config.getConfigValue("GmailUsername");
         final String password = config.getConfigValue("GmailPassword");
 
@@ -36,8 +37,16 @@ public class SendEmailReport {
             protected PasswordAuthentication getPasswordAuthentication() {
                 return new PasswordAuthentication(username, password);
             }
-          });
+          });*/
 
+		Properties props = new Properties();
+        props.put("mail.smtp.starttls.enable", "true");
+        props.put("mail.smtp.auth", "false");
+        props.put("mail.smtp.host", "mailrelay.nbcuni.ge.com");
+        props.put("mail.smtp.port", "25");
+
+        Session session = Session.getDefaultInstance(props);
+		
         try {
 
             Message message = new MimeMessage(session);

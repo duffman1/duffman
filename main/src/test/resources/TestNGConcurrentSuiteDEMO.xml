@@ -1,0 +1,19 @@
+<suite name="Pub 7 Concurrent Suite" parallel="classes" thread-count="1">
+
+  	<!--TEST EXECUTION QUEUE-->
+  	<test verbose="1" name="All Concurrent Web Tests" annotations="JDK">
+
+		<!-- Enter group name for specific test scripts, options are "full", "smoke", or "mpx" -->
+		<groups>
+	 		<run>
+	 			<include name="full"/>
+	 		</run>
+		</groups>
+
+		<classes>
+			
+			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile"/>
+			
+		</classes>
+	</test>
+</suite>
