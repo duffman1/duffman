@@ -97,6 +97,7 @@ public class PublisherAdsSideFiles {
         
     	Reporter.log("Click the Ad Side File expand link for adName + '" + adName + "'.");
     	AdSideFileExpandEdit_Lnk(adName).click();
+    	Thread.sleep(1000); //pause required
     }
     
     public void ClickAdSideFileCloneLnk(String adName) throws Exception {

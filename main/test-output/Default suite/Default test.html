@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Apr 09 20:45:30 EDT 2014</td>
+<td>Started on:</td><td>Thu Apr 10 08:47:19 EDT 2014</td>
 </tr>
-<tr><td>Total time:</td><td>173 seconds (173066 ms)</td>
+<tr><td>Total time:</td><td>108 seconds (108334 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,108 +75,157 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SEOModules.TurnOnSEOOptimizationModule.TurnOnSEOOptimizationModule_Test()'><b>TurnOnSEOOptimizationModule_Test</b><br>Test class: com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SEOModules.TurnOnSEOOptimizationModule<br/>
-<a href="#Output-923847351" onClick='toggleBox("Output-923847351", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds.AdFoldersRichMediaAds_Test()'><b>AdFoldersRichMediaAds_Test</b><br>Test class: com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds<br/>
+<a href="#Output-653167242" onClick='toggleBox("Output-653167242", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-923847351" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-923847351">
-Open url 'http://install.qa4.nbcupublisher7.publisher7.com'.<br/>
+<a href="#Output-653167242" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-653167242">
+Open url 'http://install.qa3.nbcupublisher7.publisher7.com'.<br/>
 Enter the user's email address in the 'Email Address' text box.<br/>
 Enter the user's password in the 'Password' text box.<br/>
 Click the 'Login' button.<br/>
 Click the 'Modules' menu link.<br/>
 Switch to frame titled 'Modules'.<br/>
-Enter 'Pub SEO' in the 'Filter Name' text box.<br/>
-Wait for the module titled 'Pub SEO' to appear in the list.<br/>
-Verify the 'Pub SEO' check box is checked.<br/>
+Enter 'Pub Ads' in the 'Filter Name' text box.<br/>
+Wait for the module titled 'Pub Ads' to appear in the list.<br/>
+Verify the 'Pub Ads' check box is checked.<br/>
 Click the 'Close Overlay X'.<br/>
 Mouse over the 'Structure' menu link.<br/>
-Mouse over the 'Content types' menu link.<br/>
-Click the 'Post' menu link.<br/>
-Switch to the active frame titled 'Post dialog'.<br/>
-Click the 'XML sitemap' link.<br/>
-Select 'Included' from the 'Inclusion' drop down list.<br/>
-Click the 'Save content type' link.<br/>
-Verify success message of 'The content type Post has been updated.' is present.<br/>
+Click the 'Publisher Ads Side Files' menu link.<br/>
+Switch to the active frame titled 'Publisher Ads Side Files dialog'.<br/>
+Click the 'Add' link.<br/>
+Switch to the active frame titled 'Add a new side file dialog'.<br/>
+Enter '9ed8ae32fe2246d' in the 'Name' text box.<br/>
+Enter '208c0dc717/19e0c51626.html' in the 'Path' text box.<br/>
+Select the 'text/html' from the 'Response type' drop down list.<br/>
+Enter '<html><body bgcolor=white><script language=javascript>function pq(q) {if(q.length > 1) this.q = q.substring(1, q.length);else this.q = null;this.keyValuePairs = new Array();if(q) {for(var i=0; i < this.q.split("&").length; i++) {this.keyValuePairs[i] = this.q.split("&")[i];}}this.getValue = function(s) {for(var j=0; j < this.keyValuePairs.length; j++) {if(this.keyValuePairs[j].split("=")[0] == s)return this.keyValuePairs[j].split("=")[1];}return -1;}}function qs(key){var page = new pq(document.location.search);return unescape(page.getValue(key));}var _c = qs('c');var r_number = Math.random();document.writeln('<SCR'+'IPT language='JavaScript' S'+'RC="http://media.adcentriconline.com/adcentric/tag/'+_c+'?ADCadcifr=1&number='+r_number+'"></SCR'+'IPT>');</script></body></html>' in the 'Content' text box.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'Publisher Ads Side Files dialog'.<br/>
+Verify success message of '9ed8ae32fe2246d has been created.' is present.<br/>
 Verify there are no errors present.<br/>
+Click the Ad Side File link with path '208c0dc717/19e0c51626.html'.<br/>
+Switch to the active frame titled 'Publisher Ads Side Files dialog'.<br/>
+Click the Ad Side File 'Edit' link for adName + 'AdCentric'.<br/>
+Switch to the active frame titled 'Edit side file adcentric dialog'.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'Publisher Ads Side Files dialog'.<br/>
+Verify success message of 'adcentric has been updated' is present.<br/>
+Verify there are no errors present.<br/>
+Verify storage type for Ad Side File 'AdCentric' is set to 'Overridden'.<br/>
+Click the Ad Side File 'Edit' link for adName + 'AdCentric'.<br/>
+Switch to the active frame titled 'Edit side file adcentric dialog'.<br/>
+Click the 'Revert' button.<br/>
+Click the 'Revert' button.<br/>
+Switch to the active frame titled 'Publisher Ads Side Files dialog'.<br/>
+Verify success message of 'The item has been reverted.' is present.<br/>
+Verify there are no errors present.<br/>
+Verify storage type for Ad Side File 'AdCentric' is set to 'Default'.<br/>
+Click the Ad Side File expand link for adName + 'AdCentric'.<br/>
+Click the Ad Side File 'Clone' link for adName + 'AdCentric'.<br/>
+Switch to the active frame titled 'Clone side file adcentric dialog'.<br/>
+Enter '9af7804ed6214ea' in the 'Name' text box.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'clone_of_adcentric has been created.' is present.<br/>
+Verify there are no errors present.<br/>
+Verify storage type for Ad Side File '9af7804ed6214ea' is set to 'Normal'.<br/>
+Click the Ad Side File 'Edit' link for adName + 'AdCentric'.<br/>
+Switch to the active frame titled 'Edit side file adcentric dialog'.<br/>
+Click the 'Export' tab.<br/>
+Switch to the active frame titled 'Export side file adcentric dialog'.<br/>
+Copy the text from the 'Export' text area.<br/>
 Click the 'Close Overlay X'.<br/>
-Mouse over the 'Content' menu link.<br/>
-Mouse over the 'Add content' menu link.<br/>
-Click the 'Post' menu link.<br/>
-Switch to the active frame titled 'Create Post dialog'.<br/>
-Enter '2193ac49b8a74d4' in the 'Title' text box.<br/>
-Switch to the Synopsis frame.<br/>
-Enter a randomized text string into the 'Body' text area.<br/>
-Switch to the active frame titled 'Create Post dialog'.<br/>
-Click the 'Cover' select button.<br/>
-Switch to the select file frame.<br/>
-Enter the file path for file upload.<br/>
-Click the 'Upload' button.<br/>
-Wait for the file link to be visible after upload.<br/>
-Click the 'Next' button.<br/>
-Click the 'Public Local Files' radio button.<br/>
-Click the 'Next' button.<br/>
-Verify the file image 'HanSolo' is present.<br/>
-Verify the img is loaded and visible.<br/>
-Click the 'Save' button.<br/>
-Switch to the active frame titled 'Create Post dialog'.<br/>
-Scroll the 'Publishing Options' link into view.<br/>
-Click the 'Publishing Options' link.<br/>
-Select 'Draft' from the 'Moderation State' drop down list.<br/>
-Click the 'Save' button.<br/>
-Verify success message of 'Post 2193ac49b8a74d4 has been created.' is present.<br/>
+Mouse over the 'Structure' menu link.<br/>
+Mouse over the 'Publisher Ads Side Files' menu link.<br/>
+Click the 'Import' menu link.<br/>
+Switch to the active frame titled 'Import side file dialog'.<br/>
+Enter '$adpath = new stdClass();
+$adpath->disabled = FALSE; /* Edit this to true to make a default adpath disabled initially */
+$adpath->api_version = 1;
+$adpath->machine_name = 'adcentric';
+$adpath->name = 'AdCentric';
+$adpath->path = 'AdCentric/adcentric.html';
+$adpath->file_type = 'html';
+$adpath->content = '<html><body bgcolor=white>
+<script language=javascript>
+function pq(q) {
+        if(q.length > 1) this.q = q.substring(1, q.length);
+        else this.q = null;
+        this.keyValuePairs = new Array();
+        if(q) {
+                for(var i=0; i < this.q.split("&").length; i++) {
+                        this.keyValuePairs[i] = this.q.split("&")[i];
+                }
+        }
+        this.getValue = function(s) {
+                for(var j=0; j < this.keyValuePairs.length; j++) {
+                        if(this.keyValuePairs[j].split("=")[0] == s)
+                                return this.keyValuePairs[j].split("=")[1];
+                }
+                return -1;
+        }
+}
+function qs(key){
+        var page = new pq(document.location.search);
+        return unescape(page.getValue(key));
+}
+var _c = qs(\'c\');
+var r_number = Math.random();
+document.writeln(\'<SCR\'+\'IPT language=\\\'JavaScript\\\' S\'+\'RC="http://media.adcentriconline.com/adcentric/tag/\'+_c+\'?ADCadcifr=1&number=\'+r_number+\'"></SCR\'+\'IPT>\');
+</script>
+</body></html>
+';
+' in the 'Side file code' text area.<br/>
+Click the 'Continue' button.<br/>
+Switch to the active frame titled 'Import side file dialog'.<br/>
+Verify warning message 'You have unsaved changes. These changes will not be made permanent until you click Save.' is present.<br/>
 Verify there are no errors present.<br/>
-Mouse over the 'Content' menu link.<br/>
-Mouse over the 'Add content' menu link.<br/>
-Click the 'Post' menu link.<br/>
-Switch to the active frame titled 'Create Post dialog'.<br/>
-Enter '15a75ee27ae0419' in the 'Title' text box.<br/>
-Switch to the Synopsis frame.<br/>
-Enter a randomized text string into the 'Body' text area.<br/>
-Switch to the active frame titled 'Create Post dialog'.<br/>
-Click the 'Cover' select button.<br/>
-Switch to the select file frame.<br/>
-Enter the file path for file upload.<br/>
-Click the 'Upload' button.<br/>
-Wait for the file link to be visible after upload.<br/>
-Click the 'Next' button.<br/>
-Click the 'Public Local Files' radio button.<br/>
-Click the 'Next' button.<br/>
-Verify the file image 'HanSolo' is present.<br/>
-Verify the img is loaded and visible.<br/>
-Click the 'Save' button.<br/>
-Switch to the active frame titled 'Create Post dialog'.<br/>
-Scroll the 'Publishing Options' link into view.<br/>
-Click the 'Publishing Options' link.<br/>
-Select 'Published' from the 'Moderation State' drop down list.<br/>
-Click the 'Save' button.<br/>
-Verify success message of 'Post 15a75ee27ae0419 has been created.' is present.<br/>
+Enter '17f4e6fffdba41a' in the 'Name' text box.<br/>
+Enter '784f0f54e6/fa8e04d156.html' in the 'Path' text box.<br/>
+Click the 'Update' button.<br/>
+Switch to the active frame titled 'Import side file dialog'.<br/>
+Verify warning message 'You have unsaved changes. These changes will not be made permanent until you click Save.' is present.<br/>
 Verify there are no errors present.<br/>
-Switch to the active frame titled 'Status report dialog'.<br/>
-Click the 'Close Overlay X'.<br/>
-Mouse over the 'Configuration' menu link.<br/>
-Mouse over the 'Search and metadata' menu link.<br/>
-Mouse over the 'XML sitemap' menu link.<br/>
-Click the 'Rebuild links' menu link.<br/>
-Switch to the active frame titled 'Are you sure you want to rebuild the XML sitemap? dialog'.<br/>
-Click the 'Rebuild Sitemap' button.<br/>
-Wait for the frame titled 'Rebuilding Sitemap' to close.<br/>
-Switch to the active frame titled 'XML sitemap dialog'.<br/>
-Verify success message of 'The sitemap links were rebuilt.' is present.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'Import side file dialog'.<br/>
+Enter '17f4e6fffdba41a' in the 'Machine Name' text box.<br/>
+Click the 'Update' button.<br/>
+Switch to the active frame titled 'Import side file dialog'.<br/>
+Verify warning message 'You have unsaved changes. These changes will not be made permanent until you click Save.' is present.<br/>
 Verify there are no errors present.<br/>
-Click the 'Close Overlay X'.<br/>
-Mouse over the 'Configuration' menu link.<br/>
-Mouse over the 'Search and metadata' menu link.<br/>
-Click the 'XML sitemap' menu link.<br/>
-Switch to the active frame titled 'XML sitemap dialog'.<br/>
-Click the 'XMLSitemap Link' with text ''.<br/>
-Verify the text '15a75ee27ae0419' is present on the page.<br/>
-Verify the text '2193ac49b8a74d4' is NOT present on the page.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'Publisher Ads Side Files dialog'.<br/>
+Verify success message of '17f4e6fffdba41a has been created.' is present.<br/>
+Verify there are no errors present.<br/>
+Verify storage type for Ad Side File '17f4e6fffdba41a' is set to 'Normal'.<br/>
+Click the Ad Side File expand link for adName + '9ed8ae32fe2246d'.<br/>
+Click the Ad Side File 'Delete' link for adName + '9ed8ae32fe2246d'.<br/>
+Switch to the active frame titled 'Are you sure you want to delete 9ed8ae32fe2246d? dialog'.<br/>
+Click the 'Delete' button.<br/>
+Switch to the active frame titled 'Publisher Ads Side Files dialog'.<br/>
+Verify success message of 'The item has been deleted.' is present.<br/>
+Verify there are no errors present.<br/>
+Verify Ad Side File '9ed8ae32fe2246d' is NOT present.<br/>
+Click the Ad Side File expand link for adName + '9af7804ed6214ea'.<br/>
+Click the Ad Side File 'Delete' link for adName + '9af7804ed6214ea'.<br/>
+Switch to the active frame titled 'Are you sure you want to delete clone_of_adcentric? dialog'.<br/>
+Click the 'Delete' button.<br/>
+Switch to the active frame titled 'Publisher Ads Side Files dialog'.<br/>
+Verify success message of 'The item has been deleted.' is present.<br/>
+Verify there are no errors present.<br/>
+Verify Ad Side File '9af7804ed6214ea' is NOT present.<br/>
+Click the Ad Side File expand link for adName + '17f4e6fffdba41a'.<br/>
+Click the Ad Side File 'Delete' link for adName + '17f4e6fffdba41a'.<br/>
+Switch to the active frame titled 'Are you sure you want to delete 17f4e6fffdba41a? dialog'.<br/>
+Click the 'Delete' button.<br/>
+Switch to the active frame titled 'Publisher Ads Side Files dialog'.<br/>
+Verify success message of 'The item has been deleted.' is present.<br/>
+Verify there are no errors present.<br/>
+Verify Ad Side File '17f4e6fffdba41a' is NOT present.<br/>
 </div>
 </td>
 <td></td>
-<td>170</td>
-<td>com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SEOModules.TurnOnSEOOptimizationModule@5d1a4ce8</td></tr>
+<td>105</td>
+<td>com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds@4425fa0</td></tr>
 </table><p>
 </body>
 </html>

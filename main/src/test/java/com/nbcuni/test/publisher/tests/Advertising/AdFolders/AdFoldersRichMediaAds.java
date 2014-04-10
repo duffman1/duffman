@@ -31,6 +31,24 @@ public class AdFoldersRichMediaAds extends ParentTest {
         Modules modules = new Modules(webDriver, applib);
         modules.VerifyModuleEnabled("Pub Ads");
         
+        //Setup
+        Integer randomAddFileInt = random.GetInteger(0,  3);
+        String defaultAddFile = "empty";
+        switch (randomAddFileInt) {
+        case 0:
+        	defaultAddFile = "AdCentric";
+        	break;
+        case 1:
+        	defaultAddFile = "Adconion";
+        	break;
+        case 2:
+        	defaultAddFile = "Atlas";
+        	break;
+        case 3:
+        	defaultAddFile = "Eyewonder";
+        	break;
+        }
+        
         //Step 2
         taxonomy.NavigateSite("Structure>>Publisher Ads Side Files");
         overlay.SwitchToActiveFrame();
@@ -67,17 +85,17 @@ public class AdFoldersRichMediaAds extends ParentTest {
         overlay.SwitchToActiveFrame();
         
         //Step 10
-        publisherAdsSideFiles.ClickAdSideFileEditLnk("Atlas");
+        publisherAdsSideFiles.ClickAdSideFileEditLnk(defaultAddFile);
         overlay.SwitchToActiveFrame();
         
         //Step 11
         addNewSideFile.ClickSaveBtn();
         overlay.SwitchToActiveFrame();
-        contentParent.VerifyMessageStatus("atlas has been updated");
-        publisherAdsSideFiles.VerifyAdSideFileStorageType("Atlas", "Overridden");
+        contentParent.VerifyMessageStatus(defaultAddFile.toLowerCase() + " has been updated");
+        publisherAdsSideFiles.VerifyAdSideFileStorageType(defaultAddFile, "Overridden");
         
         //Step 12
-        publisherAdsSideFiles.ClickAdSideFileEditLnk("Atlas");
+        publisherAdsSideFiles.ClickAdSideFileEditLnk(defaultAddFile);
         overlay.SwitchToActiveFrame();
         addNewSideFile.ClickRevertBtn();
         
@@ -86,24 +104,24 @@ public class AdFoldersRichMediaAds extends ParentTest {
         revert.ClickRevertBtn();
         overlay.SwitchToActiveFrame();
         contentParent.VerifyMessageStatus("The item has been reverted.");
-        publisherAdsSideFiles.VerifyAdSideFileStorageType("Atlas", "Default");
+        publisherAdsSideFiles.VerifyAdSideFileStorageType(defaultAddFile, "Default");
         
         //Step 14 - TODO automate as time allows
         
         //Step 15
-        publisherAdsSideFiles.ClickAdSideFileExpandEditLnk("Atlas");
-        publisherAdsSideFiles.ClickAdSideFileCloneLnk("Atlas");
+        publisherAdsSideFiles.ClickAdSideFileExpandEditLnk(defaultAddFile);
+        publisherAdsSideFiles.ClickAdSideFileCloneLnk(defaultAddFile);
         overlay.SwitchToActiveFrame();
         
         //Step 16
         String clonedSideFileName = random.GetCharacterString(15);
         addNewSideFile.EnterName(clonedSideFileName);
         addNewSideFile.ClickSaveBtn();
-        contentParent.VerifyMessageStatus("clone_of_atlas has been created.");
+        contentParent.VerifyMessageStatus("clone_of_" + defaultAddFile.toLowerCase() + " has been created.");
         publisherAdsSideFiles.VerifyAdSideFileStorageType(clonedSideFileName, "Normal");
         
         //Step 17
-        publisherAdsSideFiles.ClickAdSideFileEditLnk("Atlas");
+        publisherAdsSideFiles.ClickAdSideFileEditLnk(defaultAddFile);
         overlay.SwitchToActiveFrame();
         addNewSideFile.ClickExportTab();
         overlay.SwitchToActiveFrame();
