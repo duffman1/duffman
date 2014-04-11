@@ -106,7 +106,7 @@ public class NotificationPlayerUnavailability extends ParentTest{
                 overlay.switchToDefaultContent();
                 Cron cron = new Cron(webDriver, applib);
                 if (!searchFor.GetFirstMPXPlayerSearchResult().equals(playerTitle)) {
-        	    	Thread.sleep(10000); //pause and re-run cron as sometimes media assets aren't in the first ingested queue
+        	    	//re-run cron as sometimes media assets aren't in the first ingested queue
         	    	cron.RunCron(false);
             	    taxonomy.NavigateSite("Content>>Files>>mpxPlayers");
             	    searchFor.EnterTitle(playerTitle);
@@ -161,7 +161,7 @@ public class NotificationPlayerUnavailability extends ParentTest{
         	    }
         	    catch (AssertionError | NoSuchElementException ex) {
         	    	
-        	    	Thread.sleep(10000); //pause and re-run cron as this step can be flaky and sometimes require a second cron run.
+        	    	//re-run cron as this step can be flaky and sometimes require a second cron run.
         	    	overlay.switchToDefaultContent();
         	    	cron.RunCron(true);
         	    	taxonomy.NavigateSite("Content>>Files>>mpxPlayers");
@@ -249,7 +249,7 @@ public class NotificationPlayerUnavailability extends ParentTest{
         	    	contentParent.VerifyPageContentNotPresent(Arrays.asList("An MPXplayer that's in use (" + playerTitle + ") has been disabled in MPX."));
         	    }
         	    catch (AssertionError e) {
-        	    	Thread.sleep(10000); //pause and re-run cron as this step can be flaky and sometimes require a second cron run.
+        	    	//re-run cron as this step can be flaky and sometimes require a second cron run.
         	    	overlay.switchToDefaultContent();
         	    	cron.RunCron(true);
         	    	taxonomy.NavigateSite("Content>>Files>>mpxPlayers");

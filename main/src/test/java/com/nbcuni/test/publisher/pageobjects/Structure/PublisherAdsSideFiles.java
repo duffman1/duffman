@@ -1,7 +1,9 @@
 package com.nbcuni.test.publisher.pageobjects.Structure;
 
 import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -97,7 +99,6 @@ public class PublisherAdsSideFiles {
         
     	Reporter.log("Click the Ad Side File expand link for adName + '" + adName + "'.");
     	AdSideFileExpandEdit_Lnk(adName).click();
-    	Thread.sleep(1000); //pause required
     }
     
     public void ClickAdSideFileCloneLnk(String adName) throws Exception {
@@ -105,7 +106,12 @@ public class PublisherAdsSideFiles {
     	Reporter.log("Click the Ad Side File 'Clone' link for adName + '" + adName + "'.");
     	wait.until(ExpectedConditions.visibilityOf(AdSideFileClone_Lnk(adName)));
     	Thread.sleep(500); //pause required here
-    	AdSideFileClone_Lnk(adName).click();
+    	try {
+    		AdSideFileClone_Lnk(adName).click();
+    	}
+    	catch (WebDriverException e) {
+    		webDriver.executeScript("arguments[0].click();", AdSideFileClone_Lnk(adName));
+    	}
     }
     
     public void ClickAdSideFileDeleteLnk(String adName) throws Exception {
@@ -113,7 +119,12 @@ public class PublisherAdsSideFiles {
     	Reporter.log("Click the Ad Side File 'Delete' link for adName + '" + adName + "'.");
     	wait.until(ExpectedConditions.visibilityOf(AdSideFileDelete_Lnk(adName)));
     	Thread.sleep(500); //pause required here
-    	AdSideFileDelete_Lnk(adName).click();
+    	try {
+    		AdSideFileDelete_Lnk(adName).click();
+    	}
+    	catch (WebDriverException e) {
+    		webDriver.executeScript("arguments[0].click();", AdSideFileDelete_Lnk(adName));
+    	}
     }
     
     public void VerifyAdSideFileNotPresent(String adName) throws Exception {

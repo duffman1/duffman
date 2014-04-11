@@ -128,7 +128,7 @@ public class ThumbnailsAreNotUpdated extends ParentTest{
         	    searchFor.ClickApplyBtn();
         	    overlay.switchToDefaultContent();
         	    if (!searchFor.GetFirstMPXMediaSearchResult().equals(mediaTitle)) {
-        	    	Thread.sleep(30000); //pause and re-run cron as sometimes media assets aren't in the first ingested queue
+        	    	//re-run cron as sometimes media assets aren't in the first ingested queue
         	    	cron.RunCron(false);
             	    taxonomy.NavigateSite("Content>>Files>>mpxMedia");
             	    searchFor.EnterTitle(mediaTitle);

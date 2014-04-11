@@ -51,6 +51,15 @@ public class MPXPublishMedia {
     	sikuli.click(region, 1);
     }
     
+    public void ClickPublishToAllCbx() throws Exception {
+    	
+    	Reporter.log("Click the 'Publish to All' check box.");
+    	mpxAssets.WaitForImgPresent(getImagePath() + "Publish/All_Lbl.png");
+    	Pattern pattern = new Pattern(getImagePath() + "Publish/All_Lbl.png").targetOffset(-18, 0);
+    	Region region = sikuli.exists(pattern, 1);
+    	sikuli.click(region, 1);
+    }
+    
     public void ClickPublishFromDialogBtn() throws Exception {
     	
     	Reporter.log("Click the 'Publish' button from the upload dialog.");

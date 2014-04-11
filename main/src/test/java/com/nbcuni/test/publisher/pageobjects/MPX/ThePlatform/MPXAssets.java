@@ -46,6 +46,7 @@ public class MPXAssets {
             }
             Thread.sleep(500);
         }
+    	
     }
     
     public void WaitForImgNotPresent(String imgPath) throws Exception {
