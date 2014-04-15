@@ -45,7 +45,7 @@ public class CreateMovie extends ParentTest{
             //Step 3 
             CharactersInformation charactersInformation = new CharactersInformation(webDriver);
             overlay.SwitchToActiveFrame();
-            String characterName = random.GetCharacterString(15);
+            String characterName = "Character" + random.GetCharacterString(15);
             charactersInformation.EnterCharacterFirstName(characterName);
             CoverPhoto coverPhoto = new CoverPhoto(webDriver);
             coverPhoto.ClickSelectBtn();
@@ -88,7 +88,7 @@ public class CreateMovie extends ParentTest{
             
             //Step 10
             PersonsInformation personsInformation = new PersonsInformation(webDriver);
-            String personFirstName = random.GetCharacterString(15);
+            String personFirstName = "Person" + random.GetCharacterString(15);
             personsInformation.EnterFirstName(personFirstName);
             personsInformation.EnterBiography();
             overlay.SwitchToActiveFrame();
@@ -114,7 +114,7 @@ public class CreateMovie extends ParentTest{
             //Step 14
             BasicInformation basicInformation = new BasicInformation(webDriver);
             basicInformation.ClickBasicInformationTab();
-            String movieTitle = random.GetCharacterString(15);
+            String movieTitle = "Movie" + random.GetCharacterString(15);
             basicInformation.EnterTitle(movieTitle);
             basicInformation.EnterSynopsis();
             overlay.SwitchToActiveFrame();
