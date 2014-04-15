@@ -51,8 +51,8 @@ public class SelectFile {
     @FindBy(how = How.ID, using = "edit-filename")
     private WebElement FileName_Txb;
     
-    @FindBy(how = How.ID, using = "edit-submit-publisher-media-browser")
-    private WebElement Apply_Btn;
+    @FindBy(how = How.ID, using = "edit-title")
+    private WebElement Title_Txb;
     
     @FindBy(how = How.XPATH, using = "//div[@class='media-thumbnail']/img")
     private WebElement Default_Img;
@@ -102,6 +102,17 @@ public class SelectFile {
     	return webDriver.findElement(By.xpath("(//div[@class='media-thumbnail']//img)[" + imageIndex + "]"));
     }
     
+    @FindBy(how = How.ID, using = "//img[@class='pub-mpx-video-thumbnail']")
+    private WebElement DefaultMPXMediaThumbnail_Img;
+    
+    private WebElement SearchFileResult_Ttl(String title) {
+    	return webDriver.findElement(By.xpath("//td[contains(text(), '" + title + "')]"));
+    }
+    
+    private List<WebElement> Apply_Btns() {
+    	return webDriver.findElements(By.cssSelector("input[value='Apply']"));
+    }
+    
     
     //PAGE OBJECT IDENTIFIERS
     public void SwitchToSelectFileFrm() throws Exception {
@@ -125,10 +136,21 @@ public class SelectFile {
     	
     }
     
+    public void EnterTitle(String title) throws Exception {
+    	
+    	Reporter.log("Enter '" + title + "' in the 'Title' text box.");
+    	wait.until(ExpectedConditions.visibilityOf(Title_Txb)).sendKeys(title);
+    	
+    }
+    
     public void ClickApplyBtn() throws Exception {
     	
     	Reporter.log("Click the 'Apply' button.");
-    	Apply_Btn.click();
+    	for (WebElement btn : Apply_Btns()) {
+    		if (btn.isDisplayed()) {
+    			btn.click();
+    		}
+    	}
     	
     }
     
@@ -155,7 +177,7 @@ public class SelectFile {
             if (searchComplete == true){ break;}
             Thread.sleep(500);
         }
-        webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+        webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
     }
     
     public void ClickDefaultImg() throws Exception {
@@ -283,6 +305,20 @@ public class SelectFile {
     	
     	Reporter.log("Click media thumbnail image number " + imageIndex );
     	MediaThumbnail_Img(imageIndex).click();
+                
+    }
+    
+    public void ClickDefaultMPXMediaThumbnailImage() throws Exception {
+    	
+    	Reporter.log("Click a default mpx media thumbnail image with the 'nbc small' logo.");
+    	DefaultMPXMediaThumbnail_Img.click();
+                
+    }
+    
+    public void ClickSearchResultTtl(String title) throws Exception {
+    	
+    	Reporter.log("Click search file result title '" + title + "'.");
+    	SearchFileResult_Ttl(title).click();
                 
     }
     

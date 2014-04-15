@@ -1,10 +1,12 @@
 package com.nbcuni.test.publisher.pageobjects.Content;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.Reporter;
 
@@ -59,6 +61,13 @@ public class BasicInformation {
     @FindBy(how = How.XPATH, using = "//input[@id='edit-field-season-id-und-0-value']")
     private WebElement SeasonNumber_Txb;
     
+    private WebElement CustomSelect_Ddl(String label) {
+    	return webDriver.findElement(By.xpath("//label[contains(text(), '" + label + "')]/../select"));
+    }
+    
+    private WebElement CustomButton_Btn(String label) {
+    	return webDriver.findElement(By.xpath("//label[contains(text(), '" + label + "')]/../..//a[text()='Select']"));
+    }
     
     //PAGE OBJECT METHODS
     public void ClickBasicInformationTab() throws Exception {
@@ -143,6 +152,18 @@ public class BasicInformation {
     	
     	Reporter.log("Enter '" + seasonNum + "' in the 'Season Number' text box.");
     	SeasonNumber_Txb.sendKeys(seasonNum);
+    }
+    
+    public void SelectCustomField(String label, String option) throws Exception {
+    	
+    	Reporter.log("Select the '" + option + "' from the '" + label + "' drop down list.");
+    	new Select(CustomSelect_Ddl(label)).selectByVisibleText(option);
+    }
+    
+    public void ClickCustomBtn(String label) throws Exception {
+    	
+    	Reporter.log("Click the 'Select' button for '" + label + "'.");
+    	CustomButton_Btn(label).click();
     }
     
 }

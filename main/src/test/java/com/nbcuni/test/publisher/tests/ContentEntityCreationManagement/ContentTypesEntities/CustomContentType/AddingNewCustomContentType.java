@@ -6,7 +6,7 @@ import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Content.BasicInformation;
-import com.nbcuni.test.publisher.pageobjects.Content.ContentTypes;
+import com.nbcuni.test.publisher.pageobjects.Structure.ContentTypes;
 
 public class AddingNewCustomContentType extends ParentTest{
 	
@@ -31,9 +31,9 @@ public class AddingNewCustomContentType extends ParentTest{
             
             //Step 2
             taxonomy.NavigateSite("Structure>>Content types>>Add content type");
+            overlay.SwitchToActiveFrame();
             
             //Step 3
-            overlay.SwitchToFrame("Content types");
             ContentTypes contentTypes = new ContentTypes(webDriver, applib);
             String contentTypeName = random.GetCharacterString(10);
             contentTypes.EnterName(contentTypeName);
@@ -44,14 +44,13 @@ public class AddingNewCustomContentType extends ParentTest{
             overlay.ClickCloseOverlayLnk();
             
             //Step 5
-            overlay.switchToDefaultContent();
             taxonomy.NavigateSite("Structure>>Content types>>" + contentTypeName + ">>Manage fields");
+            overlay.SwitchToActiveFrame();
             
             //Step 6
-            overlay.SwitchToFrame(contentTypeName);
             String newFieldName = random.GetCharacterString(15);
             String newFieldType = "Image";
-            contentTypes.AddNewField(newFieldName);
+            contentTypes.EnterAddNewField(newFieldName);
             contentTypes.SelectFieldType(newFieldType);
             contentTypes.ClickSaveBtn();
             contentTypes.ClickSaveBtn();
@@ -62,9 +61,8 @@ public class AddingNewCustomContentType extends ParentTest{
             
             //Step 7
             overlay.ClickCloseOverlayLnk();
-            overlay.switchToDefaultContent();
             taxonomy.NavigateSite("Content>>Add content>>" + contentTypeName);
-            overlay.SwitchToFrame(contentTypeName);
+            overlay.SwitchToActiveFrame();
             contentTypes.VerifyFieldSaveBtnPresent(newFieldName);
             
             //Step 8

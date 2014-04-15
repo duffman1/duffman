@@ -1,4 +1,4 @@
-package com.nbcuni.test.publisher.pageobjects.Content;
+package com.nbcuni.test.publisher.pageobjects.Structure;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -8,14 +8,16 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.Reporter;
+
 import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 
 /*********************************************
  * publisher.nbcuni.com ContentTypes Library. Copyright
  * 
  * @author Brandon Clark
- * @version 1.0 Date: December 13, 2013
+ * @version 1.1 Date: April 13, 2014
  *********************************************/
 
 public class ContentTypes {
@@ -37,6 +39,9 @@ public class ContentTypes {
     @FindBy(how = How.ID, using = "edit-submit")
     private WebElement Save_Btn;
     
+    @FindBy(how = How.ID, using = "edit-save-continue")
+    private WebElement SaveAddFields_Btn;
+    
     @FindBy(how = How.XPATH, using = "//div[@class='content']//tbody")
     private WebElement ContentTypeTbl_Ctr;
     
@@ -45,6 +50,9 @@ public class ContentTypes {
     
     @FindBy(how = How.ID, using = "edit-fields-add-new-field-type")
     private WebElement FieldType_Ddl;
+    
+    @FindBy(how = How.ID, using = "edit-fields-add-new-field-widget-type")
+    private WebElement Widget_Ddl;
     
     private WebElement FieldSave_Btn(String fieldName) {
     	return webDriver.findElement(By.xpath("//a[@id='edit-field-" + fieldName + "-und-field-" + fieldName + "-und-0-select']"));
@@ -66,6 +74,13 @@ public class ContentTypes {
     	
     }
     
+    public void ClickSaveAddFieldsBtn() throws Exception {
+    	
+    	Reporter.log("Click the 'Save and add fields' button.");
+    	SaveAddFields_Btn.click();
+    	
+    }
+    
     public void VerifyContentTypeSaved(String name) throws Exception {
     	
     	contentParent.VerifyMessageStatus("The content type " + name + " has been added.");
@@ -75,7 +90,7 @@ public class ContentTypes {
     	
     }
     
-    public void AddNewField(String fieldName) throws Exception {
+    public void EnterAddNewField(String fieldName) throws Exception {
     	
     	Reporter.log("Enter '" + fieldName + "' in the 'Add new field' text box.");
     	AddNewField_Txb.sendKeys(fieldName);
@@ -86,6 +101,13 @@ public class ContentTypes {
     	
     	Reporter.log("Select '" + fieldType + "' from the 'Field Type' drop down list.");
         new Select(FieldType_Ddl).selectByVisibleText(fieldType);
+    	
+    }
+    
+    public void SelectWidget(String widget) throws Exception {
+    	
+    	Reporter.log("Select '" + widget + "' from the 'Widget' drop down list.");
+        new Select(Widget_Ddl).selectByVisibleText(widget);
     	
     }
     
