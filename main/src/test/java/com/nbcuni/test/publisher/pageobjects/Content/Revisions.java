@@ -73,6 +73,10 @@ public class Revisions {
 		return webDriver.findElement(By.xpath("//table[contains(@class, 'views-table')]//a[contains(text(), '" + contentItemTtl + "')]/../..//a[text()='Share']"));
 	}
 	
+	private WebElement ScheduleMenu_Btn(String contentItemTtl) {
+		return webDriver.findElement(By.xpath("//table[contains(@class, 'views-table')]//a[contains(text(), '" + contentItemTtl + "')]/../..//a[text()='Schedule']"));
+	}
+	
 	
 	//PAGE OBJECT METHODS
     public void ClickEditExtendMenuBtn(String contentItemTtl) throws Exception {
@@ -100,6 +104,12 @@ public class Revisions {
     	
     	Reporter.log("Click the 'Share' menu button.");
     	wait.until(ExpectedConditions.visibilityOf(ShareMenu_Btn(contentItemTtl))).click();
+    }
+    
+    public void ClickScheduleMenuBtn(String contentItemTtl) throws Exception {
+    	
+    	Reporter.log("Click the 'Schedule' menu button.");
+    	wait.until(ExpectedConditions.visibilityOf(ScheduleMenu_Btn(contentItemTtl))).click();
     }
     
     public void VerifyContentItemEditDelete(String contentItemTtl) throws Exception {

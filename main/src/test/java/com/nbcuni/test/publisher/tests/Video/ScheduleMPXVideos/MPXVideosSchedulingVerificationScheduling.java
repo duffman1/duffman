@@ -239,7 +239,7 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
     	    //Step 36
     	    scheduleQueue.ClickScheduleTab();
     	    overlay.SwitchToActiveFrame();
-    	    scheduleQueue.VerifyRunNowBtnPresent();
+    	    scheduleQueue.VerifyRunNowLnkPresent(mediaTitle, "Unpublish");
     	    contentParent.VerifyPageContentPresent(Arrays.asList(mediaTitle, 
     	    		"Unpublish", pub7Date1YearInFuture + " - 04:00"));
     	    

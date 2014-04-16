@@ -55,6 +55,7 @@ public class BasicUIForCreatingAndRevisingQueues extends ParentTest{
         //Step 4
         String queueTitle = random.GetCharacterString(15);
         queues.EnterTitle(queueTitle);
+        queues.EnterLogMessageStateChange(random.GetCharacterString(10));
         queues.ClickSaveQueueBtn();
         overlay.SwitchToActiveFrame();
         queues.VerifyQueuesInList(Arrays.asList(queueTitle));
@@ -79,6 +80,7 @@ public class BasicUIForCreatingAndRevisingQueues extends ParentTest{
         queues.EnterTitle(modQueueTitle);
         PublishingOptions publishingOptions = new PublishingOptions(webDriver);
         publishingOptions.VerifyCreateNewRevisionCbxChecked();
+        queues.EnterLogMessageStateChange(random.GetCharacterString(10));
         queues.ClickSaveQueueBtn();
         overlay.SwitchToActiveFrame();
         queues.VerifyQueuesInList(Arrays.asList(modQueueTitle));
@@ -92,6 +94,7 @@ public class BasicUIForCreatingAndRevisingQueues extends ParentTest{
         String modQueueTitle2 = random.GetCharacterString(15);
         queues.EnterTitle(modQueueTitle2);
         publishingOptions.ClickCreateNewRevisionCbx();
+        queues.EnterLogMessageStateChange(random.GetCharacterString(10));
         queues.ClickSaveQueueBtn();
         
         //Step 11

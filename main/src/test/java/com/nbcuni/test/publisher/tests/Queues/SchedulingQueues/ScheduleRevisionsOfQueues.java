@@ -49,6 +49,7 @@ public class ScheduleRevisionsOfQueues extends ParentTest{
         String queueTitle = random.GetCharacterString(15);
         queues.EnterTitle(queueTitle);
         queues.EnterQueueItem(postTitle, "1");
+        queues.EnterLogMessageStateChange(random.GetCharacterString(10));
         queues.ClickSaveQueueBtn();
         overlay.SwitchToActiveFrame();
         queues.VerifyQueuesInList(Arrays.asList(queueTitle)); 

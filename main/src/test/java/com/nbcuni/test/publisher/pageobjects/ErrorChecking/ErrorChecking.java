@@ -108,6 +108,7 @@ public class ErrorChecking {
     		allowedErrors.add("Notice: Trying to get property of non-object in EntityAPIController->save()");
     		allowedErrors.add("Request to retrieve mpx feed data returned a(n) \"com.theplatform.authentication.api.exception.AuthenticationException\" exception.");
     		allowedErrors.add("Expiring mpx token FAILED.");
+    		allowedErrors.add("Notice: getimagesize() [function.getimagesize]: Read error! in image_gd_get_info()");
     		
     		//FIRST - check if error container is present
     		boolean errorContainerPresent = false;
@@ -145,7 +146,8 @@ public class ErrorChecking {
     								|| errorText.contains(allowedErrors.get(3))
     								 	|| errorText.contains(allowedErrors.get(4))
     								 		|| errorText.contains(allowedErrors.get(5))
-    								 			|| errorText.contains(allowedErrors.get(6))) {
+    								 			|| errorText.contains(allowedErrors.get(6))
+    								 				|| errorText.contains(allowedErrors.get(7))) {
     					//ignore error
     				}
     				else {
@@ -170,7 +172,8 @@ public class ErrorChecking {
     										|| errorText.contains(allowedErrors.get(3))
     										 	|| errorText.contains(allowedErrors.get(4))
     										 		|| errorText.contains(allowedErrors.get(5))
-    										 			|| errorText.contains(allowedErrors.get(6))) {
+    										 			|| errorText.contains(allowedErrors.get(6))
+    										 				|| errorText.contains(allowedErrors.get(7))) {
     						//ignore error
     					}
     					else {

@@ -43,6 +43,7 @@ public class DeleteRevisionsQueues extends ParentTest {
         overlay.SwitchToActiveFrame();
         String queueTitle = random.GetCharacterString(15);
         queues.EnterTitle(queueTitle);
+        queues.EnterLogMessageStateChange(random.GetCharacterString(10));
         queues.ClickSaveQueueBtn();
         overlay.SwitchToActiveFrame();
         queues.VerifyQueuesInList(Arrays.asList(queueTitle));
@@ -51,6 +52,7 @@ public class DeleteRevisionsQueues extends ParentTest {
         queues.ClickEditQueueMenuBtn(queueTitle);
         overlay.SwitchToActiveFrame();
         queues.EnterQueueItem("a", "1");
+        queues.EnterLogMessageStateChange(random.GetCharacterString(10));
         queues.ClickSaveQueueBtn();
         overlay.SwitchToActiveFrame();
         
@@ -58,6 +60,7 @@ public class DeleteRevisionsQueues extends ParentTest {
         queues.ClickEditQueueMenuBtn(queueTitle);
         overlay.SwitchToActiveFrame();
         queues.EnterQueueItem("b", "2");
+        queues.EnterLogMessageStateChange(random.GetCharacterString(10));
         queues.ClickSaveQueueBtn();
         overlay.SwitchToActiveFrame();
         

@@ -42,6 +42,9 @@ public class Queues {
     @FindBy(how = How.CSS, using = "input[id*='edit-title']")
     private WebElement Title_Txb;
     
+    @FindBy(how = How.ID, using = "edit-event-comment")
+    private WebElement LogMessage_Txa;
+    
     @FindBy(how = How.CSS, using = "input[value='Save queue']")
     private WebElement SaveQueue_Btn;
     
@@ -82,6 +85,13 @@ public class Queues {
     	Reporter.log("Enter '" + queueTitle + "' in the 'Title' text box.");
     	Title_Txb.clear();
     	Title_Txb.sendKeys(queueTitle);
+    }
+    
+    public void EnterLogMessageStateChange(String text) throws Exception {
+    	
+    	Reporter.log("Enter '" + text + "' in the 'Log message for this state change' text area.");
+    	LogMessage_Txa.clear();
+    	LogMessage_Txa.sendKeys(text);
     }
     
     public void ClickSaveQueueBtn() throws Exception {

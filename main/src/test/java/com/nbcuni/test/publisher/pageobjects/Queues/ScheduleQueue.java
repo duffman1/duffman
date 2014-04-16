@@ -1,11 +1,16 @@
 package com.nbcuni.test.publisher.pageobjects.Queues;
 
 import com.nbcuni.test.publisher.common.Driver.Driver;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
 
@@ -20,10 +25,14 @@ import java.util.List;
 
 public class ScheduleQueue {
 
+	private WebDriver webDriver;
+	private WebDriverWait wait;
+	
     //PAGE OBJECT CONSTRUCTOR
     public ScheduleQueue(Driver webDriver) {
+    	this.webDriver = webDriver;
         PageFactory.initElements(webDriver,  this);
-        
+        wait = new WebDriverWait(webDriver, 10);
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -54,15 +63,20 @@ public class ScheduleQueue {
     @FindBy(how = How.XPATH, using = "//table[@class='sticky-enabled tableheader-processed sticky-table']/..//td[@class='empty message']")
     private WebElement Schedule_Tbl;
     
-    @FindBy(how = How.XPATH, using = "//a[text()='Run now']")
-    private WebElement RunNow_Btn;
-    
-    @FindBy(how = How.XPATH, using = "//a[text()='Cancel']")
-    private WebElement RunCancel_Btn;
-    
     @FindBy(how = How.XPATH, using = "//td[text()='Completed']")
     private WebElement Complete_txt;
     
+    private WebElement RunNow_Lnk(String contentItemTitle, String action) {
+    	return webDriver.findElement(By.xpath("//td[contains(text(), '" + contentItemTitle + "')]/../td[text()='" + action + "']/..//a[text()='Run now']"));
+    }
+    
+    private WebElement ExpandRunNowMenu_Lnk(String contentItemTitle, String action) {
+    	return webDriver.findElement(By.xpath("//td[contains(text(), '" + contentItemTitle + "')]/../td[text()='" + action + "']/..//a[text()='operations']"));
+    }
+    
+    private WebElement Cancel_Lnk(String contentItemTitle, String action) {
+    	return webDriver.findElement(By.xpath("//td[contains(text(), '" + contentItemTitle + "')]/../td[text()='" + action + "']/..//a[text()='Cancel']"));
+    }
     
     //PAGE OBJECT METHODS
     public void ClickScheduleTab() throws Exception {
@@ -138,24 +152,39 @@ public class ScheduleQueue {
     	AddScheduledRevision_Lnk.isDisplayed();
     }
 
-    public void ClickRunNowLnk() throws Exception {
+    public void ClickRunNowLnk(String contentItemTitle, String action) throws Exception {
         
-    	Reporter.log("Click the 'Run now' button.");
-    	RunNow_Btn.click();
+    	Reporter.log("Click the 'Run now' link for content item '" + contentItemTitle + "' with action '" + action + "'.");
+    	RunNow_Lnk(contentItemTitle, action).click();
 
     }
     
-    public void VerifyRunNowBtnPresent() throws Exception {
+    public void ClickRunNowExpandLnk(String contentItemTitle, String action) throws Exception {
+        
+    	Reporter.log("Click the 'Run now' expand menu link for content item '" + contentItemTitle + "' with action '" + action + "'.");
+    	ExpandRunNowMenu_Lnk(contentItemTitle, action).click();
+
+    }
+    
+    public void VerifyRunNowLnkPresent(String contentItemTitle, String action) throws Exception {
     	
-    	Reporter.log("Verify the 'Run now' button is present.");
-    	RunNow_Btn.isDisplayed();
+    	Reporter.log("Verify the 'Run now' link is present for content item '" + contentItemTitle + "' with action '" + action + "'.");
+    	RunNow_Lnk(contentItemTitle, action).isDisplayed();
     	
     }
     
-    public void VerifyCancelBtnPresent() throws Exception {
+    public void ClickCancelLnk(String contentItemTitle, String action) throws Exception {
+        
+    	Reporter.log("Click the 'Cancel' link for content item '" + contentItemTitle + "' with action '" + action + "'.");
+    	Thread.sleep(500);
+    	wait.until(ExpectedConditions.visibilityOf(Cancel_Lnk(contentItemTitle, action))).click();
+
+    }
+
+    public void VerifyCancelLnkPresent(String contentItemTitle, String action) throws Exception {
     	
-    	Reporter.log("Verify the 'Cancel' button is present.");
-    	RunCancel_Btn.isDisplayed();
+    	Reporter.log("Verify the 'Cancel' link is present for content item '" + contentItemTitle + "' with action '" + action + "'.");
+    	Cancel_Lnk(contentItemTitle, action).isDisplayed();
     }
     
     public void VerifyRunStatusComplete() throws Exception {

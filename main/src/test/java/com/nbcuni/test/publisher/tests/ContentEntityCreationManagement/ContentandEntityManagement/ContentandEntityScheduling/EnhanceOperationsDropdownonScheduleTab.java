@@ -55,11 +55,11 @@ public class EnhanceOperationsDropdownonScheduleTab extends ParentTest {
      
         //Step 4
         overlay.SwitchToActiveFrame(); 
-        scheduleQueue.VerifyRunNowBtnPresent();     
-        scheduleQueue.VerifyCancelBtnPresent();
+        scheduleQueue.VerifyRunNowLnkPresent(postTitle, "Moderate to Published");     
+        scheduleQueue.VerifyCancelLnkPresent(postTitle, "Moderate to Published");
      
         //Step 5
-        scheduleQueue.ClickRunNowLnk();
+        scheduleQueue.ClickRunNowLnk(postTitle, "Moderate to Published");
      
         //Step 6
         overlay.SwitchToActiveFrame();
