@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Apr 16 07:24:17 EDT 2014</td>
+<td>Started on:</td><td>Wed Apr 16 10:17:03 EDT 2014</td>
 </tr>
-<tr><td>Total time:</td><td>193 seconds (193148 ms)</td>
+<tr><td>Total time:</td><td>80 seconds (80847 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,264 +67,67 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.CastCrewFieldCollectionsVerificationMovie.CastCrewFieldCollectionsVerificationMovie_Test()'><b>CastCrewFieldCollectionsVerificationMovie_Test</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.CastCrewFieldCollectionsVerificationMovie<br/>
-<a href="#Output-86620653" onClick='toggleBox("Output-86620653", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MPXMediaSyncVerification.MPXMediaSyncVerification_Test()'><b>MPXMediaSyncVerification_Test</b><br>Test class: com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MPXMediaSyncVerification<br/>
+<a href="#Output-1209347085" onClick='toggleBox("Output-1209347085", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-86620653" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-86620653">
-Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.<br/>
+<a href="#Output-1209347085" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1209347085">
+Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.<br/>
 Enter the user's email address in the 'Email Address' text box.<br/>
 Enter the user's password in the 'Password' text box.<br/>
 Click the 'Login' button.<br/>
+Mouse over the 'Configuration' menu link.<br/>
+Mouse over the 'Media' menu link.<br/>
+Click the 'Media: thePlatform mpx settings' menu link.<br/>
+Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.<br/>
+Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.<br/>
+Get all the selected import account options and store to a list.<br/>
+Open the mpx data client at http://data.player.theplatform.com/player/client.<br/>
+Enter the Username in the 'Username' text box.<br/>
+Enter the Password in the 'Password' text box.<br/>
+Click the 'Sign In' button.<br/>
+Click the Account Picker button.<br/>
+Click the 'DB TV' account check box.<br/>
+Select 'Player' from the 'Object' drop down list.<br/>
+Enter 'title, disabled' in the 'Fields' text box.<br/>
+Click the 'Submit' button.<br/>
+Store the result set to a list.<br/>
+Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.<br/>
 Mouse over the 'Content' menu link.<br/>
-Mouse over the 'Add content' menu link.<br/>
-Click the 'Character Profile' menu link.<br/>
-Switch to the active frame titled 'Create Character Profile dialog'.<br/>
-Enter 'CharacterFirstName614a30ea03' in the 'Character First Name' text box.<br/>
-Click the Cover Photo 'Select' button.<br/>
-Switch to the select file frame.<br/>
-Enter the file path for file upload.<br/>
-Click the 'Upload' button.<br/>
-Wait for the file link to be visible after upload.<br/>
-Click the 'Next' button.<br/>
-Click the 'Public Local Files' radio button.<br/>
-Click the 'Next' button.<br/>
-Verify the file image 'HanSolo' is present.<br/>
-Verify the img is loaded and visible.<br/>
-Click the 'Save' button.<br/>
-Switch to the active frame titled 'Create Character Profile dialog'.<br/>
-Assert that img source of the Cover Photo contains 'HanSolo'.<br/>
-Assert the the img is loaded and visible.<br/>
-Click the 'Save' button.<br/>
-Verify success message of 'Character Profile CharacterFirstName614a30ea03 has been created.' is present.<br/>
+Mouse over the 'Files' menu link.<br/>
+Click the 'mpxMedia' menu link.<br/>
+Switch to the active frame titled 'Content dialog'.<br/>
+Click the 'Sync MPX Media' link.<br/>
+Select 'Auditude Demo player' from the first 'Import Player' drop down list.<br/>
+Click the 'Sync MPX Media Now' link.<br/>
+Verify success message of 'Processed video import/update manually for all accounts.' is present.<br/>
+Verify there are no errors present.<br/>
+Click the 'Run Cron to complete import' link.<br/>
+Switch to the active frame titled 'Cron dialog'.<br/>
+Click the 'Run Cron' button.<br/>
+Verify success message of 'Cron run successfully.' is present.<br/>
 Verify there are no errors present.<br/>
 Mouse over the 'Content' menu link.<br/>
-Mouse over the 'Add content' menu link.<br/>
-Click the 'Character Profile' menu link.<br/>
-Switch to the active frame titled 'Create Character Profile dialog'.<br/>
-Enter 'CharacterFirstName2b83c35c71' in the 'Character First Name' text box.<br/>
-Click the Cover Photo 'Select' button.<br/>
-Switch to the select file frame.<br/>
-Enter the file path for file upload.<br/>
-Click the 'Upload' button.<br/>
-Wait for the file link to be visible after upload.<br/>
-Click the 'Next' button.<br/>
-Click the 'Public Local Files' radio button.<br/>
-Click the 'Next' button.<br/>
-Verify the file image 'HanSolo' is present.<br/>
-Verify the img is loaded and visible.<br/>
-Click the 'Save' button.<br/>
-Switch to the active frame titled 'Create Character Profile dialog'.<br/>
-Assert that img source of the Cover Photo contains 'HanSolo'.<br/>
-Assert the the img is loaded and visible.<br/>
-Click the 'Save' button.<br/>
-Verify success message of 'Character Profile CharacterFirstName2b83c35c71 has been created.' is present.<br/>
-Verify there are no errors present.<br/>
-Mouse over the 'Content' menu link.<br/>
-Mouse over the 'Add content' menu link.<br/>
-Click the 'Character Profile' menu link.<br/>
-Switch to the active frame titled 'Create Character Profile dialog'.<br/>
-Enter 'CharacterFirstNamed04baade28' in the 'Character First Name' text box.<br/>
-Click the Cover Photo 'Select' button.<br/>
-Switch to the select file frame.<br/>
-Enter the file path for file upload.<br/>
-Click the 'Upload' button.<br/>
-Wait for the file link to be visible after upload.<br/>
-Click the 'Next' button.<br/>
-Click the 'Public Local Files' radio button.<br/>
-Click the 'Next' button.<br/>
-Verify the file image 'HanSolo' is present.<br/>
-Verify the img is loaded and visible.<br/>
-Click the 'Save' button.<br/>
-Switch to the active frame titled 'Create Character Profile dialog'.<br/>
-Assert that img source of the Cover Photo contains 'HanSolo'.<br/>
-Assert the the img is loaded and visible.<br/>
-Click the 'Save' button.<br/>
-Verify success message of 'Character Profile CharacterFirstNamed04baade28 has been created.' is present.<br/>
-Verify there are no errors present.<br/>
-Mouse over the 'Content' menu link.<br/>
-Mouse over the 'Add content' menu link.<br/>
-Click the 'Person' menu link.<br/>
-Switch to the active frame titled 'Create Person dialog'.<br/>
-Enter 'PersonFirstNamea73181f1f1' in the 'First name' text box.<br/>
-Enter a random block of text in the 'Biography' text area.<br/>
-Switch to the active frame titled 'Create Person dialog'.<br/>
-Click the 'Cover Photo' Select button.<br/>
-Switch to the select file frame.<br/>
-Enter the file path for file upload.<br/>
-Click the 'Upload' button.<br/>
-Wait for the file link to be visible after upload.<br/>
-Click the 'Next' button.<br/>
-Click the 'Public Local Files' radio button.<br/>
-Click the 'Next' button.<br/>
-Verify the file image 'HanSolo' is present.<br/>
-Verify the img is loaded and visible.<br/>
-Click the 'Save' button.<br/>
-Switch to the active frame titled 'Create Person dialog'.<br/>
-Click the 'Save' button.<br/>
-Verify success message of 'Person PersonFirstNamea73181f1f1 has been created.' is present.<br/>
-Verify there are no errors present.<br/>
-Mouse over the 'Content' menu link.<br/>
-Mouse over the 'Add content' menu link.<br/>
-Click the 'Person' menu link.<br/>
-Switch to the active frame titled 'Create Person dialog'.<br/>
-Enter 'PersonFirstName5ee30e78c5' in the 'First name' text box.<br/>
-Enter a random block of text in the 'Biography' text area.<br/>
-Switch to the active frame titled 'Create Person dialog'.<br/>
-Click the 'Cover Photo' Select button.<br/>
-Switch to the select file frame.<br/>
-Enter the file path for file upload.<br/>
-Click the 'Upload' button.<br/>
-Wait for the file link to be visible after upload.<br/>
-Click the 'Next' button.<br/>
-Click the 'Public Local Files' radio button.<br/>
-Click the 'Next' button.<br/>
-Verify the file image 'HanSolo' is present.<br/>
-Verify the img is loaded and visible.<br/>
-Click the 'Save' button.<br/>
-Switch to the active frame titled 'Create Person dialog'.<br/>
-Click the 'Save' button.<br/>
-Verify success message of 'Person PersonFirstName5ee30e78c5 has been created.' is present.<br/>
-Verify there are no errors present.<br/>
-Mouse over the 'Content' menu link.<br/>
-Mouse over the 'Add content' menu link.<br/>
-Click the 'Person' menu link.<br/>
-Switch to the active frame titled 'Create Person dialog'.<br/>
-Enter 'PersonFirstName1431add111' in the 'First name' text box.<br/>
-Enter a random block of text in the 'Biography' text area.<br/>
-Switch to the active frame titled 'Create Person dialog'.<br/>
-Click the 'Cover Photo' Select button.<br/>
-Switch to the select file frame.<br/>
-Enter the file path for file upload.<br/>
-Click the 'Upload' button.<br/>
-Wait for the file link to be visible after upload.<br/>
-Click the 'Next' button.<br/>
-Click the 'Public Local Files' radio button.<br/>
-Click the 'Next' button.<br/>
-Verify the file image 'HanSolo' is present.<br/>
-Verify the img is loaded and visible.<br/>
-Click the 'Save' button.<br/>
-Switch to the active frame titled 'Create Person dialog'.<br/>
-Click the 'Save' button.<br/>
-Verify success message of 'Person PersonFirstName1431add111 has been created.' is present.<br/>
-Verify there are no errors present.<br/>
-Mouse over the 'Content' menu link.<br/>
-Mouse over the 'Add content' menu link.<br/>
-Click the 'Movie' menu link.<br/>
-Switch to the active frame titled 'Create Movie dialog'.<br/>
-Enter '046735610602437' in the 'Title' text box.<br/>
-Switch to the Synopsis frame.<br/>
-Enter a randomized text string into the 'Body' text area.<br/>
-Switch to the active frame titled 'Create Movie dialog'.<br/>
-Click the 'Cover' select button.<br/>
-Switch to the select file frame.<br/>
-Enter the file path for file upload.<br/>
-Click the 'Upload' button.<br/>
-Wait for the file link to be visible after upload.<br/>
-Click the 'Next' button.<br/>
-Click the 'Public Local Files' radio button.<br/>
-Click the 'Next' button.<br/>
-Verify the file image 'HanSolo' is present.<br/>
-Verify the img is loaded and visible.<br/>
-Click the 'Save' button.<br/>
-Switch to the active frame titled 'Create Movie dialog'.<br/>
-Click the 'Cast/Crew' link.<br/>
-Enter 'PersonFirstNamea73181f1f1' in the Person text box.<br/>
-Click the 'PersonFirstNamea73181f1f1' from the auto complete option list.<br/>
-Select the 'Character' from the 'Role' drop down list.<br/>
-Assert that the 'Character' text box is displayed.<br/>
-Enter 'CharacterFirstName614a30ea03' in the 'Character' text box.<br/>
-Click the 'CharacterFirstName614a30ea03' from the auto complete option list.<br/>
-Click the 'Save' button.<br/>
-Verify success message of 'Movie 046735610602437 has been created.' is present.<br/>
-Verify there are no errors present.<br/>
-Click the 'Revisions' link in the work bench.<br/>
-Switch to the active frame titled 'Revisions dialog'.<br/>
-Click the 'Edit' menu button.<br/>
-Switch to the active frame titled 'Edit Movie 046735610602437 dialog'.<br/>
-Scroll the 'Publishing Options' link into view.<br/>
-Click the 'Publishing Options' link.<br/>
-Verify the 'Create New Revision' checkbox is checked.<br/>
-Click the 'Cast/Crew' link.<br/>
-Assert the value of the 'Person' text box equals 'PersonFirstNamea73181f1f1'.<br/>
-Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CastCrewFieldCollectionsVerificationMovie_Test.png <br/>
-<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CastCrewFieldCollectionsVerificationMovie_Test.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CastCrewFieldCollectionsVerificationMovie_Test.png' height='500' width='500'/> </a><br/>
+Mouse over the 'Files' menu link.<br/>
+Click the 'mpxMedia' menu link.<br/>
+Switch to the active frame titled 'Content dialog'.<br/>
+Enter title Automation1.<br/>
+Click the 'Apply' button.<br/>
+Get the title text of every result in the search result set.<br/>
+For each expected result, assert it is present in the result set.<br/>
 </div>
 </td>
-<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:494)
-	at org.testng.Assert.assertTrue(Assert.java:42)
-	at org.testng.Assert.assertTrue(Assert.java:52)
-	at com.nbcuni.test.publisher.pageobjects.Content.CastCrew.VerifyPersonNameValue(CastCrew.java:156)
-	at com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.CastCrewFieldCollectionsVerificationMovie.CastCrewFieldCollectionsVerificationMovie_Test(CastCrewFieldCollectionsVerificationMovie.java:122)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-</pre></div><a href='#' onClick='toggleBox("stack-trace86620653", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace86620653'><pre>java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:494)
-	at org.testng.Assert.assertTrue(Assert.java:42)
-	at org.testng.Assert.assertTrue(Assert.java:52)
-	at com.nbcuni.test.publisher.pageobjects.Content.CastCrew.VerifyPersonNameValue(CastCrew.java:156)
-	at com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.CastCrewFieldCollectionsVerificationMovie.CastCrewFieldCollectionsVerificationMovie_Test(CastCrewFieldCollectionsVerificationMovie.java:122)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-</pre></div></td>
-<td>189</td>
-<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.CastCrewFieldCollectionsVerificationMovie@68d69de</td></tr>
+<td></td>
+<td>77</td>
+<td>com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MPXMediaSyncVerification@461a5d57</td></tr>
 </table><p>
 </body>
 </html>

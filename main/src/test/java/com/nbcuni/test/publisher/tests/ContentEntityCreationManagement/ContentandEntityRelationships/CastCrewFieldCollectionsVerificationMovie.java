@@ -38,12 +38,12 @@ public class CastCrewFieldCollectionsVerificationMovie extends ParentTest{
     public void CastCrewFieldCollectionsVerificationMovie_Test() throws Exception{
     	
     	//Step 1
-    	List<String> Characters = Arrays.asList("CharacterFirstName" + random.GetCharacterString(10),
-    			"CharacterFirstName" + random.GetCharacterString(10),
-    				"CharacterFirstName" + random.GetCharacterString(10));
-    	List<String> Persons = Arrays.asList("PersonFirstName" + random.GetCharacterString(10),
-    			"PersonFirstName" + random.GetCharacterString(10),
-    				"PersonFirstName" + random.GetCharacterString(10));
+    	List<String> Characters = Arrays.asList("Character" + random.GetCharacterString(10),
+    			"Character" + random.GetCharacterString(10),
+    				"Character" + random.GetCharacterString(10));
+    	List<String> Persons = Arrays.asList("Person" + random.GetCharacterString(10),
+    			"Person" + random.GetCharacterString(10),
+    				"Person" + random.GetCharacterString(10));
     	UserLogin userLogin = applib.openApplication();
     	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
         
@@ -87,7 +87,7 @@ public class CastCrewFieldCollectionsVerificationMovie extends ParentTest{
         overlay.SwitchToActiveFrame();
         
         //Step 5
-        String movieTitle = random.GetCharacterString(15);
+        String movieTitle = "Movie" + random.GetCharacterString(15);
         BasicInformation basicInformation = new BasicInformation(webDriver);
         basicInformation.EnterTitle(movieTitle);
         basicInformation.EnterSynopsis();
@@ -128,7 +128,7 @@ public class CastCrewFieldCollectionsVerificationMovie extends ParentTest{
         castCrew.VerifyCharacterTxbDisplayed();
         castCrew.EnterCharacterName(Characters.get(1), "2");
         basicInformation.ClickBasicInformationTab();
-        String movieTitle2 = random.GetCharacterString(15);        
+        String movieTitle2 = "Movie" + random.GetCharacterString(15);        
         basicInformation.EnterTitle(movieTitle2);
         contentParent.ClickSaveBtn();
         overlay.switchToDefaultContent();

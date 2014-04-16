@@ -109,7 +109,7 @@ public class SchedulingContentPublishUnpublished extends ParentTest {
         //Step 11
         overlay.SwitchToActiveFrame();
         scheduleQueue.VerifyScheduledQueue(postTitle2);
-        scheduleQueue.VerifyScheduledQueue("Moderate to Publish");
+        scheduleQueue.VerifyScheduledQueue("Moderate to Published");
         scheduleQueue.VerifyScheduledQueue(pub7Date5MinutesFuture + " - ");
         scheduleQueue.VerifyScheduledQueue("Completed");
         overlay.ClickCloseOverlayLnk();

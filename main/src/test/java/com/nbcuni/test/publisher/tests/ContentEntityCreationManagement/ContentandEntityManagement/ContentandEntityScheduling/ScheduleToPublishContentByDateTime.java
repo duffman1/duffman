@@ -115,7 +115,7 @@ public class ScheduleToPublishContentByDateTime extends ParentTest {
         scheduleQueue.VerifyScheduledQueue(postTitle);
         scheduleQueue.VerifyScheduledQueue("Moderate to Publish");
         scheduleQueue.VerifyScheduledQueue(sdfDate10DaysFuture + " - 05:00 PM");
-        scheduleQueue.ClickRunNowLnk(postTitle, "Moderate to Publish");
+        scheduleQueue.ClickRunNowLnk(postTitle, "Moderate to Published");
         overlay.SwitchToActiveFrame();
         scheduleQueue.VerifyScheduledQueue("Moderate to Published");
         scheduleQueue.VerifyScheduledQueue("Completed");
