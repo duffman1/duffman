@@ -8,7 +8,6 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.Reporter;
-
 import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
@@ -77,8 +76,7 @@ public class AddLogo {
     public void EnterStartTime(String time) throws Exception {
     	
     	Reporter.log("Enter '" + time + "' in the 'Start Time' text box.");
-    	StartTime_Txb.click();
-    	StartTime_Txb.sendKeys(time);
+    	webDriver.executeScript("arguments[0].setAttribute('value', '" + time.replace("PM", "pm").replace("AM", "am") + "');", StartTime_Txb);
     }
     
     public void EnterEndDate(String date) throws Exception {
@@ -90,8 +88,7 @@ public class AddLogo {
     public void EnterEndTime(String time) throws Exception {
     	
     	Reporter.log("Enter '" + time + "' in the 'End Time' text box.");
-    	EndTime_Txb.click();
-    	EndTime_Txb.sendKeys(time);
+    	webDriver.executeScript("arguments[0].setAttribute('value', '" + time.replace("PM", "pm").replace("AM", "am") + "');", EndTime_Txb);
     }
     
     public void EnterFilePath(String pathToFile) throws Exception {

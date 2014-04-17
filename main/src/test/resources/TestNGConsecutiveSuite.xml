@@ -12,10 +12,7 @@
 
 		<classes>
 			
-			<!--SETUP-->
 			<class name="com.nbcuni.test.publisher.tests.Setup.TestSetup"/>
-			
-			<!--VIDEO-->
 			<class name="com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MultipleMPXAccountsPerLoginVerification"/>
 			<class name="com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MPXPlayersSyncVerification"/>
 			<class name="com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MPXMediaSyncVerification"/>
@@ -29,29 +26,11 @@
 			<class name="com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification"/>
 			<class name="com.nbcuni.test.publisher.tests.Video.Thumbnails.ThumbnailsAreNotUpdated"/>
 			<class name="com.nbcuni.test.publisher.tests.Video.DeIngestingMPXAccountsAndCorrespondingAssets.DeleteMultipleAccounts"/>
-			
-			<!--ADVERTISING-->
 			<class name="com.nbcuni.test.publisher.tests.Advertising.GooglePublisherTagsGPT.GPTConfiguration"/>
 			<class name="com.nbcuni.test.publisher.tests.Advertising.GooglePublisherTagsGPT.GPTTagsVerification"/>
-			
-			<!--CONTENT AND ENTITY CREATION AND MANAGEMENT-->
 			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery"/>
 			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIFKeywordsIngestedAsPhraseInsteadSetsWords.EXIFKeywordsIngestedPhraseInsteadSetsWords"/>
 			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons"/>
-			
-			<!--QUEUES-->
-			
-			<!--SECURITY-->
-			
-			<!--SITE MANAGEMENT AND REPORTING-->
-			
-			<!--SOCIAL INTEGRATION-->
-			
-			<!--USER CREATION AND MANAGEMENT-->
-			
-			<!--METRICS-->
-			
-			<!--CLEANUP-->
 			<class name="com.nbcuni.test.publisher.tests.Setup.TestCleanup"/>
 			
 		</classes>
