@@ -20,8 +20,8 @@ import com.nbcuni.test.publisher.common.Driver.Driver;
 /*********************************************
  * publisher.nbcuni.com Cast/Crew Library. Copyright
  * 
- * @author Brandon Clark/Faizan Khan
- * @version 1.0 Date: December 13, 2013
+ * @author Brandon Clark
+ * @version 1.1 Date: April 16, 2014
  *********************************************/
 
 public class CastCrew {
@@ -87,13 +87,13 @@ public class CastCrew {
     
     public void VerifyCharacterTxbNotDisplayed() throws Exception {
     	
-    	Reporter.log("Assert that the 'Character' text box is not displayed.");
+    	Reporter.log("Verify that the 'Character' text box is not displayed.");
     	Assert.assertTrue(Character_Txb.isDisplayed() == false);
     }
     
     public void VerifyCharacterTxbDisplayed() throws Exception {
     	
-    	Reporter.log("Assert that the 'Character' text box is displayed.");
+    	Reporter.log("Verify that the 'Character' text box is displayed.");
     	new WebDriverWait(webDriver, 10).until(ExpectedConditions.
     			visibilityOf(Character_Txb));
     	
@@ -152,19 +152,19 @@ public class CastCrew {
     
     public void VerifyPersonNameValue(String personName, String index) throws Exception {
     	
-    	Reporter.log("Assert the value of the 'Person' text box equals '" + personName + "'.");
+    	Reporter.log("Verify the value of the 'Person' text box equals '" + personName + "'.");
     	Assert.assertTrue(Person_Txb(index).getAttribute("value").contains(personName));
     }
     
     public void VerifyCharacterNameValue(String characterName, String index) throws Exception {
     	
-    	Reporter.log("Assert the value of the 'Character' text box equals '" + characterName + "'.");
+    	Reporter.log("Verify the value of the 'Character' text box equals '" + characterName + "'.");
     	Assert.assertTrue(Character_Txb(index).getAttribute("value").contains(characterName));
     }
     
     public void VerifyRoleValue(String roleName, String index) throws Exception {
     	
-    	Reporter.log("Assert the value of the 'Role' drop down list equals '" + roleName + "'.");
+    	Reporter.log("Verify the value of the 'Role' drop down list equals '" + roleName + "'.");
     	Select el = new Select(Role_Ddl(index));
     	Assert.assertEquals(el.getFirstSelectedOption().getText(), roleName);
     	

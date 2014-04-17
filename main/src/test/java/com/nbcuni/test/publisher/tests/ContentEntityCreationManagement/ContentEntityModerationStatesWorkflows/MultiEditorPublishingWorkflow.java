@@ -113,7 +113,6 @@ public class MultiEditorPublishingWorkflow extends ParentTest{
         //Step 9
         publishingOptions.ClickPublishingOptionsLnk();
         publishingOptions.EnterAssignTo(seniorEditorUserName);
-        Thread.sleep(1000); //TODO - figure out why this pause is necessary and add dynamic wait
         contentParent.ClickSaveBtn();
         contentParent.VerifyMessageStatus("Post " + postTitle + " has been updated.");
         overlay.ClickCloseOverlayLnk();

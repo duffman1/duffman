@@ -5,8 +5,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
+
 import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
@@ -19,11 +22,13 @@ import com.nbcuni.test.publisher.common.Driver.Driver;
 public class CoverMedia {
 
     private Driver webDriver;
+    private WebDriverWait wait;
     
     //PAGE OBJECT CONSTRUCTOR
     public CoverMedia(final Driver webDriver) {
         this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
+        wait = new WebDriverWait(webDriver, 10);
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -60,7 +65,7 @@ public class CoverMedia {
     public void ClickEditBtn() throws Exception {
     	
     	Reporter.log("Click the Cover Media 'Edit' button.");
-    	Edit_Btn.click();
+    	wait.until(ExpectedConditions.visibilityOf(Edit_Btn)).click();
     }
     
     public void ClickSelectBtn() throws Exception {

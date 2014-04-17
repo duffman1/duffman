@@ -1,14 +1,20 @@
 package com.nbcuni.test.publisher.pageobjects.Content;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
 
+import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
@@ -21,11 +27,15 @@ import com.nbcuni.test.publisher.common.Driver.Driver;
 public class PublishingOptions {
 
     private Driver webDriver;
+    private WebDriverWait wait;
+    private Config config;
     
     //PAGE OBJECT CONSTRUCTOR
     public PublishingOptions(Driver webDriver) {
         this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
+        wait = new WebDriverWait(webDriver, 10);
+        config = new Config();
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -133,7 +143,22 @@ public class PublishingOptions {
     	AssignTo_Txb.sendKeys(userName);
     	
     	Reporter.log("Click the '" + userName + "' from the auto complete option list.");
-    	AutoComplete_Opt(userName).click();
+    	wait.until(ExpectedConditions.visibilityOf(AutoComplete_Opt(userName)));
+    	AssignTo_Txb.sendKeys(Keys.DOWN);
+    	AssignTo_Txb.sendKeys(Keys.ENTER);
+    	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+    	for (int second = 0; ; second++){
+            if (second >= 60) {
+                Assert.fail("AutoComplete option titled '" + userName + "' is still present after timeout");}
+            try{
+            	AutoComplete_Opt(userName).isDisplayed();
+            }
+            catch (Exception e){
+            	break;
+            }
+            Thread.sleep(500);
+        }
+    	webDriver.manage().timeouts().implicitlyWait(config.getImplicitWaitTime(), TimeUnit.SECONDS);
     }
     
     public void VerifyPublishedCbxNotCheckedAndNotEditable() throws Exception {
