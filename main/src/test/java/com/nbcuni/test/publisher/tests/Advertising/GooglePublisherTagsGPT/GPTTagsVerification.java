@@ -1,16 +1,14 @@
 package com.nbcuni.test.publisher.tests.Advertising.GooglePublisherTagsGPT;
 
 import org.testng.annotations.Test;
-
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Blocks;
 import com.nbcuni.test.publisher.pageobjects.DFPAddTags;
 import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
-import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 
-public class GPTTagsVerification extends ParentTest{
+public class GPTTagsVerification extends ParentTest {
 	
     /*************************************************************************************
      * TEST CASE 
@@ -29,23 +27,35 @@ public class GPTTagsVerification extends ParentTest{
      * Step 9 - Log out of publisher 7
      * @throws Throwable No Return values are needed
      *************************************************************************************/
-    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full" })
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"})
     public void GPTTagsVerification_Test() throws Exception {
         
         	//Step 1
         	UserLogin userLogin = applib.openApplication();
         	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
             
-            //Step 1A
+        	//Setup
+            taxonomy.NavigateSite("Modules");
+            overlay.SwitchToActiveFrame();
             Modules modules = new Modules(webDriver, applib);
-            modules.VerifyModuleEnabled("Doubleclick for Publishers");
+            modules.EnterFilterName("DART");
+            modules.DisableModule("DART");
+            modules.EnterFilterName("Doubleclick for Publishers");
+            modules.EnableModule("Doubleclick for Publishers");
+            overlay.ClickCloseOverlayLnk();
+            taxonomy.NavigateSite("Structure>>DFP Ad Tags>>Global DFP Settings");
+            overlay.SwitchToActiveFrame();
+            DFPAddTags dfpAddTags = new DFPAddTags(webDriver, applib);
+            dfpAddTags.EnterNetworkId("nbcu");
+            dfpAddTags.ClickSaveConfigurationBtn();
+            contentParent.VerifyMessageStatus("The configuration options have been saved.");
+            overlay.ClickCloseOverlayLnk();
             
             //Step 2
             taxonomy.NavigateSite("Structure>>DFP Ad Tags>>Add");
+            overlay.SwitchToActiveFrame();
             
             //Step 3
-            overlay.SwitchToFrame("Add a new DFP ad");
-            DFPAddTags dfpAddTags = new DFPAddTags(webDriver, applib);
             String adSlotName = random.GetCharacterString(15);
             dfpAddTags.EnterAdSlotName(adSlotName);
             dfpAddTags.EnterAdSizes("300x250");
@@ -53,27 +63,24 @@ public class GPTTagsVerification extends ParentTest{
             
             //Step 4
             dfpAddTags.ClickSaveBtn();
-            dfpAddTags.VerifyAdTagCreated(adSlotName);
+            contentParent.VerifyMessageStatus(adSlotName + " has been created.");
+            overlay.ClickCloseOverlayLnk();
             
             //Step 5
-            overlay.ClickCloseOverlayLnk();
-            overlay.switchToDefaultContent();
             taxonomy.NavigateSite("Structure>>Blocks");
+            overlay.SwitchToActiveFrame();
             
             //Step 6
-            overlay.SwitchToActiveFrame();
             Blocks blocks = new Blocks(webDriver);
             blocks.SelectRegion("DFP tag: " + adSlotName, "Sidebar first");
             blocks.ClickSaveBlocksBtn();
-            ContentParent contentParent = new ContentParent(webDriver, applib);
             contentParent.VerifyMessageStatus("The block settings have been updated.");
             
             //Step 7
             blocks.VerifySelectedRegion(adSlotName, "Sidebar first");
+            overlay.ClickCloseOverlayLnk();
             
             //Step 8
-            overlay.ClickCloseOverlayLnk();
-            overlay.switchToDefaultContent();
             taxonomy.NavigateSite("Home");
             blocks.VerifyScriptSourceInPage("http://www.googletagservices.com/tag/js/gpt.js");
             blocks.VerifyHomePageBlockPresent(adSlotName);

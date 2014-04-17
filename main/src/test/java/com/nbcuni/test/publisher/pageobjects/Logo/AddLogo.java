@@ -121,10 +121,10 @@ public class AddLogo {
     
     public void VerifyFileImagePresent(String imageSrc) throws Exception {
     	
-    	Reporter.log("Assert the file image '" + imageSrc + "' is present.");
+    	Reporter.log("Verify the file image '" + imageSrc + "' is present.");
     	Assert.assertTrue(File_Img.getAttribute("src").contains(imageSrc));
     	
-    	Reporter.log("Assert the the img is loaded and visible.");
+    	Reporter.log("Verify the the img is loaded and visible.");
     	boolean imgLoaded;
         for (int second = 0; ; second++){
             if (second >= 30) {

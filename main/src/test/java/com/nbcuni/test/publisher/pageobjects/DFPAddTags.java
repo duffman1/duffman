@@ -50,6 +50,7 @@ public class DFPAddTags {
     public void EnterNetworkId(String networkIdName) throws Exception {
     	
     	Reporter.log("Enter '" + networkIdName + "' in the 'Network ID' text box.");
+    	NetworkId_Txb.clear();
     	NetworkId_Txb.sendKeys(networkIdName);
     }
     
@@ -63,16 +64,6 @@ public class DFPAddTags {
     	
     	Reporter.log("Click the 'Save' button.");
     	Save_Btn.click();
-    }
-    
-    public void VerifyConfigurationSaved() throws Exception {
-    	
-    	contentParent.VerifyMessageStatus("The configuration options have been saved.");
-    }
-    
-    public void VerifyAdTagCreated(String adTagName) throws Exception {
-    	
-    	contentParent.VerifyMessageStatus(adTagName + " has been created.");
     }
     
     public void EnterAdSlotName(String adSlotName) throws Exception {

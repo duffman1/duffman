@@ -5,11 +5,14 @@ import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Content.SearchFor;
 import com.nbcuni.test.publisher.pageobjects.Content.WorkBench;
+import com.nbcuni.test.publisher.pageobjects.FileTypes.MPXFileType;
 import com.nbcuni.test.publisher.pageobjects.MPX.EditMPXVideo;
 import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
@@ -71,9 +74,28 @@ public class MPXVideosSchedulingVerificationInitialOverrides extends ParentTest{
         Settings settings = new Settings(webDriver, applib);
         if (settings.IsMPXConfigured() == true) {
 
-            //NOTE - test requires mpx test "MPXMediaSyncVerification" to be ran prior to this execution
+        	//Setup
+        	List<String> configuredAccounts = settings.GetImportAccountSelectedOptions();
+        	if (configuredAccounts.contains("DB TV")) {
+        		
+        		overlay.ClickCloseOverlayLnk();
+        		taxonomy.NavigateSite("Structure>>File types>>MPX Video for Account \"DB TV\" (2312945284)");
+        		overlay.SwitchToActiveFrame();
+        		MPXFileType mpxFileType = new MPXFileType(webDriver);
+        		boolean isMPXValueOverrideEnabled = mpxFileType.EnableMPXValueOverrides();
+        		if (isMPXValueOverrideEnabled == false) {
+            	
+        			mpxFileType.ClickSaveBtn();
+        			overlay.SwitchToActiveFrame();
+        			contentParent.VerifyMessageStatus("The file type MPX Video for Account \"" + configuredAccounts.get(0));
+        			contentParent.VerifyMessageStatus("has been updated.");
+        		}
+        	}
+        	else {
+        		Assert.fail("DB TV account must be configured.");
+        	}
 
-        	//Step 2 onward will use an existing mpx published video due to flash based restriction
+        	//Step 2 onward will use an existing mpx published video
             overlay.switchToDefaultContent();
             taxonomy.NavigateSite("Content>>Files>>mpxMedia");
             overlay.SwitchToActiveFrame();
