@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Apr 16 10:17:03 EDT 2014</td>
+<td>Started on:</td><td>Wed Apr 16 12:27:41 EDT 2014</td>
 </tr>
-<tr><td>Total time:</td><td>80 seconds (80847 ms)</td>
+<tr><td>Total time:</td><td>93 seconds (93643 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,59 +75,129 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MPXMediaSyncVerification.MPXMediaSyncVerification_Test()'><b>MPXMediaSyncVerification_Test</b><br>Test class: com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MPXMediaSyncVerification<br/>
-<a href="#Output-1209347085" onClick='toggleBox("Output-1209347085", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds.AdFoldersRichMediaAds_Test()'><b>AdFoldersRichMediaAds_Test</b><br>Test class: com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds<br/>
+<a href="#Output-1813513175" onClick='toggleBox("Output-1813513175", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1209347085" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1209347085">
+<a href="#Output-1813513175" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1813513175">
 Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.<br/>
 Enter the user's email address in the 'Email Address' text box.<br/>
 Enter the user's password in the 'Password' text box.<br/>
 Click the 'Login' button.<br/>
-Mouse over the 'Configuration' menu link.<br/>
-Mouse over the 'Media' menu link.<br/>
-Click the 'Media: thePlatform mpx settings' menu link.<br/>
-Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.<br/>
-Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.<br/>
-Get all the selected import account options and store to a list.<br/>
-Open the mpx data client at http://data.player.theplatform.com/player/client.<br/>
-Enter the Username in the 'Username' text box.<br/>
-Enter the Password in the 'Password' text box.<br/>
-Click the 'Sign In' button.<br/>
-Click the Account Picker button.<br/>
-Click the 'DB TV' account check box.<br/>
-Select 'Player' from the 'Object' drop down list.<br/>
-Enter 'title, disabled' in the 'Fields' text box.<br/>
-Click the 'Submit' button.<br/>
-Store the result set to a list.<br/>
-Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.<br/>
-Mouse over the 'Content' menu link.<br/>
-Mouse over the 'Files' menu link.<br/>
-Click the 'mpxMedia' menu link.<br/>
-Switch to the active frame titled 'Content dialog'.<br/>
-Click the 'Sync MPX Media' link.<br/>
-Select 'Auditude Demo player' from the first 'Import Player' drop down list.<br/>
-Click the 'Sync MPX Media Now' link.<br/>
-Verify success message of 'Processed video import/update manually for all accounts.' is present.<br/>
+Click the 'Modules' menu link.<br/>
+Switch to frame titled 'Modules'.<br/>
+Enter 'Pub Ads' in the 'Filter Name' text box.<br/>
+Wait for the module titled 'Pub Ads' to appear in the list.<br/>
+Verify the 'Pub Ads' check box is checked.<br/>
+Click the 'Close Overlay X'.<br/>
+Mouse over the 'Structure' menu link.<br/>
+Click the 'Publisher Ads Side Files' menu link.<br/>
+Switch to the active frame titled 'Publisher Ads Side Files dialog'.<br/>
+Click the 'Add' link.<br/>
+Switch to the active frame titled 'Add a new side file dialog'.<br/>
+Enter '04b8ee0ac8044aa' in the 'Name' text box.<br/>
+Enter 'c485a4f5c8/25e8853146.html' in the 'Path' text box.<br/>
+Select the 'text/html' from the 'Response type' drop down list.<br/>
+Enter '<html><body bgcolor=white><script language=javascript>function pq(q) {if(q.length > 1) this.q = q.substring(1, q.length);else this.q = null;this.keyValuePairs = new Array();if(q) {for(var i=0; i < this.q.split("&").length; i++) {this.keyValuePairs[i] = this.q.split("&")[i];}}this.getValue = function(s) {for(var j=0; j < this.keyValuePairs.length; j++) {if(this.keyValuePairs[j].split("=")[0] == s)return this.keyValuePairs[j].split("=")[1];}return -1;}}function qs(key){var page = new pq(document.location.search);return unescape(page.getValue(key));}var _c = qs('c');var r_number = Math.random();document.writeln('<SCR'+'IPT language='JavaScript' S'+'RC="http://media.adcentriconline.com/adcentric/tag/'+_c+'?ADCadcifr=1&number='+r_number+'"></SCR'+'IPT>');</script></body></html>' in the 'Content' text box.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'Publisher Ads Side Files dialog'.<br/>
+Verify success message of '04b8ee0ac8044aa has been created.' is present.<br/>
 Verify there are no errors present.<br/>
-Click the 'Run Cron to complete import' link.<br/>
-Switch to the active frame titled 'Cron dialog'.<br/>
-Click the 'Run Cron' button.<br/>
-Verify success message of 'Cron run successfully.' is present.<br/>
+Click the Ad Side File link with path 'c485a4f5c8/25e8853146.html'.<br/>
+Switch to the active frame titled 'Publisher Ads Side Files dialog'.<br/>
+Click the Ad Side File 'Edit' link for adName + 'Eyewonder'.<br/>
+Switch to the active frame titled 'Edit side file eyewonder dialog'.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'Publisher Ads Side Files dialog'.<br/>
+Verify success message of 'eyewonder has been updated' is present.<br/>
 Verify there are no errors present.<br/>
-Mouse over the 'Content' menu link.<br/>
-Mouse over the 'Files' menu link.<br/>
-Click the 'mpxMedia' menu link.<br/>
-Switch to the active frame titled 'Content dialog'.<br/>
-Enter title Automation1.<br/>
-Click the 'Apply' button.<br/>
-Get the title text of every result in the search result set.<br/>
-For each expected result, assert it is present in the result set.<br/>
+Verify storage type for Ad Side File 'Eyewonder' is set to 'Overridden'.<br/>
+Click the Ad Side File 'Edit' link for adName + 'Eyewonder'.<br/>
+Switch to the active frame titled 'Edit side file eyewonder dialog'.<br/>
+Click the 'Revert' button.<br/>
+Click the 'Revert' button.<br/>
+Switch to the active frame titled 'Publisher Ads Side Files dialog'.<br/>
+Verify success message of 'The item has been reverted.' is present.<br/>
+Verify there are no errors present.<br/>
+Verify storage type for Ad Side File 'Eyewonder' is set to 'Default'.<br/>
+Click the Ad Side File expand link for adName + 'Eyewonder'.<br/>
+Click the Ad Side File 'Clone' link for adName + 'Eyewonder'.<br/>
+Switch to the active frame titled 'Clone side file eyewonder dialog'.<br/>
+Enter '06d7c7bde5bb43c' in the 'Name' text box.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'clone_of_eyewonder has been created.' is present.<br/>
+Verify there are no errors present.<br/>
+Verify storage type for Ad Side File '06d7c7bde5bb43c' is set to 'Normal'.<br/>
+Click the Ad Side File 'Edit' link for adName + 'Eyewonder'.<br/>
+Switch to the active frame titled 'Edit side file eyewonder dialog'.<br/>
+Click the 'Export' tab.<br/>
+Switch to the active frame titled 'Export side file eyewonder dialog'.<br/>
+Copy the text from the 'Export' text area.<br/>
+Click the 'Close Overlay X'.<br/>
+Mouse over the 'Structure' menu link.<br/>
+Mouse over the 'Publisher Ads Side Files' menu link.<br/>
+Click the 'Import' menu link.<br/>
+Switch to the active frame titled 'Import side file dialog'.<br/>
+Enter '$adpath = new stdClass();
+$adpath->disabled = FALSE; /* Edit this to true to make a default adpath disabled initially */
+$adpath->api_version = 1;
+$adpath->machine_name = 'eyewonder';
+$adpath->name = 'Eyewonder';
+$adpath->path = 'eyewonder/interim.html';
+$adpath->file_type = 'html';
+$adpath->content = '<html><head><title>Ad</title></head><body><script type="text/javascript">var cdn="100125"; if(window.location.search.indexOf("/300125/")>0) cdn="300125"; document.writeln(\'<scr\'+\'ipt type="text/javascript" src="http://cdn.eyewonder.com/\'+cdn+\'/QA/_interim.js?ewbust=\'+new Date().getTime()+\'"></scr\'+\'ipt>\');</script></body></html>';
+' in the 'Side file code' text area.<br/>
+Click the 'Continue' button.<br/>
+Switch to the active frame titled 'Import side file dialog'.<br/>
+Verify warning message 'You have unsaved changes. These changes will not be made permanent until you click Save.' is present.<br/>
+Verify there are no errors present.<br/>
+Enter 'ff42b3315a43404' in the 'Name' text box.<br/>
+Enter 'b99c49d469/cc14b1b0b2.html' in the 'Path' text box.<br/>
+Click the 'Update' button.<br/>
+Switch to the active frame titled 'Import side file dialog'.<br/>
+Verify warning message 'You have unsaved changes. These changes will not be made permanent until you click Save.' is present.<br/>
+Verify there are no errors present.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'Import side file dialog'.<br/>
+Enter 'ff42b3315a43404' in the 'Machine Name' text box.<br/>
+Click the 'Update' button.<br/>
+Switch to the active frame titled 'Import side file dialog'.<br/>
+Verify warning message 'You have unsaved changes. These changes will not be made permanent until you click Save.' is present.<br/>
+Verify there are no errors present.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'Publisher Ads Side Files dialog'.<br/>
+Verify success message of 'ff42b3315a43404 has been created.' is present.<br/>
+Verify there are no errors present.<br/>
+Verify storage type for Ad Side File 'ff42b3315a43404' is set to 'Normal'.<br/>
+Click the Ad Side File expand link for adName + '04b8ee0ac8044aa'.<br/>
+Click the Ad Side File 'Delete' link for adName + '04b8ee0ac8044aa'.<br/>
+Switch to the active frame titled 'Are you sure you want to delete 04b8ee0ac8044aa? dialog'.<br/>
+Click the 'Delete' button.<br/>
+Switch to the active frame titled 'Publisher Ads Side Files dialog'.<br/>
+Verify success message of 'The item has been deleted.' is present.<br/>
+Verify there are no errors present.<br/>
+Verify Ad Side File '04b8ee0ac8044aa' is NOT present.<br/>
+Click the Ad Side File expand link for adName + '06d7c7bde5bb43c'.<br/>
+Click the Ad Side File 'Delete' link for adName + '06d7c7bde5bb43c'.<br/>
+Switch to the active frame titled 'Are you sure you want to delete clone_of_eyewonder? dialog'.<br/>
+Click the 'Delete' button.<br/>
+Switch to the active frame titled 'Publisher Ads Side Files dialog'.<br/>
+Verify success message of 'The item has been deleted.' is present.<br/>
+Verify there are no errors present.<br/>
+Verify Ad Side File '06d7c7bde5bb43c' is NOT present.<br/>
+Click the Ad Side File expand link for adName + 'ff42b3315a43404'.<br/>
+Click the Ad Side File 'Delete' link for adName + 'ff42b3315a43404'.<br/>
+Switch to the active frame titled 'Are you sure you want to delete ff42b3315a43404? dialog'.<br/>
+Click the 'Delete' button.<br/>
+Switch to the active frame titled 'Publisher Ads Side Files dialog'.<br/>
+Verify success message of 'The item has been deleted.' is present.<br/>
+Verify there are no errors present.<br/>
+Verify Ad Side File 'ff42b3315a43404' is NOT present.<br/>
 </div>
 </td>
 <td></td>
-<td>77</td>
-<td>com.nbcuni.test.publisher.tests.Video.MPXConfigurationP7.AllowSitesToConfigureMultipleMPXAccounts.MPXMediaSyncVerification@461a5d57</td></tr>
+<td>90</td>
+<td>com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds@7c75b281</td></tr>
 </table><p>
 </body>
 </html>
