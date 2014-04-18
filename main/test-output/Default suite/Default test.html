@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Apr 17 16:42:53 EDT 2014</td>
+<td>Started on:</td><td>Fri Apr 18 09:47:09 EDT 2014</td>
 </tr>
-<tr><td>Total time:</td><td>41 seconds (41043 ms)</td>
+<tr><td>Total time:</td><td>38 seconds (38705 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,64 +75,124 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.nbcuni.test.publisher.tests.Advertising.GooglePublisherTagsGPT.GPTTagsVerification.GPTTagsVerification_Test()'><b>GPTTagsVerification_Test</b><br>Test class: com.nbcuni.test.publisher.tests.Advertising.GooglePublisherTagsGPT.GPTTagsVerification<br/>
-<a href="#Output-567364661" onClick='toggleBox("Output-567364661", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides.MPXVideosSchedulingVerificationInitialOverrides_Test()'><b>MPXVideosSchedulingVerificationInitialOverrides_Test</b><br>Test class: com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides<br/>
+<a href="#Output-122291220" onClick='toggleBox("Output-122291220", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-567364661" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-567364661">
+<a href="#Output-122291220" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-122291220">
 Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.<br/>
 Enter the user's email address in the 'Email Address' text box.<br/>
 Enter the user's password in the 'Password' text box.<br/>
 Click the 'Login' button.<br/>
-Click the 'Modules' menu link.<br/>
-Switch to the active frame titled 'Modules dialog'.<br/>
-Enter 'DART' in the 'Filter Name' text box.<br/>
-Wait for the module titled 'DART' to appear in the list.<br/>
-Enter 'Doubleclick for Publishers' in the 'Filter Name' text box.<br/>
-Wait for the module titled 'Doubleclick for Publishers' to appear in the list.<br/>
-Verify the 'Doubleclick for Publishers' check box is checked.<br/>
+Mouse over the 'Configuration' menu link.<br/>
+Mouse over the 'Media' menu link.<br/>
+Click the 'Media: thePlatform mpx settings' menu link.<br/>
+Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.<br/>
+Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.<br/>
+Get all the selected import account options and store to a list.<br/>
 Click the 'Close Overlay X'.<br/>
 Mouse over the 'Structure' menu link.<br/>
-Mouse over the 'DFP Ad Tags' menu link.<br/>
-Click the 'Global DFP Settings' menu link.<br/>
-Switch to the active frame titled 'DFP Ad Tags dialog'.<br/>
-Enter 'nbcu' in the 'Network ID' text box.<br/>
-Click the 'Save configuration' button.<br/>
-Verify success message of 'The configuration options have been saved.' is present.<br/>
-Verify there are no errors present.<br/>
-Click the 'Close Overlay X'.<br/>
-Mouse over the 'Structure' menu link.<br/>
-Mouse over the 'DFP Ad Tags' menu link.<br/>
-Click the 'Add' menu link.<br/>
-Switch to the active frame titled 'Add a new DFP ad dialog'.<br/>
-Enter '1ec3f822eebf4f8' in the 'Ad Slot Name' text box.<br/>
-Enter '300x250' in the 'Ad Sizes' text box.<br/>
-Enter 'Test_AdUnit_Pattern' in the 'Ad Unit Pattern' text box.<br/>
+Mouse over the 'File types' menu link.<br/>
+Click the 'MPX Video for Account "DB TV" (2312945284)' menu link.<br/>
+Switch to the active frame titled 'MPX Video for Account &quot;DB TV&quot; (2312945284) dialog'.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Files' menu link.<br/>
+Click the 'mpxMedia' menu link.<br/>
+Switch to the active frame titled 'Content dialog'.<br/>
+Enter title Automation1.<br/>
+Click the 'Apply' button.<br/>
+Get the title text of every result in the search result set.<br/>
+For each expected result, assert it is present in the result set.<br/>
+Click the first search title link in the search result set.<br/>
+Verify the text 'Automation1' is present on the page.<br/>
+Verify the text 'MPX Released File Public IDs:' is present on the page.<br/>
+Verify the text 'MPX Media Default Released File Public ID:' is present on the page.<br/>
+Verify the text 'MPX Media Categories:' is present on the page.<br/>
+Verify the text 'Series' is present on the page.<br/>
+Verify the text 'Show' is present on the page.<br/>
+Verify the text 'MPX Media Description:' is present on the page.<br/>
+Verify the text 'Automation 1 example test' is present on the page.<br/>
+Verify the text 'MPX Media Author:' is present on the page.<br/>
+Verify the text 'Pub7 Content Provider' is present on the page.<br/>
+Verify the text 'MPX Media Air Date:' is present on the page.<br/>
+Verify the text 'Wednesday, January 8, 2014' is present on the page.<br/>
+Verify the text 'MPX Media Keywords:' is present on the page.<br/>
+Verify the text 'mpx, metadata, field, override' is present on the page.<br/>
+Verify the text 'MPX Media Copyright:' is present on the page.<br/>
+Verify the text 'NBCUNI QA' is present on the page.<br/>
+Verify the text 'MPX Media Film Advisory Board Rating:' is present on the page.<br/>
+Verify the text 'pd' is present on the page.<br/>
+Verify the text 'MPX Media MPAA Rating:' is present on the page.<br/>
+Verify the text 'MPX Media MPAA Sub-Ratings:' is present on the page.<br/>
+Verify the text 'v' is present on the page.<br/>
+Verify the text 'MPX Media V-Chip Rating:' is present on the page.<br/>
+Verify the text 'tv-y7' is present on the page.<br/>
+Verify the text 'MPX Media V-Chip Sub-Ratings:' is present on the page.<br/>
+Verify the text 'l' is present on the page.<br/>
+Verify the text 'MPX Media Exclude Selected Countries:' is present on the page.<br/>
+Verify the text 'Prevent Playback in Selected Countries' is present on the page.<br/>
+Verify the text 'MPX Media Available Date:' is NOT present on the page.<br/>
+Verify the text 'MPX Media Expiration Date:' is NOT present on the page.<br/>
+Click the 'Edit' link in the work bench.<br/>
+Switch to the active frame titled 'Edit mpx_video_4 Automation1 dialog'.<br/>
+Verify that the 'Media Availabe Date' text box is disabled and has no value.<br/>
+Verify that the 'Media Expiration Date' text box is disabled and has no value.<br/>
+Click the 'Override' checkbox for the 'Available Date' check box.<br/>
+Click the 'Override' checkbox for the 'Expiration Date' check box.<br/>
+Enter '04/25/2014' in the 'Available Date' text box.<br/>
+Enter '05:00pm' in the 'Available Time' text box.<br/>
+Enter '04/17/2017' in the 'Expiration Date' text box.<br/>
+Enter '05:00pm' in the 'Expiration Time' text box.<br/>
 Click the 'Save' button.<br/>
-Verify success message of '1ec3f822eebf4f8 has been created.' is present.<br/>
+Verify success message of 'MPX Video for Account "DB TV" (2312945284) Automation1 has been updated.' is present.<br/>
 Verify there are no errors present.<br/>
-Click the 'Close Overlay X'.<br/>
-Mouse over the 'Structure' menu link.<br/>
-Click the 'Blocks' menu link.<br/>
-Switch to the active frame titled 'Blocks dialog'.<br/>
-Select the block name 'DFP tag: 1ec3f822eebf4f8' from the 'Sidebar first' drop down list.<br/>
-Click the 'Save Blocks' button.<br/>
-Verify success message of 'The block settings have been updated.' is present.<br/>
+Verify the text 'MPX Media Available Date:' is present on the page.<br/>
+Verify the text 'Friday, April 25, 2014' is present on the page.<br/>
+Verify the text 'MPX Media Expiration Date: ' is present on the page.<br/>
+Verify the text 'Monday, April 17, 2017' is present on the page.<br/>
+Click the 'Edit' link in the work bench.<br/>
+Switch to the active frame titled 'Edit mpx_video_4 Automation1 dialog'.<br/>
+Un-check the 'Override' checkbox for the 'Available Date' check box.<br/>
+Un-check the 'Override' checkbox for the 'Expiration Date' check box.<br/>
+Verify that the 'Media Availabe Date' text box is disabled and has no value.<br/>
+Verify that the 'Media Expiration Date' text box is disabled and has no value.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'MPX Video for Account "DB TV" (2312945284) Automation1 has been updated.' is present.<br/>
 Verify there are no errors present.<br/>
-Assert that the selected block '1ec3f822eebf4f8' contains the 'Sidebar first' text.<br/>
-Click the 'Close Overlay X'.<br/>
-Assert the page source contains the 'http://www.googletagservices.com/tag/js/gpt.js'.<br/>
-Assert the home page block '1ec3f822eebf4f8' is present.<br/>
-Mouse over the 'Structure' menu link.<br/>
-Click the 'Blocks' menu link.<br/>
-Switch to the active frame titled 'Blocks dialog'.<br/>
-Select the block name 'DFP tag: 1ec3f822eebf4f8' from the '- None -' drop down list.<br/>
-Click the 'Save Blocks' button.<br/>
+Verify the text 'Automation1' is present on the page.<br/>
+Verify the text 'MPX Released File Public IDs:' is present on the page.<br/>
+Verify the text 'MPX Media Default Released File Public ID:' is present on the page.<br/>
+Verify the text 'MPX Media Categories:' is present on the page.<br/>
+Verify the text 'Series' is present on the page.<br/>
+Verify the text 'Show' is present on the page.<br/>
+Verify the text 'MPX Media Description:' is present on the page.<br/>
+Verify the text 'Automation 1 example test' is present on the page.<br/>
+Verify the text 'MPX Media Author:' is present on the page.<br/>
+Verify the text 'Pub7 Content Provider' is present on the page.<br/>
+Verify the text 'MPX Media Air Date:' is present on the page.<br/>
+Verify the text 'Wednesday, January 8, 2014' is present on the page.<br/>
+Verify the text 'MPX Media Keywords:' is present on the page.<br/>
+Verify the text 'mpx, metadata, field, override' is present on the page.<br/>
+Verify the text 'MPX Media Copyright:' is present on the page.<br/>
+Verify the text 'NBCUNI QA' is present on the page.<br/>
+Verify the text 'MPX Media Film Advisory Board Rating:' is present on the page.<br/>
+Verify the text 'pd' is present on the page.<br/>
+Verify the text 'MPX Media MPAA Rating:' is present on the page.<br/>
+Verify the text 'MPX Media MPAA Sub-Ratings:' is present on the page.<br/>
+Verify the text 'v' is present on the page.<br/>
+Verify the text 'MPX Media V-Chip Rating:' is present on the page.<br/>
+Verify the text 'tv-y7' is present on the page.<br/>
+Verify the text 'MPX Media V-Chip Sub-Ratings:' is present on the page.<br/>
+Verify the text 'l' is present on the page.<br/>
+Verify the text 'MPX Media Exclude Selected Countries:' is present on the page.<br/>
+Verify the text 'Prevent Playback in Selected Countries' is present on the page.<br/>
+Verify the text 'MPX Media Available Date:' is NOT present on the page.<br/>
+Verify the text 'MPX Media Expiration Date:' is NOT present on the page.<br/>
 </div>
 </td>
 <td></td>
-<td>37</td>
-<td>com.nbcuni.test.publisher.tests.Advertising.GooglePublisherTagsGPT.GPTTagsVerification@1ca718f3</td></tr>
+<td>35</td>
+<td>com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides@2d258595</td></tr>
 </table><p>
 </body>
 </html>
