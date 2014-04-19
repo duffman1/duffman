@@ -36,7 +36,6 @@ public class SendEmailReport {
             message.setFrom(new InternetAddress("Automation@nbcuni.com"));
             
             //if there are failures send to automation qa resource for review
-            Integer totalTestCount = passedTestsCount + failedTestsCount;
             if (!failedTestsCount.equals(0)) {
             	message.setRecipients(Message.RecipientType.TO,
             			InternetAddress.parse("brandon.clark@nbcuni.com"));
@@ -57,11 +56,11 @@ public class SendEmailReport {
             	}
             }
             
+            Integer failedIndividualTestCount = failedTestsCount / (config.getReRunOnFailureCount() + 1);
             messageBodyPart.setContent("<body>Test run complete against latest build on "
             		+ "<a href='" + config.getConfigValue("AppURL") + "'>" + config.getConfigValue("AppURL") 
-            			+ "</a><br /><br />Total tests executed = " + totalTestCount.toString() 
-            				+ "<br />Tests passed = " + passedTestsCount.toString() + "<br />Tests failed = " 
-            					+ failedTestsCount.toString() + "<br /><br />A detailed report is attached. " 
+            			+ "</a><br /><br />Tests passed = " + passedTestsCount.toString() + "<br />Tests failed = " 
+            					+ failedIndividualTestCount.toString() + "<br /><br />A detailed report is attached. " 
             						+ failedTestScreenshotText + "Iteration Report archives are assigned to task " 
             							+ config.getConfigValue("RallyTaskID") + "." + "<br /><br />Publisher 7 "
             								+ "QA Automation</body>", "text/html");
