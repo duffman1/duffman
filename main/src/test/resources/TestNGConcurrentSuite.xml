@@ -1,4 +1,4 @@
-<suite name="Pub 7 Concurrent Suite" parallel="classes" preserve-order="true" thread-count="6">
+<suite name="Pub 7 Concurrent Suite" parallel="classes" preserve-order="true" thread-count="4">
 
   	<!--TEST EXECUTION QUEUE-->
   	<test verbose="1" name="All Concurrent Web Tests" annotations="JDK">
@@ -11,11 +11,11 @@
 		</groups>
 
 		<classes>
-			
+		
+			<class name="com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds"/>
 			<class name="com.nbcuni.test.publisher.tests.Video.Player.SelectVideoPlayerPerVideoFile"/>
 			<class name="com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen"/>
 			<class name="com.nbcuni.test.publisher.tests.Video.DeIngestingMPXAccountsAndCorrespondingAssets.EntityReferenceVerification"/>
-			<class name="com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds"/>
 			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.Logo.LogoExceptionAppearsAttemptCreateLogo"/>
 			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost"/>
 			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile"/>
@@ -52,6 +52,7 @@
 			<class name="com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification"/>
 			<class name="com.nbcuni.test.publisher.tests.Queues.DeletingQueueRevisions.DeleteRevisionsQueues"/>
 			<class name="com.nbcuni.test.publisher.tests.Security.FileViewDeniedToUnauthenticatedUsers"/>
+			<class name="com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides"/>
 			<class name="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SiteReportVisualization.SiteReportVisualization"/>
 			<class name="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EmailReRouting.EnableEmailReRouting"/>
 			<class name="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.DefaultModules.DefaultModulesEnabled"/>
@@ -68,8 +69,8 @@
 			<class name="com.nbcuni.test.publisher.tests.Metrics.AddAbilityOverrideSiteCatalystVariablesPerNodeBasis.AddAbilityOverrideSiteCatalystVariablesPerNodeBasis"/>
 			<class name="com.nbcuni.test.publisher.tests.Advertising.Comscore.PixelmanModuleSetupAndVerification"/>
 			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Movie.CreateMovie"/>
-			<class name="com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides"/>
-		
+			<class name="com.nbcuni.test.publisher.tests.Video.DeIngestingMPXAccountsAndCorrespondingAssets.DeleteMultipleAccounts"/>
+			
 		</classes>
 	</test>
 </suite>
