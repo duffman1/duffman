@@ -2,7 +2,6 @@ package com.nbcuni.test.publisher.pageobjects;
 
 import java.util.Arrays;
 import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
@@ -11,9 +10,7 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 import org.testng.Reporter;
-
 import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.Taxonomy.Taxonomy;
@@ -190,19 +187,6 @@ public class Modules {
     	
     }
     
-    public void VerifyModuleSourceInPage(String scriptSrc) throws Exception {
-    	
-    	Assert.assertTrue(webDriver.getPageSource().contains(scriptSrc));
-    	    
-    }
-    
-    public void VerifyModuleSourceNotInPage(String scriptSrc) throws Exception {
-    	
-    	Assert.assertFalse(webDriver.getPageSource().contains(scriptSrc), 
-    			"Module source is present when it should not be!");
-    	
-    }
-    
     public void VerifyModuleEnabled(String moduleName) throws Exception {
     	
     	taxonomy.NavigateSite("Modules");
@@ -211,6 +195,7 @@ public class Modules {
     	this.EnableModule(moduleName);
     	overlay.ClickCloseOverlayLnk();
         overlay.switchToDefaultContent();
+        taxonomy.NavigateSite("Home");
     }
     
     public void ClickConfigureLnk(String moduleName) throws Exception {

@@ -149,6 +149,20 @@ public class ContentParent {
         }
     }
     
+    public void VerifySourceInPage(String scriptSrc) throws Exception {
+    	
+    	Assert.assertTrue(webDriver.getPageSource().contains(scriptSrc),
+    			"Source '" + scriptSrc + "' is not present in page.");
+    	    
+    }
+    
+    public void VerifySourceNotInPage(String scriptSrc) throws Exception {
+    	
+    	Assert.assertFalse(webDriver.getPageSource().contains(scriptSrc), 
+    			"Source '" + scriptSrc + "' is present when it should not be.");
+    	
+    }
+    
     public void Scroll(String scrollCount) throws Exception {
     	
     	Reporter.log("Scroll by '" + scrollCount + "'.");

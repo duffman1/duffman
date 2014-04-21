@@ -1,4 +1,4 @@
-<suite name="Pub 7 Concurrent Suite" parallel="classes" preserve-order="true" thread-count="4">
+<suite name="Pub 7 Concurrent Suite" parallel="classes" preserve-order="true" thread-count="10">
 
   	<!--TEST EXECUTION QUEUE-->
   	<test verbose="1" name="All Concurrent Web Tests" annotations="JDK">
@@ -69,7 +69,7 @@
 			<class name="com.nbcuni.test.publisher.tests.Metrics.AddAbilityOverrideSiteCatalystVariablesPerNodeBasis.AddAbilityOverrideSiteCatalystVariablesPerNodeBasis"/>
 			<class name="com.nbcuni.test.publisher.tests.Advertising.Comscore.PixelmanModuleSetupAndVerification"/>
 			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Movie.CreateMovie"/>
-			<class name="com.nbcuni.test.publisher.tests.Video.DeIngestingMPXAccountsAndCorrespondingAssets.DeleteMultipleAccounts"/>
+			<class name="com.nbcuni.test.publisher.tests.SocialIntegration.ImplementAutoPublishingToTwitter.SeeIt"/>
 			
 		</classes>
 	</test>

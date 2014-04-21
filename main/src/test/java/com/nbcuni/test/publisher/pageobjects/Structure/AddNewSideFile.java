@@ -1,13 +1,16 @@
 package com.nbcuni.test.publisher.pageobjects.Structure;
 
 import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Reporter;
+
 import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.publisher.pageobjects.Overlay;
 import com.nbcuni.test.publisher.common.Driver.Driver;
@@ -123,7 +126,13 @@ public class AddNewSideFile {
     public void ClickExportTab() throws Exception {
         
     	Reporter.log("Click the 'Export' tab.");
-    	Export_Lnk.click();
+    	try {
+    		Export_Lnk.click();
+    	}
+    	catch (WebDriverException e) {
+    		webDriver.executeScript("arguments[0].click();", Export_Lnk);
+    		
+    	}
     }
     
     public String CopyExportTxt() throws Exception {

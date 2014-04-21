@@ -51,14 +51,14 @@ public class PixelmanModuleSetupAndVerification extends ParentTest {
         taxonomy.NavigateSite("Home>>Flush all caches");
         
         //Step 6
-        modules.VerifyModuleSourceInPage("//www.nbcudigitaladops.com/hosted/global_header.js");
+        contentParent.VerifySourceInPage("//www.nbcudigitaladops.com/hosted/global_header.js");
             
         //Step 7
         Logout logout = new Logout(webDriver);
         logout.ClickLogoutBtn();
             
         //Step 8
-        modules.VerifyModuleSourceInPage("//www.nbcudigitaladops.com/hosted/global_header.js");
+        contentParent.VerifySourceInPage("//www.nbcudigitaladops.com/hosted/global_header.js");
             
         //Step 9
         userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
@@ -75,16 +75,16 @@ public class PixelmanModuleSetupAndVerification extends ParentTest {
         taxonomy.NavigateSite("Home");
         
         //Step 10
-        modules.VerifyModuleSourceNotInPage("//www.nbcudigitaladops.com/hosted/global_header.js");
-        modules.VerifyModuleSourceNotInPage("//www.nbcudigitaladops.com/hosted/site.js?h=qa5dev_publisher_nbcuni_com_header");
+        contentParent.VerifySourceNotInPage("//www.nbcudigitaladops.com/hosted/global_header.js");
+        contentParent.VerifySourceNotInPage("//www.nbcudigitaladops.com/hosted/site.js?h=qa5dev_publisher_nbcuni_com_header");
         overlay.switchToDefaultContent();
             
         //Step 11
         logout.ClickLogoutBtn();
         
         //Step 12
-        modules.VerifyModuleSourceNotInPage("//www.nbcudigitaladops.com/hosted/global_header.js");
-        modules.VerifyModuleSourceNotInPage("//www.nbcudigitaladops.com/hosted/site.js?h=qa5dev_publisher_nbcuni_com_header");
+        contentParent.VerifySourceNotInPage("//www.nbcudigitaladops.com/hosted/global_header.js");
+        contentParent.VerifySourceNotInPage("//www.nbcudigitaladops.com/hosted/site.js?h=qa5dev_publisher_nbcuni_com_header");
          
     }
 }

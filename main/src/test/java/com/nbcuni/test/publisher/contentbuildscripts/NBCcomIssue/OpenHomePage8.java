@@ -10,10 +10,17 @@ public class OpenHomePage8 extends ParentTest{
     public void OpenHomePage_Test() throws Exception {
 
     	//Continuously open the home page indefinitely
-    	int I = 1;
-    	while (I == 1) {
+    	for(int CCount=0;CCount<2000;CCount++){
     		applib.openApplication();
-    	}
-    	
+    		
+    		webDriver.navigate().to(applib.getApplicationURL() + "/content/characterprofile1");
+    		webDriver.navigate().to(applib.getApplicationURL() + "/mediagallery1");
+    		webDriver.navigate().to(applib.getApplicationURL() + "/content/movie1");
+    		webDriver.navigate().to(applib.getApplicationURL() + "/content/person1");
+    		webDriver.navigate().to(applib.getApplicationURL() + "/content/post1");
+    		webDriver.navigate().to(applib.getApplicationURL() + "/content/episode1");
+    		webDriver.navigate().to(applib.getApplicationURL() + "/content/season1");
+    		webDriver.navigate().to(applib.getApplicationURL() + "/content/show1");
+    	}    	
     }
 }
