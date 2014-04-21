@@ -149,11 +149,16 @@ public class ContentParent {
         }
     }
     
-    public void VerifySourceInPage(String scriptSrc) throws Exception {
+    public void VerifySourceInPage(List<String> srcItems) throws Exception {
     	
-    	Assert.assertTrue(webDriver.getPageSource().contains(scriptSrc),
-    			"Source '" + scriptSrc + "' is not present in page.");
-    	    
+    	Thread.sleep(500); //stale element exception
+    	String pageSrc = webDriver.getPageSource();
+    	
+    	for (String source : srcItems) {
+    		Assert.assertTrue(pageSrc.contains(source),
+        			"Source '" + source + "' is not present in page.");
+    	}
+    	   
     }
     
     public void VerifySourceNotInPage(String scriptSrc) throws Exception {

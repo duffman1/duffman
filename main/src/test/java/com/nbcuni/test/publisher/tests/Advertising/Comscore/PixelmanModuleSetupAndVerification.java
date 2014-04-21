@@ -1,6 +1,9 @@
 package com.nbcuni.test.publisher.tests.Advertising.Comscore;
 
+import java.util.Arrays;
+
 import org.testng.annotations.Test;
+
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Logout;
@@ -51,14 +54,14 @@ public class PixelmanModuleSetupAndVerification extends ParentTest {
         taxonomy.NavigateSite("Home>>Flush all caches");
         
         //Step 6
-        contentParent.VerifySourceInPage("//www.nbcudigitaladops.com/hosted/global_header.js");
+        contentParent.VerifySourceInPage(Arrays.asList("//www.nbcudigitaladops.com/hosted/global_header.js"));
             
         //Step 7
         Logout logout = new Logout(webDriver);
         logout.ClickLogoutBtn();
             
         //Step 8
-        contentParent.VerifySourceInPage("//www.nbcudigitaladops.com/hosted/global_header.js");
+        contentParent.VerifySourceInPage(Arrays.asList("//www.nbcudigitaladops.com/hosted/global_header.js"));
             
         //Step 9
         userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());

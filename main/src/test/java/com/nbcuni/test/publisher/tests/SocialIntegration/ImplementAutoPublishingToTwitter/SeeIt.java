@@ -1,6 +1,9 @@
 package com.nbcuni.test.publisher.tests.SocialIntegration.ImplementAutoPublishingToTwitter;
 
+import java.util.Arrays;
+
 import org.testng.annotations.Test;
+
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Modules;
@@ -49,12 +52,9 @@ public class SeeIt extends ParentTest{
         contentParent.VerifyMessageStatus("Post " + postTitle + " has been created.");
         
         //Step 6
-        contentParent.VerifySourceInPage("<meta content=\"s\" name=\"twitter:seeit:idspace\">");
-    	contentParent.VerifySourceInPage("<meta content=\"9222635058369246112\" name=\"twitter:seeit:showid\">");
-    	contentParent.VerifySourceInPage("<meta content=\"fall\" name=\"twitter:seeit:campaignid\">");
-    	contentParent.VerifySourceInPage("<meta content=\"mainpage\" name=\"twitter:seeit:assetid\">");
-    	contentParent.VerifySourceInPage("<meta content=\"summary\" name=\"twitter:card\">");
-    	
-    	
+        contentParent.VerifySourceInPage(Arrays.asList("twitter:seeit:idspace", "content=\"s\"", 
+        		"twitter:seeit:showid", "content=\"9222635058369246112\"", "twitter:seeit:campaignid", 
+        			"content=\"fall\"", "twitter:seeit:assetid", "content=\"mainpage\""));
+        
     }
 }
