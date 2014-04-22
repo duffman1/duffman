@@ -2,12 +2,14 @@ package com.nbcuni.test.publisher.common;
 
 import com.ibm.icu.text.DateFormat;
 import com.ibm.icu.text.SimpleDateFormat;
+
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
+
 import org.apache.commons.io.FileUtils;
 import org.testng.IResultMap;
 import org.testng.ISuite;
@@ -172,6 +174,16 @@ public class CustomReport extends EmailableReporter {
   	  	} catch (Exception e) {
   	  		System.out.println("Failed to send report email.");
   	  	}
+  	  	
+  	  	//ping irc with results
+  	  	/* UNDER CONSTRUCTION
+  	  	SendIRCReport sendIRCReport = new SendIRCReport();
+  	  	try {
+			sendIRCReport.SendReport(filePath, fileExtension, passedTestCount, failedTestCount, failedScreenshots);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}*/
 	  
 	}
 }
