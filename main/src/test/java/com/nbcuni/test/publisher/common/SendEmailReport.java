@@ -96,7 +96,7 @@ public class SendEmailReport {
 
             if (config.getConfigValue("SendReportAutoEmails").equals("true")) {
             	Transport.send(message);
-            	System.out.println("Successfully sent report result email");
+            	System.out.println("Successfully sent report result email.");
             }
             else {
             	System.out.println("Report result email not sent per configuration setting.");

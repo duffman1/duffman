@@ -175,15 +175,13 @@ public class CustomReport extends EmailableReporter {
   	  		System.out.println("Failed to send report email.");
   	  	}
   	  	
-  	  	//ping irc with results
-  	  	/* UNDER CONSTRUCTION
+  	  	//send irc chat with results
   	  	SendIRCReport sendIRCReport = new SendIRCReport();
   	  	try {
 			sendIRCReport.SendReport(filePath, fileExtension, passedTestCount, failedTestCount, failedScreenshots);
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}*/
+			System.out.println("Failed to send report IRC chat.");
+		}
 	  
 	}
 }

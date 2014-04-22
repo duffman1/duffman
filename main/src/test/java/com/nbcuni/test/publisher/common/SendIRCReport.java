@@ -6,82 +6,79 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.net.Socket;
 import java.util.List;
-import java.util.Properties;
-
-import javax.activation.DataHandler;
-import javax.activation.DataSource;
-import javax.activation.FileDataSource;
-import javax.mail.BodyPart;
-import javax.mail.Message;
-import javax.mail.MessagingException;
-import javax.mail.Multipart;
-import javax.mail.Session;
-import javax.mail.Transport;
-import javax.mail.internet.InternetAddress;
-import javax.mail.internet.MimeBodyPart;
-import javax.mail.internet.MimeMessage;
-import javax.mail.internet.MimeMultipart;
 
 public class SendIRCReport {
 
 	public void SendReport(String pathToReport, String reportName, Integer passedTestsCount, Integer failedTestsCount, List<String> failedScreenshots) throws Exception {
 
-		// The server to connect to and our details.
-        String server = "irc.freenode.net";
-        String nick = "NBCUniAutomationBotOnIRC";
+		Config config = new Config();
+		
+		//Server conn props
+        String server = config.getConfigValue("IRCServer");
+        String nick = config.getConfigValue("IRCNickname");
         String login = "simple_bot";
 
-        // The channel which the bot will join.
-        String channel = "#nbcuots_pub7";
+        //Channel to connect to
+        String channel = config.getConfigValue("IRCChannel");
         
-        // Connect directly to the IRC server.
-        Socket socket = new Socket(server, 6667);
-        BufferedWriter writer = new BufferedWriter(
-                new OutputStreamWriter(socket.getOutputStream( )));
-        BufferedReader reader = new BufferedReader(
-                new InputStreamReader(socket.getInputStream( )));
-        
-        // Log on to the server.
-        writer.write("NICK " + nick + "\r\n");
-        writer.write("USER " + login + " 8 * : Java IRC Hacks Bot\r\n");
-        writer.flush( );
-        
-        // Read lines from the server until it tells us we have connected.
-        String line = null;
-        while ((line = reader.readLine( )) != null) {
-            if (line.indexOf("004") >= 0) {
-                // We are now logged in.
-                break;
+        //If enabled, connect to the server
+        if (config.getConfigValue("SendReportIRCChat").equals("true")) {
+        	
+        	@SuppressWarnings("resource")
+    		Socket socket = new Socket(server, 6667);
+            BufferedWriter writer = new BufferedWriter(
+                    new OutputStreamWriter(socket.getOutputStream( )));
+            BufferedReader reader = new BufferedReader(
+                    new InputStreamReader(socket.getInputStream( )));
+            
+            //Log on to the server
+            writer.write("NICK " + nick + "\r\n");
+            writer.write("USER " + login + " 8 * : Java IRC Automation Bot\r\n");
+            writer.flush();
+            
+            //Wait until connected to server
+            String line = null;
+            while ((line = reader.readLine()) != null) {
+                if (line.indexOf("004") >= 0) {
+                    //Logged in
+                    break;
+                }
+                else if (line.indexOf("433") >= 0) {
+                    System.out.println("Nickname is already in use.");
+                    return;
+                }
             }
-            else if (line.indexOf("433") >= 0) {
-                System.out.println("Nickname is already in use.");
-                return;
-            }
-        }
-        
-        // Join the channel.
-        writer.write("JOIN " + channel + "\r\n");
-        writer.flush();
-        writer.write("PRIVMSG #nbcuots_pub7 :I am your robot friend, here to write test results to you!\r\n");
-        writer.flush();
-        
-        // Keep reading lines from the server. 
-        /*
-        while ((line = reader.readLine( )) != null) {
-            if (line.toLowerCase( ).startsWith("PING ")) {
-                // We must respond to PINGs to avoid being disconnected.
-                writer.write("PONG " + line.substring(5) + "\r\n");
-                writer.write("PRIVMSG " + channel + " :I got pinged!\r\n");
-                writer.flush( );
+            
+            Integer failedIndividualTestCount = failedTestsCount / (config.getReRunOnFailureCount() + 1);
+            String sendTo;
+            if (!failedTestsCount.equals(0)) {
+            	sendTo = "baclark77";
             }
             else {
-                // Print the raw line received by the bot.
-                System.out.println(line);
+            	sendTo = channel;
             }
-        }*/
+            
+            //Join channel and write results
+            writer.write("JOIN " + channel + "\r\n");
+            writer.flush();
+            writer.write("PRIVMSG " + sendTo + " :Test run complete against latest build on " + config.getConfigValue("AppURL") + ".\r\n");
+            writer.flush();
+            writer.write("PRIVMSG " + sendTo + " :Total tests passed = " + passedTestsCount.toString() + ".\r\n");
+            writer.flush();
+            writer.write("PRIVMSG " + sendTo + " :Total tests failed = " + failedIndividualTestCount.toString() + ".\r\n");
+            writer.flush();
+            writer.write("PRIVMSG " + sendTo + " :A detailed test report has been emailed to you as well as posted to Rally attached to " + config.getConfigValue("RallyTaskID") + ".\r\n");
+            writer.flush();
+            
+            //Close writer and release socket
+            writer.close();
+            socket.close();
+            System.out.println("Successfully sent report result IRC chat.");
+        }
+        else {
+        	System.out.println("Report result IRC chat not sent per configuration setting.");
+        }
         
-        writer.close();
-        socket.close();
         
     }
 }

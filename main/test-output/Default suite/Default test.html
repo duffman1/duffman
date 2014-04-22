@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Apr 22 07:44:43 EDT 2014</td>
+<td>Started on:</td><td>Tue Apr 22 08:17:54 EDT 2014</td>
 </tr>
-<tr><td>Total time:</td><td>26 seconds (26604 ms)</td>
+<tr><td>Total time:</td><td>39 seconds (39691 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,12 +75,12 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification.DefaultPlayerOptionsVerification_Test()'><b>DefaultPlayerOptionsVerification_Test</b><br>Test class: com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification<br/>
-<a href="#Output-142669284" onClick='toggleBox("Output-142669284", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides.MPXVideosSchedulingVerificationInitialOverrides_Test()'><b>MPXVideosSchedulingVerificationInitialOverrides_Test</b><br>Test class: com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides<br/>
+<a href="#Output-443382196" onClick='toggleBox("Output-443382196", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-142669284" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-142669284">
-Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.<br/>
+<a href="#Output-443382196" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-443382196">
+Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.<br/>
 Enter the user's email address in the 'Email Address' text box.<br/>
 Enter the user's password in the 'Password' text box.<br/>
 Click the 'Login' button.<br/>
@@ -92,31 +92,114 @@ Check if the 'Connect to MPX' button is present. If not then MPX has not been pr
 Get all the selected import account options and store to a list.<br/>
 Click the 'Close Overlay X'.<br/>
 Mouse over the 'Structure' menu link.<br/>
-Click the 'File types' menu link.<br/>
-Switch to the active frame titled 'File types dialog'.<br/>
-Click the 'DB TV manage file display' link.<br/>
+Mouse over the 'File types' menu link.<br/>
+Click the 'MPX Video for Account "DB TV" (2312945284)' menu link.<br/>
 Switch to the active frame titled 'MPX Video for Account &quot;DB TV&quot; (2312945284) dialog'.<br/>
-Click the 'Pub MPX Video' checkbox<br/>
-Click the 'Pub MPX Video' link.<br/>
-Select the 'USA_Demo_Player' player from the 'Pub MPX Video Player for Account...' drop down list.<br/>
-Click the 'Save configuration' button.<br/>
-Verify success message of 'Your settings have been saved.' is present.<br/>
+Click the 'Enable MPX Value Overrides' check box.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'File types dialog'.<br/>
+Verify success message of 'The file type MPX Video for Account "DB TV' is present.<br/>
 Verify there are no errors present.<br/>
-Click the 'Close Overlay X'.<br/>
+Verify success message of 'has been updated.' is present.<br/>
+Verify there are no errors present.<br/>
 Mouse over the 'Content' menu link.<br/>
 Mouse over the 'Files' menu link.<br/>
 Click the 'mpxMedia' menu link.<br/>
 Switch to the active frame titled 'Content dialog'.<br/>
 Enter title Automation1.<br/>
 Click the 'Apply' button.<br/>
+Get the title text of every result in the search result set.<br/>
+For each expected result, assert it is present in the result set.<br/>
 Click the first search title link in the search result set.<br/>
-Verify the mpx video player frame is present.<br/>
-Verify the mpx video player frame source does NOT contain 'embed'.<br/>
+Verify the text 'Automation1' is present on the page.<br/>
+Verify the text 'MPX Released File Public IDs:' is present on the page.<br/>
+Verify the text 'MPX Media Default Released File Public ID:' is present on the page.<br/>
+Verify the text 'MPX Media Categories:' is present on the page.<br/>
+Verify the text 'Series' is present on the page.<br/>
+Verify the text 'Show' is present on the page.<br/>
+Verify the text 'MPX Media Description:' is present on the page.<br/>
+Verify the text 'Automation 1 example test' is present on the page.<br/>
+Verify the text 'MPX Media Author:' is present on the page.<br/>
+Verify the text 'Pub7 Content Provider' is present on the page.<br/>
+Verify the text 'MPX Media Air Date:' is present on the page.<br/>
+Verify the text 'Wednesday, January 8, 2014' is present on the page.<br/>
+Verify the text 'MPX Media Keywords:' is present on the page.<br/>
+Verify the text 'mpx, metadata, field, override' is present on the page.<br/>
+Verify the text 'MPX Media Copyright:' is present on the page.<br/>
+Verify the text 'NBCUNI QA' is present on the page.<br/>
+Verify the text 'MPX Media Film Advisory Board Rating:' is present on the page.<br/>
+Verify the text 'pd' is present on the page.<br/>
+Verify the text 'MPX Media MPAA Rating:' is present on the page.<br/>
+Verify the text 'MPX Media MPAA Sub-Ratings:' is present on the page.<br/>
+Verify the text 'v' is present on the page.<br/>
+Verify the text 'MPX Media V-Chip Rating:' is present on the page.<br/>
+Verify the text 'tv-y7' is present on the page.<br/>
+Verify the text 'MPX Media V-Chip Sub-Ratings:' is present on the page.<br/>
+Verify the text 'l' is present on the page.<br/>
+Verify the text 'MPX Media Exclude Selected Countries:' is present on the page.<br/>
+Verify the text 'Prevent Playback in Selected Countries' is present on the page.<br/>
+Verify the text 'MPX Media Available Date:' is NOT present on the page.<br/>
+Verify the text 'MPX Media Expiration Date:' is NOT present on the page.<br/>
+Click the 'Edit' link in the work bench.<br/>
+Switch to the active frame titled 'Edit mpx_video_1 Automation1 dialog'.<br/>
+Verify that the 'Media Availabe Date' text box is disabled and has no value.<br/>
+Verify that the 'Media Expiration Date' text box is disabled and has no value.<br/>
+Click the 'Override' checkbox for the 'Available Date' check box.<br/>
+Click the 'Override' checkbox for the 'Expiration Date' check box.<br/>
+Enter '04/29/2014' in the 'Available Date' text box.<br/>
+Enter '05:00pm' in the 'Available Time' text box.<br/>
+Enter '04/21/2017' in the 'Expiration Date' text box.<br/>
+Enter '05:00pm' in the 'Expiration Time' text box.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'MPX Video for Account "DB TV" (2312945284) Automation1 has been updated.' is present.<br/>
+Verify there are no errors present.<br/>
+Verify the text 'MPX Media Available Date:' is present on the page.<br/>
+Verify the text 'Tuesday, April 29, 2014' is present on the page.<br/>
+Verify the text 'MPX Media Expiration Date: ' is present on the page.<br/>
+Verify the text 'Friday, April 21, 2017' is present on the page.<br/>
+Click the 'Edit' link in the work bench.<br/>
+Switch to the active frame titled 'Edit mpx_video_1 Automation1 dialog'.<br/>
+Un-check the 'Override' checkbox for the 'Available Date' check box.<br/>
+Un-check the 'Override' checkbox for the 'Expiration Date' check box.<br/>
+Verify that the 'Media Availabe Date' text box is disabled and has no value.<br/>
+Verify that the 'Media Expiration Date' text box is disabled and has no value.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'MPX Video for Account "DB TV" (2312945284) Automation1 has been updated.' is present.<br/>
+Verify there are no errors present.<br/>
+Verify the text 'Automation1' is present on the page.<br/>
+Verify the text 'MPX Released File Public IDs:' is present on the page.<br/>
+Verify the text 'MPX Media Default Released File Public ID:' is present on the page.<br/>
+Verify the text 'MPX Media Categories:' is present on the page.<br/>
+Verify the text 'Series' is present on the page.<br/>
+Verify the text 'Show' is present on the page.<br/>
+Verify the text 'MPX Media Description:' is present on the page.<br/>
+Verify the text 'Automation 1 example test' is present on the page.<br/>
+Verify the text 'MPX Media Author:' is present on the page.<br/>
+Verify the text 'Pub7 Content Provider' is present on the page.<br/>
+Verify the text 'MPX Media Air Date:' is present on the page.<br/>
+Verify the text 'Wednesday, January 8, 2014' is present on the page.<br/>
+Verify the text 'MPX Media Keywords:' is present on the page.<br/>
+Verify the text 'mpx, metadata, field, override' is present on the page.<br/>
+Verify the text 'MPX Media Copyright:' is present on the page.<br/>
+Verify the text 'NBCUNI QA' is present on the page.<br/>
+Verify the text 'MPX Media Film Advisory Board Rating:' is present on the page.<br/>
+Verify the text 'pd' is present on the page.<br/>
+Verify the text 'MPX Media MPAA Rating:' is present on the page.<br/>
+Verify the text 'MPX Media MPAA Sub-Ratings:' is present on the page.<br/>
+Verify the text 'v' is present on the page.<br/>
+Verify the text 'MPX Media V-Chip Rating:' is present on the page.<br/>
+Verify the text 'tv-y7' is present on the page.<br/>
+Verify the text 'MPX Media V-Chip Sub-Ratings:' is present on the page.<br/>
+Verify the text 'l' is present on the page.<br/>
+Verify the text 'MPX Media Exclude Selected Countries:' is present on the page.<br/>
+Verify the text 'Prevent Playback in Selected Countries' is present on the page.<br/>
+Verify the text 'MPX Media Available Date:' is NOT present on the page.<br/>
+Verify the text 'MPX Media Expiration Date:' is NOT present on the page.<br/>
 </div>
 </td>
 <td></td>
-<td>23</td>
-<td>com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification@572863a9</td></tr>
+<td>36</td>
+<td>com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides@2d258595</td></tr>
 </table><p>
 </body>
 </html>
