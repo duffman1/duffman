@@ -13,10 +13,12 @@ import com.rallydev.rest.response.QueryResponse;
 import com.rallydev.rest.util.Fetch;
 import com.rallydev.rest.util.QueryFilter;
 import com.rallydev.rest.util.Ref;
-
 import java.io.RandomAccessFile;
 import java.io.IOException;
 import java.net.URI;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 
 import org.apache.commons.codec.binary.Base64;
 
@@ -30,7 +32,7 @@ public class UpdateTestResultsRally {
         //Connection parameters
         String rallyURL = config.getConfigValue("RallyUrl");
         String wsapiVersion = "1.40";
-        String applicationName = "Attach Automated Test Reports";
+        String applicationName = "Update Individual Rally Test Cases";
 
         // Credentials
         String userName = config.getConfigValue("RallyUsername");
@@ -77,7 +79,11 @@ public class UpdateTestResultsRally {
         	
         	JsonObject newTestCaseResult = new JsonObject();
             newTestCaseResult.addProperty("Verdict", result);
-            newTestCaseResult.addProperty("Date", "2014-04-22T18:00:00.000Z");
+            Calendar cal = Calendar.getInstance();
+            Date date = cal.getTime();
+        	SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        	String pub7Date = dateFormat.format(date);
+            newTestCaseResult.addProperty("Date", pub7Date);
             newTestCaseResult.addProperty("Build", "latest build");
             newTestCaseResult.addProperty("Notes", "Automated Test Run");
             newTestCaseResult.addProperty("Tester", userRef);
@@ -128,7 +134,7 @@ public class UpdateTestResultsRally {
             			JsonObject myAttachment = new JsonObject();
             			myAttachment.addProperty("TestCaseResult", ref);
             			myAttachment.addProperty("Content", myAttachmentContentRef);
-            			myAttachment.addProperty("Name", "AttachmentFromREST.jpg");
+            			myAttachment.addProperty("Name", "ScreenshotOfFailure.jpg");
             			myAttachment.addProperty("Description", "Attachment of Failed Screenshot");
             			myAttachment.addProperty("ContentType","image/jpg");
             			myAttachment.addProperty("Size", attachmentSize);
