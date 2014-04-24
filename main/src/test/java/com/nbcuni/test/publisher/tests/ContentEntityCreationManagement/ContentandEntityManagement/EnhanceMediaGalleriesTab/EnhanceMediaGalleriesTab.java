@@ -18,11 +18,11 @@ import java.util.TimeZone;
 public class EnhanceMediaGalleriesTab extends ParentTest{
 	
     /*************************************************************************************
-     * TEST CASE - TC1379
-     * Steps - https://rally1.rallydev.com/#/14663927728d/detail/testcase/17745652850
+     * TEST CASE - TC1293
+     * Steps - https://rally1.rallydev.com/#/14663927728d/detail/testcase/17615653109
      *************************************************************************************/
     @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"})
-    public void EnhanceMediaGalleriesTab_Test() throws Exception{
+    public void EnhanceMediaGalleriesTab_TC1293() throws Exception{
     	
     	//Step 1
     	UserLogin userLogin = applib.openApplication();

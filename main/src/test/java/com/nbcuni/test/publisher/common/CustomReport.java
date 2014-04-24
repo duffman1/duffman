@@ -27,6 +27,7 @@ public class CustomReport extends EmailableReporter {
 		
 		Config config = new Config();
 		UploadReportRally uploadReport = new UploadReportRally();
+		UpdateTestResultsRally updateTestCase = new UpdateTestResultsRally();
 		
 		//get the results of the consecutive suite run
 		ISuite consecutiveSuite = suites.get(0);
@@ -164,7 +165,73 @@ public class CustomReport extends EmailableReporter {
 		
   	  		System.out.println("Failed to upload report attachment to Rally.");
   	  	}
-	
+  	  	
+  	  	//update individual consecutive passed test cases in Rally
+  	  	for (ITestResult consecutive_passed_result : consecutivePassedTests.getAllResults()) {
+  	  	
+  	  		String methodName = consecutive_passed_result.getMethod().getMethodName();
+  	  		if (methodName.contains("_TC")) {
+  	  			String[] tcID = methodName.split("_");
+  	  		
+  	  			try {
+  	  				updateTestCase.updateTestResult(tcID[1], true, "");
+  	  			} catch (Exception e) {
+  	  				System.out.println("Failed to update individual consecutive suite passed test cases in Rally.");
+  	  			}
+  	  		}
+  	  		
+  	  	}
+  	  	
+  	  	//update individual consecutive failed test cases in Rally
+  	  	for (ITestResult consecutive_failed_result : consecutiveFailedTests.getAllResults()) {
+  	  	
+  	  		String methodName = consecutive_failed_result.getMethod().getMethodName();
+  	  		if (methodName.contains("_TC")) {
+  	  			String screenshotPath = config.getPathToScreenshots() + methodName + ".png";
+  	  			String[] tcID = methodName.split("_");
+  	  		
+  	  			try {
+  	  				updateTestCase.updateTestResult(tcID[1], false, screenshotPath);
+  	  			} catch (Exception e) {
+  	  				System.out.println("Failed to update individual consecutive suite failed test cases in Rally.");
+  	  			}
+  	  		}
+  	  		
+  	  	}
+  	  	
+  	  	//update individual concurrent passed test cases in Rally
+  	  	for (ITestResult concurrent_passed_result : concurrentPassedTests.getAllResults()) {
+  	  	
+  	  		String methodName = concurrent_passed_result.getMethod().getMethodName();
+  	  		if (methodName.contains("_TC")) {
+  	  			String[] tcID = methodName.split("_");
+  	  		
+  	  			try {
+  	  				updateTestCase.updateTestResult(tcID[1], true, "");
+  	  			} catch (Exception e) {
+  	  				System.out.println("Failed to update individual concurrent suite passed test cases in Rally.");
+  	  			}
+  	  		}
+  	  		
+  	  	}
+  	  	
+  	  	//update individual concurrent failed test cases in Rally
+  	  	for (ITestResult concurrent_failed_result : concurrentFailedTests.getAllResults()) {
+  	  	
+  	  		String methodName = concurrent_failed_result.getMethod().getMethodName();
+  	  		if (methodName.contains("_TC")) {
+  	  			String screenshotPath = config.getPathToScreenshots() + methodName + ".png";
+  	  			String[] tcID = methodName.split("_");
+  	  		
+  	  			try {
+  	  				updateTestCase.updateTestResult(tcID[1], false, screenshotPath);
+  	  			} catch (Exception e) {
+  	  				System.out.println("Failed to update individual concurrent suite test cases in Rally.");
+  	  			}
+  	  		}
+  	  		
+  	  	}
+  	  	
   	  	//send auto email with report
   	  	Integer passedTestCount = consecutivePassedTests.size() + concurrentPassedTests.size();
   	  	Integer failedTestCount = consecutiveFailedTests.size() + concurrentFailedTests.size();

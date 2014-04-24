@@ -12,6 +12,7 @@
   	<parameter name="SendReportAutoEmails" value="true"></parameter>
   	<parameter name="SendReportIRCChat" value="false"></parameter>
   	<parameter name="UploadReportToRally" value="true"></parameter>
+  	<parameter name="UpdateIndividualRallyTCs" value="false"></parameter>
   	<parameter name="PathToReports" value="/test-output/reports/"></parameter>
   	<parameter name="PathToScreenshots" value="/test-output/screenshots/"></parameter>
   	<parameter name="SendReportEmailAddress" value="brandon.clark@nbcuni.com"></parameter>
@@ -36,6 +37,8 @@
   	<parameter name="MPXUrl" value="http://mpx.theplatform.com/"></parameter>
   	<parameter name="MPXUsername" value="mpx/AdminPub7QA"></parameter>
   	<parameter name="MPXPassword" value="Pa55word"></parameter>
+  	<parameter name="MPXVideaUploadPause" value="10000"></parameter>
+  	<parameter name="MPXAssetBufferPause" value="0"></parameter>
   	
   	<!--SIKULI CONFIG-->
   	<parameter name="PathToSikuliImages" value="/src/test/java/com/nbcuni/test/publisher/lib/sikuli/images/"></parameter>

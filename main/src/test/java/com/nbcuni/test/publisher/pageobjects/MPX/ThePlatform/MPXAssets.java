@@ -7,6 +7,7 @@ import org.sikuli.script.Screen;
 import org.testng.Assert;
 
 import com.nbcuni.test.publisher.common.AppLib;
+import com.nbcuni.test.publisher.common.Config;
 
 /*********************************************
  * publisher.nbcuni.com MPX Assets Library. Copyright
@@ -19,10 +20,12 @@ public class MPXAssets {
 
     private AppLib applib;
     private Screen sikuli;
+    private Config config;
     
     public MPXAssets(AppLib applib) {
     	sikuli = new Screen();
         this.applib = applib;
+        config = new Config();
         
     }
     
@@ -33,8 +36,6 @@ public class MPXAssets {
     }
     
     public void WaitForImgPresent(String imgPath) throws Exception {
-    	
-    	//sikuli.wait(imgPath, applib.getSikuliImageWaitTime()); 
     	
     	for (int second = 0; ; second++){
             if (second >= applib.getSikuliImageWaitTime()) {
@@ -47,11 +48,10 @@ public class MPXAssets {
             Thread.sleep(500);
         }
     	
+    	Thread.sleep(config.getMPXAssetBufferPause());
     }
     
     public void WaitForImgNotPresent(String imgPath) throws Exception {
-    	
-    	//sikuli.waitVanish(imgPath, applib.getSikuliImageWaitTime());
     	
     	for (int second = 0; ; second++){
             if (second >= applib.getSikuliImageWaitTime()) {
@@ -63,6 +63,8 @@ public class MPXAssets {
             }
             Thread.sleep(500);
         }
+    	
+    	Thread.sleep(config.getMPXAssetBufferPause());
     }
     
     public void ScrollDownForImgPresent(String imgPath) throws Exception {

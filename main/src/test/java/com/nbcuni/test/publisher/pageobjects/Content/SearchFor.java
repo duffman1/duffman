@@ -49,7 +49,7 @@ public class SearchFor {
     }
     
     private List<WebElement> AllMPXSearchResults_Lnks() {
-    	List<WebElement> els = webDriver.findElements(By.xpath("//tbody//td[2]//a"));
+    	List<WebElement> els = webDriver.findElements(By.xpath("//tbody//td[3]//a"));
     	return els;
     }
     
@@ -94,7 +94,7 @@ public class SearchFor {
     @FindBy(how = How.XPATH, using = "(//tbody//td[3]//a)[1]")
     private WebElement FirstMPXMediaSearchResult_Lnk;
     
-    @FindBy(how = How.XPATH, using = "(//tbody//td[2]//a)[1]")
+    @FindBy(how = How.XPATH, using = "(//tbody//td[3]//a)[1]")
     private WebElement FirstMPXPlayerSearchResult_Lnk;
     
     @FindBy(how = How.XPATH, using = "(//div[text()='Published']/../..//td[@class='views-field views-field-title']/a)[1]")
@@ -105,11 +105,11 @@ public class SearchFor {
     }
     
     List<WebElement> AllMPXResultSetSource_Itms() {
-    	return webDriver.findElements(By.xpath("//tbody//td[4]"));
+    	return webDriver.findElements(By.xpath("//tbody//td[5]"));
     }
     
     private List<WebElement> AllMPXResultSetStatus_Itms() {
-    	return webDriver.findElements(By.xpath("//tbody//td[5]"));
+    	return webDriver.findElements(By.xpath("//tbody//td[6]"));
     }
     
     
@@ -204,12 +204,13 @@ public class SearchFor {
     	Reporter.log("Verify that the search result set column order matches as expected.");
     	List<WebElement> allColumns = AllMPXSearchHeader_Clms();
     	Assert.assertTrue(allColumns.get(0).getText().equals("ID"));
-    	Assert.assertTrue(allColumns.get(1).getText().equals("TITLE"));
-    	Assert.assertTrue(allColumns.get(2).getText().equals("DESCRIPTION"));
-    	Assert.assertTrue(allColumns.get(3).getText().equals("SOURCE"));
-    	Assert.assertTrue(allColumns.get(4).getText().equals("MPX STATUS"));
-    	Assert.assertTrue(allColumns.get(5).getText().equals("FIRST IMPORTED"));
-    	Assert.assertTrue(allColumns.get(6).getText().equals("LAST UPDATED"));
+    	Assert.assertTrue(allColumns.get(1).getText().equals("PUBLIC ID"));
+    	Assert.assertTrue(allColumns.get(2).getText().equals("TITLE"));
+    	Assert.assertTrue(allColumns.get(3).getText().equals("DESCRIPTION"));
+    	Assert.assertTrue(allColumns.get(4).getText().equals("SOURCE"));
+    	Assert.assertTrue(allColumns.get(5).getText().equals("MPX STATUS"));
+    	Assert.assertTrue(allColumns.get(6).getText().equals("FIRST IMPORTED"));
+    	Assert.assertTrue(allColumns.get(7).getText().equals("LAST UPDATED"));
     }
     
     public String GetFirstSearchResult() throws Exception {

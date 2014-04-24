@@ -24,10 +24,11 @@
   <parameter name="PathToReports" value="/test-output/reports/"/>
   <parameter name="MPXPassword" value="Pa55word"/>
   <parameter name="RallyTaskID" value="TA34929"/>
-  <parameter name="SendReportIRCChat" value="true"/>
+  <parameter name="SendReportIRCChat" value="false"/>
   <parameter name="RunMobile" value="false"/>
   <parameter name="RallyWorkspace" value="Digital Products"/>
   <parameter name="SendReportEmailAddress" value="brandon.clark@nbcuni.com"/>
+  <parameter name="UpdateIndividualRallyTCs" value="true"/>
   <parameter name="PathToSikuliImages" value="/src/test/java/com/nbcuni/test/publisher/lib/sikuli/images/"/>
   <parameter name="UploadReportToRally" value="false"/>
   <parameter name="ImplicitWaitTime" value="30"/>
@@ -35,7 +36,7 @@
   <parameter name="LocalWebDriverHubPort" value="4444"/>
   <parameter name="IRCChannel" value="#nbcuots_pub7"/>
   <parameter name="SikuliImageWaitTime" value="60"/>
-  <parameter name="AppURL" value="http://install.qa5.nbcupublisher7.publisher7.com"/>
+  <parameter name="AppURL" value="http://update.qa5.nbcupublisher7.publisher7.com"/>
   <parameter name="MPXUsername" value="mpx/AdminPub7QA"/>
   <listeners>
     <listener class-name="com.nbcuni.test.publisher.common.CustomReport"/>
@@ -47,15 +48,15 @@
       </run>
     </groups>
     <classes>
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile">
+      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.EnhanceMediaGalleriesTab.EnhanceMediaGalleriesTab">
         <methods>
           <include name="startSelenium"/>
           <include name="stopGridAndHub"/>
           <include name="startGridAndHub"/>
-          <include name="CreateCharacterProfile_Test"/>
+          <include name="EnhanceMediaGalleriesTab_TC1379"/>
           <include name="stopSelenium"/>
         </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile -->
+      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.EnhanceMediaGalleriesTab.EnhanceMediaGalleriesTab -->
     </classes>
   </test> <!-- All Concurrent Web Tests(failed) -->
 </suite> <!-- Failed suite [Pub 7 Concurrent Suite] -->

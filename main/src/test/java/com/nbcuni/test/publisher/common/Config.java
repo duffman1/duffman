@@ -82,6 +82,18 @@ public class Config {
     	
     }
     
+    public int getMPXVideaUploadPause() {
+    	
+    	return Integer.parseInt(this.getConfigValue("MPXVideaUploadPause"));
+    	
+    }
+    
+    public int getMPXAssetBufferPause() {
+    	
+    	return Integer.parseInt(this.getConfigValue("MPXAssetBufferPause"));
+    	
+    }
+    
     public String getPathToMedia() {
     	
     	String filePath = System.getProperty("user.dir") + this.getConfigValue("PathToMediaContent");

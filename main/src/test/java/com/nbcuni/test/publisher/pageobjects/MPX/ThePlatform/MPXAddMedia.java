@@ -1,6 +1,7 @@
 package com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform;
 
 import com.nbcuni.test.publisher.common.AppLib;
+import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.pageobjects.Content.AddFile;
 
 import org.sikuli.script.*;
@@ -19,12 +20,14 @@ public class MPXAddMedia {
     private Screen sikuli;
     private MPXAssets mpxAssets;
     private AddFile addFile;
+    private Config config;
     
     public MPXAddMedia(AppLib applib) {
     	sikuli = new Screen();
         this.applib = applib;
         mpxAssets = new MPXAssets(applib);
         addFile = new AddFile(null, applib);
+        config = new Config();
     }
     
     private String getImagePath() {
@@ -185,7 +188,7 @@ public class MPXAddMedia {
     	
     	mpxAssets.WaitForImgNotPresent(getImagePath() + "Common/Spinner.png");
     	
-    	Thread.sleep(10000); //TODO - long pause here since file uploads in background requires some time. This is bad I know but there's no visual indicator I can go by...
+    	Thread.sleep(config.getMPXVideaUploadPause()); //TODO - long pause here since file uploads in background requires some time. This is bad I know but there's no visual indicator I can go by...
     }
     
     public void SelectContentRatingUSMPAA_PG13() throws Exception {
