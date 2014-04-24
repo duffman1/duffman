@@ -108,7 +108,7 @@ public class ErrorChecking {
     		allowedErrors.add("Warning: Attempt to assign property of non-object in EntityAPIController->save()");
     		allowedErrors.add("Notice: Trying to get property of non-object in EntityAPIController->save()");
     		allowedErrors.add("Notice: getimagesize() [function.getimagesize]: Read error! in image_gd_get_info()");
-    		allowedErrors.add("Notice: Undefined index: #build_id in form_set_cache() (line 565 of /mnt/www/html/nbcupublisher7qa5/docroot/includes/form.inc).");
+    		allowedErrors.add("Notice: Undefined index: #build_id in form_set_cache() (line 565 of");
     		
     		//FIRST - check if error container is present
     		boolean errorContainerPresent = false;
