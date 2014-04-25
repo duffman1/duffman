@@ -1,5 +1,6 @@
 package com.nbcuni.test.publisher.pageobjects.FileTypes;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -8,6 +9,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
+
 import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.publisher.common.Driver.Driver;
 
@@ -20,10 +22,12 @@ import com.nbcuni.test.publisher.common.Driver.Driver;
 
 public class ManageFileDisplay {
 
-    WebDriverWait wait;
+	private Driver webDriver;
+    private WebDriverWait wait;
     
     //PAGE OBJECT CONSTRUCTOR
     public ManageFileDisplay(Driver webDriver, AppLib applib) {
+    	this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
         wait = new WebDriverWait(webDriver, 10);
     }
@@ -38,8 +42,9 @@ public class ManageFileDisplay {
     @FindBy(how = How.ID, using = "edit-displays-pub-mpx-video-status")
     private WebElement PubMPXVideo_Cbx;
     
-    @FindBy(how = How.CSS, using = "select[id*='edit-displays-pub-mpx-video-settings-pub-mpx-video-player']")
-    private WebElement PubMPXVideoPlayerForAccount_Ddl;
+    private WebElement PubMPXVideoPlayerForAccount_Ddl(String playerTitle) {
+    	return webDriver.findElement(By.xpath("//select[contains(@id, 'player')]//optgroup/option[contains(text(), '" + playerTitle + "')]"));
+    }
     
     @FindBy(how = How.ID, using = "edit-displays-pub-mpx-image-settings-pub-mpx-image-image-style")
     private WebElement PubMPXImageStyle_Ddl;
@@ -105,8 +110,9 @@ public class ManageFileDisplay {
     public void SelectMPXVideoPlayer(String playerName) throws Exception {
     	
     	Reporter.log("Select the '" + playerName + "' player from the 'Pub MPX Video Player for Account...' drop down list.");
-    	wait.until(ExpectedConditions.visibilityOf(PubMPXVideoPlayerForAccount_Ddl));
-    	new Select(PubMPXVideoPlayerForAccount_Ddl).selectByVisibleText(playerName);
+    	wait.until(ExpectedConditions.visibilityOf(PubMPXVideoPlayerForAccount_Ddl(playerName)));
+    	PubMPXVideoPlayerForAccount_Ddl(playerName).click();
+    	
     }
     
     public void SelectMPXImageStyle(String style) throws Exception {

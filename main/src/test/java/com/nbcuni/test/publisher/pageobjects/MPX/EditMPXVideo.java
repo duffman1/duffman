@@ -3,6 +3,7 @@ package com.nbcuni.test.publisher.pageobjects.MPX;
 import com.nbcuni.test.publisher.common.Driver.Driver;
 
 import org.testng.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -22,10 +23,12 @@ import org.testng.Reporter;
 
 public class EditMPXVideo {
 
+	private Driver webDriver;
 	private WebDriverWait wait;
 	
     //PAGE OBJECT CONSTRUCTOR
     public EditMPXVideo(Driver webDriver) {
+    	this.webDriver = webDriver;
     	PageFactory.initElements(webDriver, this);
         wait = new WebDriverWait(webDriver, 10);
     }
@@ -50,7 +53,11 @@ public class EditMPXVideo {
     private WebElement OverrideMPXExpirationDate_Cbx;
     
     @FindBy(how = How.ID, using = "edit-pub-mpx-player-pid")
-    private WebElement PubMPXVideoPlayer_Ddl;
+    private WebElement PubMPXVideoPlayerBase_Ddl;
+    
+    private WebElement PubMPXVideoPlayer_Ddl(String playerTitle) {
+    	return webDriver.findElement(By.xpath("//select[@id='edit-pub-mpx-player-pid']/optgroup/option[contains(text(), '" + playerTitle + "')]"));
+    }
     
     @FindBy(how = How.ID, using = "edit-field-mpx-media-categories-und-0-value")
     private WebElement MPXMediaCategory1_Txb;
@@ -191,22 +198,33 @@ public class EditMPXVideo {
     public void VerifyPubMPXVideoPlayerPresent() throws Exception {
     	
     	Reporter.log("Verify the 'Video Player' drop down list is present and has more than one option in the list.");
-    	Assert.assertTrue(new Select(PubMPXVideoPlayer_Ddl).getOptions().size() > 1);
+    	Assert.assertTrue(new Select(PubMPXVideoPlayerBase_Ddl).getOptions().size() > 1);
     	
     }
     
     public void VerifyPubMPXVideoPlayerSelectedOption(String selectedPlayerTitle) throws Exception {
     	
     	Reporter.log("Verify '" + selectedPlayerTitle + "' is selected as the 'Video Player'.");
-    	Assert.assertTrue(new Select(PubMPXVideoPlayer_Ddl).getFirstSelectedOption().
-    			getText().equals(selectedPlayerTitle));
+    	Assert.assertTrue(new Select(PubMPXVideoPlayerBase_Ddl).getFirstSelectedOption().
+    			getText().contains(selectedPlayerTitle));
     	
     }
     
     public void SelectPubMPXVideoPlayer(String playerTitle) throws Exception {
     	
     	Reporter.log("Select '" + playerTitle + "' from the 'Video Player' drop down list.");
-    	new Select(PubMPXVideoPlayer_Ddl).selectByVisibleText(playerTitle);
+    	if (playerTitle.contains("Default Player")) {
+    		Select ddl = new Select(PubMPXVideoPlayerBase_Ddl);
+    		for (WebElement option : ddl.getOptions()) {
+    			if (option.getText().contains("Default Player")) {
+    				option.click();
+    				break;
+    			}
+    		}
+    	}
+    	else {
+    		PubMPXVideoPlayer_Ddl(playerTitle).click();
+    	}
     	
     }
     
