@@ -16,11 +16,11 @@ import com.nbcuni.test.publisher.pageobjects.Structure.MPSBlocks;
 public class ImplementMPS extends ParentTest {
 	
     /*************************************************************************************
-     * TEST CASE 
-     * steps and rally tc soon to follow
+     * TEST CASE - TC2901
+     * Steps - https://rally1.rallydev.com/#/14663927728d/detail/testcase/18554111347
      *************************************************************************************/
     @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"})
-    public void ImplementMPS_Test() throws Exception {
+    public void ImplementMPS_TC2901() throws Exception {
         
         	//Step 1
         	UserLogin userLogin = applib.openApplication();
