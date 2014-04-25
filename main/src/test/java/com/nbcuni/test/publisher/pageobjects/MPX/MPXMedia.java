@@ -39,18 +39,22 @@ public class MPXMedia {
     @FindBy(how = How.XPATH, using = "//input[@value='Sync mpxMedia Now']")
     private WebElement SyncMPXMediaNow_Lnk;
     
-    @FindBy(how = How.XPATH, using = "(//select[contains(@id, 'edit-video-sync-settings')])[1]")
-    private WebElement SynchMPXMediaForAccount1_Ddl;
+    private WebElement SynchMPXMediaForAccount1_Ddl(String playerTitle) {
+    	return webDriver.findElement(By.xpath("(//select[contains(@id, 'edit-video-sync-settings')])[1]/optgroup/option[contains(text(), '" + playerTitle + "')]"));
+    }
     
-    @FindBy(how = How.XPATH, using = "(//select[contains(@id, 'edit-video-sync-settings')])[2]")
-    private WebElement SynchMPXMediaForAccount2_Ddl;
+    private WebElement SynchMPXMediaForAccount2_Ddl(String playerTitle) {
+    	return webDriver.findElement(By.xpath("(//select[contains(@id, 'edit-video-sync-settings')])[2]/optgroup/option[contains(text(), '" + playerTitle + "')]"));
+    }
     
-    @FindBy(how = How.XPATH, using = "(//select[contains(@id, 'edit-video-sync-settings')])[3]")
-    private WebElement SynchMPXMediaForAccount3_Ddl;
+    private WebElement SynchMPXMediaForAccount3_Ddl(String playerTitle) {
+    	return webDriver.findElement(By.xpath("(//select[contains(@id, 'edit-video-sync-settings')])[3]/optgroup/option[contains(text(), '" + playerTitle + "')]"));
+    }
     
-    @FindBy(how = How.XPATH, using = "(//select[contains(@id, 'edit-video-sync-settings')])[4]")
-    private WebElement SynchMPXMediaForAccount4_Ddl;
-
+    private WebElement SynchMPXMediaForAccount4_Ddl(String playerTitle) {
+    	return webDriver.findElement(By.xpath("(//select[contains(@id, 'edit-video-sync-settings')])[4]/optgroup/option[contains(text(), '" + playerTitle + "')]"));
+    }
+    
     private WebElement ImportAccount_Lbl(String label) {
     	return webDriver.findElement(By.xpath("//label[contains(@for, 'edit-video-sync-settings')][contains(text(), '" + label + "')]"));
     }
@@ -119,25 +123,26 @@ public class MPXMedia {
     public void SelectMPXPlayerForAccount1(String playerTitle) throws Exception {
     	
     	Reporter.log("Select '" + playerTitle + "' from the first 'Import Player' drop down list.");
-    	new Select(SynchMPXMediaForAccount1_Ddl).selectByVisibleText(playerTitle);
+    	SynchMPXMediaForAccount1_Ddl(playerTitle).click();
+    	
     }
     
     public void SelectMPXPlayerForAccount2(String playerTitle) throws Exception {
     	
     	Reporter.log("Select '" + playerTitle + "' from the second 'Import Player' drop down list.");
-    	new Select(SynchMPXMediaForAccount2_Ddl).selectByVisibleText(playerTitle);
+    	SynchMPXMediaForAccount2_Ddl(playerTitle).click();
     }
     
     public void SelectMPXPlayerForAccount3(String playerTitle) throws Exception {
     	
     	Reporter.log("Select '" + playerTitle + "' from the third 'Import Player' drop down list.");
-    	new Select(SynchMPXMediaForAccount3_Ddl).selectByVisibleText(playerTitle);
+    	SynchMPXMediaForAccount3_Ddl(playerTitle).click();
     }
 
     public void SelectMPXPlayerForAccount4(String playerTitle) throws Exception {
 
     	Reporter.log("Select '" + playerTitle + "' from the fourth 'Import Player' drop down list.");
-        new Select(SynchMPXMediaForAccount4_Ddl).selectByVisibleText(playerTitle);
+    	SynchMPXMediaForAccount4_Ddl(playerTitle).click();
     }
     
     public void ClickMPXPlayerUnpublishedHereLnk(String playerTitle) throws Exception {
