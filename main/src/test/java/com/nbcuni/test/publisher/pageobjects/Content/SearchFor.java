@@ -37,6 +37,9 @@ public class SearchFor {
     }
    
     //PAGE OBJECT IDENTIFIERS
+    @FindBy(how = How.ID, using = "edit-pid")
+    private WebElement PublicID_Txb;
+    
     @FindBy(how = How.XPATH, using = "//input[@id='edit-title']")
     private WebElement Title_Txb;
     
@@ -112,6 +115,10 @@ public class SearchFor {
     	return webDriver.findElements(By.xpath("//tbody//td[6]"));
     }
     
+    private WebElement PublicID_Txt(String playerTitle) {
+    	return webDriver.findElement(By.xpath("//a[text()='" + playerTitle + "']/../../td[2]"));
+    }
+    
     
     //PAGE OBJECT METHODS
     public void EnterTitle(String title) throws Exception {
@@ -119,6 +126,12 @@ public class SearchFor {
     	Reporter.log("Enter title " + title + ".");
     	Title_Txb.clear();
     	Title_Txb.sendKeys(title);
+    }
+    
+    public void EnterPublicID(String id) throws Exception {
+    	
+    	Reporter.log("Enter '" + id + "' in the 'Public ID' text box.");
+    	PublicID_Txb.sendKeys(id);
     }
     
     public void EnterUpdatedOnAfterDate(String date) throws Exception {
@@ -354,6 +367,13 @@ public class SearchFor {
     		Assert.assertTrue(el.getText().equals(status));
     	}
         webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
+    }
+    
+    public void VerifyMPXResultPublicID(String playerTitle, String publicID) throws Exception {
+
+    	Reporter.log("Verify that the 'PUBLIC ID' equals '" + publicID + "' for player titled '" + playerTitle + "'.");
+    	Assert.assertEquals(PublicID_Txt(playerTitle).getText(), publicID);
+    	//Assert.assertTrue(PublicID_Txt(playerTitle).getText().equals(publicID));
     }
     
     
