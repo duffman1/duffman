@@ -14,7 +14,6 @@ import com.nbcuni.test.publisher.pageobjects.Structure.FieldCollections;
 import com.nbcuni.test.publisher.pageobjects.Structure.ManageFields.Edit;
 import com.nbcuni.test.publisher.pageobjects.Structure.ManageFields.FieldSettings;
 import org.testng.Assert;
-import org.testng.Reporter;
 import org.testng.annotations.Test;
 
 public class EntityReferenceVerification extends ParentTest{
@@ -24,9 +23,7 @@ public class EntityReferenceVerification extends ParentTest{
      * Steps - https://rally1.rallydev.com/#/14663927728ud/detail/testcase/18169766623
      *************************************************************************************/
     @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "mpx"})
-    public void EntityReferenceVerification_Test() throws Exception{
-    	
-    	Reporter.log("Test associated with TC1886");
+    public void EntityReferenceVerification_TC1886() throws Exception{
     	
     	//Setup
     	UserLogin userLogin = applib.openApplication();
