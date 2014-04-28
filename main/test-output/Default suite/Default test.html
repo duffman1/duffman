@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sun Apr 27 09:10:16 EDT 2014</td>
+<td>Started on:</td><td>Mon Apr 28 09:00:18 EDT 2014</td>
 </tr>
-<tr><td>Total time:</td><td>19 seconds (19882 ms)</td>
+<tr><td>Total time:</td><td>367 seconds (367588 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,47 +75,107 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXLibraryPublicID.EnhanceMPXPlayerContentAdminScreen_TC2476()'><b>EnhanceMPXPlayerContentAdminScreen_TC2476</b><br>Test class: com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXLibraryPublicID<br/>
-<a href="#Output-987964686" onClick='toggleBox("Output-987964686", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.nbcuni.test.publisher.tests.Video.Configuration.ConfigurationMultipleMPXAccounts.ConfigurationMultipleMPXAccounts_TC1073()'><b>ConfigurationMultipleMPXAccounts_TC1073</b><br>Test class: com.nbcuni.test.publisher.tests.Video.Configuration.ConfigurationMultipleMPXAccounts<br/>
+<a href="#Output-160002686" onClick='toggleBox("Output-160002686", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-987964686" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-987964686">
-Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.<br/>
+<a href="#Output-160002686" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-160002686">
+Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.<br/>
 Enter the user's email address in the 'Email Address' text box.<br/>
 Enter the user's password in the 'Password' text box.<br/>
 Click the 'Login' button.<br/>
+Open the mpx data client at http://data.media.theplatform.com/media/client.<br/>
+Enter the Username in the 'Username' text box.<br/>
+Enter the Password in the 'Password' text box.<br/>
+Click the 'Sign In' button.<br/>
+Click the Account Picker button to display all mpx accounts.<br/>
+Store all the active mpx accounts to a list.<br/>
+Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.<br/>
 Mouse over the 'Configuration' menu link.<br/>
 Mouse over the 'Media' menu link.<br/>
 Click the 'Media: thePlatform mpx settings' menu link.<br/>
 Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.<br/>
 Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.<br/>
-Get all the selected import account options and store to a list.<br/>
+Click the 'Add Account' button.<br/>
+Enter mpx username in the 'Username for Account...' text box.<br/>
+Enter mpx password in the 'Password for Account...' text box.<br/>
+Click the 'Connect to MPX' button.<br/>
+Verify success message of 'Login successful' is present.<br/>
+Verify there are no errors present.<br/>
+Get the account options from the 'Select Import Account for Account...' drop down lists.<br/>
+Select 'DB TV' from the first 'Select Import Account for...' drop down list.<br/>
+click the 'Set Import Account' button.<br/>
+Verify success message of 'Setting import account "DB%20TV" for account' is present.<br/>
+Verify there are no errors present.<br/>
+Verify success message of 'Retrieving import account information for "DB%20TV".' is present.<br/>
+Verify there are no errors present.<br/>
+Verify the 'Select Import Account for...' drop down lists are disabled.<br/>
 Click the 'Close Overlay X'.<br/>
 Mouse over the 'Content' menu link.<br/>
 Mouse over the 'Files' menu link.<br/>
-Click the 'mpxPlayers' menu link.<br/>
+Click the 'mpxMedia' menu link.<br/>
 Switch to the active frame titled 'Content dialog'.<br/>
-Verify that the search result set column order matches as expected.<br/>
-Get the text of the first search result set item.<br/>
-Get the number of results in the result set.<br/>
-Enter title Auditude Demo player.<br/>
+Select 'Auditude Demo player' from the first 'Import Player' drop down list.<br/>
+Click the 'Sync MPX Media Now' link.<br/>
+Verify success message of 'Processed video import/update manually for all accounts.' is present.<br/>
+Verify there are no errors present.<br/>
+Click the 'Run Cron to complete import' link.<br/>
+Switch to the active frame titled 'Cron dialog'.<br/>
+Click the 'Run Cron' button.<br/>
+Verify success message of 'Cron run successfully.' is present.<br/>
+Verify there are no errors present.<br/>
+Click the 'Close Overlay X'.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Files' menu link.<br/>
+Click the 'mpxMedia' menu link.<br/>
+Switch to the active frame titled 'Content dialog'.<br/>
+Enter title Automation1.<br/>
 Click the 'Apply' button.<br/>
-Verify that the 'PUBLIC ID' equals 'C4Urwvl8rU61' for player titled 'Auditude Demo player'.<br/>
-Click the 'Reset' button.<br/>
-Click the Public ID column header link for column sorting.<br/>
-Get the text of the first search result set item.<br/>
-Get the number of results in the result set.<br/>
-Enter 'C4Urwvl8rU61' in the 'Public ID' text box.<br/>
+Get the title text of every result in the search result set.<br/>
+For each expected result, assert it is present in the result set.<br/>
+Mouse over the 'Configuration' menu link.<br/>
+Mouse over the 'Media' menu link.<br/>
+Click the 'Media: thePlatform mpx settings' menu link.<br/>
+Click the 'MPX Login' link.<br/>
+Wait for 'Update' button to be visible.<br/>
+Click the 'Add Account' button.<br/>
+Enter mpx username in the 'Username for Account...' text box.<br/>
+Enter mpx password in the 'Password for Account...' text box.<br/>
+Click the 'Update' button.<br/>
+Select 'NBCU TVE Stage - Golf Channel' from the second 'Select Import Account for...' drop down list.<br/>
+click the 'Set Import Account' button.<br/>
+Verify success message of 'Setting import account "NBCU%20TVE%20Stage%20-%20Golf%20Channel" for account' is present.<br/>
+Verify there are no errors present.<br/>
+Verify success message of 'Retrieving import account information for "NBCU%20TVE%20Stage%20-%20Golf%20Channel".' is present.<br/>
+Verify there are no errors present.<br/>
+Verify the 'Select Import Account for...' drop down lists are disabled.<br/>
+Click the 'Save configurations' button.<br/>
+Verify success message of 'The configuration options have been saved.' is present.<br/>
+Verify there are no errors present.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Files' menu link.<br/>
+Click the 'mpxMedia' menu link.<br/>
+Click the 'Sync MPX Media' link.<br/>
+Select 'Auditude Demo player' from the second 'Import Player' drop down list.<br/>
+Click the 'Sync MPX Media Now' link.<br/>
+Verify success message of 'Processed video import/update manually for all accounts.' is present.<br/>
+Verify there are no errors present.<br/>
+Click the 'Run Cron to complete import' link.<br/>
+Click the 'Run Cron' button.<br/>
+Verify success message of 'Cron run successfully.' is present.<br/>
+Verify there are no errors present.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Files' menu link.<br/>
+Click the 'mpxMedia' menu link.<br/>
+Enter title The Golf Fix 2/4.<br/>
 Click the 'Apply' button.<br/>
-Get the text of the first search result set item.<br/>
-Click the 'Reset' button.<br/>
-Get the text of the first search result set item.<br/>
-Get the number of results in the result set.<br/>
+Get the title text of every result in the search result set.<br/>
+For each expected result, assert it is present in the result set.<br/>
 </div>
 </td>
 <td></td>
-<td>16</td>
-<td>com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXLibraryPublicID@6d90d6c5</td></tr>
+<td>364</td>
+<td>com.nbcuni.test.publisher.tests.Video.Configuration.ConfigurationMultipleMPXAccounts@59d6f830</td></tr>
 </table><p>
 </body>
 </html>

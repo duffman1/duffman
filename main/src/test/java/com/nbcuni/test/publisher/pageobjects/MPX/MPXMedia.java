@@ -1,14 +1,18 @@
 package com.nbcuni.test.publisher.pageobjects.MPX;
 
 import com.nbcuni.test.publisher.common.Driver.Driver;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,11 +26,13 @@ import java.util.List;
 public class MPXMedia {
 
     private Driver webDriver;
+    private WebDriverWait wait;
     
     //PAGE OBJECT CONSTRUCTOR
     public MPXMedia(Driver webDriver) {
         this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
+        wait = new WebDriverWait(webDriver, 10);
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -123,26 +129,26 @@ public class MPXMedia {
     public void SelectMPXPlayerForAccount1(String playerTitle) throws Exception {
     	
     	Reporter.log("Select '" + playerTitle + "' from the first 'Import Player' drop down list.");
-    	SynchMPXMediaForAccount1_Ddl(playerTitle).click();
+    	wait.until(ExpectedConditions.visibilityOf(SynchMPXMediaForAccount1_Ddl(playerTitle))).click();
     	
     }
     
     public void SelectMPXPlayerForAccount2(String playerTitle) throws Exception {
     	
     	Reporter.log("Select '" + playerTitle + "' from the second 'Import Player' drop down list.");
-    	SynchMPXMediaForAccount2_Ddl(playerTitle).click();
+    	wait.until(ExpectedConditions.visibilityOf(SynchMPXMediaForAccount2_Ddl(playerTitle))).click();
     }
     
     public void SelectMPXPlayerForAccount3(String playerTitle) throws Exception {
     	
     	Reporter.log("Select '" + playerTitle + "' from the third 'Import Player' drop down list.");
-    	SynchMPXMediaForAccount3_Ddl(playerTitle).click();
+    	wait.until(ExpectedConditions.visibilityOf(SynchMPXMediaForAccount3_Ddl(playerTitle))).click();
     }
 
     public void SelectMPXPlayerForAccount4(String playerTitle) throws Exception {
 
     	Reporter.log("Select '" + playerTitle + "' from the fourth 'Import Player' drop down list.");
-    	SynchMPXMediaForAccount4_Ddl(playerTitle).click();
+    	wait.until(ExpectedConditions.visibilityOf(SynchMPXMediaForAccount4_Ddl(playerTitle))).click();
     }
     
     public void ClickMPXPlayerUnpublishedHereLnk(String playerTitle) throws Exception {

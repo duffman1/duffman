@@ -38,8 +38,6 @@ public class ImplementMPS extends ParentTest {
             modules.DisableModule("DART");
             modules.EnterFilterName("Doubleclick for Publishers");
             modules.DisableModule("Doubleclick for Publishers");
-            //modules.EnterFilterName("Overlay");
-            //modules.DisableModule("Overlay");
             overlay.ClickCloseOverlayLnk();
             
             //Step 3
@@ -72,7 +70,7 @@ public class ImplementMPS extends ParentTest {
             overlay.switchToDefaultContent();
             contentParent.VerifyMessageStatus("Movie " + movieTitle + " has been created.");
             
-            //Step 5 and 6
+            //Step 5 and 6 TODO - this script isn't correct, get correct script from dev as time allows
             //contentParent.VerifySourceInPage(Arrays.asList("var mps = mps || {}; mps.pagevars{\"site\":\"update\",\"title\":\"" + movieTitle + "", "{\"genre\":\"Action\",\"movie-rating\":\"G\",\"movie-types\":\"Syndicated\"},\"field\":[]}"));
             
             //Step 7

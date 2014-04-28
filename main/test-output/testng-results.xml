@@ -2,7 +2,7 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
     <line>
-      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
+      <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]>
     </line>
     <line>
       <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
@@ -12,6 +12,27 @@
     </line>
     <line>
       <![CDATA[Click the 'Login' button.]]>
+    </line>
+    <line>
+      <![CDATA[Open the mpx data client at http://data.media.theplatform.com/media/client.]]>
+    </line>
+    <line>
+      <![CDATA[Enter the Username in the 'Username' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter the Password in the 'Password' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Sign In' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the Account Picker button to display all mpx accounts.]]>
+    </line>
+    <line>
+      <![CDATA[Store all the active mpx accounts to a list.]]>
+    </line>
+    <line>
+      <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]>
     </line>
     <line>
       <![CDATA[Mouse over the 'Configuration' menu link.]]>
@@ -29,7 +50,46 @@
       <![CDATA[Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.]]>
     </line>
     <line>
-      <![CDATA[Get all the selected import account options and store to a list.]]>
+      <![CDATA[Click the 'Add Account' button.]]>
+    </line>
+    <line>
+      <![CDATA[Enter mpx username in the 'Username for Account...' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter mpx password in the 'Password for Account...' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Connect to MPX' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Login successful' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify there are no errors present.]]>
+    </line>
+    <line>
+      <![CDATA[Get the account options from the 'Select Import Account for Account...' drop down lists.]]>
+    </line>
+    <line>
+      <![CDATA[Select 'DB TV' from the first 'Select Import Account for...' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[click the 'Set Import Account' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Setting import account "DB%20TV" for account' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify there are no errors present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Retrieving import account information for "DB%20TV".' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify there are no errors present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Select Import Account for...' drop down lists are disabled.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
@@ -41,83 +101,206 @@
       <![CDATA[Mouse over the 'Files' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'mpxPlayers' menu link.]]>
+      <![CDATA[Click the 'mpxMedia' menu link.]]>
     </line>
     <line>
       <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
     </line>
     <line>
-      <![CDATA[Verify that the search result set column order matches as expected.]]>
+      <![CDATA[Select 'Auditude Demo player' from the first 'Import Player' drop down list.]]>
     </line>
     <line>
-      <![CDATA[Get the text of the first search result set item.]]>
+      <![CDATA[Click the 'Sync MPX Media Now' link.]]>
     </line>
     <line>
-      <![CDATA[Get the number of results in the result set.]]>
+      <![CDATA[Verify success message of 'Processed video import/update manually for all accounts.' is present.]]>
     </line>
     <line>
-      <![CDATA[Enter title Auditude Demo player.]]>
+      <![CDATA[Verify there are no errors present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Run Cron to complete import' link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Cron dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Run Cron' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Cron run successfully.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify there are no errors present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Files' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'mpxMedia' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter title Automation1.]]>
     </line>
     <line>
       <![CDATA[Click the 'Apply' button.]]>
     </line>
     <line>
-      <![CDATA[Verify that the 'PUBLIC ID' equals 'C4Urwvl8rU61' for player titled 'Auditude Demo player'.]]>
+      <![CDATA[Get the title text of every result in the search result set.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Reset' button.]]>
+      <![CDATA[For each expected result, assert it is present in the result set.]]>
     </line>
     <line>
-      <![CDATA[Click the Public ID column header link for column sorting.]]>
+      <![CDATA[Mouse over the 'Configuration' menu link.]]>
     </line>
     <line>
-      <![CDATA[Get the text of the first search result set item.]]>
+      <![CDATA[Mouse over the 'Media' menu link.]]>
     </line>
     <line>
-      <![CDATA[Get the number of results in the result set.]]>
+      <![CDATA[Click the 'Media: thePlatform mpx settings' menu link.]]>
     </line>
     <line>
-      <![CDATA[Enter 'C4Urwvl8rU61' in the 'Public ID' text box.]]>
+      <![CDATA[Click the 'MPX Login' link.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for 'Update' button to be visible.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Add Account' button.]]>
+    </line>
+    <line>
+      <![CDATA[Enter mpx username in the 'Username for Account...' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter mpx password in the 'Password for Account...' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Update' button.]]>
+    </line>
+    <line>
+      <![CDATA[Select 'NBCU TVE Stage - Golf Channel' from the second 'Select Import Account for...' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[click the 'Set Import Account' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Setting import account "NBCU%20TVE%20Stage%20-%20Golf%20Channel" for account' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify there are no errors present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Retrieving import account information for "NBCU%20TVE%20Stage%20-%20Golf%20Channel".' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify there are no errors present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Select Import Account for...' drop down lists are disabled.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configurations' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify there are no errors present.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Files' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'mpxMedia' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Sync MPX Media' link.]]>
+    </line>
+    <line>
+      <![CDATA[Select 'Auditude Demo player' from the second 'Import Player' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Sync MPX Media Now' link.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Processed video import/update manually for all accounts.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify there are no errors present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Run Cron to complete import' link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Run Cron' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Cron run successfully.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify there are no errors present.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Files' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'mpxMedia' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Enter title The Golf Fix 2/4.]]>
     </line>
     <line>
       <![CDATA[Click the 'Apply' button.]]>
     </line>
     <line>
-      <![CDATA[Get the text of the first search result set item.]]>
+      <![CDATA[Get the title text of every result in the search result set.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Reset' button.]]>
-    </line>
-    <line>
-      <![CDATA[Get the text of the first search result set item.]]>
-    </line>
-    <line>
-      <![CDATA[Get the number of results in the result set.]]>
+      <![CDATA[For each expected result, assert it is present in the result set.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="19882" started-at="2014-04-27T13:10:16Z" finished-at="2014-04-27T13:10:36Z">
+  <suite name="Default suite" duration-ms="367588" started-at="2014-04-28T13:00:18Z" finished-at="2014-04-28T13:06:26Z">
     <groups>
       <group name="mpx">
-        <method signature="EnhanceMPXLibraryPublicID.EnhanceMPXPlayerContentAdminScreen_TC2476()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXLibraryPublicID@6d90d6c5]" name="EnhanceMPXPlayerContentAdminScreen_TC2476" class="com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXLibraryPublicID"/>
+        <method signature="ConfigurationMultipleMPXAccounts.ConfigurationMultipleMPXAccounts_TC1073()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.Configuration.ConfigurationMultipleMPXAccounts@59d6f830]" name="ConfigurationMultipleMPXAccounts_TC1073" class="com.nbcuni.test.publisher.tests.Video.Configuration.ConfigurationMultipleMPXAccounts"/>
       </group> <!-- mpx -->
       <group name="full">
-        <method signature="EnhanceMPXLibraryPublicID.EnhanceMPXPlayerContentAdminScreen_TC2476()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXLibraryPublicID@6d90d6c5]" name="EnhanceMPXPlayerContentAdminScreen_TC2476" class="com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXLibraryPublicID"/>
+        <method signature="ConfigurationMultipleMPXAccounts.ConfigurationMultipleMPXAccounts_TC1073()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.Configuration.ConfigurationMultipleMPXAccounts@59d6f830]" name="ConfigurationMultipleMPXAccounts_TC1073" class="com.nbcuni.test.publisher.tests.Video.Configuration.ConfigurationMultipleMPXAccounts"/>
       </group> <!-- full -->
+      <group name="smoke">
+        <method signature="ConfigurationMultipleMPXAccounts.ConfigurationMultipleMPXAccounts_TC1073()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.Configuration.ConfigurationMultipleMPXAccounts@59d6f830]" name="ConfigurationMultipleMPXAccounts_TC1073" class="com.nbcuni.test.publisher.tests.Video.Configuration.ConfigurationMultipleMPXAccounts"/>
+      </group> <!-- smoke -->
     </groups>
-    <test name="Default test" duration-ms="19882" started-at="2014-04-27T13:10:16Z" finished-at="2014-04-27T13:10:36Z">
-      <class name="com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXLibraryPublicID">
-        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXLibraryPublicID@6d90d6c5]" name="startGridAndHub" is-config="true" duration-ms="11133" started-at="2014-04-27T09:10:05Z" finished-at="2014-04-27T09:10:16Z">
+    <test name="Default test" duration-ms="367588" started-at="2014-04-28T13:00:18Z" finished-at="2014-04-28T13:06:26Z">
+      <class name="com.nbcuni.test.publisher.tests.Video.Configuration.ConfigurationMultipleMPXAccounts">
+        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.Configuration.ConfigurationMultipleMPXAccounts@59d6f830]" name="startGridAndHub" is-config="true" duration-ms="11718" started-at="2014-04-28T09:00:06Z" finished-at="2014-04-28T09:00:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startGridAndHub -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXLibraryPublicID@6d90d6c5]" name="startSelenium" is-config="true" duration-ms="2398" started-at="2014-04-27T09:10:17Z" finished-at="2014-04-27T09:10:19Z">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.Configuration.ConfigurationMultipleMPXAccounts@59d6f830]" name="startSelenium" is-config="true" duration-ms="2432" started-at="2014-04-28T09:00:18Z" finished-at="2014-04-28T09:00:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="EnhanceMPXPlayerContentAdminScreen_TC2476()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXLibraryPublicID@6d90d6c5]" name="EnhanceMPXPlayerContentAdminScreen_TC2476" duration-ms="16903" started-at="2014-04-27T09:10:19Z" finished-at="2014-04-27T09:10:36Z">
+        <test-method status="PASS" signature="ConfigurationMultipleMPXAccounts_TC1073()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.Configuration.ConfigurationMultipleMPXAccounts@59d6f830]" name="ConfigurationMultipleMPXAccounts_TC1073" duration-ms="364568" started-at="2014-04-28T09:00:21Z" finished-at="2014-04-28T09:06:25Z">
           <reporter-output>
             <line>
-              <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
+              <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]>
             </line>
             <line>
               <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
@@ -127,6 +310,27 @@
             </line>
             <line>
               <![CDATA[Click the 'Login' button.]]>
+            </line>
+            <line>
+              <![CDATA[Open the mpx data client at http://data.media.theplatform.com/media/client.]]>
+            </line>
+            <line>
+              <![CDATA[Enter the Username in the 'Username' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter the Password in the 'Password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Sign In' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the Account Picker button to display all mpx accounts.]]>
+            </line>
+            <line>
+              <![CDATA[Store all the active mpx accounts to a list.]]>
+            </line>
+            <line>
+              <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]>
             </line>
             <line>
               <![CDATA[Mouse over the 'Configuration' menu link.]]>
@@ -144,7 +348,46 @@
               <![CDATA[Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.]]>
             </line>
             <line>
-              <![CDATA[Get all the selected import account options and store to a list.]]>
+              <![CDATA[Click the 'Add Account' button.]]>
+            </line>
+            <line>
+              <![CDATA[Enter mpx username in the 'Username for Account...' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter mpx password in the 'Password for Account...' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Connect to MPX' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Login successful' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify there are no errors present.]]>
+            </line>
+            <line>
+              <![CDATA[Get the account options from the 'Select Import Account for Account...' drop down lists.]]>
+            </line>
+            <line>
+              <![CDATA[Select 'DB TV' from the first 'Select Import Account for...' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[click the 'Set Import Account' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Setting import account "DB%20TV" for account' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify there are no errors present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Retrieving import account information for "DB%20TV".' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify there are no errors present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Select Import Account for...' drop down lists are disabled.]]>
             </line>
             <line>
               <![CDATA[Click the 'Close Overlay X'.]]>
@@ -156,77 +399,197 @@
               <![CDATA[Mouse over the 'Files' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'mpxPlayers' menu link.]]>
+              <![CDATA[Click the 'mpxMedia' menu link.]]>
             </line>
             <line>
               <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
             </line>
             <line>
-              <![CDATA[Verify that the search result set column order matches as expected.]]>
+              <![CDATA[Select 'Auditude Demo player' from the first 'Import Player' drop down list.]]>
             </line>
             <line>
-              <![CDATA[Get the text of the first search result set item.]]>
+              <![CDATA[Click the 'Sync MPX Media Now' link.]]>
             </line>
             <line>
-              <![CDATA[Get the number of results in the result set.]]>
+              <![CDATA[Verify success message of 'Processed video import/update manually for all accounts.' is present.]]>
             </line>
             <line>
-              <![CDATA[Enter title Auditude Demo player.]]>
+              <![CDATA[Verify there are no errors present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Run Cron to complete import' link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Cron dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Run Cron' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Cron run successfully.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify there are no errors present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Files' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'mpxMedia' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter title Automation1.]]>
             </line>
             <line>
               <![CDATA[Click the 'Apply' button.]]>
             </line>
             <line>
-              <![CDATA[Verify that the 'PUBLIC ID' equals 'C4Urwvl8rU61' for player titled 'Auditude Demo player'.]]>
+              <![CDATA[Get the title text of every result in the search result set.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Reset' button.]]>
+              <![CDATA[For each expected result, assert it is present in the result set.]]>
             </line>
             <line>
-              <![CDATA[Click the Public ID column header link for column sorting.]]>
+              <![CDATA[Mouse over the 'Configuration' menu link.]]>
             </line>
             <line>
-              <![CDATA[Get the text of the first search result set item.]]>
+              <![CDATA[Mouse over the 'Media' menu link.]]>
             </line>
             <line>
-              <![CDATA[Get the number of results in the result set.]]>
+              <![CDATA[Click the 'Media: thePlatform mpx settings' menu link.]]>
             </line>
             <line>
-              <![CDATA[Enter 'C4Urwvl8rU61' in the 'Public ID' text box.]]>
+              <![CDATA[Click the 'MPX Login' link.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for 'Update' button to be visible.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Add Account' button.]]>
+            </line>
+            <line>
+              <![CDATA[Enter mpx username in the 'Username for Account...' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter mpx password in the 'Password for Account...' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Update' button.]]>
+            </line>
+            <line>
+              <![CDATA[Select 'NBCU TVE Stage - Golf Channel' from the second 'Select Import Account for...' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[click the 'Set Import Account' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Setting import account "NBCU%20TVE%20Stage%20-%20Golf%20Channel" for account' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify there are no errors present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Retrieving import account information for "NBCU%20TVE%20Stage%20-%20Golf%20Channel".' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify there are no errors present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Select Import Account for...' drop down lists are disabled.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configurations' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify there are no errors present.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Files' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'mpxMedia' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Sync MPX Media' link.]]>
+            </line>
+            <line>
+              <![CDATA[Select 'Auditude Demo player' from the second 'Import Player' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Sync MPX Media Now' link.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Processed video import/update manually for all accounts.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify there are no errors present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Run Cron to complete import' link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Run Cron' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Cron run successfully.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify there are no errors present.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Files' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'mpxMedia' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Enter title The Golf Fix 2/4.]]>
             </line>
             <line>
               <![CDATA[Click the 'Apply' button.]]>
             </line>
             <line>
-              <![CDATA[Get the text of the first search result set item.]]>
+              <![CDATA[Get the title text of every result in the search result set.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Reset' button.]]>
-            </line>
-            <line>
-              <![CDATA[Get the text of the first search result set item.]]>
-            </line>
-            <line>
-              <![CDATA[Get the number of results in the result set.]]>
+              <![CDATA[For each expected result, assert it is present in the result set.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- EnhanceMPXPlayerContentAdminScreen_TC2476 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXLibraryPublicID@6d90d6c5]" name="stopSelenium" is-config="true" duration-ms="568" started-at="2014-04-27T09:10:36Z" finished-at="2014-04-27T09:10:36Z">
+        </test-method> <!-- ConfigurationMultipleMPXAccounts_TC1073 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Video.Configuration.ConfigurationMultipleMPXAccounts@59d6f830]" name="stopSelenium" is-config="true" duration-ms="574" started-at="2014-04-28T09:06:25Z" finished-at="2014-04-28T09:06:26Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=EnhanceMPXPlayerContentAdminScreen_TC2476 status=SUCCESS method=EnhanceMPXLibraryPublicID.EnhanceMPXPlayerContentAdminScreen_TC2476()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXLibraryPublicID@6d90d6c5] output=Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]]>
+                <![CDATA[[TestResult name=ConfigurationMultipleMPXAccounts_TC1073 status=SUCCESS method=ConfigurationMultipleMPXAccounts.ConfigurationMultipleMPXAccounts_TC1073()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.Configuration.ConfigurationMultipleMPXAccounts@59d6f830] output=Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXLibraryPublicID@6d90d6c5]" name="stopGridAndHub" is-config="true" duration-ms="371" started-at="2014-04-27T09:10:36Z" finished-at="2014-04-27T09:10:37Z">
+        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.Configuration.ConfigurationMultipleMPXAccounts@59d6f830]" name="stopGridAndHub" is-config="true" duration-ms="402" started-at="2014-04-28T09:06:26Z" finished-at="2014-04-28T09:06:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopGridAndHub -->
-      </class> <!-- com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXLibraryPublicID -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Video.Configuration.ConfigurationMultipleMPXAccounts -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
