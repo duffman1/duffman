@@ -17,11 +17,11 @@ import com.nbcuni.test.publisher.pageobjects.Structure.PublisherAdsSideFiles;
 public class AdFoldersRichMediaAds extends ParentTest {
 	
     /*************************************************************************************
-     * TEST CASE 
+     * TEST CASE - TC1160
      * Steps - https://rally1.rallydev.com/#/14663927728/detail/testcase/17540213680 
      *************************************************************************************/
-    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "smoke"})
-    public void AdFoldersRichMediaAds_Test() throws Exception{
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"})
+    public void AdFoldersRichMediaAds_TC1160() throws Exception{
         
     	//Step 1
         UserLogin userLogin = applib.openApplication();
