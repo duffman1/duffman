@@ -103,7 +103,7 @@ public class MPXAddMedia {
     	
     	Reporter.log("Enter '" + mediaTitle + "' in the 'Title' text box.");
     	mpxAssets.ScrollDownForImgPresent(getImagePath() + "Media/Title_Txb.png");
-    	Pattern pattern = new Pattern(getImagePath() + "Media/Title_Txb.png").targetOffset(0, 15);
+    	Pattern pattern = new Pattern(getImagePath() + "Media/Title_Txb.png").targetOffset(5, 15);
     	Region region = sikuli.exists(pattern, 1);
     	sikuli.click(region, 1);
     	mpxAssets.ClearInput();

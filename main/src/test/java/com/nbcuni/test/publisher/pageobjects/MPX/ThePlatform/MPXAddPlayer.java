@@ -57,8 +57,8 @@ public class MPXAddPlayer {
     	
     	Reporter.log("Enter '" + playerTitle + "' in the 'Title' text box.");
     	Thread.sleep(3000); //TODO - bad but necessary pause
-    	mpxAssets.WaitForImgPresent(getImagePath() + "Media/Title_Txb.png");
-    	Pattern pattern = new Pattern(getImagePath() + "Media/Title_Txb.png").targetOffset(0, 15);
+    	mpxAssets.WaitForImgPresent(getImagePath() + "Players/PlayerTitle_Txb.png");
+    	Pattern pattern = new Pattern(getImagePath() + "Players/PlayerTitle_Txb.png").targetOffset(0, 30);
     	Region region = sikuli.exists(pattern, 1);
     	sikuli.click(region, 1);
     	mpxAssets.ClearInput();
@@ -76,8 +76,8 @@ public class MPXAddPlayer {
     public void GiveFocusToPlayerItem() throws Exception {
     	
     	Reporter.log("Click the 'Player Title' label to give focus to the player item.");
-    	mpxAssets.WaitForImgPresent(getImagePath() + "Media/Title_Txb.png");
-    	sikuli.click(getImagePath() + "Media/Title_Txb.png");
+    	mpxAssets.WaitForImgPresent(getImagePath() + "Players/PlayerTitle_Txb.png");
+    	sikuli.click(getImagePath() + "Players/PlayerTitle_Txb.png");
     	
     }
     

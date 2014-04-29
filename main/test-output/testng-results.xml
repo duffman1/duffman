@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="2" total="6" passed="4">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
     <line>
-      <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]>
+      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
     </line>
     <line>
       <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
@@ -14,659 +14,311 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Modules' menu link.]]>
+      <![CDATA[Mouse over the 'Configuration' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to frame titled 'Modules'.]]>
+      <![CDATA[Mouse over the 'Media' menu link.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Sticky Edit Actions' in the 'Filter Name' text box.]]>
+      <![CDATA[Click the 'Media: thePlatform mpx settings' menu link.]]>
     </line>
     <line>
-      <![CDATA[Wait for the module titled 'Sticky Edit Actions' to appear in the list.]]>
+      <![CDATA[Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Devel' in the 'Filter Name' text box.]]>
+      <![CDATA[Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.]]>
     </line>
     <line>
-      <![CDATA[Wait for the module titled 'Devel' to appear in the list.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'File Lock' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the module titled 'File Lock' to appear in the list.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'ImageField Focus' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the module titled 'ImageField Focus' to appear in the list.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Database logging' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the module titled 'Database logging' to appear in the list.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Pub Post' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the module titled 'Pub Post' to appear in the list.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Pub Post' check box is checked.]]>
+      <![CDATA[Get all the selected import account options and store to a list.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the user's password in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Login' button.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the user's password in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Login' button.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the user's password in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Login' button.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the user's password in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Login' button.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Add content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Post' menu link.]]>
     </line>
     <line>
       <![CDATA[Mouse over the 'Structure' menu link.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Content types' menu link.]]>
+      <![CDATA[Mouse over the 'File types' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Modules' menu link.]]>
+      <![CDATA[Click the 'MPX Video for Account "DB TV" (2312945284)' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Add content type' menu link.]]>
+      <![CDATA[Switch to the active frame titled 'MPX Video for Account &quot;DB TV&quot; (2312945284) dialog'.]]>
     </line>
     <line>
-      <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCharacterProfile_Test.png ]]>
+      <![CDATA[Open the mpx platform.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+      <![CDATA[Enter 'mpx/AdminPub7QA' in the 'Username' text box.]]>
     </line>
     <line>
-      <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCharacterProfile_Test.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCharacterProfile_Test.png' height='500' width='500'/> </a>]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'dfb9b1205e5e49d' in the 'Title' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the Synopsis frame.]]>
-    </line>
-    <line>
-      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Cover' select button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Content types dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'e44eff7f9f' in the 'Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the select file frame.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the file path for file upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Upload' button.]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Pub Ads' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the module titled 'Pub Ads' to appear in the list.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Pub Ads' check box is checked.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'MPS' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the module titled 'MPS' to appear in the list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'MPS' check box is checked.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'DART' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the module titled 'DART' to appear in the list.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Doubleclick for Publishers' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the module titled 'Doubleclick for Publishers' to appear in the list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Reports' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Status report' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the user's password in the 'Password' text box.]]>
+      <![CDATA[Enter 'Pa55word' in the 'Password' text box.]]>
     </line>
     <line>
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'The content type e44eff7f9f has been added.' is present.]]>
+      <![CDATA[Click the 'Upload' button.]]>
     </line>
     <line>
-      <![CDATA[Verify there are no errors present.]]>
+      <![CDATA[Click the 'Choose Files' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Movies' button in the OS Upload dialog.]]>
+    </line>
+    <line>
+      <![CDATA[Click the Test Movie in th OS Upload dialog.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Open' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Upload' button in the Upload dialog.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Available Date' label on the right hand side to give focus to the media item.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '4/09/2014 12:00 AM' in the 'Available Date' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Automation6a53c9d8e5' in the 'Title' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '4/22/2014 12:00 AM' in the 'Expiration Date' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Publish' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Publish to Pub 7 Primary' check box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Publish' button from the upload dialog.]]>
+    </line>
+    <line>
+      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
     </line>
     <line>
       <![CDATA[Switch to the active frame titled 'Status report dialog'.]]>
     </line>
     <line>
-      <![CDATA[Verify the content type table contains the text 'e44eff7f9f'.]]>
-    </line>
-    <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'Ad Tag Style' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'MPS' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the file image 'HanSolo' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCharacterProfile_Test.png ]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Structure' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCharacterProfile_Test.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCharacterProfile_Test.png' height='500' width='500'/> </a>]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Content types' menu link.]]>
     </line>
     <line>
       <![CDATA[Mouse over the 'Content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'e44eff7f9f' menu link.]]>
+      <![CDATA[Mouse over the 'Files' menu link.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Add content' menu link.]]>
+      <![CDATA[Click the 'mpxMedia' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
     </line>
     <line>
-      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+      <![CDATA[Enter title Automation6a53c9d8e5.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Publishing Options' link.]]>
+      <![CDATA[Click the 'Apply' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Manage fields' menu link.]]>
+      <![CDATA[Get the text of the first search result set item.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Movie' menu link.]]>
+      <![CDATA[Get the title text of every result in the search result set.]]>
     </line>
     <line>
-      <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
+      <![CDATA[For each expected result, assert it is present in the result set.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save' button.]]>
+      <![CDATA[Verify the text '04/09/2014 - 04:00 AM' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'e44eff7f9f dialog'.]]>
+      <![CDATA[Verify the text '04/22/2014 - 04:00 AM' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Enter '8d28104fce06484' in the 'Add new field' text box.]]>
+      <![CDATA[Verify the text 'Expired' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'Post dfb9b1205e5e49d has been created.' is present.]]>
+      <![CDATA[Click the first search title link in the search result set.]]>
     </line>
     <line>
-      <![CDATA[Select 'Image' from the 'Field Type' drop down list.]]>
+      <![CDATA[Verify the text 'Automation6a53c9d8e5' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Verify there are no errors present.]]>
+      <![CDATA[Verify the text 'Wednesday, April 9, 2014 - 04:00' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save' button.]]>
+      <![CDATA[Verify the text 'Tuesday, April 22, 2014 - 04:00' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Content' menu link.]]>
+      <![CDATA[Click the 'Edit' link in the work bench.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'Edit mpx_video_4 Automation6a53c9d8e5 dialog'.]]>
     </line>
     <line>
-      <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
+      <![CDATA[Verify the value of the 'Available Date' text box equals '04/09/2014'.]]>
     </line>
     <line>
-      <![CDATA[Enter '5037b21f05e340c' in the 'Title' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Queues' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the Synopsis frame.]]>
-    </line>
-    <line>
-      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Add Promo Queue' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Updated field 8d28104fce06484 field settings.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify there are no errors present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Cover' select button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Add promo queue queue dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '209f1166edf049e' in the 'Title' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'dfb9b1205e5e49d' in the queue item text box indexed '1'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'dfb9b1205e5e49d' from the auto complete option list.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the select file frame.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the file path for file upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Upload' button.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Saved 8d28104fce06484 configuration.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify there are no errors present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '396a4d1a43' in the 'Log message for this state change' text area.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save Queue' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Add content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the file image 'HanSolo' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'e44eff7f9f' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Queues Listing dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the queue titled '209f1166edf049e' is present in the Queues list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Expand' arrow to extend the edit menu for queue titled '209f1166edf049e'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Edit' button for queue titled + '209f1166edf049e'.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Additional Information' link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Edit 209f1166edf049e dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Create New Revision' checkbox is checked.]]>
+      <![CDATA[Verify the value of the 'Expiration Date' text box equals '04/22/2014'.]]>
     </line>
     <line>
       <![CDATA[Click the 'Schedule' tab.]]>
     </line>
     <line>
-      <![CDATA[Select the 'Syndicated' from the 'Movie Type' drop down list.]]>
+      <![CDATA[Switch to the active frame titled 'Automation6a53c9d8e5 dialog'.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Create e44eff7f9f dialog'.]]>
+      <![CDATA[Verify the scheduled revision table is empty.]]>
     </line>
     <line>
-      <![CDATA[Select the 'G' from the 'Rating' drop down list.]]>
+      <![CDATA[Open the mpx platform.]]>
     </line>
     <line>
-      <![CDATA[Verify the Field 'Save' button is present.]]>
+      <![CDATA[Enter 'Automation6a53c9d8e5' in the 'Search' text box.]]>
     </line>
     <line>
-      <![CDATA[Enter '2a9d31b9ea3c495' in the 'Title' text box.]]>
+      <![CDATA[Click the 'Search by Title' link.]]>
     </line>
     <line>
-      <![CDATA[Select the 'Action' from the 'Primary Genre' drop down list.]]>
+      <![CDATA[Click the 'Available Date' label on the right hand side to give focus to the media item.]]>
     </line>
     <line>
-      <![CDATA[Switch to the Synopsis frame.]]>
+      <![CDATA[Enter '4/29/2014 12:00 AM' in the 'Available Date' text box.]]>
     </line>
     <line>
-      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled '209f1166edf049e dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Add Scheduled Revision' link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled '209f1166edf049e dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Select revision titled '209f1166edf049e'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Movie 5037b21f05e340c has been created.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Select 'Moderate to Publish' from the 'Select operation' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Verify there are no errors present.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '05/09/2014' in the 'Date' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create e44eff7f9f dialog'.]]>
+      <![CDATA[Enter '4/29/2015 12:00 AM' in the 'Expiration Date' text box.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Enter '05:00 PM' in the 'Time' text box.]]>
+      <![CDATA[Click the 'Additional Options' arrow.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Schedule' button.]]>
+      <![CDATA[Click the 'Publish Update' link.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'e44eff7f9f 2a9d31b9ea3c495 has been created.' is present.]]>
+      <![CDATA[Click the 'Publish to Pub 7 Primary' check box.]]>
     </line>
     <line>
-      <![CDATA[Verify there are no errors present.]]>
+      <![CDATA[Click the 'Update' button.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled '209f1166edf049e dialog'.]]>
+      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'The scheduled revision operation has been saved.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify there are no errors present.]]>
+      <![CDATA[Switch to the active frame titled 'Status report dialog'.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Structure' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'MPS Blocks' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Add' menu link.]]>
     </line>
     <line>
       <![CDATA[Mouse over the 'Content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Queues' menu link.]]>
+      <![CDATA[Mouse over the 'Files' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Add a new MPS block dialog'.]]>
+      <![CDATA[Click the 'mpxMedia' menu link.]]>
     </line>
     <line>
-      <![CDATA[Enter '925ede9f1ed542e' in the 'Unique Name' text box.]]>
+      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
     </line>
     <line>
-      <![CDATA[Enter '248448602c0342b' in the 'Block Name' text box.]]>
+      <![CDATA[Enter title Automation6a53c9d8e5.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save' button.]]>
+      <![CDATA[Click the 'Apply' button.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of '925ede9f1ed542e has been created.' is present.]]>
+      <![CDATA[Get the title text of every result in the search result set.]]>
     </line>
     <line>
-      <![CDATA[Verify there are no errors present.]]>
+      <![CDATA[For each expected result, assert it is present in the result set.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
+      <![CDATA[Verify the text '04/29/2014 - 04:00 AM' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Queues Listing dialog'.]]>
+      <![CDATA[Verify the text '04/29/2015 - 04:00 AM' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Expand' arrow to extend the edit menu for queue titled '209f1166edf049e'.]]>
+      <![CDATA[Verify the text 'Published' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Edit' button for queue titled + '209f1166edf049e'.]]>
+      <![CDATA[Click the first search title link in the search result set.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Structure' menu link.]]>
+      <![CDATA[Verify the text 'Automation6a53c9d8e5' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Edit 209f1166edf049e dialog'.]]>
+      <![CDATA[Verify the text 'Tuesday, April 29, 2014 - 04:00' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'Wednesday, April 29, 2015 - 04:00' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Edit' link in the work bench.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Edit mpx_video_4 Automation6a53c9d8e5 dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the value of the 'Available Date' text box equals '04/29/2014'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the value of the 'Expiration Date' text box equals '04/29/2015'.]]>
     </line>
     <line>
       <![CDATA[Click the 'Schedule' tab.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Blocks' menu link.]]>
+      <![CDATA[Switch to the active frame titled 'Automation6a53c9d8e5 dialog'.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled '209f1166edf049e dialog'.]]>
+      <![CDATA[Verify the 'Run now' link is present for content item 'Automation6a53c9d8e5' with action 'Unpublish'.]]>
     </line>
     <line>
-      <![CDATA[Verify the scheduled text '209f1166edf049e' is present in the scheduled queue.]]>
+      <![CDATA[Verify the text 'Automation6a53c9d8e5' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Verify the scheduled text 'Moderate to Publish' is present in the scheduled queue.]]>
+      <![CDATA[Verify the text 'Unpublish' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Verify the scheduled text '05/09/2014 - 05:00 PM' is present in the scheduled queue.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Select the block name '248448602c0342b' from the 'Header' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save Blocks' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The block settings have been updated.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify there are no errors present.]]>
-    </line>
-    <line>
-      <![CDATA[Select the block name '248448602c0342b' from the '- None -' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save Blocks' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
+      <![CDATA[Verify the text '04/29/2015 - 04:00' is present on the page.]]>
     </line>
   </reporter-output>
-  <suite name="Pub 7 Concurrent Suite" duration-ms="54337" started-at="2014-04-29T12:52:07Z" finished-at="2014-04-29T12:53:01Z">
+  <suite name="Default suite" duration-ms="242120" started-at="2014-04-29T15:49:29Z" finished-at="2014-04-29T15:53:31Z">
     <groups>
+      <group name="mpx">
+        <method signature="MPXVideosSchedulingVerificationScheduling.MPXVideosSchedulingVerificationScheduling_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling@56f711d0]" name="MPXVideosSchedulingVerificationScheduling_Test" class="com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling"/>
+      </group> <!-- mpx -->
       <group name="full">
-        <method signature="AddingNewCustomContentType.AddingNewCustomContentType_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CustomContentType.AddingNewCustomContentType@2634b48f]" name="AddingNewCustomContentType_Test" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CustomContentType.AddingNewCustomContentType"/>
-        <method signature="CreateCharacterProfile.CreateCharacterProfile_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@4d16e8e6]" name="CreateCharacterProfile_Test" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile"/>
-        <method signature="ImplementMPS.ImplementMPS_TC2901()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@1b147b94]" name="ImplementMPS_TC2901" class="com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS"/>
-        <method signature="ScheduleRevisionsOfQueues.ScheduleRevisionsOfQueues_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.SchedulingQueues.ScheduleRevisionsOfQueues@4e3a2be1]" name="ScheduleRevisionsOfQueues_Test" class="com.nbcuni.test.publisher.tests.Queues.SchedulingQueues.ScheduleRevisionsOfQueues"/>
+        <method signature="MPXVideosSchedulingVerificationScheduling.MPXVideosSchedulingVerificationScheduling_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling@56f711d0]" name="MPXVideosSchedulingVerificationScheduling_Test" class="com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling"/>
       </group> <!-- full -->
-      <group name="smoke">
-        <method signature="AddingNewCustomContentType.AddingNewCustomContentType_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CustomContentType.AddingNewCustomContentType@2634b48f]" name="AddingNewCustomContentType_Test" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CustomContentType.AddingNewCustomContentType"/>
-        <method signature="ScheduleRevisionsOfQueues.ScheduleRevisionsOfQueues_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.SchedulingQueues.ScheduleRevisionsOfQueues@4e3a2be1]" name="ScheduleRevisionsOfQueues_Test" class="com.nbcuni.test.publisher.tests.Queues.SchedulingQueues.ScheduleRevisionsOfQueues"/>
-      </group> <!-- smoke -->
     </groups>
-    <test name="All Concurrent Web Tests" duration-ms="54337" started-at="2014-04-29T12:52:07Z" finished-at="2014-04-29T12:53:01Z">
-      <class name="com.nbcuni.test.publisher.tests.Queues.SchedulingQueues.ScheduleRevisionsOfQueues">
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.SchedulingQueues.ScheduleRevisionsOfQueues@4e3a2be1]" name="startSelenium" is-config="true" duration-ms="4634" started-at="2014-04-29T08:52:07Z" finished-at="2014-04-29T08:52:12Z">
+    <test name="Default test" duration-ms="242120" started-at="2014-04-29T15:49:29Z" finished-at="2014-04-29T15:53:31Z">
+      <class name="com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling">
+        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling@56f711d0]" name="startGridAndHub" is-config="true" duration-ms="17698" started-at="2014-04-29T11:49:11Z" finished-at="2014-04-29T11:49:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startGridAndHub -->
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling@56f711d0]" name="startSelenium" is-config="true" duration-ms="2121" started-at="2014-04-29T11:49:29Z" finished-at="2014-04-29T11:49:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="ScheduleRevisionsOfQueues_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.SchedulingQueues.ScheduleRevisionsOfQueues@4e3a2be1]" name="ScheduleRevisionsOfQueues_Test" duration-ms="43884" started-at="2014-04-29T08:52:12Z" finished-at="2014-04-29T08:52:56Z">
+        <test-method status="PASS" signature="MPXVideosSchedulingVerificationScheduling_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling@56f711d0]" name="MPXVideosSchedulingVerificationScheduling_Test" duration-ms="239419" started-at="2014-04-29T11:49:31Z" finished-at="2014-04-29T11:53:30Z">
           <reporter-output>
             <line>
-              <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]>
+              <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
             </line>
             <line>
               <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
@@ -678,410 +330,208 @@
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Content' menu link.]]>
+              <![CDATA[Mouse over the 'Configuration' menu link.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Add content' menu link.]]>
+              <![CDATA[Mouse over the 'Media' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Post' menu link.]]>
+              <![CDATA[Click the 'Media: thePlatform mpx settings' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.]]>
             </line>
             <line>
-              <![CDATA[Enter 'dfb9b1205e5e49d' in the 'Title' text box.]]>
+              <![CDATA[Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.]]>
             </line>
             <line>
-              <![CDATA[Switch to the Synopsis frame.]]>
+              <![CDATA[Get all the selected import account options and store to a list.]]>
             </line>
             <line>
-              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+              <![CDATA[Click the 'Close Overlay X'.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+              <![CDATA[Mouse over the 'Structure' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Cover' select button.]]>
+              <![CDATA[Mouse over the 'File types' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the select file frame.]]>
+              <![CDATA[Click the 'MPX Video for Account "DB TV" (2312945284)' menu link.]]>
             </line>
             <line>
-              <![CDATA[Enter the file path for file upload.]]>
+              <![CDATA[Switch to the active frame titled 'MPX Video for Account &quot;DB TV&quot; (2312945284) dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Open the mpx platform.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'mpx/AdminPub7QA' in the 'Username' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Pa55word' in the 'Password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
               <![CDATA[Click the 'Upload' button.]]>
             </line>
             <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
+              <![CDATA[Click the 'Choose Files' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Next' button.]]>
+              <![CDATA[Click the 'Movies' button in the OS Upload dialog.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Public Local Files' radio button.]]>
+              <![CDATA[Click the Test Movie in th OS Upload dialog.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Next' button.]]>
+              <![CDATA[Click the 'Open' button.]]>
             </line>
             <line>
-              <![CDATA[Verify the file image 'HanSolo' is present.]]>
+              <![CDATA[Click the 'Upload' button in the Upload dialog.]]>
             </line>
             <line>
-              <![CDATA[Verify the img is loaded and visible.]]>
+              <![CDATA[Click the 'Available Date' label on the right hand side to give focus to the media item.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save' button.]]>
+              <![CDATA[Enter '4/09/2014 12:00 AM' in the 'Available Date' text box.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+              <![CDATA[Enter 'Automation6a53c9d8e5' in the 'Title' text box.]]>
             </line>
             <line>
-              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Publishing Options' link.]]>
-            </line>
-            <line>
-              <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
+              <![CDATA[Enter '4/22/2014 12:00 AM' in the 'Expiration Date' text box.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'Post dfb9b1205e5e49d has been created.' is present.]]>
+              <![CDATA[Click the 'Publish' button.]]>
             </line>
             <line>
-              <![CDATA[Verify there are no errors present.]]>
+              <![CDATA[Click the 'Publish to Pub 7 Primary' check box.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Content' menu link.]]>
+              <![CDATA[Click the 'Publish' button from the upload dialog.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Queues' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Add Promo Queue' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Add promo queue queue dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '209f1166edf049e' in the 'Title' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'dfb9b1205e5e49d' in the queue item text box indexed '1'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'dfb9b1205e5e49d' from the auto complete option list.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '396a4d1a43' in the 'Log message for this state change' text area.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save Queue' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Queues Listing dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the queue titled '209f1166edf049e' is present in the Queues list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Expand' arrow to extend the edit menu for queue titled '209f1166edf049e'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Edit' button for queue titled + '209f1166edf049e'.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Edit 209f1166edf049e dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Create New Revision' checkbox is checked.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Schedule' tab.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled '209f1166edf049e dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Add Scheduled Revision' link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled '209f1166edf049e dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Select revision titled '209f1166edf049e'.]]>
-            </line>
-            <line>
-              <![CDATA[Select 'Moderate to Publish' from the 'Select operation' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '05/09/2014' in the 'Date' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '05:00 PM' in the 'Time' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Schedule' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled '209f1166edf049e dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The scheduled revision operation has been saved.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify there are no errors present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Queues' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Queues Listing dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Expand' arrow to extend the edit menu for queue titled '209f1166edf049e'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Edit' button for queue titled + '209f1166edf049e'.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Edit 209f1166edf049e dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Schedule' tab.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled '209f1166edf049e dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the scheduled text '209f1166edf049e' is present in the scheduled queue.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the scheduled text 'Moderate to Publish' is present in the scheduled queue.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the scheduled text '05/09/2014 - 05:00 PM' is present in the scheduled queue.]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- ScheduleRevisionsOfQueues_Test -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.SchedulingQueues.ScheduleRevisionsOfQueues@4e3a2be1]" name="stopSelenium" is-config="true" duration-ms="564" started-at="2014-04-29T08:52:56Z" finished-at="2014-04-29T08:52:56Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=ScheduleRevisionsOfQueues_Test status=SUCCESS method=ScheduleRevisionsOfQueues.ScheduleRevisionsOfQueues_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.SchedulingQueues.ScheduleRevisionsOfQueues@4e3a2be1] output=Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- stopSelenium -->
-      </class> <!-- com.nbcuni.test.publisher.tests.Queues.SchedulingQueues.ScheduleRevisionsOfQueues -->
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile">
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@4d16e8e6]" name="startSelenium" is-config="true" duration-ms="4573" started-at="2014-04-29T08:52:07Z" finished-at="2014-04-29T08:52:12Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startSelenium -->
-        <test-method status="FAIL" signature="CreateCharacterProfile_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@4d16e8e6]" name="CreateCharacterProfile_Test" duration-ms="10311" started-at="2014-04-29T08:52:12Z" finished-at="2014-04-29T08:52:22Z">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Image the site encountered an error after logging in.]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Image the site encountered an error after logging in.
-	at org.testng.Assert.fail(Assert.java:94)
-	at com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile.CreateCharacterProfile_Test(CreateCharacterProfile.java:31)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-            <line>
-              <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the user's password in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Login' button.]]>
-            </line>
-            <line>
-              <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCharacterProfile_Test.png ]]>
-            </line>
-            <line>
-              <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCharacterProfile_Test.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCharacterProfile_Test.png' height='500' width='500'/> </a>]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- CreateCharacterProfile_Test -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@4d16e8e6]" name="stopSelenium" is-config="true" duration-ms="794" started-at="2014-04-29T08:52:22Z" finished-at="2014-04-29T08:52:23Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=CreateCharacterProfile_Test status=FAILURE method=CreateCharacterProfile.CreateCharacterProfile_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@4d16e8e6] output=Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@4d16e8e6]" name="startSelenium" is-config="true" duration-ms="2799" started-at="2014-04-29T08:52:23Z" finished-at="2014-04-29T08:52:26Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startSelenium -->
-        <test-method status="FAIL" signature="CreateCharacterProfile_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@4d16e8e6]" name="CreateCharacterProfile_Test" duration-ms="6537" started-at="2014-04-29T08:52:26Z" finished-at="2014-04-29T08:52:32Z">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Image the site encountered an error after logging in.]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Image the site encountered an error after logging in.
-	at org.testng.Assert.fail(Assert.java:94)
-	at com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile.CreateCharacterProfile_Test(CreateCharacterProfile.java:31)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.retryFailed(Invoker.java:1049)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1254)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-            <line>
-              <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the user's password in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Login' button.]]>
-            </line>
-            <line>
-              <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCharacterProfile_Test.png ]]>
-            </line>
-            <line>
-              <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCharacterProfile_Test.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCharacterProfile_Test.png' height='500' width='500'/> </a>]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- CreateCharacterProfile_Test -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@4d16e8e6]" name="stopSelenium" is-config="true" duration-ms="844" started-at="2014-04-29T08:52:32Z" finished-at="2014-04-29T08:52:33Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=CreateCharacterProfile_Test status=FAILURE method=CreateCharacterProfile.CreateCharacterProfile_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@4d16e8e6] output=Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- stopSelenium -->
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile -->
-      <class name="com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS">
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@1b147b94]" name="startSelenium" is-config="true" duration-ms="4506" started-at="2014-04-29T08:52:07Z" finished-at="2014-04-29T08:52:12Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="ImplementMPS_TC2901()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@1b147b94]" name="ImplementMPS_TC2901" duration-ms="49259" started-at="2014-04-29T08:52:12Z" finished-at="2014-04-29T08:53:01Z">
-          <reporter-output>
-            <line>
-              <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the user's password in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Login' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Modules' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Pub Ads' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the module titled 'Pub Ads' to appear in the list.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Pub Ads' check box is checked.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'MPS' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the module titled 'MPS' to appear in the list.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'MPS' check box is checked.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'DART' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the module titled 'DART' to appear in the list.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Doubleclick for Publishers' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the module titled 'Doubleclick for Publishers' to appear in the list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Reports' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Status report' menu link.]]>
+              <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
             </line>
             <line>
               <![CDATA[Switch to the active frame titled 'Status report dialog'.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'Ad Tag Style' is present on the page.]]>
+              <![CDATA[Click the 'Close Overlay X'.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'MPS' is present on the page.]]>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Files' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'mpxMedia' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter title Automation6a53c9d8e5.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Apply' button.]]>
+            </line>
+            <line>
+              <![CDATA[Get the text of the first search result set item.]]>
+            </line>
+            <line>
+              <![CDATA[Get the title text of every result in the search result set.]]>
+            </line>
+            <line>
+              <![CDATA[For each expected result, assert it is present in the result set.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text '04/09/2014 - 04:00 AM' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text '04/22/2014 - 04:00 AM' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Expired' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Click the first search title link in the search result set.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Automation6a53c9d8e5' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Wednesday, April 9, 2014 - 04:00' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Tuesday, April 22, 2014 - 04:00' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Edit' link in the work bench.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Edit mpx_video_4 Automation6a53c9d8e5 dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the value of the 'Available Date' text box equals '04/09/2014'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the value of the 'Expiration Date' text box equals '04/22/2014'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Schedule' tab.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Automation6a53c9d8e5 dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the scheduled revision table is empty.]]>
+            </line>
+            <line>
+              <![CDATA[Open the mpx platform.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Automation6a53c9d8e5' in the 'Search' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Search by Title' link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Available Date' label on the right hand side to give focus to the media item.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '4/29/2014 12:00 AM' in the 'Available Date' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '4/29/2015 12:00 AM' in the 'Expiration Date' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Additional Options' arrow.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Publish Update' link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Publish to Pub 7 Primary' check box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Update' button.]]>
+            </line>
+            <line>
+              <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Status report dialog'.]]>
             </line>
             <line>
               <![CDATA[Click the 'Close Overlay X'.]]>
@@ -1090,423 +540,95 @@
               <![CDATA[Mouse over the 'Content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Add content' menu link.]]>
+              <![CDATA[Mouse over the 'Files' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Movie' menu link.]]>
+              <![CDATA[Click the 'mpxMedia' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
             </line>
             <line>
-              <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
+              <![CDATA[Enter title Automation6a53c9d8e5.]]>
             </line>
             <line>
-              <![CDATA[Enter '5037b21f05e340c' in the 'Title' text box.]]>
+              <![CDATA[Click the 'Apply' button.]]>
             </line>
             <line>
-              <![CDATA[Switch to the Synopsis frame.]]>
+              <![CDATA[Get the title text of every result in the search result set.]]>
             </line>
             <line>
-              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+              <![CDATA[For each expected result, assert it is present in the result set.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
+              <![CDATA[Verify the text '04/29/2014 - 04:00 AM' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Cover' select button.]]>
+              <![CDATA[Verify the text '04/29/2015 - 04:00 AM' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Switch to the select file frame.]]>
+              <![CDATA[Verify the text 'Published' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Enter the file path for file upload.]]>
+              <![CDATA[Click the first search title link in the search result set.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Upload' button.]]>
+              <![CDATA[Verify the text 'Automation6a53c9d8e5' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
+              <![CDATA[Verify the text 'Tuesday, April 29, 2014 - 04:00' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Next' button.]]>
+              <![CDATA[Verify the text 'Wednesday, April 29, 2015 - 04:00' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Public Local Files' radio button.]]>
+              <![CDATA[Click the 'Edit' link in the work bench.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Next' button.]]>
+              <![CDATA[Switch to the active frame titled 'Edit mpx_video_4 Automation6a53c9d8e5 dialog'.]]>
             </line>
             <line>
-              <![CDATA[Verify the file image 'HanSolo' is present.]]>
+              <![CDATA[Verify the value of the 'Available Date' text box equals '04/29/2014'.]]>
             </line>
             <line>
-              <![CDATA[Verify the img is loaded and visible.]]>
+              <![CDATA[Verify the value of the 'Expiration Date' text box equals '04/29/2015'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save' button.]]>
+              <![CDATA[Click the 'Schedule' tab.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'Automation6a53c9d8e5 dialog'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Additional Information' link.]]>
+              <![CDATA[Verify the 'Run now' link is present for content item 'Automation6a53c9d8e5' with action 'Unpublish'.]]>
             </line>
             <line>
-              <![CDATA[Select the 'Syndicated' from the 'Movie Type' drop down list.]]>
+              <![CDATA[Verify the text 'Automation6a53c9d8e5' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Select the 'G' from the 'Rating' drop down list.]]>
+              <![CDATA[Verify the text 'Unpublish' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Select the 'Action' from the 'Primary Genre' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Movie 5037b21f05e340c has been created.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify there are no errors present.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Structure' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'MPS Blocks' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Add' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Add a new MPS block dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '925ede9f1ed542e' in the 'Unique Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '248448602c0342b' in the 'Block Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of '925ede9f1ed542e has been created.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify there are no errors present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Structure' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Blocks' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Select the block name '248448602c0342b' from the 'Header' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save Blocks' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The block settings have been updated.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify there are no errors present.]]>
-            </line>
-            <line>
-              <![CDATA[Select the block name '248448602c0342b' from the '- None -' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save Blocks' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
+              <![CDATA[Verify the text '04/29/2015 - 04:00' is present on the page.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- ImplementMPS_TC2901 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@1b147b94]" name="stopSelenium" is-config="true" duration-ms="565" started-at="2014-04-29T08:53:01Z" finished-at="2014-04-29T08:53:01Z">
+        </test-method> <!-- MPXVideosSchedulingVerificationScheduling_Test -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling@56f711d0]" name="stopSelenium" is-config="true" duration-ms="570" started-at="2014-04-29T11:53:30Z" finished-at="2014-04-29T11:53:31Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=ImplementMPS_TC2901 status=SUCCESS method=ImplementMPS.ImplementMPS_TC2901()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@1b147b94] output=Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]]>
+                <![CDATA[[TestResult name=MPXVideosSchedulingVerificationScheduling_Test status=SUCCESS method=MPXVideosSchedulingVerificationScheduling.MPXVideosSchedulingVerificationScheduling_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling@56f711d0] output=Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-      </class> <!-- com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS -->
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CustomContentType.AddingNewCustomContentType">
-        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CustomContentType.AddingNewCustomContentType@2634b48f]" name="startGridAndHub" is-config="true" duration-ms="5415" started-at="2014-04-29T08:52:02Z" finished-at="2014-04-29T08:52:07Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startGridAndHub -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CustomContentType.AddingNewCustomContentType@2634b48f]" name="startSelenium" is-config="true" duration-ms="4652" started-at="2014-04-29T08:52:07Z" finished-at="2014-04-29T08:52:12Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="AddingNewCustomContentType_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CustomContentType.AddingNewCustomContentType@2634b48f]" name="AddingNewCustomContentType_Test" duration-ms="36612" started-at="2014-04-29T08:52:12Z" finished-at="2014-04-29T08:52:48Z">
-          <reporter-output>
-            <line>
-              <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the user's password in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Login' button.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Structure' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Content types' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Add content type' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Content types dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'e44eff7f9f' in the 'Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The content type e44eff7f9f has been added.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify there are no errors present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the content type table contains the text 'e44eff7f9f'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Structure' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Content types' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'e44eff7f9f' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Manage fields' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'e44eff7f9f dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '8d28104fce06484' in the 'Add new field' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Select 'Image' from the 'Field Type' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Updated field 8d28104fce06484 field settings.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify there are no errors present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Saved 8d28104fce06484 configuration.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify there are no errors present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Add content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'e44eff7f9f' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create e44eff7f9f dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the Field 'Save' button is present.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '2a9d31b9ea3c495' in the 'Title' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the Synopsis frame.]]>
-            </line>
-            <line>
-              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create e44eff7f9f dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'e44eff7f9f 2a9d31b9ea3c495 has been created.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify there are no errors present.]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- AddingNewCustomContentType_Test -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CustomContentType.AddingNewCustomContentType@2634b48f]" name="stopSelenium" is-config="true" duration-ms="574" started-at="2014-04-29T08:52:48Z" finished-at="2014-04-29T08:52:49Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=AddingNewCustomContentType_Test status=SUCCESS method=AddingNewCustomContentType.AddingNewCustomContentType_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CustomContentType.AddingNewCustomContentType@2634b48f] output=Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CustomContentType.AddingNewCustomContentType@2634b48f]" name="stopGridAndHub" is-config="true" duration-ms="388" started-at="2014-04-29T08:53:02Z" finished-at="2014-04-29T08:53:02Z">
+        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling@56f711d0]" name="stopGridAndHub" is-config="true" duration-ms="389" started-at="2014-04-29T11:53:31Z" finished-at="2014-04-29T11:53:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopGridAndHub -->
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CustomContentType.AddingNewCustomContentType -->
-    </test> <!-- All Concurrent Web Tests -->
-  </suite> <!-- Pub 7 Concurrent Suite -->
-  <suite name="Pub 7 Consecutive Suite" duration-ms="26876" started-at="2014-04-29T12:51:34Z" finished-at="2014-04-29T12:52:01Z">
-    <groups>
-      <group name="mpx">
-        <method signature="TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@1d7d2482]" name="TestSetup_Test" class="com.nbcuni.test.publisher.tests.Setup.TestSetup"/>
-      </group> <!-- mpx -->
-      <group name="full">
-        <method signature="TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@1d7d2482]" name="TestSetup_Test" class="com.nbcuni.test.publisher.tests.Setup.TestSetup"/>
-      </group> <!-- full -->
-      <group name="smoke">
-        <method signature="TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@1d7d2482]" name="TestSetup_Test" class="com.nbcuni.test.publisher.tests.Setup.TestSetup"/>
-      </group> <!-- smoke -->
-    </groups>
-    <test name="All Consecutive Web Tests" duration-ms="26876" started-at="2014-04-29T12:51:34Z" finished-at="2014-04-29T12:52:01Z">
-      <class name="com.nbcuni.test.publisher.tests.Setup.TestSetup">
-        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@1d7d2482]" name="startGridAndHub" is-config="true" duration-ms="11690" started-at="2014-04-29T08:51:23Z" finished-at="2014-04-29T08:51:34Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startGridAndHub -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@1d7d2482]" name="startSelenium" is-config="true" duration-ms="2186" started-at="2014-04-29T08:51:34Z" finished-at="2014-04-29T08:51:37Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@1d7d2482]" name="TestSetup_Test" duration-ms="24111" started-at="2014-04-29T08:51:37Z" finished-at="2014-04-29T08:52:01Z">
-          <reporter-output>
-            <line>
-              <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the user's password in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Login' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Modules' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to frame titled 'Modules'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Sticky Edit Actions' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the module titled 'Sticky Edit Actions' to appear in the list.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Devel' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the module titled 'Devel' to appear in the list.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'File Lock' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the module titled 'File Lock' to appear in the list.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'ImageField Focus' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the module titled 'ImageField Focus' to appear in the list.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Database logging' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the module titled 'Database logging' to appear in the list.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Pub Post' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the module titled 'Pub Post' to appear in the list.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Pub Post' check box is checked.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- TestSetup_Test -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@1d7d2482]" name="stopSelenium" is-config="true" duration-ms="569" started-at="2014-04-29T08:52:01Z" finished-at="2014-04-29T08:52:01Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=TestSetup_Test status=SUCCESS method=TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@1d7d2482] output=Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@1d7d2482]" name="stopGridAndHub" is-config="true" duration-ms="367" started-at="2014-04-29T08:52:01Z" finished-at="2014-04-29T08:52:02Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- stopGridAndHub -->
-      </class> <!-- com.nbcuni.test.publisher.tests.Setup.TestSetup -->
-    </test> <!-- All Consecutive Web Tests -->
-  </suite> <!-- Pub 7 Consecutive Suite -->
-  <suite name="Publisher 7 Test Suites" duration-ms="0" started-at="2014-04-29T12:53:02Z" finished-at="2014-04-29T12:53:02Z">
-    <groups>
-    </groups>
-  </suite> <!-- Publisher 7 Test Suites -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
