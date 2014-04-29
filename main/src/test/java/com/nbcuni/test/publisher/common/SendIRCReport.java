@@ -50,13 +50,7 @@ public class SendIRCReport {
             }
             
             Integer failedIndividualTestCount = failedTestsCount / (config.getReRunOnFailureCount() + 1);
-            String sendTo;
-            if (!failedTestsCount.equals(0)) {
-            	sendTo = "baclark77";
-            }
-            else {
-            	sendTo = channel;
-            }
+            String sendTo = channel;
             
             //Join channel and write results
             writer.write("JOIN " + channel + "\r\n");

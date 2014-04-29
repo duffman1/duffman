@@ -1,0 +1,22 @@
+<suite name="Pub 7 Concurrent Suite" parallel="classes" preserve-order="true" thread-count="4">
+
+  	<!--TEST EXECUTION QUEUE-->
+  	<test verbose="1" name="All Concurrent Web Tests" annotations="JDK">
+
+		<!-- Enter group name for specific test scripts, options are "full", "smoke", or "mpx" -->
+		<groups>
+	 		<run>
+	 			<include name="full"/>
+	 		</run>
+		</groups>
+
+		<classes>
+		
+			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile"/>
+			<class name="com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS"/>
+			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CustomContentType.AddingNewCustomContentType"/>
+			<class name="com.nbcuni.test.publisher.tests.Queues.SchedulingQueues.ScheduleRevisionsOfQueues"/>
+			
+		</classes>
+	</test>
+</suite>
