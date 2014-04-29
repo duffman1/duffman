@@ -2,7 +2,7 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
     <line>
-      <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]>
+      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
     </line>
     <line>
       <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
@@ -14,205 +14,154 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[Open the mpx data client at http://data.media.theplatform.com/media/client.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the Username in the 'Username' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the Password in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Sign In' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the Account Picker button to display all mpx accounts.]]>
-    </line>
-    <line>
-      <![CDATA[Store all the active mpx accounts to a list.]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Configuration' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Media' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Media: thePlatform mpx settings' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Add Account' button.]]>
-    </line>
-    <line>
-      <![CDATA[Enter mpx username in the 'Username for Account...' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter mpx password in the 'Password for Account...' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Connect to MPX' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Login successful' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify there are no errors present.]]>
-    </line>
-    <line>
-      <![CDATA[Get the account options from the 'Select Import Account for Account...' drop down lists.]]>
-    </line>
-    <line>
-      <![CDATA[Select 'DB TV' from the first 'Select Import Account for...' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[click the 'Set Import Account' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Setting import account "DB%20TV" for account' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify there are no errors present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Retrieving import account information for "DB%20TV".' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify there are no errors present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Select Import Account for...' drop down lists are disabled.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
       <![CDATA[Mouse over the 'Content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Files' menu link.]]>
+      <![CDATA[Mouse over the 'Add content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'mpxMedia' menu link.]]>
+      <![CDATA[Click the 'TV Show' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'Create TV Show dialog'.]]>
     </line>
     <line>
-      <![CDATA[Select 'Auditude Demo player' from the first 'Import Player' drop down list.]]>
+      <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Sync MPX Media Now' link.]]>
+      <![CDATA[Enter 'aa397a3992ac4b5' in the 'Title' text box.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'Processed video import/update manually for all accounts.' is present.]]>
+      <![CDATA[Switch to the Synopsis frame.]]>
     </line>
     <line>
-      <![CDATA[Verify there are no errors present.]]>
+      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Run Cron to complete import' link.]]>
+      <![CDATA[Switch to the active frame titled 'Create TV Show dialog'.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Cron dialog'.]]>
+      <![CDATA[Click the Logo 'Select' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Run Cron' button.]]>
+      <![CDATA[Switch to the select file frame.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'Cron run successfully.' is present.]]>
+      <![CDATA[Enter the file path for file upload.]]>
     </line>
     <line>
-      <![CDATA[Verify there are no errors present.]]>
+      <![CDATA[Click the 'Upload' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Content' menu link.]]>
+      <![CDATA[Click the 'Next' button.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Files' menu link.]]>
+      <![CDATA[Click the 'Public Local Files' radio button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'mpxMedia' menu link.]]>
+      <![CDATA[Click the 'Next' button.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+      <![CDATA[Verify the file image 'HanSolo' is present.]]>
     </line>
     <line>
-      <![CDATA[Enter title Automation1.]]>
+      <![CDATA[Verify the img is loaded and visible.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Apply' button.]]>
+      <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Get the title text of every result in the search result set.]]>
+      <![CDATA[Switch to the active frame titled 'Create TV Show dialog'.]]>
     </line>
     <line>
-      <![CDATA[For each expected result, assert it is present in the result set.]]>
+      <![CDATA[Click the Cover Media 'Select' button.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Configuration' menu link.]]>
+      <![CDATA[Switch to the select file frame.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Media' menu link.]]>
+      <![CDATA[Enter the file path for file upload.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Media: thePlatform mpx settings' menu link.]]>
+      <![CDATA[Click the 'Upload' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'MPX Login' link.]]>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
     </line>
     <line>
-      <![CDATA[Wait for 'Update' button to be visible.]]>
+      <![CDATA[Click the 'Next' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Add Account' button.]]>
+      <![CDATA[Click the 'Public Local Files' radio button.]]>
     </line>
     <line>
-      <![CDATA[Enter mpx username in the 'Username for Account...' text box.]]>
+      <![CDATA[Click the 'Next' button.]]>
     </line>
     <line>
-      <![CDATA[Enter mpx password in the 'Password for Account...' text box.]]>
+      <![CDATA[Verify the file image 'HanSolo' is present.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Update' button.]]>
+      <![CDATA[Verify the img is loaded and visible.]]>
     </line>
     <line>
-      <![CDATA[Select 'NBCU TVE Stage - Golf Channel' from the second 'Select Import Account for...' drop down list.]]>
+      <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[click the 'Set Import Account' button.]]>
+      <![CDATA[Switch to the active frame titled 'Create TV Show dialog'.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'Setting import account "NBCU%20TVE%20Stage%20-%20Golf%20Channel" for account' is present.]]>
+      <![CDATA[Click the Banner 'Select' button.]]>
     </line>
     <line>
-      <![CDATA[Verify there are no errors present.]]>
+      <![CDATA[Switch to the select file frame.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'Retrieving import account information for "NBCU%20TVE%20Stage%20-%20Golf%20Channel".' is present.]]>
+      <![CDATA[Enter the file path for file upload.]]>
     </line>
     <line>
-      <![CDATA[Verify there are no errors present.]]>
+      <![CDATA[Click the 'Upload' button.]]>
     </line>
     <line>
-      <![CDATA[Verify the 'Select Import Account for...' drop down lists are disabled.]]>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save configurations' button.]]>
+      <![CDATA[Click the 'Next' button.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+      <![CDATA[Click the 'Public Local Files' radio button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the file image 'HanSolo' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the img is loaded and visible.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create TV Show dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Publishing Options' link.]]>
+    </line>
+    <line>
+      <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'TV Show aa397a3992ac4b5 has been created.' is present.]]>
     </line>
     <line>
       <![CDATA[Verify there are no errors present.]]>
@@ -221,34 +170,88 @@
       <![CDATA[Mouse over the 'Content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Files' menu link.]]>
+      <![CDATA[Mouse over the 'Add content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'mpxMedia' menu link.]]>
+      <![CDATA[Click the 'TV Season' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Sync MPX Media' link.]]>
+      <![CDATA[Switch to the active frame titled 'Create TV Season dialog'.]]>
     </line>
     <line>
-      <![CDATA[Select 'Auditude Demo player' from the second 'Import Player' drop down list.]]>
+      <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Sync MPX Media Now' link.]]>
+      <![CDATA[Enter '3cd2c5f5caec47e' in the 'Title' text box.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'Processed video import/update manually for all accounts.' is present.]]>
+      <![CDATA[Enter '1' in the 'Season Number' text box.]]>
     </line>
     <line>
-      <![CDATA[Verify there are no errors present.]]>
+      <![CDATA[Switch to the Synopsis frame.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Run Cron to complete import' link.]]>
+      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Run Cron' button.]]>
+      <![CDATA[Switch to the active frame titled 'Create TV Season dialog'.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'Cron run successfully.' is present.]]>
+      <![CDATA[Click the 'Cover' select button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the select file frame.]]>
+    </line>
+    <line>
+      <![CDATA[Enter the file path for file upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Upload' button.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Public Local Files' radio button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the file image 'HanSolo' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the img is loaded and visible.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create TV Season dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Publishing Options' link.]]>
+    </line>
+    <line>
+      <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Relationships' link.]]>
+    </line>
+    <line>
+      <![CDATA[Select 'aa397a3992ac4b5' from the 'Show' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'TV Season 3cd2c5f5caec47e has been created.' is present.]]>
     </line>
     <line>
       <![CDATA[Verify there are no errors present.]]>
@@ -257,50 +260,80 @@
       <![CDATA[Mouse over the 'Content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Files' menu link.]]>
+      <![CDATA[Mouse over the 'Add content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'mpxMedia' menu link.]]>
+      <![CDATA[Click the 'TV Episode' menu link.]]>
     </line>
     <line>
-      <![CDATA[Enter title The Golf Fix 2/4.]]>
+      <![CDATA[Switch to the active frame titled 'Create TV Episode dialog'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Apply' button.]]>
+      <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
     </line>
     <line>
-      <![CDATA[Get the title text of every result in the search result set.]]>
+      <![CDATA[Enter '57cba0bf174c4e3' in the 'Title' text box.]]>
     </line>
     <line>
-      <![CDATA[For each expected result, assert it is present in the result set.]]>
+      <![CDATA[Enter '1' in the 'Episode Number' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the Synopsis frame.]]>
+    </line>
+    <line>
+      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create TV Episode dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Publishing Options' link.]]>
+    </line>
+    <line>
+      <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Relationships' link.]]>
+    </line>
+    <line>
+      <![CDATA[Select 'aa397a3992ac4b5' from the 'Show' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Select '3cd2c5f5caec47e' from the 'Season' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'TV Episode 57cba0bf174c4e3 has been created.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify there are no errors present.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="367588" started-at="2014-04-28T13:00:18Z" finished-at="2014-04-28T13:06:26Z">
+  <suite name="Default suite" duration-ms="44793" started-at="2014-04-29T00:36:06Z" finished-at="2014-04-29T00:36:50Z">
     <groups>
-      <group name="mpx">
-        <method signature="ConfigurationMultipleMPXAccounts.ConfigurationMultipleMPXAccounts_TC1073()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.Configuration.ConfigurationMultipleMPXAccounts@59d6f830]" name="ConfigurationMultipleMPXAccounts_TC1073" class="com.nbcuni.test.publisher.tests.Video.Configuration.ConfigurationMultipleMPXAccounts"/>
-      </group> <!-- mpx -->
       <group name="full">
-        <method signature="ConfigurationMultipleMPXAccounts.ConfigurationMultipleMPXAccounts_TC1073()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.Configuration.ConfigurationMultipleMPXAccounts@59d6f830]" name="ConfigurationMultipleMPXAccounts_TC1073" class="com.nbcuni.test.publisher.tests.Video.Configuration.ConfigurationMultipleMPXAccounts"/>
+        <method signature="AddAbilityRelateShowSeasonEpisodeSpecifiableContentTypes.AddAbilityRelateShowSeasonEpisodeSpecifiableContentTypes_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.AddAbilityRelateShowSeasonEpisodeSpecifiableContentTypes@1629bc56]" name="AddAbilityRelateShowSeasonEpisodeSpecifiableContentTypes_Test" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.AddAbilityRelateShowSeasonEpisodeSpecifiableContentTypes"/>
       </group> <!-- full -->
-      <group name="smoke">
-        <method signature="ConfigurationMultipleMPXAccounts.ConfigurationMultipleMPXAccounts_TC1073()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.Configuration.ConfigurationMultipleMPXAccounts@59d6f830]" name="ConfigurationMultipleMPXAccounts_TC1073" class="com.nbcuni.test.publisher.tests.Video.Configuration.ConfigurationMultipleMPXAccounts"/>
-      </group> <!-- smoke -->
     </groups>
-    <test name="Default test" duration-ms="367588" started-at="2014-04-28T13:00:18Z" finished-at="2014-04-28T13:06:26Z">
-      <class name="com.nbcuni.test.publisher.tests.Video.Configuration.ConfigurationMultipleMPXAccounts">
-        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.Configuration.ConfigurationMultipleMPXAccounts@59d6f830]" name="startGridAndHub" is-config="true" duration-ms="11718" started-at="2014-04-28T09:00:06Z" finished-at="2014-04-28T09:00:18Z">
+    <test name="Default test" duration-ms="44793" started-at="2014-04-29T00:36:06Z" finished-at="2014-04-29T00:36:50Z">
+      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.AddAbilityRelateShowSeasonEpisodeSpecifiableContentTypes">
+        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.AddAbilityRelateShowSeasonEpisodeSpecifiableContentTypes@1629bc56]" name="startGridAndHub" is-config="true" duration-ms="11792" started-at="2014-04-28T20:35:54Z" finished-at="2014-04-28T20:36:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startGridAndHub -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.Configuration.ConfigurationMultipleMPXAccounts@59d6f830]" name="startSelenium" is-config="true" duration-ms="2432" started-at="2014-04-28T09:00:18Z" finished-at="2014-04-28T09:00:21Z">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.AddAbilityRelateShowSeasonEpisodeSpecifiableContentTypes@1629bc56]" name="startSelenium" is-config="true" duration-ms="2210" started-at="2014-04-28T20:36:06Z" finished-at="2014-04-28T20:36:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="ConfigurationMultipleMPXAccounts_TC1073()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.Configuration.ConfigurationMultipleMPXAccounts@59d6f830]" name="ConfigurationMultipleMPXAccounts_TC1073" duration-ms="364568" started-at="2014-04-28T09:00:21Z" finished-at="2014-04-28T09:06:25Z">
+        <test-method status="PASS" signature="AddAbilityRelateShowSeasonEpisodeSpecifiableContentTypes_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.AddAbilityRelateShowSeasonEpisodeSpecifiableContentTypes@1629bc56]" name="AddAbilityRelateShowSeasonEpisodeSpecifiableContentTypes_Test" duration-ms="42002" started-at="2014-04-28T20:36:08Z" finished-at="2014-04-28T20:36:50Z">
           <reporter-output>
             <line>
-              <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]>
+              <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
             </line>
             <line>
               <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
@@ -312,205 +345,154 @@
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
-              <![CDATA[Open the mpx data client at http://data.media.theplatform.com/media/client.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the Username in the 'Username' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the Password in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Sign In' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the Account Picker button to display all mpx accounts.]]>
-            </line>
-            <line>
-              <![CDATA[Store all the active mpx accounts to a list.]]>
-            </line>
-            <line>
-              <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Configuration' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Media' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Media: thePlatform mpx settings' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Add Account' button.]]>
-            </line>
-            <line>
-              <![CDATA[Enter mpx username in the 'Username for Account...' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter mpx password in the 'Password for Account...' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Connect to MPX' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Login successful' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify there are no errors present.]]>
-            </line>
-            <line>
-              <![CDATA[Get the account options from the 'Select Import Account for Account...' drop down lists.]]>
-            </line>
-            <line>
-              <![CDATA[Select 'DB TV' from the first 'Select Import Account for...' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[click the 'Set Import Account' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Setting import account "DB%20TV" for account' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify there are no errors present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Retrieving import account information for "DB%20TV".' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify there are no errors present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Select Import Account for...' drop down lists are disabled.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
               <![CDATA[Mouse over the 'Content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Files' menu link.]]>
+              <![CDATA[Mouse over the 'Add content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'mpxMedia' menu link.]]>
+              <![CDATA[Click the 'TV Show' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'Create TV Show dialog'.]]>
             </line>
             <line>
-              <![CDATA[Select 'Auditude Demo player' from the first 'Import Player' drop down list.]]>
+              <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Sync MPX Media Now' link.]]>
+              <![CDATA[Enter 'aa397a3992ac4b5' in the 'Title' text box.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'Processed video import/update manually for all accounts.' is present.]]>
+              <![CDATA[Switch to the Synopsis frame.]]>
             </line>
             <line>
-              <![CDATA[Verify there are no errors present.]]>
+              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Run Cron to complete import' link.]]>
+              <![CDATA[Switch to the active frame titled 'Create TV Show dialog'.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Cron dialog'.]]>
+              <![CDATA[Click the Logo 'Select' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Run Cron' button.]]>
+              <![CDATA[Switch to the select file frame.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'Cron run successfully.' is present.]]>
+              <![CDATA[Enter the file path for file upload.]]>
             </line>
             <line>
-              <![CDATA[Verify there are no errors present.]]>
+              <![CDATA[Click the 'Upload' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Content' menu link.]]>
+              <![CDATA[Click the 'Next' button.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Files' menu link.]]>
+              <![CDATA[Click the 'Public Local Files' radio button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'mpxMedia' menu link.]]>
+              <![CDATA[Click the 'Next' button.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+              <![CDATA[Verify the file image 'HanSolo' is present.]]>
             </line>
             <line>
-              <![CDATA[Enter title Automation1.]]>
+              <![CDATA[Verify the img is loaded and visible.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Apply' button.]]>
+              <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Get the title text of every result in the search result set.]]>
+              <![CDATA[Switch to the active frame titled 'Create TV Show dialog'.]]>
             </line>
             <line>
-              <![CDATA[For each expected result, assert it is present in the result set.]]>
+              <![CDATA[Click the Cover Media 'Select' button.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Configuration' menu link.]]>
+              <![CDATA[Switch to the select file frame.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Media' menu link.]]>
+              <![CDATA[Enter the file path for file upload.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Media: thePlatform mpx settings' menu link.]]>
+              <![CDATA[Click the 'Upload' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'MPX Login' link.]]>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
             </line>
             <line>
-              <![CDATA[Wait for 'Update' button to be visible.]]>
+              <![CDATA[Click the 'Next' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Add Account' button.]]>
+              <![CDATA[Click the 'Public Local Files' radio button.]]>
             </line>
             <line>
-              <![CDATA[Enter mpx username in the 'Username for Account...' text box.]]>
+              <![CDATA[Click the 'Next' button.]]>
             </line>
             <line>
-              <![CDATA[Enter mpx password in the 'Password for Account...' text box.]]>
+              <![CDATA[Verify the file image 'HanSolo' is present.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Update' button.]]>
+              <![CDATA[Verify the img is loaded and visible.]]>
             </line>
             <line>
-              <![CDATA[Select 'NBCU TVE Stage - Golf Channel' from the second 'Select Import Account for...' drop down list.]]>
+              <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[click the 'Set Import Account' button.]]>
+              <![CDATA[Switch to the active frame titled 'Create TV Show dialog'.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'Setting import account "NBCU%20TVE%20Stage%20-%20Golf%20Channel" for account' is present.]]>
+              <![CDATA[Click the Banner 'Select' button.]]>
             </line>
             <line>
-              <![CDATA[Verify there are no errors present.]]>
+              <![CDATA[Switch to the select file frame.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'Retrieving import account information for "NBCU%20TVE%20Stage%20-%20Golf%20Channel".' is present.]]>
+              <![CDATA[Enter the file path for file upload.]]>
             </line>
             <line>
-              <![CDATA[Verify there are no errors present.]]>
+              <![CDATA[Click the 'Upload' button.]]>
             </line>
             <line>
-              <![CDATA[Verify the 'Select Import Account for...' drop down lists are disabled.]]>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save configurations' button.]]>
+              <![CDATA[Click the 'Next' button.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+              <![CDATA[Click the 'Public Local Files' radio button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the file image 'HanSolo' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create TV Show dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Publishing Options' link.]]>
+            </line>
+            <line>
+              <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'TV Show aa397a3992ac4b5 has been created.' is present.]]>
             </line>
             <line>
               <![CDATA[Verify there are no errors present.]]>
@@ -519,34 +501,88 @@
               <![CDATA[Mouse over the 'Content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Files' menu link.]]>
+              <![CDATA[Mouse over the 'Add content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'mpxMedia' menu link.]]>
+              <![CDATA[Click the 'TV Season' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Sync MPX Media' link.]]>
+              <![CDATA[Switch to the active frame titled 'Create TV Season dialog'.]]>
             </line>
             <line>
-              <![CDATA[Select 'Auditude Demo player' from the second 'Import Player' drop down list.]]>
+              <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Sync MPX Media Now' link.]]>
+              <![CDATA[Enter '3cd2c5f5caec47e' in the 'Title' text box.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'Processed video import/update manually for all accounts.' is present.]]>
+              <![CDATA[Enter '1' in the 'Season Number' text box.]]>
             </line>
             <line>
-              <![CDATA[Verify there are no errors present.]]>
+              <![CDATA[Switch to the Synopsis frame.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Run Cron to complete import' link.]]>
+              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Run Cron' button.]]>
+              <![CDATA[Switch to the active frame titled 'Create TV Season dialog'.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'Cron run successfully.' is present.]]>
+              <![CDATA[Click the 'Cover' select button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the select file frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter the file path for file upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Upload' button.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Public Local Files' radio button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the file image 'HanSolo' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create TV Season dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Publishing Options' link.]]>
+            </line>
+            <line>
+              <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Relationships' link.]]>
+            </line>
+            <line>
+              <![CDATA[Select 'aa397a3992ac4b5' from the 'Show' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'TV Season 3cd2c5f5caec47e has been created.' is present.]]>
             </line>
             <line>
               <![CDATA[Verify there are no errors present.]]>
@@ -555,41 +591,77 @@
               <![CDATA[Mouse over the 'Content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Files' menu link.]]>
+              <![CDATA[Mouse over the 'Add content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'mpxMedia' menu link.]]>
+              <![CDATA[Click the 'TV Episode' menu link.]]>
             </line>
             <line>
-              <![CDATA[Enter title The Golf Fix 2/4.]]>
+              <![CDATA[Switch to the active frame titled 'Create TV Episode dialog'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Apply' button.]]>
+              <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
             </line>
             <line>
-              <![CDATA[Get the title text of every result in the search result set.]]>
+              <![CDATA[Enter '57cba0bf174c4e3' in the 'Title' text box.]]>
             </line>
             <line>
-              <![CDATA[For each expected result, assert it is present in the result set.]]>
+              <![CDATA[Enter '1' in the 'Episode Number' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the Synopsis frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create TV Episode dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Publishing Options' link.]]>
+            </line>
+            <line>
+              <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Relationships' link.]]>
+            </line>
+            <line>
+              <![CDATA[Select 'aa397a3992ac4b5' from the 'Show' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Select '3cd2c5f5caec47e' from the 'Season' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'TV Episode 57cba0bf174c4e3 has been created.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify there are no errors present.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- ConfigurationMultipleMPXAccounts_TC1073 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Video.Configuration.ConfigurationMultipleMPXAccounts@59d6f830]" name="stopSelenium" is-config="true" duration-ms="574" started-at="2014-04-28T09:06:25Z" finished-at="2014-04-28T09:06:26Z">
+        </test-method> <!-- AddAbilityRelateShowSeasonEpisodeSpecifiableContentTypes_Test -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.AddAbilityRelateShowSeasonEpisodeSpecifiableContentTypes@1629bc56]" name="stopSelenium" is-config="true" duration-ms="568" started-at="2014-04-28T20:36:50Z" finished-at="2014-04-28T20:36:50Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=ConfigurationMultipleMPXAccounts_TC1073 status=SUCCESS method=ConfigurationMultipleMPXAccounts.ConfigurationMultipleMPXAccounts_TC1073()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.Configuration.ConfigurationMultipleMPXAccounts@59d6f830] output=Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]]>
+                <![CDATA[[TestResult name=AddAbilityRelateShowSeasonEpisodeSpecifiableContentTypes_Test status=SUCCESS method=AddAbilityRelateShowSeasonEpisodeSpecifiableContentTypes.AddAbilityRelateShowSeasonEpisodeSpecifiableContentTypes_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.AddAbilityRelateShowSeasonEpisodeSpecifiableContentTypes@1629bc56] output=Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.Configuration.ConfigurationMultipleMPXAccounts@59d6f830]" name="stopGridAndHub" is-config="true" duration-ms="402" started-at="2014-04-28T09:06:26Z" finished-at="2014-04-28T09:06:26Z">
+        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.AddAbilityRelateShowSeasonEpisodeSpecifiableContentTypes@1629bc56]" name="stopGridAndHub" is-config="true" duration-ms="369" started-at="2014-04-28T20:36:50Z" finished-at="2014-04-28T20:36:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopGridAndHub -->
-      </class> <!-- com.nbcuni.test.publisher.tests.Video.Configuration.ConfigurationMultipleMPXAccounts -->
+      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.AddAbilityRelateShowSeasonEpisodeSpecifiableContentTypes -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

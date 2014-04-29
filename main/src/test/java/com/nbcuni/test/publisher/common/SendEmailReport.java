@@ -35,17 +35,16 @@ public class SendEmailReport {
             Message message = new MimeMessage(session);
             message.setFrom(new InternetAddress("Automation@nbcuni.com"));
             
-            //if there are failures send to automation qa resource for review
+            message.setRecipients(Message.RecipientType.TO,
+            			InternetAddress.parse(config.getConfigValue("SendReportEmailAddress")));
+            
             if (!failedTestsCount.equals(0)) {
-            	message.setRecipients(Message.RecipientType.TO,
-            			InternetAddress.parse("brandon.clark@nbcuni.com"));
+            	message.setSubject("Test Automation Report - Failed");
+                
             }
             else {
-            	message.setRecipients(Message.RecipientType.TO,
-            			InternetAddress.parse(config.getConfigValue("SendReportEmailAddress")));
+            	message.setSubject("Test Automation Report - Passed");
             }
-            
-            message.setSubject("Test Automation Report");
             
             BodyPart messageBodyPart = new MimeBodyPart();
 

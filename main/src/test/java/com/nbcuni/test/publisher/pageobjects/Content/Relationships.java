@@ -34,10 +34,10 @@ public class Relationships {
     @FindBy(how = How.XPATH, using = "//a/strong[text()='Relationships']")
     private WebElement Relationships_Lnk;
     
-    @FindBy(how = How.CSS, using = "select[id*='edit-field-pub-relation-tv-shows-und-0-field-show']")
+    @FindBy(how = How.CSS, using = "select[id='edit-field-tv-shows-und-0-show']")
     private WebElement Show_Ddl;
     
-    @FindBy(how = How.CSS, using = "select[id*='edit-field-pub-relation-tv-shows-und-0-field-season")
+    @FindBy(how = How.CSS, using = "select[id*='edit-field-tv-shows-und-0-season']")
     private WebElement Season_Ddl;
     
     @FindBy(how = How.CSS, using = "select[id*='edit-field-pub-relation-movie")
@@ -73,7 +73,7 @@ public class Relationships {
     		 @Override
     		 public Boolean apply(WebDriver webDriver) {
     		 WebElement element = Season_Ddl;
-    		 return element.isEnabled() && element.isDisplayed();
+    		 return element.isEnabled() && element.isDisplayed() && new Select(Season_Ddl).getOptions().size() > 1;
     		 }
     	}); 
     	new Select(Season_Ddl).selectByVisibleText(seasonName);
