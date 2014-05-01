@@ -1,6 +1,14 @@
 package com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform;
 
 import com.nbcuni.test.publisher.common.AppLib;
+import com.nbcuni.test.publisher.common.Driver.Driver;
+import org.openqa.selenium.WebDriverException;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.sikuli.script.*;
 import org.testng.Reporter;
 
@@ -13,11 +21,17 @@ import org.testng.Reporter;
 
 public class MPXAddPlayer {
 
+	private Driver webDriver;
+	private WebDriverWait wait;
     private AppLib applib;
     private Screen sikuli;
     private MPXAssets mpxAssets;
     
-    public MPXAddPlayer(AppLib applib) {
+    //PAGE OBJECT CONSTRUCTOR
+    public MPXAddPlayer(Driver webDriver, AppLib applib) {
+    	this.webDriver = webDriver;
+    	PageFactory.initElements(webDriver, this);
+    	wait = new WebDriverWait(webDriver, 10);
         sikuli = new Screen();
     	this.applib = applib;
     	mpxAssets = new MPXAssets(applib);
@@ -29,20 +43,35 @@ public class MPXAddPlayer {
     	return applib.getPathToSikuliImages();
     }
     
+    //PAGE OBJECT IDENTIFIERS
+    @FindBy(how = How.XPATH, using = "//a[contains(@class, 'accordion-toggle')][text()='Players']")
+    private WebElement Players_Lnk;
+    
+    @FindBy(how = How.XPATH, using = "//a[text()='All Players']")
+    private WebElement AllPlayers_Lnk;
+    
+    
+    //PAGE OBJECT METHODS
     public void ClickPlayersLnk() throws Exception {
     	
     	Reporter.log("Click the 'Players' link.");
-    	mpxAssets.WaitForImgPresent(getImagePath() + "Players/Players_Lnk.png");
-    	sikuli.click(getImagePath() + "Players/Players_Lnk.png");
+    	try {
+    		Players_Lnk.click();
+    		
+    	}
+    	catch (WebDriverException e) {
+    		webDriver.executeScript("arguments[0].click();", Players_Lnk);
+    		
+    	}
     }
     
     public void ClickAllPlayersLnk() throws Exception {
     	
     	Reporter.log("Click the 'All Players' link.");
-    	mpxAssets.WaitForImgPresent(getImagePath() + "Players/AllPlayers_Lnk.png");
-    	sikuli.click(getImagePath() + "Players/AllPlayers_Lnk.png");
+    	wait.until(ExpectedConditions.visibilityOf(AllPlayers_Lnk)).click();
     	mpxAssets.WaitForImgPresent(getImagePath() + "Players/AllPlayers_Lst.png");
     	mpxAssets.WaitForAllAssetsToLoad();
+    	
     }
     
     public void ClickAddBtn() throws Exception {

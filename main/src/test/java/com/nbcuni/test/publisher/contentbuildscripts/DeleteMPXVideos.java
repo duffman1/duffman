@@ -19,7 +19,7 @@ public class DeleteMPXVideos extends ParentTest{
         	mpxLogin.OpenMPXThePlatform();
         	mpxLogin.Login(applib.getMPXUsername(), applib.getMPXPassword());
         	
-        	MPXSelectAccount mpxSelectAccount = new MPXSelectAccount(applib);
+        	MPXSelectAccount mpxSelectAccount = new MPXSelectAccount(webDriver, applib);
         	mpxSelectAccount.SelectAccount("DB TV");
         	
         	int I = 0;

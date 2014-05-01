@@ -106,7 +106,7 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
             	
             	//Step 3
             	if (configuredAccounts.contains("DB TV")) {
-            	MPXSelectAccount mpxSelectAccount = new MPXSelectAccount(applib);
+            	MPXSelectAccount mpxSelectAccount = new MPXSelectAccount(webDriver, applib);
             	mpxSelectAccount.SelectAccount("DB TV");
             	
             	//Step 4 (test creates new mpx asset)

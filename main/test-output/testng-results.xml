@@ -2,13 +2,7 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
     <line>
-      <![CDATA[Failed to set timeouts and maximize window]]>
-    </line>
-    <line>
       <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify access denied text is present.]]>
     </line>
     <line>
       <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
@@ -19,33 +13,396 @@
     <line>
       <![CDATA[Click the 'Login' button.]]>
     </line>
+    <line>
+      <![CDATA[Mouse over the 'Configuration' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Media' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Media: thePlatform mpx settings' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.]]>
+    </line>
+    <line>
+      <![CDATA[Get all the selected import account options and store to a list.]]>
+    </line>
+    <line>
+      <![CDATA[Open the mpx platform.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'mpx/AdminPub7QA' in the 'Username' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Pa55word' in the 'Password' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Login' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Players' link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'All Players' link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Add' button.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'AutomationPlayer1a66b78762' in the 'Title' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Files' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'mpxPlayers' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Sync MPX Players' link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Sync MPX Players Now' link.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'players returned for account' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify there are no errors present.]]>
+    </line>
+    <line>
+      <![CDATA[Enter title AutomationPlayer1a66b78762.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Apply' button.]]>
+    </line>
+    <line>
+      <![CDATA[Get the text of the first search result set item.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Files' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'mpxMedia' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Enter title Automation.]]>
+    </line>
+    <line>
+      <![CDATA[Select the 'Published' from the 'MPX Status/Published' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Select the DB TV from the 'Source' select ddl.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Apply' button.]]>
+    </line>
+    <line>
+      <![CDATA[Get the text of the first search result set item.]]>
+    </line>
+    <line>
+      <![CDATA[Click the first search title link in the search result set.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Edit' link in the work bench.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Edit mpx_video_1 Automation67122913e8 dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Select 'AutomationPlayer1a66b78762' from the 'Video Player' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Open the mpx platform.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Players' link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'All Players' link.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'AutomationPlayer1a66b78762' in the 'Player Search' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Search by Players Title' link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Player Title' label to give focus to the player item.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Disable Player' check box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Status report dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Files' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'mpxPlayers' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify that the disabled and unpublished player text is present for player titled 'AutomationPlayer1a66b78762'.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Status report dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Files' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'mpxPlayers' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify that the disabled and unpublished player text is present for player titled 'AutomationPlayer1a66b78762'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter title AutomationPlayer1a66b78762.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Apply' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the first search title link in the search result set.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Edit' link in the work bench.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Edit mpx_player AutomationPlayer1a66b78762 dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Publishing Options' link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'MPX Player AutomationPlayer1a66b78762 has been updated.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify there are no errors present.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Files' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'mpxPlayers' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify that the disabled and unpublished player text is present for player titled 'AutomationPlayer1a66b78762'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'MPX Media' link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify that the disabled and unpublished player text is present for player titled 'AutomationPlayer1a66b78762'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Configuration' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Media' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Media: thePlatform mpx settings' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify that the disabled and unpublished player text is present for player titled 'AutomationPlayer1a66b78762'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'click here' link for the unpublished player titled 'AutomationPlayer1a66b78762'.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Edit mpx_player AutomationPlayer1a66b78762 dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Publishing Options' link.]]>
+    </line>
+    <line>
+      <![CDATA[Check the 'Published' checkbox]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Files' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'mpxPlayers' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify that the disabled and unpublished player text is present for player titled 'AutomationPlayer1a66b78762'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the MPX 'Login' link for the unpublished player 'AutomationPlayer1a66b78762'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Players' link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'All Players' link.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'AutomationPlayer1a66b78762' in the 'Player Search' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Search by Players Title' link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Player Title' label to give focus to the player item.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Disable Player' check box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Status report dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Files' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'mpxPlayers' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'An MPXplayer that's in use (AutomationPlayer1a66b78762) has been disabled and unpublished.' is NOT present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Status report dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Files' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'mpxPlayers' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'An MPXplayer that's in use (AutomationPlayer1a66b78762) has been disabled and unpublished.' is NOT present on the page.]]>
+    </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="32329" started-at="2014-04-29T19:52:57Z" finished-at="2014-04-29T19:53:29Z">
+  <suite name="Default suite" duration-ms="370840" started-at="2014-05-01T12:01:18Z" finished-at="2014-05-01T12:07:28Z">
     <groups>
+      <group name="mpx">
+        <method signature="NotificationPlayerUnavailability.NotificationPlayerUnavailability_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability@4fa8b45d]" name="NotificationPlayerUnavailability_Test" class="com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability"/>
+      </group> <!-- mpx -->
       <group name="full">
-        <method signature="FileViewDeniedToUnauthenticatedUsers.FileViewDeniedToUnauthenticatedUsers_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Security.FileViewDeniedToUnauthenticatedUsers@83602ca]" name="FileViewDeniedToUnauthenticatedUsers_Test" class="com.nbcuni.test.publisher.tests.Security.FileViewDeniedToUnauthenticatedUsers"/>
+        <method signature="NotificationPlayerUnavailability.NotificationPlayerUnavailability_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability@4fa8b45d]" name="NotificationPlayerUnavailability_Test" class="com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability"/>
       </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="32329" started-at="2014-04-29T19:52:57Z" finished-at="2014-04-29T19:53:29Z">
-      <class name="com.nbcuni.test.publisher.tests.Security.FileViewDeniedToUnauthenticatedUsers">
-        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Security.FileViewDeniedToUnauthenticatedUsers@83602ca]" name="startGridAndHub" is-config="true" duration-ms="13" started-at="2014-04-29T15:52:57Z" finished-at="2014-04-29T15:52:57Z">
+    <test name="Default test" duration-ms="370840" started-at="2014-05-01T12:01:18Z" finished-at="2014-05-01T12:07:28Z">
+      <class name="com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability">
+        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability@4fa8b45d]" name="startGridAndHub" is-config="true" duration-ms="11730" started-at="2014-05-01T08:01:06Z" finished-at="2014-05-01T08:01:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startGridAndHub -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Security.FileViewDeniedToUnauthenticatedUsers@83602ca]" name="startSelenium" is-config="true" duration-ms="25857" started-at="2014-04-29T15:52:57Z" finished-at="2014-04-29T15:53:23Z">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability@4fa8b45d]" name="startSelenium" is-config="true" duration-ms="2203" started-at="2014-05-01T08:01:18Z" finished-at="2014-05-01T08:01:20Z">
           <reporter-output>
-            <line>
-              <![CDATA[Failed to set timeouts and maximize window]]>
-            </line>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="FileViewDeniedToUnauthenticatedUsers_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Security.FileViewDeniedToUnauthenticatedUsers@83602ca]" name="FileViewDeniedToUnauthenticatedUsers_Test" duration-ms="5347" started-at="2014-04-29T15:53:23Z" finished-at="2014-04-29T15:53:28Z">
+        <test-method status="PASS" signature="NotificationPlayerUnavailability_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability@4fa8b45d]" name="NotificationPlayerUnavailability_Test" duration-ms="368054" started-at="2014-05-01T08:01:20Z" finished-at="2014-05-01T08:07:28Z">
           <reporter-output>
             <line>
               <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify access denied text is present.]]>
             </line>
             <line>
               <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
@@ -56,24 +413,390 @@
             <line>
               <![CDATA[Click the 'Login' button.]]>
             </line>
+            <line>
+              <![CDATA[Mouse over the 'Configuration' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Media' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Media: thePlatform mpx settings' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.]]>
+            </line>
+            <line>
+              <![CDATA[Get all the selected import account options and store to a list.]]>
+            </line>
+            <line>
+              <![CDATA[Open the mpx platform.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'mpx/AdminPub7QA' in the 'Username' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Pa55word' in the 'Password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Login' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Players' link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'All Players' link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Add' button.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'AutomationPlayer1a66b78762' in the 'Title' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Files' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'mpxPlayers' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Sync MPX Players' link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Sync MPX Players Now' link.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'players returned for account' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify there are no errors present.]]>
+            </line>
+            <line>
+              <![CDATA[Enter title AutomationPlayer1a66b78762.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Apply' button.]]>
+            </line>
+            <line>
+              <![CDATA[Get the text of the first search result set item.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Files' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'mpxMedia' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Enter title Automation.]]>
+            </line>
+            <line>
+              <![CDATA[Select the 'Published' from the 'MPX Status/Published' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Select the DB TV from the 'Source' select ddl.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Apply' button.]]>
+            </line>
+            <line>
+              <![CDATA[Get the text of the first search result set item.]]>
+            </line>
+            <line>
+              <![CDATA[Click the first search title link in the search result set.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Edit' link in the work bench.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Edit mpx_video_1 Automation67122913e8 dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Select 'AutomationPlayer1a66b78762' from the 'Video Player' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Open the mpx platform.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Players' link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'All Players' link.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'AutomationPlayer1a66b78762' in the 'Player Search' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Search by Players Title' link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Player Title' label to give focus to the player item.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Disable Player' check box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Status report dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Files' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'mpxPlayers' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify that the disabled and unpublished player text is present for player titled 'AutomationPlayer1a66b78762'.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Status report dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Files' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'mpxPlayers' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify that the disabled and unpublished player text is present for player titled 'AutomationPlayer1a66b78762'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter title AutomationPlayer1a66b78762.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Apply' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the first search title link in the search result set.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Edit' link in the work bench.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Edit mpx_player AutomationPlayer1a66b78762 dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Publishing Options' link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'MPX Player AutomationPlayer1a66b78762 has been updated.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify there are no errors present.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Files' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'mpxPlayers' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify that the disabled and unpublished player text is present for player titled 'AutomationPlayer1a66b78762'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'MPX Media' link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify that the disabled and unpublished player text is present for player titled 'AutomationPlayer1a66b78762'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Configuration' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Media' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Media: thePlatform mpx settings' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify that the disabled and unpublished player text is present for player titled 'AutomationPlayer1a66b78762'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'click here' link for the unpublished player titled 'AutomationPlayer1a66b78762'.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Edit mpx_player AutomationPlayer1a66b78762 dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Publishing Options' link.]]>
+            </line>
+            <line>
+              <![CDATA[Check the 'Published' checkbox]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Files' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'mpxPlayers' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify that the disabled and unpublished player text is present for player titled 'AutomationPlayer1a66b78762'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the MPX 'Login' link for the unpublished player 'AutomationPlayer1a66b78762'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Players' link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'All Players' link.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'AutomationPlayer1a66b78762' in the 'Player Search' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Search by Players Title' link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Player Title' label to give focus to the player item.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Disable Player' check box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Status report dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Files' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'mpxPlayers' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'An MPXplayer that's in use (AutomationPlayer1a66b78762) has been disabled and unpublished.' is NOT present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Status report dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Files' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'mpxPlayers' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'An MPXplayer that's in use (AutomationPlayer1a66b78762) has been disabled and unpublished.' is NOT present on the page.]]>
+            </line>
           </reporter-output>
-        </test-method> <!-- FileViewDeniedToUnauthenticatedUsers_Test -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Security.FileViewDeniedToUnauthenticatedUsers@83602ca]" name="stopSelenium" is-config="true" duration-ms="1112" started-at="2014-04-29T15:53:28Z" finished-at="2014-04-29T15:53:29Z">
+        </test-method> <!-- NotificationPlayerUnavailability_Test -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability@4fa8b45d]" name="stopSelenium" is-config="true" duration-ms="570" started-at="2014-05-01T08:07:28Z" finished-at="2014-05-01T08:07:28Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=FileViewDeniedToUnauthenticatedUsers_Test status=SUCCESS method=FileViewDeniedToUnauthenticatedUsers.FileViewDeniedToUnauthenticatedUsers_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Security.FileViewDeniedToUnauthenticatedUsers@83602ca] output=Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]]>
+                <![CDATA[[TestResult name=NotificationPlayerUnavailability_Test status=SUCCESS method=NotificationPlayerUnavailability.NotificationPlayerUnavailability_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability@4fa8b45d] output=Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Security.FileViewDeniedToUnauthenticatedUsers@83602ca]" name="stopGridAndHub" is-config="true" duration-ms="7" started-at="2014-04-29T15:53:30Z" finished-at="2014-04-29T15:53:30Z">
+        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability@4fa8b45d]" name="stopGridAndHub" is-config="true" duration-ms="392" started-at="2014-05-01T08:07:29Z" finished-at="2014-05-01T08:07:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopGridAndHub -->
-      </class> <!-- com.nbcuni.test.publisher.tests.Security.FileViewDeniedToUnauthenticatedUsers -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

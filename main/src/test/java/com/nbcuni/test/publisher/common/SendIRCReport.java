@@ -63,7 +63,7 @@ public class SendIRCReport {
             writer.flush();
             writer.write("PRIVMSG " + sendTo + " :A detailed test report has been emailed to you as well as posted to Rally attached to " + config.getConfigValue("RallyTaskID") + ".\r\n");
             writer.flush();
-            
+                
             //Close writer and release socket
             writer.close();
             socket.close();

@@ -39,7 +39,7 @@ public class CreateAndValidateVideo extends ParentTest{
     	MPXLogin mpxLogin = new MPXLogin(webDriver, applib);
     	mpxLogin.OpenMPXThePlatform();
     	mpxLogin.Login(applib.getMPXUsername(), applib.getMPXPassword());
-    	MPXSelectAccount mpxSelectAccount = new MPXSelectAccount(applib);
+    	MPXSelectAccount mpxSelectAccount = new MPXSelectAccount(webDriver, applib);
         mpxSelectAccount.SelectAccount("DB TV");
     	
         //create 100 mpx assets
