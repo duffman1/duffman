@@ -65,7 +65,7 @@ public class UpdateTestResultsRally {
         QueryResponse testCaseQueryResponse = restApi.query(testCaseRequest);
         testCaseQueryResponse.getResults().get(0).getAsJsonObject();
         String testCaseRef = testCaseQueryResponse.getResults().get(0).getAsJsonObject().get("_ref").getAsString();
-
+        
         //Update the test results with screenshot
         try {
         

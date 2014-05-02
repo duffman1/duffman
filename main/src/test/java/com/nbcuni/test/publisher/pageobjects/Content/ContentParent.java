@@ -144,7 +144,8 @@ public class ContentParent {
         for (String text : txtItems) {
         	
         	Reporter.log("Verify the text '" + text + "' is NOT present on the page.");
-            Assert.assertFalse(bodyTxt.contains(text));
+            Assert.assertFalse(bodyTxt.contains(text),
+            		"Text '" + text + "' is present on the page when it should NOT be.");
 
         }
     }
@@ -155,6 +156,7 @@ public class ContentParent {
     	String pageSrc = webDriver.getPageSource();
     	
     	for (String source : srcItems) {
+    		Reporter.log("Verify '" + source + "' is present in page source.");
     		Assert.assertTrue(pageSrc.contains(source),
         			"Source '" + source + "' is not present in page.");
     	}
@@ -163,6 +165,7 @@ public class ContentParent {
     
     public void VerifySourceNotInPage(String scriptSrc) throws Exception {
     	
+    	Reporter.log("Verify '" + scriptSrc + "' is not present in page source.");
     	Assert.assertFalse(webDriver.getPageSource().contains(scriptSrc), 
     			"Source '" + scriptSrc + "' is present when it should not be.");
     	

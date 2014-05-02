@@ -1,4 +1,4 @@
-<h2>Reporter output</h2><table><tr><td>Open url 'http://update.stage.nbcupublisher7.publisher7.com'.</td></tr>
+<h2>Reporter output</h2><table><tr><td>Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.</td></tr>
 <tr><td>Enter the user's email address in the 'Email Address' text box.</td></tr>
 <tr><td>Enter the user's password in the 'Password' text box.</td></tr>
 <tr><td>Click the 'Login' button.</td></tr>
@@ -6,6 +6,10 @@
 <tr><td>Switch to frame titled 'Modules'.</td></tr>
 <tr><td>Enter 'Sticky Edit Actions' in the 'Filter Name' text box.</td></tr>
 <tr><td>Wait for the module titled 'Sticky Edit Actions' to appear in the list.</td></tr>
+<tr><td>Uncheck the 'Sticky Edit Actions' module checkbox.</td></tr>
+<tr><td>Click the 'Save configuration' button.</td></tr>
+<tr><td>Verify success message of 'The configuration options have been saved.' is present.</td></tr>
+<tr><td>Verify there are no errors present.</td></tr>
 <tr><td>Enter 'Devel' in the 'Filter Name' text box.</td></tr>
 <tr><td>Wait for the module titled 'Devel' to appear in the list.</td></tr>
 <tr><td>Enter 'File Lock' in the 'Filter Name' text box.</td></tr>
@@ -16,12 +20,48 @@
 <tr><td>Wait for the module titled 'Database logging' to appear in the list.</td></tr>
 <tr><td>Enter 'Pub Post' in the 'Filter Name' text box.</td></tr>
 <tr><td>Wait for the module titled 'Pub Post' to appear in the list.</td></tr>
-<tr><td>Verify the 'Pub Post' check box is checked.</td></tr>
+<tr><td>Check the 'Pub Post' check box.</td></tr>
+<tr><td>Click the 'Save configuration' button.</td></tr>
+<tr><td>Switch to frame titled 'Some required modules must be enabled'.</td></tr>
+<tr><td>Click the 'Continue' button to enable additional modules.</td></tr>
+<tr><td>Switch back to the 'Modules' frame.</td></tr>
+<tr><td>Switch to frame titled 'Modules'.</td></tr>
+<tr><td>Verify success message of 'The configuration options have been saved.' is present.</td></tr>
+<tr><td>Verify there are no errors present.</td></tr>
 <tr><td>Click the 'Close Overlay X'.</td></tr>
-<tr><td>Open url 'http://update.stage.nbcupublisher7.publisher7.com'.</td></tr>
+<tr><td>Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.</td></tr>
 <tr><td>Enter the user's email address in the 'Email Address' text box.</td></tr>
 <tr><td>Enter the user's password in the 'Password' text box.</td></tr>
 <tr><td>Click the 'Login' button.</td></tr>
-<tr><td>Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/ImplementMPS_TC2901.png </td></tr>
-<tr><td><br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/ImplementMPS_TC2901.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/ImplementMPS_TC2901.png' height='500' width='500'/> </a></td></tr>
+<tr><td>Click the 'Modules' menu link.</td></tr>
+<tr><td>Switch to frame titled 'Modules'.</td></tr>
+<tr><td>Enter 'Metatag: Twitter Cards (See It)' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for the module titled 'Metatag: Twitter Cards (See It)' to appear in the list.</td></tr>
+<tr><td>Verify the 'Metatag: Twitter Cards (See It)' check box is checked.</td></tr>
+<tr><td>Click the 'Close Overlay X'.</td></tr>
+<tr><td>Mouse over the 'Content' menu link.</td></tr>
+<tr><td>Mouse over the 'Add content' menu link.</td></tr>
+<tr><td>Click the 'Post' menu link.</td></tr>
+<tr><td>Switch to the active frame titled 'Create Post dialog'.</td></tr>
+<tr><td>Enter '77ed15b687be435' in the 'Title' text box.</td></tr>
+<tr><td>Switch to the Synopsis frame.</td></tr>
+<tr><td>Enter a randomized text string into the 'Body' text area.</td></tr>
+<tr><td>Switch to the active frame titled 'Create Post dialog'.</td></tr>
+<tr><td>Click the 'Meta tags' link.</td></tr>
+<tr><td>Click the 'TWITTER CARD' link.</td></tr>
+<tr><td>Enter '9222635058369246112' in the 'See it: ShowID/EpisodeID' text box.</td></tr>
+<tr><td>Select the 'See It (s)' from the 'See It: IDSpace' drop down list.</td></tr>
+<tr><td>Enter 'fall' in the 'See it: Campaign ID' text box.</td></tr>
+<tr><td>Enter 'mainpage' in the 'See it: Asset ID' text box.</td></tr>
+<tr><td>Click the 'Save' button.</td></tr>
+<tr><td>Verify success message of 'Post 77ed15b687be435 has been created.' is present.</td></tr>
+<tr><td>Verify there are no errors present.</td></tr>
+<tr><td>Verify 'twitter:seeit:idspace' is present in page source.</td></tr>
+<tr><td>Verify 'content="s"' is present in page source.</td></tr>
+<tr><td>Verify 'twitter:seeit:showid' is present in page source.</td></tr>
+<tr><td>Verify 'content="9222635058369246112"' is present in page source.</td></tr>
+<tr><td>Verify 'twitter:seeit:campaignid' is present in page source.</td></tr>
+<tr><td>Verify 'content="fall"' is present in page source.</td></tr>
+<tr><td>Verify 'twitter:seeit:assetid' is present in page source.</td></tr>
+<tr><td>Verify 'content="mainpage"' is present in page source.</td></tr>
 </table>

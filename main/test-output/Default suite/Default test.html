@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu May 01 08:01:18 EDT 2014</td>
+<td>Started on:</td><td>Fri May 02 10:14:52 EDT 2014</td>
 </tr>
-<tr><td>Total time:</td><td>370 seconds (370840 ms)</td>
+<tr><td>Total time:</td><td>301 seconds (301915 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,142 +75,338 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability.NotificationPlayerUnavailability_Test()'><b>NotificationPlayerUnavailability_Test</b><br>Test class: com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability<br/>
-<a href="#Output-1461708251" onClick='toggleBox("Output-1461708251", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.SchedulingContentPublishUnpublished.SchedulingContentPublishUnpublished_TC2159()'><b>SchedulingContentPublishUnpublished_TC2159</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.SchedulingContentPublishUnpublished<br/>
+<a href="#Output-407866163" onClick='toggleBox("Output-407866163", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1461708251" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1461708251">
+<a href="#Output-407866163" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-407866163">
+STEP 1<br/>
 Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.<br/>
 Enter the user's email address in the 'Email Address' text box.<br/>
 Enter the user's password in the 'Password' text box.<br/>
 Click the 'Login' button.<br/>
-Mouse over the 'Configuration' menu link.<br/>
-Mouse over the 'Media' menu link.<br/>
-Click the 'Media: thePlatform mpx settings' menu link.<br/>
-Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.<br/>
-Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.<br/>
-Get all the selected import account options and store to a list.<br/>
-Open the mpx platform.<br/>
-Enter 'mpx/AdminPub7QA' in the 'Username' text box.<br/>
-Enter 'Pa55word' in the 'Password' text box.<br/>
-Click the 'Login' button.<br/>
-Click the 'Players' link.<br/>
-Click the 'All Players' link.<br/>
-Click the 'Add' button.<br/>
-Enter 'AutomationPlayer1a66b78762' in the 'Title' text box.<br/>
+STEP 2 and 3<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Add content' menu link.<br/>
+Click the 'Post' menu link.<br/>
+Switch to the active frame titled 'Create Post dialog'.<br/>
+Enter '6c0a955f5f344f9' in the 'Title' text box.<br/>
+Switch to the Synopsis frame.<br/>
+Enter a randomized text string into the 'Body' text area.<br/>
+Switch to the active frame titled 'Create Post dialog'.<br/>
+Click the 'Cover' select button.<br/>
+Switch to the select file frame.<br/>
+Enter the file path for file upload.<br/>
+Click the 'Upload' button.<br/>
+Wait for the file link to be visible after upload.<br/>
+Click the 'Next' button.<br/>
+Click the 'Public Local Files' radio button.<br/>
+Click the 'Next' button.<br/>
+Verify the file image 'HanSolo' is present.<br/>
+Verify the img is loaded and visible.<br/>
 Click the 'Save' button.<br/>
-Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.<br/>
-Mouse over the 'Content' menu link.<br/>
-Mouse over the 'Files' menu link.<br/>
-Click the 'mpxPlayers' menu link.<br/>
-Switch to the active frame titled 'Content dialog'.<br/>
-Click the 'Sync MPX Players' link.<br/>
-Click the 'Sync MPX Players Now' link.<br/>
-Verify success message of 'players returned for account' is present.<br/>
-Verify there are no errors present.<br/>
-Enter title AutomationPlayer1a66b78762.<br/>
-Click the 'Apply' button.<br/>
-Get the text of the first search result set item.<br/>
-Mouse over the 'Content' menu link.<br/>
-Mouse over the 'Files' menu link.<br/>
-Click the 'mpxMedia' menu link.<br/>
-Enter title Automation.<br/>
-Select the 'Published' from the 'MPX Status/Published' drop down list.<br/>
-Select the DB TV from the 'Source' select ddl.<br/>
-Click the 'Apply' button.<br/>
-Get the text of the first search result set item.<br/>
-Click the first search title link in the search result set.<br/>
-Click the 'Edit' link in the work bench.<br/>
-Switch to the active frame titled 'Edit mpx_video_1 Automation67122913e8 dialog'.<br/>
-Select 'AutomationPlayer1a66b78762' from the 'Video Player' drop down list.<br/>
-Click the 'Save' button.<br/>
-Open the mpx platform.<br/>
-Click the 'Players' link.<br/>
-Click the 'All Players' link.<br/>
-Enter 'AutomationPlayer1a66b78762' in the 'Player Search' text box.<br/>
-Click the 'Search by Players Title' link.<br/>
-Click the 'Player Title' label to give focus to the player item.<br/>
-Click the 'Disable Player' check box.<br/>
-Click the 'Save' button.<br/>
-Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.<br/>
-Switch to the active frame titled 'Status report dialog'.<br/>
-Click the 'Close Overlay X'.<br/>
-Mouse over the 'Content' menu link.<br/>
-Mouse over the 'Files' menu link.<br/>
-Click the 'mpxPlayers' menu link.<br/>
-Switch to the active frame titled 'Content dialog'.<br/>
-Verify that the disabled and unpublished player text is present for player titled 'AutomationPlayer1a66b78762'.<br/>
-Switch to the active frame titled 'Status report dialog'.<br/>
-Click the 'Close Overlay X'.<br/>
-Mouse over the 'Content' menu link.<br/>
-Mouse over the 'Files' menu link.<br/>
-Click the 'mpxPlayers' menu link.<br/>
-Switch to the active frame titled 'Content dialog'.<br/>
-Verify that the disabled and unpublished player text is present for player titled 'AutomationPlayer1a66b78762'.<br/>
-Enter title AutomationPlayer1a66b78762.<br/>
-Click the 'Apply' button.<br/>
-Click the first search title link in the search result set.<br/>
-Click the 'Edit' link in the work bench.<br/>
-Switch to the active frame titled 'Edit mpx_player AutomationPlayer1a66b78762 dialog'.<br/>
+Switch to the active frame titled 'Create Post dialog'.<br/>
 Scroll the 'Publishing Options' link into view.<br/>
 Click the 'Publishing Options' link.<br/>
+Select 'Draft' from the 'Moderation State' drop down list.<br/>
 Click the 'Save' button.<br/>
-Verify success message of 'MPX Player AutomationPlayer1a66b78762 has been updated.' is present.<br/>
+Verify success message of 'Post 6c0a955f5f344f9 has been created.' is present.<br/>
 Verify there are no errors present.<br/>
-Mouse over the 'Content' menu link.<br/>
-Mouse over the 'Files' menu link.<br/>
-Click the 'mpxPlayers' menu link.<br/>
-Switch to the active frame titled 'Content dialog'.<br/>
-Verify that the disabled and unpublished player text is present for player titled 'AutomationPlayer1a66b78762'.<br/>
-Click the 'MPX Media' link.<br/>
-Switch to the active frame titled 'Content dialog'.<br/>
-Verify that the disabled and unpublished player text is present for player titled 'AutomationPlayer1a66b78762'.<br/>
+STEP 4<br/>
+Click the 'Schedule' link in the work bench.<br/>
+Switch to the active frame titled '6c0a955f5f344f9 dialog'.<br/>
+Click the 'Add Scheduled Revision' link.<br/>
+Switch to the active frame titled '6c0a955f5f344f9 dialog'.<br/>
+STEP 5<br/>
+Select revision titled '6c0a955f5f344f9'.<br/>
+Select 'Moderate to Published' from the 'Select operation' drop down list.<br/>
+STEP 6<br/>
+Enter '05/02/2014' in the 'Date' text box.<br/>
+Enter '02:15 PM' in the 'Time' text box.<br/>
+STEP 7<br/>
+Click the 'Schedule' button.<br/>
+Switch to the active frame titled '6c0a955f5f344f9 dialog'.<br/>
+Verify success message of 'The scheduled revision operation has been saved' is present.<br/>
+Verify there are no errors present.<br/>
+STEP 8<br/>
+Switch to the active frame titled '6c0a955f5f344f9 dialog'.<br/>
+Verify the scheduled text '6c0a955f5f344f9' is present in the scheduled queue.<br/>
+Verify the scheduled text 'Moderate to Published' is present in the scheduled queue.<br/>
+Verify the scheduled text '05/02/2014 - ' is present in the scheduled queue.<br/>
+Verify the 'Run now' link is present for content item '6c0a955f5f344f9' with action 'Moderate to Published'.<br/>
+Verify the 'Cancel' link is present for content item '6c0a955f5f344f9' with action 'Moderate to Published'.<br/>
+STEP 9<br/>
 Click the 'Close Overlay X'.<br/>
-Mouse over the 'Configuration' menu link.<br/>
-Mouse over the 'Media' menu link.<br/>
-Click the 'Media: thePlatform mpx settings' menu link.<br/>
-Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.<br/>
-Verify that the disabled and unpublished player text is present for player titled 'AutomationPlayer1a66b78762'.<br/>
-Click the 'click here' link for the unpublished player titled 'AutomationPlayer1a66b78762'.<br/>
-Switch to the active frame titled 'Edit mpx_player AutomationPlayer1a66b78762 dialog'.<br/>
+Switch to the active frame titled 'Status report dialog'.<br/>
+Click the 'Close Overlay X'.<br/>
+Verify the text 'Revision state: Published' is present in the work bench info block.<br/>
+Verify the text 'Public: Yes' is present in the work bench info block.<br/>
+STEP 10<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Add content' menu link.<br/>
+Click the 'Post' menu link.<br/>
+Switch to the active frame titled 'Create Post dialog'.<br/>
+Enter '307d7af91efc427' in the 'Title' text box.<br/>
+Switch to the Synopsis frame.<br/>
+Enter a randomized text string into the 'Body' text area.<br/>
+Switch to the active frame titled 'Create Post dialog'.<br/>
+Click the 'Cover' select button.<br/>
+Switch to the select file frame.<br/>
+Enter the file path for file upload.<br/>
+Click the 'Upload' button.<br/>
+Wait for the file link to be visible after upload.<br/>
+Click the 'Next' button.<br/>
+Click the 'Public Local Files' radio button.<br/>
+Click the 'Next' button.<br/>
+Verify the file image 'HanSolo' is present.<br/>
+Verify the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'Create Post dialog'.<br/>
 Scroll the 'Publishing Options' link into view.<br/>
 Click the 'Publishing Options' link.<br/>
-Check the 'Published' checkbox<br/>
+Select 'Draft' from the 'Moderation State' drop down list.<br/>
 Click the 'Save' button.<br/>
+Verify success message of 'Post 307d7af91efc427 has been created.' is present.<br/>
+Verify there are no errors present.<br/>
+Click the 'Schedule' link in the work bench.<br/>
+Switch to the active frame titled '307d7af91efc427 dialog'.<br/>
+Click the 'Add Scheduled Revision' link.<br/>
+Switch to the active frame titled '307d7af91efc427 dialog'.<br/>
+Select revision titled '307d7af91efc427'.<br/>
+Select 'Moderate to Published' from the 'Select operation' drop down list.<br/>
+Enter '05/02/2014' in the 'Date' text box.<br/>
+Enter '02:21 PM' in the 'Time' text box.<br/>
+Click the 'Schedule' button.<br/>
+Switch to the active frame titled '307d7af91efc427 dialog'.<br/>
+Verify success message of 'The scheduled revision operation has been saved' is present.<br/>
+Verify there are no errors present.<br/>
+Switch to the active frame titled '307d7af91efc427 dialog'.<br/>
+Verify the scheduled text '307d7af91efc427' is present in the scheduled queue.<br/>
+Verify the scheduled text 'Moderate to Published' is present in the scheduled queue.<br/>
+Verify the scheduled text '05/02/2014 - ' is present in the scheduled queue.<br/>
+Click the 'Run now' link for content item '307d7af91efc427' with action 'Moderate to Published'.<br/>
+STEP 11<br/>
+Switch to the active frame titled '307d7af91efc427 dialog'.<br/>
+Verify the scheduled text '307d7af91efc427' is present in the scheduled queue.<br/>
+Verify the scheduled text 'Moderate to Published' is present in the scheduled queue.<br/>
+Verify the scheduled text '05/02/2014 - ' is present in the scheduled queue.<br/>
+Verify the scheduled text 'Completed' is present in the scheduled queue.<br/>
+Click the 'Close Overlay X'.<br/>
+STEP 12<br/>
 Mouse over the 'Content' menu link.<br/>
-Mouse over the 'Files' menu link.<br/>
-Click the 'mpxPlayers' menu link.<br/>
-Switch to the active frame titled 'Content dialog'.<br/>
-Verify that the disabled and unpublished player text is present for player titled 'AutomationPlayer1a66b78762'.<br/>
-Click the MPX 'Login' link for the unpublished player 'AutomationPlayer1a66b78762'.<br/>
-Click the 'Players' link.<br/>
-Click the 'All Players' link.<br/>
-Enter 'AutomationPlayer1a66b78762' in the 'Player Search' text box.<br/>
-Click the 'Search by Players Title' link.<br/>
-Click the 'Player Title' label to give focus to the player item.<br/>
-Click the 'Disable Player' check box.<br/>
+Mouse over the 'Add content' menu link.<br/>
+Click the 'Post' menu link.<br/>
+Switch to the active frame titled 'Create Post dialog'.<br/>
+Enter '5f284356c7c8447' in the 'Title' text box.<br/>
+Switch to the Synopsis frame.<br/>
+Enter a randomized text string into the 'Body' text area.<br/>
+Switch to the active frame titled 'Create Post dialog'.<br/>
+Click the 'Cover' select button.<br/>
+Switch to the select file frame.<br/>
+Enter the file path for file upload.<br/>
+Click the 'Upload' button.<br/>
+Wait for the file link to be visible after upload.<br/>
+Click the 'Next' button.<br/>
+Click the 'Public Local Files' radio button.<br/>
+Click the 'Next' button.<br/>
+Verify the file image 'HanSolo' is present.<br/>
+Verify the img is loaded and visible.<br/>
 Click the 'Save' button.<br/>
-Switch to the active frame titled 'Content dialog'.<br/>
+Switch to the active frame titled 'Create Post dialog'.<br/>
+Scroll the 'Publishing Options' link into view.<br/>
+Click the 'Publishing Options' link.<br/>
+Select 'Draft' from the 'Moderation State' drop down list.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'Post 5f284356c7c8447 has been created.' is present.<br/>
+Verify there are no errors present.<br/>
+Click the 'Schedule' link in the work bench.<br/>
+Switch to the active frame titled '5f284356c7c8447 dialog'.<br/>
+Click the 'Add Scheduled Revision' link.<br/>
+Switch to the active frame titled '5f284356c7c8447 dialog'.<br/>
+Select revision titled '5f284356c7c8447'.<br/>
+Select 'Moderate to Published' from the 'Select operation' drop down list.<br/>
+Enter '05/02/2014' in the 'Date' text box.<br/>
+Enter '02:21 PM' in the 'Time' text box.<br/>
+Click the 'Schedule' button.<br/>
+Switch to the active frame titled '5f284356c7c8447 dialog'.<br/>
+Verify success message of 'The scheduled revision operation has been saved' is present.<br/>
+Verify there are no errors present.<br/>
+Switch to the active frame titled '5f284356c7c8447 dialog'.<br/>
+Verify the scheduled text '5f284356c7c8447' is present in the scheduled queue.<br/>
+Verify the scheduled text 'Moderate to Published' is present in the scheduled queue.<br/>
+Verify the scheduled text '05/02/2014 - ' is present in the scheduled queue.<br/>
+Click the 'Run now' expand menu link for content item '5f284356c7c8447' with action 'Moderate to Published'.<br/>
+Click the 'Cancel' link for content item '5f284356c7c8447' with action 'Moderate to Published'.<br/>
+Switch to the active frame titled 'Are you sure you want to cancel this scheduled revision? dialog'.<br/>
+Click the 'Confirm' button.<br/>
+Switch to the active frame titled '5f284356c7c8447 dialog'.<br/>
+Verify success message of 'The scheduled revision operation has been cancelled.' is present.<br/>
+Verify there are no errors present.<br/>
+Verify the text 'Moderate to Published' is NOT present on the page.<br/>
+Click the 'Close Overlay X'.<br/>
+STEP 13<br/>
+Mouse over the 'My Workbench' menu link.<br/>
+Mouse over the 'Create content' menu link.<br/>
+Click the 'Post' menu link.<br/>
+Switch to the active frame titled 'Create Post dialog'.<br/>
+Enter 'b56e6e0ef30046a' in the 'Title' text box.<br/>
+Switch to the Synopsis frame.<br/>
+Enter a randomized text string into the 'Body' text area.<br/>
+Switch to the active frame titled 'Create Post dialog'.<br/>
+Scroll the 'Publishing Options' link into view.<br/>
+Click the 'Publishing Options' link.<br/>
+Select 'Draft' from the 'Moderation State' drop down list.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'Post b56e6e0ef30046a has been created.' is present.<br/>
+Verify there are no errors present.<br/>
+Click the 'Schedule' link in the work bench.<br/>
+Switch to the active frame titled 'b56e6e0ef30046a dialog'.<br/>
+Click the 'Add Scheduled Revision' link.<br/>
+Switch to the active frame titled 'b56e6e0ef30046a dialog'.<br/>
+Select revision titled 'b56e6e0ef30046a'.<br/>
+Select 'Moderate to Published' from the 'Select operation' drop down list.<br/>
+Enter '05/02/2014' in the 'Date' text box.<br/>
+Enter '02:21 PM' in the 'Time' text box.<br/>
+Click the 'Schedule' button.<br/>
+Switch to the active frame titled 'b56e6e0ef30046a dialog'.<br/>
+Verify success message of 'The scheduled revision operation has been saved' is present.<br/>
+Verify there are no errors present.<br/>
+Switch to the active frame titled 'b56e6e0ef30046a dialog'.<br/>
+Verify the scheduled text 'b56e6e0ef30046a' is present in the scheduled queue.<br/>
+Verify the scheduled text 'Moderate to Published' is present in the scheduled queue.<br/>
+Verify the scheduled text '05/02/2014 - ' is present in the scheduled queue.<br/>
+Click the 'Run now' link for content item 'b56e6e0ef30046a' with action 'Moderate to Published'.<br/>
+Switch to the active frame titled 'b56e6e0ef30046a dialog'.<br/>
+Verify the scheduled text 'b56e6e0ef30046a' is present in the scheduled queue.<br/>
+Verify the scheduled text 'Moderate to Published' is present in the scheduled queue.<br/>
+Verify the scheduled text '05/02/2014 - ' is present in the scheduled queue.<br/>
+Verify the scheduled text 'Completed' is present in the scheduled queue.<br/>
+Click the 'Close Overlay X'.<br/>
+STEP 14<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Add content' menu link.<br/>
+Click the 'Post' menu link.<br/>
+Switch to the active frame titled 'Create Post dialog'.<br/>
+Enter '95505a886cb7433' in the 'Title' text box.<br/>
+Switch to the Synopsis frame.<br/>
+Enter a randomized text string into the 'Body' text area.<br/>
+Switch to the active frame titled 'Create Post dialog'.<br/>
+Click the 'Cover' select button.<br/>
+Switch to the select file frame.<br/>
+Enter the file path for file upload.<br/>
+Click the 'Upload' button.<br/>
+Wait for the file link to be visible after upload.<br/>
+Click the 'Next' button.<br/>
+Click the 'Public Local Files' radio button.<br/>
+Click the 'Next' button.<br/>
+Verify the file image 'HanSolo' is present.<br/>
+Verify the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'Create Post dialog'.<br/>
+Scroll the 'Publishing Options' link into view.<br/>
+Click the 'Publishing Options' link.<br/>
+Select 'Draft' from the 'Moderation State' drop down list.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'Post 95505a886cb7433 has been created.' is present.<br/>
+Verify there are no errors present.<br/>
+Click the 'Edit Draft' link in the work bench.<br/>
+Switch to the active frame titled 'Edit Post 95505a886cb7433 dialog'.<br/>
+Switch to the Synopsis frame.<br/>
+Enter a randomized text string into the 'Body' text area.<br/>
+Switch to the active frame titled 'Edit Post 95505a886cb7433 dialog'.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'Post 95505a886cb7433 has been updated.' is present.<br/>
+Verify there are no errors present.<br/>
+STEP 15 and 16<br/>
+Click the 'Revisions' link in the work bench.<br/>
+Switch to the active frame titled 'Revisions dialog'.<br/>
+Verify the number of present revisions entries equals '2'.<br/>
+Click the 'Edit' extend menu button.<br/>
+Click the 'Schedule' menu button.<br/>
+Switch to the active frame titled '95505a886cb7433 dialog'.<br/>
+Select revision titled '95505a886cb7433'.<br/>
+Select 'Moderate to Published' from the 'Select operation' drop down list.<br/>
+Enter '05/02/2014' in the 'Date' text box.<br/>
+Enter '02:21 PM' in the 'Time' text box.<br/>
+Click the 'Schedule' button.<br/>
+Verify success message of 'The scheduled revision operation has been saved' is present.<br/>
+Verify there are no errors present.<br/>
+STEP 17<br/>
+Click the 'Schedule' link in the work bench.<br/>
+Switch to the active frame titled '95505a886cb7433 dialog'.<br/>
+Verify the scheduled text '95505a886cb7433' is present in the scheduled queue.<br/>
+Verify the scheduled text 'Moderate to Published' is present in the scheduled queue.<br/>
+Verify the scheduled text '05/02/2014 - ' is present in the scheduled queue.<br/>
+Verify the 'Run now' link is present for content item '95505a886cb7433' with action 'Moderate to Published'.<br/>
+STEP 18<br/>
+Click the 'Close Overlay X'.<br/>
+Mouse over the 'My Workbench' menu link.<br/>
+Mouse over the 'Create content' menu link.<br/>
+Click the 'Post' menu link.<br/>
+Switch to the active frame titled 'Create Post dialog'.<br/>
+Enter '38534e699ca64b7' in the 'Title' text box.<br/>
+Switch to the Synopsis frame.<br/>
+Enter a randomized text string into the 'Body' text area.<br/>
+Switch to the active frame titled 'Create Post dialog'.<br/>
+Scroll the 'Publishing Options' link into view.<br/>
+Click the 'Publishing Options' link.<br/>
+Select 'Draft' from the 'Moderation State' drop down list.<br/>
+Select 'Moderate to Published' from the 'Select operation' drop down list.<br/>
+Enter '05/02/2014' in the 'Date' text box.<br/>
+Enter '14:19' in the 'Time' text box.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'Post 38534e699ca64b7 has been created.' is present.<br/>
+Verify there are no errors present.<br/>
+Verify success message of '38534e699ca64b7 has been scheduled to Moderate to Published on 05/02/2014 - ' is present.<br/>
+Verify there are no errors present.<br/>
+STEP 19<br/>
+Click the 'Schedule' link in the work bench.<br/>
+Switch to the active frame titled '38534e699ca64b7 dialog'.<br/>
+Verify the scheduled text '38534e699ca64b7' is present in the scheduled queue.<br/>
+Verify the scheduled text 'Moderate to Published' is present in the scheduled queue.<br/>
+Verify the scheduled text '05/02/2014 - ' is present in the scheduled queue.<br/>
+Verify the 'Run now' link is present for content item '38534e699ca64b7' with action 'Moderate to Published'.<br/>
+Verify the 'Cancel' link is present for content item '38534e699ca64b7' with action 'Moderate to Published'.<br/>
 Click the 'Close Overlay X'.<br/>
 Switch to the active frame titled 'Status report dialog'.<br/>
 Click the 'Close Overlay X'.<br/>
-Mouse over the 'Content' menu link.<br/>
-Mouse over the 'Files' menu link.<br/>
-Click the 'mpxPlayers' menu link.<br/>
-Switch to the active frame titled 'Content dialog'.<br/>
-Verify the text 'An MPXplayer that's in use (AutomationPlayer1a66b78762) has been disabled and unpublished.' is NOT present on the page.<br/>
-Switch to the active frame titled 'Status report dialog'.<br/>
-Click the 'Close Overlay X'.<br/>
-Mouse over the 'Content' menu link.<br/>
-Mouse over the 'Files' menu link.<br/>
-Click the 'mpxPlayers' menu link.<br/>
-Switch to the active frame titled 'Content dialog'.<br/>
-Verify the text 'An MPXplayer that's in use (AutomationPlayer1a66b78762) has been disabled and unpublished.' is NOT present on the page.<br/>
+Verify the text 'Revision state: Published' is present in the work bench info block.<br/>
+Verify the text 'Public: Yes' is present in the work bench info block.<br/>
+STEP 20<br/>
+Mouse over the 'My Workbench' menu link.<br/>
+Mouse over the 'Create content' menu link.<br/>
+Click the 'Post' menu link.<br/>
+Switch to the active frame titled 'Create Post dialog'.<br/>
+Enter '11e7b379c46d452' in the 'Title' text box.<br/>
+Switch to the Synopsis frame.<br/>
+Enter a randomized text string into the 'Body' text area.<br/>
+Switch to the active frame titled 'Create Post dialog'.<br/>
+Scroll the 'Publishing Options' link into view.<br/>
+Click the 'Publishing Options' link.<br/>
+Select 'Draft' from the 'Moderation State' drop down list.<br/>
+Select 'Moderate to Published' from the 'Select operation' drop down list.<br/>
+Enter '05/03/2014' in the 'Date' text box.<br/>
+Enter '14:19' in the 'Time' text box.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'Post 11e7b379c46d452 has been created.' is present.<br/>
+Verify there are no errors present.<br/>
+Verify success message of '11e7b379c46d452 has been scheduled to Moderate to Published on 05/03/2014 - ' is present.<br/>
+Verify there are no errors present.<br/>
+Click the 'Schedule' link in the work bench.<br/>
+Switch to the active frame titled '11e7b379c46d452 dialog'.<br/>
+Verify the scheduled text '11e7b379c46d452' is present in the scheduled queue.<br/>
+Verify the scheduled text 'Moderate to Published' is present in the scheduled queue.<br/>
+Verify the scheduled text '05/03/2014 - ' is present in the scheduled queue.<br/>
+Click the 'Run now' link for content item '11e7b379c46d452' with action 'Moderate to Published'.<br/>
+Switch to the active frame titled '11e7b379c46d452 dialog'.<br/>
+Verify the scheduled text '11e7b379c46d452' is present in the scheduled queue.<br/>
+Verify the scheduled text 'Moderate to Published' is present in the scheduled queue.<br/>
+Verify the scheduled text 'Completed' is present in the scheduled queue.<br/>
 </div>
 </td>
 <td></td>
-<td>368</td>
-<td>com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability@4fa8b45d</td></tr>
+<td>298</td>
+<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.SchedulingContentPublishUnpublished@5b5b0e9f</td></tr>
 </table><p>
 </body>
 </html>

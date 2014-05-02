@@ -1,7 +1,10 @@
 package com.nbcuni.test.publisher.tests.Advertising.MPS;
 
 import java.util.Arrays;
+
+import org.testng.Reporter;
 import org.testng.annotations.Test;
+
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Blocks;
@@ -22,11 +25,11 @@ public class ImplementMPS extends ParentTest {
     @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"})
     public void ImplementMPS_TC2901() throws Exception {
         
-        	//Step 1
+        	Reporter.log("STEP 1");
         	UserLogin userLogin = applib.openApplication();
         	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
             
-        	//Step 2
+        	Reporter.log("STEP 2");
         	taxonomy.NavigateSite("Modules");
             overlay.SwitchToActiveFrame();
             Modules modules = new Modules(webDriver, applib);
@@ -40,7 +43,7 @@ public class ImplementMPS extends ParentTest {
             modules.DisableModule("Doubleclick for Publishers");
             overlay.ClickCloseOverlayLnk();
             
-            //Step 3
+            Reporter.log("STEP 3");
             taxonomy.NavigateSite("Reports>>Status report");
             overlay.SwitchToActiveFrame();
             contentParent.VerifyPageContentPresent(Arrays.asList("Ad Tag Style", "MPS"));
@@ -48,7 +51,7 @@ public class ImplementMPS extends ParentTest {
             errorChecking.VerifyNoMessageErrorsPresent();
             overlay.ClickCloseOverlayLnk();
             
-            //Step 4
+            Reporter.log("STEP 4");
             taxonomy.NavigateSite("Content>>Add content>>Movie");
             overlay.SwitchToActiveFrame();
             BasicInformation basicInformation = new BasicInformation(webDriver);
@@ -70,14 +73,14 @@ public class ImplementMPS extends ParentTest {
             overlay.switchToDefaultContent();
             contentParent.VerifyMessageStatus("Movie " + movieTitle + " has been created.");
             
-            //Step 5 and 6 TODO - this script isn't correct, get correct script from dev as time allows
+            Reporter.log("STEP 5 and 6 - awaiting input on dev for proper script to evaluate. Ignoring this step for the time being.");
             //contentParent.VerifySourceInPage(Arrays.asList("var mps = mps || {}; mps.pagevars{\"site\":\"update\",\"title\":\"" + movieTitle + "", "{\"genre\":\"Action\",\"movie-rating\":\"G\",\"movie-types\":\"Syndicated\"},\"field\":[]}"));
             
-            //Step 7
+            Reporter.log("STEP 7");
             webDriver.navigate().to(webDriver.getCurrentUrl() + "?kumud=1");
             contentParent.VerifySourceInPage(Arrays.asList("a3VtdWQ9MQ=="));
             
-            //Step 8
+            Reporter.log("STEP 8");
             taxonomy.NavigateSite("Structure>>MPS Blocks>>Add");
             overlay.SwitchToActiveFrame();
             MPSBlocks mpsBlocks = new MPSBlocks(webDriver);
@@ -89,7 +92,7 @@ public class ImplementMPS extends ParentTest {
             contentParent.VerifyMessageStatus(uniqueName + " has been created.");
             overlay.ClickCloseOverlayLnk();
             
-            //Step 9
+            Reporter.log("STEP 9");
             taxonomy.NavigateSite("Structure>>Blocks");
             overlay.SwitchToActiveFrame();
             Blocks blocks = new Blocks(webDriver);
@@ -97,9 +100,9 @@ public class ImplementMPS extends ParentTest {
             blocks.ClickSaveBlocksBtn();
             contentParent.VerifyMessageStatus("The block settings have been updated.");
             
-            //Step 10 - N/A
+            Reporter.log("STEP 10 - N/A");
             
-            //Cleanup
+            Reporter.log("CLEANUP");
             blocks.SelectRegion(blockName, "- None -");
             blocks.ClickSaveBlocksBtn();
             overlay.ClickCloseOverlayLnk();

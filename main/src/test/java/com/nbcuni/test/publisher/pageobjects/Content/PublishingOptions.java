@@ -61,6 +61,15 @@ public class PublishingOptions {
     	return webDriver.findElement(By.xpath("//div[@class='reference-autocomplete'][text()='" + optionTxt + "']"));
     }
     
+    @FindBy(how = How.ID, using = "edit-revision-scheduler-operation")
+    private WebElement Operation_Ddl;
+    
+    @FindBy(how = How.ID, using = "edit-revision-scheduler-datetime-datepicker-popup-0")
+    private WebElement Date_Txb;
+    
+    @FindBy(how = How.ID, using = "edit-revision-scheduler-datetime-timeEntry-popup-1")
+    private WebElement Time_Txb;
+    
     private String ScrollUp_Js() {
     	String jsScrollUp = "window.scrollBy(0,-500);";
     	return jsScrollUp;
@@ -166,6 +175,25 @@ public class PublishingOptions {
     	Reporter.log("Verify the 'Published' checkbox is unchecked and is not enabled.");
     	Assert.assertFalse(Published_Cbx.isSelected());
     	Assert.assertFalse(Published_Cbx.isEnabled());
+    }
+    
+    public void SelectOperation(String operationValue) throws Exception {
+    	
+    	Reporter.log("Select '" + operationValue + "' from the 'Select operation' drop down list.");
+    	new Select(Operation_Ddl).selectByVisibleText(operationValue);
+    }
+    
+    public void EnterDate(String date) throws Exception {
+    	
+    	Reporter.log("Enter '" + date + "' in the 'Date' text box.");
+    	Date_Txb.sendKeys(date);
+    }
+    
+    public void EnterTime(String time) throws Exception {
+    	
+    	Reporter.log("Enter '" + time + "' in the 'Time' text box.");
+    	Time_Txb.click();
+    	Time_Txb.sendKeys(time);
     }
     
 }

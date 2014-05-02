@@ -84,7 +84,7 @@ public class WorkBench {
 
         for (String text : txtItems) {
         	Reporter.log("Verify the text '" + text + "' is present in the work bench info block.");
-        	Assert.assertTrue(WorkBenchInfo_Ctr.getText().contains(text));
+        	Assert.assertTrue(WorkBenchInfo_Ctr.getText().contains(text), "Text '" + text + "' was not present in the work bench info block.");
         }
     }
     

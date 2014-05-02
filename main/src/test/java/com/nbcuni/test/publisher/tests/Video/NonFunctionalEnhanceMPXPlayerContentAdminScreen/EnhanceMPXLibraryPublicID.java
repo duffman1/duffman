@@ -58,7 +58,6 @@ public class EnhanceMPXLibraryPublicID extends ParentTest{
         		//Step 5
         		searchFor.ClickResetBtn();
         		searchFor.ClickSearchHeaderColumnLnk("Public ID");
-        		Assert.assertFalse(searchFor.GetFirstMPXPlayerSearchResult().equals(initialFirstResult));
         		Assert.assertTrue(searchFor.GetMPXSearchResultSize().equals(initialResultSize));
         		
         		//Step 6 and 7

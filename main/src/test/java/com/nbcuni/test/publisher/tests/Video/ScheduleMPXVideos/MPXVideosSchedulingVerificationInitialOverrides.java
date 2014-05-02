@@ -103,8 +103,17 @@ public class MPXVideosSchedulingVerificationInitialOverrides extends ParentTest{
             searchFor.EnterTitle("Automation1");
             searchFor.ClickApplyBtn();
             searchFor.VerifySearchResultsPresent(Arrays.asList("Automation1"));
-
             searchFor.ClickSearchTitleLnk("Automation1");
+            
+            //Setup - resets overrides in the event of a previous failure
+            WorkBench workBench = new WorkBench(webDriver, applib);
+            workBench.ClickWorkBenchTab("Edit");
+            overlay.SwitchToActiveFrame();
+            EditMPXVideo editMPXVideo = new EditMPXVideo(webDriver);
+            editMPXVideo.UnCheckOverrideMPXAvailableDateCbx();
+            editMPXVideo.UnCheckOverrideMPXExpirationDateCbx();
+            contentParent.ClickSaveBtn();
+            
             overlay.switchToDefaultContent();
             List<String> defaultVideoValues = Arrays.asList("Automation1", "MPX Released File Public IDs:",
                     "MPX Media Default Released File Public ID:", "MPX Media Categories:", "Series", "Show", "MPX Media Description:",
@@ -120,12 +129,10 @@ public class MPXVideosSchedulingVerificationInitialOverrides extends ParentTest{
             contentParent.VerifyPageContentNotPresent(overridenVideoValues);
 
             //Step 21
-            WorkBench workBench = new WorkBench(webDriver, applib);
             workBench.ClickWorkBenchTab("Edit");
             overlay.SwitchToActiveFrame();
 
             //Step 22
-            EditMPXVideo editMPXVideo = new EditMPXVideo(webDriver);
             editMPXVideo.VerifyMPXMediaAvailableDateNullAndDisabled();
             editMPXVideo.VerifyMPXMediaExpirationDateNullAndDisabled();
 

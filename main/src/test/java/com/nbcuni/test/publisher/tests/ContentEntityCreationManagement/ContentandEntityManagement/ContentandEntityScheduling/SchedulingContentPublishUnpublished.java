@@ -12,7 +12,10 @@ import com.nbcuni.test.publisher.pageobjects.Content.Revisions;
 import com.nbcuni.test.publisher.pageobjects.Content.WorkBench;
 import com.nbcuni.test.publisher.pageobjects.Cron.Cron;
 import com.nbcuni.test.publisher.pageobjects.Queues.ScheduleQueue;
+
+import org.testng.Reporter;
 import org.testng.annotations.Test;
+
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Calendar;
@@ -28,15 +31,15 @@ public class SchedulingContentPublishUnpublished extends ParentTest {
     @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"})
         public void SchedulingContentPublishUnpublished_TC2159() throws Exception{
 
-        //Step 1
+        Reporter.log("STEP 1");
         UserLogin userLogin = applib.openApplication();
         userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
 
-        //Step 2 and 3
+        Reporter.log("STEP 2 and 3");
         CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver, applib);
         String postTitle = createDefaultContent.Post("Draft");
         
-        //Step 4
+        Reporter.log("STEP 4");
         WorkBench workBench = new WorkBench(webDriver, applib);
         workBench.ClickWorkBenchTab("Schedule");
         overlay.SwitchToActiveFrame();
@@ -44,11 +47,11 @@ public class SchedulingContentPublishUnpublished extends ParentTest {
         scheduleQueue.ClickAddScheduledRevisionLnk();
         overlay.SwitchToActiveFrame();
         
-        //Step 5
+        Reporter.log("STEP 5");
         scheduleQueue.SelectRevision(postTitle);
         scheduleQueue.SelectOperation("Moderate to Published");
         
-        //Step 6
+        Reporter.log("STEP 6");
         Calendar cal15SecondsFuture = Calendar.getInstance();
         cal15SecondsFuture.add(Calendar.SECOND, 15);
     	Date date15SecondsFuture = cal15SecondsFuture.getTime();
@@ -61,12 +64,12 @@ public class SchedulingContentPublishUnpublished extends ParentTest {
         scheduleQueue.EnterDate(pub7Date15SecondsFuture);
         scheduleQueue.EnterTime(pub7Time15SecondsFuture);
         
-        //Step 7
+        Reporter.log("STEP 7");
         scheduleQueue.ClickScheduleBtn();
         overlay.SwitchToActiveFrame();
         contentParent.VerifyMessageStatus("The scheduled revision operation has been saved");
         
-        //Step 8
+        Reporter.log("STEP 8");
         overlay.SwitchToActiveFrame();
         scheduleQueue.VerifyScheduledQueue(postTitle);
         scheduleQueue.VerifyScheduledQueue("Moderate to Published");
@@ -74,7 +77,7 @@ public class SchedulingContentPublishUnpublished extends ParentTest {
         scheduleQueue.VerifyRunNowLnkPresent(postTitle, "Moderate to Published");
         scheduleQueue.VerifyCancelLnkPresent(postTitle, "Moderate to Published");
         
-        //Step 9
+        Reporter.log("STEP 9");
         Thread.sleep(15000);
         overlay.ClickCloseOverlayLnk();
         Cron cron = new Cron(webDriver, applib);
@@ -82,7 +85,7 @@ public class SchedulingContentPublishUnpublished extends ParentTest {
         webDriver.navigate().refresh();
         workBench.VerifyWorkBenchBlockTextPresent(Arrays.asList("Revision state: Published", "Public: Yes"));
         
-        //Step 10
+        Reporter.log("STEP 10");
         String postTitle2 = createDefaultContent.Post("Draft");
         workBench.ClickWorkBenchTab("Schedule");
         overlay.SwitchToActiveFrame();
@@ -106,7 +109,7 @@ public class SchedulingContentPublishUnpublished extends ParentTest {
         scheduleQueue.VerifyScheduledQueue(pub7Date5MinutesFuture + " - ");
         scheduleQueue.ClickRunNowLnk(postTitle2, "Moderate to Published");
         
-        //Step 11
+        Reporter.log("STEP 11");
         overlay.SwitchToActiveFrame();
         scheduleQueue.VerifyScheduledQueue(postTitle2);
         scheduleQueue.VerifyScheduledQueue("Moderate to Published");
@@ -114,7 +117,7 @@ public class SchedulingContentPublishUnpublished extends ParentTest {
         scheduleQueue.VerifyScheduledQueue("Completed");
         overlay.ClickCloseOverlayLnk();
         
-        //Step 12
+        Reporter.log("STEP 12");
         String postTitle3 = createDefaultContent.Post("Draft");
         workBench.ClickWorkBenchTab("Schedule");
         overlay.SwitchToActiveFrame();
@@ -141,7 +144,7 @@ public class SchedulingContentPublishUnpublished extends ParentTest {
         contentParent.VerifyPageContentNotPresent(Arrays.asList("Moderate to Published"));
         overlay.ClickCloseOverlayLnk();
         
-        //Step 13
+        Reporter.log("STEP 13");
         taxonomy.NavigateSite("My Workbench>>Create content>>Post");
         overlay.SwitchToActiveFrame();
         String postTitle4 = random.GetCharacterString(15);
@@ -178,7 +181,7 @@ public class SchedulingContentPublishUnpublished extends ParentTest {
         scheduleQueue.VerifyScheduledQueue("Completed");
         overlay.ClickCloseOverlayLnk();
         
-        //Step 14
+        Reporter.log("STEP 14");
         String postTitle5 = createDefaultContent.Post("Draft");
         workBench.ClickWorkBenchTab("Edit Draft");
         overlay.SwitchToActiveFrame();
@@ -188,7 +191,7 @@ public class SchedulingContentPublishUnpublished extends ParentTest {
         overlay.switchToDefaultContent();
         contentParent.VerifyMessageStatus("Post " + postTitle5 + " has been updated.");
         
-        //Step 15 and 16
+        Reporter.log("STEP 15 and 16");
         workBench.ClickWorkBenchTab("Revisions");
         overlay.SwitchToActiveFrame();
         RevisionState revisionState = new RevisionState(webDriver);
@@ -205,7 +208,7 @@ public class SchedulingContentPublishUnpublished extends ParentTest {
         overlay.switchToDefaultContent();
         contentParent.VerifyMessageStatus("The scheduled revision operation has been saved");
         
-        //Step 17
+        Reporter.log("STEP 17");
         workBench.ClickWorkBenchTab("Schedule");
         overlay.SwitchToActiveFrame();
         scheduleQueue.VerifyScheduledQueue(postTitle5);
@@ -213,7 +216,79 @@ public class SchedulingContentPublishUnpublished extends ParentTest {
         scheduleQueue.VerifyScheduledQueue(pub7Date5MinutesFuture + " - ");
         scheduleQueue.VerifyRunNowLnkPresent(postTitle5, "Moderate to Published");
         
-        //Step 18 on requires additional work when US6604 is complete
+        Reporter.log("STEP 18");
+        overlay.ClickCloseOverlayLnk();
+        taxonomy.NavigateSite("My Workbench>>Create content>>Post");
+        overlay.SwitchToActiveFrame();
+        String postTitle6 = random.GetCharacterString(15);
+        basicInformation.EnterTitle(postTitle6);
+        basicInformation.EnterSynopsis();
+        overlay.SwitchToActiveFrame();
+        publishingOptions.ClickPublishingOptionsLnk();
+        publishingOptions.SelectModerationState("Draft");
+        publishingOptions.SelectOperation("Moderate to Published");
+        Calendar cal1MinuteFuture = Calendar.getInstance();
+        cal1MinuteFuture.add(Calendar.MINUTE, 1);
+    	Date date1MinuteFuture = cal1MinuteFuture.getTime();
+        SimpleDateFormat pub7MilitaryDateFormat = new SimpleDateFormat("MM/dd/yyyy");
+    	pub7MilitaryDateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
+    	SimpleDateFormat pub7MilitaryTimeFormat = new SimpleDateFormat("kk:mm");
+    	pub7MilitaryTimeFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
+    	String pub7MilitaryDate1MinuteFuture = pub7MilitaryDateFormat.format(date1MinuteFuture);
+	    String pub7MilitaryTime1MinuteFuture = pub7MilitaryTimeFormat.format(date1MinuteFuture);
+        publishingOptions.EnterDate(pub7MilitaryDate1MinuteFuture);
+        publishingOptions.EnterTime(pub7MilitaryTime1MinuteFuture);
+        contentParent.ClickSaveBtn();
+        overlay.switchToDefaultContent();
+        contentParent.VerifyMessageStatus("Post " + postTitle6 + " has been created.");
+        contentParent.VerifyMessageStatus(postTitle6 + " has been scheduled to Moderate to Published on " + pub7MilitaryDate1MinuteFuture + " - ");
+        
+        Reporter.log("STEP 19");
+        workBench.ClickWorkBenchTab("Schedule");
+        overlay.SwitchToActiveFrame();
+        scheduleQueue.VerifyScheduledQueue(postTitle6);
+        scheduleQueue.VerifyScheduledQueue("Moderate to Published");
+        scheduleQueue.VerifyScheduledQueue(pub7MilitaryDate1MinuteFuture + " - ");
+        scheduleQueue.VerifyRunNowLnkPresent(postTitle6, "Moderate to Published");
+        scheduleQueue.VerifyCancelLnkPresent(postTitle6, "Moderate to Published");
+        overlay.ClickCloseOverlayLnk();
+        Thread.sleep(60000);
+        cron.RunCron(true);
+        webDriver.navigate().refresh();
+        webDriver.navigate().refresh();
+        workBench.VerifyWorkBenchBlockTextPresent(Arrays.asList("Revision state: Published", "Public: Yes"));
+        
+        Reporter.log("STEP 20");
+        taxonomy.NavigateSite("My Workbench>>Create content>>Post");
+        overlay.SwitchToActiveFrame();
+        String postTitle7 = random.GetCharacterString(15);
+        basicInformation.EnterTitle(postTitle7);
+        basicInformation.EnterSynopsis();
+        overlay.SwitchToActiveFrame();
+        publishingOptions.ClickPublishingOptionsLnk();
+        publishingOptions.SelectModerationState("Draft");
+        publishingOptions.SelectOperation("Moderate to Published");
+        Calendar cal1DayFuture = Calendar.getInstance();
+        cal1DayFuture.add(Calendar.HOUR, 24);
+    	Date date1DayFuture = cal1DayFuture.getTime();
+        String pub7MilitaryDate1DayFuture = pub7MilitaryDateFormat.format(date1DayFuture);
+	    String pub7MilitaryTime1DayFuture = pub7MilitaryTimeFormat.format(date1DayFuture);
+        publishingOptions.EnterDate(pub7MilitaryDate1DayFuture);
+        publishingOptions.EnterTime(pub7MilitaryTime1DayFuture);
+        contentParent.ClickSaveBtn();
+        overlay.switchToDefaultContent();
+        contentParent.VerifyMessageStatus("Post " + postTitle7 + " has been created.");
+        contentParent.VerifyMessageStatus(postTitle7 + " has been scheduled to Moderate to Published on " + pub7MilitaryDate1DayFuture + " - ");
+        workBench.ClickWorkBenchTab("Schedule");
+        overlay.SwitchToActiveFrame();
+        scheduleQueue.VerifyScheduledQueue(postTitle7);
+        scheduleQueue.VerifyScheduledQueue("Moderate to Published");
+        scheduleQueue.VerifyScheduledQueue(pub7MilitaryDate1DayFuture + " - ");
+        scheduleQueue.ClickRunNowLnk(postTitle7, "Moderate to Published");
+        overlay.SwitchToActiveFrame();
+        scheduleQueue.VerifyScheduledQueue(postTitle7);
+        scheduleQueue.VerifyScheduledQueue("Moderate to Published");
+        scheduleQueue.VerifyScheduledQueue("Completed");
         
     }
 }

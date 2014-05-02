@@ -19,28 +19,19 @@ import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXSelectAccount;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 
 import org.testng.Assert;
+import org.testng.Reporter;
 import org.testng.annotations.Test;
 
-public class MPXCanonicalURLImportableURLAlias extends ParentTest{
+public class CanonicalURL extends ParentTest{
 	
     /*************************************************************************************
-     * TEST CASE 
-     * Step 1 - Log in to the test instance as Drupal User 1 (usually admin in Publisher test sites). ,Login succeeds. 
-     * Step 2 - Go to Structure > File Types 
-	 * Step 3 - Click "manage fields" link in the MPX Video row.
-     * Step 4 - NOTE - if field labeled "MPX Media Related Link" exists, skip steps 4 and 5. Create a new text field. ,
-	 * Step 5 - Under MPX Media Data Field Path, enter link -- this will draw data from the Related Link field in MPX. ,
-     * Step 6 - Go back to the file types page. ,
-	 * Step 7 - Click edit file type in the MPX Video row, and then select the "MPX Media Related Link".
-     * Step 8 - Working In MPX, enter a value for any video in the Canonical URL (a.k.a Related Link) field, and click Save.,
-     * Step 9 - Run cron, and then clear all caches in Drupal.
-     * Step 10 - Go to the Content > FIles > mpxMedia page -- <http://<TestSiteName>/admin/content/file/mpxmedia>. ,The URL path in the browser address bar matches the value you entered in the Related Link field in MPX at Step 7.
-     * @throws Throwable No Return values are needed
+     * TEST CASE - TC1080
+     * Steps - https://rally1.rallydev.com/#/14663927728ud/detail/testcase/17442651858
      *************************************************************************************/
     @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "smoke", "mpx"})
-    public void MPXCanonicalURLImportableURLAlias_Test() throws Exception {
+    public void CanonicalUR_TC1080() throws Exception {
 
-    	//Step 1
+    	Reporter.log("STEP 1");
     	UserLogin userLogin = applib.openApplication();
     	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
         
@@ -52,18 +43,18 @@ public class MPXCanonicalURLImportableURLAlias extends ParentTest{
 
         	List<String> configuredAccounts = settings.GetImportAccountSelectedOptions();
 
-        	//Step 2
+        	Reporter.log("STEP 2");
         	if (configuredAccounts.get(0).equals("DB TV")) {
         		overlay.ClickCloseOverlayLnk();
         		taxonomy.NavigateSite("Structure>>File types");
         		overlay.SwitchToActiveFrame();
         	
-        		//Step 3
+        		Reporter.log("STEP 3");
         		FileTypes fileTypes = new FileTypes(webDriver);
         		fileTypes.ClickManageFieldsLnk(configuredAccounts.get(0));
         		overlay.SwitchToActiveFrame();
         		
-        		//Step 4
+        		Reporter.log("STEP 4");
         		overlay.SwitchToActiveFrame();
         		ContentParent contentParent = new ContentParent(webDriver, applib);
         		ManageFields manageFields = new ManageFields(webDriver, applib);
@@ -71,19 +62,19 @@ public class MPXCanonicalURLImportableURLAlias extends ParentTest{
         			
         			manageFields.EnterAddNewField("MPX Media Related Link");
         			
-        			//Step 5
+        			Reporter.log("STEP 5");
         			manageFields.SelectFieldType("Link");
         			manageFields.ClickSaveBtn(); 
         			manageFields.ClickSaveFieldSettingsBtn();
         			contentParent.VerifyMessageStatus("Updated field MPX Media Related Link field settings.");
         		}
         		
-        		//Step 6
+        		Reporter.log("STEP 6");
     			overlay.ClickCloseOverlayLnk();
     			taxonomy.NavigateSite("Structure>>File types");
         		overlay.SwitchToActiveFrame();
         		
-        		//Step 7
+        		Reporter.log("STEP 7");
         		fileTypes.ClickEditFileTypeLnk(configuredAccounts.get(0));
         		overlay.SwitchToActiveFrame();
         		MPXFileType mpxFileType = new MPXFileType(webDriver);
@@ -91,7 +82,7 @@ public class MPXCanonicalURLImportableURLAlias extends ParentTest{
         		mpxFileType.ClickSaveBtn();
         		contentParent.VerifyMessageStatus("has been updated.");
         		
-        		//Step 8 NOTE- step 8 creates a new video with a canonical url rather than using an existing video
+        		Reporter.log("STEP 8 NOTE- step 8 creates a new video with a canonical url rather than using an existing video");
         		MPXLogin mpxLogin = new MPXLogin(webDriver, applib);
             	mpxLogin.OpenMPXThePlatform();
             	mpxLogin.Login(applib.getMPXUsername(), applib.getMPXPassword());
@@ -108,12 +99,12 @@ public class MPXCanonicalURLImportableURLAlias extends ParentTest{
                 MPXPublishMedia mpxPublishMedia = new MPXPublishMedia(applib);
                 mpxPublishMedia.PublishDefaultVideo();
         		
-                //Step 9
+                Reporter.log("STEP 9");
                 applib.openApplication();
                 Cron cron = new Cron(webDriver, applib);
                 cron.RunCron(true);
                 
-        	    //Step 10
+        	    Reporter.log("STEP 10");
         	    taxonomy.NavigateSite("Content>>Files>>mpxMedia");
         	    overlay.SwitchToActiveFrame();
         	    SearchFor searchFor = new SearchFor(webDriver, applib);
@@ -129,7 +120,7 @@ public class MPXCanonicalURLImportableURLAlias extends ParentTest{
         	    }
         	    searchFor.ClickSearchTitleLnk(mediaTitle);
         	    
-        	    //Step 11
+        	    Reporter.log("STEP 11");
         	    contentParent.VerifyPageContentPresent(Arrays.asList("MPX Media Related Link:", canonicalURL));
         	    Assert.assertTrue(webDriver.getCurrentUrl().equals(applib.getApplicationURL() + "/" + canonicalURL));
         		
