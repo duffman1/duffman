@@ -12,6 +12,7 @@ import org.testng.Reporter;
 
 import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.pageobjects.ErrorChecking.ErrorChecking;
 
 /*********************************************
  * publisher.nbcuni.com Overlay Library. Copyright
@@ -24,12 +25,14 @@ public class Overlay {
 
     private Driver webDriver;
     private AppLib applib;
+    private ErrorChecking errorChecking;
     
     //PAGE OBJECT CONSTRUCTOR
     public Overlay(Driver webDriver, AppLib applib) {
     	this.webDriver = webDriver;
     	this.applib = applib;
     	PageFactory.initElements(webDriver, this);
+    	errorChecking = new ErrorChecking(webDriver, applib);
     }
 
     //PAGE OBJECT IDENTIFIERS
@@ -50,6 +53,8 @@ public class Overlay {
     public void switchToDefaultContent() throws Exception {
     	
     	webDriver.switchTo().defaultContent();
+    	
+    	errorChecking.VerifyNoMessageErrorsPresent();
     }
     
     public void ClickCloseOverlayLnk() throws Exception {
@@ -91,6 +96,8 @@ public class Overlay {
     	Thread.sleep(250); //slight pause to help ensure frame switch occurs to a new frame and not the old.
     	Reporter.log("Switch to the active frame titled '" + ActiveFrame_Frm.getAttribute("title") + "'.");
     	webDriver.switchTo().frame(ActiveFrame_Frm);
+    	
+    	errorChecking.VerifyNoMessageErrorsPresent();
     	
     }
     

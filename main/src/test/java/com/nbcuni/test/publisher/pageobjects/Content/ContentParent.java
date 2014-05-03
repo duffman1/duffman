@@ -89,7 +89,6 @@ public class ContentParent {
     		Assert.fail("The message status '" + messageStatus + "' is not present.");
     	}
     	
-    	Reporter.log("Verify there are no errors present.");
     	errorChecking.VerifyNoMessageErrorsPresent();
     }
     
@@ -98,7 +97,6 @@ public class ContentParent {
     	Reporter.log("Verify warning message '" + warningTxt + "' is present.");
     	Assert.assertTrue(Warning_Ctr.getText().contains(warningTxt));
     	
-    	Reporter.log("Verify there are no errors present.");
     	errorChecking.VerifyNoMessageErrorsPresent();
     }
     

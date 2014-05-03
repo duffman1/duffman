@@ -99,16 +99,28 @@ public class ErrorChecking {
     	if (applib.IsErrorCheckingEnabled() == true) {
     		webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
     	
-    		//allowed errors
+    		//ALLOWED ERRORS
     		List<String> allowedErrors = new ArrayList<String>();
     		allowedErrors.add("There are security updates available for one or more of your modules or themes");
     		allowedErrors.add("An MPXplayer that's in use");
     		allowedErrors.add("To change its status in Publisher, click here");
     		allowedErrors.add("There is a security update available for your version of Drupal");
+    		
+    		//random error on cron run
     		allowedErrors.add("Warning: Attempt to assign property of non-object in EntityAPIController->save()");
     		allowedErrors.add("Notice: Trying to get property of non-object in EntityAPIController->save()");
+    		
+    		//focal point error on image save
     		allowedErrors.add("Notice: getimagesize() [function.getimagesize]: Read error! in image_gd_get_info()");
+    		
+    		//error when creating new custom mpx type
     		allowedErrors.add("Notice: Undefined index: #build_id in form_set_cache() (line 565 of");
+    		
+    		//exif error when uploading new image
+    		allowedErrors.add("Notice: Undefined offset: 0 in simple_exif_form_alter()");
+    		allowedErrors.add("Warning: array_keys() expects parameter 1 to be array, null given in simple_exif_form_alter()");
+    		allowedErrors.add("Warning: Invalid argument supplied for foreach() in simple_exif_form_alter()");
+    		allowedErrors.add("Warning: in_array() expects parameter 2 to be array, null given in simple_exif_form_alter()");
     		
     		//FIRST - check if error container is present
     		boolean errorContainerPresent = false;
@@ -147,7 +159,11 @@ public class ErrorChecking {
     								 	|| errorText.contains(allowedErrors.get(4))
     								 		|| errorText.contains(allowedErrors.get(5))
     								 			|| errorText.contains(allowedErrors.get(6))
-    								 				|| errorText.contains(allowedErrors.get(7))) {
+    								 				|| errorText.contains(allowedErrors.get(7))
+    								 					|| errorText.contains(allowedErrors.get(8))
+    								 					|| errorText.contains(allowedErrors.get(9))
+    								 					|| errorText.contains(allowedErrors.get(10))
+    								 					|| errorText.contains(allowedErrors.get(11))) {
     					//ignore error
     				}
     				else {
@@ -173,7 +189,11 @@ public class ErrorChecking {
     										 	|| errorText.contains(allowedErrors.get(4))
     										 		|| errorText.contains(allowedErrors.get(5))
     										 			|| errorText.contains(allowedErrors.get(6))
-    										 				|| errorText.contains(allowedErrors.get(7))) {
+    										 				|| errorText.contains(allowedErrors.get(7))
+    										 					|| errorText.contains(allowedErrors.get(8))
+    										 					|| errorText.contains(allowedErrors.get(9))
+    										 					|| errorText.contains(allowedErrors.get(10))
+    										 					|| errorText.contains(allowedErrors.get(11))) {
     						//ignore error
     					}
     					else {
