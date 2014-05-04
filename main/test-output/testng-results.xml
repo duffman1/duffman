@@ -2,7 +2,7 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
     <line>
-      <![CDATA[Open url 'http://update.stage.nbcupublisher7.publisher7.com'.]]>
+      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
     </line>
     <line>
       <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
@@ -14,22 +14,19 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Configuration' menu link.]]>
+      <![CDATA[Click the 'Modules' menu link.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Media' menu link.]]>
+      <![CDATA[Switch to frame titled 'Modules'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Media: thePlatform mpx settings' menu link.]]>
+      <![CDATA[Enter 'Pub Ads' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.]]>
+      <![CDATA[Wait for the module titled 'Pub Ads' to appear in the list.]]>
     </line>
     <line>
-      <![CDATA[Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.]]>
-    </line>
-    <line>
-      <![CDATA[Get all the selected import account options and store to a list.]]>
+      <![CDATA[Verify the 'Pub Ads' check box is checked.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
@@ -38,83 +35,311 @@
       <![CDATA[Mouse over the 'Structure' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'File types' menu link.]]>
+      <![CDATA[Click the 'Publisher Ads Side Files' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'File types dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'DB TV manage file display' link.]]>
+      <![CDATA[Click the 'Add' link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'MPX Video for Account &quot;DB TV&quot; (2312945284) dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'Add a new side file dialog'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Pub MPX Video' link.]]>
+      <![CDATA[Enter 'de9710060f7b4d0' in the 'Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Select the 'USA_Demo_Player' player from the 'Pub MPX Video Player for Account...' drop down list.]]>
+      <![CDATA[Enter '0120ffdafe/f07a5bb399.html' in the 'Path' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
+      <![CDATA[Select the 'text/html' from the 'Response type' drop down list.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'Your settings have been saved.' is present.]]>
+      <![CDATA[Enter '<html><body bgcolor=white><script language=javascript>function pq(q) {if(q.length > 1) this.q = q.substring(1, q.length);else this.q = null;this.keyValuePairs = new Array();if(q) {for(var i=0; i < this.q.split("&").length; i++) {this.keyValuePairs[i] = this.q.split("&")[i];}}this.getValue = function(s) {for(var j=0; j < this.keyValuePairs.length; j++) {if(this.keyValuePairs[j].split("=")[0] == s)return this.keyValuePairs[j].split("=")[1];}return -1;}}function qs(key){var page = new pq(document.location.search);return unescape(page.getValue(key));}var _c = qs('c');var r_number = Math.random();document.writeln('<SCR'+'IPT language='JavaScript' S'+'RC="http://media.adcentriconline.com/adcentric/tag/'+_c+'?ADCadcifr=1&number='+r_number+'"></SCR'+'IPT>');</script></body></html>' in the 'Content' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'de9710060f7b4d0 has been created.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the Ad Side File link with path '0120ffdafe/f07a5bb399.html'.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the Ad Side File 'Edit' link for adName + 'AdCentric'.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Edit side file adcentric dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'adcentric has been updated' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify storage type for Ad Side File 'AdCentric' is set to 'Overridden'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the Ad Side File 'Edit' link for adName + 'AdCentric'.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Edit side file adcentric dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Revert' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Revert' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The item has been reverted.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify storage type for Ad Side File 'AdCentric' is set to 'Default'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the Ad Side File expand link for adName + 'AdCentric'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the Ad Side File 'Clone' link for adName + 'AdCentric'.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Clone side file adcentric dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'df4bd1069bdb4f9' in the 'Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'clone_of_adcentric has been created.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify storage type for Ad Side File 'df4bd1069bdb4f9' is set to 'Normal'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the Ad Side File 'Edit' link for adName + 'AdCentric'.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Edit side file adcentric dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Export' tab.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Export side file adcentric dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Copy the text from the 'Export' text area.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Content' menu link.]]>
+      <![CDATA[Mouse over the 'Structure' menu link.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Files' menu link.]]>
+      <![CDATA[Mouse over the 'Publisher Ads Side Files' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'mpxMedia' menu link.]]>
+      <![CDATA[Click the 'Import' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'Import side file dialog'.]]>
     </line>
     <line>
-      <![CDATA[Enter title Automation1.]]>
+      <![CDATA[Enter '$adpath = new stdClass();
+$adpath->disabled = FALSE; /* Edit this to true to make a default adpath disabled initially */
+$adpath->api_version = 1;
+$adpath->machine_name = 'adcentric';
+$adpath->name = 'AdCentric';
+$adpath->path = 'AdCentric/adcentric.html';
+$adpath->file_type = 'html';
+$adpath->content = '<html><body bgcolor=white>
+<script language=javascript>
+function pq(q) {
+        if(q.length > 1) this.q = q.substring(1, q.length);
+        else this.q = null;
+        this.keyValuePairs = new Array();
+        if(q) {
+                for(var i=0; i < this.q.split("&").length; i++) {
+                        this.keyValuePairs[i] = this.q.split("&")[i];
+                }
+        }
+        this.getValue = function(s) {
+                for(var j=0; j < this.keyValuePairs.length; j++) {
+                        if(this.keyValuePairs[j].split("=")[0] == s)
+                                return this.keyValuePairs[j].split("=")[1];
+                }
+                return -1;
+        }
+}
+function qs(key){
+        var page = new pq(document.location.search);
+        return unescape(page.getValue(key));
+}
+var _c = qs(\'c\');
+var r_number = Math.random();
+document.writeln(\'<SCR\'+\'IPT language=\\\'JavaScript\\\' S\'+\'RC="http://media.adcentriconline.com/adcentric/tag/\'+_c+\'?ADCadcifr=1&number=\'+r_number+\'"></SCR\'+\'IPT>\');
+</script>
+</body></html>
+';
+' in the 'Side file code' text area.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Apply' button.]]>
+      <![CDATA[Click the 'Continue' button.]]>
     </line>
     <line>
-      <![CDATA[Click the first search title link in the search result set.]]>
+      <![CDATA[Switch to the active frame titled 'Import side file dialog'.]]>
     </line>
     <line>
-      <![CDATA[Verify the mpx video player frame is present.]]>
+      <![CDATA[Verify warning message 'You have unsaved changes. These changes will not be made permanent until you click Save.' is present.]]>
     </line>
     <line>
-      <![CDATA[Verify the mpx video player frame source does NOT contain 'embed'.]]>
+      <![CDATA[Enter 'a90201e296b8421' in the 'Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '050fa76579/e768d95046.html' in the 'Path' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Update' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Import side file dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify warning message 'You have unsaved changes. These changes will not be made permanent until you click Save.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Import side file dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'a90201e296b8421' in the 'Machine Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Update' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Import side file dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify warning message 'You have unsaved changes. These changes will not be made permanent until you click Save.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'a90201e296b8421 has been created.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify storage type for Ad Side File 'a90201e296b8421' is set to 'Normal'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the Ad Side File expand link for adName + 'de9710060f7b4d0'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the Ad Side File 'Delete' link for adName + 'de9710060f7b4d0'.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Are you sure you want to delete de9710060f7b4d0? dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Delete' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The item has been deleted.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify Ad Side File 'de9710060f7b4d0' is NOT present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the Ad Side File expand link for adName + 'df4bd1069bdb4f9'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the Ad Side File 'Delete' link for adName + 'df4bd1069bdb4f9'.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Are you sure you want to delete clone_of_adcentric? dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Delete' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The item has been deleted.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify Ad Side File 'df4bd1069bdb4f9' is NOT present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the Ad Side File expand link for adName + 'a90201e296b8421'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the Ad Side File 'Delete' link for adName + 'a90201e296b8421'.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Are you sure you want to delete a90201e296b8421? dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Delete' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The item has been deleted.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify Ad Side File 'a90201e296b8421' is NOT present.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="53563" started-at="2014-05-04T16:16:28Z" finished-at="2014-05-04T16:17:22Z">
+  <suite name="Default suite" duration-ms="166905" started-at="2014-05-04T21:18:39Z" finished-at="2014-05-04T21:21:26Z">
     <groups>
-      <group name="mpx">
-        <method signature="DefaultPlayerOptionsVerification.DefaultPlayerOptionsVerification_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification@1ca718f3]" name="DefaultPlayerOptionsVerification_Test" class="com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification"/>
-      </group> <!-- mpx -->
       <group name="full">
-        <method signature="DefaultPlayerOptionsVerification.DefaultPlayerOptionsVerification_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification@1ca718f3]" name="DefaultPlayerOptionsVerification_Test" class="com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification"/>
+        <method signature="AdFoldersRichMediaAds.AdFoldersRichMediaAds_TC1160()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds@17f7b44f]" name="AdFoldersRichMediaAds_TC1160" class="com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds"/>
       </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="53563" started-at="2014-05-04T16:16:28Z" finished-at="2014-05-04T16:17:22Z">
-      <class name="com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification">
-        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification@1ca718f3]" name="startGridAndHub" is-config="true" duration-ms="11151" started-at="2014-05-04T12:16:17Z" finished-at="2014-05-04T12:16:28Z">
+    <test name="Default test" duration-ms="166905" started-at="2014-05-04T21:18:39Z" finished-at="2014-05-04T21:21:26Z">
+      <class name="com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds">
+        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds@17f7b44f]" name="startGridAndHub" is-config="true" duration-ms="11902" started-at="2014-05-04T17:18:27Z" finished-at="2014-05-04T17:18:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startGridAndHub -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification@1ca718f3]" name="startSelenium" is-config="true" duration-ms="2481" started-at="2014-05-04T12:16:28Z" finished-at="2014-05-04T12:16:31Z">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds@17f7b44f]" name="startSelenium" is-config="true" duration-ms="2499" started-at="2014-05-04T17:18:39Z" finished-at="2014-05-04T17:18:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="DefaultPlayerOptionsVerification_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification@1ca718f3]" name="DefaultPlayerOptionsVerification_Test" duration-ms="50500" started-at="2014-05-04T12:16:31Z" finished-at="2014-05-04T12:17:21Z">
+        <test-method status="PASS" signature="AdFoldersRichMediaAds_TC1160()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds@17f7b44f]" name="AdFoldersRichMediaAds_TC1160" duration-ms="163819" started-at="2014-05-04T17:18:42Z" finished-at="2014-05-04T17:21:25Z">
           <reporter-output>
             <line>
-              <![CDATA[Open url 'http://update.stage.nbcupublisher7.publisher7.com'.]]>
+              <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
             </line>
             <line>
               <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
@@ -126,22 +351,19 @@
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Configuration' menu link.]]>
+              <![CDATA[Click the 'Modules' menu link.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Media' menu link.]]>
+              <![CDATA[Switch to frame titled 'Modules'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Media: thePlatform mpx settings' menu link.]]>
+              <![CDATA[Enter 'Pub Ads' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.]]>
+              <![CDATA[Wait for the module titled 'Pub Ads' to appear in the list.]]>
             </line>
             <line>
-              <![CDATA[Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.]]>
-            </line>
-            <line>
-              <![CDATA[Get all the selected import account options and store to a list.]]>
+              <![CDATA[Verify the 'Pub Ads' check box is checked.]]>
             </line>
             <line>
               <![CDATA[Click the 'Close Overlay X'.]]>
@@ -150,77 +372,308 @@
               <![CDATA[Mouse over the 'Structure' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'File types' menu link.]]>
+              <![CDATA[Click the 'Publisher Ads Side Files' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'File types dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'DB TV manage file display' link.]]>
+              <![CDATA[Click the 'Add' link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'MPX Video for Account &quot;DB TV&quot; (2312945284) dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'Add a new side file dialog'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Pub MPX Video' link.]]>
+              <![CDATA[Enter 'de9710060f7b4d0' in the 'Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Select the 'USA_Demo_Player' player from the 'Pub MPX Video Player for Account...' drop down list.]]>
+              <![CDATA[Enter '0120ffdafe/f07a5bb399.html' in the 'Path' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
+              <![CDATA[Select the 'text/html' from the 'Response type' drop down list.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'Your settings have been saved.' is present.]]>
+              <![CDATA[Enter '<html><body bgcolor=white><script language=javascript>function pq(q) {if(q.length > 1) this.q = q.substring(1, q.length);else this.q = null;this.keyValuePairs = new Array();if(q) {for(var i=0; i < this.q.split("&").length; i++) {this.keyValuePairs[i] = this.q.split("&")[i];}}this.getValue = function(s) {for(var j=0; j < this.keyValuePairs.length; j++) {if(this.keyValuePairs[j].split("=")[0] == s)return this.keyValuePairs[j].split("=")[1];}return -1;}}function qs(key){var page = new pq(document.location.search);return unescape(page.getValue(key));}var _c = qs('c');var r_number = Math.random();document.writeln('<SCR'+'IPT language='JavaScript' S'+'RC="http://media.adcentriconline.com/adcentric/tag/'+_c+'?ADCadcifr=1&number='+r_number+'"></SCR'+'IPT>');</script></body></html>' in the 'Content' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'de9710060f7b4d0 has been created.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the Ad Side File link with path '0120ffdafe/f07a5bb399.html'.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the Ad Side File 'Edit' link for adName + 'AdCentric'.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Edit side file adcentric dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'adcentric has been updated' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify storage type for Ad Side File 'AdCentric' is set to 'Overridden'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the Ad Side File 'Edit' link for adName + 'AdCentric'.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Edit side file adcentric dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Revert' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Revert' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The item has been reverted.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify storage type for Ad Side File 'AdCentric' is set to 'Default'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the Ad Side File expand link for adName + 'AdCentric'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the Ad Side File 'Clone' link for adName + 'AdCentric'.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Clone side file adcentric dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'df4bd1069bdb4f9' in the 'Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'clone_of_adcentric has been created.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify storage type for Ad Side File 'df4bd1069bdb4f9' is set to 'Normal'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the Ad Side File 'Edit' link for adName + 'AdCentric'.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Edit side file adcentric dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Export' tab.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Export side file adcentric dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Copy the text from the 'Export' text area.]]>
             </line>
             <line>
               <![CDATA[Click the 'Close Overlay X'.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Content' menu link.]]>
+              <![CDATA[Mouse over the 'Structure' menu link.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Files' menu link.]]>
+              <![CDATA[Mouse over the 'Publisher Ads Side Files' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'mpxMedia' menu link.]]>
+              <![CDATA[Click the 'Import' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'Import side file dialog'.]]>
             </line>
             <line>
-              <![CDATA[Enter title Automation1.]]>
+              <![CDATA[Enter '$adpath = new stdClass();
+$adpath->disabled = FALSE; /* Edit this to true to make a default adpath disabled initially */
+$adpath->api_version = 1;
+$adpath->machine_name = 'adcentric';
+$adpath->name = 'AdCentric';
+$adpath->path = 'AdCentric/adcentric.html';
+$adpath->file_type = 'html';
+$adpath->content = '<html><body bgcolor=white>
+<script language=javascript>
+function pq(q) {
+        if(q.length > 1) this.q = q.substring(1, q.length);
+        else this.q = null;
+        this.keyValuePairs = new Array();
+        if(q) {
+                for(var i=0; i < this.q.split("&").length; i++) {
+                        this.keyValuePairs[i] = this.q.split("&")[i];
+                }
+        }
+        this.getValue = function(s) {
+                for(var j=0; j < this.keyValuePairs.length; j++) {
+                        if(this.keyValuePairs[j].split("=")[0] == s)
+                                return this.keyValuePairs[j].split("=")[1];
+                }
+                return -1;
+        }
+}
+function qs(key){
+        var page = new pq(document.location.search);
+        return unescape(page.getValue(key));
+}
+var _c = qs(\'c\');
+var r_number = Math.random();
+document.writeln(\'<SCR\'+\'IPT language=\\\'JavaScript\\\' S\'+\'RC="http://media.adcentriconline.com/adcentric/tag/\'+_c+\'?ADCadcifr=1&number=\'+r_number+\'"></SCR\'+\'IPT>\');
+</script>
+</body></html>
+';
+' in the 'Side file code' text area.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Apply' button.]]>
+              <![CDATA[Click the 'Continue' button.]]>
             </line>
             <line>
-              <![CDATA[Click the first search title link in the search result set.]]>
+              <![CDATA[Switch to the active frame titled 'Import side file dialog'.]]>
             </line>
             <line>
-              <![CDATA[Verify the mpx video player frame is present.]]>
+              <![CDATA[Verify warning message 'You have unsaved changes. These changes will not be made permanent until you click Save.' is present.]]>
             </line>
             <line>
-              <![CDATA[Verify the mpx video player frame source does NOT contain 'embed'.]]>
+              <![CDATA[Enter 'a90201e296b8421' in the 'Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '050fa76579/e768d95046.html' in the 'Path' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Update' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Import side file dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify warning message 'You have unsaved changes. These changes will not be made permanent until you click Save.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Import side file dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'a90201e296b8421' in the 'Machine Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Update' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Import side file dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify warning message 'You have unsaved changes. These changes will not be made permanent until you click Save.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'a90201e296b8421 has been created.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify storage type for Ad Side File 'a90201e296b8421' is set to 'Normal'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the Ad Side File expand link for adName + 'de9710060f7b4d0'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the Ad Side File 'Delete' link for adName + 'de9710060f7b4d0'.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Are you sure you want to delete de9710060f7b4d0? dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Delete' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The item has been deleted.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify Ad Side File 'de9710060f7b4d0' is NOT present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the Ad Side File expand link for adName + 'df4bd1069bdb4f9'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the Ad Side File 'Delete' link for adName + 'df4bd1069bdb4f9'.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Are you sure you want to delete clone_of_adcentric? dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Delete' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The item has been deleted.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify Ad Side File 'df4bd1069bdb4f9' is NOT present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the Ad Side File expand link for adName + 'a90201e296b8421'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the Ad Side File 'Delete' link for adName + 'a90201e296b8421'.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Are you sure you want to delete a90201e296b8421? dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Delete' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The item has been deleted.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify Ad Side File 'a90201e296b8421' is NOT present.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- DefaultPlayerOptionsVerification_Test -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification@1ca718f3]" name="stopSelenium" is-config="true" duration-ms="570" started-at="2014-05-04T12:17:21Z" finished-at="2014-05-04T12:17:22Z">
+        </test-method> <!-- AdFoldersRichMediaAds_TC1160 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds@17f7b44f]" name="stopSelenium" is-config="true" duration-ms="574" started-at="2014-05-04T17:21:25Z" finished-at="2014-05-04T17:21:26Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=DefaultPlayerOptionsVerification_Test status=SUCCESS method=DefaultPlayerOptionsVerification.DefaultPlayerOptionsVerification_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification@1ca718f3] output=Open url 'http://update.stage.nbcupublisher7.publisher7.com'.]]]>
+                <![CDATA[[TestResult name=AdFoldersRichMediaAds_TC1160 status=SUCCESS method=AdFoldersRichMediaAds.AdFoldersRichMediaAds_TC1160()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds@17f7b44f] output=Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification@1ca718f3]" name="stopGridAndHub" is-config="true" duration-ms="378" started-at="2014-05-04T12:17:22Z" finished-at="2014-05-04T12:17:22Z">
+        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds@17f7b44f]" name="stopGridAndHub" is-config="true" duration-ms="376" started-at="2014-05-04T17:21:26Z" finished-at="2014-05-04T17:21:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopGridAndHub -->
-      </class> <!-- com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

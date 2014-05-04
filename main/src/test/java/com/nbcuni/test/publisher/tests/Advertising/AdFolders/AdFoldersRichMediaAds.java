@@ -32,7 +32,7 @@ public class AdFoldersRichMediaAds extends ParentTest {
         modules.VerifyModuleEnabled("Pub Ads");
         
         //Setup
-        Integer randomAddFileInt = random.GetInteger(0,  3);
+        Integer randomAddFileInt = random.GetInteger(0, 3);
         String defaultAddFile = "empty";
         switch (randomAddFileInt) {
         case 0:

@@ -108,6 +108,7 @@ public class ErrorChecking {
     		allowedErrors.add("There is a security update available for your version of Drupal");
     		allowedErrors.add("A side file with this name already exists.");
     		allowedErrors.add("This revision cannot be deleted because it is currently the primary revision for this queue");
+    		allowedErrors.add("Your sitemap is up to date and does not need to be rebuilt");
     		
     		//random error on cron run
     		allowedErrors.add("Warning: Attempt to assign property of non-object in EntityAPIController->save()");
@@ -169,7 +170,8 @@ public class ErrorChecking {
     								 					|| errorText.contains(allowedErrors.get(11))
     								 					|| errorText.contains(allowedErrors.get(12))
     								 					|| errorText.contains(allowedErrors.get(13))
-    								 					|| errorText.contains(allowedErrors.get(14))) {
+    								 					|| errorText.contains(allowedErrors.get(14))
+    								 					|| errorText.contains(allowedErrors.get(15))) {
     					//ignore error
     				}
     				else {
@@ -202,7 +204,8 @@ public class ErrorChecking {
     										 					|| errorText.contains(allowedErrors.get(11))
     										 					|| errorText.contains(allowedErrors.get(12))
     	    								 					|| errorText.contains(allowedErrors.get(13))
-    	    								 					|| errorText.contains(allowedErrors.get(14))) {
+    	    								 					|| errorText.contains(allowedErrors.get(14))
+    	    								 					|| errorText.contains(allowedErrors.get(15))) {
     						//ignore error
     					}
     					else {
