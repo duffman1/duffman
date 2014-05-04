@@ -103,8 +103,11 @@ public class ErrorChecking {
     		List<String> allowedErrors = new ArrayList<String>();
     		allowedErrors.add("There are security updates available for one or more of your modules or themes");
     		allowedErrors.add("An MPXplayer that's in use");
+    		allowedErrors.add("To change its status in MPX, log into mpx.theplatform");
     		allowedErrors.add("To change its status in Publisher, click here");
     		allowedErrors.add("There is a security update available for your version of Drupal");
+    		allowedErrors.add("A side file with this name already exists.");
+    		allowedErrors.add("This revision cannot be deleted because it is currently the primary revision for this queue");
     		
     		//random error on cron run
     		allowedErrors.add("Warning: Attempt to assign property of non-object in EntityAPIController->save()");
@@ -163,7 +166,10 @@ public class ErrorChecking {
     								 					|| errorText.contains(allowedErrors.get(8))
     								 					|| errorText.contains(allowedErrors.get(9))
     								 					|| errorText.contains(allowedErrors.get(10))
-    								 					|| errorText.contains(allowedErrors.get(11))) {
+    								 					|| errorText.contains(allowedErrors.get(11))
+    								 					|| errorText.contains(allowedErrors.get(12))
+    								 					|| errorText.contains(allowedErrors.get(13))
+    								 					|| errorText.contains(allowedErrors.get(14))) {
     					//ignore error
     				}
     				else {
@@ -193,7 +199,10 @@ public class ErrorChecking {
     										 					|| errorText.contains(allowedErrors.get(8))
     										 					|| errorText.contains(allowedErrors.get(9))
     										 					|| errorText.contains(allowedErrors.get(10))
-    										 					|| errorText.contains(allowedErrors.get(11))) {
+    										 					|| errorText.contains(allowedErrors.get(11))
+    										 					|| errorText.contains(allowedErrors.get(12))
+    	    								 					|| errorText.contains(allowedErrors.get(13))
+    	    								 					|| errorText.contains(allowedErrors.get(14))) {
     						//ignore error
     					}
     					else {

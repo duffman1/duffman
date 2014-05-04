@@ -2,7 +2,7 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
     <line>
-      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
+      <![CDATA[Open url 'http://update.stage.nbcupublisher7.publisher7.com'.]]>
     </line>
     <line>
       <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
@@ -14,161 +14,107 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Modules' menu link.]]>
+      <![CDATA[Mouse over the 'Configuration' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to frame titled 'Modules'.]]>
+      <![CDATA[Mouse over the 'Media' menu link.]]>
     </line>
     <line>
-      <![CDATA[Enter 'zeebox Example' in the 'Filter Name' text box.]]>
+      <![CDATA[Click the 'Media: thePlatform mpx settings' menu link.]]>
     </line>
     <line>
-      <![CDATA[Wait for the module titled 'zeebox Example' to appear in the list.]]>
+      <![CDATA[Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.]]>
     </line>
     <line>
-      <![CDATA[Check the 'zeebox Example' check box.]]>
+      <![CDATA[Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Continue' button to enable additional modules.]]>
-    </line>
-    <line>
-      <![CDATA[Switch back to the 'Modules' frame.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to frame titled 'Modules'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify there are no errors present.]]>
+      <![CDATA[Get all the selected import account options and store to a list.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'Zeebox Follow Button example block' is present on the page.]]>
+      <![CDATA[Mouse over the 'Structure' menu link.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'Zeebox Play-along example block' is present on the page.]]>
+      <![CDATA[Click the 'File types' menu link.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'Zeebox Hot TV Rooms example block' is present on the page.]]>
+      <![CDATA[Switch to the active frame titled 'File types dialog'.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'Zeebox TV Room Teaser example block' is present on the page.]]>
+      <![CDATA[Click the 'DB TV manage file display' link.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'Zeebox TV Room example block' is present on the page.]]>
+      <![CDATA[Switch to the active frame titled 'MPX Video for Account &quot;DB TV&quot; (2312945284) dialog'.]]>
     </line>
     <line>
-      <![CDATA[Verify the text '' is present on the page.]]>
+      <![CDATA[Click the 'Pub MPX Video' link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Modules' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'zeebox Example' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the module titled 'zeebox Example' to appear in the list.]]>
-    </line>
-    <line>
-      <![CDATA[Uncheck the 'zeebox Example' module checkbox.]]>
+      <![CDATA[Select the 'USA_Demo_Player' player from the 'Pub MPX Video Player for Account...' drop down list.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save configuration' button.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify there are no errors present.]]>
+      <![CDATA[Verify success message of 'Your settings have been saved.' is present.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Modules' menu link.]]>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Uninstall' menu link.]]>
+      <![CDATA[Mouse over the 'Files' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+      <![CDATA[Click the 'mpxMedia' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'zeebox Example' uninstall checkbox.]]>
+      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Uninstall' button.]]>
+      <![CDATA[Enter title Automation1.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Confirm uninstall dialog'.]]>
+      <![CDATA[Click the 'Apply' button.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'The following modules will be completely uninstalled from your site, and all data from these modules will be lost!' is present on the page.]]>
+      <![CDATA[Click the first search title link in the search result set.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'zeebox Example' is present on the page.]]>
+      <![CDATA[Verify the mpx video player frame is present.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Uninstall' button to confirm.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'Zeebox Follow Button example block has been deleted.' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'Zeebox Hot TV Rooms example block has been deleted.' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'Zeebox Play-along example block has been deleted.' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'Zeebox TV Room Teaser example block has been deleted.' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'Zeebox TV Room example block has been deleted.' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'The selected modules have been uninstalled.' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'Page not found' is present on the page.]]>
+      <![CDATA[Verify the mpx video player frame source does NOT contain 'embed'.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="61220" started-at="2014-05-02T17:41:56Z" finished-at="2014-05-02T17:42:58Z">
+  <suite name="Default suite" duration-ms="53563" started-at="2014-05-04T16:16:28Z" finished-at="2014-05-04T16:17:22Z">
     <groups>
+      <group name="mpx">
+        <method signature="DefaultPlayerOptionsVerification.DefaultPlayerOptionsVerification_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification@1ca718f3]" name="DefaultPlayerOptionsVerification_Test" class="com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification"/>
+      </group> <!-- mpx -->
       <group name="full">
-        <method signature="InstallZeeboxModule.InstallZeeboxModule_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.InstallZeeboxModule.InstallZeeboxModule@4ec26cab]" name="InstallZeeboxModule_Test" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.InstallZeeboxModule.InstallZeeboxModule"/>
+        <method signature="DefaultPlayerOptionsVerification.DefaultPlayerOptionsVerification_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification@1ca718f3]" name="DefaultPlayerOptionsVerification_Test" class="com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification"/>
       </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="61220" started-at="2014-05-02T17:41:56Z" finished-at="2014-05-02T17:42:58Z">
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.InstallZeeboxModule.InstallZeeboxModule">
-        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.InstallZeeboxModule.InstallZeeboxModule@4ec26cab]" name="startGridAndHub" is-config="true" duration-ms="11088" started-at="2014-05-02T13:41:45Z" finished-at="2014-05-02T13:41:56Z">
+    <test name="Default test" duration-ms="53563" started-at="2014-05-04T16:16:28Z" finished-at="2014-05-04T16:17:22Z">
+      <class name="com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification">
+        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification@1ca718f3]" name="startGridAndHub" is-config="true" duration-ms="11151" started-at="2014-05-04T12:16:17Z" finished-at="2014-05-04T12:16:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startGridAndHub -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.InstallZeeboxModule.InstallZeeboxModule@4ec26cab]" name="startSelenium" is-config="true" duration-ms="2554" started-at="2014-05-02T13:41:57Z" finished-at="2014-05-02T13:41:59Z">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification@1ca718f3]" name="startSelenium" is-config="true" duration-ms="2481" started-at="2014-05-04T12:16:28Z" finished-at="2014-05-04T12:16:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="InstallZeeboxModule_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.InstallZeeboxModule.InstallZeeboxModule@4ec26cab]" name="InstallZeeboxModule_Test" duration-ms="58082" started-at="2014-05-02T13:41:59Z" finished-at="2014-05-02T13:42:57Z">
+        <test-method status="PASS" signature="DefaultPlayerOptionsVerification_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification@1ca718f3]" name="DefaultPlayerOptionsVerification_Test" duration-ms="50500" started-at="2014-05-04T12:16:31Z" finished-at="2014-05-04T12:17:21Z">
           <reporter-output>
             <line>
-              <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
+              <![CDATA[Open url 'http://update.stage.nbcupublisher7.publisher7.com'.]]>
             </line>
             <line>
               <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
@@ -180,158 +126,101 @@
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Modules' menu link.]]>
+              <![CDATA[Mouse over the 'Configuration' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to frame titled 'Modules'.]]>
+              <![CDATA[Mouse over the 'Media' menu link.]]>
             </line>
             <line>
-              <![CDATA[Enter 'zeebox Example' in the 'Filter Name' text box.]]>
+              <![CDATA[Click the 'Media: thePlatform mpx settings' menu link.]]>
             </line>
             <line>
-              <![CDATA[Wait for the module titled 'zeebox Example' to appear in the list.]]>
+              <![CDATA[Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.]]>
             </line>
             <line>
-              <![CDATA[Check the 'zeebox Example' check box.]]>
+              <![CDATA[Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Continue' button to enable additional modules.]]>
-            </line>
-            <line>
-              <![CDATA[Switch back to the 'Modules' frame.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to frame titled 'Modules'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify there are no errors present.]]>
+              <![CDATA[Get all the selected import account options and store to a list.]]>
             </line>
             <line>
               <![CDATA[Click the 'Close Overlay X'.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'Zeebox Follow Button example block' is present on the page.]]>
+              <![CDATA[Mouse over the 'Structure' menu link.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'Zeebox Play-along example block' is present on the page.]]>
+              <![CDATA[Click the 'File types' menu link.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'Zeebox Hot TV Rooms example block' is present on the page.]]>
+              <![CDATA[Switch to the active frame titled 'File types dialog'.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'Zeebox TV Room Teaser example block' is present on the page.]]>
+              <![CDATA[Click the 'DB TV manage file display' link.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'Zeebox TV Room example block' is present on the page.]]>
+              <![CDATA[Switch to the active frame titled 'MPX Video for Account &quot;DB TV&quot; (2312945284) dialog'.]]>
             </line>
             <line>
-              <![CDATA[Verify the text '' is present on the page.]]>
+              <![CDATA[Click the 'Pub MPX Video' link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Modules' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'zeebox Example' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the module titled 'zeebox Example' to appear in the list.]]>
-            </line>
-            <line>
-              <![CDATA[Uncheck the 'zeebox Example' module checkbox.]]>
+              <![CDATA[Select the 'USA_Demo_Player' player from the 'Pub MPX Video Player for Account...' drop down list.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save configuration' button.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify there are no errors present.]]>
+              <![CDATA[Verify success message of 'Your settings have been saved.' is present.]]>
             </line>
             <line>
               <![CDATA[Click the 'Close Overlay X'.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Modules' menu link.]]>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Uninstall' menu link.]]>
+              <![CDATA[Mouse over the 'Files' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+              <![CDATA[Click the 'mpxMedia' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'zeebox Example' uninstall checkbox.]]>
+              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Uninstall' button.]]>
+              <![CDATA[Enter title Automation1.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Confirm uninstall dialog'.]]>
+              <![CDATA[Click the 'Apply' button.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'The following modules will be completely uninstalled from your site, and all data from these modules will be lost!' is present on the page.]]>
+              <![CDATA[Click the first search title link in the search result set.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'zeebox Example' is present on the page.]]>
+              <![CDATA[Verify the mpx video player frame is present.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Uninstall' button to confirm.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'Zeebox Follow Button example block has been deleted.' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'Zeebox Hot TV Rooms example block has been deleted.' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'Zeebox Play-along example block has been deleted.' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'Zeebox TV Room Teaser example block has been deleted.' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'Zeebox TV Room example block has been deleted.' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'The selected modules have been uninstalled.' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'Page not found' is present on the page.]]>
+              <![CDATA[Verify the mpx video player frame source does NOT contain 'embed'.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- InstallZeeboxModule_Test -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.InstallZeeboxModule.InstallZeeboxModule@4ec26cab]" name="stopSelenium" is-config="true" duration-ms="574" started-at="2014-05-02T13:42:57Z" finished-at="2014-05-02T13:42:58Z">
+        </test-method> <!-- DefaultPlayerOptionsVerification_Test -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification@1ca718f3]" name="stopSelenium" is-config="true" duration-ms="570" started-at="2014-05-04T12:17:21Z" finished-at="2014-05-04T12:17:22Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=InstallZeeboxModule_Test status=SUCCESS method=InstallZeeboxModule.InstallZeeboxModule_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.InstallZeeboxModule.InstallZeeboxModule@4ec26cab] output=Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]]>
+                <![CDATA[[TestResult name=DefaultPlayerOptionsVerification_Test status=SUCCESS method=DefaultPlayerOptionsVerification.DefaultPlayerOptionsVerification_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification@1ca718f3] output=Open url 'http://update.stage.nbcupublisher7.publisher7.com'.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.InstallZeeboxModule.InstallZeeboxModule@4ec26cab]" name="stopGridAndHub" is-config="true" duration-ms="386" started-at="2014-05-02T13:42:58Z" finished-at="2014-05-02T13:42:58Z">
+        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification@1ca718f3]" name="stopGridAndHub" is-config="true" duration-ms="378" started-at="2014-05-04T12:17:22Z" finished-at="2014-05-04T12:17:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopGridAndHub -->
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.InstallZeeboxModule.InstallZeeboxModule -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
