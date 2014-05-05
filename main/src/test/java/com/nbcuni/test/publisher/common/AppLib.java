@@ -2,7 +2,6 @@ package com.nbcuni.test.publisher.common;
 
 import com.nbcuni.test.publisher.common.Driver.Driver;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
-import org.testng.Assert;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -15,7 +14,7 @@ import java.io.File;
  * NBC.com Application Library. Copyright
  *
  * @author Brandon Clark
- * @version 2.0 Date: March 1, 2014
+ * @version 2.1 Date: May 5, 2014
  ***************************************************************************/
 
 public class AppLib {
@@ -101,27 +100,21 @@ public class AppLib {
     	return config.IsErrorCheckingEnabled();
     }
     
-    public void attachScreenshot(ITestResult result) {
+    public void attachScreenshot(ITestResult result) throws Exception {
     	
-        try {
+        String methodName = result.getMethod().getMethodName();
         	
-        	String methodName = result.getMethod().getMethodName();
-        	
-        	String storeScreenshotsTo = config.getPathToScreenshots();
-            String filePath = storeScreenshotsTo + methodName + ".png";
+        String storeScreenshotsTo = config.getPathToScreenshots();
+        String filePath = storeScreenshotsTo + methodName + ".png";
 
-            Reporter.setCurrentTestResult(result); 
-            Reporter.log("Screenshot saved to " + filePath + " ");
-            System.out.println("Screenshot saved to " + filePath);
-        	File scrFile = ((TakesScreenshot) webDriver).getScreenshotAs(OutputType.FILE);    
-            FileUtils.copyFile(scrFile, new File(filePath));
+        Reporter.setCurrentTestResult(result); 
+        Reporter.log("Screenshot saved to " + filePath + " ");
+        System.out.println("Screenshot saved to " + filePath);
+        File scrFile = ((TakesScreenshot) webDriver).getScreenshotAs(OutputType.FILE);    
+        FileUtils.copyFile(scrFile, new File(filePath));
             
-        	Reporter.log("<br><br><a href='" + filePath + "'> <img src='" + filePath + "' height='500' width='500'/> </a>");
-        	Reporter.setCurrentTestResult(null);
-    		
-      } catch (Exception e) {
-          Reporter.log("Failed to capture screenshot");
-      }
+        Reporter.log("<br><br><a href='" + filePath + "'> <img src='" + filePath + "' height='500' width='500'/> </a>");
+        Reporter.setCurrentTestResult(null);
       
     }
     
@@ -136,7 +129,7 @@ public class AppLib {
     public void fail(String errorMessage) {
         
     	Reporter.log(errorMessage);
-    	Assert.fail(errorMessage);
+    	System.out.println(errorMessage);
     }
     
     public UserLogin openApplication() throws Exception {

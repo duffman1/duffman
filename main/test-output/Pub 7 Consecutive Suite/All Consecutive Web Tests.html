@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>All Consecutive Web Tests</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>12/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>12/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sun May 04 15:42:37 EDT 2014</td>
+<td>Started on:</td><td>Mon May 05 11:05:37 EDT 2014</td>
 </tr>
-<tr><td>Total time:</td><td>1733 seconds (1733218 ms)</td>
+<tr><td>Total time:</td><td>1177 seconds (1177429 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td>full </td>
 </tr><tr>
@@ -67,264 +67,6 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='com.nbcuni.test.publisher.tests.Video.CanonicalURLSupport.CanonicalURL.CanonicalUR_TC1080()'><b>CanonicalUR_TC1080</b><br>Test class: com.nbcuni.test.publisher.tests.Video.CanonicalURLSupport.CanonicalURL<br/>
-<a href="#Output-857632794" onClick='toggleBox("Output-857632794", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-857632794" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-857632794">
-STEP 1<br/>
-Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.<br/>
-Enter the user's email address in the 'Email Address' text box.<br/>
-Enter the user's password in the 'Password' text box.<br/>
-Click the 'Login' button.<br/>
-Mouse over the 'Configuration' menu link.<br/>
-Mouse over the 'Media' menu link.<br/>
-Click the 'Media: thePlatform mpx settings' menu link.<br/>
-Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.<br/>
-Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.<br/>
-Get all the selected import account options and store to a list.<br/>
-STEP 2<br/>
-Click the 'Close Overlay X'.<br/>
-Mouse over the 'Structure' menu link.<br/>
-Click the 'File types' menu link.<br/>
-Switch to the active frame titled 'File types dialog'.<br/>
-STEP 3<br/>
-Click the 'DB TV manage fields' link.<br/>
-Switch to the active frame titled 'MPX Video for Account &quot;DB TV&quot; (2312945284) dialog'.<br/>
-STEP 4<br/>
-Switch to the active frame titled 'MPX Video for Account &quot;DB TV&quot; (2312945284) dialog'.<br/>
-STEP 6<br/>
-Click the 'Close Overlay X'.<br/>
-Mouse over the 'Structure' menu link.<br/>
-Click the 'File types' menu link.<br/>
-Switch to the active frame titled 'File types dialog'.<br/>
-STEP 7<br/>
-Click the 'DB TV edit file type' link.<br/>
-Switch to the active frame titled 'MPX Video for Account &quot;DB TV&quot; (2312945284) dialog'.<br/>
-Select 'MPX Media Related Link' from the 'URL Alias Field' drop down list.<br/>
-Click the 'Save' button.<br/>
-Verify success message of 'has been updated.' is present.<br/>
-STEP 8 NOTE- step 8 creates a new video with a canonical url rather than using an existing video<br/>
-Open the mpx platform.<br/>
-Enter 'mpx/AdminPub7QA' in the 'Username' text box.<br/>
-Enter 'Pa55word' in the 'Password' text box.<br/>
-Click the 'Login' button.<br/>
-Click the 'Upload' button.<br/>
-Click the 'Choose Files' button.<br/>
-Click the 'Movies' button in the OS Upload dialog.<br/>
-Click the Test Movie in th OS Upload dialog.<br/>
-Click the 'Open' button.<br/>
-Click the 'Upload' button in the Upload dialog.<br/>
-Click the 'Available Date' label on the right hand side to give focus to the media item.<br/>
-Enter 'Automationac689a7174' in the 'Title' text box.<br/>
-Enter 'canonicalurla07e673a40' in the 'Canonical URL' text box.<br/>
-Click the 'Save' button.<br/>
-Click the 'Publish' button.<br/>
-Click the 'Publish to Pub 7 Primary' check box.<br/>
-Click the 'Publish' button from the upload dialog.<br/>
-Click the 'OK' button.<br/>
-Click the 'Publish' button.<br/>
-Click the 'Publish to Pub 7 Primary' check box.<br/>
-Click the 'Publish' button from the upload dialog.<br/>
-STEP 9<br/>
-Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.<br/>
-Switch to the active frame titled 'Status report dialog'.<br/>
-Click the 'Close Overlay X'.<br/>
-STEP 10<br/>
-Mouse over the 'Content' menu link.<br/>
-Mouse over the 'Files' menu link.<br/>
-Click the 'mpxMedia' menu link.<br/>
-Switch to the active frame titled 'Content dialog'.<br/>
-Enter title Automationac689a7174.<br/>
-Click the 'Apply' button.<br/>
-Get the text of the first search result set item.<br/>
-Mouse over the 'Content' menu link.<br/>
-Mouse over the 'Files' menu link.<br/>
-Click the 'mpxMedia' menu link.<br/>
-Enter title Automationac689a7174.<br/>
-Click the 'Apply' button.<br/>
-Click the first search title link in the search result set.<br/>
-Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CanonicalUR_TC1080.png <br/>
-<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CanonicalUR_TC1080.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CanonicalUR_TC1080.png' height='500' width='500'/> </a><br/>
-</div>
-</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element
-  (Session info: chrome=34.0.1847.131)
-  (Driver info: chromedriver=2.8.241036,platform=Mac OS X 10.9.2 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 30.06 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.2&apos;, java.version: &apos;1.7.0_25&apos;
-Session ID: 44eb8422c5c92b7a4f25ae1459a40648
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.lm5Ak7}, rotatable=false, locationContextEnabled=true, version=34.0.1847.131, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
-Command duration or timeout: 30.48 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.2&apos;, java.version: &apos;1.7.0_25&apos;
-Session ID: 961f7a94-44c2-4b09-a75e-cbd72e7d85e2
-Driver info: com.nbcuni.test.publisher.common.Driver.Driver
-Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.lm5Ak7}, rotatable=false, locationContextEnabled=true, webdriver.remote.sessionid=961f7a94-44c2-4b09-a75e-cbd72e7d85e2, version=34.0.1847.131, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:191)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:554)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:307)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:404)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:344)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:299)
-	at com.nbcuni.test.publisher.pageobjects.Content.SearchFor.SearchTitle_Lnk(SearchFor.java:76)
-	at com.nbcuni.test.publisher.pageobjects.Content.SearchFor.ClickSearchTitleLnk(SearchFor.java:182)
-	at com.nbcuni.test.publisher.tests.Video.CanonicalURLSupport.CanonicalURL.CanonicalUR_TC1080(CanonicalURL.java:121)
-Caused by: org.openqa.selenium.remote.ScreenshotException: Screen shot has been taken
-Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.2&apos;, java.version: &apos;1.7.0_25&apos;
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:125)
-	... 33 more
-Caused by: org.openqa.selenium.NoSuchElementException: no such element
-  (Session info: chrome=34.0.1847.131)
-  (Driver info: chromedriver=2.8.241036,platform=Mac OS X 10.9.2 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 30.06 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.2&apos;, java.version: &apos;1.7.0_25&apos;
-Session ID: 44eb8422c5c92b7a4f25ae1459a40648
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.lm5Ak7}, rotatable=false, locationContextEnabled=true, version=34.0.1847.131, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.2&apos;, java.version: &apos;1.7.0_25&apos;
-Driver info: driver.version: EventFiringWebDriver
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:191)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:554)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:307)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:404)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:344)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:299)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:101)
-	at com.sun.proxy.$Proxy10.findElement(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:180)
-	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:47)
-	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:33)
-	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
-	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:169)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-... Removed 34 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace857632794", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace857632794'><pre>org.openqa.selenium.NoSuchElementException: no such element
-  (Session info: chrome=34.0.1847.131)
-  (Driver info: chromedriver=2.8.241036,platform=Mac OS X 10.9.2 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 30.06 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.2&apos;, java.version: &apos;1.7.0_25&apos;
-Session ID: 44eb8422c5c92b7a4f25ae1459a40648
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.lm5Ak7}, rotatable=false, locationContextEnabled=true, version=34.0.1847.131, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
-Command duration or timeout: 30.48 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.2&apos;, java.version: &apos;1.7.0_25&apos;
-Session ID: 961f7a94-44c2-4b09-a75e-cbd72e7d85e2
-Driver info: com.nbcuni.test.publisher.common.Driver.Driver
-Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.lm5Ak7}, rotatable=false, locationContextEnabled=true, webdriver.remote.sessionid=961f7a94-44c2-4b09-a75e-cbd72e7d85e2, version=34.0.1847.131, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
-	at sun.reflect.GeneratedConstructorAccessor27.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:191)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:554)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:307)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:404)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:344)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:299)
-	at com.nbcuni.test.publisher.pageobjects.Content.SearchFor.SearchTitle_Lnk(SearchFor.java:76)
-	at com.nbcuni.test.publisher.pageobjects.Content.SearchFor.ClickSearchTitleLnk(SearchFor.java:182)
-	at com.nbcuni.test.publisher.tests.Video.CanonicalURLSupport.CanonicalURL.CanonicalUR_TC1080(CanonicalURL.java:121)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1220)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-Caused by: org.openqa.selenium.remote.ScreenshotException: Screen shot has been taken
-Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.2&apos;, java.version: &apos;1.7.0_25&apos;
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:125)
-	... 33 more
-Caused by: org.openqa.selenium.NoSuchElementException: no such element
-  (Session info: chrome=34.0.1847.131)
-  (Driver info: chromedriver=2.8.241036,platform=Mac OS X 10.9.2 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 30.06 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.2&apos;, java.version: &apos;1.7.0_25&apos;
-Session ID: 44eb8422c5c92b7a4f25ae1459a40648
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.lm5Ak7}, rotatable=false, locationContextEnabled=true, version=34.0.1847.131, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.2&apos;, java.version: &apos;1.7.0_25&apos;
-Driver info: driver.version: EventFiringWebDriver
-	at sun.reflect.GeneratedConstructorAccessor27.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:191)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:554)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:307)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:404)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:344)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:299)
-	at sun.reflect.GeneratedMethodAccessor17.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:101)
-	at com.sun.proxy.$Proxy10.findElement(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:180)
-	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:47)
-	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:33)
-	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
-	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:169)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-</pre></div></td>
-<td>192</td>
-<td>com.nbcuni.test.publisher.tests.Video.CanonicalURLSupport.CanonicalURL@1febd225</td></tr>
-</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -334,12 +76,12 @@ Driver info: driver.version: EventFiringWebDriver
 </tr>
 <tr>
 <td title='com.nbcuni.test.publisher.tests.Video.CanonicalURLSupport.CanonicalURL.CanonicalUR_TC1080()'><b>CanonicalUR_TC1080</b><br>Test class: com.nbcuni.test.publisher.tests.Video.CanonicalURLSupport.CanonicalURL<br/>
-<a href="#Output-2071134883" onClick='toggleBox("Output-2071134883", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-390215166" onClick='toggleBox("Output-390215166", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-2071134883" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-2071134883">
+<a href="#Output-390215166" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-390215166">
 STEP 1<br/>
-Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.<br/>
+Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.<br/>
 Enter the user's email address in the 'Email Address' text box.<br/>
 Enter the user's password in the 'Password' text box.<br/>
 Click the 'Login' button.<br/>
@@ -382,18 +124,14 @@ Click the Test Movie in th OS Upload dialog.<br/>
 Click the 'Open' button.<br/>
 Click the 'Upload' button in the Upload dialog.<br/>
 Click the 'Available Date' label on the right hand side to give focus to the media item.<br/>
-Enter 'Automation06653174c3' in the 'Title' text box.<br/>
-Enter 'canonicalurl7b69fd5f7f' in the 'Canonical URL' text box.<br/>
+Enter 'Automation2529a4c885' in the 'Title' text box.<br/>
+Enter 'canonicalurlc9edf41616' in the 'Canonical URL' text box.<br/>
 Click the 'Save' button.<br/>
 Click the 'Publish' button.<br/>
 Click the 'Publish to Pub 7 Primary' check box.<br/>
 Click the 'Publish' button from the upload dialog.<br/>
-Click the 'OK' button.<br/>
-Click the 'Publish' button.<br/>
-Click the 'Publish to Pub 7 Primary' check box.<br/>
-Click the 'Publish' button from the upload dialog.<br/>
 STEP 9<br/>
-Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.<br/>
+Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.<br/>
 Switch to the active frame titled 'Status report dialog'.<br/>
 Click the 'Close Overlay X'.<br/>
 STEP 10<br/>
@@ -401,25 +139,25 @@ Mouse over the 'Content' menu link.<br/>
 Mouse over the 'Files' menu link.<br/>
 Click the 'mpxMedia' menu link.<br/>
 Switch to the active frame titled 'Content dialog'.<br/>
-Enter title Automation06653174c3.<br/>
+Enter title Automation2529a4c885.<br/>
 Click the 'Apply' button.<br/>
 Get the text of the first search result set item.<br/>
 Click the first search title link in the search result set.<br/>
 STEP 11<br/>
 Verify the text 'MPX Media Related Link:' is present on the page.<br/>
-Verify the text 'canonicalurl7b69fd5f7f' is present on the page.<br/>
+Verify the text 'canonicalurlc9edf41616' is present on the page.<br/>
 </div>
 </td>
 <td></td>
-<td>205</td>
-<td>com.nbcuni.test.publisher.tests.Video.CanonicalURLSupport.CanonicalURL@1febd225</td></tr>
+<td>124</td>
+<td>com.nbcuni.test.publisher.tests.Video.CanonicalURLSupport.CanonicalURL@39c0edb7</td></tr>
 <tr>
 <td title='com.nbcuni.test.publisher.tests.Video.Configuration.ConfigurationMultipleMPXAccounts.ConfigurationMultipleMPXAccounts_TC1073()'><b>ConfigurationMultipleMPXAccounts_TC1073</b><br>Test class: com.nbcuni.test.publisher.tests.Video.Configuration.ConfigurationMultipleMPXAccounts<br/>
-<a href="#Output-647398907" onClick='toggleBox("Output-647398907", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-729308042" onClick='toggleBox("Output-729308042", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-647398907" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-647398907">
-Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.<br/>
+<a href="#Output-729308042" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-729308042">
+Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.<br/>
 Enter the user's email address in the 'Email Address' text box.<br/>
 Enter the user's password in the 'Password' text box.<br/>
 Click the 'Login' button.<br/>
@@ -429,7 +167,7 @@ Enter the Password in the 'Password' text box.<br/>
 Click the 'Sign In' button.<br/>
 Click the Account Picker button to display all mpx accounts.<br/>
 Store all the active mpx accounts to a list.<br/>
-Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.<br/>
+Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.<br/>
 Mouse over the 'Configuration' menu link.<br/>
 Mouse over the 'Media' menu link.<br/>
 Click the 'Media: thePlatform mpx settings' menu link.<br/>
@@ -439,15 +177,15 @@ Get the account options from the 'Select Import Account for Account...' drop dow
 </div>
 </td>
 <td></td>
-<td>18</td>
-<td>com.nbcuni.test.publisher.tests.Video.Configuration.ConfigurationMultipleMPXAccounts@6d8c8c3e</td></tr>
+<td>16</td>
+<td>com.nbcuni.test.publisher.tests.Video.Configuration.ConfigurationMultipleMPXAccounts@55c96b02</td></tr>
 <tr>
 <td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery.CreateMediaGallery_Test()'><b>CreateMediaGallery_Test</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery<br/>
-<a href="#Output-1128714957" onClick='toggleBox("Output-1128714957", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-2080779101" onClick='toggleBox("Output-2080779101", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1128714957" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1128714957">
-Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.<br/>
+<a href="#Output-2080779101" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2080779101">
+Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.<br/>
 Enter the user's email address in the 'Email Address' text box.<br/>
 Enter the user's password in the 'Password' text box.<br/>
 Click the 'Login' button.<br/>
@@ -455,7 +193,7 @@ Mouse over the 'Content' menu link.<br/>
 Mouse over the 'Add content' menu link.<br/>
 Click the 'Media Gallery' menu link.<br/>
 Switch to the active frame titled 'Create Media Gallery dialog'.<br/>
-Enter '88ab2dc099004b5' in the 'Title' text box.<br/>
+Enter 'b06a871020414ca' in the 'Title' text box.<br/>
 Click the 'Cover' select button.<br/>
 Switch to the select file frame.<br/>
 Enter the file path for file upload.<br/>
@@ -484,19 +222,19 @@ Switch to the active frame titled 'Create Media Gallery dialog'.<br/>
 Assert that img source of the Media Item contains 'nbclogo'.<br/>
 Assert the the img is loaded and visible.<br/>
 Click the 'Save' button.<br/>
-Verify success message of 'Media Gallery 88ab2dc099004b5 has been created.' is present.<br/>
+Verify success message of 'Media Gallery b06a871020414ca has been created.' is present.<br/>
 </div>
 </td>
 <td></td>
-<td>50</td>
-<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery@75b68cdf</td></tr>
+<td>28</td>
+<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery@36cca5b9</td></tr>
 <tr>
 <td title='com.nbcuni.test.publisher.tests.Video.DeIngestingMPXAccountsAndCorrespondingAssets.DeleteMultipleAccounts.DeleteMultipleAccounts_Test()'><b>DeleteMultipleAccounts_Test</b><br>Test class: com.nbcuni.test.publisher.tests.Video.DeIngestingMPXAccountsAndCorrespondingAssets.DeleteMultipleAccounts<br/>
-<a href="#Output-485630735" onClick='toggleBox("Output-485630735", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-661839323" onClick='toggleBox("Output-661839323", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-485630735" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-485630735">
-Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.<br/>
+<a href="#Output-661839323" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-661839323">
+Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.<br/>
 Enter the user's email address in the 'Email Address' text box.<br/>
 Enter the user's password in the 'Password' text box.<br/>
 Click the 'Login' button.<br/>
@@ -556,15 +294,15 @@ Get the text of the first search result set item.<br/>
 </div>
 </td>
 <td></td>
-<td>216</td>
-<td>com.nbcuni.test.publisher.tests.Video.DeIngestingMPXAccountsAndCorrespondingAssets.DeleteMultipleAccounts@33318b82</td></tr>
+<td>126</td>
+<td>com.nbcuni.test.publisher.tests.Video.DeIngestingMPXAccountsAndCorrespondingAssets.DeleteMultipleAccounts@1abe10a1</td></tr>
 <tr>
 <td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIFKeywordsIngestedAsPhraseInsteadSetsWords.EXIFKeywordsIngestedPhraseInsteadSetsWords.EXIFKeywordsIngestedPhraseInsteadSetsWords_Test()'><b>EXIFKeywordsIngestedPhraseInsteadSetsWords_Test</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIFKeywordsIngestedAsPhraseInsteadSetsWords.EXIFKeywordsIngestedPhraseInsteadSetsWords<br/>
-<a href="#Output-886197396" onClick='toggleBox("Output-886197396", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1128479100" onClick='toggleBox("Output-1128479100", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-886197396" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-886197396">
-Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.<br/>
+<a href="#Output-1128479100" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1128479100">
+Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.<br/>
 Enter the user's email address in the 'Email Address' text box.<br/>
 Enter the user's password in the 'Password' text box.<br/>
 Click the 'Login' button.<br/>
@@ -611,7 +349,7 @@ Mouse over the 'Content' menu link.<br/>
 Mouse over the 'Add content' menu link.<br/>
 Click the 'Media Gallery' menu link.<br/>
 Switch to the active frame titled 'Create Media Gallery dialog'.<br/>
-Enter 'a536ffe8809e42d' in the 'Title' text box.<br/>
+Enter '435b55cf24b2450' in the 'Title' text box.<br/>
 Click the 'Media Items Select' button.<br/>
 Switch to the select file frame.<br/>
 Click the 'Add files' link.<br/>
@@ -653,19 +391,19 @@ Verify the img is loaded and visible.<br/>
 Click the 'Save' button.<br/>
 Switch to the active frame titled 'Create Media Gallery dialog'.<br/>
 Click the 'Save' button.<br/>
-Verify success message of 'Media Gallery a536ffe8809e42d has been created.' is present.<br/>
+Verify success message of 'Media Gallery 435b55cf24b2450 has been created.' is present.<br/>
 </div>
 </td>
 <td></td>
-<td>82</td>
-<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIFKeywordsIngestedAsPhraseInsteadSetsWords.EXIFKeywordsIngestedPhraseInsteadSetsWords@53bc45d4</td></tr>
+<td>72</td>
+<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIFKeywordsIngestedAsPhraseInsteadSetsWords.EXIFKeywordsIngestedPhraseInsteadSetsWords@70fa8cbc</td></tr>
 <tr>
 <td title='com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling.MPXVideosSchedulingVerificationScheduling_Test()'><b>MPXVideosSchedulingVerificationScheduling_Test</b><br>Test class: com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling<br/>
-<a href="#Output-1308905491" onClick='toggleBox("Output-1308905491", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1323077828" onClick='toggleBox("Output-1323077828", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1308905491" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1308905491">
-Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.<br/>
+<a href="#Output-1323077828" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1323077828">
+Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.<br/>
 Enter the user's email address in the 'Email Address' text box.<br/>
 Enter the user's password in the 'Password' text box.<br/>
 Click the 'Login' button.<br/>
@@ -691,90 +429,90 @@ Click the Test Movie in th OS Upload dialog.<br/>
 Click the 'Open' button.<br/>
 Click the 'Upload' button in the Upload dialog.<br/>
 Click the 'Available Date' label on the right hand side to give focus to the media item.<br/>
-Enter '4/14/2014 12:00 AM' in the 'Available Date' text box.<br/>
-Enter 'Automation8f1dabf078' in the 'Title' text box.<br/>
-Enter '4/27/2014 12:00 AM' in the 'Expiration Date' text box.<br/>
+Enter '4/15/2014 12:00 AM' in the 'Available Date' text box.<br/>
+Enter 'Automation060864123f' in the 'Title' text box.<br/>
+Enter '4/28/2014 12:00 AM' in the 'Expiration Date' text box.<br/>
 Click the 'Save' button.<br/>
 Click the 'Publish' button.<br/>
 Click the 'Publish to Pub 7 Primary' check box.<br/>
 Click the 'Publish' button from the upload dialog.<br/>
-Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.<br/>
+Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.<br/>
 Switch to the active frame titled 'Status report dialog'.<br/>
 Click the 'Close Overlay X'.<br/>
 Mouse over the 'Content' menu link.<br/>
 Mouse over the 'Files' menu link.<br/>
 Click the 'mpxMedia' menu link.<br/>
 Switch to the active frame titled 'Content dialog'.<br/>
-Enter title Automation8f1dabf078.<br/>
+Enter title Automation060864123f.<br/>
 Click the 'Apply' button.<br/>
 Get the text of the first search result set item.<br/>
 Get the title text of every result in the search result set.<br/>
 For each expected result, assert it is present in the result set.<br/>
-Verify the text '04/14/2014 - 04:00 AM' is present on the page.<br/>
-Verify the text '04/27/2014 - 04:00 AM' is present on the page.<br/>
+Verify the text '04/15/2014 - 04:00 AM' is present on the page.<br/>
+Verify the text '04/28/2014 - 04:00 AM' is present on the page.<br/>
 Verify the text 'Expired' is present on the page.<br/>
 Click the first search title link in the search result set.<br/>
-Verify the text 'Automation8f1dabf078' is present on the page.<br/>
-Verify the text 'Monday, April 14, 2014 - 04:00' is present on the page.<br/>
-Verify the text 'Sunday, April 27, 2014 - 04:00' is present on the page.<br/>
+Verify the text 'Automation060864123f' is present on the page.<br/>
+Verify the text 'Tuesday, April 15, 2014 - 04:00' is present on the page.<br/>
+Verify the text 'Monday, April 28, 2014 - 04:00' is present on the page.<br/>
 Click the 'Edit' link in the work bench.<br/>
-Switch to the active frame titled 'Edit mpx_video_4 Automation8f1dabf078 dialog'.<br/>
-Verify the value of the 'Available Date' text box equals '04/14/2014'.<br/>
-Verify the value of the 'Expiration Date' text box equals '04/27/2014'.<br/>
+Switch to the active frame titled 'Edit mpx_video_3 Automation060864123f dialog'.<br/>
+Verify the value of the 'Available Date' text box equals '04/15/2014'.<br/>
+Verify the value of the 'Expiration Date' text box equals '04/28/2014'.<br/>
 Click the 'Schedule' tab.<br/>
-Switch to the active frame titled 'Automation8f1dabf078 dialog'.<br/>
+Switch to the active frame titled 'Automation060864123f dialog'.<br/>
 Verify the scheduled revision table is empty.<br/>
 Open the mpx platform.<br/>
-Enter 'Automation8f1dabf078' in the 'Search' text box.<br/>
+Enter 'Automation060864123f' in the 'Search' text box.<br/>
 Click the 'Search by Title' link.<br/>
 Click the 'Available Date' label on the right hand side to give focus to the media item.<br/>
-Enter '5/04/2014 12:00 AM' in the 'Available Date' text box.<br/>
-Enter '5/04/2015 12:00 AM' in the 'Expiration Date' text box.<br/>
+Enter '5/05/2014 12:00 AM' in the 'Available Date' text box.<br/>
+Enter '5/05/2015 12:00 AM' in the 'Expiration Date' text box.<br/>
 Click the 'Save' button.<br/>
 Click the 'Additional Options' arrow.<br/>
 Click the 'Publish Update' link.<br/>
 Click the 'Publish to Pub 7 Primary' check box.<br/>
 Click the 'Update' button.<br/>
-Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.<br/>
+Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.<br/>
 Switch to the active frame titled 'Status report dialog'.<br/>
 Click the 'Close Overlay X'.<br/>
 Mouse over the 'Content' menu link.<br/>
 Mouse over the 'Files' menu link.<br/>
 Click the 'mpxMedia' menu link.<br/>
 Switch to the active frame titled 'Content dialog'.<br/>
-Enter title Automation8f1dabf078.<br/>
+Enter title Automation060864123f.<br/>
 Click the 'Apply' button.<br/>
 Get the title text of every result in the search result set.<br/>
 For each expected result, assert it is present in the result set.<br/>
-Verify the text '05/04/2014 - 04:00 AM' is present on the page.<br/>
-Verify the text '05/04/2015 - 04:00 AM' is present on the page.<br/>
+Verify the text '05/05/2014 - 04:00 AM' is present on the page.<br/>
+Verify the text '05/05/2015 - 04:00 AM' is present on the page.<br/>
 Verify the text 'Published' is present on the page.<br/>
 Click the first search title link in the search result set.<br/>
-Verify the text 'Automation8f1dabf078' is present on the page.<br/>
-Verify the text 'Sunday, May 4, 2014 - 04:00' is present on the page.<br/>
-Verify the text 'Monday, May 4, 2015 - 04:00' is present on the page.<br/>
+Verify the text 'Automation060864123f' is present on the page.<br/>
+Verify the text 'Monday, May 5, 2014 - 04:00' is present on the page.<br/>
+Verify the text 'Tuesday, May 5, 2015 - 04:00' is present on the page.<br/>
 Click the 'Edit' link in the work bench.<br/>
-Switch to the active frame titled 'Edit mpx_video_4 Automation8f1dabf078 dialog'.<br/>
-Verify the value of the 'Available Date' text box equals '05/04/2014'.<br/>
-Verify the value of the 'Expiration Date' text box equals '05/04/2015'.<br/>
+Switch to the active frame titled 'Edit mpx_video_3 Automation060864123f dialog'.<br/>
+Verify the value of the 'Available Date' text box equals '05/05/2014'.<br/>
+Verify the value of the 'Expiration Date' text box equals '05/05/2015'.<br/>
 Click the 'Schedule' tab.<br/>
-Switch to the active frame titled 'Automation8f1dabf078 dialog'.<br/>
-Verify the 'Run now' link is present for content item 'Automation8f1dabf078' with action 'Unpublish'.<br/>
-Verify the text 'Automation8f1dabf078' is present on the page.<br/>
+Switch to the active frame titled 'Automation060864123f dialog'.<br/>
+Verify the 'Run now' link is present for content item 'Automation060864123f' with action 'Unpublish'.<br/>
+Verify the text 'Automation060864123f' is present on the page.<br/>
 Verify the text 'Unpublish' is present on the page.<br/>
-Verify the text '05/04/2015 - 04:00' is present on the page.<br/>
+Verify the text '05/05/2015 - 04:00' is present on the page.<br/>
 </div>
 </td>
 <td></td>
-<td>225</td>
-<td>com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling@6eaaf8f2</td></tr>
+<td>224</td>
+<td>com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling@231ae15a</td></tr>
 <tr>
 <td title='com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability.NotificationPlayerUnavailability_Test()'><b>NotificationPlayerUnavailability_Test</b><br>Test class: com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability<br/>
-<a href="#Output-727338412" onClick='toggleBox("Output-727338412", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-2059713807" onClick='toggleBox("Output-2059713807", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-727338412" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-727338412">
-Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.<br/>
+<a href="#Output-2059713807" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2059713807">
+Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.<br/>
 Enter the user's email address in the 'Email Address' text box.<br/>
 Enter the user's password in the 'Password' text box.<br/>
 Click the 'Login' button.<br/>
@@ -791,9 +529,9 @@ Click the 'Login' button.<br/>
 Click the 'Players' link.<br/>
 Click the 'All Players' link.<br/>
 Click the 'Add' button.<br/>
-Enter 'AutomationPlayer66430b3bc2' in the 'Title' text box.<br/>
+Enter 'AutomationPlayera219020c2d' in the 'Title' text box.<br/>
 Click the 'Save' button.<br/>
-Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.<br/>
+Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.<br/>
 Mouse over the 'Content' menu link.<br/>
 Mouse over the 'Files' menu link.<br/>
 Click the 'mpxPlayers' menu link.<br/>
@@ -801,13 +539,7 @@ Switch to the active frame titled 'Content dialog'.<br/>
 Click the 'Sync MPX Players' link.<br/>
 Click the 'Sync MPX Players Now' link.<br/>
 Verify success message of 'players returned for account' is present.<br/>
-Enter title AutomationPlayer66430b3bc2.<br/>
-Click the 'Apply' button.<br/>
-Get the text of the first search result set item.<br/>
-Mouse over the 'Content' menu link.<br/>
-Mouse over the 'Files' menu link.<br/>
-Click the 'mpxPlayers' menu link.<br/>
-Enter title AutomationPlayer66430b3bc2.<br/>
+Enter title AutomationPlayera219020c2d.<br/>
 Click the 'Apply' button.<br/>
 Get the text of the first search result set item.<br/>
 Mouse over the 'Content' menu link.<br/>
@@ -820,50 +552,50 @@ Click the 'Apply' button.<br/>
 Get the text of the first search result set item.<br/>
 Click the first search title link in the search result set.<br/>
 Click the 'Edit' link in the work bench.<br/>
-Switch to the active frame titled 'Edit mpx_video_4 Automation06653174c3 dialog'.<br/>
-Select 'AutomationPlayer66430b3bc2' from the 'Video Player' drop down list.<br/>
+Switch to the active frame titled 'Edit mpx_video_3 Automation2529a4c885 dialog'.<br/>
+Select 'AutomationPlayera219020c2d' from the 'Video Player' drop down list.<br/>
 Click the 'Save' button.<br/>
 Open the mpx platform.<br/>
 Click the 'Players' link.<br/>
 Click the 'All Players' link.<br/>
-Enter 'AutomationPlayer66430b3bc2' in the 'Player Search' text box.<br/>
+Enter 'AutomationPlayera219020c2d' in the 'Player Search' text box.<br/>
 Click the 'Search by Players Title' link.<br/>
 Click the 'Player Title' label to give focus to the player item.<br/>
 Click the 'Disable Player' check box.<br/>
 Click the 'Save' button.<br/>
-Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.<br/>
+Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.<br/>
 Switch to the active frame titled 'Status report dialog'.<br/>
 Click the 'Close Overlay X'.<br/>
 Mouse over the 'Content' menu link.<br/>
 Mouse over the 'Files' menu link.<br/>
 Click the 'mpxPlayers' menu link.<br/>
 Switch to the active frame titled 'Content dialog'.<br/>
-Verify that the disabled and unpublished player text is present for player titled 'AutomationPlayer66430b3bc2'.<br/>
-Enter title AutomationPlayer66430b3bc2.<br/>
+Verify that the disabled and unpublished player text is present for player titled 'AutomationPlayera219020c2d'.<br/>
+Enter title AutomationPlayera219020c2d.<br/>
 Click the 'Apply' button.<br/>
 Click the first search title link in the search result set.<br/>
 Click the 'Edit' link in the work bench.<br/>
-Switch to the active frame titled 'Edit mpx_player AutomationPlayer66430b3bc2 dialog'.<br/>
+Switch to the active frame titled 'Edit mpx_player AutomationPlayera219020c2d dialog'.<br/>
 Scroll the 'Publishing Options' link into view.<br/>
 Click the 'Publishing Options' link.<br/>
 Click the 'Save' button.<br/>
-Verify success message of 'MPX Player AutomationPlayer66430b3bc2 has been updated.' is present.<br/>
+Verify success message of 'MPX Player AutomationPlayera219020c2d has been updated.' is present.<br/>
 Mouse over the 'Content' menu link.<br/>
 Mouse over the 'Files' menu link.<br/>
 Click the 'mpxPlayers' menu link.<br/>
 Switch to the active frame titled 'Content dialog'.<br/>
-Verify that the disabled and unpublished player text is present for player titled 'AutomationPlayer66430b3bc2'.<br/>
+Verify that the disabled and unpublished player text is present for player titled 'AutomationPlayera219020c2d'.<br/>
 Click the 'MPX Media' link.<br/>
 Switch to the active frame titled 'Content dialog'.<br/>
-Verify that the disabled and unpublished player text is present for player titled 'AutomationPlayer66430b3bc2'.<br/>
+Verify that the disabled and unpublished player text is present for player titled 'AutomationPlayera219020c2d'.<br/>
 Click the 'Close Overlay X'.<br/>
 Mouse over the 'Configuration' menu link.<br/>
 Mouse over the 'Media' menu link.<br/>
 Click the 'Media: thePlatform mpx settings' menu link.<br/>
 Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.<br/>
-Verify that the disabled and unpublished player text is present for player titled 'AutomationPlayer66430b3bc2'.<br/>
-Click the 'click here' link for the unpublished player titled 'AutomationPlayer66430b3bc2'.<br/>
-Switch to the active frame titled 'Edit mpx_player AutomationPlayer66430b3bc2 dialog'.<br/>
+Verify that the disabled and unpublished player text is present for player titled 'AutomationPlayera219020c2d'.<br/>
+Click the 'click here' link for the unpublished player titled 'AutomationPlayera219020c2d'.<br/>
+Switch to the active frame titled 'Edit mpx_player AutomationPlayera219020c2d dialog'.<br/>
 Scroll the 'Publishing Options' link into view.<br/>
 Click the 'Publishing Options' link.<br/>
 Check the 'Published' checkbox<br/>
@@ -872,11 +604,11 @@ Mouse over the 'Content' menu link.<br/>
 Mouse over the 'Files' menu link.<br/>
 Click the 'mpxPlayers' menu link.<br/>
 Switch to the active frame titled 'Content dialog'.<br/>
-Verify that the disabled and unpublished player text is present for player titled 'AutomationPlayer66430b3bc2'.<br/>
-Click the MPX 'Login' link for the unpublished player 'AutomationPlayer66430b3bc2'.<br/>
+Verify that the disabled and unpublished player text is present for player titled 'AutomationPlayera219020c2d'.<br/>
+Click the MPX 'Login' link for the unpublished player 'AutomationPlayera219020c2d'.<br/>
 Click the 'Players' link.<br/>
 Click the 'All Players' link.<br/>
-Enter 'AutomationPlayer66430b3bc2' in the 'Player Search' text box.<br/>
+Enter 'AutomationPlayera219020c2d' in the 'Player Search' text box.<br/>
 Click the 'Search by Players Title' link.<br/>
 Click the 'Player Title' label to give focus to the player item.<br/>
 Click the 'Disable Player' check box.<br/>
@@ -889,19 +621,26 @@ Mouse over the 'Content' menu link.<br/>
 Mouse over the 'Files' menu link.<br/>
 Click the 'mpxPlayers' menu link.<br/>
 Switch to the active frame titled 'Content dialog'.<br/>
-Verify the text 'An MPXplayer that's in use (AutomationPlayer66430b3bc2) has been disabled and unpublished.' is NOT present on the page.<br/>
+Verify the text 'An MPXplayer that's in use (AutomationPlayera219020c2d) has been disabled and unpublished.' is NOT present on the page.<br/>
+Switch to the active frame titled 'Status report dialog'.<br/>
+Click the 'Close Overlay X'.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Files' menu link.<br/>
+Click the 'mpxPlayers' menu link.<br/>
+Switch to the active frame titled 'Content dialog'.<br/>
+Verify the text 'An MPXplayer that's in use (AutomationPlayera219020c2d) has been disabled and unpublished.' is NOT present on the page.<br/>
 </div>
 </td>
 <td></td>
-<td>355</td>
-<td>com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability@23dac0d9</td></tr>
+<td>297</td>
+<td>com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability@359430ca</td></tr>
 <tr>
 <td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons.StickyButtons_Test()'><b>StickyButtons_Test</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons<br/>
-<a href="#Output-235908562" onClick='toggleBox("Output-235908562", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-513427646" onClick='toggleBox("Output-513427646", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-235908562" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-235908562">
-Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.<br/>
+<a href="#Output-513427646" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-513427646">
+Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.<br/>
 Enter the user's email address in the 'Email Address' text box.<br/>
 Enter the user's password in the 'Password' text box.<br/>
 Click the 'Login' button.<br/>
@@ -920,7 +659,7 @@ Mouse over the 'Content' menu link.<br/>
 Mouse over the 'Add content' menu link.<br/>
 Click the 'Post' menu link.<br/>
 Switch to the active frame titled 'Create Post dialog'.<br/>
-Enter '9b66bda691ab4ed' in the 'Title' text box.<br/>
+Enter '2fb34278a14848f' in the 'Title' text box.<br/>
 Scroll by '100'.<br/>
 Switch to the Synopsis frame.<br/>
 Enter a randomized text string into the 'Body' text area.<br/>
@@ -937,7 +676,7 @@ Scroll by '100'.<br/>
 Verify the sticky edit 'Save' button is present.<br/>
 Verify the sticky edit 'Preview' button is present.<br/>
 Click the 'Save' button.<br/>
-Verify success message of 'Post 9b66bda691ab4ed has been created.' is present.<br/>
+Verify success message of 'Post 2fb34278a14848f has been created.' is present.<br/>
 Verify the sticky edit 'Save' button is present.<br/>
 Verify the sticky edit 'Preview' button is present.<br/>
 Scroll by '100'.<br/>
@@ -952,20 +691,20 @@ Verify success message of 'The configuration options have been saved.' is presen
 </div>
 </td>
 <td></td>
-<td>167</td>
-<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons@1abe10a1</td></tr>
+<td>72</td>
+<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons@7377e4b0</td></tr>
 <tr>
 <td title='com.nbcuni.test.publisher.tests.Video.SyncFromMPXButtonToVideoFileEntitiesEditForm.SyncFromMPXButtonToVideoFileEntitiesEditForm.SyncFromMPXButtonToVideoFileEntitiesEditForm_Test()'><b>SyncFromMPXButtonToVideoFileEntitiesEditForm_Test</b><br>Test class: com.nbcuni.test.publisher.tests.Video.SyncFromMPXButtonToVideoFileEntitiesEditForm.SyncFromMPXButtonToVideoFileEntitiesEditForm</td>
 <td></td>
 <td>0</td>
-<td>com.nbcuni.test.publisher.tests.Video.SyncFromMPXButtonToVideoFileEntitiesEditForm.SyncFromMPXButtonToVideoFileEntitiesEditForm@65642eab</td></tr>
+<td>com.nbcuni.test.publisher.tests.Video.SyncFromMPXButtonToVideoFileEntitiesEditForm.SyncFromMPXButtonToVideoFileEntitiesEditForm@3435c7be</td></tr>
 <tr>
 <td title='com.nbcuni.test.publisher.tests.Setup.TestSetup.TestSetup_Test()'><b>TestSetup_Test</b><br>Test class: com.nbcuni.test.publisher.tests.Setup.TestSetup<br/>
-<a href="#Output-855337709" onClick='toggleBox("Output-855337709", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1135696139" onClick='toggleBox("Output-1135696139", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-855337709" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-855337709">
-Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.<br/>
+<a href="#Output-1135696139" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1135696139">
+Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.<br/>
 Enter the user's email address in the 'Email Address' text box.<br/>
 Enter the user's password in the 'Password' text box.<br/>
 Click the 'Login' button.<br/>
@@ -989,14 +728,14 @@ Click the 'Close Overlay X'.<br/>
 </td>
 <td></td>
 <td>20</td>
-<td>com.nbcuni.test.publisher.tests.Setup.TestSetup@264b72a2</td></tr>
+<td>com.nbcuni.test.publisher.tests.Setup.TestSetup@140f3941</td></tr>
 <tr>
 <td title='com.nbcuni.test.publisher.tests.Video.Thumbnails.ThumbnailsAreNotUpdated.ThumbnailsAreNotUpdated_Test()'><b>ThumbnailsAreNotUpdated_Test</b><br>Test class: com.nbcuni.test.publisher.tests.Video.Thumbnails.ThumbnailsAreNotUpdated<br/>
-<a href="#Output-1148505631" onClick='toggleBox("Output-1148505631", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1475357770" onClick='toggleBox("Output-1475357770", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1148505631" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1148505631">
-Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.<br/>
+<a href="#Output-1475357770" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1475357770">
+Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.<br/>
 Enter the user's email address in the 'Email Address' text box.<br/>
 Enter the user's password in the 'Password' text box.<br/>
 Click the 'Login' button.<br/>
@@ -1029,7 +768,7 @@ Click the Test Movie in th OS Upload dialog.<br/>
 Click the 'Open' button.<br/>
 Click the 'Upload' button in the Upload dialog.<br/>
 Click the 'Available Date' label on the right hand side to give focus to the media item.<br/>
-Enter 'Automation9b12ea3253' in the 'Title' text box.<br/>
+Enter 'Automation60d5469ca0' in the 'Title' text box.<br/>
 Click the 'Save' button.<br/>
 Click the 'Files' link.<br/>
 Click the 'Upload' button.<br/>
@@ -1044,17 +783,17 @@ Click the 'Save' button.<br/>
 Click the 'Publish' button.<br/>
 Click the 'Publish to Pub 7 Primary' check box.<br/>
 Click the 'Publish' button from the upload dialog.<br/>
-Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.<br/>
+Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.<br/>
 Switch to the active frame titled 'Status report dialog'.<br/>
 Click the 'Close Overlay X'.<br/>
 Mouse over the 'Content' menu link.<br/>
 Mouse over the 'Files' menu link.<br/>
 Click the 'mpxMedia' menu link.<br/>
 Switch to the active frame titled 'Content dialog'.<br/>
-Enter title Automation9b12ea3253.<br/>
+Enter title Automation60d5469ca0.<br/>
 Click the 'Apply' button.<br/>
 Get the text of the first search result set item.<br/>
-Verify the search thumbnail named 'nbclogosmall' is present for search result 'Automation9b12ea3253'.<br/>
+Verify the search thumbnail named 'nbclogosmall' is present for search result 'Automation60d5469ca0'.<br/>
 Assert the the img is loaded and visible.<br/>
 Mouse over the 'Structure' menu link.<br/>
 Click the 'File types' menu link.<br/>
@@ -1065,13 +804,13 @@ Verify success message of 'Your settings have been saved.' is present.<br/>
 </div>
 </td>
 <td></td>
-<td>163</td>
-<td>com.nbcuni.test.publisher.tests.Video.Thumbnails.ThumbnailsAreNotUpdated@1d75249c</td></tr>
+<td>160</td>
+<td>com.nbcuni.test.publisher.tests.Video.Thumbnails.ThumbnailsAreNotUpdated@17fe67e4</td></tr>
 <tr>
 <td title='com.nbcuni.test.publisher.tests.Video.UndefinedIndexesDisplayingForMPXPlayers.UndefinedIndexesDisplayingForMPXPlayers.UndefinedIndexesDisplayingForMPXPlayers_Test()'><b>UndefinedIndexesDisplayingForMPXPlayers_Test</b><br>Test class: com.nbcuni.test.publisher.tests.Video.UndefinedIndexesDisplayingForMPXPlayers.UndefinedIndexesDisplayingForMPXPlayers</td>
 <td></td>
 <td>0</td>
-<td>com.nbcuni.test.publisher.tests.Video.UndefinedIndexesDisplayingForMPXPlayers.UndefinedIndexesDisplayingForMPXPlayers@593b8970</td></tr>
+<td>com.nbcuni.test.publisher.tests.Video.UndefinedIndexesDisplayingForMPXPlayers.UndefinedIndexesDisplayingForMPXPlayers@3f56b60a</td></tr>
 </table><p>
 </body>
 </html>

@@ -68,7 +68,15 @@ public class MPXAddPlayer {
     public void ClickAllPlayersLnk() throws Exception {
     	
     	Reporter.log("Click the 'All Players' link.");
-    	wait.until(ExpectedConditions.visibilityOf(AllPlayers_Lnk)).click();
+    	wait.until(ExpectedConditions.visibilityOf(AllPlayers_Lnk));
+    	try {
+    		AllPlayers_Lnk.click();
+    		
+    	}
+    	catch (WebDriverException e) {
+    		webDriver.executeScript("arguments[0].click();", AllPlayers_Lnk);
+    		
+    	}
     	mpxAssets.WaitForImgPresent(getImagePath() + "Players/AllPlayers_Lst.png");
     	mpxAssets.WaitForAllAssetsToLoad();
     	

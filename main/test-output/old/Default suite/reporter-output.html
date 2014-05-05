@@ -1,131 +1,232 @@
-<h2>Reporter output</h2><table><tr><td>Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.</td></tr>
+<h2>Reporter output</h2><table><tr><td>Open url 'http://update.dev-integration2.nbcupublisher7.publisher7.com'.</td></tr>
 <tr><td>Enter the user's email address in the 'Email Address' text box.</td></tr>
 <tr><td>Enter the user's password in the 'Password' text box.</td></tr>
 <tr><td>Click the 'Login' button.</td></tr>
 <tr><td>Click the 'Modules' menu link.</td></tr>
-<tr><td>Switch to frame titled 'Modules'.</td></tr>
-<tr><td>Enter 'Pub Ads' in the 'Filter Name' text box.</td></tr>
-<tr><td>Wait for the module titled 'Pub Ads' to appear in the list.</td></tr>
-<tr><td>Verify the 'Pub Ads' check box is checked.</td></tr>
-<tr><td>Click the 'Close Overlay X'.</td></tr>
-<tr><td>Mouse over the 'Structure' menu link.</td></tr>
-<tr><td>Click the 'Publisher Ads Side Files' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'Publisher Ads Side Files dialog'.</td></tr>
-<tr><td>Click the 'Add' link.</td></tr>
-<tr><td>Switch to the active frame titled 'Add a new side file dialog'.</td></tr>
-<tr><td>Enter 'de9710060f7b4d0' in the 'Name' text box.</td></tr>
-<tr><td>Enter '0120ffdafe/f07a5bb399.html' in the 'Path' text box.</td></tr>
-<tr><td>Select the 'text/html' from the 'Response type' drop down list.</td></tr>
-<tr><td>Enter '<html><body bgcolor=white><script language=javascript>function pq(q) {if(q.length > 1) this.q = q.substring(1, q.length);else this.q = null;this.keyValuePairs = new Array();if(q) {for(var i=0; i < this.q.split("&").length; i++) {this.keyValuePairs[i] = this.q.split("&")[i];}}this.getValue = function(s) {for(var j=0; j < this.keyValuePairs.length; j++) {if(this.keyValuePairs[j].split("=")[0] == s)return this.keyValuePairs[j].split("=")[1];}return -1;}}function qs(key){var page = new pq(document.location.search);return unescape(page.getValue(key));}var _c = qs('c');var r_number = Math.random();document.writeln('<SCR'+'IPT language='JavaScript' S'+'RC="http://media.adcentriconline.com/adcentric/tag/'+_c+'?ADCadcifr=1&number='+r_number+'"></SCR'+'IPT>');</script></body></html>' in the 'Content' text box.</td></tr>
-<tr><td>Click the 'Save' button.</td></tr>
-<tr><td>Switch to the active frame titled 'Publisher Ads Side Files dialog'.</td></tr>
-<tr><td>Verify success message of 'de9710060f7b4d0 has been created.' is present.</td></tr>
-<tr><td>Click the Ad Side File link with path '0120ffdafe/f07a5bb399.html'.</td></tr>
-<tr><td>Switch to the active frame titled 'Publisher Ads Side Files dialog'.</td></tr>
-<tr><td>Click the Ad Side File 'Edit' link for adName + 'AdCentric'.</td></tr>
-<tr><td>Switch to the active frame titled 'Edit side file adcentric dialog'.</td></tr>
-<tr><td>Click the 'Save' button.</td></tr>
-<tr><td>Switch to the active frame titled 'Publisher Ads Side Files dialog'.</td></tr>
-<tr><td>Verify success message of 'adcentric has been updated' is present.</td></tr>
-<tr><td>Verify storage type for Ad Side File 'AdCentric' is set to 'Overridden'.</td></tr>
-<tr><td>Click the Ad Side File 'Edit' link for adName + 'AdCentric'.</td></tr>
-<tr><td>Switch to the active frame titled 'Edit side file adcentric dialog'.</td></tr>
-<tr><td>Click the 'Revert' button.</td></tr>
-<tr><td>Click the 'Revert' button.</td></tr>
-<tr><td>Switch to the active frame titled 'Publisher Ads Side Files dialog'.</td></tr>
-<tr><td>Verify success message of 'The item has been reverted.' is present.</td></tr>
-<tr><td>Verify storage type for Ad Side File 'AdCentric' is set to 'Default'.</td></tr>
-<tr><td>Click the Ad Side File expand link for adName + 'AdCentric'.</td></tr>
-<tr><td>Click the Ad Side File 'Clone' link for adName + 'AdCentric'.</td></tr>
-<tr><td>Switch to the active frame titled 'Clone side file adcentric dialog'.</td></tr>
-<tr><td>Enter 'df4bd1069bdb4f9' in the 'Name' text box.</td></tr>
-<tr><td>Click the 'Save' button.</td></tr>
-<tr><td>Verify success message of 'clone_of_adcentric has been created.' is present.</td></tr>
-<tr><td>Verify storage type for Ad Side File 'df4bd1069bdb4f9' is set to 'Normal'.</td></tr>
-<tr><td>Click the Ad Side File 'Edit' link for adName + 'AdCentric'.</td></tr>
-<tr><td>Switch to the active frame titled 'Edit side file adcentric dialog'.</td></tr>
-<tr><td>Click the 'Export' tab.</td></tr>
-<tr><td>Switch to the active frame titled 'Export side file adcentric dialog'.</td></tr>
-<tr><td>Copy the text from the 'Export' text area.</td></tr>
-<tr><td>Click the 'Close Overlay X'.</td></tr>
-<tr><td>Mouse over the 'Structure' menu link.</td></tr>
-<tr><td>Mouse over the 'Publisher Ads Side Files' menu link.</td></tr>
-<tr><td>Click the 'Import' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'Import side file dialog'.</td></tr>
-<tr><td>Enter '$adpath = new stdClass();
-$adpath->disabled = FALSE; /* Edit this to true to make a default adpath disabled initially */
-$adpath->api_version = 1;
-$adpath->machine_name = 'adcentric';
-$adpath->name = 'AdCentric';
-$adpath->path = 'AdCentric/adcentric.html';
-$adpath->file_type = 'html';
-$adpath->content = '<html><body bgcolor=white>
-<script language=javascript>
-function pq(q) {
-        if(q.length > 1) this.q = q.substring(1, q.length);
-        else this.q = null;
-        this.keyValuePairs = new Array();
-        if(q) {
-                for(var i=0; i < this.q.split("&").length; i++) {
-                        this.keyValuePairs[i] = this.q.split("&")[i];
-                }
-        }
-        this.getValue = function(s) {
-                for(var j=0; j < this.keyValuePairs.length; j++) {
-                        if(this.keyValuePairs[j].split("=")[0] == s)
-                                return this.keyValuePairs[j].split("=")[1];
-                }
-                return -1;
-        }
-}
-function qs(key){
-        var page = new pq(document.location.search);
-        return unescape(page.getValue(key));
-}
-var _c = qs(\'c\');
-var r_number = Math.random();
-document.writeln(\'<SCR\'+\'IPT language=\\\'JavaScript\\\' S\'+\'RC="http://media.adcentriconline.com/adcentric/tag/\'+_c+\'?ADCadcifr=1&number=\'+r_number+\'"></SCR\'+\'IPT>\');
-</script>
-</body></html>
-';
-' in the 'Side file code' text area.</td></tr>
-<tr><td>Click the 'Continue' button.</td></tr>
-<tr><td>Switch to the active frame titled 'Import side file dialog'.</td></tr>
-<tr><td>Verify warning message 'You have unsaved changes. These changes will not be made permanent until you click Save.' is present.</td></tr>
-<tr><td>Enter 'a90201e296b8421' in the 'Name' text box.</td></tr>
-<tr><td>Enter '050fa76579/e768d95046.html' in the 'Path' text box.</td></tr>
-<tr><td>Click the 'Update' button.</td></tr>
-<tr><td>Switch to the active frame titled 'Import side file dialog'.</td></tr>
-<tr><td>Verify warning message 'You have unsaved changes. These changes will not be made permanent until you click Save.' is present.</td></tr>
-<tr><td>Click the 'Save' button.</td></tr>
-<tr><td>Switch to the active frame titled 'Import side file dialog'.</td></tr>
-<tr><td>Enter 'a90201e296b8421' in the 'Machine Name' text box.</td></tr>
-<tr><td>Click the 'Update' button.</td></tr>
-<tr><td>Switch to the active frame titled 'Import side file dialog'.</td></tr>
-<tr><td>Verify warning message 'You have unsaved changes. These changes will not be made permanent until you click Save.' is present.</td></tr>
-<tr><td>Click the 'Save' button.</td></tr>
-<tr><td>Switch to the active frame titled 'Publisher Ads Side Files dialog'.</td></tr>
-<tr><td>Verify success message of 'a90201e296b8421 has been created.' is present.</td></tr>
-<tr><td>Verify storage type for Ad Side File 'a90201e296b8421' is set to 'Normal'.</td></tr>
-<tr><td>Click the Ad Side File expand link for adName + 'de9710060f7b4d0'.</td></tr>
-<tr><td>Click the Ad Side File 'Delete' link for adName + 'de9710060f7b4d0'.</td></tr>
-<tr><td>Switch to the active frame titled 'Are you sure you want to delete de9710060f7b4d0? dialog'.</td></tr>
-<tr><td>Click the 'Delete' button.</td></tr>
-<tr><td>Switch to the active frame titled 'Publisher Ads Side Files dialog'.</td></tr>
-<tr><td>Verify success message of 'The item has been deleted.' is present.</td></tr>
-<tr><td>Verify Ad Side File 'de9710060f7b4d0' is NOT present.</td></tr>
-<tr><td>Click the Ad Side File expand link for adName + 'df4bd1069bdb4f9'.</td></tr>
-<tr><td>Click the Ad Side File 'Delete' link for adName + 'df4bd1069bdb4f9'.</td></tr>
-<tr><td>Switch to the active frame titled 'Are you sure you want to delete clone_of_adcentric? dialog'.</td></tr>
-<tr><td>Click the 'Delete' button.</td></tr>
-<tr><td>Switch to the active frame titled 'Publisher Ads Side Files dialog'.</td></tr>
-<tr><td>Verify success message of 'The item has been deleted.' is present.</td></tr>
-<tr><td>Verify Ad Side File 'df4bd1069bdb4f9' is NOT present.</td></tr>
-<tr><td>Click the Ad Side File expand link for adName + 'a90201e296b8421'.</td></tr>
-<tr><td>Click the Ad Side File 'Delete' link for adName + 'a90201e296b8421'.</td></tr>
-<tr><td>Switch to the active frame titled 'Are you sure you want to delete a90201e296b8421? dialog'.</td></tr>
-<tr><td>Click the 'Delete' button.</td></tr>
-<tr><td>Switch to the active frame titled 'Publisher Ads Side Files dialog'.</td></tr>
-<tr><td>Verify success message of 'The item has been deleted.' is present.</td></tr>
-<tr><td>Verify Ad Side File 'a90201e296b8421' is NOT present.</td></tr>
+<tr><td>Switch to the active frame titled 'Modules dialog'.</td></tr>
+<tr><td>Enter 'Block' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for the module titled 'Block' to appear in the list.</td></tr>
+<tr><td>Verify core module 'Block' is enabled.</td></tr>
+<tr><td>Enter 'Contextual links' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for the module titled 'Contextual links' to appear in the list.</td></tr>
+<tr><td>Verify core module 'Contextual links' is enabled.</td></tr>
+<tr><td>Enter 'Help' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for the module titled 'Help' to appear in the list.</td></tr>
+<tr><td>Verify core module 'Help' is enabled.</td></tr>
+<tr><td>Enter 'Image' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for the module titled 'Image' to appear in the list.</td></tr>
+<tr><td>Verify core module 'Image' is enabled.</td></tr>
+<tr><td>Enter 'List' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for the module titled 'List' to appear in the list.</td></tr>
+<tr><td>Verify core module 'List' is enabled.</td></tr>
+<tr><td>Enter 'Menu' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for the module titled 'Menu' to appear in the list.</td></tr>
+<tr><td>Verify core module 'Menu' is enabled.</td></tr>
+<tr><td>Enter 'Number' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for the module titled 'Number' to appear in the list.</td></tr>
+<tr><td>Verify core module 'Number' is enabled.</td></tr>
+<tr><td>Enter 'Options' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for the module titled 'Options' to appear in the list.</td></tr>
+<tr><td>Verify core module 'Options' is enabled.</td></tr>
+<tr><td>Enter 'Path' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for the module titled 'Path' to appear in the list.</td></tr>
+<tr><td>Verify core module 'Path' is enabled.</td></tr>
+<tr><td>Enter 'Taxonomy' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for the module titled 'Taxonomy' to appear in the list.</td></tr>
+<tr><td>Verify core module 'Taxonomy' is enabled.</td></tr>
+<tr><td>Enter 'Syslog' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for the module titled 'Syslog' to appear in the list.</td></tr>
+<tr><td>Verify core module 'Syslog' is enabled.</td></tr>
+<tr><td>Enter 'Shortcut' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for the module titled 'Shortcut' to appear in the list.</td></tr>
+<tr><td>Verify core module 'Shortcut' is enabled.</td></tr>
+<tr><td>Enter 'Overlay' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for the module titled 'Overlay' to appear in the list.</td></tr>
+<tr><td>Verify core module 'Overlay' is enabled.</td></tr>
+<tr><td>Enter 'Field UI' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for the module titled 'Field UI' to appear in the list.</td></tr>
+<tr><td>Verify core module 'Field UI' is enabled.</td></tr>
+<tr><td>Enter 'File' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for the module titled 'File' to appear in the list.</td></tr>
+<tr><td>Verify core module 'File' is enabled.</td></tr>
+<tr><td>Enter 'Acquia Cloud Sticky Sessions' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for the module titled 'Acquia Cloud Sticky Sessions' to appear in the list.</td></tr>
+<tr><td>Verify contrib module 'Acquia Cloud Sticky Sessions' is enabled.</td></tr>
+<tr><td>Enter 'Administration menu Adminimal Theme' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for the module titled 'Administration menu Adminimal Theme' to appear in the list.</td></tr>
+<tr><td>Verify contrib module 'Administration menu Adminimal Theme' is enabled.</td></tr>
+<tr><td>Enter 'Node clone' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for the module titled 'Node clone' to appear in the list.</td></tr>
+<tr><td>Verify contrib module 'Node clone' is enabled.</td></tr>
+<tr><td>Enter 'Collections' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for the module titled 'Collections' to appear in the list.</td></tr>
+<tr><td>Verify contrib module 'Collections' is enabled.</td></tr>
+<tr><td>Enter 'Collection Field' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for the module titled 'Collection Field' to appear in the list.</td></tr>
+<tr><td>Verify contrib module 'Collection Field' is enabled.</td></tr>
+<tr><td>Enter 'Content locking (edit lock)' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for the module titled 'Content locking (edit lock)' to appear in the list.</td></tr>
+<tr><td>Verify contrib module 'Content locking (edit lock)' is enabled.</td></tr>
+<tr><td>Enter 'Content locking (edit lock) timeouts' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for the module titled 'Content locking (edit lock) timeouts' to appear in the list.</td></tr>
+<tr><td>Verify contrib module 'Content locking (edit lock) timeouts' is enabled.</td></tr>
+<tr><td>Enter 'Context' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for the module titled 'Context' to appear in the list.</td></tr>
+<tr><td>Verify contrib module 'Context' is enabled.</td></tr>
+<tr><td>Enter 'Date Popup' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for the module titled 'Date Popup' to appear in the list.</td></tr>
+<tr><td>Verify contrib module 'Date Popup' is enabled.</td></tr>
+<tr><td>Enter 'Diff' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for the module titled 'Diff' to appear in the list.</td></tr>
+<tr><td>Verify contrib module 'Diff' is enabled.</td></tr>
+<tr><td>Enter 'Display suite' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for the module titled 'Display suite' to appear in the list.</td></tr>
+<tr><td>Verify contrib module 'Display suite' is enabled.</td></tr>
+<tr><td>Enter 'Entity cache' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for the module titled 'Entity cache' to appear in the list.</td></tr>
+<tr><td>Verify contrib module 'Entity cache' is enabled.</td></tr>
+<tr><td>Enter 'Environment indicator' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for the module titled 'Environment indicator' to appear in the list.</td></tr>
+<tr><td>Verify contrib module 'Environment indicator' is enabled.</td></tr>
+<tr><td>Enter 'Exportable Scheduler' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for the module titled 'Exportable Scheduler' to appear in the list.</td></tr>
+<tr><td>Verify contrib module 'Exportable Scheduler' is enabled.</td></tr>
+<tr><td>Enter 'Features' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for the module titled 'Features' to appear in the list.</td></tr>
+<tr><td>Verify contrib module 'Features' is enabled.</td></tr>
+<tr><td>Enter 'File entity Revisions' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for the module titled 'File entity Revisions' to appear in the list.</td></tr>
+<tr><td>Verify contrib module 'File entity Revisions' is enabled.</td></tr>
+<tr><td>Enter 'Global Redirect' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for the module titled 'Global Redirect' to appear in the list.</td></tr>
+<tr><td>Verify contrib module 'Global Redirect' is enabled.</td></tr>
+<tr><td>Enter 'Interactive Information Bar' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for the module titled 'Interactive Information Bar' to appear in the list.</td></tr>
+<tr><td>Verify contrib module 'Interactive Information Bar' is enabled.</td></tr>
+<tr><td>Enter 'Media' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for the module titled 'Media' to appear in the list.</td></tr>
+<tr><td>Verify contrib module 'Media' is enabled.</td></tr>
+<tr><td>Enter 'Media Multiselect' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for the module titled 'Media Multiselect' to appear in the list.</td></tr>
+<tr><td>Verify contrib module 'Media Multiselect' is enabled.</td></tr>
+<tr><td>Enter 'Metatag' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for the module titled 'Metatag' to appear in the list.</td></tr>
+<tr><td>Verify contrib module 'Metatag' is enabled.</td></tr>
+<tr><td>Enter 'Metatag: Open Graph' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for the module titled 'Metatag: Open Graph' to appear in the list.</td></tr>
+<tr><td>Verify contrib module 'Metatag: Open Graph' is enabled.</td></tr>
+<tr><td>Enter 'Metatag: Twitter Cards' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for the module titled 'Metatag: Twitter Cards' to appear in the list.</td></tr>
+<tr><td>Verify contrib module 'Metatag: Twitter Cards' is enabled.</td></tr>
+<tr><td>Enter 'Metatag: Twitter Cards (See It)' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for the module titled 'Metatag: Twitter Cards (See It)' to appear in the list.</td></tr>
+<tr><td>Verify contrib module 'Metatag: Twitter Cards (See It)' is enabled.</td></tr>
+<tr><td>Enter 'Module filter' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for the module titled 'Module filter' to appear in the list.</td></tr>
+<tr><td>Verify contrib module 'Module filter' is enabled.</td></tr>
+<tr><td>Enter 'Multiple forms' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for the module titled 'Multiple forms' to appear in the list.</td></tr>
+<tr><td>Verify contrib module 'Multiple forms' is enabled.</td></tr>
+<tr><td>Enter 'Pathauto' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for the module titled 'Pathauto' to appear in the list.</td></tr>
+<tr><td>Verify contrib module 'Pathauto' is enabled.</td></tr>
+<tr><td>Enter 'Plupload integration module' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for the module titled 'Plupload integration module' to appear in the list.</td></tr>
+<tr><td>Verify contrib module 'Plupload integration module' is enabled.</td></tr>
+<tr><td>Enter 'Queues Workbench' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for the module titled 'Queues Workbench' to appear in the list.</td></tr>
+<tr><td>Verify contrib module 'Queues Workbench' is enabled.</td></tr>
+<tr><td>Enter 'Revision Scheduler SPS Integration' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for the module titled 'Revision Scheduler SPS Integration' to appear in the list.</td></tr>
+<tr><td>Verify contrib module 'Revision Scheduler SPS Integration' is enabled.</td></tr>
+<tr><td>Enter 'Soft length limit' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for the module titled 'Soft length limit' to appear in the list.</td></tr>
+<tr><td>Verify contrib module 'Soft length limit' is enabled.</td></tr>
+<tr><td>Enter 'Strongarm' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for the module titled 'Strongarm' to appear in the list.</td></tr>
+<tr><td>Verify contrib module 'Strongarm' is enabled.</td></tr>
+<tr><td>Enter 'Site Preview System' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for the module titled 'Site Preview System' to appear in the list.</td></tr>
+<tr><td>Verify contrib module 'Site Preview System' is enabled.</td></tr>
+<tr><td>Enter 'Token' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for the module titled 'Token' to appear in the list.</td></tr>
+<tr><td>Verify contrib module 'Token' is enabled.</td></tr>
+<tr><td>Enter 'Views' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for the module titled 'Views' to appear in the list.</td></tr>
+<tr><td>Verify contrib module 'Views' is enabled.</td></tr>
+<tr><td>Enter 'Views Bulk Operations' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for the module titled 'Views Bulk Operations' to appear in the list.</td></tr>
+<tr><td>Verify contrib module 'Views Bulk Operations' is enabled.</td></tr>
+<tr><td>Enter 'Wysiwyg' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for the module titled 'Wysiwyg' to appear in the list.</td></tr>
+<tr><td>Verify contrib module 'Wysiwyg' is enabled.</td></tr>
+<tr><td>Enter 'Simple EXIF' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for the module titled 'Simple EXIF' to appear in the list.</td></tr>
+<tr><td>Verify contrib module 'Simple EXIF' is enabled.</td></tr>
+<tr><td>Enter 'Pub Analytics' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for the module titled 'Pub Analytics' to appear in the list.</td></tr>
+<tr><td>Verify custom module 'Pub Analytics' is enabled.</td></tr>
+<tr><td>Enter 'Publisher Certify Utility' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for the module titled 'Publisher Certify Utility' to appear in the list.</td></tr>
+<tr><td>Verify custom module 'Publisher Certify Utility' is enabled.</td></tr>
+<tr><td>Enter 'Pub Editorial' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for the module titled 'Pub Editorial' to appear in the list.</td></tr>
+<tr><td>Verify custom module 'Pub Editorial' is enabled.</td></tr>
+<tr><td>Enter 'Pub Hide Submit' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for the module titled 'Pub Hide Submit' to appear in the list.</td></tr>
+<tr><td>Verify custom module 'Pub Hide Submit' is enabled.</td></tr>
+<tr><td>Enter 'Pub Media Galleries' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for the module titled 'Pub Media Galleries' to appear in the list.</td></tr>
+<tr><td>Verify custom module 'Pub Media Galleries' is enabled.</td></tr>
+<tr><td>Enter 'Pub Movie' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for the module titled 'Pub Movie' to appear in the list.</td></tr>
+<tr><td>Verify custom module 'Pub Movie' is enabled.</td></tr>
+<tr><td>Enter 'Pub MPX' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for the module titled 'Pub MPX' to appear in the list.</td></tr>
+<tr><td>Verify custom module 'Pub MPX' is enabled.</td></tr>
+<tr><td>Enter 'Pub Promo Queue' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for the module titled 'Pub Promo Queue' to appear in the list.</td></tr>
+<tr><td>Verify custom module 'Pub Promo Queue' is enabled.</td></tr>
+<tr><td>Enter 'Publisher QA Releases Utility' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for the module titled 'Publisher QA Releases Utility' to appear in the list.</td></tr>
+<tr><td>Verify custom module 'Publisher QA Releases Utility' is enabled.</td></tr>
+<tr><td>Enter 'Publisher Releases Utility' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for the module titled 'Publisher Releases Utility' to appear in the list.</td></tr>
+<tr><td>Verify custom module 'Publisher Releases Utility' is enabled.</td></tr>
+<tr><td>Enter 'Pub Relationships' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for the module titled 'Pub Relationships' to appear in the list.</td></tr>
+<tr><td>Verify custom module 'Pub Relationships' is enabled.</td></tr>
+<tr><td>Enter 'Pub Movie Relationships' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for the module titled 'Pub Movie Relationships' to appear in the list.</td></tr>
+<tr><td>Verify custom module 'Pub Movie Relationships' is enabled.</td></tr>
+<tr><td>Enter 'Pub TV Relationships Enhanced' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for the module titled 'Pub TV Relationships Enhanced' to appear in the list.</td></tr>
+<tr><td>Verify custom module 'Pub TV Relationships Enhanced' is enabled.</td></tr>
+<tr><td>Enter 'Pub Report Client' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for the module titled 'Pub Report Client' to appear in the list.</td></tr>
+<tr><td>Verify custom module 'Pub Report Client' is enabled.</td></tr>
+<tr><td>Enter 'Publisher Sec' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for the module titled 'Publisher Sec' to appear in the list.</td></tr>
+<tr><td>Verify custom module 'Publisher Sec' is enabled.</td></tr>
+<tr><td>Enter 'Pub Social' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for the module titled 'Pub Social' to appear in the list.</td></tr>
+<tr><td>Verify custom module 'Pub Social' is enabled.</td></tr>
+<tr><td>Enter 'Pub SPS (Site Preview System)' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for the module titled 'Pub SPS (Site Preview System)' to appear in the list.</td></tr>
+<tr><td>Verify custom module 'Pub SPS (Site Preview System)' is enabled.</td></tr>
+<tr><td>Enter 'Publisher Sync Database Utility' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for the module titled 'Publisher Sync Database Utility' to appear in the list.</td></tr>
+<tr><td>Verify custom module 'Publisher Sync Database Utility' is enabled.</td></tr>
+<tr><td>Enter 'Publisher Sync Files Utility' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for the module titled 'Publisher Sync Files Utility' to appear in the list.</td></tr>
+<tr><td>Verify custom module 'Publisher Sync Files Utility' is enabled.</td></tr>
+<tr><td>Enter 'Pub Television' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for the module titled 'Pub Television' to appear in the list.</td></tr>
+<tr><td>Verify custom module 'Pub Television' is enabled.</td></tr>
+<tr><td>Enter 'Pub Users' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for the module titled 'Pub Users' to appear in the list.</td></tr>
+<tr><td>Verify custom module 'Pub Users' is enabled.</td></tr>
+<tr><td>Enter 'Pub Workbench' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for the module titled 'Pub Workbench' to appear in the list.</td></tr>
+<tr><td>Verify custom module 'Pub Workbench' is enabled.</td></tr>
 </table>

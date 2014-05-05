@@ -6,6 +6,7 @@ import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.Taxonomy.Taxonomy;
 import com.nbcuni.test.publisher.common.Driver.Driver;
 
+import org.openqa.selenium.By;
 import org.testng.ITestResult;
 import org.testng.Reporter;
 import org.testng.annotations.AfterMethod;
@@ -39,7 +40,8 @@ public class ParentTest {
     @BeforeMethod(alwaysRun = true)
     public void startSelenium() throws Exception {
         try {
-            driverSetup = new DriverSetup();
+            
+        	driverSetup = new DriverSetup();
         	webDriver = driverSetup.WebDriverSetup();
             applib = new AppLib(webDriver);
             random = new Random();
@@ -47,45 +49,50 @@ public class ParentTest {
             overlay = new Overlay(webDriver, applib);
             contentParent = new ContentParent(webDriver, applib);
             
-            try {
-            	webDriver.manage().timeouts().pageLoadTimeout(applib.getPageLoadWaitTime(), TimeUnit.SECONDS);
-            	webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
-            	webDriver.manage().window().maximize();
-            }
-            catch (Exception e) {
-            	Reporter.log("Failed to set timeouts and maximize window");
-            }
+            webDriver.manage().timeouts().pageLoadTimeout(applib.getPageLoadWaitTime(), TimeUnit.SECONDS);
+            webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
+            webDriver.manage().window().maximize();
+            
         } catch (Exception e) {
-            applib.fail(e.toString());
+            applib.fail("Failed to start WebDriver and initiate timeouts");
         }
 
     }
 
     @AfterMethod(alwaysRun = true)
-    public void stopSelenium(ITestResult result) throws Exception{
+    public void stopSelenium(ITestResult result) throws Exception {
         
     	try {
-    	
-        	if (!result.isSuccess()) {
-        		
-                applib.attachScreenshot(result);  
-
-            }
-        	
+    		if (!result.isSuccess()) {
+                
+    			applib.attachScreenshot(result);  
+    		}
         } catch (Exception e) {
-            
-        	applib.fail(e.toString());
+        	
+        	applib.fail("Failed to capture screenshot");
         }
         
+    	try {
+    		if (!result.isSuccess()) {
+    			webDriver.switchTo().defaultContent();
+            	webDriver.executeScript("arguments[0].click();", 
+            			webDriver.findElement(By.xpath("//a[text()='Flush all caches']")));
+            	Reporter.log("Cache was cleared on test failure");
+    		}
+    	}
+    	catch (Exception e) {
+    		
+    		applib.fail("Failed to flush cache");
+    	}
+    	
         try {
         	
         	webDriver.quit();
         } 
         catch (Exception e) {
         
-        	applib.fail(e.toString());
+        	applib.fail("Failed to stop WebDriver");
         }
-
     }
     
     @AfterSuite(alwaysRun = true)

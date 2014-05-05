@@ -2,7 +2,7 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
     <line>
-      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
+      <![CDATA[Open url 'http://update.dev-integration2.nbcupublisher7.publisher7.com'.]]>
     </line>
     <line>
       <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
@@ -17,329 +17,701 @@
       <![CDATA[Click the 'Modules' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to frame titled 'Modules'.]]>
+      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Pub Ads' in the 'Filter Name' text box.]]>
+      <![CDATA[Enter 'Block' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Wait for the module titled 'Pub Ads' to appear in the list.]]>
+      <![CDATA[Wait for the module titled 'Block' to appear in the list.]]>
     </line>
     <line>
-      <![CDATA[Verify the 'Pub Ads' check box is checked.]]>
+      <![CDATA[Verify core module 'Block' is enabled.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
+      <![CDATA[Enter 'Contextual links' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Structure' menu link.]]>
+      <![CDATA[Wait for the module titled 'Contextual links' to appear in the list.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Publisher Ads Side Files' menu link.]]>
+      <![CDATA[Verify core module 'Contextual links' is enabled.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
+      <![CDATA[Enter 'Help' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Add' link.]]>
+      <![CDATA[Wait for the module titled 'Help' to appear in the list.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Add a new side file dialog'.]]>
+      <![CDATA[Verify core module 'Help' is enabled.]]>
     </line>
     <line>
-      <![CDATA[Enter 'de9710060f7b4d0' in the 'Name' text box.]]>
+      <![CDATA[Enter 'Image' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Enter '0120ffdafe/f07a5bb399.html' in the 'Path' text box.]]>
+      <![CDATA[Wait for the module titled 'Image' to appear in the list.]]>
     </line>
     <line>
-      <![CDATA[Select the 'text/html' from the 'Response type' drop down list.]]>
+      <![CDATA[Verify core module 'Image' is enabled.]]>
     </line>
     <line>
-      <![CDATA[Enter '<html><body bgcolor=white><script language=javascript>function pq(q) {if(q.length > 1) this.q = q.substring(1, q.length);else this.q = null;this.keyValuePairs = new Array();if(q) {for(var i=0; i < this.q.split("&").length; i++) {this.keyValuePairs[i] = this.q.split("&")[i];}}this.getValue = function(s) {for(var j=0; j < this.keyValuePairs.length; j++) {if(this.keyValuePairs[j].split("=")[0] == s)return this.keyValuePairs[j].split("=")[1];}return -1;}}function qs(key){var page = new pq(document.location.search);return unescape(page.getValue(key));}var _c = qs('c');var r_number = Math.random();document.writeln('<SCR'+'IPT language='JavaScript' S'+'RC="http://media.adcentriconline.com/adcentric/tag/'+_c+'?ADCadcifr=1&number='+r_number+'"></SCR'+'IPT>');</script></body></html>' in the 'Content' text box.]]>
+      <![CDATA[Enter 'List' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save' button.]]>
+      <![CDATA[Wait for the module titled 'List' to appear in the list.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
+      <![CDATA[Verify core module 'List' is enabled.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'de9710060f7b4d0 has been created.' is present.]]>
+      <![CDATA[Enter 'Menu' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the Ad Side File link with path '0120ffdafe/f07a5bb399.html'.]]>
+      <![CDATA[Wait for the module titled 'Menu' to appear in the list.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
+      <![CDATA[Verify core module 'Menu' is enabled.]]>
     </line>
     <line>
-      <![CDATA[Click the Ad Side File 'Edit' link for adName + 'AdCentric'.]]>
+      <![CDATA[Enter 'Number' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Edit side file adcentric dialog'.]]>
+      <![CDATA[Wait for the module titled 'Number' to appear in the list.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save' button.]]>
+      <![CDATA[Verify core module 'Number' is enabled.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
+      <![CDATA[Enter 'Options' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'adcentric has been updated' is present.]]>
+      <![CDATA[Wait for the module titled 'Options' to appear in the list.]]>
     </line>
     <line>
-      <![CDATA[Verify storage type for Ad Side File 'AdCentric' is set to 'Overridden'.]]>
+      <![CDATA[Verify core module 'Options' is enabled.]]>
     </line>
     <line>
-      <![CDATA[Click the Ad Side File 'Edit' link for adName + 'AdCentric'.]]>
+      <![CDATA[Enter 'Path' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Edit side file adcentric dialog'.]]>
+      <![CDATA[Wait for the module titled 'Path' to appear in the list.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Revert' button.]]>
+      <![CDATA[Verify core module 'Path' is enabled.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Revert' button.]]>
+      <![CDATA[Enter 'Taxonomy' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
+      <![CDATA[Wait for the module titled 'Taxonomy' to appear in the list.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'The item has been reverted.' is present.]]>
+      <![CDATA[Verify core module 'Taxonomy' is enabled.]]>
     </line>
     <line>
-      <![CDATA[Verify storage type for Ad Side File 'AdCentric' is set to 'Default'.]]>
+      <![CDATA[Enter 'Syslog' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the Ad Side File expand link for adName + 'AdCentric'.]]>
+      <![CDATA[Wait for the module titled 'Syslog' to appear in the list.]]>
     </line>
     <line>
-      <![CDATA[Click the Ad Side File 'Clone' link for adName + 'AdCentric'.]]>
+      <![CDATA[Verify core module 'Syslog' is enabled.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Clone side file adcentric dialog'.]]>
+      <![CDATA[Enter 'Shortcut' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Enter 'df4bd1069bdb4f9' in the 'Name' text box.]]>
+      <![CDATA[Wait for the module titled 'Shortcut' to appear in the list.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save' button.]]>
+      <![CDATA[Verify core module 'Shortcut' is enabled.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'clone_of_adcentric has been created.' is present.]]>
+      <![CDATA[Enter 'Overlay' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Verify storage type for Ad Side File 'df4bd1069bdb4f9' is set to 'Normal'.]]>
+      <![CDATA[Wait for the module titled 'Overlay' to appear in the list.]]>
     </line>
     <line>
-      <![CDATA[Click the Ad Side File 'Edit' link for adName + 'AdCentric'.]]>
+      <![CDATA[Verify core module 'Overlay' is enabled.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Edit side file adcentric dialog'.]]>
+      <![CDATA[Enter 'Field UI' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Export' tab.]]>
+      <![CDATA[Wait for the module titled 'Field UI' to appear in the list.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Export side file adcentric dialog'.]]>
+      <![CDATA[Verify core module 'Field UI' is enabled.]]>
     </line>
     <line>
-      <![CDATA[Copy the text from the 'Export' text area.]]>
+      <![CDATA[Enter 'File' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
+      <![CDATA[Wait for the module titled 'File' to appear in the list.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Structure' menu link.]]>
+      <![CDATA[Verify core module 'File' is enabled.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Publisher Ads Side Files' menu link.]]>
+      <![CDATA[Enter 'Acquia Cloud Sticky Sessions' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Import' menu link.]]>
+      <![CDATA[Wait for the module titled 'Acquia Cloud Sticky Sessions' to appear in the list.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Import side file dialog'.]]>
+      <![CDATA[Verify contrib module 'Acquia Cloud Sticky Sessions' is enabled.]]>
     </line>
     <line>
-      <![CDATA[Enter '$adpath = new stdClass();
-$adpath->disabled = FALSE; /* Edit this to true to make a default adpath disabled initially */
-$adpath->api_version = 1;
-$adpath->machine_name = 'adcentric';
-$adpath->name = 'AdCentric';
-$adpath->path = 'AdCentric/adcentric.html';
-$adpath->file_type = 'html';
-$adpath->content = '<html><body bgcolor=white>
-<script language=javascript>
-function pq(q) {
-        if(q.length > 1) this.q = q.substring(1, q.length);
-        else this.q = null;
-        this.keyValuePairs = new Array();
-        if(q) {
-                for(var i=0; i < this.q.split("&").length; i++) {
-                        this.keyValuePairs[i] = this.q.split("&")[i];
-                }
-        }
-        this.getValue = function(s) {
-                for(var j=0; j < this.keyValuePairs.length; j++) {
-                        if(this.keyValuePairs[j].split("=")[0] == s)
-                                return this.keyValuePairs[j].split("=")[1];
-                }
-                return -1;
-        }
-}
-function qs(key){
-        var page = new pq(document.location.search);
-        return unescape(page.getValue(key));
-}
-var _c = qs(\'c\');
-var r_number = Math.random();
-document.writeln(\'<SCR\'+\'IPT language=\\\'JavaScript\\\' S\'+\'RC="http://media.adcentriconline.com/adcentric/tag/\'+_c+\'?ADCadcifr=1&number=\'+r_number+\'"></SCR\'+\'IPT>\');
-</script>
-</body></html>
-';
-' in the 'Side file code' text area.]]>
+      <![CDATA[Enter 'Administration menu Adminimal Theme' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Continue' button.]]>
+      <![CDATA[Wait for the module titled 'Administration menu Adminimal Theme' to appear in the list.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Import side file dialog'.]]>
+      <![CDATA[Verify contrib module 'Administration menu Adminimal Theme' is enabled.]]>
     </line>
     <line>
-      <![CDATA[Verify warning message 'You have unsaved changes. These changes will not be made permanent until you click Save.' is present.]]>
+      <![CDATA[Enter 'Node clone' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Enter 'a90201e296b8421' in the 'Name' text box.]]>
+      <![CDATA[Wait for the module titled 'Node clone' to appear in the list.]]>
     </line>
     <line>
-      <![CDATA[Enter '050fa76579/e768d95046.html' in the 'Path' text box.]]>
+      <![CDATA[Verify contrib module 'Node clone' is enabled.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Update' button.]]>
+      <![CDATA[Enter 'Collections' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Import side file dialog'.]]>
+      <![CDATA[Wait for the module titled 'Collections' to appear in the list.]]>
     </line>
     <line>
-      <![CDATA[Verify warning message 'You have unsaved changes. These changes will not be made permanent until you click Save.' is present.]]>
+      <![CDATA[Verify contrib module 'Collections' is enabled.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save' button.]]>
+      <![CDATA[Enter 'Collection Field' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Import side file dialog'.]]>
+      <![CDATA[Wait for the module titled 'Collection Field' to appear in the list.]]>
     </line>
     <line>
-      <![CDATA[Enter 'a90201e296b8421' in the 'Machine Name' text box.]]>
+      <![CDATA[Verify contrib module 'Collection Field' is enabled.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Update' button.]]>
+      <![CDATA[Enter 'Content locking (edit lock)' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Import side file dialog'.]]>
+      <![CDATA[Wait for the module titled 'Content locking (edit lock)' to appear in the list.]]>
     </line>
     <line>
-      <![CDATA[Verify warning message 'You have unsaved changes. These changes will not be made permanent until you click Save.' is present.]]>
+      <![CDATA[Verify contrib module 'Content locking (edit lock)' is enabled.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save' button.]]>
+      <![CDATA[Enter 'Content locking (edit lock) timeouts' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
+      <![CDATA[Wait for the module titled 'Content locking (edit lock) timeouts' to appear in the list.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'a90201e296b8421 has been created.' is present.]]>
+      <![CDATA[Verify contrib module 'Content locking (edit lock) timeouts' is enabled.]]>
     </line>
     <line>
-      <![CDATA[Verify storage type for Ad Side File 'a90201e296b8421' is set to 'Normal'.]]>
+      <![CDATA[Enter 'Context' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the Ad Side File expand link for adName + 'de9710060f7b4d0'.]]>
+      <![CDATA[Wait for the module titled 'Context' to appear in the list.]]>
     </line>
     <line>
-      <![CDATA[Click the Ad Side File 'Delete' link for adName + 'de9710060f7b4d0'.]]>
+      <![CDATA[Verify contrib module 'Context' is enabled.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Are you sure you want to delete de9710060f7b4d0? dialog'.]]>
+      <![CDATA[Enter 'Date Popup' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Delete' button.]]>
+      <![CDATA[Wait for the module titled 'Date Popup' to appear in the list.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
+      <![CDATA[Verify contrib module 'Date Popup' is enabled.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'The item has been deleted.' is present.]]>
+      <![CDATA[Enter 'Diff' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Verify Ad Side File 'de9710060f7b4d0' is NOT present.]]>
+      <![CDATA[Wait for the module titled 'Diff' to appear in the list.]]>
     </line>
     <line>
-      <![CDATA[Click the Ad Side File expand link for adName + 'df4bd1069bdb4f9'.]]>
+      <![CDATA[Verify contrib module 'Diff' is enabled.]]>
     </line>
     <line>
-      <![CDATA[Click the Ad Side File 'Delete' link for adName + 'df4bd1069bdb4f9'.]]>
+      <![CDATA[Enter 'Display suite' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Are you sure you want to delete clone_of_adcentric? dialog'.]]>
+      <![CDATA[Wait for the module titled 'Display suite' to appear in the list.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Delete' button.]]>
+      <![CDATA[Verify contrib module 'Display suite' is enabled.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
+      <![CDATA[Enter 'Entity cache' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'The item has been deleted.' is present.]]>
+      <![CDATA[Wait for the module titled 'Entity cache' to appear in the list.]]>
     </line>
     <line>
-      <![CDATA[Verify Ad Side File 'df4bd1069bdb4f9' is NOT present.]]>
+      <![CDATA[Verify contrib module 'Entity cache' is enabled.]]>
     </line>
     <line>
-      <![CDATA[Click the Ad Side File expand link for adName + 'a90201e296b8421'.]]>
+      <![CDATA[Enter 'Environment indicator' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the Ad Side File 'Delete' link for adName + 'a90201e296b8421'.]]>
+      <![CDATA[Wait for the module titled 'Environment indicator' to appear in the list.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Are you sure you want to delete a90201e296b8421? dialog'.]]>
+      <![CDATA[Verify contrib module 'Environment indicator' is enabled.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Delete' button.]]>
+      <![CDATA[Enter 'Exportable Scheduler' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
+      <![CDATA[Wait for the module titled 'Exportable Scheduler' to appear in the list.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'The item has been deleted.' is present.]]>
+      <![CDATA[Verify contrib module 'Exportable Scheduler' is enabled.]]>
     </line>
     <line>
-      <![CDATA[Verify Ad Side File 'a90201e296b8421' is NOT present.]]>
+      <![CDATA[Enter 'Features' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the module titled 'Features' to appear in the list.]]>
+    </line>
+    <line>
+      <![CDATA[Verify contrib module 'Features' is enabled.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'File entity Revisions' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the module titled 'File entity Revisions' to appear in the list.]]>
+    </line>
+    <line>
+      <![CDATA[Verify contrib module 'File entity Revisions' is enabled.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Global Redirect' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the module titled 'Global Redirect' to appear in the list.]]>
+    </line>
+    <line>
+      <![CDATA[Verify contrib module 'Global Redirect' is enabled.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Interactive Information Bar' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the module titled 'Interactive Information Bar' to appear in the list.]]>
+    </line>
+    <line>
+      <![CDATA[Verify contrib module 'Interactive Information Bar' is enabled.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Media' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the module titled 'Media' to appear in the list.]]>
+    </line>
+    <line>
+      <![CDATA[Verify contrib module 'Media' is enabled.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Media Multiselect' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the module titled 'Media Multiselect' to appear in the list.]]>
+    </line>
+    <line>
+      <![CDATA[Verify contrib module 'Media Multiselect' is enabled.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Metatag' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the module titled 'Metatag' to appear in the list.]]>
+    </line>
+    <line>
+      <![CDATA[Verify contrib module 'Metatag' is enabled.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Metatag: Open Graph' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the module titled 'Metatag: Open Graph' to appear in the list.]]>
+    </line>
+    <line>
+      <![CDATA[Verify contrib module 'Metatag: Open Graph' is enabled.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Metatag: Twitter Cards' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the module titled 'Metatag: Twitter Cards' to appear in the list.]]>
+    </line>
+    <line>
+      <![CDATA[Verify contrib module 'Metatag: Twitter Cards' is enabled.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Metatag: Twitter Cards (See It)' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the module titled 'Metatag: Twitter Cards (See It)' to appear in the list.]]>
+    </line>
+    <line>
+      <![CDATA[Verify contrib module 'Metatag: Twitter Cards (See It)' is enabled.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Module filter' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the module titled 'Module filter' to appear in the list.]]>
+    </line>
+    <line>
+      <![CDATA[Verify contrib module 'Module filter' is enabled.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Multiple forms' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the module titled 'Multiple forms' to appear in the list.]]>
+    </line>
+    <line>
+      <![CDATA[Verify contrib module 'Multiple forms' is enabled.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Pathauto' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the module titled 'Pathauto' to appear in the list.]]>
+    </line>
+    <line>
+      <![CDATA[Verify contrib module 'Pathauto' is enabled.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Plupload integration module' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the module titled 'Plupload integration module' to appear in the list.]]>
+    </line>
+    <line>
+      <![CDATA[Verify contrib module 'Plupload integration module' is enabled.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Queues Workbench' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the module titled 'Queues Workbench' to appear in the list.]]>
+    </line>
+    <line>
+      <![CDATA[Verify contrib module 'Queues Workbench' is enabled.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Revision Scheduler SPS Integration' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the module titled 'Revision Scheduler SPS Integration' to appear in the list.]]>
+    </line>
+    <line>
+      <![CDATA[Verify contrib module 'Revision Scheduler SPS Integration' is enabled.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Soft length limit' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the module titled 'Soft length limit' to appear in the list.]]>
+    </line>
+    <line>
+      <![CDATA[Verify contrib module 'Soft length limit' is enabled.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Strongarm' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the module titled 'Strongarm' to appear in the list.]]>
+    </line>
+    <line>
+      <![CDATA[Verify contrib module 'Strongarm' is enabled.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Site Preview System' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the module titled 'Site Preview System' to appear in the list.]]>
+    </line>
+    <line>
+      <![CDATA[Verify contrib module 'Site Preview System' is enabled.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Token' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the module titled 'Token' to appear in the list.]]>
+    </line>
+    <line>
+      <![CDATA[Verify contrib module 'Token' is enabled.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Views' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the module titled 'Views' to appear in the list.]]>
+    </line>
+    <line>
+      <![CDATA[Verify contrib module 'Views' is enabled.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Views Bulk Operations' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the module titled 'Views Bulk Operations' to appear in the list.]]>
+    </line>
+    <line>
+      <![CDATA[Verify contrib module 'Views Bulk Operations' is enabled.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Wysiwyg' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the module titled 'Wysiwyg' to appear in the list.]]>
+    </line>
+    <line>
+      <![CDATA[Verify contrib module 'Wysiwyg' is enabled.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Simple EXIF' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the module titled 'Simple EXIF' to appear in the list.]]>
+    </line>
+    <line>
+      <![CDATA[Verify contrib module 'Simple EXIF' is enabled.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Pub Analytics' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the module titled 'Pub Analytics' to appear in the list.]]>
+    </line>
+    <line>
+      <![CDATA[Verify custom module 'Pub Analytics' is enabled.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Publisher Certify Utility' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the module titled 'Publisher Certify Utility' to appear in the list.]]>
+    </line>
+    <line>
+      <![CDATA[Verify custom module 'Publisher Certify Utility' is enabled.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Pub Editorial' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the module titled 'Pub Editorial' to appear in the list.]]>
+    </line>
+    <line>
+      <![CDATA[Verify custom module 'Pub Editorial' is enabled.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Pub Hide Submit' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the module titled 'Pub Hide Submit' to appear in the list.]]>
+    </line>
+    <line>
+      <![CDATA[Verify custom module 'Pub Hide Submit' is enabled.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Pub Media Galleries' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the module titled 'Pub Media Galleries' to appear in the list.]]>
+    </line>
+    <line>
+      <![CDATA[Verify custom module 'Pub Media Galleries' is enabled.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Pub Movie' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the module titled 'Pub Movie' to appear in the list.]]>
+    </line>
+    <line>
+      <![CDATA[Verify custom module 'Pub Movie' is enabled.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Pub MPX' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the module titled 'Pub MPX' to appear in the list.]]>
+    </line>
+    <line>
+      <![CDATA[Verify custom module 'Pub MPX' is enabled.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Pub Promo Queue' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the module titled 'Pub Promo Queue' to appear in the list.]]>
+    </line>
+    <line>
+      <![CDATA[Verify custom module 'Pub Promo Queue' is enabled.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Publisher QA Releases Utility' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the module titled 'Publisher QA Releases Utility' to appear in the list.]]>
+    </line>
+    <line>
+      <![CDATA[Verify custom module 'Publisher QA Releases Utility' is enabled.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Publisher Releases Utility' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the module titled 'Publisher Releases Utility' to appear in the list.]]>
+    </line>
+    <line>
+      <![CDATA[Verify custom module 'Publisher Releases Utility' is enabled.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Pub Relationships' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the module titled 'Pub Relationships' to appear in the list.]]>
+    </line>
+    <line>
+      <![CDATA[Verify custom module 'Pub Relationships' is enabled.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Pub Movie Relationships' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the module titled 'Pub Movie Relationships' to appear in the list.]]>
+    </line>
+    <line>
+      <![CDATA[Verify custom module 'Pub Movie Relationships' is enabled.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Pub TV Relationships Enhanced' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the module titled 'Pub TV Relationships Enhanced' to appear in the list.]]>
+    </line>
+    <line>
+      <![CDATA[Verify custom module 'Pub TV Relationships Enhanced' is enabled.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Pub Report Client' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the module titled 'Pub Report Client' to appear in the list.]]>
+    </line>
+    <line>
+      <![CDATA[Verify custom module 'Pub Report Client' is enabled.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Publisher Sec' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the module titled 'Publisher Sec' to appear in the list.]]>
+    </line>
+    <line>
+      <![CDATA[Verify custom module 'Publisher Sec' is enabled.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Pub Social' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the module titled 'Pub Social' to appear in the list.]]>
+    </line>
+    <line>
+      <![CDATA[Verify custom module 'Pub Social' is enabled.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Pub SPS (Site Preview System)' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the module titled 'Pub SPS (Site Preview System)' to appear in the list.]]>
+    </line>
+    <line>
+      <![CDATA[Verify custom module 'Pub SPS (Site Preview System)' is enabled.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Publisher Sync Database Utility' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the module titled 'Publisher Sync Database Utility' to appear in the list.]]>
+    </line>
+    <line>
+      <![CDATA[Verify custom module 'Publisher Sync Database Utility' is enabled.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Publisher Sync Files Utility' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the module titled 'Publisher Sync Files Utility' to appear in the list.]]>
+    </line>
+    <line>
+      <![CDATA[Verify custom module 'Publisher Sync Files Utility' is enabled.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Pub Television' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the module titled 'Pub Television' to appear in the list.]]>
+    </line>
+    <line>
+      <![CDATA[Verify custom module 'Pub Television' is enabled.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Pub Users' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the module titled 'Pub Users' to appear in the list.]]>
+    </line>
+    <line>
+      <![CDATA[Verify custom module 'Pub Users' is enabled.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Pub Workbench' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the module titled 'Pub Workbench' to appear in the list.]]>
+    </line>
+    <line>
+      <![CDATA[Verify custom module 'Pub Workbench' is enabled.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="166905" started-at="2014-05-04T21:18:39Z" finished-at="2014-05-04T21:21:26Z">
+  <suite name="Default suite" duration-ms="46624" started-at="2014-05-05T17:12:31Z" finished-at="2014-05-05T17:13:18Z">
     <groups>
-      <group name="full">
-        <method signature="AdFoldersRichMediaAds.AdFoldersRichMediaAds_TC1160()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds@17f7b44f]" name="AdFoldersRichMediaAds_TC1160" class="com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds"/>
-      </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="166905" started-at="2014-05-04T21:18:39Z" finished-at="2014-05-04T21:21:26Z">
-      <class name="com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds">
-        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds@17f7b44f]" name="startGridAndHub" is-config="true" duration-ms="11902" started-at="2014-05-04T17:18:27Z" finished-at="2014-05-04T17:18:39Z">
+    <test name="Default test" duration-ms="46624" started-at="2014-05-05T17:12:31Z" finished-at="2014-05-05T17:13:18Z">
+      <class name="com.nbcuni.test.publisher.contentbuildscripts.DefaultModulesEnabled">
+        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.contentbuildscripts.DefaultModulesEnabled@4475a0c6]" name="startGridAndHub" is-config="true" duration-ms="11402" started-at="2014-05-05T13:12:20Z" finished-at="2014-05-05T13:12:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startGridAndHub -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds@17f7b44f]" name="startSelenium" is-config="true" duration-ms="2499" started-at="2014-05-04T17:18:39Z" finished-at="2014-05-04T17:18:42Z">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.contentbuildscripts.DefaultModulesEnabled@4475a0c6]" name="startSelenium" is-config="true" duration-ms="2507" started-at="2014-05-05T13:12:31Z" finished-at="2014-05-05T13:12:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="AdFoldersRichMediaAds_TC1160()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds@17f7b44f]" name="AdFoldersRichMediaAds_TC1160" duration-ms="163819" started-at="2014-05-04T17:18:42Z" finished-at="2014-05-04T17:21:25Z">
+        <test-method status="PASS" signature="DefaultModulesEnabled_Test()[pri:0, instance:com.nbcuni.test.publisher.contentbuildscripts.DefaultModulesEnabled@4475a0c6]" name="DefaultModulesEnabled_Test" duration-ms="43537" started-at="2014-05-05T13:12:34Z" finished-at="2014-05-05T13:13:17Z">
           <reporter-output>
             <line>
-              <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
+              <![CDATA[Open url 'http://update.dev-integration2.nbcupublisher7.publisher7.com'.]]>
             </line>
             <line>
               <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
@@ -354,326 +726,701 @@ document.writeln(\'<SCR\'+\'IPT language=\\\'JavaScript\\\' S\'+\'RC="http://med
               <![CDATA[Click the 'Modules' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to frame titled 'Modules'.]]>
+              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
             </line>
             <line>
-              <![CDATA[Enter 'Pub Ads' in the 'Filter Name' text box.]]>
+              <![CDATA[Enter 'Block' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Wait for the module titled 'Pub Ads' to appear in the list.]]>
+              <![CDATA[Wait for the module titled 'Block' to appear in the list.]]>
             </line>
             <line>
-              <![CDATA[Verify the 'Pub Ads' check box is checked.]]>
+              <![CDATA[Verify core module 'Block' is enabled.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
+              <![CDATA[Enter 'Contextual links' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Structure' menu link.]]>
+              <![CDATA[Wait for the module titled 'Contextual links' to appear in the list.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Publisher Ads Side Files' menu link.]]>
+              <![CDATA[Verify core module 'Contextual links' is enabled.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
+              <![CDATA[Enter 'Help' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Add' link.]]>
+              <![CDATA[Wait for the module titled 'Help' to appear in the list.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Add a new side file dialog'.]]>
+              <![CDATA[Verify core module 'Help' is enabled.]]>
             </line>
             <line>
-              <![CDATA[Enter 'de9710060f7b4d0' in the 'Name' text box.]]>
+              <![CDATA[Enter 'Image' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Enter '0120ffdafe/f07a5bb399.html' in the 'Path' text box.]]>
+              <![CDATA[Wait for the module titled 'Image' to appear in the list.]]>
             </line>
             <line>
-              <![CDATA[Select the 'text/html' from the 'Response type' drop down list.]]>
+              <![CDATA[Verify core module 'Image' is enabled.]]>
             </line>
             <line>
-              <![CDATA[Enter '<html><body bgcolor=white><script language=javascript>function pq(q) {if(q.length > 1) this.q = q.substring(1, q.length);else this.q = null;this.keyValuePairs = new Array();if(q) {for(var i=0; i < this.q.split("&").length; i++) {this.keyValuePairs[i] = this.q.split("&")[i];}}this.getValue = function(s) {for(var j=0; j < this.keyValuePairs.length; j++) {if(this.keyValuePairs[j].split("=")[0] == s)return this.keyValuePairs[j].split("=")[1];}return -1;}}function qs(key){var page = new pq(document.location.search);return unescape(page.getValue(key));}var _c = qs('c');var r_number = Math.random();document.writeln('<SCR'+'IPT language='JavaScript' S'+'RC="http://media.adcentriconline.com/adcentric/tag/'+_c+'?ADCadcifr=1&number='+r_number+'"></SCR'+'IPT>');</script></body></html>' in the 'Content' text box.]]>
+              <![CDATA[Enter 'List' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save' button.]]>
+              <![CDATA[Wait for the module titled 'List' to appear in the list.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
+              <![CDATA[Verify core module 'List' is enabled.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'de9710060f7b4d0 has been created.' is present.]]>
+              <![CDATA[Enter 'Menu' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the Ad Side File link with path '0120ffdafe/f07a5bb399.html'.]]>
+              <![CDATA[Wait for the module titled 'Menu' to appear in the list.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
+              <![CDATA[Verify core module 'Menu' is enabled.]]>
             </line>
             <line>
-              <![CDATA[Click the Ad Side File 'Edit' link for adName + 'AdCentric'.]]>
+              <![CDATA[Enter 'Number' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Edit side file adcentric dialog'.]]>
+              <![CDATA[Wait for the module titled 'Number' to appear in the list.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save' button.]]>
+              <![CDATA[Verify core module 'Number' is enabled.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
+              <![CDATA[Enter 'Options' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'adcentric has been updated' is present.]]>
+              <![CDATA[Wait for the module titled 'Options' to appear in the list.]]>
             </line>
             <line>
-              <![CDATA[Verify storage type for Ad Side File 'AdCentric' is set to 'Overridden'.]]>
+              <![CDATA[Verify core module 'Options' is enabled.]]>
             </line>
             <line>
-              <![CDATA[Click the Ad Side File 'Edit' link for adName + 'AdCentric'.]]>
+              <![CDATA[Enter 'Path' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Edit side file adcentric dialog'.]]>
+              <![CDATA[Wait for the module titled 'Path' to appear in the list.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Revert' button.]]>
+              <![CDATA[Verify core module 'Path' is enabled.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Revert' button.]]>
+              <![CDATA[Enter 'Taxonomy' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
+              <![CDATA[Wait for the module titled 'Taxonomy' to appear in the list.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'The item has been reverted.' is present.]]>
+              <![CDATA[Verify core module 'Taxonomy' is enabled.]]>
             </line>
             <line>
-              <![CDATA[Verify storage type for Ad Side File 'AdCentric' is set to 'Default'.]]>
+              <![CDATA[Enter 'Syslog' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the Ad Side File expand link for adName + 'AdCentric'.]]>
+              <![CDATA[Wait for the module titled 'Syslog' to appear in the list.]]>
             </line>
             <line>
-              <![CDATA[Click the Ad Side File 'Clone' link for adName + 'AdCentric'.]]>
+              <![CDATA[Verify core module 'Syslog' is enabled.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Clone side file adcentric dialog'.]]>
+              <![CDATA[Enter 'Shortcut' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Enter 'df4bd1069bdb4f9' in the 'Name' text box.]]>
+              <![CDATA[Wait for the module titled 'Shortcut' to appear in the list.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save' button.]]>
+              <![CDATA[Verify core module 'Shortcut' is enabled.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'clone_of_adcentric has been created.' is present.]]>
+              <![CDATA[Enter 'Overlay' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Verify storage type for Ad Side File 'df4bd1069bdb4f9' is set to 'Normal'.]]>
+              <![CDATA[Wait for the module titled 'Overlay' to appear in the list.]]>
             </line>
             <line>
-              <![CDATA[Click the Ad Side File 'Edit' link for adName + 'AdCentric'.]]>
+              <![CDATA[Verify core module 'Overlay' is enabled.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Edit side file adcentric dialog'.]]>
+              <![CDATA[Enter 'Field UI' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Export' tab.]]>
+              <![CDATA[Wait for the module titled 'Field UI' to appear in the list.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Export side file adcentric dialog'.]]>
+              <![CDATA[Verify core module 'Field UI' is enabled.]]>
             </line>
             <line>
-              <![CDATA[Copy the text from the 'Export' text area.]]>
+              <![CDATA[Enter 'File' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
+              <![CDATA[Wait for the module titled 'File' to appear in the list.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Structure' menu link.]]>
+              <![CDATA[Verify core module 'File' is enabled.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Publisher Ads Side Files' menu link.]]>
+              <![CDATA[Enter 'Acquia Cloud Sticky Sessions' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Import' menu link.]]>
+              <![CDATA[Wait for the module titled 'Acquia Cloud Sticky Sessions' to appear in the list.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Import side file dialog'.]]>
+              <![CDATA[Verify contrib module 'Acquia Cloud Sticky Sessions' is enabled.]]>
             </line>
             <line>
-              <![CDATA[Enter '$adpath = new stdClass();
-$adpath->disabled = FALSE; /* Edit this to true to make a default adpath disabled initially */
-$adpath->api_version = 1;
-$adpath->machine_name = 'adcentric';
-$adpath->name = 'AdCentric';
-$adpath->path = 'AdCentric/adcentric.html';
-$adpath->file_type = 'html';
-$adpath->content = '<html><body bgcolor=white>
-<script language=javascript>
-function pq(q) {
-        if(q.length > 1) this.q = q.substring(1, q.length);
-        else this.q = null;
-        this.keyValuePairs = new Array();
-        if(q) {
-                for(var i=0; i < this.q.split("&").length; i++) {
-                        this.keyValuePairs[i] = this.q.split("&")[i];
-                }
-        }
-        this.getValue = function(s) {
-                for(var j=0; j < this.keyValuePairs.length; j++) {
-                        if(this.keyValuePairs[j].split("=")[0] == s)
-                                return this.keyValuePairs[j].split("=")[1];
-                }
-                return -1;
-        }
-}
-function qs(key){
-        var page = new pq(document.location.search);
-        return unescape(page.getValue(key));
-}
-var _c = qs(\'c\');
-var r_number = Math.random();
-document.writeln(\'<SCR\'+\'IPT language=\\\'JavaScript\\\' S\'+\'RC="http://media.adcentriconline.com/adcentric/tag/\'+_c+\'?ADCadcifr=1&number=\'+r_number+\'"></SCR\'+\'IPT>\');
-</script>
-</body></html>
-';
-' in the 'Side file code' text area.]]>
+              <![CDATA[Enter 'Administration menu Adminimal Theme' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Continue' button.]]>
+              <![CDATA[Wait for the module titled 'Administration menu Adminimal Theme' to appear in the list.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Import side file dialog'.]]>
+              <![CDATA[Verify contrib module 'Administration menu Adminimal Theme' is enabled.]]>
             </line>
             <line>
-              <![CDATA[Verify warning message 'You have unsaved changes. These changes will not be made permanent until you click Save.' is present.]]>
+              <![CDATA[Enter 'Node clone' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Enter 'a90201e296b8421' in the 'Name' text box.]]>
+              <![CDATA[Wait for the module titled 'Node clone' to appear in the list.]]>
             </line>
             <line>
-              <![CDATA[Enter '050fa76579/e768d95046.html' in the 'Path' text box.]]>
+              <![CDATA[Verify contrib module 'Node clone' is enabled.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Update' button.]]>
+              <![CDATA[Enter 'Collections' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Import side file dialog'.]]>
+              <![CDATA[Wait for the module titled 'Collections' to appear in the list.]]>
             </line>
             <line>
-              <![CDATA[Verify warning message 'You have unsaved changes. These changes will not be made permanent until you click Save.' is present.]]>
+              <![CDATA[Verify contrib module 'Collections' is enabled.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save' button.]]>
+              <![CDATA[Enter 'Collection Field' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Import side file dialog'.]]>
+              <![CDATA[Wait for the module titled 'Collection Field' to appear in the list.]]>
             </line>
             <line>
-              <![CDATA[Enter 'a90201e296b8421' in the 'Machine Name' text box.]]>
+              <![CDATA[Verify contrib module 'Collection Field' is enabled.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Update' button.]]>
+              <![CDATA[Enter 'Content locking (edit lock)' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Import side file dialog'.]]>
+              <![CDATA[Wait for the module titled 'Content locking (edit lock)' to appear in the list.]]>
             </line>
             <line>
-              <![CDATA[Verify warning message 'You have unsaved changes. These changes will not be made permanent until you click Save.' is present.]]>
+              <![CDATA[Verify contrib module 'Content locking (edit lock)' is enabled.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save' button.]]>
+              <![CDATA[Enter 'Content locking (edit lock) timeouts' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
+              <![CDATA[Wait for the module titled 'Content locking (edit lock) timeouts' to appear in the list.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'a90201e296b8421 has been created.' is present.]]>
+              <![CDATA[Verify contrib module 'Content locking (edit lock) timeouts' is enabled.]]>
             </line>
             <line>
-              <![CDATA[Verify storage type for Ad Side File 'a90201e296b8421' is set to 'Normal'.]]>
+              <![CDATA[Enter 'Context' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the Ad Side File expand link for adName + 'de9710060f7b4d0'.]]>
+              <![CDATA[Wait for the module titled 'Context' to appear in the list.]]>
             </line>
             <line>
-              <![CDATA[Click the Ad Side File 'Delete' link for adName + 'de9710060f7b4d0'.]]>
+              <![CDATA[Verify contrib module 'Context' is enabled.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Are you sure you want to delete de9710060f7b4d0? dialog'.]]>
+              <![CDATA[Enter 'Date Popup' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Delete' button.]]>
+              <![CDATA[Wait for the module titled 'Date Popup' to appear in the list.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
+              <![CDATA[Verify contrib module 'Date Popup' is enabled.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'The item has been deleted.' is present.]]>
+              <![CDATA[Enter 'Diff' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Verify Ad Side File 'de9710060f7b4d0' is NOT present.]]>
+              <![CDATA[Wait for the module titled 'Diff' to appear in the list.]]>
             </line>
             <line>
-              <![CDATA[Click the Ad Side File expand link for adName + 'df4bd1069bdb4f9'.]]>
+              <![CDATA[Verify contrib module 'Diff' is enabled.]]>
             </line>
             <line>
-              <![CDATA[Click the Ad Side File 'Delete' link for adName + 'df4bd1069bdb4f9'.]]>
+              <![CDATA[Enter 'Display suite' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Are you sure you want to delete clone_of_adcentric? dialog'.]]>
+              <![CDATA[Wait for the module titled 'Display suite' to appear in the list.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Delete' button.]]>
+              <![CDATA[Verify contrib module 'Display suite' is enabled.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
+              <![CDATA[Enter 'Entity cache' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'The item has been deleted.' is present.]]>
+              <![CDATA[Wait for the module titled 'Entity cache' to appear in the list.]]>
             </line>
             <line>
-              <![CDATA[Verify Ad Side File 'df4bd1069bdb4f9' is NOT present.]]>
+              <![CDATA[Verify contrib module 'Entity cache' is enabled.]]>
             </line>
             <line>
-              <![CDATA[Click the Ad Side File expand link for adName + 'a90201e296b8421'.]]>
+              <![CDATA[Enter 'Environment indicator' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the Ad Side File 'Delete' link for adName + 'a90201e296b8421'.]]>
+              <![CDATA[Wait for the module titled 'Environment indicator' to appear in the list.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Are you sure you want to delete a90201e296b8421? dialog'.]]>
+              <![CDATA[Verify contrib module 'Environment indicator' is enabled.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Delete' button.]]>
+              <![CDATA[Enter 'Exportable Scheduler' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
+              <![CDATA[Wait for the module titled 'Exportable Scheduler' to appear in the list.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'The item has been deleted.' is present.]]>
+              <![CDATA[Verify contrib module 'Exportable Scheduler' is enabled.]]>
             </line>
             <line>
-              <![CDATA[Verify Ad Side File 'a90201e296b8421' is NOT present.]]>
+              <![CDATA[Enter 'Features' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the module titled 'Features' to appear in the list.]]>
+            </line>
+            <line>
+              <![CDATA[Verify contrib module 'Features' is enabled.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'File entity Revisions' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the module titled 'File entity Revisions' to appear in the list.]]>
+            </line>
+            <line>
+              <![CDATA[Verify contrib module 'File entity Revisions' is enabled.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Global Redirect' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the module titled 'Global Redirect' to appear in the list.]]>
+            </line>
+            <line>
+              <![CDATA[Verify contrib module 'Global Redirect' is enabled.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Interactive Information Bar' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the module titled 'Interactive Information Bar' to appear in the list.]]>
+            </line>
+            <line>
+              <![CDATA[Verify contrib module 'Interactive Information Bar' is enabled.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Media' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the module titled 'Media' to appear in the list.]]>
+            </line>
+            <line>
+              <![CDATA[Verify contrib module 'Media' is enabled.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Media Multiselect' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the module titled 'Media Multiselect' to appear in the list.]]>
+            </line>
+            <line>
+              <![CDATA[Verify contrib module 'Media Multiselect' is enabled.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Metatag' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the module titled 'Metatag' to appear in the list.]]>
+            </line>
+            <line>
+              <![CDATA[Verify contrib module 'Metatag' is enabled.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Metatag: Open Graph' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the module titled 'Metatag: Open Graph' to appear in the list.]]>
+            </line>
+            <line>
+              <![CDATA[Verify contrib module 'Metatag: Open Graph' is enabled.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Metatag: Twitter Cards' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the module titled 'Metatag: Twitter Cards' to appear in the list.]]>
+            </line>
+            <line>
+              <![CDATA[Verify contrib module 'Metatag: Twitter Cards' is enabled.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Metatag: Twitter Cards (See It)' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the module titled 'Metatag: Twitter Cards (See It)' to appear in the list.]]>
+            </line>
+            <line>
+              <![CDATA[Verify contrib module 'Metatag: Twitter Cards (See It)' is enabled.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Module filter' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the module titled 'Module filter' to appear in the list.]]>
+            </line>
+            <line>
+              <![CDATA[Verify contrib module 'Module filter' is enabled.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Multiple forms' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the module titled 'Multiple forms' to appear in the list.]]>
+            </line>
+            <line>
+              <![CDATA[Verify contrib module 'Multiple forms' is enabled.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Pathauto' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the module titled 'Pathauto' to appear in the list.]]>
+            </line>
+            <line>
+              <![CDATA[Verify contrib module 'Pathauto' is enabled.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Plupload integration module' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the module titled 'Plupload integration module' to appear in the list.]]>
+            </line>
+            <line>
+              <![CDATA[Verify contrib module 'Plupload integration module' is enabled.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Queues Workbench' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the module titled 'Queues Workbench' to appear in the list.]]>
+            </line>
+            <line>
+              <![CDATA[Verify contrib module 'Queues Workbench' is enabled.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Revision Scheduler SPS Integration' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the module titled 'Revision Scheduler SPS Integration' to appear in the list.]]>
+            </line>
+            <line>
+              <![CDATA[Verify contrib module 'Revision Scheduler SPS Integration' is enabled.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Soft length limit' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the module titled 'Soft length limit' to appear in the list.]]>
+            </line>
+            <line>
+              <![CDATA[Verify contrib module 'Soft length limit' is enabled.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Strongarm' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the module titled 'Strongarm' to appear in the list.]]>
+            </line>
+            <line>
+              <![CDATA[Verify contrib module 'Strongarm' is enabled.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Site Preview System' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the module titled 'Site Preview System' to appear in the list.]]>
+            </line>
+            <line>
+              <![CDATA[Verify contrib module 'Site Preview System' is enabled.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Token' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the module titled 'Token' to appear in the list.]]>
+            </line>
+            <line>
+              <![CDATA[Verify contrib module 'Token' is enabled.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Views' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the module titled 'Views' to appear in the list.]]>
+            </line>
+            <line>
+              <![CDATA[Verify contrib module 'Views' is enabled.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Views Bulk Operations' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the module titled 'Views Bulk Operations' to appear in the list.]]>
+            </line>
+            <line>
+              <![CDATA[Verify contrib module 'Views Bulk Operations' is enabled.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Wysiwyg' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the module titled 'Wysiwyg' to appear in the list.]]>
+            </line>
+            <line>
+              <![CDATA[Verify contrib module 'Wysiwyg' is enabled.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Simple EXIF' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the module titled 'Simple EXIF' to appear in the list.]]>
+            </line>
+            <line>
+              <![CDATA[Verify contrib module 'Simple EXIF' is enabled.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Pub Analytics' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the module titled 'Pub Analytics' to appear in the list.]]>
+            </line>
+            <line>
+              <![CDATA[Verify custom module 'Pub Analytics' is enabled.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Publisher Certify Utility' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the module titled 'Publisher Certify Utility' to appear in the list.]]>
+            </line>
+            <line>
+              <![CDATA[Verify custom module 'Publisher Certify Utility' is enabled.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Pub Editorial' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the module titled 'Pub Editorial' to appear in the list.]]>
+            </line>
+            <line>
+              <![CDATA[Verify custom module 'Pub Editorial' is enabled.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Pub Hide Submit' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the module titled 'Pub Hide Submit' to appear in the list.]]>
+            </line>
+            <line>
+              <![CDATA[Verify custom module 'Pub Hide Submit' is enabled.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Pub Media Galleries' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the module titled 'Pub Media Galleries' to appear in the list.]]>
+            </line>
+            <line>
+              <![CDATA[Verify custom module 'Pub Media Galleries' is enabled.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Pub Movie' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the module titled 'Pub Movie' to appear in the list.]]>
+            </line>
+            <line>
+              <![CDATA[Verify custom module 'Pub Movie' is enabled.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Pub MPX' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the module titled 'Pub MPX' to appear in the list.]]>
+            </line>
+            <line>
+              <![CDATA[Verify custom module 'Pub MPX' is enabled.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Pub Promo Queue' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the module titled 'Pub Promo Queue' to appear in the list.]]>
+            </line>
+            <line>
+              <![CDATA[Verify custom module 'Pub Promo Queue' is enabled.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Publisher QA Releases Utility' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the module titled 'Publisher QA Releases Utility' to appear in the list.]]>
+            </line>
+            <line>
+              <![CDATA[Verify custom module 'Publisher QA Releases Utility' is enabled.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Publisher Releases Utility' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the module titled 'Publisher Releases Utility' to appear in the list.]]>
+            </line>
+            <line>
+              <![CDATA[Verify custom module 'Publisher Releases Utility' is enabled.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Pub Relationships' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the module titled 'Pub Relationships' to appear in the list.]]>
+            </line>
+            <line>
+              <![CDATA[Verify custom module 'Pub Relationships' is enabled.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Pub Movie Relationships' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the module titled 'Pub Movie Relationships' to appear in the list.]]>
+            </line>
+            <line>
+              <![CDATA[Verify custom module 'Pub Movie Relationships' is enabled.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Pub TV Relationships Enhanced' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the module titled 'Pub TV Relationships Enhanced' to appear in the list.]]>
+            </line>
+            <line>
+              <![CDATA[Verify custom module 'Pub TV Relationships Enhanced' is enabled.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Pub Report Client' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the module titled 'Pub Report Client' to appear in the list.]]>
+            </line>
+            <line>
+              <![CDATA[Verify custom module 'Pub Report Client' is enabled.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Publisher Sec' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the module titled 'Publisher Sec' to appear in the list.]]>
+            </line>
+            <line>
+              <![CDATA[Verify custom module 'Publisher Sec' is enabled.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Pub Social' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the module titled 'Pub Social' to appear in the list.]]>
+            </line>
+            <line>
+              <![CDATA[Verify custom module 'Pub Social' is enabled.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Pub SPS (Site Preview System)' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the module titled 'Pub SPS (Site Preview System)' to appear in the list.]]>
+            </line>
+            <line>
+              <![CDATA[Verify custom module 'Pub SPS (Site Preview System)' is enabled.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Publisher Sync Database Utility' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the module titled 'Publisher Sync Database Utility' to appear in the list.]]>
+            </line>
+            <line>
+              <![CDATA[Verify custom module 'Publisher Sync Database Utility' is enabled.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Publisher Sync Files Utility' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the module titled 'Publisher Sync Files Utility' to appear in the list.]]>
+            </line>
+            <line>
+              <![CDATA[Verify custom module 'Publisher Sync Files Utility' is enabled.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Pub Television' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the module titled 'Pub Television' to appear in the list.]]>
+            </line>
+            <line>
+              <![CDATA[Verify custom module 'Pub Television' is enabled.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Pub Users' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the module titled 'Pub Users' to appear in the list.]]>
+            </line>
+            <line>
+              <![CDATA[Verify custom module 'Pub Users' is enabled.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Pub Workbench' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the module titled 'Pub Workbench' to appear in the list.]]>
+            </line>
+            <line>
+              <![CDATA[Verify custom module 'Pub Workbench' is enabled.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- AdFoldersRichMediaAds_TC1160 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds@17f7b44f]" name="stopSelenium" is-config="true" duration-ms="574" started-at="2014-05-04T17:21:25Z" finished-at="2014-05-04T17:21:26Z">
+        </test-method> <!-- DefaultModulesEnabled_Test -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.contentbuildscripts.DefaultModulesEnabled@4475a0c6]" name="stopSelenium" is-config="true" duration-ms="568" started-at="2014-05-05T13:13:17Z" finished-at="2014-05-05T13:13:18Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=AdFoldersRichMediaAds_TC1160 status=SUCCESS method=AdFoldersRichMediaAds.AdFoldersRichMediaAds_TC1160()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds@17f7b44f] output=Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]]>
+                <![CDATA[[TestResult name=DefaultModulesEnabled_Test status=SUCCESS method=DefaultModulesEnabled.DefaultModulesEnabled_Test()[pri:0, instance:com.nbcuni.test.publisher.contentbuildscripts.DefaultModulesEnabled@4475a0c6] output=Open url 'http://update.dev-integration2.nbcupublisher7.publisher7.com'.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds@17f7b44f]" name="stopGridAndHub" is-config="true" duration-ms="376" started-at="2014-05-04T17:21:26Z" finished-at="2014-05-04T17:21:26Z">
+        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.contentbuildscripts.DefaultModulesEnabled@4475a0c6]" name="stopGridAndHub" is-config="true" duration-ms="386" started-at="2014-05-05T13:13:18Z" finished-at="2014-05-05T13:13:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopGridAndHub -->
-      </class> <!-- com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds -->
+      </class> <!-- com.nbcuni.test.publisher.contentbuildscripts.DefaultModulesEnabled -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
