@@ -54,7 +54,7 @@ public class ParentTest {
             webDriver.manage().window().maximize();
             
         } catch (Exception e) {
-            applib.fail("Failed to start WebDriver and initiate timeouts");
+        	System.out.println("Failed to start WebDriver and initiate timeouts");
         }
 
     }
@@ -68,30 +68,29 @@ public class ParentTest {
     			applib.attachScreenshot(result);  
     		}
         } catch (Exception e) {
-        	
-        	applib.fail("Failed to capture screenshot");
+        	System.out.println("Failed to capture screenshot");
         }
         
     	try {
     		if (!result.isSuccess()) {
+    			webDriver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
     			webDriver.switchTo().defaultContent();
             	webDriver.executeScript("arguments[0].click();", 
             			webDriver.findElement(By.xpath("//a[text()='Flush all caches']")));
+            	Reporter.setCurrentTestResult(result); 
             	Reporter.log("Cache was cleared on test failure");
+            	Reporter.setCurrentTestResult(null);
     		}
     	}
     	catch (Exception e) {
-    		
-    		applib.fail("Failed to flush cache");
+    		System.out.println("Failed to flush cache");
     	}
     	
         try {
-        	
         	webDriver.quit();
         } 
         catch (Exception e) {
-        
-        	applib.fail("Failed to stop WebDriver");
+        	System.out.println("Failed to stop WebDriver");
         }
     }
     

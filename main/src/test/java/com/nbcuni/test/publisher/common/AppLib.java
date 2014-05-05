@@ -126,12 +126,6 @@ public class AppLib {
         return this.environment;
     }
 
-    public void fail(String errorMessage) {
-        
-    	Reporter.log(errorMessage);
-    	System.out.println(errorMessage);
-    }
-    
     public UserLogin openApplication() throws Exception {
         Reporter.log("Open url '" + this.getApplicationURL() + "'.");
         webDriver.navigate().to(this.getApplicationURL());   
