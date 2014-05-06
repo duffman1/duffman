@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue May 06 10:19:31 EDT 2014</td>
+<td>Started on:</td><td>Tue May 06 13:04:34 EDT 2014</td>
 </tr>
-<tr><td>Total time:</td><td>54 seconds (54560 ms)</td>
+<tr><td>Total time:</td><td>109 seconds (109868 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,116 +75,131 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules.PasswordRules_TC2185()'><b>PasswordRules_TC2185</b><br>Test class: com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules<br/>
-<a href="#Output-2093071831" onClick='toggleBox("Output-2093071831", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentEntityModerationStatesWorkflows.MultiEditorPublishingWorkflow.MultiEditorPublishingWorkflow_Test()'><b>MultiEditorPublishingWorkflow_Test</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentEntityModerationStatesWorkflows.MultiEditorPublishingWorkflow<br/>
+<a href="#Output-1840982196" onClick='toggleBox("Output-1840982196", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-2093071831" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-2093071831">
-SETUP - create new user and logout<br/>
-Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.<br/>
+<a href="#Output-1840982196" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1840982196">
+Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.<br/>
 Enter the user's email address in the 'Email Address' text box.<br/>
 Enter the user's password in the 'Password' text box.<br/>
 Click the 'Login' button.<br/>
 Mouse over the 'People' menu link.<br/>
 Click the 'Add user' menu link.<br/>
 Switch to the active frame titled 'People dialog'.<br/>
-Enter '5500df37e2d44a7@8edc88317ff04d2.com' in the 'Username' text box.<br/>
-Enter '5500df37e2d44a7@8edc88317ff04d2.com' in the 'E-mail address' text box.<br/>
+Enter 'd457a61c88e04b1@d2b9929e0e6a4df.com' in the 'Username' text box.<br/>
+Enter 'd457a61c88e04b1@d2b9929e0e6a4df.com' in the 'E-mail address' text box.<br/>
 Enter 'pa55word' in the 'Password' text box.<br/>
 Enter 'pa55word' in the 'Confirm password' text box.<br/>
 Check the 'editor' check box.<br/>
-Enter 'a76cfb61fc67495' in the 'First Name' text box.<br/>
-Enter 'e9ca611430374de' in the 'Last Name' text box.<br/>
+Enter '77e50b2b993341d' in the 'First Name' text box.<br/>
+Enter 'fc5cb4684a9e40d' in the 'Last Name' text box.<br/>
 Click the 'Create new account' button.<br/>
-Verify success message of 'A welcome message with further instructions has been e-mailed to the new user 5500df37e2d44a7@8edc88317ff04d2.com.' is present.<br/>
+Verify success message of 'A welcome message with further instructions has been e-mailed to the new user d457a61c88e04b1@d2b9929e0e6a4df.com.' is present.<br/>
 Click the 'Close Overlay X'.<br/>
-Click the 'Logout' button.<br/>
-STEP 1<br/>
-Enter the user's email address in the 'Email Address' text box.<br/>
-Enter the user's password in the 'Password' text box.<br/>
-Click the 'Login' button.<br/>
-STEP 2<br/>
-Click the activer user menu link for logged in user '5500df37e2d44a7@8edc88317ff04d2.com'.<br/>
-Click the 'Edit' link in the work bench.<br/>
-Switch to the active frame titled '5500df37e2d44a7@8edc88317ff04d2.com dialog'.<br/>
-STEP 3<br/>
-Enter ' ' in the 'Password' text box.<br/>
-Verify that password strength message 'The password does not include enough variation to be secure.' is present.<br/>
-Verify that password strength message 'Password must contain at least 2 digits.' is present.<br/>
-Verify that password strength message 'Password must be at least 8 characters in length.' is present.<br/>
-Verify that password strength message 'Password must begin and end with a letter.' is present.<br/>
-Verify that password strength message 'Password must contain at least one lowercase character.' is present.<br/>
-STEP 4<br/>
-Enter 'ABCDEFG1' in the 'Password' text box.<br/>
-Verify that password strength message 'The password does not include enough variation to be secure.' is present.<br/>
-Verify that password strength message 'Password must contain at least 2 digits.' is present.<br/>
-Verify that password strength message 'Password must begin and end with a letter.' is present.<br/>
-Verify that password strength message 'Password must contain at least one lowercase character.' is present.<br/>
-Verify that password strength message 'Password must be at least 8 characters in length.' is not present.<br/>
-STEP 5<br/>
-Enter 'ABCDEF11' in the 'Password' text box.<br/>
-Verify that password strength message 'The password does not include enough variation to be secure.' is present.<br/>
-Verify that password strength message 'Password must begin and end with a letter.' is present.<br/>
-Verify that password strength message 'Password must contain at least one lowercase character.' is present.<br/>
-Verify that password strength message 'Password must be at least 8 characters in length.' is not present.<br/>
-Verify that password strength message 'Password must contain at least 2 digits.' is not present.<br/>
-STEP 6<br/>
-Enter 'ABCDE11H' in the 'Password' text box.<br/>
-Verify that password strength message 'The password does not include enough variation to be secure.' is present.<br/>
-Verify that password strength message 'Password must contain at least one lowercase character.' is present.<br/>
-Verify that password strength message 'Password must be at least 8 characters in length.' is not present.<br/>
-Verify that password strength message 'Password must contain at least 2 digits.' is not present.<br/>
-Verify that password strength message 'Password must begin and end with a letter.' is not present.<br/>
-STEP 7<br/>
-Enter 'ABcDE11H' in the 'Password' text box.<br/>
-Verify the password strength container is not present.<br/>
-STEP 8<br/>
-Enter '5500df37e2d44a7@8edc88317ff04d2.com' in the 'Password' text box.<br/>
-Verify that password strength message 'The password does not include enough variation to be secure.' is present.<br/>
-Verify that password strength message 'Password must not contain the username.' is present.<br/>
-STEP 9<br/>
-Enter 'ABcDE11H' in the 'Password' text box.<br/>
-Enter 'aBcDE11H' in the 'Confirm password' text box.<br/>
-Verify password match text equals 'no'.<br/>
-STEP 10<br/>
-Enter 'pa55word' in the 'Current password' text box.<br/>
-Enter 'A' in the 'Password' text box.<br/>
-Enter 'A' in the 'Confirm password' text box.<br/>
-Click the 'Save' button.<br/>
-STEP 11<br/>
-Enter 'pa55word' in the 'Current password' text box.<br/>
-Enter 'pa555word' in the 'Password' text box.<br/>
-Enter 'pa555word' in the 'Confirm password' text box.<br/>
-Verify password match text equals 'yes'.<br/>
-Click the 'Save' button.<br/>
-Verify success message of 'The changes have been saved.' is present.<br/>
-STEP 12<br/>
-Enter 'pa555word' in the 'Current password' text box.<br/>
-Enter 'pa555!@#$%^&*word' in the 'Password' text box.<br/>
-Enter 'pa555!@#$%^&*word' in the 'Confirm password' text box.<br/>
-Verify password match text equals 'yes'.<br/>
-Click the 'Save' button.<br/>
-Verify success message of 'The changes have been saved.' is present.<br/>
-STEP 13<br/>
-Click the 'Close Overlay X'.<br/>
-Click the 'Logout' button.<br/>
-Enter the user's email address in the 'Email Address' text box.<br/>
-Enter the user's password in the 'Password' text box.<br/>
-Click the 'Login' button.<br/>
-Mouse over the 'Configuration' menu link.<br/>
 Mouse over the 'People' menu link.<br/>
-Mouse over the 'Password policies' menu link.<br/>
-Click the 'List' menu link.<br/>
-Switch to the active frame titled 'Password policies dialog'.<br/>
-Click the 'view' link.<br/>
-Switch to the active frame titled 'NBCU Password Policy dialog'.<br/>
-Verify the text 'Expiration' is present on the page.<br/>
-Verify the text '365' is present on the page.<br/>
+Click the 'Add user' menu link.<br/>
+Switch to the active frame titled 'People dialog'.<br/>
+Enter '30665ba3bddc42b@901ac57111c841c.com' in the 'Username' text box.<br/>
+Enter '30665ba3bddc42b@901ac57111c841c.com' in the 'E-mail address' text box.<br/>
+Enter 'pa55word' in the 'Password' text box.<br/>
+Enter 'pa55word' in the 'Confirm password' text box.<br/>
+Check the 'senior editor' check box.<br/>
+Enter 'ab37b5522073431' in the 'First Name' text box.<br/>
+Enter '62a4b80a32294b5' in the 'Last Name' text box.<br/>
+Click the 'Create new account' button.<br/>
+Verify success message of 'A welcome message with further instructions has been e-mailed to the new user 30665ba3bddc42b@901ac57111c841c.com.' is present.<br/>
+Click the 'Close Overlay X'.<br/>
+Mouse over the 'People' menu link.<br/>
+Click the 'Permissions' menu link.<br/>
+Switch to the active frame titled 'People dialog'.<br/>
+Check the 'edit any post content' checkbox for the 'editor' role.<br/>
+Check the 'delete any post content' checkbox for the 'editor' role.<br/>
+Check the 'access advanced_link autocomplete' checkbox for the 'senior editor' role.<br/>
+Scroll by '-500'.<br/>
+Check the 'view the administration theme' checkbox for the 'senior editor' role.<br/>
+Check the 'view moderation messages' checkbox for the 'senior editor' role.<br/>
+Check the 'access user profiles' checkbox for the 'senior editor' role.<br/>
+Click the 'Save Permissions' button.<br/>
+Verify success message of 'The changes have been saved.' is present.<br/>
+Click the 'Close Overlay X'.<br/>
+Click the 'Logout' button.<br/>
+Enter the user's email address in the 'Email Address' text box.<br/>
+Enter the user's password in the 'Password' text box.<br/>
+Click the 'Login' button.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Add content' menu link.<br/>
+Click the 'Post' menu link.<br/>
+Switch to the active frame titled 'Create Post dialog'.<br/>
+Enter '759860f8a5b24cb' in the 'Title' text box.<br/>
+Switch to the Synopsis frame.<br/>
+Enter a randomized text string into the 'Body' text area.<br/>
+Switch to the active frame titled 'Create Post dialog'.<br/>
+Click the 'Cover' select button.<br/>
+Switch to the select file frame.<br/>
+Enter the file path for file upload.<br/>
+Click the 'Upload' button.<br/>
+Wait for the file link to be visible after upload.<br/>
+Click the 'Next' button.<br/>
+Click the 'Public Local Files' radio button.<br/>
+Click the 'Next' button.<br/>
+Verify the file image 'HanSolo' is present.<br/>
+Verify the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'Create Post dialog'.<br/>
+Scroll the 'Publishing Options' link into view.<br/>
+Click the 'Publishing Options' link.<br/>
+Select 'Draft' from the 'Moderation State' drop down list.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'Post 759860f8a5b24cb has been created.' is present.<br/>
+Click the 'Edit Draft' link in the work bench.<br/>
+Switch to the active frame titled 'Edit Post 759860f8a5b24cb dialog'.<br/>
+Scroll the 'Publishing Options' link into view.<br/>
+Click the 'Publishing Options' link.<br/>
+Verify the 'Moderation State' drop down list value is 'Draft'.<br/>
+Verify the 'Assign to' text box value is 'd457a61c88e04b1@d2b9929e0e6a4df.com'.<br/>
+Click the 'Close Overlay X'.<br/>
+Click the 'My Workbench' menu link.<br/>
+Switch to the active frame titled 'My Workbench dialog'.<br/>
+Click the 'My Work' button.<br/>
+Switch to the active frame titled 'My Work dialog'.<br/>
+Enter title 759860f8a5b24cb.<br/>
+Click the 'Apply' button.<br/>
+Verify the text '759860f8a5b24cb' is present on the page.<br/>
+Verify the text 'Draft' is present on the page.<br/>
+Verify the text 'Post' is present on the page.<br/>
+Verify the text 'd457a61c88e04b1@d2b9929e0e6a4df.com' is present on the page.<br/>
+Click the 'edit' link for the content item titled '759860f8a5b24cb'.<br/>
+Switch to the active frame titled 'Edit Post 759860f8a5b24cb dialog'.<br/>
+Scroll the 'Publishing Options' link into view.<br/>
+Click the 'Publishing Options' link.<br/>
+Enter '30665ba3bddc42b@901ac57111c841c.com' in the 'Assign to' text box.<br/>
+Click the '30665ba3bddc42b@901ac57111c841c.com' from the auto complete option list.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'Post 759860f8a5b24cb has been updated.' is present.<br/>
+Click the 'Close Overlay X'.<br/>
+Click the 'My Workbench' menu link.<br/>
+Switch to the active frame titled 'My Workbench dialog'.<br/>
+Verify the text '759860f8a5b24cb' is NOT present on the page.<br/>
+Click the 'My Work' button.<br/>
+Switch to the active frame titled 'My Work dialog'.<br/>
+Enter title 759860f8a5b24cb.<br/>
+Click the 'Apply' button.<br/>
+Verify the text '759860f8a5b24cb' is present on the page.<br/>
+Verify the text '30665ba3bddc42b@901ac57111c841c.com' is present on the page.<br/>
+Click the 'Close Overlay X'.<br/>
+Click the 'Logout' button.<br/>
+Enter the user's email address in the 'Email Address' text box.<br/>
+Enter the user's password in the 'Password' text box.<br/>
+Click the 'Login' button.<br/>
+Click the 'My Workbench' menu link.<br/>
+Switch to the active frame titled 'My Workbench dialog'.<br/>
+Verify the text '759860f8a5b24cb' is present on the page.<br/>
 </div>
 </td>
 <td></td>
-<td>51</td>
-<td>com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules@133a7ec</td></tr>
+<td>106</td>
+<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentEntityModerationStatesWorkflows.MultiEditorPublishingWorkflow@50c1b7f7</td></tr>
 </table><p>
 </body>
 </html>

@@ -2,10 +2,7 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
     <line>
-      <![CDATA[SETUP - create new user and logout]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
+      <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]>
     </line>
     <line>
       <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
@@ -26,10 +23,10 @@
       <![CDATA[Switch to the active frame titled 'People dialog'.]]>
     </line>
     <line>
-      <![CDATA[Enter '5500df37e2d44a7@8edc88317ff04d2.com' in the 'Username' text box.]]>
+      <![CDATA[Enter 'd457a61c88e04b1@d2b9929e0e6a4df.com' in the 'Username' text box.]]>
     </line>
     <line>
-      <![CDATA[Enter '5500df37e2d44a7@8edc88317ff04d2.com' in the 'E-mail address' text box.]]>
+      <![CDATA[Enter 'd457a61c88e04b1@d2b9929e0e6a4df.com' in the 'E-mail address' text box.]]>
     </line>
     <line>
       <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
@@ -41,290 +38,335 @@
       <![CDATA[Check the 'editor' check box.]]>
     </line>
     <line>
-      <![CDATA[Enter 'a76cfb61fc67495' in the 'First Name' text box.]]>
+      <![CDATA[Enter '77e50b2b993341d' in the 'First Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Enter 'e9ca611430374de' in the 'Last Name' text box.]]>
+      <![CDATA[Enter 'fc5cb4684a9e40d' in the 'Last Name' text box.]]>
     </line>
     <line>
       <![CDATA[Click the 'Create new account' button.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'A welcome message with further instructions has been e-mailed to the new user 5500df37e2d44a7@8edc88317ff04d2.com.' is present.]]>
+      <![CDATA[Verify success message of 'A welcome message with further instructions has been e-mailed to the new user d457a61c88e04b1@d2b9929e0e6a4df.com.' is present.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Logout' button.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 1]]>
-    </line>
-    <line>
-      <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the user's password in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Login' button.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 2]]>
-    </line>
-    <line>
-      <![CDATA[Click the activer user menu link for logged in user '5500df37e2d44a7@8edc88317ff04d2.com'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Edit' link in the work bench.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled '5500df37e2d44a7@8edc88317ff04d2.com dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 3]]>
-    </line>
-    <line>
-      <![CDATA[Enter ' ' in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that password strength message 'The password does not include enough variation to be secure.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that password strength message 'Password must contain at least 2 digits.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that password strength message 'Password must be at least 8 characters in length.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that password strength message 'Password must begin and end with a letter.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that password strength message 'Password must contain at least one lowercase character.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 4]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'ABCDEFG1' in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that password strength message 'The password does not include enough variation to be secure.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that password strength message 'Password must contain at least 2 digits.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that password strength message 'Password must begin and end with a letter.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that password strength message 'Password must contain at least one lowercase character.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that password strength message 'Password must be at least 8 characters in length.' is not present.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 5]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'ABCDEF11' in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that password strength message 'The password does not include enough variation to be secure.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that password strength message 'Password must begin and end with a letter.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that password strength message 'Password must contain at least one lowercase character.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that password strength message 'Password must be at least 8 characters in length.' is not present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that password strength message 'Password must contain at least 2 digits.' is not present.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 6]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'ABCDE11H' in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that password strength message 'The password does not include enough variation to be secure.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that password strength message 'Password must contain at least one lowercase character.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that password strength message 'Password must be at least 8 characters in length.' is not present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that password strength message 'Password must contain at least 2 digits.' is not present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that password strength message 'Password must begin and end with a letter.' is not present.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 7]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'ABcDE11H' in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the password strength container is not present.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 8]]>
-    </line>
-    <line>
-      <![CDATA[Enter '5500df37e2d44a7@8edc88317ff04d2.com' in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that password strength message 'The password does not include enough variation to be secure.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that password strength message 'Password must not contain the username.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 9]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'ABcDE11H' in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'aBcDE11H' in the 'Confirm password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Verify password match text equals 'no'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 10]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'pa55word' in the 'Current password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'A' in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'A' in the 'Confirm password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 11]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'pa55word' in the 'Current password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'pa555word' in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'pa555word' in the 'Confirm password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Verify password match text equals 'yes'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The changes have been saved.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 12]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'pa555word' in the 'Current password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'pa555!@#$%^&*word' in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'pa555!@#$%^&*word' in the 'Confirm password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Verify password match text equals 'yes'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The changes have been saved.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 13]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Logout' button.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the user's password in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Login' button.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Configuration' menu link.]]>
     </line>
     <line>
       <![CDATA[Mouse over the 'People' menu link.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Password policies' menu link.]]>
+      <![CDATA[Click the 'Add user' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'List' menu link.]]>
+      <![CDATA[Switch to the active frame titled 'People dialog'.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Password policies dialog'.]]>
+      <![CDATA[Enter '30665ba3bddc42b@901ac57111c841c.com' in the 'Username' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the 'view' link.]]>
+      <![CDATA[Enter '30665ba3bddc42b@901ac57111c841c.com' in the 'E-mail address' text box.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'NBCU Password Policy dialog'.]]>
+      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'Expiration' is present on the page.]]>
+      <![CDATA[Enter 'pa55word' in the 'Confirm password' text box.]]>
     </line>
     <line>
-      <![CDATA[Verify the text '365' is present on the page.]]>
+      <![CDATA[Check the 'senior editor' check box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'ab37b5522073431' in the 'First Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '62a4b80a32294b5' in the 'Last Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Create new account' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'A welcome message with further instructions has been e-mailed to the new user 30665ba3bddc42b@901ac57111c841c.com.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'People' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Permissions' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'People dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Check the 'edit any post content' checkbox for the 'editor' role.]]>
+    </line>
+    <line>
+      <![CDATA[Check the 'delete any post content' checkbox for the 'editor' role.]]>
+    </line>
+    <line>
+      <![CDATA[Check the 'access advanced_link autocomplete' checkbox for the 'senior editor' role.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll by '-500'.]]>
+    </line>
+    <line>
+      <![CDATA[Check the 'view the administration theme' checkbox for the 'senior editor' role.]]>
+    </line>
+    <line>
+      <![CDATA[Check the 'view moderation messages' checkbox for the 'senior editor' role.]]>
+    </line>
+    <line>
+      <![CDATA[Check the 'access user profiles' checkbox for the 'senior editor' role.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save Permissions' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The changes have been saved.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Logout' button.]]>
+    </line>
+    <line>
+      <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter the user's password in the 'Password' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Login' button.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Add content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Post' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '759860f8a5b24cb' in the 'Title' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the Synopsis frame.]]>
+    </line>
+    <line>
+      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Cover' select button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the select file frame.]]>
+    </line>
+    <line>
+      <![CDATA[Enter the file path for file upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Upload' button.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Public Local Files' radio button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the file image 'HanSolo' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the img is loaded and visible.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Publishing Options' link.]]>
+    </line>
+    <line>
+      <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Post 759860f8a5b24cb has been created.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Edit Draft' link in the work bench.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Edit Post 759860f8a5b24cb dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Publishing Options' link.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Moderation State' drop down list value is 'Draft'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Assign to' text box value is 'd457a61c88e04b1@d2b9929e0e6a4df.com'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'My Workbench' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'My Workbench dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'My Work' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'My Work dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter title 759860f8a5b24cb.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Apply' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text '759860f8a5b24cb' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'Draft' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'Post' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'd457a61c88e04b1@d2b9929e0e6a4df.com' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'edit' link for the content item titled '759860f8a5b24cb'.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Edit Post 759860f8a5b24cb dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Publishing Options' link.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '30665ba3bddc42b@901ac57111c841c.com' in the 'Assign to' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the '30665ba3bddc42b@901ac57111c841c.com' from the auto complete option list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Post 759860f8a5b24cb has been updated.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'My Workbench' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'My Workbench dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text '759860f8a5b24cb' is NOT present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'My Work' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'My Work dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter title 759860f8a5b24cb.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Apply' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text '759860f8a5b24cb' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text '30665ba3bddc42b@901ac57111c841c.com' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Logout' button.]]>
+    </line>
+    <line>
+      <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter the user's password in the 'Password' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Login' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'My Workbench' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'My Workbench dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text '759860f8a5b24cb' is present on the page.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="54560" started-at="2014-05-06T14:19:31Z" finished-at="2014-05-06T14:20:25Z">
+  <suite name="Default suite" duration-ms="109868" started-at="2014-05-06T17:04:34Z" finished-at="2014-05-06T17:06:23Z">
     <groups>
       <group name="full">
-        <method signature="PasswordRules.PasswordRules_TC2185()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules@133a7ec]" name="PasswordRules_TC2185" class="com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules"/>
+        <method signature="MultiEditorPublishingWorkflow.MultiEditorPublishingWorkflow_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentEntityModerationStatesWorkflows.MultiEditorPublishingWorkflow@50c1b7f7]" name="MultiEditorPublishingWorkflow_Test" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentEntityModerationStatesWorkflows.MultiEditorPublishingWorkflow"/>
       </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="54560" started-at="2014-05-06T14:19:31Z" finished-at="2014-05-06T14:20:25Z">
-      <class name="com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules">
-        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules@133a7ec]" name="startGridAndHub" is-config="true" duration-ms="11784" started-at="2014-05-06T10:19:19Z" finished-at="2014-05-06T10:19:31Z">
+    <test name="Default test" duration-ms="109868" started-at="2014-05-06T17:04:34Z" finished-at="2014-05-06T17:06:23Z">
+      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentEntityModerationStatesWorkflows.MultiEditorPublishingWorkflow">
+        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentEntityModerationStatesWorkflows.MultiEditorPublishingWorkflow@50c1b7f7]" name="startGridAndHub" is-config="true" duration-ms="11975" started-at="2014-05-06T13:04:22Z" finished-at="2014-05-06T13:04:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startGridAndHub -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules@133a7ec]" name="startSelenium" is-config="true" duration-ms="2471" started-at="2014-05-06T10:19:31Z" finished-at="2014-05-06T10:19:33Z">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentEntityModerationStatesWorkflows.MultiEditorPublishingWorkflow@50c1b7f7]" name="startSelenium" is-config="true" duration-ms="2642" started-at="2014-05-06T13:04:34Z" finished-at="2014-05-06T13:04:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="PasswordRules_TC2185()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules@133a7ec]" name="PasswordRules_TC2185" duration-ms="51507" started-at="2014-05-06T10:19:33Z" finished-at="2014-05-06T10:20:25Z">
+        <test-method status="PASS" signature="MultiEditorPublishingWorkflow_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentEntityModerationStatesWorkflows.MultiEditorPublishingWorkflow@50c1b7f7]" name="MultiEditorPublishingWorkflow_Test" duration-ms="106643" started-at="2014-05-06T13:04:36Z" finished-at="2014-05-06T13:06:23Z">
           <reporter-output>
             <line>
-              <![CDATA[SETUP - create new user and logout]]>
-            </line>
-            <line>
-              <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
+              <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]>
             </line>
             <line>
               <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
@@ -345,10 +387,10 @@
               <![CDATA[Switch to the active frame titled 'People dialog'.]]>
             </line>
             <line>
-              <![CDATA[Enter '5500df37e2d44a7@8edc88317ff04d2.com' in the 'Username' text box.]]>
+              <![CDATA[Enter 'd457a61c88e04b1@d2b9929e0e6a4df.com' in the 'Username' text box.]]>
             </line>
             <line>
-              <![CDATA[Enter '5500df37e2d44a7@8edc88317ff04d2.com' in the 'E-mail address' text box.]]>
+              <![CDATA[Enter 'd457a61c88e04b1@d2b9929e0e6a4df.com' in the 'E-mail address' text box.]]>
             </line>
             <line>
               <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
@@ -360,284 +402,332 @@
               <![CDATA[Check the 'editor' check box.]]>
             </line>
             <line>
-              <![CDATA[Enter 'a76cfb61fc67495' in the 'First Name' text box.]]>
+              <![CDATA[Enter '77e50b2b993341d' in the 'First Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Enter 'e9ca611430374de' in the 'Last Name' text box.]]>
+              <![CDATA[Enter 'fc5cb4684a9e40d' in the 'Last Name' text box.]]>
             </line>
             <line>
               <![CDATA[Click the 'Create new account' button.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'A welcome message with further instructions has been e-mailed to the new user 5500df37e2d44a7@8edc88317ff04d2.com.' is present.]]>
+              <![CDATA[Verify success message of 'A welcome message with further instructions has been e-mailed to the new user d457a61c88e04b1@d2b9929e0e6a4df.com.' is present.]]>
             </line>
             <line>
               <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Logout' button.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 1]]>
-            </line>
-            <line>
-              <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the user's password in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Login' button.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 2]]>
-            </line>
-            <line>
-              <![CDATA[Click the activer user menu link for logged in user '5500df37e2d44a7@8edc88317ff04d2.com'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Edit' link in the work bench.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled '5500df37e2d44a7@8edc88317ff04d2.com dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 3]]>
-            </line>
-            <line>
-              <![CDATA[Enter ' ' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'The password does not include enough variation to be secure.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'Password must contain at least 2 digits.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'Password must be at least 8 characters in length.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'Password must begin and end with a letter.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'Password must contain at least one lowercase character.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 4]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'ABCDEFG1' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'The password does not include enough variation to be secure.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'Password must contain at least 2 digits.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'Password must begin and end with a letter.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'Password must contain at least one lowercase character.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'Password must be at least 8 characters in length.' is not present.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 5]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'ABCDEF11' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'The password does not include enough variation to be secure.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'Password must begin and end with a letter.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'Password must contain at least one lowercase character.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'Password must be at least 8 characters in length.' is not present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'Password must contain at least 2 digits.' is not present.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 6]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'ABCDE11H' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'The password does not include enough variation to be secure.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'Password must contain at least one lowercase character.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'Password must be at least 8 characters in length.' is not present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'Password must contain at least 2 digits.' is not present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'Password must begin and end with a letter.' is not present.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 7]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'ABcDE11H' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the password strength container is not present.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 8]]>
-            </line>
-            <line>
-              <![CDATA[Enter '5500df37e2d44a7@8edc88317ff04d2.com' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'The password does not include enough variation to be secure.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'Password must not contain the username.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 9]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'ABcDE11H' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'aBcDE11H' in the 'Confirm password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Verify password match text equals 'no'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 10]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa55word' in the 'Current password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'A' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'A' in the 'Confirm password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 11]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa55word' in the 'Current password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa555word' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa555word' in the 'Confirm password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Verify password match text equals 'yes'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The changes have been saved.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 12]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa555word' in the 'Current password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa555!@#$%^&*word' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa555!@#$%^&*word' in the 'Confirm password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Verify password match text equals 'yes'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The changes have been saved.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 13]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Logout' button.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the user's password in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Login' button.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Configuration' menu link.]]>
             </line>
             <line>
               <![CDATA[Mouse over the 'People' menu link.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Password policies' menu link.]]>
+              <![CDATA[Click the 'Add user' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'List' menu link.]]>
+              <![CDATA[Switch to the active frame titled 'People dialog'.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Password policies dialog'.]]>
+              <![CDATA[Enter '30665ba3bddc42b@901ac57111c841c.com' in the 'Username' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the 'view' link.]]>
+              <![CDATA[Enter '30665ba3bddc42b@901ac57111c841c.com' in the 'E-mail address' text box.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'NBCU Password Policy dialog'.]]>
+              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'Expiration' is present on the page.]]>
+              <![CDATA[Enter 'pa55word' in the 'Confirm password' text box.]]>
             </line>
             <line>
-              <![CDATA[Verify the text '365' is present on the page.]]>
+              <![CDATA[Check the 'senior editor' check box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'ab37b5522073431' in the 'First Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '62a4b80a32294b5' in the 'Last Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Create new account' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'A welcome message with further instructions has been e-mailed to the new user 30665ba3bddc42b@901ac57111c841c.com.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'People' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Permissions' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'People dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Check the 'edit any post content' checkbox for the 'editor' role.]]>
+            </line>
+            <line>
+              <![CDATA[Check the 'delete any post content' checkbox for the 'editor' role.]]>
+            </line>
+            <line>
+              <![CDATA[Check the 'access advanced_link autocomplete' checkbox for the 'senior editor' role.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll by '-500'.]]>
+            </line>
+            <line>
+              <![CDATA[Check the 'view the administration theme' checkbox for the 'senior editor' role.]]>
+            </line>
+            <line>
+              <![CDATA[Check the 'view moderation messages' checkbox for the 'senior editor' role.]]>
+            </line>
+            <line>
+              <![CDATA[Check the 'access user profiles' checkbox for the 'senior editor' role.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save Permissions' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The changes have been saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Logout' button.]]>
+            </line>
+            <line>
+              <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter the user's password in the 'Password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Login' button.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Add content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Post' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '759860f8a5b24cb' in the 'Title' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the Synopsis frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Cover' select button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the select file frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter the file path for file upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Upload' button.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Public Local Files' radio button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the file image 'HanSolo' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Publishing Options' link.]]>
+            </line>
+            <line>
+              <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Post 759860f8a5b24cb has been created.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Edit Draft' link in the work bench.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Edit Post 759860f8a5b24cb dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Publishing Options' link.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Moderation State' drop down list value is 'Draft'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Assign to' text box value is 'd457a61c88e04b1@d2b9929e0e6a4df.com'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'My Workbench' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'My Workbench dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'My Work' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'My Work dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter title 759860f8a5b24cb.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Apply' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text '759860f8a5b24cb' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Draft' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Post' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'd457a61c88e04b1@d2b9929e0e6a4df.com' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'edit' link for the content item titled '759860f8a5b24cb'.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Edit Post 759860f8a5b24cb dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Publishing Options' link.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '30665ba3bddc42b@901ac57111c841c.com' in the 'Assign to' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the '30665ba3bddc42b@901ac57111c841c.com' from the auto complete option list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Post 759860f8a5b24cb has been updated.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'My Workbench' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'My Workbench dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text '759860f8a5b24cb' is NOT present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'My Work' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'My Work dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter title 759860f8a5b24cb.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Apply' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text '759860f8a5b24cb' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text '30665ba3bddc42b@901ac57111c841c.com' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Logout' button.]]>
+            </line>
+            <line>
+              <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter the user's password in the 'Password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Login' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'My Workbench' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'My Workbench dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text '759860f8a5b24cb' is present on the page.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- PasswordRules_TC2185 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules@133a7ec]" name="stopSelenium" is-config="true" duration-ms="571" started-at="2014-05-06T10:20:25Z" finished-at="2014-05-06T10:20:25Z">
+        </test-method> <!-- MultiEditorPublishingWorkflow_Test -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentEntityModerationStatesWorkflows.MultiEditorPublishingWorkflow@50c1b7f7]" name="stopSelenium" is-config="true" duration-ms="570" started-at="2014-05-06T13:06:23Z" finished-at="2014-05-06T13:06:23Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=PasswordRules_TC2185 status=SUCCESS method=PasswordRules.PasswordRules_TC2185()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules@133a7ec] output=SETUP - create new user and logout]]]>
+                <![CDATA[[TestResult name=MultiEditorPublishingWorkflow_Test status=SUCCESS method=MultiEditorPublishingWorkflow.MultiEditorPublishingWorkflow_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentEntityModerationStatesWorkflows.MultiEditorPublishingWorkflow@50c1b7f7] output=Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules@133a7ec]" name="stopGridAndHub" is-config="true" duration-ms="385" started-at="2014-05-06T10:20:25Z" finished-at="2014-05-06T10:20:26Z">
+        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentEntityModerationStatesWorkflows.MultiEditorPublishingWorkflow@50c1b7f7]" name="stopGridAndHub" is-config="true" duration-ms="385" started-at="2014-05-06T13:06:23Z" finished-at="2014-05-06T13:06:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopGridAndHub -->
-      </class> <!-- com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules -->
+      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentEntityModerationStatesWorkflows.MultiEditorPublishingWorkflow -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -40,14 +40,14 @@ public class UserLogin {
     //PAGE OBJECT METHODS
     public void EnterEmailAddress(String emailAddress) throws Exception {
     	
-    	Reporter.log("Enter the user's email address in the 'Email Address' text box.");
+    	Reporter.log("Enter '" + emailAddress + "' in the 'Email Address' text box.");
     	Email_Address_Txb.sendKeys(emailAddress);
     	
     }
     
     public void EnterPassword(String password) throws Exception {
     	
-    	Reporter.log("Enter the user's password in the 'Password' text box.");
+    	Reporter.log("Enter '" + password + "' in the 'Password' text box.");
     	Password_Txb.sendKeys(password);
     	
     }
