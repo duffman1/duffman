@@ -29,7 +29,7 @@ public class CanonicalURL extends ParentTest{
      * Steps - https://rally1.rallydev.com/#/14663927728ud/detail/testcase/17442651858
      *************************************************************************************/
     @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "smoke", "mpx"})
-    public void CanonicalUR_TC1080() throws Exception {
+    public void CanonicalURL_TC1080() throws Exception {
 
     	Reporter.log("STEP 1");
     	UserLogin userLogin = applib.openApplication();

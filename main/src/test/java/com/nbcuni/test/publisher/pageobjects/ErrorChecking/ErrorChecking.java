@@ -126,8 +126,9 @@ public class ErrorChecking {
     		allowedErrors.add("Warning: Invalid argument supplied for foreach() in simple_exif_form_alter()");
     		allowedErrors.add("Warning: in_array() expects parameter 2 to be array, null given in simple_exif_form_alter()");
     		
-    		//DE6392 and DE6393
+    		//US7050 and DE6393
     		allowedErrors.add("Failed to update URI to \"mpx:");
+    		allowedErrors.add("Notice: Trying to get property of non-object in MediaThePlatformMpxStreamWrapper->interpolateUrl");
     		
     		//FIRST - check if error container is present
     		boolean errorContainerPresent = false;
@@ -175,7 +176,8 @@ public class ErrorChecking {
     								 					|| errorText.contains(allowedErrors.get(13))
     								 					|| errorText.contains(allowedErrors.get(14))
     								 					|| errorText.contains(allowedErrors.get(15))
-    								 					|| errorText.contains(allowedErrors.get(16))) {
+    								 					|| errorText.contains(allowedErrors.get(16))
+    								 					|| errorText.contains(allowedErrors.get(17))) {
     					//ignore error
     				}
     				else {
@@ -210,7 +212,8 @@ public class ErrorChecking {
     	    								 					|| errorText.contains(allowedErrors.get(13))
     	    								 					|| errorText.contains(allowedErrors.get(14))
     	    								 					|| errorText.contains(allowedErrors.get(15))
-    	    								 					|| errorText.contains(allowedErrors.get(16))) {
+    	    								 					|| errorText.contains(allowedErrors.get(16))
+    	    								 					|| errorText.contains(allowedErrors.get(17))) {
     						//ignore error
     					}
     					else {
