@@ -52,17 +52,17 @@ public class SchedulingContentPublishUnpublished extends ParentTest {
         scheduleQueue.SelectOperation("Moderate to Published");
         
         Reporter.log("STEP 6");
-        Calendar cal15SecondsFuture = Calendar.getInstance();
-        cal15SecondsFuture.add(Calendar.SECOND, 15);
-    	Date date15SecondsFuture = cal15SecondsFuture.getTime();
+        Calendar cal1MinuteFuture = Calendar.getInstance();
+        cal1MinuteFuture.add(Calendar.SECOND, 61);
+    	Date date1MinuteFuture = cal1MinuteFuture.getTime();
     	SimpleDateFormat pub7DateFormat = new SimpleDateFormat("MM/dd/yyyy");
     	pub7DateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
     	SimpleDateFormat pub7TimeFormat = new SimpleDateFormat("hh:mm a");
     	pub7TimeFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
-    	String pub7Date15SecondsFuture = pub7DateFormat.format(date15SecondsFuture);
-	    String pub7Time15SecondsFuture = pub7TimeFormat.format(date15SecondsFuture);
-        scheduleQueue.EnterDate(pub7Date15SecondsFuture);
-        scheduleQueue.EnterTime(pub7Time15SecondsFuture);
+    	String pub7Date1MinuteFuture = pub7DateFormat.format(date1MinuteFuture);
+	    String pub7Time1MinuteFuture = pub7TimeFormat.format(date1MinuteFuture);
+        scheduleQueue.EnterDate(pub7Date1MinuteFuture);
+        scheduleQueue.EnterTime(pub7Time1MinuteFuture);
         
         Reporter.log("STEP 7");
         scheduleQueue.ClickScheduleBtn();
@@ -73,12 +73,12 @@ public class SchedulingContentPublishUnpublished extends ParentTest {
         overlay.SwitchToActiveFrame();
         scheduleQueue.VerifyScheduledQueue(postTitle);
         scheduleQueue.VerifyScheduledQueue("Moderate to Published");
-        scheduleQueue.VerifyScheduledQueue(pub7Date15SecondsFuture + " - ");
+        scheduleQueue.VerifyScheduledQueue(pub7Date1MinuteFuture + " - ");
         scheduleQueue.VerifyRunNowLnkPresent(postTitle, "Moderate to Published");
         scheduleQueue.VerifyCancelLnkPresent(postTitle, "Moderate to Published");
         
         Reporter.log("STEP 9");
-        Thread.sleep(15000);
+        Thread.sleep(60000);
         overlay.ClickCloseOverlayLnk();
         Cron cron = new Cron(webDriver, applib);
         cron.RunCron(true);
@@ -227,39 +227,31 @@ public class SchedulingContentPublishUnpublished extends ParentTest {
         publishingOptions.ClickPublishingOptionsLnk();
         publishingOptions.SelectModerationState("Draft");
         publishingOptions.SelectOperation("Moderate to Published");
-        Calendar cal1MinuteFuture = Calendar.getInstance();
-        cal1MinuteFuture.add(Calendar.MINUTE, 1);
-    	Date date1MinuteFuture = cal1MinuteFuture.getTime();
-        SimpleDateFormat pub7MilitaryDateFormat = new SimpleDateFormat("MM/dd/yyyy");
-    	pub7MilitaryDateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
-    	SimpleDateFormat pub7MilitaryTimeFormat = new SimpleDateFormat("kk:mm");
-    	pub7MilitaryTimeFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
-    	String pub7MilitaryDate1MinuteFuture = pub7MilitaryDateFormat.format(date1MinuteFuture);
-	    String pub7MilitaryTime1MinuteFuture = pub7MilitaryTimeFormat.format(date1MinuteFuture);
-        publishingOptions.EnterDate(pub7MilitaryDate1MinuteFuture);
-        publishingOptions.EnterTime(pub7MilitaryTime1MinuteFuture);
+        Calendar cal1MinuteFuture2 = Calendar.getInstance();
+        cal1MinuteFuture2.add(Calendar.SECOND, 61);
+    	Date date1MinuteFuture2 = cal1MinuteFuture2.getTime();
+    	String pub7Date1MinuteFuture2 = pub7DateFormat.format(date1MinuteFuture2);
+	    String pub7Time1MinuteFuture2 = pub7TimeFormat.format(date1MinuteFuture2);
+        publishingOptions.EnterDate(pub7Date1MinuteFuture2);
+        publishingOptions.EnterTime(pub7Time1MinuteFuture2.replace("PM", "pm").replace("AM", "am").replace(" ", ""));
         contentParent.ClickSaveBtn();
         overlay.switchToDefaultContent();
         contentParent.VerifyMessageStatus("Post " + postTitle6 + " has been created.");
-        contentParent.VerifyMessageStatus(postTitle6 + " has been scheduled to Moderate to Published on " + pub7MilitaryDate1MinuteFuture + " - ");
+        contentParent.VerifyMessageStatus(postTitle6 + " has been scheduled to Moderate to Published on " + pub7Date1MinuteFuture2 + " - ");
         
         Reporter.log("STEP 19");
         workBench.ClickWorkBenchTab("Schedule");
         overlay.SwitchToActiveFrame();
         scheduleQueue.VerifyScheduledQueue(postTitle6);
         scheduleQueue.VerifyScheduledQueue("Moderate to Published");
-        scheduleQueue.VerifyScheduledQueue(pub7MilitaryDate1MinuteFuture + " - ");
+        scheduleQueue.VerifyScheduledQueue(pub7Date1MinuteFuture2 + " - ");
         scheduleQueue.VerifyRunNowLnkPresent(postTitle6, "Moderate to Published");
         scheduleQueue.VerifyCancelLnkPresent(postTitle6, "Moderate to Published");
         overlay.ClickCloseOverlayLnk();
-        
-        /*COMMENTING OUT - defect with scheduling within 1 minute - logged by Kumud for future work
         Thread.sleep(60000);
         cron.RunCron(true);
         webDriver.navigate().refresh();
-        webDriver.navigate().refresh();
         workBench.VerifyWorkBenchBlockTextPresent(Arrays.asList("Revision state: Published", "Public: Yes"));
-        */
         
         Reporter.log("STEP 20");
         taxonomy.NavigateSite("My Workbench>>Create content>>Post");
@@ -274,19 +266,19 @@ public class SchedulingContentPublishUnpublished extends ParentTest {
         Calendar cal1DayFuture = Calendar.getInstance();
         cal1DayFuture.add(Calendar.HOUR, 24);
     	Date date1DayFuture = cal1DayFuture.getTime();
-        String pub7MilitaryDate1DayFuture = pub7MilitaryDateFormat.format(date1DayFuture);
-	    String pub7MilitaryTime1DayFuture = pub7MilitaryTimeFormat.format(date1DayFuture);
-        publishingOptions.EnterDate(pub7MilitaryDate1DayFuture);
-        publishingOptions.EnterTime(pub7MilitaryTime1DayFuture);
+        String pub7Date1DayFuture = pub7DateFormat.format(date1DayFuture);
+	    String pub7Time1DayFuture = pub7TimeFormat.format(date1DayFuture);
+        publishingOptions.EnterDate(pub7Date1DayFuture);
+        publishingOptions.EnterTime(pub7Time1DayFuture.replace("PM", "pm").replace("AM", "am").replace(" ", ""));
         contentParent.ClickSaveBtn();
         overlay.switchToDefaultContent();
         contentParent.VerifyMessageStatus("Post " + postTitle7 + " has been created.");
-        contentParent.VerifyMessageStatus(postTitle7 + " has been scheduled to Moderate to Published on " + pub7MilitaryDate1DayFuture + " - ");
+        contentParent.VerifyMessageStatus(postTitle7 + " has been scheduled to Moderate to Published on " + pub7Date1DayFuture + " - ");
         workBench.ClickWorkBenchTab("Schedule");
         overlay.SwitchToActiveFrame();
         scheduleQueue.VerifyScheduledQueue(postTitle7);
         scheduleQueue.VerifyScheduledQueue("Moderate to Published");
-        scheduleQueue.VerifyScheduledQueue(pub7MilitaryDate1DayFuture + " - ");
+        scheduleQueue.VerifyScheduledQueue(pub7Date1DayFuture + " - ");
         scheduleQueue.ClickRunNowLnk(postTitle7, "Moderate to Published");
         overlay.SwitchToActiveFrame();
         scheduleQueue.VerifyScheduledQueue(postTitle7);
