@@ -72,8 +72,17 @@ public class Taxonomy {
     @FindBy(how = How.XPATH, using = "//a[@id='edit-shortcuts']")
     private WebElement Shortcuts_Lnk;
     
+    @FindBy(how = How.CSS, using = "li[class='admin-menu-action admin-menu-account'] a")
+    private WebElement ActiveUserMenu_Lnk;
+    
     
     //PAGE OBJECT METHODS
+    public void ClickActiveUserMenuLnk() throws Exception {
+    	
+    	Reporter.log("Click the activer user menu link for logged in user '" + ActiveUserMenu_Lnk.getText() + "'.");
+    	ActiveUserMenu_Lnk.click();
+    }
+    
     public void MouseOffTaxonomyElement(WebElement locator) throws Exception {
     	
     	//is mouse-off fails, refresh the page to be sure to close taxonomy menu

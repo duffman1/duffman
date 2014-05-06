@@ -18,7 +18,7 @@ public class CreatePermissionSetsGUI extends ParentTest {
      * Steps - https://rally1.rallydev.com/#/14663927728d/detail/testcase/17746733496 
      *************************************************************************************/
     @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"})
-    public void CreatePermissionSetsGUI_Test() throws Exception {
+    public void CreatePermissionSetsGUI_TC1381() throws Exception {
     	
     	//Step 1
     	UserLogin userLogin = applib.openApplication();

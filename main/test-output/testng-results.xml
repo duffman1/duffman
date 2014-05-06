@@ -2,6 +2,9 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
     <line>
+      <![CDATA[SETUP - create new user and logout]]>
+    </line>
+    <line>
       <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
     </line>
     <line>
@@ -14,310 +17,312 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Modules' menu link.]]>
+      <![CDATA[Mouse over the 'People' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to frame titled 'Modules'.]]>
+      <![CDATA[Click the 'Add user' menu link.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Pub Ads' in the 'Filter Name' text box.]]>
+      <![CDATA[Switch to the active frame titled 'People dialog'.]]>
     </line>
     <line>
-      <![CDATA[Wait for the module titled 'Pub Ads' to appear in the list.]]>
+      <![CDATA[Enter '5500df37e2d44a7@8edc88317ff04d2.com' in the 'Username' text box.]]>
     </line>
     <line>
-      <![CDATA[Verify the 'Pub Ads' check box is checked.]]>
+      <![CDATA[Enter '5500df37e2d44a7@8edc88317ff04d2.com' in the 'E-mail address' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
+      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Structure' menu link.]]>
+      <![CDATA[Enter 'pa55word' in the 'Confirm password' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Publisher Ads Side Files' menu link.]]>
+      <![CDATA[Check the 'editor' check box.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
+      <![CDATA[Enter 'a76cfb61fc67495' in the 'First Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Add' link.]]>
+      <![CDATA[Enter 'e9ca611430374de' in the 'Last Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Add a new side file dialog'.]]>
+      <![CDATA[Click the 'Create new account' button.]]>
     </line>
     <line>
-      <![CDATA[Enter 'f00682a193f84a2' in the 'Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '03b59d51b2/3ea94c3e4a.html' in the 'Path' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Select the 'text/html' from the 'Response type' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '<html><body bgcolor=white><script language=javascript>function pq(q) {if(q.length > 1) this.q = q.substring(1, q.length);else this.q = null;this.keyValuePairs = new Array();if(q) {for(var i=0; i < this.q.split("&").length; i++) {this.keyValuePairs[i] = this.q.split("&")[i];}}this.getValue = function(s) {for(var j=0; j < this.keyValuePairs.length; j++) {if(this.keyValuePairs[j].split("=")[0] == s)return this.keyValuePairs[j].split("=")[1];}return -1;}}function qs(key){var page = new pq(document.location.search);return unescape(page.getValue(key));}var _c = qs('c');var r_number = Math.random();document.writeln('<SCR'+'IPT language='JavaScript' S'+'RC="http://media.adcentriconline.com/adcentric/tag/'+_c+'?ADCadcifr=1&number='+r_number+'"></SCR'+'IPT>');</script></body></html>' in the 'Content' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'f00682a193f84a2 has been created.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the Ad Side File link with path '03b59d51b2/3ea94c3e4a.html'.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the Ad Side File 'Edit' link for adName + 'Atlas'.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Edit side file atlas dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'atlas has been updated' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify storage type for Ad Side File 'Atlas' is set to 'Overridden'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the Ad Side File 'Edit' link for adName + 'Atlas'.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Edit side file atlas dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Revert' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Revert' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The item has been reverted.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify storage type for Ad Side File 'Atlas' is set to 'Default'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the Ad Side File expand link for adName + 'Atlas'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the Ad Side File 'Clone' link for adName + 'Atlas'.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Clone side file atlas dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '256fbc2b25ef49d' in the 'Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'clone_of_atlas has been created.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify storage type for Ad Side File '256fbc2b25ef49d' is set to 'Normal'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the Ad Side File 'Edit' link for adName + 'Atlas'.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Edit side file atlas dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Export' tab.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Export side file atlas dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Copy the text from the 'Export' text area.]]>
+      <![CDATA[Verify success message of 'A welcome message with further instructions has been e-mailed to the new user 5500df37e2d44a7@8edc88317ff04d2.com.' is present.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Structure' menu link.]]>
+      <![CDATA[Click the 'Logout' button.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Publisher Ads Side Files' menu link.]]>
+      <![CDATA[STEP 1]]>
     </line>
     <line>
-      <![CDATA[Click the 'Import' menu link.]]>
+      <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Import side file dialog'.]]>
+      <![CDATA[Enter the user's password in the 'Password' text box.]]>
     </line>
     <line>
-      <![CDATA[Enter '$adpath = new stdClass();
-$adpath->disabled = FALSE; /* Edit this to true to make a default adpath disabled initially */
-$adpath->api_version = 1;
-$adpath->machine_name = 'atlas';
-$adpath->name = 'Atlas';
-$adpath->path = 'atlas/atlas_rm.html';
-$adpath->file_type = 'html';
-$adpath->content = '<html>
-<head>
-</head>
-<body>
-<script src=\'http://rmd.atdmt.com/tl/newIframeScript.js\'> </script>
-
-
-</body>
-</html>';
-' in the 'Side file code' text area.]]>
+      <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Continue' button.]]>
+      <![CDATA[STEP 2]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Import side file dialog'.]]>
+      <![CDATA[Click the activer user menu link for logged in user '5500df37e2d44a7@8edc88317ff04d2.com'.]]>
     </line>
     <line>
-      <![CDATA[Verify warning message 'You have unsaved changes. These changes will not be made permanent until you click Save.' is present.]]>
+      <![CDATA[Click the 'Edit' link in the work bench.]]>
     </line>
     <line>
-      <![CDATA[Enter '42ec22e2d9134f2' in the 'Name' text box.]]>
+      <![CDATA[Switch to the active frame titled '5500df37e2d44a7@8edc88317ff04d2.com dialog'.]]>
     </line>
     <line>
-      <![CDATA[Enter '226ea70b4e/7dfa185068.html' in the 'Path' text box.]]>
+      <![CDATA[STEP 3]]>
     </line>
     <line>
-      <![CDATA[Click the 'Update' button.]]>
+      <![CDATA[Enter ' ' in the 'Password' text box.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Import side file dialog'.]]>
+      <![CDATA[Verify that password strength message 'The password does not include enough variation to be secure.' is present.]]>
     </line>
     <line>
-      <![CDATA[Verify warning message 'You have unsaved changes. These changes will not be made permanent until you click Save.' is present.]]>
+      <![CDATA[Verify that password strength message 'Password must contain at least 2 digits.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify that password strength message 'Password must be at least 8 characters in length.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify that password strength message 'Password must begin and end with a letter.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify that password strength message 'Password must contain at least one lowercase character.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 4]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'ABCDEFG1' in the 'Password' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Verify that password strength message 'The password does not include enough variation to be secure.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify that password strength message 'Password must contain at least 2 digits.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify that password strength message 'Password must begin and end with a letter.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify that password strength message 'Password must contain at least one lowercase character.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify that password strength message 'Password must be at least 8 characters in length.' is not present.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 5]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'ABCDEF11' in the 'Password' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Verify that password strength message 'The password does not include enough variation to be secure.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify that password strength message 'Password must begin and end with a letter.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify that password strength message 'Password must contain at least one lowercase character.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify that password strength message 'Password must be at least 8 characters in length.' is not present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify that password strength message 'Password must contain at least 2 digits.' is not present.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 6]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'ABCDE11H' in the 'Password' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Verify that password strength message 'The password does not include enough variation to be secure.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify that password strength message 'Password must contain at least one lowercase character.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify that password strength message 'Password must be at least 8 characters in length.' is not present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify that password strength message 'Password must contain at least 2 digits.' is not present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify that password strength message 'Password must begin and end with a letter.' is not present.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 7]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'ABcDE11H' in the 'Password' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the password strength container is not present.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 8]]>
+    </line>
+    <line>
+      <![CDATA[Enter '5500df37e2d44a7@8edc88317ff04d2.com' in the 'Password' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Verify that password strength message 'The password does not include enough variation to be secure.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify that password strength message 'Password must not contain the username.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 9]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'ABcDE11H' in the 'Password' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'aBcDE11H' in the 'Confirm password' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Verify password match text equals 'no'.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 10]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'pa55word' in the 'Current password' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'A' in the 'Password' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'A' in the 'Confirm password' text box.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Import side file dialog'.]]>
+      <![CDATA[STEP 11]]>
     </line>
     <line>
-      <![CDATA[Enter '42ec22e2d9134f2' in the 'Machine Name' text box.]]>
+      <![CDATA[Enter 'pa55word' in the 'Current password' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Update' button.]]>
+      <![CDATA[Enter 'pa555word' in the 'Password' text box.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Import side file dialog'.]]>
+      <![CDATA[Enter 'pa555word' in the 'Confirm password' text box.]]>
     </line>
     <line>
-      <![CDATA[Verify warning message 'You have unsaved changes. These changes will not be made permanent until you click Save.' is present.]]>
+      <![CDATA[Verify password match text equals 'yes'.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
+      <![CDATA[Verify success message of 'The changes have been saved.' is present.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of '42ec22e2d9134f2 has been created.' is present.]]>
+      <![CDATA[STEP 12]]>
     </line>
     <line>
-      <![CDATA[Verify storage type for Ad Side File '42ec22e2d9134f2' is set to 'Normal'.]]>
+      <![CDATA[Enter 'pa555word' in the 'Current password' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the Ad Side File expand link for adName + 'f00682a193f84a2'.]]>
+      <![CDATA[Enter 'pa555!@#$%^&*word' in the 'Password' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the Ad Side File 'Delete' link for adName + 'f00682a193f84a2'.]]>
+      <![CDATA[Enter 'pa555!@#$%^&*word' in the 'Confirm password' text box.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Are you sure you want to delete f00682a193f84a2? dialog'.]]>
+      <![CDATA[Verify password match text equals 'yes'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Delete' button.]]>
+      <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
+      <![CDATA[Verify success message of 'The changes have been saved.' is present.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'The item has been deleted.' is present.]]>
+      <![CDATA[STEP 13]]>
     </line>
     <line>
-      <![CDATA[Verify Ad Side File 'f00682a193f84a2' is NOT present.]]>
+      <![CDATA[Click the 'Close Overlay X'.]]>
     </line>
     <line>
-      <![CDATA[Click the Ad Side File expand link for adName + '256fbc2b25ef49d'.]]>
+      <![CDATA[Click the 'Logout' button.]]>
     </line>
     <line>
-      <![CDATA[Click the Ad Side File 'Delete' link for adName + '256fbc2b25ef49d'.]]>
+      <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Are you sure you want to delete clone_of_atlas? dialog'.]]>
+      <![CDATA[Enter the user's password in the 'Password' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Delete' button.]]>
+      <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
+      <![CDATA[Mouse over the 'Configuration' menu link.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'The item has been deleted.' is present.]]>
+      <![CDATA[Mouse over the 'People' menu link.]]>
     </line>
     <line>
-      <![CDATA[Verify Ad Side File '256fbc2b25ef49d' is NOT present.]]>
+      <![CDATA[Mouse over the 'Password policies' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the Ad Side File expand link for adName + '42ec22e2d9134f2'.]]>
+      <![CDATA[Click the 'List' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the Ad Side File 'Delete' link for adName + '42ec22e2d9134f2'.]]>
+      <![CDATA[Switch to the active frame titled 'Password policies dialog'.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Are you sure you want to delete 42ec22e2d9134f2? dialog'.]]>
+      <![CDATA[Click the 'view' link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Delete' button.]]>
+      <![CDATA[Switch to the active frame titled 'NBCU Password Policy dialog'.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
+      <![CDATA[Verify the text 'Expiration' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'The item has been deleted.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify Ad Side File '42ec22e2d9134f2' is NOT present.]]>
+      <![CDATA[Verify the text '365' is present on the page.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="135097" started-at="2014-05-05T18:52:40Z" finished-at="2014-05-05T18:54:55Z">
+  <suite name="Default suite" duration-ms="54560" started-at="2014-05-06T14:19:31Z" finished-at="2014-05-06T14:20:25Z">
     <groups>
       <group name="full">
-        <method signature="AdFoldersRichMediaAds.AdFoldersRichMediaAds_TC1160()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds@7d1dd0b7]" name="AdFoldersRichMediaAds_TC1160" class="com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds"/>
+        <method signature="PasswordRules.PasswordRules_TC2185()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules@133a7ec]" name="PasswordRules_TC2185" class="com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules"/>
       </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="135097" started-at="2014-05-05T18:52:40Z" finished-at="2014-05-05T18:54:55Z">
-      <class name="com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds">
-        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds@7d1dd0b7]" name="startGridAndHub" is-config="true" duration-ms="11132" started-at="2014-05-05T14:52:29Z" finished-at="2014-05-05T14:52:40Z">
+    <test name="Default test" duration-ms="54560" started-at="2014-05-06T14:19:31Z" finished-at="2014-05-06T14:20:25Z">
+      <class name="com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules">
+        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules@133a7ec]" name="startGridAndHub" is-config="true" duration-ms="11784" started-at="2014-05-06T10:19:19Z" finished-at="2014-05-06T10:19:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startGridAndHub -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds@7d1dd0b7]" name="startSelenium" is-config="true" duration-ms="2460" started-at="2014-05-05T14:52:40Z" finished-at="2014-05-05T14:52:42Z">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules@133a7ec]" name="startSelenium" is-config="true" duration-ms="2471" started-at="2014-05-06T10:19:31Z" finished-at="2014-05-06T10:19:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="AdFoldersRichMediaAds_TC1160()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds@7d1dd0b7]" name="AdFoldersRichMediaAds_TC1160" duration-ms="132054" started-at="2014-05-05T14:52:42Z" finished-at="2014-05-05T14:54:54Z">
+        <test-method status="PASS" signature="PasswordRules_TC2185()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules@133a7ec]" name="PasswordRules_TC2185" duration-ms="51507" started-at="2014-05-06T10:19:33Z" finished-at="2014-05-06T10:20:25Z">
           <reporter-output>
+            <line>
+              <![CDATA[SETUP - create new user and logout]]>
+            </line>
             <line>
               <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
             </line>
@@ -331,309 +336,308 @@ $adpath->content = '<html>
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Modules' menu link.]]>
+              <![CDATA[Mouse over the 'People' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to frame titled 'Modules'.]]>
+              <![CDATA[Click the 'Add user' menu link.]]>
             </line>
             <line>
-              <![CDATA[Enter 'Pub Ads' in the 'Filter Name' text box.]]>
+              <![CDATA[Switch to the active frame titled 'People dialog'.]]>
             </line>
             <line>
-              <![CDATA[Wait for the module titled 'Pub Ads' to appear in the list.]]>
+              <![CDATA[Enter '5500df37e2d44a7@8edc88317ff04d2.com' in the 'Username' text box.]]>
             </line>
             <line>
-              <![CDATA[Verify the 'Pub Ads' check box is checked.]]>
+              <![CDATA[Enter '5500df37e2d44a7@8edc88317ff04d2.com' in the 'E-mail address' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
+              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Structure' menu link.]]>
+              <![CDATA[Enter 'pa55word' in the 'Confirm password' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Publisher Ads Side Files' menu link.]]>
+              <![CDATA[Check the 'editor' check box.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
+              <![CDATA[Enter 'a76cfb61fc67495' in the 'First Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Add' link.]]>
+              <![CDATA[Enter 'e9ca611430374de' in the 'Last Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Add a new side file dialog'.]]>
+              <![CDATA[Click the 'Create new account' button.]]>
             </line>
             <line>
-              <![CDATA[Enter 'f00682a193f84a2' in the 'Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '03b59d51b2/3ea94c3e4a.html' in the 'Path' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Select the 'text/html' from the 'Response type' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '<html><body bgcolor=white><script language=javascript>function pq(q) {if(q.length > 1) this.q = q.substring(1, q.length);else this.q = null;this.keyValuePairs = new Array();if(q) {for(var i=0; i < this.q.split("&").length; i++) {this.keyValuePairs[i] = this.q.split("&")[i];}}this.getValue = function(s) {for(var j=0; j < this.keyValuePairs.length; j++) {if(this.keyValuePairs[j].split("=")[0] == s)return this.keyValuePairs[j].split("=")[1];}return -1;}}function qs(key){var page = new pq(document.location.search);return unescape(page.getValue(key));}var _c = qs('c');var r_number = Math.random();document.writeln('<SCR'+'IPT language='JavaScript' S'+'RC="http://media.adcentriconline.com/adcentric/tag/'+_c+'?ADCadcifr=1&number='+r_number+'"></SCR'+'IPT>');</script></body></html>' in the 'Content' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'f00682a193f84a2 has been created.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the Ad Side File link with path '03b59d51b2/3ea94c3e4a.html'.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the Ad Side File 'Edit' link for adName + 'Atlas'.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Edit side file atlas dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'atlas has been updated' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify storage type for Ad Side File 'Atlas' is set to 'Overridden'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the Ad Side File 'Edit' link for adName + 'Atlas'.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Edit side file atlas dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Revert' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Revert' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The item has been reverted.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify storage type for Ad Side File 'Atlas' is set to 'Default'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the Ad Side File expand link for adName + 'Atlas'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the Ad Side File 'Clone' link for adName + 'Atlas'.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Clone side file atlas dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '256fbc2b25ef49d' in the 'Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'clone_of_atlas has been created.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify storage type for Ad Side File '256fbc2b25ef49d' is set to 'Normal'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the Ad Side File 'Edit' link for adName + 'Atlas'.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Edit side file atlas dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Export' tab.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Export side file atlas dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Copy the text from the 'Export' text area.]]>
+              <![CDATA[Verify success message of 'A welcome message with further instructions has been e-mailed to the new user 5500df37e2d44a7@8edc88317ff04d2.com.' is present.]]>
             </line>
             <line>
               <![CDATA[Click the 'Close Overlay X'.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Structure' menu link.]]>
+              <![CDATA[Click the 'Logout' button.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Publisher Ads Side Files' menu link.]]>
+              <![CDATA[STEP 1]]>
             </line>
             <line>
-              <![CDATA[Click the 'Import' menu link.]]>
+              <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Import side file dialog'.]]>
+              <![CDATA[Enter the user's password in the 'Password' text box.]]>
             </line>
             <line>
-              <![CDATA[Enter '$adpath = new stdClass();
-$adpath->disabled = FALSE; /* Edit this to true to make a default adpath disabled initially */
-$adpath->api_version = 1;
-$adpath->machine_name = 'atlas';
-$adpath->name = 'Atlas';
-$adpath->path = 'atlas/atlas_rm.html';
-$adpath->file_type = 'html';
-$adpath->content = '<html>
-<head>
-</head>
-<body>
-<script src=\'http://rmd.atdmt.com/tl/newIframeScript.js\'> </script>
-
-
-</body>
-</html>';
-' in the 'Side file code' text area.]]>
+              <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Continue' button.]]>
+              <![CDATA[STEP 2]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Import side file dialog'.]]>
+              <![CDATA[Click the activer user menu link for logged in user '5500df37e2d44a7@8edc88317ff04d2.com'.]]>
             </line>
             <line>
-              <![CDATA[Verify warning message 'You have unsaved changes. These changes will not be made permanent until you click Save.' is present.]]>
+              <![CDATA[Click the 'Edit' link in the work bench.]]>
             </line>
             <line>
-              <![CDATA[Enter '42ec22e2d9134f2' in the 'Name' text box.]]>
+              <![CDATA[Switch to the active frame titled '5500df37e2d44a7@8edc88317ff04d2.com dialog'.]]>
             </line>
             <line>
-              <![CDATA[Enter '226ea70b4e/7dfa185068.html' in the 'Path' text box.]]>
+              <![CDATA[STEP 3]]>
             </line>
             <line>
-              <![CDATA[Click the 'Update' button.]]>
+              <![CDATA[Enter ' ' in the 'Password' text box.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Import side file dialog'.]]>
+              <![CDATA[Verify that password strength message 'The password does not include enough variation to be secure.' is present.]]>
             </line>
             <line>
-              <![CDATA[Verify warning message 'You have unsaved changes. These changes will not be made permanent until you click Save.' is present.]]>
+              <![CDATA[Verify that password strength message 'Password must contain at least 2 digits.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify that password strength message 'Password must be at least 8 characters in length.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify that password strength message 'Password must begin and end with a letter.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify that password strength message 'Password must contain at least one lowercase character.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 4]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'ABCDEFG1' in the 'Password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Verify that password strength message 'The password does not include enough variation to be secure.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify that password strength message 'Password must contain at least 2 digits.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify that password strength message 'Password must begin and end with a letter.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify that password strength message 'Password must contain at least one lowercase character.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify that password strength message 'Password must be at least 8 characters in length.' is not present.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 5]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'ABCDEF11' in the 'Password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Verify that password strength message 'The password does not include enough variation to be secure.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify that password strength message 'Password must begin and end with a letter.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify that password strength message 'Password must contain at least one lowercase character.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify that password strength message 'Password must be at least 8 characters in length.' is not present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify that password strength message 'Password must contain at least 2 digits.' is not present.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 6]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'ABCDE11H' in the 'Password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Verify that password strength message 'The password does not include enough variation to be secure.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify that password strength message 'Password must contain at least one lowercase character.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify that password strength message 'Password must be at least 8 characters in length.' is not present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify that password strength message 'Password must contain at least 2 digits.' is not present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify that password strength message 'Password must begin and end with a letter.' is not present.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 7]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'ABcDE11H' in the 'Password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the password strength container is not present.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 8]]>
+            </line>
+            <line>
+              <![CDATA[Enter '5500df37e2d44a7@8edc88317ff04d2.com' in the 'Password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Verify that password strength message 'The password does not include enough variation to be secure.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify that password strength message 'Password must not contain the username.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 9]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'ABcDE11H' in the 'Password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'aBcDE11H' in the 'Confirm password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Verify password match text equals 'no'.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 10]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'pa55word' in the 'Current password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'A' in the 'Password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'A' in the 'Confirm password' text box.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Import side file dialog'.]]>
+              <![CDATA[STEP 11]]>
             </line>
             <line>
-              <![CDATA[Enter '42ec22e2d9134f2' in the 'Machine Name' text box.]]>
+              <![CDATA[Enter 'pa55word' in the 'Current password' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Update' button.]]>
+              <![CDATA[Enter 'pa555word' in the 'Password' text box.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Import side file dialog'.]]>
+              <![CDATA[Enter 'pa555word' in the 'Confirm password' text box.]]>
             </line>
             <line>
-              <![CDATA[Verify warning message 'You have unsaved changes. These changes will not be made permanent until you click Save.' is present.]]>
+              <![CDATA[Verify password match text equals 'yes'.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
+              <![CDATA[Verify success message of 'The changes have been saved.' is present.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of '42ec22e2d9134f2 has been created.' is present.]]>
+              <![CDATA[STEP 12]]>
             </line>
             <line>
-              <![CDATA[Verify storage type for Ad Side File '42ec22e2d9134f2' is set to 'Normal'.]]>
+              <![CDATA[Enter 'pa555word' in the 'Current password' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the Ad Side File expand link for adName + 'f00682a193f84a2'.]]>
+              <![CDATA[Enter 'pa555!@#$%^&*word' in the 'Password' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the Ad Side File 'Delete' link for adName + 'f00682a193f84a2'.]]>
+              <![CDATA[Enter 'pa555!@#$%^&*word' in the 'Confirm password' text box.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Are you sure you want to delete f00682a193f84a2? dialog'.]]>
+              <![CDATA[Verify password match text equals 'yes'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Delete' button.]]>
+              <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
+              <![CDATA[Verify success message of 'The changes have been saved.' is present.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'The item has been deleted.' is present.]]>
+              <![CDATA[STEP 13]]>
             </line>
             <line>
-              <![CDATA[Verify Ad Side File 'f00682a193f84a2' is NOT present.]]>
+              <![CDATA[Click the 'Close Overlay X'.]]>
             </line>
             <line>
-              <![CDATA[Click the Ad Side File expand link for adName + '256fbc2b25ef49d'.]]>
+              <![CDATA[Click the 'Logout' button.]]>
             </line>
             <line>
-              <![CDATA[Click the Ad Side File 'Delete' link for adName + '256fbc2b25ef49d'.]]>
+              <![CDATA[Enter the user's email address in the 'Email Address' text box.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Are you sure you want to delete clone_of_atlas? dialog'.]]>
+              <![CDATA[Enter the user's password in the 'Password' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Delete' button.]]>
+              <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
+              <![CDATA[Mouse over the 'Configuration' menu link.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'The item has been deleted.' is present.]]>
+              <![CDATA[Mouse over the 'People' menu link.]]>
             </line>
             <line>
-              <![CDATA[Verify Ad Side File '256fbc2b25ef49d' is NOT present.]]>
+              <![CDATA[Mouse over the 'Password policies' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the Ad Side File expand link for adName + '42ec22e2d9134f2'.]]>
+              <![CDATA[Click the 'List' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the Ad Side File 'Delete' link for adName + '42ec22e2d9134f2'.]]>
+              <![CDATA[Switch to the active frame titled 'Password policies dialog'.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Are you sure you want to delete 42ec22e2d9134f2? dialog'.]]>
+              <![CDATA[Click the 'view' link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Delete' button.]]>
+              <![CDATA[Switch to the active frame titled 'NBCU Password Policy dialog'.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
+              <![CDATA[Verify the text 'Expiration' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'The item has been deleted.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify Ad Side File '42ec22e2d9134f2' is NOT present.]]>
+              <![CDATA[Verify the text '365' is present on the page.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- AdFoldersRichMediaAds_TC1160 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds@7d1dd0b7]" name="stopSelenium" is-config="true" duration-ms="569" started-at="2014-05-05T14:54:54Z" finished-at="2014-05-05T14:54:55Z">
+        </test-method> <!-- PasswordRules_TC2185 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules@133a7ec]" name="stopSelenium" is-config="true" duration-ms="571" started-at="2014-05-06T10:20:25Z" finished-at="2014-05-06T10:20:25Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=AdFoldersRichMediaAds_TC1160 status=SUCCESS method=AdFoldersRichMediaAds.AdFoldersRichMediaAds_TC1160()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds@7d1dd0b7] output=Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]]>
+                <![CDATA[[TestResult name=PasswordRules_TC2185 status=SUCCESS method=PasswordRules.PasswordRules_TC2185()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules@133a7ec] output=SETUP - create new user and logout]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds@7d1dd0b7]" name="stopGridAndHub" is-config="true" duration-ms="379" started-at="2014-05-05T14:54:55Z" finished-at="2014-05-05T14:54:55Z">
+        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules@133a7ec]" name="stopGridAndHub" is-config="true" duration-ms="385" started-at="2014-05-06T10:20:25Z" finished-at="2014-05-06T10:20:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopGridAndHub -->
-      </class> <!-- com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds -->
+      </class> <!-- com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

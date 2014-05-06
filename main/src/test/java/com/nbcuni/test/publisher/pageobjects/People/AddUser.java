@@ -7,6 +7,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.Reporter;
 
 import com.nbcuni.test.publisher.common.AppLib;
@@ -30,6 +33,7 @@ public class AddUser {
 	private Overlay overlay;
 	private ContentParent contentParent;
 	private Random random;
+	private WebDriverWait wait;
 	
     //PAGE OBJECT CONSTRUCTOR
     public AddUser(Driver webDriver, AppLib applib) {
@@ -39,6 +43,7 @@ public class AddUser {
         overlay = new Overlay(webDriver, applib);
         contentParent = new ContentParent(webDriver, applib);
         random = new Random();
+        wait = new WebDriverWait(webDriver, 10);
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -47,6 +52,9 @@ public class AddUser {
     
     @FindBy(how = How.XPATH, using = "//input[@id='edit-mail']")
     private WebElement EmailAddress_Txb;
+    
+    @FindBy(how = How.ID, using = "edit-current-pass")
+    private WebElement CurrentPassword_Txb;
     
     @FindBy(how = How.XPATH, using = "//input[@id='edit-pass-pass1']")
     private WebElement Password_Txb;
@@ -70,6 +78,12 @@ public class AddUser {
     @FindBy(how = How.XPATH, using = "//input[@value='Create new account']")
     private WebElement CreateNewAccount_Btn;
     
+    @FindBy(how = How.CSS, using = "div[class='password-suggestions description']")
+    private WebElement PasswordStrength_Ctr;
+    
+    @FindBy(how = How.CSS, using = "div[class='password-confirm']")
+    private WebElement PasswordMatch_Ctr;
+    
     
     //PAGE OBJECT METHODS
     public void EnterUsername(String userName) throws Exception {
@@ -86,9 +100,17 @@ public class AddUser {
     	
     }
     
+    public void EnterCurrentPassword(String passWord) throws Exception {
+    	
+    	Reporter.log("Enter '" + passWord + "' in the 'Current password' text box.");
+    	CurrentPassword_Txb.sendKeys(passWord);
+    	
+    }
+
     public void EnterPassword(String passWord) throws Exception {
     	
     	Reporter.log("Enter '" + passWord + "' in the 'Password' text box.");
+    	Password_Txb.clear();
     	Password_Txb.sendKeys(passWord);
     	
     }
@@ -96,6 +118,7 @@ public class AddUser {
     public void EnterConfirmPassword(String passWord) throws Exception {
     	
     	Reporter.log("Enter '" + passWord + "' in the 'Confirm password' text box.");
+    	ConfirmPassword_Txb.clear();
     	ConfirmPassword_Txb.sendKeys(passWord);
     }
     
@@ -135,6 +158,48 @@ public class AddUser {
     	
     	Reporter.log("Click the 'Create new account' button.");
     	CreateNewAccount_Btn.click();
+    }
+    
+    public void VerifyPasswordStrengthCtrNotPresent() throws Exception {
+    	
+    	Reporter.log("Verify the password strength container is not present.");
+    	wait.until(ExpectedConditions.not(ExpectedConditions.visibilityOf(PasswordStrength_Ctr)));
+    }
+    
+    public void VerifyPasswordStrengthTxtPresent(List<String> strengthMessages) throws Exception {
+    	
+    	String strengthTxt = wait.until(ExpectedConditions.visibilityOf(PasswordStrength_Ctr)).getText();
+    	
+    	for (String message : strengthMessages) {
+    		Reporter.log("Verify that password strength message '" + message + "' is present.");
+    		Assert.assertTrue(strengthTxt.contains(message), 
+    				"Password strength message '" + message + " is not present.");
+    	}
+    }
+    
+    public void VerifyPasswordStrengthTxtNotPresent(List<String> strengthMessages) throws Exception {
+    	
+    	String strengthTxt = wait.until(ExpectedConditions.visibilityOf(PasswordStrength_Ctr)).getText();
+    	
+    	for (String message : strengthMessages) {
+    		Reporter.log("Verify that password strength message '" + message + "' is not present.");
+    		Assert.assertFalse(strengthTxt.contains(message), 
+    				"Password strength message '" + message + " is present when it should not be.");
+    	}
+    }
+    
+    public void VerifyPasswordsMatch(Boolean match) throws Exception {
+    	
+    	String passwordMatchTxt = wait.until(ExpectedConditions.visibilityOf(PasswordMatch_Ctr)).getText();
+    	
+    	if (match == true) {
+    		Reporter.log("Verify password match text equals 'yes'.");
+    		Assert.assertTrue(passwordMatchTxt.contains("yes"), "Password match text of 'yes' is not present.");
+    	}
+    	else {
+    		Reporter.log("Verify password match text equals 'no'.");
+    		Assert.assertTrue(passwordMatchTxt.contains("no"), "Password match text of 'no' is not present.");
+    	}
     }
     
     public String AddDefaultUser(List<String> roles) throws Exception {

@@ -16,7 +16,7 @@ public class CustomPermissionSetVerification extends ParentTest {
      * Steps - https://rally1.rallydev.com/#/14663927728d/detail/testcase/17744190392 
      *************************************************************************************/
     @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"})
-    public void CustomPermissionSetVerification_Test() throws Exception {
+    public void CustomPermissionSetVerification_TC1371() throws Exception {
     	
     	//Step 1
     	UserLogin userLogin = applib.openApplication();
