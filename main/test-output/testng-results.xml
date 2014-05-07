@@ -1,73 +1,357 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="3" total="4" passed="1">
   <reporter-output>
     <line>
-      <![CDATA[Open url 'http://update.dev-integration1.nbcupublisher7.publisher7.com'.]]>
+      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Access denied dialog'.]]>
+      <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
     </line>
     <line>
-      <![CDATA[Verify access denied text is present.]]>
+      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
     </line>
     <line>
-      <![CDATA[Verify access denied text is present.]]>
+      <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[Verify access denied text is present.]]>
+      <![CDATA[Click the 'Modules' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to frame titled 'Modules'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Sticky Edit Actions' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the module titled 'Sticky Edit Actions' to appear in the list.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Devel' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the module titled 'Devel' to appear in the list.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'File Lock' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the module titled 'File Lock' to appear in the list.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'ImageField Focus' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the module titled 'ImageField Focus' to appear in the list.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Database logging' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the module titled 'Database logging' to appear in the list.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Pub Post' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the module titled 'Pub Post' to appear in the list.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Pub Post' check box is checked.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/PasswordRules_TC2185.png ]]>
+    </line>
+    <line>
+      <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/PasswordRules_TC2185.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/PasswordRules_TC2185.png' height='500' width='500'/> </a>]]>
+    </line>
+    <line>
+      <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/PasswordRules_TC2185.png ]]>
+    </line>
+    <line>
+      <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/PasswordRules_TC2185.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/PasswordRules_TC2185.png' height='500' width='500'/> </a>]]>
+    </line>
+    <line>
+      <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/PasswordRules_TC2185.png ]]>
+    </line>
+    <line>
+      <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/PasswordRules_TC2185.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/PasswordRules_TC2185.png' height='500' width='500'/> </a>]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="8613" started-at="2014-05-07T15:58:26Z" finished-at="2014-05-07T15:58:34Z">
+  <suite name="Pub 7 Concurrent Suite" duration-ms="12993" started-at="2014-05-07T17:45:58Z" finished-at="2014-05-07T17:46:11Z">
     <groups>
       <group name="full">
-        <method signature="UnauthenticatedUsersCanViewQueuesRevisionList.UnauthenticatedUsersCanViewQueuesRevisionList_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.UnauthenticatedUsersCanViewQueuesRevisionList.UnauthenticatedUsersCanViewQueuesRevisionList@766b0524]" name="UnauthenticatedUsersCanViewQueuesRevisionList_Test" class="com.nbcuni.test.publisher.tests.Queues.UnauthenticatedUsersCanViewQueuesRevisionList.UnauthenticatedUsersCanViewQueuesRevisionList"/>
+        <method signature="PasswordRules.PasswordRules_TC2185()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules@3f1e86da]" name="PasswordRules_TC2185" class="com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules"/>
       </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="8613" started-at="2014-05-07T15:58:26Z" finished-at="2014-05-07T15:58:34Z">
-      <class name="com.nbcuni.test.publisher.tests.Queues.UnauthenticatedUsersCanViewQueuesRevisionList.UnauthenticatedUsersCanViewQueuesRevisionList">
-        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.UnauthenticatedUsersCanViewQueuesRevisionList.UnauthenticatedUsersCanViewQueuesRevisionList@766b0524]" name="startGridAndHub" is-config="true" duration-ms="11740" started-at="2014-05-07T11:58:14Z" finished-at="2014-05-07T11:58:26Z">
+    <test name="All Concurrent Web Tests" duration-ms="12993" started-at="2014-05-07T17:45:58Z" finished-at="2014-05-07T17:46:11Z">
+      <class name="com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules">
+        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules@3f1e86da]" name="startGridAndHub" is-config="true" duration-ms="5654" started-at="2014-05-07T13:45:53Z" finished-at="2014-05-07T13:45:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startGridAndHub -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.UnauthenticatedUsersCanViewQueuesRevisionList.UnauthenticatedUsersCanViewQueuesRevisionList@766b0524]" name="startSelenium" is-config="true" duration-ms="2502" started-at="2014-05-07T11:58:26Z" finished-at="2014-05-07T11:58:28Z">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules@3f1e86da]" name="startSelenium" is-config="true" duration-ms="2165" started-at="2014-05-07T13:45:58Z" finished-at="2014-05-07T13:46:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="UnauthenticatedUsersCanViewQueuesRevisionList_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.UnauthenticatedUsersCanViewQueuesRevisionList.UnauthenticatedUsersCanViewQueuesRevisionList@766b0524]" name="UnauthenticatedUsersCanViewQueuesRevisionList_Test" duration-ms="5535" started-at="2014-05-07T11:58:28Z" finished-at="2014-05-07T11:58:34Z">
+        <test-method status="FAIL" signature="PasswordRules_TC2185()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules@3f1e86da]" name="PasswordRules_TC2185" duration-ms="3" started-at="2014-05-07T13:46:00Z" finished-at="2014-05-07T13:46:00Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[failing test case.]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: failing test case.
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules.PasswordRules_TC2185(PasswordRules.java:26)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
             <line>
-              <![CDATA[Open url 'http://update.dev-integration1.nbcupublisher7.publisher7.com'.]]>
+              <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/PasswordRules_TC2185.png ]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Access denied dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify access denied text is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify access denied text is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify access denied text is present.]]>
+              <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/PasswordRules_TC2185.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/PasswordRules_TC2185.png' height='500' width='500'/> </a>]]>
             </line>
           </reporter-output>
-        </test-method> <!-- UnauthenticatedUsersCanViewQueuesRevisionList_Test -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.UnauthenticatedUsersCanViewQueuesRevisionList.UnauthenticatedUsersCanViewQueuesRevisionList@766b0524]" name="stopSelenium" is-config="true" duration-ms="566" started-at="2014-05-07T11:58:34Z" finished-at="2014-05-07T11:58:34Z">
+        </test-method> <!-- PasswordRules_TC2185 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules@3f1e86da]" name="stopSelenium" is-config="true" duration-ms="2136" started-at="2014-05-07T13:46:00Z" finished-at="2014-05-07T13:46:03Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=UnauthenticatedUsersCanViewQueuesRevisionList_Test status=SUCCESS method=UnauthenticatedUsersCanViewQueuesRevisionList.UnauthenticatedUsersCanViewQueuesRevisionList_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.UnauthenticatedUsersCanViewQueuesRevisionList.UnauthenticatedUsersCanViewQueuesRevisionList@766b0524] output=Open url 'http://update.dev-integration1.nbcupublisher7.publisher7.com'.]]]>
+                <![CDATA[[TestResult name=PasswordRules_TC2185 status=FAILURE method=PasswordRules.PasswordRules_TC2185()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules@3f1e86da] output=Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/PasswordRules_TC2185.png ]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.UnauthenticatedUsersCanViewQueuesRevisionList.UnauthenticatedUsersCanViewQueuesRevisionList@766b0524]" name="stopGridAndHub" is-config="true" duration-ms="365" started-at="2014-05-07T11:58:34Z" finished-at="2014-05-07T11:58:35Z">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules@3f1e86da]" name="startSelenium" is-config="true" duration-ms="2173" started-at="2014-05-07T13:46:03Z" finished-at="2014-05-07T13:46:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startSelenium -->
+        <test-method status="FAIL" signature="PasswordRules_TC2185()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules@3f1e86da]" name="PasswordRules_TC2185" duration-ms="1" started-at="2014-05-07T13:46:05Z" finished-at="2014-05-07T13:46:05Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[failing test case.]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: failing test case.
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules.PasswordRules_TC2185(PasswordRules.java:26)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.retryFailed(Invoker.java:1049)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1254)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+            <line>
+              <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/PasswordRules_TC2185.png ]]>
+            </line>
+            <line>
+              <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/PasswordRules_TC2185.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/PasswordRules_TC2185.png' height='500' width='500'/> </a>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- PasswordRules_TC2185 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules@3f1e86da]" name="stopSelenium" is-config="true" duration-ms="2160" started-at="2014-05-07T13:46:05Z" finished-at="2014-05-07T13:46:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=PasswordRules_TC2185 status=FAILURE method=PasswordRules.PasswordRules_TC2185()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules@3f1e86da] output=Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/PasswordRules_TC2185.png ]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopSelenium -->
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules@3f1e86da]" name="startSelenium" is-config="true" duration-ms="2187" started-at="2014-05-07T13:46:07Z" finished-at="2014-05-07T13:46:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startSelenium -->
+        <test-method status="FAIL" signature="PasswordRules_TC2185()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules@3f1e86da]" name="PasswordRules_TC2185" duration-ms="1" started-at="2014-05-07T13:46:09Z" finished-at="2014-05-07T13:46:09Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[failing test case.]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: failing test case.
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules.PasswordRules_TC2185(PasswordRules.java:26)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.retryFailed(Invoker.java:1049)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1254)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+            <line>
+              <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/PasswordRules_TC2185.png ]]>
+            </line>
+            <line>
+              <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/PasswordRules_TC2185.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/PasswordRules_TC2185.png' height='500' width='500'/> </a>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- PasswordRules_TC2185 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules@3f1e86da]" name="stopSelenium" is-config="true" duration-ms="2147" started-at="2014-05-07T13:46:09Z" finished-at="2014-05-07T13:46:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=PasswordRules_TC2185 status=FAILURE method=PasswordRules.PasswordRules_TC2185()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules@3f1e86da] output=Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/PasswordRules_TC2185.png ]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopSelenium -->
+        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules@3f1e86da]" name="stopGridAndHub" is-config="true" duration-ms="384" started-at="2014-05-07T13:46:11Z" finished-at="2014-05-07T13:46:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopGridAndHub -->
-      </class> <!-- com.nbcuni.test.publisher.tests.Queues.UnauthenticatedUsersCanViewQueuesRevisionList.UnauthenticatedUsersCanViewQueuesRevisionList -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules -->
+    </test> <!-- All Concurrent Web Tests -->
+  </suite> <!-- Pub 7 Concurrent Suite -->
+  <suite name="Pub 7 Consecutive Suite" duration-ms="23521" started-at="2014-05-07T17:45:29Z" finished-at="2014-05-07T17:45:52Z">
+    <groups>
+      <group name="mpx">
+        <method signature="TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@50431425]" name="TestSetup_Test" class="com.nbcuni.test.publisher.tests.Setup.TestSetup"/>
+      </group> <!-- mpx -->
+      <group name="full">
+        <method signature="TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@50431425]" name="TestSetup_Test" class="com.nbcuni.test.publisher.tests.Setup.TestSetup"/>
+      </group> <!-- full -->
+      <group name="smoke">
+        <method signature="TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@50431425]" name="TestSetup_Test" class="com.nbcuni.test.publisher.tests.Setup.TestSetup"/>
+      </group> <!-- smoke -->
+    </groups>
+    <test name="All Consecutive Web Tests" duration-ms="23521" started-at="2014-05-07T17:45:29Z" finished-at="2014-05-07T17:45:52Z">
+      <class name="com.nbcuni.test.publisher.tests.Setup.TestSetup">
+        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@50431425]" name="startGridAndHub" is-config="true" duration-ms="11106" started-at="2014-05-07T13:45:18Z" finished-at="2014-05-07T13:45:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startGridAndHub -->
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@50431425]" name="startSelenium" is-config="true" duration-ms="2581" started-at="2014-05-07T13:45:29Z" finished-at="2014-05-07T13:45:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startSelenium -->
+        <test-method status="PASS" signature="TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@50431425]" name="TestSetup_Test" duration-ms="20362" started-at="2014-05-07T13:45:31Z" finished-at="2014-05-07T13:45:52Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Login' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Modules' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to frame titled 'Modules'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Sticky Edit Actions' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the module titled 'Sticky Edit Actions' to appear in the list.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Devel' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the module titled 'Devel' to appear in the list.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'File Lock' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the module titled 'File Lock' to appear in the list.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'ImageField Focus' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the module titled 'ImageField Focus' to appear in the list.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Database logging' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the module titled 'Database logging' to appear in the list.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Pub Post' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the module titled 'Pub Post' to appear in the list.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Pub Post' check box is checked.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- TestSetup_Test -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@50431425]" name="stopSelenium" is-config="true" duration-ms="569" started-at="2014-05-07T13:45:52Z" finished-at="2014-05-07T13:45:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TestSetup_Test status=SUCCESS method=TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@50431425] output=Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopSelenium -->
+        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@50431425]" name="stopGridAndHub" is-config="true" duration-ms="373" started-at="2014-05-07T13:45:52Z" finished-at="2014-05-07T13:45:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopGridAndHub -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Setup.TestSetup -->
+    </test> <!-- All Consecutive Web Tests -->
+  </suite> <!-- Pub 7 Consecutive Suite -->
+  <suite name="Publisher 7 Test Suites" duration-ms="0" started-at="2014-05-07T17:46:12Z" finished-at="2014-05-07T17:46:12Z">
+    <groups>
+    </groups>
+  </suite> <!-- Publisher 7 Test Suites -->
 </testng-results>

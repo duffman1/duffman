@@ -183,6 +183,7 @@ public class CustomReport extends EmailableReporter {
   	  	}
   	  	
   	  	//update individual consecutive failed test cases in Rally
+  	    List<String> tcUpdatedConsec = new ArrayList<String>();
   	  	for (ITestResult consecutive_failed_result : consecutiveFailedTests.getAllResults()) {
   	  	
   	  		String methodName = consecutive_failed_result.getMethod().getMethodName();
@@ -191,7 +192,10 @@ public class CustomReport extends EmailableReporter {
   	  			String[] tcID = methodName.split("_");
   	  		
   	  			try {
-  	  				updateTestCase.updateTestResult(tcID[1], false, screenshotPath);
+  	  				if (!tcUpdatedConsec.contains(methodName)) {
+  	  					updateTestCase.updateTestResult(tcID[1], false, screenshotPath);
+  	  					tcUpdatedConsec.add(methodName);
+  	  				}
   	  			} catch (Exception e) {
   	  				System.out.println("Failed to update individual consecutive suite failed test cases in Rally.");
   	  			}
@@ -216,6 +220,7 @@ public class CustomReport extends EmailableReporter {
   	  	}
   	  	
   	  	//update individual concurrent failed test cases in Rally
+  	  	List<String> tcUpdatedConcur = new ArrayList<String>();
   	  	for (ITestResult concurrent_failed_result : concurrentFailedTests.getAllResults()) {
   	  	
   	  		String methodName = concurrent_failed_result.getMethod().getMethodName();
@@ -224,7 +229,11 @@ public class CustomReport extends EmailableReporter {
   	  			String[] tcID = methodName.split("_");
   	  		
   	  			try {
-  	  				updateTestCase.updateTestResult(tcID[1], false, screenshotPath);
+  	  				if (!tcUpdatedConcur.contains(methodName)) {
+  	  					updateTestCase.updateTestResult(tcID[1], false, screenshotPath);
+  	  					tcUpdatedConcur.add(methodName);
+  	  				}
+  	  				
   	  			} catch (Exception e) {
   	  				System.out.println("Failed to update individual concurrent suite test cases in Rally.");
   	  			}
