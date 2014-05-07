@@ -81,8 +81,8 @@ public class UpdateTestResultsRally {
             newTestCaseResult.addProperty("Verdict", result);
             Calendar cal = Calendar.getInstance();
             Date date = cal.getTime();
-        	SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-        	String pub7Date = dateFormat.format(date);
+        	SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssZ");
+            String pub7Date = dateFormat.format(date);
             newTestCaseResult.addProperty("Date", pub7Date);
             newTestCaseResult.addProperty("Build", "latest build");
             newTestCaseResult.addProperty("Notes", "Automated Test Run");

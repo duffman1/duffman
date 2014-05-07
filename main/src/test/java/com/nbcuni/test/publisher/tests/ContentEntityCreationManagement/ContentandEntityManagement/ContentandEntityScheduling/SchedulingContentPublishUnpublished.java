@@ -53,7 +53,7 @@ public class SchedulingContentPublishUnpublished extends ParentTest {
         
         Reporter.log("STEP 6");
         Calendar cal1MinuteFuture = Calendar.getInstance();
-        cal1MinuteFuture.add(Calendar.SECOND, 61);
+        cal1MinuteFuture.add(Calendar.SECOND, 70);
     	Date date1MinuteFuture = cal1MinuteFuture.getTime();
     	SimpleDateFormat pub7DateFormat = new SimpleDateFormat("MM/dd/yyyy");
     	pub7DateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
@@ -78,7 +78,7 @@ public class SchedulingContentPublishUnpublished extends ParentTest {
         scheduleQueue.VerifyCancelLnkPresent(postTitle, "Moderate to Published");
         
         Reporter.log("STEP 9");
-        Thread.sleep(60000);
+        Thread.sleep(75000);
         overlay.ClickCloseOverlayLnk();
         Cron cron = new Cron(webDriver, applib);
         cron.RunCron(true);
@@ -228,7 +228,7 @@ public class SchedulingContentPublishUnpublished extends ParentTest {
         publishingOptions.SelectModerationState("Draft");
         publishingOptions.SelectOperation("Moderate to Published");
         Calendar cal1MinuteFuture2 = Calendar.getInstance();
-        cal1MinuteFuture2.add(Calendar.SECOND, 61);
+        cal1MinuteFuture2.add(Calendar.SECOND, 70);
     	Date date1MinuteFuture2 = cal1MinuteFuture2.getTime();
     	String pub7Date1MinuteFuture2 = pub7DateFormat.format(date1MinuteFuture2);
 	    String pub7Time1MinuteFuture2 = pub7TimeFormat.format(date1MinuteFuture2);
@@ -248,7 +248,7 @@ public class SchedulingContentPublishUnpublished extends ParentTest {
         scheduleQueue.VerifyRunNowLnkPresent(postTitle6, "Moderate to Published");
         scheduleQueue.VerifyCancelLnkPresent(postTitle6, "Moderate to Published");
         overlay.ClickCloseOverlayLnk();
-        Thread.sleep(60000);
+        Thread.sleep(75000);
         cron.RunCron(true);
         webDriver.navigate().refresh();
         workBench.VerifyWorkBenchBlockTextPresent(Arrays.asList("Revision state: Published", "Public: Yes"));

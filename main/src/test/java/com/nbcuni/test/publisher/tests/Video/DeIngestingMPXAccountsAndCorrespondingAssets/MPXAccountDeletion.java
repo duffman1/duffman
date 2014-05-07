@@ -44,7 +44,7 @@ public class MPXAccountDeletion extends ParentTest {
         	
         	//Step 4
         	List<String> configuredAccounts = settings.GetImportAccountSelectedOptions();
-        	settings.ExpandMPXLogin();
+        	settings.ExpandAccountList();
         	
         	//Step 5 through 8
         	ContentParent contentParent = new ContentParent(webDriver, applib);
@@ -53,6 +53,7 @@ public class MPXAccountDeletion extends ParentTest {
         	Assert.assertTrue(configuredAccounts.size() == AllDeleteAccountButtons.size());
         	while (settings.GetAllDeleteAccountButtons().size() > 0) {
         		
+        		settings.ExpandAccountList();
         		settings.GetAllDeleteAccountButtons().get(0).click();
         		contentParent.VerifyPageContentPresent(Arrays.asList("You are about to delete account", "and all of its assets. This action cannot be undone."));
         		settings.ClickDeleteBtn();
@@ -63,7 +64,6 @@ public class MPXAccountDeletion extends ParentTest {
         		overlay.SwitchToActiveFrame();
         		contentParent.VerifyMessageStatus("Beginning process of deleting account");
         		errorChecking.VerifyNoMessageErrorsPresent();
-        		settings.ExpandMPXLogin();
         		
         	}
         	
@@ -79,8 +79,8 @@ public class MPXAccountDeletion extends ParentTest {
         	
         	//Step 10
         	taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
-            settings.EnterUsername0(applib.getMPXUsername());
-        	settings.EnterPassword0(applib.getMPXPassword());
+            settings.EnterUsername(applib.getMPXUsername());
+        	settings.EnterPassword(applib.getMPXPassword());
         	settings.ClickConnectToMPXBtn();
         	contentParent.VerifyMessageStatus("Login successful");
         	settings.SelectImportAccount1("DB TV");

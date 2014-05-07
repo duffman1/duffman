@@ -44,8 +44,8 @@ public class ConfigurationMultipleMPXAccounts extends ParentTest{
         else { 
         	
         	//Step 3
-        	settings.EnterUsername0(applib.getMPXUsername());
-        	settings.EnterPassword0(applib.getMPXPassword());
+        	settings.EnterUsername(applib.getMPXUsername());
+        	settings.EnterPassword(applib.getMPXPassword());
         	
         	//Step 4
         	settings.ClickConnectToMPXBtn();
@@ -89,11 +89,10 @@ public class ConfigurationMultipleMPXAccounts extends ParentTest{
 
             //Step 10
             taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
-            settings.ExpandMPXLogin();
-        	settings.ClickAddAccountBtn();
-        	settings.EnterUsername0(applib.getMPXUsername());
-        	settings.EnterPassword0(applib.getMPXPassword());
-        	settings.ClickUpdateBtn();
+            settings.ExpandAddAccounts();
+        	settings.EnterUsername(applib.getMPXUsername());
+        	settings.EnterPassword(applib.getMPXPassword());
+        	settings.ClickSaveBtn();
         	settings.SelectImportAccount2("NBCU TVE Stage - Golf Channel");
         	settings.ClickSetImportAccountBtn();
         	contentParent.VerifyMessageStatus("Setting import account \"NBCU%20TVE%20Stage%20-%20Golf%20Channel\" for account");

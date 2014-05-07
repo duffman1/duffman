@@ -41,10 +41,6 @@ public class UploadReportRally {
         //User settings
         String testerUserName = userName;
 
-        //Workspace and Project Settings
-        String Workspace = config.getConfigValue("RallyWorkspace");
-        String Project = config.getConfigValue("RallyProject");
-
         //Task ID - update in config with each iteration change
         String existTaskID = config.getConfigValue("RallyTaskID");       
 
@@ -57,20 +53,6 @@ public class UploadReportRally {
         JsonElement userQueryElement = userQueryResults.get(0);
         JsonObject userQueryObject = userQueryElement.getAsJsonObject();
         String userRef = userQueryObject.get("_ref").getAsString();
-
-        //Get reference to Workspace of interest
-        QueryRequest workspaceRequest = new QueryRequest("Workspace");
-        workspaceRequest.setFetch(new Fetch("Name", "Owner", "Projects"));
-        workspaceRequest.setQueryFilter(new QueryFilter("Name", "=", Workspace));
-        QueryResponse workspaceQueryResponse = restApi.query(workspaceRequest);
-        workspaceQueryResponse.getResults().get(0).getAsJsonObject().get("_ref").getAsString();
-
-        //Get reference to Project of interest
-        QueryRequest projectRequest = new QueryRequest("Project");
-        projectRequest.setFetch(new Fetch("Name", "Owner", "Projects"));
-        projectRequest.setQueryFilter(new QueryFilter("Name", "=", Project));
-        QueryResponse projectQueryResponse = restApi.query(projectRequest);
-        projectQueryResponse.getResults().get(0).getAsJsonObject().get("_ref").getAsString();      
 
         //Query for existing User Story
         QueryRequest  existTaskRequest = new QueryRequest("Tasks");
