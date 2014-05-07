@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed May 07 11:58:26 EDT 2014</td>
+<td>Started on:</td><td>Wed May 07 14:14:57 EDT 2014</td>
 </tr>
-<tr><td>Total time:</td><td>8 seconds (8613 ms)</td>
+<tr><td>Total time:</td><td>141 seconds (141392 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,21 +75,83 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.nbcuni.test.publisher.tests.Queues.UnauthenticatedUsersCanViewQueuesRevisionList.UnauthenticatedUsersCanViewQueuesRevisionList.UnauthenticatedUsersCanViewQueuesRevisionList_Test()'><b>UnauthenticatedUsersCanViewQueuesRevisionList_Test</b><br>Test class: com.nbcuni.test.publisher.tests.Queues.UnauthenticatedUsersCanViewQueuesRevisionList.UnauthenticatedUsersCanViewQueuesRevisionList<br/>
-<a href="#Output-987964686" onClick='toggleBox("Output-987964686", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.nbcuni.test.publisher.tests.Video.DeIngestingMPXAccountsAndCorrespondingAssets.MPXAccountDeletion.MPXAccountDeletion_TC1884()'><b>MPXAccountDeletion_TC1884</b><br>Test class: com.nbcuni.test.publisher.tests.Video.DeIngestingMPXAccountsAndCorrespondingAssets.MPXAccountDeletion<br/>
+<a href="#Output-1821829306" onClick='toggleBox("Output-1821829306", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-987964686" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-987964686">
-Open url 'http://update.dev-integration1.nbcupublisher7.publisher7.com'.<br/>
-Switch to the active frame titled 'Access denied dialog'.<br/>
-Verify access denied text is present.<br/>
-Verify access denied text is present.<br/>
-Verify access denied text is present.<br/>
+<a href="#Output-1821829306" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1821829306">
+Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.<br/>
+Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
+Enter 'pa55word' in the 'Password' text box.<br/>
+Click the 'Login' button.<br/>
+Mouse over the 'Configuration' menu link.<br/>
+Mouse over the 'Media' menu link.<br/>
+Click the 'Media: thePlatform mpx settings' menu link.<br/>
+Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.<br/>
+Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.<br/>
+Get all the selected import account options and store to a list.<br/>
+Click the 'MPX Login' link.<br/>
+Wait for 'Update' button to be visible.<br/>
+Get each of the 'Delete Account' buttons<br/>
+Get each of the 'Delete Account' buttons<br/>
+Get each of the 'Delete Account' buttons<br/>
+Verify the text 'You are about to delete account' is present on the page.<br/>
+Verify the text 'and all of its assets. This action cannot be undone.' is present on the page.<br/>
+Click the 'Delete' button.<br/>
+Switch to frame titled 'Deleting MPX Account'.<br/>
+Wait for the frame titled 'Deleting MPX Account' to close.<br/>
+Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.<br/>
+Verify success message of 'Beginning process of deleting account' is present.<br/>
+Click the 'MPX Login' link.<br/>
+Wait for 'Update' button to be visible.<br/>
+Get each of the 'Delete Account' buttons<br/>
+Get each of the 'Delete Account' buttons<br/>
+Verify the text 'You are about to delete account' is present on the page.<br/>
+Verify the text 'and all of its assets. This action cannot be undone.' is present on the page.<br/>
+Click the 'Delete' button.<br/>
+Switch to frame titled 'Deleting MPX Account'.<br/>
+Wait for the frame titled 'Deleting MPX Account' to close.<br/>
+Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.<br/>
+Verify success message of 'Beginning process of deleting account' is present.<br/>
+Get each of the 'Delete Account' buttons<br/>
+Click the 'Close Overlay X'.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Files' menu link.<br/>
+Click the 'mpxMedia' menu link.<br/>
+Switch to the active frame titled 'Content dialog'.<br/>
+Enter title Automation.<br/>
+Click the 'Apply' button.<br/>
+Get the number of results in the result set.<br/>
+Mouse over the 'Configuration' menu link.<br/>
+Mouse over the 'Media' menu link.<br/>
+Click the 'Media: thePlatform mpx settings' menu link.<br/>
+Enter mpx username in the 'Username for Account...' text box.<br/>
+Enter mpx password in the 'Password for Account...' text box.<br/>
+Click the 'Connect to MPX' button.<br/>
+Verify success message of 'Login successful' is present.<br/>
+Select 'DB TV' from the first 'Select Import Account for...' drop down list.<br/>
+click the 'Set Import Account' button.<br/>
+Verify success message of 'Setting import account "DB%20TV" for account' is present.<br/>
+Click the 'Save configurations' button.<br/>
+Verify success message of 'The configuration options have been saved.' is present.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Files' menu link.<br/>
+Click the 'mpxMedia' menu link.<br/>
+Select 'Auditude Demo player' from the first 'Import Player' drop down list.<br/>
+Click the 'Sync MPX Media Now' link.<br/>
+Verify success message of 'Processed video import/update manually for all accounts.' is present.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Files' menu link.<br/>
+Click the 'mpxMedia' menu link.<br/>
+Enter title Automation.<br/>
+Click the 'Apply' button.<br/>
+Get the text of the first search result set item.<br/>
+Get the text of the first search result set item.<br/>
 </div>
 </td>
 <td></td>
-<td>5</td>
-<td>com.nbcuni.test.publisher.tests.Queues.UnauthenticatedUsersCanViewQueuesRevisionList.UnauthenticatedUsersCanViewQueuesRevisionList@766b0524</td></tr>
+<td>138</td>
+<td>com.nbcuni.test.publisher.tests.Video.DeIngestingMPXAccountsAndCorrespondingAssets.MPXAccountDeletion@3071de8d</td></tr>
 </table><p>
 </body>
 </html>

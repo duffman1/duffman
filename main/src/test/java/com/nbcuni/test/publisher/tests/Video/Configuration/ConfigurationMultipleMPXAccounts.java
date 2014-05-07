@@ -44,7 +44,6 @@ public class ConfigurationMultipleMPXAccounts extends ParentTest{
         else { 
         	
         	//Step 3
-        	settings.ClickAddAccountBtn();
         	settings.EnterUsername0(applib.getMPXUsername());
         	settings.EnterPassword0(applib.getMPXPassword());
         	

@@ -79,8 +79,7 @@ public class MPXAccountDeletion extends ParentTest {
         	
         	//Step 10
         	taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
-            settings.ClickAddAccountBtn();
-        	settings.EnterUsername0(applib.getMPXUsername());
+            settings.EnterUsername0(applib.getMPXUsername());
         	settings.EnterPassword0(applib.getMPXPassword());
         	settings.ClickConnectToMPXBtn();
         	contentParent.VerifyMessageStatus("Login successful");
