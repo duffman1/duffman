@@ -21,24 +21,14 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class DeleteMultipleAccounts extends ParentTest{
+public class MPXAccountDeletion extends ParentTest {
 	
     /*************************************************************************************
-     * TEST CASE 
-     * Step 1 - Log into Pub 7<br>
-     * Step 3 - Open pub 7 and navigate to Confuguration>>Media>>Media: thePlatform mpx settings<br>
-     * Step 4 - Verify that mpx is configured. Fail test if not.<br>
-     * Step 5 - Click "MPX Login" link to expand mpx login options<br>
-     * Step 6 - For each "Delete Account xxx", get the element click the delete button<br>
-     * Step 7 - For each "You are about to..." confirmation, click the "Delete" button<br>
-     * Step 8 - For each account to be deleted, Wait for step 4 of 4 to complete for "Deleting MPX Account XXX" dialog<br>
-     * Step 9 - For each account to be deleted, Wait for page refresh to recycle<br>
-     * Step 10 - Close overlay, navigate "Content>>Files>>mpxMedia, verify no MPX assets present in list<br>
-     * Step 11 - Re-import all previous accounts
-     * @throws Throwable No Return values are needed
+     * TEST CASE - TC1884
+     * Steps - https://rally1.rallydev.com/#/14663927728ud/detail/testcase/18169765713
      *************************************************************************************/
     @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "mpx"})
-    public void DeleteMultipleAccounts_Test() throws Exception{
+    public void MPXAccountDeletion_TC1884() throws Exception{
     	
     	//Step 1
     	UserLogin userLogin = applib.openApplication();

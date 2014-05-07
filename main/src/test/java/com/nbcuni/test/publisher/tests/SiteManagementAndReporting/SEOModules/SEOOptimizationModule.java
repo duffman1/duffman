@@ -14,24 +14,14 @@ import com.nbcuni.test.publisher.pageobjects.Content.CreateDefaultContent;
 import com.nbcuni.test.publisher.pageobjects.Cron.Cron;
 import com.nbcuni.test.publisher.pageobjects.Structure.ContentTypeStructure;
 
-public class TurnOnSEOOptimizationModule extends ParentTest {
+public class SEOOptimizationModule extends ParentTest {
 
 	/*************************************************************************************
-	 * TEST CASE
-	 * Step 1 - Log into a new-installation Publisher test instance as Drupal User 1<br>
-	 * Step 2 - Navigate to the Modules page, and ensure that the modules Pub SEO and Pub Post are enabled.<br>
-	 * Step 3 - Navigate to Structure > Content Types > Post.<br>
-	 * Step 4 - In the XML sitemap vertical tab, set the value of Inclusion to Included, and then click click Save content type.<br>
-	 * Step 5 - Create and save two new Post content nodes, one unpublished and the other published.<br>
-	 * Step 6 - If you had to enable Pub SEO at Step 2, run cron. If not, mark this step as Passed, and go to the next step.<br>
-	 * Step 7 - Navigate to Configuration > Search and Metadata > XML sitemap > Rebuild links.<br>
-	 * Step 8 - Navigate to Configuration > Search and Metadata > XML sitemap, click the link for the new sitemap, and view the map to ensure that published content is included and unpublished content is excluded<br>
-	 * Step 9 - For every additional standard Content Type and one newly created custom Content Type, ensure that the value of Inclusion on the vertical tab XML sitemap is set to Included, and save that setting for each Content Type reconfigured.<br>
-	 * Step 10 - Create a new published node for each remain standard Content Type, and a new published node for a new custom Content Type, rebuild the sitemap, and view it to ensure that all newly published content is included in the map.<br>
-	 * @throws Throwable No Return values are needed
+	 * TEST CASE - TC1219
+     * Steps - https://rally1.rallydev.com/#/14663927728ud/detail/testcase/17564564056
 	 *************************************************************************************/
 	 @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"})
-	 public void TurnOnSEOOptimizationModule_Test() throws Exception {
+	 public void SEOOptimizationModule_TC1219() throws Exception {
 
 		//Step 1
 		UserLogin userLogin = applib.openApplication();

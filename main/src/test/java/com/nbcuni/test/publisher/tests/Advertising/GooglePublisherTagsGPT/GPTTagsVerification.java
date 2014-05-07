@@ -11,24 +11,11 @@ import com.nbcuni.test.publisher.pageobjects.UserLogin;
 public class GPTTagsVerification extends ParentTest {
 	
     /*************************************************************************************
-     * TEST CASE 
-     * Step 1 - Login to publisher using drupal 1 credentials <br>
-     * Step 1A - Addendum: Click on "Modules", enter filter for "Double click for publishers" and ensure enabled. If necessary, enable it.
-     * Step 2 - Click on "Structure" >> "DFP Add Tags" >> "Add"<br>
-     * Step 3 - Populate  the following fields with their corresponding values<br>
-     * Ad Slot Name = Test GPT
-     * Size(s) = 300x250
-     * Ad Unit Patter = Test_AdUnit_Pattern
-     * Step 4 - Click on the "Save" button<br>
-     * Step 5 - Click on "Structure" >> "Blocks"<br>
-     * Step 6 - Scroll down until a field with created prefix of the value given in step 3 for "ad slot name" is found. Under the "Region" column, select the value "right sidebar" (note - may vary by theme) and click the "Save blocks" button<br>
-     * Step 7 - Scroll down to the "Right sidebar" section and verify that the value from step 3 exists, and the region is "Right sidebar"<br>
-     * Step 8 - Click on the home icon, access the page source and verify the relevant script sources are present.
-     * Step 9 - Log out of publisher 7
-     * @throws Throwable No Return values are needed
+     * TEST CASE - TC1157
+     * Steps - https://rally1.rallydev.com/#/14663927728ud/detail/testcase/17533421348
      *************************************************************************************/
     @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"})
-    public void GPTTagsVerification_Test() throws Exception {
+    public void GPTTagsVerification_TC1157() throws Exception {
         
         	//Step 1
         	UserLogin userLogin = applib.openApplication();
