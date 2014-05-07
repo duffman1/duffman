@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue May 06 20:32:28 EDT 2014</td>
+<td>Started on:</td><td>Wed May 07 11:02:11 EDT 2014</td>
 </tr>
-<tr><td>Total time:</td><td>226 seconds (226505 ms)</td>
+<tr><td>Total time:</td><td>576 seconds (576480 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,74 +75,80 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.nbcuni.test.publisher.tests.Video.Configuration.ConfigurationMultipleMPXAccounts.ConfigurationMultipleMPXAccounts_TC1073()'><b>ConfigurationMultipleMPXAccounts_TC1073</b><br>Test class: com.nbcuni.test.publisher.tests.Video.Configuration.ConfigurationMultipleMPXAccounts<br/>
-<a href="#Output-2093071831" onClick='toggleBox("Output-2093071831", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.SchedulingContentPublishUnpublished.SchedulingContentPublishUnpublished_TC2159()'><b>SchedulingContentPublishUnpublished_TC2159</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.SchedulingContentPublishUnpublished<br/>
+<a href="#Output-1091827295" onClick='toggleBox("Output-1091827295", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-2093071831" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-2093071831">
-Open url 'http://update.dev-integration1.nbcupublisher7.publisher7.com'.<br/>
+<a href="#Output-1091827295" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1091827295">
+STEP 1<br/>
+Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.<br/>
 Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
 Enter 'pa55word' in the 'Password' text box.<br/>
 Click the 'Login' button.<br/>
-Open the mpx data client at http://data.media.theplatform.com/media/client.<br/>
-Enter the Username in the 'Username' text box.<br/>
-Enter the Password in the 'Password' text box.<br/>
-Click the 'Sign In' button.<br/>
-Click the Account Picker button to display all mpx accounts.<br/>
-Store all the active mpx accounts to a list.<br/>
-Open url 'http://update.dev-integration1.nbcupublisher7.publisher7.com'.<br/>
-Mouse over the 'Configuration' menu link.<br/>
-Mouse over the 'Media' menu link.<br/>
-Click the 'Media: thePlatform mpx settings' menu link.<br/>
-Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.<br/>
-Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.<br/>
-Enter mpx username in the 'Username for Account...' text box.<br/>
-Enter mpx password in the 'Password for Account...' text box.<br/>
-Click the 'Connect to MPX' button.<br/>
-Verify success message of 'Login successful' is present.<br/>
-Get the account options from the 'Select Import Account for Account...' drop down lists.<br/>
-Select 'DB TV' from the first 'Select Import Account for...' drop down list.<br/>
-click the 'Set Import Account' button.<br/>
-Verify success message of 'Setting import account "DB%20TV" for account' is present.<br/>
-Verify success message of 'Retrieving import account information for "DB%20TV".' is present.<br/>
-Verify the 'Select Import Account for...' drop down lists are disabled.<br/>
-Click the 'Close Overlay X'.<br/>
+STEP 2 and 3<br/>
 Mouse over the 'Content' menu link.<br/>
-Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/ConfigurationMultipleMPXAccounts_TC1073.png <br/>
-<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/ConfigurationMultipleMPXAccounts_TC1073.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/ConfigurationMultipleMPXAccounts_TC1073.png' height='500' width='500'/> </a><br/>
+Mouse over the 'Add content' menu link.<br/>
+Click the 'Post' menu link.<br/>
+Switch to the active frame titled 'Create Post dialog'.<br/>
+Enter '5d923c795d8e452' in the 'Title' text box.<br/>
+Switch to the Synopsis frame.<br/>
+Enter a randomized text string into the 'Body' text area.<br/>
+Switch to the active frame titled 'Create Post dialog'.<br/>
+Click the 'Cover' select button.<br/>
+Switch to the select file frame.<br/>
+Enter the file path for file upload.<br/>
+Click the 'Upload' button.<br/>
+Wait for the file link to be visible after upload.<br/>
+Click the 'Next' button.<br/>
+Click the 'Public Local Files' radio button.<br/>
+Click the 'Next' button.<br/>
+Verify the file image 'HanSolo' is present.<br/>
+Verify the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'Create Post dialog'.<br/>
+Scroll the 'Publishing Options' link into view.<br/>
+Click the 'Publishing Options' link.<br/>
+Select 'Draft' from the 'Moderation State' drop down list.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'Post 5d923c795d8e452 has been created.' is present.<br/>
+STEP 4<br/>
+Click the 'Schedule' link in the work bench.<br/>
+Switch to the active frame titled '5d923c795d8e452 dialog'.<br/>
+Click the 'Add Scheduled Revision' link.<br/>
+Switch to the active frame titled '5d923c795d8e452 dialog'.<br/>
+STEP 5<br/>
+Select revision titled '5d923c795d8e452'.<br/>
+Select 'Moderate to Published' from the 'Select operation' drop down list.<br/>
+STEP 6<br/>
+Enter '05/07/2014' in the 'Date' text box.<br/>
+Enter '03:03 PM' in the 'Time' text box.<br/>
+STEP 7<br/>
+Click the 'Schedule' button.<br/>
+Switch to the active frame titled '5d923c795d8e452 dialog'.<br/>
+Verify success message of 'The scheduled revision operation has been saved' is present.<br/>
+STEP 8<br/>
+Switch to the active frame titled '5d923c795d8e452 dialog'.<br/>
+Verify the scheduled text '5d923c795d8e452' is present in the scheduled queue.<br/>
+Verify the scheduled text 'Moderate to Published' is present in the scheduled queue.<br/>
+Verify the scheduled text '05/07/2014 - ' is present in the scheduled queue.<br/>
+Verify the 'Run now' link is present for content item '5d923c795d8e452' with action 'Moderate to Published'.<br/>
+Verify the 'Cancel' link is present for content item '5d923c795d8e452' with action 'Moderate to Published'.<br/>
+STEP 9<br/>
+Click the 'Close Overlay X'.<br/>
+Switch to the active frame titled 'Status report dialog'.<br/>
+Click the 'Close Overlay X'.<br/>
+Verify the text 'Revision state: Published' is present in the work bench info block.<br/>
+Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/SchedulingContentPublishUnpublished_TC2159.png <br/>
+<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/SchedulingContentPublishUnpublished_TC2159.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/SchedulingContentPublishUnpublished_TC2159.png' height='500' width='500'/> </a><br/>
 Cache was cleared on test failure<br/>
 </div>
 </td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element
-  (Session info: chrome=34.0.1847.131)
-  (Driver info: chromedriver=2.8.241036,platform=Mac OS X 10.9.2 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 76.43 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.2&apos;, java.version: &apos;1.7.0_25&apos;
-Session ID: 76883b445a47f138b4793f3f8a23318b
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.JkjlKE}, rotatable=false, locationContextEnabled=true, version=34.0.1847.131, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
-Command duration or timeout: 76.96 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.2&apos;, java.version: &apos;1.7.0_25&apos;
-Session ID: 128b859d-1811-404c-94fa-2c1656231be2
-Driver info: com.nbcuni.test.publisher.common.Driver.Driver
-Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.JkjlKE}, rotatable=false, locationContextEnabled=true, webdriver.remote.sessionid=128b859d-1811-404c-94fa-2c1656231be2, version=34.0.1847.131, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
-	at sun.reflect.GeneratedConstructorAccessor21.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:191)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:554)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:307)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:404)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:344)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:299)
-	at com.nbcuni.test.publisher.pageobjects.Taxonomy.Taxonomy.Tier1_Lnk(Taxonomy.java:35)
-	at com.nbcuni.test.publisher.pageobjects.Taxonomy.Taxonomy.NavigateSite(Taxonomy.java:162)
-	at com.nbcuni.test.publisher.tests.Video.Configuration.ConfigurationMultipleMPXAccounts.ConfigurationMultipleMPXAccounts_TC1073(ConfigurationMultipleMPXAccounts.java:67)
+<td><div><pre>java.lang.AssertionError: Text &apos;Revision state: Published&apos; was not present in the work bench info block. expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at com.nbcuni.test.publisher.pageobjects.Content.WorkBench.VerifyWorkBenchBlockTextPresent(WorkBench.java:87)
+	at com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.SchedulingContentPublishUnpublished.SchedulingContentPublishUnpublished_TC2159(SchedulingContentPublishUnpublished.java:86)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -167,81 +173,13 @@ Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browse
 	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-Caused by: org.openqa.selenium.remote.ScreenshotException: Screen shot has been taken
-Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.2&apos;, java.version: &apos;1.7.0_25&apos;
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:125)
-	... 32 more
-Caused by: org.openqa.selenium.NoSuchElementException: no such element
-  (Session info: chrome=34.0.1847.131)
-  (Driver info: chromedriver=2.8.241036,platform=Mac OS X 10.9.2 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 76.43 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.2&apos;, java.version: &apos;1.7.0_25&apos;
-Session ID: 76883b445a47f138b4793f3f8a23318b
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.JkjlKE}, rotatable=false, locationContextEnabled=true, version=34.0.1847.131, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.2&apos;, java.version: &apos;1.7.0_25&apos;
-Driver info: driver.version: EventFiringWebDriver
-	at sun.reflect.GeneratedConstructorAccessor21.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:191)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:554)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:307)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:404)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:344)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:299)
-	at sun.reflect.GeneratedMethodAccessor21.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:101)
-	at com.sun.proxy.$Proxy10.findElement(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:180)
-	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:47)
-	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:33)
-	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
-	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:169)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-</pre></div><a href='#' onClick='toggleBox("stack-trace2093071831", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2093071831'><pre>org.openqa.selenium.NoSuchElementException: no such element
-  (Session info: chrome=34.0.1847.131)
-  (Driver info: chromedriver=2.8.241036,platform=Mac OS X 10.9.2 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 76.43 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.2&apos;, java.version: &apos;1.7.0_25&apos;
-Session ID: 76883b445a47f138b4793f3f8a23318b
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.JkjlKE}, rotatable=false, locationContextEnabled=true, version=34.0.1847.131, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
-Command duration or timeout: 76.96 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.2&apos;, java.version: &apos;1.7.0_25&apos;
-Session ID: 128b859d-1811-404c-94fa-2c1656231be2
-Driver info: com.nbcuni.test.publisher.common.Driver.Driver
-Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.JkjlKE}, rotatable=false, locationContextEnabled=true, webdriver.remote.sessionid=128b859d-1811-404c-94fa-2c1656231be2, version=34.0.1847.131, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
-	at sun.reflect.GeneratedConstructorAccessor21.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:191)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:554)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:307)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:404)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:344)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:299)
-	at com.nbcuni.test.publisher.pageobjects.Taxonomy.Taxonomy.Tier1_Lnk(Taxonomy.java:35)
-	at com.nbcuni.test.publisher.pageobjects.Taxonomy.Taxonomy.NavigateSite(Taxonomy.java:162)
-	at com.nbcuni.test.publisher.tests.Video.Configuration.ConfigurationMultipleMPXAccounts.ConfigurationMultipleMPXAccounts_TC1073(ConfigurationMultipleMPXAccounts.java:67)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1091827295", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1091827295'><pre>java.lang.AssertionError: Text &apos;Revision state: Published&apos; was not present in the work bench info block. expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at com.nbcuni.test.publisher.pageobjects.Content.WorkBench.VerifyWorkBenchBlockTextPresent(WorkBench.java:87)
+	at com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.SchedulingContentPublishUnpublished.SchedulingContentPublishUnpublished_TC2159(SchedulingContentPublishUnpublished.java:86)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -266,53 +204,334 @@ Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browse
 	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-Caused by: org.openqa.selenium.remote.ScreenshotException: Screen shot has been taken
-Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.2&apos;, java.version: &apos;1.7.0_25&apos;
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:125)
-	... 32 more
-Caused by: org.openqa.selenium.NoSuchElementException: no such element
-  (Session info: chrome=34.0.1847.131)
-  (Driver info: chromedriver=2.8.241036,platform=Mac OS X 10.9.2 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 76.43 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.2&apos;, java.version: &apos;1.7.0_25&apos;
-Session ID: 76883b445a47f138b4793f3f8a23318b
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.JkjlKE}, rotatable=false, locationContextEnabled=true, version=34.0.1847.131, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.2&apos;, java.version: &apos;1.7.0_25&apos;
-Driver info: driver.version: EventFiringWebDriver
-	at sun.reflect.GeneratedConstructorAccessor21.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:191)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:554)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:307)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:404)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:344)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:299)
-	at sun.reflect.GeneratedMethodAccessor21.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:101)
-	at com.sun.proxy.$Proxy10.findElement(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:180)
-	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:47)
-	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:33)
-	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
-	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:169)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
 </pre></div></td>
-<td>217</td>
-<td>com.nbcuni.test.publisher.tests.Video.Configuration.ConfigurationMultipleMPXAccounts@54b216b3</td></tr>
+<td>127</td>
+<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.SchedulingContentPublishUnpublished@43d7ecc8</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.SchedulingContentPublishUnpublished.SchedulingContentPublishUnpublished_TC2159()'><b>SchedulingContentPublishUnpublished_TC2159</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.SchedulingContentPublishUnpublished<br/>
+<a href="#Output-1058131677" onClick='toggleBox("Output-1058131677", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1058131677" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1058131677">
+STEP 1<br/>
+Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.<br/>
+Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
+Enter 'pa55word' in the 'Password' text box.<br/>
+Click the 'Login' button.<br/>
+STEP 2 and 3<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Add content' menu link.<br/>
+Click the 'Post' menu link.<br/>
+Switch to the active frame titled 'Create Post dialog'.<br/>
+Enter '59a8bcf6cb87484' in the 'Title' text box.<br/>
+Switch to the Synopsis frame.<br/>
+Enter a randomized text string into the 'Body' text area.<br/>
+Switch to the active frame titled 'Create Post dialog'.<br/>
+Click the 'Cover' select button.<br/>
+Switch to the select file frame.<br/>
+Enter the file path for file upload.<br/>
+Click the 'Upload' button.<br/>
+Wait for the file link to be visible after upload.<br/>
+Click the 'Next' button.<br/>
+Click the 'Public Local Files' radio button.<br/>
+Click the 'Next' button.<br/>
+Verify the file image 'HanSolo' is present.<br/>
+Verify the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'Create Post dialog'.<br/>
+Scroll the 'Publishing Options' link into view.<br/>
+Click the 'Publishing Options' link.<br/>
+Select 'Draft' from the 'Moderation State' drop down list.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'Post 59a8bcf6cb87484 has been created.' is present.<br/>
+STEP 4<br/>
+Click the 'Schedule' link in the work bench.<br/>
+Switch to the active frame titled '59a8bcf6cb87484 dialog'.<br/>
+Click the 'Add Scheduled Revision' link.<br/>
+Switch to the active frame titled '59a8bcf6cb87484 dialog'.<br/>
+STEP 5<br/>
+Select revision titled '59a8bcf6cb87484'.<br/>
+Select 'Moderate to Published' from the 'Select operation' drop down list.<br/>
+STEP 6<br/>
+Enter '05/07/2014' in the 'Date' text box.<br/>
+Enter '03:06 PM' in the 'Time' text box.<br/>
+STEP 7<br/>
+Click the 'Schedule' button.<br/>
+Switch to the active frame titled '59a8bcf6cb87484 dialog'.<br/>
+Verify success message of 'The scheduled revision operation has been saved' is present.<br/>
+STEP 8<br/>
+Switch to the active frame titled '59a8bcf6cb87484 dialog'.<br/>
+Verify the scheduled text '59a8bcf6cb87484' is present in the scheduled queue.<br/>
+Verify the scheduled text 'Moderate to Published' is present in the scheduled queue.<br/>
+Verify the scheduled text '05/07/2014 - ' is present in the scheduled queue.<br/>
+Verify the 'Run now' link is present for content item '59a8bcf6cb87484' with action 'Moderate to Published'.<br/>
+Verify the 'Cancel' link is present for content item '59a8bcf6cb87484' with action 'Moderate to Published'.<br/>
+STEP 9<br/>
+Click the 'Close Overlay X'.<br/>
+Switch to the active frame titled 'Status report dialog'.<br/>
+Click the 'Close Overlay X'.<br/>
+Verify the text 'Revision state: Published' is present in the work bench info block.<br/>
+Verify the text 'Public: Yes' is present in the work bench info block.<br/>
+STEP 10<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Add content' menu link.<br/>
+Click the 'Post' menu link.<br/>
+Switch to the active frame titled 'Create Post dialog'.<br/>
+Enter '0b686f7f805042c' in the 'Title' text box.<br/>
+Switch to the Synopsis frame.<br/>
+Enter a randomized text string into the 'Body' text area.<br/>
+Switch to the active frame titled 'Create Post dialog'.<br/>
+Click the 'Cover' select button.<br/>
+Switch to the select file frame.<br/>
+Enter the file path for file upload.<br/>
+Click the 'Upload' button.<br/>
+Wait for the file link to be visible after upload.<br/>
+Click the 'Next' button.<br/>
+Click the 'Public Local Files' radio button.<br/>
+Click the 'Next' button.<br/>
+Verify the file image 'HanSolo' is present.<br/>
+Verify the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'Create Post dialog'.<br/>
+Scroll the 'Publishing Options' link into view.<br/>
+Click the 'Publishing Options' link.<br/>
+Select 'Draft' from the 'Moderation State' drop down list.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'Post 0b686f7f805042c has been created.' is present.<br/>
+Click the 'Schedule' link in the work bench.<br/>
+Switch to the active frame titled '0b686f7f805042c dialog'.<br/>
+Click the 'Add Scheduled Revision' link.<br/>
+Switch to the active frame titled '0b686f7f805042c dialog'.<br/>
+Select revision titled '0b686f7f805042c'.<br/>
+Select 'Moderate to Published' from the 'Select operation' drop down list.<br/>
+Enter '05/07/2014' in the 'Date' text box.<br/>
+Enter '03:12 PM' in the 'Time' text box.<br/>
+Click the 'Schedule' button.<br/>
+Switch to the active frame titled '0b686f7f805042c dialog'.<br/>
+Verify success message of 'The scheduled revision operation has been saved' is present.<br/>
+Switch to the active frame titled '0b686f7f805042c dialog'.<br/>
+Verify the scheduled text '0b686f7f805042c' is present in the scheduled queue.<br/>
+Verify the scheduled text 'Moderate to Published' is present in the scheduled queue.<br/>
+Verify the scheduled text '05/07/2014 - ' is present in the scheduled queue.<br/>
+Click the 'Run now' link for content item '0b686f7f805042c' with action 'Moderate to Published'.<br/>
+STEP 11<br/>
+Switch to the active frame titled '0b686f7f805042c dialog'.<br/>
+Verify the scheduled text '0b686f7f805042c' is present in the scheduled queue.<br/>
+Verify the scheduled text 'Moderate to Published' is present in the scheduled queue.<br/>
+Verify the scheduled text '05/07/2014 - ' is present in the scheduled queue.<br/>
+Verify the scheduled text 'Completed' is present in the scheduled queue.<br/>
+Click the 'Close Overlay X'.<br/>
+STEP 12<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Add content' menu link.<br/>
+Click the 'Post' menu link.<br/>
+Switch to the active frame titled 'Create Post dialog'.<br/>
+Enter '02a21391a6d14c0' in the 'Title' text box.<br/>
+Switch to the Synopsis frame.<br/>
+Enter a randomized text string into the 'Body' text area.<br/>
+Switch to the active frame titled 'Create Post dialog'.<br/>
+Click the 'Cover' select button.<br/>
+Switch to the select file frame.<br/>
+Enter the file path for file upload.<br/>
+Click the 'Upload' button.<br/>
+Wait for the file link to be visible after upload.<br/>
+Click the 'Next' button.<br/>
+Click the 'Public Local Files' radio button.<br/>
+Click the 'Next' button.<br/>
+Verify the file image 'HanSolo' is present.<br/>
+Verify the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'Create Post dialog'.<br/>
+Scroll the 'Publishing Options' link into view.<br/>
+Click the 'Publishing Options' link.<br/>
+Select 'Draft' from the 'Moderation State' drop down list.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'Post 02a21391a6d14c0 has been created.' is present.<br/>
+Click the 'Schedule' link in the work bench.<br/>
+Switch to the active frame titled '02a21391a6d14c0 dialog'.<br/>
+Click the 'Add Scheduled Revision' link.<br/>
+Switch to the active frame titled '02a21391a6d14c0 dialog'.<br/>
+Select revision titled '02a21391a6d14c0'.<br/>
+Select 'Moderate to Published' from the 'Select operation' drop down list.<br/>
+Enter '05/07/2014' in the 'Date' text box.<br/>
+Enter '03:12 PM' in the 'Time' text box.<br/>
+Click the 'Schedule' button.<br/>
+Switch to the active frame titled '02a21391a6d14c0 dialog'.<br/>
+Verify success message of 'The scheduled revision operation has been saved' is present.<br/>
+Switch to the active frame titled '02a21391a6d14c0 dialog'.<br/>
+Verify the scheduled text '02a21391a6d14c0' is present in the scheduled queue.<br/>
+Verify the scheduled text 'Moderate to Published' is present in the scheduled queue.<br/>
+Verify the scheduled text '05/07/2014 - ' is present in the scheduled queue.<br/>
+Click the 'Run now' expand menu link for content item '02a21391a6d14c0' with action 'Moderate to Published'.<br/>
+Click the 'Cancel' link for content item '02a21391a6d14c0' with action 'Moderate to Published'.<br/>
+Switch to the active frame titled 'Are you sure you want to cancel this scheduled revision? dialog'.<br/>
+Click the 'Confirm' button.<br/>
+Switch to the active frame titled '02a21391a6d14c0 dialog'.<br/>
+Verify success message of 'The scheduled revision operation has been cancelled.' is present.<br/>
+Verify the text 'Moderate to Published' is NOT present on the page.<br/>
+Click the 'Close Overlay X'.<br/>
+STEP 13<br/>
+Mouse over the 'My Workbench' menu link.<br/>
+Mouse over the 'Create content' menu link.<br/>
+Click the 'Post' menu link.<br/>
+Switch to the active frame titled 'Create Post dialog'.<br/>
+Enter 'b3a17aeacec145d' in the 'Title' text box.<br/>
+Switch to the Synopsis frame.<br/>
+Enter a randomized text string into the 'Body' text area.<br/>
+Switch to the active frame titled 'Create Post dialog'.<br/>
+Scroll the 'Publishing Options' link into view.<br/>
+Click the 'Publishing Options' link.<br/>
+Select 'Draft' from the 'Moderation State' drop down list.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'Post b3a17aeacec145d has been created.' is present.<br/>
+Click the 'Schedule' link in the work bench.<br/>
+Switch to the active frame titled 'b3a17aeacec145d dialog'.<br/>
+Click the 'Add Scheduled Revision' link.<br/>
+Switch to the active frame titled 'b3a17aeacec145d dialog'.<br/>
+Select revision titled 'b3a17aeacec145d'.<br/>
+Select 'Moderate to Published' from the 'Select operation' drop down list.<br/>
+Enter '05/07/2014' in the 'Date' text box.<br/>
+Enter '03:12 PM' in the 'Time' text box.<br/>
+Click the 'Schedule' button.<br/>
+Switch to the active frame titled 'b3a17aeacec145d dialog'.<br/>
+Verify success message of 'The scheduled revision operation has been saved' is present.<br/>
+Switch to the active frame titled 'b3a17aeacec145d dialog'.<br/>
+Verify the scheduled text 'b3a17aeacec145d' is present in the scheduled queue.<br/>
+Verify the scheduled text 'Moderate to Published' is present in the scheduled queue.<br/>
+Verify the scheduled text '05/07/2014 - ' is present in the scheduled queue.<br/>
+Click the 'Run now' link for content item 'b3a17aeacec145d' with action 'Moderate to Published'.<br/>
+Switch to the active frame titled 'b3a17aeacec145d dialog'.<br/>
+Verify the scheduled text 'b3a17aeacec145d' is present in the scheduled queue.<br/>
+Verify the scheduled text 'Moderate to Published' is present in the scheduled queue.<br/>
+Verify the scheduled text '05/07/2014 - ' is present in the scheduled queue.<br/>
+Verify the scheduled text 'Completed' is present in the scheduled queue.<br/>
+Click the 'Close Overlay X'.<br/>
+STEP 14<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Add content' menu link.<br/>
+Click the 'Post' menu link.<br/>
+Switch to the active frame titled 'Create Post dialog'.<br/>
+Enter 'bc08793286a7442' in the 'Title' text box.<br/>
+Switch to the Synopsis frame.<br/>
+Enter a randomized text string into the 'Body' text area.<br/>
+Switch to the active frame titled 'Create Post dialog'.<br/>
+Click the 'Cover' select button.<br/>
+Switch to the select file frame.<br/>
+Enter the file path for file upload.<br/>
+Click the 'Upload' button.<br/>
+Wait for the file link to be visible after upload.<br/>
+Click the 'Next' button.<br/>
+Click the 'Public Local Files' radio button.<br/>
+Click the 'Next' button.<br/>
+Verify the file image 'HanSolo' is present.<br/>
+Verify the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'Create Post dialog'.<br/>
+Scroll the 'Publishing Options' link into view.<br/>
+Click the 'Publishing Options' link.<br/>
+Select 'Draft' from the 'Moderation State' drop down list.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'Post bc08793286a7442 has been created.' is present.<br/>
+Click the 'Edit Draft' link in the work bench.<br/>
+Switch to the active frame titled 'Edit Post bc08793286a7442 dialog'.<br/>
+Switch to the Synopsis frame.<br/>
+Enter a randomized text string into the 'Body' text area.<br/>
+Switch to the active frame titled 'Edit Post bc08793286a7442 dialog'.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'Post bc08793286a7442 has been updated.' is present.<br/>
+STEP 15 and 16<br/>
+Click the 'Revisions' link in the work bench.<br/>
+Switch to the active frame titled 'Revisions dialog'.<br/>
+Verify the number of present revisions entries equals '2'.<br/>
+Click the 'Edit' extend menu button.<br/>
+Click the 'Schedule' menu button.<br/>
+Switch to the active frame titled 'bc08793286a7442 dialog'.<br/>
+Select revision titled 'bc08793286a7442'.<br/>
+Select 'Moderate to Published' from the 'Select operation' drop down list.<br/>
+Enter '05/07/2014' in the 'Date' text box.<br/>
+Enter '03:12 PM' in the 'Time' text box.<br/>
+Click the 'Schedule' button.<br/>
+Verify success message of 'The scheduled revision operation has been saved' is present.<br/>
+STEP 17<br/>
+Click the 'Schedule' link in the work bench.<br/>
+Switch to the active frame titled 'bc08793286a7442 dialog'.<br/>
+Verify the scheduled text 'bc08793286a7442' is present in the scheduled queue.<br/>
+Verify the scheduled text 'Moderate to Published' is present in the scheduled queue.<br/>
+Verify the scheduled text '05/07/2014 - ' is present in the scheduled queue.<br/>
+Verify the 'Run now' link is present for content item 'bc08793286a7442' with action 'Moderate to Published'.<br/>
+STEP 18<br/>
+Click the 'Close Overlay X'.<br/>
+Mouse over the 'My Workbench' menu link.<br/>
+Mouse over the 'Create content' menu link.<br/>
+Click the 'Post' menu link.<br/>
+Switch to the active frame titled 'Create Post dialog'.<br/>
+Enter '7f3852b9a60b4d8' in the 'Title' text box.<br/>
+Switch to the Synopsis frame.<br/>
+Enter a randomized text string into the 'Body' text area.<br/>
+Switch to the active frame titled 'Create Post dialog'.<br/>
+Scroll the 'Publishing Options' link into view.<br/>
+Click the 'Publishing Options' link.<br/>
+Select 'Draft' from the 'Moderation State' drop down list.<br/>
+Select 'Moderate to Published' from the 'Select operation' drop down list.<br/>
+Enter '05/07/2014' in the 'Date' text box.<br/>
+Enter '03:10 PM' in the 'Time' text box.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'Post 7f3852b9a60b4d8 has been created.' is present.<br/>
+Verify success message of '7f3852b9a60b4d8 has been scheduled to Moderate to Published on 05/07/2014 - ' is present.<br/>
+STEP 19<br/>
+Click the 'Schedule' link in the work bench.<br/>
+Switch to the active frame titled '7f3852b9a60b4d8 dialog'.<br/>
+Verify the scheduled text '7f3852b9a60b4d8' is present in the scheduled queue.<br/>
+Verify the scheduled text 'Moderate to Published' is present in the scheduled queue.<br/>
+Verify the scheduled text '05/07/2014 - ' is present in the scheduled queue.<br/>
+Verify the 'Run now' link is present for content item '7f3852b9a60b4d8' with action 'Moderate to Published'.<br/>
+Verify the 'Cancel' link is present for content item '7f3852b9a60b4d8' with action 'Moderate to Published'.<br/>
+Click the 'Close Overlay X'.<br/>
+Switch to the active frame titled 'Status report dialog'.<br/>
+Click the 'Close Overlay X'.<br/>
+Verify the text 'Revision state: Published' is present in the work bench info block.<br/>
+Verify the text 'Public: Yes' is present in the work bench info block.<br/>
+STEP 20<br/>
+Mouse over the 'My Workbench' menu link.<br/>
+Mouse over the 'Create content' menu link.<br/>
+Click the 'Post' menu link.<br/>
+Switch to the active frame titled 'Create Post dialog'.<br/>
+Enter 'a7d35d32e88a415' in the 'Title' text box.<br/>
+Switch to the Synopsis frame.<br/>
+Enter a randomized text string into the 'Body' text area.<br/>
+Switch to the active frame titled 'Create Post dialog'.<br/>
+Scroll the 'Publishing Options' link into view.<br/>
+Click the 'Publishing Options' link.<br/>
+Select 'Draft' from the 'Moderation State' drop down list.<br/>
+Select 'Moderate to Published' from the 'Select operation' drop down list.<br/>
+Enter '05/08/2014' in the 'Date' text box.<br/>
+Enter '03:11 PM' in the 'Time' text box.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'Post a7d35d32e88a415 has been created.' is present.<br/>
+Verify success message of 'a7d35d32e88a415 has been scheduled to Moderate to Published on 05/08/2014 - ' is present.<br/>
+Click the 'Schedule' link in the work bench.<br/>
+Switch to the active frame titled 'a7d35d32e88a415 dialog'.<br/>
+Verify the scheduled text 'a7d35d32e88a415' is present in the scheduled queue.<br/>
+Verify the scheduled text 'Moderate to Published' is present in the scheduled queue.<br/>
+Verify the scheduled text '05/08/2014 - ' is present in the scheduled queue.<br/>
+Click the 'Run now' link for content item 'a7d35d32e88a415' with action 'Moderate to Published'.<br/>
+Switch to the active frame titled 'a7d35d32e88a415 dialog'.<br/>
+Verify the scheduled text 'a7d35d32e88a415' is present in the scheduled queue.<br/>
+Verify the scheduled text 'Moderate to Published' is present in the scheduled queue.<br/>
+Verify the scheduled text 'Completed' is present in the scheduled queue.<br/>
+</div>
+</td>
+<td></td>
+<td>434</td>
+<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.SchedulingContentPublishUnpublished@43d7ecc8</td></tr>
 </table><p>
 </body>
 </html>

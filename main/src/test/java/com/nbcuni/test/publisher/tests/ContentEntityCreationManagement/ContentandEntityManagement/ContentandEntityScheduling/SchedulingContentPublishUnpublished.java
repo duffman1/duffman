@@ -233,7 +233,7 @@ public class SchedulingContentPublishUnpublished extends ParentTest {
     	String pub7Date1MinuteFuture2 = pub7DateFormat.format(date1MinuteFuture2);
 	    String pub7Time1MinuteFuture2 = pub7TimeFormat.format(date1MinuteFuture2);
         publishingOptions.EnterDate(pub7Date1MinuteFuture2);
-        publishingOptions.EnterTime(pub7Time1MinuteFuture2.replace("PM", "pm").replace("AM", "am").replace(" ", ""));
+        publishingOptions.EnterTime(pub7Time1MinuteFuture2);
         contentParent.ClickSaveBtn();
         overlay.switchToDefaultContent();
         contentParent.VerifyMessageStatus("Post " + postTitle6 + " has been created.");
@@ -269,7 +269,7 @@ public class SchedulingContentPublishUnpublished extends ParentTest {
         String pub7Date1DayFuture = pub7DateFormat.format(date1DayFuture);
 	    String pub7Time1DayFuture = pub7TimeFormat.format(date1DayFuture);
         publishingOptions.EnterDate(pub7Date1DayFuture);
-        publishingOptions.EnterTime(pub7Time1DayFuture.replace("PM", "pm").replace("AM", "am").replace(" ", ""));
+        publishingOptions.EnterTime(pub7Time1DayFuture);
         contentParent.ClickSaveBtn();
         overlay.switchToDefaultContent();
         contentParent.VerifyMessageStatus("Post " + postTitle7 + " has been created.");
