@@ -37,10 +37,6 @@ public class TestSetup extends ParentTest{
         	modules.EnterFilterName("Devel");
             modules.DisableModule("Devel");
             
-            //disable file lock
-            modules.EnterFilterName("File Lock");
-            modules.DisableModule("File Lock");
-            
             //disable the deprecated 'ImageField Focus" module.
             modules.EnterFilterName("ImageField Focus");
             modules.DisableModule("ImageField Focus");

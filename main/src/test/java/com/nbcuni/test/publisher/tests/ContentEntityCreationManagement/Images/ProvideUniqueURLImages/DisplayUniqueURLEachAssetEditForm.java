@@ -83,7 +83,7 @@ public class DisplayUniqueURLEachAssetEditForm extends ParentTest{
         	webDriver.navigate().to(uniqueUrl1);
         	workBench.VerifyFileImagePresent("HanSolo", "1");
         	workBench.VerifyFileImagePresent("HanSolo", "2");
-        	contentParent.VerifyPageContentPresent(Arrays.asList("Current Item", "HanSolo.jpg", 
+        	contentParent.VerifyPageContentPresent(Arrays.asList("Current Item", "HanSolo", 
         			"Current Item Index", "0", "Current Item ID", 
         				fileId1.replace("file-", ""), "Current Item URL", uniqueUrl1));
         	
