@@ -10,23 +10,20 @@ import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Configuration.RerouteEmail;
 import com.nbcuni.test.publisher.pageobjects.People.AddUser;
 
-public class EnableEmailReRouting extends ParentTest{
+public class EmailRedirect extends ParentTest{
 	
     /*************************************************************************************
-     * TEST CASE 
-     * Step 1 - Login to P7 as Admin (User 1) ,User is logged in successfully 
-     * Step 2 - Navigate to Configuration --> Development --> Reroute Email Enter a valid email address that you (the tester) own and can monitor for receipt of emails.  Click "Save Configuration" ,Email Re Routing is configured 
-     * Step 3 - Navigate to People -->  Add User  Complete configuration of a new user account, for email address use a DIFFERENT email than used in step 2, ensure "Notify user of new account' is clicked.  Save user. ,When new user is created, an email should be generated and re routed to the email address configured in step 2. 
-	 * @throws Throwable No Return values are needed
+     * TEST CASE - TC1067
+     * Steps - https://rally1.rallydev.com/#/14663927728ud/detail/testcase/17441709828
      *************************************************************************************/
     @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"})
-    public void EnableEmailReRouting_Test() throws Exception{
+    public void EmailRedirect_TC1067() throws Exception {
     	
     	//Step 1
     	UserLogin userLogin = applib.openApplication();
     	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
         
-    	//Step 1a
+    	//Setup
     	Modules modules = new Modules(webDriver, applib);
         modules.VerifyModuleEnabled("Reroute emails");
         

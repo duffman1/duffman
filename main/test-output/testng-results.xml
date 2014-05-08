@@ -2,7 +2,7 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
     <line>
-      <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]>
+      <![CDATA[Open url 'http://install.stage.nbcupublisher7.publisher7.com'.]]>
     </line>
     <line>
       <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
@@ -17,227 +17,113 @@
       <![CDATA[Mouse over the 'Configuration' menu link.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Content authoring' menu link.]]>
+      <![CDATA[Mouse over the 'Media' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Content lock' menu link.]]>
+      <![CDATA[Click the 'Media: thePlatform mpx settings' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Content lock dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+      <![CDATA[Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'People' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Add user' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'People dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '377835914156444@8d2511ec4e5a411.com' in the 'Username' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '377835914156444@8d2511ec4e5a411.com' in the 'E-mail address' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'pa55word' in the 'Confirm password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Check the 'editor' check box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'f765c7fc0b8d45c' in the 'First Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'e856a80571cd402' in the 'Last Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Create new account' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'A welcome message with further instructions has been e-mailed to the new user 377835914156444@8d2511ec4e5a411.com.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'People' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Permissions' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Roles' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'People dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Edit Permissions' link for the 'Editor' role.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'People dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Check the 'create post content' checkbox.]]>
-    </line>
-    <line>
-      <![CDATA[Check the 'edit own post content' checkbox.]]>
-    </line>
-    <line>
-      <![CDATA[Check the 'create files' checkbox.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll by '-500'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save Permissions' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The changes have been saved.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Logout' button.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '377835914156444@8d2511ec4e5a411.com' in the 'Email Address' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
       <![CDATA[Mouse over the 'Content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Add content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Post' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '5f7bfdb975c640e' in the 'Title' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the Synopsis frame.]]>
-    </line>
-    <line>
-      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Cover' select button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the select file frame.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the file path for file upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Upload' button.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the file image 'HanSolo' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Publishing Options' link.]]>
-    </line>
-    <line>
-      <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Post 5f7bfdb975c640e has been created.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Content' menu link.]]>
+      <![CDATA[Click the 'Files' menu link.]]>
     </line>
     <line>
       <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Edit' link for content item titled '5f7bfdb975c640e.]]>
+      <![CDATA[Verify that the search result set column order matches as expected.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Edit Post 5f7bfdb975c640e dialog'.]]>
+      <![CDATA[Verify the text 'We are sorry, no video available' is NOT present on the page.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'This document is now locked against simultaneous editing. It will unlock when you navigate elsewhere.' is present.]]>
+      <![CDATA[Get the number of results in the result set.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'Your lock will be considered stale and up for grabs in 30 min.' is present.]]>
+      <![CDATA[Click the Title column header link for column sorting.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Get the number of results in the result set.]]>
+    </line>
+    <line>
+      <![CDATA[Click the Type column header link for column sorting.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Get the number of results in the result set.]]>
+    </line>
+    <line>
+      <![CDATA[Click the Size column header link for column sorting.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Get the number of results in the result set.]]>
+    </line>
+    <line>
+      <![CDATA[Click the Uploaded By column header link for column sorting.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Get the number of results in the result set.]]>
+    </line>
+    <line>
+      <![CDATA[Click the Upload date column header link for column sorting.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Get the number of results in the result set.]]>
+    </line>
+    <line>
+      <![CDATA[Click the Upload date column header link for column sorting.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Get the number of results in the result set.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="69122" started-at="2014-05-08T16:13:49Z" finished-at="2014-05-08T16:14:58Z">
+  <suite name="Default suite" duration-ms="46510" started-at="2014-05-08T18:07:16Z" finished-at="2014-05-08T18:08:03Z">
     <groups>
       <group name="full">
-        <method signature="ContentLocking.ContentLocking_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.LockContentWhenEditing.ContentLocking@30404564]" name="ContentLocking_Test" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.LockContentWhenEditing.ContentLocking"/>
+        <method signature="EnhanceContentLibraryTable.EnhanceContentLibraryTable_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.EnhanceContentLibraryTable.EnhanceContentLibraryTable@572863a9]" name="EnhanceContentLibraryTable_Test" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.EnhanceContentLibraryTable.EnhanceContentLibraryTable"/>
       </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="69122" started-at="2014-05-08T16:13:49Z" finished-at="2014-05-08T16:14:58Z">
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.LockContentWhenEditing.ContentLocking">
-        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.LockContentWhenEditing.ContentLocking@30404564]" name="startGridAndHub" is-config="true" duration-ms="11852" started-at="2014-05-08T12:13:37Z" finished-at="2014-05-08T12:13:49Z">
+    <test name="Default test" duration-ms="46510" started-at="2014-05-08T18:07:16Z" finished-at="2014-05-08T18:08:03Z">
+      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.EnhanceContentLibraryTable.EnhanceContentLibraryTable">
+        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.EnhanceContentLibraryTable.EnhanceContentLibraryTable@572863a9]" name="startGridAndHub" is-config="true" duration-ms="12138" started-at="2014-05-08T14:07:04Z" finished-at="2014-05-08T14:07:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startGridAndHub -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.LockContentWhenEditing.ContentLocking@30404564]" name="startSelenium" is-config="true" duration-ms="2483" started-at="2014-05-08T12:13:49Z" finished-at="2014-05-08T12:13:51Z">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.EnhanceContentLibraryTable.EnhanceContentLibraryTable@572863a9]" name="startSelenium" is-config="true" duration-ms="2532" started-at="2014-05-08T14:07:16Z" finished-at="2014-05-08T14:07:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="ContentLocking_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.LockContentWhenEditing.ContentLocking@30404564]" name="ContentLocking_Test" duration-ms="66059" started-at="2014-05-08T12:13:51Z" finished-at="2014-05-08T12:14:57Z">
+        <test-method status="PASS" signature="EnhanceContentLibraryTable_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.EnhanceContentLibraryTable.EnhanceContentLibraryTable@572863a9]" name="EnhanceContentLibraryTable_Test" duration-ms="43386" started-at="2014-05-08T14:07:19Z" finished-at="2014-05-08T14:08:02Z">
           <reporter-output>
             <line>
-              <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]>
+              <![CDATA[Open url 'http://install.stage.nbcupublisher7.publisher7.com'.]]>
             </line>
             <line>
               <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
@@ -252,224 +138,110 @@
               <![CDATA[Mouse over the 'Configuration' menu link.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Content authoring' menu link.]]>
+              <![CDATA[Mouse over the 'Media' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Content lock' menu link.]]>
+              <![CDATA[Click the 'Media: thePlatform mpx settings' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Content lock dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+              <![CDATA[Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.]]>
             </line>
             <line>
               <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'People' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Add user' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'People dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '377835914156444@8d2511ec4e5a411.com' in the 'Username' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '377835914156444@8d2511ec4e5a411.com' in the 'E-mail address' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa55word' in the 'Confirm password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Check the 'editor' check box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'f765c7fc0b8d45c' in the 'First Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'e856a80571cd402' in the 'Last Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Create new account' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'A welcome message with further instructions has been e-mailed to the new user 377835914156444@8d2511ec4e5a411.com.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'People' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Permissions' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Roles' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'People dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Edit Permissions' link for the 'Editor' role.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'People dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Check the 'create post content' checkbox.]]>
-            </line>
-            <line>
-              <![CDATA[Check the 'edit own post content' checkbox.]]>
-            </line>
-            <line>
-              <![CDATA[Check the 'create files' checkbox.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll by '-500'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save Permissions' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The changes have been saved.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Logout' button.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '377835914156444@8d2511ec4e5a411.com' in the 'Email Address' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
               <![CDATA[Mouse over the 'Content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Add content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Post' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '5f7bfdb975c640e' in the 'Title' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the Synopsis frame.]]>
-            </line>
-            <line>
-              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Cover' select button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the select file frame.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the file path for file upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Upload' button.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Public Local Files' radio button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the file image 'HanSolo' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Publishing Options' link.]]>
-            </line>
-            <line>
-              <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Post 5f7bfdb975c640e has been created.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Content' menu link.]]>
+              <![CDATA[Click the 'Files' menu link.]]>
             </line>
             <line>
               <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Edit' link for content item titled '5f7bfdb975c640e.]]>
+              <![CDATA[Verify that the search result set column order matches as expected.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Edit Post 5f7bfdb975c640e dialog'.]]>
+              <![CDATA[Verify the text 'We are sorry, no video available' is NOT present on the page.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'This document is now locked against simultaneous editing. It will unlock when you navigate elsewhere.' is present.]]>
+              <![CDATA[Get the number of results in the result set.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'Your lock will be considered stale and up for grabs in 30 min.' is present.]]>
+              <![CDATA[Click the Title column header link for column sorting.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Get the number of results in the result set.]]>
+            </line>
+            <line>
+              <![CDATA[Click the Type column header link for column sorting.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Get the number of results in the result set.]]>
+            </line>
+            <line>
+              <![CDATA[Click the Size column header link for column sorting.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Get the number of results in the result set.]]>
+            </line>
+            <line>
+              <![CDATA[Click the Uploaded By column header link for column sorting.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Get the number of results in the result set.]]>
+            </line>
+            <line>
+              <![CDATA[Click the Upload date column header link for column sorting.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Get the number of results in the result set.]]>
+            </line>
+            <line>
+              <![CDATA[Click the Upload date column header link for column sorting.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Get the number of results in the result set.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- ContentLocking_Test -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.LockContentWhenEditing.ContentLocking@30404564]" name="stopSelenium" is-config="true" duration-ms="567" started-at="2014-05-08T12:14:57Z" finished-at="2014-05-08T12:14:58Z">
+        </test-method> <!-- EnhanceContentLibraryTable_Test -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.EnhanceContentLibraryTable.EnhanceContentLibraryTable@572863a9]" name="stopSelenium" is-config="true" duration-ms="575" started-at="2014-05-08T14:08:02Z" finished-at="2014-05-08T14:08:03Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=ContentLocking_Test status=SUCCESS method=ContentLocking.ContentLocking_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.LockContentWhenEditing.ContentLocking@30404564] output=Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]]>
+                <![CDATA[[TestResult name=EnhanceContentLibraryTable_Test status=SUCCESS method=EnhanceContentLibraryTable.EnhanceContentLibraryTable_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.EnhanceContentLibraryTable.EnhanceContentLibraryTable@572863a9] output=Open url 'http://install.stage.nbcupublisher7.publisher7.com'.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.LockContentWhenEditing.ContentLocking@30404564]" name="stopGridAndHub" is-config="true" duration-ms="380" started-at="2014-05-08T12:14:58Z" finished-at="2014-05-08T12:14:58Z">
+        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.EnhanceContentLibraryTable.EnhanceContentLibraryTable@572863a9]" name="stopGridAndHub" is-config="true" duration-ms="369" started-at="2014-05-08T14:08:03Z" finished-at="2014-05-08T14:08:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopGridAndHub -->
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.LockContentWhenEditing.ContentLocking -->
+      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.EnhanceContentLibraryTable.EnhanceContentLibraryTable -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

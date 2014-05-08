@@ -16,23 +16,11 @@ import org.testng.annotations.Test;
 public class FocalPointModule extends ParentTest{
 	
     /*************************************************************************************
-     * TEST CASE 
-     * Step 1 - Login to the site as admin with valid credentials.,Observe that user should be successfully logged in.
-     * Step 2 - Click on Module and enable Focal Point and click on Save Configuration button. ,Observe that Focal Point module should be successfully enabled. 
-     * Step 3 - Navigate to Configuration-> Media-> Focal Point then enable 'Standard image fields' and 'Media module image fields' checkboxes, and choose "Thumbnail" value from 'Preview Image Style' drop down and click on 'Save configuration' button.,Observe that 'Standard image fields' and 'Media module image fields' checkboxes should be enabled and correct value should be displayed in 'Preview Image Style' drop down.  
-     * Step 4 - Navigate to Configuration-> Media-> Image styles-> Add style then type valid name in 'Style name' text box and click on 'Create new style' button. ,Observe that image style should be successfully saved and successful message should be displayed. 
-     * Step 5 - Choose 'Focal Point Crop' from the drop down under 'Effect' column then click on 'Add' button.  Additional Scenarios: Test with 'Focal Point scale and crop' effect. Out of scope scenario: Don't test with 'Rotate' effect .,Observe that 'Add Focal Point Crop effect' overlay is displayed. 
-     * Step 6 - Type 200 in both 'Width' and 'Height' text box then click on 'Add effect' button. ,Observe that values should be saved and successful message should be displayed. 
-     * Step 7 - Click on 'Update style' button. ,Observe that image style should be successfully saved and successful message should be displayed. 
-     * Step 8 - Go to Structure -> Content type (movie) -> Manage Display -> Cover Media -> Manage Display-> In 'Cover Media' field column -> In 'FORMAT' column-> Set 'Rendered file'-> Click on the contextual link on the right of cover media row -> Choose the view mode as 'Default' -> Save. ,Setting are saved sucessfully 
-     * Step 9 - Go to Structure -> File type-> Image-> Manage File Display-> Default tab-> Under Image Style field Set the image style created in configuration test set -> Save Configuration. ,Setting are saved successfully 
-     * Step 10 - Navigate to Content-> Add Content-> Content type (Movie)-> Set the mandatory fields-> Click on Select on Cover Media field-> upload a image. ,Image should be uploaded successfully and Select a file overlay appears with the image and crosshair. 
-     * Step 11 - Drag a cross hair to the desired focal point on the image and double click > Verify that Focal point fields with coordinates appears > Save,Content type (Movie) gets Saved 
-     * Step 12 - Verify that the on the view tab of movie content type node created, 200*200 square image w.r.t. the focal point appears. ,Image appears as expected 
-     * Cleanup - Disable the focal point module
+     * TEST CASE - TC1052
+     * Steps - https://rally1.rallydev.com/#/14663927728ud/detail/testcase/17441593285
      *************************************************************************************/
     @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"})
-    public void FocalPointModule_Test() throws Exception {
+    public void FocalPointModule_TC1052() throws Exception {
          
         //Step 1
         UserLogin userLogin = applib.openApplication();

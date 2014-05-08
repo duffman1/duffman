@@ -11,22 +11,11 @@ import org.testng.annotations.Test;
 public class EXIFKeywordsIngestedPhraseInsteadSetsWords extends ParentTest{
 	
     /*************************************************************************************
-     * TEST CASE 
-     * Step 1 - Login to P7 using Admin (user 1) credentials ,Login Successful
-     * Step 1a - Enable simple exif/iptc mappings 
-     * Step 2 - Go to Content-> Files -> Click Add Files -> On Add file overlay -> Click on Add files -> Select the test images -> Click Next  Note : Test images are attached to the test cases. Please use only those selected images to test as their EXIF data field keyword has commas. And this test is to verify  special character comma  gets ingested in P7 successfully.,"Edit multiple files" overlay appears with all the test images  
-     * Step 3 - Verify that in EXIF data under "Keyword" column data values are separated by comma's ( , ) and hence comma's are successfully ingested in the P7 EXIF fields.   ,Special character comma (,) are succesfully ingested in P7 EXIF fields.  
-     * Step 4 - Go to Content -> Add Content media Gallery -> under "Create Media Gallery" overlay -> Set all the required fields ->  Click on Media Items "Select" tab -> under "Select a file" overlay -> Click on Add files -> select all test images -> Click Next  ,"Create Media Gallery" overlay appears. 
-     * Step 5 - Verify that under MEDIA ITEMS all the test images appears -> Click on Edit link of image. ,"Edit image" overlay appears 
-     * Step 6 - Verify that under "Keyword" field data values are separated by comma's (,) and special character comma are succesfully ingested in P7 -> Save ,Special character comma (,) are succesfully ingested in P7 EXIF fields and Title page of Media Gallery appears. 
-     * Step 7 - Click on "Edit draft" tab of the media gallery content node ->  On View page Click on Cover Item "Select" tab-> Upload a test image-> Click Next. ,Select a file overlay appears. 
-     * Step 8 - Verify that in EXIF data under "Keyword" column data values are separated by comma's ( , ) and hence comma's are successfully ingested in the P7 EXIF fields-> Save ,Special character comma (,) are succesfully ingested in P7 EXIF fields and Title page of Media Gallery appears and media gallery Edit page appears. 
-     * Step 9 - Under coveritem click "Edit" link -> verify under "Edit image overlay Keyword field has succussfully saved the data and special character. ,Special character comma (,) are succesfully saved in P7 EXIF fields.  
-     * Step 10 - Log out from P7 ,Logout successful 
-     * @throws Throwable No Return values are needed
+     * TEST CASE - TC17
+     * Steps - https://rally1.rallydev.com/#/14663927728ud/detail/testcase/16715541439
      *************************************************************************************/
     @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full" })
-    public void EXIFKeywordsIngestedPhraseInsteadSetsWords_Test() throws Exception{
+    public void EXIFKeywordsIngestedPhraseInsteadSetsWords_TC17() throws Exception{
          
         	//Step 1
         	UserLogin userLogin = applib.openApplication();
