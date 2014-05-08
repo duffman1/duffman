@@ -91,10 +91,7 @@ public class ScheduleRevisionsOfQueues extends ParentTest{
         overlay.SwitchToActiveFrame();
         scheduleQueue.ClickScheduleTab();
         overlay.SwitchToActiveFrame();
-        scheduleQueue.VerifyScheduledQueue(queueTitle);
-        scheduleQueue.VerifyScheduledQueue("Moderate to Publish");
-        scheduleQueue.VerifyScheduledQueue(sDate + " - 05:00 PM");
-        
+        scheduleQueue.VerifyScheduledQueue(Arrays.asList(queueTitle, "Moderate to Publish", sDate + " - 05:00 PM"));
         
     }
 }

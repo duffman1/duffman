@@ -128,13 +128,16 @@ public class ScheduleQueue {
     	Schedule_Btn.click();
     }
     
-    public void VerifyScheduledQueue(String scheduledTxt) throws Exception {
+    public void VerifyScheduledQueue(List<String> scheduledTxt) throws Exception {
     	
-    	Reporter.log("Verify the scheduled text '" + scheduledTxt + "' is present in the scheduled queue.");
-    	Thread.sleep(250); 
-    	if (!ScheduledQueue_Ctr.getText().contains(scheduledTxt)) {
-    		Assert.fail("Scheduled text of '" + scheduledTxt + "' is not present in the scheduled queue.");
+    	Thread.sleep(250);
+    	String scheduledCtrTxt = ScheduledQueue_Ctr.getText();
+    	
+    	for (String txt : scheduledTxt) {
+    		Reporter.log("Verify the scheduled text '" + txt + "' is present in the scheduled queue.");
+    		Assert.assertTrue(scheduledCtrTxt.contains(txt), "Text '" + txt + "' not present in scheduled queue container.");
     	}
+    	
     }
 
     public void VerifyScheduleTableisEmpty() throws Exception {

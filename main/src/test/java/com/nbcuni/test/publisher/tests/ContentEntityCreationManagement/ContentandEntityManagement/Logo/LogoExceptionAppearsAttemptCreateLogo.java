@@ -62,7 +62,7 @@ public class LogoExceptionAppearsAttemptCreateLogo extends ParentTest{
             cal15SecondsFuture.add(Calendar.SECOND, 15);
         	Date date15SecondsFuture = cal15SecondsFuture.getTime();
         	Calendar cal60SecondsFuture = Calendar.getInstance();
-            cal60SecondsFuture.add(Calendar.SECOND, 70);
+            cal60SecondsFuture.add(Calendar.SECOND, 60);
         	Date date60SecondsFuture = cal60SecondsFuture.getTime();
         	SimpleDateFormat pub7DateFormat = new SimpleDateFormat("yyyy-MM-dd");
         	pub7DateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
@@ -90,7 +90,7 @@ public class LogoExceptionAppearsAttemptCreateLogo extends ParentTest{
     	    
     	    //Step 5
     	    overlay.ClickCloseOverlayLnk();
-    	    Thread.sleep(19000);
+    	    Thread.sleep(15000);
     	    Cron cron = new Cron(webDriver, applib);
     	    cron.RunCron(true);
     	    taxonomy.NavigateSite("Home");
@@ -99,7 +99,7 @@ public class LogoExceptionAppearsAttemptCreateLogo extends ParentTest{
     	    logos.VerifyHomePageLogoImgPresent("nbclogosmall");
     	    
     	    //Step 7
-    	    Thread.sleep(75000); //TODO - add a better dynamic wait for this item.
+    	    Thread.sleep(45000); 
     	    cron.RunCron(true);
     	    taxonomy.NavigateSite("Home");
     	    logos.VerifyHomePageLogoImgPresent("logo");

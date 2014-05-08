@@ -112,13 +112,10 @@ public class ScheduleToPublishContentByDateTime extends ParentTest {
 
         //Step 11
         overlay.SwitchToActiveFrame();
-        scheduleQueue.VerifyScheduledQueue(postTitle);
-        scheduleQueue.VerifyScheduledQueue("Moderate to Publish");
-        scheduleQueue.VerifyScheduledQueue(sdfDate10DaysFuture + " - 05:00 PM");
+        scheduleQueue.VerifyScheduledQueue(Arrays.asList(postTitle, "Moderate to Publish", sdfDate10DaysFuture + " - 05:00 PM"));
         scheduleQueue.ClickRunNowLnk(postTitle, "Moderate to Published");
         overlay.SwitchToActiveFrame();
-        scheduleQueue.VerifyScheduledQueue("Moderate to Published");
-        scheduleQueue.VerifyScheduledQueue("Completed");
+        scheduleQueue.VerifyScheduledQueue(Arrays.asList("Moderate to Published", "Completed"));
         Revisions revisions = new Revisions(webDriver, applib);
         revisions.ClickRevisionTab();
         overlay.SwitchToActiveFrame();
