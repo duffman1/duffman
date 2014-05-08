@@ -1,17 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]">
-  <test name="Default test(failed)">
+<suite thread-count="4" name="Failed suite [Pub 7 Concurrent Suite]" parallel="classes">
+  <parameter name="ReRunOnFailure" value="false"/>
+  <parameter name="LocalAppiumHubPort" value="4724"/>
+  <parameter name="Device" value="Iphone Simulator"/>
+  <parameter name="Admin1Password" value="pa55word"/>
+  <parameter name="MPXVideaUploadPause" value="10000"/>
+  <parameter name="ReRunOnFailureCount" value="2"/>
+  <parameter name="IRCServer" value="irc.freenode.net"/>
+  <parameter name="RallyUrl" value="https://rally1.rallydev.com"/>
+  <parameter name="ErrorCheckingEnabled" value="true"/>
+  <parameter name="SendReportAutoEmails" value="true"/>
+  <parameter name="RallyUsername" value="brandon.clark@nbcuni.com"/>
+  <parameter name="Admin1Username" value="admin@publisher.nbcuni.com"/>
+  <parameter name="Browser" value="chrome"/>
+  <parameter name="GmailUsername" value="Pub7NBCUAutoEmailUser1@gmail.com"/>
+  <parameter name="PathToScreenshots" value="/test-output/screenshots/"/>
+  <parameter name="PageLoadWaitTime" value="180"/>
+  <parameter name="MPXUrl" value="http://mpx.theplatform.com/"/>
+  <parameter name="RallyProject" value="Publisher 7"/>
+  <parameter name="IRCNickname" value="NBCUniAutomationBotOnIRC"/>
+  <parameter name="PathToMediaContent" value="/src/test/java/com/nbcuni/test/publisher/content/MediaFiles/"/>
+  <parameter name="RallyPassword" value="tufNewcyd4#"/>
+  <parameter name="PathToReports" value="/test-output/reports/"/>
+  <parameter name="MPXPassword" value="Pa55word"/>
+  <parameter name="RallyTaskID" value="TA37085"/>
+  <parameter name="SendReportIRCChat" value="false"/>
+  <parameter name="RunMobile" value="false"/>
+  <parameter name="RallyWorkspace" value="Digital Products"/>
+  <parameter name="SendReportEmailAddress" value="brandon.clark@nbcuni.com"/>
+  <parameter name="UpdateIndividualRallyTCs" value="true"/>
+  <parameter name="PathToSikuliImages" value="/src/test/java/com/nbcuni/test/publisher/lib/sikuli/images/"/>
+  <parameter name="UploadReportToRally" value="true"/>
+  <parameter name="ImplicitWaitTime" value="20"/>
+  <parameter name="MPXAssetBufferPause" value="0"/>
+  <parameter name="GmailPassword" value="Pub7NBCUAutoEmailPassword1"/>
+  <parameter name="LocalWebDriverHubPort" value="4444"/>
+  <parameter name="IRCChannel" value="#nbcuots_pub7"/>
+  <parameter name="SikuliImageWaitTime" value="30"/>
+  <parameter name="AppURL" value="http://update.qa5.nbcupublisher7.publisher7.com"/>
+  <parameter name="MPXUsername" value="mpx/AdminPub7QA"/>
+  <listeners>
+    <listener class-name="com.nbcuni.test.publisher.common.CustomReport"/>
+  </listeners>
+  <test name="All Concurrent Web Tests(failed)" parallel="classes">
+    <groups>
+      <run>
+        <include name="full"/>
+      </run>
+    </groups>
     <classes>
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.SchedulingContentPublishUnpublished">
+      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile">
         <methods>
           <include name="startSelenium"/>
-          <include name="SchedulingContentPublishUnpublished_TC2159"/>
           <include name="stopGridAndHub"/>
           <include name="startGridAndHub"/>
           <include name="stopSelenium"/>
         </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.SchedulingContentPublishUnpublished -->
+      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile -->
+      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson">
+        <methods>
+          <include name="startSelenium"/>
+          <include name="stopSelenium"/>
+        </methods>
+      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson -->
+      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CustomContentType.AddingNewCustomContentType">
+        <methods>
+          <include name="startSelenium"/>
+          <include name="stopSelenium"/>
+        </methods>
+      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CustomContentType.AddingNewCustomContentType -->
+      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVSeason.CreateTVSeason">
+        <methods>
+          <include name="startSelenium"/>
+          <include name="stopSelenium"/>
+        </methods>
+      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVSeason.CreateTVSeason -->
+      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVEpisode.CreateTVEpisode">
+        <methods>
+          <include name="startSelenium"/>
+          <include name="CreateTVEpisode_Test"/>
+          <include name="stopSelenium"/>
+        </methods>
+      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVEpisode.CreateTVEpisode -->
+      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost">
+        <methods>
+          <include name="startSelenium"/>
+          <include name="stopSelenium"/>
+        </methods>
+      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- All Concurrent Web Tests(failed) -->
+</suite> <!-- Failed suite [Pub 7 Concurrent Suite] -->

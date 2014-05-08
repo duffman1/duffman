@@ -14,251 +14,188 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[Verify content menu item 'Content' is present in the site taxonomy.]]>
-    </line>
-    <line>
-      <![CDATA[Verify content menu item 'My Workbench' is present in the site taxonomy.]]>
-    </line>
-    <line>
       <![CDATA[Mouse over the 'Content' menu link.]]>
     </line>
     <line>
       <![CDATA[Mouse over the 'Add content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Post' menu link.]]>
+      <![CDATA[Click the 'Media Gallery' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'Create Media Gallery dialog'.]]>
     </line>
     <line>
-      <![CDATA[Enter 'ca8a3dd7be51414' in the 'Title' text box.]]>
+      <![CDATA[Enter 'cb00dc0b11ee46c' in the 'Title' text box.]]>
     </line>
     <line>
-      <![CDATA[Switch to the Synopsis frame.]]>
-    </line>
-    <line>
-      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Cover' select button.]]>
+      <![CDATA[Click the 'Media Items Select' button.]]>
     </line>
     <line>
       <![CDATA[Switch to the select file frame.]]>
     </line>
     <line>
-      <![CDATA[Enter the file path for file upload.]]>
+      <![CDATA[Click the 'View Library' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Upload' button.]]>
+      <![CDATA[Enter 'HanSolo' in the 'File name' text box.]]>
     </line>
     <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
+      <![CDATA[Wait for the file search 'spinner' image to be present.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Next' button.]]>
+      <![CDATA[Wait for the file search 'spinner' image to not be present, indicating image search is complete.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
+      <![CDATA[Click the 'Apply' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Next' button.]]>
+      <![CDATA[Wait for the file search 'spinner' image to be present.]]>
     </line>
     <line>
-      <![CDATA[Verify the file image 'HanSolo' is present.]]>
+      <![CDATA[Wait for the file search 'spinner' image to not be present, indicating image search is complete.]]>
     </line>
     <line>
-      <![CDATA[Verify the img is loaded and visible.]]>
+      <![CDATA[Verify the media thumbnail image 'HanSolo' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the the img is loaded and visible.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the media thumbnail image 'HanSolo' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the the img is loaded and visible.]]>
+    </line>
+    <line>
+      <![CDATA[Click media thumbnail image number 1]]>
+    </line>
+    <line>
+      <![CDATA[Click media thumbnail image number 2]]>
+    </line>
+    <line>
+      <![CDATA[Click on the 'Submit' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create Media Gallery dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that img source of the Media Item contains 'HanSolo'.]]>
+    </line>
+    <line>
+      <![CDATA[Assert the the img is loaded and visible.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that img source of the Media Item contains 'HanSolo'.]]>
+    </line>
+    <line>
+      <![CDATA[Assert the the img is loaded and visible.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+      <![CDATA[Verify success message of 'Media Gallery cb00dc0b11ee46c has been created.' is present.]]>
     </line>
     <line>
-      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+      <![CDATA[Assert that img source of the Media Item contains 'HanSolo'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Publishing Options' link.]]>
+      <![CDATA[Assert the the img is loaded and visible.]]>
     </line>
     <line>
-      <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
+      <![CDATA[Get the file id of image number 1.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save' button.]]>
+      <![CDATA[Assert that img source of the Media Item contains 'HanSolo'.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'Post ca8a3dd7be51414 has been created.' is present.]]>
+      <![CDATA[Assert the the img is loaded and visible.]]>
     </line>
     <line>
-      <![CDATA[Verify the 'View' is present in the work bench.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Edit Draft' is present in the work bench.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Revisions' is present in the work bench.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Schedule' is present in the work bench.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Revisions' link in the work bench.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Revisions dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the number of present revisions entries equals '1'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Schedule' tab.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'ca8a3dd7be51414 dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Add Scheduled Revision' link is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the scheduled revision table is empty.]]>
+      <![CDATA[Get the file id of image number 2.]]>
     </line>
     <line>
       <![CDATA[Click the 'Edit Draft' link in the work bench.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Edit Post ca8a3dd7be51414 dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'Edit Media Gallery cb00dc0b11ee46c dialog'.]]>
     </line>
     <line>
-      <![CDATA[Switch to the Synopsis frame.]]>
+      <![CDATA[Assert that img source of the Media Item contains 'HanSolo'.]]>
     </line>
     <line>
-      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+      <![CDATA[Assert the the img is loaded and visible.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Edit Post ca8a3dd7be51414 dialog'.]]>
+      <![CDATA[Get the unique url for image number 1.]]>
     </line>
     <line>
-      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+      <![CDATA[Assert that img source of the Media Item contains 'HanSolo'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Publishing Options' link.]]>
+      <![CDATA[Assert the the img is loaded and visible.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Test Revision 2' in the 'Message for State Change' text area.]]>
+      <![CDATA[Get the unique url for image number 2.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save' button.]]>
+      <![CDATA[Click the 'Cancel' button.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'Revision state' is present in the work bench info block.]]>
+      <![CDATA[Assert that img source of the Media Item contains 'HanSolo'.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'Public' is present in the work bench info block.]]>
+      <![CDATA[Assert the the img is loaded and visible.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'Moderate' is present in the work bench info block.]]>
+      <![CDATA[Assert that img source of the Media Item contains 'HanSolo'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Revisions' link in the work bench.]]>
+      <![CDATA[Assert the the img is loaded and visible.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Revisions dialog'.]]>
+      <![CDATA[Verify the text 'Current Item' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Verify the number of present revisions entries equals '2'.]]>
+      <![CDATA[Verify the text 'HanSolo.jpg' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Schedule' tab.]]>
+      <![CDATA[Verify the text 'Current Item Index' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'ca8a3dd7be51414 dialog'.]]>
+      <![CDATA[Verify the text '0' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Add Scheduled Revision' link.]]>
+      <![CDATA[Verify the text 'Current Item ID' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'ca8a3dd7be51414 dialog'.]]>
+      <![CDATA[Verify the text '1525' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Select revision titled 'ca8a3dd7be51414'.]]>
+      <![CDATA[Verify the text 'Current Item URL' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Select 'Moderate to Published' from the 'Select operation' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '05/18/2014' in the 'Date' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '05:00 PM' in the 'Time' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Schedule' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'ca8a3dd7be51414 dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The scheduled revision operation has been saved' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'ca8a3dd7be51414 dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the scheduled text 'ca8a3dd7be51414' is present in the scheduled queue.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the scheduled text 'Moderate to Publish' is present in the scheduled queue.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the scheduled text '05/18/2014 - 05:00 PM' is present in the scheduled queue.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Run now' link for content item 'ca8a3dd7be51414' with action 'Moderate to Published'.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'ca8a3dd7be51414 dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the scheduled text 'Moderate to Published' is present in the scheduled queue.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the scheduled text 'Completed' is present in the scheduled queue.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Revision' link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Revisions dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'Revision was set from Draft to Published on 05/08/2014' is present on the page.]]>
+      <![CDATA[Verify the text 'http://update.qa5.nbcupublisher7.publisher7.com/node/491/item/1525' is present on the page.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="64535" started-at="2014-05-08T13:23:21Z" finished-at="2014-05-08T13:24:25Z">
+  <suite name="Default suite" duration-ms="31568" started-at="2014-05-08T14:09:53Z" finished-at="2014-05-08T14:10:25Z">
     <groups>
       <group name="full">
-        <method signature="ScheduleToPublishContentByDateTime.ScheduleToPublishContentByDateTime_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.ScheduleToPublishContentByDateTime@2d258595]" name="ScheduleToPublishContentByDateTime_Test" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.ScheduleToPublishContentByDateTime"/>
+        <method signature="DisplayUniqueURLEachAssetEditForm.DisplayUniqueURLEachAssetEditForm_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.ProvideUniqueURLImages.DisplayUniqueURLEachAssetEditForm@4425fa0]" name="DisplayUniqueURLEachAssetEditForm_Test" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.ProvideUniqueURLImages.DisplayUniqueURLEachAssetEditForm"/>
       </group> <!-- full -->
-      <group name="smoke">
-        <method signature="ScheduleToPublishContentByDateTime.ScheduleToPublishContentByDateTime_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.ScheduleToPublishContentByDateTime@2d258595]" name="ScheduleToPublishContentByDateTime_Test" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.ScheduleToPublishContentByDateTime"/>
-      </group> <!-- smoke -->
     </groups>
-    <test name="Default test" duration-ms="64535" started-at="2014-05-08T13:23:21Z" finished-at="2014-05-08T13:24:25Z">
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.ScheduleToPublishContentByDateTime">
-        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.ScheduleToPublishContentByDateTime@2d258595]" name="startGridAndHub" is-config="true" duration-ms="11174" started-at="2014-05-08T09:23:10Z" finished-at="2014-05-08T09:23:21Z">
+    <test name="Default test" duration-ms="31568" started-at="2014-05-08T14:09:53Z" finished-at="2014-05-08T14:10:25Z">
+      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.ProvideUniqueURLImages.DisplayUniqueURLEachAssetEditForm">
+        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.ProvideUniqueURLImages.DisplayUniqueURLEachAssetEditForm@4425fa0]" name="startGridAndHub" is-config="true" duration-ms="11774" started-at="2014-05-08T10:09:42Z" finished-at="2014-05-08T10:09:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startGridAndHub -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.ScheduleToPublishContentByDateTime@2d258595]" name="startSelenium" is-config="true" duration-ms="2492" started-at="2014-05-08T09:23:21Z" finished-at="2014-05-08T09:23:23Z">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.ProvideUniqueURLImages.DisplayUniqueURLEachAssetEditForm@4425fa0]" name="startSelenium" is-config="true" duration-ms="2459" started-at="2014-05-08T10:09:53Z" finished-at="2014-05-08T10:09:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="ScheduleToPublishContentByDateTime_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.ScheduleToPublishContentByDateTime@2d258595]" name="ScheduleToPublishContentByDateTime_Test" duration-ms="61462" started-at="2014-05-08T09:23:23Z" finished-at="2014-05-08T09:24:25Z">
+        <test-method status="PASS" signature="DisplayUniqueURLEachAssetEditForm_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.ProvideUniqueURLImages.DisplayUniqueURLEachAssetEditForm@4425fa0]" name="DisplayUniqueURLEachAssetEditForm_Test" duration-ms="28524" started-at="2014-05-08T10:09:56Z" finished-at="2014-05-08T10:10:24Z">
           <reporter-output>
             <line>
               <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
@@ -273,248 +210,188 @@
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
-              <![CDATA[Verify content menu item 'Content' is present in the site taxonomy.]]>
-            </line>
-            <line>
-              <![CDATA[Verify content menu item 'My Workbench' is present in the site taxonomy.]]>
-            </line>
-            <line>
               <![CDATA[Mouse over the 'Content' menu link.]]>
             </line>
             <line>
               <![CDATA[Mouse over the 'Add content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Post' menu link.]]>
+              <![CDATA[Click the 'Media Gallery' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'Create Media Gallery dialog'.]]>
             </line>
             <line>
-              <![CDATA[Enter 'ca8a3dd7be51414' in the 'Title' text box.]]>
+              <![CDATA[Enter 'cb00dc0b11ee46c' in the 'Title' text box.]]>
             </line>
             <line>
-              <![CDATA[Switch to the Synopsis frame.]]>
-            </line>
-            <line>
-              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Cover' select button.]]>
+              <![CDATA[Click the 'Media Items Select' button.]]>
             </line>
             <line>
               <![CDATA[Switch to the select file frame.]]>
             </line>
             <line>
-              <![CDATA[Enter the file path for file upload.]]>
+              <![CDATA[Click the 'View Library' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Upload' button.]]>
+              <![CDATA[Enter 'HanSolo' in the 'File name' text box.]]>
             </line>
             <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
+              <![CDATA[Wait for the file search 'spinner' image to be present.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Next' button.]]>
+              <![CDATA[Wait for the file search 'spinner' image to not be present, indicating image search is complete.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Public Local Files' radio button.]]>
+              <![CDATA[Click the 'Apply' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Next' button.]]>
+              <![CDATA[Wait for the file search 'spinner' image to be present.]]>
             </line>
             <line>
-              <![CDATA[Verify the file image 'HanSolo' is present.]]>
+              <![CDATA[Wait for the file search 'spinner' image to not be present, indicating image search is complete.]]>
             </line>
             <line>
-              <![CDATA[Verify the img is loaded and visible.]]>
+              <![CDATA[Verify the media thumbnail image 'HanSolo' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the media thumbnail image 'HanSolo' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Click media thumbnail image number 1]]>
+            </line>
+            <line>
+              <![CDATA[Click media thumbnail image number 2]]>
+            </line>
+            <line>
+              <![CDATA[Click on the 'Submit' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Media Gallery dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that img source of the Media Item contains 'HanSolo'.]]>
+            </line>
+            <line>
+              <![CDATA[Assert the the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that img source of the Media Item contains 'HanSolo'.]]>
+            </line>
+            <line>
+              <![CDATA[Assert the the img is loaded and visible.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+              <![CDATA[Verify success message of 'Media Gallery cb00dc0b11ee46c has been created.' is present.]]>
             </line>
             <line>
-              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+              <![CDATA[Assert that img source of the Media Item contains 'HanSolo'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Publishing Options' link.]]>
+              <![CDATA[Assert the the img is loaded and visible.]]>
             </line>
             <line>
-              <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
+              <![CDATA[Get the file id of image number 1.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save' button.]]>
+              <![CDATA[Assert that img source of the Media Item contains 'HanSolo'.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'Post ca8a3dd7be51414 has been created.' is present.]]>
+              <![CDATA[Assert the the img is loaded and visible.]]>
             </line>
             <line>
-              <![CDATA[Verify the 'View' is present in the work bench.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Edit Draft' is present in the work bench.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Revisions' is present in the work bench.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Schedule' is present in the work bench.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Revisions' link in the work bench.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Revisions dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the number of present revisions entries equals '1'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Schedule' tab.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'ca8a3dd7be51414 dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Add Scheduled Revision' link is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the scheduled revision table is empty.]]>
+              <![CDATA[Get the file id of image number 2.]]>
             </line>
             <line>
               <![CDATA[Click the 'Edit Draft' link in the work bench.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Edit Post ca8a3dd7be51414 dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'Edit Media Gallery cb00dc0b11ee46c dialog'.]]>
             </line>
             <line>
-              <![CDATA[Switch to the Synopsis frame.]]>
+              <![CDATA[Assert that img source of the Media Item contains 'HanSolo'.]]>
             </line>
             <line>
-              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+              <![CDATA[Assert the the img is loaded and visible.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Edit Post ca8a3dd7be51414 dialog'.]]>
+              <![CDATA[Get the unique url for image number 1.]]>
             </line>
             <line>
-              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+              <![CDATA[Assert that img source of the Media Item contains 'HanSolo'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Publishing Options' link.]]>
+              <![CDATA[Assert the the img is loaded and visible.]]>
             </line>
             <line>
-              <![CDATA[Enter 'Test Revision 2' in the 'Message for State Change' text area.]]>
+              <![CDATA[Get the unique url for image number 2.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save' button.]]>
+              <![CDATA[Click the 'Cancel' button.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'Revision state' is present in the work bench info block.]]>
+              <![CDATA[Assert that img source of the Media Item contains 'HanSolo'.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'Public' is present in the work bench info block.]]>
+              <![CDATA[Assert the the img is loaded and visible.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'Moderate' is present in the work bench info block.]]>
+              <![CDATA[Assert that img source of the Media Item contains 'HanSolo'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Revisions' link in the work bench.]]>
+              <![CDATA[Assert the the img is loaded and visible.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Revisions dialog'.]]>
+              <![CDATA[Verify the text 'Current Item' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Verify the number of present revisions entries equals '2'.]]>
+              <![CDATA[Verify the text 'HanSolo.jpg' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Schedule' tab.]]>
+              <![CDATA[Verify the text 'Current Item Index' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'ca8a3dd7be51414 dialog'.]]>
+              <![CDATA[Verify the text '0' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Add Scheduled Revision' link.]]>
+              <![CDATA[Verify the text 'Current Item ID' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'ca8a3dd7be51414 dialog'.]]>
+              <![CDATA[Verify the text '1525' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Select revision titled 'ca8a3dd7be51414'.]]>
+              <![CDATA[Verify the text 'Current Item URL' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Select 'Moderate to Published' from the 'Select operation' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '05/18/2014' in the 'Date' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '05:00 PM' in the 'Time' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Schedule' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'ca8a3dd7be51414 dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The scheduled revision operation has been saved' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'ca8a3dd7be51414 dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the scheduled text 'ca8a3dd7be51414' is present in the scheduled queue.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the scheduled text 'Moderate to Publish' is present in the scheduled queue.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the scheduled text '05/18/2014 - 05:00 PM' is present in the scheduled queue.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Run now' link for content item 'ca8a3dd7be51414' with action 'Moderate to Published'.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'ca8a3dd7be51414 dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the scheduled text 'Moderate to Published' is present in the scheduled queue.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the scheduled text 'Completed' is present in the scheduled queue.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Revision' link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Revisions dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'Revision was set from Draft to Published on 05/08/2014' is present on the page.]]>
+              <![CDATA[Verify the text 'http://update.qa5.nbcupublisher7.publisher7.com/node/491/item/1525' is present on the page.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- ScheduleToPublishContentByDateTime_Test -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.ScheduleToPublishContentByDateTime@2d258595]" name="stopSelenium" is-config="true" duration-ms="567" started-at="2014-05-08T09:24:25Z" finished-at="2014-05-08T09:24:25Z">
+        </test-method> <!-- DisplayUniqueURLEachAssetEditForm_Test -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.ProvideUniqueURLImages.DisplayUniqueURLEachAssetEditForm@4425fa0]" name="stopSelenium" is-config="true" duration-ms="568" started-at="2014-05-08T10:10:24Z" finished-at="2014-05-08T10:10:25Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=ScheduleToPublishContentByDateTime_Test status=SUCCESS method=ScheduleToPublishContentByDateTime.ScheduleToPublishContentByDateTime_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.ScheduleToPublishContentByDateTime@2d258595] output=Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]]>
+                <![CDATA[[TestResult name=DisplayUniqueURLEachAssetEditForm_Test status=SUCCESS method=DisplayUniqueURLEachAssetEditForm.DisplayUniqueURLEachAssetEditForm_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.ProvideUniqueURLImages.DisplayUniqueURLEachAssetEditForm@4425fa0] output=Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.ScheduleToPublishContentByDateTime@2d258595]" name="stopGridAndHub" is-config="true" duration-ms="368" started-at="2014-05-08T09:24:25Z" finished-at="2014-05-08T09:24:26Z">
+        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.ProvideUniqueURLImages.DisplayUniqueURLEachAssetEditForm@4425fa0]" name="stopGridAndHub" is-config="true" duration-ms="366" started-at="2014-05-08T10:10:25Z" finished-at="2014-05-08T10:10:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopGridAndHub -->
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.ScheduleToPublishContentByDateTime -->
+      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.ProvideUniqueURLImages.DisplayUniqueURLEachAssetEditForm -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

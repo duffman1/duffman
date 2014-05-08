@@ -17,6 +17,7 @@ import org.testng.Assert;
 import org.testng.Reporter;
 
 import com.nbcuni.test.publisher.common.AppLib;
+import com.nbcuni.test.publisher.common.Random;
 import com.nbcuni.test.publisher.pageobjects.Overlay;
 import com.nbcuni.test.publisher.common.Driver.Driver;
 
@@ -32,6 +33,7 @@ public class SelectFile {
     private Driver webDriver;
     private AppLib applib;
     private WebDriverWait wait;
+    private Random random;
     
     //PAGE OBJECT CONSTRUCTOR
     public SelectFile(Driver webDriver, AppLib applib) {
@@ -39,6 +41,7 @@ public class SelectFile {
         this.applib = applib;
         PageFactory.initElements(webDriver, this);
         wait = new WebDriverWait(webDriver, 10);
+        random = new Random();
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -212,6 +215,11 @@ public class SelectFile {
     	Reporter.log("Click the 'Upload' button.");
     	Upload_Btn.click();
     	
+    	try {
+    		webDriver.switchTo().alert().accept();
+    	}
+    	catch (Exception e) { }
+    	
     }
     
     public void DoucleClickFocalPointIndicator() throws Exception {
@@ -331,9 +339,25 @@ public class SelectFile {
     public void SelectDefaultCoverImg() throws Exception {
     	
     	this.SwitchToSelectFileFrm();
-    	this.EnterFilePath(applib.getPathToMedia() + "HanSolo.jpg");
+    	Integer randomInt = random.GetInteger(0, 3);
+        String defaultImgFile = "HanSolo1.jpg";
+        switch (randomInt) {
+        case 0:
+        	defaultImgFile = "HanSolo1.jpg";
+        	break;
+        case 1:
+        	defaultImgFile = "HanSolo2.jpg";
+        	break;
+        case 2:
+        	defaultImgFile = "HanSolo3.jpg";
+        	break;
+        case 3:
+        	defaultImgFile = "HanSolo4.jpg";
+        	break;
+        }
+    	this.EnterFilePath(applib.getPathToMedia() + defaultImgFile);
     	this.ClickUploadBtn();
-    	this.WaitForFileUploaded("HanSolo.jpg");
+    	this.WaitForFileUploaded(defaultImgFile);
     	this.ClickNextBtn();
     	this.ClickPublicLocalFilesRdb();
     	this.ClickNextBtn();
@@ -343,8 +367,5 @@ public class SelectFile {
     	overlay.switchToDefaultContent();
     }
     
-   
-    
-  
 }
 
