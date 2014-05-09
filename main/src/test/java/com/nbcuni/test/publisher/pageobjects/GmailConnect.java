@@ -41,7 +41,7 @@ public class GmailConnect {
     	store.close();
     }
     
-    public void VerifyAutoEmailRecieved (String subject) throws Exception {
+    public void VerifyAutoEmailRecieved(String subject) throws Exception {
     	
     	Reporter.log("Verify that the auto email titled '" + subject + "' arrives in the gmail inbox.");
     	ConnectToGmail();
@@ -49,24 +49,22 @@ public class GmailConnect {
     	Folder folder = store.getFolder("INBOX");
         folder.open(Folder.READ_ONLY);
     	
-        boolean msgRecieved = false;
         for (int second = 0; ; second++) {
             if (second >= 60) {
                 Assert.fail("Auto email was not received after timeout");
             }
             Message[] msg = folder.getMessages();
             if (msg[msg.length - 1].getSubject().equals(subject)) {
-            	msgRecieved = true;
+            	break;
             }
-            if (msgRecieved == true){ break;}
-            Thread.sleep(500);
+            Thread.sleep(1000);
         }
         folder.close(false);
         
         DisconnectFromGmail();
     }
     
-    public void DeleteAllAutoEmailsInInbox (String subject) throws Exception {
+    public void DeleteAllAutoEmailsInInbox(String subject) throws Exception {
     	
     	ConnectToGmail();
     	
