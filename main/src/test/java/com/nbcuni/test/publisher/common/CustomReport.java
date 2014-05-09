@@ -144,11 +144,18 @@ public class CustomReport extends EmailableReporter {
   	  		storeReportsTo = config.getPathToReports();
   	  	} catch (Exception e) { System.out.println("Failed to get configuration path to reports directory."); }
 	
-  	  	DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+  	  	DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy HH:mm");
   	  	Date date = new Date();
   	  	String fileExtension = dateFormat.format(date).replace("/", "");
   	  	fileExtension = fileExtension.replace(" ", "");
-  	  	fileExtension = fileExtension.replace(":", "") + ".html";
+  	  	String environmentTitle;
+  	  	if (config.getConfigValue("AppURL").contains("stage")) {
+  	  		environmentTitle = "STAGE-";
+  	  	}
+  	  	else {
+  	  	environmentTitle = "QA-";
+  	  	}
+  	  	fileExtension = environmentTitle + fileExtension.replace(":", "") + ".html";
   	  	String filePath = storeReportsTo + fileExtension;
 
   	  	try {

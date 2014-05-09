@@ -217,6 +217,7 @@ public class SelectFile {
     	
     	try {
     		webDriver.switchTo().alert().accept();
+    		Upload_Btn.click();
     	}
     	catch (Exception e) { }
     	
