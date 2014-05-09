@@ -115,12 +115,11 @@ public class Modules {
     			webDriver.executeScript("arguments[0].click();", SaveConfiguration_Btn);
     		}
     		
-    		webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
-        	
         	boolean additionalModulesRequired = false;
         	
         	overlay.switchToDefaultContent();
         	
+        	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
         	try {
         		overlay.SwitchToFrame("Some required modules must be enabled");
         		additionalModulesRequired = true;

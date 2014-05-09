@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="5" passed="5">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
+    <line>
+      <![CDATA[STEP 1]]>
+    </line>
     <line>
       <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
     </line>
@@ -12,6 +15,9 @@
     </line>
     <line>
       <![CDATA[Click the 'Login' button.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 2]]>
     </line>
     <line>
       <![CDATA[Click the 'Modules' menu link.]]>
@@ -20,1156 +26,134 @@
       <![CDATA[Switch to frame titled 'Modules'.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Sticky Edit Actions' in the 'Filter Name' text box.]]>
+      <![CDATA[Enter 'Media: ThePlatform mpx Reports' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Wait for the module titled 'Sticky Edit Actions' to appear in the list.]]>
+      <![CDATA[Wait for the module titled 'Media: ThePlatform mpx Reports' to appear in the list.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Devel' in the 'Filter Name' text box.]]>
+      <![CDATA[Check the 'Media: ThePlatform mpx Reports' check box.]]>
     </line>
     <line>
-      <![CDATA[Wait for the module titled 'Devel' to appear in the list.]]>
+      <![CDATA[Click the 'Save configuration' button.]]>
     </line>
     <line>
-      <![CDATA[Enter 'ImageField Focus' in the 'Filter Name' text box.]]>
+      <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
     </line>
     <line>
-      <![CDATA[Wait for the module titled 'ImageField Focus' to appear in the list.]]>
+      <![CDATA[Switch back to the 'Modules' frame.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Database logging' in the 'Filter Name' text box.]]>
+      <![CDATA[Switch to frame titled 'Modules'.]]>
     </line>
     <line>
-      <![CDATA[Wait for the module titled 'Database logging' to appear in the list.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Pub Post' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the module titled 'Pub Post' to appear in the list.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Pub Post' check box is checked.]]>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[SETUP - create new user and logout]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Login' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Login' button.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Login' button.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Login' button.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'People' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Add content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Add user' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Add content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Add content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Person' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Character Profile' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Post' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to frame titled 'Create Person'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '7d659a6784fe4f8' in the 'First name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter a random block of text in the 'Biography' text area.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'People dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Character Profile dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'c424c3daefe84d7@03da3eea83c84ac.com' in the 'Username' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to frame titled 'Create Person'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'c424c3daefe84d7@03da3eea83c84ac.com' in the 'E-mail address' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Cover Photo' Select button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Title' is present as a required field.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '467d69a5081546e' in the 'Character First Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Body' is present as a required field.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Publishing Options' link.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Moderation State' is present as a required field.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
-    </line>
-    <line>
-      <![CDATA[Click the Cover Photo 'Select' button.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'be0c5dd9a57e44e' in the 'Title' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the select file frame.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'pa55word' in the 'Confirm password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the file path for file upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Upload' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the Synopsis frame.]]>
-    </line>
-    <line>
-      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
-    </line>
-    <line>
-      <![CDATA[Check the 'editor' check box.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '5a1db847aed24dd' in the 'First Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '48ee3b9cbe5d445' in the 'Last Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Create new account' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Cover' select button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the select file frame.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the file path for file upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Upload' button.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the select file frame.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the file path for file upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Upload' button.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the file image 'HanSolo' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'A welcome message with further instructions has been e-mailed to the new user c424c3daefe84d7@03da3eea83c84ac.com.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Logout' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the file image 'HanSolo' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the file image 'HanSolo' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to frame titled 'Create Person'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 1]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'c424c3daefe84d7@03da3eea83c84ac.com' in the 'Email Address' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Login' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to frame titled 'Create Character Profile'.]]>
-    </line>
-    <line>
-      <![CDATA[Assert that img source of the Cover Photo contains 'HanSolo'.]]>
-    </line>
-    <line>
-      <![CDATA[Assert the the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 2]]>
-    </line>
-    <line>
-      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
-    </line>
-    <line>
-      <![CDATA[Click the activer user menu link for logged in user 'c424c3daefe84d7@03da3eea83c84ac.com'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Publishing Options' link.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Person 7d659a6784fe4f8 has been created.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Edit' link in the work bench.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Character Profile 467d69a5081546e has been created.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'c424c3daefe84d7@03da3eea83c84ac.com dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Post be0c5dd9a57e44e has been created.' is present.]]>
     </line>
     <line>
       <![CDATA[STEP 3]]>
     </line>
     <line>
-      <![CDATA[Enter ' ' in the 'Password' text box.]]>
+      <![CDATA[Mouse over the 'Configuration' menu link.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'Draft' is present in the work bench info block.]]>
+      <![CDATA[Mouse over the 'Media' menu link.]]>
     </line>
     <line>
-      <![CDATA[Verify that password strength message 'The password does not include enough variation to be secure.' is present.]]>
+      <![CDATA[Mouse over the 'Media: thePlatform mpx settings' menu link.]]>
     </line>
     <line>
-      <![CDATA[Verify that password strength message 'Password must contain at least 2 digits.' is present.]]>
+      <![CDATA[Click the 'Media: thePlatform MPX Status (BETA)' menu link.]]>
     </line>
     <line>
-      <![CDATA[Verify that password strength message 'Password must be at least 8 characters in length.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that password strength message 'Password must begin and end with a letter.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that password strength message 'Password must contain at least one lowercase character.' is present.]]>
+      <![CDATA[Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.]]>
     </line>
     <line>
       <![CDATA[STEP 4]]>
     </line>
     <line>
-      <![CDATA[Enter 'ABCDEFG1' in the 'Password' text box.]]>
+      <![CDATA[Verify the text 'Total Videos Ingested:' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Content' menu link.]]>
+      <![CDATA[Verify the text 'View all videos here.' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Verify that password strength message 'The password does not include enough variation to be secure.' is present.]]>
+      <![CDATA[Verify the text 'Total Players Ingested:' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Verify that password strength message 'Password must contain at least 2 digits.' is present.]]>
+      <![CDATA[Verify the text 'View all players here.' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Verify that password strength message 'Password must begin and end with a letter.' is present.]]>
+      <![CDATA[Verify the text 'Videos Updated Last Cron' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Verify that password strength message 'Password must contain at least one lowercase character.' is present.]]>
+      <![CDATA[Verify the text 'Players Updated Last Cron' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Verify that password strength message 'Password must be at least 8 characters in length.' is not present.]]>
+      <![CDATA[Verify the text 'Total Videos Queued for Ingestion' is present on the page.]]>
     </line>
     <line>
       <![CDATA[STEP 5]]>
     </line>
     <line>
-      <![CDATA[Enter 'ABCDEF11' in the 'Password' text box.]]>
+      <![CDATA[Verify the text 'Successfully signed into account "DB TV" (2312945284).' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Verify that password strength message 'The password does not include enough variation to be secure.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that password strength message 'Password must begin and end with a letter.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that password strength message 'Password must contain at least one lowercase character.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Add content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that password strength message 'Password must be at least 8 characters in length.' is not present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that password strength message 'Password must contain at least 2 digits.' is not present.]]>
+      <![CDATA[Click the 'VIDEO UPDATES TO BE PROCESSED DURING THE NEXT CRON RUN' link.]]>
     </line>
     <line>
       <![CDATA[STEP 6]]>
     </line>
     <line>
-      <![CDATA[Enter 'ABCDE11H' in the 'Password' text box.]]>
+      <![CDATA[Note the 'Total Videos Ingested' count which is '129'.]]>
     </line>
     <line>
-      <![CDATA[Verify that password strength message 'The password does not include enough variation to be secure.' is present.]]>
+      <![CDATA[Note the 'Total Players Ingested' count which is '66'.]]>
     </line>
     <line>
-      <![CDATA[Verify that password strength message 'Password must contain at least one lowercase character.' is present.]]>
+      <![CDATA[Note the 'Total Videos Queued for Ingestion' count which is '0'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Post' menu link.]]>
+      <![CDATA[Note the 'Videos Updated Last Cron' count which is '0'.]]>
     </line>
     <line>
-      <![CDATA[Verify that password strength message 'Password must be at least 8 characters in length.' is not present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that password strength message 'Password must contain at least 2 digits.' is not present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that password strength message 'Password must begin and end with a letter.' is not present.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 7]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'ABcDE11H' in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the password strength container is not present.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 8]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'c424c3daefe84d7@03da3eea83c84ac.com' in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that password strength message 'The password does not include enough variation to be secure.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that password strength message 'Password must not contain the username.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 9]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'ABcDE11H' in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'aBcDE11H' in the 'Confirm password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Verify password match text equals 'no'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 10]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'pa55word' in the 'Current password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'A' in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'A' in the 'Confirm password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 11]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'pa55word' in the 'Current password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'pa555word' in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'pa555word' in the 'Confirm password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Verify password match text equals 'yes'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Title' is present as a required field.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Body' is present as a required field.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The changes have been saved.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Publishing Options' link.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Moderation State' is present as a required field.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'a73f6305ca0544c' in the 'Title' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the Synopsis frame.]]>
-    </line>
-    <line>
-      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 12]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'pa555word' in the 'Current password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'pa555!@#$%^&*word' in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'pa555!@#$%^&*word' in the 'Confirm password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Verify password match text equals 'yes'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The changes have been saved.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 13]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Cover' select button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Logout' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the select file frame.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the file path for file upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Upload' button.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Login' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the file image 'HanSolo' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Configuration' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'People' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Password policies' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'List' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Publishing Options' link.]]>
-    </line>
-    <line>
-      <![CDATA[Select 'Review' from the 'Moderation State' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Password policies dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Post a73f6305ca0544c has been created.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'view' link.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'Review' is present in the work bench info block.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Add content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Post' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'NBCU Password Policy dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'Expiration' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text '365' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Title' is present as a required field.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Body' is present as a required field.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Publishing Options' link.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Moderation State' is present as a required field.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'aa7f4ea792a2480' in the 'Title' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the Synopsis frame.]]>
-    </line>
-    <line>
-      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Cover' select button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the select file frame.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the file path for file upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Upload' button.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the file image 'HanSolo' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreatePost_TC1048.png ]]>
-    </line>
-    <line>
-      <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreatePost_TC1048.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreatePost_TC1048.png' height='500' width='500'/> </a>]]>
-    </line>
-    <line>
-      <![CDATA[Cache was cleared on test failure]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Login' button.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Add content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Post' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Title' is present as a required field.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Body' is present as a required field.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Publishing Options' link.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Moderation State' is present as a required field.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '7d3c894355c248e' in the 'Title' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the Synopsis frame.]]>
-    </line>
-    <line>
-      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Cover' select button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the select file frame.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the file path for file upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Upload' button.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the file image 'HanSolo' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Publishing Options' link.]]>
-    </line>
-    <line>
-      <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Post 7d3c894355c248e has been created.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'Draft' is present in the work bench info block.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Add content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Post' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Title' is present as a required field.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Body' is present as a required field.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Publishing Options' link.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Moderation State' is present as a required field.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '7edb2f238f38410' in the 'Title' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the Synopsis frame.]]>
-    </line>
-    <line>
-      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Cover' select button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the select file frame.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the file path for file upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Upload' button.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the file image 'HanSolo' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Publishing Options' link.]]>
-    </line>
-    <line>
-      <![CDATA[Select 'Review' from the 'Moderation State' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Post 7edb2f238f38410 has been created.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'Review' is present in the work bench info block.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Add content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Post' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Title' is present as a required field.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Body' is present as a required field.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Publishing Options' link.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Moderation State' is present as a required field.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '25e6d861155745d' in the 'Title' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the Synopsis frame.]]>
-    </line>
-    <line>
-      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Cover' select button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the select file frame.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the file path for file upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Upload' button.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the file image 'HanSolo' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Publishing Options' link.]]>
-    </line>
-    <line>
-      <![CDATA[Select 'Published' from the 'Moderation State' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Post 25e6d861155745d has been created.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'Published' is present in the work bench info block.]]>
+      <![CDATA[Note the 'Total Video Updates Waiting to be Processed' count which is '10'.]]>
     </line>
   </reporter-output>
-  <suite name="Pub 7 Concurrent Suite" duration-ms="219185" started-at="2014-05-09T16:06:58Z" finished-at="2014-05-09T16:10:37Z">
+  <suite name="Default suite" duration-ms="37109" started-at="2014-05-09T18:47:30Z" finished-at="2014-05-09T18:48:07Z">
     <groups>
+      <group name="mpx">
+        <method signature="MPXReportingBeta.MPXReportingBeta_TC3085()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.MPXReporting.MPXReportingBeta@461a5d57]" name="MPXReportingBeta_TC3085" class="com.nbcuni.test.publisher.tests.Video.MPXReporting.MPXReportingBeta"/>
+      </group> <!-- mpx -->
       <group name="full">
-        <method signature="CreateCharacterProfile.CreateCharacterProfile_TC1041()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@72bbffd]" name="CreateCharacterProfile_TC1041" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile"/>
-        <method signature="CreatePerson.CreatePerson_TC1044()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson@6175c6a4]" name="CreatePerson_TC1044" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson"/>
-        <method signature="CreatePost.CreatePost_TC1048()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost@48caff01]" name="CreatePost_TC1048" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost"/>
-        <method signature="PasswordRules.PasswordRules_TC2185()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules@7b446af8]" name="PasswordRules_TC2185" class="com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules"/>
+        <method signature="MPXReportingBeta.MPXReportingBeta_TC3085()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.MPXReporting.MPXReportingBeta@461a5d57]" name="MPXReportingBeta_TC3085" class="com.nbcuni.test.publisher.tests.Video.MPXReporting.MPXReportingBeta"/>
       </group> <!-- full -->
+      <group name="smoke">
+        <method signature="MPXReportingBeta.MPXReportingBeta_TC3085()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.MPXReporting.MPXReportingBeta@461a5d57]" name="MPXReportingBeta_TC3085" class="com.nbcuni.test.publisher.tests.Video.MPXReporting.MPXReportingBeta"/>
+      </group> <!-- smoke -->
     </groups>
-    <test name="All Concurrent Web Tests" duration-ms="219185" started-at="2014-05-09T16:06:58Z" finished-at="2014-05-09T16:10:37Z">
-      <class name="com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules">
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules@7b446af8]" name="startSelenium" is-config="true" duration-ms="4566" started-at="2014-05-09T12:06:58Z" finished-at="2014-05-09T12:07:03Z">
+    <test name="Default test" duration-ms="37109" started-at="2014-05-09T18:47:30Z" finished-at="2014-05-09T18:48:07Z">
+      <class name="com.nbcuni.test.publisher.tests.Video.MPXReporting.MPXReportingBeta">
+        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.MPXReporting.MPXReportingBeta@461a5d57]" name="startGridAndHub" is-config="true" duration-ms="12310" started-at="2014-05-09T14:47:18Z" finished-at="2014-05-09T14:47:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startGridAndHub -->
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.MPXReporting.MPXReportingBeta@461a5d57]" name="startSelenium" is-config="true" duration-ms="2503" started-at="2014-05-09T14:47:30Z" finished-at="2014-05-09T14:47:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="PasswordRules_TC2185()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules@7b446af8]" name="PasswordRules_TC2185" duration-ms="107433" started-at="2014-05-09T12:07:03Z" finished-at="2014-05-09T12:08:50Z">
+        <test-method status="PASS" signature="MPXReportingBeta_TC3085()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.MPXReporting.MPXReportingBeta@461a5d57]" name="MPXReportingBeta_TC3085" duration-ms="34025" started-at="2014-05-09T14:47:33Z" finished-at="2014-05-09T14:48:07Z">
           <reporter-output>
             <line>
-              <![CDATA[SETUP - create new user and logout]]>
+              <![CDATA[STEP 1]]>
             </line>
             <line>
               <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
             </line>
             <line>
               <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Login' button.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'People' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Add user' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'People dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'c424c3daefe84d7@03da3eea83c84ac.com' in the 'Username' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'c424c3daefe84d7@03da3eea83c84ac.com' in the 'E-mail address' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa55word' in the 'Confirm password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Check the 'editor' check box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '5a1db847aed24dd' in the 'First Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '48ee3b9cbe5d445' in the 'Last Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Create new account' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'A welcome message with further instructions has been e-mailed to the new user c424c3daefe84d7@03da3eea83c84ac.com.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Logout' button.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 1]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'c424c3daefe84d7@03da3eea83c84ac.com' in the 'Email Address' text box.]]>
             </line>
             <line>
               <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
@@ -1181,885 +165,125 @@
               <![CDATA[STEP 2]]>
             </line>
             <line>
-              <![CDATA[Click the activer user menu link for logged in user 'c424c3daefe84d7@03da3eea83c84ac.com'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Edit' link in the work bench.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'c424c3daefe84d7@03da3eea83c84ac.com dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 3]]>
-            </line>
-            <line>
-              <![CDATA[Enter ' ' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'The password does not include enough variation to be secure.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'Password must contain at least 2 digits.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'Password must be at least 8 characters in length.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'Password must begin and end with a letter.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'Password must contain at least one lowercase character.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 4]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'ABCDEFG1' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'The password does not include enough variation to be secure.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'Password must contain at least 2 digits.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'Password must begin and end with a letter.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'Password must contain at least one lowercase character.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'Password must be at least 8 characters in length.' is not present.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 5]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'ABCDEF11' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'The password does not include enough variation to be secure.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'Password must begin and end with a letter.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'Password must contain at least one lowercase character.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'Password must be at least 8 characters in length.' is not present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'Password must contain at least 2 digits.' is not present.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 6]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'ABCDE11H' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'The password does not include enough variation to be secure.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'Password must contain at least one lowercase character.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'Password must be at least 8 characters in length.' is not present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'Password must contain at least 2 digits.' is not present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'Password must begin and end with a letter.' is not present.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 7]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'ABcDE11H' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the password strength container is not present.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 8]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'c424c3daefe84d7@03da3eea83c84ac.com' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'The password does not include enough variation to be secure.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'Password must not contain the username.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 9]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'ABcDE11H' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'aBcDE11H' in the 'Confirm password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Verify password match text equals 'no'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 10]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa55word' in the 'Current password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'A' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'A' in the 'Confirm password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 11]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa55word' in the 'Current password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa555word' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa555word' in the 'Confirm password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Verify password match text equals 'yes'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The changes have been saved.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 12]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa555word' in the 'Current password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa555!@#$%^&*word' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa555!@#$%^&*word' in the 'Confirm password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Verify password match text equals 'yes'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The changes have been saved.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 13]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Logout' button.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Login' button.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Configuration' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'People' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Password policies' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'List' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Password policies dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'view' link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'NBCU Password Policy dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'Expiration' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text '365' is present on the page.]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- PasswordRules_TC2185 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules@7b446af8]" name="stopSelenium" is-config="true" duration-ms="565" started-at="2014-05-09T12:08:50Z" finished-at="2014-05-09T12:08:51Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=PasswordRules_TC2185 status=SUCCESS method=PasswordRules.PasswordRules_TC2185()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules@7b446af8] output=SETUP - create new user and logout]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- stopSelenium -->
-      </class> <!-- com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules -->
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile">
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@72bbffd]" name="startSelenium" is-config="true" duration-ms="5128" started-at="2014-05-09T12:06:58Z" finished-at="2014-05-09T12:07:03Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="CreateCharacterProfile_TC1041()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@72bbffd]" name="CreateCharacterProfile_TC1041" duration-ms="78982" started-at="2014-05-09T12:07:03Z" finished-at="2014-05-09T12:08:22Z">
-          <reporter-output>
-            <line>
-              <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Login' button.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Add content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Character Profile' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Character Profile dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '467d69a5081546e' in the 'Character First Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the Cover Photo 'Select' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the select file frame.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the file path for file upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Upload' button.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Public Local Files' radio button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the file image 'HanSolo' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to frame titled 'Create Character Profile'.]]>
-            </line>
-            <line>
-              <![CDATA[Assert that img source of the Cover Photo contains 'HanSolo'.]]>
-            </line>
-            <line>
-              <![CDATA[Assert the the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Character Profile 467d69a5081546e has been created.' is present.]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- CreateCharacterProfile_TC1041 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@72bbffd]" name="stopSelenium" is-config="true" duration-ms="596" started-at="2014-05-09T12:08:22Z" finished-at="2014-05-09T12:08:23Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=CreateCharacterProfile_TC1041 status=SUCCESS method=CreateCharacterProfile.CreateCharacterProfile_TC1041()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@72bbffd] output=Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- stopSelenium -->
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile -->
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost">
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost@48caff01]" name="startSelenium" is-config="true" duration-ms="5281" started-at="2014-05-09T12:06:58Z" finished-at="2014-05-09T12:07:04Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost@48caff01]" name="stopSelenium" is-config="true" duration-ms="933" started-at="2014-05-09T12:09:20Z" finished-at="2014-05-09T12:09:21Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=CreatePost_TC1048 status=FAILURE method=CreatePost.CreatePost_TC1048()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost@48caff01] output=Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost@48caff01]" name="startSelenium" is-config="true" duration-ms="2090" started-at="2014-05-09T12:09:21Z" finished-at="2014-05-09T12:09:23Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="CreatePost_TC1048()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost@48caff01]" name="CreatePost_TC1048" duration-ms="74137" started-at="2014-05-09T12:09:23Z" finished-at="2014-05-09T12:10:37Z">
-          <reporter-output>
-            <line>
-              <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Login' button.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Add content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Post' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Title' is present as a required field.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Body' is present as a required field.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Publishing Options' link.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Moderation State' is present as a required field.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '7d3c894355c248e' in the 'Title' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the Synopsis frame.]]>
-            </line>
-            <line>
-              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Cover' select button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the select file frame.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the file path for file upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Upload' button.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Public Local Files' radio button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the file image 'HanSolo' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Publishing Options' link.]]>
-            </line>
-            <line>
-              <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Post 7d3c894355c248e has been created.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'Draft' is present in the work bench info block.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Add content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Post' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Title' is present as a required field.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Body' is present as a required field.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Publishing Options' link.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Moderation State' is present as a required field.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '7edb2f238f38410' in the 'Title' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the Synopsis frame.]]>
-            </line>
-            <line>
-              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Cover' select button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the select file frame.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the file path for file upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Upload' button.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Public Local Files' radio button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the file image 'HanSolo' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Publishing Options' link.]]>
-            </line>
-            <line>
-              <![CDATA[Select 'Review' from the 'Moderation State' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Post 7edb2f238f38410 has been created.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'Review' is present in the work bench info block.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Add content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Post' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Title' is present as a required field.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Body' is present as a required field.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Publishing Options' link.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Moderation State' is present as a required field.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '25e6d861155745d' in the 'Title' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the Synopsis frame.]]>
-            </line>
-            <line>
-              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Cover' select button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the select file frame.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the file path for file upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Upload' button.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Public Local Files' radio button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the file image 'HanSolo' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Publishing Options' link.]]>
-            </line>
-            <line>
-              <![CDATA[Select 'Published' from the 'Moderation State' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Post 25e6d861155745d has been created.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'Published' is present in the work bench info block.]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- CreatePost_TC1048 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost@48caff01]" name="stopSelenium" is-config="true" duration-ms="568" started-at="2014-05-09T12:10:37Z" finished-at="2014-05-09T12:10:37Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=CreatePost_TC1048 status=SUCCESS method=CreatePost.CreatePost_TC1048()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost@48caff01] output=Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- stopSelenium -->
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost -->
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson">
-        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson@6175c6a4]" name="startGridAndHub" is-config="true" duration-ms="5415" started-at="2014-05-09T12:06:53Z" finished-at="2014-05-09T12:06:58Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startGridAndHub -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson@6175c6a4]" name="startSelenium" is-config="true" duration-ms="5205" started-at="2014-05-09T12:06:58Z" finished-at="2014-05-09T12:07:04Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="CreatePerson_TC1044()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson@6175c6a4]" name="CreatePerson_TC1044" duration-ms="74629" started-at="2014-05-09T12:07:04Z" finished-at="2014-05-09T12:08:18Z">
-          <reporter-output>
-            <line>
-              <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Login' button.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Add content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Person' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to frame titled 'Create Person'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '7d659a6784fe4f8' in the 'First name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter a random block of text in the 'Biography' text area.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to frame titled 'Create Person'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Cover Photo' Select button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the select file frame.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the file path for file upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Upload' button.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Public Local Files' radio button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the file image 'HanSolo' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to frame titled 'Create Person'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Person 7d659a6784fe4f8 has been created.' is present.]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- CreatePerson_TC1044 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson@6175c6a4]" name="stopSelenium" is-config="true" duration-ms="583" started-at="2014-05-09T12:08:18Z" finished-at="2014-05-09T12:08:19Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=CreatePerson_TC1044 status=SUCCESS method=CreatePerson.CreatePerson_TC1044()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson@6175c6a4] output=Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson@6175c6a4]" name="stopGridAndHub" is-config="true" duration-ms="409" started-at="2014-05-09T12:10:37Z" finished-at="2014-05-09T12:10:38Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- stopGridAndHub -->
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson -->
-    </test> <!-- All Concurrent Web Tests -->
-  </suite> <!-- Pub 7 Concurrent Suite -->
-  <suite name="Pub 7 Consecutive Suite" duration-ms="36730" started-at="2014-05-09T16:06:16Z" finished-at="2014-05-09T16:06:52Z">
-    <groups>
-      <group name="mpx">
-        <method signature="TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@6926e27]" name="TestSetup_Test" class="com.nbcuni.test.publisher.tests.Setup.TestSetup"/>
-      </group> <!-- mpx -->
-      <group name="full">
-        <method signature="TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@6926e27]" name="TestSetup_Test" class="com.nbcuni.test.publisher.tests.Setup.TestSetup"/>
-      </group> <!-- full -->
-      <group name="smoke">
-        <method signature="TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@6926e27]" name="TestSetup_Test" class="com.nbcuni.test.publisher.tests.Setup.TestSetup"/>
-      </group> <!-- smoke -->
-    </groups>
-    <test name="All Consecutive Web Tests" duration-ms="36730" started-at="2014-05-09T16:06:16Z" finished-at="2014-05-09T16:06:52Z">
-      <class name="com.nbcuni.test.publisher.tests.Setup.TestSetup">
-        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@6926e27]" name="startGridAndHub" is-config="true" duration-ms="11825" started-at="2014-05-09T12:06:04Z" finished-at="2014-05-09T12:06:16Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startGridAndHub -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@6926e27]" name="startSelenium" is-config="true" duration-ms="2470" started-at="2014-05-09T12:06:16Z" finished-at="2014-05-09T12:06:18Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@6926e27]" name="TestSetup_Test" duration-ms="33679" started-at="2014-05-09T12:06:18Z" finished-at="2014-05-09T12:06:52Z">
-          <reporter-output>
-            <line>
-              <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Login' button.]]>
-            </line>
-            <line>
               <![CDATA[Click the 'Modules' menu link.]]>
             </line>
             <line>
               <![CDATA[Switch to frame titled 'Modules'.]]>
             </line>
             <line>
-              <![CDATA[Enter 'Sticky Edit Actions' in the 'Filter Name' text box.]]>
+              <![CDATA[Enter 'Media: ThePlatform mpx Reports' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Wait for the module titled 'Sticky Edit Actions' to appear in the list.]]>
+              <![CDATA[Wait for the module titled 'Media: ThePlatform mpx Reports' to appear in the list.]]>
             </line>
             <line>
-              <![CDATA[Enter 'Devel' in the 'Filter Name' text box.]]>
+              <![CDATA[Check the 'Media: ThePlatform mpx Reports' check box.]]>
             </line>
             <line>
-              <![CDATA[Wait for the module titled 'Devel' to appear in the list.]]>
+              <![CDATA[Click the 'Save configuration' button.]]>
             </line>
             <line>
-              <![CDATA[Enter 'ImageField Focus' in the 'Filter Name' text box.]]>
+              <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
             </line>
             <line>
-              <![CDATA[Wait for the module titled 'ImageField Focus' to appear in the list.]]>
+              <![CDATA[Switch back to the 'Modules' frame.]]>
             </line>
             <line>
-              <![CDATA[Enter 'Database logging' in the 'Filter Name' text box.]]>
+              <![CDATA[Switch to frame titled 'Modules'.]]>
             </line>
             <line>
-              <![CDATA[Wait for the module titled 'Database logging' to appear in the list.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Pub Post' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the module titled 'Pub Post' to appear in the list.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Pub Post' check box is checked.]]>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
             </line>
             <line>
               <![CDATA[Click the 'Close Overlay X'.]]>
             </line>
+            <line>
+              <![CDATA[STEP 3]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Configuration' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Media' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Media: thePlatform mpx settings' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Media: thePlatform MPX Status (BETA)' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 4]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Total Videos Ingested:' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'View all videos here.' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Total Players Ingested:' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'View all players here.' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Videos Updated Last Cron' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Players Updated Last Cron' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Total Videos Queued for Ingestion' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 5]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Successfully signed into account "DB TV" (2312945284).' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'VIDEO UPDATES TO BE PROCESSED DURING THE NEXT CRON RUN' link.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 6]]>
+            </line>
+            <line>
+              <![CDATA[Note the 'Total Videos Ingested' count which is '129'.]]>
+            </line>
+            <line>
+              <![CDATA[Note the 'Total Players Ingested' count which is '66'.]]>
+            </line>
+            <line>
+              <![CDATA[Note the 'Total Videos Queued for Ingestion' count which is '0'.]]>
+            </line>
+            <line>
+              <![CDATA[Note the 'Videos Updated Last Cron' count which is '0'.]]>
+            </line>
+            <line>
+              <![CDATA[Note the 'Total Video Updates Waiting to be Processed' count which is '10'.]]>
+            </line>
           </reporter-output>
-        </test-method> <!-- TestSetup_Test -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@6926e27]" name="stopSelenium" is-config="true" duration-ms="571" started-at="2014-05-09T12:06:52Z" finished-at="2014-05-09T12:06:52Z">
+        </test-method> <!-- MPXReportingBeta_TC3085 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Video.MPXReporting.MPXReportingBeta@461a5d57]" name="stopSelenium" is-config="true" duration-ms="569" started-at="2014-05-09T14:48:07Z" finished-at="2014-05-09T14:48:07Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=TestSetup_Test status=SUCCESS method=TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@6926e27] output=Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]]>
+                <![CDATA[[TestResult name=MPXReportingBeta_TC3085 status=SUCCESS method=MPXReportingBeta.MPXReportingBeta_TC3085()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.MPXReporting.MPXReportingBeta@461a5d57] output=STEP 1]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@6926e27]" name="stopGridAndHub" is-config="true" duration-ms="372" started-at="2014-05-09T12:06:53Z" finished-at="2014-05-09T12:06:53Z">
+        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.MPXReporting.MPXReportingBeta@461a5d57]" name="stopGridAndHub" is-config="true" duration-ms="366" started-at="2014-05-09T14:48:07Z" finished-at="2014-05-09T14:48:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopGridAndHub -->
-      </class> <!-- com.nbcuni.test.publisher.tests.Setup.TestSetup -->
-    </test> <!-- All Consecutive Web Tests -->
-  </suite> <!-- Pub 7 Consecutive Suite -->
-  <suite name="Publisher 7 Test Suites" duration-ms="0" started-at="2014-05-09T16:10:48Z" finished-at="2014-05-09T16:10:48Z">
-    <groups>
-    </groups>
-  </suite> <!-- Publisher 7 Test Suites -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Video.MPXReporting.MPXReportingBeta -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
