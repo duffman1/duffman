@@ -13,19 +13,11 @@ import java.util.List;
 public class CreateTVSeason extends ParentTest{
 	
     /*************************************************************************************
-     * TEST CASE 
-     * Step 1 - Login to Pub7<br>
-     * Step 2 - Navigate to create Tv Season page<br> 
-     * Step 3 - Verify that below fields are the mandatory ones and have star symbol marked on them:-  Basic Information tab:- 1) Title 2) Season 3) Synopsis  Publishhing Options tab:- 1) Moderation state<br>
-     * Step 4 - Enter value in Title, Season and Synopsis<br>
-     * Step 5 - Upload image in Cover media<br> 
-     * Step 6 - Click on publishing options tab and select draft in Moderation state<br> 
-     * Step 7 - Click on save<br>
-     * Step 8 - Repeat above steps with Moderation state value as Review and Published<br> 
-     * @throws Throwable No Return values are needed
+     * TEST CASE - TC1046
+     * Steps - https://rally1.rallydev.com/#/14663927728d/detail/testcase/17441493787
      *************************************************************************************/
     @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "smoke" })
-    public void CreateTVSeason_Test() throws Exception{
+    public void CreateTVSeason_TC1046() throws Exception{
     	
         //Step 1
         UserLogin userLogin = applib.openApplication();

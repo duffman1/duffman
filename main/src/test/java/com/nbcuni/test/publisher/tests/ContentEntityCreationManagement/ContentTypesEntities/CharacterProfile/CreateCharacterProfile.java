@@ -12,16 +12,11 @@ import com.nbcuni.test.publisher.pageobjects.Content.SelectFile;
 public class CreateCharacterProfile extends ParentTest{
 	
     /*************************************************************************************
-     * TEST CASE
-     * Step 1 - Login to publisher using drupal 1 credentials <br>
-     * Step 2 - Click on Content >> add new content >> Character Profile<br>
-     * Step 3 - Populate the valid value in the following mandatory fields: Character, First Name OR Character, Last Name<br>
-     * Step 4 - Click on "Select" button under Cover Media. Click on "Next" button twice, then click on "Save" button<br>
-     * Step 5 - Click on the "Save" button<br> 
-     * @throws Throwable No Return values are needed
+     * TEST CASE - TC1041
+     * Steps - https://rally1.rallydev.com/#/14663927728d/detail/testcase/17441338760
      *************************************************************************************/
     @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"})
-    public void CreateCharacterProfile_Test() throws Exception {
+    public void CreateCharacterProfile_TC1041() throws Exception {
          
         	//Step 1
         	UserLogin userLogin = applib.openApplication();

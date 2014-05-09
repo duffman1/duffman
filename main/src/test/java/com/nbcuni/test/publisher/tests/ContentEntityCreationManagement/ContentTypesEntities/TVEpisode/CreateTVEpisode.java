@@ -14,22 +14,11 @@ import java.util.List;
 public class CreateTVEpisode extends ParentTest{
 	
     /*************************************************************************************
-     * TEST CASE 
-     * Step 1 - Login to pub7<br>
-     * Step 1a - Add a new person
-     * Step 2 - Navigate to create TV Episode page<br> 
-     * Step 3 - Verify that below fields are the mandatory ones and have star symbol marked on them:-  Basic Information tab:- 1) Title 2) Episode 3) Synopsis  Publishhing Options tab:- 1) Moderation state<br>
-     * Step 4 - Enter value in Title, Episode and Synopsis<br>
-     * Step 5 - Upload image in Cover Media<br> 
-     * Step 6 - Click on Publishing options tab and select Draft in Moderation state<br>
-     * Step 7 - Click on the "Cast/Crew" vertical tab<br>
-     * Step 8 - Select any person and role value<br> 
-     * Step 9 - Click on save<br> 
-     * Step 10 - Repeat above steps with Moderation state value as Review and Published<br> 
-     * @throws Throwable No Return values are needed
+     * TEST CASE - TC1045
+     * Steps - https://rally1.rallydev.com/#/14663927728d/detail/testcase/17441340536
      *************************************************************************************/
-    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "smoke" })
-    public void CreateTVEpisode_Test() throws Exception{
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "smoke"})
+    public void CreateTVEpisode_TC1045() throws Exception {
          
         	//Step 1
         	UserLogin userLogin = applib.openApplication();

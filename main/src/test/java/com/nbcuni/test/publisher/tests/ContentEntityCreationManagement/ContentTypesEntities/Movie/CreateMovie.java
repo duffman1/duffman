@@ -11,29 +11,11 @@ import java.util.List;
 public class CreateMovie extends ParentTest{
 	
     /*************************************************************************************
-     * TEST CASE Character field should only appear when Role is selected as character
-     * Step 1 - Login to publisher using drupal 1 credentials <br>
-     * Step 2 - Click on "Content" >> "Add new content" >> "Character Profile"
-     * Step 3 - Populate all required fields, and click on the "Save" button.
-     * Step 4 - Click on "Content" >> "Add new content" >> "Movie"<br>
-     * Step 5 - Click on "Cast/Crew" vertical tab<br>
-     * Step 6 - Verify that the field "Character" does not appear on the page<br>
-     * Step 7 - Select the following values in the "Role" field, one after another, and verify that the "Character" field does not appear:
-     * Contributor, Director, Executive Producer, Host, Judge, Producer, Self, Song Writer, Writer
-     * Step 8 - Select the value "Character" for field "Role" and verify that the field "Character" appears as expected<br>
-     * Step 9 - Click on "Content" >> "Add new content" >> "Person"<br>
-     * Step 10 - Populate all required fields and click the "Save" button<br>
-     * Step 11 - Click on "Content" >> "Add new content" >> "Movie"
-     * Step 12 - Click on "Cast/Crew" vertical tab<br>
-     * Step 13 - Populate the field "Person" with the title of the "Person" content type created in step 10. Select "Character" in te "Role" field and populate the "Character" field with the "Character" title created in step 3<br>
-     * Step 14 - Click on the "Basic Information" vertical tab, populate all required fields, and click on the "Save" button<br>
-     * Step 15 - Click on the "Edit" tab, then click on the "Cast/Crew" tab and verify that the values selected in step 13 are retained<br>
-     * Step 16 - Click on the "Publishing options" tab, select the "Moderation State" as "Published", uncheck the "Create new revision" checkbox, and click on the "Save" button<br>
-     * Step 17 - Log out of publisher 7<br>
-     * @throws Throwable No Return values are needed
+     * TEST CASE - TC1043
+     * Steps - https://rally1.rallydev.com/#/14663927728d/detail/testcase/17441339620
      *************************************************************************************/
     @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "smoke" })
-    public void CreateMovie_Test() throws Exception {
+    public void CreateMovie_TC1043() throws Exception {
          
         	//Step 1
         	UserLogin userLogin = applib.openApplication();

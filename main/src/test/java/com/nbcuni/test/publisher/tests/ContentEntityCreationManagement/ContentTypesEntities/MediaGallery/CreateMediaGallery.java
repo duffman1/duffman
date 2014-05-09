@@ -13,17 +13,11 @@ import com.nbcuni.test.publisher.pageobjects.Content.SelectFile;
 public class CreateMediaGallery extends ParentTest{
 	
     /*************************************************************************************
-     * TEST CASE Create Media Gallery
-     * Step 1 - Login to publisher using drupal 1 credentials <br>
-     * Step 2 - Click on "Content" >> "Add Content" >> "Media Gallery"<br>
-     * Step 3 - Populate the valid value in the following mandatory fields: "Title"<br>
-     * Step 4 - Click on "Select" button under "Cover Media", click on "Browse" button and choose the image from the local machine. Click on "Next" button twice then click on "Save" button.<br>
-     * Step 5 - Click on "Select media" button under "Media" items. Drag and drop 3 or more images from the local machine and click on "Next" button<br>
-     * Step 6 - Click on "Save" button<br> 
-     * @throws Throwable No Return values are needed
+     * TEST CASE - TC1042
+     * Steps - https://rally1.rallydev.com/#/14663927728d/detail/testcase/17441339377
      *************************************************************************************/
     @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full" })
-    public void CreateMediaGallery_Test() throws Exception{
+    public void CreateMediaGallery_TC1042() throws Exception{
         
         	//Step 1
         	UserLogin userLogin = applib.openApplication();

@@ -13,16 +13,11 @@ import com.nbcuni.test.publisher.pageobjects.Content.SelectFile;
 public class CreatePerson extends ParentTest{
 
     /*************************************************************************************
-     * TEST CASE 3106 Adding new custom content type
-     * Step 1 - Login to publisher using drupal 1 credentials <br>
-     * Step 2 - Click on Content --> Add content --> person<br>
-     * Step 3 - Populate the valid value in following mandatory fields: 'Character: First Name' or 'Character: Last Name' 'Biography'<br>
-	 * Step 4 - Click on 'Select' button under Cover Media, click on 'Browse' button and choose the image from the local machine. Click on 'Next' button twice then click on 'Save' button.<br>
-     * Step 5 - Click on 'Save' button.<br> 
-     * @throws Throwable No Return values are needed
+     * TEST CASE - TC1044
+     * Steps - https://rally1.rallydev.com/#/14663927728d/detail/testcase/17441340093
      *************************************************************************************/
     @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full" })
-    public void CreatePerson_Test() throws Exception{
+    public void CreatePerson_TC1044() throws Exception{
          
         	//Step 1
         	UserLogin userLogin = applib.openApplication();

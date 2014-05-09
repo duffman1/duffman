@@ -12,17 +12,11 @@ import org.testng.annotations.Test;
 public class EditContentMyWorkbench extends ParentTest{
 	
     /*************************************************************************************
-     * TEST CASE 
-     * Step 1 - Login as admin  Note: Code for this User Story was initially deployed to http://qa1stg.publisher.nbcuni.com/ .,
-	 * Step 2 - Create a post content item.
-	 * Step 3 - Navigate to 'My Workbench' in the admin menu.
-	 * Step 4 - Verify post data content item is present in the my work table.
-	 * Step 5 - Click the 'edit' link for the created post item.
-	 * Step 6 - Change state to 'review' and save item.
-	 * Step 7 - Verify content item saved and moderation state updated in my work table.
+     * TEST CASE - TC1394
+     * Steps - https://rally1.rallydev.com/#/14663927728d/detail/testcase/17766277487
      *************************************************************************************/
     @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"})
-    public void EditContentMyWorkbench_Test() throws Exception{
+    public void EditContentMyWorkbench_TC1394() throws Exception{
          
         	//Step 1
         	UserLogin userLogin = applib.openApplication();

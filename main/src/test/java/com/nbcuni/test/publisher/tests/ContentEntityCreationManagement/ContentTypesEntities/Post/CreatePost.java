@@ -14,19 +14,11 @@ import java.util.List;
 public class CreatePost extends ParentTest{
 	
     /*************************************************************************************
-     * TEST CASE 
-     * Step 1 - Login to Pub7 
-     * Step 1a - Navigate to create post page<br>
-     * Step 2 - Verify that below fields are the mandatory ones and have star symbol marked on them:-  Basic Information tab:- 1) Title 2) Body  Publishing Options tab:- 1) Moderation state<br>
-     * Step 3 - Enter value in Title and Body<br>
-     * Step 4 - Upload image in Cover Media.  
-     * Step 5 - Click on Publishing options tab and select Draft in Moderation state. 
-     * Step 6 - Click on save<br> 
-     * Step 7 - Repeat above steps with Moderation state value as Review and Published<br> 
-     * @throws Throwable No Return values are needed
+     * TEST CASE - TC1048
+     * Steps - https://rally1.rallydev.com/#/14663927728d/detail/testcase/17441495325
      *************************************************************************************/
-    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full" })
-    public void CreatePost_Test() throws Exception{
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"})
+    public void CreatePost_TC1048() throws Exception {
          
         	//Step 1
         	UserLogin userLogin = applib.openApplication();
