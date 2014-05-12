@@ -38,13 +38,11 @@ public class SendEmailReport {
             message.setRecipients(Message.RecipientType.TO,
             			InternetAddress.parse(config.getConfigValue("SendReportEmailAddress")));
             
-            String environment = config.getConfigValue("AppURL").replace("http://", "").replace(".nbcupublisher7.publisher7.com", "");
             if (!failedTestsCount.equals(0)) {
-            	message.setSubject("Test Automation Report - " + environment + " - Failed");
-                
+            	message.setSubject("Test Automation Report - Failed");
             }
             else {
-            	message.setSubject("Test Automation Report - " + environment + " - Passed");
+            	message.setSubject("Test Automation Report - Passed");
             }
             
             BodyPart messageBodyPart = new MimeBodyPart();

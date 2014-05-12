@@ -224,9 +224,11 @@ public class AddFile {
     		this.ClickTestMovieBtn();
     	}
     	else {
-    		this.EnterPathToFile_Win(applib.getPathToMedia());
-        	this.ClickGoBtn_Win();
-        	this.EnterFileName_Win("DefAutMed.m4v");
+    		if (sikuli.exists(this.getImagePath() + "FileUpload/DefaultVideo_Tmb.png", .9) == null) {
+    			this.EnterPathToFile_Win(applib.getPathToMedia());
+            	this.ClickGoBtn_Win();
+    		}
+    		this.EnterFileName_Win("DefAutMed.m4v");
     	}
     	this.ClickOpenBtn();
     }
