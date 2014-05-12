@@ -5,7 +5,7 @@
       <![CDATA[STEP 1]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
+      <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]>
     </line>
     <line>
       <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
@@ -23,31 +23,37 @@
       <![CDATA[Click the 'Modules' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to frame titled 'Modules'.]]>
+      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Media: ThePlatform mpx Reports' in the 'Filter Name' text box.]]>
+      <![CDATA[Enter 'Pub Ads' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Wait for the module titled 'Media: ThePlatform mpx Reports' to appear in the list.]]>
+      <![CDATA[Wait for the module titled 'Pub Ads' to appear in the list.]]>
     </line>
     <line>
-      <![CDATA[Check the 'Media: ThePlatform mpx Reports' check box.]]>
+      <![CDATA[Verify the 'Pub Ads' check box is checked.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
+      <![CDATA[Enter 'MPS' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
+      <![CDATA[Wait for the module titled 'MPS' to appear in the list.]]>
     </line>
     <line>
-      <![CDATA[Switch back to the 'Modules' frame.]]>
+      <![CDATA[Verify the 'MPS' check box is checked.]]>
     </line>
     <line>
-      <![CDATA[Switch to frame titled 'Modules'.]]>
+      <![CDATA[Enter 'DART' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+      <![CDATA[Wait for the module titled 'DART' to appear in the list.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Doubleclick for Publishers' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the module titled 'Doubleclick for Publishers' to appear in the list.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
@@ -56,101 +62,251 @@
       <![CDATA[STEP 3]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Configuration' menu link.]]>
+      <![CDATA[Mouse over the 'Reports' menu link.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Media' menu link.]]>
+      <![CDATA[Click the 'Status report' menu link.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Media: thePlatform mpx settings' menu link.]]>
+      <![CDATA[Switch to the active frame titled 'Status report dialog'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Media: thePlatform MPX Status (BETA)' menu link.]]>
+      <![CDATA[Verify the text 'Ad Tag Style' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.]]>
+      <![CDATA[Verify the text 'MPS' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
     </line>
     <line>
       <![CDATA[STEP 4]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'Total Videos Ingested:' is present on the page.]]>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'View all videos here.' is present on the page.]]>
+      <![CDATA[Mouse over the 'Add content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'Total Players Ingested:' is present on the page.]]>
+      <![CDATA[Click the 'Movie' menu link.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'View all players here.' is present on the page.]]>
+      <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'Videos Updated Last Cron' is present on the page.]]>
+      <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'Players Updated Last Cron' is present on the page.]]>
+      <![CDATA[Enter '3f6a8ecdf5c84d3' in the 'Title' text box.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'Total Videos Queued for Ingestion' is present on the page.]]>
+      <![CDATA[Switch to the Synopsis frame.]]>
+    </line>
+    <line>
+      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Cover' select button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the select file frame.]]>
+    </line>
+    <line>
+      <![CDATA[Enter the file path for file upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Upload' button.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Public Local Files' radio button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the file image 'HanSolo' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the img is loaded and visible.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Additional Information' link.]]>
+    </line>
+    <line>
+      <![CDATA[Select the 'Syndicated' from the 'Movie Type' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Select the 'G' from the 'Rating' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Select the 'Action' from the 'Primary Genre' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Movie 3f6a8ecdf5c84d3 has been created.' is present.]]>
     </line>
     <line>
       <![CDATA[STEP 5]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'Successfully signed into account "DB TV" (2312945284).' is present on the page.]]>
+      <![CDATA[Verify 'var mpscall = {'site':'install', 'path':'content/3f6a8ecdf5c84d3'}' is present in page source.]]>
     </line>
     <line>
-      <![CDATA[Click the 'VIDEO UPDATES TO BE PROCESSED DURING THE NEXT CRON RUN' link.]]>
+      <![CDATA[Verify 'var mpsopts = {'host':'install.qa5.nbcupublisher7.publisher7.com'}' is present in page source.]]>
     </line>
     <line>
-      <![CDATA[STEP 6]]>
+      <![CDATA[STEP 6 and STEP 7]]>
     </line>
     <line>
-      <![CDATA[Note the 'Total Videos Ingested' count which is '129'.]]>
+      <![CDATA[Verify 'var mps = mps || {}; mps.pagevars{"site":"install","title":"3f6a8ecdf5c84d3","path":"content\/3f6a8ecdf5c84d3","qs":"","cat":"content|3f6a8ecdf5c84d3"' is present in page source.]]>
     </line>
     <line>
-      <![CDATA[Note the 'Total Players Ingested' count which is '66'.]]>
+      <![CDATA[Verify '{"genre":"Action","movie-rating":"G","movie-types":"Syndicated"}' is present in page source.]]>
     </line>
     <line>
-      <![CDATA[Note the 'Total Videos Queued for Ingestion' count which is '0'.]]>
+      <![CDATA[STEP 8]]>
     </line>
     <line>
-      <![CDATA[Note the 'Videos Updated Last Cron' count which is '0'.]]>
+      <![CDATA[Verify 'a3VtdWQ9MQ==' is present in page source.]]>
     </line>
     <line>
-      <![CDATA[Note the 'Total Video Updates Waiting to be Processed' count which is '10'.]]>
+      <![CDATA[STEP 9]]>
+    </line>
+    <line>
+      <![CDATA[Verify 'document.write('<scr'+'ipt id="mps-ext-load" src="//'+mpsopts.host+'/fetch/ext/load-'+mpscall.site+'.js"></scr'+'ipt>')' is present in page source.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 10]]>
+    </line>
+    <line>
+      <![CDATA[Verify 'typeof(mps.writeFooter)=='function' && mps.writeFooter()' is present in page source.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 11]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Structure' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'MPS Blocks' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Add' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Add a new MPS block dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '39716b1f66ef492' in the 'Unique Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '33252b9001ec4fa' in the 'Block Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of '39716b1f66ef492 has been created.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 12]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Structure' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Blocks' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Select the block name '33252b9001ec4fa' from the 'Header' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save Blocks' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The block settings have been updated.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 13]]>
+    </line>
+    <line>
+      <![CDATA[Verify 'typeof(mps.getAd)=='function' && document.write(mps.getAd('39716b1f66ef492'))' is present in page source.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 14 - N/A]]>
+    </line>
+    <line>
+      <![CDATA[CLEANUP]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Structure' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Blocks' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Select the block name '33252b9001ec4fa' from the '- None -' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save Blocks' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="37109" started-at="2014-05-09T18:47:30Z" finished-at="2014-05-09T18:48:07Z">
+  <suite name="Default suite" duration-ms="70871" started-at="2014-05-12T14:06:48Z" finished-at="2014-05-12T14:07:59Z">
     <groups>
-      <group name="mpx">
-        <method signature="MPXReportingBeta.MPXReportingBeta_TC3085()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.MPXReporting.MPXReportingBeta@461a5d57]" name="MPXReportingBeta_TC3085" class="com.nbcuni.test.publisher.tests.Video.MPXReporting.MPXReportingBeta"/>
-      </group> <!-- mpx -->
       <group name="full">
-        <method signature="MPXReportingBeta.MPXReportingBeta_TC3085()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.MPXReporting.MPXReportingBeta@461a5d57]" name="MPXReportingBeta_TC3085" class="com.nbcuni.test.publisher.tests.Video.MPXReporting.MPXReportingBeta"/>
+        <method signature="ImplementMPS.ImplementMPS_TC2901()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@7dcecd26]" name="ImplementMPS_TC2901" class="com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS"/>
       </group> <!-- full -->
-      <group name="smoke">
-        <method signature="MPXReportingBeta.MPXReportingBeta_TC3085()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.MPXReporting.MPXReportingBeta@461a5d57]" name="MPXReportingBeta_TC3085" class="com.nbcuni.test.publisher.tests.Video.MPXReporting.MPXReportingBeta"/>
-      </group> <!-- smoke -->
     </groups>
-    <test name="Default test" duration-ms="37109" started-at="2014-05-09T18:47:30Z" finished-at="2014-05-09T18:48:07Z">
-      <class name="com.nbcuni.test.publisher.tests.Video.MPXReporting.MPXReportingBeta">
-        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.MPXReporting.MPXReportingBeta@461a5d57]" name="startGridAndHub" is-config="true" duration-ms="12310" started-at="2014-05-09T14:47:18Z" finished-at="2014-05-09T14:47:30Z">
+    <test name="Default test" duration-ms="70871" started-at="2014-05-12T14:06:48Z" finished-at="2014-05-12T14:07:59Z">
+      <class name="com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS">
+        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@7dcecd26]" name="startGridAndHub" is-config="true" duration-ms="11799" started-at="2014-05-12T10:06:36Z" finished-at="2014-05-12T10:06:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startGridAndHub -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.MPXReporting.MPXReportingBeta@461a5d57]" name="startSelenium" is-config="true" duration-ms="2503" started-at="2014-05-09T14:47:30Z" finished-at="2014-05-09T14:47:33Z">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@7dcecd26]" name="startSelenium" is-config="true" duration-ms="2440" started-at="2014-05-12T10:06:48Z" finished-at="2014-05-12T10:06:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="MPXReportingBeta_TC3085()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.MPXReporting.MPXReportingBeta@461a5d57]" name="MPXReportingBeta_TC3085" duration-ms="34025" started-at="2014-05-09T14:47:33Z" finished-at="2014-05-09T14:48:07Z">
+        <test-method status="PASS" signature="ImplementMPS_TC2901()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@7dcecd26]" name="ImplementMPS_TC2901" duration-ms="67849" started-at="2014-05-12T10:06:51Z" finished-at="2014-05-12T10:07:59Z">
           <reporter-output>
             <line>
               <![CDATA[STEP 1]]>
             </line>
             <line>
-              <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
+              <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]>
             </line>
             <line>
               <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
@@ -168,31 +324,37 @@
               <![CDATA[Click the 'Modules' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to frame titled 'Modules'.]]>
+              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
             </line>
             <line>
-              <![CDATA[Enter 'Media: ThePlatform mpx Reports' in the 'Filter Name' text box.]]>
+              <![CDATA[Enter 'Pub Ads' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Wait for the module titled 'Media: ThePlatform mpx Reports' to appear in the list.]]>
+              <![CDATA[Wait for the module titled 'Pub Ads' to appear in the list.]]>
             </line>
             <line>
-              <![CDATA[Check the 'Media: ThePlatform mpx Reports' check box.]]>
+              <![CDATA[Verify the 'Pub Ads' check box is checked.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
+              <![CDATA[Enter 'MPS' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
+              <![CDATA[Wait for the module titled 'MPS' to appear in the list.]]>
             </line>
             <line>
-              <![CDATA[Switch back to the 'Modules' frame.]]>
+              <![CDATA[Verify the 'MPS' check box is checked.]]>
             </line>
             <line>
-              <![CDATA[Switch to frame titled 'Modules'.]]>
+              <![CDATA[Enter 'DART' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+              <![CDATA[Wait for the module titled 'DART' to appear in the list.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Doubleclick for Publishers' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the module titled 'Doubleclick for Publishers' to appear in the list.]]>
             </line>
             <line>
               <![CDATA[Click the 'Close Overlay X'.]]>
@@ -201,89 +363,245 @@
               <![CDATA[STEP 3]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Configuration' menu link.]]>
+              <![CDATA[Mouse over the 'Reports' menu link.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Media' menu link.]]>
+              <![CDATA[Click the 'Status report' menu link.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Media: thePlatform mpx settings' menu link.]]>
+              <![CDATA[Switch to the active frame titled 'Status report dialog'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Media: thePlatform MPX Status (BETA)' menu link.]]>
+              <![CDATA[Verify the text 'Ad Tag Style' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.]]>
+              <![CDATA[Verify the text 'MPS' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
             </line>
             <line>
               <![CDATA[STEP 4]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'Total Videos Ingested:' is present on the page.]]>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'View all videos here.' is present on the page.]]>
+              <![CDATA[Mouse over the 'Add content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'Total Players Ingested:' is present on the page.]]>
+              <![CDATA[Click the 'Movie' menu link.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'View all players here.' is present on the page.]]>
+              <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'Videos Updated Last Cron' is present on the page.]]>
+              <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'Players Updated Last Cron' is present on the page.]]>
+              <![CDATA[Enter '3f6a8ecdf5c84d3' in the 'Title' text box.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'Total Videos Queued for Ingestion' is present on the page.]]>
+              <![CDATA[Switch to the Synopsis frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Cover' select button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the select file frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter the file path for file upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Upload' button.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Public Local Files' radio button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the file image 'HanSolo' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Additional Information' link.]]>
+            </line>
+            <line>
+              <![CDATA[Select the 'Syndicated' from the 'Movie Type' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Select the 'G' from the 'Rating' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Select the 'Action' from the 'Primary Genre' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Movie 3f6a8ecdf5c84d3 has been created.' is present.]]>
             </line>
             <line>
               <![CDATA[STEP 5]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'Successfully signed into account "DB TV" (2312945284).' is present on the page.]]>
+              <![CDATA[Verify 'var mpscall = {'site':'install', 'path':'content/3f6a8ecdf5c84d3'}' is present in page source.]]>
             </line>
             <line>
-              <![CDATA[Click the 'VIDEO UPDATES TO BE PROCESSED DURING THE NEXT CRON RUN' link.]]>
+              <![CDATA[Verify 'var mpsopts = {'host':'install.qa5.nbcupublisher7.publisher7.com'}' is present in page source.]]>
             </line>
             <line>
-              <![CDATA[STEP 6]]>
+              <![CDATA[STEP 6 and STEP 7]]>
             </line>
             <line>
-              <![CDATA[Note the 'Total Videos Ingested' count which is '129'.]]>
+              <![CDATA[Verify 'var mps = mps || {}; mps.pagevars{"site":"install","title":"3f6a8ecdf5c84d3","path":"content\/3f6a8ecdf5c84d3","qs":"","cat":"content|3f6a8ecdf5c84d3"' is present in page source.]]>
             </line>
             <line>
-              <![CDATA[Note the 'Total Players Ingested' count which is '66'.]]>
+              <![CDATA[Verify '{"genre":"Action","movie-rating":"G","movie-types":"Syndicated"}' is present in page source.]]>
             </line>
             <line>
-              <![CDATA[Note the 'Total Videos Queued for Ingestion' count which is '0'.]]>
+              <![CDATA[STEP 8]]>
             </line>
             <line>
-              <![CDATA[Note the 'Videos Updated Last Cron' count which is '0'.]]>
+              <![CDATA[Verify 'a3VtdWQ9MQ==' is present in page source.]]>
             </line>
             <line>
-              <![CDATA[Note the 'Total Video Updates Waiting to be Processed' count which is '10'.]]>
+              <![CDATA[STEP 9]]>
+            </line>
+            <line>
+              <![CDATA[Verify 'document.write('<scr'+'ipt id="mps-ext-load" src="//'+mpsopts.host+'/fetch/ext/load-'+mpscall.site+'.js"></scr'+'ipt>')' is present in page source.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 10]]>
+            </line>
+            <line>
+              <![CDATA[Verify 'typeof(mps.writeFooter)=='function' && mps.writeFooter()' is present in page source.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 11]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Structure' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'MPS Blocks' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Add' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Add a new MPS block dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '39716b1f66ef492' in the 'Unique Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '33252b9001ec4fa' in the 'Block Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of '39716b1f66ef492 has been created.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 12]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Structure' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Blocks' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Select the block name '33252b9001ec4fa' from the 'Header' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save Blocks' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The block settings have been updated.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 13]]>
+            </line>
+            <line>
+              <![CDATA[Verify 'typeof(mps.getAd)=='function' && document.write(mps.getAd('39716b1f66ef492'))' is present in page source.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 14 - N/A]]>
+            </line>
+            <line>
+              <![CDATA[CLEANUP]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Structure' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Blocks' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Select the block name '33252b9001ec4fa' from the '- None -' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save Blocks' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- MPXReportingBeta_TC3085 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Video.MPXReporting.MPXReportingBeta@461a5d57]" name="stopSelenium" is-config="true" duration-ms="569" started-at="2014-05-09T14:48:07Z" finished-at="2014-05-09T14:48:07Z">
+        </test-method> <!-- ImplementMPS_TC2901 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@7dcecd26]" name="stopSelenium" is-config="true" duration-ms="569" started-at="2014-05-12T10:07:59Z" finished-at="2014-05-12T10:07:59Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=MPXReportingBeta_TC3085 status=SUCCESS method=MPXReportingBeta.MPXReportingBeta_TC3085()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.MPXReporting.MPXReportingBeta@461a5d57] output=STEP 1]]]>
+                <![CDATA[[TestResult name=ImplementMPS_TC2901 status=SUCCESS method=ImplementMPS.ImplementMPS_TC2901()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@7dcecd26] output=STEP 1]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.MPXReporting.MPXReportingBeta@461a5d57]" name="stopGridAndHub" is-config="true" duration-ms="366" started-at="2014-05-09T14:48:07Z" finished-at="2014-05-09T14:48:08Z">
+        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@7dcecd26]" name="stopGridAndHub" is-config="true" duration-ms="367" started-at="2014-05-12T10:07:59Z" finished-at="2014-05-12T10:07:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopGridAndHub -->
-      </class> <!-- com.nbcuni.test.publisher.tests.Video.MPXReporting.MPXReportingBeta -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

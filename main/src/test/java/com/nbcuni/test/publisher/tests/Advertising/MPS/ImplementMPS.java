@@ -73,14 +73,32 @@ public class ImplementMPS extends ParentTest {
             overlay.switchToDefaultContent();
             contentParent.VerifyMessageStatus("Movie " + movieTitle + " has been created.");
             
-            Reporter.log("STEP 5 and 6 - awaiting input on dev for proper script to evaluate. Ignoring this step for the time being.");
-            //contentParent.VerifySourceInPage(Arrays.asList("var mps = mps || {}; mps.pagevars{\"site\":\"update\",\"title\":\"" + movieTitle + "", "{\"genre\":\"Action\",\"movie-rating\":\"G\",\"movie-types\":\"Syndicated\"},\"field\":[]}"));
+            Reporter.log("STEP 5");
+            String siteType;
+            if (config.getConfigValue("AppURL").contains("update")) {
+            	siteType = "update";
+            }
+            else {
+            	siteType = "install";
+            }
+            contentParent.VerifySourceInPage(Arrays.asList("var mpscall = {'site':'" + siteType + "', 'path':'content/" + movieTitle + "'}",
+            		"var mpsopts = {'host':'" + config.getConfigValue("AppURL").replace("http://", "") + "'}"));
             
-            Reporter.log("STEP 7");
+            Reporter.log("STEP 6 and STEP 7");
+            contentParent.VerifySourceInPage(Arrays.asList("var mps = mps || {}; mps.pagevars{\"site\":\"" + siteType + "\",\"title\":\"" + movieTitle + "\",\"path\":\"content\\/" + movieTitle + "\",\"qs\":\"\",\"cat\":\"content|" + movieTitle + "\"", 
+            		"{\"genre\":\"Action\",\"movie-rating\":\"G\",\"movie-types\":\"Syndicated\"}"));
+            
+            Reporter.log("STEP 8");
             webDriver.navigate().to(webDriver.getCurrentUrl() + "?kumud=1");
             contentParent.VerifySourceInPage(Arrays.asList("a3VtdWQ9MQ=="));
             
-            Reporter.log("STEP 8");
+            Reporter.log("STEP 9");
+            contentParent.VerifySourceInPage(Arrays.asList("document.write('<scr'+'ipt id=\"mps-ext-load\" src=\"//'+mpsopts.host+'/fetch/ext/load-'+mpscall.site+'.js\"></scr'+'ipt>')"));
+            
+            Reporter.log("STEP 10");
+            contentParent.VerifySourceInPage(Arrays.asList("typeof(mps.writeFooter)=='function' && mps.writeFooter()"));
+            
+            Reporter.log("STEP 11");
             taxonomy.NavigateSite("Structure>>MPS Blocks>>Add");
             overlay.SwitchToActiveFrame();
             MPSBlocks mpsBlocks = new MPSBlocks(webDriver);
@@ -92,17 +110,23 @@ public class ImplementMPS extends ParentTest {
             contentParent.VerifyMessageStatus(uniqueName + " has been created.");
             overlay.ClickCloseOverlayLnk();
             
-            Reporter.log("STEP 9");
+            Reporter.log("STEP 12");
             taxonomy.NavigateSite("Structure>>Blocks");
             overlay.SwitchToActiveFrame();
             Blocks blocks = new Blocks(webDriver);
             blocks.SelectRegion(blockName, "Header");
             blocks.ClickSaveBlocksBtn();
             contentParent.VerifyMessageStatus("The block settings have been updated.");
+            overlay.ClickCloseOverlayLnk();
             
-            Reporter.log("STEP 10 - N/A");
+            Reporter.log("STEP 13");
+            contentParent.VerifySourceInPage(Arrays.asList("typeof(mps.getAd)=='function' && document.write(mps.getAd('" + uniqueName + "'))"));
+            
+            Reporter.log("STEP 14 - N/A");
             
             Reporter.log("CLEANUP");
+            taxonomy.NavigateSite("Structure>>Blocks");
+            overlay.SwitchToActiveFrame();
             blocks.SelectRegion(blockName, "- None -");
             blocks.ClickSaveBlocksBtn();
             overlay.ClickCloseOverlayLnk();

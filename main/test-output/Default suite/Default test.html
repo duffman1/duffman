@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri May 09 14:47:30 EDT 2014</td>
+<td>Started on:</td><td>Mon May 12 10:06:48 EDT 2014</td>
 </tr>
-<tr><td>Total time:</td><td>37 seconds (37109 ms)</td>
+<tr><td>Total time:</td><td>70 seconds (70871 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,56 +75,110 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.nbcuni.test.publisher.tests.Video.MPXReporting.MPXReportingBeta.MPXReportingBeta_TC3085()'><b>MPXReportingBeta_TC3085</b><br>Test class: com.nbcuni.test.publisher.tests.Video.MPXReporting.MPXReportingBeta<br/>
-<a href="#Output-1575856307" onClick='toggleBox("Output-1575856307", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS.ImplementMPS_TC2901()'><b>ImplementMPS_TC2901</b><br>Test class: com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS<br/>
+<a href="#Output-1821829306" onClick='toggleBox("Output-1821829306", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1575856307" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1575856307">
+<a href="#Output-1821829306" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1821829306">
 STEP 1<br/>
-Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.<br/>
+Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.<br/>
 Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
 Enter 'pa55word' in the 'Password' text box.<br/>
 Click the 'Login' button.<br/>
 STEP 2<br/>
 Click the 'Modules' menu link.<br/>
-Switch to frame titled 'Modules'.<br/>
-Enter 'Media: ThePlatform mpx Reports' in the 'Filter Name' text box.<br/>
-Wait for the module titled 'Media: ThePlatform mpx Reports' to appear in the list.<br/>
-Check the 'Media: ThePlatform mpx Reports' check box.<br/>
-Click the 'Save configuration' button.<br/>
-Switch to frame titled 'Some required modules must be enabled'.<br/>
-Switch back to the 'Modules' frame.<br/>
-Switch to frame titled 'Modules'.<br/>
-Verify success message of 'The configuration options have been saved.' is present.<br/>
+Switch to the active frame titled 'Modules dialog'.<br/>
+Enter 'Pub Ads' in the 'Filter Name' text box.<br/>
+Wait for the module titled 'Pub Ads' to appear in the list.<br/>
+Verify the 'Pub Ads' check box is checked.<br/>
+Enter 'MPS' in the 'Filter Name' text box.<br/>
+Wait for the module titled 'MPS' to appear in the list.<br/>
+Verify the 'MPS' check box is checked.<br/>
+Enter 'DART' in the 'Filter Name' text box.<br/>
+Wait for the module titled 'DART' to appear in the list.<br/>
+Enter 'Doubleclick for Publishers' in the 'Filter Name' text box.<br/>
+Wait for the module titled 'Doubleclick for Publishers' to appear in the list.<br/>
 Click the 'Close Overlay X'.<br/>
 STEP 3<br/>
-Mouse over the 'Configuration' menu link.<br/>
-Mouse over the 'Media' menu link.<br/>
-Mouse over the 'Media: thePlatform mpx settings' menu link.<br/>
-Click the 'Media: thePlatform MPX Status (BETA)' menu link.<br/>
-Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.<br/>
+Mouse over the 'Reports' menu link.<br/>
+Click the 'Status report' menu link.<br/>
+Switch to the active frame titled 'Status report dialog'.<br/>
+Verify the text 'Ad Tag Style' is present on the page.<br/>
+Verify the text 'MPS' is present on the page.<br/>
+Click the 'Close Overlay X'.<br/>
 STEP 4<br/>
-Verify the text 'Total Videos Ingested:' is present on the page.<br/>
-Verify the text 'View all videos here.' is present on the page.<br/>
-Verify the text 'Total Players Ingested:' is present on the page.<br/>
-Verify the text 'View all players here.' is present on the page.<br/>
-Verify the text 'Videos Updated Last Cron' is present on the page.<br/>
-Verify the text 'Players Updated Last Cron' is present on the page.<br/>
-Verify the text 'Total Videos Queued for Ingestion' is present on the page.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Add content' menu link.<br/>
+Click the 'Movie' menu link.<br/>
+Switch to the active frame titled 'Create Movie dialog'.<br/>
+Scroll to and click the 'Basic Information' tab.<br/>
+Enter '3f6a8ecdf5c84d3' in the 'Title' text box.<br/>
+Switch to the Synopsis frame.<br/>
+Enter a randomized text string into the 'Body' text area.<br/>
+Switch to the active frame titled 'Create Movie dialog'.<br/>
+Click the 'Cover' select button.<br/>
+Switch to the select file frame.<br/>
+Enter the file path for file upload.<br/>
+Click the 'Upload' button.<br/>
+Wait for the file link to be visible after upload.<br/>
+Click the 'Next' button.<br/>
+Click the 'Public Local Files' radio button.<br/>
+Click the 'Next' button.<br/>
+Verify the file image 'HanSolo' is present.<br/>
+Verify the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'Create Movie dialog'.<br/>
+Click the 'Additional Information' link.<br/>
+Select the 'Syndicated' from the 'Movie Type' drop down list.<br/>
+Select the 'G' from the 'Rating' drop down list.<br/>
+Select the 'Action' from the 'Primary Genre' drop down list.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'Movie 3f6a8ecdf5c84d3 has been created.' is present.<br/>
 STEP 5<br/>
-Verify the text 'Successfully signed into account "DB TV" (2312945284).' is present on the page.<br/>
-Click the 'VIDEO UPDATES TO BE PROCESSED DURING THE NEXT CRON RUN' link.<br/>
-STEP 6<br/>
-Note the 'Total Videos Ingested' count which is '129'.<br/>
-Note the 'Total Players Ingested' count which is '66'.<br/>
-Note the 'Total Videos Queued for Ingestion' count which is '0'.<br/>
-Note the 'Videos Updated Last Cron' count which is '0'.<br/>
-Note the 'Total Video Updates Waiting to be Processed' count which is '10'.<br/>
+Verify 'var mpscall = {'site':'install', 'path':'content/3f6a8ecdf5c84d3'}' is present in page source.<br/>
+Verify 'var mpsopts = {'host':'install.qa5.nbcupublisher7.publisher7.com'}' is present in page source.<br/>
+STEP 6 and STEP 7<br/>
+Verify 'var mps = mps || {}; mps.pagevars{"site":"install","title":"3f6a8ecdf5c84d3","path":"content\/3f6a8ecdf5c84d3","qs":"","cat":"content|3f6a8ecdf5c84d3"' is present in page source.<br/>
+Verify '{"genre":"Action","movie-rating":"G","movie-types":"Syndicated"}' is present in page source.<br/>
+STEP 8<br/>
+Verify 'a3VtdWQ9MQ==' is present in page source.<br/>
+STEP 9<br/>
+Verify 'document.write('<scr'+'ipt id="mps-ext-load" src="//'+mpsopts.host+'/fetch/ext/load-'+mpscall.site+'.js"></scr'+'ipt>')' is present in page source.<br/>
+STEP 10<br/>
+Verify 'typeof(mps.writeFooter)=='function' && mps.writeFooter()' is present in page source.<br/>
+STEP 11<br/>
+Mouse over the 'Structure' menu link.<br/>
+Mouse over the 'MPS Blocks' menu link.<br/>
+Click the 'Add' menu link.<br/>
+Switch to the active frame titled 'Add a new MPS block dialog'.<br/>
+Enter '39716b1f66ef492' in the 'Unique Name' text box.<br/>
+Enter '33252b9001ec4fa' in the 'Block Name' text box.<br/>
+Click the 'Save' button.<br/>
+Verify success message of '39716b1f66ef492 has been created.' is present.<br/>
+Click the 'Close Overlay X'.<br/>
+STEP 12<br/>
+Mouse over the 'Structure' menu link.<br/>
+Click the 'Blocks' menu link.<br/>
+Switch to the active frame titled 'Blocks dialog'.<br/>
+Select the block name '33252b9001ec4fa' from the 'Header' drop down list.<br/>
+Click the 'Save Blocks' button.<br/>
+Verify success message of 'The block settings have been updated.' is present.<br/>
+Click the 'Close Overlay X'.<br/>
+STEP 13<br/>
+Verify 'typeof(mps.getAd)=='function' && document.write(mps.getAd('39716b1f66ef492'))' is present in page source.<br/>
+STEP 14 - N/A<br/>
+CLEANUP<br/>
+Mouse over the 'Structure' menu link.<br/>
+Click the 'Blocks' menu link.<br/>
+Switch to the active frame titled 'Blocks dialog'.<br/>
+Select the block name '33252b9001ec4fa' from the '- None -' drop down list.<br/>
+Click the 'Save Blocks' button.<br/>
+Click the 'Close Overlay X'.<br/>
 </div>
 </td>
 <td></td>
-<td>34</td>
-<td>com.nbcuni.test.publisher.tests.Video.MPXReporting.MPXReportingBeta@461a5d57</td></tr>
+<td>67</td>
+<td>com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@7dcecd26</td></tr>
 </table><p>
 </body>
 </html>

@@ -15,28 +15,14 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.TimeZone;
 
-public class LogoExceptionAppearsAttemptCreateLogo extends ParentTest{
+public class CreateLogo extends ParentTest{
 	
     /*************************************************************************************
-     * TEST CASE 
-     * Step 1,Login with valid Drupal 1 credentials ,Login Succesful 
-     * Step 1a, Enable the 'Logo Manager' module if needed.
-     * Step 2 - Navigate to Content>>Logos>>Add Logo ,Add Logo page appears 
-     * Step 3 - Populate the fields:
-     * 		1.Title
-     * 		2.Start Date
-     * 		3.Enddate
-     * 		4.Upload logo
-     * 		5.Save, "Manage Logo"  overlay appears with logo view. The Logo should be successfully scheduled at that time 
-     * Step 4 - Verify the new logo appears in the 'Logos' list, with corresponding title, start date, and end dates.
-	 * Step 5 - Run Cron.
-	 * Step 6 - Verify image logo is present on home page.
-	 * Step 7 - Wait for logo end date, run cron, assert default logo present.
-	 * Step 8 - Navigate to Content>>Logos and delete the newly created logo.
-     * @throws Throwable No Return values are needed
+     * TEST CASE - TC1066
+     * Steps - https://rally1.rallydev.com/#/14663927728d/detail/testcase/17441709609
      *************************************************************************************/
     @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"})
-    public void LogoExceptionAppearsAttemptCreateLogo_Test() throws Exception {
+    public void CreateLogo_TC1066() throws Exception {
          
         	//Step 1
         	UserLogin userLogin = applib.openApplication();

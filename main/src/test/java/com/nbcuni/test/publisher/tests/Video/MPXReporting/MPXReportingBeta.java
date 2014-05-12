@@ -39,7 +39,6 @@ public class MPXReportingBeta extends ParentTest{
     	Reporter.log("STEP 5");
     	contentParent.VerifyPageContentPresent(Arrays.asList("Successfully signed into account \"DB TV\" (2312945284)."));
     	MPXStatusBeta mpxStatusBeta = new MPXStatusBeta(webDriver);
-    	mpxStatusBeta.ClickViewVideosToBeProcessedLnk();
     	
     	Reporter.log("STEP 6");
     	Assert.assertTrue(mpxStatusBeta.GetTotalVideosIngestedCount() > 0);
