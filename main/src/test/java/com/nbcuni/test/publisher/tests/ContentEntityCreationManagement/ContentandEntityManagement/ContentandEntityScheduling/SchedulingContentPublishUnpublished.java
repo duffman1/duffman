@@ -79,16 +79,7 @@ public class SchedulingContentPublishUnpublished extends ParentTest {
         Cron cron = new Cron(webDriver, applib);
         cron.RunCron(true);
         webDriver.navigate().refresh();
-        try {
-        	workBench.VerifyWorkBenchBlockTextPresent(Arrays.asList("Revision state: Published", "Public: Yes"));
-        }
-        catch (AssertionError e) {
-        	Reporter.log("Run cron again and check if content is published");
-        	Thread.sleep(30000);
-        	cron.RunCron(true);
-            webDriver.navigate().refresh();
-            workBench.VerifyWorkBenchBlockTextPresent(Arrays.asList("Revision state: Published", "Public: Yes"));
-        }
+        workBench.VerifyWorkBenchBlockTextPresent(Arrays.asList("Revision state: Published", "Public: Yes"));
         
         Reporter.log("STEP 10");
         String postTitle2 = createDefaultContent.Post("Draft");

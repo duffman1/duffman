@@ -114,13 +114,13 @@ public class ErrorChecking {
     		allowedErrors.add("Warning: Attempt to assign property of non-object in EntityAPIController->save()");
     		allowedErrors.add("Notice: Trying to get property of non-object in EntityAPIController->save()");
     		
-    		//focal point error on image save
+    		//DE5638 focal point error on image save
     		allowedErrors.add("Notice: getimagesize() [function.getimagesize]: Read error! in image_gd_get_info()");
     		
-    		//error when creating new custom mpx type
+    		//DE5638 error when creating new custom mpx type
     		allowedErrors.add("Notice: Undefined index: #build_id in form_set_cache() (line 565 of");
     		
-    		//exif error when uploading new image
+    		//DE6585 exif error when uploading new image
     		allowedErrors.add("Notice: Undefined offset: 0 in simple_exif_form_alter()");
     		allowedErrors.add("Warning: array_keys() expects parameter 1 to be array, null given in simple_exif_form_alter()");
     		allowedErrors.add("Warning: Invalid argument supplied for foreach() in simple_exif_form_alter()");
