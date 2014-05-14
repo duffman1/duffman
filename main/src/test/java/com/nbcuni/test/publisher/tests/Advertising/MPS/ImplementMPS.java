@@ -82,7 +82,7 @@ public class ImplementMPS extends ParentTest {
             	siteType = "install";
             }
             contentParent.VerifySourceInPage(Arrays.asList("var mpscall = {'site':'" + siteType + "', 'path':'content/" + movieTitle + "'}",
-            		"var mpsopts = {'host':'" + config.getConfigValue("AppURL").replace("http://", "") + "'}"));
+            		"var mpsopts = {'host':'mps.io'}"));
             
             Reporter.log("STEP 6 and STEP 7");
             contentParent.VerifySourceInPage(Arrays.asList("var mps = mps || {}; mps.pagevars{\"site\":\"" + siteType + "\",\"title\":\"" + movieTitle + "\",\"path\":\"content\\/" + movieTitle + "\",\"qs\":\"\",\"cat\":\"content|" + movieTitle + "\"", 
@@ -120,7 +120,7 @@ public class ImplementMPS extends ParentTest {
             overlay.ClickCloseOverlayLnk();
             
             Reporter.log("STEP 13");
-            contentParent.VerifySourceInPage(Arrays.asList("typeof(mps.getAd)=='function' && document.write(mps.getAd('" + uniqueName + "'))"));
+            contentParent.VerifySourceInPage(Arrays.asList("typeof(mps.getAd)=='function' && document.write(mps.getAd('" + blockName + "'))"));
             
             Reporter.log("STEP 14 - N/A");
             

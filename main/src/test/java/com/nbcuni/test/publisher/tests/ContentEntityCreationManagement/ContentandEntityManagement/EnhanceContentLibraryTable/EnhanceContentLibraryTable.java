@@ -27,7 +27,7 @@ public class EnhanceContentLibraryTable extends ParentTest{
      * Step 12 - Click on Upload Date again, the list is sorted by default results as seen in step 5
      * @throws Throwable No Return values are needed
      *************************************************************************************/
-    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"})
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "mpx"})
     public void EnhanceContentLibraryTable_Test() throws Exception{
     	
     	//NOTE- Automated steps were re-ordered for ease of automation purposes
