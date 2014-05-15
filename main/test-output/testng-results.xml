@@ -5,7 +5,7 @@
       <![CDATA[STEP 1]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
+      <![CDATA[Open url 'http://install.stage.nbcupublisher7.publisher7.com'.]]>
     </line>
     <line>
       <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
@@ -32,7 +32,25 @@
       <![CDATA[Wait for the module titled 'Pub Ads' to appear in the list.]]>
     </line>
     <line>
-      <![CDATA[Verify the 'Pub Ads' check box is checked.]]>
+      <![CDATA[Check the 'Pub Ads' check box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configuration' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Continue' button to enable additional modules.]]>
+    </line>
+    <line>
+      <![CDATA[Switch back to the 'Modules' frame.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to frame titled 'Modules'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
     </line>
     <line>
       <![CDATA[Enter 'MPS' in the 'Filter Name' text box.]]>
@@ -98,7 +116,7 @@
       <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
     </line>
     <line>
-      <![CDATA[Enter '41ec36b8e24e481' in the 'Title' text box.]]>
+      <![CDATA[Enter 'de8bbcb5ac51448' in the 'Title' text box.]]>
     </line>
     <line>
       <![CDATA[Switch to the Synopsis frame.]]>
@@ -161,13 +179,13 @@
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'Movie 41ec36b8e24e481 has been created.' is present.]]>
+      <![CDATA[Verify success message of 'Movie de8bbcb5ac51448 has been created.' is present.]]>
     </line>
     <line>
       <![CDATA[STEP 5]]>
     </line>
     <line>
-      <![CDATA[Verify 'var mpscall = {'site':'update', 'path':'content/41ec36b8e24e481'}' is present in page source.]]>
+      <![CDATA[Verify 'var mpscall = {'site':'install', 'path':'content/de8bbcb5ac51448'}' is present in page source.]]>
     </line>
     <line>
       <![CDATA[Verify 'var mpsopts = {'host':'mps.io'}' is present in page source.]]>
@@ -176,7 +194,7 @@
       <![CDATA[STEP 6 and STEP 7]]>
     </line>
     <line>
-      <![CDATA[Verify 'var mps = mps || {}; mps.pagevars{"site":"update","title":"41ec36b8e24e481","path":"content\/41ec36b8e24e481","qs":"","cat":"content|41ec36b8e24e481"' is present in page source.]]>
+      <![CDATA[Verify 'var mps = mps || {}; mps.pagevars{"site":"install","title":"de8bbcb5ac51448","path":"content\/de8bbcb5ac51448","qs":"","cat":"content|de8bbcb5ac51448"' is present in page source.]]>
     </line>
     <line>
       <![CDATA[Verify '{"genre":"Action","movie-rating":"G","movie-types":"Syndicated"}' is present in page source.]]>
@@ -215,16 +233,16 @@
       <![CDATA[Switch to the active frame titled 'Add a new MPS block dialog'.]]>
     </line>
     <line>
-      <![CDATA[Enter 'c4781de6aaa8404' in the 'Unique Name' text box.]]>
+      <![CDATA[Enter '32022c761763442' in the 'Unique Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Enter '42235296050247b' in the 'Block Name' text box.]]>
+      <![CDATA[Enter 'a8c53c19953a473' in the 'Block Name' text box.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'c4781de6aaa8404 has been created.' is present.]]>
+      <![CDATA[Verify success message of '32022c761763442 has been created.' is present.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
@@ -242,7 +260,7 @@
       <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
     </line>
     <line>
-      <![CDATA[Select the block name '42235296050247b' from the 'Header' drop down list.]]>
+      <![CDATA[Select the block name 'a8c53c19953a473' from the 'Header' drop down list.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save Blocks' button.]]>
@@ -257,7 +275,7 @@
       <![CDATA[STEP 13]]>
     </line>
     <line>
-      <![CDATA[Verify 'typeof(mps.getAd)=='function' && document.write(mps.getAd('42235296050247b'))' is present in page source.]]>
+      <![CDATA[Verify 'typeof(mps.getAd)=='function' && document.write(mps.getAd('a8c53c19953a473'))' is present in page source.]]>
     </line>
     <line>
       <![CDATA[STEP 14 - N/A]]>
@@ -275,7 +293,7 @@
       <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
     </line>
     <line>
-      <![CDATA[Select the block name '42235296050247b' from the '- None -' drop down list.]]>
+      <![CDATA[Select the block name 'a8c53c19953a473' from the '- None -' drop down list.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save Blocks' button.]]>
@@ -284,29 +302,29 @@
       <![CDATA[Click the 'Close Overlay X'.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="68565" started-at="2014-05-14T17:29:23Z" finished-at="2014-05-14T17:30:32Z">
+  <suite name="Default suite" duration-ms="93967" started-at="2014-05-14T19:25:44Z" finished-at="2014-05-14T19:27:18Z">
     <groups>
       <group name="full">
-        <method signature="ImplementMPS.ImplementMPS_TC2901()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@3b463340]" name="ImplementMPS_TC2901" class="com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS"/>
+        <method signature="ImplementMPS.ImplementMPS_TC2901()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@142b9cd8]" name="ImplementMPS_TC2901" class="com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS"/>
       </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="68565" started-at="2014-05-14T17:29:23Z" finished-at="2014-05-14T17:30:32Z">
+    <test name="Default test" duration-ms="93967" started-at="2014-05-14T19:25:44Z" finished-at="2014-05-14T19:27:18Z">
       <class name="com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS">
-        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@3b463340]" name="startGridAndHub" is-config="true" duration-ms="11885" started-at="2014-05-14T13:29:11Z" finished-at="2014-05-14T13:29:23Z">
+        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@142b9cd8]" name="startGridAndHub" is-config="true" duration-ms="11940" started-at="2014-05-14T15:25:32Z" finished-at="2014-05-14T15:25:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startGridAndHub -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@3b463340]" name="startSelenium" is-config="true" duration-ms="2419" started-at="2014-05-14T13:29:23Z" finished-at="2014-05-14T13:29:25Z">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@142b9cd8]" name="startSelenium" is-config="true" duration-ms="2459" started-at="2014-05-14T15:25:44Z" finished-at="2014-05-14T15:25:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="ImplementMPS_TC2901()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@3b463340]" name="ImplementMPS_TC2901" duration-ms="65559" started-at="2014-05-14T13:29:25Z" finished-at="2014-05-14T13:30:31Z">
+        <test-method status="PASS" signature="ImplementMPS_TC2901()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@142b9cd8]" name="ImplementMPS_TC2901" duration-ms="90925" started-at="2014-05-14T15:25:47Z" finished-at="2014-05-14T15:27:18Z">
           <reporter-output>
             <line>
               <![CDATA[STEP 1]]>
             </line>
             <line>
-              <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
+              <![CDATA[Open url 'http://install.stage.nbcupublisher7.publisher7.com'.]]>
             </line>
             <line>
               <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
@@ -333,7 +351,25 @@
               <![CDATA[Wait for the module titled 'Pub Ads' to appear in the list.]]>
             </line>
             <line>
-              <![CDATA[Verify the 'Pub Ads' check box is checked.]]>
+              <![CDATA[Check the 'Pub Ads' check box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configuration' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Continue' button to enable additional modules.]]>
+            </line>
+            <line>
+              <![CDATA[Switch back to the 'Modules' frame.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to frame titled 'Modules'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
             </line>
             <line>
               <![CDATA[Enter 'MPS' in the 'Filter Name' text box.]]>
@@ -399,7 +435,7 @@
               <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
             </line>
             <line>
-              <![CDATA[Enter '41ec36b8e24e481' in the 'Title' text box.]]>
+              <![CDATA[Enter 'de8bbcb5ac51448' in the 'Title' text box.]]>
             </line>
             <line>
               <![CDATA[Switch to the Synopsis frame.]]>
@@ -462,13 +498,13 @@
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'Movie 41ec36b8e24e481 has been created.' is present.]]>
+              <![CDATA[Verify success message of 'Movie de8bbcb5ac51448 has been created.' is present.]]>
             </line>
             <line>
               <![CDATA[STEP 5]]>
             </line>
             <line>
-              <![CDATA[Verify 'var mpscall = {'site':'update', 'path':'content/41ec36b8e24e481'}' is present in page source.]]>
+              <![CDATA[Verify 'var mpscall = {'site':'install', 'path':'content/de8bbcb5ac51448'}' is present in page source.]]>
             </line>
             <line>
               <![CDATA[Verify 'var mpsopts = {'host':'mps.io'}' is present in page source.]]>
@@ -477,7 +513,7 @@
               <![CDATA[STEP 6 and STEP 7]]>
             </line>
             <line>
-              <![CDATA[Verify 'var mps = mps || {}; mps.pagevars{"site":"update","title":"41ec36b8e24e481","path":"content\/41ec36b8e24e481","qs":"","cat":"content|41ec36b8e24e481"' is present in page source.]]>
+              <![CDATA[Verify 'var mps = mps || {}; mps.pagevars{"site":"install","title":"de8bbcb5ac51448","path":"content\/de8bbcb5ac51448","qs":"","cat":"content|de8bbcb5ac51448"' is present in page source.]]>
             </line>
             <line>
               <![CDATA[Verify '{"genre":"Action","movie-rating":"G","movie-types":"Syndicated"}' is present in page source.]]>
@@ -516,16 +552,16 @@
               <![CDATA[Switch to the active frame titled 'Add a new MPS block dialog'.]]>
             </line>
             <line>
-              <![CDATA[Enter 'c4781de6aaa8404' in the 'Unique Name' text box.]]>
+              <![CDATA[Enter '32022c761763442' in the 'Unique Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Enter '42235296050247b' in the 'Block Name' text box.]]>
+              <![CDATA[Enter 'a8c53c19953a473' in the 'Block Name' text box.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'c4781de6aaa8404 has been created.' is present.]]>
+              <![CDATA[Verify success message of '32022c761763442 has been created.' is present.]]>
             </line>
             <line>
               <![CDATA[Click the 'Close Overlay X'.]]>
@@ -543,7 +579,7 @@
               <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
             </line>
             <line>
-              <![CDATA[Select the block name '42235296050247b' from the 'Header' drop down list.]]>
+              <![CDATA[Select the block name 'a8c53c19953a473' from the 'Header' drop down list.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save Blocks' button.]]>
@@ -558,7 +594,7 @@
               <![CDATA[STEP 13]]>
             </line>
             <line>
-              <![CDATA[Verify 'typeof(mps.getAd)=='function' && document.write(mps.getAd('42235296050247b'))' is present in page source.]]>
+              <![CDATA[Verify 'typeof(mps.getAd)=='function' && document.write(mps.getAd('a8c53c19953a473'))' is present in page source.]]>
             </line>
             <line>
               <![CDATA[STEP 14 - N/A]]>
@@ -576,7 +612,7 @@
               <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
             </line>
             <line>
-              <![CDATA[Select the block name '42235296050247b' from the '- None -' drop down list.]]>
+              <![CDATA[Select the block name 'a8c53c19953a473' from the '- None -' drop down list.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save Blocks' button.]]>
@@ -586,18 +622,18 @@
             </line>
           </reporter-output>
         </test-method> <!-- ImplementMPS_TC2901 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@3b463340]" name="stopSelenium" is-config="true" duration-ms="570" started-at="2014-05-14T13:30:31Z" finished-at="2014-05-14T13:30:32Z">
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@142b9cd8]" name="stopSelenium" is-config="true" duration-ms="572" started-at="2014-05-14T15:27:18Z" finished-at="2014-05-14T15:27:18Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=ImplementMPS_TC2901 status=SUCCESS method=ImplementMPS.ImplementMPS_TC2901()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@3b463340] output=STEP 1]]]>
+                <![CDATA[[TestResult name=ImplementMPS_TC2901 status=SUCCESS method=ImplementMPS.ImplementMPS_TC2901()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@142b9cd8] output=STEP 1]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@3b463340]" name="stopGridAndHub" is-config="true" duration-ms="368" started-at="2014-05-14T13:30:32Z" finished-at="2014-05-14T13:30:32Z">
+        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@142b9cd8]" name="stopGridAndHub" is-config="true" duration-ms="368" started-at="2014-05-14T15:27:18Z" finished-at="2014-05-14T15:27:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopGridAndHub -->

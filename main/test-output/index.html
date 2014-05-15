@@ -134,7 +134,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/private/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/testng-eclipse-348512125/testng-customsuite.xml</span>
+            <span class="header-content">/private/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/testng-eclipse--522694381/testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -195,7 +195,7 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'ImplementMPS_TC2901')
 data.setCell(0, 2, 'com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS')
-data.setCell(0, 3, 65559);
+data.setCell(0, 3, 90925);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
@@ -215,7 +215,7 @@ return data;
               <span class="reporter-method-name">ImplementMPS_TC2901</span>
               <div class="reporter-method-output-div">
                 <span class="reporter-method-output">STEP 1</span>
-                <span class="reporter-method-output">Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.</span>
+                <span class="reporter-method-output">Open url 'http://install.stage.nbcupublisher7.publisher7.com'.</span>
                 <span class="reporter-method-output">Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.</span>
                 <span class="reporter-method-output">Enter 'pa55word' in the 'Password' text box.</span>
                 <span class="reporter-method-output">Click the 'Login' button.</span>
@@ -224,7 +224,13 @@ return data;
                 <span class="reporter-method-output">Switch to the active frame titled 'Modules dialog'.</span>
                 <span class="reporter-method-output">Enter 'Pub Ads' in the 'Filter Name' text box.</span>
                 <span class="reporter-method-output">Wait for the module titled 'Pub Ads' to appear in the list.</span>
-                <span class="reporter-method-output">Verify the 'Pub Ads' check box is checked.</span>
+                <span class="reporter-method-output">Check the 'Pub Ads' check box.</span>
+                <span class="reporter-method-output">Click the 'Save configuration' button.</span>
+                <span class="reporter-method-output">Switch to frame titled 'Some required modules must be enabled'.</span>
+                <span class="reporter-method-output">Click the 'Continue' button to enable additional modules.</span>
+                <span class="reporter-method-output">Switch back to the 'Modules' frame.</span>
+                <span class="reporter-method-output">Switch to frame titled 'Modules'.</span>
+                <span class="reporter-method-output">Verify success message of 'The configuration options have been saved.' is present.</span>
                 <span class="reporter-method-output">Enter 'MPS' in the 'Filter Name' text box.</span>
                 <span class="reporter-method-output">Wait for the module titled 'MPS' to appear in the list.</span>
                 <span class="reporter-method-output">Verify the 'MPS' check box is checked.</span>
@@ -246,7 +252,7 @@ return data;
                 <span class="reporter-method-output">Click the 'Movie' menu link.</span>
                 <span class="reporter-method-output">Switch to the active frame titled 'Create Movie dialog'.</span>
                 <span class="reporter-method-output">Scroll to and click the 'Basic Information' tab.</span>
-                <span class="reporter-method-output">Enter '41ec36b8e24e481' in the 'Title' text box.</span>
+                <span class="reporter-method-output">Enter 'de8bbcb5ac51448' in the 'Title' text box.</span>
                 <span class="reporter-method-output">Switch to the Synopsis frame.</span>
                 <span class="reporter-method-output">Enter a randomized text string into the 'Body' text area.</span>
                 <span class="reporter-method-output">Switch to the active frame titled 'Create Movie dialog'.</span>
@@ -267,12 +273,12 @@ return data;
                 <span class="reporter-method-output">Select the 'G' from the 'Rating' drop down list.</span>
                 <span class="reporter-method-output">Select the 'Action' from the 'Primary Genre' drop down list.</span>
                 <span class="reporter-method-output">Click the 'Save' button.</span>
-                <span class="reporter-method-output">Verify success message of 'Movie 41ec36b8e24e481 has been created.' is present.</span>
+                <span class="reporter-method-output">Verify success message of 'Movie de8bbcb5ac51448 has been created.' is present.</span>
                 <span class="reporter-method-output">STEP 5</span>
-                <span class="reporter-method-output">Verify 'var mpscall = {'site':'update', 'path':'content/41ec36b8e24e481'}' is present in page source.</span>
+                <span class="reporter-method-output">Verify 'var mpscall = {'site':'install', 'path':'content/de8bbcb5ac51448'}' is present in page source.</span>
                 <span class="reporter-method-output">Verify 'var mpsopts = {'host':'mps.io'}' is present in page source.</span>
                 <span class="reporter-method-output">STEP 6 and STEP 7</span>
-                <span class="reporter-method-output">Verify 'var mps = mps || {}; mps.pagevars{"site":"update","title":"41ec36b8e24e481","path":"content\/41ec36b8e24e481","qs":"","cat":"content|41ec36b8e24e481"' is present in page source.</span>
+                <span class="reporter-method-output">Verify 'var mps = mps || {}; mps.pagevars{"site":"install","title":"de8bbcb5ac51448","path":"content\/de8bbcb5ac51448","qs":"","cat":"content|de8bbcb5ac51448"' is present in page source.</span>
                 <span class="reporter-method-output">Verify '{"genre":"Action","movie-rating":"G","movie-types":"Syndicated"}' is present in page source.</span>
                 <span class="reporter-method-output">STEP 8</span>
                 <span class="reporter-method-output">Verify 'a3VtdWQ9MQ==' is present in page source.</span>
@@ -285,27 +291,27 @@ return data;
                 <span class="reporter-method-output">Mouse over the 'MPS Blocks' menu link.</span>
                 <span class="reporter-method-output">Click the 'Add' menu link.</span>
                 <span class="reporter-method-output">Switch to the active frame titled 'Add a new MPS block dialog'.</span>
-                <span class="reporter-method-output">Enter 'c4781de6aaa8404' in the 'Unique Name' text box.</span>
-                <span class="reporter-method-output">Enter '42235296050247b' in the 'Block Name' text box.</span>
+                <span class="reporter-method-output">Enter '32022c761763442' in the 'Unique Name' text box.</span>
+                <span class="reporter-method-output">Enter 'a8c53c19953a473' in the 'Block Name' text box.</span>
                 <span class="reporter-method-output">Click the 'Save' button.</span>
-                <span class="reporter-method-output">Verify success message of 'c4781de6aaa8404 has been created.' is present.</span>
+                <span class="reporter-method-output">Verify success message of '32022c761763442 has been created.' is present.</span>
                 <span class="reporter-method-output">Click the 'Close Overlay X'.</span>
                 <span class="reporter-method-output">STEP 12</span>
                 <span class="reporter-method-output">Mouse over the 'Structure' menu link.</span>
                 <span class="reporter-method-output">Click the 'Blocks' menu link.</span>
                 <span class="reporter-method-output">Switch to the active frame titled 'Blocks dialog'.</span>
-                <span class="reporter-method-output">Select the block name '42235296050247b' from the 'Header' drop down list.</span>
+                <span class="reporter-method-output">Select the block name 'a8c53c19953a473' from the 'Header' drop down list.</span>
                 <span class="reporter-method-output">Click the 'Save Blocks' button.</span>
                 <span class="reporter-method-output">Verify success message of 'The block settings have been updated.' is present.</span>
                 <span class="reporter-method-output">Click the 'Close Overlay X'.</span>
                 <span class="reporter-method-output">STEP 13</span>
-                <span class="reporter-method-output">Verify 'typeof(mps.getAd)=='function' && document.write(mps.getAd('42235296050247b'))' is present in page source.</span>
+                <span class="reporter-method-output">Verify 'typeof(mps.getAd)=='function' && document.write(mps.getAd('a8c53c19953a473'))' is present in page source.</span>
                 <span class="reporter-method-output">STEP 14 - N/A</span>
                 <span class="reporter-method-output">CLEANUP</span>
                 <span class="reporter-method-output">Mouse over the 'Structure' menu link.</span>
                 <span class="reporter-method-output">Click the 'Blocks' menu link.</span>
                 <span class="reporter-method-output">Switch to the active frame titled 'Blocks dialog'.</span>
-                <span class="reporter-method-output">Select the block name '42235296050247b' from the '- None -' drop down list.</span>
+                <span class="reporter-method-output">Select the block name 'a8c53c19953a473' from the '- None -' drop down list.</span>
                 <span class="reporter-method-output">Click the 'Save Blocks' button.</span>
                 <span class="reporter-method-output">Click the 'Close Overlay X'.</span>
               </div> <!-- reporter-method-output-div -->
@@ -332,19 +338,19 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
                 <span class="method-name">startSelenium</span>
-                <span class="method-start">11899 ms</span>
+                <span class="method-start">11950 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">ImplementMPS_TC2901</span>
-                <span class="method-start">14318 ms</span>
+                <span class="method-start">14409 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">stopSelenium([TestResult name=ImplementMPS_TC2901 status=SUCCESS method=ImplementMPS.ImplementMPS_TC2901()[pri:0,...)</span>
-                <span class="method-start">79878 ms</span>
+                <span class="method-start">105334 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-suite after">
                 <span class="method-name">stopGridAndHub</span>
-                <span class="method-start">80465 ms</span>
+                <span class="method-start">105920 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

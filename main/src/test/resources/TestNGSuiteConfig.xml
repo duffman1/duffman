@@ -1,11 +1,11 @@
 <suite name="Publisher 7 Test Suites">
 
 	<!--RUNTIME CONFIG-->
-	<parameter name="AppURL" value="http://update.qa5.nbcupublisher7.publisher7.com"></parameter>
+	<parameter name="AppURL" value="http://install.stage.nbcupublisher7.publisher7.com"></parameter>
 	<parameter name="Browser" value="chrome"></parameter>
 	<parameter name="Admin1Username" value="admin@publisher.nbcuni.com"></parameter>
 	<parameter name="Admin1Password" value="pa55word"></parameter>
-	<parameter name="ReRunOnFailure" value="true"></parameter>
+	<parameter name="ReRunOnFailure" value="false"></parameter>
 	<parameter name="ReRunOnFailureCount" value="2"></parameter>
 	
   	<!--REPORT CONFIG-->
@@ -31,7 +31,7 @@
   	<parameter name="RallyUrl" value="https://rally1.rallydev.com"></parameter>
   	<parameter name="RallyWorkspace" value="Digital Products"></parameter>
   	<parameter name="RallyProject" value="Publisher 7"></parameter>
-  	<parameter name="RallyTaskID" value="TA37085"></parameter>
+  	<parameter name="RallyTaskID" value="TA38805"></parameter>
   	
   	<!--MPX CONFIG-->
   	<parameter name="MPXUrl" value="http://mpx.theplatform.com/"></parameter>

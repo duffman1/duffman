@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed May 14 13:29:23 EDT 2014</td>
+<td>Started on:</td><td>Wed May 14 15:25:44 EDT 2014</td>
 </tr>
-<tr><td>Total time:</td><td>68 seconds (68565 ms)</td>
+<tr><td>Total time:</td><td>93 seconds (93967 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,12 +76,12 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS.ImplementMPS_TC2901()'><b>ImplementMPS_TC2901</b><br>Test class: com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS<br/>
-<a href="#Output-530763609" onClick='toggleBox("Output-530763609", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-389210515" onClick='toggleBox("Output-389210515", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-530763609" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-530763609">
+<a href="#Output-389210515" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-389210515">
 STEP 1<br/>
-Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.<br/>
+Open url 'http://install.stage.nbcupublisher7.publisher7.com'.<br/>
 Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
 Enter 'pa55word' in the 'Password' text box.<br/>
 Click the 'Login' button.<br/>
@@ -90,7 +90,13 @@ Click the 'Modules' menu link.<br/>
 Switch to the active frame titled 'Modules dialog'.<br/>
 Enter 'Pub Ads' in the 'Filter Name' text box.<br/>
 Wait for the module titled 'Pub Ads' to appear in the list.<br/>
-Verify the 'Pub Ads' check box is checked.<br/>
+Check the 'Pub Ads' check box.<br/>
+Click the 'Save configuration' button.<br/>
+Switch to frame titled 'Some required modules must be enabled'.<br/>
+Click the 'Continue' button to enable additional modules.<br/>
+Switch back to the 'Modules' frame.<br/>
+Switch to frame titled 'Modules'.<br/>
+Verify success message of 'The configuration options have been saved.' is present.<br/>
 Enter 'MPS' in the 'Filter Name' text box.<br/>
 Wait for the module titled 'MPS' to appear in the list.<br/>
 Verify the 'MPS' check box is checked.<br/>
@@ -112,7 +118,7 @@ Mouse over the 'Add content' menu link.<br/>
 Click the 'Movie' menu link.<br/>
 Switch to the active frame titled 'Create Movie dialog'.<br/>
 Scroll to and click the 'Basic Information' tab.<br/>
-Enter '41ec36b8e24e481' in the 'Title' text box.<br/>
+Enter 'de8bbcb5ac51448' in the 'Title' text box.<br/>
 Switch to the Synopsis frame.<br/>
 Enter a randomized text string into the 'Body' text area.<br/>
 Switch to the active frame titled 'Create Movie dialog'.<br/>
@@ -133,12 +139,12 @@ Select the 'Syndicated' from the 'Movie Type' drop down list.<br/>
 Select the 'G' from the 'Rating' drop down list.<br/>
 Select the 'Action' from the 'Primary Genre' drop down list.<br/>
 Click the 'Save' button.<br/>
-Verify success message of 'Movie 41ec36b8e24e481 has been created.' is present.<br/>
+Verify success message of 'Movie de8bbcb5ac51448 has been created.' is present.<br/>
 STEP 5<br/>
-Verify 'var mpscall = {'site':'update', 'path':'content/41ec36b8e24e481'}' is present in page source.<br/>
+Verify 'var mpscall = {'site':'install', 'path':'content/de8bbcb5ac51448'}' is present in page source.<br/>
 Verify 'var mpsopts = {'host':'mps.io'}' is present in page source.<br/>
 STEP 6 and STEP 7<br/>
-Verify 'var mps = mps || {}; mps.pagevars{"site":"update","title":"41ec36b8e24e481","path":"content\/41ec36b8e24e481","qs":"","cat":"content|41ec36b8e24e481"' is present in page source.<br/>
+Verify 'var mps = mps || {}; mps.pagevars{"site":"install","title":"de8bbcb5ac51448","path":"content\/de8bbcb5ac51448","qs":"","cat":"content|de8bbcb5ac51448"' is present in page source.<br/>
 Verify '{"genre":"Action","movie-rating":"G","movie-types":"Syndicated"}' is present in page source.<br/>
 STEP 8<br/>
 Verify 'a3VtdWQ9MQ==' is present in page source.<br/>
@@ -151,34 +157,34 @@ Mouse over the 'Structure' menu link.<br/>
 Mouse over the 'MPS Blocks' menu link.<br/>
 Click the 'Add' menu link.<br/>
 Switch to the active frame titled 'Add a new MPS block dialog'.<br/>
-Enter 'c4781de6aaa8404' in the 'Unique Name' text box.<br/>
-Enter '42235296050247b' in the 'Block Name' text box.<br/>
+Enter '32022c761763442' in the 'Unique Name' text box.<br/>
+Enter 'a8c53c19953a473' in the 'Block Name' text box.<br/>
 Click the 'Save' button.<br/>
-Verify success message of 'c4781de6aaa8404 has been created.' is present.<br/>
+Verify success message of '32022c761763442 has been created.' is present.<br/>
 Click the 'Close Overlay X'.<br/>
 STEP 12<br/>
 Mouse over the 'Structure' menu link.<br/>
 Click the 'Blocks' menu link.<br/>
 Switch to the active frame titled 'Blocks dialog'.<br/>
-Select the block name '42235296050247b' from the 'Header' drop down list.<br/>
+Select the block name 'a8c53c19953a473' from the 'Header' drop down list.<br/>
 Click the 'Save Blocks' button.<br/>
 Verify success message of 'The block settings have been updated.' is present.<br/>
 Click the 'Close Overlay X'.<br/>
 STEP 13<br/>
-Verify 'typeof(mps.getAd)=='function' && document.write(mps.getAd('42235296050247b'))' is present in page source.<br/>
+Verify 'typeof(mps.getAd)=='function' && document.write(mps.getAd('a8c53c19953a473'))' is present in page source.<br/>
 STEP 14 - N/A<br/>
 CLEANUP<br/>
 Mouse over the 'Structure' menu link.<br/>
 Click the 'Blocks' menu link.<br/>
 Switch to the active frame titled 'Blocks dialog'.<br/>
-Select the block name '42235296050247b' from the '- None -' drop down list.<br/>
+Select the block name 'a8c53c19953a473' from the '- None -' drop down list.<br/>
 Click the 'Save Blocks' button.<br/>
 Click the 'Close Overlay X'.<br/>
 </div>
 </td>
 <td></td>
-<td>65</td>
-<td>com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@3b463340</td></tr>
+<td>90</td>
+<td>com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@142b9cd8</td></tr>
 </table><p>
 </body>
 </html>
