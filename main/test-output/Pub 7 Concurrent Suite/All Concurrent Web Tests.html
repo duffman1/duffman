@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>All Concurrent Web Tests</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>4/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon May 12 11:10:29 EDT 2014</td>
+<td>Started on:</td><td>Tue May 20 15:42:32 EDT 2014</td>
 </tr>
-<tr><td>Total time:</td><td>112 seconds (112635 ms)</td>
+<tr><td>Total time:</td><td>197 seconds (197383 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td>full </td>
 </tr><tr>
@@ -67,6 +67,63 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.nbcuni.test.publisher.contentbuildscripts.MPXPerformanceUpgrade.ValidateIngestionTimePub7.Test()'><b>Test</b><br>Test class: com.nbcuni.test.publisher.contentbuildscripts.MPXPerformanceUpgrade.ValidateIngestionTimePub7<br/>
+<a href="#Output-551975934" onClick='toggleBox("Output-551975934", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-551975934" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-551975934">
+Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.<br/>
+Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
+Enter 'pa55word' in the 'Password' text box.<br/>
+Click the 'Login' button.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Files' menu link.<br/>
+Click the 'mpxMedia' menu link.<br/>
+Switch to the active frame titled 'Content dialog'.<br/>
+Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/Test.png <br/>
+<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/Test.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/Test.png' height='500' width='500'/> </a><br/>
+Cache was cleared on test failure<br/>
+</div>
+</td>
+<td><div><pre>java.io.FileNotFoundException: /Users/brandonclark/SQE-TEST-Pub7/main/src/test/java/com/nbcuni/test/publisher/contentbuildscripts/MPXPerformanceUpgrade/AssetsCreated.txt (No such file or directory)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:138)
+	at java.io.FileReader.&lt;init&gt;(FileReader.java:72)
+	at com.nbcuni.test.publisher.contentbuildscripts.MPXPerformanceUpgrade.ValidateIngestionTimePub7.Test(ValidateIngestionTimePub7.java:55)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace551975934", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace551975934'><pre>java.io.FileNotFoundException: /Users/brandonclark/SQE-TEST-Pub7/main/src/test/java/com/nbcuni/test/publisher/contentbuildscripts/MPXPerformanceUpgrade/AssetsCreated.txt (No such file or directory)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:138)
+	at java.io.FileReader.&lt;init&gt;(FileReader.java:72)
+	at com.nbcuni.test.publisher.contentbuildscripts.MPXPerformanceUpgrade.ValidateIngestionTimePub7.Test(ValidateIngestionTimePub7.java:55)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+</pre></div></td>
+<td>68</td>
+<td>com.nbcuni.test.publisher.contentbuildscripts.MPXPerformanceUpgrade.ValidateIngestionTimePub7@5bde2a20</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -75,380 +132,62 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile.CreateCharacterProfile_TC1041()'><b>CreateCharacterProfile_TC1041</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile<br/>
-<a href="#Output-663233955" onClick='toggleBox("Output-663233955", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.nbcuni.test.publisher.contentbuildscripts.MPXPerformanceUpgrade.CreateAndEditVideos.Test()'><b>Test</b><br>Test class: com.nbcuni.test.publisher.contentbuildscripts.MPXPerformanceUpgrade.CreateAndEditVideos<br/>
+<a href="#Output-4514646" onClick='toggleBox("Output-4514646", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-663233955" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-663233955">
-Open url 'http://update.stage.nbcupublisher7.publisher7.com'.<br/>
-Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
-Enter 'pa55word' in the 'Password' text box.<br/>
+<a href="#Output-4514646" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-4514646">
+Open the mpx platform.<br/>
+Enter 'mpx/AdminPub7QA' in the 'Username' text box.<br/>
+Enter 'Pa55word' in the 'Password' text box.<br/>
 Click the 'Login' button.<br/>
-Mouse over the 'Content' menu link.<br/>
-Mouse over the 'Add content' menu link.<br/>
-Click the 'Character Profile' menu link.<br/>
-Switch to the active frame titled 'Create Character Profile dialog'.<br/>
-Enter '7e73b7a2ccd14b1' in the 'Character First Name' text box.<br/>
-Click the Cover Photo 'Select' button.<br/>
-Switch to the select file frame.<br/>
-Enter the file path for file upload.<br/>
+Clear the account name in the 'Account' text box.<br/>
+Click account name 'DB TV' from the account option drop down list.<br/>
+Wait for the 'Switching accounts' spinner to complete.<br/>
 Click the 'Upload' button.<br/>
-Wait for the file link to be visible after upload.<br/>
-Click the 'Next' button.<br/>
-Click the 'Public Local Files' radio button.<br/>
-Click the 'Next' button.<br/>
-Verify the file image 'HanSolo' is present.<br/>
-Verify the img is loaded and visible.<br/>
+Click the 'Choose Files' button.<br/>
+Click the 'Movies' button in the OS Upload dialog.<br/>
+Click the Test Movie in th OS Upload dialog.<br/>
+Click the 'Open' button.<br/>
+Click the 'Upload' button in the Upload dialog.<br/>
+Click the 'Available Date' label on the right hand side to give focus to the media item.<br/>
+Enter 'Automation3cc2b37e28' in the 'Title' text box.<br/>
 Click the 'Save' button.<br/>
-Switch to frame titled 'Create Character Profile'.<br/>
-Assert that img source of the Cover Photo contains 'HanSolo'.<br/>
-Assert the the img is loaded and visible.<br/>
+Click the 'Publish' button.<br/>
+Click the 'Publish to Pub 7 Primary' check box.<br/>
+Click the 'Publish' button from the upload dialog.<br/>
+Automation3cc2b37e28,1400615064939058000<br/>
+Click the 'Upload' button.<br/>
+Click the 'Choose Files' button.<br/>
+Click the 'Movies' button in the OS Upload dialog.<br/>
+Click the Test Movie in th OS Upload dialog.<br/>
+Click the 'Open' button.<br/>
+Click the 'Upload' button in the Upload dialog.<br/>
+Click the 'Available Date' label on the right hand side to give focus to the media item.<br/>
+Enter 'Automationcfce301d29' in the 'Title' text box.<br/>
 Click the 'Save' button.<br/>
-Verify success message of 'Character Profile 7e73b7a2ccd14b1 has been created.' is present.<br/>
+Click the 'Publish' button.<br/>
+Click the 'Publish to Pub 7 Primary' check box.<br/>
+Click the 'Publish' button from the upload dialog.<br/>
+Automationcfce301d29,1400615106215725000<br/>
+Click the 'Upload' button.<br/>
+Click the 'Choose Files' button.<br/>
+Click the 'Movies' button in the OS Upload dialog.<br/>
+Click the Test Movie in th OS Upload dialog.<br/>
+Click the 'Open' button.<br/>
+Click the 'Upload' button in the Upload dialog.<br/>
+Click the 'Available Date' label on the right hand side to give focus to the media item.<br/>
+Enter 'Automation9ea6c0f750' in the 'Title' text box.<br/>
+Click the 'Save' button.<br/>
+Click the 'Publish' button.<br/>
+Click the 'Publish to Pub 7 Primary' check box.<br/>
+Click the 'Publish' button from the upload dialog.<br/>
+Automation9ea6c0f750,1400615148963911000<br/>
 </div>
 </td>
 <td></td>
-<td>27</td>
-<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@67579bd8</td></tr>
-<tr>
-<td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson.CreatePerson_TC1044()'><b>CreatePerson_TC1044</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson<br/>
-<a href="#Output-1689178920" onClick='toggleBox("Output-1689178920", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1689178920" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1689178920">
-Open url 'http://update.stage.nbcupublisher7.publisher7.com'.<br/>
-Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
-Enter 'pa55word' in the 'Password' text box.<br/>
-Click the 'Login' button.<br/>
-Mouse over the 'Content' menu link.<br/>
-Mouse over the 'Add content' menu link.<br/>
-Click the 'Person' menu link.<br/>
-Switch to frame titled 'Create Person'.<br/>
-Enter 'b190b83649254a5' in the 'First name' text box.<br/>
-Enter a random block of text in the 'Biography' text area.<br/>
-Switch to frame titled 'Create Person'.<br/>
-Click the 'Cover Photo' Select button.<br/>
-Switch to the select file frame.<br/>
-Enter the file path for file upload.<br/>
-Click the 'Upload' button.<br/>
-Wait for the file link to be visible after upload.<br/>
-Click the 'Next' button.<br/>
-Click the 'Public Local Files' radio button.<br/>
-Click the 'Next' button.<br/>
-Verify the file image 'HanSolo' is present.<br/>
-Verify the img is loaded and visible.<br/>
-Click the 'Save' button.<br/>
-Switch to frame titled 'Create Person'.<br/>
-Click the 'Save' button.<br/>
-Verify success message of 'Person b190b83649254a5 has been created.' is present.<br/>
-</div>
-</td>
-<td></td>
-<td>28</td>
-<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson@2b7639c8</td></tr>
-<tr>
-<td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVEpisode.CreateTVEpisode.CreateTVEpisode_TC1045()'><b>CreateTVEpisode_TC1045</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVEpisode.CreateTVEpisode<br/>
-<a href="#Output-1182347244" onClick='toggleBox("Output-1182347244", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1182347244" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1182347244">
-Open url 'http://update.stage.nbcupublisher7.publisher7.com'.<br/>
-Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
-Enter 'pa55word' in the 'Password' text box.<br/>
-Click the 'Login' button.<br/>
-Mouse over the 'Content' menu link.<br/>
-Mouse over the 'Add content' menu link.<br/>
-Click the 'Person' menu link.<br/>
-Switch to frame titled 'Create Person'.<br/>
-Enter 'ac3b68c359bb4e2' in the 'First name' text box.<br/>
-Enter a random block of text in the 'Biography' text area.<br/>
-Switch to frame titled 'Create Person'.<br/>
-Click the 'Cover Photo' Select button.<br/>
-Switch to the select file frame.<br/>
-Enter the file path for file upload.<br/>
-Click the 'Upload' button.<br/>
-Wait for the file link to be visible after upload.<br/>
-Click the 'Next' button.<br/>
-Click the 'Public Local Files' radio button.<br/>
-Click the 'Next' button.<br/>
-Verify the file image 'HanSolo' is present.<br/>
-Verify the img is loaded and visible.<br/>
-Click the 'Save' button.<br/>
-Switch to frame titled 'Create Person'.<br/>
-Click the 'Save' button.<br/>
-Verify success message of 'Person ac3b68c359bb4e2 has been created.' is present.<br/>
-Mouse over the 'Content' menu link.<br/>
-Mouse over the 'Add content' menu link.<br/>
-Click the 'TV Episode' menu link.<br/>
-Switch to frame titled 'TV Episode'.<br/>
-Verify the 'Title' is present as a required field.<br/>
-Verify the 'Episode' is present as a required field.<br/>
-Verify the 'Synopsis' is present as a required field.<br/>
-Scroll the 'Publishing Options' link into view.<br/>
-Click the 'Publishing Options' link.<br/>
-Verify the 'Moderation State' is present as a required field.<br/>
-Scroll to and click the 'Basic Information' tab.<br/>
-Enter '8e5eea968c9146c' in the 'Title' text box.<br/>
-Enter '1' in the 'Episode Number' text box.<br/>
-Switch to the Synopsis frame.<br/>
-Enter a randomized text string into the 'Body' text area.<br/>
-Switch to frame titled 'Create TV Episode'.<br/>
-Click the 'Cover' select button.<br/>
-Switch to the select file frame.<br/>
-Enter the file path for file upload.<br/>
-Click the 'Upload' button.<br/>
-Wait for the file link to be visible after upload.<br/>
-Click the 'Next' button.<br/>
-Click the 'Public Local Files' radio button.<br/>
-Click the 'Next' button.<br/>
-Verify the file image 'HanSolo' is present.<br/>
-Verify the img is loaded and visible.<br/>
-Click the 'Save' button.<br/>
-Switch to frame titled 'Create TV Episode'.<br/>
-Scroll the 'Publishing Options' link into view.<br/>
-Click the 'Publishing Options' link.<br/>
-Select 'Draft' from the 'Moderation State' drop down list.<br/>
-Click the 'Cast/Crew' link.<br/>
-Enter 'ac3b68c359bb4e2' in the Person text box.<br/>
-Click the 'ac3b68c359bb4e2' from the auto complete option list.<br/>
-Select the 'Contributor' from the 'Role' drop down list.<br/>
-Click the 'Save' button.<br/>
-Verify success message of 'TV Episode 8e5eea968c9146c has been created.' is present.<br/>
-Verify the text 'Draft' is present in the work bench info block.<br/>
-Mouse over the 'Content' menu link.<br/>
-Mouse over the 'Add content' menu link.<br/>
-Click the 'Person' menu link.<br/>
-Switch to frame titled 'Create Person'.<br/>
-Enter 'd0ffbb41b3ad41c' in the 'First name' text box.<br/>
-Enter a random block of text in the 'Biography' text area.<br/>
-Switch to frame titled 'Create Person'.<br/>
-Click the 'Cover Photo' Select button.<br/>
-Switch to the select file frame.<br/>
-Enter the file path for file upload.<br/>
-Click the 'Upload' button.<br/>
-Wait for the file link to be visible after upload.<br/>
-Click the 'Next' button.<br/>
-Click the 'Public Local Files' radio button.<br/>
-Click the 'Next' button.<br/>
-Verify the file image 'HanSolo' is present.<br/>
-Verify the img is loaded and visible.<br/>
-Click the 'Save' button.<br/>
-Switch to frame titled 'Create Person'.<br/>
-Click the 'Save' button.<br/>
-Verify success message of 'Person d0ffbb41b3ad41c has been created.' is present.<br/>
-Mouse over the 'Content' menu link.<br/>
-Mouse over the 'Add content' menu link.<br/>
-Click the 'TV Episode' menu link.<br/>
-Switch to frame titled 'TV Episode'.<br/>
-Verify the 'Title' is present as a required field.<br/>
-Verify the 'Episode' is present as a required field.<br/>
-Verify the 'Synopsis' is present as a required field.<br/>
-Scroll the 'Publishing Options' link into view.<br/>
-Click the 'Publishing Options' link.<br/>
-Verify the 'Moderation State' is present as a required field.<br/>
-Scroll to and click the 'Basic Information' tab.<br/>
-Enter 'f1b14f5e365a4f2' in the 'Title' text box.<br/>
-Enter '1' in the 'Episode Number' text box.<br/>
-Switch to the Synopsis frame.<br/>
-Enter a randomized text string into the 'Body' text area.<br/>
-Switch to frame titled 'Create TV Episode'.<br/>
-Click the 'Cover' select button.<br/>
-Switch to the select file frame.<br/>
-Enter the file path for file upload.<br/>
-Click the 'Upload' button.<br/>
-Wait for the file link to be visible after upload.<br/>
-Click the 'Next' button.<br/>
-Click the 'Public Local Files' radio button.<br/>
-Click the 'Next' button.<br/>
-Verify the file image 'HanSolo' is present.<br/>
-Verify the img is loaded and visible.<br/>
-Click the 'Save' button.<br/>
-Switch to frame titled 'Create TV Episode'.<br/>
-Scroll the 'Publishing Options' link into view.<br/>
-Click the 'Publishing Options' link.<br/>
-Select 'Review' from the 'Moderation State' drop down list.<br/>
-Click the 'Cast/Crew' link.<br/>
-Enter 'd0ffbb41b3ad41c' in the Person text box.<br/>
-Click the 'd0ffbb41b3ad41c' from the auto complete option list.<br/>
-Select the 'Contributor' from the 'Role' drop down list.<br/>
-Click the 'Save' button.<br/>
-Verify success message of 'TV Episode f1b14f5e365a4f2 has been created.' is present.<br/>
-Verify the text 'Review' is present in the work bench info block.<br/>
-Mouse over the 'Content' menu link.<br/>
-Mouse over the 'Add content' menu link.<br/>
-Click the 'Person' menu link.<br/>
-Switch to frame titled 'Create Person'.<br/>
-Enter '9d9a3047e90d487' in the 'First name' text box.<br/>
-Enter a random block of text in the 'Biography' text area.<br/>
-Switch to frame titled 'Create Person'.<br/>
-Click the 'Cover Photo' Select button.<br/>
-Switch to the select file frame.<br/>
-Enter the file path for file upload.<br/>
-Click the 'Upload' button.<br/>
-Wait for the file link to be visible after upload.<br/>
-Click the 'Next' button.<br/>
-Click the 'Public Local Files' radio button.<br/>
-Click the 'Next' button.<br/>
-Verify the file image 'HanSolo' is present.<br/>
-Verify the img is loaded and visible.<br/>
-Click the 'Save' button.<br/>
-Switch to frame titled 'Create Person'.<br/>
-Click the 'Save' button.<br/>
-Verify success message of 'Person 9d9a3047e90d487 has been created.' is present.<br/>
-Mouse over the 'Content' menu link.<br/>
-Mouse over the 'Add content' menu link.<br/>
-Click the 'TV Episode' menu link.<br/>
-Switch to frame titled 'TV Episode'.<br/>
-Verify the 'Title' is present as a required field.<br/>
-Verify the 'Episode' is present as a required field.<br/>
-Verify the 'Synopsis' is present as a required field.<br/>
-Scroll the 'Publishing Options' link into view.<br/>
-Click the 'Publishing Options' link.<br/>
-Verify the 'Moderation State' is present as a required field.<br/>
-Scroll to and click the 'Basic Information' tab.<br/>
-Enter '1fedb691fea94c8' in the 'Title' text box.<br/>
-Enter '1' in the 'Episode Number' text box.<br/>
-Switch to the Synopsis frame.<br/>
-Enter a randomized text string into the 'Body' text area.<br/>
-Switch to frame titled 'Create TV Episode'.<br/>
-Click the 'Cover' select button.<br/>
-Switch to the select file frame.<br/>
-Enter the file path for file upload.<br/>
-Click the 'Upload' button.<br/>
-Wait for the file link to be visible after upload.<br/>
-Click the 'Next' button.<br/>
-Click the 'Public Local Files' radio button.<br/>
-Click the 'Next' button.<br/>
-Verify the file image 'HanSolo' is present.<br/>
-Verify the img is loaded and visible.<br/>
-Click the 'Save' button.<br/>
-Switch to frame titled 'Create TV Episode'.<br/>
-Scroll the 'Publishing Options' link into view.<br/>
-Click the 'Publishing Options' link.<br/>
-Select 'Published' from the 'Moderation State' drop down list.<br/>
-Click the 'Cast/Crew' link.<br/>
-Enter '9d9a3047e90d487' in the Person text box.<br/>
-Click the '9d9a3047e90d487' from the auto complete option list.<br/>
-Select the 'Contributor' from the 'Role' drop down list.<br/>
-Click the 'Save' button.<br/>
-Verify success message of 'TV Episode 1fedb691fea94c8 has been created.' is present.<br/>
-Verify the text 'Published' is present in the work bench info block.<br/>
-</div>
-</td>
-<td></td>
-<td>105</td>
-<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVEpisode.CreateTVEpisode@28b8b6e9</td></tr>
-<tr>
-<td title='com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules.PasswordRules_TC2185()'><b>PasswordRules_TC2185</b><br>Test class: com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules<br/>
-<a href="#Output-620766577" onClick='toggleBox("Output-620766577", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-620766577" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-620766577">
-SETUP - create new user and logout<br/>
-Open url 'http://update.stage.nbcupublisher7.publisher7.com'.<br/>
-Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
-Enter 'pa55word' in the 'Password' text box.<br/>
-Click the 'Login' button.<br/>
-Mouse over the 'People' menu link.<br/>
-Click the 'Add user' menu link.<br/>
-Switch to the active frame titled 'People dialog'.<br/>
-Enter '7dda7dc80f214bb@ab89b515e7fd4e8.com' in the 'Username' text box.<br/>
-Enter '7dda7dc80f214bb@ab89b515e7fd4e8.com' in the 'E-mail address' text box.<br/>
-Enter 'pa55word' in the 'Password' text box.<br/>
-Enter 'pa55word' in the 'Confirm password' text box.<br/>
-Check the 'editor' check box.<br/>
-Enter '7d2245460ff7493' in the 'First Name' text box.<br/>
-Enter '4bf3fcec7223447' in the 'Last Name' text box.<br/>
-Click the 'Create new account' button.<br/>
-Verify success message of 'A welcome message with further instructions has been e-mailed to the new user 7dda7dc80f214bb@ab89b515e7fd4e8.com.' is present.<br/>
-Click the 'Close Overlay X'.<br/>
-Click the 'Logout' button.<br/>
-STEP 1<br/>
-Enter '7dda7dc80f214bb@ab89b515e7fd4e8.com' in the 'Email Address' text box.<br/>
-Enter 'pa55word' in the 'Password' text box.<br/>
-Click the 'Login' button.<br/>
-STEP 2<br/>
-Click the activer user menu link for logged in user '7dda7dc80f214bb@ab89b515e7fd4e8.com'.<br/>
-Click the 'Edit' link in the work bench.<br/>
-Switch to the active frame titled '7dda7dc80f214bb@ab89b515e7fd4e8.com dialog'.<br/>
-STEP 3<br/>
-Enter ' ' in the 'Password' text box.<br/>
-Verify that password strength message 'The password does not include enough variation to be secure.' is present.<br/>
-Verify that password strength message 'Password must contain at least 2 digits.' is present.<br/>
-Verify that password strength message 'Password must be at least 8 characters in length.' is present.<br/>
-Verify that password strength message 'Password must begin and end with a letter.' is present.<br/>
-Verify that password strength message 'Password must contain at least one lowercase character.' is present.<br/>
-STEP 4<br/>
-Enter 'ABCDEFG1' in the 'Password' text box.<br/>
-Verify that password strength message 'The password does not include enough variation to be secure.' is present.<br/>
-Verify that password strength message 'Password must contain at least 2 digits.' is present.<br/>
-Verify that password strength message 'Password must begin and end with a letter.' is present.<br/>
-Verify that password strength message 'Password must contain at least one lowercase character.' is present.<br/>
-Verify that password strength message 'Password must be at least 8 characters in length.' is not present.<br/>
-STEP 5<br/>
-Enter 'ABCDEF11' in the 'Password' text box.<br/>
-Verify that password strength message 'The password does not include enough variation to be secure.' is present.<br/>
-Verify that password strength message 'Password must begin and end with a letter.' is present.<br/>
-Verify that password strength message 'Password must contain at least one lowercase character.' is present.<br/>
-Verify that password strength message 'Password must be at least 8 characters in length.' is not present.<br/>
-Verify that password strength message 'Password must contain at least 2 digits.' is not present.<br/>
-STEP 6<br/>
-Enter 'ABCDE11H' in the 'Password' text box.<br/>
-Verify that password strength message 'The password does not include enough variation to be secure.' is present.<br/>
-Verify that password strength message 'Password must contain at least one lowercase character.' is present.<br/>
-Verify that password strength message 'Password must be at least 8 characters in length.' is not present.<br/>
-Verify that password strength message 'Password must contain at least 2 digits.' is not present.<br/>
-Verify that password strength message 'Password must begin and end with a letter.' is not present.<br/>
-STEP 7<br/>
-Enter 'ABcDE11H' in the 'Password' text box.<br/>
-Verify the password strength container is not present.<br/>
-STEP 8<br/>
-Enter '7dda7dc80f214bb@ab89b515e7fd4e8.com' in the 'Password' text box.<br/>
-Verify that password strength message 'The password does not include enough variation to be secure.' is present.<br/>
-Verify that password strength message 'Password must not contain the username.' is present.<br/>
-STEP 9<br/>
-Enter 'ABcDE11H' in the 'Password' text box.<br/>
-Enter 'aBcDE11H' in the 'Confirm password' text box.<br/>
-Verify password match text equals 'no'.<br/>
-STEP 10<br/>
-Enter 'pa55word' in the 'Current password' text box.<br/>
-Enter 'A' in the 'Password' text box.<br/>
-Enter 'A' in the 'Confirm password' text box.<br/>
-Click the 'Save' button.<br/>
-STEP 11<br/>
-Enter 'pa55word' in the 'Current password' text box.<br/>
-Enter 'pa555word' in the 'Password' text box.<br/>
-Enter 'pa555word' in the 'Confirm password' text box.<br/>
-Verify password match text equals 'yes'.<br/>
-Click the 'Save' button.<br/>
-Verify success message of 'The changes have been saved.' is present.<br/>
-STEP 12<br/>
-Enter 'pa555word' in the 'Current password' text box.<br/>
-Enter 'pa555!@#$%^&*word' in the 'Password' text box.<br/>
-Enter 'pa555!@#$%^&*word' in the 'Confirm password' text box.<br/>
-Verify password match text equals 'yes'.<br/>
-Click the 'Save' button.<br/>
-Verify success message of 'The changes have been saved.' is present.<br/>
-STEP 13<br/>
-Click the 'Close Overlay X'.<br/>
-Click the 'Logout' button.<br/>
-Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
-Enter 'pa55word' in the 'Password' text box.<br/>
-Click the 'Login' button.<br/>
-Mouse over the 'Configuration' menu link.<br/>
-Mouse over the 'People' menu link.<br/>
-Mouse over the 'Password policies' menu link.<br/>
-Click the 'List' menu link.<br/>
-Switch to the active frame titled 'Password policies dialog'.<br/>
-Click the 'view' link.<br/>
-Switch to the active frame titled 'NBCU Password Policy dialog'.<br/>
-Verify the text 'Expiration' is present on the page.<br/>
-Verify the text '365' is present on the page.<br/>
-</div>
-</td>
-<td></td>
-<td>63</td>
-<td>com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules@7fafb02d</td></tr>
+<td>193</td>
+<td>com.nbcuni.test.publisher.contentbuildscripts.MPXPerformanceUpgrade.CreateAndEditVideos@14d9c11d</td></tr>
 </table><p>
 </body>
 </html>

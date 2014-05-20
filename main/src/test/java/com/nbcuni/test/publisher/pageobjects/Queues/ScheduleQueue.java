@@ -14,6 +14,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /*********************************************
@@ -103,6 +104,23 @@ public class ScheduleQueue {
     	}
     }
     
+    public void VerifyOperationOptions(List<String> options) throws Exception {
+    	
+    	Select Operation = new Select(Operation_Ddl);
+    	List<WebElement> allOptions = Operation.getOptions();
+    	List<String> allOptionsTxt = new ArrayList<String>();
+    	for (WebElement option : allOptions) {
+    		allOptionsTxt.add(option.getText());
+    	}
+    	
+    	Reporter.log("Verify that the 'Operation' option count equals '" + options.size() + "'.");
+    	Assert.assertEquals(allOptions.size(), options.size());
+    	
+    	for (String option : options) {
+    		Assert.assertTrue(allOptionsTxt.contains(option), "Option text '" + option + "' is not present in operations list.");
+    	}
+    }
+
     public void SelectOperation(String operationValue) throws Exception {
     	
     	Reporter.log("Select '" + operationValue + "' from the 'Select operation' drop down list.");

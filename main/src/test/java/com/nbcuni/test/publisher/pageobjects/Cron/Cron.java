@@ -60,7 +60,9 @@ public class Cron {
     	if (inOverlay == true) {
     		overlay.SwitchToActiveFrame();
     	}
-    	errorChecking.VerifyNoMessageErrorsPresent();
+    	else {
+    		errorChecking.VerifyNoMessageErrorsPresent();
+    	}
     	if (inOverlay == true) {
     		overlay.ClickCloseOverlayLnk();
     	}

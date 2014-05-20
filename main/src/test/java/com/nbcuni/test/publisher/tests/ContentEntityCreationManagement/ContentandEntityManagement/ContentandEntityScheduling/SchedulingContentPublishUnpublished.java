@@ -47,6 +47,8 @@ public class SchedulingContentPublishUnpublished extends ParentTest {
         
         Reporter.log("STEP 5");
         scheduleQueue.SelectRevision(postTitle);
+        scheduleQueue.VerifyOperationOptions(Arrays.asList("Revert", "Delete", "Moderate to Draft", 
+        		"Moderate to Published", "Moderate to Unpublished"));
         scheduleQueue.SelectOperation("Moderate to Published");
         
         Reporter.log("STEP 6");

@@ -133,8 +133,7 @@ public class ErrorChecking {
     		//DE6780 - undefined index and tve errors (all due to TVE issue)
     		allowedErrors.add("Notice: Undefined offset: 1 in drupal_http_request()");
     		allowedErrors.add("Notice: Undefined offset: 2 in drupal_http_request()");
-    		allowedErrors.add("seconds from: http://tve-qa.nbcuni.com");
-    		allowedErrors.add("seconds from: https://tve-dev.nbcuni.com");
+    		allowedErrors.add("tve-");
     		
     		//FIRST - check if error container is present
     		boolean errorContainerPresent = false;
@@ -186,8 +185,7 @@ public class ErrorChecking {
     								 					|| errorText.contains(allowedErrors.get(17))
     								 					|| errorText.contains(allowedErrors.get(18))
     								 					|| errorText.contains(allowedErrors.get(19))
-    								 					|| errorText.contains(allowedErrors.get(20))
-    								 					|| errorText.contains(allowedErrors.get(21))) {
+    								 					|| errorText.contains(allowedErrors.get(20))) {
     					//ignore error
     				}
     				else {
@@ -226,8 +224,7 @@ public class ErrorChecking {
     	    								 					|| errorText.contains(allowedErrors.get(17))
     	    								 					|| errorText.contains(allowedErrors.get(18))
     	    								 					|| errorText.contains(allowedErrors.get(19))
-    	    								 					|| errorText.contains(allowedErrors.get(20))
-    	    								 					|| errorText.contains(allowedErrors.get(21))) {
+    	    								 					|| errorText.contains(allowedErrors.get(20))) {
     						//ignore error
     					}
     					else {
