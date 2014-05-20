@@ -130,6 +130,12 @@ public class ErrorChecking {
     		allowedErrors.add("Failed to update URI to \"mpx:");
     		allowedErrors.add("Notice: Trying to get property of non-object in MediaThePlatformMpxStreamWrapper->interpolateUrl");
     		
+    		//DE6780 - undefined index and tve errors (all due to TVE issue)
+    		allowedErrors.add("Notice: Undefined offset: 1 in drupal_http_request()");
+    		allowedErrors.add("Notice: Undefined offset: 2 in drupal_http_request()");
+    		allowedErrors.add("seconds from: http://tve-qa.nbcuni.com");
+    		allowedErrors.add("seconds from: https://tve-dev.nbcuni.com");
+    		
     		//FIRST - check if error container is present
     		boolean errorContainerPresent = false;
     		try {
@@ -177,7 +183,11 @@ public class ErrorChecking {
     								 					|| errorText.contains(allowedErrors.get(14))
     								 					|| errorText.contains(allowedErrors.get(15))
     								 					|| errorText.contains(allowedErrors.get(16))
-    								 					|| errorText.contains(allowedErrors.get(17))) {
+    								 					|| errorText.contains(allowedErrors.get(17))
+    								 					|| errorText.contains(allowedErrors.get(18))
+    								 					|| errorText.contains(allowedErrors.get(19))
+    								 					|| errorText.contains(allowedErrors.get(20))
+    								 					|| errorText.contains(allowedErrors.get(21))) {
     					//ignore error
     				}
     				else {
@@ -213,7 +223,11 @@ public class ErrorChecking {
     	    								 					|| errorText.contains(allowedErrors.get(14))
     	    								 					|| errorText.contains(allowedErrors.get(15))
     	    								 					|| errorText.contains(allowedErrors.get(16))
-    	    								 					|| errorText.contains(allowedErrors.get(17))) {
+    	    								 					|| errorText.contains(allowedErrors.get(17))
+    	    								 					|| errorText.contains(allowedErrors.get(18))
+    	    								 					|| errorText.contains(allowedErrors.get(19))
+    	    								 					|| errorText.contains(allowedErrors.get(20))
+    	    								 					|| errorText.contains(allowedErrors.get(21))) {
     						//ignore error
     					}
     					else {
