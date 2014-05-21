@@ -92,7 +92,7 @@ public class ThumbnailsAreNotUpdated extends ParentTest{
                 String mediaTitle = "Automation" + random.GetCharacterString(10);
                 mpxAddMedia.GiveFocusToMediaItem();
                 mpxAddMedia.EnterTitle(mediaTitle);
-                mpxAddMedia.ClickSaveBtn();
+                mpxAddMedia.ClickSaveBtn(true);
                 mpxAddMedia.ClickFilesLnk();
                 mpxAddMedia.ClickUploadBtn();
             	mpxAddMedia.ClickChooseFilesBtn();
@@ -109,7 +109,7 @@ public class ThumbnailsAreNotUpdated extends ParentTest{
             	addFile.ClickOpenBtn();
             	mpxAddMedia.ClickUploadFromDialogBtn();
                 mpxAddMedia.ClickAllMediaLnk();
-                mpxAddMedia.ClickSaveBtn();
+                mpxAddMedia.ClickSaveBtn(false);
                 MPXPublishMedia mpxPublishMedia = new MPXPublishMedia(applib);
                 mpxPublishMedia.PublishDefaultVideo();
                 

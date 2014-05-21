@@ -1,4 +1,4 @@
-package com.nbcuni.test.publisher.contentbuildscripts.MPXPerformanceUpgrade;
+package com.nbcuni.test.publisher.contentbuildscripts.MPXPerformanceUpgrade.CreateVideos;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -32,7 +32,7 @@ public class CreateVideos extends ParentTest{
     	String mediaTitle = null;
     	for(int CCount=0;CCount<10;CCount++) {
     		
-    		String filePath = System.getProperty("user.dir") + "/src/test/java/com/nbcuni/test/publisher/contentbuildscripts/MPXPerformanceUpgrade/AssetsCreated.txt";
+    		String filePath = System.getProperty("user.dir") + "/src/test/java/com/nbcuni/test/publisher/contentbuildscripts/MPXPerformanceUpgrade/CreateVideos/AssetsCreated.txt";
     	    filePath = filePath.replace("/", File.separator);
     	    File file = new File(filePath); 
         	if(!file.exists()){
@@ -48,7 +48,7 @@ public class CreateVideos extends ParentTest{
                 mediaTitle = "Automation" + random.GetCharacterString(10);
                 mpxAddMedia.GiveFocusToMediaItem();
                 mpxAddMedia.EnterTitle(mediaTitle);
-                mpxAddMedia.ClickSaveBtn();
+                mpxAddMedia.ClickSaveBtn(true);
                 MPXPublishMedia mpxPublishMedia = new MPXPublishMedia(applib);
                 mpxPublishMedia.PublishDefaultVideo();
         		
@@ -56,6 +56,8 @@ public class CreateVideos extends ParentTest{
                 long creationTime = System.nanoTime();
             	bufferWritter.write("created," + mediaTitle + "," + creationTime + System.lineSeparator());
             	bufferWritter.close();
+            	
+            	webDriver.getCurrentUrl();
     		}
     		catch (Exception | AssertionError e) {
     			

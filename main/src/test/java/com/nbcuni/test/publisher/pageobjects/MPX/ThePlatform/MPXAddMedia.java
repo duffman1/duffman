@@ -168,6 +168,18 @@ public class MPXAddMedia {
         
     }
     
+    public void EnterDescription(String description) throws Exception {
+    	
+    	Reporter.log("Enter '" + description + "' in the 'Description' text box.");
+    	mpxAssets.ScrollDownForImgPresent(getImagePath() + "Media/Description_Txb.png");
+    	Pattern pattern = new Pattern(getImagePath() + "Media/Description_Txb.png").targetOffset(0, 15);
+    	Region region = sikuli.exists(pattern, 1);
+    	sikuli.click(region, 1);
+    	mpxAssets.ClearInput();
+    	sikuli.type(description);
+        
+    }
+
     public void EnterAirDate(String date) throws Exception {
     	
     	Reporter.log("Enter '" + date + "' in the 'Air Date' text box.");
@@ -180,7 +192,7 @@ public class MPXAddMedia {
         
     }
     
-    public void ClickSaveBtn() throws Exception {
+    public void ClickSaveBtn(Boolean withPause) throws Exception {
     	
     	Reporter.log("Click the 'Save' button.");
     	mpxAssets.WaitForImgPresent(getImagePath() + "Common/Save_Btn.png");
@@ -188,7 +200,9 @@ public class MPXAddMedia {
     	
     	mpxAssets.WaitForImgNotPresent(getImagePath() + "Common/Spinner.png");
     	
-    	Thread.sleep(config.getMPXVideaUploadPause()); //TODO - long pause here since file uploads in background requires some time. This is bad I know but there's no visual indicator I can go by...
+    	if (withPause.equals(true)) {
+    		Thread.sleep(config.getMPXVideaUploadPause()); //TODO - long pause here since file uploads in background requires some time. This is bad I know but there's no visual indicator I can go by...
+    	}
     }
     
     public void SelectContentRatingUSMPAA_PG13() throws Exception {

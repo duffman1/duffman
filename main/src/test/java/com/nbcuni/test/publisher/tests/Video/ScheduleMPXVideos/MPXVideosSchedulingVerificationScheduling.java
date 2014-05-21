@@ -128,7 +128,7 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
             	mpxAddMedia.EnterExpirationDate(mpxDate7DaysInPast + " 12:00 AM");
             	
             	//Step 5
-            	mpxAddMedia.ClickSaveBtn();
+            	mpxAddMedia.ClickSaveBtn(true);
             	
             	//Step 6
             	MPXPublishMedia mpxPublishMedia = new MPXPublishMedia(applib);
@@ -210,7 +210,7 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
             	mpxAddMedia.EnterExpirationDate(mpxDate1YearInFuture + " 12:00 AM");
         	    
             	//Step 27
-            	mpxAddMedia.ClickSaveBtn();
+            	mpxAddMedia.ClickSaveBtn(false);
             	
             	//Step 28
             	mpxPublishMedia.ClickAdditionalOptionsArrow();

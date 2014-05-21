@@ -95,7 +95,7 @@ public class CanonicalURL extends ParentTest{
                 mpxAddMedia.EnterTitle(mediaTitle);
                 String canonicalURL = "canonicalurl" + random.GetCharacterString(10);
                 mpxAddMedia.EnterCanonicalURL(canonicalURL);
-                mpxAddMedia.ClickSaveBtn();
+                mpxAddMedia.ClickSaveBtn(true);
                 MPXPublishMedia mpxPublishMedia = new MPXPublishMedia(applib);
                 mpxPublishMedia.PublishDefaultVideo();
         		

@@ -56,7 +56,7 @@ public class CreateAndValidateVideo extends ParentTest{
             String mediaTitle = "Automation" + random.GetCharacterString(10);
             mpxAddMedia.GiveFocusToMediaItem();
             mpxAddMedia.EnterTitle(mediaTitle);
-            mpxAddMedia.ClickSaveBtn();
+            mpxAddMedia.ClickSaveBtn(true);
             MPXPublishMedia mpxPublishMedia = new MPXPublishMedia(applib);
             mpxPublishMedia.PublishDefaultVideo();
     		
