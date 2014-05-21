@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed May 21 15:09:56 EDT 2014</td>
+<td>Started on:</td><td>Wed May 21 16:49:30 EDT 2014</td>
 </tr>
-<tr><td>Total time:</td><td>268 seconds (268782 ms)</td>
+<tr><td>Total time:</td><td>92 seconds (92730 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,89 +75,108 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.nbcuni.test.publisher.contentbuildscripts.MPXPerformanceUpgrade.EditVideos.EditVideos.Test()'><b>Test</b><br>Test class: com.nbcuni.test.publisher.contentbuildscripts.MPXPerformanceUpgrade.EditVideos.EditVideos<br/>
-<a href="#Output-2080898942" onClick='toggleBox("Output-2080898942", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS.ImplementMPS_TC2901()'><b>ImplementMPS_TC2901</b><br>Test class: com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS<br/>
+<a href="#Output-2053331376" onClick='toggleBox("Output-2053331376", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-2080898942" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-2080898942">
-Open the mpx platform.<br/>
-Enter 'mpx/AdminPub7QA' in the 'Username' text box.<br/>
-Enter 'Pa55word' in the 'Password' text box.<br/>
+<a href="#Output-2053331376" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2053331376">
+STEP 1<br/>
+Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.<br/>
+Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
+Enter 'pa55word' in the 'Password' text box.<br/>
 Click the 'Login' button.<br/>
+STEP 2<br/>
+Click the 'Modules' menu link.<br/>
+Switch to the active frame titled 'Modules dialog'.<br/>
+Enter 'Pub Ads' in the 'Filter Name' text box.<br/>
+Wait for the module titled 'Pub Ads' to appear in the list.<br/>
+Verify the 'Pub Ads' check box is checked.<br/>
+Enter 'MPS' in the 'Filter Name' text box.<br/>
+Wait for the module titled 'MPS' to appear in the list.<br/>
+Verify the 'MPS' check box is checked.<br/>
+Enter 'DART' in the 'Filter Name' text box.<br/>
+Wait for the module titled 'DART' to appear in the list.<br/>
+Enter 'Doubleclick for Publishers' in the 'Filter Name' text box.<br/>
+Wait for the module titled 'Doubleclick for Publishers' to appear in the list.<br/>
+Click the 'Close Overlay X'.<br/>
+STEP 3<br/>
+Mouse over the 'Reports' menu link.<br/>
+Click the 'Status report' menu link.<br/>
+Switch to the active frame titled 'Status report dialog'.<br/>
+Verify the text 'Ad Tag Style' is present on the page.<br/>
+Verify the text 'MPS' is present on the page.<br/>
+Click the 'Close Overlay X'.<br/>
+STEP 4<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Add content' menu link.<br/>
+Click the 'Movie' menu link.<br/>
+Switch to the active frame titled 'Create Movie dialog'.<br/>
+Scroll to and click the 'Basic Information' tab.<br/>
+Enter '62b531236513489' in the 'Title' text box.<br/>
+Switch to the Synopsis frame.<br/>
+Enter a randomized text string into the 'Body' text area.<br/>
+Switch to the active frame titled 'Create Movie dialog'.<br/>
+Click the 'Cover' select button.<br/>
+Switch to the select file frame.<br/>
+Enter the file path for file upload.<br/>
 Click the 'Upload' button.<br/>
-Click the 'Choose Files' button.<br/>
-Click the 'Movies' button in the OS Upload dialog.<br/>
-Click the Test Movie in th OS Upload dialog.<br/>
-Click the 'Open' button.<br/>
-Click the 'Upload' button in the Upload dialog.<br/>
-Click the 'Available Date' label on the right hand side to give focus to the media item.<br/>
-Enter 'Automation1896f85a7e' in the 'Title' text box.<br/>
+Wait for the file link to be visible after upload.<br/>
+Click the 'Next' button.<br/>
+Click the 'Public Local Files' radio button.<br/>
+Click the 'Next' button.<br/>
+Verify the file image 'HanSolo' is present.<br/>
+Verify the img is loaded and visible.<br/>
 Click the 'Save' button.<br/>
-Click the 'Publish' button.<br/>
-Click the 'Publish to Pub 7 Primary' check box.<br/>
-Click the 'Publish' button from the upload dialog.<br/>
-Click the 'Available Date' label on the right hand side to give focus to the media item.<br/>
-Enter '09d6fc1703f74c14921f' in the 'Description' text box.<br/>
+Switch to the active frame titled 'Create Movie dialog'.<br/>
+Click the 'Additional Information' link.<br/>
+Select the 'Syndicated' from the 'Movie Type' drop down list.<br/>
+Select the 'G' from the 'Rating' drop down list.<br/>
+Select the 'Action' from the 'Primary Genre' drop down list.<br/>
 Click the 'Save' button.<br/>
-Enter '3c43f265fac84492bd17' in the 'Description' text box.<br/>
+Verify success message of 'Movie 62b531236513489 has been created.' is present.<br/>
+STEP 5<br/>
+Verify 'var mpscall = {'site':'update', 'path':'node/' is present in page source.<br/>
+Verify 'var mpsopts = {'host':'mps.io'}' is present in page source.<br/>
+STEP 6 and STEP 7<br/>
+Verify '{"site":"update","title":"62b531236513489","path":"node\/' is present in page source.<br/>
+Verify '"qs":"","cat":"content|62b531236513489","content_id":"node' is present in page source.<br/>
+Verify '"is_content":1,"type":"movie","cag":{"genre":"Action","movie-rating":"G","movie-types":"Syndicated"},"envelope":"","pubdate":' is present in page source.<br/>
+STEP 8<br/>
+Verify 'a3VtdWQ9MQ==' is present in page source.<br/>
+STEP 9<br/>
+STEP 10<br/>
+STEP 11<br/>
+Mouse over the 'Structure' menu link.<br/>
+Mouse over the 'MPS Blocks' menu link.<br/>
+Click the 'Add' menu link.<br/>
+Switch to the active frame titled 'Add a new MPS block dialog'.<br/>
+Enter '953b99c1eda8490' in the 'Unique Name' text box.<br/>
+Enter 'd8549b8702f34f2' in the 'Block Name' text box.<br/>
 Click the 'Save' button.<br/>
-Enter '0673e19561af4f35ac10' in the 'Description' text box.<br/>
-Click the 'Save' button.<br/>
-Enter '81f5b629210e47fb8b23' in the 'Description' text box.<br/>
-Click the 'Save' button.<br/>
-Enter 'c8a4f4c4d3124578bfe9' in the 'Description' text box.<br/>
-Click the 'Save' button.<br/>
-Click the 'Upload' button.<br/>
-Click the 'Choose Files' button.<br/>
-Click the 'Movies' button in the OS Upload dialog.<br/>
-Click the Test Movie in th OS Upload dialog.<br/>
-Click the 'Open' button.<br/>
-Click the 'Upload' button in the Upload dialog.<br/>
-Enter 'blah' in the 'Description' text box.<br/>
-Enter 'Automation49298084f8' in the 'Title' text box.<br/>
-Click the 'Save' button.<br/>
-Click the 'Publish' button.<br/>
-Click the 'Publish to Pub 7 Primary' check box.<br/>
-Click the 'Publish' button from the upload dialog.<br/>
-Click the 'Available Date' label on the right hand side to give focus to the media item.<br/>
-Enter '32ccf8e08ad84d3eac0c' in the 'Description' text box.<br/>
-Click the 'Save' button.<br/>
-Enter 'c094c4cca70f4d8aa093' in the 'Description' text box.<br/>
-Click the 'Save' button.<br/>
-Enter '4b74a555ae1e4a38bd80' in the 'Description' text box.<br/>
-Click the 'Save' button.<br/>
-Enter 'c0e4a7480b38486d9e3d' in the 'Description' text box.<br/>
-Click the 'Save' button.<br/>
-Enter '61fc8c9bb5ae456bbf57' in the 'Description' text box.<br/>
-Click the 'Save' button.<br/>
-Click the 'Upload' button.<br/>
-Click the 'Choose Files' button.<br/>
-Click the 'Movies' button in the OS Upload dialog.<br/>
-Click the Test Movie in th OS Upload dialog.<br/>
-Click the 'Open' button.<br/>
-Click the 'Upload' button in the Upload dialog.<br/>
-Enter 'blah' in the 'Description' text box.<br/>
-Enter 'Automation37b6230cfa' in the 'Title' text box.<br/>
-Click the 'Save' button.<br/>
-Click the 'Publish' button.<br/>
-Click the 'Publish to Pub 7 Primary' check box.<br/>
-Click the 'Publish' button from the upload dialog.<br/>
-Click the 'Available Date' label on the right hand side to give focus to the media item.<br/>
-Enter '00d64374a2bc4f50ac4d' in the 'Description' text box.<br/>
-Click the 'Save' button.<br/>
-Enter '2c402b1e099e4cd7b7bf' in the 'Description' text box.<br/>
-Click the 'Save' button.<br/>
-Enter 'bcd5e8b594b144469c8f' in the 'Description' text box.<br/>
-Click the 'Save' button.<br/>
-Enter 'e354b165660f4b79b587' in the 'Description' text box.<br/>
-Click the 'Save' button.<br/>
-Enter '8cf7a776e5c643728b1d' in the 'Description' text box.<br/>
-Click the 'Save' button.<br/>
+Verify success message of '953b99c1eda8490 has been created.' is present.<br/>
+Click the 'Close Overlay X'.<br/>
+STEP 12<br/>
+Mouse over the 'Structure' menu link.<br/>
+Click the 'Blocks' menu link.<br/>
+Switch to the active frame titled 'Blocks dialog'.<br/>
+Select the block name 'd8549b8702f34f2' from the 'Header' drop down list.<br/>
+Click the 'Save Blocks' button.<br/>
+Verify success message of 'The block settings have been updated.' is present.<br/>
+Click the 'Close Overlay X'.<br/>
+STEP 13<br/>
+STEP 14 - N/A<br/>
+CLEANUP<br/>
+Mouse over the 'Structure' menu link.<br/>
+Click the 'Blocks' menu link.<br/>
+Switch to the active frame titled 'Blocks dialog'.<br/>
+Select the block name 'd8549b8702f34f2' from the '- None -' drop down list.<br/>
+Click the 'Save Blocks' button.<br/>
+Click the 'Close Overlay X'.<br/>
 </div>
 </td>
 <td></td>
-<td>265</td>
-<td>com.nbcuni.test.publisher.contentbuildscripts.MPXPerformanceUpgrade.EditVideos.EditVideos@26044b0b</td></tr>
+<td>89</td>
+<td>com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@5613e573</td></tr>
 </table><p>
 </body>
 </html>

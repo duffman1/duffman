@@ -71,7 +71,7 @@ public class ValidateIngestionTimePub7 extends ParentTest{
             	
             	//if asset hasn't already been processed, search for and process it
                 for (String asset : allAssets) {
-            	   
+                webDriver.getCurrentUrl();
             	   if (!entriesProcessed.contains(asset)) {
                 		   
             		   String[] data = asset.split(",");

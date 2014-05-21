@@ -2,477 +2,594 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
     <line>
-      <![CDATA[Open the mpx platform.]]>
+      <![CDATA[STEP 1]]>
     </line>
     <line>
-      <![CDATA[Enter 'mpx/AdminPub7QA' in the 'Username' text box.]]>
+      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Pa55word' in the 'Password' text box.]]>
+      <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
     </line>
     <line>
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Upload' button.]]>
+      <![CDATA[STEP 2]]>
     </line>
     <line>
-      <![CDATA[Click the 'Choose Files' button.]]>
+      <![CDATA[Click the 'Modules' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Movies' button in the OS Upload dialog.]]>
+      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
     </line>
     <line>
-      <![CDATA[Click the Test Movie in th OS Upload dialog.]]>
+      <![CDATA[Enter 'Pub Ads' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Open' button.]]>
+      <![CDATA[Wait for the module titled 'Pub Ads' to appear in the list.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Upload' button in the Upload dialog.]]>
+      <![CDATA[Verify the 'Pub Ads' check box is checked.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Available Date' label on the right hand side to give focus to the media item.]]>
+      <![CDATA[Enter 'MPS' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Automation1896f85a7e' in the 'Title' text box.]]>
+      <![CDATA[Wait for the module titled 'MPS' to appear in the list.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save' button.]]>
+      <![CDATA[Verify the 'MPS' check box is checked.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Publish' button.]]>
+      <![CDATA[Enter 'DART' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Publish to Pub 7 Primary' check box.]]>
+      <![CDATA[Wait for the module titled 'DART' to appear in the list.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Publish' button from the upload dialog.]]>
+      <![CDATA[Enter 'Doubleclick for Publishers' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Available Date' label on the right hand side to give focus to the media item.]]>
+      <![CDATA[Wait for the module titled 'Doubleclick for Publishers' to appear in the list.]]>
     </line>
     <line>
-      <![CDATA[Enter '09d6fc1703f74c14921f' in the 'Description' text box.]]>
+      <![CDATA[Click the 'Close Overlay X'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save' button.]]>
+      <![CDATA[STEP 3]]>
     </line>
     <line>
-      <![CDATA[Enter '3c43f265fac84492bd17' in the 'Description' text box.]]>
+      <![CDATA[Mouse over the 'Reports' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save' button.]]>
+      <![CDATA[Click the 'Status report' menu link.]]>
     </line>
     <line>
-      <![CDATA[Enter '0673e19561af4f35ac10' in the 'Description' text box.]]>
+      <![CDATA[Switch to the active frame titled 'Status report dialog'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save' button.]]>
+      <![CDATA[Verify the text 'Ad Tag Style' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Enter '81f5b629210e47fb8b23' in the 'Description' text box.]]>
+      <![CDATA[Verify the text 'MPS' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save' button.]]>
+      <![CDATA[Click the 'Close Overlay X'.]]>
     </line>
     <line>
-      <![CDATA[Enter 'c8a4f4c4d3124578bfe9' in the 'Description' text box.]]>
+      <![CDATA[STEP 4]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save' button.]]>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Upload' button.]]>
+      <![CDATA[Mouse over the 'Add content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Choose Files' button.]]>
+      <![CDATA[Click the 'Movie' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Movies' button in the OS Upload dialog.]]>
+      <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
     </line>
     <line>
-      <![CDATA[Click the Test Movie in th OS Upload dialog.]]>
+      <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Open' button.]]>
+      <![CDATA[Enter '62b531236513489' in the 'Title' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Upload' button in the Upload dialog.]]>
+      <![CDATA[Switch to the Synopsis frame.]]>
     </line>
     <line>
-      <![CDATA[Enter 'blah' in the 'Description' text box.]]>
+      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Automation49298084f8' in the 'Title' text box.]]>
+      <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save' button.]]>
+      <![CDATA[Click the 'Cover' select button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Publish' button.]]>
+      <![CDATA[Switch to the select file frame.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Publish to Pub 7 Primary' check box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Publish' button from the upload dialog.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Available Date' label on the right hand side to give focus to the media item.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '32ccf8e08ad84d3eac0c' in the 'Description' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'c094c4cca70f4d8aa093' in the 'Description' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '4b74a555ae1e4a38bd80' in the 'Description' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'c0e4a7480b38486d9e3d' in the 'Description' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '61fc8c9bb5ae456bbf57' in the 'Description' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
+      <![CDATA[Enter the file path for file upload.]]>
     </line>
     <line>
       <![CDATA[Click the 'Upload' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Choose Files' button.]]>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Movies' button in the OS Upload dialog.]]>
+      <![CDATA[Click the 'Next' button.]]>
     </line>
     <line>
-      <![CDATA[Click the Test Movie in th OS Upload dialog.]]>
+      <![CDATA[Click the 'Public Local Files' radio button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Open' button.]]>
+      <![CDATA[Click the 'Next' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Upload' button in the Upload dialog.]]>
+      <![CDATA[Verify the file image 'HanSolo' is present.]]>
     </line>
     <line>
-      <![CDATA[Enter 'blah' in the 'Description' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Automation37b6230cfa' in the 'Title' text box.]]>
+      <![CDATA[Verify the img is loaded and visible.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Publish' button.]]>
+      <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Publish to Pub 7 Primary' check box.]]>
+      <![CDATA[Click the 'Additional Information' link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Publish' button from the upload dialog.]]>
+      <![CDATA[Select the 'Syndicated' from the 'Movie Type' drop down list.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Available Date' label on the right hand side to give focus to the media item.]]>
+      <![CDATA[Select the 'G' from the 'Rating' drop down list.]]>
     </line>
     <line>
-      <![CDATA[Enter '00d64374a2bc4f50ac4d' in the 'Description' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '2c402b1e099e4cd7b7bf' in the 'Description' text box.]]>
+      <![CDATA[Select the 'Action' from the 'Primary Genre' drop down list.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Enter 'bcd5e8b594b144469c8f' in the 'Description' text box.]]>
+      <![CDATA[Verify success message of 'Movie 62b531236513489 has been created.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 5]]>
+    </line>
+    <line>
+      <![CDATA[Verify 'var mpscall = {'site':'update', 'path':'node/' is present in page source.]]>
+    </line>
+    <line>
+      <![CDATA[Verify 'var mpsopts = {'host':'mps.io'}' is present in page source.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 6 and STEP 7]]>
+    </line>
+    <line>
+      <![CDATA[Verify '{"site":"update","title":"62b531236513489","path":"node\/' is present in page source.]]>
+    </line>
+    <line>
+      <![CDATA[Verify '"qs":"","cat":"content|62b531236513489","content_id":"node' is present in page source.]]>
+    </line>
+    <line>
+      <![CDATA[Verify '"is_content":1,"type":"movie","cag":{"genre":"Action","movie-rating":"G","movie-types":"Syndicated"},"envelope":"","pubdate":' is present in page source.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 8]]>
+    </line>
+    <line>
+      <![CDATA[Verify 'a3VtdWQ9MQ==' is present in page source.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 9]]>
+    </line>
+    <line>
+      <![CDATA[STEP 10]]>
+    </line>
+    <line>
+      <![CDATA[STEP 11]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Structure' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'MPS Blocks' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Add' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Add a new MPS block dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '953b99c1eda8490' in the 'Unique Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'd8549b8702f34f2' in the 'Block Name' text box.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Enter 'e354b165660f4b79b587' in the 'Description' text box.]]>
+      <![CDATA[Verify success message of '953b99c1eda8490 has been created.' is present.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save' button.]]>
+      <![CDATA[Click the 'Close Overlay X'.]]>
     </line>
     <line>
-      <![CDATA[Enter '8cf7a776e5c643728b1d' in the 'Description' text box.]]>
+      <![CDATA[STEP 12]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save' button.]]>
+      <![CDATA[Mouse over the 'Structure' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Blocks' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Select the block name 'd8549b8702f34f2' from the 'Header' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save Blocks' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The block settings have been updated.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 13]]>
+    </line>
+    <line>
+      <![CDATA[STEP 14 - N/A]]>
+    </line>
+    <line>
+      <![CDATA[CLEANUP]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Structure' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Blocks' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Select the block name 'd8549b8702f34f2' from the '- None -' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save Blocks' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="268782" started-at="2014-05-21T19:09:56Z" finished-at="2014-05-21T19:14:24Z">
+  <suite name="Default suite" duration-ms="92730" started-at="2014-05-21T20:49:30Z" finished-at="2014-05-21T20:51:02Z">
     <groups>
+      <group name="full">
+        <method signature="ImplementMPS.ImplementMPS_TC2901()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@5613e573]" name="ImplementMPS_TC2901" class="com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS"/>
+      </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="268782" started-at="2014-05-21T19:09:56Z" finished-at="2014-05-21T19:14:24Z">
-      <class name="com.nbcuni.test.publisher.contentbuildscripts.MPXPerformanceUpgrade.EditVideos.EditVideos">
-        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.contentbuildscripts.MPXPerformanceUpgrade.EditVideos.EditVideos@26044b0b]" name="startGridAndHub" is-config="true" duration-ms="11829" started-at="2014-05-21T15:09:44Z" finished-at="2014-05-21T15:09:56Z">
+    <test name="Default test" duration-ms="92730" started-at="2014-05-21T20:49:30Z" finished-at="2014-05-21T20:51:02Z">
+      <class name="com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS">
+        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@5613e573]" name="startGridAndHub" is-config="true" duration-ms="11833" started-at="2014-05-21T16:49:18Z" finished-at="2014-05-21T16:49:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startGridAndHub -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.contentbuildscripts.MPXPerformanceUpgrade.EditVideos.EditVideos@26044b0b]" name="startSelenium" is-config="true" duration-ms="2366" started-at="2014-05-21T15:09:56Z" finished-at="2014-05-21T15:09:58Z">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@5613e573]" name="startSelenium" is-config="true" duration-ms="2403" started-at="2014-05-21T16:49:30Z" finished-at="2014-05-21T16:49:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="Test()[pri:0, instance:com.nbcuni.test.publisher.contentbuildscripts.MPXPerformanceUpgrade.EditVideos.EditVideos@26044b0b]" name="Test" duration-ms="265830" started-at="2014-05-21T15:09:58Z" finished-at="2014-05-21T15:14:24Z">
+        <test-method status="PASS" signature="ImplementMPS_TC2901()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@5613e573]" name="ImplementMPS_TC2901" duration-ms="89743" started-at="2014-05-21T16:49:32Z" finished-at="2014-05-21T16:51:02Z">
           <reporter-output>
             <line>
-              <![CDATA[Open the mpx platform.]]>
+              <![CDATA[STEP 1]]>
             </line>
             <line>
-              <![CDATA[Enter 'mpx/AdminPub7QA' in the 'Username' text box.]]>
+              <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
             </line>
             <line>
-              <![CDATA[Enter 'Pa55word' in the 'Password' text box.]]>
+              <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
             </line>
             <line>
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Upload' button.]]>
+              <![CDATA[STEP 2]]>
             </line>
             <line>
-              <![CDATA[Click the 'Choose Files' button.]]>
+              <![CDATA[Click the 'Modules' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Movies' button in the OS Upload dialog.]]>
+              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
             </line>
             <line>
-              <![CDATA[Click the Test Movie in th OS Upload dialog.]]>
+              <![CDATA[Enter 'Pub Ads' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Open' button.]]>
+              <![CDATA[Wait for the module titled 'Pub Ads' to appear in the list.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Upload' button in the Upload dialog.]]>
+              <![CDATA[Verify the 'Pub Ads' check box is checked.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Available Date' label on the right hand side to give focus to the media item.]]>
+              <![CDATA[Enter 'MPS' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Enter 'Automation1896f85a7e' in the 'Title' text box.]]>
+              <![CDATA[Wait for the module titled 'MPS' to appear in the list.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save' button.]]>
+              <![CDATA[Verify the 'MPS' check box is checked.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Publish' button.]]>
+              <![CDATA[Enter 'DART' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Publish to Pub 7 Primary' check box.]]>
+              <![CDATA[Wait for the module titled 'DART' to appear in the list.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Publish' button from the upload dialog.]]>
+              <![CDATA[Enter 'Doubleclick for Publishers' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Available Date' label on the right hand side to give focus to the media item.]]>
+              <![CDATA[Wait for the module titled 'Doubleclick for Publishers' to appear in the list.]]>
             </line>
             <line>
-              <![CDATA[Enter '09d6fc1703f74c14921f' in the 'Description' text box.]]>
+              <![CDATA[Click the 'Close Overlay X'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save' button.]]>
+              <![CDATA[STEP 3]]>
             </line>
             <line>
-              <![CDATA[Enter '3c43f265fac84492bd17' in the 'Description' text box.]]>
+              <![CDATA[Mouse over the 'Reports' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save' button.]]>
+              <![CDATA[Click the 'Status report' menu link.]]>
             </line>
             <line>
-              <![CDATA[Enter '0673e19561af4f35ac10' in the 'Description' text box.]]>
+              <![CDATA[Switch to the active frame titled 'Status report dialog'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save' button.]]>
+              <![CDATA[Verify the text 'Ad Tag Style' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Enter '81f5b629210e47fb8b23' in the 'Description' text box.]]>
+              <![CDATA[Verify the text 'MPS' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save' button.]]>
+              <![CDATA[Click the 'Close Overlay X'.]]>
             </line>
             <line>
-              <![CDATA[Enter 'c8a4f4c4d3124578bfe9' in the 'Description' text box.]]>
+              <![CDATA[STEP 4]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save' button.]]>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Upload' button.]]>
+              <![CDATA[Mouse over the 'Add content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Choose Files' button.]]>
+              <![CDATA[Click the 'Movie' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Movies' button in the OS Upload dialog.]]>
+              <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
             </line>
             <line>
-              <![CDATA[Click the Test Movie in th OS Upload dialog.]]>
+              <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Open' button.]]>
+              <![CDATA[Enter '62b531236513489' in the 'Title' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Upload' button in the Upload dialog.]]>
+              <![CDATA[Switch to the Synopsis frame.]]>
             </line>
             <line>
-              <![CDATA[Enter 'blah' in the 'Description' text box.]]>
+              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
             </line>
             <line>
-              <![CDATA[Enter 'Automation49298084f8' in the 'Title' text box.]]>
+              <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save' button.]]>
+              <![CDATA[Click the 'Cover' select button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Publish' button.]]>
+              <![CDATA[Switch to the select file frame.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Publish to Pub 7 Primary' check box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Publish' button from the upload dialog.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Available Date' label on the right hand side to give focus to the media item.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '32ccf8e08ad84d3eac0c' in the 'Description' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'c094c4cca70f4d8aa093' in the 'Description' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '4b74a555ae1e4a38bd80' in the 'Description' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'c0e4a7480b38486d9e3d' in the 'Description' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '61fc8c9bb5ae456bbf57' in the 'Description' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
+              <![CDATA[Enter the file path for file upload.]]>
             </line>
             <line>
               <![CDATA[Click the 'Upload' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Choose Files' button.]]>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Movies' button in the OS Upload dialog.]]>
+              <![CDATA[Click the 'Next' button.]]>
             </line>
             <line>
-              <![CDATA[Click the Test Movie in th OS Upload dialog.]]>
+              <![CDATA[Click the 'Public Local Files' radio button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Open' button.]]>
+              <![CDATA[Click the 'Next' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Upload' button in the Upload dialog.]]>
+              <![CDATA[Verify the file image 'HanSolo' is present.]]>
             </line>
             <line>
-              <![CDATA[Enter 'blah' in the 'Description' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Automation37b6230cfa' in the 'Title' text box.]]>
+              <![CDATA[Verify the img is loaded and visible.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Publish' button.]]>
+              <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Publish to Pub 7 Primary' check box.]]>
+              <![CDATA[Click the 'Additional Information' link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Publish' button from the upload dialog.]]>
+              <![CDATA[Select the 'Syndicated' from the 'Movie Type' drop down list.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Available Date' label on the right hand side to give focus to the media item.]]>
+              <![CDATA[Select the 'G' from the 'Rating' drop down list.]]>
             </line>
             <line>
-              <![CDATA[Enter '00d64374a2bc4f50ac4d' in the 'Description' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '2c402b1e099e4cd7b7bf' in the 'Description' text box.]]>
+              <![CDATA[Select the 'Action' from the 'Primary Genre' drop down list.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Enter 'bcd5e8b594b144469c8f' in the 'Description' text box.]]>
+              <![CDATA[Verify success message of 'Movie 62b531236513489 has been created.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 5]]>
+            </line>
+            <line>
+              <![CDATA[Verify 'var mpscall = {'site':'update', 'path':'node/' is present in page source.]]>
+            </line>
+            <line>
+              <![CDATA[Verify 'var mpsopts = {'host':'mps.io'}' is present in page source.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 6 and STEP 7]]>
+            </line>
+            <line>
+              <![CDATA[Verify '{"site":"update","title":"62b531236513489","path":"node\/' is present in page source.]]>
+            </line>
+            <line>
+              <![CDATA[Verify '"qs":"","cat":"content|62b531236513489","content_id":"node' is present in page source.]]>
+            </line>
+            <line>
+              <![CDATA[Verify '"is_content":1,"type":"movie","cag":{"genre":"Action","movie-rating":"G","movie-types":"Syndicated"},"envelope":"","pubdate":' is present in page source.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 8]]>
+            </line>
+            <line>
+              <![CDATA[Verify 'a3VtdWQ9MQ==' is present in page source.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 9]]>
+            </line>
+            <line>
+              <![CDATA[STEP 10]]>
+            </line>
+            <line>
+              <![CDATA[STEP 11]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Structure' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'MPS Blocks' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Add' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Add a new MPS block dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '953b99c1eda8490' in the 'Unique Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'd8549b8702f34f2' in the 'Block Name' text box.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Enter 'e354b165660f4b79b587' in the 'Description' text box.]]>
+              <![CDATA[Verify success message of '953b99c1eda8490 has been created.' is present.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save' button.]]>
+              <![CDATA[Click the 'Close Overlay X'.]]>
             </line>
             <line>
-              <![CDATA[Enter '8cf7a776e5c643728b1d' in the 'Description' text box.]]>
+              <![CDATA[STEP 12]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save' button.]]>
+              <![CDATA[Mouse over the 'Structure' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Blocks' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Select the block name 'd8549b8702f34f2' from the 'Header' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save Blocks' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The block settings have been updated.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 13]]>
+            </line>
+            <line>
+              <![CDATA[STEP 14 - N/A]]>
+            </line>
+            <line>
+              <![CDATA[CLEANUP]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Structure' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Blocks' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Select the block name 'd8549b8702f34f2' from the '- None -' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save Blocks' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- Test -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.contentbuildscripts.MPXPerformanceUpgrade.EditVideos.EditVideos@26044b0b]" name="stopSelenium" is-config="true" duration-ms="571" started-at="2014-05-21T15:14:24Z" finished-at="2014-05-21T15:14:24Z">
+        </test-method> <!-- ImplementMPS_TC2901 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@5613e573]" name="stopSelenium" is-config="true" duration-ms="570" started-at="2014-05-21T16:51:02Z" finished-at="2014-05-21T16:51:02Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Test status=SUCCESS method=EditVideos.Test()[pri:0, instance:com.nbcuni.test.publisher.contentbuildscripts.MPXPerformanceUpgrade.EditVideos.EditVideos@26044b0b] output=Open the mpx platform.]]]>
+                <![CDATA[[TestResult name=ImplementMPS_TC2901 status=SUCCESS method=ImplementMPS.ImplementMPS_TC2901()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@5613e573] output=STEP 1]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.contentbuildscripts.MPXPerformanceUpgrade.EditVideos.EditVideos@26044b0b]" name="stopGridAndHub" is-config="true" duration-ms="405" started-at="2014-05-21T15:14:24Z" finished-at="2014-05-21T15:14:25Z">
+        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@5613e573]" name="stopGridAndHub" is-config="true" duration-ms="416" started-at="2014-05-21T16:51:02Z" finished-at="2014-05-21T16:51:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopGridAndHub -->
-      </class> <!-- com.nbcuni.test.publisher.contentbuildscripts.MPXPerformanceUpgrade.EditVideos.EditVideos -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

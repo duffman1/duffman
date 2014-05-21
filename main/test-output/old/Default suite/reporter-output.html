@@ -1,74 +1,93 @@
-<h2>Reporter output</h2><table><tr><td>Open the mpx platform.</td></tr>
-<tr><td>Enter 'mpx/AdminPub7QA' in the 'Username' text box.</td></tr>
-<tr><td>Enter 'Pa55word' in the 'Password' text box.</td></tr>
+<h2>Reporter output</h2><table><tr><td>STEP 1</td></tr>
+<tr><td>Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.</td></tr>
+<tr><td>Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.</td></tr>
+<tr><td>Enter 'pa55word' in the 'Password' text box.</td></tr>
 <tr><td>Click the 'Login' button.</td></tr>
+<tr><td>STEP 2</td></tr>
+<tr><td>Click the 'Modules' menu link.</td></tr>
+<tr><td>Switch to the active frame titled 'Modules dialog'.</td></tr>
+<tr><td>Enter 'Pub Ads' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for the module titled 'Pub Ads' to appear in the list.</td></tr>
+<tr><td>Verify the 'Pub Ads' check box is checked.</td></tr>
+<tr><td>Enter 'MPS' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for the module titled 'MPS' to appear in the list.</td></tr>
+<tr><td>Verify the 'MPS' check box is checked.</td></tr>
+<tr><td>Enter 'DART' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for the module titled 'DART' to appear in the list.</td></tr>
+<tr><td>Enter 'Doubleclick for Publishers' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for the module titled 'Doubleclick for Publishers' to appear in the list.</td></tr>
+<tr><td>Click the 'Close Overlay X'.</td></tr>
+<tr><td>STEP 3</td></tr>
+<tr><td>Mouse over the 'Reports' menu link.</td></tr>
+<tr><td>Click the 'Status report' menu link.</td></tr>
+<tr><td>Switch to the active frame titled 'Status report dialog'.</td></tr>
+<tr><td>Verify the text 'Ad Tag Style' is present on the page.</td></tr>
+<tr><td>Verify the text 'MPS' is present on the page.</td></tr>
+<tr><td>Click the 'Close Overlay X'.</td></tr>
+<tr><td>STEP 4</td></tr>
+<tr><td>Mouse over the 'Content' menu link.</td></tr>
+<tr><td>Mouse over the 'Add content' menu link.</td></tr>
+<tr><td>Click the 'Movie' menu link.</td></tr>
+<tr><td>Switch to the active frame titled 'Create Movie dialog'.</td></tr>
+<tr><td>Scroll to and click the 'Basic Information' tab.</td></tr>
+<tr><td>Enter '62b531236513489' in the 'Title' text box.</td></tr>
+<tr><td>Switch to the Synopsis frame.</td></tr>
+<tr><td>Enter a randomized text string into the 'Body' text area.</td></tr>
+<tr><td>Switch to the active frame titled 'Create Movie dialog'.</td></tr>
+<tr><td>Click the 'Cover' select button.</td></tr>
+<tr><td>Switch to the select file frame.</td></tr>
+<tr><td>Enter the file path for file upload.</td></tr>
 <tr><td>Click the 'Upload' button.</td></tr>
-<tr><td>Click the 'Choose Files' button.</td></tr>
-<tr><td>Click the 'Movies' button in the OS Upload dialog.</td></tr>
-<tr><td>Click the Test Movie in th OS Upload dialog.</td></tr>
-<tr><td>Click the 'Open' button.</td></tr>
-<tr><td>Click the 'Upload' button in the Upload dialog.</td></tr>
-<tr><td>Click the 'Available Date' label on the right hand side to give focus to the media item.</td></tr>
-<tr><td>Enter 'Automation1896f85a7e' in the 'Title' text box.</td></tr>
+<tr><td>Wait for the file link to be visible after upload.</td></tr>
+<tr><td>Click the 'Next' button.</td></tr>
+<tr><td>Click the 'Public Local Files' radio button.</td></tr>
+<tr><td>Click the 'Next' button.</td></tr>
+<tr><td>Verify the file image 'HanSolo' is present.</td></tr>
+<tr><td>Verify the img is loaded and visible.</td></tr>
 <tr><td>Click the 'Save' button.</td></tr>
-<tr><td>Click the 'Publish' button.</td></tr>
-<tr><td>Click the 'Publish to Pub 7 Primary' check box.</td></tr>
-<tr><td>Click the 'Publish' button from the upload dialog.</td></tr>
-<tr><td>Click the 'Available Date' label on the right hand side to give focus to the media item.</td></tr>
-<tr><td>Enter '09d6fc1703f74c14921f' in the 'Description' text box.</td></tr>
+<tr><td>Switch to the active frame titled 'Create Movie dialog'.</td></tr>
+<tr><td>Click the 'Additional Information' link.</td></tr>
+<tr><td>Select the 'Syndicated' from the 'Movie Type' drop down list.</td></tr>
+<tr><td>Select the 'G' from the 'Rating' drop down list.</td></tr>
+<tr><td>Select the 'Action' from the 'Primary Genre' drop down list.</td></tr>
 <tr><td>Click the 'Save' button.</td></tr>
-<tr><td>Enter '3c43f265fac84492bd17' in the 'Description' text box.</td></tr>
+<tr><td>Verify success message of 'Movie 62b531236513489 has been created.' is present.</td></tr>
+<tr><td>STEP 5</td></tr>
+<tr><td>Verify 'var mpscall = {'site':'update', 'path':'node/' is present in page source.</td></tr>
+<tr><td>Verify 'var mpsopts = {'host':'mps.io'}' is present in page source.</td></tr>
+<tr><td>STEP 6 and STEP 7</td></tr>
+<tr><td>Verify '{"site":"update","title":"62b531236513489","path":"node\/' is present in page source.</td></tr>
+<tr><td>Verify '"qs":"","cat":"content|62b531236513489","content_id":"node' is present in page source.</td></tr>
+<tr><td>Verify '"is_content":1,"type":"movie","cag":{"genre":"Action","movie-rating":"G","movie-types":"Syndicated"},"envelope":"","pubdate":' is present in page source.</td></tr>
+<tr><td>STEP 8</td></tr>
+<tr><td>Verify 'a3VtdWQ9MQ==' is present in page source.</td></tr>
+<tr><td>STEP 9</td></tr>
+<tr><td>STEP 10</td></tr>
+<tr><td>STEP 11</td></tr>
+<tr><td>Mouse over the 'Structure' menu link.</td></tr>
+<tr><td>Mouse over the 'MPS Blocks' menu link.</td></tr>
+<tr><td>Click the 'Add' menu link.</td></tr>
+<tr><td>Switch to the active frame titled 'Add a new MPS block dialog'.</td></tr>
+<tr><td>Enter '953b99c1eda8490' in the 'Unique Name' text box.</td></tr>
+<tr><td>Enter 'd8549b8702f34f2' in the 'Block Name' text box.</td></tr>
 <tr><td>Click the 'Save' button.</td></tr>
-<tr><td>Enter '0673e19561af4f35ac10' in the 'Description' text box.</td></tr>
-<tr><td>Click the 'Save' button.</td></tr>
-<tr><td>Enter '81f5b629210e47fb8b23' in the 'Description' text box.</td></tr>
-<tr><td>Click the 'Save' button.</td></tr>
-<tr><td>Enter 'c8a4f4c4d3124578bfe9' in the 'Description' text box.</td></tr>
-<tr><td>Click the 'Save' button.</td></tr>
-<tr><td>Click the 'Upload' button.</td></tr>
-<tr><td>Click the 'Choose Files' button.</td></tr>
-<tr><td>Click the 'Movies' button in the OS Upload dialog.</td></tr>
-<tr><td>Click the Test Movie in th OS Upload dialog.</td></tr>
-<tr><td>Click the 'Open' button.</td></tr>
-<tr><td>Click the 'Upload' button in the Upload dialog.</td></tr>
-<tr><td>Enter 'blah' in the 'Description' text box.</td></tr>
-<tr><td>Enter 'Automation49298084f8' in the 'Title' text box.</td></tr>
-<tr><td>Click the 'Save' button.</td></tr>
-<tr><td>Click the 'Publish' button.</td></tr>
-<tr><td>Click the 'Publish to Pub 7 Primary' check box.</td></tr>
-<tr><td>Click the 'Publish' button from the upload dialog.</td></tr>
-<tr><td>Click the 'Available Date' label on the right hand side to give focus to the media item.</td></tr>
-<tr><td>Enter '32ccf8e08ad84d3eac0c' in the 'Description' text box.</td></tr>
-<tr><td>Click the 'Save' button.</td></tr>
-<tr><td>Enter 'c094c4cca70f4d8aa093' in the 'Description' text box.</td></tr>
-<tr><td>Click the 'Save' button.</td></tr>
-<tr><td>Enter '4b74a555ae1e4a38bd80' in the 'Description' text box.</td></tr>
-<tr><td>Click the 'Save' button.</td></tr>
-<tr><td>Enter 'c0e4a7480b38486d9e3d' in the 'Description' text box.</td></tr>
-<tr><td>Click the 'Save' button.</td></tr>
-<tr><td>Enter '61fc8c9bb5ae456bbf57' in the 'Description' text box.</td></tr>
-<tr><td>Click the 'Save' button.</td></tr>
-<tr><td>Click the 'Upload' button.</td></tr>
-<tr><td>Click the 'Choose Files' button.</td></tr>
-<tr><td>Click the 'Movies' button in the OS Upload dialog.</td></tr>
-<tr><td>Click the Test Movie in th OS Upload dialog.</td></tr>
-<tr><td>Click the 'Open' button.</td></tr>
-<tr><td>Click the 'Upload' button in the Upload dialog.</td></tr>
-<tr><td>Enter 'blah' in the 'Description' text box.</td></tr>
-<tr><td>Enter 'Automation37b6230cfa' in the 'Title' text box.</td></tr>
-<tr><td>Click the 'Save' button.</td></tr>
-<tr><td>Click the 'Publish' button.</td></tr>
-<tr><td>Click the 'Publish to Pub 7 Primary' check box.</td></tr>
-<tr><td>Click the 'Publish' button from the upload dialog.</td></tr>
-<tr><td>Click the 'Available Date' label on the right hand side to give focus to the media item.</td></tr>
-<tr><td>Enter '00d64374a2bc4f50ac4d' in the 'Description' text box.</td></tr>
-<tr><td>Click the 'Save' button.</td></tr>
-<tr><td>Enter '2c402b1e099e4cd7b7bf' in the 'Description' text box.</td></tr>
-<tr><td>Click the 'Save' button.</td></tr>
-<tr><td>Enter 'bcd5e8b594b144469c8f' in the 'Description' text box.</td></tr>
-<tr><td>Click the 'Save' button.</td></tr>
-<tr><td>Enter 'e354b165660f4b79b587' in the 'Description' text box.</td></tr>
-<tr><td>Click the 'Save' button.</td></tr>
-<tr><td>Enter '8cf7a776e5c643728b1d' in the 'Description' text box.</td></tr>
-<tr><td>Click the 'Save' button.</td></tr>
+<tr><td>Verify success message of '953b99c1eda8490 has been created.' is present.</td></tr>
+<tr><td>Click the 'Close Overlay X'.</td></tr>
+<tr><td>STEP 12</td></tr>
+<tr><td>Mouse over the 'Structure' menu link.</td></tr>
+<tr><td>Click the 'Blocks' menu link.</td></tr>
+<tr><td>Switch to the active frame titled 'Blocks dialog'.</td></tr>
+<tr><td>Select the block name 'd8549b8702f34f2' from the 'Header' drop down list.</td></tr>
+<tr><td>Click the 'Save Blocks' button.</td></tr>
+<tr><td>Verify success message of 'The block settings have been updated.' is present.</td></tr>
+<tr><td>Click the 'Close Overlay X'.</td></tr>
+<tr><td>STEP 13</td></tr>
+<tr><td>STEP 14 - N/A</td></tr>
+<tr><td>CLEANUP</td></tr>
+<tr><td>Mouse over the 'Structure' menu link.</td></tr>
+<tr><td>Click the 'Blocks' menu link.</td></tr>
+<tr><td>Switch to the active frame titled 'Blocks dialog'.</td></tr>
+<tr><td>Select the block name 'd8549b8702f34f2' from the '- None -' drop down list.</td></tr>
+<tr><td>Click the 'Save Blocks' button.</td></tr>
+<tr><td>Click the 'Close Overlay X'.</td></tr>
 </table>
