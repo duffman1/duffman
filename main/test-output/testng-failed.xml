@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides">
+      <class name="com.nbcuni.test.publisher.contentbuildscripts.MPXPerformanceUpgrade.CreateAndEditVideos">
         <methods>
           <include name="startSelenium"/>
           <include name="stopGridAndHub"/>
           <include name="startGridAndHub"/>
           <include name="stopSelenium"/>
-          <include name="MPXVideosSchedulingVerificationInitialOverrides_Test"/>
+          <include name="Test"/>
         </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides -->
+      </class> <!-- com.nbcuni.test.publisher.contentbuildscripts.MPXPerformanceUpgrade.CreateAndEditVideos -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

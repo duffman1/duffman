@@ -4,15 +4,10 @@
   	<test verbose="1" name="All Concurrent Web Tests" annotations="JDK">
 
 		<!-- Enter group name for specific test scripts, options are "full", "smoke", or "mpx" -->
-		<groups>
-	 		<run>
-	 			<include name="full"/>
-	 		</run>
-		</groups>
-
+		
 		<classes>
 		
-			<class name="com.nbcuni.test.publisher.contentbuildscripts.MPXPerformanceUpgrade.CreateAndEditVideos"/>
+			<class name="com.nbcuni.test.publisher.contentbuildscripts.MPXPerformanceUpgrade.CreateVideos"/>
 			<class name="com.nbcuni.test.publisher.contentbuildscripts.MPXPerformanceUpgrade.ValidateIngestionTimePub7"/>
 			
 		</classes>

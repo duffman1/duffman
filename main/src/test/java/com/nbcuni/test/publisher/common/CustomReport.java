@@ -149,7 +149,7 @@ public class CustomReport extends EmailableReporter {
   	  	String fileExtension = dateFormat.format(date).replace("/", "");
   	  	fileExtension = fileExtension.replace(" ", "");
   	  	String environmentTitle = config.getConfigValue("AppURL").replace("http://", "").replace(".nbcupublisher7.publisher7.com", "").toUpperCase();
-  	  	fileExtension = environmentTitle.replace(".", "") + "-" + fileExtension.replace(":", "") + ".html";
+  	  	fileExtension = environmentTitle + "-" + fileExtension.replace(":", "") + ".html";
   	  	String filePath = storeReportsTo + fileExtension;
 
   	  	try {

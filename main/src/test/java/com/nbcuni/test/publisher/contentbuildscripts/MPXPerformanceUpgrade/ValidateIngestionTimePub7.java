@@ -12,86 +12,122 @@ import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Content.SearchFor;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
-
-import org.testng.Reporter;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class ValidateIngestionTimePub7 extends ParentTest{
 	
-    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "smoke", "mpx"})
+    @Test(retryAnalyzer = RerunOnFailure.class)
     public void Test() throws Exception {
     	
     	//login to pub7
     	UserLogin userLogin = applib.openApplication();
     	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
     	
-    	//navigate to mpx media page
-    	taxonomy.NavigateSite("Content>>Files>>mpxMedia");
-	    overlay.SwitchToActiveFrame();
-	    
-    	Thread.sleep(60000);
+    	//open the search page
+ 	   webDriver.navigate().to(applib.getApplicationURL() + "/admin/content/file/mpxmedia");
+ 	   
+    	//wait for the asset creation file list to be available
+	    String assetCreationFilePath = System.getProperty("user.dir") + "/src/test/java/com/nbcuni/test/publisher/contentbuildscripts/MPXPerformanceUpgrade/AssetsCreated.txt";
+	    assetCreationFilePath = assetCreationFilePath.replace("/", File.separator);
+	    for (int second = 0; ; second++){
+            if (second >= 120) {
+                Assert.fail("Asset Creation File Not Available after 60 seconds");
+            }
+            
+            if (new File(assetCreationFilePath).exists()) {
+            	break;
+            }
+            else {
+            	Thread.sleep(1000);
+            }
+        }
     	
     	List<String> entriesProcessed = new ArrayList<String>();
     	int I = 1;
     	while (I == 1) {
     		
-    		//read all the entries in the created asset file
-    		String mediaTitle = null;
-    		long creationTime = 0;
-        	String filePath = System.getProperty("user.dir") + "/src/test/java/com/nbcuni/test/publisher/contentbuildscripts/MPXPerformanceUpgrade/AssetsCreated.txt";
-    	    filePath = filePath.replace("/", File.separator);
-    	    File file = new File(filePath);
-        	BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
-        	List<String> allAssets = new ArrayList<String>();
-        	String line;
-        	while ((line = bufferedReader.readLine()) != null) {
-        		
-        	   allAssets.add(line);
-        	}
-        	bufferedReader.close();
-        	
-        	
-           for (String asset : allAssets) {
-        	   if (!entriesProcessed.contains(asset)) {
+    		try {
+    			
+    			//read all the entries in the created asset file
+        		String type = null;
+        		String mediaTitle = null;
+        		long creationTime = 0;
+        		File assetCreationFile = new File(assetCreationFilePath);
+            	BufferedReader bufferedReader = new BufferedReader(new FileReader(assetCreationFile));
+            	List<String> allAssets = new ArrayList<String>();
+            	String line;
+            	while ((line = bufferedReader.readLine()) != null) {
+            		
+            	   allAssets.add(line);
+            	}
+            	bufferedReader.close();
+            	
+            	//if asset hasn't already been processed, search for and process it
+                for (String asset : allAssets) {
+            	   
+            	   if (!entriesProcessed.contains(asset)) {
+                		   
             		   String[] data = asset.split(",");
-            		   mediaTitle = data[0];
-            		   creationTime = Long.valueOf(data[1]).longValue();
-            		   entriesProcessed.add(asset);
-            		   
-            		   
-            		 //search for the asset
-               	    SearchFor searchFor = new SearchFor(webDriver, applib);
-               	    System.out.println(mediaTitle);
-               	    searchFor.EnterTitle(mediaTitle);
-               	    searchFor.ClickApplyBtn();
-               	    overlay.switchToDefaultContent();
-               	    while (!searchFor.GetFirstMPXMediaSearchResult().equals(mediaTitle)) {
-               	    	webDriver.navigate().refresh();
-               	    }
+            		   type = data[0];
+            		   mediaTitle = data[1];
+                	   creationTime = Long.valueOf(data[2]).longValue();
+                	   
+                	   entriesProcessed.add(asset);
+                		      
+                	   //search for the asset
+                   	   SearchFor searchFor = new SearchFor(webDriver, applib);
+                   	   searchFor.EnterTitle(mediaTitle);
+                   	   searchFor.ClickApplyBtn();
+                   	   overlay.switchToDefaultContent();
+                   	   int refreshCount = 0;
+                   	   Boolean ingestionTimeout = false;
+                   	   while (!searchFor.GetFirstMPXMediaSearchResult().equals(mediaTitle)) {
                    	
-                   	//log the ingestion time
-                       long ingestionTime = System.nanoTime() - creationTime;
-                       Reporter.log("Ingestion time for video '" + mediaTitle + "' was " + ingestionTime);
-                   	String filePath2 = System.getProperty("user.dir") + "/src/test/java/com/nbcuni/test/publisher/contentbuildscripts/MPXPerformanceUpgrade/AssetsIngested.txt";
-                   	    	
-                   	filePath = filePath.replace("/", File.separator);
-                   	System.out.println(filePath);
-                   	File file2 = new File(filePath2); 
-                       if(!file2.exists()){
-                       	file2.createNewFile();
+                   		   webDriver.navigate().refresh();
+                   		   refreshCount++;
+                   		   if (refreshCount == 60) {
+                   		   ingestionTimeout = true;
+                   		   		break;
+                   		   }
+                   	   }
+                   	   
+                       //log the ingestion time (or failed ingestion)
+                   	   String ingestionMessage;
+                   	   long searchTime = 0;
+                   	   long ingestionTime = 0;
+                   	   long failureTime = 0;
+                   	   if (ingestionTimeout == true) {
+                   		   failureTime = System.nanoTime();
+                   		   ingestionMessage = "searchfailure," + mediaTitle + "," + failureTime;
+                   	   }
+                   	   else {
+                   		   searchTime = System.nanoTime();
+                   		   ingestionTime = searchTime - creationTime;
+                   		   ingestionMessage = type + "," + mediaTitle + "," + searchTime + "," + TimeUnit.SECONDS.convert(ingestionTime, TimeUnit.NANOSECONDS) + " seconds";
+                   		   
+                   	   }
+                       
+                       String assetIngestionFilePath = System.getProperty("user.dir") + "/src/test/java/com/nbcuni/test/publisher/contentbuildscripts/MPXPerformanceUpgrade/AssetsIngested.txt";
+                       assetIngestionFilePath = assetIngestionFilePath.replace("/", File.separator);	    	
+                       File assetIngestionFile = new File(assetIngestionFilePath); 
+                       if(!assetIngestionFile.exists()){
+                    	   assetIngestionFile.createNewFile();
                        }
-                       FileWriter fileWritter = new FileWriter(file2.getAbsolutePath(),true);
+                           
+                       FileWriter fileWritter = new FileWriter(assetIngestionFile.getAbsolutePath(),true);
                        BufferedWriter bufferWritter = new BufferedWriter(fileWritter);
-                       bufferWritter.write("Ingestion time for video '" + mediaTitle + "' was " + TimeUnit.SECONDS.convert(ingestionTime, TimeUnit.NANOSECONDS) + " seconds"+ System.lineSeparator());
+                       bufferWritter.write(ingestionMessage + System.lineSeparator());
                        bufferWritter.close();
+                	   
             	   }
-        	}
-        	
-        	
-        	
+            	}
+    		}
+    		catch (Exception e) {
+    			
+    		}
+    		
     	}
-    	
-    	    
-    	  
+    	 
     }
 }
