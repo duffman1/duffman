@@ -30,7 +30,7 @@ public class EditVideos extends ParentTest{
 	    
     	String mediaTitle = null;
     	Boolean needToScrollUp = false;
-    	for(int CCount=0;CCount<20;CCount++) {
+    	for(int CCount=0;CCount<3;CCount++) {
     		
     		String filePath = System.getProperty("user.dir") + "/src/test/java/com/nbcuni/test/publisher/contentbuildscripts/MPXPerformanceUpgrade/EditVideos/AssetsEdited.txt";
     	    filePath = filePath.replace("/", File.separator);

@@ -92,10 +92,10 @@ public class ImplementMPS extends ParentTest {
             contentParent.VerifySourceInPage(Arrays.asList("a3VtdWQ9MQ=="));
             
             Reporter.log("STEP 9");
-            //contentParent.VerifySourceInPage(Arrays.asList("document.write('<scr'+'ipt id=\"mps-ext-load\" src=\"//'+mpsopts.host+'/fetch/ext/load-'+mpscall.site+'.js\"></scr'+'ipt>')"));
+            contentParent.VerifySourceInPage(Arrays.asList("document.write('<scr'+'ipt id=\"mps-ext-load\" src=\"//'+mpsopts.host+'/fetch/ext/load-'+mpscall.site+'.js\"></scr'+'ipt>')"));
             
             Reporter.log("STEP 10");
-            //contentParent.VerifySourceInPage(Arrays.asList("typeof(mps.writeFooter)=='function' && mps.writeFooter()"));
+            contentParent.VerifySourceInPage(Arrays.asList("typeof(mps.writeFooter)=='function' && mps.writeFooter()"));
             
             Reporter.log("STEP 11");
             taxonomy.NavigateSite("Structure>>MPS Blocks>>Add");
