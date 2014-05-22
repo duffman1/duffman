@@ -1,4 +1,4 @@
-package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIFKeywordsIngestedAsPhraseInsteadSetsWords;
+package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIF;
 
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.RerunOnFailure;
@@ -25,7 +25,7 @@ public class EXIFKeywordsIngestedPhraseInsteadSetsWords extends ParentTest{
             taxonomy.NavigateSite("Configuration>>Media>>Simple EXIF/IPTC Mappings");
             overlay.SwitchToActiveFrame();
             SimpleEXIFIPTCMappings simpleEXIFIPTCMappings = new SimpleEXIFIPTCMappings(webDriver, applib);
-            simpleEXIFIPTCMappings.SelectAltText("Aperture");
+            simpleEXIFIPTCMappings.SelectAltText("Title");
             simpleEXIFIPTCMappings.SelectTitleText("Title");
             simpleEXIFIPTCMappings.SelectCaption("Caption");
             simpleEXIFIPTCMappings.SelectCopyright("Copyright");
@@ -63,13 +63,13 @@ public class EXIFKeywordsIngestedPhraseInsteadSetsWords extends ParentTest{
             
             //Step 3
             EditImage editImage = new EditImage(webDriver, applib);
-            editImage.VerifyTitleTextValue("NUP_155306_0046.JPG");
-            editImage.VerifyAltTextValue("f/5.6");
-            editImage.VerifySourceValue("Episodic");
-            editImage.VerifyCreditValue("Brownie Harris/NBC");
-            editImage.VerifyCopyrightValue("2013 NBCUniversal Media, LLC");
-            editImage.VerifyKeywordsValue("NUP_155306, Revolution, Episode 118, Season 1");
-            editImage.ClickSaveBtn();
+            editImage.VerifyTitleTextValue("1", "NUP_155306_0046.JPG");
+            editImage.VerifyAltTextValue("1", "NUP_155306_0046.JPG");
+            editImage.VerifySourceValue("1", "Episodic");
+            editImage.VerifyCreditValue("1", "Brownie Harris/NBC");
+            editImage.VerifyCopyrightValue("1", "2013 NBCUniversal Media, LLC");
+            editImage.VerifyKeywordsValue("1", "NUP_155306, Revolution, Episode 118, Season 1");
+            editImage.ClickSaveBtn("1");
             overlay.SwitchToActiveFrame();
             ContentParent contentParent = new ContentParent(webDriver, applib);
             contentParent.VerifyMessageStatus("Image");
@@ -106,16 +106,16 @@ public class EXIFKeywordsIngestedPhraseInsteadSetsWords extends ParentTest{
             //Step 5
             MediaItems mediaItems = new MediaItems(webDriver);
             mediaItems.VerifyFileImagePresent("NUP_155306_0046", "1");
-            mediaItems.ClickEditBtn();
+            mediaItems.ClickEditBtn("1");
             
             //Step 6
             editImage.WaitForEditImageFrameOpen();
-            editImage.VerifyTitleTextValue("NUP_155306_0046.JPG");
-            editImage.VerifyAltTextValue("f/5.6");
-            editImage.VerifySourceValue("Episodic");
-            editImage.VerifyCreditValue("Brownie Harris/NBC");
-            editImage.VerifyCopyrightValue("2013 NBCUniversal Media, LLC");
-            editImage.VerifyKeywordsValue("NUP_155306, Revolution, Episode 118, Season 1");
+            editImage.VerifyTitleTextValue("1", "NUP_155306_0046.JPG");
+            editImage.VerifyAltTextValue("1", "NUP_155306_0046.JPG");
+            editImage.VerifySourceValue("1", "Episodic");
+            editImage.VerifyCreditValue("1", "Brownie Harris/NBC");
+            editImage.VerifyCopyrightValue("1", "2013 NBCUniversal Media, LLC");
+            editImage.VerifyKeywordsValue("1", "NUP_155306, Revolution, Episode 118, Season 1");
             editImage.ClickCloseWindowImg();
             overlay.SwitchToActiveFrame();
             
@@ -130,12 +130,12 @@ public class EXIFKeywordsIngestedPhraseInsteadSetsWords extends ParentTest{
         	selectFile.ClickNextBtn();
         	
         	//Step 8
-        	editImage.VerifyTitleTextValue("NUP_155306_0046.JPG");
-            editImage.VerifyAltTextValue("f/5.6");
-            editImage.VerifySourceValue("Episodic");
-            editImage.VerifyCreditValue("Brownie Harris/NBC");
-            editImage.VerifyCopyrightValue("2013 NBCUniversal Media, LLC");
-            editImage.VerifyKeywordsValue("NUP_155306, Revolution, Episode 118, Season 1");
+        	editImage.VerifyTitleTextValue("1", "NUP_155306_0046.JPG");
+            editImage.VerifyAltTextValue("1", "NUP_155306_0046.JPG");
+            editImage.VerifySourceValue("1", "Episodic");
+            editImage.VerifyCreditValue("1", "Brownie Harris/NBC");
+            editImage.VerifyCopyrightValue("1", "2013 NBCUniversal Media, LLC");
+            editImage.VerifyKeywordsValue("1", "NUP_155306, Revolution, Episode 118, Season 1");
         	selectFile.VerifyFileImagePresent("NUP_155306_0046");
         	selectFile.ClickSaveBtn();
         	overlay.SwitchToActiveFrame();

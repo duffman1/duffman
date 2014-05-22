@@ -36,12 +36,19 @@ public class MediaItems {
     @FindBy(how = How.ID, using = "edit-field-media-items-und-add-more")
     private WebElement Select_Btn;
     
-    @FindBy(how = How.XPATH, using = "//a[@id='edit-field-media-items-und-0-edit']")
-    private WebElement Edit_Btn;
+    private WebElement Edit_Btn(String buttonIndex) {
+    	return webDriver.findElement(By.xpath("(//a[contains(@id, 'edit-field-media-items')][contains(@id, 'edit')][text()='Edit'])[" + buttonIndex + "]"));
+    }
     
     private WebElement Unique_Url(String imageIndex) {
     	return webDriver.findElement(By.xpath("(//div[@class='media-thumbnail']/../../..//div[3]/a)[" + imageIndex + "]"));
     }
+    
+    @FindBy(how = How.ID, using = "media-edit-all-button")
+    private WebElement EditAll_Btn;
+    
+    @FindBy(how = How.XPATH, using = "//input[contains(@id, 'edit-field-media-items-und-add-more')]")
+    private WebElement Add_Btn;
     
     
     //PAGE OBJECT METHODS
@@ -70,10 +77,22 @@ public class MediaItems {
     	Select_Btn.click();
     }
 
-    public void ClickEditBtn() throws Exception {
+    public void ClickEditBtn(String buttonIndex) throws Exception {
     	
-    	Reporter.log("Click the 'Edit' button.");
-    	Edit_Btn.click();
+    	Reporter.log("Click the 'Edit' button with index '" + buttonIndex + "'.");
+    	Edit_Btn(buttonIndex).click();
+    }
+    
+    public void ClickEditAllBtn() throws Exception {
+    	
+    	Reporter.log("Click the 'Edit All' button.");
+    	EditAll_Btn.click();
+    }
+    
+    public void ClickAddBtn() throws Exception {
+    	
+    	Reporter.log("Click the 'Add' button.");
+    	Add_Btn.click();
     }
     
     public String GetImageUniqueUrl(String imageIndex) throws Exception {

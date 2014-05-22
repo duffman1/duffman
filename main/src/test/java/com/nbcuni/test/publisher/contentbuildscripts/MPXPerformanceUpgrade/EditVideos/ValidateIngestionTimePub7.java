@@ -34,7 +34,7 @@ public class ValidateIngestionTimePub7 extends ParentTest{
 	    String assetCreationFilePath = System.getProperty("user.dir") + "/src/test/java/com/nbcuni/test/publisher/contentbuildscripts/MPXPerformanceUpgrade/EditVideos/AssetsEdited.txt";
 	    assetCreationFilePath = assetCreationFilePath.replace("/", File.separator);
 	    for (int second = 0; ; second++){
-            if (second >= 600) {
+            if (second >= 800) {
                 Assert.fail("Asset Edit File Not Available");
             }
             
@@ -50,7 +50,7 @@ public class ValidateIngestionTimePub7 extends ParentTest{
     	List<String> entriesProcessed = new ArrayList<String>();
     	int I = 1;
     	while (I == 1) {
-    		webDriver.getCurrentUrl();
+    		webDriver.navigate().refresh();
     		try {
     			
     			//read all the entries in the created asset file
@@ -58,22 +58,20 @@ public class ValidateIngestionTimePub7 extends ParentTest{
         		long creationTime = 0;
         		long finalEditTime = 0;
         		String dynamicData = null;
-        		
+        		webDriver.getCurrentUrl();
         		File assetCreationFile = new File(assetCreationFilePath);
             	BufferedReader bufferedReader = new BufferedReader(new FileReader(assetCreationFile));
             	List<String> allAssets = new ArrayList<String>();
             	String line;
             	while ((line = bufferedReader.readLine()) != null) {
-            		
             	   allAssets.add(line);
             	}
             	bufferedReader.close();
             	
             	//if asset hasn't already been processed, search for and process it
                 for (String asset : allAssets) {
-                webDriver.getCurrentUrl();
+                	webDriver.getCurrentUrl();
             	   if (!entriesProcessed.contains(asset)) {
-                		   
             		   String[] data = asset.split(",");
             		   mediaTitle = data[1];
                 	   creationTime = Long.valueOf(data[2]).longValue();
