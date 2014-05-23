@@ -14,14 +14,13 @@ import java.io.File;
  * NBC.com Application Library. Copyright
  *
  * @author Brandon Clark
- * @version 2.1 Date: May 5, 2014
+ * @version 2.2 Date: May 23, 2014
  ***************************************************************************/
 
 public class AppLib {
 
 	Config config = new Config();
 	
-    private String environment = "";
     private Driver webDriver;
     
     public AppLib(Driver webDriver) {
@@ -122,15 +121,15 @@ public class AppLib {
         return config.getConfigValue("AppURL");
     }
     
-    public final String getEnvironment() throws Exception {
-        return this.environment;
-    }
-
     public UserLogin openApplication() throws Exception {
         Reporter.log("Open url '" + this.getApplicationURL() + "'.");
         webDriver.navigate().to(this.getApplicationURL());   
         return new UserLogin(webDriver);
     }
     
+    public void openSitePage(String location) throws Exception {
+        Reporter.log("Open url '" + this.getApplicationURL() + location + "'.");
+        webDriver.navigate().to(this.getApplicationURL() + location);   
+    }
     
 }

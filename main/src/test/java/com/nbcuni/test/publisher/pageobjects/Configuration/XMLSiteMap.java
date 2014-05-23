@@ -5,22 +5,18 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
-import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
 * publisher.nbcuni.com XML Site Map Library. Copyright
 *
-* @author Mohd Faizan Khan
-* @version 1.0 Date: Feb, 25, 2014
+* @author Brandon Clark
+* @version 1.1 Date: May 23, 2014
 *********************************************/
 public class XMLSiteMap {
 		
-	private AppLib applib;
-	
 	//PAGE OBJECT CONSTRUCTOR
-	public XMLSiteMap(Driver webDriver, AppLib applib) {
-		this.applib = applib;
+	public XMLSiteMap(Driver webDriver) {
 		PageFactory.initElements(webDriver, this);
 		
 	}
@@ -53,7 +49,7 @@ public class XMLSiteMap {
 	
 	public void ClickXMLSiteMapLnk() throws Exception {
 		
-		Reporter.log("Click the 'XMLSitemap Link' with text '" + applib.getEnvironment() + "'.");
+		Reporter.log("Click the 'XMLSitemap Link' with text '" + XMLSiteMap_Lnk.getText() + "'.");
 		XMLSiteMap_Lnk.click();
 	}
 	

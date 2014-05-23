@@ -65,10 +65,10 @@ public class UniqueURL extends ParentTest{
         	overlay.SwitchToActiveFrame();
         	mediaItems.VerifyFileImagePresent("HanSolo", "1");
         	String uniqueUrl1 = mediaItems.GetImageUniqueUrl("1");
-        	Assert.assertTrue(uniqueUrl1.contains(fileId1.replace("file-", "")));
+        	Assert.assertTrue(uniqueUrl1.contains(fileId1));
         	mediaItems.VerifyFileImagePresent("HanSolo", "2");
         	String uniqueUrl2 = mediaItems.GetImageUniqueUrl("2");
-        	Assert.assertTrue(uniqueUrl2.contains(fileId2.replace("file-", "")));
+        	Assert.assertTrue(uniqueUrl2.contains(fileId2));
         	
         	//Step 7
         	contentParent.ClickCancelBtn();
@@ -78,7 +78,7 @@ public class UniqueURL extends ParentTest{
         	workBench.VerifyFileImagePresent("HanSolo", "2");
         	contentParent.VerifyPageContentPresent(Arrays.asList("Current Item", "HanSolo", 
         			"Current Item Index", "0", "Current Item ID", 
-        				fileId1.replace("file-", ""), "Current Item URL", uniqueUrl1));
+        				fileId1, "Current Item URL", uniqueUrl1));
         	
         	//Step 8 - N/A
         	

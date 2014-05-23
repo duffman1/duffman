@@ -57,7 +57,7 @@ public class SEOOptimizationModule extends ParentTest {
 		//Step 7
 		taxonomy.NavigateSite("Configuration>>Search and metadata>>XML sitemap>>Rebuild links");
 		overlay.SwitchToActiveFrame();
-		XMLSiteMap xmlSiteMap = new XMLSiteMap(webDriver, applib);
+		XMLSiteMap xmlSiteMap = new XMLSiteMap(webDriver);
 		xmlSiteMap.ClickSaveAndRestoreCbx();
 		xmlSiteMap.ClickRebuildSitemapBtn();
 		Thread.sleep(2000); //TODO - dynamic wait

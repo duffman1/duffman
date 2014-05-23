@@ -2,9 +2,6 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
     <line>
-      <![CDATA[STEP 1]]>
-    </line>
-    <line>
       <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]>
     </line>
     <line>
@@ -17,70 +14,49 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[STEP 2]]>
-    </line>
-    <line>
       <![CDATA[Click the 'Modules' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+      <![CDATA[Switch to frame titled 'Modules'.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Pub Ads' in the 'Filter Name' text box.]]>
+      <![CDATA[Enter 'Pub SEO' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Wait for the module titled 'Pub Ads' to appear in the list.]]>
+      <![CDATA[Wait for the module titled 'Pub SEO' to appear in the list.]]>
     </line>
     <line>
-      <![CDATA[Verify the 'Pub Ads' check box is checked.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'MPS' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the module titled 'MPS' to appear in the list.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'MPS' check box is checked.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'DART' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the module titled 'DART' to appear in the list.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Doubleclick for Publishers' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the module titled 'Doubleclick for Publishers' to appear in the list.]]>
+      <![CDATA[Verify the 'Pub SEO' check box is checked.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
     </line>
     <line>
-      <![CDATA[STEP 3]]>
+      <![CDATA[Mouse over the 'Structure' menu link.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Reports' menu link.]]>
+      <![CDATA[Mouse over the 'Content types' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Status report' menu link.]]>
+      <![CDATA[Click the 'Post' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Status report dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'Post dialog'.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'Ad Tag Style' is present on the page.]]>
+      <![CDATA[Click the 'XML sitemap' link.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'MPS' is present on the page.]]>
+      <![CDATA[Select 'Included' from the 'Inclusion' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save content type' link.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The content type Post has been updated.' is present.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 4]]>
     </line>
     <line>
       <![CDATA[Mouse over the 'Content' menu link.]]>
@@ -89,16 +65,13 @@
       <![CDATA[Mouse over the 'Add content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Movie' menu link.]]>
+      <![CDATA[Click the 'Post' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
     </line>
     <line>
-      <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '965591bb5eb5485' in the 'Title' text box.]]>
+      <![CDATA[Enter '69abab8ed522403' in the 'Title' text box.]]>
     </line>
     <line>
       <![CDATA[Switch to the Synopsis frame.]]>
@@ -107,7 +80,7 @@
       <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
     </line>
     <line>
       <![CDATA[Click the 'Cover' select button.]]>
@@ -143,162 +116,174 @@
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Additional Information' link.]]>
+      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
     </line>
     <line>
-      <![CDATA[Select the 'Syndicated' from the 'Movie Type' drop down list.]]>
+      <![CDATA[Click the 'Publishing Options' link.]]>
     </line>
     <line>
-      <![CDATA[Select the 'G' from the 'Rating' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Select the 'Action' from the 'Primary Genre' drop down list.]]>
+      <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'Movie 965591bb5eb5485 has been created.' is present.]]>
+      <![CDATA[Verify success message of 'Post 69abab8ed522403 has been created.' is present.]]>
     </line>
     <line>
-      <![CDATA[STEP 5]]>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Verify 'var mpscall = {'site':'install', 'path':'node/' is present in page source.]]>
+      <![CDATA[Mouse over the 'Add content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Verify 'var mpsopts = {'host':'mps.io'}' is present in page source.]]>
+      <![CDATA[Click the 'Post' menu link.]]>
     </line>
     <line>
-      <![CDATA[STEP 6 and STEP 7]]>
+      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
     </line>
     <line>
-      <![CDATA[Verify '{"site":"install","title":"965591bb5eb5485","path":"node\/' is present in page source.]]>
+      <![CDATA[Enter 'e2f1ee0a08224aa' in the 'Title' text box.]]>
     </line>
     <line>
-      <![CDATA[Verify '"qs":"","cat":"content|965591bb5eb5485","content_id":"node' is present in page source.]]>
+      <![CDATA[Switch to the Synopsis frame.]]>
     </line>
     <line>
-      <![CDATA[Verify '"is_content":1,"type":"movie","cag":{"genre":"Action","movie-rating":"G","movie-types":"Syndicated"},"envelope":"","pubdate":' is present in page source.]]>
+      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
     </line>
     <line>
-      <![CDATA[STEP 8]]>
+      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
     </line>
     <line>
-      <![CDATA[Verify 'a3VtdWQ9MQ==' is present in page source.]]>
+      <![CDATA[Click the 'Cover' select button.]]>
     </line>
     <line>
-      <![CDATA[STEP 9]]>
+      <![CDATA[Switch to the select file frame.]]>
     </line>
     <line>
-      <![CDATA[STEP 10]]>
+      <![CDATA[Enter the file path for file upload.]]>
     </line>
     <line>
-      <![CDATA[STEP 11]]>
+      <![CDATA[Click the 'Upload' button.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Structure' menu link.]]>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'MPS Blocks' menu link.]]>
+      <![CDATA[Click the 'Next' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Add' menu link.]]>
+      <![CDATA[Click the 'Public Local Files' radio button.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Add a new MPS block dialog'.]]>
+      <![CDATA[Click the 'Next' button.]]>
     </line>
     <line>
-      <![CDATA[Enter '02832cf40b7c403' in the 'Unique Name' text box.]]>
+      <![CDATA[Verify the file image 'HanSolo' is present.]]>
     </line>
     <line>
-      <![CDATA[Enter 'eff2200c88e2461' in the 'Block Name' text box.]]>
+      <![CDATA[Verify the img is loaded and visible.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of '02832cf40b7c403 has been created.' is present.]]>
+      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Publishing Options' link.]]>
+    </line>
+    <line>
+      <![CDATA[Select 'Published' from the 'Moderation State' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Post e2f1ee0a08224aa has been created.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Status report dialog'.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
     </line>
     <line>
-      <![CDATA[STEP 12]]>
+      <![CDATA[Mouse over the 'Configuration' menu link.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Structure' menu link.]]>
+      <![CDATA[Mouse over the 'Search and metadata' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Blocks' menu link.]]>
+      <![CDATA[Mouse over the 'XML sitemap' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
+      <![CDATA[Click the 'Rebuild links' menu link.]]>
     </line>
     <line>
-      <![CDATA[Select the block name 'eff2200c88e2461' from the 'Header' drop down list.]]>
+      <![CDATA[Switch to the active frame titled 'Are you sure you want to rebuild the XML sitemap? dialog'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save Blocks' button.]]>
+      <![CDATA[Click the 'Rebuild Sitemap' button.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'The block settings have been updated.' is present.]]>
+      <![CDATA[Wait for the frame titled 'Rebuilding Sitemap' to close.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
+      <![CDATA[Switch to the active frame titled 'XML sitemap dialog'.]]>
     </line>
     <line>
-      <![CDATA[STEP 13]]>
-    </line>
-    <line>
-      <![CDATA[STEP 14 - N/A]]>
-    </line>
-    <line>
-      <![CDATA[CLEANUP]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Structure' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Blocks' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Select the block name 'eff2200c88e2461' from the '- None -' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save Blocks' button.]]>
+      <![CDATA[Verify success message of 'The sitemap links were rebuilt.' is present.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Configuration' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Search and metadata' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'XML sitemap' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'XML sitemap dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'XMLSitemap Link' with text 'http://install.qa5.nbcupublisher7.publisher7.com/sitemap.xml'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'e2f1ee0a08224aa' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text '69abab8ed522403' is NOT present on the page.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="72534" started-at="2014-05-22T20:57:13Z" finished-at="2014-05-22T20:58:26Z">
+  <suite name="Default suite" duration-ms="86339" started-at="2014-05-23T14:29:00Z" finished-at="2014-05-23T14:30:26Z">
     <groups>
       <group name="full">
-        <method signature="ImplementMPS.ImplementMPS_TC2901()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@1df749e3]" name="ImplementMPS_TC2901" class="com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS"/>
+        <method signature="SEOOptimizationModule.SEOOptimizationModule_TC1219()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SEOModules.SEOOptimizationModule@e6f8b7e]" name="SEOOptimizationModule_TC1219" class="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SEOModules.SEOOptimizationModule"/>
       </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="72534" started-at="2014-05-22T20:57:13Z" finished-at="2014-05-22T20:58:26Z">
-      <class name="com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS">
-        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@1df749e3]" name="startGridAndHub" is-config="true" duration-ms="11127" started-at="2014-05-22T16:57:02Z" finished-at="2014-05-22T16:57:13Z">
+    <test name="Default test" duration-ms="86339" started-at="2014-05-23T14:29:00Z" finished-at="2014-05-23T14:30:26Z">
+      <class name="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SEOModules.SEOOptimizationModule">
+        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SEOModules.SEOOptimizationModule@e6f8b7e]" name="startGridAndHub" is-config="true" duration-ms="11792" started-at="2014-05-23T10:28:48Z" finished-at="2014-05-23T10:29:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startGridAndHub -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@1df749e3]" name="startSelenium" is-config="true" duration-ms="2365" started-at="2014-05-22T16:57:13Z" finished-at="2014-05-22T16:57:16Z">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SEOModules.SEOOptimizationModule@e6f8b7e]" name="startSelenium" is-config="true" duration-ms="2408" started-at="2014-05-23T10:29:00Z" finished-at="2014-05-23T10:29:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="ImplementMPS_TC2901()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@1df749e3]" name="ImplementMPS_TC2901" duration-ms="69586" started-at="2014-05-22T16:57:16Z" finished-at="2014-05-22T16:58:25Z">
+        <test-method status="PASS" signature="SEOOptimizationModule_TC1219()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SEOModules.SEOOptimizationModule@e6f8b7e]" name="SEOOptimizationModule_TC1219" duration-ms="83349" started-at="2014-05-23T10:29:02Z" finished-at="2014-05-23T10:30:25Z">
           <reporter-output>
-            <line>
-              <![CDATA[STEP 1]]>
-            </line>
             <line>
               <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]>
             </line>
@@ -312,70 +297,49 @@
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
-              <![CDATA[STEP 2]]>
-            </line>
-            <line>
               <![CDATA[Click the 'Modules' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+              <![CDATA[Switch to frame titled 'Modules'.]]>
             </line>
             <line>
-              <![CDATA[Enter 'Pub Ads' in the 'Filter Name' text box.]]>
+              <![CDATA[Enter 'Pub SEO' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Wait for the module titled 'Pub Ads' to appear in the list.]]>
+              <![CDATA[Wait for the module titled 'Pub SEO' to appear in the list.]]>
             </line>
             <line>
-              <![CDATA[Verify the 'Pub Ads' check box is checked.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'MPS' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the module titled 'MPS' to appear in the list.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'MPS' check box is checked.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'DART' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the module titled 'DART' to appear in the list.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Doubleclick for Publishers' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the module titled 'Doubleclick for Publishers' to appear in the list.]]>
+              <![CDATA[Verify the 'Pub SEO' check box is checked.]]>
             </line>
             <line>
               <![CDATA[Click the 'Close Overlay X'.]]>
             </line>
             <line>
-              <![CDATA[STEP 3]]>
+              <![CDATA[Mouse over the 'Structure' menu link.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Reports' menu link.]]>
+              <![CDATA[Mouse over the 'Content types' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Status report' menu link.]]>
+              <![CDATA[Click the 'Post' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Status report dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'Post dialog'.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'Ad Tag Style' is present on the page.]]>
+              <![CDATA[Click the 'XML sitemap' link.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'MPS' is present on the page.]]>
+              <![CDATA[Select 'Included' from the 'Inclusion' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save content type' link.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The content type Post has been updated.' is present.]]>
             </line>
             <line>
               <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 4]]>
             </line>
             <line>
               <![CDATA[Mouse over the 'Content' menu link.]]>
@@ -384,16 +348,13 @@
               <![CDATA[Mouse over the 'Add content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Movie' menu link.]]>
+              <![CDATA[Click the 'Post' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
             </line>
             <line>
-              <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '965591bb5eb5485' in the 'Title' text box.]]>
+              <![CDATA[Enter '69abab8ed522403' in the 'Title' text box.]]>
             </line>
             <line>
               <![CDATA[Switch to the Synopsis frame.]]>
@@ -402,7 +363,7 @@
               <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
             </line>
             <line>
               <![CDATA[Click the 'Cover' select button.]]>
@@ -438,158 +399,173 @@
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Additional Information' link.]]>
+              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
             </line>
             <line>
-              <![CDATA[Select the 'Syndicated' from the 'Movie Type' drop down list.]]>
+              <![CDATA[Click the 'Publishing Options' link.]]>
             </line>
             <line>
-              <![CDATA[Select the 'G' from the 'Rating' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Select the 'Action' from the 'Primary Genre' drop down list.]]>
+              <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'Movie 965591bb5eb5485 has been created.' is present.]]>
+              <![CDATA[Verify success message of 'Post 69abab8ed522403 has been created.' is present.]]>
             </line>
             <line>
-              <![CDATA[STEP 5]]>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Verify 'var mpscall = {'site':'install', 'path':'node/' is present in page source.]]>
+              <![CDATA[Mouse over the 'Add content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Verify 'var mpsopts = {'host':'mps.io'}' is present in page source.]]>
+              <![CDATA[Click the 'Post' menu link.]]>
             </line>
             <line>
-              <![CDATA[STEP 6 and STEP 7]]>
+              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
             </line>
             <line>
-              <![CDATA[Verify '{"site":"install","title":"965591bb5eb5485","path":"node\/' is present in page source.]]>
+              <![CDATA[Enter 'e2f1ee0a08224aa' in the 'Title' text box.]]>
             </line>
             <line>
-              <![CDATA[Verify '"qs":"","cat":"content|965591bb5eb5485","content_id":"node' is present in page source.]]>
+              <![CDATA[Switch to the Synopsis frame.]]>
             </line>
             <line>
-              <![CDATA[Verify '"is_content":1,"type":"movie","cag":{"genre":"Action","movie-rating":"G","movie-types":"Syndicated"},"envelope":"","pubdate":' is present in page source.]]>
+              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
             </line>
             <line>
-              <![CDATA[STEP 8]]>
+              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
             </line>
             <line>
-              <![CDATA[Verify 'a3VtdWQ9MQ==' is present in page source.]]>
+              <![CDATA[Click the 'Cover' select button.]]>
             </line>
             <line>
-              <![CDATA[STEP 9]]>
+              <![CDATA[Switch to the select file frame.]]>
             </line>
             <line>
-              <![CDATA[STEP 10]]>
+              <![CDATA[Enter the file path for file upload.]]>
             </line>
             <line>
-              <![CDATA[STEP 11]]>
+              <![CDATA[Click the 'Upload' button.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Structure' menu link.]]>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'MPS Blocks' menu link.]]>
+              <![CDATA[Click the 'Next' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Add' menu link.]]>
+              <![CDATA[Click the 'Public Local Files' radio button.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Add a new MPS block dialog'.]]>
+              <![CDATA[Click the 'Next' button.]]>
             </line>
             <line>
-              <![CDATA[Enter '02832cf40b7c403' in the 'Unique Name' text box.]]>
+              <![CDATA[Verify the file image 'HanSolo' is present.]]>
             </line>
             <line>
-              <![CDATA[Enter 'eff2200c88e2461' in the 'Block Name' text box.]]>
+              <![CDATA[Verify the img is loaded and visible.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of '02832cf40b7c403 has been created.' is present.]]>
+              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Publishing Options' link.]]>
+            </line>
+            <line>
+              <![CDATA[Select 'Published' from the 'Moderation State' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Post e2f1ee0a08224aa has been created.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Status report dialog'.]]>
             </line>
             <line>
               <![CDATA[Click the 'Close Overlay X'.]]>
             </line>
             <line>
-              <![CDATA[STEP 12]]>
+              <![CDATA[Mouse over the 'Configuration' menu link.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Structure' menu link.]]>
+              <![CDATA[Mouse over the 'Search and metadata' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Blocks' menu link.]]>
+              <![CDATA[Mouse over the 'XML sitemap' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
+              <![CDATA[Click the 'Rebuild links' menu link.]]>
             </line>
             <line>
-              <![CDATA[Select the block name 'eff2200c88e2461' from the 'Header' drop down list.]]>
+              <![CDATA[Switch to the active frame titled 'Are you sure you want to rebuild the XML sitemap? dialog'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save Blocks' button.]]>
+              <![CDATA[Click the 'Rebuild Sitemap' button.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'The block settings have been updated.' is present.]]>
+              <![CDATA[Wait for the frame titled 'Rebuilding Sitemap' to close.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
+              <![CDATA[Switch to the active frame titled 'XML sitemap dialog'.]]>
             </line>
             <line>
-              <![CDATA[STEP 13]]>
-            </line>
-            <line>
-              <![CDATA[STEP 14 - N/A]]>
-            </line>
-            <line>
-              <![CDATA[CLEANUP]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Structure' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Blocks' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Select the block name 'eff2200c88e2461' from the '- None -' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save Blocks' button.]]>
+              <![CDATA[Verify success message of 'The sitemap links were rebuilt.' is present.]]>
             </line>
             <line>
               <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Configuration' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Search and metadata' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'XML sitemap' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'XML sitemap dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'XMLSitemap Link' with text 'http://install.qa5.nbcupublisher7.publisher7.com/sitemap.xml'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'e2f1ee0a08224aa' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text '69abab8ed522403' is NOT present on the page.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- ImplementMPS_TC2901 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@1df749e3]" name="stopSelenium" is-config="true" duration-ms="571" started-at="2014-05-22T16:58:25Z" finished-at="2014-05-22T16:58:26Z">
+        </test-method> <!-- SEOOptimizationModule_TC1219 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SEOModules.SEOOptimizationModule@e6f8b7e]" name="stopSelenium" is-config="true" duration-ms="570" started-at="2014-05-23T10:30:25Z" finished-at="2014-05-23T10:30:26Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=ImplementMPS_TC2901 status=SUCCESS method=ImplementMPS.ImplementMPS_TC2901()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@1df749e3] output=STEP 1]]]>
+                <![CDATA[[TestResult name=SEOOptimizationModule_TC1219 status=SUCCESS method=SEOOptimizationModule.SEOOptimizationModule_TC1219()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SEOModules.SEOOptimizationModule@e6f8b7e] output=Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@1df749e3]" name="stopGridAndHub" is-config="true" duration-ms="380" started-at="2014-05-22T16:58:26Z" finished-at="2014-05-22T16:58:26Z">
+        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SEOModules.SEOOptimizationModule@e6f8b7e]" name="stopGridAndHub" is-config="true" duration-ms="389" started-at="2014-05-23T10:30:26Z" finished-at="2014-05-23T10:30:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopGridAndHub -->
-      </class> <!-- com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS -->
+      </class> <!-- com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SEOModules.SEOOptimizationModule -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -26,10 +26,12 @@ public class WorkBench {
 
 	private Driver webDriver;
     private WebDriverWait wait;
+    private AppLib applib;
     
 	//PAGE OBJECT CONSTRUCTORS
     public WorkBench(Driver webDriver, AppLib applib) {
         this.webDriver = webDriver;
+        this.applib = applib;
         PageFactory.initElements(webDriver, this);
         wait = new WebDriverWait(webDriver, 10);
     }
@@ -151,7 +153,15 @@ public class WorkBench {
     public String GetFileImageId(String imageIndex) {
     	
     	Reporter.log("Get the file id of image number " + imageIndex + ".");
-    	return WorkBenchFileImage_Ids(imageIndex).getAttribute("id");
+    	return WorkBenchFileImage_Ids(imageIndex).getAttribute("id").replace("file-", "");
+    }
+    
+    public String GetContentNodeNumber() throws Exception {
+        
+    	Reporter.log("Note the node number for the content item.");
+    	return WorkBench_Tab("Edit Draft").getAttribute("href").replace(applib.getApplicationURL() + 
+    			"/node/", "").replace("/edit", "");
+
     }
 
 }
