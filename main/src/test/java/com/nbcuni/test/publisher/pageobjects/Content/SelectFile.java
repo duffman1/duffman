@@ -51,6 +51,9 @@ public class SelectFile {
     @FindBy(how = How.XPATH, using = "//a[@title='View Library']")
     private WebElement ViewLibrary_Btn;
     
+    @FindBy(how = How.XPATH, using = "//a[@title='Publisher7 MPX Video']")
+    private WebElement Pub7MPXVideo_Btn;
+    
     @FindBy(how = How.ID, using = "edit-filename")
     private WebElement FileName_Txb;
     
@@ -105,6 +108,10 @@ public class SelectFile {
     	return webDriver.findElement(By.xpath("(//div[@class='media-thumbnail']//img)[" + imageIndex + "]"));
     }
     
+    private WebElement MPXMediaThumbnail_Img(String imageIndex) {
+    	return webDriver.findElement(By.xpath("(//img[@class='pub-mpx-video-thumbnail'])[" + imageIndex + "]"));
+    }
+    
     @FindBy(how = How.ID, using = "//img[@class='pub-mpx-video-thumbnail']")
     private WebElement DefaultMPXMediaThumbnail_Img;
     
@@ -129,6 +136,13 @@ public class SelectFile {
     	
     	Reporter.log("Click the 'View Library' button.");
     	ViewLibrary_Btn.click();
+    	
+    }
+    
+    public void ClickPub7MPXVideoBtn() throws Exception {
+    	
+    	Reporter.log("Click the 'PUBLISHER 7 MPX VIDEO' button.");
+    	Pub7MPXVideo_Btn.click();
     	
     }
     
@@ -314,6 +328,13 @@ public class SelectFile {
     	
     	Reporter.log("Click media thumbnail image number " + imageIndex );
     	MediaThumbnail_Img(imageIndex).click();
+                
+    }
+    
+    public void ClickMPXMediaThumbnailImage(String imageIndex) throws Exception {
+    	
+    	Reporter.log("Click mpx media thumbnail image number " + imageIndex );
+    	MPXMediaThumbnail_Img(imageIndex).click();
                 
     }
     
