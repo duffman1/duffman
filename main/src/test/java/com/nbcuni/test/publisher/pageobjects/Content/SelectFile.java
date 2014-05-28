@@ -108,8 +108,8 @@ public class SelectFile {
     	return webDriver.findElement(By.xpath("(//div[@class='media-thumbnail']//img)[" + imageIndex + "]"));
     }
     
-    private WebElement MPXMediaThumbnail_Img(String imageIndex) {
-    	return webDriver.findElement(By.xpath("(//img[@class='pub-mpx-video-thumbnail'])[" + imageIndex + "]"));
+    private WebElement MPXMediaThumbnail_Img(String imgSrc, String imageIndex) {
+    	return webDriver.findElement(By.xpath("(//img[@class='pub-mpx-video-thumbnail'][contains(@src, '" + imgSrc + "')])[" + imageIndex + "]"));
     }
     
     @FindBy(how = How.ID, using = "//img[@class='pub-mpx-video-thumbnail']")
@@ -331,10 +331,10 @@ public class SelectFile {
                 
     }
     
-    public void ClickMPXMediaThumbnailImage(String imageIndex) throws Exception {
+    public void ClickMPXMediaThumbnailImage(String imgSrc, String imageIndex) throws Exception {
     	
     	Reporter.log("Click mpx media thumbnail image number " + imageIndex );
-    	MPXMediaThumbnail_Img(imageIndex).click();
+    	MPXMediaThumbnail_Img(imgSrc, imageIndex).click();
                 
     }
     

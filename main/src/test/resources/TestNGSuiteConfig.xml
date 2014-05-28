@@ -1,11 +1,11 @@
 <suite name="Publisher 7 Test Suites">
 
 	<!--RUNTIME CONFIG-->
-	<parameter name="AppURL" value="http://install.devi1.nbcupublisher7.publisher7.com"></parameter>
+	<parameter name="AppURL" value="http://install.qa5.nbcupublisher7.publisher7.com"></parameter>
 	<parameter name="Browser" value="chrome"></parameter>
 	<parameter name="Admin1Username" value="admin@publisher.nbcuni.com"></parameter>
 	<parameter name="Admin1Password" value="pa55word"></parameter>
-	<parameter name="ReRunOnFailure" value="false"></parameter>
+	<parameter name="ReRunOnFailure" value="true"></parameter>
 	<parameter name="ReRunOnFailureCount" value="2"></parameter>
 	
   	<!--REPORT CONFIG-->

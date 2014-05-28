@@ -2,375 +2,474 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
     <line>
-      <![CDATA[Open the mpx platform.]]>
+      <![CDATA[STEP 1]]>
     </line>
     <line>
-      <![CDATA[Enter 'mpx/AdminPub7QA' in the 'Username' text box.]]>
+      <![CDATA[Open url 'http://update.qa4.nbcupublisher7.publisher7.com'.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Pa55word' in the 'Password' text box.]]>
+      <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
     </line>
     <line>
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Upload' button.]]>
+      <![CDATA[STEP 2]]>
     </line>
     <line>
-      <![CDATA[Click the 'Choose Files' button.]]>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Movies' button in the OS Upload dialog.]]>
+      <![CDATA[Mouse over the 'Add content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the Test Movie in th OS Upload dialog.]]>
+      <![CDATA[Click the 'Post' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Open' button.]]>
+      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Upload' button in the Upload dialog.]]>
+      <![CDATA[Enter '9279424e37184de' in the 'Title' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Available Date' label on the right hand side to give focus to the media item.]]>
+      <![CDATA[Switch to the Synopsis frame.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Automationeed1502a02' in the 'Title' text box.]]>
+      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save' button.]]>
+      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Publish' button.]]>
+      <![CDATA[Click the 'Cover' select button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Publish to Pub 7 Primary' check box.]]>
+      <![CDATA[Switch to the select file frame.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Publish' button from the upload dialog.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Files' link.]]>
+      <![CDATA[Enter the file path for file upload.]]>
     </line>
     <line>
       <![CDATA[Click the 'Upload' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Choose Files' button.]]>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
     </line>
     <line>
-      <![CDATA[Click the 'All Files' icon.]]>
+      <![CDATA[Click the 'Next' button.]]>
     </line>
     <line>
-      <![CDATA[Click the local 'Pictures' icon.]]>
+      <![CDATA[Click the 'Public Local Files' radio button.]]>
     </line>
     <line>
-      <![CDATA[Click the nbc logo image link.]]>
+      <![CDATA[Click the 'Next' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Open' button.]]>
+      <![CDATA[Verify the file image 'HanSolo' is present.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Upload' button in the Upload dialog.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'All Media' link.]]>
+      <![CDATA[Verify the img is loaded and visible.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Additional Options' arrow.]]>
+      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Publish Update' link.]]>
+      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Publish to Pub 7 Primary' check box.]]>
+      <![CDATA[Click the 'Publishing Options' link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Update' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Upload' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Choose Files' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Movies' button in the OS Upload dialog.]]>
-    </line>
-    <line>
-      <![CDATA[Click the Test Movie in th OS Upload dialog.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Open' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Upload' button in the Upload dialog.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Available Date' label on the right hand side to give focus to the media item.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Automation9cd94f7cbc' in the 'Title' text box.]]>
+      <![CDATA[Select 'Published' from the 'Moderation State' drop down list.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Publish' button.]]>
+      <![CDATA[Verify success message of 'Post 9279424e37184de has been created.' is present.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Publish to Pub 7 Primary' check box.]]>
+      <![CDATA[STEP 3]]>
     </line>
     <line>
-      <![CDATA[Click the 'Publish' button from the upload dialog.]]>
+      <![CDATA[Click the 'Content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Files' link.]]>
+      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Upload' button.]]>
+      <![CDATA[Enter title 9279424e37184de.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Choose Files' button.]]>
+      <![CDATA[Click the 'Apply' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'All Files' icon.]]>
+      <![CDATA[Verify the search thumbnail named 'HanSolo' is present for search result '9279424e37184de'.]]>
     </line>
     <line>
-      <![CDATA[Click the local 'Pictures' icon.]]>
+      <![CDATA[Assert the the img is loaded and visible.]]>
     </line>
     <line>
-      <![CDATA[Click the nbc logo image link.]]>
+      <![CDATA[STEP 4]]>
     </line>
     <line>
-      <![CDATA[Click the 'Open' button.]]>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Upload' button in the Upload dialog.]]>
+      <![CDATA[Click the 'Files' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'All Media' link.]]>
+      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the the thumbnail image is loaded and visible.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 5]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Add content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Post' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'c0025bcc342240c' in the 'Title' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the Synopsis frame.]]>
+    </line>
+    <line>
+      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Cover' select button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the select file frame.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'PUBLISHER 7 MPX VIDEO' button.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Automation' in the 'Title' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Apply' button.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the file search 'spinner' image to be present.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the file search 'spinner' image to not be present, indicating image search is complete.]]>
+    </line>
+    <line>
+      <![CDATA[Click mpx media thumbnail image number 1]]>
+    </line>
+    <line>
+      <![CDATA[Click on the 'Submit' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Additional Options' arrow.]]>
+      <![CDATA[Verify success message of 'Post c0025bcc342240c has been created.' is present.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Publish Update' link.]]>
+      <![CDATA[STEP 6]]>
     </line>
     <line>
-      <![CDATA[Click the 'Publish to Pub 7 Primary' check box.]]>
+      <![CDATA[Click the 'Content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Update' button.]]>
+      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter title c0025bcc342240c.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Apply' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the search thumbnail named 'nbclogosmall' is present for search result 'c0025bcc342240c'.]]>
+    </line>
+    <line>
+      <![CDATA[Assert the the img is loaded and visible.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="192884" started-at="2014-05-28T16:38:00Z" finished-at="2014-05-28T16:41:13Z">
+  <suite name="Default suite" duration-ms="56083" started-at="2014-05-28T18:22:53Z" finished-at="2014-05-28T18:23:49Z">
     <groups>
+      <group name="full">
+        <method signature="RepresentativeImage.RepresentativeImage_TC3217()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.RepresentativeImage.RepresentativeImage@83602ca]" name="RepresentativeImage_TC3217" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.RepresentativeImage.RepresentativeImage"/>
+      </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="192884" started-at="2014-05-28T16:38:00Z" finished-at="2014-05-28T16:41:13Z">
-      <class name="com.nbcuni.test.publisher.contentbuildscripts.MPXPerformanceUpgrade.PublishUpdate.EditVideos">
-        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.contentbuildscripts.MPXPerformanceUpgrade.PublishUpdate.EditVideos@2d7349d7]" name="startGridAndHub" is-config="true" duration-ms="11655" started-at="2014-05-28T12:37:49Z" finished-at="2014-05-28T12:38:00Z">
+    <test name="Default test" duration-ms="56083" started-at="2014-05-28T18:22:53Z" finished-at="2014-05-28T18:23:49Z">
+      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.RepresentativeImage.RepresentativeImage">
+        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.RepresentativeImage.RepresentativeImage@83602ca]" name="startGridAndHub" is-config="true" duration-ms="11670" started-at="2014-05-28T14:22:42Z" finished-at="2014-05-28T14:22:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startGridAndHub -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.contentbuildscripts.MPXPerformanceUpgrade.PublishUpdate.EditVideos@2d7349d7]" name="startSelenium" is-config="true" duration-ms="2425" started-at="2014-05-28T12:38:00Z" finished-at="2014-05-28T12:38:03Z">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.RepresentativeImage.RepresentativeImage@83602ca]" name="startSelenium" is-config="true" duration-ms="2445" started-at="2014-05-28T14:22:53Z" finished-at="2014-05-28T14:22:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="Test()[pri:0, instance:com.nbcuni.test.publisher.contentbuildscripts.MPXPerformanceUpgrade.PublishUpdate.EditVideos@2d7349d7]" name="Test" duration-ms="189876" started-at="2014-05-28T12:38:03Z" finished-at="2014-05-28T12:41:13Z">
+        <test-method status="PASS" signature="RepresentativeImage_TC3217()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.RepresentativeImage.RepresentativeImage@83602ca]" name="RepresentativeImage_TC3217" duration-ms="53056" started-at="2014-05-28T14:22:56Z" finished-at="2014-05-28T14:23:49Z">
           <reporter-output>
             <line>
-              <![CDATA[Open the mpx platform.]]>
+              <![CDATA[STEP 1]]>
             </line>
             <line>
-              <![CDATA[Enter 'mpx/AdminPub7QA' in the 'Username' text box.]]>
+              <![CDATA[Open url 'http://update.qa4.nbcupublisher7.publisher7.com'.]]>
             </line>
             <line>
-              <![CDATA[Enter 'Pa55word' in the 'Password' text box.]]>
+              <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
             </line>
             <line>
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Upload' button.]]>
+              <![CDATA[STEP 2]]>
             </line>
             <line>
-              <![CDATA[Click the 'Choose Files' button.]]>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Movies' button in the OS Upload dialog.]]>
+              <![CDATA[Mouse over the 'Add content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the Test Movie in th OS Upload dialog.]]>
+              <![CDATA[Click the 'Post' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Open' button.]]>
+              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Upload' button in the Upload dialog.]]>
+              <![CDATA[Enter '9279424e37184de' in the 'Title' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Available Date' label on the right hand side to give focus to the media item.]]>
+              <![CDATA[Switch to the Synopsis frame.]]>
             </line>
             <line>
-              <![CDATA[Enter 'Automationeed1502a02' in the 'Title' text box.]]>
+              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save' button.]]>
+              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Publish' button.]]>
+              <![CDATA[Click the 'Cover' select button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Publish to Pub 7 Primary' check box.]]>
+              <![CDATA[Switch to the select file frame.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Publish' button from the upload dialog.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Files' link.]]>
+              <![CDATA[Enter the file path for file upload.]]>
             </line>
             <line>
               <![CDATA[Click the 'Upload' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Choose Files' button.]]>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
             </line>
             <line>
-              <![CDATA[Click the 'All Files' icon.]]>
+              <![CDATA[Click the 'Next' button.]]>
             </line>
             <line>
-              <![CDATA[Click the local 'Pictures' icon.]]>
+              <![CDATA[Click the 'Public Local Files' radio button.]]>
             </line>
             <line>
-              <![CDATA[Click the nbc logo image link.]]>
+              <![CDATA[Click the 'Next' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Open' button.]]>
+              <![CDATA[Verify the file image 'HanSolo' is present.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Upload' button in the Upload dialog.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'All Media' link.]]>
+              <![CDATA[Verify the img is loaded and visible.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Additional Options' arrow.]]>
+              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Publish Update' link.]]>
+              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Publish to Pub 7 Primary' check box.]]>
+              <![CDATA[Click the 'Publishing Options' link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Update' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Upload' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Choose Files' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Movies' button in the OS Upload dialog.]]>
-            </line>
-            <line>
-              <![CDATA[Click the Test Movie in th OS Upload dialog.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Open' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Upload' button in the Upload dialog.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Available Date' label on the right hand side to give focus to the media item.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Automation9cd94f7cbc' in the 'Title' text box.]]>
+              <![CDATA[Select 'Published' from the 'Moderation State' drop down list.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Publish' button.]]>
+              <![CDATA[Verify success message of 'Post 9279424e37184de has been created.' is present.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Publish to Pub 7 Primary' check box.]]>
+              <![CDATA[STEP 3]]>
             </line>
             <line>
-              <![CDATA[Click the 'Publish' button from the upload dialog.]]>
+              <![CDATA[Click the 'Content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Files' link.]]>
+              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Upload' button.]]>
+              <![CDATA[Enter title 9279424e37184de.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Choose Files' button.]]>
+              <![CDATA[Click the 'Apply' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'All Files' icon.]]>
+              <![CDATA[Verify the search thumbnail named 'HanSolo' is present for search result '9279424e37184de'.]]>
             </line>
             <line>
-              <![CDATA[Click the local 'Pictures' icon.]]>
+              <![CDATA[Assert the the img is loaded and visible.]]>
             </line>
             <line>
-              <![CDATA[Click the nbc logo image link.]]>
+              <![CDATA[STEP 4]]>
             </line>
             <line>
-              <![CDATA[Click the 'Open' button.]]>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Upload' button in the Upload dialog.]]>
+              <![CDATA[Click the 'Files' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'All Media' link.]]>
+              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the the thumbnail image is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 5]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Add content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Post' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'c0025bcc342240c' in the 'Title' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the Synopsis frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Cover' select button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the select file frame.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'PUBLISHER 7 MPX VIDEO' button.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Automation' in the 'Title' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Apply' button.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the file search 'spinner' image to be present.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the file search 'spinner' image to not be present, indicating image search is complete.]]>
+            </line>
+            <line>
+              <![CDATA[Click mpx media thumbnail image number 1]]>
+            </line>
+            <line>
+              <![CDATA[Click on the 'Submit' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Additional Options' arrow.]]>
+              <![CDATA[Verify success message of 'Post c0025bcc342240c has been created.' is present.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Publish Update' link.]]>
+              <![CDATA[STEP 6]]>
             </line>
             <line>
-              <![CDATA[Click the 'Publish to Pub 7 Primary' check box.]]>
+              <![CDATA[Click the 'Content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Update' button.]]>
+              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter title c0025bcc342240c.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Apply' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the search thumbnail named 'nbclogosmall' is present for search result 'c0025bcc342240c'.]]>
+            </line>
+            <line>
+              <![CDATA[Assert the the img is loaded and visible.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- Test -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.contentbuildscripts.MPXPerformanceUpgrade.PublishUpdate.EditVideos@2d7349d7]" name="stopSelenium" is-config="true" duration-ms="570" started-at="2014-05-28T12:41:13Z" finished-at="2014-05-28T12:41:13Z">
+        </test-method> <!-- RepresentativeImage_TC3217 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.RepresentativeImage.RepresentativeImage@83602ca]" name="stopSelenium" is-config="true" duration-ms="569" started-at="2014-05-28T14:23:49Z" finished-at="2014-05-28T14:23:49Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Test status=SUCCESS method=EditVideos.Test()[pri:0, instance:com.nbcuni.test.publisher.contentbuildscripts.MPXPerformanceUpgrade.PublishUpdate.EditVideos@2d7349d7] output=Open the mpx platform.]]]>
+                <![CDATA[[TestResult name=RepresentativeImage_TC3217 status=SUCCESS method=RepresentativeImage.RepresentativeImage_TC3217()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.RepresentativeImage.RepresentativeImage@83602ca] output=STEP 1]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.contentbuildscripts.MPXPerformanceUpgrade.PublishUpdate.EditVideos@2d7349d7]" name="stopGridAndHub" is-config="true" duration-ms="417" started-at="2014-05-28T12:41:13Z" finished-at="2014-05-28T12:41:14Z">
+        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.RepresentativeImage.RepresentativeImage@83602ca]" name="stopGridAndHub" is-config="true" duration-ms="375" started-at="2014-05-28T14:23:49Z" finished-at="2014-05-28T14:23:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopGridAndHub -->
-      </class> <!-- com.nbcuni.test.publisher.contentbuildscripts.MPXPerformanceUpgrade.PublishUpdate.EditVideos -->
+      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.RepresentativeImage.RepresentativeImage -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
