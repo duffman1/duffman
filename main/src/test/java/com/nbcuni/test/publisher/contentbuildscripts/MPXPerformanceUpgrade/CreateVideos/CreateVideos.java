@@ -28,9 +28,8 @@ public class CreateVideos extends ParentTest{
         MPXAssets mpxAssets = new MPXAssets(applib);
 	    mpxAssets.WaitForAllAssetsToLoad();
 		
-	    
     	String mediaTitle = null;
-    	for(int CCount=0;CCount<10;CCount++) {
+    	for(int CCount=0;CCount<5;CCount++) {
     		
     		String filePath = System.getProperty("user.dir") + "/src/test/java/com/nbcuni/test/publisher/contentbuildscripts/MPXPerformanceUpgrade/CreateVideos/AssetsCreated.txt";
     	    filePath = filePath.replace("/", File.separator);
