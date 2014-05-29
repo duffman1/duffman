@@ -37,9 +37,53 @@ public class ConfigurationMultipleMPXAccounts extends ParentTest{
         
         //Setup
         Settings settings = new Settings(webDriver, applib);
+        MPXMedia mpxMedia = new MPXMedia(webDriver);
+        Cron cron = new Cron(webDriver, applib);
+        
         if (settings.IsMPXConfigured() == true) {
         	
         	settings.VerifyImportAccountOptions(accountNames);
+        	
+        	Integer numberSelectedAccounts = settings.GetImportAccountSelectedOptions().size();
+        	if (!settings.GetImportAccountSelectedOptions().contains("DB TV")) {
+        		settings.ExpandAddAccounts();
+            	settings.EnterUsername(applib.getMPXUsername());
+            	settings.EnterPassword(applib.getMPXPassword());
+            	settings.ClickSaveBtn();
+            	if (numberSelectedAccounts.equals(1)) {
+            		settings.SelectImportAccount2("DB TV");
+            	}
+            	else if (numberSelectedAccounts.equals(2)) {
+            		settings.SelectImportAccount3("DB TV");
+            	}
+            	else {
+            		settings.SelectImportAccount4("DB TV");
+            	}
+            	settings.ClickSetImportAccountBtn();
+            	contentParent.VerifyMessageStatus("Setting import account \"DB%20TV\" for account");
+            	contentParent.VerifyMessageStatus("Retrieving import account information for \"DB%20TV\".");
+            	settings.VerifyImportAccountsDisabled();
+            	settings.ClickSaveConfigurationsBtn();
+            	contentParent.VerifyMessageStatus("The configuration options have been saved.");
+            	overlay.ClickCloseOverlayLnk();
+            	taxonomy.NavigateSite("Content>>Files>>mpxMedia");
+            	overlay.SwitchToActiveFrame();
+                mpxMedia.ExpandMPXMedia();
+                if (numberSelectedAccounts.equals(1)) {
+                	mpxMedia.SelectMPXPlayerForAccount2("Auditude Demo player");
+            	}
+            	else if (numberSelectedAccounts.equals(2)) {
+            		mpxMedia.SelectMPXPlayerForAccount3("Auditude Demo player");
+            	}
+            	else {
+            		mpxMedia.SelectMPXPlayerForAccount4("Auditude Demo player");
+            	}
+                mpxMedia.ClickSyncMPXMediaNowLnk();
+                contentParent.VerifyMessageStatus("Processed video import/update manually for all accounts.");
+                cron.ClickRunCronToCompleteImportLnk();
+                cron.ClickRunCronBtn();
+                contentParent.VerifyMessageStatus("Cron run successfully.");
+        	}
         }
         else { 
         	
@@ -65,14 +109,12 @@ public class ConfigurationMultipleMPXAccounts extends ParentTest{
         	//Step 7
         	taxonomy.NavigateSite("Content>>Files>>mpxMedia");
             overlay.SwitchToActiveFrame();
-            MPXMedia mpxMedia = new MPXMedia(webDriver);
             mpxMedia.ExpandMPXMedia();
             mpxMedia.SelectMPXPlayerForAccount1("Auditude Demo player");
             mpxMedia.ClickSyncMPXMediaNowLnk();
             contentParent.VerifyMessageStatus("Processed video import/update manually for all accounts.");
         	
         	//Step 8
-            Cron cron = new Cron(webDriver, applib);
             cron.ClickRunCronToCompleteImportLnk();
             overlay.SwitchToActiveFrame();
             cron.ClickRunCronBtn();

@@ -31,7 +31,7 @@ public class EditVideos extends ParentTest{
 		
 	    
     	String mediaTitle = null;
-    	for(int CCount=0;CCount<2;CCount++) {
+    	for(int CCount=0;CCount<5;CCount++) {
     		
     		String filePath = System.getProperty("user.dir") + "/src/test/java/com/nbcuni/test/publisher/contentbuildscripts/MPXPerformanceUpgrade/PublishUpdate/AssetsEdited.txt";
     	    filePath = filePath.replace("/", File.separator);
@@ -73,7 +73,7 @@ public class EditVideos extends ParentTest{
             	addFile.ClickOpenBtn();
             	mpxAddMedia.ClickUploadFromDialogBtn();
                 mpxAddMedia.ClickAllMediaLnk();
-                mpxAddMedia.ClickSaveBtn(false);
+                //mpxAddMedia.ClickSaveBtn(false);
                 mpxPublishMedia.ClickAdditionalOptionsArrow();
         	    mpxPublishMedia.ClickPublishUpdateLnk();
         	    mpxPublishMedia.ClickPublishToPub7PrimaryCbx();
