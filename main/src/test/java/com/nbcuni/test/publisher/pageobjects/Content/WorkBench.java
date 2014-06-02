@@ -17,10 +17,10 @@ import org.testng.Assert;
 import org.testng.Reporter;
 
 /*********************************************
- * publisher.nbcuni.com Taxonomy Library. Copyright
+ * publisher.nbcuni.com Work Bench Library. Copyright
  * 
- * @author Mohd Faizan Khan
- * @version 1.0 Date: Jan 02, 2014
+ * @author Brandon Clark
+ * @version 1.0 Date: January 2, 2014
  *********************************************/
 public class WorkBench {
 

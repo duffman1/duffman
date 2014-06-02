@@ -88,8 +88,8 @@ public class AdobePass {
     public void EnterResourceID(String id) throws Exception {
     	
     	Reporter.log("Enter '" + id + "' in the 'Resource ID' text box.");
-    	RequestorID_Txb.clear();
-    	RequestorID_Txb.sendKeys(id);
+    	ResourceID_Txb.clear();
+    	ResourceID_Txb.sendKeys(id);
     }
     
     public void EnterUserNotAuthorizedError(String error) throws Exception {

@@ -69,14 +69,15 @@ public class TVEAuthExample {
     public Boolean TVEAuthAlreadyConfigured() throws Exception {
     	
     	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
-    	Boolean alreadyConfigured = false;
+    	Boolean alreadyConfigured;
     	try {
-    		AuthenticatedStatusChecked_Ctr.isDisplayed();
-    		alreadyConfigured = true;
-    	}
-    	catch (NoSuchElementException e) {
+    		MVPDSetup_Lnk.isDisplayed();
     		alreadyConfigured = false;
     	}
+    	catch (NoSuchElementException e) {
+    		alreadyConfigured = true;
+    	}
+    	webDriver.manage().timeouts().implicitlyWait(config.getImplicitWaitTime(), TimeUnit.SECONDS);
     	return alreadyConfigured;
     }
 
