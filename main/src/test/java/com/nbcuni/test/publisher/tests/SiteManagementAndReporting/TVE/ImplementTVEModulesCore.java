@@ -112,6 +112,9 @@ public class ImplementTVEModulesCore extends ParentTest {
             contentParent.VerifyMessageStatus("The configuration options have been saved.");
             overlay.ClickCloseOverlayLnk();
         }
+        else {
+        	Reporter.log("SKIP TO STEP 11 - TVE ALREADY CONFIGURED");
+        }
         
         Reporter.log("STEP 11");
         taxonomy.NavigateSite("Home");
@@ -130,7 +133,6 @@ public class ImplementTVEModulesCore extends ParentTest {
         errorChecking.VerifyNoMessageErrorsPresent();
         
         Reporter.log("CLEANUP");
-        tveAuthExample.ClickLogoutBtn();
         taxonomy.NavigateSite("Structure>>Blocks");
         overlay.SwitchToActiveFrame();
         blocks.SelectRegion("TVE Auth Example", "- None -");

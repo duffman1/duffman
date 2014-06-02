@@ -33,7 +33,7 @@ public class TVEAuthExample {
     	this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
         config = new Config();
-        wait = new WebDriverWait(webDriver, 60);
+        wait = new WebDriverWait(webDriver, 120);
     }
     
     //PAGE OBJECT IDENTIFIERS

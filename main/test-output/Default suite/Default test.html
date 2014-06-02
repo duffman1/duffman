@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Jun 02 09:57:58 EDT 2014</td>
+<td>Started on:</td><td>Mon Jun 02 14:22:41 EDT 2014</td>
 </tr>
-<tr><td>Total time:</td><td>48 seconds (48166 ms)</td>
+<tr><td>Total time:</td><td>95 seconds (95161 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,80 +75,62 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.URLAlias.AutomaticAlias.AutomaticAlias_TC3303()'><b>AutomaticAlias_TC3303</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.URLAlias.AutomaticAlias<br/>
-<a href="#Output-121404226" onClick='toggleBox("Output-121404226", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore.ImplementTVEModulesCore_TC3261()'><b>ImplementTVEModulesCore_TC3261</b><br>Test class: com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore<br/>
+<a href="#Output-1693404377" onClick='toggleBox("Output-1693404377", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-121404226" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-121404226">
+<a href="#Output-1693404377" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1693404377">
 STEP 1<br/>
 Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.<br/>
 Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
 Enter 'pa55word' in the 'Password' text box.<br/>
 Click the 'Login' button.<br/>
-SETUP<br/>
-Mouse over the 'Configuration' menu link.<br/>
-Mouse over the 'Search and metadata' menu link.<br/>
-Mouse over the 'URL aliases' menu link.<br/>
-Click the 'Settings' menu link.<br/>
-Switch to the active frame titled 'URL aliases dialog'.<br/>
-Click the 'Do nothing. Leave the old alias intact.' radio button.<br/>
-Click the 'Save configuration' button.<br/>
-Verify success message of 'The configuration options have been saved.' is present.<br/>
-Click the 'Close Overlay X'.<br/>
 STEP 2<br/>
-Mouse over the 'Content' menu link.<br/>
-Mouse over the 'Add content' menu link.<br/>
-Click the 'Post' menu link.<br/>
-Switch to the active frame titled 'Create Post dialog'.<br/>
-Enter 'e8eea1642d0447e' in the 'Title' text box.<br/>
-Switch to the Synopsis frame.<br/>
-Enter a randomized text string into the 'Body' text area.<br/>
-Switch to the active frame titled 'Create Post dialog'.<br/>
-Click the 'URL path settings' link.<br/>
-Verify the 'Generate automatic URL alias' check box is checked.<br/>
-STEP 3<br/>
-Click the 'Save' button.<br/>
-Verify success message of 'Post e8eea1642d0447e has been created.' is present.<br/>
-STEP 4<br/>
-Click the 'Edit Draft' link in the work bench.<br/>
-Switch to the active frame titled 'Edit Post e8eea1642d0447e dialog'.<br/>
-Click the 'URL path settings' link.<br/>
-Verify the 'URL alias' is 'content/e8eea1642d0447e'.<br/>
-Verify the 'Generate automatic URL alias' check box is un-checked and disabled.<br/>
-STEP 5<br/>
-Scroll to and click the 'Basic Information' tab.<br/>
-Enter 'ed7214ad03c349b' in the 'Title' text box.<br/>
-Click the 'Save' button.<br/>
-Verify success message of 'Post ed7214ad03c349b has been updated.' is present.<br/>
-Verify that the content node alias equals 'content/e8eea1642d0447e'.<br/>
-STEP 6<br/>
-Click the 'Edit Draft' link in the work bench.<br/>
-Switch to the active frame titled 'Edit Post ed7214ad03c349b dialog'.<br/>
-Click the 'URL path settings' link.<br/>
-Enter 'content/ed7214ad03c349b' in the 'URL alias' text box.<br/>
-Click the 'Save' button.<br/>
-Verify success message of 'Post ed7214ad03c349b has been updated.' is present.<br/>
-Verify that the content node alias equals 'content/ed7214ad03c349b'.<br/>
-STEP 7<br/>
-Mouse over the 'Configuration' menu link.<br/>
-Mouse over the 'Search and metadata' menu link.<br/>
-Mouse over the 'URL aliases' menu link.<br/>
-Click the 'Settings' menu link.<br/>
-Switch to the active frame titled 'URL aliases dialog'.<br/>
-Click the 'Create a new alias. Leave the existing alias functioning.' radio button.<br/>
-Click the 'Save configuration' button.<br/>
-Verify success message of 'The configuration options have been saved.' is present.<br/>
+Click the 'Modules' menu link.<br/>
+Switch to the active frame titled 'Modules dialog'.<br/>
+Enter 'TVE Adobe Pass' in the 'Filter Name' text box.<br/>
+Wait for the module titled 'TVE Adobe Pass' to appear in the list.<br/>
+Verify the 'TVE Adobe Pass' check box is checked.<br/>
+Enter 'TVE Auth Example' in the 'Filter Name' text box.<br/>
+Wait for the module titled 'TVE Auth Example' to appear in the list.<br/>
+Verify the 'TVE Auth Example' check box is checked.<br/>
+Enter 'TVE MVPD' in the 'Filter Name' text box.<br/>
+Wait for the module titled 'TVE MVPD' to appear in the list.<br/>
+Verify the 'TVE MVPD' check box is checked.<br/>
 Click the 'Close Overlay X'.<br/>
-STEP 8<br/>
-Click the 'Edit Draft' link in the work bench.<br/>
-Switch to the active frame titled 'Edit Post ed7214ad03c349b dialog'.<br/>
-Click the 'URL path settings' link.<br/>
-Verify the 'Generate automatic URL alias' check box is checked and enabled.<br/>
+STEP 3<br/>
+Mouse over the 'Structure' menu link.<br/>
+Click the 'Blocks' menu link.<br/>
+Switch to the active frame titled 'Blocks dialog'.<br/>
+Select the block name 'TVE Auth Example' from the 'Sidebar first' drop down list.<br/>
+Click the 'Save Blocks' button.<br/>
+Verify success message of 'The block settings have been updated.' is present.<br/>
+Click the 'Close Overlay X'.<br/>
+SKIP TO STEP 11 - TVE ALREADY CONFIGURED<br/>
+STEP 11<br/>
+Verify the 'Authentication status checked:' value is 'true'.<br/>
+Verify the 'Authenticated' value is 'false'.<br/>
+Verify the 'Selected MVPD:' value is 'none'.<br/>
+STEP 12<br/>
+Select 'Optimum' from the 'Al VMPDs:' drop down list.<br/>
+Click the 'login' button.<br/>
+Enter 'research40' in the 'Optimum ID' text box.<br/>
+Enter 'support40' in the 'Password' text box.<br/>
+Click the 'SIGN IN' button.<br/>
+Verify the 'Authentication status checked:' value is 'true'.<br/>
+Verify the 'Authenticated' value is 'true'.<br/>
+Verify the 'Selected MVPD:' value is 'Cablevision'.<br/>
+CLEANUP<br/>
+Mouse over the 'Structure' menu link.<br/>
+Click the 'Blocks' menu link.<br/>
+Switch to the active frame titled 'Blocks dialog'.<br/>
+Select the block name 'TVE Auth Example' from the '- None -' drop down list.<br/>
+Click the 'Save Blocks' button.<br/>
 </div>
 </td>
 <td></td>
-<td>45</td>
-<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.URLAlias.AutomaticAlias@6d6ae297</td></tr>
+<td>92</td>
+<td>com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@3b463340</td></tr>
 </table><p>
 </body>
 </html>
