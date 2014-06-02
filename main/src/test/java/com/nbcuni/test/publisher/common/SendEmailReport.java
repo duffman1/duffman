@@ -92,13 +92,8 @@ public class SendEmailReport {
 
             message.setContent(multipart);
 
-            if (config.getConfigValue("SendReportAutoEmails").equals("true")) {
-            	Transport.send(message);
-            	System.out.println("Successfully sent report result email.");
-            }
-            else {
-            	System.out.println("Report result email not sent per configuration setting.");
-            }
+            Transport.send(message);
+            System.out.println("Successfully sent report result email.");
 
         } catch (MessagingException e) {
             throw new RuntimeException(e);

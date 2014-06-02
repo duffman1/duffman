@@ -5,13 +5,13 @@
 	<parameter name="Browser" value="chrome"></parameter>
 	<parameter name="Admin1Username" value="admin@publisher.nbcuni.com"></parameter>
 	<parameter name="Admin1Password" value="pa55word"></parameter>
-	<parameter name="ReRunOnFailure" value="false"></parameter>
+	<parameter name="ReRunOnFailure" value="true"></parameter>
 	<parameter name="ReRunOnFailureCount" value="2"></parameter>
 	
   	<!--REPORT CONFIG-->
   	<parameter name="SendReportAutoEmails" value="true"></parameter>
-  	<parameter name="UploadReportToRally" value="true"></parameter>
-  	<parameter name="UpdateIndividualRallyTCs" value="true"></parameter>
+  	<parameter name="UploadReportToRally" value="false"></parameter>
+  	<parameter name="UpdateIndividualRallyTCs" value="false"></parameter>
   	<parameter name="SendReportIRCChat" value="false"></parameter>
   	<parameter name="PathToReports" value="/test-output/reports/"></parameter>
   	<parameter name="PathToScreenshots" value="/test-output/screenshots/"></parameter>

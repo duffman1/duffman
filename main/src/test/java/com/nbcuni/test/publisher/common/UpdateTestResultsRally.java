@@ -89,7 +89,6 @@ public class UpdateTestResultsRally {
             newTestCaseResult.addProperty("Tester", userRef);
             newTestCaseResult.addProperty("TestCase", testCaseRef);
 
-            if (config.getConfigValue("UpdateIndividualRallyTCs").equals("true")) {
             	CreateRequest createRequest = new CreateRequest("testcaseresult", newTestCaseResult);
             	CreateResponse createResponse = restApi.create(createRequest);
 
@@ -151,10 +150,6 @@ public class UpdateTestResultsRally {
             		System.out.println("Updated Rally test case result for test case '" + TCID + "'.");
                 
             	}
-            }
-            else {
-            	System.out.println("Individual test cases were not updated in Rally per configuration setting.");
-            }
         }
         catch (Exception e) {
         	System.out.println(e.getStackTrace());

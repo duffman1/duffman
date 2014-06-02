@@ -102,7 +102,6 @@ public class UploadReportRally {
             myAttachment.addProperty("Size", attachmentSize);
             myAttachment.addProperty("User", userRef);          
 
-            if (config.getConfigValue("UploadReportToRally").equals("true")) {
             CreateRequest attachmentCreateRequest = new CreateRequest("Attachment", myAttachment);
             CreateResponse attachmentResponse = restApi.create(attachmentCreateRequest);
             attachmentResponse.getObject().get("_ref").getAsString();
@@ -117,10 +116,7 @@ public class UploadReportRally {
                         		System.out.println(attachmentContentErrors[i]);
                         	}                   
             	}
-            }
-            else {
-            	System.out.println("Report was not uploaded to Rally per configuration setting.");
-            }
+            
         } catch (Exception e) {
                 System.out.println("Exception occurred while attempting to create Content and/or Attachment: ");
                 e.printStackTrace();            

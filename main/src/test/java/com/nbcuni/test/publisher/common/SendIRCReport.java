@@ -22,8 +22,6 @@ public class SendIRCReport {
         String channel = config.getConfigValue("IRCChannel");
         
         //If enabled, connect to the server
-        if (config.getConfigValue("SendReportIRCChat").equals("true")) {
-        	
         	@SuppressWarnings("resource")
     		Socket socket = new Socket(server, 6667);
             BufferedWriter writer = new BufferedWriter(
@@ -68,11 +66,6 @@ public class SendIRCReport {
             writer.close();
             socket.close();
             System.out.println("Successfully sent report result IRC chat.");
-        }
-        else {
-        	System.out.println("Report result IRC chat not sent per configuration setting.");
-        }
-        
         
     }
 }
