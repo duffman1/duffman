@@ -17,146 +17,161 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[STEP 2]]>
+      <![CDATA[SETUP]]>
     </line>
     <line>
       <![CDATA[Click the 'Modules' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+      <![CDATA[Switch to frame titled 'Modules'.]]>
     </line>
     <line>
-      <![CDATA[Enter 'TVE Adobe Pass' in the 'Filter Name' text box.]]>
+      <![CDATA[Enter 'MPS' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Wait for the module titled 'TVE Adobe Pass' to appear in the list.]]>
+      <![CDATA[Wait for the module titled 'MPS' to appear in the list.]]>
     </line>
     <line>
-      <![CDATA[Verify the 'TVE Adobe Pass' check box is checked.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'TVE Auth Example' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the module titled 'TVE Auth Example' to appear in the list.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'TVE Auth Example' check box is checked.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'TVE MVPD' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the module titled 'TVE MVPD' to appear in the list.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'TVE MVPD' check box is checked.]]>
+      <![CDATA[Verify the 'MPS' check box is checked.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
     </line>
     <line>
-      <![CDATA[STEP 3]]>
+      <![CDATA[STEP 2 - 3]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Structure' menu link.]]>
+      <![CDATA[Mouse over the 'Configuration' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Blocks' menu link.]]>
+      <![CDATA[Mouse over the 'Web services' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
+      <![CDATA[Click the 'MPS Configuration' menu link.]]>
     </line>
     <line>
-      <![CDATA[Select the block name 'TVE Auth Example' from the 'Sidebar first' drop down list.]]>
+      <![CDATA[Switch to the active frame titled 'MPS Configuration dialog'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save Blocks' button.]]>
+      <![CDATA[STEP 4]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'The block settings have been updated.' is present.]]>
+      <![CDATA[Enter 'mps.nbcuni.com' in the 'MPS Host' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Document Write' radio button.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'nbc-tonightshow' in the 'Site Instance Override' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Check the 'Send Query Strings' check box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configuration' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
     </line>
     <line>
-      <![CDATA[SKIP TO STEP 11 - TVE ALREADY CONFIGURED]]>
+      <![CDATA[Verify 'var mpscall = {"site":"nbc-tonightshow",' is present in page source.]]>
     </line>
     <line>
-      <![CDATA[STEP 11]]>
+      <![CDATA[Verify 'var mpsopts = {'host':'mps.nbcuni.com'}' is present in page source.]]>
     </line>
     <line>
-      <![CDATA[Verify the 'Authentication status checked:' value is 'true'.]]>
+      <![CDATA[STEP 5]]>
     </line>
     <line>
-      <![CDATA[Verify the 'Authenticated' value is 'false'.]]>
+      <![CDATA[Mouse over the 'Configuration' menu link.]]>
     </line>
     <line>
-      <![CDATA[Verify the 'Selected MVPD:' value is 'none'.]]>
+      <![CDATA[Mouse over the 'Web services' menu link.]]>
     </line>
     <line>
-      <![CDATA[STEP 12]]>
+      <![CDATA[Click the 'MPS Configuration' menu link.]]>
     </line>
     <line>
-      <![CDATA[Select 'Optimum' from the 'Al VMPDs:' drop down list.]]>
+      <![CDATA[Switch to the active frame titled 'MPS Configuration dialog'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'login' button.]]>
+      <![CDATA[Click the 'DOM Injection' radio button.]]>
     </line>
     <line>
-      <![CDATA[Enter 'research40' in the 'Optimum ID' text box.]]>
+      <![CDATA[Click the 'Save configuration' button.]]>
     </line>
     <line>
-      <![CDATA[Enter 'support40' in the 'Password' text box.]]>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
     </line>
     <line>
-      <![CDATA[Click the 'SIGN IN' button.]]>
+      <![CDATA[Click the 'Close Overlay X'.]]>
     </line>
     <line>
-      <![CDATA[Verify the 'Authentication status checked:' value is 'true'.]]>
+      <![CDATA[Verify 'mpsload.src='//'+mpsopts.host+'/fetch/ext/load-'+mpscall.site+'.js?nowrite=jq'; mpsload.id="mps-load"' is present in page source.]]>
     </line>
     <line>
-      <![CDATA[Verify the 'Authenticated' value is 'true'.]]>
+      <![CDATA[Verify 'mpsload.async=false; head.insertBefore(mpsload,head.firstChild)' is present in page source.]]>
     </line>
     <line>
-      <![CDATA[Verify the 'Selected MVPD:' value is 'Cablevision'.]]>
+      <![CDATA[STEP 6]]>
     </line>
     <line>
-      <![CDATA[CLEANUP]]>
+      <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com/?x=y'.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Structure' menu link.]]>
+      <![CDATA[Verify 'Site-Install","path":"","qs":"eD15"' is present in page source.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Blocks' menu link.]]>
+      <![CDATA[STEP 7]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
+      <![CDATA[Mouse over the 'Configuration' menu link.]]>
     </line>
     <line>
-      <![CDATA[Select the block name 'TVE Auth Example' from the '- None -' drop down list.]]>
+      <![CDATA[Mouse over the 'Web services' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save Blocks' button.]]>
+      <![CDATA[Click the 'MPS Configuration' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'MPS Configuration dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Un-check the 'Send Query Strings' check box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configuration' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify 'Site-Install","path":"","qs":"eD15"' is not present in page source.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="95161" started-at="2014-06-02T18:22:41Z" finished-at="2014-06-02T18:24:16Z">
+  <suite name="Default suite" duration-ms="45688" started-at="2014-06-02T19:33:14Z" finished-at="2014-06-02T19:34:00Z">
     <groups>
       <group name="full">
-        <method signature="ImplementTVEModulesCore.ImplementTVEModulesCore_TC3261()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@3b463340]" name="ImplementTVEModulesCore_TC3261" class="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore"/>
+        <method signature="MPSConfigurationPage.MPSConfigurationPage_TC3306()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSConfigurationPage@26044b0b]" name="MPSConfigurationPage_TC3306" class="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSConfigurationPage"/>
       </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="95161" started-at="2014-06-02T18:22:41Z" finished-at="2014-06-02T18:24:16Z">
-      <class name="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore">
-        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@3b463340]" name="startGridAndHub" is-config="true" duration-ms="11125" started-at="2014-06-02T14:22:30Z" finished-at="2014-06-02T14:22:41Z">
+    <test name="Default test" duration-ms="45688" started-at="2014-06-02T19:33:14Z" finished-at="2014-06-02T19:34:00Z">
+      <class name="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSConfigurationPage">
+        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSConfigurationPage@26044b0b]" name="startGridAndHub" is-config="true" duration-ms="11667" started-at="2014-06-02T15:33:02Z" finished-at="2014-06-02T15:33:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startGridAndHub -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@3b463340]" name="startSelenium" is-config="true" duration-ms="2379" started-at="2014-06-02T14:22:41Z" finished-at="2014-06-02T14:22:43Z">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSConfigurationPage@26044b0b]" name="startSelenium" is-config="true" duration-ms="2466" started-at="2014-06-02T15:33:14Z" finished-at="2014-06-02T15:33:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="ImplementTVEModulesCore_TC3261()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@3b463340]" name="ImplementTVEModulesCore_TC3261" duration-ms="92195" started-at="2014-06-02T14:22:43Z" finished-at="2014-06-02T14:24:15Z">
+        <test-method status="PASS" signature="MPSConfigurationPage_TC3306()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSConfigurationPage@26044b0b]" name="MPSConfigurationPage_TC3306" duration-ms="42637" started-at="2014-06-02T15:33:16Z" finished-at="2014-06-02T15:33:59Z">
           <reporter-output>
             <line>
               <![CDATA[STEP 1]]>
@@ -174,146 +189,161 @@
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
-              <![CDATA[STEP 2]]>
+              <![CDATA[SETUP]]>
             </line>
             <line>
               <![CDATA[Click the 'Modules' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+              <![CDATA[Switch to frame titled 'Modules'.]]>
             </line>
             <line>
-              <![CDATA[Enter 'TVE Adobe Pass' in the 'Filter Name' text box.]]>
+              <![CDATA[Enter 'MPS' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Wait for the module titled 'TVE Adobe Pass' to appear in the list.]]>
+              <![CDATA[Wait for the module titled 'MPS' to appear in the list.]]>
             </line>
             <line>
-              <![CDATA[Verify the 'TVE Adobe Pass' check box is checked.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'TVE Auth Example' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the module titled 'TVE Auth Example' to appear in the list.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'TVE Auth Example' check box is checked.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'TVE MVPD' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the module titled 'TVE MVPD' to appear in the list.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'TVE MVPD' check box is checked.]]>
+              <![CDATA[Verify the 'MPS' check box is checked.]]>
             </line>
             <line>
               <![CDATA[Click the 'Close Overlay X'.]]>
             </line>
             <line>
-              <![CDATA[STEP 3]]>
+              <![CDATA[STEP 2 - 3]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Structure' menu link.]]>
+              <![CDATA[Mouse over the 'Configuration' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Blocks' menu link.]]>
+              <![CDATA[Mouse over the 'Web services' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
+              <![CDATA[Click the 'MPS Configuration' menu link.]]>
             </line>
             <line>
-              <![CDATA[Select the block name 'TVE Auth Example' from the 'Sidebar first' drop down list.]]>
+              <![CDATA[Switch to the active frame titled 'MPS Configuration dialog'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save Blocks' button.]]>
+              <![CDATA[STEP 4]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'The block settings have been updated.' is present.]]>
+              <![CDATA[Enter 'mps.nbcuni.com' in the 'MPS Host' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Document Write' radio button.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'nbc-tonightshow' in the 'Site Instance Override' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Check the 'Send Query Strings' check box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configuration' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
             </line>
             <line>
               <![CDATA[Click the 'Close Overlay X'.]]>
             </line>
             <line>
-              <![CDATA[SKIP TO STEP 11 - TVE ALREADY CONFIGURED]]>
+              <![CDATA[Verify 'var mpscall = {"site":"nbc-tonightshow",' is present in page source.]]>
             </line>
             <line>
-              <![CDATA[STEP 11]]>
+              <![CDATA[Verify 'var mpsopts = {'host':'mps.nbcuni.com'}' is present in page source.]]>
             </line>
             <line>
-              <![CDATA[Verify the 'Authentication status checked:' value is 'true'.]]>
+              <![CDATA[STEP 5]]>
             </line>
             <line>
-              <![CDATA[Verify the 'Authenticated' value is 'false'.]]>
+              <![CDATA[Mouse over the 'Configuration' menu link.]]>
             </line>
             <line>
-              <![CDATA[Verify the 'Selected MVPD:' value is 'none'.]]>
+              <![CDATA[Mouse over the 'Web services' menu link.]]>
             </line>
             <line>
-              <![CDATA[STEP 12]]>
+              <![CDATA[Click the 'MPS Configuration' menu link.]]>
             </line>
             <line>
-              <![CDATA[Select 'Optimum' from the 'Al VMPDs:' drop down list.]]>
+              <![CDATA[Switch to the active frame titled 'MPS Configuration dialog'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'login' button.]]>
+              <![CDATA[Click the 'DOM Injection' radio button.]]>
             </line>
             <line>
-              <![CDATA[Enter 'research40' in the 'Optimum ID' text box.]]>
+              <![CDATA[Click the 'Save configuration' button.]]>
             </line>
             <line>
-              <![CDATA[Enter 'support40' in the 'Password' text box.]]>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
             </line>
             <line>
-              <![CDATA[Click the 'SIGN IN' button.]]>
+              <![CDATA[Click the 'Close Overlay X'.]]>
             </line>
             <line>
-              <![CDATA[Verify the 'Authentication status checked:' value is 'true'.]]>
+              <![CDATA[Verify 'mpsload.src='//'+mpsopts.host+'/fetch/ext/load-'+mpscall.site+'.js?nowrite=jq'; mpsload.id="mps-load"' is present in page source.]]>
             </line>
             <line>
-              <![CDATA[Verify the 'Authenticated' value is 'true'.]]>
+              <![CDATA[Verify 'mpsload.async=false; head.insertBefore(mpsload,head.firstChild)' is present in page source.]]>
             </line>
             <line>
-              <![CDATA[Verify the 'Selected MVPD:' value is 'Cablevision'.]]>
+              <![CDATA[STEP 6]]>
             </line>
             <line>
-              <![CDATA[CLEANUP]]>
+              <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com/?x=y'.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Structure' menu link.]]>
+              <![CDATA[Verify 'Site-Install","path":"","qs":"eD15"' is present in page source.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Blocks' menu link.]]>
+              <![CDATA[STEP 7]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
+              <![CDATA[Mouse over the 'Configuration' menu link.]]>
             </line>
             <line>
-              <![CDATA[Select the block name 'TVE Auth Example' from the '- None -' drop down list.]]>
+              <![CDATA[Mouse over the 'Web services' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save Blocks' button.]]>
+              <![CDATA[Click the 'MPS Configuration' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'MPS Configuration dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Un-check the 'Send Query Strings' check box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configuration' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify 'Site-Install","path":"","qs":"eD15"' is not present in page source.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- ImplementTVEModulesCore_TC3261 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@3b463340]" name="stopSelenium" is-config="true" duration-ms="576" started-at="2014-06-02T14:24:15Z" finished-at="2014-06-02T14:24:16Z">
+        </test-method> <!-- MPSConfigurationPage_TC3306 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSConfigurationPage@26044b0b]" name="stopSelenium" is-config="true" duration-ms="572" started-at="2014-06-02T15:33:59Z" finished-at="2014-06-02T15:34:00Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=ImplementTVEModulesCore_TC3261 status=SUCCESS method=ImplementTVEModulesCore.ImplementTVEModulesCore_TC3261()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@3b463340] output=STEP 1]]]>
+                <![CDATA[[TestResult name=MPSConfigurationPage_TC3306 status=SUCCESS method=MPSConfigurationPage.MPSConfigurationPage_TC3306()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSConfigurationPage@26044b0b] output=STEP 1]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@3b463340]" name="stopGridAndHub" is-config="true" duration-ms="365" started-at="2014-06-02T14:24:16Z" finished-at="2014-06-02T14:24:16Z">
+        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSConfigurationPage@26044b0b]" name="stopGridAndHub" is-config="true" duration-ms="365" started-at="2014-06-02T15:34:00Z" finished-at="2014-06-02T15:34:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopGridAndHub -->
-      </class> <!-- com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Advertising.MPS.MPSConfigurationPage -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

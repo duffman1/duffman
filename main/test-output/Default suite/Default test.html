@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Jun 02 14:22:41 EDT 2014</td>
+<td>Started on:</td><td>Mon Jun 02 15:33:14 EDT 2014</td>
 </tr>
-<tr><td>Total time:</td><td>95 seconds (95161 ms)</td>
+<tr><td>Total time:</td><td>45 seconds (45688 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,62 +75,67 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore.ImplementTVEModulesCore_TC3261()'><b>ImplementTVEModulesCore_TC3261</b><br>Test class: com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore<br/>
-<a href="#Output-1693404377" onClick='toggleBox("Output-1693404377", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.nbcuni.test.publisher.tests.Advertising.MPS.MPSConfigurationPage.MPSConfigurationPage_TC3306()'><b>MPSConfigurationPage_TC3306</b><br>Test class: com.nbcuni.test.publisher.tests.Advertising.MPS.MPSConfigurationPage<br/>
+<a href="#Output-2053331376" onClick='toggleBox("Output-2053331376", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1693404377" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1693404377">
+<a href="#Output-2053331376" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2053331376">
 STEP 1<br/>
 Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.<br/>
 Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
 Enter 'pa55word' in the 'Password' text box.<br/>
 Click the 'Login' button.<br/>
-STEP 2<br/>
+SETUP<br/>
 Click the 'Modules' menu link.<br/>
-Switch to the active frame titled 'Modules dialog'.<br/>
-Enter 'TVE Adobe Pass' in the 'Filter Name' text box.<br/>
-Wait for the module titled 'TVE Adobe Pass' to appear in the list.<br/>
-Verify the 'TVE Adobe Pass' check box is checked.<br/>
-Enter 'TVE Auth Example' in the 'Filter Name' text box.<br/>
-Wait for the module titled 'TVE Auth Example' to appear in the list.<br/>
-Verify the 'TVE Auth Example' check box is checked.<br/>
-Enter 'TVE MVPD' in the 'Filter Name' text box.<br/>
-Wait for the module titled 'TVE MVPD' to appear in the list.<br/>
-Verify the 'TVE MVPD' check box is checked.<br/>
+Switch to frame titled 'Modules'.<br/>
+Enter 'MPS' in the 'Filter Name' text box.<br/>
+Wait for the module titled 'MPS' to appear in the list.<br/>
+Verify the 'MPS' check box is checked.<br/>
 Click the 'Close Overlay X'.<br/>
-STEP 3<br/>
-Mouse over the 'Structure' menu link.<br/>
-Click the 'Blocks' menu link.<br/>
-Switch to the active frame titled 'Blocks dialog'.<br/>
-Select the block name 'TVE Auth Example' from the 'Sidebar first' drop down list.<br/>
-Click the 'Save Blocks' button.<br/>
-Verify success message of 'The block settings have been updated.' is present.<br/>
+STEP 2 - 3<br/>
+Mouse over the 'Configuration' menu link.<br/>
+Mouse over the 'Web services' menu link.<br/>
+Click the 'MPS Configuration' menu link.<br/>
+Switch to the active frame titled 'MPS Configuration dialog'.<br/>
+STEP 4<br/>
+Enter 'mps.nbcuni.com' in the 'MPS Host' text box.<br/>
+Click the 'Document Write' radio button.<br/>
+Enter 'nbc-tonightshow' in the 'Site Instance Override' text box.<br/>
+Check the 'Send Query Strings' check box.<br/>
+Click the 'Save configuration' button.<br/>
+Verify success message of 'The configuration options have been saved.' is present.<br/>
 Click the 'Close Overlay X'.<br/>
-SKIP TO STEP 11 - TVE ALREADY CONFIGURED<br/>
-STEP 11<br/>
-Verify the 'Authentication status checked:' value is 'true'.<br/>
-Verify the 'Authenticated' value is 'false'.<br/>
-Verify the 'Selected MVPD:' value is 'none'.<br/>
-STEP 12<br/>
-Select 'Optimum' from the 'Al VMPDs:' drop down list.<br/>
-Click the 'login' button.<br/>
-Enter 'research40' in the 'Optimum ID' text box.<br/>
-Enter 'support40' in the 'Password' text box.<br/>
-Click the 'SIGN IN' button.<br/>
-Verify the 'Authentication status checked:' value is 'true'.<br/>
-Verify the 'Authenticated' value is 'true'.<br/>
-Verify the 'Selected MVPD:' value is 'Cablevision'.<br/>
-CLEANUP<br/>
-Mouse over the 'Structure' menu link.<br/>
-Click the 'Blocks' menu link.<br/>
-Switch to the active frame titled 'Blocks dialog'.<br/>
-Select the block name 'TVE Auth Example' from the '- None -' drop down list.<br/>
-Click the 'Save Blocks' button.<br/>
+Verify 'var mpscall = {"site":"nbc-tonightshow",' is present in page source.<br/>
+Verify 'var mpsopts = {'host':'mps.nbcuni.com'}' is present in page source.<br/>
+STEP 5<br/>
+Mouse over the 'Configuration' menu link.<br/>
+Mouse over the 'Web services' menu link.<br/>
+Click the 'MPS Configuration' menu link.<br/>
+Switch to the active frame titled 'MPS Configuration dialog'.<br/>
+Click the 'DOM Injection' radio button.<br/>
+Click the 'Save configuration' button.<br/>
+Verify success message of 'The configuration options have been saved.' is present.<br/>
+Click the 'Close Overlay X'.<br/>
+Verify 'mpsload.src='//'+mpsopts.host+'/fetch/ext/load-'+mpscall.site+'.js?nowrite=jq'; mpsload.id="mps-load"' is present in page source.<br/>
+Verify 'mpsload.async=false; head.insertBefore(mpsload,head.firstChild)' is present in page source.<br/>
+STEP 6<br/>
+Open url 'http://install.qa5.nbcupublisher7.publisher7.com/?x=y'.<br/>
+Verify 'Site-Install","path":"","qs":"eD15"' is present in page source.<br/>
+STEP 7<br/>
+Mouse over the 'Configuration' menu link.<br/>
+Mouse over the 'Web services' menu link.<br/>
+Click the 'MPS Configuration' menu link.<br/>
+Switch to the active frame titled 'MPS Configuration dialog'.<br/>
+Un-check the 'Send Query Strings' check box.<br/>
+Click the 'Save configuration' button.<br/>
+Verify success message of 'The configuration options have been saved.' is present.<br/>
+Click the 'Close Overlay X'.<br/>
+Verify 'Site-Install","path":"","qs":"eD15"' is not present in page source.<br/>
 </div>
 </td>
 <td></td>
-<td>92</td>
-<td>com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@3b463340</td></tr>
+<td>42</td>
+<td>com.nbcuni.test.publisher.tests.Advertising.MPS.MPSConfigurationPage@26044b0b</td></tr>
 </table><p>
 </body>
 </html>

@@ -3,45 +3,50 @@
 <tr><td>Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.</td></tr>
 <tr><td>Enter 'pa55word' in the 'Password' text box.</td></tr>
 <tr><td>Click the 'Login' button.</td></tr>
-<tr><td>STEP 2</td></tr>
+<tr><td>SETUP</td></tr>
 <tr><td>Click the 'Modules' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'Modules dialog'.</td></tr>
-<tr><td>Enter 'TVE Adobe Pass' in the 'Filter Name' text box.</td></tr>
-<tr><td>Wait for the module titled 'TVE Adobe Pass' to appear in the list.</td></tr>
-<tr><td>Verify the 'TVE Adobe Pass' check box is checked.</td></tr>
-<tr><td>Enter 'TVE Auth Example' in the 'Filter Name' text box.</td></tr>
-<tr><td>Wait for the module titled 'TVE Auth Example' to appear in the list.</td></tr>
-<tr><td>Verify the 'TVE Auth Example' check box is checked.</td></tr>
-<tr><td>Enter 'TVE MVPD' in the 'Filter Name' text box.</td></tr>
-<tr><td>Wait for the module titled 'TVE MVPD' to appear in the list.</td></tr>
-<tr><td>Verify the 'TVE MVPD' check box is checked.</td></tr>
+<tr><td>Switch to frame titled 'Modules'.</td></tr>
+<tr><td>Enter 'MPS' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for the module titled 'MPS' to appear in the list.</td></tr>
+<tr><td>Verify the 'MPS' check box is checked.</td></tr>
 <tr><td>Click the 'Close Overlay X'.</td></tr>
-<tr><td>STEP 3</td></tr>
-<tr><td>Mouse over the 'Structure' menu link.</td></tr>
-<tr><td>Click the 'Blocks' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'Blocks dialog'.</td></tr>
-<tr><td>Select the block name 'TVE Auth Example' from the 'Sidebar first' drop down list.</td></tr>
-<tr><td>Click the 'Save Blocks' button.</td></tr>
-<tr><td>Verify success message of 'The block settings have been updated.' is present.</td></tr>
+<tr><td>STEP 2 - 3</td></tr>
+<tr><td>Mouse over the 'Configuration' menu link.</td></tr>
+<tr><td>Mouse over the 'Web services' menu link.</td></tr>
+<tr><td>Click the 'MPS Configuration' menu link.</td></tr>
+<tr><td>Switch to the active frame titled 'MPS Configuration dialog'.</td></tr>
+<tr><td>STEP 4</td></tr>
+<tr><td>Enter 'mps.nbcuni.com' in the 'MPS Host' text box.</td></tr>
+<tr><td>Click the 'Document Write' radio button.</td></tr>
+<tr><td>Enter 'nbc-tonightshow' in the 'Site Instance Override' text box.</td></tr>
+<tr><td>Check the 'Send Query Strings' check box.</td></tr>
+<tr><td>Click the 'Save configuration' button.</td></tr>
+<tr><td>Verify success message of 'The configuration options have been saved.' is present.</td></tr>
 <tr><td>Click the 'Close Overlay X'.</td></tr>
-<tr><td>SKIP TO STEP 11 - TVE ALREADY CONFIGURED</td></tr>
-<tr><td>STEP 11</td></tr>
-<tr><td>Verify the 'Authentication status checked:' value is 'true'.</td></tr>
-<tr><td>Verify the 'Authenticated' value is 'false'.</td></tr>
-<tr><td>Verify the 'Selected MVPD:' value is 'none'.</td></tr>
-<tr><td>STEP 12</td></tr>
-<tr><td>Select 'Optimum' from the 'Al VMPDs:' drop down list.</td></tr>
-<tr><td>Click the 'login' button.</td></tr>
-<tr><td>Enter 'research40' in the 'Optimum ID' text box.</td></tr>
-<tr><td>Enter 'support40' in the 'Password' text box.</td></tr>
-<tr><td>Click the 'SIGN IN' button.</td></tr>
-<tr><td>Verify the 'Authentication status checked:' value is 'true'.</td></tr>
-<tr><td>Verify the 'Authenticated' value is 'true'.</td></tr>
-<tr><td>Verify the 'Selected MVPD:' value is 'Cablevision'.</td></tr>
-<tr><td>CLEANUP</td></tr>
-<tr><td>Mouse over the 'Structure' menu link.</td></tr>
-<tr><td>Click the 'Blocks' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'Blocks dialog'.</td></tr>
-<tr><td>Select the block name 'TVE Auth Example' from the '- None -' drop down list.</td></tr>
-<tr><td>Click the 'Save Blocks' button.</td></tr>
+<tr><td>Verify 'var mpscall = {"site":"nbc-tonightshow",' is present in page source.</td></tr>
+<tr><td>Verify 'var mpsopts = {'host':'mps.nbcuni.com'}' is present in page source.</td></tr>
+<tr><td>STEP 5</td></tr>
+<tr><td>Mouse over the 'Configuration' menu link.</td></tr>
+<tr><td>Mouse over the 'Web services' menu link.</td></tr>
+<tr><td>Click the 'MPS Configuration' menu link.</td></tr>
+<tr><td>Switch to the active frame titled 'MPS Configuration dialog'.</td></tr>
+<tr><td>Click the 'DOM Injection' radio button.</td></tr>
+<tr><td>Click the 'Save configuration' button.</td></tr>
+<tr><td>Verify success message of 'The configuration options have been saved.' is present.</td></tr>
+<tr><td>Click the 'Close Overlay X'.</td></tr>
+<tr><td>Verify 'mpsload.src='//'+mpsopts.host+'/fetch/ext/load-'+mpscall.site+'.js?nowrite=jq'; mpsload.id="mps-load"' is present in page source.</td></tr>
+<tr><td>Verify 'mpsload.async=false; head.insertBefore(mpsload,head.firstChild)' is present in page source.</td></tr>
+<tr><td>STEP 6</td></tr>
+<tr><td>Open url 'http://install.qa5.nbcupublisher7.publisher7.com/?x=y'.</td></tr>
+<tr><td>Verify 'Site-Install","path":"","qs":"eD15"' is present in page source.</td></tr>
+<tr><td>STEP 7</td></tr>
+<tr><td>Mouse over the 'Configuration' menu link.</td></tr>
+<tr><td>Mouse over the 'Web services' menu link.</td></tr>
+<tr><td>Click the 'MPS Configuration' menu link.</td></tr>
+<tr><td>Switch to the active frame titled 'MPS Configuration dialog'.</td></tr>
+<tr><td>Un-check the 'Send Query Strings' check box.</td></tr>
+<tr><td>Click the 'Save configuration' button.</td></tr>
+<tr><td>Verify success message of 'The configuration options have been saved.' is present.</td></tr>
+<tr><td>Click the 'Close Overlay X'.</td></tr>
+<tr><td>Verify 'Site-Install","path":"","qs":"eD15"' is not present in page source.</td></tr>
 </table>
