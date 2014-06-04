@@ -95,14 +95,14 @@ public class EditMPXVideo {
         
     	Reporter.log("Verify that the 'Media Availabe Date' text box is disabled and has no value.");
     	Assert.assertTrue(MPXMediaAvailableDate_Txb.getAttribute("value").equals(""));
-        Assert.assertTrue(MPXMediaAvailableDate_Txb.isEnabled() == false);
+        Assert.assertFalse(MPXMediaAvailableDate_Txb.isEnabled());
     }
 
     public void VerifyMPXMediaExpirationDateNullAndDisabled() throws Exception {
         
     	Reporter.log("Verify that the 'Media Expiration Date' text box is disabled and has no value.");
     	Assert.assertTrue(MPXMediaExpirationDate_Txb.getAttribute("value").equals(""));
-        Assert.assertTrue(MPXMediaExpirationDate_Txb.isEnabled() == false);
+        Assert.assertFalse(MPXMediaExpirationDate_Txb.isEnabled());
     }
 
     public void CheckOverrideMPXAvailableDateCbx() throws Exception {

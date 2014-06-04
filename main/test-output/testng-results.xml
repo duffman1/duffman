@@ -2,6 +2,9 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
     <line>
+      <![CDATA[STEP 1]]>
+    </line>
+    <line>
       <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]>
     </line>
     <line>
@@ -14,43 +17,70 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
+      <![CDATA[STEP 2]]>
+    </line>
+    <line>
       <![CDATA[Click the 'Modules' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to frame titled 'Modules'.]]>
+      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Node clone' in the 'Filter Name' text box.]]>
+      <![CDATA[Enter 'Pub Ads' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Wait for the module titled 'Node clone' to appear in the list.]]>
+      <![CDATA[Wait for the module titled 'Pub Ads' to appear in the list.]]>
     </line>
     <line>
-      <![CDATA[Verify the 'Node clone' check box is checked.]]>
+      <![CDATA[Verify the 'Pub Ads' check box is checked.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'MPS' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the module titled 'MPS' to appear in the list.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'MPS' check box is checked.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'DART' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the module titled 'DART' to appear in the list.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Doubleclick for Publishers' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the module titled 'Doubleclick for Publishers' to appear in the list.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Configuration' menu link.]]>
+      <![CDATA[STEP 3]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Content authoring' menu link.]]>
+      <![CDATA[Mouse over the 'Reports' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Node clone module' menu link.]]>
+      <![CDATA[Click the 'Status report' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Node clone module dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'Status report dialog'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
+      <![CDATA[Verify the text 'Ad Tag Style' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+      <![CDATA[Verify the text 'MPS' is present on the page.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 4]]>
     </line>
     <line>
       <![CDATA[Mouse over the 'Content' menu link.]]>
@@ -59,13 +89,16 @@
       <![CDATA[Mouse over the 'Add content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Post' menu link.]]>
+      <![CDATA[Click the 'Movie' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
     </line>
     <line>
-      <![CDATA[Enter 'ccb75b3a857d42d' in the 'Title' text box.]]>
+      <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'aab5100993fe442' in the 'Title' text box.]]>
     </line>
     <line>
       <![CDATA[Switch to the Synopsis frame.]]>
@@ -74,7 +107,7 @@
       <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
     </line>
     <line>
       <![CDATA[Click the 'Cover' select button.]]>
@@ -110,81 +143,258 @@
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
     </line>
     <line>
-      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+      <![CDATA[Click the 'Additional Information' link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Publishing Options' link.]]>
+      <![CDATA[Select the 'Syndicated' from the 'Movie Type' drop down list.]]>
     </line>
     <line>
-      <![CDATA[Select 'Published' from the 'Moderation State' drop down list.]]>
+      <![CDATA[Select the 'G' from the 'Rating' drop down list.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Post ccb75b3a857d42d has been created.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Clone this post' link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Clone of ccb75b3a857d42d dialog'.]]>
+      <![CDATA[Select the 'Action' from the 'Primary Genre' drop down list.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'Post Clone of ccb75b3a857d42d has been created.' is present.]]>
+      <![CDATA[Verify success message of 'Movie aab5100993fe442 has been created.' is present.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Revisions' link in the work bench.]]>
+      <![CDATA[Note the node number for the content item.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Revisions dialog'.]]>
+      <![CDATA[STEP 5]]>
     </line>
     <line>
-      <![CDATA[Select 'Published' from the 'Change State' drop down list.]]>
+      <![CDATA[Verify 'var mpscall = {"site":"nbc-tonightshow","title":"aab5100993fe442","path":"\/node\/9' is present in page source.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Change state - Draft to Published' in the 'Message for state change' text area.]]>
+      <![CDATA[Verify 'var mpsopts = {'host':'mps.nbcuni.com'}' is present in page source.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Update State' button.]]>
+      <![CDATA[STEP 6 through STEP 14]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'Clone of ccb75b3a857d42d transitioned to the published state.' is present.]]>
+      <![CDATA[Verify '{"site":"nbc-tonightshow","title":"aab5100993fe442","path":"\/node\/9' is present in page source.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the work bench info container.]]>
+      <![CDATA[Verify '"qs":"","cat":"content|aab5100993fe442","content_id":"node' is present in page source.]]>
     </line>
     <line>
-      <![CDATA[Verify the contextual link configure gear and down arrow link are visible.]]>
+      <![CDATA[Verify '"is_content":1,"type":"movie","cag":{"genre":"Action","movie-rating":"G","movie-types":"Syndicated"},"envelope":"","pubdate":' is present in page source.]]>
     </line>
     <line>
-      <![CDATA[Verify 'Configure Block' link is present.]]>
+      <![CDATA[STEP 15]]>
+    </line>
+    <line>
+      <![CDATA[Verify 'a3VtdWQ9MQ==' is present in page source.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 16]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Add content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Media Gallery' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create Media Gallery dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'a178f9c77170428' in the 'Title' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Media Items Select' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the select file frame.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'View Library' button.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'HanSolo' in the 'File name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the file search 'spinner' image to be present.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the file search 'spinner' image to not be present, indicating image search is complete.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Apply' button.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the file search 'spinner' image to be present.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the file search 'spinner' image to not be present, indicating image search is complete.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the media thumbnail image 'HanSolo' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the the img is loaded and visible.]]>
+    </line>
+    <line>
+      <![CDATA[Click media thumbnail image number 1]]>
+    </line>
+    <line>
+      <![CDATA[Click on the 'Submit' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create Media Gallery dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that img source of the Media Item contains 'HanSolo'.]]>
+    </line>
+    <line>
+      <![CDATA[Assert the the img is loaded and visible.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Media Gallery a178f9c77170428 has been created.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Note the node number for the content item.]]>
+    </line>
+    <line>
+      <![CDATA[Get the file id of image number 1.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 17]]>
+    </line>
+    <line>
+      <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com/node/10/8'.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 18 through 20]]>
+    </line>
+    <line>
+      <![CDATA[STEP 23]]>
+    </line>
+    <line>
+      <![CDATA[STEP 24]]>
+    </line>
+    <line>
+      <![CDATA[Verify 'typeof(mps.writeFooter)' is present in page source.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 25]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Structure' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'MPS Blocks' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Add' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Add a new MPS block dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '7269dbfd1b68475' in the 'Unique Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '68ee7070efea488' in the 'Block Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of '7269dbfd1b68475 has been created.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 26]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Structure' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Blocks' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Select the block name '68ee7070efea488' from the 'Header' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save Blocks' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The block settings have been updated.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 27]]>
+    </line>
+    <line>
+      <![CDATA[Verify 'mps.getAd('68ee7070efea488')' is present in page source.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 28 - N/A]]>
+    </line>
+    <line>
+      <![CDATA[CLEANUP]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Structure' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Blocks' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Select the block name '68ee7070efea488' from the '- None -' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save Blocks' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="58017" started-at="2014-06-03T11:00:44Z" finished-at="2014-06-03T11:01:42Z">
+  <suite name="Default suite" duration-ms="102272" started-at="2014-06-04T20:15:24Z" finished-at="2014-06-04T20:17:06Z">
     <groups>
       <group name="full">
-        <method signature="Cloning.Cloning_TC1054()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CloneANode.Cloning@7da5c614]" name="Cloning_TC1054" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CloneANode.Cloning"/>
+        <method signature="ImplementMPS.ImplementMPS_TC2901()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@4207c21e]" name="ImplementMPS_TC2901" class="com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS"/>
       </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="58017" started-at="2014-06-03T11:00:44Z" finished-at="2014-06-03T11:01:42Z">
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CloneANode.Cloning">
-        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CloneANode.Cloning@7da5c614]" name="startGridAndHub" is-config="true" duration-ms="12128" started-at="2014-06-03T07:00:32Z" finished-at="2014-06-03T07:00:44Z">
+    <test name="Default test" duration-ms="102272" started-at="2014-06-04T20:15:24Z" finished-at="2014-06-04T20:17:06Z">
+      <class name="com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS">
+        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@4207c21e]" name="startGridAndHub" is-config="true" duration-ms="11845" started-at="2014-06-04T16:15:12Z" finished-at="2014-06-04T16:15:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startGridAndHub -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CloneANode.Cloning@7da5c614]" name="startSelenium" is-config="true" duration-ms="2659" started-at="2014-06-03T07:00:44Z" finished-at="2014-06-03T07:00:47Z">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@4207c21e]" name="startSelenium" is-config="true" duration-ms="2427" started-at="2014-06-04T16:15:24Z" finished-at="2014-06-04T16:15:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="Cloning_TC1054()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CloneANode.Cloning@7da5c614]" name="Cloning_TC1054" duration-ms="54774" started-at="2014-06-03T07:00:47Z" finished-at="2014-06-03T07:01:42Z">
+        <test-method status="PASS" signature="ImplementMPS_TC2901()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@4207c21e]" name="ImplementMPS_TC2901" duration-ms="99265" started-at="2014-06-04T16:15:26Z" finished-at="2014-06-04T16:17:05Z">
           <reporter-output>
+            <line>
+              <![CDATA[STEP 1]]>
+            </line>
             <line>
               <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]>
             </line>
@@ -198,43 +408,70 @@
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
+              <![CDATA[STEP 2]]>
+            </line>
+            <line>
               <![CDATA[Click the 'Modules' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to frame titled 'Modules'.]]>
+              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
             </line>
             <line>
-              <![CDATA[Enter 'Node clone' in the 'Filter Name' text box.]]>
+              <![CDATA[Enter 'Pub Ads' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Wait for the module titled 'Node clone' to appear in the list.]]>
+              <![CDATA[Wait for the module titled 'Pub Ads' to appear in the list.]]>
             </line>
             <line>
-              <![CDATA[Verify the 'Node clone' check box is checked.]]>
+              <![CDATA[Verify the 'Pub Ads' check box is checked.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'MPS' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the module titled 'MPS' to appear in the list.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'MPS' check box is checked.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'DART' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the module titled 'DART' to appear in the list.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Doubleclick for Publishers' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the module titled 'Doubleclick for Publishers' to appear in the list.]]>
             </line>
             <line>
               <![CDATA[Click the 'Close Overlay X'.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Configuration' menu link.]]>
+              <![CDATA[STEP 3]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Content authoring' menu link.]]>
+              <![CDATA[Mouse over the 'Reports' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Node clone module' menu link.]]>
+              <![CDATA[Click the 'Status report' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Node clone module dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'Status report dialog'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
+              <![CDATA[Verify the text 'Ad Tag Style' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+              <![CDATA[Verify the text 'MPS' is present on the page.]]>
             </line>
             <line>
               <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 4]]>
             </line>
             <line>
               <![CDATA[Mouse over the 'Content' menu link.]]>
@@ -243,13 +480,16 @@
               <![CDATA[Mouse over the 'Add content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Post' menu link.]]>
+              <![CDATA[Click the 'Movie' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
             </line>
             <line>
-              <![CDATA[Enter 'ccb75b3a857d42d' in the 'Title' text box.]]>
+              <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'aab5100993fe442' in the 'Title' text box.]]>
             </line>
             <line>
               <![CDATA[Switch to the Synopsis frame.]]>
@@ -258,7 +498,7 @@
               <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
             </line>
             <line>
               <![CDATA[Click the 'Cover' select button.]]>
@@ -294,80 +534,254 @@
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
             </line>
             <line>
-              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+              <![CDATA[Click the 'Additional Information' link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Publishing Options' link.]]>
+              <![CDATA[Select the 'Syndicated' from the 'Movie Type' drop down list.]]>
             </line>
             <line>
-              <![CDATA[Select 'Published' from the 'Moderation State' drop down list.]]>
+              <![CDATA[Select the 'G' from the 'Rating' drop down list.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Post ccb75b3a857d42d has been created.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Clone this post' link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Clone of ccb75b3a857d42d dialog'.]]>
+              <![CDATA[Select the 'Action' from the 'Primary Genre' drop down list.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'Post Clone of ccb75b3a857d42d has been created.' is present.]]>
+              <![CDATA[Verify success message of 'Movie aab5100993fe442 has been created.' is present.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Revisions' link in the work bench.]]>
+              <![CDATA[Note the node number for the content item.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Revisions dialog'.]]>
+              <![CDATA[STEP 5]]>
             </line>
             <line>
-              <![CDATA[Select 'Published' from the 'Change State' drop down list.]]>
+              <![CDATA[Verify 'var mpscall = {"site":"nbc-tonightshow","title":"aab5100993fe442","path":"\/node\/9' is present in page source.]]>
             </line>
             <line>
-              <![CDATA[Enter 'Change state - Draft to Published' in the 'Message for state change' text area.]]>
+              <![CDATA[Verify 'var mpsopts = {'host':'mps.nbcuni.com'}' is present in page source.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Update State' button.]]>
+              <![CDATA[STEP 6 through STEP 14]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'Clone of ccb75b3a857d42d transitioned to the published state.' is present.]]>
+              <![CDATA[Verify '{"site":"nbc-tonightshow","title":"aab5100993fe442","path":"\/node\/9' is present in page source.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the work bench info container.]]>
+              <![CDATA[Verify '"qs":"","cat":"content|aab5100993fe442","content_id":"node' is present in page source.]]>
             </line>
             <line>
-              <![CDATA[Verify the contextual link configure gear and down arrow link are visible.]]>
+              <![CDATA[Verify '"is_content":1,"type":"movie","cag":{"genre":"Action","movie-rating":"G","movie-types":"Syndicated"},"envelope":"","pubdate":' is present in page source.]]>
             </line>
             <line>
-              <![CDATA[Verify 'Configure Block' link is present.]]>
+              <![CDATA[STEP 15]]>
+            </line>
+            <line>
+              <![CDATA[Verify 'a3VtdWQ9MQ==' is present in page source.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 16]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Add content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Media Gallery' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Media Gallery dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'a178f9c77170428' in the 'Title' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Media Items Select' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the select file frame.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'View Library' button.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'HanSolo' in the 'File name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the file search 'spinner' image to be present.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the file search 'spinner' image to not be present, indicating image search is complete.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Apply' button.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the file search 'spinner' image to be present.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the file search 'spinner' image to not be present, indicating image search is complete.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the media thumbnail image 'HanSolo' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Click media thumbnail image number 1]]>
+            </line>
+            <line>
+              <![CDATA[Click on the 'Submit' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Media Gallery dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that img source of the Media Item contains 'HanSolo'.]]>
+            </line>
+            <line>
+              <![CDATA[Assert the the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Media Gallery a178f9c77170428 has been created.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Note the node number for the content item.]]>
+            </line>
+            <line>
+              <![CDATA[Get the file id of image number 1.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 17]]>
+            </line>
+            <line>
+              <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com/node/10/8'.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 18 through 20]]>
+            </line>
+            <line>
+              <![CDATA[STEP 23]]>
+            </line>
+            <line>
+              <![CDATA[STEP 24]]>
+            </line>
+            <line>
+              <![CDATA[Verify 'typeof(mps.writeFooter)' is present in page source.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 25]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Structure' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'MPS Blocks' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Add' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Add a new MPS block dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '7269dbfd1b68475' in the 'Unique Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '68ee7070efea488' in the 'Block Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of '7269dbfd1b68475 has been created.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 26]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Structure' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Blocks' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Select the block name '68ee7070efea488' from the 'Header' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save Blocks' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The block settings have been updated.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 27]]>
+            </line>
+            <line>
+              <![CDATA[Verify 'mps.getAd('68ee7070efea488')' is present in page source.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 28 - N/A]]>
+            </line>
+            <line>
+              <![CDATA[CLEANUP]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Structure' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Blocks' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Select the block name '68ee7070efea488' from the '- None -' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save Blocks' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- Cloning_TC1054 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CloneANode.Cloning@7da5c614]" name="stopSelenium" is-config="true" duration-ms="570" started-at="2014-06-03T07:01:42Z" finished-at="2014-06-03T07:01:42Z">
+        </test-method> <!-- ImplementMPS_TC2901 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@4207c21e]" name="stopSelenium" is-config="true" duration-ms="569" started-at="2014-06-04T16:17:05Z" finished-at="2014-06-04T16:17:06Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Cloning_TC1054 status=SUCCESS method=Cloning.Cloning_TC1054()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CloneANode.Cloning@7da5c614] output=Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]]>
+                <![CDATA[[TestResult name=ImplementMPS_TC2901 status=SUCCESS method=ImplementMPS.ImplementMPS_TC2901()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@4207c21e] output=STEP 1]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CloneANode.Cloning@7da5c614]" name="stopGridAndHub" is-config="true" duration-ms="368" started-at="2014-06-03T07:01:42Z" finished-at="2014-06-03T07:01:43Z">
+        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@4207c21e]" name="stopGridAndHub" is-config="true" duration-ms="390" started-at="2014-06-04T16:17:06Z" finished-at="2014-06-04T16:17:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopGridAndHub -->
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CloneANode.Cloning -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

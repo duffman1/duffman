@@ -52,7 +52,7 @@ public class MPSConfigurationPage extends ParentTest {
             
             Reporter.log("STEP 6");
             applib.openSitePage("/?x=y");
-            contentParent.VerifySourceInPage(Arrays.asList("Site-Install\",\"path\":\"\",\"qs\":\"eD15\""));
+            contentParent.VerifySourceInPage(Arrays.asList("Site-Install\",\"path\":\"\\/\",\"qs\":\"eD15\""));
             
             Reporter.log("STEP 7");
             taxonomy.NavigateSite("Configuration>>Web services>>MPS Configuration");
@@ -61,6 +61,6 @@ public class MPSConfigurationPage extends ParentTest {
             mpsConfiguration.ClickSaveConfigurationBtn();
             contentParent.VerifyMessageStatus("The configuration options have been saved.");
             overlay.ClickCloseOverlayLnk();
-            contentParent.VerifySourceNotInPage("Site-Install\",\"path\":\"\",\"qs\":\"eD15\"");
+            contentParent.VerifySourceNotInPage("Site-Install\",\"path\":\"\\/\",\"qs\":\"eD15\"");
     }
 }

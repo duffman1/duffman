@@ -77,24 +77,17 @@ public class ImplementMPS extends ParentTest {
             String movieNodeNumber = workBench.GetContentNodeNumber();
             
             Reporter.log("STEP 5");
-            String siteType;
-            if (config.getConfigValue("AppURL").contains("update")) {
-            	siteType = "update";
-            }
-            else {
-            	siteType = "install";
-            }
-            contentParent.VerifySourceInPage(Arrays.asList("var mpscall = {'site':'" + siteType + "', 'path':'node/" + movieNodeNumber + "'",
-            		"var mpsopts = {'host':'mps.io'}"));
+            contentParent.VerifySourceInPage(Arrays.asList("var mpscall = {\"site\":\"nbc-tonightshow\",\"title\":\"" + movieTitle + "\",\"path\":\"\\/node\\/" + movieNodeNumber,
+            		"var mpsopts = {'host':'mps.nbcuni.com'}"));
             
-            Reporter.log("STEP 6 and STEP 7");
-            contentParent.VerifySourceInPage(Arrays.asList("{\"site\":\"" + siteType + "\",\"title\":\"" + movieTitle + "\",\"path\":\"node\\/" + movieNodeNumber + "","\"qs\":\"\",\"cat\":\"content|" + movieTitle + "\",\"content_id\":\"node","\"is_content\":1,\"type\":\"movie\",\"cag\":{\"genre\":\"Action\",\"movie-rating\":\"G\",\"movie-types\":\"Syndicated\"},\"envelope\":\"\",\"pubdate\":"));
+            Reporter.log("STEP 6 through STEP 14");
+            contentParent.VerifySourceInPage(Arrays.asList("{\"site\":\"nbc-tonightshow\",\"title\":\"" + movieTitle + "\",\"path\":\"\\/node\\/" + movieNodeNumber + "","\"qs\":\"\",\"cat\":\"content|" + movieTitle + "\",\"content_id\":\"node","\"is_content\":1,\"type\":\"movie\",\"cag\":{\"genre\":\"Action\",\"movie-rating\":\"G\",\"movie-types\":\"Syndicated\"},\"envelope\":\"\",\"pubdate\":"));
             
-            Reporter.log("STEP 8");
+            Reporter.log("STEP 15");
             webDriver.navigate().to(webDriver.getCurrentUrl() + "?kumud=1");
             contentParent.VerifySourceInPage(Arrays.asList("a3VtdWQ9MQ=="));
             
-            Reporter.log("STEP 9");
+            Reporter.log("STEP 16");
             taxonomy.NavigateSite("Content>>Add content>>Media Gallery");
         	overlay.SwitchToActiveFrame();
         	String mediaGalleryTitle = random.GetCharacterString(15);
@@ -119,19 +112,21 @@ public class ImplementMPS extends ParentTest {
         	String mediaGalleryNodeNumber = workBench.GetContentNodeNumber();
             String imageFileNumber = workBench.GetFileImageId("1");
             
-            Reporter.log("STEP 10");
+            Reporter.log("STEP 17");
             applib.openSitePage("/node/" + mediaGalleryNodeNumber + "/" + imageFileNumber);
             
-            Reporter.log("STEP 11");
-            contentParent.VerifySourceInPage(Arrays.asList("\"site\":\"" + siteType + "\",\"title\":\"" + mediaGalleryTitle + "\",\"path\":\"node\\/" + mediaGalleryNodeNumber + "\\/" + imageFileNumber + "\",\"qs\":\"\",\"cat\":\"node|" + mediaGalleryNodeNumber + "|" + imageFileNumber + "\",\"content_id\":\"node" + mediaGalleryNodeNumber + "\",\"is_content\":1,\"type\":\"media_gallery\",\"cag\":\"\",\"envelope\":\"\",\"pubdate\":"));
+            Reporter.log("STEP 18 through 20");
+            //contentParent.VerifySourceInPage(Arrays.asList("\"site\":\"nbc-tonightshow\",\"title\":\"" + mediaGalleryTitle + "\",\"path\":\"node\\/" + mediaGalleryNodeNumber + "\\/" + imageFileNumber + "\",\"qs\":\"\",\"cat\":\"node|" + mediaGalleryNodeNumber + "|" + imageFileNumber + "\",\"content_id\":\"node" + mediaGalleryNodeNumber + "\",\"is_content\":1,\"type\":\"media_gallery\",\"cag\":\"\",\"envelope\":\"\",\"pubdate\":"));
             
-            Reporter.log("STEP 12");
-            contentParent.VerifySourceInPage(Arrays.asList("id=\"mps-ext-load\" src=\"//'+mpsopts.host+'/fetch/ext/load-'+mpscall.site+'.js"));
+            //TODO - a few extra steps as time allows
             
-            Reporter.log("STEP 13");
+            Reporter.log("STEP 23");
+            //contentParent.VerifySourceInPage(Arrays.asList("id=\"mps-ext-load\" src=\"//'+mpsopts.host+'/fetch/ext/load-'+mpscall.site+'.js"));
+            
+            Reporter.log("STEP 24");
             contentParent.VerifySourceInPage(Arrays.asList("typeof(mps.writeFooter)"));
             
-            Reporter.log("STEP 14");
+            Reporter.log("STEP 25");
             taxonomy.NavigateSite("Structure>>MPS Blocks>>Add");
             overlay.SwitchToActiveFrame();
             MPSBlocks mpsBlocks = new MPSBlocks(webDriver);
@@ -143,7 +138,7 @@ public class ImplementMPS extends ParentTest {
             contentParent.VerifyMessageStatus(uniqueName + " has been created.");
             overlay.ClickCloseOverlayLnk();
             
-            Reporter.log("STEP 15");
+            Reporter.log("STEP 26");
             taxonomy.NavigateSite("Structure>>Blocks");
             overlay.SwitchToActiveFrame();
             Blocks blocks = new Blocks(webDriver);
@@ -152,10 +147,10 @@ public class ImplementMPS extends ParentTest {
             contentParent.VerifyMessageStatus("The block settings have been updated.");
             overlay.ClickCloseOverlayLnk();
             
-            Reporter.log("STEP 16");
+            Reporter.log("STEP 27");
             contentParent.VerifySourceInPage(Arrays.asList("mps.getAd('" + blockName + "')"));
             
-            Reporter.log("STEP 17 - N/A");
+            Reporter.log("STEP 28 - N/A");
             
             Reporter.log("CLEANUP");
             taxonomy.NavigateSite("Structure>>Blocks");
