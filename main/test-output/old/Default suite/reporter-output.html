@@ -1,52 +1,56 @@
-<h2>Reporter output</h2><table><tr><td>STEP 1</td></tr>
-<tr><td>Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.</td></tr>
+<h2>Reporter output</h2><table><tr><td>Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.</td></tr>
 <tr><td>Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.</td></tr>
 <tr><td>Enter 'pa55word' in the 'Password' text box.</td></tr>
 <tr><td>Click the 'Login' button.</td></tr>
-<tr><td>SETUP</td></tr>
 <tr><td>Click the 'Modules' menu link.</td></tr>
 <tr><td>Switch to frame titled 'Modules'.</td></tr>
-<tr><td>Enter 'MPS' in the 'Filter Name' text box.</td></tr>
-<tr><td>Wait for the module titled 'MPS' to appear in the list.</td></tr>
-<tr><td>Verify the 'MPS' check box is checked.</td></tr>
+<tr><td>Enter 'Node clone' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for the module titled 'Node clone' to appear in the list.</td></tr>
+<tr><td>Verify the 'Node clone' check box is checked.</td></tr>
 <tr><td>Click the 'Close Overlay X'.</td></tr>
-<tr><td>STEP 2 - 3</td></tr>
 <tr><td>Mouse over the 'Configuration' menu link.</td></tr>
-<tr><td>Mouse over the 'Web services' menu link.</td></tr>
-<tr><td>Click the 'MPS Configuration' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'MPS Configuration dialog'.</td></tr>
-<tr><td>STEP 4</td></tr>
-<tr><td>Enter 'mps.nbcuni.com' in the 'MPS Host' text box.</td></tr>
-<tr><td>Click the 'Document Write' radio button.</td></tr>
-<tr><td>Enter 'nbc-tonightshow' in the 'Site Instance Override' text box.</td></tr>
-<tr><td>Check the 'Send Query Strings' check box.</td></tr>
+<tr><td>Mouse over the 'Content authoring' menu link.</td></tr>
+<tr><td>Click the 'Node clone module' menu link.</td></tr>
+<tr><td>Switch to the active frame titled 'Node clone module dialog'.</td></tr>
 <tr><td>Click the 'Save configuration' button.</td></tr>
 <tr><td>Verify success message of 'The configuration options have been saved.' is present.</td></tr>
 <tr><td>Click the 'Close Overlay X'.</td></tr>
-<tr><td>Verify 'var mpscall = {"site":"nbc-tonightshow",' is present in page source.</td></tr>
-<tr><td>Verify 'var mpsopts = {'host':'mps.nbcuni.com'}' is present in page source.</td></tr>
-<tr><td>STEP 5</td></tr>
-<tr><td>Mouse over the 'Configuration' menu link.</td></tr>
-<tr><td>Mouse over the 'Web services' menu link.</td></tr>
-<tr><td>Click the 'MPS Configuration' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'MPS Configuration dialog'.</td></tr>
-<tr><td>Click the 'DOM Injection' radio button.</td></tr>
-<tr><td>Click the 'Save configuration' button.</td></tr>
-<tr><td>Verify success message of 'The configuration options have been saved.' is present.</td></tr>
-<tr><td>Click the 'Close Overlay X'.</td></tr>
-<tr><td>Verify 'mpsload.src='//'+mpsopts.host+'/fetch/ext/load-'+mpscall.site+'.js?nowrite=jq'; mpsload.id="mps-load"' is present in page source.</td></tr>
-<tr><td>Verify 'mpsload.async=false; head.insertBefore(mpsload,head.firstChild)' is present in page source.</td></tr>
-<tr><td>STEP 6</td></tr>
-<tr><td>Open url 'http://install.qa5.nbcupublisher7.publisher7.com/?x=y'.</td></tr>
-<tr><td>Verify 'Site-Install","path":"","qs":"eD15"' is present in page source.</td></tr>
-<tr><td>STEP 7</td></tr>
-<tr><td>Mouse over the 'Configuration' menu link.</td></tr>
-<tr><td>Mouse over the 'Web services' menu link.</td></tr>
-<tr><td>Click the 'MPS Configuration' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'MPS Configuration dialog'.</td></tr>
-<tr><td>Un-check the 'Send Query Strings' check box.</td></tr>
-<tr><td>Click the 'Save configuration' button.</td></tr>
-<tr><td>Verify success message of 'The configuration options have been saved.' is present.</td></tr>
-<tr><td>Click the 'Close Overlay X'.</td></tr>
-<tr><td>Verify 'Site-Install","path":"","qs":"eD15"' is not present in page source.</td></tr>
+<tr><td>Mouse over the 'Content' menu link.</td></tr>
+<tr><td>Mouse over the 'Add content' menu link.</td></tr>
+<tr><td>Click the 'Post' menu link.</td></tr>
+<tr><td>Switch to the active frame titled 'Create Post dialog'.</td></tr>
+<tr><td>Enter 'ccb75b3a857d42d' in the 'Title' text box.</td></tr>
+<tr><td>Switch to the Synopsis frame.</td></tr>
+<tr><td>Enter a randomized text string into the 'Body' text area.</td></tr>
+<tr><td>Switch to the active frame titled 'Create Post dialog'.</td></tr>
+<tr><td>Click the 'Cover' select button.</td></tr>
+<tr><td>Switch to the select file frame.</td></tr>
+<tr><td>Enter the file path for file upload.</td></tr>
+<tr><td>Click the 'Upload' button.</td></tr>
+<tr><td>Wait for the file link to be visible after upload.</td></tr>
+<tr><td>Click the 'Next' button.</td></tr>
+<tr><td>Click the 'Public Local Files' radio button.</td></tr>
+<tr><td>Click the 'Next' button.</td></tr>
+<tr><td>Verify the file image 'HanSolo' is present.</td></tr>
+<tr><td>Verify the img is loaded and visible.</td></tr>
+<tr><td>Click the 'Save' button.</td></tr>
+<tr><td>Switch to the active frame titled 'Create Post dialog'.</td></tr>
+<tr><td>Scroll the 'Publishing Options' link into view.</td></tr>
+<tr><td>Click the 'Publishing Options' link.</td></tr>
+<tr><td>Select 'Published' from the 'Moderation State' drop down list.</td></tr>
+<tr><td>Click the 'Save' button.</td></tr>
+<tr><td>Verify success message of 'Post ccb75b3a857d42d has been created.' is present.</td></tr>
+<tr><td>Click the 'Clone this post' link.</td></tr>
+<tr><td>Switch to the active frame titled 'Clone of ccb75b3a857d42d dialog'.</td></tr>
+<tr><td>Click the 'Save' button.</td></tr>
+<tr><td>Verify success message of 'Post Clone of ccb75b3a857d42d has been created.' is present.</td></tr>
+<tr><td>Click the 'Revisions' link in the work bench.</td></tr>
+<tr><td>Switch to the active frame titled 'Revisions dialog'.</td></tr>
+<tr><td>Select 'Published' from the 'Change State' drop down list.</td></tr>
+<tr><td>Enter 'Change state - Draft to Published' in the 'Message for state change' text area.</td></tr>
+<tr><td>Click the 'Update State' button.</td></tr>
+<tr><td>Verify success message of 'Clone of ccb75b3a857d42d transitioned to the published state.' is present.</td></tr>
+<tr><td>Mouse over the work bench info container.</td></tr>
+<tr><td>Verify the contextual link configure gear and down arrow link are visible.</td></tr>
+<tr><td>Verify 'Configure Block' link is present.</td></tr>
 </table>

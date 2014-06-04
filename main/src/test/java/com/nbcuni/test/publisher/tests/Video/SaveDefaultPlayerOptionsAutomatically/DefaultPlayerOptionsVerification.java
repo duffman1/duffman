@@ -71,7 +71,7 @@ public class DefaultPlayerOptionsVerification extends ParentTest{
         		ManageFileDisplay manageFileDisplay = new ManageFileDisplay(webDriver, applib);
         		manageFileDisplay.ClickPubMPXVideoCbx();
         		manageFileDisplay.ClickPubMPXVideoLnk();
-        		manageFileDisplay.SelectMPXVideoPlayer("USA_Demo_Player");
+        		manageFileDisplay.SelectMPXVideoPlayer("AutomationPlayer2");
         		manageFileDisplay.ClickSaveConfigurationBtn();
         		contentParent.VerifyMessageStatus("Your settings have been saved.");
         		overlay.ClickCloseOverlayLnk();

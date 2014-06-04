@@ -40,8 +40,8 @@ public class EnhanceMPXLibraryPublicID extends ParentTest{
         	searchFor.VerifyMPXSearchHeaderColumnOrder();
         	
         	//Step 3 - NA as I will use an existing known mpx player ID for DB TV account
-        	String playerName = "Auditude Demo player";
-        	String playerID = "C4Urwvl8rU61";
+        	String playerName = "AutomationPlayer1";
+        	String playerID = "VeXC0F2L9wg2";
         	
         	if (configuredAccounts.get(0).equals("DB TV")) {
         	

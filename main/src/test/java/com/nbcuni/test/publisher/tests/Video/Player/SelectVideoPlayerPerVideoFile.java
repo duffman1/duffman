@@ -82,14 +82,14 @@ public class SelectVideoPlayerPerVideoFile extends ParentTest{
         		searchFor.EnterTitle("Automation1");
         		searchFor.ClickApplyBtn();
         		content.ClickEditMenuBtn("Automation1");
-        		editMPXVideo.SelectPubMPXVideoPlayer("Auditude Demo player");
+        		editMPXVideo.SelectPubMPXVideoPlayer("VeXC0F2L9wg2");
         		contentParent.ClickSaveBtn();
         		overlay.switchToDefaultContent();
         		taxonomy.NavigateSite("Content>>Files>>mpxMedia");
         		searchFor.EnterTitle("Automation1");
         		searchFor.ClickApplyBtn();
         		content.ClickEditMenuBtn("Automation1");
-        		editMPXVideo.VerifyPubMPXVideoPlayerSelectedOption("Auditude Demo player");
+        		editMPXVideo.VerifyPubMPXVideoPlayerSelectedOption("VeXC0F2L9wg2");
         	
         	}
         }

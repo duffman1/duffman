@@ -70,13 +70,13 @@ public class ConfigurationMultipleMPXAccounts extends ParentTest{
             	overlay.SwitchToActiveFrame();
                 mpxMedia.ExpandMPXMedia();
                 if (numberSelectedAccounts.equals(1)) {
-                	mpxMedia.SelectMPXPlayerForAccount2("Auditude Demo player");
+                	mpxMedia.SelectMPXPlayerForAccount2("AutomationPlayer1");
             	}
             	else if (numberSelectedAccounts.equals(2)) {
-            		mpxMedia.SelectMPXPlayerForAccount3("Auditude Demo player");
+            		mpxMedia.SelectMPXPlayerForAccount3("AutomationPlayer1");
             	}
             	else {
-            		mpxMedia.SelectMPXPlayerForAccount4("Auditude Demo player");
+            		mpxMedia.SelectMPXPlayerForAccount4("AutomationPlayer1");
             	}
                 mpxMedia.ClickSyncMPXMediaNowLnk();
                 contentParent.VerifyMessageStatus("Processed video import/update manually for all accounts.");
@@ -110,7 +110,7 @@ public class ConfigurationMultipleMPXAccounts extends ParentTest{
         	taxonomy.NavigateSite("Content>>Files>>mpxMedia");
             overlay.SwitchToActiveFrame();
             mpxMedia.ExpandMPXMedia();
-            mpxMedia.SelectMPXPlayerForAccount1("Auditude Demo player");
+            mpxMedia.SelectMPXPlayerForAccount1("AutomationPlayer1");
             mpxMedia.ClickSyncMPXMediaNowLnk();
             contentParent.VerifyMessageStatus("Processed video import/update manually for all accounts.");
         	
@@ -144,7 +144,7 @@ public class ConfigurationMultipleMPXAccounts extends ParentTest{
         	contentParent.VerifyMessageStatus("The configuration options have been saved.");
         	taxonomy.NavigateSite("Content>>Files>>mpxMedia");
             mpxMedia.ExpandMPXMedia();
-            mpxMedia.SelectMPXPlayerForAccount2("Auditude Demo player");
+            mpxMedia.SelectMPXPlayerForAccount2("AutomationPlayer1");
             mpxMedia.ClickSyncMPXMediaNowLnk();
             contentParent.VerifyMessageStatus("Processed video import/update manually for all accounts.");
             cron.ClickRunCronToCompleteImportLnk();

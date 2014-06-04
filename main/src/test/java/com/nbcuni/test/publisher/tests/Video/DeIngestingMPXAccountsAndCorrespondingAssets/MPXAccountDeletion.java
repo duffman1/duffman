@@ -54,7 +54,7 @@ public class MPXAccountDeletion extends ParentTest {
         	taxonomy.NavigateSite("Content>>Files>>mpxMedia");
         	overlay.SwitchToActiveFrame();
         	mpxMedia.ExpandMPXMedia();
-            mpxMedia.SelectMPXPlayerForAccount1("Auditude Demo player");
+            mpxMedia.SelectMPXPlayerForAccount1("AutomationPlayer1");
             mpxMedia.ClickSyncMPXMediaNowLnk();
             overlay.ClickCloseOverlayLnk();
             cron.RunCron(true);
@@ -112,7 +112,7 @@ public class MPXAccountDeletion extends ParentTest {
     	//Step 11
     	taxonomy.NavigateSite("Content>>Files>>mpxMedia");
     	mpxMedia.ExpandMPXMedia();
-        mpxMedia.SelectMPXPlayerForAccount1("Auditude Demo player");
+        mpxMedia.SelectMPXPlayerForAccount1("AutomationPlayer1");
         mpxMedia.ClickSyncMPXMediaNowLnk();
         contentParent.VerifyMessageStatus("Processed video import/update manually for all accounts.");
     	cron.RunCron(false);
