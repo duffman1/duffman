@@ -62,5 +62,13 @@ public class MPSConfigurationPage extends ParentTest {
             contentParent.VerifyMessageStatus("The configuration options have been saved.");
             overlay.ClickCloseOverlayLnk();
             contentParent.VerifySourceNotInPage("Site-Install\",\"path\":\"\\/\",\"qs\":\"eD15\"");
+            
+            Reporter.log("CLEANUP");
+            taxonomy.NavigateSite("Configuration>>Web services>>MPS Configuration");
+            overlay.SwitchToActiveFrame();
+            mpsConfiguration.CheckSendQueryStringsCbx();
+            mpsConfiguration.ClickSaveConfigurationBtn();
+            contentParent.VerifyMessageStatus("The configuration options have been saved.");
+            
     }
 }
