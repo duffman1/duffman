@@ -166,6 +166,14 @@ public class AddFile {
     	sikuli.click(path + "AddFile/TestPictureExifData_Btn.png");
     }
     
+    public void ClickTestPictureIPTCBtn() throws Exception {
+    	
+    	Reporter.log("Click the test picture link.");
+    	String path = this.getImagePath();
+    	mpxAssets.WaitForImgPresent(path + "AddFile/TestPictureIPTC_Btn.png");
+    	sikuli.click(path + "AddFile/TestPictureIPTC_Btn.png");
+    }
+    
     public void ClickTestPictureDefaultBtn() throws Exception {
     	
     	Reporter.log("Click the test picture link.");

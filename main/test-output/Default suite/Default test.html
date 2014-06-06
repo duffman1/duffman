@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Jun 04 16:15:24 EDT 2014</td>
+<td>Started on:</td><td>Fri Jun 06 11:28:56 EDT 2014</td>
 </tr>
-<tr><td>Total time:</td><td>102 seconds (102272 ms)</td>
+<tr><td>Total time:</td><td>144 seconds (144767 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,47 +75,82 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS.ImplementMPS_TC2901()'><b>ImplementMPS_TC2901</b><br>Test class: com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS<br/>
-<a href="#Output-1984462589" onClick='toggleBox("Output-1984462589", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery.CreateMediaGallery_TC1042()'><b>CreateMediaGallery_TC1042</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery<br/>
+<a href="#Output-1770346016" onClick='toggleBox("Output-1770346016", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1984462589" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1984462589">
+<a href="#Output-1770346016" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1770346016">
 STEP 1<br/>
-Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.<br/>
+Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.<br/>
 Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
 Enter 'pa55word' in the 'Password' text box.<br/>
 Click the 'Login' button.<br/>
 STEP 2<br/>
-Click the 'Modules' menu link.<br/>
-Switch to the active frame titled 'Modules dialog'.<br/>
-Enter 'Pub Ads' in the 'Filter Name' text box.<br/>
-Wait for the module titled 'Pub Ads' to appear in the list.<br/>
-Verify the 'Pub Ads' check box is checked.<br/>
-Enter 'MPS' in the 'Filter Name' text box.<br/>
-Wait for the module titled 'MPS' to appear in the list.<br/>
-Verify the 'MPS' check box is checked.<br/>
-Enter 'DART' in the 'Filter Name' text box.<br/>
-Wait for the module titled 'DART' to appear in the list.<br/>
-Enter 'Doubleclick for Publishers' in the 'Filter Name' text box.<br/>
-Wait for the module titled 'Doubleclick for Publishers' to appear in the list.<br/>
-Click the 'Close Overlay X'.<br/>
-STEP 3<br/>
-Mouse over the 'Reports' menu link.<br/>
-Click the 'Status report' menu link.<br/>
-Switch to the active frame titled 'Status report dialog'.<br/>
-Verify the text 'Ad Tag Style' is present on the page.<br/>
-Verify the text 'MPS' is present on the page.<br/>
-Click the 'Close Overlay X'.<br/>
-STEP 4<br/>
 Mouse over the 'Content' menu link.<br/>
 Mouse over the 'Add content' menu link.<br/>
-Click the 'Movie' menu link.<br/>
-Switch to the active frame titled 'Create Movie dialog'.<br/>
-Scroll to and click the 'Basic Information' tab.<br/>
-Enter 'aab5100993fe442' in the 'Title' text box.<br/>
+Click the 'Media Gallery' menu link.<br/>
+Switch to the active frame titled 'Create Media Gallery dialog'.<br/>
+STEP 3<br/>
+Enter 'a58de1c52e0c435' in the 'Title' text box.<br/>
 Switch to the Synopsis frame.<br/>
 Enter a randomized text string into the 'Body' text area.<br/>
-Switch to the active frame titled 'Create Movie dialog'.<br/>
+Switch to the active frame titled 'Create Media Gallery dialog'.<br/>
+Enter 'short description' in the 'Short Description' text area.<br/>
+Click the 'Media Items Select' button.<br/>
+Switch to the select file frame.<br/>
+Click the 'Add files' link.<br/>
+Click the 'All Files' icon.<br/>
+Click the local 'Pictures' icon.<br/>
+Click the test picture link.<br/>
+Click the 'Open' button.<br/>
+Click the 'Start upload' link.<br/>
+Wait for file upload to reach 100%<br/>
+Click the 'Next' button.<br/>
+Switch to the active frame titled 'Create Media Gallery dialog'.<br/>
+Click the 'Add' button.<br/>
+Switch to the select file frame.<br/>
+Click the 'Add files' link.<br/>
+Click the 'All Files' icon.<br/>
+Click the local 'Pictures' icon.<br/>
+Click the test picture link.<br/>
+Click the 'Open' button.<br/>
+Click the 'Start upload' link.<br/>
+Wait for file upload to reach 100%<br/>
+Click the 'Next' button.<br/>
+Switch to the active frame titled 'Create Media Gallery dialog'.<br/>
+Assert that img source of the Media Item contains 'IPTCDefault'.<br/>
+Assert the the img is loaded and visible.<br/>
+Assert that img source of the Media Item contains 'nbclogosmall'.<br/>
+Assert the the img is loaded and visible.<br/>
+STEP 4 and 5<br/>
+Click the 'Edit All' button.<br/>
+STEP 6<br/>
+Enter '57e70fdae2664be' in the 'Keywords' text box with index '1'.<br/>
+Click the 'Save' button with index '2'.<br/>
+Switch to the active frame titled 'Create Media Gallery dialog'.<br/>
+STEP 7<br/>
+Click the 'Edit All' button.<br/>
+Assert that the Keywords Text box with index '1' value matches '57e70fdae2664be'.<br/>
+Click the 'Save' button with index '2'.<br/>
+Switch to the active frame titled 'Create Media Gallery dialog'.<br/>
+STEP 8<br/>
+Click the 'Add' button.<br/>
+Switch to the select file frame.<br/>
+Click the 'PUBLISHER 7 MPX VIDEO' button.<br/>
+Enter 'Automation' in the 'Title' text box.<br/>
+Click the 'Apply' button.<br/>
+Wait for the file search 'spinner' image to be present.<br/>
+Wait for the file search 'spinner' image to not be present, indicating image search is complete.<br/>
+Click mpx media thumbnail image number 1<br/>
+Click on the 'Submit' button.<br/>
+Switch to the active frame titled 'Create Media Gallery dialog'.<br/>
+STEP 9<br/>
+Click the 'Edit All' button.<br/>
+Verify the MPX Player frame is present.<br/>
+STEP 10<br/>
+Click the 'Cancel' link.<br/>
+Switch to the active frame titled 'Create Media Gallery dialog'.<br/>
+OPTIONAL STEP<br/>
 Click the 'Cover' select button.<br/>
 Switch to the select file frame.<br/>
 Enter the file path for file upload.<br/>
@@ -127,88 +162,54 @@ Click the 'Next' button.<br/>
 Verify the file image 'HanSolo' is present.<br/>
 Verify the img is loaded and visible.<br/>
 Click the 'Save' button.<br/>
-Switch to the active frame titled 'Create Movie dialog'.<br/>
-Click the 'Additional Information' link.<br/>
-Select the 'Syndicated' from the 'Movie Type' drop down list.<br/>
-Select the 'G' from the 'Rating' drop down list.<br/>
-Select the 'Action' from the 'Primary Genre' drop down list.<br/>
-Click the 'Save' button.<br/>
-Verify success message of 'Movie aab5100993fe442 has been created.' is present.<br/>
-Note the node number for the content item.<br/>
-STEP 5<br/>
-Verify 'var mpscall = {"site":"nbc-tonightshow","title":"aab5100993fe442","path":"\/node\/9' is present in page source.<br/>
-Verify 'var mpsopts = {'host':'mps.nbcuni.com'}' is present in page source.<br/>
-STEP 6 through STEP 14<br/>
-Verify '{"site":"nbc-tonightshow","title":"aab5100993fe442","path":"\/node\/9' is present in page source.<br/>
-Verify '"qs":"","cat":"content|aab5100993fe442","content_id":"node' is present in page source.<br/>
-Verify '"is_content":1,"type":"movie","cag":{"genre":"Action","movie-rating":"G","movie-types":"Syndicated"},"envelope":"","pubdate":' is present in page source.<br/>
-STEP 15<br/>
-Verify 'a3VtdWQ9MQ==' is present in page source.<br/>
-STEP 16<br/>
-Mouse over the 'Content' menu link.<br/>
-Mouse over the 'Add content' menu link.<br/>
-Click the 'Media Gallery' menu link.<br/>
 Switch to the active frame titled 'Create Media Gallery dialog'.<br/>
-Enter 'a178f9c77170428' in the 'Title' text box.<br/>
-Click the 'Media Items Select' button.<br/>
+Verify the Cover image src contains 'HanSolo'.<br/>
+Wait for the image to fully load.<br/>
+STEP 11<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'Media Gallery a58de1c52e0c435 has been created.' is present.<br/>
+STEP 12<br/>
+Mouse over the 'Structure' menu link.<br/>
+Mouse over the 'Content types' menu link.<br/>
+Mouse over the 'Media Gallery' menu link.<br/>
+Mouse over the 'Manage fields' menu link.<br/>
+Click the 'Media Items' menu link.<br/>
+Switch to the active frame titled 'Media Items dialog'.<br/>
+Enter 'test123' in the 'File directory' text box.<br/>
+Click the 'Save settings' button.<br/>
+Verify success message of 'Saved Media Items configuration' is present.<br/>
+Click the 'Close Overlay X'.<br/>
+STEP 13<br/>
+Click the 'Content' menu link.<br/>
+Switch to the active frame titled 'Content dialog'.<br/>
+Click the 'Edit' link for content item titled 'a58de1c52e0c435.<br/>
+Switch to the active frame titled 'Edit Media Gallery a58de1c52e0c435 dialog'.<br/>
+Click the 'Add' button.<br/>
 Switch to the select file frame.<br/>
-Click the 'View Library' button.<br/>
-Enter 'HanSolo' in the 'File name' text box.<br/>
-Wait for the file search 'spinner' image to be present.<br/>
-Wait for the file search 'spinner' image to not be present, indicating image search is complete.<br/>
-Click the 'Apply' button.<br/>
-Wait for the file search 'spinner' image to be present.<br/>
-Wait for the file search 'spinner' image to not be present, indicating image search is complete.<br/>
-Verify the media thumbnail image 'HanSolo' is present.<br/>
-Verify the the img is loaded and visible.<br/>
-Click media thumbnail image number 1<br/>
-Click on the 'Submit' button.<br/>
-Switch to the active frame titled 'Create Media Gallery dialog'.<br/>
-Assert that img source of the Media Item contains 'HanSolo'.<br/>
+Click the 'Add files' link.<br/>
+Click the 'All Files' icon.<br/>
+Click the local 'Pictures' icon.<br/>
+Click the test picture link.<br/>
+Click the 'Open' button.<br/>
+Click the 'Start upload' link.<br/>
+Wait for file upload to reach 100%<br/>
+Click the 'Next' button.<br/>
+Switch to the active frame titled 'Edit Media Gallery a58de1c52e0c435 dialog'.<br/>
+Assert that img source of the Media Item contains 'IPTCDefault'.<br/>
 Assert the the img is loaded and visible.<br/>
+Assert that img source of the Media Item contains 'nbclogosmall'.<br/>
+Assert the the img is loaded and visible.<br/>
+Assert that img source of the Media Item contains 'nbclogosmall'.<br/>
+Assert the the img is loaded and visible.<br/>
+STEP 14<br/>
 Click the 'Save' button.<br/>
-Verify success message of 'Media Gallery a178f9c77170428 has been created.' is present.<br/>
-Note the node number for the content item.<br/>
-Get the file id of image number 1.<br/>
-STEP 17<br/>
-Open url 'http://install.qa5.nbcupublisher7.publisher7.com/node/10/8'.<br/>
-STEP 18 through 20<br/>
-STEP 23<br/>
-STEP 24<br/>
-Verify 'typeof(mps.writeFooter)' is present in page source.<br/>
-STEP 25<br/>
-Mouse over the 'Structure' menu link.<br/>
-Mouse over the 'MPS Blocks' menu link.<br/>
-Click the 'Add' menu link.<br/>
-Switch to the active frame titled 'Add a new MPS block dialog'.<br/>
-Enter '7269dbfd1b68475' in the 'Unique Name' text box.<br/>
-Enter '68ee7070efea488' in the 'Block Name' text box.<br/>
-Click the 'Save' button.<br/>
-Verify success message of '7269dbfd1b68475 has been created.' is present.<br/>
-Click the 'Close Overlay X'.<br/>
-STEP 26<br/>
-Mouse over the 'Structure' menu link.<br/>
-Click the 'Blocks' menu link.<br/>
-Switch to the active frame titled 'Blocks dialog'.<br/>
-Select the block name '68ee7070efea488' from the 'Header' drop down list.<br/>
-Click the 'Save Blocks' button.<br/>
-Verify success message of 'The block settings have been updated.' is present.<br/>
-Click the 'Close Overlay X'.<br/>
-STEP 27<br/>
-Verify 'mps.getAd('68ee7070efea488')' is present in page source.<br/>
-STEP 28 - N/A<br/>
-CLEANUP<br/>
-Mouse over the 'Structure' menu link.<br/>
-Click the 'Blocks' menu link.<br/>
-Switch to the active frame titled 'Blocks dialog'.<br/>
-Select the block name '68ee7070efea488' from the '- None -' drop down list.<br/>
-Click the 'Save Blocks' button.<br/>
-Click the 'Close Overlay X'.<br/>
+Switch to the active frame titled 'Content dialog'.<br/>
+Verify success message of 'Media Gallery a58de1c52e0c435 has been updated.' is present.<br/>
 </div>
 </td>
 <td></td>
-<td>99</td>
-<td>com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@4207c21e</td></tr>
+<td>141</td>
+<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery@142b9cd8</td></tr>
 </table><p>
 </body>
 </html>

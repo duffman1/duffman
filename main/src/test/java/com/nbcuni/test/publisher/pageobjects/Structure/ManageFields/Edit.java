@@ -40,6 +40,9 @@ public class Edit {
     	return webDriver.findElement(By.xpath("//label[contains(text(), '" + uriScheme + "')]/../input"));
     }
     
+    @FindBy(how = How.ID, using = "edit-instance-settings-file-directory")
+    private WebElement FileDirectory_Txb;
+    
     @FindBy(how = How.ID, using = "edit-submit")
     private WebElement SaveSettings_Btn;
     
@@ -67,6 +70,13 @@ public class Edit {
     		Reporter.log("Chech the '" + uriScheme + "' check box under 'Allowed URI schemes'.");
     		AllowedURISchemes_Cbx(uriScheme).click();
     	}
+    }
+    
+    public void EnterFileDirectory(String path) throws Exception {
+    	
+    	Reporter.log("Enter '" + path + "' in the 'File directory' text box.");
+    	FileDirectory_Txb.clear();
+    	FileDirectory_Txb.sendKeys(path);
     }
     
     public void ClickSaveSettingsBtn() throws Exception {

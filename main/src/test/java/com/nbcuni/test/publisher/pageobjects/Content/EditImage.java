@@ -74,7 +74,13 @@ public class EditImage {
     @FindBy(how = How.CSS, using = "img[title='Close window']")
     private WebElement CloseWindow_Img;
     
-   
+    @FindBy(how = How.XPATH, using = "//iframe[@id='pdk-player']")
+    private WebElement MPXPlayer_Frm;
+    
+    @FindBy(how = How.XPATH, using = "//a[text()='Cancel']")
+    private WebElement Cancel_Lnk;
+    
+    
     //PAGE OBJECT METHODS
     public void VerifyTitleTextValue(String index, String value) throws Exception {
     	
@@ -174,6 +180,12 @@ public class EditImage {
     	Save_Btn(index).click();
     }
     
+    public void ClickCancelLnk() throws Exception {
+    	
+    	Reporter.log("Click the 'Cancel' link.");
+    	Cancel_Lnk.click();
+    }
+    
     public void ClickSaveFromEditFrmBtn() throws Exception {
     	
     	Reporter.log("Click the 'Save' button.");
@@ -214,5 +226,11 @@ public class EditImage {
     	webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
     }
     
+    public void VerifyMPXPlayerPresent() throws Exception {
+    	
+    	Reporter.log("Verify the MPX Player frame is present.");
+    	Assert.assertTrue(MPXPlayer_Frm.isDisplayed());
+    	
+    }
 }
 
