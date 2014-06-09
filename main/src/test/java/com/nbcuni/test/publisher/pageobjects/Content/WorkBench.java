@@ -1,10 +1,8 @@
 package com.nbcuni.test.publisher.pageobjects.Content;
 
 import java.util.List;
-
 import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.publisher.common.Driver.Driver;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;

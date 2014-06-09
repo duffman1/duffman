@@ -61,8 +61,8 @@ public class Cloning extends ParentTest {
 		contentParent.VerifyMessageStatus("Clone of " + postTitle + " transitioned to the published state.");
     
 		//Step 9
-		workBench.ClickContextualConfigureLnk();
-		workBench.VerifyConfigureBlockLnkPresent();
+		//workBench.ClickContextualConfigureLnk();
+		//workBench.VerifyConfigureBlockLnkPresent();
    
 	}
 }
