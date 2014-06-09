@@ -51,6 +51,7 @@ public class ImplementTVEModulesCore extends ParentTest {
         
         TVEAuthExample tveAuthExample = new TVEAuthExample(webDriver);
         ErrorChecking errorChecking = new ErrorChecking(webDriver, applib);
+        jQueryUpdate jqueryUpdate = new jQueryUpdate(webDriver);
         if (tveAuthExample.TVEAuthAlreadyConfigured().equals(false)) {
         	
         	Reporter.log("STEP 4");
@@ -103,18 +104,18 @@ public class ImplementTVEModulesCore extends ParentTest {
             taxonomy.NavigateSite("Home");
             contentParent.VerifyPageContentNotPresent(Arrays.asList("The Adobe Pass configuration must be setup."));
             
-            Reporter.log("STEP 10");
-            tveAuthExample.ClickConfigureJQueryLnk();
-            overlay.SwitchToActiveFrame();
-            jQueryUpdate jqueryUpdate = new jQueryUpdate(webDriver);
-            jqueryUpdate.SelectDefaultjQueryVersion("1.7");
-            jqueryUpdate.ClickSaveConfigurationBtn();
-            contentParent.VerifyMessageStatus("The configuration options have been saved.");
-            overlay.ClickCloseOverlayLnk();
         }
         else {
-        	Reporter.log("SKIP TO STEP 11 - TVE ALREADY CONFIGURED");
+        	Reporter.log("SKIP TO STEP 10 - TVE ALREADY CONFIGURED");
         }
+        
+        Reporter.log("STEP 10");
+        tveAuthExample.ClickConfigureJQueryLnk();
+        overlay.SwitchToActiveFrame();
+        jqueryUpdate.SelectDefaultjQueryVersion("1.7");
+        jqueryUpdate.ClickSaveConfigurationBtn();
+        contentParent.VerifyMessageStatus("The configuration options have been saved.");
+        overlay.ClickCloseOverlayLnk();
         
         Reporter.log("STEP 11");
         taxonomy.NavigateSite("Home");
@@ -137,6 +138,10 @@ public class ImplementTVEModulesCore extends ParentTest {
         overlay.SwitchToActiveFrame();
         blocks.SelectRegion("TVE Auth Example", "- None -");
         blocks.ClickSaveBlocksBtn();
+        applib.openSitePage("/#overlay=admin/config/development/jquery_update");
+        overlay.SwitchToActiveFrame();
+        jqueryUpdate.SelectDefaultjQueryVersion("1.5");
+        jqueryUpdate.ClickSaveConfigurationBtn();
         
 	}
 }

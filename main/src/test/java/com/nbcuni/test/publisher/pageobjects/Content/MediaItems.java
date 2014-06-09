@@ -44,6 +44,10 @@ public class MediaItems {
     	return webDriver.findElement(By.xpath("(//div[@class='media-thumbnail']/../../..//div[3]/a)[" + imageIndex + "]"));
     }
     
+    private WebElement MediaVideo_Frm(String itemTtl, String videoIndex) {
+    	return webDriver.findElement(By.xpath("(//div[@class='media-item'][contains(@title, '" + itemTtl + "')]//iframe[@id='pdk-player'])[" + videoIndex + "]"));
+    }
+    
     @FindBy(how = How.ID, using = "media-edit-all-button")
     private WebElement EditAll_Btn;
     
@@ -54,7 +58,7 @@ public class MediaItems {
     //PAGE OBJECT METHODS
     public void VerifyFileImagePresent(String imageSrc, String imageIndex) throws Exception {
     	
-    	Reporter.log("Assert that img source of the Media Item contains '" + imageSrc + "'.");
+    	Reporter.log("Verify the img source of the Media Item contains '" + imageSrc + "'.");
     	Assert.assertTrue(MediaItem_Img(imageIndex).getAttribute("src").contains(imageSrc));
     	
     	Reporter.log("Assert the the img is loaded and visible.");
@@ -69,6 +73,12 @@ public class MediaItems {
             if (imgLoaded == true){ break;}
             Thread.sleep(500);
         }
+    }
+    
+    public void VerifyFileVideoPresent(String videoTitle, String videoIndex) throws Exception {
+    	
+    	Reporter.log("Verify the video title with index '" + videoIndex + "' contains '" + videoTitle + "' and is present.");
+    	MediaVideo_Frm(videoTitle, videoIndex).isDisplayed();
     }
     
     public void ClickSelectBtn() throws Exception {

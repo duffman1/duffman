@@ -26,6 +26,15 @@ public class CreateMediaGallery extends ParentTest{
         	UserLogin userLogin = applib.openApplication();
         	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
         	
+        	Reporter.log("SETUP");
+        	taxonomy.NavigateSite("Structure>>Content types>>Media Gallery>>Manage fields>>Media Items");
+        	overlay.SwitchToActiveFrame();
+        	Edit edit = new Edit(webDriver, applib);
+        	edit.CheckAllowedRemoteMediaTypesCbx("MPX Video for Account \"DB TV\"");
+        	edit.ClickSaveSettingsBtn();
+        	contentParent.VerifyMessageStatus("Saved Media Items configuration.");
+        	overlay.ClickCloseOverlayLnk();
+        	
             Reporter.log("STEP 2");
             taxonomy.NavigateSite("Content>>Add content>>Media Gallery");
             overlay.SwitchToActiveFrame();
@@ -133,7 +142,6 @@ public class CreateMediaGallery extends ParentTest{
             Reporter.log("STEP 12");
             taxonomy.NavigateSite("Structure>>Content types>>Media Gallery>>Manage fields>>Media Items");
             overlay.SwitchToActiveFrame();
-            Edit edit = new Edit(webDriver, applib);
             edit.EnterFileDirectory("test123");
             edit.ClickSaveSettingsBtn();
             contentParent.VerifyMessageStatus("Saved Media Items configuration");
@@ -165,7 +173,7 @@ public class CreateMediaGallery extends ParentTest{
             overlay.SwitchToActiveFrame();
             mediaItems.VerifyFileImagePresent("IPTCDefault", "2");
             mediaItems.VerifyFileImagePresent("nbclogosmall", "3");
-            //TODO - verify video present
+            mediaItems.VerifyFileVideoPresent("Automation", "1");
             mediaItems.VerifyFileImagePresent("nbclogosmall", "4");
             
             Reporter.log("STEP 14");
