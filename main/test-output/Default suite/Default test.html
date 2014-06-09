@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Jun 09 13:48:42 EDT 2014</td>
+<td>Started on:</td><td>Mon Jun 09 14:50:22 EDT 2014</td>
 </tr>
-<tr><td>Total time:</td><td>96 seconds (96904 ms)</td>
+<tr><td>Total time:</td><td>173 seconds (173870 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,71 +75,122 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CloneANode.Cloning.Cloning_TC1054()'><b>Cloning_TC1054</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CloneANode.Cloning<br/>
-<a href="#Output-613406335" onClick='toggleBox("Output-613406335", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore.ImplementTVEModulesCore_TC3261()'><b>ImplementTVEModulesCore_TC3261</b><br>Test class: com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore<br/>
+<a href="#Output-1100256276" onClick='toggleBox("Output-1100256276", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-613406335" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-613406335">
-Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.<br/>
+<a href="#Output-1100256276" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1100256276">
+STEP 1<br/>
+Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.<br/>
 Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
 Enter 'pa55word' in the 'Password' text box.<br/>
 Click the 'Login' button.<br/>
+STEP 2<br/>
 Click the 'Modules' menu link.<br/>
+Switch to the active frame titled 'Modules dialog'.<br/>
+Enter 'TVE Adobe Pass' in the 'Filter Name' text box.<br/>
+Wait for the module titled 'TVE Adobe Pass' to appear in the list.<br/>
+Check the 'TVE Adobe Pass' check box.<br/>
+Click the 'Save configuration' button.<br/>
+Switch to frame titled 'Some required modules must be enabled'.<br/>
+Click the 'Continue' button to enable additional modules.<br/>
+Switch back to the 'Modules' frame.<br/>
 Switch to frame titled 'Modules'.<br/>
-Enter 'Node clone' in the 'Filter Name' text box.<br/>
-Wait for the module titled 'Node clone' to appear in the list.<br/>
-Verify the 'Node clone' check box is checked.<br/>
+Verify success message of 'The configuration options have been saved.' is present.<br/>
+Enter 'TVE Auth Example' in the 'Filter Name' text box.<br/>
+Wait for the module titled 'TVE Auth Example' to appear in the list.<br/>
+Check the 'TVE Auth Example' check box.<br/>
+Click the 'Save configuration' button.<br/>
+Switch to frame titled 'Some required modules must be enabled'.<br/>
+Click the 'Continue' button to enable additional modules.<br/>
+Switch back to the 'Modules' frame.<br/>
+Switch to frame titled 'Modules'.<br/>
+Verify success message of 'The configuration options have been saved.' is present.<br/>
+Enter 'TVE MVPD' in the 'Filter Name' text box.<br/>
+Wait for the module titled 'TVE MVPD' to appear in the list.<br/>
+Verify the 'TVE MVPD' check box is checked.<br/>
 Click the 'Close Overlay X'.<br/>
-Mouse over the 'Configuration' menu link.<br/>
-Mouse over the 'Content authoring' menu link.<br/>
-Click the 'Node clone module' menu link.<br/>
-Switch to the active frame titled 'Node clone module dialog'.<br/>
+STEP 3<br/>
+Mouse over the 'Structure' menu link.<br/>
+Click the 'Blocks' menu link.<br/>
+Switch to the active frame titled 'Blocks dialog'.<br/>
+Select the block name 'TVE Auth Example' from the 'Sidebar first' drop down list.<br/>
+Click the 'Save Blocks' button.<br/>
+Verify success message of 'The block settings have been updated.' is present.<br/>
+Click the 'Close Overlay X'.<br/>
+STEP 4<br/>
+Verify the text 'The MVPD Connection must be setup.' is present on the page.<br/>
+Verify the text 'The Adobe Pass configuration must be setup.' is present on the page.<br/>
+Verify the text 'Configure jQuery to use version 1.7 or higher.' is present on the page.<br/>
+STEP 5<br/>
+Click the 'setup' link for MVPD Connection.<br/>
+Switch to the active frame titled 'MVPD dialog'.<br/>
+Enter 'http://mvpd-admin.nbcuni.com/mvpd/service' in the 'MVPD Service URL' text box.<br/>
+Enter 'Syfy' in the 'Requestor ID' text box.<br/>
+Select 'stage' from the 'Instance' drop down list.<br/>
+Enter 'Oops! Something went wrong while fetching providers!' in the 'Generic Error Message' text area.<br/>
 Click the 'Save configuration' button.<br/>
 Verify success message of 'The configuration options have been saved.' is present.<br/>
 Click the 'Close Overlay X'.<br/>
-Mouse over the 'Content' menu link.<br/>
-Mouse over the 'Add content' menu link.<br/>
-Click the 'Post' menu link.<br/>
-Switch to the active frame titled 'Create Post dialog'.<br/>
-Enter '0f5e01bb2e16444' in the 'Title' text box.<br/>
-Switch to the Synopsis frame.<br/>
-Enter a randomized text string into the 'Body' text area.<br/>
-Switch to the active frame titled 'Create Post dialog'.<br/>
-Click the 'Cover' select button.<br/>
-Switch to the select file frame.<br/>
-Enter the file path for file upload.<br/>
-Click the 'Upload' button.<br/>
-Wait for the file link to be visible after upload.<br/>
-Click the 'Next' button.<br/>
-Click the 'Public Local Files' radio button.<br/>
-Click the 'Next' button.<br/>
-Verify the file image 'HanSolo' is present.<br/>
-Verify the img is loaded and visible.<br/>
-Click the 'Save' button.<br/>
-Switch to the active frame titled 'Create Post dialog'.<br/>
-Scroll the 'Publishing Options' link into view.<br/>
-Click the 'Publishing Options' link.<br/>
-Select 'Published' from the 'Moderation State' drop down list.<br/>
-Click the 'Save' button.<br/>
-Verify success message of 'Post 0f5e01bb2e16444 has been created.' is present.<br/>
-Click the 'Clone this post' link.<br/>
-Switch to the active frame titled 'Clone of 0f5e01bb2e16444 dialog'.<br/>
-Click the 'Save' button.<br/>
-Verify success message of 'Post Clone of 0f5e01bb2e16444 has been created.' is present.<br/>
-Click the 'Revisions' link in the work bench.<br/>
-Switch to the active frame titled 'Revisions dialog'.<br/>
-Select 'Published' from the 'Change State' drop down list.<br/>
-Enter 'Change state - Draft to Published' in the 'Message for state change' text area.<br/>
-Click the 'Update State' button.<br/>
-Verify success message of 'Clone of 0f5e01bb2e16444 transitioned to the published state.' is present.<br/>
-Mouse over the work bench info container.<br/>
-Verify the contextual link configure gear and down arrow link are visible.<br/>
-Verify 'Configure Block' link is present.<br/>
+STEP 6<br/>
+Verify the text 'The MVPD Connection must be setup.' is NOT present on the page.<br/>
+STEP 7<br/>
+Click the 'setup' link for Adobe Pass configuration.<br/>
+Switch to the active frame titled 'Adobe Pass dialog'.<br/>
+Enter 'http://entitlement.auth-staging.adobe.com/entitlement/AccessEnablerDebug.swf' in the 'Access Enabler Location' text box.<br/>
+Enter '30000' in the 'Request Timeout' text box.<br/>
+Enter '10.1.13' in the 'Adobe Flash Version' text box.<br/>
+Enter 'syfy' in the 'Requestor ID' text box.<br/>
+Enter 'syfy' in the 'Resource ID' text box.<br/>
+Enter 'Your TV subscription does not include this channel. Please contact your TV Provider about upgrading your service to get access.' in the 'User not Authorized Error' text box.<br/>
+Enter 'We had a problem reaching your TV provider. Please try again.' in the 'Internal Authorization Error' text box.<br/>
+Enter 'Your TV subscription does not include this channel.' in the 'Generic Authorization Error' text box.<br/>
+Enter 'http://api.auth-staging.adobe.com/api/v1/config/' in the 'Adobe Pass Config Service Path' text box.<br/>
+Click the 'Test configuration' button.<br/>
+Verify success message of 'All the configurations are valid.' is present.<br/>
+STEP 8<br/>
+Enter 'syfy' in the 'Requestor ID' text box.<br/>
+Enter 'syfy' in the 'Resource ID' text box.<br/>
+Click the 'Save configuration' button.<br/>
+Verify success message of 'The configuration options have been saved.' is present.<br/>
+Click the 'Close Overlay X'.<br/>
+STEP 9<br/>
+Verify the text 'The Adobe Pass configuration must be setup.' is NOT present on the page.<br/>
+STEP 10<br/>
+Click the 'Configure jQuery' link.<br/>
+Switch to the active frame titled 'jQuery update dialog'.<br/>
+Select '1.7' from the 'Default jQuery Version' drop down list.<br/>
+Click the 'Save configuration' button.<br/>
+Verify success message of 'The configuration options have been saved.' is present.<br/>
+Click the 'Close Overlay X'.<br/>
+STEP 11<br/>
+Verify the 'Authentication status checked:' value is 'true'.<br/>
+Verify the 'Authenticated' value is 'false'.<br/>
+Verify the 'Selected MVPD:' value is 'none'.<br/>
+STEP 12<br/>
+Select 'Optimum' from the 'Al VMPDs:' drop down list.<br/>
+Click the 'login' button.<br/>
+Enter 'research40' in the 'Optimum ID' text box.<br/>
+Enter 'support40' in the 'Password' text box.<br/>
+Click the 'SIGN IN' button.<br/>
+Verify the 'Authentication status checked:' value is 'true'.<br/>
+Verify the 'Authenticated' value is 'true'.<br/>
+Verify the 'Selected MVPD:' value is 'Cablevision'.<br/>
+CLEANUP<br/>
+Mouse over the 'Structure' menu link.<br/>
+Click the 'Blocks' menu link.<br/>
+Switch to the active frame titled 'Blocks dialog'.<br/>
+Select the block name 'TVE Auth Example' from the '- None -' drop down list.<br/>
+Click the 'Save Blocks' button.<br/>
+Open url 'http://install.qa5.nbcupublisher7.publisher7.com/#overlay=admin/config/development/jquery_update'.<br/>
+Switch to the active frame titled 'jQuery update dialog'.<br/>
+Select '1.5' from the 'Default jQuery Version' drop down list.<br/>
+Click the 'Save configuration' button.<br/>
 </div>
 </td>
 <td></td>
-<td>93</td>
-<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CloneANode.Cloning@7da5c614</td></tr>
+<td>170</td>
+<td>com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@13feba51</td></tr>
 </table><p>
 </body>
 </html>

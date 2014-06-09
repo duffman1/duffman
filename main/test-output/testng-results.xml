@@ -2,7 +2,10 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
     <line>
-      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
+      <![CDATA[STEP 1]]>
+    </line>
+    <line>
+      <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]>
     </line>
     <line>
       <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
@@ -14,34 +17,136 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
+      <![CDATA[STEP 2]]>
+    </line>
+    <line>
       <![CDATA[Click the 'Modules' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'TVE Adobe Pass' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the module titled 'TVE Adobe Pass' to appear in the list.]]>
+    </line>
+    <line>
+      <![CDATA[Check the 'TVE Adobe Pass' check box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configuration' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Continue' button to enable additional modules.]]>
+    </line>
+    <line>
+      <![CDATA[Switch back to the 'Modules' frame.]]>
     </line>
     <line>
       <![CDATA[Switch to frame titled 'Modules'.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Node clone' in the 'Filter Name' text box.]]>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
     </line>
     <line>
-      <![CDATA[Wait for the module titled 'Node clone' to appear in the list.]]>
+      <![CDATA[Enter 'TVE Auth Example' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Verify the 'Node clone' check box is checked.]]>
+      <![CDATA[Wait for the module titled 'TVE Auth Example' to appear in the list.]]>
+    </line>
+    <line>
+      <![CDATA[Check the 'TVE Auth Example' check box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configuration' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Continue' button to enable additional modules.]]>
+    </line>
+    <line>
+      <![CDATA[Switch back to the 'Modules' frame.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to frame titled 'Modules'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'TVE MVPD' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the module titled 'TVE MVPD' to appear in the list.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'TVE MVPD' check box is checked.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Configuration' menu link.]]>
+      <![CDATA[STEP 3]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Content authoring' menu link.]]>
+      <![CDATA[Mouse over the 'Structure' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Node clone module' menu link.]]>
+      <![CDATA[Click the 'Blocks' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Node clone module dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Select the block name 'TVE Auth Example' from the 'Sidebar first' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save Blocks' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The block settings have been updated.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 4]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'The MVPD Connection must be setup.' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'The Adobe Pass configuration must be setup.' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'Configure jQuery to use version 1.7 or higher.' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 5]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'setup' link for MVPD Connection.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'MVPD dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'http://mvpd-admin.nbcuni.com/mvpd/service' in the 'MVPD Service URL' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Syfy' in the 'Requestor ID' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Select 'stage' from the 'Instance' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Oops! Something went wrong while fetching providers!' in the 'Generic Error Message' text area.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save configuration' button.]]>
@@ -53,140 +158,191 @@
       <![CDATA[Click the 'Close Overlay X'.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Content' menu link.]]>
+      <![CDATA[STEP 6]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Add content' menu link.]]>
+      <![CDATA[Verify the text 'The MVPD Connection must be setup.' is NOT present on the page.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Post' menu link.]]>
+      <![CDATA[STEP 7]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+      <![CDATA[Click the 'setup' link for Adobe Pass configuration.]]>
     </line>
     <line>
-      <![CDATA[Enter '0f5e01bb2e16444' in the 'Title' text box.]]>
+      <![CDATA[Switch to the active frame titled 'Adobe Pass dialog'.]]>
     </line>
     <line>
-      <![CDATA[Switch to the Synopsis frame.]]>
+      <![CDATA[Enter 'http://entitlement.auth-staging.adobe.com/entitlement/AccessEnablerDebug.swf' in the 'Access Enabler Location' text box.]]>
     </line>
     <line>
-      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+      <![CDATA[Enter '30000' in the 'Request Timeout' text box.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+      <![CDATA[Enter '10.1.13' in the 'Adobe Flash Version' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Cover' select button.]]>
+      <![CDATA[Enter 'syfy' in the 'Requestor ID' text box.]]>
     </line>
     <line>
-      <![CDATA[Switch to the select file frame.]]>
+      <![CDATA[Enter 'syfy' in the 'Resource ID' text box.]]>
     </line>
     <line>
-      <![CDATA[Enter the file path for file upload.]]>
+      <![CDATA[Enter 'Your TV subscription does not include this channel. Please contact your TV Provider about upgrading your service to get access.' in the 'User not Authorized Error' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Upload' button.]]>
+      <![CDATA[Enter 'We had a problem reaching your TV provider. Please try again.' in the 'Internal Authorization Error' text box.]]>
     </line>
     <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
+      <![CDATA[Enter 'Your TV subscription does not include this channel.' in the 'Generic Authorization Error' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Next' button.]]>
+      <![CDATA[Enter 'http://api.auth-staging.adobe.com/api/v1/config/' in the 'Adobe Pass Config Service Path' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
+      <![CDATA[Click the 'Test configuration' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Next' button.]]>
+      <![CDATA[Verify success message of 'All the configurations are valid.' is present.]]>
     </line>
     <line>
-      <![CDATA[Verify the file image 'HanSolo' is present.]]>
+      <![CDATA[STEP 8]]>
     </line>
     <line>
-      <![CDATA[Verify the img is loaded and visible.]]>
+      <![CDATA[Enter 'syfy' in the 'Requestor ID' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save' button.]]>
+      <![CDATA[Enter 'syfy' in the 'Resource ID' text box.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+      <![CDATA[Click the 'Save configuration' button.]]>
     </line>
     <line>
-      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Publishing Options' link.]]>
+      <![CDATA[Click the 'Close Overlay X'.]]>
     </line>
     <line>
-      <![CDATA[Select 'Published' from the 'Moderation State' drop down list.]]>
+      <![CDATA[STEP 9]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save' button.]]>
+      <![CDATA[Verify the text 'The Adobe Pass configuration must be setup.' is NOT present on the page.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'Post 0f5e01bb2e16444 has been created.' is present.]]>
+      <![CDATA[STEP 10]]>
     </line>
     <line>
-      <![CDATA[Click the 'Clone this post' link.]]>
+      <![CDATA[Click the 'Configure jQuery' link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Clone of 0f5e01bb2e16444 dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'jQuery update dialog'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save' button.]]>
+      <![CDATA[Select '1.7' from the 'Default jQuery Version' drop down list.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'Post Clone of 0f5e01bb2e16444 has been created.' is present.]]>
+      <![CDATA[Click the 'Save configuration' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Revisions' link in the work bench.]]>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Revisions dialog'.]]>
+      <![CDATA[Click the 'Close Overlay X'.]]>
     </line>
     <line>
-      <![CDATA[Select 'Published' from the 'Change State' drop down list.]]>
+      <![CDATA[STEP 11]]>
     </line>
     <line>
-      <![CDATA[Enter 'Change state - Draft to Published' in the 'Message for state change' text area.]]>
+      <![CDATA[Verify the 'Authentication status checked:' value is 'true'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Update State' button.]]>
+      <![CDATA[Verify the 'Authenticated' value is 'false'.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'Clone of 0f5e01bb2e16444 transitioned to the published state.' is present.]]>
+      <![CDATA[Verify the 'Selected MVPD:' value is 'none'.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the work bench info container.]]>
+      <![CDATA[STEP 12]]>
     </line>
     <line>
-      <![CDATA[Verify the contextual link configure gear and down arrow link are visible.]]>
+      <![CDATA[Select 'Optimum' from the 'Al VMPDs:' drop down list.]]>
     </line>
     <line>
-      <![CDATA[Verify 'Configure Block' link is present.]]>
+      <![CDATA[Click the 'login' button.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'research40' in the 'Optimum ID' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'support40' in the 'Password' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'SIGN IN' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Authentication status checked:' value is 'true'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Authenticated' value is 'true'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Selected MVPD:' value is 'Cablevision'.]]>
+    </line>
+    <line>
+      <![CDATA[CLEANUP]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Structure' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Blocks' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Select the block name 'TVE Auth Example' from the '- None -' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save Blocks' button.]]>
+    </line>
+    <line>
+      <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com/#overlay=admin/config/development/jquery_update'.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'jQuery update dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Select '1.5' from the 'Default jQuery Version' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configuration' button.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="96904" started-at="2014-06-09T17:48:42Z" finished-at="2014-06-09T17:50:19Z">
+  <suite name="Default suite" duration-ms="173870" started-at="2014-06-09T18:50:22Z" finished-at="2014-06-09T18:53:16Z">
     <groups>
       <group name="full">
-        <method signature="Cloning.Cloning_TC1054()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CloneANode.Cloning@7da5c614]" name="Cloning_TC1054" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CloneANode.Cloning"/>
+        <method signature="ImplementTVEModulesCore.ImplementTVEModulesCore_TC3261()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@13feba51]" name="ImplementTVEModulesCore_TC3261" class="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore"/>
       </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="96904" started-at="2014-06-09T17:48:42Z" finished-at="2014-06-09T17:50:19Z">
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CloneANode.Cloning">
-        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CloneANode.Cloning@7da5c614]" name="startGridAndHub" is-config="true" duration-ms="11644" started-at="2014-06-09T13:48:31Z" finished-at="2014-06-09T13:48:42Z">
+    <test name="Default test" duration-ms="173870" started-at="2014-06-09T18:50:22Z" finished-at="2014-06-09T18:53:16Z">
+      <class name="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore">
+        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@13feba51]" name="startGridAndHub" is-config="true" duration-ms="11654" started-at="2014-06-09T14:50:11Z" finished-at="2014-06-09T14:50:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startGridAndHub -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CloneANode.Cloning@7da5c614]" name="startSelenium" is-config="true" duration-ms="2441" started-at="2014-06-09T13:48:42Z" finished-at="2014-06-09T13:48:45Z">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@13feba51]" name="startSelenium" is-config="true" duration-ms="2372" started-at="2014-06-09T14:50:22Z" finished-at="2014-06-09T14:50:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="Cloning_TC1054()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CloneANode.Cloning@7da5c614]" name="Cloning_TC1054" duration-ms="93884" started-at="2014-06-09T13:48:45Z" finished-at="2014-06-09T13:50:19Z">
+        <test-method status="PASS" signature="ImplementTVEModulesCore_TC3261()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@13feba51]" name="ImplementTVEModulesCore_TC3261" duration-ms="170910" started-at="2014-06-09T14:50:25Z" finished-at="2014-06-09T14:53:16Z">
           <reporter-output>
             <line>
-              <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
+              <![CDATA[STEP 1]]>
+            </line>
+            <line>
+              <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]>
             </line>
             <line>
               <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
@@ -198,34 +354,136 @@
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
+              <![CDATA[STEP 2]]>
+            </line>
+            <line>
               <![CDATA[Click the 'Modules' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'TVE Adobe Pass' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the module titled 'TVE Adobe Pass' to appear in the list.]]>
+            </line>
+            <line>
+              <![CDATA[Check the 'TVE Adobe Pass' check box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configuration' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Continue' button to enable additional modules.]]>
+            </line>
+            <line>
+              <![CDATA[Switch back to the 'Modules' frame.]]>
             </line>
             <line>
               <![CDATA[Switch to frame titled 'Modules'.]]>
             </line>
             <line>
-              <![CDATA[Enter 'Node clone' in the 'Filter Name' text box.]]>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
             </line>
             <line>
-              <![CDATA[Wait for the module titled 'Node clone' to appear in the list.]]>
+              <![CDATA[Enter 'TVE Auth Example' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Verify the 'Node clone' check box is checked.]]>
+              <![CDATA[Wait for the module titled 'TVE Auth Example' to appear in the list.]]>
+            </line>
+            <line>
+              <![CDATA[Check the 'TVE Auth Example' check box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configuration' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Continue' button to enable additional modules.]]>
+            </line>
+            <line>
+              <![CDATA[Switch back to the 'Modules' frame.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to frame titled 'Modules'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'TVE MVPD' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the module titled 'TVE MVPD' to appear in the list.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'TVE MVPD' check box is checked.]]>
             </line>
             <line>
               <![CDATA[Click the 'Close Overlay X'.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Configuration' menu link.]]>
+              <![CDATA[STEP 3]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Content authoring' menu link.]]>
+              <![CDATA[Mouse over the 'Structure' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Node clone module' menu link.]]>
+              <![CDATA[Click the 'Blocks' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Node clone module dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Select the block name 'TVE Auth Example' from the 'Sidebar first' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save Blocks' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The block settings have been updated.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 4]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'The MVPD Connection must be setup.' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'The Adobe Pass configuration must be setup.' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Configure jQuery to use version 1.7 or higher.' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 5]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'setup' link for MVPD Connection.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'MVPD dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'http://mvpd-admin.nbcuni.com/mvpd/service' in the 'MVPD Service URL' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Syfy' in the 'Requestor ID' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Select 'stage' from the 'Instance' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Oops! Something went wrong while fetching providers!' in the 'Generic Error Message' text area.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save configuration' button.]]>
@@ -237,137 +495,185 @@
               <![CDATA[Click the 'Close Overlay X'.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Content' menu link.]]>
+              <![CDATA[STEP 6]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Add content' menu link.]]>
+              <![CDATA[Verify the text 'The MVPD Connection must be setup.' is NOT present on the page.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Post' menu link.]]>
+              <![CDATA[STEP 7]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+              <![CDATA[Click the 'setup' link for Adobe Pass configuration.]]>
             </line>
             <line>
-              <![CDATA[Enter '0f5e01bb2e16444' in the 'Title' text box.]]>
+              <![CDATA[Switch to the active frame titled 'Adobe Pass dialog'.]]>
             </line>
             <line>
-              <![CDATA[Switch to the Synopsis frame.]]>
+              <![CDATA[Enter 'http://entitlement.auth-staging.adobe.com/entitlement/AccessEnablerDebug.swf' in the 'Access Enabler Location' text box.]]>
             </line>
             <line>
-              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+              <![CDATA[Enter '30000' in the 'Request Timeout' text box.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+              <![CDATA[Enter '10.1.13' in the 'Adobe Flash Version' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Cover' select button.]]>
+              <![CDATA[Enter 'syfy' in the 'Requestor ID' text box.]]>
             </line>
             <line>
-              <![CDATA[Switch to the select file frame.]]>
+              <![CDATA[Enter 'syfy' in the 'Resource ID' text box.]]>
             </line>
             <line>
-              <![CDATA[Enter the file path for file upload.]]>
+              <![CDATA[Enter 'Your TV subscription does not include this channel. Please contact your TV Provider about upgrading your service to get access.' in the 'User not Authorized Error' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Upload' button.]]>
+              <![CDATA[Enter 'We had a problem reaching your TV provider. Please try again.' in the 'Internal Authorization Error' text box.]]>
             </line>
             <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
+              <![CDATA[Enter 'Your TV subscription does not include this channel.' in the 'Generic Authorization Error' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Next' button.]]>
+              <![CDATA[Enter 'http://api.auth-staging.adobe.com/api/v1/config/' in the 'Adobe Pass Config Service Path' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Public Local Files' radio button.]]>
+              <![CDATA[Click the 'Test configuration' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Next' button.]]>
+              <![CDATA[Verify success message of 'All the configurations are valid.' is present.]]>
             </line>
             <line>
-              <![CDATA[Verify the file image 'HanSolo' is present.]]>
+              <![CDATA[STEP 8]]>
             </line>
             <line>
-              <![CDATA[Verify the img is loaded and visible.]]>
+              <![CDATA[Enter 'syfy' in the 'Requestor ID' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save' button.]]>
+              <![CDATA[Enter 'syfy' in the 'Resource ID' text box.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+              <![CDATA[Click the 'Save configuration' button.]]>
             </line>
             <line>
-              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Publishing Options' link.]]>
+              <![CDATA[Click the 'Close Overlay X'.]]>
             </line>
             <line>
-              <![CDATA[Select 'Published' from the 'Moderation State' drop down list.]]>
+              <![CDATA[STEP 9]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save' button.]]>
+              <![CDATA[Verify the text 'The Adobe Pass configuration must be setup.' is NOT present on the page.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'Post 0f5e01bb2e16444 has been created.' is present.]]>
+              <![CDATA[STEP 10]]>
             </line>
             <line>
-              <![CDATA[Click the 'Clone this post' link.]]>
+              <![CDATA[Click the 'Configure jQuery' link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Clone of 0f5e01bb2e16444 dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'jQuery update dialog'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save' button.]]>
+              <![CDATA[Select '1.7' from the 'Default jQuery Version' drop down list.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'Post Clone of 0f5e01bb2e16444 has been created.' is present.]]>
+              <![CDATA[Click the 'Save configuration' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Revisions' link in the work bench.]]>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Revisions dialog'.]]>
+              <![CDATA[Click the 'Close Overlay X'.]]>
             </line>
             <line>
-              <![CDATA[Select 'Published' from the 'Change State' drop down list.]]>
+              <![CDATA[STEP 11]]>
             </line>
             <line>
-              <![CDATA[Enter 'Change state - Draft to Published' in the 'Message for state change' text area.]]>
+              <![CDATA[Verify the 'Authentication status checked:' value is 'true'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Update State' button.]]>
+              <![CDATA[Verify the 'Authenticated' value is 'false'.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'Clone of 0f5e01bb2e16444 transitioned to the published state.' is present.]]>
+              <![CDATA[Verify the 'Selected MVPD:' value is 'none'.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the work bench info container.]]>
+              <![CDATA[STEP 12]]>
             </line>
             <line>
-              <![CDATA[Verify the contextual link configure gear and down arrow link are visible.]]>
+              <![CDATA[Select 'Optimum' from the 'Al VMPDs:' drop down list.]]>
             </line>
             <line>
-              <![CDATA[Verify 'Configure Block' link is present.]]>
+              <![CDATA[Click the 'login' button.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'research40' in the 'Optimum ID' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'support40' in the 'Password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'SIGN IN' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Authentication status checked:' value is 'true'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Authenticated' value is 'true'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Selected MVPD:' value is 'Cablevision'.]]>
+            </line>
+            <line>
+              <![CDATA[CLEANUP]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Structure' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Blocks' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Select the block name 'TVE Auth Example' from the '- None -' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save Blocks' button.]]>
+            </line>
+            <line>
+              <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com/#overlay=admin/config/development/jquery_update'.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'jQuery update dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Select '1.5' from the 'Default jQuery Version' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configuration' button.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- Cloning_TC1054 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CloneANode.Cloning@7da5c614]" name="stopSelenium" is-config="true" duration-ms="569" started-at="2014-06-09T13:50:19Z" finished-at="2014-06-09T13:50:19Z">
+        </test-method> <!-- ImplementTVEModulesCore_TC3261 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@13feba51]" name="stopSelenium" is-config="true" duration-ms="575" started-at="2014-06-09T14:53:16Z" finished-at="2014-06-09T14:53:16Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Cloning_TC1054 status=SUCCESS method=Cloning.Cloning_TC1054()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CloneANode.Cloning@7da5c614] output=Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]]>
+                <![CDATA[[TestResult name=ImplementTVEModulesCore_TC3261 status=SUCCESS method=ImplementTVEModulesCore.ImplementTVEModulesCore_TC3261()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@13feba51] output=STEP 1]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CloneANode.Cloning@7da5c614]" name="stopGridAndHub" is-config="true" duration-ms="393" started-at="2014-06-09T13:50:19Z" finished-at="2014-06-09T13:50:20Z">
+        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@13feba51]" name="stopGridAndHub" is-config="true" duration-ms="374" started-at="2014-06-09T14:53:16Z" finished-at="2014-06-09T14:53:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopGridAndHub -->
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CloneANode.Cloning -->
+      </class> <!-- com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

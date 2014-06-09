@@ -1,6 +1,7 @@
 package com.nbcuni.test.publisher.pageobjects.Content;
 
 import java.util.List;
+
 import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.publisher.common.Driver.Driver;
 import org.openqa.selenium.By;
@@ -9,8 +10,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
 
@@ -23,7 +22,6 @@ import org.testng.Reporter;
 public class WorkBench {
 
 	private Driver webDriver;
-    private WebDriverWait wait;
     private AppLib applib;
     
 	//PAGE OBJECT CONSTRUCTORS
@@ -31,21 +29,15 @@ public class WorkBench {
         this.webDriver = webDriver;
         this.applib = applib;
         PageFactory.initElements(webDriver, this);
-        wait = new WebDriverWait(webDriver, 10);
     }
     
     //PAGE OBJECT IDENTIFIERS AND SCRIPTS
-    private String MouseOver_Js = "var evObj = document.createEvent('MouseEvents');" + "evObj.initMouseEvent(\"mouseover\",true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);" + "arguments[0].dispatchEvent(evObj);";
-	
     @FindBy(how = How.CLASS_NAME, using = "workbench-info-block")
     private WebElement WorkBenchInfo_Ctr;
     
     private WebElement WorkBench_Tab(String tabName) {
     	return webDriver.findElement(By.xpath("//a[text()='" + tabName + "']"));
     }
-    
-    @FindBy(how = How.CSS, using = "div[id='block-workbench-block'] a.contextual-links-trigger")
-    private WebElement ContextualLinksGearDown_Lnk;
     
     @FindBy(how = How.XPATH, using ="//li[@class='block-configure first last']/a[contains(text(),'Configure block')]")
     private WebElement ConfigureBlock_Lnk;
@@ -86,21 +78,6 @@ public class WorkBench {
         	Reporter.log("Verify the text '" + text + "' is present in the work bench info block.");
         	Assert.assertTrue(WorkBenchInfo_Ctr.getText().contains(text), "Text '" + text + "' was not present in the work bench info block.");
         }
-    }
-    
-    public void ClickContextualConfigureLnk() throws Exception {
-        
-        Reporter.log("Mouse over the work bench info container.");
-        webDriver.executeScript(MouseOver_Js, WorkBenchInfo_Ctr);
-        
-        Reporter.log("Verify the contextual link configure gear and down arrow link are visible.");
-        wait.until(ExpectedConditions.visibilityOf(ContextualLinksGearDown_Lnk)).click();
-    }
-          
-    public void VerifyConfigureBlockLnkPresent() throws Exception {
-        
-    	Reporter.log("Verify 'Configure Block' link is present.");
-        ConfigureBlock_Lnk.getLocation();
     }
     
     public void ClickCloneContentLnk(String contentType) throws Exception {
