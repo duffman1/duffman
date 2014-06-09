@@ -1,29 +1,23 @@
 <h2>Reporter output</h2><table><tr><td>STEP 1</td></tr>
-<tr><td>Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.</td></tr>
+<tr><td>Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.</td></tr>
 <tr><td>Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.</td></tr>
 <tr><td>Enter 'pa55word' in the 'Password' text box.</td></tr>
 <tr><td>Click the 'Login' button.</td></tr>
+<tr><td>SETUP</td></tr>
+<tr><td>Open url 'http://update.qa5.nbcupublisher7.publisher7.com/#overlay=admin/config/development/jquery_update'.</td></tr>
+<tr><td>Switch to the active frame titled 'jQuery update dialog'.</td></tr>
+<tr><td>Select '1.5' from the 'Default jQuery Version' drop down list.</td></tr>
+<tr><td>Click the 'Save configuration' button.</td></tr>
+<tr><td>Click the 'Close Overlay X'.</td></tr>
 <tr><td>STEP 2</td></tr>
 <tr><td>Click the 'Modules' menu link.</td></tr>
 <tr><td>Switch to the active frame titled 'Modules dialog'.</td></tr>
 <tr><td>Enter 'TVE Adobe Pass' in the 'Filter Name' text box.</td></tr>
 <tr><td>Wait for the module titled 'TVE Adobe Pass' to appear in the list.</td></tr>
-<tr><td>Check the 'TVE Adobe Pass' check box.</td></tr>
-<tr><td>Click the 'Save configuration' button.</td></tr>
-<tr><td>Switch to frame titled 'Some required modules must be enabled'.</td></tr>
-<tr><td>Click the 'Continue' button to enable additional modules.</td></tr>
-<tr><td>Switch back to the 'Modules' frame.</td></tr>
-<tr><td>Switch to frame titled 'Modules'.</td></tr>
-<tr><td>Verify success message of 'The configuration options have been saved.' is present.</td></tr>
+<tr><td>Verify the 'TVE Adobe Pass' check box is checked.</td></tr>
 <tr><td>Enter 'TVE Auth Example' in the 'Filter Name' text box.</td></tr>
 <tr><td>Wait for the module titled 'TVE Auth Example' to appear in the list.</td></tr>
-<tr><td>Check the 'TVE Auth Example' check box.</td></tr>
-<tr><td>Click the 'Save configuration' button.</td></tr>
-<tr><td>Switch to frame titled 'Some required modules must be enabled'.</td></tr>
-<tr><td>Click the 'Continue' button to enable additional modules.</td></tr>
-<tr><td>Switch back to the 'Modules' frame.</td></tr>
-<tr><td>Switch to frame titled 'Modules'.</td></tr>
-<tr><td>Verify success message of 'The configuration options have been saved.' is present.</td></tr>
+<tr><td>Verify the 'TVE Auth Example' check box is checked.</td></tr>
 <tr><td>Enter 'TVE MVPD' in the 'Filter Name' text box.</td></tr>
 <tr><td>Wait for the module titled 'TVE MVPD' to appear in the list.</td></tr>
 <tr><td>Verify the 'TVE MVPD' check box is checked.</td></tr>
@@ -36,44 +30,7 @@
 <tr><td>Click the 'Save Blocks' button.</td></tr>
 <tr><td>Verify success message of 'The block settings have been updated.' is present.</td></tr>
 <tr><td>Click the 'Close Overlay X'.</td></tr>
-<tr><td>STEP 4</td></tr>
-<tr><td>Verify the text 'The MVPD Connection must be setup.' is present on the page.</td></tr>
-<tr><td>Verify the text 'The Adobe Pass configuration must be setup.' is present on the page.</td></tr>
-<tr><td>Verify the text 'Configure jQuery to use version 1.7 or higher.' is present on the page.</td></tr>
-<tr><td>STEP 5</td></tr>
-<tr><td>Click the 'setup' link for MVPD Connection.</td></tr>
-<tr><td>Switch to the active frame titled 'MVPD dialog'.</td></tr>
-<tr><td>Enter 'http://mvpd-admin.nbcuni.com/mvpd/service' in the 'MVPD Service URL' text box.</td></tr>
-<tr><td>Enter 'Syfy' in the 'Requestor ID' text box.</td></tr>
-<tr><td>Select 'stage' from the 'Instance' drop down list.</td></tr>
-<tr><td>Enter 'Oops! Something went wrong while fetching providers!' in the 'Generic Error Message' text area.</td></tr>
-<tr><td>Click the 'Save configuration' button.</td></tr>
-<tr><td>Verify success message of 'The configuration options have been saved.' is present.</td></tr>
-<tr><td>Click the 'Close Overlay X'.</td></tr>
-<tr><td>STEP 6</td></tr>
-<tr><td>Verify the text 'The MVPD Connection must be setup.' is NOT present on the page.</td></tr>
-<tr><td>STEP 7</td></tr>
-<tr><td>Click the 'setup' link for Adobe Pass configuration.</td></tr>
-<tr><td>Switch to the active frame titled 'Adobe Pass dialog'.</td></tr>
-<tr><td>Enter 'http://entitlement.auth-staging.adobe.com/entitlement/AccessEnablerDebug.swf' in the 'Access Enabler Location' text box.</td></tr>
-<tr><td>Enter '30000' in the 'Request Timeout' text box.</td></tr>
-<tr><td>Enter '10.1.13' in the 'Adobe Flash Version' text box.</td></tr>
-<tr><td>Enter 'syfy' in the 'Requestor ID' text box.</td></tr>
-<tr><td>Enter 'syfy' in the 'Resource ID' text box.</td></tr>
-<tr><td>Enter 'Your TV subscription does not include this channel. Please contact your TV Provider about upgrading your service to get access.' in the 'User not Authorized Error' text box.</td></tr>
-<tr><td>Enter 'We had a problem reaching your TV provider. Please try again.' in the 'Internal Authorization Error' text box.</td></tr>
-<tr><td>Enter 'Your TV subscription does not include this channel.' in the 'Generic Authorization Error' text box.</td></tr>
-<tr><td>Enter 'http://api.auth-staging.adobe.com/api/v1/config/' in the 'Adobe Pass Config Service Path' text box.</td></tr>
-<tr><td>Click the 'Test configuration' button.</td></tr>
-<tr><td>Verify success message of 'All the configurations are valid.' is present.</td></tr>
-<tr><td>STEP 8</td></tr>
-<tr><td>Enter 'syfy' in the 'Requestor ID' text box.</td></tr>
-<tr><td>Enter 'syfy' in the 'Resource ID' text box.</td></tr>
-<tr><td>Click the 'Save configuration' button.</td></tr>
-<tr><td>Verify success message of 'The configuration options have been saved.' is present.</td></tr>
-<tr><td>Click the 'Close Overlay X'.</td></tr>
-<tr><td>STEP 9</td></tr>
-<tr><td>Verify the text 'The Adobe Pass configuration must be setup.' is NOT present on the page.</td></tr>
+<tr><td>SKIP TO STEP 10 - TVE ALREADY CONFIGURED</td></tr>
 <tr><td>STEP 10</td></tr>
 <tr><td>Click the 'Configure jQuery' link.</td></tr>
 <tr><td>Switch to the active frame titled 'jQuery update dialog'.</td></tr>
@@ -100,7 +57,7 @@
 <tr><td>Switch to the active frame titled 'Blocks dialog'.</td></tr>
 <tr><td>Select the block name 'TVE Auth Example' from the '- None -' drop down list.</td></tr>
 <tr><td>Click the 'Save Blocks' button.</td></tr>
-<tr><td>Open url 'http://install.qa5.nbcupublisher7.publisher7.com/#overlay=admin/config/development/jquery_update'.</td></tr>
+<tr><td>Open url 'http://update.qa5.nbcupublisher7.publisher7.com/#overlay=admin/config/development/jquery_update'.</td></tr>
 <tr><td>Switch to the active frame titled 'jQuery update dialog'.</td></tr>
 <tr><td>Select '1.5' from the 'Default jQuery Version' drop down list.</td></tr>
 <tr><td>Click the 'Save configuration' button.</td></tr>

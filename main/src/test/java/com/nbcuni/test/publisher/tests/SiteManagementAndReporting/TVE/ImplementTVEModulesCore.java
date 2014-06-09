@@ -28,6 +28,14 @@ public class ImplementTVEModulesCore extends ParentTest {
 		UserLogin userLogin = applib.openApplication();
 		userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
        
+		Reporter.log("SETUP");
+		jQueryUpdate jqueryUpdate = new jQueryUpdate(webDriver);
+        applib.openSitePage("/#overlay=admin/config/development/jquery_update");
+        overlay.SwitchToActiveFrame();
+        jqueryUpdate.SelectDefaultjQueryVersion("1.5");
+        jqueryUpdate.ClickSaveConfigurationBtn();
+        overlay.ClickCloseOverlayLnk();
+        
 		Reporter.log("STEP 2");
 		taxonomy.NavigateSite("Modules");
         overlay.SwitchToActiveFrame();
@@ -51,7 +59,6 @@ public class ImplementTVEModulesCore extends ParentTest {
         
         TVEAuthExample tveAuthExample = new TVEAuthExample(webDriver);
         ErrorChecking errorChecking = new ErrorChecking(webDriver, applib);
-        jQueryUpdate jqueryUpdate = new jQueryUpdate(webDriver);
         if (tveAuthExample.TVEAuthAlreadyConfigured().equals(false)) {
         	
         	Reporter.log("STEP 4");

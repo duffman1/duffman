@@ -5,7 +5,7 @@
       <![CDATA[STEP 1]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]>
+      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
     </line>
     <line>
       <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
@@ -15,6 +15,24 @@
     </line>
     <line>
       <![CDATA[Click the 'Login' button.]]>
+    </line>
+    <line>
+      <![CDATA[SETUP]]>
+    </line>
+    <line>
+      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com/#overlay=admin/config/development/jquery_update'.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'jQuery update dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Select '1.5' from the 'Default jQuery Version' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configuration' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
     </line>
     <line>
       <![CDATA[STEP 2]]>
@@ -32,25 +50,7 @@
       <![CDATA[Wait for the module titled 'TVE Adobe Pass' to appear in the list.]]>
     </line>
     <line>
-      <![CDATA[Check the 'TVE Adobe Pass' check box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Continue' button to enable additional modules.]]>
-    </line>
-    <line>
-      <![CDATA[Switch back to the 'Modules' frame.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to frame titled 'Modules'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+      <![CDATA[Verify the 'TVE Adobe Pass' check box is checked.]]>
     </line>
     <line>
       <![CDATA[Enter 'TVE Auth Example' in the 'Filter Name' text box.]]>
@@ -59,25 +59,7 @@
       <![CDATA[Wait for the module titled 'TVE Auth Example' to appear in the list.]]>
     </line>
     <line>
-      <![CDATA[Check the 'TVE Auth Example' check box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Continue' button to enable additional modules.]]>
-    </line>
-    <line>
-      <![CDATA[Switch back to the 'Modules' frame.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to frame titled 'Modules'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+      <![CDATA[Verify the 'TVE Auth Example' check box is checked.]]>
     </line>
     <line>
       <![CDATA[Enter 'TVE MVPD' in the 'Filter Name' text box.]]>
@@ -116,118 +98,7 @@
       <![CDATA[Click the 'Close Overlay X'.]]>
     </line>
     <line>
-      <![CDATA[STEP 4]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'The MVPD Connection must be setup.' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'The Adobe Pass configuration must be setup.' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'Configure jQuery to use version 1.7 or higher.' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 5]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'setup' link for MVPD Connection.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'MVPD dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'http://mvpd-admin.nbcuni.com/mvpd/service' in the 'MVPD Service URL' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Syfy' in the 'Requestor ID' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Select 'stage' from the 'Instance' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Oops! Something went wrong while fetching providers!' in the 'Generic Error Message' text area.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 6]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'The MVPD Connection must be setup.' is NOT present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 7]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'setup' link for Adobe Pass configuration.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Adobe Pass dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'http://entitlement.auth-staging.adobe.com/entitlement/AccessEnablerDebug.swf' in the 'Access Enabler Location' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '30000' in the 'Request Timeout' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '10.1.13' in the 'Adobe Flash Version' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'syfy' in the 'Requestor ID' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'syfy' in the 'Resource ID' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Your TV subscription does not include this channel. Please contact your TV Provider about upgrading your service to get access.' in the 'User not Authorized Error' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'We had a problem reaching your TV provider. Please try again.' in the 'Internal Authorization Error' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Your TV subscription does not include this channel.' in the 'Generic Authorization Error' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'http://api.auth-staging.adobe.com/api/v1/config/' in the 'Adobe Pass Config Service Path' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Test configuration' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'All the configurations are valid.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 8]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'syfy' in the 'Requestor ID' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'syfy' in the 'Resource ID' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 9]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'The Adobe Pass configuration must be setup.' is NOT present on the page.]]>
+      <![CDATA[SKIP TO STEP 10 - TVE ALREADY CONFIGURED]]>
     </line>
     <line>
       <![CDATA[STEP 10]]>
@@ -308,7 +179,7 @@
       <![CDATA[Click the 'Save Blocks' button.]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com/#overlay=admin/config/development/jquery_update'.]]>
+      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com/#overlay=admin/config/development/jquery_update'.]]>
     </line>
     <line>
       <![CDATA[Switch to the active frame titled 'jQuery update dialog'.]]>
@@ -320,29 +191,29 @@
       <![CDATA[Click the 'Save configuration' button.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="173870" started-at="2014-06-09T18:50:22Z" finished-at="2014-06-09T18:53:16Z">
+  <suite name="Default suite" duration-ms="137045" started-at="2014-06-09T20:03:11Z" finished-at="2014-06-09T20:05:28Z">
     <groups>
       <group name="full">
-        <method signature="ImplementTVEModulesCore.ImplementTVEModulesCore_TC3261()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@13feba51]" name="ImplementTVEModulesCore_TC3261" class="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore"/>
+        <method signature="ImplementTVEModulesCore.ImplementTVEModulesCore_TC3261()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@5b5b0e9f]" name="ImplementTVEModulesCore_TC3261" class="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore"/>
       </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="173870" started-at="2014-06-09T18:50:22Z" finished-at="2014-06-09T18:53:16Z">
+    <test name="Default test" duration-ms="137045" started-at="2014-06-09T20:03:11Z" finished-at="2014-06-09T20:05:28Z">
       <class name="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore">
-        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@13feba51]" name="startGridAndHub" is-config="true" duration-ms="11654" started-at="2014-06-09T14:50:11Z" finished-at="2014-06-09T14:50:22Z">
+        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@5b5b0e9f]" name="startGridAndHub" is-config="true" duration-ms="12199" started-at="2014-06-09T16:02:58Z" finished-at="2014-06-09T16:03:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startGridAndHub -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@13feba51]" name="startSelenium" is-config="true" duration-ms="2372" started-at="2014-06-09T14:50:22Z" finished-at="2014-06-09T14:50:25Z">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@5b5b0e9f]" name="startSelenium" is-config="true" duration-ms="2786" started-at="2014-06-09T16:03:11Z" finished-at="2014-06-09T16:03:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="ImplementTVEModulesCore_TC3261()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@13feba51]" name="ImplementTVEModulesCore_TC3261" duration-ms="170910" started-at="2014-06-09T14:50:25Z" finished-at="2014-06-09T14:53:16Z">
+        <test-method status="PASS" signature="ImplementTVEModulesCore_TC3261()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@5b5b0e9f]" name="ImplementTVEModulesCore_TC3261" duration-ms="133674" started-at="2014-06-09T16:03:13Z" finished-at="2014-06-09T16:05:27Z">
           <reporter-output>
             <line>
               <![CDATA[STEP 1]]>
             </line>
             <line>
-              <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]>
+              <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
             </line>
             <line>
               <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
@@ -352,6 +223,24 @@
             </line>
             <line>
               <![CDATA[Click the 'Login' button.]]>
+            </line>
+            <line>
+              <![CDATA[SETUP]]>
+            </line>
+            <line>
+              <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com/#overlay=admin/config/development/jquery_update'.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'jQuery update dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Select '1.5' from the 'Default jQuery Version' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configuration' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
             </line>
             <line>
               <![CDATA[STEP 2]]>
@@ -369,25 +258,7 @@
               <![CDATA[Wait for the module titled 'TVE Adobe Pass' to appear in the list.]]>
             </line>
             <line>
-              <![CDATA[Check the 'TVE Adobe Pass' check box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Continue' button to enable additional modules.]]>
-            </line>
-            <line>
-              <![CDATA[Switch back to the 'Modules' frame.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to frame titled 'Modules'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+              <![CDATA[Verify the 'TVE Adobe Pass' check box is checked.]]>
             </line>
             <line>
               <![CDATA[Enter 'TVE Auth Example' in the 'Filter Name' text box.]]>
@@ -396,25 +267,7 @@
               <![CDATA[Wait for the module titled 'TVE Auth Example' to appear in the list.]]>
             </line>
             <line>
-              <![CDATA[Check the 'TVE Auth Example' check box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Continue' button to enable additional modules.]]>
-            </line>
-            <line>
-              <![CDATA[Switch back to the 'Modules' frame.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to frame titled 'Modules'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+              <![CDATA[Verify the 'TVE Auth Example' check box is checked.]]>
             </line>
             <line>
               <![CDATA[Enter 'TVE MVPD' in the 'Filter Name' text box.]]>
@@ -453,118 +306,7 @@
               <![CDATA[Click the 'Close Overlay X'.]]>
             </line>
             <line>
-              <![CDATA[STEP 4]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'The MVPD Connection must be setup.' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'The Adobe Pass configuration must be setup.' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'Configure jQuery to use version 1.7 or higher.' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 5]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'setup' link for MVPD Connection.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'MVPD dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'http://mvpd-admin.nbcuni.com/mvpd/service' in the 'MVPD Service URL' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Syfy' in the 'Requestor ID' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Select 'stage' from the 'Instance' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Oops! Something went wrong while fetching providers!' in the 'Generic Error Message' text area.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 6]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'The MVPD Connection must be setup.' is NOT present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 7]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'setup' link for Adobe Pass configuration.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Adobe Pass dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'http://entitlement.auth-staging.adobe.com/entitlement/AccessEnablerDebug.swf' in the 'Access Enabler Location' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '30000' in the 'Request Timeout' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '10.1.13' in the 'Adobe Flash Version' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'syfy' in the 'Requestor ID' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'syfy' in the 'Resource ID' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Your TV subscription does not include this channel. Please contact your TV Provider about upgrading your service to get access.' in the 'User not Authorized Error' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'We had a problem reaching your TV provider. Please try again.' in the 'Internal Authorization Error' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Your TV subscription does not include this channel.' in the 'Generic Authorization Error' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'http://api.auth-staging.adobe.com/api/v1/config/' in the 'Adobe Pass Config Service Path' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Test configuration' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'All the configurations are valid.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 8]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'syfy' in the 'Requestor ID' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'syfy' in the 'Resource ID' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 9]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'The Adobe Pass configuration must be setup.' is NOT present on the page.]]>
+              <![CDATA[SKIP TO STEP 10 - TVE ALREADY CONFIGURED]]>
             </line>
             <line>
               <![CDATA[STEP 10]]>
@@ -645,7 +387,7 @@
               <![CDATA[Click the 'Save Blocks' button.]]>
             </line>
             <line>
-              <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com/#overlay=admin/config/development/jquery_update'.]]>
+              <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com/#overlay=admin/config/development/jquery_update'.]]>
             </line>
             <line>
               <![CDATA[Switch to the active frame titled 'jQuery update dialog'.]]>
@@ -658,18 +400,18 @@
             </line>
           </reporter-output>
         </test-method> <!-- ImplementTVEModulesCore_TC3261 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@13feba51]" name="stopSelenium" is-config="true" duration-ms="575" started-at="2014-06-09T14:53:16Z" finished-at="2014-06-09T14:53:16Z">
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@5b5b0e9f]" name="stopSelenium" is-config="true" duration-ms="572" started-at="2014-06-09T16:05:27Z" finished-at="2014-06-09T16:05:28Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=ImplementTVEModulesCore_TC3261 status=SUCCESS method=ImplementTVEModulesCore.ImplementTVEModulesCore_TC3261()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@13feba51] output=STEP 1]]]>
+                <![CDATA[[TestResult name=ImplementTVEModulesCore_TC3261 status=SUCCESS method=ImplementTVEModulesCore.ImplementTVEModulesCore_TC3261()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@5b5b0e9f] output=STEP 1]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@13feba51]" name="stopGridAndHub" is-config="true" duration-ms="374" started-at="2014-06-09T14:53:16Z" finished-at="2014-06-09T14:53:17Z">
+        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@5b5b0e9f]" name="stopGridAndHub" is-config="true" duration-ms="373" started-at="2014-06-09T16:05:28Z" finished-at="2014-06-09T16:05:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopGridAndHub -->
