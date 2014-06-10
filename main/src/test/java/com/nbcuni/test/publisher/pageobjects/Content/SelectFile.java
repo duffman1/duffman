@@ -19,6 +19,7 @@ import org.testng.Reporter;
 import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.publisher.common.Random;
 import com.nbcuni.test.publisher.pageobjects.Overlay;
+import com.nbcuni.test.publisher.pageobjects.ErrorChecking.ErrorChecking;
 import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
@@ -34,6 +35,7 @@ public class SelectFile {
     private AppLib applib;
     private WebDriverWait wait;
     private Random random;
+    private ErrorChecking errorChecking;
     
     //PAGE OBJECT CONSTRUCTOR
     public SelectFile(Driver webDriver, AppLib applib) {
@@ -42,6 +44,7 @@ public class SelectFile {
         PageFactory.initElements(webDriver, this);
         wait = new WebDriverWait(webDriver, 10);
         random = new Random();
+        errorChecking = new ErrorChecking(webDriver, applib);
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -130,6 +133,7 @@ public class SelectFile {
     	Reporter.log("Switch to the select file frame.");
     	webDriver.switchTo().frame(SelectFile_Frm);
     	
+    	errorChecking.VerifyNoMessageErrorsPresent();
     }
     
     public void ClickViewLibraryBtn() throws Exception {

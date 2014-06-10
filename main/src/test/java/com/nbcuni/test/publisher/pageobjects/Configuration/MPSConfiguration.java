@@ -5,7 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 import org.testng.Reporter;
+
 import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
@@ -22,7 +24,7 @@ public class MPSConfiguration {
     //PAGE OBJECT CONSTRUCTOR    
     public MPSConfiguration(Driver webDriver) {
     	this.webDriver = webDriver;
-        PageFactory.initElements(webDriver, this);
+    	PageFactory.initElements(webDriver, this);
     }
     
     //PAGE OBJECT IDENTIFIERS    
@@ -44,6 +46,25 @@ public class MPSConfiguration {
     
     
     //PAGE OBJECT METHODS
+    public Boolean IsMPSEnabled() throws Exception { 
+    	
+    	Boolean mpsEnabled;
+    	if (webDriver.getPageSource().contains("mpscall")) {
+    		mpsEnabled = true;
+    	}
+    	else {
+    		mpsEnabled = false;
+    	}
+    	
+    	return mpsEnabled;
+    }
+
+    public void VerifyNoMPSCallsMade() throws Exception {
+    	
+    	Reporter.log("Verify that no MPS calls were made on the page.");
+    	Assert.assertFalse(this.IsMPSEnabled());
+    }
+    
     public void EnterMPSHost(String host) throws Exception { 
     	
     	Reporter.log("Enter '" + host + "' in the 'MPS Host' text box."); 

@@ -1,13 +1,16 @@
 package com.nbcuni.test.publisher.tests.Advertising.MPS;
 
 import java.util.Arrays;
+
 import org.testng.Reporter;
 import org.testng.annotations.Test;
+
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Blocks;
 import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
+import com.nbcuni.test.publisher.pageobjects.Configuration.MPSConfiguration;
 import com.nbcuni.test.publisher.pageobjects.Content.AdditionalInformation;
 import com.nbcuni.test.publisher.pageobjects.Content.BasicInformation;
 import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
@@ -31,9 +34,27 @@ public class ImplementMPS extends ParentTest {
         	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
             
         	Reporter.log("STEP 2");
+        	MPSConfiguration mpsConfiguration = new MPSConfiguration(webDriver);
+        	Modules modules = new Modules(webDriver, applib);
+        	if (mpsConfiguration.IsMPSEnabled() == true) {
+        		taxonomy.NavigateSite("Modules");
+                overlay.SwitchToActiveFrame();
+                modules.EnterFilterName("MPS");
+                modules.DisableModule("MPS");
+                overlay.ClickCloseOverlayLnk();
+                overlay.switchToDefaultContent();
+                
+                //Step 7
+                taxonomy.NavigateSite("Modules>>Uninstall");
+                overlay.SwitchToActiveFrame();
+                modules.UninstallModule("MPS");
+                overlay.SwitchToActiveFrame();
+                overlay.ClickCloseOverlayLnk();
+        	}
+        	
+        	Reporter.log("STEP 3");
         	taxonomy.NavigateSite("Modules");
             overlay.SwitchToActiveFrame();
-            Modules modules = new Modules(webDriver, applib);
             modules.EnterFilterName("Pub Ads");
             modules.EnableModule("Pub Ads");
             modules.EnterFilterName("MPS");
@@ -44,7 +65,7 @@ public class ImplementMPS extends ParentTest {
             modules.DisableModule("Doubleclick for Publishers");
             overlay.ClickCloseOverlayLnk();
             
-            Reporter.log("STEP 3");
+            Reporter.log("STEP 4");
             taxonomy.NavigateSite("Reports>>Status report");
             overlay.SwitchToActiveFrame();
             contentParent.VerifyPageContentPresent(Arrays.asList("Ad Tag Style", "MPS"));
@@ -52,7 +73,40 @@ public class ImplementMPS extends ParentTest {
             errorChecking.VerifyNoMessageErrorsPresent();
             overlay.ClickCloseOverlayLnk();
             
-            Reporter.log("STEP 4");
+            Reporter.log("STEP 5");
+            String siteType;
+            if (config.getConfigValue("AppURL").contains("install")) {
+            	siteType = "install";
+            }
+            else {
+            	siteType = "update";
+            }
+            contentParent.VerifySourceInPage(Arrays.asList("var mpscall = {\"site\":\"" + siteType + "\",\"title\":\"Welcome to Site-Install\",\"path\":\"\\/\",\"qs\":\"\",\"cat\":\"node\",\"content_id\":\"\",\"is_content\":0,\"type\":\"\",\"cag\":\"\",\"envelope\":\"\",\"pubdate\":",
+            		"var mpsopts = {'host':'mps.nbcuni.com'}"));
+            
+            Reporter.log("STEP 6");
+            taxonomy.NavigateSite("People");
+            overlay.SwitchToActiveFrame();
+            mpsConfiguration.VerifyNoMPSCallsMade();
+            overlay.ClickCloseOverlayLnk();
+            
+            Reporter.log("STEP 7");
+            applib.openSitePage("/kfkjdjdkjdjldkjj");
+            mpsConfiguration.VerifyNoMPSCallsMade();
+            applib.openApplication();
+            
+            Reporter.log("STEP 8");
+            taxonomy.NavigateSite("Configuration>>Web services>>MPS Configuration");
+            overlay.SwitchToActiveFrame();
+            mpsConfiguration.EnterMPSHost("mps.nbcuni.com");
+            mpsConfiguration.ClickIntegrationMethod("Document Write");
+            mpsConfiguration.EnterSiteInstanceOverride("nbc-tonightshow");
+            mpsConfiguration.CheckSendQueryStringsCbx();
+            mpsConfiguration.ClickSaveConfigurationBtn();
+            contentParent.VerifyMessageStatus("The configuration options have been saved.");
+            overlay.ClickCloseOverlayLnk();
+            
+            Reporter.log("STEP 9");
             taxonomy.NavigateSite("Content>>Add content>>Movie");
             overlay.SwitchToActiveFrame();
             BasicInformation basicInformation = new BasicInformation(webDriver);
@@ -76,18 +130,18 @@ public class ImplementMPS extends ParentTest {
             WorkBench workBench = new WorkBench(webDriver, applib);
             String movieNodeNumber = workBench.GetContentNodeNumber();
             
-            Reporter.log("STEP 5");
+            Reporter.log("STEP 10");
             contentParent.VerifySourceInPage(Arrays.asList("var mpscall = {\"site\":\"nbc-tonightshow\",\"title\":\"" + movieTitle + "\",\"path\":\"\\/node\\/" + movieNodeNumber,
             		"var mpsopts = {'host':'mps.nbcuni.com'}"));
             
-            Reporter.log("STEP 6 through STEP 14");
+            Reporter.log("STEP 11 through STEP 19");
             contentParent.VerifySourceInPage(Arrays.asList("{\"site\":\"nbc-tonightshow\",\"title\":\"" + movieTitle + "\",\"path\":\"\\/node\\/" + movieNodeNumber + "","\"qs\":\"\",\"cat\":\"content|" + movieTitle + "\",\"content_id\":\"node","\"is_content\":1,\"type\":\"movie\",\"cag\":{\"genre\":\"Action\",\"movie-rating\":\"G\",\"movie-types\":\"Syndicated\"},\"envelope\":\"\",\"pubdate\":"));
             
-            Reporter.log("STEP 15");
+            Reporter.log("STEP 20");
             webDriver.navigate().to(webDriver.getCurrentUrl() + "?kumud=1");
             contentParent.VerifySourceInPage(Arrays.asList("a3VtdWQ9MQ=="));
             
-            Reporter.log("STEP 16");
+            Reporter.log("STEP 21");
             taxonomy.NavigateSite("Content>>Add content>>Media Gallery");
         	overlay.SwitchToActiveFrame();
         	String mediaGalleryTitle = random.GetCharacterString(15);
@@ -112,21 +166,15 @@ public class ImplementMPS extends ParentTest {
         	String mediaGalleryNodeNumber = workBench.GetContentNodeNumber();
             String imageFileNumber = workBench.GetFileImageId("1");
             
-            Reporter.log("STEP 17");
+            Reporter.log("STEP 22");
             applib.openSitePage("/node/" + mediaGalleryNodeNumber + "/" + imageFileNumber);
-            
-            Reporter.log("STEP 18 through 20");
-            //contentParent.VerifySourceInPage(Arrays.asList("\"site\":\"nbc-tonightshow\",\"title\":\"" + mediaGalleryTitle + "\",\"path\":\"node\\/" + mediaGalleryNodeNumber + "\\/" + imageFileNumber + "\",\"qs\":\"\",\"cat\":\"node|" + mediaGalleryNodeNumber + "|" + imageFileNumber + "\",\"content_id\":\"node" + mediaGalleryNodeNumber + "\",\"is_content\":1,\"type\":\"media_gallery\",\"cag\":\"\",\"envelope\":\"\",\"pubdate\":"));
             
             //TODO - a few extra steps as time allows
             
-            Reporter.log("STEP 23");
-            //contentParent.VerifySourceInPage(Arrays.asList("id=\"mps-ext-load\" src=\"//'+mpsopts.host+'/fetch/ext/load-'+mpscall.site+'.js"));
-            
-            Reporter.log("STEP 24");
+            Reporter.log("STEP 28");
             contentParent.VerifySourceInPage(Arrays.asList("typeof(mps.writeFooter)"));
             
-            Reporter.log("STEP 25");
+            Reporter.log("STEP 29");
             taxonomy.NavigateSite("Structure>>MPS Blocks>>Add");
             overlay.SwitchToActiveFrame();
             MPSBlocks mpsBlocks = new MPSBlocks(webDriver);
@@ -138,7 +186,7 @@ public class ImplementMPS extends ParentTest {
             contentParent.VerifyMessageStatus(uniqueName + " has been created.");
             overlay.ClickCloseOverlayLnk();
             
-            Reporter.log("STEP 26");
+            Reporter.log("STEP 30");
             taxonomy.NavigateSite("Structure>>Blocks");
             overlay.SwitchToActiveFrame();
             Blocks blocks = new Blocks(webDriver);
@@ -147,10 +195,10 @@ public class ImplementMPS extends ParentTest {
             contentParent.VerifyMessageStatus("The block settings have been updated.");
             overlay.ClickCloseOverlayLnk();
             
-            Reporter.log("STEP 27");
+            Reporter.log("STEP 31");
             contentParent.VerifySourceInPage(Arrays.asList("mps.getAd('" + blockName + "')"));
             
-            Reporter.log("STEP 28 - N/A");
+            Reporter.log("STEP 32 - N/A");
             
             Reporter.log("CLEANUP");
             taxonomy.NavigateSite("Structure>>Blocks");

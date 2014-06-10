@@ -63,6 +63,11 @@ public class MPSConfigurationPage extends ParentTest {
             overlay.ClickCloseOverlayLnk();
             contentParent.VerifySourceNotInPage("Site-Install\",\"path\":\"\\/\",\"qs\":\"eD15\"");
             
+            Reporter.log("STEP 8");
+            contentParent.VerifySourceInPage(Arrays.asList("mps-load", "//mps.nbcuni.com/fetch/ext/load-nbc-tonightshow.js?nowrite=jq"));
+            
+            Reporter.log("STEP 9 - N/A");
+            
             Reporter.log("CLEANUP");
             taxonomy.NavigateSite("Configuration>>Web services>>MPS Configuration");
             overlay.SwitchToActiveFrame();
