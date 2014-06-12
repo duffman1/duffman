@@ -17,7 +17,6 @@ public class TestSetup extends ParentTest{
 	
     /*************************************************************************************
      * Test executes some common setup logic prior to full suite execution
-     * @throws Throwable No Return values are needed
      *************************************************************************************/
     @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "smoke", "mpx"})
     public void TestSetup_Test() throws Exception{
@@ -89,6 +88,33 @@ public class TestSetup extends ParentTest{
             }
             catch (Exception e) {}
             webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
+            
+            //delete any created custom content types
+            List<String> allowedContentTypes = new ArrayList<String>();
+            allowedContentTypes.add("character-profile");
+            allowedContentTypes.add("media-gallery");
+            allowedContentTypes.add("movie");
+            allowedContentTypes.add("person");
+            allowedContentTypes.add("post");
+            allowedContentTypes.add("tv-episode");
+            allowedContentTypes.add("tv-season");
+            allowedContentTypes.add("tv-show");
+            
+            List<WebElement> allContentTypes = webDriver.findElements(By.xpath("//a[text()='Content']/../ul//a[text()='Add content']/..//ul/li/a"));
+            List<String> allContentTypeURLsToDelete = new ArrayList<String>();
+            for (WebElement contentType : allContentTypes) {
+            	allContentTypeURLsToDelete.add(contentType.getAttribute("href").replace(config.getConfigValue("AppURL") + "/node/add/", ""));
+            }
+            
+            for (String contentType : allContentTypeURLsToDelete) {
+            	if (!allowedContentTypes.contains(contentType)) {
+            		
+            		applib.openSitePage("/#overlay=admin/structure/types/manage/" + contentType + "/delete");
+            		overlay.SwitchToActiveFrame();
+            		webDriver.findElement(By.id("edit-submit")).click();
+            		overlay.ClickCloseOverlayLnk();
+            	}
+            }
             
             //flush all caches
             taxonomy.NavigateSite("Home>>Flush all caches");
