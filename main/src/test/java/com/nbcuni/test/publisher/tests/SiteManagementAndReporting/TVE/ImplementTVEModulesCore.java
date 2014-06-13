@@ -30,14 +30,14 @@ public class ImplementTVEModulesCore extends ParentTest {
        
 		Reporter.log("SETUP");
 		jQueryUpdate jqueryUpdate = new jQueryUpdate(webDriver);
-        applib.openSitePage("/#overlay=admin/config/development/jquery_update");
-        overlay.SwitchToActiveFrame();
+        applib.openSitePage("/admin/config/development/jquery_update");
         jqueryUpdate.SelectDefaultjQueryVersion("1.5");
         jqueryUpdate.ClickSaveConfigurationBtn();
-        overlay.ClickCloseOverlayLnk();
+        taxonomy.NavigateSiteViaActions("Home>>Flush all caches");
+        taxonomy.NavigateSiteViaActions("Home");
         
 		Reporter.log("STEP 2");
-		taxonomy.NavigateSite("Modules");
+		taxonomy.NavigateSiteViaActions("Modules");
         overlay.SwitchToActiveFrame();
         Modules modules = new Modules(webDriver, applib);
         modules.EnterFilterName("TVE Adobe Pass");
@@ -49,7 +49,7 @@ public class ImplementTVEModulesCore extends ParentTest {
         overlay.ClickCloseOverlayLnk();
 		
 		Reporter.log("STEP 3");
-		taxonomy.NavigateSite("Structure>>Blocks");
+		taxonomy.NavigateSiteViaActions("Structure>>Blocks");
 		overlay.SwitchToActiveFrame();
 		Blocks blocks = new Blocks(webDriver);
         blocks.SelectRegion("TVE Auth Example", "Sidebar first");
@@ -62,7 +62,7 @@ public class ImplementTVEModulesCore extends ParentTest {
         if (tveAuthExample.TVEAuthAlreadyConfigured().equals(false)) {
         	
         	Reporter.log("STEP 4");
-            taxonomy.NavigateSite("Home");
+            taxonomy.NavigateSiteViaActions("Home");
             errorChecking.VerifyNoMessageErrorsPresent();
             contentParent.VerifyPageContentPresent(Arrays.asList("The MVPD Connection must be setup.", 
             		"The Adobe Pass configuration must be setup.", 
@@ -81,7 +81,7 @@ public class ImplementTVEModulesCore extends ParentTest {
             overlay.ClickCloseOverlayLnk();
             
             Reporter.log("STEP 6");
-            taxonomy.NavigateSite("Home");
+            taxonomy.NavigateSiteViaActions("Home");
             contentParent.VerifyPageContentNotPresent(Arrays.asList("The MVPD Connection must be setup."));
             
             Reporter.log("STEP 7");
@@ -108,7 +108,7 @@ public class ImplementTVEModulesCore extends ParentTest {
             overlay.ClickCloseOverlayLnk();
             
             Reporter.log("STEP 9");
-            taxonomy.NavigateSite("Home");
+            taxonomy.NavigateSiteViaActions("Home");
             contentParent.VerifyPageContentNotPresent(Arrays.asList("The Adobe Pass configuration must be setup."));
             
         }
@@ -141,14 +141,15 @@ public class ImplementTVEModulesCore extends ParentTest {
         errorChecking.VerifyNoMessageErrorsPresent();
         
         Reporter.log("CLEANUP");
-        taxonomy.NavigateSite("Structure>>Blocks");
+        taxonomy.NavigateSiteViaActions("Structure>>Blocks");
         overlay.SwitchToActiveFrame();
         blocks.SelectRegion("TVE Auth Example", "- None -");
         blocks.ClickSaveBlocksBtn();
-        applib.openSitePage("/#overlay=admin/config/development/jquery_update");
-        overlay.SwitchToActiveFrame();
+        applib.openSitePage("/admin/config/development/jquery_update");
         jqueryUpdate.SelectDefaultjQueryVersion("1.5");
         jqueryUpdate.ClickSaveConfigurationBtn(); 
+        taxonomy.NavigateSiteViaActions("Home>>Flush all caches");
+        taxonomy.NavigateSiteViaActions("Home");
         
 	}
 }

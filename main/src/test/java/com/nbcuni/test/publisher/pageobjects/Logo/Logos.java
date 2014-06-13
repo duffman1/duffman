@@ -1,5 +1,8 @@
 package com.nbcuni.test.publisher.pageobjects.Logo;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -12,8 +15,11 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
-
+import com.nbcuni.test.publisher.common.AppLib;
+import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.pageobjects.Overlay;
+import com.nbcuni.test.publisher.pageobjects.Content.Delete;
 
 /*********************************************
  * publisher.nbcuni.com Logos Library. Copyright
@@ -26,17 +32,27 @@ public class Logos {
 
 	private Driver webDriver;
 	private WebDriverWait wait;
+	private Config config;
+	private Overlay overlay;
+	private Delete delete;
 	
     //PAGE OBJECT CONSTRUCTOR
-    public Logos(Driver webDriver) {
+    public Logos(Driver webDriver, AppLib applib) {
     	this.webDriver = webDriver;
-        PageFactory.initElements(webDriver, this);
+    	PageFactory.initElements(webDriver, this);
         wait = new WebDriverWait(webDriver, 10);
+        config = new Config();
+        overlay = new Overlay(webDriver, applib);
+        delete = new Delete(webDriver);
     }
     
     //PAGE OBJECT IDENTIFIERS
     @FindBy(how = How.CSS, using = "img[alt='Home']")
     private WebElement HomeLogo_Img;
+    
+    private List<WebElement> AllLogo_Ttls() {
+    	return webDriver.findElements(By.xpath("//div[@class='view-content']//tbody/tr/td[contains(@class, 'title')]"));
+    }
     
     private WebElement Logo_Img(String logoTitle) {
     	return webDriver.findElement(By.xpath("//div[@class='view-content']//tbody/tr/td[contains(text(), '" + logoTitle + "')]/..//img"));
@@ -111,6 +127,29 @@ public class Logos {
             if (imgLoaded == true){ break;}
             Thread.sleep(500);
         }
+    }
+    
+    public void DeleteAllLogos() throws Exception {
+    	
+    	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+    	
+    	if (AllLogo_Ttls().size() > 0) {
+    		
+    		List<String> allLogoTtls = new ArrayList<String>();
+    		for (WebElement logo : AllLogo_Ttls()) {
+    			 allLogoTtls.add(logo.getText().trim());
+    		}
+    		
+    		//delete each logo
+    		for (String title : allLogoTtls) {
+    			this.ClickEditExtendMenuBtn(title);
+    			this.ClickEditMenuDeleteBtn(title);
+    			overlay.SwitchToActiveFrame();
+    			delete.ClickDeleteBtn();
+    		}
+    	}
+    	
+    	webDriver.manage().timeouts().implicitlyWait(config.getImplicitWaitTime(), TimeUnit.SECONDS);
     }
     
     

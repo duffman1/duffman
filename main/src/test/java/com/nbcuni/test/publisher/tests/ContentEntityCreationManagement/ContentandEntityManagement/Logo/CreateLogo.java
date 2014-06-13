@@ -28,10 +28,15 @@ public class CreateLogo extends ParentTest{
         	UserLogin userLogin = applib.openApplication();
         	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
             
-            //Step 1a
-            Modules modules = new Modules(webDriver, applib);
+        	//Setup
+        	Modules modules = new Modules(webDriver, applib);
             modules.VerifyModuleEnabled("Logo Manager");
-            
+        	taxonomy.NavigateSite("Content>>Logos");
+        	overlay.SwitchToActiveFrame();
+        	Logos logos = new Logos(webDriver, applib);
+    	    logos.DeleteAllLogos();
+        	overlay.ClickCloseOverlayLnk();
+        	
             //Step 2
             taxonomy.NavigateSite("Content>>Logos>>Add Logo");
             overlay.SwitchToActiveFrame();
@@ -71,7 +76,6 @@ public class CreateLogo extends ParentTest{
         	String pub7DateTime60SecondsFuture = pub7DateTimeFormat.format(date60SecondsFuture);
     	    contentParent.VerifyPageContentPresent(Arrays.asList(logoTitle, 
     	    		pub7DateTime15SecondsFuture.replace("24:", "00:"), pub7DateTime60SecondsFuture.replace("24:", "00:")));
-    	    Logos logos = new Logos(webDriver);
     	    logos.VerifyLogoImgPresent(logoTitle, "nbclogosmall");
     	    
     	    //Step 5

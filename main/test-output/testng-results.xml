@@ -2,6 +2,9 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
     <line>
+      <![CDATA[STEP 1]]>
+    </line>
+    <line>
       <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
     </line>
     <line>
@@ -14,72 +17,192 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
+      <![CDATA[SETUP]]>
+    </line>
+    <line>
+      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com/admin/config/development/jquery_update'.]]>
+    </line>
+    <line>
+      <![CDATA[Select '1.5' from the 'Default jQuery Version' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configuration' button.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 2]]>
+    </line>
+    <line>
       <![CDATA[Click the 'Modules' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to frame titled 'Modules'.]]>
+      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Sticky Edit Actions' in the 'Filter Name' text box.]]>
+      <![CDATA[Enter 'TVE Adobe Pass' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Wait for the module titled 'Sticky Edit Actions' to appear in the list.]]>
+      <![CDATA[Wait for the module titled 'TVE Adobe Pass' to appear in the list.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Devel' in the 'Filter Name' text box.]]>
+      <![CDATA[Verify the 'TVE Adobe Pass' check box is checked.]]>
     </line>
     <line>
-      <![CDATA[Wait for the module titled 'Devel' to appear in the list.]]>
+      <![CDATA[Enter 'TVE Auth Example' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Enter 'ImageField Focus' in the 'Filter Name' text box.]]>
+      <![CDATA[Wait for the module titled 'TVE Auth Example' to appear in the list.]]>
     </line>
     <line>
-      <![CDATA[Wait for the module titled 'ImageField Focus' to appear in the list.]]>
+      <![CDATA[Verify the 'TVE Auth Example' check box is checked.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Database logging' in the 'Filter Name' text box.]]>
+      <![CDATA[Enter 'TVE MVPD' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Wait for the module titled 'Database logging' to appear in the list.]]>
+      <![CDATA[Wait for the module titled 'TVE MVPD' to appear in the list.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Pub Post' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the module titled 'Pub Post' to appear in the list.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Pub Post' check box is checked.]]>
+      <![CDATA[Verify the 'TVE MVPD' check box is checked.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
     </line>
+    <line>
+      <![CDATA[STEP 3]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Structure' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Blocks' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Select the block name 'TVE Auth Example' from the 'Sidebar first' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save Blocks' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The block settings have been updated.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[SKIP TO STEP 10 - TVE ALREADY CONFIGURED]]>
+    </line>
+    <line>
+      <![CDATA[STEP 10]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Configure jQuery' link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'jQuery update dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Select '1.7' from the 'Default jQuery Version' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configuration' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 11]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Authentication status checked:' value is 'true'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Authenticated' value is 'false'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Selected MVPD:' value is 'none'.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 12]]>
+    </line>
+    <line>
+      <![CDATA[Select 'Optimum' from the 'Al VMPDs:' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'login' button.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'research40' in the 'Optimum ID' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'support40' in the 'Password' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'SIGN IN' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Authentication status checked:' value is 'true'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Authenticated' value is 'true'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Selected MVPD:' value is 'Cablevision'.]]>
+    </line>
+    <line>
+      <![CDATA[CLEANUP]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Structure' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Blocks' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Select the block name 'TVE Auth Example' from the '- None -' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save Blocks' button.]]>
+    </line>
+    <line>
+      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com/admin/config/development/jquery_update'.]]>
+    </line>
+    <line>
+      <![CDATA[Select '1.5' from the 'Default jQuery Version' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configuration' button.]]>
+    </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="112288" started-at="2014-06-13T11:45:28Z" finished-at="2014-06-13T11:47:20Z">
+  <suite name="Default suite" duration-ms="132961" started-at="2014-06-13T17:01:55Z" finished-at="2014-06-13T17:04:08Z">
     <groups>
-      <group name="mpx">
-        <method signature="TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@77f06d35]" name="TestSetup_Test" class="com.nbcuni.test.publisher.tests.Setup.TestSetup"/>
-      </group> <!-- mpx -->
       <group name="full">
-        <method signature="TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@77f06d35]" name="TestSetup_Test" class="com.nbcuni.test.publisher.tests.Setup.TestSetup"/>
+        <method signature="ImplementTVEModulesCore.ImplementTVEModulesCore_TC3261()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@76b29b4a]" name="ImplementTVEModulesCore_TC3261" class="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore"/>
       </group> <!-- full -->
-      <group name="smoke">
-        <method signature="TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@77f06d35]" name="TestSetup_Test" class="com.nbcuni.test.publisher.tests.Setup.TestSetup"/>
-      </group> <!-- smoke -->
     </groups>
-    <test name="Default test" duration-ms="112288" started-at="2014-06-13T11:45:28Z" finished-at="2014-06-13T11:47:20Z">
-      <class name="com.nbcuni.test.publisher.tests.Setup.TestSetup">
-        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@77f06d35]" name="startGridAndHub" is-config="true" duration-ms="11690" started-at="2014-06-13T07:45:16Z" finished-at="2014-06-13T07:45:28Z">
+    <test name="Default test" duration-ms="132961" started-at="2014-06-13T17:01:55Z" finished-at="2014-06-13T17:04:08Z">
+      <class name="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore">
+        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@76b29b4a]" name="startGridAndHub" is-config="true" duration-ms="11673" started-at="2014-06-13T13:01:43Z" finished-at="2014-06-13T13:01:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startGridAndHub -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@77f06d35]" name="startSelenium" is-config="true" duration-ms="2357" started-at="2014-06-13T07:45:28Z" finished-at="2014-06-13T07:45:30Z">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@76b29b4a]" name="startSelenium" is-config="true" duration-ms="2484" started-at="2014-06-13T13:01:55Z" finished-at="2014-06-13T13:01:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@77f06d35]" name="TestSetup_Test" duration-ms="109350" started-at="2014-06-13T07:45:30Z" finished-at="2014-06-13T07:47:19Z">
+        <test-method status="PASS" signature="ImplementTVEModulesCore_TC3261()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@76b29b4a]" name="ImplementTVEModulesCore_TC3261" duration-ms="129883" started-at="2014-06-13T13:01:57Z" finished-at="2014-06-13T13:04:07Z">
           <reporter-output>
+            <line>
+              <![CDATA[STEP 1]]>
+            </line>
             <line>
               <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
             </line>
@@ -93,65 +216,188 @@
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
+              <![CDATA[SETUP]]>
+            </line>
+            <line>
+              <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com/admin/config/development/jquery_update'.]]>
+            </line>
+            <line>
+              <![CDATA[Select '1.5' from the 'Default jQuery Version' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configuration' button.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 2]]>
+            </line>
+            <line>
               <![CDATA[Click the 'Modules' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to frame titled 'Modules'.]]>
+              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
             </line>
             <line>
-              <![CDATA[Enter 'Sticky Edit Actions' in the 'Filter Name' text box.]]>
+              <![CDATA[Enter 'TVE Adobe Pass' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Wait for the module titled 'Sticky Edit Actions' to appear in the list.]]>
+              <![CDATA[Wait for the module titled 'TVE Adobe Pass' to appear in the list.]]>
             </line>
             <line>
-              <![CDATA[Enter 'Devel' in the 'Filter Name' text box.]]>
+              <![CDATA[Verify the 'TVE Adobe Pass' check box is checked.]]>
             </line>
             <line>
-              <![CDATA[Wait for the module titled 'Devel' to appear in the list.]]>
+              <![CDATA[Enter 'TVE Auth Example' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Enter 'ImageField Focus' in the 'Filter Name' text box.]]>
+              <![CDATA[Wait for the module titled 'TVE Auth Example' to appear in the list.]]>
             </line>
             <line>
-              <![CDATA[Wait for the module titled 'ImageField Focus' to appear in the list.]]>
+              <![CDATA[Verify the 'TVE Auth Example' check box is checked.]]>
             </line>
             <line>
-              <![CDATA[Enter 'Database logging' in the 'Filter Name' text box.]]>
+              <![CDATA[Enter 'TVE MVPD' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Wait for the module titled 'Database logging' to appear in the list.]]>
+              <![CDATA[Wait for the module titled 'TVE MVPD' to appear in the list.]]>
             </line>
             <line>
-              <![CDATA[Enter 'Pub Post' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the module titled 'Pub Post' to appear in the list.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Pub Post' check box is checked.]]>
+              <![CDATA[Verify the 'TVE MVPD' check box is checked.]]>
             </line>
             <line>
               <![CDATA[Click the 'Close Overlay X'.]]>
             </line>
+            <line>
+              <![CDATA[STEP 3]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Structure' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Blocks' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Select the block name 'TVE Auth Example' from the 'Sidebar first' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save Blocks' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The block settings have been updated.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[SKIP TO STEP 10 - TVE ALREADY CONFIGURED]]>
+            </line>
+            <line>
+              <![CDATA[STEP 10]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Configure jQuery' link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'jQuery update dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Select '1.7' from the 'Default jQuery Version' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configuration' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 11]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Authentication status checked:' value is 'true'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Authenticated' value is 'false'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Selected MVPD:' value is 'none'.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 12]]>
+            </line>
+            <line>
+              <![CDATA[Select 'Optimum' from the 'Al VMPDs:' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'login' button.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'research40' in the 'Optimum ID' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'support40' in the 'Password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'SIGN IN' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Authentication status checked:' value is 'true'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Authenticated' value is 'true'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Selected MVPD:' value is 'Cablevision'.]]>
+            </line>
+            <line>
+              <![CDATA[CLEANUP]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Structure' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Blocks' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Select the block name 'TVE Auth Example' from the '- None -' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save Blocks' button.]]>
+            </line>
+            <line>
+              <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com/admin/config/development/jquery_update'.]]>
+            </line>
+            <line>
+              <![CDATA[Select '1.5' from the 'Default jQuery Version' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configuration' button.]]>
+            </line>
           </reporter-output>
-        </test-method> <!-- TestSetup_Test -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@77f06d35]" name="stopSelenium" is-config="true" duration-ms="572" started-at="2014-06-13T07:47:19Z" finished-at="2014-06-13T07:47:20Z">
+        </test-method> <!-- ImplementTVEModulesCore_TC3261 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@76b29b4a]" name="stopSelenium" is-config="true" duration-ms="575" started-at="2014-06-13T13:04:07Z" finished-at="2014-06-13T13:04:08Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=TestSetup_Test status=SUCCESS method=TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@77f06d35] output=Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]]>
+                <![CDATA[[TestResult name=ImplementTVEModulesCore_TC3261 status=SUCCESS method=ImplementTVEModulesCore.ImplementTVEModulesCore_TC3261()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@76b29b4a] output=STEP 1]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@77f06d35]" name="stopGridAndHub" is-config="true" duration-ms="368" started-at="2014-06-13T07:47:20Z" finished-at="2014-06-13T07:47:20Z">
+        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@76b29b4a]" name="stopGridAndHub" is-config="true" duration-ms="375" started-at="2014-06-13T13:04:08Z" finished-at="2014-06-13T13:04:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopGridAndHub -->
-      </class> <!-- com.nbcuni.test.publisher.tests.Setup.TestSetup -->
+      </class> <!-- com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -28,7 +28,7 @@ public class TestSetup extends ParentTest{
         	UserLogin userLogin = applib.openApplication();
         	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
             
-            //disable sticky edit actions module
+        	//disable sticky edit actions module
             taxonomy.NavigateSite("Modules");
         	overlay.SwitchToFrame("Modules");
         	Modules modules = new Modules(webDriver, applib);
@@ -102,13 +102,11 @@ public class TestSetup extends ParentTest{
             allowedContentTypes.add("tv-episode");
             allowedContentTypes.add("tv-season");
             allowedContentTypes.add("tv-show");
-            
             List<WebElement> allContentTypes = webDriver.findElements(By.xpath("//a[text()='Content']/../ul//a[text()='Add content']/..//ul/li/a"));
             List<String> allContentTypeURLsToDelete = new ArrayList<String>();
             for (WebElement contentType : allContentTypes) {
             	allContentTypeURLsToDelete.add(contentType.getAttribute("href").replace(config.getConfigValue("AppURL") + "/node/add/", ""));
             }
-            
             for (String contentType : allContentTypeURLsToDelete) {
             	if (!allowedContentTypes.contains(contentType)) {
             		
