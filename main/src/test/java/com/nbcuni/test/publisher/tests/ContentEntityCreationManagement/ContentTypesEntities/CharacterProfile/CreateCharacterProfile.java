@@ -45,6 +45,5 @@ public class CreateCharacterProfile extends ParentTest{
             overlay.switchToDefaultContent();
             contentParent.VerifyMessageStatus("Character Profile " + characterName + " has been created.");
             
-       
     }
 }

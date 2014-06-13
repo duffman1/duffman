@@ -5,8 +5,8 @@
 	<parameter name="Browser" value="chrome"></parameter>
 	<parameter name="Admin1Username" value="admin@publisher.nbcuni.com"></parameter>
 	<parameter name="Admin1Password" value="pa55word"></parameter>
-	<parameter name="ReRunOnFailure" value="false"></parameter>
-	<parameter name="ReRunOnFailureCount" value="2"></parameter>
+	<parameter name="ReRunOnFailure" value="true"></parameter>
+	<parameter name="ReRunOnFailureCount" value="1"></parameter>
 	
   	<!--REPORT CONFIG-->
   	<parameter name="SendReportAutoEmails" value="true"></parameter>
@@ -46,7 +46,7 @@
   	
   	<!--WEBDRIVER WAIT CONFIG-->
   	<parameter name="ImplicitWaitTime" value="20"></parameter>
-  	<parameter name="PageLoadWaitTime" value="180"></parameter>
+  	<parameter name="PageLoadWaitTime" value="280"></parameter>
   	
   	<!--MISC CONFIG-->
   	<parameter name="PathToMediaContent" value="/src/test/java/com/nbcuni/test/publisher/content/MediaFiles/"></parameter>

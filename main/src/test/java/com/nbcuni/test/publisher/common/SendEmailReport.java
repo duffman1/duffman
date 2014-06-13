@@ -49,8 +49,11 @@ public class SendEmailReport {
 
             String failedTestScreenshotText = "";
             if (!failedTestsCount.equals(0)) {
-            	if (failedScreenshots.size() <= 20) {
+            	if (failedScreenshots.size() <= 30) {
             		failedTestScreenshotText = "Screenshots of each failed test are attached. ";
+            	}
+            	else {
+            		failedTestScreenshotText = "Screenshots of failed tests exceeded email size limit. ";
             	}
             }
             

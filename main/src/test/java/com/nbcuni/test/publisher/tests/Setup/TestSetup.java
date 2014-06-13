@@ -4,10 +4,13 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
+
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
+import com.nbcuni.test.publisher.pageobjects.Cron.Cron;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
@@ -109,12 +112,14 @@ public class TestSetup extends ParentTest{
             for (String contentType : allContentTypeURLsToDelete) {
             	if (!allowedContentTypes.contains(contentType)) {
             		
-            		applib.openSitePage("/#overlay=admin/structure/types/manage/" + contentType + "/delete");
-            		overlay.SwitchToActiveFrame();
+            		applib.openSitePage("/admin/structure/types/manage/" + contentType + "/delete");
             		webDriver.findElement(By.id("edit-submit")).click();
-            		overlay.ClickCloseOverlayLnk();
             	}
             }
+            
+            //run cron to clear out mpx content that's been deleted
+            Cron cron = new Cron(webDriver, applib);
+            cron.RunCron(false);
             
             //flush all caches
             taxonomy.NavigateSite("Home>>Flush all caches");

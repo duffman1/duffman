@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Pub 7 Concurrent Suite]" parallel="classes">
+<suite name="Failed suite [Pub 7 Consecutive Suite]">
   <parameter name="ReRunOnFailure" value="true"/>
   <parameter name="LocalAppiumHubPort" value="4724"/>
   <parameter name="Device" value="Iphone Simulator"/>
@@ -43,22 +43,22 @@
   <listeners>
     <listener class-name="com.nbcuni.test.publisher.common.CustomReport"/>
   </listeners>
-  <test name="All Concurrent Web Tests(failed)" parallel="classes">
+  <test name="All Consecutive Web Tests(failed)">
     <groups>
       <run>
         <include name="full"/>
       </run>
     </groups>
     <classes>
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile">
+      <class name="com.nbcuni.test.publisher.tests.Setup.TestSetup">
         <methods>
           <include name="startSelenium"/>
           <include name="stopGridAndHub"/>
-          <include name="CreateCharacterProfile_TC1041"/>
           <include name="startGridAndHub"/>
           <include name="stopSelenium"/>
+          <include name="TestSetup_Test"/>
         </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Setup.TestSetup -->
     </classes>
-  </test> <!-- All Concurrent Web Tests(failed) -->
-</suite> <!-- Failed suite [Pub 7 Concurrent Suite] -->
+  </test> <!-- All Consecutive Web Tests(failed) -->
+</suite> <!-- Failed suite [Pub 7 Consecutive Suite] -->

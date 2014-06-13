@@ -117,20 +117,21 @@ public class CustomReport extends EmailableReporter {
 	    }
 	  
 	    //get the screenshot path of each failed consecutive method
+    	SimpleDateFormat screenshotDateTimeFormat = new SimpleDateFormat("MMddyyhhmmssa");
 	    List<String> failedScreenshots = new ArrayList<String>();
 	    for(ITestResult consecutive_failed_result : consecutiveFailedTests.getAllResults())
 	    {
-	    	if (!failedScreenshots.contains(config.getPathToScreenshots() + consecutive_failed_result.getMethod().getMethodName() + ".png")) {
-	    		failedScreenshots.add(config.getPathToScreenshots() + consecutive_failed_result.getMethod().getMethodName() + ".png");
-	    	}
+	    	Date date = new Date(consecutive_failed_result.getEndMillis());
+	    	String screenshotPath = config.getPathToScreenshots() + consecutive_failed_result.getMethod().getMethodName() + "_" + screenshotDateTimeFormat.format(date) + ".png";
+	    	failedScreenshots.add(screenshotPath);
 	    }
 	    
 	    //get the screenshot path of each failed concurrent method
 	    for(ITestResult concurrent_failed_result : concurrentFailedTests.getAllResults())
 	    {
-	    	if (!failedScreenshots.contains(config.getPathToScreenshots() + concurrent_failed_result.getMethod().getMethodName() + ".png")) {	
-	    		failedScreenshots.add(config.getPathToScreenshots() + concurrent_failed_result.getMethod().getMethodName() + ".png");
-	    	}
+	    	Date date = new Date(concurrent_failed_result.getEndMillis());
+	    	String screenshotPath = config.getPathToScreenshots() + concurrent_failed_result.getMethod().getMethodName() + "_" + screenshotDateTimeFormat.format(date) + ".png";
+	    	failedScreenshots.add(screenshotPath);
 	    }
 	    
 	    //generate the report
@@ -144,9 +145,9 @@ public class CustomReport extends EmailableReporter {
   	  		storeReportsTo = config.getPathToReports();
   	  	} catch (Exception e) { System.out.println("Failed to get configuration path to reports directory."); }
 	
-  	  	DateFormat dateFormat = new SimpleDateFormat("MM/dd/yy hh:mm a");
+  	  	DateFormat reportDateFormat = new SimpleDateFormat("MM/dd/yy hh:mm a");
   	  	Date date = new Date();
-  	  	String fileExtension = dateFormat.format(date).replace("/", "");
+  	  	String fileExtension = reportDateFormat.format(date).replace("/", "");
   	  	fileExtension = fileExtension.replace(" ", "");
   	  	String environmentTitle = config.getConfigValue("AppURL").replace("http://", "").replace(".nbcupublisher7.publisher7.com", "").toUpperCase();
   	  	fileExtension = environmentTitle + "-" + fileExtension.replace(":", "") + ".html";
@@ -194,7 +195,8 @@ public class CustomReport extends EmailableReporter {
   	  	  	
   	  	  		String methodName = consecutive_failed_result.getMethod().getMethodName();
   	  	  		if (methodName.contains("_TC")) {
-  	  	  			String screenshotPath = config.getPathToScreenshots() + methodName + ".png";
+  	  	  		String screenshotPath = config.getPathToScreenshots() + methodName + "_" + screenshotDateTimeFormat.format(new Date(consecutive_failed_result.getEndMillis())) + ".png";
+  		    	
   	  	  			String[] tcID = methodName.split("_");
   	  	  		
   	  	  			try {
@@ -231,7 +233,8 @@ public class CustomReport extends EmailableReporter {
   	  	  	
   	  	  		String methodName = concurrent_failed_result.getMethod().getMethodName();
   	  	  		if (methodName.contains("_TC")) {
-  	  	  			String screenshotPath = config.getPathToScreenshots() + methodName + ".png";
+  	  	  		String screenshotPath = config.getPathToScreenshots() + methodName + "_" + screenshotDateTimeFormat.format(new Date(concurrent_failed_result.getEndMillis())) + ".png";
+  		    	
   	  	  			String[] tcID = methodName.split("_");
   	  	  		
   	  	  			try {
@@ -250,7 +253,6 @@ public class CustomReport extends EmailableReporter {
   	  	else {
   	  		System.out.println("Individual test cases were not updated in Rally per configuration setting.");
   	  	}
-  	  	
   	  	
   	  	//send auto email with report
   	    Integer passedTestCount = consecutivePassedTests.size() + concurrentPassedTests.size();

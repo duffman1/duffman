@@ -8,12 +8,14 @@ import org.openqa.selenium.TakesScreenshot;
 import org.testng.ITestResult;
 import org.testng.Reporter;
 import java.io.File;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**************************************************************************.
  * NBC.com Application Library. Copyright
  *
  * @author Brandon Clark
- * @version 2.2 Date: May 23, 2014
+ * @version 2.3 Date: June 12, 2014
  ***************************************************************************/
 
 public class AppLib {
@@ -100,10 +102,12 @@ public class AppLib {
     
     public void attachScreenshot(ITestResult result) throws Exception {
     	
-        String methodName = result.getMethod().getMethodName();
-        	
-        String storeScreenshotsTo = config.getPathToScreenshots();
-        String filePath = storeScreenshotsTo + methodName + ".png";
+    	Date date = new Date(result.getEndMillis());
+    	SimpleDateFormat dateTimeFormat = new SimpleDateFormat("MMddyyhhmmssa");
+    	String screenshotDateTime = dateTimeFormat.format(date);
+        String methodName = result.getMethod().getMethodName() + "_" + screenshotDateTime;
+        
+        String filePath = config.getPathToScreenshots() + methodName + ".png";
 
         Reporter.setCurrentTestResult(result); 
         Reporter.log("Screenshot saved to " + filePath + " ");
