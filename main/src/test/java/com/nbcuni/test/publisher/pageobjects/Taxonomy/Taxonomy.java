@@ -31,7 +31,7 @@ public class Taxonomy {
     }
     
     //PAGE OBJECT IDENTIFIERS AND SCRIPTS
-    private String MouseOver_Js = "var evObj = document.createEvent('MouseEvents');" + "evObj.initMouseEvent(\"mouseover\",true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);" + "arguments[0].dispatchEvent(evObj);";
+    //private String MouseOver_Js = "var evObj = document.createEvent('MouseEvents');" + "evObj.initMouseEvent(\"mouseover\",true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);" + "arguments[0].dispatchEvent(evObj);";
 	
     private WebElement Tier1_Lnk(String[] tiers) {
     	return webDriver.findElement(By.xpath("//li[contains(@class,'admin-menu-toolbar-category')]/a[text()='" + tiers[0] + "']"));
@@ -113,141 +113,11 @@ public class Taxonomy {
     				//TODO - update for all tier length. Right now almost all tests that leverage the devel module will be tier 3 taxonomy
     				Thread.sleep(250);
             		wait.until(ExpectedConditions.visibilityOf(HomeTier1_Lnk));
-            		webDriver.executeScript(MouseOver_Js, HomeTier1_Lnk);
-            		//actions.moveToElement(HomeTier1_Lnk).build().perform();
-            		Thread.sleep(250);
-            		wait.until(ExpectedConditions.visibilityOf(HomeDevelopmentTier2_Lnk));
-            		webDriver.executeScript(MouseOver_Js, HomeDevelopmentTier2_Lnk);
-            		//actions.moveToElement(HomeDevelopmentTier2_Lnk).build().perform();
-            		Thread.sleep(250);
-            		wait.until(ExpectedConditions.visibilityOf(HomeDevelopmentTier3_Lnk(tierLevel))).click();
-            		this.MouseOffTaxonomyElement(HomeDevelopmentTier3_Lnk(tierLevel));
-    			}
-    		}
-    		
-    		if (depth == 1) {
-    			Thread.sleep(250);
-    			wait.until(ExpectedConditions.visibilityOf(HomeTier1_Lnk)).click();
-    		}
-    		else if (depth == 2) {
-    			
-    			Thread.sleep(250);
-        		wait.until(ExpectedConditions.visibilityOf(HomeTier1_Lnk));
-        		webDriver.executeScript(MouseOver_Js, HomeTier1_Lnk);
-        		//actions.moveToElement(HomeTier1_Lnk).build().perform();
-        		Thread.sleep(250);
-        		wait.until(ExpectedConditions.visibilityOf(HomeTier2_Lnk(tierLevel))).click();
-        		this.MouseOffTaxonomyElement(HomeTier2_Lnk(tierLevel));
-    		}
-    		
-    	} else {
-    	
-    		if (depth == 1) { //tier 1 taxonomy
-    			Thread.sleep(250);
-    			Reporter.log("Click the '" + tierLevel[0] + "' menu link.");
-    			wait.until(ExpectedConditions.visibilityOf(Tier1_Lnk(tierLevel))).click();
-    		}
-    		else if (depth == 2) {
-    		
-    			Thread.sleep(250);
-    			wait.until(ExpectedConditions.visibilityOf(Tier1_Lnk(tierLevel)));
-    			Reporter.log("Mouse over the '" + tierLevel[0] + "' menu link.");
-    			webDriver.executeScript(MouseOver_Js, Tier1_Lnk(tierLevel));
-    			//actions.moveToElement(Tier1_Lnk(tierLevel)).build().perform();
-    			Thread.sleep(250);
-    			Reporter.log("Click the '" + tierLevel[1] + "' menu link.");
-    			wait.until(ExpectedConditions.visibilityOf(Tier2_Lnk(tierLevel))).click();
-    			this.MouseOffTaxonomyElement(Tier2_Lnk(tierLevel));
-    		
-    		}
-    		else if (depth == 3) {
-    		
-    			Thread.sleep(250);
-    			Reporter.log("Mouse over the '" + tierLevel[0] + "' menu link.");
-    			wait.until(ExpectedConditions.visibilityOf(Tier1_Lnk(tierLevel)));
-    			webDriver.executeScript(MouseOver_Js, Tier1_Lnk(tierLevel));
-    			//actions.moveToElement(Tier1_Lnk(tierLevel)).build().perform();
-    			Thread.sleep(250);
-    			Reporter.log("Mouse over the '" + tierLevel[1] + "' menu link.");
-    			wait.until(ExpectedConditions.visibilityOf(Tier2_Lnk(tierLevel)));
-    			webDriver.executeScript(MouseOver_Js, Tier2_Lnk(tierLevel));
-    			//actions.moveToElement(Tier2_Lnk(tierLevel)).build().perform();
-    			Thread.sleep(250);
-    			Reporter.log("Click the '" + tierLevel[2] + "' menu link.");
-    			wait.until(ExpectedConditions.visibilityOf(Tier3_Lnk(tierLevel))).click();
-    			this.MouseOffTaxonomyElement(Tier3_Lnk(tierLevel));
-    		
-    		}
-    		else if (depth == 4) {
-    		
-    			Thread.sleep(250);
-    			Reporter.log("Mouse over the '" + tierLevel[0] + "' menu link.");
-    			wait.until(ExpectedConditions.visibilityOf(Tier1_Lnk(tierLevel)));
-    			webDriver.executeScript(MouseOver_Js, Tier1_Lnk(tierLevel));
-    			//actions.moveToElement(Tier1_Lnk(tierLevel)).build().perform();
-    			Thread.sleep(250);
-    			Reporter.log("Mouse over the '" + tierLevel[1] + "' menu link.");
-    			wait.until(ExpectedConditions.visibilityOf(Tier2_Lnk(tierLevel)));
-    			webDriver.executeScript(MouseOver_Js, Tier2_Lnk(tierLevel));
-    			//actions.moveToElement(Tier2_Lnk(tierLevel)).build().perform();
-    			Thread.sleep(250);
-    			Reporter.log("Mouse over the '" + tierLevel[2] + "' menu link.");
-    			wait.until(ExpectedConditions.visibilityOf(Tier3_Lnk(tierLevel)));
-    			webDriver.executeScript(MouseOver_Js, Tier3_Lnk(tierLevel));
-    			//actions.moveToElement(Tier3_Lnk(tierLevel)).build().perform();
-    			Thread.sleep(250);
-    			Reporter.log("Click the '" + tierLevel[3] + "' menu link.");
-    			wait.until(ExpectedConditions.visibilityOf(Tier4_Lnk(tierLevel))).click();
-    			this.MouseOffTaxonomyElement(Tier4_Lnk(tierLevel));
-    		}
-    		else if (depth == 5) {
-        		
-    			Thread.sleep(250);
-    			Reporter.log("Mouse over the '" + tierLevel[0] + "' menu link.");
-    			wait.until(ExpectedConditions.visibilityOf(Tier1_Lnk(tierLevel)));
-    			webDriver.executeScript(MouseOver_Js, Tier1_Lnk(tierLevel));
-    			//actions.moveToElement(Tier1_Lnk(tierLevel)).build().perform();
-    			Thread.sleep(250);
-    			Reporter.log("Mouse over the '" + tierLevel[1] + "' menu link.");
-    			wait.until(ExpectedConditions.visibilityOf(Tier2_Lnk(tierLevel)));
-    			webDriver.executeScript(MouseOver_Js, Tier2_Lnk(tierLevel));
-    			//actions.moveToElement(Tier2_Lnk(tierLevel)).build().perform();
-    			Thread.sleep(250);
-    			Reporter.log("Mouse over the '" + tierLevel[2] + "' menu link.");
-    			wait.until(ExpectedConditions.visibilityOf(Tier3_Lnk(tierLevel)));
-    			webDriver.executeScript(MouseOver_Js, Tier3_Lnk(tierLevel));
-    			//actions.moveToElement(Tier3_Lnk(tierLevel)).build().perform();
-    			Thread.sleep(250);
-    			Reporter.log("Mouse over the '" + tierLevel[3] + "' menu link.");
-    			wait.until(ExpectedConditions.visibilityOf(Tier4_Lnk(tierLevel)));
-    			webDriver.executeScript(MouseOver_Js, Tier4_Lnk(tierLevel));
-    			//actions.moveToElement(Tier4_Lnk(tierLevel)).build().perform();
-    			Thread.sleep(250);
-    			Reporter.log("Click the '" + tierLevel[4] + "' menu link.");
-    			wait.until(ExpectedConditions.visibilityOf(Tier5_Lnk(tierLevel))).click();
-    			this.MouseOffTaxonomyElement(Tier5_Lnk(tierLevel));
-    		}
-    	}
-    }
-    
-    public void NavigateSiteViaActions(String menuPath) throws Exception {
-    	
-    	String[] tierLevel = menuPath.split(">>");
-    	
-    	WebDriverWait wait = new WebDriverWait(webDriver, 10);
-    	
-    	int depth = tierLevel.length;
-    	if (menuPath.startsWith("Home")) { //home link taxonomy
-    		
-    		if (menuPath.contains("Development")) {
-    			
-    			if (depth == 3) {
-    			
-    				Thread.sleep(250);
-            		wait.until(ExpectedConditions.visibilityOf(HomeTier1_Lnk));
+            		//webDriver.executeScript(MouseOver_Js, HomeTier1_Lnk);
             		actions.moveToElement(HomeTier1_Lnk).build().perform();
             		Thread.sleep(250);
             		wait.until(ExpectedConditions.visibilityOf(HomeDevelopmentTier2_Lnk));
+            		//webDriver.executeScript(MouseOver_Js, HomeDevelopmentTier2_Lnk);
             		actions.moveToElement(HomeDevelopmentTier2_Lnk).build().perform();
             		Thread.sleep(250);
             		wait.until(ExpectedConditions.visibilityOf(HomeDevelopmentTier3_Lnk(tierLevel))).click();
@@ -263,6 +133,7 @@ public class Taxonomy {
     			
     			Thread.sleep(250);
         		wait.until(ExpectedConditions.visibilityOf(HomeTier1_Lnk));
+        		//webDriver.executeScript(MouseOver_Js, HomeTier1_Lnk);
         		actions.moveToElement(HomeTier1_Lnk).build().perform();
         		Thread.sleep(250);
         		wait.until(ExpectedConditions.visibilityOf(HomeTier2_Lnk(tierLevel))).click();
@@ -281,6 +152,7 @@ public class Taxonomy {
     			Thread.sleep(250);
     			wait.until(ExpectedConditions.visibilityOf(Tier1_Lnk(tierLevel)));
     			Reporter.log("Mouse over the '" + tierLevel[0] + "' menu link.");
+    			//webDriver.executeScript(MouseOver_Js, Tier1_Lnk(tierLevel));
     			actions.moveToElement(Tier1_Lnk(tierLevel)).build().perform();
     			Thread.sleep(250);
     			Reporter.log("Click the '" + tierLevel[1] + "' menu link.");
@@ -293,10 +165,12 @@ public class Taxonomy {
     			Thread.sleep(250);
     			Reporter.log("Mouse over the '" + tierLevel[0] + "' menu link.");
     			wait.until(ExpectedConditions.visibilityOf(Tier1_Lnk(tierLevel)));
+    			//webDriver.executeScript(MouseOver_Js, Tier1_Lnk(tierLevel));
     			actions.moveToElement(Tier1_Lnk(tierLevel)).build().perform();
     			Thread.sleep(250);
     			Reporter.log("Mouse over the '" + tierLevel[1] + "' menu link.");
     			wait.until(ExpectedConditions.visibilityOf(Tier2_Lnk(tierLevel)));
+    			//webDriver.executeScript(MouseOver_Js, Tier2_Lnk(tierLevel));
     			actions.moveToElement(Tier2_Lnk(tierLevel)).build().perform();
     			Thread.sleep(250);
     			Reporter.log("Click the '" + tierLevel[2] + "' menu link.");
@@ -309,15 +183,17 @@ public class Taxonomy {
     			Thread.sleep(250);
     			Reporter.log("Mouse over the '" + tierLevel[0] + "' menu link.");
     			wait.until(ExpectedConditions.visibilityOf(Tier1_Lnk(tierLevel)));
-    			webDriver.executeScript(MouseOver_Js, Tier1_Lnk(tierLevel));
-    			//actions.moveToElement(Tier1_Lnk(tierLevel)).build().perform();
+    			//webDriver.executeScript(MouseOver_Js, Tier1_Lnk(tierLevel));
+    			actions.moveToElement(Tier1_Lnk(tierLevel)).build().perform();
     			Thread.sleep(250);
     			Reporter.log("Mouse over the '" + tierLevel[1] + "' menu link.");
     			wait.until(ExpectedConditions.visibilityOf(Tier2_Lnk(tierLevel)));
+    			//webDriver.executeScript(MouseOver_Js, Tier2_Lnk(tierLevel));
     			actions.moveToElement(Tier2_Lnk(tierLevel)).build().perform();
     			Thread.sleep(250);
     			Reporter.log("Mouse over the '" + tierLevel[2] + "' menu link.");
     			wait.until(ExpectedConditions.visibilityOf(Tier3_Lnk(tierLevel)));
+    			//webDriver.executeScript(MouseOver_Js, Tier3_Lnk(tierLevel));
     			actions.moveToElement(Tier3_Lnk(tierLevel)).build().perform();
     			Thread.sleep(250);
     			Reporter.log("Click the '" + tierLevel[3] + "' menu link.");
@@ -329,18 +205,22 @@ public class Taxonomy {
     			Thread.sleep(250);
     			Reporter.log("Mouse over the '" + tierLevel[0] + "' menu link.");
     			wait.until(ExpectedConditions.visibilityOf(Tier1_Lnk(tierLevel)));
+    			//webDriver.executeScript(MouseOver_Js, Tier1_Lnk(tierLevel));
     			actions.moveToElement(Tier1_Lnk(tierLevel)).build().perform();
     			Thread.sleep(250);
     			Reporter.log("Mouse over the '" + tierLevel[1] + "' menu link.");
     			wait.until(ExpectedConditions.visibilityOf(Tier2_Lnk(tierLevel)));
+    			//webDriver.executeScript(MouseOver_Js, Tier2_Lnk(tierLevel));
     			actions.moveToElement(Tier2_Lnk(tierLevel)).build().perform();
     			Thread.sleep(250);
     			Reporter.log("Mouse over the '" + tierLevel[2] + "' menu link.");
     			wait.until(ExpectedConditions.visibilityOf(Tier3_Lnk(tierLevel)));
+    			//webDriver.executeScript(MouseOver_Js, Tier3_Lnk(tierLevel));
     			actions.moveToElement(Tier3_Lnk(tierLevel)).build().perform();
     			Thread.sleep(250);
     			Reporter.log("Mouse over the '" + tierLevel[3] + "' menu link.");
     			wait.until(ExpectedConditions.visibilityOf(Tier4_Lnk(tierLevel)));
+    			//webDriver.executeScript(MouseOver_Js, Tier4_Lnk(tierLevel));
     			actions.moveToElement(Tier4_Lnk(tierLevel)).build().perform();
     			Thread.sleep(250);
     			Reporter.log("Click the '" + tierLevel[4] + "' menu link.");

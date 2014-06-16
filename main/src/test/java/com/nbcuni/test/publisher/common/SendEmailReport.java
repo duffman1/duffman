@@ -49,12 +49,8 @@ public class SendEmailReport {
 
             String failedTestScreenshotText = "";
             if (!failedTestsCount.equals(0)) {
-            	if (failedScreenshots.size() <= 30) {
-            		failedTestScreenshotText = "Screenshots of each failed test are attached. ";
-            	}
-            	else {
-            		failedTestScreenshotText = "Screenshots of failed tests exceeded email size limit. ";
-            	}
+            	failedTestScreenshotText = "Screenshots of each failed test are attached. ";
+            	
             }
             
             Integer failedIndividualTestCount = failedTestsCount / (config.getReRunOnFailureCount() + 1);
@@ -76,8 +72,7 @@ public class SendEmailReport {
             multipart.addBodyPart(messageBodyPart);
             
             //add each failed screenshot (if there are less than 20 due to file size restrictions)
-            if (failedScreenshots.size() <= 20) {
-            	MimeBodyPart screenshotMimeBodyParts = null;
+            MimeBodyPart screenshotMimeBodyParts = null;
             	for (String failedScreenshot : failedScreenshots) {
             	
             		String[] fileNames = failedScreenshot.split("screenshots");
@@ -89,8 +84,6 @@ public class SendEmailReport {
             		screenshotMimeBodyParts.setDataHandler(new DataHandler(screenshotSource));
             		screenshotMimeBodyParts.setFileName(fileName);
             		multipart.addBodyPart(screenshotMimeBodyParts);
-                
-            	}
             }
 
             message.setContent(multipart);
