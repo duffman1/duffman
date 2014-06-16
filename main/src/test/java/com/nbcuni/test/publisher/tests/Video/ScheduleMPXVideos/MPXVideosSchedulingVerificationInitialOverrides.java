@@ -100,10 +100,10 @@ public class MPXVideosSchedulingVerificationInitialOverrides extends ParentTest{
             taxonomy.NavigateSite("Content>>Files>>mpxMedia");
             overlay.SwitchToActiveFrame();
             SearchFor searchFor = new SearchFor(webDriver, applib);
-            searchFor.EnterTitle("Automation1");
+            searchFor.EnterTitle("AutomationDefault");
             searchFor.ClickApplyBtn();
-            searchFor.VerifySearchResultsPresent(Arrays.asList("Automation1"));
-            searchFor.ClickSearchTitleLnk("Automation1");
+            searchFor.VerifySearchResultsPresent(Arrays.asList("AutomationDefault"));
+            searchFor.ClickSearchTitleLnk("AutomationDefault");
             
             //Setup - resets overrides in the event of a previous failure
             WorkBench workBench = new WorkBench(webDriver, applib);
@@ -115,7 +115,7 @@ public class MPXVideosSchedulingVerificationInitialOverrides extends ParentTest{
             contentParent.ClickSaveBtn();
             
             overlay.switchToDefaultContent();
-            List<String> defaultVideoValues = Arrays.asList("Automation1", "MPX Released File Public IDs:",
+            List<String> defaultVideoValues = Arrays.asList("AutomationDefault", "MPX Released File Public IDs:",
                     "MPX Media Default Released File Public ID:", "MPX Media Categories:", "Series", "Show", "MPX Media Description:",
                     "Automation 1 example test", "MPX Media Author:", "Pub7 Content Provider", "MPX Media Air Date:",
                     "Wednesday, January 8, 2014", "MPX Media Keywords:", "mpx, metadata, field, override", "MPX Media Copyright:",
@@ -156,7 +156,7 @@ public class MPXVideosSchedulingVerificationInitialOverrides extends ParentTest{
             editMPXVideo.EnterMPXExpirationTime("05:00pm");
             contentParent.ClickSaveBtn();
             overlay.switchToDefaultContent();
-            contentParent.VerifyMessageStatus("MPX Video for Account \"DB TV\" (2312945284) Automation1 has been updated.");
+            contentParent.VerifyMessageStatus("MPX Video for Account \"DB TV\" (2312945284) AutomationDefault has been updated.");
 
             //Step 25
             SimpleDateFormat sdfDate2 = new SimpleDateFormat("EEEE, MMMM d, yyyy");
@@ -171,14 +171,14 @@ public class MPXVideosSchedulingVerificationInitialOverrides extends ParentTest{
             overlay.SwitchToFrame("Content dialog");
 
             //Step 27 //FAILS
-            searchFor.EnterTitle("Automation1");
+            searchFor.EnterTitle("AutomationDefault");
             searchFor.ClickApplyBtn();
             contentParent.VerifyPageContentPresent(Arrays.asList(availableDate, expirationDate));
 
             //Step 28 through 35 not automated due to mpx flash restriction
 
             //Step 36
-            searchFor.ClickSearchTitleLnk("Automation1"); */
+            searchFor.ClickSearchTitleLnk("AutomationDefault"); */
             workBench.ClickWorkBenchTab("Edit");
             overlay.SwitchToActiveFrame();
 
@@ -191,7 +191,7 @@ public class MPXVideosSchedulingVerificationInitialOverrides extends ParentTest{
             //Step 38
             contentParent.ClickSaveBtn();
             overlay.switchToDefaultContent();
-            contentParent.VerifyMessageStatus("MPX Video for Account \"DB TV\" (2312945284) Automation1 has been updated.");
+            contentParent.VerifyMessageStatus("MPX Video for Account \"DB TV\" (2312945284) AutomationDefault has been updated.");
             contentParent.VerifyPageContentPresent(defaultVideoValues);
             contentParent.VerifyPageContentNotPresent(overridenVideoValues);
 

@@ -113,6 +113,7 @@ public class BasicInformation {
     public void ClickCoverSelectBtn() throws Exception {
     	
     	Reporter.log("Click the 'Cover' select button.");
+    	webDriver.executeScript("window.scrollBy(0,-500);");
     	CoverSelect_Btn.click();
     }
     

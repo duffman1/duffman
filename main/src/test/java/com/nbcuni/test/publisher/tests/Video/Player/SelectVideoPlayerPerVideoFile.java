@@ -60,13 +60,13 @@ public class SelectVideoPlayerPerVideoFile extends ParentTest{
         		//Step 3
         		overlay.SwitchToActiveFrame();
         		SearchFor searchFor = new SearchFor(webDriver, applib);
-        		searchFor.EnterTitle("Automation1");
+        		searchFor.EnterTitle("AutomationDefault");
         		searchFor.ClickApplyBtn();
 
         		//Step 4
         		overlay.switchToDefaultContent();
         		Content content = new Content(webDriver, applib);
-        		content.ClickEditMenuBtn("Automation1");
+        		content.ClickEditMenuBtn("AutomationDefault");
         		
         		//Step 5 and 6
         		EditMPXVideo editMPXVideo = new EditMPXVideo(webDriver);
@@ -79,16 +79,16 @@ public class SelectVideoPlayerPerVideoFile extends ParentTest{
         		//Step 8 through 19 (truncated as test steps no longer match application functionality)
         		overlay.switchToDefaultContent();
         		taxonomy.NavigateSite("Content>>Files>>mpxMedia");
-        		searchFor.EnterTitle("Automation1");
+        		searchFor.EnterTitle("AutomationDefault");
         		searchFor.ClickApplyBtn();
-        		content.ClickEditMenuBtn("Automation1");
+        		content.ClickEditMenuBtn("AutomationDefault");
         		editMPXVideo.SelectPubMPXVideoPlayer("VeXC0F2L9wg2");
         		contentParent.ClickSaveBtn();
         		overlay.switchToDefaultContent();
         		taxonomy.NavigateSite("Content>>Files>>mpxMedia");
-        		searchFor.EnterTitle("Automation1");
+        		searchFor.EnterTitle("AutomationDefault");
         		searchFor.ClickApplyBtn();
-        		content.ClickEditMenuBtn("Automation1");
+        		content.ClickEditMenuBtn("AutomationDefault");
         		editMPXVideo.VerifyPubMPXVideoPlayerSelectedOption("VeXC0F2L9wg2");
         	
         	}

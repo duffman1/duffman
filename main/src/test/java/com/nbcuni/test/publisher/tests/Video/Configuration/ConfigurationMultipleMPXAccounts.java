@@ -125,9 +125,9 @@ public class ConfigurationMultipleMPXAccounts extends ParentTest{
             taxonomy.NavigateSite("Content>>Files>>mpxMedia");
             overlay.SwitchToActiveFrame();
             SearchFor searchFor = new SearchFor(webDriver, applib);
-            searchFor.EnterTitle("Automation1");
+            searchFor.EnterTitle("AutomationDefault");
             searchFor.ClickApplyBtn();
-            searchFor.VerifySearchResultsPresent(Arrays.asList("Automation1"));
+            searchFor.VerifySearchResultsPresent(Arrays.asList("AutomationDefault"));
 
             //Step 10
             taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");

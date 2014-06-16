@@ -29,6 +29,8 @@ public class ImplementTVEModulesCore extends ParentTest {
 		userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
        
 		Reporter.log("SETUP");
+		Modules modules = new Modules(webDriver, applib);
+		modules.VerifyModuleEnabled("jQuery Update");
 		jQueryUpdate jqueryUpdate = new jQueryUpdate(webDriver);
         applib.openSitePage("/admin/config/development/jquery_update");
         jqueryUpdate.SelectDefaultjQueryVersion("1.5");
@@ -39,7 +41,6 @@ public class ImplementTVEModulesCore extends ParentTest {
 		Reporter.log("STEP 2");
 		taxonomy.NavigateSite("Modules");
         overlay.SwitchToActiveFrame();
-        Modules modules = new Modules(webDriver, applib);
         modules.EnterFilterName("TVE Adobe Pass");
         modules.EnableModule("TVE Adobe Pass");
         modules.EnterFilterName("TVE Auth Example");

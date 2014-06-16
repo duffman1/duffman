@@ -84,9 +84,9 @@ public class DefaultPlayerOptionsVerification extends ParentTest{
         		
         		//Step 18
         		SearchFor searchFor = new SearchFor(webDriver, applib);
-        		searchFor.EnterTitle("Automation1");
+        		searchFor.EnterTitle("AutomationDefault");
         		searchFor.ClickApplyBtn();
-        		searchFor.ClickSearchTitleLnk("Automation1");
+        		searchFor.ClickSearchTitleLnk("AutomationDefault");
         		
         		//Step 19
         		WorkBench workBench = new WorkBench(webDriver, applib);
