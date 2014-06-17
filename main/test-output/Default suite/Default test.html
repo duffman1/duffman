@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Jun 16 10:59:22 EDT 2014</td>
+<td>Started on:</td><td>Tue Jun 17 13:43:42 EDT 2014</td>
 </tr>
-<tr><td>Total time:</td><td>108 seconds (108367 ms)</td>
+<tr><td>Total time:</td><td>242 seconds (242656 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,12 +76,12 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery.CreateMediaGallery_TC1042()'><b>CreateMediaGallery_TC1042</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery<br/>
-<a href="#Output-821622613" onClick='toggleBox("Output-821622613", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-143304915" onClick='toggleBox("Output-143304915", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-821622613" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-821622613">
+<a href="#Output-143304915" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-143304915">
 STEP 1<br/>
-Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.<br/>
+Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.<br/>
 Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
 Enter 'pa55word' in the 'Password' text box.<br/>
 Click the 'Login' button.<br/>
@@ -101,7 +101,7 @@ Mouse over the 'Add content' menu link.<br/>
 Click the 'Media Gallery' menu link.<br/>
 Switch to the active frame titled 'Create Media Gallery dialog'.<br/>
 STEP 3<br/>
-Enter 'b66f93b3e60d49b' in the 'Title' text box.<br/>
+Enter '97b9a7282d394cc' in the 'Title' text box.<br/>
 Switch to the Synopsis frame.<br/>
 Enter a randomized text string into the 'Body' text area.<br/>
 Switch to the active frame titled 'Create Media Gallery dialog'.<br/>
@@ -117,6 +117,7 @@ Click the 'Start upload' link.<br/>
 Wait for file upload to reach 100%<br/>
 Click the 'Next' button.<br/>
 Switch to the active frame titled 'Create Media Gallery dialog'.<br/>
+Wait for the image load 'spinner' image to not be present, indicating image loading is complete.<br/>
 Click the 'Add' button.<br/>
 Switch to the select file frame.<br/>
 Click the 'Add files' link.<br/>
@@ -135,12 +136,12 @@ Assert the the img is loaded and visible.<br/>
 STEP 4 and 5<br/>
 Click the 'Edit All' button.<br/>
 STEP 6<br/>
-Enter 'bc0be2e4c1734cf' in the 'Keywords' text box with index '1'.<br/>
+Enter 'e26db0743d11468' in the 'Keywords' text box with index '1'.<br/>
 Click the 'Save' button with index '2'.<br/>
 Switch to the active frame titled 'Create Media Gallery dialog'.<br/>
 STEP 7<br/>
 Click the 'Edit All' button.<br/>
-Assert that the Keywords Text box with index '1' value matches 'bc0be2e4c1734cf'.<br/>
+Assert that the Keywords Text box with index '1' value matches 'e26db0743d11468'.<br/>
 Click the 'Save' button with index '2'.<br/>
 Switch to the active frame titled 'Create Media Gallery dialog'.<br/>
 STEP 8<br/>
@@ -154,6 +155,7 @@ Wait for the file search 'spinner' image to not be present, indicating image sea
 Click mpx media thumbnail image number 1<br/>
 Click on the 'Submit' button.<br/>
 Switch to the active frame titled 'Create Media Gallery dialog'.<br/>
+Wait for the image load 'spinner' image to not be present, indicating image loading is complete.<br/>
 STEP 9<br/>
 Click the 'Edit All' button.<br/>
 Verify the MPX Player frame is present.<br/>
@@ -177,7 +179,7 @@ Verify the Cover image src contains 'HanSolo'.<br/>
 Wait for the image to fully load.<br/>
 STEP 11<br/>
 Click the 'Save' button.<br/>
-Verify success message of 'Media Gallery b66f93b3e60d49b has been created.' is present.<br/>
+Verify success message of 'Media Gallery 97b9a7282d394cc has been created.' is present.<br/>
 STEP 12<br/>
 Mouse over the 'Structure' menu link.<br/>
 Mouse over the 'Content types' menu link.<br/>
@@ -192,8 +194,8 @@ Click the 'Close Overlay X'.<br/>
 STEP 13<br/>
 Click the 'Content' menu link.<br/>
 Switch to the active frame titled 'Content dialog'.<br/>
-Click the 'Edit' link for content item titled 'b66f93b3e60d49b.<br/>
-Switch to the active frame titled 'Edit Media Gallery b66f93b3e60d49b dialog'.<br/>
+Click the 'Edit' link for content item titled '97b9a7282d394cc.<br/>
+Switch to the active frame titled 'Edit Media Gallery 97b9a7282d394cc dialog'.<br/>
 Click the 'Add' button.<br/>
 Switch to the select file frame.<br/>
 Click the 'Add files' link.<br/>
@@ -204,7 +206,8 @@ Click the 'Open' button.<br/>
 Click the 'Start upload' link.<br/>
 Wait for file upload to reach 100%<br/>
 Click the 'Next' button.<br/>
-Switch to the active frame titled 'Edit Media Gallery b66f93b3e60d49b dialog'.<br/>
+Switch to the active frame titled 'Edit Media Gallery 97b9a7282d394cc dialog'.<br/>
+Wait for the image load 'spinner' image to not be present, indicating image loading is complete.<br/>
 Verify the img source of the Media Item contains 'IPTCDefault'.<br/>
 Assert the the img is loaded and visible.<br/>
 Verify the img source of the Media Item contains 'nbclogosmall'.<br/>
@@ -215,12 +218,12 @@ Assert the the img is loaded and visible.<br/>
 STEP 14<br/>
 Click the 'Save' button.<br/>
 Switch to the active frame titled 'Content dialog'.<br/>
-Verify success message of 'Media Gallery b66f93b3e60d49b has been updated.' is present.<br/>
+Verify success message of 'Media Gallery 97b9a7282d394cc has been updated.' is present.<br/>
 </div>
 </td>
 <td></td>
-<td>105</td>
-<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery@2f380a71</td></tr>
+<td>239</td>
+<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery@56f711d0</td></tr>
 </table><p>
 </body>
 </html>

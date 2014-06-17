@@ -5,7 +5,7 @@
       <![CDATA[STEP 1]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
+      <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]>
     </line>
     <line>
       <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
@@ -65,7 +65,7 @@
       <![CDATA[STEP 3]]>
     </line>
     <line>
-      <![CDATA[Enter 'b66f93b3e60d49b' in the 'Title' text box.]]>
+      <![CDATA[Enter '97b9a7282d394cc' in the 'Title' text box.]]>
     </line>
     <line>
       <![CDATA[Switch to the Synopsis frame.]]>
@@ -111,6 +111,9 @@
     </line>
     <line>
       <![CDATA[Switch to the active frame titled 'Create Media Gallery dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the image load 'spinner' image to not be present, indicating image loading is complete.]]>
     </line>
     <line>
       <![CDATA[Click the 'Add' button.]]>
@@ -167,7 +170,7 @@
       <![CDATA[STEP 6]]>
     </line>
     <line>
-      <![CDATA[Enter 'bc0be2e4c1734cf' in the 'Keywords' text box with index '1'.]]>
+      <![CDATA[Enter 'e26db0743d11468' in the 'Keywords' text box with index '1'.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save' button with index '2'.]]>
@@ -182,7 +185,7 @@
       <![CDATA[Click the 'Edit All' button.]]>
     </line>
     <line>
-      <![CDATA[Assert that the Keywords Text box with index '1' value matches 'bc0be2e4c1734cf'.]]>
+      <![CDATA[Assert that the Keywords Text box with index '1' value matches 'e26db0743d11468'.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save' button with index '2'.]]>
@@ -222,6 +225,9 @@
     </line>
     <line>
       <![CDATA[Switch to the active frame titled 'Create Media Gallery dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the image load 'spinner' image to not be present, indicating image loading is complete.]]>
     </line>
     <line>
       <![CDATA[STEP 9]]>
@@ -293,7 +299,7 @@
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'Media Gallery b66f93b3e60d49b has been created.' is present.]]>
+      <![CDATA[Verify success message of 'Media Gallery 97b9a7282d394cc has been created.' is present.]]>
     </line>
     <line>
       <![CDATA[STEP 12]]>
@@ -338,10 +344,10 @@
       <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Edit' link for content item titled 'b66f93b3e60d49b.]]>
+      <![CDATA[Click the 'Edit' link for content item titled '97b9a7282d394cc.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Edit Media Gallery b66f93b3e60d49b dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'Edit Media Gallery 97b9a7282d394cc dialog'.]]>
     </line>
     <line>
       <![CDATA[Click the 'Add' button.]]>
@@ -374,7 +380,10 @@
       <![CDATA[Click the 'Next' button.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Edit Media Gallery b66f93b3e60d49b dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'Edit Media Gallery 97b9a7282d394cc dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the image load 'spinner' image to not be present, indicating image loading is complete.]]>
     </line>
     <line>
       <![CDATA[Verify the img source of the Media Item contains 'IPTCDefault'.]]>
@@ -407,32 +416,32 @@
       <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'Media Gallery b66f93b3e60d49b has been updated.' is present.]]>
+      <![CDATA[Verify success message of 'Media Gallery 97b9a7282d394cc has been updated.' is present.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="108367" started-at="2014-06-16T14:59:22Z" finished-at="2014-06-16T15:01:10Z">
+  <suite name="Default suite" duration-ms="242656" started-at="2014-06-17T17:43:42Z" finished-at="2014-06-17T17:47:45Z">
     <groups>
       <group name="full">
-        <method signature="CreateMediaGallery.CreateMediaGallery_TC1042()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery@2f380a71]" name="CreateMediaGallery_TC1042" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery"/>
+        <method signature="CreateMediaGallery.CreateMediaGallery_TC1042()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery@56f711d0]" name="CreateMediaGallery_TC1042" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery"/>
       </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="108367" started-at="2014-06-16T14:59:22Z" finished-at="2014-06-16T15:01:10Z">
+    <test name="Default test" duration-ms="242656" started-at="2014-06-17T17:43:42Z" finished-at="2014-06-17T17:47:45Z">
       <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery">
-        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery@2f380a71]" name="startGridAndHub" is-config="true" duration-ms="11826" started-at="2014-06-16T10:59:10Z" finished-at="2014-06-16T10:59:22Z">
+        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery@56f711d0]" name="startGridAndHub" is-config="true" duration-ms="11895" started-at="2014-06-17T13:43:31Z" finished-at="2014-06-17T13:43:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startGridAndHub -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery@2f380a71]" name="startSelenium" is-config="true" duration-ms="2119" started-at="2014-06-16T10:59:22Z" finished-at="2014-06-16T10:59:24Z">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery@56f711d0]" name="startSelenium" is-config="true" duration-ms="2462" started-at="2014-06-17T13:43:43Z" finished-at="2014-06-17T13:43:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="CreateMediaGallery_TC1042()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery@2f380a71]" name="CreateMediaGallery_TC1042" duration-ms="105660" started-at="2014-06-16T10:59:24Z" finished-at="2014-06-16T11:01:10Z">
+        <test-method status="PASS" signature="CreateMediaGallery_TC1042()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery@56f711d0]" name="CreateMediaGallery_TC1042" duration-ms="239591" started-at="2014-06-17T13:43:45Z" finished-at="2014-06-17T13:47:45Z">
           <reporter-output>
             <line>
               <![CDATA[STEP 1]]>
             </line>
             <line>
-              <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
+              <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]>
             </line>
             <line>
               <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
@@ -492,7 +501,7 @@
               <![CDATA[STEP 3]]>
             </line>
             <line>
-              <![CDATA[Enter 'b66f93b3e60d49b' in the 'Title' text box.]]>
+              <![CDATA[Enter '97b9a7282d394cc' in the 'Title' text box.]]>
             </line>
             <line>
               <![CDATA[Switch to the Synopsis frame.]]>
@@ -538,6 +547,9 @@
             </line>
             <line>
               <![CDATA[Switch to the active frame titled 'Create Media Gallery dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the image load 'spinner' image to not be present, indicating image loading is complete.]]>
             </line>
             <line>
               <![CDATA[Click the 'Add' button.]]>
@@ -594,7 +606,7 @@
               <![CDATA[STEP 6]]>
             </line>
             <line>
-              <![CDATA[Enter 'bc0be2e4c1734cf' in the 'Keywords' text box with index '1'.]]>
+              <![CDATA[Enter 'e26db0743d11468' in the 'Keywords' text box with index '1'.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save' button with index '2'.]]>
@@ -609,7 +621,7 @@
               <![CDATA[Click the 'Edit All' button.]]>
             </line>
             <line>
-              <![CDATA[Assert that the Keywords Text box with index '1' value matches 'bc0be2e4c1734cf'.]]>
+              <![CDATA[Assert that the Keywords Text box with index '1' value matches 'e26db0743d11468'.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save' button with index '2'.]]>
@@ -649,6 +661,9 @@
             </line>
             <line>
               <![CDATA[Switch to the active frame titled 'Create Media Gallery dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the image load 'spinner' image to not be present, indicating image loading is complete.]]>
             </line>
             <line>
               <![CDATA[STEP 9]]>
@@ -720,7 +735,7 @@
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'Media Gallery b66f93b3e60d49b has been created.' is present.]]>
+              <![CDATA[Verify success message of 'Media Gallery 97b9a7282d394cc has been created.' is present.]]>
             </line>
             <line>
               <![CDATA[STEP 12]]>
@@ -765,10 +780,10 @@
               <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Edit' link for content item titled 'b66f93b3e60d49b.]]>
+              <![CDATA[Click the 'Edit' link for content item titled '97b9a7282d394cc.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Edit Media Gallery b66f93b3e60d49b dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'Edit Media Gallery 97b9a7282d394cc dialog'.]]>
             </line>
             <line>
               <![CDATA[Click the 'Add' button.]]>
@@ -801,7 +816,10 @@
               <![CDATA[Click the 'Next' button.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Edit Media Gallery b66f93b3e60d49b dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'Edit Media Gallery 97b9a7282d394cc dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the image load 'spinner' image to not be present, indicating image loading is complete.]]>
             </line>
             <line>
               <![CDATA[Verify the img source of the Media Item contains 'IPTCDefault'.]]>
@@ -834,22 +852,22 @@
               <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'Media Gallery b66f93b3e60d49b has been updated.' is present.]]>
+              <![CDATA[Verify success message of 'Media Gallery 97b9a7282d394cc has been updated.' is present.]]>
             </line>
           </reporter-output>
         </test-method> <!-- CreateMediaGallery_TC1042 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery@2f380a71]" name="stopSelenium" is-config="true" duration-ms="577" started-at="2014-06-16T11:01:10Z" finished-at="2014-06-16T11:01:10Z">
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery@56f711d0]" name="stopSelenium" is-config="true" duration-ms="580" started-at="2014-06-17T13:47:45Z" finished-at="2014-06-17T13:47:45Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=CreateMediaGallery_TC1042 status=SUCCESS method=CreateMediaGallery.CreateMediaGallery_TC1042()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery@2f380a71] output=STEP 1]]]>
+                <![CDATA[[TestResult name=CreateMediaGallery_TC1042 status=SUCCESS method=CreateMediaGallery.CreateMediaGallery_TC1042()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery@56f711d0] output=STEP 1]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery@2f380a71]" name="stopGridAndHub" is-config="true" duration-ms="389" started-at="2014-06-16T11:01:10Z" finished-at="2014-06-16T11:01:11Z">
+        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery@56f711d0]" name="stopGridAndHub" is-config="true" duration-ms="391" started-at="2014-06-17T13:47:45Z" finished-at="2014-06-17T13:47:46Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopGridAndHub -->

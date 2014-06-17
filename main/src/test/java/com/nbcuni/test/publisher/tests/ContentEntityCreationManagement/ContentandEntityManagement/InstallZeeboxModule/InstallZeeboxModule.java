@@ -35,6 +35,7 @@ public class InstallZeeboxModule extends ParentTest{
             modules.VerifyModuleEnabled("zeebox Example");
             
             //Step 4
+            Thread.sleep(2000);
             webDriver.navigate().to(applib.getApplicationURL() + "/zeebox-example");
             
             //Step 5

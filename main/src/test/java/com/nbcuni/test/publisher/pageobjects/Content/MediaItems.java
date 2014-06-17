@@ -1,5 +1,7 @@
 package com.nbcuni.test.publisher.pageobjects.Content;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
@@ -9,6 +11,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.Reporter;
 
+import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
@@ -21,11 +24,13 @@ import com.nbcuni.test.publisher.common.Driver.Driver;
 public class MediaItems {
 
     private Driver webDriver;
+    private Config config;
     
     //PAGE OBJECT CONSTRUCTOR
     public MediaItems(Driver webDriver) {
         this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
+        config = new Config();
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -53,6 +58,9 @@ public class MediaItems {
     
     @FindBy(how = How.XPATH, using = "//input[contains(@id, 'edit-field-media-items-und-add-more')]")
     private WebElement Add_Btn;
+    
+    @FindBy(how = How.XPATH, using = "//div[@class='throbber']")
+    private WebElement Spinner_Img;
     
     
     //PAGE OBJECT METHODS
@@ -115,6 +123,29 @@ public class MediaItems {
     	
     	Reporter.log("Click the unique url link for image number " + imageIndex + ".");
     	Unique_Url(imageIndex).click();
+    }
+    
+    public void WaitForImgLoadComplete() throws Exception {
+    	
+    	Reporter.log("Wait for the image load 'spinner' image to not be present, indicating image loading is complete.");
+    	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+    	boolean searchComplete;
+        for (int second = 0; ; second++){
+            if (second >= 30) {
+                Assert.fail("image load not complete after timeout");
+            }
+            try {
+            	Spinner_Img.isDisplayed();
+            	searchComplete = false;
+            }
+            catch (Exception e) {
+            	searchComplete = true;
+            }
+                
+            if (searchComplete == true){ break;}
+            Thread.sleep(500);
+        }
+        webDriver.manage().timeouts().implicitlyWait(config.getImplicitWaitTime(), TimeUnit.SECONDS);
     }
     
     

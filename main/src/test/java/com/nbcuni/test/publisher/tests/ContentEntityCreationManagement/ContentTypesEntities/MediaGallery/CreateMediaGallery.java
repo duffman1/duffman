@@ -54,6 +54,7 @@ public class CreateMediaGallery extends ParentTest{
             		basicInformation.ClickMediaItemsSelectBtn();
             	}
             	else {
+            		mediaItems.WaitForImgLoadComplete();
             		mediaItems.ClickAddBtn();
             	}
                 selectFile.SwitchToSelectFileFrm();
@@ -117,6 +118,7 @@ public class CreateMediaGallery extends ParentTest{
     		selectFile.ClickMPXMediaThumbnailImage("nbclogosmall", "1");
     		selectFile.ClickSubmitBtn();
             overlay.SwitchToActiveFrame();
+            mediaItems.WaitForImgLoadComplete();
             
             Reporter.log("STEP 9");
             mediaItems.ClickEditAllBtn();
@@ -171,6 +173,7 @@ public class CreateMediaGallery extends ParentTest{
             addFile.WaitForSuccessfulUpload();
             addFile.ClickNextBtn();
             overlay.SwitchToActiveFrame();
+            mediaItems.WaitForImgLoadComplete();
             mediaItems.VerifyFileImagePresent("IPTCDefault", "2");
             mediaItems.VerifyFileImagePresent("nbclogosmall", "3");
             mediaItems.VerifyFileVideoPresent("Automation", "1");
