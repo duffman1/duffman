@@ -89,6 +89,28 @@ public class MPXAssets {
         }
     }
     
+    public void ScrollUpForImgPresent(String imgPath) throws Exception {
+    	
+    	for (int duration = 0; ; duration++){
+            if (duration >= 10) {
+                Assert.fail("MPX image '" + imgPath + "' is not present after 10 scrolls up");
+            }
+        
+            if (sikuli.exists(imgPath, 1) == null) {
+            	if (System.getProperty("os.name").contains("Windows")) {
+            		sikuli.wheel(Button.WHEEL_UP, 15);
+            	}
+            	else {
+            		sikuli.wheel(Button.WHEEL_DOWN, 15); //in java 7 sikuli mouse down is actually the wheel_up for mac
+            	}
+            }
+            else {
+            	break;
+            }
+            
+        }
+    }
+    
     public void Scroll(String DownOrUp, int wheelGradiant) throws Exception {
     	
     	if (DownOrUp == "Down") {

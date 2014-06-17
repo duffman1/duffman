@@ -77,9 +77,14 @@ public class MPXAddMedia {
     
     public void GiveFocusToMediaItem() throws Exception {
     	
-    	Reporter.log("Click the 'Available Date' label on the right hand side to give focus to the media item.");
-    	mpxAssets.WaitForImgPresent(getImagePath() + "Media/AvailableDate_Txb.png");
-    	sikuli.click(getImagePath() + "Media/AvailableDate_Txb.png");
+    	//Reporter.log("Click the 'Available Date' label on the right hand side to give focus to the media item.");
+    	//mpxAssets.WaitForImgPresent(getImagePath() + "Media/AvailableDate_Txb.png");
+    	//sikuli.click(getImagePath() + "Media/AvailableDate_Txb.png");
+    	
+    	Pattern pattern = new Pattern(getImagePath() + "Media/Pub7DefaultFields_Ctr.png").targetOffset(5, 19);
+    	Region region = sikuli.exists(pattern, 1);
+    	sikuli.click(region, 1);
+    	mpxAssets.ScrollUpForImgPresent(getImagePath() + "Media/AvailableDate_Txb.png");
     	
     }
     

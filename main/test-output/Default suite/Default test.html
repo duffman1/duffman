@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Jun 17 13:43:42 EDT 2014</td>
+<td>Started on:</td><td>Tue Jun 17 17:14:10 EDT 2014</td>
 </tr>
-<tr><td>Total time:</td><td>242 seconds (242656 ms)</td>
+<tr><td>Total time:</td><td>292 seconds (292839 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,155 +75,87 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery.CreateMediaGallery_TC1042()'><b>CreateMediaGallery_TC1042</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery<br/>
-<a href="#Output-143304915" onClick='toggleBox("Output-143304915", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.nbcuni.test.publisher.contentbuildscripts.MPXPerformanceUpgrade.CreateVideos.CreateVideos.Test()'><b>Test</b><br>Test class: com.nbcuni.test.publisher.contentbuildscripts.MPXPerformanceUpgrade.CreateVideos.CreateVideos<br/>
+<a href="#Output-1347474424" onClick='toggleBox("Output-1347474424", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-143304915" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-143304915">
-STEP 1<br/>
-Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.<br/>
-Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
-Enter 'pa55word' in the 'Password' text box.<br/>
+<a href="#Output-1347474424" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1347474424">
+Open the mpx platform.<br/>
+Enter 'mpx/AdminPub7QA' in the 'Username' text box.<br/>
+Enter 'Pa55word' in the 'Password' text box.<br/>
 Click the 'Login' button.<br/>
-SETUP<br/>
-Mouse over the 'Structure' menu link.<br/>
-Mouse over the 'Content types' menu link.<br/>
-Mouse over the 'Media Gallery' menu link.<br/>
-Mouse over the 'Manage fields' menu link.<br/>
-Click the 'Media Items' menu link.<br/>
-Switch to the active frame titled 'Media Items dialog'.<br/>
-Click the 'Save settings' button.<br/>
-Verify success message of 'Saved Media Items configuration.' is present.<br/>
-Click the 'Close Overlay X'.<br/>
-STEP 2<br/>
-Mouse over the 'Content' menu link.<br/>
-Mouse over the 'Add content' menu link.<br/>
-Click the 'Media Gallery' menu link.<br/>
-Switch to the active frame titled 'Create Media Gallery dialog'.<br/>
-STEP 3<br/>
-Enter '97b9a7282d394cc' in the 'Title' text box.<br/>
-Switch to the Synopsis frame.<br/>
-Enter a randomized text string into the 'Body' text area.<br/>
-Switch to the active frame titled 'Create Media Gallery dialog'.<br/>
-Enter 'short description' in the 'Short Description' text area.<br/>
-Click the 'Media Items Select' button.<br/>
-Switch to the select file frame.<br/>
-Click the 'Add files' link.<br/>
-Click the 'All Files' icon.<br/>
-Click the local 'Pictures' icon.<br/>
-Click the test picture link.<br/>
-Click the 'Open' button.<br/>
-Click the 'Start upload' link.<br/>
-Wait for file upload to reach 100%<br/>
-Click the 'Next' button.<br/>
-Switch to the active frame titled 'Create Media Gallery dialog'.<br/>
-Wait for the image load 'spinner' image to not be present, indicating image loading is complete.<br/>
-Click the 'Add' button.<br/>
-Switch to the select file frame.<br/>
-Click the 'Add files' link.<br/>
-Click the 'All Files' icon.<br/>
-Click the local 'Pictures' icon.<br/>
-Click the test picture link.<br/>
-Click the 'Open' button.<br/>
-Click the 'Start upload' link.<br/>
-Wait for file upload to reach 100%<br/>
-Click the 'Next' button.<br/>
-Switch to the active frame titled 'Create Media Gallery dialog'.<br/>
-Verify the img source of the Media Item contains 'IPTCDefault'.<br/>
-Assert the the img is loaded and visible.<br/>
-Verify the img source of the Media Item contains 'nbclogosmall'.<br/>
-Assert the the img is loaded and visible.<br/>
-STEP 4 and 5<br/>
-Click the 'Edit All' button.<br/>
-STEP 6<br/>
-Enter 'e26db0743d11468' in the 'Keywords' text box with index '1'.<br/>
-Click the 'Save' button with index '2'.<br/>
-Switch to the active frame titled 'Create Media Gallery dialog'.<br/>
-STEP 7<br/>
-Click the 'Edit All' button.<br/>
-Assert that the Keywords Text box with index '1' value matches 'e26db0743d11468'.<br/>
-Click the 'Save' button with index '2'.<br/>
-Switch to the active frame titled 'Create Media Gallery dialog'.<br/>
-STEP 8<br/>
-Click the 'Add' button.<br/>
-Switch to the select file frame.<br/>
-Click the 'PUBLISHER 7 MPX VIDEO' button.<br/>
-Enter 'Automation' in the 'Title' text box.<br/>
-Click the 'Apply' button.<br/>
-Wait for the file search 'spinner' image to be present.<br/>
-Wait for the file search 'spinner' image to not be present, indicating image search is complete.<br/>
-Click mpx media thumbnail image number 1<br/>
-Click on the 'Submit' button.<br/>
-Switch to the active frame titled 'Create Media Gallery dialog'.<br/>
-Wait for the image load 'spinner' image to not be present, indicating image loading is complete.<br/>
-STEP 9<br/>
-Click the 'Edit All' button.<br/>
-Verify the MPX Player frame is present.<br/>
-STEP 10<br/>
-Click the 'Cancel' link.<br/>
-Switch to the active frame titled 'Create Media Gallery dialog'.<br/>
-OPTIONAL STEP<br/>
-Click the 'Cover' select button.<br/>
-Switch to the select file frame.<br/>
-Enter the file path for file upload.<br/>
 Click the 'Upload' button.<br/>
-Wait for the file link to be visible after upload.<br/>
-Click the 'Next' button.<br/>
-Click the 'Public Local Files' radio button.<br/>
-Click the 'Next' button.<br/>
-Verify the file image 'HanSolo' is present.<br/>
-Verify the img is loaded and visible.<br/>
-Click the 'Save' button.<br/>
-Switch to the active frame titled 'Create Media Gallery dialog'.<br/>
-Verify the Cover image src contains 'HanSolo'.<br/>
-Wait for the image to fully load.<br/>
-STEP 11<br/>
-Click the 'Save' button.<br/>
-Verify success message of 'Media Gallery 97b9a7282d394cc has been created.' is present.<br/>
-STEP 12<br/>
-Mouse over the 'Structure' menu link.<br/>
-Mouse over the 'Content types' menu link.<br/>
-Mouse over the 'Media Gallery' menu link.<br/>
-Mouse over the 'Manage fields' menu link.<br/>
-Click the 'Media Items' menu link.<br/>
-Switch to the active frame titled 'Media Items dialog'.<br/>
-Enter 'test123' in the 'File directory' text box.<br/>
-Click the 'Save settings' button.<br/>
-Verify success message of 'Saved Media Items configuration' is present.<br/>
-Click the 'Close Overlay X'.<br/>
-STEP 13<br/>
-Click the 'Content' menu link.<br/>
-Switch to the active frame titled 'Content dialog'.<br/>
-Click the 'Edit' link for content item titled '97b9a7282d394cc.<br/>
-Switch to the active frame titled 'Edit Media Gallery 97b9a7282d394cc dialog'.<br/>
-Click the 'Add' button.<br/>
-Switch to the select file frame.<br/>
-Click the 'Add files' link.<br/>
-Click the 'All Files' icon.<br/>
-Click the local 'Pictures' icon.<br/>
-Click the test picture link.<br/>
+Click the 'Choose Files' button.<br/>
+Click the 'Movies' button in the OS Upload dialog.<br/>
+Click the Test Movie in th OS Upload dialog.<br/>
 Click the 'Open' button.<br/>
-Click the 'Start upload' link.<br/>
-Wait for file upload to reach 100%<br/>
-Click the 'Next' button.<br/>
-Switch to the active frame titled 'Edit Media Gallery 97b9a7282d394cc dialog'.<br/>
-Wait for the image load 'spinner' image to not be present, indicating image loading is complete.<br/>
-Verify the img source of the Media Item contains 'IPTCDefault'.<br/>
-Assert the the img is loaded and visible.<br/>
-Verify the img source of the Media Item contains 'nbclogosmall'.<br/>
-Assert the the img is loaded and visible.<br/>
-Verify the video title with index '1' contains 'Automation' and is present.<br/>
-Verify the img source of the Media Item contains 'nbclogosmall'.<br/>
-Assert the the img is loaded and visible.<br/>
-STEP 14<br/>
+Click the 'Upload' button in the Upload dialog.<br/>
+Enter 'Automationdd4a2edf62' in the 'Title' text box.<br/>
 Click the 'Save' button.<br/>
-Switch to the active frame titled 'Content dialog'.<br/>
-Verify success message of 'Media Gallery 97b9a7282d394cc has been updated.' is present.<br/>
+Click the 'Publish' button.<br/>
+Click the 'Publish to Pub 7 Primary' check box.<br/>
+Click the 'Publish' button from the upload dialog.<br/>
+Click the 'OK' button.<br/>
+Click the 'Publish' button.<br/>
+Click the 'Publish to Pub 7 Primary' check box.<br/>
+Click the 'Publish' button from the upload dialog.<br/>
+Click the 'Upload' button.<br/>
+Click the 'Choose Files' button.<br/>
+Click the 'Movies' button in the OS Upload dialog.<br/>
+Click the Test Movie in th OS Upload dialog.<br/>
+Click the 'Open' button.<br/>
+Click the 'Upload' button in the Upload dialog.<br/>
+Enter 'Automation6f46874a02' in the 'Title' text box.<br/>
+Click the 'Save' button.<br/>
+Click the 'Publish' button.<br/>
+Click the 'Publish to Pub 7 Primary' check box.<br/>
+Click the 'Publish' button from the upload dialog.<br/>
+Click the 'Upload' button.<br/>
+Click the 'Choose Files' button.<br/>
+Click the 'Movies' button in the OS Upload dialog.<br/>
+Click the Test Movie in th OS Upload dialog.<br/>
+Click the 'Open' button.<br/>
+Click the 'Upload' button in the Upload dialog.<br/>
+Enter 'Automation8bfd55b985' in the 'Title' text box.<br/>
+Click the 'Save' button.<br/>
+Click the 'Publish' button.<br/>
+Click the 'Publish to Pub 7 Primary' check box.<br/>
+Click the 'Publish' button from the upload dialog.<br/>
+Click the 'OK' button.<br/>
+Click the 'Publish' button.<br/>
+Click the 'Publish to Pub 7 Primary' check box.<br/>
+Click the 'Publish' button from the upload dialog.<br/>
+Click the 'Upload' button.<br/>
+Click the 'Choose Files' button.<br/>
+Click the 'Movies' button in the OS Upload dialog.<br/>
+Click the Test Movie in th OS Upload dialog.<br/>
+Click the 'Open' button.<br/>
+Click the 'Upload' button in the Upload dialog.<br/>
+Enter 'Automationdf2f270dfd' in the 'Title' text box.<br/>
+Click the 'Save' button.<br/>
+Click the 'Publish' button.<br/>
+Click the 'Publish to Pub 7 Primary' check box.<br/>
+Click the 'Publish' button from the upload dialog.<br/>
+Click the 'OK' button.<br/>
+Click the 'Publish' button.<br/>
+Click the 'Publish to Pub 7 Primary' check box.<br/>
+Click the 'Publish' button from the upload dialog.<br/>
+Click the 'Upload' button.<br/>
+Click the 'Choose Files' button.<br/>
+Click the 'Movies' button in the OS Upload dialog.<br/>
+Click the Test Movie in th OS Upload dialog.<br/>
+Click the 'Open' button.<br/>
+Click the 'Upload' button in the Upload dialog.<br/>
+Enter 'Automationfc1961728e' in the 'Title' text box.<br/>
+Click the 'Save' button.<br/>
+Click the 'Publish' button.<br/>
+Click the 'Publish to Pub 7 Primary' check box.<br/>
+Click the 'Publish' button from the upload dialog.<br/>
 </div>
 </td>
 <td></td>
-<td>239</td>
-<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery@56f711d0</td></tr>
+<td>290</td>
+<td>com.nbcuni.test.publisher.contentbuildscripts.MPXPerformanceUpgrade.CreateVideos.CreateVideos@461a5d57</td></tr>
 </table><p>
 </body>
 </html>

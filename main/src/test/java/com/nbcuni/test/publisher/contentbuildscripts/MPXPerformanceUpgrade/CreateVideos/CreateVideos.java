@@ -3,7 +3,8 @@ package com.nbcuni.test.publisher.contentbuildscripts.MPXPerformanceUpgrade.Crea
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
-
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXAddMedia;
@@ -52,8 +53,9 @@ public class CreateVideos extends ParentTest{
                 mpxPublishMedia.PublishDefaultVideo();
         		
         	    //log the creation time
-                long creationTime = System.nanoTime();
-            	bufferWritter.write("created," + mediaTitle + "," + creationTime + System.lineSeparator());
+                long publishTime = System.nanoTime();
+                String publishTimeStamp = new SimpleDateFormat("MMddyy-hh:mm:ss a").format(Calendar.getInstance().getTime());
+            	bufferWritter.write("created," + mediaTitle + "," + publishTimeStamp + "," + publishTime + System.lineSeparator());
             	bufferWritter.close();
             	
             	webDriver.getCurrentUrl();

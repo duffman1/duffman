@@ -117,7 +117,7 @@ public class MPXPublishMedia {
     	this.ClickPublishBtn();
         this.ClickPublishToPub7PrimaryCbx();
         this.ClickPublishFromDialogBtn();
-        
+        Thread.sleep(2000);
         if (this.PublishSuccessful() == false) {
     		Thread.sleep(5000);
         	this.ClickOKBtn();

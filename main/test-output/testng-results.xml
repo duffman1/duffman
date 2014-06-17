@@ -2,876 +2,465 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
     <line>
-      <![CDATA[STEP 1]]>
+      <![CDATA[Open the mpx platform.]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]>
+      <![CDATA[Enter 'mpx/AdminPub7QA' in the 'Username' text box.]]>
     </line>
     <line>
-      <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+      <![CDATA[Enter 'Pa55word' in the 'Password' text box.]]>
     </line>
     <line>
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[SETUP]]>
+      <![CDATA[Click the 'Upload' button.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Structure' menu link.]]>
+      <![CDATA[Click the 'Choose Files' button.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Content types' menu link.]]>
+      <![CDATA[Click the 'Movies' button in the OS Upload dialog.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Media Gallery' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Manage fields' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Media Items' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Media Items dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save settings' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Saved Media Items configuration.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 2]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Add content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Media Gallery' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Media Gallery dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 3]]>
-    </line>
-    <line>
-      <![CDATA[Enter '97b9a7282d394cc' in the 'Title' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the Synopsis frame.]]>
-    </line>
-    <line>
-      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Media Gallery dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'short description' in the 'Short Description' text area.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Media Items Select' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the select file frame.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Add files' link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'All Files' icon.]]>
-    </line>
-    <line>
-      <![CDATA[Click the local 'Pictures' icon.]]>
-    </line>
-    <line>
-      <![CDATA[Click the test picture link.]]>
+      <![CDATA[Click the Test Movie in th OS Upload dialog.]]>
     </line>
     <line>
       <![CDATA[Click the 'Open' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Start upload' link.]]>
+      <![CDATA[Click the 'Upload' button in the Upload dialog.]]>
     </line>
     <line>
-      <![CDATA[Wait for file upload to reach 100%]]>
+      <![CDATA[Enter 'Automationdd4a2edf62' in the 'Title' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Next' button.]]>
+      <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Create Media Gallery dialog'.]]>
+      <![CDATA[Click the 'Publish' button.]]>
     </line>
     <line>
-      <![CDATA[Wait for the image load 'spinner' image to not be present, indicating image loading is complete.]]>
+      <![CDATA[Click the 'Publish to Pub 7 Primary' check box.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Add' button.]]>
+      <![CDATA[Click the 'Publish' button from the upload dialog.]]>
     </line>
     <line>
-      <![CDATA[Switch to the select file frame.]]>
+      <![CDATA[Click the 'OK' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Add files' link.]]>
+      <![CDATA[Click the 'Publish' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'All Files' icon.]]>
+      <![CDATA[Click the 'Publish to Pub 7 Primary' check box.]]>
     </line>
     <line>
-      <![CDATA[Click the local 'Pictures' icon.]]>
-    </line>
-    <line>
-      <![CDATA[Click the test picture link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Open' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Start upload' link.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for file upload to reach 100%]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Media Gallery dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img source of the Media Item contains 'IPTCDefault'.]]>
-    </line>
-    <line>
-      <![CDATA[Assert the the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img source of the Media Item contains 'nbclogosmall'.]]>
-    </line>
-    <line>
-      <![CDATA[Assert the the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 4 and 5]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Edit All' button.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 6]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'e26db0743d11468' in the 'Keywords' text box with index '1'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button with index '2'.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Media Gallery dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 7]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Edit All' button.]]>
-    </line>
-    <line>
-      <![CDATA[Assert that the Keywords Text box with index '1' value matches 'e26db0743d11468'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button with index '2'.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Media Gallery dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 8]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Add' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the select file frame.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'PUBLISHER 7 MPX VIDEO' button.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Automation' in the 'Title' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Apply' button.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the file search 'spinner' image to be present.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the file search 'spinner' image to not be present, indicating image search is complete.]]>
-    </line>
-    <line>
-      <![CDATA[Click mpx media thumbnail image number 1]]>
-    </line>
-    <line>
-      <![CDATA[Click on the 'Submit' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Media Gallery dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the image load 'spinner' image to not be present, indicating image loading is complete.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 9]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Edit All' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the MPX Player frame is present.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 10]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Cancel' link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Media Gallery dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[OPTIONAL STEP]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Cover' select button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the select file frame.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the file path for file upload.]]>
+      <![CDATA[Click the 'Publish' button from the upload dialog.]]>
     </line>
     <line>
       <![CDATA[Click the 'Upload' button.]]>
     </line>
     <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
+      <![CDATA[Click the 'Choose Files' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Next' button.]]>
+      <![CDATA[Click the 'Movies' button in the OS Upload dialog.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the file image 'HanSolo' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Media Gallery dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the Cover image src contains 'HanSolo'.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the image to fully load.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 11]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Media Gallery 97b9a7282d394cc has been created.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 12]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Structure' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Content types' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Media Gallery' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Manage fields' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Media Items' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Media Items dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'test123' in the 'File directory' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save settings' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Saved Media Items configuration' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 13]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Edit' link for content item titled '97b9a7282d394cc.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Edit Media Gallery 97b9a7282d394cc dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Add' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the select file frame.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Add files' link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'All Files' icon.]]>
-    </line>
-    <line>
-      <![CDATA[Click the local 'Pictures' icon.]]>
-    </line>
-    <line>
-      <![CDATA[Click the test picture link.]]>
+      <![CDATA[Click the Test Movie in th OS Upload dialog.]]>
     </line>
     <line>
       <![CDATA[Click the 'Open' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Start upload' link.]]>
+      <![CDATA[Click the 'Upload' button in the Upload dialog.]]>
     </line>
     <line>
-      <![CDATA[Wait for file upload to reach 100%]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Edit Media Gallery 97b9a7282d394cc dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the image load 'spinner' image to not be present, indicating image loading is complete.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img source of the Media Item contains 'IPTCDefault'.]]>
-    </line>
-    <line>
-      <![CDATA[Assert the the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img source of the Media Item contains 'nbclogosmall'.]]>
-    </line>
-    <line>
-      <![CDATA[Assert the the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the video title with index '1' contains 'Automation' and is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img source of the Media Item contains 'nbclogosmall'.]]>
-    </line>
-    <line>
-      <![CDATA[Assert the the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 14]]>
+      <![CDATA[Enter 'Automation6f46874a02' in the 'Title' text box.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+      <![CDATA[Click the 'Publish' button.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'Media Gallery 97b9a7282d394cc has been updated.' is present.]]>
+      <![CDATA[Click the 'Publish to Pub 7 Primary' check box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Publish' button from the upload dialog.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Upload' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Choose Files' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Movies' button in the OS Upload dialog.]]>
+    </line>
+    <line>
+      <![CDATA[Click the Test Movie in th OS Upload dialog.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Open' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Upload' button in the Upload dialog.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Automation8bfd55b985' in the 'Title' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Publish' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Publish to Pub 7 Primary' check box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Publish' button from the upload dialog.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'OK' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Publish' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Publish to Pub 7 Primary' check box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Publish' button from the upload dialog.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Upload' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Choose Files' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Movies' button in the OS Upload dialog.]]>
+    </line>
+    <line>
+      <![CDATA[Click the Test Movie in th OS Upload dialog.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Open' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Upload' button in the Upload dialog.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Automationdf2f270dfd' in the 'Title' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Publish' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Publish to Pub 7 Primary' check box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Publish' button from the upload dialog.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'OK' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Publish' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Publish to Pub 7 Primary' check box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Publish' button from the upload dialog.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Upload' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Choose Files' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Movies' button in the OS Upload dialog.]]>
+    </line>
+    <line>
+      <![CDATA[Click the Test Movie in th OS Upload dialog.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Open' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Upload' button in the Upload dialog.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Automationfc1961728e' in the 'Title' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Publish' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Publish to Pub 7 Primary' check box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Publish' button from the upload dialog.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="242656" started-at="2014-06-17T17:43:42Z" finished-at="2014-06-17T17:47:45Z">
+  <suite name="Default suite" duration-ms="292839" started-at="2014-06-17T21:14:10Z" finished-at="2014-06-17T21:19:02Z">
     <groups>
-      <group name="full">
-        <method signature="CreateMediaGallery.CreateMediaGallery_TC1042()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery@56f711d0]" name="CreateMediaGallery_TC1042" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery"/>
-      </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="242656" started-at="2014-06-17T17:43:42Z" finished-at="2014-06-17T17:47:45Z">
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery">
-        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery@56f711d0]" name="startGridAndHub" is-config="true" duration-ms="11895" started-at="2014-06-17T13:43:31Z" finished-at="2014-06-17T13:43:42Z">
+    <test name="Default test" duration-ms="292839" started-at="2014-06-17T21:14:10Z" finished-at="2014-06-17T21:19:02Z">
+      <class name="com.nbcuni.test.publisher.contentbuildscripts.MPXPerformanceUpgrade.CreateVideos.CreateVideos">
+        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.contentbuildscripts.MPXPerformanceUpgrade.CreateVideos.CreateVideos@461a5d57]" name="startGridAndHub" is-config="true" duration-ms="12211" started-at="2014-06-17T17:13:57Z" finished-at="2014-06-17T17:14:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startGridAndHub -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery@56f711d0]" name="startSelenium" is-config="true" duration-ms="2462" started-at="2014-06-17T13:43:43Z" finished-at="2014-06-17T13:43:45Z">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.contentbuildscripts.MPXPerformanceUpgrade.CreateVideos.CreateVideos@461a5d57]" name="startSelenium" is-config="true" duration-ms="2135" started-at="2014-06-17T17:14:10Z" finished-at="2014-06-17T17:14:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="CreateMediaGallery_TC1042()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery@56f711d0]" name="CreateMediaGallery_TC1042" duration-ms="239591" started-at="2014-06-17T13:43:45Z" finished-at="2014-06-17T13:47:45Z">
+        <test-method status="PASS" signature="Test()[pri:0, instance:com.nbcuni.test.publisher.contentbuildscripts.MPXPerformanceUpgrade.CreateVideos.CreateVideos@461a5d57]" name="Test" duration-ms="290117" started-at="2014-06-17T17:14:12Z" finished-at="2014-06-17T17:19:02Z">
           <reporter-output>
             <line>
-              <![CDATA[STEP 1]]>
+              <![CDATA[Open the mpx platform.]]>
             </line>
             <line>
-              <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]>
+              <![CDATA[Enter 'mpx/AdminPub7QA' in the 'Username' text box.]]>
             </line>
             <line>
-              <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+              <![CDATA[Enter 'Pa55word' in the 'Password' text box.]]>
             </line>
             <line>
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
-              <![CDATA[SETUP]]>
+              <![CDATA[Click the 'Upload' button.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Structure' menu link.]]>
+              <![CDATA[Click the 'Choose Files' button.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Content types' menu link.]]>
+              <![CDATA[Click the 'Movies' button in the OS Upload dialog.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Media Gallery' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Manage fields' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Media Items' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Media Items dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save settings' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Saved Media Items configuration.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 2]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Add content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Media Gallery' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Media Gallery dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 3]]>
-            </line>
-            <line>
-              <![CDATA[Enter '97b9a7282d394cc' in the 'Title' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the Synopsis frame.]]>
-            </line>
-            <line>
-              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Media Gallery dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'short description' in the 'Short Description' text area.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Media Items Select' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the select file frame.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Add files' link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'All Files' icon.]]>
-            </line>
-            <line>
-              <![CDATA[Click the local 'Pictures' icon.]]>
-            </line>
-            <line>
-              <![CDATA[Click the test picture link.]]>
+              <![CDATA[Click the Test Movie in th OS Upload dialog.]]>
             </line>
             <line>
               <![CDATA[Click the 'Open' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Start upload' link.]]>
+              <![CDATA[Click the 'Upload' button in the Upload dialog.]]>
             </line>
             <line>
-              <![CDATA[Wait for file upload to reach 100%]]>
+              <![CDATA[Enter 'Automationdd4a2edf62' in the 'Title' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Next' button.]]>
+              <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create Media Gallery dialog'.]]>
+              <![CDATA[Click the 'Publish' button.]]>
             </line>
             <line>
-              <![CDATA[Wait for the image load 'spinner' image to not be present, indicating image loading is complete.]]>
+              <![CDATA[Click the 'Publish to Pub 7 Primary' check box.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Add' button.]]>
+              <![CDATA[Click the 'Publish' button from the upload dialog.]]>
             </line>
             <line>
-              <![CDATA[Switch to the select file frame.]]>
+              <![CDATA[Click the 'OK' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Add files' link.]]>
+              <![CDATA[Click the 'Publish' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'All Files' icon.]]>
+              <![CDATA[Click the 'Publish to Pub 7 Primary' check box.]]>
             </line>
             <line>
-              <![CDATA[Click the local 'Pictures' icon.]]>
-            </line>
-            <line>
-              <![CDATA[Click the test picture link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Open' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Start upload' link.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for file upload to reach 100%]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Media Gallery dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img source of the Media Item contains 'IPTCDefault'.]]>
-            </line>
-            <line>
-              <![CDATA[Assert the the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img source of the Media Item contains 'nbclogosmall'.]]>
-            </line>
-            <line>
-              <![CDATA[Assert the the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 4 and 5]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Edit All' button.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 6]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'e26db0743d11468' in the 'Keywords' text box with index '1'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button with index '2'.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Media Gallery dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 7]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Edit All' button.]]>
-            </line>
-            <line>
-              <![CDATA[Assert that the Keywords Text box with index '1' value matches 'e26db0743d11468'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button with index '2'.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Media Gallery dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 8]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Add' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the select file frame.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'PUBLISHER 7 MPX VIDEO' button.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Automation' in the 'Title' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Apply' button.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the file search 'spinner' image to be present.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the file search 'spinner' image to not be present, indicating image search is complete.]]>
-            </line>
-            <line>
-              <![CDATA[Click mpx media thumbnail image number 1]]>
-            </line>
-            <line>
-              <![CDATA[Click on the 'Submit' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Media Gallery dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the image load 'spinner' image to not be present, indicating image loading is complete.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 9]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Edit All' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the MPX Player frame is present.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 10]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Cancel' link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Media Gallery dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[OPTIONAL STEP]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Cover' select button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the select file frame.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the file path for file upload.]]>
+              <![CDATA[Click the 'Publish' button from the upload dialog.]]>
             </line>
             <line>
               <![CDATA[Click the 'Upload' button.]]>
             </line>
             <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
+              <![CDATA[Click the 'Choose Files' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Next' button.]]>
+              <![CDATA[Click the 'Movies' button in the OS Upload dialog.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Public Local Files' radio button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the file image 'HanSolo' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Media Gallery dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the Cover image src contains 'HanSolo'.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the image to fully load.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 11]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Media Gallery 97b9a7282d394cc has been created.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 12]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Structure' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Content types' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Media Gallery' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Manage fields' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Media Items' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Media Items dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'test123' in the 'File directory' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save settings' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Saved Media Items configuration' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 13]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Edit' link for content item titled '97b9a7282d394cc.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Edit Media Gallery 97b9a7282d394cc dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Add' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the select file frame.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Add files' link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'All Files' icon.]]>
-            </line>
-            <line>
-              <![CDATA[Click the local 'Pictures' icon.]]>
-            </line>
-            <line>
-              <![CDATA[Click the test picture link.]]>
+              <![CDATA[Click the Test Movie in th OS Upload dialog.]]>
             </line>
             <line>
               <![CDATA[Click the 'Open' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Start upload' link.]]>
+              <![CDATA[Click the 'Upload' button in the Upload dialog.]]>
             </line>
             <line>
-              <![CDATA[Wait for file upload to reach 100%]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Edit Media Gallery 97b9a7282d394cc dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the image load 'spinner' image to not be present, indicating image loading is complete.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img source of the Media Item contains 'IPTCDefault'.]]>
-            </line>
-            <line>
-              <![CDATA[Assert the the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img source of the Media Item contains 'nbclogosmall'.]]>
-            </line>
-            <line>
-              <![CDATA[Assert the the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the video title with index '1' contains 'Automation' and is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img source of the Media Item contains 'nbclogosmall'.]]>
-            </line>
-            <line>
-              <![CDATA[Assert the the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 14]]>
+              <![CDATA[Enter 'Automation6f46874a02' in the 'Title' text box.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+              <![CDATA[Click the 'Publish' button.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'Media Gallery 97b9a7282d394cc has been updated.' is present.]]>
+              <![CDATA[Click the 'Publish to Pub 7 Primary' check box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Publish' button from the upload dialog.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Upload' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Choose Files' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Movies' button in the OS Upload dialog.]]>
+            </line>
+            <line>
+              <![CDATA[Click the Test Movie in th OS Upload dialog.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Open' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Upload' button in the Upload dialog.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Automation8bfd55b985' in the 'Title' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Publish' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Publish to Pub 7 Primary' check box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Publish' button from the upload dialog.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'OK' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Publish' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Publish to Pub 7 Primary' check box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Publish' button from the upload dialog.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Upload' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Choose Files' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Movies' button in the OS Upload dialog.]]>
+            </line>
+            <line>
+              <![CDATA[Click the Test Movie in th OS Upload dialog.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Open' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Upload' button in the Upload dialog.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Automationdf2f270dfd' in the 'Title' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Publish' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Publish to Pub 7 Primary' check box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Publish' button from the upload dialog.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'OK' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Publish' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Publish to Pub 7 Primary' check box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Publish' button from the upload dialog.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Upload' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Choose Files' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Movies' button in the OS Upload dialog.]]>
+            </line>
+            <line>
+              <![CDATA[Click the Test Movie in th OS Upload dialog.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Open' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Upload' button in the Upload dialog.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Automationfc1961728e' in the 'Title' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Publish' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Publish to Pub 7 Primary' check box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Publish' button from the upload dialog.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- CreateMediaGallery_TC1042 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery@56f711d0]" name="stopSelenium" is-config="true" duration-ms="580" started-at="2014-06-17T13:47:45Z" finished-at="2014-06-17T13:47:45Z">
+        </test-method> <!-- Test -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.contentbuildscripts.MPXPerformanceUpgrade.CreateVideos.CreateVideos@461a5d57]" name="stopSelenium" is-config="true" duration-ms="573" started-at="2014-06-17T17:19:02Z" finished-at="2014-06-17T17:19:02Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=CreateMediaGallery_TC1042 status=SUCCESS method=CreateMediaGallery.CreateMediaGallery_TC1042()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery@56f711d0] output=STEP 1]]]>
+                <![CDATA[[TestResult name=Test status=SUCCESS method=CreateVideos.Test()[pri:0, instance:com.nbcuni.test.publisher.contentbuildscripts.MPXPerformanceUpgrade.CreateVideos.CreateVideos@461a5d57] output=Open the mpx platform.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery@56f711d0]" name="stopGridAndHub" is-config="true" duration-ms="391" started-at="2014-06-17T13:47:45Z" finished-at="2014-06-17T13:47:46Z">
+        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.contentbuildscripts.MPXPerformanceUpgrade.CreateVideos.CreateVideos@461a5d57]" name="stopGridAndHub" is-config="true" duration-ms="392" started-at="2014-06-17T17:19:02Z" finished-at="2014-06-17T17:19:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopGridAndHub -->
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery -->
+      </class> <!-- com.nbcuni.test.publisher.contentbuildscripts.MPXPerformanceUpgrade.CreateVideos.CreateVideos -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -228,6 +228,7 @@ public class AddFile {
     public void AddDefaultVideo() throws Exception {
     	
     	if (System.getProperty("os.name").contains("Mac")) {
+    		Thread.sleep(1000);
     		this.ClickMoviesUploadBtn();
     		this.ClickTestMovieBtn();
     	}
