@@ -4,8 +4,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
+
 import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
@@ -17,9 +20,12 @@ import com.nbcuni.test.publisher.common.Driver.Driver;
 
 public class jQueryUpdate {
 
+	private WebDriverWait wait;
+	
     //PAGE OBJECT CONSTRUCTOR
     public jQueryUpdate(Driver webDriver) {
-        PageFactory.initElements(webDriver, this);
+    	PageFactory.initElements(webDriver, this);
+        wait = new WebDriverWait(webDriver, 10);
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -34,7 +40,7 @@ public class jQueryUpdate {
     public void SelectDefaultjQueryVersion(String version) throws Exception {
     	
     	Reporter.log("Select '" + version + "' from the 'Default jQuery Version' drop down list.");
-    	new Select(DefaultjQueryVersion_Ddl).selectByVisibleText(version);
+    	new Select(wait.until(ExpectedConditions.visibilityOf(DefaultjQueryVersion_Ddl))).selectByVisibleText(version);
     }
     
     public void ClickSaveConfigurationBtn() throws Exception {
