@@ -19,7 +19,7 @@
 <tr><td>Click the 'Media Gallery' menu link.</td></tr>
 <tr><td>Switch to the active frame titled 'Create Media Gallery dialog'.</td></tr>
 <tr><td>STEP 3</td></tr>
-<tr><td>Enter '8f80182778944b3' in the 'Title' text box.</td></tr>
+<tr><td>Enter '390f8a77900c498' in the 'Title' text box.</td></tr>
 <tr><td>Switch to the Synopsis frame.</td></tr>
 <tr><td>Enter a randomized text string into the 'Body' text area.</td></tr>
 <tr><td>Switch to the active frame titled 'Create Media Gallery dialog'.</td></tr>
@@ -54,12 +54,12 @@
 <tr><td>STEP 4 and 5</td></tr>
 <tr><td>Click the 'Edit All' button.</td></tr>
 <tr><td>STEP 6</td></tr>
-<tr><td>Enter '5b62178fb15c4d9' in the 'Keywords' text box with index '1'.</td></tr>
+<tr><td>Enter 'ea420c21f2e8458' in the 'Keywords' text box with index '1'.</td></tr>
 <tr><td>Click the 'Save' button with index '2'.</td></tr>
 <tr><td>Switch to the active frame titled 'Create Media Gallery dialog'.</td></tr>
 <tr><td>STEP 7</td></tr>
 <tr><td>Click the 'Edit All' button.</td></tr>
-<tr><td>Assert that the Keywords Text box with index '1' value matches '5b62178fb15c4d9'.</td></tr>
+<tr><td>Assert that the Keywords Text box with index '1' value matches 'ea420c21f2e8458'.</td></tr>
 <tr><td>Click the 'Save' button with index '2'.</td></tr>
 <tr><td>Switch to the active frame titled 'Create Media Gallery dialog'.</td></tr>
 <tr><td>STEP 8</td></tr>
@@ -76,8 +76,65 @@
 <tr><td>Wait for the image load 'spinner' image to not be present, indicating image loading is complete.</td></tr>
 <tr><td>STEP 9</td></tr>
 <tr><td>Click the 'Edit All' button.</td></tr>
-<tr><td>Verify the MPX Player frame is present.</td></tr>
-<tr><td>Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateMediaGallery_TC1042_061814014215PM.png </td></tr>
-<tr><td><br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateMediaGallery_TC1042_061814014215PM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateMediaGallery_TC1042_061814014215PM.png' height='500' width='500'/> </a></td></tr>
-<tr><td>Cache was cleared on test failure</td></tr>
+<tr><td>Verify the MPX video link is present and contains text 'Automation'.</td></tr>
+<tr><td>STEP 10</td></tr>
+<tr><td>Click the 'Cancel' link.</td></tr>
+<tr><td>Switch to the active frame titled 'Create Media Gallery dialog'.</td></tr>
+<tr><td>OPTIONAL STEP</td></tr>
+<tr><td>Click the 'Cover' select button.</td></tr>
+<tr><td>Switch to the select file frame.</td></tr>
+<tr><td>Enter the file path for file upload.</td></tr>
+<tr><td>Click the 'Upload' button.</td></tr>
+<tr><td>Wait for the file link to be visible after upload.</td></tr>
+<tr><td>Click the 'Next' button.</td></tr>
+<tr><td>Click the 'Public Local Files' radio button.</td></tr>
+<tr><td>Click the 'Next' button.</td></tr>
+<tr><td>Verify the file image 'HanSolo' is present.</td></tr>
+<tr><td>Verify the img is loaded and visible.</td></tr>
+<tr><td>Click the 'Save' button.</td></tr>
+<tr><td>Switch to the active frame titled 'Create Media Gallery dialog'.</td></tr>
+<tr><td>Verify the Cover image src contains 'HanSolo'.</td></tr>
+<tr><td>Wait for the image to fully load.</td></tr>
+<tr><td>STEP 11</td></tr>
+<tr><td>Click the 'Save' button.</td></tr>
+<tr><td>Verify success message of 'Media Gallery 390f8a77900c498 has been created.' is present.</td></tr>
+<tr><td>STEP 12</td></tr>
+<tr><td>Mouse over the 'Structure' menu link.</td></tr>
+<tr><td>Mouse over the 'Content types' menu link.</td></tr>
+<tr><td>Mouse over the 'Media Gallery' menu link.</td></tr>
+<tr><td>Mouse over the 'Manage fields' menu link.</td></tr>
+<tr><td>Click the 'Media Items' menu link.</td></tr>
+<tr><td>Switch to the active frame titled 'Media Items dialog'.</td></tr>
+<tr><td>Enter 'test123' in the 'File directory' text box.</td></tr>
+<tr><td>Click the 'Save settings' button.</td></tr>
+<tr><td>Verify success message of 'Saved Media Items configuration' is present.</td></tr>
+<tr><td>Click the 'Close Overlay X'.</td></tr>
+<tr><td>STEP 13</td></tr>
+<tr><td>Click the 'Content' menu link.</td></tr>
+<tr><td>Switch to the active frame titled 'Content dialog'.</td></tr>
+<tr><td>Click the 'Edit' link for content item titled '390f8a77900c498.</td></tr>
+<tr><td>Switch to the active frame titled 'Edit Media Gallery 390f8a77900c498 dialog'.</td></tr>
+<tr><td>Click the 'Add' button.</td></tr>
+<tr><td>Switch to the select file frame.</td></tr>
+<tr><td>Click the 'Add files' link.</td></tr>
+<tr><td>Click the 'All Files' icon.</td></tr>
+<tr><td>Click the local 'Pictures' icon.</td></tr>
+<tr><td>Click the test picture link.</td></tr>
+<tr><td>Click the 'Open' button.</td></tr>
+<tr><td>Click the 'Start upload' link.</td></tr>
+<tr><td>Wait for file upload to reach 100%</td></tr>
+<tr><td>Click the 'Next' button.</td></tr>
+<tr><td>Switch to the active frame titled 'Edit Media Gallery 390f8a77900c498 dialog'.</td></tr>
+<tr><td>Wait for the image load 'spinner' image to not be present, indicating image loading is complete.</td></tr>
+<tr><td>Verify the img source of the Media Item contains 'IPTCDefault'.</td></tr>
+<tr><td>Assert the the img is loaded and visible.</td></tr>
+<tr><td>Verify the img source of the Media Item contains 'nbclogosmall'.</td></tr>
+<tr><td>Assert the the img is loaded and visible.</td></tr>
+<tr><td>Verify the video title link with index '1' contains 'Automation' and is present.</td></tr>
+<tr><td>Verify the img source of the Media Item contains 'nbclogosmall'.</td></tr>
+<tr><td>Assert the the img is loaded and visible.</td></tr>
+<tr><td>STEP 14</td></tr>
+<tr><td>Click the 'Save' button.</td></tr>
+<tr><td>Switch to the active frame titled 'Content dialog'.</td></tr>
+<tr><td>Verify success message of 'Media Gallery 390f8a77900c498 has been updated.' is present.</td></tr>
 </table>

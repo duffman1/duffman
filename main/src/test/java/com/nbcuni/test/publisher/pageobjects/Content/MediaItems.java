@@ -53,6 +53,10 @@ public class MediaItems {
     	return webDriver.findElement(By.xpath("(//div[@class='media-item'][contains(@title, '" + itemTtl + "')]//iframe[@id='pdk-player'])[" + videoIndex + "]"));
     }
     
+    private WebElement MediaVideo_Lnk(String videoIndex) {
+    	return webDriver.findElement(By.xpath("(//div[@class='media-item']//a[contains(@type, 'video/mpx')])[" + videoIndex + "]"));
+    }
+    
     @FindBy(how = How.ID, using = "media-edit-all-button")
     private WebElement EditAll_Btn;
     
@@ -87,6 +91,12 @@ public class MediaItems {
     	
     	Reporter.log("Verify the video title with index '" + videoIndex + "' contains '" + videoTitle + "' and is present.");
     	MediaVideo_Frm(videoTitle, videoIndex).isDisplayed();
+    }
+    
+    public void VerifyFileVideoLnkPresent(String videoTitle, String videoIndex) throws Exception {
+    	
+    	Reporter.log("Verify the video title link with index '" + videoIndex + "' contains '" + videoTitle + "' and is present.");
+    	Assert.assertTrue(MediaVideo_Lnk(videoIndex).getText().contains(videoTitle));
     }
     
     public void ClickSelectBtn() throws Exception {

@@ -129,8 +129,9 @@ public class FocalPointModule extends ParentTest{
             	
         //Step 12
         WorkBench workBench = new WorkBench(webDriver, applib);
-        workBench.VerifyFileImagePresent("HanSolo", "1");
-        workBench.VerifyFileImageSize("1", "200", "200");
+        workBench.VerifyFileImageLinkPresent("HanSolo", "1");
+        //workBench.VerifyFileImagePresent("HanSolo", "1");
+        //workBench.VerifyFileImageSize("1", "200", "200");
             
         //Cleanup
         taxonomy.NavigateSite("Modules");

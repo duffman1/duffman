@@ -53,6 +53,10 @@ public class WorkBench {
     	return webDriver.findElement(By.xpath("(//div[contains(@class, 'file-image')]//img)[" + imageIndex + "]"));
     }
     
+    private WebElement WorkBenchImg_Lnk(String linkIndex) {
+    	return webDriver.findElement(By.xpath("(//div[contains(@class, 'file-image')]//a[contains(@type, 'image')])[" + linkIndex + "]"));
+    }
+    
     private WebElement WorkBenchFileImage_Ids(String imageIndex) {
     	return webDriver.findElement(By.xpath("(//div[contains(@class, 'file-image')])[" + imageIndex + "]"));
     }
@@ -115,6 +119,13 @@ public class WorkBench {
             if (imgLoaded == true){ break;}
             Thread.sleep(500);
         }
+    }
+    
+    public void VerifyFileImageLinkPresent(String imageHref, String linkIndex) throws Exception {
+    	
+    	Reporter.log("Verify that the image link is present and contains file url '" + imageHref + "'.");
+    	Assert.assertTrue(WorkBenchImg_Lnk(linkIndex).getAttribute("href").contains(imageHref));
+    	
     }
     
     public void VerifyFileImageSize(String imageIndex, String height, String width) throws Exception {

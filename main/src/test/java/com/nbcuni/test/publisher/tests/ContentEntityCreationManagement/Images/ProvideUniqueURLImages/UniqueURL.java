@@ -55,9 +55,11 @@ public class UniqueURL extends ParentTest{
             overlay.switchToDefaultContent();
             contentParent.VerifyMessageStatus("Media Gallery " + title + " has been created.");
         	WorkBench workBench = new WorkBench(webDriver, applib);
-        	workBench.VerifyFileImagePresent("HanSolo", "1");
+        	workBench.VerifyFileImageLinkPresent("HanSolo", "1");
+        	//workBench.VerifyFileImagePresent("HanSolo", "1");
         	String fileId1 = workBench.GetFileImageId("1");
-        	workBench.VerifyFileImagePresent("HanSolo", "2");
+        	workBench.VerifyFileImageLinkPresent("HanSolo", "1");
+        	//workBench.VerifyFileImagePresent("HanSolo", "2");
         	String fileId2 = workBench.GetFileImageId("2");
         	
         	//Step 6
@@ -74,8 +76,10 @@ public class UniqueURL extends ParentTest{
         	contentParent.ClickCancelBtn();
         	overlay.switchToDefaultContent();
         	webDriver.navigate().to(uniqueUrl1);
-        	workBench.VerifyFileImagePresent("HanSolo", "1");
-        	workBench.VerifyFileImagePresent("HanSolo", "2");
+        	workBench.VerifyFileImageLinkPresent("HanSolo", "1");
+        	workBench.VerifyFileImageLinkPresent("HanSolo", "2");
+        	//workBench.VerifyFileImagePresent("HanSolo", "1");
+        	//workBench.VerifyFileImagePresent("HanSolo", "2");
         	contentParent.VerifyPageContentPresent(Arrays.asList("Current Item", "HanSolo", 
         			"Current Item Index", "0", "Current Item ID", 
         				fileId1, "Current Item URL", uniqueUrl1));

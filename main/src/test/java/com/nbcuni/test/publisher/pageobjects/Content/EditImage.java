@@ -77,6 +77,9 @@ public class EditImage {
     @FindBy(how = How.XPATH, using = "//iframe[@id='pdk-player']")
     private WebElement MPXPlayer_Frm;
     
+    @FindBy(how = How.XPATH, using = "//div[contains(@id, 'media-edit')]//a[contains(@type, 'video/mpx')]")
+    private WebElement MPXVideo_Lnk;
+    
     @FindBy(how = How.XPATH, using = "//a[text()='Cancel']")
     private WebElement Cancel_Lnk;
     
@@ -230,6 +233,13 @@ public class EditImage {
     	
     	Reporter.log("Verify the MPX Player frame is present.");
     	Assert.assertTrue(MPXPlayer_Frm.isDisplayed());
+    	
+    }
+    
+    public void VerifyMPXVideoLnkPresent(String videoTitleTxt) throws Exception {
+    	
+    	Reporter.log("Verify the MPX video link is present and contains text '" + videoTitleTxt + "'.");
+    	Assert.assertTrue(MPXVideo_Lnk.getText().contains(videoTitleTxt));
     	
     }
 }

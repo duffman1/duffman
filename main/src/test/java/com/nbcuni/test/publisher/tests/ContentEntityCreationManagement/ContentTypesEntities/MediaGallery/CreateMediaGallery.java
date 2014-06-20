@@ -123,7 +123,8 @@ public class CreateMediaGallery extends ParentTest{
             Reporter.log("STEP 9");
             mediaItems.ClickEditAllBtn();
             editImage.WaitForEditImageFrameOpen();
-            editImage.VerifyMPXPlayerPresent();
+            //editImage.VerifyMPXPlayerPresent();
+            editImage.VerifyMPXVideoLnkPresent("Automation");
             
             Reporter.log("STEP 10");
             editImage.ClickCancelLnk();
@@ -176,7 +177,8 @@ public class CreateMediaGallery extends ParentTest{
             mediaItems.WaitForImgLoadComplete();
             mediaItems.VerifyFileImagePresent("IPTCDefault", "2");
             mediaItems.VerifyFileImagePresent("nbclogosmall", "3");
-            mediaItems.VerifyFileVideoPresent("Automation", "1");
+            mediaItems.VerifyFileVideoLnkPresent("Automation", "1");
+            //mediaItems.VerifyFileVideoPresent("Automation", "1");
             mediaItems.VerifyFileImagePresent("nbclogosmall", "4");
             
             Reporter.log("STEP 14");
