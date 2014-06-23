@@ -43,8 +43,6 @@ public class ImplementMPS extends ParentTest {
                 modules.DisableModule("MPS");
                 overlay.ClickCloseOverlayLnk();
                 overlay.switchToDefaultContent();
-                
-                //Step 7
                 taxonomy.NavigateSite("Modules>>Uninstall");
                 overlay.SwitchToActiveFrame();
                 modules.UninstallModule("MPS");
@@ -82,7 +80,7 @@ public class ImplementMPS extends ParentTest {
             	siteType = "update";
             }
             contentParent.VerifySourceInPage(Arrays.asList("var mpscall = {\"site\":\"" + siteType + "\",\"title\":\"Welcome to Site-Install\",\"path\":\"\\/\",\"qs\":\"\",\"cat\":\"node\",\"content_id\":\"\",\"is_content\":0,\"type\":\"\",\"cag\":\"\",\"envelope\":\"\",\"pubdate\":",
-            		"var mpsopts = {'host':'mps.nbcuni.com'}"));
+            		"var mpsopts = {\"host\":\"mps.nbcuni.com\"}"));
             
             Reporter.log("STEP 6");
             taxonomy.NavigateSite("People");
@@ -132,7 +130,7 @@ public class ImplementMPS extends ParentTest {
             
             Reporter.log("STEP 10");
             contentParent.VerifySourceInPage(Arrays.asList("var mpscall = {\"site\":\"nbc-tonightshow\",\"title\":\"" + movieTitle + "\",\"path\":\"\\/node\\/" + movieNodeNumber,
-            		"var mpsopts = {'host':'mps.nbcuni.com'}"));
+            		"var mpsopts = {\"host\":\"mps.nbcuni.com\"}"));
             
             Reporter.log("STEP 11 through STEP 19");
             contentParent.VerifySourceInPage(Arrays.asList("{\"site\":\"nbc-tonightshow\",\"title\":\"" + movieTitle + "\",\"path\":\"\\/node\\/" + movieNodeNumber + "","\"qs\":\"\",\"cat\":\"content|" + movieTitle + "\",\"content_id\":\"node","\"is_content\":1,\"type\":\"movie\",\"cag\":{\"genre\":\"Action\",\"movie-rating\":\"G\",\"movie-types\":\"Syndicated\"},\"envelope\":\"\",\"pubdate\":"));
@@ -190,7 +188,7 @@ public class ImplementMPS extends ParentTest {
             taxonomy.NavigateSite("Structure>>Blocks");
             overlay.SwitchToActiveFrame();
             Blocks blocks = new Blocks(webDriver);
-            blocks.SelectRegion(blockName, "Header");
+            blocks.SelectRegion(blockName + " (MPS)", "Header");
             blocks.ClickSaveBlocksBtn();
             contentParent.VerifyMessageStatus("The block settings have been updated.");
             overlay.ClickCloseOverlayLnk();
@@ -203,7 +201,7 @@ public class ImplementMPS extends ParentTest {
             Reporter.log("CLEANUP");
             taxonomy.NavigateSite("Structure>>Blocks");
             overlay.SwitchToActiveFrame();
-            blocks.SelectRegion(blockName, "- None -");
+            blocks.SelectRegion(blockName + " (MPS)", "- None -");
             blocks.ClickSaveBlocksBtn();
             overlay.ClickCloseOverlayLnk();
             

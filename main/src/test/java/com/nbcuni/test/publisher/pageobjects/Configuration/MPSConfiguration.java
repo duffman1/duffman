@@ -41,6 +41,21 @@ public class MPSConfiguration {
     @FindBy(how = How.ID, using ="edit-mps-query")
     private WebElement SendQueryStrings_Cbx;
     
+    private WebElement Name_Txb(String index) {
+    	return webDriver.findElement(By.xpath("(//input[contains(@id, 'name')])[" + index + "]"));
+    }
+    
+    private WebElement Value_Txb(String index) {
+    	return webDriver.findElement(By.xpath("(//input[contains(@id, 'value')])[" + index + "]"));
+    }
+    
+    private WebElement JSON_Cbx(String index) {
+    	return webDriver.findElement(By.xpath("(//input[contains(@id, 'json')])[" + index + "]"));
+    }
+    
+    @FindBy(how = How.ID, using ="edit-add-another-opt")
+    private WebElement AddAnotherOpt_Btn;
+    
     @FindBy(how = How.ID, using ="edit-submit")
     private WebElement SaveConfiguration_Btn;
     
@@ -101,6 +116,33 @@ public class MPSConfiguration {
     	}
     }
     
+    public void EnterName(String nameTxt, String index) throws Exception { 
+    	
+    	Reporter.log("Enter '" + nameTxt + "' in the 'Name' text box with index '" + index + "'.");
+    	Name_Txb(index).clear();
+    	Name_Txb(index).sendKeys(nameTxt);
+    }
+    
+    public void EnterValue(String valueTxt, String index) throws Exception { 
+    	
+    	Reporter.log("Enter '" + valueTxt + "' in the 'Value' text box with index '" + index + "'.");
+    	Value_Txb(index).clear();
+    	Value_Txb(index).sendKeys(valueTxt);
+    }
+    
+    public void CheckJSONCbx(String index) throws Exception { 
+    	
+    	Reporter.log("Check the 'JSON' check box with index '" + index + "'.");
+    	JSON_Cbx(index).click();
+    	
+    }
+    
+    public void ClickAddAnotherOptBtn() throws Exception { 
+    	
+    	Reporter.log("Click the 'Add another opt' button.");
+    	AddAnotherOpt_Btn.click();
+    }
+
     public void ClickSaveConfigurationBtn() throws Exception { 
     	
     	Reporter.log("Click the 'Save configuration' button.");
