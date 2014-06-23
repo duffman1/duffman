@@ -89,7 +89,7 @@ public class ThumbnailsAreNotUpdated extends ParentTest{
                 mpxSelectAccount.SelectAccount("DB TV");
             	MPXAddMedia mpxAddMedia = new MPXAddMedia(applib);
             	mpxAddMedia.UploadDefaultVideo();
-                String mediaTitle = "Automation" + random.GetCharacterString(10);
+                String mediaTitle = "AutomationWThumb" + random.GetCharacterString(10);
                 mpxAddMedia.GiveFocusToMediaItem();
                 mpxAddMedia.EnterTitle(mediaTitle);
                 mpxAddMedia.ClickSaveBtn(true);

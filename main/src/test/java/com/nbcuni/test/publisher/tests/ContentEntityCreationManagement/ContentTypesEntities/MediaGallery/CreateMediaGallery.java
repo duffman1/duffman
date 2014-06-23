@@ -112,7 +112,7 @@ public class CreateMediaGallery extends ParentTest{
             mediaItems.ClickAddBtn();
             selectFile.SwitchToSelectFileFrm();
             selectFile.ClickPub7MPXVideoBtn();
-    		selectFile.EnterTitle("Automation");
+    		selectFile.EnterTitle("AutomationWThumb");
     		selectFile.ClickApplyBtn();
     		selectFile.WaitForFileSearchComplete();
     		selectFile.ClickMPXMediaThumbnailImage("nbclogosmall", "1");
@@ -123,8 +123,12 @@ public class CreateMediaGallery extends ParentTest{
             Reporter.log("STEP 9");
             mediaItems.ClickEditAllBtn();
             editImage.WaitForEditImageFrameOpen();
-            //editImage.VerifyMPXPlayerPresent();
-            editImage.VerifyMPXVideoLnkPresent("Automation");
+            try {
+            	editImage.VerifyMPXPlayerPresent();
+            }
+            catch (Exception | AssertionError e) {
+            	editImage.VerifyMPXVideoLnkPresent("AutomationWThumb");
+            }
             
             Reporter.log("STEP 10");
             editImage.ClickCancelLnk();
@@ -177,8 +181,12 @@ public class CreateMediaGallery extends ParentTest{
             mediaItems.WaitForImgLoadComplete();
             mediaItems.VerifyFileImagePresent("IPTCDefault", "2");
             mediaItems.VerifyFileImagePresent("nbclogosmall", "3");
-            mediaItems.VerifyFileVideoLnkPresent("Automation", "1");
-            //mediaItems.VerifyFileVideoPresent("Automation", "1");
+            try {
+            	mediaItems.VerifyFileVideoPresent("AutomationWThumb", "1");
+            }
+            catch (Exception | AssertionError e) {
+            	mediaItems.VerifyFileVideoLnkPresent("AutomationWThumb", "1");
+            }
             mediaItems.VerifyFileImagePresent("nbclogosmall", "4");
             
             Reporter.log("STEP 14");

@@ -54,7 +54,7 @@ public class RepresentativeImage extends ParentTest {
             SelectFile selectFile = new SelectFile(webDriver, applib);
             selectFile.SwitchToSelectFileFrm();
             selectFile.ClickPub7MPXVideoBtn();
-    		selectFile.EnterTitle("Automation");
+    		selectFile.EnterTitle("AutomationWThumb");
     		selectFile.ClickApplyBtn();
     		selectFile.WaitForFileSearchComplete();
     		selectFile.ClickMPXMediaThumbnailImage("nbclogosmall", "1");
