@@ -4,7 +4,6 @@ import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Content.SearchFor;
 import com.nbcuni.test.publisher.pageobjects.Cron.Cron;
-import com.nbcuni.test.publisher.pageobjects.MPX.MPXDataClient;
 import com.nbcuni.test.publisher.pageobjects.MPX.MPXMedia;
 import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
@@ -25,12 +24,6 @@ public class ConfigurationMultipleMPXAccounts extends ParentTest{
     	UserLogin userLogin = applib.openApplication();
     	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
         
-        //Setup
-        MPXDataClient mpxDataClient = new MPXDataClient(webDriver);
-        mpxDataClient.SignInToMPXDataClient("media", applib.getMPXUsername(), applib.getMPXPassword());
-        List<String> accountNames = mpxDataClient.GetAllMPXAccounts();
-        applib.openApplication();
-        
         //Step 2
         taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
         overlay.SwitchToActiveFrame();
@@ -39,6 +32,8 @@ public class ConfigurationMultipleMPXAccounts extends ParentTest{
         Settings settings = new Settings(webDriver, applib);
         MPXMedia mpxMedia = new MPXMedia(webDriver);
         Cron cron = new Cron(webDriver, applib);
+        
+        List<String> accountNames = Arrays.asList("DB TV", "NBC.com Stage", "NBCU TVE Stage - Golf Channel", "NBCU TVE Stage - Syfy");
         
         if (settings.IsMPXConfigured() == true) {
         	
