@@ -66,7 +66,7 @@ public class CreateBulkContent3 extends ParentTest{
          }
         
          //create tv season
-         for(int CCount=0;CCount<5;CCount++) {
+         for(int CCount=0;CCount<2;CCount++) {
         
          try {
          createDefaultContent.TVSeason("Draft", null);
@@ -78,7 +78,7 @@ public class CreateBulkContent3 extends ParentTest{
          }
         
          //create tv episode
-         for(int CCount=0;CCount<5;CCount++) {
+         for(int CCount=0;CCount<2;CCount++) {
         
          try {
          createDefaultContent.TVEpisode("Draft", null, null);
@@ -90,7 +90,7 @@ public class CreateBulkContent3 extends ParentTest{
          }
         
          //create person
-         for(int CCount=0;CCount<3;CCount++) {
+         for(int CCount=0;CCount<1;CCount++) {
         
          try {
          createDefaultContent.TVEpisode("Draft", null, null);

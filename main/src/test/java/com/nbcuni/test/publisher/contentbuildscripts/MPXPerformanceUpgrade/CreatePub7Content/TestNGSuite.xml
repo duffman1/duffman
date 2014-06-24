@@ -1,4 +1,4 @@
-<suite name="Pub 7 Concurrent Suite" parallel="classes" preserve-order="true" thread-count="3">
+<suite name="Pub 7 Concurrent Suite" parallel="classes" preserve-order="true" thread-count="10">
 
   	<!--TEST EXECUTION QUEUE-->
   	<test verbose="1" name="All Concurrent Web Tests" annotations="JDK">
@@ -10,6 +10,13 @@
 			<class name="com.nbcuni.test.publisher.contentbuildscripts.MPXPerformanceUpgrade.CreatePub7Content.CreateBulkContent1"/>
 			<class name="com.nbcuni.test.publisher.contentbuildscripts.MPXPerformanceUpgrade.CreatePub7Content.CreateBulkContent2"/>
 			<class name="com.nbcuni.test.publisher.contentbuildscripts.MPXPerformanceUpgrade.CreatePub7Content.CreateBulkContent3"/>
+			<class name="com.nbcuni.test.publisher.contentbuildscripts.MPXPerformanceUpgrade.CreatePub7Content.CreateBulkContent4"/>
+			<class name="com.nbcuni.test.publisher.contentbuildscripts.MPXPerformanceUpgrade.CreatePub7Content.OpenHomePage1"/>
+			<class name="com.nbcuni.test.publisher.contentbuildscripts.MPXPerformanceUpgrade.CreatePub7Content.OpenHomePage2"/>
+			<class name="com.nbcuni.test.publisher.contentbuildscripts.MPXPerformanceUpgrade.CreatePub7Content.OpenHomePage3"/>
+			<class name="com.nbcuni.test.publisher.contentbuildscripts.MPXPerformanceUpgrade.CreatePub7Content.OpenHomePage4"/>
+			<class name="com.nbcuni.test.publisher.contentbuildscripts.MPXPerformanceUpgrade.CreatePub7Content.OpenHomePage5"/>
+			<class name="com.nbcuni.test.publisher.contentbuildscripts.MPXPerformanceUpgrade.CreatePub7Content.OpenHomePage6"/>
 			
 		</classes>
 	</test>

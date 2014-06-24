@@ -7,7 +7,7 @@ import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Content.CreateDefaultContent;
 
-public class CreateBulkContent2 extends ParentTest{
+public class CreateBulkContent4 extends ParentTest{
 
     @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"})
     public void Test() throws Exception {
