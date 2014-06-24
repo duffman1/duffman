@@ -1,4 +1,4 @@
-<suite name="Pub 7 Concurrent Suite" parallel="classes" preserve-order="true" thread-count="1">
+<suite name="Pub 7 Concurrent Suite" parallel="classes" preserve-order="true" thread-count="3">
 
   	<!--TEST EXECUTION QUEUE-->
   	<test verbose="1" name="All Concurrent Web Tests" annotations="JDK">
@@ -8,6 +8,8 @@
 		<classes>
 		
 			<class name="com.nbcuni.test.publisher.contentbuildscripts.MPXPerformanceUpgrade.CreatePub7Content.CreateBulkContent1"/>
+			<class name="com.nbcuni.test.publisher.contentbuildscripts.MPXPerformanceUpgrade.CreatePub7Content.CreateBulkContent2"/>
+			<class name="com.nbcuni.test.publisher.contentbuildscripts.MPXPerformanceUpgrade.CreatePub7Content.CreateBulkContent3"/>
 			
 		</classes>
 	</test>

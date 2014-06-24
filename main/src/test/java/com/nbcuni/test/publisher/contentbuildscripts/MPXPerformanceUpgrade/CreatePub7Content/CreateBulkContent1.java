@@ -15,10 +15,10 @@ public class CreateBulkContent1 extends ParentTest{
          //login
          UserLogin userLogin = applib.openApplication();
          userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
-            CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver, applib);
-            
+         CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver, applib);
+             
          //create character profile
-         for(int CCount=0;CCount<20;CCount++) {
+         for(int CCount=0;CCount<5;CCount++) {
         
          try {
          createDefaultContent.CharacterProfile("Draft", null, null);
@@ -30,7 +30,7 @@ public class CreateBulkContent1 extends ParentTest{
          }
         
          //create post
-         for(int CCount=0;CCount<20;CCount++) {
+         for(int CCount=0;CCount<5;CCount++) {
         
          try {
          createDefaultContent.Post("Draft");
@@ -42,7 +42,7 @@ public class CreateBulkContent1 extends ParentTest{
          }
         
          //create media gallery
-         for(int CCount=0;CCount<10;CCount++) {
+         for(int CCount=0;CCount<5;CCount++) {
         
          try {
          createDefaultContent.MediaGallery("Draft");
@@ -54,7 +54,7 @@ public class CreateBulkContent1 extends ParentTest{
          }
         
          //create tv show
-         for(int CCount=0;CCount<10;CCount++) {
+         for(int CCount=0;CCount<5;CCount++) {
         
          try {
          createDefaultContent.TVShow("Draft");
@@ -66,7 +66,7 @@ public class CreateBulkContent1 extends ParentTest{
          }
         
          //create tv season
-         for(int CCount=0;CCount<10;CCount++) {
+         for(int CCount=0;CCount<5;CCount++) {
         
          try {
          createDefaultContent.TVSeason("Draft", null);
@@ -78,7 +78,7 @@ public class CreateBulkContent1 extends ParentTest{
          }
         
          //create tv episode
-         for(int CCount=0;CCount<10;CCount++) {
+         for(int CCount=0;CCount<5;CCount++) {
         
          try {
          createDefaultContent.TVEpisode("Draft", null, null);
@@ -90,7 +90,7 @@ public class CreateBulkContent1 extends ParentTest{
          }
         
          //create person
-         for(int CCount=0;CCount<20;CCount++) {
+         for(int CCount=0;CCount<3;CCount++) {
         
          try {
          createDefaultContent.TVEpisode("Draft", null, null);

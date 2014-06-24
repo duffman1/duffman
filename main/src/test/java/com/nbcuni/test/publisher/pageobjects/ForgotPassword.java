@@ -4,7 +4,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
+
 import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
@@ -16,9 +19,12 @@ import com.nbcuni.test.publisher.common.Driver.Driver;
 
 public class ForgotPassword {
 
+	private WebDriverWait wait;
+	
     //PAGE OBJECT CONSTRUCTOR
     public ForgotPassword(Driver webDriver) {
-        PageFactory.initElements(webDriver, this);
+    	PageFactory.initElements(webDriver, this);
+        wait = new WebDriverWait(webDriver, 10);
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -42,7 +48,7 @@ public class ForgotPassword {
     public void EnterEmail(String emailAddress) throws Exception {
     	
     	Reporter.log("Enter '" + emailAddress + "' in the 'E-mail' text box.");
-    	Email_Txb.sendKeys(emailAddress);
+    	wait.until(ExpectedConditions.visibilityOf(Email_Txb)).sendKeys(emailAddress);
     }
     
     public void ClickResetPasswordBtn() throws Exception {

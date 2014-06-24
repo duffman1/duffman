@@ -2,7 +2,7 @@ package com.nbcuni.test.publisher.pageobjects.Content;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
-
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
@@ -15,7 +15,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
-
 import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.publisher.common.Random;
 import com.nbcuni.test.publisher.pageobjects.Overlay;
@@ -36,6 +35,7 @@ public class SelectFile {
     private WebDriverWait wait;
     private Random random;
     private ErrorChecking errorChecking;
+    private Overlay overlay;
     
     //PAGE OBJECT CONSTRUCTOR
     public SelectFile(Driver webDriver, AppLib applib) {
@@ -45,6 +45,7 @@ public class SelectFile {
         wait = new WebDriverWait(webDriver, 10);
         random = new Random();
         errorChecking = new ErrorChecking(webDriver, applib);
+        overlay = new Overlay(webDriver, applib);
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -234,7 +235,11 @@ public class SelectFile {
     	Upload_Btn.click();
     	
     	try {
-    		webDriver.switchTo().alert().accept();
+    		Thread.sleep(500);
+    		Alert alert1 = webDriver.switchTo().alert();
+    		alert1.accept();
+    		overlay.SwitchToActiveFrame();
+    		this.SwitchToSelectFileFrm();
     		Upload_Btn.click();
     	}
     	catch (Exception e) { }
