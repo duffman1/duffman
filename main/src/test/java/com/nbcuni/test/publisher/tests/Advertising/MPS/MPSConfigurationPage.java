@@ -43,7 +43,7 @@ public class MPSConfigurationPage extends ParentTest {
             mpsConfiguration.ClickSaveConfigurationBtn();
             contentParent.VerifyMessageStatus("The configuration options have been saved.");
             overlay.ClickCloseOverlayLnk();
-            contentParent.VerifySourceInPage(Arrays.asList("var mpscall = {\"site\":\"sandbox\",\"title\":\"Welcome to Site-Install\",\"path\":\"\\/\",\"qs\":\"\",\"cat\":\"node\",\"content_id\":\"\",\"is_content\":0,\"type\":\"\",\"cag\":\"\",\"envelope\":\"\",\"pubdate\":\"\"}",
+            contentParent.VerifySourceInPage(Arrays.asList("var mpscall = {\"site\":\"sandbox\",\"title\":\"Welcome to Site-Install\",\"path\":\"\\/\",\"cat\":\"node\",\"is_content\":0,\"type\":\"other\"}",
             		"var mpsopts = {\"host\":\"mps.nbcuni.com\"}", "var mps = mps ||"));
             
             Reporter.log("STEP 5");
