@@ -58,6 +58,12 @@ public class MPXDataClient {
     @FindBy(how = How.ID, using = "getSparseFields")
     private WebElement Fields_Txb;
     
+    @FindBy(how = How.ID, using = "rangeStart")
+    private WebElement StartRange_Txb;
+    
+    @FindBy(how = How.ID, using = "rangeEnd")
+    private WebElement EndRange_Txb;
+    
     @FindBy(how = How.ID, using = "response")
     private WebElement Response_Pre;
     
@@ -126,7 +132,7 @@ public class MPXDataClient {
     	
     	for (WebElement el : allAccountLnks) {
     		
-    		if (el.getText().contains(accountName)) {
+    		if (el.getText().equals(accountName)) {
     			Reporter.log("Click the '" + accountName + "' account check box.");
     			el.click();
     		}
@@ -135,7 +141,7 @@ public class MPXDataClient {
     	
     }
     
-    public List<String> GetAllMPXObjectFields(String mpxObject, String field) throws Exception {
+    public List<String> GetAllMPXObjectFields(String mpxObject, String field, String startRange, String endRange) throws Exception {
     	
     	Reporter.log("Select the '" + mpxObject + "' from the 'Object' drop down list.");
     	new Select(Object_Ddl).selectByVisibleText(mpxObject);
@@ -143,11 +149,17 @@ public class MPXDataClient {
     	Reporter.log("Enter '" + field + "' in the 'Field' text box.");
     	Fields_Txb.sendKeys(field);
     	
+    	Reporter.log("Enter '" + startRange + " - " + endRange + "' in the 'Range' text boxes.");
+    	StartRange_Txb.clear();
+    	StartRange_Txb.sendKeys(startRange);
+    	EndRange_Txb.clear();
+    	EndRange_Txb.sendKeys(endRange);
+    	
     	Reporter.log("Click the 'Submit' button.");
     	Submit_Btn.click();
     	
     	for (int second = 0; ; second++){
-            if (second >= 30) {
+            if (second >= 60) {
                 Assert.fail("MPX Data client result set not present after 30 seconds.");}
             try {
                 Response_Pre.isDisplayed();

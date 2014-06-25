@@ -212,10 +212,12 @@ public class SelectFile {
     public void ClickSubmitBtn() throws Exception {
     	
     	Reporter.log("Click on the 'Submit' button.");
+    	Thread.sleep(2000);
     	List<WebElement> submitBtns = Submit_Btn();
     	for (WebElement btn : submitBtns) {
     		if (btn.isDisplayed()) {
     			btn.click();
+    			break;
     		}
     	}
     	

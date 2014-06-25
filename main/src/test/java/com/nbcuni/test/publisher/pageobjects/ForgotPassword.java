@@ -48,6 +48,7 @@ public class ForgotPassword {
     public void EnterEmail(String emailAddress) throws Exception {
     	
     	Reporter.log("Enter '" + emailAddress + "' in the 'E-mail' text box.");
+    	Thread.sleep(500);
     	wait.until(ExpectedConditions.visibilityOf(Email_Txb)).sendKeys(emailAddress);
     }
     

@@ -24,7 +24,11 @@ public class MPSConfigurationPage extends ParentTest {
             
         	Reporter.log("SETUP");
         	Modules modules = new Modules(webDriver, applib);
-            modules.VerifyModuleEnabled("MPS");
+        	taxonomy.NavigateSite("Modules");
+        	overlay.SwitchToActiveFrame();
+        	modules.DisableModule("Pixelman");
+        	modules.EnableModule("MPS");
+        	overlay.ClickCloseOverlayLnk();
             
             Reporter.log("STEP 2 - 3");
             taxonomy.NavigateSite("Configuration>>Web services>>MPS Configuration");
