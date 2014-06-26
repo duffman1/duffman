@@ -183,8 +183,8 @@ public class MPXDataClient {
     		
     		result = result.replace("\"", "");
     		result = result.replace("{",  "");
-    		result = result.replace("}",  "");
-    		result = result.replace(",", "");
+    		result = result.replace("},",  "");
+    		//result = result.replace(",", "");
     		resultSet = result.split(field + ":");
     		
     	}

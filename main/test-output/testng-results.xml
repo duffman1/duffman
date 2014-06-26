@@ -2,10 +2,7 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
     <line>
-      <![CDATA[STEP 1]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]>
+      <![CDATA[Open url 'http://install.devi7.nbcupublisher7.publisher7.com'.]]>
     </line>
     <line>
       <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
@@ -17,181 +14,40 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[STEP 2]]>
-    </line>
-    <line>
       <![CDATA[Click the 'Modules' menu link.]]>
     </line>
     <line>
       <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
     </line>
     <line>
-      <![CDATA[Enter 'MPS' in the 'Filter Name' text box.]]>
+      <![CDATA[Enter 'Pub Social' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Wait for the module titled 'MPS' to appear in the list.]]>
+      <![CDATA[Wait for the module titled 'Pub Social' to appear in the list.]]>
     </line>
     <line>
-      <![CDATA[Uncheck the 'MPS' module checkbox.]]>
+      <![CDATA[Verify the 'Pub Social' check box is checked.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
+      <![CDATA[Enter 'Twitter' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+      <![CDATA[Wait for the module titled 'Twitter' to appear in the list.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
+      <![CDATA[Verify the 'Twitter' check box is checked.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Modules' menu link.]]>
+      <![CDATA[Enter 'Twitter Post' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Uninstall' menu link.]]>
+      <![CDATA[Wait for the module titled 'Twitter Post' to appear in the list.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'MPS' uninstall checkbox.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Uninstall' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Confirm uninstall dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'The following modules will be completely uninstalled from your site, and all data from these modules will be lost!' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'MPS' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Uninstall' button to confirm.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+      <![CDATA[Verify the 'Twitter Post' check box is checked.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 3]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Modules' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Pub Ads' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the module titled 'Pub Ads' to appear in the list.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Pub Ads' check box is checked.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'MPS' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the module titled 'MPS' to appear in the list.]]>
-    </line>
-    <line>
-      <![CDATA[Check the 'MPS' check box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
-    </line>
-    <line>
-      <![CDATA[Switch back to the 'Modules' frame.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to frame titled 'Modules'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'DART' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the module titled 'DART' to appear in the list.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Doubleclick for Publishers' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the module titled 'Doubleclick for Publishers' to appear in the list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 4]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Reports' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Status report' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Status report dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'Ad Tag Style' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'MPS' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 5]]>
-    </line>
-    <line>
-      <![CDATA[Verify 'var mpscall = {"site":"install","title":"Welcome to Site-Install","path":"\/","cat":"node","is_content":0,"type":"other"}' is present in page source.]]>
-    </line>
-    <line>
-      <![CDATA[Verify 'var mpsopts = {"host":"mps.nbcuni.com"}' is present in page source.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 6]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'People' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'People dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that no MPS calls were made on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 7]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com/kfkjdjdkjdjldkjj'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that no MPS calls were made on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 8]]>
     </line>
     <line>
       <![CDATA[Mouse over the 'Configuration' menu link.]]>
@@ -200,19 +56,19 @@
       <![CDATA[Mouse over the 'Web services' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'MPS Configuration' menu link.]]>
+      <![CDATA[Mouse over the 'Twitter' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'MPS Configuration dialog'.]]>
+      <![CDATA[Click the 'Settings' menu link.]]>
     </line>
     <line>
-      <![CDATA[Enter 'mps.nbcuni.com' in the 'MPS Host' text box.]]>
+      <![CDATA[Switch to the active frame titled 'Twitter dialog'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Document Write' radio button.]]>
+      <![CDATA[Enter the key in the 'OAuth Consumer Key' text box.]]>
     </line>
     <line>
-      <![CDATA[Enter 'nbc-tonightshow' in the 'Site Instance Override' text box.]]>
+      <![CDATA[Enter the secret in the 'OAuth Consumer Secret' text box.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save configuration' button.]]>
@@ -224,7 +80,55 @@
       <![CDATA[Click the 'Close Overlay X'.]]>
     </line>
     <line>
-      <![CDATA[STEP 9]]>
+      <![CDATA[Mouse over the 'Configuration' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Web services' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Twitter' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Post' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Twitter dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Check the 'Post' checkbox.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configuration' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Configuration' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Web services' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Twitter' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Twitter dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Go to Twitter to add an authenticated account' button.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'publisherseven' in the 'Userame or email' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Publ!$her' in the 'Password' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Authorize App' button.]]>
     </line>
     <line>
       <![CDATA[Mouse over the 'Content' menu link.]]>
@@ -233,16 +137,10 @@
       <![CDATA[Mouse over the 'Add content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Movie' menu link.]]>
+      <![CDATA[Click the 'Post' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'b31323549e484dc' in the 'Title' text box.]]>
+      <![CDATA[Enter '80c5067d866346c' in the 'Title' text box.]]>
     </line>
     <line>
       <![CDATA[Switch to the Synopsis frame.]]>
@@ -251,284 +149,71 @@
       <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
+      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Cover' select button.]]>
+      <![CDATA[Click the 'Publishing Options' link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the select file frame.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the file path for file upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Upload' button.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the file image 'HanSolo' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img is loaded and visible.]]>
+      <![CDATA[Select 'Published' from the 'Moderation State' drop down list.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
+      <![CDATA[Verify success message of 'Post 80c5067d866346c has been created.' is present.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Additional Information' link.]]>
+      <![CDATA[Click the 'Revisions' link in the work bench.]]>
     </line>
     <line>
-      <![CDATA[Select the 'Syndicated' from the 'Movie Type' drop down list.]]>
+      <![CDATA[Switch to frame titled 'Revisions'.]]>
     </line>
     <line>
-      <![CDATA[Select the 'G' from the 'Rating' drop down list.]]>
+      <![CDATA[Click the 'Edit' extend menu button.]]>
     </line>
     <line>
-      <![CDATA[Select the 'Action' from the 'Primary Genre' drop down list.]]>
+      <![CDATA[Click the 'Share' menu button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save' button.]]>
+      <![CDATA[Click the 'Twitter' link.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'Movie b31323549e484dc has been created.' is present.]]>
+      <![CDATA[Check the 'Post to Twitter' check box.]]>
     </line>
     <line>
-      <![CDATA[Note the node number for the content item.]]>
+      <![CDATA[Enter '1fd5363db2264b6fb9bd99684' in the 'Tweet' text area.]]>
     </line>
     <line>
-      <![CDATA[STEP 10]]>
+      <![CDATA[Click the 'Share' button.]]>
     </line>
     <line>
-      <![CDATA[Verify 'var mpscall = {"site":"nbc-tonightshow","title":"b31323549e484dc","path":"\/node\/41' is present in page source.]]>
+      <![CDATA[Verify the text 'Publisher Seven' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Verify 'var mpsopts = {"host":"mps.nbcuni.com"}' is present in page source.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 11 through STEP 19]]>
-    </line>
-    <line>
-      <![CDATA[Verify 'var mpscall = {"site":"nbc-tonightshow","title":"b31323549e484dc","path":"\/node\/41","cat":"content|b31323549e484dc","content_id":"node41","is_content":1,"type":"movie","cag":{"genre":"Action","movie-rating":"G","movie-types":"Syndicated"},"pubdate":' is present in page source.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 20]]>
-    </line>
-    <line>
-      <![CDATA[Verify 'a3VtdWQ9MQ==' is present in page source.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 21]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Add content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Media Gallery' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Media Gallery dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'f4c878b41b02457' in the 'Title' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Media Items Select' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the select file frame.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'View Library' button.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'HanSolo' in the 'File name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the file search 'spinner' image to be present.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the file search 'spinner' image to not be present, indicating image search is complete.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Apply' button.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the file search 'spinner' image to be present.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the file search 'spinner' image to not be present, indicating image search is complete.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the media thumbnail image 'HanSolo' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Click media thumbnail image number 1]]>
-    </line>
-    <line>
-      <![CDATA[Click on the 'Submit' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Media Gallery dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img source of the Media Item contains 'HanSolo'.]]>
-    </line>
-    <line>
-      <![CDATA[Assert the the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Media Gallery f4c878b41b02457 has been created.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Note the node number for the content item.]]>
-    </line>
-    <line>
-      <![CDATA[Get the file id of image number 1.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 22]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com/node/46/1761'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 28]]>
-    </line>
-    <line>
-      <![CDATA[Verify 'typeof(mps.writeFooter)' is present in page source.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 29]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Structure' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'MPS Blocks' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Add' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Add a new MPS block dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '63e87446583f44f' in the 'Unique Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '2a36820538cc48e' in the 'Block Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of '63e87446583f44f has been created.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 30]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Structure' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Blocks' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Select the block name '2a36820538cc48e (MPS)' from the 'Header' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save Blocks' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The block settings have been updated.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 31]]>
-    </line>
-    <line>
-      <![CDATA[Verify 'mps.getAd('2a36820538cc48e')' is present in page source.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 32 - N/A]]>
-    </line>
-    <line>
-      <![CDATA[CLEANUP]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Structure' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Blocks' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Select the block name '2a36820538cc48e (MPS)' from the '- None -' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save Blocks' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
+      <![CDATA[Verify the text '1fd5363db2264b6fb9bd99684' is present on the page.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="154811" started-at="2014-06-25T18:42:57Z" finished-at="2014-06-25T18:45:32Z">
+  <suite name="Default suite" duration-ms="66611" started-at="2014-06-26T17:39:42Z" finished-at="2014-06-26T17:40:49Z">
     <groups>
       <group name="full">
-        <method signature="ImplementMPS.ImplementMPS_TC2901()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@3337cdec]" name="ImplementMPS_TC2901" class="com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS"/>
+        <method signature="TwitterAutoPublishing.TwitterAutoPublishing_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.SocialIntegration.ImplementAutoPublishingToTwitter.TwitterAutoPublishing@42ff1c7f]" name="TwitterAutoPublishing_Test" class="com.nbcuni.test.publisher.tests.SocialIntegration.ImplementAutoPublishingToTwitter.TwitterAutoPublishing"/>
       </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="154811" started-at="2014-06-25T18:42:57Z" finished-at="2014-06-25T18:45:32Z">
-      <class name="com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS">
-        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@3337cdec]" name="startGridAndHub" is-config="true" duration-ms="11901" started-at="2014-06-25T14:42:45Z" finished-at="2014-06-25T14:42:57Z">
+    <test name="Default test" duration-ms="66611" started-at="2014-06-26T17:39:42Z" finished-at="2014-06-26T17:40:49Z">
+      <class name="com.nbcuni.test.publisher.tests.SocialIntegration.ImplementAutoPublishingToTwitter.TwitterAutoPublishing">
+        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.SocialIntegration.ImplementAutoPublishingToTwitter.TwitterAutoPublishing@42ff1c7f]" name="startGridAndHub" is-config="true" duration-ms="11710" started-at="2014-06-26T13:39:31Z" finished-at="2014-06-26T13:39:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startGridAndHub -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@3337cdec]" name="startSelenium" is-config="true" duration-ms="2393" started-at="2014-06-25T14:42:57Z" finished-at="2014-06-25T14:42:59Z">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.SocialIntegration.ImplementAutoPublishingToTwitter.TwitterAutoPublishing@42ff1c7f]" name="startSelenium" is-config="true" duration-ms="2424" started-at="2014-06-26T13:39:42Z" finished-at="2014-06-26T13:39:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="ImplementMPS_TC2901()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@3337cdec]" name="ImplementMPS_TC2901" duration-ms="151783" started-at="2014-06-25T14:42:59Z" finished-at="2014-06-25T14:45:31Z">
+        <test-method status="PASS" signature="TwitterAutoPublishing_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.SocialIntegration.ImplementAutoPublishingToTwitter.TwitterAutoPublishing@42ff1c7f]" name="TwitterAutoPublishing_Test" duration-ms="63601" started-at="2014-06-26T13:39:45Z" finished-at="2014-06-26T13:40:48Z">
           <reporter-output>
             <line>
-              <![CDATA[STEP 1]]>
-            </line>
-            <line>
-              <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]>
+              <![CDATA[Open url 'http://install.devi7.nbcupublisher7.publisher7.com'.]]>
             </line>
             <line>
               <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
@@ -540,181 +225,40 @@
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
-              <![CDATA[STEP 2]]>
-            </line>
-            <line>
               <![CDATA[Click the 'Modules' menu link.]]>
             </line>
             <line>
               <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
             </line>
             <line>
-              <![CDATA[Enter 'MPS' in the 'Filter Name' text box.]]>
+              <![CDATA[Enter 'Pub Social' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Wait for the module titled 'MPS' to appear in the list.]]>
+              <![CDATA[Wait for the module titled 'Pub Social' to appear in the list.]]>
             </line>
             <line>
-              <![CDATA[Uncheck the 'MPS' module checkbox.]]>
+              <![CDATA[Verify the 'Pub Social' check box is checked.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
+              <![CDATA[Enter 'Twitter' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+              <![CDATA[Wait for the module titled 'Twitter' to appear in the list.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
+              <![CDATA[Verify the 'Twitter' check box is checked.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Modules' menu link.]]>
+              <![CDATA[Enter 'Twitter Post' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Uninstall' menu link.]]>
+              <![CDATA[Wait for the module titled 'Twitter Post' to appear in the list.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'MPS' uninstall checkbox.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Uninstall' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Confirm uninstall dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'The following modules will be completely uninstalled from your site, and all data from these modules will be lost!' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'MPS' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Uninstall' button to confirm.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+              <![CDATA[Verify the 'Twitter Post' check box is checked.]]>
             </line>
             <line>
               <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 3]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Modules' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Pub Ads' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the module titled 'Pub Ads' to appear in the list.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Pub Ads' check box is checked.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'MPS' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the module titled 'MPS' to appear in the list.]]>
-            </line>
-            <line>
-              <![CDATA[Check the 'MPS' check box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
-            </line>
-            <line>
-              <![CDATA[Switch back to the 'Modules' frame.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to frame titled 'Modules'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'DART' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the module titled 'DART' to appear in the list.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Doubleclick for Publishers' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the module titled 'Doubleclick for Publishers' to appear in the list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 4]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Reports' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Status report' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Status report dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'Ad Tag Style' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'MPS' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 5]]>
-            </line>
-            <line>
-              <![CDATA[Verify 'var mpscall = {"site":"install","title":"Welcome to Site-Install","path":"\/","cat":"node","is_content":0,"type":"other"}' is present in page source.]]>
-            </line>
-            <line>
-              <![CDATA[Verify 'var mpsopts = {"host":"mps.nbcuni.com"}' is present in page source.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 6]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'People' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'People dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that no MPS calls were made on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 7]]>
-            </line>
-            <line>
-              <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com/kfkjdjdkjdjldkjj'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that no MPS calls were made on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 8]]>
             </line>
             <line>
               <![CDATA[Mouse over the 'Configuration' menu link.]]>
@@ -723,19 +267,19 @@
               <![CDATA[Mouse over the 'Web services' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'MPS Configuration' menu link.]]>
+              <![CDATA[Mouse over the 'Twitter' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'MPS Configuration dialog'.]]>
+              <![CDATA[Click the 'Settings' menu link.]]>
             </line>
             <line>
-              <![CDATA[Enter 'mps.nbcuni.com' in the 'MPS Host' text box.]]>
+              <![CDATA[Switch to the active frame titled 'Twitter dialog'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Document Write' radio button.]]>
+              <![CDATA[Enter the key in the 'OAuth Consumer Key' text box.]]>
             </line>
             <line>
-              <![CDATA[Enter 'nbc-tonightshow' in the 'Site Instance Override' text box.]]>
+              <![CDATA[Enter the secret in the 'OAuth Consumer Secret' text box.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save configuration' button.]]>
@@ -747,7 +291,55 @@
               <![CDATA[Click the 'Close Overlay X'.]]>
             </line>
             <line>
-              <![CDATA[STEP 9]]>
+              <![CDATA[Mouse over the 'Configuration' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Web services' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Twitter' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Post' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Twitter dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Check the 'Post' checkbox.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configuration' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Configuration' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Web services' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Twitter' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Twitter dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Go to Twitter to add an authenticated account' button.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'publisherseven' in the 'Userame or email' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Publ!$her' in the 'Password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Authorize App' button.]]>
             </line>
             <line>
               <![CDATA[Mouse over the 'Content' menu link.]]>
@@ -756,16 +348,10 @@
               <![CDATA[Mouse over the 'Add content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Movie' menu link.]]>
+              <![CDATA[Click the 'Post' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'b31323549e484dc' in the 'Title' text box.]]>
+              <![CDATA[Enter '80c5067d866346c' in the 'Title' text box.]]>
             </line>
             <line>
               <![CDATA[Switch to the Synopsis frame.]]>
@@ -774,278 +360,68 @@
               <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
+              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Cover' select button.]]>
+              <![CDATA[Click the 'Publishing Options' link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the select file frame.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the file path for file upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Upload' button.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Public Local Files' radio button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the file image 'HanSolo' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img is loaded and visible.]]>
+              <![CDATA[Select 'Published' from the 'Moderation State' drop down list.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
+              <![CDATA[Verify success message of 'Post 80c5067d866346c has been created.' is present.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Additional Information' link.]]>
+              <![CDATA[Click the 'Revisions' link in the work bench.]]>
             </line>
             <line>
-              <![CDATA[Select the 'Syndicated' from the 'Movie Type' drop down list.]]>
+              <![CDATA[Switch to frame titled 'Revisions'.]]>
             </line>
             <line>
-              <![CDATA[Select the 'G' from the 'Rating' drop down list.]]>
+              <![CDATA[Click the 'Edit' extend menu button.]]>
             </line>
             <line>
-              <![CDATA[Select the 'Action' from the 'Primary Genre' drop down list.]]>
+              <![CDATA[Click the 'Share' menu button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save' button.]]>
+              <![CDATA[Click the 'Twitter' link.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'Movie b31323549e484dc has been created.' is present.]]>
+              <![CDATA[Check the 'Post to Twitter' check box.]]>
             </line>
             <line>
-              <![CDATA[Note the node number for the content item.]]>
+              <![CDATA[Enter '1fd5363db2264b6fb9bd99684' in the 'Tweet' text area.]]>
             </line>
             <line>
-              <![CDATA[STEP 10]]>
+              <![CDATA[Click the 'Share' button.]]>
             </line>
             <line>
-              <![CDATA[Verify 'var mpscall = {"site":"nbc-tonightshow","title":"b31323549e484dc","path":"\/node\/41' is present in page source.]]>
+              <![CDATA[Verify the text 'Publisher Seven' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Verify 'var mpsopts = {"host":"mps.nbcuni.com"}' is present in page source.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 11 through STEP 19]]>
-            </line>
-            <line>
-              <![CDATA[Verify 'var mpscall = {"site":"nbc-tonightshow","title":"b31323549e484dc","path":"\/node\/41","cat":"content|b31323549e484dc","content_id":"node41","is_content":1,"type":"movie","cag":{"genre":"Action","movie-rating":"G","movie-types":"Syndicated"},"pubdate":' is present in page source.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 20]]>
-            </line>
-            <line>
-              <![CDATA[Verify 'a3VtdWQ9MQ==' is present in page source.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 21]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Add content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Media Gallery' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Media Gallery dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'f4c878b41b02457' in the 'Title' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Media Items Select' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the select file frame.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'View Library' button.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'HanSolo' in the 'File name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the file search 'spinner' image to be present.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the file search 'spinner' image to not be present, indicating image search is complete.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Apply' button.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the file search 'spinner' image to be present.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the file search 'spinner' image to not be present, indicating image search is complete.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the media thumbnail image 'HanSolo' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Click media thumbnail image number 1]]>
-            </line>
-            <line>
-              <![CDATA[Click on the 'Submit' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Media Gallery dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img source of the Media Item contains 'HanSolo'.]]>
-            </line>
-            <line>
-              <![CDATA[Assert the the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Media Gallery f4c878b41b02457 has been created.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Note the node number for the content item.]]>
-            </line>
-            <line>
-              <![CDATA[Get the file id of image number 1.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 22]]>
-            </line>
-            <line>
-              <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com/node/46/1761'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 28]]>
-            </line>
-            <line>
-              <![CDATA[Verify 'typeof(mps.writeFooter)' is present in page source.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 29]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Structure' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'MPS Blocks' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Add' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Add a new MPS block dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '63e87446583f44f' in the 'Unique Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '2a36820538cc48e' in the 'Block Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of '63e87446583f44f has been created.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 30]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Structure' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Blocks' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Select the block name '2a36820538cc48e (MPS)' from the 'Header' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save Blocks' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The block settings have been updated.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 31]]>
-            </line>
-            <line>
-              <![CDATA[Verify 'mps.getAd('2a36820538cc48e')' is present in page source.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 32 - N/A]]>
-            </line>
-            <line>
-              <![CDATA[CLEANUP]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Structure' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Blocks' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Select the block name '2a36820538cc48e (MPS)' from the '- None -' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save Blocks' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
+              <![CDATA[Verify the text '1fd5363db2264b6fb9bd99684' is present on the page.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- ImplementMPS_TC2901 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@3337cdec]" name="stopSelenium" is-config="true" duration-ms="619" started-at="2014-06-25T14:45:31Z" finished-at="2014-06-25T14:45:32Z">
+        </test-method> <!-- TwitterAutoPublishing_Test -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.SocialIntegration.ImplementAutoPublishingToTwitter.TwitterAutoPublishing@42ff1c7f]" name="stopSelenium" is-config="true" duration-ms="573" started-at="2014-06-26T13:40:48Z" finished-at="2014-06-26T13:40:49Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=ImplementMPS_TC2901 status=SUCCESS method=ImplementMPS.ImplementMPS_TC2901()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@3337cdec] output=STEP 1]]]>
+                <![CDATA[[TestResult name=TwitterAutoPublishing_Test status=SUCCESS method=TwitterAutoPublishing.TwitterAutoPublishing_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.SocialIntegration.ImplementAutoPublishingToTwitter.TwitterAutoPublishing@42ff1c7f] output=Open url 'http://install.devi7.nbcupublisher7.publisher7.com'.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@3337cdec]" name="stopGridAndHub" is-config="true" duration-ms="383" started-at="2014-06-25T14:45:32Z" finished-at="2014-06-25T14:45:32Z">
+        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.SocialIntegration.ImplementAutoPublishingToTwitter.TwitterAutoPublishing@42ff1c7f]" name="stopGridAndHub" is-config="true" duration-ms="376" started-at="2014-06-26T13:40:49Z" finished-at="2014-06-26T13:40:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopGridAndHub -->
-      </class> <!-- com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS -->
+      </class> <!-- com.nbcuni.test.publisher.tests.SocialIntegration.ImplementAutoPublishingToTwitter.TwitterAutoPublishing -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

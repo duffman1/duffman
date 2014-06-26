@@ -1,0 +1,15 @@
+<suite name="Pub 7 Concurrent Suite" parallel="classes" preserve-order="true" thread-count="2">
+
+  	<!--TEST EXECUTION QUEUE-->
+  	<test verbose="1" name="All Concurrent Web Tests" annotations="JDK">
+
+		<!-- Enter group name for specific test scripts, options are "full", "smoke", or "mpx" -->
+		
+		<classes>
+		
+			<class name="com.nbcuni.test.publisher.contentbuildscripts.MPXPerformanceUpgrade.DeleteVideos.DeleteVideos"/>
+			<class name="com.nbcuni.test.publisher.contentbuildscripts.MPXPerformanceUpgrade.DeleteVideos.ValidateIngestionTimePub7"/>
+			
+		</classes>
+	</test>
+</suite>
