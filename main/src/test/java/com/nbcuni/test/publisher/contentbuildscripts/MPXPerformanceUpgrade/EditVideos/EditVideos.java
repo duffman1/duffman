@@ -3,6 +3,9 @@ package com.nbcuni.test.publisher.contentbuildscripts.MPXPerformanceUpgrade.Edit
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXAddMedia;
@@ -30,7 +33,7 @@ public class EditVideos extends ParentTest{
 	    
     	String mediaTitle = null;
     	Boolean needToScrollUp = false;
-    	for(int CCount=0;CCount<3;CCount++) {
+    	for(int CCount=0;CCount<1;CCount++) {
     		
     		String filePath = System.getProperty("user.dir") + "/src/test/java/com/nbcuni/test/publisher/contentbuildscripts/MPXPerformanceUpgrade/EditVideos/AssetsEdited.txt";
     	    filePath = filePath.replace("/", File.separator);
@@ -63,7 +66,7 @@ public class EditVideos extends ParentTest{
             	webDriver.getCurrentUrl();
             	
             	String mediaDescription = "null";
-            	for(int ECount=0;ECount<50;ECount++) {
+            	for(int ECount=0;ECount<5;ECount++) {
             		
             		webDriver.getCurrentUrl();
             		if (ECount == 0) {
@@ -78,9 +81,11 @@ public class EditVideos extends ParentTest{
             	
             	//log the data
         	    long finalEditTime = System.nanoTime();
+        	    String finalEditTimeStamp = new SimpleDateFormat("MMddyy-hh:mm:ss a").format(Calendar.getInstance().getTime());
+            	
         	    FileWriter fileWritter2 = new FileWriter(file.getAbsolutePath(),true);
             	BufferedWriter bufferWritter2 = new BufferedWriter(fileWritter2);
-            	bufferWritter2.write("edited," + mediaTitle + "," + creationTime + "," + finalEditTime + "," + mediaDescription + System.lineSeparator());
+            	bufferWritter2.write("edited," + mediaTitle + "," + creationTime + "," + "," + finalEditTimeStamp + "," + finalEditTime + "," + mediaDescription + System.lineSeparator());
             	bufferWritter2.close();
             	
     		}

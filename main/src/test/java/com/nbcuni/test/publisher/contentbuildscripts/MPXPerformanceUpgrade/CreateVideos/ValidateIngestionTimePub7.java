@@ -91,7 +91,7 @@ public class ValidateIngestionTimePub7 extends ParentTest{
                        	
                        		   webDriver.navigate().refresh();
                        		   refreshCount++;
-                       		   if (refreshCount == 90) {
+                       		   if (refreshCount == 30) {
                        		   ingestionTimeout = true;
                        		   		break;
                        		   }

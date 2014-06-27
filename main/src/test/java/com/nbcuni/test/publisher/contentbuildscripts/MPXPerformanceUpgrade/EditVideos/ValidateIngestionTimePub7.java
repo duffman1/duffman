@@ -5,7 +5,9 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -56,6 +58,7 @@ public class ValidateIngestionTimePub7 extends ParentTest{
     			//read all the entries in the created asset file
         		String mediaTitle = null;
         		long creationTime = 0;
+        		String finalEditTimeStamp = null;
         		long finalEditTime = 0;
         		String dynamicData = null;
         		webDriver.getCurrentUrl();
@@ -75,8 +78,9 @@ public class ValidateIngestionTimePub7 extends ParentTest{
             		   String[] data = asset.split(",");
             		   mediaTitle = data[1];
                 	   creationTime = Long.valueOf(data[2]).longValue();
-                	   finalEditTime = Long.valueOf(data[3]).longValue();
-                	   dynamicData = data[4];
+                	   finalEditTimeStamp = data[3];
+                	   finalEditTime = Long.valueOf(data[4]).longValue();
+                	   dynamicData = data[5];
                 	   
                 	   entriesProcessed.add(asset);
                 		      
@@ -93,7 +97,7 @@ public class ValidateIngestionTimePub7 extends ParentTest{
                    	
                    		   webDriver.navigate().refresh();
                    		   refreshSearchCount++;
-                   		   if (refreshSearchCount == 60) {
+                   		   if (refreshSearchCount == 30) {
                    		   ingestionCreationTimeout = true;
                    		   		break;
                    		   }
@@ -105,7 +109,7 @@ public class ValidateIngestionTimePub7 extends ParentTest{
                    		   while (!webDriver.findElement(By.tagName("body")).getText().contains(dynamicData)){
                    				   webDriver.navigate().refresh();
                    				   refreshMediaPageCount++;
-                   				   if (refreshMediaPageCount == 120) {
+                   				   if (refreshMediaPageCount == 30) {
                             		   ingestionEditTimeout = true;
                             		   		break;
                    				   }
@@ -119,6 +123,7 @@ public class ValidateIngestionTimePub7 extends ParentTest{
                    	   long ingestionFinalEditTime = 0;
                    	   long ingestionCreationFailureTime = 0;
                    	   long ingestionEditFailureTime = 0;
+                   	   String searchTimeStamp = null;
                    	   long searchTime = 0;
                    	   long creationToFinalEditTime = 0;
                    	   if (ingestionCreationTimeout == true) {
@@ -130,10 +135,11 @@ public class ValidateIngestionTimePub7 extends ParentTest{
                 		   ingestionMessage = "searchEditFailure," + mediaTitle + "," + ingestionEditFailureTime;
                    	   }
                    	   else {
+                   		   searchTimeStamp = new SimpleDateFormat("MMddyy-hh:mm:ss a").format(Calendar.getInstance().getTime());
                    		   searchTime = System.nanoTime();
                 		   ingestionFinalEditTime = searchTime - finalEditTime;
                 		   creationToFinalEditTime = searchTime - creationTime;
-                		   ingestionMessage = mediaTitle + "," + searchTime + "," + TimeUnit.SECONDS.convert(ingestionFinalEditTime, TimeUnit.NANOSECONDS) + " seconds, " + TimeUnit.SECONDS.convert(creationToFinalEditTime, TimeUnit.NANOSECONDS) + " seconds";
+                		   ingestionMessage = mediaTitle + "Final Edit to Asset made at " + finalEditTimeStamp + "," + searchTime + "," + "Asset Final Edit Present in Pub7 at " + searchTimeStamp + "," + TimeUnit.SECONDS.convert(ingestionFinalEditTime, TimeUnit.NANOSECONDS) + " seconds, " + "ELAPSED TIME FROM FINAL EDIT IN MPX TO FINAL EDIT IN PUB7 = " + TimeUnit.SECONDS.convert(creationToFinalEditTime, TimeUnit.NANOSECONDS) + " seconds";
                 		   
                    	   }
                    	   
