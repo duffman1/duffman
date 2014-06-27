@@ -2,7 +2,6 @@ package com.nbcuni.test.publisher.pageobjects.Content;
 
 import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.publisher.common.Driver.Driver;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
@@ -12,7 +11,6 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.Reporter;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -70,6 +68,10 @@ public class SearchFor {
     
     private List<WebElement> AllResultSet_Ttls() {
     	return webDriver.findElements(By.xpath("//table/tbody/tr/td[contains(@class, 'title')]"));
+    }
+    
+    private List<WebElement> AllMPXResultSet_Ttls() {
+    	return webDriver.findElements(By.xpath("//tbody//td[3]//a"));
     }
     
     private WebElement SearchTitle_Lnk(String title) {
@@ -174,7 +176,7 @@ public class SearchFor {
     		}
     	}
     }
-
+    
     public void ClickSearchTitleLnk(String title) throws Exception {
 
     	Reporter.log("Click the first search title link in the search result set.");
@@ -244,6 +246,21 @@ public class SearchFor {
     	catch (Exception e) {}
     	webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
         return linkTxt;
+    }
+    
+    public List<String> GetAllMPXMediaSearchResult() throws Exception {
+    	
+    	webDriver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+    	Reporter.log("Get the text of all search result set item.");
+    	List<String> allTitles = new ArrayList<String>();
+    	for (WebElement el : AllMPXResultSet_Ttls()) {
+    		try {
+    			allTitles.add(el.getText());
+    		}
+    		catch (Exception e) {}
+    	}
+    	webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
+        return allTitles;
     }
     
     public String GetFirstMPXPlayerSearchResult() throws Exception {

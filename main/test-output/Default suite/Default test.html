@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Jun 26 13:39:42 EDT 2014</td>
+<td>Started on:</td><td>Thu Jun 26 16:16:26 EDT 2014</td>
 </tr>
-<tr><td>Total time:</td><td>66 seconds (66611 ms)</td>
+<tr><td>Total time:</td><td>304 seconds (304405 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,80 +75,88 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.nbcuni.test.publisher.tests.SocialIntegration.ImplementAutoPublishingToTwitter.TwitterAutoPublishing.TwitterAutoPublishing_Test()'><b>TwitterAutoPublishing_Test</b><br>Test class: com.nbcuni.test.publisher.tests.SocialIntegration.ImplementAutoPublishingToTwitter.TwitterAutoPublishing<br/>
-<a href="#Output-1693404377" onClick='toggleBox("Output-1693404377", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.nbcuni.test.publisher.tests.Video.Configuration.ConfigurationMultipleMPXAccounts.ConfigurationMultipleMPXAccounts_TC1073()'><b>ConfigurationMultipleMPXAccounts_TC1073</b><br>Test class: com.nbcuni.test.publisher.tests.Video.Configuration.ConfigurationMultipleMPXAccounts<br/>
+<a href="#Output-618068306" onClick='toggleBox("Output-618068306", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1693404377" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1693404377">
-Open url 'http://install.devi7.nbcupublisher7.publisher7.com'.<br/>
+<a href="#Output-618068306" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-618068306">
+Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.<br/>
 Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
 Enter 'pa55word' in the 'Password' text box.<br/>
 Click the 'Login' button.<br/>
-Click the 'Modules' menu link.<br/>
-Switch to the active frame titled 'Modules dialog'.<br/>
-Enter 'Pub Social' in the 'Filter Name' text box.<br/>
-Wait for the module titled 'Pub Social' to appear in the list.<br/>
-Verify the 'Pub Social' check box is checked.<br/>
-Enter 'Twitter' in the 'Filter Name' text box.<br/>
-Wait for the module titled 'Twitter' to appear in the list.<br/>
-Verify the 'Twitter' check box is checked.<br/>
-Enter 'Twitter Post' in the 'Filter Name' text box.<br/>
-Wait for the module titled 'Twitter Post' to appear in the list.<br/>
-Verify the 'Twitter Post' check box is checked.<br/>
-Click the 'Close Overlay X'.<br/>
 Mouse over the 'Configuration' menu link.<br/>
-Mouse over the 'Web services' menu link.<br/>
-Mouse over the 'Twitter' menu link.<br/>
-Click the 'Settings' menu link.<br/>
-Switch to the active frame titled 'Twitter dialog'.<br/>
-Enter the key in the 'OAuth Consumer Key' text box.<br/>
-Enter the secret in the 'OAuth Consumer Secret' text box.<br/>
-Click the 'Save configuration' button.<br/>
-Verify success message of 'The configuration options have been saved.' is present.<br/>
+Mouse over the 'Media' menu link.<br/>
+Click the 'Media: thePlatform mpx settings' menu link.<br/>
+Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.<br/>
+Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.<br/>
+Enter mpx username in the 'Username for New Account' text box.<br/>
+Enter mpx password in the 'Password for New Account' text box.<br/>
+Click the 'Connect to MPX' button.<br/>
+Verify success message of 'Login successful' is present.<br/>
+Get the account options from the 'Select Import Account for Account...' drop down lists.<br/>
+Select 'DB TV' from the first 'Select Import Account for...' drop down list.<br/>
+click the 'Set Import Account' button.<br/>
+Verify success message of 'Setting import account "DB%20TV" for account' is present.<br/>
+Verify success message of 'Retrieving import account information for "DB%20TV".' is present.<br/>
+Verify the 'Select Import Account for...' drop down lists are disabled.<br/>
 Click the 'Close Overlay X'.<br/>
-Mouse over the 'Configuration' menu link.<br/>
-Mouse over the 'Web services' menu link.<br/>
-Mouse over the 'Twitter' menu link.<br/>
-Click the 'Post' menu link.<br/>
-Switch to the active frame titled 'Twitter dialog'.<br/>
-Check the 'Post' checkbox.<br/>
-Click the 'Save configuration' button.<br/>
-Verify success message of 'The configuration options have been saved.' is present.<br/>
-Click the 'Close Overlay X'.<br/>
-Mouse over the 'Configuration' menu link.<br/>
-Mouse over the 'Web services' menu link.<br/>
-Click the 'Twitter' menu link.<br/>
-Switch to the active frame titled 'Twitter dialog'.<br/>
-Click the 'Go to Twitter to add an authenticated account' button.<br/>
-Enter 'publisherseven' in the 'Userame or email' text box.<br/>
-Enter 'Publ!$her' in the 'Password' text box.<br/>
-Click the 'Authorize App' button.<br/>
 Mouse over the 'Content' menu link.<br/>
-Mouse over the 'Add content' menu link.<br/>
-Click the 'Post' menu link.<br/>
-Enter '80c5067d866346c' in the 'Title' text box.<br/>
-Switch to the Synopsis frame.<br/>
-Enter a randomized text string into the 'Body' text area.<br/>
-Scroll the 'Publishing Options' link into view.<br/>
-Click the 'Publishing Options' link.<br/>
-Select 'Published' from the 'Moderation State' drop down list.<br/>
+Mouse over the 'Files' menu link.<br/>
+Click the 'mpxMedia' menu link.<br/>
+Switch to the active frame titled 'Content dialog'.<br/>
+Select 'AutomationPlayer1' from the first 'Import Player' drop down list.<br/>
+Click the 'Sync MPX Media Now' link.<br/>
+Verify success message of 'Processed video import/update manually for all accounts.' is present.<br/>
+Click the 'Run Cron to complete import' link.<br/>
+Switch to the active frame titled 'Cron dialog'.<br/>
+Click the 'Run Cron' button.<br/>
+Verify success message of 'Cron run successfully.' is present.<br/>
+Click the 'Close Overlay X'.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Files' menu link.<br/>
+Click the 'mpxMedia' menu link.<br/>
+Switch to the active frame titled 'Content dialog'.<br/>
+Enter title AutomationDefault.<br/>
+Click the 'Apply' button.<br/>
+Get the title text of every result in the search result set.<br/>
+For each expected result, assert it is present in the result set.<br/>
+Mouse over the 'Configuration' menu link.<br/>
+Mouse over the 'Media' menu link.<br/>
+Click the 'Media: thePlatform mpx settings' menu link.<br/>
+Click the 'ADD ACCOUNTS' link.<br/>
+Wait for 'Add New Account' button to be visible.<br/>
+Enter mpx username in the 'Username for New Account' text box.<br/>
+Enter mpx password in the 'Password for New Account' text box.<br/>
 Click the 'Save' button.<br/>
-Verify success message of 'Post 80c5067d866346c has been created.' is present.<br/>
-Click the 'Revisions' link in the work bench.<br/>
-Switch to frame titled 'Revisions'.<br/>
-Click the 'Edit' extend menu button.<br/>
-Click the 'Share' menu button.<br/>
-Click the 'Twitter' link.<br/>
-Check the 'Post to Twitter' check box.<br/>
-Enter '1fd5363db2264b6fb9bd99684' in the 'Tweet' text area.<br/>
-Click the 'Share' button.<br/>
-Verify the text 'Publisher Seven' is present on the page.<br/>
-Verify the text '1fd5363db2264b6fb9bd99684' is present on the page.<br/>
+Select 'NBCU TVE Stage - Golf Channel' from the second 'Select Import Account for...' drop down list.<br/>
+click the 'Set Import Account' button.<br/>
+Verify success message of 'Setting import account "NBCU%20TVE%20Stage%20-%20Golf%20Channel" for account' is present.<br/>
+Verify success message of 'Retrieving import account information for "NBCU%20TVE%20Stage%20-%20Golf%20Channel".' is present.<br/>
+Verify the 'Select Import Account for...' drop down lists are disabled.<br/>
+Click the 'Save configurations' button.<br/>
+Verify success message of 'The configuration options have been saved.' is present.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Files' menu link.<br/>
+Click the 'mpxMedia' menu link.<br/>
+Click the 'Sync MPX Media' link.<br/>
+Select 'AutomationPlayer1' from the second 'Import Player' drop down list.<br/>
+Click the 'Sync MPX Media Now' link.<br/>
+Verify success message of 'Processed video import/update manually for all accounts.' is present.<br/>
+Click the 'Run Cron to complete import' link.<br/>
+Click the 'Run Cron' button.<br/>
+Verify success message of 'Cron run successfully.' is present.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Files' menu link.<br/>
+Click the 'mpxMedia' menu link.<br/>
+Enter title The Golf Fix 2/4.<br/>
+Click the 'Apply' button.<br/>
+Get the title text of every result in the search result set.<br/>
+For each expected result, assert it is present in the result set.<br/>
 </div>
 </td>
 <td></td>
-<td>63</td>
-<td>com.nbcuni.test.publisher.tests.SocialIntegration.ImplementAutoPublishingToTwitter.TwitterAutoPublishing@42ff1c7f</td></tr>
+<td>301</td>
+<td>com.nbcuni.test.publisher.tests.Video.Configuration.ConfigurationMultipleMPXAccounts@7faf9b87</td></tr>
 </table><p>
 </body>
 </html>

@@ -33,7 +33,9 @@ public class ConfigurationMultipleMPXAccounts extends ParentTest{
         MPXMedia mpxMedia = new MPXMedia(webDriver);
         Cron cron = new Cron(webDriver, applib);
         
-        List<String> accountNames = Arrays.asList("DB TV", "NBC.com Stage", "NBCU TVE Stage - Golf Channel", "NBCU TVE Stage - Syfy");
+        List<String> accountNames = Arrays.asList("DB TV", "NBC.com Stage", "NBC.com Stage - Content Testing", 
+        		"NBCU TVE Dev - NBC", "NBCU TVE Dev - Style", "NBCU TVE Stage - Golf Channel", 
+        		"NBCU TVE Stage - Syfy");
         
         if (settings.IsMPXConfigured() == true) {
         	

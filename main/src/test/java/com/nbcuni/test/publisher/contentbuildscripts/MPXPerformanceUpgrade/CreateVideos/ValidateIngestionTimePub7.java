@@ -51,9 +51,7 @@ public class ValidateIngestionTimePub7 extends ParentTest{
     	int I = 1;
     	while (I == 1) {
     		
-    		try {
-    			
-    			//read all the entries in the created asset file
+    		//read all the entries in the created asset file
         		String type = null;
         		String mediaTitle = null;
         		String publishTimeStamp = null;
@@ -73,68 +71,69 @@ public class ValidateIngestionTimePub7 extends ParentTest{
             	   
             	   if (!entriesProcessed.contains(asset)) {
                 		   
-            		   String[] data = asset.split(",");
-            		   type = data[0];
-            		   mediaTitle = data[1];
-            		   publishTimeStamp = data[2];
-                	   publishTime = Long.valueOf(data[3]).longValue();
-                	   
-                	   entriesProcessed.add(asset);
-                		      
-                	   //search for the asset
-                   	   SearchFor searchFor = new SearchFor(webDriver, applib);
-                   	   searchFor.EnterTitle(mediaTitle);
-                   	   searchFor.ClickApplyBtn();
-                   	   overlay.switchToDefaultContent();
-                   	   int refreshCount = 0;
-                   	   Boolean ingestionTimeout = false;
-                   	   while (!searchFor.GetFirstMPXMediaSearchResult().equals(mediaTitle)) {
-                   	
-                   		   webDriver.navigate().refresh();
-                   		   refreshCount++;
-                   		   if (refreshCount == 90) {
-                   		   ingestionTimeout = true;
-                   		   		break;
-                   		   }
-                   	   }
-                   	   
-                       //log the ingestion time (or failed ingestion)
-                   	   String ingestionMessage;
-                   	   long searchTime = 0;
-                   	   String searchTimeStamp = null;
-                   	   long ingestionTime = 0;
-                   	   String failureTimeStamp = null;
-                   	   if (ingestionTimeout == true) {
-                   		   failureTimeStamp = new SimpleDateFormat("MMddyy-hh:mm:ss a").format(Calendar.getInstance().getTime());
-                   		   ingestionMessage = "searchfailure," + mediaTitle + "," + "Timed Out Searching for Asset at " + failureTimeStamp;
-                   	   }
-                   	   else {
-                   		   searchTime = System.nanoTime();
-                   		   searchTimeStamp = new SimpleDateFormat("MMddyy-hh:mm:ss a").format(Calendar.getInstance().getTime());
-                   		   ingestionTime = searchTime - publishTime;
-                   		   ingestionMessage = type + "," + mediaTitle + "," + "Asset Published at " + publishTimeStamp + "," + "Asset Ingested at " + searchTimeStamp + "," + "ELAPSED TIME = " + TimeUnit.SECONDS.convert(ingestionTime, TimeUnit.NANOSECONDS) + " seconds";
-                   		   
-                   	   }
-                       
-                       String assetIngestionFilePath = System.getProperty("user.dir") + "/src/test/java/com/nbcuni/test/publisher/contentbuildscripts/MPXPerformanceUpgrade/CreateVideos/AssetsIngested.txt";
-                       assetIngestionFilePath = assetIngestionFilePath.replace("/", File.separator);	    	
-                       File assetIngestionFile = new File(assetIngestionFilePath); 
-                       if(!assetIngestionFile.exists()){
-                    	   assetIngestionFile.createNewFile();
-                       }
+            		   try {
+            			   String[] data = asset.split(",");
+                		   type = data[0];
+                		   mediaTitle = data[1];
+                		   publishTimeStamp = data[2];
+                    	   publishTime = Long.valueOf(data[3]).longValue();
+                    	   
+                    	   entriesProcessed.add(asset);
+                    		      
+                    	   //search for the asset
+                       	   SearchFor searchFor = new SearchFor(webDriver, applib);
+                       	   searchFor.EnterTitle(mediaTitle);
+                       	   searchFor.ClickApplyBtn();
+                       	   overlay.switchToDefaultContent();
+                       	   int refreshCount = 0;
+                       	   Boolean ingestionTimeout = false;
+                       	   while (!searchFor.GetFirstMPXMediaSearchResult().equals(mediaTitle)) {
+                       	
+                       		   webDriver.navigate().refresh();
+                       		   refreshCount++;
+                       		   if (refreshCount == 90) {
+                       		   ingestionTimeout = true;
+                       		   		break;
+                       		   }
+                       	   }
+                       	   
+                           //log the ingestion time (or failed ingestion)
+                       	   String ingestionMessage;
+                       	   long searchTime = 0;
+                       	   String searchTimeStamp = null;
+                       	   long ingestionTime = 0;
+                       	   String failureTimeStamp = null;
+                       	   if (ingestionTimeout == true) {
+                       		   failureTimeStamp = new SimpleDateFormat("MMddyy-hh:mm:ss a").format(Calendar.getInstance().getTime());
+                       		   ingestionMessage = "searchfailure," + mediaTitle + "," + "Timed Out Searching for Asset at " + failureTimeStamp;
+                       	   }
+                       	   else {
+                       		   searchTime = System.nanoTime();
+                       		   searchTimeStamp = new SimpleDateFormat("MMddyy-hh:mm:ss a").format(Calendar.getInstance().getTime());
+                       		   ingestionTime = searchTime - publishTime;
+                       		   ingestionMessage = type + "," + mediaTitle + "," + "Asset Published at " + publishTimeStamp + "," + "Asset Ingested at " + searchTimeStamp + "," + "ELAPSED TIME = " + TimeUnit.SECONDS.convert(ingestionTime, TimeUnit.NANOSECONDS) + " seconds";
+                       		   
+                       	   }
                            
-                       FileWriter fileWritter = new FileWriter(assetIngestionFile.getAbsolutePath(),true);
-                       BufferedWriter bufferWritter = new BufferedWriter(fileWritter);
-                       bufferWritter.write(ingestionMessage + System.lineSeparator());
-                       bufferWritter.close();
-                	   
+                           String assetIngestionFilePath = System.getProperty("user.dir") + "/src/test/java/com/nbcuni/test/publisher/contentbuildscripts/MPXPerformanceUpgrade/CreateVideos/AssetsIngested.txt";
+                           assetIngestionFilePath = assetIngestionFilePath.replace("/", File.separator);	    	
+                           File assetIngestionFile = new File(assetIngestionFilePath); 
+                           if(!assetIngestionFile.exists()){
+                        	   assetIngestionFile.createNewFile();
+                           }
+                               
+                           FileWriter fileWritter = new FileWriter(assetIngestionFile.getAbsolutePath(),true);
+                           BufferedWriter bufferWritter = new BufferedWriter(fileWritter);
+                           bufferWritter.write(ingestionMessage + System.lineSeparator());
+                           bufferWritter.close();
+                    	   
+                	   }
+                	
+            		   catch (Exception e) {
+            			   webDriver.navigate().refresh();
+            		   }
             	   }
-            	}
     		}
-    		catch (Exception e) {
-    			
-    		}
-    		
     	}
     	 
     }

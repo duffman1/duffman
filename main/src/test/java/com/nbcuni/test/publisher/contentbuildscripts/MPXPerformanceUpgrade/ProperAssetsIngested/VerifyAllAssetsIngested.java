@@ -31,23 +31,32 @@ public class VerifyAllAssetsIngested extends ParentTest{
     	
     	//search for each asset in the list
     	for (String assetTitle : allNBCComAssets) {
-    		SearchFor searchFor = new SearchFor(webDriver, applib);
-    		searchFor.EnterTitle(assetTitle);
-    		searchFor.ClickApplyBtn();
-    		Thread.sleep(500);
-    		if (!searchFor.GetFirstMPXMediaSearchResult().equals(assetTitle)) {
-    			String assetIngestionFilePath = System.getProperty("user.dir") + "/src/test/java/com/nbcuni/test/publisher/contentbuildscripts/MPXPerformanceUpgrade/ProperAssetsIngested/AssetsIngested.txt";
-                assetIngestionFilePath = assetIngestionFilePath.replace("/", File.separator);	    	
-                File assetIngestionFile = new File(assetIngestionFilePath); 
-                if(!assetIngestionFile.exists()){
-             	   assetIngestionFile.createNewFile();
-                }
-                    
-                FileWriter fileWritter = new FileWriter(assetIngestionFile.getAbsolutePath(),true);
-                BufferedWriter bufferWritter = new BufferedWriter(fileWritter);
-                bufferWritter.write("Asset titled '" + assetTitle + "' is not present in search." + System.lineSeparator());
-                bufferWritter.close();
+    		
+    		try {
+    			SearchFor searchFor = new SearchFor(webDriver, applib);
+        		String cleanAssetTitle = assetTitle.replaceAll("\\\\", "\"");
+        		searchFor.EnterTitle(cleanAssetTitle);
+        		searchFor.ClickApplyBtn();
+        		Thread.sleep(250);
+        		
+        		if (!searchFor.GetAllMPXMediaSearchResult().contains(cleanAssetTitle)) {
+        			String assetIngestionFilePath = System.getProperty("user.dir") + "/src/test/java/com/nbcuni/test/publisher/contentbuildscripts/MPXPerformanceUpgrade/ProperAssetsIngested/AssetsIngested.txt";
+                    assetIngestionFilePath = assetIngestionFilePath.replace("/", File.separator);	    	
+                    File assetIngestionFile = new File(assetIngestionFilePath); 
+                    if(!assetIngestionFile.exists()){
+                 	   assetIngestionFile.createNewFile();
+                    }
+                        
+                    FileWriter fileWritter = new FileWriter(assetIngestionFile.getAbsolutePath(),true);
+                    BufferedWriter bufferWritter = new BufferedWriter(fileWritter);
+                    bufferWritter.write("Asset titled '" + assetTitle + "' is not present in search." + System.lineSeparator());
+                    bufferWritter.close();
+        		}
     		}
+    		catch (Exception e) {
+    			applib.openSitePage("/admin/content/file/mpxmedia");
+    		}
+    		
     	}
         
     }
