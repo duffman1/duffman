@@ -242,7 +242,7 @@ public class Taxonomy {
     		catch (Exception e) {
     			webDriver.navigate().refresh();
     			if (Iter == 3) {
-    				Assert.fail("Taxonomy navigation after 3 iterations for menu path '" + menuPath + "'.");
+    				Assert.fail("Taxonomy navigation failed after 3 iterations for menu path '" + menuPath + "'.");
     			}
     		}
     		

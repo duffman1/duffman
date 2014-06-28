@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Jun 26 16:16:26 EDT 2014</td>
+<td>Started on:</td><td>Fri Jun 27 16:51:10 EDT 2014</td>
 </tr>
-<tr><td>Total time:</td><td>304 seconds (304405 ms)</td>
+<tr><td>Total time:</td><td>166 seconds (166517 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,88 +75,184 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.nbcuni.test.publisher.tests.Video.Configuration.ConfigurationMultipleMPXAccounts.ConfigurationMultipleMPXAccounts_TC1073()'><b>ConfigurationMultipleMPXAccounts_TC1073</b><br>Test class: com.nbcuni.test.publisher.tests.Video.Configuration.ConfigurationMultipleMPXAccounts<br/>
-<a href="#Output-618068306" onClick='toggleBox("Output-618068306", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS.ImplementMPS_TC2901()'><b>ImplementMPS_TC2901</b><br>Test class: com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS<br/>
+<a href="#Output-396139163" onClick='toggleBox("Output-396139163", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-618068306" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-618068306">
-Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.<br/>
+<a href="#Output-396139163" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-396139163">
+STEP 1<br/>
+Open url 'http://install.devi7.nbcupublisher7.publisher7.com'.<br/>
 Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
 Enter 'pa55word' in the 'Password' text box.<br/>
 Click the 'Login' button.<br/>
-Mouse over the 'Configuration' menu link.<br/>
-Mouse over the 'Media' menu link.<br/>
-Click the 'Media: thePlatform mpx settings' menu link.<br/>
-Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.<br/>
-Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.<br/>
-Enter mpx username in the 'Username for New Account' text box.<br/>
-Enter mpx password in the 'Password for New Account' text box.<br/>
-Click the 'Connect to MPX' button.<br/>
-Verify success message of 'Login successful' is present.<br/>
-Get the account options from the 'Select Import Account for Account...' drop down lists.<br/>
-Select 'DB TV' from the first 'Select Import Account for...' drop down list.<br/>
-click the 'Set Import Account' button.<br/>
-Verify success message of 'Setting import account "DB%20TV" for account' is present.<br/>
-Verify success message of 'Retrieving import account information for "DB%20TV".' is present.<br/>
-Verify the 'Select Import Account for...' drop down lists are disabled.<br/>
-Click the 'Close Overlay X'.<br/>
-Mouse over the 'Content' menu link.<br/>
-Mouse over the 'Files' menu link.<br/>
-Click the 'mpxMedia' menu link.<br/>
-Switch to the active frame titled 'Content dialog'.<br/>
-Select 'AutomationPlayer1' from the first 'Import Player' drop down list.<br/>
-Click the 'Sync MPX Media Now' link.<br/>
-Verify success message of 'Processed video import/update manually for all accounts.' is present.<br/>
-Click the 'Run Cron to complete import' link.<br/>
-Switch to the active frame titled 'Cron dialog'.<br/>
-Click the 'Run Cron' button.<br/>
-Verify success message of 'Cron run successfully.' is present.<br/>
-Click the 'Close Overlay X'.<br/>
-Mouse over the 'Content' menu link.<br/>
-Mouse over the 'Files' menu link.<br/>
-Click the 'mpxMedia' menu link.<br/>
-Switch to the active frame titled 'Content dialog'.<br/>
-Enter title AutomationDefault.<br/>
-Click the 'Apply' button.<br/>
-Get the title text of every result in the search result set.<br/>
-For each expected result, assert it is present in the result set.<br/>
-Mouse over the 'Configuration' menu link.<br/>
-Mouse over the 'Media' menu link.<br/>
-Click the 'Media: thePlatform mpx settings' menu link.<br/>
-Click the 'ADD ACCOUNTS' link.<br/>
-Wait for 'Add New Account' button to be visible.<br/>
-Enter mpx username in the 'Username for New Account' text box.<br/>
-Enter mpx password in the 'Password for New Account' text box.<br/>
-Click the 'Save' button.<br/>
-Select 'NBCU TVE Stage - Golf Channel' from the second 'Select Import Account for...' drop down list.<br/>
-click the 'Set Import Account' button.<br/>
-Verify success message of 'Setting import account "NBCU%20TVE%20Stage%20-%20Golf%20Channel" for account' is present.<br/>
-Verify success message of 'Retrieving import account information for "NBCU%20TVE%20Stage%20-%20Golf%20Channel".' is present.<br/>
-Verify the 'Select Import Account for...' drop down lists are disabled.<br/>
-Click the 'Save configurations' button.<br/>
+STEP 2<br/>
+Click the 'Modules' menu link.<br/>
+Switch to the active frame titled 'Modules dialog'.<br/>
+Enter 'MPS' in the 'Filter Name' text box.<br/>
+Wait for the module titled 'MPS' to appear in the list.<br/>
+Uncheck the 'MPS' module checkbox.<br/>
+Click the 'Save configuration' button.<br/>
 Verify success message of 'The configuration options have been saved.' is present.<br/>
+Click the 'Close Overlay X'.<br/>
+Mouse over the 'Modules' menu link.<br/>
+Click the 'Uninstall' menu link.<br/>
+Switch to the active frame titled 'Modules dialog'.<br/>
+Click the 'MPS' uninstall checkbox.<br/>
+Click the 'Uninstall' button.<br/>
+Switch to the active frame titled 'Confirm uninstall dialog'.<br/>
+Verify the text 'The following modules will be completely uninstalled from your site, and all data from these modules will be lost!' is present on the page.<br/>
+Verify the text 'MPS' is present on the page.<br/>
+Click the 'Uninstall' button to confirm.<br/>
+Switch to the active frame titled 'Modules dialog'.<br/>
+Click the 'Close Overlay X'.<br/>
+STEP 3<br/>
+Click the 'Modules' menu link.<br/>
+Switch to the active frame titled 'Modules dialog'.<br/>
+Enter 'Pub Ads' in the 'Filter Name' text box.<br/>
+Wait for the module titled 'Pub Ads' to appear in the list.<br/>
+Verify the 'Pub Ads' check box is checked.<br/>
+Enter 'MPS' in the 'Filter Name' text box.<br/>
+Wait for the module titled 'MPS' to appear in the list.<br/>
+Check the 'MPS' check box.<br/>
+Click the 'Save configuration' button.<br/>
+Switch to frame titled 'Some required modules must be enabled'.<br/>
+Switch back to the 'Modules' frame.<br/>
+Switch to frame titled 'Modules'.<br/>
+Verify success message of 'The configuration options have been saved.' is present.<br/>
+Enter 'DART' in the 'Filter Name' text box.<br/>
+Wait for the module titled 'DART' to appear in the list.<br/>
+Enter 'Doubleclick for Publishers' in the 'Filter Name' text box.<br/>
+Wait for the module titled 'Doubleclick for Publishers' to appear in the list.<br/>
+Click the 'Close Overlay X'.<br/>
+STEP 4<br/>
+Mouse over the 'Reports' menu link.<br/>
+Click the 'Status report' menu link.<br/>
+Switch to the active frame titled 'Status report dialog'.<br/>
+Verify the text 'Ad Tag Style' is present on the page.<br/>
+Verify the text 'MPS' is present on the page.<br/>
+Click the 'Close Overlay X'.<br/>
+STEP 5<br/>
+Verify 'var mpscall = {"site":"install","title":"Welcome to Site-Install","path":"\/","cat":"node","is_content":0,"type":"other"}' is present in page source.<br/>
+Verify 'var mpsopts = {"host":"mps.nbcuni.com"}' is present in page source.<br/>
+STEP 6<br/>
+Click the 'People' menu link.<br/>
+Switch to the active frame titled 'People dialog'.<br/>
+Verify that no MPS calls were made on the page.<br/>
+Click the 'Close Overlay X'.<br/>
+STEP 7<br/>
+Open url 'http://install.devi7.nbcupublisher7.publisher7.com/kfkjdjdkjdjldkjj'.<br/>
+Verify that no MPS calls were made on the page.<br/>
+Open url 'http://install.devi7.nbcupublisher7.publisher7.com'.<br/>
+STEP 8<br/>
+Mouse over the 'Configuration' menu link.<br/>
+Mouse over the 'Web services' menu link.<br/>
+Click the 'MPS Configuration' menu link.<br/>
+Switch to the active frame titled 'MPS Configuration dialog'.<br/>
+Enter 'mps.nbcuni.com' in the 'MPS Host' text box.<br/>
+Click the 'Document Write' radio button.<br/>
+Enter 'nbc-tonightshow' in the 'Site Instance Override' text box.<br/>
+Click the 'Save configuration' button.<br/>
+Verify success message of 'The configuration options have been saved.' is present.<br/>
+Click the 'Close Overlay X'.<br/>
+STEP 9<br/>
 Mouse over the 'Content' menu link.<br/>
-Mouse over the 'Files' menu link.<br/>
-Click the 'mpxMedia' menu link.<br/>
-Click the 'Sync MPX Media' link.<br/>
-Select 'AutomationPlayer1' from the second 'Import Player' drop down list.<br/>
-Click the 'Sync MPX Media Now' link.<br/>
-Verify success message of 'Processed video import/update manually for all accounts.' is present.<br/>
-Click the 'Run Cron to complete import' link.<br/>
-Click the 'Run Cron' button.<br/>
-Verify success message of 'Cron run successfully.' is present.<br/>
+Mouse over the 'Add content' menu link.<br/>
+Click the 'Movie' menu link.<br/>
+Switch to the active frame titled 'Create Movie dialog'.<br/>
+Scroll to and click the 'Basic Information' tab.<br/>
+Enter 'd9aa764193f0420' in the 'Title' text box.<br/>
+Switch to the Synopsis frame.<br/>
+Enter a randomized text string into the 'Body' text area.<br/>
+Switch to the active frame titled 'Create Movie dialog'.<br/>
+Click the 'Cover' select button.<br/>
+Switch to the select file frame.<br/>
+Enter the file path for file upload.<br/>
+Click the 'Upload' button.<br/>
+Wait for the file link to be visible after upload.<br/>
+Click the 'Next' button.<br/>
+Click the 'Public Local Files' radio button.<br/>
+Click the 'Next' button.<br/>
+Verify the file image 'HanSolo' is present.<br/>
+Verify the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'Create Movie dialog'.<br/>
+Click the 'Additional Information' link.<br/>
+Select the 'Syndicated' from the 'Movie Type' drop down list.<br/>
+Select the 'G' from the 'Rating' drop down list.<br/>
+Select the 'Action' from the 'Primary Genre' drop down list.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'Movie d9aa764193f0420 has been created.' is present.<br/>
+Note the node number for the content item.<br/>
+STEP 10<br/>
+Verify 'var mpscall = {"site":"nbc-tonightshow","title":"d9aa764193f0420","path":"\/node\/1' is present in page source.<br/>
+Verify 'var mpsopts = {"host":"mps.nbcuni.com"}' is present in page source.<br/>
+STEP 11 through STEP 19<br/>
+Verify 'var mpscall = {"site":"nbc-tonightshow","title":"d9aa764193f0420","path":"\/node\/1","cat":"content|d9aa764193f0420","content_id":"node1","is_content":1,"type":"movie","cag":{"genre":"Action","movie-rating":"G","movie-types":"Syndicated"},"pubdate":' is present in page source.<br/>
+STEP 20<br/>
+Verify 'a3VtdWQ9MQ==' is present in page source.<br/>
+STEP 21<br/>
 Mouse over the 'Content' menu link.<br/>
-Mouse over the 'Files' menu link.<br/>
-Click the 'mpxMedia' menu link.<br/>
-Enter title The Golf Fix 2/4.<br/>
+Mouse over the 'Add content' menu link.<br/>
+Click the 'Media Gallery' menu link.<br/>
+Switch to the active frame titled 'Create Media Gallery dialog'.<br/>
+Enter 'f45c55c12ebc464' in the 'Title' text box.<br/>
+Click the 'Media Items Select' button.<br/>
+Switch to the select file frame.<br/>
+Click the 'View Library' button.<br/>
+Enter 'HanSolo' in the 'File name' text box.<br/>
+Wait for the file search 'spinner' image to be present.<br/>
+Wait for the file search 'spinner' image to not be present, indicating image search is complete.<br/>
 Click the 'Apply' button.<br/>
-Get the title text of every result in the search result set.<br/>
-For each expected result, assert it is present in the result set.<br/>
+Wait for the file search 'spinner' image to be present.<br/>
+Wait for the file search 'spinner' image to not be present, indicating image search is complete.<br/>
+Verify the media thumbnail image 'HanSolo' is present.<br/>
+Verify the the img is loaded and visible.<br/>
+Click media thumbnail image number 1<br/>
+Click on the 'Submit' button.<br/>
+Switch to the active frame titled 'Create Media Gallery dialog'.<br/>
+Verify the img source of the Media Item contains 'HanSolo'.<br/>
+Assert the the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'Media Gallery f45c55c12ebc464 has been created.' is present.<br/>
+Note the node number for the content item.<br/>
+Get the file id of image number 1.<br/>
+STEP 22<br/>
+Open url 'http://install.devi7.nbcupublisher7.publisher7.com/node/6/6'.<br/>
+STEP 28<br/>
+Verify 'typeof(mps.writeFooter)' is present in page source.<br/>
+STEP 29<br/>
+Mouse over the 'Structure' menu link.<br/>
+Mouse over the 'MPS Blocks' menu link.<br/>
+Click the 'Add' menu link.<br/>
+Switch to the active frame titled 'Add a new MPS block dialog'.<br/>
+Enter 'fad78628f32a4aa' in the 'Unique Name' text box.<br/>
+Enter '275d8170f7df45f' in the 'Block Name' text box.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'fad78628f32a4aa has been created.' is present.<br/>
+Click the 'Close Overlay X'.<br/>
+STEP 30<br/>
+Mouse over the 'Structure' menu link.<br/>
+Click the 'Blocks' menu link.<br/>
+Switch to the active frame titled 'Blocks dialog'.<br/>
+Select the block name '275d8170f7df45f (MPS)' from the 'Header' drop down list.<br/>
+Click the 'Save Blocks' button.<br/>
+Verify success message of 'The block settings have been updated.' is present.<br/>
+Click the 'Close Overlay X'.<br/>
+STEP 31<br/>
+Verify 'mps.getAd('275d8170f7df45f')' is present in page source.<br/>
+STEP 32 - N/A<br/>
+CLEANUP<br/>
+Mouse over the 'Structure' menu link.<br/>
+Click the 'Blocks' menu link.<br/>
+Switch to the active frame titled 'Blocks dialog'.<br/>
+Select the block name '275d8170f7df45f (MPS)' from the '- None -' drop down list.<br/>
+Click the 'Save Blocks' button.<br/>
+Click the 'Close Overlay X'.<br/>
 </div>
 </td>
 <td></td>
-<td>301</td>
-<td>com.nbcuni.test.publisher.tests.Video.Configuration.ConfigurationMultipleMPXAccounts@7faf9b87</td></tr>
+<td>163</td>
+<td>com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@36ebce57</td></tr>
 </table><p>
 </body>
 </html>

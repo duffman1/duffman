@@ -8,10 +8,7 @@ import com.nbcuni.test.publisher.pageobjects.Content.Delete;
 import com.nbcuni.test.publisher.pageobjects.Cron.Cron;
 import com.nbcuni.test.publisher.pageobjects.Logo.AddLogo;
 import com.nbcuni.test.publisher.pageobjects.Logo.Logos;
-
-import org.openqa.selenium.NoSuchElementException;
 import org.testng.annotations.Test;
-
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Calendar;
@@ -44,7 +41,7 @@ public class CreateLogo extends ParentTest{
         	try {
         		taxonomy.NavigateSite("Content>>Logos>>Add Logo");
         	}
-        	catch (NoSuchElementException e) {
+        	catch (Exception | AssertionError e) {
         		taxonomy.NavigateSite("Content>>Add Logo");
         	}
             overlay.SwitchToActiveFrame();

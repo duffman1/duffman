@@ -139,7 +139,7 @@ public class ValidateIngestionTimePub7 extends ParentTest{
                    		   searchTime = System.nanoTime();
                 		   ingestionFinalEditTime = searchTime - finalEditTime;
                 		   creationToFinalEditTime = searchTime - creationTime;
-                		   ingestionMessage = mediaTitle + "Final Edit to Asset made at " + finalEditTimeStamp + "," + searchTime + "," + "Asset Final Edit Present in Pub7 at " + searchTimeStamp + "," + TimeUnit.SECONDS.convert(ingestionFinalEditTime, TimeUnit.NANOSECONDS) + " seconds, " + "ELAPSED TIME FROM FINAL EDIT IN MPX TO FINAL EDIT IN PUB7 = " + TimeUnit.SECONDS.convert(creationToFinalEditTime, TimeUnit.NANOSECONDS) + " seconds";
+                		   ingestionMessage = mediaTitle + "Final Edit to Asset made at " + finalEditTimeStamp + "," + searchTime + "," + "Asset Final Edit Present in Pub7 at " + searchTimeStamp + "," + TimeUnit.SECONDS.convert(ingestionFinalEditTime, TimeUnit.NANOSECONDS) + " seconds, " + "ELAPSED TIME FROM FIRST EDIT IN MPX TO FINAL EDIT IN PUB7 = " + TimeUnit.SECONDS.convert(creationToFinalEditTime, TimeUnit.NANOSECONDS) + " seconds";
                 		   
                    	   }
                    	   
