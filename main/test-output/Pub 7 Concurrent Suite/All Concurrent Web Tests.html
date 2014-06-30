@@ -55,13 +55,13 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>All Concurrent Web Tests</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/2/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/3/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Jun 26 20:07:22 EDT 2014</td>
+<td>Started on:</td><td>Mon Jun 30 09:18:34 EDT 2014</td>
 </tr>
-<tr><td>Total time:</td><td>143 seconds (143607 ms)</td>
+<tr><td>Total time:</td><td>24 seconds (24977 ms)</td>
 </tr><tr>
-<td>Included groups:</td><td></td>
+<td>Included groups:</td><td>full </td>
 </tr><tr>
 <td>Excluded groups:</td><td></td>
 </tr>
@@ -75,29 +75,29 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.nbcuni.test.publisher.contentbuildscripts.MPXPerformanceUpgrade.CreateVideos.ValidateIngestionTimePub7.Test()'><b>Test</b><br>Test class: com.nbcuni.test.publisher.contentbuildscripts.MPXPerformanceUpgrade.CreateVideos.ValidateIngestionTimePub7<br/>
-<a href="#Output-1572214209" onClick='toggleBox("Output-1572214209", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile.CreateCharacterProfile_TC1041()'><b>CreateCharacterProfile_TC1041</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile<br/>
+<a href="#Output-630114037" onClick='toggleBox("Output-630114037", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1572214209" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1572214209">
-Open url 'http://nbcunbcvideo.prod.acquia-sites.com'.<br/>
-Enter 'Mukesh.Yadav@nbcuni.com' in the 'Email Address' text box.<br/>
+<a href="#Output-630114037" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-630114037">
+Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.<br/>
+Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
 Enter 'pa55word' in the 'Password' text box.<br/>
 Click the 'Login' button.<br/>
-Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/Test_062614080935PM.png <br/>
-<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/Test_062614080935PM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/Test_062614080935PM.png' height='500' width='500'/> </a><br/>
+Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCharacterProfile_TC1041_063014091841AM.png <br/>
+<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCharacterProfile_TC1041_063014091841AM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCharacterProfile_TC1041_063014091841AM.png' height='500' width='500'/> </a><br/>
 Cache was cleared on test failure<br/>
 </div>
 </td>
-<td><div><pre>java.lang.AssertionError: Asset Creation File Not Available after 60 seconds
-	at com.nbcuni.test.publisher.contentbuildscripts.MPXPerformanceUpgrade.CreateVideos.ValidateIngestionTimePub7.Test(ValidateIngestionTimePub7.java:39)
+<td><div><pre>java.lang.AssertionError: failing test case
+	at com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile.CreateCharacterProfile_TC1041(CreateCharacterProfile.java:26)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
 	at java.lang.Thread.run(Thread.java:724)
-... Removed 11 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1572214209", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1572214209'><pre>java.lang.AssertionError: Asset Creation File Not Available after 60 seconds
+... Removed 11 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace630114037", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace630114037'><pre>java.lang.AssertionError: failing test case
 	at org.testng.Assert.fail(Assert.java:94)
-	at com.nbcuni.test.publisher.contentbuildscripts.MPXPerformanceUpgrade.CreateVideos.ValidateIngestionTimePub7.Test(ValidateIngestionTimePub7.java:39)
+	at com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile.CreateCharacterProfile_TC1041(CreateCharacterProfile.java:26)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -112,48 +112,88 @@ Cache was cleared on test failure<br/>
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
 	at java.lang.Thread.run(Thread.java:724)
 </pre></div></td>
-<td>129</td>
-<td>com.nbcuni.test.publisher.contentbuildscripts.MPXPerformanceUpgrade.CreateVideos.ValidateIngestionTimePub7@56e746d4</td></tr>
+<td>5</td>
+<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@a01330f</td></tr>
 <tr>
-<td title='com.nbcuni.test.publisher.contentbuildscripts.MPXPerformanceUpgrade.CreateVideos.CreateVideos.Test()'><b>Test</b><br>Test class: com.nbcuni.test.publisher.contentbuildscripts.MPXPerformanceUpgrade.CreateVideos.CreateVideos<br/>
-<a href="#Output-1360455009" onClick='toggleBox("Output-1360455009", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile.CreateCharacterProfile_TC1041()'><b>CreateCharacterProfile_TC1041</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile<br/>
+<a href="#Output-1997306010" onClick='toggleBox("Output-1997306010", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1360455009" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1360455009">
-Open the mpx platform.<br/>
-Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/Test_062614080942PM.png <br/>
-<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/Test_062614080942PM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/Test_062614080942PM.png' height='500' width='500'/> </a><br/>
+<a href="#Output-1997306010" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1997306010">
+Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.<br/>
+Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
+Enter 'pa55word' in the 'Password' text box.<br/>
+Click the 'Login' button.<br/>
+Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCharacterProfile_TC1041_063014091849AM.png <br/>
+<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCharacterProfile_TC1041_063014091849AM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCharacterProfile_TC1041_063014091849AM.png' height='500' width='500'/> </a><br/>
+Cache was cleared on test failure<br/>
 </div>
 </td>
-<td><div><pre>java.lang.AssertionError: Image &apos;/Users/brandonclark/SQE-TEST-Pub7/main/src/test/java/com/nbcuni/test/publisher/lib/sikuli/images/Login/SignIn_Ctr.png&apos; is not present after timeout
-	at com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXAssets.WaitForImgPresent(MPXAssets.java:42)
-	at com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXLogin.Login(MPXLogin.java:42)
-	at com.nbcuni.test.publisher.contentbuildscripts.MPXPerformanceUpgrade.CreateVideos.CreateVideos.Test(CreateVideos.java:26)
+<td><div><pre>java.lang.AssertionError: failing test case
+	at com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile.CreateCharacterProfile_TC1041(CreateCharacterProfile.java:26)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
 	at java.lang.Thread.run(Thread.java:724)
-... Removed 11 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1360455009", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1360455009'><pre>java.lang.AssertionError: Image &apos;/Users/brandonclark/SQE-TEST-Pub7/main/src/test/java/com/nbcuni/test/publisher/lib/sikuli/images/Login/SignIn_Ctr.png&apos; is not present after timeout
+... Removed 11 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1997306010", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1997306010'><pre>java.lang.AssertionError: failing test case
 	at org.testng.Assert.fail(Assert.java:94)
-	at com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXAssets.WaitForImgPresent(MPXAssets.java:42)
-	at com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXLogin.Login(MPXLogin.java:42)
-	at com.nbcuni.test.publisher.contentbuildscripts.MPXPerformanceUpgrade.CreateVideos.CreateVideos.Test(CreateVideos.java:26)
+	at com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile.CreateCharacterProfile_TC1041(CreateCharacterProfile.java:26)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:606)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
 	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.Invoker.retryFailed(Invoker.java:1049)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1254)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
 	at java.lang.Thread.run(Thread.java:724)
 </pre></div></td>
-<td>136</td>
-<td>com.nbcuni.test.publisher.contentbuildscripts.MPXPerformanceUpgrade.CreateVideos.CreateVideos@5970eb6d</td></tr>
+<td>5</td>
+<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@a01330f</td></tr>
+<tr>
+<td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile.CreateCharacterProfile_TC1041()'><b>CreateCharacterProfile_TC1041</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile<br/>
+<a href="#Output-666794140" onClick='toggleBox("Output-666794140", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-666794140" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-666794140">
+Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.<br/>
+Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
+Enter 'pa55word' in the 'Password' text box.<br/>
+Click the 'Login' button.<br/>
+Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCharacterProfile_TC1041_063014091858AM.png <br/>
+<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCharacterProfile_TC1041_063014091858AM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCharacterProfile_TC1041_063014091858AM.png' height='500' width='500'/> </a><br/>
+Cache was cleared on test failure<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: failing test case
+	at com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile.CreateCharacterProfile_TC1041(CreateCharacterProfile.java:26)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+... Removed 11 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace666794140", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace666794140'><pre>java.lang.AssertionError: failing test case
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile.CreateCharacterProfile_TC1041(CreateCharacterProfile.java:26)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.retryFailed(Invoker.java:1049)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1254)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+</pre></div></td>
+<td>5</td>
+<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@a01330f</td></tr>
 </table><p>
 </body>
 </html>
