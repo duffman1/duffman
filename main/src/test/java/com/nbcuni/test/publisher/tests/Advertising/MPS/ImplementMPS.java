@@ -79,7 +79,7 @@ public class ImplementMPS extends ParentTest {
             else {
             	siteType = "update";
             }
-            contentParent.VerifySourceInPage(Arrays.asList("var mpscall = {\"site\":\"" + siteType + "\",\"title\":\"Welcome to Site-Install\",\"path\":\"\\/\",\"cat\":\"node\",\"is_content\":0,\"type\":\"other\"}",
+            contentParent.VerifySourceInPage(Arrays.asList("var mpscall = {\"site\":\"" + siteType + "\",\"title\":\"Welcome to Site-Install\",\"path\":\"\\/\",\"is_content\":0,\"type\":\"other\"}",
             		"var mpsopts = {\"host\":\"mps.nbcuni.com\"}"));
             
             Reporter.log("STEP 6");
@@ -133,7 +133,7 @@ public class ImplementMPS extends ParentTest {
             		"var mpsopts = {\"host\":\"mps.nbcuni.com\"}"));
             
             Reporter.log("STEP 11 through STEP 19");
-            contentParent.VerifySourceInPage(Arrays.asList("var mpscall = {\"site\":\"nbc-tonightshow\",\"title\":\"" + movieTitle + "\",\"path\":\"\\/node\\/" + movieNodeNumber + "\",\"cat\":\"content|" + movieTitle + "\",\"content_id\":\"node" + movieNodeNumber + "\",\"is_content\":1,\"type\":\"movie\",\"cag\":{\"genre\":\"Action\",\"movie-rating\":\"G\",\"movie-types\":\"Syndicated\"},\"pubdate\":"));
+            contentParent.VerifySourceInPage(Arrays.asList("var mpscall = {\"site\":\"nbc-tonightshow\",\"title\":\"" + movieTitle + "\",\"path\":\"\\/node\\/" + movieNodeNumber + "\",\"content_id\":\"node" + movieNodeNumber + "\",\"is_content\":1,\"type\":\"movie\",\"cag\":{\"genre\":\"Action\",\"movie-rating\":\"G\",\"movie-types\":\"Syndicated\"},\"pubdate\":"));
             
             Reporter.log("STEP 20");
             webDriver.navigate().to(webDriver.getCurrentUrl() + "?kumud=1");
