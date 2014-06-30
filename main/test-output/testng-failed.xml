@@ -1,24 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="2" name="Failed suite [Pub 7 Concurrent Suite]" parallel="classes">
-  <test name="All Concurrent Web Tests(failed)" parallel="classes">
+<suite name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
     <classes>
-      <class name="com.nbcuni.test.publisher.contentbuildscripts.MPXPerformanceUpgrade.CreateVideos.CreateVideos">
+      <class name="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSBlockAccess">
         <methods>
           <include name="startSelenium"/>
           <include name="stopGridAndHub"/>
-          <include name="Test"/>
           <include name="startGridAndHub"/>
           <include name="stopSelenium"/>
+          <include name="MPSBlockAccess_TC3608"/>
         </methods>
-      </class> <!-- com.nbcuni.test.publisher.contentbuildscripts.MPXPerformanceUpgrade.CreateVideos.CreateVideos -->
-      <class name="com.nbcuni.test.publisher.contentbuildscripts.MPXPerformanceUpgrade.CreateVideos.ValidateIngestionTimePub7">
-        <methods>
-          <include name="startSelenium"/>
-          <include name="stopSelenium"/>
-          <include name="Test"/>
-        </methods>
-      </class> <!-- com.nbcuni.test.publisher.contentbuildscripts.MPXPerformanceUpgrade.CreateVideos.ValidateIngestionTimePub7 -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Advertising.MPS.MPSBlockAccess -->
     </classes>
-  </test> <!-- All Concurrent Web Tests(failed) -->
-</suite> <!-- Failed suite [Pub 7 Concurrent Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

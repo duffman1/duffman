@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="1" total="2" passed="1">
   <reporter-output>
     <line>
-      <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]>
+      <![CDATA[STEP 1]]>
+    </line>
+    <line>
+      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
     </line>
     <line>
       <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
@@ -14,158 +17,327 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Modules' menu link.]]>
+      <![CDATA[STEP 2]]>
     </line>
     <line>
-      <![CDATA[Switch to frame titled 'Modules'.]]>
+      <![CDATA[Mouse over the 'Structure' menu link.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Sticky Edit Actions' in the 'Filter Name' text box.]]>
+      <![CDATA[Click the 'MPS Blocks' menu link.]]>
     </line>
     <line>
-      <![CDATA[Wait for the module titled 'Sticky Edit Actions' to appear in the list.]]>
-    </line>
-    <line>
-      <![CDATA[Check the 'Sticky Edit Actions' check box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
-    </line>
-    <line>
-      <![CDATA[Switch back to the 'Modules' frame.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to frame titled 'Modules'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+      <![CDATA[Switch to frame titled 'MPS Blocks'.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Content' menu link.]]>
+      <![CDATA[STEP 3]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Add content' menu link.]]>
+      <![CDATA[Mouse over the 'People' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Post' menu link.]]>
+      <![CDATA[Click the 'Add user' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'People dialog'.]]>
     </line>
     <line>
-      <![CDATA[Enter 'd46b5795d470407' in the 'Title' text box.]]>
+      <![CDATA[Enter '697874d28df44e5@b2d90d6bdbb143d.com' in the 'Username' text box.]]>
     </line>
     <line>
-      <![CDATA[Scroll by '100'.]]>
+      <![CDATA[Enter '697874d28df44e5@b2d90d6bdbb143d.com' in the 'E-mail address' text box.]]>
     </line>
     <line>
-      <![CDATA[Switch to the Synopsis frame.]]>
+      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
     </line>
     <line>
-      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+      <![CDATA[Enter 'pa55word' in the 'Confirm password' text box.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+      <![CDATA[Check the 'administrator' check box.]]>
     </line>
     <line>
-      <![CDATA[Verify the sticky edit 'Save' button is present.]]>
+      <![CDATA[Enter 'f5d25b8cd79d4c1' in the 'First Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Verify the sticky edit 'Preview' button is present.]]>
+      <![CDATA[Enter 'd57206962c0b4a6' in the 'Last Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Scroll by '100'.]]>
+      <![CDATA[Click the 'Create new account' button.]]>
     </line>
     <line>
-      <![CDATA[Verify the sticky edit 'Save' button is present.]]>
+      <![CDATA[Verify success message of 'A welcome message with further instructions has been e-mailed to the new user 697874d28df44e5@b2d90d6bdbb143d.com.' is present.]]>
     </line>
     <line>
-      <![CDATA[Verify the sticky edit 'Preview' button is present.]]>
+      <![CDATA[Click the 'Close Overlay X'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Meta tags' link.]]>
+      <![CDATA[STEP 4]]>
     </line>
     <line>
-      <![CDATA[Verify the sticky edit 'Save' button is present.]]>
+      <![CDATA[Click the 'Logout' button.]]>
     </line>
     <line>
-      <![CDATA[Verify the sticky edit 'Preview' button is present.]]>
+      <![CDATA[Enter '697874d28df44e5@b2d90d6bdbb143d.com' in the 'Email Address' text box.]]>
     </line>
     <line>
-      <![CDATA[Scroll by '100'.]]>
+      <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/MPSBlockAccess_TC3608_063014081718AM.png ]]>
     </line>
     <line>
-      <![CDATA[Verify the sticky edit 'Save' button is present.]]>
+      <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/MPSBlockAccess_TC3608_063014081718AM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/MPSBlockAccess_TC3608_063014081718AM.png' height='500' width='500'/> </a>]]>
     </line>
     <line>
-      <![CDATA[Verify the sticky edit 'Preview' button is present.]]>
+      <![CDATA[STEP 1]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save' button.]]>
+      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'Post d46b5795d470407 has been created.' is present.]]>
+      <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
     </line>
     <line>
-      <![CDATA[Verify the sticky edit 'Save' button is present.]]>
+      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
     </line>
     <line>
-      <![CDATA[Verify the sticky edit 'Preview' button is present.]]>
+      <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[Scroll by '100'.]]>
+      <![CDATA[STEP 2]]>
     </line>
     <line>
-      <![CDATA[Verify the sticky edit 'Save' button is present.]]>
+      <![CDATA[Mouse over the 'Structure' menu link.]]>
     </line>
     <line>
-      <![CDATA[Verify the sticky edit 'Preview' button is present.]]>
+      <![CDATA[Click the 'MPS Blocks' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Modules' menu link.]]>
+      <![CDATA[Switch to frame titled 'MPS Blocks'.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Sticky Edit Actions' in the 'Filter Name' text box.]]>
+      <![CDATA[Click the 'Close Overlay X'.]]>
     </line>
     <line>
-      <![CDATA[Wait for the module titled 'Sticky Edit Actions' to appear in the list.]]>
+      <![CDATA[STEP 3]]>
     </line>
     <line>
-      <![CDATA[Uncheck the 'Sticky Edit Actions' module checkbox.]]>
+      <![CDATA[Mouse over the 'People' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
+      <![CDATA[Click the 'Add user' menu link.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+      <![CDATA[Switch to the active frame titled 'People dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '98d76947e50143d@7a66f04124dd491.com' in the 'Username' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '98d76947e50143d@7a66f04124dd491.com' in the 'E-mail address' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'pa55word' in the 'Confirm password' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Check the 'administrator' check box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '6f8589a56bb54c0' in the 'First Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'b2587215134e4fc' in the 'Last Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Create new account' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'A welcome message with further instructions has been e-mailed to the new user 98d76947e50143d@7a66f04124dd491.com.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 4]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Logout' button.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '98d76947e50143d@7a66f04124dd491.com' in the 'Email Address' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Login' button.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 5]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Structure' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'MPS Blocks' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to frame titled 'MPS Blocks'.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="61342" started-at="2014-06-29T18:28:27Z" finished-at="2014-06-29T18:29:29Z">
+  <suite name="Default suite" duration-ms="99075" started-at="2014-06-30T12:16:12Z" finished-at="2014-06-30T12:17:51Z">
     <groups>
       <group name="full">
-        <method signature="StickyButtons.StickyButtons_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons@26044b0b]" name="StickyButtons_Test" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons"/>
+        <method signature="MPSBlockAccess.MPSBlockAccess_TC3608()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSBlockAccess@715e12dc]" name="MPSBlockAccess_TC3608" class="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSBlockAccess"/>
       </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="61342" started-at="2014-06-29T18:28:27Z" finished-at="2014-06-29T18:29:29Z">
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons">
-        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons@26044b0b]" name="startGridAndHub" is-config="true" duration-ms="11809" started-at="2014-06-29T14:28:15Z" finished-at="2014-06-29T14:28:27Z">
+    <test name="Default test" duration-ms="99075" started-at="2014-06-30T12:16:12Z" finished-at="2014-06-30T12:17:51Z">
+      <class name="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSBlockAccess">
+        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSBlockAccess@715e12dc]" name="startGridAndHub" is-config="true" duration-ms="11758" started-at="2014-06-30T08:16:00Z" finished-at="2014-06-30T08:16:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startGridAndHub -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons@26044b0b]" name="startSelenium" is-config="true" duration-ms="2802" started-at="2014-06-29T14:28:27Z" finished-at="2014-06-29T14:28:30Z">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSBlockAccess@715e12dc]" name="startSelenium" is-config="true" duration-ms="2417" started-at="2014-06-30T08:16:12Z" finished-at="2014-06-30T08:16:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="StickyButtons_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons@26044b0b]" name="StickyButtons_Test" duration-ms="57958" started-at="2014-06-29T14:28:30Z" finished-at="2014-06-29T14:29:28Z">
+        <test-method status="FAIL" signature="MPSBlockAccess_TC3608()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSBlockAccess@715e12dc]" name="MPSBlockAccess_TC3608" duration-ms="63720" started-at="2014-06-30T08:16:14Z" finished-at="2014-06-30T08:17:18Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element
+  (Session info: chrome=35.0.1916.153)
+  (Driver info: chromedriver=2.8.241036,platform=Mac OS X 10.9.3 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 20.01 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.35.0', revision: '8df0c6bedf70ff9f22c647788f9fe9c8d22210e2', time: '2013-08-17 12:46:41'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.9.3', java.version: '1.7.0_25'
+Session ID: 2f54867c5b003d7722b28d9e75a354b6
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.yvKntn}, rotatable=false, locationContextEnabled=true, version=35.0.1916.153, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
+Command duration or timeout: 20.50 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.35.0', revision: '8df0c6bedf70ff9f22c647788f9fe9c8d22210e2', time: '2013-08-17 12:46:41'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.9.3', java.version: '1.7.0_25'
+Session ID: 0b371f09-c828-4b8c-a551-9ac14746472e
+Driver info: com.nbcuni.test.publisher.common.Driver.Driver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.yvKntn}, rotatable=false, locationContextEnabled=true, webdriver.remote.sessionid=0b371f09-c828-4b8c-a551-9ac14746472e, version=35.0.1916.153, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element
+  (Session info: chrome=35.0.1916.153)
+  (Driver info: chromedriver=2.8.241036,platform=Mac OS X 10.9.3 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 20.01 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.35.0', revision: '8df0c6bedf70ff9f22c647788f9fe9c8d22210e2', time: '2013-08-17 12:46:41'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.9.3', java.version: '1.7.0_25'
+Session ID: 2f54867c5b003d7722b28d9e75a354b6
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.yvKntn}, rotatable=false, locationContextEnabled=true, version=35.0.1916.153, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
+Command duration or timeout: 20.50 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.35.0', revision: '8df0c6bedf70ff9f22c647788f9fe9c8d22210e2', time: '2013-08-17 12:46:41'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.9.3', java.version: '1.7.0_25'
+Session ID: 0b371f09-c828-4b8c-a551-9ac14746472e
+Driver info: com.nbcuni.test.publisher.common.Driver.Driver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.yvKntn}, rotatable=false, locationContextEnabled=true, webdriver.remote.sessionid=0b371f09-c828-4b8c-a551-9ac14746472e, version=35.0.1916.153, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:191)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:554)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:307)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:404)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:344)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:299)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:59)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:34)
+	at com.sun.proxy.$Proxy12.sendKeys(Unknown Source)
+	at com.nbcuni.test.publisher.pageobjects.UserLogin.EnterEmailAddress(UserLogin.java:44)
+	at com.nbcuni.test.publisher.pageobjects.UserLogin.Login(UserLogin.java:69)
+	at com.nbcuni.test.publisher.tests.Advertising.MPS.MPSBlockAccess.MPSBlockAccess_TC3608(MPSBlockAccess.java:37)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+Caused by: org.openqa.selenium.remote.ScreenshotException: Screen shot has been taken
+Build info: version: '2.35.0', revision: '8df0c6bedf70ff9f22c647788f9fe9c8d22210e2', time: '2013-08-17 12:46:41'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.9.3', java.version: '1.7.0_25'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:125)
+	... 35 more
+Caused by: org.openqa.selenium.NoSuchElementException: no such element
+  (Session info: chrome=35.0.1916.153)
+  (Driver info: chromedriver=2.8.241036,platform=Mac OS X 10.9.3 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 20.01 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.35.0', revision: '8df0c6bedf70ff9f22c647788f9fe9c8d22210e2', time: '2013-08-17 12:46:41'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.9.3', java.version: '1.7.0_25'
+Session ID: 2f54867c5b003d7722b28d9e75a354b6
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.yvKntn}, rotatable=false, locationContextEnabled=true, version=35.0.1916.153, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.35.0', revision: '8df0c6bedf70ff9f22c647788f9fe9c8d22210e2', time: '2013-08-17 12:46:41'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.9.3', java.version: '1.7.0_25'
+Driver info: driver.version: EventFiringWebDriver
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:191)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:554)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:307)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:404)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:344)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:299)
+	at sun.reflect.GeneratedMethodAccessor23.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:101)
+	at com.sun.proxy.$Proxy10.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:180)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:47)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:33)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:169)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
             <line>
-              <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]>
+              <![CDATA[STEP 1]]>
+            </line>
+            <line>
+              <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
             </line>
             <line>
               <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
@@ -177,155 +349,213 @@
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Modules' menu link.]]>
+              <![CDATA[STEP 2]]>
             </line>
             <line>
-              <![CDATA[Switch to frame titled 'Modules'.]]>
+              <![CDATA[Mouse over the 'Structure' menu link.]]>
             </line>
             <line>
-              <![CDATA[Enter 'Sticky Edit Actions' in the 'Filter Name' text box.]]>
+              <![CDATA[Click the 'MPS Blocks' menu link.]]>
             </line>
             <line>
-              <![CDATA[Wait for the module titled 'Sticky Edit Actions' to appear in the list.]]>
-            </line>
-            <line>
-              <![CDATA[Check the 'Sticky Edit Actions' check box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
-            </line>
-            <line>
-              <![CDATA[Switch back to the 'Modules' frame.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to frame titled 'Modules'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+              <![CDATA[Switch to frame titled 'MPS Blocks'.]]>
             </line>
             <line>
               <![CDATA[Click the 'Close Overlay X'.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Content' menu link.]]>
+              <![CDATA[STEP 3]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Add content' menu link.]]>
+              <![CDATA[Mouse over the 'People' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Post' menu link.]]>
+              <![CDATA[Click the 'Add user' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'People dialog'.]]>
             </line>
             <line>
-              <![CDATA[Enter 'd46b5795d470407' in the 'Title' text box.]]>
+              <![CDATA[Enter '697874d28df44e5@b2d90d6bdbb143d.com' in the 'Username' text box.]]>
             </line>
             <line>
-              <![CDATA[Scroll by '100'.]]>
+              <![CDATA[Enter '697874d28df44e5@b2d90d6bdbb143d.com' in the 'E-mail address' text box.]]>
             </line>
             <line>
-              <![CDATA[Switch to the Synopsis frame.]]>
+              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
             </line>
             <line>
-              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+              <![CDATA[Enter 'pa55word' in the 'Confirm password' text box.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+              <![CDATA[Check the 'administrator' check box.]]>
             </line>
             <line>
-              <![CDATA[Verify the sticky edit 'Save' button is present.]]>
+              <![CDATA[Enter 'f5d25b8cd79d4c1' in the 'First Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Verify the sticky edit 'Preview' button is present.]]>
+              <![CDATA[Enter 'd57206962c0b4a6' in the 'Last Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Scroll by '100'.]]>
+              <![CDATA[Click the 'Create new account' button.]]>
             </line>
             <line>
-              <![CDATA[Verify the sticky edit 'Save' button is present.]]>
+              <![CDATA[Verify success message of 'A welcome message with further instructions has been e-mailed to the new user 697874d28df44e5@b2d90d6bdbb143d.com.' is present.]]>
             </line>
             <line>
-              <![CDATA[Verify the sticky edit 'Preview' button is present.]]>
+              <![CDATA[Click the 'Close Overlay X'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Meta tags' link.]]>
+              <![CDATA[STEP 4]]>
             </line>
             <line>
-              <![CDATA[Verify the sticky edit 'Save' button is present.]]>
+              <![CDATA[Click the 'Logout' button.]]>
             </line>
             <line>
-              <![CDATA[Verify the sticky edit 'Preview' button is present.]]>
+              <![CDATA[Enter '697874d28df44e5@b2d90d6bdbb143d.com' in the 'Email Address' text box.]]>
             </line>
             <line>
-              <![CDATA[Scroll by '100'.]]>
+              <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/MPSBlockAccess_TC3608_063014081718AM.png ]]>
             </line>
             <line>
-              <![CDATA[Verify the sticky edit 'Save' button is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the sticky edit 'Preview' button is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Post d46b5795d470407 has been created.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the sticky edit 'Save' button is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the sticky edit 'Preview' button is present.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll by '100'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the sticky edit 'Save' button is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the sticky edit 'Preview' button is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Modules' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Sticky Edit Actions' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the module titled 'Sticky Edit Actions' to appear in the list.]]>
-            </line>
-            <line>
-              <![CDATA[Uncheck the 'Sticky Edit Actions' module checkbox.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+              <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/MPSBlockAccess_TC3608_063014081718AM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/MPSBlockAccess_TC3608_063014081718AM.png' height='500' width='500'/> </a>]]>
             </line>
           </reporter-output>
-        </test-method> <!-- StickyButtons_Test -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons@26044b0b]" name="stopSelenium" is-config="true" duration-ms="569" started-at="2014-06-29T14:29:28Z" finished-at="2014-06-29T14:29:29Z">
+        </test-method> <!-- MPSBlockAccess_TC3608 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSBlockAccess@715e12dc]" name="stopSelenium" is-config="true" duration-ms="2308" started-at="2014-06-30T08:17:18Z" finished-at="2014-06-30T08:17:20Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=StickyButtons_Test status=SUCCESS method=StickyButtons.StickyButtons_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons@26044b0b] output=Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]]>
+                <![CDATA[[TestResult name=MPSBlockAccess_TC3608 status=FAILURE method=MPSBlockAccess.MPSBlockAccess_TC3608()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSBlockAccess@715e12dc] output=STEP 1]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons@26044b0b]" name="stopGridAndHub" is-config="true" duration-ms="366" started-at="2014-06-29T14:29:29Z" finished-at="2014-06-29T14:29:29Z">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSBlockAccess@715e12dc]" name="startSelenium" is-config="true" duration-ms="2073" started-at="2014-06-30T08:17:20Z" finished-at="2014-06-30T08:17:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startSelenium -->
+        <test-method status="PASS" signature="MPSBlockAccess_TC3608()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSBlockAccess@715e12dc]" name="MPSBlockAccess_TC3608" duration-ms="27959" started-at="2014-06-30T08:17:22Z" finished-at="2014-06-30T08:17:50Z">
+          <reporter-output>
+            <line>
+              <![CDATA[STEP 1]]>
+            </line>
+            <line>
+              <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Login' button.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 2]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Structure' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'MPS Blocks' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to frame titled 'MPS Blocks'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 3]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'People' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Add user' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'People dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '98d76947e50143d@7a66f04124dd491.com' in the 'Username' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '98d76947e50143d@7a66f04124dd491.com' in the 'E-mail address' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'pa55word' in the 'Confirm password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Check the 'administrator' check box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '6f8589a56bb54c0' in the 'First Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'b2587215134e4fc' in the 'Last Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Create new account' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'A welcome message with further instructions has been e-mailed to the new user 98d76947e50143d@7a66f04124dd491.com.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 4]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Logout' button.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '98d76947e50143d@7a66f04124dd491.com' in the 'Email Address' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Login' button.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 5]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Structure' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'MPS Blocks' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to frame titled 'MPS Blocks'.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- MPSBlockAccess_TC3608 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSBlockAccess@715e12dc]" name="stopSelenium" is-config="true" duration-ms="567" started-at="2014-06-30T08:17:50Z" finished-at="2014-06-30T08:17:51Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=MPSBlockAccess_TC3608 status=SUCCESS method=MPSBlockAccess.MPSBlockAccess_TC3608()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSBlockAccess@715e12dc] output=STEP 1]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopSelenium -->
+        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSBlockAccess@715e12dc]" name="stopGridAndHub" is-config="true" duration-ms="387" started-at="2014-06-30T08:17:51Z" finished-at="2014-06-30T08:17:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopGridAndHub -->
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Advertising.MPS.MPSBlockAccess -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

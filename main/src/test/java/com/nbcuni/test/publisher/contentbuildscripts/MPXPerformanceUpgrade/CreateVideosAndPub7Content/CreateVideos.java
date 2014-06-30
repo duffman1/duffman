@@ -58,6 +58,7 @@ public class CreateVideos extends ParentTest{
             	bufferWritter.write("created," + mediaTitle + "," + publishTimeStamp + "," + publishTime + System.lineSeparator());
             	bufferWritter.close();
             	
+            	Thread.sleep(10000);
             	webDriver.getCurrentUrl();
     		}
     		catch (Exception | AssertionError e) {
