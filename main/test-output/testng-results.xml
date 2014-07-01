@@ -2,7 +2,7 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
     <line>
-      <![CDATA[Open url 'http://install.devi3.nbcupublisher7.publisher7.com'.]]>
+      <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]>
     </line>
     <line>
       <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
@@ -14,55 +14,124 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Add content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Post' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '18f42bdf2cb7410' in the 'Title' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the Synopsis frame.]]>
+    </line>
+    <line>
+      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Cover' select button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the select file frame.]]>
+    </line>
+    <line>
+      <![CDATA[Enter the file path for file upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Upload' button.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Public Local Files' radio button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the file image 'HanSolo' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the img is loaded and visible.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Publishing Options' link.]]>
+    </line>
+    <line>
+      <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Post 18f42bdf2cb7410 has been created.' is present.]]>
+    </line>
+    <line>
       <![CDATA[Click the 'Modules' menu link.]]>
     </line>
     <line>
       <![CDATA[Switch to frame titled 'Modules'.]]>
     </line>
     <line>
-      <![CDATA[Enter 'zeebox Example' in the 'Filter Name' text box.]]>
+      <![CDATA[Enter 'Pub Gigya' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Wait for the module titled 'zeebox Example' to appear in the list.]]>
+      <![CDATA[Wait for the module titled 'Pub Gigya' to appear in the list.]]>
     </line>
     <line>
-      <![CDATA[Verify the 'zeebox Example' check box is checked.]]>
+      <![CDATA[Verify the 'Pub Gigya' check box is checked.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'Zeebox Follow Button example block' is present on the page.]]>
+      <![CDATA[Mouse over the 'Configuration' menu link.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'Zeebox Play-along example block' is present on the page.]]>
+      <![CDATA[Mouse over the 'Web services' menu link.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'Zeebox Hot TV Rooms example block' is present on the page.]]>
+      <![CDATA[Click the 'Gigya settings' menu link.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'Zeebox TV Room Teaser example block' is present on the page.]]>
+      <![CDATA[Switch to the active frame titled 'Gigya settings dialog'.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'Zeebox TV Room example block' is present on the page.]]>
+      <![CDATA[Click the 'Share' link in the work bench.]]>
     </line>
     <line>
-      <![CDATA[Verify the text '' is present on the page.]]>
+      <![CDATA[Switch to the active frame titled 'Gigya settings dialog'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Modules' menu link.]]>
+      <![CDATA[Enter 'Tumblr, email, googleplus-interactive ,foursquare, print, twitter-tweet, facebook-like' in the Privider text box.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+      <![CDATA[Click the 'ADVANCED SHARE BAR SETTINGS' link to expand advanced menu options.]]>
     </line>
     <line>
-      <![CDATA[Enter 'zeebox Example' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the module titled 'zeebox Example' to appear in the list.]]>
-    </line>
-    <line>
-      <![CDATA[Uncheck the 'zeebox Example' module checkbox.]]>
+      <![CDATA[Enter 'wrap|true' in the 'Advanced showShareBarUI settings' text area.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save configuration' button.]]>
@@ -74,77 +143,83 @@
       <![CDATA[Click the 'Close Overlay X'.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Modules' menu link.]]>
+      <![CDATA[Click the 'Content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Uninstall' menu link.]]>
+      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter title 18f42bdf2cb7410.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Apply' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the first search title link in the search result set.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the Tumblr gigya share link is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the Email gigya share link is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the Google Plus gigya share link is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the Foursquare gigya share link is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the Print gigya share link is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the Twitter gigya share link is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the Facebook gigya share link is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Modules' menu link.]]>
     </line>
     <line>
       <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'zeebox Example' uninstall checkbox.]]>
+      <![CDATA[Enter 'Pub Gigya' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Uninstall' button.]]>
+      <![CDATA[Wait for the module titled 'Pub Gigya' to appear in the list.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Confirm uninstall dialog'.]]>
+      <![CDATA[Uncheck the 'Pub Gigya' module checkbox.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'The following modules will be completely uninstalled from your site, and all data from these modules will be lost!' is present on the page.]]>
+      <![CDATA[Click the 'Save configuration' button.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'zeebox Example' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Uninstall' button to confirm.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'Zeebox Follow Button example block has been deleted.' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'Zeebox Hot TV Rooms example block has been deleted.' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'Zeebox Play-along example block has been deleted.' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'Zeebox TV Room Teaser example block has been deleted.' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'Zeebox TV Room example block has been deleted.' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'The selected modules have been uninstalled.' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'Page not found' is present on the page.]]>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="85474" started-at="2014-07-01T18:31:35Z" finished-at="2014-07-01T18:33:00Z">
+  <suite name="Default suite" duration-ms="73962" started-at="2014-07-01T20:47:08Z" finished-at="2014-07-01T20:48:22Z">
     <groups>
       <group name="full">
-        <method signature="InstallZeeboxModule.InstallZeeboxModule_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.InstallZeeboxModule.InstallZeeboxModule@116fd92a]" name="InstallZeeboxModule_Test" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.InstallZeeboxModule.InstallZeeboxModule"/>
+        <method signature="FunctionalImplementGigyaShareBar.FunctionalImplementGigyaShareBar_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.SocialIntegration.FunctionalImplementGigyaShareBar.FunctionalImplementGigyaShareBar@64169b6c]" name="FunctionalImplementGigyaShareBar_Test" class="com.nbcuni.test.publisher.tests.SocialIntegration.FunctionalImplementGigyaShareBar.FunctionalImplementGigyaShareBar"/>
       </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="85474" started-at="2014-07-01T18:31:35Z" finished-at="2014-07-01T18:33:00Z">
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.InstallZeeboxModule.InstallZeeboxModule">
-        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.InstallZeeboxModule.InstallZeeboxModule@116fd92a]" name="startGridAndHub" is-config="true" duration-ms="11787" started-at="2014-07-01T14:31:23Z" finished-at="2014-07-01T14:31:35Z">
+    <test name="Default test" duration-ms="73962" started-at="2014-07-01T20:47:08Z" finished-at="2014-07-01T20:48:22Z">
+      <class name="com.nbcuni.test.publisher.tests.SocialIntegration.FunctionalImplementGigyaShareBar.FunctionalImplementGigyaShareBar">
+        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.SocialIntegration.FunctionalImplementGigyaShareBar.FunctionalImplementGigyaShareBar@64169b6c]" name="startGridAndHub" is-config="true" duration-ms="11698" started-at="2014-07-01T16:46:56Z" finished-at="2014-07-01T16:47:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startGridAndHub -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.InstallZeeboxModule.InstallZeeboxModule@116fd92a]" name="startSelenium" is-config="true" duration-ms="2454" started-at="2014-07-01T14:31:35Z" finished-at="2014-07-01T14:31:37Z">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.SocialIntegration.FunctionalImplementGigyaShareBar.FunctionalImplementGigyaShareBar@64169b6c]" name="startSelenium" is-config="true" duration-ms="2410" started-at="2014-07-01T16:47:08Z" finished-at="2014-07-01T16:47:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="InstallZeeboxModule_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.InstallZeeboxModule.InstallZeeboxModule@116fd92a]" name="InstallZeeboxModule_Test" duration-ms="82433" started-at="2014-07-01T14:31:37Z" finished-at="2014-07-01T14:33:00Z">
+        <test-method status="PASS" signature="FunctionalImplementGigyaShareBar_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.SocialIntegration.FunctionalImplementGigyaShareBar.FunctionalImplementGigyaShareBar@64169b6c]" name="FunctionalImplementGigyaShareBar_Test" duration-ms="70969" started-at="2014-07-01T16:47:10Z" finished-at="2014-07-01T16:48:21Z">
           <reporter-output>
             <line>
-              <![CDATA[Open url 'http://install.devi3.nbcupublisher7.publisher7.com'.]]>
+              <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]>
             </line>
             <line>
               <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
@@ -156,55 +231,124 @@
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Add content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Post' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '18f42bdf2cb7410' in the 'Title' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the Synopsis frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Cover' select button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the select file frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter the file path for file upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Upload' button.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Public Local Files' radio button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the file image 'HanSolo' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Publishing Options' link.]]>
+            </line>
+            <line>
+              <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Post 18f42bdf2cb7410 has been created.' is present.]]>
+            </line>
+            <line>
               <![CDATA[Click the 'Modules' menu link.]]>
             </line>
             <line>
               <![CDATA[Switch to frame titled 'Modules'.]]>
             </line>
             <line>
-              <![CDATA[Enter 'zeebox Example' in the 'Filter Name' text box.]]>
+              <![CDATA[Enter 'Pub Gigya' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Wait for the module titled 'zeebox Example' to appear in the list.]]>
+              <![CDATA[Wait for the module titled 'Pub Gigya' to appear in the list.]]>
             </line>
             <line>
-              <![CDATA[Verify the 'zeebox Example' check box is checked.]]>
+              <![CDATA[Verify the 'Pub Gigya' check box is checked.]]>
             </line>
             <line>
               <![CDATA[Click the 'Close Overlay X'.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'Zeebox Follow Button example block' is present on the page.]]>
+              <![CDATA[Mouse over the 'Configuration' menu link.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'Zeebox Play-along example block' is present on the page.]]>
+              <![CDATA[Mouse over the 'Web services' menu link.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'Zeebox Hot TV Rooms example block' is present on the page.]]>
+              <![CDATA[Click the 'Gigya settings' menu link.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'Zeebox TV Room Teaser example block' is present on the page.]]>
+              <![CDATA[Switch to the active frame titled 'Gigya settings dialog'.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'Zeebox TV Room example block' is present on the page.]]>
+              <![CDATA[Click the 'Share' link in the work bench.]]>
             </line>
             <line>
-              <![CDATA[Verify the text '' is present on the page.]]>
+              <![CDATA[Switch to the active frame titled 'Gigya settings dialog'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Modules' menu link.]]>
+              <![CDATA[Enter 'Tumblr, email, googleplus-interactive ,foursquare, print, twitter-tweet, facebook-like' in the Privider text box.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+              <![CDATA[Click the 'ADVANCED SHARE BAR SETTINGS' link to expand advanced menu options.]]>
             </line>
             <line>
-              <![CDATA[Enter 'zeebox Example' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the module titled 'zeebox Example' to appear in the list.]]>
-            </line>
-            <line>
-              <![CDATA[Uncheck the 'zeebox Example' module checkbox.]]>
+              <![CDATA[Enter 'wrap|true' in the 'Advanced showShareBarUI settings' text area.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save configuration' button.]]>
@@ -216,74 +360,80 @@
               <![CDATA[Click the 'Close Overlay X'.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Modules' menu link.]]>
+              <![CDATA[Click the 'Content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Uninstall' menu link.]]>
+              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter title 18f42bdf2cb7410.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Apply' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the first search title link in the search result set.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the Tumblr gigya share link is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the Email gigya share link is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the Google Plus gigya share link is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the Foursquare gigya share link is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the Print gigya share link is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the Twitter gigya share link is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the Facebook gigya share link is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Modules' menu link.]]>
             </line>
             <line>
               <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'zeebox Example' uninstall checkbox.]]>
+              <![CDATA[Enter 'Pub Gigya' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Uninstall' button.]]>
+              <![CDATA[Wait for the module titled 'Pub Gigya' to appear in the list.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Confirm uninstall dialog'.]]>
+              <![CDATA[Uncheck the 'Pub Gigya' module checkbox.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'The following modules will be completely uninstalled from your site, and all data from these modules will be lost!' is present on the page.]]>
+              <![CDATA[Click the 'Save configuration' button.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'zeebox Example' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Uninstall' button to confirm.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'Zeebox Follow Button example block has been deleted.' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'Zeebox Hot TV Rooms example block has been deleted.' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'Zeebox Play-along example block has been deleted.' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'Zeebox TV Room Teaser example block has been deleted.' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'Zeebox TV Room example block has been deleted.' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'The selected modules have been uninstalled.' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'Page not found' is present on the page.]]>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- InstallZeeboxModule_Test -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.InstallZeeboxModule.InstallZeeboxModule@116fd92a]" name="stopSelenium" is-config="true" duration-ms="576" started-at="2014-07-01T14:33:00Z" finished-at="2014-07-01T14:33:00Z">
+        </test-method> <!-- FunctionalImplementGigyaShareBar_Test -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.SocialIntegration.FunctionalImplementGigyaShareBar.FunctionalImplementGigyaShareBar@64169b6c]" name="stopSelenium" is-config="true" duration-ms="571" started-at="2014-07-01T16:48:21Z" finished-at="2014-07-01T16:48:22Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=InstallZeeboxModule_Test status=SUCCESS method=InstallZeeboxModule.InstallZeeboxModule_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.InstallZeeboxModule.InstallZeeboxModule@116fd92a] output=Open url 'http://install.devi3.nbcupublisher7.publisher7.com'.]]]>
+                <![CDATA[[TestResult name=FunctionalImplementGigyaShareBar_Test status=SUCCESS method=FunctionalImplementGigyaShareBar.FunctionalImplementGigyaShareBar_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.SocialIntegration.FunctionalImplementGigyaShareBar.FunctionalImplementGigyaShareBar@64169b6c] output=Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.InstallZeeboxModule.InstallZeeboxModule@116fd92a]" name="stopGridAndHub" is-config="true" duration-ms="365" started-at="2014-07-01T14:33:01Z" finished-at="2014-07-01T14:33:01Z">
+        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.SocialIntegration.FunctionalImplementGigyaShareBar.FunctionalImplementGigyaShareBar@64169b6c]" name="stopGridAndHub" is-config="true" duration-ms="376" started-at="2014-07-01T16:48:22Z" finished-at="2014-07-01T16:48:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopGridAndHub -->
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.InstallZeeboxModule.InstallZeeboxModule -->
+      </class> <!-- com.nbcuni.test.publisher.tests.SocialIntegration.FunctionalImplementGigyaShareBar.FunctionalImplementGigyaShareBar -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

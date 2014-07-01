@@ -101,7 +101,7 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.InstallZeeboxModule.InstallZeeboxModule" hash-for-method="InstallZeeboxModule_Test">InstallZeeboxModule_Test</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.nbcuni.test.publisher.tests.SocialIntegration.FunctionalImplementGigyaShareBar.FunctionalImplementGigyaShareBar" hash-for-method="FunctionalImplementGigyaShareBar_Test">FunctionalImplementGigyaShareBar_Test</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -119,14 +119,14 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.InstallZeeboxModule.InstallZeeboxModule</span>
+              <span class="class-name">com.nbcuni.test.publisher.tests.SocialIntegration.FunctionalImplementGigyaShareBar.FunctionalImplementGigyaShareBar</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="InstallZeeboxModule_Test">
-                  </a> <!-- InstallZeeboxModule_Test -->
-                  <span class="method-name">InstallZeeboxModule_Test</span>
+                  <a name="FunctionalImplementGigyaShareBar_Test">
+                  </a> <!-- FunctionalImplementGigyaShareBar_Test -->
+                  <span class="method-name">FunctionalImplementGigyaShareBar_Test</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -134,7 +134,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/private/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/testng-eclipse-1516446887/testng-customsuite.xml</span>
+            <span class="header-content">/private/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/testng-eclipse--1699483185/testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -143,7 +143,7 @@
 &lt;suite name=&quot;Default suite&quot;&gt;
   &lt;test verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.InstallZeeboxModule.InstallZeeboxModule&quot;/&gt;
+      &lt;class name=&quot;com.nbcuni.test.publisher.tests.SocialIntegration.FunctionalImplementGigyaShareBar.FunctionalImplementGigyaShareBar&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -171,7 +171,7 @@
               <span class="test-group-name">full</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">InstallZeeboxModule_Test</span>
+                <span class="method-in-group-name">FunctionalImplementGigyaShareBar_Test</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -193,9 +193,9 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'InstallZeeboxModule_Test')
-data.setCell(0, 2, 'com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.InstallZeeboxModule.InstallZeeboxModule')
-data.setCell(0, 3, 82433);
+data.setCell(0, 1, 'FunctionalImplementGigyaShareBar_Test')
+data.setCell(0, 2, 'com.nbcuni.test.publisher.tests.SocialIntegration.FunctionalImplementGigyaShareBar.FunctionalImplementGigyaShareBar')
+data.setCell(0, 3, 70969);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
@@ -212,49 +212,74 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="reporter-method-div">
-              <span class="reporter-method-name">InstallZeeboxModule_Test</span>
+              <span class="reporter-method-name">FunctionalImplementGigyaShareBar_Test</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Open url 'http://install.devi3.nbcupublisher7.publisher7.com'.</span>
+                <span class="reporter-method-output">Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.</span>
                 <span class="reporter-method-output">Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.</span>
                 <span class="reporter-method-output">Enter 'pa55word' in the 'Password' text box.</span>
                 <span class="reporter-method-output">Click the 'Login' button.</span>
+                <span class="reporter-method-output">Mouse over the 'Content' menu link.</span>
+                <span class="reporter-method-output">Mouse over the 'Add content' menu link.</span>
+                <span class="reporter-method-output">Click the 'Post' menu link.</span>
+                <span class="reporter-method-output">Switch to the active frame titled 'Create Post dialog'.</span>
+                <span class="reporter-method-output">Enter '18f42bdf2cb7410' in the 'Title' text box.</span>
+                <span class="reporter-method-output">Switch to the Synopsis frame.</span>
+                <span class="reporter-method-output">Enter a randomized text string into the 'Body' text area.</span>
+                <span class="reporter-method-output">Switch to the active frame titled 'Create Post dialog'.</span>
+                <span class="reporter-method-output">Click the 'Cover' select button.</span>
+                <span class="reporter-method-output">Switch to the select file frame.</span>
+                <span class="reporter-method-output">Enter the file path for file upload.</span>
+                <span class="reporter-method-output">Click the 'Upload' button.</span>
+                <span class="reporter-method-output">Wait for the file link to be visible after upload.</span>
+                <span class="reporter-method-output">Click the 'Next' button.</span>
+                <span class="reporter-method-output">Click the 'Public Local Files' radio button.</span>
+                <span class="reporter-method-output">Click the 'Next' button.</span>
+                <span class="reporter-method-output">Verify the file image 'HanSolo' is present.</span>
+                <span class="reporter-method-output">Verify the img is loaded and visible.</span>
+                <span class="reporter-method-output">Click the 'Save' button.</span>
+                <span class="reporter-method-output">Switch to the active frame titled 'Create Post dialog'.</span>
+                <span class="reporter-method-output">Scroll the 'Publishing Options' link into view.</span>
+                <span class="reporter-method-output">Click the 'Publishing Options' link.</span>
+                <span class="reporter-method-output">Select 'Draft' from the 'Moderation State' drop down list.</span>
+                <span class="reporter-method-output">Click the 'Save' button.</span>
+                <span class="reporter-method-output">Verify success message of 'Post 18f42bdf2cb7410 has been created.' is present.</span>
                 <span class="reporter-method-output">Click the 'Modules' menu link.</span>
                 <span class="reporter-method-output">Switch to frame titled 'Modules'.</span>
-                <span class="reporter-method-output">Enter 'zeebox Example' in the 'Filter Name' text box.</span>
-                <span class="reporter-method-output">Wait for the module titled 'zeebox Example' to appear in the list.</span>
-                <span class="reporter-method-output">Verify the 'zeebox Example' check box is checked.</span>
+                <span class="reporter-method-output">Enter 'Pub Gigya' in the 'Filter Name' text box.</span>
+                <span class="reporter-method-output">Wait for the module titled 'Pub Gigya' to appear in the list.</span>
+                <span class="reporter-method-output">Verify the 'Pub Gigya' check box is checked.</span>
                 <span class="reporter-method-output">Click the 'Close Overlay X'.</span>
-                <span class="reporter-method-output">Verify the text 'Zeebox Follow Button example block' is present on the page.</span>
-                <span class="reporter-method-output">Verify the text 'Zeebox Play-along example block' is present on the page.</span>
-                <span class="reporter-method-output">Verify the text 'Zeebox Hot TV Rooms example block' is present on the page.</span>
-                <span class="reporter-method-output">Verify the text 'Zeebox TV Room Teaser example block' is present on the page.</span>
-                <span class="reporter-method-output">Verify the text 'Zeebox TV Room example block' is present on the page.</span>
-                <span class="reporter-method-output">Verify the text '' is present on the page.</span>
-                <span class="reporter-method-output">Click the 'Modules' menu link.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'Modules dialog'.</span>
-                <span class="reporter-method-output">Enter 'zeebox Example' in the 'Filter Name' text box.</span>
-                <span class="reporter-method-output">Wait for the module titled 'zeebox Example' to appear in the list.</span>
-                <span class="reporter-method-output">Uncheck the 'zeebox Example' module checkbox.</span>
+                <span class="reporter-method-output">Mouse over the 'Configuration' menu link.</span>
+                <span class="reporter-method-output">Mouse over the 'Web services' menu link.</span>
+                <span class="reporter-method-output">Click the 'Gigya settings' menu link.</span>
+                <span class="reporter-method-output">Switch to the active frame titled 'Gigya settings dialog'.</span>
+                <span class="reporter-method-output">Click the 'Share' link in the work bench.</span>
+                <span class="reporter-method-output">Switch to the active frame titled 'Gigya settings dialog'.</span>
+                <span class="reporter-method-output">Enter 'Tumblr, email, googleplus-interactive ,foursquare, print, twitter-tweet, facebook-like' in the Privider text box.</span>
+                <span class="reporter-method-output">Click the 'ADVANCED SHARE BAR SETTINGS' link to expand advanced menu options.</span>
+                <span class="reporter-method-output">Enter 'wrap|true' in the 'Advanced showShareBarUI settings' text area.</span>
                 <span class="reporter-method-output">Click the 'Save configuration' button.</span>
                 <span class="reporter-method-output">Verify success message of 'The configuration options have been saved.' is present.</span>
                 <span class="reporter-method-output">Click the 'Close Overlay X'.</span>
-                <span class="reporter-method-output">Mouse over the 'Modules' menu link.</span>
-                <span class="reporter-method-output">Click the 'Uninstall' menu link.</span>
+                <span class="reporter-method-output">Click the 'Content' menu link.</span>
+                <span class="reporter-method-output">Switch to the active frame titled 'Content dialog'.</span>
+                <span class="reporter-method-output">Enter title 18f42bdf2cb7410.</span>
+                <span class="reporter-method-output">Click the 'Apply' button.</span>
+                <span class="reporter-method-output">Click the first search title link in the search result set.</span>
+                <span class="reporter-method-output">Verify the Tumblr gigya share link is present.</span>
+                <span class="reporter-method-output">Verify the Email gigya share link is present.</span>
+                <span class="reporter-method-output">Verify the Google Plus gigya share link is present.</span>
+                <span class="reporter-method-output">Verify the Foursquare gigya share link is present.</span>
+                <span class="reporter-method-output">Verify the Print gigya share link is present.</span>
+                <span class="reporter-method-output">Verify the Twitter gigya share link is present.</span>
+                <span class="reporter-method-output">Verify the Facebook gigya share link is present.</span>
+                <span class="reporter-method-output">Click the 'Modules' menu link.</span>
                 <span class="reporter-method-output">Switch to the active frame titled 'Modules dialog'.</span>
-                <span class="reporter-method-output">Click the 'zeebox Example' uninstall checkbox.</span>
-                <span class="reporter-method-output">Click the 'Uninstall' button.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'Confirm uninstall dialog'.</span>
-                <span class="reporter-method-output">Verify the text 'The following modules will be completely uninstalled from your site, and all data from these modules will be lost!' is present on the page.</span>
-                <span class="reporter-method-output">Verify the text 'zeebox Example' is present on the page.</span>
-                <span class="reporter-method-output">Click the 'Uninstall' button to confirm.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'Modules dialog'.</span>
-                <span class="reporter-method-output">Verify the text 'Zeebox Follow Button example block has been deleted.' is present on the page.</span>
-                <span class="reporter-method-output">Verify the text 'Zeebox Hot TV Rooms example block has been deleted.' is present on the page.</span>
-                <span class="reporter-method-output">Verify the text 'Zeebox Play-along example block has been deleted.' is present on the page.</span>
-                <span class="reporter-method-output">Verify the text 'Zeebox TV Room Teaser example block has been deleted.' is present on the page.</span>
-                <span class="reporter-method-output">Verify the text 'Zeebox TV Room example block has been deleted.' is present on the page.</span>
-                <span class="reporter-method-output">Verify the text 'The selected modules have been uninstalled.' is present on the page.</span>
-                <span class="reporter-method-output">Verify the text 'Page not found' is present on the page.</span>
+                <span class="reporter-method-output">Enter 'Pub Gigya' in the 'Filter Name' text box.</span>
+                <span class="reporter-method-output">Wait for the module titled 'Pub Gigya' to appear in the list.</span>
+                <span class="reporter-method-output">Uncheck the 'Pub Gigya' module checkbox.</span>
+                <span class="reporter-method-output">Click the 'Save configuration' button.</span>
+                <span class="reporter-method-output">Verify success message of 'The configuration options have been saved.' is present.</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -272,26 +297,26 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.InstallZeeboxModule.InstallZeeboxModule</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.nbcuni.test.publisher.tests.SocialIntegration.FunctionalImplementGigyaShareBar.FunctionalImplementGigyaShareBar</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">startGridAndHub</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
                 <span class="method-name">startSelenium</span>
-                <span class="method-start">11796 ms</span>
+                <span class="method-start">11708 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">InstallZeeboxModule_Test</span>
-                <span class="method-start">14250 ms</span>
+                <span class="method-name">FunctionalImplementGigyaShareBar_Test</span>
+                <span class="method-start">14118 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">stopSelenium([TestResult name=InstallZeeboxModule_Test status=SUCCESS method=InstallZeeboxModule.InstallZeeboxMod...)</span>
-                <span class="method-start">96684 ms</span>
+                <span class="method-name">stopSelenium([TestResult name=FunctionalImplementGigyaShareBar_Test status=SUCCESS method=FunctionalImplementGigy...)</span>
+                <span class="method-start">85088 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-suite after">
                 <span class="method-name">stopGridAndHub</span>
-                <span class="method-start">97276 ms</span>
+                <span class="method-start">85674 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

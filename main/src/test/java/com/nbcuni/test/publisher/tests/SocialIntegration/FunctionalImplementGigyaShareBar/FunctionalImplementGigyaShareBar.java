@@ -73,6 +73,12 @@ public class FunctionalImplementGigyaShareBar extends ParentTest{
         gigyaShareBar.VerifyTwitterBtnPresent();
         gigyaShareBar.VerifyFacebookBtnPresent();
         
+        //CLEANUP
+        taxonomy.NavigateSite("Modules");
+        overlay.SwitchToActiveFrame();
+        modules.EnterFilterName("Pub Gigya");
+        modules.DisableModule("Pub Gigya");
+        
         //Step 6 - N/A
         
     }

@@ -2,10 +2,13 @@ package com.nbcuni.test.publisher.pageobjects.Content;
 
 import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
 
 /*********************************************
@@ -16,9 +19,12 @@ import org.testng.Reporter;
  *********************************************/
 public class GigyaShareBar {
 
+	private WebDriverWait wait;
+	
 	//PAGE OBJECT CONSTRUCTORS
     public GigyaShareBar(Driver webDriver, AppLib applib) {
         PageFactory.initElements(webDriver, this);
+        wait = new WebDriverWait(webDriver, 30);
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -48,50 +54,50 @@ public class GigyaShareBar {
     public void VerifyTumblrBtnPresent() throws Exception{
     
     	Reporter.log("Verify the Tumblr gigya share link is present.");
-    	Tumblr_Btn.isDisplayed();
-
+    	wait.until(ExpectedConditions.visibilityOf(Tumblr_Btn));
+    	
     }
     
     public void VerifyEmailBtnPresent() throws Exception{
         
     	Reporter.log("Verify the Email gigya share link is present.");
-    	Email_Btn.isDisplayed();
-
+    	wait.until(ExpectedConditions.visibilityOf(Email_Btn));
+    	
     }
 
     public void VerifyGooglePlusBtnPresent() throws Exception{
         
     	Reporter.log("Verify the Google Plus gigya share link is present.");
-    	GooglePlus_Btn.isDisplayed();
-
+    	wait.until(ExpectedConditions.visibilityOf(GooglePlus_Btn));
+    	
     }
     
     public void VerifyFoursquareBtnPresent() throws Exception{
         
     	Reporter.log("Verify the Foursquare gigya share link is present.");
-    	Foursquare_Btn.isDisplayed();
-
+    	wait.until(ExpectedConditions.visibilityOf(Foursquare_Btn));
+    	
     }
     
     public void VerifyPrintBtnPresent() throws Exception{
         
     	Reporter.log("Verify the Print gigya share link is present.");
-    	Print_Btn.isDisplayed();
-
+    	wait.until(ExpectedConditions.visibilityOf(Print_Btn));
+    	
     }
     
     public void VerifyTwitterBtnPresent() throws Exception{
         
     	Reporter.log("Verify the Twitter gigya share link is present.");
-    	Twitter_Frm.isDisplayed();
-
+    	wait.until(ExpectedConditions.visibilityOf(Twitter_Frm));
+    	
     }
     
     public void VerifyFacebookBtnPresent() throws Exception{
         
     	Reporter.log("Verify the Facebook gigya share link is present.");
-    	Facebook_Frm.isDisplayed();
-
+    	wait.until(ExpectedConditions.visibilityOf(Facebook_Frm));
+    	
     }
     
     
