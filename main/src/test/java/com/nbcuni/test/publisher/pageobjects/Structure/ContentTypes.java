@@ -141,18 +141,6 @@ public class ContentTypes {
     	
     }
     
-    public void VerifyNewFieldSaved(String fieldName) throws Exception {
-    	
-    	contentParent.VerifyMessageStatus("Updated field " + fieldName + " field settings.");
-    	
-    }
-    
-    public void VerifyConfigurationSaved(String fieldName) throws Exception {
-    	
-    	contentParent.VerifyMessageStatus("Saved " + fieldName + " configuration.");
-    	
-    }
-    
     public void VerifyFieldSaveBtnPresent(String fieldName) throws Exception {
     	
     	Reporter.log("Verify the Field 'Save' button is present.");

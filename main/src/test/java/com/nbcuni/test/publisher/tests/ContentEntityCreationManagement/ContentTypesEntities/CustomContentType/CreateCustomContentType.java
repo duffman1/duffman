@@ -45,10 +45,13 @@ public class CreateCustomContentType extends ParentTest{
             contentTypes.EnterAddNewField(newFieldName);
             contentTypes.SelectFieldType(newFieldType);
             contentTypes.ClickSaveBtn();
+            overlay.SwitchToActiveFrame();
             contentTypes.ClickSaveBtn();
-            contentTypes.VerifyNewFieldSaved(newFieldName);
+            overlay.SwitchToActiveFrame();
+            contentParent.VerifyMessageStatus("Updated field " + newFieldName + " field settings.");
             contentTypes.ClickSaveBtn();
-            contentTypes.VerifyConfigurationSaved(newFieldName);
+            overlay.SwitchToActiveFrame();
+            contentParent.VerifyMessageStatus("Saved " + newFieldName + " configuration.");
             contentTypes.ClickSaveBtn();
             
             //Step 7

@@ -1,14 +1,11 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityModerationStatesandWorkflows;
 
-import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
-
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Logout;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Content.BasicInformation;
-import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.Content.PublishingOptions;
 import com.nbcuni.test.publisher.pageobjects.Content.SelectFile;
 
@@ -29,39 +26,31 @@ public class PublishContenttoUnauthenticatedUsers extends ParentTest{
       
     	//Step 1
     	UserLogin userLogin = applib.openApplication();
-    	PageFactory.initElements(webDriver, userLogin);
-        userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+    	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
         
         //Step 2
         taxonomy.NavigateSite("Content>>Add content>>Media Gallery"); 
         BasicInformation basicInformation = new BasicInformation(webDriver);
-        overlay.SwitchToFrame("Create Media Gallery");
+        overlay.SwitchToActiveFrame();
         String title = random.GetCharacterString(15);
         basicInformation.EnterTitle(title);
         basicInformation.ClickCoverSelectBtn();
         SelectFile selectFile = new SelectFile(webDriver, applib);
-        PageFactory.initElements(webDriver, selectFile);
         selectFile.SelectDefaultCoverImg();
-        overlay.SwitchToFrame("Create Media Gallery");
+        overlay.SwitchToActiveFrame();
         basicInformation.VerifyCoverImagePresent("HanSolo");        
        
-        /*TODO
-         * Upload 4 media files
-         */
         //Step 3
         PublishingOptions publishingOptions = new PublishingOptions(webDriver);
         publishingOptions.ClickPublishingOptionsLnk();
     	publishingOptions.SelectModerationState("Published");
     	publishingOptions.EnterMessageForStateChange("Log message for state change as Published");
-        ContentParent contentParent = new ContentParent(webDriver, applib);
-        PageFactory.initElements(webDriver, contentParent);
         contentParent.ClickSaveBtn();
         contentParent.VerifyMessageStatus("Media Gallery " + title + " has been created.");
       
         //Step 4
         String ContentURL = webDriver.getCurrentUrl();
         Logout logout = new Logout(webDriver);
-        PageFactory.initElements(webDriver, logout);
         logout.ClickLogoutBtn();
         webDriver.navigate().to(ContentURL);
         contentParent.VerifyPostTitle(title);

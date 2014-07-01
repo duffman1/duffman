@@ -2,9 +2,6 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
     <line>
-      <![CDATA[STEP 1]]>
-    </line>
-    <line>
       <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]>
     </line>
     <line>
@@ -17,516 +14,351 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[STEP 2]]>
+      <![CDATA[Mouse over the 'Configuration' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Modules' menu link.]]>
+      <![CDATA[Mouse over the 'Media' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+      <![CDATA[Click the 'Media: thePlatform mpx settings' menu link.]]>
     </line>
     <line>
-      <![CDATA[Enter 'MPS' in the 'Filter Name' text box.]]>
+      <![CDATA[Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.]]>
     </line>
     <line>
-      <![CDATA[Wait for the module titled 'MPS' to appear in the list.]]>
+      <![CDATA[Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.]]>
     </line>
     <line>
-      <![CDATA[Uncheck the 'MPS' module checkbox.]]>
+      <![CDATA[Get all the selected import account options and store to a list.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
+      <![CDATA[Open the mpx platform.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+      <![CDATA[Enter 'mpx/AdminPub7QA' in the 'Username' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
+      <![CDATA[Enter 'Pa55word' in the 'Password' text box.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Modules' menu link.]]>
+      <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Uninstall' menu link.]]>
+      <![CDATA[Click the 'Players' link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+      <![CDATA[Click the 'All Players' link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'MPS' uninstall checkbox.]]>
+      <![CDATA[Click the 'Add' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Uninstall' button.]]>
+      <![CDATA[Enter 'AutomationPlayerb3a4594150' in the 'Title' text box.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Confirm uninstall dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'The following modules will be completely uninstalled from your site, and all data from these modules will be lost!' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'MPS' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Uninstall' button to confirm.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 3]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Modules' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Pub Ads' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the module titled 'Pub Ads' to appear in the list.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Pub Ads' check box is checked.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'MPS' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the module titled 'MPS' to appear in the list.]]>
-    </line>
-    <line>
-      <![CDATA[Check the 'MPS' check box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
-    </line>
-    <line>
-      <![CDATA[Switch back to the 'Modules' frame.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to frame titled 'Modules'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'DART' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the module titled 'DART' to appear in the list.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Doubleclick for Publishers' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the module titled 'Doubleclick for Publishers' to appear in the list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 4]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Reports' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Status report' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Status report dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'Ad Tag Style' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'MPS' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 5]]>
-    </line>
-    <line>
-      <![CDATA[Verify 'var mpscall = {"site":"install","title":"Welcome to Site-Install","path":"\/","is_content":0,"type":"other"}' is present in page source.]]>
-    </line>
-    <line>
-      <![CDATA[Verify 'var mpsopts = {"host":"mps.nbcuni.com"}' is present in page source.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 6]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'People' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'People dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that no MPS calls were made on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 7]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com/kfkjdjdkjdjldkjj'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that no MPS calls were made on the page.]]>
+      <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
       <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]>
     </line>
     <line>
-      <![CDATA[STEP 8]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Configuration' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Web services' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'MPS Configuration' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'MPS Configuration dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'mps.nbcuni.com' in the 'MPS Host' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Document Write' radio button.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'nbc-tonightshow' in the 'Site Instance Override' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 9]]>
-    </line>
-    <line>
       <![CDATA[Mouse over the 'Content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Add content' menu link.]]>
+      <![CDATA[Mouse over the 'Files' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Movie' menu link.]]>
+      <![CDATA[Click the 'mpxPlayers' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
     </line>
     <line>
-      <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
+      <![CDATA[Click the 'Sync MPX Players' link.]]>
     </line>
     <line>
-      <![CDATA[Enter '28db28b9572d430' in the 'Title' text box.]]>
+      <![CDATA[Click the 'Sync MPX Players Now' link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the Synopsis frame.]]>
+      <![CDATA[Verify success message of 'players returned for account' is present.]]>
     </line>
     <line>
-      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Cover' select button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the select file frame.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the file path for file upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Upload' button.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the file image 'HanSolo' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Additional Information' link.]]>
-    </line>
-    <line>
-      <![CDATA[Select the 'Syndicated' from the 'Movie Type' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Select the 'G' from the 'Rating' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Select the 'Action' from the 'Primary Genre' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Movie 28db28b9572d430 has been created.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Note the node number for the content item.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 10]]>
-    </line>
-    <line>
-      <![CDATA[Verify 'var mpscall = {"site":"nbc-tonightshow","title":"28db28b9572d430","path":"\/node\/6' is present in page source.]]>
-    </line>
-    <line>
-      <![CDATA[Verify 'var mpsopts = {"host":"mps.nbcuni.com"}' is present in page source.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 11 through STEP 19]]>
-    </line>
-    <line>
-      <![CDATA[Verify 'var mpscall = {"site":"nbc-tonightshow","title":"28db28b9572d430","path":"\/node\/6","content_id":"node6","is_content":1,"type":"movie","cag":{"genre":"Action","movie-rating":"G","movie-types":"Syndicated"},"pubdate":' is present in page source.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 20]]>
-    </line>
-    <line>
-      <![CDATA[Verify 'a3VtdWQ9MQ==' is present in page source.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 21]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Add content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Media Gallery' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Media Gallery dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '8314f6bf483f4f0' in the 'Title' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Media Items Select' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the select file frame.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'View Library' button.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'HanSolo' in the 'File name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the file search 'spinner' image to be present.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the file search 'spinner' image to not be present, indicating image search is complete.]]>
+      <![CDATA[Enter title AutomationPlayerb3a4594150.]]>
     </line>
     <line>
       <![CDATA[Click the 'Apply' button.]]>
     </line>
     <line>
-      <![CDATA[Wait for the file search 'spinner' image to be present.]]>
+      <![CDATA[Get the text of the first search result set item.]]>
     </line>
     <line>
-      <![CDATA[Wait for the file search 'spinner' image to not be present, indicating image search is complete.]]>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Verify the media thumbnail image 'HanSolo' is present.]]>
+      <![CDATA[Mouse over the 'Files' menu link.]]>
     </line>
     <line>
-      <![CDATA[Verify the the img is loaded and visible.]]>
+      <![CDATA[Click the 'mpxMedia' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click media thumbnail image number 1]]>
+      <![CDATA[Enter title Automation.]]>
     </line>
     <line>
-      <![CDATA[Click on the 'Submit' button.]]>
+      <![CDATA[Select the 'Published' from the 'MPX Status/Published' drop down list.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Create Media Gallery dialog'.]]>
+      <![CDATA[Select the DB TV from the 'Source' select ddl.]]>
     </line>
     <line>
-      <![CDATA[Verify the img source of the Media Item contains 'HanSolo'.]]>
+      <![CDATA[Click the 'Apply' button.]]>
     </line>
     <line>
-      <![CDATA[Assert the the img is loaded and visible.]]>
+      <![CDATA[Get the text of the first search result set item.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save' button.]]>
+      <![CDATA[Click the first search title link in the search result set.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'Media Gallery 8314f6bf483f4f0 has been created.' is present.]]>
+      <![CDATA[Click the 'Edit' link in the work bench.]]>
     </line>
     <line>
-      <![CDATA[Note the node number for the content item.]]>
+      <![CDATA[Switch to the active frame titled 'Edit mpx_video_6 Automation5da5d131ab dialog'.]]>
     </line>
     <line>
-      <![CDATA[Get the file id of image number 1.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 22]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com/node/11/11'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 28]]>
-    </line>
-    <line>
-      <![CDATA[Verify 'typeof(mps.writeFooter)' is present in page source.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 29]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Structure' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'MPS Blocks' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Add' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Add a new MPS block dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '614b02a418d04a8' in the 'Unique Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '241906fa08254dc' in the 'Block Name' text box.]]>
+      <![CDATA[Select 'AutomationPlayerb3a4594150' from the 'Video Player' drop down list.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of '614b02a418d04a8 has been created.' is present.]]>
+      <![CDATA[Open the mpx platform.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Players' link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'All Players' link.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'AutomationPlayerb3a4594150' in the 'Player Search' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Search by Players Title' link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Player Title' label to give focus to the player item.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Disable Player' check box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Status report dialog'.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
     </line>
     <line>
-      <![CDATA[STEP 30]]>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Structure' menu link.]]>
+      <![CDATA[Mouse over the 'Files' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Blocks' menu link.]]>
+      <![CDATA[Click the 'mpxPlayers' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
     </line>
     <line>
-      <![CDATA[Select the block name '241906fa08254dc (MPS)' from the 'Header' drop down list.]]>
+      <![CDATA[Verify that the disabled and unpublished player text is present for player titled 'AutomationPlayerb3a4594150'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save Blocks' button.]]>
+      <![CDATA[Enter title AutomationPlayerb3a4594150.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'The block settings have been updated.' is present.]]>
+      <![CDATA[Click the 'Apply' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the first search title link in the search result set.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Edit' link in the work bench.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Edit mpx_player AutomationPlayerb3a4594150 dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Publishing Options' link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Edit mpx_player AutomationPlayerb3a4594150 dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'MPX Player AutomationPlayerb3a4594150 has been updated.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Files' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'mpxPlayers' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify that the disabled and unpublished player text is present for player titled 'AutomationPlayerb3a4594150'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'MPX Media' link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify that the disabled and unpublished player text is present for player titled 'AutomationPlayerb3a4594150'.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
     </line>
     <line>
-      <![CDATA[STEP 31]]>
+      <![CDATA[Mouse over the 'Configuration' menu link.]]>
     </line>
     <line>
-      <![CDATA[Verify 'mps.getAd('241906fa08254dc')' is present in page source.]]>
+      <![CDATA[Mouse over the 'Media' menu link.]]>
     </line>
     <line>
-      <![CDATA[STEP 32 - N/A]]>
+      <![CDATA[Click the 'Media: thePlatform mpx settings' menu link.]]>
     </line>
     <line>
-      <![CDATA[CLEANUP]]>
+      <![CDATA[Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Structure' menu link.]]>
+      <![CDATA[Verify that the disabled and unpublished player text is present for player titled 'AutomationPlayerb3a4594150'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Blocks' menu link.]]>
+      <![CDATA[Click the 'click here' link for the unpublished player titled 'AutomationPlayerb3a4594150'.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'Edit mpx_player AutomationPlayerb3a4594150 dialog'.]]>
     </line>
     <line>
-      <![CDATA[Select the block name '241906fa08254dc (MPS)' from the '- None -' drop down list.]]>
+      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save Blocks' button.]]>
+      <![CDATA[Click the 'Publishing Options' link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Edit mpx_player AutomationPlayerb3a4594150 dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Check the 'Published' checkbox]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Files' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'mpxPlayers' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify that the disabled and unpublished player text is present for player titled 'AutomationPlayerb3a4594150'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the MPX 'Login' link for the unpublished player 'AutomationPlayerb3a4594150'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Players' link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'All Players' link.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'AutomationPlayerb3a4594150' in the 'Player Search' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Search by Players Title' link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Player Title' label to give focus to the player item.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Disable Player' check box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Status report dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Files' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'mpxPlayers' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'An MPXplayer that's in use (AutomationPlayerb3a4594150) has been disabled and unpublished.' is NOT present on the page.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="155461" started-at="2014-06-30T16:45:57Z" finished-at="2014-06-30T16:48:33Z">
+  <suite name="Default suite" duration-ms="265213" started-at="2014-07-01T14:18:09Z" finished-at="2014-07-01T14:22:34Z">
     <groups>
+      <group name="mpx">
+        <method signature="NotificationPlayerUnavailability.NotificationPlayerUnavailability_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability@14b05b39]" name="NotificationPlayerUnavailability_Test" class="com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability"/>
+      </group> <!-- mpx -->
       <group name="full">
-        <method signature="ImplementMPS.ImplementMPS_TC2901()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@3337cdec]" name="ImplementMPS_TC2901" class="com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS"/>
+        <method signature="NotificationPlayerUnavailability.NotificationPlayerUnavailability_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability@14b05b39]" name="NotificationPlayerUnavailability_Test" class="com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability"/>
       </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="155461" started-at="2014-06-30T16:45:57Z" finished-at="2014-06-30T16:48:33Z">
-      <class name="com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS">
-        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@3337cdec]" name="startGridAndHub" is-config="true" duration-ms="11702" started-at="2014-06-30T12:45:46Z" finished-at="2014-06-30T12:45:57Z">
+    <test name="Default test" duration-ms="265213" started-at="2014-07-01T14:18:09Z" finished-at="2014-07-01T14:22:34Z">
+      <class name="com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability">
+        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability@14b05b39]" name="startGridAndHub" is-config="true" duration-ms="12266" started-at="2014-07-01T10:17:57Z" finished-at="2014-07-01T10:18:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startGridAndHub -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@3337cdec]" name="startSelenium" is-config="true" duration-ms="2533" started-at="2014-06-30T12:45:57Z" finished-at="2014-06-30T12:46:00Z">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability@14b05b39]" name="startSelenium" is-config="true" duration-ms="2369" started-at="2014-07-01T10:18:09Z" finished-at="2014-07-01T10:18:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="ImplementMPS_TC2901()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@3337cdec]" name="ImplementMPS_TC2901" duration-ms="152343" started-at="2014-06-30T12:46:00Z" finished-at="2014-06-30T12:48:32Z">
+        <test-method status="PASS" signature="NotificationPlayerUnavailability_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability@14b05b39]" name="NotificationPlayerUnavailability_Test" duration-ms="262261" started-at="2014-07-01T10:18:12Z" finished-at="2014-07-01T10:22:34Z">
           <reporter-output>
-            <line>
-              <![CDATA[STEP 1]]>
-            </line>
             <line>
               <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]>
             </line>
@@ -540,512 +372,347 @@
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
-              <![CDATA[STEP 2]]>
+              <![CDATA[Mouse over the 'Configuration' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Modules' menu link.]]>
+              <![CDATA[Mouse over the 'Media' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+              <![CDATA[Click the 'Media: thePlatform mpx settings' menu link.]]>
             </line>
             <line>
-              <![CDATA[Enter 'MPS' in the 'Filter Name' text box.]]>
+              <![CDATA[Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.]]>
             </line>
             <line>
-              <![CDATA[Wait for the module titled 'MPS' to appear in the list.]]>
+              <![CDATA[Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.]]>
             </line>
             <line>
-              <![CDATA[Uncheck the 'MPS' module checkbox.]]>
+              <![CDATA[Get all the selected import account options and store to a list.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
+              <![CDATA[Open the mpx platform.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+              <![CDATA[Enter 'mpx/AdminPub7QA' in the 'Username' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
+              <![CDATA[Enter 'Pa55word' in the 'Password' text box.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Modules' menu link.]]>
+              <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Uninstall' menu link.]]>
+              <![CDATA[Click the 'Players' link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+              <![CDATA[Click the 'All Players' link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'MPS' uninstall checkbox.]]>
+              <![CDATA[Click the 'Add' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Uninstall' button.]]>
+              <![CDATA[Enter 'AutomationPlayerb3a4594150' in the 'Title' text box.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Confirm uninstall dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'The following modules will be completely uninstalled from your site, and all data from these modules will be lost!' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'MPS' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Uninstall' button to confirm.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 3]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Modules' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Pub Ads' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the module titled 'Pub Ads' to appear in the list.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Pub Ads' check box is checked.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'MPS' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the module titled 'MPS' to appear in the list.]]>
-            </line>
-            <line>
-              <![CDATA[Check the 'MPS' check box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
-            </line>
-            <line>
-              <![CDATA[Switch back to the 'Modules' frame.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to frame titled 'Modules'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'DART' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the module titled 'DART' to appear in the list.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Doubleclick for Publishers' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the module titled 'Doubleclick for Publishers' to appear in the list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 4]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Reports' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Status report' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Status report dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'Ad Tag Style' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'MPS' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 5]]>
-            </line>
-            <line>
-              <![CDATA[Verify 'var mpscall = {"site":"install","title":"Welcome to Site-Install","path":"\/","is_content":0,"type":"other"}' is present in page source.]]>
-            </line>
-            <line>
-              <![CDATA[Verify 'var mpsopts = {"host":"mps.nbcuni.com"}' is present in page source.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 6]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'People' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'People dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that no MPS calls were made on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 7]]>
-            </line>
-            <line>
-              <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com/kfkjdjdkjdjldkjj'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that no MPS calls were made on the page.]]>
+              <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
               <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]>
             </line>
             <line>
-              <![CDATA[STEP 8]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Configuration' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Web services' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'MPS Configuration' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'MPS Configuration dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'mps.nbcuni.com' in the 'MPS Host' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Document Write' radio button.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'nbc-tonightshow' in the 'Site Instance Override' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 9]]>
-            </line>
-            <line>
               <![CDATA[Mouse over the 'Content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Add content' menu link.]]>
+              <![CDATA[Mouse over the 'Files' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Movie' menu link.]]>
+              <![CDATA[Click the 'mpxPlayers' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
             </line>
             <line>
-              <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
+              <![CDATA[Click the 'Sync MPX Players' link.]]>
             </line>
             <line>
-              <![CDATA[Enter '28db28b9572d430' in the 'Title' text box.]]>
+              <![CDATA[Click the 'Sync MPX Players Now' link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the Synopsis frame.]]>
+              <![CDATA[Verify success message of 'players returned for account' is present.]]>
             </line>
             <line>
-              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Cover' select button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the select file frame.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the file path for file upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Upload' button.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Public Local Files' radio button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the file image 'HanSolo' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Additional Information' link.]]>
-            </line>
-            <line>
-              <![CDATA[Select the 'Syndicated' from the 'Movie Type' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Select the 'G' from the 'Rating' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Select the 'Action' from the 'Primary Genre' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Movie 28db28b9572d430 has been created.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Note the node number for the content item.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 10]]>
-            </line>
-            <line>
-              <![CDATA[Verify 'var mpscall = {"site":"nbc-tonightshow","title":"28db28b9572d430","path":"\/node\/6' is present in page source.]]>
-            </line>
-            <line>
-              <![CDATA[Verify 'var mpsopts = {"host":"mps.nbcuni.com"}' is present in page source.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 11 through STEP 19]]>
-            </line>
-            <line>
-              <![CDATA[Verify 'var mpscall = {"site":"nbc-tonightshow","title":"28db28b9572d430","path":"\/node\/6","content_id":"node6","is_content":1,"type":"movie","cag":{"genre":"Action","movie-rating":"G","movie-types":"Syndicated"},"pubdate":' is present in page source.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 20]]>
-            </line>
-            <line>
-              <![CDATA[Verify 'a3VtdWQ9MQ==' is present in page source.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 21]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Add content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Media Gallery' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Media Gallery dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '8314f6bf483f4f0' in the 'Title' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Media Items Select' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the select file frame.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'View Library' button.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'HanSolo' in the 'File name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the file search 'spinner' image to be present.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the file search 'spinner' image to not be present, indicating image search is complete.]]>
+              <![CDATA[Enter title AutomationPlayerb3a4594150.]]>
             </line>
             <line>
               <![CDATA[Click the 'Apply' button.]]>
             </line>
             <line>
-              <![CDATA[Wait for the file search 'spinner' image to be present.]]>
+              <![CDATA[Get the text of the first search result set item.]]>
             </line>
             <line>
-              <![CDATA[Wait for the file search 'spinner' image to not be present, indicating image search is complete.]]>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Verify the media thumbnail image 'HanSolo' is present.]]>
+              <![CDATA[Mouse over the 'Files' menu link.]]>
             </line>
             <line>
-              <![CDATA[Verify the the img is loaded and visible.]]>
+              <![CDATA[Click the 'mpxMedia' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click media thumbnail image number 1]]>
+              <![CDATA[Enter title Automation.]]>
             </line>
             <line>
-              <![CDATA[Click on the 'Submit' button.]]>
+              <![CDATA[Select the 'Published' from the 'MPX Status/Published' drop down list.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create Media Gallery dialog'.]]>
+              <![CDATA[Select the DB TV from the 'Source' select ddl.]]>
             </line>
             <line>
-              <![CDATA[Verify the img source of the Media Item contains 'HanSolo'.]]>
+              <![CDATA[Click the 'Apply' button.]]>
             </line>
             <line>
-              <![CDATA[Assert the the img is loaded and visible.]]>
+              <![CDATA[Get the text of the first search result set item.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save' button.]]>
+              <![CDATA[Click the first search title link in the search result set.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'Media Gallery 8314f6bf483f4f0 has been created.' is present.]]>
+              <![CDATA[Click the 'Edit' link in the work bench.]]>
             </line>
             <line>
-              <![CDATA[Note the node number for the content item.]]>
+              <![CDATA[Switch to the active frame titled 'Edit mpx_video_6 Automation5da5d131ab dialog'.]]>
             </line>
             <line>
-              <![CDATA[Get the file id of image number 1.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 22]]>
-            </line>
-            <line>
-              <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com/node/11/11'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 28]]>
-            </line>
-            <line>
-              <![CDATA[Verify 'typeof(mps.writeFooter)' is present in page source.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 29]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Structure' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'MPS Blocks' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Add' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Add a new MPS block dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '614b02a418d04a8' in the 'Unique Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '241906fa08254dc' in the 'Block Name' text box.]]>
+              <![CDATA[Select 'AutomationPlayerb3a4594150' from the 'Video Player' drop down list.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of '614b02a418d04a8 has been created.' is present.]]>
+              <![CDATA[Open the mpx platform.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Players' link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'All Players' link.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'AutomationPlayerb3a4594150' in the 'Player Search' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Search by Players Title' link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Player Title' label to give focus to the player item.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Disable Player' check box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Status report dialog'.]]>
             </line>
             <line>
               <![CDATA[Click the 'Close Overlay X'.]]>
             </line>
             <line>
-              <![CDATA[STEP 30]]>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Structure' menu link.]]>
+              <![CDATA[Mouse over the 'Files' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Blocks' menu link.]]>
+              <![CDATA[Click the 'mpxPlayers' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
             </line>
             <line>
-              <![CDATA[Select the block name '241906fa08254dc (MPS)' from the 'Header' drop down list.]]>
+              <![CDATA[Verify that the disabled and unpublished player text is present for player titled 'AutomationPlayerb3a4594150'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save Blocks' button.]]>
+              <![CDATA[Enter title AutomationPlayerb3a4594150.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'The block settings have been updated.' is present.]]>
+              <![CDATA[Click the 'Apply' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the first search title link in the search result set.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Edit' link in the work bench.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Edit mpx_player AutomationPlayerb3a4594150 dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Publishing Options' link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Edit mpx_player AutomationPlayerb3a4594150 dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'MPX Player AutomationPlayerb3a4594150 has been updated.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Files' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'mpxPlayers' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify that the disabled and unpublished player text is present for player titled 'AutomationPlayerb3a4594150'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'MPX Media' link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify that the disabled and unpublished player text is present for player titled 'AutomationPlayerb3a4594150'.]]>
             </line>
             <line>
               <![CDATA[Click the 'Close Overlay X'.]]>
             </line>
             <line>
-              <![CDATA[STEP 31]]>
+              <![CDATA[Mouse over the 'Configuration' menu link.]]>
             </line>
             <line>
-              <![CDATA[Verify 'mps.getAd('241906fa08254dc')' is present in page source.]]>
+              <![CDATA[Mouse over the 'Media' menu link.]]>
             </line>
             <line>
-              <![CDATA[STEP 32 - N/A]]>
+              <![CDATA[Click the 'Media: thePlatform mpx settings' menu link.]]>
             </line>
             <line>
-              <![CDATA[CLEANUP]]>
+              <![CDATA[Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Structure' menu link.]]>
+              <![CDATA[Verify that the disabled and unpublished player text is present for player titled 'AutomationPlayerb3a4594150'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Blocks' menu link.]]>
+              <![CDATA[Click the 'click here' link for the unpublished player titled 'AutomationPlayerb3a4594150'.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'Edit mpx_player AutomationPlayerb3a4594150 dialog'.]]>
             </line>
             <line>
-              <![CDATA[Select the block name '241906fa08254dc (MPS)' from the '- None -' drop down list.]]>
+              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save Blocks' button.]]>
+              <![CDATA[Click the 'Publishing Options' link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Edit mpx_player AutomationPlayerb3a4594150 dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Check the 'Published' checkbox]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Files' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'mpxPlayers' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify that the disabled and unpublished player text is present for player titled 'AutomationPlayerb3a4594150'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the MPX 'Login' link for the unpublished player 'AutomationPlayerb3a4594150'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Players' link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'All Players' link.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'AutomationPlayerb3a4594150' in the 'Player Search' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Search by Players Title' link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Player Title' label to give focus to the player item.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Disable Player' check box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
             </line>
             <line>
               <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Status report dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Files' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'mpxPlayers' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'An MPXplayer that's in use (AutomationPlayerb3a4594150) has been disabled and unpublished.' is NOT present on the page.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- ImplementMPS_TC2901 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@3337cdec]" name="stopSelenium" is-config="true" duration-ms="569" started-at="2014-06-30T12:48:32Z" finished-at="2014-06-30T12:48:33Z">
+        </test-method> <!-- NotificationPlayerUnavailability_Test -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability@14b05b39]" name="stopSelenium" is-config="true" duration-ms="571" started-at="2014-07-01T10:22:34Z" finished-at="2014-07-01T10:22:34Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=ImplementMPS_TC2901 status=SUCCESS method=ImplementMPS.ImplementMPS_TC2901()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@3337cdec] output=STEP 1]]]>
+                <![CDATA[[TestResult name=NotificationPlayerUnavailability_Test status=SUCCESS method=NotificationPlayerUnavailability.NotificationPlayerUnavailability_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability@14b05b39] output=Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@3337cdec]" name="stopGridAndHub" is-config="true" duration-ms="384" started-at="2014-06-30T12:48:33Z" finished-at="2014-06-30T12:48:34Z">
+        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability@14b05b39]" name="stopGridAndHub" is-config="true" duration-ms="400" started-at="2014-07-01T10:22:35Z" finished-at="2014-07-01T10:22:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopGridAndHub -->
-      </class> <!-- com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

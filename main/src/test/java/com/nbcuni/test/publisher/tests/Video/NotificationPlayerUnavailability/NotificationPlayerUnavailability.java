@@ -62,7 +62,7 @@ public class NotificationPlayerUnavailability extends ParentTest{
      * @throws Throwable No Return values are needed
      *************************************************************************************/
     @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "mpx"})
-    public void NotificationPlayerUnavailability_Test() throws Exception{
+    public void NotificationPlayerUnavailability_Test() throws Exception {
 
     	//NOTE - Test steps re-ordered and truncated for automation optimization
     	UserLogin userLogin = applib.openApplication();
@@ -180,6 +180,7 @@ public class NotificationPlayerUnavailability extends ParentTest{
                 overlay.SwitchToActiveFrame();
                 PublishingOptions publishingOptions = new PublishingOptions(webDriver);
                 publishingOptions.ClickPublishingOptionsLnk();
+                overlay.SwitchToActiveFrame();
                 publishingOptions.UncheckPublishedCbx();
                 contentParent.ClickSaveBtn();
                 overlay.switchToDefaultContent();
@@ -206,8 +207,10 @@ public class NotificationPlayerUnavailability extends ParentTest{
                 mpxMedia.ClickMPXPlayerUnpublishedHereLnk(playerTitle);
                 overlay.SwitchToActiveFrame();
                 publishingOptions.ClickPublishingOptionsLnk();
+                overlay.SwitchToActiveFrame();
                 publishingOptions.CheckPublishedCbx();
                 contentParent.ClickSaveBtn();
+                overlay.switchToDefaultContent();
                 
                 //Step 13
                 taxonomy.NavigateSite("Content>>Files>>mpxPlayers");
