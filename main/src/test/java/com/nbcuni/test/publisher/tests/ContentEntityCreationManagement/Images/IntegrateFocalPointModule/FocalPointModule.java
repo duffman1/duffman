@@ -71,10 +71,12 @@ public class FocalPointModule extends ParentTest{
         addFocalPointCropEffect.EnterWidth("200");
         addFocalPointCropEffect.EnterHeight("200");
         addFocalPointCropEffect.ClickAddEffectBtn();
+        overlay.SwitchToActiveFrame();
         contentParent.VerifyMessageStatus("The image effect was successfully applied.");
             	
         //Step 7
         imageStyles.ClickUpdateStyleBtn();
+        overlay.SwitchToActiveFrame();
         contentParent.VerifyMessageStatus("Changes to the style have been saved.");
         contentParent.VerifyPageContentPresent(Arrays.asList("AutomationFocalStyle", "200px"));
         overlay.ClickCloseOverlayLnk();

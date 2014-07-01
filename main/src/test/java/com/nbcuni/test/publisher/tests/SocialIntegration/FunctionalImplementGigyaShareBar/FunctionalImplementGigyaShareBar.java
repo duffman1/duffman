@@ -1,13 +1,11 @@
 package com.nbcuni.test.publisher.tests.SocialIntegration.FunctionalImplementGigyaShareBar;
 
 import org.testng.annotations.Test;
-
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Configuration.GigyaSettings;
-import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.Content.CreateDefaultContent;
 import com.nbcuni.test.publisher.pageobjects.Content.GigyaShareBar;
 import com.nbcuni.test.publisher.pageobjects.Content.SearchFor;
@@ -55,10 +53,8 @@ public class FunctionalImplementGigyaShareBar extends ParentTest{
         gigyaSettings.ClickGigyaAdvancedShareBarSettingsLnk();
         gigyaSettings.EnterAdvancedShowShareBarUISettings("wrap|true");
         gigyaSettings.ClickSaveConfiguration_Btn();
-        ContentParent contentParent = new ContentParent(webDriver, applib);
         contentParent.VerifyMessageStatus("The configuration options have been saved.");
         overlay.ClickCloseOverlayLnk();
-        overlay.switchToDefaultContent();
         
         //Step 5
         taxonomy.NavigateSite("Content");

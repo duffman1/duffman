@@ -1,10 +1,14 @@
 package com.nbcuni.test.publisher.pageobjects.Twitter;
 
+import java.util.List;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
+
 import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.publisher.common.Driver.Driver;
 
@@ -12,13 +16,16 @@ import com.nbcuni.test.publisher.common.Driver.Driver;
  * publisher.nbcuni.com Twitter Login Library. Copyright
  * 
  * @author Brandon Clark
- * @version 1.0 Date: February 19, 2014
+ * @version 1.1 Date: July 1, 2014
  *********************************************/
 
 public class TwitterLogin {
 
+	private Driver webDriver;
+	
     //PAGE OBJECT CONSTRUCTOR
     public TwitterLogin(Driver webDriver, AppLib applib) {
+    	this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
     }
     
@@ -26,20 +33,23 @@ public class TwitterLogin {
     @FindBy(how = How.ID, using = "username_or_email")
     private WebElement AdminUsernameOrEmail_Txb;
     
-    @FindBy(how = How.XPATH, using = "(//input[@name='session[username_or_email]'])[1]")
-    private WebElement UsernameOrEmail_Txb;
+    private List<WebElement> UsernameOrEmail_Txbs() {
+    	return webDriver.findElements(By.xpath("//input[@name='session[username_or_email]']"));
+    }
     
     @FindBy(how = How.ID, using = "password")
     private WebElement AdminPassword_Txb;
     
-    @FindBy(how = How.XPATH, using = "(//input[@name='session[password]'])[1]")
-    private WebElement Password_Txb;
+    private List<WebElement> Password_Txbs() {
+    	return webDriver.findElements(By.xpath("//input[@name='session[password]']"));
+    }
     
     @FindBy(how = How.ID, using = "allow")
     private WebElement AuthorizeApp_Btn;
     
-    @FindBy(how = How.XPATH, using = "(//button[text()='Sign in'])[1]")
-    private WebElement SignIn_Btn;
+    private List<WebElement> SignIn_Btns() {
+    	return webDriver.findElements(By.xpath("//button[text()='Sign in']"));
+    }
     
     
     //PAGE OBJECT METHODS
@@ -58,13 +68,23 @@ public class TwitterLogin {
     public void EnterUsernameOrEmail(String userName) throws Exception {
     	
     	Reporter.log("Enter '" + userName + "' in the 'Userame or email' text box.");
-    	UsernameOrEmail_Txb.sendKeys(userName);
+    	for (WebElement el : UsernameOrEmail_Txbs()) {
+    		if (el.isDisplayed()) {
+    			el.sendKeys(userName);
+    			break;
+    		}
+    	}
     }
     
     public void EnterPassword(String password) throws Exception {
     	
     	Reporter.log("Enter '" + password + "' in the 'Password' text box.");
-    	Password_Txb.sendKeys(password);
+    	for (WebElement el : Password_Txbs()) {
+    		if (el.isDisplayed()) {
+    			el.sendKeys(password);
+    			break;
+    		}
+    	}
     }
 
     public void ClickAuthorizeAppBtn() throws Exception {
@@ -76,7 +96,12 @@ public class TwitterLogin {
     public void ClickSignInBtn() throws Exception {
     	
     	Reporter.log("Click the 'Sign In' button.");
-    	SignIn_Btn.click();
+    	for (WebElement el : SignIn_Btns()) {
+    		if (el.isDisplayed()) {
+    			el.click();
+    			break;
+    		}
+    	}
     }
    
 }
