@@ -46,6 +46,7 @@ public class jQueryUpdate {
     public void ClickSaveConfigurationBtn() throws Exception {
     	
     	Reporter.log("Click the 'Save configuration' button.");
+    	Thread.sleep(1000);
     	SaveConfiguration_Btn.click();
     }
     

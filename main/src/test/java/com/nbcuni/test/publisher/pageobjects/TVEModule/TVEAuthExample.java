@@ -3,6 +3,7 @@ package com.nbcuni.test.publisher.pageobjects.TVEModule;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -12,6 +13,7 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
+
 import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
 
@@ -33,7 +35,7 @@ public class TVEAuthExample {
     	this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
         config = new Config();
-        wait = new WebDriverWait(webDriver, 120);
+        wait = (WebDriverWait) new WebDriverWait(webDriver, 120).ignoring(StaleElementReferenceException.class);
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -105,6 +107,7 @@ public class TVEAuthExample {
     	wait.until(new ExpectedCondition<Boolean>() {
     		public Boolean apply(WebDriver webDriver) {
     			return AuthenticatedStatusChecked_Ctr.getText().equals(txt);
+    			
    		 	}
     	});
     }

@@ -9,8 +9,8 @@ import com.nbcuni.test.publisher.pageobjects.Content.Delete;
 import com.nbcuni.test.publisher.pageobjects.Content.PublishingOptions;
 import com.nbcuni.test.publisher.pageobjects.Content.RevisionState;
 import com.nbcuni.test.publisher.pageobjects.Content.Revisions;
+import com.nbcuni.test.publisher.pageobjects.Content.SearchFor;
 import com.nbcuni.test.publisher.pageobjects.Content.WorkBench;
-import com.nbcuni.test.publisher.pageobjects.Cron.Cron;
 import com.nbcuni.test.publisher.pageobjects.Queues.ScheduleQueue;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
@@ -53,7 +53,7 @@ public class SchedulingContentPublishUnpublished extends ParentTest {
         
         Reporter.log("STEP 6");
         Calendar cal1MinuteFuture = Calendar.getInstance();
-        cal1MinuteFuture.add(Calendar.SECOND, 65);
+        cal1MinuteFuture.add(Calendar.SECOND, 69);
     	Date date1MinuteFuture = cal1MinuteFuture.getTime();
     	SimpleDateFormat pub7DateFormat = new SimpleDateFormat("MM/dd/yyyy");
     	pub7DateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
@@ -70,17 +70,21 @@ public class SchedulingContentPublishUnpublished extends ParentTest {
         contentParent.VerifyMessageStatus("The scheduled revision operation has been saved");
         
         Reporter.log("STEP 8");
-        overlay.SwitchToActiveFrame();
         scheduleQueue.VerifyScheduledQueue(Arrays.asList(postTitle, "Moderate to Published", pub7Date1MinuteFuture + " - "));
         scheduleQueue.VerifyRunNowLnkPresent(postTitle, "Moderate to Published");
         scheduleQueue.VerifyCancelLnkPresent(postTitle, "Moderate to Published");
+        overlay.ClickCloseOverlayLnk();
         
         Reporter.log("STEP 9");
-        Thread.sleep(65000);
-        overlay.ClickCloseOverlayLnk();
-        Cron cron = new Cron(webDriver, applib);
-        cron.RunCron(true);
-        webDriver.navigate().refresh();
+        taxonomy.NavigateSite("Content");
+        overlay.SwitchToActiveFrame();
+        SearchFor searchFor = new SearchFor(webDriver, applib);
+        Date currentDate = new Date();
+    	String previouslyScheduledTitle = "futurePost" + pub7DateFormat.format(currentDate);
+        searchFor.EnterTitle(previouslyScheduledTitle);
+        searchFor.ClickApplyBtn();
+        overlay.switchToDefaultContent();
+        searchFor.ClickSearchTitleLnk(searchFor.GetFirstSearchResult());
         workBench.VerifyWorkBenchBlockTextPresent(Arrays.asList("Revision state: Published", "Public: Yes"));
         
         Reporter.log("STEP 10");

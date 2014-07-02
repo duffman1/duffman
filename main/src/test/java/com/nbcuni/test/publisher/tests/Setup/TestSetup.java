@@ -1,16 +1,24 @@
 package com.nbcuni.test.publisher.tests.Setup;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Calendar;
 import java.util.Collections;
+import java.util.Date;
 import java.util.List;
+import java.util.TimeZone;
 import java.util.concurrent.TimeUnit;
-
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
+import com.nbcuni.test.publisher.pageobjects.Content.BasicInformation;
+import com.nbcuni.test.publisher.pageobjects.Content.PublishingOptions;
+import com.nbcuni.test.publisher.pageobjects.Content.SelectFile;
+import com.nbcuni.test.publisher.pageobjects.Content.WorkBench;
 import com.nbcuni.test.publisher.pageobjects.Cron.Cron;
-
+import com.nbcuni.test.publisher.pageobjects.Queues.ScheduleQueue;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
@@ -52,6 +60,55 @@ public class TestSetup extends ParentTest{
             modules.EnableModule("Pub Post");
             overlay.ClickCloseOverlayLnk();
             
+            //schedule a post content item revision to be consumed by the SchedulingContentPublishUnpublished test later in the suite
+            taxonomy.NavigateSite("Content>>Add content>>Post");
+        	overlay.SwitchToActiveFrame();
+        	contentParent.VerifyRequiredFields(Arrays.asList("Title", "Body"));
+        	PublishingOptions publishingOptions = new PublishingOptions(webDriver);
+        	publishingOptions.ClickPublishingOptionsLnk();
+        	contentParent.VerifyRequiredFields(Arrays.asList("Moderation State"));
+        	BasicInformation basicInformation = new BasicInformation(webDriver);
+        	basicInformation.ClickBasicInformationTab();
+        	SimpleDateFormat pub7DateFormat = new SimpleDateFormat("MM/dd/yyyy");
+        	Date currentDate = new Date();
+        	String postTitle = "futurePost" + pub7DateFormat.format(currentDate) + random.GetCharacterString(15);
+        	basicInformation.EnterTitle(postTitle);
+        	basicInformation.EnterSynopsis();
+        	overlay.SwitchToActiveFrame();
+        	basicInformation.ClickCoverSelectBtn();
+        	SelectFile selectFile = new SelectFile(webDriver, applib);
+        	selectFile.SelectDefaultCoverImg();
+        	overlay.SwitchToActiveFrame();
+        	publishingOptions.ClickPublishingOptionsLnk();
+        	publishingOptions.SelectModerationState("Draft");
+        	contentParent.ClickSaveBtn();
+        	overlay.switchToDefaultContent();
+        	contentParent.VerifyMessageStatus("Post " + postTitle + " has been created.");
+        	WorkBench workBench = new WorkBench(webDriver, applib);
+            workBench.ClickWorkBenchTab("Schedule");
+            overlay.SwitchToActiveFrame();
+            ScheduleQueue scheduleQueue = new ScheduleQueue(webDriver);
+            scheduleQueue.ClickAddScheduledRevisionLnk();
+            overlay.SwitchToActiveFrame();
+            scheduleQueue.SelectRevision(postTitle);
+            scheduleQueue.VerifyOperationOptions(Arrays.asList("Revert", "Delete", "Moderate to Draft", 
+            		"Moderate to Published", "Moderate to Unpublished"));
+            scheduleQueue.SelectOperation("Moderate to Published");
+            Calendar cal1MinuteFuture = Calendar.getInstance();
+            cal1MinuteFuture.add(Calendar.SECOND, 300);
+        	Date date5MinuteFuture = cal1MinuteFuture.getTime();
+        	pub7DateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
+        	SimpleDateFormat pub7TimeFormat = new SimpleDateFormat("hh:mm a");
+        	pub7TimeFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
+        	String pub7Date5MinuteFuture = pub7DateFormat.format(date5MinuteFuture);
+    	    String pub7Time5MinuteFuture = pub7TimeFormat.format(date5MinuteFuture);
+            scheduleQueue.EnterDate(pub7Date5MinuteFuture);
+            scheduleQueue.EnterTime(pub7Time5MinuteFuture);
+            scheduleQueue.ClickScheduleBtn();
+            overlay.SwitchToActiveFrame();
+            contentParent.VerifyMessageStatus("The scheduled revision operation has been saved");
+        	overlay.ClickCloseOverlayLnk();
+        	
             //if Cindia's demo site, set set timezone to UTC
             if (applib.getApplicationURL().contains("demo.publisher7.com")) {
             	webDriver.navigate().to(applib.getApplicationURL() + "/admin/config/regional/settings");
