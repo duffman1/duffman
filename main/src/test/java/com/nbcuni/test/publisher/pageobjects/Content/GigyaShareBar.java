@@ -1,5 +1,7 @@
 package com.nbcuni.test.publisher.pageobjects.Content;
 
+import java.util.NoSuchElementException;
+
 import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.publisher.common.Driver.Driver;
 
@@ -24,7 +26,7 @@ public class GigyaShareBar {
 	//PAGE OBJECT CONSTRUCTORS
     public GigyaShareBar(Driver webDriver, AppLib applib) {
         PageFactory.initElements(webDriver, this);
-        wait = new WebDriverWait(webDriver, 30);
+        wait = (WebDriverWait) new WebDriverWait(webDriver, 30).ignoring(NoSuchElementException.class);
     }
     
     //PAGE OBJECT IDENTIFIERS

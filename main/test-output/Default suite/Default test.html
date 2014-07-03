@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Jul 02 16:56:30 EDT 2014</td>
+<td>Started on:</td><td>Thu Jul 03 10:35:39 EDT 2014</td>
 </tr>
-<tr><td>Total time:</td><td>230 seconds (230462 ms)</td>
+<tr><td>Total time:</td><td>34 seconds (34647 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,304 +67,86 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.SchedulingContentPublishUnpublished.SchedulingContentPublishUnpublished_TC2159()'><b>SchedulingContentPublishUnpublished_TC2159</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.SchedulingContentPublishUnpublished<br/>
-<a href="#Output-1309795768" onClick='toggleBox("Output-1309795768", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile.CreateCharacterProfile_TC1041()'><b>CreateCharacterProfile_TC1041</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile<br/>
+<a href="#Output-1278397931" onClick='toggleBox("Output-1278397931", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1309795768" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1309795768">
-STEP 1<br/>
+<a href="#Output-1278397931" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1278397931">
 Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.<br/>
 Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
 Enter 'pa55word' in the 'Password' text box.<br/>
 Click the 'Login' button.<br/>
-STEP 2 and 3<br/>
-Mouse over the 'Content' menu link.<br/>
-Mouse over the 'Add content' menu link.<br/>
-Click the 'Post' menu link.<br/>
-Switch to the active frame titled 'Create Post dialog'.<br/>
-Enter '566e16432c9242a' in the 'Title' text box.<br/>
-Switch to the Synopsis frame.<br/>
-Enter a randomized text string into the 'Body' text area.<br/>
-Switch to the active frame titled 'Create Post dialog'.<br/>
-Click the 'Cover' select button.<br/>
-Switch to the select file frame.<br/>
-Enter the file path for file upload.<br/>
-Click the 'Upload' button.<br/>
-Wait for the file link to be visible after upload.<br/>
-Click the 'Next' button.<br/>
-Click the 'Public Local Files' radio button.<br/>
-Click the 'Next' button.<br/>
-Verify the file image 'HanSolo' is present.<br/>
-Verify the img is loaded and visible.<br/>
-Click the 'Save' button.<br/>
-Switch to the active frame titled 'Create Post dialog'.<br/>
-Scroll the 'Publishing Options' link into view.<br/>
-Click the 'Publishing Options' link.<br/>
-Select 'Draft' from the 'Moderation State' drop down list.<br/>
-Click the 'Save' button.<br/>
-Verify success message of 'Post 566e16432c9242a has been created.' is present.<br/>
-STEP 4<br/>
-Click the 'Schedule' link in the work bench.<br/>
-Switch to the active frame titled '566e16432c9242a dialog'.<br/>
-Click the 'Add Scheduled Revision' link.<br/>
-Switch to the active frame titled '566e16432c9242a dialog'.<br/>
-STEP 5<br/>
-Select revision titled '566e16432c9242a'.<br/>
-Verify that the 'Operation' option count equals '5'.<br/>
-Select 'Moderate to Published' from the 'Select operation' drop down list.<br/>
-STEP 6<br/>
-Enter '07/02/2014' in the 'Date' text box.<br/>
-Enter '08:58 PM' in the 'Time' text box.<br/>
-STEP 7<br/>
-Click the 'Schedule' button.<br/>
-Switch to the active frame titled '566e16432c9242a dialog'.<br/>
-Verify success message of 'The scheduled revision operation has been saved' is present.<br/>
-STEP 8<br/>
-Verify the scheduled text '566e16432c9242a' is present in the scheduled queue.<br/>
-Verify the scheduled text 'Moderate to Published' is present in the scheduled queue.<br/>
-Verify the scheduled text '07/02/2014 - ' is present in the scheduled queue.<br/>
-Verify the 'Run now' link is present for content item '566e16432c9242a' with action 'Moderate to Published'.<br/>
-Verify the 'Cancel' link is present for content item '566e16432c9242a' with action 'Moderate to Published'.<br/>
-Click the 'Close Overlay X'.<br/>
-STEP 9<br/>
-Click the 'Content' menu link.<br/>
-Switch to the active frame titled 'Content dialog'.<br/>
-Enter title futurePost07/02/2014.<br/>
-Click the 'Apply' button.<br/>
-Get the text of the first search result set item.<br/>
-Click the first search title link in the search result set.<br/>
-Verify the text 'Revision state: Published' is present in the work bench info block.<br/>
-Verify the text 'Public: Yes' is present in the work bench info block.<br/>
-STEP 10<br/>
-Mouse over the 'Content' menu link.<br/>
-Mouse over the 'Add content' menu link.<br/>
-Click the 'Post' menu link.<br/>
-Switch to the active frame titled 'Create Post dialog'.<br/>
-Enter '50383c07c185450' in the 'Title' text box.<br/>
-Switch to the Synopsis frame.<br/>
-Enter a randomized text string into the 'Body' text area.<br/>
-Switch to the active frame titled 'Create Post dialog'.<br/>
-Click the 'Cover' select button.<br/>
-Switch to the select file frame.<br/>
-Enter the file path for file upload.<br/>
-Click the 'Upload' button.<br/>
-Wait for the file link to be visible after upload.<br/>
-Click the 'Next' button.<br/>
-Click the 'Public Local Files' radio button.<br/>
-Click the 'Next' button.<br/>
-Verify the file image 'HanSolo' is present.<br/>
-Verify the img is loaded and visible.<br/>
-Click the 'Save' button.<br/>
-Switch to the active frame titled 'Create Post dialog'.<br/>
-Scroll the 'Publishing Options' link into view.<br/>
-Click the 'Publishing Options' link.<br/>
-Select 'Draft' from the 'Moderation State' drop down list.<br/>
-Click the 'Save' button.<br/>
-Verify success message of 'Post 50383c07c185450 has been created.' is present.<br/>
-Click the 'Schedule' link in the work bench.<br/>
-Switch to the active frame titled '50383c07c185450 dialog'.<br/>
-Click the 'Add Scheduled Revision' link.<br/>
-Switch to the active frame titled '50383c07c185450 dialog'.<br/>
-Select revision titled '50383c07c185450'.<br/>
-Select 'Moderate to Published' from the 'Select operation' drop down list.<br/>
-Enter '07/02/2014' in the 'Date' text box.<br/>
-Enter '09:02 PM' in the 'Time' text box.<br/>
-Click the 'Schedule' button.<br/>
-Switch to the active frame titled '50383c07c185450 dialog'.<br/>
-Verify success message of 'The scheduled revision operation has been saved' is present.<br/>
-Switch to the active frame titled '50383c07c185450 dialog'.<br/>
-Verify the scheduled text '50383c07c185450' is present in the scheduled queue.<br/>
-Verify the scheduled text 'Moderate to Published' is present in the scheduled queue.<br/>
-Verify the scheduled text '07/02/2014 - ' is present in the scheduled queue.<br/>
-Click the 'Run now' link for content item '50383c07c185450' with action 'Moderate to Published'.<br/>
-STEP 11<br/>
-Switch to the active frame titled '50383c07c185450 dialog'.<br/>
-Verify the scheduled text '50383c07c185450' is present in the scheduled queue.<br/>
-Verify the scheduled text 'Moderate to Published' is present in the scheduled queue.<br/>
-Verify the scheduled text '07/02/2014 - ' is present in the scheduled queue.<br/>
-Verify the scheduled text 'Completed' is present in the scheduled queue.<br/>
-Click the 'Close Overlay X'.<br/>
-STEP 12<br/>
-Mouse over the 'Content' menu link.<br/>
-Mouse over the 'Add content' menu link.<br/>
-Click the 'Post' menu link.<br/>
-Switch to the active frame titled 'Create Post dialog'.<br/>
-Enter '9e4ef132e006478' in the 'Title' text box.<br/>
-Switch to the Synopsis frame.<br/>
-Enter a randomized text string into the 'Body' text area.<br/>
-Switch to the active frame titled 'Create Post dialog'.<br/>
-Click the 'Cover' select button.<br/>
-Switch to the select file frame.<br/>
-Enter the file path for file upload.<br/>
-Click the 'Upload' button.<br/>
-Wait for the file link to be visible after upload.<br/>
-Click the 'Next' button.<br/>
-Click the 'Public Local Files' radio button.<br/>
-Click the 'Next' button.<br/>
-Verify the file image 'HanSolo' is present.<br/>
-Verify the img is loaded and visible.<br/>
-Click the 'Save' button.<br/>
-Switch to the active frame titled 'Create Post dialog'.<br/>
-Scroll the 'Publishing Options' link into view.<br/>
-Click the 'Publishing Options' link.<br/>
-Select 'Draft' from the 'Moderation State' drop down list.<br/>
-Click the 'Save' button.<br/>
-Verify success message of 'Post 9e4ef132e006478 has been created.' is present.<br/>
-Click the 'Schedule' link in the work bench.<br/>
-Switch to the active frame titled '9e4ef132e006478 dialog'.<br/>
-Click the 'Add Scheduled Revision' link.<br/>
-Switch to the active frame titled '9e4ef132e006478 dialog'.<br/>
-Select revision titled '9e4ef132e006478'.<br/>
-Select 'Moderate to Published' from the 'Select operation' drop down list.<br/>
-Enter '07/02/2014' in the 'Date' text box.<br/>
-Enter '09:02 PM' in the 'Time' text box.<br/>
-Click the 'Schedule' button.<br/>
-Switch to the active frame titled '9e4ef132e006478 dialog'.<br/>
-Verify success message of 'The scheduled revision operation has been saved' is present.<br/>
-Switch to the active frame titled '9e4ef132e006478 dialog'.<br/>
-Verify the scheduled text '9e4ef132e006478' is present in the scheduled queue.<br/>
-Verify the scheduled text 'Moderate to Published' is present in the scheduled queue.<br/>
-Verify the scheduled text '07/02/2014 - ' is present in the scheduled queue.<br/>
-Click the 'Run now' expand menu link for content item '9e4ef132e006478' with action 'Moderate to Published'.<br/>
-Click the 'Cancel' link for content item '9e4ef132e006478' with action 'Moderate to Published'.<br/>
-Switch to the active frame titled 'Are you sure you want to cancel this scheduled revision? dialog'.<br/>
-Click the 'Confirm' button.<br/>
-Switch to the active frame titled '9e4ef132e006478 dialog'.<br/>
-Verify success message of 'The scheduled revision operation has been cancelled.' is present.<br/>
-Verify the text 'Moderate to Published' is NOT present on the page.<br/>
-Click the 'Close Overlay X'.<br/>
-STEP 13<br/>
-Mouse over the 'My Workbench' menu link.<br/>
-Mouse over the 'Create content' menu link.<br/>
-Click the 'Post' menu link.<br/>
-Switch to the active frame titled 'Create Post dialog'.<br/>
-Enter 'bb07e8290ff74d0' in the 'Title' text box.<br/>
-Switch to the Synopsis frame.<br/>
-Enter a randomized text string into the 'Body' text area.<br/>
-Switch to the active frame titled 'Create Post dialog'.<br/>
-Scroll the 'Publishing Options' link into view.<br/>
-Click the 'Publishing Options' link.<br/>
-Select 'Draft' from the 'Moderation State' drop down list.<br/>
-Click the 'Save' button.<br/>
-Verify success message of 'Post bb07e8290ff74d0 has been created.' is present.<br/>
-Click the 'Schedule' link in the work bench.<br/>
-Switch to the active frame titled 'bb07e8290ff74d0 dialog'.<br/>
-Click the 'Add Scheduled Revision' link.<br/>
-Switch to the active frame titled 'bb07e8290ff74d0 dialog'.<br/>
-Select revision titled 'bb07e8290ff74d0'.<br/>
-Select 'Moderate to Published' from the 'Select operation' drop down list.<br/>
-Enter '07/02/2014' in the 'Date' text box.<br/>
-Enter '09:02 PM' in the 'Time' text box.<br/>
-Click the 'Schedule' button.<br/>
-Switch to the active frame titled 'bb07e8290ff74d0 dialog'.<br/>
-Verify success message of 'The scheduled revision operation has been saved' is present.<br/>
-Switch to the active frame titled 'bb07e8290ff74d0 dialog'.<br/>
-Verify the scheduled text 'bb07e8290ff74d0' is present in the scheduled queue.<br/>
-Verify the scheduled text 'Moderate to Published' is present in the scheduled queue.<br/>
-Verify the scheduled text '07/02/2014 - ' is present in the scheduled queue.<br/>
-Click the 'Run now' link for content item 'bb07e8290ff74d0' with action 'Moderate to Published'.<br/>
-Switch to the active frame titled 'bb07e8290ff74d0 dialog'.<br/>
-Verify the scheduled text 'bb07e8290ff74d0' is present in the scheduled queue.<br/>
-Verify the scheduled text 'Moderate to Published' is present in the scheduled queue.<br/>
-Verify the scheduled text '07/02/2014 - ' is present in the scheduled queue.<br/>
-Verify the scheduled text 'Completed' is present in the scheduled queue.<br/>
-Click the 'Close Overlay X'.<br/>
-STEP 14<br/>
-Mouse over the 'Content' menu link.<br/>
-Mouse over the 'Add content' menu link.<br/>
-Click the 'Post' menu link.<br/>
-Switch to the active frame titled 'Create Post dialog'.<br/>
-Enter '89f78fb9ba814af' in the 'Title' text box.<br/>
-Switch to the Synopsis frame.<br/>
-Enter a randomized text string into the 'Body' text area.<br/>
-Switch to the active frame titled 'Create Post dialog'.<br/>
-Click the 'Cover' select button.<br/>
-Switch to the select file frame.<br/>
-Enter the file path for file upload.<br/>
-Click the 'Upload' button.<br/>
-Wait for the file link to be visible after upload.<br/>
-Click the 'Next' button.<br/>
-Click the 'Public Local Files' radio button.<br/>
-Click the 'Next' button.<br/>
-Verify the file image 'HanSolo' is present.<br/>
-Verify the img is loaded and visible.<br/>
-Click the 'Save' button.<br/>
-Switch to the active frame titled 'Create Post dialog'.<br/>
-Scroll the 'Publishing Options' link into view.<br/>
-Click the 'Publishing Options' link.<br/>
-Select 'Draft' from the 'Moderation State' drop down list.<br/>
-Click the 'Save' button.<br/>
-Verify success message of 'Post 89f78fb9ba814af has been created.' is present.<br/>
-Click the 'Edit Draft' link in the work bench.<br/>
-Switch to the active frame titled 'Edit Post 89f78fb9ba814af dialog'.<br/>
-Switch to the Synopsis frame.<br/>
-Enter a randomized text string into the 'Body' text area.<br/>
-Switch to the active frame titled 'Edit Post 89f78fb9ba814af dialog'.<br/>
-Click the 'Save' button.<br/>
-Verify success message of 'Post 89f78fb9ba814af has been updated.' is present.<br/>
-STEP 15 and 16<br/>
-Click the 'Revisions' link in the work bench.<br/>
-Switch to the active frame titled 'Revisions dialog'.<br/>
-Verify the number of present revisions entries equals '2'.<br/>
-Click the 'Edit' extend menu button.<br/>
-Click the 'Schedule' menu button.<br/>
-Switch to the active frame titled '89f78fb9ba814af dialog'.<br/>
-Select revision titled '89f78fb9ba814af'.<br/>
-Select 'Moderate to Published' from the 'Select operation' drop down list.<br/>
-Enter '07/02/2014' in the 'Date' text box.<br/>
-Enter '09:02 PM' in the 'Time' text box.<br/>
-Click the 'Schedule' button.<br/>
-Verify success message of 'The scheduled revision operation has been saved' is present.<br/>
-STEP 17<br/>
-Click the 'Schedule' link in the work bench.<br/>
-Switch to the active frame titled '89f78fb9ba814af dialog'.<br/>
-Verify the scheduled text '89f78fb9ba814af' is present in the scheduled queue.<br/>
-Verify the scheduled text 'Moderate to Published' is present in the scheduled queue.<br/>
-Verify the scheduled text '07/02/2014 - ' is present in the scheduled queue.<br/>
-Verify the 'Run now' link is present for content item '89f78fb9ba814af' with action 'Moderate to Published'.<br/>
-Click the 'Close Overlay X'.<br/>
-STEP 18 and 19 - TODO<br/>
-STEP 20<br/>
-Mouse over the 'My Workbench' menu link.<br/>
-Mouse over the 'Create content' menu link.<br/>
-Click the 'Post' menu link.<br/>
-Switch to the active frame titled 'Create Post dialog'.<br/>
-Enter '7002480416b6416' in the 'Title' text box.<br/>
-Switch to the Synopsis frame.<br/>
-Enter a randomized text string into the 'Body' text area.<br/>
-Switch to the active frame titled 'Create Post dialog'.<br/>
-Scroll the 'Publishing Options' link into view.<br/>
-Click the 'Publishing Options' link.<br/>
-Select 'Draft' from the 'Moderation State' drop down list.<br/>
-Select 'Moderate to Published' from the 'Select operation' drop down list.<br/>
-Enter '07/03/2014' in the 'Date' text box.<br/>
-Enter '09:00 PM' in the 'Time' text box.<br/>
-Click the 'Save' button.<br/>
-Verify success message of 'Post 7002480416b6416 has been created.' is present.<br/>
-Verify success message of '7002480416b6416 has been scheduled to Moderate to Published on 07/03/2014 - ' is present.<br/>
-Click the 'Schedule' link in the work bench.<br/>
-Switch to the active frame titled '7002480416b6416 dialog'.<br/>
-Verify the scheduled text '7002480416b6416' is present in the scheduled queue.<br/>
-Verify the scheduled text 'Moderate to Published' is present in the scheduled queue.<br/>
-Verify the scheduled text '07/03/2014 - ' is present in the scheduled queue.<br/>
-Click the 'Run now' link for content item '7002480416b6416' with action 'Moderate to Published'.<br/>
-Switch to the active frame titled '7002480416b6416 dialog'.<br/>
-Verify the scheduled text '7002480416b6416' is present in the scheduled queue.<br/>
-Verify the scheduled text 'Moderate to Published' is present in the scheduled queue.<br/>
-Verify the scheduled text 'Completed' is present in the scheduled queue.<br/>
+Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCharacterProfile_TC1041_070314103548AM.png <br/>
+<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCharacterProfile_TC1041_070314103548AM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCharacterProfile_TC1041_070314103548AM.png' height='500' width='500'/> </a><br/>
+Cache was cleared on test failure<br/>
 </div>
 </td>
-<td></td>
-<td>227</td>
-<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.SchedulingContentPublishUnpublished@4207c21e</td></tr>
+<td><div><pre>java.lang.AssertionError: failing test case
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile.CreateCharacterProfile_TC1041(CreateCharacterProfile.java:26)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1278397931", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1278397931'><pre>java.lang.AssertionError: failing test case
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile.CreateCharacterProfile_TC1041(CreateCharacterProfile.java:26)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+</pre></div></td>
+<td>5</td>
+<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@6c3a6465</td></tr>
 </table><p>
 </body>
 </html>

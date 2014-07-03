@@ -7,6 +7,8 @@ import com.nbcuni.test.publisher.pageobjects.Taxonomy.Taxonomy;
 import com.nbcuni.test.publisher.common.Driver.Driver;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestResult;
 import org.testng.Reporter;
 import org.testng.annotations.AfterMethod;
@@ -74,9 +76,10 @@ public class ParentTest {
     	try {
     		if (!result.isSuccess()) {
     			webDriver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+    			applib.openApplication();
     			webDriver.switchTo().defaultContent();
-            	webDriver.executeScript("arguments[0].click();", 
-            			webDriver.findElement(By.xpath("//a[text()='Flush all caches']")));
+    			webDriver.navigate().to(webDriver.findElement(By.xpath("//a[text()='Flush all caches']")).getAttribute("href"));
+            	new WebDriverWait(webDriver, 10).until(ExpectedConditions.textToBePresentInElement(By.xpath("//div[@class='messages status']"), "Every cache cleared"));
             	Reporter.setCurrentTestResult(result); 
             	Reporter.log("Cache was cleared on test failure");
             	Reporter.setCurrentTestResult(null);
