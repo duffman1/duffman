@@ -99,6 +99,7 @@ public class Content {
     public void ClickEditMenuBtn(String contentItemTitle) throws Exception {
     	
     	Reporter.log("Click the 'Edit' link for content item titled '" + contentItemTitle + ".");
+    	Thread.sleep(500);
     	Edit_Lnk(contentItemTitle).click();
     }
 

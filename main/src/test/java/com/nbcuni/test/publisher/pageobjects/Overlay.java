@@ -12,6 +12,7 @@ import org.testng.Reporter;
 
 import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.ErrorChecking.ErrorChecking;
 
 /*********************************************
@@ -26,6 +27,7 @@ public class Overlay {
     private Driver webDriver;
     private AppLib applib;
     private ErrorChecking errorChecking;
+    private ContentParent contentParent;
     
     //PAGE OBJECT CONSTRUCTOR
     public Overlay(Driver webDriver, AppLib applib) {
@@ -33,6 +35,7 @@ public class Overlay {
     	this.applib = applib;
     	PageFactory.initElements(webDriver, this);
     	errorChecking = new ErrorChecking(webDriver, applib);
+    	contentParent = new ContentParent(webDriver, applib);
     }
 
     //PAGE OBJECT IDENTIFIERS
@@ -60,6 +63,7 @@ public class Overlay {
     public void ClickCloseOverlayLnk() throws Exception {
     	
     	Reporter.log("Click the 'Close Overlay X'.");
+    	contentParent.Scroll("-500");
     	CloseOverlay_Lnk.click();
     	this.switchToDefaultContent();
     }
