@@ -71,6 +71,7 @@ public class CoverMedia {
     public void ClickSelectBtn() throws Exception {
     	
     	Reporter.log("Click the Cover Media 'Select' button.");
+    	Thread.sleep(500);
     	Select_Btn.click();
     }
     

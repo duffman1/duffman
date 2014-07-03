@@ -82,6 +82,7 @@ public class Edit {
     public void ClickSaveSettingsBtn() throws Exception {
     	
     	Reporter.log("Click the 'Save settings' button.");
+    	Thread.sleep(500);
     	SaveSettings_Btn.click();
     	
     }
