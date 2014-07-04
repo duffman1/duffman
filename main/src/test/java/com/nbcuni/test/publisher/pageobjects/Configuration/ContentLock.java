@@ -41,6 +41,7 @@ public class ContentLock {
 	public void ClickSaveConfiguration() throws Exception {
 		
 		Reporter.log("Click the 'Save configuration' button.");
+		Thread.sleep(500);
 		SaveConfiguration_Btn.click();
 	}
 

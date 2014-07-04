@@ -268,7 +268,7 @@ public class SelectFile {
     public void WaitForFileUploaded(String fileName) throws Exception {
     	
     	Reporter.log("Wait for the file link to be visible after upload.");
-    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOf(File_Lnk(fileName)));
+    	File_Lnk(fileName);
     	
     }
     
