@@ -98,6 +98,7 @@ public class SSODefinedDomains extends ParentTest {
 	    modules.EnterFilterName("Pub SSO");
 	    modules.DisableModule("Pub SSO");
 	    modules.EnterFilterName("simpleSAMLphp authentication");
+	    Thread.sleep(1000);
 	    modules.DisableModule("simpleSAMLphp authentication");
 	        
 	    Reporter.log("STEP 18");

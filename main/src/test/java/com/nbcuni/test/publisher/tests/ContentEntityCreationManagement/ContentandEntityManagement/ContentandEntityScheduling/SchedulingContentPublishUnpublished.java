@@ -79,8 +79,9 @@ public class SchedulingContentPublishUnpublished extends ParentTest {
         taxonomy.NavigateSite("Content");
         overlay.SwitchToActiveFrame();
         SearchFor searchFor = new SearchFor(webDriver, applib);
+        SimpleDateFormat pub7DateFormatEst = new SimpleDateFormat("MM/dd/yyyy");
         Date currentDate = new Date();
-    	String previouslyScheduledTitle = "futurePost" + pub7DateFormat.format(currentDate);
+    	String previouslyScheduledTitle = "futurePost" + pub7DateFormatEst.format(currentDate);
         searchFor.EnterTitle(previouslyScheduledTitle);
         searchFor.ClickApplyBtn();
         overlay.switchToDefaultContent();
