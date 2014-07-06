@@ -105,7 +105,6 @@ public class EditorPermissionsContentAndContentRevisionsView extends ParentTest{
         revisions.VerifyContentItemEditDelete(postTitle);
         
         //Step 25 and 26 (truncated)
-        revisions.ClickEditExtendMenuBtn(postTitle);
         revisions.ClickEditMenuBtn(postTitle);
         overlay.SwitchToActiveFrame();
         

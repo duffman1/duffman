@@ -119,7 +119,7 @@ public class Revisions {
     	wait.until(ExpectedConditions.visibilityOf(EditMenu_Btn(contentItemTtl)));
     	
     	Reporter.log("Verify Edit menu 'Delete' buttton is present.");
-    	EditMenuDelete_Btn(contentItemTtl).isDisplayed();
+    	Assert.assertTrue(EditMenuDelete_Btn(contentItemTtl).isDisplayed());
     	
     }
 

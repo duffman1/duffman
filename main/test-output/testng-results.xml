@@ -2,9 +2,6 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
     <line>
-      <![CDATA[STEP 1]]>
-    </line>
-    <line>
       <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]>
     </line>
     <line>
@@ -17,124 +14,40 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[STEP 2]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Modules' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to frame titled 'Modules'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Pub SSO' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the module titled 'Pub SSO' to appear in the list.]]>
-    </line>
-    <line>
-      <![CDATA[Check the 'Pub SSO' check box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Continue' button to enable additional modules.]]>
-    </line>
-    <line>
-      <![CDATA[Switch back to the 'Modules' frame.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to frame titled 'Modules'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll by '-500'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 3]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Configuration' menu link.]]>
-    </line>
-    <line>
       <![CDATA[Mouse over the 'People' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'SimpleSAMLphp Auth Settings' menu link.]]>
+      <![CDATA[Click the 'Add user' menu link.]]>
     </line>
     <line>
       <![CDATA[Switch to the active frame titled 'People dialog'.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'SimpleSAMLphp authentication is NOT yet activated.' is present.]]>
+      <![CDATA[Enter 'a896c2d7a5dc4a7@a95289c4ab8c401.com' in the 'Username' text box.]]>
     </line>
     <line>
-      <![CDATA[STEP 4]]>
+      <![CDATA[Enter 'a896c2d7a5dc4a7@a95289c4ab8c401.com' in the 'E-mail address' text box.]]>
     </line>
     <line>
-      <![CDATA[Verify the 'Activate authentication via SimpleSAMLphp' check box is unchecked.]]>
+      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
     </line>
     <line>
-      <![CDATA[Verify the value of the 'Installation directory' text box equals '/mnt/www/html/nbcupublisher7qa5/simplesamlphp' and the text box is disabled.]]>
+      <![CDATA[Enter 'pa55word' in the 'Confirm password' text box.]]>
     </line>
     <line>
-      <![CDATA[Verify the value of the 'Authentication source for this SP' text box equals 'pub-qa5install' and the text box is disabled.]]>
+      <![CDATA[Check the 'editor' check box.]]>
     </line>
     <line>
-      <![CDATA[Verify the ' Force https for login links' check box is checked and disabled.]]>
+      <![CDATA[Enter 'df42a72614dc493' in the 'First Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Verify the value of the 'Which attribute from simpleSAMLphp should be used as user's name' text box equals 'email' and the text box is disabled.]]>
+      <![CDATA[Enter '2d0e04266bdd4cc' in the 'Last Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Verify the value of the 'Which attribute from simpleSAMLphp should be used as unique identifier for the user' text box equals 'uid' and the text box is disabled.]]>
+      <![CDATA[Click the 'Create new account' button.]]>
     </line>
     <line>
-      <![CDATA[Verify the value of the 'Which attribute from simpleSAMLphp should be used as user mail address' text box equals 'email' and the text box is disabled.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 5]]>
-    </line>
-    <line>
-      <![CDATA[Enter the file path for certificate upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'A certificate exists for this instance of SimpleSAMLphp.' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 6]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 7]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Activate authentication via SimpleSAMLphp' check box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+      <![CDATA[Verify success message of 'A welcome message with further instructions has been e-mailed to the new user a896c2d7a5dc4a7@a95289c4ab8c401.com.' is present.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
@@ -143,46 +56,148 @@
       <![CDATA[Scroll by '-500'.]]>
     </line>
     <line>
-      <![CDATA[STEP 8]]>
+      <![CDATA[Mouse over the 'People' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Permissions' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Roles' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'People dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Edit Permissions' link for the 'Editor' role.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'People dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save Permissions' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The changes have been saved.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll by '-500'.]]>
     </line>
     <line>
       <![CDATA[Click the 'Logout' button.]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com/saml_login'.]]>
+      <![CDATA[Enter 'a896c2d7a5dc4a7@a95289c4ab8c401.com' in the 'Email Address' text box.]]>
     </line>
     <line>
-      <![CDATA[STEP 9]]>
+      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
     </line>
     <line>
-      <![CDATA[Enter '206424392' in the 'SSO ID' text box.]]>
+      <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[Enter 'tufNewcyd577BC' in the 'Password' text box.]]>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Sign In' button.]]>
+      <![CDATA[Mouse over the 'Add content' menu link.]]>
     </line>
     <line>
-      <![CDATA[STEP 10]]>
+      <![CDATA[Click the 'Post' menu link.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'Modules' is NOT present on the page.]]>
+      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
     </line>
     <line>
-      <![CDATA[STEP 11]]>
+      <![CDATA[Enter 'abe7ca7a4e04461' in the 'Title' text box.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'Brandon.Clark@nbcuni.com' is present on the page.]]>
+      <![CDATA[Switch to the Synopsis frame.]]>
     </line>
     <line>
-      <![CDATA[STEP 12]]>
+      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Cover' select button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the select file frame.]]>
+    </line>
+    <line>
+      <![CDATA[Enter the file path for file upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Upload' button.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Public Local Files' radio button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the file image 'HanSolo' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the img is loaded and visible.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Publishing Options' link.]]>
+    </line>
+    <line>
+      <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Post abe7ca7a4e04461 has been created.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the extend arrow for the 'Edit' menu.]]>
+    </line>
+    <line>
+      <![CDATA[Click the extend edit menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Edit' menu link is present from the extended edit menu.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Delete' menu link is present from the extended edit menu.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll by '-500'.]]>
     </line>
     <line>
       <![CDATA[Click the 'Logout' button.]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com/user'.]]>
     </line>
     <line>
       <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
@@ -194,96 +209,204 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'People' menu link.]]>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'People dialog'.]]>
+      <![CDATA[Mouse over the 'Add content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Brandon.Clark' link from the 'USERNAME' list.]]>
+      <![CDATA[Click the 'Post' menu link.]]>
     </line>
     <line>
-      <![CDATA[STEP 13]]>
+      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com/admin/config/people/simplesamlphp_auth'.]]>
+      <![CDATA[Enter '9d48f4f23a6c47b' in the 'Title' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Activate authentication via SimpleSAMLphp' check box.]]>
+      <![CDATA[Switch to the Synopsis frame.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
+      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'SimpleSAMLphp authentication is NOT yet activated.' is present.]]>
+      <![CDATA[Click the 'Cover' select button.]]>
     </line>
     <line>
-      <![CDATA[STEP 14 - 16 TODO]]>
+      <![CDATA[Switch to the select file frame.]]>
     </line>
     <line>
-      <![CDATA[STEP 17]]>
+      <![CDATA[Enter the file path for file upload.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Modules' menu link.]]>
+      <![CDATA[Click the 'Upload' button.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Pub SSO' in the 'Filter Name' text box.]]>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
     </line>
     <line>
-      <![CDATA[Wait for the module titled 'Pub SSO' to appear in the list.]]>
+      <![CDATA[Click the 'Next' button.]]>
     </line>
     <line>
-      <![CDATA[Uncheck the 'Pub SSO' module checkbox.]]>
+      <![CDATA[Click the 'Public Local Files' radio button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
+      <![CDATA[Click the 'Next' button.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+      <![CDATA[Verify the file image 'HanSolo' is present.]]>
     </line>
     <line>
-      <![CDATA[Enter 'simpleSAMLphp authentication' in the 'Filter Name' text box.]]>
+      <![CDATA[Verify the img is loaded and visible.]]>
     </line>
     <line>
-      <![CDATA[Wait for the module titled 'simpleSAMLphp authentication' to appear in the list.]]>
+      <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Uncheck the 'simpleSAMLphp authentication' module checkbox.]]>
+      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
+      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+      <![CDATA[Click the 'Publishing Options' link.]]>
     </line>
     <line>
-      <![CDATA[STEP 18]]>
+      <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Post 9d48f4f23a6c47b has been created.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Logout' button.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'a896c2d7a5dc4a7@a95289c4ab8c401.com' in the 'Email Address' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Login' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the content item titled '9d48f4f23a6c47b' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Edit/Delete' menu options are not present for the content item titled '9d48f4f23a6c47b'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll by '-500'.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Content Revisions' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Content Revisions dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the content item titled '9d48f4f23a6c47b' to be present in revision list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Edit' extend menu button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify Edit menu 'Edit' button is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify Edit menu 'Delete' buttton is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Edit' menu button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Edit Post abe7ca7a4e04461 dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the Synopsis frame.]]>
+    </line>
+    <line>
+      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Edit Post abe7ca7a4e04461 dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Post abe7ca7a4e04461 has been updated.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the extend edit menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Delete' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Are you sure you want to delete abe7ca7a4e04461? dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Delete' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Post abe7ca7a4e04461 has been deleted.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the content item titled 'abe7ca7a4e04461' is not present.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="121896" started-at="2014-07-05T12:32:31Z" finished-at="2014-07-05T12:34:33Z">
+  <suite name="Default suite" duration-ms="128447" started-at="2014-07-06T13:42:20Z" finished-at="2014-07-06T13:44:28Z">
     <groups>
       <group name="full">
-        <method signature="SSODefinedDomains.SSODefinedDomains_TC3474()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSODefinedDomains@4207c21e]" name="SSODefinedDomains_TC3474" class="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSODefinedDomains"/>
+        <method signature="EditorPermissionsContentAndContentRevisionsView.EditorPermissionsContentAndContentRevisionsView_TC1393()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.EditorPermissionsContentAndContentRevisionsView@4f32349d]" name="EditorPermissionsContentAndContentRevisionsView_TC1393" class="com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.EditorPermissionsContentAndContentRevisionsView"/>
       </group> <!-- full -->
+      <group name="smoke">
+        <method signature="EditorPermissionsContentAndContentRevisionsView.EditorPermissionsContentAndContentRevisionsView_TC1393()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.EditorPermissionsContentAndContentRevisionsView@4f32349d]" name="EditorPermissionsContentAndContentRevisionsView_TC1393" class="com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.EditorPermissionsContentAndContentRevisionsView"/>
+      </group> <!-- smoke -->
     </groups>
-    <test name="Default test" duration-ms="121896" started-at="2014-07-05T12:32:31Z" finished-at="2014-07-05T12:34:33Z">
-      <class name="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSODefinedDomains">
-        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSODefinedDomains@4207c21e]" name="startGridAndHub" is-config="true" duration-ms="11695" started-at="2014-07-05T08:32:19Z" finished-at="2014-07-05T08:32:31Z">
+    <test name="Default test" duration-ms="128447" started-at="2014-07-06T13:42:20Z" finished-at="2014-07-06T13:44:28Z">
+      <class name="com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.EditorPermissionsContentAndContentRevisionsView">
+        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.EditorPermissionsContentAndContentRevisionsView@4f32349d]" name="startGridAndHub" is-config="true" duration-ms="12202" started-at="2014-07-06T09:42:08Z" finished-at="2014-07-06T09:42:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startGridAndHub -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSODefinedDomains@4207c21e]" name="startSelenium" is-config="true" duration-ms="2390" started-at="2014-07-05T08:32:31Z" finished-at="2014-07-05T08:32:33Z">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.EditorPermissionsContentAndContentRevisionsView@4f32349d]" name="startSelenium" is-config="true" duration-ms="2917" started-at="2014-07-06T09:42:20Z" finished-at="2014-07-06T09:42:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="SSODefinedDomains_TC3474()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSODefinedDomains@4207c21e]" name="SSODefinedDomains_TC3474" duration-ms="118922" started-at="2014-07-05T08:32:33Z" finished-at="2014-07-05T08:34:32Z">
+        <test-method status="PASS" signature="EditorPermissionsContentAndContentRevisionsView_TC1393()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.EditorPermissionsContentAndContentRevisionsView@4f32349d]" name="EditorPermissionsContentAndContentRevisionsView_TC1393" duration-ms="124947" started-at="2014-07-06T09:42:23Z" finished-at="2014-07-06T09:44:28Z">
           <reporter-output>
-            <line>
-              <![CDATA[STEP 1]]>
-            </line>
             <line>
               <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]>
             </line>
@@ -297,124 +420,40 @@
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
-              <![CDATA[STEP 2]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Modules' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to frame titled 'Modules'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Pub SSO' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the module titled 'Pub SSO' to appear in the list.]]>
-            </line>
-            <line>
-              <![CDATA[Check the 'Pub SSO' check box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Continue' button to enable additional modules.]]>
-            </line>
-            <line>
-              <![CDATA[Switch back to the 'Modules' frame.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to frame titled 'Modules'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll by '-500'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 3]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Configuration' menu link.]]>
-            </line>
-            <line>
               <![CDATA[Mouse over the 'People' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'SimpleSAMLphp Auth Settings' menu link.]]>
+              <![CDATA[Click the 'Add user' menu link.]]>
             </line>
             <line>
               <![CDATA[Switch to the active frame titled 'People dialog'.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'SimpleSAMLphp authentication is NOT yet activated.' is present.]]>
+              <![CDATA[Enter 'a896c2d7a5dc4a7@a95289c4ab8c401.com' in the 'Username' text box.]]>
             </line>
             <line>
-              <![CDATA[STEP 4]]>
+              <![CDATA[Enter 'a896c2d7a5dc4a7@a95289c4ab8c401.com' in the 'E-mail address' text box.]]>
             </line>
             <line>
-              <![CDATA[Verify the 'Activate authentication via SimpleSAMLphp' check box is unchecked.]]>
+              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
             </line>
             <line>
-              <![CDATA[Verify the value of the 'Installation directory' text box equals '/mnt/www/html/nbcupublisher7qa5/simplesamlphp' and the text box is disabled.]]>
+              <![CDATA[Enter 'pa55word' in the 'Confirm password' text box.]]>
             </line>
             <line>
-              <![CDATA[Verify the value of the 'Authentication source for this SP' text box equals 'pub-qa5install' and the text box is disabled.]]>
+              <![CDATA[Check the 'editor' check box.]]>
             </line>
             <line>
-              <![CDATA[Verify the ' Force https for login links' check box is checked and disabled.]]>
+              <![CDATA[Enter 'df42a72614dc493' in the 'First Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Verify the value of the 'Which attribute from simpleSAMLphp should be used as user's name' text box equals 'email' and the text box is disabled.]]>
+              <![CDATA[Enter '2d0e04266bdd4cc' in the 'Last Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Verify the value of the 'Which attribute from simpleSAMLphp should be used as unique identifier for the user' text box equals 'uid' and the text box is disabled.]]>
+              <![CDATA[Click the 'Create new account' button.]]>
             </line>
             <line>
-              <![CDATA[Verify the value of the 'Which attribute from simpleSAMLphp should be used as user mail address' text box equals 'email' and the text box is disabled.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 5]]>
-            </line>
-            <line>
-              <![CDATA[Enter the file path for certificate upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'A certificate exists for this instance of SimpleSAMLphp.' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 6]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 7]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Activate authentication via SimpleSAMLphp' check box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+              <![CDATA[Verify success message of 'A welcome message with further instructions has been e-mailed to the new user a896c2d7a5dc4a7@a95289c4ab8c401.com.' is present.]]>
             </line>
             <line>
               <![CDATA[Click the 'Close Overlay X'.]]>
@@ -423,46 +462,148 @@
               <![CDATA[Scroll by '-500'.]]>
             </line>
             <line>
-              <![CDATA[STEP 8]]>
+              <![CDATA[Mouse over the 'People' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Permissions' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Roles' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'People dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Edit Permissions' link for the 'Editor' role.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'People dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save Permissions' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The changes have been saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll by '-500'.]]>
             </line>
             <line>
               <![CDATA[Click the 'Logout' button.]]>
             </line>
             <line>
-              <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com/saml_login'.]]>
+              <![CDATA[Enter 'a896c2d7a5dc4a7@a95289c4ab8c401.com' in the 'Email Address' text box.]]>
             </line>
             <line>
-              <![CDATA[STEP 9]]>
+              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
             </line>
             <line>
-              <![CDATA[Enter '206424392' in the 'SSO ID' text box.]]>
+              <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
-              <![CDATA[Enter 'tufNewcyd577BC' in the 'Password' text box.]]>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Sign In' button.]]>
+              <![CDATA[Mouse over the 'Add content' menu link.]]>
             </line>
             <line>
-              <![CDATA[STEP 10]]>
+              <![CDATA[Click the 'Post' menu link.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'Modules' is NOT present on the page.]]>
+              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
             </line>
             <line>
-              <![CDATA[STEP 11]]>
+              <![CDATA[Enter 'abe7ca7a4e04461' in the 'Title' text box.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'Brandon.Clark@nbcuni.com' is present on the page.]]>
+              <![CDATA[Switch to the Synopsis frame.]]>
             </line>
             <line>
-              <![CDATA[STEP 12]]>
+              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Cover' select button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the select file frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter the file path for file upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Upload' button.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Public Local Files' radio button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the file image 'HanSolo' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Publishing Options' link.]]>
+            </line>
+            <line>
+              <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Post abe7ca7a4e04461 has been created.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the extend arrow for the 'Edit' menu.]]>
+            </line>
+            <line>
+              <![CDATA[Click the extend edit menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Edit' menu link is present from the extended edit menu.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Delete' menu link is present from the extended edit menu.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll by '-500'.]]>
             </line>
             <line>
               <![CDATA[Click the 'Logout' button.]]>
-            </line>
-            <line>
-              <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com/user'.]]>
             </line>
             <line>
               <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
@@ -474,92 +615,200 @@
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'People' menu link.]]>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'People dialog'.]]>
+              <![CDATA[Mouse over the 'Add content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Brandon.Clark' link from the 'USERNAME' list.]]>
+              <![CDATA[Click the 'Post' menu link.]]>
             </line>
             <line>
-              <![CDATA[STEP 13]]>
+              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
             </line>
             <line>
-              <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com/admin/config/people/simplesamlphp_auth'.]]>
+              <![CDATA[Enter '9d48f4f23a6c47b' in the 'Title' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Activate authentication via SimpleSAMLphp' check box.]]>
+              <![CDATA[Switch to the Synopsis frame.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
+              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'SimpleSAMLphp authentication is NOT yet activated.' is present.]]>
+              <![CDATA[Click the 'Cover' select button.]]>
             </line>
             <line>
-              <![CDATA[STEP 14 - 16 TODO]]>
+              <![CDATA[Switch to the select file frame.]]>
             </line>
             <line>
-              <![CDATA[STEP 17]]>
+              <![CDATA[Enter the file path for file upload.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Modules' menu link.]]>
+              <![CDATA[Click the 'Upload' button.]]>
             </line>
             <line>
-              <![CDATA[Enter 'Pub SSO' in the 'Filter Name' text box.]]>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
             </line>
             <line>
-              <![CDATA[Wait for the module titled 'Pub SSO' to appear in the list.]]>
+              <![CDATA[Click the 'Next' button.]]>
             </line>
             <line>
-              <![CDATA[Uncheck the 'Pub SSO' module checkbox.]]>
+              <![CDATA[Click the 'Public Local Files' radio button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
+              <![CDATA[Click the 'Next' button.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+              <![CDATA[Verify the file image 'HanSolo' is present.]]>
             </line>
             <line>
-              <![CDATA[Enter 'simpleSAMLphp authentication' in the 'Filter Name' text box.]]>
+              <![CDATA[Verify the img is loaded and visible.]]>
             </line>
             <line>
-              <![CDATA[Wait for the module titled 'simpleSAMLphp authentication' to appear in the list.]]>
+              <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Uncheck the 'simpleSAMLphp authentication' module checkbox.]]>
+              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
+              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+              <![CDATA[Click the 'Publishing Options' link.]]>
             </line>
             <line>
-              <![CDATA[STEP 18]]>
+              <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Post 9d48f4f23a6c47b has been created.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Logout' button.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'a896c2d7a5dc4a7@a95289c4ab8c401.com' in the 'Email Address' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Login' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the content item titled '9d48f4f23a6c47b' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Edit/Delete' menu options are not present for the content item titled '9d48f4f23a6c47b'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll by '-500'.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Content Revisions' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Content Revisions dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the content item titled '9d48f4f23a6c47b' to be present in revision list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Edit' extend menu button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify Edit menu 'Edit' button is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify Edit menu 'Delete' buttton is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Edit' menu button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Edit Post abe7ca7a4e04461 dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the Synopsis frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Edit Post abe7ca7a4e04461 dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Post abe7ca7a4e04461 has been updated.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the extend edit menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Delete' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Are you sure you want to delete abe7ca7a4e04461? dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Delete' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Post abe7ca7a4e04461 has been deleted.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the content item titled 'abe7ca7a4e04461' is not present.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- SSODefinedDomains_TC3474 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSODefinedDomains@4207c21e]" name="stopSelenium" is-config="true" duration-ms="573" started-at="2014-07-05T08:34:32Z" finished-at="2014-07-05T08:34:33Z">
+        </test-method> <!-- EditorPermissionsContentAndContentRevisionsView_TC1393 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.EditorPermissionsContentAndContentRevisionsView@4f32349d]" name="stopSelenium" is-config="true" duration-ms="571" started-at="2014-07-06T09:44:28Z" finished-at="2014-07-06T09:44:28Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=SSODefinedDomains_TC3474 status=SUCCESS method=SSODefinedDomains.SSODefinedDomains_TC3474()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSODefinedDomains@4207c21e] output=STEP 1]]]>
+                <![CDATA[[TestResult name=EditorPermissionsContentAndContentRevisionsView_TC1393 status=SUCCESS method=EditorPermissionsContentAndContentRevisionsView.EditorPermissionsContentAndContentRevisionsView_TC1393()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.EditorPermissionsContentAndContentRevisionsView@4f32349d] output=Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSODefinedDomains@4207c21e]" name="stopGridAndHub" is-config="true" duration-ms="380" started-at="2014-07-05T08:34:33Z" finished-at="2014-07-05T08:34:33Z">
+        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.EditorPermissionsContentAndContentRevisionsView@4f32349d]" name="stopGridAndHub" is-config="true" duration-ms="371" started-at="2014-07-06T09:44:29Z" finished-at="2014-07-06T09:44:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopGridAndHub -->
-      </class> <!-- com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSODefinedDomains -->
+      </class> <!-- com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.EditorPermissionsContentAndContentRevisionsView -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
