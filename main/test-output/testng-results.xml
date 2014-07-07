@@ -2,10 +2,7 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
     <line>
-      <![CDATA[STEP 1 - N/A]]>
-    </line>
-    <line>
-      <![CDATA[STEP 2]]>
+      <![CDATA[STEP 1]]>
     </line>
     <line>
       <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
@@ -20,46 +17,22 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[STEP 3 - 9]]>
+      <![CDATA[SETUP]]>
     </line>
     <line>
       <![CDATA[Click the 'Modules' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Surf' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the module titled 'Surf' to appear in the list.]]>
-    </line>
-    <line>
-      <![CDATA[Check the 'Surf' check box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
-    </line>
-    <line>
-      <![CDATA[Switch back to the 'Modules' frame.]]>
-    </line>
-    <line>
       <![CDATA[Switch to frame titled 'Modules'.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+      <![CDATA[Enter 'Devel' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Pub SURF Example' in the 'Filter Name' text box.]]>
+      <![CDATA[Wait for the module titled 'Devel' to appear in the list.]]>
     </line>
     <line>
-      <![CDATA[Wait for the module titled 'Pub SURF Example' to appear in the list.]]>
-    </line>
-    <line>
-      <![CDATA[Check the 'Pub SURF Example' check box.]]>
+      <![CDATA[Check the 'Devel' check box.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save configuration' button.]]>
@@ -81,111 +54,271 @@
     </line>
     <line>
       <![CDATA[Scroll by '-500'.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Configuration' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Web services' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'MPS Configuration' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'MPS Configuration dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '' in the 'Pattern for Category Field' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configuration' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll by '-500'.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 2 - N/A]]>
+    </line>
+    <line>
+      <![CDATA[STEP 3]]>
+    </line>
+    <line>
+      <![CDATA[Verify '"cat":"content"' is not present in page source.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 4]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Add content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Movie' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '134d15e5ce27483' in the 'Title' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the Synopsis frame.]]>
+    </line>
+    <line>
+      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Cover' select button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the select file frame.]]>
+    </line>
+    <line>
+      <![CDATA[Enter the file path for file upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Upload' button.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Public Local Files' radio button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the file image 'HanSolo' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the img is loaded and visible.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Additional Information' link.]]>
+    </line>
+    <line>
+      <![CDATA[Select the 'Syndicated' from the 'Movie Type' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Select the 'G' from the 'Rating' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Select the 'Action' from the 'Primary Genre' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Movie 134d15e5ce27483 has been created.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify '"cat":"content"' is present in page source.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 5]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Edit Draft' link in the work bench.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Edit Movie 134d15e5ce27483 dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'URL path settings' link.]]>
+    </line>
+    <line>
+      <![CDATA[Uncheck the 'Generate automatic URL alias' check box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '6eb5be85ec' in the 'URL alias' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Movie 134d15e5ce27483 has been updated.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 6]]>
+    </line>
+    <line>
+      <![CDATA[Verify '"cat":"content"' is not present in page source.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 7]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Edit Draft' link in the work bench.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Edit Movie 134d15e5ce27483 dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'URL path settings' link.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '6eb5be85ec/mps-testing/2arg/3arg/4arg/5arg/6arg' in the 'URL alias' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Movie 134d15e5ce27483 has been updated.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 8]]>
+    </line>
+    <line>
+      <![CDATA[Verify '"cat":"6eb5be85ec|mps-testing|2arg"}' is present in page source.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 9]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Configuration' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Web services' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'MPS Configuration' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'MPS Configuration dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'REPLACEMENT PATTERNS' link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'MPS' link.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'MPS CAT Property' link with text '[mps:cat-pattern:?]' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '[mps:cat-pattern:?]' in the 'Pattern for Category Field' text box.]]>
     </line>
     <line>
       <![CDATA[STEP 10]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Structure' menu link.]]>
+      <![CDATA[Click the 'Save configuration' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Blocks' menu link.]]>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll by '-500'.]]>
     </line>
     <line>
       <![CDATA[STEP 11]]>
     </line>
     <line>
-      <![CDATA[Select the block name 'Surf Example Actions' from the 'Sidebar first' drop down list.]]>
+      <![CDATA[Verify '"cat":"6eb5be85ec|mps-testing|2arg|3arg|4arg"}' is present in page source.]]>
     </line>
     <line>
-      <![CDATA[Select the block name 'Surf Example Content' from the 'Sidebar first' drop down list.]]>
+      <![CDATA[STEP 12]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save Blocks' button.]]>
+      <![CDATA[Switch to the active frame titled 'Execute PHP Code dialog'.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'The block settings have been updated.' is present.]]>
+      <![CDATA[Enter 'variable_set('mps_cat_pattern', '');echo _mps_build_cat();echo PHP_EOL;variable_set('mps_cat_pattern', '[mps:cat-pattern:?]');echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/cast'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/thisisareallyreallyreallyreallyreallyreallylongurlXXXXXX/season/episode/cast/name'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/thisisareallyreallyreallyreallyreallyreallylongurlXXXXXX/season/episode/cast/'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/show//episode/cast'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/show/season//episode//'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => '/show/season//'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => '/show///'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => '/brand/season//episode'));echo PHP_EOL;variable_set('mps_cat_pattern', '[mps:cat-pattern:2]|[mps:cat-pattern:3]');echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/cast'));echo PHP_EOL;variable_set('mps_cat_pattern', '[mps:cat-pattern:0]|[mps:cat-pattern:2]|[current-date:custom:d]|[mps:cat-pattern:3]|');echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/cast'));variable_set('mps_cat_pattern', '[mps:cat-pattern:?]');echo PHP_EOL;echo '*' . _mps_build_cat(array('aliased-path' => '/')) . '*';' in the 'PHP Code to Execute' text area.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Execute' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the expected response is 'Status message
+devel
+brand|show|season|episode
+brand|thisisareallyreallyreallyreallyreallyreallylongurl|season|episode|cast
+brand|thisisareallyreallyreallyreallyreallyreallylongurl|season|episode|cast
+brand|show|~|episode
+brand|show|season
+brand|show|season|~|episode
+~|show
+
+~|brand|season
+season|episode
+brand|season|07
+**'.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
     </line>
     <line>
       <![CDATA[Scroll by '-500'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 12 - N/A]]>
-    </line>
-    <line>
-      <![CDATA[STEP 13 - N/A]]>
-    </line>
-    <line>
-      <![CDATA[STEP 14]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Sign-in' button.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 15]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the Surf frame.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'brandon.clark@nbcuni.com' in the 'Email or Username' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'tufNewcyd4#' in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Sign In' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify surf username 'baclark77' is present.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 16 - N/A]]>
-    </line>
-    <line>
-      <![CDATA[STEP 17]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Sign Out' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Sign In' button is present.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 18 - N/A]]>
     </line>
     <line>
       <![CDATA[CLEANUP]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Structure' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Blocks' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Select the block name 'Surf Example Actions' from the '- None -' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Select the block name 'Surf Example Content' from the '- None -' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save Blocks' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll by '-500'.]]>
     </line>
     <line>
       <![CDATA[Click the 'Modules' menu link.]]>
@@ -194,59 +327,65 @@
       <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Pub SURF Example' in the 'Filter Name' text box.]]>
+      <![CDATA[Enter 'Devel' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Wait for the module titled 'Pub SURF Example' to appear in the list.]]>
+      <![CDATA[Wait for the module titled 'Devel' to appear in the list.]]>
     </line>
     <line>
-      <![CDATA[Uncheck the 'Pub SURF Example' module checkbox.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Surf' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the module titled 'Surf' to appear in the list.]]>
-    </line>
-    <line>
-      <![CDATA[Uncheck the 'Surf' module checkbox.]]>
+      <![CDATA[Uncheck the 'Devel' module checkbox.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save configuration' button.]]>
     </line>
     <line>
       <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll by '-500'.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Configuration' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Web services' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'MPS Configuration' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'MPS Configuration dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '' in the 'Pattern for Category Field' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configuration' button.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="110653" started-at="2014-07-07T15:32:57Z" finished-at="2014-07-07T15:34:48Z">
+  <suite name="Default suite" duration-ms="127604" started-at="2014-07-07T19:12:42Z" finished-at="2014-07-07T19:14:50Z">
     <groups>
       <group name="full">
-        <method signature="SURFModule.SURFModule_TC3564()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SURF.SURFModule@5b5b0e9f]" name="SURFModule_TC3564" class="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SURF.SURFModule"/>
+        <method signature="MPSSupportTokens.MPSSupportTokens_TC3641()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens@7aa7f835]" name="MPSSupportTokens_TC3641" class="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens"/>
       </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="110653" started-at="2014-07-07T15:32:57Z" finished-at="2014-07-07T15:34:48Z">
-      <class name="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SURF.SURFModule">
-        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SURF.SURFModule@5b5b0e9f]" name="startGridAndHub" is-config="true" duration-ms="11777" started-at="2014-07-07T11:32:45Z" finished-at="2014-07-07T11:32:57Z">
+    <test name="Default test" duration-ms="127604" started-at="2014-07-07T19:12:42Z" finished-at="2014-07-07T19:14:50Z">
+      <class name="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens">
+        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens@7aa7f835]" name="startGridAndHub" is-config="true" duration-ms="11658" started-at="2014-07-07T15:12:31Z" finished-at="2014-07-07T15:12:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startGridAndHub -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SURF.SURFModule@5b5b0e9f]" name="startSelenium" is-config="true" duration-ms="2417" started-at="2014-07-07T11:32:57Z" finished-at="2014-07-07T11:32:59Z">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens@7aa7f835]" name="startSelenium" is-config="true" duration-ms="2445" started-at="2014-07-07T15:12:42Z" finished-at="2014-07-07T15:12:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="SURFModule_TC3564()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SURF.SURFModule@5b5b0e9f]" name="SURFModule_TC3564" duration-ms="107653" started-at="2014-07-07T11:32:59Z" finished-at="2014-07-07T11:34:47Z">
+        <test-method status="PASS" signature="MPSSupportTokens_TC3641()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens@7aa7f835]" name="MPSSupportTokens_TC3641" duration-ms="124576" started-at="2014-07-07T15:12:45Z" finished-at="2014-07-07T15:14:49Z">
           <reporter-output>
             <line>
-              <![CDATA[STEP 1 - N/A]]>
-            </line>
-            <line>
-              <![CDATA[STEP 2]]>
+              <![CDATA[STEP 1]]>
             </line>
             <line>
               <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
@@ -261,46 +400,22 @@
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
-              <![CDATA[STEP 3 - 9]]>
+              <![CDATA[SETUP]]>
             </line>
             <line>
               <![CDATA[Click the 'Modules' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Surf' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the module titled 'Surf' to appear in the list.]]>
-            </line>
-            <line>
-              <![CDATA[Check the 'Surf' check box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
-            </line>
-            <line>
-              <![CDATA[Switch back to the 'Modules' frame.]]>
-            </line>
-            <line>
               <![CDATA[Switch to frame titled 'Modules'.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+              <![CDATA[Enter 'Devel' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Enter 'Pub SURF Example' in the 'Filter Name' text box.]]>
+              <![CDATA[Wait for the module titled 'Devel' to appear in the list.]]>
             </line>
             <line>
-              <![CDATA[Wait for the module titled 'Pub SURF Example' to appear in the list.]]>
-            </line>
-            <line>
-              <![CDATA[Check the 'Pub SURF Example' check box.]]>
+              <![CDATA[Check the 'Devel' check box.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save configuration' button.]]>
@@ -322,111 +437,271 @@
             </line>
             <line>
               <![CDATA[Scroll by '-500'.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Configuration' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Web services' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'MPS Configuration' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'MPS Configuration dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '' in the 'Pattern for Category Field' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configuration' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll by '-500'.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 2 - N/A]]>
+            </line>
+            <line>
+              <![CDATA[STEP 3]]>
+            </line>
+            <line>
+              <![CDATA[Verify '"cat":"content"' is not present in page source.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 4]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Add content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Movie' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '134d15e5ce27483' in the 'Title' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the Synopsis frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Cover' select button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the select file frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter the file path for file upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Upload' button.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Public Local Files' radio button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the file image 'HanSolo' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Additional Information' link.]]>
+            </line>
+            <line>
+              <![CDATA[Select the 'Syndicated' from the 'Movie Type' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Select the 'G' from the 'Rating' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Select the 'Action' from the 'Primary Genre' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Movie 134d15e5ce27483 has been created.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify '"cat":"content"' is present in page source.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 5]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Edit Draft' link in the work bench.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Edit Movie 134d15e5ce27483 dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'URL path settings' link.]]>
+            </line>
+            <line>
+              <![CDATA[Uncheck the 'Generate automatic URL alias' check box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '6eb5be85ec' in the 'URL alias' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Movie 134d15e5ce27483 has been updated.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 6]]>
+            </line>
+            <line>
+              <![CDATA[Verify '"cat":"content"' is not present in page source.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 7]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Edit Draft' link in the work bench.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Edit Movie 134d15e5ce27483 dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'URL path settings' link.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '6eb5be85ec/mps-testing/2arg/3arg/4arg/5arg/6arg' in the 'URL alias' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Movie 134d15e5ce27483 has been updated.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 8]]>
+            </line>
+            <line>
+              <![CDATA[Verify '"cat":"6eb5be85ec|mps-testing|2arg"}' is present in page source.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 9]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Configuration' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Web services' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'MPS Configuration' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'MPS Configuration dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'REPLACEMENT PATTERNS' link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'MPS' link.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'MPS CAT Property' link with text '[mps:cat-pattern:?]' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '[mps:cat-pattern:?]' in the 'Pattern for Category Field' text box.]]>
             </line>
             <line>
               <![CDATA[STEP 10]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Structure' menu link.]]>
+              <![CDATA[Click the 'Save configuration' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Blocks' menu link.]]>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll by '-500'.]]>
             </line>
             <line>
               <![CDATA[STEP 11]]>
             </line>
             <line>
-              <![CDATA[Select the block name 'Surf Example Actions' from the 'Sidebar first' drop down list.]]>
+              <![CDATA[Verify '"cat":"6eb5be85ec|mps-testing|2arg|3arg|4arg"}' is present in page source.]]>
             </line>
             <line>
-              <![CDATA[Select the block name 'Surf Example Content' from the 'Sidebar first' drop down list.]]>
+              <![CDATA[STEP 12]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save Blocks' button.]]>
+              <![CDATA[Switch to the active frame titled 'Execute PHP Code dialog'.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'The block settings have been updated.' is present.]]>
+              <![CDATA[Enter 'variable_set('mps_cat_pattern', '');echo _mps_build_cat();echo PHP_EOL;variable_set('mps_cat_pattern', '[mps:cat-pattern:?]');echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/cast'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/thisisareallyreallyreallyreallyreallyreallylongurlXXXXXX/season/episode/cast/name'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/thisisareallyreallyreallyreallyreallyreallylongurlXXXXXX/season/episode/cast/'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/show//episode/cast'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/show/season//episode//'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => '/show/season//'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => '/show///'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => '/brand/season//episode'));echo PHP_EOL;variable_set('mps_cat_pattern', '[mps:cat-pattern:2]|[mps:cat-pattern:3]');echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/cast'));echo PHP_EOL;variable_set('mps_cat_pattern', '[mps:cat-pattern:0]|[mps:cat-pattern:2]|[current-date:custom:d]|[mps:cat-pattern:3]|');echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/cast'));variable_set('mps_cat_pattern', '[mps:cat-pattern:?]');echo PHP_EOL;echo '*' . _mps_build_cat(array('aliased-path' => '/')) . '*';' in the 'PHP Code to Execute' text area.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Execute' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the expected response is 'Status message
+devel
+brand|show|season|episode
+brand|thisisareallyreallyreallyreallyreallyreallylongurl|season|episode|cast
+brand|thisisareallyreallyreallyreallyreallyreallylongurl|season|episode|cast
+brand|show|~|episode
+brand|show|season
+brand|show|season|~|episode
+~|show
+
+~|brand|season
+season|episode
+brand|season|07
+**'.]]>
             </line>
             <line>
               <![CDATA[Click the 'Close Overlay X'.]]>
             </line>
             <line>
               <![CDATA[Scroll by '-500'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 12 - N/A]]>
-            </line>
-            <line>
-              <![CDATA[STEP 13 - N/A]]>
-            </line>
-            <line>
-              <![CDATA[STEP 14]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Sign-in' button.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 15]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the Surf frame.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'brandon.clark@nbcuni.com' in the 'Email or Username' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'tufNewcyd4#' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Sign In' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify surf username 'baclark77' is present.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 16 - N/A]]>
-            </line>
-            <line>
-              <![CDATA[STEP 17]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Sign Out' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Sign In' button is present.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 18 - N/A]]>
             </line>
             <line>
               <![CDATA[CLEANUP]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Structure' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Blocks' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Select the block name 'Surf Example Actions' from the '- None -' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Select the block name 'Surf Example Content' from the '- None -' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save Blocks' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll by '-500'.]]>
             </line>
             <line>
               <![CDATA[Click the 'Modules' menu link.]]>
@@ -435,53 +710,62 @@
               <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
             </line>
             <line>
-              <![CDATA[Enter 'Pub SURF Example' in the 'Filter Name' text box.]]>
+              <![CDATA[Enter 'Devel' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Wait for the module titled 'Pub SURF Example' to appear in the list.]]>
+              <![CDATA[Wait for the module titled 'Devel' to appear in the list.]]>
             </line>
             <line>
-              <![CDATA[Uncheck the 'Pub SURF Example' module checkbox.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Surf' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the module titled 'Surf' to appear in the list.]]>
-            </line>
-            <line>
-              <![CDATA[Uncheck the 'Surf' module checkbox.]]>
+              <![CDATA[Uncheck the 'Devel' module checkbox.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save configuration' button.]]>
             </line>
             <line>
               <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll by '-500'.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Configuration' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Web services' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'MPS Configuration' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'MPS Configuration dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '' in the 'Pattern for Category Field' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configuration' button.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- SURFModule_TC3564 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SURF.SURFModule@5b5b0e9f]" name="stopSelenium" is-config="true" duration-ms="572" started-at="2014-07-07T11:34:47Z" finished-at="2014-07-07T11:34:48Z">
+        </test-method> <!-- MPSSupportTokens_TC3641 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens@7aa7f835]" name="stopSelenium" is-config="true" duration-ms="572" started-at="2014-07-07T15:14:49Z" finished-at="2014-07-07T15:14:50Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=SURFModule_TC3564 status=SUCCESS method=SURFModule.SURFModule_TC3564()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SURF.SURFModule@5b5b0e9f] output=STEP 1 - N/A]]]>
+                <![CDATA[[TestResult name=MPSSupportTokens_TC3641 status=SUCCESS method=MPSSupportTokens.MPSSupportTokens_TC3641()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens@7aa7f835] output=STEP 1]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SURF.SURFModule@5b5b0e9f]" name="stopGridAndHub" is-config="true" duration-ms="374" started-at="2014-07-07T11:34:48Z" finished-at="2014-07-07T11:34:48Z">
+        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens@7aa7f835]" name="stopGridAndHub" is-config="true" duration-ms="375" started-at="2014-07-07T15:14:50Z" finished-at="2014-07-07T15:14:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopGridAndHub -->
-      </class> <!-- com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SURF.SURFModule -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

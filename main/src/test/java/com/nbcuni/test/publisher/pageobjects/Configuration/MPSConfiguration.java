@@ -5,26 +5,29 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
-
 import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
  * publisher.nbcuni.com MPS Configuration Library. Copyright
  * 
  * @author Brandon Clark
- * @version 1.0 Date: June 2, 2014
+ * @version 1.1 Date: July 7, 2014
  *********************************************/
 
 public class MPSConfiguration {
 
 	private Driver webDriver;
+	private WebDriverWait wait;
 	
     //PAGE OBJECT CONSTRUCTOR    
     public MPSConfiguration(Driver webDriver) {
     	this.webDriver = webDriver;
     	PageFactory.initElements(webDriver, this);
+    	wait = new WebDriverWait(webDriver, 10);
     }
     
     //PAGE OBJECT IDENTIFIERS    
@@ -55,6 +58,18 @@ public class MPSConfiguration {
     
     @FindBy(how = How.ID, using ="edit-add-another-opt")
     private WebElement AddAnotherOpt_Btn;
+    
+    @FindBy(how = How.ID, using ="edit-mps-cat-pattern")
+    private WebElement PatternForCategoryField_Txb;
+    
+    @FindBy(how = How.XPATH, using ="//fieldset[@id='edit-token-help']/legend//a")
+    private WebElement ReplacementPatterns_Lnk;
+    
+    @FindBy(how = How.XPATH, using ="//td[contains(text(), 'MPS')][1]/span[@class='expander']")
+    private WebElement MPSExpander_Lnk;
+    
+    @FindBy(how = How.XPATH, using ="//a[text()='[mps:cat-pattern:?]']")
+    private WebElement MPSCatProperty_Lnk;
     
     @FindBy(how = How.ID, using ="edit-submit")
     private WebElement SaveConfiguration_Btn;
@@ -141,6 +156,31 @@ public class MPSConfiguration {
     	
     	Reporter.log("Click the 'Add another opt' button.");
     	AddAnotherOpt_Btn.click();
+    }
+    
+    public void ClickReplacementPatternsLnk() throws Exception { 
+    	
+    	Reporter.log("Click the 'REPLACEMENT PATTERNS' link.");
+    	ReplacementPatterns_Lnk.click();
+    }
+    
+    public void ClickMPSExpanderLnk() throws Exception { 
+    	
+    	Reporter.log("Click the 'MPS' link.");
+    	wait.until(ExpectedConditions.visibilityOf(MPSExpander_Lnk)).click();
+    }
+    
+    public void VerifyMPSCatPropertyLnkPresent() throws Exception { 
+    	
+    	Reporter.log("Verify the 'MPS CAT Property' link with text '[mps:cat-pattern:?]' is present.");
+    	wait.until(ExpectedConditions.visibilityOf(MPSCatProperty_Lnk));
+    }
+    
+    public void EnterPatternForCategoryField(String pattern) throws Exception { 
+    	
+    	Reporter.log("Enter '" + pattern + "' in the 'Pattern for Category Field' text box.");
+    	PatternForCategoryField_Txb.clear();
+    	PatternForCategoryField_Txb.sendKeys(pattern);
     }
 
     public void ClickSaveConfigurationBtn() throws Exception { 

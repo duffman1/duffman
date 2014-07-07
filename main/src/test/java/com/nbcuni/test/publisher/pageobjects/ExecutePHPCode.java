@@ -1,10 +1,13 @@
 package com.nbcuni.test.publisher.pageobjects;
 
+import junit.framework.Assert;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
+
 import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
@@ -25,7 +28,7 @@ public class ExecutePHPCode {
     @FindBy(how = How.ID, using = "edit-code")
     private WebElement PHPCodeToExecute_Txa;
     
-    @FindBy(how = How.ID, using = "input[value='Execute']")
+    @FindBy(how = How.CSS, using = "input[value='Execute']")
     private WebElement Execute_Btn;
     
     @FindBy(how = How.XPATH, using = "//div[@class='messages status']")
@@ -53,6 +56,13 @@ public class ExecutePHPCode {
     	
     	String playerID = playerIDs[1];
     	return playerID;
+    }
+    
+    public void VerifyResponse(String expectedResponse) throws Exception {
+    	
+    	Reporter.log("Verify the expected response is '" + expectedResponse + "'.");
+    	//Assert.assertTrue(Message_Ctr.getText().contains(expectedResponse));
+    	Assert.assertEquals(expectedResponse, Message_Ctr.getText());
     }
     
 }

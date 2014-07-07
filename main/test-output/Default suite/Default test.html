@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Jul 07 11:32:57 EDT 2014</td>
+<td>Started on:</td><td>Mon Jul 07 15:12:42 EDT 2014</td>
 </tr>
-<tr><td>Total time:</td><td>110 seconds (110653 ms)</td>
+<tr><td>Total time:</td><td>127 seconds (127604 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,31 +75,22 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SURF.SURFModule.SURFModule_TC3564()'><b>SURFModule_TC3564</b><br>Test class: com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SURF.SURFModule<br/>
-<a href="#Output-332310904" onClick='toggleBox("Output-332310904", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens.MPSSupportTokens_TC3641()'><b>MPSSupportTokens_TC3641</b><br>Test class: com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens<br/>
+<a href="#Output-517758091" onClick='toggleBox("Output-517758091", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-332310904" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-332310904">
-STEP 1 - N/A<br/>
-STEP 2<br/>
+<a href="#Output-517758091" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-517758091">
+STEP 1<br/>
 Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.<br/>
 Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
 Enter 'pa55word' in the 'Password' text box.<br/>
 Click the 'Login' button.<br/>
-STEP 3 - 9<br/>
+SETUP<br/>
 Click the 'Modules' menu link.<br/>
-Switch to the active frame titled 'Modules dialog'.<br/>
-Enter 'Surf' in the 'Filter Name' text box.<br/>
-Wait for the module titled 'Surf' to appear in the list.<br/>
-Check the 'Surf' check box.<br/>
-Click the 'Save configuration' button.<br/>
-Switch to frame titled 'Some required modules must be enabled'.<br/>
-Switch back to the 'Modules' frame.<br/>
 Switch to frame titled 'Modules'.<br/>
-Verify success message of 'The configuration options have been saved.' is present.<br/>
-Enter 'Pub SURF Example' in the 'Filter Name' text box.<br/>
-Wait for the module titled 'Pub SURF Example' to appear in the list.<br/>
-Check the 'Pub SURF Example' check box.<br/>
+Enter 'Devel' in the 'Filter Name' text box.<br/>
+Wait for the module titled 'Devel' to appear in the list.<br/>
+Check the 'Devel' check box.<br/>
 Click the 'Save configuration' button.<br/>
 Switch to frame titled 'Some required modules must be enabled'.<br/>
 Switch back to the 'Modules' frame.<br/>
@@ -107,58 +98,123 @@ Switch to frame titled 'Modules'.<br/>
 Verify success message of 'The configuration options have been saved.' is present.<br/>
 Click the 'Close Overlay X'.<br/>
 Scroll by '-500'.<br/>
+Mouse over the 'Configuration' menu link.<br/>
+Mouse over the 'Web services' menu link.<br/>
+Click the 'MPS Configuration' menu link.<br/>
+Switch to the active frame titled 'MPS Configuration dialog'.<br/>
+Enter '' in the 'Pattern for Category Field' text box.<br/>
+Click the 'Save configuration' button.<br/>
+Verify success message of 'The configuration options have been saved.' is present.<br/>
+Click the 'Close Overlay X'.<br/>
+Scroll by '-500'.<br/>
+STEP 2 - N/A<br/>
+STEP 3<br/>
+Verify '"cat":"content"' is not present in page source.<br/>
+STEP 4<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Add content' menu link.<br/>
+Click the 'Movie' menu link.<br/>
+Switch to the active frame titled 'Create Movie dialog'.<br/>
+Scroll to and click the 'Basic Information' tab.<br/>
+Enter '134d15e5ce27483' in the 'Title' text box.<br/>
+Switch to the Synopsis frame.<br/>
+Enter a randomized text string into the 'Body' text area.<br/>
+Switch to the active frame titled 'Create Movie dialog'.<br/>
+Click the 'Cover' select button.<br/>
+Switch to the select file frame.<br/>
+Enter the file path for file upload.<br/>
+Click the 'Upload' button.<br/>
+Wait for the file link to be visible after upload.<br/>
+Click the 'Next' button.<br/>
+Click the 'Public Local Files' radio button.<br/>
+Click the 'Next' button.<br/>
+Verify the file image 'HanSolo' is present.<br/>
+Verify the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'Create Movie dialog'.<br/>
+Click the 'Additional Information' link.<br/>
+Select the 'Syndicated' from the 'Movie Type' drop down list.<br/>
+Select the 'G' from the 'Rating' drop down list.<br/>
+Select the 'Action' from the 'Primary Genre' drop down list.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'Movie 134d15e5ce27483 has been created.' is present.<br/>
+Verify '"cat":"content"' is present in page source.<br/>
+STEP 5<br/>
+Click the 'Edit Draft' link in the work bench.<br/>
+Switch to the active frame titled 'Edit Movie 134d15e5ce27483 dialog'.<br/>
+Click the 'URL path settings' link.<br/>
+Uncheck the 'Generate automatic URL alias' check box.<br/>
+Enter '6eb5be85ec' in the 'URL alias' text box.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'Movie 134d15e5ce27483 has been updated.' is present.<br/>
+STEP 6<br/>
+Verify '"cat":"content"' is not present in page source.<br/>
+STEP 7<br/>
+Click the 'Edit Draft' link in the work bench.<br/>
+Switch to the active frame titled 'Edit Movie 134d15e5ce27483 dialog'.<br/>
+Click the 'URL path settings' link.<br/>
+Enter '6eb5be85ec/mps-testing/2arg/3arg/4arg/5arg/6arg' in the 'URL alias' text box.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'Movie 134d15e5ce27483 has been updated.' is present.<br/>
+STEP 8<br/>
+Verify '"cat":"6eb5be85ec|mps-testing|2arg"}' is present in page source.<br/>
+STEP 9<br/>
+Mouse over the 'Configuration' menu link.<br/>
+Mouse over the 'Web services' menu link.<br/>
+Click the 'MPS Configuration' menu link.<br/>
+Switch to the active frame titled 'MPS Configuration dialog'.<br/>
+Click the 'REPLACEMENT PATTERNS' link.<br/>
+Click the 'MPS' link.<br/>
+Verify the 'MPS CAT Property' link with text '[mps:cat-pattern:?]' is present.<br/>
+Enter '[mps:cat-pattern:?]' in the 'Pattern for Category Field' text box.<br/>
 STEP 10<br/>
-Mouse over the 'Structure' menu link.<br/>
-Click the 'Blocks' menu link.<br/>
-Switch to the active frame titled 'Blocks dialog'.<br/>
+Click the 'Save configuration' button.<br/>
+Verify success message of 'The configuration options have been saved.' is present.<br/>
+Click the 'Close Overlay X'.<br/>
+Scroll by '-500'.<br/>
 STEP 11<br/>
-Select the block name 'Surf Example Actions' from the 'Sidebar first' drop down list.<br/>
-Select the block name 'Surf Example Content' from the 'Sidebar first' drop down list.<br/>
-Click the 'Save Blocks' button.<br/>
-Verify success message of 'The block settings have been updated.' is present.<br/>
+Verify '"cat":"6eb5be85ec|mps-testing|2arg|3arg|4arg"}' is present in page source.<br/>
+STEP 12<br/>
+Switch to the active frame titled 'Execute PHP Code dialog'.<br/>
+Enter 'variable_set('mps_cat_pattern', '');echo _mps_build_cat();echo PHP_EOL;variable_set('mps_cat_pattern', '[mps:cat-pattern:?]');echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/cast'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/thisisareallyreallyreallyreallyreallyreallylongurlXXXXXX/season/episode/cast/name'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/thisisareallyreallyreallyreallyreallyreallylongurlXXXXXX/season/episode/cast/'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/show//episode/cast'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/show/season//episode//'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => '/show/season//'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => '/show///'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => '/brand/season//episode'));echo PHP_EOL;variable_set('mps_cat_pattern', '[mps:cat-pattern:2]|[mps:cat-pattern:3]');echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/cast'));echo PHP_EOL;variable_set('mps_cat_pattern', '[mps:cat-pattern:0]|[mps:cat-pattern:2]|[current-date:custom:d]|[mps:cat-pattern:3]|');echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/cast'));variable_set('mps_cat_pattern', '[mps:cat-pattern:?]');echo PHP_EOL;echo '*' . _mps_build_cat(array('aliased-path' => '/')) . '*';' in the 'PHP Code to Execute' text area.<br/>
+Click the 'Execute' button.<br/>
+Verify the expected response is 'Status message
+devel
+brand|show|season|episode
+brand|thisisareallyreallyreallyreallyreallyreallylongurl|season|episode|cast
+brand|thisisareallyreallyreallyreallyreallyreallylongurl|season|episode|cast
+brand|show|~|episode
+brand|show|season
+brand|show|season|~|episode
+~|show
+
+~|brand|season
+season|episode
+brand|season|07
+**'.<br/>
 Click the 'Close Overlay X'.<br/>
 Scroll by '-500'.<br/>
-STEP 12 - N/A<br/>
-STEP 13 - N/A<br/>
-STEP 14<br/>
-Click the 'Sign-in' button.<br/>
-STEP 15<br/>
-Switch to the Surf frame.<br/>
-Enter 'brandon.clark@nbcuni.com' in the 'Email or Username' text box.<br/>
-Enter 'tufNewcyd4#' in the 'Password' text box.<br/>
-Click the 'Sign In' button.<br/>
-Verify surf username 'baclark77' is present.<br/>
-STEP 16 - N/A<br/>
-STEP 17<br/>
-Click the 'Sign Out' button.<br/>
-Verify the 'Sign In' button is present.<br/>
-STEP 18 - N/A<br/>
 CLEANUP<br/>
-Mouse over the 'Structure' menu link.<br/>
-Click the 'Blocks' menu link.<br/>
-Switch to the active frame titled 'Blocks dialog'.<br/>
-Select the block name 'Surf Example Actions' from the '- None -' drop down list.<br/>
-Select the block name 'Surf Example Content' from the '- None -' drop down list.<br/>
-Click the 'Save Blocks' button.<br/>
-Click the 'Close Overlay X'.<br/>
-Scroll by '-500'.<br/>
 Click the 'Modules' menu link.<br/>
 Switch to the active frame titled 'Modules dialog'.<br/>
-Enter 'Pub SURF Example' in the 'Filter Name' text box.<br/>
-Wait for the module titled 'Pub SURF Example' to appear in the list.<br/>
-Uncheck the 'Pub SURF Example' module checkbox.<br/>
+Enter 'Devel' in the 'Filter Name' text box.<br/>
+Wait for the module titled 'Devel' to appear in the list.<br/>
+Uncheck the 'Devel' module checkbox.<br/>
 Click the 'Save configuration' button.<br/>
 Verify success message of 'The configuration options have been saved.' is present.<br/>
-Enter 'Surf' in the 'Filter Name' text box.<br/>
-Wait for the module titled 'Surf' to appear in the list.<br/>
-Uncheck the 'Surf' module checkbox.<br/>
+Click the 'Close Overlay X'.<br/>
+Scroll by '-500'.<br/>
+Mouse over the 'Configuration' menu link.<br/>
+Mouse over the 'Web services' menu link.<br/>
+Click the 'MPS Configuration' menu link.<br/>
+Switch to the active frame titled 'MPS Configuration dialog'.<br/>
+Enter '' in the 'Pattern for Category Field' text box.<br/>
 Click the 'Save configuration' button.<br/>
-Verify success message of 'The configuration options have been saved.' is present.<br/>
 </div>
 </td>
 <td></td>
-<td>107</td>
-<td>com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SURF.SURFModule@5b5b0e9f</td></tr>
+<td>124</td>
+<td>com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens@7aa7f835</td></tr>
 </table><p>
 </body>
 </html>

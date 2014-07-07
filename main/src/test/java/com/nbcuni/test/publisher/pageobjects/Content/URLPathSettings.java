@@ -51,6 +51,14 @@ public class URLPathSettings {
     	wait.until(ExpectedConditions.visibilityOf(GenerateAutomaticURLAlias_Cbx));
     }
     
+    public void UnCheckGenerateAutomaticURLAliasCbx() throws Exception {
+    	
+    	Reporter.log("Uncheck the 'Generate automatic URL alias' check box.");
+    	if (GenerateAutomaticURLAlias_Cbx.isSelected() == true) {
+    		GenerateAutomaticURLAlias_Cbx.click();
+    	}
+    }
+    
     public void EnterURLAlias(String alias) throws Exception {
         
     	Reporter.log("Enter '" + alias + "' in the 'URL alias' text box.");
