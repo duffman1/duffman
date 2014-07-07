@@ -81,7 +81,8 @@ public class SSODefinedDomains extends ParentTest {
 	    userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
 	    taxonomy.NavigateSite("People");
 	    overlay.SwitchToActiveFrame();
-	    People people = new People(webDriver);
+	    People people = new People(webDriver, applib);
+	    people.SeachForUsername("Brandon.Clark");
 	    people.ClickUsernameLnk("Brandon.Clark");
 	        
 	    Reporter.log("STEP 13");
@@ -94,13 +95,24 @@ public class SSODefinedDomains extends ParentTest {
 	    Reporter.log("STEP 14 - 16 TODO");
 	        
 	    Reporter.log("STEP 17");
+	    taxonomy.NavigateSite("Home");
 	    taxonomy.NavigateSite("Modules");
+	    overlay.SwitchToActiveFrame();
 	    modules.EnterFilterName("Pub SSO");
 	    modules.DisableModule("Pub SSO");
 	    modules.EnterFilterName("simpleSAMLphp authentication");
 	    Thread.sleep(1000);
 	    modules.DisableModule("simpleSAMLphp authentication");
-	        
+	    overlay.ClickCloseOverlayLnk();
+	    taxonomy.NavigateSite("Modules>>Uninstall");
+	    overlay.SwitchToActiveFrame();
+        modules.UninstallModule("Pub SSO");
+        overlay.ClickCloseOverlayLnk();
+        taxonomy.NavigateSite("Modules>>Uninstall");
+        overlay.SwitchToActiveFrame();
+        modules.UninstallModule("simpleSAMLphp authentication");
+        overlay.ClickCloseOverlayLnk();
+        
 	    Reporter.log("STEP 18");
 	    taxonomy.NavigateSite("Home>>Flush all caches");
 		
