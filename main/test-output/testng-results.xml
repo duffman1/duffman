@@ -2,10 +2,13 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
     <line>
-      <![CDATA[STEP 1]]>
+      <![CDATA[STEP 1 - N/A]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]>
+      <![CDATA[STEP 2]]>
+    </line>
+    <line>
+      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
     </line>
     <line>
       <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
@@ -17,22 +20,22 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[STEP 2]]>
+      <![CDATA[STEP 3 - 9]]>
     </line>
     <line>
       <![CDATA[Click the 'Modules' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to frame titled 'Modules'.]]>
+      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Pub SSO' in the 'Filter Name' text box.]]>
+      <![CDATA[Enter 'Surf' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Wait for the module titled 'Pub SSO' to appear in the list.]]>
+      <![CDATA[Wait for the module titled 'Surf' to appear in the list.]]>
     </line>
     <line>
-      <![CDATA[Check the 'Pub SSO' check box.]]>
+      <![CDATA[Check the 'Surf' check box.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save configuration' button.]]>
@@ -41,7 +44,28 @@
       <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Continue' button to enable additional modules.]]>
+      <![CDATA[Switch back to the 'Modules' frame.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to frame titled 'Modules'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Pub SURF Example' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the module titled 'Pub SURF Example' to appear in the list.]]>
+    </line>
+    <line>
+      <![CDATA[Check the 'Pub SURF Example' check box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configuration' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
     </line>
     <line>
       <![CDATA[Switch back to the 'Modules' frame.]]>
@@ -59,82 +83,31 @@
       <![CDATA[Scroll by '-500'.]]>
     </line>
     <line>
-      <![CDATA[STEP 3]]>
+      <![CDATA[STEP 10]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Configuration' menu link.]]>
+      <![CDATA[Mouse over the 'Structure' menu link.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'People' menu link.]]>
+      <![CDATA[Click the 'Blocks' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'SimpleSAMLphp Auth Settings' menu link.]]>
+      <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'People dialog'.]]>
+      <![CDATA[STEP 11]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'SimpleSAMLphp authentication is NOT yet activated.' is present.]]>
+      <![CDATA[Select the block name 'Surf Example Actions' from the 'Sidebar first' drop down list.]]>
     </line>
     <line>
-      <![CDATA[STEP 4]]>
+      <![CDATA[Select the block name 'Surf Example Content' from the 'Sidebar first' drop down list.]]>
     </line>
     <line>
-      <![CDATA[Verify the 'Activate authentication via SimpleSAMLphp' check box is unchecked.]]>
+      <![CDATA[Click the 'Save Blocks' button.]]>
     </line>
     <line>
-      <![CDATA[Verify the value of the 'Installation directory' text box equals '/mnt/www/html/nbcupublisher7qa5/simplesamlphp' and the text box is disabled.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the value of the 'Authentication source for this SP' text box equals 'pub-qa5install' and the text box is disabled.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the ' Force https for login links' check box is checked and disabled.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the value of the 'Which attribute from simpleSAMLphp should be used as user's name' text box equals 'email' and the text box is disabled.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the value of the 'Which attribute from simpleSAMLphp should be used as unique identifier for the user' text box equals 'uid' and the text box is disabled.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the value of the 'Which attribute from simpleSAMLphp should be used as user mail address' text box equals 'email' and the text box is disabled.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 5]]>
-    </line>
-    <line>
-      <![CDATA[Enter the file path for certificate upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'A certificate exists for this instance of SimpleSAMLphp.' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 6]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 7]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Activate authentication via SimpleSAMLphp' check box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+      <![CDATA[Verify success message of 'The block settings have been updated.' is present.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
@@ -143,94 +116,76 @@
       <![CDATA[Scroll by '-500'.]]>
     </line>
     <line>
-      <![CDATA[STEP 8]]>
+      <![CDATA[STEP 12 - N/A]]>
     </line>
     <line>
-      <![CDATA[Click the 'Logout' button.]]>
+      <![CDATA[STEP 13 - N/A]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com/saml_login'.]]>
+      <![CDATA[STEP 14]]>
     </line>
     <line>
-      <![CDATA[STEP 9]]>
+      <![CDATA[Click the 'Sign-in' button.]]>
     </line>
     <line>
-      <![CDATA[Enter '206424392' in the 'SSO ID' text box.]]>
+      <![CDATA[STEP 15]]>
     </line>
     <line>
-      <![CDATA[Enter 'tufNewcyd577BC' in the 'Password' text box.]]>
+      <![CDATA[Switch to the Surf frame.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'brandon.clark@nbcuni.com' in the 'Email or Username' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'tufNewcyd4#' in the 'Password' text box.]]>
     </line>
     <line>
       <![CDATA[Click the 'Sign In' button.]]>
     </line>
     <line>
-      <![CDATA[STEP 10]]>
+      <![CDATA[Verify surf username 'baclark77' is present.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'Modules' is NOT present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 11]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'Brandon.Clark@nbcuni.com' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 12]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Logout' button.]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com/user'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Login' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'People' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'People dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'next >' link until user 'Brandon.Clark' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'People dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Brandon.Clark' link from the 'USERNAME' list.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 13]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com/admin/config/people/simplesamlphp_auth'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Activate authentication via SimpleSAMLphp' check box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'SimpleSAMLphp authentication is NOT yet activated.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 14 - 16 TODO]]>
+      <![CDATA[STEP 16 - N/A]]>
     </line>
     <line>
       <![CDATA[STEP 17]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Sign Out' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Sign In' button is present.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 18 - N/A]]>
+    </line>
+    <line>
+      <![CDATA[CLEANUP]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Structure' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Blocks' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Select the block name 'Surf Example Actions' from the '- None -' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Select the block name 'Surf Example Content' from the '- None -' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save Blocks' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll by '-500'.]]>
     </line>
     <line>
       <![CDATA[Click the 'Modules' menu link.]]>
@@ -239,28 +194,13 @@
       <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Pub SSO' in the 'Filter Name' text box.]]>
+      <![CDATA[Enter 'Pub SURF Example' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Wait for the module titled 'Pub SSO' to appear in the list.]]>
+      <![CDATA[Wait for the module titled 'Pub SURF Example' to appear in the list.]]>
     </line>
     <line>
-      <![CDATA[Uncheck the 'Pub SSO' module checkbox.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'simpleSAMLphp authentication' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the module titled 'simpleSAMLphp authentication' to appear in the list.]]>
-    </line>
-    <line>
-      <![CDATA[Uncheck the 'simpleSAMLphp authentication' module checkbox.]]>
+      <![CDATA[Uncheck the 'Pub SURF Example' module checkbox.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save configuration' button.]]>
@@ -269,104 +209,47 @@
       <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
+      <![CDATA[Enter 'Surf' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Scroll by '-500'.]]>
+      <![CDATA[Wait for the module titled 'Surf' to appear in the list.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Modules' menu link.]]>
+      <![CDATA[Uncheck the 'Surf' module checkbox.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Uninstall' menu link.]]>
+      <![CDATA[Click the 'Save configuration' button.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Pub SSO' uninstall checkbox.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Uninstall' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Confirm uninstall dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'The following modules will be completely uninstalled from your site, and all data from these modules will be lost!' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'Pub SSO' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Uninstall' button to confirm.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll by '-500'.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Modules' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Uninstall' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'simpleSAMLphp authentication' uninstall checkbox.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Uninstall' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Confirm uninstall dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'The following modules will be completely uninstalled from your site, and all data from these modules will be lost!' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'simpleSAMLphp authentication' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Uninstall' button to confirm.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll by '-500'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 18]]>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="147892" started-at="2014-07-07T12:48:17Z" finished-at="2014-07-07T12:50:45Z">
+  <suite name="Default suite" duration-ms="110653" started-at="2014-07-07T15:32:57Z" finished-at="2014-07-07T15:34:48Z">
     <groups>
       <group name="full">
-        <method signature="SSODefinedDomains.SSODefinedDomains_TC3474()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSODefinedDomains@569fc9fe]" name="SSODefinedDomains_TC3474" class="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSODefinedDomains"/>
+        <method signature="SURFModule.SURFModule_TC3564()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SURF.SURFModule@5b5b0e9f]" name="SURFModule_TC3564" class="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SURF.SURFModule"/>
       </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="147892" started-at="2014-07-07T12:48:17Z" finished-at="2014-07-07T12:50:45Z">
-      <class name="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSODefinedDomains">
-        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSODefinedDomains@569fc9fe]" name="startGridAndHub" is-config="true" duration-ms="11648" started-at="2014-07-07T08:48:06Z" finished-at="2014-07-07T08:48:17Z">
+    <test name="Default test" duration-ms="110653" started-at="2014-07-07T15:32:57Z" finished-at="2014-07-07T15:34:48Z">
+      <class name="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SURF.SURFModule">
+        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SURF.SURFModule@5b5b0e9f]" name="startGridAndHub" is-config="true" duration-ms="11777" started-at="2014-07-07T11:32:45Z" finished-at="2014-07-07T11:32:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startGridAndHub -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSODefinedDomains@569fc9fe]" name="startSelenium" is-config="true" duration-ms="2483" started-at="2014-07-07T08:48:17Z" finished-at="2014-07-07T08:48:20Z">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SURF.SURFModule@5b5b0e9f]" name="startSelenium" is-config="true" duration-ms="2417" started-at="2014-07-07T11:32:57Z" finished-at="2014-07-07T11:32:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="SSODefinedDomains_TC3474()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSODefinedDomains@569fc9fe]" name="SSODefinedDomains_TC3474" duration-ms="144824" started-at="2014-07-07T08:48:20Z" finished-at="2014-07-07T08:50:45Z">
+        <test-method status="PASS" signature="SURFModule_TC3564()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SURF.SURFModule@5b5b0e9f]" name="SURFModule_TC3564" duration-ms="107653" started-at="2014-07-07T11:32:59Z" finished-at="2014-07-07T11:34:47Z">
           <reporter-output>
             <line>
-              <![CDATA[STEP 1]]>
+              <![CDATA[STEP 1 - N/A]]>
             </line>
             <line>
-              <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]>
+              <![CDATA[STEP 2]]>
+            </line>
+            <line>
+              <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
             </line>
             <line>
               <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
@@ -378,22 +261,22 @@
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
-              <![CDATA[STEP 2]]>
+              <![CDATA[STEP 3 - 9]]>
             </line>
             <line>
               <![CDATA[Click the 'Modules' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to frame titled 'Modules'.]]>
+              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
             </line>
             <line>
-              <![CDATA[Enter 'Pub SSO' in the 'Filter Name' text box.]]>
+              <![CDATA[Enter 'Surf' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Wait for the module titled 'Pub SSO' to appear in the list.]]>
+              <![CDATA[Wait for the module titled 'Surf' to appear in the list.]]>
             </line>
             <line>
-              <![CDATA[Check the 'Pub SSO' check box.]]>
+              <![CDATA[Check the 'Surf' check box.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save configuration' button.]]>
@@ -402,7 +285,28 @@
               <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Continue' button to enable additional modules.]]>
+              <![CDATA[Switch back to the 'Modules' frame.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to frame titled 'Modules'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Pub SURF Example' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the module titled 'Pub SURF Example' to appear in the list.]]>
+            </line>
+            <line>
+              <![CDATA[Check the 'Pub SURF Example' check box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configuration' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
             </line>
             <line>
               <![CDATA[Switch back to the 'Modules' frame.]]>
@@ -420,82 +324,31 @@
               <![CDATA[Scroll by '-500'.]]>
             </line>
             <line>
-              <![CDATA[STEP 3]]>
+              <![CDATA[STEP 10]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Configuration' menu link.]]>
+              <![CDATA[Mouse over the 'Structure' menu link.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'People' menu link.]]>
+              <![CDATA[Click the 'Blocks' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'SimpleSAMLphp Auth Settings' menu link.]]>
+              <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'People dialog'.]]>
+              <![CDATA[STEP 11]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'SimpleSAMLphp authentication is NOT yet activated.' is present.]]>
+              <![CDATA[Select the block name 'Surf Example Actions' from the 'Sidebar first' drop down list.]]>
             </line>
             <line>
-              <![CDATA[STEP 4]]>
+              <![CDATA[Select the block name 'Surf Example Content' from the 'Sidebar first' drop down list.]]>
             </line>
             <line>
-              <![CDATA[Verify the 'Activate authentication via SimpleSAMLphp' check box is unchecked.]]>
+              <![CDATA[Click the 'Save Blocks' button.]]>
             </line>
             <line>
-              <![CDATA[Verify the value of the 'Installation directory' text box equals '/mnt/www/html/nbcupublisher7qa5/simplesamlphp' and the text box is disabled.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the value of the 'Authentication source for this SP' text box equals 'pub-qa5install' and the text box is disabled.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the ' Force https for login links' check box is checked and disabled.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the value of the 'Which attribute from simpleSAMLphp should be used as user's name' text box equals 'email' and the text box is disabled.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the value of the 'Which attribute from simpleSAMLphp should be used as unique identifier for the user' text box equals 'uid' and the text box is disabled.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the value of the 'Which attribute from simpleSAMLphp should be used as user mail address' text box equals 'email' and the text box is disabled.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 5]]>
-            </line>
-            <line>
-              <![CDATA[Enter the file path for certificate upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'A certificate exists for this instance of SimpleSAMLphp.' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 6]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 7]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Activate authentication via SimpleSAMLphp' check box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+              <![CDATA[Verify success message of 'The block settings have been updated.' is present.]]>
             </line>
             <line>
               <![CDATA[Click the 'Close Overlay X'.]]>
@@ -504,94 +357,76 @@
               <![CDATA[Scroll by '-500'.]]>
             </line>
             <line>
-              <![CDATA[STEP 8]]>
+              <![CDATA[STEP 12 - N/A]]>
             </line>
             <line>
-              <![CDATA[Click the 'Logout' button.]]>
+              <![CDATA[STEP 13 - N/A]]>
             </line>
             <line>
-              <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com/saml_login'.]]>
+              <![CDATA[STEP 14]]>
             </line>
             <line>
-              <![CDATA[STEP 9]]>
+              <![CDATA[Click the 'Sign-in' button.]]>
             </line>
             <line>
-              <![CDATA[Enter '206424392' in the 'SSO ID' text box.]]>
+              <![CDATA[STEP 15]]>
             </line>
             <line>
-              <![CDATA[Enter 'tufNewcyd577BC' in the 'Password' text box.]]>
+              <![CDATA[Switch to the Surf frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'brandon.clark@nbcuni.com' in the 'Email or Username' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'tufNewcyd4#' in the 'Password' text box.]]>
             </line>
             <line>
               <![CDATA[Click the 'Sign In' button.]]>
             </line>
             <line>
-              <![CDATA[STEP 10]]>
+              <![CDATA[Verify surf username 'baclark77' is present.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'Modules' is NOT present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 11]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'Brandon.Clark@nbcuni.com' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 12]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Logout' button.]]>
-            </line>
-            <line>
-              <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com/user'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Login' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'People' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'People dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'next >' link until user 'Brandon.Clark' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'People dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Brandon.Clark' link from the 'USERNAME' list.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 13]]>
-            </line>
-            <line>
-              <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com/admin/config/people/simplesamlphp_auth'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Activate authentication via SimpleSAMLphp' check box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'SimpleSAMLphp authentication is NOT yet activated.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 14 - 16 TODO]]>
+              <![CDATA[STEP 16 - N/A]]>
             </line>
             <line>
               <![CDATA[STEP 17]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Sign Out' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Sign In' button is present.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 18 - N/A]]>
+            </line>
+            <line>
+              <![CDATA[CLEANUP]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Structure' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Blocks' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Select the block name 'Surf Example Actions' from the '- None -' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Select the block name 'Surf Example Content' from the '- None -' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save Blocks' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll by '-500'.]]>
             </line>
             <line>
               <![CDATA[Click the 'Modules' menu link.]]>
@@ -600,28 +435,13 @@
               <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
             </line>
             <line>
-              <![CDATA[Enter 'Pub SSO' in the 'Filter Name' text box.]]>
+              <![CDATA[Enter 'Pub SURF Example' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Wait for the module titled 'Pub SSO' to appear in the list.]]>
+              <![CDATA[Wait for the module titled 'Pub SURF Example' to appear in the list.]]>
             </line>
             <line>
-              <![CDATA[Uncheck the 'Pub SSO' module checkbox.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'simpleSAMLphp authentication' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the module titled 'simpleSAMLphp authentication' to appear in the list.]]>
-            </line>
-            <line>
-              <![CDATA[Uncheck the 'simpleSAMLphp authentication' module checkbox.]]>
+              <![CDATA[Uncheck the 'Pub SURF Example' module checkbox.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save configuration' button.]]>
@@ -630,98 +450,38 @@
               <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
+              <![CDATA[Enter 'Surf' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Scroll by '-500'.]]>
+              <![CDATA[Wait for the module titled 'Surf' to appear in the list.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Modules' menu link.]]>
+              <![CDATA[Uncheck the 'Surf' module checkbox.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Uninstall' menu link.]]>
+              <![CDATA[Click the 'Save configuration' button.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Pub SSO' uninstall checkbox.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Uninstall' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Confirm uninstall dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'The following modules will be completely uninstalled from your site, and all data from these modules will be lost!' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'Pub SSO' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Uninstall' button to confirm.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll by '-500'.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Modules' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Uninstall' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'simpleSAMLphp authentication' uninstall checkbox.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Uninstall' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Confirm uninstall dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'The following modules will be completely uninstalled from your site, and all data from these modules will be lost!' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'simpleSAMLphp authentication' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Uninstall' button to confirm.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll by '-500'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 18]]>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- SSODefinedDomains_TC3474 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSODefinedDomains@569fc9fe]" name="stopSelenium" is-config="true" duration-ms="574" started-at="2014-07-07T08:50:45Z" finished-at="2014-07-07T08:50:45Z">
+        </test-method> <!-- SURFModule_TC3564 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SURF.SURFModule@5b5b0e9f]" name="stopSelenium" is-config="true" duration-ms="572" started-at="2014-07-07T11:34:47Z" finished-at="2014-07-07T11:34:48Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=SSODefinedDomains_TC3474 status=SUCCESS method=SSODefinedDomains.SSODefinedDomains_TC3474()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSODefinedDomains@569fc9fe] output=STEP 1]]]>
+                <![CDATA[[TestResult name=SURFModule_TC3564 status=SUCCESS method=SURFModule.SURFModule_TC3564()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SURF.SURFModule@5b5b0e9f] output=STEP 1 - N/A]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSODefinedDomains@569fc9fe]" name="stopGridAndHub" is-config="true" duration-ms="383" started-at="2014-07-07T08:50:45Z" finished-at="2014-07-07T08:50:46Z">
+        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SURF.SURFModule@5b5b0e9f]" name="stopGridAndHub" is-config="true" duration-ms="374" started-at="2014-07-07T11:34:48Z" finished-at="2014-07-07T11:34:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopGridAndHub -->
-      </class> <!-- com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSODefinedDomains -->
+      </class> <!-- com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SURF.SURFModule -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
