@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Pub 7 Consecutive Suite]">
+<suite thread-count="2" name="Failed suite [Pub 7 Concurrent Suite]" parallel="classes">
   <parameter name="ReRunOnFailure" value="true"/>
   <parameter name="LocalAppiumHubPort" value="4724"/>
   <parameter name="Device" value="Iphone Simulator"/>
@@ -29,12 +29,13 @@
   <parameter name="RunMobile" value="false"/>
   <parameter name="RallyWorkspace" value="Digital Products"/>
   <parameter name="SendReportEmailAddress" value="brandon.clark@nbcuni.com"/>
-  <parameter name="UpdateIndividualRallyTCs" value="true"/>
+  <parameter name="UpdateIndividualRallyTCs" value="false"/>
   <parameter name="PathToSikuliImages" value="/src/test/java/com/nbcuni/test/publisher/lib/sikuli/images/"/>
-  <parameter name="UploadReportToRally" value="true"/>
+  <parameter name="UploadReportToRally" value="false"/>
   <parameter name="ImplicitWaitTime" value="20"/>
   <parameter name="MPXAssetBufferPause" value="0"/>
   <parameter name="GmailPassword" value="Pub7NBCUAutoEmailPassword1"/>
+  <parameter name="PathToHarReports" value="/test-output/"/>
   <parameter name="LocalWebDriverHubPort" value="4444"/>
   <parameter name="IRCChannel" value="#nbcuots_pub7"/>
   <parameter name="SikuliImageWaitTime" value="30"/>
@@ -43,22 +44,28 @@
   <listeners>
     <listener class-name="com.nbcuni.test.publisher.common.CustomReport"/>
   </listeners>
-  <test name="All Consecutive Web Tests(failed)">
+  <test name="All Concurrent Web Tests(failed)" parallel="classes">
     <groups>
       <run>
         <include name="full"/>
       </run>
     </groups>
     <classes>
-      <class name="com.nbcuni.test.publisher.tests.Setup.TestSetup">
+      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile">
         <methods>
           <include name="startSelenium"/>
           <include name="stopGridAndHub"/>
           <include name="startGridAndHub"/>
           <include name="stopSelenium"/>
-          <include name="TestSetup_Test"/>
         </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.Setup.TestSetup -->
+      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile -->
+      <class name="com.nbcuni.test.publisher.tests.Performance.PageLoads">
+        <methods>
+          <include name="startSelenium"/>
+          <include name="PageLoads_Test"/>
+          <include name="stopSelenium"/>
+        </methods>
+      </class> <!-- com.nbcuni.test.publisher.tests.Performance.PageLoads -->
     </classes>
-  </test> <!-- All Consecutive Web Tests(failed) -->
-</suite> <!-- Failed suite [Pub 7 Consecutive Suite] -->
+  </test> <!-- All Concurrent Web Tests(failed) -->
+</suite> <!-- Failed suite [Pub 7 Concurrent Suite] -->

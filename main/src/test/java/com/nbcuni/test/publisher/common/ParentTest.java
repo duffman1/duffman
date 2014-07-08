@@ -6,6 +6,10 @@ import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.Taxonomy.Taxonomy;
 import com.nbcuni.test.publisher.common.Driver.Driver;
 
+import cz.mallat.uasparser.OnlineUpdateUASparser;
+
+import org.browsermob.proxy.ProxyServer;
+import org.browsermob.proxy.http.BrowserMobHttpClient;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -29,6 +33,7 @@ public class ParentTest {
     protected Config config = new Config();
     protected ContentParent contentParent;
     protected StartGridHubNode startGridHubNode;
+    public ProxyServer proxyServer = null;
     
     @BeforeSuite(alwaysRun = true)
     public void startGridAndHub() throws Exception {
@@ -37,6 +42,11 @@ public class ParentTest {
     		startGridHubNode = new StartGridHubNode();
     		startGridHubNode.start();
     	}
+    	
+    	((OnlineUpdateUASparser) BrowserMobHttpClient.PARSER).setUpdateInterval(375);
+    	proxyServer = new ProxyServer(9090);
+    	proxyServer.start();
+    	
     }
     
     @BeforeMethod(alwaysRun = true)
@@ -103,6 +113,8 @@ public class ParentTest {
     	if (config.getConfigValue("RunMobile").equals("false")) {
     		startGridHubNode.stop();
     	}
+    	
+    	proxyServer.stop();
 
     }
     

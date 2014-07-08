@@ -32,6 +32,7 @@ public class ImplementTVEModulesCore extends ParentTest {
 		Modules modules = new Modules(webDriver, applib);
 		modules.VerifyModuleEnabled("jQuery Update");
 		jQueryUpdate jqueryUpdate = new jQueryUpdate(webDriver);
+		Thread.sleep(2000);
         applib.openSitePage("/admin/config/development/jquery_update");
         jqueryUpdate.SelectDefaultjQueryVersion("1.5");
         jqueryUpdate.ClickSaveConfigurationBtn();

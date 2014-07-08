@@ -2,9 +2,12 @@ package com.nbcuni.test.publisher.common.Driver;
 
 import java.net.URL;
 import java.util.Arrays;
+
+import org.openqa.selenium.Proxy;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.Assert;
+
 import com.nbcuni.test.publisher.common.Config;
 
 /*********************************************
@@ -87,7 +90,10 @@ public class DriverSetup {
         }
         
         capabilities.setCapability(CapabilityType.TAKES_SCREENSHOT, true);
-
+        
+        Proxy browserMobProxy = new Proxy().setHttpProxy("localhost:9090");
+        capabilities.setCapability("proxy", browserMobProxy);
+		
         try {
 
              driver = new Driver(new URL(hubAddress), capabilities);

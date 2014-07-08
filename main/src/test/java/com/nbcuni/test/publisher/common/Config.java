@@ -48,6 +48,11 @@ public class Config {
     	return fileLoc.replace("/", File.separator);
     }
     
+    public String getPathToHarReports() {
+    	String fileLoc = System.getProperty("user.dir") + this.getConfigValue("PathToHarReports");
+    	return fileLoc.replace("/", File.separator);
+    }
+    
     public String getPathToScreenshots() {
     	String fileLoc = System.getProperty("user.dir") + this.getConfigValue("PathToScreenshots");
     	return fileLoc.replace("/", File.separator);

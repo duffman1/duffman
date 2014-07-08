@@ -148,7 +148,16 @@ public class CustomReport extends EmailableReporter {
 		
   	  	} catch (IOException e) { System.out.println("Failed to copy emailable-report.html to reports directory."); }
 
-  	  	//create a new zip report file and attach html report and failed screenshots
+  	  	//copy the emailable har file to the reports directory
+  	  	File harResultsFile = new File(outputDirectory + File.separator + "DefaultHar.har");
+  	  	String harFilePath = filePath.replace(".html", ".har");
+  	  	try {
+	  		FileUtils.copyFile(harResultsFile, new File(harFilePath));
+	  		System.out.println("Har Report saved to: " + harFilePath);
+		
+	  	} catch (IOException e) { System.out.println("Failed to copy DefaultHar.har to reports directory."); }
+
+  	  	//create a new zip report file and attach html report, har report, and failed screenshots
   	  	String zipFilePath = filePath.replace(".html", ".zip");
   	  	String zipFileName = environmentTitle + "-" + attachmentDateTimeFormat.format(date) + ".zip";
   	  	try {
@@ -160,6 +169,7 @@ public class CustomReport extends EmailableReporter {
   	  		AddFilesToZip addFilesToZip = new AddFilesToZip();
   	  		List<File> allFilesToZip = new ArrayList<File>();
   	  		allFilesToZip.add(new File(filePath));
+  	  		allFilesToZip.add(new File(harFilePath));
   	  		
   	  		for (String failedScreenshot : failedScreenshots) {
 	  			allFilesToZip.add(new File(failedScreenshot));

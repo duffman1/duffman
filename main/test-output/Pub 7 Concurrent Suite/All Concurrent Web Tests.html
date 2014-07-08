@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>All Concurrent Web Tests</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/3/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>4/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Jul 08 12:20:30 EDT 2014</td>
+<td>Started on:</td><td>Tue Jul 08 16:59:02 EDT 2014</td>
 </tr>
-<tr><td>Total time:</td><td>50 seconds (50358 ms)</td>
+<tr><td>Total time:</td><td>107 seconds (107263 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td>full </td>
 </tr><tr>
@@ -67,8 +67,8 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
@@ -76,133 +76,381 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile.CreateCharacterProfile_TC1041()'><b>CreateCharacterProfile_TC1041</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile<br/>
-<a href="#Output-534928452" onClick='toggleBox("Output-534928452", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1911250303" onClick='toggleBox("Output-1911250303", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-534928452" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-534928452">
-Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.<br/>
+<a href="#Output-1911250303" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1911250303">
+Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.<br/>
 Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
 Enter 'pa55word' in the 'Password' text box.<br/>
 Click the 'Login' button.<br/>
-Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCharacterProfile_TC1041_070814122040PM.png <br/>
-<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCharacterProfile_TC1041_070814122040PM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCharacterProfile_TC1041_070814122040PM.png' height='500' width='500'/> </a><br/>
-Cache was cleared on test failure<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Add content' menu link.<br/>
+Click the 'Character Profile' menu link.<br/>
+Switch to the active frame titled 'Create Character Profile dialog'.<br/>
+Enter '453d717a861348b' in the 'Character First Name' text box.<br/>
+Click the Cover Photo 'Select' button.<br/>
+Switch to the select file frame.<br/>
+Enter the file path for file upload.<br/>
+Click the 'Upload' button.<br/>
+Wait for the file link to be visible after upload.<br/>
+Click the 'Next' button.<br/>
+Click the 'Public Local Files' radio button.<br/>
+Click the 'Next' button.<br/>
+Verify the file image 'HanSolo' is present.<br/>
+Verify the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Switch to frame titled 'Create Character Profile'.<br/>
+Assert that img source of the Cover Photo contains 'HanSolo'.<br/>
+Assert the the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'Character Profile 453d717a861348b has been created.' is present.<br/>
 </div>
 </td>
-<td><div><pre>junit.framework.AssertionFailedError
-	at junit.framework.Assert.fail(Assert.java:47)
-	at junit.framework.Assert.fail(Assert.java:53)
-	at com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile.CreateCharacterProfile_TC1041(CreateCharacterProfile.java:27)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace534928452", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace534928452'><pre>junit.framework.AssertionFailedError
-	at junit.framework.Assert.fail(Assert.java:47)
-	at junit.framework.Assert.fail(Assert.java:53)
-	at com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile.CreateCharacterProfile_TC1041(CreateCharacterProfile.java:27)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-</pre></div></td>
-<td>7</td>
-<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@275c9b76</td></tr>
+<td></td>
+<td>25</td>
+<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@72bbffd</td></tr>
 <tr>
-<td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile.CreateCharacterProfile_TC1041()'><b>CreateCharacterProfile_TC1041</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile<br/>
-<a href="#Output-167489682" onClick='toggleBox("Output-167489682", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson.CreatePerson_TC1044()'><b>CreatePerson_TC1044</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson<br/>
+<a href="#Output-786397862" onClick='toggleBox("Output-786397862", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-167489682" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-167489682">
-Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.<br/>
+<a href="#Output-786397862" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-786397862">
+Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.<br/>
 Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
 Enter 'pa55word' in the 'Password' text box.<br/>
 Click the 'Login' button.<br/>
-Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCharacterProfile_TC1041_070814122055PM.png <br/>
-<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCharacterProfile_TC1041_070814122055PM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCharacterProfile_TC1041_070814122055PM.png' height='500' width='500'/> </a><br/>
-Cache was cleared on test failure<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Add content' menu link.<br/>
+Click the 'Person' menu link.<br/>
+Switch to frame titled 'Create Person'.<br/>
+Enter '4e4bdf8160d548b' in the 'First name' text box.<br/>
+Enter a random block of text in the 'Biography' text area.<br/>
+Switch to frame titled 'Create Person'.<br/>
+Click the 'Cover Photo' Select button.<br/>
+Switch to the select file frame.<br/>
+Enter the file path for file upload.<br/>
+Click the 'Upload' button.<br/>
+Wait for the file link to be visible after upload.<br/>
+Click the 'Next' button.<br/>
+Click the 'Public Local Files' radio button.<br/>
+Click the 'Next' button.<br/>
+Verify the file image 'HanSolo' is present.<br/>
+Verify the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Switch to frame titled 'Create Person'.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'Person 4e4bdf8160d548b has been created.' is present.<br/>
 </div>
 </td>
-<td><div><pre>junit.framework.AssertionFailedError
-	at junit.framework.Assert.fail(Assert.java:47)
-	at junit.framework.Assert.fail(Assert.java:53)
-	at com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile.CreateCharacterProfile_TC1041(CreateCharacterProfile.java:27)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace167489682", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace167489682'><pre>junit.framework.AssertionFailedError
-	at junit.framework.Assert.fail(Assert.java:47)
-	at junit.framework.Assert.fail(Assert.java:53)
-	at com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile.CreateCharacterProfile_TC1041(CreateCharacterProfile.java:27)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.retryFailed(Invoker.java:1049)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1254)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-</pre></div></td>
-<td>5</td>
-<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@275c9b76</td></tr>
+<td></td>
+<td>24</td>
+<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson@781e879e</td></tr>
 <tr>
-<td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile.CreateCharacterProfile_TC1041()'><b>CreateCharacterProfile_TC1041</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile<br/>
-<a href="#Output-1534553853" onClick='toggleBox("Output-1534553853", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVEpisode.CreateTVEpisode.CreateTVEpisode_TC1045()'><b>CreateTVEpisode_TC1045</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVEpisode.CreateTVEpisode<br/>
+<a href="#Output-323450695" onClick='toggleBox("Output-323450695", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1534553853" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1534553853">
-Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.<br/>
+<a href="#Output-323450695" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-323450695">
+Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.<br/>
 Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
 Enter 'pa55word' in the 'Password' text box.<br/>
 Click the 'Login' button.<br/>
-Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCharacterProfile_TC1041_070814122113PM.png <br/>
-<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCharacterProfile_TC1041_070814122113PM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCharacterProfile_TC1041_070814122113PM.png' height='500' width='500'/> </a><br/>
-Cache was cleared on test failure<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Add content' menu link.<br/>
+Click the 'Person' menu link.<br/>
+Switch to frame titled 'Create Person'.<br/>
+Enter 'd4245432793b4b0' in the 'First name' text box.<br/>
+Enter a random block of text in the 'Biography' text area.<br/>
+Switch to frame titled 'Create Person'.<br/>
+Click the 'Cover Photo' Select button.<br/>
+Switch to the select file frame.<br/>
+Enter the file path for file upload.<br/>
+Click the 'Upload' button.<br/>
+Wait for the file link to be visible after upload.<br/>
+Click the 'Next' button.<br/>
+Click the 'Public Local Files' radio button.<br/>
+Click the 'Next' button.<br/>
+Verify the file image 'HanSolo' is present.<br/>
+Verify the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Switch to frame titled 'Create Person'.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'Person d4245432793b4b0 has been created.' is present.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Add content' menu link.<br/>
+Click the 'TV Episode' menu link.<br/>
+Switch to frame titled 'TV Episode'.<br/>
+Verify the 'Title' is present as a required field.<br/>
+Verify the 'Episode' is present as a required field.<br/>
+Verify the 'Synopsis' is present as a required field.<br/>
+Scroll the 'Publishing Options' link into view.<br/>
+Click the 'Publishing Options' link.<br/>
+Verify the 'Moderation State' is present as a required field.<br/>
+Scroll to and click the 'Basic Information' tab.<br/>
+Enter '8cbcb8a1c6d3417' in the 'Title' text box.<br/>
+Enter '1' in the 'Episode Number' text box.<br/>
+Switch to the Synopsis frame.<br/>
+Enter a randomized text string into the 'Body' text area.<br/>
+Switch to frame titled 'Create TV Episode'.<br/>
+Click the 'Cover' select button.<br/>
+Switch to the select file frame.<br/>
+Enter the file path for file upload.<br/>
+Click the 'Upload' button.<br/>
+Wait for the file link to be visible after upload.<br/>
+Click the 'Next' button.<br/>
+Click the 'Public Local Files' radio button.<br/>
+Click the 'Next' button.<br/>
+Verify the file image 'HanSolo' is present.<br/>
+Verify the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Switch to frame titled 'Create TV Episode'.<br/>
+Scroll the 'Publishing Options' link into view.<br/>
+Click the 'Publishing Options' link.<br/>
+Select 'Draft' from the 'Moderation State' drop down list.<br/>
+Click the 'Cast/Crew' link.<br/>
+Enter 'd4245432793b4b0' in the Person text box.<br/>
+Click the 'd4245432793b4b0' from the auto complete option list.<br/>
+Select the 'Contributor' from the 'Role' drop down list.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'TV Episode 8cbcb8a1c6d3417 has been created.' is present.<br/>
+Verify the text 'Draft' is present in the work bench info block.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Add content' menu link.<br/>
+Click the 'Person' menu link.<br/>
+Switch to frame titled 'Create Person'.<br/>
+Enter 'f6d8e1e1a036475' in the 'First name' text box.<br/>
+Enter a random block of text in the 'Biography' text area.<br/>
+Switch to frame titled 'Create Person'.<br/>
+Click the 'Cover Photo' Select button.<br/>
+Switch to the select file frame.<br/>
+Enter the file path for file upload.<br/>
+Click the 'Upload' button.<br/>
+Wait for the file link to be visible after upload.<br/>
+Click the 'Next' button.<br/>
+Click the 'Public Local Files' radio button.<br/>
+Click the 'Next' button.<br/>
+Verify the file image 'HanSolo' is present.<br/>
+Verify the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Switch to frame titled 'Create Person'.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'Person f6d8e1e1a036475 has been created.' is present.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Add content' menu link.<br/>
+Click the 'TV Episode' menu link.<br/>
+Switch to frame titled 'TV Episode'.<br/>
+Verify the 'Title' is present as a required field.<br/>
+Verify the 'Episode' is present as a required field.<br/>
+Verify the 'Synopsis' is present as a required field.<br/>
+Scroll the 'Publishing Options' link into view.<br/>
+Click the 'Publishing Options' link.<br/>
+Verify the 'Moderation State' is present as a required field.<br/>
+Scroll to and click the 'Basic Information' tab.<br/>
+Enter 'b5e6301fa149482' in the 'Title' text box.<br/>
+Enter '1' in the 'Episode Number' text box.<br/>
+Switch to the Synopsis frame.<br/>
+Enter a randomized text string into the 'Body' text area.<br/>
+Switch to frame titled 'Create TV Episode'.<br/>
+Click the 'Cover' select button.<br/>
+Switch to the select file frame.<br/>
+Enter the file path for file upload.<br/>
+Click the 'Upload' button.<br/>
+Wait for the file link to be visible after upload.<br/>
+Click the 'Next' button.<br/>
+Click the 'Public Local Files' radio button.<br/>
+Click the 'Next' button.<br/>
+Verify the file image 'HanSolo' is present.<br/>
+Verify the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Switch to frame titled 'Create TV Episode'.<br/>
+Scroll the 'Publishing Options' link into view.<br/>
+Click the 'Publishing Options' link.<br/>
+Select 'Review' from the 'Moderation State' drop down list.<br/>
+Click the 'Cast/Crew' link.<br/>
+Enter 'f6d8e1e1a036475' in the Person text box.<br/>
+Click the 'f6d8e1e1a036475' from the auto complete option list.<br/>
+Select the 'Contributor' from the 'Role' drop down list.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'TV Episode b5e6301fa149482 has been created.' is present.<br/>
+Verify the text 'Review' is present in the work bench info block.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Add content' menu link.<br/>
+Click the 'Person' menu link.<br/>
+Switch to frame titled 'Create Person'.<br/>
+Enter 'b2c39cc45b3840a' in the 'First name' text box.<br/>
+Enter a random block of text in the 'Biography' text area.<br/>
+Switch to frame titled 'Create Person'.<br/>
+Click the 'Cover Photo' Select button.<br/>
+Switch to the select file frame.<br/>
+Enter the file path for file upload.<br/>
+Click the 'Upload' button.<br/>
+Wait for the file link to be visible after upload.<br/>
+Click the 'Next' button.<br/>
+Click the 'Public Local Files' radio button.<br/>
+Click the 'Next' button.<br/>
+Verify the file image 'HanSolo' is present.<br/>
+Verify the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Switch to frame titled 'Create Person'.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'Person b2c39cc45b3840a has been created.' is present.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Add content' menu link.<br/>
+Click the 'TV Episode' menu link.<br/>
+Switch to frame titled 'TV Episode'.<br/>
+Verify the 'Title' is present as a required field.<br/>
+Verify the 'Episode' is present as a required field.<br/>
+Verify the 'Synopsis' is present as a required field.<br/>
+Scroll the 'Publishing Options' link into view.<br/>
+Click the 'Publishing Options' link.<br/>
+Verify the 'Moderation State' is present as a required field.<br/>
+Scroll to and click the 'Basic Information' tab.<br/>
+Enter '9d1877cfdc8946e' in the 'Title' text box.<br/>
+Enter '1' in the 'Episode Number' text box.<br/>
+Switch to the Synopsis frame.<br/>
+Enter a randomized text string into the 'Body' text area.<br/>
+Switch to frame titled 'Create TV Episode'.<br/>
+Click the 'Cover' select button.<br/>
+Switch to the select file frame.<br/>
+Enter the file path for file upload.<br/>
+Click the 'Upload' button.<br/>
+Wait for the file link to be visible after upload.<br/>
+Click the 'Next' button.<br/>
+Click the 'Public Local Files' radio button.<br/>
+Click the 'Next' button.<br/>
+Verify the file image 'HanSolo' is present.<br/>
+Verify the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Switch to frame titled 'Create TV Episode'.<br/>
+Scroll the 'Publishing Options' link into view.<br/>
+Click the 'Publishing Options' link.<br/>
+Select 'Published' from the 'Moderation State' drop down list.<br/>
+Click the 'Cast/Crew' link.<br/>
+Enter 'b2c39cc45b3840a' in the Person text box.<br/>
+Click the 'b2c39cc45b3840a' from the auto complete option list.<br/>
+Select the 'Contributor' from the 'Role' drop down list.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'TV Episode 9d1877cfdc8946e has been created.' is present.<br/>
+Verify the text 'Published' is present in the work bench info block.<br/>
 </div>
 </td>
-<td><div><pre>junit.framework.AssertionFailedError
-	at junit.framework.Assert.fail(Assert.java:47)
-	at junit.framework.Assert.fail(Assert.java:53)
-	at com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile.CreateCharacterProfile_TC1041(CreateCharacterProfile.java:27)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1534553853", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1534553853'><pre>junit.framework.AssertionFailedError
-	at junit.framework.Assert.fail(Assert.java:47)
-	at junit.framework.Assert.fail(Assert.java:53)
-	at com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile.CreateCharacterProfile_TC1041(CreateCharacterProfile.java:27)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.retryFailed(Invoker.java:1049)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1254)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-</pre></div></td>
-<td>7</td>
-<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@275c9b76</td></tr>
+<td></td>
+<td>102</td>
+<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVEpisode.CreateTVEpisode@49497eb8</td></tr>
+<tr>
+<td title='com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules.PasswordRules_TC2185()'><b>PasswordRules_TC2185</b><br>Test class: com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules<br/>
+<a href="#Output-1125791968" onClick='toggleBox("Output-1125791968", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1125791968" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1125791968">
+SETUP - create new user and logout<br/>
+Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.<br/>
+Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
+Enter 'pa55word' in the 'Password' text box.<br/>
+Click the 'Login' button.<br/>
+Mouse over the 'People' menu link.<br/>
+Click the 'Add user' menu link.<br/>
+Switch to the active frame titled 'People dialog'.<br/>
+Enter 'fdb8dc53146c42b@22890ff609bd4cf.com' in the 'Username' text box.<br/>
+Enter 'fdb8dc53146c42b@22890ff609bd4cf.com' in the 'E-mail address' text box.<br/>
+Enter 'pa55word' in the 'Password' text box.<br/>
+Enter 'pa55word' in the 'Confirm password' text box.<br/>
+Check the 'editor' check box.<br/>
+Enter 'dd2e2f6f9793465' in the 'First Name' text box.<br/>
+Enter 'b4252e1488594aa' in the 'Last Name' text box.<br/>
+Click the 'Create new account' button.<br/>
+Verify success message of 'A welcome message with further instructions has been e-mailed to the new user fdb8dc53146c42b@22890ff609bd4cf.com.' is present.<br/>
+Click the 'Close Overlay X'.<br/>
+Scroll by '-500'.<br/>
+Click the 'Logout' button.<br/>
+STEP 1<br/>
+Enter 'fdb8dc53146c42b@22890ff609bd4cf.com' in the 'Email Address' text box.<br/>
+Enter 'pa55word' in the 'Password' text box.<br/>
+Click the 'Login' button.<br/>
+STEP 2<br/>
+Click the activer user menu link for logged in user 'fdb8dc53146c42b@22890ff609bd4cf.com'.<br/>
+Click the 'Edit' link in the work bench.<br/>
+Switch to the active frame titled 'fdb8dc53146c42b@22890ff609bd4cf.com dialog'.<br/>
+STEP 3<br/>
+Enter ' ' in the 'Password' text box.<br/>
+Verify that password strength message 'The password does not include enough variation to be secure.' is present.<br/>
+Verify that password strength message 'Password must contain at least 2 digits.' is present.<br/>
+Verify that password strength message 'Password must be at least 8 characters in length.' is present.<br/>
+Verify that password strength message 'Password must begin and end with a letter.' is present.<br/>
+Verify that password strength message 'Password must contain at least one lowercase character.' is present.<br/>
+STEP 4<br/>
+Enter 'ABCDEFG1' in the 'Password' text box.<br/>
+Verify that password strength message 'The password does not include enough variation to be secure.' is present.<br/>
+Verify that password strength message 'Password must contain at least 2 digits.' is present.<br/>
+Verify that password strength message 'Password must begin and end with a letter.' is present.<br/>
+Verify that password strength message 'Password must contain at least one lowercase character.' is present.<br/>
+Verify that password strength message 'Password must be at least 8 characters in length.' is not present.<br/>
+STEP 5<br/>
+Enter 'ABCDEF11' in the 'Password' text box.<br/>
+Verify that password strength message 'The password does not include enough variation to be secure.' is present.<br/>
+Verify that password strength message 'Password must begin and end with a letter.' is present.<br/>
+Verify that password strength message 'Password must contain at least one lowercase character.' is present.<br/>
+Verify that password strength message 'Password must be at least 8 characters in length.' is not present.<br/>
+Verify that password strength message 'Password must contain at least 2 digits.' is not present.<br/>
+STEP 6<br/>
+Enter 'ABCDE11H' in the 'Password' text box.<br/>
+Verify that password strength message 'The password does not include enough variation to be secure.' is present.<br/>
+Verify that password strength message 'Password must contain at least one lowercase character.' is present.<br/>
+Verify that password strength message 'Password must be at least 8 characters in length.' is not present.<br/>
+Verify that password strength message 'Password must contain at least 2 digits.' is not present.<br/>
+Verify that password strength message 'Password must begin and end with a letter.' is not present.<br/>
+STEP 7<br/>
+Enter 'ABcDE11H' in the 'Password' text box.<br/>
+Verify the password strength container is not present.<br/>
+STEP 8<br/>
+Enter 'fdb8dc53146c42b@22890ff609bd4cf.com' in the 'Password' text box.<br/>
+Verify that password strength message 'The password does not include enough variation to be secure.' is present.<br/>
+Verify that password strength message 'Password must not contain the username.' is present.<br/>
+STEP 9<br/>
+Enter 'ABcDE11H' in the 'Password' text box.<br/>
+Enter 'aBcDE11H' in the 'Confirm password' text box.<br/>
+Verify password match text equals 'no'.<br/>
+STEP 10<br/>
+Enter 'pa55word' in the 'Current password' text box.<br/>
+Enter 'A' in the 'Password' text box.<br/>
+Enter 'A' in the 'Confirm password' text box.<br/>
+Click the 'Save' button.<br/>
+STEP 11<br/>
+Enter 'pa55word' in the 'Current password' text box.<br/>
+Enter 'pa555word' in the 'Password' text box.<br/>
+Enter 'pa555word' in the 'Confirm password' text box.<br/>
+Verify password match text equals 'yes'.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'The changes have been saved.' is present.<br/>
+STEP 12<br/>
+Enter 'pa555word' in the 'Current password' text box.<br/>
+Enter 'pa555!@#$%^&*word' in the 'Password' text box.<br/>
+Enter 'pa555!@#$%^&*word' in the 'Confirm password' text box.<br/>
+Verify password match text equals 'yes'.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'The changes have been saved.' is present.<br/>
+STEP 13<br/>
+Click the 'Close Overlay X'.<br/>
+Scroll by '-500'.<br/>
+Click the 'Logout' button.<br/>
+Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
+Enter 'pa55word' in the 'Password' text box.<br/>
+Click the 'Login' button.<br/>
+Mouse over the 'Configuration' menu link.<br/>
+Mouse over the 'People' menu link.<br/>
+Mouse over the 'Password policies' menu link.<br/>
+Click the 'List' menu link.<br/>
+Switch to the active frame titled 'Password policies dialog'.<br/>
+Click the 'view' link.<br/>
+Switch to the active frame titled 'NBCU Password Policy dialog'.<br/>
+Verify the text 'Expiration' is present on the page.<br/>
+Verify the text '365' is present on the page.<br/>
+</div>
+</td>
+<td></td>
+<td>54</td>
+<td>com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules@4d58530c</td></tr>
 </table><p>
 </body>
 </html>
