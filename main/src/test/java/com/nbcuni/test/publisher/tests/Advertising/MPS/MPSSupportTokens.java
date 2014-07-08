@@ -1,8 +1,13 @@
 package com.nbcuni.test.publisher.tests.Advertising.MPS;
 
+import java.text.SimpleDateFormat;
 import java.util.Arrays;
+import java.util.Date;
+import java.util.TimeZone;
+
 import org.testng.Reporter;
 import org.testng.annotations.Test;
+
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.ExecutePHPCode;
@@ -117,7 +122,11 @@ public class MPSSupportTokens extends ParentTest {
             ExecutePHPCode executePHPCode = new ExecutePHPCode(webDriver);
             executePHPCode.EnterPHPCode("variable_set('mps_cat_pattern', '');echo _mps_build_cat();echo PHP_EOL;variable_set('mps_cat_pattern', '[mps:cat-pattern:?]');echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/cast'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/thisisareallyreallyreallyreallyreallyreallylongurlXXXXXX/season/episode/cast/name'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/thisisareallyreallyreallyreallyreallyreallylongurlXXXXXX/season/episode/cast/'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/show//episode/cast'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/show/season//episode//'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => '/show/season//'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => '/show///'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => '/brand/season//episode'));echo PHP_EOL;variable_set('mps_cat_pattern', '[mps:cat-pattern:2]|[mps:cat-pattern:3]');echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/cast'));echo PHP_EOL;variable_set('mps_cat_pattern', '[mps:cat-pattern:0]|[mps:cat-pattern:2]|[current-date:custom:d]|[mps:cat-pattern:3]|');echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/cast'));variable_set('mps_cat_pattern', '[mps:cat-pattern:?]');echo PHP_EOL;echo '*' . _mps_build_cat(array('aliased-path' => '/')) . '*';");
             executePHPCode.ClickExecuteBtn();
-            executePHPCode.VerifyResponse("Status message\ndevel\nbrand|show|season|episode\nbrand|thisisareallyreallyreallyreallyreallyreallylongurl|season|episode|cast\nbrand|thisisareallyreallyreallyreallyreallyreallylongurl|season|episode|cast\nbrand|show|~|episode\nbrand|show|season\nbrand|show|season|~|episode\n~|show\n\n~|brand|season\nseason|episode\nbrand|season|07\n**");
+            Date date = new Date();
+            SimpleDateFormat dateFormat = new SimpleDateFormat("dd");
+            dateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
+            String dayOfWeek = dateFormat.format(date);
+            executePHPCode.VerifyResponse("Status message\ndevel\nbrand|show|season|episode\nbrand|thisisareallyreallyreallyreallyreallyreallylongurl|season|episode|cast\nbrand|thisisareallyreallyreallyreallyreallyreallylongurl|season|episode|cast\nbrand|show|~|episode\nbrand|show|season\nbrand|show|season|~|episode\n~|show\n\n~|brand|season\nseason|episode\nbrand|season|" + dayOfWeek + "\n**");
             overlay.ClickCloseOverlayLnk();
             
             Reporter.log("CLEANUP");

@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Jul 07 15:12:42 EDT 2014</td>
+<td>Started on:</td><td>Tue Jul 08 08:23:14 EDT 2014</td>
 </tr>
-<tr><td>Total time:</td><td>127 seconds (127604 ms)</td>
+<tr><td>Total time:</td><td>125 seconds (125753 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,12 +76,12 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens.MPSSupportTokens_TC3641()'><b>MPSSupportTokens_TC3641</b><br>Test class: com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens<br/>
-<a href="#Output-517758091" onClick='toggleBox("Output-517758091", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-623398715" onClick='toggleBox("Output-623398715", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-517758091" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-517758091">
+<a href="#Output-623398715" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-623398715">
 STEP 1<br/>
-Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.<br/>
+Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.<br/>
 Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
 Enter 'pa55word' in the 'Password' text box.<br/>
 Click the 'Login' button.<br/>
@@ -90,12 +90,7 @@ Click the 'Modules' menu link.<br/>
 Switch to frame titled 'Modules'.<br/>
 Enter 'Devel' in the 'Filter Name' text box.<br/>
 Wait for the module titled 'Devel' to appear in the list.<br/>
-Check the 'Devel' check box.<br/>
-Click the 'Save configuration' button.<br/>
-Switch to frame titled 'Some required modules must be enabled'.<br/>
-Switch back to the 'Modules' frame.<br/>
-Switch to frame titled 'Modules'.<br/>
-Verify success message of 'The configuration options have been saved.' is present.<br/>
+Verify the 'Devel' check box is checked.<br/>
 Click the 'Close Overlay X'.<br/>
 Scroll by '-500'.<br/>
 Mouse over the 'Configuration' menu link.<br/>
@@ -116,7 +111,7 @@ Mouse over the 'Add content' menu link.<br/>
 Click the 'Movie' menu link.<br/>
 Switch to the active frame titled 'Create Movie dialog'.<br/>
 Scroll to and click the 'Basic Information' tab.<br/>
-Enter '134d15e5ce27483' in the 'Title' text box.<br/>
+Enter '61cd879052db479' in the 'Title' text box.<br/>
 Switch to the Synopsis frame.<br/>
 Enter a randomized text string into the 'Body' text area.<br/>
 Switch to the active frame titled 'Create Movie dialog'.<br/>
@@ -137,27 +132,27 @@ Select the 'Syndicated' from the 'Movie Type' drop down list.<br/>
 Select the 'G' from the 'Rating' drop down list.<br/>
 Select the 'Action' from the 'Primary Genre' drop down list.<br/>
 Click the 'Save' button.<br/>
-Verify success message of 'Movie 134d15e5ce27483 has been created.' is present.<br/>
+Verify success message of 'Movie 61cd879052db479 has been created.' is present.<br/>
 Verify '"cat":"content"' is present in page source.<br/>
 STEP 5<br/>
 Click the 'Edit Draft' link in the work bench.<br/>
-Switch to the active frame titled 'Edit Movie 134d15e5ce27483 dialog'.<br/>
+Switch to the active frame titled 'Edit Movie 61cd879052db479 dialog'.<br/>
 Click the 'URL path settings' link.<br/>
 Uncheck the 'Generate automatic URL alias' check box.<br/>
-Enter '6eb5be85ec' in the 'URL alias' text box.<br/>
+Enter '43c6eb01f2' in the 'URL alias' text box.<br/>
 Click the 'Save' button.<br/>
-Verify success message of 'Movie 134d15e5ce27483 has been updated.' is present.<br/>
+Verify success message of 'Movie 61cd879052db479 has been updated.' is present.<br/>
 STEP 6<br/>
 Verify '"cat":"content"' is not present in page source.<br/>
 STEP 7<br/>
 Click the 'Edit Draft' link in the work bench.<br/>
-Switch to the active frame titled 'Edit Movie 134d15e5ce27483 dialog'.<br/>
+Switch to the active frame titled 'Edit Movie 61cd879052db479 dialog'.<br/>
 Click the 'URL path settings' link.<br/>
-Enter '6eb5be85ec/mps-testing/2arg/3arg/4arg/5arg/6arg' in the 'URL alias' text box.<br/>
+Enter '43c6eb01f2/mps-testing/2arg/3arg/4arg/5arg/6arg' in the 'URL alias' text box.<br/>
 Click the 'Save' button.<br/>
-Verify success message of 'Movie 134d15e5ce27483 has been updated.' is present.<br/>
+Verify success message of 'Movie 61cd879052db479 has been updated.' is present.<br/>
 STEP 8<br/>
-Verify '"cat":"6eb5be85ec|mps-testing|2arg"}' is present in page source.<br/>
+Verify '"cat":"43c6eb01f2|mps-testing|2arg"}' is present in page source.<br/>
 STEP 9<br/>
 Mouse over the 'Configuration' menu link.<br/>
 Mouse over the 'Web services' menu link.<br/>
@@ -173,7 +168,7 @@ Verify success message of 'The configuration options have been saved.' is presen
 Click the 'Close Overlay X'.<br/>
 Scroll by '-500'.<br/>
 STEP 11<br/>
-Verify '"cat":"6eb5be85ec|mps-testing|2arg|3arg|4arg"}' is present in page source.<br/>
+Verify '"cat":"43c6eb01f2|mps-testing|2arg|3arg|4arg"}' is present in page source.<br/>
 STEP 12<br/>
 Switch to the active frame titled 'Execute PHP Code dialog'.<br/>
 Enter 'variable_set('mps_cat_pattern', '');echo _mps_build_cat();echo PHP_EOL;variable_set('mps_cat_pattern', '[mps:cat-pattern:?]');echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/cast'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/thisisareallyreallyreallyreallyreallyreallylongurlXXXXXX/season/episode/cast/name'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/thisisareallyreallyreallyreallyreallyreallylongurlXXXXXX/season/episode/cast/'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/show//episode/cast'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/show/season//episode//'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => '/show/season//'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => '/show///'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => '/brand/season//episode'));echo PHP_EOL;variable_set('mps_cat_pattern', '[mps:cat-pattern:2]|[mps:cat-pattern:3]');echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/cast'));echo PHP_EOL;variable_set('mps_cat_pattern', '[mps:cat-pattern:0]|[mps:cat-pattern:2]|[current-date:custom:d]|[mps:cat-pattern:3]|');echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/cast'));variable_set('mps_cat_pattern', '[mps:cat-pattern:?]');echo PHP_EOL;echo '*' . _mps_build_cat(array('aliased-path' => '/')) . '*';' in the 'PHP Code to Execute' text area.<br/>
@@ -190,7 +185,7 @@ brand|show|season|~|episode
 
 ~|brand|season
 season|episode
-brand|season|07
+brand|season|08
 **'.<br/>
 Click the 'Close Overlay X'.<br/>
 Scroll by '-500'.<br/>
@@ -213,8 +208,8 @@ Click the 'Save configuration' button.<br/>
 </div>
 </td>
 <td></td>
-<td>124</td>
-<td>com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens@7aa7f835</td></tr>
+<td>122</td>
+<td>com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens@62ccf439</td></tr>
 </table><p>
 </body>
 </html>

@@ -47,6 +47,7 @@ public class Cloning extends ParentTest {
     
 		//Step 7
 		overlay.SwitchToActiveFrame();
+		Thread.sleep(1000);
 		contentParent.ClickSaveBtn();
 		contentParent.VerifyMessageStatus("Post Clone of " + postTitle + " has been created.");
     

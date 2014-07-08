@@ -46,6 +46,7 @@ public class URLPathSettings {
     public void ClickURLPathSettingsLnk() throws Exception {
     
     	Reporter.log("Click the 'URL path settings' link.");
+    	Thread.sleep(500);
     	URLPathSettings_Lnk.click();
 
     	wait.until(ExpectedConditions.visibilityOf(GenerateAutomaticURLAlias_Cbx));
