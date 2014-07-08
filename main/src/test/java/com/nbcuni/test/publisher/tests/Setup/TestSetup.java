@@ -35,7 +35,7 @@ public class TestSetup extends ParentTest{
         	//login
         	UserLogin userLogin = applib.openApplication();
         	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
-            
+        	
         	//disable sticky edit actions module
             taxonomy.NavigateSite("Modules");
         	overlay.SwitchToFrame("Modules");

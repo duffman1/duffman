@@ -1,16 +1,13 @@
 package com.nbcuni.test.publisher.pageobjects.MyWorkbench;
 
 import java.util.List;
-
-import junit.framework.Assert;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 import org.testng.Reporter;
-
 import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************

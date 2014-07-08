@@ -84,7 +84,7 @@ public class UploadReportRally {
             fileBase64String = Base64.encodeBase64String(fileBytes);
             attachmentSize = longlength;
 
-            //First create AttachmentContent from image string
+            //First create AttachmentContent from string
             JsonObject myAttachmentContent = new JsonObject();
             myAttachmentContent.addProperty("Content", fileBase64String);
             CreateRequest attachmentContentCreateRequest = new CreateRequest("AttachmentContent", myAttachmentContent);
@@ -98,7 +98,7 @@ public class UploadReportRally {
             myAttachment.addProperty("Content", myAttachmentContentRef);
             myAttachment.addProperty("Name", reportName);
             myAttachment.addProperty("Description", "Attachment From Automated Test Suite");
-            myAttachment.addProperty("ContentType","text/html");
+            myAttachment.addProperty("ContentType","application/zip");
             myAttachment.addProperty("Size", attachmentSize);
             myAttachment.addProperty("User", userRef);          
 
@@ -107,7 +107,7 @@ public class UploadReportRally {
             attachmentResponse.getObject().get("_ref").getAsString();
             
             	if (attachmentResponse.wasSuccessful()) {
-            		System.out.println("Successfully created Attachment");
+            		System.out.println("Successfully created Rally report attachment.");
             	} else {
             		String[] attachmentContentErrors;
             		attachmentContentErrors = attachmentResponse.getErrors();

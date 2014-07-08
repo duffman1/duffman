@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="4" name="Failed suite [Pub 7 Concurrent Suite]" parallel="classes">
+<suite thread-count="2" name="Failed suite [Pub 7 Concurrent Suite]" parallel="classes">
   <parameter name="ReRunOnFailure" value="true"/>
   <parameter name="LocalAppiumHubPort" value="4724"/>
   <parameter name="Device" value="Iphone Simulator"/>
@@ -16,7 +16,7 @@
   <parameter name="Browser" value="chrome"/>
   <parameter name="GmailUsername" value="Pub7NBCUAutoEmailUser1@gmail.com"/>
   <parameter name="PathToScreenshots" value="/test-output/screenshots/"/>
-  <parameter name="PageLoadWaitTime" value="120"/>
+  <parameter name="PageLoadWaitTime" value="90"/>
   <parameter name="MPXUrl" value="http://mpx.theplatform.com/"/>
   <parameter name="RallyProject" value="Publisher 7"/>
   <parameter name="IRCNickname" value="NBCUniAutomationBotOnIRC"/>
@@ -29,16 +29,16 @@
   <parameter name="RunMobile" value="false"/>
   <parameter name="RallyWorkspace" value="Digital Products"/>
   <parameter name="SendReportEmailAddress" value="brandon.clark@nbcuni.com"/>
-  <parameter name="UpdateIndividualRallyTCs" value="false"/>
+  <parameter name="UpdateIndividualRallyTCs" value="true"/>
   <parameter name="PathToSikuliImages" value="/src/test/java/com/nbcuni/test/publisher/lib/sikuli/images/"/>
-  <parameter name="UploadReportToRally" value="false"/>
+  <parameter name="UploadReportToRally" value="true"/>
   <parameter name="ImplicitWaitTime" value="20"/>
   <parameter name="MPXAssetBufferPause" value="0"/>
   <parameter name="GmailPassword" value="Pub7NBCUAutoEmailPassword1"/>
   <parameter name="LocalWebDriverHubPort" value="4444"/>
   <parameter name="IRCChannel" value="#nbcuots_pub7"/>
   <parameter name="SikuliImageWaitTime" value="30"/>
-  <parameter name="AppURL" value="http://update.qa5.nbcupublisher7.publisher7.com"/>
+  <parameter name="AppURL" value="http://install.qa5.nbcupublisher7.publisher7.com"/>
   <parameter name="MPXUsername" value="mpx/AdminPub7QA"/>
   <listeners>
     <listener class-name="com.nbcuni.test.publisher.common.CustomReport"/>

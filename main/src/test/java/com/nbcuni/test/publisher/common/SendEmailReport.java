@@ -1,8 +1,6 @@
 package com.nbcuni.test.publisher.common;
 
-import java.util.List;
 import java.util.Properties;
-
 import javax.activation.DataHandler;
 import javax.activation.DataSource;
 import javax.activation.FileDataSource;
@@ -20,7 +18,7 @@ import javax.mail.internet.MimeMultipart;
 
 public class SendEmailReport {
 
-	public void SendEmail(String pathToReport, String reportName, Integer passedTestsCount, Integer failedTestsCount, List<String> failedScreenshots) {
+	public void SendEmail(String pathToReport, String reportName, Integer passedTestsCount, Integer failedTestsCount) throws Exception {
 
 		Config config = new Config();
 		
@@ -80,7 +78,8 @@ public class SendEmailReport {
             							+ config.getConfigValue("RallyTaskID") + "." + "<br /><br />Publisher 7 "
             								+ "QA Automation</body>", "text/html");
             
-            //attach html test report
+            
+            //attach zip file
             Multipart multipart = new MimeMultipart();
             multipart.addBodyPart(messageBodyPart);
             messageBodyPart = new MimeBodyPart();
@@ -89,21 +88,6 @@ public class SendEmailReport {
             messageBodyPart.setFileName(reportName);
             multipart.addBodyPart(messageBodyPart);
             
-            //add each failed screenshot (if there are less than 20 due to file size restrictions)
-            MimeBodyPart screenshotMimeBodyParts = null;
-            	for (String failedScreenshot : failedScreenshots) {
-            	
-            		String[] fileNames = failedScreenshot.split("screenshots");
-            		String fileName = fileNames[1].replace("\\", "");
-            		fileName = fileName.replace("/", "");
-            		screenshotMimeBodyParts = null;
-            		screenshotMimeBodyParts=new MimeBodyPart();
-            		DataSource screenshotSource = new FileDataSource(failedScreenshot);
-            		screenshotMimeBodyParts.setDataHandler(new DataHandler(screenshotSource));
-            		screenshotMimeBodyParts.setFileName(fileName);
-            		multipart.addBodyPart(screenshotMimeBodyParts);
-            }
-
             message.setContent(multipart);
 
             Transport.send(message);

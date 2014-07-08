@@ -21,7 +21,7 @@ public class CreateCharacterProfile extends ParentTest{
         	//Step 1
         	UserLogin userLogin = applib.openApplication();
         	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
-            
+        	
             //Step 2
             taxonomy.NavigateSite("Content>>Add content>>Character Profile");
             

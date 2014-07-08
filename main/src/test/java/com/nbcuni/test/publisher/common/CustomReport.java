@@ -1,15 +1,14 @@
 package com.nbcuni.test.publisher.common;
 
-import com.ibm.icu.text.DateFormat;
-import com.ibm.icu.text.SimpleDateFormat;
-
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
-
+import java.util.zip.ZipOutputStream;
 import org.apache.commons.io.FileUtils;
 import org.testng.IResultMap;
 import org.testng.ISuite;
@@ -117,12 +116,12 @@ public class CustomReport extends EmailableReporter {
 	    }
 	  
 	    //get the screenshot path of each failed consecutive method
-    	SimpleDateFormat screenshotDateTimeFormat = new SimpleDateFormat("MMddyyhhmmssa");
+    	SimpleDateFormat attachmentDateTimeFormat = new SimpleDateFormat("MMddyyhhmmssa");
 	    List<String> failedScreenshots = new ArrayList<String>();
 	    for(ITestResult consecutive_failed_result : consecutiveFailedTests.getAllResults())
 	    {
 	    	Date date = new Date(consecutive_failed_result.getEndMillis());
-	    	String screenshotPath = config.getPathToScreenshots() + consecutive_failed_result.getMethod().getMethodName() + "_" + screenshotDateTimeFormat.format(date) + ".png";
+	    	String screenshotPath = config.getPathToScreenshots() + consecutive_failed_result.getMethod().getMethodName() + "_" + attachmentDateTimeFormat.format(date) + ".png";
 	    	failedScreenshots.add(screenshotPath);
 	    }
 	    
@@ -130,7 +129,7 @@ public class CustomReport extends EmailableReporter {
 	    for(ITestResult concurrent_failed_result : concurrentFailedTests.getAllResults())
 	    {
 	    	Date date = new Date(concurrent_failed_result.getEndMillis());
-	    	String screenshotPath = config.getPathToScreenshots() + concurrent_failed_result.getMethod().getMethodName() + "_" + screenshotDateTimeFormat.format(date) + ".png";
+	    	String screenshotPath = config.getPathToScreenshots() + concurrent_failed_result.getMethod().getMethodName() + "_" + attachmentDateTimeFormat.format(date) + ".png";
 	    	failedScreenshots.add(screenshotPath);
 	    }
 	    
@@ -139,33 +138,47 @@ public class CustomReport extends EmailableReporter {
 
   	  	//copy the emailable report to the reports directory
   	  	File resultsFile = new File(outputDirectory + File.separator + "emailable-report.html");
-
-  	  	String storeReportsTo = null;
-  	  	try {
-  	  		storeReportsTo = config.getPathToReports();
-  	  	} catch (Exception e) { System.out.println("Failed to get configuration path to reports directory."); }
-	
-  	  	DateFormat reportDateFormat = new SimpleDateFormat("MM/dd/yy hh:mm a");
+  	  	String storeReportsTo = config.getPathToReports();
   	  	Date date = new Date();
-  	  	String fileExtension = reportDateFormat.format(date).replace("/", "");
-  	  	fileExtension = fileExtension.replace(" ", "");
   	  	String environmentTitle = config.getConfigValue("AppURL").replace("http://", "").replace(".nbcupublisher7.publisher7.com", "").toUpperCase();
-  	  	fileExtension = environmentTitle + "-" + fileExtension.replace(":", "") + ".html";
-  	  	String filePath = storeReportsTo + fileExtension;
-
+  	  	String filePath = storeReportsTo + environmentTitle + "-" + attachmentDateTimeFormat.format(date) + ".html";
   	  	try {
   	  		FileUtils.copyFile(resultsFile, new File(filePath));
   	  		System.out.println("Report saved to: " + filePath);
 		
   	  	} catch (IOException e) { System.out.println("Failed to copy emailable-report.html to reports directory."); }
 
-  	  	//upload report to rally
+  	  	//create a new zip report file and attach html report and failed screenshots
+  	  	String zipFilePath = filePath.replace(".html", ".zip");
+  	  	String zipFileName = environmentTitle + "-" + attachmentDateTimeFormat.format(date) + ".zip";
+  	  	try {
+  	  		FileOutputStream fileOut = null;
+  	  		fileOut = new FileOutputStream(zipFilePath);
+  	  		ZipOutputStream zipOut = new ZipOutputStream(fileOut);
+  	  		zipOut.setLevel(5);
+      
+  	  		AddFilesToZip addFilesToZip = new AddFilesToZip();
+  	  		List<File> allFilesToZip = new ArrayList<File>();
+  	  		allFilesToZip.add(new File(filePath));
+  	  		
+  	  		for (String failedScreenshot : failedScreenshots) {
+	  			allFilesToZip.add(new File(failedScreenshot));
+	  		}
+  	  		addFilesToZip.addFilesToZip(new File(zipFilePath), allFilesToZip);
+  	  		
+  	  		zipOut.close();
+  	  	}
+  	  	catch (Exception e) {
+  	  		System.out.println("Failed to create report zip file and attach reports/screenshots.");
+  	  	}
+  	    
+  	  	//upload zip report file to rally
   	  	if (config.getConfigValue("UploadReportToRally").equals("true")) {
   	  		try {
-  	  			uploadReport.uploadFileAttachment(filePath, fileExtension);
+  	  			uploadReport.uploadFileAttachment(zipFilePath, zipFileName);
 		
   	  		} catch (Exception e) {
-  	  			System.out.println("Failed to upload report attachment to Rally.");
+  	  			System.out.println("Failed to upload zip report to Rally.");
   	  		}
   	  	}
   	  	else {
@@ -173,7 +186,8 @@ public class CustomReport extends EmailableReporter {
   	  	}
   	  	
   	  	if (config.getConfigValue("UpdateIndividualRallyTCs").equals("true")) {
-  	  	//update individual consecutive passed test cases in Rally
+  	  	
+  	  		//update individual consecutive passed test cases in Rally
   	  	  	for (ITestResult consecutive_passed_result : consecutivePassedTests.getAllResults()) {
   	  	  	
   	  	  		String methodName = consecutive_passed_result.getMethod().getMethodName();
@@ -195,7 +209,7 @@ public class CustomReport extends EmailableReporter {
   	  	  	
   	  	  		String methodName = consecutive_failed_result.getMethod().getMethodName();
   	  	  		if (methodName.contains("_TC")) {
-  	  	  		String screenshotPath = config.getPathToScreenshots() + methodName + "_" + screenshotDateTimeFormat.format(new Date(consecutive_failed_result.getEndMillis())) + ".png";
+  	  	  		String screenshotPath = config.getPathToScreenshots() + methodName + "_" + attachmentDateTimeFormat.format(new Date(consecutive_failed_result.getEndMillis())) + ".png";
   		    	
   	  	  			String[] tcID = methodName.split("_");
   	  	  		
@@ -233,7 +247,7 @@ public class CustomReport extends EmailableReporter {
   	  	  	
   	  	  		String methodName = concurrent_failed_result.getMethod().getMethodName();
   	  	  		if (methodName.contains("_TC")) {
-  	  	  		String screenshotPath = config.getPathToScreenshots() + methodName + "_" + screenshotDateTimeFormat.format(new Date(concurrent_failed_result.getEndMillis())) + ".png";
+  	  	  		String screenshotPath = config.getPathToScreenshots() + methodName + "_" + attachmentDateTimeFormat.format(new Date(concurrent_failed_result.getEndMillis())) + ".png";
   		    	
   	  	  			String[] tcID = methodName.split("_");
   	  	  		
@@ -254,14 +268,14 @@ public class CustomReport extends EmailableReporter {
   	  		System.out.println("Individual test cases were not updated in Rally per configuration setting.");
   	  	}
   	  	
-  	  	//send auto email with report
+  	  	//send auto email with zip report
   	    Integer passedTestCount = consecutivePassedTests.size() + concurrentPassedTests.size();
 	  	Integer failedTestCount = consecutiveFailedTests.size() + concurrentFailedTests.size();
 	  	SendEmailReport sendEmailReport = new SendEmailReport();
 	  	
   	  	if (config.getConfigValue("SendReportAutoEmails").equals("true")) {
   	  		try {
-  	  			sendEmailReport.SendEmail(filePath, fileExtension, passedTestCount, failedTestCount, failedScreenshots);
+  	  			sendEmailReport.SendEmail(zipFilePath, zipFileName, passedTestCount, failedTestCount);
   	  		} catch (Exception e) {
   	  			System.out.println("Failed to send report email.");
   	  		}
@@ -275,7 +289,7 @@ public class CustomReport extends EmailableReporter {
   	  	if (config.getConfigValue("SendReportIRCChat").equals("true")) {
   	  		SendIRCReport sendIRCReport = new SendIRCReport();
   	  		try {
-  	  			sendIRCReport.SendReport(filePath, fileExtension, passedTestCount, failedTestCount, failedScreenshots);
+  	  			sendIRCReport.SendReport(filePath, zipFileName, passedTestCount, failedTestCount, failedScreenshots);
   	  		} catch (Exception e) {
   	  			System.out.println("Failed to send report IRC chat.");
   	  		}
