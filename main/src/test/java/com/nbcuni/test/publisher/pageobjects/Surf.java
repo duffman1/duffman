@@ -8,7 +8,10 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
+
+import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 
 /*********************************************
  * publisher.nbcuni.com Surf Library. Copyright
@@ -21,12 +24,14 @@ public class Surf {
 
     private Driver webDriver;
     private WebDriverWait wait;
+    private ContentParent contentParent;
     
     //PAGE OBJECT CONSTRUCTOR
-    public Surf(Driver webDriver) {
+    public Surf(Driver webDriver, AppLib applib) {
         this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
         wait = new WebDriverWait(webDriver, 30);
+        contentParent = new ContentParent(webDriver, applib);
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -100,6 +105,7 @@ public class Surf {
     public void ClickSignOutBtn() throws Exception {
     	
     	Reporter.log("Click the 'Sign Out' button.");
+    	contentParent.Scroll("-500");
     	wait.until(ExpectedConditions.visibilityOf(SignOut_Btn)).click();
     	
     	Reporter.log("Verify the 'Sign In' button is present.");

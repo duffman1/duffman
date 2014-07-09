@@ -51,7 +51,7 @@ public class SURFModule extends ParentTest {
 		Reporter.log("STEP 13 - N/A");
 		
 		Reporter.log("STEP 14");
-		Surf surf = new Surf(webDriver);
+		Surf surf = new Surf(webDriver, applib);
 		surf.ClickSignInBtn();
 		
 		Reporter.log("STEP 15");
