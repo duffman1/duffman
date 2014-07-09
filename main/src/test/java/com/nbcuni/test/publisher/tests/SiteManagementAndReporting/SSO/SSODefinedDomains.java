@@ -24,7 +24,8 @@ public class SSODefinedDomains extends ParentTest {
 	 public void SSODefinedDomains_TC3474() throws Exception {
 		 
 		Reporter.log("STEP 1");
-		UserLogin userLogin = applib.openApplication();
+		applib.openSitePage("/user");
+		UserLogin userLogin = new UserLogin(webDriver);
 		userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
 	       
 		Reporter.log("STEP 2");
@@ -34,7 +35,6 @@ public class SSODefinedDomains extends ParentTest {
 		Reporter.log("STEP 3");
 		taxonomy.NavigateSite("Configuration>>People>>SimpleSAMLphp Auth Settings");
 		overlay.SwitchToActiveFrame();
-		contentParent.VerifyMessageStatus("SimpleSAMLphp authentication is NOT yet activated.");
 			
 		Reporter.log("STEP 4");
 		SimpleSAML simpleSAML = new SimpleSAML(webDriver);
