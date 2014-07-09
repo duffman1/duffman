@@ -20,9 +20,9 @@ public class AddFilesToZip {
 		//delete the temp file (necessary)
 		tempFile.delete();
 
-		boolean renameOk=zipFile.renameTo(tempFile);
+		boolean renameOk = zipFile.renameTo(tempFile);
 		if (!renameOk) {
-			throw new RuntimeException("Failed to rename the file " + zipFile.getAbsolutePath() + " to " +tempFile.getAbsolutePath());
+			throw new RuntimeException("Failed to rename the file " + zipFile.getAbsolutePath() + " to " + tempFile.getAbsolutePath());
 		}
 		byte[] buf = new byte[1024];
         

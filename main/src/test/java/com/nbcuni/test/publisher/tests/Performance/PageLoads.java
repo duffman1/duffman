@@ -44,7 +44,7 @@ public class PageLoads extends ParentTest{
             	
             	titleIndex++;
             	
-            	if (titleIndex == 100) {
+            	if (titleIndex == 50) {
             		break; //TODO - still needs some debugging for higher page volumes
             	}
             	

@@ -2,10 +2,7 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
     <line>
-      <![CDATA[STEP 1]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com/user'.]]>
+      <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]>
     </line>
     <line>
       <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
@@ -15,123 +12,24 @@
     </line>
     <line>
       <![CDATA[Click the 'Login' button.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 2]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Modules' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to frame titled 'Modules'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Pub SSO' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the module titled 'Pub SSO' to appear in the list.]]>
-    </line>
-    <line>
-      <![CDATA[Check the 'Pub SSO' check box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Continue' button to enable additional modules.]]>
-    </line>
-    <line>
-      <![CDATA[Switch back to the 'Modules' frame.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to frame titled 'Modules'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll by '-500'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 3]]>
     </line>
     <line>
       <![CDATA[Mouse over the 'Configuration' menu link.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'People' menu link.]]>
+      <![CDATA[Mouse over the 'Media' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'SimpleSAMLphp Auth Settings' menu link.]]>
+      <![CDATA[Click the 'Media: thePlatform mpx settings' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'People dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.]]>
     </line>
     <line>
-      <![CDATA[STEP 4]]>
+      <![CDATA[Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.]]>
     </line>
     <line>
-      <![CDATA[Verify the 'Activate authentication via SimpleSAMLphp' check box is unchecked.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the value of the 'Installation directory' text box equals '/mnt/www/html/nbcupublisher7qa5/simplesamlphp' and the text box is disabled.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the value of the 'Authentication source for this SP' text box equals 'pub-qa5install' and the text box is disabled.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the ' Force https for login links' check box is checked and disabled.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the value of the 'Which attribute from simpleSAMLphp should be used as user's name' text box equals 'email' and the text box is disabled.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the value of the 'Which attribute from simpleSAMLphp should be used as unique identifier for the user' text box equals 'uid' and the text box is disabled.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the value of the 'Which attribute from simpleSAMLphp should be used as user mail address' text box equals 'email' and the text box is disabled.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 5]]>
-    </line>
-    <line>
-      <![CDATA[Enter the file path for certificate upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'A certificate exists for this instance of SimpleSAMLphp.' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 6]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 7]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Activate authentication via SimpleSAMLphp' check box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+      <![CDATA[Get all the selected import account options and store to a list.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
@@ -140,227 +38,329 @@
       <![CDATA[Scroll by '-500'.]]>
     </line>
     <line>
-      <![CDATA[STEP 8]]>
+      <![CDATA[Mouse over the 'Structure' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Logout' button.]]>
+      <![CDATA[Mouse over the 'File types' menu link.]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com/saml_login'.]]>
+      <![CDATA[Click the 'MPX Video for Account "DB TV" (2312945284)' menu link.]]>
     </line>
     <line>
-      <![CDATA[STEP 9]]>
+      <![CDATA[Switch to the active frame titled 'MPX Video for Account &quot;DB TV&quot; (2312945284) dialog'.]]>
     </line>
     <line>
-      <![CDATA[Enter '206424392' in the 'SSO ID' text box.]]>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Enter 'tufNewcyd577BC' in the 'Password' text box.]]>
+      <![CDATA[Mouse over the 'Files' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Sign In' button.]]>
+      <![CDATA[Click the 'mpxMedia' menu link.]]>
     </line>
     <line>
-      <![CDATA[STEP 10]]>
+      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'Modules' is NOT present on the page.]]>
+      <![CDATA[Enter title AutomationDefault.]]>
     </line>
     <line>
-      <![CDATA[STEP 11]]>
+      <![CDATA[Click the 'Apply' button.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'Brandon.Clark@nbcuni.com' is present on the page.]]>
+      <![CDATA[Get the title text of every result in the search result set.]]>
     </line>
     <line>
-      <![CDATA[STEP 12]]>
+      <![CDATA[For each expected result, assert it is present in the result set.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Logout' button.]]>
+      <![CDATA[Click the first search title link in the search result set.]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com/user'.]]>
+      <![CDATA[Click the 'Edit' link in the work bench.]]>
     </line>
     <line>
-      <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
+      <![CDATA[Switch to the active frame titled 'Edit mpx_video_6 AutomationDefault dialog'.]]>
     </line>
     <line>
-      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+      <![CDATA[Un-check the 'Override' checkbox for the 'Available Date' check box.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Login' button.]]>
+      <![CDATA[Un-check the 'Override' checkbox for the 'Expiration Date' check box.]]>
     </line>
     <line>
-      <![CDATA[Click the 'People' menu link.]]>
+      <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'People dialog'.]]>
+      <![CDATA[Verify the text 'AutomationDefault' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Click the 'next >' link until user 'Brandon.Clark' is present.]]>
+      <![CDATA[Verify the text 'MPX Released File Public IDs:' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Brandon.Clark' link from the 'USERNAME' list.]]>
+      <![CDATA[Verify the text 'MPX Media Default Released File Public ID:' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[STEP 13]]>
+      <![CDATA[Verify the text 'MPX Media Categories:' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com/admin/config/people/simplesamlphp_auth'.]]>
+      <![CDATA[Verify the text 'Series' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Activate authentication via SimpleSAMLphp' check box.]]>
+      <![CDATA[Verify the text 'Show' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
+      <![CDATA[Verify the text 'MPX Media Description:' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+      <![CDATA[Verify the text 'Automation 1 example test' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'SimpleSAMLphp authentication is NOT yet activated.' is present.]]>
+      <![CDATA[Verify the text 'MPX Media Author:' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[STEP 14 - 16 TODO]]>
+      <![CDATA[Verify the text 'Pub7 Content Provider' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[STEP 17]]>
+      <![CDATA[Verify the text 'MPX Media Air Date:' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Modules' menu link.]]>
+      <![CDATA[Verify the text 'Wednesday, January 8, 2014' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+      <![CDATA[Verify the text 'MPX Media Keywords:' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Pub SSO' in the 'Filter Name' text box.]]>
+      <![CDATA[Verify the text 'mpx, metadata, field, override' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Wait for the module titled 'Pub SSO' to appear in the list.]]>
+      <![CDATA[Verify the text 'MPX Media Copyright:' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Uncheck the 'Pub SSO' module checkbox.]]>
+      <![CDATA[Verify the text 'NBCUNI QA' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
+      <![CDATA[Verify the text 'MPX Media Film Advisory Board Rating:' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+      <![CDATA[Verify the text 'pd' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Enter 'simpleSAMLphp authentication' in the 'Filter Name' text box.]]>
+      <![CDATA[Verify the text 'MPX Media MPAA Rating:' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Wait for the module titled 'simpleSAMLphp authentication' to appear in the list.]]>
+      <![CDATA[Verify the text 'MPX Media MPAA Sub-Ratings:' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Uncheck the 'simpleSAMLphp authentication' module checkbox.]]>
+      <![CDATA[Verify the text 'v' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
+      <![CDATA[Verify the text 'MPX Media V-Chip Rating:' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+      <![CDATA[Verify the text 'tv-y7' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
+      <![CDATA[Verify the text 'MPX Media V-Chip Sub-Ratings:' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Scroll by '-500'.]]>
+      <![CDATA[Verify the text 'l' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Modules' menu link.]]>
+      <![CDATA[Verify the text 'MPX Media Exclude Selected Countries:' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Uninstall' menu link.]]>
+      <![CDATA[Verify the text 'Prevent Playback in Selected Countries' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+      <![CDATA[Verify the text 'MPX Media Available Date:' is NOT present on the page.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Pub SSO' uninstall checkbox.]]>
+      <![CDATA[Verify the text 'MPX Media Expiration Date:' is NOT present on the page.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Uninstall' button.]]>
+      <![CDATA[Click the 'Edit' link in the work bench.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Confirm uninstall dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'Edit mpx_video_6 AutomationDefault dialog'.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'The following modules will be completely uninstalled from your site, and all data from these modules will be lost!' is present on the page.]]>
+      <![CDATA[Verify that the 'Media Availabe Date' text box is disabled and has no value.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'Pub SSO' is present on the page.]]>
+      <![CDATA[Verify that the 'Media Expiration Date' text box is disabled and has no value.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Uninstall' button to confirm.]]>
+      <![CDATA[Click the 'Override' checkbox for the 'Available Date' check box.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
+      <![CDATA[Click the 'Override' checkbox for the 'Expiration Date' check box.]]>
     </line>
     <line>
-      <![CDATA[Scroll by '-500'.]]>
+      <![CDATA[Enter '07/16/2014' in the 'Available Date' text box.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Modules' menu link.]]>
+      <![CDATA[Enter '05:00pm' in the 'Available Time' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Uninstall' menu link.]]>
+      <![CDATA[Enter '07/08/2017' in the 'Expiration Date' text box.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+      <![CDATA[Enter '05:00pm' in the 'Expiration Time' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the 'simpleSAMLphp authentication' uninstall checkbox.]]>
+      <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Uninstall' button.]]>
+      <![CDATA[Verify success message of 'MPX Video for Account "DB TV" (2312945284) AutomationDefault has been updated.' is present.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Confirm uninstall dialog'.]]>
+      <![CDATA[Verify the text 'MPX Media Available Date:' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'The following modules will be completely uninstalled from your site, and all data from these modules will be lost!' is present on the page.]]>
+      <![CDATA[Verify the text 'Wednesday, July 16, 2014' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'simpleSAMLphp authentication' is present on the page.]]>
+      <![CDATA[Verify the text 'MPX Media Expiration Date: ' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Uninstall' button to confirm.]]>
+      <![CDATA[Verify the text 'Saturday, July 8, 2017' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
+      <![CDATA[Click the 'Edit' link in the work bench.]]>
     </line>
     <line>
-      <![CDATA[Scroll by '-500'.]]>
+      <![CDATA[Switch to the active frame titled 'Edit mpx_video_6 AutomationDefault dialog'.]]>
     </line>
     <line>
-      <![CDATA[STEP 18]]>
+      <![CDATA[Un-check the 'Override' checkbox for the 'Available Date' check box.]]>
+    </line>
+    <line>
+      <![CDATA[Un-check the 'Override' checkbox for the 'Expiration Date' check box.]]>
+    </line>
+    <line>
+      <![CDATA[Verify that the 'Media Availabe Date' text box is disabled and has no value.]]>
+    </line>
+    <line>
+      <![CDATA[Verify that the 'Media Expiration Date' text box is disabled and has no value.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'MPX Video for Account "DB TV" (2312945284) AutomationDefault has been updated.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'AutomationDefault' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'MPX Released File Public IDs:' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'MPX Media Default Released File Public ID:' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'MPX Media Categories:' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'Series' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'Show' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'MPX Media Description:' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'Automation 1 example test' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'MPX Media Author:' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'Pub7 Content Provider' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'MPX Media Air Date:' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'Wednesday, January 8, 2014' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'MPX Media Keywords:' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'mpx, metadata, field, override' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'MPX Media Copyright:' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'NBCUNI QA' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'MPX Media Film Advisory Board Rating:' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'pd' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'MPX Media MPAA Rating:' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'MPX Media MPAA Sub-Ratings:' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'v' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'MPX Media V-Chip Rating:' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'tv-y7' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'MPX Media V-Chip Sub-Ratings:' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'l' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'MPX Media Exclude Selected Countries:' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'Prevent Playback in Selected Countries' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'MPX Media Available Date:' is NOT present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'MPX Media Expiration Date:' is NOT present on the page.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="134274" started-at="2014-07-09T14:49:46Z" finished-at="2014-07-09T14:52:01Z">
+  <suite name="Default suite" duration-ms="64801" started-at="2014-07-09T19:05:06Z" finished-at="2014-07-09T19:06:11Z">
     <groups>
+      <group name="mpx">
+        <method signature="MPXVideosSchedulingVerificationInitialOverrides.MPXVideosSchedulingVerificationInitialOverrides_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides@204aa98f]" name="MPXVideosSchedulingVerificationInitialOverrides_Test" class="com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides"/>
+      </group> <!-- mpx -->
       <group name="full">
-        <method signature="SSODefinedDomains.SSODefinedDomains_TC3474()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSODefinedDomains@69db34de]" name="SSODefinedDomains_TC3474" class="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSODefinedDomains"/>
+        <method signature="MPXVideosSchedulingVerificationInitialOverrides.MPXVideosSchedulingVerificationInitialOverrides_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides@204aa98f]" name="MPXVideosSchedulingVerificationInitialOverrides_Test" class="com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides"/>
       </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="134274" started-at="2014-07-09T14:49:46Z" finished-at="2014-07-09T14:52:01Z">
-      <class name="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSODefinedDomains">
-        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSODefinedDomains@69db34de]" name="startGridAndHub" is-config="true" duration-ms="11664" started-at="2014-07-09T10:49:35Z" finished-at="2014-07-09T10:49:46Z">
+    <test name="Default test" duration-ms="64801" started-at="2014-07-09T19:05:06Z" finished-at="2014-07-09T19:06:11Z">
+      <class name="com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides">
+        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides@204aa98f]" name="startGridAndHub" is-config="true" duration-ms="11702" started-at="2014-07-09T15:04:55Z" finished-at="2014-07-09T15:05:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startGridAndHub -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSODefinedDomains@69db34de]" name="startSelenium" is-config="true" duration-ms="2497" started-at="2014-07-09T10:49:46Z" finished-at="2014-07-09T10:49:49Z">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides@204aa98f]" name="startSelenium" is-config="true" duration-ms="2486" started-at="2014-07-09T15:05:06Z" finished-at="2014-07-09T15:05:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="SSODefinedDomains_TC3474()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSODefinedDomains@69db34de]" name="SSODefinedDomains_TC3474" duration-ms="131192" started-at="2014-07-09T10:49:49Z" finished-at="2014-07-09T10:52:00Z">
+        <test-method status="PASS" signature="MPXVideosSchedulingVerificationInitialOverrides_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides@204aa98f]" name="MPXVideosSchedulingVerificationInitialOverrides_Test" duration-ms="61728" started-at="2014-07-09T15:05:09Z" finished-at="2014-07-09T15:06:11Z">
           <reporter-output>
             <line>
-              <![CDATA[STEP 1]]>
-            </line>
-            <line>
-              <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com/user'.]]>
+              <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]>
             </line>
             <line>
               <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
@@ -370,123 +370,24 @@
             </line>
             <line>
               <![CDATA[Click the 'Login' button.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 2]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Modules' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to frame titled 'Modules'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Pub SSO' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the module titled 'Pub SSO' to appear in the list.]]>
-            </line>
-            <line>
-              <![CDATA[Check the 'Pub SSO' check box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Continue' button to enable additional modules.]]>
-            </line>
-            <line>
-              <![CDATA[Switch back to the 'Modules' frame.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to frame titled 'Modules'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll by '-500'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 3]]>
             </line>
             <line>
               <![CDATA[Mouse over the 'Configuration' menu link.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'People' menu link.]]>
+              <![CDATA[Mouse over the 'Media' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'SimpleSAMLphp Auth Settings' menu link.]]>
+              <![CDATA[Click the 'Media: thePlatform mpx settings' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'People dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.]]>
             </line>
             <line>
-              <![CDATA[STEP 4]]>
+              <![CDATA[Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.]]>
             </line>
             <line>
-              <![CDATA[Verify the 'Activate authentication via SimpleSAMLphp' check box is unchecked.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the value of the 'Installation directory' text box equals '/mnt/www/html/nbcupublisher7qa5/simplesamlphp' and the text box is disabled.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the value of the 'Authentication source for this SP' text box equals 'pub-qa5install' and the text box is disabled.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the ' Force https for login links' check box is checked and disabled.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the value of the 'Which attribute from simpleSAMLphp should be used as user's name' text box equals 'email' and the text box is disabled.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the value of the 'Which attribute from simpleSAMLphp should be used as unique identifier for the user' text box equals 'uid' and the text box is disabled.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the value of the 'Which attribute from simpleSAMLphp should be used as user mail address' text box equals 'email' and the text box is disabled.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 5]]>
-            </line>
-            <line>
-              <![CDATA[Enter the file path for certificate upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'A certificate exists for this instance of SimpleSAMLphp.' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 6]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 7]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Activate authentication via SimpleSAMLphp' check box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+              <![CDATA[Get all the selected import account options and store to a list.]]>
             </line>
             <line>
               <![CDATA[Click the 'Close Overlay X'.]]>
@@ -495,221 +396,323 @@
               <![CDATA[Scroll by '-500'.]]>
             </line>
             <line>
-              <![CDATA[STEP 8]]>
+              <![CDATA[Mouse over the 'Structure' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Logout' button.]]>
+              <![CDATA[Mouse over the 'File types' menu link.]]>
             </line>
             <line>
-              <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com/saml_login'.]]>
+              <![CDATA[Click the 'MPX Video for Account "DB TV" (2312945284)' menu link.]]>
             </line>
             <line>
-              <![CDATA[STEP 9]]>
+              <![CDATA[Switch to the active frame titled 'MPX Video for Account &quot;DB TV&quot; (2312945284) dialog'.]]>
             </line>
             <line>
-              <![CDATA[Enter '206424392' in the 'SSO ID' text box.]]>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Enter 'tufNewcyd577BC' in the 'Password' text box.]]>
+              <![CDATA[Mouse over the 'Files' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Sign In' button.]]>
+              <![CDATA[Click the 'mpxMedia' menu link.]]>
             </line>
             <line>
-              <![CDATA[STEP 10]]>
+              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'Modules' is NOT present on the page.]]>
+              <![CDATA[Enter title AutomationDefault.]]>
             </line>
             <line>
-              <![CDATA[STEP 11]]>
+              <![CDATA[Click the 'Apply' button.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'Brandon.Clark@nbcuni.com' is present on the page.]]>
+              <![CDATA[Get the title text of every result in the search result set.]]>
             </line>
             <line>
-              <![CDATA[STEP 12]]>
+              <![CDATA[For each expected result, assert it is present in the result set.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Logout' button.]]>
+              <![CDATA[Click the first search title link in the search result set.]]>
             </line>
             <line>
-              <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com/user'.]]>
+              <![CDATA[Click the 'Edit' link in the work bench.]]>
             </line>
             <line>
-              <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
+              <![CDATA[Switch to the active frame titled 'Edit mpx_video_6 AutomationDefault dialog'.]]>
             </line>
             <line>
-              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+              <![CDATA[Un-check the 'Override' checkbox for the 'Available Date' check box.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Login' button.]]>
+              <![CDATA[Un-check the 'Override' checkbox for the 'Expiration Date' check box.]]>
             </line>
             <line>
-              <![CDATA[Click the 'People' menu link.]]>
+              <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'People dialog'.]]>
+              <![CDATA[Verify the text 'AutomationDefault' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Click the 'next >' link until user 'Brandon.Clark' is present.]]>
+              <![CDATA[Verify the text 'MPX Released File Public IDs:' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Brandon.Clark' link from the 'USERNAME' list.]]>
+              <![CDATA[Verify the text 'MPX Media Default Released File Public ID:' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[STEP 13]]>
+              <![CDATA[Verify the text 'MPX Media Categories:' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com/admin/config/people/simplesamlphp_auth'.]]>
+              <![CDATA[Verify the text 'Series' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Activate authentication via SimpleSAMLphp' check box.]]>
+              <![CDATA[Verify the text 'Show' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
+              <![CDATA[Verify the text 'MPX Media Description:' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+              <![CDATA[Verify the text 'Automation 1 example test' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'SimpleSAMLphp authentication is NOT yet activated.' is present.]]>
+              <![CDATA[Verify the text 'MPX Media Author:' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[STEP 14 - 16 TODO]]>
+              <![CDATA[Verify the text 'Pub7 Content Provider' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[STEP 17]]>
+              <![CDATA[Verify the text 'MPX Media Air Date:' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Modules' menu link.]]>
+              <![CDATA[Verify the text 'Wednesday, January 8, 2014' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+              <![CDATA[Verify the text 'MPX Media Keywords:' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Enter 'Pub SSO' in the 'Filter Name' text box.]]>
+              <![CDATA[Verify the text 'mpx, metadata, field, override' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Wait for the module titled 'Pub SSO' to appear in the list.]]>
+              <![CDATA[Verify the text 'MPX Media Copyright:' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Uncheck the 'Pub SSO' module checkbox.]]>
+              <![CDATA[Verify the text 'NBCUNI QA' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
+              <![CDATA[Verify the text 'MPX Media Film Advisory Board Rating:' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+              <![CDATA[Verify the text 'pd' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Enter 'simpleSAMLphp authentication' in the 'Filter Name' text box.]]>
+              <![CDATA[Verify the text 'MPX Media MPAA Rating:' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Wait for the module titled 'simpleSAMLphp authentication' to appear in the list.]]>
+              <![CDATA[Verify the text 'MPX Media MPAA Sub-Ratings:' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Uncheck the 'simpleSAMLphp authentication' module checkbox.]]>
+              <![CDATA[Verify the text 'v' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
+              <![CDATA[Verify the text 'MPX Media V-Chip Rating:' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+              <![CDATA[Verify the text 'tv-y7' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
+              <![CDATA[Verify the text 'MPX Media V-Chip Sub-Ratings:' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Scroll by '-500'.]]>
+              <![CDATA[Verify the text 'l' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Modules' menu link.]]>
+              <![CDATA[Verify the text 'MPX Media Exclude Selected Countries:' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Uninstall' menu link.]]>
+              <![CDATA[Verify the text 'Prevent Playback in Selected Countries' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+              <![CDATA[Verify the text 'MPX Media Available Date:' is NOT present on the page.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Pub SSO' uninstall checkbox.]]>
+              <![CDATA[Verify the text 'MPX Media Expiration Date:' is NOT present on the page.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Uninstall' button.]]>
+              <![CDATA[Click the 'Edit' link in the work bench.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Confirm uninstall dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'Edit mpx_video_6 AutomationDefault dialog'.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'The following modules will be completely uninstalled from your site, and all data from these modules will be lost!' is present on the page.]]>
+              <![CDATA[Verify that the 'Media Availabe Date' text box is disabled and has no value.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'Pub SSO' is present on the page.]]>
+              <![CDATA[Verify that the 'Media Expiration Date' text box is disabled and has no value.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Uninstall' button to confirm.]]>
+              <![CDATA[Click the 'Override' checkbox for the 'Available Date' check box.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
+              <![CDATA[Click the 'Override' checkbox for the 'Expiration Date' check box.]]>
             </line>
             <line>
-              <![CDATA[Scroll by '-500'.]]>
+              <![CDATA[Enter '07/16/2014' in the 'Available Date' text box.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Modules' menu link.]]>
+              <![CDATA[Enter '05:00pm' in the 'Available Time' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Uninstall' menu link.]]>
+              <![CDATA[Enter '07/08/2017' in the 'Expiration Date' text box.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+              <![CDATA[Enter '05:00pm' in the 'Expiration Time' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the 'simpleSAMLphp authentication' uninstall checkbox.]]>
+              <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Uninstall' button.]]>
+              <![CDATA[Verify success message of 'MPX Video for Account "DB TV" (2312945284) AutomationDefault has been updated.' is present.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Confirm uninstall dialog'.]]>
+              <![CDATA[Verify the text 'MPX Media Available Date:' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'The following modules will be completely uninstalled from your site, and all data from these modules will be lost!' is present on the page.]]>
+              <![CDATA[Verify the text 'Wednesday, July 16, 2014' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'simpleSAMLphp authentication' is present on the page.]]>
+              <![CDATA[Verify the text 'MPX Media Expiration Date: ' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Uninstall' button to confirm.]]>
+              <![CDATA[Verify the text 'Saturday, July 8, 2017' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
+              <![CDATA[Click the 'Edit' link in the work bench.]]>
             </line>
             <line>
-              <![CDATA[Scroll by '-500'.]]>
+              <![CDATA[Switch to the active frame titled 'Edit mpx_video_6 AutomationDefault dialog'.]]>
             </line>
             <line>
-              <![CDATA[STEP 18]]>
+              <![CDATA[Un-check the 'Override' checkbox for the 'Available Date' check box.]]>
+            </line>
+            <line>
+              <![CDATA[Un-check the 'Override' checkbox for the 'Expiration Date' check box.]]>
+            </line>
+            <line>
+              <![CDATA[Verify that the 'Media Availabe Date' text box is disabled and has no value.]]>
+            </line>
+            <line>
+              <![CDATA[Verify that the 'Media Expiration Date' text box is disabled and has no value.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'MPX Video for Account "DB TV" (2312945284) AutomationDefault has been updated.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'AutomationDefault' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'MPX Released File Public IDs:' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'MPX Media Default Released File Public ID:' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'MPX Media Categories:' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Series' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Show' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'MPX Media Description:' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Automation 1 example test' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'MPX Media Author:' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Pub7 Content Provider' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'MPX Media Air Date:' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Wednesday, January 8, 2014' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'MPX Media Keywords:' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'mpx, metadata, field, override' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'MPX Media Copyright:' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'NBCUNI QA' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'MPX Media Film Advisory Board Rating:' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'pd' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'MPX Media MPAA Rating:' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'MPX Media MPAA Sub-Ratings:' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'v' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'MPX Media V-Chip Rating:' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'tv-y7' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'MPX Media V-Chip Sub-Ratings:' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'l' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'MPX Media Exclude Selected Countries:' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Prevent Playback in Selected Countries' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'MPX Media Available Date:' is NOT present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'MPX Media Expiration Date:' is NOT present on the page.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- SSODefinedDomains_TC3474 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSODefinedDomains@69db34de]" name="stopSelenium" is-config="true" duration-ms="570" started-at="2014-07-09T10:52:00Z" finished-at="2014-07-09T10:52:01Z">
+        </test-method> <!-- MPXVideosSchedulingVerificationInitialOverrides_Test -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides@204aa98f]" name="stopSelenium" is-config="true" duration-ms="575" started-at="2014-07-09T15:06:11Z" finished-at="2014-07-09T15:06:11Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=SSODefinedDomains_TC3474 status=SUCCESS method=SSODefinedDomains.SSODefinedDomains_TC3474()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSODefinedDomains@69db34de] output=STEP 1]]]>
+                <![CDATA[[TestResult name=MPXVideosSchedulingVerificationInitialOverrides_Test status=SUCCESS method=MPXVideosSchedulingVerificationInitialOverrides.MPXVideosSchedulingVerificationInitialOverrides_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides@204aa98f] output=Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSODefinedDomains@69db34de]" name="stopGridAndHub" is-config="true" duration-ms="611" started-at="2014-07-09T10:52:01Z" finished-at="2014-07-09T10:52:02Z">
+        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides@204aa98f]" name="stopGridAndHub" is-config="true" duration-ms="591" started-at="2014-07-09T15:06:12Z" finished-at="2014-07-09T15:06:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopGridAndHub -->
-      </class> <!-- com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSODefinedDomains -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

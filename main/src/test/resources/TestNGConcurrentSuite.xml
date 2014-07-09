@@ -1,4 +1,4 @@
-<suite name="Pub 7 Concurrent Suite" parallel="classes" preserve-order="true" thread-count="3">
+<suite name="Pub 7 Concurrent Suite" parallel="classes" preserve-order="true" thread-count="4">
 
   	<!--TEST EXECUTION QUEUE-->
   	<test verbose="1" name="All Concurrent Web Tests" annotations="JDK">
@@ -72,12 +72,14 @@
 			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Movie.CreateMovie"/>
 			<class name="com.nbcuni.test.publisher.tests.SocialIntegration.ImplementAutoPublishingToTwitter.SeeIt"/>
 			<class name="com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXLibraryPublicID"/>
+			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.Logo.CreateLogo"/>
 			<class name="com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordReset"/>
 			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.RepresentativeImage.RepresentativeImage"/>
 			<class name="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSBlockAccess"/>
-			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.Logo.CreateLogo"/>
 			<class name="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SURF.SURFModule"/>
 			<class name="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens"/>
+			<class name="com.nbcuni.test.publisher.tests.Video.DeIngestingMPXAccountsAndCorrespondingAssets.MPXAccountDeletion"/>
+			<class name="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore"/>
 		</classes>
 	</test>
 </suite>
