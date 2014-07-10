@@ -6,6 +6,8 @@
 <tr><td>SETUP</td></tr>
 <tr><td>Click the 'Modules' menu link.</td></tr>
 <tr><td>Switch to the active frame titled 'Modules dialog'.</td></tr>
+<tr><td>Enter 'Pixelman' in the 'Filter Name' text box.</td></tr>
+<tr><td>Enter 'Devel' in the 'Filter Name' text box.</td></tr>
 <tr><td>Verify the 'Devel' check box is checked.</td></tr>
 <tr><td>Click the 'Close Overlay X'.</td></tr>
 <tr><td>Scroll by '-500'.</td></tr>
@@ -27,7 +29,7 @@
 <tr><td>Click the 'Movie' menu link.</td></tr>
 <tr><td>Switch to the active frame titled 'Create Movie dialog'.</td></tr>
 <tr><td>Scroll to and click the 'Basic Information' tab.</td></tr>
-<tr><td>Enter 'e8b54bd1f267437' in the 'Title' text box.</td></tr>
+<tr><td>Enter '3a187391223d4c9' in the 'Title' text box.</td></tr>
 <tr><td>Switch to the Synopsis frame.</td></tr>
 <tr><td>Enter a randomized text string into the 'Body' text area.</td></tr>
 <tr><td>Switch to the active frame titled 'Create Movie dialog'.</td></tr>
@@ -48,27 +50,27 @@
 <tr><td>Select the 'G' from the 'Rating' drop down list.</td></tr>
 <tr><td>Select the 'Action' from the 'Primary Genre' drop down list.</td></tr>
 <tr><td>Click the 'Save' button.</td></tr>
-<tr><td>Verify success message of 'Movie e8b54bd1f267437 has been created.' is present.</td></tr>
+<tr><td>Verify success message of 'Movie 3a187391223d4c9 has been created.' is present.</td></tr>
 <tr><td>Verify '"cat":"content"' is present in page source.</td></tr>
 <tr><td>STEP 5</td></tr>
 <tr><td>Click the 'Edit Draft' link in the work bench.</td></tr>
-<tr><td>Switch to the active frame titled 'Edit Movie e8b54bd1f267437 dialog'.</td></tr>
+<tr><td>Switch to the active frame titled 'Edit Movie 3a187391223d4c9 dialog'.</td></tr>
 <tr><td>Click the 'URL path settings' link.</td></tr>
 <tr><td>Uncheck the 'Generate automatic URL alias' check box.</td></tr>
-<tr><td>Enter 'd6de1997ff' in the 'URL alias' text box.</td></tr>
+<tr><td>Enter '92286a8896' in the 'URL alias' text box.</td></tr>
 <tr><td>Click the 'Save' button.</td></tr>
-<tr><td>Verify success message of 'Movie e8b54bd1f267437 has been updated.' is present.</td></tr>
+<tr><td>Verify success message of 'Movie 3a187391223d4c9 has been updated.' is present.</td></tr>
 <tr><td>STEP 6</td></tr>
 <tr><td>Verify '"cat":"content"' is not present in page source.</td></tr>
 <tr><td>STEP 7</td></tr>
 <tr><td>Click the 'Edit Draft' link in the work bench.</td></tr>
-<tr><td>Switch to the active frame titled 'Edit Movie e8b54bd1f267437 dialog'.</td></tr>
+<tr><td>Switch to the active frame titled 'Edit Movie 3a187391223d4c9 dialog'.</td></tr>
 <tr><td>Click the 'URL path settings' link.</td></tr>
-<tr><td>Enter 'd6de1997ff/mps-testing/2arg/3arg/4arg/5arg/6arg' in the 'URL alias' text box.</td></tr>
+<tr><td>Enter '92286a8896/mps-testing/2arg/3arg/4arg/5arg/6arg' in the 'URL alias' text box.</td></tr>
 <tr><td>Click the 'Save' button.</td></tr>
-<tr><td>Verify success message of 'Movie e8b54bd1f267437 has been updated.' is present.</td></tr>
+<tr><td>Verify success message of 'Movie 3a187391223d4c9 has been updated.' is present.</td></tr>
 <tr><td>STEP 8</td></tr>
-<tr><td>Verify '"cat":"d6de1997ff|mps-testing|2arg"}' is present in page source.</td></tr>
+<tr><td>Verify '"cat":"92286a8896|mps-testing|2arg"}' is present in page source.</td></tr>
 <tr><td>STEP 9</td></tr>
 <tr><td>Mouse over the 'Configuration' menu link.</td></tr>
 <tr><td>Mouse over the 'Web services' menu link.</td></tr>
@@ -84,7 +86,7 @@
 <tr><td>Click the 'Close Overlay X'.</td></tr>
 <tr><td>Scroll by '-500'.</td></tr>
 <tr><td>STEP 11</td></tr>
-<tr><td>Verify '"cat":"d6de1997ff|mps-testing|2arg|3arg|4arg"}' is present in page source.</td></tr>
+<tr><td>Verify '"cat":"92286a8896|mps-testing|2arg|3arg|4arg"}' is present in page source.</td></tr>
 <tr><td>STEP 12</td></tr>
 <tr><td>Switch to the active frame titled 'Execute PHP Code dialog'.</td></tr>
 <tr><td>Enter 'variable_set('mps_cat_pattern', '');echo _mps_build_cat();echo PHP_EOL;variable_set('mps_cat_pattern', '[mps:cat-pattern:?]');echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/cast'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/thisisareallyreallyreallyreallyreallyreallylongurlXXXXXX/season/episode/cast/name'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/thisisareallyreallyreallyreallyreallyreallylongurlXXXXXX/season/episode/cast/'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/show//episode/cast'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/show/season//episode//'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => '/show/season//'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => '/show///'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => '/brand/season//episode'));echo PHP_EOL;variable_set('mps_cat_pattern', '[mps:cat-pattern:2]|[mps:cat-pattern:3]');echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/cast'));echo PHP_EOL;variable_set('mps_cat_pattern', '[mps:cat-pattern:0]|[mps:cat-pattern:2]|[current-date:custom:d]|[mps:cat-pattern:3]|');echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/cast'));variable_set('mps_cat_pattern', '[mps:cat-pattern:?]');echo PHP_EOL;echo '*' . _mps_build_cat(array('aliased-path' => '/')) . '*';' in the 'PHP Code to Execute' text area.</td></tr>
@@ -109,7 +111,6 @@ brand|season|10
 <tr><td>Click the 'Modules' menu link.</td></tr>
 <tr><td>Switch to the active frame titled 'Modules dialog'.</td></tr>
 <tr><td>Enter 'Devel' in the 'Filter Name' text box.</td></tr>
-<tr><td>Wait for the module titled 'Devel' to appear in the list.</td></tr>
 <tr><td>Uncheck the 'Devel' module checkbox.</td></tr>
 <tr><td>Click the 'Save configuration' button.</td></tr>
 <tr><td>Verify success message of 'The configuration options have been saved.' is present.</td></tr>

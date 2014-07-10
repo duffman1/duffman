@@ -3,11 +3,13 @@ package com.nbcuni.test.publisher.pageobjects;
 import java.util.Arrays;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
@@ -30,6 +32,7 @@ public class Modules {
     private ContentParent contentParent;
     private Overlay overlay;
     private Taxonomy taxonomy;
+    private WebDriverWait wait;
     
     //PAGE OBJECT CONSTRUCTOR
     public Modules(Driver webDriver, AppLib applib) {
@@ -42,6 +45,7 @@ public class Modules {
     	taxonomy = new Taxonomy(webDriver);
     	PageFactory.initElements(webDriver, taxonomy);
     	PageFactory.initElements(webDriver, this);
+    	wait = new WebDriverWait(webDriver, 10);
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -57,6 +61,13 @@ public class Modules {
     @FindBy(how = How.XPATH, using = "//input[@value='Uninstall']")
     private WebElement Uninstall_Btn;
     
+    @FindBy(how = How.XPATH, using = "//label/strong[text()='Acquia agent']/../../..")
+    private WebElement AcquiaAgentModule_Row;
+    
+    private WebElement ModuleName_Row(String moduleName) {
+    	return webDriver.findElement(By.xpath("//label/strong[text()='" + moduleName + "']/../../.."));
+    }
+    
     private WebElement ModuleName_Cbx(String moduleName) {
     	return webDriver.findElement(By.xpath("//label/strong[text()='" + moduleName + "']/../../../td[@class='checkbox']//input"));
     }
@@ -71,15 +82,19 @@ public class Modules {
     
     
     //PAGE OBJECT METHODS
-    public void EnterFilterName(String filterName) throws Exception {
+    public void EnterFilterName(final String filterName) throws Exception {
     	
     	Reporter.log("Enter '" + filterName + "' in the 'Filter Name' text box.");
     	FilterList_Txb.clear();
     	FilterList_Txb.sendKeys(filterName);
-    	
-    	Reporter.log("Wait for the module titled '" + filterName + "' to appear in the list.");
-    	new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOf(ModuleName_Cbx(filterName)));
-    	Thread.sleep(1500);
+    	wait.until(ExpectedConditions.visibilityOf(ModuleName_Row(filterName)));
+    	wait.until(new ExpectedCondition<Boolean>() {
+    		public Boolean apply(WebDriver webDriver) {
+    			return (ModuleName_Row(filterName).getAttribute("style").equals("") || ModuleName_Row(filterName).getAttribute("style").equals("display: table-row;"))
+    					&& AcquiaAgentModule_Row.getAttribute("style").equals("display: none;");
+   		 	}
+    	});
+    	Thread.sleep(500);
     }
     
     public void VerifyConfigurationSaved() throws Exception{

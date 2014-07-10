@@ -162,12 +162,14 @@ public class MPSConfiguration {
     	
     	Reporter.log("Click the 'REPLACEMENT PATTERNS' link.");
     	ReplacementPatterns_Lnk.click();
+    	Thread.sleep(1000);
     }
     
     public void ClickMPSExpanderLnk() throws Exception { 
     	
     	Reporter.log("Click the 'MPS' link.");
     	wait.until(ExpectedConditions.visibilityOf(MPSExpander_Lnk)).click();
+    	Thread.sleep(1000);
     }
     
     public void VerifyMPSCatPropertyLnkPresent() throws Exception { 

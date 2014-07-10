@@ -26,6 +26,12 @@
       <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
     </line>
     <line>
+      <![CDATA[Enter 'Pixelman' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Devel' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
       <![CDATA[Verify the 'Devel' check box is checked.]]>
     </line>
     <line>
@@ -89,7 +95,7 @@
       <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
     </line>
     <line>
-      <![CDATA[Enter 'e8b54bd1f267437' in the 'Title' text box.]]>
+      <![CDATA[Enter '3a187391223d4c9' in the 'Title' text box.]]>
     </line>
     <line>
       <![CDATA[Switch to the Synopsis frame.]]>
@@ -152,7 +158,7 @@
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'Movie e8b54bd1f267437 has been created.' is present.]]>
+      <![CDATA[Verify success message of 'Movie 3a187391223d4c9 has been created.' is present.]]>
     </line>
     <line>
       <![CDATA[Verify '"cat":"content"' is present in page source.]]>
@@ -164,7 +170,7 @@
       <![CDATA[Click the 'Edit Draft' link in the work bench.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Edit Movie e8b54bd1f267437 dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'Edit Movie 3a187391223d4c9 dialog'.]]>
     </line>
     <line>
       <![CDATA[Click the 'URL path settings' link.]]>
@@ -173,13 +179,13 @@
       <![CDATA[Uncheck the 'Generate automatic URL alias' check box.]]>
     </line>
     <line>
-      <![CDATA[Enter 'd6de1997ff' in the 'URL alias' text box.]]>
+      <![CDATA[Enter '92286a8896' in the 'URL alias' text box.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'Movie e8b54bd1f267437 has been updated.' is present.]]>
+      <![CDATA[Verify success message of 'Movie 3a187391223d4c9 has been updated.' is present.]]>
     </line>
     <line>
       <![CDATA[STEP 6]]>
@@ -194,25 +200,25 @@
       <![CDATA[Click the 'Edit Draft' link in the work bench.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Edit Movie e8b54bd1f267437 dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'Edit Movie 3a187391223d4c9 dialog'.]]>
     </line>
     <line>
       <![CDATA[Click the 'URL path settings' link.]]>
     </line>
     <line>
-      <![CDATA[Enter 'd6de1997ff/mps-testing/2arg/3arg/4arg/5arg/6arg' in the 'URL alias' text box.]]>
+      <![CDATA[Enter '92286a8896/mps-testing/2arg/3arg/4arg/5arg/6arg' in the 'URL alias' text box.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'Movie e8b54bd1f267437 has been updated.' is present.]]>
+      <![CDATA[Verify success message of 'Movie 3a187391223d4c9 has been updated.' is present.]]>
     </line>
     <line>
       <![CDATA[STEP 8]]>
     </line>
     <line>
-      <![CDATA[Verify '"cat":"d6de1997ff|mps-testing|2arg"}' is present in page source.]]>
+      <![CDATA[Verify '"cat":"92286a8896|mps-testing|2arg"}' is present in page source.]]>
     </line>
     <line>
       <![CDATA[STEP 9]]>
@@ -260,7 +266,7 @@
       <![CDATA[STEP 11]]>
     </line>
     <line>
-      <![CDATA[Verify '"cat":"d6de1997ff|mps-testing|2arg|3arg|4arg"}' is present in page source.]]>
+      <![CDATA[Verify '"cat":"92286a8896|mps-testing|2arg|3arg|4arg"}' is present in page source.]]>
     </line>
     <line>
       <![CDATA[STEP 12]]>
@@ -309,9 +315,6 @@ brand|season|10
       <![CDATA[Enter 'Devel' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Wait for the module titled 'Devel' to appear in the list.]]>
-    </line>
-    <line>
       <![CDATA[Uncheck the 'Devel' module checkbox.]]>
     </line>
     <line>
@@ -345,23 +348,23 @@ brand|season|10
       <![CDATA[Click the 'Save configuration' button.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="129507" started-at="2014-07-10T12:37:30Z" finished-at="2014-07-10T12:39:40Z">
+  <suite name="Default suite" duration-ms="115674" started-at="2014-07-10T18:30:58Z" finished-at="2014-07-10T18:32:53Z">
     <groups>
       <group name="full">
-        <method signature="MPSSupportTokens.MPSSupportTokens_TC3641()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens@204aa98f]" name="MPSSupportTokens_TC3641" class="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens"/>
+        <method signature="MPSSupportTokens.MPSSupportTokens_TC3641()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens@7d52cb9a]" name="MPSSupportTokens_TC3641" class="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens"/>
       </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="129507" started-at="2014-07-10T12:37:30Z" finished-at="2014-07-10T12:39:40Z">
+    <test name="Default test" duration-ms="115674" started-at="2014-07-10T18:30:58Z" finished-at="2014-07-10T18:32:53Z">
       <class name="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens">
-        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens@204aa98f]" name="startGridAndHub" is-config="true" duration-ms="11910" started-at="2014-07-10T08:37:19Z" finished-at="2014-07-10T08:37:30Z">
+        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens@7d52cb9a]" name="startGridAndHub" is-config="true" duration-ms="12082" started-at="2014-07-10T14:30:46Z" finished-at="2014-07-10T14:30:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startGridAndHub -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens@204aa98f]" name="startSelenium" is-config="true" duration-ms="2440" started-at="2014-07-10T08:37:30Z" finished-at="2014-07-10T08:37:33Z">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens@7d52cb9a]" name="startSelenium" is-config="true" duration-ms="2414" started-at="2014-07-10T14:30:58Z" finished-at="2014-07-10T14:31:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="MPSSupportTokens_TC3641()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens@204aa98f]" name="MPSSupportTokens_TC3641" duration-ms="126481" started-at="2014-07-10T08:37:33Z" finished-at="2014-07-10T08:39:39Z">
+        <test-method status="PASS" signature="MPSSupportTokens_TC3641()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens@7d52cb9a]" name="MPSSupportTokens_TC3641" duration-ms="112665" started-at="2014-07-10T14:31:00Z" finished-at="2014-07-10T14:32:53Z">
           <reporter-output>
             <line>
               <![CDATA[STEP 1]]>
@@ -386,6 +389,12 @@ brand|season|10
             </line>
             <line>
               <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Pixelman' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Devel' in the 'Filter Name' text box.]]>
             </line>
             <line>
               <![CDATA[Verify the 'Devel' check box is checked.]]>
@@ -451,7 +460,7 @@ brand|season|10
               <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
             </line>
             <line>
-              <![CDATA[Enter 'e8b54bd1f267437' in the 'Title' text box.]]>
+              <![CDATA[Enter '3a187391223d4c9' in the 'Title' text box.]]>
             </line>
             <line>
               <![CDATA[Switch to the Synopsis frame.]]>
@@ -514,7 +523,7 @@ brand|season|10
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'Movie e8b54bd1f267437 has been created.' is present.]]>
+              <![CDATA[Verify success message of 'Movie 3a187391223d4c9 has been created.' is present.]]>
             </line>
             <line>
               <![CDATA[Verify '"cat":"content"' is present in page source.]]>
@@ -526,7 +535,7 @@ brand|season|10
               <![CDATA[Click the 'Edit Draft' link in the work bench.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Edit Movie e8b54bd1f267437 dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'Edit Movie 3a187391223d4c9 dialog'.]]>
             </line>
             <line>
               <![CDATA[Click the 'URL path settings' link.]]>
@@ -535,13 +544,13 @@ brand|season|10
               <![CDATA[Uncheck the 'Generate automatic URL alias' check box.]]>
             </line>
             <line>
-              <![CDATA[Enter 'd6de1997ff' in the 'URL alias' text box.]]>
+              <![CDATA[Enter '92286a8896' in the 'URL alias' text box.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'Movie e8b54bd1f267437 has been updated.' is present.]]>
+              <![CDATA[Verify success message of 'Movie 3a187391223d4c9 has been updated.' is present.]]>
             </line>
             <line>
               <![CDATA[STEP 6]]>
@@ -556,25 +565,25 @@ brand|season|10
               <![CDATA[Click the 'Edit Draft' link in the work bench.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Edit Movie e8b54bd1f267437 dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'Edit Movie 3a187391223d4c9 dialog'.]]>
             </line>
             <line>
               <![CDATA[Click the 'URL path settings' link.]]>
             </line>
             <line>
-              <![CDATA[Enter 'd6de1997ff/mps-testing/2arg/3arg/4arg/5arg/6arg' in the 'URL alias' text box.]]>
+              <![CDATA[Enter '92286a8896/mps-testing/2arg/3arg/4arg/5arg/6arg' in the 'URL alias' text box.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'Movie e8b54bd1f267437 has been updated.' is present.]]>
+              <![CDATA[Verify success message of 'Movie 3a187391223d4c9 has been updated.' is present.]]>
             </line>
             <line>
               <![CDATA[STEP 8]]>
             </line>
             <line>
-              <![CDATA[Verify '"cat":"d6de1997ff|mps-testing|2arg"}' is present in page source.]]>
+              <![CDATA[Verify '"cat":"92286a8896|mps-testing|2arg"}' is present in page source.]]>
             </line>
             <line>
               <![CDATA[STEP 9]]>
@@ -622,7 +631,7 @@ brand|season|10
               <![CDATA[STEP 11]]>
             </line>
             <line>
-              <![CDATA[Verify '"cat":"d6de1997ff|mps-testing|2arg|3arg|4arg"}' is present in page source.]]>
+              <![CDATA[Verify '"cat":"92286a8896|mps-testing|2arg|3arg|4arg"}' is present in page source.]]>
             </line>
             <line>
               <![CDATA[STEP 12]]>
@@ -671,9 +680,6 @@ brand|season|10
               <![CDATA[Enter 'Devel' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Wait for the module titled 'Devel' to appear in the list.]]>
-            </line>
-            <line>
               <![CDATA[Uncheck the 'Devel' module checkbox.]]>
             </line>
             <line>
@@ -708,18 +714,18 @@ brand|season|10
             </line>
           </reporter-output>
         </test-method> <!-- MPSSupportTokens_TC3641 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens@204aa98f]" name="stopSelenium" is-config="true" duration-ms="575" started-at="2014-07-10T08:39:39Z" finished-at="2014-07-10T08:39:40Z">
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens@7d52cb9a]" name="stopSelenium" is-config="true" duration-ms="574" started-at="2014-07-10T14:32:53Z" finished-at="2014-07-10T14:32:53Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=MPSSupportTokens_TC3641 status=SUCCESS method=MPSSupportTokens.MPSSupportTokens_TC3641()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens@204aa98f] output=STEP 1]]]>
+                <![CDATA[[TestResult name=MPSSupportTokens_TC3641 status=SUCCESS method=MPSSupportTokens.MPSSupportTokens_TC3641()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens@7d52cb9a] output=STEP 1]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens@204aa98f]" name="stopGridAndHub" is-config="true" duration-ms="605" started-at="2014-07-10T08:39:40Z" finished-at="2014-07-10T08:39:41Z">
+        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens@7d52cb9a]" name="stopGridAndHub" is-config="true" duration-ms="573" started-at="2014-07-10T14:32:54Z" finished-at="2014-07-10T14:32:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopGridAndHub -->

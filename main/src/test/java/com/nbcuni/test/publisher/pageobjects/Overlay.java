@@ -3,6 +3,7 @@ package com.nbcuni.test.publisher.pageobjects;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -63,8 +64,14 @@ public class Overlay {
     public void ClickCloseOverlayLnk() throws Exception {
     	
     	Reporter.log("Click the 'Close Overlay X'.");
-    	contentParent.Scroll("-500");
-    	CloseOverlay_Lnk.click();
+    	for (int ScrollC = 0; ScrollC < 10; ScrollC++) {
+    		contentParent.Scroll("-500");
+    		try {
+    			CloseOverlay_Lnk.click();
+    			break;
+    		}
+    		catch (WebDriverException e) { }
+    	}
     	this.switchToDefaultContent();
     }
     
