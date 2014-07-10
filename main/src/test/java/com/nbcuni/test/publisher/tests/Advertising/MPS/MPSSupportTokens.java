@@ -35,7 +35,11 @@ public class MPSSupportTokens extends ParentTest {
             
         	Reporter.log("SETUP");
         	Modules modules = new Modules(webDriver, applib);
-        	modules.VerifyModuleEnabled("Devel");
+        	taxonomy.NavigateSite("Modules");
+        	overlay.SwitchToActiveFrame();
+        	modules.DisableModule("Pixelman");
+        	modules.EnableModule("Devel");
+        	overlay.ClickCloseOverlayLnk();
         	taxonomy.NavigateSite("Configuration>>Web services>>MPS Configuration");
             overlay.SwitchToActiveFrame();
             MPSConfiguration mpsConfiguration = new MPSConfiguration(webDriver);
