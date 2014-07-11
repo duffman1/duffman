@@ -1,10 +1,14 @@
 package com.nbcuni.test.publisher.pageobjects.Configuration;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
+
 import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
@@ -15,10 +19,12 @@ import com.nbcuni.test.publisher.common.Driver.Driver;
 *********************************************/
 public class SSOLogin {
 		
+	private WebDriverWait wait;
+	
 	//PAGE OBJECT CONSTRUCTOR
 	public SSOLogin(Driver webDriver) {
 		PageFactory.initElements(webDriver, this);
-		
+		wait = new WebDriverWait(webDriver, 10);
 	}
 
 	//PAGE OBJECT IDENTIFIERS
@@ -49,5 +55,12 @@ public class SSOLogin {
 		
 		Reporter.log("Click the 'Sign In' button.");
 		SignIn_Btn.click();
+	}
+	
+	public void VerifySSOPasswordReset() throws Exception {
+		
+		Reporter.log("Verify the user is redirected to the SSO Password Reset page.");
+		wait.until(ExpectedConditions.titleIs("SSO Password Reset application"));
+		wait.until(ExpectedConditions.textToBePresentInElement(By.tagName("body"), "Change your password"));
 	}
 }

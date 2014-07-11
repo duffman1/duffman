@@ -39,7 +39,7 @@ public class EmailRedirect extends ParentTest{
     	
     	//Step 3
     	AddUser addUser = new AddUser(webDriver, applib);
-    	addUser.AddDefaultUser(Arrays.asList("editor"));
+    	addUser.AddDefaultUser(Arrays.asList("editor"), false);
         GmailConnect gmailConnect = new GmailConnect(applib);
         String autoEmailSubject = "An administrator created an account for you at Site-Install";
         gmailConnect.VerifyAutoEmailRecieved(autoEmailSubject);

@@ -45,7 +45,7 @@ public class ContentLocking extends ParentTest {
 	      
 	    //Step 4
 	    AddUser addUser = new AddUser(webDriver, applib);
-	    String userName = addUser.AddDefaultUser(Arrays.asList("editor"));
+	    String userName = addUser.AddDefaultUser(Arrays.asList("editor"), false);
 	    taxonomy.NavigateSite("People>>Permissions>>Roles");  
 	    overlay.SwitchToActiveFrame();
 	    Roles roles = new Roles(webDriver);

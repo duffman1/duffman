@@ -47,10 +47,10 @@ public class MultiEditorPublishingWorkflow extends ParentTest{
     	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
     	AddUser addUser = new AddUser(webDriver, applib);
     	String userPassword = "pa55word";
-        String editorUserName = addUser.AddDefaultUser(Arrays.asList("editor"));
+        String editorUserName = addUser.AddDefaultUser(Arrays.asList("editor"), false);
         
         //Setup - create senior editor user
-        String seniorEditorUserName = addUser.AddDefaultUser(Arrays.asList("senior editor"));
+        String seniorEditorUserName = addUser.AddDefaultUser(Arrays.asList("senior editor"), false);
         
         //Setup - ensure editor and senior editor have correct permissions
         taxonomy.NavigateSite("People>>Permissions");

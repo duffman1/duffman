@@ -37,7 +37,11 @@ public class People {
     
     //PAGE OBJECT IDENTIFIERS
     private WebElement Username_Lnk(String userName) {
-    	return webDriver.findElement(By.xpath("//a[contains(text(), '" + userName + "')]"));
+    	return webDriver.findElement(By.xpath("//a[contains(text(), '" + userName.substring(0, 10) + "')]"));
+    }
+    
+    private WebElement Edit_Lnk(String userName) {
+    	return webDriver.findElement(By.xpath("//a[contains(text(), '" + userName.substring(0, 10) + "')]/../..//a[text()='edit']"));
     }
     
     @FindBy(how = How.CSS, using = "a[title='Go to next page']")
@@ -49,6 +53,13 @@ public class People {
     	
     	Reporter.log("Click the '" + userName + "' link from the 'USERNAME' list.");
     	Username_Lnk(userName).click();
+    	
+    }
+    
+    public void ClickEditLnk(String userName) throws Exception {
+    	
+    	Reporter.log("Click the 'edit' link for '" + userName + "' from the 'USERNAME' list.");
+    	Edit_Lnk(userName).click();
     	
     }
     

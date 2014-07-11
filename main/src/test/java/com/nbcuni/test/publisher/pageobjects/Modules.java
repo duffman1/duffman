@@ -153,7 +153,10 @@ public class Modules {
         	overlay.SwitchToFrame("Modules");
         	webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
         	
-    		this.VerifyConfigurationSaved();
+        	if (moduleName != "Overlay") {
+        		this.VerifyConfigurationSaved();
+        	}
+        	
     	}
     	else {
     		Reporter.log("Verify the '" + moduleName + "' check box is checked.");

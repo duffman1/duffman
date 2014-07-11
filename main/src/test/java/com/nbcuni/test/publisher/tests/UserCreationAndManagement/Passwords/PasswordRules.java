@@ -26,7 +26,7 @@ public class PasswordRules extends ParentTest {
     	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
     	AddUser addUser = new AddUser(webDriver, applib);
     	String userPassword = "pa55word";
-        String editorUserName = addUser.AddDefaultUser(Arrays.asList("editor"));
+        String editorUserName = addUser.AddDefaultUser(Arrays.asList("editor"), false);
         Logout logout = new Logout(webDriver);
         logout.ClickLogoutBtn();
         

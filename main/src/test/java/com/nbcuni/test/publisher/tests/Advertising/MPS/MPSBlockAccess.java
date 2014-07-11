@@ -29,7 +29,7 @@ public class MPSBlockAccess extends ParentTest {
         	
         	Reporter.log("STEP 3");
         	AddUser addUser = new AddUser(webDriver, applib);
-            String userName = addUser.AddDefaultUser(Arrays.asList("administrator"));
+            String userName = addUser.AddDefaultUser(Arrays.asList("administrator"), false);
             
             Reporter.log("STEP 4");
             Logout logout = new Logout(webDriver);

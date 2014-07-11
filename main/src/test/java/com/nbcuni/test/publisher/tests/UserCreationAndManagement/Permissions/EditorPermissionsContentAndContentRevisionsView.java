@@ -30,7 +30,7 @@ public class EditorPermissionsContentAndContentRevisionsView extends ParentTest{
         
         //Step 2 and 3
         AddUser addUser = new AddUser(webDriver, applib);
-        String userName = addUser.AddDefaultUser(Arrays.asList("editor"));
+        String userName = addUser.AddDefaultUser(Arrays.asList("editor"), false);
         
         //Step 4
         taxonomy.NavigateSite("People>>Permissions>>Roles");

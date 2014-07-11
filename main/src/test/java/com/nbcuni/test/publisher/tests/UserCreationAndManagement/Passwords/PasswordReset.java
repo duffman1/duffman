@@ -24,7 +24,7 @@ public class PasswordReset extends ParentTest {
     	UserLogin userLogin = applib.openApplication();
     	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
     	AddUser addUser = new AddUser(webDriver, applib);
-    	String userName = addUser.AddDefaultUser(Arrays.asList("editor"));
+    	String userName = addUser.AddDefaultUser(Arrays.asList("editor"), false);
     	Logout logout = new Logout(webDriver);
     	logout.ClickLogoutBtn();
     	

@@ -1,8 +1,10 @@
 package com.nbcuni.test.publisher.pageobjects.People;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -13,6 +15,7 @@ import org.testng.Assert;
 import org.testng.Reporter;
 
 import com.nbcuni.test.publisher.common.AppLib;
+import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Random;
 import com.nbcuni.test.publisher.pageobjects.Overlay;
 import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
@@ -34,6 +37,7 @@ public class AddUser {
 	private ContentParent contentParent;
 	private Random random;
 	private WebDriverWait wait;
+	private Config config;
 	
     //PAGE OBJECT CONSTRUCTOR
     public AddUser(Driver webDriver, AppLib applib) {
@@ -44,6 +48,7 @@ public class AddUser {
         contentParent = new ContentParent(webDriver, applib);
         random = new Random();
         wait = new WebDriverWait(webDriver, 10);
+        config = new Config();
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -52,6 +57,9 @@ public class AddUser {
     
     @FindBy(how = How.XPATH, using = "//input[@id='edit-mail']")
     private WebElement EmailAddress_Txb;
+    
+    @FindBy(how = How.XPATH, using = "//a[text()='Change your password']")
+    private WebElement ChangeYourPassword_Lnk;
     
     @FindBy(how = How.ID, using = "edit-current-pass")
     private WebElement CurrentPassword_Txb;
@@ -202,16 +210,76 @@ public class AddUser {
     	}
     }
     
-    public String AddDefaultUser(List<String> roles) throws Exception {
+    public void VerifyUsernameNotPresent() throws Exception {
+    	
+    	Reporter.log("Verify the 'Username' text box is not present.");
+    	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+    	try {
+    		Username_Txb.isDisplayed();
+    		Assert.fail("Username text box is present when it should not be.");
+    	}
+    	catch (NoSuchElementException e) { }
+    	webDriver.manage().timeouts().implicitlyWait(config.getImplicitWaitTime(), TimeUnit.SECONDS);
+    	
+    }
+    
+    public void VerifyPasswordNotPresent() throws Exception {
+    	
+    	Reporter.log("Verify the 'Password' and 'Password Confirm' text boxes are not present.");
+    	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+    	try {
+    		Password_Txb.isDisplayed();
+    		ConfirmPassword_Txb.isDisplayed();
+    		Assert.fail("Password/Password Confirm text boxes are present when they should not be.");
+    	}
+    	catch (NoSuchElementException e) { }
+    	webDriver.manage().timeouts().implicitlyWait(config.getImplicitWaitTime(), TimeUnit.SECONDS);
+    	
+    }
+
+    public void VerifyUsernameValueAndIsDisabled(String userName) throws Exception {
+    	
+    	Reporter.log("Verify the 'Username' value is '" + userName + "' and the text box is disabled.");
+    	Assert.assertEquals(userName, Username_Txb.getAttribute("value"));
+    	Assert.assertFalse(Username_Txb.isEnabled());
+    	
+    }
+    
+    public void VerifyEmailAddressValueAndIsDisabled(String email) throws Exception {
+    	
+    	Reporter.log("Verify the 'E-mail address' value is '" + email + "' and the text box is disabled.");
+    	Assert.assertEquals(email, EmailAddress_Txb.getAttribute("value"));
+    	Assert.assertFalse(EmailAddress_Txb.isEnabled());
+    	
+    }
+    
+    public void ClickChangeYourPasswordLnk() throws Exception {
+    	
+    	Reporter.log("Click the 'Change your password' link.");
+    	ChangeYourPassword_Lnk.click();
+    	
+    }
+    
+    public String AddDefaultUser(List<String> roles, Boolean isSSO) throws Exception {
     	
     	taxonomy.NavigateSite("People>>Add user");
         overlay.SwitchToActiveFrame();
         String userName = random.GetCharacterString(15) + "@" + random.GetCharacterString(15) + ".com";
-        this.EnterUsername(userName);
+        if (isSSO.equals(false)) {
+        	this.EnterUsername(userName);
+        }
+        else {
+        	this.VerifyUsernameNotPresent();
+        }
         this.EnterEmailAddress(userName);
-        String passWord = "pa55word";
-        this.EnterPassword(passWord);
-        this.EnterConfirmPassword(passWord);
+        if (isSSO.equals(false)) {
+        	String passWord = "pa55word";
+        	this.EnterPassword(passWord);
+            this.EnterConfirmPassword(passWord);
+        }
+        else {
+        	this.VerifyPasswordNotPresent();
+        }
         this.CheckRoleCbx(roles);
         this.CheckNotifyUserNewAccountCbx();
         String firstName = random.GetCharacterString(15);

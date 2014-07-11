@@ -36,10 +36,19 @@ public class TestSetup extends ParentTest{
         	UserLogin userLogin = applib.openApplication();
         	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
         	
+        	//enable overlay module if necessary
+        	applib.openSitePage("/admin/modules");
+            Modules modules = new Modules(webDriver, applib);
+            if (modules.IsModuleEnabled("Overlay") == true) {
+            	applib.openSitePage("/#overlay=admin/modules");
+            }
+            else {
+            	modules.EnterFilterName("Overlay");
+                modules.EnableModule("Overlay");
+            }
+            overlay.SwitchToActiveFrame();
+            
         	//disable sticky edit actions module
-            taxonomy.NavigateSite("Modules");
-        	overlay.SwitchToFrame("Modules");
-        	Modules modules = new Modules(webDriver, applib);
         	modules.EnterFilterName("Sticky Edit Actions");
         	modules.DisableModule("Sticky Edit Actions");
             

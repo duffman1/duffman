@@ -2,7 +2,10 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
     <line>
-      <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]>
+      <![CDATA[STEP 1]]>
+    </line>
+    <line>
+      <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com/user'.]]>
     </line>
     <line>
       <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
@@ -14,16 +17,37 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
+      <![CDATA[STEP 2]]>
+    </line>
+    <line>
       <![CDATA[Click the 'Modules' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+      <![CDATA[Switch to frame titled 'Modules'.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Metatag: Twitter Cards' in the 'Filter Name' text box.]]>
+      <![CDATA[Enter 'Pub SSO' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Verify the 'Metatag: Twitter Cards (See It)' check box is checked.]]>
+      <![CDATA[Check the 'Pub SSO' check box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configuration' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Continue' button to enable additional modules.]]>
+    </line>
+    <line>
+      <![CDATA[Switch back to the 'Modules' frame.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to frame titled 'Modules'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
@@ -32,98 +56,236 @@
       <![CDATA[Scroll by '-500'.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Content' menu link.]]>
+      <![CDATA[STEP 3]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Add content' menu link.]]>
+      <![CDATA[Mouse over the 'Configuration' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Post' menu link.]]>
+      <![CDATA[Mouse over the 'People' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+      <![CDATA[Click the 'SimpleSAMLphp Auth Settings' menu link.]]>
     </line>
     <line>
-      <![CDATA[Enter '88f56b026cb74b3' in the 'Title' text box.]]>
+      <![CDATA[Switch to the active frame titled 'People dialog'.]]>
     </line>
     <line>
-      <![CDATA[Switch to the Synopsis frame.]]>
+      <![CDATA[STEP 4]]>
     </line>
     <line>
-      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+      <![CDATA[Verify the 'Activate authentication via SimpleSAMLphp' check box is unchecked.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+      <![CDATA[Verify the value of the 'Installation directory' text box equals '/mnt/www/html/nbcupublisher7qa5/simplesamlphp' and the text box is disabled.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Meta tags' link.]]>
+      <![CDATA[Verify the value of the 'Authentication source for this SP' text box equals 'pub-qa5install' and the text box is disabled.]]>
     </line>
     <line>
-      <![CDATA[Click the 'TWITTER CARD' link.]]>
+      <![CDATA[Verify the ' Force https for login links' check box is checked and disabled.]]>
     </line>
     <line>
-      <![CDATA[Enter '9222635058369246112' in the 'See it: ShowID/EpisodeID' text box.]]>
+      <![CDATA[Verify the value of the 'Which attribute from simpleSAMLphp should be used as user's name' text box equals 'email' and the text box is disabled.]]>
     </line>
     <line>
-      <![CDATA[Select the 'See It (s)' from the 'See It: IDSpace' drop down list.]]>
+      <![CDATA[Verify the value of the 'Which attribute from simpleSAMLphp should be used as unique identifier for the user' text box equals 'uid' and the text box is disabled.]]>
     </line>
     <line>
-      <![CDATA[Enter 'fall' in the 'See it: Campaign ID' text box.]]>
+      <![CDATA[Verify the value of the 'Which attribute from simpleSAMLphp should be used as user mail address' text box equals 'email' and the text box is disabled.]]>
     </line>
     <line>
-      <![CDATA[Enter 'mainpage' in the 'See it: Asset ID' text box.]]>
+      <![CDATA[STEP 5]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save' button.]]>
+      <![CDATA[Enter the file path for certificate upload.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'Post 88f56b026cb74b3 has been created.' is present.]]>
+      <![CDATA[Click the 'Save configuration' button.]]>
     </line>
     <line>
-      <![CDATA[Verify 'twitter:seeit:idspace' is present in page source.]]>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
     </line>
     <line>
-      <![CDATA[Verify 'content="s"' is present in page source.]]>
+      <![CDATA[Verify the text 'A certificate exists for this instance of SimpleSAMLphp.' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Verify 'twitter:seeit:showid' is present in page source.]]>
+      <![CDATA[STEP 6]]>
     </line>
     <line>
-      <![CDATA[Verify 'content="9222635058369246112"' is present in page source.]]>
+      <![CDATA[Click the 'Save configuration' button.]]>
     </line>
     <line>
-      <![CDATA[Verify 'twitter:seeit:campaignid' is present in page source.]]>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
     </line>
     <line>
-      <![CDATA[Verify 'content="fall"' is present in page source.]]>
+      <![CDATA[STEP 7]]>
     </line>
     <line>
-      <![CDATA[Verify 'twitter:seeit:assetid' is present in page source.]]>
+      <![CDATA[Click the 'Activate authentication via SimpleSAMLphp' check box.]]>
     </line>
     <line>
-      <![CDATA[Verify 'content="mainpage"' is present in page source.]]>
+      <![CDATA[Click the 'Save configuration' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll by '-500'.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 8]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Logout' button.]]>
+    </line>
+    <line>
+      <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com/saml_login'.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 9]]>
+    </line>
+    <line>
+      <![CDATA[Enter '206424392' in the 'SSO ID' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'tufNewcyd577BC' in the 'Password' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Sign In' button.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 10]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'Modules' is NOT present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 11]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'Brandon.Clark@nbcuni.com' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 12]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Logout' button.]]>
+    </line>
+    <line>
+      <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com/user'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Login' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'People' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'People dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'next >' link until user 'Brandon.Clark' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Brandon.Clark' link from the 'USERNAME' list.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 13]]>
+    </line>
+    <line>
+      <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com/admin/config/people/simplesamlphp_auth'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Activate authentication via SimpleSAMLphp' check box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configuration' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'SimpleSAMLphp authentication is NOT yet activated.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 14 - 16 TODO]]>
+    </line>
+    <line>
+      <![CDATA[STEP 17]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Modules' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Pub SSO' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Uncheck the 'Pub SSO' module checkbox.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configuration' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'simpleSAMLphp authentication' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Uncheck the 'simpleSAMLphp authentication' module checkbox.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configuration' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll by '-500'.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 18]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="32487" started-at="2014-07-11T13:14:00Z" finished-at="2014-07-11T13:14:32Z">
+  <suite name="Default suite" duration-ms="123734" started-at="2014-07-11T20:34:45Z" finished-at="2014-07-11T20:36:49Z">
     <groups>
       <group name="full">
-        <method signature="SeeIt.SeeIt_TC1060()[pri:0, instance:com.nbcuni.test.publisher.tests.SocialIntegration.ImplementAutoPublishingToTwitter.SeeIt@47f15427]" name="SeeIt_TC1060" class="com.nbcuni.test.publisher.tests.SocialIntegration.ImplementAutoPublishingToTwitter.SeeIt"/>
+        <method signature="SSODefinedDomains.SSODefinedDomains_TC3474()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSODefinedDomains@22e692b1]" name="SSODefinedDomains_TC3474" class="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSODefinedDomains"/>
       </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="32487" started-at="2014-07-11T13:14:00Z" finished-at="2014-07-11T13:14:32Z">
-      <class name="com.nbcuni.test.publisher.tests.SocialIntegration.ImplementAutoPublishingToTwitter.SeeIt">
-        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.SocialIntegration.ImplementAutoPublishingToTwitter.SeeIt@47f15427]" name="startGridAndHub" is-config="true" duration-ms="12146" started-at="2014-07-11T09:13:48Z" finished-at="2014-07-11T09:14:00Z">
+    <test name="Default test" duration-ms="123734" started-at="2014-07-11T20:34:45Z" finished-at="2014-07-11T20:36:49Z">
+      <class name="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSODefinedDomains">
+        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSODefinedDomains@22e692b1]" name="startGridAndHub" is-config="true" duration-ms="11600" started-at="2014-07-11T16:34:34Z" finished-at="2014-07-11T16:34:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startGridAndHub -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.SocialIntegration.ImplementAutoPublishingToTwitter.SeeIt@47f15427]" name="startSelenium" is-config="true" duration-ms="2691" started-at="2014-07-11T09:14:00Z" finished-at="2014-07-11T09:14:03Z">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSODefinedDomains@22e692b1]" name="startSelenium" is-config="true" duration-ms="2435" started-at="2014-07-11T16:34:45Z" finished-at="2014-07-11T16:34:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="SeeIt_TC1060()[pri:0, instance:com.nbcuni.test.publisher.tests.SocialIntegration.ImplementAutoPublishingToTwitter.SeeIt@47f15427]" name="SeeIt_TC1060" duration-ms="29213" started-at="2014-07-11T09:14:03Z" finished-at="2014-07-11T09:14:32Z">
+        <test-method status="PASS" signature="SSODefinedDomains_TC3474()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSODefinedDomains@22e692b1]" name="SSODefinedDomains_TC3474" duration-ms="120718" started-at="2014-07-11T16:34:48Z" finished-at="2014-07-11T16:36:49Z">
           <reporter-output>
             <line>
-              <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]>
+              <![CDATA[STEP 1]]>
+            </line>
+            <line>
+              <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com/user'.]]>
             </line>
             <line>
               <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
@@ -135,16 +297,37 @@
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
+              <![CDATA[STEP 2]]>
+            </line>
+            <line>
               <![CDATA[Click the 'Modules' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+              <![CDATA[Switch to frame titled 'Modules'.]]>
             </line>
             <line>
-              <![CDATA[Enter 'Metatag: Twitter Cards' in the 'Filter Name' text box.]]>
+              <![CDATA[Enter 'Pub SSO' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Verify the 'Metatag: Twitter Cards (See It)' check box is checked.]]>
+              <![CDATA[Check the 'Pub SSO' check box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configuration' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Continue' button to enable additional modules.]]>
+            </line>
+            <line>
+              <![CDATA[Switch back to the 'Modules' frame.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to frame titled 'Modules'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
             </line>
             <line>
               <![CDATA[Click the 'Close Overlay X'.]]>
@@ -153,95 +336,230 @@
               <![CDATA[Scroll by '-500'.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Content' menu link.]]>
+              <![CDATA[STEP 3]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Add content' menu link.]]>
+              <![CDATA[Mouse over the 'Configuration' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Post' menu link.]]>
+              <![CDATA[Mouse over the 'People' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+              <![CDATA[Click the 'SimpleSAMLphp Auth Settings' menu link.]]>
             </line>
             <line>
-              <![CDATA[Enter '88f56b026cb74b3' in the 'Title' text box.]]>
+              <![CDATA[Switch to the active frame titled 'People dialog'.]]>
             </line>
             <line>
-              <![CDATA[Switch to the Synopsis frame.]]>
+              <![CDATA[STEP 4]]>
             </line>
             <line>
-              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+              <![CDATA[Verify the 'Activate authentication via SimpleSAMLphp' check box is unchecked.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+              <![CDATA[Verify the value of the 'Installation directory' text box equals '/mnt/www/html/nbcupublisher7qa5/simplesamlphp' and the text box is disabled.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Meta tags' link.]]>
+              <![CDATA[Verify the value of the 'Authentication source for this SP' text box equals 'pub-qa5install' and the text box is disabled.]]>
             </line>
             <line>
-              <![CDATA[Click the 'TWITTER CARD' link.]]>
+              <![CDATA[Verify the ' Force https for login links' check box is checked and disabled.]]>
             </line>
             <line>
-              <![CDATA[Enter '9222635058369246112' in the 'See it: ShowID/EpisodeID' text box.]]>
+              <![CDATA[Verify the value of the 'Which attribute from simpleSAMLphp should be used as user's name' text box equals 'email' and the text box is disabled.]]>
             </line>
             <line>
-              <![CDATA[Select the 'See It (s)' from the 'See It: IDSpace' drop down list.]]>
+              <![CDATA[Verify the value of the 'Which attribute from simpleSAMLphp should be used as unique identifier for the user' text box equals 'uid' and the text box is disabled.]]>
             </line>
             <line>
-              <![CDATA[Enter 'fall' in the 'See it: Campaign ID' text box.]]>
+              <![CDATA[Verify the value of the 'Which attribute from simpleSAMLphp should be used as user mail address' text box equals 'email' and the text box is disabled.]]>
             </line>
             <line>
-              <![CDATA[Enter 'mainpage' in the 'See it: Asset ID' text box.]]>
+              <![CDATA[STEP 5]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save' button.]]>
+              <![CDATA[Enter the file path for certificate upload.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'Post 88f56b026cb74b3 has been created.' is present.]]>
+              <![CDATA[Click the 'Save configuration' button.]]>
             </line>
             <line>
-              <![CDATA[Verify 'twitter:seeit:idspace' is present in page source.]]>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
             </line>
             <line>
-              <![CDATA[Verify 'content="s"' is present in page source.]]>
+              <![CDATA[Verify the text 'A certificate exists for this instance of SimpleSAMLphp.' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Verify 'twitter:seeit:showid' is present in page source.]]>
+              <![CDATA[STEP 6]]>
             </line>
             <line>
-              <![CDATA[Verify 'content="9222635058369246112"' is present in page source.]]>
+              <![CDATA[Click the 'Save configuration' button.]]>
             </line>
             <line>
-              <![CDATA[Verify 'twitter:seeit:campaignid' is present in page source.]]>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
             </line>
             <line>
-              <![CDATA[Verify 'content="fall"' is present in page source.]]>
+              <![CDATA[STEP 7]]>
             </line>
             <line>
-              <![CDATA[Verify 'twitter:seeit:assetid' is present in page source.]]>
+              <![CDATA[Click the 'Activate authentication via SimpleSAMLphp' check box.]]>
             </line>
             <line>
-              <![CDATA[Verify 'content="mainpage"' is present in page source.]]>
+              <![CDATA[Click the 'Save configuration' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll by '-500'.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 8]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Logout' button.]]>
+            </line>
+            <line>
+              <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com/saml_login'.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 9]]>
+            </line>
+            <line>
+              <![CDATA[Enter '206424392' in the 'SSO ID' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'tufNewcyd577BC' in the 'Password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Sign In' button.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 10]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Modules' is NOT present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 11]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Brandon.Clark@nbcuni.com' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 12]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Logout' button.]]>
+            </line>
+            <line>
+              <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com/user'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Login' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'People' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'People dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'next >' link until user 'Brandon.Clark' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Brandon.Clark' link from the 'USERNAME' list.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 13]]>
+            </line>
+            <line>
+              <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com/admin/config/people/simplesamlphp_auth'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Activate authentication via SimpleSAMLphp' check box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configuration' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'SimpleSAMLphp authentication is NOT yet activated.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 14 - 16 TODO]]>
+            </line>
+            <line>
+              <![CDATA[STEP 17]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Modules' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Pub SSO' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Uncheck the 'Pub SSO' module checkbox.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configuration' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'simpleSAMLphp authentication' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Uncheck the 'simpleSAMLphp authentication' module checkbox.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configuration' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll by '-500'.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 18]]>
             </line>
           </reporter-output>
-        </test-method> <!-- SeeIt_TC1060 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.SocialIntegration.ImplementAutoPublishingToTwitter.SeeIt@47f15427]" name="stopSelenium" is-config="true" duration-ms="571" started-at="2014-07-11T09:14:32Z" finished-at="2014-07-11T09:14:32Z">
+        </test-method> <!-- SSODefinedDomains_TC3474 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSODefinedDomains@22e692b1]" name="stopSelenium" is-config="true" duration-ms="570" started-at="2014-07-11T16:36:49Z" finished-at="2014-07-11T16:36:49Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=SeeIt_TC1060 status=SUCCESS method=SeeIt.SeeIt_TC1060()[pri:0, instance:com.nbcuni.test.publisher.tests.SocialIntegration.ImplementAutoPublishingToTwitter.SeeIt@47f15427] output=Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]]>
+                <![CDATA[[TestResult name=SSODefinedDomains_TC3474 status=SUCCESS method=SSODefinedDomains.SSODefinedDomains_TC3474()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSODefinedDomains@22e692b1] output=STEP 1]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.SocialIntegration.ImplementAutoPublishingToTwitter.SeeIt@47f15427]" name="stopGridAndHub" is-config="true" duration-ms="576" started-at="2014-07-11T09:14:32Z" finished-at="2014-07-11T09:14:33Z">
+        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSODefinedDomains@22e692b1]" name="stopGridAndHub" is-config="true" duration-ms="565" started-at="2014-07-11T16:36:49Z" finished-at="2014-07-11T16:36:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopGridAndHub -->
-      </class> <!-- com.nbcuni.test.publisher.tests.SocialIntegration.ImplementAutoPublishingToTwitter.SeeIt -->
+      </class> <!-- com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSODefinedDomains -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
