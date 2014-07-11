@@ -23,8 +23,12 @@ public class SeeIt extends ParentTest{
     	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
     	
     	//Step 2
+    	taxonomy.NavigateSite("Modules");
+    	overlay.SwitchToActiveFrame();
     	Modules modules = new Modules(webDriver, applib);
-    	modules.VerifyModuleEnabled("Metatag: Twitter Cards (See It)");
+    	modules.EnterFilterName("Metatag: Twitter Cards");
+    	modules.EnableModule("Metatag: Twitter Cards (See It)");
+    	overlay.ClickCloseOverlayLnk();
     	
     	//Step 3
     	taxonomy.NavigateSite("Content>>Add content>>Post");

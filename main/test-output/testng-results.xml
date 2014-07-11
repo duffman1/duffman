@@ -2,9 +2,6 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
     <line>
-      <![CDATA[STEP 1]]>
-    </line>
-    <line>
       <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]>
     </line>
     <line>
@@ -17,94 +14,16 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[SETUP]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Modules' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to frame titled 'Modules'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'jQuery Update' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'jQuery Update' check box is checked.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll by '-500'.]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com/admin/config/development/jquery_update'.]]>
-    </line>
-    <line>
-      <![CDATA[Select '1.5' from the 'Default jQuery Version' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 2]]>
-    </line>
-    <line>
       <![CDATA[Click the 'Modules' menu link.]]>
     </line>
     <line>
       <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
     </line>
     <line>
-      <![CDATA[Enter 'TVE Adobe Pass' in the 'Filter Name' text box.]]>
+      <![CDATA[Enter 'Metatag: Twitter Cards' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Check the 'TVE Adobe Pass' check box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
-    </line>
-    <line>
-      <![CDATA[Switch back to the 'Modules' frame.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to frame titled 'Modules'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'TVE Auth Example' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Check the 'TVE Auth Example' check box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Continue' button to enable additional modules.]]>
-    </line>
-    <line>
-      <![CDATA[Switch back to the 'Modules' frame.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to frame titled 'Modules'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'TVE MVPD' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'TVE MVPD' check box is checked.]]>
+      <![CDATA[Verify the 'Metatag: Twitter Cards (See It)' check box is checked.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
@@ -113,264 +32,96 @@
       <![CDATA[Scroll by '-500'.]]>
     </line>
     <line>
-      <![CDATA[STEP 3]]>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Structure' menu link.]]>
+      <![CDATA[Mouse over the 'Add content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Blocks' menu link.]]>
+      <![CDATA[Click the 'Post' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
     </line>
     <line>
-      <![CDATA[Select the block name 'TVE Auth Example' from the 'Sidebar first' drop down list.]]>
+      <![CDATA[Enter '88f56b026cb74b3' in the 'Title' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save Blocks' button.]]>
+      <![CDATA[Switch to the Synopsis frame.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'The block settings have been updated.' is present.]]>
+      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
+      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
     </line>
     <line>
-      <![CDATA[Scroll by '-500'.]]>
+      <![CDATA[Click the 'Meta tags' link.]]>
     </line>
     <line>
-      <![CDATA[STEP 4]]>
+      <![CDATA[Click the 'TWITTER CARD' link.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'The MVPD Connection must be setup.' is present on the page.]]>
+      <![CDATA[Enter '9222635058369246112' in the 'See it: ShowID/EpisodeID' text box.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'The Adobe Pass configuration must be setup.' is present on the page.]]>
+      <![CDATA[Select the 'See It (s)' from the 'See It: IDSpace' drop down list.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'Configure jQuery to use version 1.7 or higher.' is present on the page.]]>
+      <![CDATA[Enter 'fall' in the 'See it: Campaign ID' text box.]]>
     </line>
     <line>
-      <![CDATA[STEP 5]]>
+      <![CDATA[Enter 'mainpage' in the 'See it: Asset ID' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the 'setup' link for MVPD Connection.]]>
+      <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'MVPD dialog'.]]>
+      <![CDATA[Verify success message of 'Post 88f56b026cb74b3 has been created.' is present.]]>
     </line>
     <line>
-      <![CDATA[Enter 'http://mvpd-admin.nbcuni.com/mvpd/service' in the 'MVPD Service URL' text box.]]>
+      <![CDATA[Verify 'twitter:seeit:idspace' is present in page source.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Syfy' in the 'Requestor ID' text box.]]>
+      <![CDATA[Verify 'content="s"' is present in page source.]]>
     </line>
     <line>
-      <![CDATA[Select 'stage' from the 'Instance' drop down list.]]>
+      <![CDATA[Verify 'twitter:seeit:showid' is present in page source.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Oops! Something went wrong while fetching providers!' in the 'Generic Error Message' text area.]]>
+      <![CDATA[Verify 'content="9222635058369246112"' is present in page source.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
+      <![CDATA[Verify 'twitter:seeit:campaignid' is present in page source.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+      <![CDATA[Verify 'content="fall"' is present in page source.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
+      <![CDATA[Verify 'twitter:seeit:assetid' is present in page source.]]>
     </line>
     <line>
-      <![CDATA[Scroll by '-500'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 6]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'The MVPD Connection must be setup.' is NOT present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 7]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'setup' link for Adobe Pass configuration.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Adobe Pass dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'http://entitlement.auth-staging.adobe.com/entitlement/AccessEnablerDebug.swf' in the 'Access Enabler Location' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '30000' in the 'Request Timeout' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '10.1.13' in the 'Adobe Flash Version' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'syfy' in the 'Requestor ID' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'syfy' in the 'Resource ID' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Your TV subscription does not include this channel. Please contact your TV Provider about upgrading your service to get access.' in the 'User not Authorized Error' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'We had a problem reaching your TV provider. Please try again.' in the 'Internal Authorization Error' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Your TV subscription does not include this channel.' in the 'Generic Authorization Error' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'http://api.auth-staging.adobe.com/api/v1/config/' in the 'Adobe Pass Config Service Path' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Test configuration' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'All the configurations are valid.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 8]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'syfy' in the 'Requestor ID' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'syfy' in the 'Resource ID' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll by '-500'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 9]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'The Adobe Pass configuration must be setup.' is NOT present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 10]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Configure jQuery' link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'jQuery update dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Select '1.7' from the 'Default jQuery Version' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll by '-500'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 11]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Authentication status checked:' value is 'true'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Authenticated' value is 'false'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Selected MVPD:' value is 'none'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 12]]>
-    </line>
-    <line>
-      <![CDATA[Select 'Optimum' from the 'Al VMPDs:' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'login' button.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'research40' in the 'Optimum ID' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'support40' in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'SIGN IN' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Authentication status checked:' value is 'true'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Authenticated' value is 'true'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Selected MVPD:' value is 'Cablevision'.]]>
-    </line>
-    <line>
-      <![CDATA[CLEANUP]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Structure' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Blocks' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Select the block name 'TVE Auth Example' from the '- None -' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save Blocks' button.]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com/admin/config/development/jquery_update'.]]>
-    </line>
-    <line>
-      <![CDATA[Select '1.5' from the 'Default jQuery Version' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
+      <![CDATA[Verify 'content="mainpage"' is present in page source.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="217183" started-at="2014-07-11T11:50:49Z" finished-at="2014-07-11T11:54:26Z">
+  <suite name="Default suite" duration-ms="32487" started-at="2014-07-11T13:14:00Z" finished-at="2014-07-11T13:14:32Z">
     <groups>
       <group name="full">
-        <method signature="ImplementTVEModulesCore.ImplementTVEModulesCore_TC3261()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@3b582503]" name="ImplementTVEModulesCore_TC3261" class="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore"/>
+        <method signature="SeeIt.SeeIt_TC1060()[pri:0, instance:com.nbcuni.test.publisher.tests.SocialIntegration.ImplementAutoPublishingToTwitter.SeeIt@47f15427]" name="SeeIt_TC1060" class="com.nbcuni.test.publisher.tests.SocialIntegration.ImplementAutoPublishingToTwitter.SeeIt"/>
       </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="217183" started-at="2014-07-11T11:50:49Z" finished-at="2014-07-11T11:54:26Z">
-      <class name="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore">
-        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@3b582503]" name="startGridAndHub" is-config="true" duration-ms="11901" started-at="2014-07-11T07:50:37Z" finished-at="2014-07-11T07:50:49Z">
+    <test name="Default test" duration-ms="32487" started-at="2014-07-11T13:14:00Z" finished-at="2014-07-11T13:14:32Z">
+      <class name="com.nbcuni.test.publisher.tests.SocialIntegration.ImplementAutoPublishingToTwitter.SeeIt">
+        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.SocialIntegration.ImplementAutoPublishingToTwitter.SeeIt@47f15427]" name="startGridAndHub" is-config="true" duration-ms="12146" started-at="2014-07-11T09:13:48Z" finished-at="2014-07-11T09:14:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startGridAndHub -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@3b582503]" name="startSelenium" is-config="true" duration-ms="2545" started-at="2014-07-11T07:50:49Z" finished-at="2014-07-11T07:50:51Z">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.SocialIntegration.ImplementAutoPublishingToTwitter.SeeIt@47f15427]" name="startSelenium" is-config="true" duration-ms="2691" started-at="2014-07-11T09:14:00Z" finished-at="2014-07-11T09:14:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="ImplementTVEModulesCore_TC3261()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@3b582503]" name="ImplementTVEModulesCore_TC3261" duration-ms="214048" started-at="2014-07-11T07:50:51Z" finished-at="2014-07-11T07:54:25Z">
+        <test-method status="PASS" signature="SeeIt_TC1060()[pri:0, instance:com.nbcuni.test.publisher.tests.SocialIntegration.ImplementAutoPublishingToTwitter.SeeIt@47f15427]" name="SeeIt_TC1060" duration-ms="29213" started-at="2014-07-11T09:14:03Z" finished-at="2014-07-11T09:14:32Z">
           <reporter-output>
-            <line>
-              <![CDATA[STEP 1]]>
-            </line>
             <line>
               <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]>
             </line>
@@ -384,94 +135,16 @@
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
-              <![CDATA[SETUP]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Modules' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to frame titled 'Modules'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'jQuery Update' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'jQuery Update' check box is checked.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll by '-500'.]]>
-            </line>
-            <line>
-              <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com/admin/config/development/jquery_update'.]]>
-            </line>
-            <line>
-              <![CDATA[Select '1.5' from the 'Default jQuery Version' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 2]]>
-            </line>
-            <line>
               <![CDATA[Click the 'Modules' menu link.]]>
             </line>
             <line>
               <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
             </line>
             <line>
-              <![CDATA[Enter 'TVE Adobe Pass' in the 'Filter Name' text box.]]>
+              <![CDATA[Enter 'Metatag: Twitter Cards' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Check the 'TVE Adobe Pass' check box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
-            </line>
-            <line>
-              <![CDATA[Switch back to the 'Modules' frame.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to frame titled 'Modules'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'TVE Auth Example' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Check the 'TVE Auth Example' check box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Continue' button to enable additional modules.]]>
-            </line>
-            <line>
-              <![CDATA[Switch back to the 'Modules' frame.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to frame titled 'Modules'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'TVE MVPD' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'TVE MVPD' check box is checked.]]>
+              <![CDATA[Verify the 'Metatag: Twitter Cards (See It)' check box is checked.]]>
             </line>
             <line>
               <![CDATA[Click the 'Close Overlay X'.]]>
@@ -480,260 +153,95 @@
               <![CDATA[Scroll by '-500'.]]>
             </line>
             <line>
-              <![CDATA[STEP 3]]>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Structure' menu link.]]>
+              <![CDATA[Mouse over the 'Add content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Blocks' menu link.]]>
+              <![CDATA[Click the 'Post' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
             </line>
             <line>
-              <![CDATA[Select the block name 'TVE Auth Example' from the 'Sidebar first' drop down list.]]>
+              <![CDATA[Enter '88f56b026cb74b3' in the 'Title' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save Blocks' button.]]>
+              <![CDATA[Switch to the Synopsis frame.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'The block settings have been updated.' is present.]]>
+              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
+              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
             </line>
             <line>
-              <![CDATA[Scroll by '-500'.]]>
+              <![CDATA[Click the 'Meta tags' link.]]>
             </line>
             <line>
-              <![CDATA[STEP 4]]>
+              <![CDATA[Click the 'TWITTER CARD' link.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'The MVPD Connection must be setup.' is present on the page.]]>
+              <![CDATA[Enter '9222635058369246112' in the 'See it: ShowID/EpisodeID' text box.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'The Adobe Pass configuration must be setup.' is present on the page.]]>
+              <![CDATA[Select the 'See It (s)' from the 'See It: IDSpace' drop down list.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'Configure jQuery to use version 1.7 or higher.' is present on the page.]]>
+              <![CDATA[Enter 'fall' in the 'See it: Campaign ID' text box.]]>
             </line>
             <line>
-              <![CDATA[STEP 5]]>
+              <![CDATA[Enter 'mainpage' in the 'See it: Asset ID' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the 'setup' link for MVPD Connection.]]>
+              <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'MVPD dialog'.]]>
+              <![CDATA[Verify success message of 'Post 88f56b026cb74b3 has been created.' is present.]]>
             </line>
             <line>
-              <![CDATA[Enter 'http://mvpd-admin.nbcuni.com/mvpd/service' in the 'MVPD Service URL' text box.]]>
+              <![CDATA[Verify 'twitter:seeit:idspace' is present in page source.]]>
             </line>
             <line>
-              <![CDATA[Enter 'Syfy' in the 'Requestor ID' text box.]]>
+              <![CDATA[Verify 'content="s"' is present in page source.]]>
             </line>
             <line>
-              <![CDATA[Select 'stage' from the 'Instance' drop down list.]]>
+              <![CDATA[Verify 'twitter:seeit:showid' is present in page source.]]>
             </line>
             <line>
-              <![CDATA[Enter 'Oops! Something went wrong while fetching providers!' in the 'Generic Error Message' text area.]]>
+              <![CDATA[Verify 'content="9222635058369246112"' is present in page source.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
+              <![CDATA[Verify 'twitter:seeit:campaignid' is present in page source.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+              <![CDATA[Verify 'content="fall"' is present in page source.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
+              <![CDATA[Verify 'twitter:seeit:assetid' is present in page source.]]>
             </line>
             <line>
-              <![CDATA[Scroll by '-500'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 6]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'The MVPD Connection must be setup.' is NOT present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 7]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'setup' link for Adobe Pass configuration.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Adobe Pass dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'http://entitlement.auth-staging.adobe.com/entitlement/AccessEnablerDebug.swf' in the 'Access Enabler Location' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '30000' in the 'Request Timeout' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '10.1.13' in the 'Adobe Flash Version' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'syfy' in the 'Requestor ID' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'syfy' in the 'Resource ID' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Your TV subscription does not include this channel. Please contact your TV Provider about upgrading your service to get access.' in the 'User not Authorized Error' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'We had a problem reaching your TV provider. Please try again.' in the 'Internal Authorization Error' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Your TV subscription does not include this channel.' in the 'Generic Authorization Error' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'http://api.auth-staging.adobe.com/api/v1/config/' in the 'Adobe Pass Config Service Path' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Test configuration' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'All the configurations are valid.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 8]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'syfy' in the 'Requestor ID' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'syfy' in the 'Resource ID' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll by '-500'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 9]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'The Adobe Pass configuration must be setup.' is NOT present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 10]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Configure jQuery' link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'jQuery update dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Select '1.7' from the 'Default jQuery Version' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll by '-500'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 11]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Authentication status checked:' value is 'true'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Authenticated' value is 'false'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Selected MVPD:' value is 'none'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 12]]>
-            </line>
-            <line>
-              <![CDATA[Select 'Optimum' from the 'Al VMPDs:' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'login' button.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'research40' in the 'Optimum ID' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'support40' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'SIGN IN' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Authentication status checked:' value is 'true'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Authenticated' value is 'true'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Selected MVPD:' value is 'Cablevision'.]]>
-            </line>
-            <line>
-              <![CDATA[CLEANUP]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Structure' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Blocks' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Select the block name 'TVE Auth Example' from the '- None -' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save Blocks' button.]]>
-            </line>
-            <line>
-              <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com/admin/config/development/jquery_update'.]]>
-            </line>
-            <line>
-              <![CDATA[Select '1.5' from the 'Default jQuery Version' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
+              <![CDATA[Verify 'content="mainpage"' is present in page source.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- ImplementTVEModulesCore_TC3261 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@3b582503]" name="stopSelenium" is-config="true" duration-ms="579" started-at="2014-07-11T07:54:25Z" finished-at="2014-07-11T07:54:26Z">
+        </test-method> <!-- SeeIt_TC1060 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.SocialIntegration.ImplementAutoPublishingToTwitter.SeeIt@47f15427]" name="stopSelenium" is-config="true" duration-ms="571" started-at="2014-07-11T09:14:32Z" finished-at="2014-07-11T09:14:32Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=ImplementTVEModulesCore_TC3261 status=SUCCESS method=ImplementTVEModulesCore.ImplementTVEModulesCore_TC3261()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@3b582503] output=STEP 1]]]>
+                <![CDATA[[TestResult name=SeeIt_TC1060 status=SUCCESS method=SeeIt.SeeIt_TC1060()[pri:0, instance:com.nbcuni.test.publisher.tests.SocialIntegration.ImplementAutoPublishingToTwitter.SeeIt@47f15427] output=Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@3b582503]" name="stopGridAndHub" is-config="true" duration-ms="586" started-at="2014-07-11T07:54:26Z" finished-at="2014-07-11T07:54:27Z">
+        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.SocialIntegration.ImplementAutoPublishingToTwitter.SeeIt@47f15427]" name="stopGridAndHub" is-config="true" duration-ms="576" started-at="2014-07-11T09:14:32Z" finished-at="2014-07-11T09:14:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopGridAndHub -->
-      </class> <!-- com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore -->
+      </class> <!-- com.nbcuni.test.publisher.tests.SocialIntegration.ImplementAutoPublishingToTwitter.SeeIt -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
