@@ -23,16 +23,13 @@
       <![CDATA[Click the 'Modules' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+      <![CDATA[Switch to frame titled 'Modules'.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Pixelman' in the 'Filter Name' text box.]]>
+      <![CDATA[Enter 'jQuery Update' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Devel' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Devel' check box is checked.]]>
+      <![CDATA[Verify the 'jQuery Update' check box is checked.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
@@ -41,19 +38,139 @@
       <![CDATA[Scroll by '-500'.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Configuration' menu link.]]>
+      <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com/admin/config/development/jquery_update'.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Web services' menu link.]]>
+      <![CDATA[Select '1.5' from the 'Default jQuery Version' drop down list.]]>
     </line>
     <line>
-      <![CDATA[Click the 'MPS Configuration' menu link.]]>
+      <![CDATA[Click the 'Save configuration' button.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'MPS Configuration dialog'.]]>
+      <![CDATA[STEP 2]]>
     </line>
     <line>
-      <![CDATA[Enter '' in the 'Pattern for Category Field' text box.]]>
+      <![CDATA[Click the 'Modules' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'TVE Adobe Pass' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Check the 'TVE Adobe Pass' check box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configuration' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
+    </line>
+    <line>
+      <![CDATA[Switch back to the 'Modules' frame.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to frame titled 'Modules'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'TVE Auth Example' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Check the 'TVE Auth Example' check box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configuration' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Continue' button to enable additional modules.]]>
+    </line>
+    <line>
+      <![CDATA[Switch back to the 'Modules' frame.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to frame titled 'Modules'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'TVE MVPD' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'TVE MVPD' check box is checked.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll by '-500'.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 3]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Structure' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Blocks' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Select the block name 'TVE Auth Example' from the 'Sidebar first' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save Blocks' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The block settings have been updated.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll by '-500'.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 4]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'The MVPD Connection must be setup.' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'The Adobe Pass configuration must be setup.' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'Configure jQuery to use version 1.7 or higher.' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 5]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'setup' link for MVPD Connection.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'MVPD dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'http://mvpd-admin.nbcuni.com/mvpd/service' in the 'MVPD Service URL' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Syfy' in the 'Requestor ID' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Select 'stage' from the 'Instance' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Oops! Something went wrong while fetching providers!' in the 'Generic Error Message' text area.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save configuration' button.]]>
@@ -68,187 +185,91 @@
       <![CDATA[Scroll by '-500'.]]>
     </line>
     <line>
-      <![CDATA[STEP 2 - N/A]]>
-    </line>
-    <line>
-      <![CDATA[STEP 3]]>
-    </line>
-    <line>
-      <![CDATA[Verify '"cat":"content"' is not present in page source.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 4]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Add content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Movie' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '3a187391223d4c9' in the 'Title' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the Synopsis frame.]]>
-    </line>
-    <line>
-      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Cover' select button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the select file frame.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the file path for file upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Upload' button.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the file image 'HanSolo' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Additional Information' link.]]>
-    </line>
-    <line>
-      <![CDATA[Select the 'Syndicated' from the 'Movie Type' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Select the 'G' from the 'Rating' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Select the 'Action' from the 'Primary Genre' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Movie 3a187391223d4c9 has been created.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify '"cat":"content"' is present in page source.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 5]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Edit Draft' link in the work bench.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Edit Movie 3a187391223d4c9 dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'URL path settings' link.]]>
-    </line>
-    <line>
-      <![CDATA[Uncheck the 'Generate automatic URL alias' check box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '92286a8896' in the 'URL alias' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Movie 3a187391223d4c9 has been updated.' is present.]]>
-    </line>
-    <line>
       <![CDATA[STEP 6]]>
     </line>
     <line>
-      <![CDATA[Verify '"cat":"content"' is not present in page source.]]>
+      <![CDATA[Verify the text 'The MVPD Connection must be setup.' is NOT present on the page.]]>
     </line>
     <line>
       <![CDATA[STEP 7]]>
     </line>
     <line>
-      <![CDATA[Click the 'Edit Draft' link in the work bench.]]>
+      <![CDATA[Click the 'setup' link for Adobe Pass configuration.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Edit Movie 3a187391223d4c9 dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'Adobe Pass dialog'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'URL path settings' link.]]>
+      <![CDATA[Enter 'http://entitlement.auth-staging.adobe.com/entitlement/AccessEnablerDebug.swf' in the 'Access Enabler Location' text box.]]>
     </line>
     <line>
-      <![CDATA[Enter '92286a8896/mps-testing/2arg/3arg/4arg/5arg/6arg' in the 'URL alias' text box.]]>
+      <![CDATA[Enter '30000' in the 'Request Timeout' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save' button.]]>
+      <![CDATA[Enter '10.1.13' in the 'Adobe Flash Version' text box.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'Movie 3a187391223d4c9 has been updated.' is present.]]>
+      <![CDATA[Enter 'syfy' in the 'Requestor ID' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'syfy' in the 'Resource ID' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Your TV subscription does not include this channel. Please contact your TV Provider about upgrading your service to get access.' in the 'User not Authorized Error' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'We had a problem reaching your TV provider. Please try again.' in the 'Internal Authorization Error' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Your TV subscription does not include this channel.' in the 'Generic Authorization Error' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'http://api.auth-staging.adobe.com/api/v1/config/' in the 'Adobe Pass Config Service Path' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Test configuration' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'All the configurations are valid.' is present.]]>
     </line>
     <line>
       <![CDATA[STEP 8]]>
     </line>
     <line>
-      <![CDATA[Verify '"cat":"92286a8896|mps-testing|2arg"}' is present in page source.]]>
+      <![CDATA[Enter 'syfy' in the 'Requestor ID' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'syfy' in the 'Resource ID' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configuration' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll by '-500'.]]>
     </line>
     <line>
       <![CDATA[STEP 9]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Configuration' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Web services' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'MPS Configuration' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'MPS Configuration dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'REPLACEMENT PATTERNS' link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'MPS' link.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'MPS CAT Property' link with text '[mps:cat-pattern:?]' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '[mps:cat-pattern:?]' in the 'Pattern for Category Field' text box.]]>
+      <![CDATA[Verify the text 'The Adobe Pass configuration must be setup.' is NOT present on the page.]]>
     </line>
     <line>
       <![CDATA[STEP 10]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Configure jQuery' link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'jQuery update dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Select '1.7' from the 'Default jQuery Version' drop down list.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save configuration' button.]]>
@@ -266,105 +287,86 @@
       <![CDATA[STEP 11]]>
     </line>
     <line>
-      <![CDATA[Verify '"cat":"92286a8896|mps-testing|2arg|3arg|4arg"}' is present in page source.]]>
+      <![CDATA[Verify the 'Authentication status checked:' value is 'true'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Authenticated' value is 'false'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Selected MVPD:' value is 'none'.]]>
     </line>
     <line>
       <![CDATA[STEP 12]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Execute PHP Code dialog'.]]>
+      <![CDATA[Select 'Optimum' from the 'Al VMPDs:' drop down list.]]>
     </line>
     <line>
-      <![CDATA[Enter 'variable_set('mps_cat_pattern', '');echo _mps_build_cat();echo PHP_EOL;variable_set('mps_cat_pattern', '[mps:cat-pattern:?]');echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/cast'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/thisisareallyreallyreallyreallyreallyreallylongurlXXXXXX/season/episode/cast/name'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/thisisareallyreallyreallyreallyreallyreallylongurlXXXXXX/season/episode/cast/'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/show//episode/cast'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/show/season//episode//'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => '/show/season//'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => '/show///'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => '/brand/season//episode'));echo PHP_EOL;variable_set('mps_cat_pattern', '[mps:cat-pattern:2]|[mps:cat-pattern:3]');echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/cast'));echo PHP_EOL;variable_set('mps_cat_pattern', '[mps:cat-pattern:0]|[mps:cat-pattern:2]|[current-date:custom:d]|[mps:cat-pattern:3]|');echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/cast'));variable_set('mps_cat_pattern', '[mps:cat-pattern:?]');echo PHP_EOL;echo '*' . _mps_build_cat(array('aliased-path' => '/')) . '*';' in the 'PHP Code to Execute' text area.]]>
+      <![CDATA[Click the 'login' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Execute' button.]]>
+      <![CDATA[Enter 'research40' in the 'Optimum ID' text box.]]>
     </line>
     <line>
-      <![CDATA[Verify the expected response is 'Status message
-devel
-brand|show|season|episode
-brand|thisisareallyreallyreallyreallyreallyreallylongurl|season|episode|cast
-brand|thisisareallyreallyreallyreallyreallyreallylongurl|season|episode|cast
-brand|show|~|episode
-brand|show|season
-brand|show|season|~|episode
-~|show
-
-~|brand|season
-season|episode
-brand|season|10
-**'.]]>
+      <![CDATA[Enter 'support40' in the 'Password' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
+      <![CDATA[Click the 'SIGN IN' button.]]>
     </line>
     <line>
-      <![CDATA[Scroll by '-500'.]]>
+      <![CDATA[Verify the 'Authentication status checked:' value is 'true'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Authenticated' value is 'true'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Selected MVPD:' value is 'Cablevision'.]]>
     </line>
     <line>
       <![CDATA[CLEANUP]]>
     </line>
     <line>
-      <![CDATA[Click the 'Modules' menu link.]]>
+      <![CDATA[Mouse over the 'Structure' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+      <![CDATA[Click the 'Blocks' menu link.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Devel' in the 'Filter Name' text box.]]>
+      <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
     </line>
     <line>
-      <![CDATA[Uncheck the 'Devel' module checkbox.]]>
+      <![CDATA[Select the block name 'TVE Auth Example' from the '- None -' drop down list.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
+      <![CDATA[Click the 'Save Blocks' button.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+      <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com/admin/config/development/jquery_update'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll by '-500'.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Configuration' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Web services' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'MPS Configuration' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'MPS Configuration dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '' in the 'Pattern for Category Field' text box.]]>
+      <![CDATA[Select '1.5' from the 'Default jQuery Version' drop down list.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save configuration' button.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="115674" started-at="2014-07-10T18:30:58Z" finished-at="2014-07-10T18:32:53Z">
+  <suite name="Default suite" duration-ms="217183" started-at="2014-07-11T11:50:49Z" finished-at="2014-07-11T11:54:26Z">
     <groups>
       <group name="full">
-        <method signature="MPSSupportTokens.MPSSupportTokens_TC3641()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens@7d52cb9a]" name="MPSSupportTokens_TC3641" class="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens"/>
+        <method signature="ImplementTVEModulesCore.ImplementTVEModulesCore_TC3261()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@3b582503]" name="ImplementTVEModulesCore_TC3261" class="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore"/>
       </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="115674" started-at="2014-07-10T18:30:58Z" finished-at="2014-07-10T18:32:53Z">
-      <class name="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens">
-        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens@7d52cb9a]" name="startGridAndHub" is-config="true" duration-ms="12082" started-at="2014-07-10T14:30:46Z" finished-at="2014-07-10T14:30:58Z">
+    <test name="Default test" duration-ms="217183" started-at="2014-07-11T11:50:49Z" finished-at="2014-07-11T11:54:26Z">
+      <class name="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore">
+        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@3b582503]" name="startGridAndHub" is-config="true" duration-ms="11901" started-at="2014-07-11T07:50:37Z" finished-at="2014-07-11T07:50:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startGridAndHub -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens@7d52cb9a]" name="startSelenium" is-config="true" duration-ms="2414" started-at="2014-07-10T14:30:58Z" finished-at="2014-07-10T14:31:00Z">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@3b582503]" name="startSelenium" is-config="true" duration-ms="2545" started-at="2014-07-11T07:50:49Z" finished-at="2014-07-11T07:50:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="MPSSupportTokens_TC3641()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens@7d52cb9a]" name="MPSSupportTokens_TC3641" duration-ms="112665" started-at="2014-07-10T14:31:00Z" finished-at="2014-07-10T14:32:53Z">
+        <test-method status="PASS" signature="ImplementTVEModulesCore_TC3261()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@3b582503]" name="ImplementTVEModulesCore_TC3261" duration-ms="214048" started-at="2014-07-11T07:50:51Z" finished-at="2014-07-11T07:54:25Z">
           <reporter-output>
             <line>
               <![CDATA[STEP 1]]>
@@ -388,16 +390,13 @@ brand|season|10
               <![CDATA[Click the 'Modules' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+              <![CDATA[Switch to frame titled 'Modules'.]]>
             </line>
             <line>
-              <![CDATA[Enter 'Pixelman' in the 'Filter Name' text box.]]>
+              <![CDATA[Enter 'jQuery Update' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Enter 'Devel' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Devel' check box is checked.]]>
+              <![CDATA[Verify the 'jQuery Update' check box is checked.]]>
             </line>
             <line>
               <![CDATA[Click the 'Close Overlay X'.]]>
@@ -406,19 +405,139 @@ brand|season|10
               <![CDATA[Scroll by '-500'.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Configuration' menu link.]]>
+              <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com/admin/config/development/jquery_update'.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Web services' menu link.]]>
+              <![CDATA[Select '1.5' from the 'Default jQuery Version' drop down list.]]>
             </line>
             <line>
-              <![CDATA[Click the 'MPS Configuration' menu link.]]>
+              <![CDATA[Click the 'Save configuration' button.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'MPS Configuration dialog'.]]>
+              <![CDATA[STEP 2]]>
             </line>
             <line>
-              <![CDATA[Enter '' in the 'Pattern for Category Field' text box.]]>
+              <![CDATA[Click the 'Modules' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'TVE Adobe Pass' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Check the 'TVE Adobe Pass' check box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configuration' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
+            </line>
+            <line>
+              <![CDATA[Switch back to the 'Modules' frame.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to frame titled 'Modules'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'TVE Auth Example' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Check the 'TVE Auth Example' check box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configuration' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Continue' button to enable additional modules.]]>
+            </line>
+            <line>
+              <![CDATA[Switch back to the 'Modules' frame.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to frame titled 'Modules'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'TVE MVPD' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'TVE MVPD' check box is checked.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll by '-500'.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 3]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Structure' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Blocks' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Select the block name 'TVE Auth Example' from the 'Sidebar first' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save Blocks' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The block settings have been updated.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll by '-500'.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 4]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'The MVPD Connection must be setup.' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'The Adobe Pass configuration must be setup.' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Configure jQuery to use version 1.7 or higher.' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 5]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'setup' link for MVPD Connection.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'MVPD dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'http://mvpd-admin.nbcuni.com/mvpd/service' in the 'MVPD Service URL' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Syfy' in the 'Requestor ID' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Select 'stage' from the 'Instance' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Oops! Something went wrong while fetching providers!' in the 'Generic Error Message' text area.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save configuration' button.]]>
@@ -433,187 +552,91 @@ brand|season|10
               <![CDATA[Scroll by '-500'.]]>
             </line>
             <line>
-              <![CDATA[STEP 2 - N/A]]>
-            </line>
-            <line>
-              <![CDATA[STEP 3]]>
-            </line>
-            <line>
-              <![CDATA[Verify '"cat":"content"' is not present in page source.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 4]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Add content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Movie' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '3a187391223d4c9' in the 'Title' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the Synopsis frame.]]>
-            </line>
-            <line>
-              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Cover' select button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the select file frame.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the file path for file upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Upload' button.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Public Local Files' radio button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the file image 'HanSolo' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Additional Information' link.]]>
-            </line>
-            <line>
-              <![CDATA[Select the 'Syndicated' from the 'Movie Type' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Select the 'G' from the 'Rating' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Select the 'Action' from the 'Primary Genre' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Movie 3a187391223d4c9 has been created.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify '"cat":"content"' is present in page source.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 5]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Edit Draft' link in the work bench.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Edit Movie 3a187391223d4c9 dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'URL path settings' link.]]>
-            </line>
-            <line>
-              <![CDATA[Uncheck the 'Generate automatic URL alias' check box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '92286a8896' in the 'URL alias' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Movie 3a187391223d4c9 has been updated.' is present.]]>
-            </line>
-            <line>
               <![CDATA[STEP 6]]>
             </line>
             <line>
-              <![CDATA[Verify '"cat":"content"' is not present in page source.]]>
+              <![CDATA[Verify the text 'The MVPD Connection must be setup.' is NOT present on the page.]]>
             </line>
             <line>
               <![CDATA[STEP 7]]>
             </line>
             <line>
-              <![CDATA[Click the 'Edit Draft' link in the work bench.]]>
+              <![CDATA[Click the 'setup' link for Adobe Pass configuration.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Edit Movie 3a187391223d4c9 dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'Adobe Pass dialog'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'URL path settings' link.]]>
+              <![CDATA[Enter 'http://entitlement.auth-staging.adobe.com/entitlement/AccessEnablerDebug.swf' in the 'Access Enabler Location' text box.]]>
             </line>
             <line>
-              <![CDATA[Enter '92286a8896/mps-testing/2arg/3arg/4arg/5arg/6arg' in the 'URL alias' text box.]]>
+              <![CDATA[Enter '30000' in the 'Request Timeout' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save' button.]]>
+              <![CDATA[Enter '10.1.13' in the 'Adobe Flash Version' text box.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'Movie 3a187391223d4c9 has been updated.' is present.]]>
+              <![CDATA[Enter 'syfy' in the 'Requestor ID' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'syfy' in the 'Resource ID' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Your TV subscription does not include this channel. Please contact your TV Provider about upgrading your service to get access.' in the 'User not Authorized Error' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'We had a problem reaching your TV provider. Please try again.' in the 'Internal Authorization Error' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Your TV subscription does not include this channel.' in the 'Generic Authorization Error' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'http://api.auth-staging.adobe.com/api/v1/config/' in the 'Adobe Pass Config Service Path' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Test configuration' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'All the configurations are valid.' is present.]]>
             </line>
             <line>
               <![CDATA[STEP 8]]>
             </line>
             <line>
-              <![CDATA[Verify '"cat":"92286a8896|mps-testing|2arg"}' is present in page source.]]>
+              <![CDATA[Enter 'syfy' in the 'Requestor ID' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'syfy' in the 'Resource ID' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configuration' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll by '-500'.]]>
             </line>
             <line>
               <![CDATA[STEP 9]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Configuration' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Web services' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'MPS Configuration' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'MPS Configuration dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'REPLACEMENT PATTERNS' link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'MPS' link.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'MPS CAT Property' link with text '[mps:cat-pattern:?]' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '[mps:cat-pattern:?]' in the 'Pattern for Category Field' text box.]]>
+              <![CDATA[Verify the text 'The Adobe Pass configuration must be setup.' is NOT present on the page.]]>
             </line>
             <line>
               <![CDATA[STEP 10]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Configure jQuery' link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'jQuery update dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Select '1.7' from the 'Default jQuery Version' drop down list.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save configuration' button.]]>
@@ -631,105 +654,86 @@ brand|season|10
               <![CDATA[STEP 11]]>
             </line>
             <line>
-              <![CDATA[Verify '"cat":"92286a8896|mps-testing|2arg|3arg|4arg"}' is present in page source.]]>
+              <![CDATA[Verify the 'Authentication status checked:' value is 'true'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Authenticated' value is 'false'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Selected MVPD:' value is 'none'.]]>
             </line>
             <line>
               <![CDATA[STEP 12]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Execute PHP Code dialog'.]]>
+              <![CDATA[Select 'Optimum' from the 'Al VMPDs:' drop down list.]]>
             </line>
             <line>
-              <![CDATA[Enter 'variable_set('mps_cat_pattern', '');echo _mps_build_cat();echo PHP_EOL;variable_set('mps_cat_pattern', '[mps:cat-pattern:?]');echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/cast'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/thisisareallyreallyreallyreallyreallyreallylongurlXXXXXX/season/episode/cast/name'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/thisisareallyreallyreallyreallyreallyreallylongurlXXXXXX/season/episode/cast/'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/show//episode/cast'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/show/season//episode//'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => '/show/season//'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => '/show///'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => '/brand/season//episode'));echo PHP_EOL;variable_set('mps_cat_pattern', '[mps:cat-pattern:2]|[mps:cat-pattern:3]');echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/cast'));echo PHP_EOL;variable_set('mps_cat_pattern', '[mps:cat-pattern:0]|[mps:cat-pattern:2]|[current-date:custom:d]|[mps:cat-pattern:3]|');echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/cast'));variable_set('mps_cat_pattern', '[mps:cat-pattern:?]');echo PHP_EOL;echo '*' . _mps_build_cat(array('aliased-path' => '/')) . '*';' in the 'PHP Code to Execute' text area.]]>
+              <![CDATA[Click the 'login' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Execute' button.]]>
+              <![CDATA[Enter 'research40' in the 'Optimum ID' text box.]]>
             </line>
             <line>
-              <![CDATA[Verify the expected response is 'Status message
-devel
-brand|show|season|episode
-brand|thisisareallyreallyreallyreallyreallyreallylongurl|season|episode|cast
-brand|thisisareallyreallyreallyreallyreallyreallylongurl|season|episode|cast
-brand|show|~|episode
-brand|show|season
-brand|show|season|~|episode
-~|show
-
-~|brand|season
-season|episode
-brand|season|10
-**'.]]>
+              <![CDATA[Enter 'support40' in the 'Password' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
+              <![CDATA[Click the 'SIGN IN' button.]]>
             </line>
             <line>
-              <![CDATA[Scroll by '-500'.]]>
+              <![CDATA[Verify the 'Authentication status checked:' value is 'true'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Authenticated' value is 'true'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Selected MVPD:' value is 'Cablevision'.]]>
             </line>
             <line>
               <![CDATA[CLEANUP]]>
             </line>
             <line>
-              <![CDATA[Click the 'Modules' menu link.]]>
+              <![CDATA[Mouse over the 'Structure' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+              <![CDATA[Click the 'Blocks' menu link.]]>
             </line>
             <line>
-              <![CDATA[Enter 'Devel' in the 'Filter Name' text box.]]>
+              <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
             </line>
             <line>
-              <![CDATA[Uncheck the 'Devel' module checkbox.]]>
+              <![CDATA[Select the block name 'TVE Auth Example' from the '- None -' drop down list.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
+              <![CDATA[Click the 'Save Blocks' button.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+              <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com/admin/config/development/jquery_update'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll by '-500'.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Configuration' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Web services' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'MPS Configuration' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'MPS Configuration dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '' in the 'Pattern for Category Field' text box.]]>
+              <![CDATA[Select '1.5' from the 'Default jQuery Version' drop down list.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save configuration' button.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- MPSSupportTokens_TC3641 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens@7d52cb9a]" name="stopSelenium" is-config="true" duration-ms="574" started-at="2014-07-10T14:32:53Z" finished-at="2014-07-10T14:32:53Z">
+        </test-method> <!-- ImplementTVEModulesCore_TC3261 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@3b582503]" name="stopSelenium" is-config="true" duration-ms="579" started-at="2014-07-11T07:54:25Z" finished-at="2014-07-11T07:54:26Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=MPSSupportTokens_TC3641 status=SUCCESS method=MPSSupportTokens.MPSSupportTokens_TC3641()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens@7d52cb9a] output=STEP 1]]]>
+                <![CDATA[[TestResult name=ImplementTVEModulesCore_TC3261 status=SUCCESS method=ImplementTVEModulesCore.ImplementTVEModulesCore_TC3261()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@3b582503] output=STEP 1]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens@7d52cb9a]" name="stopGridAndHub" is-config="true" duration-ms="573" started-at="2014-07-10T14:32:54Z" finished-at="2014-07-10T14:32:54Z">
+        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@3b582503]" name="stopGridAndHub" is-config="true" duration-ms="586" started-at="2014-07-11T07:54:26Z" finished-at="2014-07-11T07:54:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopGridAndHub -->
-      </class> <!-- com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens -->
+      </class> <!-- com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

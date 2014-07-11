@@ -5,121 +5,113 @@
 <tr><td>Click the 'Login' button.</td></tr>
 <tr><td>SETUP</td></tr>
 <tr><td>Click the 'Modules' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'Modules dialog'.</td></tr>
-<tr><td>Enter 'Pixelman' in the 'Filter Name' text box.</td></tr>
-<tr><td>Enter 'Devel' in the 'Filter Name' text box.</td></tr>
-<tr><td>Verify the 'Devel' check box is checked.</td></tr>
+<tr><td>Switch to frame titled 'Modules'.</td></tr>
+<tr><td>Enter 'jQuery Update' in the 'Filter Name' text box.</td></tr>
+<tr><td>Verify the 'jQuery Update' check box is checked.</td></tr>
 <tr><td>Click the 'Close Overlay X'.</td></tr>
 <tr><td>Scroll by '-500'.</td></tr>
-<tr><td>Mouse over the 'Configuration' menu link.</td></tr>
-<tr><td>Mouse over the 'Web services' menu link.</td></tr>
-<tr><td>Click the 'MPS Configuration' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'MPS Configuration dialog'.</td></tr>
-<tr><td>Enter '' in the 'Pattern for Category Field' text box.</td></tr>
+<tr><td>Open url 'http://install.qa5.nbcupublisher7.publisher7.com/admin/config/development/jquery_update'.</td></tr>
+<tr><td>Select '1.5' from the 'Default jQuery Version' drop down list.</td></tr>
+<tr><td>Click the 'Save configuration' button.</td></tr>
+<tr><td>STEP 2</td></tr>
+<tr><td>Click the 'Modules' menu link.</td></tr>
+<tr><td>Switch to the active frame titled 'Modules dialog'.</td></tr>
+<tr><td>Enter 'TVE Adobe Pass' in the 'Filter Name' text box.</td></tr>
+<tr><td>Check the 'TVE Adobe Pass' check box.</td></tr>
+<tr><td>Click the 'Save configuration' button.</td></tr>
+<tr><td>Switch to frame titled 'Some required modules must be enabled'.</td></tr>
+<tr><td>Switch back to the 'Modules' frame.</td></tr>
+<tr><td>Switch to frame titled 'Modules'.</td></tr>
+<tr><td>Verify success message of 'The configuration options have been saved.' is present.</td></tr>
+<tr><td>Enter 'TVE Auth Example' in the 'Filter Name' text box.</td></tr>
+<tr><td>Check the 'TVE Auth Example' check box.</td></tr>
+<tr><td>Click the 'Save configuration' button.</td></tr>
+<tr><td>Switch to frame titled 'Some required modules must be enabled'.</td></tr>
+<tr><td>Click the 'Continue' button to enable additional modules.</td></tr>
+<tr><td>Switch back to the 'Modules' frame.</td></tr>
+<tr><td>Switch to frame titled 'Modules'.</td></tr>
+<tr><td>Verify success message of 'The configuration options have been saved.' is present.</td></tr>
+<tr><td>Enter 'TVE MVPD' in the 'Filter Name' text box.</td></tr>
+<tr><td>Verify the 'TVE MVPD' check box is checked.</td></tr>
+<tr><td>Click the 'Close Overlay X'.</td></tr>
+<tr><td>Scroll by '-500'.</td></tr>
+<tr><td>STEP 3</td></tr>
+<tr><td>Mouse over the 'Structure' menu link.</td></tr>
+<tr><td>Click the 'Blocks' menu link.</td></tr>
+<tr><td>Switch to the active frame titled 'Blocks dialog'.</td></tr>
+<tr><td>Select the block name 'TVE Auth Example' from the 'Sidebar first' drop down list.</td></tr>
+<tr><td>Click the 'Save Blocks' button.</td></tr>
+<tr><td>Verify success message of 'The block settings have been updated.' is present.</td></tr>
+<tr><td>Click the 'Close Overlay X'.</td></tr>
+<tr><td>Scroll by '-500'.</td></tr>
+<tr><td>STEP 4</td></tr>
+<tr><td>Verify the text 'The MVPD Connection must be setup.' is present on the page.</td></tr>
+<tr><td>Verify the text 'The Adobe Pass configuration must be setup.' is present on the page.</td></tr>
+<tr><td>Verify the text 'Configure jQuery to use version 1.7 or higher.' is present on the page.</td></tr>
+<tr><td>STEP 5</td></tr>
+<tr><td>Click the 'setup' link for MVPD Connection.</td></tr>
+<tr><td>Switch to the active frame titled 'MVPD dialog'.</td></tr>
+<tr><td>Enter 'http://mvpd-admin.nbcuni.com/mvpd/service' in the 'MVPD Service URL' text box.</td></tr>
+<tr><td>Enter 'Syfy' in the 'Requestor ID' text box.</td></tr>
+<tr><td>Select 'stage' from the 'Instance' drop down list.</td></tr>
+<tr><td>Enter 'Oops! Something went wrong while fetching providers!' in the 'Generic Error Message' text area.</td></tr>
 <tr><td>Click the 'Save configuration' button.</td></tr>
 <tr><td>Verify success message of 'The configuration options have been saved.' is present.</td></tr>
 <tr><td>Click the 'Close Overlay X'.</td></tr>
 <tr><td>Scroll by '-500'.</td></tr>
-<tr><td>STEP 2 - N/A</td></tr>
-<tr><td>STEP 3</td></tr>
-<tr><td>Verify '"cat":"content"' is not present in page source.</td></tr>
-<tr><td>STEP 4</td></tr>
-<tr><td>Mouse over the 'Content' menu link.</td></tr>
-<tr><td>Mouse over the 'Add content' menu link.</td></tr>
-<tr><td>Click the 'Movie' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'Create Movie dialog'.</td></tr>
-<tr><td>Scroll to and click the 'Basic Information' tab.</td></tr>
-<tr><td>Enter '3a187391223d4c9' in the 'Title' text box.</td></tr>
-<tr><td>Switch to the Synopsis frame.</td></tr>
-<tr><td>Enter a randomized text string into the 'Body' text area.</td></tr>
-<tr><td>Switch to the active frame titled 'Create Movie dialog'.</td></tr>
-<tr><td>Click the 'Cover' select button.</td></tr>
-<tr><td>Switch to the select file frame.</td></tr>
-<tr><td>Enter the file path for file upload.</td></tr>
-<tr><td>Click the 'Upload' button.</td></tr>
-<tr><td>Wait for the file link to be visible after upload.</td></tr>
-<tr><td>Click the 'Next' button.</td></tr>
-<tr><td>Click the 'Public Local Files' radio button.</td></tr>
-<tr><td>Click the 'Next' button.</td></tr>
-<tr><td>Verify the file image 'HanSolo' is present.</td></tr>
-<tr><td>Verify the img is loaded and visible.</td></tr>
-<tr><td>Click the 'Save' button.</td></tr>
-<tr><td>Switch to the active frame titled 'Create Movie dialog'.</td></tr>
-<tr><td>Click the 'Additional Information' link.</td></tr>
-<tr><td>Select the 'Syndicated' from the 'Movie Type' drop down list.</td></tr>
-<tr><td>Select the 'G' from the 'Rating' drop down list.</td></tr>
-<tr><td>Select the 'Action' from the 'Primary Genre' drop down list.</td></tr>
-<tr><td>Click the 'Save' button.</td></tr>
-<tr><td>Verify success message of 'Movie 3a187391223d4c9 has been created.' is present.</td></tr>
-<tr><td>Verify '"cat":"content"' is present in page source.</td></tr>
-<tr><td>STEP 5</td></tr>
-<tr><td>Click the 'Edit Draft' link in the work bench.</td></tr>
-<tr><td>Switch to the active frame titled 'Edit Movie 3a187391223d4c9 dialog'.</td></tr>
-<tr><td>Click the 'URL path settings' link.</td></tr>
-<tr><td>Uncheck the 'Generate automatic URL alias' check box.</td></tr>
-<tr><td>Enter '92286a8896' in the 'URL alias' text box.</td></tr>
-<tr><td>Click the 'Save' button.</td></tr>
-<tr><td>Verify success message of 'Movie 3a187391223d4c9 has been updated.' is present.</td></tr>
 <tr><td>STEP 6</td></tr>
-<tr><td>Verify '"cat":"content"' is not present in page source.</td></tr>
+<tr><td>Verify the text 'The MVPD Connection must be setup.' is NOT present on the page.</td></tr>
 <tr><td>STEP 7</td></tr>
-<tr><td>Click the 'Edit Draft' link in the work bench.</td></tr>
-<tr><td>Switch to the active frame titled 'Edit Movie 3a187391223d4c9 dialog'.</td></tr>
-<tr><td>Click the 'URL path settings' link.</td></tr>
-<tr><td>Enter '92286a8896/mps-testing/2arg/3arg/4arg/5arg/6arg' in the 'URL alias' text box.</td></tr>
-<tr><td>Click the 'Save' button.</td></tr>
-<tr><td>Verify success message of 'Movie 3a187391223d4c9 has been updated.' is present.</td></tr>
+<tr><td>Click the 'setup' link for Adobe Pass configuration.</td></tr>
+<tr><td>Switch to the active frame titled 'Adobe Pass dialog'.</td></tr>
+<tr><td>Enter 'http://entitlement.auth-staging.adobe.com/entitlement/AccessEnablerDebug.swf' in the 'Access Enabler Location' text box.</td></tr>
+<tr><td>Enter '30000' in the 'Request Timeout' text box.</td></tr>
+<tr><td>Enter '10.1.13' in the 'Adobe Flash Version' text box.</td></tr>
+<tr><td>Enter 'syfy' in the 'Requestor ID' text box.</td></tr>
+<tr><td>Enter 'syfy' in the 'Resource ID' text box.</td></tr>
+<tr><td>Enter 'Your TV subscription does not include this channel. Please contact your TV Provider about upgrading your service to get access.' in the 'User not Authorized Error' text box.</td></tr>
+<tr><td>Enter 'We had a problem reaching your TV provider. Please try again.' in the 'Internal Authorization Error' text box.</td></tr>
+<tr><td>Enter 'Your TV subscription does not include this channel.' in the 'Generic Authorization Error' text box.</td></tr>
+<tr><td>Enter 'http://api.auth-staging.adobe.com/api/v1/config/' in the 'Adobe Pass Config Service Path' text box.</td></tr>
+<tr><td>Click the 'Test configuration' button.</td></tr>
+<tr><td>Verify success message of 'All the configurations are valid.' is present.</td></tr>
 <tr><td>STEP 8</td></tr>
-<tr><td>Verify '"cat":"92286a8896|mps-testing|2arg"}' is present in page source.</td></tr>
+<tr><td>Enter 'syfy' in the 'Requestor ID' text box.</td></tr>
+<tr><td>Enter 'syfy' in the 'Resource ID' text box.</td></tr>
+<tr><td>Click the 'Save configuration' button.</td></tr>
+<tr><td>Verify success message of 'The configuration options have been saved.' is present.</td></tr>
+<tr><td>Click the 'Close Overlay X'.</td></tr>
+<tr><td>Scroll by '-500'.</td></tr>
 <tr><td>STEP 9</td></tr>
-<tr><td>Mouse over the 'Configuration' menu link.</td></tr>
-<tr><td>Mouse over the 'Web services' menu link.</td></tr>
-<tr><td>Click the 'MPS Configuration' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'MPS Configuration dialog'.</td></tr>
-<tr><td>Click the 'REPLACEMENT PATTERNS' link.</td></tr>
-<tr><td>Click the 'MPS' link.</td></tr>
-<tr><td>Verify the 'MPS CAT Property' link with text '[mps:cat-pattern:?]' is present.</td></tr>
-<tr><td>Enter '[mps:cat-pattern:?]' in the 'Pattern for Category Field' text box.</td></tr>
+<tr><td>Verify the text 'The Adobe Pass configuration must be setup.' is NOT present on the page.</td></tr>
 <tr><td>STEP 10</td></tr>
+<tr><td>Click the 'Configure jQuery' link.</td></tr>
+<tr><td>Switch to the active frame titled 'jQuery update dialog'.</td></tr>
+<tr><td>Select '1.7' from the 'Default jQuery Version' drop down list.</td></tr>
 <tr><td>Click the 'Save configuration' button.</td></tr>
 <tr><td>Verify success message of 'The configuration options have been saved.' is present.</td></tr>
 <tr><td>Click the 'Close Overlay X'.</td></tr>
 <tr><td>Scroll by '-500'.</td></tr>
 <tr><td>STEP 11</td></tr>
-<tr><td>Verify '"cat":"92286a8896|mps-testing|2arg|3arg|4arg"}' is present in page source.</td></tr>
+<tr><td>Verify the 'Authentication status checked:' value is 'true'.</td></tr>
+<tr><td>Verify the 'Authenticated' value is 'false'.</td></tr>
+<tr><td>Verify the 'Selected MVPD:' value is 'none'.</td></tr>
 <tr><td>STEP 12</td></tr>
-<tr><td>Switch to the active frame titled 'Execute PHP Code dialog'.</td></tr>
-<tr><td>Enter 'variable_set('mps_cat_pattern', '');echo _mps_build_cat();echo PHP_EOL;variable_set('mps_cat_pattern', '[mps:cat-pattern:?]');echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/cast'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/thisisareallyreallyreallyreallyreallyreallylongurlXXXXXX/season/episode/cast/name'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/thisisareallyreallyreallyreallyreallyreallylongurlXXXXXX/season/episode/cast/'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/show//episode/cast'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/show/season//episode//'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => '/show/season//'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => '/show///'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => '/brand/season//episode'));echo PHP_EOL;variable_set('mps_cat_pattern', '[mps:cat-pattern:2]|[mps:cat-pattern:3]');echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/cast'));echo PHP_EOL;variable_set('mps_cat_pattern', '[mps:cat-pattern:0]|[mps:cat-pattern:2]|[current-date:custom:d]|[mps:cat-pattern:3]|');echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/cast'));variable_set('mps_cat_pattern', '[mps:cat-pattern:?]');echo PHP_EOL;echo '*' . _mps_build_cat(array('aliased-path' => '/')) . '*';' in the 'PHP Code to Execute' text area.</td></tr>
-<tr><td>Click the 'Execute' button.</td></tr>
-<tr><td>Verify the expected response is 'Status message
-devel
-brand|show|season|episode
-brand|thisisareallyreallyreallyreallyreallyreallylongurl|season|episode|cast
-brand|thisisareallyreallyreallyreallyreallyreallylongurl|season|episode|cast
-brand|show|~|episode
-brand|show|season
-brand|show|season|~|episode
-~|show
-
-~|brand|season
-season|episode
-brand|season|10
-**'.</td></tr>
-<tr><td>Click the 'Close Overlay X'.</td></tr>
-<tr><td>Scroll by '-500'.</td></tr>
+<tr><td>Select 'Optimum' from the 'Al VMPDs:' drop down list.</td></tr>
+<tr><td>Click the 'login' button.</td></tr>
+<tr><td>Enter 'research40' in the 'Optimum ID' text box.</td></tr>
+<tr><td>Enter 'support40' in the 'Password' text box.</td></tr>
+<tr><td>Click the 'SIGN IN' button.</td></tr>
+<tr><td>Verify the 'Authentication status checked:' value is 'true'.</td></tr>
+<tr><td>Verify the 'Authenticated' value is 'true'.</td></tr>
+<tr><td>Verify the 'Selected MVPD:' value is 'Cablevision'.</td></tr>
 <tr><td>CLEANUP</td></tr>
-<tr><td>Click the 'Modules' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'Modules dialog'.</td></tr>
-<tr><td>Enter 'Devel' in the 'Filter Name' text box.</td></tr>
-<tr><td>Uncheck the 'Devel' module checkbox.</td></tr>
-<tr><td>Click the 'Save configuration' button.</td></tr>
-<tr><td>Verify success message of 'The configuration options have been saved.' is present.</td></tr>
-<tr><td>Click the 'Close Overlay X'.</td></tr>
-<tr><td>Scroll by '-500'.</td></tr>
-<tr><td>Mouse over the 'Configuration' menu link.</td></tr>
-<tr><td>Mouse over the 'Web services' menu link.</td></tr>
-<tr><td>Click the 'MPS Configuration' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'MPS Configuration dialog'.</td></tr>
-<tr><td>Enter '' in the 'Pattern for Category Field' text box.</td></tr>
+<tr><td>Mouse over the 'Structure' menu link.</td></tr>
+<tr><td>Click the 'Blocks' menu link.</td></tr>
+<tr><td>Switch to the active frame titled 'Blocks dialog'.</td></tr>
+<tr><td>Select the block name 'TVE Auth Example' from the '- None -' drop down list.</td></tr>
+<tr><td>Click the 'Save Blocks' button.</td></tr>
+<tr><td>Open url 'http://install.qa5.nbcupublisher7.publisher7.com/admin/config/development/jquery_update'.</td></tr>
+<tr><td>Select '1.5' from the 'Default jQuery Version' drop down list.</td></tr>
 <tr><td>Click the 'Save configuration' button.</td></tr>
 </table>
