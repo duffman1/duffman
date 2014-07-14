@@ -29,8 +29,15 @@ public class ImplementTVEModulesCore extends ParentTest {
 		userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
        
 		Reporter.log("SETUP");
+		taxonomy.NavigateSite("Modules");
+		overlay.SwitchToActiveFrame();
 		Modules modules = new Modules(webDriver, applib);
-		modules.VerifyModuleEnabled("jQuery Update");
+		try {
+			modules.EnterFilterName("jQuery Update");
+		}
+		catch (Exception | AssertionError e) {}
+        modules.EnableModule("jQuery Update");
+        overlay.ClickCloseOverlayLnk();
 		jQueryUpdate jqueryUpdate = new jQueryUpdate(webDriver);
 		Thread.sleep(2000);
         applib.openSitePage("/admin/config/development/jquery_update");

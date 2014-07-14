@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>All Consecutive Web Tests</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>2/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Jul 08 16:56:10 EDT 2014</td>
+<td>Started on:</td><td>Mon Jul 14 08:43:40 EDT 2014</td>
 </tr>
-<tr><td>Total time:</td><td>165 seconds (165136 ms)</td>
+<tr><td>Total time:</td><td>108 seconds (108068 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td>full </td>
 </tr><tr>
@@ -75,42 +75,33 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.nbcuni.test.publisher.tests.Performance.PageLoads.PageLoads_Test()'><b>PageLoads_Test</b><br>Test class: com.nbcuni.test.publisher.tests.Performance.PageLoads<br/>
-<a href="#Output-1504345058" onClick='toggleBox("Output-1504345058", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1504345058" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1504345058">
-Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
-Enter 'pa55word' in the 'Password' text box.<br/>
-Click the 'Login' button.<br/>
-</div>
-</td>
-<td></td>
-<td>51</td>
-<td>com.nbcuni.test.publisher.tests.Performance.PageLoads@7a536ac6</td></tr>
-<tr>
 <td title='com.nbcuni.test.publisher.tests.Setup.TestSetup.TestSetup_Test()'><b>TestSetup_Test</b><br>Test class: com.nbcuni.test.publisher.tests.Setup.TestSetup<br/>
-<a href="#Output-1086920943" onClick='toggleBox("Output-1086920943", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1616814753" onClick='toggleBox("Output-1616814753", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1086920943" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1086920943">
+<a href="#Output-1616814753" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1616814753">
 Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.<br/>
 Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
 Enter 'pa55word' in the 'Password' text box.<br/>
 Click the 'Login' button.<br/>
-Click the 'Modules' menu link.<br/>
-Switch to frame titled 'Modules'.<br/>
+Open url 'http://update.qa5.nbcupublisher7.publisher7.com/admin/modules'.<br/>
+Open url 'http://update.qa5.nbcupublisher7.publisher7.com/#overlay=admin/modules'.<br/>
+Switch to the active frame titled 'Modules dialog'.<br/>
 Enter 'Sticky Edit Actions' in the 'Filter Name' text box.<br/>
-Wait for the module titled 'Sticky Edit Actions' to appear in the list.<br/>
+Uncheck the 'Sticky Edit Actions' module checkbox.<br/>
+Click the 'Save configuration' button.<br/>
+Verify success message of 'The configuration options have been saved.' is present.<br/>
 Enter 'Devel' in the 'Filter Name' text box.<br/>
-Wait for the module titled 'Devel' to appear in the list.<br/>
 Enter 'ImageField Focus' in the 'Filter Name' text box.<br/>
-Wait for the module titled 'ImageField Focus' to appear in the list.<br/>
 Enter 'Database logging' in the 'Filter Name' text box.<br/>
-Wait for the module titled 'Database logging' to appear in the list.<br/>
 Enter 'Pub Post' in the 'Filter Name' text box.<br/>
-Wait for the module titled 'Pub Post' to appear in the list.<br/>
-Verify the 'Pub Post' check box is checked.<br/>
+Check the 'Pub Post' check box.<br/>
+Click the 'Save configuration' button.<br/>
+Switch to frame titled 'Some required modules must be enabled'.<br/>
+Click the 'Continue' button to enable additional modules.<br/>
+Switch back to the 'Modules' frame.<br/>
+Switch to frame titled 'Modules'.<br/>
+Verify success message of 'The configuration options have been saved.' is present.<br/>
 Click the 'Close Overlay X'.<br/>
 Scroll by '-500'.<br/>
 Mouse over the 'Content' menu link.<br/>
@@ -123,7 +114,7 @@ Scroll the 'Publishing Options' link into view.<br/>
 Click the 'Publishing Options' link.<br/>
 Verify the 'Moderation State' is present as a required field.<br/>
 Scroll to and click the 'Basic Information' tab.<br/>
-Enter 'futurePost07/08/20142655f78d64b9404' in the 'Title' text box.<br/>
+Enter 'futurePost07/14/201452738ab613a94a3' in the 'Title' text box.<br/>
 Switch to the Synopsis frame.<br/>
 Enter a randomized text string into the 'Body' text area.<br/>
 Switch to the active frame titled 'Create Post dialog'.<br/>
@@ -143,28 +134,26 @@ Scroll the 'Publishing Options' link into view.<br/>
 Click the 'Publishing Options' link.<br/>
 Select 'Draft' from the 'Moderation State' drop down list.<br/>
 Click the 'Save' button.<br/>
-Verify success message of 'Post futurePost07/08/20142655f78d64b9404 has been created.' is present.<br/>
+Verify success message of 'Post futurePost07/14/201452738ab613a94a3 has been created.' is present.<br/>
 Click the 'Schedule' link in the work bench.<br/>
-Switch to the active frame titled 'futurePost07/08/20142655f78d64b9404 dialog'.<br/>
+Switch to the active frame titled 'futurePost07/14/201452738ab613a94a3 dialog'.<br/>
 Click the 'Add Scheduled Revision' link.<br/>
-Switch to the active frame titled 'futurePost07/08/20142655f78d64b9404 dialog'.<br/>
-Select revision titled 'futurePost07/08/20142655f78d64b9404'.<br/>
+Switch to the active frame titled 'futurePost07/14/201452738ab613a94a3 dialog'.<br/>
+Select revision titled 'futurePost07/14/201452738ab613a94a3'.<br/>
 Verify that the 'Operation' option count equals '5'.<br/>
 Select 'Moderate to Published' from the 'Select operation' drop down list.<br/>
-Enter '07/08/2014' in the 'Date' text box.<br/>
-Enter '09:02 PM' in the 'Time' text box.<br/>
+Enter '07/14/2014' in the 'Date' text box.<br/>
+Enter '12:50 PM' in the 'Time' text box.<br/>
 Click the 'Schedule' button.<br/>
-Switch to the active frame titled 'futurePost07/08/20142655f78d64b9404 dialog'.<br/>
+Switch to the active frame titled 'futurePost07/14/201452738ab613a94a3 dialog'.<br/>
 Verify success message of 'The scheduled revision operation has been saved' is present.<br/>
 Click the 'Close Overlay X'.<br/>
 Scroll by '-500'.<br/>
-Open url 'http://update.qa5.nbcupublisher7.publisher7.com/admin/structure/types/manage/054dda3973/delete'.<br/>
-Open url 'http://update.qa5.nbcupublisher7.publisher7.com/admin/structure/types/manage/mpxb3f762aa4c/delete'.<br/>
 </div>
 </td>
 <td></td>
-<td>108</td>
-<td>com.nbcuni.test.publisher.tests.Setup.TestSetup@73ab2e32</td></tr>
+<td>104</td>
+<td>com.nbcuni.test.publisher.tests.Setup.TestSetup@5826920c</td></tr>
 </table><p>
 </body>
 </html>

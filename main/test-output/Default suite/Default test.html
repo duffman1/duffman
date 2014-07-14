@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Jul 11 16:34:45 EDT 2014</td>
+<td>Started on:</td><td>Mon Jul 14 08:16:33 EDT 2014</td>
 </tr>
-<tr><td>Total time:</td><td>123 seconds (123734 ms)</td>
+<tr><td>Total time:</td><td>152 seconds (152046 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,103 +75,82 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSODefinedDomains.SSODefinedDomains_TC3474()'><b>SSODefinedDomains_TC3474</b><br>Test class: com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSODefinedDomains<br/>
-<a href="#Output-1522186088" onClick='toggleBox("Output-1522186088", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore.ImplementTVEModulesCore_TC3261()'><b>ImplementTVEModulesCore_TC3261</b><br>Test class: com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore<br/>
+<a href="#Output-1124993751" onClick='toggleBox("Output-1124993751", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1522186088" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1522186088">
+<a href="#Output-1124993751" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1124993751">
 STEP 1<br/>
-Open url 'http://install.qa5.nbcupublisher7.publisher7.com/user'.<br/>
+Open url 'http://install.stage.nbcupublisher7.publisher7.com'.<br/>
 Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
 Enter 'pa55word' in the 'Password' text box.<br/>
 Click the 'Login' button.<br/>
+SETUP<br/>
+Click the 'Modules' menu link.<br/>
+Switch to the active frame titled 'Modules dialog'.<br/>
+Enter 'jQuery Update' in the 'Filter Name' text box.<br/>
+Verify the 'jQuery Update' check box is checked.<br/>
+Click the 'Close Overlay X'.<br/>
+Scroll by '-500'.<br/>
+Open url 'http://install.stage.nbcupublisher7.publisher7.com/admin/config/development/jquery_update'.<br/>
+Select '1.5' from the 'Default jQuery Version' drop down list.<br/>
+Click the 'Save configuration' button.<br/>
 STEP 2<br/>
 Click the 'Modules' menu link.<br/>
-Switch to frame titled 'Modules'.<br/>
-Enter 'Pub SSO' in the 'Filter Name' text box.<br/>
-Check the 'Pub SSO' check box.<br/>
-Click the 'Save configuration' button.<br/>
-Switch to frame titled 'Some required modules must be enabled'.<br/>
-Click the 'Continue' button to enable additional modules.<br/>
-Switch back to the 'Modules' frame.<br/>
-Switch to frame titled 'Modules'.<br/>
-Verify success message of 'The configuration options have been saved.' is present.<br/>
+Switch to the active frame titled 'Modules dialog'.<br/>
+Enter 'TVE Adobe Pass' in the 'Filter Name' text box.<br/>
+Verify the 'TVE Adobe Pass' check box is checked.<br/>
+Enter 'TVE Auth Example' in the 'Filter Name' text box.<br/>
+Verify the 'TVE Auth Example' check box is checked.<br/>
+Enter 'TVE MVPD' in the 'Filter Name' text box.<br/>
+Verify the 'TVE MVPD' check box is checked.<br/>
 Click the 'Close Overlay X'.<br/>
 Scroll by '-500'.<br/>
 STEP 3<br/>
-Mouse over the 'Configuration' menu link.<br/>
-Mouse over the 'People' menu link.<br/>
-Click the 'SimpleSAMLphp Auth Settings' menu link.<br/>
-Switch to the active frame titled 'People dialog'.<br/>
-STEP 4<br/>
-Verify the 'Activate authentication via SimpleSAMLphp' check box is unchecked.<br/>
-Verify the value of the 'Installation directory' text box equals '/mnt/www/html/nbcupublisher7qa5/simplesamlphp' and the text box is disabled.<br/>
-Verify the value of the 'Authentication source for this SP' text box equals 'pub-qa5install' and the text box is disabled.<br/>
-Verify the ' Force https for login links' check box is checked and disabled.<br/>
-Verify the value of the 'Which attribute from simpleSAMLphp should be used as user's name' text box equals 'email' and the text box is disabled.<br/>
-Verify the value of the 'Which attribute from simpleSAMLphp should be used as unique identifier for the user' text box equals 'uid' and the text box is disabled.<br/>
-Verify the value of the 'Which attribute from simpleSAMLphp should be used as user mail address' text box equals 'email' and the text box is disabled.<br/>
-STEP 5<br/>
-Enter the file path for certificate upload.<br/>
-Click the 'Save configuration' button.<br/>
-Verify success message of 'The configuration options have been saved.' is present.<br/>
-Verify the text 'A certificate exists for this instance of SimpleSAMLphp.' is present on the page.<br/>
-STEP 6<br/>
-Click the 'Save configuration' button.<br/>
-Verify success message of 'The configuration options have been saved.' is present.<br/>
-STEP 7<br/>
-Click the 'Activate authentication via SimpleSAMLphp' check box.<br/>
-Click the 'Save configuration' button.<br/>
-Verify success message of 'The configuration options have been saved.' is present.<br/>
+Mouse over the 'Structure' menu link.<br/>
+Click the 'Blocks' menu link.<br/>
+Switch to the active frame titled 'Blocks dialog'.<br/>
+Select the block name 'TVE Auth Example' from the 'Sidebar first' drop down list.<br/>
+Click the 'Save Blocks' button.<br/>
+Verify success message of 'The block settings have been updated.' is present.<br/>
 Click the 'Close Overlay X'.<br/>
 Scroll by '-500'.<br/>
-STEP 8<br/>
-Click the 'Logout' button.<br/>
-Open url 'http://install.qa5.nbcupublisher7.publisher7.com/saml_login'.<br/>
-STEP 9<br/>
-Enter '206424392' in the 'SSO ID' text box.<br/>
-Enter 'tufNewcyd577BC' in the 'Password' text box.<br/>
-Click the 'Sign In' button.<br/>
+SKIP TO STEP 10 - TVE ALREADY CONFIGURED<br/>
 STEP 10<br/>
-Verify the text 'Modules' is NOT present on the page.<br/>
-STEP 11<br/>
-Verify the text 'Brandon.Clark@nbcuni.com' is present on the page.<br/>
-STEP 12<br/>
-Click the 'Logout' button.<br/>
-Open url 'http://install.qa5.nbcupublisher7.publisher7.com/user'.<br/>
-Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
-Enter 'pa55word' in the 'Password' text box.<br/>
-Click the 'Login' button.<br/>
-Click the 'People' menu link.<br/>
-Switch to the active frame titled 'People dialog'.<br/>
-Click the 'next >' link until user 'Brandon.Clark' is present.<br/>
-Click the 'Brandon.Clark' link from the 'USERNAME' list.<br/>
-STEP 13<br/>
-Open url 'http://install.qa5.nbcupublisher7.publisher7.com/admin/config/people/simplesamlphp_auth'.<br/>
-Click the 'Activate authentication via SimpleSAMLphp' check box.<br/>
-Click the 'Save configuration' button.<br/>
-Verify success message of 'The configuration options have been saved.' is present.<br/>
-Verify success message of 'SimpleSAMLphp authentication is NOT yet activated.' is present.<br/>
-STEP 14 - 16 TODO<br/>
-STEP 17<br/>
-Click the 'Modules' menu link.<br/>
-Switch to the active frame titled 'Modules dialog'.<br/>
-Enter 'Pub SSO' in the 'Filter Name' text box.<br/>
-Uncheck the 'Pub SSO' module checkbox.<br/>
-Click the 'Save configuration' button.<br/>
-Verify success message of 'The configuration options have been saved.' is present.<br/>
-Enter 'simpleSAMLphp authentication' in the 'Filter Name' text box.<br/>
-Uncheck the 'simpleSAMLphp authentication' module checkbox.<br/>
+Click the 'Configure jQuery' link.<br/>
+Switch to the active frame titled 'jQuery update dialog'.<br/>
+Select '1.7' from the 'Default jQuery Version' drop down list.<br/>
 Click the 'Save configuration' button.<br/>
 Verify success message of 'The configuration options have been saved.' is present.<br/>
 Click the 'Close Overlay X'.<br/>
 Scroll by '-500'.<br/>
-STEP 18<br/>
+STEP 11<br/>
+Verify the 'Authentication status checked:' value is 'true'.<br/>
+Verify the 'Authenticated' value is 'false'.<br/>
+Verify the 'Selected MVPD:' value is 'none'.<br/>
+STEP 12<br/>
+Select 'Optimum' from the 'Al VMPDs:' drop down list.<br/>
+Click the 'login' button.<br/>
+Enter 'research40' in the 'Optimum ID' text box.<br/>
+Enter 'support40' in the 'Password' text box.<br/>
+Click the 'SIGN IN' button.<br/>
+Verify the 'Authentication status checked:' value is 'true'.<br/>
+Verify the 'Authenticated' value is 'true'.<br/>
+Verify the 'Selected MVPD:' value is 'Cablevision'.<br/>
+CLEANUP<br/>
+Mouse over the 'Structure' menu link.<br/>
+Click the 'Blocks' menu link.<br/>
+Switch to the active frame titled 'Blocks dialog'.<br/>
+Select the block name 'TVE Auth Example' from the '- None -' drop down list.<br/>
+Click the 'Save Blocks' button.<br/>
+Open url 'http://install.stage.nbcupublisher7.publisher7.com/admin/config/development/jquery_update'.<br/>
+Select '1.5' from the 'Default jQuery Version' drop down list.<br/>
+Click the 'Save configuration' button.<br/>
 </div>
 </td>
 <td></td>
-<td>120</td>
-<td>com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSODefinedDomains@22e692b1</td></tr>
+<td>149</td>
+<td>com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@7eaddd24</td></tr>
 </table><p>
 </body>
 </html>
