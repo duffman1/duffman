@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
     <line>
       <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
@@ -14,58 +14,16 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com/admin/modules'.]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com/#overlay=admin/modules'.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Sticky Edit Actions' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Uncheck the 'Sticky Edit Actions' module checkbox.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Devel' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'ImageField Focus' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Database logging' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Pub Post' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Check the 'Pub Post' check box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Continue' button to enable additional modules.]]>
-    </line>
-    <line>
-      <![CDATA[Switch back to the 'Modules' frame.]]>
+      <![CDATA[Click the 'Modules' menu link.]]>
     </line>
     <line>
       <![CDATA[Switch to frame titled 'Modules'.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+      <![CDATA[Enter 'Logo Manager' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Logo Manager' check box is checked.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
@@ -77,130 +35,22 @@
       <![CDATA[Mouse over the 'Content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Add content' menu link.]]>
+      <![CDATA[Click the 'Logos' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Post' menu link.]]>
+      <![CDATA[Switch to the active frame titled 'Manage Logo dialog'.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+      <![CDATA[Click the 'Edit' extend menu button for logo titled 'eb37bbbdc464451'.]]>
     </line>
     <line>
-      <![CDATA[Verify the 'Title' is present as a required field.]]>
+      <![CDATA[Click the 'Delete' button for logo titled 'eb37bbbdc464451'.]]>
     </line>
     <line>
-      <![CDATA[Verify the 'Body' is present as a required field.]]>
+      <![CDATA[Switch to the active frame titled 'Are you sure you want to delete this logo? dialog'.]]>
     </line>
     <line>
-      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Publishing Options' link.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Moderation State' is present as a required field.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'futurePost07/14/201452738ab613a94a3' in the 'Title' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the Synopsis frame.]]>
-    </line>
-    <line>
-      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Cover' select button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the select file frame.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the file path for file upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Upload' button.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the file image 'HanSolo' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Publishing Options' link.]]>
-    </line>
-    <line>
-      <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Post futurePost07/14/201452738ab613a94a3 has been created.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Schedule' link in the work bench.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'futurePost07/14/201452738ab613a94a3 dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Add Scheduled Revision' link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'futurePost07/14/201452738ab613a94a3 dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Select revision titled 'futurePost07/14/201452738ab613a94a3'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that the 'Operation' option count equals '5'.]]>
-    </line>
-    <line>
-      <![CDATA[Select 'Moderate to Published' from the 'Select operation' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '07/14/2014' in the 'Date' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '12:50 PM' in the 'Time' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Schedule' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'futurePost07/14/201452738ab613a94a3 dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The scheduled revision operation has been saved' is present.]]>
+      <![CDATA[Click the 'Delete' button.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
@@ -209,37 +59,19 @@
       <![CDATA[Scroll by '-500'.]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Login' button.]]>
-    </line>
-    <line>
       <![CDATA[Mouse over the 'Content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Add content' menu link.]]>
+      <![CDATA[Mouse over the 'Logos' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Character Profile' menu link.]]>
+      <![CDATA[Click the 'Add Logo' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Create Character Profile dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'Add Logo dialog'.]]>
     </line>
     <line>
-      <![CDATA[Enter 'bfcd5470e312423' in the 'Character First Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the Cover Photo 'Select' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the select file frame.]]>
+      <![CDATA[Enter '996b903c4bf048e' in the 'Title' text box.]]>
     </line>
     <line>
       <![CDATA[Enter the file path for file upload.]]>
@@ -251,56 +83,134 @@
       <![CDATA[Wait for the file link to be visible after upload.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Next' button.]]>
+      <![CDATA[Verify the file image 'nbclogosmall' is present.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
+      <![CDATA[Verify the the img is loaded and visible.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Next' button.]]>
+      <![CDATA[Enter '2014-07-15' in the 'Start Date' text box.]]>
     </line>
     <line>
-      <![CDATA[Verify the file image 'HanSolo' is present.]]>
+      <![CDATA[Enter '05:41:43 PM' in the 'Start Time' text box.]]>
     </line>
     <line>
-      <![CDATA[Verify the img is loaded and visible.]]>
+      <![CDATA[Enter '2014-07-15' in the 'End Date' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '05:42:13 PM' in the 'End Time' text box.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Switch to frame titled 'Create Character Profile'.]]>
+      <![CDATA[Switch to the active frame titled 'Manage Logo dialog'.]]>
     </line>
     <line>
-      <![CDATA[Assert that img source of the Cover Photo contains 'HanSolo'.]]>
+      <![CDATA[Verify the text '996b903c4bf048e' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'Tue, 07/15/2014 - 17:41' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'Tue, 07/15/2014 - 17:42' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Assert the file image 'nbclogosmall' is present.]]>
     </line>
     <line>
       <![CDATA[Assert the the img is loaded and visible.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save' button.]]>
+      <![CDATA[Click the 'Close Overlay X'.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'Character Profile bfcd5470e312423 has been created.' is present.]]>
+      <![CDATA[Scroll by '-500'.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Status report dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll by '-500'.]]>
+    </line>
+    <line>
+      <![CDATA[Assert the file image 'nbclogosmall' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Assert the the img is loaded and visible.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Status report dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll by '-500'.]]>
+    </line>
+    <line>
+      <![CDATA[Assert the file image 'logo' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Assert the the img is loaded and visible.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Logos' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Manage Logo dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Edit' extend menu button for logo titled '996b903c4bf048e'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Delete' button for logo titled '996b903c4bf048e'.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Are you sure you want to delete this logo? dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Delete' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Manage Logo dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Logo has been deleted successfully.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text '996b903c4bf048e' is NOT present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'Tue, 07/15/2014 - 17:41' is NOT present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'Tue, 07/15/2014 - 17:42' is NOT present on the page.]]>
     </line>
   </reporter-output>
-  <suite name="Pub 7 Concurrent Suite" duration-ms="22136" started-at="2014-07-14T12:45:34Z" finished-at="2014-07-14T12:45:57Z">
+  <suite name="Default suite" duration-ms="199855" started-at="2014-07-15T17:40:38Z" finished-at="2014-07-15T17:43:58Z">
     <groups>
       <group name="full">
-        <method signature="CreateCharacterProfile.CreateCharacterProfile_TC1041()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@330b7338]" name="CreateCharacterProfile_TC1041" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile"/>
+        <method signature="CreateLogo.CreateLogo_TC1066()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.Logo.CreateLogo@5bde2a20]" name="CreateLogo_TC1066" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.Logo.CreateLogo"/>
       </group> <!-- full -->
     </groups>
-    <test name="All Concurrent Web Tests" duration-ms="22136" started-at="2014-07-14T12:45:34Z" finished-at="2014-07-14T12:45:57Z">
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile">
-        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@330b7338]" name="startGridAndHub" is-config="true" duration-ms="6085" started-at="2014-07-14T08:45:28Z" finished-at="2014-07-14T08:45:34Z">
+    <test name="Default test" duration-ms="199855" started-at="2014-07-15T17:40:38Z" finished-at="2014-07-15T17:43:58Z">
+      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.Logo.CreateLogo">
+        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.Logo.CreateLogo@5bde2a20]" name="startGridAndHub" is-config="true" duration-ms="12390" started-at="2014-07-15T13:40:26Z" finished-at="2014-07-15T13:40:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startGridAndHub -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@330b7338]" name="startSelenium" is-config="true" duration-ms="2022" started-at="2014-07-14T08:45:34Z" finished-at="2014-07-14T08:45:37Z">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.Logo.CreateLogo@5bde2a20]" name="startSelenium" is-config="true" duration-ms="2513" started-at="2014-07-15T13:40:38Z" finished-at="2014-07-15T13:40:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="CreateCharacterProfile_TC1041()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@330b7338]" name="CreateCharacterProfile_TC1041" duration-ms="19541" started-at="2014-07-14T08:45:37Z" finished-at="2014-07-14T08:45:56Z">
+        <test-method status="PASS" signature="CreateLogo_TC1066()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.Logo.CreateLogo@5bde2a20]" name="CreateLogo_TC1066" duration-ms="196759" started-at="2014-07-15T13:40:41Z" finished-at="2014-07-15T13:43:57Z">
           <reporter-output>
             <line>
               <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
@@ -315,177 +225,16 @@
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Add content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Character Profile' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Character Profile dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'bfcd5470e312423' in the 'Character First Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the Cover Photo 'Select' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the select file frame.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the file path for file upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Upload' button.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Public Local Files' radio button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the file image 'HanSolo' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to frame titled 'Create Character Profile'.]]>
-            </line>
-            <line>
-              <![CDATA[Assert that img source of the Cover Photo contains 'HanSolo'.]]>
-            </line>
-            <line>
-              <![CDATA[Assert the the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Character Profile bfcd5470e312423 has been created.' is present.]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- CreateCharacterProfile_TC1041 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@330b7338]" name="stopSelenium" is-config="true" duration-ms="571" started-at="2014-07-14T08:45:56Z" finished-at="2014-07-14T08:45:57Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=CreateCharacterProfile_TC1041 status=SUCCESS method=CreateCharacterProfile.CreateCharacterProfile_TC1041()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@330b7338] output=Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@330b7338]" name="stopGridAndHub" is-config="true" duration-ms="566" started-at="2014-07-14T08:45:57Z" finished-at="2014-07-14T08:45:57Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- stopGridAndHub -->
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile -->
-    </test> <!-- All Concurrent Web Tests -->
-  </suite> <!-- Pub 7 Concurrent Suite -->
-  <suite name="Pub 7 Consecutive Suite" duration-ms="108068" started-at="2014-07-14T12:43:40Z" finished-at="2014-07-14T12:45:28Z">
-    <groups>
-      <group name="mpx">
-        <method signature="TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@5826920c]" name="TestSetup_Test" class="com.nbcuni.test.publisher.tests.Setup.TestSetup"/>
-      </group> <!-- mpx -->
-      <group name="full">
-        <method signature="TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@5826920c]" name="TestSetup_Test" class="com.nbcuni.test.publisher.tests.Setup.TestSetup"/>
-      </group> <!-- full -->
-      <group name="smoke">
-        <method signature="TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@5826920c]" name="TestSetup_Test" class="com.nbcuni.test.publisher.tests.Setup.TestSetup"/>
-      </group> <!-- smoke -->
-    </groups>
-    <test name="All Consecutive Web Tests" duration-ms="108068" started-at="2014-07-14T12:43:40Z" finished-at="2014-07-14T12:45:28Z">
-      <class name="com.nbcuni.test.publisher.tests.Setup.TestSetup">
-        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@5826920c]" name="startGridAndHub" is-config="true" duration-ms="11690" started-at="2014-07-14T08:43:28Z" finished-at="2014-07-14T08:43:40Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startGridAndHub -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@5826920c]" name="startSelenium" is-config="true" duration-ms="2490" started-at="2014-07-14T08:43:40Z" finished-at="2014-07-14T08:43:42Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@5826920c]" name="TestSetup_Test" duration-ms="104997" started-at="2014-07-14T08:43:42Z" finished-at="2014-07-14T08:45:27Z">
-          <reporter-output>
-            <line>
-              <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Login' button.]]>
-            </line>
-            <line>
-              <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com/admin/modules'.]]>
-            </line>
-            <line>
-              <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com/#overlay=admin/modules'.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Sticky Edit Actions' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Uncheck the 'Sticky Edit Actions' module checkbox.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Devel' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'ImageField Focus' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Database logging' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Pub Post' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Check the 'Pub Post' check box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Continue' button to enable additional modules.]]>
-            </line>
-            <line>
-              <![CDATA[Switch back to the 'Modules' frame.]]>
+              <![CDATA[Click the 'Modules' menu link.]]>
             </line>
             <line>
               <![CDATA[Switch to frame titled 'Modules'.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+              <![CDATA[Enter 'Logo Manager' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Logo Manager' check box is checked.]]>
             </line>
             <line>
               <![CDATA[Click the 'Close Overlay X'.]]>
@@ -497,49 +246,43 @@
               <![CDATA[Mouse over the 'Content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Add content' menu link.]]>
+              <![CDATA[Click the 'Logos' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Post' menu link.]]>
+              <![CDATA[Switch to the active frame titled 'Manage Logo dialog'.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+              <![CDATA[Click the 'Edit' extend menu button for logo titled 'eb37bbbdc464451'.]]>
             </line>
             <line>
-              <![CDATA[Verify the 'Title' is present as a required field.]]>
+              <![CDATA[Click the 'Delete' button for logo titled 'eb37bbbdc464451'.]]>
             </line>
             <line>
-              <![CDATA[Verify the 'Body' is present as a required field.]]>
+              <![CDATA[Switch to the active frame titled 'Are you sure you want to delete this logo? dialog'.]]>
             </line>
             <line>
-              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+              <![CDATA[Click the 'Delete' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Publishing Options' link.]]>
+              <![CDATA[Click the 'Close Overlay X'.]]>
             </line>
             <line>
-              <![CDATA[Verify the 'Moderation State' is present as a required field.]]>
+              <![CDATA[Scroll by '-500'.]]>
             </line>
             <line>
-              <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Enter 'futurePost07/14/201452738ab613a94a3' in the 'Title' text box.]]>
+              <![CDATA[Mouse over the 'Logos' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the Synopsis frame.]]>
+              <![CDATA[Click the 'Add Logo' menu link.]]>
             </line>
             <line>
-              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+              <![CDATA[Switch to the active frame titled 'Add Logo dialog'.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Cover' select button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the select file frame.]]>
+              <![CDATA[Enter '996b903c4bf048e' in the 'Title' text box.]]>
             </line>
             <line>
               <![CDATA[Enter the file path for file upload.]]>
@@ -551,76 +294,43 @@
               <![CDATA[Wait for the file link to be visible after upload.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Next' button.]]>
+              <![CDATA[Verify the file image 'nbclogosmall' is present.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Public Local Files' radio button.]]>
+              <![CDATA[Verify the the img is loaded and visible.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Next' button.]]>
+              <![CDATA[Enter '2014-07-15' in the 'Start Date' text box.]]>
             </line>
             <line>
-              <![CDATA[Verify the file image 'HanSolo' is present.]]>
+              <![CDATA[Enter '05:41:43 PM' in the 'Start Time' text box.]]>
             </line>
             <line>
-              <![CDATA[Verify the img is loaded and visible.]]>
+              <![CDATA[Enter '2014-07-15' in the 'End Date' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Publishing Options' link.]]>
-            </line>
-            <line>
-              <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
+              <![CDATA[Enter '05:42:13 PM' in the 'End Time' text box.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'Post futurePost07/14/201452738ab613a94a3 has been created.' is present.]]>
+              <![CDATA[Switch to the active frame titled 'Manage Logo dialog'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Schedule' link in the work bench.]]>
+              <![CDATA[Verify the text '996b903c4bf048e' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'futurePost07/14/201452738ab613a94a3 dialog'.]]>
+              <![CDATA[Verify the text 'Tue, 07/15/2014 - 17:41' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Add Scheduled Revision' link.]]>
+              <![CDATA[Verify the text 'Tue, 07/15/2014 - 17:42' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'futurePost07/14/201452738ab613a94a3 dialog'.]]>
+              <![CDATA[Assert the file image 'nbclogosmall' is present.]]>
             </line>
             <line>
-              <![CDATA[Select revision titled 'futurePost07/14/201452738ab613a94a3'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that the 'Operation' option count equals '5'.]]>
-            </line>
-            <line>
-              <![CDATA[Select 'Moderate to Published' from the 'Select operation' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '07/14/2014' in the 'Date' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '12:50 PM' in the 'Time' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Schedule' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'futurePost07/14/201452738ab613a94a3 dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The scheduled revision operation has been saved' is present.]]>
+              <![CDATA[Assert the the img is loaded and visible.]]>
             </line>
             <line>
               <![CDATA[Click the 'Close Overlay X'.]]>
@@ -628,28 +338,90 @@
             <line>
               <![CDATA[Scroll by '-500'.]]>
             </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Status report dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll by '-500'.]]>
+            </line>
+            <line>
+              <![CDATA[Assert the file image 'nbclogosmall' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Assert the the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Status report dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll by '-500'.]]>
+            </line>
+            <line>
+              <![CDATA[Assert the file image 'logo' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Assert the the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Logos' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Manage Logo dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Edit' extend menu button for logo titled '996b903c4bf048e'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Delete' button for logo titled '996b903c4bf048e'.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Are you sure you want to delete this logo? dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Delete' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Manage Logo dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Logo has been deleted successfully.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text '996b903c4bf048e' is NOT present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Tue, 07/15/2014 - 17:41' is NOT present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Tue, 07/15/2014 - 17:42' is NOT present on the page.]]>
+            </line>
           </reporter-output>
-        </test-method> <!-- TestSetup_Test -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@5826920c]" name="stopSelenium" is-config="true" duration-ms="571" started-at="2014-07-14T08:45:27Z" finished-at="2014-07-14T08:45:28Z">
+        </test-method> <!-- CreateLogo_TC1066 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.Logo.CreateLogo@5bde2a20]" name="stopSelenium" is-config="true" duration-ms="571" started-at="2014-07-15T13:43:57Z" finished-at="2014-07-15T13:43:58Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=TestSetup_Test status=SUCCESS method=TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@5826920c] output=Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]]>
+                <![CDATA[[TestResult name=CreateLogo_TC1066 status=SUCCESS method=CreateLogo.CreateLogo_TC1066()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.Logo.CreateLogo@5bde2a20] output=Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@5826920c]" name="stopGridAndHub" is-config="true" duration-ms="575" started-at="2014-07-14T08:45:28Z" finished-at="2014-07-14T08:45:28Z">
+        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.Logo.CreateLogo@5bde2a20]" name="stopGridAndHub" is-config="true" duration-ms="585" started-at="2014-07-15T13:43:58Z" finished-at="2014-07-15T13:43:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopGridAndHub -->
-      </class> <!-- com.nbcuni.test.publisher.tests.Setup.TestSetup -->
-    </test> <!-- All Consecutive Web Tests -->
-  </suite> <!-- Pub 7 Consecutive Suite -->
-  <suite name="Publisher 7 Test Suites" duration-ms="0" started-at="2014-07-14T12:45:57Z" finished-at="2014-07-14T12:45:57Z">
-    <groups>
-    </groups>
-  </suite> <!-- Publisher 7 Test Suites -->
+      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.Logo.CreateLogo -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

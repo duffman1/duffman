@@ -84,11 +84,11 @@ public class Logos {
     public void VerifyHomePageLogoImgPresent(final String imageSrc) throws Exception {
     	
     	Reporter.log("Assert the file image '" + imageSrc + "' is present.");
+    	Thread.sleep(500);
     	wait.until(new ExpectedCondition<Boolean>(){
    		 	@Override
    		 	public Boolean apply(WebDriver webDriver) {
-   		 		WebElement element = HomeLogo_Img;
-   		 		return element.getAttribute("src").contains(imageSrc);
+   		 		return HomeLogo_Img.getAttribute("src").contains(imageSrc);
    		 	}
     	}); 
     	

@@ -54,9 +54,9 @@ public class CreateLogo extends ParentTest{
     	    addLogo.ClickUploadBtn();
     	    addLogo.WaitForFileUploaded("nbclogosmall.jpg");
     	    addLogo.VerifyFileImagePresent("nbclogosmall");
-            Calendar cal15SecondsFuture = Calendar.getInstance();
-            cal15SecondsFuture.add(Calendar.SECOND, 15);
-        	Date date15SecondsFuture = cal15SecondsFuture.getTime();
+            Calendar cal30SecondsFuture = Calendar.getInstance();
+            cal30SecondsFuture.add(Calendar.SECOND, 30);
+        	Date date30SecondsFuture = cal30SecondsFuture.getTime();
         	Calendar cal60SecondsFuture = Calendar.getInstance();
             cal60SecondsFuture.add(Calendar.SECOND, 60);
         	Date date60SecondsFuture = cal60SecondsFuture.getTime();
@@ -64,12 +64,12 @@ public class CreateLogo extends ParentTest{
         	pub7DateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
         	SimpleDateFormat pub7TimeFormat = new SimpleDateFormat("hh:mm:ss a");
         	pub7TimeFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
-        	String pub7Date15SecondsFuture = pub7DateFormat.format(date15SecondsFuture);
-    	    String pub7Time30SecondsFuture = pub7TimeFormat.format(date15SecondsFuture);
+        	String pub7Date30SecondsFuture = pub7DateFormat.format(date30SecondsFuture);
+    	    String pub7Time30SecondsFuture = pub7TimeFormat.format(date30SecondsFuture);
     	    String pub7Time60SecondsFuture = pub7TimeFormat.format(date60SecondsFuture);
-    	    addLogo.EnterStartDate(pub7Date15SecondsFuture);
+    	    addLogo.EnterStartDate(pub7Date30SecondsFuture);
     	    addLogo.EnterStartTime(pub7Time30SecondsFuture);
-    	    addLogo.EnterEndDate(pub7Date15SecondsFuture);
+    	    addLogo.EnterEndDate(pub7Date30SecondsFuture);
     	    addLogo.EnterEndTime(pub7Time60SecondsFuture);
     	    addLogo.ClickSaveBtn();
     	    
@@ -77,15 +77,15 @@ public class CreateLogo extends ParentTest{
     	    overlay.SwitchToActiveFrame();
     	    SimpleDateFormat pub7DateTimeFormat = new SimpleDateFormat("EEE, MM/dd/yyyy - kk:mm");
         	pub7DateTimeFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
-        	String pub7DateTime15SecondsFuture = pub7DateTimeFormat.format(date15SecondsFuture);
+        	String pub7DateTime30SecondsFuture = pub7DateTimeFormat.format(date30SecondsFuture);
         	String pub7DateTime60SecondsFuture = pub7DateTimeFormat.format(date60SecondsFuture);
     	    contentParent.VerifyPageContentPresent(Arrays.asList(logoTitle, 
-    	    		pub7DateTime15SecondsFuture.replace("24:", "00:"), pub7DateTime60SecondsFuture.replace("24:", "00:")));
+    	    		pub7DateTime30SecondsFuture.replace("24:", "00:"), pub7DateTime60SecondsFuture.replace("24:", "00:")));
     	    logos.VerifyLogoImgPresent(logoTitle, "nbclogosmall");
     	    
     	    //Step 5
     	    overlay.ClickCloseOverlayLnk();
-    	    Thread.sleep(15000);
+    	    Thread.sleep(30000);
     	    Cron cron = new Cron(webDriver, applib);
     	    cron.RunCron(true);
     	    taxonomy.NavigateSite("Home");
@@ -110,7 +110,7 @@ public class CreateLogo extends ParentTest{
     	    overlay.SwitchToActiveFrame();
     	    contentParent.VerifyMessageStatus("Logo has been deleted successfully.");
     	    contentParent.VerifyPageContentNotPresent(Arrays.asList(logoTitle, 
-    	    		pub7DateTime15SecondsFuture.replace("24:", "00:"), pub7DateTime60SecondsFuture.replace("24:", "00:")));
+    	    		pub7DateTime30SecondsFuture.replace("24:", "00:"), pub7DateTime60SecondsFuture.replace("24:", "00:")));
     	    
     }
 }
