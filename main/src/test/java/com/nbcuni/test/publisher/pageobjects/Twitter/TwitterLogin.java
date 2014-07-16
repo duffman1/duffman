@@ -1,5 +1,6 @@
 package com.nbcuni.test.publisher.pageobjects.Twitter;
 
+import java.util.Arrays;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -7,10 +8,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 import org.testng.Reporter;
 
 import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 
 /*********************************************
  * publisher.nbcuni.com Twitter Login Library. Copyright
@@ -22,11 +25,13 @@ import com.nbcuni.test.publisher.common.Driver.Driver;
 public class TwitterLogin {
 
 	private Driver webDriver;
+	private ContentParent contentParent;
 	
     //PAGE OBJECT CONSTRUCTOR
     public TwitterLogin(Driver webDriver, AppLib applib) {
     	this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
+        contentParent = new ContentParent(webDriver, applib);
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -46,6 +51,12 @@ public class TwitterLogin {
     
     @FindBy(how = How.ID, using = "allow")
     private WebElement AuthorizeApp_Btn;
+    
+    @FindBy(how = How.XPATH, using = "//input[@value='Sign in and Tweet']")
+    private WebElement SignInAndTweet_Btn;
+    
+    @FindBy(how = How.XPATH, using = "//input[@value='Tweet']")
+    private WebElement Tweet_Btn;
     
     private List<WebElement> SignIn_Btns() {
     	return webDriver.findElements(By.xpath("//button[text()='Sign in']"));
@@ -93,6 +104,18 @@ public class TwitterLogin {
     	AuthorizeApp_Btn.click();
     }
     
+    public void ClickSignInAndTweetBtn() throws Exception {
+    	
+    	Reporter.log("Click the 'Sign in and Tweet' button.");
+    	SignInAndTweet_Btn.click();
+    }
+    
+    public void ClickTweetBtn() throws Exception {
+    	
+    	Reporter.log("Click the 'Tweet' button.");
+    	Tweet_Btn.click();
+    }
+    
     public void ClickSignInBtn() throws Exception {
     	
     	Reporter.log("Click the 'Sign In' button.");
@@ -103,6 +126,23 @@ public class TwitterLogin {
     		}
     	}
     }
-   
+    
+    public void VerifyTwitterPostPresent(String content) throws Exception {
+    	
+    	for (int I = 0 ; ; I++) {
+        	if (I >= 10) {
+        		Assert.fail("Twitter post has not posted to twitter.");
+        	}
+        	try {
+        		contentParent.VerifyPageContentPresent(Arrays.asList("Publisher Seven", content));
+        		break;
+        	}
+        	catch (AssertionError e) {
+        		Thread.sleep(1000);
+        		webDriver.navigate().refresh();
+        	}
+        }
+    }
+    
 }
 

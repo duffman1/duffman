@@ -10,7 +10,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
 import com.nbcuni.test.publisher.common.AppLib;
@@ -80,14 +79,13 @@ public class Modules {
     	return webDriver.findElement(By.xpath("//label/strong[text()='" + moduleName + "']/../../../td//a[text()='Configure']"));
     }
     
+    private WebElement Category_Lnk(String categoryName) {
+    	return webDriver.findElement(By.xpath("//div[@id='module-filter-tabs']//a[contains(text(), '" + categoryName + "')]"));
+    }
+    
     
     //PAGE OBJECT METHODS
-    public void EnterFilterName(final String filterName) throws Exception {
-    	
-    	Reporter.log("Enter '" + filterName + "' in the 'Filter Name' text box.");
-    	FilterList_Txb.clear();
-    	FilterList_Txb.sendKeys(filterName);
-    	wait.until(ExpectedConditions.visibilityOf(ModuleName_Row(filterName)));
+    public void WaitForFilterVisible(final String filterName) throws Exception {
     	wait.until(new ExpectedCondition<Boolean>() {
     		public Boolean apply(WebDriver webDriver) {
     			return (ModuleName_Row(filterName).getAttribute("style").equals("") || ModuleName_Row(filterName).getAttribute("style").equals("display: table-row;"))
@@ -95,6 +93,14 @@ public class Modules {
    		 	}
     	});
     	Thread.sleep(500);
+    }
+    
+    public void EnterFilterName(String filterName) throws Exception {
+    	
+    	Reporter.log("Enter '" + filterName + "' in the 'Filter Name' text box.");
+    	FilterList_Txb.clear();
+    	FilterList_Txb.sendKeys(filterName);
+    	this.WaitForFilterVisible(filterName);
     }
     
     public void VerifyConfigurationSaved() throws Exception{
@@ -219,6 +225,12 @@ public class Modules {
     	
     	Reporter.log("Click the '" + moduleName + "' module 'Configure' link.");
     	Configure_Lnk(moduleName).click();
+    }
+    
+    public void ClickCategoryLnk(String categoryName) throws Exception {
+    	
+    	Reporter.log("Click the '" + categoryName + "' module category link.");
+    	Category_Lnk(categoryName).click();
     }
     
     

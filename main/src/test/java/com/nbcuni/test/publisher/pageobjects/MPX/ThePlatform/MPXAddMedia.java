@@ -165,6 +165,7 @@ public class MPXAddMedia {
     	
     	Reporter.log("Enter '" + date + "' in the 'Expiration Date' text box.");
     	mpxAssets.ScrollDownForImgPresent(getImagePath() + "Media/ExpirationDate_Txb.png");
+    	Thread.sleep(1000);
     	Pattern pattern = new Pattern(getImagePath() + "Media/ExpirationDate_Txb.png").targetOffset(0, 15);
     	Region region = sikuli.exists(pattern, 1);
     	sikuli.click(region, 1);

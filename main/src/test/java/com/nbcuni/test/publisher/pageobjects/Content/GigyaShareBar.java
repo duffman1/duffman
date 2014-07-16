@@ -21,10 +21,12 @@ import org.testng.Reporter;
  *********************************************/
 public class GigyaShareBar {
 
+	private Driver webDriver;
 	private WebDriverWait wait;
 	
 	//PAGE OBJECT CONSTRUCTORS
     public GigyaShareBar(Driver webDriver, AppLib applib) {
+    	this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
         wait = (WebDriverWait) new WebDriverWait(webDriver, 30).ignoring(NoSuchElementException.class);
     }
@@ -47,6 +49,12 @@ public class GigyaShareBar {
     
     @FindBy(how = How.XPATH, using = "//div[contains(@class, 'gig')]//iframe[contains(@id, 'twitter')]")
     private WebElement Twitter_Frm;
+    
+    @FindBy(how = How.XPATH, using = "//span[@class='label'][text()='Tweet']")
+    private WebElement Tweet_Btn;
+    
+    @FindBy(how = How.XPATH, using = "//span[@class='pluginButtonLabel'][text()='Like']")
+    private WebElement Like_Btn;
     
     @FindBy(how = How.XPATH, using = "//div[contains(@class, 'gig')]//iframe[contains(@title, 'Facebook')]")
     private WebElement Facebook_Frm;
@@ -88,10 +96,28 @@ public class GigyaShareBar {
     	
     }
     
-    public void VerifyTwitterBtnPresent() throws Exception{
+    public void VerifyTwitterBtnPresent() throws Exception {
         
     	Reporter.log("Verify the Twitter gigya share link is present.");
     	wait.until(ExpectedConditions.visibilityOf(Twitter_Frm));
+    	
+    }
+    
+    public void ClickTweetButton() throws Exception {
+        
+    	Reporter.log("Click the 'Tweet' button.");
+    	wait.until(ExpectedConditions.visibilityOf(Twitter_Frm));
+    	webDriver.switchTo().frame(Twitter_Frm);
+    	Tweet_Btn.click();
+    	
+    }
+    
+    public void ClickLikeButton() throws Exception {
+        
+    	Reporter.log("Click the 'Like' button.");
+    	wait.until(ExpectedConditions.visibilityOf(Facebook_Frm));
+    	webDriver.switchTo().frame(Facebook_Frm);
+    	Like_Btn.click();
     	
     }
     

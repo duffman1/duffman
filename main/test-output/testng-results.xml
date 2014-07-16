@@ -2,6 +2,9 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
     <line>
+      <![CDATA[STEP 1]]>
+    </line>
+    <line>
       <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
     </line>
     <line>
@@ -14,37 +17,10 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com/admin/modules'.]]>
+      <![CDATA[STEP 2 - N/A]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com/#overlay=admin/modules'.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Sticky Edit Actions' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Devel' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'ImageField Focus' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Database logging' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Pub Post' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Pub Post' check box is checked.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll by '-500'.]]>
+      <![CDATA[STEP 3]]>
     </line>
     <line>
       <![CDATA[Mouse over the 'Content' menu link.]]>
@@ -59,25 +35,7 @@
       <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
     </line>
     <line>
-      <![CDATA[Verify the 'Title' is present as a required field.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Body' is present as a required field.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Publishing Options' link.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Moderation State' is present as a required field.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'futurePost07/16/20147089e4914abd4e0' in the 'Title' text box.]]>
+      <![CDATA[Enter 'd94792de00774fa' in the 'Title' text box.]]>
     </line>
     <line>
       <![CDATA[Switch to the Synopsis frame.]]>
@@ -137,84 +95,51 @@
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'Post futurePost07/16/20147089e4914abd4e0 has been created.' is present.]]>
+      <![CDATA[Verify success message of 'Post d94792de00774fa has been created.' is present.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Schedule' link in the work bench.]]>
+      <![CDATA[Click the 'Tweet' button.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'futurePost07/16/20147089e4914abd4e0 dialog'.]]>
+      <![CDATA[Enter 'publisherseven' in the 'Userame or email' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Add Scheduled Revision' link.]]>
+      <![CDATA[Enter 'Publ!$her' in the 'Password' text box.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'futurePost07/16/20147089e4914abd4e0 dialog'.]]>
+      <![CDATA[Click the 'Sign in and Tweet' button.]]>
     </line>
     <line>
-      <![CDATA[Select revision titled 'futurePost07/16/20147089e4914abd4e0'.]]>
+      <![CDATA[Verify the text 'Publisher Seven' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Verify that the 'Operation' option count equals '5'.]]>
+      <![CDATA[Verify the text 'd94792de00774fa' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Select 'Moderate to Published' from the 'Select operation' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '07/16/2014' in the 'Date' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '11:36 AM' in the 'Time' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Schedule' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'futurePost07/16/20147089e4914abd4e0 dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The scheduled revision operation has been saved' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll by '-500'.]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com/admin/structure/types/manage/6b72b78e8b/delete'.]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com/admin/structure/types/manage/mpxa24ded87c0/delete'.]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com/admin/structure/types/manage/mpxc4a24bc2cd/delete'.]]>
+      <![CDATA[STEP 4]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="301819" started-at="2014-07-16T11:30:46Z" finished-at="2014-07-16T11:35:47Z">
+  <suite name="Default suite" duration-ms="36704" started-at="2014-07-16T19:53:38Z" finished-at="2014-07-16T19:54:15Z">
     <groups>
-      <group name="mpx">
-        <method signature="TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@5289178b]" name="TestSetup_Test" class="com.nbcuni.test.publisher.tests.Setup.TestSetup"/>
-      </group> <!-- mpx -->
       <group name="full">
-        <method signature="TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@5289178b]" name="TestSetup_Test" class="com.nbcuni.test.publisher.tests.Setup.TestSetup"/>
+        <method signature="ContentCommenting.ContentCommenting_TC3977()[pri:0, instance:com.nbcuni.test.publisher.tests.SocialIntegration.FunctionalImplementGigyaShareBar.ContentCommenting@2d724ca6]" name="ContentCommenting_TC3977" class="com.nbcuni.test.publisher.tests.SocialIntegration.FunctionalImplementGigyaShareBar.ContentCommenting"/>
       </group> <!-- full -->
-      <group name="smoke">
-        <method signature="TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@5289178b]" name="TestSetup_Test" class="com.nbcuni.test.publisher.tests.Setup.TestSetup"/>
-      </group> <!-- smoke -->
     </groups>
-    <test name="Default test" duration-ms="301819" started-at="2014-07-16T11:30:46Z" finished-at="2014-07-16T11:35:47Z">
-      <class name="com.nbcuni.test.publisher.tests.Setup.TestSetup">
-        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@5289178b]" name="startGridAndHub" is-config="true" duration-ms="12224" started-at="2014-07-16T07:30:33Z" finished-at="2014-07-16T07:30:46Z">
+    <test name="Default test" duration-ms="36704" started-at="2014-07-16T19:53:38Z" finished-at="2014-07-16T19:54:15Z">
+      <class name="com.nbcuni.test.publisher.tests.SocialIntegration.FunctionalImplementGigyaShareBar.ContentCommenting">
+        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.SocialIntegration.FunctionalImplementGigyaShareBar.ContentCommenting@2d724ca6]" name="startGridAndHub" is-config="true" duration-ms="11681" started-at="2014-07-16T15:53:26Z" finished-at="2014-07-16T15:53:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startGridAndHub -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@5289178b]" name="startSelenium" is-config="true" duration-ms="2583" started-at="2014-07-16T07:30:46Z" finished-at="2014-07-16T07:30:48Z">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.SocialIntegration.FunctionalImplementGigyaShareBar.ContentCommenting@2d724ca6]" name="startSelenium" is-config="true" duration-ms="2395" started-at="2014-07-16T15:53:38Z" finished-at="2014-07-16T15:53:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@5289178b]" name="TestSetup_Test" duration-ms="298632" started-at="2014-07-16T07:30:48Z" finished-at="2014-07-16T07:35:47Z">
+        <test-method status="PASS" signature="ContentCommenting_TC3977()[pri:0, instance:com.nbcuni.test.publisher.tests.SocialIntegration.FunctionalImplementGigyaShareBar.ContentCommenting@2d724ca6]" name="ContentCommenting_TC3977" duration-ms="33721" started-at="2014-07-16T15:53:40Z" finished-at="2014-07-16T15:54:14Z">
           <reporter-output>
+            <line>
+              <![CDATA[STEP 1]]>
+            </line>
             <line>
               <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
             </line>
@@ -228,37 +153,10 @@
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
-              <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com/admin/modules'.]]>
+              <![CDATA[STEP 2 - N/A]]>
             </line>
             <line>
-              <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com/#overlay=admin/modules'.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Sticky Edit Actions' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Devel' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'ImageField Focus' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Database logging' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Pub Post' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Pub Post' check box is checked.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll by '-500'.]]>
+              <![CDATA[STEP 3]]>
             </line>
             <line>
               <![CDATA[Mouse over the 'Content' menu link.]]>
@@ -273,25 +171,7 @@
               <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
             </line>
             <line>
-              <![CDATA[Verify the 'Title' is present as a required field.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Body' is present as a required field.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Publishing Options' link.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Moderation State' is present as a required field.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'futurePost07/16/20147089e4914abd4e0' in the 'Title' text box.]]>
+              <![CDATA[Enter 'd94792de00774fa' in the 'Title' text box.]]>
             </line>
             <line>
               <![CDATA[Switch to the Synopsis frame.]]>
@@ -351,77 +231,47 @@
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'Post futurePost07/16/20147089e4914abd4e0 has been created.' is present.]]>
+              <![CDATA[Verify success message of 'Post d94792de00774fa has been created.' is present.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Schedule' link in the work bench.]]>
+              <![CDATA[Click the 'Tweet' button.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'futurePost07/16/20147089e4914abd4e0 dialog'.]]>
+              <![CDATA[Enter 'publisherseven' in the 'Userame or email' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Add Scheduled Revision' link.]]>
+              <![CDATA[Enter 'Publ!$her' in the 'Password' text box.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'futurePost07/16/20147089e4914abd4e0 dialog'.]]>
+              <![CDATA[Click the 'Sign in and Tweet' button.]]>
             </line>
             <line>
-              <![CDATA[Select revision titled 'futurePost07/16/20147089e4914abd4e0'.]]>
+              <![CDATA[Verify the text 'Publisher Seven' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Verify that the 'Operation' option count equals '5'.]]>
+              <![CDATA[Verify the text 'd94792de00774fa' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Select 'Moderate to Published' from the 'Select operation' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '07/16/2014' in the 'Date' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '11:36 AM' in the 'Time' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Schedule' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'futurePost07/16/20147089e4914abd4e0 dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The scheduled revision operation has been saved' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll by '-500'.]]>
-            </line>
-            <line>
-              <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com/admin/structure/types/manage/6b72b78e8b/delete'.]]>
-            </line>
-            <line>
-              <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com/admin/structure/types/manage/mpxa24ded87c0/delete'.]]>
-            </line>
-            <line>
-              <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com/admin/structure/types/manage/mpxc4a24bc2cd/delete'.]]>
+              <![CDATA[STEP 4]]>
             </line>
           </reporter-output>
-        </test-method> <!-- TestSetup_Test -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@5289178b]" name="stopSelenium" is-config="true" duration-ms="590" started-at="2014-07-16T07:35:47Z" finished-at="2014-07-16T07:35:47Z">
+        </test-method> <!-- ContentCommenting_TC3977 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.SocialIntegration.FunctionalImplementGigyaShareBar.ContentCommenting@2d724ca6]" name="stopSelenium" is-config="true" duration-ms="575" started-at="2014-07-16T15:54:14Z" finished-at="2014-07-16T15:54:15Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=TestSetup_Test status=SUCCESS method=TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@5289178b] output=Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]]>
+                <![CDATA[[TestResult name=ContentCommenting_TC3977 status=SUCCESS method=ContentCommenting.ContentCommenting_TC3977()[pri:0, instance:com.nbcuni.test.publisher.tests.SocialIntegration.FunctionalImplementGigyaShareBar.ContentCommenting@2d724ca6] output=STEP 1]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@5289178b]" name="stopGridAndHub" is-config="true" duration-ms="426" started-at="2014-07-16T07:35:48Z" finished-at="2014-07-16T07:35:48Z">
+        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.SocialIntegration.FunctionalImplementGigyaShareBar.ContentCommenting@2d724ca6]" name="stopGridAndHub" is-config="true" duration-ms="368" started-at="2014-07-16T15:54:15Z" finished-at="2014-07-16T15:54:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopGridAndHub -->
-      </class> <!-- com.nbcuni.test.publisher.tests.Setup.TestSetup -->
+      </class> <!-- com.nbcuni.test.publisher.tests.SocialIntegration.FunctionalImplementGigyaShareBar.ContentCommenting -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

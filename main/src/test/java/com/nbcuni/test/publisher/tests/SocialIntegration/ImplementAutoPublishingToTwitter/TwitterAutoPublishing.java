@@ -1,10 +1,8 @@
 package com.nbcuni.test.publisher.tests.SocialIntegration.ImplementAutoPublishingToTwitter;
 
 import java.net.URL;
-import java.util.Arrays;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.RerunOnFailure;
@@ -140,25 +138,7 @@ public class TwitterAutoPublishing extends ParentTest{
         //Step 11
         webDriver.navigate().to(new URL("https://twitter.com/"));
         overlay.switchToDefaultContent();
-        for (int I = 0 ; ; I++) {
-        	if (I >= 10) {
-        		Assert.fail("Twitter post has not posted to twitter.");
-        	}
-        	boolean postUpdatePresent = false;
-            
-        	try {
-        		contentParent.VerifyPageContentPresent(Arrays.asList("Publisher Seven", tweet));
-        		postUpdatePresent = true;
-        	}
-        	catch (AssertionError e) {
-        		postUpdatePresent = false;
-        	}
-        	if (postUpdatePresent == true) { break; }
-        	else {
-        		Thread.sleep(1000);
-        		webDriver.navigate().refresh();
-        	}
-        }
+        twitterLogin.VerifyTwitterPostPresent(tweet);
         
     }
 }

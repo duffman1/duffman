@@ -13,20 +13,12 @@ import com.nbcuni.test.publisher.pageobjects.Content.WorkBench;
 
 public class FunctionalImplementGigyaShareBar extends ParentTest{
 	
-    /*************************************************************************************
-     * TEST CASE
-     * Step 1 - Login to P7 using Admin (user 1) credentials ,Login Successful 
-	 * Step 2 - Go to Content -> Add Content-> Add a Content  ,Content is added successfully 
-	 * Step 3 - Go to Configuration-> Webservices -> Gigya Settings  ,Gigya settings overlay appears with global settings view 
-     * Step 4 - Click on 'SHARE' link                                                                              
-     * 		1) Under Providers field fill in all providers name like Tumblr, email, googleplus-interactive,foursquare, twitter-tweet,facebook-like,facebook-send.
-     * 		2) Expand  "Advanced share bar settings" link,Verify that 'Advance showShareBarUI settings' is filled with 'wrap|true'.                                                                                
-     * Step 5 - Go to content and click on the content title created in step number 2.  Verify that the social provider items  set in configuration above in step 4 are seen in Gigya share bar are adjusting to the size of the content container so that they don't break the container when theirs long list of Providers. ,List of providers are seen to be reponsive as expected. 
-     * Step 6 - Log out from P7 ,Logout Successful  
-     * @throws Throwable No Return values are needed
+	/*************************************************************************************
+     * TEST CASE - TC3978
+     * Steps - https://rally1.rallydev.com/#/14663927728d/detail/testcase/20523473657
      *************************************************************************************/
     @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"})
-    public void FunctionalImplementGigyaShareBar_Test() throws Exception{
+    public void FunctionalImplementGigyaShareBar_TC3978() throws Exception{
     	
     	//Step 1
     	UserLogin userLogin = applib.openApplication();
@@ -71,12 +63,6 @@ public class FunctionalImplementGigyaShareBar extends ParentTest{
         gigyaShareBar.VerifyFoursquareBtnPresent();
         gigyaShareBar.VerifyPrintBtnPresent();
         gigyaShareBar.VerifyTwitterBtnPresent();
-        
-        //CLEANUP
-        taxonomy.NavigateSite("Modules");
-        overlay.SwitchToActiveFrame();
-        modules.EnterFilterName("Pub Gigya");
-        modules.DisableModule("Pub Gigya");
         
         //Step 6 - N/A
         
