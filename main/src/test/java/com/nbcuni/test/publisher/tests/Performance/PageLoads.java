@@ -1,20 +1,16 @@
 package com.nbcuni.test.publisher.tests.Performance;
 
-import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 import com.nbcuni.test.publisher.common.ParentTest;
-import com.nbcuni.test.publisher.pageobjects.UserLogin;
 
 public class PageLoads extends ParentTest{
 	
     @Test(groups = {"full", "performance" })
     public void PageLoads_Test() throws Exception{
     	
+    	/*
     	try {
+    		
     		String baseUrl = config.getConfigValue("AppURL");
         	
         	proxyServer.newHar("HomePage");
@@ -56,7 +52,7 @@ public class PageLoads extends ParentTest{
     	catch (Exception | AssertionError e) {
     		
     	}
-    	
+    	*/
     	
     }
 }
