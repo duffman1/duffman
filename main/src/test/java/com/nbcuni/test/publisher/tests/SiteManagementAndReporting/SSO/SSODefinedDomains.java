@@ -3,6 +3,7 @@ package com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO;
 import java.util.Arrays;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 import com.nbcuni.test.publisher.common.ParentTest;
@@ -23,90 +24,118 @@ public class SSODefinedDomains extends ParentTest {
 	 @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"})
 	 public void SSODefinedDomains_TC3474() throws Exception {
 		 
-		Reporter.log("STEP 1");
-		applib.openSitePage("/user");
 		UserLogin userLogin = new UserLogin(webDriver);
-		userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
-	       
-		Reporter.log("STEP 2");
-		Modules modules = new Modules(webDriver, applib);
-		modules.VerifyModuleEnabled("Pub SSO");
-			
-		Reporter.log("STEP 3");
-		taxonomy.NavigateSite("Configuration>>People>>SimpleSAMLphp Auth Settings");
-		overlay.SwitchToActiveFrame();
-			
-		Reporter.log("STEP 4");
+		Logout logout = new Logout(webDriver);
 		SimpleSAML simpleSAML = new SimpleSAML(webDriver);
-		simpleSAML.VerifyDefaultSettings();
-			
-		Reporter.log("STEP 5");
-		simpleSAML.EnterFilePath(config.getPathToMedia() + "stage.crt");
-		simpleSAML.ClickSaveConfigurationBtn();
-		contentParent.VerifyMessageStatus("The configuration options have been saved.");
-		contentParent.VerifyPageContentPresent(Arrays.asList("A certificate exists for this instance of SimpleSAMLphp."));
-			
-	    Reporter.log("STEP 6");
-	    simpleSAML.ClickSaveConfigurationBtn();
-	    contentParent.VerifyMessageStatus("The configuration options have been saved.");
-	        
-	    Reporter.log("STEP 7");
-	    simpleSAML.CheckActivateAuthCbx();
-	    simpleSAML.ClickSaveConfigurationBtn();
-	    contentParent.VerifyMessageStatus("The configuration options have been saved.");
-	    overlay.ClickCloseOverlayLnk();
-	        
-	    Reporter.log("STEP 8");
-	    Logout logout = new Logout(webDriver);
-	    logout.ClickLogoutBtn();
-	    applib.openSitePage("/saml_login");
-	        
-	    Reporter.log("STEP 9");
-	    SSOLogin ssoLogin = new SSOLogin(webDriver);
-	    ssoLogin.EnterSSOID("206424392");
-	    ssoLogin.EnterPassword("tufNewcyd577BC");
-	    ssoLogin.ClickSignInBtn();
-	       
-	    Reporter.log("STEP 10");
-	    webDriver.navigate().refresh();
-	    new WebDriverWait(webDriver, 30).until(ExpectedConditions.titleContains("Site-Install"));
-	    contentParent.VerifyPageContentNotPresent(Arrays.asList("Modules"));
-	        
-	    Reporter.log("STEP 11");
-	    contentParent.VerifyPageContentPresent(Arrays.asList("Brandon.Clark@nbcuni.com"));
-	        
-	    Reporter.log("STEP 12");
-	    logout.ClickLogoutBtn();
-	    applib.openSitePage("/user");
-	    userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
-	    taxonomy.NavigateSite("People");
-	    overlay.SwitchToActiveFrame();
-	    People people = new People(webDriver, applib);
-	    people.SeachForUsername("Brandon.Clark");
-	    people.ClickUsernameLnk("Brandon.Clark");
-	        
-	    Reporter.log("STEP 13");
-	    applib.openSitePage("/admin/config/people/simplesamlphp_auth");
-	    simpleSAML.UnCheckActivateAuthCbx();
-	    simpleSAML.ClickSaveConfigurationBtn();
-	    contentParent.VerifyMessageStatus("The configuration options have been saved.");
-	    contentParent.VerifyMessageStatus("SimpleSAMLphp authentication is NOT yet activated.");
-	        
-	    Reporter.log("STEP 14 - 16 TODO");
-	        
-	    Reporter.log("STEP 17");
-	    taxonomy.NavigateSite("Home");
-	    taxonomy.NavigateSite("Modules");
-	    overlay.SwitchToActiveFrame();
-	    modules.EnterFilterName("Pub SSO");
-	    modules.DisableModule("Pub SSO");
-	    modules.EnterFilterName("simpleSAMLphp authentication");
-	    Thread.sleep(1000);
-	    modules.DisableModule("simpleSAMLphp authentication");
-	    overlay.ClickCloseOverlayLnk();
-	    
-	    Reporter.log("STEP 18");
-	    taxonomy.NavigateSite("Home>>Flush all caches");
+		Modules modules = new Modules(webDriver, applib);
 		
+		try {
+			Reporter.log("STEP 1");
+			applib.openSitePage("/user");
+			userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+	       
+			Reporter.log("STEP 2");
+			modules.VerifyModuleEnabled("Pub SSO");
+			
+			Reporter.log("STEP 3");
+			taxonomy.NavigateSite("Configuration>>People>>SimpleSAMLphp Auth Settings");
+			overlay.SwitchToActiveFrame();
+			
+			Reporter.log("STEP 4");
+			simpleSAML.VerifyDefaultSettings();
+			
+			Reporter.log("STEP 5");
+			simpleSAML.EnterFilePath(config.getPathToMedia() + "stage.crt");
+			simpleSAML.ClickSaveConfigurationBtn();
+			contentParent.VerifyMessageStatus("The configuration options have been saved.");
+			contentParent.VerifyPageContentPresent(Arrays.asList("A certificate exists for this instance of SimpleSAMLphp."));
+			
+			Reporter.log("STEP 6");
+			simpleSAML.ClickSaveConfigurationBtn();
+			contentParent.VerifyMessageStatus("The configuration options have been saved.");
+	        
+			Reporter.log("STEP 7");
+			simpleSAML.CheckActivateAuthCbx();
+			simpleSAML.ClickSaveConfigurationBtn();
+			contentParent.VerifyMessageStatus("The configuration options have been saved.");
+			overlay.ClickCloseOverlayLnk();
+	        
+			Reporter.log("STEP 8");
+			logout.ClickLogoutBtn();
+			applib.openSitePage("/saml_login");
+	        
+			Reporter.log("STEP 9");
+			SSOLogin ssoLogin = new SSOLogin(webDriver);
+			ssoLogin.EnterSSOID("206424392");
+			ssoLogin.EnterPassword("tufNewcyd577BC");
+			ssoLogin.ClickSignInBtn();
+	       
+			Reporter.log("STEP 10");
+			webDriver.navigate().refresh();
+			new WebDriverWait(webDriver, 30).until(ExpectedConditions.titleContains("Site-Install"));
+			contentParent.VerifyPageContentNotPresent(Arrays.asList("Modules"));
+			
+			Reporter.log("STEP 11");
+			contentParent.VerifyPageContentPresent(Arrays.asList("Brandon.Clark@nbcuni.com"));
+	        
+			Reporter.log("STEP 12");
+			logout.ClickLogoutBtn();
+			applib.openSitePage("/user");
+			userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+			taxonomy.NavigateSite("People");
+			overlay.SwitchToActiveFrame();
+			People people = new People(webDriver, applib);
+			people.SeachForUsername("Brandon.Clark");
+			people.ClickUsernameLnk("Brandon.Clark");
+	        
+			Reporter.log("STEP 13");
+			applib.openSitePage("/admin/config/people/simplesamlphp_auth");
+			simpleSAML.UnCheckActivateAuthCbx();
+			simpleSAML.ClickSaveConfigurationBtn();
+			contentParent.VerifyMessageStatus("The configuration options have been saved.");
+			contentParent.VerifyMessageStatus("SimpleSAMLphp authentication is NOT yet activated.");
+	        
+			Reporter.log("STEP 14 - 16 TODO");
+	        
+			Reporter.log("STEP 17");
+			taxonomy.NavigateSite("Home");
+			taxonomy.NavigateSite("Modules");
+			overlay.SwitchToActiveFrame();
+			modules.EnterFilterName("Pub SSO");
+			modules.DisableModule("Pub SSO");
+			modules.EnterFilterName("simpleSAMLphp authentication");
+			Thread.sleep(1000);
+			modules.DisableModule("simpleSAMLphp authentication");
+			overlay.ClickCloseOverlayLnk();
+	    
+			Reporter.log("STEP 18");
+			taxonomy.NavigateSite("Home>>Flush all caches");
+		}
+		catch (Exception | AssertionError e) {
+			
+			try {
+				logout.ClickLogoutBtn();
+			}
+			catch (Exception | AssertionError e2) {}
+			
+			applib.openSitePage("/user");
+			userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+			applib.openSitePage("/admin/config/people/simplesamlphp_auth");
+			simpleSAML.UnCheckActivateAuthCbx();
+			simpleSAML.ClickSaveConfigurationBtn();
+			contentParent.VerifyMessageStatus("The configuration options have been saved.");
+			contentParent.VerifyMessageStatus("SimpleSAMLphp authentication is NOT yet activated.");
+			taxonomy.NavigateSite("Home");
+			taxonomy.NavigateSite("Modules");
+			overlay.SwitchToActiveFrame();
+			modules.EnterFilterName("Pub SSO");
+			modules.DisableModule("Pub SSO");
+			modules.EnterFilterName("simpleSAMLphp authentication");
+			Thread.sleep(1000);
+			modules.DisableModule("simpleSAMLphp authentication");
+			overlay.ClickCloseOverlayLnk();
+	    
+			Assert.fail(e.toString());
+		}
 	}
 }
