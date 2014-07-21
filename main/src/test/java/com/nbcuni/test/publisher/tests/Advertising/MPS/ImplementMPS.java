@@ -176,12 +176,10 @@ public class ImplementMPS extends ParentTest {
             taxonomy.NavigateSite("Structure>>MPS Blocks>>Add");
             overlay.SwitchToActiveFrame();
             MPSBlocks mpsBlocks = new MPSBlocks(webDriver);
-            String uniqueName = random.GetCharacterString(15);
             String blockName = random.GetCharacterString(15);
-            mpsBlocks.EnterUniqueName(uniqueName);
             mpsBlocks.EnterBlockName(blockName);
             mpsBlocks.ClickSaveBtn();
-            contentParent.VerifyMessageStatus(uniqueName + " has been created.");
+            contentParent.VerifyMessageStatus(blockName.toLowerCase() + " has been created.");
             overlay.ClickCloseOverlayLnk();
             
             Reporter.log("STEP 30");
@@ -194,7 +192,7 @@ public class ImplementMPS extends ParentTest {
             overlay.ClickCloseOverlayLnk();
             
             Reporter.log("STEP 31");
-            contentParent.VerifySourceInPage(Arrays.asList("mps.getAd('" + blockName + "')"));
+            contentParent.VerifySourceInPage(Arrays.asList("mps.getAd('" + blockName.toLowerCase() + "')"));
             
             Reporter.log("STEP 32 - N/A");
             

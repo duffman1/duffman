@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/2/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Jul 21 09:44:48 EDT 2014</td>
+<td>Started on:</td><td>Mon Jul 21 14:36:51 EDT 2014</td>
 </tr>
-<tr><td>Total time:</td><td>270 seconds (270210 ms)</td>
+<tr><td>Total time:</td><td>122 seconds (122284 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,353 +67,132 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOManageUsers.SSOManageUsers_TC3853()'><b>SSOManageUsers_TC3853</b><br>Test class: com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOManageUsers<br/>
-<a href="#Output-1821748280" onClick='toggleBox("Output-1821748280", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.nbcuni.test.publisher.tests.Advertising.MPS.AutomaticallyCreatedMPSAdSlots.AutomaticallyCreatedMPSAdSlots_TC4128()'><b>AutomaticallyCreatedMPSAdSlots_TC4128</b><br>Test class: com.nbcuni.test.publisher.tests.Advertising.MPS.AutomaticallyCreatedMPSAdSlots<br/>
+<a href="#Output-1499418634" onClick='toggleBox("Output-1499418634", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1821748280" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1821748280">
-STEP 1<br/>
-Open url 'http://install.qa5.nbcupublisher7.publisher7.com/user'.<br/>
+<a href="#Output-1499418634" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1499418634">
+STEP 1 AND SETUP<br/>
+Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.<br/>
 Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
 Enter 'pa55word' in the 'Password' text box.<br/>
 Click the 'Login' button.<br/>
-STEP 2<br/>
 Click the 'Modules' menu link.<br/>
-Switch to frame titled 'Modules'.<br/>
-Enter 'Pub SSO' in the 'Filter Name' text box.<br/>
-Check the 'Pub SSO' check box.<br/>
+Switch to the active frame titled 'Modules dialog'.<br/>
+Enter 'MPS' in the 'Filter Name' text box.<br/>
+Uncheck the 'MPS' module checkbox.<br/>
+Click the 'Save configuration' button.<br/>
+Verify success message of 'The configuration options have been saved.' is present.<br/>
+Click the 'Close Overlay X'.<br/>
+Scroll by '-500'.<br/>
+Mouse over the 'Modules' menu link.<br/>
+Click the 'Uninstall' menu link.<br/>
+Switch to the active frame titled 'Modules dialog'.<br/>
+Click the 'MPS' uninstall checkbox.<br/>
+Click the 'Uninstall' button.<br/>
+Switch to the active frame titled 'Confirm uninstall dialog'.<br/>
+Verify the text 'The following modules will be completely uninstalled from your site, and all data from these modules will be lost!' is present on the page.<br/>
+Verify the text 'MPS' is present on the page.<br/>
+Click the 'Uninstall' button to confirm.<br/>
+Switch to the active frame titled 'Modules dialog'.<br/>
+Click the 'Close Overlay X'.<br/>
+Scroll by '-500'.<br/>
+Click the 'Modules' menu link.<br/>
+Switch to the active frame titled 'Modules dialog'.<br/>
+Enter 'MPS' in the 'Filter Name' text box.<br/>
+Check the 'MPS' check box.<br/>
 Click the 'Save configuration' button.<br/>
 Switch to frame titled 'Some required modules must be enabled'.<br/>
-Click the 'Continue' button to enable additional modules.<br/>
 Switch back to the 'Modules' frame.<br/>
 Switch to frame titled 'Modules'.<br/>
 Verify success message of 'The configuration options have been saved.' is present.<br/>
 Click the 'Close Overlay X'.<br/>
 Scroll by '-500'.<br/>
+Mouse over the 'Structure' menu link.<br/>
+Mouse over the 'MPS Blocks' menu link.<br/>
+Click the 'Add' menu link.<br/>
+Switch to the active frame titled 'Add a new MPS block dialog'.<br/>
+Enter 'f5fe9e7c546a463' in the 'Block Name' text box.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'f5fe9e7c546a463 has been created.' is present.<br/>
+Click the 'Close Overlay X'.<br/>
+Scroll by '-500'.<br/>
 Mouse over the 'Configuration' menu link.<br/>
-Mouse over the 'People' menu link.<br/>
-Click the 'SimpleSAMLphp Auth Settings' menu link.<br/>
-Switch to the active frame titled 'People dialog'.<br/>
-Verify the 'Activate authentication via SimpleSAMLphp' check box is unchecked.<br/>
-Verify the value of the 'Installation directory' text box equals '/mnt/www/html/nbcupublisher7qa5/simplesamlphp' and the text box is disabled.<br/>
-Verify the value of the 'Authentication source for this SP' text box equals 'pub-qa5install' and the text box is disabled.<br/>
-Verify the ' Force https for login links' check box is checked and disabled.<br/>
-Verify the value of the 'Which attribute from simpleSAMLphp should be used as user's name' text box equals 'email' and the text box is disabled.<br/>
-Verify the value of the 'Which attribute from simpleSAMLphp should be used as unique identifier for the user' text box equals 'uid' and the text box is disabled.<br/>
-Verify the value of the 'Which attribute from simpleSAMLphp should be used as user mail address' text box equals 'email' and the text box is disabled.<br/>
-Enter the file path for certificate upload.<br/>
+Mouse over the 'Web services' menu link.<br/>
+Click the 'MPS Configuration' menu link.<br/>
+Switch to the active frame titled 'MPS Configuration dialog'.<br/>
+Enter 'mps.io' in the 'MPS Host' text box.<br/>
+Click the 'Document Write' radio button.<br/>
+Enter 'pub7-development' in the 'Site Instance Override' text box.<br/>
 Click the 'Save configuration' button.<br/>
 Verify success message of 'The configuration options have been saved.' is present.<br/>
-Verify the text 'A certificate exists for this instance of SimpleSAMLphp.' is present on the page.<br/>
-Click the 'Save configuration' button.<br/>
-Verify success message of 'The configuration options have been saved.' is present.<br/>
-Click the 'Activate authentication via SimpleSAMLphp' check box.<br/>
-Click the 'Save configuration' button.<br/>
-Verify success message of 'The configuration options have been saved.' is present.<br/>
-Click the 'Close Overlay X'.<br/>
-Scroll by '-500'.<br/>
-Click the 'Logout' button.<br/>
-Open url 'http://install.qa5.nbcupublisher7.publisher7.com/saml_login'.<br/>
-Enter '206424392' in the 'SSO ID' text box.<br/>
-Enter 'tufNewcyd577BC' in the 'Password' text box.<br/>
-Click the 'Sign In' button.<br/>
-Verify the text 'Modules' is NOT present on the page.<br/>
-Verify the text 'Brandon.Clark@nbcuni.com' is present on the page.<br/>
-Click the 'Logout' button.<br/>
-Open url 'http://install.qa5.nbcupublisher7.publisher7.com/user'.<br/>
-Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
-Enter 'pa55word' in the 'Password' text box.<br/>
-Click the 'Login' button.<br/>
-Open url 'http://install.qa5.nbcupublisher7.publisher7.com/admin/config/people/simplesamlphp_auth'.<br/>
-Click the 'Activate authentication via SimpleSAMLphp' check box.<br/>
-Click the 'Save configuration' button.<br/>
-Verify success message of 'The configuration options have been saved.' is present.<br/>
-Verify success message of 'SimpleSAMLphp authentication is NOT yet activated.' is present.<br/>
-Click the 'Modules' menu link.<br/>
-Switch to the active frame titled 'Modules dialog'.<br/>
-Enter 'Pub SSO' in the 'Filter Name' text box.<br/>
-Uncheck the 'Pub SSO' module checkbox.<br/>
-Click the 'Save configuration' button.<br/>
-Verify success message of 'The configuration options have been saved.' is present.<br/>
-Enter 'simpleSAMLphp authentication' in the 'Filter Name' text box.<br/>
-Uncheck the 'simpleSAMLphp authentication' module checkbox.<br/>
-Click the 'Save configuration' button.<br/>
-Verify success message of 'The configuration options have been saved.' is present.<br/>
-Click the 'Close Overlay X'.<br/>
-Scroll by '-500'.<br/>
-Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/SSOManageUsers_TC3853_072114094656AM.png <br/>
-<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/SSOManageUsers_TC3853_072114094656AM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/SSOManageUsers_TC3853_072114094656AM.png' height='500' width='500'/> </a><br/>
-Cache was cleared on test failure<br/>
-</div>
-</td>
-<td><div><pre>java.lang.AssertionError: org.openqa.selenium.NoSuchElementException: no such element
-  (Session info: chrome=36.0.1985.125)
-  (Driver info: chromedriver=2.8.241036,platform=Mac OS X 10.9.4 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 20.02 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.4&apos;, java.version: &apos;1.7.0_25&apos;
-Session ID: cb8aec4809e4bbf491b989fb0a301b4a
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.BYXE8z}, rotatable=false, locationContextEnabled=true, version=36.0.1985.125, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
-Command duration or timeout: 20.60 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.4&apos;, java.version: &apos;1.7.0_25&apos;
-Session ID: e5de6be6-b3f0-4561-8c3f-c53e0a4b2072
-Driver info: com.nbcuni.test.publisher.common.Driver.Driver
-Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.BYXE8z}, rotatable=false, locationContextEnabled=true, webdriver.remote.sessionid=e5de6be6-b3f0-4561-8c3f-c53e0a4b2072, version=36.0.1985.125, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
-	at org.testng.Assert.fail(Assert.java:94)
-	at com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOManageUsers.SSOManageUsers_TC3853(SSOManageUsers.java:158)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1821748280", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1821748280'><pre>java.lang.AssertionError: org.openqa.selenium.NoSuchElementException: no such element
-  (Session info: chrome=36.0.1985.125)
-  (Driver info: chromedriver=2.8.241036,platform=Mac OS X 10.9.4 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 20.02 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.4&apos;, java.version: &apos;1.7.0_25&apos;
-Session ID: cb8aec4809e4bbf491b989fb0a301b4a
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.BYXE8z}, rotatable=false, locationContextEnabled=true, version=36.0.1985.125, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
-Command duration or timeout: 20.60 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.4&apos;, java.version: &apos;1.7.0_25&apos;
-Session ID: e5de6be6-b3f0-4561-8c3f-c53e0a4b2072
-Driver info: com.nbcuni.test.publisher.common.Driver.Driver
-Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.BYXE8z}, rotatable=false, locationContextEnabled=true, webdriver.remote.sessionid=e5de6be6-b3f0-4561-8c3f-c53e0a4b2072, version=36.0.1985.125, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
-	at org.testng.Assert.fail(Assert.java:94)
-	at com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOManageUsers.SSOManageUsers_TC3853(SSOManageUsers.java:158)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-</pre></div></td>
-<td>124</td>
-<td>com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOManageUsers@56e746d4</td></tr>
-<tr>
-<td title='com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOManageUsers.SSOManageUsers_TC3853()'><b>SSOManageUsers_TC3853</b><br>Test class: com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOManageUsers<br/>
-<a href="#Output-1391310874" onClick='toggleBox("Output-1391310874", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1391310874" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1391310874">
-STEP 1<br/>
-Open url 'http://install.qa5.nbcupublisher7.publisher7.com/user'.<br/>
-Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
-Enter 'pa55word' in the 'Password' text box.<br/>
-Click the 'Login' button.<br/>
 STEP 2<br/>
-Click the 'Modules' menu link.<br/>
-Switch to frame titled 'Modules'.<br/>
-Enter 'Pub SSO' in the 'Filter Name' text box.<br/>
-Check the 'Pub SSO' check box.<br/>
-Click the 'Save configuration' button.<br/>
-Switch to frame titled 'Some required modules must be enabled'.<br/>
-Click the 'Continue' button to enable additional modules.<br/>
-Switch back to the 'Modules' frame.<br/>
-Switch to frame titled 'Modules'.<br/>
+Click the 'Sync Ad Blocks' button.<br/>
 Verify success message of 'The configuration options have been saved.' is present.<br/>
+Verify the text 'The following new blocks have been created:' is present on the page.<br/>
+Verify the text 'topbox' is present on the page.<br/>
+Verify the text 'topmulti' is present on the page.<br/>
+Verify the text 'bottommulti' is present on the page.<br/>
+Verify the text 'topbanner' is present on the page.<br/>
+STEP 3<br/>
+Verify warning message 'These blocks don't exist in the list of ad blocks retrieved: f5fe9e7c546a463' is present.<br/>
 Click the 'Close Overlay X'.<br/>
 Scroll by '-500'.<br/>
+STEP 4<br/>
+Mouse over the 'Structure' menu link.<br/>
+Click the 'Blocks' menu link.<br/>
+Switch to the active frame titled 'Blocks dialog'.<br/>
+Select the block name 'bottommulti (MPS)' from the '- None -' drop down list.<br/>
+Select the block name 'topbanner (MPS)' from the '- None -' drop down list.<br/>
+Select the block name 'topbox (MPS)' from the '- None -' drop down list.<br/>
+Select the block name 'topmulti (MPS)' from the '- None -' drop down list.<br/>
+Select the block name 'f5fe9e7c546a463 (MPS)' from the '- None -' drop down list.<br/>
+STEP 5<br/>
+Select the block name 'f5fe9e7c546a463 (MPS)' from the 'Header' drop down list.<br/>
+Click the 'Save Blocks' button.<br/>
+Verify success message of 'The block settings have been updated.' is present.<br/>
+Click the 'Close Overlay X'.<br/>
+Scroll by '-500'.<br/>
+STEP 6 - N/A<br/>
+STEP 7<br/>
 Mouse over the 'Configuration' menu link.<br/>
-Mouse over the 'People' menu link.<br/>
-Click the 'SimpleSAMLphp Auth Settings' menu link.<br/>
-Switch to the active frame titled 'People dialog'.<br/>
-Verify the 'Activate authentication via SimpleSAMLphp' check box is unchecked.<br/>
-Verify the value of the 'Installation directory' text box equals '/mnt/www/html/nbcupublisher7qa5/simplesamlphp' and the text box is disabled.<br/>
-Verify the value of the 'Authentication source for this SP' text box equals 'pub-qa5install' and the text box is disabled.<br/>
-Verify the ' Force https for login links' check box is checked and disabled.<br/>
-Verify the value of the 'Which attribute from simpleSAMLphp should be used as user's name' text box equals 'email' and the text box is disabled.<br/>
-Verify the value of the 'Which attribute from simpleSAMLphp should be used as unique identifier for the user' text box equals 'uid' and the text box is disabled.<br/>
-Verify the value of the 'Which attribute from simpleSAMLphp should be used as user mail address' text box equals 'email' and the text box is disabled.<br/>
-Enter the file path for certificate upload.<br/>
+Mouse over the 'Web services' menu link.<br/>
+Click the 'MPS Configuration' menu link.<br/>
+Switch to the active frame titled 'MPS Configuration dialog'.<br/>
+Enter 'mps.io' in the 'MPS Host' text box.<br/>
+Click the 'Document Write' radio button.<br/>
+Enter 'sandbox' in the 'Site Instance Override' text box.<br/>
 Click the 'Save configuration' button.<br/>
 Verify success message of 'The configuration options have been saved.' is present.<br/>
-Verify the text 'A certificate exists for this instance of SimpleSAMLphp.' is present on the page.<br/>
-Click the 'Save configuration' button.<br/>
-Verify success message of 'The configuration options have been saved.' is present.<br/>
-Click the 'Activate authentication via SimpleSAMLphp' check box.<br/>
-Click the 'Save configuration' button.<br/>
-Verify success message of 'The configuration options have been saved.' is present.<br/>
-Click the 'Close Overlay X'.<br/>
-Scroll by '-500'.<br/>
-Click the 'Logout' button.<br/>
-Open url 'http://install.qa5.nbcupublisher7.publisher7.com/saml_login'.<br/>
-Enter '206424392' in the 'SSO ID' text box.<br/>
-Enter 'tufNewcyd577BC' in the 'Password' text box.<br/>
-Click the 'Sign In' button.<br/>
-Verify the text 'Modules' is NOT present on the page.<br/>
-Verify the text 'Brandon.Clark@nbcuni.com' is present on the page.<br/>
-Click the 'Logout' button.<br/>
-Open url 'http://install.qa5.nbcupublisher7.publisher7.com/user'.<br/>
-Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
-Enter 'pa55word' in the 'Password' text box.<br/>
-Click the 'Login' button.<br/>
-Open url 'http://install.qa5.nbcupublisher7.publisher7.com/admin/config/people/simplesamlphp_auth'.<br/>
-Click the 'Activate authentication via SimpleSAMLphp' check box.<br/>
-Click the 'Save configuration' button.<br/>
-Verify success message of 'The configuration options have been saved.' is present.<br/>
-Verify success message of 'SimpleSAMLphp authentication is NOT yet activated.' is present.<br/>
-Click the 'Modules' menu link.<br/>
-Switch to the active frame titled 'Modules dialog'.<br/>
-Enter 'Pub SSO' in the 'Filter Name' text box.<br/>
-Uncheck the 'Pub SSO' module checkbox.<br/>
-Click the 'Save configuration' button.<br/>
-Verify success message of 'The configuration options have been saved.' is present.<br/>
-Enter 'simpleSAMLphp authentication' in the 'Filter Name' text box.<br/>
-Uncheck the 'simpleSAMLphp authentication' module checkbox.<br/>
-Click the 'Save configuration' button.<br/>
-Verify success message of 'The configuration options have been saved.' is present.<br/>
-Click the 'Close Overlay X'.<br/>
-Scroll by '-500'.<br/>
-Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/SSOManageUsers_TC3853_072114094911AM.png <br/>
-<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/SSOManageUsers_TC3853_072114094911AM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/SSOManageUsers_TC3853_072114094911AM.png' height='500' width='500'/> </a><br/>
-Cache was cleared on test failure<br/>
+STEP 8<br/>
+Open mps service page at 'http://mps.io/request/describe/sandbox'.<br/>
+Verify the text '{"instance":{"dart_mode":"gpt-asynchronous","multislot":"0"},"adunits":{"Box Ad First":{"unit":"Box Ad First","slot":"topbox","sizes":["300x250"],"responsive":0},"Box Ad Second":{"unit":"Box Ad Second","slot":"bottombox","sizes":["300x250"],"responsive":0},"Cool Rich 1":{"unit":"Cool Rich 1","slot":"coolrich","responsive":0},"Cool Rich 2":{"unit":"Cool Rich 2","slot":"coolrich","responsive":0},"Flex Ad First":{"unit":"Flex Ad First","slot":"topmulti","sizes":["300x250","160x600","300x600"],"responsive":0},"Flex Ad Second":{"unit":"Flex Ad Second","slot":"bottommulti","sizes":["300x250","160x600","300x600"],"responsive":0},"Logo A":{"unit":"Logo A","slot":"logo","sizes":["88x31","120x90"],"responsive":0},"Top Banner":{"unit":"Top Banner","slot":"topbanner","sizes":["728x90","970x66"],"responsive":0},"Top Banner B":{"unit":"Top Banner B","slot":"topbanner","sizes":["2x2"],"responsive":0}},"components":["id-0516-4520471","monitoring","test.css"]}' is present on the page.<br/>
+STEP 9<br/>
+Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.<br/>
+Mouse over the 'Configuration' menu link.<br/>
+Mouse over the 'Web services' menu link.<br/>
+Click the 'MPS Configuration' menu link.<br/>
+Switch to the active frame titled 'MPS Configuration dialog'.<br/>
+Click the 'Sync Ad Blocks' button.<br/>
+Verify the text 'The following new blocks have been created:' is present on the page.<br/>
+Verify the text 'bottombox' is present on the page.<br/>
+Verify the text 'coolrich' is present on the page.<br/>
+Verify the text 'logo' is present on the page.<br/>
+Verify the text 'topbox' is NOT present on the page.<br/>
+Verify warning message 'These blocks don't exist in the list of ad blocks retrieved: f5fe9e7c546a463' is present.<br/>
 </div>
 </td>
-<td><div><pre>java.lang.AssertionError: org.openqa.selenium.NoSuchElementException: no such element
-  (Session info: chrome=36.0.1985.125)
-  (Driver info: chromedriver=2.8.241036,platform=Mac OS X 10.9.4 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 20.01 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.4&apos;, java.version: &apos;1.7.0_25&apos;
-Session ID: d39e9dba632f787fa3195209a31979af
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.QM6UlE}, rotatable=false, locationContextEnabled=true, version=36.0.1985.125, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
-Command duration or timeout: 20.61 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.4&apos;, java.version: &apos;1.7.0_25&apos;
-Session ID: 71ddc839-0c20-4c89-b292-6a418f943021
-Driver info: com.nbcuni.test.publisher.common.Driver.Driver
-Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.QM6UlE}, rotatable=false, locationContextEnabled=true, webdriver.remote.sessionid=71ddc839-0c20-4c89-b292-6a418f943021, version=36.0.1985.125, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
-	at org.testng.Assert.fail(Assert.java:94)
-	at com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOManageUsers.SSOManageUsers_TC3853(SSOManageUsers.java:158)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.retryFailed(Invoker.java:1049)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1254)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1391310874", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1391310874'><pre>java.lang.AssertionError: org.openqa.selenium.NoSuchElementException: no such element
-  (Session info: chrome=36.0.1985.125)
-  (Driver info: chromedriver=2.8.241036,platform=Mac OS X 10.9.4 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 20.01 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.4&apos;, java.version: &apos;1.7.0_25&apos;
-Session ID: d39e9dba632f787fa3195209a31979af
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.QM6UlE}, rotatable=false, locationContextEnabled=true, version=36.0.1985.125, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
-Command duration or timeout: 20.61 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.4&apos;, java.version: &apos;1.7.0_25&apos;
-Session ID: 71ddc839-0c20-4c89-b292-6a418f943021
-Driver info: com.nbcuni.test.publisher.common.Driver.Driver
-Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.QM6UlE}, rotatable=false, locationContextEnabled=true, webdriver.remote.sessionid=71ddc839-0c20-4c89-b292-6a418f943021, version=36.0.1985.125, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
-	at org.testng.Assert.fail(Assert.java:94)
-	at com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOManageUsers.SSOManageUsers_TC3853(SSOManageUsers.java:158)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.retryFailed(Invoker.java:1049)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1254)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-</pre></div></td>
-<td>122</td>
-<td>com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOManageUsers@56e746d4</td></tr>
+<td></td>
+<td>119</td>
+<td>com.nbcuni.test.publisher.tests.Advertising.MPS.AutomaticallyCreatedMPSAdSlots@2f2f0539</td></tr>
 </table><p>
 </body>
 </html>

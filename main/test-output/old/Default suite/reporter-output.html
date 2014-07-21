@@ -1,147 +1,109 @@
-<h2>Reporter output</h2><table><tr><td>STEP 1</td></tr>
-<tr><td>Open url 'http://install.qa5.nbcupublisher7.publisher7.com/user'.</td></tr>
+<h2>Reporter output</h2><table><tr><td>STEP 1 AND SETUP</td></tr>
+<tr><td>Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.</td></tr>
 <tr><td>Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.</td></tr>
 <tr><td>Enter 'pa55word' in the 'Password' text box.</td></tr>
 <tr><td>Click the 'Login' button.</td></tr>
-<tr><td>STEP 2</td></tr>
 <tr><td>Click the 'Modules' menu link.</td></tr>
-<tr><td>Switch to frame titled 'Modules'.</td></tr>
-<tr><td>Enter 'Pub SSO' in the 'Filter Name' text box.</td></tr>
-<tr><td>Check the 'Pub SSO' check box.</td></tr>
+<tr><td>Switch to the active frame titled 'Modules dialog'.</td></tr>
+<tr><td>Enter 'MPS' in the 'Filter Name' text box.</td></tr>
+<tr><td>Uncheck the 'MPS' module checkbox.</td></tr>
+<tr><td>Click the 'Save configuration' button.</td></tr>
+<tr><td>Verify success message of 'The configuration options have been saved.' is present.</td></tr>
+<tr><td>Click the 'Close Overlay X'.</td></tr>
+<tr><td>Scroll by '-500'.</td></tr>
+<tr><td>Mouse over the 'Modules' menu link.</td></tr>
+<tr><td>Click the 'Uninstall' menu link.</td></tr>
+<tr><td>Switch to the active frame titled 'Modules dialog'.</td></tr>
+<tr><td>Click the 'MPS' uninstall checkbox.</td></tr>
+<tr><td>Click the 'Uninstall' button.</td></tr>
+<tr><td>Switch to the active frame titled 'Confirm uninstall dialog'.</td></tr>
+<tr><td>Verify the text 'The following modules will be completely uninstalled from your site, and all data from these modules will be lost!' is present on the page.</td></tr>
+<tr><td>Verify the text 'MPS' is present on the page.</td></tr>
+<tr><td>Click the 'Uninstall' button to confirm.</td></tr>
+<tr><td>Switch to the active frame titled 'Modules dialog'.</td></tr>
+<tr><td>Click the 'Close Overlay X'.</td></tr>
+<tr><td>Scroll by '-500'.</td></tr>
+<tr><td>Click the 'Modules' menu link.</td></tr>
+<tr><td>Switch to the active frame titled 'Modules dialog'.</td></tr>
+<tr><td>Enter 'MPS' in the 'Filter Name' text box.</td></tr>
+<tr><td>Check the 'MPS' check box.</td></tr>
 <tr><td>Click the 'Save configuration' button.</td></tr>
 <tr><td>Switch to frame titled 'Some required modules must be enabled'.</td></tr>
-<tr><td>Click the 'Continue' button to enable additional modules.</td></tr>
 <tr><td>Switch back to the 'Modules' frame.</td></tr>
 <tr><td>Switch to frame titled 'Modules'.</td></tr>
 <tr><td>Verify success message of 'The configuration options have been saved.' is present.</td></tr>
 <tr><td>Click the 'Close Overlay X'.</td></tr>
 <tr><td>Scroll by '-500'.</td></tr>
+<tr><td>Mouse over the 'Structure' menu link.</td></tr>
+<tr><td>Mouse over the 'MPS Blocks' menu link.</td></tr>
+<tr><td>Click the 'Add' menu link.</td></tr>
+<tr><td>Switch to the active frame titled 'Add a new MPS block dialog'.</td></tr>
+<tr><td>Enter 'f5fe9e7c546a463' in the 'Block Name' text box.</td></tr>
+<tr><td>Click the 'Save' button.</td></tr>
+<tr><td>Verify success message of 'f5fe9e7c546a463 has been created.' is present.</td></tr>
+<tr><td>Click the 'Close Overlay X'.</td></tr>
+<tr><td>Scroll by '-500'.</td></tr>
 <tr><td>Mouse over the 'Configuration' menu link.</td></tr>
-<tr><td>Mouse over the 'People' menu link.</td></tr>
-<tr><td>Click the 'SimpleSAMLphp Auth Settings' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'People dialog'.</td></tr>
-<tr><td>Verify the 'Activate authentication via SimpleSAMLphp' check box is unchecked.</td></tr>
-<tr><td>Verify the value of the 'Installation directory' text box equals '/mnt/www/html/nbcupublisher7qa5/simplesamlphp' and the text box is disabled.</td></tr>
-<tr><td>Verify the value of the 'Authentication source for this SP' text box equals 'pub-qa5install' and the text box is disabled.</td></tr>
-<tr><td>Verify the ' Force https for login links' check box is checked and disabled.</td></tr>
-<tr><td>Verify the value of the 'Which attribute from simpleSAMLphp should be used as user's name' text box equals 'email' and the text box is disabled.</td></tr>
-<tr><td>Verify the value of the 'Which attribute from simpleSAMLphp should be used as unique identifier for the user' text box equals 'uid' and the text box is disabled.</td></tr>
-<tr><td>Verify the value of the 'Which attribute from simpleSAMLphp should be used as user mail address' text box equals 'email' and the text box is disabled.</td></tr>
-<tr><td>Enter the file path for certificate upload.</td></tr>
+<tr><td>Mouse over the 'Web services' menu link.</td></tr>
+<tr><td>Click the 'MPS Configuration' menu link.</td></tr>
+<tr><td>Switch to the active frame titled 'MPS Configuration dialog'.</td></tr>
+<tr><td>Enter 'mps.io' in the 'MPS Host' text box.</td></tr>
+<tr><td>Click the 'Document Write' radio button.</td></tr>
+<tr><td>Enter 'pub7-development' in the 'Site Instance Override' text box.</td></tr>
 <tr><td>Click the 'Save configuration' button.</td></tr>
 <tr><td>Verify success message of 'The configuration options have been saved.' is present.</td></tr>
-<tr><td>Verify the text 'A certificate exists for this instance of SimpleSAMLphp.' is present on the page.</td></tr>
-<tr><td>Click the 'Save configuration' button.</td></tr>
-<tr><td>Verify success message of 'The configuration options have been saved.' is present.</td></tr>
-<tr><td>Click the 'Activate authentication via SimpleSAMLphp' check box.</td></tr>
-<tr><td>Click the 'Save configuration' button.</td></tr>
-<tr><td>Verify success message of 'The configuration options have been saved.' is present.</td></tr>
-<tr><td>Click the 'Close Overlay X'.</td></tr>
-<tr><td>Scroll by '-500'.</td></tr>
-<tr><td>Click the 'Logout' button.</td></tr>
-<tr><td>Open url 'http://install.qa5.nbcupublisher7.publisher7.com/saml_login'.</td></tr>
-<tr><td>Enter '206424392' in the 'SSO ID' text box.</td></tr>
-<tr><td>Enter 'tufNewcyd577BC' in the 'Password' text box.</td></tr>
-<tr><td>Click the 'Sign In' button.</td></tr>
-<tr><td>Verify the text 'Modules' is NOT present on the page.</td></tr>
-<tr><td>Verify the text 'Brandon.Clark@nbcuni.com' is present on the page.</td></tr>
-<tr><td>Click the 'Logout' button.</td></tr>
-<tr><td>Open url 'http://install.qa5.nbcupublisher7.publisher7.com/user'.</td></tr>
-<tr><td>Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.</td></tr>
-<tr><td>Enter 'pa55word' in the 'Password' text box.</td></tr>
-<tr><td>Click the 'Login' button.</td></tr>
-<tr><td>Open url 'http://install.qa5.nbcupublisher7.publisher7.com/admin/config/people/simplesamlphp_auth'.</td></tr>
-<tr><td>Click the 'Activate authentication via SimpleSAMLphp' check box.</td></tr>
-<tr><td>Click the 'Save configuration' button.</td></tr>
-<tr><td>Verify success message of 'The configuration options have been saved.' is present.</td></tr>
-<tr><td>Verify success message of 'SimpleSAMLphp authentication is NOT yet activated.' is present.</td></tr>
-<tr><td>Click the 'Modules' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'Modules dialog'.</td></tr>
-<tr><td>Enter 'Pub SSO' in the 'Filter Name' text box.</td></tr>
-<tr><td>Uncheck the 'Pub SSO' module checkbox.</td></tr>
-<tr><td>Click the 'Save configuration' button.</td></tr>
-<tr><td>Verify success message of 'The configuration options have been saved.' is present.</td></tr>
-<tr><td>Enter 'simpleSAMLphp authentication' in the 'Filter Name' text box.</td></tr>
-<tr><td>Uncheck the 'simpleSAMLphp authentication' module checkbox.</td></tr>
-<tr><td>Click the 'Save configuration' button.</td></tr>
-<tr><td>Verify success message of 'The configuration options have been saved.' is present.</td></tr>
-<tr><td>Click the 'Close Overlay X'.</td></tr>
-<tr><td>Scroll by '-500'.</td></tr>
-<tr><td>Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/SSOManageUsers_TC3853_072114094656AM.png </td></tr>
-<tr><td><br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/SSOManageUsers_TC3853_072114094656AM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/SSOManageUsers_TC3853_072114094656AM.png' height='500' width='500'/> </a></td></tr>
-<tr><td>Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.</td></tr>
-<tr><td>Cache was cleared on test failure</td></tr>
-<tr><td>STEP 1</td></tr>
-<tr><td>Open url 'http://install.qa5.nbcupublisher7.publisher7.com/user'.</td></tr>
-<tr><td>Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.</td></tr>
-<tr><td>Enter 'pa55word' in the 'Password' text box.</td></tr>
-<tr><td>Click the 'Login' button.</td></tr>
 <tr><td>STEP 2</td></tr>
-<tr><td>Click the 'Modules' menu link.</td></tr>
-<tr><td>Switch to frame titled 'Modules'.</td></tr>
-<tr><td>Enter 'Pub SSO' in the 'Filter Name' text box.</td></tr>
-<tr><td>Check the 'Pub SSO' check box.</td></tr>
-<tr><td>Click the 'Save configuration' button.</td></tr>
-<tr><td>Switch to frame titled 'Some required modules must be enabled'.</td></tr>
-<tr><td>Click the 'Continue' button to enable additional modules.</td></tr>
-<tr><td>Switch back to the 'Modules' frame.</td></tr>
-<tr><td>Switch to frame titled 'Modules'.</td></tr>
+<tr><td>Click the 'Sync Ad Blocks' button.</td></tr>
 <tr><td>Verify success message of 'The configuration options have been saved.' is present.</td></tr>
+<tr><td>Verify the text 'The following new blocks have been created:' is present on the page.</td></tr>
+<tr><td>Verify the text 'topbox' is present on the page.</td></tr>
+<tr><td>Verify the text 'topmulti' is present on the page.</td></tr>
+<tr><td>Verify the text 'bottommulti' is present on the page.</td></tr>
+<tr><td>Verify the text 'topbanner' is present on the page.</td></tr>
+<tr><td>STEP 3</td></tr>
+<tr><td>Verify warning message 'These blocks don't exist in the list of ad blocks retrieved: f5fe9e7c546a463' is present.</td></tr>
 <tr><td>Click the 'Close Overlay X'.</td></tr>
 <tr><td>Scroll by '-500'.</td></tr>
+<tr><td>STEP 4</td></tr>
+<tr><td>Mouse over the 'Structure' menu link.</td></tr>
+<tr><td>Click the 'Blocks' menu link.</td></tr>
+<tr><td>Switch to the active frame titled 'Blocks dialog'.</td></tr>
+<tr><td>Select the block name 'bottommulti (MPS)' from the '- None -' drop down list.</td></tr>
+<tr><td>Select the block name 'topbanner (MPS)' from the '- None -' drop down list.</td></tr>
+<tr><td>Select the block name 'topbox (MPS)' from the '- None -' drop down list.</td></tr>
+<tr><td>Select the block name 'topmulti (MPS)' from the '- None -' drop down list.</td></tr>
+<tr><td>Select the block name 'f5fe9e7c546a463 (MPS)' from the '- None -' drop down list.</td></tr>
+<tr><td>STEP 5</td></tr>
+<tr><td>Select the block name 'f5fe9e7c546a463 (MPS)' from the 'Header' drop down list.</td></tr>
+<tr><td>Click the 'Save Blocks' button.</td></tr>
+<tr><td>Verify success message of 'The block settings have been updated.' is present.</td></tr>
+<tr><td>Click the 'Close Overlay X'.</td></tr>
+<tr><td>Scroll by '-500'.</td></tr>
+<tr><td>STEP 6 - N/A</td></tr>
+<tr><td>STEP 7</td></tr>
 <tr><td>Mouse over the 'Configuration' menu link.</td></tr>
-<tr><td>Mouse over the 'People' menu link.</td></tr>
-<tr><td>Click the 'SimpleSAMLphp Auth Settings' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'People dialog'.</td></tr>
-<tr><td>Verify the 'Activate authentication via SimpleSAMLphp' check box is unchecked.</td></tr>
-<tr><td>Verify the value of the 'Installation directory' text box equals '/mnt/www/html/nbcupublisher7qa5/simplesamlphp' and the text box is disabled.</td></tr>
-<tr><td>Verify the value of the 'Authentication source for this SP' text box equals 'pub-qa5install' and the text box is disabled.</td></tr>
-<tr><td>Verify the ' Force https for login links' check box is checked and disabled.</td></tr>
-<tr><td>Verify the value of the 'Which attribute from simpleSAMLphp should be used as user's name' text box equals 'email' and the text box is disabled.</td></tr>
-<tr><td>Verify the value of the 'Which attribute from simpleSAMLphp should be used as unique identifier for the user' text box equals 'uid' and the text box is disabled.</td></tr>
-<tr><td>Verify the value of the 'Which attribute from simpleSAMLphp should be used as user mail address' text box equals 'email' and the text box is disabled.</td></tr>
-<tr><td>Enter the file path for certificate upload.</td></tr>
+<tr><td>Mouse over the 'Web services' menu link.</td></tr>
+<tr><td>Click the 'MPS Configuration' menu link.</td></tr>
+<tr><td>Switch to the active frame titled 'MPS Configuration dialog'.</td></tr>
+<tr><td>Enter 'mps.io' in the 'MPS Host' text box.</td></tr>
+<tr><td>Click the 'Document Write' radio button.</td></tr>
+<tr><td>Enter 'sandbox' in the 'Site Instance Override' text box.</td></tr>
 <tr><td>Click the 'Save configuration' button.</td></tr>
 <tr><td>Verify success message of 'The configuration options have been saved.' is present.</td></tr>
-<tr><td>Verify the text 'A certificate exists for this instance of SimpleSAMLphp.' is present on the page.</td></tr>
-<tr><td>Click the 'Save configuration' button.</td></tr>
-<tr><td>Verify success message of 'The configuration options have been saved.' is present.</td></tr>
-<tr><td>Click the 'Activate authentication via SimpleSAMLphp' check box.</td></tr>
-<tr><td>Click the 'Save configuration' button.</td></tr>
-<tr><td>Verify success message of 'The configuration options have been saved.' is present.</td></tr>
-<tr><td>Click the 'Close Overlay X'.</td></tr>
-<tr><td>Scroll by '-500'.</td></tr>
-<tr><td>Click the 'Logout' button.</td></tr>
-<tr><td>Open url 'http://install.qa5.nbcupublisher7.publisher7.com/saml_login'.</td></tr>
-<tr><td>Enter '206424392' in the 'SSO ID' text box.</td></tr>
-<tr><td>Enter 'tufNewcyd577BC' in the 'Password' text box.</td></tr>
-<tr><td>Click the 'Sign In' button.</td></tr>
-<tr><td>Verify the text 'Modules' is NOT present on the page.</td></tr>
-<tr><td>Verify the text 'Brandon.Clark@nbcuni.com' is present on the page.</td></tr>
-<tr><td>Click the 'Logout' button.</td></tr>
-<tr><td>Open url 'http://install.qa5.nbcupublisher7.publisher7.com/user'.</td></tr>
-<tr><td>Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.</td></tr>
-<tr><td>Enter 'pa55word' in the 'Password' text box.</td></tr>
-<tr><td>Click the 'Login' button.</td></tr>
-<tr><td>Open url 'http://install.qa5.nbcupublisher7.publisher7.com/admin/config/people/simplesamlphp_auth'.</td></tr>
-<tr><td>Click the 'Activate authentication via SimpleSAMLphp' check box.</td></tr>
-<tr><td>Click the 'Save configuration' button.</td></tr>
-<tr><td>Verify success message of 'The configuration options have been saved.' is present.</td></tr>
-<tr><td>Verify success message of 'SimpleSAMLphp authentication is NOT yet activated.' is present.</td></tr>
-<tr><td>Click the 'Modules' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'Modules dialog'.</td></tr>
-<tr><td>Enter 'Pub SSO' in the 'Filter Name' text box.</td></tr>
-<tr><td>Uncheck the 'Pub SSO' module checkbox.</td></tr>
-<tr><td>Click the 'Save configuration' button.</td></tr>
-<tr><td>Verify success message of 'The configuration options have been saved.' is present.</td></tr>
-<tr><td>Enter 'simpleSAMLphp authentication' in the 'Filter Name' text box.</td></tr>
-<tr><td>Uncheck the 'simpleSAMLphp authentication' module checkbox.</td></tr>
-<tr><td>Click the 'Save configuration' button.</td></tr>
-<tr><td>Verify success message of 'The configuration options have been saved.' is present.</td></tr>
-<tr><td>Click the 'Close Overlay X'.</td></tr>
-<tr><td>Scroll by '-500'.</td></tr>
-<tr><td>Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/SSOManageUsers_TC3853_072114094911AM.png </td></tr>
-<tr><td><br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/SSOManageUsers_TC3853_072114094911AM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/SSOManageUsers_TC3853_072114094911AM.png' height='500' width='500'/> </a></td></tr>
+<tr><td>STEP 8</td></tr>
+<tr><td>Open mps service page at 'http://mps.io/request/describe/sandbox'.</td></tr>
+<tr><td>Verify the text '{"instance":{"dart_mode":"gpt-asynchronous","multislot":"0"},"adunits":{"Box Ad First":{"unit":"Box Ad First","slot":"topbox","sizes":["300x250"],"responsive":0},"Box Ad Second":{"unit":"Box Ad Second","slot":"bottombox","sizes":["300x250"],"responsive":0},"Cool Rich 1":{"unit":"Cool Rich 1","slot":"coolrich","responsive":0},"Cool Rich 2":{"unit":"Cool Rich 2","slot":"coolrich","responsive":0},"Flex Ad First":{"unit":"Flex Ad First","slot":"topmulti","sizes":["300x250","160x600","300x600"],"responsive":0},"Flex Ad Second":{"unit":"Flex Ad Second","slot":"bottommulti","sizes":["300x250","160x600","300x600"],"responsive":0},"Logo A":{"unit":"Logo A","slot":"logo","sizes":["88x31","120x90"],"responsive":0},"Top Banner":{"unit":"Top Banner","slot":"topbanner","sizes":["728x90","970x66"],"responsive":0},"Top Banner B":{"unit":"Top Banner B","slot":"topbanner","sizes":["2x2"],"responsive":0}},"components":["id-0516-4520471","monitoring","test.css"]}' is present on the page.</td></tr>
+<tr><td>STEP 9</td></tr>
 <tr><td>Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.</td></tr>
-<tr><td>Cache was cleared on test failure</td></tr>
+<tr><td>Mouse over the 'Configuration' menu link.</td></tr>
+<tr><td>Mouse over the 'Web services' menu link.</td></tr>
+<tr><td>Click the 'MPS Configuration' menu link.</td></tr>
+<tr><td>Switch to the active frame titled 'MPS Configuration dialog'.</td></tr>
+<tr><td>Click the 'Sync Ad Blocks' button.</td></tr>
+<tr><td>Verify the text 'The following new blocks have been created:' is present on the page.</td></tr>
+<tr><td>Verify the text 'bottombox' is present on the page.</td></tr>
+<tr><td>Verify the text 'coolrich' is present on the page.</td></tr>
+<tr><td>Verify the text 'logo' is present on the page.</td></tr>
+<tr><td>Verify the text 'topbox' is NOT present on the page.</td></tr>
+<tr><td>Verify warning message 'These blocks don't exist in the list of ad blocks retrieved: f5fe9e7c546a463' is present.</td></tr>
 </table>

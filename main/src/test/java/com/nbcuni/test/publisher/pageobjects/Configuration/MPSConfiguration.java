@@ -71,6 +71,12 @@ public class MPSConfiguration {
     @FindBy(how = How.XPATH, using ="//a[text()='[mps:cat-pattern:?]']")
     private WebElement MPSCatProperty_Lnk;
     
+    @FindBy(how = How.XPATH, using ="//input[@value='Sync Ad Blocks']")
+    private WebElement SyncAdBlocks_Btn;
+    
+    @FindBy(how = How.XPATH, using ="//div[@class='throbber']")
+    private WebElement Spinner_Img;
+    
     @FindBy(how = How.ID, using ="edit-submit")
     private WebElement SaveConfiguration_Btn;
     
@@ -183,6 +189,13 @@ public class MPSConfiguration {
     	Reporter.log("Enter '" + pattern + "' in the 'Pattern for Category Field' text box.");
     	PatternForCategoryField_Txb.clear();
     	PatternForCategoryField_Txb.sendKeys(pattern);
+    }
+
+    public void ClickSyncAdBlocksBtn() throws Exception { 
+    	
+    	Reporter.log("Click the 'Sync Ad Blocks' button.");
+    	SyncAdBlocks_Btn.click();
+    	Thread.sleep(2000); //TODO - add dynamic wait for the spinny to not be present
     }
 
     public void ClickSaveConfigurationBtn() throws Exception { 

@@ -22,9 +22,6 @@ public class MPSBlocks {
     }
     
     //PAGE OBJECT IDENTIFIERS
-    @FindBy(how = How.ID, using = "edit-machine-name")
-    private WebElement UniqueName_Txb;
-    
     @FindBy(how = How.ID, using = "edit-block-name")
     private WebElement BlockName_Txb;
     
@@ -33,12 +30,6 @@ public class MPSBlocks {
     
     
     //PAGE OBJECT METHODS
-    public void EnterUniqueName(String uniqueName) throws Exception {
-    	
-    	Reporter.log("Enter '" + uniqueName + "' in the 'Unique Name' text box.");
-    	UniqueName_Txb.sendKeys(uniqueName);
-    }
-    
     public void EnterBlockName(String blockName) throws Exception {
     	
     	Reporter.log("Enter '" + blockName + "' in the 'Block Name' text box.");

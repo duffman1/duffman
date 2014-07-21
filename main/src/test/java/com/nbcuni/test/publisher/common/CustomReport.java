@@ -182,6 +182,7 @@ public class CustomReport extends EmailableReporter {
   	  	}
   	  	catch (Exception e) {
   	  		System.out.println("Failed to create report zip file and attach reports/screenshots.");
+  	  		e.printStackTrace();
   	  	}
   	    
   	  	//upload zip report file to rally
