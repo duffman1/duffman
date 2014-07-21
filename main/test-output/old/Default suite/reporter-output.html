@@ -1,109 +1,70 @@
-<h2>Reporter output</h2><table><tr><td>STEP 1 AND SETUP</td></tr>
-<tr><td>Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.</td></tr>
+<h2>Reporter output</h2><table><tr><td>Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.</td></tr>
 <tr><td>Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.</td></tr>
 <tr><td>Enter 'pa55word' in the 'Password' text box.</td></tr>
 <tr><td>Click the 'Login' button.</td></tr>
-<tr><td>Click the 'Modules' menu link.</td></tr>
+<tr><td>Open url 'http://install.qa5.nbcupublisher7.publisher7.com/admin/modules'.</td></tr>
+<tr><td>Open url 'http://install.qa5.nbcupublisher7.publisher7.com/#overlay=admin/modules'.</td></tr>
 <tr><td>Switch to the active frame titled 'Modules dialog'.</td></tr>
-<tr><td>Enter 'MPS' in the 'Filter Name' text box.</td></tr>
-<tr><td>Uncheck the 'MPS' module checkbox.</td></tr>
+<tr><td>Enter 'Sticky Edit Actions' in the 'Filter Name' text box.</td></tr>
+<tr><td>Uncheck the 'Sticky Edit Actions' module checkbox.</td></tr>
 <tr><td>Click the 'Save configuration' button.</td></tr>
 <tr><td>Verify success message of 'The configuration options have been saved.' is present.</td></tr>
-<tr><td>Click the 'Close Overlay X'.</td></tr>
-<tr><td>Scroll by '-500'.</td></tr>
-<tr><td>Mouse over the 'Modules' menu link.</td></tr>
-<tr><td>Click the 'Uninstall' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'Modules dialog'.</td></tr>
-<tr><td>Click the 'MPS' uninstall checkbox.</td></tr>
-<tr><td>Click the 'Uninstall' button.</td></tr>
-<tr><td>Switch to the active frame titled 'Confirm uninstall dialog'.</td></tr>
-<tr><td>Verify the text 'The following modules will be completely uninstalled from your site, and all data from these modules will be lost!' is present on the page.</td></tr>
-<tr><td>Verify the text 'MPS' is present on the page.</td></tr>
-<tr><td>Click the 'Uninstall' button to confirm.</td></tr>
-<tr><td>Switch to the active frame titled 'Modules dialog'.</td></tr>
-<tr><td>Click the 'Close Overlay X'.</td></tr>
-<tr><td>Scroll by '-500'.</td></tr>
-<tr><td>Click the 'Modules' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'Modules dialog'.</td></tr>
-<tr><td>Enter 'MPS' in the 'Filter Name' text box.</td></tr>
-<tr><td>Check the 'MPS' check box.</td></tr>
+<tr><td>Enter 'Devel' in the 'Filter Name' text box.</td></tr>
+<tr><td>Enter 'ImageField Focus' in the 'Filter Name' text box.</td></tr>
+<tr><td>Enter 'Database logging' in the 'Filter Name' text box.</td></tr>
+<tr><td>Enter 'Pub Post' in the 'Filter Name' text box.</td></tr>
+<tr><td>Check the 'Pub Post' check box.</td></tr>
 <tr><td>Click the 'Save configuration' button.</td></tr>
 <tr><td>Switch to frame titled 'Some required modules must be enabled'.</td></tr>
+<tr><td>Click the 'Continue' button to enable additional modules.</td></tr>
 <tr><td>Switch back to the 'Modules' frame.</td></tr>
 <tr><td>Switch to frame titled 'Modules'.</td></tr>
 <tr><td>Verify success message of 'The configuration options have been saved.' is present.</td></tr>
 <tr><td>Click the 'Close Overlay X'.</td></tr>
 <tr><td>Scroll by '-500'.</td></tr>
-<tr><td>Mouse over the 'Structure' menu link.</td></tr>
-<tr><td>Mouse over the 'MPS Blocks' menu link.</td></tr>
-<tr><td>Click the 'Add' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'Add a new MPS block dialog'.</td></tr>
-<tr><td>Enter 'f5fe9e7c546a463' in the 'Block Name' text box.</td></tr>
+<tr><td>Mouse over the 'Content' menu link.</td></tr>
+<tr><td>Mouse over the 'Add content' menu link.</td></tr>
+<tr><td>Click the 'Post' menu link.</td></tr>
+<tr><td>Switch to the active frame titled 'Create Post dialog'.</td></tr>
+<tr><td>Verify the 'Title' is present as a required field.</td></tr>
+<tr><td>Verify the 'Body' is present as a required field.</td></tr>
+<tr><td>Scroll the 'Publishing Options' link into view.</td></tr>
+<tr><td>Click the 'Publishing Options' link.</td></tr>
+<tr><td>Verify the 'Moderation State' is present as a required field.</td></tr>
+<tr><td>Scroll to and click the 'Basic Information' tab.</td></tr>
+<tr><td>Enter 'futurePost07/21/2014f428512d07554b4' in the 'Title' text box.</td></tr>
+<tr><td>Switch to the Synopsis frame.</td></tr>
+<tr><td>Enter a randomized text string into the 'Body' text area.</td></tr>
+<tr><td>Switch to the active frame titled 'Create Post dialog'.</td></tr>
+<tr><td>Click the 'Cover' select button.</td></tr>
+<tr><td>Switch to the select file frame.</td></tr>
+<tr><td>Enter the file path for file upload.</td></tr>
+<tr><td>Click the 'Upload' button.</td></tr>
+<tr><td>Wait for the file link to be visible after upload.</td></tr>
+<tr><td>Click the 'Next' button.</td></tr>
+<tr><td>Click the 'Public Local Files' radio button.</td></tr>
+<tr><td>Click the 'Next' button.</td></tr>
+<tr><td>Verify the file image 'HanSolo' is present.</td></tr>
+<tr><td>Verify the img is loaded and visible.</td></tr>
 <tr><td>Click the 'Save' button.</td></tr>
-<tr><td>Verify success message of 'f5fe9e7c546a463 has been created.' is present.</td></tr>
+<tr><td>Switch to the active frame titled 'Create Post dialog'.</td></tr>
+<tr><td>Scroll the 'Publishing Options' link into view.</td></tr>
+<tr><td>Click the 'Publishing Options' link.</td></tr>
+<tr><td>Select 'Draft' from the 'Moderation State' drop down list.</td></tr>
+<tr><td>Click the 'Save' button.</td></tr>
+<tr><td>Verify success message of 'Post futurePost07/21/2014f428512d07554b4 has been created.' is present.</td></tr>
+<tr><td>Click the 'Schedule' link in the work bench.</td></tr>
+<tr><td>Switch to the active frame titled 'futurePost07/21/2014f428512d07554b4 dialog'.</td></tr>
+<tr><td>Click the 'Add Scheduled Revision' link.</td></tr>
+<tr><td>Switch to the active frame titled 'futurePost07/21/2014f428512d07554b4 dialog'.</td></tr>
+<tr><td>Select revision titled 'futurePost07/21/2014f428512d07554b4'.</td></tr>
+<tr><td>Verify that the 'Operation' option count equals '5'.</td></tr>
+<tr><td>Select 'Moderate to Published' from the 'Select operation' drop down list.</td></tr>
+<tr><td>Enter '07/21/2014' in the 'Date' text box.</td></tr>
+<tr><td>Enter '09:15 PM' in the 'Time' text box.</td></tr>
+<tr><td>Click the 'Schedule' button.</td></tr>
+<tr><td>Switch to the active frame titled 'futurePost07/21/2014f428512d07554b4 dialog'.</td></tr>
+<tr><td>Verify success message of 'The scheduled revision operation has been saved' is present.</td></tr>
 <tr><td>Click the 'Close Overlay X'.</td></tr>
 <tr><td>Scroll by '-500'.</td></tr>
-<tr><td>Mouse over the 'Configuration' menu link.</td></tr>
-<tr><td>Mouse over the 'Web services' menu link.</td></tr>
-<tr><td>Click the 'MPS Configuration' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'MPS Configuration dialog'.</td></tr>
-<tr><td>Enter 'mps.io' in the 'MPS Host' text box.</td></tr>
-<tr><td>Click the 'Document Write' radio button.</td></tr>
-<tr><td>Enter 'pub7-development' in the 'Site Instance Override' text box.</td></tr>
-<tr><td>Click the 'Save configuration' button.</td></tr>
-<tr><td>Verify success message of 'The configuration options have been saved.' is present.</td></tr>
-<tr><td>STEP 2</td></tr>
-<tr><td>Click the 'Sync Ad Blocks' button.</td></tr>
-<tr><td>Verify success message of 'The configuration options have been saved.' is present.</td></tr>
-<tr><td>Verify the text 'The following new blocks have been created:' is present on the page.</td></tr>
-<tr><td>Verify the text 'topbox' is present on the page.</td></tr>
-<tr><td>Verify the text 'topmulti' is present on the page.</td></tr>
-<tr><td>Verify the text 'bottommulti' is present on the page.</td></tr>
-<tr><td>Verify the text 'topbanner' is present on the page.</td></tr>
-<tr><td>STEP 3</td></tr>
-<tr><td>Verify warning message 'These blocks don't exist in the list of ad blocks retrieved: f5fe9e7c546a463' is present.</td></tr>
-<tr><td>Click the 'Close Overlay X'.</td></tr>
-<tr><td>Scroll by '-500'.</td></tr>
-<tr><td>STEP 4</td></tr>
-<tr><td>Mouse over the 'Structure' menu link.</td></tr>
-<tr><td>Click the 'Blocks' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'Blocks dialog'.</td></tr>
-<tr><td>Select the block name 'bottommulti (MPS)' from the '- None -' drop down list.</td></tr>
-<tr><td>Select the block name 'topbanner (MPS)' from the '- None -' drop down list.</td></tr>
-<tr><td>Select the block name 'topbox (MPS)' from the '- None -' drop down list.</td></tr>
-<tr><td>Select the block name 'topmulti (MPS)' from the '- None -' drop down list.</td></tr>
-<tr><td>Select the block name 'f5fe9e7c546a463 (MPS)' from the '- None -' drop down list.</td></tr>
-<tr><td>STEP 5</td></tr>
-<tr><td>Select the block name 'f5fe9e7c546a463 (MPS)' from the 'Header' drop down list.</td></tr>
-<tr><td>Click the 'Save Blocks' button.</td></tr>
-<tr><td>Verify success message of 'The block settings have been updated.' is present.</td></tr>
-<tr><td>Click the 'Close Overlay X'.</td></tr>
-<tr><td>Scroll by '-500'.</td></tr>
-<tr><td>STEP 6 - N/A</td></tr>
-<tr><td>STEP 7</td></tr>
-<tr><td>Mouse over the 'Configuration' menu link.</td></tr>
-<tr><td>Mouse over the 'Web services' menu link.</td></tr>
-<tr><td>Click the 'MPS Configuration' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'MPS Configuration dialog'.</td></tr>
-<tr><td>Enter 'mps.io' in the 'MPS Host' text box.</td></tr>
-<tr><td>Click the 'Document Write' radio button.</td></tr>
-<tr><td>Enter 'sandbox' in the 'Site Instance Override' text box.</td></tr>
-<tr><td>Click the 'Save configuration' button.</td></tr>
-<tr><td>Verify success message of 'The configuration options have been saved.' is present.</td></tr>
-<tr><td>STEP 8</td></tr>
-<tr><td>Open mps service page at 'http://mps.io/request/describe/sandbox'.</td></tr>
-<tr><td>Verify the text '{"instance":{"dart_mode":"gpt-asynchronous","multislot":"0"},"adunits":{"Box Ad First":{"unit":"Box Ad First","slot":"topbox","sizes":["300x250"],"responsive":0},"Box Ad Second":{"unit":"Box Ad Second","slot":"bottombox","sizes":["300x250"],"responsive":0},"Cool Rich 1":{"unit":"Cool Rich 1","slot":"coolrich","responsive":0},"Cool Rich 2":{"unit":"Cool Rich 2","slot":"coolrich","responsive":0},"Flex Ad First":{"unit":"Flex Ad First","slot":"topmulti","sizes":["300x250","160x600","300x600"],"responsive":0},"Flex Ad Second":{"unit":"Flex Ad Second","slot":"bottommulti","sizes":["300x250","160x600","300x600"],"responsive":0},"Logo A":{"unit":"Logo A","slot":"logo","sizes":["88x31","120x90"],"responsive":0},"Top Banner":{"unit":"Top Banner","slot":"topbanner","sizes":["728x90","970x66"],"responsive":0},"Top Banner B":{"unit":"Top Banner B","slot":"topbanner","sizes":["2x2"],"responsive":0}},"components":["id-0516-4520471","monitoring","test.css"]}' is present on the page.</td></tr>
-<tr><td>STEP 9</td></tr>
-<tr><td>Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.</td></tr>
-<tr><td>Mouse over the 'Configuration' menu link.</td></tr>
-<tr><td>Mouse over the 'Web services' menu link.</td></tr>
-<tr><td>Click the 'MPS Configuration' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'MPS Configuration dialog'.</td></tr>
-<tr><td>Click the 'Sync Ad Blocks' button.</td></tr>
-<tr><td>Verify the text 'The following new blocks have been created:' is present on the page.</td></tr>
-<tr><td>Verify the text 'bottombox' is present on the page.</td></tr>
-<tr><td>Verify the text 'coolrich' is present on the page.</td></tr>
-<tr><td>Verify the text 'logo' is present on the page.</td></tr>
-<tr><td>Verify the text 'topbox' is NOT present on the page.</td></tr>
-<tr><td>Verify warning message 'These blocks don't exist in the list of ad blocks retrieved: f5fe9e7c546a463' is present.</td></tr>
 </table>

@@ -58,21 +58,26 @@ public class AddFilesToZip {
 		
 		//compress the files
 		for (int i = 0; i < files.size(); i++) {
-			InputStream in = new FileInputStream(files.get(i));
+			if (files.get(i).exists()) {
+				InputStream in = new FileInputStream(files.get(i));
 			
-			//add ZIP entry to output stream
-			out.setLevel(5);
-			out.putNextEntry(new ZipEntry(files.get(i).getName()));
+				//add ZIP entry to output stream
+				out.setLevel(5);
+				out.putNextEntry(new ZipEntry(files.get(i).getName()));
 			
-			//transfer bytes from the file to the ZIP file
-			int len;
-			while ((len = in.read(buf)) > 0) {
-				out.write(buf, 0, len);
+				//transfer bytes from the file to the ZIP file
+				int len;
+				while ((len = in.read(buf)) > 0) {
+					out.write(buf, 0, len);
+				}
+			
+				//complete the entry
+				out.closeEntry();
+				in.close();
 			}
-			
-			//complete the entry
-			out.closeEntry();
-			in.close();
+			else {
+				System.out.println("Could not find file to zip titled '" + files.get(i).getPath());
+			}
 		}
 		
 		//complete the ZIP file

@@ -2,9 +2,6 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
     <line>
-      <![CDATA[STEP 1 AND SETUP]]>
-    </line>
-    <line>
       <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]>
     </line>
     <line>
@@ -17,16 +14,19 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Modules' menu link.]]>
+      <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com/admin/modules'.]]>
+    </line>
+    <line>
+      <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com/#overlay=admin/modules'.]]>
     </line>
     <line>
       <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
     </line>
     <line>
-      <![CDATA[Enter 'MPS' in the 'Filter Name' text box.]]>
+      <![CDATA[Enter 'Sticky Edit Actions' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Uncheck the 'MPS' module checkbox.]]>
+      <![CDATA[Uncheck the 'Sticky Edit Actions' module checkbox.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save configuration' button.]]>
@@ -35,64 +35,28 @@
       <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
+      <![CDATA[Enter 'Devel' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Scroll by '-500'.]]>
+      <![CDATA[Enter 'ImageField Focus' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Modules' menu link.]]>
+      <![CDATA[Enter 'Database logging' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Uninstall' menu link.]]>
+      <![CDATA[Enter 'Pub Post' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'MPS' uninstall checkbox.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Uninstall' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Confirm uninstall dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'The following modules will be completely uninstalled from your site, and all data from these modules will be lost!' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'MPS' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Uninstall' button to confirm.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll by '-500'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Modules' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'MPS' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Check the 'MPS' check box.]]>
+      <![CDATA[Check the 'Pub Post' check box.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save configuration' button.]]>
     </line>
     <line>
       <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Continue' button to enable additional modules.]]>
     </line>
     <line>
       <![CDATA[Switch back to the 'Modules' frame.]]>
@@ -110,243 +74,165 @@
       <![CDATA[Scroll by '-500'.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Structure' menu link.]]>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'MPS Blocks' menu link.]]>
+      <![CDATA[Mouse over the 'Add content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Add' menu link.]]>
+      <![CDATA[Click the 'Post' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Add a new MPS block dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
     </line>
     <line>
-      <![CDATA[Enter 'f5fe9e7c546a463' in the 'Block Name' text box.]]>
+      <![CDATA[Verify the 'Title' is present as a required field.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Body' is present as a required field.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Publishing Options' link.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Moderation State' is present as a required field.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'futurePost07/21/2014f428512d07554b4' in the 'Title' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the Synopsis frame.]]>
+    </line>
+    <line>
+      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Cover' select button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the select file frame.]]>
+    </line>
+    <line>
+      <![CDATA[Enter the file path for file upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Upload' button.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Public Local Files' radio button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the file image 'HanSolo' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the img is loaded and visible.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'f5fe9e7c546a463 has been created.' is present.]]>
+      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Publishing Options' link.]]>
+    </line>
+    <line>
+      <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Post futurePost07/21/2014f428512d07554b4 has been created.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Schedule' link in the work bench.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'futurePost07/21/2014f428512d07554b4 dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Add Scheduled Revision' link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'futurePost07/21/2014f428512d07554b4 dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Select revision titled 'futurePost07/21/2014f428512d07554b4'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify that the 'Operation' option count equals '5'.]]>
+    </line>
+    <line>
+      <![CDATA[Select 'Moderate to Published' from the 'Select operation' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '07/21/2014' in the 'Date' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '09:15 PM' in the 'Time' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Schedule' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'futurePost07/21/2014f428512d07554b4 dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The scheduled revision operation has been saved' is present.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
     </line>
     <line>
       <![CDATA[Scroll by '-500'.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Configuration' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Web services' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'MPS Configuration' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'MPS Configuration dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'mps.io' in the 'MPS Host' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Document Write' radio button.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'pub7-development' in the 'Site Instance Override' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 2]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Sync Ad Blocks' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'The following new blocks have been created:' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'topbox' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'topmulti' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'bottommulti' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'topbanner' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 3]]>
-    </line>
-    <line>
-      <![CDATA[Verify warning message 'These blocks don't exist in the list of ad blocks retrieved: f5fe9e7c546a463' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll by '-500'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 4]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Structure' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Blocks' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Select the block name 'bottommulti (MPS)' from the '- None -' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Select the block name 'topbanner (MPS)' from the '- None -' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Select the block name 'topbox (MPS)' from the '- None -' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Select the block name 'topmulti (MPS)' from the '- None -' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Select the block name 'f5fe9e7c546a463 (MPS)' from the '- None -' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 5]]>
-    </line>
-    <line>
-      <![CDATA[Select the block name 'f5fe9e7c546a463 (MPS)' from the 'Header' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save Blocks' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The block settings have been updated.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll by '-500'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 6 - N/A]]>
-    </line>
-    <line>
-      <![CDATA[STEP 7]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Configuration' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Web services' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'MPS Configuration' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'MPS Configuration dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'mps.io' in the 'MPS Host' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Document Write' radio button.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'sandbox' in the 'Site Instance Override' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 8]]>
-    </line>
-    <line>
-      <![CDATA[Open mps service page at 'http://mps.io/request/describe/sandbox'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text '{"instance":{"dart_mode":"gpt-asynchronous","multislot":"0"},"adunits":{"Box Ad First":{"unit":"Box Ad First","slot":"topbox","sizes":["300x250"],"responsive":0},"Box Ad Second":{"unit":"Box Ad Second","slot":"bottombox","sizes":["300x250"],"responsive":0},"Cool Rich 1":{"unit":"Cool Rich 1","slot":"coolrich","responsive":0},"Cool Rich 2":{"unit":"Cool Rich 2","slot":"coolrich","responsive":0},"Flex Ad First":{"unit":"Flex Ad First","slot":"topmulti","sizes":["300x250","160x600","300x600"],"responsive":0},"Flex Ad Second":{"unit":"Flex Ad Second","slot":"bottommulti","sizes":["300x250","160x600","300x600"],"responsive":0},"Logo A":{"unit":"Logo A","slot":"logo","sizes":["88x31","120x90"],"responsive":0},"Top Banner":{"unit":"Top Banner","slot":"topbanner","sizes":["728x90","970x66"],"responsive":0},"Top Banner B":{"unit":"Top Banner B","slot":"topbanner","sizes":["2x2"],"responsive":0}},"components":["id-0516-4520471","monitoring","test.css"]}' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 9]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Configuration' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Web services' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'MPS Configuration' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'MPS Configuration dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Sync Ad Blocks' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'The following new blocks have been created:' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'bottombox' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'coolrich' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'logo' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'topbox' is NOT present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify warning message 'These blocks don't exist in the list of ad blocks retrieved: f5fe9e7c546a463' is present.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="122284" started-at="2014-07-21T18:36:51Z" finished-at="2014-07-21T18:38:53Z">
+  <suite name="Default suite" duration-ms="116053" started-at="2014-07-21T21:09:29Z" finished-at="2014-07-21T21:11:25Z">
     <groups>
+      <group name="mpx">
+        <method signature="TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@4891a775]" name="TestSetup_Test" class="com.nbcuni.test.publisher.tests.Setup.TestSetup"/>
+      </group> <!-- mpx -->
       <group name="full">
-        <method signature="AutomaticallyCreatedMPSAdSlots.AutomaticallyCreatedMPSAdSlots_TC4128()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.AutomaticallyCreatedMPSAdSlots@2f2f0539]" name="AutomaticallyCreatedMPSAdSlots_TC4128" class="com.nbcuni.test.publisher.tests.Advertising.MPS.AutomaticallyCreatedMPSAdSlots"/>
+        <method signature="TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@4891a775]" name="TestSetup_Test" class="com.nbcuni.test.publisher.tests.Setup.TestSetup"/>
       </group> <!-- full -->
+      <group name="smoke">
+        <method signature="TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@4891a775]" name="TestSetup_Test" class="com.nbcuni.test.publisher.tests.Setup.TestSetup"/>
+      </group> <!-- smoke -->
     </groups>
-    <test name="Default test" duration-ms="122284" started-at="2014-07-21T18:36:51Z" finished-at="2014-07-21T18:38:53Z">
-      <class name="com.nbcuni.test.publisher.tests.Advertising.MPS.AutomaticallyCreatedMPSAdSlots">
-        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.AutomaticallyCreatedMPSAdSlots@2f2f0539]" name="startGridAndHub" is-config="true" duration-ms="11791" started-at="2014-07-21T14:36:39Z" finished-at="2014-07-21T14:36:51Z">
+    <test name="Default test" duration-ms="116053" started-at="2014-07-21T21:09:29Z" finished-at="2014-07-21T21:11:25Z">
+      <class name="com.nbcuni.test.publisher.tests.Setup.TestSetup">
+        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@4891a775]" name="startGridAndHub" is-config="true" duration-ms="11851" started-at="2014-07-21T17:09:17Z" finished-at="2014-07-21T17:09:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startGridAndHub -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.AutomaticallyCreatedMPSAdSlots@2f2f0539]" name="startSelenium" is-config="true" duration-ms="2626" started-at="2014-07-21T14:36:51Z" finished-at="2014-07-21T14:36:54Z">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@4891a775]" name="startSelenium" is-config="true" duration-ms="2525" started-at="2014-07-21T17:09:29Z" finished-at="2014-07-21T17:09:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="AutomaticallyCreatedMPSAdSlots_TC4128()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.AutomaticallyCreatedMPSAdSlots@2f2f0539]" name="AutomaticallyCreatedMPSAdSlots_TC4128" duration-ms="119078" started-at="2014-07-21T14:36:54Z" finished-at="2014-07-21T14:38:53Z">
+        <test-method status="PASS" signature="TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@4891a775]" name="TestSetup_Test" duration-ms="112946" started-at="2014-07-21T17:09:32Z" finished-at="2014-07-21T17:11:25Z">
           <reporter-output>
-            <line>
-              <![CDATA[STEP 1 AND SETUP]]>
-            </line>
             <line>
               <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]>
             </line>
@@ -360,16 +246,19 @@
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Modules' menu link.]]>
+              <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com/admin/modules'.]]>
+            </line>
+            <line>
+              <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com/#overlay=admin/modules'.]]>
             </line>
             <line>
               <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
             </line>
             <line>
-              <![CDATA[Enter 'MPS' in the 'Filter Name' text box.]]>
+              <![CDATA[Enter 'Sticky Edit Actions' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Uncheck the 'MPS' module checkbox.]]>
+              <![CDATA[Uncheck the 'Sticky Edit Actions' module checkbox.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save configuration' button.]]>
@@ -378,64 +267,28 @@
               <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
+              <![CDATA[Enter 'Devel' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Scroll by '-500'.]]>
+              <![CDATA[Enter 'ImageField Focus' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Modules' menu link.]]>
+              <![CDATA[Enter 'Database logging' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Uninstall' menu link.]]>
+              <![CDATA[Enter 'Pub Post' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'MPS' uninstall checkbox.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Uninstall' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Confirm uninstall dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'The following modules will be completely uninstalled from your site, and all data from these modules will be lost!' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'MPS' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Uninstall' button to confirm.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll by '-500'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Modules' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'MPS' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Check the 'MPS' check box.]]>
+              <![CDATA[Check the 'Pub Post' check box.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save configuration' button.]]>
             </line>
             <line>
               <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Continue' button to enable additional modules.]]>
             </line>
             <line>
               <![CDATA[Switch back to the 'Modules' frame.]]>
@@ -453,239 +306,158 @@
               <![CDATA[Scroll by '-500'.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Structure' menu link.]]>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'MPS Blocks' menu link.]]>
+              <![CDATA[Mouse over the 'Add content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Add' menu link.]]>
+              <![CDATA[Click the 'Post' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Add a new MPS block dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
             </line>
             <line>
-              <![CDATA[Enter 'f5fe9e7c546a463' in the 'Block Name' text box.]]>
+              <![CDATA[Verify the 'Title' is present as a required field.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Body' is present as a required field.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Publishing Options' link.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Moderation State' is present as a required field.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'futurePost07/21/2014f428512d07554b4' in the 'Title' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the Synopsis frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Cover' select button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the select file frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter the file path for file upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Upload' button.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Public Local Files' radio button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the file image 'HanSolo' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the img is loaded and visible.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'f5fe9e7c546a463 has been created.' is present.]]>
+              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Publishing Options' link.]]>
+            </line>
+            <line>
+              <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Post futurePost07/21/2014f428512d07554b4 has been created.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Schedule' link in the work bench.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'futurePost07/21/2014f428512d07554b4 dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Add Scheduled Revision' link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'futurePost07/21/2014f428512d07554b4 dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Select revision titled 'futurePost07/21/2014f428512d07554b4'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify that the 'Operation' option count equals '5'.]]>
+            </line>
+            <line>
+              <![CDATA[Select 'Moderate to Published' from the 'Select operation' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '07/21/2014' in the 'Date' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '09:15 PM' in the 'Time' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Schedule' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'futurePost07/21/2014f428512d07554b4 dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The scheduled revision operation has been saved' is present.]]>
             </line>
             <line>
               <![CDATA[Click the 'Close Overlay X'.]]>
             </line>
             <line>
               <![CDATA[Scroll by '-500'.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Configuration' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Web services' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'MPS Configuration' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'MPS Configuration dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'mps.io' in the 'MPS Host' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Document Write' radio button.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pub7-development' in the 'Site Instance Override' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 2]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Sync Ad Blocks' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'The following new blocks have been created:' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'topbox' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'topmulti' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'bottommulti' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'topbanner' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 3]]>
-            </line>
-            <line>
-              <![CDATA[Verify warning message 'These blocks don't exist in the list of ad blocks retrieved: f5fe9e7c546a463' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll by '-500'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 4]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Structure' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Blocks' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Select the block name 'bottommulti (MPS)' from the '- None -' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Select the block name 'topbanner (MPS)' from the '- None -' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Select the block name 'topbox (MPS)' from the '- None -' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Select the block name 'topmulti (MPS)' from the '- None -' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Select the block name 'f5fe9e7c546a463 (MPS)' from the '- None -' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 5]]>
-            </line>
-            <line>
-              <![CDATA[Select the block name 'f5fe9e7c546a463 (MPS)' from the 'Header' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save Blocks' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The block settings have been updated.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll by '-500'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 6 - N/A]]>
-            </line>
-            <line>
-              <![CDATA[STEP 7]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Configuration' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Web services' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'MPS Configuration' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'MPS Configuration dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'mps.io' in the 'MPS Host' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Document Write' radio button.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'sandbox' in the 'Site Instance Override' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 8]]>
-            </line>
-            <line>
-              <![CDATA[Open mps service page at 'http://mps.io/request/describe/sandbox'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text '{"instance":{"dart_mode":"gpt-asynchronous","multislot":"0"},"adunits":{"Box Ad First":{"unit":"Box Ad First","slot":"topbox","sizes":["300x250"],"responsive":0},"Box Ad Second":{"unit":"Box Ad Second","slot":"bottombox","sizes":["300x250"],"responsive":0},"Cool Rich 1":{"unit":"Cool Rich 1","slot":"coolrich","responsive":0},"Cool Rich 2":{"unit":"Cool Rich 2","slot":"coolrich","responsive":0},"Flex Ad First":{"unit":"Flex Ad First","slot":"topmulti","sizes":["300x250","160x600","300x600"],"responsive":0},"Flex Ad Second":{"unit":"Flex Ad Second","slot":"bottommulti","sizes":["300x250","160x600","300x600"],"responsive":0},"Logo A":{"unit":"Logo A","slot":"logo","sizes":["88x31","120x90"],"responsive":0},"Top Banner":{"unit":"Top Banner","slot":"topbanner","sizes":["728x90","970x66"],"responsive":0},"Top Banner B":{"unit":"Top Banner B","slot":"topbanner","sizes":["2x2"],"responsive":0}},"components":["id-0516-4520471","monitoring","test.css"]}' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 9]]>
-            </line>
-            <line>
-              <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Configuration' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Web services' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'MPS Configuration' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'MPS Configuration dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Sync Ad Blocks' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'The following new blocks have been created:' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'bottombox' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'coolrich' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'logo' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'topbox' is NOT present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify warning message 'These blocks don't exist in the list of ad blocks retrieved: f5fe9e7c546a463' is present.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- AutomaticallyCreatedMPSAdSlots_TC4128 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.AutomaticallyCreatedMPSAdSlots@2f2f0539]" name="stopSelenium" is-config="true" duration-ms="569" started-at="2014-07-21T14:38:53Z" finished-at="2014-07-21T14:38:53Z">
+        </test-method> <!-- TestSetup_Test -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@4891a775]" name="stopSelenium" is-config="true" duration-ms="569" started-at="2014-07-21T17:11:25Z" finished-at="2014-07-21T17:11:25Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=AutomaticallyCreatedMPSAdSlots_TC4128 status=SUCCESS method=AutomaticallyCreatedMPSAdSlots.AutomaticallyCreatedMPSAdSlots_TC4128()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.AutomaticallyCreatedMPSAdSlots@2f2f0539] output=STEP 1 AND SETUP]]]>
+                <![CDATA[[TestResult name=TestSetup_Test status=SUCCESS method=TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@4891a775] output=Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.AutomaticallyCreatedMPSAdSlots@2f2f0539]" name="stopGridAndHub" is-config="true" duration-ms="372" started-at="2014-07-21T14:38:54Z" finished-at="2014-07-21T14:38:54Z">
+        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.TestSetup@4891a775]" name="stopGridAndHub" is-config="true" duration-ms="384" started-at="2014-07-21T17:11:26Z" finished-at="2014-07-21T17:11:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopGridAndHub -->
-      </class> <!-- com.nbcuni.test.publisher.tests.Advertising.MPS.AutomaticallyCreatedMPSAdSlots -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Setup.TestSetup -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

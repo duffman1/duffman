@@ -1,6 +1,7 @@
 package com.nbcuni.test.publisher.pageobjects.Configuration;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -9,6 +10,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
+
 import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
@@ -79,6 +81,12 @@ public class MPSConfiguration {
     
     @FindBy(how = How.ID, using ="edit-submit")
     private WebElement SaveConfiguration_Btn;
+    
+    @FindBy(how = How.XPATH, using ="//iframe[@id='google_ads_iframe_/7231/pub7dev/unknown_2']")
+    private WebElement TopMultiAd_Frm;
+    
+    @FindBy(how = How.XPATH, using ="//img[@class='img_ad']")
+    private WebElement Ad_Img;
     
     
     //PAGE OBJECT METHODS
@@ -202,6 +210,19 @@ public class MPSConfiguration {
     	
     	Reporter.log("Click the 'Save configuration' button.");
     	SaveConfiguration_Btn.click();
+    }
+    
+    public void VerifyTopMultiAdPresent() throws Exception { 
+    	
+    	webDriver.switchTo().frame(TopMultiAd_Frm);
+    	
+    	Reporter.log("Verify the Ad image is present.");
+    	Assert.assertTrue((Boolean) ((JavascriptExecutor)webDriver).executeScript(
+            			"return arguments[0].complete && typeof arguments[0].naturalWidth != \"undefined\" && arguments[0].naturalWidth > 0", 
+            			Ad_Img));
+    	Assert.assertEquals(Ad_Img.getAttribute("width"), "300");
+    	Assert.assertEquals(Ad_Img.getAttribute("height"), "250");
+    	
     }
     
     
