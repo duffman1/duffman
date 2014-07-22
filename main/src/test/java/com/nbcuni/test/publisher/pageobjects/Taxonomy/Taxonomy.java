@@ -1,5 +1,7 @@
 package com.nbcuni.test.publisher.pageobjects.Taxonomy;
 
+import java.util.List;
+
 import com.nbcuni.test.publisher.common.Driver.Driver;
 
 import org.openqa.selenium.By;
@@ -73,6 +75,10 @@ public class Taxonomy {
     	return webDriver.findElement(By.xpath("//ul[@id='admin-menu-menu']/..//a[text()=\"" + menuName + "\"]"));
     }
     
+    private List<WebElement> RunCron_Lnks() {
+    	return webDriver.findElements(By.xpath("//span[@class='admin-menu-home-icon']/../..//a[text()='Run cron']"));
+    }
+    
     @FindBy(how = How.XPATH, using = "//a[@id='edit-shortcuts']")
     private WebElement Shortcuts_Lnk;
     
@@ -130,22 +136,39 @@ public class Taxonomy {
     	            		break;
     	    			}
     	    		}
-    	    		
-    	    		if (depth == 1) {
-    	    			Thread.sleep(250);
-    	    			wait.until(ExpectedConditions.visibilityOf(HomeTier1_Lnk)).click();
-    	    			break;
-    	    		}
-    	    		else if (depth == 2) {
-    	    			
+    	    		else if (menuPath.contains("Run cron")) {
     	    			Thread.sleep(250);
     	        		wait.until(ExpectedConditions.visibilityOf(HomeTier1_Lnk));
-    	        		//webDriver.executeScript(MouseOver_Js, HomeTier1_Lnk);
     	        		actions.moveToElement(HomeTier1_Lnk).build().perform();
     	        		Thread.sleep(250);
-    	        		wait.until(ExpectedConditions.visibilityOf(HomeTier2_Lnk(tierLevel))).click();
-    	        		this.MouseOffTaxonomyElement(HomeTier2_Lnk(tierLevel));
+    	        		WebElement cronLnk = null;
+    	        		if (RunCron_Lnks().size() == 1) {
+    	        			cronLnk = RunCron_Lnks().get(0);
+    	        		}
+    	        		else {
+    	        			cronLnk = RunCron_Lnks().get(1);
+    	        		}
+    	        		wait.until(ExpectedConditions.visibilityOf(cronLnk)).click();
+    	        		this.MouseOffTaxonomyElement(cronLnk);
     	        		break;
+    	    		}
+    	    		else {
+    	    			if (depth == 1) {
+        	    			Thread.sleep(250);
+        	    			wait.until(ExpectedConditions.visibilityOf(HomeTier1_Lnk)).click();
+        	    			break;
+        	    		}
+        	    		else if (depth == 2) {
+        	    			
+        	    			Thread.sleep(250);
+        	        		wait.until(ExpectedConditions.visibilityOf(HomeTier1_Lnk));
+        	        		//webDriver.executeScript(MouseOver_Js, HomeTier1_Lnk);
+        	        		actions.moveToElement(HomeTier1_Lnk).build().perform();
+        	        		Thread.sleep(250);
+        	        		wait.until(ExpectedConditions.visibilityOf(HomeTier2_Lnk(tierLevel))).click();
+        	        		this.MouseOffTaxonomyElement(HomeTier2_Lnk(tierLevel));
+        	        		break;
+        	    		}
     	    		}
     	    		
     	    	} else {

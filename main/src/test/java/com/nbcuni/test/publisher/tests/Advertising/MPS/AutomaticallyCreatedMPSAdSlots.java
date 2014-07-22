@@ -40,6 +40,8 @@ public class AutomaticallyCreatedMPSAdSlots extends ParentTest {
         	}
         	taxonomy.NavigateSite("Modules");
             overlay.SwitchToActiveFrame();
+            modules.EnterFilterName("Pixelman");
+        	modules.DisableModule("Pixelman");
             modules.EnterFilterName("MPS");
             modules.EnableModule("MPS");
             overlay.ClickCloseOverlayLnk();

@@ -22,7 +22,13 @@ public class MPSEndToEndIntegration extends ParentTest {
         	UserLogin userLogin = applib.openApplication();
         	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
         	Modules modules = new Modules(webDriver, applib);
-        	modules.VerifyModuleEnabled("MPS");
+        	taxonomy.NavigateSite("Modules");
+        	overlay.SwitchToActiveFrame();
+        	modules.EnterFilterName("Pixelman");
+        	modules.DisableModule("Pixelman");
+        	modules.EnterFilterName("MPS");
+        	modules.EnableModule("MPS");
+        	overlay.ClickCloseOverlayLnk();
         	
         	Reporter.log("STEP 2");
         	taxonomy.NavigateSite("Configuration>>Web services>>MPS Configuration");

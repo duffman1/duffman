@@ -55,6 +55,8 @@ public class ImplementMPS extends ParentTest {
             overlay.SwitchToActiveFrame();
             modules.EnterFilterName("Pub Ads");
             modules.EnableModule("Pub Ads");
+            modules.EnterFilterName("Pixelman");
+        	modules.DisableModule("Pixelman");
             modules.EnterFilterName("MPS");
             modules.EnableModule("MPS");
             modules.EnterFilterName("DART");

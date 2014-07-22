@@ -37,6 +37,8 @@ public class MPSSupportTokens extends ParentTest {
         	overlay.SwitchToActiveFrame();
         	modules.EnterFilterName("Pixelman");
         	modules.DisableModule("Pixelman");
+        	modules.EnterFilterName("MPS");
+        	modules.EnableModule("MPS");
         	modules.EnterFilterName("Devel");
         	modules.EnableModule("Devel");
         	overlay.ClickCloseOverlayLnk();

@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="3" total="3" passed="0">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
     <line>
-      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
+      <![CDATA[STEP 1 AND SETUP]]>
+    </line>
+    <line>
+      <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]>
     </line>
     <line>
       <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
@@ -17,13 +20,76 @@
       <![CDATA[Click the 'Modules' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to frame titled 'Modules'.]]>
+      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'MPS' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Uncheck the 'MPS' module checkbox.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configuration' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll by '-500'.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Modules' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Uninstall' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'MPS' uninstall checkbox.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Uninstall' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Confirm uninstall dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'The following modules will be completely uninstalled from your site, and all data from these modules will be lost!' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'MPS' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Uninstall' button to confirm.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll by '-500'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Modules' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
     </line>
     <line>
       <![CDATA[Enter 'Pixelman' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Check the 'Pixelman' check box.]]>
+      <![CDATA[Enter 'MPS' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Check the 'MPS' check box.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save configuration' button.]]>
@@ -41,10 +107,31 @@
       <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
     </line>
     <line>
-      <![CDATA[Enter 'DART' in the 'Filter Name' text box.]]>
+      <![CDATA[Click the 'Close Overlay X'.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Doubleclick for Publishers' in the 'Filter Name' text box.]]>
+      <![CDATA[Scroll by '-500'.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Structure' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'MPS Blocks' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Add' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Add a new MPS block dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '44b855457425459' in the 'Block Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of '44b855457425459 has been created.' is present.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
@@ -53,37 +140,25 @@
       <![CDATA[Scroll by '-500'.]]>
     </line>
     <line>
-      <![CDATA[Verify '//www.nbcudigitaladops.com/hosted/global_header.js' is present in page source.]]>
+      <![CDATA[Mouse over the 'Configuration' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Logout' button.]]>
+      <![CDATA[Mouse over the 'Web services' menu link.]]>
     </line>
     <line>
-      <![CDATA[Verify '//www.nbcudigitaladops.com/hosted/global_header.js' is present in page source.]]>
+      <![CDATA[Click the 'MPS Configuration' menu link.]]>
     </line>
     <line>
-      <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
+      <![CDATA[Switch to the active frame titled 'MPS Configuration dialog'.]]>
     </line>
     <line>
-      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+      <![CDATA[Enter 'mps.io' in the 'MPS Host' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Login' button.]]>
+      <![CDATA[Click the 'Document Write' radio button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Modules' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to frame titled 'Modules'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Pub Ads' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Pixelman' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Uncheck the 'Pixelman' module checkbox.]]>
+      <![CDATA[Enter 'pub7-development' in the 'Site Instance Override' text box.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save configuration' button.]]>
@@ -92,115 +167,34 @@
       <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
+      <![CDATA[STEP 2]]>
     </line>
     <line>
-      <![CDATA[Scroll by '-500'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify '//www.nbcudigitaladops.com/hosted/global_header.js' is not present in page source.]]>
-    </line>
-    <line>
-      <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/Pixelman_TC1155_072214111938AM.png ]]>
-    </line>
-    <line>
-      <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/Pixelman_TC1155_072214111938AM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/Pixelman_TC1155_072214111938AM.png' height='500' width='500'/> </a>]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
-    </line>
-    <line>
-      <![CDATA[Cache was cleared on test failure]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Login' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Modules' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to frame titled 'Modules'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Pixelman' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Check the 'Pixelman' check box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
-    </line>
-    <line>
-      <![CDATA[Switch back to the 'Modules' frame.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to frame titled 'Modules'.]]>
+      <![CDATA[Click the 'Sync Ad Blocks' button.]]>
     </line>
     <line>
       <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
     </line>
     <line>
-      <![CDATA[Enter 'DART' in the 'Filter Name' text box.]]>
+      <![CDATA[Verify the text 'The following new blocks have been created:' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Doubleclick for Publishers' in the 'Filter Name' text box.]]>
+      <![CDATA[Verify the text 'topbox' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
+      <![CDATA[Verify the text 'topmulti' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Scroll by '-500'.]]>
+      <![CDATA[Verify the text 'bottommulti' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Verify '//www.nbcudigitaladops.com/hosted/global_header.js' is present in page source.]]>
+      <![CDATA[Verify the text 'topbanner' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Logout' button.]]>
+      <![CDATA[STEP 3]]>
     </line>
     <line>
-      <![CDATA[Verify '//www.nbcudigitaladops.com/hosted/global_header.js' is present in page source.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Login' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Modules' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to frame titled 'Modules'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Pub Ads' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Pixelman' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Uncheck the 'Pixelman' module checkbox.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+      <![CDATA[Verify warning message 'These blocks don't exist in the list of ad blocks retrieved: 44b855457425459' is present.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
@@ -209,64 +203,43 @@
       <![CDATA[Scroll by '-500'.]]>
     </line>
     <line>
-      <![CDATA[Verify '//www.nbcudigitaladops.com/hosted/global_header.js' is not present in page source.]]>
+      <![CDATA[STEP 4]]>
     </line>
     <line>
-      <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/Pixelman_TC1155_072214112108AM.png ]]>
+      <![CDATA[Mouse over the 'Structure' menu link.]]>
     </line>
     <line>
-      <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/Pixelman_TC1155_072214112108AM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/Pixelman_TC1155_072214112108AM.png' height='500' width='500'/> </a>]]>
+      <![CDATA[Click the 'Blocks' menu link.]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
+      <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
     </line>
     <line>
-      <![CDATA[Cache was cleared on test failure]]>
+      <![CDATA[Select the block name 'bottommulti (MPS)' from the '- None -' drop down list.]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
+      <![CDATA[Select the block name 'topbanner (MPS)' from the '- None -' drop down list.]]>
     </line>
     <line>
-      <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
+      <![CDATA[Select the block name 'topbox (MPS)' from the '- None -' drop down list.]]>
     </line>
     <line>
-      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+      <![CDATA[Select the block name 'topmulti (MPS)' from the '- None -' drop down list.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Login' button.]]>
+      <![CDATA[Select the block name '44b855457425459 (MPS)' from the '- None -' drop down list.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Modules' menu link.]]>
+      <![CDATA[STEP 5]]>
     </line>
     <line>
-      <![CDATA[Switch to frame titled 'Modules'.]]>
+      <![CDATA[Select the block name '44b855457425459 (MPS)' from the 'Header' drop down list.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Pixelman' in the 'Filter Name' text box.]]>
+      <![CDATA[Click the 'Save Blocks' button.]]>
     </line>
     <line>
-      <![CDATA[Check the 'Pixelman' check box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
-    </line>
-    <line>
-      <![CDATA[Switch back to the 'Modules' frame.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to frame titled 'Modules'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'DART' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Doubleclick for Publishers' in the 'Filter Name' text box.]]>
+      <![CDATA[Verify success message of 'The block settings have been updated.' is present.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
@@ -275,37 +248,31 @@
       <![CDATA[Scroll by '-500'.]]>
     </line>
     <line>
-      <![CDATA[Verify '//www.nbcudigitaladops.com/hosted/global_header.js' is present in page source.]]>
+      <![CDATA[STEP 6 - N/A]]>
     </line>
     <line>
-      <![CDATA[Click the 'Logout' button.]]>
+      <![CDATA[STEP 7]]>
     </line>
     <line>
-      <![CDATA[Verify '//www.nbcudigitaladops.com/hosted/global_header.js' is present in page source.]]>
+      <![CDATA[Mouse over the 'Configuration' menu link.]]>
     </line>
     <line>
-      <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
+      <![CDATA[Mouse over the 'Web services' menu link.]]>
     </line>
     <line>
-      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+      <![CDATA[Click the 'MPS Configuration' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Login' button.]]>
+      <![CDATA[Switch to the active frame titled 'MPS Configuration dialog'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Modules' menu link.]]>
+      <![CDATA[Enter 'mps.io' in the 'MPS Host' text box.]]>
     </line>
     <line>
-      <![CDATA[Switch to frame titled 'Modules'.]]>
+      <![CDATA[Click the 'Document Write' radio button.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Pub Ads' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Pixelman' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Uncheck the 'Pixelman' module checkbox.]]>
+      <![CDATA[Enter 'sandbox' in the 'Site Instance Override' text box.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save configuration' button.]]>
@@ -314,88 +281,77 @@
       <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
+      <![CDATA[STEP 8]]>
     </line>
     <line>
-      <![CDATA[Scroll by '-500'.]]>
+      <![CDATA[Open mps service page at 'http://mps.io/request/describe/sandbox'.]]>
     </line>
     <line>
-      <![CDATA[Verify '//www.nbcudigitaladops.com/hosted/global_header.js' is not present in page source.]]>
+      <![CDATA[Verify the text '{"instance":{"dart_mode":"gpt-asynchronous","multislot":"0"},"adunits":{"Box Ad First":{"unit":"Box Ad First","slot":"topbox","sizes":["300x250"],"responsive":0},"Box Ad Second":{"unit":"Box Ad Second","slot":"bottombox","sizes":["300x250"],"responsive":0},"Cool Rich 1":{"unit":"Cool Rich 1","slot":"coolrich","responsive":0},"Cool Rich 2":{"unit":"Cool Rich 2","slot":"coolrich","responsive":0},"Flex Ad First":{"unit":"Flex Ad First","slot":"topmulti","sizes":["300x250","160x600","300x600"],"responsive":0},"Flex Ad Second":{"unit":"Flex Ad Second","slot":"bottommulti","sizes":["300x250","160x600","300x600"],"responsive":0},"Logo A":{"unit":"Logo A","slot":"logo","sizes":["88x31","120x90"],"responsive":0},"Top Banner":{"unit":"Top Banner","slot":"topbanner","sizes":["728x90","970x66"],"responsive":0},"Top Banner B":{"unit":"Top Banner B","slot":"topbanner","sizes":["2x2"],"responsive":0}},"components":["id-0516-4520471","monitoring","test.css"]}' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/Pixelman_TC1155_072214112238AM.png ]]>
+      <![CDATA[STEP 9]]>
     </line>
     <line>
-      <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/Pixelman_TC1155_072214112238AM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/Pixelman_TC1155_072214112238AM.png' height='500' width='500'/> </a>]]>
+      <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
+      <![CDATA[Mouse over the 'Configuration' menu link.]]>
     </line>
     <line>
-      <![CDATA[Cache was cleared on test failure]]>
+      <![CDATA[Mouse over the 'Web services' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'MPS Configuration' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'MPS Configuration dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Sync Ad Blocks' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'The following new blocks have been created:' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'bottombox' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'coolrich' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'logo' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'topbox' is NOT present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify warning message 'These blocks don't exist in the list of ad blocks retrieved: 44b855457425459' is present.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="274270" started-at="2014-07-22T15:18:13Z" finished-at="2014-07-22T15:22:48Z">
+  <suite name="Default suite" duration-ms="132560" started-at="2014-07-22T18:30:37Z" finished-at="2014-07-22T18:32:50Z">
     <groups>
       <group name="full">
-        <method signature="Pixelman.Pixelman_TC1155()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.Comscore.Pixelman@7378c252]" name="Pixelman_TC1155" class="com.nbcuni.test.publisher.tests.Advertising.Comscore.Pixelman"/>
+        <method signature="AutomaticallyCreatedMPSAdSlots.AutomaticallyCreatedMPSAdSlots_TC4128()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.AutomaticallyCreatedMPSAdSlots@55c3b22c]" name="AutomaticallyCreatedMPSAdSlots_TC4128" class="com.nbcuni.test.publisher.tests.Advertising.MPS.AutomaticallyCreatedMPSAdSlots"/>
       </group> <!-- full -->
-      <group name="smoke">
-        <method signature="Pixelman.Pixelman_TC1155()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.Comscore.Pixelman@7378c252]" name="Pixelman_TC1155" class="com.nbcuni.test.publisher.tests.Advertising.Comscore.Pixelman"/>
-      </group> <!-- smoke -->
     </groups>
-    <test name="Default test" duration-ms="274270" started-at="2014-07-22T15:18:13Z" finished-at="2014-07-22T15:22:48Z">
-      <class name="com.nbcuni.test.publisher.tests.Advertising.Comscore.Pixelman">
-        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.Comscore.Pixelman@7378c252]" name="startGridAndHub" is-config="true" duration-ms="11754" started-at="2014-07-22T11:18:02Z" finished-at="2014-07-22T11:18:13Z">
+    <test name="Default test" duration-ms="132560" started-at="2014-07-22T18:30:37Z" finished-at="2014-07-22T18:32:50Z">
+      <class name="com.nbcuni.test.publisher.tests.Advertising.MPS.AutomaticallyCreatedMPSAdSlots">
+        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.AutomaticallyCreatedMPSAdSlots@55c3b22c]" name="startGridAndHub" is-config="true" duration-ms="12171" started-at="2014-07-22T14:30:25Z" finished-at="2014-07-22T14:30:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startGridAndHub -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.Comscore.Pixelman@7378c252]" name="startSelenium" is-config="true" duration-ms="2524" started-at="2014-07-22T11:18:13Z" finished-at="2014-07-22T11:18:16Z">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.AutomaticallyCreatedMPSAdSlots@55c3b22c]" name="startSelenium" is-config="true" duration-ms="2577" started-at="2014-07-22T14:30:37Z" finished-at="2014-07-22T14:30:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="FAIL" signature="Pixelman_TC1155()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.Comscore.Pixelman@7378c252]" name="Pixelman_TC1155" duration-ms="82020" started-at="2014-07-22T11:18:16Z" finished-at="2014-07-22T11:19:38Z">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Source '//www.nbcudigitaladops.com/hosted/global_header.js' is present when it should not be. expected [false] but found [true]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Source '//www.nbcudigitaladops.com/hosted/global_header.js' is present when it should not be. expected [false] but found [true]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:494)
-	at org.testng.Assert.assertFalse(Assert.java:63)
-	at com.nbcuni.test.publisher.pageobjects.Content.ContentParent.VerifySourceNotInPage(ContentParent.java:172)
-	at com.nbcuni.test.publisher.tests.Advertising.Comscore.Pixelman.Pixelman_TC1155(Pixelman.java:69)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method status="PASS" signature="AutomaticallyCreatedMPSAdSlots_TC4128()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.AutomaticallyCreatedMPSAdSlots@55c3b22c]" name="AutomaticallyCreatedMPSAdSlots_TC4128" duration-ms="129399" started-at="2014-07-22T14:30:40Z" finished-at="2014-07-22T14:32:49Z">
           <reporter-output>
             <line>
-              <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
+              <![CDATA[STEP 1 AND SETUP]]>
+            </line>
+            <line>
+              <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]>
             </line>
             <line>
               <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
@@ -410,13 +366,76 @@
               <![CDATA[Click the 'Modules' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to frame titled 'Modules'.]]>
+              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'MPS' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Uncheck the 'MPS' module checkbox.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configuration' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll by '-500'.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Modules' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Uninstall' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'MPS' uninstall checkbox.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Uninstall' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Confirm uninstall dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'The following modules will be completely uninstalled from your site, and all data from these modules will be lost!' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'MPS' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Uninstall' button to confirm.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll by '-500'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Modules' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
             </line>
             <line>
               <![CDATA[Enter 'Pixelman' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Check the 'Pixelman' check box.]]>
+              <![CDATA[Enter 'MPS' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Check the 'MPS' check box.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save configuration' button.]]>
@@ -434,10 +453,31 @@
               <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
             </line>
             <line>
-              <![CDATA[Enter 'DART' in the 'Filter Name' text box.]]>
+              <![CDATA[Click the 'Close Overlay X'.]]>
             </line>
             <line>
-              <![CDATA[Enter 'Doubleclick for Publishers' in the 'Filter Name' text box.]]>
+              <![CDATA[Scroll by '-500'.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Structure' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'MPS Blocks' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Add' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Add a new MPS block dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '44b855457425459' in the 'Block Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of '44b855457425459 has been created.' is present.]]>
             </line>
             <line>
               <![CDATA[Click the 'Close Overlay X'.]]>
@@ -446,37 +486,25 @@
               <![CDATA[Scroll by '-500'.]]>
             </line>
             <line>
-              <![CDATA[Verify '//www.nbcudigitaladops.com/hosted/global_header.js' is present in page source.]]>
+              <![CDATA[Mouse over the 'Configuration' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Logout' button.]]>
+              <![CDATA[Mouse over the 'Web services' menu link.]]>
             </line>
             <line>
-              <![CDATA[Verify '//www.nbcudigitaladops.com/hosted/global_header.js' is present in page source.]]>
+              <![CDATA[Click the 'MPS Configuration' menu link.]]>
             </line>
             <line>
-              <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
+              <![CDATA[Switch to the active frame titled 'MPS Configuration dialog'.]]>
             </line>
             <line>
-              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+              <![CDATA[Enter 'mps.io' in the 'MPS Host' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Login' button.]]>
+              <![CDATA[Click the 'Document Write' radio button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Modules' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to frame titled 'Modules'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Pub Ads' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Pixelman' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Uncheck the 'Pixelman' module checkbox.]]>
+              <![CDATA[Enter 'pub7-development' in the 'Site Instance Override' text box.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save configuration' button.]]>
@@ -485,371 +513,185 @@
               <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
             </line>
             <line>
+              <![CDATA[STEP 2]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Sync Ad Blocks' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'The following new blocks have been created:' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'topbox' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'topmulti' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'bottommulti' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'topbanner' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 3]]>
+            </line>
+            <line>
+              <![CDATA[Verify warning message 'These blocks don't exist in the list of ad blocks retrieved: 44b855457425459' is present.]]>
+            </line>
+            <line>
               <![CDATA[Click the 'Close Overlay X'.]]>
             </line>
             <line>
               <![CDATA[Scroll by '-500'.]]>
             </line>
             <line>
-              <![CDATA[Verify '//www.nbcudigitaladops.com/hosted/global_header.js' is not present in page source.]]>
+              <![CDATA[STEP 4]]>
             </line>
             <line>
-              <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/Pixelman_TC1155_072214111938AM.png ]]>
+              <![CDATA[Mouse over the 'Structure' menu link.]]>
             </line>
             <line>
-              <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/Pixelman_TC1155_072214111938AM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/Pixelman_TC1155_072214111938AM.png' height='500' width='500'/> </a>]]>
+              <![CDATA[Click the 'Blocks' menu link.]]>
             </line>
             <line>
-              <![CDATA[Cache was cleared on test failure]]>
+              <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Select the block name 'bottommulti (MPS)' from the '- None -' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Select the block name 'topbanner (MPS)' from the '- None -' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Select the block name 'topbox (MPS)' from the '- None -' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Select the block name 'topmulti (MPS)' from the '- None -' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Select the block name '44b855457425459 (MPS)' from the '- None -' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 5]]>
+            </line>
+            <line>
+              <![CDATA[Select the block name '44b855457425459 (MPS)' from the 'Header' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save Blocks' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The block settings have been updated.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll by '-500'.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 6 - N/A]]>
+            </line>
+            <line>
+              <![CDATA[STEP 7]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Configuration' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Web services' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'MPS Configuration' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'MPS Configuration dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'mps.io' in the 'MPS Host' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Document Write' radio button.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'sandbox' in the 'Site Instance Override' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configuration' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 8]]>
+            </line>
+            <line>
+              <![CDATA[Open mps service page at 'http://mps.io/request/describe/sandbox'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text '{"instance":{"dart_mode":"gpt-asynchronous","multislot":"0"},"adunits":{"Box Ad First":{"unit":"Box Ad First","slot":"topbox","sizes":["300x250"],"responsive":0},"Box Ad Second":{"unit":"Box Ad Second","slot":"bottombox","sizes":["300x250"],"responsive":0},"Cool Rich 1":{"unit":"Cool Rich 1","slot":"coolrich","responsive":0},"Cool Rich 2":{"unit":"Cool Rich 2","slot":"coolrich","responsive":0},"Flex Ad First":{"unit":"Flex Ad First","slot":"topmulti","sizes":["300x250","160x600","300x600"],"responsive":0},"Flex Ad Second":{"unit":"Flex Ad Second","slot":"bottommulti","sizes":["300x250","160x600","300x600"],"responsive":0},"Logo A":{"unit":"Logo A","slot":"logo","sizes":["88x31","120x90"],"responsive":0},"Top Banner":{"unit":"Top Banner","slot":"topbanner","sizes":["728x90","970x66"],"responsive":0},"Top Banner B":{"unit":"Top Banner B","slot":"topbanner","sizes":["2x2"],"responsive":0}},"components":["id-0516-4520471","monitoring","test.css"]}' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 9]]>
+            </line>
+            <line>
+              <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Configuration' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Web services' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'MPS Configuration' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'MPS Configuration dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Sync Ad Blocks' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'The following new blocks have been created:' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'bottombox' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'coolrich' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'logo' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'topbox' is NOT present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify warning message 'These blocks don't exist in the list of ad blocks retrieved: 44b855457425459' is present.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- Pixelman_TC1155 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.Comscore.Pixelman@7378c252]" name="stopSelenium" is-config="true" duration-ms="9817" started-at="2014-07-22T11:19:38Z" finished-at="2014-07-22T11:19:48Z">
+        </test-method> <!-- AutomaticallyCreatedMPSAdSlots_TC4128 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.AutomaticallyCreatedMPSAdSlots@55c3b22c]" name="stopSelenium" is-config="true" duration-ms="573" started-at="2014-07-22T14:32:49Z" finished-at="2014-07-22T14:32:50Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Pixelman_TC1155 status=FAILURE method=Pixelman.Pixelman_TC1155()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.Comscore.Pixelman@7378c252] output=Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]]>
+                <![CDATA[[TestResult name=AutomaticallyCreatedMPSAdSlots_TC4128 status=SUCCESS method=AutomaticallyCreatedMPSAdSlots.AutomaticallyCreatedMPSAdSlots_TC4128()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.AutomaticallyCreatedMPSAdSlots@55c3b22c] output=STEP 1 AND SETUP]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.Comscore.Pixelman@7378c252]" name="startSelenium" is-config="true" duration-ms="2175" started-at="2014-07-22T11:19:48Z" finished-at="2014-07-22T11:19:50Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startSelenium -->
-        <test-method status="FAIL" signature="Pixelman_TC1155()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.Comscore.Pixelman@7378c252]" name="Pixelman_TC1155" duration-ms="78309" started-at="2014-07-22T11:19:50Z" finished-at="2014-07-22T11:21:08Z">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Source '//www.nbcudigitaladops.com/hosted/global_header.js' is present when it should not be. expected [false] but found [true]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Source '//www.nbcudigitaladops.com/hosted/global_header.js' is present when it should not be. expected [false] but found [true]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:494)
-	at org.testng.Assert.assertFalse(Assert.java:63)
-	at com.nbcuni.test.publisher.pageobjects.Content.ContentParent.VerifySourceNotInPage(ContentParent.java:172)
-	at com.nbcuni.test.publisher.tests.Advertising.Comscore.Pixelman.Pixelman_TC1155(Pixelman.java:69)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.retryFailed(Invoker.java:1049)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1254)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-            <line>
-              <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Login' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Modules' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to frame titled 'Modules'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Pixelman' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Check the 'Pixelman' check box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
-            </line>
-            <line>
-              <![CDATA[Switch back to the 'Modules' frame.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to frame titled 'Modules'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'DART' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Doubleclick for Publishers' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll by '-500'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify '//www.nbcudigitaladops.com/hosted/global_header.js' is present in page source.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Logout' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify '//www.nbcudigitaladops.com/hosted/global_header.js' is present in page source.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Login' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Modules' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to frame titled 'Modules'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Pub Ads' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Pixelman' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Uncheck the 'Pixelman' module checkbox.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll by '-500'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify '//www.nbcudigitaladops.com/hosted/global_header.js' is not present in page source.]]>
-            </line>
-            <line>
-              <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/Pixelman_TC1155_072214112108AM.png ]]>
-            </line>
-            <line>
-              <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/Pixelman_TC1155_072214112108AM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/Pixelman_TC1155_072214112108AM.png' height='500' width='500'/> </a>]]>
-            </line>
-            <line>
-              <![CDATA[Cache was cleared on test failure]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- Pixelman_TC1155 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.Comscore.Pixelman@7378c252]" name="stopSelenium" is-config="true" duration-ms="9805" started-at="2014-07-22T11:21:08Z" finished-at="2014-07-22T11:21:18Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=Pixelman_TC1155 status=FAILURE method=Pixelman.Pixelman_TC1155()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.Comscore.Pixelman@7378c252] output=Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.Comscore.Pixelman@7378c252]" name="startSelenium" is-config="true" duration-ms="2149" started-at="2014-07-22T11:21:18Z" finished-at="2014-07-22T11:21:20Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startSelenium -->
-        <test-method status="FAIL" signature="Pixelman_TC1155()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.Comscore.Pixelman@7378c252]" name="Pixelman_TC1155" duration-ms="77651" started-at="2014-07-22T11:21:20Z" finished-at="2014-07-22T11:22:38Z">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Source '//www.nbcudigitaladops.com/hosted/global_header.js' is present when it should not be. expected [false] but found [true]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Source '//www.nbcudigitaladops.com/hosted/global_header.js' is present when it should not be. expected [false] but found [true]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:494)
-	at org.testng.Assert.assertFalse(Assert.java:63)
-	at com.nbcuni.test.publisher.pageobjects.Content.ContentParent.VerifySourceNotInPage(ContentParent.java:172)
-	at com.nbcuni.test.publisher.tests.Advertising.Comscore.Pixelman.Pixelman_TC1155(Pixelman.java:69)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.retryFailed(Invoker.java:1049)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1254)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-            <line>
-              <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Login' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Modules' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to frame titled 'Modules'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Pixelman' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Check the 'Pixelman' check box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
-            </line>
-            <line>
-              <![CDATA[Switch back to the 'Modules' frame.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to frame titled 'Modules'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'DART' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Doubleclick for Publishers' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll by '-500'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify '//www.nbcudigitaladops.com/hosted/global_header.js' is present in page source.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Logout' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify '//www.nbcudigitaladops.com/hosted/global_header.js' is present in page source.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Login' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Modules' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to frame titled 'Modules'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Pub Ads' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Pixelman' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Uncheck the 'Pixelman' module checkbox.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll by '-500'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify '//www.nbcudigitaladops.com/hosted/global_header.js' is not present in page source.]]>
-            </line>
-            <line>
-              <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/Pixelman_TC1155_072214112238AM.png ]]>
-            </line>
-            <line>
-              <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/Pixelman_TC1155_072214112238AM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/Pixelman_TC1155_072214112238AM.png' height='500' width='500'/> </a>]]>
-            </line>
-            <line>
-              <![CDATA[Cache was cleared on test failure]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- Pixelman_TC1155 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.Comscore.Pixelman@7378c252]" name="stopSelenium" is-config="true" duration-ms="9791" started-at="2014-07-22T11:22:38Z" finished-at="2014-07-22T11:22:48Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=Pixelman_TC1155 status=FAILURE method=Pixelman.Pixelman_TC1155()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.Comscore.Pixelman@7378c252] output=Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.Comscore.Pixelman@7378c252]" name="stopGridAndHub" is-config="true" duration-ms="370" started-at="2014-07-22T11:22:48Z" finished-at="2014-07-22T11:22:48Z">
+        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.AutomaticallyCreatedMPSAdSlots@55c3b22c]" name="stopGridAndHub" is-config="true" duration-ms="380" started-at="2014-07-22T14:32:50Z" finished-at="2014-07-22T14:32:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopGridAndHub -->
-      </class> <!-- com.nbcuni.test.publisher.tests.Advertising.Comscore.Pixelman -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Advertising.MPS.AutomaticallyCreatedMPSAdSlots -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

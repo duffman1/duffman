@@ -1,11 +1,14 @@
 package com.nbcuni.test.publisher.tests.Advertising.MPS;
 
 import java.util.Arrays;
+
 import org.testng.Reporter;
 import org.testng.annotations.Test;
+
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Logout;
+import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.People.AddUser;
 
@@ -22,6 +25,16 @@ public class MPSBlockAccess extends ParentTest {
         	UserLogin userLogin = applib.openApplication();
         	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
             
+        	Reporter.log("SETUP");
+        	Modules modules = new Modules(webDriver, applib);
+        	taxonomy.NavigateSite("Modules");
+        	overlay.SwitchToActiveFrame();
+        	modules.EnterFilterName("Pixelman");
+        	modules.DisableModule("Pixelman");
+        	modules.EnterFilterName("MPS");
+        	modules.EnableModule("MPS");
+        	overlay.ClickCloseOverlayLnk();
+        	
         	Reporter.log("STEP 2");
         	taxonomy.NavigateSite("Structure>>MPS Blocks");
         	overlay.SwitchToFrame("MPS Blocks");
