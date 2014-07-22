@@ -29,7 +29,13 @@ public class SEOOptimizationModule extends ParentTest {
        
 		//Step 2
 		Modules module = new Modules(webDriver, applib);
-		module.VerifyModuleEnabled("Pub SEO");
+		taxonomy.NavigateSite("Modules");
+		overlay.SwitchToActiveFrame();
+		module.EnterFilterName("Pub SEO");
+		module.EnableModule("Pub SEO");
+		module.EnterFilterName("Devel");
+		module.DisableModule("Devel");
+		overlay.ClickCloseOverlayLnk();
     
 		//Step 3
 		taxonomy.NavigateSite("Structure>>Content types>>Post");
