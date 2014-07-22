@@ -17,7 +17,7 @@ public class MPSEndToEndIntegration extends ParentTest {
      *************************************************************************************/
     @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"})
     public void MPSEndToEndIntegration_TC3996() throws Exception {
-        	/*
+        	
         	Reporter.log("STEP 1");
         	UserLogin userLogin = applib.openApplication();
         	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
@@ -54,15 +54,16 @@ public class MPSEndToEndIntegration extends ParentTest {
             
             Reporter.log("STEP 8");
             taxonomy.NavigateSite("Home");
-            
+            Thread.sleep(5000); //TODO - figure out a good dynamic wait for this...
         	mpsConfiguration.VerifyTopMultiAdPresent();
+        	overlay.switchToDefaultContent();
         	
         	Reporter.log("CLEANUP");
         	taxonomy.NavigateSite("Structure>>Blocks");
         	overlay.SwitchToActiveFrame();
         	blocks.SelectRegion("topmulti (MPS)", "- None -");
         	blocks.ClickSaveBlocksBtn();
-        	*/
+        	
         	
     }
 }

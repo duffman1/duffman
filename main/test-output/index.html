@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,7 +37,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Default_suite">
-              <span class="suite-name border-passed">Default suite</span>
+              <span class="suite-name border-failed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -58,7 +58,7 @@
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="group-Default_suite">
-                    <span>3 groups</span>
+                    <span>1 group</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -90,21 +90,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Default_suite" class="hide-methods passed suite-Default_suite"> (hide)</a> <!-- hide-methods passed suite-Default_suite -->
-                      <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
                     </span>
-                    <div class="method-list-content passed suite-Default_suite">
+                    <div class="method-list-content failed suite-Default_suite">
                       <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.nbcuni.test.publisher.tests.Setup.TestSetup" hash-for-method="TestSetup_Test">TestSetup_Test</a> <!-- method navigator-link -->
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.Relationships" hash-for-method="Relationships_TC1390">Relationships_TC1390</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-Default_suite -->
+                    </div> <!-- method-list-content failed suite-Default_suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -116,25 +116,57 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-passed">
+          <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.nbcuni.test.publisher.tests.Setup.TestSetup</span>
+              <img src="failed.png"/>
+              <span class="class-name">com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.Relationships</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="TestSetup_Test">
-                  </a> <!-- TestSetup_Test -->
-                  <span class="method-name">TestSetup_Test</span>
+                  <a name="Relationships_TC1390">
+                  </a> <!-- Relationships_TC1390 -->
+                  <span class="method-name">Relationships_TC1390</span>
+                  <div class="stack-trace">java.lang.AssertionError: Error text of &apos;Warning: Invalid argument supplied for foreach() in element_children() (line 6452 of /mnt/www/html/nbcupublisher7qa5/docroot/includes/common.inc).&apos; is present in application.
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.nbcuni.test.publisher.pageobjects.ErrorChecking.ErrorChecking.VerifyNoMessageErrorsPresent(ErrorChecking.java:232)
+	at com.nbcuni.test.publisher.pageobjects.Overlay.SwitchToActiveFrame(Overlay.java:111)
+	at com.nbcuni.test.publisher.pageobjects.Content.CreateDefaultContent.TVShow(CreateDefaultContent.java:227)
+	at com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.Relationships.Relationships_TC1390(Relationships.java:76)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-passed -->
+          </div> <!-- suite-Default_suite-class-failed -->
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/private/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/testng-eclipse-1944640232/testng-customsuite.xml</span>
+            <span class="header-content">/private/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/testng-eclipse--1580731853/testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -143,7 +175,7 @@
 &lt;suite name=&quot;Default suite&quot;&gt;
   &lt;test verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.nbcuni.test.publisher.tests.Setup.TestSetup&quot;/&gt;
+      &lt;class name=&quot;com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.Relationships&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -171,23 +203,7 @@
               <span class="test-group-name">full</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">TestSetup_Test</span>
-                <br/>
-              </div> <!-- method-in-group -->
-            </div> <!-- test-group -->
-            <div class="test-group">
-              <span class="test-group-name">mpx</span>
-              <br/>
-              <div class="method-in-group">
-                <span class="method-in-group-name">TestSetup_Test</span>
-                <br/>
-              </div> <!-- method-in-group -->
-            </div> <!-- test-group -->
-            <div class="test-group">
-              <span class="test-group-name">smoke</span>
-              <br/>
-              <div class="method-in-group">
-                <span class="method-in-group-name">TestSetup_Test</span>
+                <span class="method-in-group-name">Relationships_TC1390</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -209,9 +225,9 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'TestSetup_Test')
-data.setCell(0, 2, 'com.nbcuni.test.publisher.tests.Setup.TestSetup')
-data.setCell(0, 3, 112946);
+data.setCell(0, 1, 'Relationships_TC1390')
+data.setCell(0, 2, 'com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.Relationships')
+data.setCell(0, 3, 75175);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
@@ -228,46 +244,83 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="reporter-method-div">
-              <span class="reporter-method-name">TestSetup_Test</span>
+              <span class="reporter-method-name">Relationships_TC1390</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.</span>
+                <span class="reporter-method-output">STEP 1</span>
+                <span class="reporter-method-output">Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.</span>
                 <span class="reporter-method-output">Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.</span>
                 <span class="reporter-method-output">Enter 'pa55word' in the 'Password' text box.</span>
                 <span class="reporter-method-output">Click the 'Login' button.</span>
-                <span class="reporter-method-output">Open url 'http://install.qa5.nbcupublisher7.publisher7.com/admin/modules'.</span>
-                <span class="reporter-method-output">Open url 'http://install.qa5.nbcupublisher7.publisher7.com/#overlay=admin/modules'.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'Modules dialog'.</span>
-                <span class="reporter-method-output">Enter 'Sticky Edit Actions' in the 'Filter Name' text box.</span>
-                <span class="reporter-method-output">Uncheck the 'Sticky Edit Actions' module checkbox.</span>
-                <span class="reporter-method-output">Click the 'Save configuration' button.</span>
-                <span class="reporter-method-output">Verify success message of 'The configuration options have been saved.' is present.</span>
-                <span class="reporter-method-output">Enter 'Devel' in the 'Filter Name' text box.</span>
-                <span class="reporter-method-output">Enter 'ImageField Focus' in the 'Filter Name' text box.</span>
-                <span class="reporter-method-output">Enter 'Database logging' in the 'Filter Name' text box.</span>
-                <span class="reporter-method-output">Enter 'Pub Post' in the 'Filter Name' text box.</span>
-                <span class="reporter-method-output">Check the 'Pub Post' check box.</span>
-                <span class="reporter-method-output">Click the 'Save configuration' button.</span>
-                <span class="reporter-method-output">Switch to frame titled 'Some required modules must be enabled'.</span>
-                <span class="reporter-method-output">Click the 'Continue' button to enable additional modules.</span>
-                <span class="reporter-method-output">Switch back to the 'Modules' frame.</span>
-                <span class="reporter-method-output">Switch to frame titled 'Modules'.</span>
-                <span class="reporter-method-output">Verify success message of 'The configuration options have been saved.' is present.</span>
-                <span class="reporter-method-output">Click the 'Close Overlay X'.</span>
-                <span class="reporter-method-output">Scroll by '-500'.</span>
+                <span class="reporter-method-output">SETUP - Create a TV Show</span>
                 <span class="reporter-method-output">Mouse over the 'Content' menu link.</span>
                 <span class="reporter-method-output">Mouse over the 'Add content' menu link.</span>
-                <span class="reporter-method-output">Click the 'Post' menu link.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'Create Post dialog'.</span>
-                <span class="reporter-method-output">Verify the 'Title' is present as a required field.</span>
-                <span class="reporter-method-output">Verify the 'Body' is present as a required field.</span>
-                <span class="reporter-method-output">Scroll the 'Publishing Options' link into view.</span>
-                <span class="reporter-method-output">Click the 'Publishing Options' link.</span>
-                <span class="reporter-method-output">Verify the 'Moderation State' is present as a required field.</span>
+                <span class="reporter-method-output">Click the 'TV Show' menu link.</span>
+                <span class="reporter-method-output">Switch to the active frame titled 'Create TV Show dialog'.</span>
                 <span class="reporter-method-output">Scroll to and click the 'Basic Information' tab.</span>
-                <span class="reporter-method-output">Enter 'futurePost07/21/2014f428512d07554b4' in the 'Title' text box.</span>
+                <span class="reporter-method-output">Enter '31094e4a6c81493' in the 'Title' text box.</span>
                 <span class="reporter-method-output">Switch to the Synopsis frame.</span>
                 <span class="reporter-method-output">Enter a randomized text string into the 'Body' text area.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'Create Post dialog'.</span>
+                <span class="reporter-method-output">Switch to the active frame titled 'Create TV Show dialog'.</span>
+                <span class="reporter-method-output">Click the Logo 'Select' button.</span>
+                <span class="reporter-method-output">Switch to the select file frame.</span>
+                <span class="reporter-method-output">Enter the file path for file upload.</span>
+                <span class="reporter-method-output">Click the 'Upload' button.</span>
+                <span class="reporter-method-output">Wait for the file link to be visible after upload.</span>
+                <span class="reporter-method-output">Click the 'Next' button.</span>
+                <span class="reporter-method-output">Click the 'Public Local Files' radio button.</span>
+                <span class="reporter-method-output">Click the 'Next' button.</span>
+                <span class="reporter-method-output">Verify the file image 'HanSolo' is present.</span>
+                <span class="reporter-method-output">Verify the img is loaded and visible.</span>
+                <span class="reporter-method-output">Click the 'Save' button.</span>
+                <span class="reporter-method-output">Switch to the active frame titled 'Create TV Show dialog'.</span>
+                <span class="reporter-method-output">Click the Cover Media 'Select' button.</span>
+                <span class="reporter-method-output">Switch to the select file frame.</span>
+                <span class="reporter-method-output">Enter the file path for file upload.</span>
+                <span class="reporter-method-output">Click the 'Upload' button.</span>
+                <span class="reporter-method-output">Wait for the file link to be visible after upload.</span>
+                <span class="reporter-method-output">Click the 'Next' button.</span>
+                <span class="reporter-method-output">Click the 'Public Local Files' radio button.</span>
+                <span class="reporter-method-output">Click the 'Next' button.</span>
+                <span class="reporter-method-output">Verify the file image 'HanSolo' is present.</span>
+                <span class="reporter-method-output">Verify the img is loaded and visible.</span>
+                <span class="reporter-method-output">Click the 'Save' button.</span>
+                <span class="reporter-method-output">Switch to the active frame titled 'Create TV Show dialog'.</span>
+                <span class="reporter-method-output">Click the Banner 'Select' button.</span>
+                <span class="reporter-method-output">Switch to the select file frame.</span>
+                <span class="reporter-method-output">Enter the file path for file upload.</span>
+                <span class="reporter-method-output">Click the 'Upload' button.</span>
+                <span class="reporter-method-output">Wait for the file link to be visible after upload.</span>
+                <span class="reporter-method-output">Click the 'Next' button.</span>
+                <span class="reporter-method-output">Click the 'Public Local Files' radio button.</span>
+                <span class="reporter-method-output">Click the 'Next' button.</span>
+                <span class="reporter-method-output">Verify the file image 'HanSolo' is present.</span>
+                <span class="reporter-method-output">Verify the img is loaded and visible.</span>
+                <span class="reporter-method-output">Click the 'Save' button.</span>
+                <span class="reporter-method-output">Switch to the active frame titled 'Create TV Show dialog'.</span>
+                <span class="reporter-method-output">Scroll the 'Publishing Options' link into view.</span>
+                <span class="reporter-method-output">Click the 'Publishing Options' link.</span>
+                <span class="reporter-method-output">Select 'Draft' from the 'Moderation State' drop down list.</span>
+                <span class="reporter-method-output">Click the 'Save' button.</span>
+                <span class="reporter-method-output">Verify success message of 'TV Show 31094e4a6c81493 has been created.' is present.</span>
+                <span class="reporter-method-output">STEP 2</span>
+                <span class="reporter-method-output">Mouse over the 'Structure' menu link.</span>
+                <span class="reporter-method-output">Mouse over the 'Content types' menu link.</span>
+                <span class="reporter-method-output">Mouse over the 'Movie' menu link.</span>
+                <span class="reporter-method-output">Click the 'Manage fields' menu link.</span>
+                <span class="reporter-method-output">Switch to the active frame titled 'Movie dialog'.</span>
+                <span class="reporter-method-output">STEP 3</span>
+                <span class="reporter-method-output">STEP 4 - N/A as Relationships field is already configured</span>
+                <span class="reporter-method-output">Click the 'Close Overlay X'.</span>
+                <span class="reporter-method-output">Scroll by '-500'.</span>
+                <span class="reporter-method-output">STEP 5</span>
+                <span class="reporter-method-output">Mouse over the 'Content' menu link.</span>
+                <span class="reporter-method-output">Mouse over the 'Add content' menu link.</span>
+                <span class="reporter-method-output">Click the 'Movie' menu link.</span>
+                <span class="reporter-method-output">Switch to the active frame titled 'Create Movie dialog'.</span>
+                <span class="reporter-method-output">Enter '16871a0bf037474' in the 'Title' text box.</span>
+                <span class="reporter-method-output">Switch to the Synopsis frame.</span>
+                <span class="reporter-method-output">Enter a randomized text string into the 'Body' text area.</span>
+                <span class="reporter-method-output">Switch to the active frame titled 'Create Movie dialog'.</span>
                 <span class="reporter-method-output">Click the 'Cover' select button.</span>
                 <span class="reporter-method-output">Switch to the select file frame.</span>
                 <span class="reporter-method-output">Enter the file path for file upload.</span>
@@ -279,26 +332,20 @@ return data;
                 <span class="reporter-method-output">Verify the file image 'HanSolo' is present.</span>
                 <span class="reporter-method-output">Verify the img is loaded and visible.</span>
                 <span class="reporter-method-output">Click the 'Save' button.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'Create Post dialog'.</span>
-                <span class="reporter-method-output">Scroll the 'Publishing Options' link into view.</span>
-                <span class="reporter-method-output">Click the 'Publishing Options' link.</span>
-                <span class="reporter-method-output">Select 'Draft' from the 'Moderation State' drop down list.</span>
+                <span class="reporter-method-output">Switch to the active frame titled 'Create Movie dialog'.</span>
+                <span class="reporter-method-output">STEP 6</span>
+                <span class="reporter-method-output">Select '31094e4a6c81493' from the 'Show' drop down list.</span>
                 <span class="reporter-method-output">Click the 'Save' button.</span>
-                <span class="reporter-method-output">Verify success message of 'Post futurePost07/21/2014f428512d07554b4 has been created.' is present.</span>
-                <span class="reporter-method-output">Click the 'Schedule' link in the work bench.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'futurePost07/21/2014f428512d07554b4 dialog'.</span>
-                <span class="reporter-method-output">Click the 'Add Scheduled Revision' link.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'futurePost07/21/2014f428512d07554b4 dialog'.</span>
-                <span class="reporter-method-output">Select revision titled 'futurePost07/21/2014f428512d07554b4'.</span>
-                <span class="reporter-method-output">Verify that the 'Operation' option count equals '5'.</span>
-                <span class="reporter-method-output">Select 'Moderate to Published' from the 'Select operation' drop down list.</span>
-                <span class="reporter-method-output">Enter '07/21/2014' in the 'Date' text box.</span>
-                <span class="reporter-method-output">Enter '09:15 PM' in the 'Time' text box.</span>
-                <span class="reporter-method-output">Click the 'Schedule' button.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'futurePost07/21/2014f428512d07554b4 dialog'.</span>
-                <span class="reporter-method-output">Verify success message of 'The scheduled revision operation has been saved' is present.</span>
-                <span class="reporter-method-output">Click the 'Close Overlay X'.</span>
-                <span class="reporter-method-output">Scroll by '-500'.</span>
+                <span class="reporter-method-output">Verify success message of 'Movie 16871a0bf037474 has been created.' is present.</span>
+                <span class="reporter-method-output">STEP 7 - N/A to Movie content type</span>
+                <span class="reporter-method-output">STEP 8</span>
+                <span class="reporter-method-output">Mouse over the 'Content' menu link.</span>
+                <span class="reporter-method-output">Mouse over the 'Add content' menu link.</span>
+                <span class="reporter-method-output">Click the 'TV Show' menu link.</span>
+                <span class="reporter-method-output">Switch to the active frame titled 'Create TV Show dialog'.</span>
+                <span class="reporter-method-output">Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/Relationships_TC1390_072214093730AM.png </span>
+                <span class="reporter-method-output"><br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/Relationships_TC1390_072214093730AM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/Relationships_TC1390_072214093730AM.png' height='500' width='500'/> </a></span>
+                <span class="reporter-method-output">Cache was cleared on test failure</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -316,26 +363,28 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.nbcuni.test.publisher.tests.Setup.TestSetup</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.Relationships</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">startGridAndHub</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
                 <span class="method-name">startSelenium</span>
-                <span class="method-start">11862 ms</span>
+                <span class="method-start">11854 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">TestSetup_Test</span>
-                <span class="method-start">14387 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">Relationships_TC1390</span>
+                <span class="method-start">14436 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">stopSelenium([TestResult name=TestSetup_Test status=SUCCESS method=TestSetup.TestSetup_Test()[pri:0, instance:com...)</span>
-                <span class="method-start">127334 ms</span>
+                <span class="method-name">stopSelenium([TestResult name=Relationships_TC1390 status=FAILURE method=Relationships.Relationships_TC1390()[pri...)</span>
+                <span class="method-start">89613 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-suite after">
                 <span class="method-name">stopGridAndHub</span>
-                <span class="method-start">128223 ms</span>
+                <span class="method-start">99101 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

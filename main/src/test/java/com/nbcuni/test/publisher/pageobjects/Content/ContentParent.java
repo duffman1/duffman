@@ -1,9 +1,9 @@
 package com.nbcuni.test.publisher.pageobjects.Content;
 
 import com.nbcuni.test.publisher.common.AppLib;
+import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.pageobjects.ErrorChecking.ErrorChecking;
 import com.nbcuni.test.publisher.common.Driver.Driver;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -11,8 +11,8 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.Reporter;
-
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 /*********************************************
  * publisher.nbcuni.com Content Parent Library. Copyright
@@ -25,12 +25,14 @@ public class ContentParent {
 
     private Driver webDriver;
     private ErrorChecking errorChecking;
+    private Config config;
     
     //PAGE OBJECT CONSTRUCTOR
     public ContentParent(Driver webDriver, AppLib applib) {
         this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
         errorChecking = new ErrorChecking(webDriver, applib);
+        config = new Config();
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -63,6 +65,9 @@ public class ContentParent {
     
     @FindBy(how = How.XPATH, using = "//body")
     private WebElement Body_Txt;
+    
+    @FindBy(how = How.XPATH, using = "//div[@class='throbber']")
+    private WebElement Throbber_Img;
     
     private WebElement RequiredField_Ast(String field) {
     	return webDriver.findElement(By.xpath("//*[contains(text(), '" + field + "')]/span[text()='*']"));
@@ -173,6 +178,23 @@ public class ContentParent {
     	
     	Reporter.log("Scroll by '" + scrollCount + "'.");
     	webDriver.executeScript("window.scrollBy(0," + scrollCount + ");"); 
+    }
+    
+    public void WaitForThrobberNotPresent() throws Exception {
+    	
+    	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+    	
+    	for (int I = 0; I < 30; I++) {
+    		if (I == 30) { Assert.fail("Throbber is still present after timeout."); }
+    		try {
+    			Throbber_Img.getLocation();
+    		}
+    		catch (Exception e) {
+    			break;
+    		}
+    	}
+    	
+    	webDriver.manage().timeouts().implicitlyWait(config.getImplicitWaitTime(), TimeUnit.SECONDS);
     }
     
 }

@@ -2,7 +2,7 @@ package com.nbcuni.test.publisher.pageobjects.Content;
 
 import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.publisher.common.Driver.Driver;
-
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -27,7 +27,7 @@ public class Relationships {
 	//PAGE OBJECT CONSTRUCTORS
     public Relationships(Driver webDriver, AppLib applib) {
     	PageFactory.initElements(webDriver, this);
-        wait = new WebDriverWait(webDriver, 10);
+        wait = (WebDriverWait) new WebDriverWait(webDriver, 10).ignoring(StaleElementReferenceException.class);
     }
     
     //PAGE OBJECT IDENTIFIERS AND SCRIPTS

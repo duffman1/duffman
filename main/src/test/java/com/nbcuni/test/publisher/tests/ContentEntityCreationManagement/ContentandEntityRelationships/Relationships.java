@@ -66,6 +66,7 @@ public class Relationships extends ParentTest{
         Reporter.log("STEP 6");
         com.nbcuni.test.publisher.pageobjects.Content.Relationships relationshipsContent = new com.nbcuni.test.publisher.pageobjects.Content.Relationships(webDriver, applib);
         relationshipsContent.SelectShow(tvShowTitle1);
+        contentParent.WaitForThrobberNotPresent();
         contentParent.ClickSaveBtn();
         contentParent.VerifyMessageStatus("Movie " + movieTitle + " has been created.");
         
