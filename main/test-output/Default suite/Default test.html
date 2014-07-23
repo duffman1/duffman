@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Jul 22 14:30:37 EDT 2014</td>
+<td>Started on:</td><td>Wed Jul 23 08:13:20 EDT 2014</td>
 </tr>
-<tr><td>Total time:</td><td>132 seconds (132560 ms)</td>
+<tr><td>Total time:</td><td>126 seconds (126825 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,125 +75,213 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.nbcuni.test.publisher.tests.Advertising.MPS.AutomaticallyCreatedMPSAdSlots.AutomaticallyCreatedMPSAdSlots_TC4128()'><b>AutomaticallyCreatedMPSAdSlots_TC4128</b><br>Test class: com.nbcuni.test.publisher.tests.Advertising.MPS.AutomaticallyCreatedMPSAdSlots<br/>
-<a href="#Output-1250705485" onClick='toggleBox("Output-1250705485", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.Relationships.Relationships_TC1390()'><b>Relationships_TC1390</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.Relationships<br/>
+<a href="#Output-537101922" onClick='toggleBox("Output-537101922", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1250705485" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1250705485">
-STEP 1 AND SETUP<br/>
+<a href="#Output-537101922" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-537101922">
+STEP 1<br/>
 Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.<br/>
 Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
 Enter 'pa55word' in the 'Password' text box.<br/>
 Click the 'Login' button.<br/>
-Click the 'Modules' menu link.<br/>
-Switch to the active frame titled 'Modules dialog'.<br/>
-Enter 'MPS' in the 'Filter Name' text box.<br/>
-Uncheck the 'MPS' module checkbox.<br/>
-Click the 'Save configuration' button.<br/>
-Verify success message of 'The configuration options have been saved.' is present.<br/>
-Click the 'Close Overlay X'.<br/>
-Scroll by '-500'.<br/>
-Mouse over the 'Modules' menu link.<br/>
-Click the 'Uninstall' menu link.<br/>
-Switch to the active frame titled 'Modules dialog'.<br/>
-Click the 'MPS' uninstall checkbox.<br/>
-Click the 'Uninstall' button.<br/>
-Switch to the active frame titled 'Confirm uninstall dialog'.<br/>
-Verify the text 'The following modules will be completely uninstalled from your site, and all data from these modules will be lost!' is present on the page.<br/>
-Verify the text 'MPS' is present on the page.<br/>
-Click the 'Uninstall' button to confirm.<br/>
-Switch to the active frame titled 'Modules dialog'.<br/>
-Click the 'Close Overlay X'.<br/>
-Scroll by '-500'.<br/>
-Click the 'Modules' menu link.<br/>
-Switch to the active frame titled 'Modules dialog'.<br/>
-Enter 'Pixelman' in the 'Filter Name' text box.<br/>
-Enter 'MPS' in the 'Filter Name' text box.<br/>
-Check the 'MPS' check box.<br/>
-Click the 'Save configuration' button.<br/>
-Switch to frame titled 'Some required modules must be enabled'.<br/>
-Switch back to the 'Modules' frame.<br/>
-Switch to frame titled 'Modules'.<br/>
-Verify success message of 'The configuration options have been saved.' is present.<br/>
-Click the 'Close Overlay X'.<br/>
-Scroll by '-500'.<br/>
-Mouse over the 'Structure' menu link.<br/>
-Mouse over the 'MPS Blocks' menu link.<br/>
-Click the 'Add' menu link.<br/>
-Switch to the active frame titled 'Add a new MPS block dialog'.<br/>
-Enter '44b855457425459' in the 'Block Name' text box.<br/>
+SETUP - Create a TV Show<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Add content' menu link.<br/>
+Click the 'TV Show' menu link.<br/>
+Switch to the active frame titled 'Create TV Show dialog'.<br/>
+Scroll to and click the 'Basic Information' tab.<br/>
+Enter 'dc83976b0b3045a' in the 'Title' text box.<br/>
+Switch to the Synopsis frame.<br/>
+Enter a randomized text string into the 'Body' text area.<br/>
+Switch to the active frame titled 'Create TV Show dialog'.<br/>
+Click the Logo 'Select' button.<br/>
+Switch to the select file frame.<br/>
+Enter the file path for file upload.<br/>
+Click the 'Upload' button.<br/>
+Wait for the file link to be visible after upload.<br/>
+Click the 'Next' button.<br/>
+Click the 'Public Local Files' radio button.<br/>
+Click the 'Next' button.<br/>
+Verify the file image 'HanSolo' is present.<br/>
+Verify the img is loaded and visible.<br/>
 Click the 'Save' button.<br/>
-Verify success message of '44b855457425459 has been created.' is present.<br/>
-Click the 'Close Overlay X'.<br/>
-Scroll by '-500'.<br/>
-Mouse over the 'Configuration' menu link.<br/>
-Mouse over the 'Web services' menu link.<br/>
-Click the 'MPS Configuration' menu link.<br/>
-Switch to the active frame titled 'MPS Configuration dialog'.<br/>
-Enter 'mps.io' in the 'MPS Host' text box.<br/>
-Click the 'Document Write' radio button.<br/>
-Enter 'pub7-development' in the 'Site Instance Override' text box.<br/>
-Click the 'Save configuration' button.<br/>
-Verify success message of 'The configuration options have been saved.' is present.<br/>
+Switch to the active frame titled 'Create TV Show dialog'.<br/>
+Click the Cover Media 'Select' button.<br/>
+Switch to the select file frame.<br/>
+Enter the file path for file upload.<br/>
+Click the 'Upload' button.<br/>
+Wait for the file link to be visible after upload.<br/>
+Click the 'Next' button.<br/>
+Click the 'Public Local Files' radio button.<br/>
+Click the 'Next' button.<br/>
+Verify the file image 'HanSolo' is present.<br/>
+Verify the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'Create TV Show dialog'.<br/>
+Click the Banner 'Select' button.<br/>
+Switch to the select file frame.<br/>
+Enter the file path for file upload.<br/>
+Click the 'Upload' button.<br/>
+Wait for the file link to be visible after upload.<br/>
+Click the 'Next' button.<br/>
+Click the 'Public Local Files' radio button.<br/>
+Click the 'Next' button.<br/>
+Verify the file image 'HanSolo' is present.<br/>
+Verify the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'Create TV Show dialog'.<br/>
+Scroll the 'Publishing Options' link into view.<br/>
+Click the 'Publishing Options' link.<br/>
+Select 'Draft' from the 'Moderation State' drop down list.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'TV Show dc83976b0b3045a has been created.' is present.<br/>
 STEP 2<br/>
-Click the 'Sync Ad Blocks' button.<br/>
-Verify success message of 'The configuration options have been saved.' is present.<br/>
-Verify the text 'The following new blocks have been created:' is present on the page.<br/>
-Verify the text 'topbox' is present on the page.<br/>
-Verify the text 'topmulti' is present on the page.<br/>
-Verify the text 'bottommulti' is present on the page.<br/>
-Verify the text 'topbanner' is present on the page.<br/>
-STEP 3<br/>
-Verify warning message 'These blocks don't exist in the list of ad blocks retrieved: 44b855457425459' is present.<br/>
-Click the 'Close Overlay X'.<br/>
-Scroll by '-500'.<br/>
-STEP 4<br/>
 Mouse over the 'Structure' menu link.<br/>
-Click the 'Blocks' menu link.<br/>
-Switch to the active frame titled 'Blocks dialog'.<br/>
-Select the block name 'bottommulti (MPS)' from the '- None -' drop down list.<br/>
-Select the block name 'topbanner (MPS)' from the '- None -' drop down list.<br/>
-Select the block name 'topbox (MPS)' from the '- None -' drop down list.<br/>
-Select the block name 'topmulti (MPS)' from the '- None -' drop down list.<br/>
-Select the block name '44b855457425459 (MPS)' from the '- None -' drop down list.<br/>
-STEP 5<br/>
-Select the block name '44b855457425459 (MPS)' from the 'Header' drop down list.<br/>
-Click the 'Save Blocks' button.<br/>
-Verify success message of 'The block settings have been updated.' is present.<br/>
+Mouse over the 'Content types' menu link.<br/>
+Mouse over the 'Movie' menu link.<br/>
+Click the 'Manage fields' menu link.<br/>
+Switch to the active frame titled 'Movie dialog'.<br/>
+STEP 3<br/>
+Enter 'Relationships' in the 'Add existing field' text box.<br/>
+Select 'Pub TV Relationship: field_tv_shows (TV Shows)' from the 'select existing field' drop down list.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'Relationships dialog'.<br/>
+STEP 4<br/>
+Select 'Show' from the 'TV Relationship Widget Depth' drop down list.<br/>
+Click the 'Save settings' button.<br/>
+Verify success message of 'Saved Relationships configuration.' is present.<br/>
 Click the 'Close Overlay X'.<br/>
 Scroll by '-500'.<br/>
-STEP 6 - N/A<br/>
-STEP 7<br/>
-Mouse over the 'Configuration' menu link.<br/>
-Mouse over the 'Web services' menu link.<br/>
-Click the 'MPS Configuration' menu link.<br/>
-Switch to the active frame titled 'MPS Configuration dialog'.<br/>
-Enter 'mps.io' in the 'MPS Host' text box.<br/>
-Click the 'Document Write' radio button.<br/>
-Enter 'sandbox' in the 'Site Instance Override' text box.<br/>
-Click the 'Save configuration' button.<br/>
-Verify success message of 'The configuration options have been saved.' is present.<br/>
+STEP 5<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Add content' menu link.<br/>
+Click the 'Movie' menu link.<br/>
+Switch to the active frame titled 'Create Movie dialog'.<br/>
+Enter '56df199bea944e3' in the 'Title' text box.<br/>
+Switch to the Synopsis frame.<br/>
+Enter a randomized text string into the 'Body' text area.<br/>
+Switch to the active frame titled 'Create Movie dialog'.<br/>
+Click the 'Cover' select button.<br/>
+Switch to the select file frame.<br/>
+Enter the file path for file upload.<br/>
+Click the 'Upload' button.<br/>
+Wait for the file link to be visible after upload.<br/>
+Click the 'Next' button.<br/>
+Click the 'Public Local Files' radio button.<br/>
+Click the 'Next' button.<br/>
+Verify the file image 'HanSolo' is present.<br/>
+Verify the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'Create Movie dialog'.<br/>
+STEP 6<br/>
+Select 'dc83976b0b3045a' from the 'Show' drop down list.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'Movie 56df199bea944e3 has been created.' is present.<br/>
+STEP 7 - N/A to Movie content type<br/>
 STEP 8<br/>
-Open mps service page at 'http://mps.io/request/describe/sandbox'.<br/>
-Verify the text '{"instance":{"dart_mode":"gpt-asynchronous","multislot":"0"},"adunits":{"Box Ad First":{"unit":"Box Ad First","slot":"topbox","sizes":["300x250"],"responsive":0},"Box Ad Second":{"unit":"Box Ad Second","slot":"bottombox","sizes":["300x250"],"responsive":0},"Cool Rich 1":{"unit":"Cool Rich 1","slot":"coolrich","responsive":0},"Cool Rich 2":{"unit":"Cool Rich 2","slot":"coolrich","responsive":0},"Flex Ad First":{"unit":"Flex Ad First","slot":"topmulti","sizes":["300x250","160x600","300x600"],"responsive":0},"Flex Ad Second":{"unit":"Flex Ad Second","slot":"bottommulti","sizes":["300x250","160x600","300x600"],"responsive":0},"Logo A":{"unit":"Logo A","slot":"logo","sizes":["88x31","120x90"],"responsive":0},"Top Banner":{"unit":"Top Banner","slot":"topbanner","sizes":["728x90","970x66"],"responsive":0},"Top Banner B":{"unit":"Top Banner B","slot":"topbanner","sizes":["2x2"],"responsive":0}},"components":["id-0516-4520471","monitoring","test.css"]}' is present on the page.<br/>
-STEP 9<br/>
-Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.<br/>
-Mouse over the 'Configuration' menu link.<br/>
-Mouse over the 'Web services' menu link.<br/>
-Click the 'MPS Configuration' menu link.<br/>
-Switch to the active frame titled 'MPS Configuration dialog'.<br/>
-Click the 'Sync Ad Blocks' button.<br/>
-Verify the text 'The following new blocks have been created:' is present on the page.<br/>
-Verify the text 'bottombox' is present on the page.<br/>
-Verify the text 'coolrich' is present on the page.<br/>
-Verify the text 'logo' is present on the page.<br/>
-Verify the text 'topbox' is NOT present on the page.<br/>
-Verify warning message 'These blocks don't exist in the list of ad blocks retrieved: 44b855457425459' is present.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Add content' menu link.<br/>
+Click the 'TV Show' menu link.<br/>
+Switch to the active frame titled 'Create TV Show dialog'.<br/>
+Scroll to and click the 'Basic Information' tab.<br/>
+Enter '471b5b4b75da479' in the 'Title' text box.<br/>
+Switch to the Synopsis frame.<br/>
+Enter a randomized text string into the 'Body' text area.<br/>
+Switch to the active frame titled 'Create TV Show dialog'.<br/>
+Click the Logo 'Select' button.<br/>
+Switch to the select file frame.<br/>
+Enter the file path for file upload.<br/>
+Click the 'Upload' button.<br/>
+Wait for the file link to be visible after upload.<br/>
+Click the 'Next' button.<br/>
+Click the 'Public Local Files' radio button.<br/>
+Click the 'Next' button.<br/>
+Verify the file image 'HanSolo' is present.<br/>
+Verify the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'Create TV Show dialog'.<br/>
+Click the Cover Media 'Select' button.<br/>
+Switch to the select file frame.<br/>
+Enter the file path for file upload.<br/>
+Click the 'Upload' button.<br/>
+Wait for the file link to be visible after upload.<br/>
+Click the 'Next' button.<br/>
+Click the 'Public Local Files' radio button.<br/>
+Click the 'Next' button.<br/>
+Verify the file image 'HanSolo' is present.<br/>
+Verify the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'Create TV Show dialog'.<br/>
+Click the Banner 'Select' button.<br/>
+Switch to the select file frame.<br/>
+Enter the file path for file upload.<br/>
+Click the 'Upload' button.<br/>
+Wait for the file link to be visible after upload.<br/>
+Click the 'Next' button.<br/>
+Click the 'Public Local Files' radio button.<br/>
+Click the 'Next' button.<br/>
+Verify the file image 'HanSolo' is present.<br/>
+Verify the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'Create TV Show dialog'.<br/>
+Scroll the 'Publishing Options' link into view.<br/>
+Click the 'Publishing Options' link.<br/>
+Select 'Draft' from the 'Moderation State' drop down list.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'TV Show 471b5b4b75da479 has been created.' is present.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Add content' menu link.<br/>
+Click the 'TV Season' menu link.<br/>
+Switch to the active frame titled 'Create TV Season dialog'.<br/>
+Scroll to and click the 'Basic Information' tab.<br/>
+Enter '7828b380928a455' in the 'Title' text box.<br/>
+Enter '1' in the 'Season Number' text box.<br/>
+Switch to the Synopsis frame.<br/>
+Enter a randomized text string into the 'Body' text area.<br/>
+Switch to the active frame titled 'Create TV Season dialog'.<br/>
+Click the 'Cover' select button.<br/>
+Switch to the select file frame.<br/>
+Enter the file path for file upload.<br/>
+Click the 'Upload' button.<br/>
+Wait for the file link to be visible after upload.<br/>
+Click the 'Next' button.<br/>
+Click the 'Public Local Files' radio button.<br/>
+Click the 'Next' button.<br/>
+Verify the file image 'HanSolo' is present.<br/>
+Verify the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'Create TV Season dialog'.<br/>
+Scroll the 'Publishing Options' link into view.<br/>
+Click the 'Publishing Options' link.<br/>
+Select 'Draft' from the 'Moderation State' drop down list.<br/>
+Click the 'Relationships' link.<br/>
+Select '471b5b4b75da479' from the 'Show' drop down list.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'TV Season 7828b380928a455 has been created.' is present.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Add content' menu link.<br/>
+Click the 'TV Episode' menu link.<br/>
+Switch to the active frame titled 'Create TV Episode dialog'.<br/>
+Scroll to and click the 'Basic Information' tab.<br/>
+Enter '6250d920649e4b2' in the 'Title' text box.<br/>
+Enter '1' in the 'Episode Number' text box.<br/>
+Switch to the Synopsis frame.<br/>
+Enter a randomized text string into the 'Body' text area.<br/>
+Switch to the active frame titled 'Create TV Episode dialog'.<br/>
+Scroll the 'Publishing Options' link into view.<br/>
+Click the 'Publishing Options' link.<br/>
+Select 'Draft' from the 'Moderation State' drop down list.<br/>
+Click the 'Relationships' link.<br/>
+Select '471b5b4b75da479' from the 'Show' drop down list.<br/>
+Select '7828b380928a455' from the 'Season' drop down list.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'TV Episode 6250d920649e4b2 has been created.' is present.<br/>
 </div>
 </td>
 <td></td>
-<td>129</td>
-<td>com.nbcuni.test.publisher.tests.Advertising.MPS.AutomaticallyCreatedMPSAdSlots@55c3b22c</td></tr>
+<td>123</td>
+<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.Relationships@6f20bd9a</td></tr>
 </table><p>
 </body>
 </html>
