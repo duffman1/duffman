@@ -139,6 +139,7 @@ public class Taxonomy {
     	    		else if (menuPath.contains("Run cron")) {
     	    			Thread.sleep(250);
     	        		wait.until(ExpectedConditions.visibilityOf(HomeTier1_Lnk));
+    	        		Reporter.log("Mouse over the 'Home' menu link.");
     	        		actions.moveToElement(HomeTier1_Lnk).build().perform();
     	        		Thread.sleep(250);
     	        		WebElement cronLnk = null;
@@ -148,6 +149,7 @@ public class Taxonomy {
     	        		else {
     	        			cronLnk = RunCron_Lnks().get(1);
     	        		}
+    	        		Reporter.log("Click the 'Run cron' menu link.");
     	        		wait.until(ExpectedConditions.visibilityOf(cronLnk)).click();
     	        		this.MouseOffTaxonomyElement(cronLnk);
     	        		break;
@@ -155,6 +157,7 @@ public class Taxonomy {
     	    		else {
     	    			if (depth == 1) {
         	    			Thread.sleep(250);
+        	    			Reporter.log("Click the 'Home' menu link.");
         	    			wait.until(ExpectedConditions.visibilityOf(HomeTier1_Lnk)).click();
         	    			break;
         	    		}
@@ -163,8 +166,10 @@ public class Taxonomy {
         	    			Thread.sleep(250);
         	        		wait.until(ExpectedConditions.visibilityOf(HomeTier1_Lnk));
         	        		//webDriver.executeScript(MouseOver_Js, HomeTier1_Lnk);
+        	        		Reporter.log("Mouse over the 'Home' menu link.");
         	        		actions.moveToElement(HomeTier1_Lnk).build().perform();
         	        		Thread.sleep(250);
+        	        		Reporter.log("Click the '" + HomeTier2_Lnk(tierLevel) + "' menu link.");
         	        		wait.until(ExpectedConditions.visibilityOf(HomeTier2_Lnk(tierLevel))).click();
         	        		this.MouseOffTaxonomyElement(HomeTier2_Lnk(tierLevel));
         	        		break;
