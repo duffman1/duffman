@@ -56,6 +56,10 @@ public class A1_TestSetup extends ParentTest {
         	modules.EnterFilterName("Devel");
             modules.DisableModule("Devel");
             
+            //disable devel module
+        	modules.EnterFilterName("Acquia Purge");
+            modules.DisableModule("Acquia Purge");
+            
             //disable the deprecated 'ImageField Focus" module.
             modules.EnterFilterName("ImageField Focus");
             modules.DisableModule("ImageField Focus");

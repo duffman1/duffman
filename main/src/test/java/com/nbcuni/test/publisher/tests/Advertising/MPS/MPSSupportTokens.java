@@ -92,7 +92,7 @@ public class MPSSupportTokens extends ParentTest {
             contentParent.VerifyMessageStatus("Movie " + movieTitle + " has been updated.");
             
             Reporter.log("STEP 6");
-            contentParent.VerifySourceNotInPage("\"cat\":\"content\"");
+            contentParent.VerifySourceInPage(Arrays.asList("\"cat\":\"" + baseAlias + "\""));
             
             Reporter.log("STEP 7");
             workBench.ClickWorkBenchTab("Edit Draft");

@@ -66,8 +66,8 @@ public class SSODefinedDomains extends ParentTest {
 	        
 			Reporter.log("STEP 9");
 			SSOLogin ssoLogin = new SSOLogin(webDriver);
-			ssoLogin.EnterSSOID("206424392");
-			ssoLogin.EnterPassword("tufNewcyd577BC");
+			ssoLogin.EnterSSOID(config.getConfigValue("SSOUsername"));
+		    ssoLogin.EnterPassword(config.getConfigValue("SSOPassword"));
 			ssoLogin.ClickSignInBtn();
 	       
 			Reporter.log("STEP 10");
@@ -76,7 +76,7 @@ public class SSODefinedDomains extends ParentTest {
 			contentParent.VerifyPageContentNotPresent(Arrays.asList("Modules"));
 			
 			Reporter.log("STEP 11");
-			contentParent.VerifyPageContentPresent(Arrays.asList("Brandon.Clark@nbcuni.com"));
+			contentParent.VerifyPageContentPresent(Arrays.asList(config.getConfigValue("SSOEmail")));
 	        
 			Reporter.log("STEP 12");
 			logout.ClickLogoutBtn();
@@ -85,8 +85,8 @@ public class SSODefinedDomains extends ParentTest {
 			taxonomy.NavigateSite("People");
 			overlay.SwitchToActiveFrame();
 			People people = new People(webDriver, applib);
-			people.SeachForUsername("Brandon.Clark");
-			people.ClickUsernameLnk("Brandon.Clark");
+			people.SeachForUsername(config.getConfigValue("SSOEmail"));
+			people.ClickUsernameLnk(config.getConfigValue("SSOEmail"));
 	        
 			Reporter.log("STEP 13");
 			applib.openSitePage("/admin/config/people/simplesamlphp_auth");

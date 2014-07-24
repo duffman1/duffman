@@ -57,28 +57,28 @@ public class SSOManageUsers extends ParentTest {
 		    logout.ClickLogoutBtn();
 		    applib.openSitePage("/saml_login");
 		    SSOLogin ssoLogin = new SSOLogin(webDriver);
-		    ssoLogin.EnterSSOID("206424392");
-		    ssoLogin.EnterPassword("tufNewcyd577BC");
+		    ssoLogin.EnterSSOID(config.getConfigValue("SSOUsername"));
+		    ssoLogin.EnterPassword(config.getConfigValue("SSOPassword"));
 		    ssoLogin.ClickSignInBtn();
 		    webDriver.navigate().refresh();
 		    new WebDriverWait(webDriver, 30).until(ExpectedConditions.titleContains("Site-Install"));
 		    contentParent.VerifyPageContentNotPresent(Arrays.asList("Modules"));
-		    contentParent.VerifyPageContentPresent(Arrays.asList("Brandon.Clark@nbcuni.com"));
+		    contentParent.VerifyPageContentPresent(Arrays.asList(config.getConfigValue("SSOEmail")));
 		    	
 		    Reporter.log("STEP 3");
 		    WorkBench workBench = new WorkBench(webDriver, applib);
 		    workBench.ClickWorkBenchTab("Edit");
 		    overlay.SwitchToActiveFrame();
 		    AddUser addUser = new AddUser(webDriver, applib);
-		    addUser.VerifyUsernameValueAndIsDisabled("Brandon.Clark@nbcuni.com");
-		    addUser.VerifyEmailAddressValueAndIsDisabled("Brandon.Clark@nbcuni.com");
+		    addUser.VerifyUsernameValueAndIsDisabled(config.getConfigValue("SSOEmail"));
+		    addUser.VerifyEmailAddressValueAndIsDisabled(config.getConfigValue("SSOEmail"));
 		    
 		    Reporter.log("STEP 4");
 		    parentWindow = webDriver.getWindowHandle();
 		    addUser.ClickChangeYourPasswordLnk();
 	        allWindows = webDriver.getWindowHandles();  
-	        for (String window : allWindows){
-	           if (!window.equals(parentWindow)){
+	        for (String window : allWindows) {
+	           if (!window.equals(parentWindow)) {
 	             webDriver.switchTo().window(window);
 	             break;
 	           }
@@ -154,8 +154,6 @@ public class SSOManageUsers extends ParentTest {
 				overlay.ClickCloseOverlayLnk();
 			}
 			catch (Exception | AssertionError e2) {}
-			
-	    
 			Assert.fail(e.toString());
 		}
 		

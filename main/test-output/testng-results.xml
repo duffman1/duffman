@@ -2,10 +2,7 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
     <line>
-      <![CDATA[STEP 1]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com/user'.]]>
+      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
     </line>
     <line>
       <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
@@ -15,9 +12,6 @@
     </line>
     <line>
       <![CDATA[Click the 'Login' button.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 2]]>
     </line>
     <line>
       <![CDATA[Click the 'Modules' menu link.]]>
@@ -26,10 +20,10 @@
       <![CDATA[Switch to frame titled 'Modules'.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Pub SSO' in the 'Filter Name' text box.]]>
+      <![CDATA[Enter 'Logo Manager' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Verify the 'Pub SSO' check box is checked.]]>
+      <![CDATA[Verify the 'Logo Manager' check box is checked.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
@@ -41,43 +35,13 @@
       <![CDATA[Click the 'Home' menu link.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Configuration' menu link.]]>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'People' menu link.]]>
+      <![CDATA[Click the 'Logos' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'SimpleSAMLphp Auth Settings' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'People dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the file path for certificate upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'A certificate exists for this instance of SimpleSAMLphp.' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Activate authentication via SimpleSAMLphp' check box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+      <![CDATA[Switch to the active frame titled 'Manage Logo dialog'.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
@@ -86,190 +50,67 @@
       <![CDATA[Scroll by '-500'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Logout' button.]]>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com/saml_login'.]]>
+      <![CDATA[Mouse over the 'Logos' menu link.]]>
     </line>
     <line>
-      <![CDATA[Enter '206424392' in the 'SSO ID' text box.]]>
+      <![CDATA[Click the 'Add Logo' menu link.]]>
     </line>
     <line>
-      <![CDATA[Enter 'tufNewcyd577BC' in the 'Password' text box.]]>
+      <![CDATA[Switch to the active frame titled 'Add Logo dialog'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Sign In' button.]]>
+      <![CDATA[Enter 'e7935ddbe5614d4' in the 'Title' text box.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'Modules' is NOT present on the page.]]>
+      <![CDATA[Enter the file path for file upload.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'Brandon.Clark@nbcuni.com' is present on the page.]]>
+      <![CDATA[Click the 'Upload' button.]]>
     </line>
     <line>
-      <![CDATA[STEP 3]]>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Edit' link in the work bench.]]>
+      <![CDATA[Verify the file image 'nbclogosmall' is present.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Brandon.Clark@nbcuni.com dialog'.]]>
+      <![CDATA[Verify the the img is loaded and visible.]]>
     </line>
     <line>
-      <![CDATA[Verify the 'Username' value is 'Brandon.Clark@nbcuni.com' and the text box is disabled.]]>
+      <![CDATA[Enter '2014-07-24' in the 'Start Date' text box.]]>
     </line>
     <line>
-      <![CDATA[Verify the 'E-mail address' value is 'Brandon.Clark@nbcuni.com' and the text box is disabled.]]>
+      <![CDATA[Enter '10:05:07 PM' in the 'Start Time' text box.]]>
     </line>
     <line>
-      <![CDATA[STEP 4]]>
+      <![CDATA[Enter '2014-07-24' in the 'End Date' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Change your password' link.]]>
+      <![CDATA[Enter '10:05:37 PM' in the 'End Time' text box.]]>
     </line>
     <line>
-      <![CDATA[Verify the user is redirected to the SSO Password Reset page.]]>
+      <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[STEP 5]]>
+      <![CDATA[Switch to the active frame titled 'Manage Logo dialog'.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Brandon.Clark@nbcuni.com dialog'.]]>
+      <![CDATA[Verify the text 'e7935ddbe5614d4' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
+      <![CDATA[Verify the text 'Thu, 07/24/2014 - 22:05' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Scroll by '-500'.]]>
+      <![CDATA[Verify the text 'Thu, 07/24/2014 - 22:05' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Logout' button.]]>
+      <![CDATA[Assert the file image 'nbclogosmall' is present.]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com/user'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Login' button.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 6]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'People' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Add user' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'People dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Username' text box is not present.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '6e98b3793fdf42c@81a8538663eb42d.com' in the 'E-mail address' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Password' and 'Password Confirm' text boxes are not present.]]>
-    </line>
-    <line>
-      <![CDATA[Check the 'editor' check box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'ed6a172d70cd49c' in the 'First Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'b778acd3399e4cb' in the 'Last Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Create new account' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'A welcome message with further instructions has been e-mailed to the new user 6e98b3793fdf42c@81a8538663eb42d.com.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll by '-500'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 7]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'People' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'People dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'next >' link until user '6e98b3793fdf42c@81a8538663eb42d.com' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'edit' link for '6e98b3793fdf42c@81a8538663eb42d.com' from the 'USERNAME' list.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled '6e98b3793fdf42c@81a8538663eb42d.com dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Username' value is '6e98b3793fdf42c@81a8538663eb42d.com' and the text box is disabled.]]>
-    </line>
-    <line>
-      <![CDATA[STEPS 8-11]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com/admin/config/people/simplesamlphp_auth'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Activate authentication via SimpleSAMLphp' check box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'SimpleSAMLphp authentication is NOT yet activated.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Home' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Modules' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Pub SSO' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Uncheck the 'Pub SSO' module checkbox.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'simpleSAMLphp authentication' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Uncheck the 'simpleSAMLphp authentication' module checkbox.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+      <![CDATA[Assert the the img is loaded and visible.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
@@ -281,32 +122,107 @@
       <![CDATA[Mouse over the 'Home' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the '[[Driver: chrome on MAC (4f979e5b-0e52-4027-96a2-fcf64777622d)] -> xpath: //span[@class='admin-menu-home-icon']/../..//a[text()='Flush all caches']]' menu link.]]>
+      <![CDATA[Click the 'Run cron' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Status report dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll by '-500'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Home' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Assert the file image 'nbclogosmall' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Assert the the img is loaded and visible.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Home' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Run cron' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Status report dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll by '-500'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Home' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Assert the file image 'logo' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Assert the the img is loaded and visible.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Logos' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Manage Logo dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Edit' extend menu button for logo titled 'e7935ddbe5614d4'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Delete' button for logo titled 'e7935ddbe5614d4'.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Are you sure you want to delete this logo? dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Delete' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Manage Logo dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Logo has been deleted successfully.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'e7935ddbe5614d4' is NOT present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'Thu, 07/24/2014 - 22:05' is NOT present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'Thu, 07/24/2014 - 22:05' is NOT present on the page.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="117420" started-at="2014-07-24T18:29:10Z" finished-at="2014-07-24T18:31:07Z">
+  <suite name="Default suite" duration-ms="355073" started-at="2014-07-24T22:04:10Z" finished-at="2014-07-24T22:10:05Z">
     <groups>
       <group name="full">
-        <method signature="SSOManageUsers.SSOManageUsers_TC3853()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOManageUsers@70d7a2d4]" name="SSOManageUsers_TC3853" class="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOManageUsers"/>
+        <method signature="CreateLogo.CreateLogo_TC1066()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.Logo.CreateLogo@36217796]" name="CreateLogo_TC1066" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.Logo.CreateLogo"/>
       </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="117420" started-at="2014-07-24T18:29:10Z" finished-at="2014-07-24T18:31:07Z">
-      <class name="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOManageUsers">
-        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOManageUsers@70d7a2d4]" name="startGridAndHub" is-config="true" duration-ms="1263" started-at="2014-07-24T14:29:08Z" finished-at="2014-07-24T14:29:10Z">
+    <test name="Default test" duration-ms="355073" started-at="2014-07-24T22:04:10Z" finished-at="2014-07-24T22:10:05Z">
+      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.Logo.CreateLogo">
+        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.Logo.CreateLogo@36217796]" name="startGridAndHub" is-config="true" duration-ms="1266" started-at="2014-07-24T18:04:09Z" finished-at="2014-07-24T18:04:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startGridAndHub -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOManageUsers@70d7a2d4]" name="startSelenium" is-config="true" duration-ms="2559" started-at="2014-07-24T14:29:10Z" finished-at="2014-07-24T14:29:12Z">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.Logo.CreateLogo@36217796]" name="startSelenium" is-config="true" duration-ms="2611" started-at="2014-07-24T18:04:10Z" finished-at="2014-07-24T18:04:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="SSOManageUsers_TC3853()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOManageUsers@70d7a2d4]" name="SSOManageUsers_TC3853" duration-ms="114277" started-at="2014-07-24T14:29:12Z" finished-at="2014-07-24T14:31:06Z">
+        <test-method status="PASS" signature="CreateLogo_TC1066()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.Logo.CreateLogo@36217796]" name="CreateLogo_TC1066" duration-ms="351879" started-at="2014-07-24T18:04:13Z" finished-at="2014-07-24T18:10:05Z">
           <reporter-output>
             <line>
-              <![CDATA[STEP 1]]>
-            </line>
-            <line>
-              <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com/user'.]]>
+              <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
             </line>
             <line>
               <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
@@ -316,9 +232,6 @@
             </line>
             <line>
               <![CDATA[Click the 'Login' button.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 2]]>
             </line>
             <line>
               <![CDATA[Click the 'Modules' menu link.]]>
@@ -327,10 +240,10 @@
               <![CDATA[Switch to frame titled 'Modules'.]]>
             </line>
             <line>
-              <![CDATA[Enter 'Pub SSO' in the 'Filter Name' text box.]]>
+              <![CDATA[Enter 'Logo Manager' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Verify the 'Pub SSO' check box is checked.]]>
+              <![CDATA[Verify the 'Logo Manager' check box is checked.]]>
             </line>
             <line>
               <![CDATA[Click the 'Close Overlay X'.]]>
@@ -342,43 +255,13 @@
               <![CDATA[Click the 'Home' menu link.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Configuration' menu link.]]>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'People' menu link.]]>
+              <![CDATA[Click the 'Logos' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'SimpleSAMLphp Auth Settings' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'People dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the file path for certificate upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'A certificate exists for this instance of SimpleSAMLphp.' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Activate authentication via SimpleSAMLphp' check box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+              <![CDATA[Switch to the active frame titled 'Manage Logo dialog'.]]>
             </line>
             <line>
               <![CDATA[Click the 'Close Overlay X'.]]>
@@ -387,190 +270,67 @@
               <![CDATA[Scroll by '-500'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Logout' button.]]>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com/saml_login'.]]>
+              <![CDATA[Mouse over the 'Logos' menu link.]]>
             </line>
             <line>
-              <![CDATA[Enter '206424392' in the 'SSO ID' text box.]]>
+              <![CDATA[Click the 'Add Logo' menu link.]]>
             </line>
             <line>
-              <![CDATA[Enter 'tufNewcyd577BC' in the 'Password' text box.]]>
+              <![CDATA[Switch to the active frame titled 'Add Logo dialog'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Sign In' button.]]>
+              <![CDATA[Enter 'e7935ddbe5614d4' in the 'Title' text box.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'Modules' is NOT present on the page.]]>
+              <![CDATA[Enter the file path for file upload.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'Brandon.Clark@nbcuni.com' is present on the page.]]>
+              <![CDATA[Click the 'Upload' button.]]>
             </line>
             <line>
-              <![CDATA[STEP 3]]>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Edit' link in the work bench.]]>
+              <![CDATA[Verify the file image 'nbclogosmall' is present.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Brandon.Clark@nbcuni.com dialog'.]]>
+              <![CDATA[Verify the the img is loaded and visible.]]>
             </line>
             <line>
-              <![CDATA[Verify the 'Username' value is 'Brandon.Clark@nbcuni.com' and the text box is disabled.]]>
+              <![CDATA[Enter '2014-07-24' in the 'Start Date' text box.]]>
             </line>
             <line>
-              <![CDATA[Verify the 'E-mail address' value is 'Brandon.Clark@nbcuni.com' and the text box is disabled.]]>
+              <![CDATA[Enter '10:05:07 PM' in the 'Start Time' text box.]]>
             </line>
             <line>
-              <![CDATA[STEP 4]]>
+              <![CDATA[Enter '2014-07-24' in the 'End Date' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Change your password' link.]]>
+              <![CDATA[Enter '10:05:37 PM' in the 'End Time' text box.]]>
             </line>
             <line>
-              <![CDATA[Verify the user is redirected to the SSO Password Reset page.]]>
+              <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[STEP 5]]>
+              <![CDATA[Switch to the active frame titled 'Manage Logo dialog'.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Brandon.Clark@nbcuni.com dialog'.]]>
+              <![CDATA[Verify the text 'e7935ddbe5614d4' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
+              <![CDATA[Verify the text 'Thu, 07/24/2014 - 22:05' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Scroll by '-500'.]]>
+              <![CDATA[Verify the text 'Thu, 07/24/2014 - 22:05' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Logout' button.]]>
+              <![CDATA[Assert the file image 'nbclogosmall' is present.]]>
             </line>
             <line>
-              <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com/user'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Login' button.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 6]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'People' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Add user' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'People dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Username' text box is not present.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '6e98b3793fdf42c@81a8538663eb42d.com' in the 'E-mail address' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Password' and 'Password Confirm' text boxes are not present.]]>
-            </line>
-            <line>
-              <![CDATA[Check the 'editor' check box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'ed6a172d70cd49c' in the 'First Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'b778acd3399e4cb' in the 'Last Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Create new account' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'A welcome message with further instructions has been e-mailed to the new user 6e98b3793fdf42c@81a8538663eb42d.com.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll by '-500'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 7]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'People' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'People dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'next >' link until user '6e98b3793fdf42c@81a8538663eb42d.com' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'edit' link for '6e98b3793fdf42c@81a8538663eb42d.com' from the 'USERNAME' list.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled '6e98b3793fdf42c@81a8538663eb42d.com dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Username' value is '6e98b3793fdf42c@81a8538663eb42d.com' and the text box is disabled.]]>
-            </line>
-            <line>
-              <![CDATA[STEPS 8-11]]>
-            </line>
-            <line>
-              <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com/admin/config/people/simplesamlphp_auth'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Activate authentication via SimpleSAMLphp' check box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'SimpleSAMLphp authentication is NOT yet activated.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Home' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Modules' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Pub SSO' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Uncheck the 'Pub SSO' module checkbox.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'simpleSAMLphp authentication' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Uncheck the 'simpleSAMLphp authentication' module checkbox.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+              <![CDATA[Assert the the img is loaded and visible.]]>
             </line>
             <line>
               <![CDATA[Click the 'Close Overlay X'.]]>
@@ -582,26 +342,104 @@
               <![CDATA[Mouse over the 'Home' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the '[[Driver: chrome on MAC (4f979e5b-0e52-4027-96a2-fcf64777622d)] -> xpath: //span[@class='admin-menu-home-icon']/../..//a[text()='Flush all caches']]' menu link.]]>
+              <![CDATA[Click the 'Run cron' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Status report dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll by '-500'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Home' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Assert the file image 'nbclogosmall' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Assert the the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Home' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Run cron' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Status report dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll by '-500'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Home' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Assert the file image 'logo' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Assert the the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Logos' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Manage Logo dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Edit' extend menu button for logo titled 'e7935ddbe5614d4'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Delete' button for logo titled 'e7935ddbe5614d4'.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Are you sure you want to delete this logo? dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Delete' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Manage Logo dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Logo has been deleted successfully.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'e7935ddbe5614d4' is NOT present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Thu, 07/24/2014 - 22:05' is NOT present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Thu, 07/24/2014 - 22:05' is NOT present on the page.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- SSOManageUsers_TC3853 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOManageUsers@70d7a2d4]" name="stopSelenium" is-config="true" duration-ms="574" started-at="2014-07-24T14:31:06Z" finished-at="2014-07-24T14:31:07Z">
+        </test-method> <!-- CreateLogo_TC1066 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.Logo.CreateLogo@36217796]" name="stopSelenium" is-config="true" duration-ms="571" started-at="2014-07-24T18:10:05Z" finished-at="2014-07-24T18:10:05Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=SSOManageUsers_TC3853 status=SUCCESS method=SSOManageUsers.SSOManageUsers_TC3853()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOManageUsers@70d7a2d4] output=STEP 1]]]>
+                <![CDATA[[TestResult name=CreateLogo_TC1066 status=SUCCESS method=CreateLogo.CreateLogo_TC1066()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.Logo.CreateLogo@36217796] output=Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOManageUsers@70d7a2d4]" name="stopGridAndHub" is-config="true" duration-ms="370" started-at="2014-07-24T14:31:07Z" finished-at="2014-07-24T14:31:07Z">
+        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.Logo.CreateLogo@36217796]" name="stopGridAndHub" is-config="true" duration-ms="390" started-at="2014-07-24T18:10:05Z" finished-at="2014-07-24T18:10:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopGridAndHub -->
-      </class> <!-- com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOManageUsers -->
+      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.Logo.CreateLogo -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
