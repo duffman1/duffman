@@ -2,6 +2,10 @@ package com.nbcuni.test.publisher.pageobjects.MPX;
 
 import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.pageobjects.Overlay;
+import com.nbcuni.test.publisher.pageobjects.Cron.Cron;
+import com.nbcuni.test.publisher.pageobjects.Taxonomy.Taxonomy;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
@@ -13,6 +17,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -30,6 +35,10 @@ public class Settings {
     private Driver webDriver;
     private AppLib applib;
     private WebDriverWait wait;
+    private Overlay overlay;
+    private Taxonomy taxonomy;
+    private Cron cron;
+    private MPXMedia mpxMedia;
     
     //PAGE OBJECT CONSTRUCTOR
     public Settings(Driver webDriver, AppLib applib) {
@@ -37,6 +46,10 @@ public class Settings {
         this.applib = applib;
         PageFactory.initElements(webDriver, this);
         wait = new WebDriverWait(webDriver, 10);
+        overlay = new Overlay(webDriver, applib);
+        taxonomy = new Taxonomy(webDriver);
+        mpxMedia = new MPXMedia(webDriver);
+        cron = new Cron(webDriver, applib);
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -411,6 +424,33 @@ public class Settings {
     
     	Reporter.log("Click the 'Delete' button.");
     	Delete_Btn.click();
+    }
+    
+    public void ConfigureMPXIfNeeded() throws Exception {
+    	
+    	taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
+        overlay.SwitchToActiveFrame();
+        
+    	if (this.IsMPXConfigured() == false) {
+    		this.EnterUsername(applib.getMPXUsername());
+        	this.EnterPassword(applib.getMPXPassword());
+        	this.ClickConnectToMPXBtn();
+        	this.SelectImportAccount1("DB TV");
+        	this.ClickSetImportAccountBtn();
+        	this.ClickSaveConfigurationsBtn();
+        	overlay.ClickCloseOverlayLnk();
+        	taxonomy.NavigateSite("Content>>Files>>mpxMedia");
+        	overlay.SwitchToActiveFrame();
+        	mpxMedia.ExpandMPXMedia();
+            mpxMedia.SelectMPXPlayerForAccount1("AutomationPlayer1");
+            mpxMedia.ClickSyncMPXMediaNowLnk();
+            overlay.ClickCloseOverlayLnk();
+            cron.RunCron(true);
+    	}
+    	else {
+    		Reporter.log("MPX is already configured.");
+    		overlay.ClickCloseOverlayLnk();
+    	}
     }
   
 }

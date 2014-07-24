@@ -1,7 +1,6 @@
 package com.nbcuni.test.publisher.tests.Video.Player;
 
 import java.util.List;
-
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Content.Content;
@@ -9,7 +8,6 @@ import com.nbcuni.test.publisher.pageobjects.Content.SearchFor;
 import com.nbcuni.test.publisher.pageobjects.MPX.EditMPXVideo;
 import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class SelectVideoPlayerPerVideoFile extends ParentTest{
@@ -45,12 +43,13 @@ public class SelectVideoPlayerPerVideoFile extends ParentTest{
     	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
         
         //Step 2 on requires prior MPX configuration
+    	Settings settings = new Settings(webDriver, applib);
+    	settings.ConfigureMPXIfNeeded();
+    	
         taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
         overlay.SwitchToActiveFrame();
-        Settings settings = new Settings(webDriver, applib);
-        if (settings.IsMPXConfigured() == true) {
-
-        	List<String> configuredAccounts = settings.GetImportAccountSelectedOptions();
+        
+        List<String> configuredAccounts = settings.GetImportAccountSelectedOptions();
         	if (configuredAccounts.get(0).equals("DB TV") || configuredAccounts.get(0).equals("NBCU TVE Dev - NBC")) {
         		
         		//Step 2
@@ -92,13 +91,6 @@ public class SelectVideoPlayerPerVideoFile extends ParentTest{
         		editMPXVideo.VerifyPubMPXVideoPlayerSelectedOption("VeXC0F2L9wg2");
         	
         	}
-        }
-        else {
-        	
-        	Assert.fail("MPX is NOT configured. Test titled 'MultipleMPXAccountsPerLoginVerification' must run before any other MPX tests.");
-        	
-        }
-
         
     }
 }

@@ -26,61 +26,55 @@ public class EnhanceMPXLibraryPublicID extends ParentTest{
     	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
         
         //Setup
+    	Settings settings = new Settings(webDriver, applib);
+    	settings.ConfigureMPXIfNeeded();
+    	
         taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
         overlay.SwitchToActiveFrame();
-        Settings settings = new Settings(webDriver, applib);
-        if (settings.IsMPXConfigured() == true) { 
+        
+        //Step 2
+        List<String> configuredAccounts = settings.GetImportAccountSelectedOptions();
+        overlay.ClickCloseOverlayLnk();
+        taxonomy.NavigateSite("Content>>Files>>mpxPlayers");
+        overlay.SwitchToActiveFrame();
+        SearchFor searchFor = new SearchFor(webDriver, applib);
+        searchFor.VerifyMPXSearchHeaderColumnOrder();
         	
-        	//Step 2
-        	List<String> configuredAccounts = settings.GetImportAccountSelectedOptions();
-        	overlay.ClickCloseOverlayLnk();
-        	taxonomy.NavigateSite("Content>>Files>>mpxPlayers");
-        	overlay.SwitchToActiveFrame();
-        	SearchFor searchFor = new SearchFor(webDriver, applib);
-        	searchFor.VerifyMPXSearchHeaderColumnOrder();
+        //Step 3 - NA as I will use an existing known mpx player ID for DB TV account
+        String playerName = "AutomationPlayer1";
+        String playerID = "VeXC0F2L9wg2";
         	
-        	//Step 3 - NA as I will use an existing known mpx player ID for DB TV account
-        	String playerName = "AutomationPlayer1";
-        	String playerID = "VeXC0F2L9wg2";
+        if (configuredAccounts.get(0).equals("DB TV")) {
         	
-        	if (configuredAccounts.get(0).equals("DB TV")) {
-        	
-        		//Setup
-        		String initialFirstResult = searchFor.GetFirstMPXPlayerSearchResult();
-        		int initialResultSize = searchFor.GetMPXSearchResultSize();
+        	//Setup
+        	String initialFirstResult = searchFor.GetFirstMPXPlayerSearchResult();
+        	int initialResultSize = searchFor.GetMPXSearchResultSize();
         		
-        		//Step 4
-        		searchFor.EnterTitle(playerName);
-        		searchFor.ClickApplyBtn();
-        		overlay.switchToDefaultContent();
-        		searchFor.VerifyMPXResultPublicID(playerName, playerID);
+        	//Step 4
+        	searchFor.EnterTitle(playerName);
+        	searchFor.ClickApplyBtn();
+        	overlay.switchToDefaultContent();
+        	searchFor.VerifyMPXResultPublicID(playerName, playerID);
         		
-        		//Step 5
-        		searchFor.ClickResetBtn();
-        		searchFor.ClickSearchHeaderColumnLnk("Public ID");
-        		Assert.assertTrue(searchFor.GetMPXSearchResultSize().equals(initialResultSize));
+        	//Step 5
+        	searchFor.ClickResetBtn();
+        	searchFor.ClickSearchHeaderColumnLnk("Public ID");
+        	Assert.assertTrue(searchFor.GetMPXSearchResultSize().equals(initialResultSize));
         		
-        		//Step 6 and 7
-        		searchFor.EnterPublicID(playerID);
-        		searchFor.ClickApplyBtn();
-        		Assert.assertTrue(searchFor.GetFirstMPXPlayerSearchResult().contains(playerName));
+        	//Step 6 and 7
+        	searchFor.EnterPublicID(playerID);
+        	searchFor.ClickApplyBtn();
+        	Assert.assertTrue(searchFor.GetFirstMPXPlayerSearchResult().contains(playerName));
         		
-        		//Step 8
-        		searchFor.ClickResetBtn();
-        		Assert.assertTrue(searchFor.GetFirstMPXPlayerSearchResult().equals(initialFirstResult));
-        		Assert.assertTrue(searchFor.GetMPXSearchResultSize().equals(initialResultSize));
-        		
-        	
+        	//Step 8
+        	searchFor.ClickResetBtn();
+        	Assert.assertTrue(searchFor.GetFirstMPXPlayerSearchResult().equals(initialFirstResult));
+        	Assert.assertTrue(searchFor.GetMPXSearchResultSize().equals(initialResultSize));
         		
         	}
         	else {
         		Assert.fail("DBTV account not configured for this test");
         	}
         	
-        }
-        else { 
-        	Assert.fail("MPX is NOT configured. Test titled 'MultipleMPXAccountsPerLoginVerification' must run before any other MPX tests.");
-        }
-        
     }
 }

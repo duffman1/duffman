@@ -36,12 +36,13 @@ public class EnhanceMPXPlayerContentAdminScreen extends ParentTest{
     	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
         
         //Step 1a
+    	Settings settings = new Settings(webDriver, applib);
+    	settings.ConfigureMPXIfNeeded();
+    	
         taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
         overlay.SwitchToActiveFrame();
-        Settings settings = new Settings(webDriver, applib);
-        if (settings.IsMPXConfigured() == true) { 
-        	
-        	//Step 2
+        
+        //Step 2
         	List<String> configuredAccounts = settings.GetImportAccountSelectedOptions();
         	overlay.ClickCloseOverlayLnk();
         	taxonomy.NavigateSite("Content>>Files>>mpxPlayers");
@@ -98,17 +99,6 @@ public class EnhanceMPXPlayerContentAdminScreen extends ParentTest{
         		//Step 10 - NA for automation purposes
         		
         	}
-        	else {
-        		//TODO - add logic accordingly for all accounts and not just DBTV
-        		Assert.fail("MPX account not configured for this test");
-        	}
         	
-        }
-        else { 
-        	
-        	Assert.fail("MPX is NOT configured. Test titled 'MultipleMPXAccountsPerLoginVerification' must run before any other MPX tests.");
-        	
-        }
-        
     }
 }

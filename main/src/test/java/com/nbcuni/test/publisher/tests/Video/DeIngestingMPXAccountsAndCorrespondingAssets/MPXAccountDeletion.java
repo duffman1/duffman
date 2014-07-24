@@ -34,33 +34,11 @@ public class MPXAccountDeletion extends ParentTest {
     	UserLogin userLogin = applib.openApplication();
     	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
         
-        //Step 2
-        taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
-        overlay.SwitchToActiveFrame();
-        
-        //Step 3
-        Settings settings = new Settings(webDriver, applib);
+        //Step 2 and 3
+    	Settings settings = new Settings(webDriver, applib);
+    	settings.ConfigureMPXIfNeeded();
         MPXMedia mpxMedia = new MPXMedia(webDriver);
         Cron cron = new Cron(webDriver, applib);
-        if (settings.IsMPXConfigured() == false) { 
-        	
-        	settings.EnterUsername(applib.getMPXUsername());
-        	settings.EnterPassword(applib.getMPXPassword());
-        	settings.ClickConnectToMPXBtn();
-        	settings.SelectImportAccount1("DB TV");
-        	settings.ClickSetImportAccountBtn();
-        	settings.ClickSaveConfigurationsBtn();
-        	overlay.ClickCloseOverlayLnk();
-        	taxonomy.NavigateSite("Content>>Files>>mpxMedia");
-        	overlay.SwitchToActiveFrame();
-        	mpxMedia.ExpandMPXMedia();
-            mpxMedia.SelectMPXPlayerForAccount1("AutomationPlayer1");
-            mpxMedia.ClickSyncMPXMediaNowLnk();
-            overlay.ClickCloseOverlayLnk();
-            cron.RunCron(true);
-        	taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
-            overlay.SwitchToActiveFrame();
-        }
         
         //Step 4
     	List<String> configuredAccounts = settings.GetImportAccountSelectedOptions();

@@ -2,6 +2,7 @@ package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentT
 
 import org.testng.Reporter;
 import org.testng.annotations.Test;
+
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
@@ -11,6 +12,7 @@ import com.nbcuni.test.publisher.pageobjects.Content.Content;
 import com.nbcuni.test.publisher.pageobjects.Content.EditImage;
 import com.nbcuni.test.publisher.pageobjects.Content.MediaItems;
 import com.nbcuni.test.publisher.pageobjects.Content.SelectFile;
+import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
 import com.nbcuni.test.publisher.pageobjects.Structure.ManageFields.Edit;
 
 public class CreateMediaGallery extends ParentTest{
@@ -27,6 +29,8 @@ public class CreateMediaGallery extends ParentTest{
         	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
         	
         	Reporter.log("SETUP");
+        	Settings settings = new Settings(webDriver, applib);
+        	settings.ConfigureMPXIfNeeded();
         	taxonomy.NavigateSite("Structure>>Content types>>Media Gallery>>Manage fields>>Media Items");
         	overlay.SwitchToActiveFrame();
         	Edit edit = new Edit(webDriver, applib);

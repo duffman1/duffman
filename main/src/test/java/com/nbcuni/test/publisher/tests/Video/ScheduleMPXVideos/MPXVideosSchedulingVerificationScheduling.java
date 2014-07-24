@@ -77,11 +77,12 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
     	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
         
         //Note - test requires mpx configuration
+    	Settings settings = new Settings(webDriver, applib);
+    	settings.ConfigureMPXIfNeeded();
+    	
         taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
         overlay.SwitchToActiveFrame();
-        Settings settings = new Settings(webDriver, applib);
-        if (settings.IsMPXConfigured() == true) {
-		
+        
         	//Setup
         	List<String> configuredAccounts = settings.GetImportAccountSelectedOptions();
         	if (configuredAccounts.contains("DB TV")) {
@@ -270,11 +271,5 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
         }
         	
         }
-        else {
-        	
-        	Assert.fail("MPX is NOT configured. Test titled 'MultipleMPXAccountsPerLoginVerification' must run before any other MPX tests.");
-        	
-        }
         
-    }
 }

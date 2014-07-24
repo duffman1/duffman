@@ -30,45 +30,45 @@ public class EntityReferenceVerification extends ParentTest{
     	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
         
         //Setup
+    	Settings settings = new Settings(webDriver, applib);
+    	settings.ConfigureMPXIfNeeded();
+    	
         taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
         overlay.SwitchToActiveFrame();
-        Settings settings = new Settings(webDriver, applib);
-        if (settings.IsMPXConfigured() == true) {
+        List<String> configuredAccounts = settings.GetImportAccountSelectedOptions();
 
-        	List<String> configuredAccounts = settings.GetImportAccountSelectedOptions();
-
-        	//Setup
-        	if (configuredAccounts.get(0).equals("DB TV")) {
+        //Setup
+        if (configuredAccounts.get(0).equals("DB TV")) {
         		
-        		//Step 1
-        		overlay.ClickCloseOverlayLnk();
-        		taxonomy.NavigateSite("Structure>>Content types>>Add content type");
-        		overlay.SwitchToActiveFrame();
-        		ContentTypes contentTypes = new ContentTypes(webDriver, applib);
-                String contentTypeName = "MPX" + random.GetCharacterString(10);
-                contentTypes.EnterName(contentTypeName);
-        		contentTypes.ClickSaveAddFieldsBtn();
-        		overlay.SwitchToActiveFrame();
+        	//Step 1
+        	overlay.ClickCloseOverlayLnk();
+        	taxonomy.NavigateSite("Structure>>Content types>>Add content type");
+        	overlay.SwitchToActiveFrame();
+        	ContentTypes contentTypes = new ContentTypes(webDriver, applib);
+            String contentTypeName = "MPX" + random.GetCharacterString(10);
+            contentTypes.EnterName(contentTypeName);
+            contentTypes.ClickSaveAddFieldsBtn();
+        	overlay.SwitchToActiveFrame();
         		
-        		//Step 2
-        		String mpxVideoEntityFieldTitle = "MPXVideoEntity" + random.GetCharacterString(10);
-        		contentTypes.EnterAddNewField(mpxVideoEntityFieldTitle);
-        		contentTypes.SelectFieldType("Entity Reference");
-        		contentTypes.SelectWidget("Select list");
-        		contentTypes.ClickSaveBtn();
-        		overlay.SwitchToActiveFrame();
+        	//Step 2
+        	String mpxVideoEntityFieldTitle = "MPXVideoEntity" + random.GetCharacterString(10);
+        	contentTypes.EnterAddNewField(mpxVideoEntityFieldTitle);
+        	contentTypes.SelectFieldType("Entity Reference");
+        	contentTypes.SelectWidget("Select list");
+        	contentTypes.ClickSaveBtn();
+        	overlay.SwitchToActiveFrame();
         		
-        		//Step 3
-        		FieldSettings fieldSettings = new FieldSettings(webDriver, applib);
-        		fieldSettings.SelectTargetType("File");
-        		fieldSettings.SelectMode("Simple (with optional filter by bundle)");
-        		fieldSettings.CheckTargetBundleCbx("MPX Video for Account \"DB TV\" (2312945284) ");
-        		fieldSettings.SelectSortBy("Don't sort");
-        		fieldSettings.ClickSaveFieldSettingsBtn();
-        		overlay.SwitchToActiveFrame();
-        		contentParent.VerifyMessageStatus("Updated field " + mpxVideoEntityFieldTitle + " field settings.");
+        	//Step 3
+        	FieldSettings fieldSettings = new FieldSettings(webDriver, applib);
+        	fieldSettings.SelectTargetType("File");
+        	fieldSettings.SelectMode("Simple (with optional filter by bundle)");
+        	fieldSettings.CheckTargetBundleCbx("MPX Video for Account \"DB TV\" (2312945284) ");
+        	fieldSettings.SelectSortBy("Don't sort");
+        	fieldSettings.ClickSaveFieldSettingsBtn();
+        	overlay.SwitchToActiveFrame();
+        	contentParent.VerifyMessageStatus("Updated field " + mpxVideoEntityFieldTitle + " field settings.");
         		
-        		//Step 4
+        	//Step 4
         		Edit edit = new Edit(webDriver, applib);
         		edit.ClickSaveSettingsBtn();
         		overlay.SwitchToActiveFrame();
@@ -410,12 +410,6 @@ public class EntityReferenceVerification extends ParentTest{
         	else {
         		Assert.fail("DB TV account must be configured.");
         	}
-        }
-        else {
-        	
-        	Assert.fail("MPX is NOT configured. Test titled 'MultipleMPXAccountsPerLoginVerification' must run before any other MPX tests.");
-        	
-        }
         
     }
 }

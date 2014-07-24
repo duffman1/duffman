@@ -1,11 +1,14 @@
 package com.nbcuni.test.publisher.tests.Video.MPXReporting;
 
 import java.util.Arrays;
+
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.MPX.MPXStatusBeta;
+import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
 import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
+
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
@@ -23,6 +26,10 @@ public class MPXReportingBeta extends ParentTest{
     	UserLogin userLogin = applib.openApplication();
     	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
         
+    	Reporter.log("SETUP");
+    	Settings settings = new Settings(webDriver, applib);
+    	settings.ConfigureMPXIfNeeded();
+    	
     	Reporter.log("STEP 2");
     	Modules modules = new Modules(webDriver, applib);
     	modules.VerifyModuleEnabled("Media: ThePlatform mpx Reports");

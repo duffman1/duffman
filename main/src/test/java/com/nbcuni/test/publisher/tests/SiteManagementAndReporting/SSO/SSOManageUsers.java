@@ -135,22 +135,26 @@ public class SSOManageUsers extends ParentTest {
 			}
 			catch (Exception | AssertionError e2) {}
 			
-			applib.openSitePage("/user");
-			userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
-			applib.openSitePage("/admin/config/people/simplesamlphp_auth");
-			simpleSAML.UnCheckActivateAuthCbx();
-			simpleSAML.ClickSaveConfigurationBtn();
-			contentParent.VerifyMessageStatus("The configuration options have been saved.");
-			contentParent.VerifyMessageStatus("SimpleSAMLphp authentication is NOT yet activated.");
-			taxonomy.NavigateSite("Home");
-			taxonomy.NavigateSite("Modules");
-			overlay.SwitchToActiveFrame();
-			modules.EnterFilterName("Pub SSO");
-			modules.DisableModule("Pub SSO");
-			modules.EnterFilterName("simpleSAMLphp authentication");
-			Thread.sleep(1000);
-			modules.DisableModule("simpleSAMLphp authentication");
-			overlay.ClickCloseOverlayLnk();
+			try {
+				applib.openSitePage("/user");
+				userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+				applib.openSitePage("/admin/config/people/simplesamlphp_auth");
+				simpleSAML.UnCheckActivateAuthCbx();
+				simpleSAML.ClickSaveConfigurationBtn();
+				contentParent.VerifyMessageStatus("The configuration options have been saved.");
+				contentParent.VerifyMessageStatus("SimpleSAMLphp authentication is NOT yet activated.");
+				taxonomy.NavigateSite("Home");
+				taxonomy.NavigateSite("Modules");
+				overlay.SwitchToActiveFrame();
+				modules.EnterFilterName("Pub SSO");
+				modules.DisableModule("Pub SSO");
+				modules.EnterFilterName("simpleSAMLphp authentication");
+				Thread.sleep(1000);
+				modules.DisableModule("simpleSAMLphp authentication");
+				overlay.ClickCloseOverlayLnk();
+			}
+			catch (Exception | AssertionError e2) {}
+			
 	    
 			Assert.fail(e.toString());
 		}

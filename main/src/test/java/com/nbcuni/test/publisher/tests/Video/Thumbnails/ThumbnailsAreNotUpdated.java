@@ -55,12 +55,13 @@ public class ThumbnailsAreNotUpdated extends ParentTest{
     	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
         
         //MPX Configuration required
+    	Settings settings = new Settings(webDriver, applib);
+    	settings.ConfigureMPXIfNeeded();
+    	
         taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
         overlay.SwitchToActiveFrame();
-        Settings settings = new Settings(webDriver, applib);
-        if (settings.IsMPXConfigured() == true) {
-
-        	List<String> configuredAccounts = settings.GetImportAccountSelectedOptions();
+        
+        List<String> configuredAccounts = settings.GetImportAccountSelectedOptions();
 
         	if (configuredAccounts.get(0).equals("DB TV")) {
         		
@@ -148,12 +149,7 @@ public class ThumbnailsAreNotUpdated extends ParentTest{
         	else {
         		Assert.fail("DB TV account must be configured.");
         	}
-        }
-        else {
-        	
-        	Assert.fail("MPX is NOT configured. Test titled 'MultipleMPXAccountsPerLoginVerification' must run before any other MPX tests.");
-        	
-        }
+        
         
     }
 }

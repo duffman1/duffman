@@ -1,10 +1,12 @@
 package com.nbcuni.test.publisher.pageobjects.Configuration;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
@@ -61,6 +63,10 @@ public class SSOLogin {
 		
 		Reporter.log("Verify the user is redirected to the SSO Password Reset page.");
 		wait.until(ExpectedConditions.titleIs("SSO Password Reset application"));
-		wait.until(ExpectedConditions.textToBePresentInElement(By.tagName("body"), "Change your password"));
+		wait.until(new ExpectedCondition<Boolean>() {
+    		public Boolean apply(WebDriver webDriver) {
+    			return webDriver.findElement(By.tagName("body")).getText().contains("Change your password");
+   		 	}
+    	});
 	}
 }

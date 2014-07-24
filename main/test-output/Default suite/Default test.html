@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Jul 23 10:47:41 EDT 2014</td>
+<td>Started on:</td><td>Thu Jul 24 14:29:10 EDT 2014</td>
 </tr>
-<tr><td>Total time:</td><td>164 seconds (164578 ms)</td>
+<tr><td>Total time:</td><td>117 seconds (117420 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,213 +75,110 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.Relationships.Relationships_TC1390()'><b>Relationships_TC1390</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.Relationships<br/>
-<a href="#Output-2007878303" onClick='toggleBox("Output-2007878303", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOManageUsers.SSOManageUsers_TC3853()'><b>SSOManageUsers_TC3853</b><br>Test class: com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOManageUsers<br/>
+<a href="#Output-450645716" onClick='toggleBox("Output-450645716", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-2007878303" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-2007878303">
+<a href="#Output-450645716" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-450645716">
 STEP 1<br/>
-Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.<br/>
+Open url 'http://update.qa5.nbcupublisher7.publisher7.com/user'.<br/>
 Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
 Enter 'pa55word' in the 'Password' text box.<br/>
 Click the 'Login' button.<br/>
-SETUP - Create a TV Show<br/>
-Mouse over the 'Content' menu link.<br/>
-Mouse over the 'Add content' menu link.<br/>
-Click the 'TV Show' menu link.<br/>
-Switch to the active frame titled 'Create TV Show dialog'.<br/>
-Scroll to and click the 'Basic Information' tab.<br/>
-Enter '6250e4d10e7d428' in the 'Title' text box.<br/>
-Switch to the Synopsis frame.<br/>
-Enter a randomized text string into the 'Body' text area.<br/>
-Switch to the active frame titled 'Create TV Show dialog'.<br/>
-Click the Logo 'Select' button.<br/>
-Switch to the select file frame.<br/>
-Enter the file path for file upload.<br/>
-Click the 'Upload' button.<br/>
-Wait for the file link to be visible after upload.<br/>
-Click the 'Next' button.<br/>
-Click the 'Public Local Files' radio button.<br/>
-Click the 'Next' button.<br/>
-Verify the file image 'HanSolo' is present.<br/>
-Verify the img is loaded and visible.<br/>
-Click the 'Save' button.<br/>
-Switch to the active frame titled 'Create TV Show dialog'.<br/>
-Click the Cover Media 'Select' button.<br/>
-Switch to the select file frame.<br/>
-Enter the file path for file upload.<br/>
-Click the 'Upload' button.<br/>
-Wait for the file link to be visible after upload.<br/>
-Click the 'Next' button.<br/>
-Click the 'Public Local Files' radio button.<br/>
-Click the 'Next' button.<br/>
-Verify the file image 'HanSolo' is present.<br/>
-Verify the img is loaded and visible.<br/>
-Click the 'Save' button.<br/>
-Switch to the active frame titled 'Create TV Show dialog'.<br/>
-Click the Banner 'Select' button.<br/>
-Switch to the select file frame.<br/>
-Enter the file path for file upload.<br/>
-Click the 'Upload' button.<br/>
-Wait for the file link to be visible after upload.<br/>
-Click the 'Next' button.<br/>
-Click the 'Public Local Files' radio button.<br/>
-Click the 'Next' button.<br/>
-Verify the file image 'HanSolo' is present.<br/>
-Verify the img is loaded and visible.<br/>
-Click the 'Save' button.<br/>
-Switch to the active frame titled 'Create TV Show dialog'.<br/>
-Scroll the 'Publishing Options' link into view.<br/>
-Click the 'Publishing Options' link.<br/>
-Select 'Draft' from the 'Moderation State' drop down list.<br/>
-Click the 'Save' button.<br/>
-Verify success message of 'TV Show 6250e4d10e7d428 has been created.' is present.<br/>
 STEP 2<br/>
-Mouse over the 'Structure' menu link.<br/>
-Mouse over the 'Content types' menu link.<br/>
-Mouse over the 'Movie' menu link.<br/>
-Click the 'Manage fields' menu link.<br/>
-Switch to the active frame titled 'Movie dialog'.<br/>
-STEP 3<br/>
-Enter 'Relationships' in the 'Add existing field' text box.<br/>
-Select 'Pub TV Relationship: field_tv_shows (TV Shows)' from the 'select existing field' drop down list.<br/>
-Click the 'Save' button.<br/>
-Switch to the active frame titled 'Relationships dialog'.<br/>
-STEP 4<br/>
-Select 'Show' from the 'TV Relationship Widget Depth' drop down list.<br/>
-Click the 'Save settings' button.<br/>
-Verify success message of 'Saved Relationships configuration.' is present.<br/>
+Click the 'Modules' menu link.<br/>
+Switch to frame titled 'Modules'.<br/>
+Enter 'Pub SSO' in the 'Filter Name' text box.<br/>
+Verify the 'Pub SSO' check box is checked.<br/>
 Click the 'Close Overlay X'.<br/>
 Scroll by '-500'.<br/>
+Click the 'Home' menu link.<br/>
+Mouse over the 'Configuration' menu link.<br/>
+Mouse over the 'People' menu link.<br/>
+Click the 'SimpleSAMLphp Auth Settings' menu link.<br/>
+Switch to the active frame titled 'People dialog'.<br/>
+Enter the file path for certificate upload.<br/>
+Click the 'Save configuration' button.<br/>
+Verify success message of 'The configuration options have been saved.' is present.<br/>
+Verify the text 'A certificate exists for this instance of SimpleSAMLphp.' is present on the page.<br/>
+Click the 'Save configuration' button.<br/>
+Verify success message of 'The configuration options have been saved.' is present.<br/>
+Click the 'Activate authentication via SimpleSAMLphp' check box.<br/>
+Click the 'Save configuration' button.<br/>
+Verify success message of 'The configuration options have been saved.' is present.<br/>
+Click the 'Close Overlay X'.<br/>
+Scroll by '-500'.<br/>
+Click the 'Logout' button.<br/>
+Open url 'http://update.qa5.nbcupublisher7.publisher7.com/saml_login'.<br/>
+Enter '206424392' in the 'SSO ID' text box.<br/>
+Enter 'tufNewcyd577BC' in the 'Password' text box.<br/>
+Click the 'Sign In' button.<br/>
+Verify the text 'Modules' is NOT present on the page.<br/>
+Verify the text 'Brandon.Clark@nbcuni.com' is present on the page.<br/>
+STEP 3<br/>
+Click the 'Edit' link in the work bench.<br/>
+Switch to the active frame titled 'Brandon.Clark@nbcuni.com dialog'.<br/>
+Verify the 'Username' value is 'Brandon.Clark@nbcuni.com' and the text box is disabled.<br/>
+Verify the 'E-mail address' value is 'Brandon.Clark@nbcuni.com' and the text box is disabled.<br/>
+STEP 4<br/>
+Click the 'Change your password' link.<br/>
+Verify the user is redirected to the SSO Password Reset page.<br/>
 STEP 5<br/>
-Mouse over the 'Content' menu link.<br/>
-Mouse over the 'Add content' menu link.<br/>
-Click the 'Movie' menu link.<br/>
-Switch to the active frame titled 'Create Movie dialog'.<br/>
-Enter '1884cb6579054b8' in the 'Title' text box.<br/>
-Switch to the Synopsis frame.<br/>
-Enter a randomized text string into the 'Body' text area.<br/>
-Switch to the active frame titled 'Create Movie dialog'.<br/>
-Click the 'Cover' select button.<br/>
-Switch to the select file frame.<br/>
-Enter the file path for file upload.<br/>
-Click the 'Upload' button.<br/>
-Wait for the file link to be visible after upload.<br/>
-Click the 'Next' button.<br/>
-Click the 'Public Local Files' radio button.<br/>
-Click the 'Next' button.<br/>
-Verify the file image 'HanSolo' is present.<br/>
-Verify the img is loaded and visible.<br/>
-Click the 'Save' button.<br/>
-Switch to the active frame titled 'Create Movie dialog'.<br/>
+Switch to the active frame titled 'Brandon.Clark@nbcuni.com dialog'.<br/>
+Click the 'Close Overlay X'.<br/>
+Scroll by '-500'.<br/>
+Click the 'Logout' button.<br/>
+Open url 'http://update.qa5.nbcupublisher7.publisher7.com/user'.<br/>
+Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
+Enter 'pa55word' in the 'Password' text box.<br/>
+Click the 'Login' button.<br/>
 STEP 6<br/>
-Select '6250e4d10e7d428' from the 'Show' drop down list.<br/>
-Click the 'Save' button.<br/>
-Verify success message of 'Movie 1884cb6579054b8 has been created.' is present.<br/>
-STEP 7 - N/A to Movie content type<br/>
-STEP 8<br/>
-Mouse over the 'Content' menu link.<br/>
-Mouse over the 'Add content' menu link.<br/>
-Click the 'TV Show' menu link.<br/>
-Switch to the active frame titled 'Create TV Show dialog'.<br/>
-Scroll to and click the 'Basic Information' tab.<br/>
-Enter '8e174a10ae4c40a' in the 'Title' text box.<br/>
-Switch to the Synopsis frame.<br/>
-Enter a randomized text string into the 'Body' text area.<br/>
-Switch to the active frame titled 'Create TV Show dialog'.<br/>
-Click the Logo 'Select' button.<br/>
-Switch to the select file frame.<br/>
-Enter the file path for file upload.<br/>
-Click the 'Upload' button.<br/>
-Wait for the file link to be visible after upload.<br/>
-Click the 'Next' button.<br/>
-Click the 'Public Local Files' radio button.<br/>
-Click the 'Next' button.<br/>
-Verify the file image 'HanSolo' is present.<br/>
-Verify the img is loaded and visible.<br/>
-Click the 'Save' button.<br/>
-Switch to the active frame titled 'Create TV Show dialog'.<br/>
-Click the Cover Media 'Select' button.<br/>
-Switch to the select file frame.<br/>
-Enter the file path for file upload.<br/>
-Click the 'Upload' button.<br/>
-Wait for the file link to be visible after upload.<br/>
-Click the 'Next' button.<br/>
-Click the 'Public Local Files' radio button.<br/>
-Click the 'Next' button.<br/>
-Verify the file image 'HanSolo' is present.<br/>
-Verify the img is loaded and visible.<br/>
-Click the 'Save' button.<br/>
-Switch to the active frame titled 'Create TV Show dialog'.<br/>
-Click the Banner 'Select' button.<br/>
-Switch to the select file frame.<br/>
-Enter the file path for file upload.<br/>
-Click the 'Upload' button.<br/>
-Wait for the file link to be visible after upload.<br/>
-Click the 'Next' button.<br/>
-Click the 'Public Local Files' radio button.<br/>
-Click the 'Next' button.<br/>
-Verify the file image 'HanSolo' is present.<br/>
-Verify the img is loaded and visible.<br/>
-Click the 'Save' button.<br/>
-Switch to the active frame titled 'Create TV Show dialog'.<br/>
-Scroll the 'Publishing Options' link into view.<br/>
-Click the 'Publishing Options' link.<br/>
-Select 'Draft' from the 'Moderation State' drop down list.<br/>
-Click the 'Save' button.<br/>
-Verify success message of 'TV Show 8e174a10ae4c40a has been created.' is present.<br/>
-Mouse over the 'Content' menu link.<br/>
-Mouse over the 'Add content' menu link.<br/>
-Click the 'TV Season' menu link.<br/>
-Switch to the active frame titled 'Create TV Season dialog'.<br/>
-Scroll to and click the 'Basic Information' tab.<br/>
-Enter '204223fbde6f4c1' in the 'Title' text box.<br/>
-Enter '1' in the 'Season Number' text box.<br/>
-Switch to the Synopsis frame.<br/>
-Enter a randomized text string into the 'Body' text area.<br/>
-Switch to the active frame titled 'Create TV Season dialog'.<br/>
-Click the 'Cover' select button.<br/>
-Switch to the select file frame.<br/>
-Enter the file path for file upload.<br/>
-Click the 'Upload' button.<br/>
-Wait for the file link to be visible after upload.<br/>
-Click the 'Next' button.<br/>
-Click the 'Public Local Files' radio button.<br/>
-Click the 'Next' button.<br/>
-Verify the file image 'HanSolo' is present.<br/>
-Verify the img is loaded and visible.<br/>
-Click the 'Save' button.<br/>
-Switch to the active frame titled 'Create TV Season dialog'.<br/>
-Scroll the 'Publishing Options' link into view.<br/>
-Click the 'Publishing Options' link.<br/>
-Select 'Draft' from the 'Moderation State' drop down list.<br/>
-Click the 'Relationships' link.<br/>
-Select '8e174a10ae4c40a' from the 'Show' drop down list.<br/>
-Click the 'Save' button.<br/>
-Verify success message of 'TV Season 204223fbde6f4c1 has been created.' is present.<br/>
-Mouse over the 'Content' menu link.<br/>
-Mouse over the 'Add content' menu link.<br/>
-Click the 'TV Episode' menu link.<br/>
-Switch to the active frame titled 'Create TV Episode dialog'.<br/>
-Scroll to and click the 'Basic Information' tab.<br/>
-Enter '889c567aa00044a' in the 'Title' text box.<br/>
-Enter '1' in the 'Episode Number' text box.<br/>
-Switch to the Synopsis frame.<br/>
-Enter a randomized text string into the 'Body' text area.<br/>
-Switch to the active frame titled 'Create TV Episode dialog'.<br/>
-Scroll the 'Publishing Options' link into view.<br/>
-Click the 'Publishing Options' link.<br/>
-Select 'Draft' from the 'Moderation State' drop down list.<br/>
-Click the 'Relationships' link.<br/>
-Select '8e174a10ae4c40a' from the 'Show' drop down list.<br/>
-Select '204223fbde6f4c1' from the 'Season' drop down list.<br/>
-Click the 'Save' button.<br/>
-Verify success message of 'TV Episode 889c567aa00044a has been created.' is present.<br/>
+Mouse over the 'People' menu link.<br/>
+Click the 'Add user' menu link.<br/>
+Switch to the active frame titled 'People dialog'.<br/>
+Verify the 'Username' text box is not present.<br/>
+Enter '6e98b3793fdf42c@81a8538663eb42d.com' in the 'E-mail address' text box.<br/>
+Verify the 'Password' and 'Password Confirm' text boxes are not present.<br/>
+Check the 'editor' check box.<br/>
+Enter 'ed6a172d70cd49c' in the 'First Name' text box.<br/>
+Enter 'b778acd3399e4cb' in the 'Last Name' text box.<br/>
+Click the 'Create new account' button.<br/>
+Verify success message of 'A welcome message with further instructions has been e-mailed to the new user 6e98b3793fdf42c@81a8538663eb42d.com.' is present.<br/>
+Click the 'Close Overlay X'.<br/>
+Scroll by '-500'.<br/>
+STEP 7<br/>
+Click the 'People' menu link.<br/>
+Switch to the active frame titled 'People dialog'.<br/>
+Click the 'next >' link until user '6e98b3793fdf42c@81a8538663eb42d.com' is present.<br/>
+Click the 'edit' link for '6e98b3793fdf42c@81a8538663eb42d.com' from the 'USERNAME' list.<br/>
+Switch to the active frame titled '6e98b3793fdf42c@81a8538663eb42d.com dialog'.<br/>
+Verify the 'Username' value is '6e98b3793fdf42c@81a8538663eb42d.com' and the text box is disabled.<br/>
+STEPS 8-11<br/>
+Open url 'http://update.qa5.nbcupublisher7.publisher7.com/admin/config/people/simplesamlphp_auth'.<br/>
+Click the 'Activate authentication via SimpleSAMLphp' check box.<br/>
+Click the 'Save configuration' button.<br/>
+Verify success message of 'The configuration options have been saved.' is present.<br/>
+Verify success message of 'SimpleSAMLphp authentication is NOT yet activated.' is present.<br/>
+Click the 'Home' menu link.<br/>
+Click the 'Modules' menu link.<br/>
+Switch to the active frame titled 'Modules dialog'.<br/>
+Enter 'Pub SSO' in the 'Filter Name' text box.<br/>
+Uncheck the 'Pub SSO' module checkbox.<br/>
+Click the 'Save configuration' button.<br/>
+Verify success message of 'The configuration options have been saved.' is present.<br/>
+Enter 'simpleSAMLphp authentication' in the 'Filter Name' text box.<br/>
+Uncheck the 'simpleSAMLphp authentication' module checkbox.<br/>
+Click the 'Save configuration' button.<br/>
+Verify success message of 'The configuration options have been saved.' is present.<br/>
+Click the 'Close Overlay X'.<br/>
+Scroll by '-500'.<br/>
+Mouse over the 'Home' menu link.<br/>
+Click the '[[Driver: chrome on MAC (4f979e5b-0e52-4027-96a2-fcf64777622d)] -> xpath: //span[@class='admin-menu-home-icon']/../..//a[text()='Flush all caches']]' menu link.<br/>
 </div>
 </td>
 <td></td>
-<td>161</td>
-<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.Relationships@2dd9928</td></tr>
+<td>114</td>
+<td>com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOManageUsers@70d7a2d4</td></tr>
 </table><p>
 </body>
 </html>

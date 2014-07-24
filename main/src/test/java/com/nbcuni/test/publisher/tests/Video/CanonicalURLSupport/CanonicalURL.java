@@ -33,105 +33,99 @@ public class CanonicalURL extends ParentTest{
     	UserLogin userLogin = applib.openApplication();
     	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
         
-        //MPX Configuration required
+        Reporter.log("SETUP");
+        Settings settings = new Settings(webDriver, applib);
+    	settings.ConfigureMPXIfNeeded();
+    	
         taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
         overlay.SwitchToActiveFrame();
-        Settings settings = new Settings(webDriver, applib);
-        if (settings.IsMPXConfigured() == true) {
+        List<String> configuredAccounts = settings.GetImportAccountSelectedOptions();
 
-        	List<String> configuredAccounts = settings.GetImportAccountSelectedOptions();
-
-        	Reporter.log("STEP 2");
-        	if (configuredAccounts.get(0).equals("DB TV")) {
-        		overlay.ClickCloseOverlayLnk();
-        		taxonomy.NavigateSite("Structure>>File types");
-        		overlay.SwitchToActiveFrame();
+        Reporter.log("STEP 2");
+        if (configuredAccounts.get(0).equals("DB TV")) {
+        	overlay.ClickCloseOverlayLnk();
+        	taxonomy.NavigateSite("Structure>>File types");
+        	overlay.SwitchToActiveFrame();
         	
-        		Reporter.log("STEP 3");
-        		FileTypes fileTypes = new FileTypes(webDriver);
-        		fileTypes.ClickManageFieldsLnk(configuredAccounts.get(0));
-        		overlay.SwitchToActiveFrame();
+        	Reporter.log("STEP 3");
+        	FileTypes fileTypes = new FileTypes(webDriver);
+        	fileTypes.ClickManageFieldsLnk(configuredAccounts.get(0));
+        	overlay.SwitchToActiveFrame();
         		
-        		Reporter.log("STEP 4");
-        		overlay.SwitchToActiveFrame();
-        		ContentParent contentParent = new ContentParent(webDriver, applib);
-        		ManageFields manageFields = new ManageFields(webDriver, applib);
-        		if (manageFields.FieldLabelExists("MPX Media Related Link") == false) {
+        	Reporter.log("STEP 4");
+        	overlay.SwitchToActiveFrame();
+        	ContentParent contentParent = new ContentParent(webDriver, applib);
+        	ManageFields manageFields = new ManageFields(webDriver, applib);
+        	if (manageFields.FieldLabelExists("MPX Media Related Link") == false) {
         			
-        			manageFields.EnterAddNewField("MPX Media Related Link");
+        		manageFields.EnterAddNewField("MPX Media Related Link");
         			
-        			Reporter.log("STEP 5");
-        			manageFields.SelectFieldType("Link");
-        			manageFields.ClickSaveBtn(); 
-        			manageFields.ClickSaveFieldSettingsBtn();
-        			contentParent.VerifyMessageStatus("Updated field MPX Media Related Link field settings.");
-        		}
+        		Reporter.log("STEP 5");
+        		manageFields.SelectFieldType("Link");
+        		manageFields.ClickSaveBtn(); 
+        		manageFields.ClickSaveFieldSettingsBtn();
+        		contentParent.VerifyMessageStatus("Updated field MPX Media Related Link field settings.");
+        	}
         		
-        		Reporter.log("STEP 6");
-    			overlay.ClickCloseOverlayLnk();
-    			taxonomy.NavigateSite("Structure>>File types");
-        		overlay.SwitchToActiveFrame();
+        	Reporter.log("STEP 6");
+    		overlay.ClickCloseOverlayLnk();
+    		taxonomy.NavigateSite("Structure>>File types");
+        	overlay.SwitchToActiveFrame();
         		
-        		Reporter.log("STEP 7");
-        		fileTypes.ClickEditFileTypeLnk(configuredAccounts.get(0));
-        		overlay.SwitchToActiveFrame();
-        		MPXFileType mpxFileType = new MPXFileType(webDriver);
-        		mpxFileType.SelectURLAliasField("MPX Media Related Link");
-        		mpxFileType.ClickSaveBtn();
-        		contentParent.VerifyMessageStatus("has been updated.");
+        	Reporter.log("STEP 7");
+        	fileTypes.ClickEditFileTypeLnk(configuredAccounts.get(0));
+        	overlay.SwitchToActiveFrame();
+        	MPXFileType mpxFileType = new MPXFileType(webDriver);
+            mpxFileType.SelectURLAliasField("MPX Media Related Link");
+        	mpxFileType.ClickSaveBtn();
+        	contentParent.VerifyMessageStatus("has been updated.");
         		
-        		Reporter.log("STEP 8 NOTE- step 8 creates a new video with a canonical url rather than using an existing video");
-        		MPXLogin mpxLogin = new MPXLogin(webDriver, applib);
-            	mpxLogin.OpenMPXThePlatform();
-            	mpxLogin.Login(applib.getMPXUsername(), applib.getMPXPassword());
-            	MPXSelectAccount mpxSelectAccount = new MPXSelectAccount(webDriver, applib);
-                mpxSelectAccount.SelectAccount("DB TV");
-            	MPXAddMedia mpxAddMedia = new MPXAddMedia(applib);
-            	mpxAddMedia.UploadDefaultVideo();
-                String mediaTitle = "Automation" + random.GetCharacterString(10);
-                mpxAddMedia.GiveFocusToMediaItem();
-                mpxAddMedia.EnterTitle(mediaTitle);
-                String canonicalURL = "canonicalurl" + random.GetCharacterString(10);
-                mpxAddMedia.EnterCanonicalURL(canonicalURL);
-                mpxAddMedia.ClickSaveBtn(true);
-                MPXPublishMedia mpxPublishMedia = new MPXPublishMedia(applib);
-                mpxPublishMedia.PublishDefaultVideo();
+        	Reporter.log("STEP 8 NOTE- step 8 creates a new video with a canonical url rather than using an existing video");
+        	MPXLogin mpxLogin = new MPXLogin(webDriver, applib);
+            mpxLogin.OpenMPXThePlatform();
+            mpxLogin.Login(applib.getMPXUsername(), applib.getMPXPassword());
+            MPXSelectAccount mpxSelectAccount = new MPXSelectAccount(webDriver, applib);
+            mpxSelectAccount.SelectAccount("DB TV");
+            MPXAddMedia mpxAddMedia = new MPXAddMedia(applib);
+            mpxAddMedia.UploadDefaultVideo();
+            String mediaTitle = "Automation" + random.GetCharacterString(10);
+            mpxAddMedia.GiveFocusToMediaItem();
+            mpxAddMedia.EnterTitle(mediaTitle);
+            String canonicalURL = "canonicalurl" + random.GetCharacterString(10);
+            mpxAddMedia.EnterCanonicalURL(canonicalURL);
+            mpxAddMedia.ClickSaveBtn(true);
+            MPXPublishMedia mpxPublishMedia = new MPXPublishMedia(applib);
+            mpxPublishMedia.PublishDefaultVideo();
         		
-                Reporter.log("STEP 9");
-                applib.openApplication();
-                Cron cron = new Cron(webDriver, applib);
-                cron.RunCron(true);
+            Reporter.log("STEP 9");
+            applib.openApplication();
+            Cron cron = new Cron(webDriver, applib);
+            cron.RunCron(true);
                 
-        	    Reporter.log("STEP 10");
-        	    taxonomy.NavigateSite("Content>>Files>>mpxMedia");
-        	    overlay.SwitchToActiveFrame();
-        	    SearchFor searchFor = new SearchFor(webDriver, applib);
-        	    searchFor.EnterTitle(mediaTitle);
-        	    searchFor.ClickApplyBtn();
-        	    overlay.switchToDefaultContent();
-        	    if (!searchFor.GetFirstMPXMediaSearchResult().equals(mediaTitle)) {
-        	    	//re-run cron as sometimes media assets aren't in the first ingested queue
-        	    	cron.RunCron(false);
-            	    taxonomy.NavigateSite("Content>>Files>>mpxMedia");
-            	    searchFor.EnterTitle(mediaTitle);
-            	    searchFor.ClickApplyBtn();
-        	    }
-        	    searchFor.ClickSearchTitleLnk(mediaTitle);
+        	Reporter.log("STEP 10");
+        	taxonomy.NavigateSite("Content>>Files>>mpxMedia");
+        	overlay.SwitchToActiveFrame();
+        	SearchFor searchFor = new SearchFor(webDriver, applib);
+        	searchFor.EnterTitle(mediaTitle);
+        	searchFor.ClickApplyBtn();
+        	overlay.switchToDefaultContent();
+        	if (!searchFor.GetFirstMPXMediaSearchResult().equals(mediaTitle)) {
+        	    //re-run cron as sometimes media assets aren't in the first ingested queue
+        	    cron.RunCron(false);
+            	taxonomy.NavigateSite("Content>>Files>>mpxMedia");
+            	searchFor.EnterTitle(mediaTitle);
+            	searchFor.ClickApplyBtn();
+        	}
+        	searchFor.ClickSearchTitleLnk(mediaTitle);
         	    
-        	    Reporter.log("STEP 11");
-        	    contentParent.VerifyPageContentPresent(Arrays.asList("MPX Media Related Link:", canonicalURL));
-        	    Assert.assertTrue(webDriver.getCurrentUrl().equals(applib.getApplicationURL() + "/" + canonicalURL));
+        	Reporter.log("STEP 11");
+        	contentParent.VerifyPageContentPresent(Arrays.asList("MPX Media Related Link:", canonicalURL));
+        	Assert.assertTrue(webDriver.getCurrentUrl().equals(applib.getApplicationURL() + "/" + canonicalURL));
         		
-        	}
-        	else {
-        		Assert.fail("DB TV account must be configured.");
-        	}
         }
         else {
-        	
-        	Assert.fail("MPX is NOT configured. Test titled 'MultipleMPXAccountsPerLoginVerification' must run before any other MPX tests.");
-        	
+        	Assert.fail("DB TV account must be configured.");
         }
-
+        
     }
 }

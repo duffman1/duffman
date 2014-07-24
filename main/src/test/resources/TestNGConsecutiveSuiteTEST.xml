@@ -1,0 +1,19 @@
+<suite name="Pub 7 Consecutive Suite" preserve-order="true">
+
+  	<!--TEST EXECUTION QUEUE-->
+  	<test verbose="1" name="All Consecutive Web Tests" annotations="JDK">
+
+		<!-- Enter group name for specific test scripts, options are "full", "smoke", or "mpx" -->
+		<groups>
+	 		<run>
+	 			<include name="full"/>
+	 		</run>
+		</groups>
+
+		<classes>
+			<class name="com.nbcuni.test.publisher.tests.Setup.A1_TestSetup"/>
+			<class name="com.nbcuni.test.publisher.tests.Video.Configuration.ConfigurationMultipleMPXAccounts"/>CRON
+			
+		</classes>
+	</test>
+</suite>
