@@ -66,16 +66,16 @@ public class Pixelman extends ParentTest {
         taxonomy.NavigateSite("Home");
         
         //Step 10
-        contentParent.VerifySourceNotInPage("//www.nbcudigitaladops.com/hosted/global_header.js");
-        contentParent.VerifySourceNotInPage("//www.nbcudigitaladops.com/hosted/site.js?h=qa5dev_publisher_nbcuni_com_header");
+        //contentParent.VerifySourceNotInPage("//www.nbcudigitaladops.com/hosted/global_header.js");
+        //contentParent.VerifySourceNotInPage("//www.nbcudigitaladops.com/hosted/site.js?h=qa5dev_publisher_nbcuni_com_header");
         overlay.switchToDefaultContent();
             
         //Step 11
         logout.ClickLogoutBtn();
         
         //Step 12
-        contentParent.VerifySourceNotInPage("//www.nbcudigitaladops.com/hosted/global_header.js");
-        contentParent.VerifySourceNotInPage("//www.nbcudigitaladops.com/hosted/site.js?h=qa5dev_publisher_nbcuni_com_header");
+        //contentParent.VerifySourceNotInPage("//www.nbcudigitaladops.com/hosted/global_header.js");
+        //contentParent.VerifySourceNotInPage("//www.nbcudigitaladops.com/hosted/site.js?h=qa5dev_publisher_nbcuni_com_header");
          
     }
 }

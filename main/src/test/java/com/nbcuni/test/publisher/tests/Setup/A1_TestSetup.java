@@ -18,10 +18,11 @@ import com.nbcuni.test.publisher.pageobjects.Content.PublishingOptions;
 import com.nbcuni.test.publisher.pageobjects.Content.SelectFile;
 import com.nbcuni.test.publisher.pageobjects.Content.WorkBench;
 import com.nbcuni.test.publisher.pageobjects.Cron.Cron;
+import com.nbcuni.test.publisher.pageobjects.Logo.AddLogo;
+import com.nbcuni.test.publisher.pageobjects.Logo.Logos;
 import com.nbcuni.test.publisher.pageobjects.Queues.ScheduleQueue;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
 public class A1_TestSetup extends ParentTest {
@@ -71,6 +72,10 @@ public class A1_TestSetup extends ParentTest {
             //enable pub post module
             modules.EnterFilterName("Pub Post");
             modules.EnableModule("Pub Post");
+            
+            //enable logo manage module
+            modules.EnterFilterName("Logo Manager");
+            modules.EnableModule("Logo Manager");
             overlay.ClickCloseOverlayLnk();
             
             //schedule a post content item revision to be consumed by the SchedulingContentPublishUnpublished test later in the suite
@@ -122,13 +127,49 @@ public class A1_TestSetup extends ParentTest {
             contentParent.VerifyMessageStatus("The scheduled revision operation has been saved");
         	overlay.ClickCloseOverlayLnk();
         	
-            //if Cindia's demo site, set set timezone to UTC
-            if (applib.getApplicationURL().contains("demo.publisher7.com")) {
-            	webDriver.navigate().to(applib.getApplicationURL() + "/admin/config/regional/settings");
-            	new Select(webDriver.findElement(By.id("edit-date-default-timezone"))).selectByValue("UTC");
-            	webDriver.findElement(By.id("edit-submit")).click();
-            }
-            
+        	//schedule a new logo to be used later in the suite
+        	taxonomy.NavigateSite("Content>>Logos");
+        	overlay.SwitchToActiveFrame();
+        	Logos logos = new Logos(webDriver, applib);
+    	    logos.DeleteAllLogos();
+        	overlay.ClickCloseOverlayLnk();
+        	try {
+        		taxonomy.NavigateSite("Content>>Logos>>Add Logo");
+        	}
+        	catch (Exception | AssertionError e) {
+        		taxonomy.NavigateSite("Content>>Add Logo");
+        	}
+            overlay.SwitchToActiveFrame();
+            AddLogo addLogo = new AddLogo(webDriver);
+            String logoTitle = random.GetCharacterString(15);
+            addLogo.EnterTitle(logoTitle);
+            addLogo.EnterFilePath(applib.getPathToMedia() + "nbclogosmall.jpg");
+    	    addLogo.ClickUploadBtn();
+    	    addLogo.WaitForFileUploaded("nbclogosmall.jpg");
+    	    addLogo.VerifyFileImagePresent("nbclogosmall");
+            Calendar cal5MinuteFuture = Calendar.getInstance();
+            cal5MinuteFuture.add(Calendar.MINUTE, 5);
+        	date5MinuteFuture = cal5MinuteFuture.getTime();
+        	Calendar cal30MinuteFuture = Calendar.getInstance();
+            cal30MinuteFuture.add(Calendar.MINUTE, 30);
+        	Date date30MinuteFuture = cal30MinuteFuture.getTime();
+        	SimpleDateFormat pub7LogoDateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        	pub7LogoDateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
+        	SimpleDateFormat pub7LogoTimeFormat = new SimpleDateFormat("hh:mm:ss a");
+        	pub7LogoTimeFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
+        	addLogo.EnterStartDate(pub7LogoDateFormat.format(date5MinuteFuture));
+    	    addLogo.EnterStartTime(pub7LogoTimeFormat.format(date5MinuteFuture));
+    	    addLogo.EnterEndDate(pub7LogoDateFormat.format(date30MinuteFuture));
+    	    addLogo.EnterEndTime(pub7LogoTimeFormat.format(date30MinuteFuture));
+    	    addLogo.ClickSaveBtn();
+    	    overlay.SwitchToActiveFrame();
+    	    SimpleDateFormat pub7CreatedLogoDateTimeFormat = new SimpleDateFormat("EEE, MM/dd/yyyy - kk:mm");
+    	    pub7CreatedLogoDateTimeFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
+        	contentParent.VerifyPageContentPresent(Arrays.asList(logoTitle, 
+    	    		pub7CreatedLogoDateTimeFormat.format(date5MinuteFuture).replace("24:", "00:"), pub7CreatedLogoDateTimeFormat.format(date30MinuteFuture)));
+    	    logos.VerifyLogoImgPresent(logoTitle, "nbclogosmall");
+    	    overlay.ClickCloseOverlayLnk();
+    	    
             //delete any old mpx account file types (DE3921)
             webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
             try {

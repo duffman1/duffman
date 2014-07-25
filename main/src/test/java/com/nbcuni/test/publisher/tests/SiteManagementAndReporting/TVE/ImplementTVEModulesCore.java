@@ -27,7 +27,7 @@ public class ImplementTVEModulesCore extends ParentTest {
 		Reporter.log("STEP 1");
 		UserLogin userLogin = applib.openApplication();
 		userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
-       
+        
 		Reporter.log("SETUP");
 		taxonomy.NavigateSite("Modules");
 		overlay.SwitchToActiveFrame();
@@ -149,16 +149,24 @@ public class ImplementTVEModulesCore extends ParentTest {
         tveAuthExample.VerifySelectedMVPD("Cablevision");
         errorChecking.VerifyNoMessageErrorsPresent();
         
-        Reporter.log("CLEANUP");
-        taxonomy.NavigateSite("Structure>>Blocks");
-        overlay.SwitchToActiveFrame();
-        blocks.SelectRegion("TVE Auth Example", "- None -");
-        blocks.ClickSaveBlocksBtn();
-        applib.openSitePage("/admin/config/development/jquery_update");
-        jqueryUpdate.SelectDefaultjQueryVersion("1.5");
-        jqueryUpdate.ClickSaveConfigurationBtn(); 
-        taxonomy.NavigateSite("Home>>Flush all caches");
-        taxonomy.NavigateSite("Home");
-        
+	}
+	 
+	@Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"}, dependsOnMethods = {"ImplementTVEModulesCore_TC3261"}, alwaysRun=true)
+	public void Cleanup() throws Exception {
+		UserLogin userLogin = applib.openApplication();
+		userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+		taxonomy.NavigateSite("Structure>>Blocks");
+		overlay.SwitchToActiveFrame();
+		Blocks blocks = new Blocks(webDriver);
+		blocks.SelectRegion("TVE Auth Example", "- None -");
+		blocks.ClickSaveBlocksBtn();
+		applib.openSitePage("/admin/config/development/jquery_update");
+		Thread.sleep(1000);
+		jQueryUpdate jqueryUpdate = new jQueryUpdate(webDriver);
+		jqueryUpdate.SelectDefaultjQueryVersion("1.5");
+		jqueryUpdate.ClickSaveConfigurationBtn(); 
+		taxonomy.NavigateSite("Home>>Flush all caches");
+		taxonomy.NavigateSite("Home");
+		
 	}
 }

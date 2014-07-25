@@ -53,7 +53,7 @@ public class MPSEndToEndIntegration extends ParentTest {
             
             Reporter.log("STEP 6 and 7");
             Blocks blocks = new Blocks(webDriver);
-            blocks.SelectRegion("topmulti (MPS)", "Header");
+            blocks.SelectRegion("topmulti (MPS)", "Footer");
             blocks.ClickSaveBlocksBtn();
             contentParent.VerifyMessageStatus("The block settings have been updated.");
             overlay.ClickCloseOverlayLnk();

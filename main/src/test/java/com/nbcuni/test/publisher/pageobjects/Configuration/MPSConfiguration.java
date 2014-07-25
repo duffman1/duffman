@@ -214,9 +214,8 @@ public class MPSConfiguration {
     
     public void VerifyTopMultiAdPresent() throws Exception { 
     	
-    	webDriver.switchTo().frame(TopMultiAd_Frm);
-    	
     	Reporter.log("Verify the Ad image is present.");
+    	webDriver.switchTo().frame(TopMultiAd_Frm);
     	Assert.assertTrue((Boolean) ((JavascriptExecutor)webDriver).executeScript(
     			"return arguments[0].complete && typeof arguments[0].naturalWidth != \"undefined\" && arguments[0].naturalWidth > 0", 
     			Ad_Img));
