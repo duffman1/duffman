@@ -55,6 +55,7 @@ public class AdFoldersRichMediaAds extends ParentTest {
         
         //Step 3
         PublisherAdsSideFiles publisherAdsSideFiles = new PublisherAdsSideFiles(webDriver, applib);
+        publisherAdsSideFiles.DeleteAllUnwantedSideFiles();
         publisherAdsSideFiles.ClickAddLnk();
         overlay.SwitchToActiveFrame();
         

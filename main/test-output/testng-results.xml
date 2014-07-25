@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
     <line>
-      <![CDATA[STEP 1]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://install.devi2.nbcupublisher7.publisher7.com'.]]>
+      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
     </line>
     <line>
       <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
@@ -17,243 +14,360 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[SETUP]]>
-    </line>
-    <line>
       <![CDATA[Click the 'Modules' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+      <![CDATA[Switch to frame titled 'Modules'.]]>
     </line>
     <line>
-      <![CDATA[Enter 'jQuery Update' in the 'Filter Name' text box.]]>
+      <![CDATA[Enter 'Pub Ads' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Verify the 'jQuery Update' check box is checked.]]>
+      <![CDATA[Verify the 'Pub Ads' check box is checked.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
     </line>
     <line>
       <![CDATA[Scroll by '-500'.]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://install.devi2.nbcupublisher7.publisher7.com/admin/config/development/jquery_update'.]]>
-    </line>
-    <line>
-      <![CDATA[Select '1.5' from the 'Default jQuery Version' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Home' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the '[[Driver: chrome on MAC (2376a917-fade-41e8-a45c-eb777dfedfed)] -> xpath: //span[@class='admin-menu-home-icon']/../..//a[text()='Flush all caches']]' menu link.]]>
     </line>
     <line>
       <![CDATA[Click the 'Home' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 2]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Modules' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'TVE Adobe Pass' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'TVE Adobe Pass' check box is checked.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'TVE Auth Example' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'TVE Auth Example' check box is checked.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'TVE MVPD' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'TVE MVPD' check box is checked.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll by '-500'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 3]]>
     </line>
     <line>
       <![CDATA[Mouse over the 'Structure' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Blocks' menu link.]]>
+      <![CDATA[Click the 'Publisher Ads Side Files' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
     </line>
     <line>
-      <![CDATA[Select the block name 'TVE Auth Example' from the 'Sidebar first' drop down list.]]>
+      <![CDATA[Click the Ad Side File expand link for adName + 'be1dd6a81910427'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save Blocks' button.]]>
+      <![CDATA[Click the Ad Side File 'Delete' link for adName + 'be1dd6a81910427'.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'The block settings have been updated.' is present.]]>
+      <![CDATA[Switch to the active frame titled 'Are you sure you want to delete clone_of_eyewonder? dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Delete' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The item has been deleted.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify Ad Side File 'be1dd6a81910427' is NOT present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the Ad Side File expand link for adName + 'dksdllekfklsdjkfsdfkj'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the Ad Side File 'Delete' link for adName + 'dksdllekfklsdjkfsdfkj'.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Are you sure you want to delete dksdllekfklsdjkfsdfkj? dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Delete' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The item has been deleted.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify Ad Side File 'dksdllekfklsdjkfsdfkj' is NOT present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Add' link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Add a new side file dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '97e1cbfd1c074ef' in the 'Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'de52c5932a/7f391a7d08.html' in the 'Path' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Select the 'text/html' from the 'Response type' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '<html><body bgcolor=white><script language=javascript>function pq(q) {if(q.length > 1) this.q = q.substring(1, q.length);else this.q = null;this.keyValuePairs = new Array();if(q) {for(var i=0; i < this.q.split("&").length; i++) {this.keyValuePairs[i] = this.q.split("&")[i];}}this.getValue = function(s) {for(var j=0; j < this.keyValuePairs.length; j++) {if(this.keyValuePairs[j].split("=")[0] == s)return this.keyValuePairs[j].split("=")[1];}return -1;}}function qs(key){var page = new pq(document.location.search);return unescape(page.getValue(key));}var _c = qs('c');var r_number = Math.random();document.writeln('<SCR'+'IPT language='JavaScript' S'+'RC="http://media.adcentriconline.com/adcentric/tag/'+_c+'?ADCadcifr=1&number='+r_number+'"></SCR'+'IPT>');</script></body></html>' in the 'Content' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of '97e1cbfd1c074ef has been created.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the Ad Side File link with path 'de52c5932a/7f391a7d08.html'.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the Ad Side File 'Edit' link for adName + 'Atlas'.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Edit side file atlas dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'atlas has been updated' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify storage type for Ad Side File 'Atlas' is set to 'Overridden'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the Ad Side File 'Edit' link for adName + 'Atlas'.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Edit side file atlas dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Revert' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Revert' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The item has been reverted.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify storage type for Ad Side File 'Atlas' is set to 'Default'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the Ad Side File expand link for adName + 'Atlas'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the Ad Side File 'Clone' link for adName + 'Atlas'.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Clone side file atlas dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'f6ee5301bba0420' in the 'Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'clone_of_atlas has been created.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify storage type for Ad Side File 'f6ee5301bba0420' is set to 'Normal'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the Ad Side File 'Edit' link for adName + 'Atlas'.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Edit side file atlas dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Export' tab.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Export side file atlas dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Copy the text from the 'Export' text area.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
     </line>
     <line>
       <![CDATA[Scroll by '-500'.]]>
-    </line>
-    <line>
-      <![CDATA[SKIP TO STEP 10 - TVE ALREADY CONFIGURED]]>
-    </line>
-    <line>
-      <![CDATA[STEP 10]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Configure jQuery' link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'jQuery update dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Select '1.7' from the 'Default jQuery Version' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll by '-500'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 11]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Home' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Authentication status checked:' value is 'true'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Authenticated' value is 'false'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Selected MVPD:' value is 'none'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 12]]>
-    </line>
-    <line>
-      <![CDATA[Select 'Optimum' from the 'Al VMPDs:' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'login' button.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'research40' in the 'Optimum ID' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'support40' in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'SIGN IN' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Authentication status checked:' value is 'true'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Authenticated' value is 'true'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Selected MVPD:' value is 'Cablevision'.]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://install.devi2.nbcupublisher7.publisher7.com'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
       <![CDATA[Mouse over the 'Structure' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Blocks' menu link.]]>
+      <![CDATA[Mouse over the 'Publisher Ads Side Files' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
+      <![CDATA[Click the 'Import' menu link.]]>
     </line>
     <line>
-      <![CDATA[Select the block name 'TVE Auth Example' from the '- None -' drop down list.]]>
+      <![CDATA[Switch to the active frame titled 'Import side file dialog'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save Blocks' button.]]>
+      <![CDATA[Enter '$adpath = new stdClass();
+$adpath->disabled = FALSE; /* Edit this to true to make a default adpath disabled initially */
+$adpath->api_version = 1;
+$adpath->machine_name = 'atlas';
+$adpath->name = 'Atlas';
+$adpath->path = 'atlas/atlas_rm.html';
+$adpath->file_type = 'html';
+$adpath->content = '<html>
+<head>
+</head>
+<body>
+<script src=\'http://rmd.atdmt.com/tl/newIframeScript.js\'> </script>
+
+
+</body>
+</html>';
+' in the 'Side file code' text area.]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://install.devi2.nbcupublisher7.publisher7.com/admin/config/development/jquery_update'.]]>
+      <![CDATA[Click the 'Continue' button.]]>
     </line>
     <line>
-      <![CDATA[Select '1.5' from the 'Default jQuery Version' drop down list.]]>
+      <![CDATA[Switch to the active frame titled 'Import side file dialog'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
+      <![CDATA[Verify warning message 'You have unsaved changes. These changes will not be made permanent until you click Save.' is present.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Home' menu link.]]>
+      <![CDATA[Enter 'dbb962046dfb475' in the 'Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the '[[Driver: chrome on MAC (110af2c6-ea94-43ce-983f-47c922ac80b1)] -> xpath: //span[@class='admin-menu-home-icon']/../..//a[text()='Flush all caches']]' menu link.]]>
+      <![CDATA[Enter '16e5b938d4/505e701a9a.html' in the 'Path' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Home' menu link.]]>
+      <![CDATA[Click the 'Update' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Import side file dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify warning message 'You have unsaved changes. These changes will not be made permanent until you click Save.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Import side file dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'dbb962046dfb475' in the 'Machine Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Update' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Import side file dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify warning message 'You have unsaved changes. These changes will not be made permanent until you click Save.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'dbb962046dfb475 has been created.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify storage type for Ad Side File 'dbb962046dfb475' is set to 'Normal'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the Ad Side File expand link for adName + '97e1cbfd1c074ef'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the Ad Side File 'Delete' link for adName + '97e1cbfd1c074ef'.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Are you sure you want to delete 97e1cbfd1c074ef? dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Delete' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The item has been deleted.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify Ad Side File '97e1cbfd1c074ef' is NOT present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the Ad Side File expand link for adName + 'f6ee5301bba0420'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the Ad Side File 'Delete' link for adName + 'f6ee5301bba0420'.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Are you sure you want to delete clone_of_atlas? dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Delete' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The item has been deleted.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify Ad Side File 'f6ee5301bba0420' is NOT present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the Ad Side File expand link for adName + 'dbb962046dfb475'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the Ad Side File 'Delete' link for adName + 'dbb962046dfb475'.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Are you sure you want to delete dbb962046dfb475? dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Delete' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The item has been deleted.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify Ad Side File 'dbb962046dfb475' is NOT present.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="170008" started-at="2014-07-25T18:10:26Z" finished-at="2014-07-25T18:13:16Z">
+  <suite name="Default suite" duration-ms="138902" started-at="2014-07-25T20:09:08Z" finished-at="2014-07-25T20:11:27Z">
     <groups>
       <group name="full">
-        <method signature="ImplementTVEModulesCore.ImplementTVEModulesCore_TC3261()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@d32c064]" name="ImplementTVEModulesCore_TC3261" class="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore"/>
-        <method signature="ImplementTVEModulesCore.Cleanup()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@d32c064]" name="Cleanup" class="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore"/>
+        <method signature="AdFoldersRichMediaAds.AdFoldersRichMediaAds_TC1160()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds@569fc9fe]" name="AdFoldersRichMediaAds_TC1160" class="com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds"/>
       </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="170008" started-at="2014-07-25T18:10:26Z" finished-at="2014-07-25T18:13:16Z">
-      <class name="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore">
-        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@d32c064]" name="startGridAndHub" is-config="true" duration-ms="1301" started-at="2014-07-25T14:10:24Z" finished-at="2014-07-25T14:10:26Z">
+    <test name="Default test" duration-ms="138902" started-at="2014-07-25T20:09:08Z" finished-at="2014-07-25T20:11:27Z">
+      <class name="com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds">
+        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds@569fc9fe]" name="startGridAndHub" is-config="true" duration-ms="1386" started-at="2014-07-25T16:09:07Z" finished-at="2014-07-25T16:09:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startGridAndHub -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@d32c064]" name="startSelenium" is-config="true" duration-ms="2548" started-at="2014-07-25T14:10:26Z" finished-at="2014-07-25T14:10:28Z">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds@569fc9fe]" name="startSelenium" is-config="true" duration-ms="2606" started-at="2014-07-25T16:09:08Z" finished-at="2014-07-25T16:09:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="ImplementTVEModulesCore_TC3261()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@d32c064]" name="ImplementTVEModulesCore_TC3261" duration-ms="132888" started-at="2014-07-25T14:10:28Z" finished-at="2014-07-25T14:12:41Z">
+        <test-method status="PASS" signature="AdFoldersRichMediaAds_TC1160()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds@569fc9fe]" name="AdFoldersRichMediaAds_TC1160" duration-ms="135709" started-at="2014-07-25T16:09:11Z" finished-at="2014-07-25T16:11:26Z">
           <reporter-output>
             <line>
-              <![CDATA[STEP 1]]>
-            </line>
-            <line>
-              <![CDATA[Open url 'http://install.devi2.nbcupublisher7.publisher7.com'.]]>
+              <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
             </line>
             <line>
               <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
@@ -265,97 +379,184 @@
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
-              <![CDATA[SETUP]]>
-            </line>
-            <line>
               <![CDATA[Click the 'Modules' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+              <![CDATA[Switch to frame titled 'Modules'.]]>
             </line>
             <line>
-              <![CDATA[Enter 'jQuery Update' in the 'Filter Name' text box.]]>
+              <![CDATA[Enter 'Pub Ads' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Verify the 'jQuery Update' check box is checked.]]>
+              <![CDATA[Verify the 'Pub Ads' check box is checked.]]>
             </line>
             <line>
               <![CDATA[Click the 'Close Overlay X'.]]>
             </line>
             <line>
               <![CDATA[Scroll by '-500'.]]>
-            </line>
-            <line>
-              <![CDATA[Open url 'http://install.devi2.nbcupublisher7.publisher7.com/admin/config/development/jquery_update'.]]>
-            </line>
-            <line>
-              <![CDATA[Select '1.5' from the 'Default jQuery Version' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Home' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the '[[Driver: chrome on MAC (2376a917-fade-41e8-a45c-eb777dfedfed)] -> xpath: //span[@class='admin-menu-home-icon']/../..//a[text()='Flush all caches']]' menu link.]]>
             </line>
             <line>
               <![CDATA[Click the 'Home' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 2]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Modules' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'TVE Adobe Pass' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'TVE Adobe Pass' check box is checked.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'TVE Auth Example' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'TVE Auth Example' check box is checked.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'TVE MVPD' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'TVE MVPD' check box is checked.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll by '-500'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 3]]>
             </line>
             <line>
               <![CDATA[Mouse over the 'Structure' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Blocks' menu link.]]>
+              <![CDATA[Click the 'Publisher Ads Side Files' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
             </line>
             <line>
-              <![CDATA[Select the block name 'TVE Auth Example' from the 'Sidebar first' drop down list.]]>
+              <![CDATA[Click the Ad Side File expand link for adName + 'be1dd6a81910427'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save Blocks' button.]]>
+              <![CDATA[Click the Ad Side File 'Delete' link for adName + 'be1dd6a81910427'.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'The block settings have been updated.' is present.]]>
+              <![CDATA[Switch to the active frame titled 'Are you sure you want to delete clone_of_eyewonder? dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Delete' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The item has been deleted.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify Ad Side File 'be1dd6a81910427' is NOT present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the Ad Side File expand link for adName + 'dksdllekfklsdjkfsdfkj'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the Ad Side File 'Delete' link for adName + 'dksdllekfklsdjkfsdfkj'.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Are you sure you want to delete dksdllekfklsdjkfsdfkj? dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Delete' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The item has been deleted.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify Ad Side File 'dksdllekfklsdjkfsdfkj' is NOT present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Add' link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Add a new side file dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '97e1cbfd1c074ef' in the 'Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'de52c5932a/7f391a7d08.html' in the 'Path' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Select the 'text/html' from the 'Response type' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '<html><body bgcolor=white><script language=javascript>function pq(q) {if(q.length > 1) this.q = q.substring(1, q.length);else this.q = null;this.keyValuePairs = new Array();if(q) {for(var i=0; i < this.q.split("&").length; i++) {this.keyValuePairs[i] = this.q.split("&")[i];}}this.getValue = function(s) {for(var j=0; j < this.keyValuePairs.length; j++) {if(this.keyValuePairs[j].split("=")[0] == s)return this.keyValuePairs[j].split("=")[1];}return -1;}}function qs(key){var page = new pq(document.location.search);return unescape(page.getValue(key));}var _c = qs('c');var r_number = Math.random();document.writeln('<SCR'+'IPT language='JavaScript' S'+'RC="http://media.adcentriconline.com/adcentric/tag/'+_c+'?ADCadcifr=1&number='+r_number+'"></SCR'+'IPT>');</script></body></html>' in the 'Content' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of '97e1cbfd1c074ef has been created.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the Ad Side File link with path 'de52c5932a/7f391a7d08.html'.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the Ad Side File 'Edit' link for adName + 'Atlas'.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Edit side file atlas dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'atlas has been updated' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify storage type for Ad Side File 'Atlas' is set to 'Overridden'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the Ad Side File 'Edit' link for adName + 'Atlas'.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Edit side file atlas dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Revert' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Revert' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The item has been reverted.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify storage type for Ad Side File 'Atlas' is set to 'Default'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the Ad Side File expand link for adName + 'Atlas'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the Ad Side File 'Clone' link for adName + 'Atlas'.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Clone side file atlas dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'f6ee5301bba0420' in the 'Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'clone_of_atlas has been created.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify storage type for Ad Side File 'f6ee5301bba0420' is set to 'Normal'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the Ad Side File 'Edit' link for adName + 'Atlas'.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Edit side file atlas dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Export' tab.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Export side file atlas dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Copy the text from the 'Export' text area.]]>
             </line>
             <line>
               <![CDATA[Click the 'Close Overlay X'.]]>
@@ -364,156 +565,171 @@
               <![CDATA[Scroll by '-500'.]]>
             </line>
             <line>
-              <![CDATA[SKIP TO STEP 10 - TVE ALREADY CONFIGURED]]>
+              <![CDATA[Mouse over the 'Structure' menu link.]]>
             </line>
             <line>
-              <![CDATA[STEP 10]]>
+              <![CDATA[Mouse over the 'Publisher Ads Side Files' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Configure jQuery' link.]]>
+              <![CDATA[Click the 'Import' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'jQuery update dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'Import side file dialog'.]]>
             </line>
             <line>
-              <![CDATA[Select '1.7' from the 'Default jQuery Version' drop down list.]]>
+              <![CDATA[Enter '$adpath = new stdClass();
+$adpath->disabled = FALSE; /* Edit this to true to make a default adpath disabled initially */
+$adpath->api_version = 1;
+$adpath->machine_name = 'atlas';
+$adpath->name = 'Atlas';
+$adpath->path = 'atlas/atlas_rm.html';
+$adpath->file_type = 'html';
+$adpath->content = '<html>
+<head>
+</head>
+<body>
+<script src=\'http://rmd.atdmt.com/tl/newIframeScript.js\'> </script>
+
+
+</body>
+</html>';
+' in the 'Side file code' text area.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
+              <![CDATA[Click the 'Continue' button.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+              <![CDATA[Switch to the active frame titled 'Import side file dialog'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
+              <![CDATA[Verify warning message 'You have unsaved changes. These changes will not be made permanent until you click Save.' is present.]]>
             </line>
             <line>
-              <![CDATA[Scroll by '-500'.]]>
+              <![CDATA[Enter 'dbb962046dfb475' in the 'Name' text box.]]>
             </line>
             <line>
-              <![CDATA[STEP 11]]>
+              <![CDATA[Enter '16e5b938d4/505e701a9a.html' in the 'Path' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Home' menu link.]]>
+              <![CDATA[Click the 'Update' button.]]>
             </line>
             <line>
-              <![CDATA[Verify the 'Authentication status checked:' value is 'true'.]]>
+              <![CDATA[Switch to the active frame titled 'Import side file dialog'.]]>
             </line>
             <line>
-              <![CDATA[Verify the 'Authenticated' value is 'false'.]]>
+              <![CDATA[Verify warning message 'You have unsaved changes. These changes will not be made permanent until you click Save.' is present.]]>
             </line>
             <line>
-              <![CDATA[Verify the 'Selected MVPD:' value is 'none'.]]>
+              <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[STEP 12]]>
+              <![CDATA[Switch to the active frame titled 'Import side file dialog'.]]>
             </line>
             <line>
-              <![CDATA[Select 'Optimum' from the 'Al VMPDs:' drop down list.]]>
+              <![CDATA[Enter 'dbb962046dfb475' in the 'Machine Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the 'login' button.]]>
+              <![CDATA[Click the 'Update' button.]]>
             </line>
             <line>
-              <![CDATA[Enter 'research40' in the 'Optimum ID' text box.]]>
+              <![CDATA[Switch to the active frame titled 'Import side file dialog'.]]>
             </line>
             <line>
-              <![CDATA[Enter 'support40' in the 'Password' text box.]]>
+              <![CDATA[Verify warning message 'You have unsaved changes. These changes will not be made permanent until you click Save.' is present.]]>
             </line>
             <line>
-              <![CDATA[Click the 'SIGN IN' button.]]>
+              <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Verify the 'Authentication status checked:' value is 'true'.]]>
+              <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
             </line>
             <line>
-              <![CDATA[Verify the 'Authenticated' value is 'true'.]]>
+              <![CDATA[Verify success message of 'dbb962046dfb475 has been created.' is present.]]>
             </line>
             <line>
-              <![CDATA[Verify the 'Selected MVPD:' value is 'Cablevision'.]]>
+              <![CDATA[Verify storage type for Ad Side File 'dbb962046dfb475' is set to 'Normal'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the Ad Side File expand link for adName + '97e1cbfd1c074ef'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the Ad Side File 'Delete' link for adName + '97e1cbfd1c074ef'.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Are you sure you want to delete 97e1cbfd1c074ef? dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Delete' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The item has been deleted.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify Ad Side File '97e1cbfd1c074ef' is NOT present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the Ad Side File expand link for adName + 'f6ee5301bba0420'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the Ad Side File 'Delete' link for adName + 'f6ee5301bba0420'.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Are you sure you want to delete clone_of_atlas? dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Delete' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The item has been deleted.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify Ad Side File 'f6ee5301bba0420' is NOT present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the Ad Side File expand link for adName + 'dbb962046dfb475'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the Ad Side File 'Delete' link for adName + 'dbb962046dfb475'.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Are you sure you want to delete dbb962046dfb475? dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Delete' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The item has been deleted.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify Ad Side File 'dbb962046dfb475' is NOT present.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- ImplementTVEModulesCore_TC3261 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@d32c064]" name="stopSelenium" is-config="true" duration-ms="571" started-at="2014-07-25T14:12:41Z" finished-at="2014-07-25T14:12:42Z">
+        </test-method> <!-- AdFoldersRichMediaAds_TC1160 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds@569fc9fe]" name="stopSelenium" is-config="true" duration-ms="574" started-at="2014-07-25T16:11:26Z" finished-at="2014-07-25T16:11:27Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=ImplementTVEModulesCore_TC3261 status=SUCCESS method=ImplementTVEModulesCore.ImplementTVEModulesCore_TC3261()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@d32c064] output=STEP 1]]]>
+                <![CDATA[[TestResult name=AdFoldersRichMediaAds_TC1160 status=SUCCESS method=AdFoldersRichMediaAds.AdFoldersRichMediaAds_TC1160()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds@569fc9fe] output=Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@d32c064]" name="startSelenium" is-config="true" duration-ms="2208" started-at="2014-07-25T14:12:42Z" finished-at="2014-07-25T14:12:44Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="Cleanup()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@d32c064]" name="Cleanup" duration-ms="31212" started-at="2014-07-25T14:12:44Z" depends-on-methods="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore.ImplementTVEModulesCore_TC3261" finished-at="2014-07-25T14:13:15Z">
-          <reporter-output>
-            <line>
-              <![CDATA[Open url 'http://install.devi2.nbcupublisher7.publisher7.com'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Login' button.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Structure' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Blocks' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Select the block name 'TVE Auth Example' from the '- None -' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save Blocks' button.]]>
-            </line>
-            <line>
-              <![CDATA[Open url 'http://install.devi2.nbcupublisher7.publisher7.com/admin/config/development/jquery_update'.]]>
-            </line>
-            <line>
-              <![CDATA[Select '1.5' from the 'Default jQuery Version' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Home' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the '[[Driver: chrome on MAC (110af2c6-ea94-43ce-983f-47c922ac80b1)] -> xpath: //span[@class='admin-menu-home-icon']/../..//a[text()='Flush all caches']]' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Home' menu link.]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- Cleanup -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@d32c064]" name="stopSelenium" is-config="true" duration-ms="569" started-at="2014-07-25T14:13:15Z" finished-at="2014-07-25T14:13:16Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=Cleanup status=SUCCESS method=ImplementTVEModulesCore.Cleanup()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@d32c064] output=Open url 'http://install.devi2.nbcupublisher7.publisher7.com'.]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@d32c064]" name="stopGridAndHub" is-config="true" duration-ms="380" started-at="2014-07-25T14:13:16Z" finished-at="2014-07-25T14:13:16Z">
+        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds@569fc9fe]" name="stopGridAndHub" is-config="true" duration-ms="386" started-at="2014-07-25T16:11:27Z" finished-at="2014-07-25T16:11:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopGridAndHub -->
-      </class> <!-- com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

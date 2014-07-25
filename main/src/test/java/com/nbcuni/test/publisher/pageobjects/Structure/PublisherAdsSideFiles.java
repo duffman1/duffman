@@ -1,5 +1,8 @@
 package com.nbcuni.test.publisher.pageobjects.Structure;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -15,6 +18,9 @@ import org.testng.Reporter;
 
 import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.pageobjects.Overlay;
+import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
+import com.nbcuni.test.publisher.pageobjects.Content.Delete;
 
 /*********************************************
 * publisher.nbcuni.com Publisher Ads Side Files Library. Copyright
@@ -28,6 +34,9 @@ public class PublisherAdsSideFiles {
 	private Driver webDriver;
 	private AppLib applib;
 	private WebDriverWait wait;
+	private Overlay overlay;
+	private Delete delete;
+	private ContentParent contentParent;
 	
     //PAGE OBJECT CONSTRUCTOR
     public PublisherAdsSideFiles(Driver webDriver, AppLib applib) {
@@ -35,6 +44,9 @@ public class PublisherAdsSideFiles {
     	this.applib = applib;
     	PageFactory.initElements(webDriver, this);
     	wait = new WebDriverWait(webDriver, 10);
+    	overlay = new Overlay(webDriver, applib);
+    	delete = new Delete(webDriver);
+    	contentParent = new ContentParent(webDriver, applib);
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -59,6 +71,10 @@ public class PublisherAdsSideFiles {
     
     private WebElement AdSideFileExpandEdit_Lnk(String adName) {
     	return webDriver.findElement(By.xpath("//td[text()='" + adName + "']/..//a[text()='open']"));
+    }
+    
+    private List<WebElement> AdSideFileNames_Txt() {
+    	return webDriver.findElements(By.xpath("//td[@class='ctools-export-ui-name']"));
     }
     
     private WebElement AdSideFileClone_Lnk(String adName) {
@@ -145,6 +161,35 @@ public class PublisherAdsSideFiles {
     		Assert.fail("Ad side file '" + adName + "' is present when it should not be");
     	}
     	webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
+    }
+    
+    public void DeleteAllUnwantedSideFiles() throws Exception {
+    	
+    	List<String> allowedSideFiles = Arrays.asList("AdCentric", "Adconion", "AdInterax", "Atlas", "Checkm8",
+    			"Comscore", "DART", "Eyeblaster", "Eyeblaster Secure", "Eyengage", "Eyereturn", "Eyewonder",
+    			"Flashtalking", "Flite", "Icompass", "Klipmart", "Mixpo", "Oggi", "Pictela", "Pointroll", "Rovion",
+    			"Safecount", "Smartadserver", "Unicast", "Videoegg", "Viewpoint");
+    	
+    	List<String> notAllowedSideFiles = new ArrayList<String>();
+    	for (WebElement el : this.AdSideFileNames_Txt()) {
+    		String sideFile = el.getText();
+    		if (!allowedSideFiles.contains(sideFile)) {
+    			notAllowedSideFiles.add(sideFile);
+    		}
+    	}
+    	
+    	for (String sideFile : notAllowedSideFiles) {
+    		
+    		this.ClickAdSideFileExpandEditLnk(sideFile);
+    	    this.ClickAdSideFileDeleteLnk(sideFile);
+    	    overlay.SwitchToActiveFrame();
+    	    delete.ClickDeleteBtn();
+    	    overlay.SwitchToActiveFrame();
+    	    contentParent.VerifyMessageStatus("The item has been deleted.");
+    	    this.VerifyAdSideFileNotPresent(sideFile);
+    		
+    	}
+    	
     }
     
 }
