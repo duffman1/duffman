@@ -41,6 +41,8 @@ public class MPXAccountDeletion extends ParentTest {
         Cron cron = new Cron(webDriver, applib);
         
         //Step 4
+        taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
+        overlay.SwitchToActiveFrame();
     	List<String> configuredAccounts = settings.GetImportAccountSelectedOptions();
     	settings.ExpandAccountList();
     	
