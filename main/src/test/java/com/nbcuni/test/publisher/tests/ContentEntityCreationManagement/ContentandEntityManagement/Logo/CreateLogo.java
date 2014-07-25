@@ -3,7 +3,6 @@ package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Contenta
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
-import com.nbcuni.test.publisher.pageobjects.Content.Delete;
 import com.nbcuni.test.publisher.pageobjects.Logo.AddLogo;
 import com.nbcuni.test.publisher.pageobjects.Logo.Logos;
 import org.testng.annotations.Test;
@@ -47,20 +46,20 @@ public class CreateLogo extends ParentTest{
     	    addLogo.ClickUploadBtn();
     	    addLogo.WaitForFileUploaded("nbclogosmall.jpg");
     	    addLogo.VerifyFileImagePresent("nbclogosmall");
-            Calendar cal5MinutesFuture = Calendar.getInstance();
-            cal5MinutesFuture.add(Calendar.MINUTE, 5);
-        	Date date5MinutesFuture = cal5MinutesFuture.getTime();
-        	Calendar cal10MinutesFuture = Calendar.getInstance();
-            cal10MinutesFuture.add(Calendar.MINUTE, 10);
-        	Date date10MinutesFuture = cal10MinutesFuture.getTime();
+            Calendar cal2DaysFuture = Calendar.getInstance();
+            cal2DaysFuture.add(Calendar.HOUR, 48);
+        	Date date2DaysFuture = cal2DaysFuture.getTime();
+        	Calendar cal3DaysFuture = Calendar.getInstance();
+            cal3DaysFuture.add(Calendar.HOUR, 72);
+        	Date date3DaysFuture = cal3DaysFuture.getTime();
         	SimpleDateFormat pub7DateFormat = new SimpleDateFormat("yyyy-MM-dd");
         	pub7DateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
         	SimpleDateFormat pub7TimeFormat = new SimpleDateFormat("hh:mm:ss a");
         	pub7TimeFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
-        	addLogo.EnterStartDate(pub7DateFormat.format(date5MinutesFuture));
-    	    addLogo.EnterStartTime(pub7TimeFormat.format(date5MinutesFuture));
-    	    addLogo.EnterEndDate(pub7DateFormat.format(date10MinutesFuture));
-    	    addLogo.EnterEndTime(pub7TimeFormat.format(date10MinutesFuture));
+        	addLogo.EnterStartDate(pub7DateFormat.format(date2DaysFuture));
+    	    addLogo.EnterStartTime(pub7TimeFormat.format(date2DaysFuture));
+    	    addLogo.EnterEndDate(pub7DateFormat.format(date3DaysFuture));
+    	    addLogo.EnterEndTime(pub7TimeFormat.format(date3DaysFuture));
     	    addLogo.ClickSaveBtn();
     	    
     	    //Step 5
@@ -68,22 +67,18 @@ public class CreateLogo extends ParentTest{
     	    SimpleDateFormat pub7DateTimeFormat = new SimpleDateFormat("EEE, MM/dd/yyyy - kk:mm");
         	pub7DateTimeFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
         	contentParent.VerifyPageContentPresent(Arrays.asList(logoTitle, 
-    	    		pub7DateTimeFormat.format(date5MinutesFuture).replace("24:", "00:"), pub7DateTimeFormat.format(date10MinutesFuture).replace("24:", "00:")));
+    	    		pub7DateTimeFormat.format(date2DaysFuture).replace("24:", "00:"), pub7DateTimeFormat.format(date3DaysFuture).replace("24:", "00:")));
     	    logos.VerifyLogoImgPresent(logoTitle, "nbclogosmall");
     	    
     	    //Step 6
     	    overlay.ClickCloseOverlayLnk();
     	    taxonomy.NavigateSite("Content>>Logos");
     	    overlay.SwitchToActiveFrame();
-    	    logos.ClickEditExtendMenuBtn(logoTitle);
-    	    logos.ClickEditMenuDeleteBtn(logoTitle);
-    	    overlay.SwitchToActiveFrame();
-    	    Delete delete = new Delete(webDriver);
-    	    delete.ClickDeleteBtn();
+    	    logos.DeleteAllLogos();
     	    overlay.SwitchToActiveFrame();
     	    contentParent.VerifyMessageStatus("Logo has been deleted successfully.");
     	    contentParent.VerifyPageContentNotPresent(Arrays.asList(logoTitle, 
-    	    		pub7DateTimeFormat.format(date5MinutesFuture).replace("24:", "00:"), pub7DateTimeFormat.format(date10MinutesFuture).replace("24:", "00:")));
+    	    		pub7DateTimeFormat.format(date2DaysFuture).replace("24:", "00:"), pub7DateTimeFormat.format(date2DaysFuture).replace("24:", "00:")));
     	    
     }
 }

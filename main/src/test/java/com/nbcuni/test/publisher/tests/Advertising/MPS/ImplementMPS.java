@@ -33,22 +33,9 @@ public class ImplementMPS extends ParentTest {
         	UserLogin userLogin = applib.openApplication();
         	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
             
-        	Reporter.log("STEP 2");
+        	Reporter.log("STEP 2 - N/A");
         	MPSConfiguration mpsConfiguration = new MPSConfiguration(webDriver);
         	Modules modules = new Modules(webDriver, applib);
-        	if (mpsConfiguration.IsMPSEnabled() == true) {
-        		taxonomy.NavigateSite("Modules");
-                overlay.SwitchToActiveFrame();
-                modules.EnterFilterName("MPS");
-                modules.DisableModule("MPS");
-                overlay.ClickCloseOverlayLnk();
-                overlay.switchToDefaultContent();
-                taxonomy.NavigateSite("Modules>>Uninstall");
-                overlay.SwitchToActiveFrame();
-                modules.UninstallModule("MPS");
-                overlay.SwitchToActiveFrame();
-                overlay.ClickCloseOverlayLnk();
-        	}
         	
         	Reporter.log("STEP 3");
         	taxonomy.NavigateSite("Modules");
@@ -74,15 +61,8 @@ public class ImplementMPS extends ParentTest {
             overlay.ClickCloseOverlayLnk();
             
             Reporter.log("STEP 5");
-            String siteType;
-            if (config.getConfigValue("AppURL").contains("install")) {
-            	siteType = "install";
-            }
-            else {
-            	siteType = "update";
-            }
-            contentParent.VerifySourceInPage(Arrays.asList("var mpscall = {\"site\":\"" + siteType + "\",\"title\":\"Welcome to Site-Install\",\"path\":\"\\/\",\"is_content\":0,\"type\":\"other\"}",
-            		"var mpsopts = {\"host\":\"mps.nbcuni.com\"}"));
+            contentParent.VerifySourceInPage(Arrays.asList("var mpscall = {\"site\":\"pub7-development\",\"title\":\"Welcome to Site-Install\",\"path\":\"\\/\",\"is_content\":0,\"type\":\"other\"}",
+            		"var mpsopts = {\"host\":\"mps.io\"}"));
             
             Reporter.log("STEP 6");
             taxonomy.NavigateSite("People");
@@ -98,9 +78,9 @@ public class ImplementMPS extends ParentTest {
             Reporter.log("STEP 8");
             taxonomy.NavigateSite("Configuration>>Web services>>MPS Configuration");
             overlay.SwitchToActiveFrame();
-            mpsConfiguration.EnterMPSHost("mps.nbcuni.com");
+            mpsConfiguration.EnterMPSHost("mps.io");
             mpsConfiguration.ClickIntegrationMethod("Document Write");
-            mpsConfiguration.EnterSiteInstanceOverride("nbc-tonightshow");
+            mpsConfiguration.EnterSiteInstanceOverride("pub7-development");
             mpsConfiguration.CheckSendQueryStringsCbx();
             mpsConfiguration.ClickSaveConfigurationBtn();
             contentParent.VerifyMessageStatus("The configuration options have been saved.");
@@ -131,11 +111,11 @@ public class ImplementMPS extends ParentTest {
             String movieNodeNumber = workBench.GetContentNodeNumber();
             
             Reporter.log("STEP 10");
-            contentParent.VerifySourceInPage(Arrays.asList("var mpscall = {\"site\":\"nbc-tonightshow\",\"title\":\"" + movieTitle + "\",\"path\":\"\\/node\\/" + movieNodeNumber,
-            		"var mpsopts = {\"host\":\"mps.nbcuni.com\"}"));
+            contentParent.VerifySourceInPage(Arrays.asList("var mpscall = {\"site\":\"pub7-development\",\"title\":\"" + movieTitle + "\",\"path\":\"\\/node\\/" + movieNodeNumber,
+            		"var mpsopts = {\"host\":\"mps.io\"}"));
             
             Reporter.log("STEP 11 through STEP 19");
-            contentParent.VerifySourceInPage(Arrays.asList("var mpscall = {\"site\":\"nbc-tonightshow\",\"title\":\"" + movieTitle + "\",\"path\":\"\\/node\\/" + movieNodeNumber + "\",\"content_id\":\"node" + movieNodeNumber + "\",\"is_content\":1,\"type\":\"movie\",\"cag\":{\"genre\":\"Action\",\"movie-rating\":\"G\",\"movie-types\":\"Syndicated\"},\"pubdate\":"));
+            contentParent.VerifySourceInPage(Arrays.asList("var mpscall = {\"site\":\"pub7-development\",\"title\":\"" + movieTitle + "\",\"path\":\"\\/node\\/" + movieNodeNumber + "\",\"content_id\":\"node" + movieNodeNumber + "\",\"is_content\":1,\"type\":\"movie\",\"cag\":{\"genre\":\"Action\",\"movie-rating\":\"G\",\"movie-types\":\"Syndicated\"},\"pubdate\":"));
             
             Reporter.log("STEP 20");
             webDriver.navigate().to(webDriver.getCurrentUrl() + "?kumud=1");

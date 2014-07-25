@@ -2,6 +2,9 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
     <line>
+      <![CDATA[STEP 1]]>
+    </line>
+    <line>
       <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
     </line>
     <line>
@@ -14,184 +17,28 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
+      <![CDATA[SETUP]]>
+    </line>
+    <line>
       <![CDATA[Click the 'Modules' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to frame titled 'Modules'.]]>
+      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Pub Ads' in the 'Filter Name' text box.]]>
+      <![CDATA[Enter 'Pixelman' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Verify the 'Pub Ads' check box is checked.]]>
+      <![CDATA[Enter 'MPS' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
+      <![CDATA[Verify the 'MPS' check box is checked.]]>
     </line>
     <line>
-      <![CDATA[Scroll by '-500'.]]>
+      <![CDATA[Enter 'Devel' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Home' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Structure' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Publisher Ads Side Files' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the Ad Side File expand link for adName + 'be1dd6a81910427'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the Ad Side File 'Delete' link for adName + 'be1dd6a81910427'.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Are you sure you want to delete clone_of_eyewonder? dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Delete' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The item has been deleted.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify Ad Side File 'be1dd6a81910427' is NOT present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the Ad Side File expand link for adName + 'dksdllekfklsdjkfsdfkj'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the Ad Side File 'Delete' link for adName + 'dksdllekfklsdjkfsdfkj'.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Are you sure you want to delete dksdllekfklsdjkfsdfkj? dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Delete' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The item has been deleted.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify Ad Side File 'dksdllekfklsdjkfsdfkj' is NOT present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Add' link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Add a new side file dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '97e1cbfd1c074ef' in the 'Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'de52c5932a/7f391a7d08.html' in the 'Path' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Select the 'text/html' from the 'Response type' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '<html><body bgcolor=white><script language=javascript>function pq(q) {if(q.length > 1) this.q = q.substring(1, q.length);else this.q = null;this.keyValuePairs = new Array();if(q) {for(var i=0; i < this.q.split("&").length; i++) {this.keyValuePairs[i] = this.q.split("&")[i];}}this.getValue = function(s) {for(var j=0; j < this.keyValuePairs.length; j++) {if(this.keyValuePairs[j].split("=")[0] == s)return this.keyValuePairs[j].split("=")[1];}return -1;}}function qs(key){var page = new pq(document.location.search);return unescape(page.getValue(key));}var _c = qs('c');var r_number = Math.random();document.writeln('<SCR'+'IPT language='JavaScript' S'+'RC="http://media.adcentriconline.com/adcentric/tag/'+_c+'?ADCadcifr=1&number='+r_number+'"></SCR'+'IPT>');</script></body></html>' in the 'Content' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of '97e1cbfd1c074ef has been created.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the Ad Side File link with path 'de52c5932a/7f391a7d08.html'.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the Ad Side File 'Edit' link for adName + 'Atlas'.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Edit side file atlas dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'atlas has been updated' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify storage type for Ad Side File 'Atlas' is set to 'Overridden'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the Ad Side File 'Edit' link for adName + 'Atlas'.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Edit side file atlas dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Revert' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Revert' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The item has been reverted.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify storage type for Ad Side File 'Atlas' is set to 'Default'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the Ad Side File expand link for adName + 'Atlas'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the Ad Side File 'Clone' link for adName + 'Atlas'.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Clone side file atlas dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'f6ee5301bba0420' in the 'Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'clone_of_atlas has been created.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify storage type for Ad Side File 'f6ee5301bba0420' is set to 'Normal'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the Ad Side File 'Edit' link for adName + 'Atlas'.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Edit side file atlas dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Export' tab.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Export side file atlas dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Copy the text from the 'Export' text area.]]>
+      <![CDATA[Verify the 'Devel' check box is checked.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
@@ -200,172 +47,334 @@
       <![CDATA[Scroll by '-500'.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Structure' menu link.]]>
+      <![CDATA[Mouse over the 'Configuration' menu link.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Publisher Ads Side Files' menu link.]]>
+      <![CDATA[Mouse over the 'Web services' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Import' menu link.]]>
+      <![CDATA[Click the 'MPS Configuration' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Import side file dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'MPS Configuration dialog'.]]>
     </line>
     <line>
-      <![CDATA[Enter '$adpath = new stdClass();
-$adpath->disabled = FALSE; /* Edit this to true to make a default adpath disabled initially */
-$adpath->api_version = 1;
-$adpath->machine_name = 'atlas';
-$adpath->name = 'Atlas';
-$adpath->path = 'atlas/atlas_rm.html';
-$adpath->file_type = 'html';
-$adpath->content = '<html>
-<head>
-</head>
-<body>
-<script src=\'http://rmd.atdmt.com/tl/newIframeScript.js\'> </script>
-
-
-</body>
-</html>';
-' in the 'Side file code' text area.]]>
+      <![CDATA[Enter '' in the 'Pattern for Category Field' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Continue' button.]]>
+      <![CDATA[Click the 'Save configuration' button.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Import side file dialog'.]]>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
     </line>
     <line>
-      <![CDATA[Verify warning message 'You have unsaved changes. These changes will not be made permanent until you click Save.' is present.]]>
+      <![CDATA[Click the 'Close Overlay X'.]]>
     </line>
     <line>
-      <![CDATA[Enter 'dbb962046dfb475' in the 'Name' text box.]]>
+      <![CDATA[Scroll by '-500'.]]>
     </line>
     <line>
-      <![CDATA[Enter '16e5b938d4/505e701a9a.html' in the 'Path' text box.]]>
+      <![CDATA[STEP 2 - N/A]]>
     </line>
     <line>
-      <![CDATA[Click the 'Update' button.]]>
+      <![CDATA[STEP 3]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Import side file dialog'.]]>
+      <![CDATA[Verify '"cat":"content"' is not present in page source.]]>
     </line>
     <line>
-      <![CDATA[Verify warning message 'You have unsaved changes. These changes will not be made permanent until you click Save.' is present.]]>
+      <![CDATA[STEP 4]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Add content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Movie' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'cffe00aa29f9402' in the 'Title' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the Synopsis frame.]]>
+    </line>
+    <line>
+      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Cover' select button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the select file frame.]]>
+    </line>
+    <line>
+      <![CDATA[Enter the file path for file upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Upload' button.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Public Local Files' radio button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the file image 'HanSolo' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the img is loaded and visible.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Import side file dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
     </line>
     <line>
-      <![CDATA[Enter 'dbb962046dfb475' in the 'Machine Name' text box.]]>
+      <![CDATA[Click the 'Additional Information' link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Update' button.]]>
+      <![CDATA[Select the 'Syndicated' from the 'Movie Type' drop down list.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Import side file dialog'.]]>
+      <![CDATA[Select the 'G' from the 'Rating' drop down list.]]>
     </line>
     <line>
-      <![CDATA[Verify warning message 'You have unsaved changes. These changes will not be made permanent until you click Save.' is present.]]>
+      <![CDATA[Select the 'Action' from the 'Primary Genre' drop down list.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
+      <![CDATA[Verify success message of 'Movie cffe00aa29f9402 has been created.' is present.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'dbb962046dfb475 has been created.' is present.]]>
+      <![CDATA[Verify '"cat":"content"' is present in page source.]]>
     </line>
     <line>
-      <![CDATA[Verify storage type for Ad Side File 'dbb962046dfb475' is set to 'Normal'.]]>
+      <![CDATA[STEP 5]]>
     </line>
     <line>
-      <![CDATA[Click the Ad Side File expand link for adName + '97e1cbfd1c074ef'.]]>
+      <![CDATA[Click the 'Edit Draft' link in the work bench.]]>
     </line>
     <line>
-      <![CDATA[Click the Ad Side File 'Delete' link for adName + '97e1cbfd1c074ef'.]]>
+      <![CDATA[Switch to the active frame titled 'Edit Movie cffe00aa29f9402 dialog'.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Are you sure you want to delete 97e1cbfd1c074ef? dialog'.]]>
+      <![CDATA[Click the 'URL path settings' link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Delete' button.]]>
+      <![CDATA[Uncheck the 'Generate automatic URL alias' check box.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
+      <![CDATA[Enter '081083525a' in the 'URL alias' text box.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'The item has been deleted.' is present.]]>
+      <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Verify Ad Side File '97e1cbfd1c074ef' is NOT present.]]>
+      <![CDATA[Verify success message of 'Movie cffe00aa29f9402 has been updated.' is present.]]>
     </line>
     <line>
-      <![CDATA[Click the Ad Side File expand link for adName + 'f6ee5301bba0420'.]]>
+      <![CDATA[STEP 6]]>
     </line>
     <line>
-      <![CDATA[Click the Ad Side File 'Delete' link for adName + 'f6ee5301bba0420'.]]>
+      <![CDATA[Verify '"cat":"081083525a"' is present in page source.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Are you sure you want to delete clone_of_atlas? dialog'.]]>
+      <![CDATA[STEP 7]]>
     </line>
     <line>
-      <![CDATA[Click the 'Delete' button.]]>
+      <![CDATA[Click the 'Edit Draft' link in the work bench.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'Edit Movie cffe00aa29f9402 dialog'.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'The item has been deleted.' is present.]]>
+      <![CDATA[Click the 'URL path settings' link.]]>
     </line>
     <line>
-      <![CDATA[Verify Ad Side File 'f6ee5301bba0420' is NOT present.]]>
+      <![CDATA[Enter '081083525a/mps-testing/2arg/3arg/4arg/5arg/6arg' in the 'URL alias' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the Ad Side File expand link for adName + 'dbb962046dfb475'.]]>
+      <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Click the Ad Side File 'Delete' link for adName + 'dbb962046dfb475'.]]>
+      <![CDATA[Verify success message of 'Movie cffe00aa29f9402 has been updated.' is present.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Are you sure you want to delete dbb962046dfb475? dialog'.]]>
+      <![CDATA[STEP 8]]>
     </line>
     <line>
-      <![CDATA[Click the 'Delete' button.]]>
+      <![CDATA[Verify '"cat":"081083525a|mps-testing|2arg"}' is present in page source.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
+      <![CDATA[STEP 9]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'The item has been deleted.' is present.]]>
+      <![CDATA[Mouse over the 'Configuration' menu link.]]>
     </line>
     <line>
-      <![CDATA[Verify Ad Side File 'dbb962046dfb475' is NOT present.]]>
+      <![CDATA[Mouse over the 'Web services' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'MPS Configuration' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'MPS Configuration dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'REPLACEMENT PATTERNS' link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'MPS' link.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'MPS CAT Property' link with text '[mps:cat-pattern:?]' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '[mps:cat-pattern:?]' in the 'Pattern for Category Field' text box.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 10]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configuration' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll by '-500'.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 11]]>
+    </line>
+    <line>
+      <![CDATA[Verify '"cat":"081083525a|mps-testing|2arg|3arg|4arg"}' is present in page source.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 12]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Execute PHP Code dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'variable_set('mps_cat_pattern', '');echo _mps_build_cat();echo PHP_EOL;variable_set('mps_cat_pattern', '[mps:cat-pattern:?]');echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/cast'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/thisisareallyreallyreallyreallyreallyreallylongurlXXXXXX/season/episode/cast/name'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/thisisareallyreallyreallyreallyreallyreallylongurlXXXXXX/season/episode/cast/'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/show//episode/cast'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/show/season//episode//'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => '/show/season//'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => '/show///'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => '/brand/season//episode'));echo PHP_EOL;variable_set('mps_cat_pattern', '[mps:cat-pattern:2]|[mps:cat-pattern:3]');echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/cast'));echo PHP_EOL;variable_set('mps_cat_pattern', '[mps:cat-pattern:0]|[mps:cat-pattern:2]|[current-date:custom:d]|[mps:cat-pattern:3]|');echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/cast'));variable_set('mps_cat_pattern', '[mps:cat-pattern:?]');echo PHP_EOL;echo '*' . _mps_build_cat(array('aliased-path' => '/')) . '*';' in the 'PHP Code to Execute' text area.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Execute' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the expected response is 'Status message
+devel
+brand|show|season|episode
+brand|thisisareallyreallyreallyreallyreallyreallylongurl|season|episode|cast
+brand|thisisareallyreallyreallyreallyreallyreallylongurl|season|episode|cast
+brand|show|~|episode
+brand|show|season
+brand|show|season|~|episode
+~|show
+
+~|brand|season
+season|episode
+brand|season|25
+**'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll by '-500'.]]>
+    </line>
+    <line>
+      <![CDATA[CLEANUP]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Modules' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Devel' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Uncheck the 'Devel' module checkbox.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configuration' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll by '-500'.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Configuration' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Web services' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'MPS Configuration' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'MPS Configuration dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '' in the 'Pattern for Category Field' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configuration' button.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="138902" started-at="2014-07-25T20:09:08Z" finished-at="2014-07-25T20:11:27Z">
+  <suite name="Default suite" duration-ms="124911" started-at="2014-07-25T21:01:46Z" finished-at="2014-07-25T21:03:51Z">
     <groups>
       <group name="full">
-        <method signature="AdFoldersRichMediaAds.AdFoldersRichMediaAds_TC1160()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds@569fc9fe]" name="AdFoldersRichMediaAds_TC1160" class="com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds"/>
+        <method signature="MPSSupportTokens.MPSSupportTokens_TC3641()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens@3337cdec]" name="MPSSupportTokens_TC3641" class="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens"/>
       </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="138902" started-at="2014-07-25T20:09:08Z" finished-at="2014-07-25T20:11:27Z">
-      <class name="com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds">
-        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds@569fc9fe]" name="startGridAndHub" is-config="true" duration-ms="1386" started-at="2014-07-25T16:09:07Z" finished-at="2014-07-25T16:09:08Z">
+    <test name="Default test" duration-ms="124911" started-at="2014-07-25T21:01:46Z" finished-at="2014-07-25T21:03:51Z">
+      <class name="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens">
+        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens@3337cdec]" name="startGridAndHub" is-config="true" duration-ms="1015" started-at="2014-07-25T17:01:45Z" finished-at="2014-07-25T17:01:46Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startGridAndHub -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds@569fc9fe]" name="startSelenium" is-config="true" duration-ms="2606" started-at="2014-07-25T16:09:08Z" finished-at="2014-07-25T16:09:11Z">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens@3337cdec]" name="startSelenium" is-config="true" duration-ms="2609" started-at="2014-07-25T17:01:46Z" finished-at="2014-07-25T17:01:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="AdFoldersRichMediaAds_TC1160()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds@569fc9fe]" name="AdFoldersRichMediaAds_TC1160" duration-ms="135709" started-at="2014-07-25T16:09:11Z" finished-at="2014-07-25T16:11:26Z">
+        <test-method status="PASS" signature="MPSSupportTokens_TC3641()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens@3337cdec]" name="MPSSupportTokens_TC3641" duration-ms="121713" started-at="2014-07-25T17:01:48Z" finished-at="2014-07-25T17:03:50Z">
           <reporter-output>
+            <line>
+              <![CDATA[STEP 1]]>
+            </line>
             <line>
               <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
             </line>
@@ -379,184 +388,28 @@ $adpath->content = '<html>
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
+              <![CDATA[SETUP]]>
+            </line>
+            <line>
               <![CDATA[Click the 'Modules' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to frame titled 'Modules'.]]>
+              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
             </line>
             <line>
-              <![CDATA[Enter 'Pub Ads' in the 'Filter Name' text box.]]>
+              <![CDATA[Enter 'Pixelman' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Verify the 'Pub Ads' check box is checked.]]>
+              <![CDATA[Enter 'MPS' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
+              <![CDATA[Verify the 'MPS' check box is checked.]]>
             </line>
             <line>
-              <![CDATA[Scroll by '-500'.]]>
+              <![CDATA[Enter 'Devel' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Home' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Structure' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Publisher Ads Side Files' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the Ad Side File expand link for adName + 'be1dd6a81910427'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the Ad Side File 'Delete' link for adName + 'be1dd6a81910427'.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Are you sure you want to delete clone_of_eyewonder? dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Delete' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The item has been deleted.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify Ad Side File 'be1dd6a81910427' is NOT present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the Ad Side File expand link for adName + 'dksdllekfklsdjkfsdfkj'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the Ad Side File 'Delete' link for adName + 'dksdllekfklsdjkfsdfkj'.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Are you sure you want to delete dksdllekfklsdjkfsdfkj? dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Delete' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The item has been deleted.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify Ad Side File 'dksdllekfklsdjkfsdfkj' is NOT present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Add' link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Add a new side file dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '97e1cbfd1c074ef' in the 'Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'de52c5932a/7f391a7d08.html' in the 'Path' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Select the 'text/html' from the 'Response type' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '<html><body bgcolor=white><script language=javascript>function pq(q) {if(q.length > 1) this.q = q.substring(1, q.length);else this.q = null;this.keyValuePairs = new Array();if(q) {for(var i=0; i < this.q.split("&").length; i++) {this.keyValuePairs[i] = this.q.split("&")[i];}}this.getValue = function(s) {for(var j=0; j < this.keyValuePairs.length; j++) {if(this.keyValuePairs[j].split("=")[0] == s)return this.keyValuePairs[j].split("=")[1];}return -1;}}function qs(key){var page = new pq(document.location.search);return unescape(page.getValue(key));}var _c = qs('c');var r_number = Math.random();document.writeln('<SCR'+'IPT language='JavaScript' S'+'RC="http://media.adcentriconline.com/adcentric/tag/'+_c+'?ADCadcifr=1&number='+r_number+'"></SCR'+'IPT>');</script></body></html>' in the 'Content' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of '97e1cbfd1c074ef has been created.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the Ad Side File link with path 'de52c5932a/7f391a7d08.html'.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the Ad Side File 'Edit' link for adName + 'Atlas'.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Edit side file atlas dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'atlas has been updated' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify storage type for Ad Side File 'Atlas' is set to 'Overridden'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the Ad Side File 'Edit' link for adName + 'Atlas'.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Edit side file atlas dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Revert' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Revert' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The item has been reverted.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify storage type for Ad Side File 'Atlas' is set to 'Default'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the Ad Side File expand link for adName + 'Atlas'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the Ad Side File 'Clone' link for adName + 'Atlas'.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Clone side file atlas dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'f6ee5301bba0420' in the 'Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'clone_of_atlas has been created.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify storage type for Ad Side File 'f6ee5301bba0420' is set to 'Normal'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the Ad Side File 'Edit' link for adName + 'Atlas'.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Edit side file atlas dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Export' tab.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Export side file atlas dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Copy the text from the 'Export' text area.]]>
+              <![CDATA[Verify the 'Devel' check box is checked.]]>
             </line>
             <line>
               <![CDATA[Click the 'Close Overlay X'.]]>
@@ -565,171 +418,330 @@ $adpath->content = '<html>
               <![CDATA[Scroll by '-500'.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Structure' menu link.]]>
+              <![CDATA[Mouse over the 'Configuration' menu link.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Publisher Ads Side Files' menu link.]]>
+              <![CDATA[Mouse over the 'Web services' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Import' menu link.]]>
+              <![CDATA[Click the 'MPS Configuration' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Import side file dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'MPS Configuration dialog'.]]>
             </line>
             <line>
-              <![CDATA[Enter '$adpath = new stdClass();
-$adpath->disabled = FALSE; /* Edit this to true to make a default adpath disabled initially */
-$adpath->api_version = 1;
-$adpath->machine_name = 'atlas';
-$adpath->name = 'Atlas';
-$adpath->path = 'atlas/atlas_rm.html';
-$adpath->file_type = 'html';
-$adpath->content = '<html>
-<head>
-</head>
-<body>
-<script src=\'http://rmd.atdmt.com/tl/newIframeScript.js\'> </script>
-
-
-</body>
-</html>';
-' in the 'Side file code' text area.]]>
+              <![CDATA[Enter '' in the 'Pattern for Category Field' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Continue' button.]]>
+              <![CDATA[Click the 'Save configuration' button.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Import side file dialog'.]]>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
             </line>
             <line>
-              <![CDATA[Verify warning message 'You have unsaved changes. These changes will not be made permanent until you click Save.' is present.]]>
+              <![CDATA[Click the 'Close Overlay X'.]]>
             </line>
             <line>
-              <![CDATA[Enter 'dbb962046dfb475' in the 'Name' text box.]]>
+              <![CDATA[Scroll by '-500'.]]>
             </line>
             <line>
-              <![CDATA[Enter '16e5b938d4/505e701a9a.html' in the 'Path' text box.]]>
+              <![CDATA[STEP 2 - N/A]]>
             </line>
             <line>
-              <![CDATA[Click the 'Update' button.]]>
+              <![CDATA[STEP 3]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Import side file dialog'.]]>
+              <![CDATA[Verify '"cat":"content"' is not present in page source.]]>
             </line>
             <line>
-              <![CDATA[Verify warning message 'You have unsaved changes. These changes will not be made permanent until you click Save.' is present.]]>
+              <![CDATA[STEP 4]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Add content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Movie' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'cffe00aa29f9402' in the 'Title' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the Synopsis frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Cover' select button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the select file frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter the file path for file upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Upload' button.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Public Local Files' radio button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the file image 'HanSolo' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the img is loaded and visible.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Import side file dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
             </line>
             <line>
-              <![CDATA[Enter 'dbb962046dfb475' in the 'Machine Name' text box.]]>
+              <![CDATA[Click the 'Additional Information' link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Update' button.]]>
+              <![CDATA[Select the 'Syndicated' from the 'Movie Type' drop down list.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Import side file dialog'.]]>
+              <![CDATA[Select the 'G' from the 'Rating' drop down list.]]>
             </line>
             <line>
-              <![CDATA[Verify warning message 'You have unsaved changes. These changes will not be made permanent until you click Save.' is present.]]>
+              <![CDATA[Select the 'Action' from the 'Primary Genre' drop down list.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
+              <![CDATA[Verify success message of 'Movie cffe00aa29f9402 has been created.' is present.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'dbb962046dfb475 has been created.' is present.]]>
+              <![CDATA[Verify '"cat":"content"' is present in page source.]]>
             </line>
             <line>
-              <![CDATA[Verify storage type for Ad Side File 'dbb962046dfb475' is set to 'Normal'.]]>
+              <![CDATA[STEP 5]]>
             </line>
             <line>
-              <![CDATA[Click the Ad Side File expand link for adName + '97e1cbfd1c074ef'.]]>
+              <![CDATA[Click the 'Edit Draft' link in the work bench.]]>
             </line>
             <line>
-              <![CDATA[Click the Ad Side File 'Delete' link for adName + '97e1cbfd1c074ef'.]]>
+              <![CDATA[Switch to the active frame titled 'Edit Movie cffe00aa29f9402 dialog'.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Are you sure you want to delete 97e1cbfd1c074ef? dialog'.]]>
+              <![CDATA[Click the 'URL path settings' link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Delete' button.]]>
+              <![CDATA[Uncheck the 'Generate automatic URL alias' check box.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
+              <![CDATA[Enter '081083525a' in the 'URL alias' text box.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'The item has been deleted.' is present.]]>
+              <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Verify Ad Side File '97e1cbfd1c074ef' is NOT present.]]>
+              <![CDATA[Verify success message of 'Movie cffe00aa29f9402 has been updated.' is present.]]>
             </line>
             <line>
-              <![CDATA[Click the Ad Side File expand link for adName + 'f6ee5301bba0420'.]]>
+              <![CDATA[STEP 6]]>
             </line>
             <line>
-              <![CDATA[Click the Ad Side File 'Delete' link for adName + 'f6ee5301bba0420'.]]>
+              <![CDATA[Verify '"cat":"081083525a"' is present in page source.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Are you sure you want to delete clone_of_atlas? dialog'.]]>
+              <![CDATA[STEP 7]]>
             </line>
             <line>
-              <![CDATA[Click the 'Delete' button.]]>
+              <![CDATA[Click the 'Edit Draft' link in the work bench.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'Edit Movie cffe00aa29f9402 dialog'.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'The item has been deleted.' is present.]]>
+              <![CDATA[Click the 'URL path settings' link.]]>
             </line>
             <line>
-              <![CDATA[Verify Ad Side File 'f6ee5301bba0420' is NOT present.]]>
+              <![CDATA[Enter '081083525a/mps-testing/2arg/3arg/4arg/5arg/6arg' in the 'URL alias' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the Ad Side File expand link for adName + 'dbb962046dfb475'.]]>
+              <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Click the Ad Side File 'Delete' link for adName + 'dbb962046dfb475'.]]>
+              <![CDATA[Verify success message of 'Movie cffe00aa29f9402 has been updated.' is present.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Are you sure you want to delete dbb962046dfb475? dialog'.]]>
+              <![CDATA[STEP 8]]>
             </line>
             <line>
-              <![CDATA[Click the 'Delete' button.]]>
+              <![CDATA[Verify '"cat":"081083525a|mps-testing|2arg"}' is present in page source.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Publisher Ads Side Files dialog'.]]>
+              <![CDATA[STEP 9]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'The item has been deleted.' is present.]]>
+              <![CDATA[Mouse over the 'Configuration' menu link.]]>
             </line>
             <line>
-              <![CDATA[Verify Ad Side File 'dbb962046dfb475' is NOT present.]]>
+              <![CDATA[Mouse over the 'Web services' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'MPS Configuration' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'MPS Configuration dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'REPLACEMENT PATTERNS' link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'MPS' link.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'MPS CAT Property' link with text '[mps:cat-pattern:?]' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '[mps:cat-pattern:?]' in the 'Pattern for Category Field' text box.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 10]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configuration' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll by '-500'.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 11]]>
+            </line>
+            <line>
+              <![CDATA[Verify '"cat":"081083525a|mps-testing|2arg|3arg|4arg"}' is present in page source.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 12]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Execute PHP Code dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'variable_set('mps_cat_pattern', '');echo _mps_build_cat();echo PHP_EOL;variable_set('mps_cat_pattern', '[mps:cat-pattern:?]');echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/cast'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/thisisareallyreallyreallyreallyreallyreallylongurlXXXXXX/season/episode/cast/name'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/thisisareallyreallyreallyreallyreallyreallylongurlXXXXXX/season/episode/cast/'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/show//episode/cast'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/show/season//episode//'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => '/show/season//'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => '/show///'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => '/brand/season//episode'));echo PHP_EOL;variable_set('mps_cat_pattern', '[mps:cat-pattern:2]|[mps:cat-pattern:3]');echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/cast'));echo PHP_EOL;variable_set('mps_cat_pattern', '[mps:cat-pattern:0]|[mps:cat-pattern:2]|[current-date:custom:d]|[mps:cat-pattern:3]|');echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/cast'));variable_set('mps_cat_pattern', '[mps:cat-pattern:?]');echo PHP_EOL;echo '*' . _mps_build_cat(array('aliased-path' => '/')) . '*';' in the 'PHP Code to Execute' text area.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Execute' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the expected response is 'Status message
+devel
+brand|show|season|episode
+brand|thisisareallyreallyreallyreallyreallyreallylongurl|season|episode|cast
+brand|thisisareallyreallyreallyreallyreallyreallylongurl|season|episode|cast
+brand|show|~|episode
+brand|show|season
+brand|show|season|~|episode
+~|show
+
+~|brand|season
+season|episode
+brand|season|25
+**'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll by '-500'.]]>
+            </line>
+            <line>
+              <![CDATA[CLEANUP]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Modules' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Devel' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Uncheck the 'Devel' module checkbox.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configuration' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll by '-500'.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Configuration' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Web services' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'MPS Configuration' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'MPS Configuration dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '' in the 'Pattern for Category Field' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configuration' button.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- AdFoldersRichMediaAds_TC1160 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds@569fc9fe]" name="stopSelenium" is-config="true" duration-ms="574" started-at="2014-07-25T16:11:26Z" finished-at="2014-07-25T16:11:27Z">
+        </test-method> <!-- MPSSupportTokens_TC3641 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens@3337cdec]" name="stopSelenium" is-config="true" duration-ms="576" started-at="2014-07-25T17:03:50Z" finished-at="2014-07-25T17:03:51Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=AdFoldersRichMediaAds_TC1160 status=SUCCESS method=AdFoldersRichMediaAds.AdFoldersRichMediaAds_TC1160()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds@569fc9fe] output=Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]]>
+                <![CDATA[[TestResult name=MPSSupportTokens_TC3641 status=SUCCESS method=MPSSupportTokens.MPSSupportTokens_TC3641()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens@3337cdec] output=STEP 1]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds@569fc9fe]" name="stopGridAndHub" is-config="true" duration-ms="386" started-at="2014-07-25T16:11:27Z" finished-at="2014-07-25T16:11:27Z">
+        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens@3337cdec]" name="stopGridAndHub" is-config="true" duration-ms="374" started-at="2014-07-25T17:03:51Z" finished-at="2014-07-25T17:03:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopGridAndHub -->
-      </class> <!-- com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

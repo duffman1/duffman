@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore">
+      <class name="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens">
         <methods>
           <include name="startSelenium"/>
           <include name="stopGridAndHub"/>
           <include name="startGridAndHub"/>
+          <include name="MPSSupportTokens_TC3641"/>
           <include name="stopSelenium"/>
-          <include name="ImplementTVEModulesCore_TC3261"/>
         </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

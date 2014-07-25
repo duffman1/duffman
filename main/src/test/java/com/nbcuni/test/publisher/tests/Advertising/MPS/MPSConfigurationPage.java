@@ -36,15 +36,15 @@ public class MPSConfigurationPage extends ParentTest {
             
             Reporter.log("STEP 4");
             MPSConfiguration mpsConfiguration = new MPSConfiguration(webDriver);
-            mpsConfiguration.EnterMPSHost("mps.nbcuni.com");
+            mpsConfiguration.EnterMPSHost("mps.io");
             mpsConfiguration.ClickIntegrationMethod("Document Write");
-            mpsConfiguration.EnterSiteInstanceOverride("sandbox");
+            mpsConfiguration.EnterSiteInstanceOverride("pub7-development");
             mpsConfiguration.CheckSendQueryStringsCbx();
             mpsConfiguration.ClickSaveConfigurationBtn();
             contentParent.VerifyMessageStatus("The configuration options have been saved.");
             overlay.ClickCloseOverlayLnk();
-            contentParent.VerifySourceInPage(Arrays.asList("var mpscall = {\"site\":\"sandbox\",\"title\":\"Welcome to Site-Install\",\"path\":\"\\/\",\"is_content\":0,\"type\":\"other\"}",
-            		"var mpsopts = {\"host\":\"mps.nbcuni.com\"}", "var mps = mps ||"));
+            contentParent.VerifySourceInPage(Arrays.asList("var mpscall = {\"site\":\"pub7-development\",\"title\":\"Welcome to Site-Install\",\"path\":\"\\/\",\"is_content\":0,\"type\":\"other\"}",
+            		"var mpsopts = {\"host\":\"mps.io\"}", "var mps = mps ||"));
             
             Reporter.log("STEP 5");
             taxonomy.NavigateSite("Configuration>>Web services>>MPS Configuration");
@@ -71,9 +71,9 @@ public class MPSConfigurationPage extends ParentTest {
             Reporter.log("STEP 8");
             taxonomy.NavigateSite("Configuration>>Web services>>MPS Configuration");
             overlay.SwitchToActiveFrame();
-            mpsConfiguration.EnterMPSHost("mps.nbcuni.com");
+            mpsConfiguration.EnterMPSHost("mps.io");
             mpsConfiguration.ClickIntegrationMethod("Document Write");
-            mpsConfiguration.EnterSiteInstanceOverride("sandbox");
+            mpsConfiguration.EnterSiteInstanceOverride("pub7-development");
             mpsConfiguration.CheckSendQueryStringsCbx();
             mpsConfiguration.EnterName("key1", "1");
             mpsConfiguration.EnterValue("value1", "1");
@@ -84,7 +84,7 @@ public class MPSConfigurationPage extends ParentTest {
             mpsConfiguration.ClickSaveConfigurationBtn();
             contentParent.VerifyMessageStatus("The configuration options have been saved.");
             overlay.ClickCloseOverlayLnk();
-            contentParent.VerifySourceInPage(Arrays.asList("var mpsopts = {\"host\":\"mps.nbcuni.com\",\"key1\":\"value1\",\"key2\":{\"key\":\"value\",\"key2\":\"value2\"}}"));
+            contentParent.VerifySourceInPage(Arrays.asList("var mpsopts = {\"host\":\"mps.io\",\"key1\":\"value1\",\"key2\":{\"key\":\"value\",\"key2\":\"value2\"}}"));
             
             Reporter.log("STEP 9");
             taxonomy.NavigateSite("Configuration>>Web services>>MPS Configuration");
@@ -97,7 +97,7 @@ public class MPSConfigurationPage extends ParentTest {
             overlay.ClickCloseOverlayLnk();
             
             Reporter.log("STEP 10");
-            contentParent.VerifySourceInPage(Arrays.asList("//mps.nbcuni.com/request/page/jsonp?callback=mpsCallback"));
+            contentParent.VerifySourceInPage(Arrays.asList("//mps.io/request/page/jsonp?callback=mpsCallback"));
             
             Reporter.log("STEP 11 - N/A");
             

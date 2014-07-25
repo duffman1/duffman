@@ -150,23 +150,23 @@ public class A1_TestSetup extends ParentTest {
             Calendar cal5MinuteFuture = Calendar.getInstance();
             cal5MinuteFuture.add(Calendar.MINUTE, 5);
         	date5MinuteFuture = cal5MinuteFuture.getTime();
-        	Calendar cal30MinuteFuture = Calendar.getInstance();
-            cal30MinuteFuture.add(Calendar.MINUTE, 30);
-        	Date date30MinuteFuture = cal30MinuteFuture.getTime();
+        	Calendar cal60MinuteFuture = Calendar.getInstance();
+            cal60MinuteFuture.add(Calendar.MINUTE, 60);
+        	Date date60MinuteFuture = cal60MinuteFuture.getTime();
         	SimpleDateFormat pub7LogoDateFormat = new SimpleDateFormat("yyyy-MM-dd");
         	pub7LogoDateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
         	SimpleDateFormat pub7LogoTimeFormat = new SimpleDateFormat("hh:mm:ss a");
         	pub7LogoTimeFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
         	addLogo.EnterStartDate(pub7LogoDateFormat.format(date5MinuteFuture));
     	    addLogo.EnterStartTime(pub7LogoTimeFormat.format(date5MinuteFuture));
-    	    addLogo.EnterEndDate(pub7LogoDateFormat.format(date30MinuteFuture));
-    	    addLogo.EnterEndTime(pub7LogoTimeFormat.format(date30MinuteFuture));
+    	    addLogo.EnterEndDate(pub7LogoDateFormat.format(date60MinuteFuture));
+    	    addLogo.EnterEndTime(pub7LogoTimeFormat.format(date60MinuteFuture));
     	    addLogo.ClickSaveBtn();
     	    overlay.SwitchToActiveFrame();
     	    SimpleDateFormat pub7CreatedLogoDateTimeFormat = new SimpleDateFormat("EEE, MM/dd/yyyy - kk:mm");
     	    pub7CreatedLogoDateTimeFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
         	contentParent.VerifyPageContentPresent(Arrays.asList(logoTitle, 
-    	    		pub7CreatedLogoDateTimeFormat.format(date5MinuteFuture).replace("24:", "00:"), pub7CreatedLogoDateTimeFormat.format(date30MinuteFuture)));
+    	    		pub7CreatedLogoDateTimeFormat.format(date5MinuteFuture).replace("24:", "00:"), pub7CreatedLogoDateTimeFormat.format(date60MinuteFuture)));
     	    logos.VerifyLogoImgPresent(logoTitle, "nbclogosmall");
     	    overlay.ClickCloseOverlayLnk();
     	    
