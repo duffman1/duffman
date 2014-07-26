@@ -76,7 +76,23 @@ public class A1_TestSetup extends ParentTest {
             //enable logo manage module
             modules.EnterFilterName("Logo Manager");
             modules.EnableModule("Logo Manager");
-            overlay.ClickCloseOverlayLnk();
+            
+            //uninstall mps module to clean out any previously created mps blocks
+            webDriver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+            try {
+            	modules.EnterFilterName("MPS");
+            	modules.DisableModule("MPS");
+            	overlay.ClickOverlayTab("Uninstall");
+            	overlay.SwitchToActiveFrame();
+            	modules.UninstallModule("MPS");
+            	overlay.SwitchToActiveFrame();
+            	overlay.ClickCloseOverlayLnk();
+            }
+            catch (Exception | AssertionError e) {
+            	overlay.SwitchToActiveFrame();
+            	overlay.ClickCloseOverlayLnk();
+            }
+            webDriver.manage().timeouts().implicitlyWait(config.getImplicitWaitTime(), TimeUnit.SECONDS);
             
             //schedule a post content item revision to be consumed by the SchedulingContentPublishUnpublished test later in the suite
             taxonomy.NavigateSite("Content>>Add content>>Post");

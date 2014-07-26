@@ -53,6 +53,11 @@ public class Overlay {
     	return webDriver.findElement(By.xpath("//iframe[contains(@title, '" + frameTitle + "')]"));
     }
     
+    private WebElement Overlay_Tab(String tabTxt) {
+    	return webDriver.findElement(By.xpath("//ul[@id='overlay-tabs']//a[text()='" + tabTxt + "']"));
+    }
+    
+    
     //PAGE OBJECT METHODS
     public void switchToDefaultContent() throws Exception {
     	
@@ -73,6 +78,14 @@ public class Overlay {
     		catch (WebDriverException e) { }
     	}
     	this.switchToDefaultContent();
+    }
+    
+    public void ClickOverlayTab(String tabTxt) throws Exception {
+    	
+    	Reporter.log("Click the '" + tabTxt + "' overlay tab.");
+    	contentParent.Scroll("-500");
+    	Overlay_Tab(tabTxt).click();
+    	
     }
     
     public void SwitchToFrame(String frameTitle) throws Exception {

@@ -25,23 +25,8 @@ public class AutomaticallyCreatedMPSAdSlots extends ParentTest {
         	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
         	MPSConfiguration mpsConfiguration = new MPSConfiguration(webDriver);
         	Modules modules = new Modules(webDriver, applib);
-        	if (mpsConfiguration.IsMPSEnabled() == true) {
-        		taxonomy.NavigateSite("Modules");
-                overlay.SwitchToActiveFrame();
-                modules.EnterFilterName("MPS");
-                modules.DisableModule("MPS");
-                overlay.ClickCloseOverlayLnk();
-                overlay.switchToDefaultContent();
-                taxonomy.NavigateSite("Modules>>Uninstall");
-                overlay.SwitchToActiveFrame();
-                modules.UninstallModule("MPS");
-                overlay.SwitchToActiveFrame();
-                overlay.ClickCloseOverlayLnk();
-        	}
         	taxonomy.NavigateSite("Modules");
             overlay.SwitchToActiveFrame();
-            modules.EnterFilterName("Pixelman");
-        	modules.DisableModule("Pixelman");
             modules.EnterFilterName("MPS");
             modules.EnableModule("MPS");
             overlay.ClickCloseOverlayLnk();
@@ -65,11 +50,10 @@ public class AutomaticallyCreatedMPSAdSlots extends ParentTest {
         	Reporter.log("STEP 2");
         	mpsConfiguration.ClickSyncAdBlocksBtn();
         	contentParent.VerifyMessageStatus("The configuration options have been saved.");
-        	contentParent.VerifyPageContentPresent(Arrays.asList("The following new blocks have been created:", 
-        			"topbox", "topmulti", "bottommulti", "topbanner"));
         	
         	Reporter.log("STEP 3");
-        	contentParent.VerifyMessageWarning("These blocks don't exist in the list of ad blocks retrieved: " + blockName);
+        	contentParent.VerifyMessageWarning("These blocks don't exist in the list of ad blocks retrieved: ");
+        	contentParent.VerifyMessageWarning(blockName);
         	overlay.ClickCloseOverlayLnk();
         	
         	Reporter.log("STEP 4");
@@ -110,10 +94,19 @@ public class AutomaticallyCreatedMPSAdSlots extends ParentTest {
             taxonomy.NavigateSite("Configuration>>Web services>>MPS Configuration");
             overlay.SwitchToActiveFrame();
             mpsConfiguration.ClickSyncAdBlocksBtn();
-            contentParent.VerifyPageContentPresent(Arrays.asList("The following new blocks have been created:", 
-        			"bottombox", "coolrich", "logo"));
             contentParent.VerifyPageContentNotPresent(Arrays.asList("topbox"));
-            contentParent.VerifyMessageWarning("These blocks don't exist in the list of ad blocks retrieved: " + blockName);
-            
+            contentParent.VerifyMessageWarning("These blocks don't exist in the list of ad blocks retrieved: ");
+        	contentParent.VerifyMessageWarning(blockName);
+        	overlay.ClickCloseOverlayLnk();
+        	taxonomy.NavigateSite("Structure>>Blocks");
+        	overlay.SwitchToActiveFrame();
+        	blocks.SelectRegion("bottommulti (MPS)", "- None -");
+        	blocks.SelectRegion("topbanner (MPS)", "- None -");
+        	blocks.SelectRegion("topbox (MPS)", "- None -");
+        	blocks.SelectRegion("topmulti (MPS)", "- None -");
+        	blocks.SelectRegion("bottombox (MPS)", "- None -");
+        	blocks.SelectRegion("coolrich (MPS)", "- None -");
+        	blocks.SelectRegion("logo (MPS)", "- None -");
+        	blocks.SelectRegion(blockName + " (MPS)", "- None -");
     }
 }
