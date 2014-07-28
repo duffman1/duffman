@@ -39,8 +39,6 @@ public class MPSSupportTokens extends ParentTest {
         	modules.DisableModule("Pixelman");
         	modules.EnterFilterName("MPS");
         	modules.EnableModule("MPS");
-        	modules.EnterFilterName("Devel");
-        	modules.EnableModule("Devel");
         	overlay.ClickCloseOverlayLnk();
         	taxonomy.NavigateSite("Configuration>>Web services>>MPS Configuration");
             overlay.SwitchToActiveFrame();
@@ -136,11 +134,6 @@ public class MPSSupportTokens extends ParentTest {
             overlay.ClickCloseOverlayLnk();
             
             Reporter.log("CLEANUP");
-            taxonomy.NavigateSite("Modules");
-            overlay.SwitchToActiveFrame();
-            modules.EnterFilterName("Devel");
-            modules.DisableModule("Devel");
-            overlay.ClickCloseOverlayLnk();
             taxonomy.NavigateSite("Configuration>>Web services>>MPS Configuration");
             overlay.SwitchToActiveFrame();
             mpsConfiguration.EnterPatternForCategoryField("");

@@ -33,8 +33,6 @@ public class SEOOptimizationModule extends ParentTest {
 		overlay.SwitchToActiveFrame();
 		module.EnterFilterName("Pub SEO");
 		module.EnableModule("Pub SEO");
-		module.EnterFilterName("Devel");
-		module.DisableModule("Devel");
 		overlay.ClickCloseOverlayLnk();
     
 		//Step 3

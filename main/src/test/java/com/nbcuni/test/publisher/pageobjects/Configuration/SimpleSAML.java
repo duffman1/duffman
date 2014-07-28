@@ -60,8 +60,6 @@ public class SimpleSAML {
 
 		//TODO - extend for all sites
 		if (config.getConfigValue("AppURL").contains("install.qa5")) {
-			Reporter.log("Verify the 'Activate authentication via SimpleSAMLphp' check box is unchecked.");
-			Assert.assertFalse(Activate_Cbx.isSelected());
 			
 			Reporter.log("Verify the value of the 'Installation directory' text box equals '/mnt/www/html/nbcupublisher7qa5/simplesamlphp' and the text box is disabled.");
 			Assert.assertEquals(InstallationDirectory_Txb.getAttribute("value"), "/mnt/www/html/nbcupublisher7qa5/simplesamlphp");

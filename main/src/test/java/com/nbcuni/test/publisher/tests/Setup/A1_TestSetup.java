@@ -53,9 +53,9 @@ public class A1_TestSetup extends ParentTest {
         	modules.EnterFilterName("Sticky Edit Actions");
         	modules.DisableModule("Sticky Edit Actions");
             
-        	//disable devel module
+        	//enable devel module
         	modules.EnterFilterName("Devel");
-            modules.DisableModule("Devel");
+            modules.EnableModule("Devel");
             
             //disable devel module
         	modules.EnterFilterName("Acquia Purge");
