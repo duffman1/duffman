@@ -1,5 +1,7 @@
 package com.nbcuni.test.publisher.pageobjects.Configuration;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
@@ -10,6 +12,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
+
 import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
@@ -50,12 +53,24 @@ public class MPSConfiguration {
     	return webDriver.findElement(By.xpath("(//input[contains(@id, 'name')])[" + index + "]"));
     }
     
+    private List<WebElement> AllName_Txbs() {
+    	return webDriver.findElements(By.xpath("//input[contains(@id, 'name')]"));
+    }
+    
     private WebElement Value_Txb(String index) {
     	return webDriver.findElement(By.xpath("(//input[contains(@id, 'value')])[" + index + "]"));
     }
     
+    private List<WebElement> AllValue_Txbs() {
+    	return webDriver.findElements(By.xpath("//input[contains(@id, 'value')]"));
+    }
+    
     private WebElement JSON_Cbx(String index) {
     	return webDriver.findElement(By.xpath("(//input[contains(@id, 'json')])[" + index + "]"));
+    }
+    
+    private List<WebElement> AllJSON_Cbxs() {
+    	return webDriver.findElements(By.xpath("//input[contains(@id, 'json')]"));
     }
     
     @FindBy(how = How.ID, using ="edit-add-another-opt")
@@ -222,6 +237,26 @@ public class MPSConfiguration {
     	Assert.assertEquals(Ad_Img.getAttribute("width"), "300");
     	Assert.assertEquals(Ad_Img.getAttribute("height"), "250");
     	
+    }
+    
+    public void CleanAllMPSOptions() throws Exception {
+    	
+    	Reporter.log("Clear all 'Name' text box values.");
+    	for (WebElement Name_Txb : AllName_Txbs()) {
+    		Name_Txb.clear();
+    	}
+    	
+    	Reporter.log("Clear all 'Value' text box values.");
+    	for (WebElement Value_Txb : AllValue_Txbs()) {
+    		Value_Txb.clear();
+    	}
+    	
+    	Reporter.log("Uncheck all 'JSON' check boxes.");
+    	for (WebElement JSON_Cbx : AllJSON_Cbxs()) {
+    		if (JSON_Cbx.isSelected() == true) {
+    			JSON_Cbx.click();
+    		}
+    	}
     }
     
     

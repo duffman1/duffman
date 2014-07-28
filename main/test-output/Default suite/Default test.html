@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sat Jul 26 09:02:21 EDT 2014</td>
+<td>Started on:</td><td>Mon Jul 28 09:23:30 EDT 2014</td>
 </tr>
-<tr><td>Total time:</td><td>87 seconds (87948 ms)</td>
+<tr><td>Total time:</td><td>53 seconds (53981 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,105 +75,65 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.nbcuni.test.publisher.tests.Advertising.MPS.AutomaticallyCreatedMPSAdSlots.AutomaticallyCreatedMPSAdSlots_TC4128()'><b>AutomaticallyCreatedMPSAdSlots_TC4128</b><br>Test class: com.nbcuni.test.publisher.tests.Advertising.MPS.AutomaticallyCreatedMPSAdSlots<br/>
-<a href="#Output-957190698" onClick='toggleBox("Output-957190698", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.nbcuni.test.publisher.tests.Advertising.MPS.MPSEndToEndIntegration.MPSEndToEndIntegration_TC3996()'><b>MPSEndToEndIntegration_TC3996</b><br>Test class: com.nbcuni.test.publisher.tests.Advertising.MPS.MPSEndToEndIntegration<br/>
+<a href="#Output-987940300" onClick='toggleBox("Output-987940300", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-957190698" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-957190698">
-STEP 1 AND SETUP<br/>
+<a href="#Output-987940300" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-987940300">
+STEP 1<br/>
 Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.<br/>
 Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
 Enter 'pa55word' in the 'Password' text box.<br/>
 Click the 'Login' button.<br/>
 Click the 'Modules' menu link.<br/>
 Switch to the active frame titled 'Modules dialog'.<br/>
+Enter 'Pixelman' in the 'Filter Name' text box.<br/>
 Enter 'MPS' in the 'Filter Name' text box.<br/>
 Verify the 'MPS' check box is checked.<br/>
 Click the 'Close Overlay X'.<br/>
 Scroll by '-500'.<br/>
-Mouse over the 'Structure' menu link.<br/>
-Mouse over the 'MPS Blocks' menu link.<br/>
-Click the 'Add' menu link.<br/>
-Switch to the active frame titled 'Add a new MPS block dialog'.<br/>
-Enter '0b99b00fb2f0477' in the 'Block Name' text box.<br/>
-Click the 'Save' button.<br/>
-Verify success message of '0b99b00fb2f0477 has been created.' is present.<br/>
-Click the 'Close Overlay X'.<br/>
-Scroll by '-500'.<br/>
+STEP 2<br/>
 Mouse over the 'Configuration' menu link.<br/>
 Mouse over the 'Web services' menu link.<br/>
 Click the 'MPS Configuration' menu link.<br/>
 Switch to the active frame titled 'MPS Configuration dialog'.<br/>
+STEP 3<br/>
 Enter 'mps.io' in the 'MPS Host' text box.<br/>
 Click the 'Document Write' radio button.<br/>
 Enter 'pub7-development' in the 'Site Instance Override' text box.<br/>
+Clear all 'Name' text box values.<br/>
+Clear all 'Value' text box values.<br/>
+Uncheck all 'JSON' check boxes.<br/>
 Click the 'Save configuration' button.<br/>
-Verify success message of 'The configuration options have been saved.' is present.<br/>
-STEP 2<br/>
 Click the 'Sync Ad Blocks' button.<br/>
 Verify success message of 'The configuration options have been saved.' is present.<br/>
-STEP 3<br/>
-Verify warning message 'These blocks don't exist in the list of ad blocks retrieved: ' is present.<br/>
-Verify warning message '0b99b00fb2f0477' is present.<br/>
 Click the 'Close Overlay X'.<br/>
 Scroll by '-500'.<br/>
-STEP 4<br/>
+STEP 4 - N/A<br/>
+STEP 5<br/>
 Mouse over the 'Structure' menu link.<br/>
 Click the 'Blocks' menu link.<br/>
 Switch to the active frame titled 'Blocks dialog'.<br/>
-Select the block name 'bottommulti (MPS)' from the '- None -' drop down list.<br/>
-Select the block name 'topbanner (MPS)' from the '- None -' drop down list.<br/>
-Select the block name 'topbox (MPS)' from the '- None -' drop down list.<br/>
-Select the block name 'topmulti (MPS)' from the '- None -' drop down list.<br/>
-Select the block name '0b99b00fb2f0477 (MPS)' from the '- None -' drop down list.<br/>
-STEP 5<br/>
-Select the block name '0b99b00fb2f0477 (MPS)' from the 'Header' drop down list.<br/>
+STEP 6 and 7<br/>
+Select the block name 'topmulti (MPS)' from the 'Footer' drop down list.<br/>
 Click the 'Save Blocks' button.<br/>
 Verify success message of 'The block settings have been updated.' is present.<br/>
 Click the 'Close Overlay X'.<br/>
 Scroll by '-500'.<br/>
-STEP 6 - N/A<br/>
-STEP 7<br/>
-Mouse over the 'Configuration' menu link.<br/>
-Mouse over the 'Web services' menu link.<br/>
-Click the 'MPS Configuration' menu link.<br/>
-Switch to the active frame titled 'MPS Configuration dialog'.<br/>
-Enter 'mps.io' in the 'MPS Host' text box.<br/>
-Click the 'Document Write' radio button.<br/>
-Enter 'sandbox' in the 'Site Instance Override' text box.<br/>
-Click the 'Save configuration' button.<br/>
-Verify success message of 'The configuration options have been saved.' is present.<br/>
 STEP 8<br/>
-Open mps service page at 'http://mps.io/request/describe/sandbox'.<br/>
-Verify the text '{"instance":{"dart_mode":"gpt-asynchronous","multislot":"0"},"adunits":{"Box Ad First":{"unit":"Box Ad First","slot":"topbox","sizes":["300x250"],"responsive":0},"Box Ad Second":{"unit":"Box Ad Second","slot":"bottombox","sizes":["300x250"],"responsive":0},"Cool Rich 1":{"unit":"Cool Rich 1","slot":"coolrich","responsive":0},"Cool Rich 2":{"unit":"Cool Rich 2","slot":"coolrich","responsive":0},"Flex Ad First":{"unit":"Flex Ad First","slot":"topmulti","sizes":["300x250","160x600","300x600"],"responsive":0},"Flex Ad Second":{"unit":"Flex Ad Second","slot":"bottommulti","sizes":["300x250","160x600","300x600"],"responsive":0},"Logo A":{"unit":"Logo A","slot":"logo","sizes":["88x31","120x90"],"responsive":0},"Top Banner":{"unit":"Top Banner","slot":"topbanner","sizes":["728x90","970x66"],"responsive":0},"Top Banner B":{"unit":"Top Banner B","slot":"topbanner","sizes":["2x2"],"responsive":0}},"components":["id-0516-4520471","monitoring","test.css"]}' is present on the page.<br/>
-STEP 9<br/>
-Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.<br/>
-Mouse over the 'Configuration' menu link.<br/>
-Mouse over the 'Web services' menu link.<br/>
-Click the 'MPS Configuration' menu link.<br/>
-Switch to the active frame titled 'MPS Configuration dialog'.<br/>
-Click the 'Sync Ad Blocks' button.<br/>
-Verify the text 'topbox' is NOT present on the page.<br/>
-Verify warning message 'These blocks don't exist in the list of ad blocks retrieved: ' is present.<br/>
-Verify warning message '0b99b00fb2f0477' is present.<br/>
-Click the 'Close Overlay X'.<br/>
-Scroll by '-500'.<br/>
+Click the 'Home' menu link.<br/>
+Verify the Ad image is present.<br/>
+CLEANUP<br/>
 Mouse over the 'Structure' menu link.<br/>
 Click the 'Blocks' menu link.<br/>
 Switch to the active frame titled 'Blocks dialog'.<br/>
-Select the block name 'bottommulti (MPS)' from the '- None -' drop down list.<br/>
-Select the block name 'topbanner (MPS)' from the '- None -' drop down list.<br/>
-Select the block name 'topbox (MPS)' from the '- None -' drop down list.<br/>
 Select the block name 'topmulti (MPS)' from the '- None -' drop down list.<br/>
-Select the block name 'bottombox (MPS)' from the '- None -' drop down list.<br/>
-Select the block name 'coolrich (MPS)' from the '- None -' drop down list.<br/>
-Select the block name 'logo (MPS)' from the '- None -' drop down list.<br/>
-Select the block name '0b99b00fb2f0477 (MPS)' from the '- None -' drop down list.<br/>
+Click the 'Save Blocks' button.<br/>
 </div>
 </td>
 <td></td>
-<td>84</td>
-<td>com.nbcuni.test.publisher.tests.Advertising.MPS.AutomaticallyCreatedMPSAdSlots@691c5809</td></tr>
+<td>50</td>
+<td>com.nbcuni.test.publisher.tests.Advertising.MPS.MPSEndToEndIntegration@3b463340</td></tr>
 </table><p>
 </body>
 </html>

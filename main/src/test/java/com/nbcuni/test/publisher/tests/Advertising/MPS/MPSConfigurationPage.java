@@ -11,6 +11,8 @@ import com.nbcuni.test.publisher.pageobjects.Configuration.MPSConfiguration;
 
 public class MPSConfigurationPage extends ParentTest {
 	
+	Boolean testSuccessful = false;
+	
     /*************************************************************************************
      * TEST CASE - TC3306
      * Steps - https://rally1.rallydev.com/#/14663927728d/detail/testcase/19393095610
@@ -36,6 +38,7 @@ public class MPSConfigurationPage extends ParentTest {
             
             Reporter.log("STEP 4");
             MPSConfiguration mpsConfiguration = new MPSConfiguration(webDriver);
+            mpsConfiguration.CleanAllMPSOptions();
             mpsConfiguration.EnterMPSHost("mps.io");
             mpsConfiguration.ClickIntegrationMethod("Document Write");
             mpsConfiguration.EnterSiteInstanceOverride("pub7-development");
@@ -104,15 +107,24 @@ public class MPSConfigurationPage extends ParentTest {
             Reporter.log("CLEANUP");
             taxonomy.NavigateSite("Configuration>>Web services>>MPS Configuration");
             overlay.SwitchToActiveFrame();
-            mpsConfiguration.EnterName("", "1");
-            mpsConfiguration.EnterName("", "2");
-            mpsConfiguration.EnterName("", "3");
-            mpsConfiguration.EnterValue("", "1");
-            mpsConfiguration.EnterValue("", "2");
-            mpsConfiguration.EnterValue("", "3");
-            mpsConfiguration.CheckJSONCbx("2");
+            mpsConfiguration.CleanAllMPSOptions();
             mpsConfiguration.ClickSaveConfigurationBtn();
             
+            testSuccessful = true;
             
     }
+    
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"}, dependsOnMethods = {"MPSConfigurationPage_TC3306"}, alwaysRun=true)
+	public void Cleanup() throws Exception {
+		if (testSuccessful == false) {
+			
+			UserLogin userLogin = applib.openApplication();
+			userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+			taxonomy.NavigateSite("Configuration>>Web services>>MPS Configuration");
+            overlay.SwitchToActiveFrame();
+            MPSConfiguration mpsConfiguration = new MPSConfiguration(webDriver);
+            mpsConfiguration.CleanAllMPSOptions();
+            mpsConfiguration.ClickSaveConfigurationBtn();
+		}
+	}
 }

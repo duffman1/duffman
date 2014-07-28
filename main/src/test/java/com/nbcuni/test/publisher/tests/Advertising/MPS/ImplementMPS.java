@@ -33,8 +33,20 @@ public class ImplementMPS extends ParentTest {
         	UserLogin userLogin = applib.openApplication();
         	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
             
+        	Reporter.log("SETUP");
+        	taxonomy.NavigateSite("Configuration>>Web services>>MPS Configuration");
+            overlay.SwitchToActiveFrame();
+            MPSConfiguration mpsConfiguration = new MPSConfiguration(webDriver);
+            mpsConfiguration.EnterMPSHost("mps.io");
+            mpsConfiguration.ClickIntegrationMethod("Document Write");
+            mpsConfiguration.EnterSiteInstanceOverride("pub7-development");
+            mpsConfiguration.CheckSendQueryStringsCbx();
+            mpsConfiguration.CleanAllMPSOptions();
+            mpsConfiguration.ClickSaveConfigurationBtn();
+            contentParent.VerifyMessageStatus("The configuration options have been saved.");
+            overlay.ClickCloseOverlayLnk();
+            
         	Reporter.log("STEP 2 - N/A");
-        	MPSConfiguration mpsConfiguration = new MPSConfiguration(webDriver);
         	Modules modules = new Modules(webDriver, applib);
         	
         	Reporter.log("STEP 3");
@@ -75,16 +87,7 @@ public class ImplementMPS extends ParentTest {
             mpsConfiguration.VerifyNoMPSCallsMade();
             applib.openApplication();
             
-            Reporter.log("STEP 8");
-            taxonomy.NavigateSite("Configuration>>Web services>>MPS Configuration");
-            overlay.SwitchToActiveFrame();
-            mpsConfiguration.EnterMPSHost("mps.io");
-            mpsConfiguration.ClickIntegrationMethod("Document Write");
-            mpsConfiguration.EnterSiteInstanceOverride("pub7-development");
-            mpsConfiguration.CheckSendQueryStringsCbx();
-            mpsConfiguration.ClickSaveConfigurationBtn();
-            contentParent.VerifyMessageStatus("The configuration options have been saved.");
-            overlay.ClickCloseOverlayLnk();
+            Reporter.log("STEP 8 - N/A - COVERED IN SETUP");
             
             Reporter.log("STEP 9");
             taxonomy.NavigateSite("Content>>Add content>>Movie");

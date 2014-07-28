@@ -40,6 +40,7 @@ public class MPSEndToEndIntegration extends ParentTest {
             mpsConfiguration.ClickIntegrationMethod("Document Write");
             mpsConfiguration.EnterSiteInstanceOverride("pub7-development");
             mpsConfiguration.CheckSendQueryStringsCbx();
+            mpsConfiguration.CleanAllMPSOptions();
             mpsConfiguration.ClickSaveConfigurationBtn();
             mpsConfiguration.ClickSyncAdBlocksBtn();
             contentParent.VerifyMessageStatus("The configuration options have been saved.");

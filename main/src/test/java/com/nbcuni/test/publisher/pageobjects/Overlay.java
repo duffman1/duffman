@@ -84,8 +84,12 @@ public class Overlay {
     	
     	Reporter.log("Click the '" + tabTxt + "' overlay tab.");
     	contentParent.Scroll("-500");
-    	Overlay_Tab(tabTxt).click();
-    	
+    	try {
+    		Overlay_Tab(tabTxt).click();
+    	}
+    	catch (WebDriverException e) {
+    		webDriver.executeScript("arguments[0].click();", Overlay_Tab(tabTxt));
+    	}
     }
     
     public void SwitchToFrame(String frameTitle) throws Exception {
