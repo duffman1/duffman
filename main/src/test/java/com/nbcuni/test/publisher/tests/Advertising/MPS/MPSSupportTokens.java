@@ -72,7 +72,7 @@ public class MPSSupportTokens extends ParentTest {
             additionalInformation.SelectRating("G");
             additionalInformation.SelectPrimaryGenre("Action");
             contentParent.ClickSaveBtn();
-            overlay.switchToDefaultContent();
+            overlay.switchToDefaultContent(true);
             contentParent.VerifyMessageStatus("Movie " + movieTitle + " has been created.");
             WorkBench workBench = new WorkBench(webDriver, applib);
             contentParent.VerifySourceInPage(Arrays.asList("\"cat\":\"content\""));
@@ -86,7 +86,7 @@ public class MPSSupportTokens extends ParentTest {
             String baseAlias = random.GetCharacterString(10);
             urlPathSettings.EnterURLAlias(baseAlias);
             contentParent.ClickSaveBtn();
-            overlay.switchToDefaultContent();
+            overlay.switchToDefaultContent(true);
             contentParent.VerifyMessageStatus("Movie " + movieTitle + " has been updated.");
             
             Reporter.log("STEP 6");
@@ -98,7 +98,7 @@ public class MPSSupportTokens extends ParentTest {
             urlPathSettings.ClickURLPathSettingsLnk();
             urlPathSettings.EnterURLAlias(baseAlias + "/mps-testing/2arg/3arg/4arg/5arg/6arg");
             contentParent.ClickSaveBtn();
-            overlay.switchToDefaultContent();
+            overlay.switchToDefaultContent(true);
             contentParent.VerifyMessageStatus("Movie " + movieTitle + " has been updated.");
             
             Reporter.log("STEP 8");

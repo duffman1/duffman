@@ -59,11 +59,14 @@ public class Overlay {
     
     
     //PAGE OBJECT METHODS
-    public void switchToDefaultContent() throws Exception {
+    public void switchToDefaultContent(boolean checkForErrors) throws Exception {
     	
     	webDriver.switchTo().defaultContent();
     	
-    	errorChecking.VerifyNoMessageErrorsPresent();
+    	if (checkForErrors == true) {
+    		errorChecking.VerifyNoMessageErrorsPresent();
+    	}
+    	
     }
     
     public void ClickCloseOverlayLnk() throws Exception {
@@ -77,7 +80,7 @@ public class Overlay {
     		}
     		catch (WebDriverException e) { }
     	}
-    	this.switchToDefaultContent();
+    	this.switchToDefaultContent(true);
     }
     
     public void ClickOverlayTab(String tabTxt) throws Exception {
@@ -120,8 +123,8 @@ public class Overlay {
         }
     	webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
     	
-    	this.switchToDefaultContent();
-    	Thread.sleep(250); //slight pause to help ensure frame switch occurs to a new frame and not the old.
+    	this.switchToDefaultContent(false);
+    	//Thread.sleep(250); //slight pause to help ensure frame switch occurs to a new frame and not the old.
     	Reporter.log("Switch to the active frame titled '" + ActiveFrame_Frm.getAttribute("title") + "'.");
     	webDriver.switchTo().frame(ActiveFrame_Frm);
     	

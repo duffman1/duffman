@@ -35,7 +35,7 @@ public class CreateMovie extends ParentTest{
             selectFile.SelectDefaultCoverImg();
             overlay.SwitchToActiveFrame();
             contentParent.ClickSaveBtn();
-            overlay.switchToDefaultContent();
+            overlay.switchToDefaultContent(true);
             contentParent.VerifyMessageStatus("Character Profile " + characterName + " has been created.");
             
             //Step 4
@@ -64,7 +64,7 @@ public class CreateMovie extends ParentTest{
             castCrew.VerifyCharacterTxbDisplayed();
             
             //Step 9 
-            overlay.switchToDefaultContent();
+            overlay.switchToDefaultContent(true);
             taxonomy.NavigateSite("Content>>Add content>>Person");
             overlay.SwitchToActiveFrame();
             
@@ -78,7 +78,7 @@ public class CreateMovie extends ParentTest{
             selectFile.SelectDefaultCoverImg();
             overlay.SwitchToActiveFrame();
             contentParent.ClickSaveBtn();
-            overlay.switchToDefaultContent();
+            overlay.switchToDefaultContent(true);
             contentParent.VerifyMessageStatus("Person " + personFirstName + " has been created.");
             
             //Step 11
@@ -104,7 +104,7 @@ public class CreateMovie extends ParentTest{
             selectFile.SelectDefaultCoverImg();
             overlay.SwitchToActiveFrame();
             contentParent.ClickSaveBtn();
-            overlay.switchToDefaultContent();
+            overlay.switchToDefaultContent(true);
             contentParent.VerifyMessageStatus("Movie " + movieTitle + " has been created.");
             
             //Step 15
@@ -125,7 +125,7 @@ public class CreateMovie extends ParentTest{
             contentParent.ClickSaveBtn();
             
             //Step 17
-            overlay.switchToDefaultContent();
+            overlay.switchToDefaultContent(true);
             workBench.VerifyWorkBenchBlockTextPresent(Arrays.asList("Published"));
             
     }

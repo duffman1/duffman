@@ -54,7 +54,7 @@ public class ConfiguringPublisherAutopublishingToFacebookTimeandWall extends Par
         	drupalForFacebook.ClickEditLnk();
         	overlay.SwitchToActiveFrame();
         	delete.ClickDeleteBtn();
-        	overlay.switchToDefaultContent();
+        	overlay.switchToDefaultContent(true);
         	delete.ClickDeleteBtn();
         	delete.ClickDeleteBtn();
         }
@@ -73,7 +73,7 @@ public class ConfiguringPublisherAutopublishingToFacebookTimeandWall extends Par
         drupalForFacebook.EnterSecret("a9b07339789b4ea75b3951f81fe27def");
         drupalForFacebook.ClickSaveBtn();
         contentParent.VerifyMessageStatus("Created facebook application Publisher 7 Test App (" + label + ").");
-        overlay.switchToDefaultContent();
+        overlay.switchToDefaultContent(true);
         
         //Step 5
         taxonomy.NavigateSite("Structure>>Facebook Apps>>Stream Posts");
@@ -109,7 +109,7 @@ public class ConfiguringPublisherAutopublishingToFacebookTimeandWall extends Par
         String postTitle = random.GetCharacterString(15);
         basicInformation.EnterTitle(postTitle);
         basicInformation.EnterSynopsis();
-        overlay.switchToDefaultContent();
+        overlay.switchToDefaultContent(true);
         PublishingOptions publishingOptions = new PublishingOptions(webDriver);
         publishingOptions.ClickPublishingOptionsLnk();
         publishingOptions.SelectModerationState("Published");
@@ -132,7 +132,7 @@ public class ConfiguringPublisherAutopublishingToFacebookTimeandWall extends Par
         
         //Step 14
         webDriver.navigate().to(new URL("https://www.facebook.com/"));
-        overlay.switchToDefaultContent();
+        overlay.switchToDefaultContent(true);
         for (int I = 0 ; ; I++) {
         	if (I >= 10) {
         		Assert.fail("Facebook app post has not posted to facebook.");

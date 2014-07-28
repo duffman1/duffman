@@ -70,7 +70,7 @@ public class PreviewContentItemsIntheFuturefromContentandWorkbenchViews extends 
     	publishingOptions.SelectModerationState("Published");
     	ContentParent contentParent = new ContentParent(webDriver, applib);
     	contentParent.ClickSaveBtn();
-    	overlay.switchToDefaultContent();
+    	overlay.switchToDefaultContent(true);
     	contentParent.VerifyMessageStatus("Post " + postTitle + " has been created.");
     	
         //Step 3
@@ -109,7 +109,7 @@ public class PreviewContentItemsIntheFuturefromContentandWorkbenchViews extends 
         contentParent.ClickSaveBtn();
         
         //Step 9
-    	overlay.switchToDefaultContent();
+    	overlay.switchToDefaultContent(true);
     	workBench.ClickWorkBenchTab("Schedule");
     	overlay.SwitchToActiveFrame();
     	ScheduleQueue scheduleQueue = new ScheduleQueue(webDriver);
@@ -170,7 +170,7 @@ public class PreviewContentItemsIntheFuturefromContentandWorkbenchViews extends 
         sitePreview.ClickUpdatePreviewBtn();
         
         //Step 16
-        overlay.switchToDefaultContent();
+        overlay.switchToDefaultContent(true);
         contentParent.VerifyPageContentPresent(Arrays.asList(updatedShortDescription, updatedBodyTxt));
         
     	//Step 17

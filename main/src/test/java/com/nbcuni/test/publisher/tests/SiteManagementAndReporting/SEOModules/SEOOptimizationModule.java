@@ -65,7 +65,7 @@ public class SEOOptimizationModule extends ParentTest {
 		xmlSiteMap.ClickSaveAndRestoreCbx();
 		xmlSiteMap.ClickRebuildSitemapBtn();
 		Thread.sleep(2000); //TODO - dynamic wait
-		overlay.switchToDefaultContent();
+		overlay.switchToDefaultContent(true);
 		overlay.WaitForFrameNotPresent("Rebuilding Sitemap");
 		overlay.SwitchToActiveFrame();
 		contentParent.VerifyMessageStatus("The sitemap links were rebuilt.");

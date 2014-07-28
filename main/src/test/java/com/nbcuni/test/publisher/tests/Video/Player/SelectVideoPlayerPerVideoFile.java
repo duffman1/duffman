@@ -53,7 +53,7 @@ public class SelectVideoPlayerPerVideoFile extends ParentTest{
         	if (configuredAccounts.get(0).equals("DB TV") || configuredAccounts.get(0).equals("NBCU TVE Dev - NBC")) {
         		
         		//Step 2
-        		overlay.switchToDefaultContent();
+        		overlay.switchToDefaultContent(true);
         		taxonomy.NavigateSite("Content>>Files>>mpxMedia");
 
         		//Step 3
@@ -63,7 +63,7 @@ public class SelectVideoPlayerPerVideoFile extends ParentTest{
         		searchFor.ClickApplyBtn();
 
         		//Step 4
-        		overlay.switchToDefaultContent();
+        		overlay.switchToDefaultContent(true);
         		Content content = new Content(webDriver, applib);
         		content.ClickEditMenuBtn("AutomationDefault");
         		
@@ -76,14 +76,14 @@ public class SelectVideoPlayerPerVideoFile extends ParentTest{
         		contentParent.ClickSaveBtn();
             
         		//Step 8 through 19 (truncated as test steps no longer match application functionality)
-        		overlay.switchToDefaultContent();
+        		overlay.switchToDefaultContent(true);
         		taxonomy.NavigateSite("Content>>Files>>mpxMedia");
         		searchFor.EnterTitle("AutomationDefault");
         		searchFor.ClickApplyBtn();
         		content.ClickEditMenuBtn("AutomationDefault");
         		editMPXVideo.SelectPubMPXVideoPlayer("VeXC0F2L9wg2");
         		contentParent.ClickSaveBtn();
-        		overlay.switchToDefaultContent();
+        		overlay.switchToDefaultContent(true);
         		taxonomy.NavigateSite("Content>>Files>>mpxMedia");
         		searchFor.EnterTitle("AutomationDefault");
         		searchFor.ClickApplyBtn();

@@ -116,7 +116,7 @@ public class A1_TestSetup extends ParentTest {
         	publishingOptions.ClickPublishingOptionsLnk();
         	publishingOptions.SelectModerationState("Draft");
         	contentParent.ClickSaveBtn();
-        	overlay.switchToDefaultContent();
+        	overlay.switchToDefaultContent(true);
         	contentParent.VerifyMessageStatus("Post " + postTitle + " has been created.");
         	WorkBench workBench = new WorkBench(webDriver, applib);
             workBench.ClickWorkBenchTab("Schedule");

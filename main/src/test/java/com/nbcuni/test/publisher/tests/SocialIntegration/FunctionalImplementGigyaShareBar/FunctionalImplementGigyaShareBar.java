@@ -54,7 +54,7 @@ public class FunctionalImplementGigyaShareBar extends ParentTest{
         SearchFor searchFor = new SearchFor(webDriver, applib);
         searchFor.EnterTitle(postTitle);
         searchFor.ClickApplyBtn();
-        overlay.switchToDefaultContent();
+        overlay.switchToDefaultContent(true);
         searchFor.ClickSearchTitleLnk(postTitle);
         GigyaShareBar gigyaShareBar = new GigyaShareBar(webDriver, applib);
         gigyaShareBar.VerifyTumblrBtnPresent();

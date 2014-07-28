@@ -62,7 +62,7 @@ public class UndefinedIndexesDisplayingForMPXPlayers extends ParentTest{
             
         	//Step 3 (continued)
         	List<String> configuredAccounts = settings.GetImportAccountSelectedOptions();
-    	    overlay.switchToDefaultContent();
+    	    overlay.switchToDefaultContent(true);
     	    
         	//Step 3a
     	    taxonomy.NavigateSite("Modules");
@@ -71,7 +71,7 @@ public class UndefinedIndexesDisplayingForMPXPlayers extends ParentTest{
         	modules.EnterFilterName("Devel");
             modules.DisableModule("Devel");
             overlay.ClickCloseOverlayLnk();
-            overlay.switchToDefaultContent();
+            overlay.switchToDefaultContent(true);
     	    
         	//Step 3 (continued)
         	taxonomy.NavigateSite("Content>>Files>>mpxPlayers");
@@ -81,11 +81,11 @@ public class UndefinedIndexesDisplayingForMPXPlayers extends ParentTest{
             MPXPlayers.ClickSyncMPXPlayersNowLnk();
             ContentParent contentParent = new ContentParent(webDriver);
             contentParent.VerifyMessageStatus("players returned for account");
-            overlay.switchToDefaultContent();
+            overlay.switchToDefaultContent(true);
             taxonomy.NavigateSite("Home>>Run cron");
         	
         	//Step 4
-        	overlay.switchToDefaultContent();
+        	overlay.switchToDefaultContent(true);
         	taxonomy.NavigateSite("Content>>Files>>mpxMedia");
         	overlay.SwitchToActiveFrame();
         	SearchFor searchFor = new SearchFor(webDriver);
@@ -103,7 +103,7 @@ public class UndefinedIndexesDisplayingForMPXPlayers extends ParentTest{
         	contentParent.ClickSaveBtn();
         	
         	//Step 7
-        	overlay.switchToDefaultContent();
+        	overlay.switchToDefaultContent(true);
         	modules.VerifyModuleEnabled("Devel");
         	taxonomy.NavigateSite("Home>>Development>>Execute PHP Code");
         	overlay.SwitchToActiveFrame();
@@ -117,11 +117,11 @@ public class UndefinedIndexesDisplayingForMPXPlayers extends ParentTest{
         	String playerID = executePHPCode.GetPlayerId();
         	
         	//Step 8
-        	overlay.switchToDefaultContent();
+        	overlay.switchToDefaultContent(true);
         	taxonomy.NavigateSite("Content>>Files>>mpxPlayers");
         	overlay.SwitchToActiveFrame();
         	searchFor.ClickSearchTitleLnk(playerTitle);
-        	overlay.switchToDefaultContent();
+        	overlay.switchToDefaultContent(true);
         	
         	//Step 9
         	workflow.ClickWorkflowTab("Edit");
@@ -130,7 +130,7 @@ public class UndefinedIndexesDisplayingForMPXPlayers extends ParentTest{
         	publishingOptions.ClickPublishingOptionsLnk();
         	publishingOptions.UncheckPublishedCbx();
         	contentParent.ClickSaveBtn();
-        	overlay.switchToDefaultContent();
+        	overlay.switchToDefaultContent(true);
         	contentParent.VerifyMessageStatus("MPX Player");
         	contentParent.VerifyMessageStatus("has been updated.");
         	
@@ -140,12 +140,12 @@ public class UndefinedIndexesDisplayingForMPXPlayers extends ParentTest{
         	contentParent.VerifyMessageError("An MPXplayer that's in use (" + playerTitle + ") has been unpublished.");
         	MPXMedia mpxMedia = new MPXMedia(webDriver);
         	mpxMedia.ClickMPXPlayerUnpublishedHereLnk(playerTitle);
-        	overlay.switchToDefaultContent();
+        	overlay.switchToDefaultContent(true);
         	overlay.SwitchToFrame("Edit mpx_player");
         	contentParent.VerifyNoMessageErrorsPresent();
         	
         	//Step 11
-        	overlay.switchToDefaultContent();
+        	overlay.switchToDefaultContent(true);
         	taxonomy.NavigateSite("Home>>Development>>Execute PHP Code");
         	overlay.SwitchToActiveFrame();
         	executePHPCode.EnterPHPCode("$res = db_delete('mpx_player')->condition('player_id', " + playerID + ")->execute();echo ($res ? 'Player deleted.' : \"Player NOT deleted.  (Maybe it was deleted previously?)\");echo PHP_EOL;");
@@ -159,17 +159,17 @@ public class UndefinedIndexesDisplayingForMPXPlayers extends ParentTest{
             contentParent.VerifyMessageStatus("deleted player id: " + playerID);
             
             //Step 13
-            overlay.switchToDefaultContent();
+            overlay.switchToDefaultContent(true);
             taxonomy.NavigateSite("Content>>Files>>mpxMedia");
             overlay.SwitchToActiveFrame();
             contentParent.VerifyNoMessageErrorsPresent();
-            overlay.switchToDefaultContent();
+            overlay.switchToDefaultContent(true);
             taxonomy.NavigateSite("Content>>Files>>mpxPlayers");
             overlay.SwitchToActiveFrame();
             contentParent.VerifyNoMessageErrorsPresent();
             
             //Step 14
-            overlay.switchToDefaultContent();
+            overlay.switchToDefaultContent(true);
             taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
             overlay.SwitchToFrame("Media: thePlatform mpx settings dialog");
             contentParent.VerifyNoMessageErrorsPresent();

@@ -147,7 +147,7 @@ public class CreateMediaGallery extends ParentTest{
             
             Reporter.log("STEP 11");
             contentParent.ClickSaveBtn();
-            overlay.switchToDefaultContent();
+            overlay.switchToDefaultContent(true);
             contentParent.VerifyMessageStatus("Media Gallery " + title + " has been created.");
             
             Reporter.log("STEP 12");

@@ -53,7 +53,7 @@ public class EnhanceMPXLibraryPublicID extends ParentTest{
         	//Step 4
         	searchFor.EnterTitle(playerName);
         	searchFor.ClickApplyBtn();
-        	overlay.switchToDefaultContent();
+        	overlay.switchToDefaultContent(true);
         	searchFor.VerifyMPXResultPublicID(playerName, playerID);
         		
         	//Step 5

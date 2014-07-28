@@ -43,7 +43,7 @@ public class ContentCommenting extends ParentTest{
         twitterLogin.ClickSignInAndTweetBtn();
         webDriver.switchTo().window(parentWindow);
         webDriver.navigate().to(new URL("https://twitter.com/"));
-        overlay.switchToDefaultContent();
+        overlay.switchToDefaultContent(true);
         twitterLogin.VerifyTwitterPostPresent(postTitle);
         
         Reporter.log("STEP 4");
@@ -60,7 +60,7 @@ public class ContentCommenting extends ParentTest{
         publishingOptions.ClickPublishingOptionsLnk();
         publishingOptions.SelectModerationState("Published");
         contentParent.ClickSaveBtn();
-        overlay.switchToDefaultContent();
+        overlay.switchToDefaultContent(true);
         contentParent.VerifyMessageStatus("Post " + postTitle2 + " has been created.");
         gigyaShareBar.ClickLikeButton();
         for (String window : webDriver.getWindowHandles()){

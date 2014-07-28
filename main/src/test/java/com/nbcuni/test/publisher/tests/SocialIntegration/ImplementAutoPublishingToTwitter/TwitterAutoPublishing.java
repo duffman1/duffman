@@ -53,7 +53,7 @@ public class TwitterAutoPublishing extends ParentTest{
         modules.EnterFilterName("Twitter Post");
         modules.EnableModule("Twitter Post");
         overlay.ClickCloseOverlayLnk();
-        overlay.switchToDefaultContent();
+        overlay.switchToDefaultContent(true);
         
         //Step 3
         taxonomy.NavigateSite("Configuration>>Web services>>Twitter>>Settings");
@@ -112,7 +112,7 @@ public class TwitterAutoPublishing extends ParentTest{
         publishingOptions.ClickPublishingOptionsLnk();
         publishingOptions.SelectModerationState("Published");
         contentParent.ClickSaveBtn();
-        overlay.switchToDefaultContent();
+        overlay.switchToDefaultContent(true);
         contentParent.VerifyMessageStatus("Post " + postTitle + " has been created.");
         WorkBench workBench = new WorkBench(webDriver, applib);
         workBench.ClickWorkBenchTab("Revisions");
@@ -137,7 +137,7 @@ public class TwitterAutoPublishing extends ParentTest{
         
         //Step 11
         webDriver.navigate().to(new URL("https://twitter.com/"));
-        overlay.switchToDefaultContent();
+        overlay.switchToDefaultContent(true);
         twitterLogin.VerifyTwitterPostPresent(tweet);
         
     }

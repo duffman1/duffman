@@ -68,14 +68,14 @@ public class SyncFromMPXButtonToVideoFileEntitiesEditForm extends ParentTest{
             
         	//Step 3
         	List<String> configuredAccounts = settings.GetImportAccountSelectedOptions();
-    	    overlay.switchToDefaultContent();
+    	    overlay.switchToDefaultContent(true);
     	    taxonomy.NavigateSite("Home>>Run cron");
     	    overlay.SwitchToActiveFrame();
     	    ContentParent contentParent = new ContentParent(webDriver);
     	    contentParent.VerifyMessageStatus("Cron ran successfully.");
     	    
     	    //Step 4 (note that we are using the media asset created in step 1a above)
-    	    overlay.switchToDefaultContent();
+    	    overlay.switchToDefaultContent(true);
     	    taxonomy.NavigateSite("Content>>Files>>mpxMedia");
     	    overlay.SwitchToActiveFrame();
     	    SearchFor searchFor = new SearchFor(webDriver);

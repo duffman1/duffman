@@ -85,7 +85,7 @@ public class ValidateIngestionTimePub7 extends ParentTest{
                    	   SearchFor searchFor = new SearchFor(webDriver, applib);
                    	   searchFor.EnterTitle(mediaTitle);
                    	   searchFor.ClickApplyBtn();
-                   	   overlay.switchToDefaultContent();
+                   	   overlay.switchToDefaultContent(true);
                    	   int refreshCount = 0;
                    	   Boolean ingestionTimeout = false;
                    	   while (!searchFor.GetFirstMPXMediaSearchResult().equals(mediaTitle)) {

@@ -59,7 +59,7 @@ public class SURFModule extends ParentTest {
 		surf.EnterEmailUsername("brandon.clark@nbcuni.com");
 		surf.EnterPassword("tufNewcyd4#");
 		surf.ClickSurfFrmSignInBtn();
-		overlay.switchToDefaultContent();
+		overlay.switchToDefaultContent(true);
 		surf.VerifyUsernamePresent("baclark77");
 		
 		Reporter.log("STEP 16 - N/A");

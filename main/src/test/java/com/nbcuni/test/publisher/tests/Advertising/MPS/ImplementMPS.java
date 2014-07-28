@@ -108,7 +108,7 @@ public class ImplementMPS extends ParentTest {
             additionalInformation.SelectRating("G");
             additionalInformation.SelectPrimaryGenre("Action");
             contentParent.ClickSaveBtn();
-            overlay.switchToDefaultContent();
+            overlay.switchToDefaultContent(true);
             contentParent.VerifyMessageStatus("Movie " + movieTitle + " has been created.");
             WorkBench workBench = new WorkBench(webDriver, applib);
             String movieNodeNumber = workBench.GetContentNodeNumber();
@@ -144,7 +144,7 @@ public class ImplementMPS extends ParentTest {
             mediaItems.VerifyFileImagePresent("HanSolo", "1");
             ContentParent contentParent = new ContentParent(webDriver, applib);
             contentParent.ClickSaveBtn();
-            overlay.switchToDefaultContent();
+            overlay.switchToDefaultContent(true);
             contentParent.VerifyMessageStatus("Media Gallery " + mediaGalleryTitle + " has been created.");
         	String mediaGalleryNodeNumber = workBench.GetContentNodeNumber();
             String imageFileNumber = workBench.GetFileImageId("1");

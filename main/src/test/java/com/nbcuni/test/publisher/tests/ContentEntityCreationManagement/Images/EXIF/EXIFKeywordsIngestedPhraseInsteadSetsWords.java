@@ -35,7 +35,7 @@ public class EXIFKeywordsIngestedPhraseInsteadSetsWords extends ParentTest{
             simpleEXIFIPTCMappings.SelectMediaTags("none");
             simpleEXIFIPTCMappings.SelectSource("Source");
             simpleEXIFIPTCMappings.ClickSaveBtn();
-            overlay.switchToDefaultContent();
+            overlay.switchToDefaultContent(true);
             
             //Step 2
             taxonomy.NavigateSite("Content>>Files");
@@ -75,7 +75,7 @@ public class EXIFKeywordsIngestedPhraseInsteadSetsWords extends ParentTest{
             contentParent.VerifyMessageStatus("Image");
             contentParent.VerifyMessageStatus("has been updated.");
             overlay.ClickCloseOverlayLnk();
-            overlay.switchToDefaultContent();
+            overlay.switchToDefaultContent(true);
             
             //Step 4
             taxonomy.NavigateSite("Content>>Add content>>Media Gallery");

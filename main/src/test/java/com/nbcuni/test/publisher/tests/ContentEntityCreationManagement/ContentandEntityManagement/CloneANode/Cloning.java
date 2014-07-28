@@ -58,7 +58,7 @@ public class Cloning extends ParentTest {
 		revision.SelectChangeState("Published");
 		revision.EnterLogMessageForStateChange("Change state - Draft to Published");
 		revision.ClickUpdateStateBtn();
-		overlay.switchToDefaultContent();
+		overlay.switchToDefaultContent(true);
 		contentParent.VerifyMessageStatus("Clone of " + postTitle + " transitioned to the published state.");
     
 	}

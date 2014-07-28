@@ -97,7 +97,7 @@ public class MPXVideosSchedulingVerificationInitialOverrides extends ParentTest{
         	}
 
         	//Step 2 onward will use an existing mpx published video
-            overlay.switchToDefaultContent();
+            overlay.switchToDefaultContent(true);
             taxonomy.NavigateSite("Content>>Files>>mpxMedia");
             overlay.SwitchToActiveFrame();
             SearchFor searchFor = new SearchFor(webDriver, applib);
@@ -115,7 +115,7 @@ public class MPXVideosSchedulingVerificationInitialOverrides extends ParentTest{
             editMPXVideo.UnCheckOverrideMPXExpirationDateCbx();
             contentParent.ClickSaveBtn();
             
-            overlay.switchToDefaultContent();
+            overlay.switchToDefaultContent(true);
             List<String> defaultVideoValues = Arrays.asList("AutomationDefault", "MPX Released File Public IDs:",
                     "MPX Media Default Released File Public ID:", "MPX Media Categories:", "Series", "Show", "MPX Media Description:",
                     "Automation 1 example test", "MPX Media Author:", "Pub7 Content Provider", "MPX Media Air Date:",
@@ -156,7 +156,7 @@ public class MPXVideosSchedulingVerificationInitialOverrides extends ParentTest{
             editMPXVideo.EnterMPXExpirationDate(expirationDate);
             editMPXVideo.EnterMPXExpirationTime("05:00pm");
             contentParent.ClickSaveBtn();
-            overlay.switchToDefaultContent();
+            overlay.switchToDefaultContent(true);
             contentParent.VerifyMessageStatus("MPX Video for Account \"DB TV\" (2312945284) AutomationDefault has been updated.");
 
             //Step 25
@@ -191,7 +191,7 @@ public class MPXVideosSchedulingVerificationInitialOverrides extends ParentTest{
 
             //Step 38
             contentParent.ClickSaveBtn();
-            overlay.switchToDefaultContent();
+            overlay.switchToDefaultContent(true);
             contentParent.VerifyMessageStatus("MPX Video for Account \"DB TV\" (2312945284) AutomationDefault has been updated.");
             contentParent.VerifyPageContentPresent(defaultVideoValues);
             contentParent.VerifyPageContentNotPresent(overridenVideoValues);

@@ -63,7 +63,7 @@ public class MPSEndToEndIntegration extends ParentTest {
             taxonomy.NavigateSite("Home");
             Thread.sleep(5000); //TODO - figure out a good dynamic wait for this...
         	mpsConfiguration.VerifyTopMultiAdPresent();
-        	overlay.switchToDefaultContent();
+        	overlay.switchToDefaultContent(true);
         	
         	Reporter.log("CLEANUP");
         	taxonomy.NavigateSite("Structure>>Blocks");

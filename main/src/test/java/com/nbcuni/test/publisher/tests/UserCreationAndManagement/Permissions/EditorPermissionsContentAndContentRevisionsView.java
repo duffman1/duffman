@@ -113,7 +113,7 @@ public class EditorPermissionsContentAndContentRevisionsView extends ParentTest{
         basicInformation.EnterSynopsis();
         overlay.SwitchToActiveFrame();
         contentParent.ClickSaveBtn();
-        overlay.switchToDefaultContent();
+        overlay.switchToDefaultContent(true);
         contentParent.VerifyMessageStatus("Post " + postTitle + " has been updated.");
         
         //Step 28
@@ -126,7 +126,7 @@ public class EditorPermissionsContentAndContentRevisionsView extends ParentTest{
         overlay.SwitchToActiveFrame();
         Delete delete = new Delete(webDriver);
         delete.ClickDeleteBtn();
-        overlay.switchToDefaultContent();
+        overlay.switchToDefaultContent(true);
         contentParent.VerifyMessageStatus("Post " + postTitle + " has been deleted.");
         
         //Step 30

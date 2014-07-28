@@ -35,7 +35,7 @@ public class CreateTVEpisode extends ParentTest{
             	String personFirstName = random.GetCharacterString(15);
             	personsInformation.EnterFirstName(personFirstName);
             	personsInformation.EnterBiography();
-            	overlay.switchToDefaultContent();
+            	overlay.switchToDefaultContent(true);
             	overlay.SwitchToFrame("Create Person");
             	personsInformation.ClickCoverPhotoSelectBtn();
             	SelectFile selectFile = new SelectFile(webDriver, applib);
@@ -45,7 +45,7 @@ public class CreateTVEpisode extends ParentTest{
             	ContentParent contentParent = new ContentParent(webDriver, applib);
             	PageFactory.initElements(webDriver, contentParent);
             	contentParent.ClickSaveBtn();
-            	overlay.switchToDefaultContent();
+            	overlay.switchToDefaultContent(true);
             	contentParent.VerifyMessageStatus("Person " + personFirstName + " has been created.");
             	
             	//Step 2
@@ -65,7 +65,7 @@ public class CreateTVEpisode extends ParentTest{
             	basicInformation.EnterTitle(tvEpisodeTitle);
             	basicInformation.EnterEpisodeNumber("1");
             	basicInformation.EnterSynopsis();
-                overlay.switchToDefaultContent();
+                overlay.switchToDefaultContent(true);
                 overlay.SwitchToFrame("Create TV Episode");
                 
             	//Step 5

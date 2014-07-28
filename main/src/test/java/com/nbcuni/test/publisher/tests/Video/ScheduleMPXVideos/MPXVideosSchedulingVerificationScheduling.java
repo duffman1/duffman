@@ -148,7 +148,7 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
         	    SearchFor searchFor = new SearchFor(webDriver, applib);
         	    searchFor.EnterTitle(mediaTitle);
         	    searchFor.ClickApplyBtn();
-        	    overlay.switchToDefaultContent();
+        	    overlay.switchToDefaultContent(true);
         	    if (!searchFor.GetFirstMPXMediaSearchResult().equals(mediaTitle)) {
         	    	//re-run cron as sometimes media assets aren't in the first ingested queue
         	    	cron.RunCron(false);
@@ -230,7 +230,7 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
         	    //Step 31
         	    searchFor.EnterTitle(mediaTitle);
         	    searchFor.ClickApplyBtn();
-        	    overlay.switchToDefaultContent();
+        	    overlay.switchToDefaultContent(true);
         	    searchFor.VerifySearchResultsPresent(Arrays.asList(mediaTitle));
         	    String pub7DateToday = pub7DateFormat.format(dateToday);
         	    String pub7Date1YearInFuture = pub7DateFormat.format(date1YearInFuture);

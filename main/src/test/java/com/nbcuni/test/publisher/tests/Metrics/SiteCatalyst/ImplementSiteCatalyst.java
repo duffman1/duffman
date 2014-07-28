@@ -59,7 +59,7 @@ public class ImplementSiteCatalyst extends ParentTest {
         	siteCatalystVariables.EnterBlankVariableName(newVariableName);
         	siteCatalystVariables.EnterBlankVariableValue(newVariableValue);
         	contentParent.ClickSaveBtn();
-        	overlay.switchToDefaultContent();
+        	overlay.switchToDefaultContent(true);
         	contentParent.VerifyMessageStatus("Media Gallery " + mediaGalleryTitle + " has been created.");
         	
         	//Step 7
@@ -83,7 +83,7 @@ public class ImplementSiteCatalyst extends ParentTest {
         	siteCatalystVariables.EnterBlankVariableName(newVariableName2);
         	siteCatalystVariables.EnterBlankVariableValue(newVariableValue2);
         	contentParent.ClickSaveBtn();
-        	overlay.switchToDefaultContent();
+        	overlay.switchToDefaultContent(true);
         	contentParent.VerifyMessageStatus("Media Gallery " + mediaGalleryTitle + " has been updated.");
         	String pageSource2 = webDriver.getPageSource();
         	if (!pageSource2.contains(updatedVariableValue)) {

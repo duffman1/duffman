@@ -402,7 +402,7 @@ public class EntityReferenceVerification extends ParentTest{
         		selectFile.ClickSubmitBtn();
         		overlay.SwitchToActiveFrame();
         		contentParent.ClickSaveBtn();
-        		overlay.switchToDefaultContent();
+        		overlay.switchToDefaultContent(true);
         		contentParent.VerifyMessageStatus(contentTypeName + " " + title + " has been created.");
         		
         		//Step 39 through 43 - N/A as de-ingestion occurs previously

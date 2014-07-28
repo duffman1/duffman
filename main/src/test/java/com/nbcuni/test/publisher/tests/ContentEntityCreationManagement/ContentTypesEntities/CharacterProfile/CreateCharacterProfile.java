@@ -42,7 +42,7 @@ public class CreateCharacterProfile extends ParentTest{
             //Step 5
             ContentParent contentParent = new ContentParent(webDriver, applib);
             contentParent.ClickSaveBtn();
-            overlay.switchToDefaultContent();
+            overlay.switchToDefaultContent(true);
             contentParent.VerifyMessageStatus("Character Profile " + characterName + " has been created.");
             
     }

@@ -64,7 +64,7 @@ public class SoftCharacterLimit extends ParentTest{
             selectFile.SelectDefaultCoverImg();
             overlay.SwitchToActiveFrame();
             contentParent.ClickSaveBtn();
-            overlay.switchToDefaultContent();
+            overlay.switchToDefaultContent(true);
             contentParent.VerifyMessageStatus("Character Profile " + characterNameExceeds + " has been created.");
             
             //Step 11

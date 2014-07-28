@@ -138,7 +138,7 @@ public class Modules {
     		
         	boolean additionalModulesRequired = false;
         	
-        	overlay.switchToDefaultContent();
+        	overlay.switchToDefaultContent(true);
         	
         	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
         	try {
@@ -151,7 +151,7 @@ public class Modules {
         		
         		Reporter.log("Click the 'Continue' button to enable additional modules.");
         		Continue_Btn.click();
-        		overlay.switchToDefaultContent();
+        		overlay.switchToDefaultContent(true);
         		
         	}
         	
@@ -217,7 +217,7 @@ public class Modules {
     	this.EnterFilterName(moduleName);
     	this.EnableModule(moduleName);
     	overlay.ClickCloseOverlayLnk();
-        overlay.switchToDefaultContent();
+        overlay.switchToDefaultContent(true);
         taxonomy.NavigateSite("Home");
     }
     

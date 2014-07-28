@@ -53,7 +53,7 @@ public class InstallZeeboxModule extends ParentTest{
             modules.EnterFilterName("zeebox Example");
             modules.DisableModule("zeebox Example");
             overlay.ClickCloseOverlayLnk();
-            overlay.switchToDefaultContent();
+            overlay.switchToDefaultContent(true);
             
             //Step 7
             taxonomy.NavigateSite("Modules>>Uninstall");
@@ -66,7 +66,7 @@ public class InstallZeeboxModule extends ParentTest{
             				"Zeebox TV Room Teaser example block has been deleted.",
             					"Zeebox TV Room example block has been deleted.",
             						"The selected modules have been uninstalled."));
-            overlay.switchToDefaultContent();
+            overlay.switchToDefaultContent(true);
             webDriver.navigate().refresh();
             contentParent.VerifyPageContentPresent(Arrays.asList("Page not found"));
             

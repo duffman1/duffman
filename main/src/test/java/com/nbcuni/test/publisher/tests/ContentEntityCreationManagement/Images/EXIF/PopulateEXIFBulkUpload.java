@@ -35,7 +35,7 @@ public class PopulateEXIFBulkUpload extends ParentTest{
             simpleEXIFIPTCMappings.SelectMediaTags("none");
             simpleEXIFIPTCMappings.SelectSource("Source");
             simpleEXIFIPTCMappings.ClickSaveBtn();
-            overlay.switchToDefaultContent();
+            overlay.switchToDefaultContent(true);
             
             Reporter.log("STEP 2");
             taxonomy.NavigateSite("Content>>Add content>>Media Gallery");
@@ -147,7 +147,7 @@ public class PopulateEXIFBulkUpload extends ParentTest{
             editImage.WaitForEditImageFrameClose();
             overlay.SwitchToActiveFrame();
             contentParent.ClickSaveBtn();
-            overlay.switchToDefaultContent();
+            overlay.switchToDefaultContent(true);
             contentParent.VerifyMessageStatus("Media Gallery " + title + " has been created.");
             
             Reporter.log("STEP 8");

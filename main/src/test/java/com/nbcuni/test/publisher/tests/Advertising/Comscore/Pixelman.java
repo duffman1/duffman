@@ -68,7 +68,7 @@ public class Pixelman extends ParentTest {
         //Step 10
         //contentParent.VerifySourceNotInPage("//www.nbcudigitaladops.com/hosted/global_header.js");
         //contentParent.VerifySourceNotInPage("//www.nbcudigitaladops.com/hosted/site.js?h=qa5dev_publisher_nbcuni_com_header");
-        overlay.switchToDefaultContent();
+        overlay.switchToDefaultContent(true);
             
         //Step 11
         logout.ClickLogoutBtn();

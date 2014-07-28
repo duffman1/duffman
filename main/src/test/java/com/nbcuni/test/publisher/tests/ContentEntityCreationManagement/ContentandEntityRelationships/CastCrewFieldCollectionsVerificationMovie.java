@@ -60,7 +60,7 @@ public class CastCrewFieldCollectionsVerificationMovie extends ParentTest{
 	        overlay.SwitchToActiveFrame();
 	        coverPhoto.VerifyFileImagePresent("HanSolo");
 	        contentParent.ClickSaveBtn();
-	        overlay.switchToDefaultContent();
+	        overlay.switchToDefaultContent(true);
 	        contentParent.VerifyMessageStatus("Character Profile " + Characters.get(CCount) + " has been created.");
 	     
         }
@@ -77,7 +77,7 @@ public class CastCrewFieldCollectionsVerificationMovie extends ParentTest{
 	        selectFile.SelectDefaultCoverImg();
 	        overlay.SwitchToActiveFrame();
 	        contentParent.ClickSaveBtn();
-	        overlay.switchToDefaultContent();
+	        overlay.switchToDefaultContent(true);
 	        contentParent.VerifyMessageStatus("Person " + Persons.get(PCount) + " has been created.");
         }
         
@@ -107,7 +107,7 @@ public class CastCrewFieldCollectionsVerificationMovie extends ParentTest{
         //Step 7
         Thread.sleep(1000); //TODO - figure out why this pause is necessary and add dynamic wait
         contentParent.ClickSaveBtn();
-        overlay.switchToDefaultContent();
+        overlay.switchToDefaultContent(true);
         contentParent.VerifyMessageStatus("Movie " + movieTitle + " has been created.");
         WorkBench workBench = new WorkBench(webDriver, applib);
         workBench.ClickWorkBenchTab("Revisions");
@@ -131,7 +131,7 @@ public class CastCrewFieldCollectionsVerificationMovie extends ParentTest{
         String movieTitle2 = "Movie" + random.GetCharacterString(15);        
         basicInformation.EnterTitle(movieTitle2);
         contentParent.ClickSaveBtn();
-        overlay.switchToDefaultContent();
+        overlay.switchToDefaultContent(true);
         contentParent.VerifyMessageStatus("Movie " + movieTitle2 + " has been updated.");
       
         //Step 8
@@ -157,7 +157,7 @@ public class CastCrewFieldCollectionsVerificationMovie extends ParentTest{
         String movieTitle3 = random.GetCharacterString(15);        
         basicInformation.EnterTitle(movieTitle3);
         contentParent.ClickSaveBtn();
-        overlay.switchToDefaultContent();        
+        overlay.switchToDefaultContent(true);        
         contentParent.VerifyMessageStatus("Movie " + movieTitle3 + " has been updated.");
       
         //Step 9

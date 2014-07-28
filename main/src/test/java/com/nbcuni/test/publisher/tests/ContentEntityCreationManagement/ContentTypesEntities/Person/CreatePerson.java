@@ -35,7 +35,7 @@ public class CreatePerson extends ParentTest{
             personsInformation.EnterBiography();
             
             //Step 4
-            overlay.switchToDefaultContent();
+            overlay.switchToDefaultContent(true);
             overlay.SwitchToFrame("Create Person");
             personsInformation.ClickCoverPhotoSelectBtn();
             SelectFile selectFile = new SelectFile(webDriver, applib);
@@ -47,7 +47,7 @@ public class CreatePerson extends ParentTest{
             contentParent.ClickSaveBtn();
             
             //Step 5
-            overlay.switchToDefaultContent();
+            overlay.switchToDefaultContent(true);
             contentParent.VerifyMessageStatus("Person " + personFirstName + " has been created.");
             
             

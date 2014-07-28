@@ -50,7 +50,7 @@ public class SeeIt extends ParentTest{
         metaTags.EnterSeeItCampaignID("fall");
         metaTags.EnterSeeItAssetID("mainpage");
         contentParent.ClickSaveBtn();
-        overlay.switchToDefaultContent();
+        overlay.switchToDefaultContent(true);
         contentParent.VerifyMessageStatus("Post " + postTitle + " has been created.");
         
         //Step 6

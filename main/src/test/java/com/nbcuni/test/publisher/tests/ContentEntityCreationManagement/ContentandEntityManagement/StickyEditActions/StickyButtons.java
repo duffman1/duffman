@@ -62,7 +62,7 @@ public class StickyButtons extends ParentTest{
             
             //Step 5
             stickyEditActions.ClickSaveBtnPresent();
-            overlay.switchToDefaultContent();
+            overlay.switchToDefaultContent(true);
         	contentParent.VerifyMessageStatus("Post " + postTitle + " has been created.");
         	
         	//Step 7

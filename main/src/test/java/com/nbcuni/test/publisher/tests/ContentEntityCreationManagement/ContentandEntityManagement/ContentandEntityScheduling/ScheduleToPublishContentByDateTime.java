@@ -79,7 +79,7 @@ public class ScheduleToPublishContentByDateTime extends ParentTest {
         publishingOptions.ClickPublishingOptionsLnk();
         publishingOptions.EnterMessageForStateChange("Test Revision 2");
         contentParent.ClickSaveBtn();
-        overlay.switchToDefaultContent();
+        overlay.switchToDefaultContent(true);
 
         //Step 7
         workBench.VerifyWorkBenchBlockTextPresent(Arrays.asList("Revision state", "Public","Moderate"));

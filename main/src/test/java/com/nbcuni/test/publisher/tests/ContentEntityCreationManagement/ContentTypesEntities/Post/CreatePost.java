@@ -57,7 +57,7 @@ public class CreatePost extends ParentTest{
             
             	//Step 6
             	contentParent.ClickSaveBtn();
-            	overlay.switchToDefaultContent();
+            	overlay.switchToDefaultContent(true);
             	contentParent.VerifyMessageStatus("Post " + postTitle + " has been created.");
             	WorkBench workBench = new WorkBench(webDriver, applib);
             	workBench.VerifyWorkBenchBlockTextPresent(Arrays.asList(state));

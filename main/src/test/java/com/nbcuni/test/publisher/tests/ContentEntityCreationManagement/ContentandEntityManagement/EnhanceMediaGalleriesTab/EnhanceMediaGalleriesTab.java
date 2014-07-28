@@ -38,7 +38,7 @@ public class EnhanceMediaGalleriesTab extends ParentTest{
         String title = random.GetCharacterString(15);
         basicInformation.EnterTitle(title);
         contentParent.ClickSaveBtn();
-        overlay.switchToDefaultContent();
+        overlay.switchToDefaultContent(true);
         contentParent.VerifyMessageStatus("Media Gallery " + title + " has been created.");
     	
     	//Step 3
@@ -50,7 +50,7 @@ public class EnhanceMediaGalleriesTab extends ParentTest{
     	searchFor.SelectStatus("Draft");
     	searchFor.EnterTitle(title);
     	searchFor.ClickApplyBtn();
-    	overlay.switchToDefaultContent();
+    	overlay.switchToDefaultContent(true);
     	searchFor.VerifySearchResultsPresent(Arrays.asList(title));
     	searchFor.SelectStatus("Published");
     	searchFor.EnterTitle(title);
@@ -100,7 +100,7 @@ public class EnhanceMediaGalleriesTab extends ParentTest{
         overlay.SwitchToActiveFrame();
         searchFor.EnterTitle(title);
     	searchFor.ClickApplyBtn();
-    	overlay.switchToDefaultContent();
+    	overlay.switchToDefaultContent(true);
     	mediaGalleries.ClickEditExtendMenuBtn(title);
     	mediaGalleries.ClickDeleteMenuBtn(title);
     	Delete delete = new Delete(webDriver);

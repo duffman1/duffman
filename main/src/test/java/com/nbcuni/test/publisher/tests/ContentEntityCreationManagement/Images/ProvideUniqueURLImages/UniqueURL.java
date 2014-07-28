@@ -52,7 +52,7 @@ public class UniqueURL extends ParentTest{
             mediaItems.VerifyFileImagePresent("HanSolo", "2");
             ContentParent contentParent = new ContentParent(webDriver, applib);
             contentParent.ClickSaveBtn();
-            overlay.switchToDefaultContent();
+            overlay.switchToDefaultContent(true);
             contentParent.VerifyMessageStatus("Media Gallery " + title + " has been created.");
         	WorkBench workBench = new WorkBench(webDriver, applib);
         	workBench.VerifyFileImageLinkPresent("HanSolo", "1");
@@ -74,7 +74,7 @@ public class UniqueURL extends ParentTest{
         	
         	//Step 7
         	contentParent.ClickCancelBtn();
-        	overlay.switchToDefaultContent();
+        	overlay.switchToDefaultContent(true);
         	webDriver.navigate().to(uniqueUrl1);
         	workBench.VerifyFileImageLinkPresent("HanSolo", "1");
         	workBench.VerifyFileImageLinkPresent("HanSolo", "2");

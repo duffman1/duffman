@@ -31,7 +31,7 @@ public class RepresentativeImage extends ParentTest {
         	SearchFor searchFor = new SearchFor(webDriver, applib);
         	searchFor.EnterTitle(postTitle);
         	searchFor.ClickApplyBtn();
-        	overlay.switchToDefaultContent();
+        	overlay.switchToDefaultContent(true);
         	searchFor.VerifySearchThumbnailImgPresent(postTitle, "HanSolo");
         	
         	Reporter.log("STEP 4");
@@ -61,7 +61,7 @@ public class RepresentativeImage extends ParentTest {
     		selectFile.ClickSubmitBtn();
             overlay.SwitchToActiveFrame();
             contentParent.ClickSaveBtn();
-            overlay.switchToDefaultContent();
+            overlay.switchToDefaultContent(true);
             contentParent.VerifyMessageStatus("Post " + postTitle2 + " has been created.");
             
             Reporter.log("STEP 6");
@@ -69,7 +69,7 @@ public class RepresentativeImage extends ParentTest {
         	overlay.SwitchToActiveFrame();
         	searchFor.EnterTitle(postTitle2);
         	searchFor.ClickApplyBtn();
-        	overlay.switchToDefaultContent();
+        	overlay.switchToDefaultContent(true);
         	searchFor.VerifySearchThumbnailImgPresent(postTitle2, "nbclogosmall");
         	
         	//TODO - step 7 to repeat 1 through 6 for all content items as time allows

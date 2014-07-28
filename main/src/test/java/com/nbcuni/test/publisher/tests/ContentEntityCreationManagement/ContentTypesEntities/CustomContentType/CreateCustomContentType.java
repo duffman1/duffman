@@ -67,7 +67,7 @@ public class CreateCustomContentType extends ParentTest{
             basicInformation.EnterSynopsis();
             overlay.SwitchToActiveFrame();
             contentParent.ClickSaveBtn();
-            overlay.switchToDefaultContent();
+            overlay.switchToDefaultContent(true);
             contentParent.VerifyMessageStatus(contentTypeName + " " + contentTitle + " has been created.");
             
     }

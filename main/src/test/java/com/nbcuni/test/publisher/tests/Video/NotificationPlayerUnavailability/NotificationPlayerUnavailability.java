@@ -104,7 +104,7 @@ public class NotificationPlayerUnavailability extends ParentTest{
         	    SearchFor searchFor = new SearchFor(webDriver, applib);
         	    searchFor.EnterTitle(playerTitle);
                 searchFor.ClickApplyBtn();
-                overlay.switchToDefaultContent();
+                overlay.switchToDefaultContent(true);
                 Cron cron = new Cron(webDriver, applib);
                 if (!searchFor.GetFirstMPXPlayerSearchResult().equals(playerTitle)) {
         	    	//re-run cron as sometimes media assets aren't in the first ingested queue
@@ -164,7 +164,7 @@ public class NotificationPlayerUnavailability extends ParentTest{
         	    catch (AssertionError | NoSuchElementException ex) {
         	    	
         	    	//re-run cron as this step can be flaky and sometimes require a second cron run.
-        	    	overlay.switchToDefaultContent();
+        	    	overlay.switchToDefaultContent(true);
         	    	cron.RunCron(true);
         	    	taxonomy.NavigateSite("Content>>Files>>mpxPlayers");
         	    	overlay.SwitchToActiveFrame();
@@ -175,7 +175,7 @@ public class NotificationPlayerUnavailability extends ParentTest{
                 //Step 8
                 searchFor.EnterTitle(playerTitle);
                 searchFor.ClickApplyBtn();
-                overlay.switchToDefaultContent();
+                overlay.switchToDefaultContent(true);
                 searchFor.ClickSearchTitleLnk(playerTitle);
                 workBench.ClickWorkBenchTab("Edit");
                 overlay.SwitchToActiveFrame();
@@ -184,7 +184,7 @@ public class NotificationPlayerUnavailability extends ParentTest{
                 overlay.SwitchToActiveFrame();
                 publishingOptions.UncheckPublishedCbx();
                 contentParent.ClickSaveBtn();
-                overlay.switchToDefaultContent();
+                overlay.switchToDefaultContent(true);
                 contentParent.VerifyMessageStatus("MPX Player " + playerTitle + " has been updated.");
                 
                 //Step 9
@@ -211,7 +211,7 @@ public class NotificationPlayerUnavailability extends ParentTest{
                 overlay.SwitchToActiveFrame();
                 publishingOptions.CheckPublishedCbx();
                 contentParent.ClickSaveBtn();
-                overlay.switchToDefaultContent();
+                overlay.switchToDefaultContent(true);
                 
                 //Step 13
                 taxonomy.NavigateSite("Content>>Files>>mpxPlayers");
@@ -255,7 +255,7 @@ public class NotificationPlayerUnavailability extends ParentTest{
         	    }
         	    catch (AssertionError e) {
         	    	//re-run cron as this step can be flaky and sometimes require a second cron run.
-        	    	overlay.switchToDefaultContent();
+        	    	overlay.switchToDefaultContent(true);
         	    	cron.RunCron(true);
         	    	taxonomy.NavigateSite("Content>>Files>>mpxPlayers");
         	    	overlay.SwitchToActiveFrame();

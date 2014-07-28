@@ -108,7 +108,7 @@ public class CanonicalURL extends ParentTest{
         	SearchFor searchFor = new SearchFor(webDriver, applib);
         	searchFor.EnterTitle(mediaTitle);
         	searchFor.ClickApplyBtn();
-        	overlay.switchToDefaultContent();
+        	overlay.switchToDefaultContent(true);
         	if (!searchFor.GetFirstMPXMediaSearchResult().equals(mediaTitle)) {
         	    //re-run cron as sometimes media assets aren't in the first ingested queue
         	    cron.RunCron(false);

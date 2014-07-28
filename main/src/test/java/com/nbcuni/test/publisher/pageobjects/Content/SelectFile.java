@@ -397,7 +397,7 @@ public class SelectFile {
     	this.VerifyFileImagePresent("HanSolo");
     	this.ClickSaveBtn();
     	Overlay overlay = new Overlay(webDriver, applib);
-    	overlay.switchToDefaultContent();
+    	overlay.switchToDefaultContent(true);
     }
     
 }

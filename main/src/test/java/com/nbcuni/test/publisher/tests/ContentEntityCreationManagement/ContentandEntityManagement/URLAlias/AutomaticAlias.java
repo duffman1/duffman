@@ -46,7 +46,7 @@ public class AutomaticAlias extends ParentTest {
             
             Reporter.log("STEP 3");
             contentParent.ClickSaveBtn();
-            overlay.switchToDefaultContent();
+            overlay.switchToDefaultContent(true);
             contentParent.VerifyMessageStatus("Post " + postTitle + " has been created.");
             
             Reporter.log("STEP 4");
@@ -62,7 +62,7 @@ public class AutomaticAlias extends ParentTest {
             String updatedPostTitle = random.GetCharacterString(15);
             basicInformation.EnterTitle(updatedPostTitle);
             contentParent.ClickSaveBtn();
-            overlay.switchToDefaultContent();
+            overlay.switchToDefaultContent(true);
             contentParent.VerifyMessageStatus("Post " + updatedPostTitle + " has been updated.");
         	urlPathSettings.VerifyContentNodeAlias(postTitle);
         	
@@ -72,7 +72,7 @@ public class AutomaticAlias extends ParentTest {
             urlPathSettings.ClickURLPathSettingsLnk();
             urlPathSettings.EnterURLAlias("content/" + updatedPostTitle);
             contentParent.ClickSaveBtn();
-            overlay.switchToDefaultContent();
+            overlay.switchToDefaultContent(true);
             contentParent.VerifyMessageStatus("Post " + updatedPostTitle + " has been updated.");
             urlPathSettings.VerifyContentNodeAlias(updatedPostTitle);
             

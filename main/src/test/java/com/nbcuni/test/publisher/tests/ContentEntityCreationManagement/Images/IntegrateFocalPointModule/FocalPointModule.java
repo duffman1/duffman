@@ -126,7 +126,7 @@ public class FocalPointModule extends ParentTest{
         selectFile.ClickSaveBtn();
         overlay.SwitchToActiveFrame();
         contentParent.ClickSaveBtn();
-        overlay.switchToDefaultContent();
+        overlay.switchToDefaultContent(true);
         contentParent.VerifyMessageStatus("Movie " + movieTitle + " has been created.");
             	
         //Step 12

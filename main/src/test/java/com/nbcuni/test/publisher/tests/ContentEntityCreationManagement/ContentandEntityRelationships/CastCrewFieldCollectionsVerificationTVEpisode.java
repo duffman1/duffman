@@ -60,7 +60,7 @@ public class CastCrewFieldCollectionsVerificationTVEpisode extends ParentTest {
 	        overlay.SwitchToActiveFrame();
 	        coverPhoto.VerifyFileImagePresent("HanSolo");
 	        contentParent.ClickSaveBtn();
-	        overlay.switchToDefaultContent();
+	        overlay.switchToDefaultContent(true);
 	        contentParent.VerifyMessageStatus("Character Profile " + Characters.get(CCount) + " has been created.");
         }
         
@@ -76,7 +76,7 @@ public class CastCrewFieldCollectionsVerificationTVEpisode extends ParentTest {
 	        selectFile.SelectDefaultCoverImg();
 	        overlay.SwitchToActiveFrame();
 	        contentParent.ClickSaveBtn();
-	        overlay.switchToDefaultContent();
+	        overlay.switchToDefaultContent(true);
 	        contentParent.VerifyMessageStatus("Person " + Persons.get(PCount) + " has been created.");
         }
         
@@ -103,7 +103,7 @@ public class CastCrewFieldCollectionsVerificationTVEpisode extends ParentTest {
         //Step 7
         Thread.sleep(1000); //TODO - figure out why this pause is necessary and add dynamic wait
         contentParent.ClickSaveBtn();
-        overlay.switchToDefaultContent();
+        overlay.switchToDefaultContent(true);
         contentParent.VerifyMessageStatus("TV Episode " + episodeTitle + " has been created.");
         WorkBench workBench = new WorkBench(webDriver, applib);
         workBench.ClickWorkBenchTab("Revisions");
@@ -127,7 +127,7 @@ public class CastCrewFieldCollectionsVerificationTVEpisode extends ParentTest {
         String episodeTitle2 = random.GetCharacterString(15);        
         basicInformation.EnterTitle(episodeTitle2);
         contentParent.ClickSaveBtn();
-        overlay.switchToDefaultContent();        
+        overlay.switchToDefaultContent(true);        
         contentParent.VerifyMessageStatus("TV Episode " + episodeTitle2 + " has been updated.");
       
         //Step 8
@@ -153,7 +153,7 @@ public class CastCrewFieldCollectionsVerificationTVEpisode extends ParentTest {
         String episodeTitle3 = random.GetCharacterString(15);        
         basicInformation.EnterTitle(episodeTitle3);
         contentParent.ClickSaveBtn();
-        overlay.switchToDefaultContent();        
+        overlay.switchToDefaultContent(true);        
         contentParent.VerifyMessageStatus("TV Episode " + episodeTitle3 + " has been updated.");
         
         //Step 9

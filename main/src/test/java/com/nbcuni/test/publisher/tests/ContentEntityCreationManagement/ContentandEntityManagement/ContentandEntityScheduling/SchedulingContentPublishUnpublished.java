@@ -84,7 +84,7 @@ public class SchedulingContentPublishUnpublished extends ParentTest {
     	String previouslyScheduledTitle = "futurePost" + pub7DateFormatEst.format(currentDate);
         searchFor.EnterTitle(previouslyScheduledTitle);
         searchFor.ClickApplyBtn();
-        overlay.switchToDefaultContent();
+        overlay.switchToDefaultContent(true);
         searchFor.ClickSearchTitleLnk(searchFor.GetFirstSearchResult());
         workBench.VerifyWorkBenchBlockTextPresent(Arrays.asList("Revision state: Published", "Public: Yes"));
         
@@ -152,7 +152,7 @@ public class SchedulingContentPublishUnpublished extends ParentTest {
         publishingOptions.ClickPublishingOptionsLnk();
         publishingOptions.SelectModerationState("Draft");
         contentParent.ClickSaveBtn();
-        overlay.switchToDefaultContent();
+        overlay.switchToDefaultContent(true);
         contentParent.VerifyMessageStatus("Post " + postTitle4 + " has been created.");
         workBench.ClickWorkBenchTab("Schedule");
         overlay.SwitchToActiveFrame();
@@ -179,7 +179,7 @@ public class SchedulingContentPublishUnpublished extends ParentTest {
         basicInformation.EnterSynopsis();
         overlay.SwitchToActiveFrame();
         contentParent.ClickSaveBtn();
-        overlay.switchToDefaultContent();
+        overlay.switchToDefaultContent(true);
         contentParent.VerifyMessageStatus("Post " + postTitle5 + " has been updated.");
         
         Reporter.log("STEP 15 and 16");
@@ -196,7 +196,7 @@ public class SchedulingContentPublishUnpublished extends ParentTest {
         scheduleQueue.EnterDate(pub7Date5MinutesFuture);
         scheduleQueue.EnterTime(pub7Time5MinutesFuture);
         scheduleQueue.ClickScheduleBtn();
-        overlay.switchToDefaultContent();
+        overlay.switchToDefaultContent(true);
         contentParent.VerifyMessageStatus("The scheduled revision operation has been saved");
         
         Reporter.log("STEP 17");
@@ -226,7 +226,7 @@ public class SchedulingContentPublishUnpublished extends ParentTest {
         publishingOptions.EnterDate(pub7Date1DayFuture);
         publishingOptions.EnterTime(pub7Time1DayFuture);
         contentParent.ClickSaveBtn();
-        overlay.switchToDefaultContent();
+        overlay.switchToDefaultContent(true);
         contentParent.VerifyMessageStatus("Post " + postTitle7 + " has been created.");
         contentParent.VerifyMessageStatus(postTitle7 + " has been scheduled to Moderate to Published on " + pub7Date1DayFuture + " - ");
         workBench.ClickWorkBenchTab("Schedule");

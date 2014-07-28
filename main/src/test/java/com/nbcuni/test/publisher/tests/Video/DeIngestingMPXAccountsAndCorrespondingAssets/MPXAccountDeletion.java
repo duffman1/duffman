@@ -57,9 +57,9 @@ public class MPXAccountDeletion extends ParentTest {
     		settings.GetAllDeleteAccountButtons().get(0).click();
     		contentParent.VerifyPageContentPresent(Arrays.asList("You are about to delete account", "and all of its assets. This action cannot be undone."));
     		settings.ClickDeleteBtn();
-    		overlay.switchToDefaultContent();
+    		overlay.switchToDefaultContent(true);
     		overlay.SwitchToFrame("Deleting MPX Account");
-    		overlay.switchToDefaultContent();
+    		overlay.switchToDefaultContent(true);
     		overlay.WaitForFrameNotPresent("Deleting MPX Account");
     		overlay.SwitchToActiveFrame();
     		contentParent.VerifyMessageStatus("Beginning process of deleting account");
@@ -74,7 +74,7 @@ public class MPXAccountDeletion extends ParentTest {
     	SearchFor searchFor = new SearchFor(webDriver, applib);
     	searchFor.EnterTitle("Automation");
     	searchFor.ClickApplyBtn();
-    	overlay.switchToDefaultContent();
+    	overlay.switchToDefaultContent(true);
     	Assert.assertTrue(searchFor.GetSearchResultSize() == 0);
     	
     	//Step 10
@@ -99,7 +99,7 @@ public class MPXAccountDeletion extends ParentTest {
 	    taxonomy.NavigateSite("Content>>Files>>mpxMedia");
 	    searchFor.EnterTitle("Automation");
 	    searchFor.ClickApplyBtn();
-	    overlay.switchToDefaultContent();
+	    overlay.switchToDefaultContent(true);
 	    int I = 0;
 	    while (!searchFor.GetFirstMPXMediaSearchResult().contains("Automation")) {
 	    	I++; 

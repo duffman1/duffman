@@ -64,7 +64,7 @@ public class EnhanceMPXPlayerContentAdminScreen extends ParentTest{
         		
         		//Step 5
         		searchFor.ClickResetBtn();
-        		overlay.switchToDefaultContent();
+        		overlay.switchToDefaultContent(true);
         		Assert.assertTrue(searchFor.GetFirstMPXPlayerSearchResult().equals(initialFirstResult));
         		Assert.assertTrue(searchFor.GetMPXSearchResultSize().equals(initialResultSize));
         		
@@ -76,7 +76,7 @@ public class EnhanceMPXPlayerContentAdminScreen extends ParentTest{
         		//Step 6c
         		searchFor.SelectMPXPlayerAccount(configuredAccounts.get(0));
         		searchFor.ClickApplyBtn();
-        		overlay.switchToDefaultContent();
+        		overlay.switchToDefaultContent(true);
         		searchFor.VerifyMPXResultSetSource(configuredAccounts.get(0));
         		
         		//Step 7

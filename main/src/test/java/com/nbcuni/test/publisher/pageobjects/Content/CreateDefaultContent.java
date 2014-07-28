@@ -64,7 +64,7 @@ public class CreateDefaultContent {
         publishingOptions.ClickPublishingOptionsLnk();
         publishingOptions.SelectModerationState(moderationState);
         contentParent.ClickSaveBtn();
-        overlay.switchToDefaultContent();
+        overlay.switchToDefaultContent(true);
         contentParent.VerifyMessageStatus("Post " + postTitle + " has been created.");
         
         return postTitle;
@@ -91,7 +91,7 @@ public class CreateDefaultContent {
         	relationships.SelectMovie(movieTitle);
         }
         contentParent.ClickSaveBtn();
-        overlay.switchToDefaultContent();
+        overlay.switchToDefaultContent(true);
         contentParent.VerifyMessageStatus("Character Profile " + characterName + " has been created.");       
            
         return characterName;
@@ -146,7 +146,7 @@ public class CreateDefaultContent {
         publishingOptions.ClickPublishingOptionsLnk();
         publishingOptions.SelectModerationState(moderationState);
         contentParent.ClickSaveBtn();
-        overlay.switchToDefaultContent();
+        overlay.switchToDefaultContent(true);
         contentParent.VerifyMessageStatus("Movie " + movieTitle + " has been created.");
         
         return movieTitle;
@@ -167,7 +167,7 @@ public class CreateDefaultContent {
            publishingOptions.ClickPublishingOptionsLnk();
            publishingOptions.SelectModerationState(moderationState);
            contentParent.ClickSaveBtn();
-           overlay.switchToDefaultContent();
+           overlay.switchToDefaultContent(true);
            contentParent.VerifyMessageStatus("Person " + personFirstName + " has been created.");
            
            return personFirstName;
@@ -259,7 +259,7 @@ public class CreateDefaultContent {
     	   contentTypes.ClickSaveBtn();
     	   contentTypes.VerifyContentTypeSaved(contentTypeName);
     	   overlay.ClickCloseOverlayLnk();
-    	   overlay.switchToDefaultContent();
+    	   overlay.switchToDefaultContent(true);
     	   
     	   return contentTypeName;
        }
