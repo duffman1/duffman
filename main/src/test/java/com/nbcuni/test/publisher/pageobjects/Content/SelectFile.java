@@ -2,6 +2,7 @@ package com.nbcuni.test.publisher.pageobjects.Content;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -15,6 +16,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
+
 import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.publisher.common.Random;
 import com.nbcuni.test.publisher.pageobjects.Overlay;
@@ -127,6 +129,13 @@ public class SelectFile {
     	return webDriver.findElements(By.cssSelector("input[value='Apply']"));
     }
     
+    private WebElement CustomBrowse_Btn(String label) {
+    	return webDriver.findElement(By.xpath("//label[contains(text(), '" + label + "')]/..//input[contains(@id, 'upload')][1]"));
+    }
+    
+    private WebElement CustomUpload_Btn(String label) {
+    	return webDriver.findElement(By.xpath("//label[contains(text(), '" + label + "')]/..//input[contains(@id, 'upload')][2]"));
+    }
     
     //PAGE OBJECT IDENTIFIERS
     public void SwitchToSelectFileFrm() throws Exception {
@@ -231,6 +240,14 @@ public class SelectFile {
     	
     }
     
+    public void EnterCustomFieldFilePath(String label, String pathToFile) throws Exception {
+    	
+    	Reporter.log("Enter '" + pathToFile + "' in the '" + label + "' custom file upload field.");
+    	//webDriver.setFileDetector(new LocalFileDetector());
+    	CustomBrowse_Btn(label).sendKeys(pathToFile);
+    	
+    }
+
     public void ClickUploadBtn() throws Exception {
     	
     	Reporter.log("Click the 'Upload' button.");
@@ -245,6 +262,14 @@ public class SelectFile {
     		Upload_Btn.click();
     	}
     	catch (Exception e) { }
+    	
+    }
+    
+    public void ClickCustomFieldUploadBtn(String label) throws Exception {
+    	
+    	Reporter.log("Click the 'Upload' button for custom field '" + label + "'.");
+    	//webDriver.setFileDetector(new LocalFileDetector());
+    	CustomUpload_Btn(label).click();
     	
     }
     

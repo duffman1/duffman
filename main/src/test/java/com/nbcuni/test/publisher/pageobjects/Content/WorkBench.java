@@ -50,15 +50,15 @@ public class WorkBench {
     private WebElement MPXPlayer_Frm;
     
     private WebElement WorkBench_Img(String imageIndex) {
-    	return webDriver.findElement(By.xpath("(//div[contains(@class, 'file-image')]//img)[" + imageIndex + "]"));
+    	return webDriver.findElement(By.xpath("(//div[contains(@class, 'image')]//img)[" + imageIndex + "]"));
     }
     
     private WebElement WorkBenchImg_Lnk(String linkIndex) {
-    	return webDriver.findElement(By.xpath("(//div[contains(@class, 'file-image')]//a[contains(@type, 'image')])[" + linkIndex + "]"));
+    	return webDriver.findElement(By.xpath("(//div[contains(@class, 'image')]//a[contains(@type, 'image')])[" + linkIndex + "]"));
     }
     
     private WebElement WorkBenchFileImage_Ids(String imageIndex) {
-    	return webDriver.findElement(By.xpath("(//div[contains(@class, 'file-image')])[" + imageIndex + "]"));
+    	return webDriver.findElement(By.xpath("(//div[contains(@class, 'image')])[" + imageIndex + "]"));
     }
     
     

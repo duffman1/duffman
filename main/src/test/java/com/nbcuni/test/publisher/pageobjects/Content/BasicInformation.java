@@ -69,6 +69,7 @@ public class BasicInformation {
     	return webDriver.findElement(By.xpath("//label[contains(text(), '" + label + "')]/../..//a[text()='Select']"));
     }
     
+    
     //PAGE OBJECT METHODS
     public void ClickBasicInformationTab() throws Exception {
     	

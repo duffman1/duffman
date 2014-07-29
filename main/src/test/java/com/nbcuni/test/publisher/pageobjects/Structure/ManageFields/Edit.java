@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 import org.testng.Reporter;
 
 import com.nbcuni.test.publisher.common.AppLib;
@@ -77,6 +78,12 @@ public class Edit {
     	Reporter.log("Enter '" + path + "' in the 'File directory' text box.");
     	FileDirectory_Txb.clear();
     	FileDirectory_Txb.sendKeys(path);
+    }
+    
+    public void VerifyFileDirectoryValue(String path) throws Exception {
+    	
+    	Reporter.log("Verify the 'File directory' value is '" + path + "'.");
+    	Assert.assertEquals(path, FileDirectory_Txb.getAttribute("value"));
     }
     
     public void ClickSaveSettingsBtn() throws Exception {

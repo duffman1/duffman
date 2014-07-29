@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Jul 28 15:42:19 EDT 2014</td>
+<td>Started on:</td><td>Tue Jul 29 09:50:44 EDT 2014</td>
 </tr>
-<tr><td>Total time:</td><td>16 seconds (16660 ms)</td>
+<tr><td>Total time:</td><td>57 seconds (57289 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,35 +75,87 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.nbcuni.test.publisher.tests.SiteManagementAndReporting.AdminViews.NoWhiteScreen.NoWhiteScreen_TC4147()'><b>NoWhiteScreen_TC4147</b><br>Test class: com.nbcuni.test.publisher.tests.SiteManagementAndReporting.AdminViews.NoWhiteScreen<br/>
-<a href="#Output-1994517208" onClick='toggleBox("Output-1994517208", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.nbcuni.test.publisher.tests.Core.Profiles.FileFieldsTokenBasedPath.FileFieldsTokenBasedPath_TC4355()'><b>FileFieldsTokenBasedPath_TC4355</b><br>Test class: com.nbcuni.test.publisher.tests.Core.Profiles.FileFieldsTokenBasedPath<br/>
+<a href="#Output-1904921956" onClick='toggleBox("Output-1904921956", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1994517208" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1994517208">
+<a href="#Output-1904921956" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1904921956">
 STEP 1<br/>
-Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.<br/>
+Open url 'http://update.devi3.nbcupublisher7.publisher7.com'.<br/>
 Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
 Enter 'pa55word' in the 'Password' text box.<br/>
 Click the 'Login' button.<br/>
 STEP 2<br/>
-Click the 'Modules' menu link.<br/>
-Switch to frame titled 'Modules'.<br/>
-Enter 'Devel' in the 'Filter Name' text box.<br/>
-Verify the 'Devel' check box is checked.<br/>
+Mouse over the 'Structure' menu link.<br/>
+Mouse over the 'Content types' menu link.<br/>
+Click the 'Add content type' menu link.<br/>
+Switch to the active frame titled 'Content types dialog'.<br/>
+Enter '7a7e8e7938' in the 'Name' text box.<br/>
+Click the 'Save and add fields' button.<br/>
+Switch to the active frame titled '7a7e8e7938 dialog'.<br/>
+STEP 3<br/>
+Enter 'b8fae2e41aad46a' in the 'Add new field' text box.<br/>
+Select 'File' from the 'Field Type' drop down list.<br/>
+Select 'File' from the 'Widget' drop down list.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'b8fae2e41aad46a dialog'.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'b8fae2e41aad46a dialog'.<br/>
+Verify success message of 'Updated field b8fae2e41aad46a field settings.' is present.<br/>
+STEP 4<br/>
+Verify the 'File directory' value is '[current-date:custom:Y]/[current-date:custom:m]'.<br/>
+STEP 5<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled '7a7e8e7938 dialog'.<br/>
+Enter '886acc0e735e420' in the 'Add new field' text box.<br/>
+Select 'Image' from the 'Field Type' drop down list.<br/>
+Select 'Image' from the 'Widget' drop down list.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled '886acc0e735e420 dialog'.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled '886acc0e735e420 dialog'.<br/>
+STEP 6<br/>
+Verify success message of 'Updated field 886acc0e735e420 field settings.' is present.<br/>
+Verify the 'File directory' value is '[current-date:custom:Y]/[current-date:custom:m]'.<br/>
+STEP 7<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled '7a7e8e7938 dialog'.<br/>
+Verify success message of 'Saved 886acc0e735e420 configuration.' is present.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'Your settings have been saved.' is present.<br/>
 Click the 'Close Overlay X'.<br/>
 Scroll by '-500'.<br/>
-Click the 'Home' menu link.<br/>
-STEP 3<br/>
-Open url 'http://install.qa5.nbcupublisher7.publisher7.com/devel/php'.<br/>
-STEP 4<br/>
-Enter 'white();' in the 'PHP Code to Execute' text area.<br/>
-Click the 'Execute' button.<br/>
-Verify the text 'Fatal error: Call to undefined function white()' is present on the page.<br/>
+STEP 8 - N/A<br/>
+STEP 9<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Add content' menu link.<br/>
+Click the '7a7e8e7938' menu link.<br/>
+Switch to the active frame titled 'Create 7a7e8e7938 dialog'.<br/>
+Enter 'dd3460dc6638492' in the 'Title' text box.<br/>
+Switch to the Synopsis frame.<br/>
+Enter a randomized text string into the 'Body' text area.<br/>
+Switch to the active frame titled 'Create 7a7e8e7938 dialog'.<br/>
+Enter '/Users/brandonclark/SQE-TEST-Pub7/main/src/test/java/com/nbcuni/test/publisher/content/MediaFiles/HanSolo1.jpg' in the '886acc0e735e420' custom file upload field.<br/>
+Click the 'Upload' button for custom field '886acc0e735e420'.<br/>
+Wait for the file link to be visible after upload.<br/>
+Click the 'Save' button.<br/>
+Verify success message of '7a7e8e7938 dd3460dc6638492 has been created.' is present.<br/>
+Assert that img source of the Media Item contains '2014/07/HanSolo'.<br/>
+Assert the the img is loaded and visible.<br/>
+STEP 10-11<br/>
+Mouse over the 'Structure' menu link.<br/>
+Mouse over the 'Content types' menu link.<br/>
+Mouse over the 'Character Profile' menu link.<br/>
+Mouse over the 'Manage fields' menu link.<br/>
+Click the 'Cover Photo' menu link.<br/>
+Switch to the active frame titled 'Cover Photo dialog'.<br/>
+Verify the 'File directory' value is '[current-date:custom:Y]/[current-date:custom:m]'.<br/>
+STEP 12 - TODO<br/>
 </div>
 </td>
 <td></td>
-<td>13</td>
-<td>com.nbcuni.test.publisher.tests.SiteManagementAndReporting.AdminViews.NoWhiteScreen@133a7ec</td></tr>
+<td>54</td>
+<td>com.nbcuni.test.publisher.tests.Core.Profiles.FileFieldsTokenBasedPath@4e800275</td></tr>
 </table><p>
 </body>
 </html>
