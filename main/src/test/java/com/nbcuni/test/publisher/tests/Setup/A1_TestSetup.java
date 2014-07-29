@@ -78,7 +78,6 @@ public class A1_TestSetup extends ParentTest {
             modules.EnableModule("Logo Manager");
             
             //uninstall mps module to clean out any previously created mps blocks
-            webDriver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
             try {
             	modules.EnterFilterName("MPS");
             	modules.DisableModule("MPS");
@@ -92,7 +91,6 @@ public class A1_TestSetup extends ParentTest {
             	overlay.SwitchToActiveFrame();
             	overlay.ClickCloseOverlayLnk();
             }
-            webDriver.manage().timeouts().implicitlyWait(config.getImplicitWaitTime(), TimeUnit.SECONDS);
             
             //schedule a post content item revision to be consumed by the SchedulingContentPublishUnpublished test later in the suite
             taxonomy.NavigateSite("Content>>Add content>>Post");

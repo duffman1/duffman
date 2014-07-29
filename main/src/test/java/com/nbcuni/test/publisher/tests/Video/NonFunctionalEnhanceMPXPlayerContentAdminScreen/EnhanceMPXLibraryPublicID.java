@@ -44,7 +44,7 @@ public class EnhanceMPXLibraryPublicID extends ParentTest{
         String playerName = "AutomationPlayer1";
         String playerID = "VeXC0F2L9wg2";
         	
-        if (configuredAccounts.get(0).equals("DB TV")) {
+        if (configuredAccounts.contains("DB TV")) {
         	
         	//Setup
         	String initialFirstResult = searchFor.GetFirstMPXPlayerSearchResult();

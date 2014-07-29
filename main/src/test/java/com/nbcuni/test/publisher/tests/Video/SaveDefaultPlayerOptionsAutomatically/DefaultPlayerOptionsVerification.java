@@ -56,7 +56,7 @@ public class DefaultPlayerOptionsVerification extends ParentTest{
         List<String> configuredAccounts = settings.GetImportAccountSelectedOptions();
 
         	//Step 2 through 12 not needed (executed in previous mpx tests)
-        	if (configuredAccounts.get(0).equals("DB TV")) {
+        	if (configuredAccounts.contains("DB TV")) {
         		
         		//Step 13
         		overlay.ClickCloseOverlayLnk();

@@ -53,7 +53,7 @@ public class EnhanceMPXPlayerContentAdminScreen extends ParentTest{
         	//Step 3 - NA, redundant as step 2
         	
         	//Step 4
-        	if (configuredAccounts.get(0).equals("DB TV")) {
+        	if (configuredAccounts.contains("DB TV")) {
         	
         		String initialFirstResult = searchFor.GetFirstMPXPlayerSearchResult();
         		int initialResultSize = searchFor.GetMPXSearchResultSize();

@@ -63,7 +63,7 @@ public class ThumbnailsAreNotUpdated extends ParentTest{
         
         List<String> configuredAccounts = settings.GetImportAccountSelectedOptions();
 
-        	if (configuredAccounts.get(0).equals("DB TV")) {
+        	if (configuredAccounts.contains("DB TV")) {
         		
         		overlay.ClickCloseOverlayLnk();
         		taxonomy.NavigateSite("Structure>>File types");

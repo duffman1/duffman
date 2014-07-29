@@ -77,7 +77,7 @@ public class NotificationPlayerUnavailability extends ParentTest{
         
         List<String> configuredAccounts = settings.GetImportAccountSelectedOptions();
 
-        	if (configuredAccounts.get(0).equals("DB TV")) {
+        	if (configuredAccounts.contains("DB TV")) {
         		
         		//Step 1
         		MPXLogin mpxLogin = new MPXLogin(webDriver, applib);

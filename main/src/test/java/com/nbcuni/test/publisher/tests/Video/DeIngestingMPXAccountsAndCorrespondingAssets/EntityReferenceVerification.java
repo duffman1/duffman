@@ -38,7 +38,7 @@ public class EntityReferenceVerification extends ParentTest{
         List<String> configuredAccounts = settings.GetImportAccountSelectedOptions();
 
         //Setup
-        if (configuredAccounts.get(0).equals("DB TV")) {
+        if (configuredAccounts.contains("DB TV")) {
         		
         	//Step 1
         	overlay.ClickCloseOverlayLnk();

@@ -50,7 +50,7 @@ public class SelectVideoPlayerPerVideoFile extends ParentTest{
         overlay.SwitchToActiveFrame();
         
         List<String> configuredAccounts = settings.GetImportAccountSelectedOptions();
-        	if (configuredAccounts.get(0).equals("DB TV") || configuredAccounts.get(0).equals("NBCU TVE Dev - NBC")) {
+        	if (configuredAccounts.contains("DB TV") || configuredAccounts.contains("NBCU TVE Dev - NBC")) {
         		
         		//Step 2
         		overlay.switchToDefaultContent(true);
