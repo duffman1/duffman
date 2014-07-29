@@ -1,50 +1,20 @@
 <h2>Reporter output</h2><table><tr><td>STEP 1</td></tr>
-<tr><td>Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.</td></tr>
+<tr><td>Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.</td></tr>
 <tr><td>Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.</td></tr>
 <tr><td>Enter 'pa55word' in the 'Password' text box.</td></tr>
 <tr><td>Click the 'Login' button.</td></tr>
-<tr><td>Click the 'Modules' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'Modules dialog'.</td></tr>
-<tr><td>Enter 'Pixelman' in the 'Filter Name' text box.</td></tr>
-<tr><td>Enter 'MPS' in the 'Filter Name' text box.</td></tr>
-<tr><td>Verify the 'MPS' check box is checked.</td></tr>
-<tr><td>Click the 'Close Overlay X'.</td></tr>
-<tr><td>Scroll by '-500'.</td></tr>
 <tr><td>STEP 2</td></tr>
-<tr><td>Mouse over the 'Configuration' menu link.</td></tr>
-<tr><td>Mouse over the 'Web services' menu link.</td></tr>
-<tr><td>Click the 'MPS Configuration' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'MPS Configuration dialog'.</td></tr>
-<tr><td>STEP 3</td></tr>
-<tr><td>Enter 'mps.io' in the 'MPS Host' text box.</td></tr>
-<tr><td>Click the 'Document Write' radio button.</td></tr>
-<tr><td>Enter 'pub7-development' in the 'Site Instance Override' text box.</td></tr>
-<tr><td>Clear all 'Name' text box values.</td></tr>
-<tr><td>Clear all 'Value' text box values.</td></tr>
-<tr><td>Uncheck all 'JSON' check boxes.</td></tr>
-<tr><td>Click the 'Save configuration' button.</td></tr>
-<tr><td>Click the 'Sync Ad Blocks' button.</td></tr>
-<tr><td>Verify success message of 'The configuration options have been saved.' is present.</td></tr>
+<tr><td>Click the 'Modules' menu link.</td></tr>
+<tr><td>Switch to frame titled 'Modules'.</td></tr>
+<tr><td>Enter 'Devel' in the 'Filter Name' text box.</td></tr>
+<tr><td>Verify the 'Devel' check box is checked.</td></tr>
 <tr><td>Click the 'Close Overlay X'.</td></tr>
 <tr><td>Scroll by '-500'.</td></tr>
-<tr><td>STEP 4 - N/A</td></tr>
-<tr><td>STEP 5</td></tr>
-<tr><td>Mouse over the 'Structure' menu link.</td></tr>
-<tr><td>Click the 'Blocks' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'Blocks dialog'.</td></tr>
-<tr><td>STEP 6 and 7</td></tr>
-<tr><td>Select the block name 'topmulti (MPS)' from the 'Footer' drop down list.</td></tr>
-<tr><td>Click the 'Save Blocks' button.</td></tr>
-<tr><td>Verify success message of 'The block settings have been updated.' is present.</td></tr>
-<tr><td>Click the 'Close Overlay X'.</td></tr>
-<tr><td>Scroll by '-500'.</td></tr>
-<tr><td>STEP 8</td></tr>
 <tr><td>Click the 'Home' menu link.</td></tr>
-<tr><td>Verify the Ad image is present.</td></tr>
-<tr><td>CLEANUP</td></tr>
-<tr><td>Mouse over the 'Structure' menu link.</td></tr>
-<tr><td>Click the 'Blocks' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'Blocks dialog'.</td></tr>
-<tr><td>Select the block name 'topmulti (MPS)' from the '- None -' drop down list.</td></tr>
-<tr><td>Click the 'Save Blocks' button.</td></tr>
+<tr><td>STEP 3</td></tr>
+<tr><td>Open url 'http://install.qa5.nbcupublisher7.publisher7.com/devel/php'.</td></tr>
+<tr><td>STEP 4</td></tr>
+<tr><td>Enter 'white();' in the 'PHP Code to Execute' text area.</td></tr>
+<tr><td>Click the 'Execute' button.</td></tr>
+<tr><td>Verify the text 'Fatal error: Call to undefined function white()' is present on the page.</td></tr>
 </table>

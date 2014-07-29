@@ -1,6 +1,9 @@
 package com.nbcuni.test.publisher.tests.SiteManagementAndReporting.AdminViews;
+import java.util.Arrays;
+
 import org.testng.Reporter;
 import org.testng.annotations.Test;
+
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.ExecutePHPCode;
@@ -25,15 +28,13 @@ public class NoWhiteScreen extends ParentTest{
         modules.VerifyModuleEnabled("Devel");
         
     	Reporter.log("STEP 3");
-    	taxonomy.NavigateSite("Home>>Development>>Execute PHP Code");
-        overlay.SwitchToActiveFrame();
+    	applib.openSitePage("/devel/php");
         
         Reporter.log("STEP 4");
         ExecutePHPCode executePHPCode = new ExecutePHPCode(webDriver);
-        executePHPCode.EnterPHPCode("Enter white();");
+        executePHPCode.EnterPHPCode("white();");
         executePHPCode.ClickExecuteBtn();
-        executePHPCode.VerifyResponse("Fatal error: Call to undefined function white()");
-        overlay.ClickCloseOverlayLnk();
+        contentParent.VerifyPageContentPresent(Arrays.asList("Fatal error: Call to undefined function white()"));
         
     }
 }

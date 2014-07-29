@@ -5,7 +5,7 @@
       <![CDATA[STEP 1]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
+      <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]>
     </line>
     <line>
       <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
@@ -17,161 +17,71 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Modules' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Pixelman' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'MPS' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'MPS' check box is checked.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll by '-500'.]]>
-    </line>
-    <line>
       <![CDATA[STEP 2]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Configuration' menu link.]]>
+      <![CDATA[Click the 'Modules' menu link.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Web services' menu link.]]>
+      <![CDATA[Switch to frame titled 'Modules'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'MPS Configuration' menu link.]]>
+      <![CDATA[Enter 'Devel' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'MPS Configuration dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 3]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'mps.io' in the 'MPS Host' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Document Write' radio button.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'pub7-development' in the 'Site Instance Override' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Clear all 'Name' text box values.]]>
-    </line>
-    <line>
-      <![CDATA[Clear all 'Value' text box values.]]>
-    </line>
-    <line>
-      <![CDATA[Uncheck all 'JSON' check boxes.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Sync Ad Blocks' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+      <![CDATA[Verify the 'Devel' check box is checked.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
     </line>
     <line>
       <![CDATA[Scroll by '-500'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 4 - N/A]]>
-    </line>
-    <line>
-      <![CDATA[STEP 5]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Structure' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Blocks' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 6 and 7]]>
-    </line>
-    <line>
-      <![CDATA[Select the block name 'topmulti (MPS)' from the 'Footer' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save Blocks' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The block settings have been updated.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll by '-500'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 8]]>
     </line>
     <line>
       <![CDATA[Click the 'Home' menu link.]]>
     </line>
     <line>
-      <![CDATA[Verify the Ad image is present.]]>
+      <![CDATA[STEP 3]]>
     </line>
     <line>
-      <![CDATA[CLEANUP]]>
+      <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com/devel/php'.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Structure' menu link.]]>
+      <![CDATA[STEP 4]]>
     </line>
     <line>
-      <![CDATA[Click the 'Blocks' menu link.]]>
+      <![CDATA[Enter 'white();' in the 'PHP Code to Execute' text area.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
+      <![CDATA[Click the 'Execute' button.]]>
     </line>
     <line>
-      <![CDATA[Select the block name 'topmulti (MPS)' from the '- None -' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save Blocks' button.]]>
+      <![CDATA[Verify the text 'Fatal error: Call to undefined function white()' is present on the page.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="49492" started-at="2014-07-28T18:40:20Z" finished-at="2014-07-28T18:41:09Z">
+  <suite name="Default suite" duration-ms="16660" started-at="2014-07-28T19:42:19Z" finished-at="2014-07-28T19:42:36Z">
     <groups>
       <group name="full">
-        <method signature="MPSEndToEndIntegration.MPSEndToEndIntegration_TC3996()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSEndToEndIntegration@343d0d2b]" name="MPSEndToEndIntegration_TC3996" class="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSEndToEndIntegration"/>
+        <method signature="NoWhiteScreen.NoWhiteScreen_TC4147()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.AdminViews.NoWhiteScreen@133a7ec]" name="NoWhiteScreen_TC4147" class="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.AdminViews.NoWhiteScreen"/>
       </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="49492" started-at="2014-07-28T18:40:20Z" finished-at="2014-07-28T18:41:09Z">
-      <class name="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSEndToEndIntegration">
-        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSEndToEndIntegration@343d0d2b]" name="startGridAndHub" is-config="true" duration-ms="1226" started-at="2014-07-28T14:40:18Z" finished-at="2014-07-28T14:40:20Z">
+    <test name="Default test" duration-ms="16660" started-at="2014-07-28T19:42:19Z" finished-at="2014-07-28T19:42:36Z">
+      <class name="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.AdminViews.NoWhiteScreen">
+        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.AdminViews.NoWhiteScreen@133a7ec]" name="startGridAndHub" is-config="true" duration-ms="990" started-at="2014-07-28T15:42:18Z" finished-at="2014-07-28T15:42:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startGridAndHub -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSEndToEndIntegration@343d0d2b]" name="startSelenium" is-config="true" duration-ms="2658" started-at="2014-07-28T14:40:20Z" finished-at="2014-07-28T14:40:22Z">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.AdminViews.NoWhiteScreen@133a7ec]" name="startSelenium" is-config="true" duration-ms="2610" started-at="2014-07-28T15:42:19Z" finished-at="2014-07-28T15:42:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="MPSEndToEndIntegration_TC3996()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSEndToEndIntegration@343d0d2b]" name="MPSEndToEndIntegration_TC3996" duration-ms="46249" started-at="2014-07-28T14:40:22Z" finished-at="2014-07-28T14:41:08Z">
+        <test-method status="PASS" signature="NoWhiteScreen_TC4147()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.AdminViews.NoWhiteScreen@133a7ec]" name="NoWhiteScreen_TC4147" duration-ms="13465" started-at="2014-07-28T15:42:22Z" finished-at="2014-07-28T15:42:35Z">
           <reporter-output>
             <line>
               <![CDATA[STEP 1]]>
             </line>
             <line>
-              <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
+              <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]>
             </line>
             <line>
               <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
@@ -183,155 +93,65 @@
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Modules' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Pixelman' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'MPS' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'MPS' check box is checked.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll by '-500'.]]>
-            </line>
-            <line>
               <![CDATA[STEP 2]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Configuration' menu link.]]>
+              <![CDATA[Click the 'Modules' menu link.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Web services' menu link.]]>
+              <![CDATA[Switch to frame titled 'Modules'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'MPS Configuration' menu link.]]>
+              <![CDATA[Enter 'Devel' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'MPS Configuration dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 3]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'mps.io' in the 'MPS Host' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Document Write' radio button.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pub7-development' in the 'Site Instance Override' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Clear all 'Name' text box values.]]>
-            </line>
-            <line>
-              <![CDATA[Clear all 'Value' text box values.]]>
-            </line>
-            <line>
-              <![CDATA[Uncheck all 'JSON' check boxes.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Sync Ad Blocks' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+              <![CDATA[Verify the 'Devel' check box is checked.]]>
             </line>
             <line>
               <![CDATA[Click the 'Close Overlay X'.]]>
             </line>
             <line>
               <![CDATA[Scroll by '-500'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 4 - N/A]]>
-            </line>
-            <line>
-              <![CDATA[STEP 5]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Structure' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Blocks' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 6 and 7]]>
-            </line>
-            <line>
-              <![CDATA[Select the block name 'topmulti (MPS)' from the 'Footer' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save Blocks' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The block settings have been updated.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll by '-500'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 8]]>
             </line>
             <line>
               <![CDATA[Click the 'Home' menu link.]]>
             </line>
             <line>
-              <![CDATA[Verify the Ad image is present.]]>
+              <![CDATA[STEP 3]]>
             </line>
             <line>
-              <![CDATA[CLEANUP]]>
+              <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com/devel/php'.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Structure' menu link.]]>
+              <![CDATA[STEP 4]]>
             </line>
             <line>
-              <![CDATA[Click the 'Blocks' menu link.]]>
+              <![CDATA[Enter 'white();' in the 'PHP Code to Execute' text area.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
+              <![CDATA[Click the 'Execute' button.]]>
             </line>
             <line>
-              <![CDATA[Select the block name 'topmulti (MPS)' from the '- None -' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save Blocks' button.]]>
+              <![CDATA[Verify the text 'Fatal error: Call to undefined function white()' is present on the page.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- MPSEndToEndIntegration_TC3996 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSEndToEndIntegration@343d0d2b]" name="stopSelenium" is-config="true" duration-ms="572" started-at="2014-07-28T14:41:08Z" finished-at="2014-07-28T14:41:09Z">
+        </test-method> <!-- NoWhiteScreen_TC4147 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.AdminViews.NoWhiteScreen@133a7ec]" name="stopSelenium" is-config="true" duration-ms="567" started-at="2014-07-28T15:42:35Z" finished-at="2014-07-28T15:42:36Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=MPSEndToEndIntegration_TC3996 status=SUCCESS method=MPSEndToEndIntegration.MPSEndToEndIntegration_TC3996()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSEndToEndIntegration@343d0d2b] output=STEP 1]]]>
+                <![CDATA[[TestResult name=NoWhiteScreen_TC4147 status=SUCCESS method=NoWhiteScreen.NoWhiteScreen_TC4147()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.AdminViews.NoWhiteScreen@133a7ec] output=STEP 1]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSEndToEndIntegration@343d0d2b]" name="stopGridAndHub" is-config="true" duration-ms="374" started-at="2014-07-28T14:41:09Z" finished-at="2014-07-28T14:41:09Z">
+        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.AdminViews.NoWhiteScreen@133a7ec]" name="stopGridAndHub" is-config="true" duration-ms="376" started-at="2014-07-28T15:42:36Z" finished-at="2014-07-28T15:42:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopGridAndHub -->
-      </class> <!-- com.nbcuni.test.publisher.tests.Advertising.MPS.MPSEndToEndIntegration -->
+      </class> <!-- com.nbcuni.test.publisher.tests.SiteManagementAndReporting.AdminViews.NoWhiteScreen -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
