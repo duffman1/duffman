@@ -1,0 +1,1549 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>TestNG Report</title>
+<style type="text/css">
+table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}
+td,th {border:1px solid #009;padding:.25em .5em}
+.result th {vertical-align:bottom}
+.param th {padding-left:1em;padding-right:1em}
+.param td {padding-left:.5em;padding-right:2em}
+.stripe td,.stripe th {background-color: #E6EBF9}
+.numi,.numi_attn {text-align:right}
+.total td {font-weight:bold}
+.passedodd td {background-color: #0A0}
+.passedeven td {background-color: #3F3}
+.skippedodd td {background-color: #CCC}
+.skippedodd td {background-color: #DDD}
+.failedodd td,.numi_attn {background-color: #F33}
+.failedeven td,.stripe .numi_attn {background-color: #D00}
+.stacktrace {white-space:pre;font-family:monospace}
+.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}
+</style>
+</head>
+<body>
+<table cellspacing="0" cellpadding="0" class="testOverview">
+<tr><th>Test</th><th>Methods<br/>Passed</th><th>Scenarios<br/>Passed</th><th># skipped</th><th># failed</th><th>Total<br/>Time</th><th>Included<br/>Groups</th><th>Excluded<br/>Groups</th></tr>
+<tr><th colspan="8">Pub 7 Concurrent Suite</th></tr>
+<tr><td style="text-align:left;padding-right:2em"><a href="#t1">All Concurrent Web Tests</a></td><td class="numi">7</td><td class="numi">7</td><td class="numi">0</td><td class="numi_attn">3</td><td class="numi">330.6 seconds</td><td class="numi">mpx </td><td class="numi"></td></tr>
+<tr><th colspan="8">Pub 7 Consecutive Suite</th></tr>
+<tr><td style="text-align:left;padding-right:2em"><a href="#t2">All Consecutive Web Tests</a></td><td class="numi">8</td><td class="numi">8</td><td class="numi">0</td><td class="numi_attn">3</td><td class="numi">1,199.1 seconds</td><td class="numi">mpx </td><td class="numi"></td></tr>
+<tr><th colspan="8">Publisher 7 Test Suites</th></tr>
+<tr class="total"><td>Total</td>
+<td class="numi">15</td><td class="numi">15</td><td class="numi">0</td><td class="numi_attn">6</td><td class="numi">1,530.4 seconds</td><td colspan="2">&nbsp;</td></tr>
+</table>
+<table cellspacing="0" cellpadding="0" class="methodOverview" id="summary">
+<tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
+<tr><th colspan="5">Pub 7 Concurrent Suite</th></tr>
+<tr id="t1"><th colspan="5">All Concurrent Web Tests &#8212; failed</th></tr>
+<tr class="failedodd"><td rowspan="3">com.nbcuni.test.publisher.tests.Video.MPXReporting.MPXReportingBeta</td><td><a href="#m1"><b>MPXReportingBeta_TC3085</b> (mpx, full, smoke) </a></td><td class="numi">3</td><td>1406667864507</td><td class="numi">273063</td></tr><tr class="failedodd"><td><a href="#m2"><b>MPXReportingBeta_TC3085</b> (mpx, full, smoke) </a></td><td class="numi">3</td><td>1406667864507</td><td class="numi">273063</td></tr><tr class="failedodd"><td><a href="#m3"><b>MPXReportingBeta_TC3085</b> (mpx, full, smoke) </a></td><td class="numi">3</td><td>1406667864507</td><td class="numi">273063</td></tr>
+<tr><th colspan="5">All Concurrent Web Tests &#8212; passed</th></tr>
+<tr class="passedodd"><td>com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen</td><td><a href="#m4"><b>EnhanceMPXPlayerContentAdminScreen_Test</b> (mpx, full) </a></td><td class="numi">1</td><td>1406667820478</td><td class="numi">41015</td></tr>
+<tr class="passedeven"><td>com.nbcuni.test.publisher.tests.Video.Player.SelectVideoPlayerPerVideoFile</td><td><a href="#m5"><b>SelectVideoPlayerPerVideoFile_Test</b> (mpx, full) </a></td><td class="numi">1</td><td>1406667820576</td><td class="numi">38880</td></tr>
+<tr class="passedodd"><td>com.nbcuni.test.publisher.tests.Video.DeIngestingMPXAccountsAndCorrespondingAssets.EntityReferenceVerification</td><td><a href="#m6"><b>EntityReferenceVerification_TC1886</b> (mpx, full) </a></td><td class="numi">1</td><td>1406667820660</td><td class="numi">225011</td></tr>
+<tr class="passedeven"><td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.EnhanceContentLibraryTable.EnhanceContentLibraryTable</td><td><a href="#m7"><b>EnhanceContentLibraryTable_Test</b> (mpx, full) </a></td><td class="numi">1</td><td>1406667862473</td><td class="numi">68404</td></tr>
+<tr class="passedodd"><td>com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification</td><td><a href="#m8"><b>DefaultPlayerOptionsVerification_Test</b> (mpx, full) </a></td><td class="numi">1</td><td>1406667933662</td><td class="numi">27638</td></tr>
+<tr class="passedeven"><td>com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides</td><td><a href="#m9"><b>MPXVideosSchedulingVerificationInitialOverrides_Test</b> (mpx, full) </a></td><td class="numi">1</td><td>1406667964024</td><td class="numi">52179</td></tr>
+<tr class="passedodd"><td>com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXLibraryPublicID</td><td><a href="#m10"><b>EnhanceMPXLibraryPublicID_TC2476</b> (mpx, full) </a></td><td class="numi">1</td><td>1406668019207</td><td class="numi">26651</td></tr>
+<tr><th colspan="5">Pub 7 Consecutive Suite</th></tr>
+<tr id="t2"><th colspan="5">All Consecutive Web Tests &#8212; failed</th></tr>
+<tr class="failedodd"><td rowspan="3">com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling</td><td><a href="#m11"><b>MPXVideosSchedulingVerificationScheduling_Test</b> (mpx, full) </a></td><td class="numi">3</td><td>1406666835149</td><td class="numi">502915</td></tr><tr class="failedodd"><td><a href="#m12"><b>MPXVideosSchedulingVerificationScheduling_Test</b> (mpx, full) </a></td><td class="numi">3</td><td>1406666835149</td><td class="numi">502915</td></tr><tr class="failedodd"><td><a href="#m13"><b>MPXVideosSchedulingVerificationScheduling_Test</b> (mpx, full) </a></td><td class="numi">3</td><td>1406666835149</td><td class="numi">502915</td></tr>
+<tr><th colspan="5">All Consecutive Web Tests &#8212; passed</th></tr>
+<tr class="passedodd"><td>com.nbcuni.test.publisher.tests.Setup.A1_TestSetup</td><td><a href="#m14"><b>TestSetup_Test</b> (mpx, full, smoke) </a></td><td class="numi">1</td><td>1406666619427</td><td class="numi">192311</td></tr>
+<tr class="passedeven"><td>com.nbcuni.test.publisher.tests.Video.DeIngestingMPXAccountsAndCorrespondingAssets.MPXAccountDeletion</td><td><a href="#m15"><b>MPXAccountDeletion_TC1884</b> (mpx, full) </a></td><td class="numi">1</td><td>1406666814463</td><td class="numi">3</td></tr>
+<tr class="passedodd"><td>com.nbcuni.test.publisher.tests.Video.Configuration.ConfigurationMultipleMPXAccounts</td><td><a href="#m16"><b>ConfigurationMultipleMPXAccounts_TC1073</b> (mpx, full, smoke) </a></td><td class="numi">1</td><td>1406666817196</td><td class="numi">15211</td></tr>
+<tr class="passedeven"><td>com.nbcuni.test.publisher.tests.Video.SyncFromMPXButtonToVideoFileEntitiesEditForm.SyncFromMPXButtonToVideoFileEntitiesEditForm</td><td><a href="#m17"><b>SyncFromMPXButtonToVideoFileEntitiesEditForm_Test</b> (mpx, full) </a></td><td class="numi">1</td><td>1406667348353</td><td class="numi">0</td></tr>
+<tr class="passedodd"><td>com.nbcuni.test.publisher.tests.Video.UndefinedIndexesDisplayingForMPXPlayers.UndefinedIndexesDisplayingForMPXPlayers</td><td><a href="#m18"><b>UndefinedIndexesDisplayingForMPXPlayers_Test</b> (mpx, full) </a></td><td class="numi">1</td><td>1406667351069</td><td class="numi">1</td></tr>
+<tr class="passedeven"><td>com.nbcuni.test.publisher.tests.Video.CanonicalURLSupport.CanonicalURL</td><td><a href="#m19"><b>CanonicalURL_TC1080</b> (mpx, full, smoke) </a></td><td class="numi">1</td><td>1406667353787</td><td class="numi">95955</td></tr>
+<tr class="passedodd"><td>com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability</td><td><a href="#m20"><b>NotificationPlayerUnavailability_Test</b> (mpx, full) </a></td><td class="numi">1</td><td>1406667452454</td><td class="numi">246362</td></tr>
+<tr class="passedeven"><td>com.nbcuni.test.publisher.tests.Video.Thumbnails.ThumbnailsAreNotUpdated</td><td><a href="#m21"><b>ThumbnailsAreNotUpdated_Test</b> (mpx, full) </a></td><td class="numi">1</td><td>1406667701571</td><td class="numi">113665</td></tr>
+<tr><th colspan="5">Publisher 7 Test Suites</th></tr>
+</table>
+<h1>All Concurrent Web Tests</h1>
+<h2 id="m1">com.nbcuni.test.publisher.tests.Video.MPXReporting.MPXReportingBeta:MPXReportingBeta_TC3085</h2>
+<div>
+<h3>Test Messages</h3>
+STEP 1<br/>
+Open url 'http://update.devi1.nbcupublisher7.publisher7.com'.<br/>
+Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
+Enter 'pa55word' in the 'Password' text box.<br/>
+Click the 'Login' button.<br/>
+SETUP<br/>
+Mouse over the 'Configuration' menu link.<br/>
+Mouse over the 'Media' menu link.<br/>
+Click the 'Media: thePlatform mpx settings' menu link.<br/>
+Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.<br/>
+Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.<br/>
+MPX is already configured.<br/>
+Click the 'Close Overlay X'.<br/>
+Scroll by '-500'.<br/>
+STEP 2<br/>
+Click the 'Modules' menu link.<br/>
+Switch to frame titled 'Modules'.<br/>
+Enter 'Media: ThePlatform mpx Reports' in the 'Filter Name' text box.<br/>
+Check the 'Media: ThePlatform mpx Reports' check box.<br/>
+Click the 'Save configuration' button.<br/>
+Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/MPXReportingBeta_TC3085_072914050451PM.png <br/>
+<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/MPXReportingBeta_TC3085_072914050451PM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/MPXReportingBeta_TC3085_072914050451PM.png' height='500' width='500'/> </a><br/>
+Cache was cleared on test failure<br/>
+<h3>Failure</h3>
+<div class="stacktrace">java.lang.AssertionError: Error text of &apos;Notice: _ctools_export_get_defaults_from_cache() [function.-ctools-export-get-defaults-from-cache]: The script tried to execute a method or access a property of an incomplete object. Please ensure that the class definition &quot;view&quot; of the object you are trying to operate on was loaded _before_ unserialize() gets called or provide a __autoload() function to load the class definition in _ctools_export_get_defaults_from_cache() (line 758 of /mnt/www/html/nbcupublisher7devi1/docroot/profiles/publisher/modules/contrib/ctools/includes/export.inc).&apos; is present in application.
+	at com.nbcuni.test.publisher.pageobjects.ErrorChecking.ErrorChecking.VerifyNoMessageErrorsPresent(ErrorChecking.java:226)
+	at com.nbcuni.test.publisher.pageobjects.Overlay.switchToDefaultContent(Overlay.java:67)
+	at com.nbcuni.test.publisher.pageobjects.Modules.EnableModule(Modules.java:141)
+	at com.nbcuni.test.publisher.pageobjects.Modules.VerifyModuleEnabled(Modules.java:218)
+	at com.nbcuni.test.publisher.tests.Video.MPXReporting.MPXReportingBeta.MPXReportingBeta_TC3085(MPXReportingBeta.java:35)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+... Removed 11 stack frames</div>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m2">com.nbcuni.test.publisher.tests.Video.MPXReporting.MPXReportingBeta:MPXReportingBeta_TC3085</h2>
+<div>
+<h3>Test Messages</h3>
+STEP 1<br/>
+Open url 'http://update.devi1.nbcupublisher7.publisher7.com'.<br/>
+Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
+Enter 'pa55word' in the 'Password' text box.<br/>
+Click the 'Login' button.<br/>
+SETUP<br/>
+Mouse over the 'Configuration' menu link.<br/>
+Mouse over the 'Media' menu link.<br/>
+Click the 'Media: thePlatform mpx settings' menu link.<br/>
+Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.<br/>
+Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.<br/>
+MPX is already configured.<br/>
+Click the 'Close Overlay X'.<br/>
+Scroll by '-500'.<br/>
+STEP 2<br/>
+Click the 'Modules' menu link.<br/>
+Switch to frame titled 'Modules'.<br/>
+Enter 'Media: ThePlatform mpx Reports' in the 'Filter Name' text box.<br/>
+Verify the 'Media: ThePlatform mpx Reports' check box is checked.<br/>
+Click the 'Close Overlay X'.<br/>
+Scroll by '-500'.<br/>
+Click the 'Home' menu link.<br/>
+STEP 3<br/>
+Mouse over the 'Configuration' menu link.<br/>
+Mouse over the 'Media' menu link.<br/>
+Mouse over the 'Media: thePlatform mpx settings' menu link.<br/>
+Click the 'Media: thePlatform MPX Status (BETA)' menu link.<br/>
+Mouse over the 'Configuration' menu link.<br/>
+Mouse over the 'Media' menu link.<br/>
+Mouse over the 'Media: thePlatform mpx settings' menu link.<br/>
+Click the 'Media: thePlatform MPX Status (BETA)' menu link.<br/>
+Mouse over the 'Configuration' menu link.<br/>
+Mouse over the 'Media' menu link.<br/>
+Mouse over the 'Media: thePlatform mpx settings' menu link.<br/>
+Click the 'Media: thePlatform MPX Status (BETA)' menu link.<br/>
+Mouse over the 'Configuration' menu link.<br/>
+Mouse over the 'Media' menu link.<br/>
+Mouse over the 'Media: thePlatform mpx settings' menu link.<br/>
+Click the 'Media: thePlatform MPX Status (BETA)' menu link.<br/>
+Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/MPXReportingBeta_TC3085_072914050857PM.png <br/>
+<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/MPXReportingBeta_TC3085_072914050857PM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/MPXReportingBeta_TC3085_072914050857PM.png' height='500' width='500'/> </a><br/>
+Cache was cleared on test failure<br/>
+<h3>Failure</h3>
+<div class="stacktrace">java.lang.AssertionError: Taxonomy navigation failed after 3 iterations for menu path &apos;Configuration&gt;&gt;Media&gt;&gt;Media: thePlatform mpx settings&gt;&gt;Media: thePlatform MPX Status (BETA)&apos;.
+	at com.nbcuni.test.publisher.pageobjects.Taxonomy.Taxonomy.NavigateSite(Taxonomy.java:273)
+	at com.nbcuni.test.publisher.tests.Video.MPXReporting.MPXReportingBeta.MPXReportingBeta_TC3085(MPXReportingBeta.java:38)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+... Removed 11 stack frames</div>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m3">com.nbcuni.test.publisher.tests.Video.MPXReporting.MPXReportingBeta:MPXReportingBeta_TC3085</h2>
+<div>
+<h3>Test Messages</h3>
+STEP 1<br/>
+Open url 'http://update.devi1.nbcupublisher7.publisher7.com'.<br/>
+Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
+Enter 'pa55word' in the 'Password' text box.<br/>
+Click the 'Login' button.<br/>
+SETUP<br/>
+Mouse over the 'Configuration' menu link.<br/>
+Mouse over the 'Media' menu link.<br/>
+Click the 'Media: thePlatform mpx settings' menu link.<br/>
+Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.<br/>
+Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.<br/>
+MPX is already configured.<br/>
+Click the 'Close Overlay X'.<br/>
+Scroll by '-500'.<br/>
+STEP 2<br/>
+Click the 'Modules' menu link.<br/>
+Switch to frame titled 'Modules'.<br/>
+Enter 'Media: ThePlatform mpx Reports' in the 'Filter Name' text box.<br/>
+Verify the 'Media: ThePlatform mpx Reports' check box is checked.<br/>
+Click the 'Close Overlay X'.<br/>
+Scroll by '-500'.<br/>
+Click the 'Home' menu link.<br/>
+STEP 3<br/>
+Mouse over the 'Configuration' menu link.<br/>
+Mouse over the 'Media' menu link.<br/>
+Mouse over the 'Media: thePlatform mpx settings' menu link.<br/>
+Click the 'Media: thePlatform MPX Status (BETA)' menu link.<br/>
+Mouse over the 'Configuration' menu link.<br/>
+Mouse over the 'Media' menu link.<br/>
+Mouse over the 'Media: thePlatform mpx settings' menu link.<br/>
+Click the 'Media: thePlatform MPX Status (BETA)' menu link.<br/>
+Mouse over the 'Configuration' menu link.<br/>
+Mouse over the 'Media' menu link.<br/>
+Mouse over the 'Media: thePlatform mpx settings' menu link.<br/>
+Click the 'Media: thePlatform MPX Status (BETA)' menu link.<br/>
+Mouse over the 'Configuration' menu link.<br/>
+Mouse over the 'Media' menu link.<br/>
+Mouse over the 'Media: thePlatform mpx settings' menu link.<br/>
+Click the 'Media: thePlatform MPX Status (BETA)' menu link.<br/>
+Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/MPXReportingBeta_TC3085_072914050655PM.png <br/>
+<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/MPXReportingBeta_TC3085_072914050655PM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/MPXReportingBeta_TC3085_072914050655PM.png' height='500' width='500'/> </a><br/>
+Cache was cleared on test failure<br/>
+<h3>Failure</h3>
+<div class="stacktrace">java.lang.AssertionError: Taxonomy navigation failed after 3 iterations for menu path &apos;Configuration&gt;&gt;Media&gt;&gt;Media: thePlatform mpx settings&gt;&gt;Media: thePlatform MPX Status (BETA)&apos;.
+	at com.nbcuni.test.publisher.pageobjects.Taxonomy.Taxonomy.NavigateSite(Taxonomy.java:273)
+	at com.nbcuni.test.publisher.tests.Video.MPXReporting.MPXReportingBeta.MPXReportingBeta_TC3085(MPXReportingBeta.java:38)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+... Removed 11 stack frames</div>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m4">com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen:EnhanceMPXPlayerContentAdminScreen_Test</h2>
+<div>
+Open url 'http://update.devi1.nbcupublisher7.publisher7.com'.<br/>
+Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
+Enter 'pa55word' in the 'Password' text box.<br/>
+Click the 'Login' button.<br/>
+Mouse over the 'Configuration' menu link.<br/>
+Mouse over the 'Media' menu link.<br/>
+Click the 'Media: thePlatform mpx settings' menu link.<br/>
+Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.<br/>
+Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.<br/>
+MPX is already configured.<br/>
+Click the 'Close Overlay X'.<br/>
+Scroll by '-500'.<br/>
+Mouse over the 'Configuration' menu link.<br/>
+Mouse over the 'Media' menu link.<br/>
+Click the 'Media: thePlatform mpx settings' menu link.<br/>
+Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.<br/>
+Get all the selected import account options and store to a list.<br/>
+Click the 'Close Overlay X'.<br/>
+Scroll by '-500'.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Files' menu link.<br/>
+Click the 'mpxPlayers' menu link.<br/>
+Switch to the active frame titled 'Content dialog'.<br/>
+Verify that the search result set column order matches as expected.<br/>
+Get the text of the first search result set item.<br/>
+Get the number of results in the result set.<br/>
+Enter title Automation.<br/>
+Click the 'Apply' button.<br/>
+Get the number of results in the result set.<br/>
+Get the text of the first search result set item.<br/>
+Click the 'Reset' button.<br/>
+Get the text of the first search result set item.<br/>
+Get the number of results in the result set.<br/>
+Get all the account options in the 'MPX Player Account' select ddl.<br/>
+Assert that the count of options is expected + 1 for the '-select' option.<br/>
+Get the text of each of the ddl options.<br/>
+Assert that each expected account option is present in the 'MPX Player Account' select ddl.<br/>
+Select the DB TV from the 'MPXPlayerAccount' select ddl.<br/>
+Click the 'Apply' button.<br/>
+Get all the MPX result set 'Source' items.<br/>
+Assert that every source item in the result set equals 'DB TV'.<br/>
+Click the 'Reset' button.<br/>
+Select the 'Published' from the 'MPX Status/Published' drop down list.<br/>
+Click the 'Apply' button.<br/>
+Get all the MPX result set 'Status' items.<br/>
+Assert that result set size for Published items is greater than 0.<br/>
+Assert that every status item in the result set equals 'Published'.<br/>
+Click the 'Reset' button.<br/>
+Select the 'Unpublished' from the 'MPX Status/Published' drop down list.<br/>
+Click the 'Apply' button.<br/>
+Get all the MPX result set 'Status' items.<br/>
+Assert that every status item in the result set equals 'Unpublished'.<br/>
+Click the 'Reset' button.<br/>
+Get the text of the first search result set item.<br/>
+Get the number of results in the result set.<br/>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m5">com.nbcuni.test.publisher.tests.Video.DeIngestingMPXAccountsAndCorrespondingAssets.EntityReferenceVerification:EntityReferenceVerification_TC1886</h2>
+<div>
+Open url 'http://update.devi1.nbcupublisher7.publisher7.com'.<br/>
+Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
+Enter 'pa55word' in the 'Password' text box.<br/>
+Click the 'Login' button.<br/>
+Mouse over the 'Configuration' menu link.<br/>
+Mouse over the 'Media' menu link.<br/>
+Click the 'Media: thePlatform mpx settings' menu link.<br/>
+Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.<br/>
+Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.<br/>
+MPX is already configured.<br/>
+Click the 'Close Overlay X'.<br/>
+Scroll by '-500'.<br/>
+Mouse over the 'Configuration' menu link.<br/>
+Mouse over the 'Media' menu link.<br/>
+Click the 'Media: thePlatform mpx settings' menu link.<br/>
+Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.<br/>
+Get all the selected import account options and store to a list.<br/>
+Click the 'Close Overlay X'.<br/>
+Scroll by '-500'.<br/>
+Mouse over the 'Structure' menu link.<br/>
+Mouse over the 'Content types' menu link.<br/>
+Click the 'Add content type' menu link.<br/>
+Switch to the active frame titled 'Content types dialog'.<br/>
+Enter 'MPXe6a88c9d39' in the 'Name' text box.<br/>
+Click the 'Save and add fields' button.<br/>
+Switch to the active frame titled 'MPXe6a88c9d39 dialog'.<br/>
+Enter 'MPXVideoEntity0d2a8308b4' in the 'Add new field' text box.<br/>
+Select 'Entity Reference' from the 'Field Type' drop down list.<br/>
+Select 'Select list' from the 'Widget' drop down list.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'MPXVideoEntity0d2a8308b4 dialog'.<br/>
+Select the 'File' option from the 'Target type' drop down list.<br/>
+Select the 'Simple (with optional filter by bundle)' option from the 'Mode' drop down list.<br/>
+Chech the 'MPX Video for Account "DB TV" (2312945284) ' 'Target bundles' check box.<br/>
+Select the 'Don't sort' option from the 'Sort by' drop down list.<br/>
+Click the 'Save field settings' button.<br/>
+Switch to the active frame titled 'MPXVideoEntity0d2a8308b4 dialog'.<br/>
+Verify success message of 'Updated field MPXVideoEntity0d2a8308b4 field settings.' is present.<br/>
+Click the 'Save settings' button.<br/>
+Switch to the active frame titled 'MPXe6a88c9d39 dialog'.<br/>
+Verify success message of 'Saved MPXVideoEntity0d2a8308b4 configuration.' is present.<br/>
+Enter 'MPXVideoFile9027dfe7ca' in the 'Add new field' text box.<br/>
+Select 'File' from the 'Field Type' drop down list.<br/>
+Select 'Media file selector' from the 'Widget' drop down list.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'MPXVideoFile9027dfe7ca dialog'.<br/>
+Click the 'Public files' radio button.<br/>
+Click the 'Save field settings' button.<br/>
+Switch to the active frame titled 'MPXVideoFile9027dfe7ca dialog'.<br/>
+Verify success message of 'Updated field MPXVideoFile9027dfe7ca field settings.' is present.<br/>
+Chech the 'Publisher7 MPX Video' check box under 'Enabled browser plugins'.<br/>
+Chech the 'MPX Video for Account "DB TV" (2312945284)' check box under 'Allowed remote media types'.<br/>
+Chech the 'mpx:// (mpx videos)' check box under 'Allowed URI schemes'.<br/>
+Click the 'Save settings' button.<br/>
+Switch to the active frame titled 'MPXe6a88c9d39 dialog'.<br/>
+Verify success message of 'Saved MPXVideoFile9027dfe7ca configuration.' is present.<br/>
+Enter 'MPXVideoImage400befb66c' in the 'Add new field' text box.<br/>
+Select 'Image' from the 'Field Type' drop down list.<br/>
+Select 'Media file selector' from the 'Widget' drop down list.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'MPXVideoImage400befb66c dialog'.<br/>
+Click the 'Public files' radio button.<br/>
+Click the 'Save field settings' button.<br/>
+Switch to the active frame titled 'MPXVideoImage400befb66c dialog'.<br/>
+Verify success message of 'Updated field MPXVideoImage400befb66c field settings.' is present.<br/>
+Chech the 'Publisher7 MPX Video' check box under 'Enabled browser plugins'.<br/>
+Chech the 'MPX Video for Account "DB TV" (2312945284)' check box under 'Allowed remote media types'.<br/>
+Chech the 'mpx:// (mpx videos)' check box under 'Allowed URI schemes'.<br/>
+Click the 'Save settings' button.<br/>
+Switch to the active frame titled 'MPXe6a88c9d39 dialog'.<br/>
+Verify success message of 'Saved MPXVideoImage400befb66c configuration.' is present.<br/>
+Enter 'MPXVideoFC6b61023a6d' in the 'Add new field' text box.<br/>
+Select 'Field collection' from the 'Field Type' drop down list.<br/>
+Select 'Embedded' from the 'Widget' drop down list.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'MPXVideoFC6b61023a6d dialog'.<br/>
+Click the 'Save field settings' button.<br/>
+Switch to the active frame titled 'MPXVideoFC6b61023a6d dialog'.<br/>
+Verify success message of 'Updated field MPXVideoFC6b61023a6d field settings.' is present.<br/>
+Click the 'Save settings' button.<br/>
+Switch to the active frame titled 'MPXe6a88c9d39 dialog'.<br/>
+Verify success message of 'Saved MPXVideoFC6b61023a6d configuration.' is present.<br/>
+Click the 'Close Overlay X'.<br/>
+Scroll by '-500'.<br/>
+Mouse over the 'Structure' menu link.<br/>
+Click the 'Field collections' menu link.<br/>
+Switch to the active frame titled 'Field collections dialog'.<br/>
+Click the 'manage fields' link for the field name 'mpxvideofc6b61023a6d'.<br/>
+Switch to the active frame titled 'Field collection field_mpxvideofc6b61023a6d dialog'.<br/>
+Enter 'FCMPXVideoEntity043dd8ed22' in the 'Add new field' text box.<br/>
+Select 'Entity Reference' from the 'Field Type' drop down list.<br/>
+Select 'Select list' from the 'Widget' drop down list.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'FCMPXVideoEntity043dd8ed22 dialog'.<br/>
+Select the 'File' option from the 'Target type' drop down list.<br/>
+Select the 'Simple (with optional filter by bundle)' option from the 'Mode' drop down list.<br/>
+Chech the 'MPX Video for Account "DB TV" (2312945284) ' 'Target bundles' check box.<br/>
+Select the 'Don't sort' option from the 'Sort by' drop down list.<br/>
+Click the 'Save field settings' button.<br/>
+Switch to the active frame titled 'FCMPXVideoEntity043dd8ed22 dialog'.<br/>
+Verify success message of 'Updated field FCMPXVideoEntity043dd8ed22 field settings.' is present.<br/>
+Click the 'Save settings' button.<br/>
+Switch to the active frame titled 'Field collection field_mpxvideofc6b61023a6d dialog'.<br/>
+Verify success message of 'Saved FCMPXVideoEntity043dd8ed22 configuration.' is present.<br/>
+Enter 'FCMPXVideoFile48451492ea' in the 'Add new field' text box.<br/>
+Select 'File' from the 'Field Type' drop down list.<br/>
+Select 'Media file selector' from the 'Widget' drop down list.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'FCMPXVideoFile48451492ea dialog'.<br/>
+Click the 'Public files' radio button.<br/>
+Click the 'Save field settings' button.<br/>
+Switch to the active frame titled 'FCMPXVideoFile48451492ea dialog'.<br/>
+Verify success message of 'Updated field FCMPXVideoFile48451492ea field settings.' is present.<br/>
+Chech the 'Publisher7 MPX Video' check box under 'Enabled browser plugins'.<br/>
+Chech the 'MPX Video for Account "DB TV" (2312945284)' check box under 'Allowed remote media types'.<br/>
+Chech the 'mpx:// (mpx videos)' check box under 'Allowed URI schemes'.<br/>
+Click the 'Save settings' button.<br/>
+Switch to the active frame titled 'Field collection field_mpxvideofc6b61023a6d dialog'.<br/>
+Verify success message of 'Saved FCMPXVideoFile48451492ea configuration.' is present.<br/>
+Enter 'FCMPXVideoImagedf84dd4d3b' in the 'Add new field' text box.<br/>
+Select 'Image' from the 'Field Type' drop down list.<br/>
+Select 'Media file selector' from the 'Widget' drop down list.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'FCMPXVideoImagedf84dd4d3b dialog'.<br/>
+Click the 'Public files' radio button.<br/>
+Click the 'Save field settings' button.<br/>
+Switch to the active frame titled 'FCMPXVideoImagedf84dd4d3b dialog'.<br/>
+Verify success message of 'Updated field FCMPXVideoImagedf84dd4d3b field settings.' is present.<br/>
+Chech the 'Publisher7 MPX Video' check box under 'Enabled browser plugins'.<br/>
+Chech the 'MPX Video for Account "DB TV" (2312945284)' check box under 'Allowed remote media types'.<br/>
+Chech the 'mpx:// (mpx videos)' check box under 'Allowed URI schemes'.<br/>
+Click the 'Save settings' button.<br/>
+Switch to the active frame titled 'Field collection field_mpxvideofc6b61023a6d dialog'.<br/>
+Verify success message of 'Saved FCMPXVideoImagedf84dd4d3b configuration.' is present.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'Field collection field_mpxvideofc6b61023a6d dialog'.<br/>
+Verify success message of 'Your settings have been saved.' is present.<br/>
+Click the 'Close Overlay X'.<br/>
+Scroll by '-500'.<br/>
+Mouse over the 'Structure' menu link.<br/>
+Mouse over the 'Content types' menu link.<br/>
+Mouse over the 'MPXe6a88c9d39' menu link.<br/>
+Click the 'Manage fields' menu link.<br/>
+Switch to the active frame titled 'MPXe6a88c9d39 dialog'.<br/>
+Enter 'MPXPlayerEntity2692cc019a' in the 'Add new field' text box.<br/>
+Select 'Entity Reference' from the 'Field Type' drop down list.<br/>
+Select 'Select list' from the 'Widget' drop down list.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'MPXPlayerEntity2692cc019a dialog'.<br/>
+Select the 'File' option from the 'Target type' drop down list.<br/>
+Select the 'Simple (with optional filter by bundle)' option from the 'Mode' drop down list.<br/>
+Chech the 'MPX Player' 'Target bundles' check box.<br/>
+Select the 'Don't sort' option from the 'Sort by' drop down list.<br/>
+Click the 'Save field settings' button.<br/>
+Switch to the active frame titled 'MPXPlayerEntity2692cc019a dialog'.<br/>
+Verify success message of 'Updated field MPXPlayerEntity2692cc019a field settings.' is present.<br/>
+Click the 'Save settings' button.<br/>
+Switch to the active frame titled 'MPXe6a88c9d39 dialog'.<br/>
+Verify success message of 'Saved MPXPlayerEntity2692cc019a configuration.' is present.<br/>
+Enter 'MPXPlayerFile2d1875422b' in the 'Add new field' text box.<br/>
+Select 'File' from the 'Field Type' drop down list.<br/>
+Select 'Media file selector' from the 'Widget' drop down list.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'MPXPlayerFile2d1875422b dialog'.<br/>
+Click the 'Public files' radio button.<br/>
+Click the 'Save field settings' button.<br/>
+Switch to the active frame titled 'MPXPlayerFile2d1875422b dialog'.<br/>
+Verify success message of 'Updated field MPXPlayerFile2d1875422b field settings.' is present.<br/>
+Chech the 'mpxPlayers' check box under 'Enabled browser plugins'.<br/>
+Chech the 'MPX Player' check box under 'Allowed remote media types'.<br/>
+Click the 'Save settings' button.<br/>
+Switch to the active frame titled 'MPXe6a88c9d39 dialog'.<br/>
+Verify success message of 'Saved MPXPlayerFile2d1875422b configuration.' is present.<br/>
+Enter 'MPXPlayerImage833741a933' in the 'Add new field' text box.<br/>
+Select 'Image' from the 'Field Type' drop down list.<br/>
+Select 'Media file selector' from the 'Widget' drop down list.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'MPXPlayerImage833741a933 dialog'.<br/>
+Click the 'Public files' radio button.<br/>
+Click the 'Save field settings' button.<br/>
+Switch to the active frame titled 'MPXPlayerImage833741a933 dialog'.<br/>
+Verify success message of 'Updated field MPXPlayerImage833741a933 field settings.' is present.<br/>
+Chech the 'mpxPlayers' check box under 'Enabled browser plugins'.<br/>
+Chech the 'MPX Player' check box under 'Allowed remote media types'.<br/>
+Click the 'Save settings' button.<br/>
+Switch to the active frame titled 'MPXe6a88c9d39 dialog'.<br/>
+Verify success message of 'Saved MPXPlayerImage833741a933 configuration.' is present.<br/>
+Enter 'MPXPlayerFCbbcd9e885f' in the 'Add new field' text box.<br/>
+Select 'Field collection' from the 'Field Type' drop down list.<br/>
+Select 'Embedded' from the 'Widget' drop down list.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'MPXPlayerFCbbcd9e885f dialog'.<br/>
+Click the 'Save field settings' button.<br/>
+Switch to the active frame titled 'MPXPlayerFCbbcd9e885f dialog'.<br/>
+Verify success message of 'Updated field MPXPlayerFCbbcd9e885f field settings.' is present.<br/>
+Click the 'Save settings' button.<br/>
+Switch to the active frame titled 'MPXe6a88c9d39 dialog'.<br/>
+Verify success message of 'Saved MPXPlayerFCbbcd9e885f configuration.' is present.<br/>
+Click the 'Close Overlay X'.<br/>
+Scroll by '-500'.<br/>
+Mouse over the 'Structure' menu link.<br/>
+Click the 'Field collections' menu link.<br/>
+Switch to the active frame titled 'Field collections dialog'.<br/>
+Click the 'manage fields' link for the field name 'mpxplayerfcbbcd9e885f'.<br/>
+Switch to the active frame titled 'Field collection field_mpxplayerfcbbcd9e885f dialog'.<br/>
+Enter 'FCMPXPlayerEntity09177da54a' in the 'Add new field' text box.<br/>
+Select 'Entity Reference' from the 'Field Type' drop down list.<br/>
+Select 'Select list' from the 'Widget' drop down list.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'FCMPXPlayerEntity09177da54a dialog'.<br/>
+Select the 'File' option from the 'Target type' drop down list.<br/>
+Select the 'Simple (with optional filter by bundle)' option from the 'Mode' drop down list.<br/>
+Chech the 'MPX Player' 'Target bundles' check box.<br/>
+Select the 'Don't sort' option from the 'Sort by' drop down list.<br/>
+Click the 'Save field settings' button.<br/>
+Switch to the active frame titled 'FCMPXPlayerEntity09177da54a dialog'.<br/>
+Verify success message of 'Updated field FCMPXPlayerEntity09177da54a field settings.' is present.<br/>
+Click the 'Save settings' button.<br/>
+Switch to the active frame titled 'Field collection field_mpxplayerfcbbcd9e885f dialog'.<br/>
+Verify success message of 'Saved FCMPXPlayerEntity09177da54a configuration.' is present.<br/>
+Enter 'FCMPXPlayerFile3d50f7b4b0' in the 'Add new field' text box.<br/>
+Select 'File' from the 'Field Type' drop down list.<br/>
+Select 'Media file selector' from the 'Widget' drop down list.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'FCMPXPlayerFile3d50f7b4b0 dialog'.<br/>
+Click the 'Public files' radio button.<br/>
+Click the 'Save field settings' button.<br/>
+Switch to the active frame titled 'FCMPXPlayerFile3d50f7b4b0 dialog'.<br/>
+Verify success message of 'Updated field FCMPXPlayerFile3d50f7b4b0 field settings.' is present.<br/>
+Chech the 'mpxPlayers' check box under 'Enabled browser plugins'.<br/>
+Chech the 'MPX Player' check box under 'Allowed remote media types'.<br/>
+Click the 'Save settings' button.<br/>
+Switch to the active frame titled 'Field collection field_mpxplayerfcbbcd9e885f dialog'.<br/>
+Verify success message of 'Saved FCMPXPlayerFile3d50f7b4b0 configuration.' is present.<br/>
+Enter 'FCMPXPlayerImage8792488dad' in the 'Add new field' text box.<br/>
+Select 'Image' from the 'Field Type' drop down list.<br/>
+Select 'Media file selector' from the 'Widget' drop down list.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'FCMPXPlayerImage8792488dad dialog'.<br/>
+Click the 'Public files' radio button.<br/>
+Click the 'Save field settings' button.<br/>
+Switch to the active frame titled 'FCMPXPlayerImage8792488dad dialog'.<br/>
+Verify success message of 'Updated field FCMPXPlayerImage8792488dad field settings.' is present.<br/>
+Chech the 'mpxPlayers' check box under 'Enabled browser plugins'.<br/>
+Chech the 'MPX Player' check box under 'Allowed remote media types'.<br/>
+Click the 'Save settings' button.<br/>
+Switch to the active frame titled 'Field collection field_mpxplayerfcbbcd9e885f dialog'.<br/>
+Verify success message of 'Saved FCMPXPlayerImage8792488dad configuration.' is present.<br/>
+Click the 'Close Overlay X'.<br/>
+Scroll by '-500'.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Add content' menu link.<br/>
+Click the 'MPXe6a88c9d39' menu link.<br/>
+Switch to the active frame titled 'Create MPXe6a88c9d39 dialog'.<br/>
+Verify the text 'MPXVideoEntity0d2a8308b4' is present on the page.<br/>
+Verify the text 'MPXVideoFile9027dfe7ca' is present on the page.<br/>
+Verify the text 'MPXVideoImage400befb66c' is present on the page.<br/>
+Verify the text 'MPXVIDEOFC6B61023A6D' is present on the page.<br/>
+Verify the text 'FCMPXVideoEntity043dd8ed22' is present on the page.<br/>
+Verify the text 'FCMPXVideoFile48451492ea' is present on the page.<br/>
+Verify the text 'FCMPXVideoImagedf84dd4d3b' is present on the page.<br/>
+Verify the text 'MPXPlayerEntity2692cc019a' is present on the page.<br/>
+Verify the text 'MPXPlayerFile2d1875422b' is present on the page.<br/>
+Verify the text 'MPXPlayerImage833741a933' is present on the page.<br/>
+Verify the text 'MPXPLAYERFCBBCD9E885F' is present on the page.<br/>
+Verify the text 'FCMPXPlayerEntity09177da54a' is present on the page.<br/>
+Verify the text 'FCMPXPlayerFile3d50f7b4b0' is present on the page.<br/>
+Verify the text 'FCMPXPlayerImage8792488dad' is present on the page.<br/>
+Enter 'NewMPXContent2e59774a02' in the 'Title' text box.<br/>
+Select the 'AutomationDefault' from the 'MPXVideoEntity0d2a8308b4' drop down list.<br/>
+Click the 'Select' button for 'MPXVideoFile9027dfe7ca'.<br/>
+Switch to the select file frame.<br/>
+Enter 'AutomationDefault' in the 'Title' text box.<br/>
+Click the 'Apply' button.<br/>
+Wait for the file search 'spinner' image to be present.<br/>
+Wait for the file search 'spinner' image to not be present, indicating image search is complete.<br/>
+Click search file result title 'AutomationDefault'.<br/>
+Click on the 'Submit' button.<br/>
+Switch to the active frame titled 'Create MPXe6a88c9d39 dialog'.<br/>
+Click the 'Select' button for 'MPXVideoImage400befb66c'.<br/>
+Switch to the select file frame.<br/>
+Enter 'AutomationDefault' in the 'Title' text box.<br/>
+Click the 'Apply' button.<br/>
+Wait for the file search 'spinner' image to be present.<br/>
+Wait for the file search 'spinner' image to not be present, indicating image search is complete.<br/>
+Click search file result title 'AutomationDefault'.<br/>
+Click on the 'Submit' button.<br/>
+Switch to the active frame titled 'Create MPXe6a88c9d39 dialog'.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'MPXe6a88c9d39 NewMPXContent2e59774a02 has been created.' is present.<br/>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m6">com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXLibraryPublicID:EnhanceMPXLibraryPublicID_TC2476</h2>
+<div>
+Open url 'http://update.devi1.nbcupublisher7.publisher7.com'.<br/>
+Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
+Enter 'pa55word' in the 'Password' text box.<br/>
+Click the 'Login' button.<br/>
+Mouse over the 'Configuration' menu link.<br/>
+Mouse over the 'Media' menu link.<br/>
+Click the 'Media: thePlatform mpx settings' menu link.<br/>
+Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.<br/>
+Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.<br/>
+MPX is already configured.<br/>
+Click the 'Close Overlay X'.<br/>
+Scroll by '-500'.<br/>
+Mouse over the 'Configuration' menu link.<br/>
+Mouse over the 'Media' menu link.<br/>
+Click the 'Media: thePlatform mpx settings' menu link.<br/>
+Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.<br/>
+Get all the selected import account options and store to a list.<br/>
+Click the 'Close Overlay X'.<br/>
+Scroll by '-500'.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Files' menu link.<br/>
+Click the 'mpxPlayers' menu link.<br/>
+Switch to the active frame titled 'Content dialog'.<br/>
+Verify that the search result set column order matches as expected.<br/>
+Get the text of the first search result set item.<br/>
+Get the number of results in the result set.<br/>
+Enter title AutomationPlayer1.<br/>
+Click the 'Apply' button.<br/>
+Verify that the 'PUBLIC ID' equals 'VeXC0F2L9wg2' for player titled 'AutomationPlayer1'.<br/>
+Click the 'Reset' button.<br/>
+Click the Public ID column header link for column sorting.<br/>
+Get the number of results in the result set.<br/>
+Enter 'VeXC0F2L9wg2' in the 'Public ID' text box.<br/>
+Click the 'Apply' button.<br/>
+Get the text of the first search result set item.<br/>
+Click the 'Reset' button.<br/>
+Get the text of the first search result set item.<br/>
+Get the number of results in the result set.<br/>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m7">com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides:MPXVideosSchedulingVerificationInitialOverrides_Test</h2>
+<div>
+Open url 'http://update.devi1.nbcupublisher7.publisher7.com'.<br/>
+Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
+Enter 'pa55word' in the 'Password' text box.<br/>
+Click the 'Login' button.<br/>
+Mouse over the 'Configuration' menu link.<br/>
+Mouse over the 'Media' menu link.<br/>
+Click the 'Media: thePlatform mpx settings' menu link.<br/>
+Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.<br/>
+Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.<br/>
+MPX is already configured.<br/>
+Click the 'Close Overlay X'.<br/>
+Scroll by '-500'.<br/>
+Mouse over the 'Configuration' menu link.<br/>
+Mouse over the 'Media' menu link.<br/>
+Click the 'Media: thePlatform mpx settings' menu link.<br/>
+Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.<br/>
+Get all the selected import account options and store to a list.<br/>
+Click the 'Close Overlay X'.<br/>
+Scroll by '-500'.<br/>
+Mouse over the 'Structure' menu link.<br/>
+Mouse over the 'File types' menu link.<br/>
+Click the 'MPX Video for Account "DB TV" (2312945284)' menu link.<br/>
+Switch to the active frame titled 'MPX Video for Account &quot;DB TV&quot; (2312945284) dialog'.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Files' menu link.<br/>
+Click the 'mpxMedia' menu link.<br/>
+Switch to the active frame titled 'Content dialog'.<br/>
+Enter title AutomationDefault.<br/>
+Click the 'Apply' button.<br/>
+Get the title text of every result in the search result set.<br/>
+For each expected result, assert it is present in the result set.<br/>
+Click the first search title link in the search result set.<br/>
+Click the 'Edit' link in the work bench.<br/>
+Switch to the active frame titled 'Edit mpx_video_1 AutomationDefault dialog'.<br/>
+Click the 'Save' button.<br/>
+Verify the text 'AutomationDefault' is present on the page.<br/>
+Verify the text 'MPX Released File Public IDs:' is present on the page.<br/>
+Verify the text 'MPX Media Default Released File Public ID:' is present on the page.<br/>
+Verify the text 'MPX Media Categories:' is present on the page.<br/>
+Verify the text 'Series' is present on the page.<br/>
+Verify the text 'Show' is present on the page.<br/>
+Verify the text 'MPX Media Description:' is present on the page.<br/>
+Verify the text 'Automation 1 example test' is present on the page.<br/>
+Verify the text 'MPX Media Author:' is present on the page.<br/>
+Verify the text 'Pub7 Content Provider' is present on the page.<br/>
+Verify the text 'MPX Media Air Date:' is present on the page.<br/>
+Verify the text 'Wednesday, January 8, 2014' is present on the page.<br/>
+Verify the text 'MPX Media Keywords:' is present on the page.<br/>
+Verify the text 'mpx, metadata, field, override' is present on the page.<br/>
+Verify the text 'MPX Media Copyright:' is present on the page.<br/>
+Verify the text 'NBCUNI QA' is present on the page.<br/>
+Verify the text 'MPX Media Film Advisory Board Rating:' is present on the page.<br/>
+Verify the text 'pd' is present on the page.<br/>
+Verify the text 'MPX Media MPAA Rating:' is present on the page.<br/>
+Verify the text 'MPX Media MPAA Sub-Ratings:' is present on the page.<br/>
+Verify the text 'v' is present on the page.<br/>
+Verify the text 'MPX Media V-Chip Rating:' is present on the page.<br/>
+Verify the text 'tv-y7' is present on the page.<br/>
+Verify the text 'MPX Media V-Chip Sub-Ratings:' is present on the page.<br/>
+Verify the text 'l' is present on the page.<br/>
+Verify the text 'MPX Media Exclude Selected Countries:' is present on the page.<br/>
+Verify the text 'Prevent Playback in Selected Countries' is present on the page.<br/>
+Verify the text 'MPX Media Available Date:' is NOT present on the page.<br/>
+Verify the text 'MPX Media Expiration Date:' is NOT present on the page.<br/>
+Click the 'Edit' link in the work bench.<br/>
+Switch to the active frame titled 'Edit mpx_video_1 AutomationDefault dialog'.<br/>
+Verify that the 'Media Availabe Date' text box is disabled and has no value.<br/>
+Verify that the 'Media Expiration Date' text box is disabled and has no value.<br/>
+Click the 'Override' checkbox for the 'Available Date' check box.<br/>
+Click the 'Override' checkbox for the 'Expiration Date' check box.<br/>
+Enter '08/05/2014' in the 'Available Date' text box.<br/>
+Enter '05:00pm' in the 'Available Time' text box.<br/>
+Enter '07/28/2017' in the 'Expiration Date' text box.<br/>
+Enter '05:00pm' in the 'Expiration Time' text box.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'MPX Video for Account "DB TV" (2312945284) AutomationDefault has been updated.' is present.<br/>
+Verify the text 'MPX Media Available Date:' is present on the page.<br/>
+Verify the text 'Tuesday, August 5, 2014' is present on the page.<br/>
+Verify the text 'MPX Media Expiration Date: ' is present on the page.<br/>
+Verify the text 'Friday, July 28, 2017' is present on the page.<br/>
+Click the 'Edit' link in the work bench.<br/>
+Switch to the active frame titled 'Edit mpx_video_1 AutomationDefault dialog'.<br/>
+Un-check the 'Override' checkbox for the 'Available Date' check box.<br/>
+Un-check the 'Override' checkbox for the 'Expiration Date' check box.<br/>
+Verify that the 'Media Availabe Date' text box is disabled and has no value.<br/>
+Verify that the 'Media Expiration Date' text box is disabled and has no value.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'MPX Video for Account "DB TV" (2312945284) AutomationDefault has been updated.' is present.<br/>
+Verify the text 'AutomationDefault' is present on the page.<br/>
+Verify the text 'MPX Released File Public IDs:' is present on the page.<br/>
+Verify the text 'MPX Media Default Released File Public ID:' is present on the page.<br/>
+Verify the text 'MPX Media Categories:' is present on the page.<br/>
+Verify the text 'Series' is present on the page.<br/>
+Verify the text 'Show' is present on the page.<br/>
+Verify the text 'MPX Media Description:' is present on the page.<br/>
+Verify the text 'Automation 1 example test' is present on the page.<br/>
+Verify the text 'MPX Media Author:' is present on the page.<br/>
+Verify the text 'Pub7 Content Provider' is present on the page.<br/>
+Verify the text 'MPX Media Air Date:' is present on the page.<br/>
+Verify the text 'Wednesday, January 8, 2014' is present on the page.<br/>
+Verify the text 'MPX Media Keywords:' is present on the page.<br/>
+Verify the text 'mpx, metadata, field, override' is present on the page.<br/>
+Verify the text 'MPX Media Copyright:' is present on the page.<br/>
+Verify the text 'NBCUNI QA' is present on the page.<br/>
+Verify the text 'MPX Media Film Advisory Board Rating:' is present on the page.<br/>
+Verify the text 'pd' is present on the page.<br/>
+Verify the text 'MPX Media MPAA Rating:' is present on the page.<br/>
+Verify the text 'MPX Media MPAA Sub-Ratings:' is present on the page.<br/>
+Verify the text 'v' is present on the page.<br/>
+Verify the text 'MPX Media V-Chip Rating:' is present on the page.<br/>
+Verify the text 'tv-y7' is present on the page.<br/>
+Verify the text 'MPX Media V-Chip Sub-Ratings:' is present on the page.<br/>
+Verify the text 'l' is present on the page.<br/>
+Verify the text 'MPX Media Exclude Selected Countries:' is present on the page.<br/>
+Verify the text 'Prevent Playback in Selected Countries' is present on the page.<br/>
+Verify the text 'MPX Media Available Date:' is NOT present on the page.<br/>
+Verify the text 'MPX Media Expiration Date:' is NOT present on the page.<br/>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m8">com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.EnhanceContentLibraryTable.EnhanceContentLibraryTable:EnhanceContentLibraryTable_Test</h2>
+<div>
+Open url 'http://update.devi1.nbcupublisher7.publisher7.com'.<br/>
+Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
+Enter 'pa55word' in the 'Password' text box.<br/>
+Click the 'Login' button.<br/>
+Mouse over the 'Configuration' menu link.<br/>
+Mouse over the 'Media' menu link.<br/>
+Click the 'Media: thePlatform mpx settings' menu link.<br/>
+Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.<br/>
+Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.<br/>
+Click the 'Close Overlay X'.<br/>
+Scroll by '-500'.<br/>
+Mouse over the 'Content' menu link.<br/>
+Click the 'Files' menu link.<br/>
+Switch to the active frame titled 'Content dialog'.<br/>
+Verify that the search result set column order matches as expected.<br/>
+Verify the text 'We are sorry, no video available' is NOT present on the page.<br/>
+Get the number of results in the result set.<br/>
+Click the Title column header link for column sorting.<br/>
+Switch to the active frame titled 'Content dialog'.<br/>
+Get the number of results in the result set.<br/>
+Click the Type column header link for column sorting.<br/>
+Switch to the active frame titled 'Content dialog'.<br/>
+Get the number of results in the result set.<br/>
+Click the Size column header link for column sorting.<br/>
+Switch to the active frame titled 'Content dialog'.<br/>
+Get the number of results in the result set.<br/>
+Click the Uploaded By column header link for column sorting.<br/>
+Switch to the active frame titled 'Content dialog'.<br/>
+Get the number of results in the result set.<br/>
+Click the Upload date column header link for column sorting.<br/>
+Switch to the active frame titled 'Content dialog'.<br/>
+Get the number of results in the result set.<br/>
+Click the Upload date column header link for column sorting.<br/>
+Switch to the active frame titled 'Content dialog'.<br/>
+Get the number of results in the result set.<br/>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m9">com.nbcuni.test.publisher.tests.Video.Player.SelectVideoPlayerPerVideoFile:SelectVideoPlayerPerVideoFile_Test</h2>
+<div>
+Open url 'http://update.devi1.nbcupublisher7.publisher7.com'.<br/>
+Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
+Enter 'pa55word' in the 'Password' text box.<br/>
+Click the 'Login' button.<br/>
+Mouse over the 'Configuration' menu link.<br/>
+Mouse over the 'Media' menu link.<br/>
+Click the 'Media: thePlatform mpx settings' menu link.<br/>
+Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.<br/>
+Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.<br/>
+MPX is already configured.<br/>
+Click the 'Close Overlay X'.<br/>
+Scroll by '-500'.<br/>
+Mouse over the 'Configuration' menu link.<br/>
+Mouse over the 'Media' menu link.<br/>
+Click the 'Media: thePlatform mpx settings' menu link.<br/>
+Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.<br/>
+Get all the selected import account options and store to a list.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Files' menu link.<br/>
+Click the 'mpxMedia' menu link.<br/>
+Switch to the active frame titled 'Content dialog'.<br/>
+Enter title AutomationDefault.<br/>
+Click the 'Apply' button.<br/>
+Click the 'Edit' link for content item titled 'AutomationDefault.<br/>
+Verify the 'Video Player' drop down list is present and has more than one option in the list.<br/>
+Select '--- Default Player ---' from the 'Video Player' drop down list.<br/>
+Click the 'Save' button.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Files' menu link.<br/>
+Click the 'mpxMedia' menu link.<br/>
+Enter title AutomationDefault.<br/>
+Click the 'Apply' button.<br/>
+Click the 'Edit' link for content item titled 'AutomationDefault.<br/>
+Select 'VeXC0F2L9wg2' from the 'Video Player' drop down list.<br/>
+Click the 'Save' button.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Files' menu link.<br/>
+Click the 'mpxMedia' menu link.<br/>
+Enter title AutomationDefault.<br/>
+Click the 'Apply' button.<br/>
+Click the 'Edit' link for content item titled 'AutomationDefault.<br/>
+Verify 'VeXC0F2L9wg2' is selected as the 'Video Player'.<br/>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m10">com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification:DefaultPlayerOptionsVerification_Test</h2>
+<div>
+Open url 'http://update.devi1.nbcupublisher7.publisher7.com'.<br/>
+Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
+Enter 'pa55word' in the 'Password' text box.<br/>
+Click the 'Login' button.<br/>
+Mouse over the 'Configuration' menu link.<br/>
+Mouse over the 'Media' menu link.<br/>
+Click the 'Media: thePlatform mpx settings' menu link.<br/>
+Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.<br/>
+Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.<br/>
+MPX is already configured.<br/>
+Click the 'Close Overlay X'.<br/>
+Scroll by '-500'.<br/>
+Mouse over the 'Configuration' menu link.<br/>
+Mouse over the 'Media' menu link.<br/>
+Click the 'Media: thePlatform mpx settings' menu link.<br/>
+Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.<br/>
+Get all the selected import account options and store to a list.<br/>
+Click the 'Close Overlay X'.<br/>
+Scroll by '-500'.<br/>
+Mouse over the 'Structure' menu link.<br/>
+Click the 'File types' menu link.<br/>
+Switch to the active frame titled 'File types dialog'.<br/>
+Click the 'DB TV manage file display' link.<br/>
+Switch to the active frame titled 'MPX Video for Account &quot;DB TV&quot; (2312945284) dialog'.<br/>
+Click the 'Pub MPX Video' checkbox<br/>
+Click the 'Pub MPX Video' link.<br/>
+Select the 'AutomationPlayer2' player from the 'Pub MPX Video Player for Account...' drop down list.<br/>
+Click the 'Save configuration' button.<br/>
+Verify success message of 'Your settings have been saved.' is present.<br/>
+Click the 'Close Overlay X'.<br/>
+Scroll by '-500'.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Files' menu link.<br/>
+Click the 'mpxMedia' menu link.<br/>
+Switch to the active frame titled 'Content dialog'.<br/>
+Enter title AutomationDefault.<br/>
+Click the 'Apply' button.<br/>
+Click the first search title link in the search result set.<br/>
+Verify the mpx video player frame is present.<br/>
+Verify the mpx video player frame source does NOT contain 'embed'.<br/>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h1>All Consecutive Web Tests</h1>
+<h2 id="m11">com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling:MPXVideosSchedulingVerificationScheduling_Test</h2>
+<div>
+<h3>Test Messages</h3>
+Open url 'http://update.devi1.nbcupublisher7.publisher7.com'.<br/>
+Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
+Enter 'pa55word' in the 'Password' text box.<br/>
+Click the 'Login' button.<br/>
+Mouse over the 'Configuration' menu link.<br/>
+Mouse over the 'Media' menu link.<br/>
+Click the 'Media: thePlatform mpx settings' menu link.<br/>
+Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.<br/>
+Get all the selected import account options and store to a list.<br/>
+Click the 'Close Overlay X'.<br/>
+Scroll by '-500'.<br/>
+Mouse over the 'Structure' menu link.<br/>
+Mouse over the 'File types' menu link.<br/>
+Click the 'MPX Video for Account "DB TV" (2312945284)' menu link.<br/>
+Switch to the active frame titled 'MPX Video for Account &quot;DB TV&quot; (2312945284) dialog'.<br/>
+Open the mpx platform.<br/>
+Enter 'mpx/AdminPub7QA' in the 'Username' text box.<br/>
+Enter 'Pa55word' in the 'Password' text box.<br/>
+Click the 'Login' button.<br/>
+Click the 'Upload' button.<br/>
+Click the 'Choose Files' button.<br/>
+Click the 'Movies' button in the OS Upload dialog.<br/>
+Click the Test Movie in th OS Upload dialog.<br/>
+Click the 'Open' button.<br/>
+Click the 'Upload' button in the Upload dialog.<br/>
+Enter '7/09/2014 12:00 AM' in the 'Available Date' text box.<br/>
+Enter 'Automation665ec44368' in the 'Title' text box.<br/>
+Enter '7/22/2014 12:00 AM' in the 'Expiration Date' text box.<br/>
+Click the 'Save' button.<br/>
+Click the 'Publish' button.<br/>
+Click the 'Publish to Pub 7 Primary' check box.<br/>
+Click the 'Publish' button from the upload dialog.<br/>
+Open url 'http://update.devi1.nbcupublisher7.publisher7.com'.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Files' menu link.<br/>
+Click the 'mpxMedia' menu link.<br/>
+Switch to the active frame titled 'Content dialog'.<br/>
+Enter title Automation665ec44368.<br/>
+Click the 'Apply' button.<br/>
+Get the text of the first search result set item.<br/>
+Get the title text of every result in the search result set.<br/>
+For each expected result, assert it is present in the result set.<br/>
+Verify the text '07/09/2014 - 04:00 AM' is present on the page.<br/>
+Verify the text '07/22/2014 - 04:00 AM' is present on the page.<br/>
+Verify the text 'Expired' is present on the page.<br/>
+Click the first search title link in the search result set.<br/>
+Verify the text 'Automation665ec44368' is present on the page.<br/>
+Verify the text 'Wednesday, July 9, 2014 - 04:00' is present on the page.<br/>
+Verify the text 'Tuesday, July 22, 2014 - 04:00' is present on the page.<br/>
+Click the 'Edit' link in the work bench.<br/>
+Switch to the active frame titled 'Edit mpx_video_1 Automation665ec44368 dialog'.<br/>
+Verify the value of the 'Available Date' text box equals '07/09/2014'.<br/>
+Verify the value of the 'Expiration Date' text box equals '07/22/2014'.<br/>
+Click the 'Schedule' tab.<br/>
+Switch to the active frame titled 'Automation665ec44368 dialog'.<br/>
+Verify the scheduled revision table is empty.<br/>
+Open the mpx platform.<br/>
+Enter 'Automation665ec44368' in the 'Search' text box.<br/>
+Click the 'Search by Title' link.<br/>
+Enter '7/29/2014 12:00 AM' in the 'Available Date' text box.<br/>
+Enter '7/29/2015 12:00 AM' in the 'Expiration Date' text box.<br/>
+Click the 'Save' button.<br/>
+Click the 'Additional Options' arrow.<br/>
+Click the 'Publish Update' link.<br/>
+Click the 'Publish to Pub 7 Primary' check box.<br/>
+Click the 'Update' button.<br/>
+Open url 'http://update.devi1.nbcupublisher7.publisher7.com'.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Files' menu link.<br/>
+Click the 'mpxMedia' menu link.<br/>
+Switch to the active frame titled 'Content dialog'.<br/>
+Enter title Automation665ec44368.<br/>
+Click the 'Apply' button.<br/>
+Get the title text of every result in the search result set.<br/>
+For each expected result, assert it is present in the result set.<br/>
+Verify the text '07/29/2014 - 04:00 AM' is present on the page.<br/>
+Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/MPXVideosSchedulingVerificationScheduling_Test_072914045246PM.png <br/>
+<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/MPXVideosSchedulingVerificationScheduling_Test_072914045246PM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/MPXVideosSchedulingVerificationScheduling_Test_072914045246PM.png' height='500' width='500'/> </a><br/>
+Cache was cleared on test failure<br/>
+<h3>Failure</h3>
+<div class="stacktrace">java.lang.AssertionError: The text &apos;07/29/2014 - 04:00 AM&apos; is not present on the page.
+	at com.nbcuni.test.publisher.pageobjects.Content.ContentParent.VerifyPageContentPresent(ContentParent.java:136)
+	at com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling.MPXVideosSchedulingVerificationScheduling_Test(MPXVideosSchedulingVerificationScheduling.java:254)
+... Removed 26 stack frames</div>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m12">com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling:MPXVideosSchedulingVerificationScheduling_Test</h2>
+<div>
+<h3>Test Messages</h3>
+Open url 'http://update.devi1.nbcupublisher7.publisher7.com'.<br/>
+Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
+Enter 'pa55word' in the 'Password' text box.<br/>
+Click the 'Login' button.<br/>
+Mouse over the 'Configuration' menu link.<br/>
+Mouse over the 'Media' menu link.<br/>
+Click the 'Media: thePlatform mpx settings' menu link.<br/>
+Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.<br/>
+Get all the selected import account options and store to a list.<br/>
+Click the 'Close Overlay X'.<br/>
+Scroll by '-500'.<br/>
+Mouse over the 'Structure' menu link.<br/>
+Mouse over the 'File types' menu link.<br/>
+Click the 'MPX Video for Account "DB TV" (2312945284)' menu link.<br/>
+Switch to the active frame titled 'MPX Video for Account &quot;DB TV&quot; (2312945284) dialog'.<br/>
+Open the mpx platform.<br/>
+Enter 'mpx/AdminPub7QA' in the 'Username' text box.<br/>
+Enter 'Pa55word' in the 'Password' text box.<br/>
+Click the 'Login' button.<br/>
+Click the 'Upload' button.<br/>
+Click the 'Choose Files' button.<br/>
+Click the 'Movies' button in the OS Upload dialog.<br/>
+Click the Test Movie in th OS Upload dialog.<br/>
+Click the 'Open' button.<br/>
+Click the 'Upload' button in the Upload dialog.<br/>
+Enter '7/09/2014 12:00 AM' in the 'Available Date' text box.<br/>
+Enter 'Automationad02a0463f' in the 'Title' text box.<br/>
+Enter '7/22/2014 12:00 AM' in the 'Expiration Date' text box.<br/>
+Click the 'Save' button.<br/>
+Click the 'Publish' button.<br/>
+Click the 'Publish to Pub 7 Primary' check box.<br/>
+Click the 'Publish' button from the upload dialog.<br/>
+Open url 'http://update.devi1.nbcupublisher7.publisher7.com'.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Files' menu link.<br/>
+Click the 'mpxMedia' menu link.<br/>
+Switch to the active frame titled 'Content dialog'.<br/>
+Enter title Automationad02a0463f.<br/>
+Click the 'Apply' button.<br/>
+Get the text of the first search result set item.<br/>
+Get the title text of every result in the search result set.<br/>
+For each expected result, assert it is present in the result set.<br/>
+Verify the text '07/09/2014 - 04:00 AM' is present on the page.<br/>
+Verify the text '07/22/2014 - 04:00 AM' is present on the page.<br/>
+Verify the text 'Expired' is present on the page.<br/>
+Click the first search title link in the search result set.<br/>
+Verify the text 'Automationad02a0463f' is present on the page.<br/>
+Verify the text 'Wednesday, July 9, 2014 - 04:00' is present on the page.<br/>
+Verify the text 'Tuesday, July 22, 2014 - 04:00' is present on the page.<br/>
+Click the 'Edit' link in the work bench.<br/>
+Switch to the active frame titled 'Edit mpx_video_1 Automationad02a0463f dialog'.<br/>
+Verify the value of the 'Available Date' text box equals '07/09/2014'.<br/>
+Verify the value of the 'Expiration Date' text box equals '07/22/2014'.<br/>
+Click the 'Schedule' tab.<br/>
+Switch to the active frame titled 'Automationad02a0463f dialog'.<br/>
+Verify the scheduled revision table is empty.<br/>
+Open the mpx platform.<br/>
+Enter 'Automationad02a0463f' in the 'Search' text box.<br/>
+Click the 'Search by Title' link.<br/>
+Enter '7/29/2014 12:00 AM' in the 'Available Date' text box.<br/>
+Enter '7/29/2015 12:00 AM' in the 'Expiration Date' text box.<br/>
+Click the 'Save' button.<br/>
+Click the 'Additional Options' arrow.<br/>
+Click the 'Publish Update' link.<br/>
+Click the 'Publish to Pub 7 Primary' check box.<br/>
+Click the 'Update' button.<br/>
+Open url 'http://update.devi1.nbcupublisher7.publisher7.com'.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Files' menu link.<br/>
+Click the 'mpxMedia' menu link.<br/>
+Switch to the active frame titled 'Content dialog'.<br/>
+Enter title Automationad02a0463f.<br/>
+Click the 'Apply' button.<br/>
+Get the title text of every result in the search result set.<br/>
+For each expected result, assert it is present in the result set.<br/>
+Verify the text '07/29/2014 - 04:00 AM' is present on the page.<br/>
+Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/MPXVideosSchedulingVerificationScheduling_Test_072914045538PM.png <br/>
+<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/MPXVideosSchedulingVerificationScheduling_Test_072914045538PM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/MPXVideosSchedulingVerificationScheduling_Test_072914045538PM.png' height='500' width='500'/> </a><br/>
+Cache was cleared on test failure<br/>
+<h3>Failure</h3>
+<div class="stacktrace">java.lang.AssertionError: The text &apos;07/29/2014 - 04:00 AM&apos; is not present on the page.
+	at com.nbcuni.test.publisher.pageobjects.Content.ContentParent.VerifyPageContentPresent(ContentParent.java:136)
+	at com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling.MPXVideosSchedulingVerificationScheduling_Test(MPXVideosSchedulingVerificationScheduling.java:254)
+... Removed 26 stack frames</div>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m13">com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling:MPXVideosSchedulingVerificationScheduling_Test</h2>
+<div>
+<h3>Test Messages</h3>
+Open url 'http://update.devi1.nbcupublisher7.publisher7.com'.<br/>
+Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
+Enter 'pa55word' in the 'Password' text box.<br/>
+Click the 'Login' button.<br/>
+Mouse over the 'Configuration' menu link.<br/>
+Mouse over the 'Media' menu link.<br/>
+Click the 'Media: thePlatform mpx settings' menu link.<br/>
+Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.<br/>
+Get all the selected import account options and store to a list.<br/>
+Click the 'Close Overlay X'.<br/>
+Scroll by '-500'.<br/>
+Mouse over the 'Structure' menu link.<br/>
+Mouse over the 'File types' menu link.<br/>
+Click the 'MPX Video for Account "DB TV" (2312945284)' menu link.<br/>
+Switch to the active frame titled 'MPX Video for Account &quot;DB TV&quot; (2312945284) dialog'.<br/>
+Open the mpx platform.<br/>
+Enter 'mpx/AdminPub7QA' in the 'Username' text box.<br/>
+Enter 'Pa55word' in the 'Password' text box.<br/>
+Click the 'Login' button.<br/>
+Click the 'Upload' button.<br/>
+Click the 'Choose Files' button.<br/>
+Click the 'Movies' button in the OS Upload dialog.<br/>
+Click the Test Movie in th OS Upload dialog.<br/>
+Click the 'Open' button.<br/>
+Click the 'Upload' button in the Upload dialog.<br/>
+Enter '7/09/2014 12:00 AM' in the 'Available Date' text box.<br/>
+Enter 'Automation7500ed5a7e' in the 'Title' text box.<br/>
+Enter '7/22/2014 12:00 AM' in the 'Expiration Date' text box.<br/>
+Click the 'Save' button.<br/>
+Click the 'Publish' button.<br/>
+Click the 'Publish to Pub 7 Primary' check box.<br/>
+Click the 'Publish' button from the upload dialog.<br/>
+Open url 'http://update.devi1.nbcupublisher7.publisher7.com'.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Files' menu link.<br/>
+Click the 'mpxMedia' menu link.<br/>
+Switch to the active frame titled 'Content dialog'.<br/>
+Enter title Automation7500ed5a7e.<br/>
+Click the 'Apply' button.<br/>
+Get the text of the first search result set item.<br/>
+Get the title text of every result in the search result set.<br/>
+For each expected result, assert it is present in the result set.<br/>
+Verify the text '07/09/2014 - 04:00 AM' is present on the page.<br/>
+Verify the text '07/22/2014 - 04:00 AM' is present on the page.<br/>
+Verify the text 'Expired' is present on the page.<br/>
+Click the first search title link in the search result set.<br/>
+Verify the text 'Automation7500ed5a7e' is present on the page.<br/>
+Verify the text 'Wednesday, July 9, 2014 - 04:00' is present on the page.<br/>
+Verify the text 'Tuesday, July 22, 2014 - 04:00' is present on the page.<br/>
+Click the 'Edit' link in the work bench.<br/>
+Switch to the active frame titled 'Edit mpx_video_1 Automation7500ed5a7e dialog'.<br/>
+Verify the value of the 'Available Date' text box equals '07/09/2014'.<br/>
+Verify the value of the 'Expiration Date' text box equals '07/22/2014'.<br/>
+Click the 'Schedule' tab.<br/>
+Switch to the active frame titled 'Automation7500ed5a7e dialog'.<br/>
+Verify the scheduled revision table is empty.<br/>
+Open the mpx platform.<br/>
+Enter 'Automation7500ed5a7e' in the 'Search' text box.<br/>
+Click the 'Search by Title' link.<br/>
+Enter '7/29/2014 12:00 AM' in the 'Available Date' text box.<br/>
+Enter '7/29/2015 12:00 AM' in the 'Expiration Date' text box.<br/>
+Click the 'Save' button.<br/>
+Click the 'Additional Options' arrow.<br/>
+Click the 'Publish Update' link.<br/>
+Click the 'Publish to Pub 7 Primary' check box.<br/>
+Click the 'Update' button.<br/>
+Open url 'http://update.devi1.nbcupublisher7.publisher7.com'.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Files' menu link.<br/>
+Click the 'mpxMedia' menu link.<br/>
+Switch to the active frame titled 'Content dialog'.<br/>
+Enter title Automation7500ed5a7e.<br/>
+Click the 'Apply' button.<br/>
+Get the title text of every result in the search result set.<br/>
+For each expected result, assert it is present in the result set.<br/>
+Verify the text '07/29/2014 - 04:00 AM' is present on the page.<br/>
+Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/MPXVideosSchedulingVerificationScheduling_Test_072914044955PM.png <br/>
+<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/MPXVideosSchedulingVerificationScheduling_Test_072914044955PM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/MPXVideosSchedulingVerificationScheduling_Test_072914044955PM.png' height='500' width='500'/> </a><br/>
+Cache was cleared on test failure<br/>
+<h3>Failure</h3>
+<div class="stacktrace">java.lang.AssertionError: The text &apos;07/29/2014 - 04:00 AM&apos; is not present on the page.
+	at com.nbcuni.test.publisher.pageobjects.Content.ContentParent.VerifyPageContentPresent(ContentParent.java:136)
+	at com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling.MPXVideosSchedulingVerificationScheduling_Test(MPXVideosSchedulingVerificationScheduling.java:254)
+... Removed 26 stack frames</div>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m14">com.nbcuni.test.publisher.tests.Video.UndefinedIndexesDisplayingForMPXPlayers.UndefinedIndexesDisplayingForMPXPlayers:UndefinedIndexesDisplayingForMPXPlayers_Test</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m15">com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability:NotificationPlayerUnavailability_Test</h2>
+<div>
+Open url 'http://update.devi1.nbcupublisher7.publisher7.com'.<br/>
+Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
+Enter 'pa55word' in the 'Password' text box.<br/>
+Click the 'Login' button.<br/>
+Mouse over the 'Configuration' menu link.<br/>
+Mouse over the 'Media' menu link.<br/>
+Click the 'Media: thePlatform mpx settings' menu link.<br/>
+Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.<br/>
+Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.<br/>
+MPX is already configured.<br/>
+Click the 'Close Overlay X'.<br/>
+Scroll by '-500'.<br/>
+Mouse over the 'Configuration' menu link.<br/>
+Mouse over the 'Media' menu link.<br/>
+Click the 'Media: thePlatform mpx settings' menu link.<br/>
+Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.<br/>
+Get all the selected import account options and store to a list.<br/>
+Open the mpx platform.<br/>
+Enter 'mpx/AdminPub7QA' in the 'Username' text box.<br/>
+Enter 'Pa55word' in the 'Password' text box.<br/>
+Click the 'Login' button.<br/>
+Click the 'Players' link.<br/>
+Click the 'All Players' link.<br/>
+Click the 'Add' button.<br/>
+Enter 'AutomationPlayer5e37a042fc' in the 'Title' text box.<br/>
+Click the 'Save' button.<br/>
+Open url 'http://update.devi1.nbcupublisher7.publisher7.com'.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Files' menu link.<br/>
+Click the 'mpxPlayers' menu link.<br/>
+Switch to the active frame titled 'Content dialog'.<br/>
+Click the 'Sync MPX Players' link.<br/>
+Click the 'Sync MPX Players Now' link.<br/>
+Verify success message of 'players returned for account' is present.<br/>
+Enter title AutomationPlayer5e37a042fc.<br/>
+Click the 'Apply' button.<br/>
+Get the text of the first search result set item.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Files' menu link.<br/>
+Click the 'mpxMedia' menu link.<br/>
+Enter title Automation.<br/>
+Select the 'Published' from the 'MPX Status/Published' drop down list.<br/>
+Select the DB TV from the 'Source' select ddl.<br/>
+Click the 'Apply' button.<br/>
+Get the text of the first search result set item.<br/>
+Click the first search title link in the search result set.<br/>
+Click the 'Edit' link in the work bench.<br/>
+Switch to the active frame titled 'Edit mpx_video_1 Automation0563133628 dialog'.<br/>
+Select 'AutomationPlayer5e37a042fc' from the 'Video Player' drop down list.<br/>
+Click the 'Save' button.<br/>
+Open the mpx platform.<br/>
+Click the 'Players' link.<br/>
+Click the 'All Players' link.<br/>
+Enter 'AutomationPlayer5e37a042fc' in the 'Player Search' text box.<br/>
+Click the 'Search by Players Title' link.<br/>
+Click the 'Player Title' label to give focus to the player item.<br/>
+Click the 'Disable Player' check box.<br/>
+Click the 'Save' button.<br/>
+Open url 'http://update.devi1.nbcupublisher7.publisher7.com'.<br/>
+Mouse over the 'Home' menu link.<br/>
+Click the 'Run cron' menu link.<br/>
+Switch to the active frame titled 'Status report dialog'.<br/>
+Click the 'Close Overlay X'.<br/>
+Scroll by '-500'.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Files' menu link.<br/>
+Click the 'mpxPlayers' menu link.<br/>
+Switch to the active frame titled 'Content dialog'.<br/>
+Verify that the disabled and unpublished player text is present for player titled 'AutomationPlayer5e37a042fc'.<br/>
+Enter title AutomationPlayer5e37a042fc.<br/>
+Click the 'Apply' button.<br/>
+Click the first search title link in the search result set.<br/>
+Click the 'Edit' link in the work bench.<br/>
+Switch to the active frame titled 'Edit mpx_player AutomationPlayer5e37a042fc dialog'.<br/>
+Scroll the 'Publishing Options' link into view.<br/>
+Click the 'Publishing Options' link.<br/>
+Switch to the active frame titled 'Edit mpx_player AutomationPlayer5e37a042fc dialog'.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'MPX Player AutomationPlayer5e37a042fc has been updated.' is present.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Files' menu link.<br/>
+Click the 'mpxPlayers' menu link.<br/>
+Switch to the active frame titled 'Content dialog'.<br/>
+Verify that the disabled and unpublished player text is present for player titled 'AutomationPlayer5e37a042fc'.<br/>
+Click the 'MPX Media' link.<br/>
+Switch to the active frame titled 'Content dialog'.<br/>
+Verify that the disabled and unpublished player text is present for player titled 'AutomationPlayer5e37a042fc'.<br/>
+Click the 'Close Overlay X'.<br/>
+Scroll by '-500'.<br/>
+Mouse over the 'Configuration' menu link.<br/>
+Mouse over the 'Media' menu link.<br/>
+Click the 'Media: thePlatform mpx settings' menu link.<br/>
+Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.<br/>
+Verify that the disabled and unpublished player text is present for player titled 'AutomationPlayer5e37a042fc'.<br/>
+Click the 'click here' link for the unpublished player titled 'AutomationPlayer5e37a042fc'.<br/>
+Switch to the active frame titled 'Edit mpx_player AutomationPlayer5e37a042fc dialog'.<br/>
+Scroll the 'Publishing Options' link into view.<br/>
+Click the 'Publishing Options' link.<br/>
+Switch to the active frame titled 'Edit mpx_player AutomationPlayer5e37a042fc dialog'.<br/>
+Check the 'Published' checkbox<br/>
+Click the 'Save' button.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Files' menu link.<br/>
+Click the 'mpxPlayers' menu link.<br/>
+Switch to the active frame titled 'Content dialog'.<br/>
+Verify that the disabled and unpublished player text is present for player titled 'AutomationPlayer5e37a042fc'.<br/>
+Click the MPX 'Login' link for the unpublished player 'AutomationPlayer5e37a042fc'.<br/>
+Click the 'Players' link.<br/>
+Click the 'All Players' link.<br/>
+Enter 'AutomationPlayer5e37a042fc' in the 'Player Search' text box.<br/>
+Click the 'Search by Players Title' link.<br/>
+Click the 'Player Title' label to give focus to the player item.<br/>
+Click the 'Disable Player' check box.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'Content dialog'.<br/>
+Click the 'Close Overlay X'.<br/>
+Scroll by '-500'.<br/>
+Mouse over the 'Home' menu link.<br/>
+Click the 'Run cron' menu link.<br/>
+Switch to the active frame titled 'Status report dialog'.<br/>
+Click the 'Close Overlay X'.<br/>
+Scroll by '-500'.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Files' menu link.<br/>
+Click the 'mpxPlayers' menu link.<br/>
+Switch to the active frame titled 'Content dialog'.<br/>
+Verify the text 'An MPXplayer that's in use (AutomationPlayer5e37a042fc) has been disabled and unpublished.' is NOT present on the page.<br/>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m16">com.nbcuni.test.publisher.tests.Video.CanonicalURLSupport.CanonicalURL:CanonicalURL_TC1080</h2>
+<div>
+STEP 1<br/>
+Open url 'http://update.devi1.nbcupublisher7.publisher7.com'.<br/>
+Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
+Enter 'pa55word' in the 'Password' text box.<br/>
+Click the 'Login' button.<br/>
+SETUP<br/>
+Mouse over the 'Configuration' menu link.<br/>
+Mouse over the 'Media' menu link.<br/>
+Click the 'Media: thePlatform mpx settings' menu link.<br/>
+Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.<br/>
+Get all the selected import account options and store to a list.<br/>
+STEP 2<br/>
+Click the 'Close Overlay X'.<br/>
+Scroll by '-500'.<br/>
+Mouse over the 'Structure' menu link.<br/>
+Click the 'File types' menu link.<br/>
+Switch to the active frame titled 'File types dialog'.<br/>
+STEP 3<br/>
+Click the 'DB TV manage fields' link.<br/>
+Switch to the active frame titled 'MPX Video for Account &quot;DB TV&quot; (2312945284) dialog'.<br/>
+STEP 4<br/>
+Switch to the active frame titled 'MPX Video for Account &quot;DB TV&quot; (2312945284) dialog'.<br/>
+STEP 6<br/>
+Click the 'Close Overlay X'.<br/>
+Scroll by '-500'.<br/>
+Mouse over the 'Structure' menu link.<br/>
+Click the 'File types' menu link.<br/>
+Switch to the active frame titled 'File types dialog'.<br/>
+STEP 7<br/>
+Click the 'DB TV edit file type' link.<br/>
+Switch to the active frame titled 'MPX Video for Account &quot;DB TV&quot; (2312945284) dialog'.<br/>
+Select 'MPX Media Related Link' from the 'URL Alias Field' drop down list.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'has been updated.' is present.<br/>
+STEP 8 NOTE- step 8 creates a new video with a canonical url rather than using an existing video<br/>
+Open the mpx platform.<br/>
+Enter 'mpx/AdminPub7QA' in the 'Username' text box.<br/>
+Enter 'Pa55word' in the 'Password' text box.<br/>
+Click the 'Login' button.<br/>
+Click the 'Upload' button.<br/>
+Click the 'Choose Files' button.<br/>
+Click the 'Movies' button in the OS Upload dialog.<br/>
+Click the Test Movie in th OS Upload dialog.<br/>
+Click the 'Open' button.<br/>
+Click the 'Upload' button in the Upload dialog.<br/>
+Enter 'Automation0563133628' in the 'Title' text box.<br/>
+Enter 'canonicalurlcc5842cf7c' in the 'Canonical URL' text box.<br/>
+Click the 'Save' button.<br/>
+Click the 'Publish' button.<br/>
+Click the 'Publish to Pub 7 Primary' check box.<br/>
+Click the 'Publish' button from the upload dialog.<br/>
+STEP 9<br/>
+Open url 'http://update.devi1.nbcupublisher7.publisher7.com'.<br/>
+STEP 10<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Files' menu link.<br/>
+Click the 'mpxMedia' menu link.<br/>
+Switch to the active frame titled 'Content dialog'.<br/>
+Enter title Automation0563133628.<br/>
+Click the 'Apply' button.<br/>
+Get the text of the first search result set item.<br/>
+Click the first search title link in the search result set.<br/>
+STEP 11<br/>
+Verify the text 'MPX Media Related Link:' is present on the page.<br/>
+Verify the text 'canonicalurlcc5842cf7c' is present on the page.<br/>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m17">com.nbcuni.test.publisher.tests.Video.Thumbnails.ThumbnailsAreNotUpdated:ThumbnailsAreNotUpdated_Test</h2>
+<div>
+Open url 'http://update.devi1.nbcupublisher7.publisher7.com'.<br/>
+Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
+Enter 'pa55word' in the 'Password' text box.<br/>
+Click the 'Login' button.<br/>
+Mouse over the 'Configuration' menu link.<br/>
+Mouse over the 'Media' menu link.<br/>
+Click the 'Media: thePlatform mpx settings' menu link.<br/>
+Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.<br/>
+Get all the selected import account options and store to a list.<br/>
+Click the 'Close Overlay X'.<br/>
+Scroll by '-500'.<br/>
+Mouse over the 'Structure' menu link.<br/>
+Click the 'File types' menu link.<br/>
+Switch to the active frame titled 'File types dialog'.<br/>
+Click the 'DB TV manage file display' link.<br/>
+Switch to the active frame titled 'MPX Video for Account &quot;DB TV&quot; (2312945284) dialog'.<br/>
+Check the 'Pub MPX Image' checkbox<br/>
+Click the 'Pub MPX Image' link.<br/>
+Select the 'Thumbnail (100x100)' option from the 'Pub MPX Image Style' drop down list.<br/>
+Click the 'Save configuration' button.<br/>
+Verify success message of 'Your settings have been saved.' is present.<br/>
+Click the 'Close Overlay X'.<br/>
+Scroll by '-500'.<br/>
+Open the mpx platform.<br/>
+Enter 'mpx/AdminPub7QA' in the 'Username' text box.<br/>
+Enter 'Pa55word' in the 'Password' text box.<br/>
+Click the 'Login' button.<br/>
+Click the 'Upload' button.<br/>
+Click the 'Choose Files' button.<br/>
+Click the 'Movies' button in the OS Upload dialog.<br/>
+Click the Test Movie in th OS Upload dialog.<br/>
+Click the 'Open' button.<br/>
+Click the 'Upload' button in the Upload dialog.<br/>
+Enter 'AutomationWThumbd12e4de742' in the 'Title' text box.<br/>
+Click the 'Save' button.<br/>
+Click the 'Files' link.<br/>
+Click the 'Upload' button.<br/>
+Click the 'Choose Files' button.<br/>
+Click the 'All Files' icon.<br/>
+Click the local 'Pictures' icon.<br/>
+Click the nbc logo image link.<br/>
+Click the 'Open' button.<br/>
+Click the 'Upload' button in the Upload dialog.<br/>
+Click the 'All Media' link.<br/>
+Click the 'Save' button.<br/>
+Click the 'Publish' button.<br/>
+Click the 'Publish to Pub 7 Primary' check box.<br/>
+Click the 'Publish' button from the upload dialog.<br/>
+Open url 'http://update.devi1.nbcupublisher7.publisher7.com'.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Files' menu link.<br/>
+Click the 'mpxMedia' menu link.<br/>
+Switch to the active frame titled 'Content dialog'.<br/>
+Enter title AutomationWThumbd12e4de742.<br/>
+Click the 'Apply' button.<br/>
+Get the text of the first search result set item.<br/>
+Verify the search thumbnail named 'nbclogosmall' is present for search result 'AutomationWThumbd12e4de742'.<br/>
+Assert the the img is loaded and visible.<br/>
+Mouse over the 'Structure' menu link.<br/>
+Click the 'File types' menu link.<br/>
+Click the 'DB TV manage file display' link.<br/>
+Un-Check the 'Pub MPX Image' checkbox<br/>
+Click the 'Save configuration' button.<br/>
+Verify success message of 'Your settings have been saved.' is present.<br/>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m18">com.nbcuni.test.publisher.tests.Video.SyncFromMPXButtonToVideoFileEntitiesEditForm.SyncFromMPXButtonToVideoFileEntitiesEditForm:SyncFromMPXButtonToVideoFileEntitiesEditForm_Test</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m19">com.nbcuni.test.publisher.tests.Video.DeIngestingMPXAccountsAndCorrespondingAssets.MPXAccountDeletion:MPXAccountDeletion_TC1884</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m20">com.nbcuni.test.publisher.tests.Setup.A1_TestSetup:TestSetup_Test</h2>
+<div>
+Open url 'http://update.devi1.nbcupublisher7.publisher7.com'.<br/>
+Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
+Enter 'pa55word' in the 'Password' text box.<br/>
+Click the 'Login' button.<br/>
+Open url 'http://update.devi1.nbcupublisher7.publisher7.com/admin/modules'.<br/>
+Open url 'http://update.devi1.nbcupublisher7.publisher7.com/#overlay=admin/modules'.<br/>
+Switch to the active frame titled 'Modules dialog'.<br/>
+Enter 'Sticky Edit Actions' in the 'Filter Name' text box.<br/>
+Enter 'Devel' in the 'Filter Name' text box.<br/>
+Verify the 'Devel' check box is checked.<br/>
+Enter 'Acquia Purge' in the 'Filter Name' text box.<br/>
+Enter 'ImageField Focus' in the 'Filter Name' text box.<br/>
+Enter 'Database logging' in the 'Filter Name' text box.<br/>
+Enter 'Pub Post' in the 'Filter Name' text box.<br/>
+Verify the 'Pub Post' check box is checked.<br/>
+Enter 'Logo Manager' in the 'Filter Name' text box.<br/>
+Verify the 'Logo Manager' check box is checked.<br/>
+Enter 'MPS' in the 'Filter Name' text box.<br/>
+Click the 'Uninstall' overlay tab.<br/>
+Scroll by '-500'.<br/>
+Switch to the active frame titled 'Modules dialog'.<br/>
+Click the 'MPS' uninstall checkbox.<br/>
+Switch to the active frame titled 'Modules dialog'.<br/>
+Click the 'Close Overlay X'.<br/>
+Scroll by '-500'.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Add content' menu link.<br/>
+Click the 'Post' menu link.<br/>
+Switch to the active frame titled 'Create Post dialog'.<br/>
+Verify the 'Title' is present as a required field.<br/>
+Verify the 'Body' is present as a required field.<br/>
+Scroll the 'Publishing Options' link into view.<br/>
+Click the 'Publishing Options' link.<br/>
+Verify the 'Moderation State' is present as a required field.<br/>
+Scroll to and click the 'Basic Information' tab.<br/>
+Enter 'futurePost07/29/2014c296ce10cbab484' in the 'Title' text box.<br/>
+Switch to the Synopsis frame.<br/>
+Enter a randomized text string into the 'Body' text area.<br/>
+Switch to the active frame titled 'Create Post dialog'.<br/>
+Click the 'Cover' select button.<br/>
+Switch to the select file frame.<br/>
+Enter the file path for file upload.<br/>
+Click the 'Upload' button.<br/>
+Wait for the file link to be visible after upload.<br/>
+Click the 'Next' button.<br/>
+Click the 'Public Local Files' radio button.<br/>
+Click the 'Next' button.<br/>
+Verify the file image 'HanSolo' is present.<br/>
+Verify the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'Create Post dialog'.<br/>
+Scroll the 'Publishing Options' link into view.<br/>
+Click the 'Publishing Options' link.<br/>
+Select 'Draft' from the 'Moderation State' drop down list.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'Post futurePost07/29/2014c296ce10cbab484 has been created.' is present.<br/>
+Click the 'Schedule' link in the work bench.<br/>
+Switch to the active frame titled 'futurePost07/29/2014c296ce10cbab484 dialog'.<br/>
+Click the 'Add Scheduled Revision' link.<br/>
+Switch to the active frame titled 'futurePost07/29/2014c296ce10cbab484 dialog'.<br/>
+Select revision titled 'futurePost07/29/2014c296ce10cbab484'.<br/>
+Verify that the 'Operation' option count equals '5'.<br/>
+Select 'Moderate to Published' from the 'Select operation' drop down list.<br/>
+Enter '07/29/2014' in the 'Date' text box.<br/>
+Enter '08:49 PM' in the 'Time' text box.<br/>
+Click the 'Schedule' button.<br/>
+Switch to the active frame titled 'futurePost07/29/2014c296ce10cbab484 dialog'.<br/>
+Verify success message of 'The scheduled revision operation has been saved' is present.<br/>
+Click the 'Close Overlay X'.<br/>
+Scroll by '-500'.<br/>
+Mouse over the 'Content' menu link.<br/>
+Click the 'Logos' menu link.<br/>
+Switch to the active frame titled 'Manage Logo dialog'.<br/>
+Click the 'Edit' extend menu button for logo titled 'b8e32d4bc3254da'.<br/>
+Click the 'Delete' button for logo titled 'b8e32d4bc3254da'.<br/>
+Switch to the active frame titled 'Are you sure you want to delete this logo? dialog'.<br/>
+Click the 'Delete' button.<br/>
+Click the 'Close Overlay X'.<br/>
+Scroll by '-500'.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Logos' menu link.<br/>
+Click the 'Add Logo' menu link.<br/>
+Switch to the active frame titled 'Add Logo dialog'.<br/>
+Enter 'c6dc28502d56435' in the 'Title' text box.<br/>
+Enter the file path for file upload.<br/>
+Click the 'Upload' button.<br/>
+Wait for the file link to be visible after upload.<br/>
+Verify the file image 'nbclogosmall' is present.<br/>
+Verify the the img is loaded and visible.<br/>
+Enter '2014-07-29' in the 'Start Date' text box.<br/>
+Enter '08:50:13 PM' in the 'Start Time' text box.<br/>
+Enter '2014-07-29' in the 'End Date' text box.<br/>
+Enter '09:45:13 PM' in the 'End Time' text box.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'Manage Logo dialog'.<br/>
+Verify the text 'c6dc28502d56435' is present on the page.<br/>
+Verify the text 'Tue, 07/29/2014 - 20:50' is present on the page.<br/>
+Verify the text 'Tue, 07/29/2014 - 21:45' is present on the page.<br/>
+Assert the file image 'nbclogosmall' is present.<br/>
+Assert the the img is loaded and visible.<br/>
+Click the 'Close Overlay X'.<br/>
+Scroll by '-500'.<br/>
+Mouse over the 'Configuration' menu link.<br/>
+Mouse over the 'Media' menu link.<br/>
+Click the 'Media: thePlatform mpx settings' menu link.<br/>
+Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.<br/>
+Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.<br/>
+MPX is already configured.<br/>
+Click the 'Close Overlay X'.<br/>
+Scroll by '-500'.<br/>
+Mouse over the 'Configuration' menu link.<br/>
+Mouse over the 'Media' menu link.<br/>
+Click the 'Media: thePlatform mpx settings' menu link.<br/>
+Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.<br/>
+Click the 'Save configurations' button.<br/>
+Click the 'Close Overlay X'.<br/>
+Scroll by '-500'.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Files' menu link.<br/>
+Click the 'mpxMedia' menu link.<br/>
+Switch to the active frame titled 'Content dialog'.<br/>
+Click the 'Sync MPX Media' link.<br/>
+Select 'AutomationPlayer1' from the first 'Import Player' drop down list.<br/>
+Click the 'Sync MPX Media Now' link.<br/>
+Click the 'Close Overlay X'.<br/>
+Scroll by '-500'.<br/>
+Mouse over the 'Home' menu link.<br/>
+Click the 'Run cron' menu link.<br/>
+Mouse over the 'Home' menu link.<br/>
+Click the '[[Driver: chrome on MAC (622b03c9-b4e9-47cd-a40c-2672db084620)] -> xpath: //span[@class='admin-menu-home-icon']/../..//a[text()='Flush all caches']]' menu link.<br/>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m21">com.nbcuni.test.publisher.tests.Video.Configuration.ConfigurationMultipleMPXAccounts:ConfigurationMultipleMPXAccounts_TC1073</h2>
+<div>
+Open url 'http://update.devi1.nbcupublisher7.publisher7.com'.<br/>
+Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
+Enter 'pa55word' in the 'Password' text box.<br/>
+Click the 'Login' button.<br/>
+Mouse over the 'Configuration' menu link.<br/>
+Mouse over the 'Media' menu link.<br/>
+Click the 'Media: thePlatform mpx settings' menu link.<br/>
+Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.<br/>
+Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.<br/>
+Get the account options from the 'Select Import Account for Account...' drop down lists.<br/>
+Get all the selected import account options and store to a list.<br/>
+Get all the selected import account options and store to a list.<br/>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+</body></html>

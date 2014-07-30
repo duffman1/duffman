@@ -4,6 +4,7 @@ import com.nbcuni.test.publisher.common.Driver.Driver;
 
 import org.testng.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -30,7 +31,7 @@ public class EditMPXVideo {
     public EditMPXVideo(Driver webDriver) {
     	this.webDriver = webDriver;
     	PageFactory.initElements(webDriver, this);
-        wait = new WebDriverWait(webDriver, 10);
+        wait = (WebDriverWait) new WebDriverWait(webDriver, 10).ignoring(StaleElementReferenceException.class);
     }
     
     //PAGE OBJECT IDENTIFERS
@@ -110,11 +111,10 @@ public class EditMPXVideo {
     	if (OverrideMPXAvailableDate_Cbx.isSelected() == false) {
     		Reporter.log("Click the 'Override' checkbox for the 'Available Date' check box.");
         	OverrideMPXAvailableDate_Cbx.click();
-        	
+        	Thread.sleep(250);
         	wait.until(new ExpectedCondition<Boolean>() {
         		public Boolean apply(WebDriver webDriver) {
-        			WebElement element = MPXMediaAvailableDate_Txb;
-        			return element.isEnabled();
+        			return MPXMediaAvailableDate_Txb.isEnabled();
        		 	}
         	});
         	Thread.sleep(500);
@@ -126,11 +126,10 @@ public class EditMPXVideo {
     	if (OverrideMPXAvailableDate_Cbx.isSelected() == true) {
     		Reporter.log("Un-check the 'Override' checkbox for the 'Available Date' check box.");
         	OverrideMPXAvailableDate_Cbx.click();
-        	
+        	Thread.sleep(250);
         	wait.until(new ExpectedCondition<Boolean>() {
         		public Boolean apply(WebDriver webDriver) {
-        			WebElement element = MPXMediaAvailableDate_Txb;
-        			return !element.isEnabled();
+        			return !MPXMediaAvailableDate_Txb.isEnabled();
        		 	}
         	});
         	Thread.sleep(500);
@@ -142,11 +141,10 @@ public class EditMPXVideo {
     	if (OverrideMPXExpirationDate_Cbx.isSelected() == false) {
     		Reporter.log("Click the 'Override' checkbox for the 'Expiration Date' check box.");
         	OverrideMPXExpirationDate_Cbx.click();
-        	
+        	Thread.sleep(250);
         	wait.until(new ExpectedCondition<Boolean>() {
         		public Boolean apply(WebDriver webDriver) {
-        			WebElement element = MPXMediaExpirationDate_Txb;
-        			return element.isEnabled();
+        			return MPXMediaExpirationDate_Txb.isEnabled();
        		 	}
         	});
         	Thread.sleep(500);
@@ -158,11 +156,10 @@ public class EditMPXVideo {
     	if (OverrideMPXExpirationDate_Cbx.isSelected() == true) {
     		Reporter.log("Un-check the 'Override' checkbox for the 'Expiration Date' check box.");
         	OverrideMPXExpirationDate_Cbx.click();
-        	
+        	Thread.sleep(250);
         	wait.until(new ExpectedCondition<Boolean>() {
         		public Boolean apply(WebDriver webDriver) {
-        			WebElement element = MPXMediaExpirationDate_Txb;
-        			return !element.isEnabled();
+        			return !MPXMediaExpirationDate_Txb.isEnabled();
        		 	}
         	});
         	Thread.sleep(500);
