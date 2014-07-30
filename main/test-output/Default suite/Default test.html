@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Jul 30 08:14:32 EDT 2014</td>
+<td>Started on:</td><td>Wed Jul 30 09:54:20 EDT 2014</td>
 </tr>
-<tr><td>Total time:</td><td>70 seconds (70608 ms)</td>
+<tr><td>Total time:</td><td>118 seconds (118806 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,135 +75,170 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides.MPXVideosSchedulingVerificationInitialOverrides_Test()'><b>MPXVideosSchedulingVerificationInitialOverrides_Test</b><br>Test class: com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides<br/>
-<a href="#Output-1413657685" onClick='toggleBox("Output-1413657685", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIF.PopulateEXIFBulkUpload.PopulateEXIFBulkUpload_TC3192()'><b>PopulateEXIFBulkUpload_TC3192</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIF.PopulateEXIFBulkUpload<br/>
+<a href="#Output-904093228" onClick='toggleBox("Output-904093228", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1413657685" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1413657685">
+<a href="#Output-904093228" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-904093228">
+STEP 1<br/>
 Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.<br/>
 Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
 Enter 'pa55word' in the 'Password' text box.<br/>
 Click the 'Login' button.<br/>
+SETUP<br/>
 Mouse over the 'Configuration' menu link.<br/>
 Mouse over the 'Media' menu link.<br/>
-Click the 'Media: thePlatform mpx settings' menu link.<br/>
-Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.<br/>
-Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.<br/>
-MPX is already configured.<br/>
-Click the 'Close Overlay X'.<br/>
-Scroll by '-500'.<br/>
-Mouse over the 'Configuration' menu link.<br/>
-Mouse over the 'Media' menu link.<br/>
-Click the 'Media: thePlatform mpx settings' menu link.<br/>
-Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.<br/>
-Get all the selected import account options and store to a list.<br/>
-Click the 'Close Overlay X'.<br/>
-Scroll by '-500'.<br/>
-Mouse over the 'Structure' menu link.<br/>
-Mouse over the 'File types' menu link.<br/>
-Click the 'MPX Video for Account "DB TV" (2312945284)' menu link.<br/>
-Switch to the active frame titled 'MPX Video for Account &quot;DB TV&quot; (2312945284) dialog'.<br/>
+Click the 'Simple EXIF/IPTC Mappings' menu link.<br/>
+Switch to the active frame titled 'Simple EXIF/IPTC Mappings dialog'.<br/>
+Select the 'Title' option from the 'Alt Text' drop down list.<br/>
+Select the 'Title' option from the 'Title Text' drop down list.<br/>
+Select the 'Caption' option from the 'Caption' drop down list.<br/>
+Select the 'Copyright' option from the 'Copyright' drop down list.<br/>
+Select the 'Credit' option from the 'Credit' drop down list.<br/>
+Select the 'Keywords' option from the 'Keywords' drop down list.<br/>
+Select the 'none' option from the 'Media categories' drop down list.<br/>
+Select the 'none' option from the 'Media Tags' drop down list.<br/>
+Select the 'Source' option from the 'Source' drop down list.<br/>
+Click the 'Save' button.<br/>
+STEP 2<br/>
 Mouse over the 'Content' menu link.<br/>
-Mouse over the 'Files' menu link.<br/>
-Click the 'mpxMedia' menu link.<br/>
-Switch to the active frame titled 'Content dialog'.<br/>
-Enter title AutomationDefault.<br/>
-Click the 'Apply' button.<br/>
-Get the title text of every result in the search result set.<br/>
-For each expected result, assert it is present in the result set.<br/>
-Click the first search title link in the search result set.<br/>
-Click the 'Edit' link in the work bench.<br/>
-Switch to the active frame titled 'Edit mpx_video_76 AutomationDefault dialog'.<br/>
-Un-check the 'Override' checkbox for the 'Available Date' check box.<br/>
-Un-check the 'Override' checkbox for the 'Expiration Date' check box.<br/>
+Mouse over the 'Add content' menu link.<br/>
+Click the 'Media Gallery' menu link.<br/>
+Switch to the active frame titled 'Create Media Gallery dialog'.<br/>
+Enter '087942fa0450499' in the 'Title' text box.<br/>
+STEP 3<br/>
+Click the 'Media Items Select' button.<br/>
+Switch to the select file frame.<br/>
+Click the 'Add files' link.<br/>
+Click the 'All Files' icon.<br/>
+Click the local 'Pictures' icon.<br/>
+Click the test picture link.<br/>
+Click the 'Open' button.<br/>
+Click the 'Start upload' link.<br/>
+Wait for file upload to reach 100%<br/>
+Click the 'Next' button.<br/>
+Switch to the active frame titled 'Create Media Gallery dialog'.<br/>
+Click the 'Add' button.<br/>
+Switch to the select file frame.<br/>
+Click the 'Add files' link.<br/>
+Click the 'All Files' icon.<br/>
+Click the local 'Pictures' icon.<br/>
+Click the test picture link.<br/>
+Click the 'Open' button.<br/>
+Click the 'Start upload' link.<br/>
+Wait for file upload to reach 100%<br/>
+Click the 'Next' button.<br/>
+Switch to the active frame titled 'Create Media Gallery dialog'.<br/>
+Verify the img source of the Media Item contains 'NUP_155306_0046'.<br/>
+Assert the the img is loaded and visible.<br/>
+Verify the img source of the Media Item contains 'NUP_155306_0046'.<br/>
+Assert the the img is loaded and visible.<br/>
+STEP 4<br/>
+Click the 'Edit' button with index '1'.<br/>
+Assert that the Title Text box with index '1' value matches 'NUP_155306_0046.JPG'.<br/>
+Assert that the Alt Text box with index '1' value matches 'NUP_155306_0046.JPG'.<br/>
+Assert that the Source box with index '1' value matches 'Episodic'.<br/>
+Assert that the Credit Text box with index '1' value matches 'Brownie Harris/NBC'.<br/>
+Assert that the Copyright Text box with index '1' value matches '2013 NBCUniversal Media, LLC'.<br/>
+Assert that the Keywords Text box with index '1' value matches 'NUP_155306, Revolution, Episode 118, Season 1'.<br/>
+Click the 'Close Window' image.<br/>
+Switch to the active frame titled 'Create Media Gallery dialog'.<br/>
+STEP 5<br/>
+Click the 'Edit All' button.<br/>
+Assert that the Title Text box with index '1' value matches 'NUP_155306_0046.JPG'.<br/>
+Assert that the Alt Text box with index '1' value matches 'NUP_155306_0046.JPG'.<br/>
+Assert that the Source box with index '1' value matches 'Episodic'.<br/>
+Assert that the Credit Text box with index '1' value matches 'Brownie Harris/NBC'.<br/>
+Assert that the Copyright Text box with index '1' value matches '2013 NBCUniversal Media, LLC'.<br/>
+Assert that the Keywords Text box with index '1' value matches 'NUP_155306, Revolution, Episode 118, Season 1'.<br/>
+STEP 6<br/>
+Enter '1fbedaba25b3473' in the 'Title Text' text box with index '1'.<br/>
+Enter '3035e04cc3f94ac' in the 'Alt Text' text box with index '1'.<br/>
+Enter '05cc85df85c14a2' in the 'Source' text box with index '1'.<br/>
+Enter '2e41bfe052f84a5' in the 'Credit' text box with index '1'.<br/>
+Enter '9c12b7cc3a71404' in the 'Copyright' text box with index '1'.<br/>
+Enter '58cae2ee3b1a446' in the 'Keywords' text box with index '1'.<br/>
+Enter '057eb1cea33c46e' in the 'Title Text' text box with index '2'.<br/>
+Enter 'f655d40439de47f' in the 'Alt Text' text box with index '2'.<br/>
+Enter 'c40152bbe7eb45e' in the 'Source' text box with index '2'.<br/>
+Enter 'c14823b38cff48b' in the 'Credit' text box with index '2'.<br/>
+Enter '3dba993bd804469' in the 'Copyright' text box with index '2'.<br/>
+Enter '572e6f32a36b4ee' in the 'Keywords' text box with index '2'.<br/>
+Click the 'Save' button with index '2'.<br/>
+Switch to the active frame titled 'Create Media Gallery dialog'.<br/>
+STEP 7<br/>
+Click the 'Edit All' button.<br/>
+Assert that the Title Text box with index '1' value matches '1fbedaba25b3473'.<br/>
+Assert that the Alt Text box with index '1' value matches '3035e04cc3f94ac'.<br/>
+Assert that the Source box with index '1' value matches '05cc85df85c14a2'.<br/>
+Assert that the Credit Text box with index '1' value matches '2e41bfe052f84a5'.<br/>
+Assert that the Copyright Text box with index '1' value matches '9c12b7cc3a71404'.<br/>
+Assert that the Keywords Text box with index '1' value matches '58cae2ee3b1a446'.<br/>
+Assert that the Title Text box with index '2' value matches '057eb1cea33c46e'.<br/>
+Assert that the Alt Text box with index '2' value matches 'f655d40439de47f'.<br/>
+Assert that the Source box with index '2' value matches 'c40152bbe7eb45e'.<br/>
+Assert that the Credit Text box with index '2' value matches 'c14823b38cff48b'.<br/>
+Assert that the Copyright Text box with index '2' value matches '3dba993bd804469'.<br/>
+Assert that the Keywords Text box with index '2' value matches '572e6f32a36b4ee'.<br/>
+Click the 'Close Window' image.<br/>
+Switch to the active frame titled 'Create Media Gallery dialog'.<br/>
 Click the 'Save' button.<br/>
-Verify the text 'AutomationDefault' is present on the page.<br/>
-Verify the text 'MPX Released File Public IDs:' is present on the page.<br/>
-Verify the text 'MPX Media Default Released File Public ID:' is present on the page.<br/>
-Verify the text 'MPX Media Categories:' is present on the page.<br/>
-Verify the text 'Series' is present on the page.<br/>
-Verify the text 'Show' is present on the page.<br/>
-Verify the text 'MPX Media Description:' is present on the page.<br/>
-Verify the text 'Automation 1 example test' is present on the page.<br/>
-Verify the text 'MPX Media Author:' is present on the page.<br/>
-Verify the text 'Pub7 Content Provider' is present on the page.<br/>
-Verify the text 'MPX Media Air Date:' is present on the page.<br/>
-Verify the text 'Wednesday, January 8, 2014' is present on the page.<br/>
-Verify the text 'MPX Media Keywords:' is present on the page.<br/>
-Verify the text 'mpx, metadata, field, override' is present on the page.<br/>
-Verify the text 'MPX Media Copyright:' is present on the page.<br/>
-Verify the text 'NBCUNI QA' is present on the page.<br/>
-Verify the text 'MPX Media Film Advisory Board Rating:' is present on the page.<br/>
-Verify the text 'pd' is present on the page.<br/>
-Verify the text 'MPX Media MPAA Rating:' is present on the page.<br/>
-Verify the text 'MPX Media MPAA Sub-Ratings:' is present on the page.<br/>
-Verify the text 'v' is present on the page.<br/>
-Verify the text 'MPX Media V-Chip Rating:' is present on the page.<br/>
-Verify the text 'tv-y7' is present on the page.<br/>
-Verify the text 'MPX Media V-Chip Sub-Ratings:' is present on the page.<br/>
-Verify the text 'l' is present on the page.<br/>
-Verify the text 'MPX Media Exclude Selected Countries:' is present on the page.<br/>
-Verify the text 'Prevent Playback in Selected Countries' is present on the page.<br/>
-Verify the text 'MPX Media Available Date:' is NOT present on the page.<br/>
-Verify the text 'MPX Media Expiration Date:' is NOT present on the page.<br/>
-Click the 'Edit' link in the work bench.<br/>
-Switch to the active frame titled 'Edit mpx_video_76 AutomationDefault dialog'.<br/>
-Verify that the 'Media Availabe Date' text box is disabled and has no value.<br/>
-Verify that the 'Media Expiration Date' text box is disabled and has no value.<br/>
-Click the 'Override' checkbox for the 'Available Date' check box.<br/>
-Click the 'Override' checkbox for the 'Expiration Date' check box.<br/>
-Enter '08/06/2014' in the 'Available Date' text box.<br/>
-Enter '05:00pm' in the 'Available Time' text box.<br/>
-Enter '07/29/2017' in the 'Expiration Date' text box.<br/>
-Enter '05:00pm' in the 'Expiration Time' text box.<br/>
+Verify success message of 'Media Gallery 087942fa0450499 has been created.' is present.<br/>
+STEP 8<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Add content' menu link.<br/>
+Click the 'Media Gallery' menu link.<br/>
+Switch to the active frame titled 'Create Media Gallery dialog'.<br/>
+Enter 'd9295d9bfb034d1' in the 'Title' text box.<br/>
+Click the 'Cover' select button.<br/>
+STEP 9<br/>
+Switch to the select file frame.<br/>
+Enter the file path for file upload.<br/>
+Click the 'Upload' button.<br/>
+Wait for the file link to be visible after upload.<br/>
+Click the 'Next' button.<br/>
+STEP 10<br/>
+Click the 'Public Local Files' radio button.<br/>
+Click the 'Next' button.<br/>
+Verify the file image 'IPTCDefault' is present.<br/>
+Verify the img is loaded and visible.<br/>
+Assert that the Title Text box with index '1' value matches 'drpin075402'.<br/>
+Assert that the Alt Text box with index '1' value matches 'drpin075402'.<br/>
+Assert that the Source box with index '1' value matches 'David Riecks Photography'.<br/>
+Assert that the Credit Text box with index '1' value matches '?1985 David Riecks: www.riecks.c'.<br/>
+Assert that the Copyright Text box with index '1' value matches '?1985 David Riecks, All Rights Reserved'.<br/>
+Assert that the Keywords Text box with index '1' value matches 'environment, ecology, ecosystem, environmentalism, scenery, nature, land, mountains, mount, Himalayans, sky, skies, cloud, clouds, concepts, concept, conceptual, summit, peak, weather, snow, snowing, snowfall, outdoors, outdoor, outside'.<br/>
 Click the 'Save' button.<br/>
-Verify success message of 'MPX Video for Account "DB TV" (2312945284) AutomationDefault has been updated.' is present.<br/>
-Verify the text 'MPX Media Available Date:' is present on the page.<br/>
-Verify the text 'Wednesday, August 6, 2014' is present on the page.<br/>
-Verify the text 'MPX Media Expiration Date: ' is present on the page.<br/>
-Verify the text 'Saturday, July 29, 2017' is present on the page.<br/>
-Click the 'Edit' link in the work bench.<br/>
-Switch to the active frame titled 'Edit mpx_video_76 AutomationDefault dialog'.<br/>
-Un-check the 'Override' checkbox for the 'Available Date' check box.<br/>
-Un-check the 'Override' checkbox for the 'Expiration Date' check box.<br/>
-Verify that the 'Media Availabe Date' text box is disabled and has no value.<br/>
-Verify that the 'Media Expiration Date' text box is disabled and has no value.<br/>
-Click the 'Save' button.<br/>
-Verify success message of 'MPX Video for Account "DB TV" (2312945284) AutomationDefault has been updated.' is present.<br/>
-Verify the text 'AutomationDefault' is present on the page.<br/>
-Verify the text 'MPX Released File Public IDs:' is present on the page.<br/>
-Verify the text 'MPX Media Default Released File Public ID:' is present on the page.<br/>
-Verify the text 'MPX Media Categories:' is present on the page.<br/>
-Verify the text 'Series' is present on the page.<br/>
-Verify the text 'Show' is present on the page.<br/>
-Verify the text 'MPX Media Description:' is present on the page.<br/>
-Verify the text 'Automation 1 example test' is present on the page.<br/>
-Verify the text 'MPX Media Author:' is present on the page.<br/>
-Verify the text 'Pub7 Content Provider' is present on the page.<br/>
-Verify the text 'MPX Media Air Date:' is present on the page.<br/>
-Verify the text 'Wednesday, January 8, 2014' is present on the page.<br/>
-Verify the text 'MPX Media Keywords:' is present on the page.<br/>
-Verify the text 'mpx, metadata, field, override' is present on the page.<br/>
-Verify the text 'MPX Media Copyright:' is present on the page.<br/>
-Verify the text 'NBCUNI QA' is present on the page.<br/>
-Verify the text 'MPX Media Film Advisory Board Rating:' is present on the page.<br/>
-Verify the text 'pd' is present on the page.<br/>
-Verify the text 'MPX Media MPAA Rating:' is present on the page.<br/>
-Verify the text 'MPX Media MPAA Sub-Ratings:' is present on the page.<br/>
-Verify the text 'v' is present on the page.<br/>
-Verify the text 'MPX Media V-Chip Rating:' is present on the page.<br/>
-Verify the text 'tv-y7' is present on the page.<br/>
-Verify the text 'MPX Media V-Chip Sub-Ratings:' is present on the page.<br/>
-Verify the text 'l' is present on the page.<br/>
-Verify the text 'MPX Media Exclude Selected Countries:' is present on the page.<br/>
-Verify the text 'Prevent Playback in Selected Countries' is present on the page.<br/>
-Verify the text 'MPX Media Available Date:' is NOT present on the page.<br/>
-Verify the text 'MPX Media Expiration Date:' is NOT present on the page.<br/>
+Switch to the active frame titled 'Create Media Gallery dialog'.<br/>
+STEP 11<br/>
+Click the 'Edit' button.<br/>
+Assert that the Title Text box with index '1' value matches 'drpin075402'.<br/>
+Assert that the Alt Text box with index '1' value matches 'drpin075402'.<br/>
+Assert that the Source box with index '1' value matches 'David Riecks Photography'.<br/>
+Assert that the Credit Text box with index '1' value matches '?1985 David Riecks: www.riecks.c'.<br/>
+Assert that the Copyright Text box with index '1' value matches '?1985 David Riecks, All Rights Reserved'.<br/>
+Assert that the Keywords Text box with index '1' value matches 'environment, ecology, ecosystem, environmentalism, scenery, nature, land, mountains, mount, Himalayans, sky, skies, cloud, clouds, concepts, concept, conceptual, summit, peak, weather, snow, snowing, snowfall, outdoors, outdoor, outside'.<br/>
+STEP 12<br/>
+Enter '18587d07c0d44b5' in the 'Title Text' text box with index '1'.<br/>
+Enter 'e4c29cb8aa03437' in the 'Alt Text' text box with index '1'.<br/>
+Enter '66776b968a2043b' in the 'Source' text box with index '1'.<br/>
+Enter '2ef7f91283e540d' in the 'Credit' text box with index '1'.<br/>
+Enter 'f751435775a24a6' in the 'Copyright' text box with index '1'.<br/>
+Enter '588249cb0ff34df' in the 'Keywords' text box with index '1'.<br/>
+Click the 'Save' button with index '2'.<br/>
+Switch to the active frame titled 'Create Media Gallery dialog'.<br/>
+Click the 'Edit' button.<br/>
+Assert that the Title Text box with index '1' value matches '18587d07c0d44b5'.<br/>
+Assert that the Alt Text box with index '1' value matches 'e4c29cb8aa03437'.<br/>
+Assert that the Source box with index '1' value matches '66776b968a2043b'.<br/>
+Assert that the Credit Text box with index '1' value matches '2ef7f91283e540d'.<br/>
+Assert that the Copyright Text box with index '1' value matches 'f751435775a24a6'.<br/>
+Assert that the Keywords Text box with index '1' value matches '588249cb0ff34df'.<br/>
 </div>
 </td>
 <td></td>
-<td>67</td>
-<td>com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides@14b05b39</td></tr>
+<td>115</td>
+<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIF.PopulateEXIFBulkUpload@713c3100</td></tr>
 </table><p>
 </body>
 </html>

@@ -121,6 +121,7 @@ public class BasicInformation {
     public void ClickMediaItemsSelectBtn() throws Exception {
     	
     	Reporter.log("Click the 'Media Items Select' button.");
+    	Thread.sleep(250);
     	MediaItemsSelect_Btn.click();
     }
     

@@ -120,6 +120,7 @@ public class MediaItems {
     public void ClickAddBtn() throws Exception {
     	
     	Reporter.log("Click the 'Add' button.");
+    	Thread.sleep(250);
     	Add_Btn.click();
     }
     

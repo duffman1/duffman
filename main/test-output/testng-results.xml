@@ -2,6 +2,9 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
     <line>
+      <![CDATA[STEP 1]]>
+    </line>
+    <line>
       <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
     </line>
     <line>
@@ -14,28 +17,7 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Configuration' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Media' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Media: thePlatform mpx settings' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.]]>
-    </line>
-    <line>
-      <![CDATA[MPX is already configured.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll by '-500'.]]>
+      <![CDATA[SETUP]]>
     </line>
     <line>
       <![CDATA[Mouse over the 'Configuration' menu link.]]>
@@ -44,342 +26,465 @@
       <![CDATA[Mouse over the 'Media' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Media: thePlatform mpx settings' menu link.]]>
+      <![CDATA[Click the 'Simple EXIF/IPTC Mappings' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'Simple EXIF/IPTC Mappings dialog'.]]>
     </line>
     <line>
-      <![CDATA[Get all the selected import account options and store to a list.]]>
+      <![CDATA[Select the 'Title' option from the 'Alt Text' drop down list.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
+      <![CDATA[Select the 'Title' option from the 'Title Text' drop down list.]]>
     </line>
     <line>
-      <![CDATA[Scroll by '-500'.]]>
+      <![CDATA[Select the 'Caption' option from the 'Caption' drop down list.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Structure' menu link.]]>
+      <![CDATA[Select the 'Copyright' option from the 'Copyright' drop down list.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'File types' menu link.]]>
+      <![CDATA[Select the 'Credit' option from the 'Credit' drop down list.]]>
     </line>
     <line>
-      <![CDATA[Click the 'MPX Video for Account "DB TV" (2312945284)' menu link.]]>
+      <![CDATA[Select the 'Keywords' option from the 'Keywords' drop down list.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'MPX Video for Account &quot;DB TV&quot; (2312945284) dialog'.]]>
+      <![CDATA[Select the 'none' option from the 'Media categories' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Select the 'none' option from the 'Media Tags' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Select the 'Source' option from the 'Source' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 2]]>
     </line>
     <line>
       <![CDATA[Mouse over the 'Content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Files' menu link.]]>
+      <![CDATA[Mouse over the 'Add content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'mpxMedia' menu link.]]>
+      <![CDATA[Click the 'Media Gallery' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'Create Media Gallery dialog'.]]>
     </line>
     <line>
-      <![CDATA[Enter title AutomationDefault.]]>
+      <![CDATA[Enter '087942fa0450499' in the 'Title' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Apply' button.]]>
+      <![CDATA[STEP 3]]>
     </line>
     <line>
-      <![CDATA[Get the title text of every result in the search result set.]]>
+      <![CDATA[Click the 'Media Items Select' button.]]>
     </line>
     <line>
-      <![CDATA[For each expected result, assert it is present in the result set.]]>
+      <![CDATA[Switch to the select file frame.]]>
     </line>
     <line>
-      <![CDATA[Click the first search title link in the search result set.]]>
+      <![CDATA[Click the 'Add files' link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Edit' link in the work bench.]]>
+      <![CDATA[Click the 'All Files' icon.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Edit mpx_video_76 AutomationDefault dialog'.]]>
+      <![CDATA[Click the local 'Pictures' icon.]]>
     </line>
     <line>
-      <![CDATA[Un-check the 'Override' checkbox for the 'Available Date' check box.]]>
+      <![CDATA[Click the test picture link.]]>
     </line>
     <line>
-      <![CDATA[Un-check the 'Override' checkbox for the 'Expiration Date' check box.]]>
+      <![CDATA[Click the 'Open' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Start upload' link.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for file upload to reach 100%]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create Media Gallery dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Add' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the select file frame.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Add files' link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'All Files' icon.]]>
+    </line>
+    <line>
+      <![CDATA[Click the local 'Pictures' icon.]]>
+    </line>
+    <line>
+      <![CDATA[Click the test picture link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Open' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Start upload' link.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for file upload to reach 100%]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create Media Gallery dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the img source of the Media Item contains 'NUP_155306_0046'.]]>
+    </line>
+    <line>
+      <![CDATA[Assert the the img is loaded and visible.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the img source of the Media Item contains 'NUP_155306_0046'.]]>
+    </line>
+    <line>
+      <![CDATA[Assert the the img is loaded and visible.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 4]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Edit' button with index '1'.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that the Title Text box with index '1' value matches 'NUP_155306_0046.JPG'.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that the Alt Text box with index '1' value matches 'NUP_155306_0046.JPG'.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that the Source box with index '1' value matches 'Episodic'.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that the Credit Text box with index '1' value matches 'Brownie Harris/NBC'.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that the Copyright Text box with index '1' value matches '2013 NBCUniversal Media, LLC'.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that the Keywords Text box with index '1' value matches 'NUP_155306, Revolution, Episode 118, Season 1'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Window' image.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create Media Gallery dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 5]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Edit All' button.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that the Title Text box with index '1' value matches 'NUP_155306_0046.JPG'.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that the Alt Text box with index '1' value matches 'NUP_155306_0046.JPG'.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that the Source box with index '1' value matches 'Episodic'.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that the Credit Text box with index '1' value matches 'Brownie Harris/NBC'.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that the Copyright Text box with index '1' value matches '2013 NBCUniversal Media, LLC'.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that the Keywords Text box with index '1' value matches 'NUP_155306, Revolution, Episode 118, Season 1'.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 6]]>
+    </line>
+    <line>
+      <![CDATA[Enter '1fbedaba25b3473' in the 'Title Text' text box with index '1'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '3035e04cc3f94ac' in the 'Alt Text' text box with index '1'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '05cc85df85c14a2' in the 'Source' text box with index '1'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '2e41bfe052f84a5' in the 'Credit' text box with index '1'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '9c12b7cc3a71404' in the 'Copyright' text box with index '1'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '58cae2ee3b1a446' in the 'Keywords' text box with index '1'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '057eb1cea33c46e' in the 'Title Text' text box with index '2'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'f655d40439de47f' in the 'Alt Text' text box with index '2'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'c40152bbe7eb45e' in the 'Source' text box with index '2'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'c14823b38cff48b' in the 'Credit' text box with index '2'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '3dba993bd804469' in the 'Copyright' text box with index '2'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '572e6f32a36b4ee' in the 'Keywords' text box with index '2'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button with index '2'.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create Media Gallery dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 7]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Edit All' button.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that the Title Text box with index '1' value matches '1fbedaba25b3473'.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that the Alt Text box with index '1' value matches '3035e04cc3f94ac'.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that the Source box with index '1' value matches '05cc85df85c14a2'.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that the Credit Text box with index '1' value matches '2e41bfe052f84a5'.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that the Copyright Text box with index '1' value matches '9c12b7cc3a71404'.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that the Keywords Text box with index '1' value matches '58cae2ee3b1a446'.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that the Title Text box with index '2' value matches '057eb1cea33c46e'.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that the Alt Text box with index '2' value matches 'f655d40439de47f'.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that the Source box with index '2' value matches 'c40152bbe7eb45e'.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that the Credit Text box with index '2' value matches 'c14823b38cff48b'.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that the Copyright Text box with index '2' value matches '3dba993bd804469'.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that the Keywords Text box with index '2' value matches '572e6f32a36b4ee'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Window' image.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create Media Gallery dialog'.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'AutomationDefault' is present on the page.]]>
+      <![CDATA[Verify success message of 'Media Gallery 087942fa0450499 has been created.' is present.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'MPX Released File Public IDs:' is present on the page.]]>
+      <![CDATA[STEP 8]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'MPX Media Default Released File Public ID:' is present on the page.]]>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'MPX Media Categories:' is present on the page.]]>
+      <![CDATA[Mouse over the 'Add content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'Series' is present on the page.]]>
+      <![CDATA[Click the 'Media Gallery' menu link.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'Show' is present on the page.]]>
+      <![CDATA[Switch to the active frame titled 'Create Media Gallery dialog'.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'MPX Media Description:' is present on the page.]]>
+      <![CDATA[Enter 'd9295d9bfb034d1' in the 'Title' text box.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'Automation 1 example test' is present on the page.]]>
+      <![CDATA[Click the 'Cover' select button.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'MPX Media Author:' is present on the page.]]>
+      <![CDATA[STEP 9]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'Pub7 Content Provider' is present on the page.]]>
+      <![CDATA[Switch to the select file frame.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'MPX Media Air Date:' is present on the page.]]>
+      <![CDATA[Enter the file path for file upload.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'Wednesday, January 8, 2014' is present on the page.]]>
+      <![CDATA[Click the 'Upload' button.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'MPX Media Keywords:' is present on the page.]]>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'mpx, metadata, field, override' is present on the page.]]>
+      <![CDATA[Click the 'Next' button.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'MPX Media Copyright:' is present on the page.]]>
+      <![CDATA[STEP 10]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'NBCUNI QA' is present on the page.]]>
+      <![CDATA[Click the 'Public Local Files' radio button.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'MPX Media Film Advisory Board Rating:' is present on the page.]]>
+      <![CDATA[Click the 'Next' button.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'pd' is present on the page.]]>
+      <![CDATA[Verify the file image 'IPTCDefault' is present.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'MPX Media MPAA Rating:' is present on the page.]]>
+      <![CDATA[Verify the img is loaded and visible.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'MPX Media MPAA Sub-Ratings:' is present on the page.]]>
+      <![CDATA[Assert that the Title Text box with index '1' value matches 'drpin075402'.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'v' is present on the page.]]>
+      <![CDATA[Assert that the Alt Text box with index '1' value matches 'drpin075402'.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'MPX Media V-Chip Rating:' is present on the page.]]>
+      <![CDATA[Assert that the Source box with index '1' value matches 'David Riecks Photography'.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'tv-y7' is present on the page.]]>
+      <![CDATA[Assert that the Credit Text box with index '1' value matches '?1985 David Riecks: www.riecks.c'.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'MPX Media V-Chip Sub-Ratings:' is present on the page.]]>
+      <![CDATA[Assert that the Copyright Text box with index '1' value matches '?1985 David Riecks, All Rights Reserved'.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'l' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'MPX Media Exclude Selected Countries:' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'Prevent Playback in Selected Countries' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'MPX Media Available Date:' is NOT present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'MPX Media Expiration Date:' is NOT present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Edit' link in the work bench.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Edit mpx_video_76 AutomationDefault dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that the 'Media Availabe Date' text box is disabled and has no value.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that the 'Media Expiration Date' text box is disabled and has no value.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Override' checkbox for the 'Available Date' check box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Override' checkbox for the 'Expiration Date' check box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '08/06/2014' in the 'Available Date' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '05:00pm' in the 'Available Time' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '07/29/2017' in the 'Expiration Date' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '05:00pm' in the 'Expiration Time' text box.]]>
+      <![CDATA[Assert that the Keywords Text box with index '1' value matches 'environment, ecology, ecosystem, environmentalism, scenery, nature, land, mountains, mount, Himalayans, sky, skies, cloud, clouds, concepts, concept, conceptual, summit, peak, weather, snow, snowing, snowfall, outdoors, outdoor, outside'.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'MPX Video for Account "DB TV" (2312945284) AutomationDefault has been updated.' is present.]]>
+      <![CDATA[Switch to the active frame titled 'Create Media Gallery dialog'.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'MPX Media Available Date:' is present on the page.]]>
+      <![CDATA[STEP 11]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'Wednesday, August 6, 2014' is present on the page.]]>
+      <![CDATA[Click the 'Edit' button.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'MPX Media Expiration Date: ' is present on the page.]]>
+      <![CDATA[Assert that the Title Text box with index '1' value matches 'drpin075402'.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'Saturday, July 29, 2017' is present on the page.]]>
+      <![CDATA[Assert that the Alt Text box with index '1' value matches 'drpin075402'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Edit' link in the work bench.]]>
+      <![CDATA[Assert that the Source box with index '1' value matches 'David Riecks Photography'.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Edit mpx_video_76 AutomationDefault dialog'.]]>
+      <![CDATA[Assert that the Credit Text box with index '1' value matches '?1985 David Riecks: www.riecks.c'.]]>
     </line>
     <line>
-      <![CDATA[Un-check the 'Override' checkbox for the 'Available Date' check box.]]>
+      <![CDATA[Assert that the Copyright Text box with index '1' value matches '?1985 David Riecks, All Rights Reserved'.]]>
     </line>
     <line>
-      <![CDATA[Un-check the 'Override' checkbox for the 'Expiration Date' check box.]]>
+      <![CDATA[Assert that the Keywords Text box with index '1' value matches 'environment, ecology, ecosystem, environmentalism, scenery, nature, land, mountains, mount, Himalayans, sky, skies, cloud, clouds, concepts, concept, conceptual, summit, peak, weather, snow, snowing, snowfall, outdoors, outdoor, outside'.]]>
     </line>
     <line>
-      <![CDATA[Verify that the 'Media Availabe Date' text box is disabled and has no value.]]>
+      <![CDATA[STEP 12]]>
     </line>
     <line>
-      <![CDATA[Verify that the 'Media Expiration Date' text box is disabled and has no value.]]>
+      <![CDATA[Enter '18587d07c0d44b5' in the 'Title Text' text box with index '1'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save' button.]]>
+      <![CDATA[Enter 'e4c29cb8aa03437' in the 'Alt Text' text box with index '1'.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'MPX Video for Account "DB TV" (2312945284) AutomationDefault has been updated.' is present.]]>
+      <![CDATA[Enter '66776b968a2043b' in the 'Source' text box with index '1'.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'AutomationDefault' is present on the page.]]>
+      <![CDATA[Enter '2ef7f91283e540d' in the 'Credit' text box with index '1'.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'MPX Released File Public IDs:' is present on the page.]]>
+      <![CDATA[Enter 'f751435775a24a6' in the 'Copyright' text box with index '1'.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'MPX Media Default Released File Public ID:' is present on the page.]]>
+      <![CDATA[Enter '588249cb0ff34df' in the 'Keywords' text box with index '1'.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'MPX Media Categories:' is present on the page.]]>
+      <![CDATA[Click the 'Save' button with index '2'.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'Series' is present on the page.]]>
+      <![CDATA[Switch to the active frame titled 'Create Media Gallery dialog'.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'Show' is present on the page.]]>
+      <![CDATA[Click the 'Edit' button.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'MPX Media Description:' is present on the page.]]>
+      <![CDATA[Assert that the Title Text box with index '1' value matches '18587d07c0d44b5'.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'Automation 1 example test' is present on the page.]]>
+      <![CDATA[Assert that the Alt Text box with index '1' value matches 'e4c29cb8aa03437'.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'MPX Media Author:' is present on the page.]]>
+      <![CDATA[Assert that the Source box with index '1' value matches '66776b968a2043b'.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'Pub7 Content Provider' is present on the page.]]>
+      <![CDATA[Assert that the Credit Text box with index '1' value matches '2ef7f91283e540d'.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'MPX Media Air Date:' is present on the page.]]>
+      <![CDATA[Assert that the Copyright Text box with index '1' value matches 'f751435775a24a6'.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'Wednesday, January 8, 2014' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'MPX Media Keywords:' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'mpx, metadata, field, override' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'MPX Media Copyright:' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'NBCUNI QA' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'MPX Media Film Advisory Board Rating:' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'pd' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'MPX Media MPAA Rating:' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'MPX Media MPAA Sub-Ratings:' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'v' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'MPX Media V-Chip Rating:' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'tv-y7' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'MPX Media V-Chip Sub-Ratings:' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'l' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'MPX Media Exclude Selected Countries:' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'Prevent Playback in Selected Countries' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'MPX Media Available Date:' is NOT present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'MPX Media Expiration Date:' is NOT present on the page.]]>
+      <![CDATA[Assert that the Keywords Text box with index '1' value matches '588249cb0ff34df'.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="70608" started-at="2014-07-30T12:14:32Z" finished-at="2014-07-30T12:15:43Z">
+  <suite name="Default suite" duration-ms="118806" started-at="2014-07-30T13:54:20Z" finished-at="2014-07-30T13:56:19Z">
     <groups>
-      <group name="mpx">
-        <method signature="MPXVideosSchedulingVerificationInitialOverrides.MPXVideosSchedulingVerificationInitialOverrides_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides@14b05b39]" name="MPXVideosSchedulingVerificationInitialOverrides_Test" class="com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides"/>
-      </group> <!-- mpx -->
       <group name="full">
-        <method signature="MPXVideosSchedulingVerificationInitialOverrides.MPXVideosSchedulingVerificationInitialOverrides_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides@14b05b39]" name="MPXVideosSchedulingVerificationInitialOverrides_Test" class="com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides"/>
+        <method signature="PopulateEXIFBulkUpload.PopulateEXIFBulkUpload_TC3192()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIF.PopulateEXIFBulkUpload@713c3100]" name="PopulateEXIFBulkUpload_TC3192" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIF.PopulateEXIFBulkUpload"/>
       </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="70608" started-at="2014-07-30T12:14:32Z" finished-at="2014-07-30T12:15:43Z">
-      <class name="com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides">
-        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides@14b05b39]" name="startGridAndHub" is-config="true" duration-ms="1363" started-at="2014-07-30T08:14:31Z" finished-at="2014-07-30T08:14:32Z">
+    <test name="Default test" duration-ms="118806" started-at="2014-07-30T13:54:20Z" finished-at="2014-07-30T13:56:19Z">
+      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIF.PopulateEXIFBulkUpload">
+        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIF.PopulateEXIFBulkUpload@713c3100]" name="startGridAndHub" is-config="true" duration-ms="1407" started-at="2014-07-30T09:54:19Z" finished-at="2014-07-30T09:54:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startGridAndHub -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides@14b05b39]" name="startSelenium" is-config="true" duration-ms="2624" started-at="2014-07-30T08:14:32Z" finished-at="2014-07-30T08:14:35Z">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIF.PopulateEXIFBulkUpload@713c3100]" name="startSelenium" is-config="true" duration-ms="2649" started-at="2014-07-30T09:54:20Z" finished-at="2014-07-30T09:54:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="MPXVideosSchedulingVerificationInitialOverrides_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides@14b05b39]" name="MPXVideosSchedulingVerificationInitialOverrides_Test" duration-ms="67397" started-at="2014-07-30T08:14:35Z" finished-at="2014-07-30T08:15:42Z">
+        <test-method status="PASS" signature="PopulateEXIFBulkUpload_TC3192()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIF.PopulateEXIFBulkUpload@713c3100]" name="PopulateEXIFBulkUpload_TC3192" duration-ms="115570" started-at="2014-07-30T09:54:23Z" finished-at="2014-07-30T09:56:18Z">
           <reporter-output>
+            <line>
+              <![CDATA[STEP 1]]>
+            </line>
             <line>
               <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
             </line>
@@ -393,28 +498,7 @@
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Configuration' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Media' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Media: thePlatform mpx settings' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.]]>
-            </line>
-            <line>
-              <![CDATA[MPX is already configured.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll by '-500'.]]>
+              <![CDATA[SETUP]]>
             </line>
             <line>
               <![CDATA[Mouse over the 'Configuration' menu link.]]>
@@ -423,338 +507,461 @@
               <![CDATA[Mouse over the 'Media' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Media: thePlatform mpx settings' menu link.]]>
+              <![CDATA[Click the 'Simple EXIF/IPTC Mappings' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'Simple EXIF/IPTC Mappings dialog'.]]>
             </line>
             <line>
-              <![CDATA[Get all the selected import account options and store to a list.]]>
+              <![CDATA[Select the 'Title' option from the 'Alt Text' drop down list.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
+              <![CDATA[Select the 'Title' option from the 'Title Text' drop down list.]]>
             </line>
             <line>
-              <![CDATA[Scroll by '-500'.]]>
+              <![CDATA[Select the 'Caption' option from the 'Caption' drop down list.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Structure' menu link.]]>
+              <![CDATA[Select the 'Copyright' option from the 'Copyright' drop down list.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'File types' menu link.]]>
+              <![CDATA[Select the 'Credit' option from the 'Credit' drop down list.]]>
             </line>
             <line>
-              <![CDATA[Click the 'MPX Video for Account "DB TV" (2312945284)' menu link.]]>
+              <![CDATA[Select the 'Keywords' option from the 'Keywords' drop down list.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'MPX Video for Account &quot;DB TV&quot; (2312945284) dialog'.]]>
+              <![CDATA[Select the 'none' option from the 'Media categories' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Select the 'none' option from the 'Media Tags' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Select the 'Source' option from the 'Source' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 2]]>
             </line>
             <line>
               <![CDATA[Mouse over the 'Content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Files' menu link.]]>
+              <![CDATA[Mouse over the 'Add content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'mpxMedia' menu link.]]>
+              <![CDATA[Click the 'Media Gallery' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'Create Media Gallery dialog'.]]>
             </line>
             <line>
-              <![CDATA[Enter title AutomationDefault.]]>
+              <![CDATA[Enter '087942fa0450499' in the 'Title' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Apply' button.]]>
+              <![CDATA[STEP 3]]>
             </line>
             <line>
-              <![CDATA[Get the title text of every result in the search result set.]]>
+              <![CDATA[Click the 'Media Items Select' button.]]>
             </line>
             <line>
-              <![CDATA[For each expected result, assert it is present in the result set.]]>
+              <![CDATA[Switch to the select file frame.]]>
             </line>
             <line>
-              <![CDATA[Click the first search title link in the search result set.]]>
+              <![CDATA[Click the 'Add files' link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Edit' link in the work bench.]]>
+              <![CDATA[Click the 'All Files' icon.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Edit mpx_video_76 AutomationDefault dialog'.]]>
+              <![CDATA[Click the local 'Pictures' icon.]]>
             </line>
             <line>
-              <![CDATA[Un-check the 'Override' checkbox for the 'Available Date' check box.]]>
+              <![CDATA[Click the test picture link.]]>
             </line>
             <line>
-              <![CDATA[Un-check the 'Override' checkbox for the 'Expiration Date' check box.]]>
+              <![CDATA[Click the 'Open' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Start upload' link.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for file upload to reach 100%]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Media Gallery dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Add' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the select file frame.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Add files' link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'All Files' icon.]]>
+            </line>
+            <line>
+              <![CDATA[Click the local 'Pictures' icon.]]>
+            </line>
+            <line>
+              <![CDATA[Click the test picture link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Open' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Start upload' link.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for file upload to reach 100%]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Media Gallery dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the img source of the Media Item contains 'NUP_155306_0046'.]]>
+            </line>
+            <line>
+              <![CDATA[Assert the the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the img source of the Media Item contains 'NUP_155306_0046'.]]>
+            </line>
+            <line>
+              <![CDATA[Assert the the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 4]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Edit' button with index '1'.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that the Title Text box with index '1' value matches 'NUP_155306_0046.JPG'.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that the Alt Text box with index '1' value matches 'NUP_155306_0046.JPG'.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that the Source box with index '1' value matches 'Episodic'.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that the Credit Text box with index '1' value matches 'Brownie Harris/NBC'.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that the Copyright Text box with index '1' value matches '2013 NBCUniversal Media, LLC'.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that the Keywords Text box with index '1' value matches 'NUP_155306, Revolution, Episode 118, Season 1'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Window' image.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Media Gallery dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 5]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Edit All' button.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that the Title Text box with index '1' value matches 'NUP_155306_0046.JPG'.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that the Alt Text box with index '1' value matches 'NUP_155306_0046.JPG'.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that the Source box with index '1' value matches 'Episodic'.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that the Credit Text box with index '1' value matches 'Brownie Harris/NBC'.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that the Copyright Text box with index '1' value matches '2013 NBCUniversal Media, LLC'.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that the Keywords Text box with index '1' value matches 'NUP_155306, Revolution, Episode 118, Season 1'.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 6]]>
+            </line>
+            <line>
+              <![CDATA[Enter '1fbedaba25b3473' in the 'Title Text' text box with index '1'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '3035e04cc3f94ac' in the 'Alt Text' text box with index '1'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '05cc85df85c14a2' in the 'Source' text box with index '1'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '2e41bfe052f84a5' in the 'Credit' text box with index '1'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '9c12b7cc3a71404' in the 'Copyright' text box with index '1'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '58cae2ee3b1a446' in the 'Keywords' text box with index '1'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '057eb1cea33c46e' in the 'Title Text' text box with index '2'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'f655d40439de47f' in the 'Alt Text' text box with index '2'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'c40152bbe7eb45e' in the 'Source' text box with index '2'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'c14823b38cff48b' in the 'Credit' text box with index '2'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '3dba993bd804469' in the 'Copyright' text box with index '2'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '572e6f32a36b4ee' in the 'Keywords' text box with index '2'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button with index '2'.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Media Gallery dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 7]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Edit All' button.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that the Title Text box with index '1' value matches '1fbedaba25b3473'.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that the Alt Text box with index '1' value matches '3035e04cc3f94ac'.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that the Source box with index '1' value matches '05cc85df85c14a2'.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that the Credit Text box with index '1' value matches '2e41bfe052f84a5'.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that the Copyright Text box with index '1' value matches '9c12b7cc3a71404'.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that the Keywords Text box with index '1' value matches '58cae2ee3b1a446'.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that the Title Text box with index '2' value matches '057eb1cea33c46e'.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that the Alt Text box with index '2' value matches 'f655d40439de47f'.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that the Source box with index '2' value matches 'c40152bbe7eb45e'.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that the Credit Text box with index '2' value matches 'c14823b38cff48b'.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that the Copyright Text box with index '2' value matches '3dba993bd804469'.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that the Keywords Text box with index '2' value matches '572e6f32a36b4ee'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Window' image.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Media Gallery dialog'.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'AutomationDefault' is present on the page.]]>
+              <![CDATA[Verify success message of 'Media Gallery 087942fa0450499 has been created.' is present.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'MPX Released File Public IDs:' is present on the page.]]>
+              <![CDATA[STEP 8]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'MPX Media Default Released File Public ID:' is present on the page.]]>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'MPX Media Categories:' is present on the page.]]>
+              <![CDATA[Mouse over the 'Add content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'Series' is present on the page.]]>
+              <![CDATA[Click the 'Media Gallery' menu link.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'Show' is present on the page.]]>
+              <![CDATA[Switch to the active frame titled 'Create Media Gallery dialog'.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'MPX Media Description:' is present on the page.]]>
+              <![CDATA[Enter 'd9295d9bfb034d1' in the 'Title' text box.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'Automation 1 example test' is present on the page.]]>
+              <![CDATA[Click the 'Cover' select button.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'MPX Media Author:' is present on the page.]]>
+              <![CDATA[STEP 9]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'Pub7 Content Provider' is present on the page.]]>
+              <![CDATA[Switch to the select file frame.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'MPX Media Air Date:' is present on the page.]]>
+              <![CDATA[Enter the file path for file upload.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'Wednesday, January 8, 2014' is present on the page.]]>
+              <![CDATA[Click the 'Upload' button.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'MPX Media Keywords:' is present on the page.]]>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'mpx, metadata, field, override' is present on the page.]]>
+              <![CDATA[Click the 'Next' button.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'MPX Media Copyright:' is present on the page.]]>
+              <![CDATA[STEP 10]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'NBCUNI QA' is present on the page.]]>
+              <![CDATA[Click the 'Public Local Files' radio button.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'MPX Media Film Advisory Board Rating:' is present on the page.]]>
+              <![CDATA[Click the 'Next' button.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'pd' is present on the page.]]>
+              <![CDATA[Verify the file image 'IPTCDefault' is present.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'MPX Media MPAA Rating:' is present on the page.]]>
+              <![CDATA[Verify the img is loaded and visible.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'MPX Media MPAA Sub-Ratings:' is present on the page.]]>
+              <![CDATA[Assert that the Title Text box with index '1' value matches 'drpin075402'.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'v' is present on the page.]]>
+              <![CDATA[Assert that the Alt Text box with index '1' value matches 'drpin075402'.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'MPX Media V-Chip Rating:' is present on the page.]]>
+              <![CDATA[Assert that the Source box with index '1' value matches 'David Riecks Photography'.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'tv-y7' is present on the page.]]>
+              <![CDATA[Assert that the Credit Text box with index '1' value matches '?1985 David Riecks: www.riecks.c'.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'MPX Media V-Chip Sub-Ratings:' is present on the page.]]>
+              <![CDATA[Assert that the Copyright Text box with index '1' value matches '?1985 David Riecks, All Rights Reserved'.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'l' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'MPX Media Exclude Selected Countries:' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'Prevent Playback in Selected Countries' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'MPX Media Available Date:' is NOT present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'MPX Media Expiration Date:' is NOT present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Edit' link in the work bench.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Edit mpx_video_76 AutomationDefault dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that the 'Media Availabe Date' text box is disabled and has no value.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that the 'Media Expiration Date' text box is disabled and has no value.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Override' checkbox for the 'Available Date' check box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Override' checkbox for the 'Expiration Date' check box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '08/06/2014' in the 'Available Date' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '05:00pm' in the 'Available Time' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '07/29/2017' in the 'Expiration Date' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '05:00pm' in the 'Expiration Time' text box.]]>
+              <![CDATA[Assert that the Keywords Text box with index '1' value matches 'environment, ecology, ecosystem, environmentalism, scenery, nature, land, mountains, mount, Himalayans, sky, skies, cloud, clouds, concepts, concept, conceptual, summit, peak, weather, snow, snowing, snowfall, outdoors, outdoor, outside'.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'MPX Video for Account "DB TV" (2312945284) AutomationDefault has been updated.' is present.]]>
+              <![CDATA[Switch to the active frame titled 'Create Media Gallery dialog'.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'MPX Media Available Date:' is present on the page.]]>
+              <![CDATA[STEP 11]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'Wednesday, August 6, 2014' is present on the page.]]>
+              <![CDATA[Click the 'Edit' button.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'MPX Media Expiration Date: ' is present on the page.]]>
+              <![CDATA[Assert that the Title Text box with index '1' value matches 'drpin075402'.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'Saturday, July 29, 2017' is present on the page.]]>
+              <![CDATA[Assert that the Alt Text box with index '1' value matches 'drpin075402'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Edit' link in the work bench.]]>
+              <![CDATA[Assert that the Source box with index '1' value matches 'David Riecks Photography'.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Edit mpx_video_76 AutomationDefault dialog'.]]>
+              <![CDATA[Assert that the Credit Text box with index '1' value matches '?1985 David Riecks: www.riecks.c'.]]>
             </line>
             <line>
-              <![CDATA[Un-check the 'Override' checkbox for the 'Available Date' check box.]]>
+              <![CDATA[Assert that the Copyright Text box with index '1' value matches '?1985 David Riecks, All Rights Reserved'.]]>
             </line>
             <line>
-              <![CDATA[Un-check the 'Override' checkbox for the 'Expiration Date' check box.]]>
+              <![CDATA[Assert that the Keywords Text box with index '1' value matches 'environment, ecology, ecosystem, environmentalism, scenery, nature, land, mountains, mount, Himalayans, sky, skies, cloud, clouds, concepts, concept, conceptual, summit, peak, weather, snow, snowing, snowfall, outdoors, outdoor, outside'.]]>
             </line>
             <line>
-              <![CDATA[Verify that the 'Media Availabe Date' text box is disabled and has no value.]]>
+              <![CDATA[STEP 12]]>
             </line>
             <line>
-              <![CDATA[Verify that the 'Media Expiration Date' text box is disabled and has no value.]]>
+              <![CDATA[Enter '18587d07c0d44b5' in the 'Title Text' text box with index '1'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save' button.]]>
+              <![CDATA[Enter 'e4c29cb8aa03437' in the 'Alt Text' text box with index '1'.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'MPX Video for Account "DB TV" (2312945284) AutomationDefault has been updated.' is present.]]>
+              <![CDATA[Enter '66776b968a2043b' in the 'Source' text box with index '1'.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'AutomationDefault' is present on the page.]]>
+              <![CDATA[Enter '2ef7f91283e540d' in the 'Credit' text box with index '1'.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'MPX Released File Public IDs:' is present on the page.]]>
+              <![CDATA[Enter 'f751435775a24a6' in the 'Copyright' text box with index '1'.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'MPX Media Default Released File Public ID:' is present on the page.]]>
+              <![CDATA[Enter '588249cb0ff34df' in the 'Keywords' text box with index '1'.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'MPX Media Categories:' is present on the page.]]>
+              <![CDATA[Click the 'Save' button with index '2'.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'Series' is present on the page.]]>
+              <![CDATA[Switch to the active frame titled 'Create Media Gallery dialog'.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'Show' is present on the page.]]>
+              <![CDATA[Click the 'Edit' button.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'MPX Media Description:' is present on the page.]]>
+              <![CDATA[Assert that the Title Text box with index '1' value matches '18587d07c0d44b5'.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'Automation 1 example test' is present on the page.]]>
+              <![CDATA[Assert that the Alt Text box with index '1' value matches 'e4c29cb8aa03437'.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'MPX Media Author:' is present on the page.]]>
+              <![CDATA[Assert that the Source box with index '1' value matches '66776b968a2043b'.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'Pub7 Content Provider' is present on the page.]]>
+              <![CDATA[Assert that the Credit Text box with index '1' value matches '2ef7f91283e540d'.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'MPX Media Air Date:' is present on the page.]]>
+              <![CDATA[Assert that the Copyright Text box with index '1' value matches 'f751435775a24a6'.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'Wednesday, January 8, 2014' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'MPX Media Keywords:' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'mpx, metadata, field, override' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'MPX Media Copyright:' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'NBCUNI QA' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'MPX Media Film Advisory Board Rating:' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'pd' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'MPX Media MPAA Rating:' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'MPX Media MPAA Sub-Ratings:' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'v' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'MPX Media V-Chip Rating:' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'tv-y7' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'MPX Media V-Chip Sub-Ratings:' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'l' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'MPX Media Exclude Selected Countries:' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'Prevent Playback in Selected Countries' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'MPX Media Available Date:' is NOT present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'MPX Media Expiration Date:' is NOT present on the page.]]>
+              <![CDATA[Assert that the Keywords Text box with index '1' value matches '588249cb0ff34df'.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- MPXVideosSchedulingVerificationInitialOverrides_Test -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides@14b05b39]" name="stopSelenium" is-config="true" duration-ms="574" started-at="2014-07-30T08:15:42Z" finished-at="2014-07-30T08:15:43Z">
+        </test-method> <!-- PopulateEXIFBulkUpload_TC3192 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIF.PopulateEXIFBulkUpload@713c3100]" name="stopSelenium" is-config="true" duration-ms="574" started-at="2014-07-30T09:56:18Z" finished-at="2014-07-30T09:56:19Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=MPXVideosSchedulingVerificationInitialOverrides_Test status=SUCCESS method=MPXVideosSchedulingVerificationInitialOverrides.MPXVideosSchedulingVerificationInitialOverrides_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides@14b05b39] output=Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]]>
+                <![CDATA[[TestResult name=PopulateEXIFBulkUpload_TC3192 status=SUCCESS method=PopulateEXIFBulkUpload.PopulateEXIFBulkUpload_TC3192()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIF.PopulateEXIFBulkUpload@713c3100] output=STEP 1]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides@14b05b39]" name="stopGridAndHub" is-config="true" duration-ms="375" started-at="2014-07-30T08:15:43Z" finished-at="2014-07-30T08:15:43Z">
+        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIF.PopulateEXIFBulkUpload@713c3100]" name="stopGridAndHub" is-config="true" duration-ms="404" started-at="2014-07-30T09:56:19Z" finished-at="2014-07-30T09:56:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopGridAndHub -->
-      </class> <!-- com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides -->
+      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIF.PopulateEXIFBulkUpload -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
