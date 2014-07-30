@@ -56,9 +56,7 @@ public class ThumbnailsAreNotUpdated extends ParentTest{
         
         //MPX Configuration required
     	Settings settings = new Settings(webDriver, applib);
-    	settings.ConfigureMPXIfNeeded();
-    	
-        taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
+    	taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
         overlay.SwitchToActiveFrame();
         
         List<String> configuredAccounts = settings.GetImportAccountSelectedOptions();
@@ -119,8 +117,10 @@ public class ThumbnailsAreNotUpdated extends ParentTest{
                 //Step 13
                 applib.openApplication();
                 Cron cron = new Cron(webDriver, applib);
-                cron.RunCron(true);
-        		
+                if (config.getConfigValue("DrushIngestion").equals("false")) {
+                	cron.RunCron(true);
+                }
+                
         		//Step 14
         	    taxonomy.NavigateSite("Content>>Files>>mpxMedia");
         	    overlay.SwitchToActiveFrame();
@@ -129,12 +129,24 @@ public class ThumbnailsAreNotUpdated extends ParentTest{
         	    searchFor.ClickApplyBtn();
         	    overlay.switchToDefaultContent(true);
         	    if (!searchFor.GetFirstMPXMediaSearchResult().equals(mediaTitle)) {
-        	    	//re-run cron as sometimes media assets aren't in the first ingested queue
-        	    	cron.RunCron(false);
-            	    taxonomy.NavigateSite("Content>>Files>>mpxMedia");
-            	    searchFor.EnterTitle(mediaTitle);
-            	    searchFor.ClickApplyBtn();
-        	    }
+            	    if (config.getConfigValue("DrushIngestion").equals("true")) {
+            	    	int refreshCount = 0;
+            	    	while (!searchFor.GetFirstMPXMediaSearchResult().equals(mediaTitle)) {
+                           	
+                    		   webDriver.navigate().refresh();
+                    		   refreshCount++;
+                    		   if (refreshCount == 10) {
+                    		   Assert.fail("Asset titled '" + mediaTitle + "' not ingested");
+                    		   }
+                    	   }
+            		}
+            	    else {
+            	    	cron.RunCron(false);
+                		taxonomy.NavigateSite("Content>>Files>>mpxMedia");
+            	    }
+                	searchFor.EnterTitle(mediaTitle);
+                	searchFor.ClickApplyBtn();
+            	}
         	    searchFor.VerifySearchThumbnailImgPresent(mediaTitle, "nbclogosmall");
         		
         		//Step 15 through 21 - TODO as time allows. This initial test is more about initial mpx thumbnail ingestion than thumbnail update.

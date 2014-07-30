@@ -9,6 +9,7 @@ import com.nbcuni.test.publisher.pageobjects.Content.PublishingOptions;
 import com.nbcuni.test.publisher.pageobjects.Queues.Queues;
 import com.nbcuni.test.publisher.pageobjects.Queues.ScheduleQueue;
 
+import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 
@@ -31,7 +32,7 @@ public class CreateConfigureDynamicQueue extends ParentTest{
         
         Reporter.log("STEP 2");
         /*
-        
+        Assert.fail("restart here.");
         
         
         

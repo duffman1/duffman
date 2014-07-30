@@ -130,6 +130,9 @@ public class ErrorChecking {
     		allowedErrors.add("Failed to update URI to \"mpx:");
     		allowedErrors.add("Notice: Trying to get property of non-object in MediaThePlatformMpxStreamWrapper->interpolateUrl");
     		
+    		//module error
+    		allowedErrors.add("There was a problem checking available updates");
+    		
     		//FIRST - check if error container is present
     		boolean errorContainerPresent = false;
     		try {
@@ -177,7 +180,8 @@ public class ErrorChecking {
     								 					|| errorText.contains(allowedErrors.get(14))
     								 					|| errorText.contains(allowedErrors.get(15))
     								 					|| errorText.contains(allowedErrors.get(16))
-    								 					|| errorText.contains(allowedErrors.get(17))) {
+    								 					|| errorText.contains(allowedErrors.get(17))
+    								 					|| errorText.contains(allowedErrors.get(18))) {
     					//ignore error
     				}
     				else {
@@ -213,7 +217,8 @@ public class ErrorChecking {
     	    								 					|| errorText.contains(allowedErrors.get(14))
     	    								 					|| errorText.contains(allowedErrors.get(15))
     	    								 					|| errorText.contains(allowedErrors.get(16))
-    	    								 					|| errorText.contains(allowedErrors.get(17))) {
+    	    								 					|| errorText.contains(allowedErrors.get(17))
+    	    								 					|| errorText.contains(allowedErrors.get(18))) {
     						//ignore error
     					}
     					else {

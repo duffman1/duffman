@@ -1,6 +1,7 @@
 package com.nbcuni.test.publisher.pageobjects.MPX;
 
 import com.nbcuni.test.publisher.common.AppLib;
+import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
 import com.nbcuni.test.publisher.pageobjects.Overlay;
 import com.nbcuni.test.publisher.pageobjects.Cron.Cron;
@@ -39,6 +40,7 @@ public class Settings {
     private Taxonomy taxonomy;
     private Cron cron;
     private MPXMedia mpxMedia;
+    private Config config;
     
     //PAGE OBJECT CONSTRUCTOR
     public Settings(Driver webDriver, AppLib applib) {
@@ -50,6 +52,7 @@ public class Settings {
         taxonomy = new Taxonomy(webDriver);
         mpxMedia = new MPXMedia(webDriver);
         cron = new Cron(webDriver, applib);
+        config = new Config();
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -82,6 +85,9 @@ public class Settings {
     
     @FindBy(how = How.ID, using = "edit-import-accounts-actions-submit")
     private WebElement SetImportAccount_Btn;
+    
+    @FindBy(how = How.ID, using = "edit-media-theplatform-mpx-cron-videos")
+    private WebElement SyncMPXMediaOnCron_Cbx;
     
     @FindBy(how = How.ID, using = "edit-submit")
     private WebElement SaveConfigurations_Btn;
@@ -256,6 +262,22 @@ public class Settings {
     
     	Reporter.log("click the 'Set Import Account' button.");
     	SetImportAccount_Btn.click();
+    }
+    
+    public void UnCheckSyncMPXMediaOnCronBtn() throws Exception {
+    	
+    	if (SyncMPXMediaOnCron_Cbx.isSelected() == true) {
+    		Reporter.log("Uncheck the 'Sync mpxMedia on Cron' check box.");
+    		SyncMPXMediaOnCron_Cbx.click();
+    	}
+    }
+    
+    public void CheckSyncMPXMediaOnCronBtn() throws Exception {
+    	
+    	if (SyncMPXMediaOnCron_Cbx.isSelected() == false) {
+    		Reporter.log("Check the 'Sync mpxMedia on Cron' check box.");
+    		SyncMPXMediaOnCron_Cbx.click();
+    	}
     }
     
     public void ClickSaveConfigurationsBtn() throws Exception {
@@ -437,6 +459,12 @@ public class Settings {
         	this.ClickConnectToMPXBtn();
         	this.SelectImportAccount1("DB TV");
         	this.ClickSetImportAccountBtn();
+        	if (config.getConfigValue("DrushIngestion").equals("true")) {
+        		this.UnCheckSyncMPXMediaOnCronBtn();
+        	}
+        	else {
+        		this.CheckSyncMPXMediaOnCronBtn();
+        	}
         	this.ClickSaveConfigurationsBtn();
         	overlay.ClickCloseOverlayLnk();
         	taxonomy.NavigateSite("Content>>Files>>mpxMedia");
@@ -451,6 +479,28 @@ public class Settings {
     		Reporter.log("MPX is already configured.");
     		overlay.ClickCloseOverlayLnk();
     	}
+    }
+    
+    public void ConfigureMPXIngestionType() throws Exception {
+    	
+    	taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
+        overlay.SwitchToActiveFrame();
+        
+    	if (config.getConfigValue("DrushIngestion").equals("true")) {
+        		this.UnCheckSyncMPXMediaOnCronBtn();
+        }
+        else {
+        	this.CheckSyncMPXMediaOnCronBtn();
+        }
+        this.ClickSaveConfigurationsBtn();
+        overlay.ClickCloseOverlayLnk();
+        
+        taxonomy.NavigateSite("Content>>Files>>mpxMedia");
+    	overlay.SwitchToActiveFrame();
+    	mpxMedia.ExpandMPXMedia();
+        mpxMedia.SelectMPXPlayerForAccount1("AutomationPlayer1");
+        mpxMedia.ClickSyncMPXMediaNowLnk();
+        overlay.ClickCloseOverlayLnk();
     }
   
 }

@@ -34,9 +34,7 @@ public class CanonicalURL extends ParentTest{
     	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
         
         Reporter.log("SETUP");
-        Settings settings = new Settings(webDriver, applib);
-    	settings.ConfigureMPXIfNeeded();
-    	
+    	Settings settings = new Settings(webDriver, applib);
         taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
         overlay.SwitchToActiveFrame();
         List<String> configuredAccounts = settings.GetImportAccountSelectedOptions();
@@ -100,8 +98,10 @@ public class CanonicalURL extends ParentTest{
             Reporter.log("STEP 9");
             applib.openApplication();
             Cron cron = new Cron(webDriver, applib);
-            cron.RunCron(true);
-                
+            if (config.getConfigValue("DrushIngestion").equals("false")) {
+            	cron.RunCron(true);
+            }
+            
         	Reporter.log("STEP 10");
         	taxonomy.NavigateSite("Content>>Files>>mpxMedia");
         	overlay.SwitchToActiveFrame();
@@ -110,9 +110,21 @@ public class CanonicalURL extends ParentTest{
         	searchFor.ClickApplyBtn();
         	overlay.switchToDefaultContent(true);
         	if (!searchFor.GetFirstMPXMediaSearchResult().equals(mediaTitle)) {
-        	    //re-run cron as sometimes media assets aren't in the first ingested queue
-        	    cron.RunCron(false);
-            	taxonomy.NavigateSite("Content>>Files>>mpxMedia");
+        	    if (config.getConfigValue("DrushIngestion").equals("true")) {
+        	    	int refreshCount = 0;
+        	    	while (!searchFor.GetFirstMPXMediaSearchResult().equals(mediaTitle)) {
+                       	
+                		   webDriver.navigate().refresh();
+                		   refreshCount++;
+                		   if (refreshCount == 15) {
+                		   Assert.fail("Asset titled '" + mediaTitle + "' not ingested");
+                		   }
+                	   }
+        		}
+        	    else {
+        	    	cron.RunCron(false);
+            		taxonomy.NavigateSite("Content>>Files>>mpxMedia");
+        	    }
             	searchFor.EnterTitle(mediaTitle);
             	searchFor.ClickApplyBtn();
         	}
@@ -120,6 +132,7 @@ public class CanonicalURL extends ParentTest{
         	    
         	Reporter.log("STEP 11");
         	contentParent.VerifyPageContentPresent(Arrays.asList("MPX Media Related Link:", canonicalURL));
+        	Reporter.log("Verify URL equals '" + applib.getApplicationURL() + "/" + canonicalURL + "'.");
         	Assert.assertTrue(webDriver.getCurrentUrl().equals(applib.getApplicationURL() + "/" + canonicalURL));
         		
         }

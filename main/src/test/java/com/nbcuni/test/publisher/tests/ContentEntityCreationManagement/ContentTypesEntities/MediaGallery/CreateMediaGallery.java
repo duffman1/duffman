@@ -2,13 +2,11 @@ package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentT
 
 import org.testng.Reporter;
 import org.testng.annotations.Test;
-
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Content.AddFile;
 import com.nbcuni.test.publisher.pageobjects.Content.BasicInformation;
-import com.nbcuni.test.publisher.pageobjects.Content.Content;
 import com.nbcuni.test.publisher.pageobjects.Content.EditImage;
 import com.nbcuni.test.publisher.pageobjects.Content.MediaItems;
 import com.nbcuni.test.publisher.pageobjects.Content.SelectFile;
@@ -150,54 +148,8 @@ public class CreateMediaGallery extends ParentTest{
             overlay.switchToDefaultContent(true);
             contentParent.VerifyMessageStatus("Media Gallery " + title + " has been created.");
             
-            Reporter.log("STEP 12");
-            taxonomy.NavigateSite("Structure>>Content types>>Media Gallery>>Manage fields>>Media Items");
-            overlay.SwitchToActiveFrame();
-            edit.EnterFileDirectory("test123");
-            edit.ClickSaveSettingsBtn();
-            contentParent.VerifyMessageStatus("Saved Media Items configuration");
-            overlay.ClickCloseOverlayLnk();
+            Reporter.log("STEP 12 - 14 N/A");
             
-            Reporter.log("STEP 13");
-            taxonomy.NavigateSite("Content");
-            overlay.SwitchToActiveFrame();
-            Content content = new Content(webDriver, applib);
-            content.ClickEditMenuBtn(title);
-            overlay.SwitchToActiveFrame();
-            mediaItems.ClickAddBtn();
-            selectFile.SwitchToSelectFileFrm();
-            addFile.ClickAddFilesLnk();
-            if (webDriver.getCapabilities().getPlatform().toString() == "MAC") {
-            	addFile.ClickPicturesUploadBtn();
-            	addFile.ClickTestPictureDefaultBtn();
-            	addFile.ClickOpenBtn();
-            }
-            else {
-            	addFile.EnterPathToFile_Win(applib.getPathToMedia());
-            	addFile.ClickGoBtn_Win();
-            	addFile.EnterFileName_Win("nbclogosmall.jpg");
-            	addFile.ClickOpenBtn();
-            }
-            addFile.ClickStartUploadLnk();
-            addFile.WaitForSuccessfulUpload();
-            addFile.ClickNextBtn();
-            overlay.SwitchToActiveFrame();
-            mediaItems.WaitForImgLoadComplete();
-            mediaItems.VerifyFileImagePresent("IPTCDefault", "2");
-            mediaItems.VerifyFileImagePresent("nbclogosmall", "3");
-            try {
-            	mediaItems.VerifyFileVideoPresent("AutomationWThumb", "1");
-            }
-            catch (Exception | AssertionError e) {
-            	mediaItems.VerifyFileVideoLnkPresent("AutomationWThumb", "1");
-            }
-            mediaItems.VerifyFileImagePresent("nbclogosmall", "4");
-            
-            Reporter.log("STEP 14");
-            contentParent.ClickSaveBtn();
-            overlay.SwitchToActiveFrame();
-            contentParent.VerifyMessageStatus("Media Gallery " + title + " has been updated.");
-
 
     }
 }

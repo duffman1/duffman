@@ -78,9 +78,7 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
         
         //Note - test requires mpx configuration
     	Settings settings = new Settings(webDriver, applib);
-    	settings.ConfigureMPXIfNeeded();
-    	
-        taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
+    	taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
         overlay.SwitchToActiveFrame();
         
         	//Setup
@@ -138,8 +136,10 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
             	//Step 7
             	applib.openApplication();
             	Cron cron = new Cron(webDriver, applib);
-            	cron.RunCron(true);
-        	    
+            	if (config.getConfigValue("DrushIngestion").equals("false")) {
+                	cron.RunCron(true);
+                }
+            	
         	    //Step 8
         	    taxonomy.NavigateSite("Content>>Files>>mpxMedia");
         	    overlay.SwitchToActiveFrame();
@@ -150,12 +150,24 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
         	    searchFor.ClickApplyBtn();
         	    overlay.switchToDefaultContent(true);
         	    if (!searchFor.GetFirstMPXMediaSearchResult().equals(mediaTitle)) {
-        	    	//re-run cron as sometimes media assets aren't in the first ingested queue
-        	    	cron.RunCron(false);
-            	    taxonomy.NavigateSite("Content>>Files>>mpxMedia");
-            	    searchFor.EnterTitle(mediaTitle);
-            	    searchFor.ClickApplyBtn();
-        	    }
+            	    if (config.getConfigValue("DrushIngestion").equals("true")) {
+            	    	int refreshCount = 0;
+            	    	while (!searchFor.GetFirstMPXMediaSearchResult().equals(mediaTitle)) {
+                           	
+                    		   webDriver.navigate().refresh();
+                    		   refreshCount++;
+                    		   if (refreshCount == 10) {
+                    		   Assert.fail("Asset titled '" + mediaTitle + "' not ingested");
+                    		   }
+                    	   }
+            		}
+            	    else {
+            	    	cron.RunCron(false);
+                		taxonomy.NavigateSite("Content>>Files>>mpxMedia");
+            	    }
+                	searchFor.EnterTitle(mediaTitle);
+                	searchFor.ClickApplyBtn();
+            	}
         	    searchFor.VerifySearchResultsPresent(Arrays.asList(mediaTitle));
         	    SimpleDateFormat pub7DateFormat = new SimpleDateFormat("MM/dd/yyyy");
         	    String pub7Date20DaysInPast = pub7DateFormat.format(date20DaysInPast);
@@ -221,7 +233,12 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
         	    
         	    //Step 29
         	    applib.openApplication();
-            	cron.RunCron(true);
+        	    if (config.getConfigValue("DrushIngestion").equals("false")) {
+        	    	cron.RunCron(true);
+        	    }
+        	    else {
+        	    	Thread.sleep(10000); //TODO - dynamic wait
+        	    }
         	    
         	    //Step 30
         	    taxonomy.NavigateSite("Content>>Files>>mpxMedia");

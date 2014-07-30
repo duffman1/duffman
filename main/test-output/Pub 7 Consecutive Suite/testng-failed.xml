@@ -4,8 +4,10 @@
   <parameter name="ReRunOnFailure" value="true"/>
   <parameter name="LocalAppiumHubPort" value="4724"/>
   <parameter name="Device" value="Iphone Simulator"/>
+  <parameter name="SSOPassword" value="Pa55word"/>
+  <parameter name="DrushIngestion" value="true"/>
   <parameter name="Admin1Password" value="pa55word"/>
-  <parameter name="MPXVideaUploadPause" value="10000"/>
+  <parameter name="MPXVideaUploadPause" value="5000"/>
   <parameter name="ReRunOnFailureCount" value="2"/>
   <parameter name="IRCServer" value="irc.freenode.net"/>
   <parameter name="RallyUrl" value="https://rally1.rallydev.com"/>
@@ -16,15 +18,17 @@
   <parameter name="Browser" value="chrome"/>
   <parameter name="GmailUsername" value="Pub7NBCUAutoEmailUser1@gmail.com"/>
   <parameter name="PathToScreenshots" value="/test-output/screenshots/"/>
+  <parameter name="SSOUsername" value="206439339"/>
   <parameter name="PageLoadWaitTime" value="90"/>
   <parameter name="MPXUrl" value="http://mpx.theplatform.com/"/>
+  <parameter name="SSOEmail" value="FID.Publisher@nbcuni.com"/>
   <parameter name="RallyProject" value="Publisher 7"/>
   <parameter name="IRCNickname" value="NBCUniAutomationBotOnIRC"/>
   <parameter name="PathToMediaContent" value="/src/test/java/com/nbcuni/test/publisher/content/MediaFiles/"/>
   <parameter name="RallyPassword" value="tufNewcyd4#"/>
   <parameter name="PathToReports" value="/test-output/reports/"/>
   <parameter name="MPXPassword" value="Pa55word"/>
-  <parameter name="RallyTaskID" value="TA43995"/>
+  <parameter name="RallyTaskID" value="TA48757"/>
   <parameter name="SendReportIRCChat" value="false"/>
   <parameter name="RunMobile" value="false"/>
   <parameter name="RallyWorkspace" value="Digital Products"/>
@@ -35,10 +39,11 @@
   <parameter name="ImplicitWaitTime" value="20"/>
   <parameter name="MPXAssetBufferPause" value="0"/>
   <parameter name="GmailPassword" value="Pub7NBCUAutoEmailPassword1"/>
+  <parameter name="PathToHarReports" value="/test-output/"/>
   <parameter name="LocalWebDriverHubPort" value="4444"/>
   <parameter name="IRCChannel" value="#nbcuots_pub7"/>
   <parameter name="SikuliImageWaitTime" value="30"/>
-  <parameter name="AppURL" value="http://install.qa5.nbcupublisher7.publisher7.com"/>
+  <parameter name="AppURL" value="http://update.devi12.nbcupublisher7.publisher7.com"/>
   <parameter name="MPXUsername" value="mpx/AdminPub7QA"/>
   <listeners>
     <listener class-name="com.nbcuni.test.publisher.common.CustomReport"/>
@@ -46,19 +51,72 @@
   <test name="All Consecutive Web Tests(failed)">
     <groups>
       <run>
-        <include name="full"/>
+        <include name="mpx"/>
       </run>
     </groups>
     <classes>
-      <class name="com.nbcuni.test.publisher.tests.Setup.TestSetup">
+      <class name="com.nbcuni.test.publisher.tests.Video.UndefinedIndexesDisplayingForMPXPlayers.UndefinedIndexesDisplayingForMPXPlayers">
         <methods>
           <include name="startSelenium"/>
+          <include name="stopSelenium"/>
+        </methods>
+      </class> <!-- com.nbcuni.test.publisher.tests.Video.UndefinedIndexesDisplayingForMPXPlayers.UndefinedIndexesDisplayingForMPXPlayers -->
+      <class name="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSODefinedDomains">
+        <methods>
           <include name="stopGridAndHub"/>
           <include name="startGridAndHub"/>
-          <include name="stopSelenium"/>
-          <include name="TestSetup_Test"/>
         </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.Setup.TestSetup -->
+      </class> <!-- com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSODefinedDomains -->
+      <class name="com.nbcuni.test.publisher.tests.Video.SyncFromMPXButtonToVideoFileEntitiesEditForm.SyncFromMPXButtonToVideoFileEntitiesEditForm">
+        <methods>
+          <include name="startSelenium"/>
+          <include name="stopSelenium"/>
+        </methods>
+      </class> <!-- com.nbcuni.test.publisher.tests.Video.SyncFromMPXButtonToVideoFileEntitiesEditForm.SyncFromMPXButtonToVideoFileEntitiesEditForm -->
+      <class name="com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling">
+        <methods>
+          <include name="startSelenium"/>
+          <include name="stopSelenium"/>
+        </methods>
+      </class> <!-- com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling -->
+      <class name="com.nbcuni.test.publisher.tests.Video.DeIngestingMPXAccountsAndCorrespondingAssets.MPXAccountDeletion">
+        <methods>
+          <include name="startSelenium"/>
+          <include name="stopSelenium"/>
+        </methods>
+      </class> <!-- com.nbcuni.test.publisher.tests.Video.DeIngestingMPXAccountsAndCorrespondingAssets.MPXAccountDeletion -->
+      <class name="com.nbcuni.test.publisher.tests.Video.Configuration.ConfigurationMultipleMPXAccounts">
+        <methods>
+          <include name="startSelenium"/>
+          <include name="stopSelenium"/>
+        </methods>
+      </class> <!-- com.nbcuni.test.publisher.tests.Video.Configuration.ConfigurationMultipleMPXAccounts -->
+      <class name="com.nbcuni.test.publisher.tests.Video.CanonicalURLSupport.CanonicalURL">
+        <methods>
+          <include name="startSelenium"/>
+          <include name="CanonicalURL_TC1080"/>
+          <include name="stopSelenium"/>
+        </methods>
+      </class> <!-- com.nbcuni.test.publisher.tests.Video.CanonicalURLSupport.CanonicalURL -->
+      <class name="com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability">
+        <methods>
+          <include name="startSelenium"/>
+          <include name="stopSelenium"/>
+          <include name="NotificationPlayerUnavailability_Test"/>
+        </methods>
+      </class> <!-- com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability -->
+      <class name="com.nbcuni.test.publisher.tests.Video.Thumbnails.ThumbnailsAreNotUpdated">
+        <methods>
+          <include name="startSelenium"/>
+          <include name="stopSelenium"/>
+        </methods>
+      </class> <!-- com.nbcuni.test.publisher.tests.Video.Thumbnails.ThumbnailsAreNotUpdated -->
+      <class name="com.nbcuni.test.publisher.tests.Setup.A1_TestSetup">
+        <methods>
+          <include name="startSelenium"/>
+          <include name="stopSelenium"/>
+        </methods>
+      </class> <!-- com.nbcuni.test.publisher.tests.Setup.A1_TestSetup -->
     </classes>
   </test> <!-- All Consecutive Web Tests(failed) -->
 </suite> <!-- Failed suite [Pub 7 Consecutive Suite] -->

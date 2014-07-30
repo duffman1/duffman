@@ -62,7 +62,7 @@ public class MPSEndToEndIntegration extends ParentTest {
             Reporter.log("STEP 8");
             taxonomy.NavigateSite("Home");
             Thread.sleep(5000); //TODO - figure out a good dynamic wait for this...
-        	mpsConfiguration.VerifyTopMultiAdPresent();
+        	//mpsConfiguration.VerifyTopMultiAdPresent();
         	overlay.switchToDefaultContent(true);
         	
         	Reporter.log("CLEANUP");

@@ -9,6 +9,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.TimeZone;
 import java.util.concurrent.TimeUnit;
+
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Modules;
@@ -20,7 +21,9 @@ import com.nbcuni.test.publisher.pageobjects.Content.WorkBench;
 import com.nbcuni.test.publisher.pageobjects.Cron.Cron;
 import com.nbcuni.test.publisher.pageobjects.Logo.AddLogo;
 import com.nbcuni.test.publisher.pageobjects.Logo.Logos;
+import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
 import com.nbcuni.test.publisher.pageobjects.Queues.ScheduleQueue;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
@@ -180,9 +183,14 @@ public class A1_TestSetup extends ParentTest {
     	    SimpleDateFormat pub7CreatedLogoDateTimeFormat = new SimpleDateFormat("EEE, MM/dd/yyyy - kk:mm");
     	    pub7CreatedLogoDateTimeFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
         	contentParent.VerifyPageContentPresent(Arrays.asList(logoTitle, 
-    	    		pub7CreatedLogoDateTimeFormat.format(date5MinuteFuture).replace("24:", "00:"), pub7CreatedLogoDateTimeFormat.format(date60MinuteFuture)));
+    	    		pub7CreatedLogoDateTimeFormat.format(date5MinuteFuture).replace("24:", "00:"), pub7CreatedLogoDateTimeFormat.format(date60MinuteFuture).replace("24:", "00:")));
     	    logos.VerifyLogoImgPresent(logoTitle, "nbclogosmall");
     	    overlay.ClickCloseOverlayLnk();
+    	    
+    	    //configure mpx if needed
+    	    Settings settings = new Settings(webDriver, applib);
+        	settings.ConfigureMPXIfNeeded();
+        	settings.ConfigureMPXIngestionType();
     	    
             //delete any old mpx account file types (DE3921)
             webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
