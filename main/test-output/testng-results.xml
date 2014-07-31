@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
     <line>
-      <![CDATA[SETUP - create new user and logout]]>
+      <![CDATA[STEP 1]]>
     </line>
     <line>
       <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
@@ -17,40 +17,19 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'People' menu link.]]>
+      <![CDATA[STEP 2]]>
     </line>
     <line>
-      <![CDATA[Click the 'Add user' menu link.]]>
+      <![CDATA[Click the 'Modules' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'People dialog'.]]>
+      <![CDATA[Switch to frame titled 'Modules'.]]>
     </line>
     <line>
-      <![CDATA[Enter 'd05874248b45458@c23351d13d414af.com' in the 'Username' text box.]]>
+      <![CDATA[Enter 'Dynamic Queue' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Enter 'd05874248b45458@c23351d13d414af.com' in the 'E-mail address' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'pa55word' in the 'Confirm password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Check the 'editor' check box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '7eb922357f5d4ea' in the 'First Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'cff3a8d87e6c44a' in the 'Last Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Create new account' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'A welcome message with further instructions has been e-mailed to the new user d05874248b45458@c23351d13d414af.com.' is present.]]>
+      <![CDATA[Verify the 'Dynamic Queue' check box is checked.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
@@ -59,208 +38,40 @@
       <![CDATA[Scroll by '-500'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Logout' button.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 1]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'd05874248b45458@c23351d13d414af.com' in the 'Email Address' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Login' button.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 2]]>
-    </line>
-    <line>
-      <![CDATA[Click the activer user menu link for logged in user 'd05874248b45458@c23351d13d414af.com'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Edit' link in the work bench.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'd05874248b45458@c23351d13d414af.com dialog'.]]>
+      <![CDATA[Click the 'Home' menu link.]]>
     </line>
     <line>
       <![CDATA[STEP 3]]>
     </line>
     <line>
-      <![CDATA[Enter ' ' in the 'Password' text box.]]>
+      <![CDATA[Mouse over the 'Structure' menu link.]]>
     </line>
     <line>
-      <![CDATA[Verify that password strength message 'The password does not include enough variation to be secure.' is present.]]>
+      <![CDATA[Mouse over the 'Dynamic Queue types' menu link.]]>
     </line>
     <line>
-      <![CDATA[Verify that password strength message 'Password must contain at least 2 digits.' is present.]]>
+      <![CDATA[Click the 'Add dynamic queue type' menu link.]]>
     </line>
     <line>
-      <![CDATA[Verify that password strength message 'Password must be at least 8 characters in length.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that password strength message 'Password must begin and end with a letter.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that password strength message 'Password must contain at least one lowercase character.' is present.]]>
+      <![CDATA[Switch to the active frame titled 'Add dynamic queue type dialog'.]]>
     </line>
     <line>
       <![CDATA[STEP 4]]>
     </line>
     <line>
-      <![CDATA[Enter 'ABCDEFG1' in the 'Password' text box.]]>
+      <![CDATA[Enter 'c491aa9d965f4cc' in the 'Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Verify that password strength message 'The password does not include enough variation to be secure.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that password strength message 'Password must contain at least 2 digits.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that password strength message 'Password must begin and end with a letter.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that password strength message 'Password must contain at least one lowercase character.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that password strength message 'Password must be at least 8 characters in length.' is not present.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 5]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'ABCDEF11' in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that password strength message 'The password does not include enough variation to be secure.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that password strength message 'Password must begin and end with a letter.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that password strength message 'Password must contain at least one lowercase character.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that password strength message 'Password must be at least 8 characters in length.' is not present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that password strength message 'Password must contain at least 2 digits.' is not present.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 6]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'ABCDE11H' in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that password strength message 'The password does not include enough variation to be secure.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that password strength message 'Password must contain at least one lowercase character.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that password strength message 'Password must be at least 8 characters in length.' is not present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that password strength message 'Password must contain at least 2 digits.' is not present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that password strength message 'Password must begin and end with a letter.' is not present.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 7]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'ABcDE11H' in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the password strength container is not present.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 8]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'd05874248b45458@c23351d13d414af.com' in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that password strength message 'The password does not include enough variation to be secure.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that password strength message 'Password must not contain the username.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 9]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'ABcDE11H' in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'aBcDE11H' in the 'Confirm password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Verify password match text equals 'no'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 10]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'pa55word' in the 'Current password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'A' in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'A' in the 'Confirm password' text box.]]>
+      <![CDATA[Select 'Content' from the 'Entity type' drop down list.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[STEP 11]]>
+      <![CDATA[Switch to the active frame titled 'Dynamic Queue types dialog'.]]>
     </line>
     <line>
-      <![CDATA[Enter 'pa55word' in the 'Current password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'pa555word' in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'pa555word' in the 'Confirm password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Verify password match text equals 'yes'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The changes have been saved.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 12]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'pa555word' in the 'Current password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'pa555!@#$%^&*word' in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'pa555!@#$%^&*word' in the 'Confirm password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Verify password match text equals 'yes'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The changes have been saved.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 13]]>
+      <![CDATA[Verify the text 'c491aa9d965f4cc' is present on the page.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
@@ -269,7 +80,502 @@
       <![CDATA[Scroll by '-500'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Logout' button.]]>
+      <![CDATA[STEP 5]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Dynamic Queues' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Add c491aa9d965f4cc' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Add c491aa9d965f4cc dynamic queue dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 6]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'a7f280549af048e' in the 'Title' text box.]]>
+    </line>
+    <line>
+      <![CDATA[]]>
+    </line>
+    <line>
+      <![CDATA[]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Newest' radio button under 'Sort by'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save Dynamic Queue' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Dynamic Queues dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'a7f280549af048e' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll by '-500'.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 7]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Add content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Character Profile' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create Character Profile dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '459c466cb39048b' in the 'Character First Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the Cover Photo 'Select' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the select file frame.]]>
+    </line>
+    <line>
+      <![CDATA[Enter the file path for file upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Upload' button.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Public Local Files' radio button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the file image 'HanSolo' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the img is loaded and visible.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create Character Profile dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that img source of the Cover Photo contains 'HanSolo'.]]>
+    </line>
+    <line>
+      <![CDATA[Assert the the img is loaded and visible.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Publishing Options' link.]]>
+    </line>
+    <line>
+      <![CDATA[Select 'Published' from the 'Moderation State' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Character Profile 459c466cb39048b has been created.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Add content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Post' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '653f70f58d34409' in the 'Title' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the Synopsis frame.]]>
+    </line>
+    <line>
+      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Cover' select button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the select file frame.]]>
+    </line>
+    <line>
+      <![CDATA[Enter the file path for file upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Upload' button.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Public Local Files' radio button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the file image 'HanSolo' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the img is loaded and visible.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Publishing Options' link.]]>
+    </line>
+    <line>
+      <![CDATA[Select 'Published' from the 'Moderation State' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Post 653f70f58d34409 has been created.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 8]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Dynamic Queues' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Dynamic Queues dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll by '-500'.]]>
+    </line>
+    <line>
+      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com/dynamic-queue/66'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text '653f70f58d34409' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text '459c466cb39048b' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 9]]>
+    </line>
+    <line>
+      <![CDATA[STEP 10]]>
+    </line>
+    <line>
+      <![CDATA[STEP 11]]>
+    </line>
+    <line>
+      <![CDATA[STEP 12]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Structure' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Dynamic Queue types' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Dynamic Queue types dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'edit' link for Dynamic Queue Type 'c491aa9d965f4cc.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Edit c491aa9d965f4cc dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 13]]>
+    </line>
+    <line>
+      <![CDATA[Check the 'Movie' check box.]]>
+    </line>
+    <line>
+      <![CDATA[Check the 'Person' check box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Dynamic Queue types dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll by '-500'.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 14]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Dynamic Queues' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Add c491aa9d965f4cc' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Add c491aa9d965f4cc dynamic queue dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify Target bundle content count equals '2'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify content type 'Movie' is present in list of Target bundles.]]>
+    </line>
+    <line>
+      <![CDATA[Verify content type 'Person' is present in list of Target bundles.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll by '-500'.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 15]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Structure' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Dynamic Queue types' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Dynamic Queue types dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'manage display' link for Dynamic Queue Type 'c491aa9d965f4cc.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'c491aa9d965f4cc dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'Full content' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'Teaser' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'RSS' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'Revision comparison' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'Tokens' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'User Ref Preview' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'Administrative Refrence Preview' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'Promoted Content' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 16]]>
+    </line>
+    <line>
+      <![CDATA[Select 'Full content' from the 'Entity List' Formate drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Your settings have been saved.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll by '-500'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text '459c466cb39048b' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text '653f70f58d34409' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'Character: First Name' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 17]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Structure' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Dynamic Queue types' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Dynamic Queue types dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'manage display' link for Dynamic Queue Type 'c491aa9d965f4cc.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'c491aa9d965f4cc dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Select 'Teaser' from the 'Entity List' Formate drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Your settings have been saved.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll by '-500'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text '459c466cb39048b' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text '653f70f58d34409' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'Character: First Name' is NOT present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 18]]>
+    </line>
+    <line>
+      <![CDATA[STEP 19]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Structure' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Display suite' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'View modes' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Add a view mode' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'View modes dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '7e30037bb2534e2' in the 'Label' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Node' Entity check box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The view mode 7e30037bb2534e2 has been saved' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll by '-500'.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 20]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Structure' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Dynamic Queue types' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Dynamic Queue types dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'manage display' link for Dynamic Queue Type 'c491aa9d965f4cc.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'c491aa9d965f4cc dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 21]]>
+    </line>
+    <line>
+      <![CDATA[Select '7e30037bb2534e2' from the 'Entity List' Formate drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Your settings have been saved.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll by '-500'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text '459c466cb39048b' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text '653f70f58d34409' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'Character: First Name' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
     </line>
     <line>
       <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
@@ -281,53 +587,48 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Configuration' menu link.]]>
+      <![CDATA[Mouse over the 'Structure' menu link.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'People' menu link.]]>
+      <![CDATA[Click the 'Dynamic Queue types' menu link.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Password policies' menu link.]]>
+      <![CDATA[Switch to the active frame titled 'Dynamic Queue types dialog'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'List' menu link.]]>
+      <![CDATA[Switch to the active frame titled 'Are you sure you want to delete the Dynamic Queue type c491aa9d965f4cc? dialog'.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Password policies dialog'.]]>
+      <![CDATA[Click the 'Confirm' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'view' link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'NBCU Password Policy dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'Expiration' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text '365' is present on the page.]]>
+      <![CDATA[Switch to the active frame titled 'Dynamic Queue types dialog'.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="56756" started-at="2014-07-31T11:50:51Z" finished-at="2014-07-31T11:51:48Z">
+  <suite name="Default suite" duration-ms="284407" started-at="2014-07-31T17:08:00Z" finished-at="2014-07-31T17:12:44Z">
     <groups>
       <group name="full">
-        <method signature="PasswordRules.PasswordRules_TC2185()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules@b596170]" name="PasswordRules_TC2185" class="com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules"/>
+        <method signature="CreateConfigureDynamicQueue.CreateConfigureDynamicQueue_TC4197()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue@6ab453]" name="CreateConfigureDynamicQueue_TC4197" class="com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue"/>
+        <method signature="CreateConfigureDynamicQueue.Cleanup()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue@6ab453]" name="Cleanup" class="com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue"/>
       </group> <!-- full -->
+      <group name="smoke">
+        <method signature="CreateConfigureDynamicQueue.CreateConfigureDynamicQueue_TC4197()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue@6ab453]" name="CreateConfigureDynamicQueue_TC4197" class="com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue"/>
+      </group> <!-- smoke -->
     </groups>
-    <test name="Default test" duration-ms="56756" started-at="2014-07-31T11:50:51Z" finished-at="2014-07-31T11:51:48Z">
-      <class name="com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules">
-        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules@b596170]" name="startGridAndHub" is-config="true" duration-ms="1345" started-at="2014-07-31T07:50:50Z" finished-at="2014-07-31T07:50:51Z">
+    <test name="Default test" duration-ms="284407" started-at="2014-07-31T17:08:00Z" finished-at="2014-07-31T17:12:44Z">
+      <class name="com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue">
+        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue@6ab453]" name="startGridAndHub" is-config="true" duration-ms="1390" started-at="2014-07-31T13:07:59Z" finished-at="2014-07-31T13:08:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startGridAndHub -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules@b596170]" name="startSelenium" is-config="true" duration-ms="2590" started-at="2014-07-31T07:50:51Z" finished-at="2014-07-31T07:50:54Z">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue@6ab453]" name="startSelenium" is-config="true" duration-ms="2570" started-at="2014-07-31T13:08:00Z" finished-at="2014-07-31T13:08:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="PasswordRules_TC2185()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules@b596170]" name="PasswordRules_TC2185" duration-ms="53578" started-at="2014-07-31T07:50:54Z" finished-at="2014-07-31T07:51:48Z">
+        <test-method status="PASS" signature="CreateConfigureDynamicQueue_TC4197()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue@6ab453]" name="CreateConfigureDynamicQueue_TC4197" duration-ms="265406" started-at="2014-07-31T13:08:03Z" finished-at="2014-07-31T13:12:28Z">
           <reporter-output>
             <line>
-              <![CDATA[SETUP - create new user and logout]]>
+              <![CDATA[STEP 1]]>
             </line>
             <line>
               <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
@@ -342,40 +643,19 @@
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'People' menu link.]]>
+              <![CDATA[STEP 2]]>
             </line>
             <line>
-              <![CDATA[Click the 'Add user' menu link.]]>
+              <![CDATA[Click the 'Modules' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'People dialog'.]]>
+              <![CDATA[Switch to frame titled 'Modules'.]]>
             </line>
             <line>
-              <![CDATA[Enter 'd05874248b45458@c23351d13d414af.com' in the 'Username' text box.]]>
+              <![CDATA[Enter 'Dynamic Queue' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Enter 'd05874248b45458@c23351d13d414af.com' in the 'E-mail address' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa55word' in the 'Confirm password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Check the 'editor' check box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '7eb922357f5d4ea' in the 'First Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'cff3a8d87e6c44a' in the 'Last Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Create new account' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'A welcome message with further instructions has been e-mailed to the new user d05874248b45458@c23351d13d414af.com.' is present.]]>
+              <![CDATA[Verify the 'Dynamic Queue' check box is checked.]]>
             </line>
             <line>
               <![CDATA[Click the 'Close Overlay X'.]]>
@@ -384,208 +664,40 @@
               <![CDATA[Scroll by '-500'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Logout' button.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 1]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'd05874248b45458@c23351d13d414af.com' in the 'Email Address' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Login' button.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 2]]>
-            </line>
-            <line>
-              <![CDATA[Click the activer user menu link for logged in user 'd05874248b45458@c23351d13d414af.com'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Edit' link in the work bench.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'd05874248b45458@c23351d13d414af.com dialog'.]]>
+              <![CDATA[Click the 'Home' menu link.]]>
             </line>
             <line>
               <![CDATA[STEP 3]]>
             </line>
             <line>
-              <![CDATA[Enter ' ' in the 'Password' text box.]]>
+              <![CDATA[Mouse over the 'Structure' menu link.]]>
             </line>
             <line>
-              <![CDATA[Verify that password strength message 'The password does not include enough variation to be secure.' is present.]]>
+              <![CDATA[Mouse over the 'Dynamic Queue types' menu link.]]>
             </line>
             <line>
-              <![CDATA[Verify that password strength message 'Password must contain at least 2 digits.' is present.]]>
+              <![CDATA[Click the 'Add dynamic queue type' menu link.]]>
             </line>
             <line>
-              <![CDATA[Verify that password strength message 'Password must be at least 8 characters in length.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'Password must begin and end with a letter.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'Password must contain at least one lowercase character.' is present.]]>
+              <![CDATA[Switch to the active frame titled 'Add dynamic queue type dialog'.]]>
             </line>
             <line>
               <![CDATA[STEP 4]]>
             </line>
             <line>
-              <![CDATA[Enter 'ABCDEFG1' in the 'Password' text box.]]>
+              <![CDATA[Enter 'c491aa9d965f4cc' in the 'Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Verify that password strength message 'The password does not include enough variation to be secure.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'Password must contain at least 2 digits.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'Password must begin and end with a letter.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'Password must contain at least one lowercase character.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'Password must be at least 8 characters in length.' is not present.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 5]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'ABCDEF11' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'The password does not include enough variation to be secure.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'Password must begin and end with a letter.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'Password must contain at least one lowercase character.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'Password must be at least 8 characters in length.' is not present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'Password must contain at least 2 digits.' is not present.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 6]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'ABCDE11H' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'The password does not include enough variation to be secure.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'Password must contain at least one lowercase character.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'Password must be at least 8 characters in length.' is not present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'Password must contain at least 2 digits.' is not present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'Password must begin and end with a letter.' is not present.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 7]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'ABcDE11H' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the password strength container is not present.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 8]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'd05874248b45458@c23351d13d414af.com' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'The password does not include enough variation to be secure.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'Password must not contain the username.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 9]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'ABcDE11H' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'aBcDE11H' in the 'Confirm password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Verify password match text equals 'no'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 10]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa55word' in the 'Current password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'A' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'A' in the 'Confirm password' text box.]]>
+              <![CDATA[Select 'Content' from the 'Entity type' drop down list.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[STEP 11]]>
+              <![CDATA[Switch to the active frame titled 'Dynamic Queue types dialog'.]]>
             </line>
             <line>
-              <![CDATA[Enter 'pa55word' in the 'Current password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa555word' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa555word' in the 'Confirm password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Verify password match text equals 'yes'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The changes have been saved.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 12]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa555word' in the 'Current password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa555!@#$%^&*word' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa555!@#$%^&*word' in the 'Confirm password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Verify password match text equals 'yes'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The changes have been saved.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 13]]>
+              <![CDATA[Verify the text 'c491aa9d965f4cc' is present on the page.]]>
             </line>
             <line>
               <![CDATA[Click the 'Close Overlay X'.]]>
@@ -594,7 +706,521 @@
               <![CDATA[Scroll by '-500'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Logout' button.]]>
+              <![CDATA[STEP 5]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Dynamic Queues' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Add c491aa9d965f4cc' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Add c491aa9d965f4cc dynamic queue dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 6]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'a7f280549af048e' in the 'Title' text box.]]>
+            </line>
+            <line>
+              <![CDATA[]]>
+            </line>
+            <line>
+              <![CDATA[]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Newest' radio button under 'Sort by'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save Dynamic Queue' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Dynamic Queues dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'a7f280549af048e' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll by '-500'.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 7]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Add content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Character Profile' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Character Profile dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '459c466cb39048b' in the 'Character First Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the Cover Photo 'Select' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the select file frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter the file path for file upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Upload' button.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Public Local Files' radio button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the file image 'HanSolo' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Character Profile dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that img source of the Cover Photo contains 'HanSolo'.]]>
+            </line>
+            <line>
+              <![CDATA[Assert the the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Publishing Options' link.]]>
+            </line>
+            <line>
+              <![CDATA[Select 'Published' from the 'Moderation State' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Character Profile 459c466cb39048b has been created.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Add content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Post' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '653f70f58d34409' in the 'Title' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the Synopsis frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Cover' select button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the select file frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter the file path for file upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Upload' button.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Public Local Files' radio button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the file image 'HanSolo' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Publishing Options' link.]]>
+            </line>
+            <line>
+              <![CDATA[Select 'Published' from the 'Moderation State' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Post 653f70f58d34409 has been created.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 8]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Dynamic Queues' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Dynamic Queues dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll by '-500'.]]>
+            </line>
+            <line>
+              <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com/dynamic-queue/66'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text '653f70f58d34409' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text '459c466cb39048b' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 9]]>
+            </line>
+            <line>
+              <![CDATA[STEP 10]]>
+            </line>
+            <line>
+              <![CDATA[STEP 11]]>
+            </line>
+            <line>
+              <![CDATA[STEP 12]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Structure' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Dynamic Queue types' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Dynamic Queue types dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'edit' link for Dynamic Queue Type 'c491aa9d965f4cc.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Edit c491aa9d965f4cc dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 13]]>
+            </line>
+            <line>
+              <![CDATA[Check the 'Movie' check box.]]>
+            </line>
+            <line>
+              <![CDATA[Check the 'Person' check box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Dynamic Queue types dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll by '-500'.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 14]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Dynamic Queues' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Add c491aa9d965f4cc' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Add c491aa9d965f4cc dynamic queue dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify Target bundle content count equals '2'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify content type 'Movie' is present in list of Target bundles.]]>
+            </line>
+            <line>
+              <![CDATA[Verify content type 'Person' is present in list of Target bundles.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll by '-500'.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 15]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Structure' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Dynamic Queue types' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Dynamic Queue types dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'manage display' link for Dynamic Queue Type 'c491aa9d965f4cc.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'c491aa9d965f4cc dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Full content' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Teaser' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'RSS' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Revision comparison' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Tokens' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'User Ref Preview' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Administrative Refrence Preview' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Promoted Content' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 16]]>
+            </line>
+            <line>
+              <![CDATA[Select 'Full content' from the 'Entity List' Formate drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Your settings have been saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll by '-500'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text '459c466cb39048b' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text '653f70f58d34409' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Character: First Name' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 17]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Structure' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Dynamic Queue types' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Dynamic Queue types dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'manage display' link for Dynamic Queue Type 'c491aa9d965f4cc.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'c491aa9d965f4cc dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Select 'Teaser' from the 'Entity List' Formate drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Your settings have been saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll by '-500'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text '459c466cb39048b' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text '653f70f58d34409' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Character: First Name' is NOT present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 18]]>
+            </line>
+            <line>
+              <![CDATA[STEP 19]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Structure' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Display suite' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'View modes' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Add a view mode' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'View modes dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '7e30037bb2534e2' in the 'Label' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Node' Entity check box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The view mode 7e30037bb2534e2 has been saved' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll by '-500'.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 20]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Structure' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Dynamic Queue types' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Dynamic Queue types dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'manage display' link for Dynamic Queue Type 'c491aa9d965f4cc.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'c491aa9d965f4cc dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 21]]>
+            </line>
+            <line>
+              <![CDATA[Select '7e30037bb2534e2' from the 'Entity List' Formate drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Your settings have been saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll by '-500'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text '459c466cb39048b' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text '653f70f58d34409' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Character: First Name' is present on the page.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- CreateConfigureDynamicQueue_TC4197 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue@6ab453]" name="stopSelenium" is-config="true" duration-ms="575" started-at="2014-07-31T13:12:28Z" finished-at="2014-07-31T13:12:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=CreateConfigureDynamicQueue_TC4197 status=SUCCESS method=CreateConfigureDynamicQueue.CreateConfigureDynamicQueue_TC4197()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue@6ab453] output=STEP 1]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopSelenium -->
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue@6ab453]" name="startSelenium" is-config="true" duration-ms="2275" started-at="2014-07-31T13:12:29Z" finished-at="2014-07-31T13:12:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startSelenium -->
+        <test-method status="PASS" signature="Cleanup()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue@6ab453]" name="Cleanup" duration-ms="13002" started-at="2014-07-31T13:12:31Z" depends-on-methods="com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue.CreateConfigureDynamicQueue_TC4197" finished-at="2014-07-31T13:12:44Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
             </line>
             <line>
               <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
@@ -606,50 +1232,41 @@
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Configuration' menu link.]]>
+              <![CDATA[Mouse over the 'Structure' menu link.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'People' menu link.]]>
+              <![CDATA[Click the 'Dynamic Queue types' menu link.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Password policies' menu link.]]>
+              <![CDATA[Switch to the active frame titled 'Dynamic Queue types dialog'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'List' menu link.]]>
+              <![CDATA[Switch to the active frame titled 'Are you sure you want to delete the Dynamic Queue type c491aa9d965f4cc? dialog'.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Password policies dialog'.]]>
+              <![CDATA[Click the 'Confirm' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'view' link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'NBCU Password Policy dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'Expiration' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text '365' is present on the page.]]>
+              <![CDATA[Switch to the active frame titled 'Dynamic Queue types dialog'.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- PasswordRules_TC2185 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules@b596170]" name="stopSelenium" is-config="true" duration-ms="573" started-at="2014-07-31T07:51:48Z" finished-at="2014-07-31T07:51:48Z">
+        </test-method> <!-- Cleanup -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue@6ab453]" name="stopSelenium" is-config="true" duration-ms="568" started-at="2014-07-31T13:12:44Z" finished-at="2014-07-31T13:12:44Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=PasswordRules_TC2185 status=SUCCESS method=PasswordRules.PasswordRules_TC2185()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules@b596170] output=SETUP - create new user and logout]]]>
+                <![CDATA[[TestResult name=Cleanup status=SUCCESS method=CreateConfigureDynamicQueue.Cleanup()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue@6ab453] output=Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules@b596170]" name="stopGridAndHub" is-config="true" duration-ms="376" started-at="2014-07-31T07:51:48Z" finished-at="2014-07-31T07:51:49Z">
+        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue@6ab453]" name="stopGridAndHub" is-config="true" duration-ms="382" started-at="2014-07-31T13:12:45Z" finished-at="2014-07-31T13:12:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopGridAndHub -->
-      </class> <!-- com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

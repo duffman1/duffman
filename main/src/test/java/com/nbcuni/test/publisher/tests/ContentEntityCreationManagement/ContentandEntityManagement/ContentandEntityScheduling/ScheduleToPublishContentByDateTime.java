@@ -9,7 +9,7 @@ import com.nbcuni.test.publisher.pageobjects.Content.PublishingOptions;
 import com.nbcuni.test.publisher.pageobjects.Content.RevisionState;
 import com.nbcuni.test.publisher.pageobjects.Content.Revisions;
 import com.nbcuni.test.publisher.pageobjects.Content.WorkBench;
-import com.nbcuni.test.publisher.pageobjects.Queues.ScheduleQueue;
+import com.nbcuni.test.publisher.pageobjects.Structure.Queues.Queues.ScheduleQueue;
 
 import org.testng.annotations.Test;
 

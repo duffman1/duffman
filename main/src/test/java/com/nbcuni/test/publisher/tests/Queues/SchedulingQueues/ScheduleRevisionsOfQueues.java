@@ -6,9 +6,11 @@ import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Content.CreateDefaultContent;
 import com.nbcuni.test.publisher.pageobjects.Content.PublishingOptions;
-import com.nbcuni.test.publisher.pageobjects.Queues.Queues;
-import com.nbcuni.test.publisher.pageobjects.Queues.ScheduleQueue;
+import com.nbcuni.test.publisher.pageobjects.Structure.Queues.Queues.Queues;
+import com.nbcuni.test.publisher.pageobjects.Structure.Queues.Queues.ScheduleQueue;
+
 import org.testng.annotations.Test;
+
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;

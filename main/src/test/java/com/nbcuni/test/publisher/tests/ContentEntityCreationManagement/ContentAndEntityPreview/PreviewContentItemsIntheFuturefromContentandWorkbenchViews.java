@@ -15,8 +15,8 @@ import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.Content.PublishingOptions;
 import com.nbcuni.test.publisher.pageobjects.Content.SelectFile;
 import com.nbcuni.test.publisher.pageobjects.Content.WorkBench;
-import com.nbcuni.test.publisher.pageobjects.Queues.ScheduleQueue;
 import com.nbcuni.test.publisher.pageobjects.SitePreview.SitePreview;
+import com.nbcuni.test.publisher.pageobjects.Structure.Queues.Queues.ScheduleQueue;
 
 public class PreviewContentItemsIntheFuturefromContentandWorkbenchViews extends ParentTest {
 

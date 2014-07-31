@@ -1,4 +1,4 @@
-package com.nbcuni.test.publisher.pageobjects.Structure.Queues;
+package com.nbcuni.test.publisher.pageobjects.Structure.Queues.Queues;
 
 import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.publisher.common.Driver.Driver;

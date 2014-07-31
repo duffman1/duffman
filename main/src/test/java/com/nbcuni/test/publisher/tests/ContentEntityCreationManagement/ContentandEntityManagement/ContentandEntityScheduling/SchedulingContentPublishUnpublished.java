@@ -11,9 +11,11 @@ import com.nbcuni.test.publisher.pageobjects.Content.RevisionState;
 import com.nbcuni.test.publisher.pageobjects.Content.Revisions;
 import com.nbcuni.test.publisher.pageobjects.Content.SearchFor;
 import com.nbcuni.test.publisher.pageobjects.Content.WorkBench;
-import com.nbcuni.test.publisher.pageobjects.Queues.ScheduleQueue;
+import com.nbcuni.test.publisher.pageobjects.Structure.Queues.Queues.ScheduleQueue;
+
 import org.testng.Reporter;
 import org.testng.annotations.Test;
+
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Calendar;

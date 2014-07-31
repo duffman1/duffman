@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>2/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Jul 31 07:50:51 EDT 2014</td>
+<td>Started on:</td><td>Thu Jul 31 13:08:00 EDT 2014</td>
 </tr>
-<tr><td>Total time:</td><td>56 seconds (56756 ms)</td>
+<tr><td>Total time:</td><td>284 seconds (284407 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,118 +75,228 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules.PasswordRules_TC2185()'><b>PasswordRules_TC2185</b><br>Test class: com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules<br/>
-<a href="#Output-704061609" onClick='toggleBox("Output-704061609", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue.Cleanup()'><b>Cleanup</b><br>Test class: com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue<br/>
+<a href="#Output-1234605078" onClick='toggleBox("Output-1234605078", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-704061609" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-704061609">
-SETUP - create new user and logout<br/>
+<a href="#Output-1234605078" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1234605078">
 Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.<br/>
 Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
 Enter 'pa55word' in the 'Password' text box.<br/>
 Click the 'Login' button.<br/>
-Mouse over the 'People' menu link.<br/>
-Click the 'Add user' menu link.<br/>
-Switch to the active frame titled 'People dialog'.<br/>
-Enter 'd05874248b45458@c23351d13d414af.com' in the 'Username' text box.<br/>
-Enter 'd05874248b45458@c23351d13d414af.com' in the 'E-mail address' text box.<br/>
-Enter 'pa55word' in the 'Password' text box.<br/>
-Enter 'pa55word' in the 'Confirm password' text box.<br/>
-Check the 'editor' check box.<br/>
-Enter '7eb922357f5d4ea' in the 'First Name' text box.<br/>
-Enter 'cff3a8d87e6c44a' in the 'Last Name' text box.<br/>
-Click the 'Create new account' button.<br/>
-Verify success message of 'A welcome message with further instructions has been e-mailed to the new user d05874248b45458@c23351d13d414af.com.' is present.<br/>
-Click the 'Close Overlay X'.<br/>
-Scroll by '-500'.<br/>
-Click the 'Logout' button.<br/>
-STEP 1<br/>
-Enter 'd05874248b45458@c23351d13d414af.com' in the 'Email Address' text box.<br/>
-Enter 'pa55word' in the 'Password' text box.<br/>
-Click the 'Login' button.<br/>
-STEP 2<br/>
-Click the activer user menu link for logged in user 'd05874248b45458@c23351d13d414af.com'.<br/>
-Click the 'Edit' link in the work bench.<br/>
-Switch to the active frame titled 'd05874248b45458@c23351d13d414af.com dialog'.<br/>
-STEP 3<br/>
-Enter ' ' in the 'Password' text box.<br/>
-Verify that password strength message 'The password does not include enough variation to be secure.' is present.<br/>
-Verify that password strength message 'Password must contain at least 2 digits.' is present.<br/>
-Verify that password strength message 'Password must be at least 8 characters in length.' is present.<br/>
-Verify that password strength message 'Password must begin and end with a letter.' is present.<br/>
-Verify that password strength message 'Password must contain at least one lowercase character.' is present.<br/>
-STEP 4<br/>
-Enter 'ABCDEFG1' in the 'Password' text box.<br/>
-Verify that password strength message 'The password does not include enough variation to be secure.' is present.<br/>
-Verify that password strength message 'Password must contain at least 2 digits.' is present.<br/>
-Verify that password strength message 'Password must begin and end with a letter.' is present.<br/>
-Verify that password strength message 'Password must contain at least one lowercase character.' is present.<br/>
-Verify that password strength message 'Password must be at least 8 characters in length.' is not present.<br/>
-STEP 5<br/>
-Enter 'ABCDEF11' in the 'Password' text box.<br/>
-Verify that password strength message 'The password does not include enough variation to be secure.' is present.<br/>
-Verify that password strength message 'Password must begin and end with a letter.' is present.<br/>
-Verify that password strength message 'Password must contain at least one lowercase character.' is present.<br/>
-Verify that password strength message 'Password must be at least 8 characters in length.' is not present.<br/>
-Verify that password strength message 'Password must contain at least 2 digits.' is not present.<br/>
-STEP 6<br/>
-Enter 'ABCDE11H' in the 'Password' text box.<br/>
-Verify that password strength message 'The password does not include enough variation to be secure.' is present.<br/>
-Verify that password strength message 'Password must contain at least one lowercase character.' is present.<br/>
-Verify that password strength message 'Password must be at least 8 characters in length.' is not present.<br/>
-Verify that password strength message 'Password must contain at least 2 digits.' is not present.<br/>
-Verify that password strength message 'Password must begin and end with a letter.' is not present.<br/>
-STEP 7<br/>
-Enter 'ABcDE11H' in the 'Password' text box.<br/>
-Verify the password strength container is not present.<br/>
-STEP 8<br/>
-Enter 'd05874248b45458@c23351d13d414af.com' in the 'Password' text box.<br/>
-Verify that password strength message 'The password does not include enough variation to be secure.' is present.<br/>
-Verify that password strength message 'Password must not contain the username.' is present.<br/>
-STEP 9<br/>
-Enter 'ABcDE11H' in the 'Password' text box.<br/>
-Enter 'aBcDE11H' in the 'Confirm password' text box.<br/>
-Verify password match text equals 'no'.<br/>
-STEP 10<br/>
-Enter 'pa55word' in the 'Current password' text box.<br/>
-Enter 'A' in the 'Password' text box.<br/>
-Enter 'A' in the 'Confirm password' text box.<br/>
-Click the 'Save' button.<br/>
-STEP 11<br/>
-Enter 'pa55word' in the 'Current password' text box.<br/>
-Enter 'pa555word' in the 'Password' text box.<br/>
-Enter 'pa555word' in the 'Confirm password' text box.<br/>
-Verify password match text equals 'yes'.<br/>
-Click the 'Save' button.<br/>
-Verify success message of 'The changes have been saved.' is present.<br/>
-STEP 12<br/>
-Enter 'pa555word' in the 'Current password' text box.<br/>
-Enter 'pa555!@#$%^&*word' in the 'Password' text box.<br/>
-Enter 'pa555!@#$%^&*word' in the 'Confirm password' text box.<br/>
-Verify password match text equals 'yes'.<br/>
-Click the 'Save' button.<br/>
-Verify success message of 'The changes have been saved.' is present.<br/>
-STEP 13<br/>
-Click the 'Close Overlay X'.<br/>
-Scroll by '-500'.<br/>
-Click the 'Logout' button.<br/>
-Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
-Enter 'pa55word' in the 'Password' text box.<br/>
-Click the 'Login' button.<br/>
-Mouse over the 'Configuration' menu link.<br/>
-Mouse over the 'People' menu link.<br/>
-Mouse over the 'Password policies' menu link.<br/>
-Click the 'List' menu link.<br/>
-Switch to the active frame titled 'Password policies dialog'.<br/>
-Click the 'view' link.<br/>
-Switch to the active frame titled 'NBCU Password Policy dialog'.<br/>
-Verify the text 'Expiration' is present on the page.<br/>
-Verify the text '365' is present on the page.<br/>
+Mouse over the 'Structure' menu link.<br/>
+Click the 'Dynamic Queue types' menu link.<br/>
+Switch to the active frame titled 'Dynamic Queue types dialog'.<br/>
+Switch to the active frame titled 'Are you sure you want to delete the Dynamic Queue type c491aa9d965f4cc? dialog'.<br/>
+Click the 'Confirm' button.<br/>
+Switch to the active frame titled 'Dynamic Queue types dialog'.<br/>
 </div>
 </td>
 <td></td>
-<td>53</td>
-<td>com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules@b596170</td></tr>
+<td>13</td>
+<td>com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue@6ab453</td></tr>
+<tr>
+<td title='com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue.CreateConfigureDynamicQueue_TC4197()'><b>CreateConfigureDynamicQueue_TC4197</b><br>Test class: com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue<br/>
+<a href="#Output-1935223928" onClick='toggleBox("Output-1935223928", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1935223928" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1935223928">
+STEP 1<br/>
+Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.<br/>
+Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
+Enter 'pa55word' in the 'Password' text box.<br/>
+Click the 'Login' button.<br/>
+STEP 2<br/>
+Click the 'Modules' menu link.<br/>
+Switch to frame titled 'Modules'.<br/>
+Enter 'Dynamic Queue' in the 'Filter Name' text box.<br/>
+Verify the 'Dynamic Queue' check box is checked.<br/>
+Click the 'Close Overlay X'.<br/>
+Scroll by '-500'.<br/>
+Click the 'Home' menu link.<br/>
+STEP 3<br/>
+Mouse over the 'Structure' menu link.<br/>
+Mouse over the 'Dynamic Queue types' menu link.<br/>
+Click the 'Add dynamic queue type' menu link.<br/>
+Switch to the active frame titled 'Add dynamic queue type dialog'.<br/>
+STEP 4<br/>
+Enter 'c491aa9d965f4cc' in the 'Name' text box.<br/>
+Select 'Content' from the 'Entity type' drop down list.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'Dynamic Queue types dialog'.<br/>
+Verify the text 'c491aa9d965f4cc' is present on the page.<br/>
+Click the 'Close Overlay X'.<br/>
+Scroll by '-500'.<br/>
+STEP 5<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Dynamic Queues' menu link.<br/>
+Click the 'Add c491aa9d965f4cc' menu link.<br/>
+Switch to the active frame titled 'Add c491aa9d965f4cc dynamic queue dialog'.<br/>
+STEP 6<br/>
+Enter 'a7f280549af048e' in the 'Title' text box.<br/>
+<br/>
+<br/>
+Click the 'Newest' radio button under 'Sort by'.<br/>
+Click the 'Save Dynamic Queue' button.<br/>
+Switch to the active frame titled 'Dynamic Queues dialog'.<br/>
+Verify the text 'a7f280549af048e' is present on the page.<br/>
+Click the 'Close Overlay X'.<br/>
+Scroll by '-500'.<br/>
+STEP 7<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Add content' menu link.<br/>
+Click the 'Character Profile' menu link.<br/>
+Switch to the active frame titled 'Create Character Profile dialog'.<br/>
+Enter '459c466cb39048b' in the 'Character First Name' text box.<br/>
+Click the Cover Photo 'Select' button.<br/>
+Switch to the select file frame.<br/>
+Enter the file path for file upload.<br/>
+Click the 'Upload' button.<br/>
+Wait for the file link to be visible after upload.<br/>
+Click the 'Next' button.<br/>
+Click the 'Public Local Files' radio button.<br/>
+Click the 'Next' button.<br/>
+Verify the file image 'HanSolo' is present.<br/>
+Verify the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'Create Character Profile dialog'.<br/>
+Assert that img source of the Cover Photo contains 'HanSolo'.<br/>
+Assert the the img is loaded and visible.<br/>
+Scroll the 'Publishing Options' link into view.<br/>
+Click the 'Publishing Options' link.<br/>
+Select 'Published' from the 'Moderation State' drop down list.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'Character Profile 459c466cb39048b has been created.' is present.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Add content' menu link.<br/>
+Click the 'Post' menu link.<br/>
+Switch to the active frame titled 'Create Post dialog'.<br/>
+Enter '653f70f58d34409' in the 'Title' text box.<br/>
+Switch to the Synopsis frame.<br/>
+Enter a randomized text string into the 'Body' text area.<br/>
+Switch to the active frame titled 'Create Post dialog'.<br/>
+Click the 'Cover' select button.<br/>
+Switch to the select file frame.<br/>
+Enter the file path for file upload.<br/>
+Click the 'Upload' button.<br/>
+Wait for the file link to be visible after upload.<br/>
+Click the 'Next' button.<br/>
+Click the 'Public Local Files' radio button.<br/>
+Click the 'Next' button.<br/>
+Verify the file image 'HanSolo' is present.<br/>
+Verify the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'Create Post dialog'.<br/>
+Scroll the 'Publishing Options' link into view.<br/>
+Click the 'Publishing Options' link.<br/>
+Select 'Published' from the 'Moderation State' drop down list.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'Post 653f70f58d34409 has been created.' is present.<br/>
+STEP 8<br/>
+Mouse over the 'Content' menu link.<br/>
+Click the 'Dynamic Queues' menu link.<br/>
+Switch to the active frame titled 'Dynamic Queues dialog'.<br/>
+Click the 'Close Overlay X'.<br/>
+Scroll by '-500'.<br/>
+Open url 'http://update.qa5.nbcupublisher7.publisher7.com/dynamic-queue/66'.<br/>
+Verify the text '653f70f58d34409' is present on the page.<br/>
+Verify the text '459c466cb39048b' is present on the page.<br/>
+STEP 9<br/>
+STEP 10<br/>
+STEP 11<br/>
+STEP 12<br/>
+Mouse over the 'Structure' menu link.<br/>
+Click the 'Dynamic Queue types' menu link.<br/>
+Switch to the active frame titled 'Dynamic Queue types dialog'.<br/>
+Click the 'edit' link for Dynamic Queue Type 'c491aa9d965f4cc.<br/>
+Switch to the active frame titled 'Edit c491aa9d965f4cc dialog'.<br/>
+STEP 13<br/>
+Check the 'Movie' check box.<br/>
+Check the 'Person' check box.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'Dynamic Queue types dialog'.<br/>
+Click the 'Close Overlay X'.<br/>
+Scroll by '-500'.<br/>
+STEP 14<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Dynamic Queues' menu link.<br/>
+Click the 'Add c491aa9d965f4cc' menu link.<br/>
+Switch to the active frame titled 'Add c491aa9d965f4cc dynamic queue dialog'.<br/>
+Verify Target bundle content count equals '2'.<br/>
+Verify content type 'Movie' is present in list of Target bundles.<br/>
+Verify content type 'Person' is present in list of Target bundles.<br/>
+Click the 'Close Overlay X'.<br/>
+Scroll by '-500'.<br/>
+STEP 15<br/>
+Mouse over the 'Structure' menu link.<br/>
+Click the 'Dynamic Queue types' menu link.<br/>
+Switch to the active frame titled 'Dynamic Queue types dialog'.<br/>
+Click the 'manage display' link for Dynamic Queue Type 'c491aa9d965f4cc.<br/>
+Switch to the active frame titled 'c491aa9d965f4cc dialog'.<br/>
+Verify the text 'Full content' is present on the page.<br/>
+Verify the text 'Teaser' is present on the page.<br/>
+Verify the text 'RSS' is present on the page.<br/>
+Verify the text 'Revision comparison' is present on the page.<br/>
+Verify the text 'Tokens' is present on the page.<br/>
+Verify the text 'User Ref Preview' is present on the page.<br/>
+Verify the text 'Administrative Refrence Preview' is present on the page.<br/>
+Verify the text 'Promoted Content' is present on the page.<br/>
+STEP 16<br/>
+Select 'Full content' from the 'Entity List' Formate drop down list.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'Your settings have been saved.' is present.<br/>
+Click the 'Close Overlay X'.<br/>
+Scroll by '-500'.<br/>
+Verify the text '459c466cb39048b' is present on the page.<br/>
+Verify the text '653f70f58d34409' is present on the page.<br/>
+Verify the text 'Character: First Name' is present on the page.<br/>
+STEP 17<br/>
+Mouse over the 'Structure' menu link.<br/>
+Click the 'Dynamic Queue types' menu link.<br/>
+Switch to the active frame titled 'Dynamic Queue types dialog'.<br/>
+Click the 'manage display' link for Dynamic Queue Type 'c491aa9d965f4cc.<br/>
+Switch to the active frame titled 'c491aa9d965f4cc dialog'.<br/>
+Select 'Teaser' from the 'Entity List' Formate drop down list.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'Your settings have been saved.' is present.<br/>
+Click the 'Close Overlay X'.<br/>
+Scroll by '-500'.<br/>
+Verify the text '459c466cb39048b' is present on the page.<br/>
+Verify the text '653f70f58d34409' is present on the page.<br/>
+Verify the text 'Character: First Name' is NOT present on the page.<br/>
+STEP 18<br/>
+STEP 19<br/>
+Mouse over the 'Structure' menu link.<br/>
+Mouse over the 'Display suite' menu link.<br/>
+Mouse over the 'View modes' menu link.<br/>
+Click the 'Add a view mode' menu link.<br/>
+Switch to the active frame titled 'View modes dialog'.<br/>
+Enter '7e30037bb2534e2' in the 'Label' text box.<br/>
+Click the 'Node' Entity check box.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'The view mode 7e30037bb2534e2 has been saved' is present.<br/>
+Click the 'Close Overlay X'.<br/>
+Scroll by '-500'.<br/>
+STEP 20<br/>
+Mouse over the 'Structure' menu link.<br/>
+Click the 'Dynamic Queue types' menu link.<br/>
+Switch to the active frame titled 'Dynamic Queue types dialog'.<br/>
+Click the 'manage display' link for Dynamic Queue Type 'c491aa9d965f4cc.<br/>
+Switch to the active frame titled 'c491aa9d965f4cc dialog'.<br/>
+STEP 21<br/>
+Select '7e30037bb2534e2' from the 'Entity List' Formate drop down list.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'Your settings have been saved.' is present.<br/>
+Click the 'Close Overlay X'.<br/>
+Scroll by '-500'.<br/>
+Verify the text '459c466cb39048b' is present on the page.<br/>
+Verify the text '653f70f58d34409' is present on the page.<br/>
+Verify the text 'Character: First Name' is present on the page.<br/>
+</div>
+</td>
+<td></td>
+<td>265</td>
+<td>com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue@6ab453</td></tr>
 </table><p>
 </body>
 </html>

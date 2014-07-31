@@ -1,4 +1,4 @@
-package com.nbcuni.test.publisher.pageobjects.Queues;
+package com.nbcuni.test.publisher.pageobjects.Structure.Queues.Queues;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;

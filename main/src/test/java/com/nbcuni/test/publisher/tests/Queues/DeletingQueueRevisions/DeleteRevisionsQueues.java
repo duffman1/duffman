@@ -1,13 +1,15 @@
 package com.nbcuni.test.publisher.tests.Queues.DeletingQueueRevisions;
 
 import java.util.Arrays;
+
 import org.testng.annotations.Test;
+
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Content.Delete;
-import com.nbcuni.test.publisher.pageobjects.Queues.Queues;
-import com.nbcuni.test.publisher.pageobjects.Queues.QueuesRevisionList;
+import com.nbcuni.test.publisher.pageobjects.Structure.Queues.Queues.Queues;
+import com.nbcuni.test.publisher.pageobjects.Structure.Queues.Queues.QueuesRevisionList;
 
 public class DeleteRevisionsQueues extends ParentTest {
 	

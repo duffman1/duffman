@@ -12,8 +12,8 @@ import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Content.*;
 import com.nbcuni.test.publisher.pageobjects.ErrorChecking.ErrorChecking;
-import com.nbcuni.test.publisher.pageobjects.Queues.Queues;
-import com.nbcuni.test.publisher.pageobjects.Queues.QueuesRevisionList;
+import com.nbcuni.test.publisher.pageobjects.Structure.Queues.Queues.Queues;
+import com.nbcuni.test.publisher.pageobjects.Structure.Queues.Queues.QueuesRevisionList;
 
 public class BasicUIForCreatingAndRevisingQueues extends ParentTest{
 	

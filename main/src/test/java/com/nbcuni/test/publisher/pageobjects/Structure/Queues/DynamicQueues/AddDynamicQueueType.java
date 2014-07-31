@@ -1,4 +1,4 @@
-package com.nbcuni.test.publisher.pageobjects.Structure.Queues;
+package com.nbcuni.test.publisher.pageobjects.Structure.Queues.DynamicQueues;
 
 import com.nbcuni.test.publisher.common.Driver.Driver;
 import org.openqa.selenium.By;
