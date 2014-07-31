@@ -1,7 +1,7 @@
 <suite name="Publisher 7 Test Suites">
 
 	<!--RUNTIME CONFIG-->
-	<parameter name="AppURL" value="http://update.qa5.nbcupublisher7.publisher7.com"></parameter>
+	<parameter name="AppURL" value="http://update.devi7.nbcupublisher7.publisher7.com"></parameter>
 	<parameter name="Browser" value="chrome"></parameter>
 	<parameter name="Admin1Username" value="admin@publisher.nbcuni.com"></parameter>
 	<parameter name="Admin1Password" value="pa55word"></parameter>
@@ -66,9 +66,10 @@
 	<parameter name="IRCNickname" value="NBCUniAutomationBotOnIRC"></parameter>
 	<parameter name="IRCChannel" value="#nbcuots_pub7"></parameter>
 	
-  	<!--CUSTOM REPORT LISTENER-->
+  	<!--LISTENERS-->
   	<listeners>
     	<listener class-name="com.nbcuni.test.publisher.common.CustomReport" />
+    	<listener class-name="com.nbcuni.test.publisher.common.TestListeners" />
   	</listeners>
   	
   	<!--SUITE EXECUTION QUEUE-->

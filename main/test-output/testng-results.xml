@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
+<testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
     <line>
-      <![CDATA[STEP 1]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
+      <![CDATA[Open url 'http://update.devi7.nbcupublisher7.publisher7.com'.]]>
     </line>
     <line>
       <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
@@ -15,189 +12,6 @@
     </line>
     <line>
       <![CDATA[Click the 'Login' button.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 2]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Modules' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to frame titled 'Modules'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Dynamic Queue' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Dynamic Queue' check box is checked.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll by '-500'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Home' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 3]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Structure' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Dynamic Queue types' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Add dynamic queue type' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Add dynamic queue type dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 4]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'c491aa9d965f4cc' in the 'Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Select 'Content' from the 'Entity type' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Dynamic Queue types dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'c491aa9d965f4cc' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll by '-500'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 5]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Dynamic Queues' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Add c491aa9d965f4cc' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Add c491aa9d965f4cc dynamic queue dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 6]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'a7f280549af048e' in the 'Title' text box.]]>
-    </line>
-    <line>
-      <![CDATA[]]>
-    </line>
-    <line>
-      <![CDATA[]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Newest' radio button under 'Sort by'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save Dynamic Queue' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Dynamic Queues dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'a7f280549af048e' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll by '-500'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 7]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Add content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Character Profile' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Character Profile dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '459c466cb39048b' in the 'Character First Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the Cover Photo 'Select' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the select file frame.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the file path for file upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Upload' button.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the file image 'HanSolo' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Character Profile dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Assert that img source of the Cover Photo contains 'HanSolo'.]]>
-    </line>
-    <line>
-      <![CDATA[Assert the the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Publishing Options' link.]]>
-    </line>
-    <line>
-      <![CDATA[Select 'Published' from the 'Moderation State' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Character Profile 459c466cb39048b has been created.' is present.]]>
     </line>
     <line>
       <![CDATA[Mouse over the 'Content' menu link.]]>
@@ -212,7 +26,25 @@
       <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
     </line>
     <line>
-      <![CDATA[Enter '653f70f58d34409' in the 'Title' text box.]]>
+      <![CDATA[Verify the 'Title' is present as a required field.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Body' is present as a required field.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Publishing Options' link.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Moderation State' is present as a required field.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '6e72b62ed197432' in the 'Title' text box.]]>
     </line>
     <line>
       <![CDATA[Switch to the Synopsis frame.]]>
@@ -251,387 +83,165 @@
       <![CDATA[Verify the file image 'HanSolo' is present.]]>
     </line>
     <line>
-      <![CDATA[Verify the img is loaded and visible.]]>
+      <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreatePost_TC1048_073114041512PM.png ]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save' button.]]>
+      <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreatePost_TC1048_073114041512PM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreatePost_TC1048_073114041512PM.png' height='500' width='500'/> </a>]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+      <![CDATA[Open url 'http://update.devi7.nbcupublisher7.publisher7.com'.]]>
     </line>
     <line>
-      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Publishing Options' link.]]>
-    </line>
-    <line>
-      <![CDATA[Select 'Published' from the 'Moderation State' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Post 653f70f58d34409 has been created.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 8]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Dynamic Queues' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Dynamic Queues dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll by '-500'.]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com/dynamic-queue/66'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text '653f70f58d34409' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text '459c466cb39048b' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 9]]>
-    </line>
-    <line>
-      <![CDATA[STEP 10]]>
-    </line>
-    <line>
-      <![CDATA[STEP 11]]>
-    </line>
-    <line>
-      <![CDATA[STEP 12]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Structure' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Dynamic Queue types' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Dynamic Queue types dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'edit' link for Dynamic Queue Type 'c491aa9d965f4cc.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Edit c491aa9d965f4cc dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 13]]>
-    </line>
-    <line>
-      <![CDATA[Check the 'Movie' check box.]]>
-    </line>
-    <line>
-      <![CDATA[Check the 'Person' check box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Dynamic Queue types dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll by '-500'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 14]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Dynamic Queues' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Add c491aa9d965f4cc' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Add c491aa9d965f4cc dynamic queue dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify Target bundle content count equals '2'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify content type 'Movie' is present in list of Target bundles.]]>
-    </line>
-    <line>
-      <![CDATA[Verify content type 'Person' is present in list of Target bundles.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll by '-500'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 15]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Structure' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Dynamic Queue types' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Dynamic Queue types dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'manage display' link for Dynamic Queue Type 'c491aa9d965f4cc.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'c491aa9d965f4cc dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'Full content' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'Teaser' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'RSS' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'Revision comparison' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'Tokens' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'User Ref Preview' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'Administrative Refrence Preview' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'Promoted Content' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 16]]>
-    </line>
-    <line>
-      <![CDATA[Select 'Full content' from the 'Entity List' Formate drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Your settings have been saved.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll by '-500'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text '459c466cb39048b' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text '653f70f58d34409' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'Character: First Name' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 17]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Structure' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Dynamic Queue types' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Dynamic Queue types dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'manage display' link for Dynamic Queue Type 'c491aa9d965f4cc.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'c491aa9d965f4cc dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Select 'Teaser' from the 'Entity List' Formate drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Your settings have been saved.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll by '-500'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text '459c466cb39048b' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text '653f70f58d34409' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'Character: First Name' is NOT present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 18]]>
-    </line>
-    <line>
-      <![CDATA[STEP 19]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Structure' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Display suite' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'View modes' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Add a view mode' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'View modes dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '7e30037bb2534e2' in the 'Label' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Node' Entity check box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The view mode 7e30037bb2534e2 has been saved' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll by '-500'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 20]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Structure' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Dynamic Queue types' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Dynamic Queue types dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'manage display' link for Dynamic Queue Type 'c491aa9d965f4cc.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'c491aa9d965f4cc dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 21]]>
-    </line>
-    <line>
-      <![CDATA[Select '7e30037bb2534e2' from the 'Entity List' Formate drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Your settings have been saved.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll by '-500'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text '459c466cb39048b' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text '653f70f58d34409' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'Character: First Name' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Login' button.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Structure' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Dynamic Queue types' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Dynamic Queue types dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Are you sure you want to delete the Dynamic Queue type c491aa9d965f4cc? dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Confirm' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Dynamic Queue types dialog'.]]>
+      <![CDATA[Cache was cleared on test failure]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="284407" started-at="2014-07-31T17:08:00Z" finished-at="2014-07-31T17:12:44Z">
+  <suite name="Default suite" duration-ms="47503" started-at="2014-07-31T20:14:33Z" finished-at="2014-07-31T20:15:21Z">
     <groups>
       <group name="full">
-        <method signature="CreateConfigureDynamicQueue.CreateConfigureDynamicQueue_TC4197()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue@6ab453]" name="CreateConfigureDynamicQueue_TC4197" class="com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue"/>
-        <method signature="CreateConfigureDynamicQueue.Cleanup()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue@6ab453]" name="Cleanup" class="com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue"/>
+        <method signature="CreatePost.CreatePost_TC1048()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost@245614d6]" name="CreatePost_TC1048" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost"/>
       </group> <!-- full -->
-      <group name="smoke">
-        <method signature="CreateConfigureDynamicQueue.CreateConfigureDynamicQueue_TC4197()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue@6ab453]" name="CreateConfigureDynamicQueue_TC4197" class="com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue"/>
-      </group> <!-- smoke -->
     </groups>
-    <test name="Default test" duration-ms="284407" started-at="2014-07-31T17:08:00Z" finished-at="2014-07-31T17:12:44Z">
-      <class name="com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue">
-        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue@6ab453]" name="startGridAndHub" is-config="true" duration-ms="1390" started-at="2014-07-31T13:07:59Z" finished-at="2014-07-31T13:08:00Z">
+    <test name="Default test" duration-ms="47503" started-at="2014-07-31T20:14:33Z" finished-at="2014-07-31T20:15:21Z">
+      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost">
+        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost@245614d6]" name="startGridAndHub" is-config="true" duration-ms="1041" started-at="2014-07-31T16:14:32Z" finished-at="2014-07-31T16:14:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startGridAndHub -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue@6ab453]" name="startSelenium" is-config="true" duration-ms="2570" started-at="2014-07-31T13:08:00Z" finished-at="2014-07-31T13:08:03Z">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost@245614d6]" name="startSelenium" is-config="true" duration-ms="2566" started-at="2014-07-31T16:14:33Z" finished-at="2014-07-31T16:14:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="CreateConfigureDynamicQueue_TC4197()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue@6ab453]" name="CreateConfigureDynamicQueue_TC4197" duration-ms="265406" started-at="2014-07-31T13:08:03Z" finished-at="2014-07-31T13:12:28Z">
+        <test-method status="FAIL" signature="CreatePost_TC1048()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost@245614d6]" name="CreatePost_TC1048" duration-ms="36471" started-at="2014-07-31T16:14:36Z" finished-at="2014-07-31T16:15:12Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element
+  (Session info: chrome=36.0.1985.125)
+  (Driver info: chromedriver=2.8.241036,platform=Mac OS X 10.9.4 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 20.04 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.41.0', revision: '3192d8a6c4449dc285928ba024779344f5423c58', time: '2014-03-27 11:29:39'
+System info: host: 'BACLARK77-MAC1.local', ip: '192.168.0.4', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.9.4', java.version: '1.7.0_25'
+Session ID: f805fade6e55dd55acd81ef9167bc775
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.IOYwle}, rotatable=false, locationContextEnabled=true, version=36.0.1985.125, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, nativeEvents=true, webStorageEnabled=true, applicationCacheEnabled=false, takesScreenshot=true}]
+Command duration or timeout: 20.68 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.41.0', revision: '3192d8a6c4449dc285928ba024779344f5423c58', time: '2014-03-27 11:29:39'
+System info: host: 'BACLARK77-MAC1.local', ip: '192.168.0.4', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.9.4', java.version: '1.7.0_25'
+Session ID: cc0fed13-d2fe-4f73-92f1-178d8ed7dd6b
+Driver info: com.nbcuni.test.publisher.common.Driver.Driver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.IOYwle}, rotatable=false, locationContextEnabled=true, webdriver.remote.sessionid=cc0fed13-d2fe-4f73-92f1-178d8ed7dd6b, version=36.0.1985.125, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, nativeEvents=true, webStorageEnabled=true, applicationCacheEnabled=false, takesScreenshot=true}]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element
+  (Session info: chrome=36.0.1985.125)
+  (Driver info: chromedriver=2.8.241036,platform=Mac OS X 10.9.4 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 20.04 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.41.0', revision: '3192d8a6c4449dc285928ba024779344f5423c58', time: '2014-03-27 11:29:39'
+System info: host: 'BACLARK77-MAC1.local', ip: '192.168.0.4', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.9.4', java.version: '1.7.0_25'
+Session ID: f805fade6e55dd55acd81ef9167bc775
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.IOYwle}, rotatable=false, locationContextEnabled=true, version=36.0.1985.125, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, nativeEvents=true, webStorageEnabled=true, applicationCacheEnabled=false, takesScreenshot=true}]
+Command duration or timeout: 20.68 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.41.0', revision: '3192d8a6c4449dc285928ba024779344f5423c58', time: '2014-03-27 11:29:39'
+System info: host: 'BACLARK77-MAC1.local', ip: '192.168.0.4', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.9.4', java.version: '1.7.0_25'
+Session ID: cc0fed13-d2fe-4f73-92f1-178d8ed7dd6b
+Driver info: com.nbcuni.test.publisher.common.Driver.Driver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.IOYwle}, rotatable=false, locationContextEnabled=true, webdriver.remote.sessionid=cc0fed13-d2fe-4f73-92f1-178d8ed7dd6b, version=36.0.1985.125, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, nativeEvents=true, webStorageEnabled=true, applicationCacheEnabled=false, takesScreenshot=true}]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:193)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:348)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:445)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:340)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:59)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:34)
+	at com.sun.proxy.$Proxy12.getAttribute(Unknown Source)
+	at com.nbcuni.test.publisher.pageobjects.Content.SelectFile.VerifyFileImagePresent(SelectFile.java:315)
+	at com.nbcuni.test.publisher.pageobjects.Content.SelectFile.SelectDefaultCoverImg(SelectFile.java:422)
+	at com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost.CreatePost_TC1048(CreatePost.java:51)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+Caused by: org.openqa.selenium.remote.ScreenshotException: Screen shot has been taken
+Build info: version: '2.41.0', revision: '3192d8a6c4449dc285928ba024779344f5423c58', time: '2014-03-27 11:29:39'
+System info: host: 'BACLARK77-MAC1.local', ip: '192.168.0.4', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.9.4', java.version: '1.7.0_25'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:125)
+	... 35 more
+Caused by: org.openqa.selenium.NoSuchElementException: no such element
+  (Session info: chrome=36.0.1985.125)
+  (Driver info: chromedriver=2.8.241036,platform=Mac OS X 10.9.4 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 20.04 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.41.0', revision: '3192d8a6c4449dc285928ba024779344f5423c58', time: '2014-03-27 11:29:39'
+System info: host: 'BACLARK77-MAC1.local', ip: '192.168.0.4', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.9.4', java.version: '1.7.0_25'
+Session ID: f805fade6e55dd55acd81ef9167bc775
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.IOYwle}, rotatable=false, locationContextEnabled=true, version=36.0.1985.125, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, nativeEvents=true, webStorageEnabled=true, applicationCacheEnabled=false, takesScreenshot=true}]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.41.0', revision: '3192d8a6c4449dc285928ba024779344f5423c58', time: '2014-03-27 11:29:39'
+System info: host: 'BACLARK77-MAC1.local', ip: '192.168.0.4', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.9.4', java.version: '1.7.0_25'
+Driver info: driver.version: EventFiringWebDriver
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:193)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:348)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:445)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:340)
+	at sun.reflect.GeneratedMethodAccessor23.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:101)
+	at com.sun.proxy.$Proxy10.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:184)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:47)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:33)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:170)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
             <line>
-              <![CDATA[STEP 1]]>
-            </line>
-            <line>
-              <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
+              <![CDATA[Open url 'http://update.devi7.nbcupublisher7.publisher7.com'.]]>
             </line>
             <line>
               <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
@@ -641,189 +251,6 @@
             </line>
             <line>
               <![CDATA[Click the 'Login' button.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 2]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Modules' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to frame titled 'Modules'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Dynamic Queue' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Dynamic Queue' check box is checked.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll by '-500'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Home' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 3]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Structure' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Dynamic Queue types' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Add dynamic queue type' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Add dynamic queue type dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 4]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'c491aa9d965f4cc' in the 'Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Select 'Content' from the 'Entity type' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Dynamic Queue types dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'c491aa9d965f4cc' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll by '-500'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 5]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Dynamic Queues' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Add c491aa9d965f4cc' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Add c491aa9d965f4cc dynamic queue dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 6]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'a7f280549af048e' in the 'Title' text box.]]>
-            </line>
-            <line>
-              <![CDATA[]]>
-            </line>
-            <line>
-              <![CDATA[]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Newest' radio button under 'Sort by'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save Dynamic Queue' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Dynamic Queues dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'a7f280549af048e' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll by '-500'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 7]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Add content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Character Profile' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Character Profile dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '459c466cb39048b' in the 'Character First Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the Cover Photo 'Select' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the select file frame.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the file path for file upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Upload' button.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Public Local Files' radio button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the file image 'HanSolo' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Character Profile dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Assert that img source of the Cover Photo contains 'HanSolo'.]]>
-            </line>
-            <line>
-              <![CDATA[Assert the the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Publishing Options' link.]]>
-            </line>
-            <line>
-              <![CDATA[Select 'Published' from the 'Moderation State' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Character Profile 459c466cb39048b has been created.' is present.]]>
             </line>
             <line>
               <![CDATA[Mouse over the 'Content' menu link.]]>
@@ -838,7 +265,25 @@
               <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
             </line>
             <line>
-              <![CDATA[Enter '653f70f58d34409' in the 'Title' text box.]]>
+              <![CDATA[Verify the 'Title' is present as a required field.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Body' is present as a required field.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Publishing Options' link.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Moderation State' is present as a required field.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '6e72b62ed197432' in the 'Title' text box.]]>
             </line>
             <line>
               <![CDATA[Switch to the Synopsis frame.]]>
@@ -877,396 +322,32 @@
               <![CDATA[Verify the file image 'HanSolo' is present.]]>
             </line>
             <line>
-              <![CDATA[Verify the img is loaded and visible.]]>
+              <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreatePost_TC1048_073114041512PM.png ]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save' button.]]>
+              <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreatePost_TC1048_073114041512PM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreatePost_TC1048_073114041512PM.png' height='500' width='500'/> </a>]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Publishing Options' link.]]>
-            </line>
-            <line>
-              <![CDATA[Select 'Published' from the 'Moderation State' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Post 653f70f58d34409 has been created.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 8]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Dynamic Queues' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Dynamic Queues dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll by '-500'.]]>
-            </line>
-            <line>
-              <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com/dynamic-queue/66'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text '653f70f58d34409' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text '459c466cb39048b' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 9]]>
-            </line>
-            <line>
-              <![CDATA[STEP 10]]>
-            </line>
-            <line>
-              <![CDATA[STEP 11]]>
-            </line>
-            <line>
-              <![CDATA[STEP 12]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Structure' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Dynamic Queue types' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Dynamic Queue types dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'edit' link for Dynamic Queue Type 'c491aa9d965f4cc.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Edit c491aa9d965f4cc dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 13]]>
-            </line>
-            <line>
-              <![CDATA[Check the 'Movie' check box.]]>
-            </line>
-            <line>
-              <![CDATA[Check the 'Person' check box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Dynamic Queue types dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll by '-500'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 14]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Dynamic Queues' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Add c491aa9d965f4cc' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Add c491aa9d965f4cc dynamic queue dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify Target bundle content count equals '2'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify content type 'Movie' is present in list of Target bundles.]]>
-            </line>
-            <line>
-              <![CDATA[Verify content type 'Person' is present in list of Target bundles.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll by '-500'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 15]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Structure' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Dynamic Queue types' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Dynamic Queue types dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'manage display' link for Dynamic Queue Type 'c491aa9d965f4cc.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'c491aa9d965f4cc dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'Full content' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'Teaser' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'RSS' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'Revision comparison' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'Tokens' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'User Ref Preview' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'Administrative Refrence Preview' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'Promoted Content' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 16]]>
-            </line>
-            <line>
-              <![CDATA[Select 'Full content' from the 'Entity List' Formate drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Your settings have been saved.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll by '-500'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text '459c466cb39048b' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text '653f70f58d34409' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'Character: First Name' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 17]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Structure' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Dynamic Queue types' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Dynamic Queue types dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'manage display' link for Dynamic Queue Type 'c491aa9d965f4cc.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'c491aa9d965f4cc dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Select 'Teaser' from the 'Entity List' Formate drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Your settings have been saved.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll by '-500'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text '459c466cb39048b' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text '653f70f58d34409' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'Character: First Name' is NOT present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 18]]>
-            </line>
-            <line>
-              <![CDATA[STEP 19]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Structure' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Display suite' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'View modes' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Add a view mode' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'View modes dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '7e30037bb2534e2' in the 'Label' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Node' Entity check box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The view mode 7e30037bb2534e2 has been saved' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll by '-500'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 20]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Structure' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Dynamic Queue types' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Dynamic Queue types dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'manage display' link for Dynamic Queue Type 'c491aa9d965f4cc.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'c491aa9d965f4cc dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 21]]>
-            </line>
-            <line>
-              <![CDATA[Select '7e30037bb2534e2' from the 'Entity List' Formate drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Your settings have been saved.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll by '-500'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text '459c466cb39048b' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text '653f70f58d34409' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'Character: First Name' is present on the page.]]>
+              <![CDATA[Cache was cleared on test failure]]>
             </line>
           </reporter-output>
-        </test-method> <!-- CreateConfigureDynamicQueue_TC4197 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue@6ab453]" name="stopSelenium" is-config="true" duration-ms="575" started-at="2014-07-31T13:12:28Z" finished-at="2014-07-31T13:12:29Z">
+        </test-method> <!-- CreatePost_TC1048 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost@245614d6]" name="stopSelenium" is-config="true" duration-ms="8435" started-at="2014-07-31T16:15:12Z" finished-at="2014-07-31T16:15:21Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=CreateConfigureDynamicQueue_TC4197 status=SUCCESS method=CreateConfigureDynamicQueue.CreateConfigureDynamicQueue_TC4197()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue@6ab453] output=STEP 1]]]>
+                <![CDATA[[TestResult name=CreatePost_TC1048 status=FAILURE method=CreatePost.CreatePost_TC1048()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost@245614d6] output=Open url 'http://update.devi7.nbcupublisher7.publisher7.com'.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue@6ab453]" name="startSelenium" is-config="true" duration-ms="2275" started-at="2014-07-31T13:12:29Z" finished-at="2014-07-31T13:12:31Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="Cleanup()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue@6ab453]" name="Cleanup" duration-ms="13002" started-at="2014-07-31T13:12:31Z" depends-on-methods="com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue.CreateConfigureDynamicQueue_TC4197" finished-at="2014-07-31T13:12:44Z">
-          <reporter-output>
-            <line>
-              <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Login' button.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Structure' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Dynamic Queue types' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Dynamic Queue types dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Are you sure you want to delete the Dynamic Queue type c491aa9d965f4cc? dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Confirm' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Dynamic Queue types dialog'.]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- Cleanup -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue@6ab453]" name="stopSelenium" is-config="true" duration-ms="568" started-at="2014-07-31T13:12:44Z" finished-at="2014-07-31T13:12:44Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=Cleanup status=SUCCESS method=CreateConfigureDynamicQueue.Cleanup()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue@6ab453] output=Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue@6ab453]" name="stopGridAndHub" is-config="true" duration-ms="382" started-at="2014-07-31T13:12:45Z" finished-at="2014-07-31T13:12:45Z">
+        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost@245614d6]" name="stopGridAndHub" is-config="true" duration-ms="427" started-at="2014-07-31T16:15:21Z" finished-at="2014-07-31T16:15:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopGridAndHub -->
-      </class> <!-- com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue -->
+      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

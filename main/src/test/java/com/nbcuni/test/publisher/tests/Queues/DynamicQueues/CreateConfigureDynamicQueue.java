@@ -164,13 +164,4 @@ public class CreateConfigureDynamicQueue extends ParentTest{
         
     }
     
-    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"}, dependsOnMethods = {"CreateConfigureDynamicQueue_TC4197"}, alwaysRun=true)
-	public void Cleanup() throws Exception {
-    	UserLogin userLogin = applib.openApplication();
-        userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());	
-		taxonomy.NavigateSite("Structure>>Dynamic Queue types");
-        overlay.SwitchToActiveFrame();
-        DynamicQueueTypes dynamicQueueTypes = new DynamicQueueTypes(webDriver, applib);
-        dynamicQueueTypes.DeleteAllDynamicQueues();
-	}
 }

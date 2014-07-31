@@ -30,6 +30,8 @@ public class ParentTest {
     protected ContentParent contentParent;
     protected StartGridHubNode startGridHubNode;
     
+    public static Boolean abortTestSuite = false;
+    
     @BeforeSuite(alwaysRun = true)
     public void startGridAndHub() throws Exception {
 
