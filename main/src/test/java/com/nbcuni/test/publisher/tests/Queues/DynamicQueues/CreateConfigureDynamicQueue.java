@@ -1,21 +1,14 @@
 package com.nbcuni.test.publisher.tests.Queues.DynamicQueues;
 
-import com.ibm.icu.util.Calendar;
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.RerunOnFailure;
+import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
-import com.nbcuni.test.publisher.pageobjects.Content.CreateDefaultContent;
-import com.nbcuni.test.publisher.pageobjects.Content.PublishingOptions;
-import com.nbcuni.test.publisher.pageobjects.Queues.Queues;
-import com.nbcuni.test.publisher.pageobjects.Queues.ScheduleQueue;
-
-import org.testng.Assert;
+import com.nbcuni.test.publisher.pageobjects.Structure.Queues.AddDynamicQueue;
+import com.nbcuni.test.publisher.pageobjects.Structure.Queues.AddDynamicQueueType;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
-
-import java.text.SimpleDateFormat;
 import java.util.Arrays;
-import java.util.Date;
 
 public class CreateConfigureDynamicQueue extends ParentTest{
 	
@@ -31,6 +24,32 @@ public class CreateConfigureDynamicQueue extends ParentTest{
         userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
         
         Reporter.log("STEP 2");
+        Modules modules = new Modules(webDriver, applib);
+        modules.VerifyModuleEnabled("Dynamic Queue");
+        
+        Reporter.log("STEP 3");
+        taxonomy.NavigateSite("Structure>>Dynamic Queue types>>Add dynamic queue type");
+        overlay.SwitchToActiveFrame();
+        
+        Reporter.log("STEP 4");
+        String dynamicQueueTypeName = random.GetCharacterString(15);
+        AddDynamicQueueType addDynamicQueueType = new AddDynamicQueueType(webDriver);
+        addDynamicQueueType.EnterName(dynamicQueueTypeName);
+        addDynamicQueueType.SelectEntityType("Node");
+        addDynamicQueueType.ClickSaveBtn();
+        overlay.SwitchToActiveFrame();
+        contentParent.VerifyPageContentPresent(Arrays.asList(dynamicQueueTypeName));
+        overlay.ClickCloseOverlayLnk();
+        
+        Reporter.log("STEP 5");
+        taxonomy.NavigateSite("Content>>Dynamic Queues>>Add " + dynamicQueueTypeName);
+        overlay.SwitchToActiveFrame();
+        
+        Reporter.log("STEP 6");
+        String dynamicQueueTitle = random.GetCharacterString(15);
+        AddDynamicQueue addDynamicQueue = new AddDynamicQueue(webDriver);
+        
+        
         /*
         Assert.fail("restart here.");
         

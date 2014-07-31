@@ -111,6 +111,7 @@ public class AddUser {
     public void EnterCurrentPassword(String passWord) throws Exception {
     	
     	Reporter.log("Enter '" + passWord + "' in the 'Current password' text box.");
+    	Thread.sleep(500);
     	CurrentPassword_Txb.sendKeys(passWord);
     	
     }
