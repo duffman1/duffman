@@ -71,7 +71,7 @@ public class PublishingOptions {
     private WebElement Time_Txb;
     
     private String ScrollUp_Js() {
-    	String jsScrollUp = "window.scrollBy(0,-500);";
+    	String jsScrollUp = "window.scrollBy(0,-1000);";
     	return jsScrollUp;
     }
     
