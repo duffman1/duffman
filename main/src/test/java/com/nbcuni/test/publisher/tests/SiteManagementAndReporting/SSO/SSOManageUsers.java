@@ -1,7 +1,6 @@
 package com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO;
 
 import java.util.Arrays;
-import java.util.Set;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
@@ -32,7 +31,6 @@ public class SSOManageUsers extends ParentTest {
 		Modules modules = new Modules(webDriver, applib);
 		SimpleSAML simpleSAML = new SimpleSAML(webDriver);
 		Logout logout = new Logout(webDriver);
-		Set<String> allWindows = null;
 		String parentWindow = null;
 		
 		Reporter.log("STEP 1");
@@ -76,13 +74,7 @@ public class SSOManageUsers extends ParentTest {
 		Reporter.log("STEP 4");
 		parentWindow = webDriver.getWindowHandle();
 		addUser.ClickChangeYourPasswordLnk();
-	    allWindows = webDriver.getWindowHandles();  
-	    for (String window : allWindows) {
-	        if (!window.equals(parentWindow)) {
-	          webDriver.switchTo().window(window);
-	          break;
-	          }
-	    }
+	    applib.switchToNewWindow(parentWindow);
 		ssoLogin.VerifySSOPasswordReset();
 		    
 		Reporter.log("STEP 5");

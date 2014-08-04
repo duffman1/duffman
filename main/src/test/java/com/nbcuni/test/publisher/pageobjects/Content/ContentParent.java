@@ -183,7 +183,7 @@ public class ContentParent {
     public void WaitForThrobberNotPresent() throws Exception {
     	
     	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
-    	
+    	Thread.sleep(500);
     	for (int I = 0; I < 30; I++) {
     		if (I == 30) { Assert.fail("Throbber is still present after timeout."); }
     		try {
@@ -193,7 +193,7 @@ public class ContentParent {
     			break;
     		}
     	}
-    	
+    	Thread.sleep(500);
     	webDriver.manage().timeouts().implicitlyWait(config.getImplicitWaitTime(), TimeUnit.SECONDS);
     }
     

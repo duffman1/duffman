@@ -2,11 +2,13 @@ package com.nbcuni.test.publisher.common;
 
 import com.nbcuni.test.publisher.common.Driver.Driver;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
+
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.testng.ITestResult;
 import org.testng.Reporter;
+
 import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -134,5 +136,31 @@ public class AppLib {
         Reporter.log("Open url '" + this.getApplicationURL() + location + "'.");
         webDriver.navigate().to(this.getApplicationURL() + location);   
     }
+    
+    public void openNewWindow() throws Exception {
+    	Reporter.log("Open a new browser window.");
+    	webDriver.executeScript("window.open()");
+    }
+    
+    public void switchToNewWindow(String parentWindow) throws Exception {
+    	Reporter.log("Switch to new browser tab/window.");
+    	for (String window : webDriver.getWindowHandles()) {
+	        if (!window.equals(parentWindow)) {
+	          webDriver.switchTo().window(window);
+	          break;
+	          }
+	    }
+    }
+    
+    public void switchToParentWindow(String parentWindow) throws Exception {
+    	Reporter.log("Switch to the parent tab/window.");
+    	webDriver.switchTo().window(parentWindow);
+    }
+    
+    public void refreshPage() throws Exception {
+    	Reporter.log("Refresh the page.");
+    	webDriver.navigate().refresh();
+    }
+    
     
 }

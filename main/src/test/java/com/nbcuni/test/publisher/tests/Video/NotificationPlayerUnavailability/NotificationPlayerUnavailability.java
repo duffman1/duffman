@@ -2,8 +2,6 @@ package com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.Set;
-
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Content.PublishingOptions;
@@ -21,7 +19,6 @@ import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXLogin;
 import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXSearch;
 import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXSelectAccount;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
-
 import org.testng.Assert;
 import org.openqa.selenium.NoSuchElementException;
 import org.testng.annotations.Test;
@@ -221,13 +218,7 @@ public class NotificationPlayerUnavailability extends ParentTest{
                 //Step 14
                 String parentWindow = webDriver.getWindowHandle();
                 mpxMedia.ClickMPXPlayerLogIntoMPXPlatformLnk(playerTitle);
-                Set<String> allWindows = webDriver.getWindowHandles();  
-                for (String window : allWindows){
-                   if (!window.equals(parentWindow)){
-                     webDriver.switchTo().window(window);
-                     break;
-                   }
-                }
+                applib.switchToNewWindow(parentWindow);
                 
                 //Step 15
                 mpxAssets.WaitForAllAssetsToLoad();
