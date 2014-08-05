@@ -22,14 +22,6 @@ public class SendEmailReport {
 
 		Config config = new Config();
 		
-		/* SETTINGS FOR NBCU MAIL RELAY - REQUIRES VPN
-		Properties props = new Properties();
-        props.put("mail.smtp.starttls.enable", "true");
-        props.put("mail.smtp.auth", "false");
-        props.put("mail.smtp.host", "mailrelay.nbcuni.ge.com");
-        props.put("mail.smtp.port", "25");
-        Session session = Session.getDefaultInstance(props);
-		*/
 		final String userName = config.getConfigValue("GmailUsername");
 		final String passWord = config.getConfigValue("GmailPassword");
 		

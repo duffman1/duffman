@@ -5,7 +5,7 @@
 	<parameter name="Browser" value="chrome"></parameter>
 	<parameter name="Admin1Username" value="admin@publisher.nbcuni.com"></parameter>
 	<parameter name="Admin1Password" value="pa55word"></parameter>
-	<parameter name="ReRunOnFailure" value="false"></parameter>
+	<parameter name="ReRunOnFailure" value="true"></parameter>
 	<parameter name="ReRunOnFailureCount" value="2"></parameter>
 	
   	<!--REPORT CONFIG-->
@@ -16,6 +16,7 @@
   	<parameter name="PathToReports" value="/test-output/reports/"></parameter>
   	<parameter name="PathToScreenshots" value="/test-output/screenshots/"></parameter>
   	<parameter name="PathToHarReports" value="/test-output/"></parameter>
+  	<parameter name="UserStartingSuite" value="brandon.clark@nbcuni.com"></parameter>
   	<parameter name="SendReportEmailAddress" value="brandon.clark@nbcuni.com"></parameter>
   	
   	<!--MOBILE CONFIG-->
@@ -70,6 +71,7 @@
   	<listeners>
     	<listener class-name="com.nbcuni.test.publisher.common.CustomReport" />
     	<listener class-name="com.nbcuni.test.publisher.common.TestListeners" />
+    	<listener class-name="com.nbcuni.test.publisher.common.SuiteListeners" />
   	</listeners>
   	
   	<!--SUITE EXECUTION QUEUE-->
