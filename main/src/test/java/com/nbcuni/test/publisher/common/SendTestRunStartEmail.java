@@ -41,8 +41,8 @@ public class SendTestRunStartEmail {
             			InternetAddress.parse(config.getConfigValue("SendReportEmailAddress")));
             
             message.setSubject("Test Automation Execution Started");
-            message.setContent("<body>An automated test suite execution has been started on " + InetAddress.getLocalHost().getHostName().replace(".local", "") 
-            		+ " against " + "<a href='" + config.getConfigValue("AppURL") + "'>" + config.getConfigValue("AppURL") + "</a>" 
+            message.setContent("<body>An automated test suite execution has been started on <strong>" + InetAddress.getLocalHost().getHostName().replace(".local", "") 
+            		+ "</strong> against " + "<a href='" + config.getConfigValue("AppURL") + "'>" + config.getConfigValue("AppURL") + "</a>" 
             		+ ". Please wait until this suite has completed and notification has been sent " 
             		+ "to QA staff before accessing this box remotely.<br /><br /> Publisher 7 QA Automation</body>", "text/html");
             

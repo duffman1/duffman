@@ -1,6 +1,8 @@
 package com.nbcuni.test.publisher.common;
 
+import java.net.InetAddress;
 import java.util.Properties;
+
 import javax.activation.DataHandler;
 import javax.activation.DataSource;
 import javax.activation.FileDataSource;
@@ -62,15 +64,15 @@ public class SendEmailReport {
             }
             
             Integer failedIndividualTestCount = failedTestsCount / (config.getReRunOnFailureCount() + 1);
-            messageBodyPart.setContent("<body>Test run complete against latest build on "
+            messageBodyPart.setContent("<body>Test run complete for latest build against "
             		+ "<a href='" + config.getConfigValue("AppURL") + "'>" + config.getConfigValue("AppURL") 
-            			+ "</a><br /><br />Tests passed = " + passedTestsCount.toString() + "<br />Tests failed = " 
-            					+ failedIndividualTestCount.toString() + "<br /><br />A detailed functional report is attached. " 
-            						+ "A detailed http archive file (HAR) is attached and can be viewed with an online <a href='http://www.softwareishard.com/har/viewer/'>HAR viewer</a>. " 
-            							+ failedTestScreenshotText + "Iteration Report archives are assigned to task " 
-            								+ config.getConfigValue("RallyTaskID") + "." + "<br /><br />Publisher 7 "
-            									+ "QA Automation</body>", "text/html");
-            
+            		+ "</a> on <strong>" + InetAddress.getLocalHost().getHostName().replace(".local", "") + "</strong>.<br /><br />Tests passed = " 
+            		+ passedTestsCount.toString() + "<br />Tests failed = " 
+            		+ failedIndividualTestCount.toString() + "<br /><br />A detailed functional report is attached. " 
+            		+ "A detailed http archive file (HAR) is attached and can be viewed with an online <a href='http://www.softwareishard.com/har/viewer/'>HAR viewer</a>. " 
+            		+ failedTestScreenshotText + "Iteration Report archives are assigned to task " 
+            		+ config.getConfigValue("RallyTaskID") + "." + "<br /><br />Publisher 7 "
+            		+ "QA Automation</body>", "text/html");
             
             //attach zip file
             Multipart multipart = new MimeMultipart();

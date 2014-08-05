@@ -12,13 +12,13 @@
 
 		<classes>
 			<class name="com.nbcuni.test.publisher.tests.Setup.A1_TestSetup"/>CRON
-			<class name="com.nbcuni.test.publisher.tests.Video.Configuration.ConfigurationMultipleMPXAccounts"/>CRON
-			<class name="com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling"/>CRON
+			<class name="com.nbcuni.test.publisher.tests.Video.Configuration.ConfigurationMultipleMPXAccounts"/>CRON-DRUSH
+			<class name="com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling"/>CRON-DRUSH
 			<class name="com.nbcuni.test.publisher.tests.Video.SyncFromMPXButtonToVideoFileEntitiesEditForm.SyncFromMPXButtonToVideoFileEntitiesEditForm"/>
 			<class name="com.nbcuni.test.publisher.tests.Video.UndefinedIndexesDisplayingForMPXPlayers.UndefinedIndexesDisplayingForMPXPlayers"/>
-			<class name="com.nbcuni.test.publisher.tests.Video.CanonicalURLSupport.CanonicalURL"/>CRON
+			<class name="com.nbcuni.test.publisher.tests.Video.CanonicalURLSupport.CanonicalURL"/>CRON-DRUSH
 			<class name="com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability"/>CRON
-			<class name="com.nbcuni.test.publisher.tests.Video.Thumbnails.ThumbnailsAreNotUpdated"/>CRON
+			<class name="com.nbcuni.test.publisher.tests.Video.Thumbnails.ThumbnailsAreNotUpdated"/>CRON-DRUSH
 			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery"/>
 			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIF.EXIFKeywordsIngestedPhraseInsteadSetsWords"/>
 			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIF.PopulateEXIFBulkUpload"/>
@@ -26,8 +26,8 @@
 			<class name="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSODefinedDomains"/>
 			<class name="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOManageUsers"/>
 			<class name="com.nbcuni.test.publisher.tests.Performance.PageLoads"/>
-			<class name="com.nbcuni.test.publisher.tests.Video.DeIngestingMPXAccountsAndCorrespondingAssets.MPXAccountDeletion"/>CRON
-			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.Logo.CreateLogo"/>CRON
+			<class name="com.nbcuni.test.publisher.tests.Video.DeIngestingMPXAccountsAndCorrespondingAssets.MPXAccountDeletion"/>CRON-DRUSH
+			<class name="com.nbcuni.test.publisher.tests.Setup.Z1_TestCleanup"/>CRON
 		</classes>
 	</test>
 </suite>
