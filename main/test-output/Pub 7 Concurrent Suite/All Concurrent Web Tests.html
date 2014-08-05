@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>All Concurrent Web Tests</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/0/1</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Aug 05 11:26:12 EDT 2014</td>
+<td>Started on:</td><td>Tue Aug 05 16:10:44 EDT 2014</td>
 </tr>
-<tr><td>Total time:</td><td>149 seconds (149824 ms)</td>
+<tr><td>Total time:</td><td>5 seconds (5469 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td>full </td>
 </tr><tr>
@@ -67,8 +67,8 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
@@ -76,60 +76,35 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='com.nbcuni.test.publisher.tests.Advertising.Comscore.Pixelman.Pixelman_TC1155()'><b>Pixelman_TC1155</b><br>Test class: com.nbcuni.test.publisher.tests.Advertising.Comscore.Pixelman<br/>
-<a href="#Output-212715787" onClick='toggleBox("Output-212715787", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1285187018" onClick='toggleBox("Output-1285187018", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-212715787" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-212715787">
-Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.<br/>
-Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
-Enter 'pa55word' in the 'Password' text box.<br/>
-Click the 'Login' button.<br/>
-Click the 'Modules' menu link.<br/>
-Switch to frame titled 'Modules'.<br/>
-Enter 'Pixelman' in the 'Filter Name' text box.<br/>
-Check the 'Pixelman' check box.<br/>
-Click the 'Save configuration' button.<br/>
-Switch to frame titled 'Some required modules must be enabled'.<br/>
-Switch back to the 'Modules' frame.<br/>
-Switch to frame titled 'Modules'.<br/>
-Verify success message of 'The configuration options have been saved.' is present.<br/>
-Enter 'DART' in the 'Filter Name' text box.<br/>
-Enter 'Doubleclick for Publishers' in the 'Filter Name' text box.<br/>
-Uncheck the 'Doubleclick for Publishers' module checkbox.<br/>
-Click the 'Save configuration' button.<br/>
-Verify success message of 'The configuration options have been saved.' is present.<br/>
-Click the 'Close Overlay X'.<br/>
-Scroll by '-500'.<br/>
-Click the 'Home' menu link.<br/>
-Mouse over the 'Home' menu link.<br/>
-Click the '[[Driver: chrome on MAC (c648e05f-e4a2-442e-8232-143bbbe03fc2)] -> xpath: //span[@class='admin-menu-home-icon']/../..//a[text()='Flush all caches']]' menu link.<br/>
-Verify '//www.nbcudigitaladops.com/hosted/global_header.js' is present in page source.<br/>
-Click the 'Logout' button.<br/>
-Verify '//www.nbcudigitaladops.com/hosted/global_header.js' is present in page source.<br/>
-Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
-Enter 'pa55word' in the 'Password' text box.<br/>
-Click the 'Login' button.<br/>
-Click the 'Modules' menu link.<br/>
-Switch to frame titled 'Modules'.<br/>
-Enter 'Pub Ads' in the 'Filter Name' text box.<br/>
-Uncheck the 'Pub Ads' module checkbox.<br/>
-Click the 'Save configuration' button.<br/>
-Verify success message of 'The configuration options have been saved.' is present.<br/>
-Enter 'Pixelman' in the 'Filter Name' text box.<br/>
-Uncheck the 'Pixelman' module checkbox.<br/>
-Click the 'Save configuration' button.<br/>
-Verify success message of 'The configuration options have been saved.' is present.<br/>
-Click the 'Close Overlay X'.<br/>
-Scroll by '-500'.<br/>
-Mouse over the 'Home' menu link.<br/>
-Click the '[[Driver: chrome on MAC (c648e05f-e4a2-442e-8232-143bbbe03fc2)] -> xpath: //span[@class='admin-menu-home-icon']/../..//a[text()='Flush all caches']]' menu link.<br/>
-Click the 'Home' menu link.<br/>
-Click the 'Logout' button.<br/>
+<a href="#Output-1285187018" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1285187018">
+Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/Pixelman_TC1155_080514041046PM.png <br/>
+<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/Pixelman_TC1155_080514041046PM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/Pixelman_TC1155_080514041046PM.png' height='500' width='500'/> </a><br/>
 </div>
 </td>
-<td></td>
-<td>147</td>
-<td>com.nbcuni.test.publisher.tests.Advertising.Comscore.Pixelman@1cb2d75c</td></tr>
+<td><div><pre>org.testng.SkipException: TestSetup Failed - Skipping test Pixelman_TC1155
+	at com.nbcuni.test.publisher.common.TestListeners.onTestStart(TestListeners.java:50)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+... Removed 7 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1285187018", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1285187018'><pre>org.testng.SkipException: TestSetup Failed - Skipping test Pixelman_TC1155
+	at com.nbcuni.test.publisher.common.TestListeners.onTestStart(TestListeners.java:50)
+	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1904)
+	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1879)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:685)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+</pre></div></td>
+<td>0</td>
+<td>com.nbcuni.test.publisher.tests.Advertising.Comscore.Pixelman@7bb33228</td></tr>
 </table><p>
 </body>
 </html>

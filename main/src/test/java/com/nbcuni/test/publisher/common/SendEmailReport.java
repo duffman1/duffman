@@ -64,7 +64,9 @@ public class SendEmailReport {
             }
             
             Integer failedIndividualTestCount = failedTestsCount / (config.getReRunOnFailureCount() + 1);
-            messageBodyPart.setContent("<body>Test run complete for latest build against "
+            String messageContent = null;
+            if (passedTestsCount.equals(0) || passedTestsCount.equals(null)) {
+            	messageContent = "<body>Test run complete for latest build against "
             		+ "<a href='" + config.getConfigValue("AppURL") + "'>" + config.getConfigValue("AppURL") 
             		+ "</a> on <strong>" + InetAddress.getLocalHost().getHostName().replace(".local", "") + "</strong>.<br /><br />Tests passed = " 
             		+ passedTestsCount.toString() + "<br />Tests failed = " 
@@ -72,7 +74,15 @@ public class SendEmailReport {
             		+ "A detailed http archive file (HAR) is attached and can be viewed with an online <a href='http://www.softwareishard.com/har/viewer/'>HAR viewer</a>. " 
             		+ failedTestScreenshotText + "Iteration Report archives are assigned to task " 
             		+ config.getConfigValue("RallyTaskID") + "." + "<br /><br />Publisher 7 "
-            		+ "QA Automation</body>", "text/html");
+            		+ "QA Automation</body>";
+            }
+            else {
+            	messageContent = "<body>A server error was encountered during the execution of the automated test suite on " 
+            			+ InetAddress.getLocalHost().getHostName().replace(".local", "") + ". Likely causes include a Java runtime environment failure, a WebDriver " 
+            			+ "server crash, or the failure of the TestSetup script.<br /><br />Publisher 7 QA Automation</body>";
+            }
+            
+            messageBodyPart.setContent(messageContent, "text/html");
             
             //attach zip file
             Multipart multipart = new MimeMultipart();

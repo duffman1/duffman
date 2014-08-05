@@ -13,7 +13,7 @@
   <parameter name="RallyUrl" value="https://rally1.rallydev.com"/>
   <parameter name="ErrorCheckingEnabled" value="true"/>
   <parameter name="SendReportAutoEmails" value="true"/>
-  <parameter name="RallyUsername" value="brandon.clark@nbcuni.com"/>
+  <parameter name="RallyUsername" value="scott.baierwalter@nbc.com"/>
   <parameter name="Admin1Username" value="admin@publisher.nbcuni.com"/>
   <parameter name="Browser" value="chrome"/>
   <parameter name="GmailUsername" value="Pub7NBCUAutoEmailUser1@gmail.com"/>
@@ -25,7 +25,7 @@
   <parameter name="RallyProject" value="Publisher 7"/>
   <parameter name="IRCNickname" value="NBCUniAutomationBotOnIRC"/>
   <parameter name="PathToMediaContent" value="/src/test/java/com/nbcuni/test/publisher/content/MediaFiles/"/>
-  <parameter name="RallyPassword" value="tufNewcyd4#"/>
+  <parameter name="RallyPassword" value="Lighth0use123"/>
   <parameter name="PathToReports" value="/test-output/reports/"/>
   <parameter name="MPXPassword" value="Pa55word"/>
   <parameter name="RallyTaskID" value="TA48757"/>
@@ -43,74 +43,29 @@
   <parameter name="LocalWebDriverHubPort" value="4444"/>
   <parameter name="IRCChannel" value="#nbcuots_pub7"/>
   <parameter name="SikuliImageWaitTime" value="30"/>
-  <parameter name="AppURL" value="http://update.devi12.nbcupublisher7.publisher7.com"/>
+  <parameter name="AppURL" value="http://update.qa5.nbcupublisher7.publisher7.com"/>
   <parameter name="MPXUsername" value="mpx/AdminPub7QA"/>
   <listeners>
     <listener class-name="com.nbcuni.test.publisher.common.CustomReport"/>
+    <listener class-name="com.nbcuni.test.publisher.common.TestListeners"/>
+    <listener class-name="com.nbcuni.test.publisher.common.SuiteListeners"/>
   </listeners>
   <test name="All Concurrent Web Tests(failed)" parallel="classes">
     <groups>
       <run>
-        <include name="mpx"/>
+        <include name="full"/>
       </run>
     </groups>
     <classes>
-      <class name="com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.CustomPermissionSetVerification">
+      <class name="com.nbcuni.test.publisher.tests.Advertising.Comscore.Pixelman">
         <methods>
+          <include name="startSelenium"/>
           <include name="stopGridAndHub"/>
           <include name="startGridAndHub"/>
-        </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.CustomPermissionSetVerification -->
-      <class name="com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen">
-        <methods>
-          <include name="startSelenium"/>
+          <include name="Pixelman_TC1155"/>
           <include name="stopSelenium"/>
         </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen -->
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.EnhanceContentLibraryTable.EnhanceContentLibraryTable">
-        <methods>
-          <include name="startSelenium"/>
-          <include name="stopSelenium"/>
-        </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.EnhanceContentLibraryTable.EnhanceContentLibraryTable -->
-      <class name="com.nbcuni.test.publisher.tests.Video.DeIngestingMPXAccountsAndCorrespondingAssets.EntityReferenceVerification">
-        <methods>
-          <include name="startSelenium"/>
-          <include name="stopSelenium"/>
-        </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.Video.DeIngestingMPXAccountsAndCorrespondingAssets.EntityReferenceVerification -->
-      <class name="com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXLibraryPublicID">
-        <methods>
-          <include name="startSelenium"/>
-          <include name="stopSelenium"/>
-        </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXLibraryPublicID -->
-      <class name="com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification">
-        <methods>
-          <include name="startSelenium"/>
-          <include name="DefaultPlayerOptionsVerification_Test"/>
-          <include name="stopSelenium"/>
-        </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification -->
-      <class name="com.nbcuni.test.publisher.tests.Video.MPXReporting.MPXReportingBeta">
-        <methods>
-          <include name="startSelenium"/>
-          <include name="stopSelenium"/>
-        </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.Video.MPXReporting.MPXReportingBeta -->
-      <class name="com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides">
-        <methods>
-          <include name="startSelenium"/>
-          <include name="stopSelenium"/>
-          <include name="MPXVideosSchedulingVerificationInitialOverrides_Test"/>
-        </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides -->
-      <class name="com.nbcuni.test.publisher.tests.Video.Player.SelectVideoPlayerPerVideoFile">
-        <methods>
-          <include name="startSelenium"/>
-          <include name="stopSelenium"/>
-        </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.Video.Player.SelectVideoPlayerPerVideoFile -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Advertising.Comscore.Pixelman -->
     </classes>
   </test> <!-- All Concurrent Web Tests(failed) -->
 </suite> <!-- Failed suite [Pub 7 Concurrent Suite] -->

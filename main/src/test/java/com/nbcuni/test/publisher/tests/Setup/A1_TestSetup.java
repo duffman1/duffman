@@ -9,6 +9,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.TimeZone;
 import java.util.concurrent.TimeUnit;
+
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
@@ -21,6 +22,7 @@ import com.nbcuni.test.publisher.pageobjects.Logo.AddLogo;
 import com.nbcuni.test.publisher.pageobjects.Logo.Logos;
 import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
 import com.nbcuni.test.publisher.pageobjects.Structure.Queues.Queues.ScheduleQueue;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -151,7 +153,7 @@ public class A1_TestSetup extends ParentTest {
             	overlay.ClickCloseOverlayLnk();
             	
             	//schedule a new logo to be used later in the suite
-            	taxonomy.NavigateSite("Content>>Logos");
+            	applib.openSitePage("/#overlay=admin/content/logos");
             	overlay.SwitchToActiveFrame();
             	Logos logos = new Logos(webDriver, applib);
         	    logos.DeleteAllLogos();
