@@ -41,18 +41,24 @@ public class SendTestRunStartEmail {
             			InternetAddress.parse(config.getConfigValue("SendReportEmailAddress")));
             
             message.setSubject("Test Automation Execution Started");
+            
+            String[] emailAddresses = config.getConfigValue("SendReportEmailAddress").replace(" ", "").split(",");
+            String initiatorAddress = null;
+            try {
+            	initiatorAddress = emailAddresses[1];
+            }
+            catch (Exception e) {
+            	initiatorAddress = "an unknown user";
+            }
+            
             message.setContent("<body>An automated test suite execution has been started on <strong>" + InetAddress.getLocalHost().getHostName().replace(".local", "") 
             		+ "</strong> against " + "<a href='" + config.getConfigValue("AppURL") + "'>" + config.getConfigValue("AppURL") + "</a>" 
-            		+ ". Please wait until this suite has completed and notification has been sent " 
+            		+ " by " + initiatorAddress + ". Please wait until this suite has completed and notification has been sent " 
             		+ "to QA staff before accessing this box remotely.<br /><br /> Publisher 7 QA Automation</body>", "text/html");
             
-            if (InetAddress.getLocalHost().getHostName().contains("NBCAutomation")) {
-            	Transport.send(message);
-            	System.out.println("Successfully sent test run start email.");
-            }
-            else {
-            	System.out.println("Test run start email not sent as CRE is not a public NBC environment.");
-            }
+            Transport.send(message);
+            System.out.println("Successfully sent test run start email.");
+           
 
         } catch (MessagingException e) {
             throw new RuntimeException(e);

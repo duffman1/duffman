@@ -9,7 +9,6 @@ import java.util.Date;
 import java.util.List;
 import java.util.TimeZone;
 import java.util.concurrent.TimeUnit;
-
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
@@ -17,12 +16,10 @@ import com.nbcuni.test.publisher.pageobjects.Content.BasicInformation;
 import com.nbcuni.test.publisher.pageobjects.Content.PublishingOptions;
 import com.nbcuni.test.publisher.pageobjects.Content.SelectFile;
 import com.nbcuni.test.publisher.pageobjects.Content.WorkBench;
-import com.nbcuni.test.publisher.pageobjects.Cron.Cron;
 import com.nbcuni.test.publisher.pageobjects.Logo.AddLogo;
 import com.nbcuni.test.publisher.pageobjects.Logo.Logos;
 import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
 import com.nbcuni.test.publisher.pageobjects.Structure.Queues.Queues.ScheduleQueue;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -175,23 +172,23 @@ public class A1_TestSetup extends ParentTest {
                 Calendar cal5MinuteFuture = Calendar.getInstance();
                 cal5MinuteFuture.add(Calendar.MINUTE, 5);
             	date5MinuteFuture = cal5MinuteFuture.getTime();
-            	Calendar cal60MinuteFuture = Calendar.getInstance();
-                cal60MinuteFuture.add(Calendar.MINUTE, 60);
-            	Date date60MinuteFuture = cal60MinuteFuture.getTime();
+            	Calendar cal120MinuteFuture = Calendar.getInstance();
+                cal120MinuteFuture.add(Calendar.MINUTE, 120);
+            	Date date120MinuteFuture = cal120MinuteFuture.getTime();
             	SimpleDateFormat pub7LogoDateFormat = new SimpleDateFormat("yyyy-MM-dd");
             	pub7LogoDateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
             	SimpleDateFormat pub7LogoTimeFormat = new SimpleDateFormat("hh:mm:ss a");
             	pub7LogoTimeFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
             	addLogo.EnterStartDate(pub7LogoDateFormat.format(date5MinuteFuture));
         	    addLogo.EnterStartTime(pub7LogoTimeFormat.format(date5MinuteFuture));
-        	    addLogo.EnterEndDate(pub7LogoDateFormat.format(date60MinuteFuture));
-        	    addLogo.EnterEndTime(pub7LogoTimeFormat.format(date60MinuteFuture));
+        	    addLogo.EnterEndDate(pub7LogoDateFormat.format(date120MinuteFuture));
+        	    addLogo.EnterEndTime(pub7LogoTimeFormat.format(date120MinuteFuture));
         	    addLogo.ClickSaveBtn();
         	    overlay.SwitchToActiveFrame();
         	    SimpleDateFormat pub7CreatedLogoDateTimeFormat = new SimpleDateFormat("EEE, MM/dd/yyyy - kk:mm");
         	    pub7CreatedLogoDateTimeFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
             	contentParent.VerifyPageContentPresent(Arrays.asList(logoTitle, 
-        	    		pub7CreatedLogoDateTimeFormat.format(date5MinuteFuture).replace("24:", "00:"), pub7CreatedLogoDateTimeFormat.format(date60MinuteFuture).replace("24:", "00:")));
+        	    		pub7CreatedLogoDateTimeFormat.format(date5MinuteFuture).replace("24:", "00:"), pub7CreatedLogoDateTimeFormat.format(date120MinuteFuture).replace("24:", "00:")));
         	    logos.VerifyLogoImgPresent(logoTitle, "nbclogosmall");
         	    overlay.ClickCloseOverlayLnk();
         	    
@@ -255,10 +252,6 @@ public class A1_TestSetup extends ParentTest {
                 		webDriver.findElement(By.id("edit-submit")).click();
                 	}
                 }
-                
-                //run cron to clear out mpx content that's been deleted
-                Cron cron = new Cron(webDriver, applib);
-                cron.RunCron(false);
                 
                 //flush all caches
                 taxonomy.NavigateSite("Home>>Flush all caches");

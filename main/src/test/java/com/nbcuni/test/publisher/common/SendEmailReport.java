@@ -63,18 +63,24 @@ public class SendEmailReport {
             	
             }
             
+            String machineName = InetAddress.getLocalHost().getHostName().replace(".local", "");
             Integer failedIndividualTestCount = failedTestsCount / (config.getReRunOnFailureCount() + 1);
-            String messageContent = null;
-            messageContent = "<body>Test run complete for latest build against "
-            		+ "<a href='" + config.getConfigValue("AppURL") + "'>" + config.getConfigValue("AppURL") 
-            		+ "</a> on <strong>" + InetAddress.getLocalHost().getHostName().replace(".local", "") + "</strong>.<br /><br />Tests passed = " 
-            		+ passedTestsCount.toString() + "<br />Tests failed = " 
-            		+ failedIndividualTestCount.toString() + "<br /><br />A detailed functional report is attached. " 
-            		+ "A detailed http archive file (HAR) is attached and can be viewed with an online <a href='http://www.softwareishard.com/har/viewer/'>HAR viewer</a>. " 
-            		+ failedTestScreenshotText + "Iteration Report archives are assigned to task " 
-            		+ config.getConfigValue("RallyTaskID") + "." + "<br /><br />Publisher 7 "
-            		+ "QA Automation</body>";
             
+            String messageContent = null;
+            if (passedTestsCount.equals(0)) {
+            	messageContent = "<body>A server error was encountered during the execution of the automated test suite on <strong>" + machineName + "</strong>, resulting in 0 successful test executions. Likely causes include a site outage, a Java runtime environment failure, a WebDriver server crash, or the failure of the TestSetup script.<br /><br />Publisher 7 QA Automation</body>";
+            }
+            else {
+            	messageContent = "<body>Test run complete for latest build against "
+                		+ "<a href='" + config.getConfigValue("AppURL") + "'>" + config.getConfigValue("AppURL") 
+                		+ "</a> on <strong>" + machineName + "</strong>.<br /><br />Tests passed = " 
+                		+ passedTestsCount.toString() + "<br />Tests failed = " 
+                		+ failedIndividualTestCount.toString() + "<br /><br />A detailed functional report is attached. " 
+                		+ "A detailed http archive file (HAR) is attached and can be viewed with an online <a href='http://www.softwareishard.com/har/viewer/'>HAR viewer</a>. " 
+                		+ failedTestScreenshotText + "Iteration Report archives are assigned to task " 
+                		+ config.getConfigValue("RallyTaskID") + "." + "<br /><br />Publisher 7 "
+                		+ "QA Automation</body>";
+            }
             messageBodyPart.setContent(messageContent, "text/html");
             
             //attach zip file
