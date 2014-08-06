@@ -3,7 +3,7 @@
   	<!--TEST EXECUTION QUEUE-->
   	<test verbose="1" name="All Consecutive Web Tests" annotations="JDK">
 
-		<!-- Enter group name for specific test scripts, options are "full", "smoke", or "mpx" -->
+		<!-- Enter group name for specific test scripts, options are "full", "smoke", "mpx", "certify" -->
 		<groups>
 	 		<run>
 	 			<include name="full"/>
@@ -11,7 +11,7 @@
 		</groups>
 
 		<classes>
-			<class name="com.nbcuni.test.publisher.tests.Setup.A1_TestSetup"/>CRON
+			<class name="com.nbcuni.test.publisher.tests.Setup.A1_TestSetup"/>
 			<class name="com.nbcuni.test.publisher.tests.Video.Configuration.ConfigurationMultipleMPXAccounts"/>CRON-DRUSH
 			<class name="com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling"/>CRON-DRUSH
 			<class name="com.nbcuni.test.publisher.tests.Video.SyncFromMPXButtonToVideoFileEntitiesEditForm.SyncFromMPXButtonToVideoFileEntitiesEditForm"/>

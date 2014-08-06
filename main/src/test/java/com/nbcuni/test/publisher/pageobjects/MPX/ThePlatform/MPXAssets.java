@@ -32,7 +32,7 @@ public class MPXAssets {
     public void WaitForAllAssetsToLoad() throws Exception {
     	
     	this.WaitForImgPresent(applib.getPathToSikuliImages() + "Common/SaveCancel_Btns.png");
-    	Thread.sleep(2000);
+    	Thread.sleep(5000);
     }
     
     public void WaitForImgPresent(String imgPath) throws Exception {

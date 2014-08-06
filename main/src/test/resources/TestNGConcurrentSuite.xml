@@ -3,7 +3,7 @@
   	<!--TEST EXECUTION QUEUE-->
   	<test verbose="1" name="All Concurrent Web Tests" annotations="JDK">
 
-		<!-- Enter group name for specific test scripts, options are "full", "smoke", or "mpx" -->
+		<!-- Enter group name for specific test scripts, options are "full", "smoke", "mpx", "certify" -->
 		<groups>
 	 		<run>
 	 			<include name="full"/>
@@ -11,7 +11,7 @@
 		</groups>
 
 		<classes>
-			<class name="com.nbcuni.test.publisher.tests.Advertising.Comscore.Pixelman"/> 
+			<class name="com.nbcuni.test.publisher.tests.Advertising.Comscore.Pixelman"/>
 			<class name="com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds"/>
 			<class name="com.nbcuni.test.publisher.tests.Video.Player.SelectVideoPlayerPerVideoFile"/>
 			<class name="com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen"/>

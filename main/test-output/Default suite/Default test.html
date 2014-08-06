@@ -1,0 +1,150 @@
+<html>
+<head>
+<title>TestNG:  Default test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Default test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Wed Aug 06 15:54:31 EDT 2014</td>
+</tr>
+<tr><td>Total time:</td><td>120 seconds (120418 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.nbcuni.test.publisher.tests.Video.Thumbnails.ThumbnailsAreNotUpdated.ThumbnailsAreNotUpdated_Test()'><b>ThumbnailsAreNotUpdated_Test</b><br>Test class: com.nbcuni.test.publisher.tests.Video.Thumbnails.ThumbnailsAreNotUpdated<br/>
+<a href="#Output-848228443" onClick='toggleBox("Output-848228443", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-848228443" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-848228443">
+Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.<br/>
+Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
+Enter 'pa55word' in the 'Password' text box.<br/>
+Click the 'Login' button.<br/>
+Mouse over the 'Configuration' menu link.<br/>
+Mouse over the 'Media' menu link.<br/>
+Click the 'Media: thePlatform mpx settings' menu link.<br/>
+Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.<br/>
+Get all the selected import account options and store to a list.<br/>
+Click the 'Close Overlay X'.<br/>
+Scroll by '-500'.<br/>
+Mouse over the 'Structure' menu link.<br/>
+Click the 'File types' menu link.<br/>
+Switch to the active frame titled 'File types dialog'.<br/>
+Click the 'DB TV manage file display' link.<br/>
+Switch to the active frame titled 'MPX Video for Account &quot;DB TV&quot; (2312945284) dialog'.<br/>
+Click the 'Pub MPX Image' link.<br/>
+Select the 'Thumbnail (100x100)' option from the 'Pub MPX Image Style' drop down list.<br/>
+Click the 'Save configuration' button.<br/>
+Verify success message of 'Your settings have been saved.' is present.<br/>
+Click the 'Close Overlay X'.<br/>
+Scroll by '-500'.<br/>
+Open the mpx platform.<br/>
+Click the 'Upload' button.<br/>
+Click the 'Choose Files' button.<br/>
+Click the 'Movies' button in the OS Upload dialog.<br/>
+Click the Test Movie in th OS Upload dialog.<br/>
+Click the 'Open' button.<br/>
+Click the 'Upload' button in the Upload dialog.<br/>
+Enter 'AutomationWThumb222266178e' in the 'Title' text box.<br/>
+Click the 'Save' button.<br/>
+Click the 'Files' link.<br/>
+Click the 'Upload' button.<br/>
+Click the 'Choose Files' button.<br/>
+Click the 'All Files' icon.<br/>
+Click the local 'Pictures' icon.<br/>
+Click the nbc logo image link.<br/>
+Click the 'Open' button.<br/>
+Click the 'Upload' button in the Upload dialog.<br/>
+Click the 'All Media' link.<br/>
+Click the 'Save' button.<br/>
+Click the 'Publish' button.<br/>
+Click the 'Publish to Pub 7 Primary' check box.<br/>
+Click the 'Publish' button from the upload dialog.<br/>
+Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Files' menu link.<br/>
+Click the 'mpxMedia' menu link.<br/>
+Switch to the active frame titled 'Content dialog'.<br/>
+Enter title AutomationWThumb222266178e.<br/>
+Click the 'Apply' button.<br/>
+Get the text of the first search result set item.<br/>
+Verify the search thumbnail named 'nbclogosmall' is present for search result 'AutomationWThumb222266178e'.<br/>
+Assert the the img is loaded and visible.<br/>
+Mouse over the 'Structure' menu link.<br/>
+Click the 'File types' menu link.<br/>
+Click the 'DB TV manage file display' link.<br/>
+Un-Check the 'Pub MPX Image' checkbox<br/>
+Click the 'Save configuration' button.<br/>
+Verify success message of 'Your settings have been saved.' is present.<br/>
+</div>
+</td>
+<td></td>
+<td>117</td>
+<td>com.nbcuni.test.publisher.tests.Video.Thumbnails.ThumbnailsAreNotUpdated@1f42269</td></tr>
+</table><p>
+</body>
+</html>

@@ -39,7 +39,7 @@ public class MPXAddMedia {
     	
     	Reporter.log("Click the 'Upload' button.");
     	mpxAssets.WaitForImgPresent(getImagePath() + "Common/Upload_Btn.png");
-    	sikuli.click(getImagePath() + "Common/Upload_Btn.png");
+    	sikuli.doubleClick(getImagePath() + "Common/Upload_Btn.png");
     }
     
     public void ClickChooseFilesBtn() throws Exception {
