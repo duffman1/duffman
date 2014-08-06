@@ -10,6 +10,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.Reporter;
 
@@ -41,6 +42,9 @@ public class AddDynamicQueue {
     private WebElement TargetBundle_Cbx(String contentType) {
     	return webDriver.findElement(By.xpath("//label[text()='" + contentType + " ']/../input"));
     }
+    
+    @FindBy(how = How.ID, using = "edit-settings-tv-show-select")
+    private WebElement TVShows_Ddl;
     
     @FindBy(how = How.ID, using = "edit-settings-sort-dynamic-queue-newest")
     private WebElement SortByNewest_Rdb;
@@ -88,6 +92,12 @@ public class AddDynamicQueue {
     	}
     }
     
+    public void SelectTVShow(String showTitle) throws Exception {
+    	
+    	Reporter.log("Select '" + showTitle + "' from the 'TV Shows' drop down list.");
+    	new Select(TVShows_Ddl).selectByVisibleText(showTitle);
+    }
+
     public void ClickSortByNewestRdb() throws Exception {
     	
     	Reporter.log("Click the 'Newest' radio button under 'Sort by'.");

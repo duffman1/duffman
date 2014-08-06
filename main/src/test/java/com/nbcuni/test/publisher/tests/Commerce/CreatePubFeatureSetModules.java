@@ -27,8 +27,8 @@ public class CreatePubFeatureSetModules extends ParentTest {
         	modules.ClickCategoryLnk("Publisher Feature Sets");
         	modules.WaitForFilterVisible("Publisher Blog");
         	modules.WaitForFilterVisible("Publisher Entertainment");
-        	modules.WaitForFilterVisible("Publisher News");
         	modules.WaitForFilterVisible("Publisher Commerce");
+        	modules.WaitForFilterVisible("Publisher News");
         	modules.WaitForFilterVisible("Publisher TVE");
         	
     }

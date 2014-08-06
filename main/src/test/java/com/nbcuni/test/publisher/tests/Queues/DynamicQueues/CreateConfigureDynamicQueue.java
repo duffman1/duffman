@@ -43,15 +43,8 @@ public class CreateConfigureDynamicQueue extends ParentTest{
         String dynamicQueueTypeName = random.GetCharacterString(15);
         AddDynamicQueueType addDynamicQueueType = new AddDynamicQueueType(webDriver);
         addDynamicQueueType.EnterName(dynamicQueueTypeName);
-        String entityType = null;
-        if (config.getConfigValue("AppURL").contains("install")) {
-        	entityType = "Node";
-        }
-        else {
-        	entityType = "Content";
-        }
         		
-        addDynamicQueueType.SelectEntityType(entityType);
+        addDynamicQueueType.SelectEntityType();
         addDynamicQueueType.ClickSaveBtn();
         overlay.SwitchToActiveFrame();
         contentParent.VerifyPageContentPresent(Arrays.asList(dynamicQueueTypeName));

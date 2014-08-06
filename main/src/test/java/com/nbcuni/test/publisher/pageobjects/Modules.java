@@ -86,6 +86,7 @@ public class Modules {
     
     //PAGE OBJECT METHODS
     public void WaitForFilterVisible(final String filterName) throws Exception {
+    	Reporter.log("Wait for module filter titled '" + filterName + "' to be visible in module list.");
     	wait.until(new ExpectedCondition<Boolean>() {
     		public Boolean apply(WebDriver webDriver) {
     			return (ModuleName_Row(filterName).getAttribute("style").equals("") || ModuleName_Row(filterName).getAttribute("style").equals("display: table-row;"))

@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+    <line>
+      <![CDATA[STEP 1]]>
+    </line>
+    <line>
+      <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Login' button.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 2]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Structure' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Content types' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Add content type' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Content types dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'abe29dd3b1' in the 'Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save and add fields' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'abe29dd3b1 dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 3]]>
+    </line>
+    <line>
+      <![CDATA[Enter '59b70f939a1f4af' in the 'Add new field' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Select 'File' from the 'Field Type' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Select 'File' from the 'Widget' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled '59b70f939a1f4af dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled '59b70f939a1f4af dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Updated field 59b70f939a1f4af field settings.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 4]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'File directory' value is '[current-date:custom:Y]/[current-date:custom:m]'.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 5]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'abe29dd3b1 dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '6b4008c57eaf4dd' in the 'Add new field' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Select 'Image' from the 'Field Type' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Select 'Image' from the 'Widget' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled '6b4008c57eaf4dd dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled '6b4008c57eaf4dd dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 6]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Updated field 6b4008c57eaf4dd field settings.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'File directory' value is '[current-date:custom:Y]/[current-date:custom:m]'.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 7]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'abe29dd3b1 dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Saved 6b4008c57eaf4dd configuration.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Your settings have been saved.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll by '-500'.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 8 - N/A]]>
+    </line>
+    <line>
+      <![CDATA[STEP 9]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Add content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'abe29dd3b1' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create abe29dd3b1 dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '194736aca10747b' in the 'Title' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the Synopsis frame.]]>
+    </line>
+    <line>
+      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create abe29dd3b1 dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '/Users/brandonclark/SQE-TEST-Pub7/main/src/test/java/com/nbcuni/test/publisher/content/MediaFiles/HanSolo1.jpg' in the '6b4008c57eaf4dd' custom file upload field.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Upload' button for custom field '6b4008c57eaf4dd'.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'abe29dd3b1 194736aca10747b has been created.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that img source of the Media Item contains '2014/08/HanSolo'.]]>
+    </line>
+    <line>
+      <![CDATA[Assert the the img is loaded and visible.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 10-11]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Structure' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Content types' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Character Profile' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Manage fields' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Cover Photo' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Cover Photo dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'File directory' value is '[current-date:custom:Y]/[current-date:custom:m]'.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 12 - TODO]]>
+    </line>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="59336" started-at="2014-08-06T15:40:15Z" finished-at="2014-08-06T15:41:14Z">
+    <groups>
+      <group name="full">
+        <method signature="FileFieldsTokenBasedPath.FileFieldsTokenBasedPath_TC4355()[pri:0, instance:com.nbcuni.test.publisher.tests.Core.Profiles.FileFieldsTokenBasedPath@4e800275]" name="FileFieldsTokenBasedPath_TC4355" class="com.nbcuni.test.publisher.tests.Core.Profiles.FileFieldsTokenBasedPath"/>
+      </group> <!-- full -->
+    </groups>
+    <test name="Default test" duration-ms="59336" started-at="2014-08-06T15:40:15Z" finished-at="2014-08-06T15:41:14Z">
+      <class name="com.nbcuni.test.publisher.tests.Core.Profiles.FileFieldsTokenBasedPath">
+        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Core.Profiles.FileFieldsTokenBasedPath@4e800275]" name="startGridAndHub" is-config="true" duration-ms="1344" started-at="2014-08-06T11:40:13Z" finished-at="2014-08-06T11:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startGridAndHub -->
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Core.Profiles.FileFieldsTokenBasedPath@4e800275]" name="startSelenium" is-config="true" duration-ms="2271" started-at="2014-08-06T11:40:15Z" finished-at="2014-08-06T11:40:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startSelenium -->
+        <test-method status="PASS" signature="FileFieldsTokenBasedPath_TC4355()[pri:0, instance:com.nbcuni.test.publisher.tests.Core.Profiles.FileFieldsTokenBasedPath@4e800275]" name="FileFieldsTokenBasedPath_TC4355" duration-ms="56482" started-at="2014-08-06T11:40:17Z" finished-at="2014-08-06T11:41:14Z">
+          <reporter-output>
+            <line>
+              <![CDATA[STEP 1]]>
+            </line>
+            <line>
+              <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Login' button.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 2]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Structure' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Content types' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Add content type' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Content types dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'abe29dd3b1' in the 'Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save and add fields' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'abe29dd3b1 dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 3]]>
+            </line>
+            <line>
+              <![CDATA[Enter '59b70f939a1f4af' in the 'Add new field' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Select 'File' from the 'Field Type' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Select 'File' from the 'Widget' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled '59b70f939a1f4af dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled '59b70f939a1f4af dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Updated field 59b70f939a1f4af field settings.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 4]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'File directory' value is '[current-date:custom:Y]/[current-date:custom:m]'.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 5]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'abe29dd3b1 dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '6b4008c57eaf4dd' in the 'Add new field' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Select 'Image' from the 'Field Type' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Select 'Image' from the 'Widget' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled '6b4008c57eaf4dd dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled '6b4008c57eaf4dd dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 6]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Updated field 6b4008c57eaf4dd field settings.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'File directory' value is '[current-date:custom:Y]/[current-date:custom:m]'.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 7]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'abe29dd3b1 dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Saved 6b4008c57eaf4dd configuration.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Your settings have been saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll by '-500'.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 8 - N/A]]>
+            </line>
+            <line>
+              <![CDATA[STEP 9]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Add content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'abe29dd3b1' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create abe29dd3b1 dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '194736aca10747b' in the 'Title' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the Synopsis frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create abe29dd3b1 dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '/Users/brandonclark/SQE-TEST-Pub7/main/src/test/java/com/nbcuni/test/publisher/content/MediaFiles/HanSolo1.jpg' in the '6b4008c57eaf4dd' custom file upload field.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Upload' button for custom field '6b4008c57eaf4dd'.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'abe29dd3b1 194736aca10747b has been created.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that img source of the Media Item contains '2014/08/HanSolo'.]]>
+            </line>
+            <line>
+              <![CDATA[Assert the the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 10-11]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Structure' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Content types' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Character Profile' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Manage fields' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Cover Photo' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Cover Photo dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'File directory' value is '[current-date:custom:Y]/[current-date:custom:m]'.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 12 - TODO]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- FileFieldsTokenBasedPath_TC4355 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Core.Profiles.FileFieldsTokenBasedPath@4e800275]" name="stopSelenium" is-config="true" duration-ms="570" started-at="2014-08-06T11:41:14Z" finished-at="2014-08-06T11:41:14Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=FileFieldsTokenBasedPath_TC4355 status=SUCCESS method=FileFieldsTokenBasedPath.FileFieldsTokenBasedPath_TC4355()[pri:0, instance:com.nbcuni.test.publisher.tests.Core.Profiles.FileFieldsTokenBasedPath@4e800275] output=STEP 1]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopSelenium -->
+        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Core.Profiles.FileFieldsTokenBasedPath@4e800275]" name="stopGridAndHub" is-config="true" duration-ms="370" started-at="2014-08-06T11:41:14Z" finished-at="2014-08-06T11:41:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopGridAndHub -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Core.Profiles.FileFieldsTokenBasedPath -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

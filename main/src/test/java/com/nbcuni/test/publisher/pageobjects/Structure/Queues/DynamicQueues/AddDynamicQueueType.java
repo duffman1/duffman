@@ -49,10 +49,15 @@ public class AddDynamicQueueType {
     	Name_Txb.sendKeys(queueTypeName);
     }
     
-    public void SelectEntityType(String entityType) throws Exception {
+    public void SelectEntityType() throws Exception {
     	
-    	Reporter.log("Select '" + entityType + "' from the 'Entity type' drop down list.");
-    	new Select(EntityType_Ddl).selectByVisibleText(entityType);
+    	Reporter.log("Select 'Content' or 'Node' from the 'Entity type' drop down list.");
+    	try {
+    		new Select(EntityType_Ddl).selectByVisibleText("Content");
+    	}
+    	catch (Exception e) {
+    		new Select(EntityType_Ddl).selectByVisibleText("Node");
+    	}
     }
     
     public void EnableContentTypes(List<String> contentTypes) throws Exception {
