@@ -35,7 +35,7 @@ public class BasicUIForCreatingAndRevisingQueues extends ParentTest{
      * Step 14 - Again display the Edit <queuename> overlay<br> 
      * @throws Throwable No Return values are needed
      *************************************************************************************/
-    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full" })
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "certify"})
     public void BasicUIForCreatingAndRevisingQueues_Test() throws Exception{
     	
         //Step 1

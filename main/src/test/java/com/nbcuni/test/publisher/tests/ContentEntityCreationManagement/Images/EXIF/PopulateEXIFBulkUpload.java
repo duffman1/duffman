@@ -14,7 +14,7 @@ public class PopulateEXIFBulkUpload extends ParentTest{
      * TEST CASE - TC3192
      * Steps - https://rally1.rallydev.com/#/14663927728d/detail/testcase/19126670410
      *************************************************************************************/
-    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full" })
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "certify"})
     public void PopulateEXIFBulkUpload_TC3192() throws Exception{
          
         	Reporter.log("STEP 1");

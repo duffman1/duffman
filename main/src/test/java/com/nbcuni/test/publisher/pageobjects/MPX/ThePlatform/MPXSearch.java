@@ -44,6 +44,7 @@ public class MPXSearch {
     	sikuli.click(getImagePath() + "Search/SearchPlayers_Txb.png");
     	mpxAssets.ClearInput();
     	sikuli.type(txt);
+    	Thread.sleep(1000);
     }
     
     public void ClickSearchByTitleLnk() throws Exception {

@@ -44,7 +44,7 @@ public class PreviewContentItemsIntheFuturefromContentandWorkbenchViews extends 
      * Step 20 - Verify that EnablePreview Button displayed
      * @throws Throwable No Return values are needed
      *************************************************************************************/
-	@Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"})
+	@Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "certify"})
 	public void PreviewContentItemsIntheFuturefromContentandWorkbenchViews_Test() throws Exception{
 		
 		//Step 1

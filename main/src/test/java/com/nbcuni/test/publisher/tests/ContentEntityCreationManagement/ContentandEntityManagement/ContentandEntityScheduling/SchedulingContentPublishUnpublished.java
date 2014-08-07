@@ -28,7 +28,7 @@ public class SchedulingContentPublishUnpublished extends ParentTest {
 	* TEST CASE - TC2159
     * Steps - https://rally1.rallydev.com/#/14663927728ud/detail/testcase/18309480903
 	*************************************************************************************/
-    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"})
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "certify"})
         public void SchedulingContentPublishUnpublished_TC2159() throws Exception{
 
         Reporter.log("STEP 1");

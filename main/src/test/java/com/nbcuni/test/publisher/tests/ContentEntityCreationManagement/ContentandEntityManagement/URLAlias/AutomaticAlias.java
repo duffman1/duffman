@@ -16,7 +16,7 @@ public class AutomaticAlias extends ParentTest {
      * TEST CASE - TC3303
      * Steps - https://rally1.rallydev.com/#/14663927728ud/detail/testcase/19387125936
      *************************************************************************************/
-    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"})
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "certify"})
     public void AutomaticAlias_TC3303() throws Exception {
          
         	Reporter.log("STEP 1");

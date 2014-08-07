@@ -58,7 +58,7 @@ public class NotificationPlayerUnavailability extends ParentTest{
      * Step 28 - Navigate to Home --> Files --> mpxMedia page,Message "An MPXplayer that's in use (NAME_OF_PLAYER_IN_STEP_3) has been disabled and unpublished."
      * @throws Throwable No Return values are needed
      *************************************************************************************/
-    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "mpx"})
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "mpx", "certify"})
     public void NotificationPlayerUnavailability_Test() throws Exception {
 
     	//NOTE - Test steps re-ordered and truncated for automation optimization

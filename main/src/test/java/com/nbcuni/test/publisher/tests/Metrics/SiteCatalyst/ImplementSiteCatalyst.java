@@ -18,7 +18,7 @@ public class ImplementSiteCatalyst extends ParentTest {
      * TEST CASE - TC1061
      * Steps - https://rally1.rallydev.com/#/14663927728d/detail/testcase/17441703257
      *************************************************************************************/
-    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"})
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "certify"})
     public void ImplementSiteCatalyst_TC1061() throws Exception {
          
         	//Step 1

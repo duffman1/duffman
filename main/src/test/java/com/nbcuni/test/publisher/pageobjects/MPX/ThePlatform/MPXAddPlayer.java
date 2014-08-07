@@ -86,7 +86,7 @@ public class MPXAddPlayer {
     	
     	Reporter.log("Click the 'Add' button.");
     	mpxAssets.WaitForImgPresent(getImagePath() + "Common/Add_Btn.png");
-    	sikuli.click(getImagePath() + "Common/Add_Btn.png", 1);
+    	sikuli.doubleClick(getImagePath() + "Common/Add_Btn.png", 1);
     	mpxAssets.WaitForImgPresent(getImagePath() + "Players/NewPlayer_Lbl.png");
     }
     

@@ -10,7 +10,7 @@ public class EditorPermissionCustomQueuesOperationsMenu extends ParentTest {
      * TEST CASE - TC1379
      * Steps - https://rally1.rallydev.com/#/14663927728d/detail/testcase/17745652850 
      *************************************************************************************/
-    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"})
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "certify"})
     public void EditorPermissionCustomQueuesOperationsMenu_TC1379() throws Exception {
     	
     	/* COMMENTING OUT THIS TEST - WAITING FOR INFO FROM SRUTHI

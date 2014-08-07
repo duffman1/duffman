@@ -47,7 +47,7 @@ public class ThumbnailsAreNotUpdated extends ParentTest{
      * Step 21 - Go to Content table and look for the Movie created ,A thumbnail image is displayed for the movie.  
      * @throws Throwable No Return values are needed
      *************************************************************************************/
-    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "mpx"})
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "mpx", "certify"})
     public void ThumbnailsAreNotUpdated_Test() throws Exception {
 
     	//Step 1 and 2

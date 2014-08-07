@@ -30,7 +30,7 @@ public class A1_TestSetup extends ParentTest {
     /*************************************************************************************
      * Test executes some common setup logic prior to full suite execution
      *************************************************************************************/
-    @Test(groups = {"full", "smoke", "mpx"})
+    @Test(groups = {"full", "smoke", "mpx", "certify"})
     public void TestSetup_Test() throws Exception {
     	
     	Boolean allIterationsFailed = false;

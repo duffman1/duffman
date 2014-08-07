@@ -21,7 +21,7 @@ public class EditorPermissionsContentAndContentRevisionsView extends ParentTest{
      * TEST CASE - TC1393
      * Steps - https://rally1.rallydev.com/#/14663927728ud/detail/testcase/17766094466
      *************************************************************************************/
-    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "smoke"})
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "smoke", "certify"})
     public void EditorPermissionsContentAndContentRevisionsView_TC1393() throws Exception {
     	
     	//Step 1

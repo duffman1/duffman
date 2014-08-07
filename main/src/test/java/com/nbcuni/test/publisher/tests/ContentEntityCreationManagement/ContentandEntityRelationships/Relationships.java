@@ -15,7 +15,7 @@ public class Relationships extends ParentTest{
      * TEST CASE - TC1390
      * Steps - https://rally1.rallydev.com/#/14663927728ud/detail/testcase/17762511569
      *************************************************************************************/
-    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"})
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "certify"})
     public void Relationships_TC1390() throws Exception{
     	
     	Reporter.log("STEP 1");
