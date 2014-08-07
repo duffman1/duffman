@@ -118,61 +118,64 @@ public class CreateConfigureDynamicQueue extends ParentTest{
         		"Revision comparison", "Tokens", "User Ref Preview", "Administrative Refrence Preview", 
         		"Promoted Content"));
         
-        Reporter.log("STEP 16");
-        ManageDisplay manageDisplay = new ManageDisplay(webDriver);
-        manageDisplay.SelectEntityListFormat("Full content");
-        contentParent.WaitForThrobberNotPresent();
-        manageDisplay.ClickSaveBtn();
-        contentParent.VerifyMessageStatus("Your settings have been saved.");
-        overlay.ClickCloseOverlayLnk();
-        applib.switchToNewWindow(parentWindow);
-        applib.refreshPage();
-        contentParent.VerifyPageContentPresent(Arrays.asList(characterProfileTitle, postTitle, "Character: First Name"));
-        
-        Reporter.log("STEP 17");
-        applib.switchToParentWindow(parentWindow);
-        taxonomy.NavigateSite("Structure>>Dynamic Queue types");
-        overlay.SwitchToActiveFrame();
-        dynamicQueueTypes.ClickManageDisplayLnk(dynamicQueueTypeName);
-        overlay.SwitchToActiveFrame();
-        manageDisplay.SelectEntityListFormat("Teaser");
-        contentParent.WaitForThrobberNotPresent();
-        manageDisplay.ClickSaveBtn();
-        contentParent.VerifyMessageStatus("Your settings have been saved.");
-        overlay.ClickCloseOverlayLnk();
-        applib.switchToNewWindow(parentWindow);
-        applib.refreshPage();
-        contentParent.VerifyPageContentPresent(Arrays.asList(characterProfileTitle, postTitle));
-        contentParent.VerifyPageContentPresent(Arrays.asList("Character: First Name", "Cover Media", "Cover Photo"));
-        
-        Reporter.log("STEP 18"); //TODO
-        
-        Reporter.log("STEP 19");
-        applib.switchToParentWindow(parentWindow);
-        taxonomy.NavigateSite("Structure>>Display suite>>View modes>>Add a view mode");
-        overlay.SwitchToActiveFrame();
-        String viewModeLabel = random.GetCharacterString(15);
-        AddViewMode addViewMode = new AddViewMode(webDriver);
-        addViewMode.EnterLabel(viewModeLabel);
-        addViewMode.CheckEntityCbx("Node");
-        addViewMode.ClickSaveBtn();
-        contentParent.VerifyMessageStatus("The view mode " + viewModeLabel + " has been saved");
-        overlay.ClickCloseOverlayLnk();
-        
-        Reporter.log("STEP 20");
-        taxonomy.NavigateSite("Structure>>Dynamic Queue types");
-        overlay.SwitchToActiveFrame();
-        dynamicQueueTypes.ClickManageDisplayLnk(dynamicQueueTypeName);
-        overlay.SwitchToActiveFrame();
-        
-        Reporter.log("STEP 21");
-        manageDisplay.SelectEntityListFormat(viewModeLabel);
-        contentParent.WaitForThrobberNotPresent();
-        manageDisplay.ClickSaveBtn();
-        contentParent.VerifyMessageStatus("Your settings have been saved.");
-        overlay.ClickCloseOverlayLnk();
-        applib.switchToNewWindow(parentWindow);
-        contentParent.VerifyPageContentPresent(Arrays.asList(characterProfileTitle, postTitle, "Character: First Name"));
+        if (config.getConfigValue("AppURL").contains("install")) {
+        	Reporter.log("STEP 16");
+            ManageDisplay manageDisplay = new ManageDisplay(webDriver);
+            manageDisplay.SelectEntityListFormat("Full content");
+            contentParent.WaitForThrobberNotPresent();
+            manageDisplay.ClickSaveBtn();
+            contentParent.VerifyMessageStatus("Your settings have been saved.");
+            overlay.ClickCloseOverlayLnk();
+            applib.switchToNewWindow(parentWindow);
+            applib.refreshPage();
+            contentParent.VerifyPageContentPresent(Arrays.asList(characterProfileTitle, postTitle, "Character: First Name"));
+            
+            Reporter.log("STEP 17");
+            applib.switchToParentWindow(parentWindow);
+            taxonomy.NavigateSite("Structure>>Dynamic Queue types");
+            overlay.SwitchToActiveFrame();
+            dynamicQueueTypes.ClickManageDisplayLnk(dynamicQueueTypeName);
+            overlay.SwitchToActiveFrame();
+            manageDisplay.SelectEntityListFormat("Teaser");
+            contentParent.WaitForThrobberNotPresent();
+            manageDisplay.ClickSaveBtn();
+            contentParent.VerifyMessageStatus("Your settings have been saved.");
+            overlay.ClickCloseOverlayLnk();
+            applib.switchToNewWindow(parentWindow);
+            applib.refreshPage();
+            contentParent.VerifyPageContentPresent(Arrays.asList(characterProfileTitle, postTitle));
+            contentParent.VerifyPageContentPresent(Arrays.asList("Character: First Name", "Cover Media", "Cover Photo"));
+            
+            Reporter.log("STEP 18"); //TODO
+            
+            Reporter.log("STEP 19");
+            applib.switchToParentWindow(parentWindow);
+            taxonomy.NavigateSite("Structure>>Display suite>>View modes>>Add a view mode");
+            overlay.SwitchToActiveFrame();
+            String viewModeLabel = random.GetCharacterString(15);
+            AddViewMode addViewMode = new AddViewMode(webDriver);
+            addViewMode.EnterLabel(viewModeLabel);
+            addViewMode.CheckEntityCbx("Node");
+            addViewMode.ClickSaveBtn();
+            contentParent.VerifyMessageStatus("The view mode " + viewModeLabel + " has been saved");
+            overlay.ClickCloseOverlayLnk();
+            
+            Reporter.log("STEP 20");
+            taxonomy.NavigateSite("Structure>>Dynamic Queue types");
+            overlay.SwitchToActiveFrame();
+            dynamicQueueTypes.ClickManageDisplayLnk(dynamicQueueTypeName);
+            overlay.SwitchToActiveFrame();
+            
+            Reporter.log("STEP 21");
+            manageDisplay.SelectEntityListFormat(viewModeLabel);
+            contentParent.WaitForThrobberNotPresent();
+            manageDisplay.ClickSaveBtn();
+            contentParent.VerifyMessageStatus("Your settings have been saved.");
+            overlay.ClickCloseOverlayLnk();
+            applib.switchToNewWindow(parentWindow);
+            contentParent.VerifyPageContentPresent(Arrays.asList(characterProfileTitle, postTitle, "Character: First Name"));
+            
+        }
         
     }
     
