@@ -86,19 +86,21 @@ public class A1_TestSetup extends ParentTest {
                 modules.EnableModule("Logo Manager");
                 
                 //uninstall mps module to clean out any previously created mps blocks
-                try {
+                //try {
                 	modules.EnterFilterName("MPS");
                 	modules.DisableModule("MPS");
                 	overlay.ClickOverlayTab("Uninstall");
                 	overlay.SwitchToActiveFrame();
-                	modules.UninstallModule("MPS");
-                	overlay.SwitchToActiveFrame();
+                	if (modules.IsModuleInstalled("MPS").equals(true)) {
+                		modules.UninstallModule("MPS");
+                		overlay.SwitchToActiveFrame();
+                	}
                 	overlay.ClickCloseOverlayLnk();
-                }
+                /*}
                 catch (Exception | AssertionError e) {
                 	overlay.SwitchToActiveFrame();
                 	overlay.ClickCloseOverlayLnk();
-                }
+                }*/
                 
                 //schedule a post content item revision to be consumed by the SchedulingContentPublishUnpublished test later in the suite
                 taxonomy.NavigateSite("Content>>Add content>>Post");
@@ -259,6 +261,7 @@ public class A1_TestSetup extends ParentTest {
                 break;
         	}
         	catch (Exception | AssertionError e) {
+        		e.printStackTrace();
         		webDriver.manage().deleteAllCookies();
         	}
         }

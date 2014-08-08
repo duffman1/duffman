@@ -43,15 +43,15 @@ public class DynamicQueueTypes {
     }
     
     private WebElement Edit_Lnk(String queueType) {
-    	return webDriver.findElement(By.xpath("//a[contains(text(), '" + queueType + "')]/../..//a[text()='edit']"));
+    	return webDriver.findElement(By.xpath("//td[contains(text(), '" + queueType + "')]/..//a[text()='edit']"));
     }
     
     private WebElement Delete_Lnk(String queueType) {
-    	return webDriver.findElement(By.xpath("//a[contains(text(), '" + queueType + "')]/../..//a[text()='delete']"));
+    	return webDriver.findElement(By.xpath("//td[contains(text(), '" + queueType + "')]/..//a[text()='delete']"));
     }
     
     private WebElement ManageDisplay_Lnk(String queueType) {
-    	return webDriver.findElement(By.xpath("//a[contains(text(), '" + queueType + "')]/../..//a[text()='manage display']"));
+    	return webDriver.findElement(By.xpath("//td[contains(text(), '" + queueType + "')]/..//a[text()='manage display']"));
     }
     
     

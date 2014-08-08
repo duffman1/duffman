@@ -29,7 +29,7 @@ public class DynamicQueues {
     
     //PAGE OBJECT IDENTIFIERS
     private WebElement Edit_Lnk(String dynamicQueueName) {
-    	return webDriver.findElement(By.xpath("//a[contains(text(), '" + dynamicQueueName + "')]/../..//a[text()='edit']"));
+    	return webDriver.findElement(By.xpath("//a[contains(text(), '" + dynamicQueueName + "')]/../..//a[text()='Edit']"));
     }
     
     
@@ -43,7 +43,7 @@ public class DynamicQueues {
     public String GetDynamicQueueNodeNumber(String dynamicQueueName) throws Exception {
         
     	return Edit_Lnk(dynamicQueueName).getAttribute("href").replace(applib.getApplicationURL() + 
-    			"/admin/content/dynamic-queue/manage/", "");
+    			"/admin/content/dynamic-queue/manage/", "").replace("?destination=admin/content/dynamic-queue", "");
 
     }
     

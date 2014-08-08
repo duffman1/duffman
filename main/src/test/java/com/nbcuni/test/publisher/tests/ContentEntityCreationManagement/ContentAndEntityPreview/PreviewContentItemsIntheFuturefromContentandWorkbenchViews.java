@@ -127,7 +127,7 @@ public class PreviewContentItemsIntheFuturefromContentandWorkbenchViews extends 
     	//Step 10
     	sitePreview.VerifySelectAConditionValue("Site as of ...");
     	sitePreview.VerifyDateValue(sDate);
-    	sitePreview.VerifyTimeValue("12:40 pm");
+    	sitePreview.VerifyTimeValue("12:40");
     	webDriver.navigate().refresh();  
     	contentParent.VerifyPageContentPresent(Arrays.asList(updatedShortDescription, updatedBodyTxt));
     	
@@ -140,7 +140,7 @@ public class PreviewContentItemsIntheFuturefromContentandWorkbenchViews extends 
     	sitePreview.VerifyDisablePreviewBtnVisible();
     	sitePreview.VerifySelectAConditionValue("Site as of ...");
     	sitePreview.VerifyDateValue(sDate);
-    	sitePreview.VerifyTimeValue("12:40 pm");
+    	sitePreview.VerifyTimeValue("12:40");
     	
     	//Step 13
     	workBench.ClickWorkBenchTab("Schedule");
@@ -162,11 +162,11 @@ public class PreviewContentItemsIntheFuturefromContentandWorkbenchViews extends 
     	//Step 14
     	sitePreview.VerifySelectAConditionValue("Site as of ...");
     	sitePreview.VerifyDateValue(sDate);
-    	sitePreview.VerifyTimeValue("12:40 pm");
+    	sitePreview.VerifyTimeValue("12:40");
     	
     	//Step 15
     	sitePreview.EnterDate(ssDate);
-        sitePreview.EnterTime("12:40 pm");
+        sitePreview.EnterTime("12:40");
         sitePreview.ClickUpdatePreviewBtn();
         
         //Step 16

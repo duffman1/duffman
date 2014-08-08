@@ -2,7 +2,9 @@ package com.nbcuni.test.publisher.pageobjects;
 
 import java.util.Arrays;
 import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
@@ -12,6 +14,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
+
 import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.Taxonomy.Taxonomy;
@@ -193,6 +196,20 @@ public class Modules {
     	return moduleAlreadyDisabled;
     	
     	
+    }
+    
+    public Boolean IsModuleInstalled(String moduleName) throws Exception {
+    	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+    	Boolean isModuleInstalled = null;
+    	try {
+    		UninstallModuleName_Cbx(moduleName).getLocation();
+    		isModuleInstalled = true;
+    	}
+    	catch (NoSuchElementException e) {
+    		isModuleInstalled = false;
+    	}
+    	webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
+    	return isModuleInstalled;
     }
     
     public void UninstallModule(String moduleName) throws Exception {
