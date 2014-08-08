@@ -133,9 +133,6 @@ public class ErrorChecking {
     		//module error
     		allowedErrors.add("There was a problem checking available updates");
     		
-    		//DE8455
-    		allowedErrors.add("Notice: Undefined offset: 4 in _menu_translate()");
-    		
     		//FIRST - check if error container is present
     		boolean errorContainerPresent = false;
     		try {
@@ -184,8 +181,7 @@ public class ErrorChecking {
     								 					|| errorText.contains(allowedErrors.get(15))
     								 					|| errorText.contains(allowedErrors.get(16))
     								 					|| errorText.contains(allowedErrors.get(17))
-    								 					|| errorText.contains(allowedErrors.get(18))
-    								 					|| errorText.contains(allowedErrors.get(19))) {
+    								 					|| errorText.contains(allowedErrors.get(18))) {
     					//ignore error
     				}
     				else {
@@ -222,8 +218,7 @@ public class ErrorChecking {
     	    								 					|| errorText.contains(allowedErrors.get(15))
     	    								 					|| errorText.contains(allowedErrors.get(16))
     	    								 					|| errorText.contains(allowedErrors.get(17))
-    	    								 					|| errorText.contains(allowedErrors.get(18))
-    	    								 					|| errorText.contains(allowedErrors.get(19))) {
+    	    								 					|| errorText.contains(allowedErrors.get(18))) {
     						//ignore error
     					}
     					else {
