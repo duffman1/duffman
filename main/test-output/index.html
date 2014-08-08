@@ -58,7 +58,7 @@
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="group-Default_suite">
-                    <span>2 groups</span>
+                    <span>4 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -101,7 +101,7 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.nbcuni.test.publisher.tests.Video.Thumbnails.ThumbnailsAreNotUpdated" hash-for-method="ThumbnailsAreNotUpdated_Test">ThumbnailsAreNotUpdated_Test</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.nbcuni.test.publisher.tests.Setup.A1_TestSetup" hash-for-method="TestSetup_Test">TestSetup_Test</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -119,14 +119,14 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.nbcuni.test.publisher.tests.Video.Thumbnails.ThumbnailsAreNotUpdated</span>
+              <span class="class-name">com.nbcuni.test.publisher.tests.Setup.A1_TestSetup</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="ThumbnailsAreNotUpdated_Test">
-                  </a> <!-- ThumbnailsAreNotUpdated_Test -->
-                  <span class="method-name">ThumbnailsAreNotUpdated_Test</span>
+                  <a name="TestSetup_Test">
+                  </a> <!-- TestSetup_Test -->
+                  <span class="method-name">TestSetup_Test</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -134,7 +134,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/private/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/testng-eclipse--327184469/testng-customsuite.xml</span>
+            <span class="header-content">/private/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/testng-eclipse-1775058420/testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -143,7 +143,7 @@
 &lt;suite name=&quot;Default suite&quot;&gt;
   &lt;test verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.nbcuni.test.publisher.tests.Video.Thumbnails.ThumbnailsAreNotUpdated&quot;/&gt;
+      &lt;class name=&quot;com.nbcuni.test.publisher.tests.Setup.A1_TestSetup&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -168,10 +168,18 @@
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="test-group">
+              <span class="test-group-name">certify</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">TestSetup_Test</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
               <span class="test-group-name">full</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">ThumbnailsAreNotUpdated_Test</span>
+                <span class="method-in-group-name">TestSetup_Test</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -179,7 +187,15 @@
               <span class="test-group-name">mpx</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">ThumbnailsAreNotUpdated_Test</span>
+                <span class="method-in-group-name">TestSetup_Test</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">smoke</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">TestSetup_Test</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -201,14 +217,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'ThumbnailsAreNotUpdated_Test')
-data.setCell(0, 2, 'com.nbcuni.test.publisher.tests.Video.Thumbnails.ThumbnailsAreNotUpdated')
-data.setCell(0, 3, 117473);
+data.setCell(0, 1, 'TestSetup_Test')
+data.setCell(0, 2, 'com.nbcuni.test.publisher.tests.Setup.A1_TestSetup')
+data.setCell(0, 3, 211920);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 3 minutes</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -220,68 +236,158 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="reporter-method-div">
-              <span class="reporter-method-name">ThumbnailsAreNotUpdated_Test</span>
+              <span class="reporter-method-name">TestSetup_Test</span>
               <div class="reporter-method-output-div">
                 <span class="reporter-method-output">Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.</span>
                 <span class="reporter-method-output">Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.</span>
                 <span class="reporter-method-output">Enter 'pa55word' in the 'Password' text box.</span>
                 <span class="reporter-method-output">Click the 'Login' button.</span>
+                <span class="reporter-method-output">Open url 'http://update.qa5.nbcupublisher7.publisher7.com/admin/modules'.</span>
+                <span class="reporter-method-output">Open url 'http://update.qa5.nbcupublisher7.publisher7.com/#overlay=admin/modules'.</span>
+                <span class="reporter-method-output">Switch to the active frame titled 'Modules dialog'.</span>
+                <span class="reporter-method-output">Enter 'Sticky Edit Actions' in the 'Filter Name' text box.</span>
+                <span class="reporter-method-output">Wait for module filter titled 'Sticky Edit Actions' to be visible in module list.</span>
+                <span class="reporter-method-output">Enter 'Devel' in the 'Filter Name' text box.</span>
+                <span class="reporter-method-output">Wait for module filter titled 'Devel' to be visible in module list.</span>
+                <span class="reporter-method-output">Verify the 'Devel' check box is checked.</span>
+                <span class="reporter-method-output">Enter 'Acquia Purge' in the 'Filter Name' text box.</span>
+                <span class="reporter-method-output">Wait for module filter titled 'Acquia Purge' to be visible in module list.</span>
+                <span class="reporter-method-output">Enter 'ImageField Focus' in the 'Filter Name' text box.</span>
+                <span class="reporter-method-output">Wait for module filter titled 'ImageField Focus' to be visible in module list.</span>
+                <span class="reporter-method-output">Enter 'Database logging' in the 'Filter Name' text box.</span>
+                <span class="reporter-method-output">Wait for module filter titled 'Database logging' to be visible in module list.</span>
+                <span class="reporter-method-output">Enter 'Pub Post' in the 'Filter Name' text box.</span>
+                <span class="reporter-method-output">Wait for module filter titled 'Pub Post' to be visible in module list.</span>
+                <span class="reporter-method-output">Verify the 'Pub Post' check box is checked.</span>
+                <span class="reporter-method-output">Enter 'Logo Manager' in the 'Filter Name' text box.</span>
+                <span class="reporter-method-output">Wait for module filter titled 'Logo Manager' to be visible in module list.</span>
+                <span class="reporter-method-output">Verify the 'Logo Manager' check box is checked.</span>
+                <span class="reporter-method-output">Enter 'MPS' in the 'Filter Name' text box.</span>
+                <span class="reporter-method-output">Wait for module filter titled 'MPS' to be visible in module list.</span>
+                <span class="reporter-method-output">Click the 'Uninstall' overlay tab.</span>
+                <span class="reporter-method-output">Scroll by '-500'.</span>
+                <span class="reporter-method-output">Switch to the active frame titled 'Modules dialog'.</span>
+                <span class="reporter-method-output">Click the 'MPS' uninstall checkbox.</span>
+                <span class="reporter-method-output">Switch to the active frame titled 'Modules dialog'.</span>
+                <span class="reporter-method-output">Click the 'Close Overlay X'.</span>
+                <span class="reporter-method-output">Scroll by '-500'.</span>
+                <span class="reporter-method-output">Mouse over the 'Content' menu link.</span>
+                <span class="reporter-method-output">Mouse over the 'Add content' menu link.</span>
+                <span class="reporter-method-output">Click the 'Post' menu link.</span>
+                <span class="reporter-method-output">Switch to the active frame titled 'Create Post dialog'.</span>
+                <span class="reporter-method-output">Verify the 'Title' is present as a required field.</span>
+                <span class="reporter-method-output">Verify the 'Body' is present as a required field.</span>
+                <span class="reporter-method-output">Scroll the 'Publishing Options' link into view.</span>
+                <span class="reporter-method-output">Click the 'Publishing Options' link.</span>
+                <span class="reporter-method-output">Verify the 'Moderation State' is present as a required field.</span>
+                <span class="reporter-method-output">Scroll to and click the 'Basic Information' tab.</span>
+                <span class="reporter-method-output">Enter 'futurePost08/08/2014d06852c0c2fa4d5' in the 'Title' text box.</span>
+                <span class="reporter-method-output">Switch to the Synopsis frame.</span>
+                <span class="reporter-method-output">Enter a randomized text string into the 'Body' text area.</span>
+                <span class="reporter-method-output">Switch to the active frame titled 'Create Post dialog'.</span>
+                <span class="reporter-method-output">Click the 'Cover' select button.</span>
+                <span class="reporter-method-output">Switch to the select file frame.</span>
+                <span class="reporter-method-output">Enter the file path for file upload.</span>
+                <span class="reporter-method-output">Click the 'Upload' button.</span>
+                <span class="reporter-method-output">Wait for the file link to be visible after upload.</span>
+                <span class="reporter-method-output">Click the 'Next' button.</span>
+                <span class="reporter-method-output">Click the 'Public Local Files' radio button.</span>
+                <span class="reporter-method-output">Click the 'Next' button.</span>
+                <span class="reporter-method-output">Verify the file image 'HanSolo' is present.</span>
+                <span class="reporter-method-output">Verify the img is loaded and visible.</span>
+                <span class="reporter-method-output">Click the 'Save' button.</span>
+                <span class="reporter-method-output">Switch to the active frame titled 'Create Post dialog'.</span>
+                <span class="reporter-method-output">Scroll the 'Publishing Options' link into view.</span>
+                <span class="reporter-method-output">Click the 'Publishing Options' link.</span>
+                <span class="reporter-method-output">Select 'Draft' from the 'Moderation State' drop down list.</span>
+                <span class="reporter-method-output">Click the 'Save' button.</span>
+                <span class="reporter-method-output">Verify success message of 'Post futurePost08/08/2014d06852c0c2fa4d5 has been created.' is present.</span>
+                <span class="reporter-method-output">Click the 'Schedule' link in the work bench.</span>
+                <span class="reporter-method-output">Switch to the active frame titled 'futurePost08/08/2014d06852c0c2fa4d5 dialog'.</span>
+                <span class="reporter-method-output">Click the 'Add Scheduled Revision' link.</span>
+                <span class="reporter-method-output">Switch to the active frame titled 'futurePost08/08/2014d06852c0c2fa4d5 dialog'.</span>
+                <span class="reporter-method-output">Select revision titled 'futurePost08/08/2014d06852c0c2fa4d5'.</span>
+                <span class="reporter-method-output">Verify that the 'Operation' option count equals '5'.</span>
+                <span class="reporter-method-output">Select 'Moderate to Published' from the 'Select operation' drop down list.</span>
+                <span class="reporter-method-output">Enter '08/08/2014' in the 'Date' text box.</span>
+                <span class="reporter-method-output">Enter '12:00 PM' in the 'Time' text box.</span>
+                <span class="reporter-method-output">Click the 'Schedule' button.</span>
+                <span class="reporter-method-output">Switch to the active frame titled 'futurePost08/08/2014d06852c0c2fa4d5 dialog'.</span>
+                <span class="reporter-method-output">Verify success message of 'The scheduled revision operation has been saved' is present.</span>
+                <span class="reporter-method-output">Click the 'Close Overlay X'.</span>
+                <span class="reporter-method-output">Scroll by '-500'.</span>
+                <span class="reporter-method-output">Open url 'http://update.qa5.nbcupublisher7.publisher7.com/#overlay=admin/content/logos'.</span>
+                <span class="reporter-method-output">Switch to the active frame titled 'Manage Logo dialog'.</span>
+                <span class="reporter-method-output">Click the 'Close Overlay X'.</span>
+                <span class="reporter-method-output">Scroll by '-500'.</span>
+                <span class="reporter-method-output">Mouse over the 'Content' menu link.</span>
+                <span class="reporter-method-output">Mouse over the 'Logos' menu link.</span>
+                <span class="reporter-method-output">Click the 'Add Logo' menu link.</span>
+                <span class="reporter-method-output">Switch to the active frame titled 'Add Logo dialog'.</span>
+                <span class="reporter-method-output">Enter 'cb80c2315ac9400' in the 'Title' text box.</span>
+                <span class="reporter-method-output">Enter the file path for file upload.</span>
+                <span class="reporter-method-output">Click the 'Upload' button.</span>
+                <span class="reporter-method-output">Wait for the file link to be visible after upload.</span>
+                <span class="reporter-method-output">Verify the file image 'nbclogosmall' is present.</span>
+                <span class="reporter-method-output">Verify the the img is loaded and visible.</span>
+                <span class="reporter-method-output">Enter '2014-08-08' in the 'Start Date' text box.</span>
+                <span class="reporter-method-output">Enter '12:00:35 PM' in the 'Start Time' text box.</span>
+                <span class="reporter-method-output">Enter '2014-08-08' in the 'End Date' text box.</span>
+                <span class="reporter-method-output">Enter '01:55:35 PM' in the 'End Time' text box.</span>
+                <span class="reporter-method-output">Click the 'Save' button.</span>
+                <span class="reporter-method-output">Switch to the active frame titled 'Manage Logo dialog'.</span>
+                <span class="reporter-method-output">Verify the text 'cb80c2315ac9400' is present on the page.</span>
+                <span class="reporter-method-output">Verify the text 'Fri, 08/08/2014 - 12:00' is present on the page.</span>
+                <span class="reporter-method-output">Verify the text 'Fri, 08/08/2014 - 13:55' is present on the page.</span>
+                <span class="reporter-method-output">Assert the file image 'nbclogosmall' is present.</span>
+                <span class="reporter-method-output">Assert the the img is loaded and visible.</span>
+                <span class="reporter-method-output">Click the 'Close Overlay X'.</span>
+                <span class="reporter-method-output">Scroll by '-500'.</span>
                 <span class="reporter-method-output">Mouse over the 'Configuration' menu link.</span>
                 <span class="reporter-method-output">Mouse over the 'Media' menu link.</span>
                 <span class="reporter-method-output">Click the 'Media: thePlatform mpx settings' menu link.</span>
                 <span class="reporter-method-output">Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.</span>
-                <span class="reporter-method-output">Get all the selected import account options and store to a list.</span>
+                <span class="reporter-method-output">Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.</span>
+                <span class="reporter-method-output">Enter mpx username in the 'Username for New Account' text box.</span>
+                <span class="reporter-method-output">Enter mpx password in the 'Password for New Account' text box.</span>
+                <span class="reporter-method-output">Click the 'Connect to MPX' button.</span>
+                <span class="reporter-method-output">Select 'DB TV' from the first 'Select Import Account for...' drop down list.</span>
+                <span class="reporter-method-output">click the 'Set Import Account' button.</span>
+                <span class="reporter-method-output">Uncheck the 'Sync mpxMedia on Cron' check box.</span>
+                <span class="reporter-method-output">Click the 'Save configurations' button.</span>
                 <span class="reporter-method-output">Click the 'Close Overlay X'.</span>
                 <span class="reporter-method-output">Scroll by '-500'.</span>
-                <span class="reporter-method-output">Mouse over the 'Structure' menu link.</span>
-                <span class="reporter-method-output">Click the 'File types' menu link.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'File types dialog'.</span>
-                <span class="reporter-method-output">Click the 'DB TV manage file display' link.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'MPX Video for Account &quot;DB TV&quot; (2312945284) dialog'.</span>
-                <span class="reporter-method-output">Click the 'Pub MPX Image' link.</span>
-                <span class="reporter-method-output">Select the 'Thumbnail (100x100)' option from the 'Pub MPX Image Style' drop down list.</span>
-                <span class="reporter-method-output">Click the 'Save configuration' button.</span>
-                <span class="reporter-method-output">Verify success message of 'Your settings have been saved.' is present.</span>
-                <span class="reporter-method-output">Click the 'Close Overlay X'.</span>
-                <span class="reporter-method-output">Scroll by '-500'.</span>
-                <span class="reporter-method-output">Open the mpx platform.</span>
-                <span class="reporter-method-output">Click the 'Upload' button.</span>
-                <span class="reporter-method-output">Click the 'Choose Files' button.</span>
-                <span class="reporter-method-output">Click the 'Movies' button in the OS Upload dialog.</span>
-                <span class="reporter-method-output">Click the Test Movie in th OS Upload dialog.</span>
-                <span class="reporter-method-output">Click the 'Open' button.</span>
-                <span class="reporter-method-output">Click the 'Upload' button in the Upload dialog.</span>
-                <span class="reporter-method-output">Enter 'AutomationWThumb222266178e' in the 'Title' text box.</span>
-                <span class="reporter-method-output">Click the 'Save' button.</span>
-                <span class="reporter-method-output">Click the 'Files' link.</span>
-                <span class="reporter-method-output">Click the 'Upload' button.</span>
-                <span class="reporter-method-output">Click the 'Choose Files' button.</span>
-                <span class="reporter-method-output">Click the 'All Files' icon.</span>
-                <span class="reporter-method-output">Click the local 'Pictures' icon.</span>
-                <span class="reporter-method-output">Click the nbc logo image link.</span>
-                <span class="reporter-method-output">Click the 'Open' button.</span>
-                <span class="reporter-method-output">Click the 'Upload' button in the Upload dialog.</span>
-                <span class="reporter-method-output">Click the 'All Media' link.</span>
-                <span class="reporter-method-output">Click the 'Save' button.</span>
-                <span class="reporter-method-output">Click the 'Publish' button.</span>
-                <span class="reporter-method-output">Click the 'Publish to Pub 7 Primary' check box.</span>
-                <span class="reporter-method-output">Click the 'Publish' button from the upload dialog.</span>
-                <span class="reporter-method-output">Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.</span>
                 <span class="reporter-method-output">Mouse over the 'Content' menu link.</span>
                 <span class="reporter-method-output">Mouse over the 'Files' menu link.</span>
                 <span class="reporter-method-output">Click the 'mpxMedia' menu link.</span>
                 <span class="reporter-method-output">Switch to the active frame titled 'Content dialog'.</span>
-                <span class="reporter-method-output">Enter title AutomationWThumb222266178e.</span>
-                <span class="reporter-method-output">Click the 'Apply' button.</span>
-                <span class="reporter-method-output">Get the text of the first search result set item.</span>
-                <span class="reporter-method-output">Verify the search thumbnail named 'nbclogosmall' is present for search result 'AutomationWThumb222266178e'.</span>
-                <span class="reporter-method-output">Assert the the img is loaded and visible.</span>
-                <span class="reporter-method-output">Mouse over the 'Structure' menu link.</span>
-                <span class="reporter-method-output">Click the 'File types' menu link.</span>
-                <span class="reporter-method-output">Click the 'DB TV manage file display' link.</span>
-                <span class="reporter-method-output">Un-Check the 'Pub MPX Image' checkbox</span>
-                <span class="reporter-method-output">Click the 'Save configuration' button.</span>
-                <span class="reporter-method-output">Verify success message of 'Your settings have been saved.' is present.</span>
+                <span class="reporter-method-output">Select 'AutomationPlayer1' from the first 'Import Player' drop down list.</span>
+                <span class="reporter-method-output">Click the 'Sync MPX Media Now' link.</span>
+                <span class="reporter-method-output">Click the 'Close Overlay X'.</span>
+                <span class="reporter-method-output">Scroll by '-500'.</span>
+                <span class="reporter-method-output">Mouse over the 'Home' menu link.</span>
+                <span class="reporter-method-output">Click the 'Run cron' menu link.</span>
+                <span class="reporter-method-output">Switch to the active frame titled 'Status report dialog'.</span>
+                <span class="reporter-method-output">Click the 'Close Overlay X'.</span>
+                <span class="reporter-method-output">Scroll by '-500'.</span>
+                <span class="reporter-method-output">Mouse over the 'Configuration' menu link.</span>
+                <span class="reporter-method-output">Mouse over the 'Media' menu link.</span>
+                <span class="reporter-method-output">Click the 'Media: thePlatform mpx settings' menu link.</span>
+                <span class="reporter-method-output">Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.</span>
+                <span class="reporter-method-output">Click the 'Save configurations' button.</span>
+                <span class="reporter-method-output">Click the 'Close Overlay X'.</span>
+                <span class="reporter-method-output">Scroll by '-500'.</span>
+                <span class="reporter-method-output">Mouse over the 'Content' menu link.</span>
+                <span class="reporter-method-output">Mouse over the 'Files' menu link.</span>
+                <span class="reporter-method-output">Click the 'mpxMedia' menu link.</span>
+                <span class="reporter-method-output">Switch to the active frame titled 'Content dialog'.</span>
+                <span class="reporter-method-output">Click the 'Sync MPX Media' link.</span>
+                <span class="reporter-method-output">Select 'AutomationPlayer1' from the first 'Import Player' drop down list.</span>
+                <span class="reporter-method-output">Click the 'Sync MPX Media Now' link.</span>
+                <span class="reporter-method-output">Click the 'Close Overlay X'.</span>
+                <span class="reporter-method-output">Scroll by '-500'.</span>
+                <span class="reporter-method-output">Mouse over the 'Home' menu link.</span>
+                <span class="reporter-method-output">Click the '[[Driver: chrome on MAC (96dccd3b-766a-4182-b966-4a8813fd9bbb)] -> xpath: //span[@class='admin-menu-home-icon']/../..//a[text()='Flush all caches']]' menu link.</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -299,26 +405,26 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.nbcuni.test.publisher.tests.Video.Thumbnails.ThumbnailsAreNotUpdated</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.nbcuni.test.publisher.tests.Setup.A1_TestSetup</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">startGridAndHub</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
                 <span class="method-name">startSelenium</span>
-                <span class="method-start">977 ms</span>
+                <span class="method-start">1242 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">ThumbnailsAreNotUpdated_Test</span>
-                <span class="method-start">3336 ms</span>
+                <span class="method-name">TestSetup_Test</span>
+                <span class="method-start">3805 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">stopSelenium([TestResult name=ThumbnailsAreNotUpdated_Test status=SUCCESS method=ThumbnailsAreNotUpdated.Thumbnai...)</span>
-                <span class="method-start">120810 ms</span>
+                <span class="method-name">stopSelenium([TestResult name=TestSetup_Test status=SUCCESS method=A1_TestSetup.TestSetup_Test()[pri:0, instance:...)</span>
+                <span class="method-start">215726 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-suite after">
                 <span class="method-name">stopGridAndHub</span>
-                <span class="method-start">121400 ms</span>
+                <span class="method-start">216310 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
