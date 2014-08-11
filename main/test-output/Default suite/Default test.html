@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Aug 08 09:44:00 EDT 2014</td>
+<td>Started on:</td><td>Mon Aug 11 14:05:49 EDT 2014</td>
 </tr>
-<tr><td>Total time:</td><td>100 seconds (100863 ms)</td>
+<tr><td>Total time:</td><td>107 seconds (107105 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,17 +75,17 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.nbcuni.test.publisher.tests.Queues.DynamicQueues.RelatingTVShowsDynamicQueues.RelatingTVShowsDynamicQueues_TC4389()'><b>RelatingTVShowsDynamicQueues_TC4389</b><br>Test class: com.nbcuni.test.publisher.tests.Queues.DynamicQueues.RelatingTVShowsDynamicQueues<br/>
-<a href="#Output-1502428873" onClick='toggleBox("Output-1502428873", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue.CreateConfigureDynamicQueue_TC4197()'><b>CreateConfigureDynamicQueue_TC4197</b><br>Test class: com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue<br/>
+<a href="#Output-278229142" onClick='toggleBox("Output-278229142", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1502428873" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1502428873">
+<a href="#Output-278229142" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-278229142">
 STEP 1<br/>
 Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.<br/>
 Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
 Enter 'pa55word' in the 'Password' text box.<br/>
 Click the 'Login' button.<br/>
-SETUP<br/>
+STEP 2<br/>
 Click the 'Modules' menu link.<br/>
 Switch to frame titled 'Modules'.<br/>
 Enter 'Dynamic Queue' in the 'Filter Name' text box.<br/>
@@ -94,29 +94,41 @@ Verify the 'Dynamic Queue' check box is checked.<br/>
 Click the 'Close Overlay X'.<br/>
 Scroll by '-500'.<br/>
 Click the 'Home' menu link.<br/>
-STEP 2<br/>
+STEP 3<br/>
 Mouse over the 'Structure' menu link.<br/>
 Mouse over the 'Dynamic Queue types' menu link.<br/>
 Click the 'Add dynamic queue type' menu link.<br/>
 Switch to the active frame titled 'Add dynamic queue type dialog'.<br/>
-Enter '5188f01536b7410' in the 'Name' text box.<br/>
+STEP 4<br/>
+Enter '55a7b242106947a' in the 'Name' text box.<br/>
 Select 'Content' or 'Node' from the 'Entity type' drop down list.<br/>
 Click the 'Save' button.<br/>
 Switch to the active frame titled 'Dynamic Queue types dialog'.<br/>
-Verify the text '5188f01536b7410' is present on the page.<br/>
+Verify the text '55a7b242106947a' is present on the page.<br/>
 Click the 'Close Overlay X'.<br/>
 Scroll by '-500'.<br/>
-STEP 3<br/>
+STEP 5<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Dynamic Queues' menu link.<br/>
+Click the 'Add 55a7b242106947a' menu link.<br/>
+Switch to the active frame titled 'Add 55a7b242106947a dynamic queue dialog'.<br/>
+STEP 6<br/>
+Enter 'e69ae062e3554fa' in the 'Title' text box.<br/>
+<br/>
+<br/>
+Click the 'Newest' radio button under 'Sort by'.<br/>
+Click the 'Save Dynamic Queue' button.<br/>
+Switch to the active frame titled 'Dynamic Queues dialog'.<br/>
+Verify the text 'e69ae062e3554fa' is present on the page.<br/>
+Click the 'Close Overlay X'.<br/>
+Scroll by '-500'.<br/>
+STEP 7<br/>
 Mouse over the 'Content' menu link.<br/>
 Mouse over the 'Add content' menu link.<br/>
-Click the 'TV Show' menu link.<br/>
-Switch to the active frame titled 'Create TV Show dialog'.<br/>
-Scroll to and click the 'Basic Information' tab.<br/>
-Enter '89c49d5b56b7439' in the 'Title' text box.<br/>
-Switch to the Synopsis frame.<br/>
-Enter a randomized text string into the 'Body' text area.<br/>
-Switch to the active frame titled 'Create TV Show dialog'.<br/>
-Click the Logo 'Select' button.<br/>
+Click the 'Character Profile' menu link.<br/>
+Switch to the active frame titled 'Create Character Profile dialog'.<br/>
+Enter '1c9890982c24472' in the 'Character First Name' text box.<br/>
+Click the Cover Photo 'Select' button.<br/>
 Switch to the select file frame.<br/>
 Enter the file path for file upload.<br/>
 Click the 'Upload' button.<br/>
@@ -127,52 +139,22 @@ Click the 'Next' button.<br/>
 Verify the file image 'HanSolo' is present.<br/>
 Verify the img is loaded and visible.<br/>
 Click the 'Save' button.<br/>
-Switch to the active frame titled 'Create TV Show dialog'.<br/>
-Click the Cover Media 'Select' button.<br/>
-Switch to the select file frame.<br/>
-Enter the file path for file upload.<br/>
-Click the 'Upload' button.<br/>
-Wait for the file link to be visible after upload.<br/>
-Click the 'Next' button.<br/>
-Click the 'Public Local Files' radio button.<br/>
-Click the 'Next' button.<br/>
-Verify the file image 'HanSolo' is present.<br/>
-Verify the img is loaded and visible.<br/>
-Click the 'Save' button.<br/>
-Switch to the active frame titled 'Create TV Show dialog'.<br/>
-Click the Banner 'Select' button.<br/>
-Switch to the select file frame.<br/>
-Enter the file path for file upload.<br/>
-Click the 'Upload' button.<br/>
-Wait for the file link to be visible after upload.<br/>
-Click the 'Next' button.<br/>
-Click the 'Public Local Files' radio button.<br/>
-Click the 'Next' button.<br/>
-Verify the file image 'HanSolo' is present.<br/>
-Verify the img is loaded and visible.<br/>
-Click the 'Save' button.<br/>
-Switch to the active frame titled 'Create TV Show dialog'.<br/>
+Switch to the active frame titled 'Create Character Profile dialog'.<br/>
+Assert that img source of the Cover Photo contains 'HanSolo'.<br/>
+Assert the the img is loaded and visible.<br/>
 Scroll the 'Publishing Options' link into view.<br/>
 Click the 'Publishing Options' link.<br/>
 Select 'Published' from the 'Moderation State' drop down list.<br/>
 Click the 'Save' button.<br/>
-Verify success message of 'TV Show 89c49d5b56b7439 has been created.' is present.<br/>
-STEP 4<br/>
-Mouse over the 'Structure' menu link.<br/>
-Mouse over the 'Content types' menu link.<br/>
-Mouse over the 'Movie' menu link.<br/>
-Click the 'Manage fields' menu link.<br/>
-Switch to the active frame titled 'Movie dialog'.<br/>
-Click the 'Close Overlay X'.<br/>
-Scroll by '-500'.<br/>
+Verify success message of 'Character Profile 1c9890982c24472 has been created.' is present.<br/>
 Mouse over the 'Content' menu link.<br/>
 Mouse over the 'Add content' menu link.<br/>
-Click the 'Movie' menu link.<br/>
-Switch to the active frame titled 'Create Movie dialog'.<br/>
-Enter '34f586095427457' in the 'Title' text box.<br/>
+Click the 'Post' menu link.<br/>
+Switch to the active frame titled 'Create Post dialog'.<br/>
+Enter 'c336421ff133425' in the 'Title' text box.<br/>
 Switch to the Synopsis frame.<br/>
 Enter a randomized text string into the 'Body' text area.<br/>
-Switch to the active frame titled 'Create Movie dialog'.<br/>
+Switch to the active frame titled 'Create Post dialog'.<br/>
 Click the 'Cover' select button.<br/>
 Switch to the select file frame.<br/>
 Enter the file path for file upload.<br/>
@@ -184,29 +166,12 @@ Click the 'Next' button.<br/>
 Verify the file image 'HanSolo' is present.<br/>
 Verify the img is loaded and visible.<br/>
 Click the 'Save' button.<br/>
-Switch to the active frame titled 'Create Movie dialog'.<br/>
-Select '89c49d5b56b7439' from the 'Show' drop down list.<br/>
+Switch to the active frame titled 'Create Post dialog'.<br/>
 Scroll the 'Publishing Options' link into view.<br/>
 Click the 'Publishing Options' link.<br/>
 Select 'Published' from the 'Moderation State' drop down list.<br/>
 Click the 'Save' button.<br/>
-Verify success message of 'Movie 34f586095427457 has been created.' is present.<br/>
-STEP 5<br/>
-STEP 6<br/>
-Mouse over the 'Content' menu link.<br/>
-Mouse over the 'Dynamic Queues' menu link.<br/>
-Click the 'Add 5188f01536b7410' menu link.<br/>
-Switch to the active frame titled 'Add 5188f01536b7410 dynamic queue dialog'.<br/>
-STEP 7<br/>
-Enter '6df95036b81148a' in the 'Title' text box.<br/>
-<br/>
-Select '89c49d5b56b7439' from the 'TV Shows' drop down list.<br/>
-Click the 'Newest' radio button under 'Sort by'.<br/>
-Click the 'Save Dynamic Queue' button.<br/>
-Switch to the active frame titled 'Dynamic Queues dialog'.<br/>
-Verify the text '6df95036b81148a' is present on the page.<br/>
-Click the 'Close Overlay X'.<br/>
-Scroll by '-500'.<br/>
+Verify success message of 'Post c336421ff133425 has been created.' is present.<br/>
 STEP 8<br/>
 Mouse over the 'Content' menu link.<br/>
 Click the 'Dynamic Queues' menu link.<br/>
@@ -215,15 +180,51 @@ Click the 'Close Overlay X'.<br/>
 Scroll by '-500'.<br/>
 Open a new browser window.<br/>
 Switch to new browser tab/window.<br/>
-Open url 'http://update.qa5.nbcupublisher7.publisher7.com/dynamic-queue/46'.<br/>
-Verify the text '34f586095427457' is present on the page.<br/>
-Verify the text 'Relationships' is present on the page.<br/>
-Verify the text '89c49d5b56b7439' is present on the page.<br/>
+Open url 'http://update.qa5.nbcupublisher7.publisher7.com/dynamic-queue/121'.<br/>
+Verify the text 'c336421ff133425' is present on the page.<br/>
+Verify the text '1c9890982c24472' is present on the page.<br/>
+STEP 9<br/>
+STEP 10<br/>
+STEP 11<br/>
+STEP 12<br/>
+Switch to the parent tab/window.<br/>
+Mouse over the 'Structure' menu link.<br/>
+Click the 'Dynamic Queue types' menu link.<br/>
+Switch to the active frame titled 'Dynamic Queue types dialog'.<br/>
+Click the 'edit' link for Dynamic Queue Type '55a7b242106947a.<br/>
+Switch to the active frame titled 'Edit 55a7b242106947a dialog'.<br/>
+STEP 13<br/>
+Check the 'Movie' check box.<br/>
+Check the 'Person' check box.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'Dynamic Queue types dialog'.<br/>
+Click the 'Close Overlay X'.<br/>
+Scroll by '-500'.<br/>
+STEP 14<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Dynamic Queues' menu link.<br/>
+Click the 'Add 55a7b242106947a' menu link.<br/>
+Switch to the active frame titled 'Add 55a7b242106947a dynamic queue dialog'.<br/>
+Verify Target bundle content count equals '2'.<br/>
+Verify content type 'Movie' is present in list of Target bundles.<br/>
+Verify content type 'Person' is present in list of Target bundles.<br/>
+Click the 'Close Overlay X'.<br/>
+Scroll by '-500'.<br/>
+STEP 15<br/>
+Mouse over the 'Structure' menu link.<br/>
+Click the 'Dynamic Queue types' menu link.<br/>
+Switch to the active frame titled 'Dynamic Queue types dialog'.<br/>
+Click the 'manage display' link for Dynamic Queue Type '55a7b242106947a.<br/>
+Switch to the active frame titled '55a7b242106947a dialog'.<br/>
+Verify the text 'Default' is present on the page.<br/>
+Verify the text 'Teaser' is present on the page.<br/>
+Verify the text 'Revision comparison' is present on the page.<br/>
+Verify the text 'Tokens' is present on the page.<br/>
 </div>
 </td>
 <td></td>
-<td>97</td>
-<td>com.nbcuni.test.publisher.tests.Queues.DynamicQueues.RelatingTVShowsDynamicQueues@3337cdec</td></tr>
+<td>103</td>
+<td>com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue@3b537e1d</td></tr>
 </table><p>
 </body>
 </html>

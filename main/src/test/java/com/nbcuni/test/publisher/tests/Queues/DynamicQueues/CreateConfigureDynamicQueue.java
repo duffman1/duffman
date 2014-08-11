@@ -114,9 +114,8 @@ public class CreateConfigureDynamicQueue extends ParentTest{
         overlay.SwitchToActiveFrame();
         dynamicQueueTypes.ClickManageDisplayLnk(dynamicQueueTypeName);
         overlay.SwitchToActiveFrame();
-        contentParent.VerifyPageContentPresent(Arrays.asList("Full content", "Teaser", "RSS", 
-        		"Revision comparison", "Tokens", "User Ref Preview", "Administrative Refrence Preview", 
-        		"Promoted Content"));
+        contentParent.VerifyPageContentPresent(Arrays.asList("Default", "Teaser", "Revision comparison", 
+        		"Tokens"));
         
         if (config.getConfigValue("AppURL").contains("install")) {
         	Reporter.log("STEP 16");
