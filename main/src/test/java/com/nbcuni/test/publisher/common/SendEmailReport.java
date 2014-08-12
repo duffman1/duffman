@@ -73,7 +73,7 @@ public class SendEmailReport {
             else {
             	messageContent = "<body>Test run complete for latest build against "
                 		+ "<a href='" + config.getConfigValue("AppURL") + "'>" + config.getConfigValue("AppURL") 
-                		+ "</a> on <strong>" + machineName + "</strong>.<br /><br />Test group = " + config.getIncludedGroups() + "<br /><br />Tests passed = " 
+                		+ "</a> on <strong>" + machineName + "</strong>.<br /><br />Test group = " + config.getIncludedGroups() + "<br />Tests passed = " 
                 		+ passedTestsCount.toString() + "<br />Tests failed = " 
                 		+ failedIndividualTestCount.toString() + "<br /><br />A detailed functional report is attached. " 
                 		+ "A detailed http archive file (HAR) is attached and can be viewed with an online <a href='http://www.softwareishard.com/har/viewer/'>HAR viewer</a>. " 
