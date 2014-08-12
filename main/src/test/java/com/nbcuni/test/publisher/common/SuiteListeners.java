@@ -14,13 +14,13 @@ public class SuiteListeners extends ParentTest implements ISuiteListener {
 	@Override
 	public void onStart(ISuite suite) {
 		if (suite.getName().equals("Pub 7 Consecutive Suite")) {
+			
 			if (config.getConfigValue("SendReportAutoEmails").equals("true")) {
 	  	  		try {
 	  	  			SendTestRunStartEmail sendTestRunStartEmail = new SendTestRunStartEmail();
 	  	  			sendTestRunStartEmail.SendEmail();
 	  	  		} catch (Exception e) {
-	  	  			e.printStackTrace();
-	  	  			//System.out.println("Failed to send test run start email.");
+	  	  			System.out.println("Failed to send test run start email.");
 	  	  		}
 	  	  	}
 	  	  	else {

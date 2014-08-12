@@ -133,7 +133,7 @@ public class ErrorChecking {
     		//module error
     		allowedErrors.add("There was a problem checking available updates");
     		
-    		//dyanmic queue error
+    		//DE8455 dyanmic queue error
     		allowedErrors.add("Notice: Undefined offset: 4 in _menu_translate()");
     		
     		//FIRST - check if error container is present
