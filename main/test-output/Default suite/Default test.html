@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Aug 11 14:05:49 EDT 2014</td>
+<td>Started on:</td><td>Wed Aug 13 12:29:08 EDT 2014</td>
 </tr>
-<tr><td>Total time:</td><td>107 seconds (107105 ms)</td>
+<tr><td>Total time:</td><td>163 seconds (163397 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,83 +75,63 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue.CreateConfigureDynamicQueue_TC4197()'><b>CreateConfigureDynamicQueue_TC4197</b><br>Test class: com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue<br/>
-<a href="#Output-278229142" onClick='toggleBox("Output-278229142", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.nbcuni.test.publisher.tests.Setup.A1_TestSetup.TestSetup_Test()'><b>TestSetup_Test</b><br>Test class: com.nbcuni.test.publisher.tests.Setup.A1_TestSetup<br/>
+<a href="#Output-1414943481" onClick='toggleBox("Output-1414943481", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-278229142" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-278229142">
-STEP 1<br/>
+<a href="#Output-1414943481" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1414943481">
 Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.<br/>
 Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
 Enter 'pa55word' in the 'Password' text box.<br/>
 Click the 'Login' button.<br/>
-STEP 2<br/>
-Click the 'Modules' menu link.<br/>
-Switch to frame titled 'Modules'.<br/>
-Enter 'Dynamic Queue' in the 'Filter Name' text box.<br/>
-Wait for module filter titled 'Dynamic Queue' to be visible in module list.<br/>
-Verify the 'Dynamic Queue' check box is checked.<br/>
+Open url 'http://update.qa5.nbcupublisher7.publisher7.com/admin/modules'.<br/>
+Open url 'http://update.qa5.nbcupublisher7.publisher7.com/#overlay=admin/modules'.<br/>
+Switch to the active frame titled 'Modules dialog'.<br/>
+Enter 'Sticky Edit Actions' in the 'Filter Name' text box.<br/>
+Wait for module filter titled 'Sticky Edit Actions' to be visible in module list.<br/>
+Enter 'Devel' in the 'Filter Name' text box.<br/>
+Wait for module filter titled 'Devel' to be visible in module list.<br/>
+Verify the 'Devel' check box is checked.<br/>
+Enter 'Acquia Purge' in the 'Filter Name' text box.<br/>
+Wait for module filter titled 'Acquia Purge' to be visible in module list.<br/>
+Enter 'ImageField Focus' in the 'Filter Name' text box.<br/>
+Wait for module filter titled 'ImageField Focus' to be visible in module list.<br/>
+Enter 'Database logging' in the 'Filter Name' text box.<br/>
+Wait for module filter titled 'Database logging' to be visible in module list.<br/>
+Enter 'Pub Post' in the 'Filter Name' text box.<br/>
+Wait for module filter titled 'Pub Post' to be visible in module list.<br/>
+Verify the 'Pub Post' check box is checked.<br/>
+Enter 'Logo Manager' in the 'Filter Name' text box.<br/>
+Wait for module filter titled 'Logo Manager' to be visible in module list.<br/>
+Verify the 'Logo Manager' check box is checked.<br/>
+Enter 'MPS' in the 'Filter Name' text box.<br/>
+Wait for module filter titled 'MPS' to be visible in module list.<br/>
+Uncheck the 'MPS' module checkbox.<br/>
+Click the 'Save configuration' button.<br/>
+Verify success message of 'The configuration options have been saved.' is present.<br/>
+Click the 'Uninstall' overlay tab.<br/>
+Scroll by '-500'.<br/>
+Switch to the active frame titled 'Modules dialog'.<br/>
+Click the 'MPS' uninstall checkbox.<br/>
+Click the 'Uninstall' button.<br/>
+Switch to the active frame titled 'Confirm uninstall dialog'.<br/>
+Verify the text 'The following modules will be completely uninstalled from your site, and all data from these modules will be lost!' is present on the page.<br/>
+Verify the text 'MPS' is present on the page.<br/>
+Click the 'Uninstall' button to confirm.<br/>
+Switch to the active frame titled 'Modules dialog'.<br/>
 Click the 'Close Overlay X'.<br/>
 Scroll by '-500'.<br/>
-Click the 'Home' menu link.<br/>
-STEP 3<br/>
-Mouse over the 'Structure' menu link.<br/>
-Mouse over the 'Dynamic Queue types' menu link.<br/>
-Click the 'Add dynamic queue type' menu link.<br/>
-Switch to the active frame titled 'Add dynamic queue type dialog'.<br/>
-STEP 4<br/>
-Enter '55a7b242106947a' in the 'Name' text box.<br/>
-Select 'Content' or 'Node' from the 'Entity type' drop down list.<br/>
-Click the 'Save' button.<br/>
-Switch to the active frame titled 'Dynamic Queue types dialog'.<br/>
-Verify the text '55a7b242106947a' is present on the page.<br/>
-Click the 'Close Overlay X'.<br/>
-Scroll by '-500'.<br/>
-STEP 5<br/>
-Mouse over the 'Content' menu link.<br/>
-Mouse over the 'Dynamic Queues' menu link.<br/>
-Click the 'Add 55a7b242106947a' menu link.<br/>
-Switch to the active frame titled 'Add 55a7b242106947a dynamic queue dialog'.<br/>
-STEP 6<br/>
-Enter 'e69ae062e3554fa' in the 'Title' text box.<br/>
-<br/>
-<br/>
-Click the 'Newest' radio button under 'Sort by'.<br/>
-Click the 'Save Dynamic Queue' button.<br/>
-Switch to the active frame titled 'Dynamic Queues dialog'.<br/>
-Verify the text 'e69ae062e3554fa' is present on the page.<br/>
-Click the 'Close Overlay X'.<br/>
-Scroll by '-500'.<br/>
-STEP 7<br/>
-Mouse over the 'Content' menu link.<br/>
-Mouse over the 'Add content' menu link.<br/>
-Click the 'Character Profile' menu link.<br/>
-Switch to the active frame titled 'Create Character Profile dialog'.<br/>
-Enter '1c9890982c24472' in the 'Character First Name' text box.<br/>
-Click the Cover Photo 'Select' button.<br/>
-Switch to the select file frame.<br/>
-Enter the file path for file upload.<br/>
-Click the 'Upload' button.<br/>
-Wait for the file link to be visible after upload.<br/>
-Click the 'Next' button.<br/>
-Click the 'Public Local Files' radio button.<br/>
-Click the 'Next' button.<br/>
-Verify the file image 'HanSolo' is present.<br/>
-Verify the img is loaded and visible.<br/>
-Click the 'Save' button.<br/>
-Switch to the active frame titled 'Create Character Profile dialog'.<br/>
-Assert that img source of the Cover Photo contains 'HanSolo'.<br/>
-Assert the the img is loaded and visible.<br/>
-Scroll the 'Publishing Options' link into view.<br/>
-Click the 'Publishing Options' link.<br/>
-Select 'Published' from the 'Moderation State' drop down list.<br/>
-Click the 'Save' button.<br/>
-Verify success message of 'Character Profile 1c9890982c24472 has been created.' is present.<br/>
 Mouse over the 'Content' menu link.<br/>
 Mouse over the 'Add content' menu link.<br/>
 Click the 'Post' menu link.<br/>
 Switch to the active frame titled 'Create Post dialog'.<br/>
-Enter 'c336421ff133425' in the 'Title' text box.<br/>
+Verify the 'Title' is present as a required field.<br/>
+Verify the 'Body' is present as a required field.<br/>
+Scroll the 'Publishing Options' link into view.<br/>
+Click the 'Publishing Options' link.<br/>
+Verify the 'Moderation State' is present as a required field.<br/>
+Scroll to and click the 'Basic Information' tab.<br/>
+Enter 'futurePost08/13/20140cd72588dd9544a' in the 'Title' text box.<br/>
 Switch to the Synopsis frame.<br/>
 Enter a randomized text string into the 'Body' text area.<br/>
 Switch to the active frame titled 'Create Post dialog'.<br/>
@@ -169,62 +149,84 @@ Click the 'Save' button.<br/>
 Switch to the active frame titled 'Create Post dialog'.<br/>
 Scroll the 'Publishing Options' link into view.<br/>
 Click the 'Publishing Options' link.<br/>
-Select 'Published' from the 'Moderation State' drop down list.<br/>
+Select 'Draft' from the 'Moderation State' drop down list.<br/>
 Click the 'Save' button.<br/>
-Verify success message of 'Post c336421ff133425 has been created.' is present.<br/>
-STEP 8<br/>
-Mouse over the 'Content' menu link.<br/>
-Click the 'Dynamic Queues' menu link.<br/>
-Switch to the active frame titled 'Dynamic Queues dialog'.<br/>
+Verify success message of 'Post futurePost08/13/20140cd72588dd9544a has been created.' is present.<br/>
+Click the 'Schedule' link in the work bench.<br/>
+Switch to the active frame titled 'futurePost08/13/20140cd72588dd9544a dialog'.<br/>
+Click the 'Add Scheduled Revision' link.<br/>
+Switch to the active frame titled 'futurePost08/13/20140cd72588dd9544a dialog'.<br/>
+Select revision titled 'futurePost08/13/20140cd72588dd9544a'.<br/>
+Verify that the 'Operation' option count equals '5'.<br/>
+Select 'Moderate to Published' from the 'Select operation' drop down list.<br/>
+Enter '08/13/2014' in the 'Date' text box.<br/>
+Enter '04:35 PM' in the 'Time' text box.<br/>
+Click the 'Schedule' button.<br/>
+Switch to the active frame titled 'futurePost08/13/20140cd72588dd9544a dialog'.<br/>
+Verify success message of 'The scheduled revision operation has been saved' is present.<br/>
 Click the 'Close Overlay X'.<br/>
 Scroll by '-500'.<br/>
-Open a new browser window.<br/>
-Switch to new browser tab/window.<br/>
-Open url 'http://update.qa5.nbcupublisher7.publisher7.com/dynamic-queue/121'.<br/>
-Verify the text 'c336421ff133425' is present on the page.<br/>
-Verify the text '1c9890982c24472' is present on the page.<br/>
-STEP 9<br/>
-STEP 10<br/>
-STEP 11<br/>
-STEP 12<br/>
-Switch to the parent tab/window.<br/>
-Mouse over the 'Structure' menu link.<br/>
-Click the 'Dynamic Queue types' menu link.<br/>
-Switch to the active frame titled 'Dynamic Queue types dialog'.<br/>
-Click the 'edit' link for Dynamic Queue Type '55a7b242106947a.<br/>
-Switch to the active frame titled 'Edit 55a7b242106947a dialog'.<br/>
-STEP 13<br/>
-Check the 'Movie' check box.<br/>
-Check the 'Person' check box.<br/>
+Open url 'http://update.qa5.nbcupublisher7.publisher7.com/#overlay=admin/content/logos'.<br/>
+Switch to the active frame titled 'Manage Logo dialog'.<br/>
+Click the 'Close Overlay X'.<br/>
+Scroll by '-500'.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Logos' menu link.<br/>
+Click the 'Add Logo' menu link.<br/>
+Switch to the active frame titled 'Add Logo dialog'.<br/>
+Enter 'f30826a260de4ff' in the 'Title' text box.<br/>
+Enter the file path for file upload.<br/>
+Click the 'Upload' button.<br/>
+Wait for the file link to be visible after upload.<br/>
+Verify the file image 'nbclogosmall' is present.<br/>
+Verify the the img is loaded and visible.<br/>
+Enter '2014-08-13' in the 'Start Date' text box.<br/>
+Enter '04:35:45 PM' in the 'Start Time' text box.<br/>
+Enter '2014-08-13' in the 'End Date' text box.<br/>
+Enter '06:30:45 PM' in the 'End Time' text box.<br/>
 Click the 'Save' button.<br/>
-Switch to the active frame titled 'Dynamic Queue types dialog'.<br/>
+Switch to the active frame titled 'Manage Logo dialog'.<br/>
+Verify the text 'f30826a260de4ff' is present on the page.<br/>
+Verify the text 'Wed, 08/13/2014 - 16:35' is present on the page.<br/>
+Verify the text 'Wed, 08/13/2014 - 18:30' is present on the page.<br/>
+Assert the file image 'nbclogosmall' is present.<br/>
+Assert the the img is loaded and visible.<br/>
 Click the 'Close Overlay X'.<br/>
 Scroll by '-500'.<br/>
-STEP 14<br/>
+Mouse over the 'Configuration' menu link.<br/>
+Mouse over the 'Media' menu link.<br/>
+Click the 'Media: thePlatform mpx settings' menu link.<br/>
+Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.<br/>
+Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.<br/>
+MPX is already configured.<br/>
+Click the 'Close Overlay X'.<br/>
+Scroll by '-500'.<br/>
+Mouse over the 'Configuration' menu link.<br/>
+Mouse over the 'Media' menu link.<br/>
+Click the 'Media: thePlatform mpx settings' menu link.<br/>
+Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.<br/>
+Click the 'Save configurations' button.<br/>
+Click the 'Close Overlay X'.<br/>
+Scroll by '-500'.<br/>
 Mouse over the 'Content' menu link.<br/>
-Mouse over the 'Dynamic Queues' menu link.<br/>
-Click the 'Add 55a7b242106947a' menu link.<br/>
-Switch to the active frame titled 'Add 55a7b242106947a dynamic queue dialog'.<br/>
-Verify Target bundle content count equals '2'.<br/>
-Verify content type 'Movie' is present in list of Target bundles.<br/>
-Verify content type 'Person' is present in list of Target bundles.<br/>
+Mouse over the 'Files' menu link.<br/>
+Click the 'mpxMedia' menu link.<br/>
+Switch to the active frame titled 'Content dialog'.<br/>
+Click the 'Sync MPX Media' link.<br/>
+Select 'AutomationPlayer1' from the first 'Import Player' drop down list.<br/>
+Click the 'Sync MPX Media Now' link.<br/>
 Click the 'Close Overlay X'.<br/>
 Scroll by '-500'.<br/>
-STEP 15<br/>
-Mouse over the 'Structure' menu link.<br/>
-Click the 'Dynamic Queue types' menu link.<br/>
-Switch to the active frame titled 'Dynamic Queue types dialog'.<br/>
-Click the 'manage display' link for Dynamic Queue Type '55a7b242106947a.<br/>
-Switch to the active frame titled '55a7b242106947a dialog'.<br/>
-Verify the text 'Default' is present on the page.<br/>
-Verify the text 'Teaser' is present on the page.<br/>
-Verify the text 'Revision comparison' is present on the page.<br/>
-Verify the text 'Tokens' is present on the page.<br/>
+Open url 'http://update.qa5.nbcupublisher7.publisher7.com/admin/structure/types/manage/4a8c90c4a3/delete'.<br/>
+Open url 'http://update.qa5.nbcupublisher7.publisher7.com/admin/structure/types/manage/fe3dd49d88/delete'.<br/>
+Open url 'http://update.qa5.nbcupublisher7.publisher7.com/admin/structure/types/manage/mpxc3c07039fd/delete'.<br/>
+Mouse over the 'Home' menu link.<br/>
+Click the '[[Driver: chrome on MAC (d5fce5c9-b26e-4d6d-93ce-c90181f8acc0)] -> xpath: //span[@class='admin-menu-home-icon']/../..//a[text()='Flush all caches']]' menu link.<br/>
 </div>
 </td>
 <td></td>
-<td>103</td>
-<td>com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue@3b537e1d</td></tr>
+<td>160</td>
+<td>com.nbcuni.test.publisher.tests.Setup.A1_TestSetup@5e7f2a19</td></tr>
 </table><p>
 </body>
 </html>

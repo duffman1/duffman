@@ -86,21 +86,15 @@ public class A1_TestSetup extends ParentTest {
                 modules.EnableModule("Logo Manager");
                 
                 //uninstall mps module to clean out any previously created mps blocks
-                //try {
-                	modules.EnterFilterName("MPS");
-                	modules.DisableModule("MPS");
-                	overlay.ClickOverlayTab("Uninstall");
+                modules.EnterFilterName("MPS");
+                modules.DisableModule("MPS");
+                overlay.ClickOverlayTab("Uninstall");
+                overlay.SwitchToActiveFrame();
+                if (modules.IsModuleInstalled("MPS").equals(true)) {
+                	modules.UninstallModule("MPS");
                 	overlay.SwitchToActiveFrame();
-                	if (modules.IsModuleInstalled("MPS").equals(true)) {
-                		modules.UninstallModule("MPS");
-                		overlay.SwitchToActiveFrame();
-                	}
-                	overlay.ClickCloseOverlayLnk();
-                /*}
-                catch (Exception | AssertionError e) {
-                	overlay.SwitchToActiveFrame();
-                	overlay.ClickCloseOverlayLnk();
-                }*/
+                }
+                overlay.ClickCloseOverlayLnk();
                 
                 //schedule a post content item revision to be consumed by the SchedulingContentPublishUnpublished test later in the suite
                 taxonomy.NavigateSite("Content>>Add content>>Post");
@@ -267,7 +261,7 @@ public class A1_TestSetup extends ParentTest {
         }
     	
         if (allIterationsFailed.equals(true)) {
-        	abortTestSuite = true;
+        	//abortTestSuite = true;
         	Assert.fail();
         }
             
