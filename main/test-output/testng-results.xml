@@ -2,7 +2,10 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
     <line>
-      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
+      <![CDATA[STEP 1]]>
+    </line>
+    <line>
+      <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]>
     </line>
     <line>
       <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
@@ -14,73 +17,25 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com/admin/modules'.]]>
+      <![CDATA[SETUP]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com/#overlay=admin/modules'.]]>
+      <![CDATA[Mouse over the 'Configuration' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+      <![CDATA[Mouse over the 'Search and metadata' menu link.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Sticky Edit Actions' in the 'Filter Name' text box.]]>
+      <![CDATA[Mouse over the 'URL aliases' menu link.]]>
     </line>
     <line>
-      <![CDATA[Wait for module filter titled 'Sticky Edit Actions' to be visible in module list.]]>
+      <![CDATA[Click the 'Settings' menu link.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Devel' in the 'Filter Name' text box.]]>
+      <![CDATA[Switch to the active frame titled 'URL aliases dialog'.]]>
     </line>
     <line>
-      <![CDATA[Wait for module filter titled 'Devel' to be visible in module list.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Devel' check box is checked.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Acquia Purge' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for module filter titled 'Acquia Purge' to be visible in module list.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'ImageField Focus' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for module filter titled 'ImageField Focus' to be visible in module list.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Database logging' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for module filter titled 'Database logging' to be visible in module list.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Pub Post' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for module filter titled 'Pub Post' to be visible in module list.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Pub Post' check box is checked.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Logo Manager' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for module filter titled 'Logo Manager' to be visible in module list.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Logo Manager' check box is checked.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'MPS' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for module filter titled 'MPS' to be visible in module list.]]>
-    </line>
-    <line>
-      <![CDATA[Uncheck the 'MPS' module checkbox.]]>
+      <![CDATA[Click the 'Do nothing. Leave the old alias intact.' radio button.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save configuration' button.]]>
@@ -89,40 +44,13 @@
       <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Uninstall' overlay tab.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll by '-500'.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'MPS' uninstall checkbox.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Uninstall' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Confirm uninstall dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'The following modules will be completely uninstalled from your site, and all data from these modules will be lost!' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'MPS' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Uninstall' button to confirm.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
-    </line>
-    <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
     </line>
     <line>
       <![CDATA[Scroll by '-500'.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 2]]>
     </line>
     <line>
       <![CDATA[Mouse over the 'Content' menu link.]]>
@@ -137,25 +65,7 @@
       <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
     </line>
     <line>
-      <![CDATA[Verify the 'Title' is present as a required field.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Body' is present as a required field.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Publishing Options' link.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Moderation State' is present as a required field.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'futurePost08/13/20140cd72588dd9544a' in the 'Title' text box.]]>
+      <![CDATA[Enter '9bdf23f1b92740e' in the 'Title' text box.]]>
     </line>
     <line>
       <![CDATA[Switch to the Synopsis frame.]]>
@@ -167,217 +77,106 @@
       <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Cover' select button.]]>
+      <![CDATA[Click the 'URL path settings' link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the select file frame.]]>
+      <![CDATA[Verify the 'Generate automatic URL alias' check box is checked.]]>
     </line>
     <line>
-      <![CDATA[Enter the file path for file upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Upload' button.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the file image 'HanSolo' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img is loaded and visible.]]>
+      <![CDATA[STEP 3]]>
     </line>
     <line>
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+      <![CDATA[Verify success message of 'Post 9bdf23f1b92740e has been created.' is present.]]>
     </line>
     <line>
-      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+      <![CDATA[STEP 4]]>
     </line>
     <line>
-      <![CDATA[Click the 'Publishing Options' link.]]>
+      <![CDATA[Click the 'Edit Draft' link in the work bench.]]>
     </line>
     <line>
-      <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
+      <![CDATA[Switch to the active frame titled 'Edit Post 9bdf23f1b92740e dialog'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save' button.]]>
+      <![CDATA[Click the 'URL path settings' link.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'Post futurePost08/13/20140cd72588dd9544a has been created.' is present.]]>
+      <![CDATA[Verify the 'URL alias' is 'content/9bdf23f1b92740e'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Schedule' link in the work bench.]]>
+      <![CDATA[Verify the 'Generate automatic URL alias' check box is un-checked and disabled.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'futurePost08/13/20140cd72588dd9544a dialog'.]]>
+      <![CDATA[STEP 5]]>
     </line>
     <line>
-      <![CDATA[Click the 'Add Scheduled Revision' link.]]>
+      <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'futurePost08/13/20140cd72588dd9544a dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Select revision titled 'futurePost08/13/20140cd72588dd9544a'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that the 'Operation' option count equals '5'.]]>
-    </line>
-    <line>
-      <![CDATA[Select 'Moderate to Published' from the 'Select operation' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '08/13/2014' in the 'Date' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '04:35 PM' in the 'Time' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Schedule' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'futurePost08/13/20140cd72588dd9544a dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The scheduled revision operation has been saved' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll by '-500'.]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com/#overlay=admin/content/logos'.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Manage Logo dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll by '-500'.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Logos' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Add Logo' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Add Logo dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'f30826a260de4ff' in the 'Title' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the file path for file upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Upload' button.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the file image 'nbclogosmall' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '2014-08-13' in the 'Start Date' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '04:35:45 PM' in the 'Start Time' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '2014-08-13' in the 'End Date' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '06:30:45 PM' in the 'End Time' text box.]]>
+      <![CDATA[Enter 'b5675c7c31544dc' in the 'Title' text box.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Manage Logo dialog'.]]>
+      <![CDATA[Verify success message of 'Post b5675c7c31544dc has been updated.' is present.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'f30826a260de4ff' is present on the page.]]>
+      <![CDATA[Verify that the content node alias equals 'content/9bdf23f1b92740e'.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'Wed, 08/13/2014 - 16:35' is present on the page.]]>
+      <![CDATA[STEP 6]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'Wed, 08/13/2014 - 18:30' is present on the page.]]>
+      <![CDATA[Click the 'Edit Draft' link in the work bench.]]>
     </line>
     <line>
-      <![CDATA[Assert the file image 'nbclogosmall' is present.]]>
+      <![CDATA[Switch to the active frame titled 'Edit Post b5675c7c31544dc dialog'.]]>
     </line>
     <line>
-      <![CDATA[Assert the the img is loaded and visible.]]>
+      <![CDATA[Click the 'URL path settings' link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
+      <![CDATA[Enter 'content/b5675c7c31544dc' in the 'URL alias' text box.]]>
     </line>
     <line>
-      <![CDATA[Scroll by '-500'.]]>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Post b5675c7c31544dc has been updated.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify that the content node alias equals 'content/b5675c7c31544dc'.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 7]]>
     </line>
     <line>
       <![CDATA[Mouse over the 'Configuration' menu link.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Media' menu link.]]>
+      <![CDATA[Mouse over the 'Search and metadata' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Media: thePlatform mpx settings' menu link.]]>
+      <![CDATA[Mouse over the 'URL aliases' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.]]>
+      <![CDATA[Click the 'Settings' menu link.]]>
     </line>
     <line>
-      <![CDATA[Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.]]>
+      <![CDATA[Switch to the active frame titled 'URL aliases dialog'.]]>
     </line>
     <line>
-      <![CDATA[MPX is already configured.]]>
+      <![CDATA[Click the 'Create a new alias. Leave the existing alias functioning.' radio button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
+      <![CDATA[Click the 'Save configuration' button.]]>
     </line>
     <line>
-      <![CDATA[Scroll by '-500'.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Configuration' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Media' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Media: thePlatform mpx settings' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save configurations' button.]]>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
@@ -386,77 +185,47 @@
       <![CDATA[Scroll by '-500'.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Content' menu link.]]>
+      <![CDATA[STEP 8]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Files' menu link.]]>
+      <![CDATA[Click the 'Edit Draft' link in the work bench.]]>
     </line>
     <line>
-      <![CDATA[Click the 'mpxMedia' menu link.]]>
+      <![CDATA[Switch to the active frame titled 'Edit Post b5675c7c31544dc dialog'.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+      <![CDATA[Click the 'URL path settings' link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Sync MPX Media' link.]]>
-    </line>
-    <line>
-      <![CDATA[Select 'AutomationPlayer1' from the first 'Import Player' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Sync MPX Media Now' link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll by '-500'.]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com/admin/structure/types/manage/4a8c90c4a3/delete'.]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com/admin/structure/types/manage/fe3dd49d88/delete'.]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com/admin/structure/types/manage/mpxc3c07039fd/delete'.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Home' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the '[[Driver: chrome on MAC (d5fce5c9-b26e-4d6d-93ce-c90181f8acc0)] -> xpath: //span[@class='admin-menu-home-icon']/../..//a[text()='Flush all caches']]' menu link.]]>
+      <![CDATA[Verify the 'Generate automatic URL alias' check box is checked and enabled.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="163397" started-at="2014-08-13T16:29:08Z" finished-at="2014-08-13T16:31:51Z">
+  <suite name="Default suite" duration-ms="57328" started-at="2014-08-15T14:35:25Z" finished-at="2014-08-15T14:36:22Z">
     <groups>
       <group name="certify">
-        <method signature="A1_TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.A1_TestSetup@5e7f2a19]" name="TestSetup_Test" class="com.nbcuni.test.publisher.tests.Setup.A1_TestSetup"/>
+        <method signature="AutomaticAlias.AutomaticAlias_TC3303()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.URLAlias.AutomaticAlias@47f15427]" name="AutomaticAlias_TC3303" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.URLAlias.AutomaticAlias"/>
       </group> <!-- certify -->
-      <group name="mpx">
-        <method signature="A1_TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.A1_TestSetup@5e7f2a19]" name="TestSetup_Test" class="com.nbcuni.test.publisher.tests.Setup.A1_TestSetup"/>
-      </group> <!-- mpx -->
       <group name="full">
-        <method signature="A1_TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.A1_TestSetup@5e7f2a19]" name="TestSetup_Test" class="com.nbcuni.test.publisher.tests.Setup.A1_TestSetup"/>
+        <method signature="AutomaticAlias.AutomaticAlias_TC3303()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.URLAlias.AutomaticAlias@47f15427]" name="AutomaticAlias_TC3303" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.URLAlias.AutomaticAlias"/>
       </group> <!-- full -->
-      <group name="smoke">
-        <method signature="A1_TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.A1_TestSetup@5e7f2a19]" name="TestSetup_Test" class="com.nbcuni.test.publisher.tests.Setup.A1_TestSetup"/>
-      </group> <!-- smoke -->
     </groups>
-    <test name="Default test" duration-ms="163397" started-at="2014-08-13T16:29:08Z" finished-at="2014-08-13T16:31:51Z">
-      <class name="com.nbcuni.test.publisher.tests.Setup.A1_TestSetup">
-        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.A1_TestSetup@5e7f2a19]" name="startGridAndHub" is-config="true" duration-ms="1610" started-at="2014-08-13T12:29:06Z" finished-at="2014-08-13T12:29:08Z">
+    <test name="Default test" duration-ms="57328" started-at="2014-08-15T14:35:25Z" finished-at="2014-08-15T14:36:22Z">
+      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.URLAlias.AutomaticAlias">
+        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.URLAlias.AutomaticAlias@47f15427]" name="startGridAndHub" is-config="true" duration-ms="1483" started-at="2014-08-15T10:35:23Z" finished-at="2014-08-15T10:35:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startGridAndHub -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.A1_TestSetup@5e7f2a19]" name="startSelenium" is-config="true" duration-ms="2760" started-at="2014-08-13T12:29:08Z" finished-at="2014-08-13T12:29:11Z">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.URLAlias.AutomaticAlias@47f15427]" name="startSelenium" is-config="true" duration-ms="3367" started-at="2014-08-15T10:35:25Z" finished-at="2014-08-15T10:35:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.A1_TestSetup@5e7f2a19]" name="TestSetup_Test" duration-ms="160048" started-at="2014-08-13T12:29:11Z" finished-at="2014-08-13T12:31:51Z">
+        <test-method status="PASS" signature="AutomaticAlias_TC3303()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.URLAlias.AutomaticAlias@47f15427]" name="AutomaticAlias_TC3303" duration-ms="53376" started-at="2014-08-15T10:35:28Z" finished-at="2014-08-15T10:36:22Z">
           <reporter-output>
             <line>
-              <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
+              <![CDATA[STEP 1]]>
+            </line>
+            <line>
+              <![CDATA[Open url 'http://install.qa5.nbcupublisher7.publisher7.com'.]]>
             </line>
             <line>
               <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
@@ -468,73 +237,25 @@
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
-              <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com/admin/modules'.]]>
+              <![CDATA[SETUP]]>
             </line>
             <line>
-              <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com/#overlay=admin/modules'.]]>
+              <![CDATA[Mouse over the 'Configuration' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+              <![CDATA[Mouse over the 'Search and metadata' menu link.]]>
             </line>
             <line>
-              <![CDATA[Enter 'Sticky Edit Actions' in the 'Filter Name' text box.]]>
+              <![CDATA[Mouse over the 'URL aliases' menu link.]]>
             </line>
             <line>
-              <![CDATA[Wait for module filter titled 'Sticky Edit Actions' to be visible in module list.]]>
+              <![CDATA[Click the 'Settings' menu link.]]>
             </line>
             <line>
-              <![CDATA[Enter 'Devel' in the 'Filter Name' text box.]]>
+              <![CDATA[Switch to the active frame titled 'URL aliases dialog'.]]>
             </line>
             <line>
-              <![CDATA[Wait for module filter titled 'Devel' to be visible in module list.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Devel' check box is checked.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Acquia Purge' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for module filter titled 'Acquia Purge' to be visible in module list.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'ImageField Focus' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for module filter titled 'ImageField Focus' to be visible in module list.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Database logging' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for module filter titled 'Database logging' to be visible in module list.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Pub Post' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for module filter titled 'Pub Post' to be visible in module list.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Pub Post' check box is checked.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Logo Manager' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for module filter titled 'Logo Manager' to be visible in module list.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Logo Manager' check box is checked.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'MPS' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for module filter titled 'MPS' to be visible in module list.]]>
-            </line>
-            <line>
-              <![CDATA[Uncheck the 'MPS' module checkbox.]]>
+              <![CDATA[Click the 'Do nothing. Leave the old alias intact.' radio button.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save configuration' button.]]>
@@ -543,40 +264,13 @@
               <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Uninstall' overlay tab.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll by '-500'.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'MPS' uninstall checkbox.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Uninstall' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Confirm uninstall dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'The following modules will be completely uninstalled from your site, and all data from these modules will be lost!' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'MPS' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Uninstall' button to confirm.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
-            </line>
-            <line>
               <![CDATA[Click the 'Close Overlay X'.]]>
             </line>
             <line>
               <![CDATA[Scroll by '-500'.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 2]]>
             </line>
             <line>
               <![CDATA[Mouse over the 'Content' menu link.]]>
@@ -591,25 +285,7 @@
               <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
             </line>
             <line>
-              <![CDATA[Verify the 'Title' is present as a required field.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Body' is present as a required field.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Publishing Options' link.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Moderation State' is present as a required field.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'futurePost08/13/20140cd72588dd9544a' in the 'Title' text box.]]>
+              <![CDATA[Enter '9bdf23f1b92740e' in the 'Title' text box.]]>
             </line>
             <line>
               <![CDATA[Switch to the Synopsis frame.]]>
@@ -621,217 +297,106 @@
               <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Cover' select button.]]>
+              <![CDATA[Click the 'URL path settings' link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the select file frame.]]>
+              <![CDATA[Verify the 'Generate automatic URL alias' check box is checked.]]>
             </line>
             <line>
-              <![CDATA[Enter the file path for file upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Upload' button.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Public Local Files' radio button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the file image 'HanSolo' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img is loaded and visible.]]>
+              <![CDATA[STEP 3]]>
             </line>
             <line>
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+              <![CDATA[Verify success message of 'Post 9bdf23f1b92740e has been created.' is present.]]>
             </line>
             <line>
-              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+              <![CDATA[STEP 4]]>
             </line>
             <line>
-              <![CDATA[Click the 'Publishing Options' link.]]>
+              <![CDATA[Click the 'Edit Draft' link in the work bench.]]>
             </line>
             <line>
-              <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
+              <![CDATA[Switch to the active frame titled 'Edit Post 9bdf23f1b92740e dialog'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save' button.]]>
+              <![CDATA[Click the 'URL path settings' link.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'Post futurePost08/13/20140cd72588dd9544a has been created.' is present.]]>
+              <![CDATA[Verify the 'URL alias' is 'content/9bdf23f1b92740e'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Schedule' link in the work bench.]]>
+              <![CDATA[Verify the 'Generate automatic URL alias' check box is un-checked and disabled.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'futurePost08/13/20140cd72588dd9544a dialog'.]]>
+              <![CDATA[STEP 5]]>
             </line>
             <line>
-              <![CDATA[Click the 'Add Scheduled Revision' link.]]>
+              <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'futurePost08/13/20140cd72588dd9544a dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Select revision titled 'futurePost08/13/20140cd72588dd9544a'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that the 'Operation' option count equals '5'.]]>
-            </line>
-            <line>
-              <![CDATA[Select 'Moderate to Published' from the 'Select operation' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '08/13/2014' in the 'Date' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '04:35 PM' in the 'Time' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Schedule' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'futurePost08/13/20140cd72588dd9544a dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The scheduled revision operation has been saved' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll by '-500'.]]>
-            </line>
-            <line>
-              <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com/#overlay=admin/content/logos'.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Manage Logo dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll by '-500'.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Logos' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Add Logo' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Add Logo dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'f30826a260de4ff' in the 'Title' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the file path for file upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Upload' button.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the file image 'nbclogosmall' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '2014-08-13' in the 'Start Date' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '04:35:45 PM' in the 'Start Time' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '2014-08-13' in the 'End Date' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '06:30:45 PM' in the 'End Time' text box.]]>
+              <![CDATA[Enter 'b5675c7c31544dc' in the 'Title' text box.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Manage Logo dialog'.]]>
+              <![CDATA[Verify success message of 'Post b5675c7c31544dc has been updated.' is present.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'f30826a260de4ff' is present on the page.]]>
+              <![CDATA[Verify that the content node alias equals 'content/9bdf23f1b92740e'.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'Wed, 08/13/2014 - 16:35' is present on the page.]]>
+              <![CDATA[STEP 6]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'Wed, 08/13/2014 - 18:30' is present on the page.]]>
+              <![CDATA[Click the 'Edit Draft' link in the work bench.]]>
             </line>
             <line>
-              <![CDATA[Assert the file image 'nbclogosmall' is present.]]>
+              <![CDATA[Switch to the active frame titled 'Edit Post b5675c7c31544dc dialog'.]]>
             </line>
             <line>
-              <![CDATA[Assert the the img is loaded and visible.]]>
+              <![CDATA[Click the 'URL path settings' link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
+              <![CDATA[Enter 'content/b5675c7c31544dc' in the 'URL alias' text box.]]>
             </line>
             <line>
-              <![CDATA[Scroll by '-500'.]]>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Post b5675c7c31544dc has been updated.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify that the content node alias equals 'content/b5675c7c31544dc'.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 7]]>
             </line>
             <line>
               <![CDATA[Mouse over the 'Configuration' menu link.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Media' menu link.]]>
+              <![CDATA[Mouse over the 'Search and metadata' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Media: thePlatform mpx settings' menu link.]]>
+              <![CDATA[Mouse over the 'URL aliases' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.]]>
+              <![CDATA[Click the 'Settings' menu link.]]>
             </line>
             <line>
-              <![CDATA[Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.]]>
+              <![CDATA[Switch to the active frame titled 'URL aliases dialog'.]]>
             </line>
             <line>
-              <![CDATA[MPX is already configured.]]>
+              <![CDATA[Click the 'Create a new alias. Leave the existing alias functioning.' radio button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
+              <![CDATA[Click the 'Save configuration' button.]]>
             </line>
             <line>
-              <![CDATA[Scroll by '-500'.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Configuration' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Media' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Media: thePlatform mpx settings' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save configurations' button.]]>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
             </line>
             <line>
               <![CDATA[Click the 'Close Overlay X'.]]>
@@ -840,65 +405,38 @@
               <![CDATA[Scroll by '-500'.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Content' menu link.]]>
+              <![CDATA[STEP 8]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Files' menu link.]]>
+              <![CDATA[Click the 'Edit Draft' link in the work bench.]]>
             </line>
             <line>
-              <![CDATA[Click the 'mpxMedia' menu link.]]>
+              <![CDATA[Switch to the active frame titled 'Edit Post b5675c7c31544dc dialog'.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+              <![CDATA[Click the 'URL path settings' link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Sync MPX Media' link.]]>
-            </line>
-            <line>
-              <![CDATA[Select 'AutomationPlayer1' from the first 'Import Player' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Sync MPX Media Now' link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll by '-500'.]]>
-            </line>
-            <line>
-              <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com/admin/structure/types/manage/4a8c90c4a3/delete'.]]>
-            </line>
-            <line>
-              <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com/admin/structure/types/manage/fe3dd49d88/delete'.]]>
-            </line>
-            <line>
-              <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com/admin/structure/types/manage/mpxc3c07039fd/delete'.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Home' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the '[[Driver: chrome on MAC (d5fce5c9-b26e-4d6d-93ce-c90181f8acc0)] -> xpath: //span[@class='admin-menu-home-icon']/../..//a[text()='Flush all caches']]' menu link.]]>
+              <![CDATA[Verify the 'Generate automatic URL alias' check box is checked and enabled.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- TestSetup_Test -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.A1_TestSetup@5e7f2a19]" name="stopSelenium" is-config="true" duration-ms="572" started-at="2014-08-13T12:31:51Z" finished-at="2014-08-13T12:31:51Z">
+        </test-method> <!-- AutomaticAlias_TC3303 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.URLAlias.AutomaticAlias@47f15427]" name="stopSelenium" is-config="true" duration-ms="571" started-at="2014-08-15T10:36:22Z" finished-at="2014-08-15T10:36:22Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=TestSetup_Test status=SUCCESS method=A1_TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.A1_TestSetup@5e7f2a19] output=Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]]>
+                <![CDATA[[TestResult name=AutomaticAlias_TC3303 status=SUCCESS method=AutomaticAlias.AutomaticAlias_TC3303()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.URLAlias.AutomaticAlias@47f15427] output=STEP 1]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.A1_TestSetup@5e7f2a19]" name="stopGridAndHub" is-config="true" duration-ms="386" started-at="2014-08-13T12:31:51Z" finished-at="2014-08-13T12:31:52Z">
+        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.URLAlias.AutomaticAlias@47f15427]" name="stopGridAndHub" is-config="true" duration-ms="381" started-at="2014-08-15T10:36:22Z" finished-at="2014-08-15T10:36:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopGridAndHub -->
-      </class> <!-- com.nbcuni.test.publisher.tests.Setup.A1_TestSetup -->
+      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.URLAlias.AutomaticAlias -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

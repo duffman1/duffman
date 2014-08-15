@@ -136,6 +136,10 @@ public class ErrorChecking {
     		//DE8455 dyanmic queue error
     		allowedErrors.add("Notice: Undefined offset: 4 in _menu_translate()");
     		
+    		//dynamic queue error
+    		allowedErrors.add("Notice: Undefined variable: extra in dynamic_queue_field_extra_fields()");
+    		
+    		
     		//FIRST - check if error container is present
     		boolean errorContainerPresent = false;
     		try {
@@ -185,7 +189,8 @@ public class ErrorChecking {
     								 					|| errorText.contains(allowedErrors.get(16))
     								 					|| errorText.contains(allowedErrors.get(17))
     								 					|| errorText.contains(allowedErrors.get(18))
-    								 					|| errorText.contains(allowedErrors.get(19))) {
+    								 					|| errorText.contains(allowedErrors.get(19))
+    								 					|| errorText.contains(allowedErrors.get(20))) {
     					//ignore error
     				}
     				else {
@@ -223,7 +228,8 @@ public class ErrorChecking {
     	    								 					|| errorText.contains(allowedErrors.get(16))
     	    								 					|| errorText.contains(allowedErrors.get(17))
     	    								 					|| errorText.contains(allowedErrors.get(18))
-    	    								 					|| errorText.contains(allowedErrors.get(19))) {
+    	    								 					|| errorText.contains(allowedErrors.get(19))
+    	    								 					|| errorText.contains(allowedErrors.get(20))) {
     						//ignore error
     					}
     					else {
