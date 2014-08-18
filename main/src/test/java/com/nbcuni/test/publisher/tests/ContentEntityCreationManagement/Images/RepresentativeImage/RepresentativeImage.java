@@ -14,7 +14,7 @@ public class RepresentativeImage extends ParentTest {
      * TEST CASE - TC3217
      * Steps - https://rally1.rallydev.com/#/14663927728ud/detail/testcase/19212549516
      *************************************************************************************/
-    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"})
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "mpx"})
     public void RepresentativeImage_TC3217() throws Exception{
          
         	Reporter.log("STEP 1");

@@ -120,7 +120,7 @@ public class CreateConfigureDynamicQueue extends ParentTest{
         if (config.getConfigValue("AppURL").contains("install")) {
         	Reporter.log("STEP 16");
             ManageDisplay manageDisplay = new ManageDisplay(webDriver);
-            manageDisplay.SelectEntityListFormat("Full content");
+            manageDisplay.SelectEntityListFormat("Default");
             contentParent.WaitForThrobberNotPresent();
             manageDisplay.ClickSaveBtn();
             contentParent.VerifyMessageStatus("Your settings have been saved.");

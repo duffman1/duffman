@@ -2,6 +2,7 @@ package com.nbcuni.test.publisher.common;
 
 import java.net.InetAddress;
 import java.util.Properties;
+
 import javax.mail.Message;
 import javax.mail.MessagingException;
 import javax.mail.PasswordAuthentication;
@@ -51,9 +52,14 @@ public class SendTestRunStartEmail {
             	initiatorAddress = "an unknown user";
             }
             
+            String excludedGroupTxt = ".";
+            if (!config.getExcludedGroups().equals("")) {
+            	excludedGroupTxt = " and excludes tests assigned to the \"" + config.getExcludedGroups() + "\" test group(s).";
+            }
+            
             message.setContent("<body>An automated test suite execution has been started on <strong>" + InetAddress.getLocalHost().getHostName().replace(".local", "") 
             		+ "</strong> against " + "<a href='" + config.getConfigValue("AppURL") + "'>" + config.getConfigValue("AppURL") + "</a>" 
-            		+ " by " + initiatorAddress + ". This execution includes tests assigned to the \"" + config.getIncludedGroups() + "\" test group. <br /><br />Please wait until this suite has completed and notification has been sent " 
+            		+ " by " + initiatorAddress + ". This execution includes tests assigned to the \"" + config.getIncludedGroups() + "\" test group(s)" + excludedGroupTxt + " <br /><br />Please wait until this suite has completed and notification has been sent " 
             		+ "to QA staff before accessing this box remotely.<br /><br /> Publisher 7 QA Automation</body>", "text/html");
             
             Transport.send(message);

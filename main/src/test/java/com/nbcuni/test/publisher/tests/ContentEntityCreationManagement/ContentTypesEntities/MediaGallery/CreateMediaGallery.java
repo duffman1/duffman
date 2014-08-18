@@ -19,7 +19,7 @@ public class CreateMediaGallery extends ParentTest{
      * TEST CASE - TC1042
      * Steps - https://rally1.rallydev.com/#/14663927728d/detail/testcase/17441339377
      *************************************************************************************/
-    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full" })
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "mpx" })
     public void CreateMediaGallery_TC1042() throws Exception{
         
         	Reporter.log("STEP 1");

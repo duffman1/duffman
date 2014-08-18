@@ -147,6 +147,12 @@ public class Config {
         return this.getXPathValueFromFile(this.getConcurrentSuiteFileLocation(), "//groups/run/include/@name");
 
     }
+    
+    public String getExcludedGroups() {
+
+        return this.getXPathValueFromFile(this.getConcurrentSuiteFileLocation(), "//groups/run/exclude/@name");
+
+    }
 
 
 }
