@@ -261,7 +261,9 @@ public class A1_TestSetup extends ParentTest {
         }
     	
         if (allIterationsFailed.equals(true)) {
-        	//abortTestSuite = true;
+        	if (config.getConfigValue("AbortSuiteOnSetupFailure").equals("true")) {
+        		abortTestSuite = true;
+        	}
         	Assert.fail();
         }
             

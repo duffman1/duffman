@@ -18,7 +18,7 @@ import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
 
-public class SendEmailReport {
+public class SendEmailReport extends ParentTest{
 
 	public void SendEmail(String pathToReport, String reportName, Integer passedTestsCount, Integer failedTestsCount) throws Exception {
 
@@ -72,8 +72,8 @@ public class SendEmailReport {
             Integer failedIndividualTestCount = failedTestsCount / (config.getReRunOnFailureCount() + 1);
             
             String messageContent = null;
-            if (passedTestsCount.equals(0)) {
-            	messageContent = "<body>A server error was encountered during the execution of the automated test suite on <strong>" + machineName + "</strong>, resulting in 0 successful test executions. Likely causes include a site outage, a Java runtime environment failure, a WebDriver server crash, or the failure of the TestSetup script.<br /><br />Publisher 7 QA Automation</body>";
+            if (abortTestSuite.equals(true)) {
+            	messageContent = "<body>A critical error was encountered during the execution of the automated test suite on <strong>" + machineName + "</strong>, resulting in the failure of the test setup scripts. All subsequent tests were skipped. Please see attached report/screenshot for details on the setup script failure.<br /><br />To execute the suite and ignore the setup failure, set config value \"AbortSuiteOnSetupFailure\" to false and re-run. Note that this may result in test failures.<br /><br />Publisher 7 QA Automation</body>";
             }
             else {
             	messageContent = "<body>Test run complete for latest build against "
