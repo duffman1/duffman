@@ -43,7 +43,7 @@ public class DynamicQueues {
     public String GetDynamicQueueNodeNumber(String dynamicQueueName) throws Exception {
         
     	return Edit_Lnk(dynamicQueueName).getAttribute("href").replace(applib.getApplicationURL() + 
-    			"/admin/content/dynamic-queue/manage/", "").replace("?destination=admin/content/dynamic-queue", "");
+    			"/dynamic-queue/", "").replace("/edit?destination=admin/content/dynamic-queue", "");
 
     }
     

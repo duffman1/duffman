@@ -1,128 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="15" failed="1" total="16" passed="0">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
     <line>
-      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Login' button.]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com/admin/modules'.]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com/#overlay=admin/modules'.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Sticky Edit Actions' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for module filter titled 'Sticky Edit Actions' to be visible in module list.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Devel' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for module filter titled 'Devel' to be visible in module list.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Devel' check box is checked.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Acquia Purge' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for module filter titled 'Acquia Purge' to be visible in module list.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'ImageField Focus' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for module filter titled 'ImageField Focus' to be visible in module list.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Database logging' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for module filter titled 'Database logging' to be visible in module list.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Pub Post' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for module filter titled 'Pub Post' to be visible in module list.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Pub Post' check box is checked.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Logo Manager' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for module filter titled 'Logo Manager' to be visible in module list.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Logo Manager' check box is checked.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'MPS' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for module filter titled 'MPS' to be visible in module list.]]>
-    </line>
-    <line>
-      <![CDATA[Uncheck the 'MPS' module checkbox.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Uninstall' overlay tab.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll by '-500'.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'MPS' uninstall checkbox.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Uninstall' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Confirm uninstall dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'The following modules will be completely uninstalled from your site, and all data from these modules will be lost!' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'MPS' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Uninstall' button to confirm.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll by '-500'.]]>
+      <![CDATA[STEP 1]]>
     </line>
     <line>
       <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
@@ -137,79 +17,22 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com/admin/modules'.]]>
+      <![CDATA[SETUP]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com/#overlay=admin/modules'.]]>
+      <![CDATA[Click the 'Modules' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+      <![CDATA[Switch to frame titled 'Modules'.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Sticky Edit Actions' in the 'Filter Name' text box.]]>
+      <![CDATA[Enter 'Dynamic Queue' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Wait for module filter titled 'Sticky Edit Actions' to be visible in module list.]]>
+      <![CDATA[Wait for module filter titled 'Dynamic Queue' to be visible in module list.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Devel' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for module filter titled 'Devel' to be visible in module list.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Devel' check box is checked.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Acquia Purge' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for module filter titled 'Acquia Purge' to be visible in module list.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'ImageField Focus' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for module filter titled 'ImageField Focus' to be visible in module list.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Database logging' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for module filter titled 'Database logging' to be visible in module list.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Pub Post' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for module filter titled 'Pub Post' to be visible in module list.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Pub Post' check box is checked.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Logo Manager' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for module filter titled 'Logo Manager' to be visible in module list.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Logo Manager' check box is checked.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'MPS' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for module filter titled 'MPS' to be visible in module list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Uninstall' overlay tab.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll by '-500'.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+      <![CDATA[Verify the 'Dynamic Queue' check box is checked.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
@@ -218,91 +41,190 @@
       <![CDATA[Scroll by '-500'.]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
+      <![CDATA[Click the 'Home' menu link.]]>
     </line>
     <line>
-      <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+      <![CDATA[Mouse over the 'Add content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Login' button.]]>
+      <![CDATA[Click the 'TV Show' menu link.]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com/admin/modules'.]]>
+      <![CDATA[Switch to the active frame titled 'Create TV Show dialog'.]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com/#overlay=admin/modules'.]]>
+      <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+      <![CDATA[Enter '42a00e1a9d7e4cf' in the 'Title' text box.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Sticky Edit Actions' in the 'Filter Name' text box.]]>
+      <![CDATA[Switch to the Synopsis frame.]]>
     </line>
     <line>
-      <![CDATA[Wait for module filter titled 'Sticky Edit Actions' to be visible in module list.]]>
+      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Devel' in the 'Filter Name' text box.]]>
+      <![CDATA[Switch to the active frame titled 'Create TV Show dialog'.]]>
     </line>
     <line>
-      <![CDATA[Wait for module filter titled 'Devel' to be visible in module list.]]>
+      <![CDATA[Click the Logo 'Select' button.]]>
     </line>
     <line>
-      <![CDATA[Verify the 'Devel' check box is checked.]]>
+      <![CDATA[Switch to the select file frame.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Acquia Purge' in the 'Filter Name' text box.]]>
+      <![CDATA[Enter the file path for file upload.]]>
     </line>
     <line>
-      <![CDATA[Wait for module filter titled 'Acquia Purge' to be visible in module list.]]>
+      <![CDATA[Click the 'Upload' button.]]>
     </line>
     <line>
-      <![CDATA[Enter 'ImageField Focus' in the 'Filter Name' text box.]]>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
     </line>
     <line>
-      <![CDATA[Wait for module filter titled 'ImageField Focus' to be visible in module list.]]>
+      <![CDATA[Click the 'Next' button.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Database logging' in the 'Filter Name' text box.]]>
+      <![CDATA[Click the 'Public Local Files' radio button.]]>
     </line>
     <line>
-      <![CDATA[Wait for module filter titled 'Database logging' to be visible in module list.]]>
+      <![CDATA[Click the 'Next' button.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Pub Post' in the 'Filter Name' text box.]]>
+      <![CDATA[Verify the file image 'HanSolo' is present.]]>
     </line>
     <line>
-      <![CDATA[Wait for module filter titled 'Pub Post' to be visible in module list.]]>
+      <![CDATA[Verify the img is loaded and visible.]]>
     </line>
     <line>
-      <![CDATA[Verify the 'Pub Post' check box is checked.]]>
+      <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Logo Manager' in the 'Filter Name' text box.]]>
+      <![CDATA[Switch to the active frame titled 'Create TV Show dialog'.]]>
     </line>
     <line>
-      <![CDATA[Wait for module filter titled 'Logo Manager' to be visible in module list.]]>
+      <![CDATA[Click the Cover Media 'Select' button.]]>
     </line>
     <line>
-      <![CDATA[Verify the 'Logo Manager' check box is checked.]]>
+      <![CDATA[Switch to the select file frame.]]>
     </line>
     <line>
-      <![CDATA[Enter 'MPS' in the 'Filter Name' text box.]]>
+      <![CDATA[Enter the file path for file upload.]]>
     </line>
     <line>
-      <![CDATA[Wait for module filter titled 'MPS' to be visible in module list.]]>
+      <![CDATA[Click the 'Upload' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Uninstall' overlay tab.]]>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
     </line>
     <line>
-      <![CDATA[Scroll by '-500'.]]>
+      <![CDATA[Click the 'Next' button.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+      <![CDATA[Click the 'Public Local Files' radio button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the file image 'HanSolo' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the img is loaded and visible.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create TV Show dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the Banner 'Select' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the select file frame.]]>
+    </line>
+    <line>
+      <![CDATA[Enter the file path for file upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Upload' button.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Public Local Files' radio button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the file image 'HanSolo' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the img is loaded and visible.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create TV Show dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Publishing Options' link.]]>
+    </line>
+    <line>
+      <![CDATA[Select 'Published' from the 'Moderation State' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'TV Show 42a00e1a9d7e4cf has been created.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 2]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Structure' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Dynamic Queue types' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Add dynamic queue type' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Add dynamic queue type dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '18d45cf6e78f49f' in the 'Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Select 'Content' or 'Node' from the 'Entity type' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Select '1 min' from the 'Cache lifetime' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Dynamic Queue types dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text '18d45cf6e78f49f' is present on the page.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
@@ -311,91 +233,25 @@
       <![CDATA[Scroll by '-500'.]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
+      <![CDATA[STEP 3 - MOVED TO SETUP]]>
     </line>
     <line>
-      <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
+      <![CDATA[STEP 4]]>
     </line>
     <line>
-      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+      <![CDATA[Mouse over the 'Structure' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Login' button.]]>
+      <![CDATA[Mouse over the 'Content types' menu link.]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com/admin/modules'.]]>
+      <![CDATA[Mouse over the 'Movie' menu link.]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com/#overlay=admin/modules'.]]>
+      <![CDATA[Click the 'Manage fields' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Sticky Edit Actions' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for module filter titled 'Sticky Edit Actions' to be visible in module list.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Devel' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for module filter titled 'Devel' to be visible in module list.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Devel' check box is checked.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Acquia Purge' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for module filter titled 'Acquia Purge' to be visible in module list.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'ImageField Focus' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for module filter titled 'ImageField Focus' to be visible in module list.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Database logging' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for module filter titled 'Database logging' to be visible in module list.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Pub Post' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for module filter titled 'Pub Post' to be visible in module list.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Pub Post' check box is checked.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Logo Manager' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for module filter titled 'Logo Manager' to be visible in module list.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Logo Manager' check box is checked.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'MPS' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for module filter titled 'MPS' to be visible in module list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Uninstall' overlay tab.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll by '-500'.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'Movie dialog'.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
@@ -404,1461 +260,606 @@
       <![CDATA[Scroll by '-500'.]]>
     </line>
     <line>
-      <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/TestSetup_Test_081914051515PM.png ]]>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
     </line>
     <line>
-      <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/TestSetup_Test_081914051515PM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/TestSetup_Test_081914051515PM.png' height='500' width='500'/> </a>]]>
+      <![CDATA[Mouse over the 'Add content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
+      <![CDATA[Click the 'Movie' menu link.]]>
     </line>
     <line>
-      <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/NotificationPlayerUnavailability_Test_081914051520PM.png ]]>
+      <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
     </line>
     <line>
-      <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/NotificationPlayerUnavailability_Test_081914051520PM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/NotificationPlayerUnavailability_Test_081914051520PM.png' height='500' width='500'/> </a>]]>
+      <![CDATA[Enter 'a411a93d14af4c7' in the 'Title' text box.]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
+      <![CDATA[Switch to the Synopsis frame.]]>
     </line>
     <line>
-      <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/PopulateEXIFBulkUpload_TC3192_081914051526PM.png ]]>
+      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
     </line>
     <line>
-      <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/PopulateEXIFBulkUpload_TC3192_081914051526PM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/PopulateEXIFBulkUpload_TC3192_081914051526PM.png' height='500' width='500'/> </a>]]>
+      <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
+      <![CDATA[Click the 'Cover' select button.]]>
     </line>
     <line>
-      <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/TestCleanup_Test_081914051532PM.png ]]>
+      <![CDATA[Switch to the select file frame.]]>
     </line>
     <line>
-      <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/TestCleanup_Test_081914051532PM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/TestCleanup_Test_081914051532PM.png' height='500' width='500'/> </a>]]>
+      <![CDATA[Enter the file path for file upload.]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
+      <![CDATA[Click the 'Upload' button.]]>
     </line>
     <line>
-      <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/ThumbnailsAreNotUpdated_Test_081914051539PM.png ]]>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
     </line>
     <line>
-      <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/ThumbnailsAreNotUpdated_Test_081914051539PM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/ThumbnailsAreNotUpdated_Test_081914051539PM.png' height='500' width='500'/> </a>]]>
+      <![CDATA[Click the 'Next' button.]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
+      <![CDATA[Click the 'Public Local Files' radio button.]]>
     </line>
     <line>
-      <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCustomContentType_TC1049_081914051548PM.png ]]>
+      <![CDATA[Click the 'Next' button.]]>
     </line>
     <line>
-      <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/Relationships_TC1390_081914051548PM.png ]]>
+      <![CDATA[Verify the file image 'HanSolo' is present.]]>
     </line>
     <line>
-      <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/SchedulingContentPublishUnpublished_TC2159_081914051548PM.png ]]>
+      <![CDATA[Verify the img is loaded and visible.]]>
     </line>
     <line>
-      <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCustomContentType_TC1049_081914051548PM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCustomContentType_TC1049_081914051548PM.png' height='500' width='500'/> </a>]]>
+      <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
+      <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
     </line>
     <line>
-      <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/SchedulingContentPublishUnpublished_TC2159_081914051548PM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/SchedulingContentPublishUnpublished_TC2159_081914051548PM.png' height='500' width='500'/> </a>]]>
+      <![CDATA[Select '42a00e1a9d7e4cf' from the 'Show' drop down list.]]>
     </line>
     <line>
-      <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/Relationships_TC1390_081914051548PM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/Relationships_TC1390_081914051548PM.png' height='500' width='500'/> </a>]]>
+      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
+      <![CDATA[Click the 'Publishing Options' link.]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
+      <![CDATA[Select 'Published' from the 'Moderation State' drop down list.]]>
     </line>
     <line>
-      <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/PreviewContentItemsIntheFuturefromContentandWorkbenchViews_Test_081914051556PM.png ]]>
+      <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/PreviewContentItemsIntheFuturefromContentandWorkbenchViews_Test_081914051556PM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/PreviewContentItemsIntheFuturefromContentandWorkbenchViews_Test_081914051556PM.png' height='500' width='500'/> </a>]]>
+      <![CDATA[Verify success message of 'Movie a411a93d14af4c7 has been created.' is present.]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
+      <![CDATA[STEP 5]]>
     </line>
     <line>
-      <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/MPSEndToEndIntegration_TC3996_081914051557PM.png ]]>
+      <![CDATA[STEP 6]]>
     </line>
     <line>
-      <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/AutomaticAlias_TC3303_081914051557PM.png ]]>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
     </line>
     <line>
-      <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/AutomaticAlias_TC3303_081914051557PM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/AutomaticAlias_TC3303_081914051557PM.png' height='500' width='500'/> </a>]]>
+      <![CDATA[Mouse over the 'Dynamic Queues' menu link.]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
+      <![CDATA[Click the 'Add 18d45cf6e78f49f' menu link.]]>
     </line>
     <line>
-      <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/MPSEndToEndIntegration_TC3996_081914051557PM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/MPSEndToEndIntegration_TC3996_081914051557PM.png' height='500' width='500'/> </a>]]>
+      <![CDATA[Switch to the active frame titled 'Add 18d45cf6e78f49f dynamic queue dialog'.]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
+      <![CDATA[STEP 7]]>
     </line>
     <line>
-      <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/BasicUIForCreatingAndRevisingQueues_Test_081914051604PM.png ]]>
+      <![CDATA[Enter '93e168e7355749c' in the 'Title' text box.]]>
     </line>
     <line>
-      <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/BasicUIForCreatingAndRevisingQueues_Test_081914051604PM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/BasicUIForCreatingAndRevisingQueues_Test_081914051604PM.png' height='500' width='500'/> </a>]]>
+      <![CDATA[]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
+      <![CDATA[Select '42a00e1a9d7e4cf' from the 'TV Shows' drop down list.]]>
     </line>
     <line>
-      <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/EditorPermissionsContentAndContentRevisionsView_TC1393_081914051606PM.png ]]>
+      <![CDATA[Click the 'Newest' radio button under 'Sort by'.]]>
     </line>
     <line>
-      <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/EditorPermissionsContentAndContentRevisionsView_TC1393_081914051606PM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/EditorPermissionsContentAndContentRevisionsView_TC1393_081914051606PM.png' height='500' width='500'/> </a>]]>
+      <![CDATA[Click the 'Save Dynamic Queue' button.]]>
     </line>
     <line>
-      <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/EditorPermissionCustomQueuesOperationsMenu_TC1379_081914051606PM.png ]]>
+      <![CDATA[STEP 8]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
     </line>
     <line>
-      <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/EditorPermissionCustomQueuesOperationsMenu_TC1379_081914051606PM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/EditorPermissionCustomQueuesOperationsMenu_TC1379_081914051606PM.png' height='500' width='500'/> </a>]]>
+      <![CDATA[Click the 'Dynamic Queues' menu link.]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
+      <![CDATA[Switch to the active frame titled 'Dynamic Queues dialog'.]]>
     </line>
     <line>
-      <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/ImplementSiteCatalyst_TC1061_081914051614PM.png ]]>
+      <![CDATA[Click the 'Close Overlay X'.]]>
     </line>
     <line>
-      <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/ImplementSiteCatalyst_TC1061_081914051614PM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/ImplementSiteCatalyst_TC1061_081914051614PM.png' height='500' width='500'/> </a>]]>
+      <![CDATA[Scroll by '-500'.]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
+      <![CDATA[Open a new browser window.]]>
     </line>
     <line>
-      <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/RelatingTVShowsDynamicQueues_TC4389_081914051614PM.png ]]>
+      <![CDATA[Switch to new browser tab/window.]]>
     </line>
     <line>
-      <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/RelatingTVShowsDynamicQueues_TC4389_081914051614PM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/RelatingTVShowsDynamicQueues_TC4389_081914051614PM.png' height='500' width='500'/> </a>]]>
+      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com/dynamic-queue/101'.]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
+      <![CDATA[Verify the text 'a411a93d14af4c7' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'Relationships' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text '42a00e1a9d7e4cf' is present on the page.]]>
     </line>
   </reporter-output>
-  <suite name="Pub 7 Concurrent Suite" duration-ms="34720" started-at="2014-08-19T21:15:43Z" finished-at="2014-08-19T21:16:18Z">
+  <suite name="Default suite" duration-ms="107307" started-at="2014-08-20T17:23:00Z" finished-at="2014-08-20T17:24:48Z">
     <groups>
       <group name="certify">
-        <method signature="AutomaticAlias.AutomaticAlias_TC3303()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.URLAlias.AutomaticAlias@12a8fc06]" name="AutomaticAlias_TC3303" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.URLAlias.AutomaticAlias"/>
-        <method signature="BasicUIForCreatingAndRevisingQueues.BasicUIForCreatingAndRevisingQueues_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.CreateUpdateRevisionsToQueues.BasicUIForCreatingAndRevisingQueues@2a4d21f4]" name="BasicUIForCreatingAndRevisingQueues_Test" class="com.nbcuni.test.publisher.tests.Queues.CreateUpdateRevisionsToQueues.BasicUIForCreatingAndRevisingQueues"/>
-        <method signature="CreateCustomContentType.CreateCustomContentType_TC1049()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CustomContentType.CreateCustomContentType@105697e9]" name="CreateCustomContentType_TC1049" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CustomContentType.CreateCustomContentType"/>
-        <method signature="EditorPermissionCustomQueuesOperationsMenu.EditorPermissionCustomQueuesOperationsMenu_TC1379()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.EditorPermissionCustomQueuesOperationsMenu@19b6b59c]" name="EditorPermissionCustomQueuesOperationsMenu_TC1379" class="com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.EditorPermissionCustomQueuesOperationsMenu"/>
-        <method signature="EditorPermissionsContentAndContentRevisionsView.EditorPermissionsContentAndContentRevisionsView_TC1393()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.EditorPermissionsContentAndContentRevisionsView@43151434]" name="EditorPermissionsContentAndContentRevisionsView_TC1393" class="com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.EditorPermissionsContentAndContentRevisionsView"/>
-        <method signature="ImplementSiteCatalyst.ImplementSiteCatalyst_TC1061()[pri:0, instance:com.nbcuni.test.publisher.tests.Metrics.SiteCatalyst.ImplementSiteCatalyst@4ad70ab0]" name="ImplementSiteCatalyst_TC1061" class="com.nbcuni.test.publisher.tests.Metrics.SiteCatalyst.ImplementSiteCatalyst"/>
-        <method signature="MPSEndToEndIntegration.MPSEndToEndIntegration_TC3996()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSEndToEndIntegration@4194f034]" name="MPSEndToEndIntegration_TC3996" class="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSEndToEndIntegration"/>
-        <method signature="PreviewContentItemsIntheFuturefromContentandWorkbenchViews.PreviewContentItemsIntheFuturefromContentandWorkbenchViews_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentAndEntityPreview.PreviewContentItemsIntheFuturefromContentandWorkbenchViews@69a6f843]" name="PreviewContentItemsIntheFuturefromContentandWorkbenchViews_Test" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentAndEntityPreview.PreviewContentItemsIntheFuturefromContentandWorkbenchViews"/>
-        <method signature="RelatingTVShowsDynamicQueues.RelatingTVShowsDynamicQueues_TC4389()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.RelatingTVShowsDynamicQueues@27fd13f6]" name="RelatingTVShowsDynamicQueues_TC4389" class="com.nbcuni.test.publisher.tests.Queues.DynamicQueues.RelatingTVShowsDynamicQueues"/>
-        <method signature="Relationships.Relationships_TC1390()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.Relationships@38dddee8]" name="Relationships_TC1390" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.Relationships"/>
-        <method signature="SchedulingContentPublishUnpublished.SchedulingContentPublishUnpublished_TC2159()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.SchedulingContentPublishUnpublished@17d1e318]" name="SchedulingContentPublishUnpublished_TC2159" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.SchedulingContentPublishUnpublished"/>
+        <method signature="RelatingTVShowsDynamicQueues.RelatingTVShowsDynamicQueues_TC4389()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.RelatingTVShowsDynamicQueues@2c2893ce]" name="RelatingTVShowsDynamicQueues_TC4389" class="com.nbcuni.test.publisher.tests.Queues.DynamicQueues.RelatingTVShowsDynamicQueues"/>
       </group> <!-- certify -->
-      <group name="mpx">
-        <method signature="SchedulingContentPublishUnpublished.SchedulingContentPublishUnpublished_TC2159()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.SchedulingContentPublishUnpublished@17d1e318]" name="SchedulingContentPublishUnpublished_TC2159" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.SchedulingContentPublishUnpublished"/>
-      </group> <!-- mpx -->
       <group name="full">
-        <method signature="AutomaticAlias.AutomaticAlias_TC3303()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.URLAlias.AutomaticAlias@12a8fc06]" name="AutomaticAlias_TC3303" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.URLAlias.AutomaticAlias"/>
-        <method signature="BasicUIForCreatingAndRevisingQueues.BasicUIForCreatingAndRevisingQueues_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.CreateUpdateRevisionsToQueues.BasicUIForCreatingAndRevisingQueues@2a4d21f4]" name="BasicUIForCreatingAndRevisingQueues_Test" class="com.nbcuni.test.publisher.tests.Queues.CreateUpdateRevisionsToQueues.BasicUIForCreatingAndRevisingQueues"/>
-        <method signature="CreateCustomContentType.CreateCustomContentType_TC1049()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CustomContentType.CreateCustomContentType@105697e9]" name="CreateCustomContentType_TC1049" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CustomContentType.CreateCustomContentType"/>
-        <method signature="EditorPermissionCustomQueuesOperationsMenu.EditorPermissionCustomQueuesOperationsMenu_TC1379()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.EditorPermissionCustomQueuesOperationsMenu@19b6b59c]" name="EditorPermissionCustomQueuesOperationsMenu_TC1379" class="com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.EditorPermissionCustomQueuesOperationsMenu"/>
-        <method signature="EditorPermissionsContentAndContentRevisionsView.EditorPermissionsContentAndContentRevisionsView_TC1393()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.EditorPermissionsContentAndContentRevisionsView@43151434]" name="EditorPermissionsContentAndContentRevisionsView_TC1393" class="com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.EditorPermissionsContentAndContentRevisionsView"/>
-        <method signature="ImplementSiteCatalyst.ImplementSiteCatalyst_TC1061()[pri:0, instance:com.nbcuni.test.publisher.tests.Metrics.SiteCatalyst.ImplementSiteCatalyst@4ad70ab0]" name="ImplementSiteCatalyst_TC1061" class="com.nbcuni.test.publisher.tests.Metrics.SiteCatalyst.ImplementSiteCatalyst"/>
-        <method signature="MPSEndToEndIntegration.MPSEndToEndIntegration_TC3996()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSEndToEndIntegration@4194f034]" name="MPSEndToEndIntegration_TC3996" class="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSEndToEndIntegration"/>
-        <method signature="PreviewContentItemsIntheFuturefromContentandWorkbenchViews.PreviewContentItemsIntheFuturefromContentandWorkbenchViews_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentAndEntityPreview.PreviewContentItemsIntheFuturefromContentandWorkbenchViews@69a6f843]" name="PreviewContentItemsIntheFuturefromContentandWorkbenchViews_Test" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentAndEntityPreview.PreviewContentItemsIntheFuturefromContentandWorkbenchViews"/>
-        <method signature="RelatingTVShowsDynamicQueues.RelatingTVShowsDynamicQueues_TC4389()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.RelatingTVShowsDynamicQueues@27fd13f6]" name="RelatingTVShowsDynamicQueues_TC4389" class="com.nbcuni.test.publisher.tests.Queues.DynamicQueues.RelatingTVShowsDynamicQueues"/>
-        <method signature="Relationships.Relationships_TC1390()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.Relationships@38dddee8]" name="Relationships_TC1390" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.Relationships"/>
-        <method signature="SchedulingContentPublishUnpublished.SchedulingContentPublishUnpublished_TC2159()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.SchedulingContentPublishUnpublished@17d1e318]" name="SchedulingContentPublishUnpublished_TC2159" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.SchedulingContentPublishUnpublished"/>
+        <method signature="RelatingTVShowsDynamicQueues.RelatingTVShowsDynamicQueues_TC4389()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.RelatingTVShowsDynamicQueues@2c2893ce]" name="RelatingTVShowsDynamicQueues_TC4389" class="com.nbcuni.test.publisher.tests.Queues.DynamicQueues.RelatingTVShowsDynamicQueues"/>
       </group> <!-- full -->
       <group name="smoke">
-        <method signature="CreateCustomContentType.CreateCustomContentType_TC1049()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CustomContentType.CreateCustomContentType@105697e9]" name="CreateCustomContentType_TC1049" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CustomContentType.CreateCustomContentType"/>
-        <method signature="EditorPermissionsContentAndContentRevisionsView.EditorPermissionsContentAndContentRevisionsView_TC1393()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.EditorPermissionsContentAndContentRevisionsView@43151434]" name="EditorPermissionsContentAndContentRevisionsView_TC1393" class="com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.EditorPermissionsContentAndContentRevisionsView"/>
-        <method signature="RelatingTVShowsDynamicQueues.RelatingTVShowsDynamicQueues_TC4389()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.RelatingTVShowsDynamicQueues@27fd13f6]" name="RelatingTVShowsDynamicQueues_TC4389" class="com.nbcuni.test.publisher.tests.Queues.DynamicQueues.RelatingTVShowsDynamicQueues"/>
+        <method signature="RelatingTVShowsDynamicQueues.RelatingTVShowsDynamicQueues_TC4389()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.RelatingTVShowsDynamicQueues@2c2893ce]" name="RelatingTVShowsDynamicQueues_TC4389" class="com.nbcuni.test.publisher.tests.Queues.DynamicQueues.RelatingTVShowsDynamicQueues"/>
       </group> <!-- smoke -->
     </groups>
-    <test name="All Concurrent Web Tests" duration-ms="34720" started-at="2014-08-19T21:15:43Z" finished-at="2014-08-19T21:16:18Z">
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.URLAlias.AutomaticAlias">
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.URLAlias.AutomaticAlias@12a8fc06]" name="startSelenium" is-config="true" duration-ms="4354" started-at="2014-08-19T17:15:53Z" finished-at="2014-08-19T17:15:57Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startSelenium -->
-        <test-method status="SKIP" signature="AutomaticAlias_TC3303()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.URLAlias.AutomaticAlias@12a8fc06]" name="AutomaticAlias_TC3303" duration-ms="1" started-at="2014-08-19T17:15:57Z" finished-at="2014-08-19T17:15:57Z">
-          <exception class="org.testng.SkipException">
-            <message>
-              <![CDATA[TestSetup Failed - Skipping test AutomaticAlias_TC3303]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.SkipException: TestSetup Failed - Skipping test AutomaticAlias_TC3303
-	at com.nbcuni.test.publisher.common.TestListeners.onTestStart(TestListeners.java:50)
-	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1904)
-	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1879)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:685)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.SkipException -->
-          <reporter-output>
-            <line>
-              <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/AutomaticAlias_TC3303_081914051557PM.png ]]>
-            </line>
-            <line>
-              <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/AutomaticAlias_TC3303_081914051557PM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/AutomaticAlias_TC3303_081914051557PM.png' height='500' width='500'/> </a>]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- AutomaticAlias_TC3303 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.URLAlias.AutomaticAlias@12a8fc06]" name="stopSelenium" is-config="true" duration-ms="4543" started-at="2014-08-19T17:15:57Z" finished-at="2014-08-19T17:16:02Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=AutomaticAlias_TC3303 status=SKIP method=AutomaticAlias.AutomaticAlias_TC3303()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.URLAlias.AutomaticAlias@12a8fc06] output=Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/AutomaticAlias_TC3303_081914051557PM.png ]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- stopSelenium -->
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.URLAlias.AutomaticAlias -->
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CustomContentType.CreateCustomContentType">
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CustomContentType.CreateCustomContentType@105697e9]" name="startSelenium" is-config="true" duration-ms="4049" started-at="2014-08-19T17:15:43Z" finished-at="2014-08-19T17:15:48Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startSelenium -->
-        <test-method status="SKIP" signature="CreateCustomContentType_TC1049()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CustomContentType.CreateCustomContentType@105697e9]" name="CreateCustomContentType_TC1049" duration-ms="1" started-at="2014-08-19T17:15:48Z" finished-at="2014-08-19T17:15:48Z">
-          <exception class="org.testng.SkipException">
-            <message>
-              <![CDATA[TestSetup Failed - Skipping test CreateCustomContentType_TC1049]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.SkipException: TestSetup Failed - Skipping test CreateCustomContentType_TC1049
-	at com.nbcuni.test.publisher.common.TestListeners.onTestStart(TestListeners.java:50)
-	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1904)
-	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1879)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:685)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.SkipException -->
-          <reporter-output>
-            <line>
-              <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCustomContentType_TC1049_081914051548PM.png ]]>
-            </line>
-            <line>
-              <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCustomContentType_TC1049_081914051548PM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCustomContentType_TC1049_081914051548PM.png' height='500' width='500'/> </a>]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- CreateCustomContentType_TC1049 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CustomContentType.CreateCustomContentType@105697e9]" name="stopSelenium" is-config="true" duration-ms="5266" started-at="2014-08-19T17:15:48Z" finished-at="2014-08-19T17:15:53Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=CreateCustomContentType_TC1049 status=SKIP method=CreateCustomContentType.CreateCustomContentType_TC1049()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CustomContentType.CreateCustomContentType@105697e9] output=Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCustomContentType_TC1049_081914051548PM.png ]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- stopSelenium -->
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CustomContentType.CreateCustomContentType -->
+    <test name="Default test" duration-ms="107307" started-at="2014-08-20T17:23:00Z" finished-at="2014-08-20T17:24:48Z">
       <class name="com.nbcuni.test.publisher.tests.Queues.DynamicQueues.RelatingTVShowsDynamicQueues">
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.RelatingTVShowsDynamicQueues@27fd13f6]" name="startSelenium" is-config="true" duration-ms="3155" started-at="2014-08-19T17:16:11Z" finished-at="2014-08-19T17:16:14Z">
+        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.RelatingTVShowsDynamicQueues@2c2893ce]" name="startGridAndHub" is-config="true" duration-ms="1285" started-at="2014-08-20T13:22:59Z" finished-at="2014-08-20T13:23:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startGridAndHub -->
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.RelatingTVShowsDynamicQueues@2c2893ce]" name="startSelenium" is-config="true" duration-ms="2629" started-at="2014-08-20T13:23:00Z" finished-at="2014-08-20T13:23:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="SKIP" signature="RelatingTVShowsDynamicQueues_TC4389()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.RelatingTVShowsDynamicQueues@27fd13f6]" name="RelatingTVShowsDynamicQueues_TC4389" duration-ms="0" started-at="2014-08-19T17:16:14Z" finished-at="2014-08-19T17:16:14Z">
-          <exception class="org.testng.SkipException">
-            <message>
-              <![CDATA[TestSetup Failed - Skipping test RelatingTVShowsDynamicQueues_TC4389]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.SkipException: TestSetup Failed - Skipping test RelatingTVShowsDynamicQueues_TC4389
-	at com.nbcuni.test.publisher.common.TestListeners.onTestStart(TestListeners.java:50)
-	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1904)
-	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1879)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:685)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.SkipException -->
+        <test-method status="PASS" signature="RelatingTVShowsDynamicQueues_TC4389()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.RelatingTVShowsDynamicQueues@2c2893ce]" name="RelatingTVShowsDynamicQueues_TC4389" duration-ms="104092" started-at="2014-08-20T13:23:03Z" finished-at="2014-08-20T13:24:47Z">
           <reporter-output>
             <line>
-              <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/RelatingTVShowsDynamicQueues_TC4389_081914051614PM.png ]]>
+              <![CDATA[STEP 1]]>
             </line>
             <line>
-              <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/RelatingTVShowsDynamicQueues_TC4389_081914051614PM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/RelatingTVShowsDynamicQueues_TC4389_081914051614PM.png' height='500' width='500'/> </a>]]>
+              <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Login' button.]]>
+            </line>
+            <line>
+              <![CDATA[SETUP]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Modules' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to frame titled 'Modules'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Dynamic Queue' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for module filter titled 'Dynamic Queue' to be visible in module list.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Dynamic Queue' check box is checked.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll by '-500'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Home' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Add content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'TV Show' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create TV Show dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '42a00e1a9d7e4cf' in the 'Title' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the Synopsis frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create TV Show dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the Logo 'Select' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the select file frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter the file path for file upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Upload' button.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Public Local Files' radio button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the file image 'HanSolo' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create TV Show dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the Cover Media 'Select' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the select file frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter the file path for file upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Upload' button.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Public Local Files' radio button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the file image 'HanSolo' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create TV Show dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the Banner 'Select' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the select file frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter the file path for file upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Upload' button.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Public Local Files' radio button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the file image 'HanSolo' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create TV Show dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Publishing Options' link.]]>
+            </line>
+            <line>
+              <![CDATA[Select 'Published' from the 'Moderation State' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'TV Show 42a00e1a9d7e4cf has been created.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 2]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Structure' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Dynamic Queue types' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Add dynamic queue type' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Add dynamic queue type dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '18d45cf6e78f49f' in the 'Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Select 'Content' or 'Node' from the 'Entity type' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Select '1 min' from the 'Cache lifetime' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Dynamic Queue types dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text '18d45cf6e78f49f' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll by '-500'.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 3 - MOVED TO SETUP]]>
+            </line>
+            <line>
+              <![CDATA[STEP 4]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Structure' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Content types' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Movie' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Manage fields' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Movie dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll by '-500'.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Add content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Movie' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'a411a93d14af4c7' in the 'Title' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the Synopsis frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Cover' select button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the select file frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter the file path for file upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Upload' button.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Public Local Files' radio button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the file image 'HanSolo' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Select '42a00e1a9d7e4cf' from the 'Show' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Publishing Options' link.]]>
+            </line>
+            <line>
+              <![CDATA[Select 'Published' from the 'Moderation State' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Movie a411a93d14af4c7 has been created.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 5]]>
+            </line>
+            <line>
+              <![CDATA[STEP 6]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Dynamic Queues' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Add 18d45cf6e78f49f' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Add 18d45cf6e78f49f dynamic queue dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 7]]>
+            </line>
+            <line>
+              <![CDATA[Enter '93e168e7355749c' in the 'Title' text box.]]>
+            </line>
+            <line>
+              <![CDATA[]]>
+            </line>
+            <line>
+              <![CDATA[Select '42a00e1a9d7e4cf' from the 'TV Shows' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Newest' radio button under 'Sort by'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save Dynamic Queue' button.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 8]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Dynamic Queues' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Dynamic Queues dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll by '-500'.]]>
+            </line>
+            <line>
+              <![CDATA[Open a new browser window.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to new browser tab/window.]]>
+            </line>
+            <line>
+              <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com/dynamic-queue/101'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'a411a93d14af4c7' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Relationships' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text '42a00e1a9d7e4cf' is present on the page.]]>
             </line>
           </reporter-output>
         </test-method> <!-- RelatingTVShowsDynamicQueues_TC4389 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.RelatingTVShowsDynamicQueues@27fd13f6]" name="stopSelenium" is-config="true" duration-ms="4065" started-at="2014-08-19T17:16:14Z" finished-at="2014-08-19T17:16:18Z">
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.RelatingTVShowsDynamicQueues@2c2893ce]" name="stopSelenium" is-config="true" duration-ms="573" started-at="2014-08-20T13:24:47Z" finished-at="2014-08-20T13:24:48Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=RelatingTVShowsDynamicQueues_TC4389 status=SKIP method=RelatingTVShowsDynamicQueues.RelatingTVShowsDynamicQueues_TC4389()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.RelatingTVShowsDynamicQueues@27fd13f6] output=Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/RelatingTVShowsDynamicQueues_TC4389_081914051614PM.png ]]]>
+                <![CDATA[[TestResult name=RelatingTVShowsDynamicQueues_TC4389 status=SUCCESS method=RelatingTVShowsDynamicQueues.RelatingTVShowsDynamicQueues_TC4389()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.RelatingTVShowsDynamicQueues@2c2893ce] output=STEP 1]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
+        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.RelatingTVShowsDynamicQueues@2c2893ce]" name="stopGridAndHub" is-config="true" duration-ms="377" started-at="2014-08-20T13:24:48Z" finished-at="2014-08-20T13:24:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopGridAndHub -->
       </class> <!-- com.nbcuni.test.publisher.tests.Queues.DynamicQueues.RelatingTVShowsDynamicQueues -->
-      <class name="com.nbcuni.test.publisher.tests.Metrics.SiteCatalyst.ImplementSiteCatalyst">
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Metrics.SiteCatalyst.ImplementSiteCatalyst@4ad70ab0]" name="startSelenium" is-config="true" duration-ms="3007" started-at="2014-08-19T17:16:11Z" finished-at="2014-08-19T17:16:14Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startSelenium -->
-        <test-method status="SKIP" signature="ImplementSiteCatalyst_TC1061()[pri:0, instance:com.nbcuni.test.publisher.tests.Metrics.SiteCatalyst.ImplementSiteCatalyst@4ad70ab0]" name="ImplementSiteCatalyst_TC1061" duration-ms="1" started-at="2014-08-19T17:16:14Z" finished-at="2014-08-19T17:16:14Z">
-          <exception class="org.testng.SkipException">
-            <message>
-              <![CDATA[TestSetup Failed - Skipping test ImplementSiteCatalyst_TC1061]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.SkipException: TestSetup Failed - Skipping test ImplementSiteCatalyst_TC1061
-	at com.nbcuni.test.publisher.common.TestListeners.onTestStart(TestListeners.java:50)
-	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1904)
-	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1879)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:685)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.SkipException -->
-          <reporter-output>
-            <line>
-              <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/ImplementSiteCatalyst_TC1061_081914051614PM.png ]]>
-            </line>
-            <line>
-              <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/ImplementSiteCatalyst_TC1061_081914051614PM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/ImplementSiteCatalyst_TC1061_081914051614PM.png' height='500' width='500'/> </a>]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- ImplementSiteCatalyst_TC1061 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Metrics.SiteCatalyst.ImplementSiteCatalyst@4ad70ab0]" name="stopSelenium" is-config="true" duration-ms="4067" started-at="2014-08-19T17:16:14Z" finished-at="2014-08-19T17:16:18Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=ImplementSiteCatalyst_TC1061 status=SKIP method=ImplementSiteCatalyst.ImplementSiteCatalyst_TC1061()[pri:0, instance:com.nbcuni.test.publisher.tests.Metrics.SiteCatalyst.ImplementSiteCatalyst@4ad70ab0] output=Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/ImplementSiteCatalyst_TC1061_081914051614PM.png ]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- stopSelenium -->
-      </class> <!-- com.nbcuni.test.publisher.tests.Metrics.SiteCatalyst.ImplementSiteCatalyst -->
-      <class name="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSEndToEndIntegration">
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSEndToEndIntegration@4194f034]" name="startSelenium" is-config="true" duration-ms="4297" started-at="2014-08-19T17:15:53Z" finished-at="2014-08-19T17:15:57Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startSelenium -->
-        <test-method status="SKIP" signature="MPSEndToEndIntegration_TC3996()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSEndToEndIntegration@4194f034]" name="MPSEndToEndIntegration_TC3996" duration-ms="1" started-at="2014-08-19T17:15:57Z" finished-at="2014-08-19T17:15:57Z">
-          <exception class="org.testng.SkipException">
-            <message>
-              <![CDATA[TestSetup Failed - Skipping test MPSEndToEndIntegration_TC3996]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.SkipException: TestSetup Failed - Skipping test MPSEndToEndIntegration_TC3996
-	at com.nbcuni.test.publisher.common.TestListeners.onTestStart(TestListeners.java:50)
-	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1904)
-	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1879)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:685)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.SkipException -->
-          <reporter-output>
-            <line>
-              <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/MPSEndToEndIntegration_TC3996_081914051557PM.png ]]>
-            </line>
-            <line>
-              <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/MPSEndToEndIntegration_TC3996_081914051557PM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/MPSEndToEndIntegration_TC3996_081914051557PM.png' height='500' width='500'/> </a>]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- MPSEndToEndIntegration_TC3996 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSEndToEndIntegration@4194f034]" name="stopSelenium" is-config="true" duration-ms="4753" started-at="2014-08-19T17:15:57Z" finished-at="2014-08-19T17:16:02Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=MPSEndToEndIntegration_TC3996 status=SKIP method=MPSEndToEndIntegration.MPSEndToEndIntegration_TC3996()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSEndToEndIntegration@4194f034] output=Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/MPSEndToEndIntegration_TC3996_081914051557PM.png ]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- stopSelenium -->
-      </class> <!-- com.nbcuni.test.publisher.tests.Advertising.MPS.MPSEndToEndIntegration -->
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.Relationships">
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.Relationships@38dddee8]" name="startSelenium" is-config="true" duration-ms="4056" started-at="2014-08-19T17:15:43Z" finished-at="2014-08-19T17:15:48Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startSelenium -->
-        <test-method status="SKIP" signature="Relationships_TC1390()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.Relationships@38dddee8]" name="Relationships_TC1390" duration-ms="1" started-at="2014-08-19T17:15:48Z" finished-at="2014-08-19T17:15:48Z">
-          <exception class="org.testng.SkipException">
-            <message>
-              <![CDATA[TestSetup Failed - Skipping test Relationships_TC1390]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.SkipException: TestSetup Failed - Skipping test Relationships_TC1390
-	at com.nbcuni.test.publisher.common.TestListeners.onTestStart(TestListeners.java:50)
-	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1904)
-	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1879)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:685)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.SkipException -->
-          <reporter-output>
-            <line>
-              <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/Relationships_TC1390_081914051548PM.png ]]>
-            </line>
-            <line>
-              <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/Relationships_TC1390_081914051548PM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/Relationships_TC1390_081914051548PM.png' height='500' width='500'/> </a>]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- Relationships_TC1390 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.Relationships@38dddee8]" name="stopSelenium" is-config="true" duration-ms="5321" started-at="2014-08-19T17:15:48Z" finished-at="2014-08-19T17:15:53Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=Relationships_TC1390 status=SKIP method=Relationships.Relationships_TC1390()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.Relationships@38dddee8] output=Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/Relationships_TC1390_081914051548PM.png ]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- stopSelenium -->
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.Relationships -->
-      <class name="com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.EditorPermissionCustomQueuesOperationsMenu">
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.EditorPermissionCustomQueuesOperationsMenu@19b6b59c]" name="startSelenium" is-config="true" duration-ms="4278" started-at="2014-08-19T17:16:02Z" finished-at="2014-08-19T17:16:06Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startSelenium -->
-        <test-method status="SKIP" signature="EditorPermissionCustomQueuesOperationsMenu_TC1379()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.EditorPermissionCustomQueuesOperationsMenu@19b6b59c]" name="EditorPermissionCustomQueuesOperationsMenu_TC1379" duration-ms="0" started-at="2014-08-19T17:16:06Z" finished-at="2014-08-19T17:16:06Z">
-          <exception class="org.testng.SkipException">
-            <message>
-              <![CDATA[TestSetup Failed - Skipping test EditorPermissionCustomQueuesOperationsMenu_TC1379]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.SkipException: TestSetup Failed - Skipping test EditorPermissionCustomQueuesOperationsMenu_TC1379
-	at com.nbcuni.test.publisher.common.TestListeners.onTestStart(TestListeners.java:50)
-	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1904)
-	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1879)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:685)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.SkipException -->
-          <reporter-output>
-            <line>
-              <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/EditorPermissionCustomQueuesOperationsMenu_TC1379_081914051606PM.png ]]>
-            </line>
-            <line>
-              <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/EditorPermissionCustomQueuesOperationsMenu_TC1379_081914051606PM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/EditorPermissionCustomQueuesOperationsMenu_TC1379_081914051606PM.png' height='500' width='500'/> </a>]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- EditorPermissionCustomQueuesOperationsMenu_TC1379 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.EditorPermissionCustomQueuesOperationsMenu@19b6b59c]" name="stopSelenium" is-config="true" duration-ms="4780" started-at="2014-08-19T17:16:06Z" finished-at="2014-08-19T17:16:11Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=EditorPermissionCustomQueuesOperationsMenu_TC1379 status=SKIP method=EditorPermissionCustomQueuesOperationsMenu.EditorPermissionCustomQueuesOperationsMenu_TC1379()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.EditorPermissionCustomQueuesOperationsMenu@19b6b59c] output=Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/EditorPermissionCustomQueuesOperationsMenu_TC1379_081914051606PM.png ]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- stopSelenium -->
-      </class> <!-- com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.EditorPermissionCustomQueuesOperationsMenu -->
-      <class name="com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.EditorPermissionsContentAndContentRevisionsView">
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.EditorPermissionsContentAndContentRevisionsView@43151434]" name="startSelenium" is-config="true" duration-ms="4290" started-at="2014-08-19T17:16:02Z" finished-at="2014-08-19T17:16:06Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.EditorPermissionsContentAndContentRevisionsView@43151434]" name="stopSelenium" is-config="true" duration-ms="4748" started-at="2014-08-19T17:16:06Z" finished-at="2014-08-19T17:16:11Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=EditorPermissionsContentAndContentRevisionsView_TC1393 status=SKIP method=EditorPermissionsContentAndContentRevisionsView.EditorPermissionsContentAndContentRevisionsView_TC1393()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.EditorPermissionsContentAndContentRevisionsView@43151434] output=Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/EditorPermissionsContentAndContentRevisionsView_TC1393_081914051606PM.png ]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- stopSelenium -->
-        <test-method status="SKIP" signature="EditorPermissionsContentAndContentRevisionsView_TC1393()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.EditorPermissionsContentAndContentRevisionsView@43151434]" name="EditorPermissionsContentAndContentRevisionsView_TC1393" duration-ms="0" started-at="2014-08-19T17:16:06Z" finished-at="2014-08-19T17:16:06Z">
-          <exception class="org.testng.SkipException">
-            <message>
-              <![CDATA[TestSetup Failed - Skipping test EditorPermissionsContentAndContentRevisionsView_TC1393]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.SkipException: TestSetup Failed - Skipping test EditorPermissionsContentAndContentRevisionsView_TC1393
-	at com.nbcuni.test.publisher.common.TestListeners.onTestStart(TestListeners.java:50)
-	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1904)
-	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1879)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:685)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.SkipException -->
-          <reporter-output>
-            <line>
-              <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/EditorPermissionsContentAndContentRevisionsView_TC1393_081914051606PM.png ]]>
-            </line>
-            <line>
-              <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/EditorPermissionsContentAndContentRevisionsView_TC1393_081914051606PM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/EditorPermissionsContentAndContentRevisionsView_TC1393_081914051606PM.png' height='500' width='500'/> </a>]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- EditorPermissionsContentAndContentRevisionsView_TC1393 -->
-      </class> <!-- com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.EditorPermissionsContentAndContentRevisionsView -->
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentAndEntityPreview.PreviewContentItemsIntheFuturefromContentandWorkbenchViews">
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentAndEntityPreview.PreviewContentItemsIntheFuturefromContentandWorkbenchViews@69a6f843]" name="startSelenium" is-config="true" duration-ms="3740" started-at="2014-08-19T17:15:53Z" finished-at="2014-08-19T17:15:56Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startSelenium -->
-        <test-method status="SKIP" signature="PreviewContentItemsIntheFuturefromContentandWorkbenchViews_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentAndEntityPreview.PreviewContentItemsIntheFuturefromContentandWorkbenchViews@69a6f843]" name="PreviewContentItemsIntheFuturefromContentandWorkbenchViews_Test" duration-ms="1" started-at="2014-08-19T17:15:56Z" finished-at="2014-08-19T17:15:56Z">
-          <exception class="org.testng.SkipException">
-            <message>
-              <![CDATA[TestSetup Failed - Skipping test PreviewContentItemsIntheFuturefromContentandWorkbenchViews_Test]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.SkipException: TestSetup Failed - Skipping test PreviewContentItemsIntheFuturefromContentandWorkbenchViews_Test
-	at com.nbcuni.test.publisher.common.TestListeners.onTestStart(TestListeners.java:50)
-	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1904)
-	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1879)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:685)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.SkipException -->
-          <reporter-output>
-            <line>
-              <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/PreviewContentItemsIntheFuturefromContentandWorkbenchViews_Test_081914051556PM.png ]]>
-            </line>
-            <line>
-              <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/PreviewContentItemsIntheFuturefromContentandWorkbenchViews_Test_081914051556PM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/PreviewContentItemsIntheFuturefromContentandWorkbenchViews_Test_081914051556PM.png' height='500' width='500'/> </a>]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- PreviewContentItemsIntheFuturefromContentandWorkbenchViews_Test -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentAndEntityPreview.PreviewContentItemsIntheFuturefromContentandWorkbenchViews@69a6f843]" name="stopSelenium" is-config="true" duration-ms="4759" started-at="2014-08-19T17:15:56Z" finished-at="2014-08-19T17:16:01Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=PreviewContentItemsIntheFuturefromContentandWorkbenchViews_Test status=SKIP method=PreviewContentItemsIntheFuturefromContentandWorkbenchViews.PreviewContentItemsIntheFuturefromContentandWorkbenchViews_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentAndEntityPreview.PreviewContentItemsIntheFuturefromContentandWorkbenchViews@69a6f843] output=Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/PreviewContentItemsIntheFuturefromContentandWorkbenchViews_Test_081914051556PM.png ]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- stopSelenium -->
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentAndEntityPreview.PreviewContentItemsIntheFuturefromContentandWorkbenchViews -->
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.LockContentWhenEditing.ContentLocking">
-        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.LockContentWhenEditing.ContentLocking@6bedd91b]" name="startGridAndHub" is-config="true" duration-ms="304" started-at="2014-08-19T17:15:43Z" finished-at="2014-08-19T17:15:43Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startGridAndHub -->
-        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.LockContentWhenEditing.ContentLocking@6bedd91b]" name="stopGridAndHub" is-config="true" duration-ms="452" started-at="2014-08-19T17:16:18Z" finished-at="2014-08-19T17:16:19Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- stopGridAndHub -->
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.LockContentWhenEditing.ContentLocking -->
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.SchedulingContentPublishUnpublished">
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.SchedulingContentPublishUnpublished@17d1e318]" name="startSelenium" is-config="true" duration-ms="4075" started-at="2014-08-19T17:15:43Z" finished-at="2014-08-19T17:15:48Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startSelenium -->
-        <test-method status="SKIP" signature="SchedulingContentPublishUnpublished_TC2159()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.SchedulingContentPublishUnpublished@17d1e318]" name="SchedulingContentPublishUnpublished_TC2159" duration-ms="1" started-at="2014-08-19T17:15:48Z" finished-at="2014-08-19T17:15:48Z">
-          <exception class="org.testng.SkipException">
-            <message>
-              <![CDATA[TestSetup Failed - Skipping test SchedulingContentPublishUnpublished_TC2159]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.SkipException: TestSetup Failed - Skipping test SchedulingContentPublishUnpublished_TC2159
-	at com.nbcuni.test.publisher.common.TestListeners.onTestStart(TestListeners.java:50)
-	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1904)
-	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1879)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:685)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.SkipException -->
-          <reporter-output>
-            <line>
-              <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/SchedulingContentPublishUnpublished_TC2159_081914051548PM.png ]]>
-            </line>
-            <line>
-              <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/SchedulingContentPublishUnpublished_TC2159_081914051548PM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/SchedulingContentPublishUnpublished_TC2159_081914051548PM.png' height='500' width='500'/> </a>]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- SchedulingContentPublishUnpublished_TC2159 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.SchedulingContentPublishUnpublished@17d1e318]" name="stopSelenium" is-config="true" duration-ms="5035" started-at="2014-08-19T17:15:48Z" finished-at="2014-08-19T17:15:53Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=SchedulingContentPublishUnpublished_TC2159 status=SKIP method=SchedulingContentPublishUnpublished.SchedulingContentPublishUnpublished_TC2159()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.SchedulingContentPublishUnpublished@17d1e318] output=Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/SchedulingContentPublishUnpublished_TC2159_081914051548PM.png ]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- stopSelenium -->
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.SchedulingContentPublishUnpublished -->
-      <class name="com.nbcuni.test.publisher.tests.Queues.CreateUpdateRevisionsToQueues.BasicUIForCreatingAndRevisingQueues">
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.CreateUpdateRevisionsToQueues.BasicUIForCreatingAndRevisingQueues@2a4d21f4]" name="startSelenium" is-config="true" duration-ms="2985" started-at="2014-08-19T17:16:01Z" finished-at="2014-08-19T17:16:04Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startSelenium -->
-        <test-method status="SKIP" signature="BasicUIForCreatingAndRevisingQueues_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.CreateUpdateRevisionsToQueues.BasicUIForCreatingAndRevisingQueues@2a4d21f4]" name="BasicUIForCreatingAndRevisingQueues_Test" duration-ms="1" started-at="2014-08-19T17:16:04Z" finished-at="2014-08-19T17:16:04Z">
-          <exception class="org.testng.SkipException">
-            <message>
-              <![CDATA[TestSetup Failed - Skipping test BasicUIForCreatingAndRevisingQueues_Test]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.SkipException: TestSetup Failed - Skipping test BasicUIForCreatingAndRevisingQueues_Test
-	at com.nbcuni.test.publisher.common.TestListeners.onTestStart(TestListeners.java:50)
-	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1904)
-	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1879)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:685)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.SkipException -->
-          <reporter-output>
-            <line>
-              <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/BasicUIForCreatingAndRevisingQueues_Test_081914051604PM.png ]]>
-            </line>
-            <line>
-              <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/BasicUIForCreatingAndRevisingQueues_Test_081914051604PM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/BasicUIForCreatingAndRevisingQueues_Test_081914051604PM.png' height='500' width='500'/> </a>]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- BasicUIForCreatingAndRevisingQueues_Test -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.CreateUpdateRevisionsToQueues.BasicUIForCreatingAndRevisingQueues@2a4d21f4]" name="stopSelenium" is-config="true" duration-ms="7132" started-at="2014-08-19T17:16:04Z" finished-at="2014-08-19T17:16:11Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=BasicUIForCreatingAndRevisingQueues_Test status=SKIP method=BasicUIForCreatingAndRevisingQueues.BasicUIForCreatingAndRevisingQueues_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.CreateUpdateRevisionsToQueues.BasicUIForCreatingAndRevisingQueues@2a4d21f4] output=Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/BasicUIForCreatingAndRevisingQueues_Test_081914051604PM.png ]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- stopSelenium -->
-      </class> <!-- com.nbcuni.test.publisher.tests.Queues.CreateUpdateRevisionsToQueues.BasicUIForCreatingAndRevisingQueues -->
-    </test> <!-- All Concurrent Web Tests -->
-  </suite> <!-- Pub 7 Concurrent Suite -->
-  <suite name="Pub 7 Consecutive Suite" duration-ms="179112" started-at="2014-08-19T21:12:44Z" finished-at="2014-08-19T21:15:43Z">
-    <groups>
-      <group name="certify">
-        <method signature="A1_TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.A1_TestSetup@71f31c64]" name="TestSetup_Test" class="com.nbcuni.test.publisher.tests.Setup.A1_TestSetup"/>
-        <method signature="NotificationPlayerUnavailability.NotificationPlayerUnavailability_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability@d2d78bd]" name="NotificationPlayerUnavailability_Test" class="com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability"/>
-        <method signature="PopulateEXIFBulkUpload.PopulateEXIFBulkUpload_TC3192()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIF.PopulateEXIFBulkUpload@1b01bcee]" name="PopulateEXIFBulkUpload_TC3192" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIF.PopulateEXIFBulkUpload"/>
-        <method signature="ThumbnailsAreNotUpdated.ThumbnailsAreNotUpdated_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.Thumbnails.ThumbnailsAreNotUpdated@427aff0]" name="ThumbnailsAreNotUpdated_Test" class="com.nbcuni.test.publisher.tests.Video.Thumbnails.ThumbnailsAreNotUpdated"/>
-        <method signature="Z1_TestCleanup.TestCleanup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.Z1_TestCleanup@6bcb9aea]" name="TestCleanup_Test" class="com.nbcuni.test.publisher.tests.Setup.Z1_TestCleanup"/>
-      </group> <!-- certify -->
-      <group name="mpx">
-        <method signature="A1_TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.A1_TestSetup@71f31c64]" name="TestSetup_Test" class="com.nbcuni.test.publisher.tests.Setup.A1_TestSetup"/>
-        <method signature="NotificationPlayerUnavailability.NotificationPlayerUnavailability_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability@d2d78bd]" name="NotificationPlayerUnavailability_Test" class="com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability"/>
-        <method signature="ThumbnailsAreNotUpdated.ThumbnailsAreNotUpdated_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.Thumbnails.ThumbnailsAreNotUpdated@427aff0]" name="ThumbnailsAreNotUpdated_Test" class="com.nbcuni.test.publisher.tests.Video.Thumbnails.ThumbnailsAreNotUpdated"/>
-        <method signature="Z1_TestCleanup.TestCleanup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.Z1_TestCleanup@6bcb9aea]" name="TestCleanup_Test" class="com.nbcuni.test.publisher.tests.Setup.Z1_TestCleanup"/>
-      </group> <!-- mpx -->
-      <group name="full">
-        <method signature="A1_TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.A1_TestSetup@71f31c64]" name="TestSetup_Test" class="com.nbcuni.test.publisher.tests.Setup.A1_TestSetup"/>
-        <method signature="NotificationPlayerUnavailability.NotificationPlayerUnavailability_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability@d2d78bd]" name="NotificationPlayerUnavailability_Test" class="com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability"/>
-        <method signature="PopulateEXIFBulkUpload.PopulateEXIFBulkUpload_TC3192()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIF.PopulateEXIFBulkUpload@1b01bcee]" name="PopulateEXIFBulkUpload_TC3192" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIF.PopulateEXIFBulkUpload"/>
-        <method signature="ThumbnailsAreNotUpdated.ThumbnailsAreNotUpdated_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.Thumbnails.ThumbnailsAreNotUpdated@427aff0]" name="ThumbnailsAreNotUpdated_Test" class="com.nbcuni.test.publisher.tests.Video.Thumbnails.ThumbnailsAreNotUpdated"/>
-        <method signature="Z1_TestCleanup.TestCleanup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.Z1_TestCleanup@6bcb9aea]" name="TestCleanup_Test" class="com.nbcuni.test.publisher.tests.Setup.Z1_TestCleanup"/>
-      </group> <!-- full -->
-      <group name="smoke">
-        <method signature="A1_TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.A1_TestSetup@71f31c64]" name="TestSetup_Test" class="com.nbcuni.test.publisher.tests.Setup.A1_TestSetup"/>
-        <method signature="Z1_TestCleanup.TestCleanup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.Z1_TestCleanup@6bcb9aea]" name="TestCleanup_Test" class="com.nbcuni.test.publisher.tests.Setup.Z1_TestCleanup"/>
-      </group> <!-- smoke -->
-    </groups>
-    <test name="All Consecutive Web Tests" duration-ms="179112" started-at="2014-08-19T21:12:44Z" finished-at="2014-08-19T21:15:43Z">
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIF.PopulateEXIFBulkUpload">
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIF.PopulateEXIFBulkUpload@1b01bcee]" name="startSelenium" is-config="true" duration-ms="2167" started-at="2014-08-19T17:15:24Z" finished-at="2014-08-19T17:15:26Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startSelenium -->
-        <test-method status="SKIP" signature="PopulateEXIFBulkUpload_TC3192()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIF.PopulateEXIFBulkUpload@1b01bcee]" name="PopulateEXIFBulkUpload_TC3192" duration-ms="1" started-at="2014-08-19T17:15:26Z" finished-at="2014-08-19T17:15:26Z">
-          <exception class="org.testng.SkipException">
-            <message>
-              <![CDATA[TestSetup Failed - Skipping test PopulateEXIFBulkUpload_TC3192]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.SkipException: TestSetup Failed - Skipping test PopulateEXIFBulkUpload_TC3192
-	at com.nbcuni.test.publisher.common.TestListeners.onTestStart(TestListeners.java:50)
-	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1904)
-	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1879)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:685)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1220)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.SkipException -->
-          <reporter-output>
-            <line>
-              <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/PopulateEXIFBulkUpload_TC3192_081914051526PM.png ]]>
-            </line>
-            <line>
-              <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/PopulateEXIFBulkUpload_TC3192_081914051526PM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/PopulateEXIFBulkUpload_TC3192_081914051526PM.png' height='500' width='500'/> </a>]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- PopulateEXIFBulkUpload_TC3192 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIF.PopulateEXIFBulkUpload@1b01bcee]" name="stopSelenium" is-config="true" duration-ms="3992" started-at="2014-08-19T17:15:26Z" finished-at="2014-08-19T17:15:30Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=PopulateEXIFBulkUpload_TC3192 status=SKIP method=PopulateEXIFBulkUpload.PopulateEXIFBulkUpload_TC3192()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIF.PopulateEXIFBulkUpload@1b01bcee] output=Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/PopulateEXIFBulkUpload_TC3192_081914051526PM.png ]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- stopSelenium -->
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIF.PopulateEXIFBulkUpload -->
-      <class name="com.nbcuni.test.publisher.tests.Video.Configuration.ConfigurationMultipleMPXAccounts">
-        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.Configuration.ConfigurationMultipleMPXAccounts@49a3a85d]" name="startGridAndHub" is-config="true" duration-ms="807" started-at="2014-08-19T17:12:43Z" finished-at="2014-08-19T17:12:44Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startGridAndHub -->
-        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.Configuration.ConfigurationMultipleMPXAccounts@49a3a85d]" name="stopGridAndHub" is-config="true" duration-ms="429" started-at="2014-08-19T17:15:43Z" finished-at="2014-08-19T17:15:43Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- stopGridAndHub -->
-      </class> <!-- com.nbcuni.test.publisher.tests.Video.Configuration.ConfigurationMultipleMPXAccounts -->
-      <class name="com.nbcuni.test.publisher.tests.Setup.Z1_TestCleanup">
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.Z1_TestCleanup@6bcb9aea]" name="startSelenium" is-config="true" duration-ms="2188" started-at="2014-08-19T17:15:30Z" finished-at="2014-08-19T17:15:32Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startSelenium -->
-        <test-method status="SKIP" signature="TestCleanup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.Z1_TestCleanup@6bcb9aea]" name="TestCleanup_Test" duration-ms="0" started-at="2014-08-19T17:15:32Z" finished-at="2014-08-19T17:15:32Z">
-          <exception class="org.testng.SkipException">
-            <message>
-              <![CDATA[TestSetup Failed - Skipping test TestCleanup_Test]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.SkipException: TestSetup Failed - Skipping test TestCleanup_Test
-	at com.nbcuni.test.publisher.common.TestListeners.onTestStart(TestListeners.java:50)
-	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1904)
-	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1879)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:685)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1220)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.SkipException -->
-          <reporter-output>
-            <line>
-              <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/TestCleanup_Test_081914051532PM.png ]]>
-            </line>
-            <line>
-              <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/TestCleanup_Test_081914051532PM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/TestCleanup_Test_081914051532PM.png' height='500' width='500'/> </a>]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- TestCleanup_Test -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.Z1_TestCleanup@6bcb9aea]" name="stopSelenium" is-config="true" duration-ms="4024" started-at="2014-08-19T17:15:32Z" finished-at="2014-08-19T17:15:36Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=TestCleanup_Test status=SKIP method=Z1_TestCleanup.TestCleanup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.Z1_TestCleanup@6bcb9aea] output=Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/TestCleanup_Test_081914051532PM.png ]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- stopSelenium -->
-      </class> <!-- com.nbcuni.test.publisher.tests.Setup.Z1_TestCleanup -->
-      <class name="com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability">
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability@d2d78bd]" name="startSelenium" is-config="true" duration-ms="2178" started-at="2014-08-19T17:15:18Z" finished-at="2014-08-19T17:15:20Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startSelenium -->
-        <test-method status="SKIP" signature="NotificationPlayerUnavailability_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability@d2d78bd]" name="NotificationPlayerUnavailability_Test" duration-ms="1" started-at="2014-08-19T17:15:20Z" finished-at="2014-08-19T17:15:20Z">
-          <exception class="org.testng.SkipException">
-            <message>
-              <![CDATA[TestSetup Failed - Skipping test NotificationPlayerUnavailability_Test]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.SkipException: TestSetup Failed - Skipping test NotificationPlayerUnavailability_Test
-	at com.nbcuni.test.publisher.common.TestListeners.onTestStart(TestListeners.java:50)
-	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1904)
-	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1879)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:685)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1220)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.SkipException -->
-          <reporter-output>
-            <line>
-              <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/NotificationPlayerUnavailability_Test_081914051520PM.png ]]>
-            </line>
-            <line>
-              <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/NotificationPlayerUnavailability_Test_081914051520PM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/NotificationPlayerUnavailability_Test_081914051520PM.png' height='500' width='500'/> </a>]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- NotificationPlayerUnavailability_Test -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability@d2d78bd]" name="stopSelenium" is-config="true" duration-ms="3997" started-at="2014-08-19T17:15:20Z" finished-at="2014-08-19T17:15:24Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=NotificationPlayerUnavailability_Test status=SKIP method=NotificationPlayerUnavailability.NotificationPlayerUnavailability_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability@d2d78bd] output=Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/NotificationPlayerUnavailability_Test_081914051520PM.png ]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- stopSelenium -->
-      </class> <!-- com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability -->
-      <class name="com.nbcuni.test.publisher.tests.Video.Thumbnails.ThumbnailsAreNotUpdated">
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.Thumbnails.ThumbnailsAreNotUpdated@427aff0]" name="startSelenium" is-config="true" duration-ms="2189" started-at="2014-08-19T17:15:36Z" finished-at="2014-08-19T17:15:39Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startSelenium -->
-        <test-method status="SKIP" signature="ThumbnailsAreNotUpdated_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.Thumbnails.ThumbnailsAreNotUpdated@427aff0]" name="ThumbnailsAreNotUpdated_Test" duration-ms="1" started-at="2014-08-19T17:15:39Z" finished-at="2014-08-19T17:15:39Z">
-          <exception class="org.testng.SkipException">
-            <message>
-              <![CDATA[TestSetup Failed - Skipping test ThumbnailsAreNotUpdated_Test]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.SkipException: TestSetup Failed - Skipping test ThumbnailsAreNotUpdated_Test
-	at com.nbcuni.test.publisher.common.TestListeners.onTestStart(TestListeners.java:50)
-	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1904)
-	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1879)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:685)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1220)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.SkipException -->
-          <reporter-output>
-            <line>
-              <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/ThumbnailsAreNotUpdated_Test_081914051539PM.png ]]>
-            </line>
-            <line>
-              <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/ThumbnailsAreNotUpdated_Test_081914051539PM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/ThumbnailsAreNotUpdated_Test_081914051539PM.png' height='500' width='500'/> </a>]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- ThumbnailsAreNotUpdated_Test -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Video.Thumbnails.ThumbnailsAreNotUpdated@427aff0]" name="stopSelenium" is-config="true" duration-ms="4018" started-at="2014-08-19T17:15:39Z" finished-at="2014-08-19T17:15:43Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=ThumbnailsAreNotUpdated_Test status=SKIP method=ThumbnailsAreNotUpdated.ThumbnailsAreNotUpdated_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.Thumbnails.ThumbnailsAreNotUpdated@427aff0] output=Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/ThumbnailsAreNotUpdated_Test_081914051539PM.png ]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- stopSelenium -->
-      </class> <!-- com.nbcuni.test.publisher.tests.Video.Thumbnails.ThumbnailsAreNotUpdated -->
-      <class name="com.nbcuni.test.publisher.tests.Setup.A1_TestSetup">
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.A1_TestSetup@71f31c64]" name="startSelenium" is-config="true" duration-ms="2922" started-at="2014-08-19T17:12:44Z" finished-at="2014-08-19T17:12:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startSelenium -->
-        <test-method status="FAIL" signature="TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.A1_TestSetup@71f31c64]" name="TestSetup_Test" duration-ms="148596" started-at="2014-08-19T17:12:47Z" finished-at="2014-08-19T17:15:15Z">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: null
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.fail(Assert.java:101)
-	at com.nbcuni.test.publisher.tests.Setup.A1_TestSetup.TestSetup_Test(A1_TestSetup.java:267)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1220)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-            <line>
-              <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Login' button.]]>
-            </line>
-            <line>
-              <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com/admin/modules'.]]>
-            </line>
-            <line>
-              <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com/#overlay=admin/modules'.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Sticky Edit Actions' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for module filter titled 'Sticky Edit Actions' to be visible in module list.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Devel' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for module filter titled 'Devel' to be visible in module list.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Devel' check box is checked.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Acquia Purge' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for module filter titled 'Acquia Purge' to be visible in module list.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'ImageField Focus' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for module filter titled 'ImageField Focus' to be visible in module list.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Database logging' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for module filter titled 'Database logging' to be visible in module list.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Pub Post' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for module filter titled 'Pub Post' to be visible in module list.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Pub Post' check box is checked.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Logo Manager' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for module filter titled 'Logo Manager' to be visible in module list.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Logo Manager' check box is checked.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'MPS' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for module filter titled 'MPS' to be visible in module list.]]>
-            </line>
-            <line>
-              <![CDATA[Uncheck the 'MPS' module checkbox.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Uninstall' overlay tab.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll by '-500'.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'MPS' uninstall checkbox.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Uninstall' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Confirm uninstall dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'The following modules will be completely uninstalled from your site, and all data from these modules will be lost!' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'MPS' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Uninstall' button to confirm.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll by '-500'.]]>
-            </line>
-            <line>
-              <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Login' button.]]>
-            </line>
-            <line>
-              <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com/admin/modules'.]]>
-            </line>
-            <line>
-              <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com/#overlay=admin/modules'.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Sticky Edit Actions' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for module filter titled 'Sticky Edit Actions' to be visible in module list.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Devel' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for module filter titled 'Devel' to be visible in module list.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Devel' check box is checked.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Acquia Purge' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for module filter titled 'Acquia Purge' to be visible in module list.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'ImageField Focus' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for module filter titled 'ImageField Focus' to be visible in module list.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Database logging' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for module filter titled 'Database logging' to be visible in module list.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Pub Post' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for module filter titled 'Pub Post' to be visible in module list.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Pub Post' check box is checked.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Logo Manager' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for module filter titled 'Logo Manager' to be visible in module list.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Logo Manager' check box is checked.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'MPS' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for module filter titled 'MPS' to be visible in module list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Uninstall' overlay tab.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll by '-500'.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll by '-500'.]]>
-            </line>
-            <line>
-              <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Login' button.]]>
-            </line>
-            <line>
-              <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com/admin/modules'.]]>
-            </line>
-            <line>
-              <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com/#overlay=admin/modules'.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Sticky Edit Actions' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for module filter titled 'Sticky Edit Actions' to be visible in module list.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Devel' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for module filter titled 'Devel' to be visible in module list.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Devel' check box is checked.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Acquia Purge' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for module filter titled 'Acquia Purge' to be visible in module list.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'ImageField Focus' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for module filter titled 'ImageField Focus' to be visible in module list.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Database logging' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for module filter titled 'Database logging' to be visible in module list.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Pub Post' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for module filter titled 'Pub Post' to be visible in module list.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Pub Post' check box is checked.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Logo Manager' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for module filter titled 'Logo Manager' to be visible in module list.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Logo Manager' check box is checked.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'MPS' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for module filter titled 'MPS' to be visible in module list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Uninstall' overlay tab.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll by '-500'.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll by '-500'.]]>
-            </line>
-            <line>
-              <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Login' button.]]>
-            </line>
-            <line>
-              <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com/admin/modules'.]]>
-            </line>
-            <line>
-              <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com/#overlay=admin/modules'.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Sticky Edit Actions' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for module filter titled 'Sticky Edit Actions' to be visible in module list.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Devel' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for module filter titled 'Devel' to be visible in module list.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Devel' check box is checked.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Acquia Purge' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for module filter titled 'Acquia Purge' to be visible in module list.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'ImageField Focus' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for module filter titled 'ImageField Focus' to be visible in module list.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Database logging' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for module filter titled 'Database logging' to be visible in module list.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Pub Post' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for module filter titled 'Pub Post' to be visible in module list.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Pub Post' check box is checked.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Logo Manager' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for module filter titled 'Logo Manager' to be visible in module list.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Logo Manager' check box is checked.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'MPS' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for module filter titled 'MPS' to be visible in module list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Uninstall' overlay tab.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll by '-500'.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll by '-500'.]]>
-            </line>
-            <line>
-              <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/TestSetup_Test_081914051515PM.png ]]>
-            </line>
-            <line>
-              <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/TestSetup_Test_081914051515PM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/TestSetup_Test_081914051515PM.png' height='500' width='500'/> </a>]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- TestSetup_Test -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.A1_TestSetup@71f31c64]" name="stopSelenium" is-config="true" duration-ms="2820" started-at="2014-08-19T17:15:15Z" finished-at="2014-08-19T17:15:18Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=TestSetup_Test status=FAILURE method=A1_TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.A1_TestSetup@71f31c64] output=Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- stopSelenium -->
-      </class> <!-- com.nbcuni.test.publisher.tests.Setup.A1_TestSetup -->
-    </test> <!-- All Consecutive Web Tests -->
-  </suite> <!-- Pub 7 Consecutive Suite -->
-  <suite name="Publisher 7 Test Suites" duration-ms="0" started-at="2014-08-19T21:16:19Z" finished-at="2014-08-19T21:16:19Z">
-    <groups>
-    </groups>
-  </suite> <!-- Publisher 7 Test Suites -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

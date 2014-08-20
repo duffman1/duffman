@@ -35,6 +35,8 @@ public class RelatingTVShowsDynamicQueues extends ParentTest{
         Reporter.log("SETUP");
         Modules modules = new Modules(webDriver, applib);
         modules.VerifyModuleEnabled("Dynamic Queue");
+        CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver, applib);
+        String tvShowName1 = createDefaultContent.TVShow("Published");
         
         Reporter.log("STEP 2");
         taxonomy.NavigateSite("Structure>>Dynamic Queue types>>Add dynamic queue type");
@@ -43,15 +45,13 @@ public class RelatingTVShowsDynamicQueues extends ParentTest{
         AddDynamicQueueType addDynamicQueueType = new AddDynamicQueueType(webDriver);
         addDynamicQueueType.EnterName(dynamicQueueTypeName);
         addDynamicQueueType.SelectEntityType();
+        addDynamicQueueType.SelectCacheLifetime("1 min");
         addDynamicQueueType.ClickSaveBtn();
         overlay.SwitchToActiveFrame();
         contentParent.VerifyPageContentPresent(Arrays.asList(dynamicQueueTypeName));
         overlay.ClickCloseOverlayLnk();
         
-        Reporter.log("STEP 3");
-        CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver, applib);
-        String tvShowName1 = createDefaultContent.TVShow("Published");
-        //String tvShowName2 = createDefaultContent.TVShow("Published");
+        Reporter.log("STEP 3 - MOVED TO SETUP");
         
         Reporter.log("STEP 4");
         taxonomy.NavigateSite("Structure>>Content types>>Movie>>Manage fields");
@@ -105,9 +105,7 @@ public class RelatingTVShowsDynamicQueues extends ParentTest{
         addDynamicQueue.SelectTVShow(tvShowName1);
         addDynamicQueue.ClickSortByNewestRdb();
         addDynamicQueue.ClickSaveDynamicQueueBtn();
-        overlay.SwitchToActiveFrame();
-        contentParent.VerifyPageContentPresent(Arrays.asList(dynamicQueueTitle));
-        overlay.ClickCloseOverlayLnk();
+        overlay.switchToDefaultContent(true);
         
         Reporter.log("STEP 8");
         taxonomy.NavigateSite("Content>>Dynamic Queues");

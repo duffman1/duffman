@@ -38,6 +38,9 @@ public class AddDynamicQueueType {
     	return webDriver.findElement(By.xpath("//label[text()='" + contentType + " ']/../input"));
     }
     
+    @FindBy(how = How.ID, using = "edit-cache-lifetime")
+    private WebElement CacheLifetime_Ddl;
+    
     @FindBy(how = How.ID, using = "edit-submit")
     private WebElement Save_Btn;
     
@@ -58,6 +61,12 @@ public class AddDynamicQueueType {
     	catch (Exception e) {
     		new Select(EntityType_Ddl).selectByVisibleText("Node");
     	}
+    }
+    
+    public void SelectCacheLifetime(String lifetime) throws Exception {
+    	
+    	Reporter.log("Select '" + lifetime + "' from the 'Cache lifetime' drop down list.");
+    	new Select(CacheLifetime_Ddl).selectByVisibleText(lifetime);
     }
     
     public void EnableContentTypes(List<String> contentTypes) throws Exception {

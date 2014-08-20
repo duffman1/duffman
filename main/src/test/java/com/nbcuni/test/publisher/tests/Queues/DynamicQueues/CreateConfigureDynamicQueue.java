@@ -31,6 +31,11 @@ public class CreateConfigureDynamicQueue extends ParentTest{
         UserLogin userLogin = applib.openApplication();
         userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
         
+        Reporter.log("SETUP");
+        CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver, applib);
+        String characterProfileTitle = createDefaultContent.CharacterProfile("Published", null, null);
+        String postTitle = createDefaultContent.Post("Published");
+        
         Reporter.log("STEP 2");
         Modules modules = new Modules(webDriver, applib);
         modules.VerifyModuleEnabled("Dynamic Queue");
@@ -43,7 +48,7 @@ public class CreateConfigureDynamicQueue extends ParentTest{
         String dynamicQueueTypeName = random.GetCharacterString(15);
         AddDynamicQueueType addDynamicQueueType = new AddDynamicQueueType(webDriver);
         addDynamicQueueType.EnterName(dynamicQueueTypeName);
-        		
+        addDynamicQueueType.SelectCacheLifetime("1 min");		
         addDynamicQueueType.SelectEntityType();
         addDynamicQueueType.ClickSaveBtn();
         overlay.SwitchToActiveFrame();
@@ -62,14 +67,9 @@ public class CreateConfigureDynamicQueue extends ParentTest{
         addDynamicQueue.CheckTargetBundle_Cbx("Post");
         addDynamicQueue.ClickSortByNewestRdb();
         addDynamicQueue.ClickSaveDynamicQueueBtn();
-        overlay.SwitchToActiveFrame();
-        contentParent.VerifyPageContentPresent(Arrays.asList(dynamicQueueTitle));
-        overlay.ClickCloseOverlayLnk();
+        overlay.switchToDefaultContent(true);
         
-        Reporter.log("STEP 7");
-        CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver, applib);
-        String characterProfileTitle = createDefaultContent.CharacterProfile("Published", null, null);
-        String postTitle = createDefaultContent.Post("Published");
+        Reporter.log("STEP 7 - MOVED TO SETUP");
         
         Reporter.log("STEP 8");
         taxonomy.NavigateSite("Content>>Dynamic Queues");
