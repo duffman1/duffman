@@ -41,6 +41,7 @@ public class A1_TestSetup extends ParentTest {
         		allIterationsFailed = true;
         	}
         	try {
+        		
         		//login
             	UserLogin userLogin = applib.openApplication();
             	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
@@ -57,43 +58,30 @@ public class A1_TestSetup extends ParentTest {
                 }
                 overlay.SwitchToActiveFrame();
                 
-            	//disable sticky edit actions module
-            	modules.EnterFilterName("Sticky Edit Actions");
-            	modules.DisableModule("Sticky Edit Actions");
-                
-            	//enable devel module
-            	modules.EnterFilterName("Devel");
-                modules.EnableModule("Devel");
-                
-                //disable devel module
-            	modules.EnterFilterName("Acquia Purge");
-                modules.DisableModule("Acquia Purge");
-                
-                //disable the deprecated 'ImageField Focus" module.
-                modules.EnterFilterName("ImageField Focus");
-                modules.DisableModule("ImageField Focus");
-                
-                //disable database logging module
-                modules.EnterFilterName("Database logging");
-                modules.DisableModule("Database logging");
-                
-                //enable pub post module
-                modules.EnterFilterName("Pub Post");
-                modules.EnableModule("Pub Post");
-                
-                //enable logo manage module
-                modules.EnterFilterName("Logo Manager");
-                modules.EnableModule("Logo Manager");
-                
-                //uninstall mps module to clean out any previously created mps blocks
-                modules.EnterFilterName("MPS");
-                modules.DisableModule("MPS");
-                overlay.ClickOverlayTab("Uninstall");
-                overlay.SwitchToActiveFrame();
-                if (modules.IsModuleInstalled("MPS").equals(true)) {
-                	modules.UninstallModule("MPS");
-                	overlay.SwitchToActiveFrame();
+                //enable necessary modules
+                for (String module : Arrays.asList("Devel", "Pub Post", "Logo Manager")) {
+                	modules.EnterFilterName(module);
+                    modules.EnableModule(module);
                 }
+                
+                //disable necessary modules
+                for (String module : Arrays.asList("Sticky Edit Actions", "Acquia Purge", 
+                		"ImageField Focus", "Database logging", "MPS", 
+                		"Dynamic Queue Workbench", "Dynamic Queue")) {
+                	modules.EnterFilterName(module);
+                	modules.DisableModule(module);
+                }
+            	
+                //uninstall some high data usage modules that overflow lists
+                for (String module : Arrays.asList("MPS", "Dynamic Queue Workbench", "Dynamic Queue")) {
+                	overlay.ClickOverlayTab("Uninstall");
+                    overlay.SwitchToActiveFrame();
+                    if (modules.IsModuleInstalled(module)) {
+                    	modules.UninstallModule(module);
+                    	overlay.SwitchToActiveFrame();
+                    }
+                }
+                
                 overlay.ClickCloseOverlayLnk();
                 
                 //schedule a post content item revision to be consumed by the SchedulingContentPublishUnpublished test later in the suite

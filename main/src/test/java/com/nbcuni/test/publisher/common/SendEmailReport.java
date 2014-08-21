@@ -26,6 +26,7 @@ public class SendEmailReport extends ParentTest{
 		
 		final String userName = config.getConfigValue("GmailUsername");
 		final String passWord = config.getConfigValue("GmailPassword");
+		String appURL = config.getConfigValue("AppURL");
 		
 		Properties props = new Properties();
 		props.put("mail.smtp.auth", "true");
@@ -73,11 +74,11 @@ public class SendEmailReport extends ParentTest{
             
             String messageContent = null;
             if (abortTestSuite.equals(true)) {
-            	messageContent = "<body>A critical error was encountered during the execution of the automated test suite on <strong>" + machineName + "</strong>, resulting in the failure of the test setup scripts. All subsequent tests were skipped. Please see attached report/screenshot for details on the setup script failure.<br /><br />To execute the suite and ignore the setup failure, set config value \"AbortSuiteOnSetupFailure\" to false and re-run. Note that this may result in test failures.<br /><br />Publisher 7 QA Automation</body>";
+            	messageContent = "<body>A critical error was encountered during the execution of the automated test suite on <strong>" + machineName + "</strong> against <a href='" + appURL + "'>" + appURL + "</a>, resulting in the failure of the test setup scripts. All subsequent tests were skipped. Please see attached report/screenshot for details on the setup script failure.<br /><br />To execute the suite and ignore the setup failure, set config value \"AbortSuiteOnSetupFailure\" to false and re-run. Note that this may result in test failures.<br /><br />Publisher 7 QA Automation</body>";
             }
             else {
             	messageContent = "<body>Test run complete for latest build against "
-                		+ "<a href='" + config.getConfigValue("AppURL") + "'>" + config.getConfigValue("AppURL") 
+                		+ "<a href='" + appURL + "'>" + appURL 
                 		+ "</a> on <strong>" + machineName + "</strong>.<br /><br />Included test group(s) = " + config.getIncludedGroups() + excludedGroupTxt + "<br />Tests passed = " 
                 		+ passedTestsCount.toString() + "<br />Tests failed = " 
                 		+ failedIndividualTestCount.toString() + "<br /><br />A detailed functional report is attached. " 
