@@ -46,7 +46,7 @@ public class SendTestRunStartEmail {
             String[] emailAddresses = config.getConfigValue("SendReportEmailAddress").replace(" ", "").split(",");
             String initiatorAddress = null;
             try {
-            	initiatorAddress = emailAddresses[1];
+            	initiatorAddress = emailAddresses[emailAddresses.length - 1];
             }
             catch (Exception e) {
             	initiatorAddress = "an unknown user";
