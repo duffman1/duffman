@@ -14,7 +14,6 @@ import com.nbcuni.test.publisher.pageobjects.Structure.Queues.DynamicQueues.Dyna
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 import java.util.Arrays;
-import java.util.concurrent.TimeUnit;
 
 public class AddTaxonomyParameters extends ParentTest{
 	
