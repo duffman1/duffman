@@ -88,7 +88,7 @@ public class SelectFile {
     @FindBy(how = How.XPATH, using = "//input[@id='edit-scheme-public']")
     private WebElement PublicLocalFiles_Rdb;
     
-    @FindBy(how = How.XPATH, using = "//div[@id='file_image_form_group_image_top_wrapper']//img")
+    @FindBy(how = How.XPATH, using = "//div[@class='file-entity-left-view file-entity-panel']//img")
     private WebElement File_Img;
     
     @FindBy(how = How.XPATH, using = "//input[@id='edit-submit']")
@@ -100,7 +100,7 @@ public class SelectFile {
     @FindBy(how = How.XPATH, using = "//div[@class='throbber']")
     private WebElement Spinner_Img;
     
-    @FindBy(how = How.ID, using = "edit-indicator")
+    @FindBy(how = How.XPATH, using = "//div[contains(@id, 'focal-point-media')]")
     private WebElement FocalPoint_Ind;
     
     @FindBy(how = How.ID, using = "edit-focal-point")

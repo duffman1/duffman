@@ -41,6 +41,13 @@ public class AddDynamicQueueType {
     @FindBy(how = How.ID, using = "edit-cache-lifetime")
     private WebElement CacheLifetime_Ddl;
     
+    @FindBy(how = How.XPATH, using = "//a/strong[text()='Taxonomy filters']")
+    private WebElement TaxonomyFilters_Lnk;
+    
+    private WebElement TaxonomyFilter_Lnk(String filterName) {
+    	return webDriver.findElement(By.xpath("//label[contains(text(), '" + filterName + "')]/../input"));
+    }
+    
     @FindBy(how = How.ID, using = "edit-submit")
     private WebElement Save_Btn;
     
@@ -67,6 +74,22 @@ public class AddDynamicQueueType {
     	
     	Reporter.log("Select '" + lifetime + "' from the 'Cache lifetime' drop down list.");
     	new Select(CacheLifetime_Ddl).selectByVisibleText(lifetime);
+    }
+    
+    public void ClickTaxonomyFilterLnk() throws Exception {
+    	
+    	Reporter.log("Click the 'Taxonomy filters' link.");
+    	TaxonomyFilters_Lnk.click();
+    }
+    
+    public void EnableTaxonomyFilters(List<String> filterTypes) throws Exception {
+    	
+    	for (String filterType : filterTypes) {
+    		if (!TaxonomyFilter_Lnk(filterType).isSelected()) {
+    			Reporter.log("Check the '" + filterType + "' check box.");
+    			TaxonomyFilter_Lnk(filterType).click();
+    		}
+    	}
     }
     
     public void EnableContentTypes(List<String> contentTypes) throws Exception {
