@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Aug 25 13:03:21 EDT 2014</td>
+<td>Started on:</td><td>Mon Aug 25 15:15:08 EDT 2014</td>
 </tr>
-<tr><td>Total time:</td><td>118 seconds (118150 ms)</td>
+<tr><td>Total time:</td><td>91 seconds (91847 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,64 +75,34 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentEntityModerationStatesWorkflows.MultiEditorPublishingWorkflow.MultiEditorPublishingWorkflow_Test()'><b>MultiEditorPublishingWorkflow_Test</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentEntityModerationStatesWorkflows.MultiEditorPublishingWorkflow<br/>
-<a href="#Output-498950136" onClick='toggleBox("Output-498950136", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.nbcuni.test.publisher.tests.Queues.DynamicQueues.AddTaxonomyParameters.AddTaxonomyParameters_TC4420()'><b>AddTaxonomyParameters_TC4420</b><br>Test class: com.nbcuni.test.publisher.tests.Queues.DynamicQueues.AddTaxonomyParameters<br/>
+<a href="#Output-488893968" onClick='toggleBox("Output-488893968", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-498950136" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-498950136">
-Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.<br/>
+<a href="#Output-488893968" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-488893968">
+STEP 1<br/>
+Open url 'http://update.stage.nbcupublisher7.publisher7.com'.<br/>
 Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
 Enter 'pa55word' in the 'Password' text box.<br/>
 Click the 'Login' button.<br/>
-Mouse over the 'People' menu link.<br/>
-Click the 'Add user' menu link.<br/>
-Switch to the active frame titled 'People dialog'.<br/>
-Enter '50cb47756da5426@2d22e443dd5445d.com' in the 'Username' text box.<br/>
-Enter '50cb47756da5426@2d22e443dd5445d.com' in the 'E-mail address' text box.<br/>
-Enter 'pa55word' in the 'Password' text box.<br/>
-Enter 'pa55word' in the 'Confirm password' text box.<br/>
-Check the 'editor' check box.<br/>
-Enter 'ff4c3a0c3cfe4c8' in the 'First Name' text box.<br/>
-Enter '3dd5782d87dc4aa' in the 'Last Name' text box.<br/>
-Click the 'Create new account' button.<br/>
-Verify success message of 'A welcome message with further instructions has been e-mailed to the new user 50cb47756da5426@2d22e443dd5445d.com.' is present.<br/>
+SETUP<br/>
+Click the 'Modules' menu link.<br/>
+Switch to frame titled 'Modules'.<br/>
+Enter 'Dynamic Queue' in the 'Filter Name' text box.<br/>
+Wait for module filter titled 'Dynamic Queue' to be visible in module list.<br/>
+Verify the 'Dynamic Queue' check box is checked.<br/>
 Click the 'Close Overlay X'.<br/>
 Scroll by '-500'.<br/>
-Mouse over the 'People' menu link.<br/>
-Click the 'Add user' menu link.<br/>
-Switch to the active frame titled 'People dialog'.<br/>
-Enter 'fdc268f65f534ce@8278ffa2ae3a463.com' in the 'Username' text box.<br/>
-Enter 'fdc268f65f534ce@8278ffa2ae3a463.com' in the 'E-mail address' text box.<br/>
-Enter 'pa55word' in the 'Password' text box.<br/>
-Enter 'pa55word' in the 'Confirm password' text box.<br/>
-Check the 'senior editor' check box.<br/>
-Enter 'e4f207e7680e431' in the 'First Name' text box.<br/>
-Enter '59d235d093e54ec' in the 'Last Name' text box.<br/>
-Click the 'Create new account' button.<br/>
-Verify success message of 'A welcome message with further instructions has been e-mailed to the new user fdc268f65f534ce@8278ffa2ae3a463.com.' is present.<br/>
-Click the 'Close Overlay X'.<br/>
-Scroll by '-500'.<br/>
-Mouse over the 'People' menu link.<br/>
-Click the 'Permissions' menu link.<br/>
-Switch to the active frame titled 'People dialog'.<br/>
-Check the 'edit any post content' checkbox for the 'editor' role.<br/>
-Check the 'delete any post content' checkbox for the 'editor' role.<br/>
-Click the 'Save Permissions' button.<br/>
-Verify success message of 'The changes have been saved.' is present.<br/>
-Click the 'Close Overlay X'.<br/>
-Scroll by '-500'.<br/>
-Click the 'Logout' button.<br/>
-Enter '50cb47756da5426@2d22e443dd5445d.com' in the 'Email Address' text box.<br/>
-Enter 'pa55word' in the 'Password' text box.<br/>
-Click the 'Login' button.<br/>
+Click the 'Home' menu link.<br/>
 Mouse over the 'Content' menu link.<br/>
 Mouse over the 'Add content' menu link.<br/>
-Click the 'Post' menu link.<br/>
-Switch to the active frame titled 'Create Post dialog'.<br/>
-Enter 'e13a310f0a82495' in the 'Title' text box.<br/>
+Click the 'Movie' menu link.<br/>
+Switch to the active frame titled 'Create Movie dialog'.<br/>
+Scroll to and click the 'Basic Information' tab.<br/>
+Enter 'movieWTaxe4040f46d188403' in the 'Title' text box.<br/>
 Switch to the Synopsis frame.<br/>
 Enter a randomized text string into the 'Body' text area.<br/>
-Switch to the active frame titled 'Create Post dialog'.<br/>
+Switch to the active frame titled 'Create Movie dialog'.<br/>
 Click the 'Cover' select button.<br/>
 Switch to the select file frame.<br/>
 Enter the file path for file upload.<br/>
@@ -144,63 +114,100 @@ Click the 'Next' button.<br/>
 Verify the file image 'HanSolo' is present.<br/>
 Verify the img is loaded and visible.<br/>
 Click the 'Save' button.<br/>
-Switch to the active frame titled 'Create Post dialog'.<br/>
+Switch to the active frame titled 'Create Movie dialog'.<br/>
+Click the 'Additional Information' link.<br/>
+Select the 'Syndicated' from the 'Movie Type' drop down list.<br/>
+Select the 'G' from the 'Rating' drop down list.<br/>
+Select the 'Action' from the 'Primary Genre' drop down list.<br/>
 Scroll the 'Publishing Options' link into view.<br/>
 Click the 'Publishing Options' link.<br/>
-Select 'Draft' from the 'Moderation State' drop down list.<br/>
+Select 'Published' from the 'Moderation State' drop down list.<br/>
 Click the 'Save' button.<br/>
-Verify success message of 'Post e13a310f0a82495 has been created.' is present.<br/>
-Click the 'Edit Draft' link in the work bench.<br/>
-Switch to the active frame titled 'Edit Post e13a310f0a82495 dialog'.<br/>
-Scroll the 'Publishing Options' link into view.<br/>
-Click the 'Publishing Options' link.<br/>
-Verify the 'Moderation State' drop down list value is 'Draft'.<br/>
-Verify the 'Assign to' text box value is '50cb47756da5426@2d22e443dd5445d.com'.<br/>
-Click the 'Close Overlay X'.<br/>
-Scroll by '-500'.<br/>
-Click the 'My Workbench' menu link.<br/>
-Switch to the active frame titled 'My Workbench dialog'.<br/>
-Click the 'My Work' button.<br/>
-Switch to the active frame titled 'My Work dialog'.<br/>
-Enter title e13a310f0a82495.<br/>
-Click the 'Apply' button.<br/>
-Verify the text 'e13a310f0a82495' is present on the page.<br/>
-Verify the text 'Draft' is present on the page.<br/>
-Verify the text 'Post' is present on the page.<br/>
-Verify the text '50cb47756da5426@2d22e443dd5445d.com' is present on the page.<br/>
-Click the 'edit' link for the content item titled 'e13a310f0a82495'.<br/>
-Switch to the active frame titled 'Edit Post e13a310f0a82495 dialog'.<br/>
-Scroll the 'Publishing Options' link into view.<br/>
-Click the 'Publishing Options' link.<br/>
-Enter 'fdc268f65f534ce@8278ffa2ae3a463.com' in the 'Assign to' text box.<br/>
-Click the 'fdc268f65f534ce@8278ffa2ae3a463.com' from the auto complete option list.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Add content' menu link.<br/>
+Click the 'Movie' menu link.<br/>
+Switch to the active frame titled 'Create Movie dialog'.<br/>
+Scroll to and click the 'Basic Information' tab.<br/>
+Enter 'movieWOTax468a8bc9f8e7487' in the 'Title' text box.<br/>
+Switch to the Synopsis frame.<br/>
+Enter a randomized text string into the 'Body' text area.<br/>
+Switch to the active frame titled 'Create Movie dialog'.<br/>
+Click the 'Cover' select button.<br/>
+Switch to the select file frame.<br/>
+Enter the file path for file upload.<br/>
+Click the 'Upload' button.<br/>
+Wait for the file link to be visible after upload.<br/>
+Click the 'Next' button.<br/>
+Click the 'Public Local Files' radio button.<br/>
+Click the 'Next' button.<br/>
+Verify the file image 'HanSolo' is present.<br/>
+Verify the img is loaded and visible.<br/>
 Click the 'Save' button.<br/>
-Verify success message of 'Post e13a310f0a82495 has been updated.' is present.<br/>
+Switch to the active frame titled 'Create Movie dialog'.<br/>
+Scroll the 'Publishing Options' link into view.<br/>
+Click the 'Publishing Options' link.<br/>
+Select 'Published' from the 'Moderation State' drop down list.<br/>
+Click the 'Save' button.<br/>
+STEP 2<br/>
+Mouse over the 'Structure' menu link.<br/>
+Mouse over the 'Dynamic Queue types' menu link.<br/>
+Click the 'Add dynamic queue type' menu link.<br/>
+Switch to the active frame titled 'Add dynamic queue type dialog'.<br/>
+STEP 3<br/>
+Enter 'f1d8b171214442f' in the 'Name' text box.<br/>
+Select 'Content' or 'Node' from the 'Entity type' drop down list.<br/>
+Select '1 min' from the 'Cache lifetime' drop down list.<br/>
+Check the 'Movie' check box.<br/>
+Check the 'Person' check box.<br/>
+Click the 'Taxonomy filters' link.<br/>
+Check the 'field_movie_primary_genre' check box.<br/>
+Check the 'field_movie_secondary_genre' check box.<br/>
+Check the 'field_additional_genres' check box.<br/>
+Check the 'field_primary_genre' check box.<br/>
+Check the 'field_movie_rating' check box.<br/>
+Check the 'field_movie_type' check box.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'Dynamic Queue types dialog'.<br/>
+Verify the text 'f1d8b171214442f' is present on the page.<br/>
 Click the 'Close Overlay X'.<br/>
 Scroll by '-500'.<br/>
-Click the 'My Workbench' menu link.<br/>
-Switch to the active frame titled 'My Workbench dialog'.<br/>
-Verify the text 'e13a310f0a82495' is NOT present on the page.<br/>
-Click the 'My Work' button.<br/>
-Switch to the active frame titled 'My Work dialog'.<br/>
-Enter title e13a310f0a82495.<br/>
-Click the 'Apply' button.<br/>
-Verify the text 'e13a310f0a82495' is present on the page.<br/>
-Verify the text 'fdc268f65f534ce@8278ffa2ae3a463.com' is present on the page.<br/>
+STEP 4<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Dynamic Queues' menu link.<br/>
+Click the 'Add f1d8b171214442f' menu link.<br/>
+Switch to the active frame titled 'Add f1d8b171214442f dynamic queue dialog'.<br/>
+STEP 5<br/>
+Enter 'a37be9aa02ed480' in the 'Title' text box.<br/>
+STEP 6<br/>
+<br/>
+<br/>
+STEP 7<br/>
+Select 'Syndicated' from the 'Taxonomy filter for field_movie_type (Movie)' multi-select list.<br/>
+Select 'Action' from the 'Taxonomy filter for field_movie_primary_genre (Movie)' multi-select list.<br/>
+Select 'G' from the 'Taxonomy filter for field_movie_rating (Movie)' multi-select list.<br/>
+STEP 8 - TODO<br/>
+STEP 9<br/>
+Click the 'Newest' radio button under 'Sort by'.<br/>
+Click the 'Save Dynamic Queue' button.<br/>
+Verify the text 'a37be9aa02ed480' is present on the page.<br/>
+STEPS 10 AND 11 - MOVED TO TEST SETUP<br/>
+STEP 12 TODO<br/>
+STEP 13<br/>
+Mouse over the 'Content' menu link.<br/>
+Click the 'Dynamic Queues' menu link.<br/>
+Switch to the active frame titled 'Dynamic Queues dialog'.<br/>
 Click the 'Close Overlay X'.<br/>
 Scroll by '-500'.<br/>
-Click the 'Logout' button.<br/>
-Enter 'fdc268f65f534ce@8278ffa2ae3a463.com' in the 'Email Address' text box.<br/>
-Enter 'pa55word' in the 'Password' text box.<br/>
-Click the 'Login' button.<br/>
-Click the 'My Workbench' menu link.<br/>
-Switch to the active frame titled 'My Workbench dialog'.<br/>
-Verify the text 'e13a310f0a82495' is present on the page.<br/>
+Open a new browser window.<br/>
+Switch to new browser tab/window.<br/>
+Open url 'http://update.stage.nbcupublisher7.publisher7.com/dynamic-queue/101'.<br/>
+Verify the text 'movieWTaxe4040f46d188403' is present on the page.<br/>
+Verify the text 'movieWOTax468a8bc9f8e7487' is NOT present on the page.<br/>
 </div>
 </td>
 <td></td>
-<td>114</td>
-<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentEntityModerationStatesWorkflows.MultiEditorPublishingWorkflow@5e9a867</td></tr>
+<td>88</td>
+<td>com.nbcuni.test.publisher.tests.Queues.DynamicQueues.AddTaxonomyParameters@2c2893ce</td></tr>
 </table><p>
 </body>
 </html>

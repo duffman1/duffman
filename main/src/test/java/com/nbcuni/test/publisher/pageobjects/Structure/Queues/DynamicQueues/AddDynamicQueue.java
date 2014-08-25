@@ -43,6 +43,22 @@ public class AddDynamicQueue {
     	return webDriver.findElement(By.xpath("//label[text()='" + contentType + " ']/../input"));
     }
     
+    private WebElement FieldMovieType_Opt(String option) {
+    	return webDriver.findElement(By.xpath("//select[@id='edit-settings-terms-field-movie-type']//option[contains(text(), '" + option + "')]"));
+    }
+    
+    private WebElement FieldMoviePrimaryGenre_Opt(String option) {
+    	return webDriver.findElement(By.xpath("//select[@id='edit-settings-terms-field-movie-primary-genre']//option[contains(text(), '" + option + "')]"));
+    }
+    
+    private WebElement FieldMovieSecondaryGenre_Opt(String option) {
+    	return webDriver.findElement(By.xpath("//select[@id='edit-settings-terms-field-movie-secondary-genre']//option[contains(text(), '" + option + "')]"));
+    }
+    
+    private WebElement FieldMovieRating_Opt(String option) {
+    	return webDriver.findElement(By.xpath("//select[@id='edit-settings-terms-field-movie-rating']//option[contains(text(), '" + option + "')]"));
+    }
+    
     @FindBy(how = How.ID, using = "edit-settings-tv-show-select")
     private WebElement TVShows_Ddl;
     
@@ -90,6 +106,30 @@ public class AddDynamicQueue {
     		Assert.assertTrue(allTargetBundleValues.contains(contentType.toLowerCase()), "Content type '" + contentType 
     				+ "' is not present in list of target bundles.");
     	}
+    }
+    
+    public void SelectFieldMovieTypeTaxonomy(String option) throws Exception {
+    	
+    	Reporter.log("Select '" + option + "' from the 'Taxonomy filter for field_movie_type (Movie)' multi-select list.");
+    	FieldMovieType_Opt(option).click();
+    }
+    
+    public void SelectFieldMoviePrimaryGenreTaxonomy(String option) throws Exception {
+    	
+    	Reporter.log("Select '" + option + "' from the 'Taxonomy filter for field_movie_primary_genre (Movie)' multi-select list.");
+    	FieldMoviePrimaryGenre_Opt(option).click();
+    }
+    
+    public void SelectFieldMovieSecondaryGenreTaxonomy(String option) throws Exception {
+    	
+    	Reporter.log("Select '" + option + "' from the 'Taxonomy filter for field_movie_secondary_genre (Movie)' multi-select list.");
+    	FieldMovieSecondaryGenre_Opt(option).click();
+    }
+    
+    public void SelectFieldMovieRatingTaxonomy(String option) throws Exception {
+    	
+    	Reporter.log("Select '" + option + "' from the 'Taxonomy filter for field_movie_rating (Movie)' multi-select list.");
+    	FieldMovieRating_Opt(option).click();
     }
     
     public void SelectTVShow(String showTitle) throws Exception {
