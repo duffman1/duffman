@@ -2,274 +2,7 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
     <line>
-      <![CDATA[SETUP - create new user and logout]]>
-    </line>
-    <line>
       <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Login' button.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'People' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Add user' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'People dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'cfcfb7388f324b5@74f0d80e7864459.com' in the 'Username' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'cfcfb7388f324b5@74f0d80e7864459.com' in the 'E-mail address' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'pa55word' in the 'Confirm password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Check the 'editor' check box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'bfde24fdd4ec49b' in the 'First Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '58450584867444a' in the 'Last Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Create new account' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'A welcome message with further instructions has been e-mailed to the new user cfcfb7388f324b5@74f0d80e7864459.com.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll by '-500'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Logout' button.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 1]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'cfcfb7388f324b5@74f0d80e7864459.com' in the 'Email Address' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Login' button.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 2]]>
-    </line>
-    <line>
-      <![CDATA[Click the activer user menu link for logged in user 'cfcfb7388f324b5@74f0d80e7864459.com'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Edit' link in the work bench.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'cfcfb7388f324b5@74f0d80e7864459.com dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 3]]>
-    </line>
-    <line>
-      <![CDATA[Enter ' ' in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that password strength message 'The password does not include enough variation to be secure.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that password strength message 'Password must contain at least 2 digits.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that password strength message 'Password must be at least 8 characters in length.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that password strength message 'Password must begin and end with a letter.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that password strength message 'Password must contain at least one lowercase character.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 4]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'ABCDEFG1' in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that password strength message 'The password does not include enough variation to be secure.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that password strength message 'Password must contain at least 2 digits.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that password strength message 'Password must begin and end with a letter.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that password strength message 'Password must contain at least one lowercase character.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that password strength message 'Password must be at least 8 characters in length.' is not present.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 5]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'ABCDEF11' in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that password strength message 'The password does not include enough variation to be secure.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that password strength message 'Password must begin and end with a letter.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that password strength message 'Password must contain at least one lowercase character.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that password strength message 'Password must be at least 8 characters in length.' is not present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that password strength message 'Password must contain at least 2 digits.' is not present.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 6]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'ABCDE11H' in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that password strength message 'The password does not include enough variation to be secure.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that password strength message 'Password must contain at least one lowercase character.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that password strength message 'Password must be at least 8 characters in length.' is not present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that password strength message 'Password must contain at least 2 digits.' is not present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that password strength message 'Password must begin and end with a letter.' is not present.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 7]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'ABcDE11H' in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the password strength container is not present.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 8]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'cfcfb7388f324b5@74f0d80e7864459.com' in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that password strength message 'The password does not include enough variation to be secure.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that password strength message 'Password must not contain the username.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 9]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'ABcDE11H' in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'aBcDE11H' in the 'Confirm password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Verify password match text equals 'no'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 10]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'pa55word' in the 'Current password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'A' in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'A' in the 'Confirm password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 11]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'pa55word' in the 'Current password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'pa555word' in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'pa555word' in the 'Confirm password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Verify password match text equals 'yes'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The changes have been saved.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 12]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'pa555word' in the 'Current password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'pa555!@#$%^&*word' in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'pa555!@#$%^&*word' in the 'Confirm password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Verify password match text equals 'yes'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The changes have been saved.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 13]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll by '-500'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Logout' button.]]>
     </line>
     <line>
       <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
@@ -284,317 +17,179 @@
       <![CDATA[Mouse over the 'Configuration' menu link.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'People' menu link.]]>
+      <![CDATA[Mouse over the 'Media' menu link.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Password policies' menu link.]]>
+      <![CDATA[Click the 'Media: thePlatform mpx settings' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'List' menu link.]]>
+      <![CDATA[Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Password policies dialog'.]]>
+      <![CDATA[Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.]]>
     </line>
     <line>
-      <![CDATA[Click the 'view' link.]]>
+      <![CDATA[MPX is already configured.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'NBCU Password Policy dialog'.]]>
+      <![CDATA[Click the 'Close Overlay X'.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'Expiration' is present on the page.]]>
+      <![CDATA[Scroll by '-500'.]]>
     </line>
     <line>
-      <![CDATA[Verify the text '365' is present on the page.]]>
+      <![CDATA[Mouse over the 'Configuration' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Media' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Media: thePlatform mpx settings' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Get all the selected import account options and store to a list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll by '-500'.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Files' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'mpxPlayers' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify that the search result set column order matches as expected.]]>
+    </line>
+    <line>
+      <![CDATA[Get the text of the first search result set item.]]>
+    </line>
+    <line>
+      <![CDATA[Get the number of results in the result set.]]>
+    </line>
+    <line>
+      <![CDATA[Enter title Automation.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Apply' button.]]>
+    </line>
+    <line>
+      <![CDATA[Get the number of results in the result set.]]>
+    </line>
+    <line>
+      <![CDATA[Get the text of the first search result set item.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Reset' button.]]>
+    </line>
+    <line>
+      <![CDATA[Get the text of the first search result set item.]]>
+    </line>
+    <line>
+      <![CDATA[Get the number of results in the result set.]]>
+    </line>
+    <line>
+      <![CDATA[Get all the account options in the 'MPX Player Account' select ddl.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that the count of options is expected + 1 for the '-select' option.]]>
+    </line>
+    <line>
+      <![CDATA[Get the text of each of the ddl options.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that each expected account option is present in the 'MPX Player Account' select ddl.]]>
+    </line>
+    <line>
+      <![CDATA[Select the DB TV from the 'MPXPlayerAccount' select ddl.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Apply' button.]]>
+    </line>
+    <line>
+      <![CDATA[Get all the MPX result set 'Source' items.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that every source item in the result set equals 'DB TV'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Reset' button.]]>
+    </line>
+    <line>
+      <![CDATA[Select the 'Published' from the 'MPX Status/Published' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Apply' button.]]>
+    </line>
+    <line>
+      <![CDATA[Get all the MPX result set 'Status' items.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that result set size for Published items is greater than 0.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that every status item in the result set equals 'Published'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Reset' button.]]>
+    </line>
+    <line>
+      <![CDATA[Select the 'Unpublished' from the 'MPX Status/Published' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Apply' button.]]>
+    </line>
+    <line>
+      <![CDATA[Get all the MPX result set 'Status' items.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that every status item in the result set equals 'Unpublished'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Reset' button.]]>
+    </line>
+    <line>
+      <![CDATA[Get the text of the first search result set item.]]>
+    </line>
+    <line>
+      <![CDATA[Get the number of results in the result set.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="60317" started-at="2014-08-26T15:02:02Z" finished-at="2014-08-26T15:03:02Z">
+  <suite name="Default suite" duration-ms="48539" started-at="2014-08-27T14:04:46Z" finished-at="2014-08-27T14:05:34Z">
     <groups>
+      <group name="mpx">
+        <method signature="EnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen@328e6de9]" name="EnhanceMPXPlayerContentAdminScreen_Test" class="com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen"/>
+      </group> <!-- mpx -->
       <group name="full">
-        <method signature="PasswordRules.PasswordRules_TC2185()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules@14866f20]" name="PasswordRules_TC2185" class="com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules"/>
+        <method signature="EnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen@328e6de9]" name="EnhanceMPXPlayerContentAdminScreen_Test" class="com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen"/>
       </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="60317" started-at="2014-08-26T15:02:02Z" finished-at="2014-08-26T15:03:02Z">
-      <class name="com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules">
-        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules@14866f20]" name="startGridAndHub" is-config="true" duration-ms="1023" started-at="2014-08-26T11:02:01Z" finished-at="2014-08-26T11:02:02Z">
+    <test name="Default test" duration-ms="48539" started-at="2014-08-27T14:04:46Z" finished-at="2014-08-27T14:05:34Z">
+      <class name="com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen">
+        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen@328e6de9]" name="startGridAndHub" is-config="true" duration-ms="1515" started-at="2014-08-27T10:04:44Z" finished-at="2014-08-27T10:04:46Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startGridAndHub -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules@14866f20]" name="startSelenium" is-config="true" duration-ms="2591" started-at="2014-08-26T11:02:02Z" finished-at="2014-08-26T11:02:05Z">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen@328e6de9]" name="startSelenium" is-config="true" duration-ms="3271" started-at="2014-08-27T10:04:46Z" finished-at="2014-08-27T10:04:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="PasswordRules_TC2185()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules@14866f20]" name="PasswordRules_TC2185" duration-ms="57142" started-at="2014-08-26T11:02:05Z" finished-at="2014-08-26T11:03:02Z">
+        <test-method status="PASS" signature="EnhanceMPXPlayerContentAdminScreen_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen@328e6de9]" name="EnhanceMPXPlayerContentAdminScreen_Test" duration-ms="44682" started-at="2014-08-27T10:04:49Z" finished-at="2014-08-27T10:05:34Z">
           <reporter-output>
             <line>
-              <![CDATA[SETUP - create new user and logout]]>
-            </line>
-            <line>
               <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Login' button.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'People' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Add user' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'People dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'cfcfb7388f324b5@74f0d80e7864459.com' in the 'Username' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'cfcfb7388f324b5@74f0d80e7864459.com' in the 'E-mail address' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa55word' in the 'Confirm password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Check the 'editor' check box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'bfde24fdd4ec49b' in the 'First Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '58450584867444a' in the 'Last Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Create new account' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'A welcome message with further instructions has been e-mailed to the new user cfcfb7388f324b5@74f0d80e7864459.com.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll by '-500'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Logout' button.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 1]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'cfcfb7388f324b5@74f0d80e7864459.com' in the 'Email Address' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Login' button.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 2]]>
-            </line>
-            <line>
-              <![CDATA[Click the activer user menu link for logged in user 'cfcfb7388f324b5@74f0d80e7864459.com'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Edit' link in the work bench.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'cfcfb7388f324b5@74f0d80e7864459.com dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 3]]>
-            </line>
-            <line>
-              <![CDATA[Enter ' ' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'The password does not include enough variation to be secure.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'Password must contain at least 2 digits.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'Password must be at least 8 characters in length.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'Password must begin and end with a letter.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'Password must contain at least one lowercase character.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 4]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'ABCDEFG1' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'The password does not include enough variation to be secure.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'Password must contain at least 2 digits.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'Password must begin and end with a letter.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'Password must contain at least one lowercase character.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'Password must be at least 8 characters in length.' is not present.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 5]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'ABCDEF11' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'The password does not include enough variation to be secure.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'Password must begin and end with a letter.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'Password must contain at least one lowercase character.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'Password must be at least 8 characters in length.' is not present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'Password must contain at least 2 digits.' is not present.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 6]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'ABCDE11H' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'The password does not include enough variation to be secure.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'Password must contain at least one lowercase character.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'Password must be at least 8 characters in length.' is not present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'Password must contain at least 2 digits.' is not present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'Password must begin and end with a letter.' is not present.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 7]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'ABcDE11H' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the password strength container is not present.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 8]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'cfcfb7388f324b5@74f0d80e7864459.com' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'The password does not include enough variation to be secure.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that password strength message 'Password must not contain the username.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 9]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'ABcDE11H' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'aBcDE11H' in the 'Confirm password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Verify password match text equals 'no'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 10]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa55word' in the 'Current password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'A' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'A' in the 'Confirm password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 11]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa55word' in the 'Current password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa555word' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa555word' in the 'Confirm password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Verify password match text equals 'yes'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The changes have been saved.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 12]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa555word' in the 'Current password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa555!@#$%^&*word' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa555!@#$%^&*word' in the 'Confirm password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Verify password match text equals 'yes'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The changes have been saved.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 13]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll by '-500'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Logout' button.]]>
             </line>
             <line>
               <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
@@ -609,47 +204,173 @@
               <![CDATA[Mouse over the 'Configuration' menu link.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'People' menu link.]]>
+              <![CDATA[Mouse over the 'Media' menu link.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Password policies' menu link.]]>
+              <![CDATA[Click the 'Media: thePlatform mpx settings' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'List' menu link.]]>
+              <![CDATA[Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Password policies dialog'.]]>
+              <![CDATA[Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.]]>
             </line>
             <line>
-              <![CDATA[Click the 'view' link.]]>
+              <![CDATA[MPX is already configured.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'NBCU Password Policy dialog'.]]>
+              <![CDATA[Click the 'Close Overlay X'.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'Expiration' is present on the page.]]>
+              <![CDATA[Scroll by '-500'.]]>
             </line>
             <line>
-              <![CDATA[Verify the text '365' is present on the page.]]>
+              <![CDATA[Mouse over the 'Configuration' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Media' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Media: thePlatform mpx settings' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Get all the selected import account options and store to a list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll by '-500'.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Files' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'mpxPlayers' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify that the search result set column order matches as expected.]]>
+            </line>
+            <line>
+              <![CDATA[Get the text of the first search result set item.]]>
+            </line>
+            <line>
+              <![CDATA[Get the number of results in the result set.]]>
+            </line>
+            <line>
+              <![CDATA[Enter title Automation.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Apply' button.]]>
+            </line>
+            <line>
+              <![CDATA[Get the number of results in the result set.]]>
+            </line>
+            <line>
+              <![CDATA[Get the text of the first search result set item.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Reset' button.]]>
+            </line>
+            <line>
+              <![CDATA[Get the text of the first search result set item.]]>
+            </line>
+            <line>
+              <![CDATA[Get the number of results in the result set.]]>
+            </line>
+            <line>
+              <![CDATA[Get all the account options in the 'MPX Player Account' select ddl.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that the count of options is expected + 1 for the '-select' option.]]>
+            </line>
+            <line>
+              <![CDATA[Get the text of each of the ddl options.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that each expected account option is present in the 'MPX Player Account' select ddl.]]>
+            </line>
+            <line>
+              <![CDATA[Select the DB TV from the 'MPXPlayerAccount' select ddl.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Apply' button.]]>
+            </line>
+            <line>
+              <![CDATA[Get all the MPX result set 'Source' items.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that every source item in the result set equals 'DB TV'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Reset' button.]]>
+            </line>
+            <line>
+              <![CDATA[Select the 'Published' from the 'MPX Status/Published' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Apply' button.]]>
+            </line>
+            <line>
+              <![CDATA[Get all the MPX result set 'Status' items.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that result set size for Published items is greater than 0.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that every status item in the result set equals 'Published'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Reset' button.]]>
+            </line>
+            <line>
+              <![CDATA[Select the 'Unpublished' from the 'MPX Status/Published' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Apply' button.]]>
+            </line>
+            <line>
+              <![CDATA[Get all the MPX result set 'Status' items.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that every status item in the result set equals 'Unpublished'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Reset' button.]]>
+            </line>
+            <line>
+              <![CDATA[Get the text of the first search result set item.]]>
+            </line>
+            <line>
+              <![CDATA[Get the number of results in the result set.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- PasswordRules_TC2185 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules@14866f20]" name="stopSelenium" is-config="true" duration-ms="574" started-at="2014-08-26T11:03:02Z" finished-at="2014-08-26T11:03:02Z">
+        </test-method> <!-- EnhanceMPXPlayerContentAdminScreen_Test -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen@328e6de9]" name="stopSelenium" is-config="true" duration-ms="570" started-at="2014-08-27T10:05:34Z" finished-at="2014-08-27T10:05:34Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=PasswordRules_TC2185 status=SUCCESS method=PasswordRules.PasswordRules_TC2185()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules@14866f20] output=SETUP - create new user and logout]]]>
+                <![CDATA[[TestResult name=EnhanceMPXPlayerContentAdminScreen_Test status=SUCCESS method=EnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen@328e6de9] output=Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules@14866f20]" name="stopGridAndHub" is-config="true" duration-ms="366" started-at="2014-08-26T11:03:02Z" finished-at="2014-08-26T11:03:03Z">
+        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen@328e6de9]" name="stopGridAndHub" is-config="true" duration-ms="372" started-at="2014-08-27T10:05:34Z" finished-at="2014-08-27T10:05:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopGridAndHub -->
-      </class> <!-- com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
