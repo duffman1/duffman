@@ -59,134 +59,86 @@
       <![CDATA[Scroll by '-500'.]]>
     </line>
     <line>
+      <![CDATA[Mouse over the 'Structure' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'File types' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'File types dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'DB TV manage file display' link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'MPX Video for Account &quot;DB TV&quot; (2312945284) dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Pub MPX Video' link.]]>
+    </line>
+    <line>
+      <![CDATA[Select the 'AutomationPlayer2' player from the 'Pub MPX Video Player for Account...' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configuration' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Your settings have been saved.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll by '-500'.]]>
+    </line>
+    <line>
       <![CDATA[Mouse over the 'Content' menu link.]]>
     </line>
     <line>
       <![CDATA[Mouse over the 'Files' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'mpxPlayers' menu link.]]>
+      <![CDATA[Click the 'mpxMedia' menu link.]]>
     </line>
     <line>
       <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
     </line>
     <line>
-      <![CDATA[Verify that the search result set column order matches as expected.]]>
-    </line>
-    <line>
-      <![CDATA[Get the text of the first search result set item.]]>
-    </line>
-    <line>
-      <![CDATA[Get the number of results in the result set.]]>
-    </line>
-    <line>
-      <![CDATA[Enter title Automation.]]>
+      <![CDATA[Enter title AutomationDefault.]]>
     </line>
     <line>
       <![CDATA[Click the 'Apply' button.]]>
     </line>
     <line>
-      <![CDATA[Get the number of results in the result set.]]>
+      <![CDATA[Click the first search title link in the search result set.]]>
     </line>
     <line>
-      <![CDATA[Get the text of the first search result set item.]]>
+      <![CDATA[Verify the mpx video player frame is present.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Reset' button.]]>
-    </line>
-    <line>
-      <![CDATA[Get the text of the first search result set item.]]>
-    </line>
-    <line>
-      <![CDATA[Get the number of results in the result set.]]>
-    </line>
-    <line>
-      <![CDATA[Get all the account options in the 'MPX Player Account' select ddl.]]>
-    </line>
-    <line>
-      <![CDATA[Assert that the count of options is expected + 1 for the '-select' option.]]>
-    </line>
-    <line>
-      <![CDATA[Get the text of each of the ddl options.]]>
-    </line>
-    <line>
-      <![CDATA[Assert that each expected account option is present in the 'MPX Player Account' select ddl.]]>
-    </line>
-    <line>
-      <![CDATA[Select the DB TV from the 'MPXPlayerAccount' select ddl.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Apply' button.]]>
-    </line>
-    <line>
-      <![CDATA[Get all the MPX result set 'Source' items.]]>
-    </line>
-    <line>
-      <![CDATA[Assert that every source item in the result set equals 'DB TV'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Reset' button.]]>
-    </line>
-    <line>
-      <![CDATA[Select the 'Published' from the 'MPX Status/Published' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Apply' button.]]>
-    </line>
-    <line>
-      <![CDATA[Get all the MPX result set 'Status' items.]]>
-    </line>
-    <line>
-      <![CDATA[Assert that result set size for Published items is greater than 0.]]>
-    </line>
-    <line>
-      <![CDATA[Assert that every status item in the result set equals 'Published'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Reset' button.]]>
-    </line>
-    <line>
-      <![CDATA[Select the 'Unpublished' from the 'MPX Status/Published' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Apply' button.]]>
-    </line>
-    <line>
-      <![CDATA[Get all the MPX result set 'Status' items.]]>
-    </line>
-    <line>
-      <![CDATA[Assert that every status item in the result set equals 'Unpublished'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Reset' button.]]>
-    </line>
-    <line>
-      <![CDATA[Get the text of the first search result set item.]]>
-    </line>
-    <line>
-      <![CDATA[Get the number of results in the result set.]]>
+      <![CDATA[Verify the mpx video player frame source does NOT contain 'embed'.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="48539" started-at="2014-08-27T14:04:46Z" finished-at="2014-08-27T14:05:34Z">
+  <suite name="Default suite" duration-ms="41496" started-at="2014-09-02T23:16:22Z" finished-at="2014-09-02T23:17:04Z">
     <groups>
       <group name="mpx">
-        <method signature="EnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen@328e6de9]" name="EnhanceMPXPlayerContentAdminScreen_Test" class="com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen"/>
+        <method signature="DefaultPlayerOptionsVerification.DefaultPlayerOptionsVerification_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification@1df749e3]" name="DefaultPlayerOptionsVerification_Test" class="com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification"/>
       </group> <!-- mpx -->
       <group name="full">
-        <method signature="EnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen@328e6de9]" name="EnhanceMPXPlayerContentAdminScreen_Test" class="com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen"/>
+        <method signature="DefaultPlayerOptionsVerification.DefaultPlayerOptionsVerification_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification@1df749e3]" name="DefaultPlayerOptionsVerification_Test" class="com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification"/>
       </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="48539" started-at="2014-08-27T14:04:46Z" finished-at="2014-08-27T14:05:34Z">
-      <class name="com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen">
-        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen@328e6de9]" name="startGridAndHub" is-config="true" duration-ms="1515" started-at="2014-08-27T10:04:44Z" finished-at="2014-08-27T10:04:46Z">
+    <test name="Default test" duration-ms="41496" started-at="2014-09-02T23:16:22Z" finished-at="2014-09-02T23:17:04Z">
+      <class name="com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification">
+        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification@1df749e3]" name="startGridAndHub" is-config="true" duration-ms="962" started-at="2014-09-02T19:16:21Z" finished-at="2014-09-02T19:16:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startGridAndHub -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen@328e6de9]" name="startSelenium" is-config="true" duration-ms="3271" started-at="2014-08-27T10:04:46Z" finished-at="2014-08-27T10:04:49Z">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification@1df749e3]" name="startSelenium" is-config="true" duration-ms="2554" started-at="2014-09-02T19:16:22Z" finished-at="2014-09-02T19:16:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="EnhanceMPXPlayerContentAdminScreen_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen@328e6de9]" name="EnhanceMPXPlayerContentAdminScreen_Test" duration-ms="44682" started-at="2014-08-27T10:04:49Z" finished-at="2014-08-27T10:05:34Z">
+        <test-method status="PASS" signature="DefaultPlayerOptionsVerification_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification@1df749e3]" name="DefaultPlayerOptionsVerification_Test" duration-ms="38361" started-at="2014-09-02T19:16:25Z" finished-at="2014-09-02T19:17:03Z">
           <reporter-output>
             <line>
               <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
@@ -246,131 +198,83 @@
               <![CDATA[Scroll by '-500'.]]>
             </line>
             <line>
+              <![CDATA[Mouse over the 'Structure' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'File types' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'File types dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'DB TV manage file display' link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'MPX Video for Account &quot;DB TV&quot; (2312945284) dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Pub MPX Video' link.]]>
+            </line>
+            <line>
+              <![CDATA[Select the 'AutomationPlayer2' player from the 'Pub MPX Video Player for Account...' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configuration' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Your settings have been saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll by '-500'.]]>
+            </line>
+            <line>
               <![CDATA[Mouse over the 'Content' menu link.]]>
             </line>
             <line>
               <![CDATA[Mouse over the 'Files' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'mpxPlayers' menu link.]]>
+              <![CDATA[Click the 'mpxMedia' menu link.]]>
             </line>
             <line>
               <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
             </line>
             <line>
-              <![CDATA[Verify that the search result set column order matches as expected.]]>
-            </line>
-            <line>
-              <![CDATA[Get the text of the first search result set item.]]>
-            </line>
-            <line>
-              <![CDATA[Get the number of results in the result set.]]>
-            </line>
-            <line>
-              <![CDATA[Enter title Automation.]]>
+              <![CDATA[Enter title AutomationDefault.]]>
             </line>
             <line>
               <![CDATA[Click the 'Apply' button.]]>
             </line>
             <line>
-              <![CDATA[Get the number of results in the result set.]]>
+              <![CDATA[Click the first search title link in the search result set.]]>
             </line>
             <line>
-              <![CDATA[Get the text of the first search result set item.]]>
+              <![CDATA[Verify the mpx video player frame is present.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Reset' button.]]>
-            </line>
-            <line>
-              <![CDATA[Get the text of the first search result set item.]]>
-            </line>
-            <line>
-              <![CDATA[Get the number of results in the result set.]]>
-            </line>
-            <line>
-              <![CDATA[Get all the account options in the 'MPX Player Account' select ddl.]]>
-            </line>
-            <line>
-              <![CDATA[Assert that the count of options is expected + 1 for the '-select' option.]]>
-            </line>
-            <line>
-              <![CDATA[Get the text of each of the ddl options.]]>
-            </line>
-            <line>
-              <![CDATA[Assert that each expected account option is present in the 'MPX Player Account' select ddl.]]>
-            </line>
-            <line>
-              <![CDATA[Select the DB TV from the 'MPXPlayerAccount' select ddl.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Apply' button.]]>
-            </line>
-            <line>
-              <![CDATA[Get all the MPX result set 'Source' items.]]>
-            </line>
-            <line>
-              <![CDATA[Assert that every source item in the result set equals 'DB TV'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Reset' button.]]>
-            </line>
-            <line>
-              <![CDATA[Select the 'Published' from the 'MPX Status/Published' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Apply' button.]]>
-            </line>
-            <line>
-              <![CDATA[Get all the MPX result set 'Status' items.]]>
-            </line>
-            <line>
-              <![CDATA[Assert that result set size for Published items is greater than 0.]]>
-            </line>
-            <line>
-              <![CDATA[Assert that every status item in the result set equals 'Published'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Reset' button.]]>
-            </line>
-            <line>
-              <![CDATA[Select the 'Unpublished' from the 'MPX Status/Published' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Apply' button.]]>
-            </line>
-            <line>
-              <![CDATA[Get all the MPX result set 'Status' items.]]>
-            </line>
-            <line>
-              <![CDATA[Assert that every status item in the result set equals 'Unpublished'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Reset' button.]]>
-            </line>
-            <line>
-              <![CDATA[Get the text of the first search result set item.]]>
-            </line>
-            <line>
-              <![CDATA[Get the number of results in the result set.]]>
+              <![CDATA[Verify the mpx video player frame source does NOT contain 'embed'.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- EnhanceMPXPlayerContentAdminScreen_Test -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen@328e6de9]" name="stopSelenium" is-config="true" duration-ms="570" started-at="2014-08-27T10:05:34Z" finished-at="2014-08-27T10:05:34Z">
+        </test-method> <!-- DefaultPlayerOptionsVerification_Test -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification@1df749e3]" name="stopSelenium" is-config="true" duration-ms="567" started-at="2014-09-02T19:17:03Z" finished-at="2014-09-02T19:17:04Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=EnhanceMPXPlayerContentAdminScreen_Test status=SUCCESS method=EnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen@328e6de9] output=Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]]>
+                <![CDATA[[TestResult name=DefaultPlayerOptionsVerification_Test status=SUCCESS method=DefaultPlayerOptionsVerification.DefaultPlayerOptionsVerification_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification@1df749e3] output=Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen@328e6de9]" name="stopGridAndHub" is-config="true" duration-ms="372" started-at="2014-08-27T10:05:34Z" finished-at="2014-08-27T10:05:35Z">
+        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification@1df749e3]" name="stopGridAndHub" is-config="true" duration-ms="364" started-at="2014-09-02T19:17:04Z" finished-at="2014-09-02T19:17:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopGridAndHub -->
-      </class> <!-- com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

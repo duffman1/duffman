@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Aug 27 10:04:46 EDT 2014</td>
+<td>Started on:</td><td>Tue Sep 02 19:16:22 EDT 2014</td>
 </tr>
-<tr><td>Total time:</td><td>48 seconds (48539 ms)</td>
+<tr><td>Total time:</td><td>41 seconds (41496 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,11 +75,11 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen_Test()'><b>EnhanceMPXPlayerContentAdminScreen_Test</b><br>Test class: com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen<br/>
-<a href="#Output-636682417" onClick='toggleBox("Output-636682417", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification.DefaultPlayerOptionsVerification_Test()'><b>DefaultPlayerOptionsVerification_Test</b><br>Test class: com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification<br/>
+<a href="#Output-67615869" onClick='toggleBox("Output-67615869", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-636682417" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-636682417">
+<a href="#Output-67615869" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-67615869">
 Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.<br/>
 Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
 Enter 'pa55word' in the 'Password' text box.<br/>
@@ -99,47 +99,31 @@ Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.<br/>
 Get all the selected import account options and store to a list.<br/>
 Click the 'Close Overlay X'.<br/>
 Scroll by '-500'.<br/>
+Mouse over the 'Structure' menu link.<br/>
+Click the 'File types' menu link.<br/>
+Switch to the active frame titled 'File types dialog'.<br/>
+Click the 'DB TV manage file display' link.<br/>
+Switch to the active frame titled 'MPX Video for Account &quot;DB TV&quot; (2312945284) dialog'.<br/>
+Click the 'Pub MPX Video' link.<br/>
+Select the 'AutomationPlayer2' player from the 'Pub MPX Video Player for Account...' drop down list.<br/>
+Click the 'Save configuration' button.<br/>
+Verify success message of 'Your settings have been saved.' is present.<br/>
+Click the 'Close Overlay X'.<br/>
+Scroll by '-500'.<br/>
 Mouse over the 'Content' menu link.<br/>
 Mouse over the 'Files' menu link.<br/>
-Click the 'mpxPlayers' menu link.<br/>
+Click the 'mpxMedia' menu link.<br/>
 Switch to the active frame titled 'Content dialog'.<br/>
-Verify that the search result set column order matches as expected.<br/>
-Get the text of the first search result set item.<br/>
-Get the number of results in the result set.<br/>
-Enter title Automation.<br/>
+Enter title AutomationDefault.<br/>
 Click the 'Apply' button.<br/>
-Get the number of results in the result set.<br/>
-Get the text of the first search result set item.<br/>
-Click the 'Reset' button.<br/>
-Get the text of the first search result set item.<br/>
-Get the number of results in the result set.<br/>
-Get all the account options in the 'MPX Player Account' select ddl.<br/>
-Assert that the count of options is expected + 1 for the '-select' option.<br/>
-Get the text of each of the ddl options.<br/>
-Assert that each expected account option is present in the 'MPX Player Account' select ddl.<br/>
-Select the DB TV from the 'MPXPlayerAccount' select ddl.<br/>
-Click the 'Apply' button.<br/>
-Get all the MPX result set 'Source' items.<br/>
-Assert that every source item in the result set equals 'DB TV'.<br/>
-Click the 'Reset' button.<br/>
-Select the 'Published' from the 'MPX Status/Published' drop down list.<br/>
-Click the 'Apply' button.<br/>
-Get all the MPX result set 'Status' items.<br/>
-Assert that result set size for Published items is greater than 0.<br/>
-Assert that every status item in the result set equals 'Published'.<br/>
-Click the 'Reset' button.<br/>
-Select the 'Unpublished' from the 'MPX Status/Published' drop down list.<br/>
-Click the 'Apply' button.<br/>
-Get all the MPX result set 'Status' items.<br/>
-Assert that every status item in the result set equals 'Unpublished'.<br/>
-Click the 'Reset' button.<br/>
-Get the text of the first search result set item.<br/>
-Get the number of results in the result set.<br/>
+Click the first search title link in the search result set.<br/>
+Verify the mpx video player frame is present.<br/>
+Verify the mpx video player frame source does NOT contain 'embed'.<br/>
 </div>
 </td>
 <td></td>
-<td>44</td>
-<td>com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen@328e6de9</td></tr>
+<td>38</td>
+<td>com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification@1df749e3</td></tr>
 </table><p>
 </body>
 </html>

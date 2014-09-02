@@ -180,7 +180,8 @@ public class SearchFor {
     public void ClickSearchTitleLnk(String title) throws Exception {
 
     	Reporter.log("Click the first search title link in the search result set.");
-    	Thread.sleep(250); 
+    	SearchTitle_Lnk(title).isDisplayed(); 
+    	Thread.sleep(1000); //slight pause required
         SearchTitle_Lnk(title).click();
     }
     

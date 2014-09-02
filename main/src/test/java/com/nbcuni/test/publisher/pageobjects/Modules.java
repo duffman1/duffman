@@ -218,6 +218,7 @@ public class Modules {
     	UninstallModuleName_Cbx(moduleName).click();
     	
     	Reporter.log("Click the 'Uninstall' button.");
+    	Thread.sleep(1000);
     	Uninstall_Btn.click();
     	overlay.SwitchToActiveFrame();
     	contentParent.VerifyPageContentPresent(Arrays.asList("The following modules will be completely uninstalled from your site, and all data from these modules will be lost!", 
