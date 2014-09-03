@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>2/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Aug 27 10:04:46 EDT 2014</td>
+<td>Started on:</td><td>Wed Sep 03 15:59:45 EDT 2014</td>
 </tr>
-<tr><td>Total time:</td><td>48 seconds (48539 ms)</td>
+<tr><td>Total time:</td><td>93 seconds (93772 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,71 +75,121 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen_Test()'><b>EnhanceMPXPlayerContentAdminScreen_Test</b><br>Test class: com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen<br/>
-<a href="#Output-636682417" onClick='toggleBox("Output-636682417", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.nbcuni.test.publisher.tests.Advertising.MPS.MPSConfigurationPage.Cleanup()'><b>Cleanup</b><br>Test class: com.nbcuni.test.publisher.tests.Advertising.MPS.MPSConfigurationPage</td>
+<td></td>
+<td>0</td>
+<td>com.nbcuni.test.publisher.tests.Advertising.MPS.MPSConfigurationPage@5374fab8</td></tr>
+<tr>
+<td title='com.nbcuni.test.publisher.tests.Advertising.MPS.MPSConfigurationPage.MPSConfigurationPage_TC3306()'><b>MPSConfigurationPage_TC3306</b><br>Test class: com.nbcuni.test.publisher.tests.Advertising.MPS.MPSConfigurationPage<br/>
+<a href="#Output-891727648" onClick='toggleBox("Output-891727648", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-636682417" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-636682417">
-Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.<br/>
+<a href="#Output-891727648" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-891727648">
+STEP 1<br/>
+Open url 'http://update.stage.nbcupublisher7.publisher7.com'.<br/>
 Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
 Enter 'pa55word' in the 'Password' text box.<br/>
 Click the 'Login' button.<br/>
-Mouse over the 'Configuration' menu link.<br/>
-Mouse over the 'Media' menu link.<br/>
-Click the 'Media: thePlatform mpx settings' menu link.<br/>
-Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.<br/>
-Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.<br/>
-MPX is already configured.<br/>
+SETUP<br/>
+Click the 'Modules' menu link.<br/>
+Switch to the active frame titled 'Modules dialog'.<br/>
+Verify the 'MPS' check box is checked.<br/>
 Click the 'Close Overlay X'.<br/>
 Scroll by '-500'.<br/>
+STEP 2 - 3<br/>
 Mouse over the 'Configuration' menu link.<br/>
-Mouse over the 'Media' menu link.<br/>
-Click the 'Media: thePlatform mpx settings' menu link.<br/>
-Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.<br/>
-Get all the selected import account options and store to a list.<br/>
+Mouse over the 'Web services' menu link.<br/>
+Click the 'MPS Configuration' menu link.<br/>
+Switch to the active frame titled 'MPS Configuration dialog'.<br/>
+STEP 4<br/>
+Clear all 'Name' text box values.<br/>
+Clear all 'Value' text box values.<br/>
+Uncheck all 'JSON' check boxes.<br/>
+Enter 'mps.io' in the 'MPS Host' text box.<br/>
+Click the 'Document Write' radio button.<br/>
+Enter 'pub7-development' in the 'Site Instance Override' text box.<br/>
+Click the 'Save configuration' button.<br/>
+Verify success message of 'The configuration options have been saved.' is present.<br/>
 Click the 'Close Overlay X'.<br/>
 Scroll by '-500'.<br/>
-Mouse over the 'Content' menu link.<br/>
-Mouse over the 'Files' menu link.<br/>
-Click the 'mpxPlayers' menu link.<br/>
-Switch to the active frame titled 'Content dialog'.<br/>
-Verify that the search result set column order matches as expected.<br/>
-Get the text of the first search result set item.<br/>
-Get the number of results in the result set.<br/>
-Enter title Automation.<br/>
-Click the 'Apply' button.<br/>
-Get the number of results in the result set.<br/>
-Get the text of the first search result set item.<br/>
-Click the 'Reset' button.<br/>
-Get the text of the first search result set item.<br/>
-Get the number of results in the result set.<br/>
-Get all the account options in the 'MPX Player Account' select ddl.<br/>
-Assert that the count of options is expected + 1 for the '-select' option.<br/>
-Get the text of each of the ddl options.<br/>
-Assert that each expected account option is present in the 'MPX Player Account' select ddl.<br/>
-Select the DB TV from the 'MPXPlayerAccount' select ddl.<br/>
-Click the 'Apply' button.<br/>
-Get all the MPX result set 'Source' items.<br/>
-Assert that every source item in the result set equals 'DB TV'.<br/>
-Click the 'Reset' button.<br/>
-Select the 'Published' from the 'MPX Status/Published' drop down list.<br/>
-Click the 'Apply' button.<br/>
-Get all the MPX result set 'Status' items.<br/>
-Assert that result set size for Published items is greater than 0.<br/>
-Assert that every status item in the result set equals 'Published'.<br/>
-Click the 'Reset' button.<br/>
-Select the 'Unpublished' from the 'MPX Status/Published' drop down list.<br/>
-Click the 'Apply' button.<br/>
-Get all the MPX result set 'Status' items.<br/>
-Assert that every status item in the result set equals 'Unpublished'.<br/>
-Click the 'Reset' button.<br/>
-Get the text of the first search result set item.<br/>
-Get the number of results in the result set.<br/>
+Verify 'var mpscall = {"site":"pub7-development","title":"Welcome to Site-Install","path":"\/","is_content":0,"type":"other"}' is present in page source.<br/>
+Verify 'var mpsopts = {"host":"mps.io"}' is present in page source.<br/>
+Verify 'var mps = mps ||' is present in page source.<br/>
+STEP 5<br/>
+Mouse over the 'Configuration' menu link.<br/>
+Mouse over the 'Web services' menu link.<br/>
+Click the 'MPS Configuration' menu link.<br/>
+Switch to the active frame titled 'MPS Configuration dialog'.<br/>
+Click the 'DOM Injection (Only select this method if JQuery is enabled).' radio button.<br/>
+Click the 'Save configuration' button.<br/>
+Verify success message of 'The configuration options have been saved.' is present.<br/>
+Click the 'Close Overlay X'.<br/>
+Scroll by '-500'.<br/>
+Verify 'mpsload.src='//'+mpsopts.host+'/fetch/ext/load-'+mpscall.site+'.js?nowrite=jq'; mpsload.id="mps-load"' is present in page source.<br/>
+Verify 'mpsload.async=false; head.insertBefore(mpsload,head.firstChild)' is present in page source.<br/>
+STEP 6<br/>
+Open url 'http://update.stage.nbcupublisher7.publisher7.com/?x=y'.<br/>
+Verify 'Site-Install","path":"\/","qs":"eD15"' is present in page source.<br/>
+STEP 7<br/>
+Mouse over the 'Configuration' menu link.<br/>
+Mouse over the 'Web services' menu link.<br/>
+Click the 'MPS Configuration' menu link.<br/>
+Switch to the active frame titled 'MPS Configuration dialog'.<br/>
+Un-check the 'Send Query Strings' check box.<br/>
+Click the 'Save configuration' button.<br/>
+Verify success message of 'The configuration options have been saved.' is present.<br/>
+Click the 'Close Overlay X'.<br/>
+Scroll by '-500'.<br/>
+Verify 'Site-Install","path":"\/","qs":"eD15"' is not present in page source.<br/>
+STEP 8<br/>
+Mouse over the 'Configuration' menu link.<br/>
+Mouse over the 'Web services' menu link.<br/>
+Click the 'MPS Configuration' menu link.<br/>
+Switch to the active frame titled 'MPS Configuration dialog'.<br/>
+Enter 'mps.io' in the 'MPS Host' text box.<br/>
+Click the 'Document Write' radio button.<br/>
+Enter 'pub7-development' in the 'Site Instance Override' text box.<br/>
+Check the 'Send Query Strings' check box.<br/>
+Enter 'key1' in the 'Name' text box with index '1'.<br/>
+Enter 'value1' in the 'Value' text box with index '1'.<br/>
+Click the 'Add another opt' button.<br/>
+Enter 'key2' in the 'Name' text box with index '2'.<br/>
+Enter '{"key":"value", "key2": "value2"}' in the 'Value' text box with index '2'.<br/>
+Check the 'JSON' check box with index '2'.<br/>
+Click the 'Save configuration' button.<br/>
+Verify success message of 'The configuration options have been saved.' is present.<br/>
+Click the 'Close Overlay X'.<br/>
+Scroll by '-500'.<br/>
+Verify 'var mpsopts = {"host":"mps.io","key1":"value1","key2":{"key":"value","key2":"value2"}}' is present in page source.<br/>
+STEP 9<br/>
+Mouse over the 'Configuration' menu link.<br/>
+Mouse over the 'Web services' menu link.<br/>
+Click the 'MPS Configuration' menu link.<br/>
+Switch to the active frame titled 'MPS Configuration dialog'.<br/>
+Enter 'key3' in the 'Name' text box with index '3'.<br/>
+Enter 'jshdhdhdhjdhshd' in the 'Value' text box with index '3'.<br/>
+Check the 'JSON' check box with index '3'.<br/>
+Click the 'Save configuration' button.<br/>
+Verify error message of 'If the json checkbox is checked, this must be a valid json object.' is present.<br/>
+Click the 'Close Overlay X'.<br/>
+Scroll by '-500'.<br/>
+STEP 10<br/>
+Verify '//mps.io/request/page/jsonp?callback=mpsCallback' is present in page source.<br/>
+STEP 11 - N/A<br/>
+CLEANUP<br/>
+Mouse over the 'Configuration' menu link.<br/>
+Mouse over the 'Web services' menu link.<br/>
+Click the 'MPS Configuration' menu link.<br/>
+Switch to the active frame titled 'MPS Configuration dialog'.<br/>
+Clear all 'Name' text box values.<br/>
+Clear all 'Value' text box values.<br/>
+Uncheck all 'JSON' check boxes.<br/>
+Click the 'Save configuration' button.<br/>
 </div>
 </td>
 <td></td>
-<td>44</td>
-<td>com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen@328e6de9</td></tr>
+<td>87</td>
+<td>com.nbcuni.test.publisher.tests.Advertising.MPS.MPSConfigurationPage@5374fab8</td></tr>
 </table><p>
 </body>
 </html>

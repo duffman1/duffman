@@ -43,9 +43,7 @@ public class PasswordRules extends ParentTest {
         
         Reporter.log("STEP 3");
         addUser.EnterPassword(" ");
-        addUser.VerifyPasswordStrengthTxtPresent(Arrays.asList("The password does not include enough variation to be secure.",
-        		"Password must contain at least 2 digits.", "Password must be at least 8 characters in length.",
-        			"Password must begin and end with a letter.", "Password must contain at least one lowercase character."));
+        addUser.VerifyPasswordStrengthTxtPresent(Arrays.asList("The password is all spaces and will not be saved."));
 
         Reporter.log("STEP 4");
         addUser.EnterPassword("ABCDEFG1");

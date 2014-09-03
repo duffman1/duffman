@@ -1,56 +1,101 @@
-<h2>Reporter output</h2><table><tr><td>Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.</td></tr>
+<h2>Reporter output</h2><table><tr><td>STEP 1</td></tr>
+<tr><td>Open url 'http://update.stage.nbcupublisher7.publisher7.com'.</td></tr>
 <tr><td>Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.</td></tr>
 <tr><td>Enter 'pa55word' in the 'Password' text box.</td></tr>
 <tr><td>Click the 'Login' button.</td></tr>
-<tr><td>Mouse over the 'Configuration' menu link.</td></tr>
-<tr><td>Mouse over the 'Media' menu link.</td></tr>
-<tr><td>Click the 'Media: thePlatform mpx settings' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.</td></tr>
-<tr><td>Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.</td></tr>
-<tr><td>MPX is already configured.</td></tr>
+<tr><td>SETUP</td></tr>
+<tr><td>Click the 'Modules' menu link.</td></tr>
+<tr><td>Switch to the active frame titled 'Modules dialog'.</td></tr>
+<tr><td>Verify the 'MPS' check box is checked.</td></tr>
 <tr><td>Click the 'Close Overlay X'.</td></tr>
 <tr><td>Scroll by '-500'.</td></tr>
+<tr><td>STEP 2 - 3</td></tr>
 <tr><td>Mouse over the 'Configuration' menu link.</td></tr>
-<tr><td>Mouse over the 'Media' menu link.</td></tr>
-<tr><td>Click the 'Media: thePlatform mpx settings' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.</td></tr>
-<tr><td>Get all the selected import account options and store to a list.</td></tr>
+<tr><td>Mouse over the 'Web services' menu link.</td></tr>
+<tr><td>Click the 'MPS Configuration' menu link.</td></tr>
+<tr><td>Switch to the active frame titled 'MPS Configuration dialog'.</td></tr>
+<tr><td>STEP 4</td></tr>
+<tr><td>Clear all 'Name' text box values.</td></tr>
+<tr><td>Clear all 'Value' text box values.</td></tr>
+<tr><td>Uncheck all 'JSON' check boxes.</td></tr>
+<tr><td>Enter 'mps.io' in the 'MPS Host' text box.</td></tr>
+<tr><td>Click the 'Document Write' radio button.</td></tr>
+<tr><td>Enter 'pub7-development' in the 'Site Instance Override' text box.</td></tr>
+<tr><td>Click the 'Save configuration' button.</td></tr>
+<tr><td>Verify success message of 'The configuration options have been saved.' is present.</td></tr>
 <tr><td>Click the 'Close Overlay X'.</td></tr>
 <tr><td>Scroll by '-500'.</td></tr>
-<tr><td>Mouse over the 'Content' menu link.</td></tr>
-<tr><td>Mouse over the 'Files' menu link.</td></tr>
-<tr><td>Click the 'mpxPlayers' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'Content dialog'.</td></tr>
-<tr><td>Verify that the search result set column order matches as expected.</td></tr>
-<tr><td>Get the text of the first search result set item.</td></tr>
-<tr><td>Get the number of results in the result set.</td></tr>
-<tr><td>Enter title Automation.</td></tr>
-<tr><td>Click the 'Apply' button.</td></tr>
-<tr><td>Get the number of results in the result set.</td></tr>
-<tr><td>Get the text of the first search result set item.</td></tr>
-<tr><td>Click the 'Reset' button.</td></tr>
-<tr><td>Get the text of the first search result set item.</td></tr>
-<tr><td>Get the number of results in the result set.</td></tr>
-<tr><td>Get all the account options in the 'MPX Player Account' select ddl.</td></tr>
-<tr><td>Assert that the count of options is expected + 1 for the '-select' option.</td></tr>
-<tr><td>Get the text of each of the ddl options.</td></tr>
-<tr><td>Assert that each expected account option is present in the 'MPX Player Account' select ddl.</td></tr>
-<tr><td>Select the DB TV from the 'MPXPlayerAccount' select ddl.</td></tr>
-<tr><td>Click the 'Apply' button.</td></tr>
-<tr><td>Get all the MPX result set 'Source' items.</td></tr>
-<tr><td>Assert that every source item in the result set equals 'DB TV'.</td></tr>
-<tr><td>Click the 'Reset' button.</td></tr>
-<tr><td>Select the 'Published' from the 'MPX Status/Published' drop down list.</td></tr>
-<tr><td>Click the 'Apply' button.</td></tr>
-<tr><td>Get all the MPX result set 'Status' items.</td></tr>
-<tr><td>Assert that result set size for Published items is greater than 0.</td></tr>
-<tr><td>Assert that every status item in the result set equals 'Published'.</td></tr>
-<tr><td>Click the 'Reset' button.</td></tr>
-<tr><td>Select the 'Unpublished' from the 'MPX Status/Published' drop down list.</td></tr>
-<tr><td>Click the 'Apply' button.</td></tr>
-<tr><td>Get all the MPX result set 'Status' items.</td></tr>
-<tr><td>Assert that every status item in the result set equals 'Unpublished'.</td></tr>
-<tr><td>Click the 'Reset' button.</td></tr>
-<tr><td>Get the text of the first search result set item.</td></tr>
-<tr><td>Get the number of results in the result set.</td></tr>
+<tr><td>Verify 'var mpscall = {"site":"pub7-development","title":"Welcome to Site-Install","path":"\/","is_content":0,"type":"other"}' is present in page source.</td></tr>
+<tr><td>Verify 'var mpsopts = {"host":"mps.io"}' is present in page source.</td></tr>
+<tr><td>Verify 'var mps = mps ||' is present in page source.</td></tr>
+<tr><td>STEP 5</td></tr>
+<tr><td>Mouse over the 'Configuration' menu link.</td></tr>
+<tr><td>Mouse over the 'Web services' menu link.</td></tr>
+<tr><td>Click the 'MPS Configuration' menu link.</td></tr>
+<tr><td>Switch to the active frame titled 'MPS Configuration dialog'.</td></tr>
+<tr><td>Click the 'DOM Injection (Only select this method if JQuery is enabled).' radio button.</td></tr>
+<tr><td>Click the 'Save configuration' button.</td></tr>
+<tr><td>Verify success message of 'The configuration options have been saved.' is present.</td></tr>
+<tr><td>Click the 'Close Overlay X'.</td></tr>
+<tr><td>Scroll by '-500'.</td></tr>
+<tr><td>Verify 'mpsload.src='//'+mpsopts.host+'/fetch/ext/load-'+mpscall.site+'.js?nowrite=jq'; mpsload.id="mps-load"' is present in page source.</td></tr>
+<tr><td>Verify 'mpsload.async=false; head.insertBefore(mpsload,head.firstChild)' is present in page source.</td></tr>
+<tr><td>STEP 6</td></tr>
+<tr><td>Open url 'http://update.stage.nbcupublisher7.publisher7.com/?x=y'.</td></tr>
+<tr><td>Verify 'Site-Install","path":"\/","qs":"eD15"' is present in page source.</td></tr>
+<tr><td>STEP 7</td></tr>
+<tr><td>Mouse over the 'Configuration' menu link.</td></tr>
+<tr><td>Mouse over the 'Web services' menu link.</td></tr>
+<tr><td>Click the 'MPS Configuration' menu link.</td></tr>
+<tr><td>Switch to the active frame titled 'MPS Configuration dialog'.</td></tr>
+<tr><td>Un-check the 'Send Query Strings' check box.</td></tr>
+<tr><td>Click the 'Save configuration' button.</td></tr>
+<tr><td>Verify success message of 'The configuration options have been saved.' is present.</td></tr>
+<tr><td>Click the 'Close Overlay X'.</td></tr>
+<tr><td>Scroll by '-500'.</td></tr>
+<tr><td>Verify 'Site-Install","path":"\/","qs":"eD15"' is not present in page source.</td></tr>
+<tr><td>STEP 8</td></tr>
+<tr><td>Mouse over the 'Configuration' menu link.</td></tr>
+<tr><td>Mouse over the 'Web services' menu link.</td></tr>
+<tr><td>Click the 'MPS Configuration' menu link.</td></tr>
+<tr><td>Switch to the active frame titled 'MPS Configuration dialog'.</td></tr>
+<tr><td>Enter 'mps.io' in the 'MPS Host' text box.</td></tr>
+<tr><td>Click the 'Document Write' radio button.</td></tr>
+<tr><td>Enter 'pub7-development' in the 'Site Instance Override' text box.</td></tr>
+<tr><td>Check the 'Send Query Strings' check box.</td></tr>
+<tr><td>Enter 'key1' in the 'Name' text box with index '1'.</td></tr>
+<tr><td>Enter 'value1' in the 'Value' text box with index '1'.</td></tr>
+<tr><td>Click the 'Add another opt' button.</td></tr>
+<tr><td>Enter 'key2' in the 'Name' text box with index '2'.</td></tr>
+<tr><td>Enter '{"key":"value", "key2": "value2"}' in the 'Value' text box with index '2'.</td></tr>
+<tr><td>Check the 'JSON' check box with index '2'.</td></tr>
+<tr><td>Click the 'Save configuration' button.</td></tr>
+<tr><td>Verify success message of 'The configuration options have been saved.' is present.</td></tr>
+<tr><td>Click the 'Close Overlay X'.</td></tr>
+<tr><td>Scroll by '-500'.</td></tr>
+<tr><td>Verify 'var mpsopts = {"host":"mps.io","key1":"value1","key2":{"key":"value","key2":"value2"}}' is present in page source.</td></tr>
+<tr><td>STEP 9</td></tr>
+<tr><td>Mouse over the 'Configuration' menu link.</td></tr>
+<tr><td>Mouse over the 'Web services' menu link.</td></tr>
+<tr><td>Click the 'MPS Configuration' menu link.</td></tr>
+<tr><td>Switch to the active frame titled 'MPS Configuration dialog'.</td></tr>
+<tr><td>Enter 'key3' in the 'Name' text box with index '3'.</td></tr>
+<tr><td>Enter 'jshdhdhdhjdhshd' in the 'Value' text box with index '3'.</td></tr>
+<tr><td>Check the 'JSON' check box with index '3'.</td></tr>
+<tr><td>Click the 'Save configuration' button.</td></tr>
+<tr><td>Verify error message of 'If the json checkbox is checked, this must be a valid json object.' is present.</td></tr>
+<tr><td>Click the 'Close Overlay X'.</td></tr>
+<tr><td>Scroll by '-500'.</td></tr>
+<tr><td>STEP 10</td></tr>
+<tr><td>Verify '//mps.io/request/page/jsonp?callback=mpsCallback' is present in page source.</td></tr>
+<tr><td>STEP 11 - N/A</td></tr>
+<tr><td>CLEANUP</td></tr>
+<tr><td>Mouse over the 'Configuration' menu link.</td></tr>
+<tr><td>Mouse over the 'Web services' menu link.</td></tr>
+<tr><td>Click the 'MPS Configuration' menu link.</td></tr>
+<tr><td>Switch to the active frame titled 'MPS Configuration dialog'.</td></tr>
+<tr><td>Clear all 'Name' text box values.</td></tr>
+<tr><td>Clear all 'Value' text box values.</td></tr>
+<tr><td>Uncheck all 'JSON' check boxes.</td></tr>
+<tr><td>Click the 'Save configuration' button.</td></tr>
 </table>

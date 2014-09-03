@@ -100,7 +100,7 @@ public class SelectFile {
     @FindBy(how = How.XPATH, using = "//div[@class='throbber']")
     private WebElement Spinner_Img;
     
-    @FindBy(how = How.ID, using = "edit-indicator")
+    @FindBy(how = How.XPATH, using = "//div[contains(@id, 'focal-point-media')]")
     private WebElement FocalPoint_Ind;
     
     @FindBy(how = How.ID, using = "edit-focal-point")
