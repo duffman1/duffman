@@ -28,15 +28,13 @@ public class NoWhiteScreen extends ParentTest{
         modules.VerifyModuleEnabled("Devel");
         
     	Reporter.log("STEP 3");
-    	taxonomy.NavigateSite("Home>>Development>>Execute PHP Code");
-    	overlay.SwitchToActiveFrame();
-    	//applib.openSitePage("/#overlay=devel/php");
+    	Thread.sleep(1000);
+    	applib.openSitePage("/devel/php");
         
         Reporter.log("STEP 4");
         ExecutePHPCode executePHPCode = new ExecutePHPCode(webDriver);
         executePHPCode.EnterPHPCode("white();");
         executePHPCode.ClickExecuteBtn();
-        overlay.switchToDefaultContent(false);
         contentParent.VerifyPageContentPresent(Arrays.asList("Fatal error: Call to undefined function white()"));
         
     }
