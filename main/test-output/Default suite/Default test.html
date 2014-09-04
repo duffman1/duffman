@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>2/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Sep 03 18:22:41 EDT 2014</td>
+<td>Started on:</td><td>Thu Sep 04 13:41:45 EDT 2014</td>
 </tr>
-<tr><td>Total time:</td><td>21 seconds (21774 ms)</td>
+<tr><td>Total time:</td><td>177 seconds (177022 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,36 +75,157 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.nbcuni.test.publisher.tests.SiteManagementAndReporting.AdminViews.NoWhiteScreen.NoWhiteScreen_TC4147()'><b>NoWhiteScreen_TC4147</b><br>Test class: com.nbcuni.test.publisher.tests.SiteManagementAndReporting.AdminViews.NoWhiteScreen<br/>
-<a href="#Output-1448986681" onClick='toggleBox("Output-1448986681", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents.Cleanup()'><b>Cleanup</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents<br/>
+<a href="#Output-617796752" onClick='toggleBox("Output-617796752", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1448986681" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1448986681">
+<a href="#Output-617796752" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-617796752">
+Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.<br/>
+Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
+Enter 'pa55word' in the 'Password' text box.<br/>
+Click the 'Login' button.<br/>
+Mouse over the 'Structure' menu link.<br/>
+Click the 'Blocks' menu link.<br/>
+Switch to the active frame titled 'Blocks dialog'.<br/>
+Select the block name 'Birthday Block' from the '- None -' drop down list.<br/>
+Select the block name 'Holiday Party Block' from the '- None -' drop down list.<br/>
+Click the 'Save Blocks' button.<br/>
+Verify success message of 'The block settings have been updated.' is present.<br/>
+</div>
+</td>
+<td></td>
+<td>14</td>
+<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@5d64b55b</td></tr>
+<tr>
+<td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents.CountdownClockEvents_TC4887()'><b>CountdownClockEvents_TC4887</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents<br/>
+<a href="#Output-513105193" onClick='toggleBox("Output-513105193", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-513105193" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-513105193">
 STEP 1<br/>
-Open url 'http://update.stage.nbcupublisher7.publisher7.com'.<br/>
+Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.<br/>
 Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
 Enter 'pa55word' in the 'Password' text box.<br/>
 Click the 'Login' button.<br/>
 STEP 2<br/>
 Click the 'Modules' menu link.<br/>
 Switch to frame titled 'Modules'.<br/>
-Enter 'Devel' in the 'Filter Name' text box.<br/>
-Wait for module filter titled 'Devel' to be visible in module list.<br/>
-Verify the 'Devel' check box is checked.<br/>
+Enter 'Event Countdown' in the 'Filter Name' text box.<br/>
+Wait for module filter titled 'Event Countdown' to be visible in module list.<br/>
+Verify the 'Event Countdown' check box is checked.<br/>
 Click the 'Close Overlay X'.<br/>
 Scroll by '-500'.<br/>
 Click the 'Home' menu link.<br/>
 STEP 3<br/>
-Open url 'http://update.stage.nbcupublisher7.publisher7.com/devel/php'.<br/>
+Mouse over the 'Configuration' menu link.<br/>
+Mouse over the 'Media' menu link.<br/>
+Click the 'Event Countdown' menu link.<br/>
+Switch to the active frame titled 'Event Countdown dialog'.<br/>
+Sample nodes have already been created.<br/>
+Click the 'Close Overlay X'.<br/>
+Scroll by '-500'.<br/>
 STEP 4<br/>
-Enter 'white();' in the 'PHP Code to Execute' text area.<br/>
-Click the 'Execute' button.<br/>
-Verify the text 'Fatal error: Call to undefined function white()' is present on the page.<br/>
+STEP 5 AND 6<br/>
+Click the 'Content' menu link.<br/>
+Switch to the active frame titled 'Content dialog'.<br/>
+Enter title Birthday Event.<br/>
+Click the 'Apply' button.<br/>
+Click the 'Edit' link for content item titled 'Birthday Event.<br/>
+Enter '09/04/2014 in the 'Date' text box.<br/>
+Enter '05:44:23PM in the 'Time' text box.<br/>
+Enter 'http://www.amazon.com/s/ref=nb_sb_ss_c_0_8/190-0002947-5703141?url=search-alias%3Dtoys-and-games&field-keywords=birthday%20party%20supplies&sprefix=birthday%2Caps%2C168' in the 'Active Call to Action' text box.<br/>
+Click the 'Active Image Select' button.<br/>
+Switch to the select file frame.<br/>
+Enter the file path for file upload.<br/>
+Click the 'Upload' button.<br/>
+Wait for the file link to be visible after upload.<br/>
+Click the 'Next' button.<br/>
+Click the 'Public Local Files' radio button.<br/>
+Click the 'Next' button.<br/>
+Verify the file image 'HanSolo' is present.<br/>
+Verify the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Enter '#FF0000' in the 'Active Background Color' text box.<br/>
+Enter 'http://www.nbc.com' in the 'Expiry Call to Action' text box.<br/>
+Click the 'Expiry Image Select' button.<br/>
+Switch to the select file frame.<br/>
+Enter the file path for file upload.<br/>
+Click the 'Upload' button.<br/>
+Wait for the file link to be visible after upload.<br/>
+Click the 'Next' button.<br/>
+Click the 'Public Local Files' radio button.<br/>
+Click the 'Next' button.<br/>
+Verify the file image 'nbclogosmall' is present.<br/>
+Verify the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Enter '#00FFFF' in the 'Expiry Background Color' text box.<br/>
+Click the 'Save' button.<br/>
+STEP 7<br/>
+Mouse over the 'Structure' menu link.<br/>
+Click the 'Blocks' menu link.<br/>
+Select the block name 'Birthday Block' from the 'Content' drop down list.<br/>
+Select the block name 'Holiday Party Block' from the 'Content' drop down list.<br/>
+Click the 'Save Blocks' button.<br/>
+Verify success message of 'The block settings have been updated.' is present.<br/>
+STEP 8<br/>
+Click the 'Home' menu link.<br/>
+STEP 9<br/>
+Verify the countdown timer is visible.<br/>
+Verify the countdown timer is counting down.<br/>
+Assert that active img source of the event contains 'HanSolo'.<br/>
+Assert the the img is loaded and visible.<br/>
+Verify the active background color of '#FF0000' is visible for event with title 'Birthday Event'.<br/>
+Verify the active link href of 'http://www.amazon.com/s/ref=nb_sb_ss_c_0_8/190-0002947-5703141?url=search-alias%3Dtoys-and-games&field-keywords=birthday%20party%20supplies&sprefix=birthday%2Caps%2C168' is visible for event with title 'Birthday Event'.<br/>
+STEP 10<br/>
+Verify the countdown timer is NOT counting down.<br/>
+Assert that expiry img source of the event contains 'nbclogosmall'.<br/>
+Assert the the img is loaded and visible.<br/>
+Verify the expiry background color of '#00FFFF' is visible for event with title 'Birthday Event'.<br/>
+Verify the expiry link href of 'http://www.nbc.com' is visible for event with title 'Birthday Event'.<br/>
+STEP 11 AND 12<br/>
+STEP 13<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Add content' menu link.<br/>
+Click the 'Event Countdown' menu link.<br/>
+Switch to the active frame titled 'Create Event Countdown dialog'.<br/>
+Enter 'b514acd3e79546f' in the 'Title' text box.<br/>
+Enter '09/04/2014 in the 'Date' text box.<br/>
+Enter '05:46:05PM in the 'Time' text box.<br/>
+Enter 'http://www.amazon.com/s/ref=nb_sb_ss_c_0_8/190-0002947-5703141?url=search-alias%3Dtoys-and-games&field-keywords=birthday%20party%20supplies&sprefix=birthday%2Caps%2C168' in the 'Active Call to Action' text box.<br/>
+Click the 'Active Image Select' button.<br/>
+Switch to the select file frame.<br/>
+Enter the file path for file upload.<br/>
+Click the 'Upload' button.<br/>
+Wait for the file link to be visible after upload.<br/>
+Click the 'Next' button.<br/>
+Click the 'Public Local Files' radio button.<br/>
+Click the 'Next' button.<br/>
+Verify the file image 'HanSolo' is present.<br/>
+Verify the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'Create Event Countdown dialog'.<br/>
+Enter '#FF0000' in the 'Active Background Color' text box.<br/>
+Enter 'http://www.nbc.com' in the 'Expiry Call to Action' text box.<br/>
+Click the 'Expiry Image Select' button.<br/>
+Switch to the select file frame.<br/>
+Enter the file path for file upload.<br/>
+Click the 'Upload' button.<br/>
+Wait for the file link to be visible after upload.<br/>
+Click the 'Next' button.<br/>
+Click the 'Public Local Files' radio button.<br/>
+Click the 'Next' button.<br/>
+Verify the file image 'nbclogosmall' is present.<br/>
+Verify the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'Create Event Countdown dialog'.<br/>
+Enter '#00FFFF' in the 'Expiry Background Color' text box.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'Event Countdown b514acd3e79546f has been created.' is present.<br/>
 </div>
 </td>
 <td></td>
-<td>18</td>
-<td>com.nbcuni.test.publisher.tests.SiteManagementAndReporting.AdminViews.NoWhiteScreen@2d258595</td></tr>
+<td>156</td>
+<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@5d64b55b</td></tr>
 </table><p>
 </body>
 </html>

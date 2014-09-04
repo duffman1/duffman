@@ -1,21 +1,131 @@
 <h2>Reporter output</h2><table><tr><td>STEP 1</td></tr>
-<tr><td>Open url 'http://update.stage.nbcupublisher7.publisher7.com'.</td></tr>
+<tr><td>Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.</td></tr>
 <tr><td>Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.</td></tr>
 <tr><td>Enter 'pa55word' in the 'Password' text box.</td></tr>
 <tr><td>Click the 'Login' button.</td></tr>
 <tr><td>STEP 2</td></tr>
 <tr><td>Click the 'Modules' menu link.</td></tr>
 <tr><td>Switch to frame titled 'Modules'.</td></tr>
-<tr><td>Enter 'Devel' in the 'Filter Name' text box.</td></tr>
-<tr><td>Wait for module filter titled 'Devel' to be visible in module list.</td></tr>
-<tr><td>Verify the 'Devel' check box is checked.</td></tr>
+<tr><td>Enter 'Event Countdown' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for module filter titled 'Event Countdown' to be visible in module list.</td></tr>
+<tr><td>Verify the 'Event Countdown' check box is checked.</td></tr>
 <tr><td>Click the 'Close Overlay X'.</td></tr>
 <tr><td>Scroll by '-500'.</td></tr>
 <tr><td>Click the 'Home' menu link.</td></tr>
 <tr><td>STEP 3</td></tr>
-<tr><td>Open url 'http://update.stage.nbcupublisher7.publisher7.com/devel/php'.</td></tr>
+<tr><td>Mouse over the 'Configuration' menu link.</td></tr>
+<tr><td>Mouse over the 'Media' menu link.</td></tr>
+<tr><td>Click the 'Event Countdown' menu link.</td></tr>
+<tr><td>Switch to the active frame titled 'Event Countdown dialog'.</td></tr>
+<tr><td>Sample nodes have already been created.</td></tr>
+<tr><td>Click the 'Close Overlay X'.</td></tr>
+<tr><td>Scroll by '-500'.</td></tr>
 <tr><td>STEP 4</td></tr>
-<tr><td>Enter 'white();' in the 'PHP Code to Execute' text area.</td></tr>
-<tr><td>Click the 'Execute' button.</td></tr>
-<tr><td>Verify the text 'Fatal error: Call to undefined function white()' is present on the page.</td></tr>
+<tr><td>STEP 5 AND 6</td></tr>
+<tr><td>Click the 'Content' menu link.</td></tr>
+<tr><td>Switch to the active frame titled 'Content dialog'.</td></tr>
+<tr><td>Enter title Birthday Event.</td></tr>
+<tr><td>Click the 'Apply' button.</td></tr>
+<tr><td>Click the 'Edit' link for content item titled 'Birthday Event.</td></tr>
+<tr><td>Enter '09/04/2014 in the 'Date' text box.</td></tr>
+<tr><td>Enter '05:44:23PM in the 'Time' text box.</td></tr>
+<tr><td>Enter 'http://www.amazon.com/s/ref=nb_sb_ss_c_0_8/190-0002947-5703141?url=search-alias%3Dtoys-and-games&field-keywords=birthday%20party%20supplies&sprefix=birthday%2Caps%2C168' in the 'Active Call to Action' text box.</td></tr>
+<tr><td>Click the 'Active Image Select' button.</td></tr>
+<tr><td>Switch to the select file frame.</td></tr>
+<tr><td>Enter the file path for file upload.</td></tr>
+<tr><td>Click the 'Upload' button.</td></tr>
+<tr><td>Wait for the file link to be visible after upload.</td></tr>
+<tr><td>Click the 'Next' button.</td></tr>
+<tr><td>Click the 'Public Local Files' radio button.</td></tr>
+<tr><td>Click the 'Next' button.</td></tr>
+<tr><td>Verify the file image 'HanSolo' is present.</td></tr>
+<tr><td>Verify the img is loaded and visible.</td></tr>
+<tr><td>Click the 'Save' button.</td></tr>
+<tr><td>Enter '#FF0000' in the 'Active Background Color' text box.</td></tr>
+<tr><td>Enter 'http://www.nbc.com' in the 'Expiry Call to Action' text box.</td></tr>
+<tr><td>Click the 'Expiry Image Select' button.</td></tr>
+<tr><td>Switch to the select file frame.</td></tr>
+<tr><td>Enter the file path for file upload.</td></tr>
+<tr><td>Click the 'Upload' button.</td></tr>
+<tr><td>Wait for the file link to be visible after upload.</td></tr>
+<tr><td>Click the 'Next' button.</td></tr>
+<tr><td>Click the 'Public Local Files' radio button.</td></tr>
+<tr><td>Click the 'Next' button.</td></tr>
+<tr><td>Verify the file image 'nbclogosmall' is present.</td></tr>
+<tr><td>Verify the img is loaded and visible.</td></tr>
+<tr><td>Click the 'Save' button.</td></tr>
+<tr><td>Enter '#00FFFF' in the 'Expiry Background Color' text box.</td></tr>
+<tr><td>Click the 'Save' button.</td></tr>
+<tr><td>STEP 7</td></tr>
+<tr><td>Mouse over the 'Structure' menu link.</td></tr>
+<tr><td>Click the 'Blocks' menu link.</td></tr>
+<tr><td>Select the block name 'Birthday Block' from the 'Content' drop down list.</td></tr>
+<tr><td>Select the block name 'Holiday Party Block' from the 'Content' drop down list.</td></tr>
+<tr><td>Click the 'Save Blocks' button.</td></tr>
+<tr><td>Verify success message of 'The block settings have been updated.' is present.</td></tr>
+<tr><td>STEP 8</td></tr>
+<tr><td>Click the 'Home' menu link.</td></tr>
+<tr><td>STEP 9</td></tr>
+<tr><td>Verify the countdown timer is visible.</td></tr>
+<tr><td>Verify the countdown timer is counting down.</td></tr>
+<tr><td>Assert that active img source of the event contains 'HanSolo'.</td></tr>
+<tr><td>Assert the the img is loaded and visible.</td></tr>
+<tr><td>Verify the active background color of '#FF0000' is visible for event with title 'Birthday Event'.</td></tr>
+<tr><td>Verify the active link href of 'http://www.amazon.com/s/ref=nb_sb_ss_c_0_8/190-0002947-5703141?url=search-alias%3Dtoys-and-games&field-keywords=birthday%20party%20supplies&sprefix=birthday%2Caps%2C168' is visible for event with title 'Birthday Event'.</td></tr>
+<tr><td>STEP 10</td></tr>
+<tr><td>Verify the countdown timer is NOT counting down.</td></tr>
+<tr><td>Assert that expiry img source of the event contains 'nbclogosmall'.</td></tr>
+<tr><td>Assert the the img is loaded and visible.</td></tr>
+<tr><td>Verify the expiry background color of '#00FFFF' is visible for event with title 'Birthday Event'.</td></tr>
+<tr><td>Verify the expiry link href of 'http://www.nbc.com' is visible for event with title 'Birthday Event'.</td></tr>
+<tr><td>STEP 11 AND 12</td></tr>
+<tr><td>STEP 13</td></tr>
+<tr><td>Mouse over the 'Content' menu link.</td></tr>
+<tr><td>Mouse over the 'Add content' menu link.</td></tr>
+<tr><td>Click the 'Event Countdown' menu link.</td></tr>
+<tr><td>Switch to the active frame titled 'Create Event Countdown dialog'.</td></tr>
+<tr><td>Enter 'b514acd3e79546f' in the 'Title' text box.</td></tr>
+<tr><td>Enter '09/04/2014 in the 'Date' text box.</td></tr>
+<tr><td>Enter '05:46:05PM in the 'Time' text box.</td></tr>
+<tr><td>Enter 'http://www.amazon.com/s/ref=nb_sb_ss_c_0_8/190-0002947-5703141?url=search-alias%3Dtoys-and-games&field-keywords=birthday%20party%20supplies&sprefix=birthday%2Caps%2C168' in the 'Active Call to Action' text box.</td></tr>
+<tr><td>Click the 'Active Image Select' button.</td></tr>
+<tr><td>Switch to the select file frame.</td></tr>
+<tr><td>Enter the file path for file upload.</td></tr>
+<tr><td>Click the 'Upload' button.</td></tr>
+<tr><td>Wait for the file link to be visible after upload.</td></tr>
+<tr><td>Click the 'Next' button.</td></tr>
+<tr><td>Click the 'Public Local Files' radio button.</td></tr>
+<tr><td>Click the 'Next' button.</td></tr>
+<tr><td>Verify the file image 'HanSolo' is present.</td></tr>
+<tr><td>Verify the img is loaded and visible.</td></tr>
+<tr><td>Click the 'Save' button.</td></tr>
+<tr><td>Switch to the active frame titled 'Create Event Countdown dialog'.</td></tr>
+<tr><td>Enter '#FF0000' in the 'Active Background Color' text box.</td></tr>
+<tr><td>Enter 'http://www.nbc.com' in the 'Expiry Call to Action' text box.</td></tr>
+<tr><td>Click the 'Expiry Image Select' button.</td></tr>
+<tr><td>Switch to the select file frame.</td></tr>
+<tr><td>Enter the file path for file upload.</td></tr>
+<tr><td>Click the 'Upload' button.</td></tr>
+<tr><td>Wait for the file link to be visible after upload.</td></tr>
+<tr><td>Click the 'Next' button.</td></tr>
+<tr><td>Click the 'Public Local Files' radio button.</td></tr>
+<tr><td>Click the 'Next' button.</td></tr>
+<tr><td>Verify the file image 'nbclogosmall' is present.</td></tr>
+<tr><td>Verify the img is loaded and visible.</td></tr>
+<tr><td>Click the 'Save' button.</td></tr>
+<tr><td>Switch to the active frame titled 'Create Event Countdown dialog'.</td></tr>
+<tr><td>Enter '#00FFFF' in the 'Expiry Background Color' text box.</td></tr>
+<tr><td>Click the 'Save' button.</td></tr>
+<tr><td>Verify success message of 'Event Countdown b514acd3e79546f has been created.' is present.</td></tr>
+<tr><td>Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.</td></tr>
+<tr><td>Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.</td></tr>
+<tr><td>Enter 'pa55word' in the 'Password' text box.</td></tr>
+<tr><td>Click the 'Login' button.</td></tr>
+<tr><td>Mouse over the 'Structure' menu link.</td></tr>
+<tr><td>Click the 'Blocks' menu link.</td></tr>
+<tr><td>Switch to the active frame titled 'Blocks dialog'.</td></tr>
+<tr><td>Select the block name 'Birthday Block' from the '- None -' drop down list.</td></tr>
+<tr><td>Select the block name 'Holiday Party Block' from the '- None -' drop down list.</td></tr>
+<tr><td>Click the 'Save Blocks' button.</td></tr>
+<tr><td>Verify success message of 'The block settings have been updated.' is present.</td></tr>
 </table>
