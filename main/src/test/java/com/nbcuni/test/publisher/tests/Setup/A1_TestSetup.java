@@ -224,6 +224,7 @@ public class A1_TestSetup extends ParentTest {
                 allowedContentTypes.add("tv-episode");
                 allowedContentTypes.add("tv-season");
                 allowedContentTypes.add("tv-show");
+                allowedContentTypes.add("event-countdown");
                 List<WebElement> allContentTypes = webDriver.findElements(By.xpath("//a[text()='Content']/../ul//a[text()='Add content']/..//ul/li/a"));
                 List<String> allContentTypeURLsToDelete = new ArrayList<String>();
                 for (WebElement contentType : allContentTypes) {
