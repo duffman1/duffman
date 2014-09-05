@@ -4,13 +4,16 @@ import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.pageobjects.ErrorChecking.ErrorChecking;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.Reporter;
+
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -19,6 +22,8 @@ import java.util.concurrent.TimeUnit;
  * 
  * @author Brandon Clark
  * @version 1.0 Date: December 13, 2013
+ * @author Vineela Juturu
+ * @version 1.1 Date: September 05, 2014
  *********************************************/
 
 public class ContentParent {
@@ -68,6 +73,22 @@ public class ContentParent {
     
     @FindBy(how = How.XPATH, using = "//div[@class='throbber']")
     private WebElement Throbber_Img;
+    
+    //Pager Element
+    @FindBy(how = How.XPATH, using = "//div[@class='item-list']")
+    private WebElement Pager_Ctr;
+    
+    
+    //List of Page Elements
+    private List<WebElement> Page_Elements() {
+    	return webDriver.findElements(By.xpath("//div[@class='item-list']/ul/li"));
+    }
+    
+    //next Page element
+    @FindBy(how = How.XPATH, using = "//div[@class='item-list']//a[text()='next ›']")
+    private WebElement NextPage_lnk;
+    
+    
     
     private WebElement RequiredField_Ast(String field) {
     	return webDriver.findElement(By.xpath("//*[contains(text(), '" + field + "')]/span[text()='*']"));
@@ -195,6 +216,59 @@ public class ContentParent {
     	}
     	Thread.sleep(500);
     	webDriver.manage().timeouts().implicitlyWait(config.getImplicitWaitTime(), TimeUnit.SECONDS);
+    }
+    
+    public void VerifyPageCtrElementPresent() throws Exception {
+    	
+    	Reporter.log("Verify Page Container Element is present.");
+    	
+    	if(!Pager_Ctr.isDisplayed()){
+    	Assert.fail("Page Container Element is not present on the page");
+    	}
+    	
+    }
+    
+    public void VerifyCorrectNumberOfPagesDisplayed(int itemsPerPage, int totalLimit) throws Exception{
+    
+    	Reporter.log("Verify Correct NumberOfPages Displayed.");
+    	
+    	if(itemsPerPage != 0){
+    		
+    		List<WebElement> totalPages = Page_Elements();
+    		
+    		//On Initial view there will be 2 additional pages 'next >','last>>' 
+    		if ((totalPages.size()-2) != (totalLimit/itemsPerPage)){
+    			Assert.fail("Actual Pages Displayed '"+ (totalPages.size()-2) +"' is not equals to expected pages '"+totalLimit/itemsPerPage+"'.");    			
+    		}
+       	}    	 
+    
+    }
+    
+    public void ClickNextPageLink(){
+    	
+    	Reporter.log("Click the 'NextPage' Link");
+    	
+    	NextPage_lnk.click();
+    	
+    }
+    
+    public boolean isNextDynamicQueuePageExists(){
+    	
+    	Reporter.log("Returns true if nextPage link exists on DynamicQueue.");
+    	
+    	boolean nextPage = false;
+    	
+    	try{
+    	if(NextPage_lnk.isDisplayed())
+    		
+    		nextPage = true;
+    	
+    	}catch(NoSuchElementException e){
+    	
+    		nextPage = false;
+    	}	
+    	
+    	return nextPage;
     }
     
 }

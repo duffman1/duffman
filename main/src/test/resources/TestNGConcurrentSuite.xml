@@ -1,4 +1,4 @@
-<suite name="Pub 7 Concurrent Suite" parallel="classes" preserve-order="true" thread-count="3">
+<suite name="Pub 7 Concurrent Suite" parallel="classes" preserve-order="true" thread-count="1">
 
   	<!--TEST EXECUTION QUEUE-->
   	<test verbose="1" name="All Concurrent Web Tests" annotations="JDK">
@@ -11,7 +11,7 @@
 	 		</run>
 		</groups>
 
-		<classes>
+		<classes>		 
 			<class name="com.nbcuni.test.publisher.tests.Advertising.Comscore.Pixelman"/>
 			<class name="com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds"/>
 			<class name="com.nbcuni.test.publisher.tests.Video.Player.SelectVideoPlayerPerVideoFile"/>
@@ -86,6 +86,7 @@
 			<class name="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens"/>
 			<class name="com.nbcuni.test.publisher.tests.Core.Profiles.FileFieldsTokenBasedPath"/>
 			<class name="com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue"/>
+			<class name="com.nbcuni.test.publisher.tests.Queues.DynamicQueues.DynamicQueuePagination"/>
 			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.Logo.CreateLogo"/>
 			<class name="com.nbcuni.test.publisher.tests.Queues.DynamicQueues.RelatingTVShowsDynamicQueues"/>
 			<class name="com.nbcuni.test.publisher.tests.Queues.DynamicQueues.AddTaxonomyParameters"/>
