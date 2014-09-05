@@ -1,12 +1,14 @@
 package com.nbcuni.test.publisher.pageobjects.Configuration;
 
 import java.util.concurrent.TimeUnit;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.Reporter;
 import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
@@ -69,7 +71,21 @@ public class EventCountdownConfig {
 		
 		Reporter.log("Wait for the sample nodes to be created.");
 		new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOf(SampleNodesCreated_Txt));
-		new WebDriverWait(webDriver, 60).until(ExpectedConditions.not(ExpectedConditions.visibilityOf(Progress_Trb)));
+		
+		webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+		for (int second = 0; ; second++){
+            if (second >= 60) {
+                Assert.fail("Progress throbber is still present after timeout");
+            }
+            try {
+            	Progress_Trb.getLocation();
+            }
+            catch (NoSuchElementException e) {
+            	break;
+            }
+            Thread.sleep(500);
+        }
+		webDriver.manage().timeouts().implicitlyWait(config.getImplicitWaitTime(), TimeUnit.SECONDS);
 	}
 
 	

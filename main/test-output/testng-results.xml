@@ -32,7 +32,22 @@
       <![CDATA[Wait for module filter titled 'Event Countdown' to be visible in module list.]]>
     </line>
     <line>
-      <![CDATA[Verify the 'Event Countdown' check box is checked.]]>
+      <![CDATA[Check the 'Event Countdown' check box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configuration' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
+    </line>
+    <line>
+      <![CDATA[Switch back to the 'Modules' frame.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to frame titled 'Modules'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
@@ -59,7 +74,10 @@
       <![CDATA[Switch to the active frame titled 'Event Countdown dialog'.]]>
     </line>
     <line>
-      <![CDATA[Sample nodes have already been created.]]>
+      <![CDATA[Click the 'Create' button.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the sample nodes to be created.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
@@ -89,10 +107,10 @@
       <![CDATA[Click the 'Edit' link for content item titled 'Birthday Event.]]>
     </line>
     <line>
-      <![CDATA[Enter '09/04/2014 in the 'Date' text box.]]>
+      <![CDATA[Enter '09/05/2014 in the 'Date' text box.]]>
     </line>
     <line>
-      <![CDATA[Enter '05:44:23PM in the 'Time' text box.]]>
+      <![CDATA[Enter '12:22:40PM in the 'Time' text box.]]>
     </line>
     <line>
       <![CDATA[Enter 'http://www.amazon.com/s/ref=nb_sb_ss_c_0_8/190-0002947-5703141?url=search-alias%3Dtoys-and-games&field-keywords=birthday%20party%20supplies&sprefix=birthday%2Caps%2C168' in the 'Active Call to Action' text box.]]>
@@ -260,13 +278,13 @@
       <![CDATA[Switch to the active frame titled 'Create Event Countdown dialog'.]]>
     </line>
     <line>
-      <![CDATA[Enter 'b514acd3e79546f' in the 'Title' text box.]]>
+      <![CDATA[Enter '077a706ccceb425' in the 'Title' text box.]]>
     </line>
     <line>
-      <![CDATA[Enter '09/04/2014 in the 'Date' text box.]]>
+      <![CDATA[Enter '09/05/2014 in the 'Date' text box.]]>
     </line>
     <line>
-      <![CDATA[Enter '05:46:05PM in the 'Time' text box.]]>
+      <![CDATA[Enter '12:24:07PM in the 'Time' text box.]]>
     </line>
     <line>
       <![CDATA[Enter 'http://www.amazon.com/s/ref=nb_sb_ss_c_0_8/190-0002947-5703141?url=search-alias%3Dtoys-and-games&field-keywords=birthday%20party%20supplies&sprefix=birthday%2Caps%2C168' in the 'Active Call to Action' text box.]]>
@@ -356,7 +374,7 @@
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'Event Countdown b514acd3e79546f has been created.' is present.]]>
+      <![CDATA[Verify success message of 'Event Countdown 077a706ccceb425 has been created.' is present.]]>
     </line>
     <line>
       <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
@@ -392,24 +410,24 @@
       <![CDATA[Verify success message of 'The block settings have been updated.' is present.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="177022" started-at="2014-09-04T17:41:45Z" finished-at="2014-09-04T17:44:42Z">
+  <suite name="Default suite" duration-ms="214572" started-at="2014-09-05T12:19:10Z" finished-at="2014-09-05T12:22:45Z">
     <groups>
       <group name="full">
         <method signature="CountdownClockEvents.CountdownClockEvents_TC4887()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@5d64b55b]" name="CountdownClockEvents_TC4887" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents"/>
         <method signature="CountdownClockEvents.Cleanup()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@5d64b55b]" name="Cleanup" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents"/>
       </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="177022" started-at="2014-09-04T17:41:45Z" finished-at="2014-09-04T17:44:42Z">
+    <test name="Default test" duration-ms="214572" started-at="2014-09-05T12:19:10Z" finished-at="2014-09-05T12:22:45Z">
       <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents">
-        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@5d64b55b]" name="startGridAndHub" is-config="true" duration-ms="1301" started-at="2014-09-04T13:41:44Z" finished-at="2014-09-04T13:41:45Z">
+        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@5d64b55b]" name="startGridAndHub" is-config="true" duration-ms="1299" started-at="2014-09-05T08:19:09Z" finished-at="2014-09-05T08:19:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startGridAndHub -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@5d64b55b]" name="startSelenium" is-config="true" duration-ms="2589" started-at="2014-09-04T13:41:45Z" finished-at="2014-09-04T13:41:48Z">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@5d64b55b]" name="startSelenium" is-config="true" duration-ms="2661" started-at="2014-09-05T08:19:10Z" finished-at="2014-09-05T08:19:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="CountdownClockEvents_TC4887()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@5d64b55b]" name="CountdownClockEvents_TC4887" duration-ms="156588" started-at="2014-09-04T13:41:48Z" finished-at="2014-09-04T13:44:24Z">
+        <test-method status="PASS" signature="CountdownClockEvents_TC4887()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@5d64b55b]" name="CountdownClockEvents_TC4887" duration-ms="193857" started-at="2014-09-05T08:19:13Z" finished-at="2014-09-05T08:22:27Z">
           <reporter-output>
             <line>
               <![CDATA[STEP 1]]>
@@ -442,7 +460,22 @@
               <![CDATA[Wait for module filter titled 'Event Countdown' to be visible in module list.]]>
             </line>
             <line>
-              <![CDATA[Verify the 'Event Countdown' check box is checked.]]>
+              <![CDATA[Check the 'Event Countdown' check box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configuration' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
+            </line>
+            <line>
+              <![CDATA[Switch back to the 'Modules' frame.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to frame titled 'Modules'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
             </line>
             <line>
               <![CDATA[Click the 'Close Overlay X'.]]>
@@ -469,7 +502,10 @@
               <![CDATA[Switch to the active frame titled 'Event Countdown dialog'.]]>
             </line>
             <line>
-              <![CDATA[Sample nodes have already been created.]]>
+              <![CDATA[Click the 'Create' button.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the sample nodes to be created.]]>
             </line>
             <line>
               <![CDATA[Click the 'Close Overlay X'.]]>
@@ -499,10 +535,10 @@
               <![CDATA[Click the 'Edit' link for content item titled 'Birthday Event.]]>
             </line>
             <line>
-              <![CDATA[Enter '09/04/2014 in the 'Date' text box.]]>
+              <![CDATA[Enter '09/05/2014 in the 'Date' text box.]]>
             </line>
             <line>
-              <![CDATA[Enter '05:44:23PM in the 'Time' text box.]]>
+              <![CDATA[Enter '12:22:40PM in the 'Time' text box.]]>
             </line>
             <line>
               <![CDATA[Enter 'http://www.amazon.com/s/ref=nb_sb_ss_c_0_8/190-0002947-5703141?url=search-alias%3Dtoys-and-games&field-keywords=birthday%20party%20supplies&sprefix=birthday%2Caps%2C168' in the 'Active Call to Action' text box.]]>
@@ -670,13 +706,13 @@
               <![CDATA[Switch to the active frame titled 'Create Event Countdown dialog'.]]>
             </line>
             <line>
-              <![CDATA[Enter 'b514acd3e79546f' in the 'Title' text box.]]>
+              <![CDATA[Enter '077a706ccceb425' in the 'Title' text box.]]>
             </line>
             <line>
-              <![CDATA[Enter '09/04/2014 in the 'Date' text box.]]>
+              <![CDATA[Enter '09/05/2014 in the 'Date' text box.]]>
             </line>
             <line>
-              <![CDATA[Enter '05:46:05PM in the 'Time' text box.]]>
+              <![CDATA[Enter '12:24:07PM in the 'Time' text box.]]>
             </line>
             <line>
               <![CDATA[Enter 'http://www.amazon.com/s/ref=nb_sb_ss_c_0_8/190-0002947-5703141?url=search-alias%3Dtoys-and-games&field-keywords=birthday%20party%20supplies&sprefix=birthday%2Caps%2C168' in the 'Active Call to Action' text box.]]>
@@ -766,11 +802,11 @@
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'Event Countdown b514acd3e79546f has been created.' is present.]]>
+              <![CDATA[Verify success message of 'Event Countdown 077a706ccceb425 has been created.' is present.]]>
             </line>
           </reporter-output>
         </test-method> <!-- CountdownClockEvents_TC4887 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@5d64b55b]" name="stopSelenium" is-config="true" duration-ms="571" started-at="2014-09-04T13:44:24Z" finished-at="2014-09-04T13:44:25Z">
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@5d64b55b]" name="stopSelenium" is-config="true" duration-ms="575" started-at="2014-09-05T08:22:27Z" finished-at="2014-09-05T08:22:28Z">
           <params>
             <param index="0">
               <value>
@@ -781,11 +817,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@5d64b55b]" name="startSelenium" is-config="true" duration-ms="2256" started-at="2014-09-04T13:44:25Z" finished-at="2014-09-04T13:44:27Z">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@5d64b55b]" name="startSelenium" is-config="true" duration-ms="2236" started-at="2014-09-05T08:22:28Z" finished-at="2014-09-05T08:22:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="Cleanup()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@5d64b55b]" name="Cleanup" duration-ms="14438" started-at="2014-09-04T13:44:27Z" depends-on-methods="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents.CountdownClockEvents_TC4887" finished-at="2014-09-04T13:44:42Z">
+        <test-method status="PASS" signature="Cleanup()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@5d64b55b]" name="Cleanup" duration-ms="14656" started-at="2014-09-05T08:22:30Z" depends-on-methods="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents.CountdownClockEvents_TC4887" finished-at="2014-09-05T08:22:44Z">
           <reporter-output>
             <line>
               <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
@@ -822,7 +858,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- Cleanup -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@5d64b55b]" name="stopSelenium" is-config="true" duration-ms="568" started-at="2014-09-04T13:44:42Z" finished-at="2014-09-04T13:44:42Z">
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@5d64b55b]" name="stopSelenium" is-config="true" duration-ms="569" started-at="2014-09-05T08:22:44Z" finished-at="2014-09-05T08:22:45Z">
           <params>
             <param index="0">
               <value>
@@ -833,7 +869,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@5d64b55b]" name="stopGridAndHub" is-config="true" duration-ms="392" started-at="2014-09-04T13:44:42Z" finished-at="2014-09-04T13:44:43Z">
+        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@5d64b55b]" name="stopGridAndHub" is-config="true" duration-ms="389" started-at="2014-09-05T08:22:45Z" finished-at="2014-09-05T08:22:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopGridAndHub -->
