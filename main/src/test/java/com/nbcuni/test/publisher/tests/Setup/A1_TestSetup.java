@@ -73,7 +73,7 @@ public class A1_TestSetup extends ParentTest {
                 }
             	
                 //uninstall some high data usage modules that overflow lists
-                for (String module : Arrays.asList("MPS", "Dynamic Queue Workbench", "Dynamic Queue")) {
+                for (String module : Arrays.asList("MPS", "Dynamic Queue Workbench", "Dynamic Queue", "Event Countdown")) {
                 	overlay.ClickOverlayTab("Uninstall");
                     overlay.SwitchToActiveFrame();
                     if (modules.IsModuleInstalled(module)) {
