@@ -186,6 +186,12 @@ public class CountdownClockEvents extends ParentTest{
     	blocks.SelectRegion("Holiday Party Block", "- None -");
     	blocks.ClickSaveBlocksBtn();
     	contentParent.VerifyMessageStatus("The block settings have been updated.");
+    	overlay.ClickCloseOverlayLnk();
+    	taxonomy.NavigateSite("Modules");
+    	overlay.SwitchToActiveFrame();
+    	Modules modules = new Modules(webDriver, applib);
+    	modules.EnterFilterName("Event Countdown");
+    	modules.DisableModule("Event Countdown");
     	
 	}
 }

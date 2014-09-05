@@ -67,7 +67,7 @@ public class A1_TestSetup extends ParentTest {
                 //disable necessary modules
                 for (String module : Arrays.asList("Sticky Edit Actions", "Acquia Purge", 
                 		"ImageField Focus", "Database logging", "MPS", 
-                		"Dynamic Queue Workbench", "Dynamic Queue")) {
+                		"Dynamic Queue Workbench", "Dynamic Queue", "Event Countdown")) {
                 	modules.EnterFilterName(module);
                 	modules.DisableModule(module);
                 }

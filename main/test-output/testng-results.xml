@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
-    <line>
-      <![CDATA[STEP 1]]>
-    </line>
     <line>
       <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
     </line>
@@ -15,51 +12,6 @@
     </line>
     <line>
       <![CDATA[Click the 'Login' button.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 2]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Modules' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to frame titled 'Modules'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Event Countdown' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for module filter titled 'Event Countdown' to be visible in module list.]]>
-    </line>
-    <line>
-      <![CDATA[Check the 'Event Countdown' check box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
-    </line>
-    <line>
-      <![CDATA[Switch back to the 'Modules' frame.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to frame titled 'Modules'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll by '-500'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Home' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 3]]>
     </line>
     <line>
       <![CDATA[Mouse over the 'Configuration' menu link.]]>
@@ -68,16 +20,16 @@
       <![CDATA[Mouse over the 'Media' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Event Countdown' menu link.]]>
+      <![CDATA[Click the 'Media: thePlatform mpx settings' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Event Countdown dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Create' button.]]>
+      <![CDATA[Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.]]>
     </line>
     <line>
-      <![CDATA[Wait for the sample nodes to be created.]]>
+      <![CDATA[MPX is already configured.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
@@ -86,352 +38,342 @@
       <![CDATA[Scroll by '-500'.]]>
     </line>
     <line>
-      <![CDATA[STEP 4]]>
+      <![CDATA[Mouse over the 'Configuration' menu link.]]>
     </line>
     <line>
-      <![CDATA[STEP 5 AND 6]]>
+      <![CDATA[Mouse over the 'Media' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Content' menu link.]]>
+      <![CDATA[Click the 'Media: thePlatform mpx settings' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.]]>
     </line>
     <line>
-      <![CDATA[Enter title Birthday Event.]]>
+      <![CDATA[Get all the selected import account options and store to a list.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Apply' button.]]>
+      <![CDATA[Click the 'Close Overlay X'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Edit' link for content item titled 'Birthday Event.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '09/05/2014 in the 'Date' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '12:22:40PM in the 'Time' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'http://www.amazon.com/s/ref=nb_sb_ss_c_0_8/190-0002947-5703141?url=search-alias%3Dtoys-and-games&field-keywords=birthday%20party%20supplies&sprefix=birthday%2Caps%2C168' in the 'Active Call to Action' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Active Image Select' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the select file frame.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the file path for file upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Upload' button.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the file image 'HanSolo' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '#FF0000' in the 'Active Background Color' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'http://www.nbc.com' in the 'Expiry Call to Action' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Expiry Image Select' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the select file frame.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the file path for file upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Upload' button.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the file image 'nbclogosmall' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '#00FFFF' in the 'Expiry Background Color' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 7]]>
+      <![CDATA[Scroll by '-500'.]]>
     </line>
     <line>
       <![CDATA[Mouse over the 'Structure' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Blocks' menu link.]]>
+      <![CDATA[Mouse over the 'File types' menu link.]]>
     </line>
     <line>
-      <![CDATA[Select the block name 'Birthday Block' from the 'Content' drop down list.]]>
+      <![CDATA[Click the 'MPX Video for Account "DB TV" (2312945284)' menu link.]]>
     </line>
     <line>
-      <![CDATA[Select the block name 'Holiday Party Block' from the 'Content' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save Blocks' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The block settings have been updated.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 8]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Home' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 9]]>
-    </line>
-    <line>
-      <![CDATA[Verify the countdown timer is visible.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the countdown timer is counting down.]]>
-    </line>
-    <line>
-      <![CDATA[Assert that active img source of the event contains 'HanSolo'.]]>
-    </line>
-    <line>
-      <![CDATA[Assert the the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the active background color of '#FF0000' is visible for event with title 'Birthday Event'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the active link href of 'http://www.amazon.com/s/ref=nb_sb_ss_c_0_8/190-0002947-5703141?url=search-alias%3Dtoys-and-games&field-keywords=birthday%20party%20supplies&sprefix=birthday%2Caps%2C168' is visible for event with title 'Birthday Event'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 10]]>
-    </line>
-    <line>
-      <![CDATA[Verify the countdown timer is NOT counting down.]]>
-    </line>
-    <line>
-      <![CDATA[Assert that expiry img source of the event contains 'nbclogosmall'.]]>
-    </line>
-    <line>
-      <![CDATA[Assert the the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the expiry background color of '#00FFFF' is visible for event with title 'Birthday Event'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the expiry link href of 'http://www.nbc.com' is visible for event with title 'Birthday Event'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 11 AND 12]]>
-    </line>
-    <line>
-      <![CDATA[STEP 13]]>
+      <![CDATA[Switch to the active frame titled 'MPX Video for Account &quot;DB TV&quot; (2312945284) dialog'.]]>
     </line>
     <line>
       <![CDATA[Mouse over the 'Content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Add content' menu link.]]>
+      <![CDATA[Mouse over the 'Files' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Event Countdown' menu link.]]>
+      <![CDATA[Click the 'mpxMedia' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Create Event Countdown dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
     </line>
     <line>
-      <![CDATA[Enter '077a706ccceb425' in the 'Title' text box.]]>
+      <![CDATA[Enter title AutomationDefault.]]>
     </line>
     <line>
-      <![CDATA[Enter '09/05/2014 in the 'Date' text box.]]>
+      <![CDATA[Click the 'Apply' button.]]>
     </line>
     <line>
-      <![CDATA[Enter '12:24:07PM in the 'Time' text box.]]>
+      <![CDATA[Get the title text of every result in the search result set.]]>
     </line>
     <line>
-      <![CDATA[Enter 'http://www.amazon.com/s/ref=nb_sb_ss_c_0_8/190-0002947-5703141?url=search-alias%3Dtoys-and-games&field-keywords=birthday%20party%20supplies&sprefix=birthday%2Caps%2C168' in the 'Active Call to Action' text box.]]>
+      <![CDATA[For each expected result, assert it is present in the result set.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Active Image Select' button.]]>
+      <![CDATA[Click the first search title link in the search result set.]]>
     </line>
     <line>
-      <![CDATA[Switch to the select file frame.]]>
+      <![CDATA[Click the 'Edit' link in the work bench.]]>
     </line>
     <line>
-      <![CDATA[Enter the file path for file upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Upload' button.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the file image 'HanSolo' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img is loaded and visible.]]>
+      <![CDATA[Switch to the active frame titled 'Edit mpx_video_86 AutomationDefault dialog'.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Create Event Countdown dialog'.]]>
+      <![CDATA[Verify the text 'AutomationDefault' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Enter '#FF0000' in the 'Active Background Color' text box.]]>
+      <![CDATA[Verify the text 'MPX Released File Public IDs:' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Enter 'http://www.nbc.com' in the 'Expiry Call to Action' text box.]]>
+      <![CDATA[Verify the text 'MPX Media Default Released File Public ID:' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Expiry Image Select' button.]]>
+      <![CDATA[Verify the text 'MPX Media Categories:' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Switch to the select file frame.]]>
+      <![CDATA[Verify the text 'Series' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Enter the file path for file upload.]]>
+      <![CDATA[Verify the text 'Show' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Upload' button.]]>
+      <![CDATA[Verify the text 'MPX Media Description:' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
+      <![CDATA[Verify the text 'Automation 1 example test' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Next' button.]]>
+      <![CDATA[Verify the text 'MPX Media Author:' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
+      <![CDATA[Verify the text 'Pub7 Content Provider' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Next' button.]]>
+      <![CDATA[Verify the text 'MPX Media Air Date:' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Verify the file image 'nbclogosmall' is present.]]>
+      <![CDATA[Verify the text 'Wednesday, January 8, 2014' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Verify the img is loaded and visible.]]>
+      <![CDATA[Verify the text 'MPX Media Keywords:' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'mpx, metadata, field, override' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'MPX Media Copyright:' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'NBCUNI QA' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'MPX Media Film Advisory Board Rating:' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'pd' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'MPX Media MPAA Rating:' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'MPX Media MPAA Sub-Ratings:' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'v' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'MPX Media V-Chip Rating:' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'tv-y7' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'MPX Media V-Chip Sub-Ratings:' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'l' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'MPX Media Exclude Selected Countries:' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'Prevent Playback in Selected Countries' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'MPX Media Available Date:' is NOT present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'MPX Media Expiration Date:' is NOT present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Edit' link in the work bench.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Edit mpx_video_86 AutomationDefault dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify that the 'Media Availabe Date' text box is disabled and has no value.]]>
+    </line>
+    <line>
+      <![CDATA[Verify that the 'Media Expiration Date' text box is disabled and has no value.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Override' checkbox for the 'Available Date' check box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Override' checkbox for the 'Expiration Date' check box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '09/12/2014' in the 'Available Date' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '05:00pm' in the 'Available Time' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '09/04/2017' in the 'Expiration Date' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '05:00pm' in the 'Expiration Time' text box.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Create Event Countdown dialog'.]]>
+      <![CDATA[Verify success message of 'MPX Video for Account "DB TV" (2312945284) AutomationDefault has been updated.' is present.]]>
     </line>
     <line>
-      <![CDATA[Enter '#00FFFF' in the 'Expiry Background Color' text box.]]>
+      <![CDATA[Verify the text 'MPX Media Available Date:' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'Friday, September 12, 2014' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'MPX Media Expiration Date: ' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'Monday, September 4, 2017' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Edit' link in the work bench.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Edit mpx_video_86 AutomationDefault dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Un-check the 'Override' checkbox for the 'Available Date' check box.]]>
+    </line>
+    <line>
+      <![CDATA[Un-check the 'Override' checkbox for the 'Expiration Date' check box.]]>
+    </line>
+    <line>
+      <![CDATA[Verify that the 'Media Availabe Date' text box is disabled and has no value.]]>
+    </line>
+    <line>
+      <![CDATA[Verify that the 'Media Expiration Date' text box is disabled and has no value.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'Event Countdown 077a706ccceb425 has been created.' is present.]]>
+      <![CDATA[Verify success message of 'MPX Video for Account "DB TV" (2312945284) AutomationDefault has been updated.' is present.]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
+      <![CDATA[Verify the text 'AutomationDefault' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
+      <![CDATA[Verify the text 'MPX Released File Public IDs:' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+      <![CDATA[Verify the text 'MPX Media Default Released File Public ID:' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Login' button.]]>
+      <![CDATA[Verify the text 'MPX Media Categories:' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Structure' menu link.]]>
+      <![CDATA[Verify the text 'Series' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Blocks' menu link.]]>
+      <![CDATA[Verify the text 'Show' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
+      <![CDATA[Verify the text 'MPX Media Description:' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Select the block name 'Birthday Block' from the '- None -' drop down list.]]>
+      <![CDATA[Verify the text 'Automation 1 example test' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Select the block name 'Holiday Party Block' from the '- None -' drop down list.]]>
+      <![CDATA[Verify the text 'MPX Media Author:' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save Blocks' button.]]>
+      <![CDATA[Verify the text 'Pub7 Content Provider' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'The block settings have been updated.' is present.]]>
+      <![CDATA[Verify the text 'MPX Media Air Date:' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'Wednesday, January 8, 2014' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'MPX Media Keywords:' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'mpx, metadata, field, override' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'MPX Media Copyright:' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'NBCUNI QA' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'MPX Media Film Advisory Board Rating:' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'pd' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'MPX Media MPAA Rating:' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'MPX Media MPAA Sub-Ratings:' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'v' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'MPX Media V-Chip Rating:' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'tv-y7' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'MPX Media V-Chip Sub-Ratings:' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'l' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'MPX Media Exclude Selected Countries:' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'Prevent Playback in Selected Countries' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'MPX Media Available Date:' is NOT present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'MPX Media Expiration Date:' is NOT present on the page.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="214572" started-at="2014-09-05T12:19:10Z" finished-at="2014-09-05T12:22:45Z">
+  <suite name="Default suite" duration-ms="64828" started-at="2014-09-05T15:15:28Z" finished-at="2014-09-05T15:16:33Z">
     <groups>
+      <group name="mpx">
+        <method signature="MPXVideosSchedulingVerificationInitialOverrides.MPXVideosSchedulingVerificationInitialOverrides_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides@1bffd008]" name="MPXVideosSchedulingVerificationInitialOverrides_Test" class="com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides"/>
+      </group> <!-- mpx -->
       <group name="full">
-        <method signature="CountdownClockEvents.CountdownClockEvents_TC4887()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@5d64b55b]" name="CountdownClockEvents_TC4887" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents"/>
-        <method signature="CountdownClockEvents.Cleanup()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@5d64b55b]" name="Cleanup" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents"/>
+        <method signature="MPXVideosSchedulingVerificationInitialOverrides.MPXVideosSchedulingVerificationInitialOverrides_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides@1bffd008]" name="MPXVideosSchedulingVerificationInitialOverrides_Test" class="com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides"/>
       </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="214572" started-at="2014-09-05T12:19:10Z" finished-at="2014-09-05T12:22:45Z">
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents">
-        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@5d64b55b]" name="startGridAndHub" is-config="true" duration-ms="1299" started-at="2014-09-05T08:19:09Z" finished-at="2014-09-05T08:19:10Z">
+    <test name="Default test" duration-ms="64828" started-at="2014-09-05T15:15:28Z" finished-at="2014-09-05T15:16:33Z">
+      <class name="com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides">
+        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides@1bffd008]" name="startGridAndHub" is-config="true" duration-ms="1316" started-at="2014-09-05T11:15:27Z" finished-at="2014-09-05T11:15:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startGridAndHub -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@5d64b55b]" name="startSelenium" is-config="true" duration-ms="2661" started-at="2014-09-05T08:19:10Z" finished-at="2014-09-05T08:19:13Z">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides@1bffd008]" name="startSelenium" is-config="true" duration-ms="2710" started-at="2014-09-05T11:15:28Z" finished-at="2014-09-05T11:15:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="CountdownClockEvents_TC4887()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@5d64b55b]" name="CountdownClockEvents_TC4887" duration-ms="193857" started-at="2014-09-05T08:19:13Z" finished-at="2014-09-05T08:22:27Z">
+        <test-method status="PASS" signature="MPXVideosSchedulingVerificationInitialOverrides_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides@1bffd008]" name="MPXVideosSchedulingVerificationInitialOverrides_Test" duration-ms="61534" started-at="2014-09-05T11:15:31Z" finished-at="2014-09-05T11:16:33Z">
           <reporter-output>
-            <line>
-              <![CDATA[STEP 1]]>
-            </line>
             <line>
               <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
             </line>
@@ -443,51 +385,6 @@
             </line>
             <line>
               <![CDATA[Click the 'Login' button.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 2]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Modules' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to frame titled 'Modules'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Event Countdown' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for module filter titled 'Event Countdown' to be visible in module list.]]>
-            </line>
-            <line>
-              <![CDATA[Check the 'Event Countdown' check box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
-            </line>
-            <line>
-              <![CDATA[Switch back to the 'Modules' frame.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to frame titled 'Modules'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll by '-500'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Home' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 3]]>
             </line>
             <line>
               <![CDATA[Mouse over the 'Configuration' menu link.]]>
@@ -496,16 +393,16 @@
               <![CDATA[Mouse over the 'Media' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Event Countdown' menu link.]]>
+              <![CDATA[Click the 'Media: thePlatform mpx settings' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Event Countdown dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Create' button.]]>
+              <![CDATA[Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.]]>
             </line>
             <line>
-              <![CDATA[Wait for the sample nodes to be created.]]>
+              <![CDATA[MPX is already configured.]]>
             </line>
             <line>
               <![CDATA[Click the 'Close Overlay X'.]]>
@@ -514,366 +411,338 @@
               <![CDATA[Scroll by '-500'.]]>
             </line>
             <line>
-              <![CDATA[STEP 4]]>
+              <![CDATA[Mouse over the 'Configuration' menu link.]]>
             </line>
             <line>
-              <![CDATA[STEP 5 AND 6]]>
+              <![CDATA[Mouse over the 'Media' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Content' menu link.]]>
+              <![CDATA[Click the 'Media: thePlatform mpx settings' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.]]>
             </line>
             <line>
-              <![CDATA[Enter title Birthday Event.]]>
+              <![CDATA[Get all the selected import account options and store to a list.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Apply' button.]]>
+              <![CDATA[Click the 'Close Overlay X'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Edit' link for content item titled 'Birthday Event.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '09/05/2014 in the 'Date' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '12:22:40PM in the 'Time' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'http://www.amazon.com/s/ref=nb_sb_ss_c_0_8/190-0002947-5703141?url=search-alias%3Dtoys-and-games&field-keywords=birthday%20party%20supplies&sprefix=birthday%2Caps%2C168' in the 'Active Call to Action' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Active Image Select' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the select file frame.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the file path for file upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Upload' button.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Public Local Files' radio button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the file image 'HanSolo' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '#FF0000' in the 'Active Background Color' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'http://www.nbc.com' in the 'Expiry Call to Action' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Expiry Image Select' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the select file frame.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the file path for file upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Upload' button.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Public Local Files' radio button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the file image 'nbclogosmall' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '#00FFFF' in the 'Expiry Background Color' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 7]]>
+              <![CDATA[Scroll by '-500'.]]>
             </line>
             <line>
               <![CDATA[Mouse over the 'Structure' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Blocks' menu link.]]>
+              <![CDATA[Mouse over the 'File types' menu link.]]>
             </line>
             <line>
-              <![CDATA[Select the block name 'Birthday Block' from the 'Content' drop down list.]]>
+              <![CDATA[Click the 'MPX Video for Account "DB TV" (2312945284)' menu link.]]>
             </line>
             <line>
-              <![CDATA[Select the block name 'Holiday Party Block' from the 'Content' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save Blocks' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The block settings have been updated.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 8]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Home' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 9]]>
-            </line>
-            <line>
-              <![CDATA[Verify the countdown timer is visible.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the countdown timer is counting down.]]>
-            </line>
-            <line>
-              <![CDATA[Assert that active img source of the event contains 'HanSolo'.]]>
-            </line>
-            <line>
-              <![CDATA[Assert the the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the active background color of '#FF0000' is visible for event with title 'Birthday Event'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the active link href of 'http://www.amazon.com/s/ref=nb_sb_ss_c_0_8/190-0002947-5703141?url=search-alias%3Dtoys-and-games&field-keywords=birthday%20party%20supplies&sprefix=birthday%2Caps%2C168' is visible for event with title 'Birthday Event'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 10]]>
-            </line>
-            <line>
-              <![CDATA[Verify the countdown timer is NOT counting down.]]>
-            </line>
-            <line>
-              <![CDATA[Assert that expiry img source of the event contains 'nbclogosmall'.]]>
-            </line>
-            <line>
-              <![CDATA[Assert the the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the expiry background color of '#00FFFF' is visible for event with title 'Birthday Event'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the expiry link href of 'http://www.nbc.com' is visible for event with title 'Birthday Event'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 11 AND 12]]>
-            </line>
-            <line>
-              <![CDATA[STEP 13]]>
+              <![CDATA[Switch to the active frame titled 'MPX Video for Account &quot;DB TV&quot; (2312945284) dialog'.]]>
             </line>
             <line>
               <![CDATA[Mouse over the 'Content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Add content' menu link.]]>
+              <![CDATA[Mouse over the 'Files' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Event Countdown' menu link.]]>
+              <![CDATA[Click the 'mpxMedia' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create Event Countdown dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
             </line>
             <line>
-              <![CDATA[Enter '077a706ccceb425' in the 'Title' text box.]]>
+              <![CDATA[Enter title AutomationDefault.]]>
             </line>
             <line>
-              <![CDATA[Enter '09/05/2014 in the 'Date' text box.]]>
+              <![CDATA[Click the 'Apply' button.]]>
             </line>
             <line>
-              <![CDATA[Enter '12:24:07PM in the 'Time' text box.]]>
+              <![CDATA[Get the title text of every result in the search result set.]]>
             </line>
             <line>
-              <![CDATA[Enter 'http://www.amazon.com/s/ref=nb_sb_ss_c_0_8/190-0002947-5703141?url=search-alias%3Dtoys-and-games&field-keywords=birthday%20party%20supplies&sprefix=birthday%2Caps%2C168' in the 'Active Call to Action' text box.]]>
+              <![CDATA[For each expected result, assert it is present in the result set.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Active Image Select' button.]]>
+              <![CDATA[Click the first search title link in the search result set.]]>
             </line>
             <line>
-              <![CDATA[Switch to the select file frame.]]>
+              <![CDATA[Click the 'Edit' link in the work bench.]]>
             </line>
             <line>
-              <![CDATA[Enter the file path for file upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Upload' button.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Public Local Files' radio button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the file image 'HanSolo' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img is loaded and visible.]]>
+              <![CDATA[Switch to the active frame titled 'Edit mpx_video_86 AutomationDefault dialog'.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create Event Countdown dialog'.]]>
+              <![CDATA[Verify the text 'AutomationDefault' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Enter '#FF0000' in the 'Active Background Color' text box.]]>
+              <![CDATA[Verify the text 'MPX Released File Public IDs:' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Enter 'http://www.nbc.com' in the 'Expiry Call to Action' text box.]]>
+              <![CDATA[Verify the text 'MPX Media Default Released File Public ID:' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Expiry Image Select' button.]]>
+              <![CDATA[Verify the text 'MPX Media Categories:' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Switch to the select file frame.]]>
+              <![CDATA[Verify the text 'Series' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Enter the file path for file upload.]]>
+              <![CDATA[Verify the text 'Show' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Upload' button.]]>
+              <![CDATA[Verify the text 'MPX Media Description:' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
+              <![CDATA[Verify the text 'Automation 1 example test' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Next' button.]]>
+              <![CDATA[Verify the text 'MPX Media Author:' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Public Local Files' radio button.]]>
+              <![CDATA[Verify the text 'Pub7 Content Provider' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Next' button.]]>
+              <![CDATA[Verify the text 'MPX Media Air Date:' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Verify the file image 'nbclogosmall' is present.]]>
+              <![CDATA[Verify the text 'Wednesday, January 8, 2014' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Verify the img is loaded and visible.]]>
+              <![CDATA[Verify the text 'MPX Media Keywords:' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'mpx, metadata, field, override' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'MPX Media Copyright:' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'NBCUNI QA' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'MPX Media Film Advisory Board Rating:' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'pd' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'MPX Media MPAA Rating:' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'MPX Media MPAA Sub-Ratings:' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'v' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'MPX Media V-Chip Rating:' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'tv-y7' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'MPX Media V-Chip Sub-Ratings:' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'l' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'MPX Media Exclude Selected Countries:' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Prevent Playback in Selected Countries' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'MPX Media Available Date:' is NOT present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'MPX Media Expiration Date:' is NOT present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Edit' link in the work bench.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Edit mpx_video_86 AutomationDefault dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify that the 'Media Availabe Date' text box is disabled and has no value.]]>
+            </line>
+            <line>
+              <![CDATA[Verify that the 'Media Expiration Date' text box is disabled and has no value.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Override' checkbox for the 'Available Date' check box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Override' checkbox for the 'Expiration Date' check box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '09/12/2014' in the 'Available Date' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '05:00pm' in the 'Available Time' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '09/04/2017' in the 'Expiration Date' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '05:00pm' in the 'Expiration Time' text box.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create Event Countdown dialog'.]]>
+              <![CDATA[Verify success message of 'MPX Video for Account "DB TV" (2312945284) AutomationDefault has been updated.' is present.]]>
             </line>
             <line>
-              <![CDATA[Enter '#00FFFF' in the 'Expiry Background Color' text box.]]>
+              <![CDATA[Verify the text 'MPX Media Available Date:' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Friday, September 12, 2014' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'MPX Media Expiration Date: ' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Monday, September 4, 2017' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Edit' link in the work bench.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Edit mpx_video_86 AutomationDefault dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Un-check the 'Override' checkbox for the 'Available Date' check box.]]>
+            </line>
+            <line>
+              <![CDATA[Un-check the 'Override' checkbox for the 'Expiration Date' check box.]]>
+            </line>
+            <line>
+              <![CDATA[Verify that the 'Media Availabe Date' text box is disabled and has no value.]]>
+            </line>
+            <line>
+              <![CDATA[Verify that the 'Media Expiration Date' text box is disabled and has no value.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'Event Countdown 077a706ccceb425 has been created.' is present.]]>
+              <![CDATA[Verify success message of 'MPX Video for Account "DB TV" (2312945284) AutomationDefault has been updated.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'AutomationDefault' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'MPX Released File Public IDs:' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'MPX Media Default Released File Public ID:' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'MPX Media Categories:' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Series' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Show' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'MPX Media Description:' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Automation 1 example test' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'MPX Media Author:' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Pub7 Content Provider' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'MPX Media Air Date:' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Wednesday, January 8, 2014' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'MPX Media Keywords:' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'mpx, metadata, field, override' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'MPX Media Copyright:' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'NBCUNI QA' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'MPX Media Film Advisory Board Rating:' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'pd' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'MPX Media MPAA Rating:' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'MPX Media MPAA Sub-Ratings:' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'v' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'MPX Media V-Chip Rating:' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'tv-y7' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'MPX Media V-Chip Sub-Ratings:' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'l' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'MPX Media Exclude Selected Countries:' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Prevent Playback in Selected Countries' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'MPX Media Available Date:' is NOT present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'MPX Media Expiration Date:' is NOT present on the page.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- CountdownClockEvents_TC4887 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@5d64b55b]" name="stopSelenium" is-config="true" duration-ms="575" started-at="2014-09-05T08:22:27Z" finished-at="2014-09-05T08:22:28Z">
+        </test-method> <!-- MPXVideosSchedulingVerificationInitialOverrides_Test -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides@1bffd008]" name="stopSelenium" is-config="true" duration-ms="575" started-at="2014-09-05T11:16:33Z" finished-at="2014-09-05T11:16:33Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=CountdownClockEvents_TC4887 status=SUCCESS method=CountdownClockEvents.CountdownClockEvents_TC4887()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@5d64b55b] output=STEP 1]]]>
+                <![CDATA[[TestResult name=MPXVideosSchedulingVerificationInitialOverrides_Test status=SUCCESS method=MPXVideosSchedulingVerificationInitialOverrides.MPXVideosSchedulingVerificationInitialOverrides_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides@1bffd008] output=Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@5d64b55b]" name="startSelenium" is-config="true" duration-ms="2236" started-at="2014-09-05T08:22:28Z" finished-at="2014-09-05T08:22:30Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="Cleanup()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@5d64b55b]" name="Cleanup" duration-ms="14656" started-at="2014-09-05T08:22:30Z" depends-on-methods="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents.CountdownClockEvents_TC4887" finished-at="2014-09-05T08:22:44Z">
-          <reporter-output>
-            <line>
-              <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Login' button.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Structure' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Blocks' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Select the block name 'Birthday Block' from the '- None -' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Select the block name 'Holiday Party Block' from the '- None -' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save Blocks' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The block settings have been updated.' is present.]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- Cleanup -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@5d64b55b]" name="stopSelenium" is-config="true" duration-ms="569" started-at="2014-09-05T08:22:44Z" finished-at="2014-09-05T08:22:45Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=Cleanup status=SUCCESS method=CountdownClockEvents.Cleanup()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@5d64b55b] output=Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@5d64b55b]" name="stopGridAndHub" is-config="true" duration-ms="389" started-at="2014-09-05T08:22:45Z" finished-at="2014-09-05T08:22:45Z">
+        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides@1bffd008]" name="stopGridAndHub" is-config="true" duration-ms="394" started-at="2014-09-05T11:16:33Z" finished-at="2014-09-05T11:16:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopGridAndHub -->
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
