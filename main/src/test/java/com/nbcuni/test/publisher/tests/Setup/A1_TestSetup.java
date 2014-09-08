@@ -67,13 +67,13 @@ public class A1_TestSetup extends ParentTest {
                 //disable necessary modules
                 for (String module : Arrays.asList("Sticky Edit Actions", "Acquia Purge", 
                 		"ImageField Focus", "Database logging", "MPS", 
-                		"Dynamic Queue Workbench", "Dynamic Queue")) {
+                		"Dynamic Queue Workbench", "Dynamic Queue", "Event Countdown")) {
                 	modules.EnterFilterName(module);
                 	modules.DisableModule(module);
                 }
             	
                 //uninstall some high data usage modules that overflow lists
-                for (String module : Arrays.asList("MPS", "Dynamic Queue Workbench", "Dynamic Queue")) {
+                for (String module : Arrays.asList("MPS", "Dynamic Queue Workbench", "Dynamic Queue", "Event Countdown")) {
                 	overlay.ClickOverlayTab("Uninstall");
                     overlay.SwitchToActiveFrame();
                     if (modules.IsModuleInstalled(module)) {
