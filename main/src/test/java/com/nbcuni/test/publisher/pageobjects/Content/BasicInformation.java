@@ -61,6 +61,9 @@ public class BasicInformation {
     @FindBy(how = How.XPATH, using = "//input[@id='edit-field-season-id-und-0-value']")
     private WebElement SeasonNumber_Txb;
     
+    @FindBy(how = How.XPATH, using = "//select[contains(@class, 'wysiwyg')]")
+    private WebElement TextFormat_Ddl;
+    
     private WebElement CustomSelect_Ddl(String label) {
     	return webDriver.findElement(By.xpath("//label[contains(text(), '" + label + "')]/../select"));
     }
@@ -161,6 +164,12 @@ public class BasicInformation {
     	
     	Reporter.log("Select the '" + option + "' from the '" + label + "' drop down list.");
     	new Select(CustomSelect_Ddl(label)).selectByVisibleText(option);
+    }
+    
+    public void SelectTextFormat(String option) throws Exception {
+    	
+    	Reporter.log("Select the '" + option + "' from the 'Text format' drop down list.");
+    	new Select(TextFormat_Ddl).selectByVisibleText(option);
     }
     
     public void ClickCustomBtn(String label) throws Exception {
