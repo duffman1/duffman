@@ -2,6 +2,9 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
     <line>
+      <![CDATA[STEP 1]]>
+    </line>
+    <line>
       <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
     </line>
     <line>
@@ -14,360 +17,45 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'People' menu link.]]>
+      <![CDATA[STEP 2]]>
     </line>
     <line>
-      <![CDATA[Click the 'Add user' menu link.]]>
+      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com/junkurl'.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'People dialog'.]]>
+      <![CDATA[STEP 3]]>
     </line>
     <line>
-      <![CDATA[Enter '971cef23c9e242c@40c638c0b94e481.com' in the 'Username' text box.]]>
+      <![CDATA[Verify the mps call parameter '"site":"sandbox"' is present in the page source.]]>
     </line>
     <line>
-      <![CDATA[Enter '971cef23c9e242c@40c638c0b94e481.com' in the 'E-mail address' text box.]]>
+      <![CDATA[Verify the mps call parameter '"path":"ERROR/404"' is present in the page source.]]>
     </line>
     <line>
-      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'pa55word' in the 'Confirm password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Check the 'editor' check box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'a19b46e6cc9f49a' in the 'First Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'b634dffebb274ae' in the 'Last Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Create new account' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'A welcome message with further instructions has been e-mailed to the new user 971cef23c9e242c@40c638c0b94e481.com.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll by '-500'.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'People' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Add user' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'People dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '90070cc9a79b4fd@d9f538e351f44ee.com' in the 'Username' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '90070cc9a79b4fd@d9f538e351f44ee.com' in the 'E-mail address' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'pa55word' in the 'Confirm password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Check the 'senior editor' check box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'b9f6f2e392fa4f4' in the 'First Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '061c69aa2eb5476' in the 'Last Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Create new account' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'A welcome message with further instructions has been e-mailed to the new user 90070cc9a79b4fd@d9f538e351f44ee.com.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll by '-500'.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'People' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Permissions' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'People dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Check the 'edit any post content' checkbox for the 'editor' role.]]>
-    </line>
-    <line>
-      <![CDATA[Check the 'delete any post content' checkbox for the 'editor' role.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save Permissions' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The changes have been saved.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll by '-500'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Logout' button.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '971cef23c9e242c@40c638c0b94e481.com' in the 'Email Address' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Login' button.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Add content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Post' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'cb0be395aec142b' in the 'Title' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the Synopsis frame.]]>
-    </line>
-    <line>
-      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Cover' select button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the select file frame.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the file path for file upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Upload' button.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the file image 'HanSolo' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Publishing Options' link.]]>
-    </line>
-    <line>
-      <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Post cb0be395aec142b has been created.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Edit Draft' link in the work bench.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Edit Post cb0be395aec142b dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Publishing Options' link.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Moderation State' drop down list value is 'Draft'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Assign to' text box value is '971cef23c9e242c@40c638c0b94e481.com'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll by '-500'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'My Workbench' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'My Workbench dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'My Work' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'My Work dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter title cb0be395aec142b.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Apply' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'cb0be395aec142b' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'Draft' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'Post' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text '971cef23c9e242c@40c638c0b94e481.com' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'edit' link for the content item titled 'cb0be395aec142b'.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Edit Post cb0be395aec142b dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Publishing Options' link.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '90070cc9a79b4fd@d9f538e351f44ee.com' in the 'Assign to' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the '90070cc9a79b4fd@d9f538e351f44ee.com' from the auto complete option list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Post cb0be395aec142b has been updated.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll by '-500'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'My Workbench' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'My Workbench dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'cb0be395aec142b' is NOT present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'My Work' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'My Work dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter title cb0be395aec142b.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Apply' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'cb0be395aec142b' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text '90070cc9a79b4fd@d9f538e351f44ee.com' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll by '-500'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Logout' button.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '90070cc9a79b4fd@d9f538e351f44ee.com' in the 'Email Address' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Login' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'My Workbench' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'My Workbench dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'cb0be395aec142b' is present on the page.]]>
+      <![CDATA[Verify the mps call parameter '"content_id":"ERROR"' is present in the page source.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="111068" started-at="2014-09-08T20:23:58Z" finished-at="2014-09-08T20:25:49Z">
+  <suite name="Default suite" duration-ms="10341" started-at="2014-09-09T12:13:58Z" finished-at="2014-09-09T12:14:08Z">
     <groups>
       <group name="full">
-        <method signature="MultiEditorPublishingWorkflow.MultiEditorPublishingWorkflow_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentEntityModerationStatesWorkflows.MultiEditorPublishingWorkflow@5e9a867]" name="MultiEditorPublishingWorkflow_Test" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentEntityModerationStatesWorkflows.MultiEditorPublishingWorkflow"/>
+        <method signature="AddMPSCallsToErrorPages.AddMPSCallsToErrorPages_TC4950()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.AddMPSCallsToErrorPages@620bfd8e]" name="AddMPSCallsToErrorPages_TC4950" class="com.nbcuni.test.publisher.tests.Advertising.MPS.AddMPSCallsToErrorPages"/>
       </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="111068" started-at="2014-09-08T20:23:58Z" finished-at="2014-09-08T20:25:49Z">
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentEntityModerationStatesWorkflows.MultiEditorPublishingWorkflow">
-        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentEntityModerationStatesWorkflows.MultiEditorPublishingWorkflow@5e9a867]" name="startGridAndHub" is-config="true" duration-ms="1307" started-at="2014-09-08T16:23:57Z" finished-at="2014-09-08T16:23:58Z">
+    <test name="Default test" duration-ms="10341" started-at="2014-09-09T12:13:58Z" finished-at="2014-09-09T12:14:08Z">
+      <class name="com.nbcuni.test.publisher.tests.Advertising.MPS.AddMPSCallsToErrorPages">
+        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.AddMPSCallsToErrorPages@620bfd8e]" name="startGridAndHub" is-config="true" duration-ms="1323" started-at="2014-09-09T08:13:57Z" finished-at="2014-09-09T08:13:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startGridAndHub -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentEntityModerationStatesWorkflows.MultiEditorPublishingWorkflow@5e9a867]" name="startSelenium" is-config="true" duration-ms="2672" started-at="2014-09-08T16:23:58Z" finished-at="2014-09-08T16:24:01Z">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.AddMPSCallsToErrorPages@620bfd8e]" name="startSelenium" is-config="true" duration-ms="2776" started-at="2014-09-09T08:13:58Z" finished-at="2014-09-09T08:14:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="MultiEditorPublishingWorkflow_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentEntityModerationStatesWorkflows.MultiEditorPublishingWorkflow@5e9a867]" name="MultiEditorPublishingWorkflow_Test" duration-ms="107814" started-at="2014-09-08T16:24:01Z" finished-at="2014-09-08T16:25:49Z">
+        <test-method status="PASS" signature="AddMPSCallsToErrorPages_TC4950()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.AddMPSCallsToErrorPages@620bfd8e]" name="AddMPSCallsToErrorPages_TC4950" duration-ms="6981" started-at="2014-09-09T08:14:01Z" finished-at="2014-09-09T08:14:08Z">
           <reporter-output>
+            <line>
+              <![CDATA[STEP 1]]>
+            </line>
             <line>
               <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
             </line>
@@ -381,359 +69,41 @@
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'People' menu link.]]>
+              <![CDATA[STEP 2]]>
             </line>
             <line>
-              <![CDATA[Click the 'Add user' menu link.]]>
+              <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com/junkurl'.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'People dialog'.]]>
+              <![CDATA[STEP 3]]>
             </line>
             <line>
-              <![CDATA[Enter '971cef23c9e242c@40c638c0b94e481.com' in the 'Username' text box.]]>
+              <![CDATA[Verify the mps call parameter '"site":"sandbox"' is present in the page source.]]>
             </line>
             <line>
-              <![CDATA[Enter '971cef23c9e242c@40c638c0b94e481.com' in the 'E-mail address' text box.]]>
+              <![CDATA[Verify the mps call parameter '"path":"ERROR/404"' is present in the page source.]]>
             </line>
             <line>
-              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa55word' in the 'Confirm password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Check the 'editor' check box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'a19b46e6cc9f49a' in the 'First Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'b634dffebb274ae' in the 'Last Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Create new account' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'A welcome message with further instructions has been e-mailed to the new user 971cef23c9e242c@40c638c0b94e481.com.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll by '-500'.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'People' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Add user' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'People dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '90070cc9a79b4fd@d9f538e351f44ee.com' in the 'Username' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '90070cc9a79b4fd@d9f538e351f44ee.com' in the 'E-mail address' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa55word' in the 'Confirm password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Check the 'senior editor' check box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'b9f6f2e392fa4f4' in the 'First Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '061c69aa2eb5476' in the 'Last Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Create new account' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'A welcome message with further instructions has been e-mailed to the new user 90070cc9a79b4fd@d9f538e351f44ee.com.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll by '-500'.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'People' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Permissions' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'People dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Check the 'edit any post content' checkbox for the 'editor' role.]]>
-            </line>
-            <line>
-              <![CDATA[Check the 'delete any post content' checkbox for the 'editor' role.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save Permissions' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The changes have been saved.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll by '-500'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Logout' button.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '971cef23c9e242c@40c638c0b94e481.com' in the 'Email Address' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Login' button.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Add content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Post' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'cb0be395aec142b' in the 'Title' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the Synopsis frame.]]>
-            </line>
-            <line>
-              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Cover' select button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the select file frame.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the file path for file upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Upload' button.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Public Local Files' radio button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the file image 'HanSolo' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Publishing Options' link.]]>
-            </line>
-            <line>
-              <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Post cb0be395aec142b has been created.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Edit Draft' link in the work bench.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Edit Post cb0be395aec142b dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Publishing Options' link.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Moderation State' drop down list value is 'Draft'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Assign to' text box value is '971cef23c9e242c@40c638c0b94e481.com'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll by '-500'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'My Workbench' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'My Workbench dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'My Work' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'My Work dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter title cb0be395aec142b.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Apply' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'cb0be395aec142b' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'Draft' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'Post' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text '971cef23c9e242c@40c638c0b94e481.com' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'edit' link for the content item titled 'cb0be395aec142b'.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Edit Post cb0be395aec142b dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Publishing Options' link.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '90070cc9a79b4fd@d9f538e351f44ee.com' in the 'Assign to' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the '90070cc9a79b4fd@d9f538e351f44ee.com' from the auto complete option list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Post cb0be395aec142b has been updated.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll by '-500'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'My Workbench' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'My Workbench dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'cb0be395aec142b' is NOT present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'My Work' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'My Work dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter title cb0be395aec142b.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Apply' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'cb0be395aec142b' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text '90070cc9a79b4fd@d9f538e351f44ee.com' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll by '-500'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Logout' button.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '90070cc9a79b4fd@d9f538e351f44ee.com' in the 'Email Address' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Login' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'My Workbench' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'My Workbench dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'cb0be395aec142b' is present on the page.]]>
+              <![CDATA[Verify the mps call parameter '"content_id":"ERROR"' is present in the page source.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- MultiEditorPublishingWorkflow_Test -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentEntityModerationStatesWorkflows.MultiEditorPublishingWorkflow@5e9a867]" name="stopSelenium" is-config="true" duration-ms="571" started-at="2014-09-08T16:25:49Z" finished-at="2014-09-08T16:25:49Z">
+        </test-method> <!-- AddMPSCallsToErrorPages_TC4950 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.AddMPSCallsToErrorPages@620bfd8e]" name="stopSelenium" is-config="true" duration-ms="569" started-at="2014-09-09T08:14:08Z" finished-at="2014-09-09T08:14:08Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=MultiEditorPublishingWorkflow_Test status=SUCCESS method=MultiEditorPublishingWorkflow.MultiEditorPublishingWorkflow_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentEntityModerationStatesWorkflows.MultiEditorPublishingWorkflow@5e9a867] output=Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]]>
+                <![CDATA[[TestResult name=AddMPSCallsToErrorPages_TC4950 status=SUCCESS method=AddMPSCallsToErrorPages.AddMPSCallsToErrorPages_TC4950()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.AddMPSCallsToErrorPages@620bfd8e] output=STEP 1]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentEntityModerationStatesWorkflows.MultiEditorPublishingWorkflow@5e9a867]" name="stopGridAndHub" is-config="true" duration-ms="381" started-at="2014-09-08T16:25:49Z" finished-at="2014-09-08T16:25:50Z">
+        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.AddMPSCallsToErrorPages@620bfd8e]" name="stopGridAndHub" is-config="true" duration-ms="370" started-at="2014-09-09T08:14:08Z" finished-at="2014-09-09T08:14:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopGridAndHub -->
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentEntityModerationStatesWorkflows.MultiEditorPublishingWorkflow -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Advertising.MPS.AddMPSCallsToErrorPages -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

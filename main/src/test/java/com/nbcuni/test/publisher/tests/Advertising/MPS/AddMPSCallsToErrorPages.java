@@ -26,7 +26,7 @@ public class AddMPSCallsToErrorPages extends ParentTest {
         	
         	Reporter.log("STEP 3");
         	MPSConfiguration mpsConfiguration = new MPSConfiguration(webDriver);
-            mpsConfiguration.VerifyMPSCallParameters(Arrays.asList("\"site\":\"pub7-development\"", 
+            mpsConfiguration.VerifyMPSCallParameters(Arrays.asList("\"site\":\"sandbox\"", 
             		"\"path\":\"ERROR/404\"", "\"content_id\":\"ERROR\""));
     }
 }
