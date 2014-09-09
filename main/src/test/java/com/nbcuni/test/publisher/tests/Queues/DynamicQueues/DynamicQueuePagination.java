@@ -25,7 +25,8 @@ public class DynamicQueuePagination extends ParentTest{
      * @version 1.0 Date: September 3, 2014
      *************************************************************************************/
 @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"})
-public void CreateConfigureDynamicQueue_TC4197() throws Exception{
+public void DynamicQueuePaginatione_TC4791() throws Exception{
+	
 //Test Data. please note that this test case is not meant for 'Total Limit' = 0.
 int itemsPerPage = 2;
 int totalLimit = 6; 
