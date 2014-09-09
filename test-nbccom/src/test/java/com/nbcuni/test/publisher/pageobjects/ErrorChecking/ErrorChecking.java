@@ -136,10 +136,7 @@ public class ErrorChecking {
     		//DE8455 dyanmic queue error
     		allowedErrors.add("Notice: Undefined offset: 4 in _menu_translate()");
     		
-    		//dynamic queue error
-    		allowedErrors.add("Notice: Undefined variable: extra in dynamic_queue_field_extra_fields()");
-    		
-    		
+    		   		    		
     		//FIRST - check if error container is present
     		boolean errorContainerPresent = false;
     		try {
@@ -169,35 +166,22 @@ public class ErrorChecking {
     				//get the text of the error
     				String errorText = Error_Ctr.getText();
     				errorText.replace("Error message", "");
+    				
+    				
     				//check the error text isn't in list of allowed errors
-    				if (errorText.contains(allowedErrors.get(0)) 
-    						|| errorText.contains(allowedErrors.get(1))
-    							|| errorText.contains(allowedErrors.get(2))
-    								|| errorText.contains(allowedErrors.get(3))
-    								 	|| errorText.contains(allowedErrors.get(4))
-    								 		|| errorText.contains(allowedErrors.get(5))
-    								 			|| errorText.contains(allowedErrors.get(6))
-    								 				|| errorText.contains(allowedErrors.get(7))
-    								 					|| errorText.contains(allowedErrors.get(8))
-    								 					|| errorText.contains(allowedErrors.get(9))
-    								 					|| errorText.contains(allowedErrors.get(10))
-    								 					|| errorText.contains(allowedErrors.get(11))
-    								 					|| errorText.contains(allowedErrors.get(12))
-    								 					|| errorText.contains(allowedErrors.get(13))
-    								 					|| errorText.contains(allowedErrors.get(14))
-    								 					|| errorText.contains(allowedErrors.get(15))
-    								 					|| errorText.contains(allowedErrors.get(16))
-    								 					|| errorText.contains(allowedErrors.get(17))
-    								 					|| errorText.contains(allowedErrors.get(18))
-    								 					|| errorText.contains(allowedErrors.get(19))
-    								 					|| errorText.contains(allowedErrors.get(20))) {
-    					//ignore error
+    				boolean ignoreError = false;
+    				for (int i=0; i<allowedErrors.size(); i++) {
+    					if(errorText.contains(allowedErrors.get(i))) {
+    						//ignore error
+    						ignoreError = true;
+    					}
+    					
     				}
-    				else {
+    				if (!ignoreError) {
     					//legit error and fail test
     					Assert.fail("Error text of '" + errorText + "' is present in application.");
     				}
-    			}
+    			} // moreThan1Error == false
     			else { //FOURTH - check errors in case of MORE than 1 error
     				
     				//get the error text of every error present
@@ -209,37 +193,23 @@ public class ErrorChecking {
     				
     				//check the error text of each error
     				for (String errorText : Errors) {
-    					if (errorText.contains(allowedErrors.get(0)) 
-    							|| errorText.contains(allowedErrors.get(1))
-    									|| errorText.contains(allowedErrors.get(2))
-    										|| errorText.contains(allowedErrors.get(3))
-    										 	|| errorText.contains(allowedErrors.get(4))
-    										 		|| errorText.contains(allowedErrors.get(5))
-    										 			|| errorText.contains(allowedErrors.get(6))
-    										 				|| errorText.contains(allowedErrors.get(7))
-    										 					|| errorText.contains(allowedErrors.get(8))
-    										 					|| errorText.contains(allowedErrors.get(9))
-    										 					|| errorText.contains(allowedErrors.get(10))
-    										 					|| errorText.contains(allowedErrors.get(11))
-    										 					|| errorText.contains(allowedErrors.get(12))
-    	    								 					|| errorText.contains(allowedErrors.get(13))
-    	    								 					|| errorText.contains(allowedErrors.get(14))
-    	    								 					|| errorText.contains(allowedErrors.get(15))
-    	    								 					|| errorText.contains(allowedErrors.get(16))
-    	    								 					|| errorText.contains(allowedErrors.get(17))
-    	    								 					|| errorText.contains(allowedErrors.get(18))
-    	    								 					|| errorText.contains(allowedErrors.get(19))
-    	    								 					|| errorText.contains(allowedErrors.get(20))) {
-    						//ignore error
-    					}
-    					else {
-    						//legitimate error and fail test
+    					boolean ignoreError = false;
+        				for (int i=0; i<allowedErrors.size(); i++) {
+        					if(errorText.contains(allowedErrors.get(i))) {
+        						//ignore error
+        						ignoreError = true;
+        					}
+        					
+        				}
+    					if (!ignoreError) {
+        					//legitimate error and fail test
         					Assert.fail("Error text of '" + errorText + "' is present in application.");
-    					}
-    				}
-    			}
+        				}
+    					
+    				}  //for (String errorText : Errors) {
+    			}     //else { //FOURTH - check errors in case of MORE than 1 error
     			
-    		}
+    		} //if (errorContainerPresent == true)
     		
     		webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
     	}
