@@ -139,6 +139,9 @@ public class ErrorChecking {
     		//dynamic queue error
     		allowedErrors.add("Notice: Undefined variable: extra in dynamic_queue_field_extra_fields()");
     		
+    		//security index error
+    		allowedErrors.add("Notice: Undefined variable: local in include_once()");
+    		
     		
     		//FIRST - check if error container is present
     		boolean errorContainerPresent = false;
@@ -190,7 +193,8 @@ public class ErrorChecking {
     								 					|| errorText.contains(allowedErrors.get(17))
     								 					|| errorText.contains(allowedErrors.get(18))
     								 					|| errorText.contains(allowedErrors.get(19))
-    								 					|| errorText.contains(allowedErrors.get(20))) {
+    								 					|| errorText.contains(allowedErrors.get(20))
+    								 					|| errorText.contains(allowedErrors.get(21))) {
     					//ignore error
     				}
     				else {
@@ -229,7 +233,8 @@ public class ErrorChecking {
     	    								 					|| errorText.contains(allowedErrors.get(17))
     	    								 					|| errorText.contains(allowedErrors.get(18))
     	    								 					|| errorText.contains(allowedErrors.get(19))
-    	    								 					|| errorText.contains(allowedErrors.get(20))) {
+    	    								 					|| errorText.contains(allowedErrors.get(20))
+    	    								 					|| errorText.contains(allowedErrors.get(21))) {
     						//ignore error
     					}
     					else {
