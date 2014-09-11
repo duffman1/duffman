@@ -1,12 +1,26 @@
-<h2>Reporter output</h2><table><tr><td>STEP 1</td></tr>
-<tr><td>Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.</td></tr>
+<h2>Reporter output</h2><table><tr><td>Open url 'http://nbcupublisher7acc.prod.acquia-sites.com'.</td></tr>
 <tr><td>Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.</td></tr>
 <tr><td>Enter 'pa55word' in the 'Password' text box.</td></tr>
 <tr><td>Click the 'Login' button.</td></tr>
-<tr><td>STEP 2</td></tr>
-<tr><td>Open url 'http://update.qa5.nbcupublisher7.publisher7.com/junkurl'.</td></tr>
-<tr><td>STEP 3</td></tr>
-<tr><td>Verify the mps call parameter '"site":"sandbox"' is present in the page source.</td></tr>
-<tr><td>Verify the mps call parameter '"path":"ERROR/404"' is present in the page source.</td></tr>
-<tr><td>Verify the mps call parameter '"content_id":"ERROR"' is present in the page source.</td></tr>
+<tr><td>Mouse over the 'Content' menu link.</td></tr>
+<tr><td>Mouse over the 'Add content' menu link.</td></tr>
+<tr><td>Click the 'Character Profile' menu link.</td></tr>
+<tr><td>Switch to the active frame titled 'Create Character Profile dialog'.</td></tr>
+<tr><td>Enter 'df011b524367490' in the 'Character First Name' text box.</td></tr>
+<tr><td>Click the Cover Photo 'Select' button.</td></tr>
+<tr><td>Switch to the select file frame.</td></tr>
+<tr><td>Enter the file path for file upload.</td></tr>
+<tr><td>Click the 'Upload' button.</td></tr>
+<tr><td>Wait for the file link to be visible after upload.</td></tr>
+<tr><td>Click the 'Next' button.</td></tr>
+<tr><td>Click the 'Public Local Files' radio button.</td></tr>
+<tr><td>Click the 'Next' button.</td></tr>
+<tr><td>Verify the file image 'HanSolo' is present.</td></tr>
+<tr><td>Verify the img is loaded and visible.</td></tr>
+<tr><td>Click the 'Save' button.</td></tr>
+<tr><td>Switch to frame titled 'Create Character Profile'.</td></tr>
+<tr><td>Assert that img source of the Cover Photo contains 'HanSolo'.</td></tr>
+<tr><td>Assert the the img is loaded and visible.</td></tr>
+<tr><td>Click the 'Save' button.</td></tr>
+<tr><td>Verify success message of 'Character Profile df011b524367490 has been created.' is present.</td></tr>
 </table>

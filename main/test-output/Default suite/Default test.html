@@ -57,9 +57,13 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
+<<<<<<< HEAD
 <td>Started on:</td><td>Fri Sep 05 13:54:11 EDT 2014</td>
+=======
+<td>Started on:</td><td>Thu Sep 11 09:25:31 EDT 2014</td>
+>>>>>>> refs/heads/Brandon
 </tr>
-<tr><td>Total time:</td><td>10 seconds (10341 ms)</td>
+<tr><td>Total time:</td><td>22 seconds (22494 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,27 +79,41 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.nbcuni.test.publisher.tests.Advertising.MPS.AddMPSCallsToErrorPages.AddMPSCallsToErrorPages_TC4950()'><b>AddMPSCallsToErrorPages_TC4950</b><br>Test class: com.nbcuni.test.publisher.tests.Advertising.MPS.AddMPSCallsToErrorPages<br/>
-<a href="#Output-623398715" onClick='toggleBox("Output-623398715", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile.CreateCharacterProfile_TC1041()'><b>CreateCharacterProfile_TC1041</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile<br/>
+<a href="#Output-1017015096" onClick='toggleBox("Output-1017015096", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-623398715" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-623398715">
-STEP 1<br/>
-Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.<br/>
+<a href="#Output-1017015096" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1017015096">
+Open url 'http://nbcupublisher7acc.prod.acquia-sites.com'.<br/>
 Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
 Enter 'pa55word' in the 'Password' text box.<br/>
 Click the 'Login' button.<br/>
-STEP 2<br/>
-Open url 'http://update.qa5.nbcupublisher7.publisher7.com/junkurl'.<br/>
-STEP 3<br/>
-Verify the mps call parameter '"site":"sandbox"' is present in the page source.<br/>
-Verify the mps call parameter '"path":"ERROR/404"' is present in the page source.<br/>
-Verify the mps call parameter '"content_id":"ERROR"' is present in the page source.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Add content' menu link.<br/>
+Click the 'Character Profile' menu link.<br/>
+Switch to the active frame titled 'Create Character Profile dialog'.<br/>
+Enter 'df011b524367490' in the 'Character First Name' text box.<br/>
+Click the Cover Photo 'Select' button.<br/>
+Switch to the select file frame.<br/>
+Enter the file path for file upload.<br/>
+Click the 'Upload' button.<br/>
+Wait for the file link to be visible after upload.<br/>
+Click the 'Next' button.<br/>
+Click the 'Public Local Files' radio button.<br/>
+Click the 'Next' button.<br/>
+Verify the file image 'HanSolo' is present.<br/>
+Verify the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Switch to frame titled 'Create Character Profile'.<br/>
+Assert that img source of the Cover Photo contains 'HanSolo'.<br/>
+Assert the the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'Character Profile df011b524367490 has been created.' is present.<br/>
 </div>
 </td>
 <td></td>
-<td>6</td>
-<td>com.nbcuni.test.publisher.tests.Advertising.MPS.AddMPSCallsToErrorPages@620bfd8e</td></tr>
+<td>19</td>
+<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@47dbc53d</td></tr>
 </table><p>
 </body>
 </html>
