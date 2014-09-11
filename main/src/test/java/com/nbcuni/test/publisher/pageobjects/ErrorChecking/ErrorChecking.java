@@ -1,5 +1,8 @@
 package com.nbcuni.test.publisher.pageobjects.ErrorChecking;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -99,50 +102,20 @@ public class ErrorChecking {
     	if (applib.IsErrorCheckingEnabled() == true) {
     		webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
     	
-    		//ALLOWED ERRORS
-    		List<String> allowedErrors = new ArrayList<String>();
-    		allowedErrors.add("There are security updates available for one or more of your modules or themes");
-    		allowedErrors.add("An MPXplayer that's in use");
-    		allowedErrors.add("To change its status in MPX, log into mpx.theplatform");
-    		allowedErrors.add("To change its status in Publisher, click here");
-    		allowedErrors.add("There is a security update available for your version of Drupal");
-    		allowedErrors.add("A side file with this name already exists.");
-    		allowedErrors.add("This revision cannot be deleted because it is currently the primary revision for this queue");
-    		allowedErrors.add("Your sitemap is up to date and does not need to be rebuilt");
-    		
-    		//random error on cron run
-    		allowedErrors.add("Warning: Attempt to assign property of non-object in EntityAPIController->save()");
-    		allowedErrors.add("Notice: Trying to get property of non-object in EntityAPIController->save()");
-    		
-    		//DE5638 focal point error on image save
-    		allowedErrors.add("Notice: getimagesize() [function.getimagesize]: Read error! in image_gd_get_info()");
-    		
-    		//DE5638 error when creating new custom mpx type
-    		allowedErrors.add("Notice: Undefined index: #build_id in form_set_cache() (line 565 of");
-    		
-    		//DE6585 exif error when uploading new image
-    		allowedErrors.add("Notice: Undefined offset: 0 in simple_exif_form_alter()");
-    		allowedErrors.add("Warning: array_keys() expects parameter 1 to be array, null given in simple_exif_form_alter()");
-    		allowedErrors.add("Warning: Invalid argument supplied for foreach() in simple_exif_form_alter()");
-    		allowedErrors.add("Warning: in_array() expects parameter 2 to be array, null given in simple_exif_form_alter()");
-    		
-    		//US7050 and DE6393
-    		allowedErrors.add("Failed to update URI to \"mpx:");
-    		allowedErrors.add("Notice: Trying to get property of non-object in MediaThePlatformMpxStreamWrapper->interpolateUrl");
-    		
-    		//module error
-    		allowedErrors.add("There was a problem checking available updates");
-    		
-    		//DE8455 dyanmic queue error
-    		allowedErrors.add("Notice: Undefined offset: 4 in _menu_translate()");
-    		
-    		//dynamic queue error
-    		allowedErrors.add("Notice: Undefined variable: extra in dynamic_queue_field_extra_fields()");
-    		
-    		//security index error
-    		allowedErrors.add("Notice: Undefined variable: local in include_once()");
-    		
-    		
+    		//get the allowed errors from the text file
+    		String allowedErrorsFilePath = System.getProperty("user.dir") + "/src/test/resources/AllowedErrors.txt";
+    	    allowedErrorsFilePath = allowedErrorsFilePath.replace("/", File.separator);
+    	    File allowedErrorsFile = new File(allowedErrorsFilePath);
+        	BufferedReader bufferedReader = new BufferedReader(new FileReader(allowedErrorsFile));
+        	List<String> allowedErrors = new ArrayList<String>();
+        	String line;
+        	while ((line = bufferedReader.readLine()) != null) {
+        		
+        	   allowedErrors.add(line.trim());
+        	}
+        	bufferedReader.close();
+        	
+    	    
     		//FIRST - check if error container is present
     		boolean errorContainerPresent = false;
     		try {
@@ -172,32 +145,17 @@ public class ErrorChecking {
     				//get the text of the error
     				String errorText = Error_Ctr.getText();
     				errorText.replace("Error message", "");
+    				
     				//check the error text isn't in list of allowed errors
-    				if (errorText.contains(allowedErrors.get(0)) 
-    						|| errorText.contains(allowedErrors.get(1))
-    							|| errorText.contains(allowedErrors.get(2))
-    								|| errorText.contains(allowedErrors.get(3))
-    								 	|| errorText.contains(allowedErrors.get(4))
-    								 		|| errorText.contains(allowedErrors.get(5))
-    								 			|| errorText.contains(allowedErrors.get(6))
-    								 				|| errorText.contains(allowedErrors.get(7))
-    								 					|| errorText.contains(allowedErrors.get(8))
-    								 					|| errorText.contains(allowedErrors.get(9))
-    								 					|| errorText.contains(allowedErrors.get(10))
-    								 					|| errorText.contains(allowedErrors.get(11))
-    								 					|| errorText.contains(allowedErrors.get(12))
-    								 					|| errorText.contains(allowedErrors.get(13))
-    								 					|| errorText.contains(allowedErrors.get(14))
-    								 					|| errorText.contains(allowedErrors.get(15))
-    								 					|| errorText.contains(allowedErrors.get(16))
-    								 					|| errorText.contains(allowedErrors.get(17))
-    								 					|| errorText.contains(allowedErrors.get(18))
-    								 					|| errorText.contains(allowedErrors.get(19))
-    								 					|| errorText.contains(allowedErrors.get(20))
-    								 					|| errorText.contains(allowedErrors.get(21))) {
-    					//ignore error
+    				boolean ignoreError = false;
+    				for (int i=0; i<allowedErrors.size(); i++) {
+    					if(errorText.contains(allowedErrors.get(i))) {
+    						//ignore error
+    						ignoreError = true;
+    					}
     				}
-    				else {
+    				
+    				if (!ignoreError) {
     					//legit error and fail test
     					Assert.fail("Error text of '" + errorText + "' is present in application.");
     				}
@@ -213,39 +171,21 @@ public class ErrorChecking {
     				
     				//check the error text of each error
     				for (String errorText : Errors) {
-    					if (errorText.contains(allowedErrors.get(0)) 
-    							|| errorText.contains(allowedErrors.get(1))
-    									|| errorText.contains(allowedErrors.get(2))
-    										|| errorText.contains(allowedErrors.get(3))
-    										 	|| errorText.contains(allowedErrors.get(4))
-    										 		|| errorText.contains(allowedErrors.get(5))
-    										 			|| errorText.contains(allowedErrors.get(6))
-    										 				|| errorText.contains(allowedErrors.get(7))
-    										 					|| errorText.contains(allowedErrors.get(8))
-    										 					|| errorText.contains(allowedErrors.get(9))
-    										 					|| errorText.contains(allowedErrors.get(10))
-    										 					|| errorText.contains(allowedErrors.get(11))
-    										 					|| errorText.contains(allowedErrors.get(12))
-    	    								 					|| errorText.contains(allowedErrors.get(13))
-    	    								 					|| errorText.contains(allowedErrors.get(14))
-    	    								 					|| errorText.contains(allowedErrors.get(15))
-    	    								 					|| errorText.contains(allowedErrors.get(16))
-    	    								 					|| errorText.contains(allowedErrors.get(17))
-    	    								 					|| errorText.contains(allowedErrors.get(18))
-    	    								 					|| errorText.contains(allowedErrors.get(19))
-    	    								 					|| errorText.contains(allowedErrors.get(20))
-    	    								 					|| errorText.contains(allowedErrors.get(21))) {
-    						//ignore error
+    					boolean ignoreError = false;
+    					for (int i=0; i<allowedErrors.size(); i++) {
+    						if(errorText.contains(allowedErrors.get(i))) {
+    							//ignore error
+    							ignoreError = true;
+    						}
     					}
-    					else {
+    					
+    					if (!ignoreError) {
     						//legitimate error and fail test
-        					Assert.fail("Error text of '" + errorText + "' is present in application.");
+    						Assert.fail("Error text of '" + errorText + "' is present in application.");
     					}
     				}
     			}
-    			
     		}
-    		
     		webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
     	}
     }

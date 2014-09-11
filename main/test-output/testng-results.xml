@@ -2,10 +2,7 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
     <line>
-      <![CDATA[STEP 1]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
+      <![CDATA[Open url 'http://nbcupublisher7acc.prod.acquia-sites.com'.]]>
     </line>
     <line>
       <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
@@ -17,47 +14,89 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[STEP 2]]>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com/junkurl'.]]>
+      <![CDATA[Mouse over the 'Add content' menu link.]]>
     </line>
     <line>
-      <![CDATA[STEP 3]]>
+      <![CDATA[Click the 'Character Profile' menu link.]]>
     </line>
     <line>
-      <![CDATA[Verify the mps call parameter '"site":"sandbox"' is present in the page source.]]>
+      <![CDATA[Switch to the active frame titled 'Create Character Profile dialog'.]]>
     </line>
     <line>
-      <![CDATA[Verify the mps call parameter '"path":"ERROR/404"' is present in the page source.]]>
+      <![CDATA[Enter 'df011b524367490' in the 'Character First Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Verify the mps call parameter '"content_id":"ERROR"' is present in the page source.]]>
+      <![CDATA[Click the Cover Photo 'Select' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the select file frame.]]>
+    </line>
+    <line>
+      <![CDATA[Enter the file path for file upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Upload' button.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Public Local Files' radio button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the file image 'HanSolo' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the img is loaded and visible.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to frame titled 'Create Character Profile'.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that img source of the Cover Photo contains 'HanSolo'.]]>
+    </line>
+    <line>
+      <![CDATA[Assert the the img is loaded and visible.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Character Profile df011b524367490 has been created.' is present.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="10341" started-at="2014-09-09T12:13:58Z" finished-at="2014-09-09T12:14:08Z">
+  <suite name="Default suite" duration-ms="22494" started-at="2014-09-11T13:25:31Z" finished-at="2014-09-11T13:25:53Z">
     <groups>
       <group name="full">
-        <method signature="AddMPSCallsToErrorPages.AddMPSCallsToErrorPages_TC4950()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.AddMPSCallsToErrorPages@620bfd8e]" name="AddMPSCallsToErrorPages_TC4950" class="com.nbcuni.test.publisher.tests.Advertising.MPS.AddMPSCallsToErrorPages"/>
+        <method signature="CreateCharacterProfile.CreateCharacterProfile_TC1041()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@47dbc53d]" name="CreateCharacterProfile_TC1041" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile"/>
       </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="10341" started-at="2014-09-09T12:13:58Z" finished-at="2014-09-09T12:14:08Z">
-      <class name="com.nbcuni.test.publisher.tests.Advertising.MPS.AddMPSCallsToErrorPages">
-        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.AddMPSCallsToErrorPages@620bfd8e]" name="startGridAndHub" is-config="true" duration-ms="1323" started-at="2014-09-09T08:13:57Z" finished-at="2014-09-09T08:13:58Z">
+    <test name="Default test" duration-ms="22494" started-at="2014-09-11T13:25:31Z" finished-at="2014-09-11T13:25:53Z">
+      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile">
+        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@47dbc53d]" name="startGridAndHub" is-config="true" duration-ms="1273" started-at="2014-09-11T09:25:30Z" finished-at="2014-09-11T09:25:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startGridAndHub -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.AddMPSCallsToErrorPages@620bfd8e]" name="startSelenium" is-config="true" duration-ms="2776" started-at="2014-09-09T08:13:58Z" finished-at="2014-09-09T08:14:01Z">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@47dbc53d]" name="startSelenium" is-config="true" duration-ms="2581" started-at="2014-09-11T09:25:31Z" finished-at="2014-09-11T09:25:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="AddMPSCallsToErrorPages_TC4950()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.AddMPSCallsToErrorPages@620bfd8e]" name="AddMPSCallsToErrorPages_TC4950" duration-ms="6981" started-at="2014-09-09T08:14:01Z" finished-at="2014-09-09T08:14:08Z">
+        <test-method status="PASS" signature="CreateCharacterProfile_TC1041()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@47dbc53d]" name="CreateCharacterProfile_TC1041" duration-ms="19332" started-at="2014-09-11T09:25:34Z" finished-at="2014-09-11T09:25:53Z">
           <reporter-output>
             <line>
-              <![CDATA[STEP 1]]>
-            </line>
-            <line>
-              <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
+              <![CDATA[Open url 'http://nbcupublisher7acc.prod.acquia-sites.com'.]]>
             </line>
             <line>
               <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
@@ -69,41 +108,86 @@
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
-              <![CDATA[STEP 2]]>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com/junkurl'.]]>
+              <![CDATA[Mouse over the 'Add content' menu link.]]>
             </line>
             <line>
-              <![CDATA[STEP 3]]>
+              <![CDATA[Click the 'Character Profile' menu link.]]>
             </line>
             <line>
-              <![CDATA[Verify the mps call parameter '"site":"sandbox"' is present in the page source.]]>
+              <![CDATA[Switch to the active frame titled 'Create Character Profile dialog'.]]>
             </line>
             <line>
-              <![CDATA[Verify the mps call parameter '"path":"ERROR/404"' is present in the page source.]]>
+              <![CDATA[Enter 'df011b524367490' in the 'Character First Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Verify the mps call parameter '"content_id":"ERROR"' is present in the page source.]]>
+              <![CDATA[Click the Cover Photo 'Select' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the select file frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter the file path for file upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Upload' button.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Public Local Files' radio button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the file image 'HanSolo' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to frame titled 'Create Character Profile'.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that img source of the Cover Photo contains 'HanSolo'.]]>
+            </line>
+            <line>
+              <![CDATA[Assert the the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Character Profile df011b524367490 has been created.' is present.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- AddMPSCallsToErrorPages_TC4950 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.AddMPSCallsToErrorPages@620bfd8e]" name="stopSelenium" is-config="true" duration-ms="569" started-at="2014-09-09T08:14:08Z" finished-at="2014-09-09T08:14:08Z">
+        </test-method> <!-- CreateCharacterProfile_TC1041 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@47dbc53d]" name="stopSelenium" is-config="true" duration-ms="568" started-at="2014-09-11T09:25:53Z" finished-at="2014-09-11T09:25:53Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=AddMPSCallsToErrorPages_TC4950 status=SUCCESS method=AddMPSCallsToErrorPages.AddMPSCallsToErrorPages_TC4950()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.AddMPSCallsToErrorPages@620bfd8e] output=STEP 1]]]>
+                <![CDATA[[TestResult name=CreateCharacterProfile_TC1041 status=SUCCESS method=CreateCharacterProfile.CreateCharacterProfile_TC1041()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@47dbc53d] output=Open url 'http://nbcupublisher7acc.prod.acquia-sites.com'.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.AddMPSCallsToErrorPages@620bfd8e]" name="stopGridAndHub" is-config="true" duration-ms="370" started-at="2014-09-09T08:14:08Z" finished-at="2014-09-09T08:14:09Z">
+        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@47dbc53d]" name="stopGridAndHub" is-config="true" duration-ms="361" started-at="2014-09-11T09:25:53Z" finished-at="2014-09-11T09:25:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopGridAndHub -->
-      </class> <!-- com.nbcuni.test.publisher.tests.Advertising.MPS.AddMPSCallsToErrorPages -->
+      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
