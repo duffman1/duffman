@@ -1,5 +1,8 @@
 package com.nbcuni.test.publisher.tests.Setup;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -9,6 +12,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.TimeZone;
 import java.util.concurrent.TimeUnit;
+
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
@@ -20,8 +24,10 @@ import com.nbcuni.test.publisher.pageobjects.Logo.AddLogo;
 import com.nbcuni.test.publisher.pageobjects.Logo.Logos;
 import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
 import com.nbcuni.test.publisher.pageobjects.Structure.Queues.Queues.ScheduleQueue;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -46,6 +52,36 @@ public class A1_TestSetup extends ParentTest {
             	UserLogin userLogin = applib.openApplication();
             	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
             	
+            	//set timezone utc
+            	applib.openSitePage("/admin/config/regional/settings");
+            	webDriver.findElement(By.xpath("//select[@id='edit-date-default-timezone']/option[contains(text(), 'UTC')]")).click();
+            	contentParent.ClickSaveBtn();
+            	
+            	//set date/time formats
+            	applib.openSitePage("/admin/config/regional/date-time");
+            	new Select(webDriver.findElement(By.id("edit-date-format-html5-tools-iso8601"))).selectByValue("c");
+            	new Select(webDriver.findElement(By.id("edit-date-format-long"))).selectByValue("l, F j, Y - H:i");
+            	new Select(webDriver.findElement(By.id("edit-date-format-medium"))).selectByValue("D, m/d/Y - H:i");
+            	new Select(webDriver.findElement(By.id("edit-date-format-short"))).selectByValue("Y-m-d H:i");
+            	new Select(webDriver.findElement(By.id("edit-date-format-edit-date"))).selectByValue("m/d/Y - h:i A");
+            	contentParent.ClickSaveBtn();
+            	
+            	//set file system paths
+            	/*
+            	applib.openSitePage("/admin/config/media/file-system");
+            	WebElement PublicFileSystemPath_Txb = webDriver.findElement(By.id("edit-file-public-path"));
+            	PublicFileSystemPath_Txb.clear();
+            	PublicFileSystemPath_Txb.sendKeys("sites/default/files");
+            	WebElement PrivateFileSystemPath_Txb = webDriver.findElement(By.id("edit-file-private-path"));
+            	PrivateFileSystemPath_Txb.clear();
+            	PrivateFileSystemPath_Txb.sendKeys("/mnt/files/nbcupublisher7.qa5/sites/default/files-private");
+            	WebElement TemporaryDirectory_Txb = webDriver.findElement(By.id("edit-file-temporary-path"));
+            	TemporaryDirectory_Txb.clear();
+            	TemporaryDirectory_Txb.sendKeys("/mnt/tmp/nbcupublisher7qa5");
+            	webDriver.findElement(By.id("edit-file-default-scheme-public")).click();
+            	contentParent.ClickSaveBtn();
+            	*/
+            	
             	//enable overlay module if necessary
             	applib.openSitePage("/admin/modules");
                 Modules modules = new Modules(webDriver, applib);
@@ -59,17 +95,33 @@ public class A1_TestSetup extends ParentTest {
                 overlay.SwitchToActiveFrame();
                 
                 //enable necessary modules
-                for (String module : Arrays.asList("Devel", "Pub Post", "Logo Manager")) {
-                	modules.EnterFilterName(module);
-                    modules.EnableModule(module);
+                String requiredModulesFilePath = System.getProperty("user.dir") + "/src/test/java/com/nbcuni/test/publisher/tests/Setup/AllEnabledModules.txt";
+        	    requiredModulesFilePath = requiredModulesFilePath.replace("/", File.separator);
+        	    File requiredModulesFile = new File(requiredModulesFilePath);
+            	BufferedReader bufferedReader = new BufferedReader(new FileReader(requiredModulesFile));
+            	List<String> requiredModules = new ArrayList<String>();
+            	String line;
+            	while ((line = bufferedReader.readLine()) != null) {
+            		
+            	   requiredModules.add(line.trim());
+            	}
+            	bufferedReader.close();
+                
+                for (String module : requiredModules) {
+                	if (!modules.IsModuleEnabled(module)) {
+                		modules.EnterFilterName(module);
+                        modules.EnableModule(module);
+                	}
                 }
                 
                 //disable necessary modules
                 for (String module : Arrays.asList("Sticky Edit Actions", "Acquia Purge", 
                 		"ImageField Focus", "Database logging", "MPS", 
                 		"Dynamic Queue Workbench", "Dynamic Queue", "Event Countdown")) {
-                	modules.EnterFilterName(module);
-                	modules.DisableModule(module);
+                	if (modules.IsModuleEnabled(module)) {
+                		modules.EnterFilterName(module);
+                    	modules.DisableModule(module);
+                	}
                 }
             	
                 //uninstall some high data usage modules that overflow lists
