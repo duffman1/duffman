@@ -136,6 +136,12 @@ public class A1_TestSetup extends ParentTest {
                 
                 overlay.ClickCloseOverlayLnk();
                 
+                //configure media gallery multi select
+                applib.openSitePage("/admin/structure/types/manage/media-gallery/fields/field_media_items/widget-type");
+                new Select(webDriver.findElement(By.id("edit-widget-type"))).selectByVisibleText("Media multiselect");
+                contentParent.ClickSaveBtn();
+                taxonomy.NavigateSite("Home");
+                
                 //schedule a post content item revision to be consumed by the SchedulingContentPublishUnpublished test later in the suite
                 taxonomy.NavigateSite("Content>>Add content>>Post");
             	overlay.SwitchToActiveFrame();
