@@ -138,6 +138,7 @@ public class MPSConfiguration {
     public void EnterMPSHost(String host) throws Exception { 
     	
     	Reporter.log("Enter '" + host + "' in the 'MPS Host' text box."); 
+    	Thread.sleep(500);
     	MPSHost_Txb.clear();
     	MPSHost_Txb.sendKeys(host);
     }

@@ -61,7 +61,7 @@ public class BasicInformation {
     @FindBy(how = How.XPATH, using = "//input[@id='edit-field-season-id-und-0-value']")
     private WebElement SeasonNumber_Txb;
     
-    @FindBy(how = How.XPATH, using = "//select[contains(@class, 'wysiwyg')]")
+    @FindBy(how = How.XPATH, using = "//label[contains(text(), 'Text format')]/../select")
     private WebElement TextFormat_Ddl;
     
     private WebElement CustomSelect_Ddl(String label) {

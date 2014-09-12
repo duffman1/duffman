@@ -42,7 +42,7 @@ public class PasswordReset extends ParentTest {
     	
     	Reporter.log("STEP 4");
     	GmailConnect gmailConnect = new GmailConnect(applib);
-        String autoEmailSubject = "Replacement login information for " + userName + " at Site-Install";
+        String autoEmailSubject = "Replacement login information for " + userName + " at ";
         gmailConnect.VerifyAutoEmailRecieved(autoEmailSubject);
         gmailConnect.DeleteAllAutoEmailsInInbox(autoEmailSubject);
         

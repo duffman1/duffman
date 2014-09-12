@@ -46,7 +46,7 @@ public class MPSConfigurationPage extends ParentTest {
             mpsConfiguration.ClickSaveConfigurationBtn();
             contentParent.VerifyMessageStatus("The configuration options have been saved.");
             overlay.ClickCloseOverlayLnk();
-            mpsConfiguration.VerifyMPSCallParameters(Arrays.asList("\"site\":\"pub7-development\"", "\"title\":\"Welcome to Site-Install\"", "\"path\":\"\\/\"", "\"is_content\":0", "\"type\":\"other\"", "var mpsopts = {\"host\":\"mps.io\"}"));
+            mpsConfiguration.VerifyMPSCallParameters(Arrays.asList("\"site\":\"pub7-development\"", "\"title\":\"Welcome to", "\"path\":\"\\/\"", "\"is_content\":0", "\"type\":\"other\"", "var mpsopts = {\"host\":\"mps.io\"}"));
             
             Reporter.log("STEP 5");
             taxonomy.NavigateSite("Configuration>>Web services>>MPS Configuration");
@@ -59,7 +59,7 @@ public class MPSConfigurationPage extends ParentTest {
             
             Reporter.log("STEP 6");
             applib.openSitePage("/?x=y");
-            mpsConfiguration.VerifyMPSCallParameters(Arrays.asList("\"title\":\"Welcome to Site-Install\"", "\"path\":\"\\/\"", "\"qs\":\"eD15\""));
+            mpsConfiguration.VerifyMPSCallParameters(Arrays.asList("\"title\":\"Welcome to", "\"path\":\"\\/\"", "\"qs\":\"eD15\""));
             
             Reporter.log("STEP 7");
             taxonomy.NavigateSite("Configuration>>Web services>>MPS Configuration");

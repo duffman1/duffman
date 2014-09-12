@@ -73,10 +73,7 @@ public class ImplementMPS extends ParentTest {
             overlay.ClickCloseOverlayLnk();
             
             Reporter.log("STEP 5");
-            mpsConfiguration.VerifyMPSCallParameters(Arrays.asList("\"site\":\"pub7-development\"", "\"title\":\"Welcome to Site-Install\"", "\"path\":\"\\/\"", "\"is_content\":0", "\"type\":\"other\""));
-            /*
-            contentParent.VerifySourceInPage(Arrays.asList("var mpscall = {\"site\":\"pub7-development\",\"title\":\"Welcome to Site-Install\",\"path\":\"\\/\",\"is_content\":0,\"type\":\"other\"}",
-            		"var mpsopts = {\"host\":\"mps.io\"}"));*/
+            mpsConfiguration.VerifyMPSCallParameters(Arrays.asList("\"site\":\"pub7-development\"", "\"title\":\"Welcome to", "\"path\":\"\\/\"", "\"is_content\":0", "\"type\":\"other\""));
             
             Reporter.log("STEP 6");
             taxonomy.NavigateSite("People");
@@ -118,7 +115,6 @@ public class ImplementMPS extends ParentTest {
             
             Reporter.log("STEP 10 through STEP 19");
             mpsConfiguration.VerifyMPSCallParameters(Arrays.asList("\"site\":\"pub7-development\"", "\"title\":\"" + movieTitle + "\"", "\"path\":\"\\/node\\/" + movieNodeNumber + "\"", "\"content_id\":\"node" + movieNodeNumber + "\"", "\"is_content\":1", "\"type\":\"movie\"", "\"cag\":{\"genre\":\"Action\",\"movie-rating\":\"G\",\"movie-types\":\"Syndicated\"}", "\"pubdate\":"));
-            //contentParent.VerifySourceInPage(Arrays.asList("var mpscall = {\"site\":\"pub7-development\",\"title\":\"" + movieTitle + "\",\"path\":\"\\/node\\/" + movieNodeNumber + "\",\"content_id\":\"node" + movieNodeNumber + "\",\"is_content\":1,\"type\":\"movie\",\"cag\":{\"genre\":\"Action\",\"movie-rating\":\"G\",\"movie-types\":\"Syndicated\"},\"pubdate\":"));
             
             Reporter.log("STEP 20");
             webDriver.navigate().to(webDriver.getCurrentUrl() + "?kumud=1");
