@@ -40,10 +40,10 @@ public class BasicInformation {
     @FindBy(how = How.ID, using = "edit-field-summary-und-0-value")
     private WebElement ShortDescription_Txa;
     
-    @FindBy(how = How.XPATH, using = "//iframe[@id='edit-body-und-0-value_ifr']")
+    @FindBy(how = How.XPATH, using = "//iframe[@class='cke_wysiwyg_frame cke_reset']")
     private WebElement Synopsis_Frm;
     
-    @FindBy(how = How.XPATH, using = "//body[@id='tinymce']")
+    @FindBy(how = How.XPATH, using = "//body[contains(@class, 'editable')]")
     private WebElement Synopsis_Txa;
     
     @FindBy(how = How.XPATH, using = "//a[contains(@id, 'cover')][text()='Select']")
