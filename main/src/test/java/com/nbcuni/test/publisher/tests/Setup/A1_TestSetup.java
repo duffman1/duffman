@@ -52,36 +52,6 @@ public class A1_TestSetup extends ParentTest {
             	UserLogin userLogin = applib.openApplication();
             	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
             	
-            	//set timezone utc
-            	applib.openSitePage("/admin/config/regional/settings");
-            	webDriver.findElement(By.xpath("//select[@id='edit-date-default-timezone']/option[contains(text(), 'UTC')]")).click();
-            	contentParent.ClickSaveBtn();
-            	
-            	//set date/time formats
-            	applib.openSitePage("/admin/config/regional/date-time");
-            	new Select(webDriver.findElement(By.id("edit-date-format-html5-tools-iso8601"))).selectByValue("c");
-            	new Select(webDriver.findElement(By.id("edit-date-format-long"))).selectByValue("l, F j, Y - H:i");
-            	new Select(webDriver.findElement(By.id("edit-date-format-medium"))).selectByValue("D, m/d/Y - H:i");
-            	new Select(webDriver.findElement(By.id("edit-date-format-short"))).selectByValue("Y-m-d H:i");
-            	new Select(webDriver.findElement(By.id("edit-date-format-edit-date"))).selectByValue("m/d/Y - h:i A");
-            	contentParent.ClickSaveBtn();
-            	
-            	//set file system paths
-            	/*
-            	applib.openSitePage("/admin/config/media/file-system");
-            	WebElement PublicFileSystemPath_Txb = webDriver.findElement(By.id("edit-file-public-path"));
-            	PublicFileSystemPath_Txb.clear();
-            	PublicFileSystemPath_Txb.sendKeys("sites/default/files");
-            	WebElement PrivateFileSystemPath_Txb = webDriver.findElement(By.id("edit-file-private-path"));
-            	PrivateFileSystemPath_Txb.clear();
-            	PrivateFileSystemPath_Txb.sendKeys("/mnt/files/nbcupublisher7.qa5/sites/default/files-private");
-            	WebElement TemporaryDirectory_Txb = webDriver.findElement(By.id("edit-file-temporary-path"));
-            	TemporaryDirectory_Txb.clear();
-            	TemporaryDirectory_Txb.sendKeys("/mnt/tmp/nbcupublisher7qa5");
-            	webDriver.findElement(By.id("edit-file-default-scheme-public")).click();
-            	contentParent.ClickSaveBtn();
-            	*/
-            	
             	//enable overlay module if necessary
             	applib.openSitePage("/admin/modules");
                 Modules modules = new Modules(webDriver, applib);
@@ -94,10 +64,10 @@ public class A1_TestSetup extends ParentTest {
                 }
                 overlay.SwitchToActiveFrame();
                 
-                //enable necessary modules
+                //enable necessary modules (from text file)
                 String requiredModulesFilePath = System.getProperty("user.dir") + "/src/test/java/com/nbcuni/test/publisher/tests/Setup/AllEnabledModules.txt";
-        	    requiredModulesFilePath = requiredModulesFilePath.replace("/", File.separator);
-        	    File requiredModulesFile = new File(requiredModulesFilePath);
+        	    //requiredModulesFilePath = requiredModulesFilePath.replace("/", File.separator);
+        	    File requiredModulesFile = new File(requiredModulesFilePath.replace("/", File.separator));
             	BufferedReader bufferedReader = new BufferedReader(new FileReader(requiredModulesFile));
             	List<String> requiredModules = new ArrayList<String>();
             	String line;
@@ -136,6 +106,36 @@ public class A1_TestSetup extends ParentTest {
                 
                 overlay.ClickCloseOverlayLnk();
                 
+              //set timezone utc
+            	applib.openSitePage("/admin/config/regional/settings");
+            	webDriver.findElement(By.xpath("//select[@id='edit-date-default-timezone']/option[contains(text(), 'UTC')]")).click();
+            	contentParent.ClickSaveBtn();
+            	
+            	//set date/time formats
+            	applib.openSitePage("/admin/config/regional/date-time");
+            	new Select(webDriver.findElement(By.id("edit-date-format-html5-tools-iso8601"))).selectByValue("c");
+            	new Select(webDriver.findElement(By.id("edit-date-format-long"))).selectByValue("l, F j, Y - H:i");
+            	new Select(webDriver.findElement(By.id("edit-date-format-medium"))).selectByValue("D, m/d/Y - H:i");
+            	new Select(webDriver.findElement(By.id("edit-date-format-short"))).selectByValue("Y-m-d H:i");
+            	new Select(webDriver.findElement(By.id("edit-date-format-edit-date"))).selectByValue("m/d/Y - h:i A");
+            	contentParent.ClickSaveBtn();
+            	
+            	//set file system paths
+            	/*
+            	applib.openSitePage("/admin/config/media/file-system");
+            	WebElement PublicFileSystemPath_Txb = webDriver.findElement(By.id("edit-file-public-path"));
+            	PublicFileSystemPath_Txb.clear();
+            	PublicFileSystemPath_Txb.sendKeys("sites/default/files");
+            	WebElement PrivateFileSystemPath_Txb = webDriver.findElement(By.id("edit-file-private-path"));
+            	PrivateFileSystemPath_Txb.clear();
+            	PrivateFileSystemPath_Txb.sendKeys("/mnt/files/nbcupublisher7.qa5/sites/default/files-private");
+            	WebElement TemporaryDirectory_Txb = webDriver.findElement(By.id("edit-file-temporary-path"));
+            	TemporaryDirectory_Txb.clear();
+            	TemporaryDirectory_Txb.sendKeys("/mnt/tmp/nbcupublisher7qa5");
+            	webDriver.findElement(By.id("edit-file-default-scheme-public")).click();
+            	contentParent.ClickSaveBtn();
+            	*/
+            	
                 //configure media gallery multi select
                 applib.openSitePage("/admin/structure/types/manage/media-gallery/fields/field_media_items/widget-type");
                 new Select(webDriver.findElement(By.id("edit-widget-type"))).selectByVisibleText("Media multiselect");

@@ -1,7 +1,10 @@
 package com.nbcuni.test.publisher.pageobjects.Content;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -10,6 +13,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.Reporter;
 
+import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Random;
 import com.nbcuni.test.publisher.common.Driver.Driver;
 
@@ -23,11 +27,13 @@ import com.nbcuni.test.publisher.common.Driver.Driver;
 public class BasicInformation {
 
     private Driver webDriver;
+    private Config config;
     
     //PAGE OBJECT CONSTRUCTOR
     public BasicInformation(Driver webDriver) {
         this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
+        config = new Config();
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -40,11 +46,33 @@ public class BasicInformation {
     @FindBy(how = How.ID, using = "edit-field-summary-und-0-value")
     private WebElement ShortDescription_Txa;
     
-    @FindBy(how = How.XPATH, using = "//iframe[@class='cke_wysiwyg_frame cke_reset']")
-    private WebElement Synopsis_Frm;
+    private WebElement Synopsis_Frm() {
+    	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+    	
+    	WebElement frm = null;
+    	try {
+    		frm = webDriver.findElement(By.xpath("//iframe[@class='cke_wysiwyg_frame cke_reset']"));
+    	}
+    	catch (NoSuchElementException e) {
+    		frm = webDriver.findElement(By.xpath("//iframe[@id='edit-body-und-0-value_ifr']"));
+    	}
+    	webDriver.manage().timeouts().implicitlyWait(config.getImplicitWaitTime(), TimeUnit.SECONDS);
+    	return frm;
+    }
     
-    @FindBy(how = How.XPATH, using = "//body[contains(@class, 'editable')]")
-    private WebElement Synopsis_Txa;
+    private WebElement Synopsis_Txa() {
+    	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+    	
+    	WebElement txa = null;
+    	try {
+    		txa = webDriver.findElement(By.xpath("//body[contains(@class, 'editable')]"));
+    	}
+    	catch (NoSuchElementException e) {
+    		txa = webDriver.findElement(By.xpath("//body[@id='tinymce']"));
+    	}
+    	webDriver.manage().timeouts().implicitlyWait(config.getImplicitWaitTime(), TimeUnit.SECONDS);
+    	return txa;
+    }
     
     @FindBy(how = How.XPATH, using = "//a[contains(@id, 'cover')][text()='Select']")
     private WebElement CoverSelect_Btn;
@@ -98,7 +126,7 @@ public class BasicInformation {
     public String EnterSynopsis() throws Exception{
 
         Reporter.log("Switch to the Synopsis frame.");
-    	webDriver.switchTo().frame(Synopsis_Frm);
+    	webDriver.switchTo().frame(Synopsis_Frm());
 
         Reporter.log("Enter a randomized text string into the 'Body' text area.");
         Random random = new Random();
@@ -107,8 +135,9 @@ public class BasicInformation {
                             random.GetCharacterString(20) + " " +
                                 random.GetCharacterString(20);
         
-        Synopsis_Txa.clear();
-        Synopsis_Txa.sendKeys(body);
+        WebElement Body_Txa = Synopsis_Txa();
+        Body_Txa.clear();
+        Body_Txa.sendKeys(body);
         webDriver.switchTo().defaultContent();
         
         return body;
