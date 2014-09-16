@@ -123,7 +123,7 @@ public class BasicInformation {
     	ShortDescription_Txa.sendKeys(shortDescription);
     }
 
-    public String EnterSynopsis() throws Exception{
+    public String EnterSynopsis() throws Exception {
 
         Reporter.log("Switch to the Synopsis frame.");
     	webDriver.switchTo().frame(Synopsis_Frm());
@@ -141,6 +141,19 @@ public class BasicInformation {
         webDriver.switchTo().defaultContent();
         
         return body;
+    }
+    
+    public void EnterSynopsis(String synopsis) throws Exception {
+
+        Reporter.log("Switch to the Synopsis frame.");
+    	webDriver.switchTo().frame(Synopsis_Frm());
+
+        Reporter.log("Enter '" + synopsis + "' into the 'Body' text area.");
+        WebElement Body_Txa = Synopsis_Txa();
+        Body_Txa.clear();
+        Body_Txa.sendKeys(synopsis);
+        webDriver.switchTo().defaultContent();
+        
     }
     
     public void ClickCoverSelectBtn() throws Exception {
