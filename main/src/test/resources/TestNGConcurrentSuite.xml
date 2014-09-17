@@ -3,7 +3,7 @@
   	<!--TEST EXECUTION QUEUE-->
   	<test verbose="1" name="All Concurrent Web Tests" annotations="JDK">
 
-		<!-- Enter group name for specific test scripts, options are "full", "smoke", "mpx", "certify" -->
+		<!-- Enter group name for specific test scripts, options are "full", "smoke", "mpx", "certify" "mps"-->
 		<groups>
 	 		<run>
 	 			<include name="full"/>

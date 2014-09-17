@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="3" name="Failed suite [Pub 7 Concurrent Suite]" parallel="classes">
-  <parameter name="ReRunOnFailure" value="true"/>
+<suite thread-count="1" name="Failed suite [Pub 7 Concurrent Suite]" parallel="classes">
+  <parameter name="ReRunOnFailure" value="false"/>
   <parameter name="LocalAppiumHubPort" value="4724"/>
   <parameter name="Device" value="Iphone Simulator"/>
   <parameter name="SSOPassword" value="Pa55word"/>
-  <parameter name="DrushIngestion" value="true"/>
+  <parameter name="DrushIngestion" value="false"/>
   <parameter name="Admin1Password" value="pa55word"/>
   <parameter name="MPXVideaUploadPause" value="5000"/>
   <parameter name="ReRunOnFailureCount" value="2"/>
   <parameter name="IRCServer" value="irc.freenode.net"/>
   <parameter name="RallyUrl" value="https://rally1.rallydev.com"/>
   <parameter name="ErrorCheckingEnabled" value="true"/>
-  <parameter name="SendReportAutoEmails" value="true"/>
+  <parameter name="SendReportAutoEmails" value="false"/>
   <parameter name="RallyUsername" value="scott.baierwalter@nbc.com"/>
   <parameter name="Admin1Username" value="admin@publisher.nbcuni.com"/>
   <parameter name="Browser" value="chrome"/>
@@ -29,14 +29,14 @@
   <parameter name="RallyPassword" value="Lighth0use123"/>
   <parameter name="PathToReports" value="/test-output/reports/"/>
   <parameter name="MPXPassword" value="Pa55word"/>
-  <parameter name="RallyTaskID" value="TA51790"/>
-  <parameter name="SendReportIRCChat" value="true"/>
+  <parameter name="RallyTaskID" value="TA55562"/>
+  <parameter name="SendReportIRCChat" value="false"/>
   <parameter name="RunMobile" value="false"/>
   <parameter name="RallyWorkspace" value="Digital Products"/>
-  <parameter name="SendReportEmailAddress" value="ots.publishing.qa@nbcuni.com, brandon.cark@nbcuni.com"/>
-  <parameter name="UpdateIndividualRallyTCs" value="true"/>
+  <parameter name="SendReportEmailAddress" value="ots.publishing.qa@nbcuni.com, brandon.clark@nbcuni.com"/>
+  <parameter name="UpdateIndividualRallyTCs" value="false"/>
   <parameter name="PathToSikuliImages" value="/src/test/java/com/nbcuni/test/publisher/lib/sikuli/images/"/>
-  <parameter name="UploadReportToRally" value="true"/>
+  <parameter name="UploadReportToRally" value="false"/>
   <parameter name="ImplicitWaitTime" value="20"/>
   <parameter name="MPXAssetBufferPause" value="0"/>
   <parameter name="GmailPassword" value="Pub7NBCUAutoEmailPassword1"/>
@@ -44,7 +44,7 @@
   <parameter name="LocalWebDriverHubPort" value="4444"/>
   <parameter name="IRCChannel" value="#nbcuots_pub7"/>
   <parameter name="SikuliImageWaitTime" value="30"/>
-  <parameter name="AppURL" value="http://update.qa5.nbcupublisher7.publisher7.com"/>
+  <parameter name="AppURL" value="http://qa5.publisher7.com"/>
   <parameter name="MPXUsername" value="mpx/AdminPub7QA"/>
   <listeners>
     <listener class-name="com.nbcuni.test.publisher.common.CustomReport"/>
@@ -54,73 +54,61 @@
   <test name="All Concurrent Web Tests(failed)" parallel="classes">
     <groups>
       <run>
-        <include name="certify"/>
-        <exclude name="mpx"/>
+        <include name="mps"/>
+        <exclude name=""/>
       </run>
     </groups>
     <classes>
-      <class name="com.nbcuni.test.publisher.tests.Queues.CreateUpdateRevisionsToQueues.BasicUIForCreatingAndRevisingQueues">
-        <methods>
-          <include name="BasicUIForCreatingAndRevisingQueues_Test"/>
-          <include name="stopSelenium"/>
-        </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.Queues.CreateUpdateRevisionsToQueues.BasicUIForCreatingAndRevisingQueues -->
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.URLAlias.AutomaticAlias">
+      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityModerationStatesandWorkflows.PublishContenttoUnauthenticatedUsers">
         <methods>
           <include name="stopGridAndHub"/>
-          <include name="AutomaticAlias_TC3303"/>
           <include name="startGridAndHub"/>
-          <include name="stopSelenium"/>
         </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.URLAlias.AutomaticAlias -->
-      <class name="com.nbcuni.test.publisher.tests.Queues.DynamicQueues.RelatingTVShowsDynamicQueues">
+      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityModerationStatesandWorkflows.PublishContenttoUnauthenticatedUsers -->
+      <class name="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens">
         <methods>
-          <include name="RelatingTVShowsDynamicQueues_TC4389"/>
+          <include name="startSelenium"/>
+          <include name="MPSSupportTokens_TC3641"/>
           <include name="stopSelenium"/>
         </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.Queues.DynamicQueues.RelatingTVShowsDynamicQueues -->
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CustomContentType.CreateCustomContentType">
+      </class> <!-- com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens -->
+      <class name="com.nbcuni.test.publisher.tests.Advertising.MPS.AddMPSCallsToErrorPages">
         <methods>
-          <include name="CreateCustomContentType_TC1049"/>
+          <include name="AddMPSCallsToErrorPages_TC4950"/>
           <include name="stopSelenium"/>
         </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CustomContentType.CreateCustomContentType -->
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.Relationships">
+      </class> <!-- com.nbcuni.test.publisher.tests.Advertising.MPS.AddMPSCallsToErrorPages -->
+      <class name="com.nbcuni.test.publisher.tests.Advertising.MPS.AutomaticallyCreatedMPSAdSlots">
         <methods>
-          <include name="Relationships_TC1390"/>
+          <include name="startSelenium"/>
           <include name="stopSelenium"/>
         </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.Relationships -->
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentAndEntityPreview.PreviewContentItemsIntheFuturefromContentandWorkbenchViews">
+      </class> <!-- com.nbcuni.test.publisher.tests.Advertising.MPS.AutomaticallyCreatedMPSAdSlots -->
+      <class name="com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS">
         <methods>
-          <include name="PreviewContentItemsIntheFuturefromContentandWorkbenchViews_Test"/>
+          <include name="startSelenium"/>
           <include name="stopSelenium"/>
         </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentAndEntityPreview.PreviewContentItemsIntheFuturefromContentandWorkbenchViews -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS -->
+      <class name="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSBlockAccess">
+        <methods>
+          <include name="startSelenium"/>
+          <include name="stopSelenium"/>
+          <include name="MPSBlockAccess_TC3608"/>
+        </methods>
+      </class> <!-- com.nbcuni.test.publisher.tests.Advertising.MPS.MPSBlockAccess -->
       <class name="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSEndToEndIntegration">
         <methods>
+          <include name="startSelenium"/>
           <include name="stopSelenium"/>
-          <include name="MPSEndToEndIntegration_TC3996"/>
         </methods>
       </class> <!-- com.nbcuni.test.publisher.tests.Advertising.MPS.MPSEndToEndIntegration -->
-      <class name="com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.EditorPermissionsContentAndContentRevisionsView">
+      <class name="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSConfigurationPage">
         <methods>
-          <include name="EditorPermissionsContentAndContentRevisionsView_TC1393"/>
+          <include name="startSelenium"/>
           <include name="stopSelenium"/>
         </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.EditorPermissionsContentAndContentRevisionsView -->
-      <class name="com.nbcuni.test.publisher.tests.Metrics.SiteCatalyst.ImplementSiteCatalyst">
-        <methods>
-          <include name="ImplementSiteCatalyst_TC1061"/>
-          <include name="stopSelenium"/>
-        </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.Metrics.SiteCatalyst.ImplementSiteCatalyst -->
-      <class name="com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.EditorPermissionCustomQueuesOperationsMenu">
-        <methods>
-          <include name="EditorPermissionCustomQueuesOperationsMenu_TC1379"/>
-          <include name="stopSelenium"/>
-        </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.EditorPermissionCustomQueuesOperationsMenu -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Advertising.MPS.MPSConfigurationPage -->
     </classes>
   </test> <!-- All Concurrent Web Tests(failed) -->
 </suite> <!-- Failed suite [Pub 7 Concurrent Suite] -->
