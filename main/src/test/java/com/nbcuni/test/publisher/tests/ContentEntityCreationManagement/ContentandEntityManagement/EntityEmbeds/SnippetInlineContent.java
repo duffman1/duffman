@@ -6,8 +6,11 @@ import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Configuration.TextFormat;
 import com.nbcuni.test.publisher.pageobjects.Content.BasicInformation;
+import com.nbcuni.test.publisher.pageobjects.Content.EmbedYoutubeVideo;
+
 import org.testng.Reporter;
 import org.testng.annotations.Test;
+
 import java.util.Arrays;
 
 public class SnippetInlineContent extends ParentTest{
@@ -42,7 +45,18 @@ public class SnippetInlineContent extends ParentTest{
         	taxonomy.NavigateSite("Content>>Add content>>Post");
         	overlay.SwitchToActiveFrame();
         	BasicInformation basicInformation = new BasicInformation(webDriver);
+        	String postTitle = random.GetCharacterString(15);
+        	basicInformation.EnterTitle(postTitle);
         	basicInformation.EnterSynopsis("<strong>Embedding a youtube video</strong>");
+        	overlay.SwitchToActiveFrame();
+        	basicInformation.ClickYoutubeBtn();
+        	EmbedYoutubeVideo embedYoutubeVideo = new EmbedYoutubeVideo(webDriver);
+        	embedYoutubeVideo.EnterYoutubeURL("https://www.youtube.com/watch?v=__dZ_v7rQh4");
+        	embedYoutubeVideo.ClickOkBtn();
+        	contentParent.ClickSaveBtn();
+        	overlay.switchToDefaultContent(true);
+        	contentParent.VerifyMessageStatus("Post " + postTitle + " has been created.");
+        	
         	
         	
         	
