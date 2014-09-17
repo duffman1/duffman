@@ -106,7 +106,7 @@ public class A1_TestSetup extends ParentTest {
                 
                 overlay.ClickCloseOverlayLnk();
                 
-              //set timezone utc
+                //set timezone utc
             	applib.openSitePage("/admin/config/regional/settings");
             	webDriver.findElement(By.xpath("//select[@id='edit-date-default-timezone']/option[contains(text(), 'UTC')]")).click();
             	contentParent.ClickSaveBtn();
@@ -139,6 +139,9 @@ public class A1_TestSetup extends ParentTest {
                 //configure media gallery multi select
                 applib.openSitePage("/admin/structure/types/manage/media-gallery/fields/field_media_items/widget-type");
                 new Select(webDriver.findElement(By.id("edit-widget-type"))).selectByVisibleText("Media multiselect");
+                contentParent.ClickSaveBtn();
+                applib.openSitePage("/admin/structure/types/manage/media-gallery/fields/field_media_items");
+                new Select(webDriver.findElement(By.id("edit-field-cardinality"))).selectByVisibleText("Unlimited");
                 contentParent.ClickSaveBtn();
                 taxonomy.NavigateSite("Home");
                 
