@@ -3,7 +3,7 @@
   	<!--TEST EXECUTION QUEUE-->
   	<test verbose="1" name="All Consecutive Web Tests" annotations="JDK">
 
-		<!-- Enter group name for specific test scripts, options are "full", "smoke", "mpx", "certify" -->
+		<!-- Enter group name for specific test scripts, options are "full", "smoke", "mpx", "certify" "mps"-->
 		<groups>
 	 		<run>
 	 			<include name="full"/>
@@ -29,7 +29,7 @@
 			<class name="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOManageUsers"/>
 			-->
 			<class name="com.nbcuni.test.publisher.tests.Performance.PageLoads"/>
-			<!-- 
+			<!--
 			<class name="com.nbcuni.test.publisher.tests.Video.DeIngestingMPXAccountsAndCorrespondingAssets.MPXAccountDeletion"/>CRON-DRUSH
 			-->
 			<class name="com.nbcuni.test.publisher.tests.Setup.Z1_TestCleanup"/>CRON

@@ -17,7 +17,7 @@ public class MPSConfigurationPage extends ParentTest {
      * TEST CASE - TC3306
      * Steps - https://rally1.rallydev.com/#/14663927728d/detail/testcase/19393095610
      *************************************************************************************/
-    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"})
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "mps"})
     public void MPSConfigurationPage_TC3306() throws Exception {
         
         	Reporter.log("STEP 1");

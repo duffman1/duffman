@@ -51,15 +51,19 @@ public class SnippetInlineContent extends ParentTest{
         	overlay.SwitchToActiveFrame();
         	basicInformation.ClickYoutubeBtn();
         	EmbedYoutubeVideo embedYoutubeVideo = new EmbedYoutubeVideo(webDriver);
-        	embedYoutubeVideo.EnterYoutubeURL("https://www.youtube.com/watch?v=__dZ_v7rQh4");
+        	String videoSrc = "http://www.youtube.com/embed/yp9pTFcD2uk?end=2";
+        	String height = "360";
+        	String width = "640";
+        	embedYoutubeVideo.EnterYoutubeURL(videoSrc);
+        	embedYoutubeVideo.EnterHeight(height);
+        	embedYoutubeVideo.EnterWidth(width);
         	embedYoutubeVideo.ClickOkBtn();
         	contentParent.ClickSaveBtn();
         	overlay.switchToDefaultContent(true);
         	contentParent.VerifyMessageStatus("Post " + postTitle + " has been created.");
         	
-        	//TODO - need an additional validation on step 5 for this to be valid. Following up with Pete to get this test working 9.17.14
-        	
-        	
+        	Reporter.log("STEP 5");
+        	embedYoutubeVideo.VerifyVideoPresent(videoSrc, height, width);
         	
         	
         	
