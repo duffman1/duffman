@@ -7,10 +7,8 @@ import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Configuration.TextFormat;
 import com.nbcuni.test.publisher.pageobjects.Content.BasicInformation;
 import com.nbcuni.test.publisher.pageobjects.Content.EmbedYoutubeVideo;
-
 import org.testng.Reporter;
 import org.testng.annotations.Test;
-
 import java.util.Arrays;
 
 public class SnippetInlineContent extends ParentTest{
@@ -64,9 +62,6 @@ public class SnippetInlineContent extends ParentTest{
         	
         	Reporter.log("STEP 5");
         	embedYoutubeVideo.VerifyVideoPresent(videoSrc, height, width);
-        	
-        	
-        	
-    	    
+
     }
 }
