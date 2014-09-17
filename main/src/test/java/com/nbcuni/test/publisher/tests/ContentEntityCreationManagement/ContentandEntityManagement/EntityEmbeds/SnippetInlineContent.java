@@ -57,6 +57,8 @@ public class SnippetInlineContent extends ParentTest{
         	overlay.switchToDefaultContent(true);
         	contentParent.VerifyMessageStatus("Post " + postTitle + " has been created.");
         	
+        	//TODO - need an additional validation on step 5 for this to be valid. Following up with Pete to get this test working 9.17.14
+        	
         	
         	
         	
