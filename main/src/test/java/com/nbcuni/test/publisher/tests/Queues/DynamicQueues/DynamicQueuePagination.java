@@ -33,7 +33,7 @@ public class DynamicQueuePagination extends ParentTest{
 	public Object[][] provideData() {
  
 		return new Object[][] { 
-			{2, 3, 4},{5, 4, 4},{2, 6, 6}
+			{2, 6, 6}
 		};
 		
 	}
