@@ -46,6 +46,9 @@ public class BasicInformation {
     @FindBy(how = How.ID, using = "edit-field-summary-und-0-value")
     private WebElement ShortDescription_Txa;
     
+    @FindBy(how = How.XPATH, using = "//a[@title='Embed YouTube Video']")
+    private WebElement YouTube_Btn;
+    
     private WebElement Synopsis_Frm() {
     	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
     	
@@ -218,6 +221,12 @@ public class BasicInformation {
     	
     	Reporter.log("Click the 'Select' button for '" + label + "'.");
     	CustomButton_Btn(label).click();
+    }
+    
+    public void ClickYoutubeBtn() throws Exception {
+    	
+    	Reporter.log("Click the embed youtube button.");
+    	YouTube_Btn.click();
     }
     
 }

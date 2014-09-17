@@ -101,7 +101,7 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.nbcuni.test.publisher.tests.SocialIntegration.FunctionalImplementGigyaShareBar.FunctionalImplementGigyaShareBar" hash-for-method="FunctionalImplementGigyaShareBar_TC3978">FunctionalImplementGigyaShareBar_TC3978</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost" hash-for-method="CreatePost_TC1048">CreatePost_TC1048</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -119,14 +119,14 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.nbcuni.test.publisher.tests.SocialIntegration.FunctionalImplementGigyaShareBar.FunctionalImplementGigyaShareBar</span>
+              <span class="class-name">com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="FunctionalImplementGigyaShareBar_TC3978">
-                  </a> <!-- FunctionalImplementGigyaShareBar_TC3978 -->
-                  <span class="method-name">FunctionalImplementGigyaShareBar_TC3978</span>
+                  <a name="CreatePost_TC1048">
+                  </a> <!-- CreatePost_TC1048 -->
+                  <span class="method-name">CreatePost_TC1048</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -134,7 +134,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/private/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/testng-eclipse-1445204518/testng-customsuite.xml</span>
+            <span class="header-content">/private/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/testng-eclipse--851048963/testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -143,7 +143,7 @@
 &lt;suite name=&quot;Default suite&quot;&gt;
   &lt;test verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.nbcuni.test.publisher.tests.SocialIntegration.FunctionalImplementGigyaShareBar.FunctionalImplementGigyaShareBar&quot;/&gt;
+      &lt;class name=&quot;com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -171,7 +171,7 @@
               <span class="test-group-name">full</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">FunctionalImplementGigyaShareBar_TC3978</span>
+                <span class="method-in-group-name">CreatePost_TC1048</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -193,14 +193,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'FunctionalImplementGigyaShareBar_TC3978')
-data.setCell(0, 2, 'com.nbcuni.test.publisher.tests.SocialIntegration.FunctionalImplementGigyaShareBar.FunctionalImplementGigyaShareBar')
-data.setCell(0, 3, 56042);
+data.setCell(0, 1, 'CreatePost_TC1048')
+data.setCell(0, 2, 'com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost')
+data.setCell(0, 3, 49604);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 56 seconds</span>
+              <span class="suite-total-time">Total running time: 49 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -212,7 +212,7 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="reporter-method-div">
-              <span class="reporter-method-name">FunctionalImplementGigyaShareBar_TC3978</span>
+              <span class="reporter-method-name">CreatePost_TC1048</span>
               <div class="reporter-method-output-div">
                 <span class="reporter-method-output">Open url 'http://qa5.publisher7.com'.</span>
                 <span class="reporter-method-output">Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.</span>
@@ -222,10 +222,17 @@ return data;
                 <span class="reporter-method-output">Mouse over the 'Add content' menu link.</span>
                 <span class="reporter-method-output">Click the 'Post' menu link.</span>
                 <span class="reporter-method-output">Switch to the active frame titled 'Create Post dialog'.</span>
-                <span class="reporter-method-output">Enter '0cff7e551f594b2' in the 'Title' text box.</span>
+                <span class="reporter-method-output">Verify the 'Title' is present as a required field.</span>
+                <span class="reporter-method-output">Verify the 'Body' is present as a required field.</span>
+                <span class="reporter-method-output">Scroll the 'Publishing Options' link into view.</span>
+                <span class="reporter-method-output">Click the 'Publishing Options' link.</span>
+                <span class="reporter-method-output">Verify the 'Moderation State' is present as a required field.</span>
+                <span class="reporter-method-output">Scroll to and click the 'Basic Information' tab.</span>
+                <span class="reporter-method-output">Enter 'dc215939567d44a' in the 'Title' text box.</span>
                 <span class="reporter-method-output">Switch to the Synopsis frame.</span>
                 <span class="reporter-method-output">Enter a randomized text string into the 'Body' text area.</span>
                 <span class="reporter-method-output">Switch to the active frame titled 'Create Post dialog'.</span>
+                <span class="reporter-method-output">Select the 'WYSIWYG Mini' from the 'Text format' drop down list.</span>
                 <span class="reporter-method-output">Click the 'Cover' select button.</span>
                 <span class="reporter-method-output">Switch to the select file frame.</span>
                 <span class="reporter-method-output">Enter the file path for file upload.</span>
@@ -242,39 +249,74 @@ return data;
                 <span class="reporter-method-output">Click the 'Publishing Options' link.</span>
                 <span class="reporter-method-output">Select 'Draft' from the 'Moderation State' drop down list.</span>
                 <span class="reporter-method-output">Click the 'Save' button.</span>
-                <span class="reporter-method-output">Verify success message of 'Post 0cff7e551f594b2 has been created.' is present.</span>
-                <span class="reporter-method-output">Click the 'Modules' menu link.</span>
-                <span class="reporter-method-output">Switch to frame titled 'Modules'.</span>
-                <span class="reporter-method-output">Enter 'Pub Gigya' in the 'Filter Name' text box.</span>
-                <span class="reporter-method-output">Wait for module filter titled 'Pub Gigya' to be visible in module list.</span>
-                <span class="reporter-method-output">Verify the 'Pub Gigya' check box is checked.</span>
-                <span class="reporter-method-output">Click the 'Close Overlay X'.</span>
-                <span class="reporter-method-output">Scroll by '-500'.</span>
-                <span class="reporter-method-output">Click the 'Home' menu link.</span>
-                <span class="reporter-method-output">Mouse over the 'Configuration' menu link.</span>
-                <span class="reporter-method-output">Mouse over the 'Web services' menu link.</span>
-                <span class="reporter-method-output">Click the 'Gigya settings' menu link.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'Gigya settings dialog'.</span>
-                <span class="reporter-method-output">Click the 'Share' link in the work bench.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'Gigya settings dialog'.</span>
-                <span class="reporter-method-output">Enter 'Tumblr, email, googleplus-interactive ,foursquare, print, twitter-tweet, facebook-like' in the Privider text box.</span>
-                <span class="reporter-method-output">Click the 'ADVANCED SHARE BAR SETTINGS' link to expand advanced menu options.</span>
-                <span class="reporter-method-output">Enter 'wrap|true' in the 'Advanced showShareBarUI settings' text area.</span>
-                <span class="reporter-method-output">Click the 'Save configuration' button.</span>
-                <span class="reporter-method-output">Verify success message of 'The configuration options have been saved.' is present.</span>
-                <span class="reporter-method-output">Click the 'Close Overlay X'.</span>
-                <span class="reporter-method-output">Scroll by '-500'.</span>
-                <span class="reporter-method-output">Click the 'Content' menu link.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'Content dialog'.</span>
-                <span class="reporter-method-output">Enter title 0cff7e551f594b2.</span>
-                <span class="reporter-method-output">Click the 'Apply' button.</span>
-                <span class="reporter-method-output">Click the first search title link in the search result set.</span>
-                <span class="reporter-method-output">Verify the Tumblr gigya share link is present.</span>
-                <span class="reporter-method-output">Verify the Email gigya share link is present.</span>
-                <span class="reporter-method-output">Verify the Google Plus gigya share link is present.</span>
-                <span class="reporter-method-output">Verify the Foursquare gigya share link is present.</span>
-                <span class="reporter-method-output">Verify the Print gigya share link is present.</span>
-                <span class="reporter-method-output">Verify the Twitter gigya share link is present.</span>
+                <span class="reporter-method-output">Verify success message of 'Post dc215939567d44a has been created.' is present.</span>
+                <span class="reporter-method-output">Verify the text 'Draft' is present in the work bench info block.</span>
+                <span class="reporter-method-output">Mouse over the 'Content' menu link.</span>
+                <span class="reporter-method-output">Mouse over the 'Add content' menu link.</span>
+                <span class="reporter-method-output">Click the 'Post' menu link.</span>
+                <span class="reporter-method-output">Switch to the active frame titled 'Create Post dialog'.</span>
+                <span class="reporter-method-output">Verify the 'Title' is present as a required field.</span>
+                <span class="reporter-method-output">Verify the 'Body' is present as a required field.</span>
+                <span class="reporter-method-output">Scroll the 'Publishing Options' link into view.</span>
+                <span class="reporter-method-output">Click the 'Publishing Options' link.</span>
+                <span class="reporter-method-output">Verify the 'Moderation State' is present as a required field.</span>
+                <span class="reporter-method-output">Scroll to and click the 'Basic Information' tab.</span>
+                <span class="reporter-method-output">Enter 'd6e945d1e002444' in the 'Title' text box.</span>
+                <span class="reporter-method-output">Switch to the Synopsis frame.</span>
+                <span class="reporter-method-output">Enter a randomized text string into the 'Body' text area.</span>
+                <span class="reporter-method-output">Switch to the active frame titled 'Create Post dialog'.</span>
+                <span class="reporter-method-output">Select the 'WYSIWYG Mini' from the 'Text format' drop down list.</span>
+                <span class="reporter-method-output">Click the 'Cover' select button.</span>
+                <span class="reporter-method-output">Switch to the select file frame.</span>
+                <span class="reporter-method-output">Enter the file path for file upload.</span>
+                <span class="reporter-method-output">Click the 'Upload' button.</span>
+                <span class="reporter-method-output">Wait for the file link to be visible after upload.</span>
+                <span class="reporter-method-output">Click the 'Next' button.</span>
+                <span class="reporter-method-output">Click the 'Public Local Files' radio button.</span>
+                <span class="reporter-method-output">Click the 'Next' button.</span>
+                <span class="reporter-method-output">Verify the file image 'HanSolo' is present.</span>
+                <span class="reporter-method-output">Verify the img is loaded and visible.</span>
+                <span class="reporter-method-output">Click the 'Save' button.</span>
+                <span class="reporter-method-output">Switch to the active frame titled 'Create Post dialog'.</span>
+                <span class="reporter-method-output">Scroll the 'Publishing Options' link into view.</span>
+                <span class="reporter-method-output">Click the 'Publishing Options' link.</span>
+                <span class="reporter-method-output">Select 'Review' from the 'Moderation State' drop down list.</span>
+                <span class="reporter-method-output">Click the 'Save' button.</span>
+                <span class="reporter-method-output">Verify success message of 'Post d6e945d1e002444 has been created.' is present.</span>
+                <span class="reporter-method-output">Verify the text 'Review' is present in the work bench info block.</span>
+                <span class="reporter-method-output">Mouse over the 'Content' menu link.</span>
+                <span class="reporter-method-output">Mouse over the 'Add content' menu link.</span>
+                <span class="reporter-method-output">Click the 'Post' menu link.</span>
+                <span class="reporter-method-output">Switch to the active frame titled 'Create Post dialog'.</span>
+                <span class="reporter-method-output">Verify the 'Title' is present as a required field.</span>
+                <span class="reporter-method-output">Verify the 'Body' is present as a required field.</span>
+                <span class="reporter-method-output">Scroll the 'Publishing Options' link into view.</span>
+                <span class="reporter-method-output">Click the 'Publishing Options' link.</span>
+                <span class="reporter-method-output">Verify the 'Moderation State' is present as a required field.</span>
+                <span class="reporter-method-output">Scroll to and click the 'Basic Information' tab.</span>
+                <span class="reporter-method-output">Enter '7266836a6d16452' in the 'Title' text box.</span>
+                <span class="reporter-method-output">Switch to the Synopsis frame.</span>
+                <span class="reporter-method-output">Enter a randomized text string into the 'Body' text area.</span>
+                <span class="reporter-method-output">Switch to the active frame titled 'Create Post dialog'.</span>
+                <span class="reporter-method-output">Select the 'WYSIWYG Mini' from the 'Text format' drop down list.</span>
+                <span class="reporter-method-output">Click the 'Cover' select button.</span>
+                <span class="reporter-method-output">Switch to the select file frame.</span>
+                <span class="reporter-method-output">Enter the file path for file upload.</span>
+                <span class="reporter-method-output">Click the 'Upload' button.</span>
+                <span class="reporter-method-output">Wait for the file link to be visible after upload.</span>
+                <span class="reporter-method-output">Click the 'Next' button.</span>
+                <span class="reporter-method-output">Click the 'Public Local Files' radio button.</span>
+                <span class="reporter-method-output">Click the 'Next' button.</span>
+                <span class="reporter-method-output">Verify the file image 'HanSolo' is present.</span>
+                <span class="reporter-method-output">Verify the img is loaded and visible.</span>
+                <span class="reporter-method-output">Click the 'Save' button.</span>
+                <span class="reporter-method-output">Switch to the active frame titled 'Create Post dialog'.</span>
+                <span class="reporter-method-output">Scroll the 'Publishing Options' link into view.</span>
+                <span class="reporter-method-output">Click the 'Publishing Options' link.</span>
+                <span class="reporter-method-output">Select 'Published' from the 'Moderation State' drop down list.</span>
+                <span class="reporter-method-output">Click the 'Save' button.</span>
+                <span class="reporter-method-output">Verify success message of 'Post 7266836a6d16452 has been created.' is present.</span>
+                <span class="reporter-method-output">Verify the text 'Published' is present in the work bench info block.</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -292,26 +334,26 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.nbcuni.test.publisher.tests.SocialIntegration.FunctionalImplementGigyaShareBar.FunctionalImplementGigyaShareBar</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">startGridAndHub</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
                 <span class="method-name">startSelenium</span>
-                <span class="method-start">1281 ms</span>
+                <span class="method-start">1347 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">FunctionalImplementGigyaShareBar_TC3978</span>
-                <span class="method-start">3565 ms</span>
+                <span class="method-name">CreatePost_TC1048</span>
+                <span class="method-start">5078 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">stopSelenium([TestResult name=FunctionalImplementGigyaShareBar_TC3978 status=SUCCESS method=FunctionalImplementGi...)</span>
-                <span class="method-start">59608 ms</span>
+                <span class="method-name">stopSelenium([TestResult name=CreatePost_TC1048 status=SUCCESS method=CreatePost.CreatePost_TC1048()[pri:0, insta...)</span>
+                <span class="method-start">54683 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-suite after">
                 <span class="method-name">stopGridAndHub</span>
-                <span class="method-start">60194 ms</span>
+                <span class="method-start">55268 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

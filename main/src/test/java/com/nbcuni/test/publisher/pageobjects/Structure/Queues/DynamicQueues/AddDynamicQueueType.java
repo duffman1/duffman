@@ -1,6 +1,8 @@
 package com.nbcuni.test.publisher.pageobjects.Structure.Queues.DynamicQueues;
 
+import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -8,7 +10,9 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Reporter;
+
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 /*********************************************
  * publisher.nbcuni.com Add Dynamic Queue Type Library. Copyright
@@ -20,11 +24,13 @@ import java.util.List;
 public class AddDynamicQueueType {
 
     private Driver webDriver;
+    private Config config;
     
     //PAGE OBJECT CONSTRUCTOR
     public AddDynamicQueueType(Driver webDriver) {
         this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
+        config = new Config();
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -61,6 +67,7 @@ public class AddDynamicQueueType {
     
     public void SelectEntityType() throws Exception {
     	
+    	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
     	Reporter.log("Select 'Content' or 'Node' from the 'Entity type' drop down list.");
     	try {
     		new Select(EntityType_Ddl).selectByVisibleText("Content");
@@ -68,6 +75,7 @@ public class AddDynamicQueueType {
     	catch (Exception e) {
     		new Select(EntityType_Ddl).selectByVisibleText("Node");
     	}
+    	webDriver.manage().timeouts().implicitlyWait(config.getImplicitWaitTime(), TimeUnit.SECONDS);
     }
     
     public void SelectCacheLifetime(String lifetime) throws Exception {
