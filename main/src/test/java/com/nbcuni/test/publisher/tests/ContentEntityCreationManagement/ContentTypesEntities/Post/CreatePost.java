@@ -46,6 +46,7 @@ public class CreatePost extends ParentTest{
             
             	//Step 4
             	overlay.SwitchToActiveFrame();
+            	basicInformation.SelectTextFormat("WYSIWYG Mini");
             	basicInformation.ClickCoverSelectBtn();
             	SelectFile selectFile = new SelectFile(webDriver, applib);
             	selectFile.SelectDefaultCoverImg();

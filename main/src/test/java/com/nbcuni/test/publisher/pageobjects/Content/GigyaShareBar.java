@@ -38,7 +38,7 @@ public class GigyaShareBar {
     @FindBy(how = How.XPATH, using = "//div[contains(@class, 'gig')][text()='Email']")
     private WebElement Email_Btn;
     
-    @FindBy(how = How.XPATH, using = "//div[contains(@class, 'gig')][text()='Google+']")
+    @FindBy(how = How.XPATH, using = "//div[contains(@class, 'gig')][text()='Google']")
     private WebElement GooglePlus_Btn;
     
     @FindBy(how = How.XPATH, using = "//div[contains(@class, 'gig')][text()='Foursquare']")

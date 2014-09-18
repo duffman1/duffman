@@ -93,6 +93,7 @@ public class EnhanceMediaGalleriesTab extends ParentTest{
     	searchFor.EnterTitle(title);
     	searchFor.ClickApplyBtn();
     	mediaGalleries.ClickEditMenuBtn(title);
+    	basicInformation.EnterTitle(title);
     	basicInformation.EnterSynopsis();
     	contentParent.ClickSaveBtn();
         contentParent.VerifyMessageStatus("Media Gallery " + title + " has been updated.");

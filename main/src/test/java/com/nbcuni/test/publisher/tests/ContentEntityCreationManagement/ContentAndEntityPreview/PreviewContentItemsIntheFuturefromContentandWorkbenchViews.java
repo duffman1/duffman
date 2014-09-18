@@ -4,6 +4,7 @@ import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.TimeZone;
 
 import org.testng.annotations.Test;
 
@@ -84,10 +85,14 @@ public class PreviewContentItemsIntheFuturefromContentandWorkbenchViews extends 
         Calendar cal = Calendar.getInstance();
     	cal.add(Calendar.DATE, 1);
     	Date date = cal.getTime();
-    	SimpleDateFormat sdfDate = new SimpleDateFormat("MM/dd/yyyy");
-        String sDate = sdfDate.format(date);
-        sitePreview.EnterDate(sDate);
-        sitePreview.EnterTime("12:40 pm");
+    	SimpleDateFormat pub7PreviewDateFormat = new SimpleDateFormat("yyyy-MM-dd");
+    	SimpleDateFormat pub7StandardDateFormat = new SimpleDateFormat("MM/dd/yyyy");
+    	pub7PreviewDateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
+    	pub7StandardDateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
+        String sPreviewDate = pub7PreviewDateFormat.format(date);
+        String sStandardDate = pub7StandardDateFormat.format(date);
+        sitePreview.EnterDate(sPreviewDate);
+        sitePreview.EnterTime("16:40");
         
         //Step 6        
         sitePreview.ClickEnablePreviewBtn(); 
@@ -117,7 +122,7 @@ public class PreviewContentItemsIntheFuturefromContentandWorkbenchViews extends 
     	overlay.SwitchToActiveFrame();
     	scheduleQueue.SelectRevision(updatedPostTitle);
     	scheduleQueue.SelectOperation("Moderate to Published");
-    	scheduleQueue.EnterDate(sDate);
+    	scheduleQueue.EnterDate(sStandardDate);
     	scheduleQueue.EnterTime("12:40 PM");
     	scheduleQueue.ClickScheduleBtn();
     	overlay.SwitchToActiveFrame();
@@ -126,8 +131,8 @@ public class PreviewContentItemsIntheFuturefromContentandWorkbenchViews extends 
     	
     	//Step 10
     	sitePreview.VerifySelectAConditionValue("Site as of ...");
-    	sitePreview.VerifyDateValue(sDate);
-    	sitePreview.VerifyTimeValue("12:40");
+    	sitePreview.VerifyDateValue(sPreviewDate);
+    	sitePreview.VerifyTimeValue("16:40");
     	webDriver.navigate().refresh();  
     	contentParent.VerifyPageContentPresent(Arrays.asList(updatedShortDescription, updatedBodyTxt));
     	
@@ -139,8 +144,8 @@ public class PreviewContentItemsIntheFuturefromContentandWorkbenchViews extends 
     	sitePreview.ClickPreviewSiteLnk();
     	sitePreview.VerifyDisablePreviewBtnVisible();
     	sitePreview.VerifySelectAConditionValue("Site as of ...");
-    	sitePreview.VerifyDateValue(sDate);
-    	sitePreview.VerifyTimeValue("12:40");
+    	sitePreview.VerifyDateValue(sPreviewDate);
+    	sitePreview.VerifyTimeValue("16:40");
     	
     	//Step 13
     	workBench.ClickWorkBenchTab("Schedule");
@@ -151,7 +156,7 @@ public class PreviewContentItemsIntheFuturefromContentandWorkbenchViews extends 
     	scheduleQueue.SelectOperation("Moderate to Published");    	
     	cal.add(Calendar.DATE, 2);
     	Date dateafter2 = cal.getTime();    	
-        String ssDate = sdfDate.format(dateafter2);
+        String ssDate = pub7StandardDateFormat.format(dateafter2);
     	scheduleQueue.EnterDate(ssDate);
     	scheduleQueue.EnterTime("1:40 AM");
     	scheduleQueue.ClickScheduleBtn();
@@ -161,12 +166,12 @@ public class PreviewContentItemsIntheFuturefromContentandWorkbenchViews extends 
     	
     	//Step 14
     	sitePreview.VerifySelectAConditionValue("Site as of ...");
-    	sitePreview.VerifyDateValue(sDate);
-    	sitePreview.VerifyTimeValue("12:40");
+    	sitePreview.VerifyDateValue(sPreviewDate);
+    	sitePreview.VerifyTimeValue("16:40");
     	
     	//Step 15
-    	sitePreview.EnterDate(ssDate);
-        sitePreview.EnterTime("12:40");
+    	sitePreview.EnterDate(pub7PreviewDateFormat.format(dateafter2));
+        sitePreview.EnterTime("16:40");
         sitePreview.ClickUpdatePreviewBtn();
         
         //Step 16

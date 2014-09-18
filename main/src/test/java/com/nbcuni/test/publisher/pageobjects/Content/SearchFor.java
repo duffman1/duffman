@@ -158,7 +158,7 @@ public class SearchFor {
     public void VerifySearchResultsPresent(List<String> resultSet) throws Exception {
     	
     	Reporter.log("Get the title text of every result in the search result set.");
-    	Thread.sleep(250);
+    	Thread.sleep(1000);
     	List<String> allResultTitles = new ArrayList<String>();
     	for (WebElement el : AllResultSet_Ttls()) {
     		
