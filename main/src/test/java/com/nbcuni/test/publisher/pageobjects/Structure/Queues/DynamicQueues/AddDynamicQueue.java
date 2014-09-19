@@ -74,6 +74,14 @@ public class AddDynamicQueue {
     @FindBy(how = How.ID, using = "edit-submit")
     private WebElement SaveDynamicQueue_Btn;
     
+    @FindBy(how = How.ID, using = "edit-settings-pager")
+    private WebElement ItemsPerPage_Txb;
+    
+    @FindBy(how = How.ID, using = "edit-settings-limit")
+    private WebElement TotalLimit_Txb;
+    
+    
+    
     
     //PAGE OBJECT METHODS
     public void EnterTitle(String queueTitle) throws Exception {
@@ -154,6 +162,26 @@ public class AddDynamicQueue {
     	
     	Reporter.log("Click the 'Save Dynamic Queue' button.");
     	SaveDynamicQueue_Btn.click();
+    }
+    
+    public void EnterItemsPerPage(int itemsPerPage){
+    	
+    	Reporter.log("Set '"+itemsPerPage+"' in ItemsPerPage textbox.");
+    	
+    	ItemsPerPage_Txb.click();
+    	ItemsPerPage_Txb.clear();
+    	ItemsPerPage_Txb.sendKeys(String.valueOf(itemsPerPage));
+    	
+    }
+    
+    public void EnterTotalItemsLimit(int totalLimit){
+    	
+    	Reporter.log("Set '"+totalLimit+"' in TotalLimit textbox.");
+    	
+    	TotalLimit_Txb.click();
+    	TotalLimit_Txb.clear();
+    	TotalLimit_Txb.sendKeys(String.valueOf(totalLimit));
+    	
     }
     
     

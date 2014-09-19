@@ -4,6 +4,7 @@ import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.pageobjects.ErrorChecking.ErrorChecking;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -11,6 +12,7 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.Reporter;
+
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -68,7 +70,7 @@ public class ContentParent {
     
     @FindBy(how = How.XPATH, using = "//div[@class='throbber']")
     private WebElement Throbber_Img;
-    
+
     private WebElement RequiredField_Ast(String field) {
     	return webDriver.findElement(By.xpath("//*[contains(text(), '" + field + "')]/span[text()='*']"));
     }

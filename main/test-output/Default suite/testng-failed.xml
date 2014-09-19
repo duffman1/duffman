@@ -3,11 +3,27 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
+<<<<<<< HEAD
       <class name="com.nbcuni.test.publisher.common.UploadReportsGitHub">
+=======
+      <class name="com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS">
+>>>>>>> refs/heads/Vineela
         <methods>
+<<<<<<< HEAD
           <include name="UploadReport"/>
+=======
+          <include name="startSelenium"/>
+          <include name="stopGridAndHub"/>
+          <include name="ImplementMPS_TC2901"/>
+          <include name="startGridAndHub"/>
+          <include name="stopSelenium"/>
+>>>>>>> refs/heads/Vineela
         </methods>
+<<<<<<< HEAD
       </class> <!-- com.nbcuni.test.publisher.common.UploadReportsGitHub -->
+=======
+      </class> <!-- com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS -->
+>>>>>>> refs/heads/Vineela
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
