@@ -32,19 +32,19 @@ public class MetaTags {
     @FindBy(how = How.XPATH, using = "//a/strong[text()='Meta tags']")
     private WebElement MetaTags_Lnk;
     
-    @FindBy(how = How.XPATH, using = "//a[text()='Twitter card']")
+    @FindBy(how = How.XPATH, using = "//fieldset[@id='edit-metatags-und-twitter-cards']//a")
     private WebElement TwitterCard_Lnk;
     
-    @FindBy(how = How.ID, using = "edit-metatags-twitterseeitshowid-value")
+    @FindBy(how = How.ID, using = "edit-metatags-und-twitterseeitshowid-value")
     private WebElement SeeItShowIDEpisodeID_Txb;
     
-    @FindBy(how = How.ID, using = "edit-metatags-twitterseeitidspace-value")
+    @FindBy(how = How.ID, using = "edit-metatags-und-twitterseeitidspace-value")
     private WebElement SeeItIDSpace_Ddl;
     
-    @FindBy(how = How.ID, using = "edit-metatags-twitterseeitcampaignid-value")
+    @FindBy(how = How.ID, using = "edit-metatags-und-twitterseeitcampaignid-value")
     private WebElement SeeItCampaignID_Txb;
     
-    @FindBy(how = How.ID, using = "edit-metatags-twitterseeitassetid-value")
+    @FindBy(how = How.ID, using = "edit-metatags-und-twitterseeitassetid-value")
     private WebElement SeeItAssetID_Txb;
     
     

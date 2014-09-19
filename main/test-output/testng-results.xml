@@ -1,17 +1,253 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
+    <line>
+      <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Login' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Modules' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Metatag: Twitter Cards' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for module filter titled 'Metatag: Twitter Cards' to be visible in module list.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Metatag: Twitter Cards (See It)' check box is checked.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll by '-500'.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Add content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Post' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '3f6808b2911140b' in the 'Title' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the Synopsis frame.]]>
+    </line>
+    <line>
+      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Meta tags' link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'TWITTER CARD' link.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '9222635058369246112' in the 'See it: ShowID/EpisodeID' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Select the 'See It (s)' from the 'See It: IDSpace' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'fall' in the 'See it: Campaign ID' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'mainpage' in the 'See it: Asset ID' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Post 3f6808b2911140b has been created.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify 'twitter:seeit:idspace' is present in page source.]]>
+    </line>
+    <line>
+      <![CDATA[Verify 'content="s"' is present in page source.]]>
+    </line>
+    <line>
+      <![CDATA[Verify 'twitter:seeit:showid' is present in page source.]]>
+    </line>
+    <line>
+      <![CDATA[Verify 'content="9222635058369246112"' is present in page source.]]>
+    </line>
+    <line>
+      <![CDATA[Verify 'twitter:seeit:campaignid' is present in page source.]]>
+    </line>
+    <line>
+      <![CDATA[Verify 'content="fall"' is present in page source.]]>
+    </line>
+    <line>
+      <![CDATA[Verify 'twitter:seeit:assetid' is present in page source.]]>
+    </line>
+    <line>
+      <![CDATA[Verify 'content="mainpage"' is present in page source.]]>
+    </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="3945" started-at="2014-09-18T17:19:35Z" finished-at="2014-09-18T17:19:39Z">
+  <suite name="Default suite" duration-ms="34290" started-at="2014-09-19T13:26:41Z" finished-at="2014-09-19T13:27:15Z">
     <groups>
+      <group name="full">
+        <method signature="SeeIt.SeeIt_TC1060()[pri:0, instance:com.nbcuni.test.publisher.tests.SocialIntegration.ImplementAutoPublishingToTwitter.SeeIt@3b463340]" name="SeeIt_TC1060" class="com.nbcuni.test.publisher.tests.SocialIntegration.ImplementAutoPublishingToTwitter.SeeIt"/>
+      </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="3945" started-at="2014-09-18T17:19:35Z" finished-at="2014-09-18T17:19:39Z">
-      <class name="com.nbcuni.test.publisher.common.UploadReportsGitHub">
-        <test-method status="PASS" signature="UploadReport()[pri:0, instance:com.nbcuni.test.publisher.common.UploadReportsGitHub@2d73b676]" name="UploadReport" duration-ms="3933" started-at="2014-09-18T13:19:35Z" finished-at="2014-09-18T13:19:39Z">
+    <test name="Default test" duration-ms="34290" started-at="2014-09-19T13:26:41Z" finished-at="2014-09-19T13:27:15Z">
+      <class name="com.nbcuni.test.publisher.tests.SocialIntegration.ImplementAutoPublishingToTwitter.SeeIt">
+        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.SocialIntegration.ImplementAutoPublishingToTwitter.SeeIt@3b463340]" name="startGridAndHub" is-config="true" duration-ms="1380" started-at="2014-09-19T09:26:39Z" finished-at="2014-09-19T09:26:41Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- UploadReport -->
-      </class> <!-- com.nbcuni.test.publisher.common.UploadReportsGitHub -->
+        </test-method> <!-- startGridAndHub -->
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.SocialIntegration.ImplementAutoPublishingToTwitter.SeeIt@3b463340]" name="startSelenium" is-config="true" duration-ms="2686" started-at="2014-09-19T09:26:41Z" finished-at="2014-09-19T09:26:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startSelenium -->
+        <test-method status="PASS" signature="SeeIt_TC1060()[pri:0, instance:com.nbcuni.test.publisher.tests.SocialIntegration.ImplementAutoPublishingToTwitter.SeeIt@3b463340]" name="SeeIt_TC1060" duration-ms="31021" started-at="2014-09-19T09:26:43Z" finished-at="2014-09-19T09:27:14Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Login' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Modules' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Metatag: Twitter Cards' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for module filter titled 'Metatag: Twitter Cards' to be visible in module list.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Metatag: Twitter Cards (See It)' check box is checked.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll by '-500'.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Add content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Post' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '3f6808b2911140b' in the 'Title' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the Synopsis frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Meta tags' link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'TWITTER CARD' link.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '9222635058369246112' in the 'See it: ShowID/EpisodeID' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Select the 'See It (s)' from the 'See It: IDSpace' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'fall' in the 'See it: Campaign ID' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'mainpage' in the 'See it: Asset ID' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Post 3f6808b2911140b has been created.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify 'twitter:seeit:idspace' is present in page source.]]>
+            </line>
+            <line>
+              <![CDATA[Verify 'content="s"' is present in page source.]]>
+            </line>
+            <line>
+              <![CDATA[Verify 'twitter:seeit:showid' is present in page source.]]>
+            </line>
+            <line>
+              <![CDATA[Verify 'content="9222635058369246112"' is present in page source.]]>
+            </line>
+            <line>
+              <![CDATA[Verify 'twitter:seeit:campaignid' is present in page source.]]>
+            </line>
+            <line>
+              <![CDATA[Verify 'content="fall"' is present in page source.]]>
+            </line>
+            <line>
+              <![CDATA[Verify 'twitter:seeit:assetid' is present in page source.]]>
+            </line>
+            <line>
+              <![CDATA[Verify 'content="mainpage"' is present in page source.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- SeeIt_TC1060 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.SocialIntegration.ImplementAutoPublishingToTwitter.SeeIt@3b463340]" name="stopSelenium" is-config="true" duration-ms="570" started-at="2014-09-19T09:27:14Z" finished-at="2014-09-19T09:27:15Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=SeeIt_TC1060 status=SUCCESS method=SeeIt.SeeIt_TC1060()[pri:0, instance:com.nbcuni.test.publisher.tests.SocialIntegration.ImplementAutoPublishingToTwitter.SeeIt@3b463340] output=Open url 'http://qa5.publisher7.com'.]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopSelenium -->
+        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.SocialIntegration.ImplementAutoPublishingToTwitter.SeeIt@3b463340]" name="stopGridAndHub" is-config="true" duration-ms="374" started-at="2014-09-19T09:27:15Z" finished-at="2014-09-19T09:27:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopGridAndHub -->
+      </class> <!-- com.nbcuni.test.publisher.tests.SocialIntegration.ImplementAutoPublishingToTwitter.SeeIt -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
