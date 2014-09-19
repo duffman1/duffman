@@ -181,7 +181,7 @@ public class SearchFor {
 
     	Reporter.log("Click the first search title link in the search result set.");
     	SearchTitle_Lnk(title).isDisplayed(); 
-    	Thread.sleep(1000); //slight pause required
+    	Thread.sleep(2000); //slight pause required
         SearchTitle_Lnk(title).click();
     }
     
