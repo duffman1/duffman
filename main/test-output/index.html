@@ -58,7 +58,7 @@
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="group-Default_suite">
-                    <span>0 groups</span>
+                    <span>1 group</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -101,7 +101,7 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.nbcuni.test.publisher.common.UploadReportsGitHub" hash-for-method="UploadReport">UploadReport</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.nbcuni.test.publisher.tests.SocialIntegration.ImplementAutoPublishingToTwitter.SeeIt" hash-for-method="SeeIt_TC1060">SeeIt_TC1060</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -119,14 +119,14 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.nbcuni.test.publisher.common.UploadReportsGitHub</span>
+              <span class="class-name">com.nbcuni.test.publisher.tests.SocialIntegration.ImplementAutoPublishingToTwitter.SeeIt</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="UploadReport">
-                  </a> <!-- UploadReport -->
-                  <span class="method-name">UploadReport</span>
+                  <a name="SeeIt_TC1060">
+                  </a> <!-- SeeIt_TC1060 -->
+                  <span class="method-name">SeeIt_TC1060</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -134,7 +134,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/private/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/testng-eclipse--1313637926/testng-customsuite.xml</span>
+            <span class="header-content">/private/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/testng-eclipse--2015738872/testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -143,7 +143,7 @@
 &lt;suite name=&quot;Default suite&quot;&gt;
   &lt;test verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.nbcuni.test.publisher.common.UploadReportsGitHub&quot;/&gt;
+      &lt;class name=&quot;com.nbcuni.test.publisher.tests.SocialIntegration.ImplementAutoPublishingToTwitter.SeeIt&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -167,6 +167,14 @@
             <span class="header-content">Groups for Default suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="test-group">
+              <span class="test-group-name">full</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">SeeIt_TC1060</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="times-Default_suite" class="panel">
@@ -185,14 +193,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'UploadReport')
-data.setCell(0, 2, 'com.nbcuni.test.publisher.common.UploadReportsGitHub')
-data.setCell(0, 3, 3933);
+data.setCell(0, 1, 'SeeIt_TC1060')
+data.setCell(0, 2, 'com.nbcuni.test.publisher.tests.SocialIntegration.ImplementAutoPublishingToTwitter.SeeIt')
+data.setCell(0, 3, 31021);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 3 seconds</span>
+              <span class="suite-total-time">Total running time: 31 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -203,6 +211,46 @@ return data;
             <span class="header-content">Reporter output for Default suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">SeeIt_TC1060</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Open url 'http://qa5.publisher7.com'.</span>
+                <span class="reporter-method-output">Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.</span>
+                <span class="reporter-method-output">Enter 'pa55word' in the 'Password' text box.</span>
+                <span class="reporter-method-output">Click the 'Login' button.</span>
+                <span class="reporter-method-output">Click the 'Modules' menu link.</span>
+                <span class="reporter-method-output">Switch to the active frame titled 'Modules dialog'.</span>
+                <span class="reporter-method-output">Enter 'Metatag: Twitter Cards' in the 'Filter Name' text box.</span>
+                <span class="reporter-method-output">Wait for module filter titled 'Metatag: Twitter Cards' to be visible in module list.</span>
+                <span class="reporter-method-output">Verify the 'Metatag: Twitter Cards (See It)' check box is checked.</span>
+                <span class="reporter-method-output">Click the 'Close Overlay X'.</span>
+                <span class="reporter-method-output">Scroll by '-500'.</span>
+                <span class="reporter-method-output">Mouse over the 'Content' menu link.</span>
+                <span class="reporter-method-output">Mouse over the 'Add content' menu link.</span>
+                <span class="reporter-method-output">Click the 'Post' menu link.</span>
+                <span class="reporter-method-output">Switch to the active frame titled 'Create Post dialog'.</span>
+                <span class="reporter-method-output">Enter '3f6808b2911140b' in the 'Title' text box.</span>
+                <span class="reporter-method-output">Switch to the Synopsis frame.</span>
+                <span class="reporter-method-output">Enter a randomized text string into the 'Body' text area.</span>
+                <span class="reporter-method-output">Switch to the active frame titled 'Create Post dialog'.</span>
+                <span class="reporter-method-output">Click the 'Meta tags' link.</span>
+                <span class="reporter-method-output">Click the 'TWITTER CARD' link.</span>
+                <span class="reporter-method-output">Enter '9222635058369246112' in the 'See it: ShowID/EpisodeID' text box.</span>
+                <span class="reporter-method-output">Select the 'See It (s)' from the 'See It: IDSpace' drop down list.</span>
+                <span class="reporter-method-output">Enter 'fall' in the 'See it: Campaign ID' text box.</span>
+                <span class="reporter-method-output">Enter 'mainpage' in the 'See it: Asset ID' text box.</span>
+                <span class="reporter-method-output">Click the 'Save' button.</span>
+                <span class="reporter-method-output">Verify success message of 'Post 3f6808b2911140b has been created.' is present.</span>
+                <span class="reporter-method-output">Verify 'twitter:seeit:idspace' is present in page source.</span>
+                <span class="reporter-method-output">Verify 'content="s"' is present in page source.</span>
+                <span class="reporter-method-output">Verify 'twitter:seeit:showid' is present in page source.</span>
+                <span class="reporter-method-output">Verify 'content="9222635058369246112"' is present in page source.</span>
+                <span class="reporter-method-output">Verify 'twitter:seeit:campaignid' is present in page source.</span>
+                <span class="reporter-method-output">Verify 'content="fall"' is present in page source.</span>
+                <span class="reporter-method-output">Verify 'twitter:seeit:assetid' is present in page source.</span>
+                <span class="reporter-method-output">Verify 'content="mainpage"' is present in page source.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
@@ -218,11 +266,27 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.nbcuni.test.publisher.common.UploadReportsGitHub</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">UploadReport</span>
+              <div class="chronological-class-name">com.nbcuni.test.publisher.tests.SocialIntegration.ImplementAutoPublishingToTwitter.SeeIt</div> <!-- chronological-class-name -->
+              <div class="configuration-suite before">
+                <span class="method-name">startGridAndHub</span>
                 <span class="method-start">0 ms</span>
+              </div> <!-- configuration-suite before -->
+              <div class="configuration-method before">
+                <span class="method-name">startSelenium</span>
+                <span class="method-start">1391 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">SeeIt_TC1060</span>
+                <span class="method-start">4077 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">stopSelenium([TestResult name=SeeIt_TC1060 status=SUCCESS method=SeeIt.SeeIt_TC1060()[pri:0, instance:com.nbcuni....)</span>
+                <span class="method-start">35099 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-suite after">
+                <span class="method-name">stopGridAndHub</span>
+                <span class="method-start">35680 ms</span>
+              </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
