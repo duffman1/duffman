@@ -3,10 +3,10 @@
   	<!--TEST EXECUTION QUEUE-->
   	<test verbose="1" name="All Consecutive Web Tests" annotations="JDK">
 
-		<!-- Enter group name for specific test scripts, options are "full", "smoke", "mpx", "certify" -->
+		<!-- Enter group name for specific test scripts, options are "full", "smoke", "mpx", "certify" "mps"-->
 		<groups>
 	 		<run>
-	 			<include name="certify"/>
+	 			<include name="full"/>
 	 			<exclude name=""/>
 	 		</run>
 		</groups>
@@ -24,10 +24,14 @@
 			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIF.EXIFKeywordsIngestedPhraseInsteadSetsWords"/>
 			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIF.PopulateEXIFBulkUpload"/>
 			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons"/>
+			<!--  
 			<class name="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSODefinedDomains"/>
 			<class name="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOManageUsers"/>
+			-->
 			<class name="com.nbcuni.test.publisher.tests.Performance.PageLoads"/>
+			<!--
 			<class name="com.nbcuni.test.publisher.tests.Video.DeIngestingMPXAccountsAndCorrespondingAssets.MPXAccountDeletion"/>CRON-DRUSH
+			-->
 			<class name="com.nbcuni.test.publisher.tests.Setup.Z1_TestCleanup"/>CRON
 		</classes>
 	</test>

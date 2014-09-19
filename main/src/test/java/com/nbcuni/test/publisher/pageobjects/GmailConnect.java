@@ -54,7 +54,7 @@ public class GmailConnect {
                 Assert.fail("Auto email was not received after timeout");
             }
             Message[] msg = folder.getMessages();
-            if (msg[msg.length - 1].getSubject().equals(subject)) {
+            if (msg[msg.length - 1].getSubject().contains(subject)) {
             	break;
             }
             Thread.sleep(1000);
@@ -73,7 +73,7 @@ public class GmailConnect {
     	
         Message[] allMessages = folder.getMessages();
         for (Message message : allMessages) {
-        	if (message.getSubject().equals(subject)) {
+        	if (message.getSubject().contains(subject)) {
         		message.setFlag(Flags.Flag.DELETED, true);
         	}
         }

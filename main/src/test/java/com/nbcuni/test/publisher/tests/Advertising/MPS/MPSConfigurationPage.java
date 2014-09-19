@@ -17,7 +17,7 @@ public class MPSConfigurationPage extends ParentTest {
      * TEST CASE - TC3306
      * Steps - https://rally1.rallydev.com/#/14663927728d/detail/testcase/19393095610
      *************************************************************************************/
-    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"})
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "mps"})
     public void MPSConfigurationPage_TC3306() throws Exception {
         
         	Reporter.log("STEP 1");
@@ -46,8 +46,7 @@ public class MPSConfigurationPage extends ParentTest {
             mpsConfiguration.ClickSaveConfigurationBtn();
             contentParent.VerifyMessageStatus("The configuration options have been saved.");
             overlay.ClickCloseOverlayLnk();
-            contentParent.VerifySourceInPage(Arrays.asList("var mpscall = {\"site\":\"pub7-development\",\"title\":\"Welcome to Site-Install\",\"path\":\"\\/\",\"is_content\":0,\"type\":\"other\"}",
-            		"var mpsopts = {\"host\":\"mps.io\"}", "var mps = mps ||"));
+            mpsConfiguration.VerifyMPSCallParameters(Arrays.asList("\"site\":\"pub7-development\"", "\"title\":\"Welcome to", "\"path\":\"\\/\"", "\"is_content\":0", "\"type\":\"other\"", "var mpsopts = {\"host\":\"mps.io\"}"));
             
             Reporter.log("STEP 5");
             taxonomy.NavigateSite("Configuration>>Web services>>MPS Configuration");
@@ -60,7 +59,7 @@ public class MPSConfigurationPage extends ParentTest {
             
             Reporter.log("STEP 6");
             applib.openSitePage("/?x=y");
-            contentParent.VerifySourceInPage(Arrays.asList("Site-Install\",\"path\":\"\\/\",\"qs\":\"eD15\""));
+            mpsConfiguration.VerifyMPSCallParameters(Arrays.asList("\"title\":\"Welcome to", "\"path\":\"\\/\"", "\"qs\":\"eD15\""));
             
             Reporter.log("STEP 7");
             taxonomy.NavigateSite("Configuration>>Web services>>MPS Configuration");

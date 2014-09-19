@@ -3,10 +3,10 @@
   	<!--TEST EXECUTION QUEUE-->
   	<test verbose="1" name="All Concurrent Web Tests" annotations="JDK">
 
-		<!-- Enter group name for specific test scripts, options are "full", "smoke", "mpx", "certify" -->
+		<!-- Enter group name for specific test scripts, options are "full", "smoke", "mpx", "certify" "mps"-->
 		<groups>
 	 		<run>
-	 			<include name="certify"/>
+	 			<include name="full"/>
 	 			<exclude name=""/>
 	 		</run>
 		</groups>
@@ -81,9 +81,9 @@
 			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.RepresentativeImage.RepresentativeImage"/>
 			<class name="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SURF.SURFModule"/>
 			<class name="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore"/>
+			<class name="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens"/>
 			<class name="com.nbcuni.test.publisher.tests.Commerce.CreatePubFeatureSetModules"/>
 			<class name="com.nbcuni.test.publisher.tests.SocialIntegration.FunctionalImplementGigyaShareBar.ContentCommenting"/>
-			<class name="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens"/>
 			<class name="com.nbcuni.test.publisher.tests.Core.Profiles.FileFieldsTokenBasedPath"/>
 			<class name="com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue"/>
 			<class name="com.nbcuni.test.publisher.tests.Queues.DynamicQueues.DynamicQueuePagination"/>
@@ -91,6 +91,9 @@
 			<class name="com.nbcuni.test.publisher.tests.Queues.DynamicQueues.RelatingTVShowsDynamicQueues"/>
 			<class name="com.nbcuni.test.publisher.tests.Queues.DynamicQueues.AddTaxonomyParameters"/>
 			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents"/>	
+			<class name="com.nbcuni.test.publisher.tests.Advertising.MPS.AddMPSCallsToErrorPages"/>
+			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.EntityEmbeds.SnippetInlineContent"/>
+			<class name="com.nbcuni.test.publisher.tests.Queues.DynamicQueues.DynamicQueuePagination"/>
 		</classes>
 	</test>
 </suite>

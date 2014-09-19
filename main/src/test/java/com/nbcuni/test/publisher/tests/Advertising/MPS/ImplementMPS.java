@@ -26,7 +26,7 @@ public class ImplementMPS extends ParentTest {
      * TEST CASE - TC2901
      * Steps - https://rally1.rallydev.com/#/14663927728d/detail/testcase/18554111347
      *************************************************************************************/
-    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"})
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "mps"})
     public void ImplementMPS_TC2901() throws Exception {
         
         	Reporter.log("STEP 1");
@@ -34,22 +34,7 @@ public class ImplementMPS extends ParentTest {
         	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
             
         	Reporter.log("SETUP");
-        	taxonomy.NavigateSite("Configuration>>Web services>>MPS Configuration");
-            overlay.SwitchToActiveFrame();
-            MPSConfiguration mpsConfiguration = new MPSConfiguration(webDriver);
-            mpsConfiguration.EnterMPSHost("mps.io");
-            mpsConfiguration.ClickIntegrationMethod("Document Write");
-            mpsConfiguration.EnterSiteInstanceOverride("pub7-development");
-            mpsConfiguration.CheckSendQueryStringsCbx();
-            mpsConfiguration.CleanAllMPSOptions();
-            mpsConfiguration.ClickSaveConfigurationBtn();
-            contentParent.VerifyMessageStatus("The configuration options have been saved.");
-            overlay.ClickCloseOverlayLnk();
-            
-        	Reporter.log("STEP 2 - N/A");
         	Modules modules = new Modules(webDriver, applib);
-        	
-        	Reporter.log("STEP 3");
         	taxonomy.NavigateSite("Modules");
             overlay.SwitchToActiveFrame();
             modules.EnterFilterName("Pub Ads");
@@ -63,7 +48,22 @@ public class ImplementMPS extends ParentTest {
             modules.EnterFilterName("Doubleclick for Publishers");
             modules.DisableModule("Doubleclick for Publishers");
             overlay.ClickCloseOverlayLnk();
+        	taxonomy.NavigateSite("Configuration>>Web services>>MPS Configuration");
+            overlay.SwitchToActiveFrame();
+            MPSConfiguration mpsConfiguration = new MPSConfiguration(webDriver);
+            mpsConfiguration.EnterMPSHost("mps.io");
+            mpsConfiguration.ClickIntegrationMethod("Document Write");
+            mpsConfiguration.EnterSiteInstanceOverride("pub7-development");
+            mpsConfiguration.CheckSendQueryStringsCbx();
+            mpsConfiguration.CleanAllMPSOptions();
+            mpsConfiguration.ClickSaveConfigurationBtn();
+            contentParent.VerifyMessageStatus("The configuration options have been saved.");
+            overlay.ClickCloseOverlayLnk();
             
+        	Reporter.log("STEP 2 - N/A");
+        	
+        	Reporter.log("STEP 3 - N/A");
+        	
             Reporter.log("STEP 4");
             taxonomy.NavigateSite("Reports>>Status report");
             overlay.SwitchToActiveFrame();
@@ -73,8 +73,7 @@ public class ImplementMPS extends ParentTest {
             overlay.ClickCloseOverlayLnk();
             
             Reporter.log("STEP 5");
-            contentParent.VerifySourceInPage(Arrays.asList("var mpscall = {\"site\":\"pub7-development\",\"title\":\"Welcome to Site-Install\",\"path\":\"\\/\",\"is_content\":0,\"type\":\"other\"}",
-            		"var mpsopts = {\"host\":\"mps.io\"}"));
+            mpsConfiguration.VerifyMPSCallParameters(Arrays.asList("\"site\":\"pub7-development\"", "\"title\":\"Welcome to", "\"path\":\"\\/\"", "\"is_content\":0", "\"type\":\"other\""));
             
             Reporter.log("STEP 6");
             taxonomy.NavigateSite("People");
@@ -84,7 +83,8 @@ public class ImplementMPS extends ParentTest {
             
             Reporter.log("STEP 7");
             applib.openSitePage("/kfkjdjdkjdjldkjj");
-            mpsConfiguration.VerifyNoMPSCallsMade();
+            mpsConfiguration.VerifyMPSCallParameters(Arrays.asList("\"site\":\"pub7-development\"", 
+            		"\"path\":\"ERROR/404\"", "\"content_id\":\"ERROR\""));
             applib.openApplication();
             
             Reporter.log("STEP 8 - N/A - COVERED IN SETUP");
@@ -113,12 +113,8 @@ public class ImplementMPS extends ParentTest {
             WorkBench workBench = new WorkBench(webDriver, applib);
             String movieNodeNumber = workBench.GetContentNodeNumber();
             
-            Reporter.log("STEP 10");
-            contentParent.VerifySourceInPage(Arrays.asList("var mpscall = {\"site\":\"pub7-development\",\"title\":\"" + movieTitle + "\",\"path\":\"\\/node\\/" + movieNodeNumber,
-            		"var mpsopts = {\"host\":\"mps.io\"}"));
-            
-            Reporter.log("STEP 11 through STEP 19");
-            contentParent.VerifySourceInPage(Arrays.asList("var mpscall = {\"site\":\"pub7-development\",\"title\":\"" + movieTitle + "\",\"path\":\"\\/node\\/" + movieNodeNumber + "\",\"content_id\":\"node" + movieNodeNumber + "\",\"is_content\":1,\"type\":\"movie\",\"cag\":{\"genre\":\"Action\",\"movie-rating\":\"G\",\"movie-types\":\"Syndicated\"},\"pubdate\":"));
+            Reporter.log("STEP 10 through STEP 19");
+            mpsConfiguration.VerifyMPSCallParameters(Arrays.asList("\"site\":\"pub7-development\"", "\"title\":\"" + movieTitle + "\"", "\"path\":\"\\/node\\/" + movieNodeNumber + "\"", "\"content_id\":\"node" + movieNodeNumber + "\"", "\"is_content\":1", "\"type\":\"movie\"", "\"cag\":{\"genre\":\"Action\",\"movie-rating\":\"G\",\"movie-types\":\"Syndicated\"}", "\"pubdate\":"));
             
             Reporter.log("STEP 20");
             webDriver.navigate().to(webDriver.getCurrentUrl() + "?kumud=1");

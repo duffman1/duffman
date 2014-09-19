@@ -1,10 +1,16 @@
 package com.nbcuni.test.publisher.pageobjects.Content;
 
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
+
+import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Random;
 import com.nbcuni.test.publisher.common.Driver.Driver;
 
@@ -12,28 +18,52 @@ import com.nbcuni.test.publisher.common.Driver.Driver;
  * publisher.nbcuni.com PersonsInformation Library. Copyright
  * 
  * @author Brandon Clark
- * @version 1.0 Date: December 13, 2013
+ * @version 1.1 Date: September 16, 2014
  *********************************************/
 
 public class PersonsInformation {
 
     private Driver webDriver;
+    private Config config;
     
     //PAGE OBJECT CONSTCUTOR
     public PersonsInformation(Driver webDriver) {
         this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
+        config = new Config();
     }
     
     //PAGE OBJECT IDENTIFIERS
     @FindBy(how = How.ID, using = "edit-field-person-first-name-und-0-value")
     private WebElement FirstName_Txb;
     
-    @FindBy(how = How.ID, using = "edit-body-und-0-value_ifr")
-    private WebElement Biography_Frm;
+    private WebElement Biography_Frm() {
+    	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+    	
+    	WebElement frm = null;
+    	try {
+    		frm = webDriver.findElement(By.xpath("//iframe[@class='cke_wysiwyg_frame cke_reset']"));
+    	}
+    	catch (NoSuchElementException e) {
+    		frm = webDriver.findElement(By.xpath("//iframe[@id='edit-body-und-0-value_ifr']"));
+    	}
+    	webDriver.manage().timeouts().implicitlyWait(config.getImplicitWaitTime(), TimeUnit.SECONDS);
+    	return frm;
+    }
     
-    @FindBy(how = How.ID, using = "tinymce")
-    private WebElement Biography_Txa;
+    private WebElement Biography_Txa() {
+    	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+    	
+    	WebElement txa = null;
+    	try {
+    		txa = webDriver.findElement(By.xpath("//body[contains(@class, 'editable')]"));
+    	}
+    	catch (NoSuchElementException e) {
+    		txa = webDriver.findElement(By.xpath("//body[@id='tinymce']"));
+    	}
+    	webDriver.manage().timeouts().implicitlyWait(config.getImplicitWaitTime(), TimeUnit.SECONDS);
+    	return txa;
+    }
     
     @FindBy(how = How.ID, using = "edit-field-person-cover-photo-und-0-select")
     private WebElement CoverPhotoSelect_Btn;
@@ -48,7 +78,7 @@ public class PersonsInformation {
     
     public String EnterBiography() throws Exception{
 
-        webDriver.switchTo().frame(Biography_Frm);
+        webDriver.switchTo().frame(Biography_Frm());
 
         Reporter.log("Enter a random block of text in the 'Biography' text area.");
         Random random = new Random();
@@ -56,8 +86,9 @@ public class PersonsInformation {
                         random.GetCharacterString(20) + " " +
                             random.GetCharacterString(20) + " " +
                                 random.GetCharacterString(20);
-        Biography_Txa.click();
-        Biography_Txa.sendKeys(body);
+        WebElement txa = Biography_Txa();
+        txa.click();
+        txa.sendKeys(body);
         
         return body;
     }

@@ -5,7 +5,7 @@
       <![CDATA[STEP 1]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
+      <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
     </line>
     <line>
       <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
@@ -17,34 +17,133 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
+      <![CDATA[SETUP]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Modules' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'jQuery Update' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for module filter titled 'jQuery Update' to be visible in module list.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'jQuery Update' check box is checked.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll by '-500'.]]>
+    </line>
+    <line>
+      <![CDATA[Open url 'http://qa5.publisher7.com/admin/config/development/jquery_update'.]]>
+    </line>
+    <line>
+      <![CDATA[Select '1.5' from the 'Default jQuery Version' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configuration' button.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Home' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the '[[Driver: chrome on MAC (0475cd0d-d1b1-42c5-b331-588f33635de5)] -> xpath: //span[@class='admin-menu-home-icon']/../..//a[text()='Flush all caches']]' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Home' menu link.]]>
+    </line>
+    <line>
       <![CDATA[STEP 2]]>
     </line>
     <line>
       <![CDATA[Click the 'Modules' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to frame titled 'Modules'.]]>
+      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Event Countdown' in the 'Filter Name' text box.]]>
+      <![CDATA[Enter 'TVE Adobe Pass' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Wait for module filter titled 'Event Countdown' to be visible in module list.]]>
+      <![CDATA[Wait for module filter titled 'TVE Adobe Pass' to be visible in module list.]]>
     </line>
     <line>
-      <![CDATA[Check the 'Event Countdown' check box.]]>
+      <![CDATA[Verify the 'TVE Adobe Pass' check box is checked.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'TVE Auth Example' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for module filter titled 'TVE Auth Example' to be visible in module list.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'TVE Auth Example' check box is checked.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'TVE MVPD' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for module filter titled 'TVE MVPD' to be visible in module list.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'TVE MVPD' check box is checked.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll by '-500'.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 3]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Structure' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Blocks' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Select the block name 'TVE Auth Example' from the 'Sidebar first' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save Blocks' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The block settings have been updated.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll by '-500'.]]>
+    </line>
+    <line>
+      <![CDATA[SKIP TO STEP 10 - TVE ALREADY CONFIGURED]]>
+    </line>
+    <line>
+      <![CDATA[STEP 10]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Configure jQuery' link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'jQuery update dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Select '1.7' from the 'Default jQuery Version' drop down list.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save configuration' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
-    </line>
-    <line>
-      <![CDATA[Switch back to the 'Modules' frame.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to frame titled 'Modules'.]]>
     </line>
     <line>
       <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
@@ -56,328 +155,49 @@
       <![CDATA[Scroll by '-500'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Home' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 3]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Configuration' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Media' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Event Countdown' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Event Countdown dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Create' button.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the sample nodes to be created.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll by '-500'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 4]]>
-    </line>
-    <line>
-      <![CDATA[STEP 5 AND 6]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter title Birthday Event.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Apply' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Edit' link for content item titled 'Birthday Event.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '09/05/2014 in the 'Date' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '12:22:40PM in the 'Time' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'http://www.amazon.com/s/ref=nb_sb_ss_c_0_8/190-0002947-5703141?url=search-alias%3Dtoys-and-games&field-keywords=birthday%20party%20supplies&sprefix=birthday%2Caps%2C168' in the 'Active Call to Action' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Active Image Select' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the select file frame.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the file path for file upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Upload' button.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the file image 'HanSolo' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '#FF0000' in the 'Active Background Color' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'http://www.nbc.com' in the 'Expiry Call to Action' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Expiry Image Select' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the select file frame.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the file path for file upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Upload' button.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the file image 'nbclogosmall' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '#00FFFF' in the 'Expiry Background Color' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 7]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Structure' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Blocks' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Select the block name 'Birthday Block' from the 'Content' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Select the block name 'Holiday Party Block' from the 'Content' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save Blocks' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The block settings have been updated.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 8]]>
+      <![CDATA[STEP 11]]>
     </line>
     <line>
       <![CDATA[Click the 'Home' menu link.]]>
     </line>
     <line>
-      <![CDATA[STEP 9]]>
+      <![CDATA[Verify the 'Authentication status checked:' value is 'true'.]]>
     </line>
     <line>
-      <![CDATA[Verify the countdown timer is visible.]]>
+      <![CDATA[Verify the 'Authenticated' value is 'false'.]]>
     </line>
     <line>
-      <![CDATA[Verify the countdown timer is counting down.]]>
+      <![CDATA[Verify the 'Selected MVPD:' value is 'none'.]]>
     </line>
     <line>
-      <![CDATA[Assert that active img source of the event contains 'HanSolo'.]]>
+      <![CDATA[STEP 12]]>
     </line>
     <line>
-      <![CDATA[Assert the the img is loaded and visible.]]>
+      <![CDATA[Select 'Optimum' from the 'Al VMPDs:' drop down list.]]>
     </line>
     <line>
-      <![CDATA[Verify the active background color of '#FF0000' is visible for event with title 'Birthday Event'.]]>
+      <![CDATA[Click the 'login' button.]]>
     </line>
     <line>
-      <![CDATA[Verify the active link href of 'http://www.amazon.com/s/ref=nb_sb_ss_c_0_8/190-0002947-5703141?url=search-alias%3Dtoys-and-games&field-keywords=birthday%20party%20supplies&sprefix=birthday%2Caps%2C168' is visible for event with title 'Birthday Event'.]]>
+      <![CDATA[Enter 'research40' in the 'Optimum ID' text box.]]>
     </line>
     <line>
-      <![CDATA[STEP 10]]>
+      <![CDATA[Enter 'support40' in the 'Password' text box.]]>
     </line>
     <line>
-      <![CDATA[Verify the countdown timer is NOT counting down.]]>
+      <![CDATA[Click the 'SIGN IN' button.]]>
     </line>
     <line>
-      <![CDATA[Assert that expiry img source of the event contains 'nbclogosmall'.]]>
+      <![CDATA[Verify the 'Authentication status checked:' value is 'true'.]]>
     </line>
     <line>
-      <![CDATA[Assert the the img is loaded and visible.]]>
+      <![CDATA[Verify the 'Authenticated' value is 'true'.]]>
     </line>
     <line>
-      <![CDATA[Verify the expiry background color of '#00FFFF' is visible for event with title 'Birthday Event'.]]>
+      <![CDATA[Verify the 'Selected MVPD:' value is 'Cablevision'.]]>
     </line>
     <line>
-      <![CDATA[Verify the expiry link href of 'http://www.nbc.com' is visible for event with title 'Birthday Event'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 11 AND 12]]>
-    </line>
-    <line>
-      <![CDATA[STEP 13]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Add content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Event Countdown' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Event Countdown dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '077a706ccceb425' in the 'Title' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '09/05/2014 in the 'Date' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '12:24:07PM in the 'Time' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'http://www.amazon.com/s/ref=nb_sb_ss_c_0_8/190-0002947-5703141?url=search-alias%3Dtoys-and-games&field-keywords=birthday%20party%20supplies&sprefix=birthday%2Caps%2C168' in the 'Active Call to Action' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Active Image Select' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the select file frame.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the file path for file upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Upload' button.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the file image 'HanSolo' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Event Countdown dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '#FF0000' in the 'Active Background Color' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'http://www.nbc.com' in the 'Expiry Call to Action' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Expiry Image Select' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the select file frame.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the file path for file upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Upload' button.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the file image 'nbclogosmall' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Event Countdown dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '#00FFFF' in the 'Expiry Background Color' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Event Countdown 077a706ccceb425 has been created.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
+      <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
     </line>
     <line>
       <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
@@ -398,42 +218,54 @@
       <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
     </line>
     <line>
-      <![CDATA[Select the block name 'Birthday Block' from the '- None -' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Select the block name 'Holiday Party Block' from the '- None -' drop down list.]]>
+      <![CDATA[Select the block name 'TVE Auth Example' from the '- None -' drop down list.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save Blocks' button.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'The block settings have been updated.' is present.]]>
+      <![CDATA[Open url 'http://qa5.publisher7.com/admin/config/development/jquery_update'.]]>
+    </line>
+    <line>
+      <![CDATA[Select '1.5' from the 'Default jQuery Version' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configuration' button.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Home' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the '[[Driver: chrome on MAC (b261e240-2382-4df4-a459-749cc7a05a5a)] -> xpath: //span[@class='admin-menu-home-icon']/../..//a[text()='Flush all caches']]' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Home' menu link.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="214572" started-at="2014-09-05T12:19:10Z" finished-at="2014-09-05T12:22:45Z">
+  <suite name="Default suite" duration-ms="179291" started-at="2014-09-19T14:20:12Z" finished-at="2014-09-19T14:23:12Z">
     <groups>
       <group name="full">
-        <method signature="CountdownClockEvents.CountdownClockEvents_TC4887()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@5d64b55b]" name="CountdownClockEvents_TC4887" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents"/>
-        <method signature="CountdownClockEvents.Cleanup()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@5d64b55b]" name="Cleanup" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents"/>
+        <method signature="ImplementTVEModulesCore.ImplementTVEModulesCore_TC3261()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@4019ea9a]" name="ImplementTVEModulesCore_TC3261" class="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore"/>
+        <method signature="ImplementTVEModulesCore.Cleanup()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@4019ea9a]" name="Cleanup" class="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore"/>
       </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="214572" started-at="2014-09-05T12:19:10Z" finished-at="2014-09-05T12:22:45Z">
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents">
-        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@5d64b55b]" name="startGridAndHub" is-config="true" duration-ms="1299" started-at="2014-09-05T08:19:09Z" finished-at="2014-09-05T08:19:10Z">
+    <test name="Default test" duration-ms="179291" started-at="2014-09-19T14:20:12Z" finished-at="2014-09-19T14:23:12Z">
+      <class name="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore">
+        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@4019ea9a]" name="startGridAndHub" is-config="true" duration-ms="977" started-at="2014-09-19T10:20:11Z" finished-at="2014-09-19T10:20:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startGridAndHub -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@5d64b55b]" name="startSelenium" is-config="true" duration-ms="2661" started-at="2014-09-05T08:19:10Z" finished-at="2014-09-05T08:19:13Z">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@4019ea9a]" name="startSelenium" is-config="true" duration-ms="2646" started-at="2014-09-19T10:20:12Z" finished-at="2014-09-19T10:20:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="CountdownClockEvents_TC4887()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@5d64b55b]" name="CountdownClockEvents_TC4887" duration-ms="193857" started-at="2014-09-05T08:19:13Z" finished-at="2014-09-05T08:22:27Z">
+        <test-method status="PASS" signature="ImplementTVEModulesCore_TC3261()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@4019ea9a]" name="ImplementTVEModulesCore_TC3261" duration-ms="142999" started-at="2014-09-19T10:20:15Z" finished-at="2014-09-19T10:22:38Z">
           <reporter-output>
             <line>
               <![CDATA[STEP 1]]>
             </line>
             <line>
-              <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
+              <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
             </line>
             <line>
               <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
@@ -445,34 +277,133 @@
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
+              <![CDATA[SETUP]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Modules' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'jQuery Update' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for module filter titled 'jQuery Update' to be visible in module list.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'jQuery Update' check box is checked.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll by '-500'.]]>
+            </line>
+            <line>
+              <![CDATA[Open url 'http://qa5.publisher7.com/admin/config/development/jquery_update'.]]>
+            </line>
+            <line>
+              <![CDATA[Select '1.5' from the 'Default jQuery Version' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configuration' button.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Home' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the '[[Driver: chrome on MAC (0475cd0d-d1b1-42c5-b331-588f33635de5)] -> xpath: //span[@class='admin-menu-home-icon']/../..//a[text()='Flush all caches']]' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Home' menu link.]]>
+            </line>
+            <line>
               <![CDATA[STEP 2]]>
             </line>
             <line>
               <![CDATA[Click the 'Modules' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to frame titled 'Modules'.]]>
+              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
             </line>
             <line>
-              <![CDATA[Enter 'Event Countdown' in the 'Filter Name' text box.]]>
+              <![CDATA[Enter 'TVE Adobe Pass' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Wait for module filter titled 'Event Countdown' to be visible in module list.]]>
+              <![CDATA[Wait for module filter titled 'TVE Adobe Pass' to be visible in module list.]]>
             </line>
             <line>
-              <![CDATA[Check the 'Event Countdown' check box.]]>
+              <![CDATA[Verify the 'TVE Adobe Pass' check box is checked.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'TVE Auth Example' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for module filter titled 'TVE Auth Example' to be visible in module list.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'TVE Auth Example' check box is checked.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'TVE MVPD' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for module filter titled 'TVE MVPD' to be visible in module list.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'TVE MVPD' check box is checked.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll by '-500'.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 3]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Structure' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Blocks' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Select the block name 'TVE Auth Example' from the 'Sidebar first' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save Blocks' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The block settings have been updated.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll by '-500'.]]>
+            </line>
+            <line>
+              <![CDATA[SKIP TO STEP 10 - TVE ALREADY CONFIGURED]]>
+            </line>
+            <line>
+              <![CDATA[STEP 10]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Configure jQuery' link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'jQuery update dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Select '1.7' from the 'Default jQuery Version' drop down list.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save configuration' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
-            </line>
-            <line>
-              <![CDATA[Switch back to the 'Modules' frame.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to frame titled 'Modules'.]]>
             </line>
             <line>
               <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
@@ -484,347 +415,68 @@
               <![CDATA[Scroll by '-500'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Home' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 3]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Configuration' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Media' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Event Countdown' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Event Countdown dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Create' button.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the sample nodes to be created.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll by '-500'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 4]]>
-            </line>
-            <line>
-              <![CDATA[STEP 5 AND 6]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter title Birthday Event.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Apply' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Edit' link for content item titled 'Birthday Event.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '09/05/2014 in the 'Date' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '12:22:40PM in the 'Time' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'http://www.amazon.com/s/ref=nb_sb_ss_c_0_8/190-0002947-5703141?url=search-alias%3Dtoys-and-games&field-keywords=birthday%20party%20supplies&sprefix=birthday%2Caps%2C168' in the 'Active Call to Action' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Active Image Select' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the select file frame.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the file path for file upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Upload' button.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Public Local Files' radio button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the file image 'HanSolo' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '#FF0000' in the 'Active Background Color' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'http://www.nbc.com' in the 'Expiry Call to Action' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Expiry Image Select' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the select file frame.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the file path for file upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Upload' button.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Public Local Files' radio button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the file image 'nbclogosmall' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '#00FFFF' in the 'Expiry Background Color' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 7]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Structure' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Blocks' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Select the block name 'Birthday Block' from the 'Content' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Select the block name 'Holiday Party Block' from the 'Content' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save Blocks' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The block settings have been updated.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 8]]>
+              <![CDATA[STEP 11]]>
             </line>
             <line>
               <![CDATA[Click the 'Home' menu link.]]>
             </line>
             <line>
-              <![CDATA[STEP 9]]>
+              <![CDATA[Verify the 'Authentication status checked:' value is 'true'.]]>
             </line>
             <line>
-              <![CDATA[Verify the countdown timer is visible.]]>
+              <![CDATA[Verify the 'Authenticated' value is 'false'.]]>
             </line>
             <line>
-              <![CDATA[Verify the countdown timer is counting down.]]>
+              <![CDATA[Verify the 'Selected MVPD:' value is 'none'.]]>
             </line>
             <line>
-              <![CDATA[Assert that active img source of the event contains 'HanSolo'.]]>
+              <![CDATA[STEP 12]]>
             </line>
             <line>
-              <![CDATA[Assert the the img is loaded and visible.]]>
+              <![CDATA[Select 'Optimum' from the 'Al VMPDs:' drop down list.]]>
             </line>
             <line>
-              <![CDATA[Verify the active background color of '#FF0000' is visible for event with title 'Birthday Event'.]]>
+              <![CDATA[Click the 'login' button.]]>
             </line>
             <line>
-              <![CDATA[Verify the active link href of 'http://www.amazon.com/s/ref=nb_sb_ss_c_0_8/190-0002947-5703141?url=search-alias%3Dtoys-and-games&field-keywords=birthday%20party%20supplies&sprefix=birthday%2Caps%2C168' is visible for event with title 'Birthday Event'.]]>
+              <![CDATA[Enter 'research40' in the 'Optimum ID' text box.]]>
             </line>
             <line>
-              <![CDATA[STEP 10]]>
+              <![CDATA[Enter 'support40' in the 'Password' text box.]]>
             </line>
             <line>
-              <![CDATA[Verify the countdown timer is NOT counting down.]]>
+              <![CDATA[Click the 'SIGN IN' button.]]>
             </line>
             <line>
-              <![CDATA[Assert that expiry img source of the event contains 'nbclogosmall'.]]>
+              <![CDATA[Verify the 'Authentication status checked:' value is 'true'.]]>
             </line>
             <line>
-              <![CDATA[Assert the the img is loaded and visible.]]>
+              <![CDATA[Verify the 'Authenticated' value is 'true'.]]>
             </line>
             <line>
-              <![CDATA[Verify the expiry background color of '#00FFFF' is visible for event with title 'Birthday Event'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the expiry link href of 'http://www.nbc.com' is visible for event with title 'Birthday Event'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 11 AND 12]]>
-            </line>
-            <line>
-              <![CDATA[STEP 13]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Add content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Event Countdown' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Event Countdown dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '077a706ccceb425' in the 'Title' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '09/05/2014 in the 'Date' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '12:24:07PM in the 'Time' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'http://www.amazon.com/s/ref=nb_sb_ss_c_0_8/190-0002947-5703141?url=search-alias%3Dtoys-and-games&field-keywords=birthday%20party%20supplies&sprefix=birthday%2Caps%2C168' in the 'Active Call to Action' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Active Image Select' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the select file frame.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the file path for file upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Upload' button.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Public Local Files' radio button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the file image 'HanSolo' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Event Countdown dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '#FF0000' in the 'Active Background Color' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'http://www.nbc.com' in the 'Expiry Call to Action' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Expiry Image Select' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the select file frame.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the file path for file upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Upload' button.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Public Local Files' radio button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the file image 'nbclogosmall' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Event Countdown dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '#00FFFF' in the 'Expiry Background Color' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Event Countdown 077a706ccceb425 has been created.' is present.]]>
+              <![CDATA[Verify the 'Selected MVPD:' value is 'Cablevision'.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- CountdownClockEvents_TC4887 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@5d64b55b]" name="stopSelenium" is-config="true" duration-ms="575" started-at="2014-09-05T08:22:27Z" finished-at="2014-09-05T08:22:28Z">
+        </test-method> <!-- ImplementTVEModulesCore_TC3261 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@4019ea9a]" name="stopSelenium" is-config="true" duration-ms="574" started-at="2014-09-19T10:22:38Z" finished-at="2014-09-19T10:22:38Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=CountdownClockEvents_TC4887 status=SUCCESS method=CountdownClockEvents.CountdownClockEvents_TC4887()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@5d64b55b] output=STEP 1]]]>
+                <![CDATA[[TestResult name=ImplementTVEModulesCore_TC3261 status=SUCCESS method=ImplementTVEModulesCore.ImplementTVEModulesCore_TC3261()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@4019ea9a] output=STEP 1]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@5d64b55b]" name="startSelenium" is-config="true" duration-ms="2236" started-at="2014-09-05T08:22:28Z" finished-at="2014-09-05T08:22:30Z">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@4019ea9a]" name="startSelenium" is-config="true" duration-ms="2248" started-at="2014-09-19T10:22:38Z" finished-at="2014-09-19T10:22:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="Cleanup()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@5d64b55b]" name="Cleanup" duration-ms="14656" started-at="2014-09-05T08:22:30Z" depends-on-methods="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents.CountdownClockEvents_TC4887" finished-at="2014-09-05T08:22:44Z">
+        <test-method status="PASS" signature="Cleanup()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@4019ea9a]" name="Cleanup" duration-ms="30244" started-at="2014-09-19T10:22:41Z" depends-on-methods="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore.ImplementTVEModulesCore_TC3261" finished-at="2014-09-19T10:23:11Z">
           <reporter-output>
             <line>
-              <![CDATA[Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]>
+              <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
             </line>
             <line>
               <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
@@ -845,35 +497,47 @@
               <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
             </line>
             <line>
-              <![CDATA[Select the block name 'Birthday Block' from the '- None -' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Select the block name 'Holiday Party Block' from the '- None -' drop down list.]]>
+              <![CDATA[Select the block name 'TVE Auth Example' from the '- None -' drop down list.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save Blocks' button.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'The block settings have been updated.' is present.]]>
+              <![CDATA[Open url 'http://qa5.publisher7.com/admin/config/development/jquery_update'.]]>
+            </line>
+            <line>
+              <![CDATA[Select '1.5' from the 'Default jQuery Version' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configuration' button.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Home' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the '[[Driver: chrome on MAC (b261e240-2382-4df4-a459-749cc7a05a5a)] -> xpath: //span[@class='admin-menu-home-icon']/../..//a[text()='Flush all caches']]' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Home' menu link.]]>
             </line>
           </reporter-output>
         </test-method> <!-- Cleanup -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@5d64b55b]" name="stopSelenium" is-config="true" duration-ms="569" started-at="2014-09-05T08:22:44Z" finished-at="2014-09-05T08:22:45Z">
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@4019ea9a]" name="stopSelenium" is-config="true" duration-ms="571" started-at="2014-09-19T10:23:11Z" finished-at="2014-09-19T10:23:12Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Cleanup status=SUCCESS method=CountdownClockEvents.Cleanup()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@5d64b55b] output=Open url 'http://update.qa5.nbcupublisher7.publisher7.com'.]]]>
+                <![CDATA[[TestResult name=Cleanup status=SUCCESS method=ImplementTVEModulesCore.Cleanup()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@4019ea9a] output=Open url 'http://qa5.publisher7.com'.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@5d64b55b]" name="stopGridAndHub" is-config="true" duration-ms="389" started-at="2014-09-05T08:22:45Z" finished-at="2014-09-05T08:22:45Z">
+        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@4019ea9a]" name="stopGridAndHub" is-config="true" duration-ms="368" started-at="2014-09-19T10:23:12Z" finished-at="2014-09-19T10:23:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopGridAndHub -->
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents -->
+      </class> <!-- com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

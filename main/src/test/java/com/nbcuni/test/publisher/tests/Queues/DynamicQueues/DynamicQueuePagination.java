@@ -4,6 +4,7 @@ import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
+import com.nbcuni.test.publisher.pageobjects.Content.ContentPagination;
 import com.nbcuni.test.publisher.pageobjects.Content.CreateDefaultContent;
 import com.nbcuni.test.publisher.pageobjects.Structure.Queues.DynamicQueues.AddDynamicQueue;
 import com.nbcuni.test.publisher.pageobjects.Structure.Queues.DynamicQueues.AddDynamicQueueType;
@@ -11,6 +12,7 @@ import com.nbcuni.test.publisher.pageobjects.Structure.Queues.DynamicQueues.Dyna
 
 import org.testng.Reporter;
 import org.testng.annotations.Test;
+import org.testng.annotations.DataProvider;
 
 import java.util.Arrays;
 import java.util.concurrent.TimeUnit;
@@ -24,13 +26,23 @@ public class DynamicQueuePagination extends ParentTest{
      * @author Vineela Juturu
      * @version 1.0 Date: September 3, 2014
      *************************************************************************************/
-@Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"})
-public void CreateConfigureDynamicQueue_TC4197() throws Exception{
-//Test Data. please note that this test case is not meant for 'Total Limit' = 0.
-int itemsPerPage = 2;
-int totalLimit = 6; 
-String testContent[] = new String[totalLimit]; 
-webDriver.manage().timeouts().pageLoadTimeout(300, TimeUnit.SECONDS);
+
+	// Test will be Data Driven with following sets. 
+	// Except TotalLimit = 0, This Test case will work for remaining all scenarios. 
+	@DataProvider(name = "dqpaginationTestdata")
+		public Object[][] provideData() {
+ 
+			return new Object[][] { 
+					{2, 6, 6}
+			};
+		
+		}
+	 
+	@Test(dataProvider = "dqpaginationTestdata", retryAnalyzer = RerunOnFailure.class, groups = {"full"})
+	public void DynamicQueuePagination_TC4791(int itemsPerPage, int totalLimit, int createContentTotal) throws Exception{
+
+		String testContent[] = new String[createContentTotal]; 
+		webDriver.manage().timeouts().pageLoadTimeout(300, TimeUnit.SECONDS);
    
         Reporter.log("STEP 1");
         UserLogin userLogin = applib.openApplication();
@@ -40,21 +52,14 @@ webDriver.manage().timeouts().pageLoadTimeout(300, TimeUnit.SECONDS);
         CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver, applib);
         
         // create testContent ArrayList of Posts
-        
-        for (int i=0; i < testContent.length; i++){
-    
-        testContent[i] = createDefaultContent.Post("Published");
-       
-        } 
-       
+        for (int i=0; i < testContent.length; i++)
+        	testContent[i] = createDefaultContent.Post("Published");
         
         Modules modules = new Modules(webDriver, applib);
         modules.VerifyModuleEnabled("Dynamic Queue");
         
-        
         taxonomy.NavigateSite("Structure>>Dynamic Queue types>>Add dynamic queue type");
         overlay.SwitchToActiveFrame();
-        
         
         String dynamicQueueTypeName = random.GetCharacterString(15);
         AddDynamicQueueType addDynamicQueueType = new AddDynamicQueueType(webDriver);
@@ -65,11 +70,9 @@ webDriver.manage().timeouts().pageLoadTimeout(300, TimeUnit.SECONDS);
         overlay.SwitchToActiveFrame();
         contentParent.VerifyPageContentPresent(Arrays.asList(dynamicQueueTypeName));
         overlay.ClickCloseOverlayLnk();
-        
        
         taxonomy.NavigateSite("Content>>Dynamic Queues>>Add " + dynamicQueueTypeName);
         overlay.SwitchToActiveFrame();
-        
        
         String dynamicQueueTitle = random.GetCharacterString(15);
         AddDynamicQueue addDynamicQueue = new AddDynamicQueue(webDriver);
@@ -93,28 +96,39 @@ webDriver.manage().timeouts().pageLoadTimeout(300, TimeUnit.SECONDS);
         applib.openNewWindow();
         applib.switchToNewWindow(parentWindow);
         applib.openSitePage("/dynamic-queue/" + dynamicQueueNodeID);
-       
         
         Reporter.log("STEP 4 - Verification of content on each page");
-        contentParent.VerifyPageCtrElementPresent();
-        contentParent.VerifyCorrectNumberOfPagesDisplayed(itemsPerPage, totalLimit);
-        
-        
-        // Verify content on first page
-        int i = testContent.length; 
-        
-        contentParent.VerifyPageContentPresent(Arrays.asList(testContent[i-1], testContent[i-2]));
-        while (contentParent.isNextDynamicQueuePageExists()) {
-        i=i-2;
-       
-        Reporter.log("since next page exists, click on 'next >' link.");
-        contentParent.ClickNextPageLink(); 
-        Reporter.log("Verify page containing expected content.");
-            contentParent.VerifyPageContentPresent(Arrays.asList(testContent[i-1], testContent[i-2]));       
-       
-        }
-        
-}
-
+        ContentPagination contentPagination = new ContentPagination(webDriver);
+        if (contentPagination.getExpectedNumberOfPages(itemsPerPage, totalLimit) == 1){
+        	for(int index = (createContentTotal-1), loopvar = 0; loopvar <= (totalLimit-1); loopvar++)
+        		 contentParent.VerifyPageContentPresent(Arrays.asList(testContent[index--])); 
+   		 	Reporter.log("Single page displayed and Verified all content on Page");
+        } else 
+        {
+        	int pageNum = 1;
+        	int index = createContentTotal-1;
+        	int currentPageItems = 0;
+        	int loopVar;
+        	
+	        contentPagination.VerifyPageCtrElementPresent();
+	        contentPagination.VerifyCorrectNumberOfPagesDisplayed(itemsPerPage, totalLimit);
+        	
+        	do{
+        		// Click on NextPage link starting from Second page
+        		if( pageNum != 1) {contentPagination.ClickNextPageLink();}
+        		
+	        	if((pageNum * itemsPerPage) <= totalLimit)
+	        		currentPageItems = itemsPerPage;
+	        	else
+	        		currentPageItems = totalLimit - (pageNum-1) * itemsPerPage;
+	        	
+	        	for(loopVar = 0; loopVar <= (currentPageItems-1); loopVar++)
+	        		contentParent.VerifyPageContentPresent(Arrays.asList(testContent[index--])); 
+	        	
+        		Reporter.log("On pagenum:'"+ pageNum + "' displayed content Verified");
+		        	pageNum++;
+	        	}while(contentPagination.isNextPageExists());
+	    	}
+	}
 }
 

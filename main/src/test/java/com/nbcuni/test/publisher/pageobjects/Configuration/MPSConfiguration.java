@@ -103,8 +103,19 @@ public class MPSConfiguration {
     @FindBy(how = How.XPATH, using ="//img[@class='img_ad']")
     private WebElement Ad_Img;
     
+    @FindBy(how = How.XPATH, using ="//script[contains(text(), 'mpscall')]")
+    private WebElement MPSCall_Scr;
+    
     
     //PAGE OBJECT METHODS
+    public void VerifyMPSCallParameters(List<String> parameters) throws Exception {
+    	String mpsCallParams = MPSCall_Scr.getAttribute("innerHTML");
+    	for (String parameter : parameters) {
+    		Reporter.log("Verify the mps call parameter '" + parameter + "' is present in the page source.");
+    		Assert.assertTrue(mpsCallParams.contains(parameter), "MPS Call parameter '" + parameter + "' is not present in page source as expected.");
+    	}
+    }
+    
     public Boolean IsMPSEnabled() throws Exception { 
     	
     	Boolean mpsEnabled;
@@ -127,6 +138,7 @@ public class MPSConfiguration {
     public void EnterMPSHost(String host) throws Exception { 
     	
     	Reporter.log("Enter '" + host + "' in the 'MPS Host' text box."); 
+    	Thread.sleep(500);
     	MPSHost_Txb.clear();
     	MPSHost_Txb.sendKeys(host);
     }

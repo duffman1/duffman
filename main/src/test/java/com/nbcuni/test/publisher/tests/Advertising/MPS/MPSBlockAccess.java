@@ -18,7 +18,7 @@ public class MPSBlockAccess extends ParentTest {
      * TEST CASE - TC3608
      * Steps - https://rally1.rallydev.com/#/14663927728ud/detail/testcase/20142895489
      *************************************************************************************/
-    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"})
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "mps"})
     public void MPSBlockAccess_TC3608() throws Exception {
         
         	Reporter.log("STEP 1");
