@@ -6,6 +6,9 @@ import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestResult;
 import org.testng.Reporter;
 
@@ -23,11 +26,13 @@ import java.util.Date;
 public class AppLib {
 
 	Config config = new Config();
+	private WebDriverWait wait;
 	
     private Driver webDriver;
     
     public AppLib(Driver webDriver) {
     	this.webDriver = webDriver;
+    	wait = new WebDriverWait(webDriver, 10);
     }
 
     public String getPathToMedia() {
@@ -140,10 +145,16 @@ public class AppLib {
     public void openNewWindow() throws Exception {
     	Reporter.log("Open a new browser window.");
     	webDriver.executeScript("window.open()");
+    	wait.until(new ExpectedCondition<Boolean>() {
+    		public Boolean apply(WebDriver webDriver) {
+    			return webDriver.getWindowHandles().size() > 1;
+   		 	}
+    	});
     }
     
     public void switchToNewWindow(String parentWindow) throws Exception {
     	Reporter.log("Switch to new browser tab/window.");
+    	Thread.sleep(1000);
     	for (String window : webDriver.getWindowHandles()) {
 	        if (!window.equals(parentWindow)) {
 	          webDriver.switchTo().window(window);

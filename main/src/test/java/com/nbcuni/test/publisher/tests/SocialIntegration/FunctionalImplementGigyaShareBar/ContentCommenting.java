@@ -31,7 +31,7 @@ public class ContentCommenting extends ParentTest{
         GigyaShareBar gigyaShareBar = new GigyaShareBar(webDriver, applib);
         String parentWindow = webDriver.getWindowHandle();
 	    gigyaShareBar.ClickTweetButton();
-        applib.switchToNewWindow(parentWindow);
+	    applib.switchToNewWindow(parentWindow);
         TwitterLogin twitterLogin = new TwitterLogin(webDriver, applib);
         twitterLogin.EnterUsernameOrEmail("publisherseven");
         twitterLogin.EnterPassword("Publ!$her");

@@ -141,7 +141,25 @@ public class SelectFile {
     public void SwitchToSelectFileFrm() throws Exception {
     	
     	Reporter.log("Switch to the select file frame.");
-    	webDriver.switchTo().frame(SelectFile_Frm);
+    	
+    	//webDriver.switchTo().frame(SelectFile_Frm);
+    	
+    	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+    	for (int second = 0; ; second++){
+            if (second >= 30) {
+                Assert.fail("No inputs on 'Select a file' frame after timeout.");
+            }
+            try {
+            	webDriver.switchTo().frame(SelectFile_Frm);
+            	webDriver.findElement(By.xpath("//input"));
+            	break;
+            }
+            catch (Exception e) {
+            	overlay.SwitchToActiveFrame();
+            }
+            Thread.sleep(500);
+        }
+        webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
     	
     	errorChecking.VerifyNoMessageErrorsPresent();
     }
@@ -395,7 +413,6 @@ public class SelectFile {
     }
     
     public void SelectDefaultCoverImg() throws Exception {
-    	
     	this.SwitchToSelectFileFrm();
     	Integer randomInt = random.GetInteger(0, 3);
         String defaultImgFile = "HanSolo1.jpg";
