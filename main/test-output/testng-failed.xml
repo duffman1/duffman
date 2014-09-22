@@ -3,11 +3,15 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.nbcuni.test.publisher.common.UploadReportsGitHub">
+      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIF.EXIFKeywordsIngestedPhraseInsteadSetsWords">
         <methods>
-          <include name="UploadReport"/>
+          <include name="startSelenium"/>
+          <include name="EXIFKeywordsIngestedPhraseInsteadSetsWords_TC17"/>
+          <include name="stopGridAndHub"/>
+          <include name="startGridAndHub"/>
+          <include name="stopSelenium"/>
         </methods>
-      </class> <!-- com.nbcuni.test.publisher.common.UploadReportsGitHub -->
+      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIF.EXIFKeywordsIngestedPhraseInsteadSetsWords -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

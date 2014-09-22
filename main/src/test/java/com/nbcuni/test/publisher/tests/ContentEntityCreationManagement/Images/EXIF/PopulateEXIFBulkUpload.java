@@ -35,7 +35,7 @@ public class PopulateEXIFBulkUpload extends ParentTest{
             simpleEXIFIPTCMappings.SelectMediaTags("none");
             simpleEXIFIPTCMappings.SelectSource("Source");
             simpleEXIFIPTCMappings.ClickSaveBtn();
-            overlay.switchToDefaultContent(true);
+            overlay.ClickCloseOverlayLnk();
             
             Reporter.log("STEP 2");
             taxonomy.NavigateSite("Content>>Add content>>Media Gallery");

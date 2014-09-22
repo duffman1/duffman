@@ -35,7 +35,7 @@ public class EXIFKeywordsIngestedPhraseInsteadSetsWords extends ParentTest{
             simpleEXIFIPTCMappings.SelectMediaTags("none");
             simpleEXIFIPTCMappings.SelectSource("Source");
             simpleEXIFIPTCMappings.ClickSaveBtn();
-            overlay.switchToDefaultContent(true);
+            overlay.ClickCloseOverlayLnk();
             
             //Step 2
             taxonomy.NavigateSite("Content>>Files");
