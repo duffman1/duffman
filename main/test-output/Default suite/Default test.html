@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Sep 22 12:26:20 EDT 2014</td>
+<td>Started on:</td><td>Mon Sep 22 17:09:18 EDT 2014</td>
 </tr>
-<tr><td>Total time:</td><td>28 seconds (28011 ms)</td>
+<tr><td>Total time:</td><td>91 seconds (91174 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,53 +75,139 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Mapper.Phase1ContentTypeMapper.Phase1ContentTypeMapper_TC5260()'><b>Phase1ContentTypeMapper_TC5260</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Mapper.Phase1ContentTypeMapper<br/>
-<a href="#Output-2129209119" onClick='toggleBox("Output-2129209119", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.nbcuni.test.publisher.tests.Queues.DynamicQueues.AddTaxonomyParameters.AddTaxonomyParameters_TC4420()'><b>AddTaxonomyParameters_TC4420</b><br>Test class: com.nbcuni.test.publisher.tests.Queues.DynamicQueues.AddTaxonomyParameters<br/>
+<a href="#Output-1778619446" onClick='toggleBox("Output-1778619446", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-2129209119" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-2129209119">
+<a href="#Output-1778619446" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1778619446">
 STEP 1<br/>
 Open url 'http://qa5.publisher7.com'.<br/>
 Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
 Enter 'pa55word' in the 'Password' text box.<br/>
 Click the 'Login' button.<br/>
-STEP 2<br/>
+SETUP<br/>
 Click the 'Modules' menu link.<br/>
-Switch to the active frame titled 'Modules dialog'.<br/>
-Enter 'Pub Schema Example' in the 'Filter Name' text box.<br/>
-Wait for module filter titled 'Pub Schema Example' to be visible in module list.<br/>
-Verify the 'Pub Schema Example' check box is checked.<br/>
-Enter 'RestWS Schema' in the 'Filter Name' text box.<br/>
-Wait for module filter titled 'RestWS Schema' to be visible in module list.<br/>
-Verify the 'RestWS Schema' check box is checked.<br/>
-Enter 'RestWS Schema UI' in the 'Filter Name' text box.<br/>
-Wait for module filter titled 'RestWS Schema UI' to be visible in module list.<br/>
-Verify the 'RestWS Schema UI' check box is checked.<br/>
+Switch to frame titled 'Modules'.<br/>
+Enter 'Dynamic Queue' in the 'Filter Name' text box.<br/>
+Wait for module filter titled 'Dynamic Queue' to be visible in module list.<br/>
+Verify the 'Dynamic Queue' check box is checked.<br/>
 Click the 'Close Overlay X'.<br/>
 Scroll by '-500'.<br/>
+Click the 'Home' menu link.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Add content' menu link.<br/>
+Click the 'Movie' menu link.<br/>
+Switch to the active frame titled 'Create Movie dialog'.<br/>
+Scroll to and click the 'Basic Information' tab.<br/>
+Enter 'movieWTax724a244d820646c' in the 'Title' text box.<br/>
+Switch to the Synopsis frame.<br/>
+Enter a randomized text string into the 'Body' text area.<br/>
+Switch to the active frame titled 'Create Movie dialog'.<br/>
+Click the 'Cover' select button.<br/>
+Switch to the select file frame.<br/>
+Enter the file path for file upload.<br/>
+Click the 'Upload' button.<br/>
+Wait for the file link to be visible after upload.<br/>
+Click the 'Next' button.<br/>
+Click the 'Public Local Files' radio button.<br/>
+Click the 'Next' button.<br/>
+Verify the file image 'HanSolo' is present.<br/>
+Verify the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'Create Movie dialog'.<br/>
+Click the 'Additional Information' link.<br/>
+Select the 'Syndicated' from the 'Movie Type' drop down list.<br/>
+Select the 'G' from the 'Rating' drop down list.<br/>
+Select the 'Action' from the 'Primary Genre' drop down list.<br/>
+Scroll the 'Publishing Options' link into view.<br/>
+Click the 'Publishing Options' link.<br/>
+Select 'Published' from the 'Moderation State' drop down list.<br/>
+Click the 'Save' button.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Add content' menu link.<br/>
+Click the 'Movie' menu link.<br/>
+Switch to the active frame titled 'Create Movie dialog'.<br/>
+Scroll to and click the 'Basic Information' tab.<br/>
+Enter 'movieWOTax2ace968e45cb43d' in the 'Title' text box.<br/>
+Switch to the Synopsis frame.<br/>
+Enter a randomized text string into the 'Body' text area.<br/>
+Switch to the active frame titled 'Create Movie dialog'.<br/>
+Click the 'Cover' select button.<br/>
+Switch to the select file frame.<br/>
+Enter the file path for file upload.<br/>
+Click the 'Upload' button.<br/>
+Wait for the file link to be visible after upload.<br/>
+Click the 'Next' button.<br/>
+Click the 'Public Local Files' radio button.<br/>
+Click the 'Next' button.<br/>
+Verify the file image 'HanSolo' is present.<br/>
+Verify the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'Create Movie dialog'.<br/>
+Scroll the 'Publishing Options' link into view.<br/>
+Click the 'Publishing Options' link.<br/>
+Select 'Published' from the 'Moderation State' drop down list.<br/>
+Click the 'Save' button.<br/>
+STEP 2<br/>
+Mouse over the 'Structure' menu link.<br/>
+Mouse over the 'Dynamic Queue types' menu link.<br/>
+Click the 'Add dynamic queue type' menu link.<br/>
+Switch to the active frame titled 'Add dynamic queue type dialog'.<br/>
 STEP 3<br/>
-Mouse over the 'Configuration' menu link.<br/>
-Mouse over the 'Web services' menu link.<br/>
-Click the 'RestWS Schema mapping' menu link.<br/>
-Switch to the active frame titled 'RestWS Schema mapping dialog'.<br/>
-Select '- Please select -' from 'The show's seasons' drop down list.<br/>
-Select '- Please select -' from 'The season's episodes' drop down list.<br/>
-Select '- Please select -' from 'The episode's season' drop down list.<br/>
-Select '- Please select -' from 'The blog's show' drop down list.<br/>
-Select '- Please select -' from 'The gallery's show' drop down list.<br/>
-Click the 'Save configuration' button.<br/>
-Verify success message of 'The configuration options have been saved.' is present.<br/>
-Verify the text 'The following resources are not mapped.' is present on the page.<br/>
-Verify the text 'show:seasons' is present on the page.<br/>
-Verify the text 'season:episodes' is present on the page.<br/>
-Verify the text 'episode:season' is present on the page.<br/>
-Verify the text 'blog:show' is present on the page.<br/>
-Verify the text 'gallery:show' is present on the page.<br/>
+Enter '906fb457468d446' in the 'Name' text box.<br/>
+Select 'Content' or 'Node' from the 'Entity type' drop down list.<br/>
+Select '1 min' from the 'Cache lifetime' drop down list.<br/>
+Check the 'Movie' check box.<br/>
+Check the 'Person' check box.<br/>
+Click the 'Taxonomy filters' link.<br/>
+Check the 'field_movie_primary_genre' check box.<br/>
+Check the 'field_movie_secondary_genre' check box.<br/>
+Check the 'field_additional_genres' check box.<br/>
+Check the 'field_primary_genre' check box.<br/>
+Check the 'field_movie_rating' check box.<br/>
+Check the 'field_movie_type' check box.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'Dynamic Queue types dialog'.<br/>
+Verify the text '906fb457468d446' is present on the page.<br/>
+Click the 'Close Overlay X'.<br/>
+Scroll by '-500'.<br/>
+STEP 4<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Dynamic Queues' menu link.<br/>
+Click the 'Add 906fb457468d446' menu link.<br/>
+Switch to the active frame titled 'Add 906fb457468d446 dynamic queue dialog'.<br/>
+STEP 5<br/>
+Enter 'ac509834e5fa4c2' in the 'Title' text box.<br/>
+STEP 6<br/>
+<br/>
+<br/>
+STEP 7<br/>
+Select 'Syndicated' from the 'Taxonomy filter for field_movie_type (Movie)' multi-select list.<br/>
+Select 'Action' from the 'Taxonomy filter for field_movie_primary_genre (Movie)' multi-select list.<br/>
+Select 'G' from the 'Taxonomy filter for field_movie_rating (Movie)' multi-select list.<br/>
+STEP 8 - TODO<br/>
+STEP 9<br/>
+Click the 'Newest' radio button under 'Sort by'.<br/>
+Click the 'Save Dynamic Queue' button.<br/>
+Verify the text 'ac509834e5fa4c2' is present on the page.<br/>
+STEPS 10 AND 11 - MOVED TO TEST SETUP<br/>
+STEP 12 TODO<br/>
+STEP 13<br/>
+Mouse over the 'Content' menu link.<br/>
+Click the 'Dynamic Queues' menu link.<br/>
+Switch to the active frame titled 'Dynamic Queues dialog'.<br/>
+Click the 'Close Overlay X'.<br/>
+Scroll by '-500'.<br/>
+Open a new browser window.<br/>
+Switch to new browser tab/window.<br/>
+Open url 'http://qa5.publisher7.com/dynamic-queue/16'.<br/>
+Verify the text 'movieWTax724a244d820646c' is present on the page.<br/>
+Verify the text 'movieWOTax2ace968e45cb43d' is NOT present on the page.<br/>
 </div>
 </td>
 <td></td>
-<td>24</td>
-<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Mapper.Phase1ContentTypeMapper@f72003d</td></tr>
+<td>87</td>
+<td>com.nbcuni.test.publisher.tests.Queues.DynamicQueues.AddTaxonomyParameters@2c2893ce</td></tr>
 </table><p>
 </body>
 </html>

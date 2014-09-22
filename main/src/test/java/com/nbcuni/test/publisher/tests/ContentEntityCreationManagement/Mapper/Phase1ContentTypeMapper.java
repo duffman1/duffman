@@ -1,11 +1,15 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Mapper;
 
 import java.util.Arrays;
+
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.RerunOnFailure;
+import com.nbcuni.test.publisher.pageobjects.Blocks;
 import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Configuration.RestWSSchemaMapping;
+import com.nbcuni.test.publisher.pageobjects.TVEModule.jQueryUpdate;
+
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 
@@ -48,4 +52,18 @@ public class Phase1ContentTypeMapper extends ParentTest{
             
             
     }
+    
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"}, dependsOnMethods = {"Phase1ContentTypeMapper_TC5260"}, alwaysRun=true)
+	public void Cleanup() throws Exception {
+		UserLogin userLogin = applib.openApplication();
+		userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+		taxonomy.NavigateSite("Modules");
+        overlay.SwitchToActiveFrame();
+        Modules modules = new Modules(webDriver, applib);
+        for (String module : Arrays.asList("Pub Schema Example", "RestWS Schema UI")) {
+        	modules.EnterFilterName(module);
+        	modules.DisableModule(module);
+        }
+		
+	}
 }
