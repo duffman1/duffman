@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Sep 23 11:13:34 EDT 2014</td>
+<td>Started on:</td><td>Tue Sep 23 15:02:53 EDT 2014</td>
 </tr>
-<tr><td>Total time:</td><td>0 seconds (22 ms)</td>
+<tr><td>Total time:</td><td>38 seconds (38008 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,69 +67,80 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-skipped'>
-<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.nbcuni.test.publisher.common.UploadReportsGitHub.UploadReport()'><b>UploadReport</b><br>Test class: com.nbcuni.test.publisher.common.UploadReportsGitHub</td>
-<td><div><pre>org.testng.TestNGException: 
-Method UploadReport requires 3 parameters but 0 were supplied in the @Test annotation.
-	at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:198)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:134)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:373)
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:450)
-	at org.testng.internal.Invoker.handleParameters(Invoker.java:1383)
-	at org.testng.internal.Invoker.createParameters(Invoker.java:1075)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1180)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-</pre></div><a href='#' onClick='toggleBox("stack-trace2019646603", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2019646603'><pre>org.testng.TestNGException: 
-Method UploadReport requires 3 parameters but 0 were supplied in the @Test annotation.
-	at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:198)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:134)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:373)
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:450)
-	at org.testng.internal.Invoker.handleParameters(Invoker.java:1383)
-	at org.testng.internal.Invoker.createParameters(Invoker.java:1075)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1180)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-</pre></div></td>
-<td>0</td>
-<td>com.nbcuni.test.publisher.common.UploadReportsGitHub@517d4687</td></tr>
+<td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.ProvideUniqueURLImages.UniqueURL.UniqueURL_TC1056()'><b>UniqueURL_TC1056</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.ProvideUniqueURLImages.UniqueURL<br/>
+<a href="#Output-1414943481" onClick='toggleBox("Output-1414943481", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1414943481" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1414943481">
+Open url 'http://qa5.publisher7.com'.<br/>
+Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
+Enter 'pa55word' in the 'Password' text box.<br/>
+Click the 'Login' button.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Add content' menu link.<br/>
+Click the 'Media Gallery' menu link.<br/>
+Switch to the active frame titled 'Create Media Gallery dialog'.<br/>
+Enter '202845d8264e4bf' in the 'Title' text box.<br/>
+Click the 'Media Items Select' button.<br/>
+Switch to the select file frame.<br/>
+Switch to the active frame titled 'Create Media Gallery dialog'.<br/>
+Click the 'View Library' button.<br/>
+Enter 'HanSolo' in the 'File name' text box.<br/>
+Wait for the file search 'spinner' image to be present.<br/>
+Wait for the file search 'spinner' image to not be present, indicating image search is complete.<br/>
+Click the 'Apply' button.<br/>
+Wait for the file search 'spinner' image to be present.<br/>
+Wait for the file search 'spinner' image to not be present, indicating image search is complete.<br/>
+Verify the media thumbnail image 'HanSolo' is present.<br/>
+Verify the the img is loaded and visible.<br/>
+Verify the media thumbnail image 'HanSolo' is present.<br/>
+Verify the the img is loaded and visible.<br/>
+Click media thumbnail image number 1<br/>
+Click media thumbnail image number 2<br/>
+Click on the 'Submit' button.<br/>
+Switch to the active frame titled 'Create Media Gallery dialog'.<br/>
+Verify the img source of the Media Item contains 'HanSolo'.<br/>
+Assert the the img is loaded and visible.<br/>
+Verify the img source of the Media Item contains 'HanSolo'.<br/>
+Assert the the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'Media Gallery 202845d8264e4bf has been created.' is present.<br/>
+Verify that the image link is present and contains file url 'HanSolo'.<br/>
+Get the file id of image number 1.<br/>
+Verify that the image link is present and contains file url 'HanSolo'.<br/>
+Get the file id of image number 2.<br/>
+Click the 'Edit Draft' link in the work bench.<br/>
+Switch to the active frame titled 'Edit Media Gallery 202845d8264e4bf dialog'.<br/>
+Verify the img source of the Media Item contains 'HanSolo'.<br/>
+Assert the the img is loaded and visible.<br/>
+Get the unique url for image number 1.<br/>
+Verify the img source of the Media Item contains 'HanSolo'.<br/>
+Assert the the img is loaded and visible.<br/>
+Get the unique url for image number 2.<br/>
+Click the 'Cancel' button.<br/>
+Verify that the image link is present and contains file url 'HanSolo'.<br/>
+Verify that the image link is present and contains file url 'HanSolo'.<br/>
+Verify the text 'Current Item' is present on the page.<br/>
+Verify the text 'HanSolo' is present on the page.<br/>
+Verify the text 'Current Item Index' is present on the page.<br/>
+Verify the text '0' is present on the page.<br/>
+Verify the text 'Current Item ID' is present on the page.<br/>
+Verify the text '9256' is present on the page.<br/>
+Verify the text 'Current Item URL' is present on the page.<br/>
+Verify the text 'http://qa5.publisher7.com/node/8036/item/9256' is present on the page.<br/>
+</div>
+</td>
+<td></td>
+<td>34</td>
+<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.ProvideUniqueURLImages.UniqueURL@76b29b4a</td></tr>
 </table><p>
 </body>
 </html>
