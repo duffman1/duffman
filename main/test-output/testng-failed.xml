@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Pub 7 Consecutive Suite]">
+<suite thread-count="3" name="Failed suite [Pub 7 Concurrent Suite]" parallel="classes">
   <parameter name="LocalAppiumHubPort" value="4724"/>
   <parameter name="MPXVideaUploadPause" value="5000"/>
   <parameter name="RallyUrl" value="https://rally1.rallydev.com"/>
@@ -15,10 +15,10 @@
   <parameter name="SendReportIRCChat" value="false"/>
   <parameter name="RallyWorkspace" value="Digital Products"/>
   <parameter name="IRCChannel" value="#nbcuots_pub7"/>
-  <parameter name="AppURL" value="http://p7-20.pr.publisher7.com"/>
+  <parameter name="AppURL" value="http://acc.publisher7.com"/>
   <parameter name="SikuliImageWaitTime" value="30"/>
   <parameter name="MPXUsername" value="mpx/AdminPub7QA"/>
-  <parameter name="ReRunOnFailure" value="false"/>
+  <parameter name="ReRunOnFailure" value="true"/>
   <parameter name="SSOPassword" value="Pa55word"/>
   <parameter name="Device" value="Iphone Simulator"/>
   <parameter name="GithubOwner" value="NBCUOTS"/>
@@ -27,7 +27,7 @@
   <parameter name="ReRunOnFailureCount" value="2"/>
   <parameter name="IRCServer" value="irc.freenode.net"/>
   <parameter name="ErrorCheckingEnabled" value="true"/>
-  <parameter name="SendReportAutoEmails" value="false"/>
+  <parameter name="SendReportAutoEmails" value="true"/>
   <parameter name="GithubRepo" value="Publisher7_citest"/>
   <parameter name="Admin1Username" value="admin@publisher.nbcuni.com"/>
   <parameter name="GmailUsername" value="Pub7NBCUAutoEmailUser1@gmail.com"/>
@@ -41,8 +41,8 @@
   <parameter name="PathToMediaContent" value="/src/test/java/com/nbcuni/test/publisher/content/MediaFiles/"/>
   <parameter name="RallyTaskID" value="TA57908"/>
   <parameter name="RunMobile" value="false"/>
-  <parameter name="SendReportEmailAddress" value="ots.publishing.qa@nbcuni.com, brandon.clark@nbcuni.com"/>
-  <parameter name="UpdateIndividualRallyTCs" value="false"/>
+  <parameter name="SendReportEmailAddress" value="brandon.clark@nbcuni.com, brandon.clark@nbcuni.com"/>
+  <parameter name="UpdateIndividualRallyTCs" value="true"/>
   <parameter name="UploadReportToRally" value="true"/>
   <parameter name="PathToSikuliImages" value="/src/test/java/com/nbcuni/test/publisher/lib/sikuli/images/"/>
   <parameter name="ImplicitWaitTime" value="20"/>
@@ -56,7 +56,7 @@
     <listener class-name="com.nbcuni.test.publisher.common.TestListeners"/>
     <listener class-name="com.nbcuni.test.publisher.common.SuiteListeners"/>
   </listeners>
-  <test name="All Consecutive Web Tests(failed)">
+  <test name="All Concurrent Web Tests(failed)" parallel="classes">
     <groups>
       <run>
         <include name="full"/>
@@ -64,15 +64,15 @@
       </run>
     </groups>
     <classes>
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons">
+      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile">
         <methods>
           <include name="startSelenium"/>
           <include name="stopGridAndHub"/>
-          <include name="StickyButtons_Test"/>
+          <include name="CreateCharacterProfile_TC1041"/>
           <include name="startGridAndHub"/>
           <include name="stopSelenium"/>
         </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons -->
+      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile -->
     </classes>
-  </test> <!-- All Consecutive Web Tests(failed) -->
-</suite> <!-- Failed suite [Pub 7 Consecutive Suite] -->
+  </test> <!-- All Concurrent Web Tests(failed) -->
+</suite> <!-- Failed suite [Pub 7 Concurrent Suite] -->

@@ -116,6 +116,10 @@ public class CustomReport extends EmailableReporter {
 	    	concurrentFailedTests.removeResult(failedMethodToRemove);
 	    }
 	  
+	    //get the count of passed/failed tests
+  	  	Integer passedTestCount = consecutivePassedTests.size() + concurrentPassedTests.size();
+	  	Integer failedTestCount = consecutiveFailedTests.size() + concurrentFailedTests.size();
+	  
 	    //get the screenshot path of each failed consecutive method
     	SimpleDateFormat attachmentDateTimeFormat = new SimpleDateFormat("MMddyyhhmmssa");
 	    List<String> failedScreenshots = new ArrayList<String>();
@@ -137,12 +141,17 @@ public class CustomReport extends EmailableReporter {
 	    //generate the report
   	  	super.generateReport(xmlSuites, suites, outputDirectory);
 
-  	  	//copy the emailable report to the reports directory
+  	  	
+  	  	//copy the emailable report to the reports directory and rename
+  	  	String status = "PASSED";
+  	  	if (failedTestCount != 0) {
+  	  		status = "FAILED";
+  	  	}
   	  	File resultsFile = new File(outputDirectory + File.separator + "emailable-report.html");
   	  	String storeReportsTo = config.getPathToReports();
   	  	Date date = new Date();
-  	  	String environmentTitle = config.getConfigValue("AppURL").replace("http://", "").replace(".nbcupublisher7.publisher7.com", "").toUpperCase();
-  	  	String filePath = storeReportsTo + environmentTitle + "-" + attachmentDateTimeFormat.format(date) + ".html";
+  	  	String environmentTitle = config.getConfigValue("AppURL").replace("http://", "").toUpperCase();
+  	  	String filePath = storeReportsTo + environmentTitle + "-" + status + "-" + attachmentDateTimeFormat.format(date) + ".html";
   	  	try {
   	  		FileUtils.copyFile(resultsFile, new File(filePath));
   	  		System.out.println("Report saved to: " + filePath);
@@ -162,7 +171,7 @@ public class CustomReport extends EmailableReporter {
   	  	
   	  	//create a new zip report file and attach html report, har report, and failed screenshots
   	  	String zipFilePath = filePath.replace(".html", ".zip");
-  	  	String zipFileName = environmentTitle + "-" + attachmentDateTimeFormat.format(date) + ".zip";
+  	  	String zipFileName = environmentTitle + "-" + status + "-" + attachmentDateTimeFormat.format(date) + ".zip";
   	  	try {
   	  		FileOutputStream fileOut = null;
   	  		fileOut = new FileOutputStream(zipFilePath);
@@ -285,9 +294,7 @@ public class CustomReport extends EmailableReporter {
   	  	}
   	  	
   	  	//send auto email with zip report
-  	    Integer passedTestCount = consecutivePassedTests.size() + concurrentPassedTests.size();
-	  	Integer failedTestCount = consecutiveFailedTests.size() + concurrentFailedTests.size();
-	  	SendEmailReport sendEmailReport = new SendEmailReport();
+  	    SendEmailReport sendEmailReport = new SendEmailReport();
 	  	
   	  	if (config.getConfigValue("SendReportAutoEmails").equals("true")) {
   	  		try {

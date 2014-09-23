@@ -15,10 +15,10 @@
   <parameter name="SendReportIRCChat" value="false"/>
   <parameter name="RallyWorkspace" value="Digital Products"/>
   <parameter name="IRCChannel" value="#nbcuots_pub7"/>
-  <parameter name="AppURL" value="http://p7-20.pr.publisher7.com"/>
+  <parameter name="AppURL" value="http://acc.publisher7.com"/>
   <parameter name="SikuliImageWaitTime" value="30"/>
   <parameter name="MPXUsername" value="mpx/AdminPub7QA"/>
-  <parameter name="ReRunOnFailure" value="false"/>
+  <parameter name="ReRunOnFailure" value="true"/>
   <parameter name="SSOPassword" value="Pa55word"/>
   <parameter name="Device" value="Iphone Simulator"/>
   <parameter name="GithubOwner" value="NBCUOTS"/>
@@ -27,7 +27,7 @@
   <parameter name="ReRunOnFailureCount" value="2"/>
   <parameter name="IRCServer" value="irc.freenode.net"/>
   <parameter name="ErrorCheckingEnabled" value="true"/>
-  <parameter name="SendReportAutoEmails" value="false"/>
+  <parameter name="SendReportAutoEmails" value="true"/>
   <parameter name="GithubRepo" value="Publisher7_citest"/>
   <parameter name="Admin1Username" value="admin@publisher.nbcuni.com"/>
   <parameter name="GmailUsername" value="Pub7NBCUAutoEmailUser1@gmail.com"/>
@@ -41,8 +41,8 @@
   <parameter name="PathToMediaContent" value="/src/test/java/com/nbcuni/test/publisher/content/MediaFiles/"/>
   <parameter name="RallyTaskID" value="TA57908"/>
   <parameter name="RunMobile" value="false"/>
-  <parameter name="SendReportEmailAddress" value="ots.publishing.qa@nbcuni.com, brandon.clark@nbcuni.com"/>
-  <parameter name="UpdateIndividualRallyTCs" value="false"/>
+  <parameter name="SendReportEmailAddress" value="brandon.clark@nbcuni.com, brandon.clark@nbcuni.com"/>
+  <parameter name="UpdateIndividualRallyTCs" value="true"/>
   <parameter name="UploadReportToRally" value="true"/>
   <parameter name="PathToSikuliImages" value="/src/test/java/com/nbcuni/test/publisher/lib/sikuli/images/"/>
   <parameter name="ImplicitWaitTime" value="20"/>
