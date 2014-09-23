@@ -91,7 +91,7 @@ public class SitePreview {
 	     
 	 }
 	       
-	 public void VerifySelectAConditionValue(String value) throws Exception { 	    	
+	 public void VerifySelectAConditionValue(final String value) throws Exception { 	    	
 	    	
 		 Reporter.log("Verify the selected option of the 'SELECT A CONDITION' drop down list is '" + value + "'.");	  
 		 Thread.sleep(250); //stale element exception
