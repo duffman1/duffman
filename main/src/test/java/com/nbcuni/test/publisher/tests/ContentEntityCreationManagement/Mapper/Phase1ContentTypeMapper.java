@@ -4,12 +4,9 @@ import java.util.Arrays;
 
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.RerunOnFailure;
-import com.nbcuni.test.publisher.pageobjects.Blocks;
 import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Configuration.RestWSSchemaMapping;
-import com.nbcuni.test.publisher.pageobjects.TVEModule.jQueryUpdate;
-
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 

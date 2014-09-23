@@ -207,7 +207,7 @@ public class EditImage {
     public void WaitForEditImageFrameOpen() throws Exception {
     	
     	CloseWindow_Img.isDisplayed();
-    	Thread.sleep(1000); //stale element exception
+    	Thread.sleep(2000); //stale element exception TODO dynamic wait
     	wait.until(ExpectedConditions.visibilityOf(TitleText_Txb("1")));
     	Thread.sleep(2500); //long pause required here... TODO - figure out dynamic wait
     }
