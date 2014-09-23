@@ -186,10 +186,13 @@ public class CustomReport extends EmailableReporter {
   	  	}
   	    
   	  	//upload zip report file to rally
+  	  	String rallyAttachmentContentId = null;
+  	  	String rallyReportAttachmentURL = null;
   	  	if (config.getConfigValue("UploadReportToRally").equals("true")) {
   	  		try {
-  	  			uploadReport.uploadFileAttachment(zipFilePath, zipFileName);
-		
+  	  			rallyAttachmentContentId = uploadReport.uploadFileAttachment(zipFilePath, zipFileName);
+  	  			rallyAttachmentContentId = rallyAttachmentContentId.replace("https://rally1.rallydev.com/slm/webservice/1.40/attachment/", "").replace(".js", "");
+  	  			rallyReportAttachmentURL = "https://rally1.rallydev.com/slm/attachment/" + rallyAttachmentContentId + "/" + zipFileName;
   	  		} catch (Exception e) {
   	  			System.out.println("Failed to upload zip report to Rally.");
   	  		}
@@ -297,7 +300,6 @@ public class CustomReport extends EmailableReporter {
   	  		System.out.println("Report result email not sent per configuration setting.");
   	  	}
   	  	
-  	  	
   	  	//send irc chat with results
   	  	if (config.getConfigValue("SendReportIRCChat").equals("true")) {
   	  		SendIRCReport sendIRCReport = new SendIRCReport();
@@ -311,5 +313,15 @@ public class CustomReport extends EmailableReporter {
   	  		System.out.println("Report result IRC chat not sent per configuration setting.");
   	  	}
   	  	
+  	  	//update github for pull request environment executions
+  	  	UploadReportsGitHub uploadReportsGitHub = new UploadReportsGitHub();
+  	  	if (config.getConfigValue("AppURL").contains(".pr.")) {
+  	  		if (config.getConfigValue("GithubUpdatePRResults").equals("true")) {
+  	  			uploadReportsGitHub.UploadReport(passedTestCount, failedTestCount, rallyReportAttachmentURL);
+  	  		}
+  	  		else {
+  	  			System.out.println("Github Pull Request results not updated per configuration setting.");
+  	  		}
+  	  	}
 	}
 }

@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">3 suites, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -36,8 +36,8 @@
       <div class="suite">
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
-            <a href="#" class="navigator-link" panel-name="suite-Default_suite">
-              <span class="suite-name border-passed">Default suite</span>
+            <a href="#" class="navigator-link" panel-name="suite-Pub_7_Concurrent_Suite">
+              <span class="suite-name border-failed">Pub 7 Concurrent Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -47,37 +47,37 @@
             <div class="suite-section-content">
               <ul>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>testng-customsuite.xml</span>
+                  <a href="#" class="navigator-link " panel-name="test-xml-Pub_7_Concurrent_Suite">
+                    <span>TestNGConcurrentSuiteTEST.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="testlist-Default_suite">
+                  <a href="#" class="navigator-link " panel-name="testlist-Pub_7_Concurrent_Suite">
                     <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="group-Default_suite">
-                    <span>2 groups</span>
+                  <a href="#" class="navigator-link " panel-name="group-Pub_7_Concurrent_Suite">
+                    <span>1 group</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="times-Default_suite">
+                  <a href="#" class="navigator-link " panel-name="times-Pub_7_Concurrent_Suite">
                     <span>Times</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="reporter-Default_suite">
+                  <a href="#" class="navigator-link " panel-name="reporter-Pub_7_Concurrent_Suite">
                     <span>Reporter output</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="ignored-methods-Default_suite">
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-Pub_7_Concurrent_Suite">
                     <span>Ignored methods</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="chronological-Default_suite">
+                  <a href="#" class="navigator-link " panel-name="chronological-Pub_7_Concurrent_Suite">
                     <span>Chronological view</span>
                   </a> <!-- navigator-link  -->
                 </li>
@@ -90,21 +90,100 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Default_suite" class="hide-methods passed suite-Default_suite"> (hide)</a> <!-- hide-methods passed suite-Default_suite -->
-                      <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Pub_7_Concurrent_Suite" class="hide-methods failed suite-Pub_7_Concurrent_Suite"> (hide)</a> <!-- hide-methods failed suite-Pub_7_Concurrent_Suite -->
+                      <a href="#" panel-name="suite-Pub_7_Concurrent_Suite" class="show-methods failed suite-Pub_7_Concurrent_Suite"> (show)</a> <!-- show-methods failed suite-Pub_7_Concurrent_Suite -->
                     </span>
-                    <div class="method-list-content passed suite-Default_suite">
+                    <div class="method-list-content failed suite-Pub_7_Concurrent_Suite">
                       <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIF.PopulateEXIFBulkUpload" hash-for-method="PopulateEXIFBulkUpload_TC3192">PopulateEXIFBulkUpload_TC3192</a> <!-- method navigator-link -->
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Pub_7_Concurrent_Suite" title="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile" hash-for-method="CreateCharacterProfile_TC1041">CreateCharacterProfile_TC1041</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-Default_suite -->
+                    </div> <!-- method-list-content failed suite-Pub_7_Concurrent_Suite -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" class="navigator-link" panel-name="suite-Pub_7_Consecutive_Suite">
+              <span class="suite-name border-failed">Pub 7 Consecutive Suite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="test-xml-Pub_7_Consecutive_Suite">
+                    <span>TestNGConsecutiveSuiteTEST.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="testlist-Pub_7_Consecutive_Suite">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="group-Pub_7_Consecutive_Suite">
+                    <span>1 group</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="times-Pub_7_Consecutive_Suite">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="reporter-Pub_7_Consecutive_Suite">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-Pub_7_Consecutive_Suite">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="chronological-Pub_7_Consecutive_Suite">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">1 method, 1 failed,   </span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Pub_7_Consecutive_Suite" class="hide-methods failed suite-Pub_7_Consecutive_Suite"> (hide)</a> <!-- hide-methods failed suite-Pub_7_Consecutive_Suite -->
+                      <a href="#" panel-name="suite-Pub_7_Consecutive_Suite" class="show-methods failed suite-Pub_7_Consecutive_Suite"> (show)</a> <!-- show-methods failed suite-Pub_7_Consecutive_Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Pub_7_Consecutive_Suite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Pub_7_Consecutive_Suite" title="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons" hash-for-method="StickyButtons_Test">StickyButtons_Test</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Pub_7_Consecutive_Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -115,85 +194,490 @@
     </div> <!-- navigator-root -->
     <div class="wrapper">
       <div class="main-panel-root">
-        <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-passed">
+        <div panel-name="suite-Pub_7_Concurrent_Suite" class="panel Pub_7_Concurrent_Suite">
+          <div class="suite-Pub_7_Concurrent_Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIF.PopulateEXIFBulkUpload</span>
+              <img src="failed.png"/>
+              <span class="class-name">com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="PopulateEXIFBulkUpload_TC3192">
-                  </a> <!-- PopulateEXIFBulkUpload_TC3192 -->
-                  <span class="method-name">PopulateEXIFBulkUpload_TC3192</span>
+                  <a name="CreateCharacterProfile_TC1041">
+                  </a> <!-- CreateCharacterProfile_TC1041 -->
+                  <span class="method-name">CreateCharacterProfile_TC1041</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element
+  (Session info: chrome=37.0.2062.122)
+  (Driver info: chromedriver=2.8.241036,platform=Mac OS X 10.9.4 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 20.01 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.41.0&apos;, revision: &apos;3192d8a6c4449dc285928ba024779344f5423c58&apos;, time: &apos;2014-03-27 11:29:39&apos;
+System info: host: &apos;BACLARK77-MAC1.local&apos;, ip: &apos;192.168.0.4&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.4&apos;, java.version: &apos;1.7.0_25&apos;
+Session ID: e7e3e9bebd030225a4ec9f51e5d69a56
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.I245r3}, rotatable=false, locationContextEnabled=true, version=37.0.2062.122, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, nativeEvents=true, webStorageEnabled=true, applicationCacheEnabled=false, takesScreenshot=true}]
+Command duration or timeout: 20.59 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.41.0&apos;, revision: &apos;3192d8a6c4449dc285928ba024779344f5423c58&apos;, time: &apos;2014-03-27 11:29:39&apos;
+System info: host: &apos;BACLARK77-MAC1.local&apos;, ip: &apos;192.168.0.4&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.4&apos;, java.version: &apos;1.7.0_25&apos;
+Session ID: 7fe574a4-9bea-49a7-9e3c-dd4a7d424333
+Driver info: com.nbcuni.test.publisher.common.Driver.Driver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.I245r3}, rotatable=false, locationContextEnabled=true, webdriver.remote.sessionid=7fe574a4-9bea-49a7-9e3c-dd4a7d424333, version=37.0.2062.122, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, nativeEvents=true, webStorageEnabled=true, applicationCacheEnabled=false, takesScreenshot=true}]
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:193)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:348)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:445)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:340)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:59)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:34)
+	at com.sun.proxy.$Proxy12.sendKeys(Unknown Source)
+	at com.nbcuni.test.publisher.pageobjects.UserLogin.EnterEmailAddress(UserLogin.java:44)
+	at com.nbcuni.test.publisher.pageobjects.UserLogin.Login(UserLogin.java:69)
+	at com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile.CreateCharacterProfile_TC1041(CreateCharacterProfile.java:23)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+Caused by: org.openqa.selenium.remote.ScreenshotException: Screen shot has been taken
+Build info: version: &apos;2.41.0&apos;, revision: &apos;3192d8a6c4449dc285928ba024779344f5423c58&apos;, time: &apos;2014-03-27 11:29:39&apos;
+System info: host: &apos;BACLARK77-MAC1.local&apos;, ip: &apos;192.168.0.4&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.4&apos;, java.version: &apos;1.7.0_25&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:125)
+	... 24 more
+Caused by: org.openqa.selenium.NoSuchElementException: no such element
+  (Session info: chrome=37.0.2062.122)
+  (Driver info: chromedriver=2.8.241036,platform=Mac OS X 10.9.4 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 20.01 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.41.0&apos;, revision: &apos;3192d8a6c4449dc285928ba024779344f5423c58&apos;, time: &apos;2014-03-27 11:29:39&apos;
+System info: host: &apos;BACLARK77-MAC1.local&apos;, ip: &apos;192.168.0.4&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.4&apos;, java.version: &apos;1.7.0_25&apos;
+Session ID: e7e3e9bebd030225a4ec9f51e5d69a56
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.I245r3}, rotatable=false, locationContextEnabled=true, version=37.0.2062.122, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, nativeEvents=true, webStorageEnabled=true, applicationCacheEnabled=false, takesScreenshot=true}]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.41.0&apos;, revision: &apos;3192d8a6c4449dc285928ba024779344f5423c58&apos;, time: &apos;2014-03-27 11:29:39&apos;
+System info: host: &apos;BACLARK77-MAC1.local&apos;, ip: &apos;192.168.0.4&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.4&apos;, java.version: &apos;1.7.0_25&apos;
+Driver info: driver.version: EventFiringWebDriver
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:193)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:348)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:445)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:340)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:101)
+	at com.sun.proxy.$Proxy10.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:184)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:47)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:33)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:170)
+	... 3 more
+... Removed 22 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-passed -->
-        </div> <!-- panel Default_suite -->
-        <div panel-name="test-xml-Default_suite" class="panel">
+          </div> <!-- suite-Pub_7_Concurrent_Suite-class-failed -->
+        </div> <!-- panel Pub_7_Concurrent_Suite -->
+        <div panel-name="suite-Pub_7_Consecutive_Suite" class="panel Pub_7_Consecutive_Suite">
+          <div class="suite-Pub_7_Consecutive_Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="StickyButtons_Test">
+                  </a> <!-- StickyButtons_Test -->
+                  <span class="method-name">StickyButtons_Test</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element
+  (Session info: chrome=37.0.2062.122)
+  (Driver info: chromedriver=2.8.241036,platform=Mac OS X 10.9.4 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 20.05 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.41.0&apos;, revision: &apos;3192d8a6c4449dc285928ba024779344f5423c58&apos;, time: &apos;2014-03-27 11:29:39&apos;
+System info: host: &apos;BACLARK77-MAC1.local&apos;, ip: &apos;192.168.0.4&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.4&apos;, java.version: &apos;1.7.0_25&apos;
+Session ID: 63d8225cc6b2d7bec071eefac0d4b00e
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.ZdqQhn}, rotatable=false, locationContextEnabled=true, version=37.0.2062.122, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, nativeEvents=true, webStorageEnabled=true, applicationCacheEnabled=false, takesScreenshot=true}]
+Command duration or timeout: 21.12 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.41.0&apos;, revision: &apos;3192d8a6c4449dc285928ba024779344f5423c58&apos;, time: &apos;2014-03-27 11:29:39&apos;
+System info: host: &apos;BACLARK77-MAC1.local&apos;, ip: &apos;192.168.0.4&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.4&apos;, java.version: &apos;1.7.0_25&apos;
+Session ID: a4a0dc40-a21b-4f73-ae8a-631a3d6bba54
+Driver info: com.nbcuni.test.publisher.common.Driver.Driver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.ZdqQhn}, rotatable=false, locationContextEnabled=true, webdriver.remote.sessionid=a4a0dc40-a21b-4f73-ae8a-631a3d6bba54, version=37.0.2062.122, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, nativeEvents=true, webStorageEnabled=true, applicationCacheEnabled=false, takesScreenshot=true}]
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:193)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:348)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:445)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:340)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:59)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:34)
+	at com.sun.proxy.$Proxy12.sendKeys(Unknown Source)
+	at com.nbcuni.test.publisher.pageobjects.UserLogin.EnterEmailAddress(UserLogin.java:44)
+	at com.nbcuni.test.publisher.pageobjects.UserLogin.Login(UserLogin.java:69)
+	at com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons.StickyButtons_Test(StickyButtons.java:30)
+Caused by: org.openqa.selenium.remote.ScreenshotException: Screen shot has been taken
+Build info: version: &apos;2.41.0&apos;, revision: &apos;3192d8a6c4449dc285928ba024779344f5423c58&apos;, time: &apos;2014-03-27 11:29:39&apos;
+System info: host: &apos;BACLARK77-MAC1.local&apos;, ip: &apos;192.168.0.4&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.4&apos;, java.version: &apos;1.7.0_25&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:125)
+	... 36 more
+Caused by: org.openqa.selenium.NoSuchElementException: no such element
+  (Session info: chrome=37.0.2062.122)
+  (Driver info: chromedriver=2.8.241036,platform=Mac OS X 10.9.4 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 20.05 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.41.0&apos;, revision: &apos;3192d8a6c4449dc285928ba024779344f5423c58&apos;, time: &apos;2014-03-27 11:29:39&apos;
+System info: host: &apos;BACLARK77-MAC1.local&apos;, ip: &apos;192.168.0.4&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.4&apos;, java.version: &apos;1.7.0_25&apos;
+Session ID: 63d8225cc6b2d7bec071eefac0d4b00e
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.ZdqQhn}, rotatable=false, locationContextEnabled=true, version=37.0.2062.122, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, nativeEvents=true, webStorageEnabled=true, applicationCacheEnabled=false, takesScreenshot=true}]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.41.0&apos;, revision: &apos;3192d8a6c4449dc285928ba024779344f5423c58&apos;, time: &apos;2014-03-27 11:29:39&apos;
+System info: host: &apos;BACLARK77-MAC1.local&apos;, ip: &apos;192.168.0.4&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.4&apos;, java.version: &apos;1.7.0_25&apos;
+Driver info: driver.version: EventFiringWebDriver
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:193)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:348)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:445)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:340)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:101)
+	at com.sun.proxy.$Proxy10.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:184)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:47)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:33)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:170)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+... Removed 37 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Pub_7_Consecutive_Suite-class-failed -->
+        </div> <!-- panel Pub_7_Consecutive_Suite -->
+        <div panel-name="suite-Publisher_7_Test_Suites" class="panel Publisher_7_Test_Suites">
+        </div> <!-- panel Publisher_7_Test_Suites -->
+        <div panel-name="test-xml-Pub_7_Concurrent_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/private/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/testng-eclipse--1048410355/testng-customsuite.xml</span>
+            <span class="header-content">/Users/brandonclark/SQE-TEST-Pub7/main/src/test/resources/TestNGConcurrentSuiteTEST.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite name=&quot;Default suite&quot;&gt;
-  &lt;test verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
+&lt;suite thread-count=&quot;3&quot; name=&quot;Pub 7 Concurrent Suite&quot; parallel=&quot;classes&quot;&gt;
+  &lt;parameter name=&quot;LocalAppiumHubPort&quot; value=&quot;4724&quot;/&gt;
+  &lt;parameter name=&quot;MPXVideaUploadPause&quot; value=&quot;5000&quot;/&gt;
+  &lt;parameter name=&quot;RallyUrl&quot; value=&quot;https://rally1.rallydev.com&quot;/&gt;
+  &lt;parameter name=&quot;RallyUsername&quot; value=&quot;scott.baierwalter@nbc.com&quot;/&gt;
+  &lt;parameter name=&quot;AbortSuiteOnSetupFailure&quot; value=&quot;true&quot;/&gt;
+  &lt;parameter name=&quot;SSOEmail&quot; value=&quot;FID.Publisher@nbcuni.com&quot;/&gt;
+  &lt;parameter name=&quot;RallyProject&quot; value=&quot;Publisher 7&quot;/&gt;
+  &lt;parameter name=&quot;IRCNickname&quot; value=&quot;NBCUniAutomationBotOnIRC&quot;/&gt;
+  &lt;parameter name=&quot;GithubPassword&quot; value=&quot;tufNewcyd4&quot;/&gt;
+  &lt;parameter name=&quot;PathToReports&quot; value=&quot;/test-output/reports/&quot;/&gt;
+  &lt;parameter name=&quot;MPXPassword&quot; value=&quot;Pa55word&quot;/&gt;
+  &lt;parameter name=&quot;SendReportIRCChat&quot; value=&quot;false&quot;/&gt;
+  &lt;parameter name=&quot;RallyWorkspace&quot; value=&quot;Digital Products&quot;/&gt;
+  &lt;parameter name=&quot;IRCChannel&quot; value=&quot;#nbcuots_pub7&quot;/&gt;
+  &lt;parameter name=&quot;SikuliImageWaitTime&quot; value=&quot;30&quot;/&gt;
+  &lt;parameter name=&quot;AppURL&quot; value=&quot;http://p7-20.pr.publisher7.com&quot;/&gt;
+  &lt;parameter name=&quot;MPXUsername&quot; value=&quot;mpx/AdminPub7QA&quot;/&gt;
+  &lt;parameter name=&quot;ReRunOnFailure&quot; value=&quot;false&quot;/&gt;
+  &lt;parameter name=&quot;Device&quot; value=&quot;Iphone Simulator&quot;/&gt;
+  &lt;parameter name=&quot;SSOPassword&quot; value=&quot;Pa55word&quot;/&gt;
+  &lt;parameter name=&quot;GithubOwner&quot; value=&quot;NBCUOTS&quot;/&gt;
+  &lt;parameter name=&quot;DrushIngestion&quot; value=&quot;false&quot;/&gt;
+  &lt;parameter name=&quot;Admin1Password&quot; value=&quot;pa55word&quot;/&gt;
+  &lt;parameter name=&quot;ReRunOnFailureCount&quot; value=&quot;2&quot;/&gt;
+  &lt;parameter name=&quot;IRCServer&quot; value=&quot;irc.freenode.net&quot;/&gt;
+  &lt;parameter name=&quot;ErrorCheckingEnabled&quot; value=&quot;true&quot;/&gt;
+  &lt;parameter name=&quot;SendReportAutoEmails&quot; value=&quot;false&quot;/&gt;
+  &lt;parameter name=&quot;GithubRepo&quot; value=&quot;Publisher7_citest&quot;/&gt;
+  &lt;parameter name=&quot;Admin1Username&quot; value=&quot;admin@publisher.nbcuni.com&quot;/&gt;
+  &lt;parameter name=&quot;GmailUsername&quot; value=&quot;Pub7NBCUAutoEmailUser1@gmail.com&quot;/&gt;
+  &lt;parameter name=&quot;Browser&quot; value=&quot;chrome&quot;/&gt;
+  &lt;parameter name=&quot;GithubUsername&quot; value=&quot;baclark77@yahoo.com&quot;/&gt;
+  &lt;parameter name=&quot;PathToScreenshots&quot; value=&quot;/test-output/screenshots/&quot;/&gt;
+  &lt;parameter name=&quot;SSOUsername&quot; value=&quot;206439339&quot;/&gt;
+  &lt;parameter name=&quot;PageLoadWaitTime&quot; value=&quot;90&quot;/&gt;
+  &lt;parameter name=&quot;MPXUrl&quot; value=&quot;http://mpx.theplatform.com/&quot;/&gt;
+  &lt;parameter name=&quot;RallyPassword&quot; value=&quot;Lighth0use123&quot;/&gt;
+  &lt;parameter name=&quot;PathToMediaContent&quot; value=&quot;/src/test/java/com/nbcuni/test/publisher/content/MediaFiles/&quot;/&gt;
+  &lt;parameter name=&quot;RallyTaskID&quot; value=&quot;TA57908&quot;/&gt;
+  &lt;parameter name=&quot;RunMobile&quot; value=&quot;false&quot;/&gt;
+  &lt;parameter name=&quot;SendReportEmailAddress&quot; value=&quot;ots.publishing.qa@nbcuni.com, brandon.clark@nbcuni.com&quot;/&gt;
+  &lt;parameter name=&quot;UpdateIndividualRallyTCs&quot; value=&quot;false&quot;/&gt;
+  &lt;parameter name=&quot;UploadReportToRally&quot; value=&quot;true&quot;/&gt;
+  &lt;parameter name=&quot;PathToSikuliImages&quot; value=&quot;/src/test/java/com/nbcuni/test/publisher/lib/sikuli/images/&quot;/&gt;
+  &lt;parameter name=&quot;ImplicitWaitTime&quot; value=&quot;20&quot;/&gt;
+  &lt;parameter name=&quot;GmailPassword&quot; value=&quot;Pub7NBCUAutoEmailPassword1&quot;/&gt;
+  &lt;parameter name=&quot;MPXAssetBufferPause&quot; value=&quot;0&quot;/&gt;
+  &lt;parameter name=&quot;PathToHarReports&quot; value=&quot;/test-output/&quot;/&gt;
+  &lt;parameter name=&quot;LocalWebDriverHubPort&quot; value=&quot;4444&quot;/&gt;
+  &lt;parameter name=&quot;GithubUpdatePRResults&quot; value=&quot;true&quot;/&gt;
+  &lt;test name=&quot;All Concurrent Web Tests&quot;&gt;
+    &lt;groups&gt;
+      &lt;run&gt;
+        &lt;include name=&quot;full&quot;/&gt;
+        &lt;exclude name=&quot;&quot;/&gt;
+      &lt;/run&gt;
+    &lt;/groups&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIF.PopulateEXIFBulkUpload&quot;/&gt;
+      &lt;class name=&quot;com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Default test --&gt;
-&lt;/suite&gt; &lt;!-- Default suite --&gt;
+  &lt;/test&gt; &lt;!-- All Concurrent Web Tests --&gt;
+&lt;/suite&gt; &lt;!-- Pub 7 Concurrent Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="testlist-Default_suite" class="panel">
+        <div panel-name="test-xml-Pub_7_Consecutive_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Tests for Default suite</span>
+            <span class="header-content">/Users/brandonclark/SQE-TEST-Pub7/main/src/test/resources/TestNGConsecutiveSuiteTEST.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite name=&quot;Pub 7 Consecutive Suite&quot;&gt;
+  &lt;parameter name=&quot;LocalAppiumHubPort&quot; value=&quot;4724&quot;/&gt;
+  &lt;parameter name=&quot;MPXVideaUploadPause&quot; value=&quot;5000&quot;/&gt;
+  &lt;parameter name=&quot;RallyUrl&quot; value=&quot;https://rally1.rallydev.com&quot;/&gt;
+  &lt;parameter name=&quot;RallyUsername&quot; value=&quot;scott.baierwalter@nbc.com&quot;/&gt;
+  &lt;parameter name=&quot;AbortSuiteOnSetupFailure&quot; value=&quot;true&quot;/&gt;
+  &lt;parameter name=&quot;SSOEmail&quot; value=&quot;FID.Publisher@nbcuni.com&quot;/&gt;
+  &lt;parameter name=&quot;RallyProject&quot; value=&quot;Publisher 7&quot;/&gt;
+  &lt;parameter name=&quot;IRCNickname&quot; value=&quot;NBCUniAutomationBotOnIRC&quot;/&gt;
+  &lt;parameter name=&quot;GithubPassword&quot; value=&quot;tufNewcyd4&quot;/&gt;
+  &lt;parameter name=&quot;PathToReports&quot; value=&quot;/test-output/reports/&quot;/&gt;
+  &lt;parameter name=&quot;MPXPassword&quot; value=&quot;Pa55word&quot;/&gt;
+  &lt;parameter name=&quot;SendReportIRCChat&quot; value=&quot;false&quot;/&gt;
+  &lt;parameter name=&quot;RallyWorkspace&quot; value=&quot;Digital Products&quot;/&gt;
+  &lt;parameter name=&quot;IRCChannel&quot; value=&quot;#nbcuots_pub7&quot;/&gt;
+  &lt;parameter name=&quot;SikuliImageWaitTime&quot; value=&quot;30&quot;/&gt;
+  &lt;parameter name=&quot;AppURL&quot; value=&quot;http://p7-20.pr.publisher7.com&quot;/&gt;
+  &lt;parameter name=&quot;MPXUsername&quot; value=&quot;mpx/AdminPub7QA&quot;/&gt;
+  &lt;parameter name=&quot;ReRunOnFailure&quot; value=&quot;false&quot;/&gt;
+  &lt;parameter name=&quot;Device&quot; value=&quot;Iphone Simulator&quot;/&gt;
+  &lt;parameter name=&quot;SSOPassword&quot; value=&quot;Pa55word&quot;/&gt;
+  &lt;parameter name=&quot;GithubOwner&quot; value=&quot;NBCUOTS&quot;/&gt;
+  &lt;parameter name=&quot;DrushIngestion&quot; value=&quot;false&quot;/&gt;
+  &lt;parameter name=&quot;Admin1Password&quot; value=&quot;pa55word&quot;/&gt;
+  &lt;parameter name=&quot;ReRunOnFailureCount&quot; value=&quot;2&quot;/&gt;
+  &lt;parameter name=&quot;IRCServer&quot; value=&quot;irc.freenode.net&quot;/&gt;
+  &lt;parameter name=&quot;ErrorCheckingEnabled&quot; value=&quot;true&quot;/&gt;
+  &lt;parameter name=&quot;SendReportAutoEmails&quot; value=&quot;false&quot;/&gt;
+  &lt;parameter name=&quot;GithubRepo&quot; value=&quot;Publisher7_citest&quot;/&gt;
+  &lt;parameter name=&quot;Admin1Username&quot; value=&quot;admin@publisher.nbcuni.com&quot;/&gt;
+  &lt;parameter name=&quot;GmailUsername&quot; value=&quot;Pub7NBCUAutoEmailUser1@gmail.com&quot;/&gt;
+  &lt;parameter name=&quot;Browser&quot; value=&quot;chrome&quot;/&gt;
+  &lt;parameter name=&quot;GithubUsername&quot; value=&quot;baclark77@yahoo.com&quot;/&gt;
+  &lt;parameter name=&quot;PathToScreenshots&quot; value=&quot;/test-output/screenshots/&quot;/&gt;
+  &lt;parameter name=&quot;SSOUsername&quot; value=&quot;206439339&quot;/&gt;
+  &lt;parameter name=&quot;PageLoadWaitTime&quot; value=&quot;90&quot;/&gt;
+  &lt;parameter name=&quot;MPXUrl&quot; value=&quot;http://mpx.theplatform.com/&quot;/&gt;
+  &lt;parameter name=&quot;RallyPassword&quot; value=&quot;Lighth0use123&quot;/&gt;
+  &lt;parameter name=&quot;PathToMediaContent&quot; value=&quot;/src/test/java/com/nbcuni/test/publisher/content/MediaFiles/&quot;/&gt;
+  &lt;parameter name=&quot;RallyTaskID&quot; value=&quot;TA57908&quot;/&gt;
+  &lt;parameter name=&quot;RunMobile&quot; value=&quot;false&quot;/&gt;
+  &lt;parameter name=&quot;SendReportEmailAddress&quot; value=&quot;ots.publishing.qa@nbcuni.com, brandon.clark@nbcuni.com&quot;/&gt;
+  &lt;parameter name=&quot;UpdateIndividualRallyTCs&quot; value=&quot;false&quot;/&gt;
+  &lt;parameter name=&quot;UploadReportToRally&quot; value=&quot;true&quot;/&gt;
+  &lt;parameter name=&quot;PathToSikuliImages&quot; value=&quot;/src/test/java/com/nbcuni/test/publisher/lib/sikuli/images/&quot;/&gt;
+  &lt;parameter name=&quot;ImplicitWaitTime&quot; value=&quot;20&quot;/&gt;
+  &lt;parameter name=&quot;GmailPassword&quot; value=&quot;Pub7NBCUAutoEmailPassword1&quot;/&gt;
+  &lt;parameter name=&quot;MPXAssetBufferPause&quot; value=&quot;0&quot;/&gt;
+  &lt;parameter name=&quot;PathToHarReports&quot; value=&quot;/test-output/&quot;/&gt;
+  &lt;parameter name=&quot;LocalWebDriverHubPort&quot; value=&quot;4444&quot;/&gt;
+  &lt;parameter name=&quot;GithubUpdatePRResults&quot; value=&quot;true&quot;/&gt;
+  &lt;test name=&quot;All Consecutive Web Tests&quot;&gt;
+    &lt;groups&gt;
+      &lt;run&gt;
+        &lt;include name=&quot;full&quot;/&gt;
+        &lt;exclude name=&quot;&quot;/&gt;
+      &lt;/run&gt;
+    &lt;/groups&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- All Consecutive Web Tests --&gt;
+&lt;/suite&gt; &lt;!-- Pub 7 Consecutive Suite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="test-xml-Publisher_7_Test_Suites" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">/Users/brandonclark/SQE-TEST-Pub7/main/src/test/resources/TestNGSuiteConfig.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite name=&quot;Publisher 7 Test Suites&quot;&gt;
+  &lt;parameter name=&quot;LocalAppiumHubPort&quot; value=&quot;4724&quot;/&gt;
+  &lt;parameter name=&quot;MPXVideaUploadPause&quot; value=&quot;5000&quot;/&gt;
+  &lt;parameter name=&quot;RallyUrl&quot; value=&quot;https://rally1.rallydev.com&quot;/&gt;
+  &lt;parameter name=&quot;RallyUsername&quot; value=&quot;scott.baierwalter@nbc.com&quot;/&gt;
+  &lt;parameter name=&quot;AbortSuiteOnSetupFailure&quot; value=&quot;true&quot;/&gt;
+  &lt;parameter name=&quot;SSOEmail&quot; value=&quot;FID.Publisher@nbcuni.com&quot;/&gt;
+  &lt;parameter name=&quot;RallyProject&quot; value=&quot;Publisher 7&quot;/&gt;
+  &lt;parameter name=&quot;IRCNickname&quot; value=&quot;NBCUniAutomationBotOnIRC&quot;/&gt;
+  &lt;parameter name=&quot;GithubPassword&quot; value=&quot;tufNewcyd4&quot;/&gt;
+  &lt;parameter name=&quot;PathToReports&quot; value=&quot;/test-output/reports/&quot;/&gt;
+  &lt;parameter name=&quot;MPXPassword&quot; value=&quot;Pa55word&quot;/&gt;
+  &lt;parameter name=&quot;SendReportIRCChat&quot; value=&quot;false&quot;/&gt;
+  &lt;parameter name=&quot;RallyWorkspace&quot; value=&quot;Digital Products&quot;/&gt;
+  &lt;parameter name=&quot;IRCChannel&quot; value=&quot;#nbcuots_pub7&quot;/&gt;
+  &lt;parameter name=&quot;AppURL&quot; value=&quot;http://p7-20.pr.publisher7.com&quot;/&gt;
+  &lt;parameter name=&quot;SikuliImageWaitTime&quot; value=&quot;30&quot;/&gt;
+  &lt;parameter name=&quot;MPXUsername&quot; value=&quot;mpx/AdminPub7QA&quot;/&gt;
+  &lt;parameter name=&quot;ReRunOnFailure&quot; value=&quot;false&quot;/&gt;
+  &lt;parameter name=&quot;SSOPassword&quot; value=&quot;Pa55word&quot;/&gt;
+  &lt;parameter name=&quot;Device&quot; value=&quot;Iphone Simulator&quot;/&gt;
+  &lt;parameter name=&quot;GithubOwner&quot; value=&quot;NBCUOTS&quot;/&gt;
+  &lt;parameter name=&quot;Admin1Password&quot; value=&quot;pa55word&quot;/&gt;
+  &lt;parameter name=&quot;DrushIngestion&quot; value=&quot;false&quot;/&gt;
+  &lt;parameter name=&quot;ReRunOnFailureCount&quot; value=&quot;2&quot;/&gt;
+  &lt;parameter name=&quot;IRCServer&quot; value=&quot;irc.freenode.net&quot;/&gt;
+  &lt;parameter name=&quot;ErrorCheckingEnabled&quot; value=&quot;true&quot;/&gt;
+  &lt;parameter name=&quot;SendReportAutoEmails&quot; value=&quot;false&quot;/&gt;
+  &lt;parameter name=&quot;GithubRepo&quot; value=&quot;Publisher7_citest&quot;/&gt;
+  &lt;parameter name=&quot;Admin1Username&quot; value=&quot;admin@publisher.nbcuni.com&quot;/&gt;
+  &lt;parameter name=&quot;GmailUsername&quot; value=&quot;Pub7NBCUAutoEmailUser1@gmail.com&quot;/&gt;
+  &lt;parameter name=&quot;Browser&quot; value=&quot;chrome&quot;/&gt;
+  &lt;parameter name=&quot;GithubUsername&quot; value=&quot;baclark77@yahoo.com&quot;/&gt;
+  &lt;parameter name=&quot;PathToScreenshots&quot; value=&quot;/test-output/screenshots/&quot;/&gt;
+  &lt;parameter name=&quot;SSOUsername&quot; value=&quot;206439339&quot;/&gt;
+  &lt;parameter name=&quot;PageLoadWaitTime&quot; value=&quot;90&quot;/&gt;
+  &lt;parameter name=&quot;MPXUrl&quot; value=&quot;http://mpx.theplatform.com/&quot;/&gt;
+  &lt;parameter name=&quot;RallyPassword&quot; value=&quot;Lighth0use123&quot;/&gt;
+  &lt;parameter name=&quot;PathToMediaContent&quot; value=&quot;/src/test/java/com/nbcuni/test/publisher/content/MediaFiles/&quot;/&gt;
+  &lt;parameter name=&quot;RallyTaskID&quot; value=&quot;TA57908&quot;/&gt;
+  &lt;parameter name=&quot;RunMobile&quot; value=&quot;false&quot;/&gt;
+  &lt;parameter name=&quot;SendReportEmailAddress&quot; value=&quot;ots.publishing.qa@nbcuni.com, brandon.clark@nbcuni.com&quot;/&gt;
+  &lt;parameter name=&quot;UpdateIndividualRallyTCs&quot; value=&quot;false&quot;/&gt;
+  &lt;parameter name=&quot;UploadReportToRally&quot; value=&quot;true&quot;/&gt;
+  &lt;parameter name=&quot;PathToSikuliImages&quot; value=&quot;/src/test/java/com/nbcuni/test/publisher/lib/sikuli/images/&quot;/&gt;
+  &lt;parameter name=&quot;ImplicitWaitTime&quot; value=&quot;20&quot;/&gt;
+  &lt;parameter name=&quot;GmailPassword&quot; value=&quot;Pub7NBCUAutoEmailPassword1&quot;/&gt;
+  &lt;parameter name=&quot;MPXAssetBufferPause&quot; value=&quot;0&quot;/&gt;
+  &lt;parameter name=&quot;PathToHarReports&quot; value=&quot;/test-output/&quot;/&gt;
+  &lt;parameter name=&quot;LocalWebDriverHubPort&quot; value=&quot;4444&quot;/&gt;
+  &lt;parameter name=&quot;GithubUpdatePRResults&quot; value=&quot;true&quot;/&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;com.nbcuni.test.publisher.common.CustomReport&quot;/&gt;
+    &lt;listener class-name=&quot;com.nbcuni.test.publisher.common.TestListeners&quot;/&gt;
+    &lt;listener class-name=&quot;com.nbcuni.test.publisher.common.SuiteListeners&quot;/&gt;
+  &lt;/listeners&gt;
+  &lt;suite-files&gt;
+    &lt;suite-file path=&quot;TestNGConsecutiveSuiteTEST.xml&quot;/&gt;
+    &lt;suite-file path=&quot;TestNGConcurrentSuiteTEST.xml&quot;/&gt;
+  &lt;/suite-files&gt;
+&lt;/suite&gt; &lt;!-- Publisher 7 Test Suites --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-Pub_7_Concurrent_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Pub 7 Concurrent Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Default test (1 class)</span>
+                <span class="test-name">All Concurrent Web Tests (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="group-Default_suite" class="panel">
+        <div panel-name="testlist-Pub_7_Consecutive_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Groups for Default suite</span>
+            <span class="header-content">Tests for Pub 7 Consecutive Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="test-group">
-              <span class="test-group-name">certify</span>
-              <br/>
-              <div class="method-in-group">
-                <span class="method-in-group-name">PopulateEXIFBulkUpload_TC3192</span>
-                <br/>
-              </div> <!-- method-in-group -->
-            </div> <!-- test-group -->
+            <ul>
+              <li>
+                <span class="test-name">All Consecutive Web Tests (1 class)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-Publisher_7_Test_Suites" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Publisher 7 Test Suites</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Pub_7_Concurrent_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Pub 7 Concurrent Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
             <div class="test-group">
               <span class="test-group-name">full</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">PopulateEXIFBulkUpload_TC3192</span>
+                <span class="method-in-group-name">CreateCharacterProfile_TC1041</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">StickyButtons_Test</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="times-Default_suite" class="panel">
+        <div panel-name="group-Pub_7_Consecutive_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Times for Default suite</span>
+            <span class="header-content">Groups for Pub 7 Consecutive Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="test-group">
+              <span class="test-group-name">full</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">CreateCharacterProfile_TC1041</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">StickyButtons_Test</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Publisher_7_Test_Suites" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Publisher 7 Test Suites</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-Pub_7_Concurrent_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Pub 7 Concurrent Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="times-div">
               <script type="text/javascript">
-suiteTableInitFunctions.push('tableData_Default_suite');
-function tableData_Default_suite() {
+suiteTableInitFunctions.push('tableData_Pub_7_Concurrent_Suite');
+function tableData_Pub_7_Concurrent_Suite() {
 var data = new google.visualization.DataTable();
 data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
@@ -201,220 +685,297 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'PopulateEXIFBulkUpload_TC3192')
-data.setCell(0, 2, 'com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIF.PopulateEXIFBulkUpload')
-data.setCell(0, 3, 138001);
-window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
+data.setCell(0, 1, 'CreateCharacterProfile_TC1041')
+data.setCell(0, 2, 'com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile')
+data.setCell(0, 3, 21606);
+window.suiteTableData['Pub_7_Concurrent_Suite']= { tableData: data, tableDiv: 'times-div-Pub_7_Concurrent_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 minutes</span>
-              <div id="times-div-Default_suite">
-              </div> <!-- times-div-Default_suite -->
+              <span class="suite-total-time">Total running time: 21 seconds</span>
+              <div id="times-div-Pub_7_Concurrent_Suite">
+              </div> <!-- times-div-Pub_7_Concurrent_Suite -->
             </div> <!-- times-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="reporter-Default_suite" class="panel">
+        <div panel-name="times-Pub_7_Consecutive_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Reporter output for Default suite</span>
+            <span class="header-content">Times for Pub 7 Consecutive Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_Pub_7_Consecutive_Suite');
+function tableData_Pub_7_Consecutive_Suite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(1);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'StickyButtons_Test')
+data.setCell(0, 2, 'com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons')
+data.setCell(0, 3, 22104);
+window.suiteTableData['Pub_7_Consecutive_Suite']= { tableData: data, tableDiv: 'times-div-Pub_7_Consecutive_Suite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 22 seconds</span>
+              <div id="times-div-Pub_7_Consecutive_Suite">
+              </div> <!-- times-div-Pub_7_Consecutive_Suite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-Publisher_7_Test_Suites" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Publisher 7 Test Suites</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_Publisher_7_Test_Suites');
+function tableData_Publisher_7_Test_Suites() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(0);
+window.suiteTableData['Publisher_7_Test_Suites']= { tableData: data, tableDiv: 'times-div-Publisher_7_Test_Suites'}
+return data;
+}
+              </script>
+              <div id="times-div-Publisher_7_Test_Suites">
+              </div> <!-- times-div-Publisher_7_Test_Suites -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Pub_7_Concurrent_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Pub 7 Concurrent Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="reporter-method-div">
-              <span class="reporter-method-name">PopulateEXIFBulkUpload_TC3192</span>
+              <span class="reporter-method-name">CreateCharacterProfile_TC1041</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output">STEP 1</span>
-                <span class="reporter-method-output">Open url 'http://p7-1571.pr.publisher7.com'.</span>
+                <span class="reporter-method-output">Open url 'http://p7-20.pr.publisher7.com'.</span>
                 <span class="reporter-method-output">Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.</span>
-                <span class="reporter-method-output">Enter 'pa55word' in the 'Password' text box.</span>
-                <span class="reporter-method-output">Click the 'Login' button.</span>
-                <span class="reporter-method-output">SETUP</span>
-                <span class="reporter-method-output">Mouse over the 'Configuration' menu link.</span>
-                <span class="reporter-method-output">Mouse over the 'Media' menu link.</span>
-                <span class="reporter-method-output">Click the 'Simple EXIF/IPTC Mappings' menu link.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'Simple EXIF/IPTC Mappings dialog'.</span>
-                <span class="reporter-method-output">Select the 'Title' option from the 'Alt Text' drop down list.</span>
-                <span class="reporter-method-output">Select the 'Title' option from the 'Title Text' drop down list.</span>
-                <span class="reporter-method-output">Select the 'Caption' option from the 'Caption' drop down list.</span>
-                <span class="reporter-method-output">Select the 'Copyright' option from the 'Copyright' drop down list.</span>
-                <span class="reporter-method-output">Select the 'Credit' option from the 'Credit' drop down list.</span>
-                <span class="reporter-method-output">Select the 'Keywords' option from the 'Keywords' drop down list.</span>
-                <span class="reporter-method-output">Select the 'none' option from the 'Media categories' drop down list.</span>
-                <span class="reporter-method-output">Select the 'none' option from the 'Media Tags' drop down list.</span>
-                <span class="reporter-method-output">Select the 'Source' option from the 'Source' drop down list.</span>
-                <span class="reporter-method-output">Click the 'Save' button.</span>
-                <span class="reporter-method-output">Click the 'Close Overlay X'.</span>
-                <span class="reporter-method-output">Scroll by '-500'.</span>
-                <span class="reporter-method-output">STEP 2</span>
-                <span class="reporter-method-output">Mouse over the 'Content' menu link.</span>
-                <span class="reporter-method-output">Mouse over the 'Add content' menu link.</span>
-                <span class="reporter-method-output">Click the 'Media Gallery' menu link.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'Create Media Gallery dialog'.</span>
-                <span class="reporter-method-output">Enter 'd9da9431696e48d' in the 'Title' text box.</span>
-                <span class="reporter-method-output">STEP 3</span>
-                <span class="reporter-method-output">Click the 'Media Items Select' button.</span>
-                <span class="reporter-method-output">Switch to the select file frame.</span>
-                <span class="reporter-method-output">Click the 'Add files' link.</span>
-                <span class="reporter-method-output">Click the 'All Files' icon.</span>
-                <span class="reporter-method-output">Click the local 'Pictures' icon.</span>
-                <span class="reporter-method-output">Click the test picture link.</span>
-                <span class="reporter-method-output">Click the 'Open' button.</span>
-                <span class="reporter-method-output">Click the 'Start upload' link.</span>
-                <span class="reporter-method-output">Wait for file upload to reach 100%</span>
-                <span class="reporter-method-output">Click the 'Next' button.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'Create Media Gallery dialog'.</span>
-                <span class="reporter-method-output">Click the 'Add' button.</span>
-                <span class="reporter-method-output">Switch to the select file frame.</span>
-                <span class="reporter-method-output">Click the 'Add files' link.</span>
-                <span class="reporter-method-output">Click the 'All Files' icon.</span>
-                <span class="reporter-method-output">Click the local 'Pictures' icon.</span>
-                <span class="reporter-method-output">Click the test picture link.</span>
-                <span class="reporter-method-output">Click the 'Open' button.</span>
-                <span class="reporter-method-output">Click the 'Start upload' link.</span>
-                <span class="reporter-method-output">Wait for file upload to reach 100%</span>
-                <span class="reporter-method-output">Click the 'Next' button.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'Create Media Gallery dialog'.</span>
-                <span class="reporter-method-output">Verify the img source of the Media Item contains 'NUP_155306_0046'.</span>
-                <span class="reporter-method-output">Assert the the img is loaded and visible.</span>
-                <span class="reporter-method-output">Verify the img source of the Media Item contains 'NUP_155306_0046'.</span>
-                <span class="reporter-method-output">Assert the the img is loaded and visible.</span>
-                <span class="reporter-method-output">STEP 4</span>
-                <span class="reporter-method-output">Click the 'Edit' button with index '1'.</span>
-                <span class="reporter-method-output">Assert that the Title Text box with index '1' value matches 'NUP_155306_0046.JPG'.</span>
-                <span class="reporter-method-output">Assert that the Alt Text box with index '1' value matches 'NUP_155306_0046.JPG'.</span>
-                <span class="reporter-method-output">Assert that the Source box with index '1' value matches 'Episodic'.</span>
-                <span class="reporter-method-output">Assert that the Credit Text box with index '1' value matches 'Brownie Harris/NBC'.</span>
-                <span class="reporter-method-output">Assert that the Copyright Text box with index '1' value matches '2013 NBCUniversal Media, LLC'.</span>
-                <span class="reporter-method-output">Assert that the Keywords Text box with index '1' value matches 'NUP_155306, Revolution, Episode 118, Season 1'.</span>
-                <span class="reporter-method-output">Click the 'Close Window' image.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'Create Media Gallery dialog'.</span>
-                <span class="reporter-method-output">STEP 5</span>
-                <span class="reporter-method-output">Click the 'Edit All' button.</span>
-                <span class="reporter-method-output">Assert that the Title Text box with index '1' value matches 'NUP_155306_0046.JPG'.</span>
-                <span class="reporter-method-output">Assert that the Alt Text box with index '1' value matches 'NUP_155306_0046.JPG'.</span>
-                <span class="reporter-method-output">Assert that the Source box with index '1' value matches 'Episodic'.</span>
-                <span class="reporter-method-output">Assert that the Credit Text box with index '1' value matches 'Brownie Harris/NBC'.</span>
-                <span class="reporter-method-output">Assert that the Copyright Text box with index '1' value matches '2013 NBCUniversal Media, LLC'.</span>
-                <span class="reporter-method-output">Assert that the Keywords Text box with index '1' value matches 'NUP_155306, Revolution, Episode 118, Season 1'.</span>
-                <span class="reporter-method-output">STEP 6</span>
-                <span class="reporter-method-output">Enter '6c3818652e7f483' in the 'Title Text' text box with index '1'.</span>
-                <span class="reporter-method-output">Enter '37c9f081bff0479' in the 'Alt Text' text box with index '1'.</span>
-                <span class="reporter-method-output">Enter '07fa63a0228741a' in the 'Source' text box with index '1'.</span>
-                <span class="reporter-method-output">Enter '12f656517dd54c4' in the 'Credit' text box with index '1'.</span>
-                <span class="reporter-method-output">Enter '3d942047005a49f' in the 'Copyright' text box with index '1'.</span>
-                <span class="reporter-method-output">Enter 'bd6269daca5f4a1' in the 'Keywords' text box with index '1'.</span>
-                <span class="reporter-method-output">Enter '673fe0dbde27432' in the 'Title Text' text box with index '2'.</span>
-                <span class="reporter-method-output">Enter '34ea48d59c61479' in the 'Alt Text' text box with index '2'.</span>
-                <span class="reporter-method-output">Enter '3f7aa65d9e13460' in the 'Source' text box with index '2'.</span>
-                <span class="reporter-method-output">Enter '299692bf8b8c400' in the 'Credit' text box with index '2'.</span>
-                <span class="reporter-method-output">Enter '88c0341ba7944c2' in the 'Copyright' text box with index '2'.</span>
-                <span class="reporter-method-output">Enter '452c1f84b2c0430' in the 'Keywords' text box with index '2'.</span>
-                <span class="reporter-method-output">Click the 'Save' button with index '2'.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'Create Media Gallery dialog'.</span>
-                <span class="reporter-method-output">STEP 7</span>
-                <span class="reporter-method-output">Click the 'Edit All' button.</span>
-                <span class="reporter-method-output">Assert that the Title Text box with index '1' value matches '6c3818652e7f483'.</span>
-                <span class="reporter-method-output">Assert that the Alt Text box with index '1' value matches '37c9f081bff0479'.</span>
-                <span class="reporter-method-output">Assert that the Source box with index '1' value matches '07fa63a0228741a'.</span>
-                <span class="reporter-method-output">Assert that the Credit Text box with index '1' value matches '12f656517dd54c4'.</span>
-                <span class="reporter-method-output">Assert that the Copyright Text box with index '1' value matches '3d942047005a49f'.</span>
-                <span class="reporter-method-output">Assert that the Keywords Text box with index '1' value matches 'bd6269daca5f4a1'.</span>
-                <span class="reporter-method-output">Assert that the Title Text box with index '2' value matches '673fe0dbde27432'.</span>
-                <span class="reporter-method-output">Assert that the Alt Text box with index '2' value matches '34ea48d59c61479'.</span>
-                <span class="reporter-method-output">Assert that the Source box with index '2' value matches '3f7aa65d9e13460'.</span>
-                <span class="reporter-method-output">Assert that the Credit Text box with index '2' value matches '299692bf8b8c400'.</span>
-                <span class="reporter-method-output">Assert that the Copyright Text box with index '2' value matches '88c0341ba7944c2'.</span>
-                <span class="reporter-method-output">Assert that the Keywords Text box with index '2' value matches '452c1f84b2c0430'.</span>
-                <span class="reporter-method-output">Click the 'Close Window' image.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'Create Media Gallery dialog'.</span>
-                <span class="reporter-method-output">Click the 'Save' button.</span>
-                <span class="reporter-method-output">Verify success message of 'Media Gallery d9da9431696e48d has been created.' is present.</span>
-                <span class="reporter-method-output">STEP 8</span>
-                <span class="reporter-method-output">Mouse over the 'Content' menu link.</span>
-                <span class="reporter-method-output">Mouse over the 'Add content' menu link.</span>
-                <span class="reporter-method-output">Click the 'Media Gallery' menu link.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'Create Media Gallery dialog'.</span>
-                <span class="reporter-method-output">Enter '94afe06da352421' in the 'Title' text box.</span>
-                <span class="reporter-method-output">Click the 'Cover' select button.</span>
-                <span class="reporter-method-output">STEP 9</span>
-                <span class="reporter-method-output">Switch to the select file frame.</span>
-                <span class="reporter-method-output">Enter the file path for file upload.</span>
-                <span class="reporter-method-output">Click the 'Upload' button.</span>
-                <span class="reporter-method-output">Wait for the file link to be visible after upload.</span>
-                <span class="reporter-method-output">Click the 'Next' button.</span>
-                <span class="reporter-method-output">STEP 10</span>
-                <span class="reporter-method-output">Click the 'Public Local Files' radio button.</span>
-                <span class="reporter-method-output">Click the 'Next' button.</span>
-                <span class="reporter-method-output">Verify the file image 'IPTCDefault' is present.</span>
-                <span class="reporter-method-output">Verify the img is loaded and visible.</span>
-                <span class="reporter-method-output">Assert that the Title Text box with index '1' value matches 'drpin075402'.</span>
-                <span class="reporter-method-output">Assert that the Alt Text box with index '1' value matches 'drpin075402'.</span>
-                <span class="reporter-method-output">Assert that the Source box with index '1' value matches 'David Riecks Photography'.</span>
-                <span class="reporter-method-output">Assert that the Credit Text box with index '1' value matches '?1985 David Riecks: www.riecks.c'.</span>
-                <span class="reporter-method-output">Assert that the Copyright Text box with index '1' value matches '?1985 David Riecks, All Rights Reserved'.</span>
-                <span class="reporter-method-output">Assert that the Keywords Text box with index '1' value matches 'environment, ecology, ecosystem, environmentalism, scenery, nature, land, mountains, mount, Himalayans, sky, skies, cloud, clouds, concepts, concept, conceptual, summit, peak, weather, snow, snowing, snowfall, outdoors, outdoor, outside'.</span>
-                <span class="reporter-method-output">Click the 'Save' button.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'Create Media Gallery dialog'.</span>
-                <span class="reporter-method-output">STEP 11</span>
-                <span class="reporter-method-output">Click the 'Edit' button.</span>
-                <span class="reporter-method-output">Assert that the Title Text box with index '1' value matches 'drpin075402'.</span>
-                <span class="reporter-method-output">Assert that the Alt Text box with index '1' value matches 'drpin075402'.</span>
-                <span class="reporter-method-output">Assert that the Source box with index '1' value matches 'David Riecks Photography'.</span>
-                <span class="reporter-method-output">Assert that the Credit Text box with index '1' value matches '?1985 David Riecks: www.riecks.c'.</span>
-                <span class="reporter-method-output">Assert that the Copyright Text box with index '1' value matches '?1985 David Riecks, All Rights Reserved'.</span>
-                <span class="reporter-method-output">Assert that the Keywords Text box with index '1' value matches 'environment, ecology, ecosystem, environmentalism, scenery, nature, land, mountains, mount, Himalayans, sky, skies, cloud, clouds, concepts, concept, conceptual, summit, peak, weather, snow, snowing, snowfall, outdoors, outdoor, outside'.</span>
-                <span class="reporter-method-output">STEP 12</span>
-                <span class="reporter-method-output">Enter 'db109888708a4fb' in the 'Title Text' text box with index '1'.</span>
-                <span class="reporter-method-output">Enter '71fffcf71c0c4df' in the 'Alt Text' text box with index '1'.</span>
-                <span class="reporter-method-output">Enter '38caba26541e458' in the 'Source' text box with index '1'.</span>
-                <span class="reporter-method-output">Enter '97605e841ed24fe' in the 'Credit' text box with index '1'.</span>
-                <span class="reporter-method-output">Enter 'a293f1313081495' in the 'Copyright' text box with index '1'.</span>
-                <span class="reporter-method-output">Enter 'ee6915003b99486' in the 'Keywords' text box with index '1'.</span>
-                <span class="reporter-method-output">Click the 'Save' button with index '2'.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'Create Media Gallery dialog'.</span>
-                <span class="reporter-method-output">Click the 'Edit' button.</span>
-                <span class="reporter-method-output">Assert that the Title Text box with index '1' value matches 'db109888708a4fb'.</span>
-                <span class="reporter-method-output">Assert that the Alt Text box with index '1' value matches '71fffcf71c0c4df'.</span>
-                <span class="reporter-method-output">Assert that the Source box with index '1' value matches '38caba26541e458'.</span>
-                <span class="reporter-method-output">Assert that the Credit Text box with index '1' value matches '97605e841ed24fe'.</span>
-                <span class="reporter-method-output">Assert that the Copyright Text box with index '1' value matches 'a293f1313081495'.</span>
-                <span class="reporter-method-output">Assert that the Keywords Text box with index '1' value matches 'ee6915003b99486'.</span>
+                <span class="reporter-method-output">Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCharacterProfile_TC1041_092314011452PM.png </span>
+                <span class="reporter-method-output"><br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCharacterProfile_TC1041_092314011452PM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCharacterProfile_TC1041_092314011452PM.png' height='500' width='500'/> </a></span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="ignored-methods-Default_suite" class="panel">
+        <div panel-name="reporter-Pub_7_Consecutive_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Pub 7 Consecutive Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">StickyButtons_Test</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Open url 'http://p7-20.pr.publisher7.com'.</span>
+                <span class="reporter-method-output">Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.</span>
+                <span class="reporter-method-output">Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/StickyButtons_Test_092314011424PM.png </span>
+                <span class="reporter-method-output"><br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/StickyButtons_Test_092314011424PM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/StickyButtons_Test_092314011424PM.png' height='500' width='500'/> </a></span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Publisher_7_Test_Suites" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Publisher 7 Test Suites</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-Pub_7_Concurrent_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="chronological-Default_suite" class="panel">
+        <div panel-name="ignored-methods-Pub_7_Consecutive_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-Publisher_7_Test_Suites" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Pub_7_Concurrent_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">Methods in chronological order</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIF.PopulateEXIFBulkUpload</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">startGridAndHub</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
                 <span class="method-name">startSelenium</span>
-                <span class="method-start">1296 ms</span>
+                <span class="method-start">1540 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">PopulateEXIFBulkUpload_TC3192</span>
-                <span class="method-start">3931 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">StickyButtons_Test</span>
+                <span class="method-start">4644 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">stopSelenium([TestResult name=PopulateEXIFBulkUpload_TC3192 status=SUCCESS method=PopulateEXIFBulkUpload.Populate...)</span>
-                <span class="method-start">141933 ms</span>
+                <span class="method-name">stopSelenium([TestResult name=StickyButtons_Test status=FAILURE method=StickyButtons.StickyButtons_Test()[pri:0, ...)</span>
+                <span class="method-start">26754 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-suite after">
                 <span class="method-name">stopGridAndHub</span>
-                <span class="method-start">142521 ms</span>
+                <span class="method-start">29746 ms</span>
+              </div> <!-- configuration-suite after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile</div> <!-- chronological-class-name -->
+              <div class="configuration-suite before">
+                <span class="method-name">startGridAndHub</span>
+                <span class="method-start">30121 ms</span>
+              </div> <!-- configuration-suite before -->
+              <div class="configuration-method before">
+                <span class="method-name">startSelenium</span>
+                <span class="method-start">30469 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">CreateCharacterProfile_TC1041</span>
+                <span class="method-start">32765 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">stopSelenium([TestResult name=CreateCharacterProfile_TC1041 status=FAILURE method=CreateCharacterProfile.CreateCh...)</span>
+                <span class="method-start">54373 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-suite after">
+                <span class="method-name">stopGridAndHub</span>
+                <span class="method-start">57222 ms</span>
+              </div> <!-- configuration-suite after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Pub_7_Consecutive_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons</div> <!-- chronological-class-name -->
+              <div class="configuration-suite before">
+                <span class="method-name">startGridAndHub</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-suite before -->
+              <div class="configuration-method before">
+                <span class="method-name">startSelenium</span>
+                <span class="method-start">1540 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">StickyButtons_Test</span>
+                <span class="method-start">4644 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">stopSelenium([TestResult name=StickyButtons_Test status=FAILURE method=StickyButtons.StickyButtons_Test()[pri:0, ...)</span>
+                <span class="method-start">26754 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-suite after">
+                <span class="method-name">stopGridAndHub</span>
+                <span class="method-start">29746 ms</span>
+              </div> <!-- configuration-suite after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile</div> <!-- chronological-class-name -->
+              <div class="configuration-suite before">
+                <span class="method-name">startGridAndHub</span>
+                <span class="method-start">30121 ms</span>
+              </div> <!-- configuration-suite before -->
+              <div class="configuration-method before">
+                <span class="method-name">startSelenium</span>
+                <span class="method-start">30469 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">CreateCharacterProfile_TC1041</span>
+                <span class="method-start">32765 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">stopSelenium([TestResult name=CreateCharacterProfile_TC1041 status=FAILURE method=CreateCharacterProfile.CreateCh...)</span>
+                <span class="method-start">54373 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-suite after">
+                <span class="method-name">stopGridAndHub</span>
+                <span class="method-start">57222 ms</span>
+              </div> <!-- configuration-suite after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Publisher_7_Test_Suites" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons</div> <!-- chronological-class-name -->
+              <div class="configuration-suite before">
+                <span class="method-name">startGridAndHub</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-suite before -->
+              <div class="configuration-method before">
+                <span class="method-name">startSelenium</span>
+                <span class="method-start">1540 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">StickyButtons_Test</span>
+                <span class="method-start">4644 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">stopSelenium([TestResult name=StickyButtons_Test status=FAILURE method=StickyButtons.StickyButtons_Test()[pri:0, ...)</span>
+                <span class="method-start">26754 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-suite after">
+                <span class="method-name">stopGridAndHub</span>
+                <span class="method-start">29746 ms</span>
+              </div> <!-- configuration-suite after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile</div> <!-- chronological-class-name -->
+              <div class="configuration-suite before">
+                <span class="method-name">startGridAndHub</span>
+                <span class="method-start">30121 ms</span>
+              </div> <!-- configuration-suite before -->
+              <div class="configuration-method before">
+                <span class="method-name">startSelenium</span>
+                <span class="method-start">30469 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">CreateCharacterProfile_TC1041</span>
+                <span class="method-start">32765 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">stopSelenium([TestResult name=CreateCharacterProfile_TC1041 status=FAILURE method=CreateCharacterProfile.CreateCh...)</span>
+                <span class="method-start">54373 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-suite after">
+                <span class="method-name">stopGridAndHub</span>
+                <span class="method-start">57222 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

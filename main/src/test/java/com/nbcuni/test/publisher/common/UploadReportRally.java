@@ -18,7 +18,7 @@ import org.apache.commons.codec.binary.Base64;
 
 public class UploadReportRally {
 
-    public void uploadFileAttachment(String pathToReport, String reportName) throws Exception {
+    public String uploadFileAttachment(String pathToReport, String reportName) throws Exception {
 
     	Config config = new Config();
     	
@@ -70,6 +70,8 @@ public class UploadReportRally {
         //Open file
         RandomAccessFile myFileHandle = new RandomAccessFile(ReportFile, "r");
 
+        String attachmentContentId = null;
+        
         try {
             
         	//Get and check length
@@ -104,7 +106,7 @@ public class UploadReportRally {
 
             CreateRequest attachmentCreateRequest = new CreateRequest("Attachment", myAttachment);
             CreateResponse attachmentResponse = restApi.create(attachmentCreateRequest);
-            attachmentResponse.getObject().get("_ref").getAsString();
+            attachmentContentId = attachmentResponse.getObject().get("_ref").getAsString();
             
             	if (attachmentResponse.wasSuccessful()) {
             		System.out.println("Successfully created Rally report attachment.");
@@ -126,6 +128,8 @@ public class UploadReportRally {
             //Release all resources
         	myFileHandle.close();
             restApi.close();
-        }                
+        }
+        
+        return attachmentContentId;
     }
 }

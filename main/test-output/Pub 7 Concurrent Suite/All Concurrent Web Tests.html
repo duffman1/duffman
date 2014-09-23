@@ -55,709 +55,201 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>All Concurrent Web Tests</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>7/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Sep 17 13:46:50 EDT 2014</td>
+<td>Started on:</td><td>Tue Sep 23 13:14:28 EDT 2014</td>
 </tr>
-<tr><td>Total time:</td><td>447 seconds (447291 ms)</td>
+<tr><td>Total time:</td><td>26 seconds (26748 ms)</td>
 </tr><tr>
-<td>Included groups:</td><td>mps </td>
+<td>Included groups:</td><td>full </td>
 </tr><tr>
 <td>Excluded groups:</td><td> </td>
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.nbcuni.test.publisher.tests.Advertising.MPS.AddMPSCallsToErrorPages.AddMPSCallsToErrorPages_TC4950()'><b>AddMPSCallsToErrorPages_TC4950</b><br>Test class: com.nbcuni.test.publisher.tests.Advertising.MPS.AddMPSCallsToErrorPages<br/>
-<a href="#Output-1358897915" onClick='toggleBox("Output-1358897915", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile.CreateCharacterProfile_TC1041()'><b>CreateCharacterProfile_TC1041</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile<br/>
+<a href="#Output-380247559" onClick='toggleBox("Output-380247559", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1358897915" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1358897915">
-STEP 1<br/>
-Open url 'http://qa5.publisher7.com'.<br/>
+<a href="#Output-380247559" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-380247559">
+Open url 'http://p7-20.pr.publisher7.com'.<br/>
 Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
-Enter 'pa55word' in the 'Password' text box.<br/>
-Click the 'Login' button.<br/>
-SETUP<br/>
-Click the 'Modules' menu link.<br/>
-Switch to frame titled 'Modules'.<br/>
-Enter 'MPS' in the 'Filter Name' text box.<br/>
-Wait for module filter titled 'MPS' to be visible in module list.<br/>
-Verify the 'MPS' check box is checked.<br/>
-Click the 'Close Overlay X'.<br/>
-Scroll by '-500'.<br/>
-Click the 'Home' menu link.<br/>
-Mouse over the 'Configuration' menu link.<br/>
-Mouse over the 'Web services' menu link.<br/>
-Click the 'MPS Configuration' menu link.<br/>
-Switch to the active frame titled 'MPS Configuration dialog'.<br/>
-Enter 'mps.io' in the 'MPS Host' text box.<br/>
-Click the 'Document Write' radio button.<br/>
-Enter 'pub7-development' in the 'Site Instance Override' text box.<br/>
-Clear all 'Name' text box values.<br/>
-Clear all 'Value' text box values.<br/>
-Uncheck all 'JSON' check boxes.<br/>
-Click the 'Save configuration' button.<br/>
-Verify success message of 'The configuration options have been saved.' is present.<br/>
-Click the 'Close Overlay X'.<br/>
-Scroll by '-500'.<br/>
-STEP 2<br/>
-Open url 'http://qa5.publisher7.com/junkurl'.<br/>
-STEP 3<br/>
-Verify the mps call parameter '"site":"pub7-development"' is present in the page source.<br/>
-Verify the mps call parameter '"path":"ERROR/404"' is present in the page source.<br/>
-Verify the mps call parameter '"content_id":"ERROR"' is present in the page source.<br/>
+Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCharacterProfile_TC1041_092314011452PM.png <br/>
+<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCharacterProfile_TC1041_092314011452PM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCharacterProfile_TC1041_092314011452PM.png' height='500' width='500'/> </a><br/>
 </div>
 </td>
-<td></td>
-<td>31</td>
-<td>com.nbcuni.test.publisher.tests.Advertising.MPS.AddMPSCallsToErrorPages@6e68bc46</td></tr>
-<tr>
-<td title='com.nbcuni.test.publisher.tests.Advertising.MPS.AutomaticallyCreatedMPSAdSlots.AutomaticallyCreatedMPSAdSlots_TC4128()'><b>AutomaticallyCreatedMPSAdSlots_TC4128</b><br>Test class: com.nbcuni.test.publisher.tests.Advertising.MPS.AutomaticallyCreatedMPSAdSlots<br/>
-<a href="#Output-1584930935" onClick='toggleBox("Output-1584930935", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1584930935" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1584930935">
-STEP 1 AND SETUP<br/>
-Open url 'http://qa5.publisher7.com'.<br/>
-Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
-Enter 'pa55word' in the 'Password' text box.<br/>
-Click the 'Login' button.<br/>
-Click the 'Modules' menu link.<br/>
-Switch to the active frame titled 'Modules dialog'.<br/>
-Enter 'MPS' in the 'Filter Name' text box.<br/>
-Wait for module filter titled 'MPS' to be visible in module list.<br/>
-Verify the 'MPS' check box is checked.<br/>
-Click the 'Close Overlay X'.<br/>
-Scroll by '-500'.<br/>
-Mouse over the 'Structure' menu link.<br/>
-Mouse over the 'MPS Blocks' menu link.<br/>
-Click the 'Add' menu link.<br/>
-Switch to the active frame titled 'Add a new MPS block dialog'.<br/>
-Enter '264f1dc6d134464' in the 'Block Name' text box.<br/>
-Click the 'Save' button.<br/>
-Verify success message of '264f1dc6d134464 has been created.' is present.<br/>
-Click the 'Close Overlay X'.<br/>
-Scroll by '-500'.<br/>
-Mouse over the 'Configuration' menu link.<br/>
-Mouse over the 'Web services' menu link.<br/>
-Click the 'MPS Configuration' menu link.<br/>
-Switch to the active frame titled 'MPS Configuration dialog'.<br/>
-Enter 'mps.io' in the 'MPS Host' text box.<br/>
-Click the 'Document Write' radio button.<br/>
-Enter 'pub7-development' in the 'Site Instance Override' text box.<br/>
-Click the 'Save configuration' button.<br/>
-Verify success message of 'The configuration options have been saved.' is present.<br/>
-STEP 2<br/>
-Click the 'Sync Ad Blocks' button.<br/>
-Verify success message of 'The configuration options have been saved.' is present.<br/>
-STEP 3<br/>
-Verify warning message 'These blocks don't exist in the list of ad blocks retrieved: ' is present.<br/>
-Verify warning message '264f1dc6d134464' is present.<br/>
-Click the 'Close Overlay X'.<br/>
-Scroll by '-500'.<br/>
-STEP 4<br/>
-Mouse over the 'Structure' menu link.<br/>
-Click the 'Blocks' menu link.<br/>
-Switch to the active frame titled 'Blocks dialog'.<br/>
-Select the block name 'bottommulti (MPS)' from the '- None -' drop down list.<br/>
-Select the block name 'topbanner (MPS)' from the '- None -' drop down list.<br/>
-Select the block name 'topbox (MPS)' from the '- None -' drop down list.<br/>
-Select the block name 'topmulti (MPS)' from the '- None -' drop down list.<br/>
-Select the block name '264f1dc6d134464 (MPS)' from the '- None -' drop down list.<br/>
-STEP 5<br/>
-Select the block name '264f1dc6d134464 (MPS)' from the 'Header' drop down list.<br/>
-Click the 'Save Blocks' button.<br/>
-Verify success message of 'The block settings have been updated.' is present.<br/>
-Click the 'Close Overlay X'.<br/>
-Scroll by '-500'.<br/>
-STEP 6 - N/A<br/>
-STEP 7<br/>
-Mouse over the 'Configuration' menu link.<br/>
-Mouse over the 'Web services' menu link.<br/>
-Click the 'MPS Configuration' menu link.<br/>
-Switch to the active frame titled 'MPS Configuration dialog'.<br/>
-Enter 'mps.io' in the 'MPS Host' text box.<br/>
-Click the 'Document Write' radio button.<br/>
-Enter 'sandbox' in the 'Site Instance Override' text box.<br/>
-Click the 'Save configuration' button.<br/>
-Verify success message of 'The configuration options have been saved.' is present.<br/>
-STEP 8<br/>
-Open mps service page at 'http://mps.io/request/describe/sandbox'.<br/>
-Verify the text '{"instance":{"dart_mode":"gpt-asynchronous","multislot":"0"},"adunits":{"Box Ad First":{"unit":"Box Ad First","slot":"topbox","sizes":["300x250"],"responsive":0},"Box Ad Second":{"unit":"Box Ad Second","slot":"bottombox","sizes":["300x250"],"responsive":0},"Cool Rich 1":{"unit":"Cool Rich 1","slot":"coolrich","responsive":0},"Cool Rich 2":{"unit":"Cool Rich 2","slot":"coolrich","responsive":0},"Flex Ad First":{"unit":"Flex Ad First","slot":"topmulti","sizes":["300x250","160x600","300x600"],"responsive":0},"Flex Ad Second":{"unit":"Flex Ad Second","slot":"bottommulti","sizes":["300x250","160x600","300x600"],"responsive":0},"Logo A":{"unit":"Logo A","slot":"logo","sizes":["88x31","120x90"],"responsive":0},"Top Banner":{"unit":"Top Banner","slot":"topbanner","sizes":["728x90","970x66"],"responsive":0},"Top Banner B":{"unit":"Top Banner B","slot":"topbanner","sizes":["2x2"],"responsive":0}},"components":["id-0516-4520471","monitoring","test.css"]}' is present on the page.<br/>
-STEP 9<br/>
-Open url 'http://qa5.publisher7.com'.<br/>
-Mouse over the 'Configuration' menu link.<br/>
-Mouse over the 'Web services' menu link.<br/>
-Click the 'MPS Configuration' menu link.<br/>
-Switch to the active frame titled 'MPS Configuration dialog'.<br/>
-Click the 'Sync Ad Blocks' button.<br/>
-Verify the text 'topbox' is NOT present on the page.<br/>
-Verify warning message 'These blocks don't exist in the list of ad blocks retrieved: ' is present.<br/>
-Verify warning message '264f1dc6d134464' is present.<br/>
-Click the 'Close Overlay X'.<br/>
-Scroll by '-500'.<br/>
-Mouse over the 'Structure' menu link.<br/>
-Click the 'Blocks' menu link.<br/>
-Switch to the active frame titled 'Blocks dialog'.<br/>
-Select the block name 'bottommulti (MPS)' from the '- None -' drop down list.<br/>
-Select the block name 'topbanner (MPS)' from the '- None -' drop down list.<br/>
-Select the block name 'topbox (MPS)' from the '- None -' drop down list.<br/>
-Select the block name 'topmulti (MPS)' from the '- None -' drop down list.<br/>
-Select the block name 'bottombox (MPS)' from the '- None -' drop down list.<br/>
-Select the block name 'coolrich (MPS)' from the '- None -' drop down list.<br/>
-Select the block name 'logo (MPS)' from the '- None -' drop down list.<br/>
-Select the block name '264f1dc6d134464 (MPS)' from the '- None -' drop down list.<br/>
-</div>
-</td>
-<td></td>
-<td>67</td>
-<td>com.nbcuni.test.publisher.tests.Advertising.MPS.AutomaticallyCreatedMPSAdSlots@70ca1fc0</td></tr>
-<tr>
-<td title='com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS.ImplementMPS_TC2901()'><b>ImplementMPS_TC2901</b><br>Test class: com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS<br/>
-<a href="#Output-113403275" onClick='toggleBox("Output-113403275", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-113403275" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-113403275">
-STEP 1<br/>
-Open url 'http://qa5.publisher7.com'.<br/>
-Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
-Enter 'pa55word' in the 'Password' text box.<br/>
-Click the 'Login' button.<br/>
-SETUP<br/>
-Click the 'Modules' menu link.<br/>
-Switch to the active frame titled 'Modules dialog'.<br/>
-Enter 'Pub Ads' in the 'Filter Name' text box.<br/>
-Wait for module filter titled 'Pub Ads' to be visible in module list.<br/>
-Verify the 'Pub Ads' check box is checked.<br/>
-Enter 'Pixelman' in the 'Filter Name' text box.<br/>
-Wait for module filter titled 'Pixelman' to be visible in module list.<br/>
-Enter 'MPS' in the 'Filter Name' text box.<br/>
-Wait for module filter titled 'MPS' to be visible in module list.<br/>
-Verify the 'MPS' check box is checked.<br/>
-Enter 'DART' in the 'Filter Name' text box.<br/>
-Wait for module filter titled 'DART' to be visible in module list.<br/>
-Enter 'Doubleclick for Publishers' in the 'Filter Name' text box.<br/>
-Wait for module filter titled 'Doubleclick for Publishers' to be visible in module list.<br/>
-Click the 'Close Overlay X'.<br/>
-Scroll by '-500'.<br/>
-Mouse over the 'Configuration' menu link.<br/>
-Mouse over the 'Web services' menu link.<br/>
-Click the 'MPS Configuration' menu link.<br/>
-Switch to the active frame titled 'MPS Configuration dialog'.<br/>
-Enter 'mps.io' in the 'MPS Host' text box.<br/>
-Click the 'Document Write' radio button.<br/>
-Enter 'pub7-development' in the 'Site Instance Override' text box.<br/>
-Clear all 'Name' text box values.<br/>
-Clear all 'Value' text box values.<br/>
-Uncheck all 'JSON' check boxes.<br/>
-Click the 'Save configuration' button.<br/>
-Verify success message of 'The configuration options have been saved.' is present.<br/>
-Click the 'Close Overlay X'.<br/>
-Scroll by '-500'.<br/>
-STEP 2 - N/A<br/>
-STEP 3 - N/A<br/>
-STEP 4<br/>
-Mouse over the 'Reports' menu link.<br/>
-Click the 'Status report' menu link.<br/>
-Switch to the active frame titled 'Status report dialog'.<br/>
-Verify the text 'Ad Tag Style' is present on the page.<br/>
-Verify the text 'MPS' is present on the page.<br/>
-Click the 'Close Overlay X'.<br/>
-Scroll by '-500'.<br/>
-STEP 5<br/>
-Verify the mps call parameter '"site":"pub7-development"' is present in the page source.<br/>
-Verify the mps call parameter '"title":"Welcome to' is present in the page source.<br/>
-Verify the mps call parameter '"path":"\/"' is present in the page source.<br/>
-Verify the mps call parameter '"is_content":0' is present in the page source.<br/>
-Verify the mps call parameter '"type":"other"' is present in the page source.<br/>
-STEP 6<br/>
-Click the 'People' menu link.<br/>
-Switch to the active frame titled 'People dialog'.<br/>
-Verify that no MPS calls were made on the page.<br/>
-Click the 'Close Overlay X'.<br/>
-Scroll by '-500'.<br/>
-STEP 7<br/>
-Open url 'http://qa5.publisher7.com/kfkjdjdkjdjldkjj'.<br/>
-Verify the mps call parameter '"site":"pub7-development"' is present in the page source.<br/>
-Verify the mps call parameter '"path":"ERROR/404"' is present in the page source.<br/>
-Verify the mps call parameter '"content_id":"ERROR"' is present in the page source.<br/>
-Open url 'http://qa5.publisher7.com'.<br/>
-STEP 8 - N/A - COVERED IN SETUP<br/>
-STEP 9<br/>
-Mouse over the 'Content' menu link.<br/>
-Mouse over the 'Add content' menu link.<br/>
-Click the 'Movie' menu link.<br/>
-Switch to the active frame titled 'Create Movie dialog'.<br/>
-Scroll to and click the 'Basic Information' tab.<br/>
-Enter 'ca29ed74cea24aa' in the 'Title' text box.<br/>
-Switch to the Synopsis frame.<br/>
-Enter a randomized text string into the 'Body' text area.<br/>
-Switch to the active frame titled 'Create Movie dialog'.<br/>
-Click the 'Cover' select button.<br/>
-Switch to the select file frame.<br/>
-Enter the file path for file upload.<br/>
-Click the 'Upload' button.<br/>
-Wait for the file link to be visible after upload.<br/>
-Click the 'Next' button.<br/>
-Click the 'Public Local Files' radio button.<br/>
-Click the 'Next' button.<br/>
-Verify the file image 'HanSolo' is present.<br/>
-Verify the img is loaded and visible.<br/>
-Click the 'Save' button.<br/>
-Switch to the active frame titled 'Create Movie dialog'.<br/>
-Click the 'Additional Information' link.<br/>
-Select the 'Syndicated' from the 'Movie Type' drop down list.<br/>
-Select the 'G' from the 'Rating' drop down list.<br/>
-Select the 'Action' from the 'Primary Genre' drop down list.<br/>
-Click the 'Save' button.<br/>
-Verify success message of 'Movie ca29ed74cea24aa has been created.' is present.<br/>
-Note the node number for the content item.<br/>
-STEP 10 through STEP 19<br/>
-Verify the mps call parameter '"site":"pub7-development"' is present in the page source.<br/>
-Verify the mps call parameter '"title":"ca29ed74cea24aa"' is present in the page source.<br/>
-Verify the mps call parameter '"path":"\/node\/711"' is present in the page source.<br/>
-Verify the mps call parameter '"content_id":"node711"' is present in the page source.<br/>
-Verify the mps call parameter '"is_content":1' is present in the page source.<br/>
-Verify the mps call parameter '"type":"movie"' is present in the page source.<br/>
-Verify the mps call parameter '"cag":{"genre":"Action","movie-rating":"G","movie-types":"Syndicated"}' is present in the page source.<br/>
-Verify the mps call parameter '"pubdate":' is present in the page source.<br/>
-STEP 20<br/>
-Verify 'a3VtdWQ9MQ==' is present in page source.<br/>
-STEP 21<br/>
-Mouse over the 'Content' menu link.<br/>
-Mouse over the 'Add content' menu link.<br/>
-Click the 'Media Gallery' menu link.<br/>
-Switch to the active frame titled 'Create Media Gallery dialog'.<br/>
-Enter '7daa653737ee4e0' in the 'Title' text box.<br/>
-Click the 'Media Items Select' button.<br/>
-Switch to the select file frame.<br/>
-Click the 'View Library' button.<br/>
-Enter 'HanSolo' in the 'File name' text box.<br/>
-Wait for the file search 'spinner' image to be present.<br/>
-Wait for the file search 'spinner' image to not be present, indicating image search is complete.<br/>
-Click the 'Apply' button.<br/>
-Wait for the file search 'spinner' image to be present.<br/>
-Wait for the file search 'spinner' image to not be present, indicating image search is complete.<br/>
-Verify the media thumbnail image 'HanSolo' is present.<br/>
-Verify the the img is loaded and visible.<br/>
-Click media thumbnail image number 1<br/>
-Click on the 'Submit' button.<br/>
-Switch to the active frame titled 'Create Media Gallery dialog'.<br/>
-Verify the img source of the Media Item contains 'HanSolo'.<br/>
-Assert the the img is loaded and visible.<br/>
-Click the 'Save' button.<br/>
-Verify success message of 'Media Gallery 7daa653737ee4e0 has been created.' is present.<br/>
-Note the node number for the content item.<br/>
-Get the file id of image number 1.<br/>
-STEP 22<br/>
-Open url 'http://qa5.publisher7.com/node/716/1211'.<br/>
-STEP 28<br/>
-Verify 'typeof(mps.writeFooter)' is present in page source.<br/>
-STEP 29<br/>
-Mouse over the 'Structure' menu link.<br/>
-Mouse over the 'MPS Blocks' menu link.<br/>
-Click the 'Add' menu link.<br/>
-Switch to the active frame titled 'Add a new MPS block dialog'.<br/>
-Enter '31e3642a93714a2' in the 'Block Name' text box.<br/>
-Click the 'Save' button.<br/>
-Verify success message of '31e3642a93714a2 has been created.' is present.<br/>
-Click the 'Close Overlay X'.<br/>
-Scroll by '-500'.<br/>
-STEP 30<br/>
-Mouse over the 'Structure' menu link.<br/>
-Click the 'Blocks' menu link.<br/>
-Switch to the active frame titled 'Blocks dialog'.<br/>
-Select the block name '31e3642a93714a2 (MPS)' from the 'Header' drop down list.<br/>
-Click the 'Save Blocks' button.<br/>
-Verify success message of 'The block settings have been updated.' is present.<br/>
-Click the 'Close Overlay X'.<br/>
-Scroll by '-500'.<br/>
-STEP 31<br/>
-Verify 'mps.getAd('31e3642a93714a2')' is present in page source.<br/>
-STEP 32 - N/A<br/>
-CLEANUP<br/>
-Mouse over the 'Structure' menu link.<br/>
-Click the 'Blocks' menu link.<br/>
-Switch to the active frame titled 'Blocks dialog'.<br/>
-Select the block name '31e3642a93714a2 (MPS)' from the '- None -' drop down list.<br/>
-Click the 'Save Blocks' button.<br/>
-Click the 'Close Overlay X'.<br/>
-Scroll by '-500'.<br/>
-</div>
-</td>
-<td></td>
-<td>109</td>
-<td>com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@1f4ebbf5</td></tr>
-<tr>
-<td title='com.nbcuni.test.publisher.tests.Advertising.MPS.MPSBlockAccess.MPSBlockAccess_TC3608()'><b>MPSBlockAccess_TC3608</b><br>Test class: com.nbcuni.test.publisher.tests.Advertising.MPS.MPSBlockAccess<br/>
-<a href="#Output-1660324072" onClick='toggleBox("Output-1660324072", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1660324072" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1660324072">
-STEP 1<br/>
-Open url 'http://qa5.publisher7.com'.<br/>
-Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
-Enter 'pa55word' in the 'Password' text box.<br/>
-Click the 'Login' button.<br/>
-SETUP<br/>
-Click the 'Modules' menu link.<br/>
-Switch to the active frame titled 'Modules dialog'.<br/>
-Enter 'Pixelman' in the 'Filter Name' text box.<br/>
-Wait for module filter titled 'Pixelman' to be visible in module list.<br/>
-Enter 'MPS' in the 'Filter Name' text box.<br/>
-Wait for module filter titled 'MPS' to be visible in module list.<br/>
-Verify the 'MPS' check box is checked.<br/>
-Click the 'Close Overlay X'.<br/>
-Scroll by '-500'.<br/>
-STEP 2<br/>
-Mouse over the 'Structure' menu link.<br/>
-Click the 'MPS Blocks' menu link.<br/>
-Switch to frame titled 'MPS Blocks'.<br/>
-Click the 'Close Overlay X'.<br/>
-Scroll by '-500'.<br/>
-STEP 3<br/>
-Mouse over the 'People' menu link.<br/>
-Click the 'Add user' menu link.<br/>
-Switch to the active frame titled 'People dialog'.<br/>
-Enter '031231adf562463@78beee1ddd964d0.com' in the 'Username' text box.<br/>
-Enter '031231adf562463@78beee1ddd964d0.com' in the 'E-mail address' text box.<br/>
-Enter 'pa55word' in the 'Password' text box.<br/>
-Enter 'pa55word' in the 'Confirm password' text box.<br/>
-Check the 'administrator' check box.<br/>
-Enter '49abdf9d952140c' in the 'First Name' text box.<br/>
-Enter '5ff66b739d8f42e' in the 'Last Name' text box.<br/>
-Click the 'Create new account' button.<br/>
-Verify success message of 'A welcome message with further instructions has been e-mailed to the new user 031231adf562463@78beee1ddd964d0.com.' is present.<br/>
-Click the 'Close Overlay X'.<br/>
-Scroll by '-500'.<br/>
-STEP 4<br/>
-Click the 'Logout' button.<br/>
-Enter '031231adf562463@78beee1ddd964d0.com' in the 'Email Address' text box.<br/>
-Enter 'pa55word' in the 'Password' text box.<br/>
-Click the 'Login' button.<br/>
-STEP 5<br/>
-Mouse over the 'Structure' menu link.<br/>
-Click the 'MPS Blocks' menu link.<br/>
-Switch to frame titled 'MPS Blocks'.<br/>
-</div>
-</td>
-<td></td>
-<td>31</td>
-<td>com.nbcuni.test.publisher.tests.Advertising.MPS.MPSBlockAccess@496a2dd4</td></tr>
-<tr>
-<td title='com.nbcuni.test.publisher.tests.Advertising.MPS.MPSConfigurationPage.MPSConfigurationPage_TC3306()'><b>MPSConfigurationPage_TC3306</b><br>Test class: com.nbcuni.test.publisher.tests.Advertising.MPS.MPSConfigurationPage<br/>
-<a href="#Output-1166469237" onClick='toggleBox("Output-1166469237", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1166469237" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1166469237">
-STEP 1<br/>
-Open url 'http://qa5.publisher7.com'.<br/>
-Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
-Enter 'pa55word' in the 'Password' text box.<br/>
-Click the 'Login' button.<br/>
-SETUP<br/>
-Click the 'Modules' menu link.<br/>
-Switch to the active frame titled 'Modules dialog'.<br/>
-Verify the 'MPS' check box is checked.<br/>
-Click the 'Close Overlay X'.<br/>
-Scroll by '-500'.<br/>
-STEP 2 - 3<br/>
-Mouse over the 'Configuration' menu link.<br/>
-Mouse over the 'Web services' menu link.<br/>
-Click the 'MPS Configuration' menu link.<br/>
-Switch to the active frame titled 'MPS Configuration dialog'.<br/>
-STEP 4<br/>
-Clear all 'Name' text box values.<br/>
-Clear all 'Value' text box values.<br/>
-Uncheck all 'JSON' check boxes.<br/>
-Enter 'mps.io' in the 'MPS Host' text box.<br/>
-Click the 'Document Write' radio button.<br/>
-Enter 'pub7-development' in the 'Site Instance Override' text box.<br/>
-Click the 'Save configuration' button.<br/>
-Verify success message of 'The configuration options have been saved.' is present.<br/>
-Click the 'Close Overlay X'.<br/>
-Scroll by '-500'.<br/>
-Verify the mps call parameter '"site":"pub7-development"' is present in the page source.<br/>
-Verify the mps call parameter '"title":"Welcome to' is present in the page source.<br/>
-Verify the mps call parameter '"path":"\/"' is present in the page source.<br/>
-Verify the mps call parameter '"is_content":0' is present in the page source.<br/>
-Verify the mps call parameter '"type":"other"' is present in the page source.<br/>
-Verify the mps call parameter 'var mpsopts = {"host":"mps.io"}' is present in the page source.<br/>
-STEP 5<br/>
-Mouse over the 'Configuration' menu link.<br/>
-Mouse over the 'Web services' menu link.<br/>
-Click the 'MPS Configuration' menu link.<br/>
-Switch to the active frame titled 'MPS Configuration dialog'.<br/>
-Click the 'DOM Injection (Only select this method if JQuery is enabled).' radio button.<br/>
-Click the 'Save configuration' button.<br/>
-Verify success message of 'The configuration options have been saved.' is present.<br/>
-Click the 'Close Overlay X'.<br/>
-Scroll by '-500'.<br/>
-Verify 'mpsload.src='//'+mpsopts.host+'/fetch/ext/load-'+mpscall.site+'.js?nowrite=jq'; mpsload.id="mps-load"' is present in page source.<br/>
-Verify 'mpsload.async=false; head.insertBefore(mpsload,head.firstChild)' is present in page source.<br/>
-STEP 6<br/>
-Open url 'http://qa5.publisher7.com/?x=y'.<br/>
-Verify the mps call parameter '"title":"Welcome to' is present in the page source.<br/>
-Verify the mps call parameter '"path":"\/"' is present in the page source.<br/>
-Verify the mps call parameter '"qs":"eD15"' is present in the page source.<br/>
-STEP 7<br/>
-Mouse over the 'Configuration' menu link.<br/>
-Mouse over the 'Web services' menu link.<br/>
-Click the 'MPS Configuration' menu link.<br/>
-Switch to the active frame titled 'MPS Configuration dialog'.<br/>
-Un-check the 'Send Query Strings' check box.<br/>
-Click the 'Save configuration' button.<br/>
-Verify success message of 'The configuration options have been saved.' is present.<br/>
-Click the 'Close Overlay X'.<br/>
-Scroll by '-500'.<br/>
-Verify 'Site-Install","path":"\/","qs":"eD15"' is not present in page source.<br/>
-STEP 8<br/>
-Mouse over the 'Configuration' menu link.<br/>
-Mouse over the 'Web services' menu link.<br/>
-Click the 'MPS Configuration' menu link.<br/>
-Switch to the active frame titled 'MPS Configuration dialog'.<br/>
-Enter 'mps.io' in the 'MPS Host' text box.<br/>
-Click the 'Document Write' radio button.<br/>
-Enter 'pub7-development' in the 'Site Instance Override' text box.<br/>
-Check the 'Send Query Strings' check box.<br/>
-Enter 'key1' in the 'Name' text box with index '1'.<br/>
-Enter 'value1' in the 'Value' text box with index '1'.<br/>
-Click the 'Add another opt' button.<br/>
-Enter 'key2' in the 'Name' text box with index '2'.<br/>
-Enter '{"key":"value", "key2": "value2"}' in the 'Value' text box with index '2'.<br/>
-Check the 'JSON' check box with index '2'.<br/>
-Click the 'Save configuration' button.<br/>
-Verify success message of 'The configuration options have been saved.' is present.<br/>
-Click the 'Close Overlay X'.<br/>
-Scroll by '-500'.<br/>
-Verify 'var mpsopts = {"host":"mps.io","key1":"value1","key2":{"key":"value","key2":"value2"}}' is present in page source.<br/>
-STEP 9<br/>
-Mouse over the 'Configuration' menu link.<br/>
-Mouse over the 'Web services' menu link.<br/>
-Click the 'MPS Configuration' menu link.<br/>
-Switch to the active frame titled 'MPS Configuration dialog'.<br/>
-Enter 'key3' in the 'Name' text box with index '3'.<br/>
-Enter 'jshdhdhdhjdhshd' in the 'Value' text box with index '3'.<br/>
-Check the 'JSON' check box with index '3'.<br/>
-Click the 'Save configuration' button.<br/>
-Verify error message of 'If the json checkbox is checked, this must be a valid json object.' is present.<br/>
-Click the 'Close Overlay X'.<br/>
-Scroll by '-500'.<br/>
-STEP 10<br/>
-Verify '//mps.io/request/page/jsonp?callback=mpsCallback' is present in page source.<br/>
-STEP 11 - N/A<br/>
-CLEANUP<br/>
-Mouse over the 'Configuration' menu link.<br/>
-Mouse over the 'Web services' menu link.<br/>
-Click the 'MPS Configuration' menu link.<br/>
-Switch to the active frame titled 'MPS Configuration dialog'.<br/>
-Clear all 'Name' text box values.<br/>
-Clear all 'Value' text box values.<br/>
-Uncheck all 'JSON' check boxes.<br/>
-Click the 'Save configuration' button.<br/>
-</div>
-</td>
-<td></td>
-<td>61</td>
-<td>com.nbcuni.test.publisher.tests.Advertising.MPS.MPSConfigurationPage@484ae502</td></tr>
-<tr>
-<td title='com.nbcuni.test.publisher.tests.Advertising.MPS.MPSEndToEndIntegration.MPSEndToEndIntegration_TC3996()'><b>MPSEndToEndIntegration_TC3996</b><br>Test class: com.nbcuni.test.publisher.tests.Advertising.MPS.MPSEndToEndIntegration<br/>
-<a href="#Output-1057459996" onClick='toggleBox("Output-1057459996", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1057459996" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1057459996">
-STEP 1<br/>
-Open url 'http://qa5.publisher7.com'.<br/>
-Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
-Enter 'pa55word' in the 'Password' text box.<br/>
-Click the 'Login' button.<br/>
-Click the 'Modules' menu link.<br/>
-Switch to the active frame titled 'Modules dialog'.<br/>
-Enter 'Pixelman' in the 'Filter Name' text box.<br/>
-Wait for module filter titled 'Pixelman' to be visible in module list.<br/>
-Enter 'MPS' in the 'Filter Name' text box.<br/>
-Wait for module filter titled 'MPS' to be visible in module list.<br/>
-Verify the 'MPS' check box is checked.<br/>
-Click the 'Close Overlay X'.<br/>
-Scroll by '-500'.<br/>
-STEP 2<br/>
-Mouse over the 'Configuration' menu link.<br/>
-Mouse over the 'Web services' menu link.<br/>
-Click the 'MPS Configuration' menu link.<br/>
-Switch to the active frame titled 'MPS Configuration dialog'.<br/>
-STEP 3<br/>
-Enter 'mps.io' in the 'MPS Host' text box.<br/>
-Click the 'Document Write' radio button.<br/>
-Enter 'pub7-development' in the 'Site Instance Override' text box.<br/>
-Clear all 'Name' text box values.<br/>
-Clear all 'Value' text box values.<br/>
-Uncheck all 'JSON' check boxes.<br/>
-Click the 'Save configuration' button.<br/>
-Click the 'Sync Ad Blocks' button.<br/>
-Verify success message of 'The configuration options have been saved.' is present.<br/>
-Click the 'Close Overlay X'.<br/>
-Scroll by '-500'.<br/>
-STEP 4 - N/A<br/>
-STEP 5<br/>
-Mouse over the 'Structure' menu link.<br/>
-Click the 'Blocks' menu link.<br/>
-Switch to the active frame titled 'Blocks dialog'.<br/>
-STEP 6 and 7<br/>
-Select the block name 'topmulti (MPS)' from the 'Footer' drop down list.<br/>
-Click the 'Save Blocks' button.<br/>
-Verify success message of 'The block settings have been updated.' is present.<br/>
-Click the 'Close Overlay X'.<br/>
-Scroll by '-500'.<br/>
-STEP 8<br/>
-Click the 'Home' menu link.<br/>
-CLEANUP<br/>
-Mouse over the 'Structure' menu link.<br/>
-Click the 'Blocks' menu link.<br/>
-Switch to the active frame titled 'Blocks dialog'.<br/>
-Select the block name 'topmulti (MPS)' from the '- None -' drop down list.<br/>
-Click the 'Save Blocks' button.<br/>
-</div>
-</td>
-<td></td>
-<td>49</td>
-<td>com.nbcuni.test.publisher.tests.Advertising.MPS.MPSEndToEndIntegration@105697e9</td></tr>
-<tr>
-<td title='com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens.MPSSupportTokens_TC3641()'><b>MPSSupportTokens_TC3641</b><br>Test class: com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens<br/>
-<a href="#Output-687238923" onClick='toggleBox("Output-687238923", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-687238923" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-687238923">
-STEP 1<br/>
-Open url 'http://qa5.publisher7.com'.<br/>
-Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
-Enter 'pa55word' in the 'Password' text box.<br/>
-Click the 'Login' button.<br/>
-SETUP<br/>
-Click the 'Modules' menu link.<br/>
-Switch to the active frame titled 'Modules dialog'.<br/>
-Enter 'Pixelman' in the 'Filter Name' text box.<br/>
-Wait for module filter titled 'Pixelman' to be visible in module list.<br/>
-Enter 'MPS' in the 'Filter Name' text box.<br/>
-Wait for module filter titled 'MPS' to be visible in module list.<br/>
-Verify the 'MPS' check box is checked.<br/>
-Click the 'Close Overlay X'.<br/>
-Scroll by '-500'.<br/>
-Mouse over the 'Configuration' menu link.<br/>
-Mouse over the 'Web services' menu link.<br/>
-Click the 'MPS Configuration' menu link.<br/>
-Switch to the active frame titled 'MPS Configuration dialog'.<br/>
-Enter '' in the 'Pattern for Category Field' text box.<br/>
-Click the 'Save configuration' button.<br/>
-Verify success message of 'The configuration options have been saved.' is present.<br/>
-Click the 'Close Overlay X'.<br/>
-Scroll by '-500'.<br/>
-STEP 2 - N/A<br/>
-STEP 3<br/>
-Verify '"cat":"content"' is not present in page source.<br/>
-STEP 4<br/>
-Mouse over the 'Content' menu link.<br/>
-Mouse over the 'Add content' menu link.<br/>
-Click the 'Movie' menu link.<br/>
-Switch to the active frame titled 'Create Movie dialog'.<br/>
-Scroll to and click the 'Basic Information' tab.<br/>
-Enter '4a097fd85284483' in the 'Title' text box.<br/>
-Switch to the Synopsis frame.<br/>
-Enter a randomized text string into the 'Body' text area.<br/>
-Switch to the active frame titled 'Create Movie dialog'.<br/>
-Click the 'Cover' select button.<br/>
-Switch to the select file frame.<br/>
-Enter the file path for file upload.<br/>
-Click the 'Upload' button.<br/>
-Wait for the file link to be visible after upload.<br/>
-Click the 'Next' button.<br/>
-Click the 'Public Local Files' radio button.<br/>
-Click the 'Next' button.<br/>
-Verify the file image 'HanSolo' is present.<br/>
-Verify the img is loaded and visible.<br/>
-Click the 'Save' button.<br/>
-Switch to the active frame titled 'Create Movie dialog'.<br/>
-Click the 'Additional Information' link.<br/>
-Select the 'Syndicated' from the 'Movie Type' drop down list.<br/>
-Select the 'G' from the 'Rating' drop down list.<br/>
-Select the 'Action' from the 'Primary Genre' drop down list.<br/>
-Click the 'Save' button.<br/>
-Verify success message of 'Movie 4a097fd85284483 has been created.' is present.<br/>
-Verify '"cat":"content"' is present in page source.<br/>
-STEP 5<br/>
-Click the 'Edit Draft' link in the work bench.<br/>
-Switch to the active frame titled 'Edit Movie 4a097fd85284483 dialog'.<br/>
-Click the 'URL path settings' link.<br/>
-Uncheck the 'Generate automatic URL alias' check box.<br/>
-Enter 'eb310c9b7d' in the 'URL alias' text box.<br/>
-Click the 'Save' button.<br/>
-Verify success message of 'Movie 4a097fd85284483 has been updated.' is present.<br/>
-STEP 6<br/>
-Verify '"cat":"eb310c9b7d"' is present in page source.<br/>
-STEP 7<br/>
-Click the 'Edit Draft' link in the work bench.<br/>
-Switch to the active frame titled 'Edit Movie 4a097fd85284483 dialog'.<br/>
-Click the 'URL path settings' link.<br/>
-Enter 'eb310c9b7d/mps-testing/2arg/3arg/4arg/5arg/6arg' in the 'URL alias' text box.<br/>
-Click the 'Save' button.<br/>
-Verify success message of 'Movie 4a097fd85284483 has been updated.' is present.<br/>
-STEP 8<br/>
-Verify '"cat":"eb310c9b7d|mps-testing|2arg"}' is present in page source.<br/>
-STEP 9<br/>
-Mouse over the 'Configuration' menu link.<br/>
-Mouse over the 'Web services' menu link.<br/>
-Click the 'MPS Configuration' menu link.<br/>
-Switch to the active frame titled 'MPS Configuration dialog'.<br/>
-Click the 'REPLACEMENT PATTERNS' link.<br/>
-Click the 'MPS' link.<br/>
-Verify the 'MPS CAT Property' link with text '[mps:cat-pattern:?]' is present.<br/>
-Enter '[mps:cat-pattern:?]' in the 'Pattern for Category Field' text box.<br/>
-STEP 10<br/>
-Click the 'Save configuration' button.<br/>
-Verify success message of 'The configuration options have been saved.' is present.<br/>
-Click the 'Close Overlay X'.<br/>
-Scroll by '-500'.<br/>
-STEP 11<br/>
-Verify '"cat":"eb310c9b7d|mps-testing|2arg|3arg|4arg"}' is present in page source.<br/>
-STEP 12<br/>
-Switch to the active frame titled 'Execute PHP Code dialog'.<br/>
-Enter 'variable_set('mps_cat_pattern', '');echo _mps_build_cat();echo PHP_EOL;variable_set('mps_cat_pattern', '[mps:cat-pattern:?]');echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/cast'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/thisisareallyreallyreallyreallyreallyreallylongurlXXXXXX/season/episode/cast/name'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/thisisareallyreallyreallyreallyreallyreallylongurlXXXXXX/season/episode/cast/'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/show//episode/cast'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/show/season//episode//'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => '/show/season//'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => '/show///'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => '/brand/season//episode'));echo PHP_EOL;variable_set('mps_cat_pattern', '[mps:cat-pattern:2]|[mps:cat-pattern:3]');echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/cast'));echo PHP_EOL;variable_set('mps_cat_pattern', '[mps:cat-pattern:0]|[mps:cat-pattern:2]|[current-date:custom:d]|[mps:cat-pattern:3]|');echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/cast'));variable_set('mps_cat_pattern', '[mps:cat-pattern:?]');echo PHP_EOL;echo '*' . _mps_build_cat(array('aliased-path' => '/')) . '*';' in the 'PHP Code to Execute' text area.<br/>
-Click the 'Execute' button.<br/>
-Verify the expected response is 'Status message
-devel
-brand|show|season|episode
-brand|thisisareallyreallyreallyreallyreallyreallylongurl|season|episode|cast
-brand|thisisareallyreallyreallyreallyreallyreallylongurl|season|episode|cast
-brand|show|~|episode
-brand|show|season
-brand|show|season|~|episode
-~|show
-
-~|brand|season
-season|episode
-brand|season|17
-**'.<br/>
-Click the 'Close Overlay X'.<br/>
-Scroll by '-500'.<br/>
-CLEANUP<br/>
-Mouse over the 'Configuration' menu link.<br/>
-Mouse over the 'Web services' menu link.<br/>
-Click the 'MPS Configuration' menu link.<br/>
-Switch to the active frame titled 'MPS Configuration dialog'.<br/>
-Enter '' in the 'Pattern for Category Field' text box.<br/>
-Click the 'Save configuration' button.<br/>
-</div>
-</td>
-<td></td>
-<td>77</td>
-<td>com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens@647f84c9</td></tr>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element
+  (Session info: chrome=37.0.2062.122)
+  (Driver info: chromedriver=2.8.241036,platform=Mac OS X 10.9.4 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 20.01 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.41.0&apos;, revision: &apos;3192d8a6c4449dc285928ba024779344f5423c58&apos;, time: &apos;2014-03-27 11:29:39&apos;
+System info: host: &apos;BACLARK77-MAC1.local&apos;, ip: &apos;192.168.0.4&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.4&apos;, java.version: &apos;1.7.0_25&apos;
+Session ID: e7e3e9bebd030225a4ec9f51e5d69a56
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.I245r3}, rotatable=false, locationContextEnabled=true, version=37.0.2062.122, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, nativeEvents=true, webStorageEnabled=true, applicationCacheEnabled=false, takesScreenshot=true}]
+Command duration or timeout: 20.59 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.41.0&apos;, revision: &apos;3192d8a6c4449dc285928ba024779344f5423c58&apos;, time: &apos;2014-03-27 11:29:39&apos;
+System info: host: &apos;BACLARK77-MAC1.local&apos;, ip: &apos;192.168.0.4&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.4&apos;, java.version: &apos;1.7.0_25&apos;
+Session ID: 7fe574a4-9bea-49a7-9e3c-dd4a7d424333
+Driver info: com.nbcuni.test.publisher.common.Driver.Driver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.I245r3}, rotatable=false, locationContextEnabled=true, webdriver.remote.sessionid=7fe574a4-9bea-49a7-9e3c-dd4a7d424333, version=37.0.2062.122, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, nativeEvents=true, webStorageEnabled=true, applicationCacheEnabled=false, takesScreenshot=true}]
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:193)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:348)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:445)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:340)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:59)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:34)
+	at com.sun.proxy.$Proxy12.sendKeys(Unknown Source)
+	at com.nbcuni.test.publisher.pageobjects.UserLogin.EnterEmailAddress(UserLogin.java:44)
+	at com.nbcuni.test.publisher.pageobjects.UserLogin.Login(UserLogin.java:69)
+	at com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile.CreateCharacterProfile_TC1041(CreateCharacterProfile.java:23)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+Caused by: org.openqa.selenium.remote.ScreenshotException: Screen shot has been taken
+Build info: version: &apos;2.41.0&apos;, revision: &apos;3192d8a6c4449dc285928ba024779344f5423c58&apos;, time: &apos;2014-03-27 11:29:39&apos;
+System info: host: &apos;BACLARK77-MAC1.local&apos;, ip: &apos;192.168.0.4&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.4&apos;, java.version: &apos;1.7.0_25&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:125)
+	... 24 more
+Caused by: org.openqa.selenium.NoSuchElementException: no such element
+  (Session info: chrome=37.0.2062.122)
+  (Driver info: chromedriver=2.8.241036,platform=Mac OS X 10.9.4 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 20.01 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.41.0&apos;, revision: &apos;3192d8a6c4449dc285928ba024779344f5423c58&apos;, time: &apos;2014-03-27 11:29:39&apos;
+System info: host: &apos;BACLARK77-MAC1.local&apos;, ip: &apos;192.168.0.4&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.4&apos;, java.version: &apos;1.7.0_25&apos;
+Session ID: e7e3e9bebd030225a4ec9f51e5d69a56
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.I245r3}, rotatable=false, locationContextEnabled=true, version=37.0.2062.122, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, nativeEvents=true, webStorageEnabled=true, applicationCacheEnabled=false, takesScreenshot=true}]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.41.0&apos;, revision: &apos;3192d8a6c4449dc285928ba024779344f5423c58&apos;, time: &apos;2014-03-27 11:29:39&apos;
+System info: host: &apos;BACLARK77-MAC1.local&apos;, ip: &apos;192.168.0.4&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.4&apos;, java.version: &apos;1.7.0_25&apos;
+Driver info: driver.version: EventFiringWebDriver
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:193)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:348)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:445)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:340)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:101)
+	at com.sun.proxy.$Proxy10.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:184)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:47)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:33)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:170)
+	... 3 more
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace380247559", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace380247559'><pre>org.openqa.selenium.NoSuchElementException: no such element
+  (Session info: chrome=37.0.2062.122)
+  (Driver info: chromedriver=2.8.241036,platform=Mac OS X 10.9.4 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 20.01 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.41.0&apos;, revision: &apos;3192d8a6c4449dc285928ba024779344f5423c58&apos;, time: &apos;2014-03-27 11:29:39&apos;
+System info: host: &apos;BACLARK77-MAC1.local&apos;, ip: &apos;192.168.0.4&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.4&apos;, java.version: &apos;1.7.0_25&apos;
+Session ID: e7e3e9bebd030225a4ec9f51e5d69a56
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.I245r3}, rotatable=false, locationContextEnabled=true, version=37.0.2062.122, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, nativeEvents=true, webStorageEnabled=true, applicationCacheEnabled=false, takesScreenshot=true}]
+Command duration or timeout: 20.59 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.41.0&apos;, revision: &apos;3192d8a6c4449dc285928ba024779344f5423c58&apos;, time: &apos;2014-03-27 11:29:39&apos;
+System info: host: &apos;BACLARK77-MAC1.local&apos;, ip: &apos;192.168.0.4&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.4&apos;, java.version: &apos;1.7.0_25&apos;
+Session ID: 7fe574a4-9bea-49a7-9e3c-dd4a7d424333
+Driver info: com.nbcuni.test.publisher.common.Driver.Driver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.I245r3}, rotatable=false, locationContextEnabled=true, webdriver.remote.sessionid=7fe574a4-9bea-49a7-9e3c-dd4a7d424333, version=37.0.2062.122, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, nativeEvents=true, webStorageEnabled=true, applicationCacheEnabled=false, takesScreenshot=true}]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:193)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:348)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:445)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:340)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:59)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:34)
+	at com.sun.proxy.$Proxy12.sendKeys(Unknown Source)
+	at com.nbcuni.test.publisher.pageobjects.UserLogin.EnterEmailAddress(UserLogin.java:44)
+	at com.nbcuni.test.publisher.pageobjects.UserLogin.Login(UserLogin.java:69)
+	at com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile.CreateCharacterProfile_TC1041(CreateCharacterProfile.java:23)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+Caused by: org.openqa.selenium.remote.ScreenshotException: Screen shot has been taken
+Build info: version: &apos;2.41.0&apos;, revision: &apos;3192d8a6c4449dc285928ba024779344f5423c58&apos;, time: &apos;2014-03-27 11:29:39&apos;
+System info: host: &apos;BACLARK77-MAC1.local&apos;, ip: &apos;192.168.0.4&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.4&apos;, java.version: &apos;1.7.0_25&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:125)
+	... 24 more
+Caused by: org.openqa.selenium.NoSuchElementException: no such element
+  (Session info: chrome=37.0.2062.122)
+  (Driver info: chromedriver=2.8.241036,platform=Mac OS X 10.9.4 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 20.01 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.41.0&apos;, revision: &apos;3192d8a6c4449dc285928ba024779344f5423c58&apos;, time: &apos;2014-03-27 11:29:39&apos;
+System info: host: &apos;BACLARK77-MAC1.local&apos;, ip: &apos;192.168.0.4&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.4&apos;, java.version: &apos;1.7.0_25&apos;
+Session ID: e7e3e9bebd030225a4ec9f51e5d69a56
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.I245r3}, rotatable=false, locationContextEnabled=true, version=37.0.2062.122, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, nativeEvents=true, webStorageEnabled=true, applicationCacheEnabled=false, takesScreenshot=true}]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.41.0&apos;, revision: &apos;3192d8a6c4449dc285928ba024779344f5423c58&apos;, time: &apos;2014-03-27 11:29:39&apos;
+System info: host: &apos;BACLARK77-MAC1.local&apos;, ip: &apos;192.168.0.4&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.4&apos;, java.version: &apos;1.7.0_25&apos;
+Driver info: driver.version: EventFiringWebDriver
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:193)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:348)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:445)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:340)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:101)
+	at com.sun.proxy.$Proxy10.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:184)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:47)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:33)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:170)
+	... 3 more
+</pre></div></td>
+<td>21</td>
+<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@e244821</td></tr>
 </table><p>
 </body>
 </html>
