@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="3" total="4" passed="1">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
     <line>
-      <![CDATA[Open url 'http://acc.publisher7.com'.]]>
+      <![CDATA[STEP 1]]>
+    </line>
+    <line>
+      <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
     </line>
     <line>
       <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
@@ -14,31 +17,52 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
+      <![CDATA[SETUP]]>
+    </line>
+    <line>
       <![CDATA[Click the 'Modules' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to frame titled 'Modules'.]]>
+      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Sticky Edit Actions' in the 'Filter Name' text box.]]>
+      <![CDATA[Enter 'Pixelman' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Wait for module filter titled 'Sticky Edit Actions' to be visible in module list.]]>
+      <![CDATA[Wait for module filter titled 'Pixelman' to be visible in module list.]]>
     </line>
     <line>
-      <![CDATA[Check the 'Sticky Edit Actions' check box.]]>
+      <![CDATA[Enter 'MPS' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for module filter titled 'MPS' to be visible in module list.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'MPS' check box is checked.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll by '-500'.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Configuration' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Web services' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'MPS Configuration' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'MPS Configuration dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '' in the 'Pattern for Category Field' text box.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save configuration' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
-    </line>
-    <line>
-      <![CDATA[Switch back to the 'Modules' frame.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to frame titled 'Modules'.]]>
     </line>
     <line>
       <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
@@ -50,7 +74,16 @@
       <![CDATA[Scroll by '-500'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Home' menu link.]]>
+      <![CDATA[STEP 2 - N/A]]>
+    </line>
+    <line>
+      <![CDATA[STEP 3]]>
+    </line>
+    <line>
+      <![CDATA[Verify '"cat":"content"' is not present in page source.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 4]]>
     </line>
     <line>
       <![CDATA[Mouse over the 'Content' menu link.]]>
@@ -59,16 +92,16 @@
       <![CDATA[Mouse over the 'Add content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Post' menu link.]]>
+      <![CDATA[Click the 'Movie' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
     </line>
     <line>
-      <![CDATA[Enter '7ee5d23c1e7c40f' in the 'Title' text box.]]>
+      <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
     </line>
     <line>
-      <![CDATA[Scroll by '100'.]]>
+      <![CDATA[Enter '7f7e8a9ba9974d7' in the 'Title' text box.]]>
     </line>
     <line>
       <![CDATA[Switch to the Synopsis frame.]]>
@@ -77,73 +110,151 @@
       <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
     </line>
     <line>
-      <![CDATA[Verify the sticky edit 'Save' button is present.]]>
+      <![CDATA[Click the 'Cover' select button.]]>
     </line>
     <line>
-      <![CDATA[Verify the sticky edit 'Preview' button is present.]]>
+      <![CDATA[Switch to the select file frame.]]>
     </line>
     <line>
-      <![CDATA[Scroll by '100'.]]>
+      <![CDATA[Enter the file path for file upload.]]>
     </line>
     <line>
-      <![CDATA[Verify the sticky edit 'Save' button is present.]]>
+      <![CDATA[Click the 'Upload' button.]]>
     </line>
     <line>
-      <![CDATA[Verify the sticky edit 'Preview' button is present.]]>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Meta tags' link.]]>
+      <![CDATA[Click the 'Next' button.]]>
     </line>
     <line>
-      <![CDATA[Verify the sticky edit 'Save' button is present.]]>
+      <![CDATA[Click the 'Public Local Files' radio button.]]>
     </line>
     <line>
-      <![CDATA[Verify the sticky edit 'Preview' button is present.]]>
+      <![CDATA[Click the 'Next' button.]]>
     </line>
     <line>
-      <![CDATA[Scroll by '100'.]]>
+      <![CDATA[Verify the file image 'HanSolo' is present.]]>
     </line>
     <line>
-      <![CDATA[Verify the sticky edit 'Save' button is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the sticky edit 'Preview' button is present.]]>
+      <![CDATA[Verify the img is loaded and visible.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'Post 7ee5d23c1e7c40f has been created.' is present.]]>
+      <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
     </line>
     <line>
-      <![CDATA[Verify the sticky edit 'Save' button is present.]]>
+      <![CDATA[Click the 'Additional Information' link.]]>
     </line>
     <line>
-      <![CDATA[Verify the sticky edit 'Preview' button is present.]]>
+      <![CDATA[Select the 'Syndicated' from the 'Movie Type' drop down list.]]>
     </line>
     <line>
-      <![CDATA[Scroll by '100'.]]>
+      <![CDATA[Select the 'G' from the 'Rating' drop down list.]]>
     </line>
     <line>
-      <![CDATA[Verify the sticky edit 'Save' button is present.]]>
+      <![CDATA[Select the 'Action' from the 'Primary Genre' drop down list.]]>
     </line>
     <line>
-      <![CDATA[Verify the sticky edit 'Preview' button is present.]]>
+      <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Modules' menu link.]]>
+      <![CDATA[Verify success message of 'Movie 7f7e8a9ba9974d7 has been created.' is present.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Sticky Edit Actions' in the 'Filter Name' text box.]]>
+      <![CDATA[Verify '"cat":"content"' is present in page source.]]>
     </line>
     <line>
-      <![CDATA[Wait for module filter titled 'Sticky Edit Actions' to be visible in module list.]]>
+      <![CDATA[STEP 5]]>
     </line>
     <line>
-      <![CDATA[Uncheck the 'Sticky Edit Actions' module checkbox.]]>
+      <![CDATA[Click the 'Edit Draft' link in the work bench.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Edit Movie 7f7e8a9ba9974d7 dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'URL path settings' link.]]>
+    </line>
+    <line>
+      <![CDATA[Uncheck the 'Generate automatic URL alias' check box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'db9a44536c' in the 'URL alias' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Movie 7f7e8a9ba9974d7 has been updated.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 6]]>
+    </line>
+    <line>
+      <![CDATA[Verify '"cat":"db9a44536c"' is present in page source.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 7]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Edit Draft' link in the work bench.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Edit Movie 7f7e8a9ba9974d7 dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'URL path settings' link.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'db9a44536c/mps-testing/2arg/3arg/4arg/5arg/6arg' in the 'URL alias' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Movie 7f7e8a9ba9974d7 has been updated.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 8]]>
+    </line>
+    <line>
+      <![CDATA[Verify '"cat":"db9a44536c|mps-testing|2arg"}' is present in page source.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 9]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Configuration' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Web services' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'MPS Configuration' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'MPS Configuration dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'REPLACEMENT PATTERNS' link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'MPS' link.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'MPS CAT Property' link with text '[mps:cat-pattern:?]' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '[mps:cat-pattern:?]' in the 'Pattern for Category Field' text box.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 10]]>
     </line>
     <line>
       <![CDATA[Click the 'Save configuration' button.]]>
@@ -152,123 +263,99 @@
       <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://acc.publisher7.com'.]]>
+      <![CDATA[Click the 'Close Overlay X'.]]>
     </line>
     <line>
-      <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
+      <![CDATA[Scroll by '-500'.]]>
     </line>
     <line>
-      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+      <![CDATA[STEP 11]]>
     </line>
     <line>
-      <![CDATA[Click the 'Login' button.]]>
+      <![CDATA[Verify '"cat":"db9a44536c|mps-testing|2arg|3arg|4arg"}' is present in page source.]]>
     </line>
     <line>
-      <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCharacterProfile_TC1041_092314034705PM.png ]]>
+      <![CDATA[STEP 12]]>
     </line>
     <line>
-      <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCharacterProfile_TC1041_092314034705PM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCharacterProfile_TC1041_092314034705PM.png' height='500' width='500'/> </a>]]>
+      <![CDATA[Switch to the active frame titled 'Execute PHP Code dialog'.]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://acc.publisher7.com'.]]>
+      <![CDATA[Enter 'variable_set('mps_cat_pattern', '');echo _mps_build_cat();echo PHP_EOL;variable_set('mps_cat_pattern', '[mps:cat-pattern:?]');echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/cast'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/thisisareallyreallyreallyreallyreallyreallylongurlXXXXXX/season/episode/cast/name'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/thisisareallyreallyreallyreallyreallyreallylongurlXXXXXX/season/episode/cast/'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/show//episode/cast'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/show/season//episode//'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => '/show/season//'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => '/show///'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => '/brand/season//episode'));echo PHP_EOL;variable_set('mps_cat_pattern', '[mps:cat-pattern:2]|[mps:cat-pattern:3]');echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/cast'));echo PHP_EOL;variable_set('mps_cat_pattern', '[mps:cat-pattern:0]|[mps:cat-pattern:2]|[current-date:custom:d]|[mps:cat-pattern:3]|');echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/cast'));variable_set('mps_cat_pattern', '[mps:cat-pattern:?]');echo PHP_EOL;echo '*' . _mps_build_cat(array('aliased-path' => '/')) . '*';' in the 'PHP Code to Execute' text area.]]>
     </line>
     <line>
-      <![CDATA[Cache was cleared on test failure]]>
+      <![CDATA[Click the 'Execute' button.]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://acc.publisher7.com'.]]>
+      <![CDATA[Verify the expected response is 'Status message
+devel
+brand|show|season|episode
+brand|thisisareallyreallyreallyreallyreallyreallylongurl|season|episode|cast
+brand|thisisareallyreallyreallyreallyreallyreallylongurl|season|episode|cast
+brand|show|~|episode
+brand|show|season
+brand|show|season|~|episode
+~|show
+
+~|brand|season
+season|episode
+brand|season|24
+**'.]]>
     </line>
     <line>
-      <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
+      <![CDATA[Click the 'Close Overlay X'.]]>
     </line>
     <line>
-      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+      <![CDATA[Scroll by '-500'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Login' button.]]>
+      <![CDATA[CLEANUP]]>
     </line>
     <line>
-      <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCharacterProfile_TC1041_092314034746PM.png ]]>
+      <![CDATA[Mouse over the 'Configuration' menu link.]]>
     </line>
     <line>
-      <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCharacterProfile_TC1041_092314034746PM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCharacterProfile_TC1041_092314034746PM.png' height='500' width='500'/> </a>]]>
+      <![CDATA[Mouse over the 'Web services' menu link.]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://acc.publisher7.com'.]]>
+      <![CDATA[Click the 'MPS Configuration' menu link.]]>
     </line>
     <line>
-      <![CDATA[Cache was cleared on test failure]]>
+      <![CDATA[Switch to the active frame titled 'MPS Configuration dialog'.]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://acc.publisher7.com'.]]>
+      <![CDATA[Enter '' in the 'Pattern for Category Field' text box.]]>
     </line>
     <line>
-      <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Login' button.]]>
-    </line>
-    <line>
-      <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCharacterProfile_TC1041_092314034817PM.png ]]>
-    </line>
-    <line>
-      <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCharacterProfile_TC1041_092314034817PM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCharacterProfile_TC1041_092314034817PM.png' height='500' width='500'/> </a>]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://acc.publisher7.com'.]]>
-    </line>
-    <line>
-      <![CDATA[Cache was cleared on test failure]]>
+      <![CDATA[Click the 'Save configuration' button.]]>
     </line>
   </reporter-output>
-  <suite name="Pub 7 Concurrent Suite" duration-ms="103022" started-at="2014-09-23T19:46:53Z" finished-at="2014-09-23T19:48:36Z">
+  <suite name="Default suite" duration-ms="96343" started-at="2014-09-24T11:55:07Z" finished-at="2014-09-24T11:56:43Z">
     <groups>
       <group name="full">
-        <method signature="CreateCharacterProfile.CreateCharacterProfile_TC1041()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@745f1427]" name="CreateCharacterProfile_TC1041" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile"/>
+        <method signature="MPSSupportTokens.MPSSupportTokens_TC3641()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens@37b2cb94]" name="MPSSupportTokens_TC3641" class="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens"/>
       </group> <!-- full -->
+      <group name="mps">
+        <method signature="MPSSupportTokens.MPSSupportTokens_TC3641()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens@37b2cb94]" name="MPSSupportTokens_TC3641" class="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens"/>
+      </group> <!-- mps -->
     </groups>
-    <test name="All Concurrent Web Tests" duration-ms="103022" started-at="2014-09-23T19:46:53Z" finished-at="2014-09-23T19:48:36Z">
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile">
-        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@745f1427]" name="startGridAndHub" is-config="true" duration-ms="328" started-at="2014-09-23T15:46:53Z" finished-at="2014-09-23T15:46:53Z">
+    <test name="Default test" duration-ms="96343" started-at="2014-09-24T11:55:07Z" finished-at="2014-09-24T11:56:43Z">
+      <class name="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens">
+        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens@37b2cb94]" name="startGridAndHub" is-config="true" duration-ms="1331" started-at="2014-09-24T07:55:06Z" finished-at="2014-09-24T07:55:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startGridAndHub -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@745f1427]" name="startSelenium" is-config="true" duration-ms="2303" started-at="2014-09-23T15:46:53Z" finished-at="2014-09-23T15:46:55Z">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens@37b2cb94]" name="startSelenium" is-config="true" duration-ms="3284" started-at="2014-09-24T07:55:07Z" finished-at="2014-09-24T07:55:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="FAIL" signature="CreateCharacterProfile_TC1041()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@745f1427]" name="CreateCharacterProfile_TC1041" duration-ms="10174" started-at="2014-09-23T15:46:55Z" finished-at="2014-09-23T15:47:05Z">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: null
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.fail(Assert.java:101)
-	at com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile.CreateCharacterProfile_TC1041(CreateCharacterProfile.java:26)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method status="PASS" signature="MPSSupportTokens_TC3641()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens@37b2cb94]" name="MPSSupportTokens_TC3641" duration-ms="92466" started-at="2014-09-24T07:55:10Z" finished-at="2014-09-24T07:56:43Z">
           <reporter-output>
             <line>
-              <![CDATA[Open url 'http://acc.publisher7.com'.]]>
+              <![CDATA[STEP 1]]>
+            </line>
+            <line>
+              <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
             </line>
             <line>
               <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
@@ -280,220 +367,52 @@
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
-              <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCharacterProfile_TC1041_092314034705PM.png ]]>
-            </line>
-            <line>
-              <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCharacterProfile_TC1041_092314034705PM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCharacterProfile_TC1041_092314034705PM.png' height='500' width='500'/> </a>]]>
-            </line>
-            <line>
-              <![CDATA[Cache was cleared on test failure]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- CreateCharacterProfile_TC1041 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@745f1427]" name="stopSelenium" is-config="true" duration-ms="32120" started-at="2014-09-23T15:47:05Z" finished-at="2014-09-23T15:47:38Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=CreateCharacterProfile_TC1041 status=FAILURE method=CreateCharacterProfile.CreateCharacterProfile_TC1041()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@745f1427] output=Open url 'http://acc.publisher7.com'.]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@745f1427]" name="startSelenium" is-config="true" duration-ms="2330" started-at="2014-09-23T15:47:38Z" finished-at="2014-09-23T15:47:40Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startSelenium -->
-        <test-method status="FAIL" signature="CreateCharacterProfile_TC1041()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@745f1427]" name="CreateCharacterProfile_TC1041" duration-ms="5900" started-at="2014-09-23T15:47:40Z" finished-at="2014-09-23T15:47:46Z">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: null
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.fail(Assert.java:101)
-	at com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile.CreateCharacterProfile_TC1041(CreateCharacterProfile.java:26)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.retryFailed(Invoker.java:1049)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1254)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-            <line>
-              <![CDATA[Open url 'http://acc.publisher7.com'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Login' button.]]>
-            </line>
-            <line>
-              <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCharacterProfile_TC1041_092314034746PM.png ]]>
-            </line>
-            <line>
-              <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCharacterProfile_TC1041_092314034746PM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCharacterProfile_TC1041_092314034746PM.png' height='500' width='500'/> </a>]]>
-            </line>
-            <line>
-              <![CDATA[Cache was cleared on test failure]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- CreateCharacterProfile_TC1041 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@745f1427]" name="stopSelenium" is-config="true" duration-ms="23777" started-at="2014-09-23T15:47:46Z" finished-at="2014-09-23T15:48:10Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=CreateCharacterProfile_TC1041 status=FAILURE method=CreateCharacterProfile.CreateCharacterProfile_TC1041()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@745f1427] output=Open url 'http://acc.publisher7.com'.]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@745f1427]" name="startSelenium" is-config="true" duration-ms="2323" started-at="2014-09-23T15:48:10Z" finished-at="2014-09-23T15:48:12Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startSelenium -->
-        <test-method status="FAIL" signature="CreateCharacterProfile_TC1041()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@745f1427]" name="CreateCharacterProfile_TC1041" duration-ms="5447" started-at="2014-09-23T15:48:12Z" finished-at="2014-09-23T15:48:17Z">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: null
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.fail(Assert.java:101)
-	at com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile.CreateCharacterProfile_TC1041(CreateCharacterProfile.java:26)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.retryFailed(Invoker.java:1049)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1254)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-            <line>
-              <![CDATA[Open url 'http://acc.publisher7.com'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Login' button.]]>
-            </line>
-            <line>
-              <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCharacterProfile_TC1041_092314034817PM.png ]]>
-            </line>
-            <line>
-              <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCharacterProfile_TC1041_092314034817PM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCharacterProfile_TC1041_092314034817PM.png' height='500' width='500'/> </a>]]>
-            </line>
-            <line>
-              <![CDATA[Cache was cleared on test failure]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- CreateCharacterProfile_TC1041 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@745f1427]" name="stopSelenium" is-config="true" duration-ms="18632" started-at="2014-09-23T15:48:17Z" finished-at="2014-09-23T15:48:36Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=CreateCharacterProfile_TC1041 status=FAILURE method=CreateCharacterProfile.CreateCharacterProfile_TC1041()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@745f1427] output=Open url 'http://acc.publisher7.com'.]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@745f1427]" name="stopGridAndHub" is-config="true" duration-ms="396" started-at="2014-09-23T15:48:36Z" finished-at="2014-09-23T15:48:37Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- stopGridAndHub -->
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile -->
-    </test> <!-- All Concurrent Web Tests -->
-  </suite> <!-- Pub 7 Concurrent Suite -->
-  <suite name="Pub 7 Consecutive Suite" duration-ms="116802" started-at="2014-09-23T19:44:55Z" finished-at="2014-09-23T19:46:52Z">
-    <groups>
-      <group name="full">
-        <method signature="StickyButtons.StickyButtons_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons@10e8c1cf]" name="StickyButtons_Test" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons"/>
-      </group> <!-- full -->
-    </groups>
-    <test name="All Consecutive Web Tests" duration-ms="116802" started-at="2014-09-23T19:44:55Z" finished-at="2014-09-23T19:46:52Z">
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons">
-        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons@10e8c1cf]" name="startGridAndHub" is-config="true" duration-ms="837" started-at="2014-09-23T15:44:55Z" finished-at="2014-09-23T15:44:55Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startGridAndHub -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons@10e8c1cf]" name="startSelenium" is-config="true" duration-ms="2697" started-at="2014-09-23T15:44:55Z" finished-at="2014-09-23T15:44:58Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="StickyButtons_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons@10e8c1cf]" name="StickyButtons_Test" duration-ms="113520" started-at="2014-09-23T15:44:58Z" finished-at="2014-09-23T15:46:52Z">
-          <reporter-output>
-            <line>
-              <![CDATA[Open url 'http://acc.publisher7.com'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Login' button.]]>
+              <![CDATA[SETUP]]>
             </line>
             <line>
               <![CDATA[Click the 'Modules' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to frame titled 'Modules'.]]>
+              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
             </line>
             <line>
-              <![CDATA[Enter 'Sticky Edit Actions' in the 'Filter Name' text box.]]>
+              <![CDATA[Enter 'Pixelman' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Wait for module filter titled 'Sticky Edit Actions' to be visible in module list.]]>
+              <![CDATA[Wait for module filter titled 'Pixelman' to be visible in module list.]]>
             </line>
             <line>
-              <![CDATA[Check the 'Sticky Edit Actions' check box.]]>
+              <![CDATA[Enter 'MPS' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for module filter titled 'MPS' to be visible in module list.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'MPS' check box is checked.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll by '-500'.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Configuration' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Web services' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'MPS Configuration' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'MPS Configuration dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '' in the 'Pattern for Category Field' text box.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save configuration' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
-            </line>
-            <line>
-              <![CDATA[Switch back to the 'Modules' frame.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to frame titled 'Modules'.]]>
             </line>
             <line>
               <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
@@ -505,7 +424,16 @@
               <![CDATA[Scroll by '-500'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Home' menu link.]]>
+              <![CDATA[STEP 2 - N/A]]>
+            </line>
+            <line>
+              <![CDATA[STEP 3]]>
+            </line>
+            <line>
+              <![CDATA[Verify '"cat":"content"' is not present in page source.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 4]]>
             </line>
             <line>
               <![CDATA[Mouse over the 'Content' menu link.]]>
@@ -514,16 +442,16 @@
               <![CDATA[Mouse over the 'Add content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Post' menu link.]]>
+              <![CDATA[Click the 'Movie' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
             </line>
             <line>
-              <![CDATA[Enter '7ee5d23c1e7c40f' in the 'Title' text box.]]>
+              <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
             </line>
             <line>
-              <![CDATA[Scroll by '100'.]]>
+              <![CDATA[Enter '7f7e8a9ba9974d7' in the 'Title' text box.]]>
             </line>
             <line>
               <![CDATA[Switch to the Synopsis frame.]]>
@@ -532,73 +460,151 @@
               <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
             </line>
             <line>
-              <![CDATA[Verify the sticky edit 'Save' button is present.]]>
+              <![CDATA[Click the 'Cover' select button.]]>
             </line>
             <line>
-              <![CDATA[Verify the sticky edit 'Preview' button is present.]]>
+              <![CDATA[Switch to the select file frame.]]>
             </line>
             <line>
-              <![CDATA[Scroll by '100'.]]>
+              <![CDATA[Enter the file path for file upload.]]>
             </line>
             <line>
-              <![CDATA[Verify the sticky edit 'Save' button is present.]]>
+              <![CDATA[Click the 'Upload' button.]]>
             </line>
             <line>
-              <![CDATA[Verify the sticky edit 'Preview' button is present.]]>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Meta tags' link.]]>
+              <![CDATA[Click the 'Next' button.]]>
             </line>
             <line>
-              <![CDATA[Verify the sticky edit 'Save' button is present.]]>
+              <![CDATA[Click the 'Public Local Files' radio button.]]>
             </line>
             <line>
-              <![CDATA[Verify the sticky edit 'Preview' button is present.]]>
+              <![CDATA[Click the 'Next' button.]]>
             </line>
             <line>
-              <![CDATA[Scroll by '100'.]]>
+              <![CDATA[Verify the file image 'HanSolo' is present.]]>
             </line>
             <line>
-              <![CDATA[Verify the sticky edit 'Save' button is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the sticky edit 'Preview' button is present.]]>
+              <![CDATA[Verify the img is loaded and visible.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'Post 7ee5d23c1e7c40f has been created.' is present.]]>
+              <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
             </line>
             <line>
-              <![CDATA[Verify the sticky edit 'Save' button is present.]]>
+              <![CDATA[Click the 'Additional Information' link.]]>
             </line>
             <line>
-              <![CDATA[Verify the sticky edit 'Preview' button is present.]]>
+              <![CDATA[Select the 'Syndicated' from the 'Movie Type' drop down list.]]>
             </line>
             <line>
-              <![CDATA[Scroll by '100'.]]>
+              <![CDATA[Select the 'G' from the 'Rating' drop down list.]]>
             </line>
             <line>
-              <![CDATA[Verify the sticky edit 'Save' button is present.]]>
+              <![CDATA[Select the 'Action' from the 'Primary Genre' drop down list.]]>
             </line>
             <line>
-              <![CDATA[Verify the sticky edit 'Preview' button is present.]]>
+              <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Modules' menu link.]]>
+              <![CDATA[Verify success message of 'Movie 7f7e8a9ba9974d7 has been created.' is present.]]>
             </line>
             <line>
-              <![CDATA[Enter 'Sticky Edit Actions' in the 'Filter Name' text box.]]>
+              <![CDATA[Verify '"cat":"content"' is present in page source.]]>
             </line>
             <line>
-              <![CDATA[Wait for module filter titled 'Sticky Edit Actions' to be visible in module list.]]>
+              <![CDATA[STEP 5]]>
             </line>
             <line>
-              <![CDATA[Uncheck the 'Sticky Edit Actions' module checkbox.]]>
+              <![CDATA[Click the 'Edit Draft' link in the work bench.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Edit Movie 7f7e8a9ba9974d7 dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'URL path settings' link.]]>
+            </line>
+            <line>
+              <![CDATA[Uncheck the 'Generate automatic URL alias' check box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'db9a44536c' in the 'URL alias' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Movie 7f7e8a9ba9974d7 has been updated.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 6]]>
+            </line>
+            <line>
+              <![CDATA[Verify '"cat":"db9a44536c"' is present in page source.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 7]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Edit Draft' link in the work bench.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Edit Movie 7f7e8a9ba9974d7 dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'URL path settings' link.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'db9a44536c/mps-testing/2arg/3arg/4arg/5arg/6arg' in the 'URL alias' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Movie 7f7e8a9ba9974d7 has been updated.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 8]]>
+            </line>
+            <line>
+              <![CDATA[Verify '"cat":"db9a44536c|mps-testing|2arg"}' is present in page source.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 9]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Configuration' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Web services' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'MPS Configuration' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'MPS Configuration dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'REPLACEMENT PATTERNS' link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'MPS' link.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'MPS CAT Property' link with text '[mps:cat-pattern:?]' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '[mps:cat-pattern:?]' in the 'Pattern for Category Field' text box.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 10]]>
             </line>
             <line>
               <![CDATA[Click the 'Save configuration' button.]]>
@@ -606,28 +612,91 @@
             <line>
               <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
             </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll by '-500'.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 11]]>
+            </line>
+            <line>
+              <![CDATA[Verify '"cat":"db9a44536c|mps-testing|2arg|3arg|4arg"}' is present in page source.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 12]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Execute PHP Code dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'variable_set('mps_cat_pattern', '');echo _mps_build_cat();echo PHP_EOL;variable_set('mps_cat_pattern', '[mps:cat-pattern:?]');echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/cast'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/thisisareallyreallyreallyreallyreallyreallylongurlXXXXXX/season/episode/cast/name'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/thisisareallyreallyreallyreallyreallyreallylongurlXXXXXX/season/episode/cast/'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/show//episode/cast'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/show/season//episode//'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => '/show/season//'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => '/show///'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => '/brand/season//episode'));echo PHP_EOL;variable_set('mps_cat_pattern', '[mps:cat-pattern:2]|[mps:cat-pattern:3]');echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/cast'));echo PHP_EOL;variable_set('mps_cat_pattern', '[mps:cat-pattern:0]|[mps:cat-pattern:2]|[current-date:custom:d]|[mps:cat-pattern:3]|');echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/cast'));variable_set('mps_cat_pattern', '[mps:cat-pattern:?]');echo PHP_EOL;echo '*' . _mps_build_cat(array('aliased-path' => '/')) . '*';' in the 'PHP Code to Execute' text area.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Execute' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the expected response is 'Status message
+devel
+brand|show|season|episode
+brand|thisisareallyreallyreallyreallyreallyreallylongurl|season|episode|cast
+brand|thisisareallyreallyreallyreallyreallyreallylongurl|season|episode|cast
+brand|show|~|episode
+brand|show|season
+brand|show|season|~|episode
+~|show
+
+~|brand|season
+season|episode
+brand|season|24
+**'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll by '-500'.]]>
+            </line>
+            <line>
+              <![CDATA[CLEANUP]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Configuration' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Web services' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'MPS Configuration' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'MPS Configuration dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '' in the 'Pattern for Category Field' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configuration' button.]]>
+            </line>
           </reporter-output>
-        </test-method> <!-- StickyButtons_Test -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons@10e8c1cf]" name="stopSelenium" is-config="true" duration-ms="574" started-at="2014-09-23T15:46:52Z" finished-at="2014-09-23T15:46:52Z">
+        </test-method> <!-- MPSSupportTokens_TC3641 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens@37b2cb94]" name="stopSelenium" is-config="true" duration-ms="579" started-at="2014-09-24T07:56:43Z" finished-at="2014-09-24T07:56:43Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=StickyButtons_Test status=SUCCESS method=StickyButtons.StickyButtons_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons@10e8c1cf] output=Open url 'http://acc.publisher7.com'.]]]>
+                <![CDATA[[TestResult name=MPSSupportTokens_TC3641 status=SUCCESS method=MPSSupportTokens.MPSSupportTokens_TC3641()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens@37b2cb94] output=STEP 1]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons@10e8c1cf]" name="stopGridAndHub" is-config="true" duration-ms="390" started-at="2014-09-23T15:46:52Z" finished-at="2014-09-23T15:46:53Z">
+        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens@37b2cb94]" name="stopGridAndHub" is-config="true" duration-ms="376" started-at="2014-09-24T07:56:43Z" finished-at="2014-09-24T07:56:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopGridAndHub -->
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons -->
-    </test> <!-- All Consecutive Web Tests -->
-  </suite> <!-- Pub 7 Consecutive Suite -->
-  <suite name="Publisher 7 Test Suites" duration-ms="0" started-at="2014-09-23T19:48:47Z" finished-at="2014-09-23T19:48:47Z">
-    <groups>
-    </groups>
-  </suite> <!-- Publisher 7 Test Suites -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
