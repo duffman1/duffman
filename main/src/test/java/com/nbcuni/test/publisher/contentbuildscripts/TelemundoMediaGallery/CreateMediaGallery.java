@@ -2,7 +2,7 @@ package com.nbcuni.test.publisher.contentbuildscripts.TelemundoMediaGallery;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import org.testng.Reporter;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.RerunOnFailure;
@@ -23,8 +23,7 @@ public class CreateMediaGallery extends ParentTest{
         	
         	for (int i = 0; i<=15; i++) {
         		
-        		try {
-        			//add a media gallery with multiple images
+        		//add a media gallery with multiple images
                     taxonomy.NavigateSite("Content>>Add content>>Media Gallery");
                     overlay.SwitchToActiveFrame();
                     BasicInformation basicInformation = new BasicInformation(webDriver);
@@ -79,10 +78,10 @@ public class CreateMediaGallery extends ParentTest{
                         mediaItems.VerifyFileImagePresent("nbclogosmall", "2");
                     }
                     catch (Exception | AssertionError e) {
+                    	contentParent.Scroll("500");
                     	Date date = new Date();
                     	SimpleDateFormat dateTimeFormat = new SimpleDateFormat("MMddyyhhmmssa");
-                    	Reporter.log("MEDIA GALLERY IMAGE NOT FULLY LOADED - " + dateTimeFormat.format(date));
-                    	break;
+                    	Assert.fail("MEDIA GALLERY IMAGE NOT FULLY LOADED - " + dateTimeFormat.format(date));
                     }
                     
                     //add a cover image
@@ -95,12 +94,6 @@ public class CreateMediaGallery extends ParentTest{
                     contentParent.ClickSaveBtn();
                     overlay.switchToDefaultContent(true);
                     contentParent.VerifyMessageStatus("Media Gallery " + title + " has been created.");
-        		}
-        		catch (Exception | AssertionError e) {
-        			overlay.switchToDefaultContent(false);
-        			taxonomy.NavigateSite("Home");
-        		}
-        		
         	}
     }
 }
