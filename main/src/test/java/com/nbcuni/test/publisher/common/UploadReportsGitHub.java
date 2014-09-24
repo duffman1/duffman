@@ -1,9 +1,9 @@
 package com.nbcuni.test.publisher.common;
 
+import java.util.List;
 import org.eclipse.egit.github.core.CommitStatus;
 import org.eclipse.egit.github.core.RepositoryCommit;
 import org.eclipse.egit.github.core.RepositoryId;
-import org.eclipse.egit.github.core.client.GitHubClient;
 import org.eclipse.egit.github.core.service.CommitService;
 import org.eclipse.egit.github.core.service.PullRequestService;
 import org.testng.annotations.Test;
@@ -11,44 +11,65 @@ import org.testng.annotations.Test;
 public class UploadReportsGitHub {
 
 	@Test
-    public void UploadReport() throws Exception {
+    public void UploadReport(Integer passedTestCount, Integer failedTestCount, String rallyReportAttachURL) {
 
     	Config config = new Config();
     	
+    	//set variables from config
+    	String envURL = config.getConfigValue("AppURL");
+    	String userName = config.getConfigValue("GithubUsername");
+    	String passWord = config.getConfigValue("GithubPassword");
+    	String owner = config.getConfigValue("GithubOwner");
+    	String repo = config.getConfigValue("GithubRepo");
+    	int pullId = 0;
+    	String ssh = null;
     	
-    	//Basic authentication
-    	GitHubClient client = new GitHubClient();
-    	client.setCredentials("baclark77@yahoo.com", "tufNewcyd4");
-    	
-    	int pullId = 20;
-    	
-    	PullRequestService pullRequestService = new PullRequestService();
-    	pullRequestService.getClient().setCredentials("baclark77", "tufNewcyd4");
-    	RepositoryId repository = new RepositoryId("NBCUOTS", "Publisher7_citest");
-    	
-    	CommitService commitService = new CommitService();
-    	commitService.getClient().setCredentials("baclark77", "tufNewcyd4");
-    	
-    	String shaId = null;
-    	for (RepositoryCommit commit : pullRequestService.getCommits(repository, pullId)) {
-    		System.out.println(commit.getUrl());
-    		shaId = commit.getCommit().getSha();
+    	try {
+    		
+    		//get the pull request id from the url
+        	pullId = Integer.parseInt(envURL.replace("http://p7-", "").replace(".pr.publisher7.com", ""));
+        	
+        	//initiate github services
+        	PullRequestService pullRequestService = new PullRequestService();
+        	pullRequestService.getClient().setCredentials(userName, passWord);
+        	CommitService commitService = new CommitService();
+        	commitService.getClient().setCredentials(userName, passWord);
+        	
+        	//initiate repository
+        	RepositoryId repository = new RepositoryId(owner, repo);
+        	
+        	//get the last commit associated with the pr
+        	List<RepositoryCommit> commits = pullRequestService.getCommits(repository, pullId);
+        	RepositoryCommit commit = commits.get(commits.size() - 1);
+        	
+        	//get the ssh associated with the commit
+        	ssh = commit.getUrl().replace("https://api.github.com/repos/" + owner + "/" + repo + "/commits/", "");
+        	
+        	//set the commit status based on the results
+        	String status = "success";
+        	String description = "Automated Web Tests";
+        	String targetUrl = rallyReportAttachURL;
+        	if (failedTestCount != 0) {
+        		status = "failure";
+        	}
+        	
+        	CommitStatus commitStatus = new CommitStatus();
+        	commitStatus.setState(status);
+        	commitStatus.setDescription(description);
+        	if (config.getConfigValue("UploadReportToRally").equals("true")) {
+        		commitStatus.setTargetUrl(targetUrl);
+        	}
+        	
+        	//update the pull request with the status
+        	commitService.createStatus(repository, ssh, commitStatus);
+    		System.out.println("Successfully updated Github Pull Request.");
     		
     	}
-    	
-    	
-    	CommitStatus commitStatus = new CommitStatus();
-    	commitStatus.setState("success");
-    	commitStatus.setDescription("an automated description");
-    	commitStatus.setTargetUrl("http://google.com");
-    	commitService.createStatus(repository, "a8736b475f08e5954dfc3faf1735fd45f478902f", commitStatus);
-    	
-    	
-    	
-    	
-    	
-    	
-    	
+    	catch (Exception e) {
+    		System.out.println("Failed to update Github Pull Request.");
+    		e.printStackTrace();
+    		
+    	}
     	
     }
 }

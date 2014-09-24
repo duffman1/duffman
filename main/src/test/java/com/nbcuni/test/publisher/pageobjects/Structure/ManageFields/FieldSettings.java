@@ -63,7 +63,7 @@ public class FieldSettings {
     public void SelectMode(String mode) throws Exception {
     	
     	Reporter.log("Select the '" + mode + "' option from the 'Mode' drop down list.");
-    	Thread.sleep(500);
+    	Thread.sleep(1000);
     	new Select(wait.until(ExpectedConditions.visibilityOf(Mode_Ddl))).selectByVisibleText(mode);
     	
     }
