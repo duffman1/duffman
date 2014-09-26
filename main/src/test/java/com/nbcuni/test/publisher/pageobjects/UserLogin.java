@@ -69,6 +69,7 @@ public class UserLogin {
     	this.EnterEmailAddress(emailAddress);
     	this.EnterPassword(password);
     	this.ClickLoginBtn();
+    	Thread.sleep(1000);
     }
     
     

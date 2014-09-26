@@ -3,11 +3,15 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.nbcuni.test.publisher.common.UploadReportsGitHub">
+      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.RepresentativeImage.RepresentativeImage">
         <methods>
-          <include name="UploadReport"/>
+          <include name="startSelenium"/>
+          <include name="stopGridAndHub"/>
+          <include name="startGridAndHub"/>
+          <include name="RepresentativeImage_TC3217"/>
+          <include name="stopSelenium"/>
         </methods>
-      </class> <!-- com.nbcuni.test.publisher.common.UploadReportsGitHub -->
+      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.RepresentativeImage.RepresentativeImage -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
