@@ -154,6 +154,8 @@ public class Revisions {
     public void ClickRevisionTab() throws Exception{
     	
     	Reporter.log("Click the 'Revision' link.");
+    	wait.until(ExpectedConditions.visibilityOf(Revision_Lnk));
+    	Thread.sleep(500);
     	Revision_Lnk.click();
     }
 

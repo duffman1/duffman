@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>2/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Sep 29 12:56:20 EDT 2014</td>
+<td>Started on:</td><td>Mon Sep 29 17:36:22 EDT 2014</td>
 </tr>
-<tr><td>Total time:</td><td>244 seconds (244351 ms)</td>
+<tr><td>Total time:</td><td>76 seconds (76978 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,119 +75,90 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore.Cleanup()'><b>Cleanup</b><br>Test class: com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore<br/>
-<a href="#Output-391556414" onClick='toggleBox("Output-391556414", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.RepresentativeImage.RepresentativeImage.RepresentativeImage_TC3217()'><b>RepresentativeImage_TC3217</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.RepresentativeImage.RepresentativeImage<br/>
+<a href="#Output-45916146" onClick='toggleBox("Output-45916146", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-391556414" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-391556414">
+<a href="#Output-45916146" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-45916146">
+STEP 1<br/>
 Open url 'http://qa5.publisher7.com'.<br/>
 Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
 Enter 'pa55word' in the 'Password' text box.<br/>
 Click the 'Login' button.<br/>
-Open url 'http://qa5.publisher7.com/admin/config/development/jquery_update'.<br/>
-Select '1.5' from the 'Default jQuery Version' drop down list.<br/>
-Click the 'Save configuration' button.<br/>
-Mouse over the 'Home' menu link.<br/>
-Click the '[[Driver: chrome on MAC (f80748a0-5a78-45dd-bef4-774f2f5d69c8)] -> xpath: //span[@class='admin-menu-home-icon']/../..//a[text()='Flush all caches']]' menu link.<br/>
+STEP 2<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Add content' menu link.<br/>
+Click the 'Post' menu link.<br/>
+Switch to the active frame titled 'Create Post dialog'.<br/>
+Enter '9660a3fa63f243f' in the 'Title' text box.<br/>
+Switch to the Synopsis frame.<br/>
+Enter a randomized text string into the 'Body' text area.<br/>
+Switch to the active frame titled 'Create Post dialog'.<br/>
+Click the 'Cover' select button.<br/>
+Switch to the select file frame.<br/>
+Enter the file path for file upload.<br/>
+Click the 'Upload' button.<br/>
+Wait for the file link to be visible after upload.<br/>
+Click the 'Next' button.<br/>
+Click the 'Public Local Files' radio button.<br/>
+Click the 'Next' button.<br/>
+Verify the file image 'HanSolo' is present.<br/>
+Verify the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'Create Post dialog'.<br/>
+Scroll the 'Publishing Options' link into view.<br/>
+Click the 'Publishing Options' link.<br/>
+Select 'Published' from the 'Moderation State' drop down list.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'Post 9660a3fa63f243f has been created.' is present.<br/>
+STEP 3<br/>
+Click the 'Content' menu link.<br/>
+Switch to the active frame titled 'Content dialog'.<br/>
+Enter title 9660a3fa63f243f.<br/>
+Click the 'Apply' button.<br/>
+Verify the search thumbnail named 'HanSolo' is present for search result '9660a3fa63f243f'.<br/>
+Assert the the img is loaded and visible.<br/>
+STEP 4<br/>
 Click the 'Home' menu link.<br/>
-Click the 'Modules' menu link.<br/>
-Switch to the active frame titled 'Modules dialog'.<br/>
-Enter 'TVE Auth Example' in the 'Filter Name' text box.<br/>
-Wait for module filter titled 'TVE Auth Example' to be visible in module list.<br/>
-Uncheck the 'TVE Auth Example' module checkbox.<br/>
-Click the 'Save configuration' button.<br/>
-Verify success message of 'The configuration options have been saved.' is present.<br/>
-Click the 'Uninstall' overlay tab.<br/>
+Mouse over the 'Content' menu link.<br/>
+Click the 'Files' menu link.<br/>
+Switch to the active frame titled 'Content dialog'.<br/>
+Verify the the thumbnail image is loaded and visible.<br/>
+Click the 'Close Overlay X'.<br/>
 Scroll by '-500'.<br/>
-Switch to the active frame titled 'Modules dialog'.<br/>
-Click the 'TVE Auth Example' uninstall checkbox.<br/>
-Click the 'Uninstall' button.<br/>
-Switch to the active frame titled 'Confirm uninstall dialog'.<br/>
-Verify the text 'The following modules will be completely uninstalled from your site, and all data from these modules will be lost!' is present on the page.<br/>
-Verify the text 'TVE Auth Example' is present on the page.<br/>
-Click the 'Uninstall' button to confirm.<br/>
-Switch to the active frame titled 'Modules dialog'.<br/>
+STEP 5<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Add content' menu link.<br/>
+Click the 'Post' menu link.<br/>
+Switch to the active frame titled 'Create Post dialog'.<br/>
+Enter '0ca089bf5d65417' in the 'Title' text box.<br/>
+Switch to the Synopsis frame.<br/>
+Enter a randomized text string into the 'Body' text area.<br/>
+Switch to the active frame titled 'Create Post dialog'.<br/>
+Click the 'Cover' select button.<br/>
+Switch to the select file frame.<br/>
+Click the 'PUBLISHER 7 MPX VIDEO' button.<br/>
+Enter 'AutomationWThumb' in the 'Title' text box.<br/>
+Click the 'Apply' button.<br/>
+Wait for the file search 'spinner' image to be present.<br/>
+Wait for the file search 'spinner' image to not be present, indicating image search is complete.<br/>
+Click mpx media thumbnail image number 1<br/>
+Click on the 'Submit' button.<br/>
+Switch to the active frame titled 'Create Post dialog'.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'Post 0ca089bf5d65417 has been created.' is present.<br/>
+STEP 6<br/>
+Click the 'Content' menu link.<br/>
+Switch to the active frame titled 'Content dialog'.<br/>
+Enter title 0ca089bf5d65417.<br/>
+Click the 'Apply' button.<br/>
+Verify the search thumbnail named 'nbclogosmall' is present for search result '0ca089bf5d65417'.<br/>
+Assert the the img is loaded and visible.<br/>
 </div>
 </td>
 <td></td>
-<td>72</td>
-<td>com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@5ed56a40</td></tr>
-<tr>
-<td title='com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore.ImplementTVEModulesCore_TC3261()'><b>ImplementTVEModulesCore_TC3261</b><br>Test class: com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore<br/>
-<a href="#Output-1044397091" onClick='toggleBox("Output-1044397091", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1044397091" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1044397091">
-Open url 'http://qa5.publisher7.com'.<br/>
-Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
-Enter 'pa55word' in the 'Password' text box.<br/>
-Click the 'Login' button.<br/>
-Click the 'Modules' menu link.<br/>
-Switch to frame titled 'Modules'.<br/>
-Enter 'jQuery Update' in the 'Filter Name' text box.<br/>
-Wait for module filter titled 'jQuery Update' to be visible in module list.<br/>
-Verify the 'jQuery Update' check box is checked.<br/>
-Click the 'Close Overlay X'.<br/>
-Scroll by '-500'.<br/>
-Click the 'Home' menu link.<br/>
-Open url 'http://qa5.publisher7.com/admin/config/development/jquery_update'.<br/>
-Select '1.5' from the 'Default jQuery Version' drop down list.<br/>
-Click the 'Save configuration' button.<br/>
-Mouse over the 'Home' menu link.<br/>
-Click the '[[Driver: chrome on MAC (d4d52efa-0285-4e32-ade8-440385580a2c)] -> xpath: //span[@class='admin-menu-home-icon']/../..//a[text()='Flush all caches']]' menu link.<br/>
-Click the 'Home' menu link.<br/>
-Click the 'Modules' menu link.<br/>
-Switch to the active frame titled 'Modules dialog'.<br/>
-Enter 'TVE Auth Example' in the 'Filter Name' text box.<br/>
-Wait for module filter titled 'TVE Auth Example' to be visible in module list.<br/>
-Check the 'TVE Auth Example' check box.<br/>
-Click the 'Save configuration' button.<br/>
-Switch to frame titled 'Some required modules must be enabled'.<br/>
-Switch back to the 'Modules' frame.<br/>
-Switch to frame titled 'Modules'.<br/>
-Verify success message of 'The configuration options have been saved.' is present.<br/>
-Enter 'TVE Adobe Pass' in the 'Filter Name' text box.<br/>
-Wait for module filter titled 'TVE Adobe Pass' to be visible in module list.<br/>
-Verify the 'TVE Adobe Pass' check box is checked.<br/>
-Enter 'TVE MVPD' in the 'Filter Name' text box.<br/>
-Wait for module filter titled 'TVE MVPD' to be visible in module list.<br/>
-Verify the 'TVE MVPD' check box is checked.<br/>
-Click the 'Close Overlay X'.<br/>
-Scroll by '-500'.<br/>
-Mouse over the 'Structure' menu link.<br/>
-Click the 'Blocks' menu link.<br/>
-Switch to the active frame titled 'Blocks dialog'.<br/>
-Select the block name 'TVE Auth Example' from the 'Sidebar first' drop down list.<br/>
-Click the 'Save Blocks' button.<br/>
-Verify success message of 'The block settings have been updated.' is present.<br/>
-Click the 'Close Overlay X'.<br/>
-Scroll by '-500'.<br/>
-MVPD IS ALREADY CONFIGURED.<br/>
-ADOBE PASS IS ALREADY CONFIGURED.<br/>
-Click the 'Configure jQuery' link.<br/>
-Switch to the active frame titled 'jQuery update dialog'.<br/>
-Select '1.7' from the 'Default jQuery Version' drop down list.<br/>
-Click the 'Save configuration' button.<br/>
-Verify success message of 'The configuration options have been saved.' is present.<br/>
-Click the 'Close Overlay X'.<br/>
-Scroll by '-500'.<br/>
-Click the 'Home' menu link.<br/>
-Verify the 'Authentication status checked:' value is 'true'.<br/>
-Verify the 'Authenticated' value is 'false'.<br/>
-Verify the 'Selected MVPD:' value is 'none'.<br/>
-Select 'Optimum' from the 'Al VMPDs:' drop down list.<br/>
-Click the 'login' button.<br/>
-Enter 'research40' in the 'Optimum ID' text box.<br/>
-Enter 'support40' in the 'Password' text box.<br/>
-Click the 'SIGN IN' button.<br/>
-Verify the 'Authentication status checked:' value is 'true'.<br/>
-Verify the 'Authenticated' value is 'true'.<br/>
-Verify the 'Selected MVPD:' value is 'Cablevision'.<br/>
-</div>
-</td>
-<td></td>
-<td>165</td>
-<td>com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@5ed56a40</td></tr>
+<td>73</td>
+<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.RepresentativeImage.RepresentativeImage@1e57c459</td></tr>
 </table><p>
 </body>
 </html>

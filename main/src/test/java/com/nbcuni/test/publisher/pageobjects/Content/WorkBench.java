@@ -4,12 +4,15 @@ import java.util.List;
 
 import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
 
@@ -23,12 +26,14 @@ public class WorkBench {
 
 	private Driver webDriver;
     private AppLib applib;
+    private WebDriverWait wait;
     
 	//PAGE OBJECT CONSTRUCTORS
     public WorkBench(Driver webDriver, AppLib applib) {
         this.webDriver = webDriver;
         this.applib = applib;
         PageFactory.initElements(webDriver, this);
+        wait = new WebDriverWait(webDriver, 10);
     }
     
     //PAGE OBJECT IDENTIFIERS AND SCRIPTS
@@ -66,6 +71,8 @@ public class WorkBench {
     public void ClickWorkBenchTab(String tabName) throws Exception{
     
     	Reporter.log("Click the '" + tabName + "' link in the work bench.");
+    	wait.until(ExpectedConditions.visibilityOf(WorkBench_Tab(tabName)));
+    	Thread.sleep(500);
     	WorkBench_Tab(tabName).click();
 
     }

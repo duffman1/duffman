@@ -1,200 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
     <line>
-      <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Login' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Modules' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to frame titled 'Modules'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'jQuery Update' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for module filter titled 'jQuery Update' to be visible in module list.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'jQuery Update' check box is checked.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll by '-500'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Home' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://qa5.publisher7.com/admin/config/development/jquery_update'.]]>
-    </line>
-    <line>
-      <![CDATA[Select '1.5' from the 'Default jQuery Version' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Home' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the '[[Driver: chrome on MAC (d4d52efa-0285-4e32-ade8-440385580a2c)] -> xpath: //span[@class='admin-menu-home-icon']/../..//a[text()='Flush all caches']]' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Home' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Modules' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'TVE Auth Example' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for module filter titled 'TVE Auth Example' to be visible in module list.]]>
-    </line>
-    <line>
-      <![CDATA[Check the 'TVE Auth Example' check box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
-    </line>
-    <line>
-      <![CDATA[Switch back to the 'Modules' frame.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to frame titled 'Modules'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'TVE Adobe Pass' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for module filter titled 'TVE Adobe Pass' to be visible in module list.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'TVE Adobe Pass' check box is checked.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'TVE MVPD' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for module filter titled 'TVE MVPD' to be visible in module list.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'TVE MVPD' check box is checked.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll by '-500'.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Structure' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Blocks' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Select the block name 'TVE Auth Example' from the 'Sidebar first' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save Blocks' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The block settings have been updated.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll by '-500'.]]>
-    </line>
-    <line>
-      <![CDATA[MVPD IS ALREADY CONFIGURED.]]>
-    </line>
-    <line>
-      <![CDATA[ADOBE PASS IS ALREADY CONFIGURED.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Configure jQuery' link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'jQuery update dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Select '1.7' from the 'Default jQuery Version' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll by '-500'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Home' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Authentication status checked:' value is 'true'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Authenticated' value is 'false'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Selected MVPD:' value is 'none'.]]>
-    </line>
-    <line>
-      <![CDATA[Select 'Optimum' from the 'Al VMPDs:' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'login' button.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'research40' in the 'Optimum ID' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'support40' in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'SIGN IN' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Authentication status checked:' value is 'true'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Authenticated' value is 'true'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Selected MVPD:' value is 'Cablevision'.]]>
+      <![CDATA[STEP 1]]>
     </line>
     <line>
       <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
@@ -209,94 +17,237 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://qa5.publisher7.com/admin/config/development/jquery_update'.]]>
+      <![CDATA[STEP 2]]>
     </line>
     <line>
-      <![CDATA[Select '1.5' from the 'Default jQuery Version' drop down list.]]>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
+      <![CDATA[Mouse over the 'Add content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Home' menu link.]]>
+      <![CDATA[Click the 'Post' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the '[[Driver: chrome on MAC (f80748a0-5a78-45dd-bef4-774f2f5d69c8)] -> xpath: //span[@class='admin-menu-home-icon']/../..//a[text()='Flush all caches']]' menu link.]]>
+      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '9660a3fa63f243f' in the 'Title' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the Synopsis frame.]]>
+    </line>
+    <line>
+      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Cover' select button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the select file frame.]]>
+    </line>
+    <line>
+      <![CDATA[Enter the file path for file upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Upload' button.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Public Local Files' radio button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the file image 'HanSolo' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the img is loaded and visible.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Publishing Options' link.]]>
+    </line>
+    <line>
+      <![CDATA[Select 'Published' from the 'Moderation State' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Post 9660a3fa63f243f has been created.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 3]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter title 9660a3fa63f243f.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Apply' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the search thumbnail named 'HanSolo' is present for search result '9660a3fa63f243f'.]]>
+    </line>
+    <line>
+      <![CDATA[Assert the the img is loaded and visible.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 4]]>
     </line>
     <line>
       <![CDATA[Click the 'Home' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Modules' menu link.]]>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+      <![CDATA[Click the 'Files' menu link.]]>
     </line>
     <line>
-      <![CDATA[Enter 'TVE Auth Example' in the 'Filter Name' text box.]]>
+      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
     </line>
     <line>
-      <![CDATA[Wait for module filter titled 'TVE Auth Example' to be visible in module list.]]>
+      <![CDATA[Verify the the thumbnail image is loaded and visible.]]>
     </line>
     <line>
-      <![CDATA[Uncheck the 'TVE Auth Example' module checkbox.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Uninstall' overlay tab.]]>
+      <![CDATA[Click the 'Close Overlay X'.]]>
     </line>
     <line>
       <![CDATA[Scroll by '-500'.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+      <![CDATA[STEP 5]]>
     </line>
     <line>
-      <![CDATA[Click the 'TVE Auth Example' uninstall checkbox.]]>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Uninstall' button.]]>
+      <![CDATA[Mouse over the 'Add content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Confirm uninstall dialog'.]]>
+      <![CDATA[Click the 'Post' menu link.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'The following modules will be completely uninstalled from your site, and all data from these modules will be lost!' is present on the page.]]>
+      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'TVE Auth Example' is present on the page.]]>
+      <![CDATA[Enter '0ca089bf5d65417' in the 'Title' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Uninstall' button to confirm.]]>
+      <![CDATA[Switch to the Synopsis frame.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Cover' select button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the select file frame.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'PUBLISHER 7 MPX VIDEO' button.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'AutomationWThumb' in the 'Title' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Apply' button.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the file search 'spinner' image to be present.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the file search 'spinner' image to not be present, indicating image search is complete.]]>
+    </line>
+    <line>
+      <![CDATA[Click mpx media thumbnail image number 1]]>
+    </line>
+    <line>
+      <![CDATA[Click on the 'Submit' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Post 0ca089bf5d65417 has been created.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 6]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter title 0ca089bf5d65417.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Apply' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the search thumbnail named 'nbclogosmall' is present for search result '0ca089bf5d65417'.]]>
+    </line>
+    <line>
+      <![CDATA[Assert the the img is loaded and visible.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="244351" started-at="2014-09-29T16:56:20Z" finished-at="2014-09-29T17:00:24Z">
+  <suite name="Default suite" duration-ms="76978" started-at="2014-09-29T21:36:22Z" finished-at="2014-09-29T21:37:39Z">
     <groups>
+      <group name="mpx">
+        <method signature="RepresentativeImage.RepresentativeImage_TC3217()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.RepresentativeImage.RepresentativeImage@1e57c459]" name="RepresentativeImage_TC3217" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.RepresentativeImage.RepresentativeImage"/>
+      </group> <!-- mpx -->
       <group name="full">
-        <method signature="ImplementTVEModulesCore.ImplementTVEModulesCore_TC3261()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@5ed56a40]" name="ImplementTVEModulesCore_TC3261" class="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore"/>
-        <method signature="ImplementTVEModulesCore.Cleanup()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@5ed56a40]" name="Cleanup" class="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore"/>
+        <method signature="RepresentativeImage.RepresentativeImage_TC3217()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.RepresentativeImage.RepresentativeImage@1e57c459]" name="RepresentativeImage_TC3217" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.RepresentativeImage.RepresentativeImage"/>
       </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="244351" started-at="2014-09-29T16:56:20Z" finished-at="2014-09-29T17:00:24Z">
-      <class name="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore">
-        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@5ed56a40]" name="startGridAndHub" is-config="true" duration-ms="1377" started-at="2014-09-29T12:56:18Z" finished-at="2014-09-29T12:56:20Z">
+    <test name="Default test" duration-ms="76978" started-at="2014-09-29T21:36:22Z" finished-at="2014-09-29T21:37:39Z">
+      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.RepresentativeImage.RepresentativeImage">
+        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.RepresentativeImage.RepresentativeImage@1e57c459]" name="startGridAndHub" is-config="true" duration-ms="1126" started-at="2014-09-29T17:36:21Z" finished-at="2014-09-29T17:36:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startGridAndHub -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@5ed56a40]" name="startSelenium" is-config="true" duration-ms="2885" started-at="2014-09-29T12:56:20Z" finished-at="2014-09-29T12:56:23Z">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.RepresentativeImage.RepresentativeImage@1e57c459]" name="startSelenium" is-config="true" duration-ms="2830" started-at="2014-09-29T17:36:22Z" finished-at="2014-09-29T17:36:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="ImplementTVEModulesCore_TC3261()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@5ed56a40]" name="ImplementTVEModulesCore_TC3261" duration-ms="165262" started-at="2014-09-29T12:56:23Z" finished-at="2014-09-29T12:59:08Z">
+        <test-method status="PASS" signature="RepresentativeImage_TC3217()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.RepresentativeImage.RepresentativeImage@1e57c459]" name="RepresentativeImage_TC3217" duration-ms="73563" started-at="2014-09-29T17:36:25Z" finished-at="2014-09-29T17:37:39Z">
           <reporter-output>
+            <line>
+              <![CDATA[STEP 1]]>
+            </line>
             <line>
               <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
             </line>
@@ -310,306 +261,230 @@
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Modules' menu link.]]>
+              <![CDATA[STEP 2]]>
             </line>
             <line>
-              <![CDATA[Switch to frame titled 'Modules'.]]>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Enter 'jQuery Update' in the 'Filter Name' text box.]]>
+              <![CDATA[Mouse over the 'Add content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Wait for module filter titled 'jQuery Update' to be visible in module list.]]>
+              <![CDATA[Click the 'Post' menu link.]]>
             </line>
             <line>
-              <![CDATA[Verify the 'jQuery Update' check box is checked.]]>
+              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
+              <![CDATA[Enter '9660a3fa63f243f' in the 'Title' text box.]]>
             </line>
             <line>
-              <![CDATA[Scroll by '-500'.]]>
+              <![CDATA[Switch to the Synopsis frame.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Home' menu link.]]>
+              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
             </line>
             <line>
-              <![CDATA[Open url 'http://qa5.publisher7.com/admin/config/development/jquery_update'.]]>
+              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
             </line>
             <line>
-              <![CDATA[Select '1.5' from the 'Default jQuery Version' drop down list.]]>
+              <![CDATA[Click the 'Cover' select button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
+              <![CDATA[Switch to the select file frame.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Home' menu link.]]>
+              <![CDATA[Enter the file path for file upload.]]>
             </line>
             <line>
-              <![CDATA[Click the '[[Driver: chrome on MAC (d4d52efa-0285-4e32-ade8-440385580a2c)] -> xpath: //span[@class='admin-menu-home-icon']/../..//a[text()='Flush all caches']]' menu link.]]>
+              <![CDATA[Click the 'Upload' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Home' menu link.]]>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Modules' menu link.]]>
+              <![CDATA[Click the 'Next' button.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+              <![CDATA[Click the 'Public Local Files' radio button.]]>
             </line>
             <line>
-              <![CDATA[Enter 'TVE Auth Example' in the 'Filter Name' text box.]]>
+              <![CDATA[Click the 'Next' button.]]>
             </line>
             <line>
-              <![CDATA[Wait for module filter titled 'TVE Auth Example' to be visible in module list.]]>
+              <![CDATA[Verify the file image 'HanSolo' is present.]]>
             </line>
             <line>
-              <![CDATA[Check the 'TVE Auth Example' check box.]]>
+              <![CDATA[Verify the img is loaded and visible.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
+              <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
+              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
             </line>
             <line>
-              <![CDATA[Switch back to the 'Modules' frame.]]>
+              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
             </line>
             <line>
-              <![CDATA[Switch to frame titled 'Modules'.]]>
+              <![CDATA[Click the 'Publishing Options' link.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+              <![CDATA[Select 'Published' from the 'Moderation State' drop down list.]]>
             </line>
             <line>
-              <![CDATA[Enter 'TVE Adobe Pass' in the 'Filter Name' text box.]]>
+              <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Wait for module filter titled 'TVE Adobe Pass' to be visible in module list.]]>
+              <![CDATA[Verify success message of 'Post 9660a3fa63f243f has been created.' is present.]]>
             </line>
             <line>
-              <![CDATA[Verify the 'TVE Adobe Pass' check box is checked.]]>
+              <![CDATA[STEP 3]]>
             </line>
             <line>
-              <![CDATA[Enter 'TVE MVPD' in the 'Filter Name' text box.]]>
+              <![CDATA[Click the 'Content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Wait for module filter titled 'TVE MVPD' to be visible in module list.]]>
+              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
             </line>
             <line>
-              <![CDATA[Verify the 'TVE MVPD' check box is checked.]]>
+              <![CDATA[Enter title 9660a3fa63f243f.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
+              <![CDATA[Click the 'Apply' button.]]>
             </line>
             <line>
-              <![CDATA[Scroll by '-500'.]]>
+              <![CDATA[Verify the search thumbnail named 'HanSolo' is present for search result '9660a3fa63f243f'.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Structure' menu link.]]>
+              <![CDATA[Assert the the img is loaded and visible.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Blocks' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Select the block name 'TVE Auth Example' from the 'Sidebar first' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save Blocks' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The block settings have been updated.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll by '-500'.]]>
-            </line>
-            <line>
-              <![CDATA[MVPD IS ALREADY CONFIGURED.]]>
-            </line>
-            <line>
-              <![CDATA[ADOBE PASS IS ALREADY CONFIGURED.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Configure jQuery' link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'jQuery update dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Select '1.7' from the 'Default jQuery Version' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll by '-500'.]]>
+              <![CDATA[STEP 4]]>
             </line>
             <line>
               <![CDATA[Click the 'Home' menu link.]]>
             </line>
             <line>
-              <![CDATA[Verify the 'Authentication status checked:' value is 'true'.]]>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Verify the 'Authenticated' value is 'false'.]]>
+              <![CDATA[Click the 'Files' menu link.]]>
             </line>
             <line>
-              <![CDATA[Verify the 'Selected MVPD:' value is 'none'.]]>
+              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
             </line>
             <line>
-              <![CDATA[Select 'Optimum' from the 'Al VMPDs:' drop down list.]]>
+              <![CDATA[Verify the the thumbnail image is loaded and visible.]]>
             </line>
             <line>
-              <![CDATA[Click the 'login' button.]]>
+              <![CDATA[Click the 'Close Overlay X'.]]>
             </line>
             <line>
-              <![CDATA[Enter 'research40' in the 'Optimum ID' text box.]]>
+              <![CDATA[Scroll by '-500'.]]>
             </line>
             <line>
-              <![CDATA[Enter 'support40' in the 'Password' text box.]]>
+              <![CDATA[STEP 5]]>
             </line>
             <line>
-              <![CDATA[Click the 'SIGN IN' button.]]>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Verify the 'Authentication status checked:' value is 'true'.]]>
+              <![CDATA[Mouse over the 'Add content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Verify the 'Authenticated' value is 'true'.]]>
+              <![CDATA[Click the 'Post' menu link.]]>
             </line>
             <line>
-              <![CDATA[Verify the 'Selected MVPD:' value is 'Cablevision'.]]>
+              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '0ca089bf5d65417' in the 'Title' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the Synopsis frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Cover' select button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the select file frame.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'PUBLISHER 7 MPX VIDEO' button.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'AutomationWThumb' in the 'Title' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Apply' button.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the file search 'spinner' image to be present.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the file search 'spinner' image to not be present, indicating image search is complete.]]>
+            </line>
+            <line>
+              <![CDATA[Click mpx media thumbnail image number 1]]>
+            </line>
+            <line>
+              <![CDATA[Click on the 'Submit' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Post 0ca089bf5d65417 has been created.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 6]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter title 0ca089bf5d65417.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Apply' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the search thumbnail named 'nbclogosmall' is present for search result '0ca089bf5d65417'.]]>
+            </line>
+            <line>
+              <![CDATA[Assert the the img is loaded and visible.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- ImplementTVEModulesCore_TC3261 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@5ed56a40]" name="stopSelenium" is-config="true" duration-ms="573" started-at="2014-09-29T12:59:08Z" finished-at="2014-09-29T12:59:08Z">
+        </test-method> <!-- RepresentativeImage_TC3217 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.RepresentativeImage.RepresentativeImage@1e57c459]" name="stopSelenium" is-config="true" duration-ms="572" started-at="2014-09-29T17:37:39Z" finished-at="2014-09-29T17:37:39Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=ImplementTVEModulesCore_TC3261 status=SUCCESS method=ImplementTVEModulesCore.ImplementTVEModulesCore_TC3261()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@5ed56a40] output=Open url 'http://qa5.publisher7.com'.]]]>
+                <![CDATA[[TestResult name=RepresentativeImage_TC3217 status=SUCCESS method=RepresentativeImage.RepresentativeImage_TC3217()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.RepresentativeImage.RepresentativeImage@1e57c459] output=STEP 1]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@5ed56a40]" name="startSelenium" is-config="true" duration-ms="2432" started-at="2014-09-29T12:59:08Z" finished-at="2014-09-29T12:59:11Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="Cleanup()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@5ed56a40]" name="Cleanup" duration-ms="72615" started-at="2014-09-29T12:59:11Z" depends-on-methods="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore.ImplementTVEModulesCore_TC3261" finished-at="2014-09-29T13:00:23Z">
-          <reporter-output>
-            <line>
-              <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Login' button.]]>
-            </line>
-            <line>
-              <![CDATA[Open url 'http://qa5.publisher7.com/admin/config/development/jquery_update'.]]>
-            </line>
-            <line>
-              <![CDATA[Select '1.5' from the 'Default jQuery Version' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Home' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the '[[Driver: chrome on MAC (f80748a0-5a78-45dd-bef4-774f2f5d69c8)] -> xpath: //span[@class='admin-menu-home-icon']/../..//a[text()='Flush all caches']]' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Home' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Modules' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'TVE Auth Example' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for module filter titled 'TVE Auth Example' to be visible in module list.]]>
-            </line>
-            <line>
-              <![CDATA[Uncheck the 'TVE Auth Example' module checkbox.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Uninstall' overlay tab.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll by '-500'.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'TVE Auth Example' uninstall checkbox.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Uninstall' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Confirm uninstall dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'The following modules will be completely uninstalled from your site, and all data from these modules will be lost!' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'TVE Auth Example' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Uninstall' button to confirm.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- Cleanup -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@5ed56a40]" name="stopSelenium" is-config="true" duration-ms="570" started-at="2014-09-29T13:00:23Z" finished-at="2014-09-29T13:00:24Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=Cleanup status=SUCCESS method=ImplementTVEModulesCore.Cleanup()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@5ed56a40] output=Open url 'http://qa5.publisher7.com'.]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@5ed56a40]" name="stopGridAndHub" is-config="true" duration-ms="383" started-at="2014-09-29T13:00:24Z" finished-at="2014-09-29T13:00:24Z">
+        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.RepresentativeImage.RepresentativeImage@1e57c459]" name="stopGridAndHub" is-config="true" duration-ms="370" started-at="2014-09-29T17:37:39Z" finished-at="2014-09-29T17:37:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopGridAndHub -->
-      </class> <!-- com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore -->
+      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.RepresentativeImage.RepresentativeImage -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

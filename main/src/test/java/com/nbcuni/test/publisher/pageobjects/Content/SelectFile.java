@@ -150,8 +150,9 @@ public class SelectFile {
                 Assert.fail("No inputs on 'Select a file' frame after timeout.");
             }
             try {
+            	Thread.sleep(500);
             	webDriver.switchTo().frame(SelectFile_Frm);
-            	webDriver.findElement(By.xpath("//input"));
+            	webDriver.findElement(By.xpath("(//input)[1]"));
             	break;
             }
             catch (Exception e) {
