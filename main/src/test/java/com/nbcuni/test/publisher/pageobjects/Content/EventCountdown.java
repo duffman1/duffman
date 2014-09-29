@@ -8,9 +8,11 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
+
 import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
@@ -23,11 +25,13 @@ import com.nbcuni.test.publisher.common.Driver.Driver;
 public class EventCountdown {
 
     private Driver webDriver;
+    private WebDriverWait wait;
     
     //PAGE OBJECT CONSTRUCTOR
     public EventCountdown(Driver webDriver) {
         this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
+        wait = new WebDriverWait(webDriver, 10);
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -149,7 +153,7 @@ public class EventCountdown {
     public void VerifyCountDownTimerRunning(String eventTitle) throws Exception {
     	
     	Reporter.log("Verify the countdown timer is visible.");
-    	Assert.assertTrue(CountdownTimer_Ctr(eventTitle).isDisplayed());
+    	wait.until(ExpectedConditions.visibilityOf(CountdownTimer_Ctr(eventTitle)));
     	
     	Reporter.log("Verify the countdown timer is counting down.");
     	String timerTxt = CountdownTimer_Ctr(eventTitle).getText();

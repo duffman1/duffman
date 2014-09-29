@@ -35,7 +35,7 @@ public class TVEAuthExample {
     	this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
         config = new Config();
-        wait = (WebDriverWait) new WebDriverWait(webDriver, 120).ignoring(StaleElementReferenceException.class);
+        wait = (WebDriverWait) new WebDriverWait(webDriver, 180).ignoring(StaleElementReferenceException.class);
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -74,6 +74,36 @@ public class TVEAuthExample {
     	Boolean alreadyConfigured;
     	try {
     		MVPDSetup_Lnk.isDisplayed();
+    		alreadyConfigured = false;
+    	}
+    	catch (NoSuchElementException e) {
+    		alreadyConfigured = true;
+    	}
+    	webDriver.manage().timeouts().implicitlyWait(config.getImplicitWaitTime(), TimeUnit.SECONDS);
+    	return alreadyConfigured;
+    }
+    
+    public Boolean isMVPDConfigured() throws Exception {
+    	
+    	webDriver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+    	Boolean alreadyConfigured;
+    	try {
+    		MVPDSetup_Lnk.isDisplayed();
+    		alreadyConfigured = false;
+    	}
+    	catch (NoSuchElementException e) {
+    		alreadyConfigured = true;
+    	}
+    	webDriver.manage().timeouts().implicitlyWait(config.getImplicitWaitTime(), TimeUnit.SECONDS);
+    	return alreadyConfigured;
+    }
+    
+    public Boolean isAdobePassConfigured() throws Exception {
+    	
+    	webDriver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+    	Boolean alreadyConfigured;
+    	try {
+    		AdobeSetup_Lnk.isDisplayed();
     		alreadyConfigured = false;
     	}
     	catch (NoSuchElementException e) {

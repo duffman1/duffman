@@ -324,6 +324,8 @@ public class SelectFile {
     public void ClickPublicLocalFilesRdb() throws Exception {
     	
     	Reporter.log("Click the 'Public Local Files' radio button.");
+    	wait.until(ExpectedConditions.visibilityOf(PublicLocalFiles_Rdb));
+    	Thread.sleep(1000);
     	PublicLocalFiles_Rdb.click();
     }
     

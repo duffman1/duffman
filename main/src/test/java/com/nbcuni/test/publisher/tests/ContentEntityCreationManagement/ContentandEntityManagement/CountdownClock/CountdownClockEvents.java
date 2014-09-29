@@ -172,7 +172,7 @@ public class CountdownClockEvents extends ParentTest{
         	overlay.switchToDefaultContent(false);
         	contentParent.VerifyMessageStatus("Event Countdown " + eventCountdownTitle + " has been created.");
         	
-        	//TODO - some extra steps as time allows for the seperate content types and publishing/unpublishing
+        	//TODO - some extra steps as time allows for the separate content types and publishing/unpublishing
     }
     
     @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"}, dependsOnMethods = {"CountdownClockEvents_TC4887"}, alwaysRun=true)

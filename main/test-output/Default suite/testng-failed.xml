@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.nbcuni.test.publisher.contentbuildscripts.TelemundoMediaGallery.CreateMediaGallery">
+      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents">
         <methods>
           <include name="startSelenium"/>
           <include name="stopGridAndHub"/>
           <include name="startGridAndHub"/>
+          <include name="CountdownClockEvents_TC4887"/>
           <include name="stopSelenium"/>
-          <include name="CreateMediaGallery_Test"/>
         </methods>
-      </class> <!-- com.nbcuni.test.publisher.contentbuildscripts.TelemundoMediaGallery.CreateMediaGallery -->
+      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

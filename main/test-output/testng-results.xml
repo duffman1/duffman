@@ -1,270 +1,615 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="1" passed="0">
+<testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
     <line>
-      <![CDATA[Scroll by '1000'.]]>
+      <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
     </line>
     <line>
-      <![CDATA[Enter '98378d95235d487' in the 'Title' text box.]]>
+      <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
     </line>
     <line>
-      <![CDATA[Switch to the Synopsis frame.]]>
+      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
     </line>
     <line>
-      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+      <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[Enter 'short description' in the 'Short Description' text area.]]>
+      <![CDATA[Click the 'Modules' menu link.]]>
     </line>
     <line>
-      <![CDATA[Scroll by '500'.]]>
+      <![CDATA[Switch to frame titled 'Modules'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Media Items Select' button.]]>
+      <![CDATA[Enter 'jQuery Update' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Switch to the select file frame.]]>
+      <![CDATA[Wait for module filter titled 'jQuery Update' to be visible in module list.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Add files' link.]]>
+      <![CDATA[Verify the 'jQuery Update' check box is checked.]]>
     </line>
     <line>
-      <![CDATA[Click the 'All Files' icon.]]>
+      <![CDATA[Click the 'Close Overlay X'.]]>
     </line>
     <line>
-      <![CDATA[Click the local 'Pictures' icon.]]>
+      <![CDATA[Scroll by '-500'.]]>
     </line>
     <line>
-      <![CDATA[Click the test picture link.]]>
+      <![CDATA[Click the 'Home' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Open' button.]]>
+      <![CDATA[Open url 'http://qa5.publisher7.com/admin/config/development/jquery_update'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Start upload' link.]]>
+      <![CDATA[Select '1.5' from the 'Default jQuery Version' drop down list.]]>
     </line>
     <line>
-      <![CDATA[Wait for file upload to reach 100%]]>
+      <![CDATA[Click the 'Save configuration' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Next' button.]]>
+      <![CDATA[Mouse over the 'Home' menu link.]]>
     </line>
     <line>
-      <![CDATA[Wait for the image load 'spinner' image to not be present, indicating image loading is complete.]]>
+      <![CDATA[Click the '[[Driver: chrome on MAC (d4d52efa-0285-4e32-ade8-440385580a2c)] -> xpath: //span[@class='admin-menu-home-icon']/../..//a[text()='Flush all caches']]' menu link.]]>
     </line>
     <line>
-      <![CDATA[Scroll by '500'.]]>
+      <![CDATA[Click the 'Home' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Add' button.]]>
+      <![CDATA[Click the 'Modules' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the select file frame.]]>
+      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Add files' link.]]>
+      <![CDATA[Enter 'TVE Auth Example' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the 'All Files' icon.]]>
+      <![CDATA[Wait for module filter titled 'TVE Auth Example' to be visible in module list.]]>
     </line>
     <line>
-      <![CDATA[Click the local 'Pictures' icon.]]>
+      <![CDATA[Check the 'TVE Auth Example' check box.]]>
     </line>
     <line>
-      <![CDATA[Click the test picture link.]]>
+      <![CDATA[Click the 'Save configuration' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Open' button.]]>
+      <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Start upload' link.]]>
+      <![CDATA[Switch back to the 'Modules' frame.]]>
     </line>
     <line>
-      <![CDATA[Wait for file upload to reach 100%]]>
+      <![CDATA[Switch to frame titled 'Modules'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Next' button.]]>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
     </line>
     <line>
-      <![CDATA[Verify the img source of the Media Item contains 'IPTCDefault'.]]>
+      <![CDATA[Enter 'TVE Adobe Pass' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Scroll by '500'.]]>
+      <![CDATA[Wait for module filter titled 'TVE Adobe Pass' to be visible in module list.]]>
     </line>
     <line>
-      <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateMediaGallery_Test_092914083226AM.png ]]>
+      <![CDATA[Verify the 'TVE Adobe Pass' check box is checked.]]>
     </line>
     <line>
-      <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateMediaGallery_Test_092914083226AM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateMediaGallery_Test_092914083226AM.png' height='500' width='500'/> </a>]]>
+      <![CDATA[Enter 'TVE MVPD' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for module filter titled 'TVE MVPD' to be visible in module list.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'TVE MVPD' check box is checked.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll by '-500'.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Structure' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Blocks' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Select the block name 'TVE Auth Example' from the 'Sidebar first' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save Blocks' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The block settings have been updated.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll by '-500'.]]>
+    </line>
+    <line>
+      <![CDATA[MVPD IS ALREADY CONFIGURED.]]>
+    </line>
+    <line>
+      <![CDATA[ADOBE PASS IS ALREADY CONFIGURED.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Configure jQuery' link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'jQuery update dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Select '1.7' from the 'Default jQuery Version' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configuration' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll by '-500'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Home' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Authentication status checked:' value is 'true'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Authenticated' value is 'false'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Selected MVPD:' value is 'none'.]]>
+    </line>
+    <line>
+      <![CDATA[Select 'Optimum' from the 'Al VMPDs:' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'login' button.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'research40' in the 'Optimum ID' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'support40' in the 'Password' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'SIGN IN' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Authentication status checked:' value is 'true'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Authenticated' value is 'true'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Selected MVPD:' value is 'Cablevision'.]]>
     </line>
     <line>
       <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
     </line>
+    <line>
+      <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Login' button.]]>
+    </line>
+    <line>
+      <![CDATA[Open url 'http://qa5.publisher7.com/admin/config/development/jquery_update'.]]>
+    </line>
+    <line>
+      <![CDATA[Select '1.5' from the 'Default jQuery Version' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configuration' button.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Home' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the '[[Driver: chrome on MAC (f80748a0-5a78-45dd-bef4-774f2f5d69c8)] -> xpath: //span[@class='admin-menu-home-icon']/../..//a[text()='Flush all caches']]' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Home' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Modules' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'TVE Auth Example' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for module filter titled 'TVE Auth Example' to be visible in module list.]]>
+    </line>
+    <line>
+      <![CDATA[Uncheck the 'TVE Auth Example' module checkbox.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configuration' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Uninstall' overlay tab.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll by '-500'.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'TVE Auth Example' uninstall checkbox.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Uninstall' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Confirm uninstall dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'The following modules will be completely uninstalled from your site, and all data from these modules will be lost!' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'TVE Auth Example' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Uninstall' button to confirm.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+    </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="57085" started-at="2014-09-29T12:31:33Z" finished-at="2014-09-29T12:32:30Z">
+  <suite name="Default suite" duration-ms="244351" started-at="2014-09-29T16:56:20Z" finished-at="2014-09-29T17:00:24Z">
     <groups>
+      <group name="full">
+        <method signature="ImplementTVEModulesCore.ImplementTVEModulesCore_TC3261()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@5ed56a40]" name="ImplementTVEModulesCore_TC3261" class="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore"/>
+        <method signature="ImplementTVEModulesCore.Cleanup()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@5ed56a40]" name="Cleanup" class="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore"/>
+      </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="57085" started-at="2014-09-29T12:31:33Z" finished-at="2014-09-29T12:32:30Z">
-      <class name="com.nbcuni.test.publisher.contentbuildscripts.TelemundoMediaGallery.CreateMediaGallery">
-        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.contentbuildscripts.TelemundoMediaGallery.CreateMediaGallery@14fa6144]" name="startGridAndHub" is-config="true" duration-ms="1300" started-at="2014-09-29T08:31:32Z" finished-at="2014-09-29T08:31:33Z">
+    <test name="Default test" duration-ms="244351" started-at="2014-09-29T16:56:20Z" finished-at="2014-09-29T17:00:24Z">
+      <class name="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore">
+        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@5ed56a40]" name="startGridAndHub" is-config="true" duration-ms="1377" started-at="2014-09-29T12:56:18Z" finished-at="2014-09-29T12:56:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startGridAndHub -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.contentbuildscripts.TelemundoMediaGallery.CreateMediaGallery@14fa6144]" name="startSelenium" is-config="true" duration-ms="2824" started-at="2014-09-29T08:31:33Z" finished-at="2014-09-29T08:31:36Z">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@5ed56a40]" name="startSelenium" is-config="true" duration-ms="2885" started-at="2014-09-29T12:56:20Z" finished-at="2014-09-29T12:56:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="FAIL" signature="CreateMediaGallery_Test()[pri:0, instance:com.nbcuni.test.publisher.contentbuildscripts.TelemundoMediaGallery.CreateMediaGallery@14fa6144]" name="CreateMediaGallery_Test" duration-ms="49919" started-at="2014-09-29T08:31:36Z" finished-at="2014-09-29T08:32:26Z">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[MEDIA GALLERY IMAGE NOT FULLY LOADED - 092914083226AM]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: MEDIA GALLERY IMAGE NOT FULLY LOADED - 092914083226AM
-	at org.testng.Assert.fail(Assert.java:94)
-	at com.nbcuni.test.publisher.contentbuildscripts.TelemundoMediaGallery.CreateMediaGallery.CreateMediaGallery_Test(CreateMediaGallery.java:96)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method status="PASS" signature="ImplementTVEModulesCore_TC3261()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@5ed56a40]" name="ImplementTVEModulesCore_TC3261" duration-ms="165262" started-at="2014-09-29T12:56:23Z" finished-at="2014-09-29T12:59:08Z">
           <reporter-output>
             <line>
-              <![CDATA[Scroll by '1000'.]]>
+              <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
             </line>
             <line>
-              <![CDATA[Enter '98378d95235d487' in the 'Title' text box.]]>
+              <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
             </line>
             <line>
-              <![CDATA[Switch to the Synopsis frame.]]>
+              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
             </line>
             <line>
-              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+              <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
-              <![CDATA[Enter 'short description' in the 'Short Description' text area.]]>
+              <![CDATA[Click the 'Modules' menu link.]]>
             </line>
             <line>
-              <![CDATA[Scroll by '500'.]]>
+              <![CDATA[Switch to frame titled 'Modules'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Media Items Select' button.]]>
+              <![CDATA[Enter 'jQuery Update' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Switch to the select file frame.]]>
+              <![CDATA[Wait for module filter titled 'jQuery Update' to be visible in module list.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Add files' link.]]>
+              <![CDATA[Verify the 'jQuery Update' check box is checked.]]>
             </line>
             <line>
-              <![CDATA[Click the 'All Files' icon.]]>
+              <![CDATA[Click the 'Close Overlay X'.]]>
             </line>
             <line>
-              <![CDATA[Click the local 'Pictures' icon.]]>
+              <![CDATA[Scroll by '-500'.]]>
             </line>
             <line>
-              <![CDATA[Click the test picture link.]]>
+              <![CDATA[Click the 'Home' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Open' button.]]>
+              <![CDATA[Open url 'http://qa5.publisher7.com/admin/config/development/jquery_update'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Start upload' link.]]>
+              <![CDATA[Select '1.5' from the 'Default jQuery Version' drop down list.]]>
             </line>
             <line>
-              <![CDATA[Wait for file upload to reach 100%]]>
+              <![CDATA[Click the 'Save configuration' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Next' button.]]>
+              <![CDATA[Mouse over the 'Home' menu link.]]>
             </line>
             <line>
-              <![CDATA[Wait for the image load 'spinner' image to not be present, indicating image loading is complete.]]>
+              <![CDATA[Click the '[[Driver: chrome on MAC (d4d52efa-0285-4e32-ade8-440385580a2c)] -> xpath: //span[@class='admin-menu-home-icon']/../..//a[text()='Flush all caches']]' menu link.]]>
             </line>
             <line>
-              <![CDATA[Scroll by '500'.]]>
+              <![CDATA[Click the 'Home' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Add' button.]]>
+              <![CDATA[Click the 'Modules' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the select file frame.]]>
+              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Add files' link.]]>
+              <![CDATA[Enter 'TVE Auth Example' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the 'All Files' icon.]]>
+              <![CDATA[Wait for module filter titled 'TVE Auth Example' to be visible in module list.]]>
             </line>
             <line>
-              <![CDATA[Click the local 'Pictures' icon.]]>
+              <![CDATA[Check the 'TVE Auth Example' check box.]]>
             </line>
             <line>
-              <![CDATA[Click the test picture link.]]>
+              <![CDATA[Click the 'Save configuration' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Open' button.]]>
+              <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Start upload' link.]]>
+              <![CDATA[Switch back to the 'Modules' frame.]]>
             </line>
             <line>
-              <![CDATA[Wait for file upload to reach 100%]]>
+              <![CDATA[Switch to frame titled 'Modules'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Next' button.]]>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
             </line>
             <line>
-              <![CDATA[Verify the img source of the Media Item contains 'IPTCDefault'.]]>
+              <![CDATA[Enter 'TVE Adobe Pass' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Scroll by '500'.]]>
+              <![CDATA[Wait for module filter titled 'TVE Adobe Pass' to be visible in module list.]]>
             </line>
             <line>
-              <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateMediaGallery_Test_092914083226AM.png ]]>
+              <![CDATA[Verify the 'TVE Adobe Pass' check box is checked.]]>
             </line>
             <line>
-              <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateMediaGallery_Test_092914083226AM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateMediaGallery_Test_092914083226AM.png' height='500' width='500'/> </a>]]>
+              <![CDATA[Enter 'TVE MVPD' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for module filter titled 'TVE MVPD' to be visible in module list.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'TVE MVPD' check box is checked.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll by '-500'.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Structure' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Blocks' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Select the block name 'TVE Auth Example' from the 'Sidebar first' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save Blocks' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The block settings have been updated.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll by '-500'.]]>
+            </line>
+            <line>
+              <![CDATA[MVPD IS ALREADY CONFIGURED.]]>
+            </line>
+            <line>
+              <![CDATA[ADOBE PASS IS ALREADY CONFIGURED.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Configure jQuery' link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'jQuery update dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Select '1.7' from the 'Default jQuery Version' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configuration' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll by '-500'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Home' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Authentication status checked:' value is 'true'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Authenticated' value is 'false'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Selected MVPD:' value is 'none'.]]>
+            </line>
+            <line>
+              <![CDATA[Select 'Optimum' from the 'Al VMPDs:' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'login' button.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'research40' in the 'Optimum ID' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'support40' in the 'Password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'SIGN IN' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Authentication status checked:' value is 'true'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Authenticated' value is 'true'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Selected MVPD:' value is 'Cablevision'.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- CreateMediaGallery_Test -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.contentbuildscripts.TelemundoMediaGallery.CreateMediaGallery@14fa6144]" name="stopSelenium" is-config="true" duration-ms="4318" started-at="2014-09-29T08:32:26Z" finished-at="2014-09-29T08:32:30Z">
+        </test-method> <!-- ImplementTVEModulesCore_TC3261 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@5ed56a40]" name="stopSelenium" is-config="true" duration-ms="573" started-at="2014-09-29T12:59:08Z" finished-at="2014-09-29T12:59:08Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=CreateMediaGallery_Test status=FAILURE method=CreateMediaGallery.CreateMediaGallery_Test()[pri:0, instance:com.nbcuni.test.publisher.contentbuildscripts.TelemundoMediaGallery.CreateMediaGallery@14fa6144] output=Scroll by '1000'.]]]>
+                <![CDATA[[TestResult name=ImplementTVEModulesCore_TC3261 status=SUCCESS method=ImplementTVEModulesCore.ImplementTVEModulesCore_TC3261()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@5ed56a40] output=Open url 'http://qa5.publisher7.com'.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.contentbuildscripts.TelemundoMediaGallery.CreateMediaGallery@14fa6144]" name="stopGridAndHub" is-config="true" duration-ms="408" started-at="2014-09-29T08:32:30Z" finished-at="2014-09-29T08:32:31Z">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@5ed56a40]" name="startSelenium" is-config="true" duration-ms="2432" started-at="2014-09-29T12:59:08Z" finished-at="2014-09-29T12:59:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startSelenium -->
+        <test-method status="PASS" signature="Cleanup()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@5ed56a40]" name="Cleanup" duration-ms="72615" started-at="2014-09-29T12:59:11Z" depends-on-methods="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore.ImplementTVEModulesCore_TC3261" finished-at="2014-09-29T13:00:23Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Login' button.]]>
+            </line>
+            <line>
+              <![CDATA[Open url 'http://qa5.publisher7.com/admin/config/development/jquery_update'.]]>
+            </line>
+            <line>
+              <![CDATA[Select '1.5' from the 'Default jQuery Version' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configuration' button.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Home' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the '[[Driver: chrome on MAC (f80748a0-5a78-45dd-bef4-774f2f5d69c8)] -> xpath: //span[@class='admin-menu-home-icon']/../..//a[text()='Flush all caches']]' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Home' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Modules' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'TVE Auth Example' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for module filter titled 'TVE Auth Example' to be visible in module list.]]>
+            </line>
+            <line>
+              <![CDATA[Uncheck the 'TVE Auth Example' module checkbox.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configuration' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Uninstall' overlay tab.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll by '-500'.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'TVE Auth Example' uninstall checkbox.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Uninstall' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Confirm uninstall dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'The following modules will be completely uninstalled from your site, and all data from these modules will be lost!' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'TVE Auth Example' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Uninstall' button to confirm.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- Cleanup -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@5ed56a40]" name="stopSelenium" is-config="true" duration-ms="570" started-at="2014-09-29T13:00:23Z" finished-at="2014-09-29T13:00:24Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Cleanup status=SUCCESS method=ImplementTVEModulesCore.Cleanup()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@5ed56a40] output=Open url 'http://qa5.publisher7.com'.]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopSelenium -->
+        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@5ed56a40]" name="stopGridAndHub" is-config="true" duration-ms="383" started-at="2014-09-29T13:00:24Z" finished-at="2014-09-29T13:00:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopGridAndHub -->
-      </class> <!-- com.nbcuni.test.publisher.contentbuildscripts.TelemundoMediaGallery.CreateMediaGallery -->
+      </class> <!-- com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
