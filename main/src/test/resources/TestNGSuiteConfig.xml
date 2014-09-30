@@ -12,7 +12,7 @@
   	<parameter name="SendReportAutoEmails" value="true"></parameter>
   	<parameter name="UploadReportToRally" value="true"></parameter>
   	<parameter name="UpdateIndividualRallyTCs" value="true"></parameter>
-  	<parameter name="SendReportIRCChat" value="false"></parameter>
+  	<parameter name="GithubUpdatePRResults" value="true"></parameter>
   	<parameter name="PathToReports" value="/test-output/reports/"></parameter>
   	<parameter name="PathToScreenshots" value="/test-output/screenshots/"></parameter>
   	<parameter name="PathToHarReports" value="/test-output/"></parameter>
@@ -40,6 +40,12 @@
   	<parameter name="RallyProject" value="Publisher 7"></parameter>
   	<parameter name="RallyTaskID" value="TA57908"></parameter>
   	
+  	<!--GITHUB CONFIG-->
+  	<parameter name="GithubUsername" value="baclark77@yahoo.com"></parameter>
+  	<parameter name="GithubPassword" value="tufNewcyd4"></parameter>
+  	<parameter name="GithubOwner" value="NBCUOTS"></parameter>
+  	<parameter name="GithubRepo" value="Publisher7_citest"></parameter>
+  	
   	<!--MPX CONFIG-->
   	<parameter name="MPXUrl" value="http://mpx.theplatform.com/"></parameter>
   	<parameter name="MPXUsername" value="mpx/AdminPub7QA"></parameter>
@@ -63,6 +69,7 @@
 	<parameter name="LocalAppiumHubPort" value="4724"></parameter>
 	
 	<!--IRC CONFIG-->
+	<parameter name="SendReportIRCChat" value="false"></parameter>
 	<parameter name="IRCServer" value="irc.freenode.net"></parameter>
 	<parameter name="IRCNickname" value="NBCUniAutomationBotOnIRC"></parameter>
 	<parameter name="IRCChannel" value="#nbcuots_pub7"></parameter>

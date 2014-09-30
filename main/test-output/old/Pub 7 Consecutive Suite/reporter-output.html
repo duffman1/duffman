@@ -1,608 +1,75 @@
-<h2>Reporter output</h2><table><tr><td>STEP 1</td></tr>
-<tr><td>Open url 'http://qa5.publisher7.com'.</td></tr>
+<h2>Reporter output</h2><table><tr><td>Open url 'http://acc.publisher7.com'.</td></tr>
 <tr><td>Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.</td></tr>
 <tr><td>Enter 'pa55word' in the 'Password' text box.</td></tr>
 <tr><td>Click the 'Login' button.</td></tr>
-<tr><td>SETUP</td></tr>
-<tr><td>Click the 'Modules' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'Modules dialog'.</td></tr>
-<tr><td>Verify the 'MPS' check box is checked.</td></tr>
-<tr><td>Click the 'Close Overlay X'.</td></tr>
-<tr><td>Scroll by '-500'.</td></tr>
-<tr><td>STEP 2 - 3</td></tr>
-<tr><td>Mouse over the 'Configuration' menu link.</td></tr>
-<tr><td>Mouse over the 'Web services' menu link.</td></tr>
-<tr><td>Click the 'MPS Configuration' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'MPS Configuration dialog'.</td></tr>
-<tr><td>STEP 4</td></tr>
-<tr><td>Clear all 'Name' text box values.</td></tr>
-<tr><td>Clear all 'Value' text box values.</td></tr>
-<tr><td>Uncheck all 'JSON' check boxes.</td></tr>
-<tr><td>Enter 'mps.io' in the 'MPS Host' text box.</td></tr>
-<tr><td>Click the 'Document Write' radio button.</td></tr>
-<tr><td>Enter 'pub7-development' in the 'Site Instance Override' text box.</td></tr>
-<tr><td>Click the 'Save configuration' button.</td></tr>
-<tr><td>Verify success message of 'The configuration options have been saved.' is present.</td></tr>
-<tr><td>Click the 'Close Overlay X'.</td></tr>
-<tr><td>Scroll by '-500'.</td></tr>
-<tr><td>Verify the mps call parameter '"site":"pub7-development"' is present in the page source.</td></tr>
-<tr><td>Verify the mps call parameter '"title":"Welcome to' is present in the page source.</td></tr>
-<tr><td>Verify the mps call parameter '"path":"\/"' is present in the page source.</td></tr>
-<tr><td>Verify the mps call parameter '"is_content":0' is present in the page source.</td></tr>
-<tr><td>Verify the mps call parameter '"type":"other"' is present in the page source.</td></tr>
-<tr><td>Verify the mps call parameter 'var mpsopts = {"host":"mps.io"}' is present in the page source.</td></tr>
-<tr><td>STEP 5</td></tr>
-<tr><td>Mouse over the 'Configuration' menu link.</td></tr>
-<tr><td>Mouse over the 'Web services' menu link.</td></tr>
-<tr><td>Click the 'MPS Configuration' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'MPS Configuration dialog'.</td></tr>
-<tr><td>Click the 'DOM Injection (Only select this method if JQuery is enabled).' radio button.</td></tr>
-<tr><td>Click the 'Save configuration' button.</td></tr>
-<tr><td>Verify success message of 'The configuration options have been saved.' is present.</td></tr>
-<tr><td>Click the 'Close Overlay X'.</td></tr>
-<tr><td>Scroll by '-500'.</td></tr>
-<tr><td>Verify 'mpsload.src='//'+mpsopts.host+'/fetch/ext/load-'+mpscall.site+'.js?nowrite=jq'; mpsload.id="mps-load"' is present in page source.</td></tr>
-<tr><td>Verify 'mpsload.async=false; head.insertBefore(mpsload,head.firstChild)' is present in page source.</td></tr>
-<tr><td>STEP 6</td></tr>
-<tr><td>Open url 'http://qa5.publisher7.com/?x=y'.</td></tr>
-<tr><td>Verify the mps call parameter '"title":"Welcome to' is present in the page source.</td></tr>
-<tr><td>Verify the mps call parameter '"path":"\/"' is present in the page source.</td></tr>
-<tr><td>Verify the mps call parameter '"qs":"eD15"' is present in the page source.</td></tr>
-<tr><td>STEP 7</td></tr>
-<tr><td>Mouse over the 'Configuration' menu link.</td></tr>
-<tr><td>Mouse over the 'Web services' menu link.</td></tr>
-<tr><td>Click the 'MPS Configuration' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'MPS Configuration dialog'.</td></tr>
-<tr><td>Un-check the 'Send Query Strings' check box.</td></tr>
-<tr><td>Click the 'Save configuration' button.</td></tr>
-<tr><td>Verify success message of 'The configuration options have been saved.' is present.</td></tr>
-<tr><td>Click the 'Close Overlay X'.</td></tr>
-<tr><td>Scroll by '-500'.</td></tr>
-<tr><td>Verify 'Site-Install","path":"\/","qs":"eD15"' is not present in page source.</td></tr>
-<tr><td>STEP 8</td></tr>
-<tr><td>Mouse over the 'Configuration' menu link.</td></tr>
-<tr><td>Mouse over the 'Web services' menu link.</td></tr>
-<tr><td>Click the 'MPS Configuration' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'MPS Configuration dialog'.</td></tr>
-<tr><td>Enter 'mps.io' in the 'MPS Host' text box.</td></tr>
-<tr><td>Click the 'Document Write' radio button.</td></tr>
-<tr><td>Enter 'pub7-development' in the 'Site Instance Override' text box.</td></tr>
-<tr><td>Check the 'Send Query Strings' check box.</td></tr>
-<tr><td>Enter 'key1' in the 'Name' text box with index '1'.</td></tr>
-<tr><td>Enter 'value1' in the 'Value' text box with index '1'.</td></tr>
-<tr><td>Click the 'Add another opt' button.</td></tr>
-<tr><td>Enter 'key2' in the 'Name' text box with index '2'.</td></tr>
-<tr><td>Enter '{"key":"value", "key2": "value2"}' in the 'Value' text box with index '2'.</td></tr>
-<tr><td>Check the 'JSON' check box with index '2'.</td></tr>
-<tr><td>Click the 'Save configuration' button.</td></tr>
-<tr><td>Verify success message of 'The configuration options have been saved.' is present.</td></tr>
-<tr><td>Click the 'Close Overlay X'.</td></tr>
-<tr><td>Scroll by '-500'.</td></tr>
-<tr><td>Verify 'var mpsopts = {"host":"mps.io","key1":"value1","key2":{"key":"value","key2":"value2"}}' is present in page source.</td></tr>
-<tr><td>STEP 9</td></tr>
-<tr><td>Mouse over the 'Configuration' menu link.</td></tr>
-<tr><td>Mouse over the 'Web services' menu link.</td></tr>
-<tr><td>Click the 'MPS Configuration' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'MPS Configuration dialog'.</td></tr>
-<tr><td>Enter 'key3' in the 'Name' text box with index '3'.</td></tr>
-<tr><td>Enter 'jshdhdhdhjdhshd' in the 'Value' text box with index '3'.</td></tr>
-<tr><td>Check the 'JSON' check box with index '3'.</td></tr>
-<tr><td>Click the 'Save configuration' button.</td></tr>
-<tr><td>Verify error message of 'If the json checkbox is checked, this must be a valid json object.' is present.</td></tr>
-<tr><td>Click the 'Close Overlay X'.</td></tr>
-<tr><td>Scroll by '-500'.</td></tr>
-<tr><td>STEP 10</td></tr>
-<tr><td>Verify '//mps.io/request/page/jsonp?callback=mpsCallback' is present in page source.</td></tr>
-<tr><td>STEP 11 - N/A</td></tr>
-<tr><td>CLEANUP</td></tr>
-<tr><td>Mouse over the 'Configuration' menu link.</td></tr>
-<tr><td>Mouse over the 'Web services' menu link.</td></tr>
-<tr><td>Click the 'MPS Configuration' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'MPS Configuration dialog'.</td></tr>
-<tr><td>Clear all 'Name' text box values.</td></tr>
-<tr><td>Clear all 'Value' text box values.</td></tr>
-<tr><td>Uncheck all 'JSON' check boxes.</td></tr>
-<tr><td>Click the 'Save configuration' button.</td></tr>
-<tr><td>STEP 1</td></tr>
-<tr><td>Open url 'http://qa5.publisher7.com'.</td></tr>
-<tr><td>Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.</td></tr>
-<tr><td>Enter 'pa55word' in the 'Password' text box.</td></tr>
-<tr><td>Click the 'Login' button.</td></tr>
-<tr><td>SETUP</td></tr>
-<tr><td>Click the 'Modules' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'Modules dialog'.</td></tr>
-<tr><td>Enter 'Pub Ads' in the 'Filter Name' text box.</td></tr>
-<tr><td>Wait for module filter titled 'Pub Ads' to be visible in module list.</td></tr>
-<tr><td>Verify the 'Pub Ads' check box is checked.</td></tr>
-<tr><td>Enter 'Pixelman' in the 'Filter Name' text box.</td></tr>
-<tr><td>Wait for module filter titled 'Pixelman' to be visible in module list.</td></tr>
-<tr><td>Enter 'MPS' in the 'Filter Name' text box.</td></tr>
-<tr><td>Wait for module filter titled 'MPS' to be visible in module list.</td></tr>
-<tr><td>Verify the 'MPS' check box is checked.</td></tr>
-<tr><td>Enter 'DART' in the 'Filter Name' text box.</td></tr>
-<tr><td>Wait for module filter titled 'DART' to be visible in module list.</td></tr>
-<tr><td>Enter 'Doubleclick for Publishers' in the 'Filter Name' text box.</td></tr>
-<tr><td>Wait for module filter titled 'Doubleclick for Publishers' to be visible in module list.</td></tr>
-<tr><td>Click the 'Close Overlay X'.</td></tr>
-<tr><td>Scroll by '-500'.</td></tr>
-<tr><td>Mouse over the 'Configuration' menu link.</td></tr>
-<tr><td>Mouse over the 'Web services' menu link.</td></tr>
-<tr><td>Click the 'MPS Configuration' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'MPS Configuration dialog'.</td></tr>
-<tr><td>Enter 'mps.io' in the 'MPS Host' text box.</td></tr>
-<tr><td>Click the 'Document Write' radio button.</td></tr>
-<tr><td>Enter 'pub7-development' in the 'Site Instance Override' text box.</td></tr>
-<tr><td>Clear all 'Name' text box values.</td></tr>
-<tr><td>Clear all 'Value' text box values.</td></tr>
-<tr><td>Uncheck all 'JSON' check boxes.</td></tr>
-<tr><td>Click the 'Save configuration' button.</td></tr>
-<tr><td>Verify success message of 'The configuration options have been saved.' is present.</td></tr>
-<tr><td>Click the 'Close Overlay X'.</td></tr>
-<tr><td>Scroll by '-500'.</td></tr>
-<tr><td>STEP 2 - N/A</td></tr>
-<tr><td>STEP 3 - N/A</td></tr>
-<tr><td>STEP 4</td></tr>
-<tr><td>Mouse over the 'Reports' menu link.</td></tr>
-<tr><td>Click the 'Status report' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'Status report dialog'.</td></tr>
-<tr><td>Verify the text 'Ad Tag Style' is present on the page.</td></tr>
-<tr><td>Verify the text 'MPS' is present on the page.</td></tr>
-<tr><td>Click the 'Close Overlay X'.</td></tr>
-<tr><td>Scroll by '-500'.</td></tr>
-<tr><td>STEP 5</td></tr>
-<tr><td>Verify the mps call parameter '"site":"pub7-development"' is present in the page source.</td></tr>
-<tr><td>Verify the mps call parameter '"title":"Welcome to' is present in the page source.</td></tr>
-<tr><td>Verify the mps call parameter '"path":"\/"' is present in the page source.</td></tr>
-<tr><td>Verify the mps call parameter '"is_content":0' is present in the page source.</td></tr>
-<tr><td>Verify the mps call parameter '"type":"other"' is present in the page source.</td></tr>
-<tr><td>STEP 6</td></tr>
-<tr><td>Click the 'People' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'People dialog'.</td></tr>
-<tr><td>Verify that no MPS calls were made on the page.</td></tr>
-<tr><td>Click the 'Close Overlay X'.</td></tr>
-<tr><td>Scroll by '-500'.</td></tr>
-<tr><td>STEP 7</td></tr>
-<tr><td>Open url 'http://qa5.publisher7.com/kfkjdjdkjdjldkjj'.</td></tr>
-<tr><td>Verify the mps call parameter '"site":"pub7-development"' is present in the page source.</td></tr>
-<tr><td>Verify the mps call parameter '"path":"ERROR/404"' is present in the page source.</td></tr>
-<tr><td>Verify the mps call parameter '"content_id":"ERROR"' is present in the page source.</td></tr>
-<tr><td>Open url 'http://qa5.publisher7.com'.</td></tr>
-<tr><td>STEP 8 - N/A - COVERED IN SETUP</td></tr>
-<tr><td>STEP 9</td></tr>
-<tr><td>Mouse over the 'Content' menu link.</td></tr>
-<tr><td>Mouse over the 'Add content' menu link.</td></tr>
-<tr><td>Click the 'Movie' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'Create Movie dialog'.</td></tr>
-<tr><td>Scroll to and click the 'Basic Information' tab.</td></tr>
-<tr><td>Enter 'ca29ed74cea24aa' in the 'Title' text box.</td></tr>
-<tr><td>Switch to the Synopsis frame.</td></tr>
-<tr><td>Enter a randomized text string into the 'Body' text area.</td></tr>
-<tr><td>Switch to the active frame titled 'Create Movie dialog'.</td></tr>
-<tr><td>Click the 'Cover' select button.</td></tr>
-<tr><td>Switch to the select file frame.</td></tr>
-<tr><td>Enter the file path for file upload.</td></tr>
-<tr><td>Click the 'Upload' button.</td></tr>
-<tr><td>Wait for the file link to be visible after upload.</td></tr>
-<tr><td>Click the 'Next' button.</td></tr>
-<tr><td>Click the 'Public Local Files' radio button.</td></tr>
-<tr><td>Click the 'Next' button.</td></tr>
-<tr><td>Verify the file image 'HanSolo' is present.</td></tr>
-<tr><td>Verify the img is loaded and visible.</td></tr>
-<tr><td>Click the 'Save' button.</td></tr>
-<tr><td>Switch to the active frame titled 'Create Movie dialog'.</td></tr>
-<tr><td>Click the 'Additional Information' link.</td></tr>
-<tr><td>Select the 'Syndicated' from the 'Movie Type' drop down list.</td></tr>
-<tr><td>Select the 'G' from the 'Rating' drop down list.</td></tr>
-<tr><td>Select the 'Action' from the 'Primary Genre' drop down list.</td></tr>
-<tr><td>Click the 'Save' button.</td></tr>
-<tr><td>Verify success message of 'Movie ca29ed74cea24aa has been created.' is present.</td></tr>
-<tr><td>Note the node number for the content item.</td></tr>
-<tr><td>STEP 10 through STEP 19</td></tr>
-<tr><td>Verify the mps call parameter '"site":"pub7-development"' is present in the page source.</td></tr>
-<tr><td>Verify the mps call parameter '"title":"ca29ed74cea24aa"' is present in the page source.</td></tr>
-<tr><td>Verify the mps call parameter '"path":"\/node\/711"' is present in the page source.</td></tr>
-<tr><td>Verify the mps call parameter '"content_id":"node711"' is present in the page source.</td></tr>
-<tr><td>Verify the mps call parameter '"is_content":1' is present in the page source.</td></tr>
-<tr><td>Verify the mps call parameter '"type":"movie"' is present in the page source.</td></tr>
-<tr><td>Verify the mps call parameter '"cag":{"genre":"Action","movie-rating":"G","movie-types":"Syndicated"}' is present in the page source.</td></tr>
-<tr><td>Verify the mps call parameter '"pubdate":' is present in the page source.</td></tr>
-<tr><td>STEP 20</td></tr>
-<tr><td>Verify 'a3VtdWQ9MQ==' is present in page source.</td></tr>
-<tr><td>STEP 21</td></tr>
-<tr><td>Mouse over the 'Content' menu link.</td></tr>
-<tr><td>Mouse over the 'Add content' menu link.</td></tr>
-<tr><td>Click the 'Media Gallery' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'Create Media Gallery dialog'.</td></tr>
-<tr><td>Enter '7daa653737ee4e0' in the 'Title' text box.</td></tr>
-<tr><td>Click the 'Media Items Select' button.</td></tr>
-<tr><td>Switch to the select file frame.</td></tr>
-<tr><td>Click the 'View Library' button.</td></tr>
-<tr><td>Enter 'HanSolo' in the 'File name' text box.</td></tr>
-<tr><td>Wait for the file search 'spinner' image to be present.</td></tr>
-<tr><td>Wait for the file search 'spinner' image to not be present, indicating image search is complete.</td></tr>
-<tr><td>Click the 'Apply' button.</td></tr>
-<tr><td>Wait for the file search 'spinner' image to be present.</td></tr>
-<tr><td>Wait for the file search 'spinner' image to not be present, indicating image search is complete.</td></tr>
-<tr><td>Verify the media thumbnail image 'HanSolo' is present.</td></tr>
-<tr><td>Verify the the img is loaded and visible.</td></tr>
-<tr><td>Click media thumbnail image number 1</td></tr>
-<tr><td>Click on the 'Submit' button.</td></tr>
-<tr><td>Switch to the active frame titled 'Create Media Gallery dialog'.</td></tr>
-<tr><td>Verify the img source of the Media Item contains 'HanSolo'.</td></tr>
-<tr><td>Assert the the img is loaded and visible.</td></tr>
-<tr><td>Click the 'Save' button.</td></tr>
-<tr><td>Verify success message of 'Media Gallery 7daa653737ee4e0 has been created.' is present.</td></tr>
-<tr><td>Note the node number for the content item.</td></tr>
-<tr><td>Get the file id of image number 1.</td></tr>
-<tr><td>STEP 22</td></tr>
-<tr><td>Open url 'http://qa5.publisher7.com/node/716/1211'.</td></tr>
-<tr><td>STEP 28</td></tr>
-<tr><td>Verify 'typeof(mps.writeFooter)' is present in page source.</td></tr>
-<tr><td>STEP 29</td></tr>
-<tr><td>Mouse over the 'Structure' menu link.</td></tr>
-<tr><td>Mouse over the 'MPS Blocks' menu link.</td></tr>
-<tr><td>Click the 'Add' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'Add a new MPS block dialog'.</td></tr>
-<tr><td>Enter '31e3642a93714a2' in the 'Block Name' text box.</td></tr>
-<tr><td>Click the 'Save' button.</td></tr>
-<tr><td>Verify success message of '31e3642a93714a2 has been created.' is present.</td></tr>
-<tr><td>Click the 'Close Overlay X'.</td></tr>
-<tr><td>Scroll by '-500'.</td></tr>
-<tr><td>STEP 30</td></tr>
-<tr><td>Mouse over the 'Structure' menu link.</td></tr>
-<tr><td>Click the 'Blocks' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'Blocks dialog'.</td></tr>
-<tr><td>Select the block name '31e3642a93714a2 (MPS)' from the 'Header' drop down list.</td></tr>
-<tr><td>Click the 'Save Blocks' button.</td></tr>
-<tr><td>Verify success message of 'The block settings have been updated.' is present.</td></tr>
-<tr><td>Click the 'Close Overlay X'.</td></tr>
-<tr><td>Scroll by '-500'.</td></tr>
-<tr><td>STEP 31</td></tr>
-<tr><td>Verify 'mps.getAd('31e3642a93714a2')' is present in page source.</td></tr>
-<tr><td>STEP 32 - N/A</td></tr>
-<tr><td>CLEANUP</td></tr>
-<tr><td>Mouse over the 'Structure' menu link.</td></tr>
-<tr><td>Click the 'Blocks' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'Blocks dialog'.</td></tr>
-<tr><td>Select the block name '31e3642a93714a2 (MPS)' from the '- None -' drop down list.</td></tr>
-<tr><td>Click the 'Save Blocks' button.</td></tr>
-<tr><td>Click the 'Close Overlay X'.</td></tr>
-<tr><td>Scroll by '-500'.</td></tr>
-<tr><td>STEP 1</td></tr>
-<tr><td>Open url 'http://qa5.publisher7.com'.</td></tr>
-<tr><td>Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.</td></tr>
-<tr><td>Enter 'pa55word' in the 'Password' text box.</td></tr>
-<tr><td>Click the 'Login' button.</td></tr>
-<tr><td>Click the 'Modules' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'Modules dialog'.</td></tr>
-<tr><td>Enter 'Pixelman' in the 'Filter Name' text box.</td></tr>
-<tr><td>Wait for module filter titled 'Pixelman' to be visible in module list.</td></tr>
-<tr><td>Enter 'MPS' in the 'Filter Name' text box.</td></tr>
-<tr><td>Wait for module filter titled 'MPS' to be visible in module list.</td></tr>
-<tr><td>Verify the 'MPS' check box is checked.</td></tr>
-<tr><td>Click the 'Close Overlay X'.</td></tr>
-<tr><td>Scroll by '-500'.</td></tr>
-<tr><td>STEP 2</td></tr>
-<tr><td>Mouse over the 'Configuration' menu link.</td></tr>
-<tr><td>Mouse over the 'Web services' menu link.</td></tr>
-<tr><td>Click the 'MPS Configuration' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'MPS Configuration dialog'.</td></tr>
-<tr><td>STEP 3</td></tr>
-<tr><td>Enter 'mps.io' in the 'MPS Host' text box.</td></tr>
-<tr><td>Click the 'Document Write' radio button.</td></tr>
-<tr><td>Enter 'pub7-development' in the 'Site Instance Override' text box.</td></tr>
-<tr><td>Clear all 'Name' text box values.</td></tr>
-<tr><td>Clear all 'Value' text box values.</td></tr>
-<tr><td>Uncheck all 'JSON' check boxes.</td></tr>
-<tr><td>Click the 'Save configuration' button.</td></tr>
-<tr><td>Click the 'Sync Ad Blocks' button.</td></tr>
-<tr><td>Verify success message of 'The configuration options have been saved.' is present.</td></tr>
-<tr><td>Click the 'Close Overlay X'.</td></tr>
-<tr><td>Scroll by '-500'.</td></tr>
-<tr><td>STEP 4 - N/A</td></tr>
-<tr><td>STEP 5</td></tr>
-<tr><td>Mouse over the 'Structure' menu link.</td></tr>
-<tr><td>Click the 'Blocks' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'Blocks dialog'.</td></tr>
-<tr><td>STEP 6 and 7</td></tr>
-<tr><td>Select the block name 'topmulti (MPS)' from the 'Footer' drop down list.</td></tr>
-<tr><td>Click the 'Save Blocks' button.</td></tr>
-<tr><td>Verify success message of 'The block settings have been updated.' is present.</td></tr>
-<tr><td>Click the 'Close Overlay X'.</td></tr>
-<tr><td>Scroll by '-500'.</td></tr>
-<tr><td>STEP 8</td></tr>
-<tr><td>Click the 'Home' menu link.</td></tr>
-<tr><td>CLEANUP</td></tr>
-<tr><td>Mouse over the 'Structure' menu link.</td></tr>
-<tr><td>Click the 'Blocks' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'Blocks dialog'.</td></tr>
-<tr><td>Select the block name 'topmulti (MPS)' from the '- None -' drop down list.</td></tr>
-<tr><td>Click the 'Save Blocks' button.</td></tr>
-<tr><td>STEP 1</td></tr>
-<tr><td>Open url 'http://qa5.publisher7.com'.</td></tr>
-<tr><td>Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.</td></tr>
-<tr><td>Enter 'pa55word' in the 'Password' text box.</td></tr>
-<tr><td>Click the 'Login' button.</td></tr>
-<tr><td>SETUP</td></tr>
-<tr><td>Click the 'Modules' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'Modules dialog'.</td></tr>
-<tr><td>Enter 'Pixelman' in the 'Filter Name' text box.</td></tr>
-<tr><td>Wait for module filter titled 'Pixelman' to be visible in module list.</td></tr>
-<tr><td>Enter 'MPS' in the 'Filter Name' text box.</td></tr>
-<tr><td>Wait for module filter titled 'MPS' to be visible in module list.</td></tr>
-<tr><td>Verify the 'MPS' check box is checked.</td></tr>
-<tr><td>Click the 'Close Overlay X'.</td></tr>
-<tr><td>Scroll by '-500'.</td></tr>
-<tr><td>STEP 2</td></tr>
-<tr><td>Mouse over the 'Structure' menu link.</td></tr>
-<tr><td>Click the 'MPS Blocks' menu link.</td></tr>
-<tr><td>Switch to frame titled 'MPS Blocks'.</td></tr>
-<tr><td>Click the 'Close Overlay X'.</td></tr>
-<tr><td>Scroll by '-500'.</td></tr>
-<tr><td>STEP 3</td></tr>
-<tr><td>Mouse over the 'People' menu link.</td></tr>
-<tr><td>Click the 'Add user' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'People dialog'.</td></tr>
-<tr><td>Enter '031231adf562463@78beee1ddd964d0.com' in the 'Username' text box.</td></tr>
-<tr><td>Enter '031231adf562463@78beee1ddd964d0.com' in the 'E-mail address' text box.</td></tr>
-<tr><td>Enter 'pa55word' in the 'Password' text box.</td></tr>
-<tr><td>Enter 'pa55word' in the 'Confirm password' text box.</td></tr>
-<tr><td>Check the 'administrator' check box.</td></tr>
-<tr><td>Enter '49abdf9d952140c' in the 'First Name' text box.</td></tr>
-<tr><td>Enter '5ff66b739d8f42e' in the 'Last Name' text box.</td></tr>
-<tr><td>Click the 'Create new account' button.</td></tr>
-<tr><td>Verify success message of 'A welcome message with further instructions has been e-mailed to the new user 031231adf562463@78beee1ddd964d0.com.' is present.</td></tr>
-<tr><td>Click the 'Close Overlay X'.</td></tr>
-<tr><td>Scroll by '-500'.</td></tr>
-<tr><td>STEP 4</td></tr>
-<tr><td>Click the 'Logout' button.</td></tr>
-<tr><td>Enter '031231adf562463@78beee1ddd964d0.com' in the 'Email Address' text box.</td></tr>
-<tr><td>Enter 'pa55word' in the 'Password' text box.</td></tr>
-<tr><td>Click the 'Login' button.</td></tr>
-<tr><td>STEP 5</td></tr>
-<tr><td>Mouse over the 'Structure' menu link.</td></tr>
-<tr><td>Click the 'MPS Blocks' menu link.</td></tr>
-<tr><td>Switch to frame titled 'MPS Blocks'.</td></tr>
-<tr><td>STEP 1 AND SETUP</td></tr>
-<tr><td>Open url 'http://qa5.publisher7.com'.</td></tr>
-<tr><td>Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.</td></tr>
-<tr><td>Enter 'pa55word' in the 'Password' text box.</td></tr>
-<tr><td>Click the 'Login' button.</td></tr>
-<tr><td>Click the 'Modules' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'Modules dialog'.</td></tr>
-<tr><td>Enter 'MPS' in the 'Filter Name' text box.</td></tr>
-<tr><td>Wait for module filter titled 'MPS' to be visible in module list.</td></tr>
-<tr><td>Verify the 'MPS' check box is checked.</td></tr>
-<tr><td>Click the 'Close Overlay X'.</td></tr>
-<tr><td>Scroll by '-500'.</td></tr>
-<tr><td>Mouse over the 'Structure' menu link.</td></tr>
-<tr><td>Mouse over the 'MPS Blocks' menu link.</td></tr>
-<tr><td>Click the 'Add' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'Add a new MPS block dialog'.</td></tr>
-<tr><td>Enter '264f1dc6d134464' in the 'Block Name' text box.</td></tr>
-<tr><td>Click the 'Save' button.</td></tr>
-<tr><td>Verify success message of '264f1dc6d134464 has been created.' is present.</td></tr>
-<tr><td>Click the 'Close Overlay X'.</td></tr>
-<tr><td>Scroll by '-500'.</td></tr>
-<tr><td>Mouse over the 'Configuration' menu link.</td></tr>
-<tr><td>Mouse over the 'Web services' menu link.</td></tr>
-<tr><td>Click the 'MPS Configuration' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'MPS Configuration dialog'.</td></tr>
-<tr><td>Enter 'mps.io' in the 'MPS Host' text box.</td></tr>
-<tr><td>Click the 'Document Write' radio button.</td></tr>
-<tr><td>Enter 'pub7-development' in the 'Site Instance Override' text box.</td></tr>
-<tr><td>Click the 'Save configuration' button.</td></tr>
-<tr><td>Verify success message of 'The configuration options have been saved.' is present.</td></tr>
-<tr><td>STEP 2</td></tr>
-<tr><td>Click the 'Sync Ad Blocks' button.</td></tr>
-<tr><td>Verify success message of 'The configuration options have been saved.' is present.</td></tr>
-<tr><td>STEP 3</td></tr>
-<tr><td>Verify warning message 'These blocks don't exist in the list of ad blocks retrieved: ' is present.</td></tr>
-<tr><td>Verify warning message '264f1dc6d134464' is present.</td></tr>
-<tr><td>Click the 'Close Overlay X'.</td></tr>
-<tr><td>Scroll by '-500'.</td></tr>
-<tr><td>STEP 4</td></tr>
-<tr><td>Mouse over the 'Structure' menu link.</td></tr>
-<tr><td>Click the 'Blocks' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'Blocks dialog'.</td></tr>
-<tr><td>Select the block name 'bottommulti (MPS)' from the '- None -' drop down list.</td></tr>
-<tr><td>Select the block name 'topbanner (MPS)' from the '- None -' drop down list.</td></tr>
-<tr><td>Select the block name 'topbox (MPS)' from the '- None -' drop down list.</td></tr>
-<tr><td>Select the block name 'topmulti (MPS)' from the '- None -' drop down list.</td></tr>
-<tr><td>Select the block name '264f1dc6d134464 (MPS)' from the '- None -' drop down list.</td></tr>
-<tr><td>STEP 5</td></tr>
-<tr><td>Select the block name '264f1dc6d134464 (MPS)' from the 'Header' drop down list.</td></tr>
-<tr><td>Click the 'Save Blocks' button.</td></tr>
-<tr><td>Verify success message of 'The block settings have been updated.' is present.</td></tr>
-<tr><td>Click the 'Close Overlay X'.</td></tr>
-<tr><td>Scroll by '-500'.</td></tr>
-<tr><td>STEP 6 - N/A</td></tr>
-<tr><td>STEP 7</td></tr>
-<tr><td>Mouse over the 'Configuration' menu link.</td></tr>
-<tr><td>Mouse over the 'Web services' menu link.</td></tr>
-<tr><td>Click the 'MPS Configuration' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'MPS Configuration dialog'.</td></tr>
-<tr><td>Enter 'mps.io' in the 'MPS Host' text box.</td></tr>
-<tr><td>Click the 'Document Write' radio button.</td></tr>
-<tr><td>Enter 'sandbox' in the 'Site Instance Override' text box.</td></tr>
-<tr><td>Click the 'Save configuration' button.</td></tr>
-<tr><td>Verify success message of 'The configuration options have been saved.' is present.</td></tr>
-<tr><td>STEP 8</td></tr>
-<tr><td>Open mps service page at 'http://mps.io/request/describe/sandbox'.</td></tr>
-<tr><td>Verify the text '{"instance":{"dart_mode":"gpt-asynchronous","multislot":"0"},"adunits":{"Box Ad First":{"unit":"Box Ad First","slot":"topbox","sizes":["300x250"],"responsive":0},"Box Ad Second":{"unit":"Box Ad Second","slot":"bottombox","sizes":["300x250"],"responsive":0},"Cool Rich 1":{"unit":"Cool Rich 1","slot":"coolrich","responsive":0},"Cool Rich 2":{"unit":"Cool Rich 2","slot":"coolrich","responsive":0},"Flex Ad First":{"unit":"Flex Ad First","slot":"topmulti","sizes":["300x250","160x600","300x600"],"responsive":0},"Flex Ad Second":{"unit":"Flex Ad Second","slot":"bottommulti","sizes":["300x250","160x600","300x600"],"responsive":0},"Logo A":{"unit":"Logo A","slot":"logo","sizes":["88x31","120x90"],"responsive":0},"Top Banner":{"unit":"Top Banner","slot":"topbanner","sizes":["728x90","970x66"],"responsive":0},"Top Banner B":{"unit":"Top Banner B","slot":"topbanner","sizes":["2x2"],"responsive":0}},"components":["id-0516-4520471","monitoring","test.css"]}' is present on the page.</td></tr>
-<tr><td>STEP 9</td></tr>
-<tr><td>Open url 'http://qa5.publisher7.com'.</td></tr>
-<tr><td>Mouse over the 'Configuration' menu link.</td></tr>
-<tr><td>Mouse over the 'Web services' menu link.</td></tr>
-<tr><td>Click the 'MPS Configuration' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'MPS Configuration dialog'.</td></tr>
-<tr><td>Click the 'Sync Ad Blocks' button.</td></tr>
-<tr><td>Verify the text 'topbox' is NOT present on the page.</td></tr>
-<tr><td>Verify warning message 'These blocks don't exist in the list of ad blocks retrieved: ' is present.</td></tr>
-<tr><td>Verify warning message '264f1dc6d134464' is present.</td></tr>
-<tr><td>Click the 'Close Overlay X'.</td></tr>
-<tr><td>Scroll by '-500'.</td></tr>
-<tr><td>Mouse over the 'Structure' menu link.</td></tr>
-<tr><td>Click the 'Blocks' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'Blocks dialog'.</td></tr>
-<tr><td>Select the block name 'bottommulti (MPS)' from the '- None -' drop down list.</td></tr>
-<tr><td>Select the block name 'topbanner (MPS)' from the '- None -' drop down list.</td></tr>
-<tr><td>Select the block name 'topbox (MPS)' from the '- None -' drop down list.</td></tr>
-<tr><td>Select the block name 'topmulti (MPS)' from the '- None -' drop down list.</td></tr>
-<tr><td>Select the block name 'bottombox (MPS)' from the '- None -' drop down list.</td></tr>
-<tr><td>Select the block name 'coolrich (MPS)' from the '- None -' drop down list.</td></tr>
-<tr><td>Select the block name 'logo (MPS)' from the '- None -' drop down list.</td></tr>
-<tr><td>Select the block name '264f1dc6d134464 (MPS)' from the '- None -' drop down list.</td></tr>
-<tr><td>STEP 1</td></tr>
-<tr><td>Open url 'http://qa5.publisher7.com'.</td></tr>
-<tr><td>Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.</td></tr>
-<tr><td>Enter 'pa55word' in the 'Password' text box.</td></tr>
-<tr><td>Click the 'Login' button.</td></tr>
-<tr><td>SETUP</td></tr>
-<tr><td>Click the 'Modules' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'Modules dialog'.</td></tr>
-<tr><td>Enter 'Pixelman' in the 'Filter Name' text box.</td></tr>
-<tr><td>Wait for module filter titled 'Pixelman' to be visible in module list.</td></tr>
-<tr><td>Enter 'MPS' in the 'Filter Name' text box.</td></tr>
-<tr><td>Wait for module filter titled 'MPS' to be visible in module list.</td></tr>
-<tr><td>Verify the 'MPS' check box is checked.</td></tr>
-<tr><td>Click the 'Close Overlay X'.</td></tr>
-<tr><td>Scroll by '-500'.</td></tr>
-<tr><td>Mouse over the 'Configuration' menu link.</td></tr>
-<tr><td>Mouse over the 'Web services' menu link.</td></tr>
-<tr><td>Click the 'MPS Configuration' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'MPS Configuration dialog'.</td></tr>
-<tr><td>Enter '' in the 'Pattern for Category Field' text box.</td></tr>
-<tr><td>Click the 'Save configuration' button.</td></tr>
-<tr><td>Verify success message of 'The configuration options have been saved.' is present.</td></tr>
-<tr><td>Click the 'Close Overlay X'.</td></tr>
-<tr><td>Scroll by '-500'.</td></tr>
-<tr><td>STEP 2 - N/A</td></tr>
-<tr><td>STEP 3</td></tr>
-<tr><td>Verify '"cat":"content"' is not present in page source.</td></tr>
-<tr><td>STEP 4</td></tr>
-<tr><td>Mouse over the 'Content' menu link.</td></tr>
-<tr><td>Mouse over the 'Add content' menu link.</td></tr>
-<tr><td>Click the 'Movie' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'Create Movie dialog'.</td></tr>
-<tr><td>Scroll to and click the 'Basic Information' tab.</td></tr>
-<tr><td>Enter '4a097fd85284483' in the 'Title' text box.</td></tr>
-<tr><td>Switch to the Synopsis frame.</td></tr>
-<tr><td>Enter a randomized text string into the 'Body' text area.</td></tr>
-<tr><td>Switch to the active frame titled 'Create Movie dialog'.</td></tr>
-<tr><td>Click the 'Cover' select button.</td></tr>
-<tr><td>Switch to the select file frame.</td></tr>
-<tr><td>Enter the file path for file upload.</td></tr>
-<tr><td>Click the 'Upload' button.</td></tr>
-<tr><td>Wait for the file link to be visible after upload.</td></tr>
-<tr><td>Click the 'Next' button.</td></tr>
-<tr><td>Click the 'Public Local Files' radio button.</td></tr>
-<tr><td>Click the 'Next' button.</td></tr>
-<tr><td>Verify the file image 'HanSolo' is present.</td></tr>
-<tr><td>Verify the img is loaded and visible.</td></tr>
-<tr><td>Click the 'Save' button.</td></tr>
-<tr><td>Switch to the active frame titled 'Create Movie dialog'.</td></tr>
-<tr><td>Click the 'Additional Information' link.</td></tr>
-<tr><td>Select the 'Syndicated' from the 'Movie Type' drop down list.</td></tr>
-<tr><td>Select the 'G' from the 'Rating' drop down list.</td></tr>
-<tr><td>Select the 'Action' from the 'Primary Genre' drop down list.</td></tr>
-<tr><td>Click the 'Save' button.</td></tr>
-<tr><td>Verify success message of 'Movie 4a097fd85284483 has been created.' is present.</td></tr>
-<tr><td>Verify '"cat":"content"' is present in page source.</td></tr>
-<tr><td>STEP 5</td></tr>
-<tr><td>Click the 'Edit Draft' link in the work bench.</td></tr>
-<tr><td>Switch to the active frame titled 'Edit Movie 4a097fd85284483 dialog'.</td></tr>
-<tr><td>Click the 'URL path settings' link.</td></tr>
-<tr><td>Uncheck the 'Generate automatic URL alias' check box.</td></tr>
-<tr><td>Enter 'eb310c9b7d' in the 'URL alias' text box.</td></tr>
-<tr><td>Click the 'Save' button.</td></tr>
-<tr><td>Verify success message of 'Movie 4a097fd85284483 has been updated.' is present.</td></tr>
-<tr><td>STEP 6</td></tr>
-<tr><td>Verify '"cat":"eb310c9b7d"' is present in page source.</td></tr>
-<tr><td>STEP 7</td></tr>
-<tr><td>Click the 'Edit Draft' link in the work bench.</td></tr>
-<tr><td>Switch to the active frame titled 'Edit Movie 4a097fd85284483 dialog'.</td></tr>
-<tr><td>Click the 'URL path settings' link.</td></tr>
-<tr><td>Enter 'eb310c9b7d/mps-testing/2arg/3arg/4arg/5arg/6arg' in the 'URL alias' text box.</td></tr>
-<tr><td>Click the 'Save' button.</td></tr>
-<tr><td>Verify success message of 'Movie 4a097fd85284483 has been updated.' is present.</td></tr>
-<tr><td>STEP 8</td></tr>
-<tr><td>Verify '"cat":"eb310c9b7d|mps-testing|2arg"}' is present in page source.</td></tr>
-<tr><td>STEP 9</td></tr>
-<tr><td>Mouse over the 'Configuration' menu link.</td></tr>
-<tr><td>Mouse over the 'Web services' menu link.</td></tr>
-<tr><td>Click the 'MPS Configuration' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'MPS Configuration dialog'.</td></tr>
-<tr><td>Click the 'REPLACEMENT PATTERNS' link.</td></tr>
-<tr><td>Click the 'MPS' link.</td></tr>
-<tr><td>Verify the 'MPS CAT Property' link with text '[mps:cat-pattern:?]' is present.</td></tr>
-<tr><td>Enter '[mps:cat-pattern:?]' in the 'Pattern for Category Field' text box.</td></tr>
-<tr><td>STEP 10</td></tr>
-<tr><td>Click the 'Save configuration' button.</td></tr>
-<tr><td>Verify success message of 'The configuration options have been saved.' is present.</td></tr>
-<tr><td>Click the 'Close Overlay X'.</td></tr>
-<tr><td>Scroll by '-500'.</td></tr>
-<tr><td>STEP 11</td></tr>
-<tr><td>Verify '"cat":"eb310c9b7d|mps-testing|2arg|3arg|4arg"}' is present in page source.</td></tr>
-<tr><td>STEP 12</td></tr>
-<tr><td>Switch to the active frame titled 'Execute PHP Code dialog'.</td></tr>
-<tr><td>Enter 'variable_set('mps_cat_pattern', '');echo _mps_build_cat();echo PHP_EOL;variable_set('mps_cat_pattern', '[mps:cat-pattern:?]');echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/cast'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/thisisareallyreallyreallyreallyreallyreallylongurlXXXXXX/season/episode/cast/name'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/thisisareallyreallyreallyreallyreallyreallylongurlXXXXXX/season/episode/cast/'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/show//episode/cast'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/show/season//episode//'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => '/show/season//'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => '/show///'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => '/brand/season//episode'));echo PHP_EOL;variable_set('mps_cat_pattern', '[mps:cat-pattern:2]|[mps:cat-pattern:3]');echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/cast'));echo PHP_EOL;variable_set('mps_cat_pattern', '[mps:cat-pattern:0]|[mps:cat-pattern:2]|[current-date:custom:d]|[mps:cat-pattern:3]|');echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/cast'));variable_set('mps_cat_pattern', '[mps:cat-pattern:?]');echo PHP_EOL;echo '*' . _mps_build_cat(array('aliased-path' => '/')) . '*';' in the 'PHP Code to Execute' text area.</td></tr>
-<tr><td>Click the 'Execute' button.</td></tr>
-<tr><td>Verify the expected response is 'Status message
-devel
-brand|show|season|episode
-brand|thisisareallyreallyreallyreallyreallyreallylongurl|season|episode|cast
-brand|thisisareallyreallyreallyreallyreallyreallylongurl|season|episode|cast
-brand|show|~|episode
-brand|show|season
-brand|show|season|~|episode
-~|show
-
-~|brand|season
-season|episode
-brand|season|17
-**'.</td></tr>
-<tr><td>Click the 'Close Overlay X'.</td></tr>
-<tr><td>Scroll by '-500'.</td></tr>
-<tr><td>CLEANUP</td></tr>
-<tr><td>Mouse over the 'Configuration' menu link.</td></tr>
-<tr><td>Mouse over the 'Web services' menu link.</td></tr>
-<tr><td>Click the 'MPS Configuration' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'MPS Configuration dialog'.</td></tr>
-<tr><td>Enter '' in the 'Pattern for Category Field' text box.</td></tr>
-<tr><td>Click the 'Save configuration' button.</td></tr>
-<tr><td>STEP 1</td></tr>
-<tr><td>Open url 'http://qa5.publisher7.com'.</td></tr>
-<tr><td>Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.</td></tr>
-<tr><td>Enter 'pa55word' in the 'Password' text box.</td></tr>
-<tr><td>Click the 'Login' button.</td></tr>
-<tr><td>SETUP</td></tr>
 <tr><td>Click the 'Modules' menu link.</td></tr>
 <tr><td>Switch to frame titled 'Modules'.</td></tr>
-<tr><td>Enter 'MPS' in the 'Filter Name' text box.</td></tr>
-<tr><td>Wait for module filter titled 'MPS' to be visible in module list.</td></tr>
-<tr><td>Verify the 'MPS' check box is checked.</td></tr>
-<tr><td>Click the 'Close Overlay X'.</td></tr>
-<tr><td>Scroll by '-500'.</td></tr>
-<tr><td>Click the 'Home' menu link.</td></tr>
-<tr><td>Mouse over the 'Configuration' menu link.</td></tr>
-<tr><td>Mouse over the 'Web services' menu link.</td></tr>
-<tr><td>Click the 'MPS Configuration' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'MPS Configuration dialog'.</td></tr>
-<tr><td>Enter 'mps.io' in the 'MPS Host' text box.</td></tr>
-<tr><td>Click the 'Document Write' radio button.</td></tr>
-<tr><td>Enter 'pub7-development' in the 'Site Instance Override' text box.</td></tr>
-<tr><td>Clear all 'Name' text box values.</td></tr>
-<tr><td>Clear all 'Value' text box values.</td></tr>
-<tr><td>Uncheck all 'JSON' check boxes.</td></tr>
+<tr><td>Enter 'Sticky Edit Actions' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for module filter titled 'Sticky Edit Actions' to be visible in module list.</td></tr>
+<tr><td>Check the 'Sticky Edit Actions' check box.</td></tr>
 <tr><td>Click the 'Save configuration' button.</td></tr>
+<tr><td>Switch to frame titled 'Some required modules must be enabled'.</td></tr>
+<tr><td>Switch back to the 'Modules' frame.</td></tr>
+<tr><td>Switch to frame titled 'Modules'.</td></tr>
 <tr><td>Verify success message of 'The configuration options have been saved.' is present.</td></tr>
 <tr><td>Click the 'Close Overlay X'.</td></tr>
 <tr><td>Scroll by '-500'.</td></tr>
-<tr><td>STEP 2</td></tr>
-<tr><td>Open url 'http://qa5.publisher7.com/junkurl'.</td></tr>
-<tr><td>STEP 3</td></tr>
-<tr><td>Verify the mps call parameter '"site":"pub7-development"' is present in the page source.</td></tr>
-<tr><td>Verify the mps call parameter '"path":"ERROR/404"' is present in the page source.</td></tr>
-<tr><td>Verify the mps call parameter '"content_id":"ERROR"' is present in the page source.</td></tr>
+<tr><td>Click the 'Home' menu link.</td></tr>
+<tr><td>Mouse over the 'Content' menu link.</td></tr>
+<tr><td>Mouse over the 'Add content' menu link.</td></tr>
+<tr><td>Click the 'Post' menu link.</td></tr>
+<tr><td>Switch to the active frame titled 'Create Post dialog'.</td></tr>
+<tr><td>Enter '7ee5d23c1e7c40f' in the 'Title' text box.</td></tr>
+<tr><td>Scroll by '100'.</td></tr>
+<tr><td>Switch to the Synopsis frame.</td></tr>
+<tr><td>Enter a randomized text string into the 'Body' text area.</td></tr>
+<tr><td>Switch to the active frame titled 'Create Post dialog'.</td></tr>
+<tr><td>Verify the sticky edit 'Save' button is present.</td></tr>
+<tr><td>Verify the sticky edit 'Preview' button is present.</td></tr>
+<tr><td>Scroll by '100'.</td></tr>
+<tr><td>Verify the sticky edit 'Save' button is present.</td></tr>
+<tr><td>Verify the sticky edit 'Preview' button is present.</td></tr>
+<tr><td>Click the 'Meta tags' link.</td></tr>
+<tr><td>Verify the sticky edit 'Save' button is present.</td></tr>
+<tr><td>Verify the sticky edit 'Preview' button is present.</td></tr>
+<tr><td>Scroll by '100'.</td></tr>
+<tr><td>Verify the sticky edit 'Save' button is present.</td></tr>
+<tr><td>Verify the sticky edit 'Preview' button is present.</td></tr>
+<tr><td>Click the 'Save' button.</td></tr>
+<tr><td>Verify success message of 'Post 7ee5d23c1e7c40f has been created.' is present.</td></tr>
+<tr><td>Verify the sticky edit 'Save' button is present.</td></tr>
+<tr><td>Verify the sticky edit 'Preview' button is present.</td></tr>
+<tr><td>Scroll by '100'.</td></tr>
+<tr><td>Verify the sticky edit 'Save' button is present.</td></tr>
+<tr><td>Verify the sticky edit 'Preview' button is present.</td></tr>
+<tr><td>Click the 'Modules' menu link.</td></tr>
+<tr><td>Enter 'Sticky Edit Actions' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for module filter titled 'Sticky Edit Actions' to be visible in module list.</td></tr>
+<tr><td>Uncheck the 'Sticky Edit Actions' module checkbox.</td></tr>
+<tr><td>Click the 'Save configuration' button.</td></tr>
+<tr><td>Verify success message of 'The configuration options have been saved.' is present.</td></tr>
+<tr><td>Open url 'http://acc.publisher7.com'.</td></tr>
+<tr><td>Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.</td></tr>
+<tr><td>Enter 'pa55word' in the 'Password' text box.</td></tr>
+<tr><td>Click the 'Login' button.</td></tr>
+<tr><td>Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCharacterProfile_TC1041_092314034705PM.png </td></tr>
+<tr><td><br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCharacterProfile_TC1041_092314034705PM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCharacterProfile_TC1041_092314034705PM.png' height='500' width='500'/> </a></td></tr>
+<tr><td>Open url 'http://acc.publisher7.com'.</td></tr>
+<tr><td>Cache was cleared on test failure</td></tr>
+<tr><td>Open url 'http://acc.publisher7.com'.</td></tr>
+<tr><td>Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.</td></tr>
+<tr><td>Enter 'pa55word' in the 'Password' text box.</td></tr>
+<tr><td>Click the 'Login' button.</td></tr>
+<tr><td>Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCharacterProfile_TC1041_092314034746PM.png </td></tr>
+<tr><td><br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCharacterProfile_TC1041_092314034746PM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCharacterProfile_TC1041_092314034746PM.png' height='500' width='500'/> </a></td></tr>
+<tr><td>Open url 'http://acc.publisher7.com'.</td></tr>
+<tr><td>Cache was cleared on test failure</td></tr>
+<tr><td>Open url 'http://acc.publisher7.com'.</td></tr>
+<tr><td>Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.</td></tr>
+<tr><td>Enter 'pa55word' in the 'Password' text box.</td></tr>
+<tr><td>Click the 'Login' button.</td></tr>
+<tr><td>Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCharacterProfile_TC1041_092314034817PM.png </td></tr>
+<tr><td><br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCharacterProfile_TC1041_092314034817PM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateCharacterProfile_TC1041_092314034817PM.png' height='500' width='500'/> </a></td></tr>
+<tr><td>Open url 'http://acc.publisher7.com'.</td></tr>
+<tr><td>Cache was cleared on test failure</td></tr>
 </table>

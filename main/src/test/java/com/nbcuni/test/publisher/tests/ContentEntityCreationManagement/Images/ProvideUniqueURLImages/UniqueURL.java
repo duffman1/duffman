@@ -76,6 +76,7 @@ public class UniqueURL extends ParentTest{
         	contentParent.ClickCancelBtn();
         	overlay.switchToDefaultContent(true);
         	webDriver.navigate().to(uniqueUrl1);
+        	Thread.sleep(1000); 
         	workBench.VerifyFileImageLinkPresent("HanSolo", "1");
         	workBench.VerifyFileImageLinkPresent("HanSolo", "2");
         	//workBench.VerifyFileImagePresent("HanSolo", "1");
