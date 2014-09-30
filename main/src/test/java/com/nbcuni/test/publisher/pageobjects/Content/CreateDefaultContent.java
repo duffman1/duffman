@@ -70,6 +70,26 @@ public class CreateDefaultContent {
         return postTitle;
     }
     
+    public String Post(String moderationState, String synopsis) throws Exception {
+    	
+    	taxonomy.NavigateSite("Content>>Add content>>Post");
+        overlay.SwitchToActiveFrame();
+        String postTitle = random.GetCharacterString(15);
+        basicInformation.EnterTitle(postTitle);
+        basicInformation.EnterSynopsis(synopsis);
+        overlay.SwitchToActiveFrame();
+        basicInformation.ClickCoverSelectBtn();
+        selectFile.SelectDefaultCoverImg();
+        overlay.SwitchToActiveFrame();
+        publishingOptions.ClickPublishingOptionsLnk();
+        publishingOptions.SelectModerationState(moderationState);
+        contentParent.ClickSaveBtn();
+        overlay.switchToDefaultContent(true);
+        contentParent.VerifyMessageStatus("Post " + postTitle + " has been created.");
+        
+        return postTitle;
+    }
+    
     public String CharacterProfile(String moderationState, String showTitle, String movieTitle) throws Exception {
         
     	taxonomy.NavigateSite("Content>>Add content>>Character Profile");
@@ -98,6 +118,35 @@ public class CreateDefaultContent {
            
     }
     
+    public String CharacterProfile(String moderationState, String showTitle, String movieTitle, String biography) throws Exception {
+        
+    	taxonomy.NavigateSite("Content>>Add content>>Character Profile");
+        overlay.SwitchToActiveFrame();
+        String characterName = random.GetCharacterString(15); 
+        charactersInformation.EnterCharacterFirstName(characterName);
+        personsInformation.EnterBiography(biography);
+        overlay.SwitchToActiveFrame();
+        coverPhoto.ClickSelectBtn();
+        selectFile.SelectDefaultCoverImg();
+        overlay.SwitchToActiveFrame();
+        coverPhoto.VerifyFileImagePresent("HanSolo");
+        publishingOptions.ClickPublishingOptionsLnk();
+        publishingOptions.SelectModerationState(moderationState);
+        if (showTitle != null) {
+        	relationships.ClickRelationshipsLnk();
+        	relationships.SelectShow(showTitle);
+        }
+        if (movieTitle != null) {
+        	relationships.ClickRelationshipsLnk();
+        	relationships.SelectMovie(movieTitle);
+        }
+        contentParent.ClickSaveBtn();
+        overlay.switchToDefaultContent(true);
+        contentParent.VerifyMessageStatus("Character Profile " + characterName + " has been created.");       
+           
+        return characterName;
+           
+    }
        public String CustomContent(String moderationState , String CustomContentType) throws Exception {	
        
         taxonomy.NavigateSite("Content>>Add content>>" + CustomContentType);
@@ -152,6 +201,28 @@ public class CreateDefaultContent {
         return movieTitle;
        
        }
+       
+       public String Movie(String moderationState, String synopsis) throws Exception {
+           
+           taxonomy.NavigateSite("Content>>Add content>>Movie");
+           overlay.SwitchToActiveFrame();
+           basicInformation.ClickBasicInformationTab();
+           String movieTitle = random.GetCharacterString(15);
+           basicInformation.EnterTitle(movieTitle);
+           basicInformation.EnterSynopsis(synopsis);
+           overlay.SwitchToActiveFrame();
+           basicInformation.ClickCoverSelectBtn();
+           selectFile.SelectDefaultCoverImg();
+           overlay.SwitchToActiveFrame();
+           publishingOptions.ClickPublishingOptionsLnk();
+           publishingOptions.SelectModerationState(moderationState);
+           contentParent.ClickSaveBtn();
+           overlay.switchToDefaultContent(true);
+           contentParent.VerifyMessageStatus("Movie " + movieTitle + " has been created.");
+           
+           return movieTitle;
+          
+          }
 
        public String Person(String moderationState) throws Exception {
        
@@ -160,6 +231,26 @@ public class CreateDefaultContent {
            String personFirstName = random.GetCharacterString(15);
            personsInformation.EnterFirstName(personFirstName);
            personsInformation.EnterBiography();
+           overlay.SwitchToActiveFrame();
+           personsInformation.ClickCoverPhotoSelectBtn();
+           selectFile.SelectDefaultCoverImg();
+           overlay.SwitchToActiveFrame();
+           publishingOptions.ClickPublishingOptionsLnk();
+           publishingOptions.SelectModerationState(moderationState);
+           contentParent.ClickSaveBtn();
+           overlay.switchToDefaultContent(true);
+           contentParent.VerifyMessageStatus("Person " + personFirstName + " has been created.");
+           
+           return personFirstName;
+       }
+       
+       public String Person(String moderationState, String biography) throws Exception {
+           
+           taxonomy.NavigateSite("Content>>Add content>>Person");
+           overlay.SwitchToActiveFrame();
+           String personFirstName = random.GetCharacterString(15);
+           personsInformation.EnterFirstName(personFirstName);
+           personsInformation.EnterBiography(biography);
            overlay.SwitchToActiveFrame();
            personsInformation.ClickCoverPhotoSelectBtn();
            selectFile.SelectDefaultCoverImg();
