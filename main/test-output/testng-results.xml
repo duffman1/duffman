@@ -17,121 +17,25 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[STEP 2]]>
+      <![CDATA[Click the 'Modules' menu link.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Content' menu link.]]>
+      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Add content' menu link.]]>
+      <![CDATA[Enter 'Pixelman' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Post' menu link.]]>
+      <![CDATA[Wait for module filter titled 'Pixelman' to be visible in module list.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+      <![CDATA[Enter 'MPS' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Enter '9660a3fa63f243f' in the 'Title' text box.]]>
+      <![CDATA[Wait for module filter titled 'MPS' to be visible in module list.]]>
     </line>
     <line>
-      <![CDATA[Switch to the Synopsis frame.]]>
-    </line>
-    <line>
-      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Cover' select button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the select file frame.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the file path for file upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Upload' button.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the file image 'HanSolo' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Publishing Options' link.]]>
-    </line>
-    <line>
-      <![CDATA[Select 'Published' from the 'Moderation State' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Post 9660a3fa63f243f has been created.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 3]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter title 9660a3fa63f243f.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Apply' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the search thumbnail named 'HanSolo' is present for search result '9660a3fa63f243f'.]]>
-    </line>
-    <line>
-      <![CDATA[Assert the the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 4]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Home' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Files' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the the thumbnail image is loaded and visible.]]>
+      <![CDATA[Verify the 'MPS' check box is checked.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
@@ -140,110 +44,137 @@
       <![CDATA[Scroll by '-500'.]]>
     </line>
     <line>
+      <![CDATA[STEP 2]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Configuration' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Web services' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'MPS Configuration' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'MPS Configuration dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 3]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'mps.io' in the 'MPS Host' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Document Write' radio button.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'pub7-development' in the 'Site Instance Override' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Clear all 'Name' text box values.]]>
+    </line>
+    <line>
+      <![CDATA[Clear all 'Value' text box values.]]>
+    </line>
+    <line>
+      <![CDATA[Uncheck all 'JSON' check boxes.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configuration' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Sync Ad Blocks' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll by '-500'.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 4 - N/A]]>
+    </line>
+    <line>
       <![CDATA[STEP 5]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Content' menu link.]]>
+      <![CDATA[Mouse over the 'Structure' menu link.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Add content' menu link.]]>
+      <![CDATA[Click the 'Blocks' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Post' menu link.]]>
+      <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+      <![CDATA[STEP 6 and 7]]>
     </line>
     <line>
-      <![CDATA[Enter '0ca089bf5d65417' in the 'Title' text box.]]>
+      <![CDATA[Select the block name 'topmulti (MPS)' from the 'Footer' drop down list.]]>
     </line>
     <line>
-      <![CDATA[Switch to the Synopsis frame.]]>
+      <![CDATA[Click the 'Save Blocks' button.]]>
     </line>
     <line>
-      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+      <![CDATA[Verify success message of 'The block settings have been updated.' is present.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+      <![CDATA[Click the 'Close Overlay X'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Cover' select button.]]>
+      <![CDATA[Scroll by '-500'.]]>
     </line>
     <line>
-      <![CDATA[Switch to the select file frame.]]>
+      <![CDATA[STEP 8]]>
     </line>
     <line>
-      <![CDATA[Click the 'PUBLISHER 7 MPX VIDEO' button.]]>
+      <![CDATA[Click the 'Home' menu link.]]>
     </line>
     <line>
-      <![CDATA[Enter 'AutomationWThumb' in the 'Title' text box.]]>
+      <![CDATA[CLEANUP]]>
     </line>
     <line>
-      <![CDATA[Click the 'Apply' button.]]>
+      <![CDATA[Mouse over the 'Structure' menu link.]]>
     </line>
     <line>
-      <![CDATA[Wait for the file search 'spinner' image to be present.]]>
+      <![CDATA[Click the 'Blocks' menu link.]]>
     </line>
     <line>
-      <![CDATA[Wait for the file search 'spinner' image to not be present, indicating image search is complete.]]>
+      <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
     </line>
     <line>
-      <![CDATA[Click mpx media thumbnail image number 1]]>
+      <![CDATA[Select the block name 'topmulti (MPS)' from the '- None -' drop down list.]]>
     </line>
     <line>
-      <![CDATA[Click on the 'Submit' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Post 0ca089bf5d65417 has been created.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 6]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter title 0ca089bf5d65417.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Apply' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the search thumbnail named 'nbclogosmall' is present for search result '0ca089bf5d65417'.]]>
-    </line>
-    <line>
-      <![CDATA[Assert the the img is loaded and visible.]]>
+      <![CDATA[Click the 'Save Blocks' button.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="76978" started-at="2014-09-29T21:36:22Z" finished-at="2014-09-29T21:37:39Z">
+  <suite name="Default suite" duration-ms="64471" started-at="2014-09-30T00:36:01Z" finished-at="2014-09-30T00:37:05Z">
     <groups>
-      <group name="mpx">
-        <method signature="RepresentativeImage.RepresentativeImage_TC3217()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.RepresentativeImage.RepresentativeImage@1e57c459]" name="RepresentativeImage_TC3217" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.RepresentativeImage.RepresentativeImage"/>
-      </group> <!-- mpx -->
+      <group name="certify">
+        <method signature="MPSEndToEndIntegration.MPSEndToEndIntegration_TC3996()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSEndToEndIntegration@76b29b4a]" name="MPSEndToEndIntegration_TC3996" class="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSEndToEndIntegration"/>
+      </group> <!-- certify -->
       <group name="full">
-        <method signature="RepresentativeImage.RepresentativeImage_TC3217()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.RepresentativeImage.RepresentativeImage@1e57c459]" name="RepresentativeImage_TC3217" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.RepresentativeImage.RepresentativeImage"/>
+        <method signature="MPSEndToEndIntegration.MPSEndToEndIntegration_TC3996()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSEndToEndIntegration@76b29b4a]" name="MPSEndToEndIntegration_TC3996" class="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSEndToEndIntegration"/>
       </group> <!-- full -->
+      <group name="mps">
+        <method signature="MPSEndToEndIntegration.MPSEndToEndIntegration_TC3996()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSEndToEndIntegration@76b29b4a]" name="MPSEndToEndIntegration_TC3996" class="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSEndToEndIntegration"/>
+      </group> <!-- mps -->
     </groups>
-    <test name="Default test" duration-ms="76978" started-at="2014-09-29T21:36:22Z" finished-at="2014-09-29T21:37:39Z">
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.RepresentativeImage.RepresentativeImage">
-        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.RepresentativeImage.RepresentativeImage@1e57c459]" name="startGridAndHub" is-config="true" duration-ms="1126" started-at="2014-09-29T17:36:21Z" finished-at="2014-09-29T17:36:22Z">
+    <test name="Default test" duration-ms="64471" started-at="2014-09-30T00:36:01Z" finished-at="2014-09-30T00:37:05Z">
+      <class name="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSEndToEndIntegration">
+        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSEndToEndIntegration@76b29b4a]" name="startGridAndHub" is-config="true" duration-ms="1080" started-at="2014-09-29T20:36:00Z" finished-at="2014-09-29T20:36:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startGridAndHub -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.RepresentativeImage.RepresentativeImage@1e57c459]" name="startSelenium" is-config="true" duration-ms="2830" started-at="2014-09-29T17:36:22Z" finished-at="2014-09-29T17:36:25Z">
+        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSEndToEndIntegration@76b29b4a]" name="startSelenium" is-config="true" duration-ms="2853" started-at="2014-09-29T20:36:01Z" finished-at="2014-09-29T20:36:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="RepresentativeImage_TC3217()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.RepresentativeImage.RepresentativeImage@1e57c459]" name="RepresentativeImage_TC3217" duration-ms="73563" started-at="2014-09-29T17:36:25Z" finished-at="2014-09-29T17:37:39Z">
+        <test-method status="PASS" signature="MPSEndToEndIntegration_TC3996()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSEndToEndIntegration@76b29b4a]" name="MPSEndToEndIntegration_TC3996" duration-ms="61032" started-at="2014-09-29T20:36:04Z" finished-at="2014-09-29T20:37:05Z">
           <reporter-output>
             <line>
               <![CDATA[STEP 1]]>
@@ -261,121 +192,25 @@
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
-              <![CDATA[STEP 2]]>
+              <![CDATA[Click the 'Modules' menu link.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Content' menu link.]]>
+              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Add content' menu link.]]>
+              <![CDATA[Enter 'Pixelman' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Post' menu link.]]>
+              <![CDATA[Wait for module filter titled 'Pixelman' to be visible in module list.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+              <![CDATA[Enter 'MPS' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Enter '9660a3fa63f243f' in the 'Title' text box.]]>
+              <![CDATA[Wait for module filter titled 'MPS' to be visible in module list.]]>
             </line>
             <line>
-              <![CDATA[Switch to the Synopsis frame.]]>
-            </line>
-            <line>
-              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Cover' select button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the select file frame.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the file path for file upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Upload' button.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Public Local Files' radio button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the file image 'HanSolo' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Publishing Options' link.]]>
-            </line>
-            <line>
-              <![CDATA[Select 'Published' from the 'Moderation State' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Post 9660a3fa63f243f has been created.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 3]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter title 9660a3fa63f243f.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Apply' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the search thumbnail named 'HanSolo' is present for search result '9660a3fa63f243f'.]]>
-            </line>
-            <line>
-              <![CDATA[Assert the the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 4]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Home' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Files' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the the thumbnail image is loaded and visible.]]>
+              <![CDATA[Verify the 'MPS' check box is checked.]]>
             </line>
             <line>
               <![CDATA[Click the 'Close Overlay X'.]]>
@@ -384,107 +219,131 @@
               <![CDATA[Scroll by '-500'.]]>
             </line>
             <line>
+              <![CDATA[STEP 2]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Configuration' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Web services' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'MPS Configuration' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'MPS Configuration dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 3]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'mps.io' in the 'MPS Host' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Document Write' radio button.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'pub7-development' in the 'Site Instance Override' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Clear all 'Name' text box values.]]>
+            </line>
+            <line>
+              <![CDATA[Clear all 'Value' text box values.]]>
+            </line>
+            <line>
+              <![CDATA[Uncheck all 'JSON' check boxes.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configuration' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Sync Ad Blocks' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll by '-500'.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 4 - N/A]]>
+            </line>
+            <line>
               <![CDATA[STEP 5]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Content' menu link.]]>
+              <![CDATA[Mouse over the 'Structure' menu link.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Add content' menu link.]]>
+              <![CDATA[Click the 'Blocks' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Post' menu link.]]>
+              <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+              <![CDATA[STEP 6 and 7]]>
             </line>
             <line>
-              <![CDATA[Enter '0ca089bf5d65417' in the 'Title' text box.]]>
+              <![CDATA[Select the block name 'topmulti (MPS)' from the 'Footer' drop down list.]]>
             </line>
             <line>
-              <![CDATA[Switch to the Synopsis frame.]]>
+              <![CDATA[Click the 'Save Blocks' button.]]>
             </line>
             <line>
-              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+              <![CDATA[Verify success message of 'The block settings have been updated.' is present.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+              <![CDATA[Click the 'Close Overlay X'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Cover' select button.]]>
+              <![CDATA[Scroll by '-500'.]]>
             </line>
             <line>
-              <![CDATA[Switch to the select file frame.]]>
+              <![CDATA[STEP 8]]>
             </line>
             <line>
-              <![CDATA[Click the 'PUBLISHER 7 MPX VIDEO' button.]]>
+              <![CDATA[Click the 'Home' menu link.]]>
             </line>
             <line>
-              <![CDATA[Enter 'AutomationWThumb' in the 'Title' text box.]]>
+              <![CDATA[CLEANUP]]>
             </line>
             <line>
-              <![CDATA[Click the 'Apply' button.]]>
+              <![CDATA[Mouse over the 'Structure' menu link.]]>
             </line>
             <line>
-              <![CDATA[Wait for the file search 'spinner' image to be present.]]>
+              <![CDATA[Click the 'Blocks' menu link.]]>
             </line>
             <line>
-              <![CDATA[Wait for the file search 'spinner' image to not be present, indicating image search is complete.]]>
+              <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
             </line>
             <line>
-              <![CDATA[Click mpx media thumbnail image number 1]]>
+              <![CDATA[Select the block name 'topmulti (MPS)' from the '- None -' drop down list.]]>
             </line>
             <line>
-              <![CDATA[Click on the 'Submit' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Post 0ca089bf5d65417 has been created.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 6]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter title 0ca089bf5d65417.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Apply' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the search thumbnail named 'nbclogosmall' is present for search result '0ca089bf5d65417'.]]>
-            </line>
-            <line>
-              <![CDATA[Assert the the img is loaded and visible.]]>
+              <![CDATA[Click the 'Save Blocks' button.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- RepresentativeImage_TC3217 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.RepresentativeImage.RepresentativeImage@1e57c459]" name="stopSelenium" is-config="true" duration-ms="572" started-at="2014-09-29T17:37:39Z" finished-at="2014-09-29T17:37:39Z">
+        </test-method> <!-- MPSEndToEndIntegration_TC3996 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSEndToEndIntegration@76b29b4a]" name="stopSelenium" is-config="true" duration-ms="572" started-at="2014-09-29T20:37:05Z" finished-at="2014-09-29T20:37:05Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=RepresentativeImage_TC3217 status=SUCCESS method=RepresentativeImage.RepresentativeImage_TC3217()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.RepresentativeImage.RepresentativeImage@1e57c459] output=STEP 1]]]>
+                <![CDATA[[TestResult name=MPSEndToEndIntegration_TC3996 status=SUCCESS method=MPSEndToEndIntegration.MPSEndToEndIntegration_TC3996()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSEndToEndIntegration@76b29b4a] output=STEP 1]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.RepresentativeImage.RepresentativeImage@1e57c459]" name="stopGridAndHub" is-config="true" duration-ms="370" started-at="2014-09-29T17:37:39Z" finished-at="2014-09-29T17:37:40Z">
+        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSEndToEndIntegration@76b29b4a]" name="stopGridAndHub" is-config="true" duration-ms="364" started-at="2014-09-29T20:37:05Z" finished-at="2014-09-29T20:37:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopGridAndHub -->
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.RepresentativeImage.RepresentativeImage -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Advertising.MPS.MPSEndToEndIntegration -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

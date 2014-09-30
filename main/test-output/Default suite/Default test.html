@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Sep 29 17:36:22 EDT 2014</td>
+<td>Started on:</td><td>Mon Sep 29 20:36:01 EDT 2014</td>
 </tr>
-<tr><td>Total time:</td><td>76 seconds (76978 ms)</td>
+<tr><td>Total time:</td><td>64 seconds (64471 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,90 +75,66 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.RepresentativeImage.RepresentativeImage.RepresentativeImage_TC3217()'><b>RepresentativeImage_TC3217</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.RepresentativeImage.RepresentativeImage<br/>
-<a href="#Output-45916146" onClick='toggleBox("Output-45916146", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.nbcuni.test.publisher.tests.Advertising.MPS.MPSEndToEndIntegration.MPSEndToEndIntegration_TC3996()'><b>MPSEndToEndIntegration_TC3996</b><br>Test class: com.nbcuni.test.publisher.tests.Advertising.MPS.MPSEndToEndIntegration<br/>
+<a href="#Output-2143503954" onClick='toggleBox("Output-2143503954", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-45916146" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-45916146">
+<a href="#Output-2143503954" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2143503954">
 STEP 1<br/>
 Open url 'http://qa5.publisher7.com'.<br/>
 Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
 Enter 'pa55word' in the 'Password' text box.<br/>
 Click the 'Login' button.<br/>
-STEP 2<br/>
-Mouse over the 'Content' menu link.<br/>
-Mouse over the 'Add content' menu link.<br/>
-Click the 'Post' menu link.<br/>
-Switch to the active frame titled 'Create Post dialog'.<br/>
-Enter '9660a3fa63f243f' in the 'Title' text box.<br/>
-Switch to the Synopsis frame.<br/>
-Enter a randomized text string into the 'Body' text area.<br/>
-Switch to the active frame titled 'Create Post dialog'.<br/>
-Click the 'Cover' select button.<br/>
-Switch to the select file frame.<br/>
-Enter the file path for file upload.<br/>
-Click the 'Upload' button.<br/>
-Wait for the file link to be visible after upload.<br/>
-Click the 'Next' button.<br/>
-Click the 'Public Local Files' radio button.<br/>
-Click the 'Next' button.<br/>
-Verify the file image 'HanSolo' is present.<br/>
-Verify the img is loaded and visible.<br/>
-Click the 'Save' button.<br/>
-Switch to the active frame titled 'Create Post dialog'.<br/>
-Scroll the 'Publishing Options' link into view.<br/>
-Click the 'Publishing Options' link.<br/>
-Select 'Published' from the 'Moderation State' drop down list.<br/>
-Click the 'Save' button.<br/>
-Verify success message of 'Post 9660a3fa63f243f has been created.' is present.<br/>
-STEP 3<br/>
-Click the 'Content' menu link.<br/>
-Switch to the active frame titled 'Content dialog'.<br/>
-Enter title 9660a3fa63f243f.<br/>
-Click the 'Apply' button.<br/>
-Verify the search thumbnail named 'HanSolo' is present for search result '9660a3fa63f243f'.<br/>
-Assert the the img is loaded and visible.<br/>
-STEP 4<br/>
-Click the 'Home' menu link.<br/>
-Mouse over the 'Content' menu link.<br/>
-Click the 'Files' menu link.<br/>
-Switch to the active frame titled 'Content dialog'.<br/>
-Verify the the thumbnail image is loaded and visible.<br/>
+Click the 'Modules' menu link.<br/>
+Switch to the active frame titled 'Modules dialog'.<br/>
+Enter 'Pixelman' in the 'Filter Name' text box.<br/>
+Wait for module filter titled 'Pixelman' to be visible in module list.<br/>
+Enter 'MPS' in the 'Filter Name' text box.<br/>
+Wait for module filter titled 'MPS' to be visible in module list.<br/>
+Verify the 'MPS' check box is checked.<br/>
 Click the 'Close Overlay X'.<br/>
 Scroll by '-500'.<br/>
+STEP 2<br/>
+Mouse over the 'Configuration' menu link.<br/>
+Mouse over the 'Web services' menu link.<br/>
+Click the 'MPS Configuration' menu link.<br/>
+Switch to the active frame titled 'MPS Configuration dialog'.<br/>
+STEP 3<br/>
+Enter 'mps.io' in the 'MPS Host' text box.<br/>
+Click the 'Document Write' radio button.<br/>
+Enter 'pub7-development' in the 'Site Instance Override' text box.<br/>
+Clear all 'Name' text box values.<br/>
+Clear all 'Value' text box values.<br/>
+Uncheck all 'JSON' check boxes.<br/>
+Click the 'Save configuration' button.<br/>
+Click the 'Sync Ad Blocks' button.<br/>
+Verify success message of 'The configuration options have been saved.' is present.<br/>
+Click the 'Close Overlay X'.<br/>
+Scroll by '-500'.<br/>
+STEP 4 - N/A<br/>
 STEP 5<br/>
-Mouse over the 'Content' menu link.<br/>
-Mouse over the 'Add content' menu link.<br/>
-Click the 'Post' menu link.<br/>
-Switch to the active frame titled 'Create Post dialog'.<br/>
-Enter '0ca089bf5d65417' in the 'Title' text box.<br/>
-Switch to the Synopsis frame.<br/>
-Enter a randomized text string into the 'Body' text area.<br/>
-Switch to the active frame titled 'Create Post dialog'.<br/>
-Click the 'Cover' select button.<br/>
-Switch to the select file frame.<br/>
-Click the 'PUBLISHER 7 MPX VIDEO' button.<br/>
-Enter 'AutomationWThumb' in the 'Title' text box.<br/>
-Click the 'Apply' button.<br/>
-Wait for the file search 'spinner' image to be present.<br/>
-Wait for the file search 'spinner' image to not be present, indicating image search is complete.<br/>
-Click mpx media thumbnail image number 1<br/>
-Click on the 'Submit' button.<br/>
-Switch to the active frame titled 'Create Post dialog'.<br/>
-Click the 'Save' button.<br/>
-Verify success message of 'Post 0ca089bf5d65417 has been created.' is present.<br/>
-STEP 6<br/>
-Click the 'Content' menu link.<br/>
-Switch to the active frame titled 'Content dialog'.<br/>
-Enter title 0ca089bf5d65417.<br/>
-Click the 'Apply' button.<br/>
-Verify the search thumbnail named 'nbclogosmall' is present for search result '0ca089bf5d65417'.<br/>
-Assert the the img is loaded and visible.<br/>
+Mouse over the 'Structure' menu link.<br/>
+Click the 'Blocks' menu link.<br/>
+Switch to the active frame titled 'Blocks dialog'.<br/>
+STEP 6 and 7<br/>
+Select the block name 'topmulti (MPS)' from the 'Footer' drop down list.<br/>
+Click the 'Save Blocks' button.<br/>
+Verify success message of 'The block settings have been updated.' is present.<br/>
+Click the 'Close Overlay X'.<br/>
+Scroll by '-500'.<br/>
+STEP 8<br/>
+Click the 'Home' menu link.<br/>
+CLEANUP<br/>
+Mouse over the 'Structure' menu link.<br/>
+Click the 'Blocks' menu link.<br/>
+Switch to the active frame titled 'Blocks dialog'.<br/>
+Select the block name 'topmulti (MPS)' from the '- None -' drop down list.<br/>
+Click the 'Save Blocks' button.<br/>
 </div>
 </td>
 <td></td>
-<td>73</td>
-<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.RepresentativeImage.RepresentativeImage@1e57c459</td></tr>
+<td>61</td>
+<td>com.nbcuni.test.publisher.tests.Advertising.MPS.MPSEndToEndIntegration@76b29b4a</td></tr>
 </table><p>
 </body>
 </html>
