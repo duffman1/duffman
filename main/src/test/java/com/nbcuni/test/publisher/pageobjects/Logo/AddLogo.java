@@ -3,11 +3,13 @@ package com.nbcuni.test.publisher.pageobjects.Logo;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.LocalFileDetector;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.Reporter;
+
 import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
@@ -94,7 +96,7 @@ public class AddLogo {
     public void EnterFilePath(String pathToFile) throws Exception {
     	
     	Reporter.log("Enter the file path for file upload.");
-    	//webDriver.setFileDetector(new LocalFileDetector());
+    	webDriver.setFileDetector(new LocalFileDetector());
     	BrowseToFile_Upl.sendKeys(pathToFile);
     	
     }

@@ -196,12 +196,7 @@ public class A1_TestSetup extends ParentTest {
             	Logos logos = new Logos(webDriver, applib);
         	    logos.DeleteAllLogos();
             	overlay.ClickCloseOverlayLnk();
-            	try {
-            		taxonomy.NavigateSite("Content>>Logos>>Add Logo");
-            	}
-            	catch (Exception | AssertionError e) {
-            		taxonomy.NavigateSite("Content>>Add Logo");
-            	}
+            	applib.openSitePage("/#overlay=logo/add");
                 overlay.SwitchToActiveFrame();
                 AddLogo addLogo = new AddLogo(webDriver);
                 String logoTitle = random.GetCharacterString(15);

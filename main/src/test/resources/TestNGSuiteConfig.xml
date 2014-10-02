@@ -1,12 +1,13 @@
 <suite name="Publisher 7 Test Suites">
 
 	<!--RUNTIME CONFIG-->
-	<parameter name="AppURL" value="http://qa5.publisher7.com"></parameter>
+	<parameter name="AppURL" value="http://acc.publisher7.com"></parameter>
 	<parameter name="Browser" value="chrome"></parameter>
 	<parameter name="Admin1Username" value="admin@publisher.nbcuni.com"></parameter>
 	<parameter name="Admin1Password" value="pa55word"></parameter>
 	<parameter name="ReRunOnFailure" value="true"></parameter>
-	<parameter name="ReRunOnFailureCount" value="1"></parameter>
+	<parameter name="ReRunOnFailureCount" value="2"></parameter>
+	<parameter name="RunOnGridNetwork" value="true"></parameter>
 	
   	<!--REPORT CONFIG-->
   	<parameter name="SendReportAutoEmails" value="true"></parameter>
@@ -66,6 +67,7 @@
   	<parameter name="PathToMediaContent" value="/src/test/java/com/nbcuni/test/publisher/content/MediaFiles/"></parameter>
   	<parameter name="ErrorCheckingEnabled" value="true"></parameter>
   	<parameter name="LocalWebDriverHubPort" value="4444"></parameter>
+  	<parameter name="RemoteWebDriverHubPort" value="4445"></parameter>
 	<parameter name="LocalAppiumHubPort" value="4724"></parameter>
 	
 	<!--IRC CONFIG-->

@@ -124,7 +124,7 @@ public class Overlay {
     	webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
     	
     	this.switchToDefaultContent(false);
-    	Thread.sleep(500); //slight pause to help ensure frame switch occurs to a new frame and not the old.
+    	Thread.sleep(1000); //slight pause to help ensure frame switch occurs to a new frame and not the old.
     	Reporter.log("Switch to the active frame titled '" + ActiveFrame_Frm.getAttribute("title") + "'.");
     	webDriver.switchTo().frame(ActiveFrame_Frm);
     	
