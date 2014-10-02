@@ -12,7 +12,6 @@ import java.util.Date;
 import java.util.List;
 import java.util.TimeZone;
 import java.util.concurrent.TimeUnit;
-
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
@@ -25,7 +24,7 @@ import com.nbcuni.test.publisher.pageobjects.Logo.Logos;
 import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
 import com.nbcuni.test.publisher.pageobjects.People.Permissions;
 import com.nbcuni.test.publisher.pageobjects.Structure.Queues.Queues.ScheduleQueue;
-
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
@@ -107,16 +106,19 @@ public class A1_TestSetup extends ParentTest {
                 overlay.ClickCloseOverlayLnk();
                 
                 //set pub sauce theme and admin menu perms
-                if (webDriver.findElements(By.xpath("//div[@id='admin-menu-wrapper']")).isEmpty()) {
-                	applib.openSitePage("/admin/appearance");
-                    new Select(webDriver.findElement(By.id("edit-admin-theme--2"))).selectByVisibleText("Pub Sauce");
-                    contentParent.ClickSaveBtn();
-                    
-                    applib.openSitePage("admin/people/permissions");
-                    Permissions permissions = new Permissions(webDriver, applib);
-                    permissions.EnablePermissions("editor", Arrays.asList("access administration menu"));
-                    permissions.ClickSaveConfigurationsBtn();
+                applib.openSitePage("/admin/appearance");
+                new Select(webDriver.findElement(By.id("edit-admin-theme--2"))).selectByVisibleText("Pub Sauce");
+                contentParent.ClickSaveBtn();
+                applib.openSitePage("/admin/people/permissions");
+                Permissions permissions = new Permissions(webDriver, applib);
+                WebElement cbx = webDriver.findElement(By.xpath("//label[contains(text(),'editor')]/../input[@value='access administration menu']"));
+                if (!cbx.isSelected()) {
+                	cbx.click();
+                	Alert alert1 = webDriver.switchTo().alert();
+            		alert1.accept();
+            		webDriver.switchTo().defaultContent();
                 }
+                permissions.ClickSaveConfigurationsBtn();
                 
                 //set timezone utc
             	applib.openSitePage("/admin/config/regional/settings");
@@ -232,7 +234,7 @@ public class A1_TestSetup extends ParentTest {
         	    Settings settings = new Settings(webDriver, applib);
             	settings.ConfigureMPXIfNeeded();
             	settings.ConfigureMPXIngestionType();
-        	    
+            	
                 //delete any old mpx account file types (DE3921)
                 webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
                 try {
