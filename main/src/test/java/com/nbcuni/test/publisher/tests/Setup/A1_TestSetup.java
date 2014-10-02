@@ -23,6 +23,7 @@ import com.nbcuni.test.publisher.pageobjects.Content.WorkBench;
 import com.nbcuni.test.publisher.pageobjects.Logo.AddLogo;
 import com.nbcuni.test.publisher.pageobjects.Logo.Logos;
 import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
+import com.nbcuni.test.publisher.pageobjects.People.Permissions;
 import com.nbcuni.test.publisher.pageobjects.Structure.Queues.Queues.ScheduleQueue;
 
 import org.openqa.selenium.By;
@@ -87,7 +88,7 @@ public class A1_TestSetup extends ParentTest {
                 //disable necessary modules
                 for (String module : Arrays.asList("Sticky Edit Actions", "Acquia Purge", 
                 		"ImageField Focus", "Database logging", "MPS", 
-                		"Dynamic Queue Workbench", "Dynamic Queue", "Event Countdown")) {
+                		"Dynamic Queue Workbench", "Dynamic Queue", "Event Countdown", "Mobile Friendly Navigation Toolbar")) {
                 	if (modules.IsModuleEnabled(module)) {
                 		modules.EnterFilterName(module);
                     	modules.DisableModule(module);
@@ -103,8 +104,19 @@ public class A1_TestSetup extends ParentTest {
                     	overlay.SwitchToActiveFrame();
                     }
                 }
-                
                 overlay.ClickCloseOverlayLnk();
+                
+                //set pub sauce theme and admin menu perms
+                if (webDriver.findElements(By.xpath("//div[@id='admin-menu-wrapper']")).isEmpty()) {
+                	applib.openSitePage("/admin/appearance");
+                    new Select(webDriver.findElement(By.id("edit-admin-theme--2"))).selectByVisibleText("Pub Sauce");
+                    contentParent.ClickSaveBtn();
+                    
+                    applib.openSitePage("admin/people/permissions");
+                    Permissions permissions = new Permissions(webDriver, applib);
+                    permissions.EnablePermissions("editor", Arrays.asList("access administration menu"));
+                    permissions.ClickSaveConfigurationsBtn();
+                }
                 
                 //set timezone utc
             	applib.openSitePage("/admin/config/regional/settings");
@@ -119,22 +131,6 @@ public class A1_TestSetup extends ParentTest {
             	new Select(webDriver.findElement(By.id("edit-date-format-short"))).selectByValue("Y-m-d H:i");
             	new Select(webDriver.findElement(By.id("edit-date-format-edit-date"))).selectByValue("m/d/Y - h:i A");
             	contentParent.ClickSaveBtn();
-            	
-            	//set file system paths
-            	/*
-            	applib.openSitePage("/admin/config/media/file-system");
-            	WebElement PublicFileSystemPath_Txb = webDriver.findElement(By.id("edit-file-public-path"));
-            	PublicFileSystemPath_Txb.clear();
-            	PublicFileSystemPath_Txb.sendKeys("sites/default/files");
-            	WebElement PrivateFileSystemPath_Txb = webDriver.findElement(By.id("edit-file-private-path"));
-            	PrivateFileSystemPath_Txb.clear();
-            	PrivateFileSystemPath_Txb.sendKeys("/mnt/files/nbcupublisher7.qa5/sites/default/files-private");
-            	WebElement TemporaryDirectory_Txb = webDriver.findElement(By.id("edit-file-temporary-path"));
-            	TemporaryDirectory_Txb.clear();
-            	TemporaryDirectory_Txb.sendKeys("/mnt/tmp/nbcupublisher7qa5");
-            	webDriver.findElement(By.id("edit-file-default-scheme-public")).click();
-            	contentParent.ClickSaveBtn();
-            	*/
             	
                 //configure media gallery multi select
                 applib.openSitePage("/admin/structure/types/manage/media-gallery/fields/field_media_items/widget-type");
