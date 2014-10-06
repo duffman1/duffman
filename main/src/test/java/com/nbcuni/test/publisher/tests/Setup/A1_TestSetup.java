@@ -142,30 +142,32 @@ public class A1_TestSetup extends ParentTest {
                 	Alert alert1 = webDriver.switchTo().alert();
             		alert1.accept();
             		webDriver.switchTo().defaultContent();
+            		permissions.ClickSaveConfigurationsBtn();
                 }
-                permissions.ClickSaveConfigurationsBtn();
                 
-                //set file system paths
-                String privateFileSystemPath = null;
-                if (config.getConfigValue("AppURL").contains(".pr")) {
-                	privateFileSystemPath = config.getConfigValue("AppURL").replace("http://p7-", "").replace(".pr.publisher7.com", "");
-                }
-                else {
-                	privateFileSystemPath = config.getConfigValue("AppURL").replace("http://", "").replace(".publisher7.com", "");
-                }
-                config.getConfigValue("AppURL").replace("old", "http://").replace(".publisher7.com", "");
+                //set file system paths if not already set
                 applib.openSitePage("/admin/config/media/file-system");
                 WebElement PublicFileSystemPath_Txb = webDriver.findElement(By.id("edit-file-public-path"));
-                PublicFileSystemPath_Txb.clear();
-                PublicFileSystemPath_Txb.sendKeys("sites/default/files");
                 WebElement PrivateFileSystemPath_Txb = webDriver.findElement(By.id("edit-file-private-path"));
-                PrivateFileSystemPath_Txb.clear();
-                PrivateFileSystemPath_Txb.sendKeys("/mnt/files/nbcupublisher7." + privateFileSystemPath + "/sites/default/files-private");
-                WebElement TemporaryDirectory_Txb = webDriver.findElement(By.id("edit-file-temporary-path"));
-                TemporaryDirectory_Txb.clear();
-                TemporaryDirectory_Txb.sendKeys("/mnt/tmp/nbcupublisher7qa5");
-                webDriver.findElement(By.id("edit-file-default-scheme-public")).click();
-                contentParent.ClickSaveBtn();
+                if (PrivateFileSystemPath_Txb.getAttribute("value").equals("")) {
+                	String privateFileSystemPath = null;
+                	if (config.getConfigValue("AppURL").contains(".pr")) {
+                		privateFileSystemPath = config.getConfigValue("AppURL").replace("http://p7-", "").replace(".pr.publisher7.com", "");
+                	}
+                	else {
+                		privateFileSystemPath = config.getConfigValue("AppURL").replace("http://", "").replace(".publisher7.com", "");
+                	}
+                
+                	PublicFileSystemPath_Txb.clear();
+                	PublicFileSystemPath_Txb.sendKeys("sites/default/files");
+                	PrivateFileSystemPath_Txb.clear();
+                	PrivateFileSystemPath_Txb.sendKeys("/mnt/files/nbcupublisher7" + privateFileSystemPath + "/sites/default/files-private");
+                	WebElement TemporaryDirectory_Txb = webDriver.findElement(By.id("edit-file-temporary-path"));
+                	TemporaryDirectory_Txb.clear();
+                	TemporaryDirectory_Txb.sendKeys("/mnt/tmp/nbcupublisher7qa5");
+                	webDriver.findElement(By.id("edit-file-default-scheme-public")).click();
+                	contentParent.ClickSaveBtn();
+                }
                 taxonomy.NavigateSite("Home");
                 
                 //schedule a post content item revision to be consumed by the SchedulingContentPublishUnpublished test later in the suite
@@ -300,6 +302,7 @@ public class A1_TestSetup extends ParentTest {
                 allowedContentTypes.add("movie");
                 allowedContentTypes.add("person");
                 allowedContentTypes.add("post");
+                allowedContentTypes.add("article");
                 allowedContentTypes.add("tv-episode");
                 allowedContentTypes.add("tv-season");
                 allowedContentTypes.add("tv-show");
