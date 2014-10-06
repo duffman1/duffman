@@ -146,13 +146,21 @@ public class A1_TestSetup extends ParentTest {
                 permissions.ClickSaveConfigurationsBtn();
                 
                 //set file system paths
+                String privateFileSystemPath = null;
+                if (config.getConfigValue("AppURL").contains(".pr")) {
+                	privateFileSystemPath = config.getConfigValue("AppURL").replace("http://p7-", "").replace(".pr.publisher7.com", "");
+                }
+                else {
+                	privateFileSystemPath = config.getConfigValue("AppURL").replace("http://", "").replace(".publisher7.com", "");
+                }
+                config.getConfigValue("AppURL").replace("old", "http://").replace(".publisher7.com", "");
                 applib.openSitePage("/admin/config/media/file-system");
                 WebElement PublicFileSystemPath_Txb = webDriver.findElement(By.id("edit-file-public-path"));
                 PublicFileSystemPath_Txb.clear();
                 PublicFileSystemPath_Txb.sendKeys("sites/default/files");
                 WebElement PrivateFileSystemPath_Txb = webDriver.findElement(By.id("edit-file-private-path"));
                 PrivateFileSystemPath_Txb.clear();
-                PrivateFileSystemPath_Txb.sendKeys("/mnt/files/nbcupublisher7.qa5/sites/default/files-private");
+                PrivateFileSystemPath_Txb.sendKeys("/mnt/files/nbcupublisher7." + privateFileSystemPath + "/sites/default/files-private");
                 WebElement TemporaryDirectory_Txb = webDriver.findElement(By.id("edit-file-temporary-path"));
                 TemporaryDirectory_Txb.clear();
                 TemporaryDirectory_Txb.sendKeys("/mnt/tmp/nbcupublisher7qa5");
