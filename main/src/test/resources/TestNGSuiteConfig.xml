@@ -1,12 +1,12 @@
 <suite name="Publisher 7 Test Suites">
 
 	<!--RUNTIME CONFIG-->
-	<parameter name="AppURL" value="http://acc.publisher7.com"></parameter>
+	<parameter name="AppURL" value="http://qa5.publisher7.com"></parameter>
 	<parameter name="Browser" value="chrome"></parameter>
 	<parameter name="Admin1Username" value="admin@publisher.nbcuni.com"></parameter>
 	<parameter name="Admin1Password" value="pa55word"></parameter>
-	<parameter name="ReRunOnFailure" value="false"></parameter>
-	<parameter name="ReRunOnFailureCount" value="1"></parameter>
+	<parameter name="ReRunOnFailure" value="true"></parameter>
+	<parameter name="ReRunOnFailureCount" value="3"></parameter>
 	<parameter name="RunOnGridNetwork" value="true"></parameter>
 	
   	<!--REPORT CONFIG-->
@@ -18,7 +18,7 @@
   	<parameter name="PathToScreenshots" value="/test-output/screenshots/"></parameter>
   	<parameter name="PathToHarReports" value="/test-output/"></parameter>
   	<parameter name="AbortSuiteOnSetupFailure" value="true"></parameter>
-  	<parameter name="SendReportEmailAddress" value="brandon.clark@nbcuni.com, brandon.clark@nbcuni.com"></parameter>
+  	<parameter name="SendReportEmailAddress" value="ots.publishing.qa@nbcuni.com, brandon.clark@nbcuni.com"></parameter>
   	
   	<!--MOBILE CONFIG-->
 	<parameter name="RunMobile" value="false"></parameter>

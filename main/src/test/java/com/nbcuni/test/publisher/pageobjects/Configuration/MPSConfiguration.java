@@ -176,6 +176,7 @@ public class MPSConfiguration {
     	
     	Reporter.log("Enter '" + nameTxt + "' in the 'Name' text box with index '" + index + "'.");
     	Name_Txb(index).clear();
+    	Name_Txb(index).click();
     	Name_Txb(index).sendKeys(nameTxt);
     }
     
@@ -183,6 +184,7 @@ public class MPSConfiguration {
     	
     	Reporter.log("Enter '" + valueTxt + "' in the 'Value' text box with index '" + index + "'.");
     	Value_Txb(index).clear();
+    	Value_Txb(index).click();
     	Value_Txb(index).sendKeys(valueTxt);
     }
     

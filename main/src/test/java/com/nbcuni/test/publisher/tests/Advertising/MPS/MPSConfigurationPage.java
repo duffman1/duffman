@@ -99,7 +99,7 @@ public class MPSConfigurationPage extends ParentTest {
             overlay.ClickCloseOverlayLnk();
             
             Reporter.log("STEP 10");
-            contentParent.VerifySourceInPage(Arrays.asList("//mps.io/request/page/jsonp?callback=mpsCallback"));
+            contentParent.VerifySourceInPage(Arrays.asList("//mps.io/request/page/jsonp?CALLBACK=mpsCallback"));
             
             Reporter.log("STEP 11 - N/A");
             

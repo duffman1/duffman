@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
     <line>
-      <![CDATA[Open url 'http://acc.publisher7.com'.]]>
+      <![CDATA[STEP 1]]>
+    </line>
+    <line>
+      <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
     </line>
     <line>
       <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
@@ -14,426 +17,322 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://acc.publisher7.com/admin/appearance'.]]>
+      <![CDATA[SETUP]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://acc.publisher7.com/admin/modules'.]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://acc.publisher7.com/#overlay=admin/modules'.]]>
+      <![CDATA[Click the 'Modules' menu link.]]>
     </line>
     <line>
       <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Uninstall' overlay tab.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll by '-500'.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Uninstall' overlay tab.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll by '-500'.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Uninstall' overlay tab.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll by '-500'.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Uninstall' overlay tab.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll by '-500'.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+      <![CDATA[Verify the 'MPS' check box is checked.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://acc.publisher7.com/admin/config/regional/settings'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://acc.publisher7.com/admin/config/regional/date-time'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://acc.publisher7.com/admin/structure/types/manage/media-gallery/fields/field_media_items/widget-type'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://acc.publisher7.com/admin/structure/types/manage/media-gallery/fields/field_media_items'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Home' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://acc.publisher7.com/admin/people/permissions'.]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://acc.publisher7.com/admin/config/media/file-system'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Home' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Add content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Post' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Title' is present as a required field.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Body' is present as a required field.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Publishing Options' link.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Moderation State' is present as a required field.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'futurePost10/06/20140d6b0eb93c60458' in the 'Title' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the Synopsis frame.]]>
-    </line>
-    <line>
-      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Cover' select button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the select file frame.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the file path for file upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Upload' button.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the file image 'HanSolo' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Publishing Options' link.]]>
-    </line>
-    <line>
-      <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Post futurePost10/06/20140d6b0eb93c60458 has been created.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Schedule' link in the work bench.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'futurePost10/06/20140d6b0eb93c60458 dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Add Scheduled Revision' link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'futurePost10/06/20140d6b0eb93c60458 dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Select revision titled 'futurePost10/06/20140d6b0eb93c60458'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that the 'Operation' option count equals '5'.]]>
-    </line>
-    <line>
-      <![CDATA[Select 'Moderate to Published' from the 'Select operation' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '10/06/2014' in the 'Date' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '09:07 PM' in the 'Time' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Schedule' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'futurePost10/06/20140d6b0eb93c60458 dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The scheduled revision operation has been saved' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://acc.publisher7.com/#overlay=admin/content/logos'.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Manage Logo dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://acc.publisher7.com/#overlay=logo/add'.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Add Logo dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '14977ead45e54ed' in the 'Title' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the file path for file upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Upload' button.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the file image 'nbclogosmall' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '2014-10-06' in the 'Start Date' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '09:07:15 PM' in the 'Start Time' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '2014-10-06' in the 'End Date' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '11:02:15 PM' in the 'End Time' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Manage Logo dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text '14977ead45e54ed' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'Mon, 10/06/2014 - 21:07' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'Mon, 10/06/2014 - 23:02' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Assert the file image 'nbclogosmall' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Assert the the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
+      <![CDATA[STEP 2 - 3]]>
     </line>
     <line>
       <![CDATA[Mouse over the 'Configuration' menu link.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Media' menu link.]]>
+      <![CDATA[Mouse over the 'Web services' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Media: thePlatform mpx settings' menu link.]]>
+      <![CDATA[Click the 'MPS Configuration' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'MPS Configuration dialog'.]]>
     </line>
     <line>
-      <![CDATA[Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.]]>
+      <![CDATA[STEP 4]]>
     </line>
     <line>
-      <![CDATA[MPX is already configured.]]>
+      <![CDATA[Clear all 'Name' text box values.]]>
+    </line>
+    <line>
+      <![CDATA[Clear all 'Value' text box values.]]>
+    </line>
+    <line>
+      <![CDATA[Uncheck all 'JSON' check boxes.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'mps.io' in the 'MPS Host' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Document Write' radio button.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'pub7-development' in the 'Site Instance Override' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configuration' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the mps call parameter '"site":"pub7-development"' is present in the page source.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the mps call parameter '"title":"Welcome to' is present in the page source.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the mps call parameter '"path":"\/"' is present in the page source.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the mps call parameter '"is_content":0' is present in the page source.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the mps call parameter '"type":"other"' is present in the page source.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the mps call parameter 'var mpsopts = {"host":"mps.io"}' is present in the page source.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 5]]>
     </line>
     <line>
       <![CDATA[Mouse over the 'Configuration' menu link.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Media' menu link.]]>
+      <![CDATA[Mouse over the 'Web services' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Media: thePlatform mpx settings' menu link.]]>
+      <![CDATA[Click the 'MPS Configuration' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'MPS Configuration dialog'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save configurations' button.]]>
+      <![CDATA[Click the 'DOM Injection (Only select this method if JQuery is enabled).' radio button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
+      <![CDATA[Click the 'Save configuration' button.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Files' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'mpxMedia' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Sync MPX Media' link.]]>
-    </line>
-    <line>
-      <![CDATA[Select 'AutomationPlayer1' from the first 'Import Player' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Sync MPX Media Now' link.]]>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://acc.publisher7.com/admin/structure/types/manage/721a5707da/delete'.]]>
+      <![CDATA[Verify 'mpsload.src='//'+mpsopts.host+'/fetch/ext/load-'+mpscall.site+'.js?nowrite=jq'; mpsload.id="mps-load"' is present in page source.]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://acc.publisher7.com/admin/structure/types/manage/750df0874c/delete'.]]>
+      <![CDATA[Verify 'mpsload.async=false; head.insertBefore(mpsload,head.firstChild)' is present in page source.]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://acc.publisher7.com/admin/structure/types/manage/mpx0df1ce5ba6/delete'.]]>
+      <![CDATA[STEP 6]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://acc.publisher7.com/admin/structure/types/manage/mpx3df53fd568/delete'.]]>
+      <![CDATA[Open url 'http://qa5.publisher7.com/?x=y'.]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://acc.publisher7.com/admin/structure/types/manage/mpx890a7b3529/delete'.]]>
+      <![CDATA[Verify the mps call parameter '"title":"Welcome to' is present in the page source.]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://acc.publisher7.com/admin/structure/types/manage/mpxa117ed840c/delete'.]]>
+      <![CDATA[Verify the mps call parameter '"path":"\/"' is present in the page source.]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://acc.publisher7.com/admin/structure/types/manage/mpxc8c9ca39b4/delete'.]]>
+      <![CDATA[Verify the mps call parameter '"qs":"eD15"' is present in the page source.]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://acc.publisher7.com/admin/structure/types/manage/mpxc99f625c97/delete'.]]>
+      <![CDATA[STEP 7]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Home' menu link.]]>
+      <![CDATA[Mouse over the 'Configuration' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the '[[Driver: chrome on MAC (eafbfe3a-71d6-4b66-ad12-7937afadf034)] -> xpath: //span[@class='admin-menu-home-icon']/../..//a[text()='Flush all caches']]' menu link.]]>
+      <![CDATA[Mouse over the 'Web services' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'MPS Configuration' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'MPS Configuration dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Un-check the 'Send Query Strings' check box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configuration' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify 'Site-Install","path":"\/","qs":"eD15"' is not present in page source.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 8]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Configuration' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Web services' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'MPS Configuration' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'MPS Configuration dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'mps.io' in the 'MPS Host' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Document Write' radio button.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'pub7-development' in the 'Site Instance Override' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Check the 'Send Query Strings' check box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'key1' in the 'Name' text box with index '1'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'value1' in the 'Value' text box with index '1'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Add another opt' button.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'key2' in the 'Name' text box with index '2'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '{"key":"value", "key2": "value2"}' in the 'Value' text box with index '2'.]]>
+    </line>
+    <line>
+      <![CDATA[Check the 'JSON' check box with index '2'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configuration' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify 'var mpsopts = {"host":"mps.io","key1":"value1","key2":{"key":"value","key2":"value2"}}' is present in page source.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 9]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Configuration' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Web services' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'MPS Configuration' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'MPS Configuration dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'key3' in the 'Name' text box with index '3'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'jshdhdhdhjdhshd' in the 'Value' text box with index '3'.]]>
+    </line>
+    <line>
+      <![CDATA[Check the 'JSON' check box with index '3'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configuration' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify error message of 'If the json checkbox is checked, this must be a valid json object.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 10]]>
+    </line>
+    <line>
+      <![CDATA[Verify '//mps.io/request/page/jsonp?CALLBACK=mpsCallback' is present in page source.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 11 - N/A]]>
+    </line>
+    <line>
+      <![CDATA[CLEANUP]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Configuration' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Web services' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'MPS Configuration' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'MPS Configuration dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Clear all 'Name' text box values.]]>
+    </line>
+    <line>
+      <![CDATA[Clear all 'Value' text box values.]]>
+    </line>
+    <line>
+      <![CDATA[Uncheck all 'JSON' check boxes.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configuration' button.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="284714" started-at="2014-10-06T21:00:13Z" finished-at="2014-10-06T21:04:57Z">
+  <suite name="Default suite" duration-ms="139293" started-at="2014-10-06T21:27:37Z" finished-at="2014-10-06T21:29:56Z">
     <groups>
-      <group name="certify">
-        <method signature="A1_TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.A1_TestSetup@31b037fe]" name="TestSetup_Test" class="com.nbcuni.test.publisher.tests.Setup.A1_TestSetup"/>
-      </group> <!-- certify -->
-      <group name="mpx">
-        <method signature="A1_TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.A1_TestSetup@31b037fe]" name="TestSetup_Test" class="com.nbcuni.test.publisher.tests.Setup.A1_TestSetup"/>
-      </group> <!-- mpx -->
       <group name="full">
-        <method signature="A1_TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.A1_TestSetup@31b037fe]" name="TestSetup_Test" class="com.nbcuni.test.publisher.tests.Setup.A1_TestSetup"/>
+        <method signature="MPSConfigurationPage.MPSConfigurationPage_TC3306()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSConfigurationPage@44c75ba4]" name="MPSConfigurationPage_TC3306" class="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSConfigurationPage"/>
+        <method signature="MPSConfigurationPage.Cleanup()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSConfigurationPage@44c75ba4]" name="Cleanup" class="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSConfigurationPage"/>
       </group> <!-- full -->
-      <group name="smoke">
-        <method signature="A1_TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.A1_TestSetup@31b037fe]" name="TestSetup_Test" class="com.nbcuni.test.publisher.tests.Setup.A1_TestSetup"/>
-      </group> <!-- smoke -->
+      <group name="mps">
+        <method signature="MPSConfigurationPage.MPSConfigurationPage_TC3306()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSConfigurationPage@44c75ba4]" name="MPSConfigurationPage_TC3306" class="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSConfigurationPage"/>
+      </group> <!-- mps -->
     </groups>
-    <test name="Default test" duration-ms="284714" started-at="2014-10-06T21:00:13Z" finished-at="2014-10-06T21:04:57Z">
-      <class name="com.nbcuni.test.publisher.tests.Setup.A1_TestSetup">
-        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.A1_TestSetup@31b037fe]" name="startGridAndHub" is-config="true" duration-ms="285" started-at="2014-10-06T17:00:12Z" finished-at="2014-10-06T17:00:13Z">
+    <test name="Default test" duration-ms="139293" started-at="2014-10-06T21:27:37Z" finished-at="2014-10-06T21:29:56Z">
+      <class name="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSConfigurationPage">
+        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSConfigurationPage@44c75ba4]" name="startGridAndHub" is-config="true" duration-ms="1248" started-at="2014-10-06T17:27:36Z" finished-at="2014-10-06T17:27:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startGridAndHub -->
-        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.A1_TestSetup@31b037fe]" name="startSelenium" is-config="true" duration-ms="2670" started-at="2014-10-06T17:00:13Z" finished-at="2014-10-06T17:00:15Z">
+        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSConfigurationPage@44c75ba4]" name="startSelenium" is-config="true" duration-ms="2596" started-at="2014-10-06T17:27:37Z" finished-at="2014-10-06T17:27:40Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.nbcuni.test.publisher.tests.Setup.A1_TestSetup.TestSetup_Test() throws java.lang.Exception]]>
+                <![CDATA[public void com.nbcuni.test.publisher.tests.Advertising.MPS.MPSConfigurationPage.MPSConfigurationPage_TC3306() throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.A1_TestSetup@31b037fe]" name="TestSetup_Test" duration-ms="281462" started-at="2014-10-06T17:00:15Z" finished-at="2014-10-06T17:04:57Z">
+        <test-method status="PASS" signature="MPSConfigurationPage_TC3306()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSConfigurationPage@44c75ba4]" name="MPSConfigurationPage_TC3306" duration-ms="133298" started-at="2014-10-06T17:27:40Z" finished-at="2014-10-06T17:29:53Z">
           <reporter-output>
             <line>
-              <![CDATA[Open url 'http://acc.publisher7.com'.]]>
+              <![CDATA[STEP 1]]>
+            </line>
+            <line>
+              <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
             </line>
             <line>
               <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
@@ -445,407 +344,331 @@
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
-              <![CDATA[Open url 'http://acc.publisher7.com/admin/appearance'.]]>
+              <![CDATA[SETUP]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Open url 'http://acc.publisher7.com/admin/modules'.]]>
-            </line>
-            <line>
-              <![CDATA[Open url 'http://acc.publisher7.com/#overlay=admin/modules'.]]>
+              <![CDATA[Click the 'Modules' menu link.]]>
             </line>
             <line>
               <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Uninstall' overlay tab.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll by '-500'.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Uninstall' overlay tab.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll by '-500'.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Uninstall' overlay tab.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll by '-500'.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Uninstall' overlay tab.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll by '-500'.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+              <![CDATA[Verify the 'MPS' check box is checked.]]>
             </line>
             <line>
               <![CDATA[Click the 'Close Overlay X'.]]>
             </line>
             <line>
-              <![CDATA[Open url 'http://acc.publisher7.com/admin/config/regional/settings'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Open url 'http://acc.publisher7.com/admin/config/regional/date-time'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Open url 'http://acc.publisher7.com/admin/structure/types/manage/media-gallery/fields/field_media_items/widget-type'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Open url 'http://acc.publisher7.com/admin/structure/types/manage/media-gallery/fields/field_media_items'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Home' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Open url 'http://acc.publisher7.com/admin/people/permissions'.]]>
-            </line>
-            <line>
-              <![CDATA[Open url 'http://acc.publisher7.com/admin/config/media/file-system'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Home' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Add content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Post' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Title' is present as a required field.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Body' is present as a required field.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Publishing Options' link.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Moderation State' is present as a required field.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'futurePost10/06/20140d6b0eb93c60458' in the 'Title' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the Synopsis frame.]]>
-            </line>
-            <line>
-              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Cover' select button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the select file frame.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the file path for file upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Upload' button.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Public Local Files' radio button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the file image 'HanSolo' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Publishing Options' link.]]>
-            </line>
-            <line>
-              <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Post futurePost10/06/20140d6b0eb93c60458 has been created.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Schedule' link in the work bench.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'futurePost10/06/20140d6b0eb93c60458 dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Add Scheduled Revision' link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'futurePost10/06/20140d6b0eb93c60458 dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Select revision titled 'futurePost10/06/20140d6b0eb93c60458'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that the 'Operation' option count equals '5'.]]>
-            </line>
-            <line>
-              <![CDATA[Select 'Moderate to Published' from the 'Select operation' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '10/06/2014' in the 'Date' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '09:07 PM' in the 'Time' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Schedule' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'futurePost10/06/20140d6b0eb93c60458 dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The scheduled revision operation has been saved' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Open url 'http://acc.publisher7.com/#overlay=admin/content/logos'.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Manage Logo dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Open url 'http://acc.publisher7.com/#overlay=logo/add'.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Add Logo dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '14977ead45e54ed' in the 'Title' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the file path for file upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Upload' button.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the file image 'nbclogosmall' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '2014-10-06' in the 'Start Date' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '09:07:15 PM' in the 'Start Time' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '2014-10-06' in the 'End Date' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '11:02:15 PM' in the 'End Time' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Manage Logo dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text '14977ead45e54ed' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'Mon, 10/06/2014 - 21:07' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'Mon, 10/06/2014 - 23:02' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Assert the file image 'nbclogosmall' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Assert the the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
+              <![CDATA[STEP 2 - 3]]>
             </line>
             <line>
               <![CDATA[Mouse over the 'Configuration' menu link.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Media' menu link.]]>
+              <![CDATA[Mouse over the 'Web services' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Media: thePlatform mpx settings' menu link.]]>
+              <![CDATA[Click the 'MPS Configuration' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'MPS Configuration dialog'.]]>
             </line>
             <line>
-              <![CDATA[Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.]]>
+              <![CDATA[STEP 4]]>
             </line>
             <line>
-              <![CDATA[MPX is already configured.]]>
+              <![CDATA[Clear all 'Name' text box values.]]>
+            </line>
+            <line>
+              <![CDATA[Clear all 'Value' text box values.]]>
+            </line>
+            <line>
+              <![CDATA[Uncheck all 'JSON' check boxes.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'mps.io' in the 'MPS Host' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Document Write' radio button.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'pub7-development' in the 'Site Instance Override' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configuration' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
             </line>
             <line>
               <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the mps call parameter '"site":"pub7-development"' is present in the page source.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the mps call parameter '"title":"Welcome to' is present in the page source.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the mps call parameter '"path":"\/"' is present in the page source.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the mps call parameter '"is_content":0' is present in the page source.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the mps call parameter '"type":"other"' is present in the page source.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the mps call parameter 'var mpsopts = {"host":"mps.io"}' is present in the page source.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 5]]>
             </line>
             <line>
               <![CDATA[Mouse over the 'Configuration' menu link.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Media' menu link.]]>
+              <![CDATA[Mouse over the 'Web services' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Media: thePlatform mpx settings' menu link.]]>
+              <![CDATA[Click the 'MPS Configuration' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'MPS Configuration dialog'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save configurations' button.]]>
+              <![CDATA[Click the 'DOM Injection (Only select this method if JQuery is enabled).' radio button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
+              <![CDATA[Click the 'Save configuration' button.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Files' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'mpxMedia' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Sync MPX Media' link.]]>
-            </line>
-            <line>
-              <![CDATA[Select 'AutomationPlayer1' from the first 'Import Player' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Sync MPX Media Now' link.]]>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
             </line>
             <line>
               <![CDATA[Click the 'Close Overlay X'.]]>
             </line>
             <line>
-              <![CDATA[Open url 'http://acc.publisher7.com/admin/structure/types/manage/721a5707da/delete'.]]>
+              <![CDATA[Verify 'mpsload.src='//'+mpsopts.host+'/fetch/ext/load-'+mpscall.site+'.js?nowrite=jq'; mpsload.id="mps-load"' is present in page source.]]>
             </line>
             <line>
-              <![CDATA[Open url 'http://acc.publisher7.com/admin/structure/types/manage/750df0874c/delete'.]]>
+              <![CDATA[Verify 'mpsload.async=false; head.insertBefore(mpsload,head.firstChild)' is present in page source.]]>
             </line>
             <line>
-              <![CDATA[Open url 'http://acc.publisher7.com/admin/structure/types/manage/mpx0df1ce5ba6/delete'.]]>
+              <![CDATA[STEP 6]]>
             </line>
             <line>
-              <![CDATA[Open url 'http://acc.publisher7.com/admin/structure/types/manage/mpx3df53fd568/delete'.]]>
+              <![CDATA[Open url 'http://qa5.publisher7.com/?x=y'.]]>
             </line>
             <line>
-              <![CDATA[Open url 'http://acc.publisher7.com/admin/structure/types/manage/mpx890a7b3529/delete'.]]>
+              <![CDATA[Verify the mps call parameter '"title":"Welcome to' is present in the page source.]]>
             </line>
             <line>
-              <![CDATA[Open url 'http://acc.publisher7.com/admin/structure/types/manage/mpxa117ed840c/delete'.]]>
+              <![CDATA[Verify the mps call parameter '"path":"\/"' is present in the page source.]]>
             </line>
             <line>
-              <![CDATA[Open url 'http://acc.publisher7.com/admin/structure/types/manage/mpxc8c9ca39b4/delete'.]]>
+              <![CDATA[Verify the mps call parameter '"qs":"eD15"' is present in the page source.]]>
             </line>
             <line>
-              <![CDATA[Open url 'http://acc.publisher7.com/admin/structure/types/manage/mpxc99f625c97/delete'.]]>
+              <![CDATA[STEP 7]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Home' menu link.]]>
+              <![CDATA[Mouse over the 'Configuration' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the '[[Driver: chrome on MAC (eafbfe3a-71d6-4b66-ad12-7937afadf034)] -> xpath: //span[@class='admin-menu-home-icon']/../..//a[text()='Flush all caches']]' menu link.]]>
+              <![CDATA[Mouse over the 'Web services' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'MPS Configuration' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'MPS Configuration dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Un-check the 'Send Query Strings' check box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configuration' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify 'Site-Install","path":"\/","qs":"eD15"' is not present in page source.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 8]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Configuration' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Web services' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'MPS Configuration' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'MPS Configuration dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'mps.io' in the 'MPS Host' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Document Write' radio button.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'pub7-development' in the 'Site Instance Override' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Check the 'Send Query Strings' check box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'key1' in the 'Name' text box with index '1'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'value1' in the 'Value' text box with index '1'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Add another opt' button.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'key2' in the 'Name' text box with index '2'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '{"key":"value", "key2": "value2"}' in the 'Value' text box with index '2'.]]>
+            </line>
+            <line>
+              <![CDATA[Check the 'JSON' check box with index '2'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configuration' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify 'var mpsopts = {"host":"mps.io","key1":"value1","key2":{"key":"value","key2":"value2"}}' is present in page source.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 9]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Configuration' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Web services' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'MPS Configuration' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'MPS Configuration dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'key3' in the 'Name' text box with index '3'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'jshdhdhdhjdhshd' in the 'Value' text box with index '3'.]]>
+            </line>
+            <line>
+              <![CDATA[Check the 'JSON' check box with index '3'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configuration' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify error message of 'If the json checkbox is checked, this must be a valid json object.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 10]]>
+            </line>
+            <line>
+              <![CDATA[Verify '//mps.io/request/page/jsonp?CALLBACK=mpsCallback' is present in page source.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 11 - N/A]]>
+            </line>
+            <line>
+              <![CDATA[CLEANUP]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Configuration' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Web services' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'MPS Configuration' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'MPS Configuration dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Clear all 'Name' text box values.]]>
+            </line>
+            <line>
+              <![CDATA[Clear all 'Value' text box values.]]>
+            </line>
+            <line>
+              <![CDATA[Uncheck all 'JSON' check boxes.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configuration' button.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- TestSetup_Test -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.A1_TestSetup@31b037fe]" name="stopSelenium" is-config="true" duration-ms="573" started-at="2014-10-06T17:04:57Z" finished-at="2014-10-06T17:04:57Z">
+        </test-method> <!-- MPSConfigurationPage_TC3306 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSConfigurationPage@44c75ba4]" name="stopSelenium" is-config="true" duration-ms="569" started-at="2014-10-06T17:29:53Z" finished-at="2014-10-06T17:29:53Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=TestSetup_Test status=SUCCESS method=A1_TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.A1_TestSetup@31b037fe] output=Open url 'http://acc.publisher7.com'.]]]>
+                <![CDATA[[TestResult name=MPSConfigurationPage_TC3306 status=SUCCESS method=MPSConfigurationPage.MPSConfigurationPage_TC3306()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSConfigurationPage@44c75ba4] output=STEP 1]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.A1_TestSetup@31b037fe]" name="stopGridAndHub" is-config="true" duration-ms="6" started-at="2014-10-06T17:04:58Z" finished-at="2014-10-06T17:04:58Z">
+        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSConfigurationPage@44c75ba4]" name="startSelenium" is-config="true" duration-ms="2250" started-at="2014-10-06T17:29:53Z" finished-at="2014-10-06T17:29:56Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.nbcuni.test.publisher.tests.Advertising.MPS.MPSConfigurationPage.Cleanup() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startSelenium -->
+        <test-method status="PASS" signature="Cleanup()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSConfigurationPage@44c75ba4]" name="Cleanup" duration-ms="1" started-at="2014-10-06T17:29:56Z" depends-on-methods="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSConfigurationPage.MPSConfigurationPage_TC3306" finished-at="2014-10-06T17:29:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Cleanup -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSConfigurationPage@44c75ba4]" name="stopSelenium" is-config="true" duration-ms="565" started-at="2014-10-06T17:29:56Z" finished-at="2014-10-06T17:29:56Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Cleanup status=SUCCESS method=MPSConfigurationPage.Cleanup()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSConfigurationPage@44c75ba4] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopSelenium -->
+        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSConfigurationPage@44c75ba4]" name="stopGridAndHub" is-config="true" duration-ms="379" started-at="2014-10-06T17:29:56Z" finished-at="2014-10-06T17:29:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopGridAndHub -->
-      </class> <!-- com.nbcuni.test.publisher.tests.Setup.A1_TestSetup -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Advertising.MPS.MPSConfigurationPage -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
