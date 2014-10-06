@@ -129,9 +129,9 @@ public class ImplementMPS extends ParentTest {
             selectFile.SwitchToSelectFileFrm();
             selectFile.ClickViewLibraryBtn();
             selectFile.EnterFileName("HanSolo");
-            selectFile.WaitForFileSearchComplete();
+            contentParent.WaitForThrobberNotPresent();
             selectFile.ClickApplyBtn();
-            selectFile.WaitForFileSearchComplete();
+            contentParent.WaitForThrobberNotPresent();
             selectFile.VerifyMediaThumbnailImagePresent("HanSolo", "1");
             selectFile.ClickMediaThumbnailImage("1");
             selectFile.ClickSubmitBtn();

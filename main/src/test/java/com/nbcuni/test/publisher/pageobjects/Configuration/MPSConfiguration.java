@@ -197,6 +197,7 @@ public class MPSConfiguration {
     	
     	Reporter.log("Click the 'Add another opt' button.");
     	AddAnotherOpt_Btn.click();
+    	Thread.sleep(1000);
     }
     
     public void ClickReplacementPatternsLnk() throws Exception { 

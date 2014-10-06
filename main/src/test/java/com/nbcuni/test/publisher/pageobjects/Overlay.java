@@ -72,14 +72,8 @@ public class Overlay {
     public void ClickCloseOverlayLnk() throws Exception {
     	
     	Reporter.log("Click the 'Close Overlay X'.");
-    	for (int ScrollC = 0; ScrollC < 10; ScrollC++) {
-    		contentParent.Scroll("-500");
-    		try {
-    			CloseOverlay_Lnk.click();
-    			break;
-    		}
-    		catch (WebDriverException e) { }
-    	}
+    	Thread.sleep(1000);
+    	webDriver.executeScript("arguments[0].click();", CloseOverlay_Lnk);
     	this.switchToDefaultContent(true);
     }
     

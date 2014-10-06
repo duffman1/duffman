@@ -58,6 +58,9 @@ public class SelectFile {
     @FindBy(how = How.XPATH, using = "//iframe[@id='mediaBrowser']")
     private WebElement SelectFile_Frm;
     
+    @FindBy(how = How.XPATH, using = "//h1[text()='Select a file']")
+    private WebElement SelectFile_Txt;
+    
     @FindBy(how = How.XPATH, using = "//a[@title='View Library']")
     private WebElement ViewLibrary_Btn;
     
@@ -149,7 +152,7 @@ public class SelectFile {
     	for (int I = 0; I<10; I++) {
     		try {
     			webDriver.switchTo().frame(SelectFile_Frm);
-    			ViewLibrary_Btn.getLocation();
+    			SelectFile_Txt.getLocation();
     			break;
     		}
     		catch (Exception e) {
