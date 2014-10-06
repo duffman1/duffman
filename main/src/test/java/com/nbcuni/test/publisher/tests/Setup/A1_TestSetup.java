@@ -52,6 +52,11 @@ public class A1_TestSetup extends ParentTest {
             	UserLogin userLogin = applib.openApplication();
             	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
             	
+            	//set pub sauce theme
+                applib.openSitePage("/admin/appearance");
+                new Select(webDriver.findElement(By.id("edit-admin-theme--2"))).selectByVisibleText("Pub Sauce");
+                contentParent.ClickSaveBtn();
+                
             	//enable overlay module if necessary
             	applib.openSitePage("/admin/modules");
                 Modules modules = new Modules(webDriver, applib);
@@ -105,21 +110,6 @@ public class A1_TestSetup extends ParentTest {
                 }
                 overlay.ClickCloseOverlayLnk();
                 
-                //set pub sauce theme and admin menu perms
-                applib.openSitePage("/admin/appearance");
-                new Select(webDriver.findElement(By.id("edit-admin-theme--2"))).selectByVisibleText("Pub Sauce");
-                contentParent.ClickSaveBtn();
-                applib.openSitePage("/admin/people/permissions");
-                Permissions permissions = new Permissions(webDriver, applib);
-                WebElement cbx = webDriver.findElement(By.xpath("//label[contains(text(),'editor')]/../input[@value='access administration menu']"));
-                if (!cbx.isSelected()) {
-                	cbx.click();
-                	Alert alert1 = webDriver.switchTo().alert();
-            		alert1.accept();
-            		webDriver.switchTo().defaultContent();
-                }
-                permissions.ClickSaveConfigurationsBtn();
-                
                 //set timezone utc
             	applib.openSitePage("/admin/config/regional/settings");
             	webDriver.findElement(By.xpath("//select[@id='edit-date-default-timezone']/option[contains(text(), 'UTC')]")).click();
@@ -140,6 +130,33 @@ public class A1_TestSetup extends ParentTest {
                 contentParent.ClickSaveBtn();
                 applib.openSitePage("/admin/structure/types/manage/media-gallery/fields/field_media_items");
                 new Select(webDriver.findElement(By.id("edit-field-cardinality"))).selectByVisibleText("Unlimited");
+                contentParent.ClickSaveBtn();
+                taxonomy.NavigateSite("Home");
+                
+                //set admin menu perms
+                applib.openSitePage("/admin/people/permissions");
+                Permissions permissions = new Permissions(webDriver, applib);
+                WebElement cbx = webDriver.findElement(By.xpath("//label[contains(text(),'editor')]/../input[@value='access administration menu']"));
+                if (!cbx.isSelected()) {
+                	cbx.click();
+                	Alert alert1 = webDriver.switchTo().alert();
+            		alert1.accept();
+            		webDriver.switchTo().defaultContent();
+                }
+                permissions.ClickSaveConfigurationsBtn();
+                
+                //set file system paths
+                applib.openSitePage("/admin/config/media/file-system");
+                WebElement PublicFileSystemPath_Txb = webDriver.findElement(By.id("edit-file-public-path"));
+                PublicFileSystemPath_Txb.clear();
+                PublicFileSystemPath_Txb.sendKeys("sites/default/files");
+                WebElement PrivateFileSystemPath_Txb = webDriver.findElement(By.id("edit-file-private-path"));
+                PrivateFileSystemPath_Txb.clear();
+                PrivateFileSystemPath_Txb.sendKeys("/mnt/files/nbcupublisher7.qa5/sites/default/files-private");
+                WebElement TemporaryDirectory_Txb = webDriver.findElement(By.id("edit-file-temporary-path"));
+                TemporaryDirectory_Txb.clear();
+                TemporaryDirectory_Txb.sendKeys("/mnt/tmp/nbcupublisher7qa5");
+                webDriver.findElement(By.id("edit-file-default-scheme-public")).click();
                 contentParent.ClickSaveBtn();
                 taxonomy.NavigateSite("Home");
                 
