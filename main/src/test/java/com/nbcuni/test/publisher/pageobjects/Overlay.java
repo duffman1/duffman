@@ -115,13 +115,19 @@ public class Overlay {
             if (loadingFramePresent == false){ break;}
             Thread.sleep(500);
         }
-    	webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
+    	
+    	//longer timeout for overlay loads
+    	webDriver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
     	
     	this.switchToDefaultContent(false);
     	Thread.sleep(500); //slight pause to help ensure frame switch occurs to a new frame and not the old.
     	Reporter.log("Switch to the active frame titled '" + ActiveFrame_Frm.getAttribute("title") + "'.");
     	webDriver.switchTo().frame(ActiveFrame_Frm);
     	
+    	//default timeout
+    	webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
+    	
+    	//check for errors in overlay
     	errorChecking.VerifyNoMessageErrorsPresent();
     	
     }
@@ -143,7 +149,7 @@ public class Overlay {
             	framePresent = false;
             }
             if (framePresent == false){ break;}
-            Thread.sleep(500);
+            Thread.sleep(1000);
         }
     	webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
     	
