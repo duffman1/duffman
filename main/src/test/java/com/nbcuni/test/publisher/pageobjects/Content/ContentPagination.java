@@ -1,114 +1,68 @@
 package com.nbcuni.test.publisher.pageobjects.Content;
 
 import com.nbcuni.test.publisher.common.Driver.Driver;
-
 import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
-
 import java.util.List;
-
 
 /*********************************************
  * publisher.nbcuni.com Content Pagination Library. Copyright 
  *
  * @author Vineela Juturu
- * @version 1.0 Date: September 12, 2014
+ * @version 1.1 Date: October 5, 2014
  *********************************************/
 
 public class ContentPagination {
 
 	private Driver webDriver;
+	private WebDriverWait wait;
     
     //PAGE OBJECT CONSTRUCTOR
     public ContentPagination(Driver webDriver) {
         this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
+        wait = new WebDriverWait(webDriver, 10);
     }
     
     //PAGE OBJECT IDENTIFIERS      
     @FindBy(how = How.XPATH, using = "//div[@class='item-list']")
     private WebElement Pager_Ctr;
     
-    private List<WebElement> Page_Elements() {
+    private List<WebElement> PageNumber_Lnks() {
     	return webDriver.findElements(By.xpath("//div[@class='item-list']/ul/li"));
     }
     
-    @FindBy(how = How.XPATH, using = "//div[@class='item-list']//a[text()='next ›']")
-    private WebElement NextPage_lnk;
+    @FindBy(how = How.XPATH, using = "//div[@class='item-list']//a[contains(text(), 'next')]")
+    private WebElement NextPage_Lnk;
+    
     
     //PAGE OBJECT METHODS
-    public void VerifyPageCtrElementPresent() throws Exception {
+    public void VerifyPageCtrPresent() throws Exception {
     	
-    	Reporter.log("Verify Page Container Element is present.");
-    	
-    	if(!Pager_Ctr.isDisplayed()){
-    	Assert.fail("Page Container Element is not present on the page");
-    	}
+    	Reporter.log("Verify the pagination links are present.");
+    	wait.until(ExpectedConditions.visibilityOf(Pager_Ctr));
     	
     }
     
-    public int getExpectedNumberOfPages(int itemsPerPage, int totalLimit) throws Exception{
-    	
-    	Reporter.log("Returns Expected NumberOfPages.");
-    	
-    	int expectedPages = 0;
-    	if(itemsPerPage != 0){
-   
-    		if (totalLimit%itemsPerPage == 0) {
-    			expectedPages = totalLimit/itemsPerPage;
-    		} else {
-    			expectedPages = totalLimit/itemsPerPage + 1;
-    		}
-    	}
-    	return expectedPages;
-    	
-    }
+    public void VerifyCorrectNumberOfPagesDisplayed(Integer numberOfPages) throws Exception{
     
-    public void VerifyCorrectNumberOfPagesDisplayed(int itemsPerPage, int totalLimit) throws Exception{
-    
-    	Reporter.log("Verify Correct NumberOfPages Displayed.");
-    	
-    	int expectedPages = getExpectedNumberOfPages (itemsPerPage, totalLimit);
-    	
-    	List<WebElement> totalPages = Page_Elements();
-    		
-    	//On Initial view there will be 2 additional pages 'next >','last>>' 
-    	if ((totalPages.size()-2) != (expectedPages)){
-    			Assert.fail("Actual Pages Displayed '"+ (totalPages.size()-2) +"' is not equals to expected pages '"+expectedPages+"'.");    			
-    	}    	 
+    	Reporter.log("Verify the number of pages equals '" + numberOfPages.toString() + ".");
+    	Assert.assertTrue(PageNumber_Lnks().size() == numberOfPages);	 
     
     }
     
-    public void ClickNextPageLink(){
+    public void ClickNextPageLnk(){
     	
-    	Reporter.log("Click the 'NextPage' Link");
+    	Reporter.log("Click the 'next >' Link");
+    	NextPage_Lnk.click();
     	
-    	NextPage_lnk.click();
-    	
-    }
-    
-    public boolean isNextPageExists(){
-    	
-    	Reporter.log("Returns true if nextPage link exists.");
-    	
-    	boolean nextPage = false;
-    	try{
-    	if(NextPage_lnk.isDisplayed())
-    		nextPage = true;
-    	}catch(NoSuchElementException e){
-    		nextPage = false;
-    	}	
-    	return nextPage;
     }
     
 }
-
-
-
-

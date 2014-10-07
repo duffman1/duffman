@@ -34,7 +34,7 @@ public class SiteCatalystVariables {
     private WebElement SiteCatalystVariables_Tab;
     
     private WebElement VariableValue_Txb(String variableName) {
-    	return webDriver.findElement(By.xpath("//input[@value='" + variableName + "']/../../..//input[contains(@id, 'value')]"));
+    	return webDriver.findElement(By.xpath("//input[@value='" + variableName + "']/../../..//textarea[contains(@id, 'value')]"));
     }
     
     @FindBy(how = How.ID, using = "edit-add-another-variable")
@@ -43,7 +43,7 @@ public class SiteCatalystVariables {
     @FindBy(how = How.XPATH, using = "(//input[contains(@id, 'name')][@value=''])[1]")
     private WebElement BlankVariableName_Txb;
     
-    @FindBy(how = How.XPATH, using = "(//input[contains(@id, 'name')][@value='']/../../..//input[contains(@id, 'value')][@value=''])[1]")
+    @FindBy(how = How.XPATH, using = "(//input[contains(@id, 'name')][@value='']/../../..//textarea[contains(@id, 'value')])[1]")
     private WebElement BlankVariableValue_Txb;
     
     

@@ -62,10 +62,10 @@ public class AddDynamicQueue {
     @FindBy(how = How.ID, using = "edit-settings-tv-show-select")
     private WebElement TVShows_Ddl;
     
-    @FindBy(how = How.ID, using = "edit-settings-sort-dynamic-queue-newest")
+    @FindBy(how = How.ID, using = "edit-settings-sort-dynamic-queue-modifier-newest")
     private WebElement SortByNewest_Rdb;
     
-    @FindBy(how = How.ID, using = "edit-settings-sort-dynamic-queue-oldest")
+    @FindBy(how = How.ID, using = "edit-settings-sort-dynamic-queue-modifier-oldest")
     private WebElement SortByOldest_Rdb;
     
     @FindBy(how = How.ID, using = "edit-status")

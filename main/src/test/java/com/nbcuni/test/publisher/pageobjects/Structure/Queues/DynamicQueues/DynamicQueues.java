@@ -1,5 +1,10 @@
 package com.nbcuni.test.publisher.pageobjects.Structure.Queues.DynamicQueues;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import junit.framework.Assert;
+
 import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.publisher.common.Driver.Driver;
 
@@ -32,6 +37,10 @@ public class DynamicQueues {
     	return webDriver.findElement(By.xpath("//a[contains(text(), '" + dynamicQueueName + "')]/../..//a[text()='Edit']"));
     }
     
+    private List<WebElement> AllDynamicQueue_Lnks() {
+    	return webDriver.findElements(By.xpath("//div[contains(@class, 'dynamic-queue')]//h2/a"));
+    }
+    
     
     //PAGE OBJECT METHODS
     public void ClickEditLnk(String dynamicQueueName) throws Exception {
@@ -45,6 +54,20 @@ public class DynamicQueues {
     	return Edit_Lnk(dynamicQueueName).getAttribute("href").replace(applib.getApplicationURL() + 
     			"/dynamic-queue/", "").replace("/edit?destination=admin/content/dynamic-queue", "");
 
+    }
+    
+    public void VerifyVisibleLnkCount(Integer expectedVisibleCount) throws Exception {
+    	
+    	List<WebElement> allVisibleDQLnks = new ArrayList<WebElement>();
+    	for (WebElement dqLnk : AllDynamicQueue_Lnks()) {
+    		if (dqLnk.isDisplayed()) {
+    			allVisibleDQLnks.add(dqLnk);
+    		}
+    	}
+    	
+    	Reporter.log("Verify the visible count of Dynamic Queue Links equals '" + expectedVisibleCount.toString() + "'.");
+    	Assert.assertTrue(allVisibleDQLnks.size() == expectedVisibleCount);
+    	
     }
     
 }

@@ -149,12 +149,20 @@ public class A1_TestSetup extends ParentTest {
                 applib.openSitePage("/admin/config/media/file-system");
                 WebElement PublicFileSystemPath_Txb = webDriver.findElement(By.id("edit-file-public-path"));
                 WebElement PrivateFileSystemPath_Txb = webDriver.findElement(By.id("edit-file-private-path"));
+                
                 if (PrivateFileSystemPath_Txb.getAttribute("value").equals("")) {
                 	String privateFileSystemPath = null;
                 	if (config.getConfigValue("AppURL").contains(".pr")) {
-                		privateFileSystemPath = config.getConfigValue("AppURL").replace("http://p7-", "").replace(".pr.publisher7.com", "");
+                		privateFileSystemPath = "";
+                	}
+                	else if (config.getConfigValue("AppURL").contains("acc.")) {
+                		privateFileSystemPath = "/mnt/files/nbcupublisher7acc/sites/default/files-private";
+                	}
+                	else if (config.getConfigValue("AppURL").contains("acc-test")) {
+                		privateFileSystemPath = "/mnt/files/nbcupublisher7devi0/sites/default/files-private";
                 	}
                 	else {
+                		privateFileSystemPath = "/mnt/files/nbcupublisher7." + config.getConfigValue("AppURL").replace("http://", "").replace(".publisher7.com", "") + "/sites/default/files-private";
                 		privateFileSystemPath = config.getConfigValue("AppURL").replace("http://", "").replace(".publisher7.com", "");
                 	}
                 
