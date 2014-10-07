@@ -127,6 +127,7 @@ public class EventCountdown {
     	
     	Reporter.log("Enter '" + color + "' in the 'Active Background Color' text box.");
     	ActiveBackgroundColor_Txb.clear();
+    	ActiveBackgroundColor_Txb.click();
     	ActiveBackgroundColor_Txb.sendKeys(color);
     }
     
@@ -147,6 +148,7 @@ public class EventCountdown {
     	
     	Reporter.log("Enter '" + color + "' in the 'Expiry Background Color' text box.");
     	ExpiryBackgroundColor_Txb.clear();
+    	ExpiryBackgroundColor_Txb.click();
     	ExpiryBackgroundColor_Txb.sendKeys(color);
     }
     
