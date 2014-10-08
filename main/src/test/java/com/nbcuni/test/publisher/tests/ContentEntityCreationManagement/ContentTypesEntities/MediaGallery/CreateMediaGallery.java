@@ -116,7 +116,7 @@ public class CreateMediaGallery extends ParentTest{
             selectFile.ClickPub7MPXVideoBtn();
     		selectFile.EnterTitle("AutomationWThumb");
     		selectFile.ClickApplyBtn();
-    		selectFile.WaitForFileSearchComplete();
+    		contentParent.WaitForThrobberNotPresent();
     		selectFile.ClickMPXMediaThumbnailImage("nbclogosmall", "1");
     		selectFile.ClickSubmitBtn();
             overlay.SwitchToActiveFrame();

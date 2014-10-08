@@ -12,7 +12,6 @@ import java.util.Date;
 import java.util.List;
 import java.util.TimeZone;
 import java.util.concurrent.TimeUnit;
-
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
@@ -23,8 +22,9 @@ import com.nbcuni.test.publisher.pageobjects.Content.WorkBench;
 import com.nbcuni.test.publisher.pageobjects.Logo.AddLogo;
 import com.nbcuni.test.publisher.pageobjects.Logo.Logos;
 import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
+import com.nbcuni.test.publisher.pageobjects.People.Permissions;
 import com.nbcuni.test.publisher.pageobjects.Structure.Queues.Queues.ScheduleQueue;
-
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
@@ -52,6 +52,11 @@ public class A1_TestSetup extends ParentTest {
             	UserLogin userLogin = applib.openApplication();
             	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
             	
+            	//set pub sauce theme
+                applib.openSitePage("/admin/appearance");
+                new Select(webDriver.findElement(By.id("edit-admin-theme--2"))).selectByVisibleText("Pub Sauce");
+                contentParent.ClickSaveBtn();
+                
             	//enable overlay module if necessary
             	applib.openSitePage("/admin/modules");
                 Modules modules = new Modules(webDriver, applib);
@@ -87,7 +92,7 @@ public class A1_TestSetup extends ParentTest {
                 //disable necessary modules
                 for (String module : Arrays.asList("Sticky Edit Actions", "Acquia Purge", 
                 		"ImageField Focus", "Database logging", "MPS", 
-                		"Dynamic Queue Workbench", "Dynamic Queue", "Event Countdown")) {
+                		"Dynamic Queue Workbench", "Dynamic Queue", "Event Countdown", "Mobile Friendly Navigation Toolbar")) {
                 	if (modules.IsModuleEnabled(module)) {
                 		modules.EnterFilterName(module);
                     	modules.DisableModule(module);
@@ -103,7 +108,6 @@ public class A1_TestSetup extends ParentTest {
                     	overlay.SwitchToActiveFrame();
                     }
                 }
-                
                 overlay.ClickCloseOverlayLnk();
                 
                 //set timezone utc
@@ -120,22 +124,6 @@ public class A1_TestSetup extends ParentTest {
             	new Select(webDriver.findElement(By.id("edit-date-format-edit-date"))).selectByValue("m/d/Y - h:i A");
             	contentParent.ClickSaveBtn();
             	
-            	//set file system paths
-            	/*
-            	applib.openSitePage("/admin/config/media/file-system");
-            	WebElement PublicFileSystemPath_Txb = webDriver.findElement(By.id("edit-file-public-path"));
-            	PublicFileSystemPath_Txb.clear();
-            	PublicFileSystemPath_Txb.sendKeys("sites/default/files");
-            	WebElement PrivateFileSystemPath_Txb = webDriver.findElement(By.id("edit-file-private-path"));
-            	PrivateFileSystemPath_Txb.clear();
-            	PrivateFileSystemPath_Txb.sendKeys("/mnt/files/nbcupublisher7.qa5/sites/default/files-private");
-            	WebElement TemporaryDirectory_Txb = webDriver.findElement(By.id("edit-file-temporary-path"));
-            	TemporaryDirectory_Txb.clear();
-            	TemporaryDirectory_Txb.sendKeys("/mnt/tmp/nbcupublisher7qa5");
-            	webDriver.findElement(By.id("edit-file-default-scheme-public")).click();
-            	contentParent.ClickSaveBtn();
-            	*/
-            	
                 //configure media gallery multi select
                 applib.openSitePage("/admin/structure/types/manage/media-gallery/fields/field_media_items/widget-type");
                 new Select(webDriver.findElement(By.id("edit-widget-type"))).selectByVisibleText("Media multiselect");
@@ -143,6 +131,51 @@ public class A1_TestSetup extends ParentTest {
                 applib.openSitePage("/admin/structure/types/manage/media-gallery/fields/field_media_items");
                 new Select(webDriver.findElement(By.id("edit-field-cardinality"))).selectByVisibleText("Unlimited");
                 contentParent.ClickSaveBtn();
+                taxonomy.NavigateSite("Home");
+                
+                //set admin menu perms
+                applib.openSitePage("/admin/people/permissions");
+                Permissions permissions = new Permissions(webDriver, applib);
+                WebElement cbx = webDriver.findElement(By.xpath("//label[contains(text(),'editor')]/../input[@value='access administration menu']"));
+                if (!cbx.isSelected()) {
+                	cbx.click();
+                	Alert alert1 = webDriver.switchTo().alert();
+            		alert1.accept();
+            		webDriver.switchTo().defaultContent();
+            		permissions.ClickSaveConfigurationsBtn();
+                }
+                
+                //set file system paths if not already set
+                applib.openSitePage("/admin/config/media/file-system");
+                WebElement PublicFileSystemPath_Txb = webDriver.findElement(By.id("edit-file-public-path"));
+                WebElement PrivateFileSystemPath_Txb = webDriver.findElement(By.id("edit-file-private-path"));
+                
+                if (PrivateFileSystemPath_Txb.getAttribute("value").equals("")) {
+                	String privateFileSystemPath = null;
+                	if (config.getConfigValue("AppURL").contains(".pr")) {
+                		privateFileSystemPath = "";
+                	}
+                	else if (config.getConfigValue("AppURL").contains("acc.")) {
+                		privateFileSystemPath = "/mnt/files/nbcupublisher7acc/sites/default/files-private";
+                	}
+                	else if (config.getConfigValue("AppURL").contains("acc-test")) {
+                		privateFileSystemPath = "/mnt/files/nbcupublisher7devi0/sites/default/files-private";
+                	}
+                	else {
+                		privateFileSystemPath = "/mnt/files/nbcupublisher7." + config.getConfigValue("AppURL").replace("http://", "").replace(".publisher7.com", "") + "/sites/default/files-private";
+                		privateFileSystemPath = config.getConfigValue("AppURL").replace("http://", "").replace(".publisher7.com", "");
+                	}
+                
+                	PublicFileSystemPath_Txb.clear();
+                	PublicFileSystemPath_Txb.sendKeys("sites/default/files");
+                	PrivateFileSystemPath_Txb.clear();
+                	PrivateFileSystemPath_Txb.sendKeys("/mnt/files/nbcupublisher7" + privateFileSystemPath + "/sites/default/files-private");
+                	WebElement TemporaryDirectory_Txb = webDriver.findElement(By.id("edit-file-temporary-path"));
+                	TemporaryDirectory_Txb.clear();
+                	TemporaryDirectory_Txb.sendKeys("/mnt/tmp/nbcupublisher7qa5");
+                	webDriver.findElement(By.id("edit-file-default-scheme-public")).click();
+                	contentParent.ClickSaveBtn();
+                }
                 taxonomy.NavigateSite("Home");
                 
                 //schedule a post content item revision to be consumed by the SchedulingContentPublishUnpublished test later in the suite
@@ -200,12 +233,7 @@ public class A1_TestSetup extends ParentTest {
             	Logos logos = new Logos(webDriver, applib);
         	    logos.DeleteAllLogos();
             	overlay.ClickCloseOverlayLnk();
-            	try {
-            		taxonomy.NavigateSite("Content>>Logos>>Add Logo");
-            	}
-            	catch (Exception | AssertionError e) {
-            		taxonomy.NavigateSite("Content>>Add Logo");
-            	}
+            	applib.openSitePage("/#overlay=logo/add");
                 overlay.SwitchToActiveFrame();
                 AddLogo addLogo = new AddLogo(webDriver);
                 String logoTitle = random.GetCharacterString(15);
@@ -241,7 +269,7 @@ public class A1_TestSetup extends ParentTest {
         	    Settings settings = new Settings(webDriver, applib);
             	settings.ConfigureMPXIfNeeded();
             	settings.ConfigureMPXIngestionType();
-        	    
+            	
                 //delete any old mpx account file types (DE3921)
                 webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
                 try {
@@ -282,6 +310,7 @@ public class A1_TestSetup extends ParentTest {
                 allowedContentTypes.add("movie");
                 allowedContentTypes.add("person");
                 allowedContentTypes.add("post");
+                allowedContentTypes.add("article");
                 allowedContentTypes.add("tv-episode");
                 allowedContentTypes.add("tv-season");
                 allowedContentTypes.add("tv-show");

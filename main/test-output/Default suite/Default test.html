@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Sep 24 07:55:07 EDT 2014</td>
+<td>Started on:</td><td>Tue Oct 07 10:49:31 EDT 2014</td>
 </tr>
-<tr><td>Total time:</td><td>96 seconds (96343 ms)</td>
+<tr><td>Total time:</td><td>64 seconds (64129 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,134 +75,68 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens.MPSSupportTokens_TC3641()'><b>MPSSupportTokens_TC3641</b><br>Test class: com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens<br/>
-<a href="#Output-1194653073" onClick='toggleBox("Output-1194653073", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.nbcuni.test.publisher.tests.Queues.DynamicQueues.DynamicQueuePagination.DynamicQueuePagination_TC4791()'><b>DynamicQueuePagination_TC4791</b><br>Test class: com.nbcuni.test.publisher.tests.Queues.DynamicQueues.DynamicQueuePagination<br/>
+<a href="#Output-1002055195" onClick='toggleBox("Output-1002055195", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1194653073" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1194653073">
+<a href="#Output-1002055195" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1002055195">
 STEP 1<br/>
 Open url 'http://qa5.publisher7.com'.<br/>
 Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
 Enter 'pa55word' in the 'Password' text box.<br/>
 Click the 'Login' button.<br/>
 SETUP<br/>
+Click the 'Content' menu link.<br/>
+Switch to the active frame titled 'Content dialog'.<br/>
+Get the number of results in the result set.<br/>
+Click the 'Close Overlay X'.<br/>
 Click the 'Modules' menu link.<br/>
-Switch to the active frame titled 'Modules dialog'.<br/>
-Enter 'Pixelman' in the 'Filter Name' text box.<br/>
-Wait for module filter titled 'Pixelman' to be visible in module list.<br/>
-Enter 'MPS' in the 'Filter Name' text box.<br/>
-Wait for module filter titled 'MPS' to be visible in module list.<br/>
-Verify the 'MPS' check box is checked.<br/>
+Switch to frame titled 'Modules'.<br/>
+Enter 'Dynamic Queue' in the 'Filter Name' text box.<br/>
+Wait for module filter titled 'Dynamic Queue' to be visible in module list.<br/>
+Verify the 'Dynamic Queue' check box is checked.<br/>
 Click the 'Close Overlay X'.<br/>
-Scroll by '-500'.<br/>
-Mouse over the 'Configuration' menu link.<br/>
-Mouse over the 'Web services' menu link.<br/>
-Click the 'MPS Configuration' menu link.<br/>
-Switch to the active frame titled 'MPS Configuration dialog'.<br/>
-Enter '' in the 'Pattern for Category Field' text box.<br/>
-Click the 'Save configuration' button.<br/>
-Verify success message of 'The configuration options have been saved.' is present.<br/>
+Click the 'Home' menu link.<br/>
+Mouse over the 'Structure' menu link.<br/>
+Mouse over the 'Dynamic Queue types' menu link.<br/>
+Click the 'Add dynamic queue type' menu link.<br/>
+Switch to the active frame titled 'Add dynamic queue type dialog'.<br/>
+Enter '009aea0b7be44b4' in the 'Name' text box.<br/>
+Select '1 min' from the 'Cache lifetime' drop down list.<br/>
+Select 'Content' or 'Node' from the 'Entity type' drop down list.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'Dynamic Queue types dialog'.<br/>
+Verify the text '009aea0b7be44b4' is present on the page.<br/>
 Click the 'Close Overlay X'.<br/>
-Scroll by '-500'.<br/>
-STEP 2 - N/A<br/>
-STEP 3<br/>
-Verify '"cat":"content"' is not present in page source.<br/>
-STEP 4<br/>
 Mouse over the 'Content' menu link.<br/>
-Mouse over the 'Add content' menu link.<br/>
-Click the 'Movie' menu link.<br/>
-Switch to the active frame titled 'Create Movie dialog'.<br/>
-Scroll to and click the 'Basic Information' tab.<br/>
-Enter '7f7e8a9ba9974d7' in the 'Title' text box.<br/>
-Switch to the Synopsis frame.<br/>
-Enter a randomized text string into the 'Body' text area.<br/>
-Switch to the active frame titled 'Create Movie dialog'.<br/>
-Click the 'Cover' select button.<br/>
-Switch to the select file frame.<br/>
-Enter the file path for file upload.<br/>
-Click the 'Upload' button.<br/>
-Wait for the file link to be visible after upload.<br/>
-Click the 'Next' button.<br/>
-Click the 'Public Local Files' radio button.<br/>
-Click the 'Next' button.<br/>
-Verify the file image 'HanSolo' is present.<br/>
-Verify the img is loaded and visible.<br/>
-Click the 'Save' button.<br/>
-Switch to the active frame titled 'Create Movie dialog'.<br/>
-Click the 'Additional Information' link.<br/>
-Select the 'Syndicated' from the 'Movie Type' drop down list.<br/>
-Select the 'G' from the 'Rating' drop down list.<br/>
-Select the 'Action' from the 'Primary Genre' drop down list.<br/>
-Click the 'Save' button.<br/>
-Verify success message of 'Movie 7f7e8a9ba9974d7 has been created.' is present.<br/>
-Verify '"cat":"content"' is present in page source.<br/>
-STEP 5<br/>
-Click the 'Edit Draft' link in the work bench.<br/>
-Switch to the active frame titled 'Edit Movie 7f7e8a9ba9974d7 dialog'.<br/>
-Click the 'URL path settings' link.<br/>
-Uncheck the 'Generate automatic URL alias' check box.<br/>
-Enter 'db9a44536c' in the 'URL alias' text box.<br/>
-Click the 'Save' button.<br/>
-Verify success message of 'Movie 7f7e8a9ba9974d7 has been updated.' is present.<br/>
-STEP 6<br/>
-Verify '"cat":"db9a44536c"' is present in page source.<br/>
-STEP 7<br/>
-Click the 'Edit Draft' link in the work bench.<br/>
-Switch to the active frame titled 'Edit Movie 7f7e8a9ba9974d7 dialog'.<br/>
-Click the 'URL path settings' link.<br/>
-Enter 'db9a44536c/mps-testing/2arg/3arg/4arg/5arg/6arg' in the 'URL alias' text box.<br/>
-Click the 'Save' button.<br/>
-Verify success message of 'Movie 7f7e8a9ba9974d7 has been updated.' is present.<br/>
-STEP 8<br/>
-Verify '"cat":"db9a44536c|mps-testing|2arg"}' is present in page source.<br/>
-STEP 9<br/>
-Mouse over the 'Configuration' menu link.<br/>
-Mouse over the 'Web services' menu link.<br/>
-Click the 'MPS Configuration' menu link.<br/>
-Switch to the active frame titled 'MPS Configuration dialog'.<br/>
-Click the 'REPLACEMENT PATTERNS' link.<br/>
-Click the 'MPS' link.<br/>
-Verify the 'MPS CAT Property' link with text '[mps:cat-pattern:?]' is present.<br/>
-Enter '[mps:cat-pattern:?]' in the 'Pattern for Category Field' text box.<br/>
-STEP 10<br/>
-Click the 'Save configuration' button.<br/>
-Verify success message of 'The configuration options have been saved.' is present.<br/>
+Mouse over the 'Dynamic Queues' menu link.<br/>
+Click the 'Add 009aea0b7be44b4' menu link.<br/>
+Switch to the active frame titled 'Add 009aea0b7be44b4 dynamic queue dialog'.<br/>
+Enter 'bf586f0c19b444b' in the 'Title' text box.<br/>
+<br/>
+Click the 'Newest' radio button under 'Sort by'.<br/>
+STEP 2<br/>
+Set '5' in ItemsPerPage textbox.<br/>
+Set '10' in TotalLimit textbox.<br/>
+Click the 'Save Dynamic Queue' button.<br/>
+STEP 3<br/>
+Mouse over the 'Content' menu link.<br/>
+Click the 'Dynamic Queues' menu link.<br/>
+Switch to the active frame titled 'Dynamic Queues dialog'.<br/>
 Click the 'Close Overlay X'.<br/>
-Scroll by '-500'.<br/>
-STEP 11<br/>
-Verify '"cat":"db9a44536c|mps-testing|2arg|3arg|4arg"}' is present in page source.<br/>
-STEP 12<br/>
-Switch to the active frame titled 'Execute PHP Code dialog'.<br/>
-Enter 'variable_set('mps_cat_pattern', '');echo _mps_build_cat();echo PHP_EOL;variable_set('mps_cat_pattern', '[mps:cat-pattern:?]');echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/cast'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/thisisareallyreallyreallyreallyreallyreallylongurlXXXXXX/season/episode/cast/name'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/thisisareallyreallyreallyreallyreallyreallylongurlXXXXXX/season/episode/cast/'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/show//episode/cast'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/show/season//episode//'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => '/show/season//'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => '/show///'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => '/brand/season//episode'));echo PHP_EOL;variable_set('mps_cat_pattern', '[mps:cat-pattern:2]|[mps:cat-pattern:3]');echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/cast'));echo PHP_EOL;variable_set('mps_cat_pattern', '[mps:cat-pattern:0]|[mps:cat-pattern:2]|[current-date:custom:d]|[mps:cat-pattern:3]|');echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/cast'));variable_set('mps_cat_pattern', '[mps:cat-pattern:?]');echo PHP_EOL;echo '*' . _mps_build_cat(array('aliased-path' => '/')) . '*';' in the 'PHP Code to Execute' text area.<br/>
-Click the 'Execute' button.<br/>
-Verify the expected response is 'Status message
-devel
-brand|show|season|episode
-brand|thisisareallyreallyreallyreallyreallyreallylongurl|season|episode|cast
-brand|thisisareallyreallyreallyreallyreallyreallylongurl|season|episode|cast
-brand|show|~|episode
-brand|show|season
-brand|show|season|~|episode
-~|show
-
-~|brand|season
-season|episode
-brand|season|24
-**'.<br/>
-Click the 'Close Overlay X'.<br/>
-Scroll by '-500'.<br/>
-CLEANUP<br/>
-Mouse over the 'Configuration' menu link.<br/>
-Mouse over the 'Web services' menu link.<br/>
-Click the 'MPS Configuration' menu link.<br/>
-Switch to the active frame titled 'MPS Configuration dialog'.<br/>
-Enter '' in the 'Pattern for Category Field' text box.<br/>
-Click the 'Save configuration' button.<br/>
+Open a new browser window.<br/>
+Switch to new browser tab/window.<br/>
+Open url 'http://qa5.publisher7.com/dynamic-queue/31'.<br/>
+STEP 4<br/>
+Verify the pagination links are present.<br/>
+Verify the visible count of Dynamic Queue Links equals '5'.<br/>
+Click the 'next >' Link<br/>
+Verify the visible count of Dynamic Queue Links equals '5'.<br/>
 </div>
 </td>
 <td></td>
-<td>92</td>
-<td>com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens@37b2cb94</td></tr>
+<td>60</td>
+<td>com.nbcuni.test.publisher.tests.Queues.DynamicQueues.DynamicQueuePagination@5d03462c</td></tr>
 </table><p>
 </body>
 </html>

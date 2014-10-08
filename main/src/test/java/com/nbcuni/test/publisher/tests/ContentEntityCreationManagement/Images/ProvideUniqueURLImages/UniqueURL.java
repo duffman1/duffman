@@ -36,9 +36,9 @@ public class UniqueURL extends ParentTest{
             selectFile.SwitchToSelectFileFrm();
             selectFile.ClickViewLibraryBtn();
             selectFile.EnterFileName("HanSolo");
-            selectFile.WaitForFileSearchComplete();
+            contentParent.WaitForThrobberNotPresent();
             selectFile.ClickApplyBtn();
-            selectFile.WaitForFileSearchComplete();
+            contentParent.WaitForThrobberNotPresent();
             selectFile.VerifyMediaThumbnailImagePresent("HanSolo", "1");
             selectFile.VerifyMediaThumbnailImagePresent("HanSolo", "2");
             selectFile.ClickMediaThumbnailImage("1");

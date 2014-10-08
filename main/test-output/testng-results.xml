@@ -20,336 +20,168 @@
       <![CDATA[SETUP]]>
     </line>
     <line>
+      <![CDATA[Click the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Get the number of results in the result set.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
       <![CDATA[Click the 'Modules' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+      <![CDATA[Switch to frame titled 'Modules'.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Pixelman' in the 'Filter Name' text box.]]>
+      <![CDATA[Enter 'Dynamic Queue' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Wait for module filter titled 'Pixelman' to be visible in module list.]]>
+      <![CDATA[Wait for module filter titled 'Dynamic Queue' to be visible in module list.]]>
     </line>
     <line>
-      <![CDATA[Enter 'MPS' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for module filter titled 'MPS' to be visible in module list.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'MPS' check box is checked.]]>
+      <![CDATA[Verify the 'Dynamic Queue' check box is checked.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
     </line>
     <line>
-      <![CDATA[Scroll by '-500'.]]>
+      <![CDATA[Click the 'Home' menu link.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Configuration' menu link.]]>
+      <![CDATA[Mouse over the 'Structure' menu link.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Web services' menu link.]]>
+      <![CDATA[Mouse over the 'Dynamic Queue types' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'MPS Configuration' menu link.]]>
+      <![CDATA[Click the 'Add dynamic queue type' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'MPS Configuration dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'Add dynamic queue type dialog'.]]>
     </line>
     <line>
-      <![CDATA[Enter '' in the 'Pattern for Category Field' text box.]]>
+      <![CDATA[Enter '009aea0b7be44b4' in the 'Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
+      <![CDATA[Select '1 min' from the 'Cache lifetime' drop down list.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+      <![CDATA[Select 'Content' or 'Node' from the 'Entity type' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Dynamic Queue types dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text '009aea0b7be44b4' is present on the page.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll by '-500'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 2 - N/A]]>
-    </line>
-    <line>
-      <![CDATA[STEP 3]]>
-    </line>
-    <line>
-      <![CDATA[Verify '"cat":"content"' is not present in page source.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 4]]>
     </line>
     <line>
       <![CDATA[Mouse over the 'Content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Add content' menu link.]]>
+      <![CDATA[Mouse over the 'Dynamic Queues' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Movie' menu link.]]>
+      <![CDATA[Click the 'Add 009aea0b7be44b4' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'Add 009aea0b7be44b4 dynamic queue dialog'.]]>
     </line>
     <line>
-      <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
+      <![CDATA[Enter 'bf586f0c19b444b' in the 'Title' text box.]]>
     </line>
     <line>
-      <![CDATA[Enter '7f7e8a9ba9974d7' in the 'Title' text box.]]>
+      <![CDATA[]]>
     </line>
     <line>
-      <![CDATA[Switch to the Synopsis frame.]]>
+      <![CDATA[Click the 'Newest' radio button under 'Sort by'.]]>
     </line>
     <line>
-      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+      <![CDATA[STEP 2]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
+      <![CDATA[Set '5' in ItemsPerPage textbox.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Cover' select button.]]>
+      <![CDATA[Set '10' in TotalLimit textbox.]]>
     </line>
     <line>
-      <![CDATA[Switch to the select file frame.]]>
+      <![CDATA[Click the 'Save Dynamic Queue' button.]]>
     </line>
     <line>
-      <![CDATA[Enter the file path for file upload.]]>
+      <![CDATA[STEP 3]]>
     </line>
     <line>
-      <![CDATA[Click the 'Upload' button.]]>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
+      <![CDATA[Click the 'Dynamic Queues' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the file image 'HanSolo' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Additional Information' link.]]>
-    </line>
-    <line>
-      <![CDATA[Select the 'Syndicated' from the 'Movie Type' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Select the 'G' from the 'Rating' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Select the 'Action' from the 'Primary Genre' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Movie 7f7e8a9ba9974d7 has been created.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify '"cat":"content"' is present in page source.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 5]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Edit Draft' link in the work bench.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Edit Movie 7f7e8a9ba9974d7 dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'URL path settings' link.]]>
-    </line>
-    <line>
-      <![CDATA[Uncheck the 'Generate automatic URL alias' check box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'db9a44536c' in the 'URL alias' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Movie 7f7e8a9ba9974d7 has been updated.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 6]]>
-    </line>
-    <line>
-      <![CDATA[Verify '"cat":"db9a44536c"' is present in page source.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 7]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Edit Draft' link in the work bench.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Edit Movie 7f7e8a9ba9974d7 dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'URL path settings' link.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'db9a44536c/mps-testing/2arg/3arg/4arg/5arg/6arg' in the 'URL alias' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Movie 7f7e8a9ba9974d7 has been updated.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 8]]>
-    </line>
-    <line>
-      <![CDATA[Verify '"cat":"db9a44536c|mps-testing|2arg"}' is present in page source.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 9]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Configuration' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Web services' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'MPS Configuration' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'MPS Configuration dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'REPLACEMENT PATTERNS' link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'MPS' link.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'MPS CAT Property' link with text '[mps:cat-pattern:?]' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '[mps:cat-pattern:?]' in the 'Pattern for Category Field' text box.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 10]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+      <![CDATA[Switch to the active frame titled 'Dynamic Queues dialog'.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
     </line>
     <line>
-      <![CDATA[Scroll by '-500'.]]>
+      <![CDATA[Open a new browser window.]]>
     </line>
     <line>
-      <![CDATA[STEP 11]]>
+      <![CDATA[Switch to new browser tab/window.]]>
     </line>
     <line>
-      <![CDATA[Verify '"cat":"db9a44536c|mps-testing|2arg|3arg|4arg"}' is present in page source.]]>
+      <![CDATA[Open url 'http://qa5.publisher7.com/dynamic-queue/31'.]]>
     </line>
     <line>
-      <![CDATA[STEP 12]]>
+      <![CDATA[STEP 4]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Execute PHP Code dialog'.]]>
+      <![CDATA[Verify the pagination links are present.]]>
     </line>
     <line>
-      <![CDATA[Enter 'variable_set('mps_cat_pattern', '');echo _mps_build_cat();echo PHP_EOL;variable_set('mps_cat_pattern', '[mps:cat-pattern:?]');echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/cast'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/thisisareallyreallyreallyreallyreallyreallylongurlXXXXXX/season/episode/cast/name'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/thisisareallyreallyreallyreallyreallyreallylongurlXXXXXX/season/episode/cast/'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/show//episode/cast'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/show/season//episode//'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => '/show/season//'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => '/show///'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => '/brand/season//episode'));echo PHP_EOL;variable_set('mps_cat_pattern', '[mps:cat-pattern:2]|[mps:cat-pattern:3]');echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/cast'));echo PHP_EOL;variable_set('mps_cat_pattern', '[mps:cat-pattern:0]|[mps:cat-pattern:2]|[current-date:custom:d]|[mps:cat-pattern:3]|');echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/cast'));variable_set('mps_cat_pattern', '[mps:cat-pattern:?]');echo PHP_EOL;echo '*' . _mps_build_cat(array('aliased-path' => '/')) . '*';' in the 'PHP Code to Execute' text area.]]>
+      <![CDATA[Verify the visible count of Dynamic Queue Links equals '5'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Execute' button.]]>
+      <![CDATA[Click the 'next >' Link]]>
     </line>
     <line>
-      <![CDATA[Verify the expected response is 'Status message
-devel
-brand|show|season|episode
-brand|thisisareallyreallyreallyreallyreallyreallylongurl|season|episode|cast
-brand|thisisareallyreallyreallyreallyreallyreallylongurl|season|episode|cast
-brand|show|~|episode
-brand|show|season
-brand|show|season|~|episode
-~|show
-
-~|brand|season
-season|episode
-brand|season|24
-**'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll by '-500'.]]>
-    </line>
-    <line>
-      <![CDATA[CLEANUP]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Configuration' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Web services' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'MPS Configuration' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'MPS Configuration dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '' in the 'Pattern for Category Field' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
+      <![CDATA[Verify the visible count of Dynamic Queue Links equals '5'.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="96343" started-at="2014-09-24T11:55:07Z" finished-at="2014-09-24T11:56:43Z">
+  <suite name="Default suite" duration-ms="64129" started-at="2014-10-07T14:49:31Z" finished-at="2014-10-07T14:50:35Z">
     <groups>
       <group name="full">
-        <method signature="MPSSupportTokens.MPSSupportTokens_TC3641()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens@37b2cb94]" name="MPSSupportTokens_TC3641" class="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens"/>
+        <method signature="DynamicQueuePagination.DynamicQueuePagination_TC4791()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.DynamicQueuePagination@5d03462c]" name="DynamicQueuePagination_TC4791" class="com.nbcuni.test.publisher.tests.Queues.DynamicQueues.DynamicQueuePagination"/>
       </group> <!-- full -->
-      <group name="mps">
-        <method signature="MPSSupportTokens.MPSSupportTokens_TC3641()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens@37b2cb94]" name="MPSSupportTokens_TC3641" class="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens"/>
-      </group> <!-- mps -->
     </groups>
-    <test name="Default test" duration-ms="96343" started-at="2014-09-24T11:55:07Z" finished-at="2014-09-24T11:56:43Z">
-      <class name="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens">
-        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens@37b2cb94]" name="startGridAndHub" is-config="true" duration-ms="1331" started-at="2014-09-24T07:55:06Z" finished-at="2014-09-24T07:55:07Z">
+    <test name="Default test" duration-ms="64129" started-at="2014-10-07T14:49:31Z" finished-at="2014-10-07T14:50:35Z">
+      <class name="com.nbcuni.test.publisher.tests.Queues.DynamicQueues.DynamicQueuePagination">
+        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.DynamicQueuePagination@5d03462c]" name="startGridAndHub" is-config="true" duration-ms="1308" started-at="2014-10-07T10:49:30Z" finished-at="2014-10-07T10:49:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startGridAndHub -->
-        <test-method status="PASS" signature="startSelenium()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens@37b2cb94]" name="startSelenium" is-config="true" duration-ms="3284" started-at="2014-09-24T07:55:07Z" finished-at="2014-09-24T07:55:10Z">
+        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.DynamicQueuePagination@5d03462c]" name="startSelenium" is-config="true" duration-ms="2617" started-at="2014-10-07T10:49:31Z" finished-at="2014-10-07T10:49:34Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.nbcuni.test.publisher.tests.Queues.DynamicQueues.DynamicQueuePagination.DynamicQueuePagination_TC4791() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="MPSSupportTokens_TC3641()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens@37b2cb94]" name="MPSSupportTokens_TC3641" duration-ms="92466" started-at="2014-09-24T07:55:10Z" finished-at="2014-09-24T07:56:43Z">
+        <test-method status="PASS" signature="DynamicQueuePagination_TC4791()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.DynamicQueuePagination@5d03462c]" name="DynamicQueuePagination_TC4791" duration-ms="60929" started-at="2014-10-07T10:49:34Z" finished-at="2014-10-07T10:50:35Z">
           <reporter-output>
             <line>
               <![CDATA[STEP 1]]>
@@ -370,333 +202,161 @@ brand|season|24
               <![CDATA[SETUP]]>
             </line>
             <line>
+              <![CDATA[Click the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Get the number of results in the result set.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
               <![CDATA[Click the 'Modules' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+              <![CDATA[Switch to frame titled 'Modules'.]]>
             </line>
             <line>
-              <![CDATA[Enter 'Pixelman' in the 'Filter Name' text box.]]>
+              <![CDATA[Enter 'Dynamic Queue' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Wait for module filter titled 'Pixelman' to be visible in module list.]]>
+              <![CDATA[Wait for module filter titled 'Dynamic Queue' to be visible in module list.]]>
             </line>
             <line>
-              <![CDATA[Enter 'MPS' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for module filter titled 'MPS' to be visible in module list.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'MPS' check box is checked.]]>
+              <![CDATA[Verify the 'Dynamic Queue' check box is checked.]]>
             </line>
             <line>
               <![CDATA[Click the 'Close Overlay X'.]]>
             </line>
             <line>
-              <![CDATA[Scroll by '-500'.]]>
+              <![CDATA[Click the 'Home' menu link.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Configuration' menu link.]]>
+              <![CDATA[Mouse over the 'Structure' menu link.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Web services' menu link.]]>
+              <![CDATA[Mouse over the 'Dynamic Queue types' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'MPS Configuration' menu link.]]>
+              <![CDATA[Click the 'Add dynamic queue type' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'MPS Configuration dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'Add dynamic queue type dialog'.]]>
             </line>
             <line>
-              <![CDATA[Enter '' in the 'Pattern for Category Field' text box.]]>
+              <![CDATA[Enter '009aea0b7be44b4' in the 'Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
+              <![CDATA[Select '1 min' from the 'Cache lifetime' drop down list.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+              <![CDATA[Select 'Content' or 'Node' from the 'Entity type' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Dynamic Queue types dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text '009aea0b7be44b4' is present on the page.]]>
             </line>
             <line>
               <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll by '-500'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 2 - N/A]]>
-            </line>
-            <line>
-              <![CDATA[STEP 3]]>
-            </line>
-            <line>
-              <![CDATA[Verify '"cat":"content"' is not present in page source.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 4]]>
             </line>
             <line>
               <![CDATA[Mouse over the 'Content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Add content' menu link.]]>
+              <![CDATA[Mouse over the 'Dynamic Queues' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Movie' menu link.]]>
+              <![CDATA[Click the 'Add 009aea0b7be44b4' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'Add 009aea0b7be44b4 dynamic queue dialog'.]]>
             </line>
             <line>
-              <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
+              <![CDATA[Enter 'bf586f0c19b444b' in the 'Title' text box.]]>
             </line>
             <line>
-              <![CDATA[Enter '7f7e8a9ba9974d7' in the 'Title' text box.]]>
+              <![CDATA[]]>
             </line>
             <line>
-              <![CDATA[Switch to the Synopsis frame.]]>
+              <![CDATA[Click the 'Newest' radio button under 'Sort by'.]]>
             </line>
             <line>
-              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+              <![CDATA[STEP 2]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
+              <![CDATA[Set '5' in ItemsPerPage textbox.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Cover' select button.]]>
+              <![CDATA[Set '10' in TotalLimit textbox.]]>
             </line>
             <line>
-              <![CDATA[Switch to the select file frame.]]>
+              <![CDATA[Click the 'Save Dynamic Queue' button.]]>
             </line>
             <line>
-              <![CDATA[Enter the file path for file upload.]]>
+              <![CDATA[STEP 3]]>
             </line>
             <line>
-              <![CDATA[Click the 'Upload' button.]]>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
+              <![CDATA[Click the 'Dynamic Queues' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Public Local Files' radio button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the file image 'HanSolo' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Additional Information' link.]]>
-            </line>
-            <line>
-              <![CDATA[Select the 'Syndicated' from the 'Movie Type' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Select the 'G' from the 'Rating' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Select the 'Action' from the 'Primary Genre' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Movie 7f7e8a9ba9974d7 has been created.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify '"cat":"content"' is present in page source.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 5]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Edit Draft' link in the work bench.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Edit Movie 7f7e8a9ba9974d7 dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'URL path settings' link.]]>
-            </line>
-            <line>
-              <![CDATA[Uncheck the 'Generate automatic URL alias' check box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'db9a44536c' in the 'URL alias' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Movie 7f7e8a9ba9974d7 has been updated.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 6]]>
-            </line>
-            <line>
-              <![CDATA[Verify '"cat":"db9a44536c"' is present in page source.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 7]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Edit Draft' link in the work bench.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Edit Movie 7f7e8a9ba9974d7 dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'URL path settings' link.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'db9a44536c/mps-testing/2arg/3arg/4arg/5arg/6arg' in the 'URL alias' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Movie 7f7e8a9ba9974d7 has been updated.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 8]]>
-            </line>
-            <line>
-              <![CDATA[Verify '"cat":"db9a44536c|mps-testing|2arg"}' is present in page source.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 9]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Configuration' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Web services' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'MPS Configuration' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'MPS Configuration dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'REPLACEMENT PATTERNS' link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'MPS' link.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'MPS CAT Property' link with text '[mps:cat-pattern:?]' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '[mps:cat-pattern:?]' in the 'Pattern for Category Field' text box.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 10]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+              <![CDATA[Switch to the active frame titled 'Dynamic Queues dialog'.]]>
             </line>
             <line>
               <![CDATA[Click the 'Close Overlay X'.]]>
             </line>
             <line>
-              <![CDATA[Scroll by '-500'.]]>
+              <![CDATA[Open a new browser window.]]>
             </line>
             <line>
-              <![CDATA[STEP 11]]>
+              <![CDATA[Switch to new browser tab/window.]]>
             </line>
             <line>
-              <![CDATA[Verify '"cat":"db9a44536c|mps-testing|2arg|3arg|4arg"}' is present in page source.]]>
+              <![CDATA[Open url 'http://qa5.publisher7.com/dynamic-queue/31'.]]>
             </line>
             <line>
-              <![CDATA[STEP 12]]>
+              <![CDATA[STEP 4]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Execute PHP Code dialog'.]]>
+              <![CDATA[Verify the pagination links are present.]]>
             </line>
             <line>
-              <![CDATA[Enter 'variable_set('mps_cat_pattern', '');echo _mps_build_cat();echo PHP_EOL;variable_set('mps_cat_pattern', '[mps:cat-pattern:?]');echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/cast'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/thisisareallyreallyreallyreallyreallyreallylongurlXXXXXX/season/episode/cast/name'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/thisisareallyreallyreallyreallyreallyreallylongurlXXXXXX/season/episode/cast/'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/show//episode/cast'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/show/season//episode//'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => '/show/season//'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => '/show///'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => '/brand/season//episode'));echo PHP_EOL;variable_set('mps_cat_pattern', '[mps:cat-pattern:2]|[mps:cat-pattern:3]');echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/cast'));echo PHP_EOL;variable_set('mps_cat_pattern', '[mps:cat-pattern:0]|[mps:cat-pattern:2]|[current-date:custom:d]|[mps:cat-pattern:3]|');echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/cast'));variable_set('mps_cat_pattern', '[mps:cat-pattern:?]');echo PHP_EOL;echo '*' . _mps_build_cat(array('aliased-path' => '/')) . '*';' in the 'PHP Code to Execute' text area.]]>
+              <![CDATA[Verify the visible count of Dynamic Queue Links equals '5'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Execute' button.]]>
+              <![CDATA[Click the 'next >' Link]]>
             </line>
             <line>
-              <![CDATA[Verify the expected response is 'Status message
-devel
-brand|show|season|episode
-brand|thisisareallyreallyreallyreallyreallyreallylongurl|season|episode|cast
-brand|thisisareallyreallyreallyreallyreallyreallylongurl|season|episode|cast
-brand|show|~|episode
-brand|show|season
-brand|show|season|~|episode
-~|show
-
-~|brand|season
-season|episode
-brand|season|24
-**'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll by '-500'.]]>
-            </line>
-            <line>
-              <![CDATA[CLEANUP]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Configuration' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Web services' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'MPS Configuration' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'MPS Configuration dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '' in the 'Pattern for Category Field' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
+              <![CDATA[Verify the visible count of Dynamic Queue Links equals '5'.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- MPSSupportTokens_TC3641 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens@37b2cb94]" name="stopSelenium" is-config="true" duration-ms="579" started-at="2014-09-24T07:56:43Z" finished-at="2014-09-24T07:56:43Z">
+        </test-method> <!-- DynamicQueuePagination_TC4791 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.DynamicQueuePagination@5d03462c]" name="stopSelenium" is-config="true" duration-ms="571" started-at="2014-10-07T10:50:35Z" finished-at="2014-10-07T10:50:35Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=MPSSupportTokens_TC3641 status=SUCCESS method=MPSSupportTokens.MPSSupportTokens_TC3641()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens@37b2cb94] output=STEP 1]]]>
+                <![CDATA[[TestResult name=DynamicQueuePagination_TC4791 status=SUCCESS method=DynamicQueuePagination.DynamicQueuePagination_TC4791()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.DynamicQueuePagination@5d03462c] output=STEP 1]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens@37b2cb94]" name="stopGridAndHub" is-config="true" duration-ms="376" started-at="2014-09-24T07:56:43Z" finished-at="2014-09-24T07:56:44Z">
+        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.DynamicQueuePagination@5d03462c]" name="stopGridAndHub" is-config="true" duration-ms="421" started-at="2014-10-07T10:50:35Z" finished-at="2014-10-07T10:50:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopGridAndHub -->
-      </class> <!-- com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Queues.DynamicQueues.DynamicQueuePagination -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

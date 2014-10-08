@@ -49,6 +49,7 @@ public class AutomaticallyCreatedMPSAdSlots extends ParentTest {
         	
         	Reporter.log("STEP 2");
         	mpsConfiguration.ClickSyncAdBlocksBtn();
+        	contentParent.WaitForThrobberNotPresent();
         	contentParent.VerifyMessageStatus("The configuration options have been saved.");
         	
         	Reporter.log("STEP 3");

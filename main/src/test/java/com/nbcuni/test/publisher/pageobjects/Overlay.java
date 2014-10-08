@@ -72,14 +72,8 @@ public class Overlay {
     public void ClickCloseOverlayLnk() throws Exception {
     	
     	Reporter.log("Click the 'Close Overlay X'.");
-    	for (int ScrollC = 0; ScrollC < 10; ScrollC++) {
-    		contentParent.Scroll("-500");
-    		try {
-    			CloseOverlay_Lnk.click();
-    			break;
-    		}
-    		catch (WebDriverException e) { }
-    	}
+    	Thread.sleep(1000);
+    	webDriver.executeScript("arguments[0].click();", CloseOverlay_Lnk);
     	this.switchToDefaultContent(true);
     }
     
@@ -121,13 +115,19 @@ public class Overlay {
             if (loadingFramePresent == false){ break;}
             Thread.sleep(500);
         }
-    	webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
+    	
+    	//longer timeout for overlay loads
+    	webDriver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
     	
     	this.switchToDefaultContent(false);
-    	//Thread.sleep(250); //slight pause to help ensure frame switch occurs to a new frame and not the old.
+    	Thread.sleep(500); //slight pause to help ensure frame switch occurs to a new frame and not the old.
     	Reporter.log("Switch to the active frame titled '" + ActiveFrame_Frm.getAttribute("title") + "'.");
     	webDriver.switchTo().frame(ActiveFrame_Frm);
     	
+    	//default timeout
+    	webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
+    	
+    	//check for errors in overlay
     	errorChecking.VerifyNoMessageErrorsPresent();
     	
     }
@@ -149,7 +149,7 @@ public class Overlay {
             	framePresent = false;
             }
             if (framePresent == false){ break;}
-            Thread.sleep(500);
+            Thread.sleep(1000);
         }
     	webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
     	

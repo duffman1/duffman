@@ -55,7 +55,7 @@ public class TextFormat {
 	
 	public void EnterAllowedHTMLTags(String allowedTags) throws Exception {
 		
-		Reporter.log("Enter '" + allowedTags + "' in the 'Allowed HTML tags' text box.");
+		Reporter.log("Enter the allowed html tags in the 'Allowed HTML tags' text box.");
 		AllowedHTMLTags_Txb.clear();
 		AllowedHTMLTags_Txb.sendKeys(allowedTags);
 	}

@@ -57,6 +57,7 @@ public class SitePreview {
 	 public void ClickEnablePreviewBtn() throws Exception { 
 		 
 		 Reporter.log("Click the 'Enable Preview' button.");
+		 Thread.sleep(1000);
 		 try {
 			 	EnablePreview_Btn.click();
 	    	}
@@ -69,6 +70,7 @@ public class SitePreview {
 	 public void ClickPreviewSiteLnk() throws Exception { 
 	    	
 		 Reporter.log("Click on the 'Preview Site' link.");
+		 Thread.sleep(1000);
 		 try {
 			 PreviewSite_Lnk.click();
 		 }
@@ -79,8 +81,9 @@ public class SitePreview {
 	    
 	 public void VerifyEnablePreviewBtnVisible() throws Exception { 
 	    	
-		 Reporter.log("Verify the 'Enable Preview' button is visible.");	
-		 Assert.assertTrue(EnablePreview_Btn.isDisplayed());
+		 Reporter.log("Verify the 'Enable Preview' button is visible.");
+		 wait.until(ExpectedConditions.visibilityOf(EnablePreview_Btn));
+		 //Assert.assertTrue(EnablePreview_Btn.isDisplayed());
 	 }
 	    
 	 public void SelectACondition() throws Exception { 
@@ -94,7 +97,7 @@ public class SitePreview {
 	 public void VerifySelectAConditionValue(final String value) throws Exception { 	    	
 	    	
 		 Reporter.log("Verify the selected option of the 'SELECT A CONDITION' drop down list is '" + value + "'.");	  
-		 Thread.sleep(250); //stale element exception
+		 Thread.sleep(1000);
 		 wait.until(ExpectedConditions.visibilityOf(SelectCondition_Ddl));
 		 Assert.assertEquals(new Select(SelectCondition_Ddl).getFirstSelectedOption().getText(),value);
 	 }
@@ -145,7 +148,8 @@ public class SitePreview {
 	    
 	 public void ClickDisablePreviewBtn() throws Exception {
 	    	
-		 Reporter.log("Click the 'Disable Preview' button.");	    	
+		 Reporter.log("Click the 'Disable Preview' button.");	    
+		 Thread.sleep(1000);
 		 DisablePreview_Btn.click();
 	 }
 	    
@@ -155,9 +159,10 @@ public class SitePreview {
 		 UpdatePreview_Btn.isDisplayed();
 	 }
 	       
-	 public void ClickUpdatePreviewBtn(){
+	 public void ClickUpdatePreviewBtn() throws Exception {
 	    	
 		 Reporter.log("Click the 'Update Preview' button.");	
+		 Thread.sleep(1000);
 		 UpdatePreview_Btn.click();
 	 }
 }

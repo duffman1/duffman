@@ -238,10 +238,12 @@ public class SearchFor {
     
     public String GetFirstMPXMediaSearchResult() throws Exception {
     	
-    	webDriver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+    	webDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     	Reporter.log("Get the text of the first search result set item.");
     	String linkTxt = "";
     	try {
+    		FirstMPXMediaSearchResult_Lnk.getLocation();
+    		Thread.sleep(2000);
     		linkTxt = FirstMPXMediaSearchResult_Lnk.getText();	
     	}
     	catch (Exception e) {}

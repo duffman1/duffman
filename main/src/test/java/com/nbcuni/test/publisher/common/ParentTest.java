@@ -17,6 +17,8 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
+import java.lang.reflect.Method;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class ParentTest {
@@ -36,7 +38,7 @@ public class ParentTest {
     @BeforeSuite(alwaysRun = true)
     public void startGridAndHub() throws Exception {
 
-    	if (config.getConfigValue("RunMobile").equals("false")) {
+    	if (config.getConfigValue("RunMobile").equals("false") && config.getConfigValue("RunOnGridNetwork").equals("false")) {
     		startGridHubNode = new StartGridHubNode();
     		startGridHubNode.start();
     	}
@@ -44,11 +46,17 @@ public class ParentTest {
     }
     
     @BeforeMethod(alwaysRun = true)
-    public void startSelenium() throws Exception {
+    public void startSelenium(Method method) throws Exception {
         try {
             
+        	List<String> allLocalTests = config.getAllLocalTests();
+        	Boolean runLocally = false;
+        	if (allLocalTests.contains(method.getDeclaringClass().getCanonicalName())) {
+        		runLocally = true;
+        	}
+        	
         	driverSetup = new DriverSetup();
-        	webDriver = driverSetup.WebDriverSetup();
+        	webDriver = driverSetup.WebDriverSetup(runLocally);
             applib = new AppLib(webDriver);
             random = new Random();
             taxonomy = new Taxonomy(webDriver);
@@ -108,7 +116,7 @@ public class ParentTest {
     @AfterSuite(alwaysRun = true)
     public void stopGridAndHub() throws Exception {
 
-    	if (config.getConfigValue("RunMobile").equals("false")) {
+    	if (config.getConfigValue("RunMobile").equals("false") && config.getConfigValue("RunOnGridNetwork").equals("false")) {
     		startGridHubNode.stop();
     	}
     	

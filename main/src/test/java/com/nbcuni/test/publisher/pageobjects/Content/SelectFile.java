@@ -8,6 +8,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.remote.LocalFileDetector;
 //import org.openqa.selenium.remote.LocalFileDetector;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -18,6 +19,7 @@ import org.testng.Assert;
 import org.testng.Reporter;
 
 import com.nbcuni.test.publisher.common.AppLib;
+import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Random;
 import com.nbcuni.test.publisher.pageobjects.Overlay;
 import com.nbcuni.test.publisher.pageobjects.ErrorChecking.ErrorChecking;
@@ -38,6 +40,7 @@ public class SelectFile {
     private Random random;
     private ErrorChecking errorChecking;
     private Overlay overlay;
+    private Config config;
     
     //PAGE OBJECT CONSTRUCTOR
     public SelectFile(Driver webDriver, AppLib applib) {
@@ -48,11 +51,15 @@ public class SelectFile {
         random = new Random();
         errorChecking = new ErrorChecking(webDriver, applib);
         overlay = new Overlay(webDriver, applib);
+        config = new Config();
     }
     
     //PAGE OBJECT IDENTIFIERS
     @FindBy(how = How.XPATH, using = "//iframe[@id='mediaBrowser']")
     private WebElement SelectFile_Frm;
+    
+    @FindBy(how = How.XPATH, using = "//h1[text()='Select a file']")
+    private WebElement SelectFile_Txt;
     
     @FindBy(how = How.XPATH, using = "//a[@title='View Library']")
     private WebElement ViewLibrary_Btn;
@@ -141,26 +148,27 @@ public class SelectFile {
     public void SwitchToSelectFileFrm() throws Exception {
     	
     	Reporter.log("Switch to the select file frame.");
-    	
-    	//webDriver.switchTo().frame(SelectFile_Frm);
-    	
-    	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
-    	for (int second = 0; ; second++){
-            if (second >= 30) {
-                Assert.fail("No inputs on 'Select a file' frame after timeout.");
-            }
-            try {
-            	webDriver.switchTo().frame(SelectFile_Frm);
-            	webDriver.findElement(By.xpath("//input"));
-            	break;
-            }
-            catch (Exception e) {
-            	overlay.SwitchToActiveFrame();
-            }
-            Thread.sleep(500);
-        }
-        webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
-    	
+    	webDriver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+    	for (int I = 0; I<10; I++) {
+    		try {
+    			webDriver.switchTo().frame(SelectFile_Frm);
+    			SelectFile_Txt.getLocation();
+    			break;
+    		}
+    		catch (Exception e) {
+    			Thread.sleep(1000);
+    		}
+    		webDriver.switchTo().defaultContent();
+    		try {
+    			String activeFrame = "//iframe[@class='overlay-element overlay-active']";
+    			webDriver.findElement(By.xpath(activeFrame));
+    			webDriver.switchTo().frame(webDriver.findElement(By.xpath(activeFrame)));
+    			System.out.println("active frame switch happened.");
+    		}
+    		catch (Exception e) {
+    		}
+    	}
+    	webDriver.manage().timeouts().implicitlyWait(config.getImplicitWaitTime(), TimeUnit.SECONDS);
     	errorChecking.VerifyNoMessageErrorsPresent();
     }
     
@@ -253,7 +261,7 @@ public class SelectFile {
     public void EnterFilePath(String pathToFile) throws Exception {
     	
     	Reporter.log("Enter the file path for file upload.");
-    	//webDriver.setFileDetector(new LocalFileDetector());
+    	webDriver.setFileDetector(new LocalFileDetector());
     	BrowseToFile_Upl.sendKeys(pathToFile);
     	
     }
@@ -261,7 +269,7 @@ public class SelectFile {
     public void EnterCustomFieldFilePath(String label, String pathToFile) throws Exception {
     	
     	Reporter.log("Enter '" + pathToFile + "' in the '" + label + "' custom file upload field.");
-    	//webDriver.setFileDetector(new LocalFileDetector());
+    	webDriver.setFileDetector(new LocalFileDetector());
     	CustomBrowse_Btn(label).sendKeys(pathToFile);
     	
     }
@@ -324,6 +332,8 @@ public class SelectFile {
     public void ClickPublicLocalFilesRdb() throws Exception {
     	
     	Reporter.log("Click the 'Public Local Files' radio button.");
+    	wait.until(ExpectedConditions.visibilityOf(PublicLocalFiles_Rdb));
+    	Thread.sleep(1000);
     	PublicLocalFiles_Rdb.click();
     }
     

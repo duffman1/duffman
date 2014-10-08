@@ -1,6 +1,7 @@
 package com.nbcuni.test.publisher.pageobjects.Configuration;
 
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.LocalFileDetector;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
@@ -18,12 +19,14 @@ import com.nbcuni.test.publisher.common.Driver.Driver;
 *********************************************/
 public class SimpleSAML {
 		
+	private Driver webDriver;
 	private Config config;
 	
 	//PAGE OBJECT CONSTRUCTOR
 	public SimpleSAML(Driver webDriver) {
 		PageFactory.initElements(webDriver, this);
 		config = new Config();
+		this.webDriver = webDriver;
 	}
 
 	//PAGE OBJECT IDENTIFIERS
@@ -91,7 +94,7 @@ public class SimpleSAML {
 	public void EnterFilePath(String pathToFile) throws Exception {
     	
     	Reporter.log("Enter the file path for certificate upload.");
-    	//webDriver.setFileDetector(new LocalFileDetector());
+    	webDriver.setFileDetector(new LocalFileDetector());
     	UploadCertificate_Upl.sendKeys(pathToFile);
     	
     }

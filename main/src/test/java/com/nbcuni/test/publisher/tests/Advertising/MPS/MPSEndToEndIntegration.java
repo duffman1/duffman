@@ -43,6 +43,7 @@ public class MPSEndToEndIntegration extends ParentTest {
             mpsConfiguration.CleanAllMPSOptions();
             mpsConfiguration.ClickSaveConfigurationBtn();
             mpsConfiguration.ClickSyncAdBlocksBtn();
+            contentParent.WaitForThrobberNotPresent();
             contentParent.VerifyMessageStatus("The configuration options have been saved.");
             overlay.ClickCloseOverlayLnk();
             

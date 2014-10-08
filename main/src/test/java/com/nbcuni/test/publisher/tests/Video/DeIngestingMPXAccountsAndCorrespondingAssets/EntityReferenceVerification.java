@@ -389,7 +389,7 @@ public class EntityReferenceVerification extends ParentTest{
         		selectFile.SwitchToSelectFileFrm();
         		selectFile.EnterTitle("AutomationDefault");
         		selectFile.ClickApplyBtn();
-        		selectFile.WaitForFileSearchComplete();
+        		contentParent.WaitForThrobberNotPresent();
         		selectFile.ClickSearchResultTtl("AutomationDefault");
         		selectFile.ClickSubmitBtn();
         		overlay.SwitchToActiveFrame();
@@ -397,7 +397,7 @@ public class EntityReferenceVerification extends ParentTest{
         		selectFile.SwitchToSelectFileFrm();
         		selectFile.EnterTitle("AutomationDefault");
         		selectFile.ClickApplyBtn();
-        		selectFile.WaitForFileSearchComplete();
+        		contentParent.WaitForThrobberNotPresent();
         		selectFile.ClickSearchResultTtl("AutomationDefault");
         		selectFile.ClickSubmitBtn();
         		overlay.SwitchToActiveFrame();

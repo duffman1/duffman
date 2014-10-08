@@ -67,7 +67,9 @@ public class Surf {
     public void ClickSignInBtn() throws Exception {
     	
     	Reporter.log("Click the 'Sign-in' button.");
-    	wait.until(ExpectedConditions.visibilityOf(SignIn_Btn)).click();
+    	wait.until(ExpectedConditions.visibilityOf(SignIn_Btn));
+    	Thread.sleep(2000);
+    	SignIn_Btn.click();
     }
     
     public void SwitchToSurfFrm() throws Exception {

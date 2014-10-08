@@ -6,10 +6,13 @@ import com.nbcuni.test.publisher.pageobjects.ErrorChecking.ErrorChecking;
 import com.nbcuni.test.publisher.common.Driver.Driver;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
 
@@ -28,6 +31,7 @@ public class ContentParent {
     private Driver webDriver;
     private ErrorChecking errorChecking;
     private Config config;
+    private WebDriverWait wait;
     
     //PAGE OBJECT CONSTRUCTOR
     public ContentParent(Driver webDriver, AppLib applib) {
@@ -35,6 +39,7 @@ public class ContentParent {
         PageFactory.initElements(webDriver, this);
         errorChecking = new ErrorChecking(webDriver, applib);
         config = new Config();
+        wait = new WebDriverWait(webDriver, 10);
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -130,13 +135,13 @@ public class ContentParent {
     public void VerifyPageContentPresent(List<String> txtItems) throws Exception {
 
     	Thread.sleep(500); //stale element exception
-        String bodyTxt = Body_Txt.getText();
-
-        for (String text : txtItems) {
+        for (final String text : txtItems) {
         	Reporter.log("Verify the text '" + text + "' is present on the page.");
-        	if (!bodyTxt.contains(text)) {
-        		Assert.fail("The text '" + text + "' is not present on the page.");
-        	}
+        	wait.until(new ExpectedCondition<Boolean>() {
+        		public Boolean apply(WebDriver webDriver) {
+        			return Body_Txt.getText().contains(text);
+       		 	}
+        	});
             
         }
     }
@@ -144,35 +149,41 @@ public class ContentParent {
     public void VerifyPageContentNotPresent(List<String> txtItems) throws Exception {
 
     	Thread.sleep(500); //stale element exception
-        String bodyTxt = Body_Txt.getText();
-        
-        for (String text : txtItems) {
+        for (final String text : txtItems) {
         	
         	Reporter.log("Verify the text '" + text + "' is NOT present on the page.");
-            Assert.assertFalse(bodyTxt.contains(text),
-            		"Text '" + text + "' is present on the page when it should NOT be.");
-
+        	wait.until(new ExpectedCondition<Boolean>() {
+        		public Boolean apply(WebDriver webDriver) {
+        			return !Body_Txt.getText().contains(text);
+       		 	}
+        	});
         }
     }
     
     public void VerifySourceInPage(List<String> srcItems) throws Exception {
     	
     	Thread.sleep(500); //stale element exception
-    	String pageSrc = webDriver.getPageSource();
+    	final String pageSrc = webDriver.getPageSource();
     	
-    	for (String source : srcItems) {
+    	for (final String source : srcItems) {
     		Reporter.log("Verify '" + source + "' is present in page source.");
-    		Assert.assertTrue(pageSrc.contains(source),
-        			"Source '" + source + "' is not present in page.");
+    		wait.until(new ExpectedCondition<Boolean>() {
+        		public Boolean apply(WebDriver webDriver) {
+        			return pageSrc.contains(source);
+       		 	}
+        	});
     	}
     	   
     }
     
-    public void VerifySourceNotInPage(String scriptSrc) throws Exception {
+    public void VerifySourceNotInPage(final String scriptSrc) throws Exception {
     	
     	Reporter.log("Verify '" + scriptSrc + "' is not present in page source.");
-    	Assert.assertFalse(webDriver.getPageSource().contains(scriptSrc), 
-    			"Source '" + scriptSrc + "' is present when it should not be.");
+    	wait.until(new ExpectedCondition<Boolean>() {
+    		public Boolean apply(WebDriver webDriver) {
+    			return !webDriver.getPageSource().contains(scriptSrc);
+   		 	}
+    	});
     	
     }
     
@@ -185,7 +196,7 @@ public class ContentParent {
     public void WaitForThrobberNotPresent() throws Exception {
     	
     	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
-    	Thread.sleep(500);
+    	Thread.sleep(1000);
     	for (int I = 0; I < 30; I++) {
     		if (I == 30) { Assert.fail("Throbber is still present after timeout."); }
     		try {

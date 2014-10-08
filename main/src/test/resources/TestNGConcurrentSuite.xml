@@ -11,7 +11,8 @@
 	 		</run>
 		</groups>
 
-		<classes>		        	
+		<classes>
+			<class name="com.nbcuni.test.publisher.tests.Video.CanonicalURLSupport.CanonicalURL" runscron="true" runslocal="true"/>		        	
 			<class name="com.nbcuni.test.publisher.tests.Advertising.Comscore.Pixelman"/>
 			<class name="com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds"/>
 			<class name="com.nbcuni.test.publisher.tests.Video.Player.SelectVideoPlayerPerVideoFile"/>
@@ -21,16 +22,17 @@
 			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile"/>
 			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson"/>
 			<class name="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSConfigurationPage"/>
+			<class name="com.nbcuni.test.publisher.tests.Video.Thumbnails.ThumbnailsAreNotUpdated" runscron="true" runslocal="true"/>
 			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVEpisode.CreateTVEpisode"/>
 			<class name="com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules"/>
 			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVSeason.CreateTVSeason"/>
 			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CustomContentType.CreateCustomContentType"/>
-			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.SchedulingContentPublishUnpublished"/>
 			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityModerationStatesandWorkflows.PublishContenttoUnauthenticatedUsers"/>
 			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.EnhanceOperationsDropdownonScheduleTab"/>
 			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.ScheduleToPublishContentByDateTime"/>
 			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.EnhanceContentLibraryTable.EnhanceContentLibraryTable"/>
 			<class name="com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS"/>
+			<class name="com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling" runscron="true" runslocal="true"/>
 			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.InstallZeeboxModule.InstallZeeboxModule"/>
 			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.CastCrewFieldCollectionsVerificationMovie"/>
 			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.Relationships"/>
@@ -41,6 +43,9 @@
 			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.CastCrewFieldCollectionsVerificationTVEpisode"/>
 			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentAndEntityPreview.PreviewContentItemsIntheFuturefromContentandWorkbenchViews"/>
 			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CloneANode.Cloning"/>
+			<class name="com.nbcuni.test.publisher.tests.Video.SyncFromMPXButtonToVideoFileEntitiesEditForm.SyncFromMPXButtonToVideoFileEntitiesEditForm"/>
+			<class name="com.nbcuni.test.publisher.tests.Video.UndefinedIndexesDisplayingForMPXPlayers.UndefinedIndexesDisplayingForMPXPlayers"/>
+			<class name="com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability" runscron="true" runslocal="true"/>
 			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentEntityModerationStatesWorkflows.MultiEditorPublishingWorkflow"/>
 			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.SoftLengthLimit.SoftCharacterLimit"/>
 			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.URLAlias.AutomaticAlias"/>
@@ -51,6 +56,7 @@
 			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ProgramGuides.ROVITVSchedule.ProgramGuideVerification"/>CRON
 			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.EnhanceMediaGalleriesTab.EnhanceMediaGalleriesTab"/>
 			<class name="com.nbcuni.test.publisher.tests.Queues.AddModerationStatesToRevisionsOfAQueue.QueueModerationStates"/>
+			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery" runslocal="true"/>
 			<class name="com.nbcuni.test.publisher.tests.Video.MPXReporting.MPXReportingBeta"/>
 			<class name="com.nbcuni.test.publisher.tests.Queues.CreateUpdateRevisionsToQueues.BasicUIForCreatingAndRevisingQueues"/>
 			<class name="com.nbcuni.test.publisher.tests.Queues.SchedulingQueues.ScheduleRevisionsOfQueues"/>
@@ -61,6 +67,7 @@
 			<class name="com.nbcuni.test.publisher.tests.SocialIntegration.FunctionalImplementGigyaShareBar.FunctionalImplementGigyaShareBar"/>
 			<class name="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSBlockAccess"/>
 			<class name="com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides"/>
+			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIF.EXIFKeywordsIngestedPhraseInsteadSetsWords" runslocal="true"/>
 			<class name="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SiteReportVisualization.SiteReportVisualization"/>
 			<class name="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EmailReRouting.EmailRedirect"/>
 			<class name="com.nbcuni.test.publisher.tests.SocialIntegration.Facebook.ConfiguringPublisherAutopublishingToFacebookTimeandWall"/>
@@ -70,6 +77,7 @@
 			<class name="com.nbcuni.test.publisher.tests.Advertising.MPS.AutomaticallyCreatedMPSAdSlots"/>
 			<class name="com.nbcuni.test.publisher.tests.UserCreationAndManagement.Roles.RolesPredefinedInPublisher7"/>
 			<class name="com.nbcuni.test.publisher.tests.UserCreationAndManagement.UnauthenticatedUsersNotAbleToViewThePublishedContents.UnauthenticatedUsersNotAbleToViewThePublishedContents"/>
+			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIF.PopulateEXIFBulkUpload" runslocal="true"/>
 			<class name="com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.CreatePermissionSetsGUI"/>
 			<class name="com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.CustomPermissionSetVerification"/>
 			<class name="com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.EditorPermissionCustomQueuesOperationsMenu"/>
@@ -95,6 +103,7 @@
 			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.EntityEmbeds.SnippetInlineContent"/>
 			<class name="com.nbcuni.test.publisher.tests.Queues.DynamicQueues.DynamicQueuePagination"/>
 			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Mapper.Phase1ContentTypeMapper"/>
+			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.SchedulingContentPublishUnpublished"/>
 		</classes>
 	</test>
 </suite>

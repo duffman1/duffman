@@ -19,7 +19,7 @@ public class DriverSetup {
 	private Config config = new Config();
     Driver driver = null;
     
-    public Driver WebDriverSetup() throws Exception {
+    public Driver WebDriverSetup(Boolean runLocally) throws Exception {
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
 
@@ -35,7 +35,12 @@ public class DriverSetup {
         
         String hubAddress;
         if (isMobileRun.equals(false)) {
-        	hubAddress = "http://localhost:" + config.getConfigValue("LocalWebDriverHubPort") + "/wd/hub";
+        	if (config.getConfigValue("RunOnGridNetwork").equals("true")) {
+        		hubAddress = "http://localhost:" + config.getConfigValue("RemoteWebDriverHubPort") + "/wd/hub";
+        	}
+        	else {
+        		hubAddress = "http://localhost:" + config.getConfigValue("LocalWebDriverHubPort") + "/wd/hub";
+        	}
         }
         else {
         	hubAddress = "http://localhost:" + config.getConfigValue("LocalAppiumHubPort") + "/wd/hub";
@@ -87,6 +92,15 @@ public class DriverSetup {
         }
         
         capabilities.setCapability(CapabilityType.TAKES_SCREENSHOT, true);
+        
+        if (config.getConfigValue("RunOnGridNetwork").equals("true")) {
+        	if (runLocally.equals(true)) {
+        		capabilities.setCapability(CapabilityType.VERSION, "local");
+        	}
+        	else {
+        		capabilities.setCapability(CapabilityType.VERSION, "remote");
+        	}
+        }
         
         try {
 
