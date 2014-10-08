@@ -24,9 +24,9 @@ public class SendEmailReport extends ParentTest{
 
 		Config config = new Config();
 		
-		final String userName = config.getConfigValue("GmailUsername");
-		final String passWord = config.getConfigValue("GmailPassword");
-		String appURL = config.getConfigValue("AppURL");
+		final String userName = config.getConfigValueString("GmailUsername");
+		final String passWord = config.getConfigValueString("GmailPassword");
+		String appURL = config.getConfigValueString("AppURL");
 		
 		Properties props = new Properties();
 		props.put("mail.smtp.auth", "true");
@@ -47,7 +47,7 @@ public class SendEmailReport extends ParentTest{
             message.setFrom(new InternetAddress("Automation@nbcuni.com"));
             
             message.setRecipients(Message.RecipientType.TO,
-            			InternetAddress.parse(config.getConfigValue("SendReportEmailAddress")));
+            			InternetAddress.parse(config.getConfigValueString("SendReportEmailAddress")));
             
             if (!failedTestsCount.equals(0)) {
             	message.setSubject("Test Automation Report - Failed");
@@ -70,7 +70,7 @@ public class SendEmailReport extends ParentTest{
             }
             
             String machineName = InetAddress.getLocalHost().getHostName().replace(".local", "");
-            Integer failedIndividualTestCount = failedTestsCount / (config.getReRunOnFailureCount() + 1);
+            Integer failedIndividualTestCount = failedTestsCount / (config.getConfigValueInt("ReRunOnFailureCount") + 1);
             
             String messageContent = null;
             if (abortTestSuite.equals(true)) {
@@ -84,7 +84,7 @@ public class SendEmailReport extends ParentTest{
                 		+ failedIndividualTestCount.toString() + "<br /><br />A detailed functional report is attached. " 
                 		+ "A detailed http archive file (HAR) is attached and can be viewed with an online <a href='http://www.softwareishard.com/har/viewer/'>HAR viewer</a>. " 
                 		+ failedTestScreenshotText + "Iteration Report archives are assigned to task " 
-                		+ config.getConfigValue("RallyTaskID") + "." + "<br /><br />Publisher 7 "
+                		+ config.getConfigValueString("RallyTaskID") + "." + "<br /><br />Publisher 7 "
                 		+ "QA Automation</body>";
             }
             messageBodyPart.setContent(messageContent, "text/html");

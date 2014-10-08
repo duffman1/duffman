@@ -22,17 +22,17 @@ public class MPXReportingBeta extends ParentTest{
     @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "smoke", "mpx"})
     public void MPXReportingBeta_TC3085() throws Exception {
 
-    	if (config.getConfigValue("DrushIngestion").equals("false")) {
+    	if (config.getConfigValueString("DrushIngestion").equals("false")) {
     		Reporter.log("STEP 1");
         	UserLogin userLogin = applib.openApplication();
-        	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+        	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
         	Reporter.log("SETUP");
-        	Settings settings = new Settings(webDriver, applib);
+        	Settings settings = new Settings(webDriver);
         	settings.ConfigureMPXIfNeeded();
         	
         	Reporter.log("STEP 2");
-        	Modules modules = new Modules(webDriver, applib);
+        	Modules modules = new Modules(webDriver);
         	modules.VerifyModuleEnabled("Media: ThePlatform mpx Reports");
         	
         	Reporter.log("STEP 3");

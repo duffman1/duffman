@@ -9,8 +9,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
-
-import com.nbcuni.test.publisher.common.AppLib;
+import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
 import com.nbcuni.test.publisher.pageobjects.Overlay;
 
@@ -25,14 +24,14 @@ public class People {
 
 	private Driver webDriver;
 	private Overlay overlay;
-	private AppLib applib;
+	private Config config;
 	
     //PAGE OBJECT CONSTRUCTOR
-    public People(Driver webDriver, AppLib applib) {
+    public People(Driver webDriver) {
     	this.webDriver = webDriver;
-    	this.applib = applib;
+    	config = new Config();
     	PageFactory.initElements(webDriver, this);
-        overlay = new Overlay (webDriver, applib);
+        overlay = new Overlay (webDriver);
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -79,7 +78,7 @@ public class People {
     		}
     	}
     	
-    	webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
+    	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
     	
     }
     

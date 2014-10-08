@@ -28,21 +28,21 @@ public class SSOManageUsers extends ParentTest {
 	 public void SSOManageUsers_TC3853() throws Exception {
 		 
 		UserLogin userLogin = new UserLogin(webDriver); 
-		Modules modules = new Modules(webDriver, applib);
+		Modules modules = new Modules(webDriver);
 		SimpleSAML simpleSAML = new SimpleSAML(webDriver);
 		Logout logout = new Logout(webDriver);
 		String parentWindow = null;
 		
 		Reporter.log("STEP 1");
 		applib.openSitePage("/user");
-		userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+		userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
 		       
 		Reporter.log("STEP 2");
 		modules.VerifyModuleEnabled("Pub SSO");
 		taxonomy.NavigateSite("Configuration>>People>>SimpleSAMLphp Auth Settings");
 		overlay.SwitchToActiveFrame();
 		simpleSAML.VerifyDefaultSettings();
-		simpleSAML.EnterFilePath(config.getPathToMedia() + "stage.crt");
+		simpleSAML.EnterFilePath(config.getConfigValueFilePath("PathToMediaContent") + "stage.crt");
 		simpleSAML.ClickSaveConfigurationBtn();
 		contentParent.VerifyMessageStatus("The configuration options have been saved.");
 		contentParent.VerifyPageContentPresent(Arrays.asList("A certificate exists for this instance of SimpleSAMLphp."));
@@ -55,21 +55,21 @@ public class SSOManageUsers extends ParentTest {
 		logout.ClickLogoutBtn();
 		applib.openSitePage("/saml_login");
 		SSOLogin ssoLogin = new SSOLogin(webDriver);
-		ssoLogin.EnterSSOID(config.getConfigValue("SSOUsername"));
-		ssoLogin.EnterPassword(config.getConfigValue("SSOPassword"));
+		ssoLogin.EnterSSOID(config.getConfigValueString("SSOUsername"));
+		ssoLogin.EnterPassword(config.getConfigValueString("SSOPassword"));
 		ssoLogin.ClickSignInBtn();
 		webDriver.navigate().refresh();
 		new WebDriverWait(webDriver, 30).until(ExpectedConditions.titleContains("Site-Install"));
 		contentParent.VerifyPageContentNotPresent(Arrays.asList("Modules"));
-		contentParent.VerifyPageContentPresent(Arrays.asList(config.getConfigValue("SSOEmail")));
+		contentParent.VerifyPageContentPresent(Arrays.asList(config.getConfigValueString("SSOEmail")));
 		    	
 		Reporter.log("STEP 3");
-		WorkBench workBench = new WorkBench(webDriver, applib);
+		WorkBench workBench = new WorkBench(webDriver);
 		workBench.ClickWorkBenchTab("Edit");
 		overlay.SwitchToActiveFrame();
-		AddUser addUser = new AddUser(webDriver, applib);
-		addUser.VerifyUsernameValueAndIsDisabled(config.getConfigValue("SSOEmail"));
-		addUser.VerifyEmailAddressValueAndIsDisabled(config.getConfigValue("SSOEmail"));
+		AddUser addUser = new AddUser(webDriver);
+		addUser.VerifyUsernameValueAndIsDisabled(config.getConfigValueString("SSOEmail"));
+		addUser.VerifyEmailAddressValueAndIsDisabled(config.getConfigValueString("SSOEmail"));
 		    
 		Reporter.log("STEP 4");
 		parentWindow = webDriver.getWindowHandle();
@@ -84,7 +84,7 @@ public class SSOManageUsers extends ParentTest {
 		overlay.ClickCloseOverlayLnk();
 		logout.ClickLogoutBtn();
 		applib.openSitePage("/user");
-		userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+		userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
 		    
 		Reporter.log("STEP 6");
 		String editorUserName = addUser.AddDefaultUser(Arrays.asList("editor"), true);
@@ -92,7 +92,7 @@ public class SSOManageUsers extends ParentTest {
 	    Reporter.log("STEP 7");
 		taxonomy.NavigateSite("People");
 		overlay.SwitchToActiveFrame();
-		People people = new People(webDriver, applib);
+		People people = new People(webDriver);
 		people.SeachForUsername(editorUserName);
 		people.ClickEditLnk(editorUserName);
 		overlay.SwitchToActiveFrame();
@@ -125,10 +125,10 @@ public class SSOManageUsers extends ParentTest {
 				
 				UserLogin userLogin = new UserLogin(webDriver);
 				SimpleSAML simpleSAML = new SimpleSAML(webDriver);
-				Modules modules = new Modules(webDriver, applib);
+				Modules modules = new Modules(webDriver);
 				
 				applib.openSitePage("/user");
-				userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+				userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
 				applib.openSitePage("/admin/config/people/simplesamlphp_auth");
 				simpleSAML.UnCheckActivateAuthCbx();
 				simpleSAML.ClickSaveConfigurationBtn();

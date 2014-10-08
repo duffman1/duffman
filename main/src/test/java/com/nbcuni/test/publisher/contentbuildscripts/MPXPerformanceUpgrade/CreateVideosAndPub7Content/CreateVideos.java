@@ -21,12 +21,12 @@ public class CreateVideos extends ParentTest{
     public void Test() throws Exception {
     	
     	//login to mpx
-    	MPXLogin mpxLogin = new MPXLogin(webDriver, applib);
+    	MPXLogin mpxLogin = new MPXLogin(webDriver);
     	mpxLogin.OpenMPXThePlatform();
-    	mpxLogin.Login(applib.getMPXUsername(), applib.getMPXPassword());
-    	MPXSelectAccount mpxSelectAccount = new MPXSelectAccount(webDriver, applib);
+    	mpxLogin.Login(config.getConfigValueString("MPXUsername"), config.getConfigValueString("MPXPassword"));
+    	MPXSelectAccount mpxSelectAccount = new MPXSelectAccount(webDriver);
         mpxSelectAccount.SelectAccount("DB TV");
-        MPXAssets mpxAssets = new MPXAssets(applib);
+        MPXAssets mpxAssets = new MPXAssets();
 	    mpxAssets.WaitForAllAssetsToLoad();
 		
     	String mediaTitle = null;
@@ -49,7 +49,7 @@ public class CreateVideos extends ParentTest{
                 mpxAddMedia.GiveFocusToMediaItem();
                 mpxAddMedia.EnterTitle(mediaTitle);
                 mpxAddMedia.ClickSaveBtn(true);
-                MPXPublishMedia mpxPublishMedia = new MPXPublishMedia(applib);
+                MPXPublishMedia mpxPublishMedia = new MPXPublishMedia();
                 mpxPublishMedia.PublishDefaultVideo();
         		
         	    //log the creation time

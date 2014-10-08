@@ -21,12 +21,12 @@ public class ContentCommenting extends ParentTest{
     	
     	Reporter.log("STEP 1");
     	UserLogin userLogin = applib.openApplication();
-    	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+    	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
     	Reporter.log("STEP 2 - N/A");
         
     	Reporter.log("STEP 3");
-        CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver, applib);
+        CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver);
         String postTitle = createDefaultContent.Post("Draft");
         GigyaShareBar gigyaShareBar = new GigyaShareBar(webDriver, applib);
         String parentWindow = webDriver.getWindowHandle();

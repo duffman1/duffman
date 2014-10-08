@@ -1,10 +1,8 @@
 package com.nbcuni.test.publisher.pageobjects.Content;
 
-import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.pageobjects.ErrorChecking.ErrorChecking;
 import com.nbcuni.test.publisher.common.Driver.Driver;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -34,10 +32,10 @@ public class ContentParent {
     private WebDriverWait wait;
     
     //PAGE OBJECT CONSTRUCTOR
-    public ContentParent(Driver webDriver, AppLib applib) {
+    public ContentParent(Driver webDriver) {
         this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
-        errorChecking = new ErrorChecking(webDriver, applib);
+        errorChecking = new ErrorChecking(webDriver);
         config = new Config();
         wait = new WebDriverWait(webDriver, 10);
     }
@@ -207,7 +205,7 @@ public class ContentParent {
     		}
     	}
     	Thread.sleep(500);
-    	webDriver.manage().timeouts().implicitlyWait(config.getImplicitWaitTime(), TimeUnit.SECONDS);
+    	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
     }
     
 }

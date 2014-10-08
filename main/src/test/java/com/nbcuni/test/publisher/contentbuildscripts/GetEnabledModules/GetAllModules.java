@@ -19,7 +19,7 @@ public class GetAllModules extends ParentTest{
     	
     	//login to pub7
     	UserLogin userLogin = applib.openApplication();
-    	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+    	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
 		
     	
     		String filePath = System.getProperty("user.dir") + "/src/test/java/com/nbcuni/test/publisher/contentbuildscripts/GetEnabledModules/GetAllModules.txt";

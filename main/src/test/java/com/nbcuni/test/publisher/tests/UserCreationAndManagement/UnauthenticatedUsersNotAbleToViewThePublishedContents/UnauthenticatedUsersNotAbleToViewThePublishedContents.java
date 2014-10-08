@@ -48,12 +48,12 @@ public class UnauthenticatedUsersNotAbleToViewThePublishedContents extends Paren
     	
     	//Step 1
     	UserLogin userLogin = applib.openApplication();
-    	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+    	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         //Step 2  
-    	CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver, applib);
+    	CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver);
     	String postTitle = createDefaultContent.Post("Published");
-    	WorkBench workBench = new WorkBench(webDriver, applib);
+    	WorkBench workBench = new WorkBench(webDriver);
     	workBench.VerifyWorkBenchBlockTextPresent(Arrays.asList("Published"));
     	
     	//Step 3
@@ -65,17 +65,17 @@ public class UnauthenticatedUsersNotAbleToViewThePublishedContents extends Paren
         webDriver.navigate().to(contentURL);
       
         //Step5
-        ContentParent contentParent = new ContentParent(webDriver, applib);
+        ContentParent contentParent = new ContentParent(webDriver);
         contentParent.VerifyPageContentPresent(Arrays.asList(postTitle));
         
         //Step6
-        userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+        userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         //Step7	
         webDriver.navigate().to(contentURL);
       
         //Step8
-        Revisions revisions = new Revisions(webDriver, applib);
+        Revisions revisions = new Revisions(webDriver);
         revisions.ClickRevisionTab();
         overlay.SwitchToFrame("Revisions dialog");        
         revisions.EnterLogMessageForStateChange("This Revision Comment");
@@ -92,12 +92,12 @@ public class UnauthenticatedUsersNotAbleToViewThePublishedContents extends Paren
         contentParent.VerifyPageContentPresent(Arrays.asList(postTitle));
         
         //Step13
-        userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+        userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
       
         //Step14
         taxonomy.NavigateSite("Content");
         overlay.SwitchToActiveFrame();
-        SearchFor searchFor = new SearchFor(webDriver, applib);
+        SearchFor searchFor = new SearchFor(webDriver);
         searchFor.ClickSearchTitleLnk(postTitle);
         
         //Step15
@@ -111,7 +111,7 @@ public class UnauthenticatedUsersNotAbleToViewThePublishedContents extends Paren
         contentParent.VerifyPageContentPresent(Arrays.asList(postTitle));
         
         //Step18
-        userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+        userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
       
         //Step19
         webDriver.navigate().to(contentURL);

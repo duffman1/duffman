@@ -4,13 +4,11 @@ import org.testng.Assert;
 import org.w3c.dom.Attr;
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
-
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.xpath.XPath;
 import javax.xml.xpath.XPathConstants;
 import javax.xml.xpath.XPathFactory;
-
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
@@ -57,85 +55,50 @@ public class Config {
         return value;
 	}
 	
-    public String getConfigValue(String parameterName) {
+	public String getConfigValueString(String parameterName) {
 
-    	return this.getXPathValueFromFile(this.getConfigFileLocation(), "//parameter[@name='" + parameterName + "']/@value");
-     
-    }
-    
-    public String getPathToReports() {
-    	String fileLoc = System.getProperty("user.dir") + this.getConfigValue("PathToReports");
-    	return fileLoc.replace("/", File.separator);
-    }
-    
-    public String getPathToHarReports() {
-    	
-    	String fileLoc = System.getProperty("user.dir") + this.getConfigValue("PathToHarReports");
-    	return fileLoc.replace("/", File.separator);
-    	
-    }
-    
-    public String getPathToScreenshots() {
-    	
-    	String fileLoc = System.getProperty("user.dir") + this.getConfigValue("PathToScreenshots");
-    	return fileLoc.replace("/", File.separator);
-    	
-    }
-    
-    public String getPathToSikuliImages() {
-    	
-    	String fileLoc = System.getProperty("user.dir") + this.getConfigValue("PathToSikuliImages");
-    	return fileLoc.replace("/", File.separator);
-    	
-    }
-    
-    public int getReRunOnFailureCount() {
-    	
-    	return Integer.parseInt(this.getConfigValue("ReRunOnFailureCount"));
-    	
-    }
-    
-    public double getSikuliImageWaitTime() {
-    	
-    	return (double) Integer.parseInt(this.getConfigValue("SikuliImageWaitTime"));
-    	
-    }
-    
-    public int getImplicitWaitTime() {
-    	
-    	return Integer.parseInt(this.getConfigValue("ImplicitWaitTime"));
-    	
-    }
-    
-    public int getPageLoadWaitTime() {
-    	
-    	return Integer.parseInt(this.getConfigValue("PageLoadWaitTime"));
-    	
-    }
-    
-    public int getMPXVideaUploadPause() {
-    	
-    	return Integer.parseInt(this.getConfigValue("MPXVideaUploadPause"));
-    	
-    }
-    
-    public int getMPXAssetBufferPause() {
-    	
-    	return Integer.parseInt(this.getConfigValue("MPXAssetBufferPause"));
-    	
-    }
-    
-    public String getPathToMedia() {
-    	
-    	String filePath = System.getProperty("user.dir") + this.getConfigValue("PathToMediaContent");
-        return filePath.replace("/", File.separator);
+		String parameterValue = "";
+    	if (System.getProperty("system.test." + parameterName.toLowerCase()) != null) {
+    		parameterValue = System.getProperty("system.test." + parameterName.toLowerCase());
+    	}
+    	else {
+    		parameterValue = this.getXPathValueFromFile(this.getConfigFileLocation(), "//parameter[@name='" + parameterName + "']/@value");
+    	}
         
+    	return parameterValue;
     }
-    
-    public boolean IsErrorCheckingEnabled() {
+	
+	public String getConfigValueFilePath(String parameterName) {
+
+		String parameterValue = "";
+    	if (System.getProperty("system.test." + parameterName.toLowerCase()) != null) {
+    		parameterValue = System.getProperty("system.test." + parameterName.toLowerCase());
+    	}
+    	else {
+    		parameterValue = this.getXPathValueFromFile(this.getConfigFileLocation(), "//parameter[@name='" + parameterName + "']/@value");
+    	}
+        
+    	parameterValue = System.getProperty("user.dir") + parameterValue;
+    	return parameterValue.replace("/", File.separator);
+    }
+	
+	public Integer getConfigValueInt(String parameterName) {
+
+		String parameterValue = "";
+    	if (System.getProperty("system.test." + parameterName.toLowerCase()) != null) {
+    		parameterValue = System.getProperty("system.test." + parameterName.toLowerCase());
+    	}
+    	else {
+    		parameterValue = this.getXPathValueFromFile(this.getConfigFileLocation(), "//parameter[@name='" + parameterName + "']/@value");
+    	}
+        
+    	return Integer.parseInt(parameterValue);
+    }
+	
+	public boolean IsErrorCheckingEnabled() {
     	
     	boolean checksEnabled = true;
-    	if (this.getConfigValue("ErrorCheckingEnabled").equals("true")) {
+    	if (this.getConfigValueString("ErrorCheckingEnabled").equals("true")) {
     		checksEnabled = true;
     	}
     	else {

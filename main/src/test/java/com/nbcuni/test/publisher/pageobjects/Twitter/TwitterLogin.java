@@ -31,7 +31,7 @@ public class TwitterLogin {
     public TwitterLogin(Driver webDriver, AppLib applib) {
     	this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
-        contentParent = new ContentParent(webDriver, applib);
+        contentParent = new ContentParent(webDriver);
     }
     
     //PAGE OBJECT IDENTIFIERS

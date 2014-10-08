@@ -31,19 +31,19 @@ public class DynamicQueuePagination extends ParentTest {
 
 		Reporter.log("STEP 1");
         UserLogin userLogin = applib.openApplication();
-        userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+        userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         Reporter.log("SETUP");
         taxonomy.NavigateSite("Content");
         overlay.SwitchToActiveFrame();
         Boolean contentPresent = false;
-        SearchFor searchFor = new SearchFor(webDriver, applib);
+        SearchFor searchFor = new SearchFor(webDriver);
         if (searchFor.GetSearchResultSize() > 20) {
         	contentPresent = true;
         }
         overlay.ClickCloseOverlayLnk();
         
-        CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver, applib);
+        CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver);
         List<String> postTitles = new ArrayList<String>();
         if (!contentPresent) {
         	for (int i=0; i < 7; i++) {
@@ -51,7 +51,7 @@ public class DynamicQueuePagination extends ParentTest {
         	}
         }
         
-        Modules modules = new Modules(webDriver, applib);
+        Modules modules = new Modules(webDriver);
         modules.VerifyModuleEnabled("Dynamic Queue");
         
         taxonomy.NavigateSite("Structure>>Dynamic Queue types>>Add dynamic queue type");
@@ -85,7 +85,7 @@ public class DynamicQueuePagination extends ParentTest {
         Reporter.log("STEP 3");
         taxonomy.NavigateSite("Content>>Dynamic Queues");
         overlay.SwitchToActiveFrame();
-        DynamicQueues dynamicQueues = new DynamicQueues(webDriver, applib);
+        DynamicQueues dynamicQueues = new DynamicQueues(webDriver);
         String dynamicQueueNodeID = dynamicQueues.GetDynamicQueueNodeNumber(dynamicQueueTitle);
         overlay.ClickCloseOverlayLnk();
         String parentWindow = webDriver.getWindowHandle();
@@ -95,7 +95,7 @@ public class DynamicQueuePagination extends ParentTest {
         
         Reporter.log("STEP 4");
         ContentPagination contentPagination = new ContentPagination(webDriver);
-        ErrorChecking errorChecking = new ErrorChecking(webDriver, applib);
+        ErrorChecking errorChecking = new ErrorChecking(webDriver);
         contentPagination.VerifyPageCtrPresent();
         dynamicQueues.VerifyVisibleLnkCount(5);
         contentPagination.ClickNextPageLnk();

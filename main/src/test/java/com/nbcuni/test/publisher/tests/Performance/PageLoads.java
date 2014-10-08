@@ -18,7 +18,7 @@ public class PageLoads extends ParentTest{
             proxyServer.endPage();
             	
             UserLogin userLogin = new UserLogin(webDriver);
-            userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+            userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
                 
             List<WebElement> allMenuLinks = webDriver.findElements(By.xpath("//div[@id='admin-menu-wrapper']//a"));
             List<String> allHrefs = new ArrayList<String>();

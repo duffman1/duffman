@@ -19,7 +19,7 @@ public class CreateMovie extends ParentTest{
          
         	//Step 1
         	UserLogin userLogin = applib.openApplication();
-        	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+        	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
             //Step 2
             taxonomy.NavigateSite("Content>>Add content>>Character Profile");
@@ -31,7 +31,7 @@ public class CreateMovie extends ParentTest{
             charactersInformation.EnterCharacterFirstName(characterName);
             CoverPhoto coverPhoto = new CoverPhoto(webDriver);
             coverPhoto.ClickSelectBtn();
-            SelectFile selectFile = new SelectFile(webDriver, applib);
+            SelectFile selectFile = new SelectFile(webDriver);
             selectFile.SelectDefaultCoverImg();
             overlay.SwitchToActiveFrame();
             contentParent.ClickSaveBtn();
@@ -108,7 +108,7 @@ public class CreateMovie extends ParentTest{
             contentParent.VerifyMessageStatus("Movie " + movieTitle + " has been created.");
             
             //Step 15
-            WorkBench workBench = new WorkBench(webDriver, applib);
+            WorkBench workBench = new WorkBench(webDriver);
             workBench.ClickWorkBenchTab("Edit Draft");
             overlay.SwitchToActiveFrame();
             castCrew.ClickCastCrewLnk();

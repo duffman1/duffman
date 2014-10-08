@@ -75,7 +75,7 @@ public class AddDynamicQueueType {
     	catch (Exception e) {
     		new Select(EntityType_Ddl).selectByVisibleText("Node");
     	}
-    	webDriver.manage().timeouts().implicitlyWait(config.getImplicitWaitTime(), TimeUnit.SECONDS);
+    	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
     }
     
     public void SelectCacheLifetime(String lifetime) throws Exception {

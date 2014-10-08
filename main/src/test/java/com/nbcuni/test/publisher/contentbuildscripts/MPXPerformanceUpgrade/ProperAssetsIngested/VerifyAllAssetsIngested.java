@@ -18,11 +18,11 @@ public class VerifyAllAssetsIngested extends ParentTest{
     	
     	//Step 1
     	UserLogin userLogin = applib.openApplication();
-    	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+    	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
     	//login to mpx media client
     	MPXDataClient mpxDataClient = new MPXDataClient(webDriver);
-    	mpxDataClient.SignInToMPXDataClient("media", config.getConfigValue("MPXUsername"), config.getConfigValue("MPXPassword"));
+    	mpxDataClient.SignInToMPXDataClient("media", config.getConfigValueString("MPXUsername"), config.getConfigValueString("MPXPassword"));
     	mpxDataClient.ChooseMPXAccount("NBC.com Stage");
     	List<String>allNBCComAssets = mpxDataClient.GetAllMPXObjectFields("Media", "title", "0", "30000");
         
@@ -33,7 +33,7 @@ public class VerifyAllAssetsIngested extends ParentTest{
     	for (String assetTitle : allNBCComAssets) {
     		
     		try {
-    			SearchFor searchFor = new SearchFor(webDriver, applib);
+    			SearchFor searchFor = new SearchFor(webDriver);
         		String cleanAssetTitle = assetTitle.replaceAll("\\\\", "\"");
         		searchFor.EnterTitle(cleanAssetTitle);
         		searchFor.ClickApplyBtn();

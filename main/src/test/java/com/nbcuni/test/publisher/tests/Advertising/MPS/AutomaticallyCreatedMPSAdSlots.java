@@ -22,9 +22,9 @@ public class AutomaticallyCreatedMPSAdSlots extends ParentTest {
         
         	Reporter.log("STEP 1 AND SETUP");
         	UserLogin userLogin = applib.openApplication();
-        	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+        	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         	MPSConfiguration mpsConfiguration = new MPSConfiguration(webDriver);
-        	Modules modules = new Modules(webDriver, applib);
+        	Modules modules = new Modules(webDriver);
         	taxonomy.NavigateSite("Modules");
             overlay.SwitchToActiveFrame();
             modules.EnterFilterName("MPS");

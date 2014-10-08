@@ -21,12 +21,12 @@ public class Phase1ContentTypeMapper extends ParentTest{
          
         	Reporter.log("STEP 1");
         	UserLogin userLogin = applib.openApplication();
-        	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+        	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
             Reporter.log("STEP 2");
             taxonomy.NavigateSite("Modules");
             overlay.SwitchToActiveFrame();
-            Modules modules = new Modules(webDriver, applib);
+            Modules modules = new Modules(webDriver);
             for (String module : Arrays.asList("Pub Schema Example", "RestWS Schema", "RestWS Schema UI")) {
             	modules.EnterFilterName(module);
             	modules.EnableModule(module);
@@ -53,10 +53,10 @@ public class Phase1ContentTypeMapper extends ParentTest{
     @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"}, dependsOnMethods = {"Phase1ContentTypeMapper_TC5260"}, alwaysRun=true)
 	public void Cleanup() throws Exception {
 		UserLogin userLogin = applib.openApplication();
-		userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+		userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
 		taxonomy.NavigateSite("Modules");
         overlay.SwitchToActiveFrame();
-        Modules modules = new Modules(webDriver, applib);
+        Modules modules = new Modules(webDriver);
         for (String module : Arrays.asList("Pub Schema Example", "RestWS Schema UI")) {
         	modules.EnterFilterName(module);
         	modules.DisableModule(module);

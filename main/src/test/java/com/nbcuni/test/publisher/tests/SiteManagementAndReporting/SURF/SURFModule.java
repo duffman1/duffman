@@ -23,12 +23,12 @@ public class SURFModule extends ParentTest {
 		
 		Reporter.log("STEP 2");
 		UserLogin userLogin = applib.openApplication();
-		userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+		userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
 	       
 		Reporter.log("STEP 3 - 9");
 		taxonomy.NavigateSite("Modules");
 		overlay.SwitchToActiveFrame();
-		Modules modules = new Modules(webDriver, applib);
+		Modules modules = new Modules(webDriver);
 		modules.EnterFilterName("Surf");
 		modules.EnableModule("Surf");
 		modules.EnterFilterName("Pub SURF Example");
@@ -75,10 +75,10 @@ public class SURFModule extends ParentTest {
 	 @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"}, dependsOnMethods = {"SURFModule_TC3564"}, alwaysRun=true)
 		public void Cleanup() throws Exception {
 			UserLogin userLogin = applib.openApplication();
-			userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+			userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
 			taxonomy.NavigateSite("Modules");
 	    	overlay.SwitchToActiveFrame();
-	    	Modules modules = new Modules(webDriver, applib);
+	    	Modules modules = new Modules(webDriver);
 	    	modules.EnterFilterName("Pub SURF Example");
 	    	modules.DisableModule("Pub SURF Example");
 	    	overlay.ClickOverlayTab("Uninstall");

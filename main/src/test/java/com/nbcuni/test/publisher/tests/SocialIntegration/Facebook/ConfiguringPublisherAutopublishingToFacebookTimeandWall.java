@@ -33,12 +33,12 @@ public class ConfiguringPublisherAutopublishingToFacebookTimeandWall extends Par
     	
     	//Step 2
     	UserLogin userLogin = applib.openApplication();
-    	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+    	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         //Step 3
         taxonomy.NavigateSite("Modules");
         overlay.SwitchToActiveFrame();
-        Modules modules = new Modules(webDriver, applib);
+        Modules modules = new Modules(webDriver);
         modules.EnterFilterName("Pub Social");
         modules.EnableModule("Pub Social");
         overlay.ClickCloseOverlayLnk();
@@ -46,9 +46,9 @@ public class ConfiguringPublisherAutopublishingToFacebookTimeandWall extends Par
         //Step 3a
         taxonomy.NavigateSite("Structure>>Facebook Apps");
         overlay.SwitchToActiveFrame();
-        DrupalForFacebook drupalForFacebook = new DrupalForFacebook(webDriver, applib);
+        DrupalForFacebook drupalForFacebook = new DrupalForFacebook(webDriver);
         Delete delete = new Delete(webDriver);
-        ContentParent contentParent = new ContentParent(webDriver, applib);
+        ContentParent contentParent = new ContentParent(webDriver);
         boolean appAlreadyExists = drupalForFacebook.FacebookAppExists();
         if (appAlreadyExists == true) {
         	drupalForFacebook.ClickEditLnk();
@@ -115,15 +115,15 @@ public class ConfiguringPublisherAutopublishingToFacebookTimeandWall extends Par
         publishingOptions.SelectModerationState("Published");
         contentParent.ClickSaveBtn();
         contentParent.VerifyMessageStatus("Post " + postTitle + " has been created.");
-        WorkBench workBench = new WorkBench(webDriver, applib);
+        WorkBench workBench = new WorkBench(webDriver);
         workBench.ClickWorkBenchTab("Revisions");
         overlay.SwitchToActiveFrame();
         
         //Step 12
-        Revisions revisions = new Revisions(webDriver, applib);
+        Revisions revisions = new Revisions(webDriver);
         revisions.ClickEditExtendMenuBtn(postTitle);
         revisions.ClickShareMenuBtn(postTitle);
-        Share share = new Share(webDriver, applib);
+        Share share = new Share(webDriver);
         share.ClickFacebookLnk();
         share.ClickPostToFacebookWallCbx();
         String message = random.GetCharacterString(15);

@@ -35,77 +35,7 @@ public class AppLib {
     	wait = new WebDriverWait(webDriver, 10);
     }
 
-    public String getPathToMedia() {
-    	
-        return config.getPathToMedia();
-    }
     
-    public String getPathToSikuliImages() {
-    	
-    	return config.getPathToSikuliImages();
-    }
-    
-    public String getAdmin1Username() {
-    	
-    	return config.getConfigValue("Admin1Username");
-    }
-    
-    public String getAdmin1Password() {
-    	
-    	return config.getConfigValue("Admin1Password");
-    }
-    
-    public String getMPXUrl() {
-    	
-    	return config.getConfigValue("MPXUrl");
-    }
-
-    public String getMPXUsername() {
-    	
-    	return config.getConfigValue("MPXUsername");
-    	
-    }
-    
-    public String getMPXPassword() {
-    	
-    	return config.getConfigValue("MPXPassword");
-    	
-    }
-    
-    public int getImplicitWaitTime() {
-    	
-    	return config.getImplicitWaitTime();
-    	
-    }
-    
-    public double getSikuliImageWaitTime() {
-    	
-    	return config.getSikuliImageWaitTime();
-    	
-    }
-    
-    public int getPageLoadWaitTime() {
-    	
-    	return config.getPageLoadWaitTime();
-    	
-    }
-    
-    public String getGmailAutoEmailUsername() {
-    	
-    	return config.getConfigValue("GmailUsername");
-    	
-    }
-    
-    public String getGmailAutoEmailPassword() {
-    	
-    	return config.getConfigValue("GmailPassword");
-    	
-    }
-    
-    public boolean IsErrorCheckingEnabled() {
-    	
-    	return config.IsErrorCheckingEnabled();
-    }
     
     public void attachScreenshot(ITestResult result) throws Exception {
     	
@@ -114,8 +44,7 @@ public class AppLib {
     	String screenshotDateTime = dateTimeFormat.format(date);
         String methodName = result.getMethod().getMethodName() + "_" + screenshotDateTime;
         
-        String filePath = config.getPathToScreenshots() + methodName + ".png";
-
+        String filePath = config.getConfigValueFilePath("PathToScreenshots") + methodName + ".png";
         Reporter.setCurrentTestResult(result); 
         Reporter.log("Screenshot saved to " + filePath + " ");
         System.out.println("Screenshot saved to " + filePath);
@@ -127,19 +56,15 @@ public class AppLib {
       
     }
     
-    public final String getApplicationURL() throws Exception {
-        return config.getConfigValue("AppURL");
-    }
-    
     public UserLogin openApplication() throws Exception {
-        Reporter.log("Open url '" + this.getApplicationURL() + "'.");
-        webDriver.navigate().to(this.getApplicationURL());   
+        Reporter.log("Open url '" + config.getConfigValueString("AppURL") + "'.");
+        webDriver.navigate().to(config.getConfigValueString("AppURL"));   
         return new UserLogin(webDriver);
     }
     
     public void openSitePage(String location) throws Exception {
-        Reporter.log("Open url '" + this.getApplicationURL() + location + "'.");
-        webDriver.navigate().to(this.getApplicationURL() + location);   
+        Reporter.log("Open url '" + config.getConfigValueString("AppURL") + location + "'.");
+        webDriver.navigate().to(config.getConfigValueString("AppURL") + location);   
     }
     
     public void openNewWindow() throws Exception {

@@ -59,7 +59,7 @@ public class BasicInformation {
     	catch (NoSuchElementException e) {
     		frm = webDriver.findElement(By.xpath("//iframe[@id='edit-body-und-0-value_ifr']"));
     	}
-    	webDriver.manage().timeouts().implicitlyWait(config.getImplicitWaitTime(), TimeUnit.SECONDS);
+    	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
     	return frm;
     }
     
@@ -73,7 +73,7 @@ public class BasicInformation {
     	catch (NoSuchElementException e) {
     		txa = webDriver.findElement(By.xpath("//body[@id='tinymce']"));
     	}
-    	webDriver.manage().timeouts().implicitlyWait(config.getImplicitWaitTime(), TimeUnit.SECONDS);
+    	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
     	return txa;
     }
     

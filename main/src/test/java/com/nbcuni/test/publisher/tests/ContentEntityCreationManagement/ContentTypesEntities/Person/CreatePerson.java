@@ -22,7 +22,7 @@ public class CreatePerson extends ParentTest{
         	//Step 1
         	UserLogin userLogin = applib.openApplication();
         	PageFactory.initElements(webDriver, userLogin);
-            userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+            userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
             //Step 2
             taxonomy.NavigateSite("Content>>Add content>>Person");
@@ -38,11 +38,11 @@ public class CreatePerson extends ParentTest{
             overlay.switchToDefaultContent(true);
             overlay.SwitchToFrame("Create Person");
             personsInformation.ClickCoverPhotoSelectBtn();
-            SelectFile selectFile = new SelectFile(webDriver, applib);
+            SelectFile selectFile = new SelectFile(webDriver);
             PageFactory.initElements(webDriver, selectFile);
             selectFile.SelectDefaultCoverImg();
             overlay.SwitchToFrame("Create Person");
-            ContentParent contentParent = new ContentParent(webDriver, applib);
+            ContentParent contentParent = new ContentParent(webDriver);
             PageFactory.initElements(webDriver, contentParent);
             contentParent.ClickSaveBtn();
             

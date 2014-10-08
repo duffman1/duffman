@@ -8,8 +8,7 @@ import javax.mail.Session;
 import javax.mail.Store;
 import org.testng.Assert;
 import org.testng.Reporter;
-
-import com.nbcuni.test.publisher.common.AppLib;
+import com.nbcuni.test.publisher.common.Config;
 
 /*********************************************
  * publisher.nbcuni.com Gmail Connect Library. Copyright
@@ -20,12 +19,12 @@ import com.nbcuni.test.publisher.common.AppLib;
 
 public class GmailConnect {
 
-    private AppLib applib;
+    private Config config;
     private Session session;
     private Store store;
     
-    public GmailConnect(AppLib applib) {
-        this.applib = applib;
+    public GmailConnect() {
+        config = new Config();
     }
     
     private void ConnectToGmail() throws Exception { 
@@ -33,7 +32,7 @@ public class GmailConnect {
     	Properties props = new Properties();
         session = Session.getInstance(props);
         store = session.getStore("imaps");
-        store.connect("imap.gmail.com", applib.getGmailAutoEmailUsername(), applib.getGmailAutoEmailPassword());
+        store.connect("imap.gmail.com", config.getConfigValueString("GmailUsername"), config.getConfigValueString("GmailPassword"));
     }
     
     private void DisconnectFromGmail() throws Exception { 

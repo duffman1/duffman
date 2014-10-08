@@ -1,7 +1,6 @@
 package com.nbcuni.test.publisher.common;
 
 import java.util.UUID;
-import com.nbcuni.test.lib.Util;
 
 /*********************************************
  * publisher.nbcuni.com Random Library. Copyright
@@ -16,8 +15,6 @@ public class Random {
     public Random() {
         
     }
-    
-    Util util = new Util(null);
     
     public String GetCharacterString(int maximumLength) throws Exception {
 

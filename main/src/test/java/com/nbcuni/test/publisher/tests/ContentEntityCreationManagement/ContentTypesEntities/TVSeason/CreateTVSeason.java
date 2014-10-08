@@ -21,7 +21,7 @@ public class CreateTVSeason extends ParentTest{
     	
         //Step 1
         UserLogin userLogin = applib.openApplication();
-        userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+        userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         List<String> allStates = Arrays.asList("Draft", "Review", "Published");
         for (String state : allStates) {
@@ -31,7 +31,7 @@ public class CreateTVSeason extends ParentTest{
         overlay.SwitchToFrame("Create TV Season");
         
         //Step 3
-        ContentParent contentParent = new ContentParent(webDriver, applib);
+        ContentParent contentParent = new ContentParent(webDriver);
         contentParent.VerifyRequiredFields(Arrays.asList("Title", "Season", "Synopsis"));
         PublishingOptions publishingOptions = new PublishingOptions(webDriver);
         publishingOptions.ClickPublishingOptionsLnk();
@@ -48,7 +48,7 @@ public class CreateTVSeason extends ParentTest{
         
         //Step 5
         basicInformation.ClickCoverSelectBtn();
-        SelectFile selectFile = new SelectFile(webDriver, applib);
+        SelectFile selectFile = new SelectFile(webDriver);
         selectFile.SelectDefaultCoverImg();
     	overlay.SwitchToFrame("Create TV Season");
     	
@@ -59,7 +59,7 @@ public class CreateTVSeason extends ParentTest{
     	//Step 7
     	contentParent.ClickSaveBtn();
     	contentParent.VerifyMessageStatus("TV Season " + tvSeasonTitle + " has been created.");
-    	WorkBench workBench = new WorkBench(webDriver, applib);
+    	WorkBench workBench = new WorkBench(webDriver);
     	workBench.VerifyWorkBenchBlockTextPresent(Arrays.asList(state));
     	
         }

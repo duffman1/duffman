@@ -16,7 +16,6 @@ import org.testng.Reporter;
 
 public class MPXAddMedia {
 
-    private AppLib applib;
     private Screen sikuli;
     private MPXAssets mpxAssets;
     private AddFile addFile;
@@ -24,15 +23,14 @@ public class MPXAddMedia {
     
     public MPXAddMedia(AppLib applib) {
     	sikuli = new Screen();
-        this.applib = applib;
-        mpxAssets = new MPXAssets(applib);
-        addFile = new AddFile(null, applib);
+        mpxAssets = new MPXAssets();
+        addFile = new AddFile(null);
         config = new Config();
     }
     
     private String getImagePath() {
     	
-    	return applib.getPathToSikuliImages();
+    	return config.getConfigValueFilePath("PathToSikuliImages");
     }
     
     public void ClickUploadBtn() throws Exception {
@@ -207,7 +205,7 @@ public class MPXAddMedia {
     	mpxAssets.WaitForImgNotPresent(getImagePath() + "Common/Spinner.png");
     	
     	if (withPause.equals(true)) {
-    		Thread.sleep(config.getMPXVideaUploadPause()); //TODO - long pause here since file uploads in background requires some time. This is bad I know but there's no visual indicator I can go by...
+    		Thread.sleep(config.getConfigValueInt("MPXVideoUploadPause")); //TODO - long pause here since file uploads in background requires some time. This is bad I know but there's no visual indicator I can go by...
     	}
     }
     

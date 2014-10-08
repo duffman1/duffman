@@ -24,10 +24,10 @@ public class FocalPointModule extends ParentTest{
          
         //Step 1
         UserLogin userLogin = applib.openApplication();
-        userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+        userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
         //Step 2
-        Modules modules = new Modules(webDriver, applib);
+        Modules modules = new Modules(webDriver);
         modules.VerifyModuleEnabled("Focal Point");
         	
         //Step 3
@@ -42,7 +42,7 @@ public class FocalPointModule extends ParentTest{
         	
         taxonomy.NavigateSite("Configuration>>Media>>Image styles");
         overlay.SwitchToActiveFrame();
-        ImageStyles imageStyles = new ImageStyles(webDriver, applib);
+        ImageStyles imageStyles = new ImageStyles(webDriver);
         if (imageStyles.FocalImageStylePresent("AutomationFocalStyle") == true) {
         	
         	imageStyles.ClickDeleteStyleLnk("AutomationFocalStyle");
@@ -110,9 +110,9 @@ public class FocalPointModule extends ParentTest{
         basicInformation.EnterSynopsis();
         overlay.SwitchToActiveFrame();
         basicInformation.ClickCoverSelectBtn();
-        SelectFile selectFile = new SelectFile(webDriver, applib);
+        SelectFile selectFile = new SelectFile(webDriver);
         selectFile.SwitchToSelectFileFrm();
-        selectFile.EnterFilePath(applib.getPathToMedia() + "HanSolo.jpg");
+        selectFile.EnterFilePath(config.getConfigValueFilePath("PathToMediaContent") + "HanSolo.jpg");
         selectFile.ClickUploadBtn();
         selectFile.WaitForFileUploaded("HanSolo.jpg");
         selectFile.ClickNextBtn();
@@ -130,7 +130,7 @@ public class FocalPointModule extends ParentTest{
         contentParent.VerifyMessageStatus("Movie " + movieTitle + " has been created.");
             	
         //Step 12
-        WorkBench workBench = new WorkBench(webDriver, applib);
+        WorkBench workBench = new WorkBench(webDriver);
         workBench.VerifyFileImageLinkPresent("HanSolo", "1");
         //workBench.VerifyFileImagePresent("HanSolo", "1");
         //workBench.VerifyFileImageSize("1", "200", "200");

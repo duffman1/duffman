@@ -5,7 +5,6 @@ import com.nbcuni.test.publisher.pageobjects.Overlay;
 import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.Taxonomy.Taxonomy;
 import com.nbcuni.test.publisher.common.Driver.Driver;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
@@ -16,7 +15,6 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
-
 import java.lang.reflect.Method;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -38,10 +36,6 @@ public class ParentTest {
     @BeforeSuite(alwaysRun = true)
     public void startGridAndHub() throws Exception {
 
-    	if (config.getConfigValue("RunMobile").equals("false") && config.getConfigValue("RunOnGridNetwork").equals("false")) {
-    		startGridHubNode = new StartGridHubNode();
-    		startGridHubNode.start();
-    	}
     	
     }
     
@@ -60,11 +54,11 @@ public class ParentTest {
             applib = new AppLib(webDriver);
             random = new Random();
             taxonomy = new Taxonomy(webDriver);
-            overlay = new Overlay(webDriver, applib);
-            contentParent = new ContentParent(webDriver, applib);
+            overlay = new Overlay(webDriver);
+            contentParent = new ContentParent(webDriver);
             
-            webDriver.manage().timeouts().pageLoadTimeout(applib.getPageLoadWaitTime(), TimeUnit.SECONDS);
-            webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
+            webDriver.manage().timeouts().pageLoadTimeout(config.getConfigValueInt("PageLoadWaitTime"), TimeUnit.SECONDS);
+            webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
             webDriver.manage().window().maximize();
             
         } catch (Exception e) {
@@ -116,9 +110,6 @@ public class ParentTest {
     @AfterSuite(alwaysRun = true)
     public void stopGridAndHub() throws Exception {
 
-    	if (config.getConfigValue("RunMobile").equals("false") && config.getConfigValue("RunOnGridNetwork").equals("false")) {
-    		startGridHubNode.stop();
-    	}
     	
     }
     

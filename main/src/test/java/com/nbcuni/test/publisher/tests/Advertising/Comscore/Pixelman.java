@@ -19,12 +19,12 @@ public class Pixelman extends ParentTest {
         
     	//Step 1
         UserLogin userLogin = applib.openApplication();
-        userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+        userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         //Step 2 and 3 (truncated)
         taxonomy.NavigateSite("Modules");
     	overlay.SwitchToFrame("Modules");
-    	Modules modules = new Modules(webDriver, applib);
+    	Modules modules = new Modules(webDriver);
     	modules.EnterFilterName("Pixelman");
     	modules.EnableModule("Pixelman");
     	
@@ -50,7 +50,7 @@ public class Pixelman extends ParentTest {
         contentParent.VerifySourceInPage(Arrays.asList("//www.nbcudigitaladops.com/hosted/global_header.js"));
             
         //Step 9
-        userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+        userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         taxonomy.NavigateSite("Modules");
         overlay.SwitchToFrame("Modules");
         modules.EnterFilterName("Pub Ads");

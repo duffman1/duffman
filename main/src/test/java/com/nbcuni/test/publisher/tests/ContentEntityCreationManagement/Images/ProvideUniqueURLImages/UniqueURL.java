@@ -19,7 +19,7 @@ public class UniqueURL extends ParentTest{
          
         	//Step 1
         	UserLogin userLogin = applib.openApplication();
-        	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+        	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
         	//Step 2
         	taxonomy.NavigateSite("Content>>Add content>>Media Gallery");
@@ -32,7 +32,7 @@ public class UniqueURL extends ParentTest{
             basicInformation.ClickMediaItemsSelectBtn();
             
             //Step 4
-            SelectFile selectFile = new SelectFile(webDriver, applib);
+            SelectFile selectFile = new SelectFile(webDriver);
             selectFile.SwitchToSelectFileFrm();
             selectFile.ClickViewLibraryBtn();
             selectFile.EnterFileName("HanSolo");
@@ -50,11 +50,11 @@ public class UniqueURL extends ParentTest{
             MediaItems mediaItems = new MediaItems(webDriver);
             mediaItems.VerifyFileImagePresent("HanSolo", "1");
             mediaItems.VerifyFileImagePresent("HanSolo", "2");
-            ContentParent contentParent = new ContentParent(webDriver, applib);
+            ContentParent contentParent = new ContentParent(webDriver);
             contentParent.ClickSaveBtn();
             overlay.switchToDefaultContent(true);
             contentParent.VerifyMessageStatus("Media Gallery " + title + " has been created.");
-        	WorkBench workBench = new WorkBench(webDriver, applib);
+        	WorkBench workBench = new WorkBench(webDriver);
         	workBench.VerifyFileImageLinkPresent("HanSolo", "1");
         	//workBench.VerifyFileImagePresent("HanSolo", "1");
         	String fileId1 = workBench.GetFileImageId("1");

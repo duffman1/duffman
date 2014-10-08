@@ -18,11 +18,11 @@ public class Z1_TestCleanup extends ParentTest{
          
         	//login
         	UserLogin userLogin = applib.openApplication();
-        	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+        	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
         	//if drush ingestion is enabled, run cron so that any scheduled tasks are ready for the concurrent suite (create logo, schedule publish content, etc)
-            Cron cron = new Cron(webDriver, applib);
-            if (config.getConfigValue("DrushIngestion").equals("true")) {
+            Cron cron = new Cron(webDriver);
+            if (config.getConfigValueString("DrushIngestion").equals("true")) {
             	cron.RunCron(true);
             }
     }

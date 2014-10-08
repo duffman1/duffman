@@ -17,10 +17,10 @@ public class SiteReportVisualization extends ParentTest{
     	/*COMMENTING TEST OUT - Sruthi is looking into specifics on this test
     	//Step 1
     	UserLogin userLogin = applib.openApplication();
-    	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+    	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
     	
     	//Setup
-    	Modules modules = new Modules(webDriver, applib);
+    	Modules modules = new Modules(webDriver);
     	modules.VerifyModuleEnabled("Pub Report Server");
     	
     	//Step 2

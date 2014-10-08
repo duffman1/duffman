@@ -33,14 +33,14 @@ public class DeleteRevisionsQueues extends ParentTest {
     	
         //Step 1
         UserLogin userLogin = applib.openApplication();
-        userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+        userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         //Step 2
         taxonomy.NavigateSite("Content>>Queues");
         overlay.SwitchToActiveFrame();
         
         //Step 3
-        Queues queues = new Queues(webDriver, applib);
+        Queues queues = new Queues(webDriver);
         queues.ClickAddPromoQueueLnk();
         overlay.SwitchToActiveFrame();
         String queueTitle = random.GetCharacterString(15);

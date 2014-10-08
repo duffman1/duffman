@@ -18,12 +18,12 @@ public class CreatePubFeatureSetModules extends ParentTest {
         
         	Reporter.log("STEP 1");
         	UserLogin userLogin = applib.openApplication();
-        	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+        	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
         	Reporter.log("STEP 2");
         	taxonomy.NavigateSite("Modules");
         	overlay.SwitchToActiveFrame();
-        	Modules modules = new Modules(webDriver, applib);
+        	Modules modules = new Modules(webDriver);
         	modules.ClickCategoryLnk("Publisher Feature Sets");
         	modules.WaitForFilterVisible("Publisher Blog");
         	modules.WaitForFilterVisible("Publisher Entertainment");

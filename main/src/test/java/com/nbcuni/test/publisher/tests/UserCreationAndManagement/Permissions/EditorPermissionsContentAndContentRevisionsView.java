@@ -26,10 +26,10 @@ public class EditorPermissionsContentAndContentRevisionsView extends ParentTest{
     	
     	//Step 1
     	UserLogin userLogin = applib.openApplication();
-    	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+    	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         //Step 2 and 3
-        AddUser addUser = new AddUser(webDriver, applib);
+        AddUser addUser = new AddUser(webDriver);
         String userName = addUser.AddDefaultUser(Arrays.asList("editor"), false);
         
         //Step 4
@@ -58,7 +58,7 @@ public class EditorPermissionsContentAndContentRevisionsView extends ParentTest{
         userLogin.Login(userName, "pa55word");
         
         //Step 9 and 10 (truncated)
-        CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver, applib);
+        CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver);
         String postTitle = createDefaultContent.Post("Draft");
         
         //Step 11
@@ -66,7 +66,7 @@ public class EditorPermissionsContentAndContentRevisionsView extends ParentTest{
         overlay.SwitchToActiveFrame();
         
         //Step 12 and 13 (truncated)
-        Content content = new Content(webDriver, applib);
+        Content content = new Content(webDriver);
         content.VerifyContentItemEditDelete(postTitle);
         
         //Step 14
@@ -74,7 +74,7 @@ public class EditorPermissionsContentAndContentRevisionsView extends ParentTest{
         logout.ClickLogoutBtn();
         
         //Step 15
-        userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+        userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         //Step 16 and 17 (truncated)
         String postTitle2 = createDefaultContent.Post("Draft");
@@ -98,7 +98,7 @@ public class EditorPermissionsContentAndContentRevisionsView extends ParentTest{
         overlay.SwitchToActiveFrame();
         
         //Step 23
-        Revisions revisions = new Revisions(webDriver, applib);
+        Revisions revisions = new Revisions(webDriver);
         revisions.VerifyContentItemEditDeleteNotPresent(postTitle2);
         
         //Step 24

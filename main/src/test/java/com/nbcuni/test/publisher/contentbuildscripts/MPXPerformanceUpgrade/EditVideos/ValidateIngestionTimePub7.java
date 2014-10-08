@@ -27,10 +27,10 @@ public class ValidateIngestionTimePub7 extends ParentTest{
     	
     	//login to pub7
     	UserLogin userLogin = applib.openApplication();
-    	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+    	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
     	
     	//open the search page
- 	    webDriver.navigate().to(applib.getApplicationURL() + "/admin/content/file/mpxmedia");
+ 	    webDriver.navigate().to(config.getConfigValueString("AppURL") + "/admin/content/file/mpxmedia");
  	   
     	//wait for the asset creation file list to be available
 	    String assetCreationFilePath = System.getProperty("user.dir") + "/src/test/java/com/nbcuni/test/publisher/contentbuildscripts/MPXPerformanceUpgrade/EditVideos/AssetsEdited.txt";
@@ -85,7 +85,7 @@ public class ValidateIngestionTimePub7 extends ParentTest{
                 	   entriesProcessed.add(asset);
                 		      
                 	   //search for the asset
-                   	   SearchFor searchFor = new SearchFor(webDriver, applib);
+                   	   SearchFor searchFor = new SearchFor(webDriver);
                    	   searchFor.EnterTitle(mediaTitle);
                    	   searchFor.ClickApplyBtn();
                    	   overlay.switchToDefaultContent(true);

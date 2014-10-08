@@ -1,8 +1,464 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="5" passed="5">
   <reporter-output>
     <line>
-      <![CDATA[STEP 1]]>
+      <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Login' button.]]>
+    </line>
+    <line>
+      <![CDATA[Open url 'http://qa5.publisher7.com/admin/appearance'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Open url 'http://qa5.publisher7.com/admin/modules'.]]>
+    </line>
+    <line>
+      <![CDATA[Open url 'http://qa5.publisher7.com/#overlay=admin/modules'.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'MPS' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for module filter titled 'MPS' to be visible in module list.]]>
+    </line>
+    <line>
+      <![CDATA[Uncheck the 'MPS' module checkbox.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configuration' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Dynamic Queue' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for module filter titled 'Dynamic Queue' to be visible in module list.]]>
+    </line>
+    <line>
+      <![CDATA[Uncheck the 'Dynamic Queue' module checkbox.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configuration' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Uninstall' overlay tab.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll by '-500'.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'MPS' uninstall checkbox.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Uninstall' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Confirm uninstall dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'The following modules will be completely uninstalled from your site, and all data from these modules will be lost!' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'MPS' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Uninstall' button to confirm.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Uninstall' overlay tab.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll by '-500'.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Uninstall' overlay tab.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll by '-500'.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Dynamic Queue' uninstall checkbox.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Uninstall' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Confirm uninstall dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'The following modules will be completely uninstalled from your site, and all data from these modules will be lost!' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'Dynamic Queue' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Uninstall' button to confirm.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Uninstall' overlay tab.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll by '-500'.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Open url 'http://qa5.publisher7.com/admin/config/regional/settings'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Open url 'http://qa5.publisher7.com/admin/config/regional/date-time'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Open url 'http://qa5.publisher7.com/admin/structure/types/manage/media-gallery/fields/field_media_items/widget-type'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Open url 'http://qa5.publisher7.com/admin/structure/types/manage/media-gallery/fields/field_media_items'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Home' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Open url 'http://qa5.publisher7.com/admin/people/permissions'.]]>
+    </line>
+    <line>
+      <![CDATA[Open url 'http://qa5.publisher7.com/admin/config/media/file-system'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Home' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Add content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Post' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Title' is present as a required field.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Body' is present as a required field.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Publishing Options' link.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Moderation State' is present as a required field.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'futurePost10/08/2014b8ef5e02af31469' in the 'Title' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the Synopsis frame.]]>
+    </line>
+    <line>
+      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Cover' select button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the select file frame.]]>
+    </line>
+    <line>
+      <![CDATA[Enter the file path for file upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Upload' button.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Public Local Files' radio button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the file image 'HanSolo' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the img is loaded and visible.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Publishing Options' link.]]>
+    </line>
+    <line>
+      <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Post futurePost10/08/2014b8ef5e02af31469 has been created.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Schedule' link in the work bench.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'futurePost10/08/2014b8ef5e02af31469 dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Add Scheduled Revision' link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'futurePost10/08/2014b8ef5e02af31469 dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Select revision titled 'futurePost10/08/2014b8ef5e02af31469'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify that the 'Operation' option count equals '5'.]]>
+    </line>
+    <line>
+      <![CDATA[Select 'Moderate to Published' from the 'Select operation' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '10/08/2014' in the 'Date' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '06:35 PM' in the 'Time' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Schedule' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'futurePost10/08/2014b8ef5e02af31469 dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The scheduled revision operation has been saved' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Open url 'http://qa5.publisher7.com/#overlay=admin/content/logos'.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Manage Logo dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Open url 'http://qa5.publisher7.com/#overlay=logo/add'.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Add Logo dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '0ca964eb19b54cf' in the 'Title' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter the file path for file upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Upload' button.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the file image 'nbclogosmall' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the the img is loaded and visible.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '2014-10-08' in the 'Start Date' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '06:35:40 PM' in the 'Start Time' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '2014-10-08' in the 'End Date' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '08:30:40 PM' in the 'End Time' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Manage Logo dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text '0ca964eb19b54cf' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'Wed, 10/08/2014 - 18:35' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'Wed, 10/08/2014 - 20:30' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Assert the file image 'nbclogosmall' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Assert the the img is loaded and visible.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Configuration' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Media' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Media: thePlatform mpx settings' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.]]>
+    </line>
+    <line>
+      <![CDATA[MPX is already configured.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Configuration' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Media' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Media: thePlatform mpx settings' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configurations' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Files' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'mpxMedia' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Sync MPX Media' link.]]>
+    </line>
+    <line>
+      <![CDATA[Select 'AutomationPlayer1' from the first 'Import Player' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Sync MPX Media Now' link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Open url 'http://qa5.publisher7.com/admin/structure/types/manage/0b0541294f/delete'.]]>
+    </line>
+    <line>
+      <![CDATA[Open url 'http://qa5.publisher7.com/admin/structure/types/manage/4c0347efd6/delete'.]]>
+    </line>
+    <line>
+      <![CDATA[Open url 'http://qa5.publisher7.com/admin/structure/types/manage/mpxff7aa4b0b7/delete'.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Home' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the '[[Driver: chrome on MAC (69a1a9dc-aa46-4c37-9a0f-1a3cd85d85f8)] -> xpath: //span[@class='admin-menu-home-icon']/../..//a[text()='Flush all caches']]' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Home' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the '[[Driver: chrome on MAC (69a1a9dc-aa46-4c37-9a0f-1a3cd85d85f8)] -> xpath: //span[@class='admin-menu-home-icon']/../..//a[text()='Flush all caches']]' menu link.]]>
     </line>
     <line>
       <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
@@ -17,19 +473,40 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[SETUP]]>
+      <![CDATA[Mouse over the 'Configuration' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Content' menu link.]]>
+      <![CDATA[Mouse over the 'Media' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+      <![CDATA[Click the 'Media: thePlatform mpx settings' menu link.]]>
     </line>
     <line>
-      <![CDATA[Get the number of results in the result set.]]>
+      <![CDATA[Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
+      <![CDATA[Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.]]>
+    </line>
+    <line>
+      <![CDATA[Get the account options from the 'Select Import Account for Account...' drop down lists.]]>
+    </line>
+    <line>
+      <![CDATA[Get all the selected import account options and store to a list.]]>
+    </line>
+    <line>
+      <![CDATA[Get all the selected import account options and store to a list.]]>
+    </line>
+    <line>
+      <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
       <![CDATA[Click the 'Modules' menu link.]]>
@@ -38,13 +515,28 @@
       <![CDATA[Switch to frame titled 'Modules'.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Dynamic Queue' in the 'Filter Name' text box.]]>
+      <![CDATA[Enter 'Sticky Edit Actions' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Wait for module filter titled 'Dynamic Queue' to be visible in module list.]]>
+      <![CDATA[Wait for module filter titled 'Sticky Edit Actions' to be visible in module list.]]>
     </line>
     <line>
-      <![CDATA[Verify the 'Dynamic Queue' check box is checked.]]>
+      <![CDATA[Check the 'Sticky Edit Actions' check box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configuration' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
+    </line>
+    <line>
+      <![CDATA[Switch back to the 'Modules' frame.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to frame titled 'Modules'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
@@ -53,139 +545,159 @@
       <![CDATA[Click the 'Home' menu link.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Structure' menu link.]]>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Dynamic Queue types' menu link.]]>
+      <![CDATA[Mouse over the 'Add content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Add dynamic queue type' menu link.]]>
+      <![CDATA[Click the 'Post' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Add dynamic queue type dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
     </line>
     <line>
-      <![CDATA[Enter '009aea0b7be44b4' in the 'Name' text box.]]>
+      <![CDATA[Enter 'af47b272ca544fe' in the 'Title' text box.]]>
     </line>
     <line>
-      <![CDATA[Select '1 min' from the 'Cache lifetime' drop down list.]]>
+      <![CDATA[Scroll by '100'.]]>
     </line>
     <line>
-      <![CDATA[Select 'Content' or 'Node' from the 'Entity type' drop down list.]]>
+      <![CDATA[Switch to the Synopsis frame.]]>
+    </line>
+    <line>
+      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the sticky edit 'Save' button is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the sticky edit 'Preview' button is present.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll by '100'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the sticky edit 'Save' button is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the sticky edit 'Preview' button is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Meta tags' link.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the sticky edit 'Save' button is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the sticky edit 'Preview' button is present.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll by '100'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the sticky edit 'Save' button is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the sticky edit 'Preview' button is present.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Dynamic Queue types dialog'.]]>
+      <![CDATA[Verify success message of 'Post af47b272ca544fe has been created.' is present.]]>
     </line>
     <line>
-      <![CDATA[Verify the text '009aea0b7be44b4' is present on the page.]]>
+      <![CDATA[Verify the sticky edit 'Save' button is present.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
+      <![CDATA[Verify the sticky edit 'Preview' button is present.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Content' menu link.]]>
+      <![CDATA[Scroll by '100'.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Dynamic Queues' menu link.]]>
+      <![CDATA[Verify the sticky edit 'Save' button is present.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Add 009aea0b7be44b4' menu link.]]>
+      <![CDATA[Verify the sticky edit 'Preview' button is present.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Add 009aea0b7be44b4 dynamic queue dialog'.]]>
+      <![CDATA[Click the 'Modules' menu link.]]>
     </line>
     <line>
-      <![CDATA[Enter 'bf586f0c19b444b' in the 'Title' text box.]]>
+      <![CDATA[Enter 'Sticky Edit Actions' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[]]>
+      <![CDATA[Wait for module filter titled 'Sticky Edit Actions' to be visible in module list.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Newest' radio button under 'Sort by'.]]>
+      <![CDATA[Uncheck the 'Sticky Edit Actions' module checkbox.]]>
     </line>
     <line>
-      <![CDATA[STEP 2]]>
+      <![CDATA[Click the 'Save configuration' button.]]>
     </line>
     <line>
-      <![CDATA[Set '5' in ItemsPerPage textbox.]]>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
     </line>
     <line>
-      <![CDATA[Set '10' in TotalLimit textbox.]]>
+      <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save Dynamic Queue' button.]]>
+      <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
     </line>
     <line>
-      <![CDATA[STEP 3]]>
+      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Dynamic Queues' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Dynamic Queues dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Open a new browser window.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to new browser tab/window.]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://qa5.publisher7.com/dynamic-queue/31'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 4]]>
-    </line>
-    <line>
-      <![CDATA[Verify the pagination links are present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the visible count of Dynamic Queue Links equals '5'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'next >' Link]]>
-    </line>
-    <line>
-      <![CDATA[Verify the visible count of Dynamic Queue Links equals '5'.]]>
+      <![CDATA[Click the 'Login' button.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="64129" started-at="2014-10-07T14:49:31Z" finished-at="2014-10-07T14:50:35Z">
+  <suite name="Pub 7 Consecutive Suite" duration-ms="446798" started-at="2014-10-08T18:27:13Z" finished-at="2014-10-08T18:34:40Z">
     <groups>
+      <group name="certify">
+        <method signature="A1_TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.A1_TestSetup@52a2c034]" name="TestSetup_Test" class="com.nbcuni.test.publisher.tests.Setup.A1_TestSetup"/>
+        <method signature="Z1_TestCleanup.TestCleanup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.Z1_TestCleanup@204aa98f]" name="TestCleanup_Test" class="com.nbcuni.test.publisher.tests.Setup.Z1_TestCleanup"/>
+      </group> <!-- certify -->
+      <group name="mpx">
+        <method signature="A1_TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.A1_TestSetup@52a2c034]" name="TestSetup_Test" class="com.nbcuni.test.publisher.tests.Setup.A1_TestSetup"/>
+        <method signature="ConfigurationMultipleMPXAccounts.ConfigurationMultipleMPXAccounts_TC1073()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.Configuration.ConfigurationMultipleMPXAccounts@3af8c04e]" name="ConfigurationMultipleMPXAccounts_TC1073" class="com.nbcuni.test.publisher.tests.Video.Configuration.ConfigurationMultipleMPXAccounts"/>
+        <method signature="Z1_TestCleanup.TestCleanup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.Z1_TestCleanup@204aa98f]" name="TestCleanup_Test" class="com.nbcuni.test.publisher.tests.Setup.Z1_TestCleanup"/>
+      </group> <!-- mpx -->
       <group name="full">
-        <method signature="DynamicQueuePagination.DynamicQueuePagination_TC4791()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.DynamicQueuePagination@5d03462c]" name="DynamicQueuePagination_TC4791" class="com.nbcuni.test.publisher.tests.Queues.DynamicQueues.DynamicQueuePagination"/>
+        <method signature="A1_TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.A1_TestSetup@52a2c034]" name="TestSetup_Test" class="com.nbcuni.test.publisher.tests.Setup.A1_TestSetup"/>
+        <method signature="ConfigurationMultipleMPXAccounts.ConfigurationMultipleMPXAccounts_TC1073()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.Configuration.ConfigurationMultipleMPXAccounts@3af8c04e]" name="ConfigurationMultipleMPXAccounts_TC1073" class="com.nbcuni.test.publisher.tests.Video.Configuration.ConfigurationMultipleMPXAccounts"/>
+        <method signature="PageLoads.PageLoads_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Performance.PageLoads@21195f21]" name="PageLoads_Test" class="com.nbcuni.test.publisher.tests.Performance.PageLoads"/>
+        <method signature="StickyButtons.StickyButtons_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons@c2dd10a]" name="StickyButtons_Test" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons"/>
+        <method signature="Z1_TestCleanup.TestCleanup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.Z1_TestCleanup@204aa98f]" name="TestCleanup_Test" class="com.nbcuni.test.publisher.tests.Setup.Z1_TestCleanup"/>
       </group> <!-- full -->
+      <group name="performance">
+        <method signature="PageLoads.PageLoads_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Performance.PageLoads@21195f21]" name="PageLoads_Test" class="com.nbcuni.test.publisher.tests.Performance.PageLoads"/>
+      </group> <!-- performance -->
+      <group name="smoke">
+        <method signature="A1_TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.A1_TestSetup@52a2c034]" name="TestSetup_Test" class="com.nbcuni.test.publisher.tests.Setup.A1_TestSetup"/>
+        <method signature="ConfigurationMultipleMPXAccounts.ConfigurationMultipleMPXAccounts_TC1073()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.Configuration.ConfigurationMultipleMPXAccounts@3af8c04e]" name="ConfigurationMultipleMPXAccounts_TC1073" class="com.nbcuni.test.publisher.tests.Video.Configuration.ConfigurationMultipleMPXAccounts"/>
+        <method signature="Z1_TestCleanup.TestCleanup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.Z1_TestCleanup@204aa98f]" name="TestCleanup_Test" class="com.nbcuni.test.publisher.tests.Setup.Z1_TestCleanup"/>
+      </group> <!-- smoke -->
     </groups>
-    <test name="Default test" duration-ms="64129" started-at="2014-10-07T14:49:31Z" finished-at="2014-10-07T14:50:35Z">
-      <class name="com.nbcuni.test.publisher.tests.Queues.DynamicQueues.DynamicQueuePagination">
-        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.DynamicQueuePagination@5d03462c]" name="startGridAndHub" is-config="true" duration-ms="1308" started-at="2014-10-07T10:49:30Z" finished-at="2014-10-07T10:49:31Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startGridAndHub -->
-        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.DynamicQueuePagination@5d03462c]" name="startSelenium" is-config="true" duration-ms="2617" started-at="2014-10-07T10:49:31Z" finished-at="2014-10-07T10:49:34Z">
+    <test name="All Consecutive Web Tests" duration-ms="446798" started-at="2014-10-08T18:27:13Z" finished-at="2014-10-08T18:34:40Z">
+      <class name="com.nbcuni.test.publisher.tests.Video.Configuration.ConfigurationMultipleMPXAccounts">
+        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.Video.Configuration.ConfigurationMultipleMPXAccounts@3af8c04e]" name="startSelenium" is-config="true" duration-ms="1819" started-at="2014-10-08T14:32:50Z" finished-at="2014-10-08T14:32:52Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.nbcuni.test.publisher.tests.Queues.DynamicQueues.DynamicQueuePagination.DynamicQueuePagination_TC4791() throws java.lang.Exception]]>
+                <![CDATA[public void com.nbcuni.test.publisher.tests.Video.Configuration.ConfigurationMultipleMPXAccounts.ConfigurationMultipleMPXAccounts_TC1073() throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="DynamicQueuePagination_TC4791()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.DynamicQueuePagination@5d03462c]" name="DynamicQueuePagination_TC4791" duration-ms="60929" started-at="2014-10-07T10:49:34Z" finished-at="2014-10-07T10:50:35Z">
+        <test-method status="PASS" signature="ConfigurationMultipleMPXAccounts_TC1073()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.Configuration.ConfigurationMultipleMPXAccounts@3af8c04e]" name="ConfigurationMultipleMPXAccounts_TC1073" duration-ms="11513" started-at="2014-10-08T14:32:52Z" finished-at="2014-10-08T14:33:03Z">
           <reporter-output>
-            <line>
-              <![CDATA[STEP 1]]>
-            </line>
             <line>
               <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
             </line>
@@ -199,19 +711,116 @@
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
-              <![CDATA[SETUP]]>
+              <![CDATA[Mouse over the 'Configuration' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Content' menu link.]]>
+              <![CDATA[Mouse over the 'Media' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+              <![CDATA[Click the 'Media: thePlatform mpx settings' menu link.]]>
             </line>
             <line>
-              <![CDATA[Get the number of results in the result set.]]>
+              <![CDATA[Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
+              <![CDATA[Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.]]>
+            </line>
+            <line>
+              <![CDATA[Get the account options from the 'Select Import Account for Account...' drop down lists.]]>
+            </line>
+            <line>
+              <![CDATA[Get all the selected import account options and store to a list.]]>
+            </line>
+            <line>
+              <![CDATA[Get all the selected import account options and store to a list.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- ConfigurationMultipleMPXAccounts_TC1073 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Video.Configuration.ConfigurationMultipleMPXAccounts@3af8c04e]" name="stopSelenium" is-config="true" duration-ms="1337" started-at="2014-10-08T14:33:03Z" finished-at="2014-10-08T14:33:04Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=ConfigurationMultipleMPXAccounts_TC1073 status=SUCCESS method=ConfigurationMultipleMPXAccounts.ConfigurationMultipleMPXAccounts_TC1073()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.Configuration.ConfigurationMultipleMPXAccounts@3af8c04e] output=Open url 'http://qa5.publisher7.com'.]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopSelenium -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Video.Configuration.ConfigurationMultipleMPXAccounts -->
+      <class name="com.nbcuni.test.publisher.tests.Setup.Z1_TestCleanup">
+        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.Z1_TestCleanup@204aa98f]" name="startGridAndHub" is-config="true" duration-ms="10" started-at="2014-10-08T14:27:13Z" finished-at="2014-10-08T14:27:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startGridAndHub -->
+        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.Z1_TestCleanup@204aa98f]" name="startSelenium" is-config="true" duration-ms="1702" started-at="2014-10-08T14:34:31Z" finished-at="2014-10-08T14:34:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.nbcuni.test.publisher.tests.Setup.Z1_TestCleanup.TestCleanup_Test() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startSelenium -->
+        <test-method status="PASS" signature="TestCleanup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.Z1_TestCleanup@204aa98f]" name="TestCleanup_Test" duration-ms="5861" started-at="2014-10-08T14:34:33Z" finished-at="2014-10-08T14:34:38Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Login' button.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- TestCleanup_Test -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.Z1_TestCleanup@204aa98f]" name="stopSelenium" is-config="true" duration-ms="1242" started-at="2014-10-08T14:34:38Z" finished-at="2014-10-08T14:34:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TestCleanup_Test status=SUCCESS method=Z1_TestCleanup.TestCleanup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.Z1_TestCleanup@204aa98f] output=Open url 'http://qa5.publisher7.com'.]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopSelenium -->
+        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.Z1_TestCleanup@204aa98f]" name="stopGridAndHub" is-config="true" duration-ms="0" started-at="2014-10-08T14:34:40Z" finished-at="2014-10-08T14:34:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopGridAndHub -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Setup.Z1_TestCleanup -->
+      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons">
+        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons@c2dd10a]" name="startSelenium" is-config="true" duration-ms="1700" started-at="2014-10-08T14:33:04Z" finished-at="2014-10-08T14:33:06Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons.StickyButtons_Test() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startSelenium -->
+        <test-method status="PASS" signature="StickyButtons_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons@c2dd10a]" name="StickyButtons_Test" duration-ms="80633" started-at="2014-10-08T14:33:06Z" finished-at="2014-10-08T14:34:27Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
               <![CDATA[Click the 'Modules' menu link.]]>
@@ -220,13 +829,28 @@
               <![CDATA[Switch to frame titled 'Modules'.]]>
             </line>
             <line>
-              <![CDATA[Enter 'Dynamic Queue' in the 'Filter Name' text box.]]>
+              <![CDATA[Enter 'Sticky Edit Actions' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Wait for module filter titled 'Dynamic Queue' to be visible in module list.]]>
+              <![CDATA[Wait for module filter titled 'Sticky Edit Actions' to be visible in module list.]]>
             </line>
             <line>
-              <![CDATA[Verify the 'Dynamic Queue' check box is checked.]]>
+              <![CDATA[Check the 'Sticky Edit Actions' check box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configuration' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
+            </line>
+            <line>
+              <![CDATA[Switch back to the 'Modules' frame.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to frame titled 'Modules'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
             </line>
             <line>
               <![CDATA[Click the 'Close Overlay X'.]]>
@@ -235,128 +859,633 @@
               <![CDATA[Click the 'Home' menu link.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Structure' menu link.]]>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Dynamic Queue types' menu link.]]>
+              <![CDATA[Mouse over the 'Add content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Add dynamic queue type' menu link.]]>
+              <![CDATA[Click the 'Post' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Add dynamic queue type dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
             </line>
             <line>
-              <![CDATA[Enter '009aea0b7be44b4' in the 'Name' text box.]]>
+              <![CDATA[Enter 'af47b272ca544fe' in the 'Title' text box.]]>
             </line>
             <line>
-              <![CDATA[Select '1 min' from the 'Cache lifetime' drop down list.]]>
+              <![CDATA[Scroll by '100'.]]>
             </line>
             <line>
-              <![CDATA[Select 'Content' or 'Node' from the 'Entity type' drop down list.]]>
+              <![CDATA[Switch to the Synopsis frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the sticky edit 'Save' button is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the sticky edit 'Preview' button is present.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll by '100'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the sticky edit 'Save' button is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the sticky edit 'Preview' button is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Meta tags' link.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the sticky edit 'Save' button is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the sticky edit 'Preview' button is present.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll by '100'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the sticky edit 'Save' button is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the sticky edit 'Preview' button is present.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Dynamic Queue types dialog'.]]>
+              <![CDATA[Verify success message of 'Post af47b272ca544fe has been created.' is present.]]>
             </line>
             <line>
-              <![CDATA[Verify the text '009aea0b7be44b4' is present on the page.]]>
+              <![CDATA[Verify the sticky edit 'Save' button is present.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
+              <![CDATA[Verify the sticky edit 'Preview' button is present.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Content' menu link.]]>
+              <![CDATA[Scroll by '100'.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Dynamic Queues' menu link.]]>
+              <![CDATA[Verify the sticky edit 'Save' button is present.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Add 009aea0b7be44b4' menu link.]]>
+              <![CDATA[Verify the sticky edit 'Preview' button is present.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Add 009aea0b7be44b4 dynamic queue dialog'.]]>
+              <![CDATA[Click the 'Modules' menu link.]]>
             </line>
             <line>
-              <![CDATA[Enter 'bf586f0c19b444b' in the 'Title' text box.]]>
+              <![CDATA[Enter 'Sticky Edit Actions' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[]]>
+              <![CDATA[Wait for module filter titled 'Sticky Edit Actions' to be visible in module list.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Newest' radio button under 'Sort by'.]]>
+              <![CDATA[Uncheck the 'Sticky Edit Actions' module checkbox.]]>
             </line>
             <line>
-              <![CDATA[STEP 2]]>
+              <![CDATA[Click the 'Save configuration' button.]]>
             </line>
             <line>
-              <![CDATA[Set '5' in ItemsPerPage textbox.]]>
-            </line>
-            <line>
-              <![CDATA[Set '10' in TotalLimit textbox.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save Dynamic Queue' button.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 3]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Dynamic Queues' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Dynamic Queues dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Open a new browser window.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to new browser tab/window.]]>
-            </line>
-            <line>
-              <![CDATA[Open url 'http://qa5.publisher7.com/dynamic-queue/31'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 4]]>
-            </line>
-            <line>
-              <![CDATA[Verify the pagination links are present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the visible count of Dynamic Queue Links equals '5'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'next >' Link]]>
-            </line>
-            <line>
-              <![CDATA[Verify the visible count of Dynamic Queue Links equals '5'.]]>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- DynamicQueuePagination_TC4791 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.DynamicQueuePagination@5d03462c]" name="stopSelenium" is-config="true" duration-ms="571" started-at="2014-10-07T10:50:35Z" finished-at="2014-10-07T10:50:35Z">
+        </test-method> <!-- StickyButtons_Test -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons@c2dd10a]" name="stopSelenium" is-config="true" duration-ms="1195" started-at="2014-10-08T14:34:27Z" finished-at="2014-10-08T14:34:28Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=DynamicQueuePagination_TC4791 status=SUCCESS method=DynamicQueuePagination.DynamicQueuePagination_TC4791()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.DynamicQueuePagination@5d03462c] output=STEP 1]]]>
+                <![CDATA[[TestResult name=StickyButtons_Test status=SUCCESS method=StickyButtons.StickyButtons_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons@c2dd10a] output=Open url 'http://qa5.publisher7.com'.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.DynamicQueuePagination@5d03462c]" name="stopGridAndHub" is-config="true" duration-ms="421" started-at="2014-10-07T10:50:35Z" finished-at="2014-10-07T10:50:36Z">
+      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons -->
+      <class name="com.nbcuni.test.publisher.tests.Performance.PageLoads">
+        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.Performance.PageLoads@21195f21]" name="startSelenium" is-config="true" duration-ms="1768" started-at="2014-10-08T14:34:28Z" finished-at="2014-10-08T14:34:30Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.nbcuni.test.publisher.tests.Performance.PageLoads.PageLoads_Test() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- stopGridAndHub -->
-      </class> <!-- com.nbcuni.test.publisher.tests.Queues.DynamicQueues.DynamicQueuePagination -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- startSelenium -->
+        <test-method status="PASS" signature="PageLoads_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Performance.PageLoads@21195f21]" name="PageLoads_Test" duration-ms="1" started-at="2014-10-08T14:34:30Z" finished-at="2014-10-08T14:34:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PageLoads_Test -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Performance.PageLoads@21195f21]" name="stopSelenium" is-config="true" duration-ms="1125" started-at="2014-10-08T14:34:30Z" finished-at="2014-10-08T14:34:31Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=PageLoads_Test status=SUCCESS method=PageLoads.PageLoads_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Performance.PageLoads@21195f21] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopSelenium -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Performance.PageLoads -->
+      <class name="com.nbcuni.test.publisher.tests.Setup.A1_TestSetup">
+        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.A1_TestSetup@52a2c034]" name="startSelenium" is-config="true" duration-ms="3253" started-at="2014-10-08T14:27:13Z" finished-at="2014-10-08T14:27:16Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.nbcuni.test.publisher.tests.Setup.A1_TestSetup.TestSetup_Test() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startSelenium -->
+        <test-method status="PASS" signature="TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.A1_TestSetup@52a2c034]" name="TestSetup_Test" duration-ms="333056" started-at="2014-10-08T14:27:16Z" finished-at="2014-10-08T14:32:49Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Login' button.]]>
+            </line>
+            <line>
+              <![CDATA[Open url 'http://qa5.publisher7.com/admin/appearance'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Open url 'http://qa5.publisher7.com/admin/modules'.]]>
+            </line>
+            <line>
+              <![CDATA[Open url 'http://qa5.publisher7.com/#overlay=admin/modules'.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'MPS' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for module filter titled 'MPS' to be visible in module list.]]>
+            </line>
+            <line>
+              <![CDATA[Uncheck the 'MPS' module checkbox.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configuration' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Dynamic Queue' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for module filter titled 'Dynamic Queue' to be visible in module list.]]>
+            </line>
+            <line>
+              <![CDATA[Uncheck the 'Dynamic Queue' module checkbox.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configuration' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Uninstall' overlay tab.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll by '-500'.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'MPS' uninstall checkbox.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Uninstall' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Confirm uninstall dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'The following modules will be completely uninstalled from your site, and all data from these modules will be lost!' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'MPS' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Uninstall' button to confirm.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Uninstall' overlay tab.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll by '-500'.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Uninstall' overlay tab.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll by '-500'.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Dynamic Queue' uninstall checkbox.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Uninstall' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Confirm uninstall dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'The following modules will be completely uninstalled from your site, and all data from these modules will be lost!' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Dynamic Queue' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Uninstall' button to confirm.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Uninstall' overlay tab.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll by '-500'.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Open url 'http://qa5.publisher7.com/admin/config/regional/settings'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Open url 'http://qa5.publisher7.com/admin/config/regional/date-time'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Open url 'http://qa5.publisher7.com/admin/structure/types/manage/media-gallery/fields/field_media_items/widget-type'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Open url 'http://qa5.publisher7.com/admin/structure/types/manage/media-gallery/fields/field_media_items'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Home' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Open url 'http://qa5.publisher7.com/admin/people/permissions'.]]>
+            </line>
+            <line>
+              <![CDATA[Open url 'http://qa5.publisher7.com/admin/config/media/file-system'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Home' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Add content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Post' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Title' is present as a required field.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Body' is present as a required field.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Publishing Options' link.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Moderation State' is present as a required field.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'futurePost10/08/2014b8ef5e02af31469' in the 'Title' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the Synopsis frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Cover' select button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the select file frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter the file path for file upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Upload' button.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Public Local Files' radio button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the file image 'HanSolo' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Publishing Options' link.]]>
+            </line>
+            <line>
+              <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Post futurePost10/08/2014b8ef5e02af31469 has been created.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Schedule' link in the work bench.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'futurePost10/08/2014b8ef5e02af31469 dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Add Scheduled Revision' link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'futurePost10/08/2014b8ef5e02af31469 dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Select revision titled 'futurePost10/08/2014b8ef5e02af31469'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify that the 'Operation' option count equals '5'.]]>
+            </line>
+            <line>
+              <![CDATA[Select 'Moderate to Published' from the 'Select operation' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '10/08/2014' in the 'Date' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '06:35 PM' in the 'Time' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Schedule' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'futurePost10/08/2014b8ef5e02af31469 dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The scheduled revision operation has been saved' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Open url 'http://qa5.publisher7.com/#overlay=admin/content/logos'.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Manage Logo dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Open url 'http://qa5.publisher7.com/#overlay=logo/add'.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Add Logo dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '0ca964eb19b54cf' in the 'Title' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter the file path for file upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Upload' button.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the file image 'nbclogosmall' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '2014-10-08' in the 'Start Date' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '06:35:40 PM' in the 'Start Time' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '2014-10-08' in the 'End Date' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '08:30:40 PM' in the 'End Time' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Manage Logo dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text '0ca964eb19b54cf' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Wed, 10/08/2014 - 18:35' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Wed, 10/08/2014 - 20:30' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Assert the file image 'nbclogosmall' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Assert the the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Configuration' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Media' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Media: thePlatform mpx settings' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.]]>
+            </line>
+            <line>
+              <![CDATA[MPX is already configured.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Configuration' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Media' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Media: thePlatform mpx settings' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configurations' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Files' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'mpxMedia' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Sync MPX Media' link.]]>
+            </line>
+            <line>
+              <![CDATA[Select 'AutomationPlayer1' from the first 'Import Player' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Sync MPX Media Now' link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Open url 'http://qa5.publisher7.com/admin/structure/types/manage/0b0541294f/delete'.]]>
+            </line>
+            <line>
+              <![CDATA[Open url 'http://qa5.publisher7.com/admin/structure/types/manage/4c0347efd6/delete'.]]>
+            </line>
+            <line>
+              <![CDATA[Open url 'http://qa5.publisher7.com/admin/structure/types/manage/mpxff7aa4b0b7/delete'.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Home' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the '[[Driver: chrome on MAC (69a1a9dc-aa46-4c37-9a0f-1a3cd85d85f8)] -> xpath: //span[@class='admin-menu-home-icon']/../..//a[text()='Flush all caches']]' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Home' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the '[[Driver: chrome on MAC (69a1a9dc-aa46-4c37-9a0f-1a3cd85d85f8)] -> xpath: //span[@class='admin-menu-home-icon']/../..//a[text()='Flush all caches']]' menu link.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- TestSetup_Test -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.A1_TestSetup@52a2c034]" name="stopSelenium" is-config="true" duration-ms="573" started-at="2014-10-08T14:32:49Z" finished-at="2014-10-08T14:32:50Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TestSetup_Test status=SUCCESS method=A1_TestSetup.TestSetup_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Setup.A1_TestSetup@52a2c034] output=Open url 'http://qa5.publisher7.com'.]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopSelenium -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Setup.A1_TestSetup -->
+    </test> <!-- All Consecutive Web Tests -->
+  </suite> <!-- Pub 7 Consecutive Suite -->
 </testng-results>

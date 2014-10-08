@@ -22,14 +22,14 @@ public class FunctionalImplementGigyaShareBar extends ParentTest{
     	
     	//Step 1
     	UserLogin userLogin = applib.openApplication();
-    	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+    	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         //Step 2 (creates new post)
-        CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver, applib);
+        CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver);
         String postTitle = createDefaultContent.Post("Draft");
         
         //Step Setup
-        Modules modules = new Modules(webDriver, applib);
+        Modules modules = new Modules(webDriver);
         modules.VerifyModuleEnabled("Pub Gigya");
         
         //Step 3
@@ -37,7 +37,7 @@ public class FunctionalImplementGigyaShareBar extends ParentTest{
         overlay.SwitchToActiveFrame();
         
         //Step 4
-        WorkBench workBench = new WorkBench(webDriver, applib);
+        WorkBench workBench = new WorkBench(webDriver);
         workBench.ClickWorkBenchTab("Share");
         overlay.SwitchToActiveFrame();
         GigyaSettings gigyaSettings = new GigyaSettings(webDriver, applib);
@@ -51,7 +51,7 @@ public class FunctionalImplementGigyaShareBar extends ParentTest{
         //Step 5
         taxonomy.NavigateSite("Content");
         overlay.SwitchToActiveFrame();
-        SearchFor searchFor = new SearchFor(webDriver, applib);
+        SearchFor searchFor = new SearchFor(webDriver);
         searchFor.EnterTitle(postTitle);
         searchFor.ClickApplyBtn();
         overlay.switchToDefaultContent(true);

@@ -15,11 +15,11 @@ public class DeleteMPXVideos extends ParentTest{
     	//Step 1
     	applib.openApplication();
     	
-        MPXLogin mpxLogin = new MPXLogin(webDriver, applib);
+        MPXLogin mpxLogin = new MPXLogin(webDriver);
         	mpxLogin.OpenMPXThePlatform();
-        	mpxLogin.Login(applib.getMPXUsername(), applib.getMPXPassword());
+        	mpxLogin.Login(config.getConfigValueString("MPXUsername"), config.getConfigValueString("MPXPassword"));
         	
-        	MPXSelectAccount mpxSelectAccount = new MPXSelectAccount(webDriver, applib);
+        	MPXSelectAccount mpxSelectAccount = new MPXSelectAccount(webDriver);
         	mpxSelectAccount.SelectAccount("DB TV");
         	
         	int I = 0;
@@ -29,7 +29,7 @@ public class DeleteMPXVideos extends ParentTest{
         	
         	webDriver.getTitle();
         	
-        	MPXDeleteMedia mpxDeleteMedia = new MPXDeleteMedia(applib);
+        	MPXDeleteMedia mpxDeleteMedia = new MPXDeleteMedia();
         	mpxDeleteMedia.ClickDeleteBtn();
         	mpxDeleteMedia.ClickYesBtn();
         	Thread.sleep(5000); //add dynamic wait

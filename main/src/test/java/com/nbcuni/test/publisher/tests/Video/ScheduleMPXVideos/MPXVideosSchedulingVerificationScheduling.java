@@ -1,6 +1,5 @@
 package com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos;
 
-import com.ibm.icu.util.Calendar;
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Content.SearchFor;
@@ -23,6 +22,7 @@ import org.testng.annotations.Test;
 
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
@@ -74,10 +74,10 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
     	
     	//Step 1
     	UserLogin userLogin = applib.openApplication();
-    	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+    	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         //Note - test requires mpx configuration
-    	Settings settings = new Settings(webDriver, applib);
+    	Settings settings = new Settings(webDriver);
     	taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
         overlay.SwitchToActiveFrame();
         
@@ -99,13 +99,13 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
         		}
         		
         		//Step 2
-            	MPXLogin mpxLogin = new MPXLogin(webDriver, applib);
+            	MPXLogin mpxLogin = new MPXLogin(webDriver);
             	mpxLogin.OpenMPXThePlatform();
-            	mpxLogin.Login(applib.getMPXUsername(), applib.getMPXPassword());
+            	mpxLogin.Login(config.getConfigValueString("MPXUsername"), config.getConfigValueString("MPXPassword"));
             	
             	//Step 3
             	if (configuredAccounts.contains("DB TV")) {
-            	MPXSelectAccount mpxSelectAccount = new MPXSelectAccount(webDriver, applib);
+            	MPXSelectAccount mpxSelectAccount = new MPXSelectAccount(webDriver);
             	mpxSelectAccount.SelectAccount("DB TV");
             	
             	//Step 4 (test creates new mpx asset)
@@ -130,13 +130,13 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
             	mpxAddMedia.ClickSaveBtn(true);
             	
             	//Step 6
-            	MPXPublishMedia mpxPublishMedia = new MPXPublishMedia(applib);
+            	MPXPublishMedia mpxPublishMedia = new MPXPublishMedia();
             	mpxPublishMedia.PublishDefaultVideo();
             	
             	//Step 7
             	applib.openApplication();
-            	Cron cron = new Cron(webDriver, applib);
-            	if (config.getConfigValue("DrushIngestion").equals("false")) {
+            	Cron cron = new Cron(webDriver);
+            	if (config.getConfigValueString("DrushIngestion").equals("false")) {
                 	cron.RunCron(true);
                 }
             	
@@ -145,12 +145,12 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
         	    overlay.SwitchToActiveFrame();
         	    
         	    //Step 9
-        	    SearchFor searchFor = new SearchFor(webDriver, applib);
+        	    SearchFor searchFor = new SearchFor(webDriver);
         	    searchFor.EnterTitle(mediaTitle);
         	    searchFor.ClickApplyBtn();
         	    overlay.switchToDefaultContent(true);
         	    if (!searchFor.GetFirstMPXMediaSearchResult().equals(mediaTitle)) {
-            	    if (config.getConfigValue("DrushIngestion").equals("true")) {
+            	    if (config.getConfigValueString("DrushIngestion").equals("true")) {
             	    	int refreshCount = 0;
             	    	while (!searchFor.GetFirstMPXMediaSearchResult().equals(mediaTitle)) {
                            	
@@ -186,7 +186,7 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
         	    		pub7WorkflowDate7DaysInPast + " - 04:00"));
         	    
         	    //Step 12
-        	    WorkBench workBench = new WorkBench(webDriver, applib);
+        	    WorkBench workBench = new WorkBench(webDriver);
         	    workBench.ClickWorkBenchTab("Edit");
         	    overlay.SwitchToActiveFrame();
         	    
@@ -205,10 +205,10 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
         	    
         	    //Step 26
         	    mpxLogin.OpenMPXThePlatform();
-        	    MPXAssets mpxAssets = new MPXAssets(applib);
+        	    MPXAssets mpxAssets = new MPXAssets();
         	    mpxAssets.WaitForAllAssetsToLoad();
         	    mpxSelectAccount.SelectAccount("DB TV");
-        	    MPXSearch mpxSearch = new MPXSearch(applib);
+        	    MPXSearch mpxSearch = new MPXSearch();
         	    mpxSearch.EnterSearchTxt(mediaTitle);
         	    mpxSearch.ClickSearchByTitleLnk();
         	    mpxAddMedia.GiveFocusToMediaItem();
@@ -233,7 +233,7 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
         	    
         	    //Step 29
         	    applib.openApplication();
-        	    if (config.getConfigValue("DrushIngestion").equals("false")) {
+        	    if (config.getConfigValueString("DrushIngestion").equals("false")) {
         	    	cron.RunCron(true);
         	    }
         	    else {

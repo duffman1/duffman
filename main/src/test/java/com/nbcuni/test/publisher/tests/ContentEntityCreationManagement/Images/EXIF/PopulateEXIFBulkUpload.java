@@ -19,7 +19,7 @@ public class PopulateEXIFBulkUpload extends ParentTest{
          
         	Reporter.log("STEP 1");
         	UserLogin userLogin = applib.openApplication();
-        	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+        	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
             Reporter.log("SETUP");
             taxonomy.NavigateSite("Configuration>>Media>>Simple EXIF/IPTC Mappings");
@@ -45,7 +45,7 @@ public class PopulateEXIFBulkUpload extends ParentTest{
             basicInformation.EnterTitle(title);
             
             Reporter.log("STEP 3");
-            AddFile addFile = new AddFile(webDriver, applib);
+            AddFile addFile = new AddFile(webDriver);
             MediaItems mediaItems = new MediaItems(webDriver);
             for(int Count=0;Count<2;Count++) {
             	if (Count == 0) {
@@ -54,7 +54,7 @@ public class PopulateEXIFBulkUpload extends ParentTest{
             	else {
             		mediaItems.ClickAddBtn();
             	}
-                SelectFile selectFile = new SelectFile(webDriver, applib);
+                SelectFile selectFile = new SelectFile(webDriver);
                 selectFile.SwitchToSelectFileFrm();
                 addFile.ClickAddFilesLnk();
                 if (webDriver.getCapabilities().getPlatform().toString() == "MAC") {
@@ -63,7 +63,7 @@ public class PopulateEXIFBulkUpload extends ParentTest{
                 	addFile.ClickOpenBtn();
                 }
                 else {
-                	addFile.EnterPathToFile_Win(applib.getPathToMedia());
+                	addFile.EnterPathToFile_Win(config.getConfigValueFilePath("PathToMediaContent"));
                 	addFile.ClickGoBtn_Win();
                 	addFile.EnterFileName_Win("NUP_155306_0046.JPG");
                 	addFile.ClickOpenBtn();
@@ -78,7 +78,7 @@ public class PopulateEXIFBulkUpload extends ParentTest{
             
             Reporter.log("STEP 4");
             mediaItems.ClickEditBtn("1");
-            EditImage editImage = new EditImage(webDriver, applib);
+            EditImage editImage = new EditImage(webDriver);
             editImage.WaitForEditImageFrameOpen();
             editImage.VerifyTitleTextValue("1", "NUP_155306_0046.JPG");
             editImage.VerifyAltTextValue("1", "NUP_155306_0046.JPG");
@@ -158,9 +158,9 @@ public class PopulateEXIFBulkUpload extends ParentTest{
             basicInformation.ClickCoverSelectBtn();
             
             Reporter.log("STEP 9");
-            SelectFile selectFile = new SelectFile(webDriver, applib);
+            SelectFile selectFile = new SelectFile(webDriver);
             selectFile.SwitchToSelectFileFrm();
-        	selectFile.EnterFilePath(applib.getPathToMedia() + "IPTCDefault.jpg");
+        	selectFile.EnterFilePath(config.getConfigValueFilePath("PathToMediaContent") + "IPTCDefault.jpg");
         	selectFile.ClickUploadBtn();
         	selectFile.WaitForFileUploaded("IPTCDefault.jpg");
         	selectFile.ClickNextBtn();

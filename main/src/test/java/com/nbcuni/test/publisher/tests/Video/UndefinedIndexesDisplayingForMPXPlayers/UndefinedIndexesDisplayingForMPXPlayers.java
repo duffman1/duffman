@@ -34,10 +34,10 @@ public class UndefinedIndexesDisplayingForMPXPlayers extends ParentTest{
     	//Step 1
     	UserLogin userLogin = applib.openApplication();
     	PageFactory.initElements(webDriver, userLogin);
-    	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
-    	MPXLogin mpxLogin = new MPXLogin(webDriver, applib);
+    	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
+    	MPXLogin mpxLogin = new MPXLogin(webDriver);
     	mpxLogin.OpenMPXThePlatform();
-    	mpxLogin.Login(applib.getMPXUsername(), applib.getMPXPassword());
+    	mpxLogin.Login(config.getConfigValueString("MPXUsername"), config.getConfigValueString("MPXPassword"));
     	MPXAssets mpxAssets = new MPXAssets(webDriver, applib);
     	mpxAssets.WaitForAllAssetsToLoad();
     	

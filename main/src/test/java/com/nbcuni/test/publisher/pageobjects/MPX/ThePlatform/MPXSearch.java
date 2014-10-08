@@ -1,6 +1,7 @@
 package com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform;
 
-import com.nbcuni.test.publisher.common.AppLib;
+import com.nbcuni.test.publisher.common.Config;
+
 import org.testng.Reporter;
 import org.sikuli.script.*;
 
@@ -13,19 +14,19 @@ import org.sikuli.script.*;
 
 public class MPXSearch {
 
-    private AppLib applib;
+    private Config config;
     private Screen sikuli;
     private MPXAssets mpxAssets;
     
-    public MPXSearch(AppLib applib) {
+    public MPXSearch() {
         sikuli = new Screen();
-        this.applib = applib;
-        mpxAssets = new MPXAssets(applib);
+        config = new Config();
+        mpxAssets = new MPXAssets();
     }
     
     private String getImagePath() {
     	
-    	return applib.getPathToSikuliImages();
+    	return config.getConfigValueFilePath("PathToSikuliImages");
     }
     
     public void EnterSearchTxt(String txt) throws Exception {

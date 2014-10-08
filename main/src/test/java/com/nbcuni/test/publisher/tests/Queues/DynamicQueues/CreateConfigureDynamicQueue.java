@@ -29,15 +29,15 @@ public class CreateConfigureDynamicQueue extends ParentTest{
     	
         Reporter.log("STEP 1");
         UserLogin userLogin = applib.openApplication();
-        userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+        userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         Reporter.log("SETUP");
-        CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver, applib);
+        CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver);
         String characterProfileTitle = createDefaultContent.CharacterProfile("Published", null, null);
         String postTitle = createDefaultContent.Post("Published");
         
         Reporter.log("STEP 2");
-        Modules modules = new Modules(webDriver, applib);
+        Modules modules = new Modules(webDriver);
         modules.VerifyModuleEnabled("Dynamic Queue");
         
         Reporter.log("STEP 3");
@@ -74,7 +74,7 @@ public class CreateConfigureDynamicQueue extends ParentTest{
         Reporter.log("STEP 8");
         taxonomy.NavigateSite("Content>>Dynamic Queues");
         overlay.SwitchToActiveFrame();
-        DynamicQueues dynamicQueues = new DynamicQueues(webDriver, applib);
+        DynamicQueues dynamicQueues = new DynamicQueues(webDriver);
         String dynamicQueueNodeID = dynamicQueues.GetDynamicQueueNodeNumber(dynamicQueueTitle);
         overlay.ClickCloseOverlayLnk();
         String parentWindow = webDriver.getWindowHandle();
@@ -117,7 +117,7 @@ public class CreateConfigureDynamicQueue extends ParentTest{
         contentParent.VerifyPageContentPresent(Arrays.asList("Default", "Teaser", "Revision comparison", 
         		"Tokens"));
         
-        if (config.getConfigValue("AppURL").contains("install")) {
+        if (config.getConfigValueString("AppURL").contains("install")) {
         	Reporter.log("STEP 16");
             ManageDisplay manageDisplay = new ManageDisplay(webDriver);
             manageDisplay.SelectEntityListFormat("Default");

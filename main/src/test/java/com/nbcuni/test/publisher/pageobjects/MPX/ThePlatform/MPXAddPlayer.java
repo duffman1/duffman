@@ -1,6 +1,6 @@
 package com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform;
 
-import com.nbcuni.test.publisher.common.AppLib;
+import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
@@ -22,25 +22,25 @@ import org.testng.Reporter;
 public class MPXAddPlayer {
 
 	private Driver webDriver;
+	private Config config;
 	private WebDriverWait wait;
-    private AppLib applib;
     private Screen sikuli;
     private MPXAssets mpxAssets;
     
     //PAGE OBJECT CONSTRUCTOR
-    public MPXAddPlayer(Driver webDriver, AppLib applib) {
+    public MPXAddPlayer(Driver webDriver) {
     	this.webDriver = webDriver;
+    	config = new Config();
     	PageFactory.initElements(webDriver, this);
     	wait = new WebDriverWait(webDriver, 10);
         sikuli = new Screen();
-    	this.applib = applib;
-    	mpxAssets = new MPXAssets(applib);
+    	mpxAssets = new MPXAssets();
         
     }
     
     private String getImagePath() {
     	
-    	return applib.getPathToSikuliImages();
+    	return config.getConfigValueFilePath("PathToSikuliImages");
     }
     
     //PAGE OBJECT IDENTIFIERS

@@ -23,7 +23,7 @@ public class NodeTypes {
     //PAGE OBJECT CONSTRUCTOR
     public NodeTypes(Driver webDriver, AppLib applib) {
         PageFactory.initElements(webDriver, this);
-        contentParent = new ContentParent(webDriver, applib);
+        contentParent = new ContentParent(webDriver);
     }
     
     //PAGE OBJECT IDENTIFIERS

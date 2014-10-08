@@ -79,7 +79,7 @@ public class TVEAuthExample {
     	catch (NoSuchElementException e) {
     		alreadyConfigured = true;
     	}
-    	webDriver.manage().timeouts().implicitlyWait(config.getImplicitWaitTime(), TimeUnit.SECONDS);
+    	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
     	return alreadyConfigured;
     }
     
@@ -94,7 +94,7 @@ public class TVEAuthExample {
     	catch (NoSuchElementException e) {
     		alreadyConfigured = true;
     	}
-    	webDriver.manage().timeouts().implicitlyWait(config.getImplicitWaitTime(), TimeUnit.SECONDS);
+    	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
     	return alreadyConfigured;
     }
     
@@ -109,7 +109,7 @@ public class TVEAuthExample {
     	catch (NoSuchElementException e) {
     		alreadyConfigured = true;
     	}
-    	webDriver.manage().timeouts().implicitlyWait(config.getImplicitWaitTime(), TimeUnit.SECONDS);
+    	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
     	return alreadyConfigured;
     }
 

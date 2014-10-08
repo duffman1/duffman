@@ -31,10 +31,10 @@ public class CanonicalURL extends ParentTest{
 
     	Reporter.log("STEP 1");
     	UserLogin userLogin = applib.openApplication();
-    	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+    	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         Reporter.log("SETUP");
-    	Settings settings = new Settings(webDriver, applib);
+    	Settings settings = new Settings(webDriver);
         taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
         overlay.SwitchToActiveFrame();
         List<String> configuredAccounts = settings.GetImportAccountSelectedOptions();
@@ -52,8 +52,8 @@ public class CanonicalURL extends ParentTest{
         		
         	Reporter.log("STEP 4");
         	overlay.SwitchToActiveFrame();
-        	ContentParent contentParent = new ContentParent(webDriver, applib);
-        	ManageFields manageFields = new ManageFields(webDriver, applib);
+        	ContentParent contentParent = new ContentParent(webDriver);
+        	ManageFields manageFields = new ManageFields(webDriver);
         	if (manageFields.FieldLabelExists("MPX Media Related Link") == false) {
         			
         		manageFields.EnterAddNewField("MPX Media Related Link");
@@ -79,10 +79,10 @@ public class CanonicalURL extends ParentTest{
         	contentParent.VerifyMessageStatus("has been updated.");
         		
         	Reporter.log("STEP 8 NOTE- step 8 creates a new video with a canonical url rather than using an existing video");
-        	MPXLogin mpxLogin = new MPXLogin(webDriver, applib);
+        	MPXLogin mpxLogin = new MPXLogin(webDriver);
             mpxLogin.OpenMPXThePlatform();
-            mpxLogin.Login(applib.getMPXUsername(), applib.getMPXPassword());
-            MPXSelectAccount mpxSelectAccount = new MPXSelectAccount(webDriver, applib);
+            mpxLogin.Login(config.getConfigValueString("MPXUsername"), config.getConfigValueString("MPXPassword"));
+            MPXSelectAccount mpxSelectAccount = new MPXSelectAccount(webDriver);
             mpxSelectAccount.SelectAccount("DB TV");
             MPXAddMedia mpxAddMedia = new MPXAddMedia(applib);
             mpxAddMedia.UploadDefaultVideo();
@@ -92,25 +92,25 @@ public class CanonicalURL extends ParentTest{
             String canonicalURL = "canonicalurl" + random.GetCharacterString(10);
             mpxAddMedia.EnterCanonicalURL(canonicalURL);
             mpxAddMedia.ClickSaveBtn(true);
-            MPXPublishMedia mpxPublishMedia = new MPXPublishMedia(applib);
+            MPXPublishMedia mpxPublishMedia = new MPXPublishMedia();
             mpxPublishMedia.PublishDefaultVideo();
         		
             Reporter.log("STEP 9");
             applib.openApplication();
-            Cron cron = new Cron(webDriver, applib);
-            if (config.getConfigValue("DrushIngestion").equals("false")) {
+            Cron cron = new Cron(webDriver);
+            if (config.getConfigValueString("DrushIngestion").equals("false")) {
             	cron.RunCron(true);
             }
             
         	Reporter.log("STEP 10");
         	taxonomy.NavigateSite("Content>>Files>>mpxMedia");
         	overlay.SwitchToActiveFrame();
-        	SearchFor searchFor = new SearchFor(webDriver, applib);
+        	SearchFor searchFor = new SearchFor(webDriver);
         	searchFor.EnterTitle(mediaTitle);
         	searchFor.ClickApplyBtn();
         	overlay.switchToDefaultContent(true);
         	if (!searchFor.GetFirstMPXMediaSearchResult().equals(mediaTitle)) {
-        	    if (config.getConfigValue("DrushIngestion").equals("true")) {
+        	    if (config.getConfigValueString("DrushIngestion").equals("true")) {
         	    	int refreshCount = 0;
         	    	while (!searchFor.GetFirstMPXMediaSearchResult().equals(mediaTitle)) {
                        	
@@ -132,8 +132,8 @@ public class CanonicalURL extends ParentTest{
         	    
         	Reporter.log("STEP 11");
         	contentParent.VerifyPageContentPresent(Arrays.asList("MPX Media Related Link:", canonicalURL));
-        	Reporter.log("Verify URL equals '" + applib.getApplicationURL() + "/" + canonicalURL + "'.");
-        	Assert.assertTrue(webDriver.getCurrentUrl().equals(applib.getApplicationURL() + "/" + canonicalURL));
+        	Reporter.log("Verify URL equals '" + config.getConfigValueString("AppURL") + "/" + canonicalURL + "'.");
+        	Assert.assertTrue(webDriver.getCurrentUrl().equals(config.getConfigValueString("AppURL") + "/" + canonicalURL));
         		
         }
         else {

@@ -23,7 +23,7 @@ public class ImplementSiteCatalyst extends ParentTest {
          
         	//Step 1
         	UserLogin userLogin = applib.openApplication();
-        	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+        	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
         	//Step 2
         	taxonomy.NavigateSite("Configuration>>System>>SiteCatalyst");
@@ -38,7 +38,7 @@ public class ImplementSiteCatalyst extends ParentTest {
         	siteCatalyst.ClickMediaGalleryCbx();
         	siteCatalyst.ClickPostCbx();
         	siteCatalyst.ClickSaveConfigurationBtn();
-        	ContentParent contentParent = new ContentParent(webDriver, applib);
+        	ContentParent contentParent = new ContentParent(webDriver);
         	contentParent.VerifyMessageStatus("The configuration options have been saved.");
         	
         	//Step 5
@@ -72,7 +72,7 @@ public class ImplementSiteCatalyst extends ParentTest {
         	}
         	
         	//Step 8
-        	WorkBench workBench = new WorkBench(webDriver, applib);
+        	WorkBench workBench = new WorkBench(webDriver);
         	workBench.ClickWorkBenchTab("Edit Draft");
         	overlay.SwitchToActiveFrame();
         	siteCatalystVariables.ClickSiteCatalystVariablesTab();

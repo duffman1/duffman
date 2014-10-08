@@ -37,7 +37,7 @@ public class SyncFromMPXButtonToVideoFileEntitiesEditForm extends ParentTest{
     	userLogin.Login("admin@publisher.nbcuni.com", "pa55word");
         
     	//Step 1a
-    	MPXLogin mpxLogin = new MPXLogin(webDriver, applib);
+    	MPXLogin mpxLogin = new MPXLogin(webDriver);
     	mpxLogin.OpenMPXThePlatform();
     	mpxLogin.Login("mpx/AdminPub7QA", "Pa55word");
     	MPXAssets mpxAssets = new MPXAssets(webDriver, applib);

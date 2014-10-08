@@ -37,9 +37,9 @@ public class CreateMediaGallery extends ParentTest{
                     basicInformation.EnterSynopsis();
                     overlay.switchToDefaultContent(false);
                     basicInformation.EnterShortDescription("short description");
-                    AddFile addFile = new AddFile(webDriver, applib);
+                    AddFile addFile = new AddFile(webDriver);
                     MediaItems mediaItems = new MediaItems(webDriver);
-                    SelectFile selectFile = new SelectFile(webDriver, applib);
+                    SelectFile selectFile = new SelectFile(webDriver);
                     for(int Count=0;Count<2;Count++) {
                     	if (Count == 0) {
                     		contentParent.Scroll("500");
@@ -63,7 +63,7 @@ public class CreateMediaGallery extends ParentTest{
                         	addFile.ClickOpenBtn();
                         }
                         else {
-                        	addFile.EnterPathToFile_Win(applib.getPathToMedia());
+                        	addFile.EnterPathToFile_Win(config.getConfigValueFilePath("PathToMediaContent"));
                         	addFile.ClickGoBtn_Win();
                         	if (Count == 0) {
                         		addFile.EnterFileName_Win("IPTCDefault.jpg");

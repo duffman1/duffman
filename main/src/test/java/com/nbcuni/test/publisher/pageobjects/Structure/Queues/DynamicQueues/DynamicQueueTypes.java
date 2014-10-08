@@ -31,7 +31,7 @@ public class DynamicQueueTypes {
         this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
         delete = new Delete(webDriver);
-        overlay = new Overlay(webDriver, applib);
+        overlay = new Overlay(webDriver);
     }
     
     //PAGE OBJECT IDENTIFIERS

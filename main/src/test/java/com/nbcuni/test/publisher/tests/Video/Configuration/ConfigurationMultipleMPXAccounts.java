@@ -22,16 +22,16 @@ public class ConfigurationMultipleMPXAccounts extends ParentTest{
     	
     	//Step 1
     	UserLogin userLogin = applib.openApplication();
-    	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+    	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         //Step 2
         taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
         overlay.SwitchToActiveFrame();
         
         //Setup
-        Settings settings = new Settings(webDriver, applib);
+        Settings settings = new Settings(webDriver);
         MPXMedia mpxMedia = new MPXMedia(webDriver);
-        Cron cron = new Cron(webDriver, applib);
+        Cron cron = new Cron(webDriver);
         
         List<String> accountNames = Arrays.asList("DB TV", "NBC.com Stage", "NBC.com Stage - Content Testing", 
         		"NBCU TVE Dev - NBC", "NBCU TVE Dev - Style", "NBCU TVE Stage - Golf Channel", 
@@ -44,8 +44,8 @@ public class ConfigurationMultipleMPXAccounts extends ParentTest{
         	Integer numberSelectedAccounts = settings.GetImportAccountSelectedOptions().size();
         	if (!settings.GetImportAccountSelectedOptions().contains("DB TV")) {
         		settings.ExpandAddAccounts();
-            	settings.EnterUsername(applib.getMPXUsername());
-            	settings.EnterPassword(applib.getMPXPassword());
+            	settings.EnterUsername(config.getConfigValueString("MPXUsername"));
+            	settings.EnterPassword(config.getConfigValueString("MPXPassword"));
             	settings.ClickSaveBtn();
             	if (numberSelectedAccounts.equals(1)) {
             		settings.SelectImportAccount2("DB TV");
@@ -85,8 +85,8 @@ public class ConfigurationMultipleMPXAccounts extends ParentTest{
         else { 
         	
         	//Step 3
-        	settings.EnterUsername(applib.getMPXUsername());
-        	settings.EnterPassword(applib.getMPXPassword());
+        	settings.EnterUsername(config.getConfigValueString("MPXUsername"));
+        	settings.EnterPassword(config.getConfigValueString("MPXPassword"));
         	
         	//Step 4
         	settings.ClickConnectToMPXBtn();
@@ -121,7 +121,7 @@ public class ConfigurationMultipleMPXAccounts extends ParentTest{
             //Step 9
             taxonomy.NavigateSite("Content>>Files>>mpxMedia");
             overlay.SwitchToActiveFrame();
-            SearchFor searchFor = new SearchFor(webDriver, applib);
+            SearchFor searchFor = new SearchFor(webDriver);
             searchFor.EnterTitle("AutomationDefault");
             searchFor.ClickApplyBtn();
             searchFor.VerifySearchResultsPresent(Arrays.asList("AutomationDefault"));
@@ -129,8 +129,8 @@ public class ConfigurationMultipleMPXAccounts extends ParentTest{
             //Step 10
             taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
             settings.ExpandAddAccounts();
-        	settings.EnterUsername(applib.getMPXUsername());
-        	settings.EnterPassword(applib.getMPXPassword());
+        	settings.EnterUsername(config.getConfigValueString("MPXUsername"));
+        	settings.EnterPassword(config.getConfigValueString("MPXPassword"));
         	settings.ClickSaveBtn();
         	settings.SelectImportAccount2("NBCU TVE Stage - Golf Channel");
         	settings.ClickSetImportAccountBtn();

@@ -33,13 +33,13 @@ public class CreateAndValidateVideo extends ParentTest{
     	
     	//Step 1
     	UserLogin userLogin = applib.openApplication();
-    	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+    	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
     	//login to mpx
-    	MPXLogin mpxLogin = new MPXLogin(webDriver, applib);
+    	MPXLogin mpxLogin = new MPXLogin(webDriver);
     	mpxLogin.OpenMPXThePlatform();
-    	mpxLogin.Login(applib.getMPXUsername(), applib.getMPXPassword());
-    	MPXSelectAccount mpxSelectAccount = new MPXSelectAccount(webDriver, applib);
+    	mpxLogin.Login(config.getConfigValueString("MPXUsername"), config.getConfigValueString("MPXPassword"));
+    	MPXSelectAccount mpxSelectAccount = new MPXSelectAccount(webDriver);
         mpxSelectAccount.SelectAccount("DB TV");
     	
         //create 100 mpx assets
@@ -48,7 +48,7 @@ public class CreateAndValidateVideo extends ParentTest{
     		
     		//create asset on mpx
     		mpxLogin.OpenMPXThePlatform();
-    		MPXAssets mpxAssets = new MPXAssets(applib);
+    		MPXAssets mpxAssets = new MPXAssets();
     	    mpxAssets.WaitForAllAssetsToLoad();
     		
     		MPXAddMedia mpxAddMedia = new MPXAddMedia(applib);
@@ -57,19 +57,19 @@ public class CreateAndValidateVideo extends ParentTest{
             mpxAddMedia.GiveFocusToMediaItem();
             mpxAddMedia.EnterTitle(mediaTitle);
             mpxAddMedia.ClickSaveBtn(true);
-            MPXPublishMedia mpxPublishMedia = new MPXPublishMedia(applib);
+            MPXPublishMedia mpxPublishMedia = new MPXPublishMedia();
             mpxPublishMedia.PublishDefaultVideo();
     		
             //open pub and run cron
             applib.openApplication();
-            Cron cron = new Cron(webDriver, applib);
+            Cron cron = new Cron(webDriver);
             cron.RunCron(true);
             cronRunTimes++;
             
     	    //validate video is present
     	    taxonomy.NavigateSite("Content>>Files>>mpxMedia");
     	    overlay.SwitchToActiveFrame();
-    	    SearchFor searchFor = new SearchFor(webDriver, applib);
+    	    SearchFor searchFor = new SearchFor(webDriver);
     	    searchFor.EnterTitle(mediaTitle);
     	    searchFor.ClickApplyBtn();
     	    overlay.switchToDefaultContent(true);

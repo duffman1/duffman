@@ -1,10 +1,8 @@
 package com.nbcuni.test.publisher.pageobjects.Content;
 
 import java.util.List;
-
-import com.nbcuni.test.publisher.common.AppLib;
+import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
@@ -25,13 +23,13 @@ import org.testng.Reporter;
 public class WorkBench {
 
 	private Driver webDriver;
-    private AppLib applib;
+    private Config config;
     private WebDriverWait wait;
     
 	//PAGE OBJECT CONSTRUCTORS
-    public WorkBench(Driver webDriver, AppLib applib) {
+    public WorkBench(Driver webDriver) {
         this.webDriver = webDriver;
-        this.applib = applib;
+        config = new Config();
         PageFactory.initElements(webDriver, this);
         wait = new WebDriverWait(webDriver, 10);
     }
@@ -152,7 +150,7 @@ public class WorkBench {
     public String GetContentNodeNumber() throws Exception {
         
     	Reporter.log("Note the node number for the content item.");
-    	return WorkBench_Tab("Edit Draft").getAttribute("href").replace(applib.getApplicationURL() + 
+    	return WorkBench_Tab("Edit Draft").getAttribute("href").replace(config.getConfigValueString("AppURL") + 
     			"/node/", "").replace("/edit", "");
 
     }

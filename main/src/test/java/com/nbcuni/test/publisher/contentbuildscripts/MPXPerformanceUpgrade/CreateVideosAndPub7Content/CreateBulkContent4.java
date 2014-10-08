@@ -14,8 +14,8 @@ public class CreateBulkContent4 extends ParentTest{
          
          //login
          UserLogin userLogin = applib.openApplication();
-         userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
-         CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver, applib);
+         userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
+         CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver);
              
          //create character profile
          for(int CCount=0;CCount<20;CCount++) {

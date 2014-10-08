@@ -23,7 +23,7 @@ public class CreateTVEpisode extends ParentTest{
         	//Step 1
         	UserLogin userLogin = applib.openApplication();
         	PageFactory.initElements(webDriver, userLogin);
-            userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+            userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
             List<String> allStates = Arrays.asList("Draft", "Review", "Published");
             for (String state : allStates) {
@@ -38,11 +38,11 @@ public class CreateTVEpisode extends ParentTest{
             	overlay.switchToDefaultContent(true);
             	overlay.SwitchToFrame("Create Person");
             	personsInformation.ClickCoverPhotoSelectBtn();
-            	SelectFile selectFile = new SelectFile(webDriver, applib);
+            	SelectFile selectFile = new SelectFile(webDriver);
             	PageFactory.initElements(webDriver, selectFile);
             	selectFile.SelectDefaultCoverImg();
             	overlay.SwitchToFrame("Create Person");
-            	ContentParent contentParent = new ContentParent(webDriver, applib);
+            	ContentParent contentParent = new ContentParent(webDriver);
             	PageFactory.initElements(webDriver, contentParent);
             	contentParent.ClickSaveBtn();
             	overlay.switchToDefaultContent(true);
@@ -89,7 +89,7 @@ public class CreateTVEpisode extends ParentTest{
             	Thread.sleep(1000); //TODO - slight pause required here for this test - figure out a proper dynamic wait for this test.
             	contentParent.ClickSaveBtn();
             	contentParent.VerifyMessageStatus("TV Episode " + tvEpisodeTitle + " has been created.");
-            	WorkBench workBench = new WorkBench(webDriver, applib);
+            	WorkBench workBench = new WorkBench(webDriver);
             	PageFactory.initElements(webDriver, workBench);
             	workBench.VerifyWorkBenchBlockTextPresent(Arrays.asList(state));
             	

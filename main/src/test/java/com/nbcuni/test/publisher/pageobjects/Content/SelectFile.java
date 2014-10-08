@@ -2,7 +2,6 @@ package com.nbcuni.test.publisher.pageobjects.Content;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -17,8 +16,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
-
-import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Random;
 import com.nbcuni.test.publisher.pageobjects.Overlay;
@@ -35,7 +32,6 @@ import com.nbcuni.test.publisher.common.Driver.Driver;
 public class SelectFile {
 
     private Driver webDriver;
-    private AppLib applib;
     private WebDriverWait wait;
     private Random random;
     private ErrorChecking errorChecking;
@@ -43,14 +39,13 @@ public class SelectFile {
     private Config config;
     
     //PAGE OBJECT CONSTRUCTOR
-    public SelectFile(Driver webDriver, AppLib applib) {
+    public SelectFile(Driver webDriver) {
         this.webDriver = webDriver;
-        this.applib = applib;
         PageFactory.initElements(webDriver, this);
         wait = new WebDriverWait(webDriver, 10);
         random = new Random();
-        errorChecking = new ErrorChecking(webDriver, applib);
-        overlay = new Overlay(webDriver, applib);
+        errorChecking = new ErrorChecking(webDriver);
+        overlay = new Overlay(webDriver);
         config = new Config();
     }
     
@@ -168,7 +163,7 @@ public class SelectFile {
     		catch (Exception e) {
     		}
     	}
-    	webDriver.manage().timeouts().implicitlyWait(config.getImplicitWaitTime(), TimeUnit.SECONDS);
+    	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
     	errorChecking.VerifyNoMessageErrorsPresent();
     }
     
@@ -234,7 +229,7 @@ public class SelectFile {
             if (searchComplete == true){ break;}
             Thread.sleep(500);
         }
-        webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
+        webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
     }
     
     public void ClickDefaultImg() throws Exception {
@@ -440,7 +435,7 @@ public class SelectFile {
         	defaultImgFile = "HanSolo4.jpg";
         	break;
         }
-    	this.EnterFilePath(applib.getPathToMedia() + defaultImgFile);
+    	this.EnterFilePath(config.getConfigValueFilePath("PathToMediaContent") + defaultImgFile);
     	this.ClickUploadBtn();
     	this.WaitForFileUploaded(defaultImgFile);
     	this.ClickNextBtn();
@@ -448,7 +443,7 @@ public class SelectFile {
     	this.ClickNextBtn();
     	this.VerifyFileImagePresent("HanSolo");
     	this.ClickSaveBtn();
-    	Overlay overlay = new Overlay(webDriver, applib);
+    	Overlay overlay = new Overlay(webDriver);
     	overlay.switchToDefaultContent(true);
     }
     

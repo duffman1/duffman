@@ -126,7 +126,7 @@ public class CustomReport extends EmailableReporter {
 	    for(ITestResult consecutive_failed_result : consecutiveFailedTests.getAllResults())
 	    {
 	    	Date date = new Date(consecutive_failed_result.getEndMillis());
-	    	String screenshotPath = config.getPathToScreenshots() + consecutive_failed_result.getMethod().getMethodName() + "_" + attachmentDateTimeFormat.format(date) + ".png";
+	    	String screenshotPath = config.getConfigValueFilePath("PathToScreenshots") + consecutive_failed_result.getMethod().getMethodName() + "_" + attachmentDateTimeFormat.format(date) + ".png";
 	    	failedScreenshots.add(screenshotPath);
 	    }
 	    
@@ -134,7 +134,7 @@ public class CustomReport extends EmailableReporter {
 	    for(ITestResult concurrent_failed_result : concurrentFailedTests.getAllResults())
 	    {
 	    	Date date = new Date(concurrent_failed_result.getEndMillis());
-	    	String screenshotPath = config.getPathToScreenshots() + concurrent_failed_result.getMethod().getMethodName() + "_" + attachmentDateTimeFormat.format(date) + ".png";
+	    	String screenshotPath = config.getConfigValueFilePath("PathToScreenshots") + concurrent_failed_result.getMethod().getMethodName() + "_" + attachmentDateTimeFormat.format(date) + ".png";
 	    	failedScreenshots.add(screenshotPath);
 	    }
 	    
@@ -148,9 +148,9 @@ public class CustomReport extends EmailableReporter {
   	  		status = "FAILED";
   	  	}
   	  	File resultsFile = new File(outputDirectory + File.separator + "emailable-report.html");
-  	  	String storeReportsTo = config.getPathToReports();
+  	  	String storeReportsTo = config.getConfigValueFilePath("PathToReports");
   	  	Date date = new Date();
-  	  	String environmentTitle = config.getConfigValue("AppURL").replace("http://", "").toUpperCase();
+  	  	String environmentTitle = config.getConfigValueString("AppURL").replace("http://", "").toUpperCase();
   	  	String filePath = storeReportsTo + environmentTitle + "-" + status + "-" + attachmentDateTimeFormat.format(date) + ".html";
   	  	try {
   	  		FileUtils.copyFile(resultsFile, new File(filePath));
@@ -197,7 +197,7 @@ public class CustomReport extends EmailableReporter {
   	  	//upload zip report file to rally
   	  	String rallyAttachmentContentId = null;
   	  	String rallyReportAttachmentURL = null;
-  	  	if (config.getConfigValue("UploadReportToRally").equals("true")) {
+  	  	if (config.getConfigValueString("UploadReportToRally").equals("true")) {
   	  		try {
   	  			rallyAttachmentContentId = uploadReport.uploadFileAttachment(zipFilePath, zipFileName);
   	  			rallyAttachmentContentId = rallyAttachmentContentId.replace("https://rally1.rallydev.com/slm/webservice/1.40/attachment/", "").replace(".js", "");
@@ -210,7 +210,7 @@ public class CustomReport extends EmailableReporter {
   	  		System.out.println("Report was not uploaded to Rally per configuration setting.");
   	  	}
   	  	
-  	  	if (config.getConfigValue("UpdateIndividualRallyTCs").equals("true")) {
+  	  	if (config.getConfigValueString("UpdateIndividualRallyTCs").equals("true")) {
   	  	
   	  		//update individual consecutive passed test cases in Rally
   	  	  	for (ITestResult consecutive_passed_result : consecutivePassedTests.getAllResults()) {
@@ -234,7 +234,7 @@ public class CustomReport extends EmailableReporter {
   	  	  	
   	  	  		String methodName = consecutive_failed_result.getMethod().getMethodName();
   	  	  		if (methodName.contains("_TC")) {
-  	  	  		String screenshotPath = config.getPathToScreenshots() + methodName + "_" + attachmentDateTimeFormat.format(new Date(consecutive_failed_result.getEndMillis())) + ".png";
+  	  	  		String screenshotPath = config.getConfigValueFilePath("PathToScreenshots") + methodName + "_" + attachmentDateTimeFormat.format(new Date(consecutive_failed_result.getEndMillis())) + ".png";
   		    	
   	  	  			String[] tcID = methodName.split("_");
   	  	  		
@@ -272,7 +272,7 @@ public class CustomReport extends EmailableReporter {
   	  	  	
   	  	  		String methodName = concurrent_failed_result.getMethod().getMethodName();
   	  	  		if (methodName.contains("_TC")) {
-  	  	  		String screenshotPath = config.getPathToScreenshots() + methodName + "_" + attachmentDateTimeFormat.format(new Date(concurrent_failed_result.getEndMillis())) + ".png";
+  	  	  		String screenshotPath = config.getConfigValueFilePath("PathToScreenshots") + methodName + "_" + attachmentDateTimeFormat.format(new Date(concurrent_failed_result.getEndMillis())) + ".png";
   		    	
   	  	  			String[] tcID = methodName.split("_");
   	  	  		
@@ -296,7 +296,7 @@ public class CustomReport extends EmailableReporter {
   	  	//send auto email with zip report
   	    SendEmailReport sendEmailReport = new SendEmailReport();
 	  	
-  	  	if (config.getConfigValue("SendReportAutoEmails").equals("true")) {
+  	  	if (config.getConfigValueString("SendReportAutoEmails").equals("true")) {
   	  		try {
   	  			sendEmailReport.SendEmail(zipFilePath, zipFileName, passedTestCount, failedTestCount);
   	  		} catch (Exception e) {
@@ -308,7 +308,7 @@ public class CustomReport extends EmailableReporter {
   	  	}
   	  	
   	  	//send irc chat with results
-  	  	if (config.getConfigValue("SendReportIRCChat").equals("true")) {
+  	  	if (config.getConfigValueString("SendReportIRCChat").equals("true")) {
   	  		SendIRCReport sendIRCReport = new SendIRCReport();
   	  		try {
   	  			sendIRCReport.SendReport(filePath, zipFileName, passedTestCount, failedTestCount, failedScreenshots);
@@ -322,8 +322,8 @@ public class CustomReport extends EmailableReporter {
   	  	
   	  	//update github for pull request environment executions
   	  	UploadReportsGitHub uploadReportsGitHub = new UploadReportsGitHub();
-  	  	if (config.getConfigValue("AppURL").contains(".pr.")) {
-  	  		if (config.getConfigValue("GithubUpdatePRResults").equals("true")) {
+  	  	if (config.getConfigValueString("AppURL").contains(".pr.")) {
+  	  		if (config.getConfigValueString("GithubUpdatePRResults").equals("true")) {
   	  			uploadReportsGitHub.UploadReport(passedTestCount, failedTestCount, rallyReportAttachmentURL);
   	  		}
   	  		else {

@@ -10,8 +10,7 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.Reporter;
-
-import com.nbcuni.test.publisher.common.AppLib;
+import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
 import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.ErrorChecking.ErrorChecking;
@@ -26,17 +25,17 @@ import com.nbcuni.test.publisher.pageobjects.ErrorChecking.ErrorChecking;
 public class Overlay {
 
     private Driver webDriver;
-    private AppLib applib;
+    private Config config;
     private ErrorChecking errorChecking;
     private ContentParent contentParent;
     
     //PAGE OBJECT CONSTRUCTOR
-    public Overlay(Driver webDriver, AppLib applib) {
+    public Overlay(Driver webDriver) {
     	this.webDriver = webDriver;
-    	this.applib = applib;
+    	config = new Config();
     	PageFactory.initElements(webDriver, this);
-    	errorChecking = new ErrorChecking(webDriver, applib);
-    	contentParent = new ContentParent(webDriver, applib);
+    	errorChecking = new ErrorChecking(webDriver);
+    	contentParent = new ContentParent(webDriver);
     }
 
     //PAGE OBJECT IDENTIFIERS
@@ -125,7 +124,7 @@ public class Overlay {
     	webDriver.switchTo().frame(ActiveFrame_Frm);
     	
     	//default timeout
-    	webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
+    	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
     	
     	//check for errors in overlay
     	errorChecking.VerifyNoMessageErrorsPresent();
@@ -151,7 +150,7 @@ public class Overlay {
             if (framePresent == false){ break;}
             Thread.sleep(1000);
         }
-    	webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
+    	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
     	
     }
     

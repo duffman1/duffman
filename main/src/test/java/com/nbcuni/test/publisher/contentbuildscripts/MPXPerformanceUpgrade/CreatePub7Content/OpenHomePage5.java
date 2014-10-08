@@ -13,7 +13,7 @@ public class OpenHomePage5 extends ParentTest{
     	for(int CCount=0;CCount<500;CCount++){
     		applib.openApplication();
     		
-    		webDriver.navigate().to(applib.getApplicationURL());
+    		webDriver.navigate().to(config.getConfigValueString("AppURL"));
     		
     	}
     	

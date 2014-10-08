@@ -16,7 +16,7 @@ public class DefaultModulesEnabled extends ParentTest{
     	
     	//Step 1
     	UserLogin userLogin = applib.openApplication();
-    	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+    	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
     	//Step 2
     	taxonomy.NavigateSite("Modules");
@@ -25,7 +25,7 @@ public class DefaultModulesEnabled extends ParentTest{
     	//Step 3
     	List<String> allCoreModules = Arrays.asList("Block", "Contextual links", "Help", "Image", "List", "Menu", "Number", "Options", "Path", "Taxonomy", "Syslog", 
     			"Shortcut", "Overlay", "Field UI", "File");
-    	Modules modules = new Modules(webDriver, applib);
+    	Modules modules = new Modules(webDriver);
     	for (String module : allCoreModules) {
     		modules.EnterFilterName(module);
     		Reporter.log("Verify core module '" + module + "' is enabled.");

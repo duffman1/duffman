@@ -1,6 +1,5 @@
 package com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos;
 
-import com.ibm.icu.util.Calendar;
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Content.SearchFor;
@@ -15,6 +14,7 @@ import org.testng.annotations.Test;
 
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
@@ -66,10 +66,10 @@ public class MPXVideosSchedulingVerificationInitialOverrides extends ParentTest{
 
     	//Step 1
     	UserLogin userLogin = applib.openApplication();
-    	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+    	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         //Step 2 on requires prior MPX configuration
-    	Settings settings = new Settings(webDriver, applib);
+    	Settings settings = new Settings(webDriver);
     	settings.ConfigureMPXIfNeeded();
     	
         taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
@@ -100,14 +100,14 @@ public class MPXVideosSchedulingVerificationInitialOverrides extends ParentTest{
             overlay.switchToDefaultContent(true);
             taxonomy.NavigateSite("Content>>Files>>mpxMedia");
             overlay.SwitchToActiveFrame();
-            SearchFor searchFor = new SearchFor(webDriver, applib);
+            SearchFor searchFor = new SearchFor(webDriver);
             searchFor.EnterTitle("AutomationDefault");
             searchFor.ClickApplyBtn();
             searchFor.VerifySearchResultsPresent(Arrays.asList("AutomationDefault"));
             searchFor.ClickSearchTitleLnk("AutomationDefault");
             
             //Setup - resets overrides in the event of a previous failure
-            WorkBench workBench = new WorkBench(webDriver, applib);
+            WorkBench workBench = new WorkBench(webDriver);
             workBench.ClickWorkBenchTab("Edit");
             overlay.SwitchToActiveFrame();
             EditMPXVideo editMPXVideo = new EditMPXVideo(webDriver);
