@@ -1,17 +1,125 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]">
-  <test name="Default test(failed)">
+<suite thread-count="3" name="Failed suite [Publisher 7 Test Suite]" parallel="classes">
+  <parameter name="LocalAppiumHubPort" value="4724"/>
+  <parameter name="RallyUrl" value="https://rally1.rallydev.com"/>
+  <parameter name="RallyUsername" value=""/>
+  <parameter name="AbortSuiteOnSetupFailure" value="true"/>
+  <parameter name="SSOEmail" value="FID.Publisher@nbcuni.com"/>
+  <parameter name="RallyProject" value="Publisher 7"/>
+  <parameter name="IRCNickname" value="NBCUniAutomationBotOnIRC"/>
+  <parameter name="GithubPassword" value=""/>
+  <parameter name="RunOnGridNetwork" value="true"/>
+  <parameter name="PathToReports" value="/test-output/reports/"/>
+  <parameter name="MPXPassword" value="Pa55word"/>
+  <parameter name="SendReportIRCChat" value="false"/>
+  <parameter name="RallyWorkspace" value="Digital Products"/>
+  <parameter name="IRCChannel" value="#nbcuots_pub7"/>
+  <parameter name="SikuliImageWaitTime" value="30"/>
+  <parameter name="AppURL" value="http://qa5.publisher7.com"/>
+  <parameter name="MPXUsername" value="mpx/AdminPub7QA"/>
+  <parameter name="ReRunOnFailure" value="false"/>
+  <parameter name="Device" value="Iphone Simulator"/>
+  <parameter name="SSOPassword" value="Pa55word"/>
+  <parameter name="GithubOwner" value="NBCUOTS"/>
+  <parameter name="DrushIngestion" value="false"/>
+  <parameter name="Admin1Password" value="pa55word"/>
+  <parameter name="ReRunOnFailureCount" value="3"/>
+  <parameter name="IRCServer" value="irc.freenode.net"/>
+  <parameter name="ErrorCheckingEnabled" value="true"/>
+  <parameter name="RemoteWebDriverHubPort" value="4445"/>
+  <parameter name="SendReportAutoEmails" value="true"/>
+  <parameter name="GithubRepo" value="Publisher7_citest"/>
+  <parameter name="Admin1Username" value="admin@publisher.nbcuni.com"/>
+  <parameter name="GmailUsername" value="Pub7NBCUAutoEmailUser1@gmail.com"/>
+  <parameter name="Browser" value="chrome"/>
+  <parameter name="GithubUsername" value=""/>
+  <parameter name="PathToScreenshots" value="/test-output/screenshots/"/>
+  <parameter name="MPXVideoUploadPause" value="5000"/>
+  <parameter name="SSOUsername" value="206439339"/>
+  <parameter name="PageLoadWaitTime" value="90"/>
+  <parameter name="MPXUrl" value="http://mpx.theplatform.com/"/>
+  <parameter name="RallyPassword" value=""/>
+  <parameter name="PathToMediaContent" value="/src/test/java/com/nbcuni/test/publisher/content/MediaFiles/"/>
+  <parameter name="RallyTaskID" value="TA60294"/>
+  <parameter name="RunMobile" value="false"/>
+  <parameter name="SendReportEmailAddress" value="brandon.clark@nbcuni.com, brandon.clark@nbcuni.com"/>
+  <parameter name="UpdateIndividualRallyTCs" value="true"/>
+  <parameter name="UploadReportToRally" value="true"/>
+  <parameter name="PathToSikuliImages" value="/src/test/java/com/nbcuni/test/publisher/lib/sikuli/images/"/>
+  <parameter name="ImplicitWaitTime" value="20"/>
+  <parameter name="MPXAssetBufferPause" value="0"/>
+  <parameter name="GmailPassword" value="Pub7NBCUAutoEmailPassword1"/>
+  <parameter name="PathToHarReports" value="/test-output/"/>
+  <parameter name="GithubUpdatePRResults" value="true"/>
+  <listeners>
+    <listener class-name="com.nbcuni.test.publisher.common.CustomReport"/>
+    <listener class-name="com.nbcuni.test.publisher.common.TestListeners"/>
+    <listener class-name="com.nbcuni.test.publisher.common.SuiteListeners"/>
+  </listeners>
+  <test name="All Web Tests(failed)" parallel="classes">
+    <groups>
+      <run>
+        <include name="mps"/>
+        <exclude name="sensitive"/>
+      </run>
+    </groups>
     <classes>
-      <class name="com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability">
+      <class name="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SiteReportVisualization.SiteReportVisualization">
         <methods>
-          <include name="startSelenium"/>
           <include name="stopGridAndHub"/>
           <include name="startGridAndHub"/>
-          <include name="stopSelenium"/>
-          <include name="NotificationPlayerUnavailability_Test"/>
         </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability -->
+      </class> <!-- com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SiteReportVisualization.SiteReportVisualization -->
+      <class name="com.nbcuni.test.publisher.tests.Advertising.MPS.AddMPSCallsToErrorPages">
+        <methods>
+          <include name="startSelenium"/>
+          <include name="AddMPSCallsToErrorPages_TC4950"/>
+          <include name="stopSelenium"/>
+        </methods>
+      </class> <!-- com.nbcuni.test.publisher.tests.Advertising.MPS.AddMPSCallsToErrorPages -->
+      <class name="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens">
+        <methods>
+          <include name="startSelenium"/>
+          <include name="MPSSupportTokens_TC3641"/>
+          <include name="stopSelenium"/>
+        </methods>
+      </class> <!-- com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens -->
+      <class name="com.nbcuni.test.publisher.tests.Advertising.MPS.AutomaticallyCreatedMPSAdSlots">
+        <methods>
+          <include name="startSelenium"/>
+          <include name="AutomaticallyCreatedMPSAdSlots_TC4128"/>
+          <include name="stopSelenium"/>
+        </methods>
+      </class> <!-- com.nbcuni.test.publisher.tests.Advertising.MPS.AutomaticallyCreatedMPSAdSlots -->
+      <class name="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSEndToEndIntegration">
+        <methods>
+          <include name="startSelenium"/>
+          <include name="stopSelenium"/>
+          <include name="MPSEndToEndIntegration_TC3996"/>
+        </methods>
+      </class> <!-- com.nbcuni.test.publisher.tests.Advertising.MPS.MPSEndToEndIntegration -->
+      <class name="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSBlockAccess">
+        <methods>
+          <include name="startSelenium"/>
+          <include name="stopSelenium"/>
+          <include name="MPSBlockAccess_TC3608"/>
+        </methods>
+      </class> <!-- com.nbcuni.test.publisher.tests.Advertising.MPS.MPSBlockAccess -->
+      <class name="com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS">
+        <methods>
+          <include name="startSelenium"/>
+          <include name="ImplementMPS_TC2901"/>
+          <include name="stopSelenium"/>
+        </methods>
+      </class> <!-- com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS -->
+      <class name="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSConfigurationPage">
+        <methods>
+          <include name="startSelenium"/>
+          <include name="MPSConfigurationPage_TC3306"/>
+          <include name="stopSelenium"/>
+        </methods>
+      </class> <!-- com.nbcuni.test.publisher.tests.Advertising.MPS.MPSConfigurationPage -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- All Web Tests(failed) -->
+</suite> <!-- Failed suite [Publisher 7 Test Suite] -->

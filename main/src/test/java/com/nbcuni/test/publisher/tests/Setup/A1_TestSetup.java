@@ -12,10 +12,15 @@ import java.util.Date;
 import java.util.List;
 import java.util.TimeZone;
 import java.util.concurrent.TimeUnit;
-import com.nbcuni.test.publisher.common.ParentTest;
+import com.nbcuni.test.publisher.common.AppLib;
+import com.nbcuni.test.publisher.common.Config;
+import com.nbcuni.test.publisher.common.Random;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 import com.nbcuni.test.publisher.pageobjects.Modules;
+import com.nbcuni.test.publisher.pageobjects.Overlay;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Content.BasicInformation;
+import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.Content.PublishingOptions;
 import com.nbcuni.test.publisher.pageobjects.Content.SelectFile;
 import com.nbcuni.test.publisher.pageobjects.Content.WorkBench;
@@ -24,22 +29,24 @@ import com.nbcuni.test.publisher.pageobjects.Logo.Logos;
 import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
 import com.nbcuni.test.publisher.pageobjects.People.Permissions;
 import com.nbcuni.test.publisher.pageobjects.Structure.Queues.Queues.ScheduleQueue;
+import com.nbcuni.test.publisher.pageobjects.Taxonomy.Taxonomy;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
-import org.testng.Assert;
-import org.testng.annotations.Test;
 
-public class A1_TestSetup extends ParentTest {
+public class A1_TestSetup {
 	
     /*************************************************************************************
      * Test executes some common setup logic prior to full suite execution
      *************************************************************************************/
-    @Test(groups = {"full", "smoke", "mpx", "certify"})
-    public void TestSetup_Test() throws Exception {
+    public Boolean TestSetup_Test(Driver webDriver, AppLib applib) throws Exception {
     	
+    	Config config = new Config();
+		
+    	Boolean abortTestSuite = false;
     	Boolean allIterationsFailed = false;
+    	
     	int iter = 0;
         while (iter <= 3) {
         	iter++;
@@ -55,6 +62,7 @@ public class A1_TestSetup extends ParentTest {
             	//set pub sauce theme
                 applib.openSitePage("/admin/appearance");
                 new Select(webDriver.findElement(By.id("edit-admin-theme--2"))).selectByVisibleText("Pub Sauce");
+                ContentParent contentParent = new ContentParent(webDriver);
                 contentParent.ClickSaveBtn();
                 
             	//enable overlay module if necessary
@@ -67,6 +75,7 @@ public class A1_TestSetup extends ParentTest {
                 	modules.EnterFilterName("Overlay");
                     modules.EnableModule("Overlay");
                 }
+                Overlay overlay = new Overlay(webDriver);
                 overlay.SwitchToActiveFrame();
                 
                 //enable necessary modules (from text file)
@@ -131,6 +140,7 @@ public class A1_TestSetup extends ParentTest {
                 applib.openSitePage("/admin/structure/types/manage/media-gallery/fields/field_media_items");
                 new Select(webDriver.findElement(By.id("edit-field-cardinality"))).selectByVisibleText("Unlimited");
                 contentParent.ClickSaveBtn();
+                Taxonomy taxonomy = new Taxonomy(webDriver);
                 taxonomy.NavigateSite("Home");
                 
                 //set admin menu perms
@@ -189,6 +199,7 @@ public class A1_TestSetup extends ParentTest {
             	basicInformation.ClickBasicInformationTab();
             	SimpleDateFormat pub7DateFormat = new SimpleDateFormat("MM/dd/yyyy");
             	Date currentDate = new Date();
+            	Random random = new Random();
             	String postTitle = "futurePost" + pub7DateFormat.format(currentDate) + random.GetCharacterString(15);
             	basicInformation.EnterTitle(postTitle);
             	basicInformation.EnterSynopsis();
@@ -343,8 +354,8 @@ public class A1_TestSetup extends ParentTest {
         	if (config.getConfigValueString("AbortSuiteOnSetupFailure").equals("true")) {
         		abortTestSuite = true;
         	}
-        	Assert.fail();
         }
-            
+        webDriver.quit();
+        return abortTestSuite;
     }
 }

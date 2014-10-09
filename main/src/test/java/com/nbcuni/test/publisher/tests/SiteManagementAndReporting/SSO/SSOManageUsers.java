@@ -24,7 +24,7 @@ public class SSOManageUsers extends ParentTest {
 	 * TEST CASE - TC3853
      * Steps - https://rally1.rallydev.com/#/14663927728ud/detail/testcase/20332795162
 	 *************************************************************************************/
-	 @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"})
+	 @Test(retryAnalyzer = RerunOnFailure.class, groups = {"sensitive"})
 	 public void SSOManageUsers_TC3853() throws Exception {
 		 
 		UserLogin userLogin = new UserLogin(webDriver); 

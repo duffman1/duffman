@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
+<testng-results skipped="7" failed="0" total="7" passed="0">
   <reporter-output>
     <line>
-      <![CDATA[STEP 1]]>
+      <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
     </line>
     <line>
       <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
@@ -14,358 +17,10 @@
       <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Login' button.]]>
+      <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
     </line>
     <line>
-      <![CDATA[STEP 2]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Modules' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to frame titled 'Modules'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Event Countdown' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for module filter titled 'Event Countdown' to be visible in module list.]]>
-    </line>
-    <line>
-      <![CDATA[Check the 'Event Countdown' check box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
-    </line>
-    <line>
-      <![CDATA[Switch back to the 'Modules' frame.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to frame titled 'Modules'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Home' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 3]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Configuration' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Media' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Event Countdown' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Event Countdown dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Sample nodes have already been created.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 4]]>
-    </line>
-    <line>
-      <![CDATA[STEP 5 AND 6]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter title Birthday Event.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Apply' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Edit' link for content item titled 'Birthday Event.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '10/09/2014 in the 'Date' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '12:34:33AM in the 'Time' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'http://www.amazon.com/s/ref=nb_sb_ss_c_0_8/190-0002947-5703141?url=search-alias%3Dtoys-and-games&field-keywords=birthday%20party%20supplies&sprefix=birthday%2Caps%2C168' in the 'Active Call to Action' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Active Image Select' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the select file frame.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the file path for file upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Upload' button.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the file image 'HanSolo' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '#FF0000' in the 'Active Background Color' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'http://www.nbc.com' in the 'Expiry Call to Action' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Expiry Image Select' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the select file frame.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the file path for file upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Upload' button.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the file image 'nbclogosmall' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '#00FFFF' in the 'Expiry Background Color' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 7]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Structure' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Blocks' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Select the block name 'Birthday Block' from the 'Content' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Select the block name 'Holiday Party Block' from the 'Content' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save Blocks' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The block settings have been updated.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 8]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Home' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 9]]>
-    </line>
-    <line>
-      <![CDATA[Verify the countdown timer is visible.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the countdown timer is counting down.]]>
-    </line>
-    <line>
-      <![CDATA[Assert that active img source of the event contains 'HanSolo'.]]>
-    </line>
-    <line>
-      <![CDATA[Assert the the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the active background color of '#FF0000' is visible for event with title 'Birthday Event'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the active link href of 'http://www.amazon.com/s/ref=nb_sb_ss_c_0_8/190-0002947-5703141?url=search-alias%3Dtoys-and-games&field-keywords=birthday%20party%20supplies&sprefix=birthday%2Caps%2C168' is visible for event with title 'Birthday Event'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 10]]>
-    </line>
-    <line>
-      <![CDATA[Verify the countdown timer is NOT counting down.]]>
-    </line>
-    <line>
-      <![CDATA[Assert that expiry img source of the event contains 'nbclogosmall'.]]>
-    </line>
-    <line>
-      <![CDATA[Assert the the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the expiry background color of '#00FFFF' is visible for event with title 'Birthday Event'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the expiry link href of 'http://www.nbc.com' is visible for event with title 'Birthday Event'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 11 AND 12]]>
-    </line>
-    <line>
-      <![CDATA[STEP 13]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Add content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Event Countdown' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Event Countdown dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '8c39f28e0dca417' in the 'Title' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '10/09/2014 in the 'Date' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '12:36:07AM in the 'Time' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'http://www.amazon.com/s/ref=nb_sb_ss_c_0_8/190-0002947-5703141?url=search-alias%3Dtoys-and-games&field-keywords=birthday%20party%20supplies&sprefix=birthday%2Caps%2C168' in the 'Active Call to Action' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Active Image Select' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the select file frame.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the file path for file upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Upload' button.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the file image 'HanSolo' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Event Countdown dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '#FF0000' in the 'Active Background Color' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'http://www.nbc.com' in the 'Expiry Call to Action' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Expiry Image Select' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the select file frame.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the file path for file upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Upload' button.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the file image 'nbclogosmall' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Event Countdown dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '#00FFFF' in the 'Expiry Background Color' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Event Countdown 8c39f28e0dca417 has been created.' is present.]]>
+      <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
     </line>
     <line>
       <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
@@ -374,562 +29,509 @@
       <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
     </line>
     <line>
-      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+      <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/ImplementMPS_TC2901_100914102710AM.png ]]>
     </line>
     <line>
-      <![CDATA[Click the 'Login' button.]]>
+      <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/AutomaticallyCreatedMPSAdSlots_TC4128_100914102710AM.png ]]>
     </line>
     <line>
-      <![CDATA[Click the 'Modules' menu link.]]>
+      <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/AddMPSCallsToErrorPages_TC4950_100914102710AM.png ]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+      <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/ImplementMPS_TC2901_100914102710AM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/ImplementMPS_TC2901_100914102710AM.png' height='500' width='500'/> </a>]]>
     </line>
     <line>
-      <![CDATA[Enter 'Event Countdown' in the 'Filter Name' text box.]]>
+      <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
     </line>
     <line>
-      <![CDATA[Wait for module filter titled 'Event Countdown' to be visible in module list.]]>
+      <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/AutomaticallyCreatedMPSAdSlots_TC4128_100914102710AM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/AutomaticallyCreatedMPSAdSlots_TC4128_100914102710AM.png' height='500' width='500'/> </a>]]>
     </line>
     <line>
-      <![CDATA[Uncheck the 'Event Countdown' module checkbox.]]>
+      <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
+      <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/AddMPSCallsToErrorPages_TC4950_100914102710AM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/AddMPSCallsToErrorPages_TC4950_100914102710AM.png' height='500' width='500'/> </a>]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+      <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Uninstall' overlay tab.]]>
+      <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/MPSEndToEndIntegration_TC3996_100914102716AM.png ]]>
     </line>
     <line>
-      <![CDATA[Scroll by '-500'.]]>
+      <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/MPSConfigurationPage_TC3306_100914102716AM.png ]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+      <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/MPSEndToEndIntegration_TC3996_100914102716AM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/MPSEndToEndIntegration_TC3996_100914102716AM.png' height='500' width='500'/> </a>]]>
     </line>
     <line>
-      <![CDATA[Click the 'Event Countdown' uninstall checkbox.]]>
+      <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/MPSConfigurationPage_TC3306_100914102716AM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/MPSConfigurationPage_TC3306_100914102716AM.png' height='500' width='500'/> </a>]]>
     </line>
     <line>
-      <![CDATA[Click the 'Uninstall' button.]]>
+      <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/MPSBlockAccess_TC3608_100914102716AM.png ]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Confirm uninstall dialog'.]]>
+      <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'The following modules will be completely uninstalled from your site, and all data from these modules will be lost!' is present on the page.]]>
+      <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'Event Countdown' is present on the page.]]>
+      <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/MPSBlockAccess_TC3608_100914102716AM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/MPSBlockAccess_TC3608_100914102716AM.png' height='500' width='500'/> </a>]]>
     </line>
     <line>
-      <![CDATA[Click the 'Uninstall' button to confirm.]]>
+      <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+      <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/MPSSupportTokens_TC3641_100914102722AM.png ]]>
+    </line>
+    <line>
+      <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/MPSSupportTokens_TC3641_100914102722AM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/MPSSupportTokens_TC3641_100914102722AM.png' height='500' width='500'/> </a>]]>
+    </line>
+    <line>
+      <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="248205" started-at="2014-10-09T00:31:23Z" finished-at="2014-10-09T00:35:31Z">
+  <suite name="Publisher 7 Test Suite" duration-ms="18285" started-at="2014-10-09T14:27:07Z" finished-at="2014-10-09T14:27:26Z">
     <groups>
+      <group name="certify">
+        <method signature="MPSEndToEndIntegration.MPSEndToEndIntegration_TC3996()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSEndToEndIntegration@72729f44]" name="MPSEndToEndIntegration_TC3996" class="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSEndToEndIntegration"/>
+      </group> <!-- certify -->
       <group name="full">
-        <method signature="CountdownClockEvents.CountdownClockEvents_TC4887()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@41a92be6]" name="CountdownClockEvents_TC4887" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents"/>
-        <method signature="CountdownClockEvents.Cleanup()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@41a92be6]" name="Cleanup" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents"/>
+        <method signature="AddMPSCallsToErrorPages.AddMPSCallsToErrorPages_TC4950()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.AddMPSCallsToErrorPages@26e0696c]" name="AddMPSCallsToErrorPages_TC4950" class="com.nbcuni.test.publisher.tests.Advertising.MPS.AddMPSCallsToErrorPages"/>
+        <method signature="AutomaticallyCreatedMPSAdSlots.AutomaticallyCreatedMPSAdSlots_TC4128()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.AutomaticallyCreatedMPSAdSlots@1bb40e7e]" name="AutomaticallyCreatedMPSAdSlots_TC4128" class="com.nbcuni.test.publisher.tests.Advertising.MPS.AutomaticallyCreatedMPSAdSlots"/>
+        <method signature="ImplementMPS.ImplementMPS_TC2901()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@63cc5f63]" name="ImplementMPS_TC2901" class="com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS"/>
+        <method signature="MPSBlockAccess.MPSBlockAccess_TC3608()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSBlockAccess@60c31037]" name="MPSBlockAccess_TC3608" class="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSBlockAccess"/>
+        <method signature="MPSConfigurationPage.MPSConfigurationPage_TC3306()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSConfigurationPage@239f04af]" name="MPSConfigurationPage_TC3306" class="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSConfigurationPage"/>
+        <method signature="MPSEndToEndIntegration.MPSEndToEndIntegration_TC3996()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSEndToEndIntegration@72729f44]" name="MPSEndToEndIntegration_TC3996" class="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSEndToEndIntegration"/>
+        <method signature="MPSSupportTokens.MPSSupportTokens_TC3641()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens@34a204f3]" name="MPSSupportTokens_TC3641" class="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens"/>
       </group> <!-- full -->
+      <group name="mps">
+        <method signature="AddMPSCallsToErrorPages.AddMPSCallsToErrorPages_TC4950()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.AddMPSCallsToErrorPages@26e0696c]" name="AddMPSCallsToErrorPages_TC4950" class="com.nbcuni.test.publisher.tests.Advertising.MPS.AddMPSCallsToErrorPages"/>
+        <method signature="AutomaticallyCreatedMPSAdSlots.AutomaticallyCreatedMPSAdSlots_TC4128()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.AutomaticallyCreatedMPSAdSlots@1bb40e7e]" name="AutomaticallyCreatedMPSAdSlots_TC4128" class="com.nbcuni.test.publisher.tests.Advertising.MPS.AutomaticallyCreatedMPSAdSlots"/>
+        <method signature="ImplementMPS.ImplementMPS_TC2901()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@63cc5f63]" name="ImplementMPS_TC2901" class="com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS"/>
+        <method signature="MPSBlockAccess.MPSBlockAccess_TC3608()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSBlockAccess@60c31037]" name="MPSBlockAccess_TC3608" class="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSBlockAccess"/>
+        <method signature="MPSConfigurationPage.MPSConfigurationPage_TC3306()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSConfigurationPage@239f04af]" name="MPSConfigurationPage_TC3306" class="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSConfigurationPage"/>
+        <method signature="MPSEndToEndIntegration.MPSEndToEndIntegration_TC3996()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSEndToEndIntegration@72729f44]" name="MPSEndToEndIntegration_TC3996" class="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSEndToEndIntegration"/>
+        <method signature="MPSSupportTokens.MPSSupportTokens_TC3641()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens@34a204f3]" name="MPSSupportTokens_TC3641" class="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens"/>
+      </group> <!-- mps -->
     </groups>
-    <test name="Default test" duration-ms="248205" started-at="2014-10-09T00:31:23Z" finished-at="2014-10-09T00:35:31Z">
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents">
-        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@41a92be6]" name="startGridAndHub" is-config="true" duration-ms="6" started-at="2014-10-08T20:31:23Z" finished-at="2014-10-08T20:31:23Z">
+    <test name="All Web Tests" duration-ms="18285" started-at="2014-10-09T14:27:07Z" finished-at="2014-10-09T14:27:26Z">
+      <class name="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSBlockAccess">
+        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSBlockAccess@60c31037]" name="startSelenium" is-config="true" duration-ms="2661" started-at="2014-10-09T10:27:14Z" finished-at="2014-10-09T10:27:16Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.nbcuni.test.publisher.tests.Advertising.MPS.MPSBlockAccess.MPSBlockAccess_TC3608() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startSelenium -->
+        <test-method status="SKIP" signature="MPSBlockAccess_TC3608()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSBlockAccess@60c31037]" name="MPSBlockAccess_TC3608" duration-ms="1" started-at="2014-10-09T10:27:16Z" finished-at="2014-10-09T10:27:16Z">
+          <exception class="org.testng.SkipException">
+            <message>
+              <![CDATA[TestSetup Failed - Skipping test MPSBlockAccess_TC3608]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.SkipException: TestSetup Failed - Skipping test MPSBlockAccess_TC3608
+	at com.nbcuni.test.publisher.common.TestListeners.onTestStart(TestListeners.java:50)
+	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1904)
+	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1879)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:685)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.SkipException -->
+          <reporter-output>
+            <line>
+              <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/MPSBlockAccess_TC3608_100914102716AM.png ]]>
+            </line>
+            <line>
+              <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/MPSBlockAccess_TC3608_100914102716AM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/MPSBlockAccess_TC3608_100914102716AM.png' height='500' width='500'/> </a>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- MPSBlockAccess_TC3608 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSBlockAccess@60c31037]" name="stopSelenium" is-config="true" duration-ms="3685" started-at="2014-10-09T10:27:16Z" finished-at="2014-10-09T10:27:20Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=MPSBlockAccess_TC3608 status=SKIP method=MPSBlockAccess.MPSBlockAccess_TC3608()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSBlockAccess@60c31037] output=Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/MPSBlockAccess_TC3608_100914102716AM.png ]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopSelenium -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Advertising.MPS.MPSBlockAccess -->
+      <class name="com.nbcuni.test.publisher.tests.Advertising.MPS.AddMPSCallsToErrorPages">
+        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.AddMPSCallsToErrorPages@26e0696c]" name="startSelenium" is-config="true" duration-ms="2478" started-at="2014-10-09T10:27:07Z" finished-at="2014-10-09T10:27:10Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.nbcuni.test.publisher.tests.Advertising.MPS.AddMPSCallsToErrorPages.AddMPSCallsToErrorPages_TC4950() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startSelenium -->
+        <test-method status="SKIP" signature="AddMPSCallsToErrorPages_TC4950()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.AddMPSCallsToErrorPages@26e0696c]" name="AddMPSCallsToErrorPages_TC4950" duration-ms="0" started-at="2014-10-09T10:27:10Z" finished-at="2014-10-09T10:27:10Z">
+          <exception class="org.testng.SkipException">
+            <message>
+              <![CDATA[TestSetup Failed - Skipping test AddMPSCallsToErrorPages_TC4950]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.SkipException: TestSetup Failed - Skipping test AddMPSCallsToErrorPages_TC4950
+	at com.nbcuni.test.publisher.common.TestListeners.onTestStart(TestListeners.java:50)
+	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1904)
+	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1879)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:685)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.SkipException -->
+          <reporter-output>
+            <line>
+              <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/AddMPSCallsToErrorPages_TC4950_100914102710AM.png ]]>
+            </line>
+            <line>
+              <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/AddMPSCallsToErrorPages_TC4950_100914102710AM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/AddMPSCallsToErrorPages_TC4950_100914102710AM.png' height='500' width='500'/> </a>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- AddMPSCallsToErrorPages_TC4950 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.AddMPSCallsToErrorPages@26e0696c]" name="stopSelenium" is-config="true" duration-ms="3853" started-at="2014-10-09T10:27:10Z" finished-at="2014-10-09T10:27:14Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=AddMPSCallsToErrorPages_TC4950 status=SKIP method=AddMPSCallsToErrorPages.AddMPSCallsToErrorPages_TC4950()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.AddMPSCallsToErrorPages@26e0696c] output=Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/AddMPSCallsToErrorPages_TC4950_100914102710AM.png ]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopSelenium -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Advertising.MPS.AddMPSCallsToErrorPages -->
+      <class name="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSEndToEndIntegration">
+        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSEndToEndIntegration@72729f44]" name="startSelenium" is-config="true" duration-ms="2412" started-at="2014-10-09T10:27:14Z" finished-at="2014-10-09T10:27:16Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.nbcuni.test.publisher.tests.Advertising.MPS.MPSEndToEndIntegration.MPSEndToEndIntegration_TC3996() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startSelenium -->
+        <test-method status="SKIP" signature="MPSEndToEndIntegration_TC3996()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSEndToEndIntegration@72729f44]" name="MPSEndToEndIntegration_TC3996" duration-ms="1" started-at="2014-10-09T10:27:16Z" finished-at="2014-10-09T10:27:16Z">
+          <exception class="org.testng.SkipException">
+            <message>
+              <![CDATA[TestSetup Failed - Skipping test MPSEndToEndIntegration_TC3996]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.SkipException: TestSetup Failed - Skipping test MPSEndToEndIntegration_TC3996
+	at com.nbcuni.test.publisher.common.TestListeners.onTestStart(TestListeners.java:50)
+	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1904)
+	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1879)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:685)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.SkipException -->
+          <reporter-output>
+            <line>
+              <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/MPSEndToEndIntegration_TC3996_100914102716AM.png ]]>
+            </line>
+            <line>
+              <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/MPSEndToEndIntegration_TC3996_100914102716AM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/MPSEndToEndIntegration_TC3996_100914102716AM.png' height='500' width='500'/> </a>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- MPSEndToEndIntegration_TC3996 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSEndToEndIntegration@72729f44]" name="stopSelenium" is-config="true" duration-ms="3890" started-at="2014-10-09T10:27:16Z" finished-at="2014-10-09T10:27:20Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=MPSEndToEndIntegration_TC3996 status=SKIP method=MPSEndToEndIntegration.MPSEndToEndIntegration_TC3996()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSEndToEndIntegration@72729f44] output=Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/MPSEndToEndIntegration_TC3996_100914102716AM.png ]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopSelenium -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Advertising.MPS.MPSEndToEndIntegration -->
+      <class name="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSConfigurationPage">
+        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSConfigurationPage@239f04af]" name="startSelenium" is-config="true" duration-ms="2456" started-at="2014-10-09T10:27:14Z" finished-at="2014-10-09T10:27:16Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.nbcuni.test.publisher.tests.Advertising.MPS.MPSConfigurationPage.MPSConfigurationPage_TC3306() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startSelenium -->
+        <test-method status="SKIP" signature="MPSConfigurationPage_TC3306()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSConfigurationPage@239f04af]" name="MPSConfigurationPage_TC3306" duration-ms="1" started-at="2014-10-09T10:27:16Z" finished-at="2014-10-09T10:27:16Z">
+          <exception class="org.testng.SkipException">
+            <message>
+              <![CDATA[TestSetup Failed - Skipping test MPSConfigurationPage_TC3306]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.SkipException: TestSetup Failed - Skipping test MPSConfigurationPage_TC3306
+	at com.nbcuni.test.publisher.common.TestListeners.onTestStart(TestListeners.java:50)
+	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1904)
+	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1879)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:685)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.SkipException -->
+          <reporter-output>
+            <line>
+              <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/MPSConfigurationPage_TC3306_100914102716AM.png ]]>
+            </line>
+            <line>
+              <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/MPSConfigurationPage_TC3306_100914102716AM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/MPSConfigurationPage_TC3306_100914102716AM.png' height='500' width='500'/> </a>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- MPSConfigurationPage_TC3306 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSConfigurationPage@239f04af]" name="stopSelenium" is-config="true" duration-ms="3984" started-at="2014-10-09T10:27:16Z" finished-at="2014-10-09T10:27:20Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=MPSConfigurationPage_TC3306 status=SKIP method=MPSConfigurationPage.MPSConfigurationPage_TC3306()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSConfigurationPage@239f04af] output=Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/MPSConfigurationPage_TC3306_100914102716AM.png ]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopSelenium -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Advertising.MPS.MPSConfigurationPage -->
+      <class name="com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS">
+        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@63cc5f63]" name="startSelenium" is-config="true" duration-ms="2323" started-at="2014-10-09T10:27:07Z" finished-at="2014-10-09T10:27:10Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS.ImplementMPS_TC2901() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startSelenium -->
+        <test-method status="SKIP" signature="ImplementMPS_TC2901()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@63cc5f63]" name="ImplementMPS_TC2901" duration-ms="4" started-at="2014-10-09T10:27:10Z" finished-at="2014-10-09T10:27:10Z">
+          <exception class="org.testng.SkipException">
+            <message>
+              <![CDATA[TestSetup Failed - Skipping test ImplementMPS_TC2901]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.SkipException: TestSetup Failed - Skipping test ImplementMPS_TC2901
+	at com.nbcuni.test.publisher.common.TestListeners.onTestStart(TestListeners.java:50)
+	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1904)
+	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1879)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:685)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.SkipException -->
+          <reporter-output>
+            <line>
+              <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/ImplementMPS_TC2901_100914102710AM.png ]]>
+            </line>
+            <line>
+              <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/ImplementMPS_TC2901_100914102710AM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/ImplementMPS_TC2901_100914102710AM.png' height='500' width='500'/> </a>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- ImplementMPS_TC2901 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@63cc5f63]" name="stopSelenium" is-config="true" duration-ms="3959" started-at="2014-10-09T10:27:10Z" finished-at="2014-10-09T10:27:14Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=ImplementMPS_TC2901 status=SKIP method=ImplementMPS.ImplementMPS_TC2901()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@63cc5f63] output=Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/ImplementMPS_TC2901_100914102710AM.png ]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopSelenium -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS -->
+      <class name="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens">
+        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens@34a204f3]" name="startSelenium" is-config="true" duration-ms="1688" started-at="2014-10-09T10:27:20Z" finished-at="2014-10-09T10:27:22Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens.MPSSupportTokens_TC3641() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startSelenium -->
+        <test-method status="SKIP" signature="MPSSupportTokens_TC3641()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens@34a204f3]" name="MPSSupportTokens_TC3641" duration-ms="0" started-at="2014-10-09T10:27:22Z" finished-at="2014-10-09T10:27:22Z">
+          <exception class="org.testng.SkipException">
+            <message>
+              <![CDATA[TestSetup Failed - Skipping test MPSSupportTokens_TC3641]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.SkipException: TestSetup Failed - Skipping test MPSSupportTokens_TC3641
+	at com.nbcuni.test.publisher.common.TestListeners.onTestStart(TestListeners.java:50)
+	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1904)
+	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1879)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:685)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.SkipException -->
+          <reporter-output>
+            <line>
+              <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/MPSSupportTokens_TC3641_100914102722AM.png ]]>
+            </line>
+            <line>
+              <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/MPSSupportTokens_TC3641_100914102722AM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/MPSSupportTokens_TC3641_100914102722AM.png' height='500' width='500'/> </a>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- MPSSupportTokens_TC3641 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens@34a204f3]" name="stopSelenium" is-config="true" duration-ms="3942" started-at="2014-10-09T10:27:22Z" finished-at="2014-10-09T10:27:26Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=MPSSupportTokens_TC3641 status=SKIP method=MPSSupportTokens.MPSSupportTokens_TC3641()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens@34a204f3] output=Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/MPSSupportTokens_TC3641_100914102722AM.png ]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopSelenium -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens -->
+      <class name="com.nbcuni.test.publisher.tests.Advertising.MPS.AutomaticallyCreatedMPSAdSlots">
+        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.AutomaticallyCreatedMPSAdSlots@1bb40e7e]" name="startSelenium" is-config="true" duration-ms="2366" started-at="2014-10-09T10:27:07Z" finished-at="2014-10-09T10:27:10Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.nbcuni.test.publisher.tests.Advertising.MPS.AutomaticallyCreatedMPSAdSlots.AutomaticallyCreatedMPSAdSlots_TC4128() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startSelenium -->
+        <test-method status="SKIP" signature="AutomaticallyCreatedMPSAdSlots_TC4128()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.AutomaticallyCreatedMPSAdSlots@1bb40e7e]" name="AutomaticallyCreatedMPSAdSlots_TC4128" duration-ms="0" started-at="2014-10-09T10:27:10Z" finished-at="2014-10-09T10:27:10Z">
+          <exception class="org.testng.SkipException">
+            <message>
+              <![CDATA[TestSetup Failed - Skipping test AutomaticallyCreatedMPSAdSlots_TC4128]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.SkipException: TestSetup Failed - Skipping test AutomaticallyCreatedMPSAdSlots_TC4128
+	at com.nbcuni.test.publisher.common.TestListeners.onTestStart(TestListeners.java:50)
+	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1904)
+	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1879)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:685)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.SkipException -->
+          <reporter-output>
+            <line>
+              <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/AutomaticallyCreatedMPSAdSlots_TC4128_100914102710AM.png ]]>
+            </line>
+            <line>
+              <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/AutomaticallyCreatedMPSAdSlots_TC4128_100914102710AM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/AutomaticallyCreatedMPSAdSlots_TC4128_100914102710AM.png' height='500' width='500'/> </a>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- AutomaticallyCreatedMPSAdSlots_TC4128 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.AutomaticallyCreatedMPSAdSlots@1bb40e7e]" name="stopSelenium" is-config="true" duration-ms="3920" started-at="2014-10-09T10:27:10Z" finished-at="2014-10-09T10:27:14Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=AutomaticallyCreatedMPSAdSlots_TC4128 status=SKIP method=AutomaticallyCreatedMPSAdSlots.AutomaticallyCreatedMPSAdSlots_TC4128()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.AutomaticallyCreatedMPSAdSlots@1bb40e7e] output=Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/AutomaticallyCreatedMPSAdSlots_TC4128_100914102710AM.png ]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopSelenium -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Advertising.MPS.AutomaticallyCreatedMPSAdSlots -->
+      <class name="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SiteReportVisualization.SiteReportVisualization">
+        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SiteReportVisualization.SiteReportVisualization@64cd6dca]" name="startGridAndHub" is-config="true" duration-ms="8892" started-at="2014-10-09T10:26:58Z" finished-at="2014-10-09T10:27:07Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
+            </line>
           </reporter-output>
         </test-method> <!-- startGridAndHub -->
-        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@41a92be6]" name="startSelenium" is-config="true" duration-ms="2563" started-at="2014-10-08T20:31:23Z" finished-at="2014-10-08T20:31:25Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents.CountdownClockEvents_TC4887() throws java.lang.Exception]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="CountdownClockEvents_TC4887()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@41a92be6]" name="CountdownClockEvents_TC4887" duration-ms="185989" started-at="2014-10-08T20:31:25Z" finished-at="2014-10-08T20:34:31Z">
-          <reporter-output>
-            <line>
-              <![CDATA[STEP 1]]>
-            </line>
-            <line>
-              <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Login' button.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 2]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Modules' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to frame titled 'Modules'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Event Countdown' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for module filter titled 'Event Countdown' to be visible in module list.]]>
-            </line>
-            <line>
-              <![CDATA[Check the 'Event Countdown' check box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
-            </line>
-            <line>
-              <![CDATA[Switch back to the 'Modules' frame.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to frame titled 'Modules'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Home' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 3]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Configuration' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Media' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Event Countdown' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Event Countdown dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Sample nodes have already been created.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 4]]>
-            </line>
-            <line>
-              <![CDATA[STEP 5 AND 6]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter title Birthday Event.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Apply' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Edit' link for content item titled 'Birthday Event.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '10/09/2014 in the 'Date' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '12:34:33AM in the 'Time' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'http://www.amazon.com/s/ref=nb_sb_ss_c_0_8/190-0002947-5703141?url=search-alias%3Dtoys-and-games&field-keywords=birthday%20party%20supplies&sprefix=birthday%2Caps%2C168' in the 'Active Call to Action' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Active Image Select' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the select file frame.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the file path for file upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Upload' button.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Public Local Files' radio button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the file image 'HanSolo' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '#FF0000' in the 'Active Background Color' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'http://www.nbc.com' in the 'Expiry Call to Action' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Expiry Image Select' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the select file frame.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the file path for file upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Upload' button.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Public Local Files' radio button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the file image 'nbclogosmall' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '#00FFFF' in the 'Expiry Background Color' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 7]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Structure' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Blocks' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Select the block name 'Birthday Block' from the 'Content' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Select the block name 'Holiday Party Block' from the 'Content' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save Blocks' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The block settings have been updated.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 8]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Home' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 9]]>
-            </line>
-            <line>
-              <![CDATA[Verify the countdown timer is visible.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the countdown timer is counting down.]]>
-            </line>
-            <line>
-              <![CDATA[Assert that active img source of the event contains 'HanSolo'.]]>
-            </line>
-            <line>
-              <![CDATA[Assert the the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the active background color of '#FF0000' is visible for event with title 'Birthday Event'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the active link href of 'http://www.amazon.com/s/ref=nb_sb_ss_c_0_8/190-0002947-5703141?url=search-alias%3Dtoys-and-games&field-keywords=birthday%20party%20supplies&sprefix=birthday%2Caps%2C168' is visible for event with title 'Birthday Event'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 10]]>
-            </line>
-            <line>
-              <![CDATA[Verify the countdown timer is NOT counting down.]]>
-            </line>
-            <line>
-              <![CDATA[Assert that expiry img source of the event contains 'nbclogosmall'.]]>
-            </line>
-            <line>
-              <![CDATA[Assert the the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the expiry background color of '#00FFFF' is visible for event with title 'Birthday Event'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the expiry link href of 'http://www.nbc.com' is visible for event with title 'Birthday Event'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 11 AND 12]]>
-            </line>
-            <line>
-              <![CDATA[STEP 13]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Add content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Event Countdown' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Event Countdown dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '8c39f28e0dca417' in the 'Title' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '10/09/2014 in the 'Date' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '12:36:07AM in the 'Time' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'http://www.amazon.com/s/ref=nb_sb_ss_c_0_8/190-0002947-5703141?url=search-alias%3Dtoys-and-games&field-keywords=birthday%20party%20supplies&sprefix=birthday%2Caps%2C168' in the 'Active Call to Action' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Active Image Select' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the select file frame.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the file path for file upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Upload' button.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Public Local Files' radio button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the file image 'HanSolo' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Event Countdown dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '#FF0000' in the 'Active Background Color' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'http://www.nbc.com' in the 'Expiry Call to Action' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Expiry Image Select' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the select file frame.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the file path for file upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Upload' button.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Public Local Files' radio button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the file image 'nbclogosmall' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Event Countdown dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '#00FFFF' in the 'Expiry Background Color' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Event Countdown 8c39f28e0dca417 has been created.' is present.]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- CountdownClockEvents_TC4887 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@41a92be6]" name="stopSelenium" is-config="true" duration-ms="1210" started-at="2014-10-08T20:34:31Z" finished-at="2014-10-08T20:34:32Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=CountdownClockEvents_TC4887 status=SUCCESS method=CountdownClockEvents.CountdownClockEvents_TC4887()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@41a92be6] output=STEP 1]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@41a92be6]" name="startSelenium" is-config="true" duration-ms="1962" started-at="2014-10-08T20:34:32Z" finished-at="2014-10-08T20:34:34Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents.Cleanup() throws java.lang.Exception]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="Cleanup()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@41a92be6]" name="Cleanup" duration-ms="55161" started-at="2014-10-08T20:34:34Z" depends-on-methods="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents.CountdownClockEvents_TC4887" finished-at="2014-10-08T20:35:30Z">
-          <reporter-output>
-            <line>
-              <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Login' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Modules' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Event Countdown' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for module filter titled 'Event Countdown' to be visible in module list.]]>
-            </line>
-            <line>
-              <![CDATA[Uncheck the 'Event Countdown' module checkbox.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Uninstall' overlay tab.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll by '-500'.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Event Countdown' uninstall checkbox.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Uninstall' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Confirm uninstall dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'The following modules will be completely uninstalled from your site, and all data from these modules will be lost!' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'Event Countdown' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Uninstall' button to confirm.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- Cleanup -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@41a92be6]" name="stopSelenium" is-config="true" duration-ms="1307" started-at="2014-10-08T20:35:30Z" finished-at="2014-10-08T20:35:31Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=Cleanup status=SUCCESS method=CountdownClockEvents.Cleanup()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@41a92be6] output=Open url 'http://qa5.publisher7.com'.]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@41a92be6]" name="stopGridAndHub" is-config="true" duration-ms="0" started-at="2014-10-08T20:35:31Z" finished-at="2014-10-08T20:35:31Z">
+        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SiteReportVisualization.SiteReportVisualization@64cd6dca]" name="stopGridAndHub" is-config="true" duration-ms="0" started-at="2014-10-09T10:27:26Z" finished-at="2014-10-09T10:27:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopGridAndHub -->
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SiteReportVisualization.SiteReportVisualization -->
+    </test> <!-- All Web Tests -->
+  </suite> <!-- Publisher 7 Test Suite -->
 </testng-results>

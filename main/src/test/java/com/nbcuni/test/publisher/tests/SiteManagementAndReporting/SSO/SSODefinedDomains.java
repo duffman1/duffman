@@ -22,7 +22,7 @@ public class SSODefinedDomains extends ParentTest {
 	 * TEST CASE - TC3474
      * Steps - https://rally1.rallydev.com/#/14663927728d/detail/testcase/19851154396
 	 *************************************************************************************/
-	 @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"})
+	 @Test(retryAnalyzer = RerunOnFailure.class, groups = {"sensitive"})
 	 public void SSODefinedDomains_TC3474() throws Exception {
 		 
 		UserLogin userLogin = new UserLogin(webDriver);

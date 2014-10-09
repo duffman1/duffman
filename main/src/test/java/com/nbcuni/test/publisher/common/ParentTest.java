@@ -4,7 +4,9 @@ import com.nbcuni.test.publisher.common.Driver.*;
 import com.nbcuni.test.publisher.pageobjects.Overlay;
 import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.Taxonomy.Taxonomy;
+import com.nbcuni.test.publisher.tests.Setup.A1_TestSetup;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
@@ -15,6 +17,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
+
 import java.lang.reflect.Method;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -36,7 +39,13 @@ public class ParentTest {
     @BeforeSuite(alwaysRun = true)
     public void startGridAndHub() throws Exception {
 
-    	
+    	driverSetup = new DriverSetup();
+    	webDriver = driverSetup.WebDriverSetup(true);
+    	applib = new AppLib(webDriver);
+    	webDriver.manage().timeouts().pageLoadTimeout(config.getConfigValueInt("PageLoadWaitTime"), TimeUnit.SECONDS);
+        webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
+    	A1_TestSetup testSetup = new A1_TestSetup();
+    	abortTestSuite = testSetup.TestSetup_Test(webDriver, applib);
     }
     
     @BeforeMethod(alwaysRun = true)

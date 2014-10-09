@@ -1,4 +1,4 @@
-<suite name="Publisher 7 Test Suites">
+<suite name="Publisher 7 Test Suite" parallel="classes" preserve-order="true" thread-count="3">
 
 	<!--RUNTIME CONFIG-->
 	<parameter name="AppURL" value="http://qa5.publisher7.com"></parameter>
@@ -34,8 +34,8 @@
   	<parameter name="SSOEmail" value="FID.Publisher@nbcuni.com"></parameter>
   	
   	<!--RALLY CONFIG-->
-  	<parameter name="RallyUsername" value="brandon.clark@nbcuni.com"></parameter>
-  	<parameter name="RallyPassword" value="tufNewcyd4#"></parameter>
+  	<parameter name="RallyUsername" value=""></parameter>
+  	<parameter name="RallyPassword" value=""></parameter>
   	<parameter name="RallyUrl" value="https://rally1.rallydev.com"></parameter>
   	<parameter name="RallyWorkspace" value="Digital Products"></parameter>
   	<parameter name="RallyProject" value="Publisher 7"></parameter>
@@ -82,9 +82,28 @@
     	<listener class-name="com.nbcuni.test.publisher.common.SuiteListeners" />
   	</listeners>
   	
-  	<!--SUITE EXECUTION QUEUE-->
+  	<!--TEST EXECUTION QUEUE-->
+  	<test verbose="1" name="All Web Tests" annotations="JDK">
+
+		<!-- Enter group name for specific test scripts. options:
+		 "full", "smoke", "mpx", "certify" "mps", "sensitive", "sikuli"
+		-->
+		<groups>
+	 		<run>
+	 			<include name="full"/>
+	 			<exclude name="sensitive"/>
+	 		</run>
+		</groups>
+
+		<packages>
+			<package name="com.nbcuni.test.publisher.tests.*" />
+		</packages>
+	</test>
+  	
+  	<!--SUITE EXECUTION QUEUE
   	<suite-files>
     	<suite-file path="TestNGConsecutiveSuite.xml" />
     	<suite-file path="TestNGConcurrentSuite.xml" />
     </suite-files>
+    -->
 </suite>

@@ -22,7 +22,7 @@ public class StickyButtons extends ParentTest{
      * Step 8 - Clean up and disable sticky edit action module.
      * @throws Throwable No Return values are needed
      *************************************************************************************/
-    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"})
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"sensitive"})
     public void StickyButtons_Test() throws Exception{
          
         	//Step 1
