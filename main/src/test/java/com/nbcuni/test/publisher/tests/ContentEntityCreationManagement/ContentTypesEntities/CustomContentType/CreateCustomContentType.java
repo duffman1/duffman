@@ -14,7 +14,7 @@ public class CreateCustomContentType extends ParentTest{
      * TEST CASE - TC1049
      * Steps - https://rally1.rallydev.com/#/14663927728ud/detail/testcase/17441495573
      *************************************************************************************/
-    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "smoke", "certify"})
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "certify"})
     public void CreateCustomContentType_TC1049() throws Exception{
         
         	//Step 1

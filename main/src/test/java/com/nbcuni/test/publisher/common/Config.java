@@ -55,6 +55,33 @@ public class Config {
         return value;
 	}
 	
+	private List<String> getXPathValuesFromFile(String fileLocation, String xpathQuery) {
+		
+		List<String> allValues = new ArrayList<String>();
+    	try {
+    		DocumentBuilderFactory xmlFactory = DocumentBuilderFactory.newInstance();
+    		DocumentBuilder docBuilder = xmlFactory.newDocumentBuilder();
+    	
+    		XPathFactory xpathFact = XPathFactory.newInstance();
+    		XPath xpath = xpathFact.newXPath();
+    	
+    		File configFile = new File(fileLocation);
+    		
+    		Document configXmlDoc = docBuilder.parse(configFile);
+    		NodeList nodeList = (NodeList) xpath.evaluate(xpathQuery, configXmlDoc, XPathConstants.NODESET);
+    	
+    		int length = nodeList.getLength();
+    		for( int i=0; i<length; i++) {
+    			Attr attr = (Attr) nodeList.item(i);
+    			allValues.add(attr.toString());
+    		}
+    	}
+    	catch (Exception e) {
+    		Assert.fail("Failed to get value from test config");
+    	}
+    		return allValues;
+    }
+	
 	public String getConfigValueString(String parameterName) {
 
 		String parameterValue = "";
@@ -116,42 +143,41 @@ public class Config {
 
     }
     
-    public String getIncludedGroups() {
+    public List<String> getIncludedGroups() {
 
-        return this.getXPathValueFromFile(this.getConcurrentSuiteFileLocation(), "//groups/run/include/@name");
-
+        List<String> allIncludedGroups = this.getXPathValuesFromFile(this.getConfigFileLocation(), "//groups/run/include/@name");
+    	List<String> allIncudedGroupsCleaned = new ArrayList<String>();
+    	
+    	for (String group: allIncludedGroups) {
+    		allIncudedGroupsCleaned.add(group.replace("name=", "").replace("\"", ""));
+    	}
+    	
+    	return allIncudedGroupsCleaned;
     }
     
-    public String getExcludedGroups() {
+    public List<String> getExcludedGroups() {
 
-        return this.getXPathValueFromFile(this.getConcurrentSuiteFileLocation(), "//groups/run/exclude/@name");
-
+        List<String> allExcludedGroups = this.getXPathValuesFromFile(this.getConfigFileLocation(), "//groups/run/exclude/@name");
+    	List<String> allExcludedGroupsCleaned = new ArrayList<String>();
+    	
+    	for (String group: allExcludedGroups) {
+    		allExcludedGroupsCleaned.add(group.replace("name=", "").replace("\"", ""));
+    	}
+    	
+    	return allExcludedGroupsCleaned;
     }
-
+    
     public List<String> getAllLocalTests() {
-    	//TODO - clean this up, some redundant code.
-    	List<String> allLocalTests = new ArrayList<String>();
-    	try {
-    		DocumentBuilderFactory xmlFactory = DocumentBuilderFactory.newInstance();
-    		DocumentBuilder docBuilder = xmlFactory.newDocumentBuilder();
     	
-    		XPathFactory xpathFact = XPathFactory.newInstance();
-    		XPath xpath = xpathFact.newXPath();
+    	List<String> allLocalTests = this.getXPathValuesFromFile(this.getConfigFileLocation(), "//class[@runslocal='true']/@name");
+    	List<String> allLocalTestsCleaned = new ArrayList<String>();
     	
-    		File configFile = new File(this.getConfigFileLocation());
-    		
-    		Document configXmlDoc = docBuilder.parse(configFile);
-    		NodeList nodeList = (NodeList) xpath.evaluate("//class[@runslocal='true']/@name", configXmlDoc, XPathConstants.NODESET);
+    	for (String localTest: allLocalTests) {
+    		allLocalTestsCleaned.add(localTest.replace("name=", "").replace("\"", ""));
+    	}
     	
-    		int length = nodeList.getLength();
-    		for( int i=0; i<length; i++) {
-    			Attr attr = (Attr) nodeList.item(i);
-    			allLocalTests.add(attr.toString().replace("name=", "").replace("\"", ""));
-    		}
-    	}
-    	catch (Exception e) {
-    		Assert.fail("Failed to get value from test config");
-    	}
-    		return allLocalTests;
-    	}
+    	return allLocalTestsCleaned;
+    }
+    
+    
 }

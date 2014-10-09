@@ -36,7 +36,7 @@ public class ScheduleToPublishContentByDateTime extends ParentTest {
 	* Step 11 - Verify Schedule table for scheduled revision and Run Cron and verify that published revision displayed under revision tab<br>
 	* @throws Throwable No Return values are needed
 	*************************************************************************************/
-    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "smoke"})
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"})
         public void ScheduleToPublishContentByDateTime_Test() throws Exception{
 
         //Step 1

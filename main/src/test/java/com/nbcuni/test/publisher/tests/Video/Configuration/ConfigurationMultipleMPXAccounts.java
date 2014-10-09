@@ -17,7 +17,7 @@ public class ConfigurationMultipleMPXAccounts extends ParentTest{
      * TEST CASE - TC1073
      * Steps - https://rally1.rallydev.com/#/14663927728d/detail/testcase/17442647774
      *************************************************************************************/
-    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "smoke", "mpx"})
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "mpx"})
     public void ConfigurationMultipleMPXAccounts_TC1073() throws Exception{
     	
     	//Step 1

@@ -17,7 +17,7 @@ public class CreateTVEpisode extends ParentTest{
      * TEST CASE - TC1045
      * Steps - https://rally1.rallydev.com/#/14663927728d/detail/testcase/17441340536
      *************************************************************************************/
-    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "smoke"})
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"})
     public void CreateTVEpisode_TC1045() throws Exception {
          
         	//Step 1

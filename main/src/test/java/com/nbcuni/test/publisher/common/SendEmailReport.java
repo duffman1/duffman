@@ -65,7 +65,7 @@ public class SendEmailReport extends ParentTest{
             }
             
             String excludedGroupTxt = "";
-            if (!config.getExcludedGroups().equals("")) {
+            if (!config.getExcludedGroups().isEmpty()) {
             	excludedGroupTxt = "<br />Excluded test group(s) = " + config.getExcludedGroups();
             }
             

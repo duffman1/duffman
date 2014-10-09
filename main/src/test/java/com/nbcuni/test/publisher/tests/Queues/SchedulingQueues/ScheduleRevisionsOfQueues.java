@@ -31,7 +31,7 @@ public class ScheduleRevisionsOfQueues extends ParentTest{
      * Step 9 - Click Schedule<br>
      * @throws Throwable No Return values are needed
      *************************************************************************************/
-    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "smoke" })
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full" })
     public void ScheduleRevisionsOfQueues_Test() throws Exception{
     	
         //Step 1

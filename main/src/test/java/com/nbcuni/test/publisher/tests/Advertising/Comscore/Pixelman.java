@@ -14,7 +14,7 @@ public class Pixelman extends ParentTest {
      * TEST CASE - TC1155
      * Steps - https://rally1.rallydev.com/#/14663927728ud/detail/testcase/17533191589
      *************************************************************************************/
-    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "smoke"})
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"})
     public void Pixelman_TC1155() throws Exception{
         
     	//Step 1

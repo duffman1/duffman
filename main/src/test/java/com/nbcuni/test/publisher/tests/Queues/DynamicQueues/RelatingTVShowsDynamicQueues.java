@@ -23,7 +23,7 @@ public class RelatingTVShowsDynamicQueues extends ParentTest{
      * TEST CASE - TC4389
      * Steps - https://rally1.rallydev.com/#/14663927728d/detail/testcase/20942343684
      *************************************************************************************/
-    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "smoke", "certify"})
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "certify"})
     public void RelatingTVShowsDynamicQueues_TC4389() throws Exception{
     	
     	webDriver.manage().timeouts().pageLoadTimeout(200, TimeUnit.SECONDS);

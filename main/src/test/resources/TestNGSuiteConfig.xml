@@ -1,7 +1,7 @@
 <suite name="Publisher 7 Test Suite" parallel="classes" preserve-order="true" thread-count="3">
 
 	<!--RUNTIME CONFIG-->
-	<parameter name="AppURL" value="http://qa5.publisher7.com"></parameter>
+	<parameter name="AppURL" value="http://acc-test.publisher7.com"></parameter>
 	<parameter name="Browser" value="chrome"></parameter>
 	<parameter name="Admin1Username" value="admin@publisher.nbcuni.com"></parameter>
 	<parameter name="Admin1Password" value="pa55word"></parameter>
@@ -85,13 +85,21 @@
   	<!--TEST EXECUTION QUEUE-->
   	<test verbose="1" name="All Web Tests" annotations="JDK">
 
-		<!-- Enter group name for specific test scripts. options:
-		 "full", "smoke", "mpx", "certify" "mps", "sensitive", "sikuli"
+		<!-- TEST GROUPS
+		 "full" - every test in the suite except the sensitive test group.
+		 "mpx" - every mpx video test.
+		 "certify" - a subset of the full test group that is required to certify a build.
+		 "mps" - every mps advertisement test.
+		 "sensitive" - only those tests that CANNOT run in parallel to anything else.
+		 "sikuli" - those tests that leverage sikuli image recognition in some capacity.
+		 "broken" - those tests that are broken and safe to ignore until they can be resolved.
 		-->
 		<groups>
 	 		<run>
 	 			<include name="full"/>
-	 			<exclude name=""/>
+	 			<include name="mps"/>
+	 			<exclude name="broken"/>
+	 			<exclude name="mpx"/>
 	 		</run>
 		</groups>
 

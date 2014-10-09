@@ -26,7 +26,7 @@ public class CanonicalURL extends ParentTest{
      * TEST CASE - TC1080
      * Steps - https://rally1.rallydev.com/#/14663927728ud/detail/testcase/17442651858
      *************************************************************************************/
-    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "smoke", "mpx"})
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "mpx"})
     public void CanonicalURL_TC1080() throws Exception {
 
     	Reporter.log("STEP 1");

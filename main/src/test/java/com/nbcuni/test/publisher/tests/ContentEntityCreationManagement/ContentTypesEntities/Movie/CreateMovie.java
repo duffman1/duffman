@@ -14,7 +14,7 @@ public class CreateMovie extends ParentTest{
      * TEST CASE - TC1043
      * Steps - https://rally1.rallydev.com/#/14663927728d/detail/testcase/17441339620
      *************************************************************************************/
-    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "smoke" })
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full" })
     public void CreateMovie_TC1043() throws Exception {
          
         	//Step 1

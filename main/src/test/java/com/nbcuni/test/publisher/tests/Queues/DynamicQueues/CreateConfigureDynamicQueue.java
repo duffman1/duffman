@@ -22,7 +22,7 @@ public class CreateConfigureDynamicQueue extends ParentTest{
      * TEST CASE - TC4197
      * Steps - https://rally1.rallydev.com/#/14663927728d/detail/testcase/20794225692
      *************************************************************************************/
-    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "smoke" })
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full" })
     public void CreateConfigureDynamicQueue_TC4197() throws Exception{
     	
     	webDriver.manage().timeouts().pageLoadTimeout(200, TimeUnit.SECONDS);

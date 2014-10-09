@@ -13,7 +13,7 @@ public class Z1_TestCleanup extends ParentTest{
      * Test executes some common teardown logic after the full suite execution
      * @throws Throwable No Return values are needed
      *************************************************************************************/
-    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "smoke", "mpx", "certify"})
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "mpx", "certify"})
     public void TestCleanup_Test() throws Exception{
          
         	//login

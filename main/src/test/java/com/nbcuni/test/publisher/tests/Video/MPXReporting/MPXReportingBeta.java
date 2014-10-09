@@ -19,7 +19,7 @@ public class MPXReportingBeta extends ParentTest{
      * TEST CASE - TC3085
      * Steps - https://rally1.rallydev.com/#/14663927728d/detail/testcase/18695457554
      *************************************************************************************/
-    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "smoke", "mpx"})
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "mpx"})
     public void MPXReportingBeta_TC3085() throws Exception {
 
     	if (config.getConfigValueString("DrushIngestion").equals("false")) {

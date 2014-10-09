@@ -53,7 +53,7 @@ public class SendTestRunStartEmail {
             }
             
             String excludedGroupTxt = ".";
-            if (!config.getExcludedGroups().equals("")) {
+            if (!config.getExcludedGroups().isEmpty()) {
             	excludedGroupTxt = " and excludes tests assigned to the \"" + config.getExcludedGroups() + "\" test group(s).";
             }
             
