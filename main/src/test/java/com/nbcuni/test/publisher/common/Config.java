@@ -138,24 +138,14 @@ public class Config {
     		XPathFactory xpathFact = XPathFactory.newInstance();
     		XPath xpath = xpathFact.newXPath();
     	
-    		File consecutiveFile = new File(this.getConsecutiveSuiteFileLocation());
-    		File concurrentFile = new File(this.getConcurrentSuiteFileLocation());
+    		File configFile = new File(this.getConfigFileLocation());
+    		
+    		Document configXmlDoc = docBuilder.parse(configFile);
+    		NodeList nodeList = (NodeList) xpath.evaluate("//class[@runslocal='true']/@name", configXmlDoc, XPathConstants.NODESET);
     	
-    		Document consecutiveXmlDoc = docBuilder.parse(consecutiveFile);
-    		NodeList consecutiveNodeList = (NodeList) xpath.evaluate("//class[@runslocal='true']/@name", consecutiveXmlDoc, XPathConstants.NODESET);
-    	
-    		int length = consecutiveNodeList.getLength();
+    		int length = nodeList.getLength();
     		for( int i=0; i<length; i++) {
-    			Attr attr = (Attr) consecutiveNodeList.item(i);
-    			allLocalTests.add(attr.toString().replace("name=", "").replace("\"", ""));
-    		}
-    	
-    		Document concurrentXmlDoc = docBuilder.parse(concurrentFile);
-    		NodeList concurrentNodeList = (NodeList) xpath.evaluate("//class[@runslocal='true']/@name", concurrentXmlDoc, XPathConstants.NODESET);
-    	
-    		int length2 = concurrentNodeList.getLength();
-    		for( int i=0; i<length2; i++) {
-    			Attr attr = (Attr) concurrentNodeList.item(i);
+    			Attr attr = (Attr) nodeList.item(i);
     			allLocalTests.add(attr.toString().replace("name=", "").replace("\"", ""));
     		}
     	}

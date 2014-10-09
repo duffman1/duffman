@@ -115,7 +115,7 @@ public class SSODefinedDomains extends ParentTest {
 		
 	}
 	 
-	@Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"}, dependsOnMethods = {"SSODefinedDomains_TC3474"}, alwaysRun=true)
+	@Test(retryAnalyzer = RerunOnFailure.class, groups = {"sensitive"}, dependsOnMethods = {"SSODefinedDomains_TC3474"}, alwaysRun=true)
 	public void Cleanup() throws Exception {
 		if (testSuccessful == false) {
 			

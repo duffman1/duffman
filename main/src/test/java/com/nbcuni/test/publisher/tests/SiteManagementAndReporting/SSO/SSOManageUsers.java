@@ -119,7 +119,7 @@ public class SSOManageUsers extends ParentTest {
 		
 	}
 	 
-	 @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"}, dependsOnMethods = {"SSOManageUsers_TC3853"}, alwaysRun=true)
+	 @Test(retryAnalyzer = RerunOnFailure.class, groups = {"sensitive"}, dependsOnMethods = {"SSOManageUsers_TC3853"}, alwaysRun=true)
 		public void Cleanup() throws Exception {
 			if (testSuccessful == false) {
 				
