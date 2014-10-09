@@ -16,7 +16,7 @@ public class NoWhiteScreen extends ParentTest{
      * TEST CASE - TC4147
      * Steps - https://rally1.rallydev.com/#/14663927728d/detail/testcase/20725959397
      *************************************************************************************/
-    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"})
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "broken"})
     public void NoWhiteScreen_TC4147() throws Exception {
     	
     	Reporter.log("STEP 1");

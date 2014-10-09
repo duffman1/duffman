@@ -17,8 +17,8 @@
   	<parameter name="PathToReports" value="/test-output/reports/"></parameter>
   	<parameter name="PathToScreenshots" value="/test-output/screenshots/"></parameter>
   	<parameter name="PathToHarReports" value="/test-output/"></parameter>
-  	<parameter name="AbortSuiteOnSetupFailure" value="true"></parameter>
-  	<parameter name="SendReportEmailAddress" value="brandon.clark@nbcuni.com, brandon.clark@nbcuni.com"></parameter>
+  	<parameter name="AbortSuiteOnSetupFailure" value="false"></parameter>
+  	<parameter name="SendReportEmailAddress" value="pete.duff@nbcuni.com, brandon.clark@nbcuni.com"></parameter>
   	
   	<!--MOBILE CONFIG-->
 	<parameter name="RunMobile" value="false"></parameter>
@@ -34,8 +34,8 @@
   	<parameter name="SSOEmail" value="FID.Publisher@nbcuni.com"></parameter>
   	
   	<!--RALLY CONFIG-->
-  	<parameter name="RallyUsername" value=""></parameter>
-  	<parameter name="RallyPassword" value=""></parameter>
+  	<parameter name="RallyUsername" value="brandon.clark@nbcuni.com"></parameter>
+  	<parameter name="RallyPassword" value="tufNewcyd4#"></parameter>
   	<parameter name="RallyUrl" value="https://rally1.rallydev.com"></parameter>
   	<parameter name="RallyWorkspace" value="Digital Products"></parameter>
   	<parameter name="RallyProject" value="Publisher 7"></parameter>
@@ -97,9 +97,7 @@
 		<groups>
 	 		<run>
 	 			<include name="full"/>
-	 			<include name="mps"/>
 	 			<exclude name="broken"/>
-	 			<exclude name="mpx"/>
 	 		</run>
 		</groups>
 
