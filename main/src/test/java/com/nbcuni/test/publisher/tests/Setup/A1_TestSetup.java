@@ -91,7 +91,8 @@ public class A1_TestSetup {
             	}
             	bufferedReader.close();
                 
-                for (String module : requiredModules) {
+                for (String module : Arrays.asList("Field UI", "Administration menu", 
+                		"Administration menu Adminimal Theme", "Pub Post", "Logo Manager")) {
                 	if (!modules.IsModuleEnabled(module)) {
                 		modules.EnterFilterName(module);
                         modules.EnableModule(module);
@@ -101,7 +102,8 @@ public class A1_TestSetup {
                 //disable necessary modules
                 for (String module : Arrays.asList("Sticky Edit Actions", "Acquia Purge", 
                 		"ImageField Focus", "Database logging", "MPS", 
-                		"Dynamic Queue Workbench", "Dynamic Queue", "Event Countdown", "Mobile Friendly Navigation Toolbar")) {
+                		"Dynamic Queue Workbench", "Dynamic Queue", "Event Countdown", 
+                		"Mobile Friendly Navigation Toolbar", "TVE Auth Example", "Pub SURF Example")) {
                 	if (modules.IsModuleEnabled(module)) {
                 		modules.EnterFilterName(module);
                     	modules.DisableModule(module);

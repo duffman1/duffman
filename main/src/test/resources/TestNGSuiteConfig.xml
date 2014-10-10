@@ -1,4 +1,4 @@
-<suite name="Publisher 7 Test Suite" parallel="classes" preserve-order="true" thread-count="3">
+<suite name="Publisher 7 Test Suite" parallel="classes" preserve-order="true" thread-count="4">
 
 	<!--RUNTIME CONFIG-->
 	<parameter name="AppURL" value="http://acc-test.publisher7.com"></parameter>
@@ -8,18 +8,18 @@
 	<parameter name="ReRunOnFailure" value="true"></parameter>
 	<parameter name="ReRunOnFailureCount" value="3"></parameter>
 	<parameter name="RunRemotely" value="true"></parameter>
-	
-  	<!--REPORT CONFIG-->
-  	<parameter name="SendReportAutoEmails" value="true"></parameter>
+	<parameter name="SendReportAutoEmails" value="true"></parameter>
   	<parameter name="UploadReportToRally" value="true"></parameter>
   	<parameter name="UpdateIndividualRallyTCs" value="true"></parameter>
   	<parameter name="GithubUpdatePRResults" value="true"></parameter>
-  	<parameter name="PathToReports" value="/test-output/reports/"></parameter>
-  	<parameter name="PathToScreenshots" value="/test-output/screenshots/"></parameter>
-  	<parameter name="PathToHarReports" value="/test-output/"></parameter>
   	<parameter name="RunSetupScripts" value="true"></parameter>
   	<parameter name="AbortSuiteOnSetupFailure" value="true"></parameter>
   	<parameter name="SendReportEmailAddress" value="brandon.clark@nbcuni.com, brandon.clark@nbcuni.com"></parameter>
+  	
+  	<!--REPORT CONFIG-->
+  	<parameter name="PathToReports" value="/test-output/reports/"></parameter>
+  	<parameter name="PathToScreenshots" value="/test-output/screenshots/"></parameter>
+  	<parameter name="PathToHarReports" value="/test-output/"></parameter>
   	
   	<!--MOBILE CONFIG-->
 	<parameter name="RunMobile" value="false"></parameter>
@@ -54,7 +54,7 @@
   	<parameter name="MPXPassword" value="Pa55word"></parameter>
   	<parameter name="MPXVideoUploadPause" value="5000"></parameter>
   	<parameter name="MPXAssetBufferPause" value="0"></parameter>
-  	<parameter name="DrushIngestion" value="true"></parameter>
+  	<parameter name="DrushIngestion" value="false"></parameter>
   	
   	<!--SIKULI CONFIG-->
   	<parameter name="PathToSikuliImages" value="/src/test/java/com/nbcuni/test/publisher/lib/sikuli/images/"></parameter>

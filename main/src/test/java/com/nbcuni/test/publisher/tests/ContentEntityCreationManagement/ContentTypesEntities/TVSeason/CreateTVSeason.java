@@ -28,10 +28,9 @@ public class CreateTVSeason extends ParentTest{
         	
         //Step 2
         taxonomy.NavigateSite("Content>>Add content>>TV Season");
-        overlay.SwitchToFrame("Create TV Season");
+        overlay.SwitchToActiveFrame();
         
         //Step 3
-        ContentParent contentParent = new ContentParent(webDriver);
         contentParent.VerifyRequiredFields(Arrays.asList("Title", "Season", "Synopsis"));
         PublishingOptions publishingOptions = new PublishingOptions(webDriver);
         publishingOptions.ClickPublishingOptionsLnk();
@@ -44,13 +43,13 @@ public class CreateTVSeason extends ParentTest{
         basicInformation.EnterTitle(tvSeasonTitle);
         basicInformation.EnterSeasonNumber("1");
         basicInformation.EnterSynopsis();
-        overlay.SwitchToFrame("Create TV Season");
+        overlay.SwitchToActiveFrame();
         
         //Step 5
         basicInformation.ClickCoverSelectBtn();
         SelectFile selectFile = new SelectFile(webDriver);
         selectFile.SelectDefaultCoverImg();
-    	overlay.SwitchToFrame("Create TV Season");
+    	overlay.SwitchToActiveFrame();
     	
     	//Step 6
     	publishingOptions.ClickPublishingOptionsLnk();

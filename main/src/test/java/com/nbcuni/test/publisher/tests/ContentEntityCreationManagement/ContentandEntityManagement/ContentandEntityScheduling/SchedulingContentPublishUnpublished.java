@@ -12,10 +12,8 @@ import com.nbcuni.test.publisher.pageobjects.Content.Revisions;
 import com.nbcuni.test.publisher.pageobjects.Content.SearchFor;
 import com.nbcuni.test.publisher.pageobjects.Content.WorkBench;
 import com.nbcuni.test.publisher.pageobjects.Structure.Queues.Queues.ScheduleQueue;
-
 import org.testng.Reporter;
 import org.testng.annotations.Test;
-
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Calendar;
@@ -28,7 +26,7 @@ public class SchedulingContentPublishUnpublished extends ParentTest {
 	* TEST CASE - TC2159
     * Steps - https://rally1.rallydev.com/#/14663927728ud/detail/testcase/18309480903
 	*************************************************************************************/
-    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "certify", "mpx"})
+	@Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "certify", "mpx"})
         public void SchedulingContentPublishUnpublished_TC2159() throws Exception{
 
         Reporter.log("STEP 1");
@@ -55,7 +53,7 @@ public class SchedulingContentPublishUnpublished extends ParentTest {
         
         Reporter.log("STEP 6");
         Calendar cal1MinuteFuture = Calendar.getInstance();
-        cal1MinuteFuture.add(Calendar.SECOND, 69);
+        cal1MinuteFuture.add(Calendar.MINUTE, 1);
     	Date date1MinuteFuture = cal1MinuteFuture.getTime();
     	SimpleDateFormat pub7DateFormat = new SimpleDateFormat("MM/dd/yyyy");
     	pub7DateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
@@ -83,7 +81,7 @@ public class SchedulingContentPublishUnpublished extends ParentTest {
         SearchFor searchFor = new SearchFor(webDriver);
         SimpleDateFormat pub7DateFormatEst = new SimpleDateFormat("MM/dd/yyyy");
         Date currentDate = new Date();
-    	String previouslyScheduledTitle = "futurePost" + pub7DateFormatEst.format(currentDate);
+        String previouslyScheduledTitle = "futurePost" + pub7DateFormatEst.format(currentDate);
         searchFor.EnterTitle(previouslyScheduledTitle);
         searchFor.ClickApplyBtn();
         overlay.switchToDefaultContent(true);
