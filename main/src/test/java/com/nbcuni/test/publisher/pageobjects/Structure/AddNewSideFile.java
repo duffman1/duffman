@@ -1,7 +1,6 @@
 package com.nbcuni.test.publisher.pageobjects.Structure;
 
 import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
@@ -10,8 +9,7 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Reporter;
-
-import com.nbcuni.test.publisher.common.AppLib;
+import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.pageobjects.Overlay;
 import com.nbcuni.test.publisher.common.Driver.Driver;
 
@@ -25,15 +23,15 @@ import com.nbcuni.test.publisher.common.Driver.Driver;
 public class AddNewSideFile {
 
 	private Driver webDriver;
-	private AppLib applib;
+	private Config config;
 	private Overlay overlay;
 	
     //PAGE OBJECT CONSTRUCTOR
-    public AddNewSideFile(Driver webDriver, AppLib applib) {
+    public AddNewSideFile(Driver webDriver) {
     	this.webDriver = webDriver;
-    	this.applib = applib;
+    	config = new Config();
     	PageFactory.initElements(webDriver, this);
-    	overlay = new Overlay(webDriver, applib);
+    	overlay = new Overlay(webDriver);
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -114,7 +112,7 @@ public class AddNewSideFile {
     		overlay.SwitchToActiveFrame();
     		Save_Btn.click();
     	}
-    	webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
+    	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
     }
     
     public void ClickRevertBtn() throws Exception {

@@ -44,10 +44,10 @@ public class DefaultPlayerOptionsVerification extends ParentTest{
 
     	//Step 1
     	UserLogin userLogin = applib.openApplication();
-    	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+    	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         //MPX Configuration required
-    	Settings settings = new Settings(webDriver, applib);
+    	Settings settings = new Settings(webDriver);
     	settings.ConfigureMPXIfNeeded();
     	
         taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
@@ -84,13 +84,13 @@ public class DefaultPlayerOptionsVerification extends ParentTest{
         		//Step 17 - N/A
         		
         		//Step 18
-        		SearchFor searchFor = new SearchFor(webDriver, applib);
+        		SearchFor searchFor = new SearchFor(webDriver);
         		searchFor.EnterTitle("AutomationDefault");
         		searchFor.ClickApplyBtn();
         		searchFor.ClickSearchTitleLnk("AutomationDefault");
         		
         		//Step 19
-        		WorkBench workBench = new WorkBench(webDriver, applib);
+        		WorkBench workBench = new WorkBench(webDriver);
         		workBench.VerifyMPXPlayerPresent();
         		
         		//Test Case TC1812

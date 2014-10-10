@@ -27,10 +27,10 @@ public class EntityReferenceVerification extends ParentTest{
     	
     	//Setup
     	UserLogin userLogin = applib.openApplication();
-    	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+    	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         //Setup
-    	Settings settings = new Settings(webDriver, applib);
+    	Settings settings = new Settings(webDriver);
     	settings.ConfigureMPXIfNeeded();
     	
         taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
@@ -44,7 +44,7 @@ public class EntityReferenceVerification extends ParentTest{
         	overlay.ClickCloseOverlayLnk();
         	taxonomy.NavigateSite("Structure>>Content types>>Add content type");
         	overlay.SwitchToActiveFrame();
-        	ContentTypes contentTypes = new ContentTypes(webDriver, applib);
+        	ContentTypes contentTypes = new ContentTypes(webDriver);
             String contentTypeName = "MPX" + random.GetCharacterString(10);
             contentTypes.EnterName(contentTypeName);
             contentTypes.ClickSaveAddFieldsBtn();
@@ -370,7 +370,7 @@ public class EntityReferenceVerification extends ParentTest{
         		//Step 35
         		taxonomy.NavigateSite("Content>>Add content>>" + contentTypeName);
         		overlay.SwitchToActiveFrame();
-        		ErrorChecking errorChecking = new ErrorChecking(webDriver, applib);
+        		ErrorChecking errorChecking = new ErrorChecking(webDriver);
         		errorChecking.VerifyNoMessageErrorsPresent();
         		
         		//Steps 36 and 37
@@ -385,7 +385,7 @@ public class EntityReferenceVerification extends ParentTest{
         		basicInformation.EnterTitle(title);
         		basicInformation.SelectCustomField(mpxVideoEntityFieldTitle, "AutomationDefault");
         		basicInformation.ClickCustomBtn(mpxVideoFileFieldTitle);
-        		SelectFile selectFile = new SelectFile(webDriver, applib);
+        		SelectFile selectFile = new SelectFile(webDriver);
         		selectFile.SwitchToSelectFileFrm();
         		selectFile.EnterTitle("AutomationDefault");
         		selectFile.ClickApplyBtn();

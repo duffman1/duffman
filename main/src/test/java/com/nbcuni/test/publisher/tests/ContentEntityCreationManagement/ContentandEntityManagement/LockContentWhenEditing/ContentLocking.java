@@ -30,7 +30,7 @@ public class ContentLocking extends ParentTest {
          
 		//Step 1
 		UserLogin userLogin = applib.openApplication();
-		userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+		userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
 	  
 		//Step 2
 	    taxonomy.NavigateSite("Configuration>>Content authoring>>Content lock");
@@ -44,7 +44,7 @@ public class ContentLocking extends ParentTest {
 	    //Step 3 N/A
 	      
 	    //Step 4
-	    AddUser addUser = new AddUser(webDriver, applib);
+	    AddUser addUser = new AddUser(webDriver);
 	    String userName = addUser.AddDefaultUser(Arrays.asList("editor"), false);
 	    taxonomy.NavigateSite("People>>Permissions>>Roles");  
 	    overlay.SwitchToActiveFrame();
@@ -64,13 +64,13 @@ public class ContentLocking extends ParentTest {
 	    userLogin.Login(userName, "pa55word");
 	        
 	    //Step 6
-	    CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver, applib);
+	    CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver);
 	    String postTitle = createDefaultContent.Post("Draft");
 	        
 	    //Step 7
 	    taxonomy.NavigateSite("Content");
 	    overlay.SwitchToActiveFrame();
-	    Content content = new Content(webDriver, applib);
+	    Content content = new Content(webDriver);
 	    content.ClickEditMenuBtn(postTitle);
 	    overlay.SwitchToActiveFrame();
 	    

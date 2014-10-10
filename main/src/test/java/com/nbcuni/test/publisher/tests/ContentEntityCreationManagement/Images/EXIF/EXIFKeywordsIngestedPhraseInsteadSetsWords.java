@@ -19,7 +19,7 @@ public class EXIFKeywordsIngestedPhraseInsteadSetsWords extends ParentTest{
          
         	//Step 1
         	UserLogin userLogin = applib.openApplication();
-        	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+        	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
             //Step 1a
             taxonomy.NavigateSite("Configuration>>Media>>Simple EXIF/IPTC Mappings");
@@ -40,10 +40,10 @@ public class EXIFKeywordsIngestedPhraseInsteadSetsWords extends ParentTest{
             //Step 2
             taxonomy.NavigateSite("Content>>Files");
             overlay.SwitchToActiveFrame();
-            Content content = new Content(webDriver, applib);
+            Content content = new Content(webDriver);
             content.ClickAddFileLnk();
             overlay.SwitchToActiveFrame();
-            AddFile addFile = new AddFile(webDriver, applib);
+            AddFile addFile = new AddFile(webDriver);
             addFile.ClickAddFilesLnk();
             if (webDriver.getCapabilities().getPlatform().toString() == "MAC") {
             	addFile.ClickPicturesUploadBtn();
@@ -51,7 +51,7 @@ public class EXIFKeywordsIngestedPhraseInsteadSetsWords extends ParentTest{
             	addFile.ClickOpenBtn();
             }
             else {
-            	addFile.EnterPathToFile_Win(applib.getPathToMedia());
+            	addFile.EnterPathToFile_Win(config.getConfigValueFilePath("PathToMediaContent"));
             	addFile.ClickGoBtn_Win();
             	addFile.EnterFileName_Win("NUP_155306_0046.JPG");
             	addFile.ClickOpenBtn();
@@ -62,7 +62,7 @@ public class EXIFKeywordsIngestedPhraseInsteadSetsWords extends ParentTest{
             overlay.SwitchToActiveFrame();
             
             //Step 3
-            EditImage editImage = new EditImage(webDriver, applib);
+            EditImage editImage = new EditImage(webDriver);
             editImage.VerifyTitleTextValue("1", "NUP_155306_0046.JPG");
             editImage.VerifyAltTextValue("1", "NUP_155306_0046.JPG");
             editImage.VerifySourceValue("1", "Episodic");
@@ -71,7 +71,7 @@ public class EXIFKeywordsIngestedPhraseInsteadSetsWords extends ParentTest{
             editImage.VerifyKeywordsValue("1", "NUP_155306, Revolution, Episode 118, Season 1");
             editImage.ClickSaveBtn("1");
             overlay.SwitchToActiveFrame();
-            ContentParent contentParent = new ContentParent(webDriver, applib);
+            ContentParent contentParent = new ContentParent(webDriver);
             contentParent.VerifyMessageStatus("Image");
             contentParent.VerifyMessageStatus("has been updated.");
             overlay.ClickCloseOverlayLnk();
@@ -84,7 +84,7 @@ public class EXIFKeywordsIngestedPhraseInsteadSetsWords extends ParentTest{
             String title = random.GetCharacterString(15);
             basicInformation.EnterTitle(title);
             basicInformation.ClickMediaItemsSelectBtn();
-            SelectFile selectFile = new SelectFile(webDriver, applib);
+            SelectFile selectFile = new SelectFile(webDriver);
             selectFile.SwitchToSelectFileFrm();
             addFile.ClickAddFilesLnk();
             if (webDriver.getCapabilities().getPlatform().toString() == "MAC") {
@@ -93,7 +93,7 @@ public class EXIFKeywordsIngestedPhraseInsteadSetsWords extends ParentTest{
             	addFile.ClickOpenBtn();
             }
             else {
-            	addFile.EnterPathToFile_Win(applib.getPathToMedia());
+            	addFile.EnterPathToFile_Win(config.getConfigValueFilePath("PathToMediaContent"));
             	addFile.ClickGoBtn_Win();
             	addFile.EnterFileName_Win("NUP_155306_0046.JPG");
             	addFile.ClickOpenBtn();
@@ -122,7 +122,7 @@ public class EXIFKeywordsIngestedPhraseInsteadSetsWords extends ParentTest{
             //Step 7
             basicInformation.ClickCoverSelectBtn();
             selectFile.SwitchToSelectFileFrm();
-        	selectFile.EnterFilePath(applib.getPathToMedia() + "NUP_155306_0046.JPG");
+        	selectFile.EnterFilePath(config.getConfigValueFilePath("PathToMediaContent") + "NUP_155306_0046.JPG");
         	selectFile.ClickUploadBtn();
         	selectFile.WaitForFileUploaded("NUP_155306_0046.JPG");
         	selectFile.ClickNextBtn();

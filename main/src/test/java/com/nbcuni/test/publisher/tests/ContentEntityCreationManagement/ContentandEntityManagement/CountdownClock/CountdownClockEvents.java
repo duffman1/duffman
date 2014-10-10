@@ -29,10 +29,10 @@ public class CountdownClockEvents extends ParentTest{
          
         	Reporter.log("STEP 1");
         	UserLogin userLogin = applib.openApplication();
-        	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+        	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
         	Reporter.log("STEP 2");
-        	Modules modules = new Modules(webDriver, applib);
+        	Modules modules = new Modules(webDriver);
         	modules.VerifyModuleEnabled("Event Countdown");
         	
         	Reporter.log("STEP 3");
@@ -57,11 +57,11 @@ public class CountdownClockEvents extends ParentTest{
         		taxonomy.NavigateSite("Content");
         		overlay.SwitchToActiveFrame();
             	
-        		SearchFor searchFor = new SearchFor(webDriver, applib);
+        		SearchFor searchFor = new SearchFor(webDriver);
             	searchFor.EnterTitle(eventTitle);
             	searchFor.ClickApplyBtn();
             	overlay.switchToDefaultContent(true);
-                Content content = new Content(webDriver, applib);
+                Content content = new Content(webDriver);
                 content.ClickEditMenuBtn(eventTitle);
             	
             	Calendar cal1MinuteFuture = Calendar.getInstance();
@@ -74,9 +74,9 @@ public class CountdownClockEvents extends ParentTest{
             	eventCountdown.EnterTimerDateTime(pub7DateFormat.format(date1MinuteFuture), pub7TimeFormat.format(date1MinuteFuture));
             	eventCountdown.EnterActiveCallToAction("http://www.amazon.com/s/ref=nb_sb_ss_c_0_8/190-0002947-5703141?url=search-alias%3Dtoys-and-games&field-keywords=birthday%20party%20supplies&sprefix=birthday%2Caps%2C168");
             	eventCountdown.ClickActiveImageSelectBtn();
-            	SelectFile selectFile = new SelectFile(webDriver, applib);
+            	SelectFile selectFile = new SelectFile(webDriver);
             	selectFile.SwitchToSelectFileFrm();
-            	selectFile.EnterFilePath(applib.getPathToMedia() + "HanSolo1.jpg");
+            	selectFile.EnterFilePath(config.getConfigValueFilePath("PathToMediaContent") + "HanSolo1.jpg");
             	selectFile.ClickUploadBtn();
             	selectFile.WaitForFileUploaded("HanSolo1.jpg");
             	selectFile.ClickNextBtn();
@@ -89,7 +89,7 @@ public class CountdownClockEvents extends ParentTest{
             	eventCountdown.EnterExpiryCallToAction("http://www.nbc.com");
             	eventCountdown.ClickExpiryImageSelectBtn();
             	selectFile.SwitchToSelectFileFrm();
-            	selectFile.EnterFilePath(applib.getPathToMedia() + "nbclogosmall.jpg");
+            	selectFile.EnterFilePath(config.getConfigValueFilePath("PathToMediaContent") + "nbclogosmall.jpg");
             	selectFile.ClickUploadBtn();
             	selectFile.WaitForFileUploaded("nbclogosmall.jpg");
             	selectFile.ClickNextBtn();
@@ -143,9 +143,9 @@ public class CountdownClockEvents extends ParentTest{
         	eventCountdown.EnterTimerDateTime(pub7DateFormat.format(date1MinuteFuture), pub7TimeFormat.format(date1MinuteFuture));
         	eventCountdown.EnterActiveCallToAction("http://www.amazon.com/s/ref=nb_sb_ss_c_0_8/190-0002947-5703141?url=search-alias%3Dtoys-and-games&field-keywords=birthday%20party%20supplies&sprefix=birthday%2Caps%2C168");
         	eventCountdown.ClickActiveImageSelectBtn();
-        	SelectFile selectFile = new SelectFile(webDriver, applib);
+        	SelectFile selectFile = new SelectFile(webDriver);
         	selectFile.SwitchToSelectFileFrm();
-        	selectFile.EnterFilePath(applib.getPathToMedia() + "HanSolo1.jpg");
+        	selectFile.EnterFilePath(config.getConfigValueFilePath("PathToMediaContent") + "HanSolo1.jpg");
         	selectFile.ClickUploadBtn();
         	selectFile.WaitForFileUploaded("HanSolo1.jpg");
         	selectFile.ClickNextBtn();
@@ -158,7 +158,7 @@ public class CountdownClockEvents extends ParentTest{
         	eventCountdown.EnterExpiryCallToAction("http://www.nbc.com");
         	eventCountdown.ClickExpiryImageSelectBtn();
         	selectFile.SwitchToSelectFileFrm();
-        	selectFile.EnterFilePath(applib.getPathToMedia() + "nbclogosmall.jpg");
+        	selectFile.EnterFilePath(config.getConfigValueFilePath("PathToMediaContent") + "nbclogosmall.jpg");
         	selectFile.ClickUploadBtn();
         	selectFile.WaitForFileUploaded("nbclogosmall.jpg");
         	selectFile.ClickNextBtn();
@@ -178,10 +178,10 @@ public class CountdownClockEvents extends ParentTest{
     @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"}, dependsOnMethods = {"CountdownClockEvents_TC4887"}, alwaysRun=true)
 	public void Cleanup() throws Exception {
 		UserLogin userLogin = applib.openApplication();
-		userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+		userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
 		taxonomy.NavigateSite("Modules");
     	overlay.SwitchToActiveFrame();
-    	Modules modules = new Modules(webDriver, applib);
+    	Modules modules = new Modules(webDriver);
     	modules.EnterFilterName("Event Countdown");
     	modules.DisableModule("Event Countdown");
     	overlay.ClickOverlayTab("Uninstall");

@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Oct 07 10:49:31 EDT 2014</td>
+<td>Started on:</td><td>Fri Oct 10 08:45:43 EDT 2014</td>
 </tr>
-<tr><td>Total time:</td><td>64 seconds (64129 ms)</td>
+<tr><td>Total time:</td><td>26 seconds (26828 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,68 +75,41 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.nbcuni.test.publisher.tests.Queues.DynamicQueues.DynamicQueuePagination.DynamicQueuePagination_TC4791()'><b>DynamicQueuePagination_TC4791</b><br>Test class: com.nbcuni.test.publisher.tests.Queues.DynamicQueues.DynamicQueuePagination<br/>
-<a href="#Output-1002055195" onClick='toggleBox("Output-1002055195", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile.CreateCharacterProfile_TC1041()'><b>CreateCharacterProfile_TC1041</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile<br/>
+<a href="#Output-295551483" onClick='toggleBox("Output-295551483", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1002055195" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1002055195">
-STEP 1<br/>
-Open url 'http://qa5.publisher7.com'.<br/>
+<a href="#Output-295551483" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-295551483">
+Open url 'http://acc-test.publisher7.com'.<br/>
 Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
 Enter 'pa55word' in the 'Password' text box.<br/>
 Click the 'Login' button.<br/>
-SETUP<br/>
-Click the 'Content' menu link.<br/>
-Switch to the active frame titled 'Content dialog'.<br/>
-Get the number of results in the result set.<br/>
-Click the 'Close Overlay X'.<br/>
-Click the 'Modules' menu link.<br/>
-Switch to frame titled 'Modules'.<br/>
-Enter 'Dynamic Queue' in the 'Filter Name' text box.<br/>
-Wait for module filter titled 'Dynamic Queue' to be visible in module list.<br/>
-Verify the 'Dynamic Queue' check box is checked.<br/>
-Click the 'Close Overlay X'.<br/>
-Click the 'Home' menu link.<br/>
-Mouse over the 'Structure' menu link.<br/>
-Mouse over the 'Dynamic Queue types' menu link.<br/>
-Click the 'Add dynamic queue type' menu link.<br/>
-Switch to the active frame titled 'Add dynamic queue type dialog'.<br/>
-Enter '009aea0b7be44b4' in the 'Name' text box.<br/>
-Select '1 min' from the 'Cache lifetime' drop down list.<br/>
-Select 'Content' or 'Node' from the 'Entity type' drop down list.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Add content' menu link.<br/>
+Click the 'Character Profile' menu link.<br/>
+Switch to the active frame titled 'Create Character Profile dialog'.<br/>
+Enter '175da91e26f448c' in the 'Character First Name' text box.<br/>
+Click the Cover Photo 'Select' button.<br/>
+Switch to the select file frame.<br/>
+Enter the file path for file upload.<br/>
+Click the 'Upload' button.<br/>
+Wait for the file link to be visible after upload.<br/>
+Click the 'Next' button.<br/>
+Click the 'Public Local Files' radio button.<br/>
+Click the 'Next' button.<br/>
+Verify the file image 'HanSolo' is present.<br/>
+Verify the img is loaded and visible.<br/>
 Click the 'Save' button.<br/>
-Switch to the active frame titled 'Dynamic Queue types dialog'.<br/>
-Verify the text '009aea0b7be44b4' is present on the page.<br/>
-Click the 'Close Overlay X'.<br/>
-Mouse over the 'Content' menu link.<br/>
-Mouse over the 'Dynamic Queues' menu link.<br/>
-Click the 'Add 009aea0b7be44b4' menu link.<br/>
-Switch to the active frame titled 'Add 009aea0b7be44b4 dynamic queue dialog'.<br/>
-Enter 'bf586f0c19b444b' in the 'Title' text box.<br/>
-<br/>
-Click the 'Newest' radio button under 'Sort by'.<br/>
-STEP 2<br/>
-Set '5' in ItemsPerPage textbox.<br/>
-Set '10' in TotalLimit textbox.<br/>
-Click the 'Save Dynamic Queue' button.<br/>
-STEP 3<br/>
-Mouse over the 'Content' menu link.<br/>
-Click the 'Dynamic Queues' menu link.<br/>
-Switch to the active frame titled 'Dynamic Queues dialog'.<br/>
-Click the 'Close Overlay X'.<br/>
-Open a new browser window.<br/>
-Switch to new browser tab/window.<br/>
-Open url 'http://qa5.publisher7.com/dynamic-queue/31'.<br/>
-STEP 4<br/>
-Verify the pagination links are present.<br/>
-Verify the visible count of Dynamic Queue Links equals '5'.<br/>
-Click the 'next >' Link<br/>
-Verify the visible count of Dynamic Queue Links equals '5'.<br/>
+Switch to frame titled 'Create Character Profile'.<br/>
+Assert that img source of the Cover Photo contains 'HanSolo'.<br/>
+Assert the the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'Character Profile 175da91e26f448c has been created.' is present.<br/>
 </div>
 </td>
 <td></td>
-<td>60</td>
-<td>com.nbcuni.test.publisher.tests.Queues.DynamicQueues.DynamicQueuePagination@5d03462c</td></tr>
+<td>23</td>
+<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@333d4d6b</td></tr>
 </table><p>
 </body>
 </html>

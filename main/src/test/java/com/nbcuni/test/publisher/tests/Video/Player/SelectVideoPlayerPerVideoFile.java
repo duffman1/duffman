@@ -40,10 +40,10 @@ public class SelectVideoPlayerPerVideoFile extends ParentTest{
 
     	//Step 1
     	UserLogin userLogin = applib.openApplication();
-    	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+    	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         //Step 2 on requires prior MPX configuration
-    	Settings settings = new Settings(webDriver, applib);
+    	Settings settings = new Settings(webDriver);
     	settings.ConfigureMPXIfNeeded();
     	
         taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
@@ -58,13 +58,13 @@ public class SelectVideoPlayerPerVideoFile extends ParentTest{
 
         		//Step 3
         		overlay.SwitchToActiveFrame();
-        		SearchFor searchFor = new SearchFor(webDriver, applib);
+        		SearchFor searchFor = new SearchFor(webDriver);
         		searchFor.EnterTitle("AutomationDefault");
         		searchFor.ClickApplyBtn();
 
         		//Step 4
         		overlay.switchToDefaultContent(true);
-        		Content content = new Content(webDriver, applib);
+        		Content content = new Content(webDriver);
         		content.ClickEditMenuBtn("AutomationDefault");
         		
         		//Step 5 and 6

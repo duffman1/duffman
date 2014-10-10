@@ -156,7 +156,7 @@ public class MediaItems {
             if (searchComplete == true){ break;}
             Thread.sleep(500);
         }
-        webDriver.manage().timeouts().implicitlyWait(config.getImplicitWaitTime(), TimeUnit.SECONDS);
+        webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
     }
     
     

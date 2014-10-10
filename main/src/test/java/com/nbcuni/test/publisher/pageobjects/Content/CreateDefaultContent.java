@@ -1,6 +1,5 @@
 package com.nbcuni.test.publisher.pageobjects.Content;
 
-import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.publisher.common.Random;
 import com.nbcuni.test.publisher.pageobjects.Overlay;
 import com.nbcuni.test.publisher.pageobjects.Structure.ContentTypes;
@@ -32,22 +31,22 @@ public class CreateDefaultContent {
 	Banner banner;
 	Relationships relationships;
 	
-    public CreateDefaultContent(Driver webDriver, AppLib applib) {
+    public CreateDefaultContent(Driver webDriver) {
         taxonomy = new Taxonomy(webDriver);
-        overlay = new Overlay(webDriver, applib);
+        overlay = new Overlay(webDriver);
         random = new Random();
         basicInformation = new BasicInformation(webDriver);
-        contentParent = new ContentParent(webDriver, applib);
+        contentParent = new ContentParent(webDriver);
         publishingOptions = new PublishingOptions(webDriver);
-        selectFile = new SelectFile(webDriver, applib);
+        selectFile = new SelectFile(webDriver);
         charactersInformation = new CharactersInformation(webDriver);
         coverPhoto = new CoverPhoto(webDriver);
         personsInformation = new PersonsInformation(webDriver);
-        contentTypes = new ContentTypes(webDriver, applib);
+        contentTypes = new ContentTypes(webDriver);
         coverMedia = new CoverMedia(webDriver);
         logo = new Logo(webDriver);
         banner = new Banner(webDriver);
-        relationships = new Relationships(webDriver, applib);
+        relationships = new Relationships(webDriver);
     }
    
     public String Post(String moderationState) throws Exception {

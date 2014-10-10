@@ -22,10 +22,10 @@ public class MPSConfigurationPage extends ParentTest {
         
         	Reporter.log("STEP 1");
         	UserLogin userLogin = applib.openApplication();
-        	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+        	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
         	Reporter.log("SETUP");
-        	Modules modules = new Modules(webDriver, applib);
+        	Modules modules = new Modules(webDriver);
         	taxonomy.NavigateSite("Modules");
         	overlay.SwitchToActiveFrame();
         	modules.DisableModule("Pixelman");
@@ -118,7 +118,7 @@ public class MPSConfigurationPage extends ParentTest {
 		if (testSuccessful == false) {
 			
 			UserLogin userLogin = applib.openApplication();
-			userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+			userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
 			taxonomy.NavigateSite("Configuration>>Web services>>MPS Configuration");
             overlay.SwitchToActiveFrame();
             MPSConfiguration mpsConfiguration = new MPSConfiguration(webDriver);

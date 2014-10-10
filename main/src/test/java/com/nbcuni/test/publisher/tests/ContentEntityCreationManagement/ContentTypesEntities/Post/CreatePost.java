@@ -22,7 +22,7 @@ public class CreatePost extends ParentTest{
          
         	//Step 1
         	UserLogin userLogin = applib.openApplication();
-        	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+        	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
             List<String> allStates = Arrays.asList("Draft", "Review", "Published");
             for (String state : allStates) {
@@ -48,7 +48,7 @@ public class CreatePost extends ParentTest{
             	overlay.SwitchToActiveFrame();
             	basicInformation.SelectTextFormat("WYSIWYG Mini");
             	basicInformation.ClickCoverSelectBtn();
-            	SelectFile selectFile = new SelectFile(webDriver, applib);
+            	SelectFile selectFile = new SelectFile(webDriver);
             	selectFile.SelectDefaultCoverImg();
             	overlay.SwitchToActiveFrame();
             
@@ -60,7 +60,7 @@ public class CreatePost extends ParentTest{
             	contentParent.ClickSaveBtn();
             	overlay.switchToDefaultContent(true);
             	contentParent.VerifyMessageStatus("Post " + postTitle + " has been created.");
-            	WorkBench workBench = new WorkBench(webDriver, applib);
+            	WorkBench workBench = new WorkBench(webDriver);
             	workBench.VerifyWorkBenchBlockTextPresent(Arrays.asList(state));
             	
             }

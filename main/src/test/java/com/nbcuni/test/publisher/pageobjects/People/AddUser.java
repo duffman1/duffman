@@ -13,8 +13,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
-
-import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Random;
 import com.nbcuni.test.publisher.pageobjects.Overlay;
@@ -40,12 +38,12 @@ public class AddUser {
 	private Config config;
 	
     //PAGE OBJECT CONSTRUCTOR
-    public AddUser(Driver webDriver, AppLib applib) {
+    public AddUser(Driver webDriver) {
     	this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
         taxonomy = new Taxonomy(webDriver);
-        overlay = new Overlay(webDriver, applib);
-        contentParent = new ContentParent(webDriver, applib);
+        overlay = new Overlay(webDriver);
+        contentParent = new ContentParent(webDriver);
         random = new Random();
         wait = new WebDriverWait(webDriver, 10);
         config = new Config();
@@ -220,7 +218,7 @@ public class AddUser {
     		Assert.fail("Username text box is present when it should not be.");
     	}
     	catch (NoSuchElementException e) { }
-    	webDriver.manage().timeouts().implicitlyWait(config.getImplicitWaitTime(), TimeUnit.SECONDS);
+    	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
     	
     }
     
@@ -234,7 +232,7 @@ public class AddUser {
     		Assert.fail("Password/Password Confirm text boxes are present when they should not be.");
     	}
     	catch (NoSuchElementException e) { }
-    	webDriver.manage().timeouts().implicitlyWait(config.getImplicitWaitTime(), TimeUnit.SECONDS);
+    	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
     	
     }
 

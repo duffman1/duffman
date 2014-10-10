@@ -50,7 +50,7 @@ public class PreviewContentItemsIntheFuturefromContentandWorkbenchViews extends 
 		
 		//Step 1
     	UserLogin userLogin = applib.openApplication();
-        userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+        userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         //Step 2        
     	taxonomy.NavigateSite("Content>>Add content>>Post");
@@ -63,13 +63,13 @@ public class PreviewContentItemsIntheFuturefromContentandWorkbenchViews extends 
     	String shortDescriptionText = random.GetCharacterString(25);
     	basicInformation.EnterShortDescription(shortDescriptionText);
     	basicInformation.ClickCoverSelectBtn();
-    	SelectFile selectFile = new SelectFile(webDriver, applib);
+    	SelectFile selectFile = new SelectFile(webDriver);
     	selectFile.SelectDefaultCoverImg();
     	overlay.SwitchToActiveFrame();
     	PublishingOptions publishingOptions = new PublishingOptions(webDriver);
     	publishingOptions.ClickPublishingOptionsLnk();
     	publishingOptions.SelectModerationState("Published");
-    	ContentParent contentParent = new ContentParent(webDriver, applib);
+    	ContentParent contentParent = new ContentParent(webDriver);
     	contentParent.ClickSaveBtn();
     	overlay.switchToDefaultContent(true);
     	contentParent.VerifyMessageStatus("Post " + postTitle + " has been created.");
@@ -102,7 +102,7 @@ public class PreviewContentItemsIntheFuturefromContentandWorkbenchViews extends 
         sitePreview.VerifyUpdatePreviewBtnVisible();
         
         //Step 8
-        WorkBench workBench = new WorkBench(webDriver, applib);
+        WorkBench workBench = new WorkBench(webDriver);
         workBench.ClickWorkBenchTab("Edit Draft");
         overlay.SwitchToActiveFrame();
         String updatedPostTitle = "Updated" + postTitle;

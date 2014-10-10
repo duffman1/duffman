@@ -28,18 +28,18 @@ public class InstallZeeboxModule extends ParentTest{
          
         	//Step 1
         	UserLogin userLogin = applib.openApplication();
-        	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+        	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
             //Step 2 and 3
-            Modules modules = new Modules(webDriver, applib);
+            Modules modules = new Modules(webDriver);
             modules.VerifyModuleEnabled("zeebox Example");
             
             //Step 4
             Thread.sleep(2000);
-            webDriver.navigate().to(applib.getApplicationURL() + "/zeebox-example");
+            webDriver.navigate().to(config.getConfigValueString("AppURL") + "/zeebox-example");
             
             //Step 5
-            ContentParent contentParent = new ContentParent(webDriver, applib);
+            ContentParent contentParent = new ContentParent(webDriver);
             contentParent.VerifyPageContentPresent(Arrays.asList("Zeebox Follow Button example block",
             		"Zeebox Play-along example block",
             			"Zeebox Hot TV Rooms example block",

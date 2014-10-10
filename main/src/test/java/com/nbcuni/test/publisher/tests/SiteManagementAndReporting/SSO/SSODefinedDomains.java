@@ -22,17 +22,17 @@ public class SSODefinedDomains extends ParentTest {
 	 * TEST CASE - TC3474
      * Steps - https://rally1.rallydev.com/#/14663927728d/detail/testcase/19851154396
 	 *************************************************************************************/
-	 @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"})
+	 @Test(retryAnalyzer = RerunOnFailure.class, groups = {"sensitive"})
 	 public void SSODefinedDomains_TC3474() throws Exception {
 		 
 		UserLogin userLogin = new UserLogin(webDriver);
 		Logout logout = new Logout(webDriver);
 		SimpleSAML simpleSAML = new SimpleSAML(webDriver);
-		Modules modules = new Modules(webDriver, applib);
+		Modules modules = new Modules(webDriver);
 			
 		Reporter.log("STEP 1");
 		applib.openSitePage("/user");
-		userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+		userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
 	       
 		Reporter.log("STEP 2");
 		modules.VerifyModuleEnabled("Pub SSO");
@@ -45,7 +45,7 @@ public class SSODefinedDomains extends ParentTest {
 		simpleSAML.VerifyDefaultSettings();
 			
 		Reporter.log("STEP 5");
-		simpleSAML.EnterFilePath(config.getPathToMedia() + "stage.crt");
+		simpleSAML.EnterFilePath(config.getConfigValueFilePath("PathToMediaContent") + "stage.crt");
 		simpleSAML.ClickSaveConfigurationBtn();
 		contentParent.VerifyMessageStatus("The configuration options have been saved.");
 		contentParent.VerifyPageContentPresent(Arrays.asList("A certificate exists for this instance of SimpleSAMLphp."));
@@ -66,8 +66,8 @@ public class SSODefinedDomains extends ParentTest {
 	        
 		Reporter.log("STEP 9");
 		SSOLogin ssoLogin = new SSOLogin(webDriver);
-		ssoLogin.EnterSSOID(config.getConfigValue("SSOUsername"));
-		ssoLogin.EnterPassword(config.getConfigValue("SSOPassword"));
+		ssoLogin.EnterSSOID(config.getConfigValueString("SSOUsername"));
+		ssoLogin.EnterPassword(config.getConfigValueString("SSOPassword"));
 		ssoLogin.ClickSignInBtn();
 	       
 		Reporter.log("STEP 10");
@@ -76,17 +76,17 @@ public class SSODefinedDomains extends ParentTest {
 		contentParent.VerifyPageContentNotPresent(Arrays.asList("Modules"));
 			
 		Reporter.log("STEP 11");
-		contentParent.VerifyPageContentPresent(Arrays.asList(config.getConfigValue("SSOEmail")));
+		contentParent.VerifyPageContentPresent(Arrays.asList(config.getConfigValueString("SSOEmail")));
 		
 		Reporter.log("STEP 12");
 		logout.ClickLogoutBtn();
 		applib.openSitePage("/user");
-		userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+		userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
 		taxonomy.NavigateSite("People");
 		overlay.SwitchToActiveFrame();
-		People people = new People(webDriver, applib);
-		people.SeachForUsername(config.getConfigValue("SSOEmail"));
-		people.ClickUsernameLnk(config.getConfigValue("SSOEmail"));
+		People people = new People(webDriver);
+		people.SeachForUsername(config.getConfigValueString("SSOEmail"));
+		people.ClickUsernameLnk(config.getConfigValueString("SSOEmail"));
 	        
 		Reporter.log("STEP 13");
 		applib.openSitePage("/admin/config/people/simplesamlphp_auth");
@@ -115,16 +115,16 @@ public class SSODefinedDomains extends ParentTest {
 		
 	}
 	 
-	@Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"}, dependsOnMethods = {"SSODefinedDomains_TC3474"}, alwaysRun=true)
+	@Test(retryAnalyzer = RerunOnFailure.class, groups = {"sensitive"}, dependsOnMethods = {"SSODefinedDomains_TC3474"}, alwaysRun=true)
 	public void Cleanup() throws Exception {
 		if (testSuccessful == false) {
 			
 			UserLogin userLogin = new UserLogin(webDriver);
 			SimpleSAML simpleSAML = new SimpleSAML(webDriver);
-			Modules modules = new Modules(webDriver, applib);
+			Modules modules = new Modules(webDriver);
 			
 			applib.openSitePage("/user");
-			userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+			userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
 			applib.openSitePage("/admin/config/people/simplesamlphp_auth");
 			simpleSAML.UnCheckActivateAuthCbx();
 			simpleSAML.ClickSaveConfigurationBtn();

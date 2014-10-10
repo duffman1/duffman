@@ -20,7 +20,7 @@ public class CreateCharacterProfile extends ParentTest{
          
         	//Step 1
         	UserLogin userLogin = applib.openApplication();
-        	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+        	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         	
             //Step 2
             taxonomy.NavigateSite("Content>>Add content>>Character Profile");
@@ -34,13 +34,13 @@ public class CreateCharacterProfile extends ParentTest{
             //Step 4
             CoverPhoto coverPhoto = new CoverPhoto(webDriver);
             coverPhoto.ClickSelectBtn();
-            SelectFile selectFile = new SelectFile(webDriver, applib);
+            SelectFile selectFile = new SelectFile(webDriver);
             selectFile.SelectDefaultCoverImg();
             overlay.SwitchToFrame("Create Character Profile");
             coverPhoto.VerifyFileImagePresent("HanSolo");
             
             //Step 5
-            ContentParent contentParent = new ContentParent(webDriver, applib);
+            ContentParent contentParent = new ContentParent(webDriver);
             contentParent.ClickSaveBtn();
             overlay.switchToDefaultContent(true);
             contentParent.VerifyMessageStatus("Character Profile " + characterName + " has been created.");

@@ -1,6 +1,6 @@
 package com.nbcuni.test.publisher.pageobjects.Content;
 
-import com.nbcuni.test.publisher.common.AppLib;
+import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -20,13 +20,13 @@ import org.testng.Reporter;
 public class URLPathSettings {
 
 	private Driver webDriver;
-	private AppLib applib;
-    private WebDriverWait wait;
+	private Config config;
+	private WebDriverWait wait;
     
 	//PAGE OBJECT CONSTRUCTORS
-    public URLPathSettings(Driver webDriver, AppLib applib) {
+    public URLPathSettings(Driver webDriver) {
         this.webDriver = webDriver;
-        this.applib = applib;
+        config = new Config();
         PageFactory.initElements(webDriver, this);
         wait = new WebDriverWait(webDriver, 10);
     }
@@ -101,7 +101,7 @@ public class URLPathSettings {
     public void VerifyContentNodeAlias(String title) throws Exception {
     	
     	Reporter.log("Verify that the content node alias equals 'content/" + title.toLowerCase() + "'.");
-        Assert.assertEquals(webDriver.getCurrentUrl().replace(applib.getApplicationURL() + "/", ""), "content/" + title.toLowerCase());
+        Assert.assertEquals(webDriver.getCurrentUrl().replace(config.getConfigValueString("AppURL") + "/", ""), "content/" + title.toLowerCase());
     }
 
 }

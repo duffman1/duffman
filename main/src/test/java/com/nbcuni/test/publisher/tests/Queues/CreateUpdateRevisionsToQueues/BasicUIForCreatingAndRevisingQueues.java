@@ -40,16 +40,16 @@ public class BasicUIForCreatingAndRevisingQueues extends ParentTest{
     	
         //Step 1
         UserLogin userLogin = applib.openApplication();
-        userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+        userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         //Step 2
         taxonomy.NavigateSite("Content>>Queues>>Add Promo Queue");
         overlay.SwitchToActiveFrame();
         
         //Step 3
-        Queues queues = new Queues(webDriver, applib);
+        Queues queues = new Queues(webDriver);
         queues.ClickSaveQueueBtn();
-        ErrorChecking errorChecking = new ErrorChecking(webDriver, applib);
+        ErrorChecking errorChecking = new ErrorChecking(webDriver);
         errorChecking.VerifyAllRequiredFields(Arrays.asList("Title"));
         
         //Step 4

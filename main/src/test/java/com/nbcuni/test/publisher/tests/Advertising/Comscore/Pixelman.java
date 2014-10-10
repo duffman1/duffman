@@ -14,17 +14,17 @@ public class Pixelman extends ParentTest {
      * TEST CASE - TC1155
      * Steps - https://rally1.rallydev.com/#/14663927728ud/detail/testcase/17533191589
      *************************************************************************************/
-    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "smoke"})
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"})
     public void Pixelman_TC1155() throws Exception{
         
     	//Step 1
         UserLogin userLogin = applib.openApplication();
-        userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+        userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         //Step 2 and 3 (truncated)
         taxonomy.NavigateSite("Modules");
     	overlay.SwitchToFrame("Modules");
-    	Modules modules = new Modules(webDriver, applib);
+    	Modules modules = new Modules(webDriver);
     	modules.EnterFilterName("Pixelman");
     	modules.EnableModule("Pixelman");
     	
@@ -50,7 +50,7 @@ public class Pixelman extends ParentTest {
         contentParent.VerifySourceInPage(Arrays.asList("//www.nbcudigitaladops.com/hosted/global_header.js"));
             
         //Step 9
-        userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+        userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         taxonomy.NavigateSite("Modules");
         overlay.SwitchToFrame("Modules");
         modules.EnterFilterName("Pub Ads");

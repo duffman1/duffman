@@ -1,5 +1,6 @@
 package com.nbcuni.test.publisher.common.Driver;
 
+/*
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.HashMap;
@@ -13,6 +14,7 @@ import org.openqa.grid.internal.utils.SelfRegisteringRemote;
 import org.openqa.grid.web.Hub;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import com.nbcuni.test.publisher.common.Config;
+*/
 
 /*********************************************
  * publisher.nbcuni.com Start Grid Hub and Node Library. Copyright
@@ -27,6 +29,7 @@ public class StartGridHubNode {
         
     }
     
+    /*
     Config config = new Config();
     String hubHost = "localhost";
     int hubPort = Integer.parseInt(config.getConfigValue("LocalWebDriverHubPort"));
@@ -131,6 +134,6 @@ public class StartGridHubNode {
         
         return capabilities;
     }
-    
+    */
 }
 

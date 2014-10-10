@@ -11,8 +11,6 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.Reporter;
-
-import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
 import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
@@ -31,10 +29,10 @@ public class ContentTypes {
     private Config config;
     
     //PAGE OBJECT CONSTRUCTOR
-    public ContentTypes(Driver webDriver, AppLib applib) {
+    public ContentTypes(Driver webDriver) {
         this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
-        contentParent = new ContentParent(webDriver, applib);
+        contentParent = new ContentParent(webDriver);
         config = new Config();
     }
     
@@ -162,7 +160,7 @@ public class ContentTypes {
     		fieldPresent = false;
     	}
     	
-    	webDriver.manage().timeouts().implicitlyWait(config.getImplicitWaitTime(), TimeUnit.SECONDS);
+    	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
     	return fieldPresent;
     }
     

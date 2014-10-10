@@ -23,8 +23,8 @@ public class PasswordRules extends ParentTest {
     	
     	Reporter.log("SETUP - create new user and logout");
     	UserLogin userLogin = applib.openApplication();
-    	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
-    	AddUser addUser = new AddUser(webDriver, applib);
+    	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
+    	AddUser addUser = new AddUser(webDriver);
     	String userPassword = "pa55word";
         String editorUserName = addUser.AddDefaultUser(Arrays.asList("editor"), false);
         Logout logout = new Logout(webDriver);
@@ -37,7 +37,7 @@ public class PasswordRules extends ParentTest {
         
         Reporter.log("STEP 2");
         taxonomy.ClickActiveUserMenuLnk();
-        WorkBench workBench = new WorkBench(webDriver, applib);
+        WorkBench workBench = new WorkBench(webDriver);
         workBench.ClickWorkBenchTab("Edit");
         overlay.SwitchToActiveFrame();
         
@@ -85,7 +85,7 @@ public class PasswordRules extends ParentTest {
         addUser.EnterPassword("A");
         addUser.EnterConfirmPassword("A");
         contentParent.ClickSaveBtn();
-        ErrorChecking errorChecking = new ErrorChecking(webDriver, applib);
+        ErrorChecking errorChecking = new ErrorChecking(webDriver);
         errorChecking.VerifyErrorMessagePresent("Your password has not met the following requirement(s):");
         
         Reporter.log("STEP 11");
@@ -107,7 +107,7 @@ public class PasswordRules extends ParentTest {
         Reporter.log("STEP 13");
         overlay.ClickCloseOverlayLnk();
         logout.ClickLogoutBtn();
-        userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+        userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         taxonomy.NavigateSite("Configuration>>People>>Password policies>>List");
         overlay.SwitchToActiveFrame();
         PasswordPolicies passwordPolicies = new PasswordPolicies(webDriver);

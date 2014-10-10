@@ -20,14 +20,14 @@ public class CustomPermissionSetVerification extends ParentTest {
     	
     	//Step 1
     	UserLogin userLogin = applib.openApplication();
-    	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+    	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
     	//Step 2
     	taxonomy.NavigateSite("Structure>>Permission Sets");
     	overlay.SwitchToActiveFrame();
     	
     	//Step 3
-    	PermissionSets permissionSets = new PermissionSets(webDriver, applib);
+    	PermissionSets permissionSets = new PermissionSets(webDriver);
     	permissionSets.ClickAddLnk();
     	overlay.SwitchToActiveFrame();
     	

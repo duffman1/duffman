@@ -1,6 +1,5 @@
 package com.nbcuni.test.publisher.tests.Queues.SchedulingQueues;
 
-import com.ibm.icu.util.Calendar;
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
@@ -13,6 +12,7 @@ import org.testng.annotations.Test;
 
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
+import java.util.Calendar;
 import java.util.Date;
 
 public class ScheduleRevisionsOfQueues extends ParentTest{
@@ -31,15 +31,15 @@ public class ScheduleRevisionsOfQueues extends ParentTest{
      * Step 9 - Click Schedule<br>
      * @throws Throwable No Return values are needed
      *************************************************************************************/
-    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "smoke" })
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full" })
     public void ScheduleRevisionsOfQueues_Test() throws Exception{
     	
         //Step 1
         UserLogin userLogin = applib.openApplication();
-        userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+        userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         //Step 1a
-        CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver, applib);
+        CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver);
         String postTitle = createDefaultContent.Post("Draft");
         
         //Step 2
@@ -47,7 +47,7 @@ public class ScheduleRevisionsOfQueues extends ParentTest{
         overlay.SwitchToActiveFrame();
         
         //Step 3
-        Queues queues = new Queues(webDriver, applib);
+        Queues queues = new Queues(webDriver);
         String queueTitle = random.GetCharacterString(15);
         queues.EnterTitle(queueTitle);
         queues.EnterQueueItem(postTitle, "1");

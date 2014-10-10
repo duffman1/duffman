@@ -45,11 +45,11 @@ public class CastCrewFieldCollectionsVerificationMovie extends ParentTest{
     			"Person" + random.GetCharacterString(10),
     				"Person" + random.GetCharacterString(10));
     	UserLogin userLogin = applib.openApplication();
-    	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+    	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         //Step 2
         CharactersInformation charactersInformation = new CharactersInformation(webDriver);
-        SelectFile selectFile = new SelectFile(webDriver, applib);
+        SelectFile selectFile = new SelectFile(webDriver);
         for(int CCount=0;CCount<3;CCount++){
 	        taxonomy.NavigateSite("Content>>Add content>>Character Profile");
 	        overlay.SwitchToActiveFrame();
@@ -109,10 +109,10 @@ public class CastCrewFieldCollectionsVerificationMovie extends ParentTest{
         contentParent.ClickSaveBtn();
         overlay.switchToDefaultContent(true);
         contentParent.VerifyMessageStatus("Movie " + movieTitle + " has been created.");
-        WorkBench workBench = new WorkBench(webDriver, applib);
+        WorkBench workBench = new WorkBench(webDriver);
         workBench.ClickWorkBenchTab("Revisions");
         overlay.SwitchToActiveFrame();
-        Revisions revisions = new Revisions(webDriver, applib);
+        Revisions revisions = new Revisions(webDriver);
         revisions.ClickEditMenuBtn(movieTitle);
         overlay.SwitchToActiveFrame();
         PublishingOptions publishingOptions = new PublishingOptions(webDriver);

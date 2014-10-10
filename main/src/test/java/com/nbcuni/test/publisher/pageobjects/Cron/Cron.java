@@ -5,8 +5,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
-
-import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.publisher.common.Driver.Driver;
 import com.nbcuni.test.publisher.pageobjects.Overlay;
 import com.nbcuni.test.publisher.pageobjects.ErrorChecking.ErrorChecking;
@@ -26,11 +24,11 @@ public class Cron {
 	private ErrorChecking errorChecking;
 	
     //PAGE OBJECT CONSTRUCTOR
-    public Cron(Driver webDriver, AppLib applib) {
+    public Cron(Driver webDriver) {
         PageFactory.initElements(webDriver, this);
         taxonomy = new Taxonomy(webDriver);
-        overlay = new Overlay(webDriver, applib);
-        errorChecking = new ErrorChecking(webDriver, applib);
+        overlay = new Overlay(webDriver);
+        errorChecking = new ErrorChecking(webDriver);
     }
     
     //PAGE OBJECT IDENTIFIERS

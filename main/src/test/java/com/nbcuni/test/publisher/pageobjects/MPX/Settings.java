@@ -1,12 +1,10 @@
 package com.nbcuni.test.publisher.pageobjects.MPX;
 
-import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
 import com.nbcuni.test.publisher.pageobjects.Overlay;
 import com.nbcuni.test.publisher.pageobjects.Cron.Cron;
 import com.nbcuni.test.publisher.pageobjects.Taxonomy.Taxonomy;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
@@ -34,7 +32,6 @@ import java.util.concurrent.TimeUnit;
 public class Settings {
 
     private Driver webDriver;
-    private AppLib applib;
     private WebDriverWait wait;
     private Overlay overlay;
     private Taxonomy taxonomy;
@@ -43,15 +40,14 @@ public class Settings {
     private Config config;
     
     //PAGE OBJECT CONSTRUCTOR
-    public Settings(Driver webDriver, AppLib applib) {
+    public Settings(Driver webDriver) {
         this.webDriver = webDriver;
-        this.applib = applib;
         PageFactory.initElements(webDriver, this);
         wait = new WebDriverWait(webDriver, 10);
-        overlay = new Overlay(webDriver, applib);
+        overlay = new Overlay(webDriver);
         taxonomy = new Taxonomy(webDriver);
         mpxMedia = new MPXMedia(webDriver);
-        cron = new Cron(webDriver, applib);
+        cron = new Cron(webDriver);
         config = new Config();
     }
     
@@ -234,7 +230,7 @@ public class Settings {
     
      }
     
-     	webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
+     	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
     }
     
     public boolean IsMPXConfigured() throws Exception {
@@ -253,7 +249,7 @@ public class Settings {
     		mpxAlreadyConfigured = true;
     	}
     
-    	webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
+    	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
     
     	return mpxAlreadyConfigured;
     }
@@ -352,7 +348,7 @@ public class Settings {
     		Assert.assertTrue(ddl3.getFirstSelectedOption().isEnabled() == false);
     	}
     
-    	webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
+    	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
     }
     
     public void VerifyUsernameValues(String userName, int txbCount) throws Exception {
@@ -410,7 +406,7 @@ public class Settings {
         if (ddl3Present == true) { selectedOptions.add(ddl3.getFirstSelectedOption().getText()); }
         if (ddl4Present == true) { selectedOptions.add(ddl4.getFirstSelectedOption().getText()); }
     
-        webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
+        webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
     
         return selectedOptions;
     }
@@ -437,7 +433,7 @@ public class Settings {
     	Reporter.log("Get each of the 'Delete Account' buttons");
     	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
     	List<WebElement> allElements = DeleteAccount_Btns();
-    	webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
+    	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
     
     	return allElements;
     }
@@ -454,12 +450,12 @@ public class Settings {
         overlay.SwitchToActiveFrame();
         
     	if (this.IsMPXConfigured() == false) {
-    		this.EnterUsername(applib.getMPXUsername());
-        	this.EnterPassword(applib.getMPXPassword());
+    		this.EnterUsername(config.getConfigValueString("MPXUsername"));
+        	this.EnterPassword(config.getConfigValueString("MPXPassword"));
         	this.ClickConnectToMPXBtn();
         	this.SelectImportAccount1("DB TV");
         	this.ClickSetImportAccountBtn();
-        	if (config.getConfigValue("DrushIngestion").equals("true")) {
+        	if (config.getConfigValueString("DrushIngestion").equals("true")) {
         		this.UnCheckSyncMPXMediaOnCronBtn();
         	}
         	else {
@@ -486,7 +482,7 @@ public class Settings {
     	taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
         overlay.SwitchToActiveFrame();
         
-    	if (config.getConfigValue("DrushIngestion").equals("true")) {
+    	if (config.getConfigValueString("DrushIngestion").equals("true")) {
         		this.UnCheckSyncMPXMediaOnCronBtn();
         }
         else {

@@ -42,7 +42,7 @@ public class Logos {
     	PageFactory.initElements(webDriver, this);
         wait = new WebDriverWait(webDriver, 10);
         config = new Config();
-        overlay = new Overlay(webDriver, applib);
+        overlay = new Overlay(webDriver);
         delete = new Delete(webDriver);
     }
     
@@ -149,7 +149,7 @@ public class Logos {
     		}
     	}
     	
-    	webDriver.manage().timeouts().implicitlyWait(config.getImplicitWaitTime(), TimeUnit.SECONDS);
+    	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
     }
     
     

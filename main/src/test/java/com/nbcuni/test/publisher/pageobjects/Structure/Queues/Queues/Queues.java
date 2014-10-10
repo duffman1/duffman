@@ -2,7 +2,6 @@ package com.nbcuni.test.publisher.pageobjects.Structure.Queues.Queues;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -13,8 +12,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
-
-import com.nbcuni.test.publisher.common.AppLib;
+import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
@@ -27,13 +25,13 @@ import com.nbcuni.test.publisher.common.Driver.Driver;
 public class Queues {
 
     private Driver webDriver;
-    private AppLib applib;
+    private Config config;
     private WebDriverWait wait;
     
     //PAGE OBJECT CONSTRUCTOR
-    public Queues(Driver webDriver, AppLib applib) {
+    public Queues(Driver webDriver) {
         this.webDriver = webDriver;
-        this.applib = applib;
+        config = new Config();
         PageFactory.initElements(webDriver, this);
         wait = new WebDriverWait(webDriver, 10);
     }
@@ -156,7 +154,7 @@ public class Queues {
             }
             Thread.sleep(500);
         }
-    	webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
+    	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
     }
     
     public void VerifyQueueEditDeleteNotPresent(String queueTitle) throws Exception {
@@ -178,7 +176,7 @@ public class Queues {
 
         Assert.assertFalse(elPresent);
 
-        webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
+        webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
     	
     }
     

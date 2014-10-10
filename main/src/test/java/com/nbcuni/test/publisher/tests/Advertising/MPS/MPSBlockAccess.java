@@ -23,10 +23,10 @@ public class MPSBlockAccess extends ParentTest {
         
         	Reporter.log("STEP 1");
         	UserLogin userLogin = applib.openApplication();
-        	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+        	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
         	Reporter.log("SETUP");
-        	Modules modules = new Modules(webDriver, applib);
+        	Modules modules = new Modules(webDriver);
         	taxonomy.NavigateSite("Modules");
         	overlay.SwitchToActiveFrame();
         	modules.EnterFilterName("Pixelman");
@@ -41,7 +41,7 @@ public class MPSBlockAccess extends ParentTest {
         	overlay.ClickCloseOverlayLnk();
         	
         	Reporter.log("STEP 3");
-        	AddUser addUser = new AddUser(webDriver, applib);
+        	AddUser addUser = new AddUser(webDriver);
             String userName = addUser.AddDefaultUser(Arrays.asList("administrator"), false);
             
             Reporter.log("STEP 4");

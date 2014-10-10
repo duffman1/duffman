@@ -22,15 +22,15 @@ public class StickyButtons extends ParentTest{
      * Step 8 - Clean up and disable sticky edit action module.
      * @throws Throwable No Return values are needed
      *************************************************************************************/
-    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"})
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"sensitive"})
     public void StickyButtons_Test() throws Exception{
          
         	//Step 1
         	UserLogin userLogin = applib.openApplication();
-        	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+        	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
             //Step 1a
-            Modules modules = new Modules(webDriver, applib);
+            Modules modules = new Modules(webDriver);
             modules.VerifyModuleEnabled("Sticky Edit Actions");
             
             //Step 2 - NOTE - using post instead of character profile content type
@@ -39,7 +39,7 @@ public class StickyButtons extends ParentTest{
             BasicInformation basicInformation = new BasicInformation(webDriver);
             String postTitle = random.GetCharacterString(15);
         	basicInformation.EnterTitle(postTitle);
-        	ContentParent contentParent = new ContentParent(webDriver, applib);
+        	ContentParent contentParent = new ContentParent(webDriver);
         	contentParent.Scroll("100");
         	basicInformation.EnterSynopsis();
         	overlay.SwitchToActiveFrame();
@@ -66,7 +66,7 @@ public class StickyButtons extends ParentTest{
         	contentParent.VerifyMessageStatus("Post " + postTitle + " has been created.");
         	
         	//Step 7
-        	webDriver.navigate().to(applib.getApplicationURL() + "/node/add/post");
+        	webDriver.navigate().to(config.getConfigValueString("AppURL") + "/node/add/post");
         	stickyEditActions.VerifySaveBtnPresent();
             stickyEditActions.VerifyPreviewBtnPresent();
             contentParent.Scroll("100");

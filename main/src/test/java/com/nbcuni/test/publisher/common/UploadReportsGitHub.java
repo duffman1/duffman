@@ -16,11 +16,11 @@ public class UploadReportsGitHub {
     	Config config = new Config();
     	
     	//set variables from config
-    	String envURL = config.getConfigValue("AppURL");
-    	String userName = config.getConfigValue("GithubUsername");
-    	String passWord = config.getConfigValue("GithubPassword");
-    	String owner = config.getConfigValue("GithubOwner");
-    	String repo = config.getConfigValue("GithubRepo");
+    	String envURL = config.getConfigValueString("AppURL");
+    	String userName = config.getConfigValueString("GitHubUsername");
+    	String passWord = config.getConfigValueString("GitHubPassword");
+    	String owner = config.getConfigValueString("GithubOwner");
+    	String repo = config.getConfigValueString("GithubRepo");
     	int pullId = 0;
     	String ssh = null;
     	
@@ -56,7 +56,7 @@ public class UploadReportsGitHub {
         	CommitStatus commitStatus = new CommitStatus();
         	commitStatus.setState(status);
         	commitStatus.setDescription(description);
-        	if (config.getConfigValue("UploadReportToRally").equals("true")) {
+        	if (config.getConfigValueString("UploadReportToRally").equals("true")) {
         		commitStatus.setTargetUrl(targetUrl);
         	}
         	

@@ -25,10 +25,10 @@ public class SEOOptimizationModule extends ParentTest {
 
 		//Step 1
 		UserLogin userLogin = applib.openApplication();
-		userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+		userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
        
 		//Step 2
-		Modules module = new Modules(webDriver, applib);
+		Modules module = new Modules(webDriver);
 		taxonomy.NavigateSite("Modules");
 		overlay.SwitchToActiveFrame();
 		module.EnterFilterName("Pub SEO");
@@ -44,18 +44,18 @@ public class SEOOptimizationModule extends ParentTest {
 		contentTypeStructure.ClickXMLSiteMapLink();
 		contentTypeStructure.SelectInclusionOption("Included");
 		contentTypeStructure.ClickSaveContentType();
-		ContentParent contentParent = new ContentParent(webDriver, applib);
+		ContentParent contentParent = new ContentParent(webDriver);
 		contentParent.VerifyMessageStatus("The content type Post has been updated.");
 		overlay.ClickCloseOverlayLnk();
 		
 		//Step 5
-		CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver, applib);
+		CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver);
 		String DraftPostTitle = createDefaultContent.Post("Draft");
 		String PublishedPostTitle = createDefaultContent.Post("Published");
 		System.out.println(PublishedPostTitle);
 		
 		//Step 6
-		Cron cron = new Cron(webDriver, applib);
+		Cron cron = new Cron(webDriver);
 		cron.RunCron(true);
 		
 		//Step 7

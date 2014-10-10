@@ -44,8 +44,8 @@ public class MultiEditorPublishingWorkflow extends ParentTest{
         
     	//Setup - create editor user
     	UserLogin userLogin = applib.openApplication();
-    	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
-    	AddUser addUser = new AddUser(webDriver, applib);
+    	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
+    	AddUser addUser = new AddUser(webDriver);
     	String userPassword = "pa55word";
         String editorUserName = addUser.AddDefaultUser(Arrays.asList("editor"), false);
         
@@ -74,11 +74,11 @@ public class MultiEditorPublishingWorkflow extends ParentTest{
         userLogin.Login(editorUserName, userPassword);
             
         //Step 2
-        CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver, applib);
+        CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver);
         String postTitle = createDefaultContent.Post("Draft");
         
         //Step 3
-        WorkBench workBench = new WorkBench(webDriver, applib);
+        WorkBench workBench = new WorkBench(webDriver);
         workBench.ClickWorkBenchTab("Edit Draft");
         overlay.SwitchToActiveFrame();
             
@@ -98,7 +98,7 @@ public class MultiEditorPublishingWorkflow extends ParentTest{
         MyWork myWork = new MyWork(webDriver);
         myWork.ClickMyWorkBtn();
         overlay.SwitchToActiveFrame();
-        SearchFor searchFor = new SearchFor(webDriver, applib);
+        SearchFor searchFor = new SearchFor(webDriver);
         searchFor.EnterTitle(postTitle);
         searchFor.ClickApplyBtn();
         Thread.sleep(1000); //TODO - dynamic wait

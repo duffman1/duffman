@@ -12,10 +12,15 @@ import java.util.Date;
 import java.util.List;
 import java.util.TimeZone;
 import java.util.concurrent.TimeUnit;
-import com.nbcuni.test.publisher.common.ParentTest;
+import com.nbcuni.test.publisher.common.AppLib;
+import com.nbcuni.test.publisher.common.Config;
+import com.nbcuni.test.publisher.common.Random;
+import com.nbcuni.test.publisher.common.Driver.Driver;
 import com.nbcuni.test.publisher.pageobjects.Modules;
+import com.nbcuni.test.publisher.pageobjects.Overlay;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Content.BasicInformation;
+import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.Content.PublishingOptions;
 import com.nbcuni.test.publisher.pageobjects.Content.SelectFile;
 import com.nbcuni.test.publisher.pageobjects.Content.WorkBench;
@@ -24,22 +29,24 @@ import com.nbcuni.test.publisher.pageobjects.Logo.Logos;
 import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
 import com.nbcuni.test.publisher.pageobjects.People.Permissions;
 import com.nbcuni.test.publisher.pageobjects.Structure.Queues.Queues.ScheduleQueue;
+import com.nbcuni.test.publisher.pageobjects.Taxonomy.Taxonomy;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
-import org.testng.Assert;
-import org.testng.annotations.Test;
 
-public class A1_TestSetup extends ParentTest {
+public class A1_TestSetup {
 	
     /*************************************************************************************
      * Test executes some common setup logic prior to full suite execution
      *************************************************************************************/
-    @Test(groups = {"full", "smoke", "mpx", "certify"})
-    public void TestSetup_Test() throws Exception {
+    public Boolean TestSetup_Test(Driver webDriver, AppLib applib) throws Exception {
     	
+    	Config config = new Config();
+		
+    	Boolean abortTestSuite = false;
     	Boolean allIterationsFailed = false;
+    	
     	int iter = 0;
         while (iter <= 3) {
         	iter++;
@@ -50,16 +57,17 @@ public class A1_TestSetup extends ParentTest {
         		
         		//login
             	UserLogin userLogin = applib.openApplication();
-            	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+            	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             	
             	//set pub sauce theme
                 applib.openSitePage("/admin/appearance");
                 new Select(webDriver.findElement(By.id("edit-admin-theme--2"))).selectByVisibleText("Pub Sauce");
+                ContentParent contentParent = new ContentParent(webDriver);
                 contentParent.ClickSaveBtn();
                 
             	//enable overlay module if necessary
             	applib.openSitePage("/admin/modules");
-                Modules modules = new Modules(webDriver, applib);
+                Modules modules = new Modules(webDriver);
                 if (modules.IsModuleEnabled("Overlay") == true) {
                 	applib.openSitePage("/#overlay=admin/modules");
                 }
@@ -67,6 +75,7 @@ public class A1_TestSetup extends ParentTest {
                 	modules.EnterFilterName("Overlay");
                     modules.EnableModule("Overlay");
                 }
+                Overlay overlay = new Overlay(webDriver);
                 overlay.SwitchToActiveFrame();
                 
                 //enable necessary modules (from text file)
@@ -131,6 +140,7 @@ public class A1_TestSetup extends ParentTest {
                 applib.openSitePage("/admin/structure/types/manage/media-gallery/fields/field_media_items");
                 new Select(webDriver.findElement(By.id("edit-field-cardinality"))).selectByVisibleText("Unlimited");
                 contentParent.ClickSaveBtn();
+                Taxonomy taxonomy = new Taxonomy(webDriver);
                 taxonomy.NavigateSite("Home");
                 
                 //set admin menu perms
@@ -152,18 +162,18 @@ public class A1_TestSetup extends ParentTest {
                 
                 if (PrivateFileSystemPath_Txb.getAttribute("value").equals("")) {
                 	String privateFileSystemPath = null;
-                	if (config.getConfigValue("AppURL").contains(".pr")) {
+                	if (config.getConfigValueString("AppURL").contains(".pr")) {
                 		privateFileSystemPath = "";
                 	}
-                	else if (config.getConfigValue("AppURL").contains("acc.")) {
+                	else if (config.getConfigValueString("AppURL").contains("acc.")) {
                 		privateFileSystemPath = "/mnt/files/nbcupublisher7acc/sites/default/files-private";
                 	}
-                	else if (config.getConfigValue("AppURL").contains("acc-test")) {
+                	else if (config.getConfigValueString("AppURL").contains("acc-test")) {
                 		privateFileSystemPath = "/mnt/files/nbcupublisher7devi0/sites/default/files-private";
                 	}
                 	else {
-                		privateFileSystemPath = "/mnt/files/nbcupublisher7." + config.getConfigValue("AppURL").replace("http://", "").replace(".publisher7.com", "") + "/sites/default/files-private";
-                		privateFileSystemPath = config.getConfigValue("AppURL").replace("http://", "").replace(".publisher7.com", "");
+                		privateFileSystemPath = "/mnt/files/nbcupublisher7." + config.getConfigValueString("AppURL").replace("http://", "").replace(".publisher7.com", "") + "/sites/default/files-private";
+                		privateFileSystemPath = config.getConfigValueString("AppURL").replace("http://", "").replace(".publisher7.com", "");
                 	}
                 
                 	PublicFileSystemPath_Txb.clear();
@@ -189,12 +199,13 @@ public class A1_TestSetup extends ParentTest {
             	basicInformation.ClickBasicInformationTab();
             	SimpleDateFormat pub7DateFormat = new SimpleDateFormat("MM/dd/yyyy");
             	Date currentDate = new Date();
+            	Random random = new Random();
             	String postTitle = "futurePost" + pub7DateFormat.format(currentDate) + random.GetCharacterString(15);
             	basicInformation.EnterTitle(postTitle);
             	basicInformation.EnterSynopsis();
             	overlay.SwitchToActiveFrame();
             	basicInformation.ClickCoverSelectBtn();
-            	SelectFile selectFile = new SelectFile(webDriver, applib);
+            	SelectFile selectFile = new SelectFile(webDriver);
             	selectFile.SelectDefaultCoverImg();
             	overlay.SwitchToActiveFrame();
             	publishingOptions.ClickPublishingOptionsLnk();
@@ -202,7 +213,7 @@ public class A1_TestSetup extends ParentTest {
             	contentParent.ClickSaveBtn();
             	overlay.switchToDefaultContent(true);
             	contentParent.VerifyMessageStatus("Post " + postTitle + " has been created.");
-            	WorkBench workBench = new WorkBench(webDriver, applib);
+            	WorkBench workBench = new WorkBench(webDriver);
                 workBench.ClickWorkBenchTab("Schedule");
                 overlay.SwitchToActiveFrame();
                 ScheduleQueue scheduleQueue = new ScheduleQueue(webDriver);
@@ -238,7 +249,7 @@ public class A1_TestSetup extends ParentTest {
                 AddLogo addLogo = new AddLogo(webDriver);
                 String logoTitle = random.GetCharacterString(15);
                 addLogo.EnterTitle(logoTitle);
-                addLogo.EnterFilePath(applib.getPathToMedia() + "nbclogosmall.jpg");
+                addLogo.EnterFilePath(config.getConfigValueFilePath("PathToMediaContent") + "nbclogosmall.jpg");
         	    addLogo.ClickUploadBtn();
         	    addLogo.WaitForFileUploaded("nbclogosmall.jpg");
         	    addLogo.VerifyFileImagePresent("nbclogosmall");
@@ -266,7 +277,7 @@ public class A1_TestSetup extends ParentTest {
         	    overlay.ClickCloseOverlayLnk();
         	    
         	    //configure mpx if needed
-        	    Settings settings = new Settings(webDriver, applib);
+        	    Settings settings = new Settings(webDriver);
             	settings.ConfigureMPXIfNeeded();
             	settings.ConfigureMPXIngestionType();
             	
@@ -279,7 +290,7 @@ public class A1_TestSetup extends ParentTest {
                 		allURLs = allURLs + el.getAttribute("href");
                 		eachURL.add(el.getAttribute("href"));
                 	}
-                	allURLs = allURLs.replaceAll(applib.getApplicationURL() + "/admin/structure/file-types/manage/", "");
+                	allURLs = allURLs.replaceAll(config.getConfigValueString("AppURL") + "/admin/structure/file-types/manage/", "");
                 	String[] index = allURLs.split("mpx_video_");
                 	
                 	ArrayList<Integer> allIndexInts = new ArrayList<Integer>();
@@ -301,7 +312,7 @@ public class A1_TestSetup extends ParentTest {
                 	}
                 }
                 catch (Exception e) {}
-                webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
+                webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
                 
                 //delete any created custom content types
                 List<String> allowedContentTypes = new ArrayList<String>();
@@ -318,7 +329,7 @@ public class A1_TestSetup extends ParentTest {
                 List<WebElement> allContentTypes = webDriver.findElements(By.xpath("//a[text()='Content']/../ul//a[text()='Add content']/..//ul/li/a"));
                 List<String> allContentTypeURLsToDelete = new ArrayList<String>();
                 for (WebElement contentType : allContentTypes) {
-                	allContentTypeURLsToDelete.add(contentType.getAttribute("href").replace(config.getConfigValue("AppURL") + "/node/add/", ""));
+                	allContentTypeURLsToDelete.add(contentType.getAttribute("href").replace(config.getConfigValueString("AppURL") + "/node/add/", ""));
                 }
                 for (String contentType : allContentTypeURLsToDelete) {
                 	if (!allowedContentTypes.contains(contentType)) {
@@ -340,11 +351,11 @@ public class A1_TestSetup extends ParentTest {
         }
     	
         if (allIterationsFailed.equals(true)) {
-        	if (config.getConfigValue("AbortSuiteOnSetupFailure").equals("true")) {
+        	if (config.getConfigValueString("AbortSuiteOnSetupFailure").equals("true")) {
         		abortTestSuite = true;
         	}
-        	Assert.fail();
         }
-            
+        webDriver.quit();
+        return abortTestSuite;
     }
 }

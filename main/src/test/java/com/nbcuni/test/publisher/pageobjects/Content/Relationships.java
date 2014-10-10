@@ -1,6 +1,5 @@
 package com.nbcuni.test.publisher.pageobjects.Content;
 
-import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.publisher.common.Driver.Driver;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
@@ -25,7 +24,7 @@ public class Relationships {
 	private WebDriverWait wait;
 	
 	//PAGE OBJECT CONSTRUCTORS
-    public Relationships(Driver webDriver, AppLib applib) {
+    public Relationships(Driver webDriver) {
     	PageFactory.initElements(webDriver, this);
         wait = (WebDriverWait) new WebDriverWait(webDriver, 10).ignoring(StaleElementReferenceException.class);
     }

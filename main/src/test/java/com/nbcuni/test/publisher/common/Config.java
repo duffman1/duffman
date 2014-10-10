@@ -4,13 +4,11 @@ import org.testng.Assert;
 import org.w3c.dom.Attr;
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
-
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.xpath.XPath;
 import javax.xml.xpath.XPathConstants;
 import javax.xml.xpath.XPathFactory;
-
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
@@ -57,85 +55,77 @@ public class Config {
         return value;
 	}
 	
-    public String getConfigValue(String parameterName) {
+	private List<String> getXPathValuesFromFile(String fileLocation, String xpathQuery) {
+		
+		List<String> allValues = new ArrayList<String>();
+    	try {
+    		DocumentBuilderFactory xmlFactory = DocumentBuilderFactory.newInstance();
+    		DocumentBuilder docBuilder = xmlFactory.newDocumentBuilder();
+    	
+    		XPathFactory xpathFact = XPathFactory.newInstance();
+    		XPath xpath = xpathFact.newXPath();
+    	
+    		File configFile = new File(fileLocation);
+    		
+    		Document configXmlDoc = docBuilder.parse(configFile);
+    		NodeList nodeList = (NodeList) xpath.evaluate(xpathQuery, configXmlDoc, XPathConstants.NODESET);
+    	
+    		int length = nodeList.getLength();
+    		for( int i=0; i<length; i++) {
+    			Attr attr = (Attr) nodeList.item(i);
+    			allValues.add(attr.toString());
+    		}
+    	}
+    	catch (Exception e) {
+    		Assert.fail("Failed to get value from test config");
+    	}
+    		return allValues;
+    }
+	
+	public String getConfigValueString(String parameterName) {
 
-    	return this.getXPathValueFromFile(this.getConfigFileLocation(), "//parameter[@name='" + parameterName + "']/@value");
-     
-    }
-    
-    public String getPathToReports() {
-    	String fileLoc = System.getProperty("user.dir") + this.getConfigValue("PathToReports");
-    	return fileLoc.replace("/", File.separator);
-    }
-    
-    public String getPathToHarReports() {
-    	
-    	String fileLoc = System.getProperty("user.dir") + this.getConfigValue("PathToHarReports");
-    	return fileLoc.replace("/", File.separator);
-    	
-    }
-    
-    public String getPathToScreenshots() {
-    	
-    	String fileLoc = System.getProperty("user.dir") + this.getConfigValue("PathToScreenshots");
-    	return fileLoc.replace("/", File.separator);
-    	
-    }
-    
-    public String getPathToSikuliImages() {
-    	
-    	String fileLoc = System.getProperty("user.dir") + this.getConfigValue("PathToSikuliImages");
-    	return fileLoc.replace("/", File.separator);
-    	
-    }
-    
-    public int getReRunOnFailureCount() {
-    	
-    	return Integer.parseInt(this.getConfigValue("ReRunOnFailureCount"));
-    	
-    }
-    
-    public double getSikuliImageWaitTime() {
-    	
-    	return (double) Integer.parseInt(this.getConfigValue("SikuliImageWaitTime"));
-    	
-    }
-    
-    public int getImplicitWaitTime() {
-    	
-    	return Integer.parseInt(this.getConfigValue("ImplicitWaitTime"));
-    	
-    }
-    
-    public int getPageLoadWaitTime() {
-    	
-    	return Integer.parseInt(this.getConfigValue("PageLoadWaitTime"));
-    	
-    }
-    
-    public int getMPXVideaUploadPause() {
-    	
-    	return Integer.parseInt(this.getConfigValue("MPXVideaUploadPause"));
-    	
-    }
-    
-    public int getMPXAssetBufferPause() {
-    	
-    	return Integer.parseInt(this.getConfigValue("MPXAssetBufferPause"));
-    	
-    }
-    
-    public String getPathToMedia() {
-    	
-    	String filePath = System.getProperty("user.dir") + this.getConfigValue("PathToMediaContent");
-        return filePath.replace("/", File.separator);
+		String parameterValue = "";
+    	if (System.getProperty("system.test." + parameterName.toLowerCase()) != null) {
+    		parameterValue = System.getProperty("system.test." + parameterName.toLowerCase());
+    	}
+    	else {
+    		parameterValue = this.getXPathValueFromFile(this.getConfigFileLocation(), "//parameter[@name='" + parameterName + "']/@value");
+    	}
         
+    	return parameterValue;
     }
-    
-    public boolean IsErrorCheckingEnabled() {
+	
+	public String getConfigValueFilePath(String parameterName) {
+
+		String parameterValue = "";
+    	if (System.getProperty("system.test." + parameterName.toLowerCase()) != null) {
+    		parameterValue = System.getProperty("system.test." + parameterName.toLowerCase());
+    	}
+    	else {
+    		parameterValue = this.getXPathValueFromFile(this.getConfigFileLocation(), "//parameter[@name='" + parameterName + "']/@value");
+    	}
+        
+    	parameterValue = System.getProperty("user.dir") + parameterValue;
+    	return parameterValue.replace("/", File.separator);
+    }
+	
+	public Integer getConfigValueInt(String parameterName) {
+
+		String parameterValue = "";
+    	if (System.getProperty("system.test." + parameterName.toLowerCase()) != null) {
+    		parameterValue = System.getProperty("system.test." + parameterName.toLowerCase());
+    	}
+    	else {
+    		parameterValue = this.getXPathValueFromFile(this.getConfigFileLocation(), "//parameter[@name='" + parameterName + "']/@value");
+    	}
+        
+    	return Integer.parseInt(parameterValue);
+    }
+	
+	public boolean IsErrorCheckingEnabled() {
     	
     	boolean checksEnabled = true;
-    	if (this.getConfigValue("ErrorCheckingEnabled").equals("true")) {
+    	if (this.getConfigValueString("ErrorCheckingEnabled").equals("true")) {
     		checksEnabled = true;
     	}
     	else {
@@ -153,52 +143,41 @@ public class Config {
 
     }
     
-    public String getIncludedGroups() {
+    public List<String> getIncludedGroups() {
 
-        return this.getXPathValueFromFile(this.getConcurrentSuiteFileLocation(), "//groups/run/include/@name");
-
+        List<String> allIncludedGroups = this.getXPathValuesFromFile(this.getConfigFileLocation(), "//groups/run/include/@name");
+    	List<String> allIncudedGroupsCleaned = new ArrayList<String>();
+    	
+    	for (String group: allIncludedGroups) {
+    		allIncudedGroupsCleaned.add(group.replace("name=", "").replace("\"", ""));
+    	}
+    	
+    	return allIncudedGroupsCleaned;
     }
     
-    public String getExcludedGroups() {
+    public List<String> getExcludedGroups() {
 
-        return this.getXPathValueFromFile(this.getConcurrentSuiteFileLocation(), "//groups/run/exclude/@name");
-
+        List<String> allExcludedGroups = this.getXPathValuesFromFile(this.getConfigFileLocation(), "//groups/run/exclude/@name");
+    	List<String> allExcludedGroupsCleaned = new ArrayList<String>();
+    	
+    	for (String group: allExcludedGroups) {
+    		allExcludedGroupsCleaned.add(group.replace("name=", "").replace("\"", ""));
+    	}
+    	
+    	return allExcludedGroupsCleaned;
     }
-
+    
     public List<String> getAllLocalTests() {
-    	//TODO - clean this up, some redundant code.
-    	List<String> allLocalTests = new ArrayList<String>();
-    	try {
-    		DocumentBuilderFactory xmlFactory = DocumentBuilderFactory.newInstance();
-    		DocumentBuilder docBuilder = xmlFactory.newDocumentBuilder();
     	
-    		XPathFactory xpathFact = XPathFactory.newInstance();
-    		XPath xpath = xpathFact.newXPath();
+    	List<String> allLocalTests = this.getXPathValuesFromFile(this.getConfigFileLocation(), "//class[@runslocal='true']/@name");
+    	List<String> allLocalTestsCleaned = new ArrayList<String>();
     	
-    		File consecutiveFile = new File(this.getConsecutiveSuiteFileLocation());
-    		File concurrentFile = new File(this.getConcurrentSuiteFileLocation());
-    	
-    		Document consecutiveXmlDoc = docBuilder.parse(consecutiveFile);
-    		NodeList consecutiveNodeList = (NodeList) xpath.evaluate("//class[@runslocal='true']/@name", consecutiveXmlDoc, XPathConstants.NODESET);
-    	
-    		int length = consecutiveNodeList.getLength();
-    		for( int i=0; i<length; i++) {
-    			Attr attr = (Attr) consecutiveNodeList.item(i);
-    			allLocalTests.add(attr.toString().replace("name=", "").replace("\"", ""));
-    		}
-    	
-    		Document concurrentXmlDoc = docBuilder.parse(concurrentFile);
-    		NodeList concurrentNodeList = (NodeList) xpath.evaluate("//class[@runslocal='true']/@name", concurrentXmlDoc, XPathConstants.NODESET);
-    	
-    		int length2 = concurrentNodeList.getLength();
-    		for( int i=0; i<length2; i++) {
-    			Attr attr = (Attr) concurrentNodeList.item(i);
-    			allLocalTests.add(attr.toString().replace("name=", "").replace("\"", ""));
-    		}
+    	for (String localTest: allLocalTests) {
+    		allLocalTestsCleaned.add(localTest.replace("name=", "").replace("\"", ""));
     	}
-    	catch (Exception e) {
-    		Assert.fail("Failed to get value from test config");
-    	}
-    		return allLocalTests;
-    	}
+    	
+    	return allLocalTestsCleaned;
+    }
+    
+    
 }

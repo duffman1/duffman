@@ -1,6 +1,6 @@
 package com.nbcuni.test.publisher.pageobjects.Content;
 
-import com.nbcuni.test.publisher.common.AppLib;
+import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
 import org.testng.Assert;
 import org.openqa.selenium.By;
@@ -11,6 +11,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
+
 import java.util.concurrent.TimeUnit;
 
 /*********************************************
@@ -23,13 +24,13 @@ import java.util.concurrent.TimeUnit;
 public class Content {
 
     private Driver webDriver;
-    private AppLib applib;
+    private Config config;
     private WebDriverWait wait;
     
     //PAGE OBJECT CONSTRUCTOR
-    public Content(Driver webDriver, AppLib applib) {
+    public Content(Driver webDriver) {
         this.webDriver = webDriver;
-        this.applib = applib;
+        config = new Config();
         wait = new WebDriverWait(webDriver, 10);
         PageFactory.initElements(webDriver, this);
     }
@@ -92,7 +93,7 @@ public class Content {
 
         Assert.assertFalse(elPresent);
 
-        webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
+        webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
     	
     }
     
@@ -132,7 +133,7 @@ public class Content {
     	if (elPresent == true) {
     		Assert.fail("Content item is present when it should not be");
     	}
-    	webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
+    	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
     	
     }
     

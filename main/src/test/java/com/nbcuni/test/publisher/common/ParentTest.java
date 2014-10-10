@@ -4,6 +4,7 @@ import com.nbcuni.test.publisher.common.Driver.*;
 import com.nbcuni.test.publisher.pageobjects.Overlay;
 import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.Taxonomy.Taxonomy;
+import com.nbcuni.test.publisher.tests.Setup.A1_TestSetup;
 import com.nbcuni.test.publisher.common.Driver.Driver;
 
 import org.openqa.selenium.By;
@@ -36,13 +37,17 @@ public class ParentTest {
     public static Boolean abortTestSuite = false;
     
     @BeforeSuite(alwaysRun = true)
-    public void startGridAndHub() throws Exception {
+    public void suiteSetup() throws Exception {
 
-    	if (config.getConfigValue("RunMobile").equals("false") && config.getConfigValue("RunOnGridNetwork").equals("false")) {
-    		startGridHubNode = new StartGridHubNode();
-    		startGridHubNode.start();
+    	if (config.getConfigValueString("RunSetupScripts").equals("true")) {
+    		driverSetup = new DriverSetup();
+        	webDriver = driverSetup.WebDriverSetup(true);
+        	applib = new AppLib(webDriver);
+        	webDriver.manage().timeouts().pageLoadTimeout(config.getConfigValueInt("PageLoadWaitTime"), TimeUnit.SECONDS);
+            webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
+        	A1_TestSetup testSetup = new A1_TestSetup();
+        	abortTestSuite = testSetup.TestSetup_Test(webDriver, applib);
     	}
-    	
     }
     
     @BeforeMethod(alwaysRun = true)
@@ -60,11 +65,11 @@ public class ParentTest {
             applib = new AppLib(webDriver);
             random = new Random();
             taxonomy = new Taxonomy(webDriver);
-            overlay = new Overlay(webDriver, applib);
-            contentParent = new ContentParent(webDriver, applib);
+            overlay = new Overlay(webDriver);
+            contentParent = new ContentParent(webDriver);
             
-            webDriver.manage().timeouts().pageLoadTimeout(applib.getPageLoadWaitTime(), TimeUnit.SECONDS);
-            webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
+            webDriver.manage().timeouts().pageLoadTimeout(config.getConfigValueInt("PageLoadWaitTime"), TimeUnit.SECONDS);
+            webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
             webDriver.manage().window().maximize();
             
         } catch (Exception e) {
@@ -114,11 +119,8 @@ public class ParentTest {
     }
     
     @AfterSuite(alwaysRun = true)
-    public void stopGridAndHub() throws Exception {
+    public void suiteTeardown() throws Exception {
 
-    	if (config.getConfigValue("RunMobile").equals("false") && config.getConfigValue("RunOnGridNetwork").equals("false")) {
-    		startGridHubNode.stop();
-    	}
     	
     }
     

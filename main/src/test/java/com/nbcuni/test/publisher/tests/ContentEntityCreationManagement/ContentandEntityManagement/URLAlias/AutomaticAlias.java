@@ -21,7 +21,7 @@ public class AutomaticAlias extends ParentTest {
          
         	Reporter.log("STEP 1");
         	UserLogin userLogin = applib.openApplication();
-        	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+        	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
         	Reporter.log("SETUP");
         	taxonomy.NavigateSite("Configuration>>Search and metadata>>URL aliases>>Settings");
@@ -40,7 +40,7 @@ public class AutomaticAlias extends ParentTest {
             basicInformation.EnterTitle(postTitle);
             basicInformation.EnterSynopsis();
             overlay.SwitchToActiveFrame();
-            URLPathSettings urlPathSettings = new URLPathSettings(webDriver, applib);
+            URLPathSettings urlPathSettings = new URLPathSettings(webDriver);
             urlPathSettings.ClickURLPathSettingsLnk();
             urlPathSettings.VerifyGenerateAutomateURLAliasChecked();
             
@@ -50,7 +50,7 @@ public class AutomaticAlias extends ParentTest {
             contentParent.VerifyMessageStatus("Post " + postTitle + " has been created.");
             
             Reporter.log("STEP 4");
-            WorkBench workBench = new WorkBench(webDriver, applib);
+            WorkBench workBench = new WorkBench(webDriver);
             workBench.ClickWorkBenchTab("Edit Draft");
             overlay.SwitchToActiveFrame();
             urlPathSettings.ClickURLPathSettingsLnk();

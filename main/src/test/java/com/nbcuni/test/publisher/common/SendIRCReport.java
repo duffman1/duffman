@@ -14,12 +14,12 @@ public class SendIRCReport {
 		Config config = new Config();
 		
 		//Server conn props
-        String server = config.getConfigValue("IRCServer");
-        String nick = config.getConfigValue("IRCNickname");
+        String server = config.getConfigValueString("IRCServer");
+        String nick = config.getConfigValueString("IRCNickname");
         String login = "simple_bot";
 
         //Channel to connect to
-        String channel = config.getConfigValue("IRCChannel");
+        String channel = config.getConfigValueString("IRCChannel");
         
         //If enabled, connect to the server
         	@SuppressWarnings("resource")
@@ -47,19 +47,19 @@ public class SendIRCReport {
                 }
             }
             
-            Integer failedIndividualTestCount = failedTestsCount / (config.getReRunOnFailureCount() + 1);
+            Integer failedIndividualTestCount = failedTestsCount / (config.getConfigValueInt("ReRunOnFailureCount") + 1);
             String sendTo = channel;
             
             //Join channel and write results
             writer.write("JOIN " + channel + "\r\n");
             writer.flush();
-            writer.write("PRIVMSG " + sendTo + " :Test run complete against latest build on " + config.getConfigValue("AppURL") + ".\r\n");
+            writer.write("PRIVMSG " + sendTo + " :Test run complete against latest build on " + config.getConfigValueString("AppURL") + ".\r\n");
             writer.flush();
             writer.write("PRIVMSG " + sendTo + " :Total tests passed = " + passedTestsCount.toString() + ".\r\n");
             writer.flush();
             writer.write("PRIVMSG " + sendTo + " :Total tests failed = " + failedIndividualTestCount.toString() + ".\r\n");
             writer.flush();
-            writer.write("PRIVMSG " + sendTo + " :A detailed test report has been emailed to you as well as posted to Rally attached to " + config.getConfigValue("RallyTaskID") + ".\r\n");
+            writer.write("PRIVMSG " + sendTo + " :A detailed test report has been emailed to you as well as posted to Rally attached to " + config.getConfigValueString("RallyTaskID") + ".\r\n");
             writer.flush();
                 
             //Close writer and release socket

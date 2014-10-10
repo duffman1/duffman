@@ -28,12 +28,12 @@ public class EnhanceOperationsDropdownonScheduleTab extends ParentTest {
 
     	//Step 1
         UserLogin userLogin = applib.openApplication();
-        userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+        userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
 
         //Step 2
         taxonomy.VerifyContentMenuExist("Content");
         taxonomy.VerifyContentMenuExist("My Workbench");
-        CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver, applib);
+        CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver);
         String postTitle = createDefaultContent.Post("Draft");
 
         //Step 3

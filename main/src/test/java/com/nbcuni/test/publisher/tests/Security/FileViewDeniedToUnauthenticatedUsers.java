@@ -23,14 +23,14 @@ public class FileViewDeniedToUnauthenticatedUsers extends ParentTest{
     	
     	//Step 1
         applib.openApplication();
-        webDriver.navigate().to(applib.getApplicationURL() + "/admin/content/file");
+        webDriver.navigate().to(config.getConfigValueString("AppURL") + "/admin/content/file");
         AccessDenied accessDenied = new AccessDenied(webDriver);
         accessDenied.VerifyAccessDeniedTxt();
         
         //Step 2
         UserLogin userLogin = new UserLogin(webDriver);
         PageFactory.initElements(webDriver, userLogin);
-        userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+        userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         new WebDriverWait(webDriver, 10).until(ExpectedConditions.titleContains("Content"));
         
     }

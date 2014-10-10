@@ -1,8 +1,7 @@
 package com.nbcuni.test.publisher.pageobjects.Content;
 
 import java.util.concurrent.TimeUnit;
-
-import com.nbcuni.test.publisher.common.AppLib;
+import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
 
 import org.openqa.selenium.By;
@@ -26,13 +25,13 @@ import org.testng.Reporter;
 public class Revisions {
 
 	private Driver webDriver;
-	private AppLib applib;
+	private Config config;
     private WebDriverWait wait;
     
 	//PAGE OBJECT CONSTRUCTOR
-	public Revisions(Driver webDriver, AppLib applib) {
+	public Revisions(Driver webDriver) {
         this.webDriver = webDriver;
-        this.applib = applib;
+        config = new Config();
         PageFactory.initElements(webDriver, this);
         wait = new WebDriverWait(webDriver, 10);
     }
@@ -142,7 +141,7 @@ public class Revisions {
     	if (elPresent == true) {
     		Assert.fail("Content item Edit/Delete button present when it should not be");
     	}
-    	webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
+    	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
     }
     
     public void ClickUpdateStateBtn() throws Exception {    	
