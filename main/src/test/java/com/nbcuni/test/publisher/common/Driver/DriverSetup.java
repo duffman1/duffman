@@ -88,13 +88,16 @@ public class DriverSetup {
         
         capabilities.setCapability(CapabilityType.TAKES_SCREENSHOT, true);
         
-        if (config.getConfigValueString("RunOnGridNetwork").equals("true")) {
+        if (config.getConfigValueString("RunRemotely").equals("true")) {
         	if (runLocally.equals(true)) {
         		capabilities.setCapability(CapabilityType.VERSION, "local");
         	}
         	else {
         		capabilities.setCapability(CapabilityType.VERSION, "remote");
         	}
+        }
+        else {
+        	capabilities.setCapability(CapabilityType.VERSION, "local");
         }
         
         try {

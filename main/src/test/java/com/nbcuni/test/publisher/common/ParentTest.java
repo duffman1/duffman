@@ -37,15 +37,17 @@ public class ParentTest {
     public static Boolean abortTestSuite = false;
     
     @BeforeSuite(alwaysRun = true)
-    public void startGridAndHub() throws Exception {
+    public void suiteSetup() throws Exception {
 
-    	driverSetup = new DriverSetup();
-    	webDriver = driverSetup.WebDriverSetup(true);
-    	applib = new AppLib(webDriver);
-    	webDriver.manage().timeouts().pageLoadTimeout(config.getConfigValueInt("PageLoadWaitTime"), TimeUnit.SECONDS);
-        webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
-    	A1_TestSetup testSetup = new A1_TestSetup();
-    	abortTestSuite = testSetup.TestSetup_Test(webDriver, applib);
+    	if (config.getConfigValueString("RunSetupScripts").equals("true")) {
+    		driverSetup = new DriverSetup();
+        	webDriver = driverSetup.WebDriverSetup(true);
+        	applib = new AppLib(webDriver);
+        	webDriver.manage().timeouts().pageLoadTimeout(config.getConfigValueInt("PageLoadWaitTime"), TimeUnit.SECONDS);
+            webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
+        	A1_TestSetup testSetup = new A1_TestSetup();
+        	abortTestSuite = testSetup.TestSetup_Test(webDriver, applib);
+    	}
     }
     
     @BeforeMethod(alwaysRun = true)
@@ -117,7 +119,7 @@ public class ParentTest {
     }
     
     @AfterSuite(alwaysRun = true)
-    public void stopGridAndHub() throws Exception {
+    public void suiteTeardown() throws Exception {
 
     	
     }
