@@ -97,7 +97,7 @@ public class NotificationPlayerUnavailability extends ParentTest{
                 MPXPlayers MPXPlayers = new MPXPlayers(webDriver);
                 MPXPlayers.ClickSyncMPXPlayersLnk();
                 MPXPlayers.ClickSyncMPXPlayersNowLnk();
-                contentParent.VerifyMessageStatus("players returned for account");
+                contentParent.VerifyMessageStatus("Processed players manually for all accounts");
         	    SearchFor searchFor = new SearchFor(webDriver);
         	    searchFor.EnterTitle(playerTitle);
                 searchFor.ClickApplyBtn();

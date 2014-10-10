@@ -135,12 +135,16 @@ public class ContentParent {
     	Thread.sleep(500); //stale element exception
         for (final String text : txtItems) {
         	Reporter.log("Verify the text '" + text + "' is present on the page.");
-        	wait.until(new ExpectedCondition<Boolean>() {
-        		public Boolean apply(WebDriver webDriver) {
-        			return Body_Txt.getText().contains(text);
-       		 	}
-        	});
-            
+        	try {
+        		wait.until(new ExpectedCondition<Boolean>() {
+            		public Boolean apply(WebDriver webDriver) {
+            			return Body_Txt.getText().contains(text);
+           		 	}
+            	});
+        	}
+        	catch (Exception e) {
+        		Assert.fail("Page content with text '" + text + "' is not present.");
+        	}
         }
     }
 
@@ -165,13 +169,17 @@ public class ContentParent {
     	
     	for (final String source : srcItems) {
     		Reporter.log("Verify '" + source + "' is present in page source.");
-    		wait.until(new ExpectedCondition<Boolean>() {
-        		public Boolean apply(WebDriver webDriver) {
-        			return pageSrc.contains(source);
-       		 	}
-        	});
+    		try {
+    			wait.until(new ExpectedCondition<Boolean>() {
+            		public Boolean apply(WebDriver webDriver) {
+            			return pageSrc.contains(source);
+           		 	}
+            	});
+    		}
+    		catch (Exception e) {
+    			Assert.fail("Page source of '" + source + "' is not present.");
+    		}
     	}
-    	   
     }
     
     public void VerifySourceNotInPage(final String scriptSrc) throws Exception {

@@ -1,8 +1,5 @@
 package com.nbcuni.test.publisher.tests.Setup;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -78,21 +75,9 @@ public class A1_TestSetup {
                 Overlay overlay = new Overlay(webDriver);
                 overlay.SwitchToActiveFrame();
                 
-                //enable necessary modules (from text file)
-                String requiredModulesFilePath = System.getProperty("user.dir") + "/src/test/java/com/nbcuni/test/publisher/tests/Setup/AllEnabledModules.txt";
-        	    //requiredModulesFilePath = requiredModulesFilePath.replace("/", File.separator);
-        	    File requiredModulesFile = new File(requiredModulesFilePath.replace("/", File.separator));
-            	BufferedReader bufferedReader = new BufferedReader(new FileReader(requiredModulesFile));
-            	List<String> requiredModules = new ArrayList<String>();
-            	String line;
-            	while ((line = bufferedReader.readLine()) != null) {
-            		
-            	   requiredModules.add(line.trim());
-            	}
-            	bufferedReader.close();
-                
+                //enable necessary modules
                 for (String module : Arrays.asList("Field UI", "Administration menu", 
-                		"Administration menu Adminimal Theme", "Pub Post", "Logo Manager")) {
+                		"Administration menu Adminimal Theme", "Pub Post", "Logo Manager", "Devel")) {
                 	if (!modules.IsModuleEnabled(module)) {
                 		modules.EnterFilterName(module);
                         modules.EnableModule(module);

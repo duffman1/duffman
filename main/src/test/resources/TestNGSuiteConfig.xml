@@ -1,7 +1,7 @@
 <suite name="Publisher 7 Test Suite" parallel="classes" preserve-order="true" thread-count="4">
 
 	<!--RUNTIME CONFIG-->
-	<parameter name="AppURL" value="http://acc-test.publisher7.com"></parameter>
+	<parameter name="AppURL" value="http://qa5.publisher7.com"></parameter>
 	<parameter name="Browser" value="chrome"></parameter>
 	<parameter name="Admin1Username" value="admin@publisher.nbcuni.com"></parameter>
 	<parameter name="Admin1Password" value="pa55word"></parameter>
@@ -99,6 +99,7 @@
 	 		<run>
 	 			<include name="full"/>
 	 			<exclude name="broken"/>
+	 			<exclude name="sensitive"/>
 	 		</run>
 		</groups>
 
@@ -201,6 +202,8 @@
 			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Mapper.Phase1ContentTypeMapper"/>
 			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.SchedulingContentPublishUnpublished"/>
 			<class name="com.nbcuni.test.publisher.tests.Video.DeIngestingMPXAccountsAndCorrespondingAssets.MPXAccountDeletion" runscron="true"/>CRON-DRUSH
+			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.EntityEmbeds.MarkdownTextAreas"/>
+			<class name="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EditorialActivity.CollectEditorialActivity"/>
 		</classes>
 	</test>
   	

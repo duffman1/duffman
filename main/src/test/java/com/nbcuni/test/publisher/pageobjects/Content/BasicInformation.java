@@ -49,6 +49,9 @@ public class BasicInformation {
     @FindBy(how = How.XPATH, using = "//a[@title='Embed YouTube Video']")
     private WebElement YouTube_Btn;
     
+    @FindBy(how = How.ID, using = "edit-body-und-0-value")
+    private WebElement Body_Txa;
+    
     private WebElement Synopsis_Frm() {
     	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
     	
@@ -156,6 +159,14 @@ public class BasicInformation {
         Body_Txa.clear();
         Body_Txa.sendKeys(synopsis);
         webDriver.switchTo().defaultContent();
+        
+    }
+    
+    public void EnterBody(String bodyTxt) throws Exception {
+
+        Reporter.log("Enter '" + bodyTxt + "' into the 'Body' text area.");
+        Body_Txa.clear();
+        Body_Txa.sendKeys(bodyTxt);
         
     }
     
