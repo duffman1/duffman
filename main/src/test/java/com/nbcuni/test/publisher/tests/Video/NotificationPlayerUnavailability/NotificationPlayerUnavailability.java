@@ -63,10 +63,10 @@ public class NotificationPlayerUnavailability extends ParentTest{
 
     	//NOTE - Test steps re-ordered and truncated for automation optimization
     	UserLogin userLogin = applib.openApplication();
-    	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+    	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         //MPX Configuration required
-    	Settings settings = new Settings(webDriver, applib);
+    	Settings settings = new Settings(webDriver);
     	settings.ConfigureMPXIfNeeded();
     	
         taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
@@ -77,14 +77,14 @@ public class NotificationPlayerUnavailability extends ParentTest{
         	if (configuredAccounts.contains("DB TV")) {
         		
         		//Step 1
-        		MPXLogin mpxLogin = new MPXLogin(webDriver, applib);
+        		MPXLogin mpxLogin = new MPXLogin(webDriver);
             	mpxLogin.OpenMPXThePlatform();
-            	mpxLogin.Login(applib.getMPXUsername(), applib.getMPXPassword());
+            	mpxLogin.Login(config.getConfigValueString("MPXUsername"), config.getConfigValueString("MPXPassword"));
             	
             	//Step 2 - note that this test creates a new player
-            	MPXSelectAccount mpxSelectAccount = new MPXSelectAccount(webDriver, applib);
+            	MPXSelectAccount mpxSelectAccount = new MPXSelectAccount(webDriver);
                 mpxSelectAccount.SelectAccount("DB TV");
-            	MPXAddPlayer mpxAddPlayer = new MPXAddPlayer(webDriver, applib);
+            	MPXAddPlayer mpxAddPlayer = new MPXAddPlayer(webDriver);
                 mpxAddPlayer.ClickPlayersLnk();
                 mpxAddPlayer.ClickAllPlayersLnk();
                 mpxAddPlayer.ClickAddBtn();
@@ -98,11 +98,11 @@ public class NotificationPlayerUnavailability extends ParentTest{
                 MPXPlayers.ClickSyncMPXPlayersLnk();
                 MPXPlayers.ClickSyncMPXPlayersNowLnk();
                 contentParent.VerifyMessageStatus("players returned for account");
-        	    SearchFor searchFor = new SearchFor(webDriver, applib);
+        	    SearchFor searchFor = new SearchFor(webDriver);
         	    searchFor.EnterTitle(playerTitle);
                 searchFor.ClickApplyBtn();
                 overlay.switchToDefaultContent(true);
-                Cron cron = new Cron(webDriver, applib);
+                Cron cron = new Cron(webDriver);
                 if (!searchFor.GetFirstMPXPlayerSearchResult().equals(playerTitle)) {
         	    	//re-run cron as sometimes media assets aren't in the first ingested queue
         	    	cron.RunCron(false);
@@ -121,7 +121,7 @@ public class NotificationPlayerUnavailability extends ParentTest{
         	    searchFor.SelectMPXMediaSource("DB TV");
         	    searchFor.ClickApplyBtn();
         	    searchFor.ClickSearchTitleLnk(searchFor.GetFirstMPXMediaSearchResult());
-        	    WorkBench workBench = new WorkBench(webDriver, applib);
+        	    WorkBench workBench = new WorkBench(webDriver);
         	    workBench.ClickWorkBenchTab("Edit");
         	    overlay.SwitchToActiveFrame();
         	    EditMPXVideo editMPXVideo = new EditMPXVideo(webDriver);
@@ -131,12 +131,12 @@ public class NotificationPlayerUnavailability extends ParentTest{
         	    
                 //Step 3
         	    mpxLogin.OpenMPXThePlatform();
-        	    MPXAssets mpxAssets = new MPXAssets(applib);
+        	    MPXAssets mpxAssets = new MPXAssets();
         	    mpxAssets.WaitForAllAssetsToLoad();
             	mpxSelectAccount.SelectAccount("DB TV");
                 mpxAddPlayer.ClickPlayersLnk();
                 mpxAddPlayer.ClickAllPlayersLnk();
-            	MPXSearch mpxSearch = new MPXSearch(applib);
+            	MPXSearch mpxSearch = new MPXSearch();
             	mpxSearch.EnterSearchPlayersTxt(playerTitle);
             	mpxSearch.ClickSearchByPlayersTitleLnk();
             	mpxAddPlayer.GiveFocusToPlayerItem();
@@ -154,7 +154,7 @@ public class NotificationPlayerUnavailability extends ParentTest{
         	    overlay.SwitchToActiveFrame();
         	    
         	    //Step 7 - note that multiple cron runs are sometimes necessary for disabled player to be present
-        	    ErrorChecking errorChecking = new ErrorChecking(webDriver, applib);
+        	    ErrorChecking errorChecking = new ErrorChecking(webDriver);
         	    try {
         	    	errorChecking.VerifyMPXPlayerDisabledAndUnpublished(playerTitle);	
         	    }

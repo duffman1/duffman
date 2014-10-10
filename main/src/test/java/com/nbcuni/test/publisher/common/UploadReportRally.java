@@ -10,6 +10,7 @@ import com.rallydev.rest.response.CreateResponse;
 import com.rallydev.rest.response.QueryResponse;
 import com.rallydev.rest.util.Fetch;
 import com.rallydev.rest.util.QueryFilter;
+
 import java.io.RandomAccessFile;
 import java.io.IOException;
 import java.net.URI;
@@ -18,18 +19,19 @@ import org.apache.commons.codec.binary.Base64;
 
 public class UploadReportRally {
 
-    public String uploadFileAttachment(String pathToReport, String reportName) throws Exception {
+    @SuppressWarnings("deprecation")
+	public String uploadFileAttachment(String pathToReport, String reportName) throws Exception {
 
     	Config config = new Config();
     	
         //Connection parameters
-        String rallyURL = config.getConfigValue("RallyUrl");
+        String rallyURL = config.getConfigValueString("RallyUrl");
         String wsapiVersion = "1.40";
         String applicationName = "Attach Automated Test Reports";
 
         // Credentials
-        String userName = config.getConfigValue("RallyUsername");
-        String userPassword = config.getConfigValue("RallyPassword");
+        String userName = config.getConfigValueString("RallyUsername");
+        String userPassword = config.getConfigValueString("RallyPassword");
 
         RallyRestApi restApi = new RallyRestApi(
                         new URI(rallyURL),
@@ -42,7 +44,7 @@ public class UploadReportRally {
         String testerUserName = userName;
 
         //Task ID - update in config with each iteration change
-        String existTaskID = config.getConfigValue("RallyTaskID");       
+        String existTaskID = config.getConfigValueString("RallyTaskID");       
 
         //Read User
         QueryRequest userRequest = new QueryRequest("User");

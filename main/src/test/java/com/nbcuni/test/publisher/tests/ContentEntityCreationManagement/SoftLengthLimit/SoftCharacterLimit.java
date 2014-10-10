@@ -21,7 +21,7 @@ public class SoftCharacterLimit extends ParentTest{
          
         	//Step 1
         	UserLogin userLogin = applib.openApplication();
-        	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+        	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         	
             //Step 2 through 4
         	taxonomy.NavigateSite("Structure>>Content types>>Character Profile>>Manage fields>>Character: First Name");
@@ -50,7 +50,7 @@ public class SoftCharacterLimit extends ParentTest{
             String characterNameMeets = random.GetCharacterString(15);
             String characterNameExceeds = random.GetCharacterString(160);
             charactersInformation.EnterCharacterFirstName(characterNameUnder);
-            SoftLength softLength = new SoftLength(webDriver, applib);
+            SoftLength softLength = new SoftLength(webDriver);
             softLength.VerifySoftLengthUnderLimit("4/150");
             charactersInformation.EnterCharacterFirstName(characterNameMeets);
             softLength.VerifySoftLengthMeetsLimit("15/150");
@@ -60,7 +60,7 @@ public class SoftCharacterLimit extends ParentTest{
             //Step 10
             CoverPhoto coverPhoto = new CoverPhoto(webDriver);
             coverPhoto.ClickSelectBtn();
-            SelectFile selectFile = new SelectFile(webDriver, applib);
+            SelectFile selectFile = new SelectFile(webDriver);
             selectFile.SelectDefaultCoverImg();
             overlay.SwitchToActiveFrame();
             contentParent.ClickSaveBtn();

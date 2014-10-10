@@ -23,7 +23,7 @@ public class CreateLogo extends ParentTest{
          
         	//Step 1
         	UserLogin userLogin = applib.openApplication();
-        	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+        	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
         	//Step 2 (previously scheduled in setup test)
         	Logos logos = new Logos(webDriver, applib);
@@ -42,7 +42,7 @@ public class CreateLogo extends ParentTest{
             AddLogo addLogo = new AddLogo(webDriver);
             String logoTitle = random.GetCharacterString(15);
             addLogo.EnterTitle(logoTitle);
-            addLogo.EnterFilePath(applib.getPathToMedia() + "nbclogosmall.jpg");
+            addLogo.EnterFilePath(config.getConfigValueFilePath("PathToMediaContent") + "nbclogosmall.jpg");
     	    addLogo.ClickUploadBtn();
     	    addLogo.WaitForFileUploaded("nbclogosmall.jpg");
     	    addLogo.VerifyFileImagePresent("nbclogosmall");

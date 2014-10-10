@@ -22,8 +22,8 @@ public class PasswordReset extends ParentTest {
     	
     	Reporter.log("SETUP - create new user");
     	UserLogin userLogin = applib.openApplication();
-    	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
-    	AddUser addUser = new AddUser(webDriver, applib);
+    	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
+    	AddUser addUser = new AddUser(webDriver);
     	String userName = addUser.AddDefaultUser(Arrays.asList("editor"), false);
     	Logout logout = new Logout(webDriver);
     	logout.ClickLogoutBtn();
@@ -41,7 +41,7 @@ public class PasswordReset extends ParentTest {
     	contentParent.VerifyMessageStatus("Further instructions have been sent to your e-mail address.");
     	
     	Reporter.log("STEP 4");
-    	GmailConnect gmailConnect = new GmailConnect(applib);
+    	GmailConnect gmailConnect = new GmailConnect();
         String autoEmailSubject = "Replacement login information for " + userName + " at ";
         gmailConnect.VerifyAutoEmailRecieved(autoEmailSubject);
         gmailConnect.DeleteAllAutoEmailsInInbox(autoEmailSubject);

@@ -62,7 +62,7 @@ public class SimpleSAML {
 	public void VerifyDefaultSettings() throws Exception {
 
 		//TODO - extend for all sites
-		if (config.getConfigValue("AppURL").contains("install.qa5")) {
+		if (config.getConfigValueString("AppURL").contains("install.qa5")) {
 			
 			Reporter.log("Verify the value of the 'Installation directory' text box equals '/mnt/www/html/nbcupublisher7qa5/simplesamlphp' and the text box is disabled.");
 			Assert.assertEquals(InstallationDirectory_Txb.getAttribute("value"), "/mnt/www/html/nbcupublisher7qa5/simplesamlphp");

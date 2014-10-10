@@ -21,10 +21,10 @@ public class ProgramGuideVerification extends ParentTest{
 		
 		//Step 1
 		UserLogin userLogin = applib.openApplication();
-		userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+		userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
 			    
 		//Step 2 and 3	   
-		Modules modules = new Modules(webDriver, applib);
+		Modules modules = new Modules(webDriver);
 		taxonomy.NavigateSite("Modules");
 		overlay.SwitchToActiveFrame();
 		modules.EnterFilterName("Program Guide");
@@ -42,7 +42,7 @@ public class ProgramGuideVerification extends ParentTest{
 		blocks.SelectRegion("Program Guide", "Content");
 		blocks.ClickSaveBlocksBtn();
 		overlay.SwitchToActiveFrame();
-		ContentParent contentParent = new ContentParent(webDriver, applib);
+		ContentParent contentParent = new ContentParent(webDriver);
 		contentParent.VerifyMessageStatus("The block settings have been updated.");
 		        
 		//Step 6
@@ -71,7 +71,7 @@ public class ProgramGuideVerification extends ParentTest{
         //Step 12
         taxonomy.NavigateSite("Home>>Run cron");
         overlay.SwitchToActiveFrame();
-        ErrorChecking errorChecking = new ErrorChecking(webDriver, applib);
+        ErrorChecking errorChecking = new ErrorChecking(webDriver);
         errorChecking.VerifyNoMessageErrorsPresent();
 	    
         //Step 13

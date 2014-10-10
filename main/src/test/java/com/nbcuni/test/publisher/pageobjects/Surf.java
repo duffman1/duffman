@@ -31,7 +31,7 @@ public class Surf {
         this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
         wait = new WebDriverWait(webDriver, 30);
-        contentParent = new ContentParent(webDriver, applib);
+        contentParent = new ContentParent(webDriver);
     }
     
     //PAGE OBJECT IDENTIFIERS

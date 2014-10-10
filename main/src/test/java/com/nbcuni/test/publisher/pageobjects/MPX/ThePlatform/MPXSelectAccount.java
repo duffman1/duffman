@@ -8,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.sikuli.script.Screen;
 import org.testng.Reporter;
 
-import com.nbcuni.test.publisher.common.AppLib;
+import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
@@ -21,21 +21,21 @@ import com.nbcuni.test.publisher.common.Driver.Driver;
 public class MPXSelectAccount {
 
 	private Driver webDriver;
-    private AppLib applib;
+    private Config config;
     private MPXAssets mpxAssets;
     
     //PAGE OBJECT CONSTRUCTOR
-    public MPXSelectAccount(Driver webDriver, AppLib applib) {
+    public MPXSelectAccount(Driver webDriver) {
     	this.webDriver = webDriver;
     	PageFactory.initElements(webDriver, this);
         new Screen();
-        this.applib = applib;
-        mpxAssets = new MPXAssets(applib);
+        config = new Config();
+        mpxAssets = new MPXAssets();
     }
     
     private String getImagePath() {
     	
-    	return applib.getPathToSikuliImages();
+    	return config.getConfigValueFilePath("PathToSikuliImages");
     	
     }
     

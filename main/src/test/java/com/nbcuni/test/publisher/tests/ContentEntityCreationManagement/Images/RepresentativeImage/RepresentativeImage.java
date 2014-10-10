@@ -19,16 +19,16 @@ public class RepresentativeImage extends ParentTest {
          
         	Reporter.log("STEP 1");
         	UserLogin userLogin = applib.openApplication();
-        	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+        	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
         	Reporter.log("STEP 2");
-        	CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver, applib);
+        	CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver);
         	String postTitle = createDefaultContent.Post("Published");
         	
         	Reporter.log("STEP 3");
         	taxonomy.NavigateSite("Content");
         	overlay.SwitchToActiveFrame();
-        	SearchFor searchFor = new SearchFor(webDriver, applib);
+        	SearchFor searchFor = new SearchFor(webDriver);
         	searchFor.EnterTitle(postTitle);
         	searchFor.ClickApplyBtn();
         	overlay.switchToDefaultContent(true);
@@ -51,7 +51,7 @@ public class RepresentativeImage extends ParentTest {
             basicInformation.EnterSynopsis();
             overlay.SwitchToActiveFrame();
             basicInformation.ClickCoverSelectBtn();
-            SelectFile selectFile = new SelectFile(webDriver, applib);
+            SelectFile selectFile = new SelectFile(webDriver);
             selectFile.SwitchToSelectFileFrm();
             selectFile.ClickPub7MPXVideoBtn();
     		selectFile.EnterTitle("AutomationWThumb");

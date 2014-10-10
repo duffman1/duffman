@@ -36,21 +36,21 @@ public class ScheduleToPublishContentByDateTime extends ParentTest {
 	* Step 11 - Verify Schedule table for scheduled revision and Run Cron and verify that published revision displayed under revision tab<br>
 	* @throws Throwable No Return values are needed
 	*************************************************************************************/
-    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "smoke"})
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"})
         public void ScheduleToPublishContentByDateTime_Test() throws Exception{
 
         //Step 1
         UserLogin userLogin = applib.openApplication();
-        userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+        userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
 
         //Step 2
         taxonomy.VerifyContentMenuExist("Content");
         taxonomy.VerifyContentMenuExist("My Workbench");
-        CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver, applib);
+        CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver);
         String postTitle = createDefaultContent.Post("Draft");
 
         //Step 3
-        WorkBench workBench = new WorkBench(webDriver, applib);
+        WorkBench workBench = new WorkBench(webDriver);
         workBench.VerifyWorkBenchTabPresent("View");
         workBench.VerifyWorkBenchTabPresent("Edit Draft");
         workBench.VerifyWorkBenchTabPresent("Revisions");
@@ -116,7 +116,7 @@ public class ScheduleToPublishContentByDateTime extends ParentTest {
         scheduleQueue.ClickRunNowLnk(postTitle, "Moderate to Published");
         overlay.SwitchToActiveFrame();
         scheduleQueue.VerifyScheduledQueue(Arrays.asList("Moderate to Published", "Completed"));
-        Revisions revisions = new Revisions(webDriver, applib);
+        Revisions revisions = new Revisions(webDriver);
         revisions.ClickRevisionTab();
         overlay.SwitchToActiveFrame();
         Calendar calToday = Calendar.getInstance();

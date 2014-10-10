@@ -31,10 +31,10 @@ public class ImplementMPS extends ParentTest {
         
         	Reporter.log("STEP 1");
         	UserLogin userLogin = applib.openApplication();
-        	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+        	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
         	Reporter.log("SETUP");
-        	Modules modules = new Modules(webDriver, applib);
+        	Modules modules = new Modules(webDriver);
         	taxonomy.NavigateSite("Modules");
             overlay.SwitchToActiveFrame();
             modules.EnterFilterName("Pub Ads");
@@ -68,7 +68,7 @@ public class ImplementMPS extends ParentTest {
             taxonomy.NavigateSite("Reports>>Status report");
             overlay.SwitchToActiveFrame();
             contentParent.VerifyPageContentPresent(Arrays.asList("Ad Tag Style", "MPS"));
-            ErrorChecking errorChecking = new ErrorChecking(webDriver, applib);
+            ErrorChecking errorChecking = new ErrorChecking(webDriver);
             errorChecking.VerifyNoMessageErrorsPresent();
             overlay.ClickCloseOverlayLnk();
             
@@ -99,7 +99,7 @@ public class ImplementMPS extends ParentTest {
             basicInformation.EnterSynopsis();
             overlay.SwitchToActiveFrame();
             basicInformation.ClickCoverSelectBtn();
-            SelectFile selectFile = new SelectFile(webDriver, applib);
+            SelectFile selectFile = new SelectFile(webDriver);
             selectFile.SelectDefaultCoverImg();
             overlay.SwitchToActiveFrame();
             AdditionalInformation additionalInformation = new AdditionalInformation(webDriver);
@@ -110,7 +110,7 @@ public class ImplementMPS extends ParentTest {
             contentParent.ClickSaveBtn();
             overlay.switchToDefaultContent(true);
             contentParent.VerifyMessageStatus("Movie " + movieTitle + " has been created.");
-            WorkBench workBench = new WorkBench(webDriver, applib);
+            WorkBench workBench = new WorkBench(webDriver);
             String movieNodeNumber = workBench.GetContentNodeNumber();
             
             Reporter.log("STEP 10 through STEP 19");
@@ -138,7 +138,7 @@ public class ImplementMPS extends ParentTest {
             overlay.SwitchToActiveFrame();
             MediaItems mediaItems = new MediaItems(webDriver);
             mediaItems.VerifyFileImagePresent("HanSolo", "1");
-            ContentParent contentParent = new ContentParent(webDriver, applib);
+            ContentParent contentParent = new ContentParent(webDriver);
             contentParent.ClickSaveBtn();
             overlay.switchToDefaultContent(true);
             contentParent.VerifyMessageStatus("Media Gallery " + mediaGalleryTitle + " has been created.");

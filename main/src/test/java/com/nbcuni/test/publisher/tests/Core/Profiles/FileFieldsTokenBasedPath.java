@@ -26,12 +26,12 @@ public class FileFieldsTokenBasedPath extends ParentTest {
         
     	Reporter.log("STEP 1");
         UserLogin userLogin = applib.openApplication();
-        userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+        userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         Reporter.log("STEP 2");
         taxonomy.NavigateSite("Structure>>Content types>>Add content type");
         overlay.SwitchToActiveFrame();
-        ContentTypes contentTypes = new ContentTypes(webDriver, applib);
+        ContentTypes contentTypes = new ContentTypes(webDriver);
         String contentTypeName = random.GetCharacterString(10);
         contentTypes.EnterName(contentTypeName);
         contentTypes.ClickSaveAddFieldsBtn();
@@ -86,14 +86,14 @@ public class FileFieldsTokenBasedPath extends ParentTest {
         basicInformation.EnterTitle(contentTitle);
         basicInformation.EnterSynopsis();
         overlay.SwitchToActiveFrame();
-        SelectFile selectFile = new SelectFile(webDriver, applib);
-        selectFile.EnterCustomFieldFilePath(newImageFieldName, applib.getPathToMedia() + "HanSolo1.jpg");
+        SelectFile selectFile = new SelectFile(webDriver);
+        selectFile.EnterCustomFieldFilePath(newImageFieldName, config.getConfigValueFilePath("PathToMediaContent") + "HanSolo1.jpg");
 		selectFile.ClickCustomFieldUploadBtn(newImageFieldName);
     	selectFile.WaitForFileUploaded("HanSolo1.jpg");
     	contentParent.ClickSaveBtn();
         overlay.switchToDefaultContent(true);
         contentParent.VerifyMessageStatus(contentTypeName + " " + contentTitle + " has been created.");
-        WorkBench workBench = new WorkBench(webDriver, applib);
+        WorkBench workBench = new WorkBench(webDriver);
         Date currentMonth = Calendar.getInstance().getTime();
     	SimpleDateFormat currentMonthFormat = new SimpleDateFormat("yyyy/MM");
     	currentMonthFormat.setTimeZone(TimeZone.getTimeZone("UTC"));

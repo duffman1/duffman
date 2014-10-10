@@ -23,7 +23,7 @@ public class DFPAddTags {
     //PAGE OBJECT CONSTRUCTOR
     public DFPAddTags(Driver webDriver, AppLib applib) {
         PageFactory.initElements(webDriver, this);
-        contentParent = new ContentParent(webDriver, applib);
+        contentParent = new ContentParent(webDriver);
     }
     
     //PAGE OBJECT IDENTIFIERS

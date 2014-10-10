@@ -20,10 +20,10 @@ public class Relationships extends ParentTest{
     	
     	Reporter.log("STEP 1");
     	UserLogin userLogin = applib.openApplication();
-    	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+    	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
     	Reporter.log("SETUP - Create a TV Show");
-    	CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver, applib);
+    	CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver);
     	String tvShowTitle1 = createDefaultContent.TVShow("Draft");
     	
     	Reporter.log("STEP 2");
@@ -31,7 +31,7 @@ public class Relationships extends ParentTest{
     	overlay.SwitchToActiveFrame();
     	
     	Reporter.log("STEP 3");
-    	ContentTypes contentTypes = new ContentTypes(webDriver, applib);
+    	ContentTypes contentTypes = new ContentTypes(webDriver);
     	if (contentTypes.IsFieldPresent("Relationships").equals(false)) {
     		contentTypes.EnterAddExistingField("Relationships");
         	contentTypes.SelectExistingField("Pub TV Relationship: field_tv_shows (TV Shows)");
@@ -59,12 +59,12 @@ public class Relationships extends ParentTest{
         basicInformation.EnterSynopsis();
         overlay.SwitchToActiveFrame();
         basicInformation.ClickCoverSelectBtn();
-        SelectFile selectFile = new SelectFile(webDriver, applib);
+        SelectFile selectFile = new SelectFile(webDriver);
         selectFile.SelectDefaultCoverImg();
         overlay.SwitchToActiveFrame();
         
         Reporter.log("STEP 6");
-        com.nbcuni.test.publisher.pageobjects.Content.Relationships relationshipsContent = new com.nbcuni.test.publisher.pageobjects.Content.Relationships(webDriver, applib);
+        com.nbcuni.test.publisher.pageobjects.Content.Relationships relationshipsContent = new com.nbcuni.test.publisher.pageobjects.Content.Relationships(webDriver);
         relationshipsContent.SelectShow(tvShowTitle1);
         contentParent.WaitForThrobberNotPresent();
         contentParent.ClickSaveBtn();
@@ -102,10 +102,10 @@ public class Relationships extends ParentTest{
     	Reporter.log("STEP 11");
     	taxonomy.NavigateSite("Content>>Files");
     	overlay.SwitchToActiveFrame();
-    	SearchFor searchFor = new SearchFor(webDriver, applib);
+    	SearchFor searchFor = new SearchFor(webDriver);
     	searchFor.ClickSearchHeaderColumnLnk("Type");
     	overlay.SwitchToActiveFrame();
-    	Content content = new Content(webDriver, applib);
+    	Content content = new Content(webDriver);
     	String fileTitle = searchFor.GetFirstSearchResult();
     	content.ClickEditMenuBtn(fileTitle);
     	overlay.SwitchToActiveFrame();

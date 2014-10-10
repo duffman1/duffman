@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
@@ -15,8 +14,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
-
-import com.nbcuni.test.publisher.common.AppLib;
+import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
 import com.nbcuni.test.publisher.pageobjects.Overlay;
 import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
@@ -32,21 +30,21 @@ import com.nbcuni.test.publisher.pageobjects.Content.Delete;
 public class PublisherAdsSideFiles {
 
 	private Driver webDriver;
-	private AppLib applib;
+	private Config config;
 	private WebDriverWait wait;
 	private Overlay overlay;
 	private Delete delete;
 	private ContentParent contentParent;
 	
     //PAGE OBJECT CONSTRUCTOR
-    public PublisherAdsSideFiles(Driver webDriver, AppLib applib) {
+    public PublisherAdsSideFiles(Driver webDriver) {
     	this.webDriver = webDriver;
-    	this.applib = applib;
+    	config = new Config();
     	PageFactory.initElements(webDriver, this);
     	wait = new WebDriverWait(webDriver, 10);
-    	overlay = new Overlay(webDriver, applib);
+    	overlay = new Overlay(webDriver);
     	delete = new Delete(webDriver);
-    	contentParent = new ContentParent(webDriver, applib);
+    	contentParent = new ContentParent(webDriver);
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -160,7 +158,7 @@ public class PublisherAdsSideFiles {
     	if (elPresent == true) {
     		Assert.fail("Ad side file '" + adName + "' is present when it should not be");
     	}
-    	webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
+    	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
     }
     
     public void DeleteAllUnwantedSideFiles() throws Exception {

@@ -26,7 +26,7 @@ public class PublishContenttoUnauthenticatedUsers extends ParentTest{
       
     	//Step 1
     	UserLogin userLogin = applib.openApplication();
-    	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+    	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         //Step 2
         taxonomy.NavigateSite("Content>>Add content>>Media Gallery"); 
@@ -35,7 +35,7 @@ public class PublishContenttoUnauthenticatedUsers extends ParentTest{
         String title = random.GetCharacterString(15);
         basicInformation.EnterTitle(title);
         basicInformation.ClickCoverSelectBtn();
-        SelectFile selectFile = new SelectFile(webDriver, applib);
+        SelectFile selectFile = new SelectFile(webDriver);
         selectFile.SelectDefaultCoverImg();
         overlay.SwitchToActiveFrame();
         basicInformation.VerifyCoverImagePresent("HanSolo");        

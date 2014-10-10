@@ -56,7 +56,7 @@ public class EventCountdownConfig {
             sampleNodesConfigured = false;
         }
             
-    	webDriver.manage().timeouts().implicitlyWait(config.getImplicitWaitTime(), TimeUnit.SECONDS);
+    	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
     	
     	return sampleNodesConfigured;
 	}
@@ -85,7 +85,7 @@ public class EventCountdownConfig {
             }
             Thread.sleep(500);
         }
-		webDriver.manage().timeouts().implicitlyWait(config.getImplicitWaitTime(), TimeUnit.SECONDS);
+		webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
 	}
 
 	

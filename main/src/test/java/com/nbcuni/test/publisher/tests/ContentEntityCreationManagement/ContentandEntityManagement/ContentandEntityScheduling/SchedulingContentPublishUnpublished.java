@@ -33,14 +33,14 @@ public class SchedulingContentPublishUnpublished extends ParentTest {
 
         Reporter.log("STEP 1");
         UserLogin userLogin = applib.openApplication();
-        userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+        userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
 
         Reporter.log("STEP 2 and 3");
-        CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver, applib);
+        CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver);
         String postTitle = createDefaultContent.Post("Draft");
         
         Reporter.log("STEP 4");
-        WorkBench workBench = new WorkBench(webDriver, applib);
+        WorkBench workBench = new WorkBench(webDriver);
         workBench.ClickWorkBenchTab("Schedule");
         overlay.SwitchToActiveFrame();
         ScheduleQueue scheduleQueue = new ScheduleQueue(webDriver);
@@ -80,7 +80,7 @@ public class SchedulingContentPublishUnpublished extends ParentTest {
         Reporter.log("STEP 9");
         taxonomy.NavigateSite("Content");
         overlay.SwitchToActiveFrame();
-        SearchFor searchFor = new SearchFor(webDriver, applib);
+        SearchFor searchFor = new SearchFor(webDriver);
         SimpleDateFormat pub7DateFormatEst = new SimpleDateFormat("MM/dd/yyyy");
         Date currentDate = new Date();
     	String previouslyScheduledTitle = "futurePost" + pub7DateFormatEst.format(currentDate);
@@ -189,7 +189,7 @@ public class SchedulingContentPublishUnpublished extends ParentTest {
         overlay.SwitchToActiveFrame();
         RevisionState revisionState = new RevisionState(webDriver);
         revisionState.VerifyRevisionCount(2);
-        Revisions revisions = new Revisions(webDriver, applib);
+        Revisions revisions = new Revisions(webDriver);
         revisions.ClickEditExtendMenuBtn(postTitle5);
         revisions.ClickScheduleMenuBtn(postTitle5);
         overlay.SwitchToActiveFrame();

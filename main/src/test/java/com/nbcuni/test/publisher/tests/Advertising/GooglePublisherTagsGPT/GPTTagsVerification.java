@@ -19,12 +19,12 @@ public class GPTTagsVerification extends ParentTest {
         
         	//Step 1
         	UserLogin userLogin = applib.openApplication();
-        	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+        	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
         	//Setup
             taxonomy.NavigateSite("Modules");
             overlay.SwitchToActiveFrame();
-            Modules modules = new Modules(webDriver, applib);
+            Modules modules = new Modules(webDriver);
             modules.EnterFilterName("DART");
             modules.DisableModule("DART");
             modules.EnterFilterName("Doubleclick for Publishers");

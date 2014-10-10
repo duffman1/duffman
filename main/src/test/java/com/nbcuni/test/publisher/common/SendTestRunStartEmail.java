@@ -17,8 +17,8 @@ public class SendTestRunStartEmail {
 
 		Config config = new Config();
 		
-		final String userName = config.getConfigValue("GmailUsername");
-		final String passWord = config.getConfigValue("GmailPassword");
+		final String userName = config.getConfigValueString("GmailUsername");
+		final String passWord = config.getConfigValueString("GmailPassword");
 		
 		Properties props = new Properties();
 		props.put("mail.smtp.auth", "true");
@@ -39,11 +39,11 @@ public class SendTestRunStartEmail {
             message.setFrom(new InternetAddress("Automation@nbcuni.com"));
             
             message.setRecipients(Message.RecipientType.TO,
-            			InternetAddress.parse(config.getConfigValue("SendReportEmailAddress")));
+            			InternetAddress.parse(config.getConfigValueString("SendReportEmailAddress")));
             
             message.setSubject("Test Automation Execution Started");
             
-            String[] emailAddresses = config.getConfigValue("SendReportEmailAddress").replace(" ", "").split(",");
+            String[] emailAddresses = config.getConfigValueString("SendReportEmailAddress").replace(" ", "").split(",");
             String initiatorAddress = null;
             try {
             	initiatorAddress = emailAddresses[emailAddresses.length - 1];
@@ -53,12 +53,12 @@ public class SendTestRunStartEmail {
             }
             
             String excludedGroupTxt = ".";
-            if (!config.getExcludedGroups().equals("")) {
+            if (!config.getExcludedGroups().isEmpty()) {
             	excludedGroupTxt = " and excludes tests assigned to the \"" + config.getExcludedGroups() + "\" test group(s).";
             }
             
             message.setContent("<body>An automated test suite execution has been started on <strong>" + InetAddress.getLocalHost().getHostName().replace(".local", "") 
-            		+ "</strong> against " + "<a href='" + config.getConfigValue("AppURL") + "'>" + config.getConfigValue("AppURL") + "</a>" 
+            		+ "</strong> against " + "<a href='" + config.getConfigValueString("AppURL") + "'>" + config.getConfigValueString("AppURL") + "</a>" 
             		+ " by " + initiatorAddress + ". This execution includes tests assigned to the \"" + config.getIncludedGroups() + "\" test group(s)" + excludedGroupTxt + " <br /><br />Please wait until this suite has completed and notification has been sent " 
             		+ "to QA staff before accessing this box remotely.<br /><br /> Publisher 7 QA Automation</body>", "text/html");
             

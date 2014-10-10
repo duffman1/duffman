@@ -29,10 +29,10 @@ public class MPSSupportTokens extends ParentTest {
         
         	Reporter.log("STEP 1");
         	UserLogin userLogin = applib.openApplication();
-        	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+        	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
         	Reporter.log("SETUP");
-        	Modules modules = new Modules(webDriver, applib);
+        	Modules modules = new Modules(webDriver);
         	taxonomy.NavigateSite("Modules");
         	overlay.SwitchToActiveFrame();
         	modules.EnterFilterName("Pixelman");
@@ -63,7 +63,7 @@ public class MPSSupportTokens extends ParentTest {
             basicInformation.EnterSynopsis();
             overlay.SwitchToActiveFrame();
             basicInformation.ClickCoverSelectBtn();
-            SelectFile selectFile = new SelectFile(webDriver, applib);
+            SelectFile selectFile = new SelectFile(webDriver);
             selectFile.SelectDefaultCoverImg();
             overlay.SwitchToActiveFrame();
             AdditionalInformation additionalInformation = new AdditionalInformation(webDriver);
@@ -74,13 +74,13 @@ public class MPSSupportTokens extends ParentTest {
             contentParent.ClickSaveBtn();
             overlay.switchToDefaultContent(true);
             contentParent.VerifyMessageStatus("Movie " + movieTitle + " has been created.");
-            WorkBench workBench = new WorkBench(webDriver, applib);
+            WorkBench workBench = new WorkBench(webDriver);
             contentParent.VerifySourceInPage(Arrays.asList("\"cat\":\"content\""));
             
             Reporter.log("STEP 5");
             workBench.ClickWorkBenchTab("Edit Draft");
             overlay.SwitchToActiveFrame();
-            URLPathSettings urlPathSettings = new URLPathSettings(webDriver, applib);
+            URLPathSettings urlPathSettings = new URLPathSettings(webDriver);
             urlPathSettings.ClickURLPathSettingsLnk();
             urlPathSettings.UnCheckGenerateAutomaticURLAliasCbx();
             String baseAlias = random.GetCharacterString(10);

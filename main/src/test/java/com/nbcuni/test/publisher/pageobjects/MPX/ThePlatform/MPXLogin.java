@@ -1,6 +1,6 @@
 package com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform;
 
-import com.nbcuni.test.publisher.common.AppLib;
+import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
 import org.testng.Reporter;
 import org.openqa.selenium.WebElement;
@@ -20,15 +20,15 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class MPXLogin {
 
     private Driver webDriver;
-    private AppLib applib;
+    private Config config;
     private MPXAssets mpxAssets;
     private WebDriverWait wait;
     
-    public MPXLogin(Driver webDriver, AppLib applib) {
+    public MPXLogin(Driver webDriver) {
         this.webDriver = webDriver;
+        config = new Config();
         PageFactory.initElements(webDriver, this);
-        this.applib = applib;
-        mpxAssets = new MPXAssets(applib);
+        mpxAssets = new MPXAssets();
         wait = new WebDriverWait(webDriver, 10);
     }
     
@@ -47,7 +47,7 @@ public class MPXLogin {
     public void OpenMPXThePlatform() throws Exception {
     	
     	Reporter.log("Open the mpx platform.");
-    	webDriver.navigate().to(applib.getMPXUrl());
+    	webDriver.navigate().to(config.getConfigValueString("MPXUrl"));
     }
     
     public void Login(String userName, String passWord) throws Exception {

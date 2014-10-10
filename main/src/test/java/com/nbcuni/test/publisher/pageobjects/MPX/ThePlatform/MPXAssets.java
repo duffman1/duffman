@@ -5,8 +5,6 @@ import org.sikuli.script.Key;
 import org.sikuli.script.KeyModifier;
 import org.sikuli.script.Screen;
 import org.testng.Assert;
-
-import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.publisher.common.Config;
 
 /*********************************************
@@ -18,27 +16,25 @@ import com.nbcuni.test.publisher.common.Config;
 
 public class MPXAssets {
 
-    private AppLib applib;
     private Screen sikuli;
     private Config config;
     
-    public MPXAssets(AppLib applib) {
+    public MPXAssets() {
     	sikuli = new Screen();
-        this.applib = applib;
         config = new Config();
         
     }
     
     public void WaitForAllAssetsToLoad() throws Exception {
     	
-    	this.WaitForImgPresent(applib.getPathToSikuliImages() + "Common/SaveCancel_Btns.png");
+    	this.WaitForImgPresent(config.getConfigValueFilePath("PathToSikuliImages") + "Common/SaveCancel_Btns.png");
     	Thread.sleep(5000);
     }
     
     public void WaitForImgPresent(String imgPath) throws Exception {
     	
     	for (int second = 0; ; second++){
-            if (second >= applib.getSikuliImageWaitTime()) {
+            if (second >= (double) config.getConfigValueInt("SikuliImageWaitTime")) {
                 Assert.fail("Image '" + imgPath + "' is not present after timeout");
             }
             
@@ -48,13 +44,13 @@ public class MPXAssets {
             Thread.sleep(1000);
         }
     	
-    	Thread.sleep(config.getMPXAssetBufferPause());
+    	Thread.sleep(config.getConfigValueInt("MPXAssetBufferPause"));
     }
     
     public void WaitForImgNotPresent(String imgPath) throws Exception {
     	
     	for (int second = 0; ; second++){
-            if (second >= applib.getSikuliImageWaitTime()) {
+            if (second >= (double) config.getConfigValueInt("SikuliImageWaitTime")) {
                 Assert.fail("Image '" + imgPath + "' is still present after timeout");
             }
             
@@ -64,7 +60,7 @@ public class MPXAssets {
             Thread.sleep(1000);
         }
     	
-    	Thread.sleep(config.getMPXAssetBufferPause());
+    	Thread.sleep(config.getConfigValueInt("MPXAssetBufferPause"));
     }
     
     public void ScrollDownForImgPresent(String imgPath) throws Exception {

@@ -26,10 +26,10 @@ public class AddTaxonomyParameters extends ParentTest{
     	
     	Reporter.log("STEP 1");
         UserLogin userLogin = applib.openApplication();
-        userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+        userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         Reporter.log("SETUP");
-        Modules modules = new Modules(webDriver, applib);
+        Modules modules = new Modules(webDriver);
         modules.VerifyModuleEnabled("Dynamic Queue");
         String movieWTax = "movieWTax" + random.GetCharacterString(15);
         String movieWOTax = "movieWOTax" + random.GetCharacterString(15);
@@ -42,7 +42,7 @@ public class AddTaxonomyParameters extends ParentTest{
             basicInformation.EnterSynopsis();
             overlay.SwitchToActiveFrame();
             basicInformation.ClickCoverSelectBtn();
-            SelectFile selectFile = new SelectFile(webDriver, applib);
+            SelectFile selectFile = new SelectFile(webDriver);
             selectFile.SelectDefaultCoverImg();
             overlay.SwitchToActiveFrame();
             if (title.contains("WTax")) {
@@ -113,7 +113,7 @@ public class AddTaxonomyParameters extends ParentTest{
         Reporter.log("STEP 13");
         taxonomy.NavigateSite("Content>>Dynamic Queues");
         overlay.SwitchToActiveFrame();
-        DynamicQueues dynamicQueues = new DynamicQueues(webDriver, applib);
+        DynamicQueues dynamicQueues = new DynamicQueues(webDriver);
         String dynamicQueueNodeID = dynamicQueues.GetDynamicQueueNodeNumber(dynamicQueueTitle);
         overlay.ClickCloseOverlayLnk();
         String parentWindow = webDriver.getWindowHandle();

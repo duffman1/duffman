@@ -2,15 +2,12 @@ package com.nbcuni.test.publisher.pageobjects.Structure.Queues.DynamicQueues;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import junit.framework.Assert;
-
-import com.nbcuni.test.publisher.common.AppLib;
+import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 import org.testng.Reporter;
 
 /*********************************************
@@ -23,12 +20,12 @@ import org.testng.Reporter;
 public class DynamicQueues {
 
     private Driver webDriver;
-    private AppLib applib;
+    private Config config;
     
     //PAGE OBJECT CONSTRUCTOR
-    public DynamicQueues(Driver webDriver, AppLib applib) {
+    public DynamicQueues(Driver webDriver) {
         this.webDriver = webDriver;
-        this.applib = applib;
+        config = new Config();
         PageFactory.initElements(webDriver, this);
     }
     
@@ -51,7 +48,7 @@ public class DynamicQueues {
     
     public String GetDynamicQueueNodeNumber(String dynamicQueueName) throws Exception {
         
-    	return Edit_Lnk(dynamicQueueName).getAttribute("href").replace(applib.getApplicationURL() + 
+    	return Edit_Lnk(dynamicQueueName).getAttribute("href").replace(config.getConfigValueString("AppURL") + 
     			"/dynamic-queue/", "").replace("/edit?destination=admin/content/dynamic-queue", "");
 
     }

@@ -27,9 +27,9 @@ public class ImplementTVEModulesCore extends ParentTest {
 	 public void ImplementTVEModulesCore_TC3261() throws Exception {
 		 
 		UserLogin userLogin = applib.openApplication();
-		userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+		userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
-		Modules modules = new Modules(webDriver, applib);
+		Modules modules = new Modules(webDriver);
 		modules.VerifyModuleEnabled("jQuery Update");
 		jQueryUpdate jqueryUpdate = new jQueryUpdate(webDriver);
 		Thread.sleep(2000);
@@ -56,7 +56,7 @@ public class ImplementTVEModulesCore extends ParentTest {
         overlay.ClickCloseOverlayLnk();
         
         TVEAuthExample tveAuthExample = new TVEAuthExample(webDriver);
-        ErrorChecking errorChecking = new ErrorChecking(webDriver, applib);
+        ErrorChecking errorChecking = new ErrorChecking(webDriver);
         
         if (!tveAuthExample.isMVPDConfigured()) {
         	tveAuthExample.ClickMVPDSetupLnk();
@@ -132,7 +132,7 @@ public class ImplementTVEModulesCore extends ParentTest {
 	@Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"}, dependsOnMethods = {"ImplementTVEModulesCore_TC3261"}, alwaysRun=true)
 	public void Cleanup() throws Exception {
 		UserLogin userLogin = applib.openApplication();
-		userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+		userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
 		applib.openSitePage("/admin/config/development/jquery_update");
 		Thread.sleep(1000);
 		jQueryUpdate jqueryUpdate = new jQueryUpdate(webDriver);
@@ -140,7 +140,7 @@ public class ImplementTVEModulesCore extends ParentTest {
 		jqueryUpdate.ClickSaveConfigurationBtn(); 
 		taxonomy.NavigateSite("Home>>Flush all caches");
 		taxonomy.NavigateSite("Home");
-		Modules modules = new Modules(webDriver, applib);
+		Modules modules = new Modules(webDriver);
 		taxonomy.NavigateSite("Modules");
 		overlay.SwitchToActiveFrame();
 		for (String module : Arrays.asList("TVE Auth Example")) {

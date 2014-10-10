@@ -40,10 +40,10 @@ public class TwitterAutoPublishing extends ParentTest{
     	
     	//Step 1
     	UserLogin userLogin = applib.openApplication();
-    	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+    	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         taxonomy.NavigateSite("Modules");
         overlay.SwitchToActiveFrame();
-        Modules modules = new Modules(webDriver, applib);
+        Modules modules = new Modules(webDriver);
         modules.EnterFilterName("Pub Social");
         modules.EnableModule("Pub Social");
         
@@ -77,7 +77,7 @@ public class TwitterAutoPublishing extends ParentTest{
         //Step 5
         taxonomy.NavigateSite("Configuration>>Web services>>Twitter");
         overlay.SwitchToActiveFrame();
-        TwitterAccounts twitterAccounts = new TwitterAccounts(webDriver, applib);
+        TwitterAccounts twitterAccounts = new TwitterAccounts(webDriver);
         TwitterLogin twitterLogin = new TwitterLogin(webDriver, applib);
         Boolean accountAlreadyExists = twitterAccounts.TwitterAccountExists();
         if (accountAlreadyExists == false) {
@@ -93,7 +93,7 @@ public class TwitterAutoPublishing extends ParentTest{
         	twitterLogin.EnterUsernameOrEmail("publisherseven");
         	twitterLogin.EnterPassword("Publ!$her");
         	twitterLogin.ClickSignInBtn();
-        	webDriver.navigate().to(applib.getApplicationURL());
+        	webDriver.navigate().to(config.getConfigValueString("AppURL"));
         }
         
         //Step 6
@@ -114,17 +114,17 @@ public class TwitterAutoPublishing extends ParentTest{
         contentParent.ClickSaveBtn();
         overlay.switchToDefaultContent(true);
         contentParent.VerifyMessageStatus("Post " + postTitle + " has been created.");
-        WorkBench workBench = new WorkBench(webDriver, applib);
+        WorkBench workBench = new WorkBench(webDriver);
         workBench.ClickWorkBenchTab("Revisions");
         overlay.SwitchToFrame("Revisions");
         
         //Step 7
-        Revisions revisions = new Revisions(webDriver, applib);
+        Revisions revisions = new Revisions(webDriver);
         revisions.ClickEditExtendMenuBtn(postTitle);
         revisions.ClickShareMenuBtn(postTitle);
         
         //Step 8
-        Share share = new Share(webDriver, applib);
+        Share share = new Share(webDriver);
         share.ClickTwitterLnk();
         share.ClickPostToTwitterCbx();
         

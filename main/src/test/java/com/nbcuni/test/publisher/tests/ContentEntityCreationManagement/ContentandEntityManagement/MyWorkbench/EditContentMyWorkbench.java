@@ -20,16 +20,16 @@ public class EditContentMyWorkbench extends ParentTest{
          
         	//Step 1
         	UserLogin userLogin = applib.openApplication();
-        	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+        	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
         	//Step 2
-        	CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver, applib);
+        	CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver);
         	String postTitle = createDefaultContent.Post("Draft");
         	
         	//Step 3
         	taxonomy.NavigateSite("My Workbench");
         	overlay.SwitchToActiveFrame();
-        	ErrorChecking errorChecking = new ErrorChecking(webDriver, applib);
+        	ErrorChecking errorChecking = new ErrorChecking(webDriver);
         	errorChecking.VerifyNoMessageErrorsPresent();
         	
         	//Step 4

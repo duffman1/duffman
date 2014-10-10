@@ -23,10 +23,10 @@ public class EnhanceMPXLibraryPublicID extends ParentTest{
     	
     	//Step 1
     	UserLogin userLogin = applib.openApplication();
-    	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+    	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         //Setup
-    	Settings settings = new Settings(webDriver, applib);
+    	Settings settings = new Settings(webDriver);
     	settings.ConfigureMPXIfNeeded();
     	
         taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
@@ -37,7 +37,7 @@ public class EnhanceMPXLibraryPublicID extends ParentTest{
         overlay.ClickCloseOverlayLnk();
         taxonomy.NavigateSite("Content>>Files>>mpxPlayers");
         overlay.SwitchToActiveFrame();
-        SearchFor searchFor = new SearchFor(webDriver, applib);
+        SearchFor searchFor = new SearchFor(webDriver);
         searchFor.VerifyMPXSearchHeaderColumnOrder();
         	
         //Step 3 - NA as I will use an existing known mpx player ID for DB TV account

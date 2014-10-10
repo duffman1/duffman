@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.Reporter;
-import com.nbcuni.test.publisher.common.AppLib;
+import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
@@ -19,12 +19,12 @@ import com.nbcuni.test.publisher.common.Driver.Driver;
 public class SoftLength {
 
     private Driver webDriver;
-    private AppLib applib;
+    private Config config;
     
     //PAGE OBJECT CONSTRUCTOR
-    public SoftLength(Driver webDriver, AppLib applib) {
+    public SoftLength(Driver webDriver) {
         this.webDriver = webDriver;
-        this.applib = applib;
+        config = new Config();
         PageFactory.initElements(webDriver, this);
     }
     
@@ -77,7 +77,7 @@ public class SoftLength {
 
         Assert.assertFalse(elPresent);
 
-        webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
+        webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
     }
     
     public void VerifySoftLengthMeetsLimitNotPresent(String characterTxt) throws Exception {
@@ -96,7 +96,7 @@ public class SoftLength {
 
         Assert.assertFalse(elPresent);
 
-        webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
+        webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
     }
     
     public void VerifySoftLengthExceedsLimitNotPresent(String characterTxt) throws Exception {
@@ -115,7 +115,7 @@ public class SoftLength {
 
         Assert.assertFalse(elPresent);
 
-        webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
+        webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
     }
     
     

@@ -16,7 +16,7 @@ public class EditorPermissionCustomQueuesOperationsMenu extends ParentTest {
     	/* COMMENTING OUT THIS TEST - WAITING FOR INFO FROM SRUTHI
     	//Step 1
     	UserLogin userLogin = applib.openApplication();
-    	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+    	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
     	//Step 2
     	taxonomy.NavigateSite("Structure>>Queues>>Add queue type");
@@ -38,7 +38,7 @@ public class EditorPermissionCustomQueuesOperationsMenu extends ParentTest {
     	overlay.SwitchToActiveFrame();
     	
     	//Step 6
-    	Queues queues = new Queues(webDriver, applib);
+    	Queues queues = new Queues(webDriver);
     	String queueTitle = random.GetCharacterString(15);
     	queues.EnterTitle(queueTitle);
     	queues.ClickSaveQueueBtn();
@@ -80,7 +80,7 @@ public class EditorPermissionCustomQueuesOperationsMenu extends ParentTest {
     	overlay.ClickCloseOverlayLnk();
     	
     	//Setup
-    	AddUser addUser = new AddUser(webDriver, applib);
+    	AddUser addUser = new AddUser(webDriver);
         String userName = addUser.AddDefaultUser(Arrays.asList("editor"));
     	
         //Step 13

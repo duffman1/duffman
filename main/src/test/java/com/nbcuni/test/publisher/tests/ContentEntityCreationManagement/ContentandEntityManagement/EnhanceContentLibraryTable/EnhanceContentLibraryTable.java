@@ -34,10 +34,10 @@ public class EnhanceContentLibraryTable extends ParentTest{
     	
     	//Step 1 and 2
     	UserLogin userLogin = applib.openApplication();
-    	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+    	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
         overlay.SwitchToActiveFrame();
-        Settings settings = new Settings(webDriver, applib);
+        Settings settings = new Settings(webDriver);
         if (settings.IsMPXConfigured() == true) { 
         
         	//Step 3
@@ -46,7 +46,7 @@ public class EnhanceContentLibraryTable extends ParentTest{
         	overlay.SwitchToActiveFrame();
         	
         	//Step 4
-        	SearchFor searchFor = new SearchFor(webDriver, applib);
+        	SearchFor searchFor = new SearchFor(webDriver);
         	searchFor.VerifySearchHeaderColumnOrder();
         	
         	//Step 5 //TODO this step needs additional logic as time allows

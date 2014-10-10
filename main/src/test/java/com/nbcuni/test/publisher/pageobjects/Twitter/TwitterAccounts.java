@@ -1,14 +1,12 @@
 package com.nbcuni.test.publisher.pageobjects.Twitter;
 
 import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
-
-import com.nbcuni.test.publisher.common.AppLib;
+import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
@@ -21,12 +19,12 @@ import com.nbcuni.test.publisher.common.Driver.Driver;
 public class TwitterAccounts {
 
 	private Driver webDriver;
-	private AppLib applib;
+	private Config config;
 	
     //PAGE OBJECT CONSTRUCTOR
-    public TwitterAccounts(Driver webDriver, AppLib applib) {
+    public TwitterAccounts(Driver webDriver) {
     	this.webDriver = webDriver;
-    	this.applib = applib;
+    	config = new Config();
         PageFactory.initElements(webDriver, this);
     }
     
@@ -58,7 +56,7 @@ public class TwitterAccounts {
     		existingAccountPresent = false;
     	}
     	
-    	webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
+    	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
     	
     	return existingAccountPresent;
     }

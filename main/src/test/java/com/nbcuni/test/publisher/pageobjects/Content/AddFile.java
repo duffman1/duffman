@@ -12,8 +12,7 @@ import org.sikuli.script.Pattern;
 import org.sikuli.script.Region;
 import org.sikuli.script.Screen;
 import org.testng.Reporter;
-
-import com.nbcuni.test.publisher.common.AppLib;
+import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXAssets;
 import com.nbcuni.test.publisher.common.Driver.Driver;
 
@@ -27,16 +26,16 @@ import com.nbcuni.test.publisher.common.Driver.Driver;
 public class AddFile {
 
     private Driver webDriver;
-    private AppLib applib;
+    private Config config;
     private Screen sikuli;
     private MPXAssets mpxAssets;
     
     //PAGE OBJECT CONSTRUCTOR
-    public AddFile(Driver webDriver, AppLib applib) {
+    public AddFile(Driver webDriver) {
         this.webDriver = webDriver;
-        this.applib = applib;
+        config = new Config();
         sikuli = new Screen();
-        mpxAssets = new MPXAssets(applib);
+        mpxAssets = new MPXAssets();
         PageFactory.initElements(webDriver, this);
     }
     
@@ -57,7 +56,7 @@ public class AddFile {
     //PAGE OBJECT METHODS
     private String getImagePath() {
     	
-    	String PathToImages = applib.getPathToSikuliImages();
+    	String PathToImages = config.getConfigValueFilePath("PathToSikuliImages");
     	return PathToImages;
     }
 
@@ -234,7 +233,7 @@ public class AddFile {
     	}
     	else {
     		if (sikuli.exists(this.getImagePath() + "FileUpload/DefaultVideo_Tmb.png", .9) == null) {
-    			this.EnterPathToFile_Win(applib.getPathToMedia());
+    			this.EnterPathToFile_Win(config.getConfigValueFilePath("PathToMediaContent"));
             	this.ClickGoBtn_Win();
     		}
     		this.EnterFileName_Win("DefAutMed.m4v");
@@ -249,7 +248,7 @@ public class AddFile {
     		this.ClickTestPictureDefaultBtn();
     	}
     	else {
-    		this.EnterPathToFile_Win(applib.getPathToMedia());
+    		this.EnterPathToFile_Win(config.getConfigValueFilePath("PathToMediaContent"));
         	this.ClickGoBtn_Win();
         	this.EnterFileName_Win("nbclogosmall.jpg");
     	}

@@ -18,7 +18,7 @@ public class AddApplyEmbeddedMetadataButtonAllImageForms extends ParentTest{
          
         	//Step 1
         	UserLogin userLogin = applib.openApplication();
-        	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+        	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
         	//Step 2
             taxonomy.NavigateSite("Configuration>>Media>>Simple EXIF/IPTC Mappings");
@@ -41,9 +41,9 @@ public class AddApplyEmbeddedMetadataButtonAllImageForms extends ParentTest{
             overlay.SwitchToActiveFrame();
             CoverMedia coverMedia = new CoverMedia(webDriver);
             coverMedia.ClickSelectBtn();
-            SelectFile selectFile = new SelectFile(webDriver, applib);
+            SelectFile selectFile = new SelectFile(webDriver);
             selectFile.SwitchToSelectFileFrm();
-        	selectFile.EnterFilePath(applib.getPathToMedia() + "NUP_155306_0046.JPG");
+        	selectFile.EnterFilePath(config.getConfigValueFilePath("PathToMediaContent") + "NUP_155306_0046.JPG");
         	selectFile.ClickUploadBtn();
         	selectFile.WaitForFileUploaded("NUP_155306_0046.JPG");
         	selectFile.ClickNextBtn();
@@ -52,7 +52,7 @@ public class AddApplyEmbeddedMetadataButtonAllImageForms extends ParentTest{
         	selectFile.VerifyFileImagePresent("NUP_155306_0046");
             
             //Step 4
-            EditImage editImage = new EditImage(webDriver, applib);
+            EditImage editImage = new EditImage(webDriver);
             editImage.VerifyApplyEmbeddedMetadataBtnPresent();
             
             //Step 5

@@ -27,21 +27,21 @@ public class MPXAccountDeletion extends ParentTest {
      * TEST CASE - TC1884
      * Steps - https://rally1.rallydev.com/#/14663927728ud/detail/testcase/18169765713
      *************************************************************************************/
-    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "mpx"})
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"mpx", "sensitive"})
     public void MPXAccountDeletion_TC1884() throws Exception{
     	
-    	if (config.getConfigValue("DrushIngestion").equals("false")) {
+    	if (config.getConfigValueString("DrushIngestion").equals("false")) {
     		
     		//Step 1
         	UserLogin userLogin = applib.openApplication();
-        	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+        	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
             //Step 2 and 3
-        	Settings settings = new Settings(webDriver, applib);
+        	Settings settings = new Settings(webDriver);
         	settings.ConfigureMPXIfNeeded();
         	settings.ConfigureMPXIngestionType();
             MPXMedia mpxMedia = new MPXMedia(webDriver);
-            Cron cron = new Cron(webDriver, applib);
+            Cron cron = new Cron(webDriver);
             
             //Step 4
             taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
@@ -50,8 +50,8 @@ public class MPXAccountDeletion extends ParentTest {
         	settings.ExpandAccountList();
         	
         	//Step 5 through 8
-        	ContentParent contentParent = new ContentParent(webDriver, applib);
-        	ErrorChecking errorChecking = new ErrorChecking(webDriver, applib);
+        	ContentParent contentParent = new ContentParent(webDriver);
+        	ErrorChecking errorChecking = new ErrorChecking(webDriver);
         	List<WebElement> AllDeleteAccountButtons = settings.GetAllDeleteAccountButtons();
         	Assert.assertTrue(configuredAccounts.size() == AllDeleteAccountButtons.size());
         	while (settings.GetAllDeleteAccountButtons().size() > 0) {
@@ -74,7 +74,7 @@ public class MPXAccountDeletion extends ParentTest {
         	overlay.ClickCloseOverlayLnk();
         	taxonomy.NavigateSite("Content>>Files>>mpxMedia");
         	overlay.SwitchToActiveFrame();
-        	SearchFor searchFor = new SearchFor(webDriver, applib);
+        	SearchFor searchFor = new SearchFor(webDriver);
         	searchFor.EnterTitle("Automation");
         	searchFor.ClickApplyBtn();
         	overlay.switchToDefaultContent(true);
@@ -82,14 +82,14 @@ public class MPXAccountDeletion extends ParentTest {
         	
         	//Step 10
         	taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
-            settings.EnterUsername(applib.getMPXUsername());
-        	settings.EnterPassword(applib.getMPXPassword());
+            settings.EnterUsername(config.getConfigValueString("MPXUsername"));
+        	settings.EnterPassword(config.getConfigValueString("MPXPassword"));
         	settings.ClickConnectToMPXBtn();
         	contentParent.VerifyMessageStatus("Login successful");
         	settings.SelectImportAccount1("DB TV");
         	settings.ClickSetImportAccountBtn();
         	contentParent.VerifyMessageStatus("Setting import account \"DB%20TV\" for account");
-        	if (config.getConfigValue("DrushIngestion").equals("true")) {
+        	if (config.getConfigValueString("DrushIngestion").equals("true")) {
         		settings.UnCheckSyncMPXMediaOnCronBtn();
         	}
         	else {
@@ -126,7 +126,7 @@ public class MPXAccountDeletion extends ParentTest {
             		allURLs = allURLs + el.getAttribute("href");
             		eachURL.add(el.getAttribute("href"));
             	}
-            	allURLs = allURLs.replaceAll(applib.getApplicationURL() + "/admin/structure/file-types/manage/", "");
+            	allURLs = allURLs.replaceAll(config.getConfigValueString("AppURL") + "/admin/structure/file-types/manage/", "");
             	String[] index = allURLs.split("mpx_video_");
             	ArrayList<Integer> allIndexInts = new ArrayList<Integer>();
             	allIndexInts.removeAll(Collections.singleton("empty"));
@@ -147,7 +147,7 @@ public class MPXAccountDeletion extends ParentTest {
             	}
             }
             catch (Exception e) {}
-            webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
+            webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
     	    
     	}
     }

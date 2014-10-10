@@ -20,8 +20,8 @@ public class MPSEndToEndIntegration extends ParentTest {
         	
         	Reporter.log("STEP 1");
         	UserLogin userLogin = applib.openApplication();
-        	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
-        	Modules modules = new Modules(webDriver, applib);
+        	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
+        	Modules modules = new Modules(webDriver);
         	taxonomy.NavigateSite("Modules");
         	overlay.SwitchToActiveFrame();
         	modules.EnterFilterName("Pixelman");

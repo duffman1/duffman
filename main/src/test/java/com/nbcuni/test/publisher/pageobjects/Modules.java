@@ -14,8 +14,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
-
-import com.nbcuni.test.publisher.common.AppLib;
+import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.Taxonomy.Taxonomy;
 import com.nbcuni.test.publisher.common.Driver.Driver;
@@ -30,22 +29,19 @@ import com.nbcuni.test.publisher.common.Driver.Driver;
 public class Modules {
 
     private Driver webDriver;
-    private AppLib applib;
+    private Config config;
     private ContentParent contentParent;
     private Overlay overlay;
     private Taxonomy taxonomy;
     private WebDriverWait wait;
     
     //PAGE OBJECT CONSTRUCTOR
-    public Modules(Driver webDriver, AppLib applib) {
+    public Modules(Driver webDriver) {
     	this.webDriver = webDriver;
-    	this.applib = applib;
-    	contentParent = new ContentParent(webDriver, applib);
-    	PageFactory.initElements(webDriver, contentParent);
-    	overlay = new Overlay(webDriver, applib);
-    	PageFactory.initElements(webDriver, applib);
+    	config = new Config();
+    	contentParent = new ContentParent(webDriver);
+    	overlay = new Overlay(webDriver);
     	taxonomy = new Taxonomy(webDriver);
-    	PageFactory.initElements(webDriver, taxonomy);
     	PageFactory.initElements(webDriver, this);
     	wait = new WebDriverWait(webDriver, 10);
     }
@@ -161,7 +157,7 @@ public class Modules {
         	
         	Reporter.log("Switch back to the 'Modules' frame.");
         	overlay.SwitchToFrame("Modules");
-        	webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
+        	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
         	
         	if (moduleName != "Overlay") {
         		this.VerifyConfigurationSaved();
@@ -208,7 +204,7 @@ public class Modules {
     	catch (NoSuchElementException e) {
     		isModuleInstalled = false;
     	}
-    	webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
+    	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
     	return isModuleInstalled;
     }
     

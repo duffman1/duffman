@@ -24,19 +24,19 @@ import org.apache.commons.codec.binary.Base64;
 
 public class UpdateTestResultsRally {
 
-    @SuppressWarnings("resource")
+    @SuppressWarnings({ "resource", "deprecation" })
 	public void updateTestResult(String TCID, Boolean passed, String screenshotPath) throws Exception {
 
     	Config config = new Config();
     	
         //Connection parameters
-        String rallyURL = config.getConfigValue("RallyUrl");
+        String rallyURL = config.getConfigValueString("RallyUrl");
         String wsapiVersion = "1.40";
         String applicationName = "Update Individual Rally Test Cases";
 
         // Credentials
-        String userName = config.getConfigValue("RallyUsername");
-        String userPassword = config.getConfigValue("RallyPassword");
+        String userName = config.getConfigValueString("RallyUsername");
+        String userPassword = config.getConfigValueString("RallyPassword");
 
         RallyRestApi restApi = new RallyRestApi(
                         new URI(rallyURL),

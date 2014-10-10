@@ -23,17 +23,17 @@ public class UnauthenticatedUsersCanViewQueuesRevisionList extends ParentTest{
         applib.openApplication();
         
         //Step 2
-        webDriver.navigate().to(applib.getApplicationURL() + "/#overlay=admin/content/queues/manage/all/revisions-state-flow-states");
+        webDriver.navigate().to(config.getConfigValueString("AppURL") + "/#overlay=admin/content/queues/manage/all/revisions-state-flow-states");
         overlay.SwitchToActiveFrame();
         AccessDenied accessDenied = new AccessDenied(webDriver);
         accessDenied.VerifyAccessDeniedTxt();
         
         //Step 3
-        webDriver.navigate().to(applib.getApplicationURL() + "/admin/content/queues/");
+        webDriver.navigate().to(config.getConfigValueString("AppURL") + "/admin/content/queues/");
         accessDenied.VerifyAccessDeniedTxt();
         
         //Step 4
-        webDriver.navigate().to(applib.getApplicationURL() + "/admin/content/queues/manage/all/revisions-state-flow-states");
+        webDriver.navigate().to(config.getConfigValueString("AppURL") + "/admin/content/queues/manage/all/revisions-state-flow-states");
         accessDenied.VerifyAccessDeniedTxt();
         
         

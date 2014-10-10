@@ -14,19 +14,19 @@ public class CreateCustomContentType extends ParentTest{
      * TEST CASE - TC1049
      * Steps - https://rally1.rallydev.com/#/14663927728ud/detail/testcase/17441495573
      *************************************************************************************/
-    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "smoke", "certify"})
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "certify"})
     public void CreateCustomContentType_TC1049() throws Exception{
         
         	//Step 1
         	UserLogin userLogin = applib.openApplication();
-        	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+        	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
             //Step 2
             taxonomy.NavigateSite("Structure>>Content types>>Add content type");
             overlay.SwitchToActiveFrame();
             
             //Step 3
-            ContentTypes contentTypes = new ContentTypes(webDriver, applib);
+            ContentTypes contentTypes = new ContentTypes(webDriver);
             String contentTypeName = random.GetCharacterString(10);
             contentTypes.EnterName(contentTypeName);
             

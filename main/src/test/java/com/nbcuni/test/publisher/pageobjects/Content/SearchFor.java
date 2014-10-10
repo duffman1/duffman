@@ -1,6 +1,6 @@
 package com.nbcuni.test.publisher.pageobjects.Content;
 
-import com.nbcuni.test.publisher.common.AppLib;
+import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -11,6 +11,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.Reporter;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -25,12 +26,12 @@ import java.util.concurrent.TimeUnit;
 public class SearchFor {
 
     private Driver webDriver;
-    private AppLib applib;
+    private Config config;
     
     //PAGE OBJECT CONSTRUCTOR
-    public SearchFor(Driver webDriver, AppLib applib) {
+    public SearchFor(Driver webDriver) {
         this.webDriver = webDriver;
-        this.applib = applib;
+        config = new Config();
         PageFactory.initElements(webDriver, this);
     }
    
@@ -247,7 +248,7 @@ public class SearchFor {
     		linkTxt = FirstMPXMediaSearchResult_Lnk.getText();	
     	}
     	catch (Exception e) {}
-    	webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
+    	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
         return linkTxt;
     }
     
@@ -262,7 +263,7 @@ public class SearchFor {
     		}
     		catch (Exception e) {}
     	}
-    	webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
+    	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
         return allTitles;
     }
     
@@ -275,7 +276,7 @@ public class SearchFor {
     		linkTxt = FirstMPXPlayerSearchResult_Lnk.getText();	
     	}
     	catch (Exception e) {}
-    	webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
+    	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
         return linkTxt;
     }
     
@@ -292,7 +293,7 @@ public class SearchFor {
     	Reporter.log("Get the number of results in the result set.");
     	webDriver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
     	int resultSetSize = AllSearchResults_Lnks().size();
-    	webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
+    	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
         return resultSetSize;
     }
     
@@ -386,7 +387,7 @@ public class SearchFor {
     		
     		Assert.assertTrue(el.getText().equals(status));
     	}
-        webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
+        webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
     }
     
     public void VerifyMPXResultPublicID(String playerTitle, String publicID) throws Exception {

@@ -1,7 +1,7 @@
 package com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform;
 
 import java.util.Iterator;
-import com.nbcuni.test.publisher.common.AppLib;
+import com.nbcuni.test.publisher.common.Config;
 import org.testng.Reporter;
 import org.sikuli.script.*;
 
@@ -14,19 +14,19 @@ import org.sikuli.script.*;
 
 public class MPXDeleteMedia {
 
-    private AppLib applib;
     private Screen sikuli;
+    private Config config;
     private MPXAssets mpxAssets;
     
-    public MPXDeleteMedia(AppLib applib) {
+    public MPXDeleteMedia() {
         sikuli = new Screen();
-        this.applib = applib;
-        mpxAssets = new MPXAssets(applib);
+        config = new Config();
+        mpxAssets = new MPXAssets();
     }
     
     private String getImagePath() {
     	
-    	return applib.getPathToSikuliImages();
+    	return config.getConfigValueFilePath("PathToSikuliImages");
     }
     
     public void GiveFocusToMediaList() throws Exception {

@@ -26,7 +26,7 @@ public class EnhanceMediaGalleriesTab extends ParentTest{
     	
     	//Step 1
     	UserLogin userLogin = applib.openApplication();
-    	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+    	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         //Step 2
     	taxonomy.NavigateSite("Content>>Media Galleries");
@@ -46,7 +46,7 @@ public class EnhanceMediaGalleriesTab extends ParentTest{
     	overlay.SwitchToActiveFrame();
         
     	//Steps 4 and 5
-    	SearchFor searchFor = new SearchFor(webDriver, applib);
+    	SearchFor searchFor = new SearchFor(webDriver);
     	searchFor.SelectStatus("Draft");
     	searchFor.EnterTitle(title);
     	searchFor.ClickApplyBtn();

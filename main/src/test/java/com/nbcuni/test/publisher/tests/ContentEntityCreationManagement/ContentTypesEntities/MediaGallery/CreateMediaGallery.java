@@ -24,10 +24,10 @@ public class CreateMediaGallery extends ParentTest{
         
         	Reporter.log("STEP 1");
         	UserLogin userLogin = applib.openApplication();
-        	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+        	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         	
         	Reporter.log("SETUP");
-        	Settings settings = new Settings(webDriver, applib);
+        	Settings settings = new Settings(webDriver);
         	settings.ConfigureMPXIfNeeded();
         	taxonomy.NavigateSite("Structure>>Content types>>Media Gallery>>Manage fields>>Media Items");
         	overlay.SwitchToActiveFrame();
@@ -48,9 +48,9 @@ public class CreateMediaGallery extends ParentTest{
             basicInformation.EnterSynopsis();
             overlay.SwitchToActiveFrame();
             basicInformation.EnterShortDescription("short description");
-            AddFile addFile = new AddFile(webDriver, applib);
+            AddFile addFile = new AddFile(webDriver);
             MediaItems mediaItems = new MediaItems(webDriver);
-            SelectFile selectFile = new SelectFile(webDriver, applib);
+            SelectFile selectFile = new SelectFile(webDriver);
             for(int Count=0;Count<2;Count++) {
             	if (Count == 0) {
             		basicInformation.ClickMediaItemsSelectBtn();
@@ -72,7 +72,7 @@ public class CreateMediaGallery extends ParentTest{
                 	addFile.ClickOpenBtn();
                 }
                 else {
-                	addFile.EnterPathToFile_Win(applib.getPathToMedia());
+                	addFile.EnterPathToFile_Win(config.getConfigValueFilePath("PathToMediaContent"));
                 	addFile.ClickGoBtn_Win();
                 	if (Count == 0) {
                 		addFile.EnterFileName_Win("IPTCDefault.jpg");
@@ -92,7 +92,7 @@ public class CreateMediaGallery extends ParentTest{
             
             Reporter.log("STEP 4 and 5");
             mediaItems.ClickEditAllBtn();
-            EditImage editImage = new EditImage(webDriver, applib);
+            EditImage editImage = new EditImage(webDriver);
             editImage.WaitForEditImageFrameOpen();
             
             Reporter.log("STEP 6");

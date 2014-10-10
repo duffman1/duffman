@@ -2,10 +2,7 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
     <line>
-      <![CDATA[STEP 1]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
+      <![CDATA[Open url 'http://acc-test.publisher7.com'.]]>
     </line>
     <line>
       <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
@@ -17,177 +14,96 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[SETUP]]>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Content' menu link.]]>
+      <![CDATA[Mouse over the 'Add content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+      <![CDATA[Click the 'Character Profile' menu link.]]>
     </line>
     <line>
-      <![CDATA[Get the number of results in the result set.]]>
+      <![CDATA[Switch to the active frame titled 'Create Character Profile dialog'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
+      <![CDATA[Enter '175da91e26f448c' in the 'Character First Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Modules' menu link.]]>
+      <![CDATA[Click the Cover Photo 'Select' button.]]>
     </line>
     <line>
-      <![CDATA[Switch to frame titled 'Modules'.]]>
+      <![CDATA[Switch to the select file frame.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Dynamic Queue' in the 'Filter Name' text box.]]>
+      <![CDATA[Enter the file path for file upload.]]>
     </line>
     <line>
-      <![CDATA[Wait for module filter titled 'Dynamic Queue' to be visible in module list.]]>
+      <![CDATA[Click the 'Upload' button.]]>
     </line>
     <line>
-      <![CDATA[Verify the 'Dynamic Queue' check box is checked.]]>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
+      <![CDATA[Click the 'Next' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Home' menu link.]]>
+      <![CDATA[Click the 'Public Local Files' radio button.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Structure' menu link.]]>
+      <![CDATA[Click the 'Next' button.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Dynamic Queue types' menu link.]]>
+      <![CDATA[Verify the file image 'HanSolo' is present.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Add dynamic queue type' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Add dynamic queue type dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '009aea0b7be44b4' in the 'Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Select '1 min' from the 'Cache lifetime' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Select 'Content' or 'Node' from the 'Entity type' drop down list.]]>
+      <![CDATA[Verify the img is loaded and visible.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Dynamic Queue types dialog'.]]>
+      <![CDATA[Switch to frame titled 'Create Character Profile'.]]>
     </line>
     <line>
-      <![CDATA[Verify the text '009aea0b7be44b4' is present on the page.]]>
+      <![CDATA[Assert that img source of the Cover Photo contains 'HanSolo'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
+      <![CDATA[Assert the the img is loaded and visible.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Content' menu link.]]>
+      <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Dynamic Queues' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Add 009aea0b7be44b4' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Add 009aea0b7be44b4 dynamic queue dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'bf586f0c19b444b' in the 'Title' text box.]]>
-    </line>
-    <line>
-      <![CDATA[]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Newest' radio button under 'Sort by'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 2]]>
-    </line>
-    <line>
-      <![CDATA[Set '5' in ItemsPerPage textbox.]]>
-    </line>
-    <line>
-      <![CDATA[Set '10' in TotalLimit textbox.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save Dynamic Queue' button.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 3]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Dynamic Queues' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Dynamic Queues dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Open a new browser window.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to new browser tab/window.]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://qa5.publisher7.com/dynamic-queue/31'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 4]]>
-    </line>
-    <line>
-      <![CDATA[Verify the pagination links are present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the visible count of Dynamic Queue Links equals '5'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'next >' Link]]>
-    </line>
-    <line>
-      <![CDATA[Verify the visible count of Dynamic Queue Links equals '5'.]]>
+      <![CDATA[Verify success message of 'Character Profile 175da91e26f448c has been created.' is present.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="64129" started-at="2014-10-07T14:49:31Z" finished-at="2014-10-07T14:50:35Z">
+  <suite name="Default suite" duration-ms="26828" started-at="2014-10-10T12:45:43Z" finished-at="2014-10-10T12:46:10Z">
     <groups>
       <group name="full">
-        <method signature="DynamicQueuePagination.DynamicQueuePagination_TC4791()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.DynamicQueuePagination@5d03462c]" name="DynamicQueuePagination_TC4791" class="com.nbcuni.test.publisher.tests.Queues.DynamicQueues.DynamicQueuePagination"/>
+        <method signature="CreateCharacterProfile.CreateCharacterProfile_TC1041()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@333d4d6b]" name="CreateCharacterProfile_TC1041" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile"/>
       </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="64129" started-at="2014-10-07T14:49:31Z" finished-at="2014-10-07T14:50:35Z">
-      <class name="com.nbcuni.test.publisher.tests.Queues.DynamicQueues.DynamicQueuePagination">
-        <test-method status="PASS" signature="startGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.DynamicQueuePagination@5d03462c]" name="startGridAndHub" is-config="true" duration-ms="1308" started-at="2014-10-07T10:49:30Z" finished-at="2014-10-07T10:49:31Z">
+    <test name="Default test" duration-ms="26828" started-at="2014-10-10T12:45:43Z" finished-at="2014-10-10T12:46:10Z">
+      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile">
+        <test-method status="PASS" signature="suiteSetup()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@333d4d6b]" name="suiteSetup" is-config="true" duration-ms="30" started-at="2014-10-10T08:45:43Z" finished-at="2014-10-10T08:45:43Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- startGridAndHub -->
-        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.DynamicQueuePagination@5d03462c]" name="startSelenium" is-config="true" duration-ms="2617" started-at="2014-10-07T10:49:31Z" finished-at="2014-10-07T10:49:34Z">
+        </test-method> <!-- suiteSetup -->
+        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@333d4d6b]" name="startSelenium" is-config="true" duration-ms="2428" started-at="2014-10-10T08:45:43Z" finished-at="2014-10-10T08:45:45Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.nbcuni.test.publisher.tests.Queues.DynamicQueues.DynamicQueuePagination.DynamicQueuePagination_TC4791() throws java.lang.Exception]]>
+                <![CDATA[public void com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile.CreateCharacterProfile_TC1041() throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="DynamicQueuePagination_TC4791()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.DynamicQueuePagination@5d03462c]" name="DynamicQueuePagination_TC4791" duration-ms="60929" started-at="2014-10-07T10:49:34Z" finished-at="2014-10-07T10:50:35Z">
+        <test-method status="PASS" signature="CreateCharacterProfile_TC1041()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@333d4d6b]" name="CreateCharacterProfile_TC1041" duration-ms="23178" started-at="2014-10-10T08:45:45Z" finished-at="2014-10-10T08:46:09Z">
           <reporter-output>
             <line>
-              <![CDATA[STEP 1]]>
-            </line>
-            <line>
-              <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
+              <![CDATA[Open url 'http://acc-test.publisher7.com'.]]>
             </line>
             <line>
               <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
@@ -199,164 +115,86 @@
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
-              <![CDATA[SETUP]]>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Content' menu link.]]>
+              <![CDATA[Mouse over the 'Add content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+              <![CDATA[Click the 'Character Profile' menu link.]]>
             </line>
             <line>
-              <![CDATA[Get the number of results in the result set.]]>
+              <![CDATA[Switch to the active frame titled 'Create Character Profile dialog'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
+              <![CDATA[Enter '175da91e26f448c' in the 'Character First Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Modules' menu link.]]>
+              <![CDATA[Click the Cover Photo 'Select' button.]]>
             </line>
             <line>
-              <![CDATA[Switch to frame titled 'Modules'.]]>
+              <![CDATA[Switch to the select file frame.]]>
             </line>
             <line>
-              <![CDATA[Enter 'Dynamic Queue' in the 'Filter Name' text box.]]>
+              <![CDATA[Enter the file path for file upload.]]>
             </line>
             <line>
-              <![CDATA[Wait for module filter titled 'Dynamic Queue' to be visible in module list.]]>
+              <![CDATA[Click the 'Upload' button.]]>
             </line>
             <line>
-              <![CDATA[Verify the 'Dynamic Queue' check box is checked.]]>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
+              <![CDATA[Click the 'Next' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Home' menu link.]]>
+              <![CDATA[Click the 'Public Local Files' radio button.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Structure' menu link.]]>
+              <![CDATA[Click the 'Next' button.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Dynamic Queue types' menu link.]]>
+              <![CDATA[Verify the file image 'HanSolo' is present.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Add dynamic queue type' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Add dynamic queue type dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '009aea0b7be44b4' in the 'Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Select '1 min' from the 'Cache lifetime' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Select 'Content' or 'Node' from the 'Entity type' drop down list.]]>
+              <![CDATA[Verify the img is loaded and visible.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Dynamic Queue types dialog'.]]>
+              <![CDATA[Switch to frame titled 'Create Character Profile'.]]>
             </line>
             <line>
-              <![CDATA[Verify the text '009aea0b7be44b4' is present on the page.]]>
+              <![CDATA[Assert that img source of the Cover Photo contains 'HanSolo'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
+              <![CDATA[Assert the the img is loaded and visible.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Content' menu link.]]>
+              <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Dynamic Queues' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Add 009aea0b7be44b4' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Add 009aea0b7be44b4 dynamic queue dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'bf586f0c19b444b' in the 'Title' text box.]]>
-            </line>
-            <line>
-              <![CDATA[]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Newest' radio button under 'Sort by'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 2]]>
-            </line>
-            <line>
-              <![CDATA[Set '5' in ItemsPerPage textbox.]]>
-            </line>
-            <line>
-              <![CDATA[Set '10' in TotalLimit textbox.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save Dynamic Queue' button.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 3]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Dynamic Queues' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Dynamic Queues dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Open a new browser window.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to new browser tab/window.]]>
-            </line>
-            <line>
-              <![CDATA[Open url 'http://qa5.publisher7.com/dynamic-queue/31'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 4]]>
-            </line>
-            <line>
-              <![CDATA[Verify the pagination links are present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the visible count of Dynamic Queue Links equals '5'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'next >' Link]]>
-            </line>
-            <line>
-              <![CDATA[Verify the visible count of Dynamic Queue Links equals '5'.]]>
+              <![CDATA[Verify success message of 'Character Profile 175da91e26f448c has been created.' is present.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- DynamicQueuePagination_TC4791 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.DynamicQueuePagination@5d03462c]" name="stopSelenium" is-config="true" duration-ms="571" started-at="2014-10-07T10:50:35Z" finished-at="2014-10-07T10:50:35Z">
+        </test-method> <!-- CreateCharacterProfile_TC1041 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@333d4d6b]" name="stopSelenium" is-config="true" duration-ms="1212" started-at="2014-10-10T08:46:09Z" finished-at="2014-10-10T08:46:10Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=DynamicQueuePagination_TC4791 status=SUCCESS method=DynamicQueuePagination.DynamicQueuePagination_TC4791()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.DynamicQueuePagination@5d03462c] output=STEP 1]]]>
+                <![CDATA[[TestResult name=CreateCharacterProfile_TC1041 status=SUCCESS method=CreateCharacterProfile.CreateCharacterProfile_TC1041()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@333d4d6b] output=Open url 'http://acc-test.publisher7.com'.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="stopGridAndHub()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.DynamicQueuePagination@5d03462c]" name="stopGridAndHub" is-config="true" duration-ms="421" started-at="2014-10-07T10:50:35Z" finished-at="2014-10-07T10:50:36Z">
+        <test-method status="PASS" signature="suiteTeardown()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@333d4d6b]" name="suiteTeardown" is-config="true" duration-ms="0" started-at="2014-10-10T08:46:10Z" finished-at="2014-10-10T08:46:10Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- stopGridAndHub -->
-      </class> <!-- com.nbcuni.test.publisher.tests.Queues.DynamicQueues.DynamicQueuePagination -->
+        </test-method> <!-- suiteTeardown -->
+      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

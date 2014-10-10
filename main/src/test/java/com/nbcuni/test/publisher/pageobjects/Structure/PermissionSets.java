@@ -1,6 +1,7 @@
 package com.nbcuni.test.publisher.pageobjects.Structure;
 
 import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -10,8 +11,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
-
-import com.nbcuni.test.publisher.common.AppLib;
+import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
@@ -24,13 +24,13 @@ import com.nbcuni.test.publisher.common.Driver.Driver;
 public class PermissionSets {
 
 	private Driver webDriver;
-	private AppLib applib;
+	private Config config;
 	private WebDriverWait wait;
 	
     //PAGE OBJECT CONSTRUCTOR
-    public PermissionSets(Driver webDriver, AppLib applib) {
+    public PermissionSets(Driver webDriver) {
     	this.webDriver = webDriver;
-    	this.applib = applib;
+    	config = new Config();
     	PageFactory.initElements(webDriver, this);
     	wait = new WebDriverWait(webDriver, 10);
     }
@@ -100,7 +100,7 @@ public class PermissionSets {
     	if (elPresent == true) {
     		Assert.fail("Permission Set '" + setName + "' is present when it should not be");
     	}
-    	webDriver.manage().timeouts().implicitlyWait(applib.getImplicitWaitTime(), TimeUnit.SECONDS);
+    	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
     }
     
 }

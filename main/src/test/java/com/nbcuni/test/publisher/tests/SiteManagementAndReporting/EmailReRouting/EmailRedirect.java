@@ -21,10 +21,10 @@ public class EmailRedirect extends ParentTest{
     	
     	//Step 1
     	UserLogin userLogin = applib.openApplication();
-    	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+    	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
     	//Setup
-    	Modules modules = new Modules(webDriver, applib);
+    	Modules modules = new Modules(webDriver);
         modules.VerifyModuleEnabled("Reroute emails");
         
     	//Step 2
@@ -32,15 +32,15 @@ public class EmailRedirect extends ParentTest{
     	overlay.SwitchToActiveFrame();
     	RerouteEmail rerouteEmail = new RerouteEmail(webDriver, applib);
     	rerouteEmail.CheckEnableReroutingCbx();
-    	rerouteEmail.EnterEmailAddresses(applib.getGmailAutoEmailUsername());
+    	rerouteEmail.EnterEmailAddresses(config.getConfigValueString("GmailUsername"));
     	rerouteEmail.ClickSaveConfigurationBtn();
     	contentParent.VerifyMessageStatus("The configuration options have been saved.");
     	overlay.ClickCloseOverlayLnk();
     	
     	//Step 3
-    	AddUser addUser = new AddUser(webDriver, applib);
+    	AddUser addUser = new AddUser(webDriver);
     	addUser.AddDefaultUser(Arrays.asList("editor"), false);
-        GmailConnect gmailConnect = new GmailConnect(applib);
+        GmailConnect gmailConnect = new GmailConnect();
         String autoEmailSubject = "An administrator created an account for you at ";
         gmailConnect.VerifyAutoEmailRecieved(autoEmailSubject);
         gmailConnect.DeleteAllAutoEmailsInInbox(autoEmailSubject);

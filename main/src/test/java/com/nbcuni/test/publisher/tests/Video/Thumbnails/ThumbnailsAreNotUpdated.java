@@ -52,10 +52,10 @@ public class ThumbnailsAreNotUpdated extends ParentTest{
 
     	//Step 1 and 2
     	UserLogin userLogin = applib.openApplication();
-    	userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+    	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         //MPX Configuration required
-    	Settings settings = new Settings(webDriver, applib);
+    	Settings settings = new Settings(webDriver);
     	taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
         overlay.SwitchToActiveFrame();
         
@@ -76,15 +76,15 @@ public class ThumbnailsAreNotUpdated extends ParentTest{
         		manageFileDisplay.ClickPubMPXImageLnk();
         		manageFileDisplay.SelectMPXImageStyle("Thumbnail (100x100)");
         		manageFileDisplay.ClickSaveConfigurationBtn();
-        		ContentParent contentParent = new ContentParent(webDriver, applib);
+        		ContentParent contentParent = new ContentParent(webDriver);
         		contentParent.VerifyMessageStatus("Your settings have been saved.");
         		overlay.ClickCloseOverlayLnk();
         		
         		//Step 3
-        		MPXLogin mpxLogin = new MPXLogin(webDriver, applib);
+        		MPXLogin mpxLogin = new MPXLogin(webDriver);
             	mpxLogin.OpenMPXThePlatform();
-            	mpxLogin.Login(applib.getMPXUsername(), applib.getMPXPassword());
-            	MPXSelectAccount mpxSelectAccount = new MPXSelectAccount(webDriver, applib);
+            	mpxLogin.Login(config.getConfigValueString("MPXUsername"), config.getConfigValueString("MPXPassword"));
+            	MPXSelectAccount mpxSelectAccount = new MPXSelectAccount(webDriver);
                 mpxSelectAccount.SelectAccount("DB TV");
             	MPXAddMedia mpxAddMedia = new MPXAddMedia(applib);
             	mpxAddMedia.UploadDefaultVideo();
@@ -95,13 +95,13 @@ public class ThumbnailsAreNotUpdated extends ParentTest{
                 mpxAddMedia.ClickFilesLnk();
                 mpxAddMedia.ClickUploadBtn();
             	mpxAddMedia.ClickChooseFilesBtn();
-            	AddFile addFile = new AddFile(webDriver, applib);
+            	AddFile addFile = new AddFile(webDriver);
             	if (webDriver.getCapabilities().getPlatform().toString() == "MAC") {
             		addFile.ClickPicturesUploadBtn();
                 	addFile.ClickNBCLogoLnk();
             	}
             	else {
-            		addFile.EnterPathToFile_Win(applib.getPathToMedia());
+            		addFile.EnterPathToFile_Win(config.getConfigValueFilePath("PathToMediaContent"));
                 	addFile.ClickGoBtn_Win();
                 	addFile.EnterFileName_Win("nbclogosmall.jpg");
             	}
@@ -109,27 +109,27 @@ public class ThumbnailsAreNotUpdated extends ParentTest{
             	mpxAddMedia.ClickUploadFromDialogBtn();
                 mpxAddMedia.ClickAllMediaLnk();
                 mpxAddMedia.ClickSaveBtn(false);
-                MPXPublishMedia mpxPublishMedia = new MPXPublishMedia(applib);
+                MPXPublishMedia mpxPublishMedia = new MPXPublishMedia();
                 mpxPublishMedia.PublishDefaultVideo();
                 
                 //Step 4 through 12 - N/A as step 3 creates a media item that has an image associated with it.
                 
                 //Step 13
                 applib.openApplication();
-                Cron cron = new Cron(webDriver, applib);
-                if (config.getConfigValue("DrushIngestion").equals("false")) {
+                Cron cron = new Cron(webDriver);
+                if (config.getConfigValueString("DrushIngestion").equals("false")) {
                 	cron.RunCron(true);
                 }
                 
         		//Step 14
         	    taxonomy.NavigateSite("Content>>Files>>mpxMedia");
         	    overlay.SwitchToActiveFrame();
-        	    SearchFor searchFor = new SearchFor(webDriver, applib);
+        	    SearchFor searchFor = new SearchFor(webDriver);
         	    searchFor.EnterTitle(mediaTitle);
         	    searchFor.ClickApplyBtn();
         	    overlay.switchToDefaultContent(true);
         	    if (!searchFor.GetFirstMPXMediaSearchResult().equals(mediaTitle)) {
-            	    if (config.getConfigValue("DrushIngestion").equals("true")) {
+            	    if (config.getConfigValueString("DrushIngestion").equals("true")) {
             	    	int refreshCount = 0;
             	    	while (!searchFor.GetFirstMPXMediaSearchResult().equals(mediaTitle)) {
                            	

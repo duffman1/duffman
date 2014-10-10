@@ -25,10 +25,10 @@ public class AdFoldersRichMediaAds extends ParentTest {
         
     	//Step 1
         UserLogin userLogin = applib.openApplication();
-        userLogin.Login(applib.getAdmin1Username(), applib.getAdmin1Password());
+        userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         //Setup
-        Modules modules = new Modules(webDriver, applib);
+        Modules modules = new Modules(webDriver);
         modules.VerifyModuleEnabled("Pub Ads");
         
         //Setup
@@ -54,14 +54,14 @@ public class AdFoldersRichMediaAds extends ParentTest {
         overlay.SwitchToActiveFrame();
         
         //Step 3
-        PublisherAdsSideFiles publisherAdsSideFiles = new PublisherAdsSideFiles(webDriver, applib);
+        PublisherAdsSideFiles publisherAdsSideFiles = new PublisherAdsSideFiles(webDriver);
         publisherAdsSideFiles.DeleteAllUnwantedSideFiles();
         publisherAdsSideFiles.ClickAddLnk();
         overlay.SwitchToActiveFrame();
         
         //Step 4
         String sideFileName = random.GetCharacterString(15);
-        AddNewSideFile addNewSideFile = new AddNewSideFile(webDriver, applib);
+        AddNewSideFile addNewSideFile = new AddNewSideFile(webDriver);
         addNewSideFile.EnterName(sideFileName);
         
         //Step 5
@@ -81,7 +81,7 @@ public class AdFoldersRichMediaAds extends ParentTest {
         
         //Step 9
         publisherAdsSideFiles.ClickAdSideFileLnk(sideFilePath);
-        Assert.assertEquals(webDriver.getCurrentUrl(), applib.getApplicationURL() + "/" + sideFilePath + "#overlay-context=");
+        Assert.assertEquals(webDriver.getCurrentUrl(), config.getConfigValueString("AppURL") + "/" + sideFilePath + "#overlay-context=");
         webDriver.navigate().back();
         overlay.SwitchToActiveFrame();
         

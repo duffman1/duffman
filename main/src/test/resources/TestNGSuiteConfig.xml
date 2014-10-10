@@ -1,13 +1,13 @@
-<suite name="Publisher 7 Test Suites">
+<suite name="Publisher 7 Test Suite" parallel="classes" preserve-order="true" thread-count="3">
 
 	<!--RUNTIME CONFIG-->
-	<parameter name="AppURL" value="http://qa5.publisher7.com"></parameter>
+	<parameter name="AppURL" value="http://acc-test.publisher7.com"></parameter>
 	<parameter name="Browser" value="chrome"></parameter>
 	<parameter name="Admin1Username" value="admin@publisher.nbcuni.com"></parameter>
 	<parameter name="Admin1Password" value="pa55word"></parameter>
-	<parameter name="ReRunOnFailure" value="false"></parameter>
+	<parameter name="ReRunOnFailure" value="true"></parameter>
 	<parameter name="ReRunOnFailureCount" value="3"></parameter>
-	<parameter name="RunOnGridNetwork" value="false"></parameter>
+	<parameter name="RunRemotely" value="true"></parameter>
 	
   	<!--REPORT CONFIG-->
   	<parameter name="SendReportAutoEmails" value="true"></parameter>
@@ -17,6 +17,7 @@
   	<parameter name="PathToReports" value="/test-output/reports/"></parameter>
   	<parameter name="PathToScreenshots" value="/test-output/screenshots/"></parameter>
   	<parameter name="PathToHarReports" value="/test-output/"></parameter>
+  	<parameter name="RunSetupScripts" value="true"></parameter>
   	<parameter name="AbortSuiteOnSetupFailure" value="true"></parameter>
   	<parameter name="SendReportEmailAddress" value="brandon.clark@nbcuni.com, brandon.clark@nbcuni.com"></parameter>
   	
@@ -34,16 +35,16 @@
   	<parameter name="SSOEmail" value="FID.Publisher@nbcuni.com"></parameter>
   	
   	<!--RALLY CONFIG-->
-  	<parameter name="RallyUsername" value="scott.baierwalter@nbc.com"></parameter>
-  	<parameter name="RallyPassword" value="Lighth0use123"></parameter>
+  	<parameter name="RallyUsername" value=""></parameter>
+  	<parameter name="RallyPassword" value=""></parameter>
   	<parameter name="RallyUrl" value="https://rally1.rallydev.com"></parameter>
   	<parameter name="RallyWorkspace" value="Digital Products"></parameter>
   	<parameter name="RallyProject" value="Publisher 7"></parameter>
   	<parameter name="RallyTaskID" value="TA60294"></parameter>
   	
   	<!--GITHUB CONFIG-->
-  	<parameter name="GithubUsername" value="baclark77@yahoo.com"></parameter>
-  	<parameter name="GithubPassword" value="tufNewcyd4"></parameter>
+  	<parameter name="GithubUsername" value=""></parameter>
+  	<parameter name="GithubPassword" value=""></parameter>
   	<parameter name="GithubOwner" value="NBCUOTS"></parameter>
   	<parameter name="GithubRepo" value="Publisher7_citest"></parameter>
   	
@@ -51,9 +52,9 @@
   	<parameter name="MPXUrl" value="http://mpx.theplatform.com/"></parameter>
   	<parameter name="MPXUsername" value="mpx/AdminPub7QA"></parameter>
   	<parameter name="MPXPassword" value="Pa55word"></parameter>
-  	<parameter name="MPXVideaUploadPause" value="5000"></parameter>
+  	<parameter name="MPXVideoUploadPause" value="5000"></parameter>
   	<parameter name="MPXAssetBufferPause" value="0"></parameter>
-  	<parameter name="DrushIngestion" value="false"></parameter>
+  	<parameter name="DrushIngestion" value="true"></parameter>
   	
   	<!--SIKULI CONFIG-->
   	<parameter name="PathToSikuliImages" value="/src/test/java/com/nbcuni/test/publisher/lib/sikuli/images/"></parameter>
@@ -66,7 +67,6 @@
   	<!--MISC CONFIG-->
   	<parameter name="PathToMediaContent" value="/src/test/java/com/nbcuni/test/publisher/content/MediaFiles/"></parameter>
   	<parameter name="ErrorCheckingEnabled" value="true"></parameter>
-  	<parameter name="LocalWebDriverHubPort" value="4444"></parameter>
   	<parameter name="RemoteWebDriverHubPort" value="4445"></parameter>
 	<parameter name="LocalAppiumHubPort" value="4724"></parameter>
 	
@@ -83,9 +83,125 @@
     	<listener class-name="com.nbcuni.test.publisher.common.SuiteListeners" />
   	</listeners>
   	
-  	<!--SUITE EXECUTION QUEUE-->
-  	<suite-files>
-    	<suite-file path="TestNGConsecutiveSuite.xml" />
-    	<suite-file path="TestNGConcurrentSuite.xml" />
-    </suite-files>
+  	<!--TEST EXECUTION QUEUE-->
+  	<test verbose="1" name="All Web Tests" annotations="JDK">
+
+		<!-- TEST GROUPS
+		 "full" - every test in the suite except the sensitive test group.
+		 "mpx" - every mpx video test.
+		 "certify" - a subset of the full test group that is required to certify a build.
+		 "mps" - every mps advertisement test.
+		 "sensitive" - only those tests that CANNOT run in parallel to anything else.
+		 "sikuli" - those tests that leverage sikuli image recognition in some capacity.
+		 "broken" - those tests that are broken and safe to ignore until they can be resolved.
+		-->
+		<groups>
+	 		<run>
+	 			<include name="full"/>
+	 			<exclude name="broken"/>
+	 		</run>
+		</groups>
+
+		<classes>
+			<class name="com.nbcuni.test.publisher.tests.Video.Configuration.ConfigurationMultipleMPXAccounts" runscron="true"/>
+			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons"/>
+			<class name="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSODefinedDomains"/>
+			<class name="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOManageUsers"/>
+			<class name="com.nbcuni.test.publisher.tests.Performance.PageLoads"/>
+			<class name="com.nbcuni.test.publisher.tests.Video.CanonicalURLSupport.CanonicalURL" runscron="true" runslocal="true"/>		        	
+			<class name="com.nbcuni.test.publisher.tests.Advertising.Comscore.Pixelman"/>
+			<class name="com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds"/>
+			<class name="com.nbcuni.test.publisher.tests.Video.Player.SelectVideoPlayerPerVideoFile"/>
+			<class name="com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen"/>
+			<class name="com.nbcuni.test.publisher.tests.Video.DeIngestingMPXAccountsAndCorrespondingAssets.EntityReferenceVerification"/>
+			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost"/>	
+			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile"/>
+			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson"/>
+			<class name="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSConfigurationPage"/>
+			<class name="com.nbcuni.test.publisher.tests.Video.Thumbnails.ThumbnailsAreNotUpdated" runscron="true" runslocal="true"/>
+			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVEpisode.CreateTVEpisode"/>
+			<class name="com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules"/>
+			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVSeason.CreateTVSeason"/>
+			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CustomContentType.CreateCustomContentType"/>
+			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityModerationStatesandWorkflows.PublishContenttoUnauthenticatedUsers"/>
+			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.EnhanceOperationsDropdownonScheduleTab"/>
+			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.ScheduleToPublishContentByDateTime"/>
+			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.EnhanceContentLibraryTable.EnhanceContentLibraryTable"/>
+			<class name="com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS"/>
+			<class name="com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling" runscron="true" runslocal="true"/>
+			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.InstallZeeboxModule.InstallZeeboxModule"/>
+			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.CastCrewFieldCollectionsVerificationMovie"/>
+			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.Relationships"/>
+			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.AddApplyEmbeddedMetadataButton.AddApplyEmbeddedMetadataButtonAllImageForms"/>
+			<class name="com.nbcuni.test.publisher.tests.Advertising.GooglePublisherTagsGPT.GPTTagsVerification"/>
+			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.ProvideUniqueURLImages.UniqueURL"/>
+			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.IntegrateFocalPointModule.FocalPointModule"/>
+			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.CastCrewFieldCollectionsVerificationTVEpisode"/>
+			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentAndEntityPreview.PreviewContentItemsIntheFuturefromContentandWorkbenchViews"/>
+			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CloneANode.Cloning"/>
+			<class name="com.nbcuni.test.publisher.tests.Video.SyncFromMPXButtonToVideoFileEntitiesEditForm.SyncFromMPXButtonToVideoFileEntitiesEditForm"/>
+			<class name="com.nbcuni.test.publisher.tests.Video.UndefinedIndexesDisplayingForMPXPlayers.UndefinedIndexesDisplayingForMPXPlayers"/>
+			<class name="com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability" runscron="true" runslocal="true"/>
+			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentEntityModerationStatesWorkflows.MultiEditorPublishingWorkflow"/>
+			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.SoftLengthLimit.SoftCharacterLimit"/>
+			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.URLAlias.AutomaticAlias"/>
+			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.MyWorkbench.EditContentMyWorkbench"/>
+			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.LockContentWhenEditing.ContentLocking"/>
+			<class name="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.AdminViews.NoWhiteScreen"/>
+			<class name="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSEndToEndIntegration"/>
+			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ProgramGuides.ROVITVSchedule.ProgramGuideVerification"/>CRON
+			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.EnhanceMediaGalleriesTab.EnhanceMediaGalleriesTab"/>
+			<class name="com.nbcuni.test.publisher.tests.Queues.AddModerationStatesToRevisionsOfAQueue.QueueModerationStates"/>
+			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery" runslocal="true"/>
+			<class name="com.nbcuni.test.publisher.tests.Video.MPXReporting.MPXReportingBeta"/>
+			<class name="com.nbcuni.test.publisher.tests.Queues.CreateUpdateRevisionsToQueues.BasicUIForCreatingAndRevisingQueues"/>
+			<class name="com.nbcuni.test.publisher.tests.Queues.SchedulingQueues.ScheduleRevisionsOfQueues"/>
+			<class name="com.nbcuni.test.publisher.tests.Queues.UnauthenticatedUsersCanViewQueuesRevisionList.UnauthenticatedUsersCanViewQueuesRevisionList"/>
+			<class name="com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification"/>
+			<class name="com.nbcuni.test.publisher.tests.Queues.DeletingQueueRevisions.DeleteRevisionsQueues"/>
+			<class name="com.nbcuni.test.publisher.tests.Security.FileViewDeniedToUnauthenticatedUsers"/>
+			<class name="com.nbcuni.test.publisher.tests.SocialIntegration.FunctionalImplementGigyaShareBar.FunctionalImplementGigyaShareBar"/>
+			<class name="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSBlockAccess"/>
+			<class name="com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationInitialOverrides"/>
+			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIF.EXIFKeywordsIngestedPhraseInsteadSetsWords" runslocal="true"/>
+			<class name="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SiteReportVisualization.SiteReportVisualization"/>
+			<class name="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EmailReRouting.EmailRedirect"/>
+			<class name="com.nbcuni.test.publisher.tests.SocialIntegration.Facebook.ConfiguringPublisherAutopublishingToFacebookTimeandWall"/>
+			<class name="com.nbcuni.test.publisher.tests.SocialIntegration.ImplementAutoPublishingToTwitter.TwitterAutoPublishing"/>
+			<class name="com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.EditorPermissionsContentAndContentRevisionsView"/>
+			<class name="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SEOModules.SEOOptimizationModule"/>CRON
+			<class name="com.nbcuni.test.publisher.tests.Advertising.MPS.AutomaticallyCreatedMPSAdSlots"/>
+			<class name="com.nbcuni.test.publisher.tests.UserCreationAndManagement.Roles.RolesPredefinedInPublisher7"/>
+			<class name="com.nbcuni.test.publisher.tests.UserCreationAndManagement.UnauthenticatedUsersNotAbleToViewThePublishedContents.UnauthenticatedUsersNotAbleToViewThePublishedContents"/>
+			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIF.PopulateEXIFBulkUpload" runslocal="true"/>
+			<class name="com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.CreatePermissionSetsGUI"/>
+			<class name="com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.CustomPermissionSetVerification"/>
+			<class name="com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.EditorPermissionCustomQueuesOperationsMenu"/>
+			<class name="com.nbcuni.test.publisher.tests.Metrics.SiteCatalyst.ImplementSiteCatalyst"/>
+			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Movie.CreateMovie"/>
+			<class name="com.nbcuni.test.publisher.tests.SocialIntegration.ImplementAutoPublishingToTwitter.SeeIt"/>
+			<class name="com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXLibraryPublicID"/>
+			<class name="com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordReset"/>
+			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.RepresentativeImage.RepresentativeImage"/>
+			<class name="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SURF.SURFModule"/>
+			<class name="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore"/>
+			<class name="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens"/>
+			<class name="com.nbcuni.test.publisher.tests.Commerce.CreatePubFeatureSetModules"/>
+			<class name="com.nbcuni.test.publisher.tests.SocialIntegration.FunctionalImplementGigyaShareBar.ContentCommenting"/>
+			<class name="com.nbcuni.test.publisher.tests.Core.Profiles.FileFieldsTokenBasedPath"/>
+			<class name="com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue"/>
+			<class name="com.nbcuni.test.publisher.tests.Queues.DynamicQueues.DynamicQueuePagination"/>
+			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.Logo.CreateLogo"/>
+			<class name="com.nbcuni.test.publisher.tests.Queues.DynamicQueues.RelatingTVShowsDynamicQueues"/>
+			<class name="com.nbcuni.test.publisher.tests.Queues.DynamicQueues.AddTaxonomyParameters"/>
+			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents"/>	
+			<class name="com.nbcuni.test.publisher.tests.Advertising.MPS.AddMPSCallsToErrorPages"/>
+			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.EntityEmbeds.SnippetInlineContent"/>
+			<class name="com.nbcuni.test.publisher.tests.Queues.DynamicQueues.DynamicQueuePagination"/>
+			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Mapper.Phase1ContentTypeMapper"/>
+			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.SchedulingContentPublishUnpublished"/>
+			<class name="com.nbcuni.test.publisher.tests.Video.DeIngestingMPXAccountsAndCorrespondingAssets.MPXAccountDeletion" runscron="true"/>CRON-DRUSH
+		</classes>
+	</test>
+  	
 </suite>
