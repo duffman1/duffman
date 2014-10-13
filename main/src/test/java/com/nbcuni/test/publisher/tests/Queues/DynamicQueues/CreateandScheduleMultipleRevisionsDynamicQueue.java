@@ -33,7 +33,7 @@ public class CreateandScheduleMultipleRevisionsDynamicQueue extends ParentTest {
      * Steps - https://rally1.rallydev.com/#/14663927728d/detail/testcase/22576323009
      *************************************************************************************/
 	
-	 @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "smoke" })
+	 @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"})
 	    public void CreateScheduleMultipleRevisionsDynamicQueue_TC4969() throws Exception{
 		 
 		 webDriver.manage().timeouts().pageLoadTimeout(200, TimeUnit.SECONDS);
