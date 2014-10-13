@@ -5,7 +5,7 @@
       <![CDATA[STEP 1]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
+      <![CDATA[Open url 'http://qa5.publisher7.com/user'.]]>
     </line>
     <line>
       <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
@@ -26,19 +26,22 @@
       <![CDATA[Switch to frame titled 'Modules'.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Event Countdown' in the 'Filter Name' text box.]]>
+      <![CDATA[Enter 'Pub SSO' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Wait for module filter titled 'Event Countdown' to be visible in module list.]]>
+      <![CDATA[Wait for module filter titled 'Pub SSO' to be visible in module list.]]>
     </line>
     <line>
-      <![CDATA[Check the 'Event Countdown' check box.]]>
+      <![CDATA[Check the 'Pub SSO' check box.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save configuration' button.]]>
     </line>
     <line>
       <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Continue' button to enable additional modules.]]>
     </line>
     <line>
       <![CDATA[Switch back to the 'Modules' frame.]]>
@@ -56,322 +59,109 @@
       <![CDATA[Click the 'Home' menu link.]]>
     </line>
     <line>
-      <![CDATA[STEP 3]]>
-    </line>
-    <line>
       <![CDATA[Mouse over the 'Configuration' menu link.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Media' menu link.]]>
+      <![CDATA[Mouse over the 'People' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Event Countdown' menu link.]]>
+      <![CDATA[Click the 'SimpleSAMLphp Auth Settings' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Event Countdown dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'People dialog'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Create' button.]]>
+      <![CDATA[Enter the file path for certificate upload.]]>
     </line>
     <line>
-      <![CDATA[Wait for the sample nodes to be created.]]>
+      <![CDATA[Click the 'Save configuration' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'A certificate exists for this instance of SimpleSAMLphp.' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configuration' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Activate authentication via SimpleSAMLphp' check box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configuration' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
     </line>
     <line>
+      <![CDATA[Click the 'Logout' button.]]>
+    </line>
+    <line>
+      <![CDATA[Open url 'http://qa5.publisher7.com/saml_login'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '206439339' in the 'SSO ID' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Pa55word' in the 'Password' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Sign In' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'FID.Publisher@nbcuni.com' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'Modules' is NOT present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 3]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Edit' link in the work bench.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'FID.Publisher@nbcuni.com dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Username' value is 'FID.Publisher@nbcuni.com' and the text box is disabled.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'E-mail address' value is 'FID.Publisher@nbcuni.com' and the text box is disabled.]]>
+    </line>
+    <line>
       <![CDATA[STEP 4]]>
     </line>
     <line>
-      <![CDATA[STEP 5 AND 6]]>
+      <![CDATA[Click the 'Change your password' link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Content' menu link.]]>
+      <![CDATA[Switch to new browser tab/window.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+      <![CDATA[Verify the user is redirected to the SSO Password Reset page.]]>
     </line>
     <line>
-      <![CDATA[Enter title Birthday Event.]]>
+      <![CDATA[STEP 5]]>
     </line>
     <line>
-      <![CDATA[Click the 'Apply' button.]]>
+      <![CDATA[Switch to the active frame titled 'FID.Publisher@nbcuni.com dialog'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Edit' link for content item titled 'Birthday Event.]]>
+      <![CDATA[Click the 'Close Overlay X'.]]>
     </line>
     <line>
-      <![CDATA[Enter '10/13/2014 in the 'Date' text box.]]>
+      <![CDATA[Click the 'Logout' button.]]>
     </line>
     <line>
-      <![CDATA[Enter '02:41:37PM in the 'Time' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'http://www.amazon.com/s/ref=nb_sb_ss_c_0_8/190-0002947-5703141?url=search-alias%3Dtoys-and-games&field-keywords=birthday%20party%20supplies&sprefix=birthday%2Caps%2C168' in the 'Active Call to Action' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Active Image Select' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the select file frame.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the file path for file upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Upload' button.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the file image 'HanSolo' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '#FF0000' in the 'Active Background Color' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'http://www.nbc.com' in the 'Expiry Call to Action' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Expiry Image Select' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the select file frame.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the file path for file upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Upload' button.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the file image 'nbclogosmall' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '#00FFFF' in the 'Expiry Background Color' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 7]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Structure' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Blocks' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Select the block name 'Birthday Block' from the 'Content' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Select the block name 'Holiday Party Block' from the 'Content' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save Blocks' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The block settings have been updated.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 8]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Home' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 9]]>
-    </line>
-    <line>
-      <![CDATA[Verify the countdown timer is visible.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the countdown timer is counting down.]]>
-    </line>
-    <line>
-      <![CDATA[Assert that active img source of the event contains 'HanSolo'.]]>
-    </line>
-    <line>
-      <![CDATA[Assert the the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the active background color of '#FF0000' is visible for event with title 'Birthday Event'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the active link href of 'http://www.amazon.com/s/ref=nb_sb_ss_c_0_8/190-0002947-5703141?url=search-alias%3Dtoys-and-games&field-keywords=birthday%20party%20supplies&sprefix=birthday%2Caps%2C168' is visible for event with title 'Birthday Event'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 10]]>
-    </line>
-    <line>
-      <![CDATA[Verify the countdown timer is NOT counting down.]]>
-    </line>
-    <line>
-      <![CDATA[Assert that expiry img source of the event contains 'nbclogosmall'.]]>
-    </line>
-    <line>
-      <![CDATA[Assert the the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the expiry background color of '#00FFFF' is visible for event with title 'Birthday Event'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the expiry link href of 'http://www.nbc.com' is visible for event with title 'Birthday Event'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 11 AND 12]]>
-    </line>
-    <line>
-      <![CDATA[STEP 13]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Add content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Event Countdown' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Event Countdown dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'f470b62f89754c3' in the 'Title' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '10/13/2014 in the 'Date' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '02:43:06PM in the 'Time' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'http://www.amazon.com/s/ref=nb_sb_ss_c_0_8/190-0002947-5703141?url=search-alias%3Dtoys-and-games&field-keywords=birthday%20party%20supplies&sprefix=birthday%2Caps%2C168' in the 'Active Call to Action' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Active Image Select' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the select file frame.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the file path for file upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Upload' button.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the file image 'HanSolo' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Event Countdown dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '#FF0000' in the 'Active Background Color' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'http://www.nbc.com' in the 'Expiry Call to Action' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Expiry Image Select' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the select file frame.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the file path for file upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Upload' button.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the file image 'nbclogosmall' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Event Countdown dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '#00FFFF' in the 'Expiry Background Color' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Event Countdown f470b62f89754c3 has been created.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
+      <![CDATA[Open url 'http://qa5.publisher7.com/user'.]]>
     </line>
     <line>
       <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
@@ -383,19 +173,73 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Modules' menu link.]]>
+      <![CDATA[STEP 6]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+      <![CDATA[Mouse over the 'People' menu link.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Event Countdown' in the 'Filter Name' text box.]]>
+      <![CDATA[Click the 'Add user' menu link.]]>
     </line>
     <line>
-      <![CDATA[Wait for module filter titled 'Event Countdown' to be visible in module list.]]>
+      <![CDATA[Switch to the active frame titled 'People dialog'.]]>
     </line>
     <line>
-      <![CDATA[Uncheck the 'Event Countdown' module checkbox.]]>
+      <![CDATA[Verify the 'Username' text box is not present.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'b1814d19cc154da@14d9e9c9572146f.com' in the 'E-mail address' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Password' and 'Password Confirm' text boxes are not present.]]>
+    </line>
+    <line>
+      <![CDATA[Check the 'editor' check box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '61e530f3bb1b40f' in the 'First Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '502136316d3146a' in the 'Last Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Create new account' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'A welcome message with further instructions has been e-mailed to the new user b1814d19cc154da@14d9e9c9572146f.com.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 7]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'People' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'People dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'next >' link until user 'b1814d19cc154da@14d9e9c9572146f.com' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'edit' link for 'b1814d19cc154da@14d9e9c9572146f.com' from the 'USERNAME' list.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'b1814d19cc154da@14d9e9c9572146f.com dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Username' value is 'b1814d19cc154da@14d9e9c9572146f.com' and the text box is disabled.]]>
+    </line>
+    <line>
+      <![CDATA[STEPS 8-11]]>
+    </line>
+    <line>
+      <![CDATA[Open url 'http://qa5.publisher7.com/admin/config/people/simplesamlphp_auth'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Activate authentication via SimpleSAMLphp' check box.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save configuration' button.]]>
@@ -404,67 +248,88 @@
       <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Uninstall' overlay tab.]]>
+      <![CDATA[Verify success message of 'SimpleSAMLphp authentication is NOT yet activated.' is present.]]>
     </line>
     <line>
-      <![CDATA[Scroll by '-500'.]]>
+      <![CDATA[Click the 'Home' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Event Countdown' uninstall checkbox.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Uninstall' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Confirm uninstall dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'The following modules will be completely uninstalled from your site, and all data from these modules will be lost!' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'Event Countdown' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Uninstall' button to confirm.]]>
+      <![CDATA[Click the 'Modules' menu link.]]>
     </line>
     <line>
       <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Pub SSO' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for module filter titled 'Pub SSO' to be visible in module list.]]>
+    </line>
+    <line>
+      <![CDATA[Uncheck the 'Pub SSO' module checkbox.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configuration' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'simpleSAMLphp authentication' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for module filter titled 'simpleSAMLphp authentication' to be visible in module list.]]>
+    </line>
+    <line>
+      <![CDATA[Uncheck the 'simpleSAMLphp authentication' module checkbox.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configuration' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Home' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the '[[Driver: chrome on MAC (e91eedf4-87f7-43d0-a47c-ee95491a4ae2)] -> xpath: //span[@class='admin-menu-home-icon']/../..//a[text()='Flush all caches']]' menu link.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="241090" started-at="2014-10-13T14:38:25Z" finished-at="2014-10-13T14:42:26Z">
+  <suite name="Default suite" duration-ms="191733" started-at="2014-10-13T15:33:21Z" finished-at="2014-10-13T15:36:32Z">
     <groups>
-      <group name="full">
-        <method signature="CountdownClockEvents.CountdownClockEvents_TC4887()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@4db5cb7b]" name="CountdownClockEvents_TC4887" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents"/>
-        <method signature="CountdownClockEvents.Cleanup()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@4db5cb7b]" name="Cleanup" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents"/>
-      </group> <!-- full -->
+      <group name="sensitive">
+        <method signature="SSOManageUsers.SSOManageUsers_TC3853()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOManageUsers@4891a775]" name="SSOManageUsers_TC3853" class="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOManageUsers"/>
+        <method signature="SSOManageUsers.Cleanup()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOManageUsers@4891a775]" name="Cleanup" class="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOManageUsers"/>
+      </group> <!-- sensitive -->
     </groups>
-    <test name="Default test" duration-ms="241090" started-at="2014-10-13T14:38:25Z" finished-at="2014-10-13T14:42:26Z">
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents">
-        <test-method status="PASS" signature="suiteSetup()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@4db5cb7b]" name="suiteSetup" is-config="true" duration-ms="29" started-at="2014-10-13T10:38:25Z" finished-at="2014-10-13T10:38:25Z">
+    <test name="Default test" duration-ms="191733" started-at="2014-10-13T15:33:21Z" finished-at="2014-10-13T15:36:32Z">
+      <class name="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOManageUsers">
+        <test-method status="PASS" signature="suiteSetup()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOManageUsers@4891a775]" name="suiteSetup" is-config="true" duration-ms="24" started-at="2014-10-13T11:33:21Z" finished-at="2014-10-13T11:33:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteSetup -->
-        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@4db5cb7b]" name="startSelenium" is-config="true" duration-ms="3236" started-at="2014-10-13T10:38:25Z" finished-at="2014-10-13T10:38:28Z">
+        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOManageUsers@4891a775]" name="startSelenium" is-config="true" duration-ms="3236" started-at="2014-10-13T11:33:21Z" finished-at="2014-10-13T11:33:24Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents.CountdownClockEvents_TC4887() throws java.lang.Exception]]>
+                <![CDATA[public void com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOManageUsers.SSOManageUsers_TC3853() throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="CountdownClockEvents_TC4887()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@4db5cb7b]" name="CountdownClockEvents_TC4887" duration-ms="179982" started-at="2014-10-13T10:38:28Z" finished-at="2014-10-13T10:41:28Z">
+        <test-method status="PASS" signature="SSOManageUsers_TC3853()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOManageUsers@4891a775]" name="SSOManageUsers_TC3853" duration-ms="184755" started-at="2014-10-13T11:33:24Z" finished-at="2014-10-13T11:36:29Z">
           <reporter-output>
             <line>
               <![CDATA[STEP 1]]>
             </line>
             <line>
-              <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
+              <![CDATA[Open url 'http://qa5.publisher7.com/user'.]]>
             </line>
             <line>
               <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
@@ -485,19 +350,22 @@
               <![CDATA[Switch to frame titled 'Modules'.]]>
             </line>
             <line>
-              <![CDATA[Enter 'Event Countdown' in the 'Filter Name' text box.]]>
+              <![CDATA[Enter 'Pub SSO' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Wait for module filter titled 'Event Countdown' to be visible in module list.]]>
+              <![CDATA[Wait for module filter titled 'Pub SSO' to be visible in module list.]]>
             </line>
             <line>
-              <![CDATA[Check the 'Event Countdown' check box.]]>
+              <![CDATA[Check the 'Pub SSO' check box.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save configuration' button.]]>
             </line>
             <line>
               <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Continue' button to enable additional modules.]]>
             </line>
             <line>
               <![CDATA[Switch back to the 'Modules' frame.]]>
@@ -515,348 +383,109 @@
               <![CDATA[Click the 'Home' menu link.]]>
             </line>
             <line>
-              <![CDATA[STEP 3]]>
-            </line>
-            <line>
               <![CDATA[Mouse over the 'Configuration' menu link.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Media' menu link.]]>
+              <![CDATA[Mouse over the 'People' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Event Countdown' menu link.]]>
+              <![CDATA[Click the 'SimpleSAMLphp Auth Settings' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Event Countdown dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'People dialog'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Create' button.]]>
+              <![CDATA[Enter the file path for certificate upload.]]>
             </line>
             <line>
-              <![CDATA[Wait for the sample nodes to be created.]]>
+              <![CDATA[Click the 'Save configuration' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'A certificate exists for this instance of SimpleSAMLphp.' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configuration' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Activate authentication via SimpleSAMLphp' check box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configuration' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
             </line>
             <line>
               <![CDATA[Click the 'Close Overlay X'.]]>
             </line>
             <line>
+              <![CDATA[Click the 'Logout' button.]]>
+            </line>
+            <line>
+              <![CDATA[Open url 'http://qa5.publisher7.com/saml_login'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '206439339' in the 'SSO ID' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Pa55word' in the 'Password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Sign In' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'FID.Publisher@nbcuni.com' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Modules' is NOT present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 3]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Edit' link in the work bench.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'FID.Publisher@nbcuni.com dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Username' value is 'FID.Publisher@nbcuni.com' and the text box is disabled.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'E-mail address' value is 'FID.Publisher@nbcuni.com' and the text box is disabled.]]>
+            </line>
+            <line>
               <![CDATA[STEP 4]]>
             </line>
             <line>
-              <![CDATA[STEP 5 AND 6]]>
+              <![CDATA[Click the 'Change your password' link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Content' menu link.]]>
+              <![CDATA[Switch to new browser tab/window.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+              <![CDATA[Verify the user is redirected to the SSO Password Reset page.]]>
             </line>
             <line>
-              <![CDATA[Enter title Birthday Event.]]>
+              <![CDATA[STEP 5]]>
             </line>
             <line>
-              <![CDATA[Click the 'Apply' button.]]>
+              <![CDATA[Switch to the active frame titled 'FID.Publisher@nbcuni.com dialog'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Edit' link for content item titled 'Birthday Event.]]>
+              <![CDATA[Click the 'Close Overlay X'.]]>
             </line>
             <line>
-              <![CDATA[Enter '10/13/2014 in the 'Date' text box.]]>
+              <![CDATA[Click the 'Logout' button.]]>
             </line>
             <line>
-              <![CDATA[Enter '02:41:37PM in the 'Time' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'http://www.amazon.com/s/ref=nb_sb_ss_c_0_8/190-0002947-5703141?url=search-alias%3Dtoys-and-games&field-keywords=birthday%20party%20supplies&sprefix=birthday%2Caps%2C168' in the 'Active Call to Action' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Active Image Select' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the select file frame.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the file path for file upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Upload' button.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Public Local Files' radio button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the file image 'HanSolo' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '#FF0000' in the 'Active Background Color' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'http://www.nbc.com' in the 'Expiry Call to Action' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Expiry Image Select' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the select file frame.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the file path for file upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Upload' button.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Public Local Files' radio button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the file image 'nbclogosmall' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '#00FFFF' in the 'Expiry Background Color' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 7]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Structure' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Blocks' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Select the block name 'Birthday Block' from the 'Content' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Select the block name 'Holiday Party Block' from the 'Content' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save Blocks' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The block settings have been updated.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 8]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Home' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 9]]>
-            </line>
-            <line>
-              <![CDATA[Verify the countdown timer is visible.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the countdown timer is counting down.]]>
-            </line>
-            <line>
-              <![CDATA[Assert that active img source of the event contains 'HanSolo'.]]>
-            </line>
-            <line>
-              <![CDATA[Assert the the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the active background color of '#FF0000' is visible for event with title 'Birthday Event'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the active link href of 'http://www.amazon.com/s/ref=nb_sb_ss_c_0_8/190-0002947-5703141?url=search-alias%3Dtoys-and-games&field-keywords=birthday%20party%20supplies&sprefix=birthday%2Caps%2C168' is visible for event with title 'Birthday Event'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 10]]>
-            </line>
-            <line>
-              <![CDATA[Verify the countdown timer is NOT counting down.]]>
-            </line>
-            <line>
-              <![CDATA[Assert that expiry img source of the event contains 'nbclogosmall'.]]>
-            </line>
-            <line>
-              <![CDATA[Assert the the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the expiry background color of '#00FFFF' is visible for event with title 'Birthday Event'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the expiry link href of 'http://www.nbc.com' is visible for event with title 'Birthday Event'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 11 AND 12]]>
-            </line>
-            <line>
-              <![CDATA[STEP 13]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Add content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Event Countdown' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Event Countdown dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'f470b62f89754c3' in the 'Title' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '10/13/2014 in the 'Date' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '02:43:06PM in the 'Time' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'http://www.amazon.com/s/ref=nb_sb_ss_c_0_8/190-0002947-5703141?url=search-alias%3Dtoys-and-games&field-keywords=birthday%20party%20supplies&sprefix=birthday%2Caps%2C168' in the 'Active Call to Action' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Active Image Select' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the select file frame.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the file path for file upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Upload' button.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Public Local Files' radio button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the file image 'HanSolo' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Event Countdown dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '#FF0000' in the 'Active Background Color' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'http://www.nbc.com' in the 'Expiry Call to Action' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Expiry Image Select' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the select file frame.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the file path for file upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Upload' button.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Public Local Files' radio button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the file image 'nbclogosmall' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Event Countdown dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '#00FFFF' in the 'Expiry Background Color' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Event Countdown f470b62f89754c3 has been created.' is present.]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- CountdownClockEvents_TC4887 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@4db5cb7b]" name="stopSelenium" is-config="true" duration-ms="580" started-at="2014-10-13T10:41:28Z" finished-at="2014-10-13T10:41:29Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=CountdownClockEvents_TC4887 status=SUCCESS method=CountdownClockEvents.CountdownClockEvents_TC4887()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@4db5cb7b] output=STEP 1]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@4db5cb7b]" name="startSelenium" is-config="true" duration-ms="2604" started-at="2014-10-13T10:41:29Z" finished-at="2014-10-13T10:41:31Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents.Cleanup() throws java.lang.Exception]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="Cleanup()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@4db5cb7b]" name="Cleanup" duration-ms="54110" started-at="2014-10-13T10:41:31Z" depends-on-methods="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents.CountdownClockEvents_TC4887" finished-at="2014-10-13T10:42:26Z">
-          <reporter-output>
-            <line>
-              <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
+              <![CDATA[Open url 'http://qa5.publisher7.com/user'.]]>
             </line>
             <line>
               <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
@@ -868,19 +497,73 @@
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Modules' menu link.]]>
+              <![CDATA[STEP 6]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+              <![CDATA[Mouse over the 'People' menu link.]]>
             </line>
             <line>
-              <![CDATA[Enter 'Event Countdown' in the 'Filter Name' text box.]]>
+              <![CDATA[Click the 'Add user' menu link.]]>
             </line>
             <line>
-              <![CDATA[Wait for module filter titled 'Event Countdown' to be visible in module list.]]>
+              <![CDATA[Switch to the active frame titled 'People dialog'.]]>
             </line>
             <line>
-              <![CDATA[Uncheck the 'Event Countdown' module checkbox.]]>
+              <![CDATA[Verify the 'Username' text box is not present.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'b1814d19cc154da@14d9e9c9572146f.com' in the 'E-mail address' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Password' and 'Password Confirm' text boxes are not present.]]>
+            </line>
+            <line>
+              <![CDATA[Check the 'editor' check box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '61e530f3bb1b40f' in the 'First Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '502136316d3146a' in the 'Last Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Create new account' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'A welcome message with further instructions has been e-mailed to the new user b1814d19cc154da@14d9e9c9572146f.com.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 7]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'People' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'People dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'next >' link until user 'b1814d19cc154da@14d9e9c9572146f.com' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'edit' link for 'b1814d19cc154da@14d9e9c9572146f.com' from the 'USERNAME' list.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'b1814d19cc154da@14d9e9c9572146f.com dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Username' value is 'b1814d19cc154da@14d9e9c9572146f.com' and the text box is disabled.]]>
+            </line>
+            <line>
+              <![CDATA[STEPS 8-11]]>
+            </line>
+            <line>
+              <![CDATA[Open url 'http://qa5.publisher7.com/admin/config/people/simplesamlphp_auth'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Activate authentication via SimpleSAMLphp' check box.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save configuration' button.]]>
@@ -889,53 +572,100 @@
               <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Uninstall' overlay tab.]]>
+              <![CDATA[Verify success message of 'SimpleSAMLphp authentication is NOT yet activated.' is present.]]>
             </line>
             <line>
-              <![CDATA[Scroll by '-500'.]]>
+              <![CDATA[Click the 'Home' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Event Countdown' uninstall checkbox.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Uninstall' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Confirm uninstall dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'The following modules will be completely uninstalled from your site, and all data from these modules will be lost!' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'Event Countdown' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Uninstall' button to confirm.]]>
+              <![CDATA[Click the 'Modules' menu link.]]>
             </line>
             <line>
               <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Pub SSO' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for module filter titled 'Pub SSO' to be visible in module list.]]>
+            </line>
+            <line>
+              <![CDATA[Uncheck the 'Pub SSO' module checkbox.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configuration' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'simpleSAMLphp authentication' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for module filter titled 'simpleSAMLphp authentication' to be visible in module list.]]>
+            </line>
+            <line>
+              <![CDATA[Uncheck the 'simpleSAMLphp authentication' module checkbox.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configuration' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Home' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the '[[Driver: chrome on MAC (e91eedf4-87f7-43d0-a47c-ee95491a4ae2)] -> xpath: //span[@class='admin-menu-home-icon']/../..//a[text()='Flush all caches']]' menu link.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- Cleanup -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@4db5cb7b]" name="stopSelenium" is-config="true" duration-ms="567" started-at="2014-10-13T10:42:26Z" finished-at="2014-10-13T10:42:26Z">
+        </test-method> <!-- SSOManageUsers_TC3853 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOManageUsers@4891a775]" name="stopSelenium" is-config="true" duration-ms="572" started-at="2014-10-13T11:36:29Z" finished-at="2014-10-13T11:36:29Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Cleanup status=SUCCESS method=CountdownClockEvents.Cleanup()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@4db5cb7b] output=Open url 'http://qa5.publisher7.com'.]]]>
+                <![CDATA[[TestResult name=SSOManageUsers_TC3853 status=SUCCESS method=SSOManageUsers.SSOManageUsers_TC3853()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOManageUsers@4891a775] output=STEP 1]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="suiteTeardown()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@4db5cb7b]" name="suiteTeardown" is-config="true" duration-ms="0" started-at="2014-10-13T10:42:26Z" finished-at="2014-10-13T10:42:26Z">
+        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOManageUsers@4891a775]" name="startSelenium" is-config="true" duration-ms="2590" started-at="2014-10-13T11:36:29Z" finished-at="2014-10-13T11:36:32Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOManageUsers.Cleanup() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startSelenium -->
+        <test-method status="PASS" signature="Cleanup()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOManageUsers@4891a775]" name="Cleanup" duration-ms="1" started-at="2014-10-13T11:36:32Z" depends-on-methods="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOManageUsers.SSOManageUsers_TC3853" finished-at="2014-10-13T11:36:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Cleanup -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOManageUsers@4891a775]" name="stopSelenium" is-config="true" duration-ms="566" started-at="2014-10-13T11:36:32Z" finished-at="2014-10-13T11:36:32Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Cleanup status=SUCCESS method=SSOManageUsers.Cleanup()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOManageUsers@4891a775] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopSelenium -->
+        <test-method status="PASS" signature="suiteTeardown()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOManageUsers@4891a775]" name="suiteTeardown" is-config="true" duration-ms="0" started-at="2014-10-13T11:36:32Z" finished-at="2014-10-13T11:36:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteTeardown -->
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents -->
+      </class> <!-- com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOManageUsers -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

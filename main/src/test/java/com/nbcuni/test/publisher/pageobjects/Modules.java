@@ -157,6 +157,7 @@ public class Modules {
         	
         	Reporter.log("Switch back to the 'Modules' frame.");
         	overlay.SwitchToFrame("Modules");
+        	
         	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
         	
         	if (moduleName != "Overlay") {

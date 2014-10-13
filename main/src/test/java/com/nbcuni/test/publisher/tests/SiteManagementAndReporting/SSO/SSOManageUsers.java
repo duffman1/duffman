@@ -1,8 +1,6 @@
 package com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO;
 
 import java.util.Arrays;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 import com.nbcuni.test.publisher.common.ParentTest;
@@ -54,15 +52,15 @@ public class SSOManageUsers extends ParentTest {
 		overlay.ClickCloseOverlayLnk();
 		logout.ClickLogoutBtn();
 		applib.openSitePage("/saml_login");
+		Thread.sleep(1000);
 		SSOLogin ssoLogin = new SSOLogin(webDriver);
 		ssoLogin.EnterSSOID(config.getConfigValueString("SSOUsername"));
 		ssoLogin.EnterPassword(config.getConfigValueString("SSOPassword"));
 		ssoLogin.ClickSignInBtn();
 		webDriver.navigate().refresh();
-		new WebDriverWait(webDriver, 30).until(ExpectedConditions.titleContains("Site-Install"));
-		contentParent.VerifyPageContentNotPresent(Arrays.asList("Modules"));
 		contentParent.VerifyPageContentPresent(Arrays.asList(config.getConfigValueString("SSOEmail")));
-		    	
+		contentParent.VerifyPageContentNotPresent(Arrays.asList("Modules"));
+			
 		Reporter.log("STEP 3");
 		WorkBench workBench = new WorkBench(webDriver);
 		workBench.ClickWorkBenchTab("Edit");

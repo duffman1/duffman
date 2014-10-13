@@ -1,8 +1,6 @@
 package com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO;
 
 import java.util.Arrays;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 import com.nbcuni.test.publisher.common.ParentTest;
@@ -63,6 +61,7 @@ public class SSODefinedDomains extends ParentTest {
 		Reporter.log("STEP 8");
 		logout.ClickLogoutBtn();
 		applib.openSitePage("/saml_login");
+		Thread.sleep(1000);
 	        
 		Reporter.log("STEP 9");
 		SSOLogin ssoLogin = new SSOLogin(webDriver);
@@ -70,14 +69,11 @@ public class SSODefinedDomains extends ParentTest {
 		ssoLogin.EnterPassword(config.getConfigValueString("SSOPassword"));
 		ssoLogin.ClickSignInBtn();
 	       
-		Reporter.log("STEP 10");
+		Reporter.log("STEP 10 AND 11");
 		webDriver.navigate().refresh();
-		new WebDriverWait(webDriver, 30).until(ExpectedConditions.titleContains("Site-Install"));
+		contentParent.VerifyPageContentPresent(Arrays.asList(config.getConfigValueString("SSOEmail")));
 		contentParent.VerifyPageContentNotPresent(Arrays.asList("Modules"));
 			
-		Reporter.log("STEP 11");
-		contentParent.VerifyPageContentPresent(Arrays.asList(config.getConfigValueString("SSOEmail")));
-		
 		Reporter.log("STEP 12");
 		logout.ClickLogoutBtn();
 		applib.openSitePage("/user");

@@ -1,145 +1,100 @@
 <h2>Reporter output</h2><table><tr><td>STEP 1</td></tr>
-<tr><td>Open url 'http://qa5.publisher7.com'.</td></tr>
+<tr><td>Open url 'http://qa5.publisher7.com/user'.</td></tr>
 <tr><td>Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.</td></tr>
 <tr><td>Enter 'pa55word' in the 'Password' text box.</td></tr>
 <tr><td>Click the 'Login' button.</td></tr>
 <tr><td>STEP 2</td></tr>
 <tr><td>Click the 'Modules' menu link.</td></tr>
 <tr><td>Switch to frame titled 'Modules'.</td></tr>
-<tr><td>Enter 'Event Countdown' in the 'Filter Name' text box.</td></tr>
-<tr><td>Wait for module filter titled 'Event Countdown' to be visible in module list.</td></tr>
-<tr><td>Check the 'Event Countdown' check box.</td></tr>
+<tr><td>Enter 'Pub SSO' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for module filter titled 'Pub SSO' to be visible in module list.</td></tr>
+<tr><td>Check the 'Pub SSO' check box.</td></tr>
 <tr><td>Click the 'Save configuration' button.</td></tr>
 <tr><td>Switch to frame titled 'Some required modules must be enabled'.</td></tr>
+<tr><td>Click the 'Continue' button to enable additional modules.</td></tr>
 <tr><td>Switch back to the 'Modules' frame.</td></tr>
 <tr><td>Switch to frame titled 'Modules'.</td></tr>
 <tr><td>Verify success message of 'The configuration options have been saved.' is present.</td></tr>
 <tr><td>Click the 'Close Overlay X'.</td></tr>
 <tr><td>Click the 'Home' menu link.</td></tr>
-<tr><td>STEP 3</td></tr>
 <tr><td>Mouse over the 'Configuration' menu link.</td></tr>
-<tr><td>Mouse over the 'Media' menu link.</td></tr>
-<tr><td>Click the 'Event Countdown' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'Event Countdown dialog'.</td></tr>
-<tr><td>Click the 'Create' button.</td></tr>
-<tr><td>Wait for the sample nodes to be created.</td></tr>
+<tr><td>Mouse over the 'People' menu link.</td></tr>
+<tr><td>Click the 'SimpleSAMLphp Auth Settings' menu link.</td></tr>
+<tr><td>Switch to the active frame titled 'People dialog'.</td></tr>
+<tr><td>Enter the file path for certificate upload.</td></tr>
+<tr><td>Click the 'Save configuration' button.</td></tr>
+<tr><td>Verify success message of 'The configuration options have been saved.' is present.</td></tr>
+<tr><td>Verify the text 'A certificate exists for this instance of SimpleSAMLphp.' is present on the page.</td></tr>
+<tr><td>Click the 'Save configuration' button.</td></tr>
+<tr><td>Verify success message of 'The configuration options have been saved.' is present.</td></tr>
+<tr><td>Click the 'Activate authentication via SimpleSAMLphp' check box.</td></tr>
+<tr><td>Click the 'Save configuration' button.</td></tr>
+<tr><td>Verify success message of 'The configuration options have been saved.' is present.</td></tr>
 <tr><td>Click the 'Close Overlay X'.</td></tr>
+<tr><td>Click the 'Logout' button.</td></tr>
+<tr><td>Open url 'http://qa5.publisher7.com/saml_login'.</td></tr>
+<tr><td>Enter '206439339' in the 'SSO ID' text box.</td></tr>
+<tr><td>Enter 'Pa55word' in the 'Password' text box.</td></tr>
+<tr><td>Click the 'Sign In' button.</td></tr>
+<tr><td>Verify the text 'FID.Publisher@nbcuni.com' is present on the page.</td></tr>
+<tr><td>Verify the text 'Modules' is NOT present on the page.</td></tr>
+<tr><td>STEP 3</td></tr>
+<tr><td>Click the 'Edit' link in the work bench.</td></tr>
+<tr><td>Switch to the active frame titled 'FID.Publisher@nbcuni.com dialog'.</td></tr>
+<tr><td>Verify the 'Username' value is 'FID.Publisher@nbcuni.com' and the text box is disabled.</td></tr>
+<tr><td>Verify the 'E-mail address' value is 'FID.Publisher@nbcuni.com' and the text box is disabled.</td></tr>
 <tr><td>STEP 4</td></tr>
-<tr><td>STEP 5 AND 6</td></tr>
-<tr><td>Click the 'Content' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'Content dialog'.</td></tr>
-<tr><td>Enter title Birthday Event.</td></tr>
-<tr><td>Click the 'Apply' button.</td></tr>
-<tr><td>Click the 'Edit' link for content item titled 'Birthday Event.</td></tr>
-<tr><td>Enter '10/13/2014 in the 'Date' text box.</td></tr>
-<tr><td>Enter '02:41:37PM in the 'Time' text box.</td></tr>
-<tr><td>Enter 'http://www.amazon.com/s/ref=nb_sb_ss_c_0_8/190-0002947-5703141?url=search-alias%3Dtoys-and-games&field-keywords=birthday%20party%20supplies&sprefix=birthday%2Caps%2C168' in the 'Active Call to Action' text box.</td></tr>
-<tr><td>Click the 'Active Image Select' button.</td></tr>
-<tr><td>Switch to the select file frame.</td></tr>
-<tr><td>Enter the file path for file upload.</td></tr>
-<tr><td>Click the 'Upload' button.</td></tr>
-<tr><td>Wait for the file link to be visible after upload.</td></tr>
-<tr><td>Click the 'Next' button.</td></tr>
-<tr><td>Click the 'Public Local Files' radio button.</td></tr>
-<tr><td>Click the 'Next' button.</td></tr>
-<tr><td>Verify the file image 'HanSolo' is present.</td></tr>
-<tr><td>Verify the img is loaded and visible.</td></tr>
-<tr><td>Click the 'Save' button.</td></tr>
-<tr><td>Enter '#FF0000' in the 'Active Background Color' text box.</td></tr>
-<tr><td>Enter 'http://www.nbc.com' in the 'Expiry Call to Action' text box.</td></tr>
-<tr><td>Click the 'Expiry Image Select' button.</td></tr>
-<tr><td>Switch to the select file frame.</td></tr>
-<tr><td>Enter the file path for file upload.</td></tr>
-<tr><td>Click the 'Upload' button.</td></tr>
-<tr><td>Wait for the file link to be visible after upload.</td></tr>
-<tr><td>Click the 'Next' button.</td></tr>
-<tr><td>Click the 'Public Local Files' radio button.</td></tr>
-<tr><td>Click the 'Next' button.</td></tr>
-<tr><td>Verify the file image 'nbclogosmall' is present.</td></tr>
-<tr><td>Verify the img is loaded and visible.</td></tr>
-<tr><td>Click the 'Save' button.</td></tr>
-<tr><td>Enter '#00FFFF' in the 'Expiry Background Color' text box.</td></tr>
-<tr><td>Click the 'Save' button.</td></tr>
-<tr><td>STEP 7</td></tr>
-<tr><td>Mouse over the 'Structure' menu link.</td></tr>
-<tr><td>Click the 'Blocks' menu link.</td></tr>
-<tr><td>Select the block name 'Birthday Block' from the 'Content' drop down list.</td></tr>
-<tr><td>Select the block name 'Holiday Party Block' from the 'Content' drop down list.</td></tr>
-<tr><td>Click the 'Save Blocks' button.</td></tr>
-<tr><td>Verify success message of 'The block settings have been updated.' is present.</td></tr>
-<tr><td>STEP 8</td></tr>
-<tr><td>Click the 'Home' menu link.</td></tr>
-<tr><td>STEP 9</td></tr>
-<tr><td>Verify the countdown timer is visible.</td></tr>
-<tr><td>Verify the countdown timer is counting down.</td></tr>
-<tr><td>Assert that active img source of the event contains 'HanSolo'.</td></tr>
-<tr><td>Assert the the img is loaded and visible.</td></tr>
-<tr><td>Verify the active background color of '#FF0000' is visible for event with title 'Birthday Event'.</td></tr>
-<tr><td>Verify the active link href of 'http://www.amazon.com/s/ref=nb_sb_ss_c_0_8/190-0002947-5703141?url=search-alias%3Dtoys-and-games&field-keywords=birthday%20party%20supplies&sprefix=birthday%2Caps%2C168' is visible for event with title 'Birthday Event'.</td></tr>
-<tr><td>STEP 10</td></tr>
-<tr><td>Verify the countdown timer is NOT counting down.</td></tr>
-<tr><td>Assert that expiry img source of the event contains 'nbclogosmall'.</td></tr>
-<tr><td>Assert the the img is loaded and visible.</td></tr>
-<tr><td>Verify the expiry background color of '#00FFFF' is visible for event with title 'Birthday Event'.</td></tr>
-<tr><td>Verify the expiry link href of 'http://www.nbc.com' is visible for event with title 'Birthday Event'.</td></tr>
-<tr><td>STEP 11 AND 12</td></tr>
-<tr><td>STEP 13</td></tr>
-<tr><td>Mouse over the 'Content' menu link.</td></tr>
-<tr><td>Mouse over the 'Add content' menu link.</td></tr>
-<tr><td>Click the 'Event Countdown' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'Create Event Countdown dialog'.</td></tr>
-<tr><td>Enter 'f470b62f89754c3' in the 'Title' text box.</td></tr>
-<tr><td>Enter '10/13/2014 in the 'Date' text box.</td></tr>
-<tr><td>Enter '02:43:06PM in the 'Time' text box.</td></tr>
-<tr><td>Enter 'http://www.amazon.com/s/ref=nb_sb_ss_c_0_8/190-0002947-5703141?url=search-alias%3Dtoys-and-games&field-keywords=birthday%20party%20supplies&sprefix=birthday%2Caps%2C168' in the 'Active Call to Action' text box.</td></tr>
-<tr><td>Click the 'Active Image Select' button.</td></tr>
-<tr><td>Switch to the select file frame.</td></tr>
-<tr><td>Enter the file path for file upload.</td></tr>
-<tr><td>Click the 'Upload' button.</td></tr>
-<tr><td>Wait for the file link to be visible after upload.</td></tr>
-<tr><td>Click the 'Next' button.</td></tr>
-<tr><td>Click the 'Public Local Files' radio button.</td></tr>
-<tr><td>Click the 'Next' button.</td></tr>
-<tr><td>Verify the file image 'HanSolo' is present.</td></tr>
-<tr><td>Verify the img is loaded and visible.</td></tr>
-<tr><td>Click the 'Save' button.</td></tr>
-<tr><td>Switch to the active frame titled 'Create Event Countdown dialog'.</td></tr>
-<tr><td>Enter '#FF0000' in the 'Active Background Color' text box.</td></tr>
-<tr><td>Enter 'http://www.nbc.com' in the 'Expiry Call to Action' text box.</td></tr>
-<tr><td>Click the 'Expiry Image Select' button.</td></tr>
-<tr><td>Switch to the select file frame.</td></tr>
-<tr><td>Enter the file path for file upload.</td></tr>
-<tr><td>Click the 'Upload' button.</td></tr>
-<tr><td>Wait for the file link to be visible after upload.</td></tr>
-<tr><td>Click the 'Next' button.</td></tr>
-<tr><td>Click the 'Public Local Files' radio button.</td></tr>
-<tr><td>Click the 'Next' button.</td></tr>
-<tr><td>Verify the file image 'nbclogosmall' is present.</td></tr>
-<tr><td>Verify the img is loaded and visible.</td></tr>
-<tr><td>Click the 'Save' button.</td></tr>
-<tr><td>Switch to the active frame titled 'Create Event Countdown dialog'.</td></tr>
-<tr><td>Enter '#00FFFF' in the 'Expiry Background Color' text box.</td></tr>
-<tr><td>Click the 'Save' button.</td></tr>
-<tr><td>Verify success message of 'Event Countdown f470b62f89754c3 has been created.' is present.</td></tr>
-<tr><td>Open url 'http://qa5.publisher7.com'.</td></tr>
+<tr><td>Click the 'Change your password' link.</td></tr>
+<tr><td>Switch to new browser tab/window.</td></tr>
+<tr><td>Verify the user is redirected to the SSO Password Reset page.</td></tr>
+<tr><td>STEP 5</td></tr>
+<tr><td>Switch to the active frame titled 'FID.Publisher@nbcuni.com dialog'.</td></tr>
+<tr><td>Click the 'Close Overlay X'.</td></tr>
+<tr><td>Click the 'Logout' button.</td></tr>
+<tr><td>Open url 'http://qa5.publisher7.com/user'.</td></tr>
 <tr><td>Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.</td></tr>
 <tr><td>Enter 'pa55word' in the 'Password' text box.</td></tr>
 <tr><td>Click the 'Login' button.</td></tr>
-<tr><td>Click the 'Modules' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'Modules dialog'.</td></tr>
-<tr><td>Enter 'Event Countdown' in the 'Filter Name' text box.</td></tr>
-<tr><td>Wait for module filter titled 'Event Countdown' to be visible in module list.</td></tr>
-<tr><td>Uncheck the 'Event Countdown' module checkbox.</td></tr>
+<tr><td>STEP 6</td></tr>
+<tr><td>Mouse over the 'People' menu link.</td></tr>
+<tr><td>Click the 'Add user' menu link.</td></tr>
+<tr><td>Switch to the active frame titled 'People dialog'.</td></tr>
+<tr><td>Verify the 'Username' text box is not present.</td></tr>
+<tr><td>Enter 'b1814d19cc154da@14d9e9c9572146f.com' in the 'E-mail address' text box.</td></tr>
+<tr><td>Verify the 'Password' and 'Password Confirm' text boxes are not present.</td></tr>
+<tr><td>Check the 'editor' check box.</td></tr>
+<tr><td>Enter '61e530f3bb1b40f' in the 'First Name' text box.</td></tr>
+<tr><td>Enter '502136316d3146a' in the 'Last Name' text box.</td></tr>
+<tr><td>Click the 'Create new account' button.</td></tr>
+<tr><td>Verify success message of 'A welcome message with further instructions has been e-mailed to the new user b1814d19cc154da@14d9e9c9572146f.com.' is present.</td></tr>
+<tr><td>Click the 'Close Overlay X'.</td></tr>
+<tr><td>STEP 7</td></tr>
+<tr><td>Click the 'People' menu link.</td></tr>
+<tr><td>Switch to the active frame titled 'People dialog'.</td></tr>
+<tr><td>Click the 'next >' link until user 'b1814d19cc154da@14d9e9c9572146f.com' is present.</td></tr>
+<tr><td>Click the 'edit' link for 'b1814d19cc154da@14d9e9c9572146f.com' from the 'USERNAME' list.</td></tr>
+<tr><td>Switch to the active frame titled 'b1814d19cc154da@14d9e9c9572146f.com dialog'.</td></tr>
+<tr><td>Verify the 'Username' value is 'b1814d19cc154da@14d9e9c9572146f.com' and the text box is disabled.</td></tr>
+<tr><td>STEPS 8-11</td></tr>
+<tr><td>Open url 'http://qa5.publisher7.com/admin/config/people/simplesamlphp_auth'.</td></tr>
+<tr><td>Click the 'Activate authentication via SimpleSAMLphp' check box.</td></tr>
 <tr><td>Click the 'Save configuration' button.</td></tr>
 <tr><td>Verify success message of 'The configuration options have been saved.' is present.</td></tr>
-<tr><td>Click the 'Uninstall' overlay tab.</td></tr>
-<tr><td>Scroll by '-500'.</td></tr>
+<tr><td>Verify success message of 'SimpleSAMLphp authentication is NOT yet activated.' is present.</td></tr>
+<tr><td>Click the 'Home' menu link.</td></tr>
+<tr><td>Click the 'Modules' menu link.</td></tr>
 <tr><td>Switch to the active frame titled 'Modules dialog'.</td></tr>
-<tr><td>Click the 'Event Countdown' uninstall checkbox.</td></tr>
-<tr><td>Click the 'Uninstall' button.</td></tr>
-<tr><td>Switch to the active frame titled 'Confirm uninstall dialog'.</td></tr>
-<tr><td>Verify the text 'The following modules will be completely uninstalled from your site, and all data from these modules will be lost!' is present on the page.</td></tr>
-<tr><td>Verify the text 'Event Countdown' is present on the page.</td></tr>
-<tr><td>Click the 'Uninstall' button to confirm.</td></tr>
-<tr><td>Switch to the active frame titled 'Modules dialog'.</td></tr>
+<tr><td>Enter 'Pub SSO' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for module filter titled 'Pub SSO' to be visible in module list.</td></tr>
+<tr><td>Uncheck the 'Pub SSO' module checkbox.</td></tr>
+<tr><td>Click the 'Save configuration' button.</td></tr>
+<tr><td>Verify success message of 'The configuration options have been saved.' is present.</td></tr>
+<tr><td>Enter 'simpleSAMLphp authentication' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for module filter titled 'simpleSAMLphp authentication' to be visible in module list.</td></tr>
+<tr><td>Uncheck the 'simpleSAMLphp authentication' module checkbox.</td></tr>
+<tr><td>Click the 'Save configuration' button.</td></tr>
+<tr><td>Verify success message of 'The configuration options have been saved.' is present.</td></tr>
+<tr><td>Click the 'Close Overlay X'.</td></tr>
+<tr><td>Mouse over the 'Home' menu link.</td></tr>
+<tr><td>Click the '[[Driver: chrome on MAC (e91eedf4-87f7-43d0-a47c-ee95491a4ae2)] -> xpath: //span[@class='admin-menu-home-icon']/../..//a[text()='Flush all caches']]' menu link.</td></tr>
 </table>
