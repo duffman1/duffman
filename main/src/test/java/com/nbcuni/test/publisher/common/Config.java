@@ -4,11 +4,13 @@ import org.testng.Assert;
 import org.w3c.dom.Attr;
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
+
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.xpath.XPath;
 import javax.xml.xpath.XPathConstants;
 import javax.xml.xpath.XPathFactory;
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
@@ -27,6 +29,7 @@ public class Config {
 		return fileLoc.replace("/", File.separator);
 	}
 	
+	@SuppressWarnings("unused")
 	private String getConsecutiveSuiteFileLocation() {
 		String fileLoc = System.getProperty("user.dir") + "/src/test/resources/TestNGConsecutiveSuite.xml";
 		return fileLoc.replace("/", File.separator);

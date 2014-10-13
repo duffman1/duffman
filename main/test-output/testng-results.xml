@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="1" total="2" passed="1">
   <reporter-output>
     <line>
-      <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
+      <![CDATA[STEP 1]]>
+    </line>
+    <line>
+      <![CDATA[Open url 'http://acc-test.publisher7.com'.]]>
     </line>
     <line>
       <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
@@ -14,28 +17,100 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Content' menu link.]]>
+      <![CDATA[STEP 2]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Add content' menu link.]]>
+      <![CDATA[Click the 'Modules' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Person' menu link.]]>
+      <![CDATA[Switch to frame titled 'Modules'.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Create Person dialog'.]]>
+      <![CDATA[Enter 'Event Countdown' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Enter '114589c078d5472' in the 'First name' text box.]]>
+      <![CDATA[Wait for module filter titled 'Event Countdown' to be visible in module list.]]>
     </line>
     <line>
-      <![CDATA[Enter a random block of text in the 'Biography' text area.]]>
+      <![CDATA[Check the 'Event Countdown' check box.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Create Person dialog'.]]>
+      <![CDATA[Click the 'Save configuration' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Cover Photo' Select button.]]>
+      <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
+    </line>
+    <line>
+      <![CDATA[Switch back to the 'Modules' frame.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to frame titled 'Modules'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Home' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 3]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Configuration' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Media' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Event Countdown' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Event Countdown dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Create' button.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the sample nodes to be created.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 4]]>
+    </line>
+    <line>
+      <![CDATA[STEP 5 AND 6]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter title Birthday Event.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Apply' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Edit' link for content item titled 'Birthday Event.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '10/13/2014 in the 'Date' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '06:18:09PM in the 'Time' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'http://www.amazon.com/s/ref=nb_sb_ss_c_0_8/190-0002947-5703141?url=search-alias%3Dtoys-and-games&field-keywords=birthday%20party%20supplies&sprefix=birthday%2Caps%2C168' in the 'Active Call to Action' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Active Image Select' button.]]>
     </line>
     <line>
       <![CDATA[Switch to the select file frame.]]>
@@ -68,42 +143,312 @@
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Create Person dialog'.]]>
+      <![CDATA[Enter '#FF0000' in the 'Active Background Color' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'http://www.nbc.com' in the 'Expiry Call to Action' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Expiry Image Select' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the select file frame.]]>
+    </line>
+    <line>
+      <![CDATA[Enter the file path for file upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Upload' button.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Public Local Files' radio button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the file image 'nbclogosmall' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the img is loaded and visible.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'Person 114589c078d5472 has been created.' is present.]]>
+      <![CDATA[Enter '#00FFFF' in the 'Expiry Background Color' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 7]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Structure' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Blocks' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Select the block name 'Birthday Block' from the 'Content' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Select the block name 'Holiday Party Block' from the 'Content' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save Blocks' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The block settings have been updated.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 8]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Home' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 9]]>
+    </line>
+    <line>
+      <![CDATA[Verify the countdown timer is visible.]]>
+    </line>
+    <line>
+      <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CountdownClockEvents_TC4887_101314021701PM.png ]]>
+    </line>
+    <line>
+      <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CountdownClockEvents_TC4887_101314021701PM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CountdownClockEvents_TC4887_101314021701PM.png' height='500' width='500'/> </a>]]>
+    </line>
+    <line>
+      <![CDATA[Open url 'http://acc-test.publisher7.com'.]]>
+    </line>
+    <line>
+      <![CDATA[Cache was cleared on test failure]]>
+    </line>
+    <line>
+      <![CDATA[Open url 'http://acc-test.publisher7.com'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Login' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Modules' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Event Countdown' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for module filter titled 'Event Countdown' to be visible in module list.]]>
+    </line>
+    <line>
+      <![CDATA[Uncheck the 'Event Countdown' module checkbox.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configuration' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Uninstall' overlay tab.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll by '-500'.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Event Countdown' uninstall checkbox.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Uninstall' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Confirm uninstall dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'The following modules will be completely uninstalled from your site, and all data from these modules will be lost!' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'Event Countdown' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Uninstall' button to confirm.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="31305" started-at="2014-10-13T18:01:10Z" finished-at="2014-10-13T18:01:41Z">
+  <suite name="Default suite" duration-ms="174254" started-at="2014-10-13T18:15:10Z" finished-at="2014-10-13T18:18:04Z">
     <groups>
       <group name="full">
-        <method signature="CreatePerson.CreatePerson_TC1044()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson@3138f11c]" name="CreatePerson_TC1044" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson"/>
+        <method signature="CountdownClockEvents.CountdownClockEvents_TC4887()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@4db5cb7b]" name="CountdownClockEvents_TC4887" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents"/>
+        <method signature="CountdownClockEvents.Cleanup()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@4db5cb7b]" name="Cleanup" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents"/>
       </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="31305" started-at="2014-10-13T18:01:10Z" finished-at="2014-10-13T18:01:41Z">
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson">
-        <test-method status="PASS" signature="suiteSetup()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson@3138f11c]" name="suiteSetup" is-config="true" duration-ms="21" started-at="2014-10-13T14:01:10Z" finished-at="2014-10-13T14:01:10Z">
+    <test name="Default test" duration-ms="174254" started-at="2014-10-13T18:15:10Z" finished-at="2014-10-13T18:18:04Z">
+      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents">
+        <test-method status="PASS" signature="suiteSetup()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@4db5cb7b]" name="suiteSetup" is-config="true" duration-ms="30" started-at="2014-10-13T14:15:10Z" finished-at="2014-10-13T14:15:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteSetup -->
-        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson@3138f11c]" name="startSelenium" is-config="true" duration-ms="3221" started-at="2014-10-13T14:01:10Z" finished-at="2014-10-13T14:01:13Z">
+        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@4db5cb7b]" name="startSelenium" is-config="true" duration-ms="3268" started-at="2014-10-13T14:15:10Z" finished-at="2014-10-13T14:15:13Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson.CreatePerson_TC1044() throws java.lang.Exception]]>
+                <![CDATA[public void com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents.CountdownClockEvents_TC4887() throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="CreatePerson_TC1044()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson@3138f11c]" name="CreatePerson_TC1044" duration-ms="27499" started-at="2014-10-13T14:01:13Z" finished-at="2014-10-13T14:01:41Z">
+        <test-method status="FAIL" signature="CountdownClockEvents_TC4887()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@4db5cb7b]" name="CountdownClockEvents_TC4887" duration-ms="107812" started-at="2014-10-13T14:15:13Z" finished-at="2014-10-13T14:17:01Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element
+  (Session info: chrome=38.0.2125.101)
+  (Driver info: chromedriver=2.8.241036,platform=Mac OS X 10.9.4 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 20.03 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.41.0', revision: '3192d8a', time: '2014-03-27 17:17:32'
+System info: host: 'BACLARK77-MAC1.local', ip: '192.168.0.4', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.9.4', java.version: '1.7.0_25'
+Session ID: d244d4119c6adb7adeccee51da2a4863
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.9GBES2}, rotatable=false, locationContextEnabled=true, version=38.0.2125.101, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, nativeEvents=true, webStorageEnabled=true, applicationCacheEnabled=false, takesScreenshot=true}]
+Command duration or timeout: 20.49 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.42.2', revision: '6a6995d31c7c56c340d6f45a76976d43506cd6cc', time: '2014-06-03 10:52:47'
+System info: host: 'BACLARK77-MAC1.local', ip: '192.168.0.4', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.9.4', java.version: '1.7.0_25'
+Session ID: 94b49629-2181-43bb-87d8-0a5360c9743a
+Driver info: com.nbcuni.test.publisher.common.Driver.Driver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.9GBES2}, rotatable=false, locationContextEnabled=true, webdriver.remote.sessionid=94b49629-2181-43bb-87d8-0a5360c9743a, version=38.0.2125.101, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, nativeEvents=true, webStorageEnabled=true, applicationCacheEnabled=false, takesScreenshot=true}]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element
+  (Session info: chrome=38.0.2125.101)
+  (Driver info: chromedriver=2.8.241036,platform=Mac OS X 10.9.4 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 20.03 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.41.0', revision: '3192d8a', time: '2014-03-27 17:17:32'
+System info: host: 'BACLARK77-MAC1.local', ip: '192.168.0.4', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.9.4', java.version: '1.7.0_25'
+Session ID: d244d4119c6adb7adeccee51da2a4863
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.9GBES2}, rotatable=false, locationContextEnabled=true, version=38.0.2125.101, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, nativeEvents=true, webStorageEnabled=true, applicationCacheEnabled=false, takesScreenshot=true}]
+Command duration or timeout: 20.49 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.42.2', revision: '6a6995d31c7c56c340d6f45a76976d43506cd6cc', time: '2014-06-03 10:52:47'
+System info: host: 'BACLARK77-MAC1.local', ip: '192.168.0.4', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.9.4', java.version: '1.7.0_25'
+Session ID: 94b49629-2181-43bb-87d8-0a5360c9743a
+Driver info: com.nbcuni.test.publisher.common.Driver.Driver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.9GBES2}, rotatable=false, locationContextEnabled=true, webdriver.remote.sessionid=94b49629-2181-43bb-87d8-0a5360c9743a, version=38.0.2125.101, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, nativeEvents=true, webStorageEnabled=true, applicationCacheEnabled=false, takesScreenshot=true}]
+	at sun.reflect.GeneratedConstructorAccessor20.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:449)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at com.nbcuni.test.publisher.pageobjects.Content.EventCountdown.CountdownTimer_Ctr(EventCountdown.java:66)
+	at com.nbcuni.test.publisher.pageobjects.Content.EventCountdown.VerifyCountDownTimerRunning(EventCountdown.java:158)
+	at com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents.CountdownClockEvents_TC4887(CountdownClockEvents.java:121)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+Caused by: org.openqa.selenium.remote.ScreenshotException: Screen shot has been taken
+Build info: version: '2.42.2', revision: '6a6995d31c7c56c340d6f45a76976d43506cd6cc', time: '2014-06-03 10:52:47'
+System info: host: 'BACLARK77-MAC1.local', ip: '192.168.0.4', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.9.4', java.version: '1.7.0_25'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:136)
+	... 32 more
+Caused by: org.openqa.selenium.NoSuchElementException: no such element
+  (Session info: chrome=38.0.2125.101)
+  (Driver info: chromedriver=2.8.241036,platform=Mac OS X 10.9.4 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 20.03 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.41.0', revision: '3192d8a', time: '2014-03-27 17:17:32'
+System info: host: 'BACLARK77-MAC1.local', ip: '192.168.0.4', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.9.4', java.version: '1.7.0_25'
+Session ID: d244d4119c6adb7adeccee51da2a4863
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.9GBES2}, rotatable=false, locationContextEnabled=true, version=38.0.2125.101, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, nativeEvents=true, webStorageEnabled=true, applicationCacheEnabled=false, takesScreenshot=true}]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.42.2', revision: '6a6995d31c7c56c340d6f45a76976d43506cd6cc', time: '2014-06-03 10:52:47'
+System info: host: 'BACLARK77-MAC1.local', ip: '192.168.0.4', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.9.4', java.version: '1.7.0_25'
+Driver info: driver.version: EventFiringWebDriver
+	at sun.reflect.GeneratedConstructorAccessor40.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:193)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:348)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:445)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:340)
+	at sun.reflect.GeneratedMethodAccessor25.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:101)
+	at com.sun.proxy.$Proxy2.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:184)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:47)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:1)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:170)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
             <line>
-              <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
+              <![CDATA[STEP 1]]>
+            </line>
+            <line>
+              <![CDATA[Open url 'http://acc-test.publisher7.com'.]]>
             </line>
             <line>
               <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
@@ -115,28 +460,100 @@
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Content' menu link.]]>
+              <![CDATA[STEP 2]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Add content' menu link.]]>
+              <![CDATA[Click the 'Modules' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Person' menu link.]]>
+              <![CDATA[Switch to frame titled 'Modules'.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create Person dialog'.]]>
+              <![CDATA[Enter 'Event Countdown' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Enter '114589c078d5472' in the 'First name' text box.]]>
+              <![CDATA[Wait for module filter titled 'Event Countdown' to be visible in module list.]]>
             </line>
             <line>
-              <![CDATA[Enter a random block of text in the 'Biography' text area.]]>
+              <![CDATA[Check the 'Event Countdown' check box.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create Person dialog'.]]>
+              <![CDATA[Click the 'Save configuration' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Cover Photo' Select button.]]>
+              <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
+            </line>
+            <line>
+              <![CDATA[Switch back to the 'Modules' frame.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to frame titled 'Modules'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Home' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 3]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Configuration' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Media' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Event Countdown' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Event Countdown dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Create' button.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the sample nodes to be created.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 4]]>
+            </line>
+            <line>
+              <![CDATA[STEP 5 AND 6]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter title Birthday Event.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Apply' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Edit' link for content item titled 'Birthday Event.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '10/13/2014 in the 'Date' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '06:18:09PM in the 'Time' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'http://www.amazon.com/s/ref=nb_sb_ss_c_0_8/190-0002947-5703141?url=search-alias%3Dtoys-and-games&field-keywords=birthday%20party%20supplies&sprefix=birthday%2Caps%2C168' in the 'Active Call to Action' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Active Image Select' button.]]>
             </line>
             <line>
               <![CDATA[Switch to the select file frame.]]>
@@ -169,32 +586,199 @@
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create Person dialog'.]]>
+              <![CDATA[Enter '#FF0000' in the 'Active Background Color' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'http://www.nbc.com' in the 'Expiry Call to Action' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Expiry Image Select' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the select file frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter the file path for file upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Upload' button.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Public Local Files' radio button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the file image 'nbclogosmall' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the img is loaded and visible.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'Person 114589c078d5472 has been created.' is present.]]>
+              <![CDATA[Enter '#00FFFF' in the 'Expiry Background Color' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 7]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Structure' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Blocks' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Select the block name 'Birthday Block' from the 'Content' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Select the block name 'Holiday Party Block' from the 'Content' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save Blocks' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The block settings have been updated.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 8]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Home' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 9]]>
+            </line>
+            <line>
+              <![CDATA[Verify the countdown timer is visible.]]>
+            </line>
+            <line>
+              <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CountdownClockEvents_TC4887_101314021701PM.png ]]>
+            </line>
+            <line>
+              <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CountdownClockEvents_TC4887_101314021701PM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CountdownClockEvents_TC4887_101314021701PM.png' height='500' width='500'/> </a>]]>
+            </line>
+            <line>
+              <![CDATA[Cache was cleared on test failure]]>
             </line>
           </reporter-output>
-        </test-method> <!-- CreatePerson_TC1044 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson@3138f11c]" name="stopSelenium" is-config="true" duration-ms="570" started-at="2014-10-13T14:01:41Z" finished-at="2014-10-13T14:01:41Z">
+        </test-method> <!-- CountdownClockEvents_TC4887 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@4db5cb7b]" name="stopSelenium" is-config="true" duration-ms="14515" started-at="2014-10-13T14:17:01Z" finished-at="2014-10-13T14:17:16Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=CreatePerson_TC1044 status=SUCCESS method=CreatePerson.CreatePerson_TC1044()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson@3138f11c] output=Open url 'http://qa5.publisher7.com'.]]]>
+                <![CDATA[[TestResult name=CountdownClockEvents_TC4887 status=FAILURE method=CountdownClockEvents.CountdownClockEvents_TC4887()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@4db5cb7b] output=STEP 1]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="suiteTeardown()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson@3138f11c]" name="suiteTeardown" is-config="true" duration-ms="0" started-at="2014-10-13T14:01:41Z" finished-at="2014-10-13T14:01:41Z">
+        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@4db5cb7b]" name="startSelenium" is-config="true" duration-ms="2576" started-at="2014-10-13T14:17:16Z" finished-at="2014-10-13T14:17:18Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents.Cleanup() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startSelenium -->
+        <test-method status="PASS" signature="Cleanup()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@4db5cb7b]" name="Cleanup" duration-ms="45485" started-at="2014-10-13T14:17:18Z" depends-on-methods="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents.CountdownClockEvents_TC4887" finished-at="2014-10-13T14:18:04Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Open url 'http://acc-test.publisher7.com'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Login' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Modules' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Event Countdown' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for module filter titled 'Event Countdown' to be visible in module list.]]>
+            </line>
+            <line>
+              <![CDATA[Uncheck the 'Event Countdown' module checkbox.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configuration' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Uninstall' overlay tab.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll by '-500'.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Event Countdown' uninstall checkbox.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Uninstall' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Confirm uninstall dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'The following modules will be completely uninstalled from your site, and all data from these modules will be lost!' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Event Countdown' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Uninstall' button to confirm.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- Cleanup -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@4db5cb7b]" name="stopSelenium" is-config="true" duration-ms="570" started-at="2014-10-13T14:18:04Z" finished-at="2014-10-13T14:18:04Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Cleanup status=SUCCESS method=CountdownClockEvents.Cleanup()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@4db5cb7b] output=Open url 'http://acc-test.publisher7.com'.]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopSelenium -->
+        <test-method status="PASS" signature="suiteTeardown()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@4db5cb7b]" name="suiteTeardown" is-config="true" duration-ms="0" started-at="2014-10-13T14:18:04Z" finished-at="2014-10-13T14:18:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteTeardown -->
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson -->
+      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

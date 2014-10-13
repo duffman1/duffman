@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,7 +37,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Default_suite">
-              <span class="suite-name border-passed">Default suite</span>
+              <span class="suite-name border-failed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -90,7 +90,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Default_suite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents" hash-for-method="CountdownClockEvents_TC4887">CountdownClockEvents_TC4887</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Default_suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -101,7 +115,7 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson" hash-for-method="CreatePerson_TC1044">CreatePerson_TC1044</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents" hash-for-method="Cleanup">Cleanup</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -116,17 +130,132 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-passed">
+          <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson</span>
+              <img src="failed.png"/>
+              <span class="class-name">com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="CreatePerson_TC1044">
-                  </a> <!-- CreatePerson_TC1044 -->
-                  <span class="method-name">CreatePerson_TC1044</span>
+                  <a name="CountdownClockEvents_TC4887">
+                  </a> <!-- CountdownClockEvents_TC4887 -->
+                  <span class="method-name">CountdownClockEvents_TC4887</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element
+  (Session info: chrome=38.0.2125.101)
+  (Driver info: chromedriver=2.8.241036,platform=Mac OS X 10.9.4 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 20.03 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.41.0&apos;, revision: &apos;3192d8a&apos;, time: &apos;2014-03-27 17:17:32&apos;
+System info: host: &apos;BACLARK77-MAC1.local&apos;, ip: &apos;192.168.0.4&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.4&apos;, java.version: &apos;1.7.0_25&apos;
+Session ID: d244d4119c6adb7adeccee51da2a4863
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.9GBES2}, rotatable=false, locationContextEnabled=true, version=38.0.2125.101, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, nativeEvents=true, webStorageEnabled=true, applicationCacheEnabled=false, takesScreenshot=true}]
+Command duration or timeout: 20.49 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.42.2&apos;, revision: &apos;6a6995d31c7c56c340d6f45a76976d43506cd6cc&apos;, time: &apos;2014-06-03 10:52:47&apos;
+System info: host: &apos;BACLARK77-MAC1.local&apos;, ip: &apos;192.168.0.4&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.4&apos;, java.version: &apos;1.7.0_25&apos;
+Session ID: 94b49629-2181-43bb-87d8-0a5360c9743a
+Driver info: com.nbcuni.test.publisher.common.Driver.Driver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.9GBES2}, rotatable=false, locationContextEnabled=true, webdriver.remote.sessionid=94b49629-2181-43bb-87d8-0a5360c9743a, version=38.0.2125.101, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, nativeEvents=true, webStorageEnabled=true, applicationCacheEnabled=false, takesScreenshot=true}]
+	at sun.reflect.GeneratedConstructorAccessor20.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:449)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at com.nbcuni.test.publisher.pageobjects.Content.EventCountdown.CountdownTimer_Ctr(EventCountdown.java:66)
+	at com.nbcuni.test.publisher.pageobjects.Content.EventCountdown.VerifyCountDownTimerRunning(EventCountdown.java:158)
+	at com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents.CountdownClockEvents_TC4887(CountdownClockEvents.java:121)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+Caused by: org.openqa.selenium.remote.ScreenshotException: Screen shot has been taken
+Build info: version: &apos;2.42.2&apos;, revision: &apos;6a6995d31c7c56c340d6f45a76976d43506cd6cc&apos;, time: &apos;2014-06-03 10:52:47&apos;
+System info: host: &apos;BACLARK77-MAC1.local&apos;, ip: &apos;192.168.0.4&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.4&apos;, java.version: &apos;1.7.0_25&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:136)
+	... 32 more
+Caused by: org.openqa.selenium.NoSuchElementException: no such element
+  (Session info: chrome=38.0.2125.101)
+  (Driver info: chromedriver=2.8.241036,platform=Mac OS X 10.9.4 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 20.03 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.41.0&apos;, revision: &apos;3192d8a&apos;, time: &apos;2014-03-27 17:17:32&apos;
+System info: host: &apos;BACLARK77-MAC1.local&apos;, ip: &apos;192.168.0.4&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.4&apos;, java.version: &apos;1.7.0_25&apos;
+Session ID: d244d4119c6adb7adeccee51da2a4863
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.9GBES2}, rotatable=false, locationContextEnabled=true, version=38.0.2125.101, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, nativeEvents=true, webStorageEnabled=true, applicationCacheEnabled=false, takesScreenshot=true}]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.42.2&apos;, revision: &apos;6a6995d31c7c56c340d6f45a76976d43506cd6cc&apos;, time: &apos;2014-06-03 10:52:47&apos;
+System info: host: &apos;BACLARK77-MAC1.local&apos;, ip: &apos;192.168.0.4&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.4&apos;, java.version: &apos;1.7.0_25&apos;
+Driver info: driver.version: EventFiringWebDriver
+	at sun.reflect.GeneratedConstructorAccessor40.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:193)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:348)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:445)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:340)
+	at sun.reflect.GeneratedMethodAccessor25.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:101)
+	at com.sun.proxy.$Proxy2.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:184)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:47)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:1)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:170)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-failed -->
+          <div class="suite-Default_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="Cleanup">
+                  </a> <!-- Cleanup -->
+                  <span class="method-name">Cleanup</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -134,7 +263,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/private/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/testng-eclipse--1565676170/testng-customsuite.xml</span>
+            <span class="header-content">/private/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/testng-eclipse--1141339172/testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -143,7 +272,7 @@
 &lt;suite name=&quot;Default suite&quot;&gt;
   &lt;test verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson&quot;/&gt;
+      &lt;class name=&quot;com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -171,7 +300,11 @@
               <span class="test-group-name">full</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">CreatePerson_TC1044</span>
+                <span class="method-in-group-name">Cleanup</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">CountdownClockEvents_TC4887</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -191,16 +324,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'CreatePerson_TC1044')
-data.setCell(0, 2, 'com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson')
-data.setCell(0, 3, 27499);
+data.setCell(0, 1, 'CountdownClockEvents_TC4887')
+data.setCell(0, 2, 'com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents')
+data.setCell(0, 3, 107812);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'Cleanup')
+data.setCell(1, 2, 'com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents')
+data.setCell(1, 3, 45485);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 27 seconds</span>
+              <span class="suite-total-time">Total running time: 2 minutes</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -212,20 +349,71 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="reporter-method-div">
-              <span class="reporter-method-name">CreatePerson_TC1044</span>
+              <span class="reporter-method-name">Cleanup</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Open url 'http://qa5.publisher7.com'.</span>
+                <span class="reporter-method-output">Open url 'http://acc-test.publisher7.com'.</span>
                 <span class="reporter-method-output">Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.</span>
                 <span class="reporter-method-output">Enter 'pa55word' in the 'Password' text box.</span>
                 <span class="reporter-method-output">Click the 'Login' button.</span>
-                <span class="reporter-method-output">Mouse over the 'Content' menu link.</span>
-                <span class="reporter-method-output">Mouse over the 'Add content' menu link.</span>
-                <span class="reporter-method-output">Click the 'Person' menu link.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'Create Person dialog'.</span>
-                <span class="reporter-method-output">Enter '114589c078d5472' in the 'First name' text box.</span>
-                <span class="reporter-method-output">Enter a random block of text in the 'Biography' text area.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'Create Person dialog'.</span>
-                <span class="reporter-method-output">Click the 'Cover Photo' Select button.</span>
+                <span class="reporter-method-output">Click the 'Modules' menu link.</span>
+                <span class="reporter-method-output">Switch to the active frame titled 'Modules dialog'.</span>
+                <span class="reporter-method-output">Enter 'Event Countdown' in the 'Filter Name' text box.</span>
+                <span class="reporter-method-output">Wait for module filter titled 'Event Countdown' to be visible in module list.</span>
+                <span class="reporter-method-output">Uncheck the 'Event Countdown' module checkbox.</span>
+                <span class="reporter-method-output">Click the 'Save configuration' button.</span>
+                <span class="reporter-method-output">Verify success message of 'The configuration options have been saved.' is present.</span>
+                <span class="reporter-method-output">Click the 'Uninstall' overlay tab.</span>
+                <span class="reporter-method-output">Scroll by '-500'.</span>
+                <span class="reporter-method-output">Switch to the active frame titled 'Modules dialog'.</span>
+                <span class="reporter-method-output">Click the 'Event Countdown' uninstall checkbox.</span>
+                <span class="reporter-method-output">Click the 'Uninstall' button.</span>
+                <span class="reporter-method-output">Switch to the active frame titled 'Confirm uninstall dialog'.</span>
+                <span class="reporter-method-output">Verify the text 'The following modules will be completely uninstalled from your site, and all data from these modules will be lost!' is present on the page.</span>
+                <span class="reporter-method-output">Verify the text 'Event Countdown' is present on the page.</span>
+                <span class="reporter-method-output">Click the 'Uninstall' button to confirm.</span>
+                <span class="reporter-method-output">Switch to the active frame titled 'Modules dialog'.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">CountdownClockEvents_TC4887</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">STEP 1</span>
+                <span class="reporter-method-output">Open url 'http://acc-test.publisher7.com'.</span>
+                <span class="reporter-method-output">Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.</span>
+                <span class="reporter-method-output">Enter 'pa55word' in the 'Password' text box.</span>
+                <span class="reporter-method-output">Click the 'Login' button.</span>
+                <span class="reporter-method-output">STEP 2</span>
+                <span class="reporter-method-output">Click the 'Modules' menu link.</span>
+                <span class="reporter-method-output">Switch to frame titled 'Modules'.</span>
+                <span class="reporter-method-output">Enter 'Event Countdown' in the 'Filter Name' text box.</span>
+                <span class="reporter-method-output">Wait for module filter titled 'Event Countdown' to be visible in module list.</span>
+                <span class="reporter-method-output">Check the 'Event Countdown' check box.</span>
+                <span class="reporter-method-output">Click the 'Save configuration' button.</span>
+                <span class="reporter-method-output">Switch to frame titled 'Some required modules must be enabled'.</span>
+                <span class="reporter-method-output">Switch back to the 'Modules' frame.</span>
+                <span class="reporter-method-output">Switch to frame titled 'Modules'.</span>
+                <span class="reporter-method-output">Verify success message of 'The configuration options have been saved.' is present.</span>
+                <span class="reporter-method-output">Click the 'Close Overlay X'.</span>
+                <span class="reporter-method-output">Click the 'Home' menu link.</span>
+                <span class="reporter-method-output">STEP 3</span>
+                <span class="reporter-method-output">Mouse over the 'Configuration' menu link.</span>
+                <span class="reporter-method-output">Mouse over the 'Media' menu link.</span>
+                <span class="reporter-method-output">Click the 'Event Countdown' menu link.</span>
+                <span class="reporter-method-output">Switch to the active frame titled 'Event Countdown dialog'.</span>
+                <span class="reporter-method-output">Click the 'Create' button.</span>
+                <span class="reporter-method-output">Wait for the sample nodes to be created.</span>
+                <span class="reporter-method-output">Click the 'Close Overlay X'.</span>
+                <span class="reporter-method-output">STEP 4</span>
+                <span class="reporter-method-output">STEP 5 AND 6</span>
+                <span class="reporter-method-output">Click the 'Content' menu link.</span>
+                <span class="reporter-method-output">Switch to the active frame titled 'Content dialog'.</span>
+                <span class="reporter-method-output">Enter title Birthday Event.</span>
+                <span class="reporter-method-output">Click the 'Apply' button.</span>
+                <span class="reporter-method-output">Click the 'Edit' link for content item titled 'Birthday Event.</span>
+                <span class="reporter-method-output">Enter '10/13/2014 in the 'Date' text box.</span>
+                <span class="reporter-method-output">Enter '06:18:09PM in the 'Time' text box.</span>
+                <span class="reporter-method-output">Enter 'http://www.amazon.com/s/ref=nb_sb_ss_c_0_8/190-0002947-5703141?url=search-alias%3Dtoys-and-games&field-keywords=birthday%20party%20supplies&sprefix=birthday%2Caps%2C168' in the 'Active Call to Action' text box.</span>
+                <span class="reporter-method-output">Click the 'Active Image Select' button.</span>
                 <span class="reporter-method-output">Switch to the select file frame.</span>
                 <span class="reporter-method-output">Enter the file path for file upload.</span>
                 <span class="reporter-method-output">Click the 'Upload' button.</span>
@@ -236,9 +424,35 @@ return data;
                 <span class="reporter-method-output">Verify the file image 'HanSolo' is present.</span>
                 <span class="reporter-method-output">Verify the img is loaded and visible.</span>
                 <span class="reporter-method-output">Click the 'Save' button.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'Create Person dialog'.</span>
+                <span class="reporter-method-output">Enter '#FF0000' in the 'Active Background Color' text box.</span>
+                <span class="reporter-method-output">Enter 'http://www.nbc.com' in the 'Expiry Call to Action' text box.</span>
+                <span class="reporter-method-output">Click the 'Expiry Image Select' button.</span>
+                <span class="reporter-method-output">Switch to the select file frame.</span>
+                <span class="reporter-method-output">Enter the file path for file upload.</span>
+                <span class="reporter-method-output">Click the 'Upload' button.</span>
+                <span class="reporter-method-output">Wait for the file link to be visible after upload.</span>
+                <span class="reporter-method-output">Click the 'Next' button.</span>
+                <span class="reporter-method-output">Click the 'Public Local Files' radio button.</span>
+                <span class="reporter-method-output">Click the 'Next' button.</span>
+                <span class="reporter-method-output">Verify the file image 'nbclogosmall' is present.</span>
+                <span class="reporter-method-output">Verify the img is loaded and visible.</span>
                 <span class="reporter-method-output">Click the 'Save' button.</span>
-                <span class="reporter-method-output">Verify success message of 'Person 114589c078d5472 has been created.' is present.</span>
+                <span class="reporter-method-output">Enter '#00FFFF' in the 'Expiry Background Color' text box.</span>
+                <span class="reporter-method-output">Click the 'Save' button.</span>
+                <span class="reporter-method-output">STEP 7</span>
+                <span class="reporter-method-output">Mouse over the 'Structure' menu link.</span>
+                <span class="reporter-method-output">Click the 'Blocks' menu link.</span>
+                <span class="reporter-method-output">Select the block name 'Birthday Block' from the 'Content' drop down list.</span>
+                <span class="reporter-method-output">Select the block name 'Holiday Party Block' from the 'Content' drop down list.</span>
+                <span class="reporter-method-output">Click the 'Save Blocks' button.</span>
+                <span class="reporter-method-output">Verify success message of 'The block settings have been updated.' is present.</span>
+                <span class="reporter-method-output">STEP 8</span>
+                <span class="reporter-method-output">Click the 'Home' menu link.</span>
+                <span class="reporter-method-output">STEP 9</span>
+                <span class="reporter-method-output">Verify the countdown timer is visible.</span>
+                <span class="reporter-method-output">Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CountdownClockEvents_TC4887_101314021701PM.png </span>
+                <span class="reporter-method-output"><br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CountdownClockEvents_TC4887_101314021701PM.png'> <img src='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CountdownClockEvents_TC4887_101314021701PM.png' height='500' width='500'/> </a></span>
+                <span class="reporter-method-output">Cache was cleared on test failure</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -256,26 +470,40 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">suiteSetup</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
-                <span class="method-name">startSelenium(public void com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Per...)</span>
-                <span class="method-start">34 ms</span>
+                <span class="method-name">startSelenium(public void com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManageme...)</span>
+                <span class="method-start">40 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">CreatePerson_TC1044</span>
-                <span class="method-start">3255 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">CountdownClockEvents_TC4887</span>
+                <span class="method-start">3308 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">stopSelenium([TestResult name=CreatePerson_TC1044 status=SUCCESS method=CreatePerson.CreatePerson_TC1044()[pri:0,...)</span>
-                <span class="method-start">30755 ms</span>
+                <span class="method-name">stopSelenium([TestResult name=CountdownClockEvents_TC4887 status=FAILURE method=CountdownClockEvents.CountdownClo...)</span>
+                <span class="method-start">111125 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">startSelenium(public void com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManageme...)</span>
+                <span class="method-start">125652 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">Cleanup</span>
+                <span class="method-start">128228 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">stopSelenium([TestResult name=Cleanup status=SUCCESS method=CountdownClockEvents.Cleanup()[pri:0, instance:com.nb...)</span>
+                <span class="method-start">173714 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-suite after">
                 <span class="method-name">suiteTeardown</span>
-                <span class="method-start">31348 ms</span>
+                <span class="method-start">174328 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
