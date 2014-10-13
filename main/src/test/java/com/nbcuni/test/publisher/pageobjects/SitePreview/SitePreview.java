@@ -27,7 +27,7 @@ public class SitePreview {
 	 public SitePreview(Driver webDriver) {
 		 this.webDriver = webDriver;
 		 PageFactory.initElements(webDriver, this);
-	     wait = new WebDriverWait(webDriver, 10);  
+	     wait = new WebDriverWait(webDriver, 20);  
 	 }
 	 
 	 //PAGE OBJECT IDENTIFIERS
@@ -105,6 +105,13 @@ public class SitePreview {
 		 wait.until(ExpectedConditions.visibilityOf(Date_Txb)).clear();
 		 Date_Txb.sendKeys(date);
 		 
+	 }
+	 
+	 public void VerifyDateTxbTobeVisible() throws Exception { 
+	    	
+		 Reporter.log("Verify the 'Date' Textbox is visible.");	
+		 wait.until(ExpectedConditions.visibilityOf(Date_Txb));
+		 Assert.assertTrue(Date_Txb.isDisplayed());
 	 }
 	    
 	 public void VerifyDateValue(String date) throws Exception {

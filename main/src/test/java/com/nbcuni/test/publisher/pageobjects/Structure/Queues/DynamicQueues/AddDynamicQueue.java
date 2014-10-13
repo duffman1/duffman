@@ -19,6 +19,8 @@ import org.testng.Reporter;
  * 
  * @author Brandon Clark
  * @version 1.0 Date: July 30, 2014
+ * @author Vineela Juturu
+ * @version 1.1 Date September 30, 2014
  *********************************************/
 
 public class AddDynamicQueue {
@@ -62,10 +64,10 @@ public class AddDynamicQueue {
     @FindBy(how = How.ID, using = "edit-settings-tv-show-select")
     private WebElement TVShows_Ddl;
     
-    @FindBy(how = How.ID, using = "edit-settings-sort-dynamic-queue-newest")
+    @FindBy(how = How.ID, using = "edit-settings-sort-dynamic-queue-modifier-newest")
     private WebElement SortByNewest_Rdb;
     
-    @FindBy(how = How.ID, using = "edit-settings-sort-dynamic-queue-oldest")
+    @FindBy(how = How.ID, using = "edit-settings-sort-dynamic-queue-modifier-oldest")
     private WebElement SortByOldest_Rdb;
     
     @FindBy(how = How.ID, using = "edit-status")
@@ -80,13 +82,18 @@ public class AddDynamicQueue {
     @FindBy(how = How.ID, using = "edit-settings-limit")
     private WebElement TotalLimit_Txb;
     
+    @FindBy(how = How.ID, using = "edit-event")
+    private WebElement ModerationState_Ddl;
     
-    
+    @FindBy(how = How.ID, using = "edit-revision")
+    private WebElement Createnewrevision_Cbx;
     
     //PAGE OBJECT METHODS
     public void EnterTitle(String queueTitle) throws Exception {
     	
     	Reporter.log("Enter '" + queueTitle + "' in the 'Title' text box.");
+    	Title_Txb.click();
+    	Title_Txb.clear();
     	Title_Txb.sendKeys(queueTitle);
     }
     
@@ -184,6 +191,19 @@ public class AddDynamicQueue {
     	
     }
     
+    public void SelectModerationState(String state) throws Exception {
+    	
+    	Reporter.log("Select '" + state + "' from the 'TV Shows' drop down list.");
+    	new Select(ModerationState_Ddl).selectByVisibleText(state);
+    }
     
+    public void CheckCreatenewrevision_Cbx() throws Exception {
+    	
+    	if (Createnewrevision_Cbx.isSelected() == false) {
+    		Reporter.log("");
+    		Createnewrevision_Cbx.click();
+    	}
+    	
+    }
 }
 

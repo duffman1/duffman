@@ -10,6 +10,9 @@ import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
+import com.nbcuni.test.publisher.pageobjects.Logout;
+import com.nbcuni.test.publisher.pageobjects.ErrorChecking.ErrorChecking;
+import com.nbcuni.test.publisher.pageobjects.People.Permissions;
 import com.nbcuni.test.publisher.pageobjects.Content.CreateDefaultContent;
 import com.nbcuni.test.publisher.pageobjects.Structure.AddViewMode;
 import com.nbcuni.test.publisher.pageobjects.Structure.Queues.DynamicQueues.AddDynamicQueue;
@@ -22,6 +25,9 @@ public class CreateConfigureDynamicQueue extends ParentTest{
 	/*************************************************************************************
      * TEST CASE - TC4197
      * Steps - https://rally1.rallydev.com/#/14663927728d/detail/testcase/20794225692
+     * @author Brandon Clark
+     * @author Vineela Juturu
+     * @version 1.0 Date: October 13, 2014
      *************************************************************************************/
     @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "smoke" })
     public void CreateConfigureDynamicQueue_TC4197() throws Exception{
@@ -40,6 +46,7 @@ public class CreateConfigureDynamicQueue extends ParentTest{
         String postTitle = createDefaultContent.Post("Published", postBody);
         String unpublishedPostBody = random.GetCharacterString(15);
         String unpublishedPostTitle = createDefaultContent.Post("Draft", unpublishedPostBody);
+        String nameNumber_ErrorMessage = "Name cannot be a number. It is recommended that this name begin with a capital letter and contain only letters, numbers, and spaces.";
       
         Reporter.log("STEP 2");
         Modules modules = new Modules(webDriver, applib);
@@ -49,12 +56,19 @@ public class CreateConfigureDynamicQueue extends ParentTest{
         taxonomy.NavigateSite("Structure>>Dynamic Queue types>>Add dynamic queue type");
         overlay.SwitchToActiveFrame();
         
-        Reporter.log("STEP 4&5 to be done");
-        
-        Reporter.log("STEP 6");
-        String dynamicQueueTypeName = random.GetCharacterString(15);
+        Reporter.log("STEP 4");
         AddDynamicQueueType addDynamicQueueType = new AddDynamicQueueType(webDriver);
+        String dynamicQueueTypeNameNumber = "25";
+        addDynamicQueueType.EnterName(dynamicQueueTypeNameNumber);
+        addDynamicQueueType.ClickSaveBtn();
+        ErrorChecking errorchecking = new ErrorChecking(webDriver, applib);
+        errorchecking.VerifyErrorMessagePresent(nameNumber_ErrorMessage);
+        
+        Reporter.log("STEP 5");
+        addDynamicQueueType.ClickMachineNameEditLnk();
+        String dynamicQueueTypeName = random.GetCharacterString(15);        
         addDynamicQueueType.EnterName(dynamicQueueTypeName);
+        addDynamicQueueType.EnterMachineName(dynamicQueueTypeName);
         addDynamicQueueType.SelectCacheLifetime("1 min");		
         addDynamicQueueType.SelectEntityType();
         addDynamicQueueType.ClickSaveBtn();
@@ -62,27 +76,28 @@ public class CreateConfigureDynamicQueue extends ParentTest{
         contentParent.VerifyPageContentPresent(Arrays.asList(dynamicQueueTypeName));
         overlay.ClickCloseOverlayLnk();
         
-        Reporter.log("STEP 7");
+        Reporter.log("STEP 6&7");
         taxonomy.NavigateSite("Content>>Dynamic Queues>>Add " + dynamicQueueTypeName);
-        overlay.SwitchToActiveFrame();
-        
+        overlay.SwitchToActiveFrame();       
         String dynamicQueueTitle = random.GetCharacterString(15);
         AddDynamicQueue addDynamicQueue = new AddDynamicQueue(webDriver);
-        addDynamicQueue.EnterTitle(dynamicQueueTitle);
+        addDynamicQueue.EnterTitle(dynamicQueueTitle);       
         addDynamicQueue.CheckTargetBundle_Cbx("Character Profile");
         addDynamicQueue.CheckTargetBundle_Cbx("Post");
         addDynamicQueue.ClickSortByNewestRdb();
+        addDynamicQueue.SelectModerationState("Publish");
         addDynamicQueue.ClickSaveDynamicQueueBtn();
         overlay.switchToDefaultContent(true);
         
-        Reporter.log("STEP 8 to be done");
-        
-        Reporter.log("STEP 9 - MOVED TO SETUP");
-        
-        Reporter.log("STEP 10");
+        Reporter.log("STEP 8 ");
         taxonomy.NavigateSite("Content>>Dynamic Queues");
         overlay.SwitchToActiveFrame();
         DynamicQueues dynamicQueues = new DynamicQueues(webDriver, applib);
+        dynamicQueues.VerifyDynamicQueueStatus(dynamicQueueTitle, "Published");
+        
+        Reporter.log("STEP 9 - MOVED TO SETUP");
+        
+        Reporter.log("STEP 10 ");
         String dynamicQueueNodeID = dynamicQueues.GetDynamicQueueNodeNumber(dynamicQueueTitle);
         overlay.ClickCloseOverlayLnk();
         String parentWindow = webDriver.getWindowHandle();
@@ -209,7 +224,24 @@ public class CreateConfigureDynamicQueue extends ParentTest{
         contentParent.VerifyPageContentPresent(Arrays.asList(unpublishedPostTitle, postTitle, characterProfileTitle));
         contentParent.VerifyPageContentNotPresent(Arrays.asList(unpublishedPostBody, postBody, charProfBiography));
         
-        Reporter.log("STEP 27,28"); //To do
+        Reporter.log("STEP 27"); 
+        applib.switchToParentWindow(parentWindow);
+        taxonomy.NavigateSite("People>>Permissions");
+        overlay.SwitchToActiveFrame();
+        Permissions permissions = new Permissions(webDriver, applib);
+        permissions.EnablePermissions("anonymous user", Arrays.asList("access dynamic queues"));
+        permissions.EnablePermissions("authenticated user", Arrays.asList("access dynamic queues"));
+        permissions.ClickSaveConfigurationsBtn();
+        contentParent.VerifyMessageStatus("The changes have been saved.");
+        overlay.ClickCloseOverlayLnk();
+        Logout logout = new Logout(webDriver);
+        logout.ClickLogoutBtn();
        
+        Reporter.log("STEP 28");
+        applib.switchToNewWindow(parentWindow);
+        applib.refreshPage();
+        contentParent.VerifyPageContentPresent(Arrays.asList(postTitle, characterProfileTitle));
+        contentParent.VerifyPageContentNotPresent(Arrays.asList(unpublishedPostTitle, unpublishedPostBody));
+        
    } 
 }
