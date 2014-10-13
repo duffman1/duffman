@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
     <line>
-      <![CDATA[STEP 1]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://qa5.publisher7.com/user'.]]>
+      <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
     </line>
     <line>
       <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
@@ -17,319 +14,96 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[STEP 2]]>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Modules' menu link.]]>
+      <![CDATA[Mouse over the 'Add content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to frame titled 'Modules'.]]>
+      <![CDATA[Click the 'Person' menu link.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Pub SSO' in the 'Filter Name' text box.]]>
+      <![CDATA[Switch to the active frame titled 'Create Person dialog'.]]>
     </line>
     <line>
-      <![CDATA[Wait for module filter titled 'Pub SSO' to be visible in module list.]]>
+      <![CDATA[Enter '114589c078d5472' in the 'First name' text box.]]>
     </line>
     <line>
-      <![CDATA[Check the 'Pub SSO' check box.]]>
+      <![CDATA[Enter a random block of text in the 'Biography' text area.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
+      <![CDATA[Switch to the active frame titled 'Create Person dialog'.]]>
     </line>
     <line>
-      <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
+      <![CDATA[Click the 'Cover Photo' Select button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Continue' button to enable additional modules.]]>
+      <![CDATA[Switch to the select file frame.]]>
     </line>
     <line>
-      <![CDATA[Switch back to the 'Modules' frame.]]>
+      <![CDATA[Enter the file path for file upload.]]>
     </line>
     <line>
-      <![CDATA[Switch to frame titled 'Modules'.]]>
+      <![CDATA[Click the 'Upload' button.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
+      <![CDATA[Click the 'Next' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Home' menu link.]]>
+      <![CDATA[Click the 'Public Local Files' radio button.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Configuration' menu link.]]>
+      <![CDATA[Click the 'Next' button.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'People' menu link.]]>
+      <![CDATA[Verify the file image 'HanSolo' is present.]]>
     </line>
     <line>
-      <![CDATA[Click the 'SimpleSAMLphp Auth Settings' menu link.]]>
+      <![CDATA[Verify the img is loaded and visible.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'People dialog'.]]>
+      <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Enter the file path for certificate upload.]]>
+      <![CDATA[Switch to the active frame titled 'Create Person dialog'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
+      <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'A certificate exists for this instance of SimpleSAMLphp.' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Activate authentication via SimpleSAMLphp' check box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Logout' button.]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://qa5.publisher7.com/saml_login'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '206439339' in the 'SSO ID' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Pa55word' in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Sign In' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'FID.Publisher@nbcuni.com' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'Modules' is NOT present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 3]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Edit' link in the work bench.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'FID.Publisher@nbcuni.com dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Username' value is 'FID.Publisher@nbcuni.com' and the text box is disabled.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'E-mail address' value is 'FID.Publisher@nbcuni.com' and the text box is disabled.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 4]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Change your password' link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to new browser tab/window.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the user is redirected to the SSO Password Reset page.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 5]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'FID.Publisher@nbcuni.com dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Logout' button.]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://qa5.publisher7.com/user'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Login' button.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 6]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'People' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Add user' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'People dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Username' text box is not present.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'b1814d19cc154da@14d9e9c9572146f.com' in the 'E-mail address' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Password' and 'Password Confirm' text boxes are not present.]]>
-    </line>
-    <line>
-      <![CDATA[Check the 'editor' check box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '61e530f3bb1b40f' in the 'First Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '502136316d3146a' in the 'Last Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Create new account' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'A welcome message with further instructions has been e-mailed to the new user b1814d19cc154da@14d9e9c9572146f.com.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 7]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'People' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'People dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'next >' link until user 'b1814d19cc154da@14d9e9c9572146f.com' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'edit' link for 'b1814d19cc154da@14d9e9c9572146f.com' from the 'USERNAME' list.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'b1814d19cc154da@14d9e9c9572146f.com dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Username' value is 'b1814d19cc154da@14d9e9c9572146f.com' and the text box is disabled.]]>
-    </line>
-    <line>
-      <![CDATA[STEPS 8-11]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://qa5.publisher7.com/admin/config/people/simplesamlphp_auth'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Activate authentication via SimpleSAMLphp' check box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'SimpleSAMLphp authentication is NOT yet activated.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Home' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Modules' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Pub SSO' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for module filter titled 'Pub SSO' to be visible in module list.]]>
-    </line>
-    <line>
-      <![CDATA[Uncheck the 'Pub SSO' module checkbox.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'simpleSAMLphp authentication' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for module filter titled 'simpleSAMLphp authentication' to be visible in module list.]]>
-    </line>
-    <line>
-      <![CDATA[Uncheck the 'simpleSAMLphp authentication' module checkbox.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Home' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the '[[Driver: chrome on MAC (e91eedf4-87f7-43d0-a47c-ee95491a4ae2)] -> xpath: //span[@class='admin-menu-home-icon']/../..//a[text()='Flush all caches']]' menu link.]]>
+      <![CDATA[Verify success message of 'Person 114589c078d5472 has been created.' is present.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="191733" started-at="2014-10-13T15:33:21Z" finished-at="2014-10-13T15:36:32Z">
+  <suite name="Default suite" duration-ms="31305" started-at="2014-10-13T18:01:10Z" finished-at="2014-10-13T18:01:41Z">
     <groups>
-      <group name="sensitive">
-        <method signature="SSOManageUsers.SSOManageUsers_TC3853()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOManageUsers@4891a775]" name="SSOManageUsers_TC3853" class="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOManageUsers"/>
-        <method signature="SSOManageUsers.Cleanup()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOManageUsers@4891a775]" name="Cleanup" class="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOManageUsers"/>
-      </group> <!-- sensitive -->
+      <group name="full">
+        <method signature="CreatePerson.CreatePerson_TC1044()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson@3138f11c]" name="CreatePerson_TC1044" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson"/>
+      </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="191733" started-at="2014-10-13T15:33:21Z" finished-at="2014-10-13T15:36:32Z">
-      <class name="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOManageUsers">
-        <test-method status="PASS" signature="suiteSetup()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOManageUsers@4891a775]" name="suiteSetup" is-config="true" duration-ms="24" started-at="2014-10-13T11:33:21Z" finished-at="2014-10-13T11:33:21Z">
+    <test name="Default test" duration-ms="31305" started-at="2014-10-13T18:01:10Z" finished-at="2014-10-13T18:01:41Z">
+      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson">
+        <test-method status="PASS" signature="suiteSetup()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson@3138f11c]" name="suiteSetup" is-config="true" duration-ms="21" started-at="2014-10-13T14:01:10Z" finished-at="2014-10-13T14:01:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteSetup -->
-        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOManageUsers@4891a775]" name="startSelenium" is-config="true" duration-ms="3236" started-at="2014-10-13T11:33:21Z" finished-at="2014-10-13T11:33:24Z">
+        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson@3138f11c]" name="startSelenium" is-config="true" duration-ms="3221" started-at="2014-10-13T14:01:10Z" finished-at="2014-10-13T14:01:13Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOManageUsers.SSOManageUsers_TC3853() throws java.lang.Exception]]>
+                <![CDATA[public void com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson.CreatePerson_TC1044() throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="SSOManageUsers_TC3853()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOManageUsers@4891a775]" name="SSOManageUsers_TC3853" duration-ms="184755" started-at="2014-10-13T11:33:24Z" finished-at="2014-10-13T11:36:29Z">
+        <test-method status="PASS" signature="CreatePerson_TC1044()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson@3138f11c]" name="CreatePerson_TC1044" duration-ms="27499" started-at="2014-10-13T14:01:13Z" finished-at="2014-10-13T14:01:41Z">
           <reporter-output>
             <line>
-              <![CDATA[STEP 1]]>
-            </line>
-            <line>
-              <![CDATA[Open url 'http://qa5.publisher7.com/user'.]]>
+              <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
             </line>
             <line>
               <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
@@ -341,331 +115,86 @@
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
-              <![CDATA[STEP 2]]>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Modules' menu link.]]>
+              <![CDATA[Mouse over the 'Add content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to frame titled 'Modules'.]]>
+              <![CDATA[Click the 'Person' menu link.]]>
             </line>
             <line>
-              <![CDATA[Enter 'Pub SSO' in the 'Filter Name' text box.]]>
+              <![CDATA[Switch to the active frame titled 'Create Person dialog'.]]>
             </line>
             <line>
-              <![CDATA[Wait for module filter titled 'Pub SSO' to be visible in module list.]]>
+              <![CDATA[Enter '114589c078d5472' in the 'First name' text box.]]>
             </line>
             <line>
-              <![CDATA[Check the 'Pub SSO' check box.]]>
+              <![CDATA[Enter a random block of text in the 'Biography' text area.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
+              <![CDATA[Switch to the active frame titled 'Create Person dialog'.]]>
             </line>
             <line>
-              <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
+              <![CDATA[Click the 'Cover Photo' Select button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Continue' button to enable additional modules.]]>
+              <![CDATA[Switch to the select file frame.]]>
             </line>
             <line>
-              <![CDATA[Switch back to the 'Modules' frame.]]>
+              <![CDATA[Enter the file path for file upload.]]>
             </line>
             <line>
-              <![CDATA[Switch to frame titled 'Modules'.]]>
+              <![CDATA[Click the 'Upload' button.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
+              <![CDATA[Click the 'Next' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Home' menu link.]]>
+              <![CDATA[Click the 'Public Local Files' radio button.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Configuration' menu link.]]>
+              <![CDATA[Click the 'Next' button.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'People' menu link.]]>
+              <![CDATA[Verify the file image 'HanSolo' is present.]]>
             </line>
             <line>
-              <![CDATA[Click the 'SimpleSAMLphp Auth Settings' menu link.]]>
+              <![CDATA[Verify the img is loaded and visible.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'People dialog'.]]>
+              <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Enter the file path for certificate upload.]]>
+              <![CDATA[Switch to the active frame titled 'Create Person dialog'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
+              <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'A certificate exists for this instance of SimpleSAMLphp.' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Activate authentication via SimpleSAMLphp' check box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Logout' button.]]>
-            </line>
-            <line>
-              <![CDATA[Open url 'http://qa5.publisher7.com/saml_login'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '206439339' in the 'SSO ID' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Pa55word' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Sign In' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'FID.Publisher@nbcuni.com' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'Modules' is NOT present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 3]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Edit' link in the work bench.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'FID.Publisher@nbcuni.com dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Username' value is 'FID.Publisher@nbcuni.com' and the text box is disabled.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'E-mail address' value is 'FID.Publisher@nbcuni.com' and the text box is disabled.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 4]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Change your password' link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to new browser tab/window.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the user is redirected to the SSO Password Reset page.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 5]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'FID.Publisher@nbcuni.com dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Logout' button.]]>
-            </line>
-            <line>
-              <![CDATA[Open url 'http://qa5.publisher7.com/user'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Login' button.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 6]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'People' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Add user' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'People dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Username' text box is not present.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'b1814d19cc154da@14d9e9c9572146f.com' in the 'E-mail address' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Password' and 'Password Confirm' text boxes are not present.]]>
-            </line>
-            <line>
-              <![CDATA[Check the 'editor' check box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '61e530f3bb1b40f' in the 'First Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '502136316d3146a' in the 'Last Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Create new account' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'A welcome message with further instructions has been e-mailed to the new user b1814d19cc154da@14d9e9c9572146f.com.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 7]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'People' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'People dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'next >' link until user 'b1814d19cc154da@14d9e9c9572146f.com' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'edit' link for 'b1814d19cc154da@14d9e9c9572146f.com' from the 'USERNAME' list.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'b1814d19cc154da@14d9e9c9572146f.com dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Username' value is 'b1814d19cc154da@14d9e9c9572146f.com' and the text box is disabled.]]>
-            </line>
-            <line>
-              <![CDATA[STEPS 8-11]]>
-            </line>
-            <line>
-              <![CDATA[Open url 'http://qa5.publisher7.com/admin/config/people/simplesamlphp_auth'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Activate authentication via SimpleSAMLphp' check box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'SimpleSAMLphp authentication is NOT yet activated.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Home' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Modules' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Pub SSO' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for module filter titled 'Pub SSO' to be visible in module list.]]>
-            </line>
-            <line>
-              <![CDATA[Uncheck the 'Pub SSO' module checkbox.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'simpleSAMLphp authentication' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for module filter titled 'simpleSAMLphp authentication' to be visible in module list.]]>
-            </line>
-            <line>
-              <![CDATA[Uncheck the 'simpleSAMLphp authentication' module checkbox.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Home' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the '[[Driver: chrome on MAC (e91eedf4-87f7-43d0-a47c-ee95491a4ae2)] -> xpath: //span[@class='admin-menu-home-icon']/../..//a[text()='Flush all caches']]' menu link.]]>
+              <![CDATA[Verify success message of 'Person 114589c078d5472 has been created.' is present.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- SSOManageUsers_TC3853 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOManageUsers@4891a775]" name="stopSelenium" is-config="true" duration-ms="572" started-at="2014-10-13T11:36:29Z" finished-at="2014-10-13T11:36:29Z">
+        </test-method> <!-- CreatePerson_TC1044 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson@3138f11c]" name="stopSelenium" is-config="true" duration-ms="570" started-at="2014-10-13T14:01:41Z" finished-at="2014-10-13T14:01:41Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=SSOManageUsers_TC3853 status=SUCCESS method=SSOManageUsers.SSOManageUsers_TC3853()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOManageUsers@4891a775] output=STEP 1]]]>
+                <![CDATA[[TestResult name=CreatePerson_TC1044 status=SUCCESS method=CreatePerson.CreatePerson_TC1044()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson@3138f11c] output=Open url 'http://qa5.publisher7.com'.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOManageUsers@4891a775]" name="startSelenium" is-config="true" duration-ms="2590" started-at="2014-10-13T11:36:29Z" finished-at="2014-10-13T11:36:32Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOManageUsers.Cleanup() throws java.lang.Exception]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="Cleanup()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOManageUsers@4891a775]" name="Cleanup" duration-ms="1" started-at="2014-10-13T11:36:32Z" depends-on-methods="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOManageUsers.SSOManageUsers_TC3853" finished-at="2014-10-13T11:36:32Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Cleanup -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOManageUsers@4891a775]" name="stopSelenium" is-config="true" duration-ms="566" started-at="2014-10-13T11:36:32Z" finished-at="2014-10-13T11:36:32Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=Cleanup status=SUCCESS method=SSOManageUsers.Cleanup()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOManageUsers@4891a775] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="suiteTeardown()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOManageUsers@4891a775]" name="suiteTeardown" is-config="true" duration-ms="0" started-at="2014-10-13T11:36:32Z" finished-at="2014-10-13T11:36:32Z">
+        <test-method status="PASS" signature="suiteTeardown()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson@3138f11c]" name="suiteTeardown" is-config="true" duration-ms="0" started-at="2014-10-13T14:01:41Z" finished-at="2014-10-13T14:01:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteTeardown -->
-      </class> <!-- com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOManageUsers -->
+      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

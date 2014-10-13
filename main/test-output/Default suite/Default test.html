@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>2/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Oct 13 11:33:21 EDT 2014</td>
+<td>Started on:</td><td>Mon Oct 13 14:01:10 EDT 2014</td>
 </tr>
-<tr><td>Total time:</td><td>191 seconds (191733 ms)</td>
+<tr><td>Total time:</td><td>31 seconds (31305 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,120 +75,41 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOManageUsers.Cleanup()'><b>Cleanup</b><br>Test class: com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOManageUsers</td>
-<td></td>
-<td>0</td>
-<td>com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOManageUsers@4891a775</td></tr>
-<tr>
-<td title='com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOManageUsers.SSOManageUsers_TC3853()'><b>SSOManageUsers_TC3853</b><br>Test class: com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOManageUsers<br/>
-<a href="#Output-2013909272" onClick='toggleBox("Output-2013909272", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson.CreatePerson_TC1044()'><b>CreatePerson_TC1044</b><br>Test class: com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson<br/>
+<a href="#Output-952496253" onClick='toggleBox("Output-952496253", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-2013909272" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-2013909272">
-STEP 1<br/>
-Open url 'http://qa5.publisher7.com/user'.<br/>
+<a href="#Output-952496253" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-952496253">
+Open url 'http://qa5.publisher7.com'.<br/>
 Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
 Enter 'pa55word' in the 'Password' text box.<br/>
 Click the 'Login' button.<br/>
-STEP 2<br/>
-Click the 'Modules' menu link.<br/>
-Switch to frame titled 'Modules'.<br/>
-Enter 'Pub SSO' in the 'Filter Name' text box.<br/>
-Wait for module filter titled 'Pub SSO' to be visible in module list.<br/>
-Check the 'Pub SSO' check box.<br/>
-Click the 'Save configuration' button.<br/>
-Switch to frame titled 'Some required modules must be enabled'.<br/>
-Click the 'Continue' button to enable additional modules.<br/>
-Switch back to the 'Modules' frame.<br/>
-Switch to frame titled 'Modules'.<br/>
-Verify success message of 'The configuration options have been saved.' is present.<br/>
-Click the 'Close Overlay X'.<br/>
-Click the 'Home' menu link.<br/>
-Mouse over the 'Configuration' menu link.<br/>
-Mouse over the 'People' menu link.<br/>
-Click the 'SimpleSAMLphp Auth Settings' menu link.<br/>
-Switch to the active frame titled 'People dialog'.<br/>
-Enter the file path for certificate upload.<br/>
-Click the 'Save configuration' button.<br/>
-Verify success message of 'The configuration options have been saved.' is present.<br/>
-Verify the text 'A certificate exists for this instance of SimpleSAMLphp.' is present on the page.<br/>
-Click the 'Save configuration' button.<br/>
-Verify success message of 'The configuration options have been saved.' is present.<br/>
-Click the 'Activate authentication via SimpleSAMLphp' check box.<br/>
-Click the 'Save configuration' button.<br/>
-Verify success message of 'The configuration options have been saved.' is present.<br/>
-Click the 'Close Overlay X'.<br/>
-Click the 'Logout' button.<br/>
-Open url 'http://qa5.publisher7.com/saml_login'.<br/>
-Enter '206439339' in the 'SSO ID' text box.<br/>
-Enter 'Pa55word' in the 'Password' text box.<br/>
-Click the 'Sign In' button.<br/>
-Verify the text 'FID.Publisher@nbcuni.com' is present on the page.<br/>
-Verify the text 'Modules' is NOT present on the page.<br/>
-STEP 3<br/>
-Click the 'Edit' link in the work bench.<br/>
-Switch to the active frame titled 'FID.Publisher@nbcuni.com dialog'.<br/>
-Verify the 'Username' value is 'FID.Publisher@nbcuni.com' and the text box is disabled.<br/>
-Verify the 'E-mail address' value is 'FID.Publisher@nbcuni.com' and the text box is disabled.<br/>
-STEP 4<br/>
-Click the 'Change your password' link.<br/>
-Switch to new browser tab/window.<br/>
-Verify the user is redirected to the SSO Password Reset page.<br/>
-STEP 5<br/>
-Switch to the active frame titled 'FID.Publisher@nbcuni.com dialog'.<br/>
-Click the 'Close Overlay X'.<br/>
-Click the 'Logout' button.<br/>
-Open url 'http://qa5.publisher7.com/user'.<br/>
-Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
-Enter 'pa55word' in the 'Password' text box.<br/>
-Click the 'Login' button.<br/>
-STEP 6<br/>
-Mouse over the 'People' menu link.<br/>
-Click the 'Add user' menu link.<br/>
-Switch to the active frame titled 'People dialog'.<br/>
-Verify the 'Username' text box is not present.<br/>
-Enter 'b1814d19cc154da@14d9e9c9572146f.com' in the 'E-mail address' text box.<br/>
-Verify the 'Password' and 'Password Confirm' text boxes are not present.<br/>
-Check the 'editor' check box.<br/>
-Enter '61e530f3bb1b40f' in the 'First Name' text box.<br/>
-Enter '502136316d3146a' in the 'Last Name' text box.<br/>
-Click the 'Create new account' button.<br/>
-Verify success message of 'A welcome message with further instructions has been e-mailed to the new user b1814d19cc154da@14d9e9c9572146f.com.' is present.<br/>
-Click the 'Close Overlay X'.<br/>
-STEP 7<br/>
-Click the 'People' menu link.<br/>
-Switch to the active frame titled 'People dialog'.<br/>
-Click the 'next >' link until user 'b1814d19cc154da@14d9e9c9572146f.com' is present.<br/>
-Click the 'edit' link for 'b1814d19cc154da@14d9e9c9572146f.com' from the 'USERNAME' list.<br/>
-Switch to the active frame titled 'b1814d19cc154da@14d9e9c9572146f.com dialog'.<br/>
-Verify the 'Username' value is 'b1814d19cc154da@14d9e9c9572146f.com' and the text box is disabled.<br/>
-STEPS 8-11<br/>
-Open url 'http://qa5.publisher7.com/admin/config/people/simplesamlphp_auth'.<br/>
-Click the 'Activate authentication via SimpleSAMLphp' check box.<br/>
-Click the 'Save configuration' button.<br/>
-Verify success message of 'The configuration options have been saved.' is present.<br/>
-Verify success message of 'SimpleSAMLphp authentication is NOT yet activated.' is present.<br/>
-Click the 'Home' menu link.<br/>
-Click the 'Modules' menu link.<br/>
-Switch to the active frame titled 'Modules dialog'.<br/>
-Enter 'Pub SSO' in the 'Filter Name' text box.<br/>
-Wait for module filter titled 'Pub SSO' to be visible in module list.<br/>
-Uncheck the 'Pub SSO' module checkbox.<br/>
-Click the 'Save configuration' button.<br/>
-Verify success message of 'The configuration options have been saved.' is present.<br/>
-Enter 'simpleSAMLphp authentication' in the 'Filter Name' text box.<br/>
-Wait for module filter titled 'simpleSAMLphp authentication' to be visible in module list.<br/>
-Uncheck the 'simpleSAMLphp authentication' module checkbox.<br/>
-Click the 'Save configuration' button.<br/>
-Verify success message of 'The configuration options have been saved.' is present.<br/>
-Click the 'Close Overlay X'.<br/>
-Mouse over the 'Home' menu link.<br/>
-Click the '[[Driver: chrome on MAC (e91eedf4-87f7-43d0-a47c-ee95491a4ae2)] -> xpath: //span[@class='admin-menu-home-icon']/../..//a[text()='Flush all caches']]' menu link.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Add content' menu link.<br/>
+Click the 'Person' menu link.<br/>
+Switch to the active frame titled 'Create Person dialog'.<br/>
+Enter '114589c078d5472' in the 'First name' text box.<br/>
+Enter a random block of text in the 'Biography' text area.<br/>
+Switch to the active frame titled 'Create Person dialog'.<br/>
+Click the 'Cover Photo' Select button.<br/>
+Switch to the select file frame.<br/>
+Enter the file path for file upload.<br/>
+Click the 'Upload' button.<br/>
+Wait for the file link to be visible after upload.<br/>
+Click the 'Next' button.<br/>
+Click the 'Public Local Files' radio button.<br/>
+Click the 'Next' button.<br/>
+Verify the file image 'HanSolo' is present.<br/>
+Verify the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'Create Person dialog'.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'Person 114589c078d5472 has been created.' is present.<br/>
 </div>
 </td>
 <td></td>
-<td>184</td>
-<td>com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOManageUsers@4891a775</td></tr>
+<td>27</td>
+<td>com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson@3138f11c</td></tr>
 </table><p>
 </body>
 </html>
