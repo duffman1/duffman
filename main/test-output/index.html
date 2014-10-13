@@ -58,7 +58,7 @@
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="group-Default_suite">
-                    <span>3 groups</span>
+                    <span>1 group</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -90,7 +90,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -101,7 +101,12 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.SchedulingContentPublishUnpublished" hash-for-method="SchedulingContentPublishUnpublished_TC2159">SchedulingContentPublishUnpublished_TC2159</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents" hash-for-method="Cleanup">Cleanup</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents" hash-for-method="CountdownClockEvents_TC4887">CountdownClockEvents_TC4887</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -119,14 +124,21 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.SchedulingContentPublishUnpublished</span>
+              <span class="class-name">com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="SchedulingContentPublishUnpublished_TC2159">
-                  </a> <!-- SchedulingContentPublishUnpublished_TC2159 -->
-                  <span class="method-name">SchedulingContentPublishUnpublished_TC2159</span>
+                  <a name="Cleanup">
+                  </a> <!-- Cleanup -->
+                  <span class="method-name">Cleanup</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="CountdownClockEvents_TC4887">
+                  </a> <!-- CountdownClockEvents_TC4887 -->
+                  <span class="method-name">CountdownClockEvents_TC4887</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -134,7 +146,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/private/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/testng-eclipse-553094637/testng-customsuite.xml</span>
+            <span class="header-content">/private/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/testng-eclipse-1417624560/testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -143,7 +155,7 @@
 &lt;suite name=&quot;Default suite&quot;&gt;
   &lt;test verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.SchedulingContentPublishUnpublished&quot;/&gt;
+      &lt;class name=&quot;com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -168,26 +180,14 @@
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="test-group">
-              <span class="test-group-name">certify</span>
-              <br/>
-              <div class="method-in-group">
-                <span class="method-in-group-name">SchedulingContentPublishUnpublished_TC2159</span>
-                <br/>
-              </div> <!-- method-in-group -->
-            </div> <!-- test-group -->
-            <div class="test-group">
               <span class="test-group-name">full</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">SchedulingContentPublishUnpublished_TC2159</span>
+                <span class="method-in-group-name">Cleanup</span>
                 <br/>
               </div> <!-- method-in-group -->
-            </div> <!-- test-group -->
-            <div class="test-group">
-              <span class="test-group-name">mpx</span>
-              <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">SchedulingContentPublishUnpublished_TC2159</span>
+                <span class="method-in-group-name">CountdownClockEvents_TC4887</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -207,11 +207,15 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'SchedulingContentPublishUnpublished_TC2159')
-data.setCell(0, 2, 'com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.SchedulingContentPublishUnpublished')
-data.setCell(0, 3, 215601);
+data.setCell(0, 1, 'CountdownClockEvents_TC4887')
+data.setCell(0, 2, 'com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents')
+data.setCell(0, 3, 179982);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'Cleanup')
+data.setCell(1, 2, 'com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents')
+data.setCell(1, 3, 54110);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
@@ -228,215 +232,103 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="reporter-method-div">
-              <span class="reporter-method-name">SchedulingContentPublishUnpublished_TC2159</span>
+              <span class="reporter-method-name">CountdownClockEvents_TC4887</span>
               <div class="reporter-method-output-div">
                 <span class="reporter-method-output">STEP 1</span>
                 <span class="reporter-method-output">Open url 'http://qa5.publisher7.com'.</span>
                 <span class="reporter-method-output">Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.</span>
                 <span class="reporter-method-output">Enter 'pa55word' in the 'Password' text box.</span>
                 <span class="reporter-method-output">Click the 'Login' button.</span>
-                <span class="reporter-method-output">STEP 2 and 3</span>
-                <span class="reporter-method-output">Mouse over the 'Content' menu link.</span>
-                <span class="reporter-method-output">Mouse over the 'Add content' menu link.</span>
-                <span class="reporter-method-output">Click the 'Post' menu link.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'Create Post dialog'.</span>
-                <span class="reporter-method-output">Enter 'defed2b6b31d480' in the 'Title' text box.</span>
-                <span class="reporter-method-output">Switch to the Synopsis frame.</span>
-                <span class="reporter-method-output">Enter a randomized text string into the 'Body' text area.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'Create Post dialog'.</span>
-                <span class="reporter-method-output">Click the 'Cover' select button.</span>
-                <span class="reporter-method-output">Switch to the select file frame.</span>
-                <span class="reporter-method-output">Enter the file path for file upload.</span>
-                <span class="reporter-method-output">Click the 'Upload' button.</span>
-                <span class="reporter-method-output">Wait for the file link to be visible after upload.</span>
-                <span class="reporter-method-output">Click the 'Next' button.</span>
-                <span class="reporter-method-output">Click the 'Public Local Files' radio button.</span>
-                <span class="reporter-method-output">Click the 'Next' button.</span>
-                <span class="reporter-method-output">Verify the file image 'HanSolo' is present.</span>
-                <span class="reporter-method-output">Verify the img is loaded and visible.</span>
-                <span class="reporter-method-output">Click the 'Save' button.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'Create Post dialog'.</span>
-                <span class="reporter-method-output">Scroll the 'Publishing Options' link into view.</span>
-                <span class="reporter-method-output">Click the 'Publishing Options' link.</span>
-                <span class="reporter-method-output">Select 'Draft' from the 'Moderation State' drop down list.</span>
-                <span class="reporter-method-output">Click the 'Save' button.</span>
-                <span class="reporter-method-output">Verify success message of 'Post defed2b6b31d480 has been created.' is present.</span>
-                <span class="reporter-method-output">STEP 4</span>
-                <span class="reporter-method-output">Click the 'Schedule' link in the work bench.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'defed2b6b31d480 dialog'.</span>
-                <span class="reporter-method-output">Click the 'Add Scheduled Revision' link.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'defed2b6b31d480 dialog'.</span>
-                <span class="reporter-method-output">STEP 5</span>
-                <span class="reporter-method-output">Select revision titled 'defed2b6b31d480'.</span>
-                <span class="reporter-method-output">Verify that the 'Operation' option count equals '5'.</span>
-                <span class="reporter-method-output">Select 'Moderate to Published' from the 'Select operation' drop down list.</span>
-                <span class="reporter-method-output">STEP 6</span>
-                <span class="reporter-method-output">Enter '10/10/2014' in the 'Date' text box.</span>
-                <span class="reporter-method-output">Enter '07:15 PM' in the 'Time' text box.</span>
-                <span class="reporter-method-output">STEP 7</span>
-                <span class="reporter-method-output">Click the 'Schedule' button.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'defed2b6b31d480 dialog'.</span>
-                <span class="reporter-method-output">Verify success message of 'The scheduled revision operation has been saved' is present.</span>
-                <span class="reporter-method-output">STEP 8</span>
-                <span class="reporter-method-output">Verify the scheduled text 'defed2b6b31d480' is present in the scheduled queue.</span>
-                <span class="reporter-method-output">Verify the scheduled text 'Moderate to Published' is present in the scheduled queue.</span>
-                <span class="reporter-method-output">Verify the scheduled text '10/10/2014 - ' is present in the scheduled queue.</span>
-                <span class="reporter-method-output">Verify the 'Run now' link is present for content item 'defed2b6b31d480' with action 'Moderate to Published'.</span>
-                <span class="reporter-method-output">Verify the 'Cancel' link is present for content item 'defed2b6b31d480' with action 'Moderate to Published'.</span>
+                <span class="reporter-method-output">STEP 2</span>
+                <span class="reporter-method-output">Click the 'Modules' menu link.</span>
+                <span class="reporter-method-output">Switch to frame titled 'Modules'.</span>
+                <span class="reporter-method-output">Enter 'Event Countdown' in the 'Filter Name' text box.</span>
+                <span class="reporter-method-output">Wait for module filter titled 'Event Countdown' to be visible in module list.</span>
+                <span class="reporter-method-output">Check the 'Event Countdown' check box.</span>
+                <span class="reporter-method-output">Click the 'Save configuration' button.</span>
+                <span class="reporter-method-output">Switch to frame titled 'Some required modules must be enabled'.</span>
+                <span class="reporter-method-output">Switch back to the 'Modules' frame.</span>
+                <span class="reporter-method-output">Switch to frame titled 'Modules'.</span>
+                <span class="reporter-method-output">Verify success message of 'The configuration options have been saved.' is present.</span>
                 <span class="reporter-method-output">Click the 'Close Overlay X'.</span>
-                <span class="reporter-method-output">STEP 9</span>
+                <span class="reporter-method-output">Click the 'Home' menu link.</span>
+                <span class="reporter-method-output">STEP 3</span>
+                <span class="reporter-method-output">Mouse over the 'Configuration' menu link.</span>
+                <span class="reporter-method-output">Mouse over the 'Media' menu link.</span>
+                <span class="reporter-method-output">Click the 'Event Countdown' menu link.</span>
+                <span class="reporter-method-output">Switch to the active frame titled 'Event Countdown dialog'.</span>
+                <span class="reporter-method-output">Click the 'Create' button.</span>
+                <span class="reporter-method-output">Wait for the sample nodes to be created.</span>
+                <span class="reporter-method-output">Click the 'Close Overlay X'.</span>
+                <span class="reporter-method-output">STEP 4</span>
+                <span class="reporter-method-output">STEP 5 AND 6</span>
                 <span class="reporter-method-output">Click the 'Content' menu link.</span>
                 <span class="reporter-method-output">Switch to the active frame titled 'Content dialog'.</span>
-                <span class="reporter-method-output">Enter title futurePost10/10/2014.</span>
+                <span class="reporter-method-output">Enter title Birthday Event.</span>
                 <span class="reporter-method-output">Click the 'Apply' button.</span>
-                <span class="reporter-method-output">Get the text of the first search result set item.</span>
-                <span class="reporter-method-output">Click the first search title link in the search result set.</span>
-                <span class="reporter-method-output">Verify the text 'Revision state: Published' is present in the work bench info block.</span>
-                <span class="reporter-method-output">Verify the text 'Public: Yes' is present in the work bench info block.</span>
+                <span class="reporter-method-output">Click the 'Edit' link for content item titled 'Birthday Event.</span>
+                <span class="reporter-method-output">Enter '10/13/2014 in the 'Date' text box.</span>
+                <span class="reporter-method-output">Enter '02:41:37PM in the 'Time' text box.</span>
+                <span class="reporter-method-output">Enter 'http://www.amazon.com/s/ref=nb_sb_ss_c_0_8/190-0002947-5703141?url=search-alias%3Dtoys-and-games&field-keywords=birthday%20party%20supplies&sprefix=birthday%2Caps%2C168' in the 'Active Call to Action' text box.</span>
+                <span class="reporter-method-output">Click the 'Active Image Select' button.</span>
+                <span class="reporter-method-output">Switch to the select file frame.</span>
+                <span class="reporter-method-output">Enter the file path for file upload.</span>
+                <span class="reporter-method-output">Click the 'Upload' button.</span>
+                <span class="reporter-method-output">Wait for the file link to be visible after upload.</span>
+                <span class="reporter-method-output">Click the 'Next' button.</span>
+                <span class="reporter-method-output">Click the 'Public Local Files' radio button.</span>
+                <span class="reporter-method-output">Click the 'Next' button.</span>
+                <span class="reporter-method-output">Verify the file image 'HanSolo' is present.</span>
+                <span class="reporter-method-output">Verify the img is loaded and visible.</span>
+                <span class="reporter-method-output">Click the 'Save' button.</span>
+                <span class="reporter-method-output">Enter '#FF0000' in the 'Active Background Color' text box.</span>
+                <span class="reporter-method-output">Enter 'http://www.nbc.com' in the 'Expiry Call to Action' text box.</span>
+                <span class="reporter-method-output">Click the 'Expiry Image Select' button.</span>
+                <span class="reporter-method-output">Switch to the select file frame.</span>
+                <span class="reporter-method-output">Enter the file path for file upload.</span>
+                <span class="reporter-method-output">Click the 'Upload' button.</span>
+                <span class="reporter-method-output">Wait for the file link to be visible after upload.</span>
+                <span class="reporter-method-output">Click the 'Next' button.</span>
+                <span class="reporter-method-output">Click the 'Public Local Files' radio button.</span>
+                <span class="reporter-method-output">Click the 'Next' button.</span>
+                <span class="reporter-method-output">Verify the file image 'nbclogosmall' is present.</span>
+                <span class="reporter-method-output">Verify the img is loaded and visible.</span>
+                <span class="reporter-method-output">Click the 'Save' button.</span>
+                <span class="reporter-method-output">Enter '#00FFFF' in the 'Expiry Background Color' text box.</span>
+                <span class="reporter-method-output">Click the 'Save' button.</span>
+                <span class="reporter-method-output">STEP 7</span>
+                <span class="reporter-method-output">Mouse over the 'Structure' menu link.</span>
+                <span class="reporter-method-output">Click the 'Blocks' menu link.</span>
+                <span class="reporter-method-output">Select the block name 'Birthday Block' from the 'Content' drop down list.</span>
+                <span class="reporter-method-output">Select the block name 'Holiday Party Block' from the 'Content' drop down list.</span>
+                <span class="reporter-method-output">Click the 'Save Blocks' button.</span>
+                <span class="reporter-method-output">Verify success message of 'The block settings have been updated.' is present.</span>
+                <span class="reporter-method-output">STEP 8</span>
+                <span class="reporter-method-output">Click the 'Home' menu link.</span>
+                <span class="reporter-method-output">STEP 9</span>
+                <span class="reporter-method-output">Verify the countdown timer is visible.</span>
+                <span class="reporter-method-output">Verify the countdown timer is counting down.</span>
+                <span class="reporter-method-output">Assert that active img source of the event contains 'HanSolo'.</span>
+                <span class="reporter-method-output">Assert the the img is loaded and visible.</span>
+                <span class="reporter-method-output">Verify the active background color of '#FF0000' is visible for event with title 'Birthday Event'.</span>
+                <span class="reporter-method-output">Verify the active link href of 'http://www.amazon.com/s/ref=nb_sb_ss_c_0_8/190-0002947-5703141?url=search-alias%3Dtoys-and-games&field-keywords=birthday%20party%20supplies&sprefix=birthday%2Caps%2C168' is visible for event with title 'Birthday Event'.</span>
                 <span class="reporter-method-output">STEP 10</span>
-                <span class="reporter-method-output">Mouse over the 'Content' menu link.</span>
-                <span class="reporter-method-output">Mouse over the 'Add content' menu link.</span>
-                <span class="reporter-method-output">Click the 'Post' menu link.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'Create Post dialog'.</span>
-                <span class="reporter-method-output">Enter '90daa1c8b42c4f9' in the 'Title' text box.</span>
-                <span class="reporter-method-output">Switch to the Synopsis frame.</span>
-                <span class="reporter-method-output">Enter a randomized text string into the 'Body' text area.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'Create Post dialog'.</span>
-                <span class="reporter-method-output">Click the 'Cover' select button.</span>
-                <span class="reporter-method-output">Switch to the select file frame.</span>
-                <span class="reporter-method-output">Enter the file path for file upload.</span>
-                <span class="reporter-method-output">Click the 'Upload' button.</span>
-                <span class="reporter-method-output">Wait for the file link to be visible after upload.</span>
-                <span class="reporter-method-output">Click the 'Next' button.</span>
-                <span class="reporter-method-output">Click the 'Public Local Files' radio button.</span>
-                <span class="reporter-method-output">Click the 'Next' button.</span>
-                <span class="reporter-method-output">Verify the file image 'HanSolo' is present.</span>
-                <span class="reporter-method-output">Verify the img is loaded and visible.</span>
-                <span class="reporter-method-output">Click the 'Save' button.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'Create Post dialog'.</span>
-                <span class="reporter-method-output">Scroll the 'Publishing Options' link into view.</span>
-                <span class="reporter-method-output">Click the 'Publishing Options' link.</span>
-                <span class="reporter-method-output">Select 'Draft' from the 'Moderation State' drop down list.</span>
-                <span class="reporter-method-output">Click the 'Save' button.</span>
-                <span class="reporter-method-output">Verify success message of 'Post 90daa1c8b42c4f9 has been created.' is present.</span>
-                <span class="reporter-method-output">Click the 'Schedule' link in the work bench.</span>
-                <span class="reporter-method-output">Switch to the active frame titled '90daa1c8b42c4f9 dialog'.</span>
-                <span class="reporter-method-output">Click the 'Add Scheduled Revision' link.</span>
-                <span class="reporter-method-output">Switch to the active frame titled '90daa1c8b42c4f9 dialog'.</span>
-                <span class="reporter-method-output">Select revision titled '90daa1c8b42c4f9'.</span>
-                <span class="reporter-method-output">Select 'Moderate to Published' from the 'Select operation' drop down list.</span>
-                <span class="reporter-method-output">Enter '10/10/2014' in the 'Date' text box.</span>
-                <span class="reporter-method-output">Enter '07:19 PM' in the 'Time' text box.</span>
-                <span class="reporter-method-output">Click the 'Schedule' button.</span>
-                <span class="reporter-method-output">Switch to the active frame titled '90daa1c8b42c4f9 dialog'.</span>
-                <span class="reporter-method-output">Verify success message of 'The scheduled revision operation has been saved' is present.</span>
-                <span class="reporter-method-output">Switch to the active frame titled '90daa1c8b42c4f9 dialog'.</span>
-                <span class="reporter-method-output">Verify the scheduled text '90daa1c8b42c4f9' is present in the scheduled queue.</span>
-                <span class="reporter-method-output">Verify the scheduled text 'Moderate to Published' is present in the scheduled queue.</span>
-                <span class="reporter-method-output">Verify the scheduled text '10/10/2014 - ' is present in the scheduled queue.</span>
-                <span class="reporter-method-output">Click the 'Run now' link for content item '90daa1c8b42c4f9' with action 'Moderate to Published'.</span>
-                <span class="reporter-method-output">STEP 11</span>
-                <span class="reporter-method-output">Switch to the active frame titled '90daa1c8b42c4f9 dialog'.</span>
-                <span class="reporter-method-output">Verify the scheduled text '90daa1c8b42c4f9' is present in the scheduled queue.</span>
-                <span class="reporter-method-output">Verify the scheduled text 'Moderate to Published' is present in the scheduled queue.</span>
-                <span class="reporter-method-output">Verify the scheduled text '10/10/2014 - ' is present in the scheduled queue.</span>
-                <span class="reporter-method-output">Verify the scheduled text 'Completed' is present in the scheduled queue.</span>
-                <span class="reporter-method-output">Click the 'Close Overlay X'.</span>
-                <span class="reporter-method-output">STEP 12</span>
-                <span class="reporter-method-output">Mouse over the 'Content' menu link.</span>
-                <span class="reporter-method-output">Mouse over the 'Add content' menu link.</span>
-                <span class="reporter-method-output">Click the 'Post' menu link.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'Create Post dialog'.</span>
-                <span class="reporter-method-output">Enter '82744f275281416' in the 'Title' text box.</span>
-                <span class="reporter-method-output">Switch to the Synopsis frame.</span>
-                <span class="reporter-method-output">Enter a randomized text string into the 'Body' text area.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'Create Post dialog'.</span>
-                <span class="reporter-method-output">Click the 'Cover' select button.</span>
-                <span class="reporter-method-output">Switch to the select file frame.</span>
-                <span class="reporter-method-output">Enter the file path for file upload.</span>
-                <span class="reporter-method-output">Click the 'Upload' button.</span>
-                <span class="reporter-method-output">Wait for the file link to be visible after upload.</span>
-                <span class="reporter-method-output">Click the 'Next' button.</span>
-                <span class="reporter-method-output">Click the 'Public Local Files' radio button.</span>
-                <span class="reporter-method-output">Click the 'Next' button.</span>
-                <span class="reporter-method-output">Verify the file image 'HanSolo' is present.</span>
-                <span class="reporter-method-output">Verify the img is loaded and visible.</span>
-                <span class="reporter-method-output">Click the 'Save' button.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'Create Post dialog'.</span>
-                <span class="reporter-method-output">Scroll the 'Publishing Options' link into view.</span>
-                <span class="reporter-method-output">Click the 'Publishing Options' link.</span>
-                <span class="reporter-method-output">Select 'Draft' from the 'Moderation State' drop down list.</span>
-                <span class="reporter-method-output">Click the 'Save' button.</span>
-                <span class="reporter-method-output">Verify success message of 'Post 82744f275281416 has been created.' is present.</span>
-                <span class="reporter-method-output">Click the 'Schedule' link in the work bench.</span>
-                <span class="reporter-method-output">Switch to the active frame titled '82744f275281416 dialog'.</span>
-                <span class="reporter-method-output">Click the 'Add Scheduled Revision' link.</span>
-                <span class="reporter-method-output">Switch to the active frame titled '82744f275281416 dialog'.</span>
-                <span class="reporter-method-output">Select revision titled '82744f275281416'.</span>
-                <span class="reporter-method-output">Select 'Moderate to Published' from the 'Select operation' drop down list.</span>
-                <span class="reporter-method-output">Enter '10/10/2014' in the 'Date' text box.</span>
-                <span class="reporter-method-output">Enter '07:19 PM' in the 'Time' text box.</span>
-                <span class="reporter-method-output">Click the 'Schedule' button.</span>
-                <span class="reporter-method-output">Switch to the active frame titled '82744f275281416 dialog'.</span>
-                <span class="reporter-method-output">Verify success message of 'The scheduled revision operation has been saved' is present.</span>
-                <span class="reporter-method-output">Switch to the active frame titled '82744f275281416 dialog'.</span>
-                <span class="reporter-method-output">Verify the scheduled text '82744f275281416' is present in the scheduled queue.</span>
-                <span class="reporter-method-output">Verify the scheduled text 'Moderate to Published' is present in the scheduled queue.</span>
-                <span class="reporter-method-output">Verify the scheduled text '10/10/2014 - ' is present in the scheduled queue.</span>
-                <span class="reporter-method-output">Click the 'Run now' expand menu link for content item '82744f275281416' with action 'Moderate to Published'.</span>
-                <span class="reporter-method-output">Click the 'Cancel' link for content item '82744f275281416' with action 'Moderate to Published'.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'Are you sure you want to cancel this scheduled revision? dialog'.</span>
-                <span class="reporter-method-output">Click the 'Confirm' button.</span>
-                <span class="reporter-method-output">Switch to the active frame titled '82744f275281416 dialog'.</span>
-                <span class="reporter-method-output">Verify success message of 'The scheduled revision operation has been cancelled.' is present.</span>
-                <span class="reporter-method-output">Verify the text 'Moderate to Published' is NOT present on the page.</span>
-                <span class="reporter-method-output">Click the 'Close Overlay X'.</span>
+                <span class="reporter-method-output">Verify the countdown timer is NOT counting down.</span>
+                <span class="reporter-method-output">Assert that expiry img source of the event contains 'nbclogosmall'.</span>
+                <span class="reporter-method-output">Assert the the img is loaded and visible.</span>
+                <span class="reporter-method-output">Verify the expiry background color of '#00FFFF' is visible for event with title 'Birthday Event'.</span>
+                <span class="reporter-method-output">Verify the expiry link href of 'http://www.nbc.com' is visible for event with title 'Birthday Event'.</span>
+                <span class="reporter-method-output">STEP 11 AND 12</span>
                 <span class="reporter-method-output">STEP 13</span>
-                <span class="reporter-method-output">Mouse over the 'My Workbench' menu link.</span>
-                <span class="reporter-method-output">Mouse over the 'Create content' menu link.</span>
-                <span class="reporter-method-output">Click the 'Post' menu link.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'Create Post dialog'.</span>
-                <span class="reporter-method-output">Enter '8770f645e2c54b6' in the 'Title' text box.</span>
-                <span class="reporter-method-output">Switch to the Synopsis frame.</span>
-                <span class="reporter-method-output">Enter a randomized text string into the 'Body' text area.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'Create Post dialog'.</span>
-                <span class="reporter-method-output">Scroll the 'Publishing Options' link into view.</span>
-                <span class="reporter-method-output">Click the 'Publishing Options' link.</span>
-                <span class="reporter-method-output">Select 'Draft' from the 'Moderation State' drop down list.</span>
-                <span class="reporter-method-output">Click the 'Save' button.</span>
-                <span class="reporter-method-output">Verify success message of 'Post 8770f645e2c54b6 has been created.' is present.</span>
-                <span class="reporter-method-output">Click the 'Schedule' link in the work bench.</span>
-                <span class="reporter-method-output">Switch to the active frame titled '8770f645e2c54b6 dialog'.</span>
-                <span class="reporter-method-output">Click the 'Add Scheduled Revision' link.</span>
-                <span class="reporter-method-output">Switch to the active frame titled '8770f645e2c54b6 dialog'.</span>
-                <span class="reporter-method-output">Select revision titled '8770f645e2c54b6'.</span>
-                <span class="reporter-method-output">Select 'Moderate to Published' from the 'Select operation' drop down list.</span>
-                <span class="reporter-method-output">Enter '10/10/2014' in the 'Date' text box.</span>
-                <span class="reporter-method-output">Enter '07:19 PM' in the 'Time' text box.</span>
-                <span class="reporter-method-output">Click the 'Schedule' button.</span>
-                <span class="reporter-method-output">Switch to the active frame titled '8770f645e2c54b6 dialog'.</span>
-                <span class="reporter-method-output">Verify success message of 'The scheduled revision operation has been saved' is present.</span>
-                <span class="reporter-method-output">Switch to the active frame titled '8770f645e2c54b6 dialog'.</span>
-                <span class="reporter-method-output">Verify the scheduled text '8770f645e2c54b6' is present in the scheduled queue.</span>
-                <span class="reporter-method-output">Verify the scheduled text 'Moderate to Published' is present in the scheduled queue.</span>
-                <span class="reporter-method-output">Verify the scheduled text '10/10/2014 - ' is present in the scheduled queue.</span>
-                <span class="reporter-method-output">Click the 'Run now' link for content item '8770f645e2c54b6' with action 'Moderate to Published'.</span>
-                <span class="reporter-method-output">Switch to the active frame titled '8770f645e2c54b6 dialog'.</span>
-                <span class="reporter-method-output">Verify the scheduled text '8770f645e2c54b6' is present in the scheduled queue.</span>
-                <span class="reporter-method-output">Verify the scheduled text 'Moderate to Published' is present in the scheduled queue.</span>
-                <span class="reporter-method-output">Verify the scheduled text '10/10/2014 - ' is present in the scheduled queue.</span>
-                <span class="reporter-method-output">Verify the scheduled text 'Completed' is present in the scheduled queue.</span>
-                <span class="reporter-method-output">Click the 'Close Overlay X'.</span>
-                <span class="reporter-method-output">STEP 14</span>
                 <span class="reporter-method-output">Mouse over the 'Content' menu link.</span>
                 <span class="reporter-method-output">Mouse over the 'Add content' menu link.</span>
-                <span class="reporter-method-output">Click the 'Post' menu link.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'Create Post dialog'.</span>
-                <span class="reporter-method-output">Enter '5b33b83c762f413' in the 'Title' text box.</span>
-                <span class="reporter-method-output">Switch to the Synopsis frame.</span>
-                <span class="reporter-method-output">Enter a randomized text string into the 'Body' text area.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'Create Post dialog'.</span>
-                <span class="reporter-method-output">Click the 'Cover' select button.</span>
+                <span class="reporter-method-output">Click the 'Event Countdown' menu link.</span>
+                <span class="reporter-method-output">Switch to the active frame titled 'Create Event Countdown dialog'.</span>
+                <span class="reporter-method-output">Enter 'f470b62f89754c3' in the 'Title' text box.</span>
+                <span class="reporter-method-output">Enter '10/13/2014 in the 'Date' text box.</span>
+                <span class="reporter-method-output">Enter '02:43:06PM in the 'Time' text box.</span>
+                <span class="reporter-method-output">Enter 'http://www.amazon.com/s/ref=nb_sb_ss_c_0_8/190-0002947-5703141?url=search-alias%3Dtoys-and-games&field-keywords=birthday%20party%20supplies&sprefix=birthday%2Caps%2C168' in the 'Active Call to Action' text box.</span>
+                <span class="reporter-method-output">Click the 'Active Image Select' button.</span>
                 <span class="reporter-method-output">Switch to the select file frame.</span>
                 <span class="reporter-method-output">Enter the file path for file upload.</span>
                 <span class="reporter-method-output">Click the 'Upload' button.</span>
@@ -447,69 +339,50 @@ return data;
                 <span class="reporter-method-output">Verify the file image 'HanSolo' is present.</span>
                 <span class="reporter-method-output">Verify the img is loaded and visible.</span>
                 <span class="reporter-method-output">Click the 'Save' button.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'Create Post dialog'.</span>
-                <span class="reporter-method-output">Scroll the 'Publishing Options' link into view.</span>
-                <span class="reporter-method-output">Click the 'Publishing Options' link.</span>
-                <span class="reporter-method-output">Select 'Draft' from the 'Moderation State' drop down list.</span>
+                <span class="reporter-method-output">Switch to the active frame titled 'Create Event Countdown dialog'.</span>
+                <span class="reporter-method-output">Enter '#FF0000' in the 'Active Background Color' text box.</span>
+                <span class="reporter-method-output">Enter 'http://www.nbc.com' in the 'Expiry Call to Action' text box.</span>
+                <span class="reporter-method-output">Click the 'Expiry Image Select' button.</span>
+                <span class="reporter-method-output">Switch to the select file frame.</span>
+                <span class="reporter-method-output">Enter the file path for file upload.</span>
+                <span class="reporter-method-output">Click the 'Upload' button.</span>
+                <span class="reporter-method-output">Wait for the file link to be visible after upload.</span>
+                <span class="reporter-method-output">Click the 'Next' button.</span>
+                <span class="reporter-method-output">Click the 'Public Local Files' radio button.</span>
+                <span class="reporter-method-output">Click the 'Next' button.</span>
+                <span class="reporter-method-output">Verify the file image 'nbclogosmall' is present.</span>
+                <span class="reporter-method-output">Verify the img is loaded and visible.</span>
                 <span class="reporter-method-output">Click the 'Save' button.</span>
-                <span class="reporter-method-output">Verify success message of 'Post 5b33b83c762f413 has been created.' is present.</span>
-                <span class="reporter-method-output">Click the 'Edit Draft' link in the work bench.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'Edit Post 5b33b83c762f413 dialog'.</span>
-                <span class="reporter-method-output">Switch to the Synopsis frame.</span>
-                <span class="reporter-method-output">Enter a randomized text string into the 'Body' text area.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'Edit Post 5b33b83c762f413 dialog'.</span>
+                <span class="reporter-method-output">Switch to the active frame titled 'Create Event Countdown dialog'.</span>
+                <span class="reporter-method-output">Enter '#00FFFF' in the 'Expiry Background Color' text box.</span>
                 <span class="reporter-method-output">Click the 'Save' button.</span>
-                <span class="reporter-method-output">Verify success message of 'Post 5b33b83c762f413 has been updated.' is present.</span>
-                <span class="reporter-method-output">STEP 15 and 16</span>
-                <span class="reporter-method-output">Click the 'Revisions' link in the work bench.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'Revisions dialog'.</span>
-                <span class="reporter-method-output">Verify the number of present revisions entries equals '2'.</span>
-                <span class="reporter-method-output">Click the 'Edit' extend menu button.</span>
-                <span class="reporter-method-output">Click the 'Schedule' menu button.</span>
-                <span class="reporter-method-output">Switch to the active frame titled '5b33b83c762f413 dialog'.</span>
-                <span class="reporter-method-output">Select revision titled '5b33b83c762f413'.</span>
-                <span class="reporter-method-output">Select 'Moderate to Published' from the 'Select operation' drop down list.</span>
-                <span class="reporter-method-output">Enter '10/10/2014' in the 'Date' text box.</span>
-                <span class="reporter-method-output">Enter '07:19 PM' in the 'Time' text box.</span>
-                <span class="reporter-method-output">Click the 'Schedule' button.</span>
-                <span class="reporter-method-output">Verify success message of 'The scheduled revision operation has been saved' is present.</span>
-                <span class="reporter-method-output">STEP 17</span>
-                <span class="reporter-method-output">Click the 'Schedule' link in the work bench.</span>
-                <span class="reporter-method-output">Switch to the active frame titled '5b33b83c762f413 dialog'.</span>
-                <span class="reporter-method-output">Verify the scheduled text '5b33b83c762f413' is present in the scheduled queue.</span>
-                <span class="reporter-method-output">Verify the scheduled text 'Moderate to Published' is present in the scheduled queue.</span>
-                <span class="reporter-method-output">Verify the scheduled text '10/10/2014 - ' is present in the scheduled queue.</span>
-                <span class="reporter-method-output">Verify the 'Run now' link is present for content item '5b33b83c762f413' with action 'Moderate to Published'.</span>
-                <span class="reporter-method-output">Click the 'Close Overlay X'.</span>
-                <span class="reporter-method-output">STEP 18 and 19 - TODO</span>
-                <span class="reporter-method-output">STEP 20</span>
-                <span class="reporter-method-output">Mouse over the 'My Workbench' menu link.</span>
-                <span class="reporter-method-output">Mouse over the 'Create content' menu link.</span>
-                <span class="reporter-method-output">Click the 'Post' menu link.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'Create Post dialog'.</span>
-                <span class="reporter-method-output">Enter 'f02a68ead0544a2' in the 'Title' text box.</span>
-                <span class="reporter-method-output">Switch to the Synopsis frame.</span>
-                <span class="reporter-method-output">Enter a randomized text string into the 'Body' text area.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'Create Post dialog'.</span>
-                <span class="reporter-method-output">Scroll the 'Publishing Options' link into view.</span>
-                <span class="reporter-method-output">Click the 'Publishing Options' link.</span>
-                <span class="reporter-method-output">Select 'Draft' from the 'Moderation State' drop down list.</span>
-                <span class="reporter-method-output">Select 'Moderate to Published' from the 'Select operation' drop down list.</span>
-                <span class="reporter-method-output">Enter '10/11/2014' in the 'Date' text box.</span>
-                <span class="reporter-method-output">Enter '07:16 PM' in the 'Time' text box.</span>
-                <span class="reporter-method-output">Click the 'Save' button.</span>
-                <span class="reporter-method-output">Verify success message of 'Post f02a68ead0544a2 has been created.' is present.</span>
-                <span class="reporter-method-output">Verify success message of 'f02a68ead0544a2 has been scheduled to Moderate to Published on 10/11/2014 - ' is present.</span>
-                <span class="reporter-method-output">Click the 'Schedule' link in the work bench.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'f02a68ead0544a2 dialog'.</span>
-                <span class="reporter-method-output">Verify the scheduled text 'f02a68ead0544a2' is present in the scheduled queue.</span>
-                <span class="reporter-method-output">Verify the scheduled text 'Moderate to Published' is present in the scheduled queue.</span>
-                <span class="reporter-method-output">Verify the scheduled text '10/11/2014 - ' is present in the scheduled queue.</span>
-                <span class="reporter-method-output">Click the 'Run now' link for content item 'f02a68ead0544a2' with action 'Moderate to Published'.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'f02a68ead0544a2 dialog'.</span>
-                <span class="reporter-method-output">Verify the scheduled text 'f02a68ead0544a2' is present in the scheduled queue.</span>
-                <span class="reporter-method-output">Verify the scheduled text 'Moderate to Published' is present in the scheduled queue.</span>
-                <span class="reporter-method-output">Verify the scheduled text 'Completed' is present in the scheduled queue.</span>
+                <span class="reporter-method-output">Verify success message of 'Event Countdown f470b62f89754c3 has been created.' is present.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">Cleanup</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Open url 'http://qa5.publisher7.com'.</span>
+                <span class="reporter-method-output">Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.</span>
+                <span class="reporter-method-output">Enter 'pa55word' in the 'Password' text box.</span>
+                <span class="reporter-method-output">Click the 'Login' button.</span>
+                <span class="reporter-method-output">Click the 'Modules' menu link.</span>
+                <span class="reporter-method-output">Switch to the active frame titled 'Modules dialog'.</span>
+                <span class="reporter-method-output">Enter 'Event Countdown' in the 'Filter Name' text box.</span>
+                <span class="reporter-method-output">Wait for module filter titled 'Event Countdown' to be visible in module list.</span>
+                <span class="reporter-method-output">Uncheck the 'Event Countdown' module checkbox.</span>
+                <span class="reporter-method-output">Click the 'Save configuration' button.</span>
+                <span class="reporter-method-output">Verify success message of 'The configuration options have been saved.' is present.</span>
+                <span class="reporter-method-output">Click the 'Uninstall' overlay tab.</span>
+                <span class="reporter-method-output">Scroll by '-500'.</span>
+                <span class="reporter-method-output">Switch to the active frame titled 'Modules dialog'.</span>
+                <span class="reporter-method-output">Click the 'Event Countdown' uninstall checkbox.</span>
+                <span class="reporter-method-output">Click the 'Uninstall' button.</span>
+                <span class="reporter-method-output">Switch to the active frame titled 'Confirm uninstall dialog'.</span>
+                <span class="reporter-method-output">Verify the text 'The following modules will be completely uninstalled from your site, and all data from these modules will be lost!' is present on the page.</span>
+                <span class="reporter-method-output">Verify the text 'Event Countdown' is present on the page.</span>
+                <span class="reporter-method-output">Click the 'Uninstall' button to confirm.</span>
+                <span class="reporter-method-output">Switch to the active frame titled 'Modules dialog'.</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -527,26 +400,38 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.SchedulingContentPublishUnpublished</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">suiteSetup</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
                 <span class="method-name">startSelenium(public void com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManageme...)</span>
-                <span class="method-start">33 ms</span>
+                <span class="method-start">37 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">SchedulingContentPublishUnpublished_TC2159</span>
-                <span class="method-start">3241 ms</span>
+                <span class="method-name">CountdownClockEvents_TC4887</span>
+                <span class="method-start">3273 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">stopSelenium([TestResult name=SchedulingContentPublishUnpublished_TC2159 status=SUCCESS method=SchedulingContentP...)</span>
-                <span class="method-start">218843 ms</span>
+                <span class="method-name">stopSelenium([TestResult name=CountdownClockEvents_TC4887 status=SUCCESS method=CountdownClockEvents.CountdownClo...)</span>
+                <span class="method-start">183255 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">startSelenium(public void com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManageme...)</span>
+                <span class="method-start">183838 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">Cleanup</span>
+                <span class="method-start">186442 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">stopSelenium([TestResult name=Cleanup status=SUCCESS method=CountdownClockEvents.Cleanup()[pri:0, instance:com.nb...)</span>
+                <span class="method-start">240553 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-suite after">
                 <span class="method-name">suiteTeardown</span>
-                <span class="method-start">219429 ms</span>
+                <span class="method-start">241134 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

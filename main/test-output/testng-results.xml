@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
     <line>
       <![CDATA[STEP 1]]>
@@ -17,154 +17,73 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[STEP 2 and 3]]>
+      <![CDATA[STEP 2]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Content' menu link.]]>
+      <![CDATA[Click the 'Modules' menu link.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Add content' menu link.]]>
+      <![CDATA[Switch to frame titled 'Modules'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Post' menu link.]]>
+      <![CDATA[Enter 'Event Countdown' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+      <![CDATA[Wait for module filter titled 'Event Countdown' to be visible in module list.]]>
     </line>
     <line>
-      <![CDATA[Enter 'defed2b6b31d480' in the 'Title' text box.]]>
+      <![CDATA[Check the 'Event Countdown' check box.]]>
     </line>
     <line>
-      <![CDATA[Switch to the Synopsis frame.]]>
+      <![CDATA[Click the 'Save configuration' button.]]>
     </line>
     <line>
-      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+      <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+      <![CDATA[Switch back to the 'Modules' frame.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Cover' select button.]]>
+      <![CDATA[Switch to frame titled 'Modules'.]]>
     </line>
     <line>
-      <![CDATA[Switch to the select file frame.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the file path for file upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Upload' button.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the file image 'HanSolo' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Publishing Options' link.]]>
-    </line>
-    <line>
-      <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Post defed2b6b31d480 has been created.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 4]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Schedule' link in the work bench.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'defed2b6b31d480 dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Add Scheduled Revision' link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'defed2b6b31d480 dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 5]]>
-    </line>
-    <line>
-      <![CDATA[Select revision titled 'defed2b6b31d480'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that the 'Operation' option count equals '5'.]]>
-    </line>
-    <line>
-      <![CDATA[Select 'Moderate to Published' from the 'Select operation' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 6]]>
-    </line>
-    <line>
-      <![CDATA[Enter '10/10/2014' in the 'Date' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '07:15 PM' in the 'Time' text box.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 7]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Schedule' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'defed2b6b31d480 dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The scheduled revision operation has been saved' is present.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 8]]>
-    </line>
-    <line>
-      <![CDATA[Verify the scheduled text 'defed2b6b31d480' is present in the scheduled queue.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the scheduled text 'Moderate to Published' is present in the scheduled queue.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the scheduled text '10/10/2014 - ' is present in the scheduled queue.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Run now' link is present for content item 'defed2b6b31d480' with action 'Moderate to Published'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Cancel' link is present for content item 'defed2b6b31d480' with action 'Moderate to Published'.]]>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
     </line>
     <line>
-      <![CDATA[STEP 9]]>
+      <![CDATA[Click the 'Home' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 3]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Configuration' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Media' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Event Countdown' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Event Countdown dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Create' button.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the sample nodes to be created.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 4]]>
+    </line>
+    <line>
+      <![CDATA[STEP 5 AND 6]]>
     </line>
     <line>
       <![CDATA[Click the 'Content' menu link.]]>
@@ -173,454 +92,199 @@
       <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
     </line>
     <line>
-      <![CDATA[Enter title futurePost10/10/2014.]]>
+      <![CDATA[Enter title Birthday Event.]]>
     </line>
     <line>
       <![CDATA[Click the 'Apply' button.]]>
     </line>
     <line>
-      <![CDATA[Get the text of the first search result set item.]]>
+      <![CDATA[Click the 'Edit' link for content item titled 'Birthday Event.]]>
     </line>
     <line>
-      <![CDATA[Click the first search title link in the search result set.]]>
+      <![CDATA[Enter '10/13/2014 in the 'Date' text box.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'Revision state: Published' is present in the work bench info block.]]>
+      <![CDATA[Enter '02:41:37PM in the 'Time' text box.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'Public: Yes' is present in the work bench info block.]]>
+      <![CDATA[Enter 'http://www.amazon.com/s/ref=nb_sb_ss_c_0_8/190-0002947-5703141?url=search-alias%3Dtoys-and-games&field-keywords=birthday%20party%20supplies&sprefix=birthday%2Caps%2C168' in the 'Active Call to Action' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Active Image Select' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the select file frame.]]>
+    </line>
+    <line>
+      <![CDATA[Enter the file path for file upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Upload' button.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Public Local Files' radio button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the file image 'HanSolo' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the img is loaded and visible.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '#FF0000' in the 'Active Background Color' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'http://www.nbc.com' in the 'Expiry Call to Action' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Expiry Image Select' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the select file frame.]]>
+    </line>
+    <line>
+      <![CDATA[Enter the file path for file upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Upload' button.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Public Local Files' radio button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the file image 'nbclogosmall' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the img is loaded and visible.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '#00FFFF' in the 'Expiry Background Color' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 7]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Structure' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Blocks' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Select the block name 'Birthday Block' from the 'Content' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Select the block name 'Holiday Party Block' from the 'Content' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save Blocks' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The block settings have been updated.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 8]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Home' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 9]]>
+    </line>
+    <line>
+      <![CDATA[Verify the countdown timer is visible.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the countdown timer is counting down.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that active img source of the event contains 'HanSolo'.]]>
+    </line>
+    <line>
+      <![CDATA[Assert the the img is loaded and visible.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the active background color of '#FF0000' is visible for event with title 'Birthday Event'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the active link href of 'http://www.amazon.com/s/ref=nb_sb_ss_c_0_8/190-0002947-5703141?url=search-alias%3Dtoys-and-games&field-keywords=birthday%20party%20supplies&sprefix=birthday%2Caps%2C168' is visible for event with title 'Birthday Event'.]]>
     </line>
     <line>
       <![CDATA[STEP 10]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Content' menu link.]]>
+      <![CDATA[Verify the countdown timer is NOT counting down.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Add content' menu link.]]>
+      <![CDATA[Assert that expiry img source of the event contains 'nbclogosmall'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Post' menu link.]]>
+      <![CDATA[Assert the the img is loaded and visible.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+      <![CDATA[Verify the expiry background color of '#00FFFF' is visible for event with title 'Birthday Event'.]]>
     </line>
     <line>
-      <![CDATA[Enter '90daa1c8b42c4f9' in the 'Title' text box.]]>
+      <![CDATA[Verify the expiry link href of 'http://www.nbc.com' is visible for event with title 'Birthday Event'.]]>
     </line>
     <line>
-      <![CDATA[Switch to the Synopsis frame.]]>
-    </line>
-    <line>
-      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Cover' select button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the select file frame.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the file path for file upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Upload' button.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the file image 'HanSolo' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Publishing Options' link.]]>
-    </line>
-    <line>
-      <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Post 90daa1c8b42c4f9 has been created.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Schedule' link in the work bench.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled '90daa1c8b42c4f9 dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Add Scheduled Revision' link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled '90daa1c8b42c4f9 dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Select revision titled '90daa1c8b42c4f9'.]]>
-    </line>
-    <line>
-      <![CDATA[Select 'Moderate to Published' from the 'Select operation' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '10/10/2014' in the 'Date' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '07:19 PM' in the 'Time' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Schedule' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled '90daa1c8b42c4f9 dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The scheduled revision operation has been saved' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled '90daa1c8b42c4f9 dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the scheduled text '90daa1c8b42c4f9' is present in the scheduled queue.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the scheduled text 'Moderate to Published' is present in the scheduled queue.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the scheduled text '10/10/2014 - ' is present in the scheduled queue.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Run now' link for content item '90daa1c8b42c4f9' with action 'Moderate to Published'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 11]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled '90daa1c8b42c4f9 dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the scheduled text '90daa1c8b42c4f9' is present in the scheduled queue.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the scheduled text 'Moderate to Published' is present in the scheduled queue.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the scheduled text '10/10/2014 - ' is present in the scheduled queue.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the scheduled text 'Completed' is present in the scheduled queue.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 12]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Add content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Post' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '82744f275281416' in the 'Title' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the Synopsis frame.]]>
-    </line>
-    <line>
-      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Cover' select button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the select file frame.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the file path for file upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Upload' button.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the file image 'HanSolo' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Publishing Options' link.]]>
-    </line>
-    <line>
-      <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Post 82744f275281416 has been created.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Schedule' link in the work bench.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled '82744f275281416 dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Add Scheduled Revision' link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled '82744f275281416 dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Select revision titled '82744f275281416'.]]>
-    </line>
-    <line>
-      <![CDATA[Select 'Moderate to Published' from the 'Select operation' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '10/10/2014' in the 'Date' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '07:19 PM' in the 'Time' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Schedule' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled '82744f275281416 dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The scheduled revision operation has been saved' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled '82744f275281416 dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the scheduled text '82744f275281416' is present in the scheduled queue.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the scheduled text 'Moderate to Published' is present in the scheduled queue.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the scheduled text '10/10/2014 - ' is present in the scheduled queue.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Run now' expand menu link for content item '82744f275281416' with action 'Moderate to Published'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Cancel' link for content item '82744f275281416' with action 'Moderate to Published'.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Are you sure you want to cancel this scheduled revision? dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Confirm' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled '82744f275281416 dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The scheduled revision operation has been cancelled.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'Moderate to Published' is NOT present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
+      <![CDATA[STEP 11 AND 12]]>
     </line>
     <line>
       <![CDATA[STEP 13]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'My Workbench' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Create content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Post' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '8770f645e2c54b6' in the 'Title' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the Synopsis frame.]]>
-    </line>
-    <line>
-      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Publishing Options' link.]]>
-    </line>
-    <line>
-      <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Post 8770f645e2c54b6 has been created.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Schedule' link in the work bench.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled '8770f645e2c54b6 dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Add Scheduled Revision' link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled '8770f645e2c54b6 dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Select revision titled '8770f645e2c54b6'.]]>
-    </line>
-    <line>
-      <![CDATA[Select 'Moderate to Published' from the 'Select operation' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '10/10/2014' in the 'Date' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '07:19 PM' in the 'Time' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Schedule' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled '8770f645e2c54b6 dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The scheduled revision operation has been saved' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled '8770f645e2c54b6 dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the scheduled text '8770f645e2c54b6' is present in the scheduled queue.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the scheduled text 'Moderate to Published' is present in the scheduled queue.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the scheduled text '10/10/2014 - ' is present in the scheduled queue.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Run now' link for content item '8770f645e2c54b6' with action 'Moderate to Published'.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled '8770f645e2c54b6 dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the scheduled text '8770f645e2c54b6' is present in the scheduled queue.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the scheduled text 'Moderate to Published' is present in the scheduled queue.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the scheduled text '10/10/2014 - ' is present in the scheduled queue.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the scheduled text 'Completed' is present in the scheduled queue.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 14]]>
-    </line>
-    <line>
       <![CDATA[Mouse over the 'Content' menu link.]]>
     </line>
     <line>
       <![CDATA[Mouse over the 'Add content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Post' menu link.]]>
+      <![CDATA[Click the 'Event Countdown' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'Create Event Countdown dialog'.]]>
     </line>
     <line>
-      <![CDATA[Enter '5b33b83c762f413' in the 'Title' text box.]]>
+      <![CDATA[Enter 'f470b62f89754c3' in the 'Title' text box.]]>
     </line>
     <line>
-      <![CDATA[Switch to the Synopsis frame.]]>
+      <![CDATA[Enter '10/13/2014 in the 'Date' text box.]]>
     </line>
     <line>
-      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+      <![CDATA[Enter '02:43:06PM in the 'Time' text box.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+      <![CDATA[Enter 'http://www.amazon.com/s/ref=nb_sb_ss_c_0_8/190-0002947-5703141?url=search-alias%3Dtoys-and-games&field-keywords=birthday%20party%20supplies&sprefix=birthday%2Caps%2C168' in the 'Active Call to Action' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Cover' select button.]]>
+      <![CDATA[Click the 'Active Image Select' button.]]>
     </line>
     <line>
       <![CDATA[Switch to the select file frame.]]>
@@ -653,225 +317,148 @@
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'Create Event Countdown dialog'.]]>
     </line>
     <line>
-      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+      <![CDATA[Enter '#FF0000' in the 'Active Background Color' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Publishing Options' link.]]>
+      <![CDATA[Enter 'http://www.nbc.com' in the 'Expiry Call to Action' text box.]]>
     </line>
     <line>
-      <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
+      <![CDATA[Click the 'Expiry Image Select' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save' button.]]>
+      <![CDATA[Switch to the select file frame.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'Post 5b33b83c762f413 has been created.' is present.]]>
+      <![CDATA[Enter the file path for file upload.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Edit Draft' link in the work bench.]]>
+      <![CDATA[Click the 'Upload' button.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Edit Post 5b33b83c762f413 dialog'.]]>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
     </line>
     <line>
-      <![CDATA[Switch to the Synopsis frame.]]>
+      <![CDATA[Click the 'Next' button.]]>
     </line>
     <line>
-      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+      <![CDATA[Click the 'Public Local Files' radio button.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Edit Post 5b33b83c762f413 dialog'.]]>
+      <![CDATA[Click the 'Next' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save' button.]]>
+      <![CDATA[Verify the file image 'nbclogosmall' is present.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'Post 5b33b83c762f413 has been updated.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 15 and 16]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Revisions' link in the work bench.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Revisions dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the number of present revisions entries equals '2'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Edit' extend menu button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Schedule' menu button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled '5b33b83c762f413 dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Select revision titled '5b33b83c762f413'.]]>
-    </line>
-    <line>
-      <![CDATA[Select 'Moderate to Published' from the 'Select operation' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '10/10/2014' in the 'Date' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '07:19 PM' in the 'Time' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Schedule' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The scheduled revision operation has been saved' is present.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 17]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Schedule' link in the work bench.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled '5b33b83c762f413 dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the scheduled text '5b33b83c762f413' is present in the scheduled queue.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the scheduled text 'Moderate to Published' is present in the scheduled queue.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the scheduled text '10/10/2014 - ' is present in the scheduled queue.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Run now' link is present for content item '5b33b83c762f413' with action 'Moderate to Published'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 18 and 19 - TODO]]>
-    </line>
-    <line>
-      <![CDATA[STEP 20]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'My Workbench' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Create content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Post' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'f02a68ead0544a2' in the 'Title' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the Synopsis frame.]]>
-    </line>
-    <line>
-      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Publishing Options' link.]]>
-    </line>
-    <line>
-      <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Select 'Moderate to Published' from the 'Select operation' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '10/11/2014' in the 'Date' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '07:16 PM' in the 'Time' text box.]]>
+      <![CDATA[Verify the img is loaded and visible.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'Post f02a68ead0544a2 has been created.' is present.]]>
+      <![CDATA[Switch to the active frame titled 'Create Event Countdown dialog'.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'f02a68ead0544a2 has been scheduled to Moderate to Published on 10/11/2014 - ' is present.]]>
+      <![CDATA[Enter '#00FFFF' in the 'Expiry Background Color' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Schedule' link in the work bench.]]>
+      <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'f02a68ead0544a2 dialog'.]]>
+      <![CDATA[Verify success message of 'Event Countdown f470b62f89754c3 has been created.' is present.]]>
     </line>
     <line>
-      <![CDATA[Verify the scheduled text 'f02a68ead0544a2' is present in the scheduled queue.]]>
+      <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
     </line>
     <line>
-      <![CDATA[Verify the scheduled text 'Moderate to Published' is present in the scheduled queue.]]>
+      <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
     </line>
     <line>
-      <![CDATA[Verify the scheduled text '10/11/2014 - ' is present in the scheduled queue.]]>
+      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Run now' link for content item 'f02a68ead0544a2' with action 'Moderate to Published'.]]>
+      <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'f02a68ead0544a2 dialog'.]]>
+      <![CDATA[Click the 'Modules' menu link.]]>
     </line>
     <line>
-      <![CDATA[Verify the scheduled text 'f02a68ead0544a2' is present in the scheduled queue.]]>
+      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
     </line>
     <line>
-      <![CDATA[Verify the scheduled text 'Moderate to Published' is present in the scheduled queue.]]>
+      <![CDATA[Enter 'Event Countdown' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Verify the scheduled text 'Completed' is present in the scheduled queue.]]>
+      <![CDATA[Wait for module filter titled 'Event Countdown' to be visible in module list.]]>
+    </line>
+    <line>
+      <![CDATA[Uncheck the 'Event Countdown' module checkbox.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configuration' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Uninstall' overlay tab.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll by '-500'.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Event Countdown' uninstall checkbox.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Uninstall' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Confirm uninstall dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'The following modules will be completely uninstalled from your site, and all data from these modules will be lost!' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'Event Countdown' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Uninstall' button to confirm.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="219392" started-at="2014-10-10T19:13:32Z" finished-at="2014-10-10T19:17:11Z">
+  <suite name="Default suite" duration-ms="241090" started-at="2014-10-13T14:38:25Z" finished-at="2014-10-13T14:42:26Z">
     <groups>
-      <group name="certify">
-        <method signature="SchedulingContentPublishUnpublished.SchedulingContentPublishUnpublished_TC2159()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.SchedulingContentPublishUnpublished@1f42269]" name="SchedulingContentPublishUnpublished_TC2159" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.SchedulingContentPublishUnpublished"/>
-      </group> <!-- certify -->
-      <group name="mpx">
-        <method signature="SchedulingContentPublishUnpublished.SchedulingContentPublishUnpublished_TC2159()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.SchedulingContentPublishUnpublished@1f42269]" name="SchedulingContentPublishUnpublished_TC2159" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.SchedulingContentPublishUnpublished"/>
-      </group> <!-- mpx -->
       <group name="full">
-        <method signature="SchedulingContentPublishUnpublished.SchedulingContentPublishUnpublished_TC2159()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.SchedulingContentPublishUnpublished@1f42269]" name="SchedulingContentPublishUnpublished_TC2159" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.SchedulingContentPublishUnpublished"/>
+        <method signature="CountdownClockEvents.CountdownClockEvents_TC4887()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@4db5cb7b]" name="CountdownClockEvents_TC4887" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents"/>
+        <method signature="CountdownClockEvents.Cleanup()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@4db5cb7b]" name="Cleanup" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents"/>
       </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="219392" started-at="2014-10-10T19:13:32Z" finished-at="2014-10-10T19:17:11Z">
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.SchedulingContentPublishUnpublished">
-        <test-method status="PASS" signature="suiteSetup()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.SchedulingContentPublishUnpublished@1f42269]" name="suiteSetup" is-config="true" duration-ms="24" started-at="2014-10-10T15:13:32Z" finished-at="2014-10-10T15:13:32Z">
+    <test name="Default test" duration-ms="241090" started-at="2014-10-13T14:38:25Z" finished-at="2014-10-13T14:42:26Z">
+      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents">
+        <test-method status="PASS" signature="suiteSetup()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@4db5cb7b]" name="suiteSetup" is-config="true" duration-ms="29" started-at="2014-10-13T10:38:25Z" finished-at="2014-10-13T10:38:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteSetup -->
-        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.SchedulingContentPublishUnpublished@1f42269]" name="startSelenium" is-config="true" duration-ms="3208" started-at="2014-10-10T15:13:32Z" finished-at="2014-10-10T15:13:35Z">
+        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@4db5cb7b]" name="startSelenium" is-config="true" duration-ms="3236" started-at="2014-10-13T10:38:25Z" finished-at="2014-10-13T10:38:28Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.SchedulingContentPublishUnpublished.SchedulingContentPublishUnpublished_TC2159() throws java.lang.Exception]]>
+                <![CDATA[public void com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents.CountdownClockEvents_TC4887() throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="SchedulingContentPublishUnpublished_TC2159()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.SchedulingContentPublishUnpublished@1f42269]" name="SchedulingContentPublishUnpublished_TC2159" duration-ms="215601" started-at="2014-10-10T15:13:35Z" finished-at="2014-10-10T15:17:10Z">
+        <test-method status="PASS" signature="CountdownClockEvents_TC4887()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@4db5cb7b]" name="CountdownClockEvents_TC4887" duration-ms="179982" started-at="2014-10-13T10:38:28Z" finished-at="2014-10-13T10:41:28Z">
           <reporter-output>
             <line>
               <![CDATA[STEP 1]]>
@@ -889,154 +476,73 @@
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
-              <![CDATA[STEP 2 and 3]]>
+              <![CDATA[STEP 2]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Content' menu link.]]>
+              <![CDATA[Click the 'Modules' menu link.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Add content' menu link.]]>
+              <![CDATA[Switch to frame titled 'Modules'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Post' menu link.]]>
+              <![CDATA[Enter 'Event Countdown' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+              <![CDATA[Wait for module filter titled 'Event Countdown' to be visible in module list.]]>
             </line>
             <line>
-              <![CDATA[Enter 'defed2b6b31d480' in the 'Title' text box.]]>
+              <![CDATA[Check the 'Event Countdown' check box.]]>
             </line>
             <line>
-              <![CDATA[Switch to the Synopsis frame.]]>
+              <![CDATA[Click the 'Save configuration' button.]]>
             </line>
             <line>
-              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+              <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+              <![CDATA[Switch back to the 'Modules' frame.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Cover' select button.]]>
+              <![CDATA[Switch to frame titled 'Modules'.]]>
             </line>
             <line>
-              <![CDATA[Switch to the select file frame.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the file path for file upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Upload' button.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Public Local Files' radio button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the file image 'HanSolo' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Publishing Options' link.]]>
-            </line>
-            <line>
-              <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Post defed2b6b31d480 has been created.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 4]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Schedule' link in the work bench.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'defed2b6b31d480 dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Add Scheduled Revision' link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'defed2b6b31d480 dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 5]]>
-            </line>
-            <line>
-              <![CDATA[Select revision titled 'defed2b6b31d480'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that the 'Operation' option count equals '5'.]]>
-            </line>
-            <line>
-              <![CDATA[Select 'Moderate to Published' from the 'Select operation' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 6]]>
-            </line>
-            <line>
-              <![CDATA[Enter '10/10/2014' in the 'Date' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '07:15 PM' in the 'Time' text box.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 7]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Schedule' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'defed2b6b31d480 dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The scheduled revision operation has been saved' is present.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 8]]>
-            </line>
-            <line>
-              <![CDATA[Verify the scheduled text 'defed2b6b31d480' is present in the scheduled queue.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the scheduled text 'Moderate to Published' is present in the scheduled queue.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the scheduled text '10/10/2014 - ' is present in the scheduled queue.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Run now' link is present for content item 'defed2b6b31d480' with action 'Moderate to Published'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Cancel' link is present for content item 'defed2b6b31d480' with action 'Moderate to Published'.]]>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
             </line>
             <line>
               <![CDATA[Click the 'Close Overlay X'.]]>
             </line>
             <line>
-              <![CDATA[STEP 9]]>
+              <![CDATA[Click the 'Home' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 3]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Configuration' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Media' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Event Countdown' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Event Countdown dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Create' button.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the sample nodes to be created.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 4]]>
+            </line>
+            <line>
+              <![CDATA[STEP 5 AND 6]]>
             </line>
             <line>
               <![CDATA[Click the 'Content' menu link.]]>
@@ -1045,454 +551,199 @@
               <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
             </line>
             <line>
-              <![CDATA[Enter title futurePost10/10/2014.]]>
+              <![CDATA[Enter title Birthday Event.]]>
             </line>
             <line>
               <![CDATA[Click the 'Apply' button.]]>
             </line>
             <line>
-              <![CDATA[Get the text of the first search result set item.]]>
+              <![CDATA[Click the 'Edit' link for content item titled 'Birthday Event.]]>
             </line>
             <line>
-              <![CDATA[Click the first search title link in the search result set.]]>
+              <![CDATA[Enter '10/13/2014 in the 'Date' text box.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'Revision state: Published' is present in the work bench info block.]]>
+              <![CDATA[Enter '02:41:37PM in the 'Time' text box.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'Public: Yes' is present in the work bench info block.]]>
+              <![CDATA[Enter 'http://www.amazon.com/s/ref=nb_sb_ss_c_0_8/190-0002947-5703141?url=search-alias%3Dtoys-and-games&field-keywords=birthday%20party%20supplies&sprefix=birthday%2Caps%2C168' in the 'Active Call to Action' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Active Image Select' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the select file frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter the file path for file upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Upload' button.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Public Local Files' radio button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the file image 'HanSolo' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '#FF0000' in the 'Active Background Color' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'http://www.nbc.com' in the 'Expiry Call to Action' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Expiry Image Select' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the select file frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter the file path for file upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Upload' button.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Public Local Files' radio button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the file image 'nbclogosmall' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '#00FFFF' in the 'Expiry Background Color' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 7]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Structure' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Blocks' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Select the block name 'Birthday Block' from the 'Content' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Select the block name 'Holiday Party Block' from the 'Content' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save Blocks' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The block settings have been updated.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 8]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Home' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 9]]>
+            </line>
+            <line>
+              <![CDATA[Verify the countdown timer is visible.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the countdown timer is counting down.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that active img source of the event contains 'HanSolo'.]]>
+            </line>
+            <line>
+              <![CDATA[Assert the the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the active background color of '#FF0000' is visible for event with title 'Birthday Event'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the active link href of 'http://www.amazon.com/s/ref=nb_sb_ss_c_0_8/190-0002947-5703141?url=search-alias%3Dtoys-and-games&field-keywords=birthday%20party%20supplies&sprefix=birthday%2Caps%2C168' is visible for event with title 'Birthday Event'.]]>
             </line>
             <line>
               <![CDATA[STEP 10]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Content' menu link.]]>
+              <![CDATA[Verify the countdown timer is NOT counting down.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Add content' menu link.]]>
+              <![CDATA[Assert that expiry img source of the event contains 'nbclogosmall'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Post' menu link.]]>
+              <![CDATA[Assert the the img is loaded and visible.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+              <![CDATA[Verify the expiry background color of '#00FFFF' is visible for event with title 'Birthday Event'.]]>
             </line>
             <line>
-              <![CDATA[Enter '90daa1c8b42c4f9' in the 'Title' text box.]]>
+              <![CDATA[Verify the expiry link href of 'http://www.nbc.com' is visible for event with title 'Birthday Event'.]]>
             </line>
             <line>
-              <![CDATA[Switch to the Synopsis frame.]]>
-            </line>
-            <line>
-              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Cover' select button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the select file frame.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the file path for file upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Upload' button.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Public Local Files' radio button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the file image 'HanSolo' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Publishing Options' link.]]>
-            </line>
-            <line>
-              <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Post 90daa1c8b42c4f9 has been created.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Schedule' link in the work bench.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled '90daa1c8b42c4f9 dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Add Scheduled Revision' link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled '90daa1c8b42c4f9 dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Select revision titled '90daa1c8b42c4f9'.]]>
-            </line>
-            <line>
-              <![CDATA[Select 'Moderate to Published' from the 'Select operation' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '10/10/2014' in the 'Date' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '07:19 PM' in the 'Time' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Schedule' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled '90daa1c8b42c4f9 dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The scheduled revision operation has been saved' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled '90daa1c8b42c4f9 dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the scheduled text '90daa1c8b42c4f9' is present in the scheduled queue.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the scheduled text 'Moderate to Published' is present in the scheduled queue.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the scheduled text '10/10/2014 - ' is present in the scheduled queue.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Run now' link for content item '90daa1c8b42c4f9' with action 'Moderate to Published'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 11]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled '90daa1c8b42c4f9 dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the scheduled text '90daa1c8b42c4f9' is present in the scheduled queue.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the scheduled text 'Moderate to Published' is present in the scheduled queue.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the scheduled text '10/10/2014 - ' is present in the scheduled queue.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the scheduled text 'Completed' is present in the scheduled queue.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 12]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Add content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Post' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '82744f275281416' in the 'Title' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the Synopsis frame.]]>
-            </line>
-            <line>
-              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Cover' select button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the select file frame.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the file path for file upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Upload' button.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Public Local Files' radio button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the file image 'HanSolo' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Publishing Options' link.]]>
-            </line>
-            <line>
-              <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Post 82744f275281416 has been created.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Schedule' link in the work bench.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled '82744f275281416 dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Add Scheduled Revision' link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled '82744f275281416 dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Select revision titled '82744f275281416'.]]>
-            </line>
-            <line>
-              <![CDATA[Select 'Moderate to Published' from the 'Select operation' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '10/10/2014' in the 'Date' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '07:19 PM' in the 'Time' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Schedule' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled '82744f275281416 dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The scheduled revision operation has been saved' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled '82744f275281416 dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the scheduled text '82744f275281416' is present in the scheduled queue.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the scheduled text 'Moderate to Published' is present in the scheduled queue.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the scheduled text '10/10/2014 - ' is present in the scheduled queue.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Run now' expand menu link for content item '82744f275281416' with action 'Moderate to Published'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Cancel' link for content item '82744f275281416' with action 'Moderate to Published'.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Are you sure you want to cancel this scheduled revision? dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Confirm' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled '82744f275281416 dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The scheduled revision operation has been cancelled.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'Moderate to Published' is NOT present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
+              <![CDATA[STEP 11 AND 12]]>
             </line>
             <line>
               <![CDATA[STEP 13]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'My Workbench' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Create content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Post' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '8770f645e2c54b6' in the 'Title' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the Synopsis frame.]]>
-            </line>
-            <line>
-              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Publishing Options' link.]]>
-            </line>
-            <line>
-              <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Post 8770f645e2c54b6 has been created.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Schedule' link in the work bench.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled '8770f645e2c54b6 dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Add Scheduled Revision' link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled '8770f645e2c54b6 dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Select revision titled '8770f645e2c54b6'.]]>
-            </line>
-            <line>
-              <![CDATA[Select 'Moderate to Published' from the 'Select operation' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '10/10/2014' in the 'Date' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '07:19 PM' in the 'Time' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Schedule' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled '8770f645e2c54b6 dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The scheduled revision operation has been saved' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled '8770f645e2c54b6 dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the scheduled text '8770f645e2c54b6' is present in the scheduled queue.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the scheduled text 'Moderate to Published' is present in the scheduled queue.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the scheduled text '10/10/2014 - ' is present in the scheduled queue.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Run now' link for content item '8770f645e2c54b6' with action 'Moderate to Published'.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled '8770f645e2c54b6 dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the scheduled text '8770f645e2c54b6' is present in the scheduled queue.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the scheduled text 'Moderate to Published' is present in the scheduled queue.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the scheduled text '10/10/2014 - ' is present in the scheduled queue.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the scheduled text 'Completed' is present in the scheduled queue.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 14]]>
-            </line>
-            <line>
               <![CDATA[Mouse over the 'Content' menu link.]]>
             </line>
             <line>
               <![CDATA[Mouse over the 'Add content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Post' menu link.]]>
+              <![CDATA[Click the 'Event Countdown' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'Create Event Countdown dialog'.]]>
             </line>
             <line>
-              <![CDATA[Enter '5b33b83c762f413' in the 'Title' text box.]]>
+              <![CDATA[Enter 'f470b62f89754c3' in the 'Title' text box.]]>
             </line>
             <line>
-              <![CDATA[Switch to the Synopsis frame.]]>
+              <![CDATA[Enter '10/13/2014 in the 'Date' text box.]]>
             </line>
             <line>
-              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+              <![CDATA[Enter '02:43:06PM in the 'Time' text box.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+              <![CDATA[Enter 'http://www.amazon.com/s/ref=nb_sb_ss_c_0_8/190-0002947-5703141?url=search-alias%3Dtoys-and-games&field-keywords=birthday%20party%20supplies&sprefix=birthday%2Caps%2C168' in the 'Active Call to Action' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Cover' select button.]]>
+              <![CDATA[Click the 'Active Image Select' button.]]>
             </line>
             <line>
               <![CDATA[Switch to the select file frame.]]>
@@ -1525,212 +776,166 @@
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'Create Event Countdown dialog'.]]>
             </line>
             <line>
-              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+              <![CDATA[Enter '#FF0000' in the 'Active Background Color' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Publishing Options' link.]]>
+              <![CDATA[Enter 'http://www.nbc.com' in the 'Expiry Call to Action' text box.]]>
             </line>
             <line>
-              <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
+              <![CDATA[Click the 'Expiry Image Select' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save' button.]]>
+              <![CDATA[Switch to the select file frame.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'Post 5b33b83c762f413 has been created.' is present.]]>
+              <![CDATA[Enter the file path for file upload.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Edit Draft' link in the work bench.]]>
+              <![CDATA[Click the 'Upload' button.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Edit Post 5b33b83c762f413 dialog'.]]>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
             </line>
             <line>
-              <![CDATA[Switch to the Synopsis frame.]]>
+              <![CDATA[Click the 'Next' button.]]>
             </line>
             <line>
-              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+              <![CDATA[Click the 'Public Local Files' radio button.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Edit Post 5b33b83c762f413 dialog'.]]>
+              <![CDATA[Click the 'Next' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save' button.]]>
+              <![CDATA[Verify the file image 'nbclogosmall' is present.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'Post 5b33b83c762f413 has been updated.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 15 and 16]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Revisions' link in the work bench.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Revisions dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the number of present revisions entries equals '2'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Edit' extend menu button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Schedule' menu button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled '5b33b83c762f413 dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Select revision titled '5b33b83c762f413'.]]>
-            </line>
-            <line>
-              <![CDATA[Select 'Moderate to Published' from the 'Select operation' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '10/10/2014' in the 'Date' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '07:19 PM' in the 'Time' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Schedule' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The scheduled revision operation has been saved' is present.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 17]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Schedule' link in the work bench.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled '5b33b83c762f413 dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the scheduled text '5b33b83c762f413' is present in the scheduled queue.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the scheduled text 'Moderate to Published' is present in the scheduled queue.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the scheduled text '10/10/2014 - ' is present in the scheduled queue.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Run now' link is present for content item '5b33b83c762f413' with action 'Moderate to Published'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 18 and 19 - TODO]]>
-            </line>
-            <line>
-              <![CDATA[STEP 20]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'My Workbench' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Create content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Post' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'f02a68ead0544a2' in the 'Title' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the Synopsis frame.]]>
-            </line>
-            <line>
-              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Publishing Options' link.]]>
-            </line>
-            <line>
-              <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Select 'Moderate to Published' from the 'Select operation' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '10/11/2014' in the 'Date' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '07:16 PM' in the 'Time' text box.]]>
+              <![CDATA[Verify the img is loaded and visible.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'Post f02a68ead0544a2 has been created.' is present.]]>
+              <![CDATA[Switch to the active frame titled 'Create Event Countdown dialog'.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'f02a68ead0544a2 has been scheduled to Moderate to Published on 10/11/2014 - ' is present.]]>
+              <![CDATA[Enter '#00FFFF' in the 'Expiry Background Color' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Schedule' link in the work bench.]]>
+              <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'f02a68ead0544a2 dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the scheduled text 'f02a68ead0544a2' is present in the scheduled queue.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the scheduled text 'Moderate to Published' is present in the scheduled queue.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the scheduled text '10/11/2014 - ' is present in the scheduled queue.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Run now' link for content item 'f02a68ead0544a2' with action 'Moderate to Published'.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'f02a68ead0544a2 dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the scheduled text 'f02a68ead0544a2' is present in the scheduled queue.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the scheduled text 'Moderate to Published' is present in the scheduled queue.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the scheduled text 'Completed' is present in the scheduled queue.]]>
+              <![CDATA[Verify success message of 'Event Countdown f470b62f89754c3 has been created.' is present.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- SchedulingContentPublishUnpublished_TC2159 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.SchedulingContentPublishUnpublished@1f42269]" name="stopSelenium" is-config="true" duration-ms="573" started-at="2014-10-10T15:17:10Z" finished-at="2014-10-10T15:17:11Z">
+        </test-method> <!-- CountdownClockEvents_TC4887 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@4db5cb7b]" name="stopSelenium" is-config="true" duration-ms="580" started-at="2014-10-13T10:41:28Z" finished-at="2014-10-13T10:41:29Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=SchedulingContentPublishUnpublished_TC2159 status=SUCCESS method=SchedulingContentPublishUnpublished.SchedulingContentPublishUnpublished_TC2159()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.SchedulingContentPublishUnpublished@1f42269] output=STEP 1]]]>
+                <![CDATA[[TestResult name=CountdownClockEvents_TC4887 status=SUCCESS method=CountdownClockEvents.CountdownClockEvents_TC4887()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@4db5cb7b] output=STEP 1]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="suiteTeardown()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.SchedulingContentPublishUnpublished@1f42269]" name="suiteTeardown" is-config="true" duration-ms="0" started-at="2014-10-10T15:17:11Z" finished-at="2014-10-10T15:17:11Z">
+        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@4db5cb7b]" name="startSelenium" is-config="true" duration-ms="2604" started-at="2014-10-13T10:41:29Z" finished-at="2014-10-13T10:41:31Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents.Cleanup() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startSelenium -->
+        <test-method status="PASS" signature="Cleanup()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@4db5cb7b]" name="Cleanup" duration-ms="54110" started-at="2014-10-13T10:41:31Z" depends-on-methods="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents.CountdownClockEvents_TC4887" finished-at="2014-10-13T10:42:26Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Login' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Modules' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Event Countdown' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for module filter titled 'Event Countdown' to be visible in module list.]]>
+            </line>
+            <line>
+              <![CDATA[Uncheck the 'Event Countdown' module checkbox.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configuration' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Uninstall' overlay tab.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll by '-500'.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Event Countdown' uninstall checkbox.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Uninstall' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Confirm uninstall dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'The following modules will be completely uninstalled from your site, and all data from these modules will be lost!' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Event Countdown' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Uninstall' button to confirm.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- Cleanup -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@4db5cb7b]" name="stopSelenium" is-config="true" duration-ms="567" started-at="2014-10-13T10:42:26Z" finished-at="2014-10-13T10:42:26Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Cleanup status=SUCCESS method=CountdownClockEvents.Cleanup()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@4db5cb7b] output=Open url 'http://qa5.publisher7.com'.]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopSelenium -->
+        <test-method status="PASS" signature="suiteTeardown()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents@4db5cb7b]" name="suiteTeardown" is-config="true" duration-ms="0" started-at="2014-10-13T10:42:26Z" finished-at="2014-10-13T10:42:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteTeardown -->
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.SchedulingContentPublishUnpublished -->
+      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

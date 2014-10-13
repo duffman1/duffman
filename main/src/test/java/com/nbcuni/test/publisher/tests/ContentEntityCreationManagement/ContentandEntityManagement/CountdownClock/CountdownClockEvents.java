@@ -83,6 +83,7 @@ public class CountdownClockEvents extends ParentTest{
             	selectFile.ClickPublicLocalFilesRdb();
             	selectFile.ClickNextBtn();
             	selectFile.VerifyFileImagePresent("HanSolo");
+            	Thread.sleep(1000);
             	selectFile.ClickSaveBtn();
             	overlay.switchToDefaultContent(true);
             	eventCountdown.EnterActiveBackgroundColor("#FF0000");
@@ -96,6 +97,7 @@ public class CountdownClockEvents extends ParentTest{
             	selectFile.ClickPublicLocalFilesRdb();
             	selectFile.ClickNextBtn();
             	selectFile.VerifyFileImagePresent("nbclogosmall");
+            	Thread.sleep(1000);
             	selectFile.ClickSaveBtn();
             	overlay.switchToDefaultContent(true);
             	eventCountdown.EnterExpiryBackgroundColor("#00FFFF");
