@@ -59,14 +59,14 @@ public class EnhanceMPXPlayerContentAdminScreen extends ParentTest{
         		int initialResultSize = searchFor.GetMPXSearchResultSize();
         		searchFor.EnterTitle("Automation");
         		searchFor.ClickApplyBtn();
-        		Thread.sleep(2000); //TODO - add dynamic wait for search result validation
+        		Thread.sleep(5000); //TODO - add dynamic wait for search result validation
         		Assert.assertTrue(searchFor.GetMPXSearchResultSize() < initialResultSize);
         		Assert.assertTrue(searchFor.GetFirstMPXPlayerSearchResult().contains("AutomationPlayer"));
         		
         		//Step 5
         		searchFor.ClickResetBtn();
         		overlay.switchToDefaultContent(true);
-        		Thread.sleep(2000); //TODO - add dynamic wait for search result validation
+        		Thread.sleep(5000); //TODO - add dynamic wait for search result validation
         		Assert.assertTrue(searchFor.GetFirstMPXPlayerSearchResult().equals(initialFirstResult));
         		Assert.assertTrue(searchFor.GetMPXSearchResultSize().equals(initialResultSize));
         		
@@ -83,6 +83,7 @@ public class EnhanceMPXPlayerContentAdminScreen extends ParentTest{
         		
         		//Step 7
         		searchFor.ClickResetBtn();
+        		Thread.sleep(2000); //TODO - dynamic wait
         		
         		//Step 8
         		searchFor.SelectStatus("Published");
@@ -95,7 +96,7 @@ public class EnhanceMPXPlayerContentAdminScreen extends ParentTest{
         		
         		//Step 9
         		searchFor.ClickResetBtn();
-        		Thread.sleep(2000); //TODO - add dynamic wait for search result validation
+        		Thread.sleep(5000); //TODO - add dynamic wait for search result validation
         		Assert.assertTrue(searchFor.GetFirstMPXPlayerSearchResult().equals(initialFirstResult));
         		Assert.assertTrue(searchFor.GetMPXSearchResultSize().equals(initialResultSize));
         		
