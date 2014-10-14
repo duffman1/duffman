@@ -19,9 +19,9 @@ import com.nbcuni.test.publisher.pageobjects.Content.CreateDefaultContent;
 import com.nbcuni.test.publisher.pageobjects.SitePreview.SitePreview;
 import com.nbcuni.test.publisher.pageobjects.Structure.Queues.DynamicQueues.AddDynamicQueue;
 import com.nbcuni.test.publisher.pageobjects.Structure.Queues.DynamicQueues.AddDynamicQueueType;
-import com.nbcuni.test.publisher.pageobjects.Structure.Queues.DynamicQueues.DynamicQueueRevisionsList;
 import com.nbcuni.test.publisher.pageobjects.Structure.Queues.DynamicQueues.DynamicQueues;
-import com.nbcuni.test.publisher.pageobjects.Structure.Queues.DynamicQueues.ScheduleDynamicQueue;
+import com.nbcuni.test.publisher.pageobjects.Structure.Queues.Queues.QueuesRevisionList;
+import com.nbcuni.test.publisher.pageobjects.Structure.Queues.Queues.ScheduleQueue;
 
 public class CreateandScheduleMultipleRevisionsDynamicQueue extends ParentTest {
 	
@@ -126,7 +126,7 @@ public class CreateandScheduleMultipleRevisionsDynamicQueue extends ParentTest {
          overlay.SwitchToActiveFrame();
          
          Reporter.log("STEP 13");
-         DynamicQueueRevisionsList dqrevisionslist = new DynamicQueueRevisionsList(webDriver);
+         QueuesRevisionList dqrevisionslist = new QueuesRevisionList(webDriver);
          int revisionscount = 2;
          dqrevisionslist.VerifyRevisionCount(revisionscount);
          
@@ -135,7 +135,7 @@ public class CreateandScheduleMultipleRevisionsDynamicQueue extends ParentTest {
          overlay.SwitchToActiveFrame();
          
          Reporter.log("STEP 15");
-         ScheduleDynamicQueue scheduledynamicqueue = new ScheduleDynamicQueue(webDriver);
+         ScheduleQueue scheduledynamicqueue = new ScheduleQueue(webDriver);
          scheduledynamicqueue.VerifyAddScheduleVersionLnkPresent();
          scheduledynamicqueue.ClickAddScheduledRevisionLnk();
          overlay.SwitchToActiveFrame();
