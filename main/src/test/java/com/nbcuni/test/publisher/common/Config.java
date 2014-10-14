@@ -80,7 +80,7 @@ public class Config {
     		}
     	}
     	catch (Exception e) {
-    		Assert.fail("Failed to get value from test config");
+    		Assert.fail("Failed to get values from test config");
     	}
     		return allValues;
     }
@@ -144,30 +144,6 @@ public class Config {
     	String value = this.getXPathValueFromFile(this.getConcurrentSuiteFileLocation(), "//suite[@name='Pub 7 Concurrent Suite']/@thread-count");
         return Integer.parseInt(value);
 
-    }
-    
-    public List<String> getIncludedGroups() {
-
-        List<String> allIncludedGroups = this.getXPathValuesFromFile(this.getConfigFileLocation(), "//groups/run/include/@name");
-    	List<String> allIncudedGroupsCleaned = new ArrayList<String>();
-    	
-    	for (String group: allIncludedGroups) {
-    		allIncudedGroupsCleaned.add(group.replace("name=", "").replace("\"", ""));
-    	}
-    	
-    	return allIncudedGroupsCleaned;
-    }
-    
-    public List<String> getExcludedGroups() {
-
-        List<String> allExcludedGroups = this.getXPathValuesFromFile(this.getConfigFileLocation(), "//groups/run/exclude/@name");
-    	List<String> allExcludedGroupsCleaned = new ArrayList<String>();
-    	
-    	for (String group: allExcludedGroups) {
-    		allExcludedGroupsCleaned.add(group.replace("name=", "").replace("\"", ""));
-    	}
-    	
-    	return allExcludedGroupsCleaned;
     }
     
     public List<String> getAllLocalTests() {

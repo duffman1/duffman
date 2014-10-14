@@ -29,20 +29,30 @@ public class CustomReport extends EmailableReporter {
 		UploadReportRally uploadReport = new UploadReportRally();
 		UpdateTestResultsRally updateTestCase = new UpdateTestResultsRally();
 		
-		//get the results of the suite run
-		ISuite consecutiveSuite = suites.get(0);
-		Map<String, ISuiteResult> suiteResults = consecutiveSuite.getResults();
+		//get the results of the suite run, and the included/excluded groups
+		ISuite testSuite = suites.get(0);
+		Map<String, ISuiteResult> suiteResults = testSuite.getResults();
 	       
 	    IResultMap passedTests = null;
 	    IResultMap failedTests = null;
+	    List<String> includedGroups = new ArrayList<String>();
+	    List<String> excludedGroups = new ArrayList<String>();
+	    
 	    for (ISuiteResult sr : suiteResults.values()) {
 	          
 	    	ITestContext suiteTestContext = sr.getTestContext();
 	        passedTests = suiteTestContext.getPassedTests();
 	        failedTests = suiteTestContext.getFailedTests();
 	        
+	        for (String includedGroup : sr.getTestContext().getIncludedGroups()) {
+	        	includedGroups.add(includedGroup);
+	        }
+	        
+	        for (String excludedGroup: sr.getTestContext().getExcludedGroups()) {
+	        	excludedGroups.add(excludedGroup);
+	        }
 	    }
-		
+	    
 	    //remove any failed results that pass on an automatic retry
 	    List<ITestNGMethod> consecutiveMethodsToRemove = new ArrayList<ITestNGMethod>();
 
@@ -207,7 +217,7 @@ public class CustomReport extends EmailableReporter {
 	  	
   	  	if (config.getConfigValueString("SendReportAutoEmails").equals("true")) {
   	  		try {
-  	  			sendEmailReport.SendEmail(zipFilePath, zipFileName, passedTestCount, failedTestCount);
+  	  			sendEmailReport.SendEmail(zipFilePath, zipFileName, passedTestCount, failedTestCount, includedGroups, excludedGroups);
   	  		} catch (Exception e) {
   	  			System.out.println("Failed to send report email.");
   	  		}
