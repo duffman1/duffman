@@ -4,10 +4,7 @@ import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Content.*;
-
-import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
-
 import java.util.Arrays;
 import java.util.List;
 
@@ -22,35 +19,30 @@ public class CreateTVEpisode extends ParentTest{
          
         	//Step 1
         	UserLogin userLogin = applib.openApplication();
-        	PageFactory.initElements(webDriver, userLogin);
-            userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
+        	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
             List<String> allStates = Arrays.asList("Draft", "Review", "Published");
             for (String state : allStates) {
             
             	//Step 1A
             	taxonomy.NavigateSite("Content>>Add content>>Person");
-            	overlay.SwitchToFrame("Create Person");
+            	overlay.SwitchToActiveFrame();
             	PersonsInformation personsInformation = new PersonsInformation(webDriver);
             	String personFirstName = random.GetCharacterString(15);
             	personsInformation.EnterFirstName(personFirstName);
             	personsInformation.EnterBiography();
-            	overlay.switchToDefaultContent(true);
-            	overlay.SwitchToFrame("Create Person");
+            	overlay.SwitchToActiveFrame();
             	personsInformation.ClickCoverPhotoSelectBtn();
             	SelectFile selectFile = new SelectFile(webDriver);
-            	PageFactory.initElements(webDriver, selectFile);
             	selectFile.SelectDefaultCoverImg();
-            	overlay.SwitchToFrame("Create Person");
-            	ContentParent contentParent = new ContentParent(webDriver);
-            	PageFactory.initElements(webDriver, contentParent);
+            	overlay.SwitchToActiveFrame();
             	contentParent.ClickSaveBtn();
             	overlay.switchToDefaultContent(true);
             	contentParent.VerifyMessageStatus("Person " + personFirstName + " has been created.");
             	
             	//Step 2
             	taxonomy.NavigateSite("Content>>Add content>>TV Episode");
-            	overlay.SwitchToFrame("TV Episode");
+            	overlay.SwitchToActiveFrame();
             	
             	//Step 3
             	contentParent.VerifyRequiredFields(Arrays.asList("Title", "Episode", "Synopsis"));
@@ -65,13 +57,12 @@ public class CreateTVEpisode extends ParentTest{
             	basicInformation.EnterTitle(tvEpisodeTitle);
             	basicInformation.EnterEpisodeNumber("1");
             	basicInformation.EnterSynopsis();
-                overlay.switchToDefaultContent(true);
-                overlay.SwitchToFrame("Create TV Episode");
+                overlay.SwitchToActiveFrame();
                 
             	//Step 5
             	basicInformation.ClickCoverSelectBtn();
             	selectFile.SelectDefaultCoverImg();
-            	overlay.SwitchToFrame("Create TV Episode");
+            	overlay.SwitchToActiveFrame();
         	
             	//Step 6
             	publishingOptions.ClickPublishingOptionsLnk();
@@ -90,7 +81,6 @@ public class CreateTVEpisode extends ParentTest{
             	contentParent.ClickSaveBtn();
             	contentParent.VerifyMessageStatus("TV Episode " + tvEpisodeTitle + " has been created.");
             	WorkBench workBench = new WorkBench(webDriver);
-            	PageFactory.initElements(webDriver, workBench);
             	workBench.VerifyWorkBenchBlockTextPresent(Arrays.asList(state));
             	
             }

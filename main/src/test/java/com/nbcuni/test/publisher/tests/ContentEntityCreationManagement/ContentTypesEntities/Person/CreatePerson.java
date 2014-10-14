@@ -1,12 +1,9 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person;
 
-import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
-
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
-import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.Content.PersonsInformation;
 import com.nbcuni.test.publisher.pageobjects.Content.SelectFile;
 
@@ -21,29 +18,24 @@ public class CreatePerson extends ParentTest{
          
         	//Step 1
         	UserLogin userLogin = applib.openApplication();
-        	PageFactory.initElements(webDriver, userLogin);
-            userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
+        	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
             //Step 2
             taxonomy.NavigateSite("Content>>Add content>>Person");
             
             //Step 3
-            overlay.SwitchToFrame("Create Person");
+            overlay.SwitchToActiveFrame();
             PersonsInformation personsInformation = new PersonsInformation(webDriver);
             String personFirstName = random.GetCharacterString(15);
             personsInformation.EnterFirstName(personFirstName);
             personsInformation.EnterBiography();
             
             //Step 4
-            overlay.switchToDefaultContent(true);
-            overlay.SwitchToFrame("Create Person");
+            overlay.SwitchToActiveFrame();
             personsInformation.ClickCoverPhotoSelectBtn();
             SelectFile selectFile = new SelectFile(webDriver);
-            PageFactory.initElements(webDriver, selectFile);
             selectFile.SelectDefaultCoverImg();
-            overlay.SwitchToFrame("Create Person");
-            ContentParent contentParent = new ContentParent(webDriver);
-            PageFactory.initElements(webDriver, contentParent);
+            overlay.SwitchToActiveFrame();
             contentParent.ClickSaveBtn();
             
             //Step 5

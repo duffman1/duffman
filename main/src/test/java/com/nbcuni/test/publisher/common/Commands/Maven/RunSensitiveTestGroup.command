@@ -1,0 +1,3 @@
+chmod -R 777 ~/SQE-TEST-Pub7
+cd ~/SQE-TEST-Pub7/main
+mvn test -Dgroups=sensitive -Dsystem.test.appurl=http://qa5.publisher7.com -Dsystem.test.rerunonfailure=true -Dsystem.test.rerunonfailurecount=3 -Dsystem.test.runremotely=false -Dsystem.test.runsetupscripts=true -Dsystem.test.sendreportemailaddress=brandon.clark@nbcuni.com -Dsystem.test.uploadreporttorally=false -Dsystem.test.updateindividualrallytcs=true -Dsystem.test.rallyusername=brandon.clark@nbcuni.com -Dsystem.test.rallypassword=tufNewcyd4#

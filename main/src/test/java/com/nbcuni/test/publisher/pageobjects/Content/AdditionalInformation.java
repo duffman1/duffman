@@ -16,7 +16,7 @@ import com.nbcuni.test.publisher.common.Driver.Driver;
  * publisher.nbcuni.com Additional Information Library. Copyright
  * 
  * @author Brandon Clark
- * @version 1.0 Date: March 25, 2014
+ * @version 1.1 Date: October 13, 2014
  *********************************************/
 
 public class AdditionalInformation {
@@ -44,6 +44,9 @@ public class AdditionalInformation {
     
     @FindBy(how = How.ID, using = "edit-field-movie-primary-genre-und")
     private WebElement PrimaryGenre_Ddl;
+    
+    @FindBy(how = How.ID, using = "edit-field-content-tags-und")
+    private WebElement Tags_Txb;
     
     
     //PAGE OBJECT METHODS
@@ -77,7 +80,17 @@ public class AdditionalInformation {
     	new Select(wait.until(ExpectedConditions.visibilityOf(PrimaryGenre_Ddl))).selectByVisibleText(option);
     }
     
-    
+    public void EnterTag(String tag) throws Exception {
+    	
+    	Reporter.log("Enter '" + tag + "' in the 'Tags' text box.");
+    	wait.until(ExpectedConditions.visibilityOf(Tags_Txb));
+    	if (Tags_Txb.getAttribute("value").equals("")) {
+    		Tags_Txb.sendKeys(tag);
+    	}
+    	else {
+    		Tags_Txb.sendKeys(", " + tag);
+    	}
+    }
     
 }
 

@@ -18,13 +18,13 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.TimeZone;
 
-public class CountdownClockEvents extends ParentTest{
+public class CountdownClockEvents extends ParentTest {
 	
     /*************************************************************************************
      * TEST CASE - TC4887
      * Steps - https://rally1.rallydev.com/#/14663927728d/detail/testcase/22256545043
      *************************************************************************************/
-    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"})
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"sensitive"})
     public void CountdownClockEvents_TC4887() throws Exception {
          
         	Reporter.log("STEP 1");
@@ -83,6 +83,7 @@ public class CountdownClockEvents extends ParentTest{
             	selectFile.ClickPublicLocalFilesRdb();
             	selectFile.ClickNextBtn();
             	selectFile.VerifyFileImagePresent("HanSolo");
+            	Thread.sleep(1000);
             	selectFile.ClickSaveBtn();
             	overlay.switchToDefaultContent(true);
             	eventCountdown.EnterActiveBackgroundColor("#FF0000");
@@ -96,6 +97,7 @@ public class CountdownClockEvents extends ParentTest{
             	selectFile.ClickPublicLocalFilesRdb();
             	selectFile.ClickNextBtn();
             	selectFile.VerifyFileImagePresent("nbclogosmall");
+            	Thread.sleep(1000);
             	selectFile.ClickSaveBtn();
             	overlay.switchToDefaultContent(true);
             	eventCountdown.EnterExpiryBackgroundColor("#00FFFF");
@@ -175,7 +177,7 @@ public class CountdownClockEvents extends ParentTest{
         	//TODO - some extra steps as time allows for the separate content types and publishing/unpublishing
     }
     
-    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"}, dependsOnMethods = {"CountdownClockEvents_TC4887"}, alwaysRun=true)
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"sensitive"}, dependsOnMethods = {"CountdownClockEvents_TC4887"}, alwaysRun=true)
 	public void Cleanup() throws Exception {
 		UserLogin userLogin = applib.openApplication();
 		userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));

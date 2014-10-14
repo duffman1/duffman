@@ -51,7 +51,7 @@ public class AppLib {
         File scrFile = ((TakesScreenshot) webDriver).getScreenshotAs(OutputType.FILE);    
         FileUtils.copyFile(scrFile, new File(filePath));
             
-        Reporter.log("<br><br><a href='" + filePath + "'> <img src='" + filePath + "' height='500' width='500'/> </a>");
+        Reporter.log("<br><br><a href='" + filePath + "'> <img src='./" + methodName + ".png' height='700' width='700'/> </a>");
         Reporter.setCurrentTestResult(null);
       
     }
