@@ -37,7 +37,7 @@ public class ContentParent {
         PageFactory.initElements(webDriver, this);
         errorChecking = new ErrorChecking(webDriver);
         config = new Config();
-        wait = new WebDriverWait(webDriver, 10);
+        wait = new WebDriverWait(webDriver, 30);
     }
     
     //PAGE OBJECT IDENTIFIERS

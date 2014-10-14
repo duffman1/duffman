@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Oct 14 13:08:05 EDT 2014</td>
+<td>Started on:</td><td>Tue Oct 14 14:55:40 EDT 2014</td>
 </tr>
-<tr><td>Total time:</td><td>51 seconds (51723 ms)</td>
+<tr><td>Total time:</td><td>129 seconds (129185 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,69 +75,170 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen_Test()'><b>EnhanceMPXPlayerContentAdminScreen_Test</b><br>Test class: com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen<br/>
-<a href="#Output-784084756" onClick='toggleBox("Output-784084756", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS.ImplementMPS_TC2901()'><b>ImplementMPS_TC2901</b><br>Test class: com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS<br/>
+<a href="#Output-710975519" onClick='toggleBox("Output-710975519", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-784084756" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-784084756">
-Open url 'http://qa5.publisher7.com'.<br/>
+<a href="#Output-710975519" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-710975519">
+STEP 1<br/>
+Open url 'http://acc-test.publisher7.com'.<br/>
 Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
 Enter 'pa55word' in the 'Password' text box.<br/>
 Click the 'Login' button.<br/>
-Mouse over the 'Configuration' menu link.<br/>
-Mouse over the 'Media' menu link.<br/>
-Click the 'Media: thePlatform mpx settings' menu link.<br/>
-Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.<br/>
-Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.<br/>
-MPX is already configured.<br/>
+SETUP<br/>
+Click the 'Modules' menu link.<br/>
+Switch to the active frame titled 'Modules dialog'.<br/>
+Enter 'Pub Ads' in the 'Filter Name' text box.<br/>
+Wait for module filter titled 'Pub Ads' to be visible in module list.<br/>
+Verify the 'Pub Ads' check box is checked.<br/>
+Enter 'Pixelman' in the 'Filter Name' text box.<br/>
+Wait for module filter titled 'Pixelman' to be visible in module list.<br/>
+Enter 'MPS' in the 'Filter Name' text box.<br/>
+Wait for module filter titled 'MPS' to be visible in module list.<br/>
+Verify the 'MPS' check box is checked.<br/>
+Enter 'DART' in the 'Filter Name' text box.<br/>
+Wait for module filter titled 'DART' to be visible in module list.<br/>
+Enter 'Doubleclick for Publishers' in the 'Filter Name' text box.<br/>
+Wait for module filter titled 'Doubleclick for Publishers' to be visible in module list.<br/>
 Click the 'Close Overlay X'.<br/>
 Mouse over the 'Configuration' menu link.<br/>
-Mouse over the 'Media' menu link.<br/>
-Click the 'Media: thePlatform mpx settings' menu link.<br/>
-Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.<br/>
-Get all the selected import account options and store to a list.<br/>
+Mouse over the 'Web services' menu link.<br/>
+Click the 'MPS Configuration' menu link.<br/>
+Switch to the active frame titled 'MPS Configuration dialog'.<br/>
+Enter 'mps.io' in the 'MPS Host' text box.<br/>
+Click the 'Document Write' radio button.<br/>
+Enter 'pub7-development' in the 'Site Instance Override' text box.<br/>
+Clear all 'Name' text box values.<br/>
+Clear all 'Value' text box values.<br/>
+Uncheck all 'JSON' check boxes.<br/>
+Click the 'Save configuration' button.<br/>
+Verify success message of 'The configuration options have been saved.' is present.<br/>
 Click the 'Close Overlay X'.<br/>
+STEP 2 - N/A<br/>
+STEP 3 - N/A<br/>
+STEP 4<br/>
+Mouse over the 'Reports' menu link.<br/>
+Click the 'Status report' menu link.<br/>
+Switch to the active frame titled 'Status report dialog'.<br/>
+Verify the text 'Ad Tag Style' is present on the page.<br/>
+Verify the text 'MPS' is present on the page.<br/>
+Click the 'Close Overlay X'.<br/>
+STEP 5<br/>
+Verify the mps call parameter '"site":"pub7-development"' is present in the page source.<br/>
+Verify the mps call parameter '"title":"Welcome to' is present in the page source.<br/>
+Verify the mps call parameter '"path":"\/"' is present in the page source.<br/>
+Verify the mps call parameter '"is_content":0' is present in the page source.<br/>
+Verify the mps call parameter '"type":"other"' is present in the page source.<br/>
+STEP 6<br/>
+Click the 'People' menu link.<br/>
+Switch to the active frame titled 'People dialog'.<br/>
+Verify that no MPS calls were made on the page.<br/>
+Click the 'Close Overlay X'.<br/>
+STEP 7<br/>
+Open url 'http://acc-test.publisher7.com/kfkjdjdkjdjldkjj'.<br/>
+Verify the mps call parameter '"site":"pub7-development"' is present in the page source.<br/>
+Verify the mps call parameter '"path":"ERROR/404"' is present in the page source.<br/>
+Verify the mps call parameter '"content_id":"ERROR"' is present in the page source.<br/>
+Open url 'http://acc-test.publisher7.com'.<br/>
+STEP 8 - N/A - COVERED IN SETUP<br/>
+STEP 9<br/>
 Mouse over the 'Content' menu link.<br/>
-Mouse over the 'Files' menu link.<br/>
-Click the 'mpxPlayers' menu link.<br/>
-Switch to the active frame titled 'Content dialog'.<br/>
-Verify that the search result set column order matches as expected.<br/>
-Get the text of the first search result set item.<br/>
-Get the number of results in the result set.<br/>
-Enter title Automation.<br/>
+Mouse over the 'Add content' menu link.<br/>
+Click the 'Movie' menu link.<br/>
+Switch to the active frame titled 'Create Movie dialog'.<br/>
+Scroll to and click the 'Basic Information' tab.<br/>
+Enter 'bdaf32e21e2d4cf' in the 'Title' text box.<br/>
+Switch to the Synopsis frame.<br/>
+Enter a randomized text string into the 'Body' text area.<br/>
+Switch to the active frame titled 'Create Movie dialog'.<br/>
+Click the 'Cover' select button.<br/>
+Switch to the select file frame.<br/>
+Enter the file path for file upload.<br/>
+Click the 'Upload' button.<br/>
+Wait for the file link to be visible after upload.<br/>
+Click the 'Next' button.<br/>
+Click the 'Public Local Files' radio button.<br/>
+Click the 'Next' button.<br/>
+Verify the file image 'HanSolo' is present.<br/>
+Verify the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'Create Movie dialog'.<br/>
+Click the 'Additional Information' link.<br/>
+Select the 'Syndicated' from the 'Movie Type' drop down list.<br/>
+Select the 'G' from the 'Rating' drop down list.<br/>
+Select the 'Action' from the 'Primary Genre' drop down list.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'Movie bdaf32e21e2d4cf has been created.' is present.<br/>
+Note the node number for the content item.<br/>
+STEP 10 through STEP 19<br/>
+Verify the mps call parameter '"site":"pub7-development"' is present in the page source.<br/>
+Verify the mps call parameter '"title":"bdaf32e21e2d4cf"' is present in the page source.<br/>
+Verify the mps call parameter '"path":"\/node\/6831"' is present in the page source.<br/>
+Verify the mps call parameter '"content_id":"node6831"' is present in the page source.<br/>
+Verify the mps call parameter '"is_content":1' is present in the page source.<br/>
+Verify the mps call parameter '"type":"movie"' is present in the page source.<br/>
+Verify the mps call parameter '"cag":{"genre":"Action","movie-rating":"G","movie-types":"Syndicated"}' is present in the page source.<br/>
+Verify the mps call parameter '"pubdate":' is present in the page source.<br/>
+STEP 20<br/>
+Verify 'a3VtdWQ9MQ==' is present in page source.<br/>
+STEP 21<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Add content' menu link.<br/>
+Click the 'Media Gallery' menu link.<br/>
+Switch to the active frame titled 'Create Media Gallery dialog'.<br/>
+Enter 'c5deacddc27848c' in the 'Title' text box.<br/>
+Click the 'Media Items Select' button.<br/>
+Switch to the select file frame.<br/>
+Click the 'View Library' button.<br/>
+Enter 'HanSolo' in the 'File name' text box.<br/>
 Click the 'Apply' button.<br/>
-Get the number of results in the result set.<br/>
-Get the text of the first search result set item.<br/>
-Click the 'Reset' button.<br/>
-Get the text of the first search result set item.<br/>
-Get the number of results in the result set.<br/>
-Get all the account options in the 'MPX Player Account' select ddl.<br/>
-Assert that the count of options is expected + 1 for the '-select' option.<br/>
-Get the text of each of the ddl options.<br/>
-Assert that each expected account option is present in the 'MPX Player Account' select ddl.<br/>
-Select the DB TV from the 'MPXPlayerAccount' select ddl.<br/>
-Click the 'Apply' button.<br/>
-Get all the MPX result set 'Source' items.<br/>
-Assert that every source item in the result set equals 'DB TV'.<br/>
-Click the 'Reset' button.<br/>
-Select the 'Published' from the 'MPX Status/Published' drop down list.<br/>
-Click the 'Apply' button.<br/>
-Get all the MPX result set 'Status' items.<br/>
-Assert that result set size for Published items is greater than 0.<br/>
-Assert that every status item in the result set equals 'Published'.<br/>
-Click the 'Reset' button.<br/>
-Select the 'Unpublished' from the 'MPX Status/Published' drop down list.<br/>
-Click the 'Apply' button.<br/>
-Get all the MPX result set 'Status' items.<br/>
-Assert that every status item in the result set equals 'Unpublished'.<br/>
-Click the 'Reset' button.<br/>
-Get the text of the first search result set item.<br/>
-Get the number of results in the result set.<br/>
+Verify the media thumbnail image 'HanSolo' is present.<br/>
+Verify the the img is loaded and visible.<br/>
+Click media thumbnail image number 1<br/>
+Click on the 'Submit' button.<br/>
+Switch to the active frame titled 'Create Media Gallery dialog'.<br/>
+Verify the img source of the Media Item contains 'HanSolo'.<br/>
+Assert the the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'Media Gallery c5deacddc27848c has been created.' is present.<br/>
+Note the node number for the content item.<br/>
+Get the file id of image number 1.<br/>
+STEP 22<br/>
+Open url 'http://acc-test.publisher7.com/node/6836/8956'.<br/>
+STEP 28<br/>
+Verify 'typeof(mps.writeFooter)' is present in page source.<br/>
+STEP 29<br/>
+Mouse over the 'Structure' menu link.<br/>
+Mouse over the 'MPS Blocks' menu link.<br/>
+Click the 'Add' menu link.<br/>
+Switch to the active frame titled 'Add a new MPS block dialog'.<br/>
+Enter 'ecd81cde1fae495' in the 'Block Name' text box.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'ecd81cde1fae495 has been created.' is present.<br/>
+Click the 'Close Overlay X'.<br/>
+STEP 30<br/>
+Mouse over the 'Structure' menu link.<br/>
+Click the 'Blocks' menu link.<br/>
+Switch to the active frame titled 'Blocks dialog'.<br/>
+Select the block name 'ecd81cde1fae495 (MPS)' from the 'Header' drop down list.<br/>
+Click the 'Save Blocks' button.<br/>
+Verify success message of 'The block settings have been updated.' is present.<br/>
+Click the 'Close Overlay X'.<br/>
+STEP 31<br/>
+Verify 'mps.getAd('ecd81cde1fae495')' is present in page source.<br/>
+STEP 32 - N/A<br/>
+CLEANUP<br/>
+Mouse over the 'Structure' menu link.<br/>
+Click the 'Blocks' menu link.<br/>
+Switch to the active frame titled 'Blocks dialog'.<br/>
+Select the block name 'ecd81cde1fae495 (MPS)' from the '- None -' drop down list.<br/>
+Click the 'Save Blocks' button.<br/>
+Click the 'Close Overlay X'.<br/>
 </div>
 </td>
 <td></td>
-<td>47</td>
-<td>com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen@3d2f0499</td></tr>
+<td>125</td>
+<td>com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@1bffd008</td></tr>
 </table><p>
 </body>
 </html>
