@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
-    <line>
-      <![CDATA[STEP 1]]>
-    </line>
     <line>
       <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
     </line>
@@ -17,22 +14,34 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[SETUP]]>
-    </line>
-    <line>
       <![CDATA[Click the 'Modules' menu link.]]>
     </line>
     <line>
       <![CDATA[Switch to frame titled 'Modules'.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Dynamic Queue' in the 'Filter Name' text box.]]>
+      <![CDATA[Enter 'Sticky Edit Actions' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Wait for module filter titled 'Dynamic Queue' to be visible in module list.]]>
+      <![CDATA[Wait for module filter titled 'Sticky Edit Actions' to be visible in module list.]]>
     </line>
     <line>
-      <![CDATA[Verify the 'Dynamic Queue' check box is checked.]]>
+      <![CDATA[Check the 'Sticky Edit Actions' check box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configuration' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
+    </line>
+    <line>
+      <![CDATA[Switch back to the 'Modules' frame.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to frame titled 'Modules'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
@@ -47,16 +56,16 @@
       <![CDATA[Mouse over the 'Add content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'TV Show' menu link.]]>
+      <![CDATA[Click the 'Post' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Create TV Show dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
     </line>
     <line>
-      <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
+      <![CDATA[Enter '10ef6348f1b843c' in the 'Title' text box.]]>
     </line>
     <line>
-      <![CDATA[Enter 'dd56ec98161a417' in the 'Title' text box.]]>
+      <![CDATA[Scroll by '100'.]]>
     </line>
     <line>
       <![CDATA[Switch to the Synopsis frame.]]>
@@ -65,370 +74,107 @@
       <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Create TV Show dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
     </line>
     <line>
-      <![CDATA[Click the Logo 'Select' button.]]>
+      <![CDATA[Verify the sticky edit 'Save' button is present.]]>
     </line>
     <line>
-      <![CDATA[Switch to the select file frame.]]>
+      <![CDATA[Verify the sticky edit 'Preview' button is present.]]>
     </line>
     <line>
-      <![CDATA[Enter the file path for file upload.]]>
+      <![CDATA[Scroll by '100'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Upload' button.]]>
+      <![CDATA[Verify the sticky edit 'Save' button is present.]]>
     </line>
     <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
+      <![CDATA[Verify the sticky edit 'Preview' button is present.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Next' button.]]>
+      <![CDATA[Click the 'Meta tags' link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
+      <![CDATA[Verify the sticky edit 'Save' button is present.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Next' button.]]>
+      <![CDATA[Verify the sticky edit 'Preview' button is present.]]>
     </line>
     <line>
-      <![CDATA[Verify the file image 'HanSolo' is present.]]>
+      <![CDATA[Scroll by '100'.]]>
     </line>
     <line>
-      <![CDATA[Verify the img is loaded and visible.]]>
+      <![CDATA[Verify the sticky edit 'Save' button is present.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create TV Show dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the Cover Media 'Select' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the select file frame.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the file path for file upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Upload' button.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the file image 'HanSolo' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img is loaded and visible.]]>
+      <![CDATA[Verify the sticky edit 'Preview' button is present.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Create TV Show dialog'.]]>
+      <![CDATA[Verify success message of 'Post 10ef6348f1b843c has been created.' is present.]]>
     </line>
     <line>
-      <![CDATA[Click the Banner 'Select' button.]]>
+      <![CDATA[Verify the sticky edit 'Save' button is present.]]>
     </line>
     <line>
-      <![CDATA[Switch to the select file frame.]]>
+      <![CDATA[Verify the sticky edit 'Preview' button is present.]]>
     </line>
     <line>
-      <![CDATA[Enter the file path for file upload.]]>
+      <![CDATA[Scroll by '100'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Upload' button.]]>
+      <![CDATA[Verify the sticky edit 'Save' button is present.]]>
     </line>
     <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
+      <![CDATA[Verify the sticky edit 'Preview' button is present.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Next' button.]]>
+      <![CDATA[Click the 'Modules' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
+      <![CDATA[Enter 'Sticky Edit Actions' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Next' button.]]>
+      <![CDATA[Wait for module filter titled 'Sticky Edit Actions' to be visible in module list.]]>
     </line>
     <line>
-      <![CDATA[Verify the file image 'HanSolo' is present.]]>
+      <![CDATA[Uncheck the 'Sticky Edit Actions' module checkbox.]]>
     </line>
     <line>
-      <![CDATA[Verify the img is loaded and visible.]]>
+      <![CDATA[Click the 'Save configuration' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create TV Show dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Publishing Options' link.]]>
-    </line>
-    <line>
-      <![CDATA[Select 'Published' from the 'Moderation State' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'TV Show dd56ec98161a417 has been created.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 2]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Structure' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Dynamic Queue types' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Add dynamic queue type' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Add dynamic queue type dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'a53b7d534a8f44a' in the 'Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Select 'Content' or 'Node' from the 'Entity type' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Select '1 min' from the 'Cache lifetime' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Dynamic Queue types dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'a53b7d534a8f44a' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 3 - MOVED TO SETUP]]>
-    </line>
-    <line>
-      <![CDATA[STEP 4]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Structure' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Content types' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Movie' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Manage fields' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Movie dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Add content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Movie' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '27790a273b2a4d4' in the 'Title' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the Synopsis frame.]]>
-    </line>
-    <line>
-      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Cover' select button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the select file frame.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the file path for file upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Upload' button.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the file image 'HanSolo' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Select 'dd56ec98161a417' from the 'Show' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Publishing Options' link.]]>
-    </line>
-    <line>
-      <![CDATA[Select 'Published' from the 'Moderation State' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Movie 27790a273b2a4d4 has been created.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 5]]>
-    </line>
-    <line>
-      <![CDATA[STEP 6]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Dynamic Queues' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Add a53b7d534a8f44a' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Add a53b7d534a8f44a dynamic queue dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 7]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'f77de6512b0b44b' in the 'Title' text box.]]>
-    </line>
-    <line>
-      <![CDATA[]]>
-    </line>
-    <line>
-      <![CDATA[Select 'dd56ec98161a417' from the 'TV Shows' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Newest' radio button under 'Sort by'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save Dynamic Queue' button.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 8]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Dynamic Queues' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Dynamic Queues dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Open a new browser window.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to new browser tab/window.]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://qa5.publisher7.com/dynamic-queue/36'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text '27790a273b2a4d4' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'Relationships' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'dd56ec98161a417' is present on the page.]]>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="123972" started-at="2014-10-15T13:15:40Z" finished-at="2014-10-15T13:17:44Z">
+  <suite name="Default suite" duration-ms="93669" started-at="2014-10-15T13:58:57Z" finished-at="2014-10-15T14:00:31Z">
     <groups>
-      <group name="certify">
-        <method signature="RelatingTVShowsDynamicQueues.RelatingTVShowsDynamicQueues_TC4389()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.RelatingTVShowsDynamicQueues@371d1794]" name="RelatingTVShowsDynamicQueues_TC4389" class="com.nbcuni.test.publisher.tests.Queues.DynamicQueues.RelatingTVShowsDynamicQueues"/>
-      </group> <!-- certify -->
-      <group name="full">
-        <method signature="RelatingTVShowsDynamicQueues.RelatingTVShowsDynamicQueues_TC4389()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.RelatingTVShowsDynamicQueues@371d1794]" name="RelatingTVShowsDynamicQueues_TC4389" class="com.nbcuni.test.publisher.tests.Queues.DynamicQueues.RelatingTVShowsDynamicQueues"/>
-      </group> <!-- full -->
+      <group name="sensitive">
+        <method signature="StickyButtons.StickyButtons_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons@b596170]" name="StickyButtons_Test" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons"/>
+        <method signature="StickyButtons.Cleanup()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons@b596170]" name="Cleanup" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons"/>
+      </group> <!-- sensitive -->
     </groups>
-    <test name="Default test" duration-ms="123972" started-at="2014-10-15T13:15:40Z" finished-at="2014-10-15T13:17:44Z">
-      <class name="com.nbcuni.test.publisher.tests.Queues.DynamicQueues.RelatingTVShowsDynamicQueues">
-        <test-method status="PASS" signature="suiteSetup()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.RelatingTVShowsDynamicQueues@371d1794]" name="suiteSetup" is-config="true" duration-ms="31" started-at="2014-10-15T09:15:40Z" finished-at="2014-10-15T09:15:40Z">
+    <test name="Default test" duration-ms="93669" started-at="2014-10-15T13:58:57Z" finished-at="2014-10-15T14:00:31Z">
+      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons">
+        <test-method status="PASS" signature="suiteSetup()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons@b596170]" name="suiteSetup" is-config="true" duration-ms="21" started-at="2014-10-15T09:58:57Z" finished-at="2014-10-15T09:58:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteSetup -->
-        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.RelatingTVShowsDynamicQueues@371d1794]" name="startSelenium" is-config="true" duration-ms="3187" started-at="2014-10-15T09:15:40Z" finished-at="2014-10-15T09:15:43Z">
+        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons@b596170]" name="startSelenium" is-config="true" duration-ms="3241" started-at="2014-10-15T09:58:57Z" finished-at="2014-10-15T09:59:00Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.nbcuni.test.publisher.tests.Queues.DynamicQueues.RelatingTVShowsDynamicQueues.RelatingTVShowsDynamicQueues_TC4389() throws java.lang.Exception]]>
+                <![CDATA[public void com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons.StickyButtons_Test() throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="RelatingTVShowsDynamicQueues_TC4389()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.RelatingTVShowsDynamicQueues@371d1794]" name="RelatingTVShowsDynamicQueues_TC4389" duration-ms="120196" started-at="2014-10-15T09:15:43Z" finished-at="2014-10-15T09:17:43Z">
+        <test-method status="PASS" signature="StickyButtons_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons@b596170]" name="StickyButtons_Test" duration-ms="86676" started-at="2014-10-15T09:59:00Z" finished-at="2014-10-15T10:00:27Z">
           <reporter-output>
-            <line>
-              <![CDATA[STEP 1]]>
-            </line>
             <line>
               <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
             </line>
@@ -442,22 +188,34 @@
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
-              <![CDATA[SETUP]]>
-            </line>
-            <line>
               <![CDATA[Click the 'Modules' menu link.]]>
             </line>
             <line>
               <![CDATA[Switch to frame titled 'Modules'.]]>
             </line>
             <line>
-              <![CDATA[Enter 'Dynamic Queue' in the 'Filter Name' text box.]]>
+              <![CDATA[Enter 'Sticky Edit Actions' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Wait for module filter titled 'Dynamic Queue' to be visible in module list.]]>
+              <![CDATA[Wait for module filter titled 'Sticky Edit Actions' to be visible in module list.]]>
             </line>
             <line>
-              <![CDATA[Verify the 'Dynamic Queue' check box is checked.]]>
+              <![CDATA[Check the 'Sticky Edit Actions' check box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configuration' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
+            </line>
+            <line>
+              <![CDATA[Switch back to the 'Modules' frame.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to frame titled 'Modules'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
             </line>
             <line>
               <![CDATA[Click the 'Close Overlay X'.]]>
@@ -472,16 +230,16 @@
               <![CDATA[Mouse over the 'Add content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'TV Show' menu link.]]>
+              <![CDATA[Click the 'Post' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create TV Show dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
             </line>
             <line>
-              <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
+              <![CDATA[Enter '10ef6348f1b843c' in the 'Title' text box.]]>
             </line>
             <line>
-              <![CDATA[Enter 'dd56ec98161a417' in the 'Title' text box.]]>
+              <![CDATA[Scroll by '100'.]]>
             </line>
             <line>
               <![CDATA[Switch to the Synopsis frame.]]>
@@ -490,356 +248,124 @@
               <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create TV Show dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
             </line>
             <line>
-              <![CDATA[Click the Logo 'Select' button.]]>
+              <![CDATA[Verify the sticky edit 'Save' button is present.]]>
             </line>
             <line>
-              <![CDATA[Switch to the select file frame.]]>
+              <![CDATA[Verify the sticky edit 'Preview' button is present.]]>
             </line>
             <line>
-              <![CDATA[Enter the file path for file upload.]]>
+              <![CDATA[Scroll by '100'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Upload' button.]]>
+              <![CDATA[Verify the sticky edit 'Save' button is present.]]>
             </line>
             <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
+              <![CDATA[Verify the sticky edit 'Preview' button is present.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Next' button.]]>
+              <![CDATA[Click the 'Meta tags' link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Public Local Files' radio button.]]>
+              <![CDATA[Verify the sticky edit 'Save' button is present.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Next' button.]]>
+              <![CDATA[Verify the sticky edit 'Preview' button is present.]]>
             </line>
             <line>
-              <![CDATA[Verify the file image 'HanSolo' is present.]]>
+              <![CDATA[Scroll by '100'.]]>
             </line>
             <line>
-              <![CDATA[Verify the img is loaded and visible.]]>
+              <![CDATA[Verify the sticky edit 'Save' button is present.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create TV Show dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the Cover Media 'Select' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the select file frame.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the file path for file upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Upload' button.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Public Local Files' radio button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the file image 'HanSolo' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img is loaded and visible.]]>
+              <![CDATA[Verify the sticky edit 'Preview' button is present.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create TV Show dialog'.]]>
+              <![CDATA[Verify success message of 'Post 10ef6348f1b843c has been created.' is present.]]>
             </line>
             <line>
-              <![CDATA[Click the Banner 'Select' button.]]>
+              <![CDATA[Verify the sticky edit 'Save' button is present.]]>
             </line>
             <line>
-              <![CDATA[Switch to the select file frame.]]>
+              <![CDATA[Verify the sticky edit 'Preview' button is present.]]>
             </line>
             <line>
-              <![CDATA[Enter the file path for file upload.]]>
+              <![CDATA[Scroll by '100'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Upload' button.]]>
+              <![CDATA[Verify the sticky edit 'Save' button is present.]]>
             </line>
             <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
+              <![CDATA[Verify the sticky edit 'Preview' button is present.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Next' button.]]>
+              <![CDATA[Click the 'Modules' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Public Local Files' radio button.]]>
+              <![CDATA[Enter 'Sticky Edit Actions' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Next' button.]]>
+              <![CDATA[Wait for module filter titled 'Sticky Edit Actions' to be visible in module list.]]>
             </line>
             <line>
-              <![CDATA[Verify the file image 'HanSolo' is present.]]>
+              <![CDATA[Uncheck the 'Sticky Edit Actions' module checkbox.]]>
             </line>
             <line>
-              <![CDATA[Verify the img is loaded and visible.]]>
+              <![CDATA[Click the 'Save configuration' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create TV Show dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Publishing Options' link.]]>
-            </line>
-            <line>
-              <![CDATA[Select 'Published' from the 'Moderation State' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'TV Show dd56ec98161a417 has been created.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 2]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Structure' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Dynamic Queue types' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Add dynamic queue type' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Add dynamic queue type dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'a53b7d534a8f44a' in the 'Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Select 'Content' or 'Node' from the 'Entity type' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Select '1 min' from the 'Cache lifetime' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Dynamic Queue types dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'a53b7d534a8f44a' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 3 - MOVED TO SETUP]]>
-            </line>
-            <line>
-              <![CDATA[STEP 4]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Structure' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Content types' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Movie' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Manage fields' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Movie dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Add content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Movie' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '27790a273b2a4d4' in the 'Title' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the Synopsis frame.]]>
-            </line>
-            <line>
-              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Cover' select button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the select file frame.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the file path for file upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Upload' button.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Public Local Files' radio button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the file image 'HanSolo' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Select 'dd56ec98161a417' from the 'Show' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Publishing Options' link.]]>
-            </line>
-            <line>
-              <![CDATA[Select 'Published' from the 'Moderation State' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Movie 27790a273b2a4d4 has been created.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 5]]>
-            </line>
-            <line>
-              <![CDATA[STEP 6]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Dynamic Queues' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Add a53b7d534a8f44a' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Add a53b7d534a8f44a dynamic queue dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 7]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'f77de6512b0b44b' in the 'Title' text box.]]>
-            </line>
-            <line>
-              <![CDATA[]]>
-            </line>
-            <line>
-              <![CDATA[Select 'dd56ec98161a417' from the 'TV Shows' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Newest' radio button under 'Sort by'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save Dynamic Queue' button.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 8]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Dynamic Queues' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Dynamic Queues dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Open a new browser window.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to new browser tab/window.]]>
-            </line>
-            <line>
-              <![CDATA[Open url 'http://qa5.publisher7.com/dynamic-queue/36'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text '27790a273b2a4d4' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'Relationships' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'dd56ec98161a417' is present on the page.]]>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- RelatingTVShowsDynamicQueues_TC4389 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.RelatingTVShowsDynamicQueues@371d1794]" name="stopSelenium" is-config="true" duration-ms="579" started-at="2014-10-15T09:17:43Z" finished-at="2014-10-15T09:17:44Z">
+        </test-method> <!-- StickyButtons_Test -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons@b596170]" name="stopSelenium" is-config="true" duration-ms="574" started-at="2014-10-15T10:00:27Z" finished-at="2014-10-15T10:00:28Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=RelatingTVShowsDynamicQueues_TC4389 status=SUCCESS method=RelatingTVShowsDynamicQueues.RelatingTVShowsDynamicQueues_TC4389()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.RelatingTVShowsDynamicQueues@371d1794] output=STEP 1]]]>
+                <![CDATA[[TestResult name=StickyButtons_Test status=SUCCESS method=StickyButtons.StickyButtons_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons@b596170] output=Open url 'http://qa5.publisher7.com'.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="suiteTeardown()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.RelatingTVShowsDynamicQueues@371d1794]" name="suiteTeardown" is-config="true" duration-ms="1" started-at="2014-10-15T09:17:44Z" finished-at="2014-10-15T09:17:44Z">
+        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons@b596170]" name="startSelenium" is-config="true" duration-ms="2599" started-at="2014-10-15T10:00:28Z" finished-at="2014-10-15T10:00:30Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons.Cleanup() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startSelenium -->
+        <test-method status="PASS" signature="Cleanup()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons@b596170]" name="Cleanup" duration-ms="1" started-at="2014-10-15T10:00:30Z" depends-on-methods="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons.StickyButtons_Test" finished-at="2014-10-15T10:00:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Cleanup -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons@b596170]" name="stopSelenium" is-config="true" duration-ms="566" started-at="2014-10-15T10:00:30Z" finished-at="2014-10-15T10:00:31Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Cleanup status=SUCCESS method=StickyButtons.Cleanup()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons@b596170] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopSelenium -->
+        <test-method status="PASS" signature="suiteTeardown()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons@b596170]" name="suiteTeardown" is-config="true" duration-ms="0" started-at="2014-10-15T10:00:31Z" finished-at="2014-10-15T10:00:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteTeardown -->
-      </class> <!-- com.nbcuni.test.publisher.tests.Queues.DynamicQueues.RelatingTVShowsDynamicQueues -->
+      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
